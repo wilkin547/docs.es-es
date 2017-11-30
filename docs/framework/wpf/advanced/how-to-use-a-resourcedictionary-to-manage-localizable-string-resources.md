@@ -1,48 +1,54 @@
 ---
-title: "C&#243;mo: Usar ResourceDictionary para administrar recursos de cadenas localizables | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "localización [WPF], empaquetar recursos de cadenas"
-  - "empaquetar recursos de cadenas"
-  - "ResourceDictionary [WPF]"
-  - "recursos [WPF], empaquetar recursos de cadenas"
+title: "Cómo: Usar ResourceDictionary para administrar recursos de cadenas localizables"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- resources [WPF], packaging string resources
+- packaging string resources [WPF]
+- ResourceDictionary [WPF]
+- localization [WPF], packaging string resources
 ms.assetid: 19e7d9a5-20df-4ad3-b157-fe6515902e5e
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 6
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 38cfd687eadf31cc94dfdd2cbbf082bf80424cba
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/22/2017
 ---
-# C&#243;mo: Usar ResourceDictionary para administrar recursos de cadenas localizables
-En este ejemplo se muestra cómo utilizar un objeto <xref:System.Windows.ResourceDictionary> para empaquetar los recursos de cadenas localizables para las aplicaciones de [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)].  
+# <a name="how-to-use-a-resourcedictionary-to-manage-localizable-string-resources"></a>Cómo: Usar ResourceDictionary para administrar recursos de cadenas localizables
+Este ejemplo muestra cómo utilizar un <xref:System.Windows.ResourceDictionary> para empaquetar recursos de cadenas localizables para [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] las aplicaciones.  
   
-### Para utilizar un objeto ResourceDictionary a fin de administrar los recursos de cadenas localizables  
+### <a name="to-use-a-resourcedictionary-to-manage-localizable-string-resources"></a>Usar ResourceDictionary para administrar recursos de cadenas localizables  
   
-1.  Cree un objeto <xref:System.Windows.ResourceDictionary> que contenga las cadenas que desee localizar.  El siguiente fragmento de código muestra un ejemplo.  
+1.  Crear un <xref:System.Windows.ResourceDictionary> que contiene las cadenas que desea localizar. En el código siguiente se muestra un ejemplo.  
   
-     [!code-xml[StringLocalizationSample#StringResourceDictionary](../../../../samples/snippets/csharp/VS_Snippets_Wpf/StringLocalizationSample/CSharp/StringResources.xaml#stringresourcedictionary)]  
+     [!code-xaml[StringLocalizationSample#StringResourceDictionary](../../../../samples/snippets/csharp/VS_Snippets_Wpf/StringLocalizationSample/CSharp/StringResources.xaml#stringresourcedictionary)]  
   
-     Este código define un recurso de cadena, `localizedMessage`, de tipo <xref:System.String>, del espacio de nombres <xref:System> de mscorlib.dll.  
+     Este código define un recurso de cadena, `localizedMessage`, del tipo <xref:System.String>, desde el <xref:System> espacio de nombres en mscorlib.dll.  
   
-2.  Agregue el objeto <xref:System.Windows.ResourceDictionary> a la aplicación, mediante el código siguiente.  
+2.  Agregue el <xref:System.Windows.ResourceDictionary> a la aplicación, utilizando el código siguiente.  
   
-     [!code-xml[StringLocalizationSample#ReferencingStringResourceDictionary](../../../../samples/snippets/csharp/VS_Snippets_Wpf/StringLocalizationSample/CSharp/App.xaml#referencingstringresourcedictionary)]  
+     [!code-xaml[StringLocalizationSample#ReferencingStringResourceDictionary](../../../../samples/snippets/csharp/VS_Snippets_Wpf/StringLocalizationSample/CSharp/App.xaml#referencingstringresourcedictionary)]  
   
-3.  Utilice el recurso de cadena desde el marcado, mediante un marcado [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] como el siguiente.  
+3.  Usar el recurso de cadena desde el marcado, mediante [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] que en el siguiente.  
   
-     [!code-xml[StringLocalizationSample#GetLocalizedResourceFromMarkup](../../../../samples/snippets/csharp/VS_Snippets_Wpf/StringLocalizationSample/CSharp/MainWindow.xaml#getlocalizedresourcefrommarkup)]  
+     [!code-xaml[StringLocalizationSample#GetLocalizedResourceFromMarkup](../../../../samples/snippets/csharp/VS_Snippets_Wpf/StringLocalizationSample/CSharp/MainWindow.xaml#getlocalizedresourcefrommarkup)]  
   
-4.  Utilice el recurso de cadena desde el código subyacente, mediante un código como el siguiente.  
+4.  Use el recurso de cadenas del código subyacente mediante código como el siguiente.  
   
      [!code-csharp[StringLocalizationSample#GetLocalizedResourceFromCode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/StringLocalizationSample/CSharp/MainWindow.xaml.cs#getlocalizedresourcefromcode)]
      [!code-vb[StringLocalizationSample#GetLocalizedResourceFromCode](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/StringLocalizationSample/VisualBasic/MainWindow.xaml.vb#getlocalizedresourcefromcode)]  
   
-5.  Localice la aplicación.  Para obtener más información, consulte [Localizar una aplicación](../../../../docs/framework/wpf/advanced/how-to-localize-an-application.md).
+5.  Localice la aplicación. Para obtener más información, consulte [adaptar una aplicación](../../../../docs/framework/wpf/advanced/how-to-localize-an-application.md).

@@ -1,56 +1,61 @@
 ---
-title: "C&#243;mo: Guardar archivos con el control RichTextBox de formularios Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - ".rtf (archivos), guardar en el control RichTextBox"
-  - "ejemplos [Windows Forms], cuadros de texto"
-  - "archivos, guardar con el control RichTextBox"
-  - "RichTextBox (control) [Windows Forms], guardar archivos"
-  - "RTF (archivos), guardar en el control RichTextBox"
-  - "guardar archivos"
-  - "guardar archivos, RichTextBox (control)"
-  - "archivos de texto, guardar desde el control RichTextBox"
+title: "Cómo: Guardar archivos con el control RichTextBox de formularios Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- saving files
+- RTF files [Windows Forms], saving in RichTextBox control
+- examples [Windows Forms], text boxes
+- saving files [Windows Forms], RichTextBox control
+- files [Windows Forms], saving with RichTextBox control
+- RichTextBox control [Windows Forms], saving files
+- .rtf files [Windows Forms], saving in RichTextBox control
+- text files [Windows Forms], saving from RichTextBox control
 ms.assetid: 4a58ec19-84d1-4383-9110-298c06adcfca
-caps.latest.revision: 15
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: d28aeaefca6f8aa13607f1c1e6f72557ef536754
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo: Guardar archivos con el control RichTextBox de formularios Windows Forms
-El control <xref:System.Windows.Forms.RichTextBox> de formularios Windows Forms puede escribir la información que muestra en uno de los siguientes formatos:  
+# <a name="how-to-save-files-with-the-windows-forms-richtextbox-control"></a>Cómo: Guardar archivos con el control RichTextBox de formularios Windows Forms
+Los formularios Windows Forms <xref:System.Windows.Forms.RichTextBox> control puede escribir la información que muestra en uno de los siguientes formatos:  
   
 -   Texto sin formato  
   
 -   Texto sin formato Unicode  
   
--   Formato de texto enriquecido \(RTF\)  
+-   Formato de texto enriquecido (RTF)  
   
 -   RTF con espacios en lugar de objetos OLE  
   
 -   Texto sin formato con una representación textual de objetos OLE  
   
- Para guardar un archivo, llame al método <xref:System.Windows.Forms.RichTextBox.SaveFile%2A>.  También puede utilizar el método **SaveFile** para guardar datos en una secuencia.  Para obtener más información, vea <xref:System.Windows.Forms.RichTextBox.SaveFile%28System.IO.Stream%2CSystem.Windows.Forms.RichTextBoxStreamType%29>.  
+ Para guardar un archivo, llame a la <xref:System.Windows.Forms.RichTextBox.SaveFile%2A> método. También puede usar el **SaveFile** método para guardar los datos en una secuencia. Para obtener más información, consulta <xref:System.Windows.Forms.RichTextBox.SaveFile%28System.IO.Stream%2CSystem.Windows.Forms.RichTextBoxStreamType%29>.  
   
-### Para guardar el contenido del control en un archivo  
+### <a name="to-save-the-contents-of-the-control-to-a-file"></a>Para guardar el contenido del control en un archivo  
   
-1.  Determina la ruta de acceso del archivo que se va a guardar.  
+1.  Determinar la ruta de acceso del archivo que se guardará.  
   
-     Para hacer esto en una aplicación real, lo habitual es utilizar el componente <xref:System.Windows.Forms.SaveFileDialog>.  Para obtener información general, vea [Información general sobre el componente SaveFileDialog](../../../../docs/framework/winforms/controls/savefiledialog-component-overview-windows-forms.md).  
+     Para hacer esto en una aplicación del mundo real, se utilizaría normalmente la <xref:System.Windows.Forms.SaveFileDialog> componente. Para obtener información general, vea [general sobre el componente SaveFileDialog](../../../../docs/framework/winforms/controls/savefiledialog-component-overview-windows-forms.md).  
   
-2.  Llame al método <xref:System.Windows.Forms.RichTextBox.SaveFile%2A> del control <xref:System.Windows.Forms.RichTextBox>, y especifique el archivo que se guardará y, opcionalmente, un tipo de archivo.  Si llama al método con un nombre de archivo como único argumento, el archivo se guardará como RTF.  Para especificar otro tipo de archivo, llame al método con un valor de la enumeración <xref:System.Windows.Forms.RichTextBoxStreamType> como segundo argumento.  
+2.  Llame a la <xref:System.Windows.Forms.RichTextBox.SaveFile%2A> método de la <xref:System.Windows.Forms.RichTextBox> control, especifique el archivo para guardar y, opcionalmente, un tipo de archivo. Si llama al método con un nombre de archivo como su único argumento, el archivo se guardará como RTF. Para especificar otro tipo de archivo, llame al método con un valor de la enumeración <xref:System.Windows.Forms.RichTextBoxStreamType> como segundo argumento.  
   
-     En el ejemplo siguiente, la ruta de acceso establecida para la ubicación del archivo de texto enriquecido es la carpeta **Mis documentos**.  Se utiliza esta ubicación porque se puede asumir que la mayoría de los equipos que ejecuten el sistema operativo Windows tendrán esta carpeta.  Al elegir esta ubicación, también se permite a los usuarios con niveles de acceso mínimos ejecutar la aplicación de un modo seguro.  En el ejemplo siguiente suponemos que ya se ha agregado un control <xref:System.Windows.Forms.RichTextBox> al formulario.  
+     En el ejemplo siguiente, la ruta de acceso establecida para la ubicación del archivo de texto enriquecido es el **Mis documentos** carpeta. Se utiliza esta ubicación porque se puede asumir que la mayoría de los equipos ejecutan el sistema operativo Windows incluirá esta carpeta. Al elegir esta ubicación también permite a los usuarios con niveles de acceso de sistema mínimos ejecutar la aplicación de forma segura. El ejemplo siguiente supone un formulario con un <xref:System.Windows.Forms.RichTextBox> control ya se ha agregado.  
   
     ```vb  
     Public Sub SaveFile()  
@@ -61,7 +66,6 @@ El control <xref:System.Windows.Forms.RichTextBox> de formularios Windows Forms 
        & "\Testdoc.rtf", _  
           RichTextBoxStreamType.RichNoOleObjs)  
     End Sub  
-  
     ```  
   
     ```csharp  
@@ -75,7 +79,6 @@ El control <xref:System.Windows.Forms.RichTextBox> de formularios Windows Forms 
        + @"\Testdoc.rtf",  
           RichTextBoxStreamType.RichNoOleObjs);  
     }  
-  
     ```  
   
     ```cpp  
@@ -92,10 +95,10 @@ El control <xref:System.Windows.Forms.RichTextBox> de formularios Windows Forms 
     ```  
   
     > [!IMPORTANT]
-    >  En este ejemplo se crea un nuevo archivo, si es que aún no existe.  Si una aplicación necesita crear un archivo, precisará acceso de creación para la carpeta correspondiente.  Los permisos se establecen usando listas de control de acceso.  Sin embargo, si el archivo ya existe, la aplicación sólo precisará acceso de escritura, un privilegio menor.  Por tanto, siempre que sea posible, resulta más seguro crear el archivo durante la implementación y conceder sólo acceso de lectura para un único archivo, en lugar de acceso de creación para una carpeta.  También es más seguro escribir datos en carpetas de usuario en lugar de en la carpeta raíz o en la carpeta Archivos de programa.  
+    >  En este ejemplo se crea un nuevo archivo, si este no existe aún. Si una aplicación necesita crear un archivo, esa aplicación necesita acceso de creación para la carpeta. Los permisos se establecen usando listas de control de acceso. Si el archivo ya existe, la aplicación necesita acceso de escritura solo, un privilegio menor. Siempre que sea posible, resulta más seguro crear el archivo durante la implementación y únicamente conceda acceso de lectura a un único archivo, en lugar de acceso de creación para una carpeta. Además, es más seguro escribir datos en carpetas de usuario que en la carpeta raíz o en la carpeta Archivos de programa.  
   
-## Vea también  
- <xref:System.Windows.Forms.RichTextBox.SaveFile%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.RichTextBox>   
- [RichTextBox \(Control\)](../../../../docs/framework/winforms/controls/richtextbox-control-windows-forms.md)   
+## <a name="see-also"></a>Vea también  
+ <xref:System.Windows.Forms.RichTextBox.SaveFile%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.RichTextBox>  
+ [RichTextBox (control)](../../../../docs/framework/winforms/controls/richtextbox-control-windows-forms.md)  
  [Controles que se utilizan en formularios Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)

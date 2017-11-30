@@ -1,39 +1,21 @@
 ---
 title: Elementos declarados en Visual Basic
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 0d1d1bb5-ac0b-485f-8922-cdcec5574c79
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 074ae8af056784e2ae4b870545ec4389deb9388e
-ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
-
+ms.openlocfilehash: 0c437331e5fb1a5b9d727b3e24760250685fd365
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="declared-elements-in-visual-basic"></a>Elementos declarados en Visual Basic
 Un *elemento declarado* es un elemento de programación que se define en una instrucción de declaración. Entre los elementos declarados se incluyen variables, constantes, enumeraciones, clases, estructuras, módulos, interfaces, procedimientos, parámetros de procedimientos, valores devueltos de función, referencias a procedimientos externos, operadores, propiedades, eventos y delegados.  
@@ -87,4 +69,3 @@ Un *elemento declarado* es un elemento de programación que se define en una ins
   
  [Contextos de declaración y niveles de acceso predeterminados](../../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md)  
  Se enumeran los tipos de elementos declarados y se muestra para cada uno de ellos su instrucción de declaración, en qué contexto se pueden declarar y su nivel de acceso predeterminado.
-

@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a5eada64-075b-4162-9655-ded84e4681f2
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: b4b0a295e5d788eb50ba39227ac6971ea057ec1e
-ms.contentlocale: es-es
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 442970c8253147313a38e1a1518219a96ec41945
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="lttypeinstantiationgt-element-net-native"></a>Elemento &lt;TypeInstantiation&gt; (.NET Native)
 Aplica la directiva de reflexión en tiempo de ejecución a un tipo genérico construido.  
@@ -54,9 +52,9 @@ Aplica la directiva de reflexión en tiempo de ejecución a un tipo genérico co
 |`Browse`|Reflexión|Atributo opcional. Controla la consulta para obtener información sobre los elementos de programa, pero no permite el acceso en tiempo de ejecución.|  
 |`Dynamic`|Reflexión|Atributo opcional. Controla el acceso en tiempo de ejecución a todos los miembros de tipo (incluidos constructores, métodos, campos, propiedades y eventos) para permitir la programación dinámica.|  
 |`Serialize`|Serialización|Atributo opcional. Controla el acceso en tiempo de ejecución a constructores, campos y propiedades para permitir que bibliotecas como el serializador JSON Newtonsoft puedan serializar y deserializar instancias de tipo.|  
-|`DataContractSerializer`|Serialización|Atributo opcional. Controla la directiva de serialización que usa la clase <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=fullName>.|  
-|`DataContractJsonSerializer`|Serialización|Atributo opcional. Controla la directiva de serialización JSON que usa la clase <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer?displayProperty=fullName>.|  
-|`XmlSerializer`|Serialización|Atributo opcional. Controla la directiva de serialización XML que usa la clase <xref:System.Xml.Serialization.XmlSerializer?displayProperty=fullName>.|  
+|`DataContractSerializer`|Serialización|Atributo opcional. Controla la directiva de serialización que usa la clase <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType>.|  
+|`DataContractJsonSerializer`|Serialización|Atributo opcional. Controla la directiva de serialización JSON que usa la clase <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer?displayProperty=nameWithType>.|  
+|`XmlSerializer`|Serialización|Atributo opcional. Controla la directiva de serialización XML que usa la clase <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType>.|  
 |`MarshalObject`|Interop|Atributo opcional. Controla la directiva de serialización de tipos de referencia a Windows Runtime y COM.|  
 |`MarshalDelegate`|Interop|Atributo opcional. Controla la directiva de serialización de tipos de delegado como punteros de función a código nativo.|  
 |`MarshalStructure`|Interop|Atributo opcional. Controla la directiva de cálculo de referencias de estructuras a código nativo.|  
@@ -65,7 +63,7 @@ Aplica la directiva de reflexión en tiempo de ejecución a un tipo genérico co
   
 |Valor|Descripción|  
 |-----------|-----------------|  
-|*type_name*|Nombre del tipo. Si el elemento `<TypeInstantiation>` es un elemento secundario de un elemento [\<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md), un elemento [\<Type>](../../../docs/framework/net-native/type-element-net-native.md) u otro elemento `<TypeInstantiation>`, *type_name* puede especificar el nombre del tipo sin su espacio de nombres. De lo contrario, *type_name* debe incluir el nombre de tipo completo. El nombre de tipo no es representativo. Por ejemplo, para un objeto <xref:System.Collections.Generic.List%601?displayProperty=fullName>, el elemento `<TypeInstantiation>` puede aparecer del siguiente modo:<br /><br /> `\<TypeInstantiation Name=System.Collections.Generic.List Dynamic="Required Public" />`|  
+|*type_name*|Nombre del tipo. Si el elemento `<TypeInstantiation>` es un elemento secundario de un elemento [\<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md), un elemento [\<Type>](../../../docs/framework/net-native/type-element-net-native.md) u otro elemento `<TypeInstantiation>`, *type_name* puede especificar el nombre del tipo sin su espacio de nombres. De lo contrario, *type_name* debe incluir el nombre de tipo completo. El nombre de tipo no es representativo. Por ejemplo, para un objeto <xref:System.Collections.Generic.List%601?displayProperty=nameWithType>, el elemento `<TypeInstantiation>` puede aparecer del siguiente modo:<br /><br /> `\<TypeInstantiation Name=System.Collections.Generic.List Dynamic="Required Public" />`|  
   
 ## <a name="arguments-attribute"></a>Arguments (atributo)  
   
@@ -113,7 +111,7 @@ Aplica la directiva de reflexión en tiempo de ejecución a un tipo genérico co
   
  [!code-csharp[ProjectN_Reflection#2](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/makegenerictype1.cs#2)]  
   
- Después de compilar con la cadena de herramientas de [!INCLUDE[net_native](../../../includes/net-native-md.md)], el ejemplo genera una excepción [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) en la línea que llama al método <xref:System.Type.GetGenericTypeDefinition%2A?displayProperty=fullName>. Puede eliminar la excepción e indicar los metadatos necesarios agregando el siguiente elemento `<TypeInstantiation>` al archivo de directivas en tiempo de ejecución:  
+ Después de compilar con la cadena de herramientas de [!INCLUDE[net_native](../../../includes/net-native-md.md)], el ejemplo genera una excepción [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) en la línea que llama al método <xref:System.Type.GetGenericTypeDefinition%2A?displayProperty=nameWithType>. Puede eliminar la excepción e indicar los metadatos necesarios agregando el siguiente elemento `<TypeInstantiation>` al archivo de directivas en tiempo de ejecución:  
   
 ```xml  
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">  
@@ -127,7 +125,6 @@ Aplica la directiva de reflexión en tiempo de ejecución a un tipo genérico co
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Runtime Directives (rd.xml) Configuration File Reference (Referencia del archivo de configuración de directivas en tiempo de ejecución (rd.xml))](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)   
- [Runtime Directive Elements (Elementos de directivas en tiempo de ejecución)](../../../docs/framework/net-native/runtime-directive-elements.md)   
+ [Runtime Directives (rd.xml) Configuration File Reference (Referencia del archivo de configuración de directivas en tiempo de ejecución (rd.xml))](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
+ [Runtime Directive Elements (Elementos de directivas en tiempo de ejecución)](../../../docs/framework/net-native/runtime-directive-elements.md)  
  [Runtime Directive Policy Settings](../../../docs/framework/net-native/runtime-directive-policy-settings.md) (Configuración de directiva de la directiva en tiempo de ejecución)
-

@@ -1,104 +1,109 @@
 ---
-title: "Tutorial: Hospedar un control de Win32 en WPF | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "hospedar control Win32 en WPF"
-  - "código Win32, interoperabilidad con WPF"
+title: 'Tutorial: Hospedar un control de Win32 en WPF'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- hosting Win32 control in WPF [WPF]
+- Win32 code [WPF], WPF interoperation
 ms.assetid: a676b1eb-fc55-4355-93ab-df840c41cea0
-caps.latest.revision: 21
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 17
+caps.latest.revision: "21"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 566be72cf330f6da83987f5e693176552471f091
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Tutorial: Hospedar un control de Win32 en WPF
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] proporciona un entorno enriquecido para la creación de aplicaciones.  Sin embargo, cuando se tiene una inversión sustancial en código [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)], puede resultar más eficaz reutilizar al menos parte de ese código en la aplicación [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] en lugar de volver a escribirlo todo por completo.  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] proporciona un mecanismo sencillo para hospedar una ventana [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] en una página [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
+# <a name="walkthrough-hosting-a-win32-control-in-wpf"></a>Tutorial: Hospedar un control de Win32 en WPF
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] proporciona un entorno rico para crear aplicaciones. Sin embargo, si tiene una inversión sustancial en [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] código, puede ser más eficaz volver a usar al menos parte de ese código en su [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplicación en lugar de escribirlo completamente. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]Proporciona un mecanismo sencillo para hospedar un [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] ventana, en un [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] página.  
   
- En este tema se explica cómo crear una aplicación, [Hosting a Win32 ListBox Control in WPF Sample](http://go.microsoft.com/fwlink/?LinkID=159998), que hospeda un control de cuadro de lista de [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)].  Este procedimiento general se puede extender para hospedar cualquier ventana [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)].  
+ Este tema le guía a través de una aplicación, [hospedar un Control de cuadro de lista de Win32 en WPF Sample](http://go.microsoft.com/fwlink/?LinkID=159998), que hospeda un [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] control de cuadro de lista. Este procedimiento general se puede extender para hospedar cualquier [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] ventana.  
   
-   
   
 <a name="requirements"></a>   
-## Requisitos  
- En este tema se da por hecho que está familiarizado con la programación básica en [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] y [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)].  Para obtener una introducción básica a la programación en [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], vea [Introducción](../../../../docs/framework/wpf/getting-started/index.md).  Para obtener una introducción a la programación en [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)], puede consultar cualquiera de los numerosos libros sobre el tema, en particular *Programming Windows* escrito por Charles Petzold.  
+## <a name="requirements"></a>Requisitos  
+ Este tema supone una familiarización básica con ambos [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] y [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] de programación. Para obtener una introducción básica a [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] de programación, vea [Introducción](../../../../docs/framework/wpf/getting-started/index.md). Para obtener una introducción a [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] de programación, debe hacer referencia a cualquiera de los numerosos libros sobre el tema, en particular *Programming Windows* por Charles Petzold.  
   
- Como el ejemplo que acompaña a este tema se implementa en [!INCLUDE[TLA#tla_cshrp](../../../../includes/tlasharptla-cshrp-md.md)], se utiliza [!INCLUDE[TLA#tla_pinvoke](../../../../includes/tlasharptla-pinvoke-md.md)] para tener acceso a la [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] de [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)].  Puede ser útil tener algún conocimiento sobre [!INCLUDE[TLA2#tla_pinvoke](../../../../includes/tla2sharptla-pinvoke-md.md)], pero no esencial.  
+ Dado que el ejemplo que se incluye en este tema se implementa en [!INCLUDE[TLA#tla_cshrp](../../../../includes/tlasharptla-cshrp-md.md)], hace uso de [!INCLUDE[TLA#tla_pinvoke](../../../../includes/tlasharptla-pinvoke-md.md)] para tener acceso a la [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)]. Cierta familiaridad con [!INCLUDE[TLA2#tla_pinvoke](../../../../includes/tla2sharptla-pinvoke-md.md)] es útil, pero no es esencial.  
   
 > [!NOTE]
->  En este tema se incluyen varios ejemplos de código del ejemplo asociado.  Sin embargo, para facilitar la legibilidad, no se incluye el código de ejemplo completo.  Puede obtener o ver el código completo en [Hosting a Win32 ListBox Control in WPF Sample](http://go.microsoft.com/fwlink/?LinkID=159998).  
+>  En este tema se incluye una serie de ejemplos de código del ejemplo asociado. Sin embargo, para una mejor lectura, no se incluye el código de ejemplo completo. Puede obtener o ver el código completo de [hospedar un Control de cuadro de lista de Win32 en WPF Sample](http://go.microsoft.com/fwlink/?LinkID=159998).  
   
 <a name="basic_procedure"></a>   
-## El procedimiento básico  
- En esta sección se describe el procedimiento básico para hospedar una ventana [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] en una página de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  En las demás secciones se explican los detalles de cada paso.  
+## <a name="the-basic-procedure"></a>Procedimiento básico  
+ En esta sección se describe el procedimiento básico para hospedar una [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] ventana en un [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] página. En las secciones restantes se explican los detalles de cada paso.  
   
  El procedimiento de hospedaje básico es el siguiente:  
   
-1.  Implemente una página de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] para hospedar la ventana.  Una técnica es crear un elemento <xref:System.Windows.Controls.Border> para reservar una sección de la página de la ventana hospedada.  
+1.  Implemente un [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] página para hospedar la ventana. Una de estas técnicas consiste en crear un <xref:System.Windows.Controls.Border> elemento que se va a reservar una sección de la página de la ventana hospedada.  
   
-2.  Implemente una clase para hospedar el control que se hereda de <xref:System.Windows.Interop.HwndHost>.  
+2.  Implementar una clase para hospedar el control que se hereda de <xref:System.Windows.Interop.HwndHost>.  
   
-3.  En esta clase, invalide el miembro <xref:System.Windows.Interop.HwndHost.BuildWindowCore%2A> de la clase <xref:System.Windows.Interop.HwndHost>.  
+3.  En esa clase, invalide el <xref:System.Windows.Interop.HwndHost> miembro de la clase <xref:System.Windows.Interop.HwndHost.BuildWindowCore%2A>.  
   
-4.  Cree la ventana hospedada como un elemento secundario de la ventana que contiene la página de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  Aunque la programación de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] convencional no necesita utilizar esta ventana explícitamente, la página de hospedaje es una ventana con un controlador \(HWND\).  Recibirá la página HWND a través del parámetro `hwndParent` del método <xref:System.Windows.Interop.HwndHost.BuildWindowCore%2A>.  La ventana hospedada se debe crear como un elemento secundario de HWND.  
+4.  Crear la ventana hospedada como un elemento secundario de la ventana que contiene la [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] página. Aunque convencional [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] no es necesario que la programación de manera explícita que use del mismo, la página de hospedaje es una ventana con un identificador (HWND). Aparecerá la página HWND a través de la `hwndParent` parámetro de la <xref:System.Windows.Interop.HwndHost.BuildWindowCore%2A> método. La ventana hospedada debe crearse como un elemento secundario del HWND.  
   
-5.  Una vez creada la ventana host, devuelva el HWND de la ventana hospedada.  Si desea hospedar uno o varios controles [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)], normalmente creará una ventana host como un elemento secundario de HWND y convertirá los controles en elementos secundarios de esa ventana host.  Alojar los controles en una ventana host es un modo simple de permitir que la página [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] reciba las notificaciones de los controles y de abordar algunos de los problemas de [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] con las notificaciones a través de los límites de HWND.  
+5.  Una vez que haya creado la ventana host, devuelva el HWND de la ventana hospedada. Si desea hospedar uno o varios [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] controles, normalmente crea una ventana host como un elemento secundario de HWND y lo convierte los elementos secundarios de controles de esa ventana host. Ajuste los controles en una ventana host proporciona una manera sencilla para su [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] página para recibir notificaciones de los controles que se tratan algunas determinado [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] problemas con las notificaciones a través del límite HWND.  
   
-6.  Controle algunos de los mensajes enviados a la ventana host, como las notificaciones de los controles secundarios.  Existen dos formas de lograr esto.  
+6.  Controle los mensajes seleccionados que se envían a la ventana host, como las notificaciones de los controles secundarios. Existen dos formas de lograr esto.  
   
-    -   Si prefiere controlar los mensajes en la clase de hospedaje, invalide el método <xref:System.Windows.Interop.HwndHost.WndProc%2A> de la clase <xref:System.Windows.Interop.HwndHost>.  
+    -   Si desea controlar los mensajes de la clase de hospedaje, invalide el <xref:System.Windows.Interop.HwndHost.WndProc%2A> método de la <xref:System.Windows.Interop.HwndHost> clase.  
   
-    -   Si prefiere que [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] controle los mensajes, controle el evento <xref:System.Windows.Interop.HwndHost.MessageHook> de la clase <xref:System.Windows.Interop.HwndHost> en el código subyacente.  Este evento se produce para cada mensaje recibido por la ventana hospedada.  Si elige esta opción, debe invalidar igualmente <xref:System.Windows.Interop.HwndHost.WndProc%2A>, pero sólo necesita una implementación mínima.  
+    -   Si prefiere tener la [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] controlar los mensajes, controlar el <xref:System.Windows.Interop.HwndHost> clase <xref:System.Windows.Interop.HwndHost.MessageHook> evento en el código subyacente. Este evento se produce para cada mensaje recibido por la ventana hospedada. Si elige esta opción, debe invalidar <xref:System.Windows.Interop.HwndHost.WndProc%2A>, pero sólo necesita una implementación mínima.  
   
-7.  Invalide los métodos <xref:System.Windows.Interop.HwndHost.DestroyWindowCore%2A> y <xref:System.Windows.Interop.HwndHost.WndProc%2A> de <xref:System.Windows.Interop.HwndHost>.  Debe invalidar estos métodos para cumplir el contrato de <xref:System.Windows.Interop.HwndHost>, pero es posible que sólo necesite proporcionar una implementación mínima.  
+7.  Invalidar el <xref:System.Windows.Interop.HwndHost.DestroyWindowCore%2A> y <xref:System.Windows.Interop.HwndHost.WndProc%2A> métodos de <xref:System.Windows.Interop.HwndHost>. Debe invalidar estos métodos para satisfacer el <xref:System.Windows.Interop.HwndHost> contrato, pero solo puede necesitar proporcionar una implementación mínima.  
   
-8.  En su archivo de código subyacente, cree una instancia de la clase que hospeda los controles y conviértala en un elemento secundario del elemento <xref:System.Windows.Controls.Border> que va a hospedar la ventana.  
+8.  En el archivo de código subyacente, cree una instancia de la clase que hospeda los controles y conviértala en un elemento secundario de la <xref:System.Windows.Controls.Border> elemento que se va a hospedar la ventana.  
   
-9. Comuníquese con la ventana hospedada enviándole mensajes [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] y controlando los mensajes de sus ventanas secundarias, como las notificaciones enviadas por los controles.  
+9. Comunicarse con la ventana hospedada enviándole [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] mensajes y mensajes de control de sus ventanas secundarias, como las notificaciones enviadas por los controles.  
   
 <a name="page_layout"></a>   
-## Implementar el diseño de página  
- El diseño de la página [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] que hospeda el control ListBox consta de dos regiones.  El margen izquierdo de la página hospeda varios controles [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] que proporcionan una [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] que le permite manipular el control [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)].  La esquina superior derecha de la página tiene una región cuadrada para el control ListBox hospedado.  
+## <a name="implement-the-page-layout"></a>Implementar el diseño de página  
+ El diseño de la [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] página que hospeda el ListBox Control consta de dos regiones. El lado izquierdo de la página hospeda varios [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] controles que proporcionan un [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] que permite manipular el [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] control. La esquina superior derecha de la página tiene una región cuadrada para el control ListBox.  
   
- El código para implementar este diseño es bastante simple.  El elemento raíz es un <xref:System.Windows.Controls.DockPanel> que tiene dos elementos secundarios.  El primero es un elemento <xref:System.Windows.Controls.Border> que hospeda el control ListBox.  Ocupa un espacio cuadrado de 200 x 200 en la esquina superior derecha de la página.  El segundo es un elemento <xref:System.Windows.Controls.StackPanel> que contiene un conjunto de los controles [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] que muestran información y le permiten manipular el control ListBox estableciendo las propiedades de interoperación expuestas.  Para cada uno de los elementos que son elementos secundarios de <xref:System.Windows.Controls.StackPanel>, consulte el material de referencia de los distintos elementos utilizados para obtener detalles sobre qué son estos elemento y qué hacen. Estos elementos se muestran en el código de ejemplo siguiente, pero no se ofrece una explicación de ellos \(no son necesarios para el modelo básico de interoperación; se proporcionan para agregar interactividad al ejemplo\).  
+ El código para implementar este diseño es muy sencillo. El elemento raíz es un <xref:System.Windows.Controls.DockPanel> que tiene dos elementos secundarios. El primero es un <xref:System.Windows.Controls.Border> elemento que hospeda el Control de cuadro de lista. Ocupa un cuadrado de 200x200 en la esquina superior derecha de la página. El segundo es un <xref:System.Windows.Controls.StackPanel> elemento que contiene un conjunto de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] controles que muestran información y permiten manipular el ListBox Control estableciendo propiedades de interoperación exponen. Para cada uno de los elementos que son elementos secundarios de la <xref:System.Windows.Controls.StackPanel>, consulte el material de referencia para los distintos elementos utilizados para obtener más información sobre estos elementos son y qué hacen, estos se muestran en el ejemplo de código siguiente, pero no estará explicados aquí (básica modelo de interoperación no requiere ninguna de ellas, que se proporcionan para agregar parte de esta interactividad al ejemplo).  
   
- [!code-xml[WPFHostingWin32Control#WPFUI](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFHostingWin32Control/CSharp/Page1.xaml#wpfui)]  
+ [!code-xaml[WPFHostingWin32Control#WPFUI](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFHostingWin32Control/CSharp/Page1.xaml#wpfui)]  
   
 <a name="host_class"></a>   
-## Implementar una clase para hospedar el control Microsoft Win32  
- El núcleo de este ejemplo es la clase que realmente hospeda el control, ControlHost.cs.  Se hereda de <xref:System.Windows.Interop.HwndHost>.  El constructor toma dos parámetros, el alto y el ancho, que se corresponden con el alto y ancho del elemento <xref:System.Windows.Controls.Border> que hospeda el control ListBox.  Estos valores se utilizan después para garantizar que el tamaño del control coincide con el elemento <xref:System.Windows.Controls.Border>.  
+## <a name="implement-a-class-to-host-the-microsoft-win32-control"></a>Implementar una clase para hospedar el control de Microsoft Win32  
+ El núcleo de este ejemplo es la clase que realmente hospeda el control, ControlHost.cs. Hereda de <xref:System.Windows.Interop.HwndHost>. El constructor toma dos parámetros, alto y ancho, que se corresponde con el alto y ancho de la <xref:System.Windows.Controls.Border> elemento que hospeda el control de cuadro de lista. Estos valores se usan más adelante para asegurarse de que el tamaño del control coincide con el <xref:System.Windows.Controls.Border> elemento.  
   
  [!code-csharp[WPFHostingWin32Control#ControlHostClass](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFHostingWin32Control/CSharp/ControlHost.cs#controlhostclass)]
  [!code-vb[WPFHostingWin32Control#ControlHostClass](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFHostingWin32Control/VisualBasic/ControlHost.vb#controlhostclass)]  
   
- También hay un conjunto de constantes.  Estas constantes se obtienen principalmente de Winuser.h y permiten utilizar nombres convencionales al llamar a las funciones [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)].  
+ Hay también un conjunto de constantes. Estas constantes se obtienen principalmente de Winuser.h y le permiten utilizar nombres convencionales al llamar a [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] funciones.  
   
  [!code-csharp[WPFHostingWin32Control#ControlHostConstants](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFHostingWin32Control/CSharp/ControlHost.cs#controlhostconstants)]
  [!code-vb[WPFHostingWin32Control#ControlHostConstants](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFHostingWin32Control/VisualBasic/ControlHost.vb#controlhostconstants)]  
   
 <a name="buildwindowcore"></a>   
-### Invalidar BuildWindowCore para crear la ventana Microsoft Win32  
- Este método se invalida para crear la ventana [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] que se hospedará en la página y realizar la conexión entre la ventana y la página.  Como este ejemplo implica hospedar un control ListBox Control, se crean dos ventanas.  La primera es la ventana que se hospeda realmente en la página [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  El control ListBox se crea como un elemento secundario de esa ventana.  
+### <a name="override-buildwindowcore-to-create-the-microsoft-win32-window"></a>Invalidar BuildWindowCore para crear la ventana de Microsoft Win32  
+ Invalide este método para crear el [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] ventana que se hospedará en la página y realizar la conexión entre la ventana y la página. Dado que este ejemplo implica hospedar un control ListBox, se crean dos ventanas. La primera es la ventana que se hospeda realmente en la [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] página. El control ListBox se crea como un elemento secundario de esa ventana.  
   
- La razón de este enfoque es simplificar el proceso de recepción de notificaciones desde el control.  La clase <xref:System.Windows.Interop.HwndHost> permite procesar los mensajes enviados a la ventana hospedada.  Si hospeda directamente un control [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)], recibirá los mensajes enviados al bucle de mensajes interno del control.  Puede mostrar el control y enviarle mensajes, pero no recibirá las notificaciones que el control envía a su ventana primaria.  Esto significa, entre otras cosas, que no hay forma de detectar cuándo el usuario interactúa con el control.  En lugar de ello, cree una ventana host y convierta el control en un elemento secundario de esa ventana.  Esto le permite procesar los mensajes de la ventana host incluidas las notificaciones enviadas a ella por el control.  Por comodidad, como la ventana host es básicamente un contenedor simple del control, el paquete recibirá el nombre de control ListBox.  
+ El motivo de esto es simplificar el proceso de recepción de notificaciones desde el control. La <xref:System.Windows.Interop.HwndHost> clase le permite procesar los mensajes enviados a la ventana que lo hospeda. Si hospeda un [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] controlar directamente, recibirá los mensajes enviados al bucle de mensajes interno del control. Puede mostrar el control y enviarle mensajes, pero no recibirá las notificaciones que el control envíe a su ventana primaria. Entre otras cosas, esto significa que no hay manera de detectar en qué momento el usuario interactúa con el control. Por eso, debe crear una ventana host y convertir el control en un elemento secundario de esa ventana. Esto le permite procesar los mensajes para la ventana host, incluidas las notificaciones que el control envía a la ventana. Para mayor comodidad, y dado que la ventana host es poco más que un simple contenedor del control, se hará referencia al paquete como un control ListBox.  
   
 <a name="create_the_window_and_listbox"></a>   
-#### Crear la ventana host y el control ListBox  
- Puede utilizar [!INCLUDE[TLA2#tla_pinvoke](../../../../includes/tla2sharptla-pinvoke-md.md)] para crear una ventana host para el control creando y registrando una clase de ventana, etc.  Sin embargo, un procedimiento mucho más simple es crear una ventana con la clase de ventana "estática" predefinida.  De esta forma, obtendrá el procedimiento de la ventana que necesita para recibir las notificaciones del control, sin tener apenas que escribir código.  
+#### <a name="create-the-host-window-and-listbox-control"></a>Crear la ventana host y el control ListBox  
+ Puede usar [!INCLUDE[TLA2#tla_pinvoke](../../../../includes/tla2sharptla-pinvoke-md.md)] para crear una ventana de host para el control creando y registrando una clase de ventana y así sucesivamente. Aun así, un enfoque mucho más sencillo consiste en crear una ventana con la clase de ventana "estática" predefinida. Esto le proporciona el procedimiento de ventana que necesita para recibir notificaciones del control y requiere una codificación mínima.  
   
- El HWND del control se expone a través de una propiedad de sólo lectura, que la página host puede utilizar para enviar mensajes al control.  
+ El HWND del control se expone a través de una propiedad de solo lectura, de modo que la página host pueda usarla para enviar mensajes al control.  
   
  [!code-csharp[WPFHostingWin32Control#IntPtrProperty](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFHostingWin32Control/CSharp/ControlHost.cs#intptrproperty)]
  [!code-vb[WPFHostingWin32Control#IntPtrProperty](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFHostingWin32Control/VisualBasic/ControlHost.vb#intptrproperty)]  
   
- El control ListBox se crea como un elemento secundario de la ventana host.  El alto y ancho de ambas ventanas se establecen en los valores pasados al constructor, descritos anteriormente.  Esto garantiza que el tamaño de la ventana host y el control sea idéntico al del área reservada en la página.  Una vez creadas las ventanas, el ejemplo devuelve un objeto <xref:System.Runtime.InteropServices.HandleRef> que contiene el HWND de la ventana host.  
+ El control ListBox se crea como un elemento secundario de la ventana host. El alto y el ancho de ambas ventanas se establecen en los valores pasados al constructor, como se ha descrito anteriormente. Esto garantiza que el tamaño de la ventana host y del control sea idéntico al área reservada en la página.  Una vez creadas las ventanas, el ejemplo devuelve una <xref:System.Runtime.InteropServices.HandleRef> objeto que contiene el HWND de la ventana host.  
   
  [!code-csharp[WPFHostingWin32Control#BuildWindowCore](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFHostingWin32Control/CSharp/ControlHost.cs#buildwindowcore)]
  [!code-vb[WPFHostingWin32Control#BuildWindowCore](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFHostingWin32Control/VisualBasic/ControlHost.vb#buildwindowcore)]  
@@ -107,8 +112,8 @@ caps.handback.revision: 17
  [!code-vb[WPFHostingWin32Control#BuildWindowCoreHelper](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFHostingWin32Control/VisualBasic/ControlHost.vb#buildwindowcorehelper)]  
   
 <a name="destroywindow_wndproc"></a>   
-### Implementar DestroyWindow y WndProc  
- Además de <xref:System.Windows.Interop.HwndHost.BuildWindowCore%2A>, debe invalidar también los métodos <xref:System.Windows.Interop.HwndHost.WndProc%2A> y <xref:System.Windows.Interop.HwndHost.DestroyWindowCore%2A> de <xref:System.Windows.Interop.HwndHost>.  En este ejemplo, los mensajes del control se controlan mediante el controlador <xref:System.Windows.Interop.HwndHost.MessageHook>, por lo que la implementación de <xref:System.Windows.Interop.HwndHost.WndProc%2A> y <xref:System.Windows.Interop.HwndHost.DestroyWindowCore%2A> es mínima.  En el caso de <xref:System.Windows.Interop.HwndHost.WndProc%2A>, establezca `handled` en `false` para indicar que el mensaje no se ha controlado y devuelva 0.  Para <xref:System.Windows.Interop.HwndHost.DestroyWindowCore%2A>, simplemente destruya la ventana.  
+### <a name="implement-destroywindow-and-wndproc"></a>Implementar DestroyWindow y WndProc  
+ Además <xref:System.Windows.Interop.HwndHost.BuildWindowCore%2A>, también debe invalidar el <xref:System.Windows.Interop.HwndHost.WndProc%2A> y <xref:System.Windows.Interop.HwndHost.DestroyWindowCore%2A> métodos de la <xref:System.Windows.Interop.HwndHost>. En este ejemplo, se administran los mensajes para el control con el <xref:System.Windows.Interop.HwndHost.MessageHook> controlador, por lo tanto, la implementación de <xref:System.Windows.Interop.HwndHost.WndProc%2A> y <xref:System.Windows.Interop.HwndHost.DestroyWindowCore%2A> es mínimo. En el caso de <xref:System.Windows.Interop.HwndHost.WndProc%2A>, establezca `handled` a `false` para indicar que el mensaje no se ha controlado y devuelva 0. Para <xref:System.Windows.Interop.HwndHost.DestroyWindowCore%2A>, simplemente destruya la ventana.  
   
  [!code-csharp[WPFHostingWin32Control#WndProcDestroy](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFHostingWin32Control/CSharp/ControlHost.cs#wndprocdestroy)]
  [!code-vb[WPFHostingWin32Control#WndProcDestroy](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFHostingWin32Control/VisualBasic/ControlHost.vb#wndprocdestroy)]  
@@ -117,13 +122,13 @@ caps.handback.revision: 17
  [!code-vb[WPFHostingWin32Control#WndProcDestroyHelper](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFHostingWin32Control/VisualBasic/ControlHost.vb#wndprocdestroyhelper)]  
   
 <a name="host_the_control"></a>   
-## Hospedar el control en la página  
- Para hospedar el control en la página, primero debe crear una nueva instancia de la clase `ControlHost`.  Pase el alto y ancho del elemento de esquina que contiene el control \(`ControlHostElement`\) al constructor `ControlHost`.  De esta forma, se asegurará de que el control ListBox tiene el tamaño correcto.  A continuación, hospede el control en la página asignando el objeto `ControlHost` a la propiedad <xref:System.Windows.Controls.Decorator.Child%2A> del <xref:System.Windows.Controls.Border> host.  
+## <a name="host-the-control-on-the-page"></a>Hospedar el control en la página  
+ Para hospedar el control en la página, primero se crea una nueva instancia de la `ControlHost` clase. Pase el alto y ancho del elemento de borde que contiene el control (`ControlHostElement`) a la `ControlHost` constructor. Esto garantiza que el control ListBox tenga el tamaño correcto. A continuación, hospedar el control en la página mediante la asignación de la `ControlHost` el objeto a la <xref:System.Windows.Controls.Decorator.Child%2A> propiedad del host <xref:System.Windows.Controls.Border>.  
   
- En el ejemplo se asocia un controlador al evento <xref:System.Windows.Interop.HwndHost.MessageHook> de `ControlHost` para recibir los mensajes del control.  Este evento se provoca para cada mensaje enviado a la ventana hospedada.  En este caso, éstos son los mensajes enviados a la ventana que contiene el control ListBox real, incluidas las notificaciones del control.  En el ejemplo se llama a SendMessage para obtener información del control y modificar su contenido.  Los detalles sobre cómo la página se comunica con el control se describen en la sección siguiente.  
+ El ejemplo asocia un controlador para el <xref:System.Windows.Interop.HwndHost.MessageHook> eventos de la `ControlHost` para recibir mensajes desde el control. Este evento se genera para cada mensaje enviado a la ventana hospedada. En este caso, estos son los mensajes enviados a la ventana que contiene el control ListBox real, incluidas las notificaciones del control. En el ejemplo se llama a SendMessage para obtener información del control y modificar su contenido. En la siguiente sección se describe en detalle la manera en que la página se comunica con el control.  
   
 > [!NOTE]
->  Observe que hay dos declaraciones [!INCLUDE[TLA2#tla_pinvoke](../../../../includes/tla2sharptla-pinvoke-md.md)] para SendMessage.  Esto es necesario porque una utiliza el parámetro `wParam` para pasar una cadena y la otra lo utiliza para pasar un valor entero.  Necesita una declaración distinta para cada firma con el fin de garantizar que las referencias a los datos se calculan correctamente.  
+>  Tenga en cuenta que hay dos [!INCLUDE[TLA2#tla_pinvoke](../../../../includes/tla2sharptla-pinvoke-md.md)] declaraciones para SendMessage. Esto es necesario porque una utiliza el `wParam` parámetro que se pasa una cadena y la otra lo utiliza para pasar un entero. Necesita una declaración distinta para cada firma para asegurarse de que los datos se serializan correctamente.  
   
  [!code-csharp[WPFHostingWin32Control#HostWindowClass](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFHostingWin32Control/CSharp/Page1.xaml.cs#hostwindowclass)]
  [!code-vb[WPFHostingWin32Control#HostWindowClass](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFHostingWin32Control/VisualBasic/Page1.xaml.vb#hostwindowclass)]  
@@ -132,33 +137,33 @@ caps.handback.revision: 17
  [!code-vb[WPFHostingWin32Control#ControlMsgFilterSendMessage](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFHostingWin32Control/VisualBasic/Page1.xaml.vb#controlmsgfiltersendmessage)]  
   
 <a name="communication"></a>   
-## Implementar la comunicación entre el control y la página  
- El control se manipula enviándole mensajes [!INCLUDE[TLA2#tla_win](../../../../includes/tla2sharptla-win-md.md)].  El control le indica cuándo el usuario interactúa con él enviando notificaciones a su ventana host.  En el ejemplo [Hosting a Win32 ListBox Control in WPF Sample](http://go.microsoft.com/fwlink/?LinkID=159998) se incluye una interfaz de usuario que proporciona varios ejemplos sobre cómo funciona esto:  
+## <a name="implement-communication-between-the-control-and-the-page"></a>Implementar la comunicación entre el control y la página  
+ Manipular el control mediante su envío [!INCLUDE[TLA2#tla_win](../../../../includes/tla2sharptla-win-md.md)] mensajes. El control le notifica en qué momento el usuario interactúa con él mediante el envío de notificaciones a la ventana host. El [hospedar un Control de cuadro de lista de Win32 en WPF Sample](http://go.microsoft.com/fwlink/?LinkID=159998) ejemplo incluye una interfaz de usuario que proporciona varios ejemplos de cómo funciona esto:  
   
--   Asocie un elemento a la lista.  
+-   Anexar un elemento a la lista  
   
--   Elimine el elemento seleccionado de la lista  
+-   Eliminar el elemento seleccionado de la lista  
   
--   Muestre el texto del elemento actualmente seleccionado.  
+-   Mostrar el texto del elemento actualmente seleccionado  
   
--   Muestre el número de elementos de la lista.  
+-   Mostrar el número de elementos de la lista  
   
- El usuario puede seleccionar también un elemento del cuadro de lista haciendo clic en él, como ocurre en cualquier aplicación [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] convencional.  Los datos mostrados se actualizan cada vez que el usuario cambia el estado del cuadro de lista seleccionándolo, agregando o anexando un elemento.  
+ El usuario también puede seleccionar un elemento en el cuadro de lista haciendo clic en él, tal como haría con un convencional [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] aplicación. Los datos mostrados se actualizan cada vez que el usuario cambia el estado del cuadro de lista al seleccionar, agregar o anexar un elemento.  
   
- Para anexar elementos, envíe un mensaje LB\_ADDSTRING al cuadro de lista.  Para eliminar elementos, envíe LB\_GETCURSEL para obtener el índice de la selección actual y, después, LB\_DELETESTRING para eliminar el elemento.  En el ejemplo se envía también LB\_GETCOUNT y se utiliza el valor devuelto para actualizar la pantalla que muestra el número de elementos.  Ambas instancias de SendMessage utilizan una de las declaraciones [!INCLUDE[TLA2#tla_pinvoke](../../../../includes/tla2sharptla-pinvoke-md.md)] descritas en la sección anterior.  
+ Para anexar elementos, envíe al cuadro de lista un mensaje LB_ADDSTRING. Si quiere eliminar elementos, envíe LB_GETCURSEL para obtener el índice de la selección actual y, después, LB_DELETESTRING para eliminar el elemento. En el ejemplo también se envía LB_GETCOUNT y se usa el valor devuelto para actualizar la pantalla que muestra el número de elementos. Ambas instancias de SendMessage usan uno de los [!INCLUDE[TLA2#tla_pinvoke](../../../../includes/tla2sharptla-pinvoke-md.md)] declaraciones descritas en la sección anterior.  
   
  [!code-csharp[WPFHostingWin32Control#AppendDeleteText](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFHostingWin32Control/CSharp/Page1.xaml.cs#appenddeletetext)]
  [!code-vb[WPFHostingWin32Control#AppendDeleteText](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFHostingWin32Control/VisualBasic/Page1.xaml.vb#appenddeletetext)]  
   
- Cuando el usuario selecciona un elemento que cambia su selección, el control se lo notifica a la ventana host enviándole un mensaje WM\_COMMAND, que provoca el evento <xref:System.Windows.Interop.HwndHost.MessageHook> para la página.  El controlador recibe la misma información que el procedimiento de la ventana principal de la ventana host.  Pasa también una referencia a un valor booleano, `handled`.  `handled` se establece en `true` para indicar que se ha controlado el mensaje, y ya no hace falta más procesamiento.  
+ Cuando el usuario selecciona un elemento o cambia su selección, el control notifica a la ventana de host mediante el envío de un mensaje WM_COMMAND, que provoca la <xref:System.Windows.Interop.HwndHost.MessageHook> eventos de la página. El controlador recibe la misma información que el procedimiento de ventana principal de la ventana host. También pasa una referencia a un valor booleano, `handled`. Establece `handled` a `true` para indicar que ha controlado el mensaje y no es necesario ningún procesamiento adicional.  
   
- WM\_COMMAND se envía por varias razones, por lo que debe examinar el identificador de la notificación para determinar si es un evento que desea controlar.  El identificador se incluye en los bytes más significativos del parámetro `wParam`.  Como [!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)] no tiene una macro HIWORD, en el ejemplo se utilizan operadores bit a bit para extraer el identificador.  Si el usuario ha realizado o cambiado su selección, el identificador será LBN\_SELCHANGE.  
+ WM_COMMAND se envía por diversas razones, por lo que debe examinar el identificador de la notificación para determinar si se trata de un evento que quiere controlar. El identificador se encuentra en los bytes más significativos de la `wParam` parámetro. Puesto que [!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)] does no tiene una macro HIWORD, el ejemplo usa los operadores bit a bit para extraer el identificador. Si el usuario ha realizado su selección o la ha cambiado, el identificador será LBN_SELCHANGE.  
   
- Cuando se recibe LBN\_SELCHANGE, el ejemplo obtiene el índice del elemento seleccionado enviando un mensaje LB\_GETCURSEL al control.  Para obtener el texto, primero creará <xref:System.Text.StringBuilder>.  A continuación, enviará un mensaje LB\_GETTEXT al control.  Pase el objeto <xref:System.Text.StringBuilder> vacío como parámetro `wParam`.  Cuando SendMessage termine de procesarse, <xref:System.Text.StringBuilder> contendrá el texto del elemento seleccionado.  Este uso de SendMessage requiere una nueva declaración [!INCLUDE[TLA2#tla_pinvoke](../../../../includes/tla2sharptla-pinvoke-md.md)].  
+ Cuando se recibe LBN_SELCHANGE, el ejemplo obtiene el índice del elemento seleccionado mediante el envío de un mensaje LB_GETCURSEL al control. Para obtener el texto, cree primero un <xref:System.Text.StringBuilder>. Después, envíe al control un mensaje LB_GETTEXT. Pasar el vacío <xref:System.Text.StringBuilder> objeto como el `wParam` parámetro. Cuando se devuelve SendMessage, el <xref:System.Text.StringBuilder> contendrá el texto del elemento seleccionado. Este uso de SendMessage todavía requiere otro [!INCLUDE[TLA2#tla_pinvoke](../../../../includes/tla2sharptla-pinvoke-md.md)] declaración.  
   
- Por último, establezca `handled` en `true` para indicar que el mensaje se ha controlado.  
+ Por último, establezca `handled` a `true` para indicar que se ha administrado el mensaje.  
   
-## Vea también  
- <xref:System.Windows.Interop.HwndHost>   
- [Interoperabilidad de WPF y Win32](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md)   
- [Tutorial: Introducción a WPF](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)
+## <a name="see-also"></a>Vea también  
+ <xref:System.Windows.Interop.HwndHost>  
+ [Interoperabilidad de WPF y Win32](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md)  
+ [Tutorial: Mi primera aplicación de escritorio WPF](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)

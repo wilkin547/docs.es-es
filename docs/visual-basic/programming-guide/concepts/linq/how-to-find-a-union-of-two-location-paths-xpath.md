@@ -1,41 +1,36 @@
 ---
-title: "Cómo: buscar la unión de dos rutas de ubicación (XPath-LINQ to XML) (Visual Basic) | Documentos de Microsoft"
+title: "Cómo: buscar la unión de dos rutas de acceso de ubicación (XPath-LINQ to XML) (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: c82c09b4-cb0a-47ec-8cc3-a124144c2788
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 90fe1bd9a7992c5e3f4c57f5596a88e5be506917
-ms.contentlocale: es-es
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: c15ef409500a07d922563309301ea8f1442feee6
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="how-to-find-a-union-of-two-location-paths-xpath-linq-to-xml-visual-basic"></a>Cómo: buscar la unión de dos rutas de ubicación (XPath-LINQ to XML) (Visual Basic)
+# <a name="how-to-find-a-union-of-two-location-paths-xpath-linq-to-xml-visual-basic"></a>Cómo: buscar la unión de dos rutas de acceso de ubicación (XPath-LINQ to XML) (Visual Basic)
 XPath permite buscar la unión de los resultados de dos rutas de ubicación XPath.  
   
  La expresión XPath es:  
   
  `//Category|//Price`  
   
- Puede conseguir los mismos resultados mediante la <xref:System.Linq.Enumerable.Concat%2A>operador de consulta estándar.</xref:System.Linq.Enumerable.Concat%2A>  
+ Puede conseguir los mismos resultados usando el operador de consulta estándar <xref:System.Linq.Enumerable.Concat%2A>.  
   
 ## <a name="example"></a>Ejemplo  
- Este ejemplo busca todos los elementos `Category` y todos los elementos `Price` y los concatena en una única recopilación. Tenga en cuenta que el [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] consulta llama <xref:System.Xml.Linq.Extensions.InDocumentOrder%2A>para ordenar los resultados.</xref:System.Xml.Linq.Extensions.InDocumentOrder%2A> Los resultados de la evaluación de la expresión XPath también están en el orden del documento.  
+ Este ejemplo busca todos los elementos `Category` y todos los elementos `Price` y los concatena en una única recopilación. Tenga en cuenta que la consulta [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] llama a <xref:System.Xml.Linq.Extensions.InDocumentOrder%2A> para ordenar los resultados. Los resultados de la evaluación de la expresión XPath también están en el orden del documento.  
   
- Este ejemplo utiliza el siguiente documento XML: [archivo XML de muestra: datos numéricos (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md).  
+ En este ejemplo se usa el siguiente documento XML: [Archivo XML de muestra: Datos numéricos (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md).  
   
 ```vb  
 Dim data As XDocument = XDocument.Load("Data.xml")  
@@ -81,4 +76,3 @@ Results are identical
   
 ## <a name="see-also"></a>Vea también  
  [LINQ to XML para usuarios de XPath (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
-

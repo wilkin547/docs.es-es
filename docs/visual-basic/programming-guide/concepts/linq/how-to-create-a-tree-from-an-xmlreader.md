@@ -1,38 +1,30 @@
 ---
-title: "Cómo: crear un árbol de XmlReader (Visual Basic) | Documentos de Microsoft"
+title: "Cómo: crear un árbol de un objeto XmlReader (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 6de683d8-177d-402b-b0de-d0539f1ce5d8
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: a8dff4e518d8850b4050389e5677ac81ecd1e074
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 4ceae7c2bee85e7b368322c8ba195dea9feff672
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="how-to-create-a-tree-from-an-xmlreader-visual-basic"></a>Cómo: crear un árbol de XmlReader (Visual Basic)
-Este tema muestra cómo crear un árbol XML directamente desde un <xref:System.Xml.XmlReader>.</xref:System.Xml.XmlReader> Para crear un <xref:System.Xml.Linq.XElement>de un <xref:System.Xml.XmlReader>, debe colocar el <xref:System.Xml.XmlReader>en un nodo element.</xref:System.Xml.XmlReader> </xref:System.Xml.XmlReader> </xref:System.Xml.Linq.XElement> El <xref:System.Xml.XmlReader>omitirá los comentarios y el procesamiento de instrucciones, pero si el <xref:System.Xml.XmlReader>se coloca en un nodo de texto, se producirá un error.</xref:System.Xml.XmlReader> </xref:System.Xml.XmlReader> Para evitar tales errores, coloque siempre <xref:System.Xml.XmlReader>en un elemento antes de crear un árbol XML desde <xref:System.Xml.XmlReader>.</xref:System.Xml.XmlReader> </xref:System.Xml.XmlReader>  
+# <a name="how-to-create-a-tree-from-an-xmlreader-visual-basic"></a>Cómo: crear un árbol de un objeto XmlReader (Visual Basic)
+En este tema se muestra cómo crear un árbol XML directamente de <xref:System.Xml.XmlReader>. Para crear un <xref:System.Xml.Linq.XElement> de <xref:System.Xml.XmlReader>, debe colocar el <xref:System.Xml.XmlReader> en un nodo de elemento. <xref:System.Xml.XmlReader> omitirá los comentarios y las instrucciones de procesamiento, pero si <xref:System.Xml.XmlReader> se coloca en un nodo de texto, se producirá un error. Para evitar tales errores, coloque siempre <xref:System.Xml.XmlReader> en un elemento ante de crear un árbol XML de <xref:System.Xml.XmlReader>.  
   
 ## <a name="example"></a>Ejemplo  
- Este ejemplo utiliza el siguiente documento XML: [archivo XML de ejemplo: libros (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md).  
+ En este ejemplo se usa el siguiente documento XML: [Archivo XML de muestra: Libros (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md).  
   
- El siguiente código crea un objeto `T:System.Xml.XmlReader` y lee nodos hasta que encuentra el primer nodo de elemento. A continuación, carga el <xref:System.Xml.Linq.XElement>objeto.</xref:System.Xml.Linq.XElement>  
+ El siguiente código crea un objeto `T:System.Xml.XmlReader` y lee nodos hasta que encuentra el primer nodo de elemento. A continuación, carga el objeto <xref:System.Xml.Linq.XElement>.  
   
 ```vb  
 Dim r As XmlReader = XmlReader.Create("books.xml")  

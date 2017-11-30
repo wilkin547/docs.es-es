@@ -1,73 +1,76 @@
 ---
-title: "Eventos de cambio de propiedades | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "eventos de cambio [WPF], propiedad"
-  - "crear desencadenadores de propiedad [WPF]"
-  - "propiedades de dependencia [WPF], eventos de cambio"
-  - "eventos [WPF], cambio en los valores de propiedad"
-  - "identificar eventos de cambio de propiedad [WPF]"
-  - "eventos de cambio de propiedad [WPF]"
-  - "eventos de cambio de propiedad [WPF], tipos de"
-  - "desencadenadores de propiedad [WPF]"
-  - "desencadenadores de propiedad [WPF], definición de"
-  - "cambios en el valor de propiedad [WPF]"
+title: Eventos de cambio de propiedades
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- dependency properties [WPF], change events
+- property value changes [WPF]
+- change events [WPF], property
+- events [WPF], change in property values
+- creating property triggers [WPF]
+- property change events [WPF], types of
+- property change events [WPF]
+- property triggers [WPF]
+- identifying changed property events [WPF]
+- property triggers [WPF], definition of
 ms.assetid: 0a7989df-9674-4cc1-bc50-5d8ef5d9c055
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: e415d5ab46bc354198135fc4e0902e3017923e20
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Eventos de cambio de propiedades
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] define varios eventos que se provocan en respuesta a un cambio en el valor de una propiedad.  A menudo, la propiedad es una [propiedad de dependencia](GTMT).  A veces, el propio evento es un [evento enrutado](GTMT) y, otras, un evento [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] estándar.  La definición del evento varía, dependiendo del escenario, porque algunos cambios de propiedad deben enrutarse preferentemente a través de un árbol de elementos, mientras que otros cambios de propiedad afectan tan sólo al objeto cuya propiedad se modifica.  
+# <a name="property-change-events"></a>Eventos de cambio de propiedades
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] define varios eventos que se producen como respuesta a un cambio en el valor de una propiedad. A menudo, la propiedad es una propiedad de dependencia. A veces, el propio evento es un evento enrutado y, otras, es un evento [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] estándar. La definición del evento varía según el escenario, porque algunos cambios de propiedad deben enrutarse a través de un árbol de elementos, mientras que otros cambios de propiedad, generalmente, solo son de interés para el objeto en el que se modifica la propiedad.  
   
-## Identificar un evento de cambio de propiedad  
- No todos los eventos que comunican un cambio de propiedad se identifican de manera explícita, ya sea mediante un modelo de firma o de denominación.  En general, en la descripción del evento de la documentación del [!INCLUDE[TLA#tla_sdk](../../../../includes/tlasharptla-sdk-md.md)] se indica si el evento está vinculado directamente a un cambio en el valor de una propiedad y se proporcionan referencias cruzadas entre esta última y el evento.  
+## <a name="identifying-a-property-change-event"></a>Identificar un evento de cambio de propiedad  
+ No todos los eventos que informan de un cambio de propiedad se identifican de manera explícita como evento de cambio de propiedad mediante un patrón de signatura o de nomenclatura. Por lo general, la descripción del evento de la documentación del [!INCLUDE[TLA#tla_sdk](../../../../includes/tlasharptla-sdk-md.md)] indica si el evento está vinculado directamente a un cambio de valor de propiedad y proporciona referencias cruzadas entre la propiedad y el evento.  
   
-### Eventos RoutedPropertyChanged  
- Algunos eventos utilizan un delegado y un tipo de datos de evento que se usan explícitamente para los eventos de cambio de propiedad.  El tipo de datos de evento es <xref:System.Windows.RoutedPropertyChangedEventArgs%601> y el delegado es <xref:System.Windows.RoutedPropertyChangedEventHandler%601>.  Tanto los datos como el delegado del evento tienen un parámetro de tipo genérico que se utiliza para especificar, al definir el controlador, el tipo real de la propiedad que cambia.  Los datos del evento contienen dos propiedades, <xref:System.Windows.RoutedPropertyChangedEventArgs%601.OldValue%2A> y <xref:System.Windows.RoutedPropertyChangedEventArgs%601.NewValue%2A>, que se pasan como argumento de tipo en los datos de evento.  
+### <a name="routedpropertychanged-events"></a>Eventos RoutedPropertyChanged  
+ Algunos eventos usan un delegado y un tipo de datos de evento que se usan explícitamente para los eventos de cambio de propiedad. El tipo de datos de evento es <xref:System.Windows.RoutedPropertyChangedEventArgs%601>, y el delegado <xref:System.Windows.RoutedPropertyChangedEventHandler%601>. El delegado y los datos del evento tienen un parámetro de tipo genérico que se usa para especificar el tipo real de la propiedad que cambia al definir el controlador. Los datos del evento contienen dos propiedades, <xref:System.Windows.RoutedPropertyChangedEventArgs%601.OldValue%2A> y <xref:System.Windows.RoutedPropertyChangedEventArgs%601.NewValue%2A>, que son, a continuación, pasa como el argumento de tipo en el evento datos.  
   
- El elemento "Routed" del nombre indica que el evento de cambio de propiedad se registra como un evento enrutado.  La ventaja de enrutar un evento de cambio de propiedad es que el nivel superior de un control puede recibir este tipo de eventos cuando se modifica el valor de las propiedades de los elementos secundarios \(elementos compuestos del control\).  Por ejemplo, se puede crear un control que incorpore un control <xref:System.Windows.Controls.Primitives.RangeBase>, como <xref:System.Windows.Controls.Slider>.  Si cambia el valor de la propiedad <xref:System.Windows.Controls.Primitives.RangeBase.Value%2A> en el elemento de control deslizante, puede ser conveniente controlar este cambio en el control primario, en lugar de en dicho elemento.  
+ La parte "Routed" del nombre indica que el evento con la propiedad cambiada se registra como evento enrutado. La ventaja de enrutar un evento con la propiedad cambiada es que el nivel superior de un control puede recibir eventos con la propiedad cambiada si las propiedades de los elementos secundarios (las partes compuestas del control) cambian de valor. Por ejemplo, podría crear un control que incorpora un <xref:System.Windows.Controls.Primitives.RangeBase> de control como un <xref:System.Windows.Controls.Slider>. Si el valor de la <xref:System.Windows.Controls.Primitives.RangeBase.Value%2A> cambios de propiedades en la parte del control deslizante, puede desear controlar este cambio en el control primario en lugar de en la parte.  
   
- Al haber un valor anterior y otro nuevo, podría caerse en la tentación de utilizar este controlador de eventos como un validador del valor de propiedad.  Sin embargo, no es esta la intención del diseño de la mayoría de los eventos de cambio de propiedad.  En general, se proporcionan los valores para permitir actuar con ellos en otras áreas lógicas del código, pero no se recomienda modificar valores desde el interior del controlador de eventos, ya que podría provocar una recursividad involuntaria según cómo se implemente este último.  
+ Dado que tiene un valor anterior y uno nuevo, puede ser tentador usar este controlador de eventos como un validador para el valor de propiedad. Sin embargo, no es la intención de diseño de la mayoría de los eventos con la propiedad cambiada. Por lo general, los valores se proporcionan para que pueda actuar sobre esos valores en otras áreas de la lógica del código, pero no se recomienda modificar los valores desde el controlador de eventos y es posible que se cause una recursividad involuntaria según cómo se implemente el controlador.  
   
- Si la propiedad es una propiedad de dependencia personalizada, o si trabaja con una clase derivada donde ha definido el código de creación de instancias, existe un mecanismo mucho mejor para realizar el seguimiento de los cambios de las propiedades integrado en el sistema de propiedades de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]: las devoluciones de llamada <xref:System.Windows.CoerceValueCallback> y <xref:System.Windows.PropertyChangedCallback> a las propiedades del sistema.  Para obtener más detalles sobre cómo usar el sistema de propiedades de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] para validar y convertir valores, vea [Devoluciones de llamada y validación de las propiedades de dependencia](../../../../docs/framework/wpf/advanced/dependency-property-callbacks-and-validation.md) y [Propiedades de dependencia personalizadas](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md).  
+ Si la propiedad es una propiedad de dependencia personalizada, o si está trabajando con una clase derivada donde ha definido el código de creación de instancias, hay un mecanismo mucho mejor para el seguimiento de cambios de propiedad que se halla integrado en el [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sistema de propiedad: el las devoluciones de llamada del sistema de propiedad <xref:System.Windows.CoerceValueCallback> y <xref:System.Windows.PropertyChangedCallback>. Para obtener más información acerca de cómo puede usar el sistema de propiedades de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] para la validación y la coerción, consulte [Devoluciones de llamada y validación de las propiedades de dependencia](../../../../docs/framework/wpf/advanced/dependency-property-callbacks-and-validation.md) y [Propiedades de dependencia personalizadas](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md).  
   
-### Eventos DependencyPropertyChanged  
- Otros dos tipos que forman parte de un escenario de evento de cambio de propiedad son <xref:System.Windows.DependencyPropertyChangedEventArgs> y <xref:System.Windows.DependencyPropertyChangedEventHandler>.  No se enrutan los eventos para estos cambios de propiedad; son los eventos de [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] estándar.  <xref:System.Windows.DependencyPropertyChangedEventArgs> es un tipo de informes de datos de eventos inusual, porque no se deriva de <xref:System.EventArgs>; <xref:System.Windows.DependencyPropertyChangedEventArgs> es una estructura, no una clase.  
+### <a name="dependencypropertychanged-events"></a>Eventos DependencyPropertyChanged  
+ Otro par de tipos que forman parte de un escenario de evento de cambio de propiedad es <xref:System.Windows.DependencyPropertyChangedEventArgs> y <xref:System.Windows.DependencyPropertyChangedEventHandler>. No se enrutan los eventos para estos cambios de propiedad: son eventos [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] estándares. <xref:System.Windows.DependencyPropertyChangedEventArgs>es un tipo de informe porque no se deriva de datos de evento raro <xref:System.EventArgs>; <xref:System.Windows.DependencyPropertyChangedEventArgs> es una estructura, no una clase.  
   
- Los eventos que utilizan <xref:System.Windows.DependencyPropertyChangedEventArgs> y <xref:System.Windows.DependencyPropertyChangedEventHandler> son ligeramente más comunes que los eventos `RoutedPropertyChanged`.  Un ejemplo de un evento que utiliza estos tipos es <xref:System.Windows.UIElement.IsMouseCapturedChanged>.  
+ Eventos que usan <xref:System.Windows.DependencyPropertyChangedEventArgs> y <xref:System.Windows.DependencyPropertyChangedEventHandler> son ligeramente más comunes que `RoutedPropertyChanged` eventos. Un ejemplo de un evento que utiliza estos tipos es <xref:System.Windows.UIElement.IsMouseCapturedChanged>.  
   
- Al igual que <xref:System.Windows.RoutedPropertyChangedEventArgs%601>, <xref:System.Windows.DependencyPropertyChangedEventArgs> también comunica un valor anterior y un valor nuevo para la propiedad.  Asimismo, son aplicables las mismas consideraciones sobre lo que se puede hacer con los valores; en general no se recomienda que se intente cambiar de nuevo los valores en el remitente en respuesta al evento.  
+ Al igual que <xref:System.Windows.RoutedPropertyChangedEventArgs%601>, <xref:System.Windows.DependencyPropertyChangedEventArgs> también informa de un valor antiguo y nuevo para la propiedad. Además, se aplican las mismas consideraciones sobre lo que puede hacer con los valores. Por lo general, no se recomienda que intente volver a cambiar los valores en el remitente como respuesta al evento.  
   
-## Desencadenadores de propiedades  
- Un concepto estrechamente relacionado con los eventos de cambio de propiedad son los desencadenadores de propiedad.  Un desencadenador de propiedad se crea dentro de un estilo o plantilla, y permite crear un comportamiento condicional basado en el valor de la propiedad a la que se asigna el desencadenador de propiedad.  
+## <a name="property-triggers"></a>Desencadenadores de propiedad  
+ Un concepto estrechamente relacionado con un evento de cambio de propiedad es un desencadenador de propiedad. Un desencadenador de propiedad se crea dentro de un estilo o una plantilla y le permite crear un comportamiento condicional basado en el valor de la propiedad donde se asigna el desencadenador de propiedad.  
   
- La propiedad correspondiente a un desencadenador de propiedad debe ser de dependencia.  Puede ser \(y suele ser\) una propiedad de dependencia de sólo lectura.  Un indicador adecuado para saber cuándo una propiedad de dependencia expuesta por un control está diseñada \(al menos en parte\) para actuar como desencadenador de propiedad, es que su nombre empiece por "Is".  Las propiedades que tienen este nombre suelen ser propiedades de dependencia de tipo Boolean de sólo lectura cuyo principal escenario consiste en informar sobre un estado del control que pueda afectar a la interfaz de usuario en tiempo real y, por consiguiente, es probable que sea un desencadenador de propiedad.  
+ La propiedad de un desencadenador de propiedad debe ser una propiedad de dependencia. Puede ser (y, con frecuencia, lo es) una propiedad de dependencia de solo lectura. Un buen indicador de si una propiedad de dependencia expuesta por un control está diseñada parcialmente como un desencadenador de propiedad es si el nombre de propiedad comienza por "Is". Las propiedades que tienen este nombre suelen ser una propiedad de dependencia booleana de solo lectura en que el escenario principal para la propiedad está informando de un estado de control que puede tener consecuencias en la interfaz de usuario en tiempo real y, por lo tanto, es un candidato de desencadenador de propiedad.  
   
- Algunas de estas propiedades también tienen un evento de cambio de propiedad dedicado.  Por ejemplo, la propiedad <xref:System.Windows.UIElement.IsMouseCaptured%2A> tiene un evento de cambio de propiedad <xref:System.Windows.UIElement.IsMouseCapturedChanged>.  La propiedad en sí es de sólo lectura, y su valor lo ajusta el sistema de entrada, que provoca el evento <xref:System.Windows.UIElement.IsMouseCapturedChanged> cada vez que se produce un cambio en tiempo real.  
+ Algunas de estas propiedades también tienen un evento de cambio de propiedad dedicado. Por ejemplo, la propiedad <xref:System.Windows.UIElement.IsMouseCaptured%2A> tiene un evento de cambio de propiedad <xref:System.Windows.UIElement.IsMouseCapturedChanged>. La propiedad en sí es de sólo lectura, con su valor ajustado por el sistema de entrada y genera el sistema de entrada <xref:System.Windows.UIElement.IsMouseCapturedChanged> en cada cambio en tiempo real.  
   
- En comparación con un evento de cambio propiedad auténtico, el uso de un desencadenador de propiedad que actúe en caso de cambio de propiedad tiene algunas limitaciones.  
+ En comparación con un evento de cambio de propiedad auténtico, el uso de un desencadenador de propiedad para actuar sobre un cambio de propiedad tiene algunas limitaciones.  
   
- Los desencadenadores de propiedad funcionan aplicando una lógica de coincidencia exacta.  Es preciso especificar una propiedad y un valor que indique el valor concreto que provocará que el desencadenador se active.  Por ejemplo: `<Setter Property="IsMouseCaptured" Value="true"> ... </Setter>`.  Debido a esta limitación, la mayoría de los usos de los desencadenadores de propiedad se centran en las propiedades de tipo Boolean o en aquéllas que toman un valor de enumeración dedicado, cuyo intervalo de valores posibles es lo bastante manejable para definir un desencadenador para cada caso.  O bien, puede que para algunos valores especiales únicamente haya desencadenadores de propiedad, por ejemplo, cuando un recuento de elementos llega a cero, y que no haya ningún desencadenador para los casos en que el valor de propiedad vuelva a cambiar y deje de ser cero \(en lugar de desencadenadores para todos los casos, en esta situación podría necesitar un controlador de eventos mediante código, o bien un comportamiento predeterminado que cambie al estado anterior cuando el valor sea distinto de cero\).  
+ Los desencadenadores de propiedad funcionan mediante una lógica de coincidencia exacta. Especifica una propiedad y un valor que indica el valor específico por el que el desencadenador se activa. Por ejemplo: `<Setter Property="IsMouseCaptured" Value="true"> ... </Setter>`. Debido a esta limitación, la mayoría de los usos de desencadenadores de propiedad será para propiedades booleanas o propiedades que usan un valor de enumeración dedicado, donde el intervalo de valores posibles es lo bastante administrable para definir un desencadenador para cada caso. O bien pueden existir desencadenadores de propiedad solo para valores especiales, como cuando un recuento de elementos llega a cero, y no habría ningún desencadenador que reconociera los casos en los que vuelve a cambiar el valor de la propiedad en dirección contraria a cero de nuevo (en lugar de desencadenadores para todos los casos, es posible que necesite aquí un controlador de evento de código o un comportamiento predeterminado que vuelva a alternar el estado del desencadenador cuando el valor no sea cero).  
   
- La sintaxis de los desencadenadores de propiedad es análoga a las instrucciones "if" de programación.  Si la condición de activación se cumple, entonces se "ejecuta" el "cuerpo" del desencadenador de propiedad.  El "cuerpo" de un desencadenador de propiedad no es código, sino marcado.  Ese marcado está limitado al uso de uno o más elementos <xref:System.Windows.Setter> para establecer otras propiedades del objeto donde se aplica el estilo o la plantilla.  
+ La sintaxis del desencadenador de propiedad es análoga a una instrucción "if" en programación. Si se cumple la condición del desencadenador, el valor "body" del desencadenador de propiedad será "executed". El valor "body" de un desencadenador de propiedad no es código, sino marcado. Ese marcado está limitado mediante uno o más <xref:System.Windows.Setter> elementos para establecer otras propiedades del objeto donde se aplica el estilo o la plantilla.  
   
- Para compensar la condición "if" de un desencadenador de propiedad que posee gran variedad de valores posibles, suele ser aconsejable establecer ese mismo valor de propiedad en un valor predeterminado mediante <xref:System.Windows.Setter>.  De esta manera, el establecedor contenido en <xref:System.Windows.Trigger> tendrá la prioridad cuando se cumpla la condición de activación, y el objeto <xref:System.Windows.Setter> que no esté contenido en <xref:System.Windows.Trigger> tendrá prioridad siempre que no se cumpla la condición de activación.  
+ Para compensar la condición "if" de un desencadenador de propiedad que tiene una gran variedad de valores posibles, es normalmente se recomienda establecer ese mismo valor de propiedad a un valor predeterminado mediante una <xref:System.Windows.Setter>. De esta manera, el <xref:System.Windows.Trigger> establecedor independiente tendrá prioridad cuando es true, la condición desencadenadora y <xref:System.Windows.Setter> que no está dentro un <xref:System.Windows.Trigger> tendrá prioridad siempre que la condición desencadenadora es false.  
   
- Los desencadenadores de propiedad suelen ser adecuados para escenarios en que deben cambiar una o varias propiedades de aspecto basándose en el estado de otra propiedad del mismo elemento.  
+ Los desencadenadores de propiedad, por lo general, suelen ser adecuados para escenarios donde pueden cambiar una o varias propiedades de apariencia, en función del estado de otra propiedad del mismo elemento.  
   
- Para obtener más información sobre las desencadenadores de propiedad, vea [Aplicar estilos y plantillas](../../../../docs/framework/wpf/controls/styling-and-templating.md).  
+ Para obtener más información acerca de los desencadenadores de propiedad, consulte [Aplicar estilos y plantillas](../../../../docs/framework/wpf/controls/styling-and-templating.md).  
   
-## Vea también  
- [Información general sobre eventos enrutados](../../../../docs/framework/wpf/advanced/routed-events-overview.md)   
+## <a name="see-also"></a>Vea también  
+ [Información general sobre eventos enrutados](../../../../docs/framework/wpf/advanced/routed-events-overview.md)  
  [Información general sobre las propiedades de dependencia](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)

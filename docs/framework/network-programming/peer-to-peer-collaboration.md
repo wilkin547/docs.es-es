@@ -7,22 +7,16 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 ms.assetid: b6216d88-bccb-4a59-9f1c-9f751708e811
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: b17fc74b2143f7307316a167330d06c87b9d4c3d
-ms.contentlocale: es-es
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 3928c6b3690bd03a4365d21d5fbf2f4bd2a4f457
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="peer-to-peer-collaboration"></a>Colaboración de punto a punto
 La función de las redes punto a punto es permitir que los equipos PC que existen en el perímetro de Internet puedan realizar tareas informáticas que van más allá de las simplemente basadas en el cliente. Los equipos PC modernos cuentan con un procesador muy rápido, una memoria amplia y un disco duro grande, si bien ninguna de estas características se usa en su totalidad para realizar las tareas informáticas habituales, como el correo electrónico y la exploración web. Estos equipos pueden actuar fácilmente como cliente y servidor (del mismo nivel) para varios tipos de aplicaciones.  
@@ -56,6 +50,5 @@ La función de las redes punto a punto es permitir que los equipos PC que existe
  En un dominio de Active Directory, los controladores de dominio proporcionan servicios de autenticación mediante Kerberos. En un entorno de equipos de mismo nivel sin servidor, estos deben proporcionar su propia autenticación. En las redes punto a punto, cualquier nodo puede actuar como una entidad de certificación, eliminando el requisito de un certificado raíz en el almacén raíz de confianza de cada elemento de mismo nivel. La autenticación se proporciona mediante certificados autofirmados, con formato de certificados X.509. Estos son los certificados que crea cada elemento de mismo nivel, lo que genera el par de claves pública y privada, y el certificado que se firma con la clave privada. El certificado autofirmado se usa para la autenticación y para proporcionar información sobre la entidad de mismo nivel. Al igual que la autenticación X.509, la autenticación de redes de mismo nivel se basa en una cadena de certificados que tiene su origen en una clave pública que sea de confianza.  
   
 ## <a name="see-also"></a>Vea también  
- <xref:System.Net.PeerToPeer.Collaboration>   
+ <xref:System.Net.PeerToPeer.Collaboration>  
  [Acerca del espacio de nombres System.Net.PeerToPeer.Collaboration](../../../docs/framework/network-programming/about-the-system-net-peertopeer-collaboration-namespace.md)
-

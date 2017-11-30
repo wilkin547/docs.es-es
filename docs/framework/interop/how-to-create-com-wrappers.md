@@ -5,29 +5,22 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - COM,wrappers creating
 - COM,wrappers Visual Studio
 ms.assetid: bdf89bea-1623-45ee-a57b-cf7c90395efa
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: e99b084ddb565a8ae00ee917eaf7fca2c659ab64
-ms.contentlocale: es-es
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: b8f8e5ef6aa90b1d31c589a82891f0ca1bfa5469
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-create-com-wrappers"></a>Cómo: Crear contenedores COM
 Puede crear contenedores del Modelo de objetos componentes (COM) mediante características de [!INCLUDE[vsprvsext](../../../includes/vsprvsext-md.md)] o las herramientas Tlbimp.exe y Regasm.exe de .NET Framework. Ambos métodos generan dos tipos de contenedores COM:  
@@ -88,6 +81,5 @@ Puede crear contenedores del Modelo de objetos componentes (COM) mediante caract
  Puede ejecutar Regasm.exe en un ensamblado que se encuentre en cualquier directorio y, después, ejecutar [Gacutil.exe (herramienta de la caché global de ensamblados)](../../../docs/framework/tools/gacutil-exe-gac-tool.md) para moverlo a la caché global de ensamblados. Al mover el ensamblado no se invalidan las entradas del registro de ubicación, porque siempre se examina la caché global de ensamblados si el ensamblado no se encuentra en otra parte.  
   
 ## <a name="see-also"></a>Vea también  
- [Contenedor RCW](../../../docs/framework/interop/runtime-callable-wrapper.md)   
- [Contenedor CCW](../../../docs/framework/interop/com-callable-wrapper.md)
-
+ [Contenedor al que se puede llamar en tiempo de ejecución](../../../docs/framework/interop/runtime-callable-wrapper.md)  
+ [Contenedor CCW (COM callable wrapper)](../../../docs/framework/interop/com-callable-wrapper.md)

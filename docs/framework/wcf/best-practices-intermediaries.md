@@ -1,27 +1,30 @@
 ---
-title: "Procedimientos recomendados: Intermediarios | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 'Procedimientos recomendados: intermediarios'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 2d41b337-8132-4ac2-bea2-6e9ae2f00f8d
-caps.latest.revision: 2
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 3185761ef784051c7508c3684d46997521483f04
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Procedimientos recomendados: Intermediarios
-Se debe tener cuidado en tratar los errores correctamente al llamar a intermediarios para asegurarse de que los canales del lado servicio en el intermediario se cierran correctamente.  
+# <a name="best-practices-intermediaries"></a>Procedimientos recomendados: intermediarios
+Se debe tener cuidado para controlar los errores correctamente al llamar a intermediarios para asegurarse de que los canales en el lado servicio se han cerrado correctamente.  
   
- Considere el escenario siguiente.Un cliente realiza una llamada a un intermediario que, a continuación, llamada a un servicio back\-end.El servicio back\-end define un contrato sin errores, por lo que cualquier error que genere el servicio se tratará como un error sin tipo.El servicio back\-end genera <xref:System.ApplicationException> y WCF anula correctamente el canal del lado servicio.<xref:System.ApplicationException> manifiesta <xref:System.ServiceModel.FaultException> que se genera para el intermediario.El intermediario vuelve a generar <xref:System.ApplicationException>.WCF lo interpreta como un error sin tipo procedente del intermediario y lo reenvía al cliente.Después de recibir el error, tanto el intermediario como el cliente generan un error de sus canales del lado cliente.No obstante, el canal del lado servicio del intermediario permanece abierto porque WCF no sabe que el error es grave.  
+ Considere el caso siguiente. Un cliente realiza una llamada a un intermedio que llama a un servicio de back-end.  El servicio back-end no define ningún contrato de error, de modo que cualquier error de ese servicio se tratará como un error no tipado.  El servicio back-end produce un <xref:System.ApplicationException> y WCF anula correctamente el canal del lado del servicio. <xref:System.ApplicationException> emerge como <xref:System.ServiceModel.FaultException> que se inicia en el intermediario. El intermediario vuelve a iniciar <xref:System.ApplicationException>. WCF interpreta esto como un error no tipado del intermediario y se lo reenvía al cliente. Al recibir el error, el intermediario y el cliente generan errores en los canales de lado de cliente. Sin embargo, el canal del lado de servicio del intermediario permanece abierto porque WCF no sabe que el error es irrecuperable.  
   
- El procedimiento recomendado en este escenario es detectar si el error que procede del servicio es grave y, en caso afirmativo, el intermediario debe generar el error de su canal del lado servicio tal como se muestra en el siguiente fragmento de código.  
+ La recomendación en este escenario es detectar si el error que procede del servicio es irrecuperable y, en tal caso, el intermediario debería producir un error en su canal de lado de servicio como se muestra en el fragmento de código siguiente.  
   
 ```csharp  
 catch (Exception e)  
@@ -37,9 +40,8 @@ catch (Exception e)
         throw;  
     }  
 }  
-  
 ```  
   
-## Vea también  
- [Control de errores de WCF](../../../docs/framework/wcf/wcf-error-handling.md)   
- [Especificación y administración de errores en contratos y servicios](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)
+## <a name="see-also"></a>Vea también  
+ [Control de errores de WCF](../../../docs/framework/wcf/wcf-error-handling.md)  
+ [Especificación y gestión de errores en contratos y servicios](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)

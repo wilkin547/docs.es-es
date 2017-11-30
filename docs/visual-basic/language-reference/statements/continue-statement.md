@@ -1,54 +1,52 @@
 ---
-title: "Continue (Instrucci&#243;n, Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.continue"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Continue (instrucción) [Visual Basic]"
-  - "bucles, transferir a la siguiente iteración"
+title: "Continue (Instrucción, Visual Basic)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vb.continue
+helpviewer_keywords:
+- Continue statement [Visual Basic]
+- loops, transferring to next iteration
 ms.assetid: 3ad00103-358b-4af3-a3a8-1b9ea0e995d3
-caps.latest.revision: 21
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 21
+caps.latest.revision: "21"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 4a47819600a6c1d58f09c2f8ed3443632e9dab68
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Continue (Instrucci&#243;n, Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-Transfiere controle inmediatamente a la siguiente iteración de un bucle.  
+# <a name="continue-statement-visual-basic"></a>Continue (Instrucción, Visual Basic)
+Transfiere el control inmediatamente a la siguiente iteración de un bucle.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
-Continue { Do | For | While }  
+Continue { Do | For | While }  
 ```  
   
-## Comentarios  
- Puede transferir desde dentro de un bucle `Do`, `For` o `While` a la siguiente iteración de ese bucle.  El control pasa inmediatamente a la comprobación de condición del bucle, que es equivalente a transferir a la instrucción `For` o `While`, o a la instrucción `Do` o `Loop` que contiene la cláusula `Until` o `While`.  
+## <a name="remarks"></a>Comentarios  
+ Puede transferir desde dentro de un `Do`, `For`, o `While` loop a la siguiente iteración del bucle. Control pasa inmediatamente a la comprobación de condición del bucle, que es equivalente a transferir a la `For` o `While` (instrucción), o a la `Do` o `Loop` instrucción que contiene el `Until` o `While` cláusula.  
   
- Puede usar `Continue` en cualquier ubicación del bucle que permita transferencias.  Las reglas que permiten la transferencia del control son iguales que las de la [GoTo \(Instrucción\)](../../../visual-basic/language-reference/statements/goto-statement.md).  
+ Puede usar `Continue` en cualquier ubicación en el bucle que permite las transferencias. Las reglas que permiten la transferencia del control son los mismos que con la [instrucción GoTo](../../../visual-basic/language-reference/statements/goto-statement.md).  
   
- Por ejemplo, si un bucle está completamente incluido en un bloque `Try`, un bloque `Catch` o un bloque `Finally`, puede usar `Continue` para transferir el control fuera del bucle.  Por otra parte, si la estructura `Try`...`End Try` está contenida dentro del bucle, no puede usar `Continue` para transferir el control fuera del bloque `Finally` y utilizarlo para transferirlo fuera de un bloque `Try` o `Catch` sólo si lo transfiere completamente fuera de la estructura `Try`...`End Try`.  
+ Por ejemplo, si un bucle es totalmente independiente dentro de un `Try` bloque, un `Catch` bloque, o un `Finally` bloque, puede usar `Continue` para transferir fuera del bucle. Si es, por otro lado, la `Try`... `End Try` estructura está dentro del bucle, no se puede usar `Continue` para transferir el control fuera de la `Finally` bloque y se puede usar para transferir fuera de un `Try` o `Catch` sólo se bloquea si transfirió completamente fuera de la `Try`... `End Try` estructura.  
   
- Si tiene bucles anidados del mismo tipo, por ejemplo un bucle `Do` dentro de otro bucle `Do`, una instrucción `Continue Do` pasa a la siguiente iteración del bucle `Do` más interno que lo contiene.  No puede utilizar `Continue` para pasar a la iteración siguiente de un bucle que contiene el mismo tipo.  
+ Si tiene bucles anidados del mismo tipo, por ejemplo un `Do` bucle dentro de otro `Do` bucles, un `Continue Do` omite la instrucción a la siguiente iteración de la más interna `Do` bucle que lo contiene. No se puede utilizar `Continue` para ir directamente a la siguiente iteración de un bucle que contiene el mismo tipo.  
   
- Si tiene bucles anidados de distintos tipos, por ejemplo un bucle `Do` dentro de un bucle `For`, puede pasar a la siguiente iteración de cualquiera de esos bucles mediante `Continue Do` o `Continue For`.  
+ Si tiene bucles anidados de tipos diferentes, por ejemplo un `Do` bucle dentro de un `For` bucle, puede omitir a la siguiente iteración de cualquiera de esos bucles utilizando `Continue Do` o `Continue For`.  
   
-## Ejemplo  
- El ejemplo de código siguiente utiliza la instrucción `Continue While` para pasar a la siguiente columna de una matriz si un divisor es cero.  `Continue While` está dentro de un bucle `For`.  Transfiere a la instrucción `While col < lastcol`, que es la siguiente iteración del bucle `While` más interior que contiene el bucle `For`.  
+## <a name="example"></a>Ejemplo  
+ El siguiente ejemplo de código utiliza el `Continue While` instrucción para pasar a la siguiente columna de una matriz si un divisor es cero. El `Continue While` está dentro de un `For` bucle. Transfiere a la `While col < lastcol` instrucción, que es la siguiente iteración de la más interna `While` bucle que contiene el `For` bucle.  
   
  [!code-vb[VbVbalrStatements#14](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/continue-statement_1.vb)]  
   
-## Vea también  
- [Do...Loop \(Instrucción\)](../../../visual-basic/language-reference/statements/do-loop-statement.md)   
- [For...Next \(Instrucción\)](../../../visual-basic/language-reference/statements/for-next-statement.md)   
- [While...End While \(Instrucción\)](../../../visual-basic/language-reference/statements/while-end-while-statement.md)   
- [Try...Catch...Finally \(Instrucción\)](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)
+## <a name="see-also"></a>Vea también  
+ [Do...Loop (instrucción)](../../../visual-basic/language-reference/statements/do-loop-statement.md)  
+ [For...Next (instrucción)](../../../visual-basic/language-reference/statements/for-next-statement.md)  
+ [While...End While (instrucción)](../../../visual-basic/language-reference/statements/while-end-while-statement.md)  
+ [Try...Catch...Finally (instrucción)](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)

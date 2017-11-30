@@ -1,37 +1,41 @@
 ---
-title: "C&#243;mo: Determinar si un elemento Freezable est&#225; inmovilizado | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Freezable (objetos), determinar si están inmovilizados"
-  - "IsFrozen (propiedad)"
+title: "Cómo: Determinar si un elemento Freezable está inmovilizado"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords: Freezable objects [WPF], determining if frozen
 ms.assetid: 92e58baa-ee12-4a9e-ac3a-ca458807a8b2
-caps.latest.revision: 6
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 47fb0a871c3792450386c440629ead1ee3fbecdf
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo: Determinar si un elemento Freezable est&#225; inmovilizado
-En este ejemplo se muestra cómo determinar si un objeto <xref:System.Windows.Freezable> está inmovilizado.  Si intenta modificar un objeto <xref:System.Windows.Freezable> inmovilizado, se inicia una excepción <xref:System.InvalidOperationException>.  Para evitarlo, use la propiedad <xref:System.Windows.Freezable.IsFrozen%2A> del objeto <xref:System.Windows.Freezable> para determinar si se encuentra inmovilizado.  
+# <a name="how-to-determine-whether-a-freezable-is-frozen"></a>Cómo: Determinar si un elemento Freezable está inmovilizado
+Este ejemplo muestra cómo determinar si un <xref:System.Windows.Freezable> objeto está inmovilizado. Si intenta modificar inmovilizado <xref:System.Windows.Freezable> de objeto, produce un <xref:System.InvalidOperationException>. Para evitar que se produzca esta excepción, use la <xref:System.Windows.Freezable.IsFrozen%2A> propiedad de la <xref:System.Windows.Freezable> objeto para determinar si está inmovilizado.  
   
-## Ejemplo  
- En el ejemplo siguiente se inmoviliza <xref:System.Windows.Media.SolidColorBrush> y, a continuación, se comprueba mediante la propiedad <xref:System.Windows.Freezable.IsFrozen%2A> si se encuentra inmovilizado.  
+## <a name="example"></a>Ejemplo  
+ En el ejemplo siguiente se inmoviliza un <xref:System.Windows.Media.SolidColorBrush> y, a continuación, se comprueba mediante la <xref:System.Windows.Freezable.IsFrozen%2A> propiedad para determinar si está inmovilizado.  
   
  [!code-csharp[freezablesample_procedural#CheckIsFrozenExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/freezablesample_procedural/CSharp/freezablesample.cs#checkisfrozenexample)]
  [!code-vb[freezablesample_procedural#CheckIsFrozenExample](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/freezablesample_procedural/visualbasic/freezablesample.vb#checkisfrozenexample)]  
   
- Para obtener más información acerca de los objetos <xref:System.Windows.Freezable>, vea [Información general sobre objetos Freezable](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md).  
+ Para obtener más información acerca de <xref:System.Windows.Freezable> los objetos, vea la [Freezable Objects Overview](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md).  
   
-## Vea también  
- <xref:System.Windows.Freezable>   
- <xref:System.Windows.Freezable.IsFrozen%2A>   
- [Información general sobre objetos Freezable](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)   
- [Temas "Cómo..."](../../../../docs/framework/wpf/advanced/base-elements-how-to-topics.md)
+## <a name="see-also"></a>Vea también  
+ <xref:System.Windows.Freezable>  
+ <xref:System.Windows.Freezable.IsFrozen%2A>  
+ [Información general sobre objetos Freezable](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)  
+ [Temas de procedimientos](../../../../docs/framework/wpf/advanced/base-elements-how-to-topics.md)

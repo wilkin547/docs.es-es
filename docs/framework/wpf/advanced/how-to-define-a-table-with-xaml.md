@@ -1,30 +1,33 @@
 ---
-title: "C&#243;mo: Definir una tabla con XAML | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "documentos, definir tablas con XAML"
-  - "tablas, definir con XAML"
-  - "XAML, definir tablas"
+title: "Cómo: Definir una tabla con XAML"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- XAML [WPF], defining tables
+- documents [WPF], defining tables with XAML
+- tables [WPF], defining with XAML
 ms.assetid: 83f2dc58-437e-4cdc-b5dd-0019810c7a85
-caps.latest.revision: 7
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 4
+caps.latest.revision: "7"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 350dff0b6ea9d92e919e45e4f46cf888f44f6212
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/22/2017
 ---
-# C&#243;mo: Definir una tabla con XAML
-En el ejemplo siguiente se muestra cómo definir un objeto <xref:System.Windows.Documents.Table> mediante [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].  La tabla del ejemplo tiene cuatro columnas \(representas por elementos <xref:System.Windows.Documents.TableColumn>\) y varias filas \(representadas por elementos <xref:System.Windows.Documents.TableRow>\) que contienen datos y, además, la información de título, encabezado y pie de página.  Las filas deben estar contenidas en un elemento <xref:System.Windows.Documents.TableRowGroup>.  Cada fila de la tabla consta de una o más celdas \(representadas por elementos <xref:System.Windows.Documents.TableCell>\).  El contenido de la celda de una tabla debe estar incluido en un elemento <xref:System.Windows.Documents.Block>; en este caso se utilizan elementos <xref:System.Windows.Documents.Paragraph>.  La tabla también hospeda un hipervínculo \(representado por el elemento <xref:System.Windows.Documents.Hyperlink>\) en la fila del pie de página.  
+# <a name="how-to-define-a-table-with-xaml"></a>Cómo: Definir una tabla con XAML
+En el ejemplo siguiente se muestra cómo definir un <xref:System.Windows.Documents.Table> con [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].  La tabla de ejemplo tiene cuatro columnas (representado por <xref:System.Windows.Documents.TableColumn> elementos) y varias filas (representados por <xref:System.Windows.Documents.TableRow> elementos) que contiene los datos, así como el título, encabezado y pie de página información.  Filas deben estar contenidas en un <xref:System.Windows.Documents.TableRowGroup> elemento.  Cada fila de la tabla está formada por una o varias celdas (representado por <xref:System.Windows.Documents.TableCell> elementos).  El contenido de una celda de tabla debe estar contenido en un <xref:System.Windows.Documents.Block> elemento; en este caso <xref:System.Windows.Documents.Paragraph> se utilizan elementos.  La tabla también hospeda un hipervínculo (representado por la <xref:System.Windows.Documents.Hyperlink> elemento) en la fila de pie de página.  
   
-## Ejemplo  
- [!code-xml[TableSnippetsXAML#_TableXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TableSnippetsXAML/CS/Window1.xaml#_tablexaml)]  
+## <a name="example"></a>Ejemplo  
+ [!code-xaml[TableSnippetsXAML#_TableXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TableSnippetsXAML/CS/Window1.xaml#_tablexaml)]  
   
  En la ilustración siguiente se muestra cómo se representa la tabla definida en este ejemplo.  
   

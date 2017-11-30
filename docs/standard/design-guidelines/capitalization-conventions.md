@@ -1,66 +1,64 @@
 ---
-title: "Convenciones de may&#250;sculas y min&#250;sculas | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "mayúsculas y minúsculas Camel nombres [.NET Framework]"
-  - "instrucciones de diseño clases biblioteca [.NET Framework], uso de mayúsculas"
-  - "Minúsculas Pascal nombres [.NET Framework]"
-  - "distinción entre mayúsculas y minúsculas, las convenciones de mayúsculas y minúsculas"
-  - "nombres [.NET Framework], uso de mayúsculas"
+title: "Normas referentes al uso de minúsculas y mayúsculas"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- camel-case names [.NET Framework]
+- class library design guidelines [.NET Framework], capitalization
+- Pascal-case names [.NET Framework]
+- case sensitivity, capitalization conventions
+- names [.NET Framework], capitalization
 ms.assetid: 4c4ea526-9203-486f-b72d-29d61c5b3c6d
-caps.latest.revision: 16
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: e1bddb7bb3559e6f39b7884b92f64bee8fbb3510
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Convenciones de may&#250;sculas y min&#250;sculas
-Las instrucciones de este capítulo disponer un método sencillo para el uso de caso de que, cuando se aplican de forma coherente, asegúrese de identificadores para los tipos, miembros y parámetros fáciles de leer.  
+# <a name="capitalization-conventions"></a>Normas referentes al uso de minúsculas y mayúsculas
+Las directrices descritas en este capítulo disponer un método sencillo para el uso de mayúsculas, cuando se aplica de forma coherente, asegúrese de identificadores para los tipos, miembros y parámetros fáciles de leer.  
   
-## Reglas de mayúsculas y minúsculas para los identificadores  
- Para diferenciar las palabras en un identificador, poner en mayúsculas la primera letra de cada palabra en el identificador. No utilice caracteres de subrayado para diferenciar las palabras, o, de hecho, en cualquier lugar de identificadores. Hay dos maneras adecuadas para aprovechar los identificadores, dependiendo del uso del identificador:  
+## <a name="capitalization-rules-for-identifiers"></a>Reglas de mayúsculas y minúsculas para los identificadores  
+ Para diferenciar las palabras en un identificador, poner en mayúscula la primera letra de cada palabra en el identificador. No use caracteres de subrayado para diferenciar las palabras o con este propósito, en cualquier lugar en los identificadores. Hay dos maneras adecuados aprovechar identificadores, según el uso del identificador:  
   
 -   Pascal  
   
 -   seguir el estilo Camel  
   
- La convención Pascal, utilizada para todos los identificadores excepto los nombres de parámetro, se pone en mayúsculas el primer carácter de cada palabra \(incluidos los acrónimos a través de dos letras\), como se muestra en los ejemplos siguientes:  
+ La convención Pascal, utilizada para todos los identificadores excepto los nombres de parámetro, se pone en mayúsculas el primer carácter de cada palabra (incluidos los acrónimos a través de dos letras de longitud), tal como se muestra en los ejemplos siguientes:  
   
- `PropertyDescriptor`   
+ `PropertyDescriptor`  
  `HtmlTag`  
   
- Se realiza un caso especial para los acrónimos de dos letras en la que se escriben dos letras, como se muestra en el siguiente identificador:  
+ Se ha realizado un caso especial para los acrónimos de dos letras en el que están en dos letras en mayúscula, como se muestra en el siguiente identificador:  
   
  `IOStream`  
   
- La convención de camelCasing utilizada únicamente para los nombres de parámetro en mayúsculas el primer carácter de cada palabra excepto la primera palabra, como se muestra en los ejemplos siguientes. Como también se muestra en el ejemplo, los acrónimos de dos letras que comenzar un identificador con grafía camel están en minúsculas.  
+ La convención de seguir el estilo Camel, usar solo para los nombres de parámetro, pone en mayúsculas el primer carácter de cada palabra excepto la primera palabra, como se muestra en los ejemplos siguientes. Como también se muestra en el ejemplo, acrónimos de dos letras que comenzar un identificador con grafía camel son en minúsculas.  
   
- `propertyDescriptor`   
- `ioStream`   
+ `propertyDescriptor`  
+ `ioStream`  
  `htmlTag`  
   
- **✓ hacer** usar Pascal para todos los nombres de miembro, el tipo y el espacio de nombres públicos que consta de varias palabras.  
+ **✓ HACER** usar Pascal para todos los nombres de miembro, el tipo y el espacio de nombres públicos que consta de varias palabras.  
   
- **✓ hacer** utilice seguir el estilo Camel para los nombres de parámetro.  
+ **✓ HACER** utilice seguir el estilo Camel para los nombres de parámetro.  
   
  En la tabla siguiente describe las reglas de mayúsculas y minúsculas para diferentes tipos de identificadores.  
   
 |Identificador|Mayúsculas y minúsculas|Ejemplo|  
-|-------------------|-----------------------------|-------------|  
-|Espacio de nombres|Pascal|`namespace System.Security { ... }`|  
+|----------------|------------|-------------|  
+|Espacio de nombres|Pascal|`namespace System.Security { ... }`|  
 |Tipo|Pascal|`public class StreamReader { ... }`|  
 |Interfaz|Pascal|`public interface IEnumerable { ... }`|  
 |Método|Pascal|`public class Object {` <br />  `public virtual string ToString();` <br /> `}`|  
@@ -70,15 +68,15 @@ Las instrucciones de este capítulo disponer un método sencillo para el uso de 
 |Valor de enumeración|Pascal|`public enum FileMode {` <br />  `Append,` <br />  `...` <br /> `}`|  
 |Parámetro|Camel|`public class Convert {` <br />  `public static int ToInt32(string value);` <br /> `}`|  
   
-## Uso de mayúsculas para palabras compuestas y términos comunes  
- La mayoría términos compuestos se tratan como palabras individuales para los fines de mayúsculas y minúsculas.  
+## <a name="capitalizing-compound-words-and-common-terms"></a>Poner en mayúsculas palabras compuestas y términos comunes  
+ La mayoría de términos compuestos se tratan como palabras individuales para los fines de mayúsculas y minúsculas.  
   
- **X no** poner en mayúsculas cada palabra en las denominadas palabras compuestas con formato cerrado.  
+ **X DO NOT** poner en mayúsculas cada palabra en denominadas palabras compuestas con formato cerrado.  
   
- Éstas son palabras compuestas escritas como una sola palabra, como extremo. Con el fin de obtener instrucciones de mayúsculas y minúsculas, tratar una palabra compuesta con formato cerrado como una sola palabra. Use un diccionario actual para determinar si se escribe una palabra compuesta con formato cerrado.  
+ Éstas son palabras compuestas que se escribe como una sola palabra, como punto de conexión. Con el fin de obtener instrucciones de mayúsculas y minúsculas, tratar una palabra compuesta con formato cerrado como una sola palabra. Use un diccionario actual para determinar si se escribe una palabra compuesta en forma cerrada.  
   
 |Pascal|Camel|No|  
-|------------|-----------|--------|  
+|------------|-----------|---------|  
 |`BitFlag`|`bitFlag`|`Bitflag`|  
 |`Callback`|`callback`|`CallBack`|  
 |`Canceled`|`canceled`|`Cancelled`|  
@@ -105,15 +103,15 @@ Las instrucciones de este capítulo disponer un método sencillo para el uso de 
 |`WhiteSpace`|`whiteSpace`|`Whitespace`|  
 |`Writable`|`writable`|`Writeable`|  
   
-## Distinción de mayúsculas y minúsculas  
- Los idiomas que se pueden ejecutar en el CLR no tienen que admitir minúsculas, aunque algunos ofrecen. Incluso si el idioma lo admite, otros lenguajes que pueden tener acceso a su marco no. Ninguna de las API que son accesibles desde el exterior, por lo tanto, no puede confiar en caso de por sí solo para distinguir entre los dos nombres en el mismo contexto.  
+## <a name="case-sensitivity"></a>Distinción de mayúsculas y minúsculas  
+ Lenguajes que se pueden ejecutar en el CLR no se necesitan para admitir esta característica, aunque algunos no. Incluso si el idioma lo admite, otros lenguajes que pueden tener acceso el marco no lo hace. Ninguna API que esté accesible desde el exterior, por lo tanto, no se puede confiar en el caso de por sí solo para distinguir entre los dos nombres en el mismo contexto.  
   
- **X no** supone que todos los lenguajes de programación distinguen entre mayúsculas y minúsculas. No lo son. Los nombres no pueden diferenciarse por sólo por.  
+ **X DO NOT** se supone que todos los lenguajes de programación distinguen entre mayúsculas y minúsculas. pero no lo son. Los nombres no pueden diferenciarse por sólo por sus mayúsculas.  
   
- *Partes © 2009, 2005 Microsoft Corporation. Todos los derechos reservados.*  
+ *Partes © 2005, 2009 Microsoft Corporation. Reservados todos los derechos.*  
   
- *Reimpreso con permiso de Pearson Education, Inc. de [las directrices de diseño de Framework: convenciones, expresiones idiomáticas y patrones para las bibliotecas .NET de reutilizable, 2nd Edition](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina y Brad Abrams, publicado el 22 de octubre de 2008 por Addison\-Wesley Professional como parte de la serie de desarrollo de Microsoft Windows.*  
+ *Volver a imprimir en el permiso de educación de Pearson, Inc. de [directrices de diseño de marco de trabajo: convenciones, expresiones y patrones para las bibliotecas .NET de reutilizable, 2ª edición](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina y Brad Abrams, publicado el 22 de octubre de 2008 por Addison-Wesley Professional como parte de la serie de desarrollo de Microsoft Windows.*  
   
-## Vea también  
- [Instrucciones de diseño de Framework](../../../docs/standard/design-guidelines/index.md)   
- [Instrucciones de nomenclatura](../../../docs/standard/design-guidelines/naming-guidelines.md)
+## <a name="see-also"></a>Vea también  
+ [Instrucciones de diseño de .NET Framework](../../../docs/standard/design-guidelines/index.md)  
+ [Las directrices de nomenclatura](../../../docs/standard/design-guidelines/naming-guidelines.md)

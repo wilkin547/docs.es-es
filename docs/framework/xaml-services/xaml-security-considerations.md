@@ -1,52 +1,55 @@
 ---
-title: "XAML Security Considerations | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "security [XAML Services], .NET XAML services"
-  - "XAML security [XAML Services]"
+title: Consideraciones de seguridad sobre XAML
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- security [XAML Services], .NET XAML services
+- XAML security [XAML Services]
 ms.assetid: 544296d4-f38e-4498-af49-c9f4dad28964
-caps.latest.revision: 7
-author: "wadepickett"
-ms.author: "wpickett"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: wadepickett
+ms.author: wpickett
+manager: wpickett
+ms.openlocfilehash: 59d0b835a0de3e84e2cb6e77ed368511bfe21b19
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# XAML Security Considerations
-En este tema se describen los procedimientos recomendados para la seguridad en las aplicaciones al usar XAML y la API de los Servicios XAML de .NET Framework.  
+# <a name="xaml-security-considerations"></a>Consideraciones de seguridad sobre XAML
+En este tema describe las prácticas recomendadas para la seguridad en las aplicaciones cuando se usa XAML y API de servicios XAML de .NET Framework.  
   
-## XAML que no es de confianza en aplicaciones  
- En el sentido más general, XAML que no es de confianza es cualquier origen XAML que su aplicación no ha incluido o emitido específicamente.  
+## <a name="untrusted-xaml-in-applications"></a>XAML no es de confianza en las aplicaciones  
+ En el sentido más general, XAML no es de confianza es cualquier origen XAML que su aplicación no específicamente no incluir o emitir.  
   
- El XAML compilado o almacenado como un recurso de tipo `resx` dentro de un ensamblado de confianza y con signo no carece de confianza de forma intrínseca.  Puede confiar en el XAML tanto como confíe en el ensamblado en conjunto.  En la mayoría de los casos, se hace referencia únicamente los aspectos de confianza del XAML dinámico, que es un origen XAML que se carga desde una secuencia u otra E\/S.  El XAML dinámico no es un componente o una característica concreta de un modelo de aplicaciones con una infraestructura de implementación y empaquetado.  Sin embargo, un ensamblado podría implementar un comportamiento que implique la carga de XAML dinámico.  
+ XAML que está compilado o almacenado como un `resx`-el recurso de tipo de un ensamblado de confianza y firmado no es intrínsecamente no es de confianza. Puede confiar en el XAML tanto como confíe en el ensamblado como un todo. En la mayoría de los casos, solo esté interesado en los aspectos de confianza de XAML dinámico, que es un origen XAML que se carga desde una secuencia u otra E/S. XAML dinámico no es un componente específico o una característica de un modelo de aplicación con una infraestructura de empaquetado y distribución. Sin embargo, un ensamblado puede implementar un comportamiento que implica cargar XAML dinámico.  
   
- Para XAML que no es de confianza, debería tratarlo generalmente igual que si fuera código que no es de confianza.  Utilice un espacio aislado u otras metáforas para evitar que XAML que posiblemente no sea de confianza tenga acceso a su código de confianza.  
+ Para XAML que no se confía, debes tratarla generalmente el mismo como si fuera código no seguro. Usar un espacio aislado u otras metáforas para evitar que XAML que posiblemente no se confía tener acceso al código de confianza.  
   
- La naturaleza de capacidades de XAML concede al XAML el derecho de construir objetos y establecer sus propiedades.  Esta funcionalidad también incluye el acceso a los convertidores de tipos, la asignación y acceso a los ensamblados en el dominio de aplicación, el uso de las extensiones de marcado, los bloques `x:Code`, etc.  
+ La naturaleza de las capacidades XAML concede al XAML el derecho a construir objetos y establecer sus propiedades. Estas capacidades son también el acceso a los convertidores de tipos, asignación y obtener acceso a los ensamblados en el dominio de aplicación, con las extensiones de marcado, `x:Code` bloques y así sucesivamente.  
   
- Además de sus funciones de nivel de lenguaje, el XAML se utiliza para la definición de la interfaz de usuario en muchas tecnologías.  Cargar XAML que no es de confianza podría significar cargar una interfaz de usuario malintencionada de suplantación de identidad.  
+ Además de sus capacidades de nivel de lenguaje, XAML se usa para la definición de interfaz de usuario en muchas tecnologías. Cargar XAML no es de confianza, podría significar cargar una interfaz de usuario de suplantación de identidad malintencionado.  
   
-## Compartir el contexto entre los lectores y escritores  
- La arquitectura de los Servicios XAML de .NET Framework para los lectores y sistemas de escritura de XAML requieren a menudo compartir un lector de XAML con un sistemas de escritura de XAML, o un contexto de esquema XAML compartido.  Podría ser necesario compartir los objetos o contextos si está escribiendo la lógica de bucle de nodo XAML o proporcionando una ruta de acceso de guardar personalizada.  No debería compartir las instancias de lector de XAML, el contexto de esquema XAML no predeterminado ni los valores de las clases de lector o escritor de XAML entre código confiable y no confiable.  
+## <a name="sharing-context-between-readers-and-writers"></a>Compartir el contexto entre los lectores y escritores  
+ La arquitectura de servicios XAML de .NET Framework para los lectores y escritores de XAML requiere a menudo compartir un lector de XAML para un escritor de XAML o un contexto de esquema XAML compartido. Podría ser necesario compartir los objetos o contextos si está escribiendo la lógica de bucle de nodo XAML o proporcionando un personalizado guardar la ruta de acceso. No se deben compartir instancias del lector de XAML, el contexto de esquema XAML no predeterminado o la configuración de las clases de lector/escritor XAML entre el código de confianza y.  
   
- La mayoría de los escenarios y operaciones que implican la escritura de objetos XAML para un respaldo de los tipos basados en CLR simplemente pueden usar el contexto de esquema XAML predeterminado.  El contexto de esquema XAML predeterminado no incluye explícitamente los valores que podrían poner en peligro la plena confianza.  Así es seguro compartir el contexto entre los componentes de lector y escritor de XAML confiable y no confiable.  Sin embargo, si hace esto, un procedimiento recomendado sigue siendo mantener tales lectores y escritores en los ámbitos de <xref:System.AppDomain> independientes, con uno de ellos específicamente pensado o aislado en un espacio para la confianza parcial.  
+ La mayoría de escenarios y las operaciones que implican la escritura de un tipo basado en CLR realizar una copia de objetos XAML solamente pueden usar el contexto de esquema XAML predeterminado. El contexto de esquema XAML predeterminado no incluye explícitamente la configuración que podría poner en peligro la plena confianza. Por lo tanto es seguro compartir el contexto entre los componentes de lector/escritor XAML confiable y no confiables. Sin embargo, si lo hace, sigue siendo un procedimiento recomendado mantener tales lectores y escritores en independiente <xref:System.AppDomain> ámbitos, con uno de ellos específicamente deseada o en un espacio aislado de confianza parcial.  
   
-## Espacios de nombres XAML y confianza de ensamblado  
- La sintaxis no calificada básica y la definición de cómo XAML interpreta una asignación de espacio de nombres XAML personalizada para un ensamblado no distinguen entre un ensamblado confiable y uno no confiable cuando se carga en el dominio de aplicación.  En consecuencia, es técnicamente posible que un ensamblado que no es de confianza suplante la asignación del espacio de nombres XAML intencional de un ensamblado confiable y capture el objeto declarado y la información de propiedad de un origen XAML.  Si tiene requisitos de seguridad para evitar esta situación, su asignación de espacio de nombres XAML intencional se debería realizar mediante una de las siguientes técnicas:  
+## <a name="xaml-namespaces-and-assembly-trust"></a>Espacios de nombres XAML y confianza del ensamblado  
+ La sintaxis sin calificar básica y la definición de cómo XAML interpreta una asignación de espacio de nombres XAML personalizada a un ensamblado no distingue entre un ensamblado de confianza y que se carga en el dominio de aplicación. Por lo tanto, es técnicamente posible para un ensamblado de confianza suplantar la asignación de espacio de nombres XAML intencional de un ensamblado de confianza y capturar información de propiedad y objeto declarado un origen XAML. Si tiene requisitos de seguridad para evitar esta situación, su asignación de espacio de nombres XAML intencional se debería realizar mediante una de las técnicas siguientes:  
   
--   Use un nombre de ensamblado completo con un nombre seguro para cualquier asignación de espacio de nombres XAML realizada por el XAML de su aplicación.  
+-   Utilice un nombre completo del ensamblado con nombre seguro en cualquier asignación de espacio de nombres XAML realizada por el XAML de su aplicación.  
   
--   Restrinja la asignación del ensamblado a un conjunto fijo de ensamblados de referencia, construyendo un <xref:System.Xaml.XamlSchemaContext> concreto para sus lectores de XAML y escritores de objetos XAML.  Vea <xref:System.Xaml.XamlSchemaContext.%23ctor%28System.Collections.Generic.IEnumerable%7BSystem.Reflection.Assembly%7D%29>.  
+-   Restringir la asignación del ensamblado a un conjunto fijo de ensamblados de referencia, mediante la creación de un determinado <xref:System.Xaml.XamlSchemaContext> para el código XAML los lectores XAML y los escritores de objetos. Consulta <xref:System.Xaml.XamlSchemaContext.%23ctor%28System.Collections.Generic.IEnumerable%7BSystem.Reflection.Assembly%7D%29>.  
   
-## Asignación de tipos de XAML y acceso al sistema de tipos  
- XAML proporciona soporte técnico para su propio sistema de tipos, que es igual de muchas maneras a la forma en que CLR implementa el sistema de tipos CLR básico.  Sin embargo, para ciertos aspectos del conocimiento de tipos donde se están tomando decisiones de confianza sobre un tipo en función de su información de tipo, debería diferir a la información de tipo en los tipos de respaldo de CLR.  Esto se debe a que algunas de las capacidades de informe concretas del sistema de tipos XAML se quedan abiertas como métodos virtuales y, en consecuencia, no están totalmente bajo el control de las implementaciones originales de los Servicios XAML de .NET Framework.  Estos puntos de extensibilidad existen porque el sistema de tipos XAML es extensible, para coincidir con la extensibilidad del propio XAML y sus posibles estrategias de asignación de tipos alternativa, frente a la implementación respaldada por CLR predeterminada y el contexto de esquema XAML predeterminado.  Para obtener más información, vea las notas específicas sobre varias de las propiedades de <xref:System.Xaml.XamlType> y <xref:System.Xaml.XamlMember>.  
+## <a name="xaml-type-mapping-and-type-system-access"></a>Asignación de tipos XAML y acceso al sistema de tipo  
+ XAML es compatible con su propio sistema de tipos, que en muchos aspectos del mismo nivel para el modo en que CLR implementa el sistema de tipos CLR básico. Sin embargo, para ciertos aspectos del conocimiento de tipos donde tome decisiones de confianza sobre un tipo en función de su información de tipo, debe respetar la información de tipo en lo tipos de respaldo de CLR. Esto es porque algunas de las funciones de informes específicas del sistema de tipos XAML se quedan abiertas como métodos virtuales y por lo tanto, no son totalmente bajo el control de las implementaciones de servicios XAML de .NET Framework originales. Estos puntos de extensibilidad existen porque el sistema de tipos XAML es extensible, para que coincida con la extensibilidad del propio XAML y sus posibles estrategias de asignación de tipos alternativas frente a la implementación de respaldada por CLR predeterminada y el contexto de esquema XAML predeterminado. Para obtener más información, consulte las notas específicas en algunas de las propiedades de <xref:System.Xaml.XamlType> y <xref:System.Xaml.XamlMember>.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  <xref:System.Xaml.Permissions.XamlAccessLevel>

@@ -1,45 +1,49 @@
 ---
-title: "C&#243;mo: Definir el comportamiento de cambio de tama&#241;o y colocaci&#243;n de una ventana dividida | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "ventanas divisoras, cambiar el tamaño"
-  - "SplitContainer (control) [Windows Forms], cambiar el tamaño"
-  - "ventanas divisoras, cambiar el tamaño"
+title: "Cómo: Definir el comportamiento de cambio de tamaño y colocación de una ventana dividida"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- split windows [Windows Forms], resizing
+- splitter windows [Windows Forms], resizing
+- SplitContainer control [Windows Forms], resizing
 ms.assetid: 9bf73f36-ed2d-4a02-b15a-0770eff4fdfa
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: db4a99c7dae7783e8ea51f43ad51fcd2214997e5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo: Definir el comportamiento de cambio de tama&#241;o y colocaci&#243;n de una ventana dividida
-Los paneles del control <xref:System.Windows.Forms.SplitContainer> son susceptibles de ser manipulados por los usuarios y resulta sencillo modificar su tamaño.  Sin embargo, en ocasiones es conveniente controlar el divisor mediante programación \(dónde colocarlo y en qué medida se puede mover\).  
+# <a name="how-to-define-resize-and-positioning-behavior-in-a-split-window"></a>Cómo: Definir el comportamiento de cambio de tamaño y colocación de una ventana dividida
+Los paneles de la <xref:System.Windows.Forms.SplitContainer> control prestan apropiado para la que se va a cambiar de tamaño y manipulados por los usuarios. Sin embargo, habrá veces cuando desea controlar mediante programación el divisor, donde se coloca y hasta qué punto se puede mover.  
   
- La propiedad <xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A> y las demás propiedades del control <xref:System.Windows.Forms.SplitContainer> permiten controlar con precisión el comportamiento de la interfaz de usuario para que se adapte a sus necesidades.  Estas propiedades se enumeran en la tabla siguiente.  
+ El <xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A> propiedad y las demás propiedades en el <xref:System.Windows.Forms.SplitContainer> control ofrecen un control preciso sobre el comportamiento de la interfaz de usuario para satisfacer sus necesidades. Estas propiedades se muestran en la tabla siguiente.  
   
-|Name|Descripción|  
+|Nombre|Descripción|  
 |----------|-----------------|  
-|Propiedad <xref:System.Windows.Forms.SplitContainer.IsSplitterFixed%2A>|Determina si el divisor se podrá mover desde el teclado o el mouse.|  
-|Propiedad <xref:System.Windows.Forms.SplitContainer.SplitterDistance%2A>|Determina la distancia en píxeles, contando desde el borde izquierdo o superior, hasta la barra de división movible.|  
-|Propiedad <xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A>|Determina la distancia mínima, en píxeles, que el usuario puede trasladar el divisor.|  
+|Propiedad <xref:System.Windows.Forms.SplitContainer.IsSplitterFixed%2A>|Determina si el divisor se puede mover mediante el teclado o mouse (ratón).|  
+|Propiedad <xref:System.Windows.Forms.SplitContainer.SplitterDistance%2A>|Determina la distancia en píxeles desde el borde izquierdo o superior de la barra de división puede mover.|  
+|Propiedad <xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A>|Determina la distancia mínima, en píxeles, que se puede mover el divisor por el usuario.|  
   
- El ejemplo siguiente modifica la propiedad <xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A> para crear un efecto de "divisor con ajuste"; cuando el usuario arrastra el divisor, avanza en bloques de 10 píxeles en lugar de hacerlo de 1 en 1, que es el valor predeterminado.  
+ El ejemplo siguiente se modifica el <xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A> propiedad que se va a crear un efecto de "divisor con ajuste"; cuando el usuario arrastra el divisor, avanza en bloques de 10 píxeles en lugar de con el valor predeterminado 1.  
   
-### Para definir el comportamiento de cambio de tamaño de SplitContainer  
+### <a name="to-define-splitcontainer-resize-behavior"></a>Para definir el comportamiento de cambio de tamaño de SplitContainer  
   
-1.  En un procedimiento, establezca la propiedad <xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A> en el tamaño deseado, para lograr el comportamiento de 'ajuste' del divisor.  
+1.  En un procedimiento, establezca la <xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A> propiedad tenga el tamaño deseado, por lo que se consigue el comportamiento de 'ajuste' del divisor.  
   
-     En el ejemplo de código siguiente, contenido en el evento <xref:System.Windows.Forms.Form.Load> del formulario, se establece el divisor incluido  en el control <xref:System.Windows.Forms.SplitContainer> de modo que salte 10 píxeles cuando se arrastra.  
+     En el ejemplo de código siguiente dentro del formulario <xref:System.Windows.Forms.Form.Load> evento, el divisor dentro del <xref:System.Windows.Forms.SplitContainer> control se establece en 10 píxeles cuando arrastra de salto.  
   
     ```vb  
     Private Sub Form1_Load(ByVal sender As System.Object, _  
@@ -49,7 +53,6 @@ Los paneles del control <xref:System.Windows.Forms.SplitContainer> son susceptib
         splitSnapper.Dock = DockStyle.Fill  
         splitSnapper.Parent = me  
     End Sub  
-  
     ```  
   
     ```csharp  
@@ -62,14 +65,14 @@ Los paneles del control <xref:System.Windows.Forms.SplitContainer> son susceptib
     }  
     ```  
   
-     \([!INCLUDE[csprcs](../../../../includes/csprcs-md.md)]\) Coloque el código siguiente en el constructor del formulario para registrar el controlador de eventos.  
+     ([!INCLUDE[csprcs](../../../../includes/csprcs-md.md)]) Coloque el código siguiente en el constructor del formulario para registrar el controlador de eventos.  
   
     ```csharp  
     this.Load += new System.EventHandler(this.Form1_Load);  
     ```  
   
-     Al mover el divisor ligeramente a la izquierda o la derecha no se producirá ningún efecto visible; sin embargo, cuando el puntero del mouse se desplace 10 píxeles en cualquier dirección, el divisor se ajustará a la nueva posición.  
+     Mover el divisor ligeramente hacia la izquierda o derecha no tendrá ningún efecto visible; Sin embargo, cuando el puntero del mouse desplace 10 píxeles en cualquier dirección, el divisor se ajustará a la nueva posición.  
   
-## Vea también  
- <xref:System.Windows.Forms.SplitContainer>   
+## <a name="see-also"></a>Vea también  
+ <xref:System.Windows.Forms.SplitContainer>  
  <xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A>

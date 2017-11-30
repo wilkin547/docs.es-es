@@ -1,75 +1,78 @@
 ---
-title: "C&#243;mo: Crear texto con sombreado | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "efectos de sombra en el texto"
-  - "texto, sombreados"
-  - "tipografía, efectos de sombra"
+title: "Cómo: Crear texto con sombreado"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- typography [WPF], shadow effects
+- shadow effects in text [WPF]
+- text [WPF], shadowed
 ms.assetid: 6ab9c754-6001-4708-b479-5367f2fd1a35
-caps.latest.revision: 22
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 19
+caps.latest.revision: "22"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 31bbc3da54c10304e52f93d38365a8d9ed005505
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/22/2017
 ---
-# C&#243;mo: Crear texto con sombreado
-En los ejemplos de esta sección se muestra cómo crear un efecto de sombra para el texto mostrado.  
+# <a name="how-to-create-text-with-a-shadow"></a>Cómo: Crear texto con sombreado
+En los ejemplos de esta sección se muestra cómo crear un efecto de sombreado para el texto mostrado.  
   
-## Ejemplo  
- El objeto <xref:System.Windows.Media.Effects.DropShadowEffect> permite crear diversos de efectos de sombra para los objetos de [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  En el ejemplo siguiente se muestra un efecto de sombra paralela aplicada al texto.  En este caso, la sombra es una sombra suave, lo que significa que su color está desenfocado.  
+## <a name="example"></a>Ejemplo  
+ El <xref:System.Windows.Media.Effects.DropShadowEffect> objeto le permite crear una variedad de colocar los efectos de sombra para [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] objetos. En el ejemplo siguiente se muestra un efecto de sombra paralela aplicado al texto. En este caso, la sombra es suave, lo que significa que su color se desenfoca.  
   
- ![Sombra de texto con Suavidad &#61; 0.25](../../../../docs/framework/wpf/advanced/media/shadowtext01.png "ShadowText01")  
+ ![Sombra de texto con suavidad &#61; 0,25](../../../../docs/framework/wpf/advanced/media/shadowtext01.jpg "ShadowText01")  
 Ejemplo de texto con una sombra suave  
   
- Puede controlar el ancho de una sombra estableciendo la propiedad <xref:System.Windows.Media.Effects.DropShadowEffect.ShadowDepth%2A>.  El valor `4.0` indica un ancho de la sombra de 4 píxeles.  Puede controlar la suavidad, o desenfoque, de una sombra modificando la propiedad <xref:System.Windows.Media.Effects.DropShadowEffect.BlurRadius%2A>.  El valor `0.0` indica ausencia de desenfoque.  En el ejemplo de código siguiente se muestra cómo se crea una sombra suave.  
+ Puede controlar el ancho de una sombra estableciendo la <xref:System.Windows.Media.Effects.DropShadowEffect.ShadowDepth%2A> propiedad. Un valor de `4.0` indica un ancho de la sombra de 4 píxeles. Puede controlar la suavidad, o desenfoque, de una sombra modificando la <xref:System.Windows.Media.Effects.DropShadowEffect.BlurRadius%2A> propiedad. Un valor de `0.0` indica que no está. El ejemplo de código siguiente muestra cómo crear una sombra suave.  
   
- [!code-xml[TextShadowSnippets#TextShadowSnippet1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextShadowSnippets/CS/SingleShadows.xaml#textshadowsnippet1)]  
+ [!code-xaml[TextShadowSnippets#TextShadowSnippet1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextShadowSnippets/CS/SingleShadows.xaml#textshadowsnippet1)]  
   
 > [!NOTE]
->  Estos efectos de sombra no atraviesan la canalización de representación de texto de [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  Como resultado, ClearType se deshabilita al utilizar estos efectos.  
+>  Estos efectos de sombra no pasan a través de la [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] canalización de representación de texto. Como resultado, ClearType está deshabilitado cuando se usan estos efectos.  
   
- En el ejemplo siguiente se muestra un efecto de sombra paralela nítida aplicada al texto.  En este caso, la sombra no está desenfocada.  
+ En el ejemplo siguiente se muestra un efecto de sombra paralela intensa aplicado al texto. En este caso, la sombra no está desenfocada.  
   
- ![Sombra de texto con Suavidad &#61; 0](../../../../docs/framework/wpf/advanced/media/shadowtext02.png "ShadowText02")  
-Ejemplo de texto con una sombra nítida  
+ ![Sombra de texto con suavidad &#61; 0](../../../../docs/framework/wpf/advanced/media/shadowtext02.jpg "ShadowText02")  
+Ejemplo de texto con una sombra intensa  
   
- Puede crear una sombra nítida estableciendo la propiedad <xref:System.Windows.Media.Effects.DropShadowEffect.BlurRadius%2A> en `0.0`, que indica que no se utiliza ningún desenfoque.  Puede controlar la dirección de la sombra modificando la propiedad <xref:System.Windows.Media.Effects.DropShadowEffect.Direction%2A>.  Establezca el valor direccional de esta propiedad en un valor de grados comprendido entre `0` y `360`.  En la ilustración siguiente se muestran los valores direccionales del valor de la propiedad <xref:System.Windows.Media.Effects.DropShadowEffect.Direction%2A>.  
+ Puede crear una sombra nítida estableciendo la <xref:System.Windows.Media.Effects.DropShadowEffect.BlurRadius%2A> propiedad `0.0`, lo que indica que se utiliza ningún desenfoque. Puede controlar la dirección de la sombra modificando la <xref:System.Windows.Media.Effects.DropShadowEffect.Direction%2A> propiedad. Establezca el valor direccional de esta propiedad en un grado entre `0` y `360`. La ilustración siguiente muestra los valores de dirección de la <xref:System.Windows.Media.Effects.DropShadowEffect.Direction%2A> configuración de la propiedad.  
   
- ![Valor de grado de sombra paralela de una sombra](../../../../docs/framework/wpf/advanced/media/shadowtext08.png "ShadowText08")  
-Diagrama de dirección de DropShadow  
+ ![Valor de grado de sombra paralela de sombra](../../../../docs/framework/wpf/advanced/media/shadowtext08.png "ShadowText08")  
+Diagrama de dirección de un objeto DropShadow  
   
- En el ejemplo de código siguiente se muestra cómo se crea una sombra nítida.  
+ En el ejemplo de código siguiente se muestra cómo crear una sombra intensa.  
   
- [!code-xml[TextShadowSnippets#TextShadowSnippet2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextShadowSnippets/CS/SingleShadows.xaml#textshadowsnippet2)]  
+ [!code-xaml[TextShadowSnippets#TextShadowSnippet2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextShadowSnippets/CS/SingleShadows.xaml#textshadowsnippet2)]  
   
-## Utilizar un efecto de desenfoque  
- Se puede utilizar un <xref:System.Windows.Media.Effects.BlurBitmapEffect> para crear un efecto similar a la sombra que se pueda colocar tras un objeto de texto.  Un efecto de imagen de desenfoque aplicado al texto lo desenfoca de manera uniforme en todas direcciones.  
+## <a name="using-a-blur-effect"></a>Uso de un efecto de desenfoque  
+ Un <xref:System.Windows.Media.Effects.BlurBitmapEffect> puede utilizarse para crear un efecto similar a la sombra que puede colocarse detrás de un objeto de texto. Un efecto de mapa de bits de desenfoque aplicado al texto desenfoca el texto de manera uniforme en todas las direcciones.  
   
  En el ejemplo siguiente se muestra un efecto de desenfoque aplicado al texto.  
   
- ![Sombra de texto usando BlurBitmapEffect](../../../../docs/framework/wpf/advanced/media/shadowtext06.png "ShadowText06")  
-Ejemplo de texto con un efecto de desenfoque  
+ ![Sombra de texto usando BlurBitmapEffect](../../../../docs/framework/wpf/advanced/media/shadowtext06.jpg "ShadowText06")  
+Ejemplo de texto con efecto de desenfoque  
   
- En el ejemplo de código siguiente se muestra cómo se crea un efecto de desenfoque.  
+ En el ejemplo de código siguiente se muestra cómo crear un efecto de desenfoque.  
   
- [!code-xml[TextShadowSnippets#TextShadowSnippet6](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextShadowSnippets/CS/BlurShadows.xaml#textshadowsnippet6)]  
+ [!code-xaml[TextShadowSnippets#TextShadowSnippet6](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextShadowSnippets/CS/BlurShadows.xaml#textshadowsnippet6)]  
   
-## Utilizar una transformación de traslación  
- Un <xref:System.Windows.Media.TranslateTransform> se puede utilizar para crear un efecto similar a la sombra que se puede colocar detrás de un objeto de texto.  
+## <a name="using-a-translate-transform"></a>Uso de una transformación de traslación  
+ Un <xref:System.Windows.Media.TranslateTransform> puede utilizarse para crear un efecto similar a la sombra que puede colocarse detrás de un objeto de texto.  
   
- En el ejemplo de código siguiente se utiliza un objeto <xref:System.Windows.Media.TranslateTransform> para desplazar texto.  En este ejemplo, una copia del texto primario ligeramente desplazada crea un efecto de sombra.  
+ El siguiente ejemplo de código utiliza un <xref:System.Windows.Media.TranslateTransform> para desplazar el texto. En este ejemplo, una copia ligeramente desplazada del texto bajo el texto primario crea un efecto de sombra.  
   
- ![Sombra de texto usando TranslateTransform](../../../../docs/framework/wpf/advanced/media/shadowtext07.png "ShadowText07")  
-Ejemplo de texto que utiliza una transformación para un efecto de sombra  
+ ![Sombra de texto usando TranslateTransform](../../../../docs/framework/wpf/advanced/media/shadowtext07.jpg "ShadowText07")  
+Ejemplo de texto que usa una transformación para un efecto de sombra  
   
  En el ejemplo de código siguiente se muestra cómo crear una transformación para un efecto de sombra.  
   
- [!code-xml[TextShadowSnippets#TextShadowSnippet7](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextShadowSnippets/CS/TransformShadows.xaml#textshadowsnippet7)]
+ [!code-xaml[TextShadowSnippets#TextShadowSnippet7](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextShadowSnippets/CS/TransformShadows.xaml#textshadowsnippet7)]

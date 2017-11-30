@@ -1,34 +1,32 @@
 ---
-title: "Falta la expresi&#243;n de sub&#237;ndice de matriz | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "bc30306"
-  - "vbc30306"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "BC30306"
+title: "Falta la expresión de subíndice de matriz"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- bc30306
+- vbc30306
+helpviewer_keywords: BC30306
 ms.assetid: 3c0d9732-ee37-436f-a1df-29d65712f48a
-caps.latest.revision: 9
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: aac09a90abf69fe53f46910fe4b542c6cc632c3a
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Falta la expresi&#243;n de sub&#237;ndice de matriz
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-Una inicialización de matriz omite uno o más de los subíndices que definen los límites de la matriz.  Por ejemplo, la instrucción podría contener la expresión `myArray (5,5,,10)` que omite el tercer subíndice.  
+# <a name="array-subscript-expression-missing"></a>Falta la expresión de subíndice de matriz
+Una inicialización de matriz omite uno o varios de los subíndices que definen los límites de matriz. Por ejemplo, la instrucción podría contener la expresión `myArray (5,5,,10)`, lo que deja el tercer subíndice.  
   
- **Identificador de error:** BC30306  
+ **Id. de error:** BC30306  
   
-### Para corregir este error  
+## <a name="to-correct-this-error"></a>Para corregir este error  
   
--   Suministre el subíndice que no ha incluido.  
+-   Proporcione el subíndice que faltan.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Matrices](../../../visual-basic/programming-guide/language-features/arrays/index.md)

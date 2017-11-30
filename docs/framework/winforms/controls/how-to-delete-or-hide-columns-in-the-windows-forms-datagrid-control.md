@@ -1,50 +1,54 @@
 ---
-title: "C&#243;mo: Eliminar u ocultar columnas del control DataGrid de formularios Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "columnas [Windows Forms], eliminar de cuadrículas de datos"
-  - "columnas [Windows Forms], ocultar"
-  - "cuadrículas de datos, eliminar columnas"
-  - "cuadrículas de datos, ocultar columnas"
-  - "DataGrid (control) [Windows Forms], eliminar columnas"
-  - "DataGrid (control) [Windows Forms], ocultar columnas"
+title: "Cómo: Eliminar u ocultar columnas del control DataGrid de formularios Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- data grids [Windows Forms], deleting columns
+- DataGrid control [Windows Forms], deleting columns
+- data grids [Windows Forms], hiding columns
+- columns [Windows Forms], hiding
+- columns [Windows Forms], deleting in data grids
+- DataGrid control [Windows Forms], hiding columns
 ms.assetid: bcd0dd96-6687-4c48-b0e1-d5287b93ac91
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 1d89f14d034c1050d364282c04424b1326bcff9e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo: Eliminar u ocultar columnas del control DataGrid de formularios Windows Forms
+# <a name="how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control"></a>Cómo: Eliminar u ocultar columnas del control DataGrid de formularios Windows Forms
 > [!NOTE]
->  Aunque el control <xref:System.Windows.Forms.DataGridView> reemplaza y agrega funcionalidad al control <xref:System.Windows.Forms.DataGrid>, este control <xref:System.Windows.Forms.DataGrid> se conserva a efectos de compatibilidad con versiones anteriores y, en su caso, de uso futuro.  Para obtener más información, vea [Diferencias entre los controles DataGridView y DataGrid de formularios Windows Forms](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
+>  El control <xref:System.Windows.Forms.DataGridView> reemplaza y agrega funcionalidad al control <xref:System.Windows.Forms.DataGrid>; sin embargo, el control <xref:System.Windows.Forms.DataGrid> se conserva a efectos de compatibilidad con versiones anteriores y uso futuro, en su caso. Para obtener más información, consulte [Differences Between the Windows Forms DataGridView and DataGrid Controls](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md) (Diferencias entre los controles DataGridView y DataGrid de formularios Windows Forms).  
   
- Para eliminar u ocultar columnas del control <xref:System.Windows.Forms.DataGrid> de los formularios Windows Forms mediante programación, puede utilizar los métodos y las propiedades de los objetos <xref:System.Windows.Forms.GridColumnStylesCollection> y <xref:System.Windows.Forms.DataGridColumnStyle>, que son miembros de la clase <xref:System.Windows.Forms.DataGridTableStyle>.  
+ Mediante programación puede eliminar u ocultar columnas en los formularios Windows Forms <xref:System.Windows.Forms.DataGrid> control mediante el uso de las propiedades y métodos de la <xref:System.Windows.Forms.GridColumnStylesCollection> y <xref:System.Windows.Forms.DataGridColumnStyle> objetos (que son miembros de la <xref:System.Windows.Forms.DataGridTableStyle> clase).  
   
- Las columnas eliminadas u ocultas siguen existiendo en el origen de datos al que está enlazada la cuadrícula, y se puede obtener acceso a ellas mediante programación.  No son visibles sólo en la cuadrícula de datos.  
+ Las columnas eliminadas u ocultas siguen existan en el origen de datos se enlaza a la cuadrícula y todavía son accesibles mediante programación. Simplemente ya no son visibles en la cuadrícula de datos.  
   
 > [!NOTE]
->  Si la aplicación no obtiene acceso a determinadas columnas de datos y no desea mostrarlas en la cuadrícula de datos, probablemente no será necesario incluirlas en el origen de datos en primer lugar.  
+>  Si la aplicación no tiene acceso a determinadas columnas de datos y no desea que se muestren en la cuadrícula de datos, probablemente no es necesario incluir en el origen de datos en primer lugar.  
   
-### Para eliminar una columna del control DataGrid mediante programación  
+### <a name="to-delete-a-column-from-the-datagrid-programmatically"></a>Para eliminar una columna de la cuadrícula de datos mediante programación  
   
-1.  En el área de declaraciones del formulario, declare una instancia nueva de la clase <xref:System.Windows.Forms.DataGridTableStyle>.  
+1.  En el área de declaraciones del formulario, declare una nueva instancia de la <xref:System.Windows.Forms.DataGridTableStyle> clase.  
   
-2.  Establezca la propiedad <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A?displayProperty=fullName> en la tabla del origen de datos a la que desee aplicar el estilo.  En el ejemplo siguiente se utiliza la propiedad <xref:System.Windows.Forms.DataGrid.DataMember%2A?displayProperty=fullName> y se da por supuesto que esta propiedad está ya definida.  
+2.  Establecer el <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A?displayProperty=nameWithType> propiedad a la tabla de origen de datos que desea aplicar el estilo. En el ejemplo siguiente se usa el <xref:System.Windows.Forms.DataGrid.DataMember%2A?displayProperty=nameWithType> propiedad, que se supone que ya se ha establecido.  
   
-3.  Agregue el nuevo objeto <xref:System.Windows.Forms.DataGridTableStyle> a la colección de estilos de tabla de la cuadrícula de datos.  
+3.  Agregue el nuevo <xref:System.Windows.Forms.DataGridTableStyle> objeto a la colección de estilos de tabla del control datagrid.  
   
-4.  Llame al método <xref:System.Windows.Forms.GridColumnStylesCollection.RemoveAt%2A> de la colección <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> del control <xref:System.Windows.Forms.DataGrid> y especifique el índice de la columna que desea eliminar.  
+4.  Llame a la <xref:System.Windows.Forms.GridColumnStylesCollection.RemoveAt%2A> método de la <xref:System.Windows.Forms.DataGrid>del <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> colección, que especifica el índice de columna de la columna que se va a eliminar.  
   
     ```vb  
     ' Declare a new DataGridTableStyle in the  
@@ -62,7 +66,6 @@ caps.handback.revision: 11
        ' Delete the first column (index 0)  
        DataGrid1.TableStyles(0).GridColumnStyles.RemoveAt(0)  
     End Sub  
-  
     ```  
   
     ```csharp  
@@ -84,15 +87,15 @@ caps.handback.revision: 11
     }  
     ```  
   
-### Para ocultar una columna en el control DataGrid mediante programación  
+### <a name="to-hide-a-column-in-the-datagrid-programmatically"></a>Para ocultar una columna en la cuadrícula de datos mediante programación  
   
-1.  En el área de declaraciones del formulario, declare una instancia nueva de la clase <xref:System.Windows.Forms.DataGridTableStyle>.  
+1.  En el área de declaraciones del formulario, declare una nueva instancia de la <xref:System.Windows.Forms.DataGridTableStyle> clase.  
   
-2.  Defina la propiedad <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> de <xref:System.Windows.Forms.DataGridTableStyle> con la tabla del origen de datos a la que desee aplicar el estilo.  En el ejemplo siguiente se utiliza la propiedad <xref:System.Windows.Forms.DataGrid.DataMember%2A?displayProperty=fullName> y se da por supuesto que esta propiedad está ya definida.  
+2.  Establecer el <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> propiedad de la <xref:System.Windows.Forms.DataGridTableStyle> a la tabla de origen de datos que desea aplicar el estilo. El siguiente ejemplo de código utiliza el <xref:System.Windows.Forms.DataGrid.DataMember%2A?displayProperty=nameWithType> propiedad, que se supone que ya se ha establecido.  
   
-3.  Agregue el nuevo objeto <xref:System.Windows.Forms.DataGridTableStyle> a la colección de estilos de tabla de la cuadrícula de datos.  
+3.  Agregue el nuevo <xref:System.Windows.Forms.DataGridTableStyle> objeto a la colección de estilos de tabla del control datagrid.  
   
-4.  Oculte la columna estableciendo la propiedad `Width`  en 0, especificando el índice de columna de la columna que desea ocultar.  
+4.  Ocultar la columna estableciendo su `Width` propiedad en 0, que especifica el índice de columna de la columna que desea ocultar.  
   
     ```vb  
     ' Declare a new DataGridTableStyle in the  
@@ -110,7 +113,6 @@ caps.handback.revision: 11
        ' Hide the first column (index 0)  
        DataGrid1.TableStyles(0).GridColumnStyles(0).Width = 0  
     End Sub  
-  
     ```  
   
     ```csharp  
@@ -132,6 +134,6 @@ caps.handback.revision: 11
     }  
     ```  
   
-## Vea también  
- [Cómo: Cambiar los datos mostrados en tiempo de ejecución en el control DataGrid de formularios Windows Forms](../../../../docs/framework/winforms/controls/change-displayed-data-at-run-time-wf-datagrid-control.md)   
+## <a name="see-also"></a>Vea también  
+ [Cómo: Cambiar los datos mostrados en tiempo de ejecución en el control DataGrid de formularios Windows Forms](../../../../docs/framework/winforms/controls/change-displayed-data-at-run-time-wf-datagrid-control.md)  
  [Cómo: Agregar tablas y columnas al control DataGrid de Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)

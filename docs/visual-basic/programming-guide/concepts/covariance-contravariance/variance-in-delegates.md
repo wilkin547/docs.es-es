@@ -1,35 +1,27 @@
 ---
-title: Varianza en delegados (Visual Basic) | Documentos de Microsoft
+title: Varianza en delegados (Visual Basic)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 38e9353f-74f8-4211-a8f0-7a495414df4a
-caps.latest.revision: 3
-author: stevehoag
-ms.author: shoag
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: cbab7da8c97ca202f8a4d0a1a65b8fa240cca32d
-ms.lasthandoff: 03/13/2017
-
+caps.latest.revision: "3"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 9fe76a32f76f760497021289ec1c6ce673cec1b8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="variance-in-delegates-visual-basic"></a>Varianza en delegados (Visual Basic)
-.NET framework 3.5 introdujo la compatibilidad con la varianza para hacer coincidir las firmas de método con tipos de delegado en todos los delegados en C# y Visual Basic. Esto significa que puede asignar a los delegados no sólo los métodos con firmas coincidentes, sino también los métodos que devuelven más derivados de tipos (covarianza) o que aceptan parámetros que tienen tipos menos derivados (contravarianza) que el especificado por el tipo de delegado. Esto incluye a los delegados genéricos y no genéricos.  
+.NET framework 3.5 se introdujo compatibilidad con la varianza para hacer coincidir las firmas de método con tipos de delegado en todos los delegados en C# y Visual Basic. Esto significa que puede asignar a los delegados no solo métodos con firmas coincidentes, sino métodos que devuelven tipos más derivados (covarianza) o que aceptan parámetros con tipos menos derivados (contravarianza) que el especificado por el tipo de delegado. Esto incluye delegados genéricos y no genéricos.  
   
- Por ejemplo, considere el siguiente código, que tiene dos clases y dos delegados: genéricos y no genéricos.  
+ Por ejemplo, consideremos el siguiente código, que tiene dos clases y dos delegados: genéricos y no genéricos.  
   
 ```vb  
 Public Class First  
@@ -43,7 +35,7 @@ Public Delegate Function SampleDelegate(ByVal a As Second) As First
 Public Delegate Function SampleGenericDelegate(Of A, R)(ByVal a As A) As R  
 ```  
   
- Al crear delegados de la `SampleDelegate` o `SampleDelegate(Of A, R)` tipos, puede asignar uno de los siguientes métodos a dichos delegados.  
+ Al crear delegados de los tipos `SampleDelegate` o `SampleDelegate(Of A, R)`, puede asignar uno de los métodos siguientes a dichos delegados.  
   
 ```vb  
 ' Matching signature.  
@@ -92,14 +84,14 @@ Dim dGeneric As SampleGenericDelegate(Of Second, First) = AddressOf ASecondRFirs
 Dim dGenericConversion As SampleGenericDelegate(Of Second, First) = AddressOf AFirstRSecond  
 ```  
   
- Para obtener más ejemplos, vea [utilizar varianza en delegados (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-in-delegates.md) y [Using Variance for Func y Action Generic Delegates (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md).  
+ Para obtener más ejemplos, vea [utilizando la varianza en delegados (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-in-delegates.md) y [Using Variance for Func y Action Generic Delegates (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md).  
   
 ## <a name="variance-in-generic-type-parameters"></a>Varianza en parámetros de tipo genérico  
- En .NET Framework 4 y versiones posteriores puede habilitar la conversión implícita entre los delegados, para que los delegados genéricos con parámetros de tipo genérico especifican tipos distintos pueden asignarse entre sí, si los tipos se hereden entre sí como requiere la varianza.  
+ En .NET Framework 4 y versiones posteriores puede habilitar la conversión implícita entre los delegados, por lo que los delegados genéricos que tienen diferentes tipos especificados por los parámetros de tipo genérico se pueden asignar entre sí, si los tipos que se heredaron entre sí según sea necesario por varianza.  
   
- Para habilitar la conversión implícita, debe declarar explícitamente los parámetros genéricos de un delegado como covariante o contravariante utilizando la `in` o `out` (palabra clave).  
+ Para habilitar la conversión implícita, debe declarar explícitamente parámetros genéricos en un delegado como covariante o contravariante mediante la palabra clave `in` o `out`.  
   
- En el ejemplo de código siguiente se muestra cómo crear a un delegado que tiene un parámetro de tipo genérico covariante.  
+ En el ejemplo de código siguiente se muestra cómo se crea un delegado que tiene un parámetro de tipo genérico covariante.  
   
 ```vb  
 ' Type T is declared covariant by using the out keyword.  
@@ -112,9 +104,9 @@ Sub Test()
 End Sub  
 ```  
   
- Si utiliza sólo admiten la varianza para hacer coincidir las firmas de método con tipos de delegado y no use el `in` y `out` palabras clave, es posible que a veces se pueden crear instancias de delegados con métodos o expresiones lambda idénticos, pero no se puede asignar un delegado a otro.  
+ Si usa solo la compatibilidad con la varianza para hacer coincidir firmas de método con tipos de delegados y no usa las palabras clave `in` y `out`, es posible que en algunas ocasiones pueda crear instancias de delegados con métodos o expresiones lambda idénticos, pero no pueda asignar un delegado a otro.  
   
- En el ejemplo de código siguiente, `SampleGenericDelegate(Of String)` no se puede convertir explícitamente a `SampleGenericDelegate(Of Object)`, aunque `String` hereda `Object`. Puede solucionar este problema, marque el parámetro genérico `T` con el `out` (palabra clave).  
+ En el ejemplo de código siguiente, `SampleGenericDelegate(Of String)` no se puede convertir explícitamente a `SampleGenericDelegate(Of Object)`, aunque `String` hereda `Object`. Para solucionar este problema, marque el parámetro genérico `T` con la palabra clave `out`.  
   
 ```vb  
 Public Delegate Function SampleGenericDelegate(Of T)() As T  
@@ -134,48 +126,68 @@ Sub Test()
 End Sub  
 ```  
   
-### <a name="generic-delegates-that-have-variant-type-parameters-in-the-net-framework"></a>Parámetros de tipo de los delegados genéricos que tengan variante en .NET Framework  
- .NET framework 4 introdujo la compatibilidad con la varianza para los parámetros de tipo genérico en varios delegados genéricos existentes:  
+### <a name="generic-delegates-that-have-variant-type-parameters-in-the-net-framework"></a>Delegados genéricos con parámetros de tipo variante en .NET Framework  
+ En .NET Framework 4 se presentó por primera vez la compatibilidad con la varianza para los parámetros de tipo genérico en varios delegados genéricos existentes:  
   
--   `Action`delegados de la <xref:System>espacio de nombres, por ejemplo, <xref:System.Action%601>y <xref:System.Action%602></xref:System.Action%602> </xref:System.Action%601> </xref:System>  
+-   `Action` delega del espacio de nombres <xref:System>, por ejemplo, <xref:System.Action%601> y <xref:System.Action%602>  
   
--   `Func`delegados de la <xref:System>espacio de nombres, por ejemplo, <xref:System.Func%601>y <xref:System.Func%602></xref:System.Func%602> </xref:System.Func%601> </xref:System>  
+-   `Func` delega del espacio de nombres <xref:System>, por ejemplo, <xref:System.Func%601> y <xref:System.Func%602>  
   
--   El <xref:System.Predicate%601>delegado</xref:System.Predicate%601>  
+-   Delegado <xref:System.Predicate%601>.  
   
--   El <xref:System.Comparison%601>delegado</xref:System.Comparison%601>  
+-   Delegado <xref:System.Comparison%601>.  
   
--   El <xref:System.Converter%602>delegado</xref:System.Converter%602>  
+-   Delegado <xref:System.Converter%602>.  
   
  Para obtener más información y ejemplos, vea [Using Variance for Func y Action Generic Delegates (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md).  
   
 ### <a name="declaring-variant-type-parameters-in-generic-delegates"></a>Declarar parámetros de tipo variante en delegados genéricos  
- Si un delegado genérico tiene covariante o parámetros de tipo genérico contravariante, que puede hacer referencia como un *delegado genérico variante*.  
+ Si un delegado genérico tiene parámetros de tipo genérico covariante o contravariante, se puede hacer referencia a él como un *delegado genérico variante*.  
   
- Puede declarar un parámetro de tipo genérico covariante en un delegado genérico mediante la `out` (palabra clave). El tipo covariante puede usarse solo como un tipo de valor devuelto del método y no como un tipo de argumentos de método. En el ejemplo de código siguiente se muestra cómo declarar a un delegado genérico covariante.  
+ Puede declarar un parámetro de tipo genérico covariante en un delegado genérico mediante la palabra clave `out`. El tipo covariante puede usarse solo como un tipo de valor devuelto de método, y no como un tipo de argumentos de método. En el siguiente ejemplo de código se muestra cómo declarar un delegado genérico covariante.  
   
-<CodeContentPlaceHolder>5</CodeContentPlaceHolder>  
- Puede declarar una contravariante del parámetro de tipo genérico en un delegado genérico mediante la `in` (palabra clave). El tipo contravariante puede usarse solo como un tipo de argumentos de método y no como un tipo de valor devuelto del método. En el ejemplo de código siguiente se muestra cómo declarar a un delegado genérico contravariante.  
+```vb  
+Public Delegate Function DCovariant(Of Out R)() As R  
+```  
   
-<CodeContentPlaceHolder>6</CodeContentPlaceHolder>  
+ Puede declarar un parámetro de tipo genérico contravariante en un delegado genérico mediante la palabra clave `in`. El tipo contravariante puede usarse solo como un tipo de argumentos de método, y no como un tipo de valor devuelto de método. En el siguiente ejemplo de código se muestra cómo declarar un delegado genérico contravariante.  
+  
+```vb  
+Public Delegate Sub DContravariant(Of In A)(ByVal a As A)  
+```  
+  
 > [!IMPORTANT]
->  `ByRef`parámetros de Visual Basic no se pueden marcar como variante.  
+>  `ByRef`parámetros en Visual Basic no se pueden marcar como variante.  
   
- También es posible admitir la varianza y la covarianza en el mismo delegado, pero para distintos parámetros de tipo. Esta implementación se muestra en el ejemplo siguiente.  
+ También es posible admitir la varianza y la covarianza en el mismo delegado, pero para parámetros de tipo diferentes. Esta implementación se muestra en el ejemplo siguiente.  
   
-<CodeContentPlaceHolder>7</CodeContentPlaceHolder>  
-### <a name="instantiating-and-invoking-variant-generic-delegates"></a>Crear instancias e invocar delegados genéricos variantes  
- Puede crear instancias e invocar a delegados variantes igual que crear instancias e invoca delegados invariables. En el ejemplo siguiente, se crea una instancia del delegado mediante una expresión lambda.  
+```vb  
+Public Delegate Function DVariant(Of In A, Out R)(ByVal a As A) As R  
+```  
   
-<CodeContentPlaceHolder>8</CodeContentPlaceHolder>  
-### <a name="combining-variant-generic-delegates"></a>Combinación de delegados genéricos variantes  
- No debe combinar a delegados variantes. El <xref:System.Delegate.Combine%2A>método no admite la conversión de delegado variantes y espera que los delegados para ser del mismo tipo.</xref:System.Delegate.Combine%2A> Esto puede provocar una excepción en tiempo de ejecución al combinar delegados mediante la <xref:System.Delegate.Combine%2A>(método) (en C# y Visual Basic) o mediante el `+` (operador) (en C#), tal como se muestra en el ejemplo de código siguiente.</xref:System.Delegate.Combine%2A>  
+### <a name="instantiating-and-invoking-variant-generic-delegates"></a>Crear instancias de delegados genéricos variantes e invocarlos  
+ Puede crear instancias de delegados variantes e invocarlos del mismo modo que crea instancias de delegados invariables y los invoca. En el ejemplo siguiente, se crea una instancia del delegado mediante una expresión lambda.  
   
-<CodeContentPlaceHolder>9</CodeContentPlaceHolder>  
+```vb  
+Dim dvariant As DVariant(Of String, String) = Function(str) str + " "  
+dvariant("test")  
+```  
+  
+### <a name="combining-variant-generic-delegates"></a>Combinar delegados genéricos variantes  
+ No debe combinar delegados variantes. El método <xref:System.Delegate.Combine%2A> no admite la conversión de delegados variantes y espera que los delegados sean exactamente del mismo tipo. Esto puede provocar una excepción de tiempo de ejecución cuando se combinan los delegados mediante la <xref:System.Delegate.Combine%2A> (método) (en C# y Visual Basic) o mediante el `+` operador (en C#), tal como se muestra en el ejemplo de código siguiente.  
+  
+```vb  
+Dim actObj As Action(Of Object) = Sub(x) Console.WriteLine("object: {0}", x)  
+Dim actStr As Action(Of String) = Sub(x) Console.WriteLine("string: {0}", x)  
+  
+' The following statement throws an exception at run time.  
+' Dim actCombine = [Delegate].Combine(actStr, actObj)  
+```  
+  
 ## <a name="variance-in-generic-type-parameters-for-value-and-reference-types"></a>Varianza en parámetros de tipo genérico para los tipos de referencia y valor  
- Varianza en parámetros de tipo genérico es compatible con sólo los tipos de referencia. Por ejemplo, `DVariant(Of Int)`no se puede convertir implícitamente a `DVariant(Of Object)` o `DVariant(Of Long)`, porque integer es un tipo de valor.  
+ La varianza para parámetros de tipo genérico solo es compatible con tipos de referencia. Por ejemplo, `DVariant(Of Int)`no se puede convertir implícitamente a `DVariant(Of Object)` o `DVariant(Of Long)`, porque integer es un tipo de valor.  
   
- En el ejemplo siguiente se muestra que la varianza de tipo genérico con parámetros no se admite para tipos de valor.  
+ En el ejemplo siguiente se muestra que la varianza en parámetros de tipo genérico no se admite para tipos de valor.  
   
 ```vb  
 ' The type T is covariant.  
@@ -198,8 +210,8 @@ End Sub
 ```  
   
 ## <a name="relaxed-delegate-conversion-in-visual-basic"></a>Conversión de delegado flexible en Visual Basic  
- Conversión de delegado flexible permite más flexibilidad en la coincidencia de las firmas de método con tipos de delegado. Por ejemplo, permite omitir las especificaciones de parámetro y omite los valores devueltos de función al asignar un método a un delegado. Para obtener más información, consulte [la conversión de delegado no estricta](../../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md).  
+ Conversión de delegado flexible ofrece más flexibilidad para hacer coincidir las firmas de método con tipos de delegado. Por ejemplo, permite omitir las especificaciones de parámetro y omitir los valores devueltos de función cuando se asigna un método a un delegado. Para obtener más información, consulte [conversión de delegado flexible](../../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Genéricos](https://msdn.microsoft.com/library/ms172192)   
- [Usar la varianza para Func y Action Generic Delegates (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)
+ [Genéricos](~/docs/standard/generics/index.md)  
+ [Usar la varianza para los delegados genéricos Func y Action (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)

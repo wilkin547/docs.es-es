@@ -1,28 +1,34 @@
 ---
-title: "C&#243;mo crear un administrador de autorizaci&#243;n personalizado para un servicio | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Clase OperationRequirement"
-  - "Windows Communication Foundation, extender"
+title: "Cómo crear un administrador de autorización personalizado para un servicio"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- Windows Communication Foundation, extending
+- OperationRequirement class
 ms.assetid: 6214afde-44c1-4bf5-ba07-5ad6493620ea
-caps.latest.revision: 15
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 7b8d934509940bf712ccb7463156c88540027407
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo crear un administrador de autorizaci&#243;n personalizado para un servicio
-La infraestructura del Modelo de identidad en [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] admite un modelo de la autorización basado en demandas extensible.Las demandas se extraen de los tokens y opcionalmente son procesadas por directivas de autorización personalizadas y, a continuación, colocadas en <xref:System.IdentityModel.Policy.AuthorizationContext>.Un administrador de autorización examina las demandas en <xref:System.IdentityModel.Policy.AuthorizationContext> para tomar las decisiones de autorización.  
+# <a name="how-to-create-a-custom-authorization-manager-for-a-service"></a>Cómo crear un administrador de autorización personalizado para un servicio
+La infraestructura del Modelo de identidad en [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] admite un modelo de la autorización basado en demandas extensible. Las demandas se extraen de los tokens y opcionalmente son procesadas por directivas de autorización personalizadas y, a continuación, colocadas en <xref:System.IdentityModel.Policy.AuthorizationContext>. Un administrador de autorización examina las demandas en <xref:System.IdentityModel.Policy.AuthorizationContext> para tomar las decisiones de autorización.  
   
- La clase <xref:System.ServiceModel.ServiceAuthorizationManager> toma de forma predeterminada, las decisiones de la autorización; sin embargo estas decisiones se pueden invalidar creando un administrador de autorización personalizado.Para crear un administrador de autorización personalizado, cree una clase que derive de <xref:System.ServiceModel.ServiceAuthorizationManager> e implemente el método <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A>.Las decisiones de la autorización se toman en el método <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A>, que devuelve `true` cuando se permite el acceso y `false` cuando se niega el acceso.  
+ La clase <xref:System.ServiceModel.ServiceAuthorizationManager> toma de forma predeterminada, las decisiones de la autorización; sin embargo estas decisiones se pueden invalidar creando un administrador de autorización personalizado. Para crear un administrador de autorización personalizado, cree una clase que derive de <xref:System.ServiceModel.ServiceAuthorizationManager> e implemente el método <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A>. Las decisiones de la autorización se toman en el método <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A>, que devuelve `true` cuando se permite el acceso y `false` cuando se niega el acceso.  
   
  Si la decisión de autorización depende del contenido del cuerpo del mensaje, utilice el método <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccess%2A>.  
   
@@ -30,7 +36,7 @@ La infraestructura del Modelo de identidad en [!INCLUDE[indigo1](../../../../inc
   
  El registro del administrador de autorización personalizado para un servicio se puede hacer en código o configuración.  
   
-### Para crear un administrador de autorización personalizado  
+### <a name="to-create-a-custom-authorization-manager"></a>Para crear un administrador de autorización personalizado  
   
 1.  Derive una clase de la clase <xref:System.ServiceModel.ServiceAuthorizationManager>.  
   
@@ -46,7 +52,7 @@ La infraestructura del Modelo de identidad en [!INCLUDE[indigo1](../../../../inc
      [!code-csharp[c_CustomAuthMgr#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customauthmgr/cs/c_customauthmgr.cs#6)]
      [!code-vb[c_CustomAuthMgr#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customauthmgr/vb/c_customauthmgr.vb#6)]  
   
-### Para registrar a un administrador de autorización personalizado mediante código  
+### <a name="to-register-a-custom-authorization-manager-using-code"></a>Para registrar a un administrador de autorización personalizado mediante código  
   
 1.  Cree una instancia del administrador de autorización personalizado y asígnelo a la propiedad <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.ServiceAuthorizationManager%2A>.  
   
@@ -57,25 +63,25 @@ La infraestructura del Modelo de identidad en [!INCLUDE[indigo1](../../../../inc
      [!code-csharp[c_CustomAuthMgr#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customauthmgr/cs/c_customauthmgr.cs#4)]
      [!code-vb[c_CustomAuthMgr#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customauthmgr/vb/c_customauthmgr.vb#4)]  
   
-### Para registrar a un administrador de autorización personalizado mediante configuración  
+### <a name="to-register-a-custom-authorization-manager-using-configuration"></a>Para registrar a un administrador de autorización personalizado mediante configuración  
   
 1.  Abra el archivo de configuración para el servicio.  
   
-2.  Agregue [\<serviceAuthorization\>](../../../../docs/framework/configure-apps/file-schema/wcf/serviceauthorization-element.md) a [\<comportamientos\>](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md).  
+2.  Agregar un [ \<serviceAuthorization >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceauthorization-element.md) a la [ \<comportamientos >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md).  
   
-     Para el [\<serviceAuthorization\>](../../../../docs/framework/configure-apps/file-schema/wcf/serviceauthorization-element.md), agregue un atributo `serviceAuthorizationManagerType` y establezca su valor en el tipo que represente al administrador de autorización personalizado.  
+     Para el [ \<serviceAuthorization >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceauthorization-element.md), agregue un `serviceAuthorizationManagerType` de atributo y establezca su valor en el tipo que representa el Administrador de autorización personalizada.  
   
 3.  Agregue un enlace que proteja la comunicación entre el cliente y el servicio.  
   
-     El enlace que se elige para esta comunicación determina las demandas que se agregan al <xref:System.IdentityModel.Policy.AuthorizationContext>, que el administrador de autorización personalizado utiliza para tomar las decisiones de autorización.Para obtener más detalles sobre los enlaces proporcionados por el sistema, vea [Enlaces proporcionados por el sistema](../../../../docs/framework/wcf/system-provided-bindings.md).  
+     El enlace que se elige para esta comunicación determina las demandas que se agregan al <xref:System.IdentityModel.Policy.AuthorizationContext>, que el administrador de autorización personalizado utiliza para tomar las decisiones de autorización. Para obtener más información acerca de los enlaces proporcionados por el sistema, consulte [enlaces proporcionados](../../../../docs/framework/wcf/system-provided-bindings.md).  
   
-4.  Asocie el comportamiento a un extremo de servicio, agregando un elemento [\<servicio\>](../../../../docs/framework/configure-apps/file-schema/wcf/service.md)`behaviorConfiguration y establezca el valor del atributo` [\<comportamiento\>](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md).  
+4.  Asociar el comportamiento a un extremo de servicio agregando una [ \<servicio >](../../../../docs/framework/configure-apps/file-schema/wcf/service.md) elemento y establezca el valor de la `behaviorConfiguration` en el valor del atributo name para el [ \<comportamiento >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md) elemento.  
   
-     Para obtener más información sobre la configuración de un extremo de servicio, vea [Cómo crear un extremo de servicio en configuración](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md).  
+     Para obtener más información acerca de cómo configurar un extremo de servicio, consulte [Cómo: crear un extremo de servicio en la configuración](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md).  
   
      El ejemplo de código siguiente registra el administrador de autorización personalizado `Samples.MyServiceAuthorizationManager`.  
   
-    ```  
+    ```xml  
     <configuration>  
       <system.serviceModel>  
         <services>  
@@ -113,15 +119,15 @@ La infraestructura del Modelo de identidad en [!INCLUDE[indigo1](../../../../inc
     ```  
   
     > [!WARNING]
-    >  Tenga en cuenta que cuando se especifica el serviceAuthorizationManagerType, la cadena debe contener el nombre de tipo completo.una coma, y el nombre del ensamblado en el que el tipo está definido.Si deja fuera el nombre del ensamblado, WCF intentará cargar el tipo desde System.ServiceModel.dll.  
+    >  Tenga en cuenta que cuando se especifica el serviceAuthorizationManagerType, la cadena debe contener el nombre de tipo completo. una coma, y el nombre del ensamblado en el que el tipo está definido. Si deja fuera el nombre del ensamblado, WCF intentará cargar el tipo desde System.ServiceModel.dll.  
   
-## Ejemplo  
- El ejemplo de código siguiente muestra una implementación básica de una clase <xref:System.ServiceModel.ServiceAuthorizationManager> que incluye la invalidación del método <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A>.El código de ejemplo examina <xref:System.IdentityModel.Policy.AuthorizationContext> para una demanda personalizada y devuelve `true` cuando el recurso para esa demanda de la costumbre coincide con el valor de la acción de <xref:System.ServiceModel.OperationContext>.Para una implementación más completa de una clase <xref:System.ServiceModel.ServiceAuthorizationManager>, vea [Directiva de autorización](../../../../docs/framework/wcf/samples/authorization-policy.md).  
+## <a name="example"></a>Ejemplo  
+ El ejemplo de código siguiente muestra una implementación básica de una clase <xref:System.ServiceModel.ServiceAuthorizationManager> que incluye la invalidación del método <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A>. El código de ejemplo examina <xref:System.IdentityModel.Policy.AuthorizationContext> para una demanda personalizada y devuelve `true` cuando el recurso para esa demanda de la costumbre coincide con el valor de la acción de <xref:System.ServiceModel.OperationContext>. Para una implementación más completa de un <xref:System.ServiceModel.ServiceAuthorizationManager> de clases, consulte [directiva de autorización](../../../../docs/framework/wcf/samples/authorization-policy.md).  
   
  [!code-csharp[c_CustomAuthMgr#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customauthmgr/cs/c_customauthmgr.cs#2)]
  [!code-vb[c_CustomAuthMgr#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customauthmgr/vb/c_customauthmgr.vb#2)]  
   
-## Vea también  
- <xref:System.ServiceModel.ServiceAuthorizationManager>   
- [Directiva de autorización](../../../../docs/framework/wcf/samples/authorization-policy.md)   
+## <a name="see-also"></a>Vea también  
+ <xref:System.ServiceModel.ServiceAuthorizationManager>  
+ [Directiva de autorización](../../../../docs/framework/wcf/samples/authorization-policy.md)  
  [Directiva de autorización](../../../../docs/framework/wcf/samples/authorization-policy.md)

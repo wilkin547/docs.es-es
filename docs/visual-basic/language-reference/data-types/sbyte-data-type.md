@@ -1,57 +1,81 @@
 ---
-title: "SByte (Tipo de datos, Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.sbyte"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "tipos de datos [Visual Basic], integrales"
-  - "números enteros"
-  - "enteros, tipos de datos"
-  - "enteros, tipos"
-  - "tipos de datos integrales"
-  - "números, enteros"
-  - "números, enteros"
-  - "SByte (tipo de datos)"
-  - "números enteros"
+title: SByte (Tipo de datos, Visual Basic)
+ms.date: 04/20/2017
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vb.sbyte
+helpviewer_keywords:
+- numbers [Visual Basic], whole
+- whole numbers
+- integral data types [Visual Basic]
+- integer numbers
+- numbers [Visual Basic], integer
+- integers [Visual Basic], data types
+- integers [Visual Basic], types
+- data types [Visual Basic], integral
+- SByte data type
 ms.assetid: 5c38374a-18a1-4cc2-b493-299e3dcaa60f
-caps.latest.revision: 18
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: rpetrusha
+ms.author: ronpet
+ms.openlocfilehash: 2bcd00665ec5b8651089811a61212bfa302fe95d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# SByte (Tipo de datos, Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
+# <a name="sbyte-data-type-visual-basic"></a>Tipo de datos SByte (Visual Basic)
 
-Contiene enteros de 8 bits con signo \(1 bytes\) que se sitúan en el intervalo entre \-128 y 127.  
+Contiene enteros con signo 8 bits (1-bytes que van de un valor de -128 a 127).  
   
-## Comentarios  
- Utilice el tipo de datos `SByte` para incluir valores enteros que no precisen el ancho total de datos de `Integer` ni la mitad del ancho de datos de `Short`.  En algunos casos, Common Language Runtime puede empaquetar las variables `SByte` de forma que se ahorre consumo de memoria.  
+## <a name="remarks"></a>Comentarios
+
+Use la `SByte` tipo de datos para contener valores enteros que no requieren el ancho completo de datos de `Integer` o incluso el ancho de la mitad de los datos de `Short`. En algunos casos, common language runtime puede empaquetar su `SByte` variables estrecha colaboración y ahorre consumo de memoria.
+
+El valor predeterminado de `SByte` es 0.
+
+## <a name="literal-assignments"></a>Asignaciones de literales
   
- El valor predeterminado de `SByte` es 0.  
+Puede declarar e inicializar un `SByte` variable asignarle un decimal literal, un literal hexadecimal, un literal octal, o (a partir de Visual Basic de 2017) un literal binario.
+
+En el siguiente ejemplo, enteros es igual a-102 que se representan como decimal, hexadecimal, y literales binarios se asignan a `SByte` valores. Este ejemplo requiere que se compilen con la `/removeintchecks` modificador del compilador.
+
+[!code-vb[SByte](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#SByte)]  
+
+> [!NOTE] 
+> Use el prefijo `&h` o `&H` para denotar un literal hexadecimal, el prefijo `&b` o `&B` para denotar un literal binario y el prefijo `&o` o `&O` para denotar un literal octal. Los literales decimales no tienen prefijo.
+
+A partir de Visual Basic de 2017, también puede utilizar el carácter de subrayado, `_`, como un separador de dígitos para mejorar la legibilidad, como en el ejemplo siguiente se muestra.
+
+[!code-vb[SByteSeparator](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#SByteS)]  
+
+Si el literal entero está fuera del intervalo de `SByte` (es decir, si es inferior a <xref:System.SByte.MinValue?displayProperty=nameWithType> o mayor que <xref:System.SByte.MaxValue?displayProperty=nameWithType>, se produce un error de compilación. Cuando un literal entero no tiene sufijo, un [entero](integer-data-type.md) se deduce. Si el literal entero está fuera del intervalo de la `Integer` tipo, un [largo](long-data-type.md) se deduce. Esto significa que, en los ejemplos anteriores, los literales numéricos `0x9A` y `0b10011010` se interpretan como enteros con signo de 32 bits con un valor de 156, lo cual supera <xref:System.SByte.MaxValue?displayProperty=nameWithType>. Para compilar correctamente el código como el siguiente que asigna un entero no decimales en un `SByte`, puede realizar cualquiera de las siguientes acciones:
+
+- Deshabilitar las comprobaciones de límites de enteros a la compilación con el `/removeintchecks` modificador del compilador.
+
+- Use un [escriba carácter](../../programming-guide\language-features\data-types/type-characters.md) para definir explícitamente el valor literal que se desea asignar a la `SByte`. En el ejemplo siguiente se asigna un literal negativo `Short` valor a un `SByte`. Tenga en cuenta que, para los números negativos, se debe establecer el bit de orden superior de la palabra de orden superior del literal numérico. En el caso de nuestro ejemplo, esto es de tipo bit 15 del literal `Short` valor.
+
+   [!code-vb[SByteTypeChars](../../../../samples/snippets/visualbasic/language-reference/data-types/sbyte-assignment.vb#1)]
+
+## <a name="programming-tips"></a>Sugerencias de programación
   
-## Sugerencias de programación  
+-   **Conformidad con CLS.** El `SByte` tipo de datos no es parte de la [Common Language Specification](http://www.ecma-international.org/publications/standards/Ecma-335.htm) (CLS), por lo que el código conforme a CLS no puede utilizar un componente que lo utiliza.
+
+-   **De ampliación.** El `SByte` tipo de datos se amplía a `Short`, `Integer`, `Long`, `Decimal`, `Single`, y `Double`. Esto significa que se puede convertir `SByte` a cualquiera de estos tipos sin que se produzca una <xref:System.OverflowException?displayProperty=nameWithType> error.
   
--   **Compatibilidad con CLS.** El tipo de datos `SByte` no forma parte de [Independencia del lenguaje y componentes independientes del lenguaje](../Topic/Language%20Independence%20and%20Language-Independent%20Components.md) \(CLS\), por lo que el código conforme a CLS no puede utilizar un componente que lo utiliza.  
+-   **Caracteres de tipo.** `SByte`no tiene ningún carácter de tipo literal ni caracteres de tipo identificador.  
   
--   **Ampliación.** El tipo de datos `SByte` se amplía a `Short`, `Integer`, `Long`, `Decimal`, `Single` y `Double`.  Esto significa que se puede convertir `SByte` en cualquiera de estos tipos sin encontrar un error <xref:System.OverflowException?displayProperty=fullName>.  
+-   **Tipo de Framework.** El tipo correspondiente en .NET Framework es la estructura <xref:System.SByte?displayProperty=nameWithType>.
   
--   **Caracteres de tipo.** `SByte` no tiene caracteres de tipo literal ni caracteres de tipo identificador.  
-  
--   **Tipo en Framework.** El tipo correspondiente en .NET Framework es la estructura <xref:System.SByte?displayProperty=fullName>.  
-  
-## Vea también  
- <xref:System.SByte?displayProperty=fullName>   
- [Tipos de datos](../../../visual-basic/language-reference/data-types/data-type-summary.md)   
- [Funciones de conversión de tipos](../../../visual-basic/language-reference/functions/type-conversion-functions.md)   
- [Resumen de conversión](../../../visual-basic/language-reference/keywords/conversion-summary.md)   
- [Short \(Tipo de datos\)](../../../visual-basic/language-reference/data-types/short-data-type.md)   
- [Integer \(Tipo de datos\)](../../../visual-basic/language-reference/data-types/integer-data-type.md)   
- [Long \(Tipo de datos\)](../../../visual-basic/language-reference/data-types/long-data-type.md)   
+## <a name="see-also"></a>Vea también
+
+ <xref:System.SByte?displayProperty=nameWithType>  
+ [Tipos de datos](../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ [Funciones de conversión de tipos](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
+ [Resumen de conversión](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
+ [Short (tipo de datos)](../../../visual-basic/language-reference/data-types/short-data-type.md)  
+ [Integer (tipo de datos)](../../../visual-basic/language-reference/data-types/integer-data-type.md)  
+ [Long (tipo de datos)](../../../visual-basic/language-reference/data-types/long-data-type.md)  
  [Uso eficiente de tipos de datos](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

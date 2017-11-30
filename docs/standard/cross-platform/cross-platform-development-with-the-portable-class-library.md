@@ -1,54 +1,52 @@
 ---
-title: "Desarrollo multiplataforma con la Biblioteca de clases portable | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "Biblioteca de clases portable [.NET Framework]"
-  - "establecer el destino de varias plataformas"
-  - "varias plataformas de destino"
+title: Desarrollo multiplataforma con la Biblioteca de clases portable
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Portable Class Library [.NET Framework]
+- targeting multiple platforms
+- multiple platforms, targeting
 ms.assetid: c31e1663-c164-4e65-b66d-d3aa8750a154
-caps.latest.revision: 95
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 95
+caps.latest.revision: "95"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: 697842906772c190c67e2f6ec1a4eb255229f289
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Desarrollo multiplataforma con la Biblioteca de clases portable
+# <a name="cross-platform-development-with-the-portable-class-library"></a>Desarrollo multiplataforma con la Biblioteca de clases portable
 El tipo de proyecto Biblioteca de clases portable de .NET Framework incluido en Visual Studio sirve para crear aplicaciones multiplataforma y bibliotecas para Microsoft de forma rápida y sencilla.  
   
  Las bibliotecas de clases portables reducen el tiempo y el coste empleados en desarrollar y probar código. Use este tipo de proyecto para escribir y compilar ensamblados de .NET Framework portables; a continuación, haga referencia a esos ensamblados desde aplicaciones diseñadas para varias plataformas como, por ejemplo, Windows y Windows Phone.  
   
  Puede cambiar de plataforma incluso después de haber creado un proyecto de Biblioteca de clases portable en Visual Studio y de haber empezado a desarrollarlo. Visual Studio compilará la biblioteca con los ensamblados nuevos, con lo que podrá identificar los cambios que necesita hacer en el código.  
   
- En este artículo se trata el desarrollo de aplicaciones en Visual Studio; no obstante, Microsoft también proporciona ensamblados de referencia de la Biblioteca de clases portable que pueden usarse para desarrollar aplicaciones y bibliotecas con otras herramientas como, por ejemplo, Xamarin. Estas aplicaciones y bibliotecas pueden usarse en cualquier runtime basado en .NET Framework en plataformas no pertenecientes a Microsoft. Para obtener más información acerca de los ensamblados de referencia, vea la entrada de blog [clase biblioteca Portable (PCL) ahora disponible en todas las plataformas](http://blogs.msdn.com/b/dotnet/archive/2013/10/14/portable-class-library-pcl-now-available-on-all-platforms.aspx). Para descargar los ensamblados, consulte [ensamblados de referencia de biblioteca Portable de Microsoft .NET](http://www.microsoft.com/download/details.aspx?id=40727) en Microsoft Download Center. Para obtener más información acerca de cómo usar los ensamblados con Xamarin, consulte la entrada de blog [PCL bibliotecas NuGet y .NET ahora habilitadas para Xamarin](http://blogs.msdn.com/b/dotnet/archive/2013/11/13/pcl-and-net-nuget-libraries-are-now-enabled-for-xamarin.aspx).  
+ En este artículo se trata el desarrollo de aplicaciones en Visual Studio; no obstante, Microsoft también proporciona ensamblados de referencia de la Biblioteca de clases portable que pueden usarse para desarrollar aplicaciones y bibliotecas con otras herramientas como, por ejemplo, Xamarin. Estas aplicaciones y bibliotecas pueden usarse en cualquier runtime basado en .NET Framework en plataformas no pertenecientes a Microsoft. Para obtener más información acerca de los ensamblados de referencia, vea la entrada de blog [de clases portables biblioteca (PCL) ahora disponible en todas las plataformas](http://blogs.msdn.com/b/dotnet/archive/2013/10/14/portable-class-library-pcl-now-available-on-all-platforms.aspx). Para descargar los ensamblados, vea [ensamblados de referencia de biblioteca Portable de Microsoft .NET](http://www.microsoft.com/download/details.aspx?id=40727) en Microsoft Download Center. Para obtener más información acerca de cómo usar los ensamblados con Xamarin, consulte la entrada de blog [PCL bibliotecas NuGet y .NET ahora habilitadas para Xamarin](http://blogs.msdn.com/b/dotnet/archive/2013/11/13/pcl-and-net-nuget-libraries-are-now-enabled-for-xamarin.aspx).  
   
  Visual Studio incluye plantillas que sirven para desarrollar con la Biblioteca de clases portable. En función de qué versión de Visual Studio se use, las plantillas y los menús disponibles pueden ser diferentes de los descritos en este artículo.  
   
 > [!WARNING]
->  [Visual Studio 2013 Update 2](http://go.microsoft.com/fwlink/p/?LinkId=393658) incluye actualizaciones para las plantillas de biblioteca de clases Portable. Si tiene una versión anterior de Visual Studio y Visual Studio 2013 instalado en el mismo equipo y, a continuación, instalar la actualización 2, los cambios a la **.NET Framework de destino** opciones se aplicarán a ambas versiones de Visual Studio.  
+>  [Visual Studio 2013 Update 2](http://go.microsoft.com/fwlink/p/?LinkId=393658) incluye actualizaciones para las plantillas de biblioteca de clases Portable. Si tiene una versión anterior de Visual Studio y Visual Studio 2013 instalado en el mismo equipo y, a continuación, instalar la actualización 2, los cambios realizados en el **.NET Framework de destino** opciones se aplicarán a ambas versiones de Visual Studio.  
   
  En este tema:  
   
- [Compatibilidad con Visual Studio](#vs_support)   
- [Crear un proyecto de biblioteca de clases Portable](#create_pcl)   
- [Opciones de destino](#platforms)   
- [Cambiar los destinos](#change_targets)   
- [Características admitidas](#features)   
- [Tipos y miembros compatibles](#members)   
- [Diferencias de API en la biblioteca de clases Portable](#API_diff)   
- [Uso de la biblioteca de clases portables](#using)  
+ [Compatibilidad con Visual Studio](#vs_support)  
+ [Crear un proyecto de biblioteca de clases Portable](#create_pcl)  
+ [Opciones de destino](#platforms)  
+ [Cambiar los destinos](#change_targets)  
+ [Características admitidas](#features)  
+ [Tipos y miembros compatibles](#members)  
+ [Diferencias de API en la biblioteca de clases Portable](#API_diff)  
+ [Uso de la biblioteca de clases Portable](#using)  
   
 <a name="vs_support"></a>   
 ## <a name="visual-studio-support"></a>Compatibilidad de Visual Studio  
@@ -58,16 +56,16 @@ El tipo de proyecto Biblioteca de clases portable de .NET Framework incluido en 
 |-----------------------|---------------------------------------------------|  
 |Visual Studio 2010, Professional, Premium o Ultimate|Sí, al instalar el [herramientas de biblioteca Portable](http://go.microsoft.com/fwlink/?LinkId=210823).|  
 |Versiones de Visual Studio Express 2010|No.|  
-|Visual Studio 2012 Professional, Premium o Ultimate|Sí. Para compatibilidad con teléfonos, instale el [Windows Phone SDK 8.0](http://go.microsoft.com/fwlink/?LinkId=265772).|  
+|Visual Studio 2012 Professional, Premium o Ultimate|Sí. Teléfono de soporte, instalar el [Windows Phone SDK 8.0](http://go.microsoft.com/fwlink/?LinkId=265772).|  
 |Versiones de Visual Studio Express 2012|No.|  
 |Visual Studio 2013 Professional, Premium o Ultimate|Sí. Para compatibilidad con Windows Phone 8.1, instale [Visual Studio 2013 Update 2](http://go.microsoft.com/fwlink/p/?LinkId=393658).|  
-|Visual Studio Express 2013 para Windows|Sí, al instalar el [versión más reciente de Visual Studio Express](http://go.microsoft.com/fwlink/p/?LinkId=394629), que incluye Update 2 o agregar [Visual Studio 2013 Update 2](http://go.microsoft.com/fwlink/p/?LinkId=393658).|  
+|Visual Studio Express 2013 para Windows|Sí, al instalar el [versión más reciente de Visual Studio Express](http://go.microsoft.com/fwlink/p/?LinkId=394629), que incluye Update 2, o agregar [Visual Studio 2013 Update 2](http://go.microsoft.com/fwlink/p/?LinkId=393658).|  
   
 <a name="create_pcl"></a>   
 ## <a name="creating-a-portable-class-library-project"></a>Crear un proyecto de Biblioteca de clases portable  
  Para crear una Biblioteca de clases portable, use una de las plantillas proporcionadas en Visual Studio. Cree un nuevo proyecto y en el **nuevo proyecto** cuadro de diálogo **plantillas**, seleccione el idioma de destino (C# o Visual Basic) y, a continuación, seleccione una de las plataformas de destino. En el paso siguiente puede seleccionar más plataformas.  
   
- En Visual Studio 2013 Update 2, puede elegir la **biblioteca de clases (Portable)** plantilla para su idioma y plataforma para crear una biblioteca de clases Portable. Verá esta plantilla para las plataformas siguientes:  
+ En Visual Studio 2013 Update 2, puede elegir la **biblioteca de clases (Portable)** plantilla para el lenguaje elegido y plataforma para crear una biblioteca de clases Portable. Verá esta plantilla para las plataformas siguientes:  
   
 -   Aplicaciones de la Tienda  
   
@@ -75,50 +73,49 @@ El tipo de proyecto Biblioteca de clases portable de .NET Framework incluido en 
   
 -   Silverlight  
   
- Si desea crear una biblioteca destinada a Windows Phone 8.1 y Windows 8.1 en C#, puede elegir **almacenar aplicaciones**y, a continuación, elija **biblioteca de clases (Portable para aplicaciones universales)**.  
+ Si desea crear una biblioteca de destino de Windows Phone 8.1 y Windows 8.1 en C#, puede elegir **aplicaciones de la tienda**y, a continuación, elija **biblioteca de clases (Portable para aplicaciones universales)**.  
   
  ![Biblioteca de clases portable para aplicaciones de la tienda](../../../docs/standard/cross-platform/media/storeuniversalpcl.png "StoreUniversalPCL")  
   
  Esta plantilla selecciona automáticamente Windows 8.1 y Windows Phone 8.1 como destino. Si crea una biblioteca destinada solo a Windows Phone 8.1 o Windows 8.1, puede cambiar y agregar plataformas de destino posteriormente.  
   
- Si utiliza Visual Studio 2012 o Visual Studio 2013 sin Update 2, cree un nuevo proyecto y elija la **biblioteca de clases Portable** plantilla en Visual C# o Visual Basic.  
+ Si usa Visual Studio 2012 o Visual Studio 2013 sin Update 2, cree un nuevo proyecto y elija la **biblioteca de clases Portable** plantilla en Visual C# o Visual Basic.  
   
  ![Seleccione el proyecto de biblioteca Portable](../../../docs/standard/cross-platform/media/portablelibrary-start.png "PortableLibrary_start")  
   
- El **Agregar biblioteca de clases Portable** aparece el cuadro de diálogo y podrá seleccionar plataformas adicionales. El cuadro de diálogo emitirá advertencias sobre compatibilidad en función de los destinos que seleccione.  
+ El **Agregar biblioteca de clases Portable** aparece el cuadro de diálogo, y puede seleccionar plataformas adicionales. El cuadro de diálogo emitirá advertencias sobre compatibilidad en función de los destinos que seleccione.  
   
- ![Cambie el cuadro de diálogo de marcos de destino para VS2013](../../../docs/standard/cross-platform/media/clr-pcl-changeframeworks.png "CLR_PCL_ChangeFrameworks")  
+ ![Diálogo de marcos de trabajo de destino de cambio para VS2013](../../../docs/standard/cross-platform/media/clr-pcl-changeframeworks.png "CLR_PCL_ChangeFrameworks")  
 Cuadro de diálogo Agregar biblioteca de clases portable en Visual Studio 2013 Update 2  
   
  Con independencia de si usa Visual Studio 2012 o Visual Studio 2013, puede seleccionar las plataformas cuando cree un proyecto de Biblioteca de clases portable, o bien puede usar las propiedades del proyecto para modificar las plataformas de destino después de haber creado el proyecto.  
   
 <a name="platforms"></a>   
 ## <a name="target-options"></a>Opciones de destino  
- Al crear un proyecto de Biblioteca de clases portable, se puede elegir el sistema operativo y la versión de .NET Framework de destino. Si utiliza Visual Studio 2013 y ha instalado la actualización 2 o posterior, puede elegir la **biblioteca de clases (Portable para aplicaciones universales)** plantilla para crear una biblioteca de clases Portable destinada a Windows 8.1 y Windows Phone 8.1. En la tabla siguiente se muestran los destinos disponibles en función de la versión de Visual Studio que se use.  
+ Al crear un proyecto de Biblioteca de clases portable, se puede elegir el sistema operativo y la versión de .NET Framework de destino. Si usa Visual Studio 2013 y ha instalado la Update 2 o versiones posteriores, puede elegir la **biblioteca de clases (Portable para aplicaciones universales)** plantilla para crear una biblioteca de clases Portable que tenga como destino Windows 8.1 y Windows Phone 8.1. En la tabla siguiente se muestran los destinos disponibles en función de la versión de Visual Studio que se use.  
   
-|||||  
-|-|-|-|-|  
 |Opción de destino|Visual Studio 2012|Visual Studio 2013|Visual Studio 2013 Update 2 o una versión posterior|  
+|-|-|-|-|  
 |.NET Framework|-.NET framework 4 y versiones posteriores<br /><br /> -.NET framework 4.0.3 y versiones posteriores<br /><br /> -.NET framework 4.5|-.NET framework 4 y versiones posteriores<br /><br /> -.NET framework 4.0.3 y versiones posteriores<br /><br /> : .NET framework 4.5 y versiones posteriores<br /><br /> -.NET framework 4.5.1|-.NET framework 4<br /><br /> -.NET framework 4.0.3<br /><br /> -.NET framework 4.5<br /><br /> -.NET framework 4.5.1|  
 |Windows Phone|-Windows Phone 7 y versiones posteriores<br /><br /> -Windows Phone 7.5 y versiones posteriores<br /><br /> -Windows Phone 8|-Windows Phone 8|-Windows Phone Silverlight 8<br /><br /> -Windows Phone Silverlight 8.1<br /><br /> Para compatibilidad de Windows Runtime y XAML, elija:<br /><br /> -Windows Phone 8.1|  
-|Tienda Windows|-.NET para aplicaciones de la tienda de Windows|-Aplicaciones de la tienda Windows (Windows 8) y versiones posteriores<br /><br /> -Tienda de Windows (Windows 8.1)|-Windows 8<br /><br /> -Windows 8.1|  
+|Tienda Windows|-.NET para aplicaciones de la tienda de Windows|-Aplicaciones de la tienda Windows (Windows 8) y versiones posteriores<br /><br /> -Aplicaciones de la tienda Windows (Windows 8.1)|-Windows 8<br /><br /> -Windows 8.1|  
 |-Silverlight|-Silverlight 4 y versiones posteriores<br /><br /> -Silverlight 5|-Silverlight 5|-Silverlight 5|  
-|Xbox|-Xbox 360|N/D|N/D|  
+|Xbox|-Consola Xbox 360|N/D|N/D|  
   
 <a name="change_targets"></a>   
 ## <a name="changing-targets"></a>Cambiar los destinos  
  Si se elige una plantilla de Biblioteca de clases portable, las plataformas predeterminadas se seleccionan automáticamente, pero estos valores predeterminados variarán en función de la versión de Visual Studio que esté instalada y de los destinos que se hayan seleccionado previamente. Las plataformas se pueden cambiar en el momento de crear la Biblioteca de clases portable o después de haber iniciado el desarrollo de una Biblioteca de clases portable.  
   
- Si desea cambiar los destinos después de haber creado el proyecto, en **el Explorador de soluciones**, abra el menú contextual del proyecto de biblioteca de clases Portable (no la solución) y, a continuación, elija **propiedades**. En la página de propiedades del proyecto, el **biblioteca** ficha muestra las plataformas que actualmente va dirigido el proyecto.  
+ Si desea cambiar los destinos después de haber creado el proyecto, en **el Explorador de soluciones**, abra el menú contextual para el proyecto de biblioteca de clases Portable (no la solución) y, a continuación, elija **propiedades** . En la página de propiedades de proyecto, el **biblioteca** ficha muestra las plataformas que actualmente va dirigido el proyecto.  
   
  ![Propiedades del proyecto](../../../docs/standard/cross-platform/media/portablelibrary-projectproperties.png "PortableLibrary_ProjectProperties")  
 Página de propiedades de la Biblioteca de clases portable en Visual Studio 2013 Update 2  
   
- Para agregar o quitar destinos, elija la **cambio** button y, a continuación, active y desactive las casillas correspondientes.  
+ Para agregar o quitar destinos, elija la **cambio** botón y, a continuación, active y desactive las casillas correspondientes.  
   
  Al modificar los destinos, las API que tiene a su disposición para desarrollar el proyecto cambiarán para corresponderse con las opciones seleccionadas. Visual Studio notifica los errores y las advertencias que pueden producirse como resultado del cambio de destinos.  
   
- Si va a evaluar la portabilidad de los ensamblados antes de realizar cambios en Visual Studio, puede utilizar el [analizador de portabilidad de .NET](http://visualstudiogallery.msdn.microsoft.com/1177943e-cfb7-4822-a8a6-e56c7905292b).  
+ Si va a evaluar la portabilidad de los ensamblados antes de realizar cambios en Visual Studio, puede usar el [analizador de portabilidad de .NET](http://visualstudiogallery.msdn.microsoft.com/1177943e-cfb7-4822-a8a6-e56c7905292b).  
   
  El menú de opciones varía en función de la versión de Visual Studio que se use.  
   
@@ -155,7 +152,7 @@ Cuadro de diálogo para el cambio de destinos en Visual Studio 2012
  ➌ Requiere [Microsoft HTTP Client Libraries](http://www.nuget.org/packages/Microsoft.Net.Http) paquete  
   
 > [!WARNING]
->  Puede encontrar errores al hacer referencia a la [Microsoft Compression](https://www.nuget.org/packages/Microsoft.Bcl.Compression) y [Microsoft HTTP Client Libraries](http://www.nuget.org/packages/Microsoft.Net.Http) paquetes desde una biblioteca portable usada por una aplicación de Windows Phone Silverlight 8.1. Para obtener más información, consulte [compatibilidad de plataformas y cambios para las aplicaciones de Windows Phone Silverlight 8.1](http://go.microsoft.com/fwlink/p/?LinkId=394744).  
+>  Puede encontrar errores al hacer referencia a la [Microsoft Compression](https://www.nuget.org/packages/Microsoft.Bcl.Compression) y [Microsoft HTTP Client Libraries](http://www.nuget.org/packages/Microsoft.Net.Http) paquetes desde una biblioteca portable usada por una aplicación de Windows Phone Silverlight 8.1. Para obtener más información, consulte [compatibilidad de plataformas y cambios para las aplicaciones de Windows Phone Silverlight 8.1 importantes](http://go.microsoft.com/fwlink/p/?LinkId=394744).  
   
 <a name="members"></a>   
 ## <a name="supported-types-and-members"></a>Tipos y miembros compatibles  
@@ -171,14 +168,14 @@ Cuadro de diálogo para el cambio de destinos en Visual Studio 2012
   
  Por ejemplo, la Biblioteca de clases portable contiene tipos relacionados con la interfaz de usuario solo cuando el destino es Windows 8.1 y Windows Phone 8.1. También puede encontrar limitaciones si elige como destino plataformas (como Xbox, .NET Framework 4 y Windows Phone 7) que se publicaron antes de la introducción de la Biblioteca de clases portable. .NET Framework publica paquetes a través de NuGet que mejoran la compatibilidad de la Biblioteca de clases portable con algunas de estas plataformas antiguas. Para obtener más información y una lista de paquetes de NuGet, consulte [.NET Framework y versiones fuera de banda](../../../docs/framework/get-started/the-net-framework-and-out-of-band-releases.md).  
   
- Si un miembro es compatible con la Biblioteca de clases portable y con los destinos seleccionados, aparecerá en su proyecto en IntelliSense. Además, el icono de biblioteca de clases Portable ![compatible con la biblioteca Portable](../../../docs/standard/cross-platform/media/portablelibrary-referenceicon.png "PortableLibrary_ReferenceIcon") aparece en las tablas de miembros en el [biblioteca de clases de .NET Framework](http://go.microsoft.com/fwlink/?LinkId=211358) junto a los miembros admitidos. Por ejemplo, la tabla de miembros siguiente muestra que el <xref:System.String.Chars%2A> propiedad en el <xref:System.String> clase es compatible con la biblioteca de clases portables:  
+ Si un miembro es compatible con la Biblioteca de clases portable y con los destinos seleccionados, aparecerá en su proyecto en IntelliSense. Además, el icono de biblioteca de clases Portable ![compatible con la biblioteca Portable](../../../docs/standard/cross-platform/media/portablelibrary-referenceicon.png "PortableLibrary_ReferenceIcon") aparece en las tablas de miembros, en el [biblioteca de clases de .NET Framework](http://go.microsoft.com/fwlink/?LinkId=211358) junto a los miembros admitidos. Por ejemplo, la tabla de miembros siguiente muestra que la propiedad <xref:System.String.Chars%2A> de la clase <xref:System.String> es compatible con la Biblioteca de clases portable:  
   
  ![Icono de miembro compatible](../../../docs/standard/cross-platform/media/plibsupportedmemberlist.png "PlibSupportedMemberList")  
 Icono de la Biblioteca de clases portable  
   
  También puede buscar en el **información de versión** sección de un tema de referencia de una nota que indica que un tipo o miembro se admite en el proyecto de biblioteca de clases Portable:  
   
- ![Información de versión de la biblioteca Portable](../../../docs/standard/cross-platform/media/plibversioninformation.png "PlibVersionInformation")  
+ ![Información de versión de biblioteca Portable](../../../docs/standard/cross-platform/media/plibversioninformation.png "PlibVersionInformation")  
 Ejemplo de información de versiones  
   
  No obstante, recuerde que una API puede ser compatible con la Biblioteca de clases portable, pero si esa API se puede usar dependerá de los destinos que se seleccionen.  
@@ -197,9 +194,9 @@ Ejemplo de información de versiones
  Cuando cree una aplicación de la Tienda Windows o de Windows Phone que haga referencia a un ensamblado de Biblioteca de clases portable, no necesitará realizar pasos adicionales, ya que el paquete de la aplicación incluye todo lo necesario para implementar la aplicación.  
   
 ### <a name="deploying-a-net-framework-app"></a>Implementar una aplicación de .NET Framework  
- Cuando implemente una aplicación de .NET Framework que haga referencia a un ensamblado de Biblioteca de clases portable, especifique una dependencia en la versión correcta de .NET Framework. Al especificar esta dependencia, se asegura de que la versión requerida se instala con la aplicación. Si el destino .NET Framework 4 o posterior, el equipo debe tener .NET Framework 4 con una [actualizar](http://go.microsoft.com/fwlink/?LinkId=210824), actualización 4.0.3 para .NET Framework 4 o .NET Framework 4.5 instalado.  
+ Cuando implemente una aplicación de .NET Framework que haga referencia a un ensamblado de Biblioteca de clases portable, especifique una dependencia en la versión correcta de .NET Framework. Al especificar esta dependencia, se asegura de que la versión requerida se instala con la aplicación. Si el destino es .NET Framework 4 o versiones posteriores, el equipo debe tener .NET Framework 4 con una [actualizar](http://go.microsoft.com/fwlink/?LinkId=210824), actualización 4.0.3 para .NET Framework 4 o .NET Framework 4.5 instalado.  
   
--   Para crear una dependencia con implementación ClickOnce: en **el Explorador de soluciones**, elija el nodo de proyecto para el proyecto que desea publicar. (Este es el proyecto que hace referencia al proyecto de Biblioteca de clases portable). En la barra de menús, elija **proyecto**, **propiedades**y, a continuación, elija la **publicar** ficha. En el **publicar** página, elija **requisitos previos**. Seleccione la versión requerida de .NET Framework (o la actualización de .NET Framework 4) como requisito previo.  
+-   Para crear una dependencia con la implementación de ClickOnce: en **el Explorador de soluciones**, elija el nodo de proyecto para el proyecto que desea publicar. (Este es el proyecto que hace referencia al proyecto de Biblioteca de clases portable). En la barra de menús, elija **proyecto**, **propiedades**y, a continuación, elija la **publicar** ficha. En el **publicar** página, elija **requisitos previos**. Seleccione la versión requerida de .NET Framework (o la actualización de .NET Framework 4) como requisito previo.  
   
 -   Para crear una dependencia con un proyecto de instalación: en **el Explorador de soluciones**, elija el proyecto de instalación. En la barra de menús, elija **proyecto**, **propiedades**, **requisitos previos**. Seleccione la versión de .NET Framework necesaria como requisito previo.  
   
@@ -227,12 +224,11 @@ Ejemplo de información de versiones
               style="visibility:hidden;height:0px;width:0px;border:0px">  
    </iframe>  
 </div>  
-  
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Usar la biblioteca de clases Portable con MVVM](../../../docs/standard/cross-platform/using-portable-class-library-with-model-view-view-model.md)   
- [Recursos de la aplicación para las bibliotecas que tienen como destino varias plataformas](../../../docs/standard/cross-platform/app-resources-for-libraries-that-target-multiple-platforms.md)   
- [Analizador de portabilidad de .NET](http://visualstudiogallery.msdn.microsoft.com/1177943e-cfb7-4822-a8a6-e56c7905292b)   
- [Compatibilidad de .NET framework para aplicaciones de la tienda de Windows y en tiempo de ejecución de Windows](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)   
- [Implementación](../../../docs/framework/deployment/net-framework-and-applications.md)
+ [Usar la biblioteca de clases Portable con MVVM](../../../docs/standard/cross-platform/using-portable-class-library-with-model-view-view-model.md)  
+ [Recursos de la aplicación para bibliotecas destinadas a varias plataformas](../../../docs/standard/cross-platform/app-resources-for-libraries-that-target-multiple-platforms.md)  
+ [Analizador de portabilidad de .NET](http://visualstudiogallery.msdn.microsoft.com/1177943e-cfb7-4822-a8a6-e56c7905292b)  
+ [Compatibilidad de .NET Framework con las aplicaciones de la Tienda Windows y Windows Runtime](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)  
+ [Implementación](../../../docs/framework/deployment/net-framework-applications.md)

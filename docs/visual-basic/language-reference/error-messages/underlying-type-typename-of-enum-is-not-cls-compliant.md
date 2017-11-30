@@ -1,47 +1,29 @@
 ---
-title: Tipo subyacente &lt;typename&gt; de Enum no es conforme a CLS | Documentos de Microsoft
-ms.date: 2015-07-20
+title: "Tipo subyacente &lt;typename&gt; de enumeración no es compatible con CLS"
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vbc40032
 - bc40032
-dev_langs:
-- VB
-helpviewer_keywords:
-- BC40032
+helpviewer_keywords: BC40032
 ms.assetid: 32bf1949-fd73-456c-a323-bf1ffe1320ed
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 51f9c520922260f6d38cf170f46f9c4d88ed4028
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 68b57dc82737b72463b7fcf1a3e50934e1562c31
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="underlying-type-lttypenamegt-of-enum-is-not-cls-compliant"></a>Tipo subyacente &lt;typename&gt; de Enum no es conforme a CLS
-El tipo de datos especificado para esta enumeración no es parte de la [independencia del lenguaje y componentes independientes del lenguaje](https://msdn.microsoft.com/library/12a7a7h3) (CLS). Esto no es un error en su componente, porque la [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort_md.md)] y [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] admiten este tipo de datos. Sin embargo, otro componente escrito en código estrictamente compatible con CLS podría no admitir este tipo de datos. Un componente no puede interactuar correctamente con su componente.  
+# <a name="underlying-type-lttypenamegt-of-enum-is-not-cls-compliant"></a>Tipo subyacente &lt;typename&gt; de enumeración no es compatible con CLS
+El tipo de datos especificado para esta enumeración no es parte de la [independencia del lenguaje y componentes independientes del lenguaje](https://msdn.microsoft.com/library/12a7a7h3) (CLS). Esto no es un error dentro de un componente, porque la [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] y [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] admiten este tipo de datos. Sin embargo, otro componente escrito en código estrictamente conforme a CLS podría no admitir este tipo de datos. Posible que un componente de ese tipo no pueda interactuar correctamente con su componente.  
   
- Los siguientes tipos de datos [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] no son conformes con CLS:  
+ Los siguientes tipos de datos [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] no son conformes con CLS:  
   
 -   [SByte (tipo de datos)](../../../visual-basic/language-reference/data-types/sbyte-data-type.md)  
   
@@ -51,21 +33,21 @@ El tipo de datos especificado para esta enumeración no es parte de la [independ
   
 -   [UShort (tipo de datos)](../../../visual-basic/language-reference/data-types/ushort-data-type.md)  
   
- De forma predeterminada, este mensaje es una advertencia. Para obtener más información sobre cómo ocultar las advertencias o tratar las advertencias como errores, vea [configurar advertencias en Visual Basic](https://docs.microsoft.com/visualstudio/ide/configuring-warnings-in-visual-basic).  
+ De forma predeterminada, este mensaje es una advertencia. Para obtener más información sobre cómo ocultar las advertencias o cómo tratarlas como errores, vea [configurar advertencias en Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).  
   
  **Id. de error:** BC40032  
   
 ## <a name="to-correct-this-error"></a>Para corregir este error  
   
--   Si su componente interactúa con otros [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort_md.md)] componentes o no interactúen con cualquier otro componente, no es necesario cambiar nada.  
+-   Si el componente se comunica solo con otros [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] componentes o no interactúen con cualquier otro componente, no necesita cambiar nada.  
   
--   Si trabaja con un componente no escrito para la [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort_md.md)], es posible que pueda determinar, ya sea mediante reflexión o documentación, si admite este tipo de datos. Si lo hace, no es necesario cambiar nada.  
+-   Si interactúa con un componente no escrito para el [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], es posible que pueda determinar, ya sea mediante reflexión o en documentación, si admite este tipo de datos. Si es así, no es necesario cambiar nada.  
   
--   Si dispone de interfaz con un componente que no admite este tipo de datos, debe reemplazarlo con el tipo compatible con CLS más próximo. Por ejemplo, en lugar de `UInteger` , quizá pueda usar `Integer` si no necesita que el intervalo de valores esté por encima de 2.147.483.647. Si necesita el intervalo extendido, puede reemplazar `UInteger` por `Long`.  
+-   Si interactúa con un componente que no admite este tipo de datos, debe reemplazar por el tipo conforme a CLS más próximo. Por ejemplo, en lugar de `UInteger` , quizá pueda usar `Integer` si no necesita que el intervalo de valores esté por encima de 2.147.483.647. Si necesita el intervalo extendido, puede reemplazar `UInteger` por `Long`.  
   
--   Si trabaja con objetos de automatización o COM, tenga en cuenta que algunos tipos tienen anchos de datos distintos que en [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort_md.md)]. Por ejemplo, `uint` suele ser de 16 bits en otros entornos. Si se pasa un argumento de 16 bits a esos componentes, declárelo como `UShort` en lugar de `UInteger` en administradas [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] código.  
+-   Si trabaja con objetos de automatización o COM, tenga en cuenta que algunos tipos tienen anchos de datos distintos que en [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Por ejemplo, `uint` suele ser de 16 bits en otros entornos. Al pasar un argumento de 16 bits a esos componentes, declárelo como `UShort` en lugar de `UInteger` en su administrado [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] código.  
   
 ## <a name="see-also"></a>Vea también  
- [Reflexión](http://msdn.microsoft.com/library/5d1d1bcf-08de-4d0b-97a8-912d17c00f26)   
- [Reflexión](http://msdn.microsoft.com/library/d1a58e7f-fb39-4d50-bf84-e3b8f9bf9775)   
+ [Reflexión](http://msdn.microsoft.com/library/5d1d1bcf-08de-4d0b-97a8-912d17c00f26)  
+ [Reflexión](../../../framework/reflection-and-codedom/reflection.md)  
  [\<PAVE sobre > escribir código conforme a CLS](http://msdn.microsoft.com/en-us/4c705105-69a2-4e5e-b24e-0633bc32c7f3)

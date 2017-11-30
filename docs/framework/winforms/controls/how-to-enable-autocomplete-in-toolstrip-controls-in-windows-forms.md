@@ -1,39 +1,43 @@
 ---
-title: "C&#243;mo: Habilitar AutoComplete en los controles ToolStrip de formularios Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "AutoComplete, habilitar en barras de herramientas"
-  - "AutoComplete, ejemplos"
-  - "ejemplos [Windows Forms], barras de herramientas"
-  - "barras de herramientas [Windows Forms], AutoComplete"
-  - "ToolStrip (control) [Windows Forms], AutoComplete"
-  - "ToolStripComboBox (clase), ejemplos"
+title: "Cómo: Habilitar AutoComplete en los controles ToolStrip de formularios Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- AutoComplete [Windows Forms], examples
+- toolbars [Windows Forms], AutoComplete
+- examples [Windows Forms], toolbars
+- AutoComplete [Windows Forms], enabling in toolbars
+- ToolStripComboBox class [Windows Forms], examples
+- ToolStrip control [Windows Forms], AutoComplete
 ms.assetid: fd66d085-1af1-45d4-930a-cde944da2e16
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: ac74e50eb6558c38d46714dd7bfe0cfd61133ac8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo: Habilitar AutoComplete en los controles ToolStrip de formularios Windows Forms
-El procedimiento siguiente combina un <xref:System.Windows.Forms.ToolStripLabel> con un <xref:System.Windows.Forms.ToolStripComboBox> que puede desplegar para mostrar una lista de elementos, como los sitios Web recientemente visitados.  Si el usuario escribe un carácter que coincide con el primer carácter de uno de los elementos en la lista, inmediatamente se muestra el elemento.  
+# <a name="how-to-enable-autocomplete-in-toolstrip-controls-in-windows-forms"></a>Cómo: Habilitar AutoComplete en los controles ToolStrip de formularios Windows Forms
+El procedimiento siguiente combina un <xref:System.Windows.Forms.ToolStripLabel> con un <xref:System.Windows.Forms.ToolStripComboBox> que puede colocarse hacia abajo mostrar una lista de elementos, como recientemente de los sitios Web visitados. Si el usuario escribe un carácter que coincide con el primer carácter de uno de los elementos de la lista, inmediatamente se muestra el elemento.  
   
 > [!NOTE]
->  La realización automática funciona con controles `ToolStrip` del mismo modo que funciona con controles tradicionales como <xref:System.Windows.Forms.ComboBox> y <xref:System.Windows.Forms.TextBox>.  
+>  Finalización automática funciona con `ToolStrip` controles de la misma manera que funciona con controles tradicionales como <xref:System.Windows.Forms.ComboBox> y <xref:System.Windows.Forms.TextBox>.  
   
-### Para habilitar AutoComplete en un control ToolStrip  
+### <a name="to-enable-autocomplete-in-a-toolstrip-control"></a>Para habilitar AutoComplete en un control ToolStrip  
   
-1.  Cree un control <xref:System.Windows.Forms.ToolStrip> y agréguele los elementos.  
+1.  Crear un <xref:System.Windows.Forms.ToolStrip> controlar y agregarle elementos.  
   
     ```vb  
     ToolStrip1 = New System.Windows.Forms.ToolStrip  
@@ -45,10 +49,9 @@ El procedimiento siguiente combina un <xref:System.Windows.Forms.ToolStripLabel>
     toolStrip1 = new System.Windows.Forms.ToolStrip();  
     toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[]   
         {toolStripLabel1, toolStripComboBox1});  
-  
     ```  
   
-2.  Establezca la propiedad <xref:System.Windows.Forms.ToolStripItem.Overflow%2A> de la etiqueta y del cuadro combinado en <xref:System.Windows.Forms.ToolStripItemOverflow>, de modo que la lista esté siempre disponible independientemente del tamaño del formulario.  
+2.  Establecer el <xref:System.Windows.Forms.ToolStripItem.Overflow%2A> propiedad de la etiqueta y el cuadro combinado para <xref:System.Windows.Forms.ToolStripItemOverflow.Never> para que la lista esté siempre disponible sin tener en cuenta el tamaño del formulario.  
   
     ```vb  
     ToolStripLabel1.Overflow = _  
@@ -61,23 +64,20 @@ El procedimiento siguiente combina un <xref:System.Windows.Forms.ToolStripLabel>
     toolStripLabel1.Overflow = _  
         System.Windows.Forms.ToolStripItemOverflow.Never  
     toolStripComboBox1.Overflow = System.Windows.Forms.ToolStripItemOverflow.Never  
-  
     ```  
   
-3.  Agregue las palabras a la colección Elementos del control <xref:System.Windows.Forms.ToolStripComboBox>.  
+3.  Agregar palabras a la colección de elementos de la <xref:System.Windows.Forms.ToolStripComboBox> control.  
   
     ```vb  
     ToolStripComboBox1.Items.AddRange(New Object() {"First Item", _  
         "Second Item", "Third Item"})  
-  
     ```  
   
     ```csharp  
     toolStripComboBox1.Items.AddRange(new object[] {"First item", "Second item", "Third item"});  
-  
     ```  
   
-4.  Establezca la propiedad <xref:System.Windows.Forms.ComboBox.AutoCompleteMode%2A> del cuadro combinado en <xref:System.Windows.Forms.AutoCompleteMode>.  
+4.  Establecer el <xref:System.Windows.Forms.ComboBox.AutoCompleteMode%2A> propiedad del cuadro combinado para <xref:System.Windows.Forms.AutoCompleteMode.Append>.  
   
     ```vb  
     ToolStripComboBox1.AutoCompleteMode = _  
@@ -86,10 +86,9 @@ El procedimiento siguiente combina un <xref:System.Windows.Forms.ToolStripLabel>
   
     ```csharp  
     toolStripComboBox1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;  
-  
     ```  
   
-5.  Establezca la propiedad <xref:System.Windows.Forms.ComboBox.AutoCompleteSource%2A> del cuadro combinado en <xref:System.Windows.Forms.AutoCompleteSource>.  
+5.  Establecer el <xref:System.Windows.Forms.ComboBox.AutoCompleteSource%2A> propiedad del cuadro combinado para <xref:System.Windows.Forms.AutoCompleteSource.ListItems>.  
   
     ```vb  
     ToolStripComboBox1.AutoCompleteSource = _  
@@ -98,15 +97,14 @@ El procedimiento siguiente combina un <xref:System.Windows.Forms.ToolStripLabel>
   
     ```csharp  
     toolStripComboBox1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;  
-  
     ```  
   
-## Vea también  
- <xref:System.Windows.Forms.ToolStrip>   
- <xref:System.Windows.Forms.ToolStripLabel>   
- <xref:System.Windows.Forms.ToolStripComboBox>   
- <xref:System.Windows.Forms.ToolStripComboBox.AutoCompleteMode%2A>   
- <xref:System.Windows.Forms.ToolStripComboBox.AutoCompleteSource%2A>   
- [Información sobre el control ToolStrip](../../../../docs/framework/winforms/controls/toolstrip-control-overview-windows-forms.md)   
- [Arquitectura del control ToolStrip](../../../../docs/framework/winforms/controls/toolstrip-control-architecture.md)   
+## <a name="see-also"></a>Vea también  
+ <xref:System.Windows.Forms.ToolStrip>  
+ <xref:System.Windows.Forms.ToolStripLabel>  
+ <xref:System.Windows.Forms.ToolStripComboBox>  
+ <xref:System.Windows.Forms.ToolStripComboBox.AutoCompleteMode%2A>  
+ <xref:System.Windows.Forms.ToolStripComboBox.AutoCompleteSource%2A>  
+ [Información sobre el control ToolStrip](../../../../docs/framework/winforms/controls/toolstrip-control-overview-windows-forms.md)  
+ [Arquitectura del control ToolStrip](../../../../docs/framework/winforms/controls/toolstrip-control-architecture.md)  
  [Resumen de la tecnología ToolStrip](../../../../docs/framework/winforms/controls/toolstrip-technology-summary.md)

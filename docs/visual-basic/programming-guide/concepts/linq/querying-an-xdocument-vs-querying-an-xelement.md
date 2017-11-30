@@ -1,34 +1,30 @@
 ---
-title: Diferencias entre realizar consultas de un XDocument Un XElement (Visual Basic) | Documentos de Microsoft
+title: Diferencias entre realizar consultas de un XDocument Un XElement (Visual Basic)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 2d111f84-0ded-4cde-8d93-5440557a726d
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 29044cd118bfd8ecc12bddca722ee3656d455e0f
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: 3ee3c0c1cda12a74f50b4937263d80f526b5d7ba
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="querying-an-xdocument-vs-querying-an-xelement-visual-basic"></a>Diferencias entre realizar consultas de un XDocument Un XElement (Visual Basic)
-Cuando carga un documento a través de <xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=fullName>, observará que tiene que escribir las consultas de forma ligeramente diferente que cuando se carga a través de <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=fullName>.</xref:System.Xml.Linq.XElement.Load%2A?displayProperty=fullName> </xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=fullName>  
+Cuando carga un documento mediante <xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=nameWithType>, observará que es necesario escribir las consultas de forma ligeramente diferente a como lo haría en caso de cargar el documento mediante <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType>.  
   
 ## <a name="comparison-of-xdocumentload-and-xelementload"></a>Comparación entre XDocument.Load y XElement.Load  
- Cuando carga un documento XML en un <xref:System.Xml.Linq.XElement>a través de <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=fullName>, el <xref:System.Xml.Linq.XElement>en la raíz de XML árbol contiene el elemento raíz del documento cargado.</xref:System.Xml.Linq.XElement> </xref:System.Xml.Linq.XElement.Load%2A?displayProperty=fullName> </xref:System.Xml.Linq.XElement> Sin embargo, cuando carga el mismo documento XML en una <xref:System.Xml.Linq.XDocument>a través de <xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=fullName>la raíz del árbol es un <xref:System.Xml.Linq.XDocument>nodo y el elemento raíz del documento cargado es el secundario permitido un <xref:System.Xml.Linq.XElement>nodo del <xref:System.Xml.Linq.XDocument>.</xref:System.Xml.Linq.XDocument> </xref:System.Xml.Linq.XElement> </xref:System.Xml.Linq.XDocument> </xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=fullName> </xref:System.Xml.Linq.XDocument> Los ejes de [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] funcionan en relación al nodo raíz.  
+ Cuando carga un documento XML en un <xref:System.Xml.Linq.XElement> mediante <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType>, el <xref:System.Xml.Linq.XElement> situado en la raíz del árbol XML contiene al elemento raíz del documento que se ha cargado. Sin embargo, cuando carga el mismo documento XML en un <xref:System.Xml.Linq.XDocument> mediante <xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=nameWithType>, la raíz del árbol es un nodo <xref:System.Xml.Linq.XDocument> el elemento raíz del documento cargado es el nodo secundario permitido <xref:System.Xml.Linq.XElement> de <xref:System.Xml.Linq.XDocument>. Los ejes de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] funcionan en relación al nodo raíz.  
   
- Este primer ejemplo carga un árbol XML usando <xref:System.Xml.Linq.XElement.Load%2A>.</xref:System.Xml.Linq.XElement.Load%2A> A continuación, consulta los elementos secundarios de la raíz del árbol.  
+ Este primer ejemplo carga un árbol XML utilizando <xref:System.Xml.Linq.XElement.Load%2A>. A continuación, consulta los elementos secundarios de la raíz del árbol.  
   
 ```vb  
 ' Create a simple document and  write it to a file  
@@ -59,7 +55,7 @@ Querying tree loaded with XElement.Load
 <Child3>3</Child3>  
 ```  
   
- El ejemplo siguiente es el mismo que el anterior, con la excepción de que el árbol XML se carga en una <xref:System.Xml.Linq.XDocument>en lugar de un <xref:System.Xml.Linq.XElement>.</xref:System.Xml.Linq.XElement> </xref:System.Xml.Linq.XDocument>  
+ El siguiente ejemplo es igual al anterior, con la diferencia de que el árbol XML se carga en un <xref:System.Xml.Linq.XDocument> en vez de un <xref:System.Xml.Linq.XElement>.  
   
 ```vb  
 ' Create a simple document and  write it to a file  
@@ -94,7 +90,7 @@ Querying tree loaded with XDocument.Load
   
  Observe que la misma consulta devolvió el nodo `Root` en vez de los tres nodos secundarios.  
   
- Un enfoque para tratar con esto es usar el <xref:System.Xml.Linq.XDocument.Root%2A>propiedad antes de obtener acceso a los métodos de ejes, como sigue:</xref:System.Xml.Linq.XDocument.Root%2A>  
+ Una forma de afrontar este asunto es utilizar la propiedad <xref:System.Xml.Linq.XDocument.Root%2A> antes de obtener acceso a los métodos de los ejes, tal y como se indica a continuación:  
   
 ```vb  
 ' Create a simple document and  write it to a file  
@@ -115,7 +111,7 @@ For Each e As XElement In childList
 Next  
 ```  
   
- Esta consulta se realiza ahora en la misma forma que la consulta en el árbol se basa en <xref:System.Xml.Linq.XElement>.</xref:System.Xml.Linq.XElement> El ejemplo genera el siguiente resultado:  
+ Ahora, esta consulta genera el mismo resultado que la consulta del árbol cuya raíz comienza en <xref:System.Xml.Linq.XElement>. El ejemplo genera el siguiente resultado:  
   
 ```  
 Querying tree loaded with XDocument.Load  

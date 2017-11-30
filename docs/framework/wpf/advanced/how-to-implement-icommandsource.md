@@ -1,70 +1,74 @@
 ---
-title: "C&#243;mo: Implementar ICommandSource | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "interfaces de ICommandSource, implementar"
-  - "interfaces, ICommandSource, implementar"
+title: "Cómo: Implementar ICommandSource"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords: ICommandSource interfaces [WPF], implementing
 ms.assetid: 7452dd39-6e11-44bf-806a-31d87f3772ac
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: bdff5ebeb51daff4e8848e9a7c8282c2eee6f208
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo: Implementar ICommandSource
-En este ejemplo se muestra cómo crear un origen de comando implementando <xref:System.Windows.Input.ICommandSource>.  Un origen de comando es un objeto que sabe cómo invocar un comando.  La interfaz <xref:System.Windows.Input.ICommandSource> expone tres miembros: <xref:System.Windows.Input.ICommandSource.Command%2A>, <xref:System.Windows.Input.ICommandSource.CommandParameter%2A> y <xref:System.Windows.Input.ICommandSource.CommandTarget%2A>.  <xref:System.Windows.Input.ICommandSource.Command%2A> es el comando que se invocará.  <xref:System.Windows.Input.ICommandSource.CommandParameter%2A> es un tipo de datos definido por el usuario que se pasa desde el origen de comando al método que administra el comando.  <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> es el objeto en que se ejecuta el comando.  
+# <a name="how-to-implement-icommandsource"></a>Cómo: Implementar ICommandSource
+Este ejemplo muestra cómo crear un origen de comando implementando <xref:System.Windows.Input.ICommandSource>.  Un origen de comando es un objeto que sabe cómo invocar un comando.  El <xref:System.Windows.Input.ICommandSource> interfaz expone tres miembros: <xref:System.Windows.Input.ICommandSource.Command%2A>, <xref:System.Windows.Input.ICommandSource.CommandParameter%2A>, y <xref:System.Windows.Input.ICommandSource.CommandTarget%2A>.  <xref:System.Windows.Input.ICommandSource.Command%2A>es el comando que se invocará. El <xref:System.Windows.Input.ICommandSource.CommandParameter%2A> es un tipo de datos definido por el usuario que se pasa desde el origen del comando al método que controla el comando. El <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> es el objeto que se ejecuta en el comando.  
   
- En este ejemplo, se crea una clase que crea una subclase del control <xref:System.Windows.Controls.Slider> e implementa <xref:System.Windows.Input.ICommandSource>.  
+ En este ejemplo, se crea una clase que las subclases el <xref:System.Windows.Controls.Slider> control e implementa <xref:System.Windows.Input.ICommandSource>.  
   
-## Ejemplo  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] proporciona varias clases que implementan <xref:System.Windows.Input.ICommandSource>, como <xref:System.Windows.Controls.Button>, <xref:System.Windows.Controls.MenuItem> y <xref:System.Windows.Controls.ListBoxItem>.  El origen de comando define cómo invoca un comando.  Los objetos <xref:System.Windows.Controls.Button> y <xref:System.Windows.Controls.MenuItem> invocan un comando cuando se hace clic en ellos.  Un objeto <xref:System.Windows.Controls.ListBoxItem> invoca un comando cuando se hacer doble clic en él.  Estas clases sólo se convierten en el origen de un comando cuando se establece su propiedad <xref:System.Windows.Input.ICommandSource.Command%2A>.  
+## <a name="example"></a>Ejemplo  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]Proporciona una serie de clases que implementan <xref:System.Windows.Input.ICommandSource>, como <xref:System.Windows.Controls.Button>, <xref:System.Windows.Controls.MenuItem>, y <xref:System.Windows.Controls.ListBoxItem>.  Un origen de comando define cómo invoca un comando.   <xref:System.Windows.Controls.Button>y <xref:System.Windows.Controls.MenuItem> invocar un comando cuando se hace clic en.  A <xref:System.Windows.Controls.ListBoxItem> cuando hace doble clic, se invoca un comando. Estas clases solo se convierten en un comando de origen cuando sus <xref:System.Windows.Input.ICommandSource.Command%2A> se establece la propiedad.  
   
- En este ejemplo se invoca al comando cuando se mueve el control deslizante, o dicho con más exactitud, cuando se cambia la propiedad <xref:System.Windows.Controls.Primitives.RangeBase.Value%2A>.  
+ En este ejemplo se invoca el comando cuando se mueve el control deslizante, o más concretamente, cuando el <xref:System.Windows.Controls.Primitives.RangeBase.Value%2A> se cambia la propiedad.  
   
- A continuación, se muestra la definición de clase.  
+ La siguiente es la definición de clase.  
   
  [!code-csharp[ImplementICommandSource#ImplementICommandSourceClassDefinition](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ImplementICommandSource/CSharp/CommandSlider.cs#implementicommandsourceclassdefinition)]
  [!code-vb[ImplementICommandSource#ImplementICommandSourceClassDefinition](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ImplementICommandSource/visualbasic/commandslider.vb#implementicommandsourceclassdefinition)]  
   
- El paso siguiente es implementar los miembros de <xref:System.Windows.Input.ICommandSource>.  En este ejemplo, las propiedades se implementan como objetos <xref:System.Windows.DependencyProperty>.  Esto permite que las propiedades utilicen el enlace de datos.  Para obtener más información sobre la clase <xref:System.Windows.DependencyProperty>, vea [Información general sobre las propiedades de dependencia](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md).  Para obtener más información sobre el enlace a datos, vea [Información general sobre el enlace de datos](../../../../docs/framework/wpf/data/data-binding-overview.md).  
+ El paso siguiente consiste en implementar el <xref:System.Windows.Input.ICommandSource> miembros.  En este ejemplo, las propiedades se implementan como <xref:System.Windows.DependencyProperty> objetos.  Esto permite que las propiedades utilizar el enlace de datos.  Para obtener más información sobre la <xref:System.Windows.DependencyProperty> de clases, consulte la [información general sobre propiedades de dependencia](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md).  Para obtener más información sobre el enlace de datos, vea el [información general sobre el enlace de datos](../../../../docs/framework/wpf/data/data-binding-overview.md).  
   
- Aquí se muestra únicamente la propiedad <xref:System.Windows.Input.ICommandSource.Command%2A>.  
+ Solo el <xref:System.Windows.Input.ICommandSource.Command%2A> propiedad se muestra aquí.  
   
  [!code-csharp[ImplementICommandSource#ImplementICommandSourceCommandPropertyDefinition](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ImplementICommandSource/CSharp/CommandSlider.cs#implementicommandsourcecommandpropertydefinition)]
  [!code-vb[ImplementICommandSource#ImplementICommandSourceCommandPropertyDefinition](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ImplementICommandSource/visualbasic/commandslider.vb#implementicommandsourcecommandpropertydefinition)]  
   
- Lo siguiente es la devolución de llamada de cambio de <xref:System.Windows.DependencyProperty>.  
+ Éste es el <xref:System.Windows.DependencyProperty> cambiar la devolución de llamada.  
   
  [!code-csharp[ImplementICommandSource#ImplementICommandSourceCommandChanged](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ImplementICommandSource/CSharp/CommandSlider.cs#implementicommandsourcecommandchanged)]
  [!code-vb[ImplementICommandSource#ImplementICommandSourceCommandChanged](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ImplementICommandSource/visualbasic/commandslider.vb#implementicommandsourcecommandchanged)]  
   
- El paso siguiente consiste en agregar y quitar el comando que está asociado al origen de comando.  No se puede sobrescribir simplemente la propiedad <xref:System.Windows.Input.ICommandSource.Command%2A> cuando se agrega un nuevo comando, porque antes se deben quitar los controladores de eventos asociados al comando anterior, si lo hay.  
+ El siguiente paso es agregar y quitar el comando que está asociado con el origen del comando.  El <xref:System.Windows.Input.ICommandSource.Command%2A> propiedad no se puede simplemente se sobrescribe cuando se agrega un nuevo comando, porque los controladores de eventos asociados con el comando anterior, si hubiera, primero hay que quitar.  
   
  [!code-csharp[ImplementICommandSource#ImplementICommandSourceHookUnHookCommands](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ImplementICommandSource/CSharp/CommandSlider.cs#implementicommandsourcehookunhookcommands)]
  [!code-vb[ImplementICommandSource#ImplementICommandSourceHookUnHookCommands](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ImplementICommandSource/visualbasic/commandslider.vb#implementicommandsourcehookunhookcommands)]  
   
- El último paso consiste en crear la lógica para el controlador de <xref:System.Windows.Input.ICommand.CanExecuteChanged> y el método <xref:System.Windows.Input.ICommand.Execute%2A>.  
+ El último paso consiste en crear la lógica de la <xref:System.Windows.Input.ICommand.CanExecuteChanged> controlador y el <xref:System.Windows.Input.ICommand.Execute%2A> método.  
   
- El evento <xref:System.Windows.Input.ICommand.CanExecuteChanged> notifica al origen de comando que es posible que haya cambiado la capacidad del comando para ejecutarse en el destino de comando actual.  Cuando un origen de comando recibe este evento, normalmente llama al método <xref:System.Windows.Input.ICommand.CanExecute%2A> del comando.  Si el comando no se puede ejecutar en el destino de comando actual, el origen de comando se suele deshabilitar.  Si el comando sí se puede ejecutar en el destino de comando actual, el origen de comando se suele habilitar.  
+ El <xref:System.Windows.Input.ICommand.CanExecuteChanged> evento le notifica el origen del comando que puede haber cambiado la capacidad del comando para ejecutar en el destino del comando actual.  Cuando un origen de comando recibe este evento, normalmente llama el <xref:System.Windows.Input.ICommand.CanExecute%2A> método en el comando.  Si el comando no se puede ejecutar en el destino del comando actual, el origen del comando normalmente se deshabilitará.  Si el comando puede ejecutarse en el destino del comando actual, el origen del comando habilitará normalmente sí.  
   
  [!code-csharp[ImplementICommandSource#ImplementICommandCanExecuteChanged](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ImplementICommandSource/CSharp/CommandSlider.cs#implementicommandcanexecutechanged)]
  [!code-vb[ImplementICommandSource#ImplementICommandCanExecuteChanged](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ImplementICommandSource/visualbasic/commandslider.vb#implementicommandcanexecutechanged)]  
   
- El último paso es el método <xref:System.Windows.Input.ICommand.Execute%2A>.  Si el comando es <xref:System.Windows.Input.RoutedCommand>, se llama al método <xref:System.Windows.Input.RoutedCommand.Execute%2A> de <xref:System.Windows.Input.RoutedCommand>; de lo contrario, se llama al método <xref:System.Windows.Input.ICommand> <xref:System.Windows.Input.ICommand.Execute%2A>.  
+ El último paso es la <xref:System.Windows.Input.ICommand.Execute%2A> método.  Si el comando es un <xref:System.Windows.Input.RoutedCommand>, <xref:System.Windows.Input.RoutedCommand> <xref:System.Windows.Input.RoutedCommand.Execute%2A> método es llamado; de lo contrario, el <xref:System.Windows.Input.ICommand> <xref:System.Windows.Input.ICommand.Execute%2A> se llama al método.  
   
  [!code-csharp[ImplementICommandSource#ImplementICommandExecute](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ImplementICommandSource/CSharp/CommandSlider.cs#implementicommandexecute)]
  [!code-vb[ImplementICommandSource#ImplementICommandExecute](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ImplementICommandSource/visualbasic/commandslider.vb#implementicommandexecute)]  
   
-## Vea también  
- <xref:System.Windows.Input.ICommandSource>   
- <xref:System.Windows.Input.ICommand>   
- <xref:System.Windows.Input.RoutedCommand>   
+## <a name="see-also"></a>Vea también  
+ <xref:System.Windows.Input.ICommandSource>  
+ <xref:System.Windows.Input.ICommand>  
+ <xref:System.Windows.Input.RoutedCommand>  
  [Información general sobre comandos](../../../../docs/framework/wpf/advanced/commanding-overview.md)

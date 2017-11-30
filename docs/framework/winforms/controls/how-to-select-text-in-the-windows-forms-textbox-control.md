@@ -1,45 +1,50 @@
 ---
-title: "C&#243;mo: Seleccionar texto en el control TextBox de formularios Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "cuadros de texto, seleccionar texto mediante programación"
-  - "texto, seleccionar texto en cuadros de texto mediante programación"
-  - "TextBox (control) [Windows Forms], seleccionar texto mediante programación"
+title: "Cómo: Seleccionar texto en el control TextBox de formularios Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- TextBox control [Windows Forms], selecting text programmatically
+- text boxes [Windows Forms], selecting text programmatically
+- text [Windows Forms], selecting in text boxes programmatically
 ms.assetid: 8c591546-6a01-45c7-8e03-f78431f903b1
-caps.latest.revision: 24
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 24
+caps.latest.revision: "24"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 08ad19f3daca43fb33e845b632ac7d92b00f544c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo: Seleccionar texto en el control TextBox de formularios Windows Forms
-Puede seleccionar texto en el control <xref:System.Windows.Forms.TextBox> de formularios Windows Forms mediante programación.  Por ejemplo, si crea una función que busque cadenas en el texto, podría seleccionar el texto para alertar visualmente al usuario de la posición de la cadena encontrada.  
+# <a name="how-to-select-text-in-the-windows-forms-textbox-control"></a>Cómo: Seleccionar texto en el control TextBox de formularios Windows Forms
+Puede seleccionar texto mediante programación en Windows Forms <xref:System.Windows.Forms.TextBox> control. Por ejemplo, si crea una función que se busca en el texto de una cadena concreta, puede seleccionar el texto para alertar visualmente al usuario de la posición de la cadena se encuentra.  
   
-### Para seleccionar texto mediante programación  
+### <a name="to-select-text-programmatically"></a>Para seleccionar texto mediante programación  
   
-1.  Establezca la propiedad <xref:System.Windows.Forms.TextBoxBase.SelectionStart%2A> en el principio del texto que desea seleccionar.  
+1.  Establecer el <xref:System.Windows.Forms.TextBoxBase.SelectionStart%2A> propiedad al principio del texto que desea seleccionar.  
   
-     La propiedad <xref:System.Windows.Forms.TextBoxBase.SelectionStart%2A> es un número que indica el punto de inserción dentro de la cadena de texto, siendo 0 la posición más a la izquierda.  Si se establece la propiedad <xref:System.Windows.Forms.TextBoxBase.SelectionStart%2A> en un valor igual o mayor que el número de caracteres del cuadro de texto, el punto de inserción se situará después del último carácter.  
+     El <xref:System.Windows.Forms.TextBoxBase.SelectionStart%2A> propiedad es un número que indica el punto de inserción dentro de la cadena de texto, siendo 0 la posición más a la izquierda. Si el <xref:System.Windows.Forms.TextBoxBase.SelectionStart%2A> propiedad se establece en un valor igual o mayor que el número de caracteres en el cuadro de texto, el punto de inserción se coloca después del último carácter.  
   
-2.  Establezca la propiedad <xref:System.Windows.Forms.TextBoxBase.SelectionLength%2A> en la longitud del texto que desea seleccionar.  
+2.  Establecer el <xref:System.Windows.Forms.TextBoxBase.SelectionLength%2A> propiedad a la longitud del texto que desea seleccionar.  
   
-     La propiedad <xref:System.Windows.Forms.TextBoxBase.SelectionLength%2A> es un valor numérico que establece el ancho del punto de inserción.  Al establecer <xref:System.Windows.Forms.TextBoxBase.SelectionLength%2A> en un número mayor que 0, se selecciona este número de caracteres, empezando en el punto de inserción actual.  
+     El <xref:System.Windows.Forms.TextBoxBase.SelectionLength%2A> propiedad es un valor numérico que establece el ancho del punto de inserción. Establecer el <xref:System.Windows.Forms.TextBoxBase.SelectionLength%2A> en un número mayor que 0, ese número de caracteres que se seleccione, desde el punto de inserción actual.  
   
-3.  \(Opcional\) Utilice la propiedad <xref:System.Windows.Forms.TextBoxBase.SelectedText%2A> para tener acceso al texto seleccionado.  
+3.  (Opcional) Tener acceso al texto seleccionado a través de la <xref:System.Windows.Forms.TextBoxBase.SelectedText%2A> propiedad.  
   
-     El código que se muestra a continuación selecciona el contenido de un cuadro de texto cuando se produce el evento <xref:System.Windows.Forms.Control.Enter> del control.  En este ejemplo se comprueba si el cuadro de texto tiene un valor para la propiedad <xref:System.Windows.Forms.TextBox.Text%2A> que no es `null` ni una cadena vacía.  Cuando el cuadro de texto recibe el foco, se selecciona el texto actual del cuadro de texto.  El controlador de eventos `TextBox1_Enter` se debe enlazar al control. Para obtener más información, vea [How to: Create Event Handlers at Run Time for Windows Forms](../../../../docs/framework/winforms/how-to-create-event-handlers-at-run-time-for-windows-forms.md).  
+     El código siguiente selecciona el contenido de un texto de cuadro cuando el control <xref:System.Windows.Forms.Control.Enter> se produce el evento. Este ejemplo se comprueba si el cuadro de texto tiene un valor para el <xref:System.Windows.Forms.TextBox.Text%2A> propiedad que no es `null` o una cadena vacía. Cuando el cuadro de texto recibe el foco, se selecciona el texto actual en el cuadro de texto. El `TextBox1_Enter` controlador de eventos debe estar enlazado al control; para obtener más información, consulte [Cómo: crear controladores de eventos en tiempo de ejecución para formularios Windows Forms](../../../../docs/framework/winforms/how-to-create-event-handlers-at-run-time-for-windows-forms.md).  
   
-     Para probar este ejemplo, presione la tecla Tabulador hasta que el cuadro de texto tenga el foco.  Si hace clic en el cuadro de texto, se anula la selección del texto.  
+     Para probar este ejemplo, presione la tecla Tab hasta que el cuadro de texto tiene el foco. Si hace clic en el cuadro de texto, el texto se anula la selección.  
   
     ```vb  
     Private Sub TextBox1_Enter(ByVal sender As Object, ByVal e As System.EventArgs) Handles TextBox1.Enter  
@@ -48,7 +53,6 @@ Puede seleccionar texto en el control <xref:System.Windows.Forms.TextBox> de for
           TextBox1.SelectionLength = TextBox1.Text.Length  
        End If  
     End Sub  
-  
     ```  
   
     ```csharp  
@@ -59,7 +63,6 @@ Puede seleccionar texto en el control <xref:System.Windows.Forms.TextBox> de for
           textBox1.SelectionLength = textBox1.Text.Length;  
        }  
     }  
-  
     ```  
   
     ```cpp  
@@ -74,12 +77,12 @@ Puede seleccionar texto en el control <xref:System.Windows.Forms.TextBox> de for
     }  
     ```  
   
-## Vea también  
- <xref:System.Windows.Forms.TextBox>   
- [Información general sobre el control TextBox](../../../../docs/framework/winforms/controls/textbox-control-overview-windows-forms.md)   
- [Cómo: Controlar el punto de inserción en un control TextBox de formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)   
- [Cómo: Crear un cuadro de texto de contraseña con el control TextBox de formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)   
- [Cómo: Crear un cuadro de texto de sólo lectura](../../../../docs/framework/winforms/controls/how-to-create-a-read-only-text-box-windows-forms.md)   
- [Cómo: Insertar comillas en una cadena](../../../../docs/framework/winforms/controls/how-to-put-quotation-marks-in-a-string-windows-forms.md)   
- [Cómo: Ver múltiples líneas en el control TextBox de formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)   
- [TextBox \(Control\)](../../../../docs/framework/winforms/controls/textbox-control-windows-forms.md)
+## <a name="see-also"></a>Vea también  
+ <xref:System.Windows.Forms.TextBox>  
+ [Información general sobre el control TextBox](../../../../docs/framework/winforms/controls/textbox-control-overview-windows-forms.md)  
+ [Controlar el punto de inserción en un control TextBox de Windows Forms](../../../../docs/framework/winforms/controls/how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)  
+ [Crear un cuadro de texto de contraseña con el control TextBox de Windows Forms](../../../../docs/framework/winforms/controls/how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)  
+ [Crear un cuadro de texto de sólo lectura](../../../../docs/framework/winforms/controls/how-to-create-a-read-only-text-box-windows-forms.md)  
+ [Insertar comillas en una cadena](../../../../docs/framework/winforms/controls/how-to-put-quotation-marks-in-a-string-windows-forms.md)  
+ [Ver múltiples líneas en el control TextBox de Windows Forms](../../../../docs/framework/winforms/controls/how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)  
+ [Control TextBox](../../../../docs/framework/winforms/controls/textbox-control-windows-forms.md)

@@ -1,40 +1,46 @@
 ---
-title: "C&#243;mo: Aplicar propiedades de expansi&#243;n al contenido de un Viewbox | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "controles, Viewbox"
-  - "Stretch (propiedades)"
-  - "StretchDirection (propiedades)"
-  - "Viewbox (control)"
+title: "Cómo: Aplicar propiedades de expansión al contenido de un Viewbox"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- StretchDirection properties [WPF]
+- Stretch properties [WPF]
+- controls [WPF], Viewbox
+- Viewbox control [WPF]
 ms.assetid: b9c22ef4-bce4-4300-9e0c-8260b7db83cc
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: f6e93c744a8d7c294556e80f0ac4bf1f973ea5c1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo: Aplicar propiedades de expansi&#243;n al contenido de un Viewbox
-## Ejemplo  
- En este ejemplo se muestra cómo cambiar el valor de las propiedades <xref:System.Windows.Controls.Viewbox.StretchDirection%2A> y <xref:System.Windows.Controls.Viewbox.Stretch%2A> de <xref:System.Windows.Controls.Viewbox>.  
+# <a name="how-to-apply-stretch-properties-to-the-contents-of-a-viewbox"></a>Cómo: Aplicar propiedades de expansión al contenido de un Viewbox
+## <a name="example"></a>Ejemplo  
+ Este ejemplo muestra cómo cambiar el valor de la <xref:System.Windows.Controls.Viewbox.StretchDirection%2A> y <xref:System.Windows.Controls.Viewbox.Stretch%2A> propiedades de un <xref:System.Windows.Controls.Viewbox>.  
   
- El primer ejemplo utiliza [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] para definir un elemento <xref:System.Windows.Controls.Viewbox>.  Asigna una propiedad <xref:System.Windows.FrameworkElement.MaxWidth%2A> y una propiedad <xref:System.Windows.FrameworkElement.MaxHeight%2A> de 400.  En el ejemplo se anida un elemento <xref:System.Windows.Controls.Image> en el control <xref:System.Windows.Controls.Viewbox>.  Los elementos <xref:System.Windows.Controls.Button> que corresponden a los valores de propiedad para las enumeraciones <xref:System.Windows.Controls.Viewbox.Stretch%2A> y <xref:System.Windows.Controls.StretchDirection> manipulan el comportamiento de ajuste del objeto <xref:System.Windows.Controls.Image> anidado.  
+ El primer ejemplo utiliza [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] para definir un <xref:System.Windows.Controls.Viewbox> elemento. Asigna un <xref:System.Windows.FrameworkElement.MaxWidth%2A> y <xref:System.Windows.FrameworkElement.MaxHeight%2A> de 400. El ejemplo anida una <xref:System.Windows.Controls.Image> elemento dentro de la <xref:System.Windows.Controls.Viewbox>. <xref:System.Windows.Controls.Button>elementos que corresponden a los valores de propiedad para el <xref:System.Windows.Controls.Viewbox.Stretch%2A> y <xref:System.Windows.Controls.StretchDirection> enumeraciones manipulan el comportamiento de ajuste de las anidadas <xref:System.Windows.Controls.Image>.  
   
- [!code-xml[viewboxStretchLayoutSamp#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/viewboxStretchLayoutSamp/CSharp/Window1.xaml#1)]  
+ [!code-xaml[viewboxStretchLayoutSamp#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/viewboxStretchLayoutSamp/CSharp/Window1.xaml#1)]  
   
- En el archivo de código subyacente siguiente se controlan los eventos <xref:System.Windows.Controls.Button><xref:System.Windows.Controls.Primitives.ButtonBase.Click> definidos en el ejemplo de [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] anterior.  
+ Los siguientes identificadores de archivo de código subyacente del <xref:System.Windows.Controls.Button> <xref:System.Windows.Controls.Primitives.ButtonBase.Click> eventos que el anterior [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] en el ejemplo se define.  
   
  [!code-csharp[viewboxStretchLayoutSamp#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/viewboxStretchLayoutSamp/CSharp/Window1.xaml.cs#2)]
  [!code-vb[viewboxStretchLayoutSamp#2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/viewboxStretchLayoutSamp/VisualBasic/Window1.xaml.vb#2)]  
   
-## Vea también  
- <xref:System.Windows.Controls.Viewbox>   
- <xref:System.Windows.Media.Stretch>   
+## <a name="see-also"></a>Vea también  
+ <xref:System.Windows.Controls.Viewbox>  
+ <xref:System.Windows.Media.Stretch>  
  <xref:System.Windows.Controls.StretchDirection>

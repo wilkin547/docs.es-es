@@ -1,60 +1,63 @@
 ---
-title: "C&#243;mo: Voltear un control UIElement horizontal o verticalmente | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "voltear UIElements"
-  - "UIElements, voltear"
+title: "Cómo: Voltear un control UIElement horizontal o verticalmente"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- flipping UIElements [WPF]
+- UIElements [WPF], flipping
 ms.assetid: 02c6730f-65c0-40d5-a553-4cb663721882
-caps.latest.revision: 4
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 84d1360246141cfa565d669fff108e3e4db3ce33
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/22/2017
 ---
-# C&#243;mo: Voltear un control UIElement horizontal o verticalmente
-En este ejemplo se muestra cómo utilizar una transformación <xref:System.Windows.Media.ScaleTransform> para voltear en sentido horizontal o vertical un elemento <xref:System.Windows.UIElement>.  En este ejemplo, se voltea un control <xref:System.Windows.Controls.Button> \(un tipo de elemento <xref:System.Windows.UIElement>\) aplicándole una transformación <xref:System.Windows.Media.ScaleTransform> a su propiedad <xref:System.Windows.UIElement.RenderTransform%2A>.  
+# <a name="how-to-flip-a-uielement-horizontally-or-vertically"></a>Cómo: Voltear un control UIElement horizontal o verticalmente
+Este ejemplo muestra cómo utilizar un <xref:System.Windows.Media.ScaleTransform> debe voltear un <xref:System.Windows.UIElement> horizontal o verticalmente. En este ejemplo, un <xref:System.Windows.Controls.Button> control (un tipo de <xref:System.Windows.UIElement>) se voltea aplicando un <xref:System.Windows.Media.ScaleTransform> a su <xref:System.Windows.UIElement.RenderTransform%2A> propiedad.  
   
-## Ejemplo  
- En la ilustración siguiente se muestra el botón que se va a voltear.  
+## <a name="example"></a>Ejemplo  
+ En la siguiente ilustración muestra el botón Examinar.  
   
- ![Botón sin transformación](../../../../docs/framework/wpf/advanced/media/graphicsmm-buttonflipbeforeflip.png "graphicsmm\_buttonflipbeforeflip")  
-Elemento UIElement que se va a voltear  
+ ![Un botón sin transformación](../../../../docs/framework/wpf/advanced/media/graphicsmm-buttonflipbeforeflip.gif "graphicsmm_buttonflipbeforeflip")  
+El elemento de IU para voltear  
   
- A continuación se muestra el código que crea el botón.  
+ A continuación muestra el código que crea el botón.  
   
- [!code-xml[Transforms_snip#GraphicsMMButtonWithoutFlip](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/FlipExample.xaml#graphicsmmbuttonwithoutflip)]  
+ [!code-xaml[Transforms_snip#GraphicsMMButtonWithoutFlip](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/FlipExample.xaml#graphicsmmbuttonwithoutflip)]  
   
-## Ejemplo  
- Para voltear horizontalmente el botón, cree una transformación <xref:System.Windows.Media.ScaleTransform> y establezca su propiedad <xref:System.Windows.Media.ScaleTransform.ScaleX%2A> en \-1.  Aplique la transformación <xref:System.Windows.Media.ScaleTransform> a la propiedad <xref:System.Windows.UIElement.RenderTransform%2A> del botón.  
+## <a name="example"></a>Ejemplo  
+ Para voltear horizontalmente el botón, cree una <xref:System.Windows.Media.ScaleTransform> y establecer su <xref:System.Windows.Media.ScaleTransform.ScaleX%2A> propiedad en -1. Aplicar el <xref:System.Windows.Media.ScaleTransform> en el botón <xref:System.Windows.UIElement.RenderTransform%2A> propiedad.  
   
- [!code-xml[Transforms_snip#GraphicsMMFlipButtonExample1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/FlipExample.xaml#graphicsmmflipbuttonexample1)]  
+ [!code-xaml[Transforms_snip#GraphicsMMFlipButtonExample1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/FlipExample.xaml#graphicsmmflipbuttonexample1)]  
   
- ![Botón volteado horizontalmente alrededor del punto &#40;0,0&#41;](../../../../docs/framework/wpf/advanced/media/graphicsmm-buttonfliphorizontalflip-displaced.png "graphicsmm\_buttonfliphorizontalflip\_displaced")  
+ ![Un botón volteado horizontalmente alrededor de &#40; 0,0 &#41; ] (../../../../docs/framework/wpf/advanced/media/graphicsmm-buttonfliphorizontalflip-displaced.gif "graphicsmm_buttonfliphorizontalflip_displaced")  
 El botón después de aplicar ScaleTransform  
   
-## Ejemplo  
- Como puede observar en la ilustración anterior, el botón se ha volteado, pero también se ha movido.  Esto se debe a que se volteó desde su esquina superior izquierda.  Para voltear el botón en su lugar, se debe aplicar <xref:System.Windows.Media.ScaleTransform> a su centro, no a su esquina.  Una manera fácil de aplicar <xref:System.Windows.Media.ScaleTransform> al centro de los botones es establecer la propiedad <xref:System.Windows.UIElement.RenderTransformOrigin%2A> del botón en 0.5, 0.5.  
+## <a name="example"></a>Ejemplo  
+ Como puede ver en la ilustración anterior, el botón se ha volteado, pero también se ha movido. Eso es porque se voltea el botón de la esquina superior izquierda. Para voltear el botón en su lugar, desea aplicar el <xref:System.Windows.Media.ScaleTransform> a su centro, no a su esquina. Una forma sencilla de aplicar el <xref:System.Windows.Media.ScaleTransform> a los botones es establecer el botón Centro <xref:System.Windows.UIElement.RenderTransformOrigin%2A> propiedad en 0,5, 0,5.  
   
- [!code-xml[Transforms_snip#GraphicsMMFlipButtonExample2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/FlipExample.xaml#graphicsmmflipbuttonexample2)]  
+ [!code-xaml[Transforms_snip#GraphicsMMFlipButtonExample2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/FlipExample.xaml#graphicsmmflipbuttonexample2)]  
   
- ![Botón volteado horizontalmente alrededor de su centro](../../../../docs/framework/wpf/advanced/media/graphicsmm-buttonfliphorizontalflip-inplace.png "graphicsmm\_buttonfliphorizontalflip\_inplace")  
-El botón con su propiedad RenderTransformOrigin establecida en 0.5, 0.5  
+ ![Botón volteado horizontalmente alrededor de su centro](../../../../docs/framework/wpf/advanced/media/graphicsmm-buttonfliphorizontalflip-inplace.gif "graphicsmm_buttonfliphorizontalflip_inplace")  
+El botón con un valor de RenderTransformOrigin de 0,5, 0,5  
   
-## Ejemplo  
- Para voltear verticalmente el botón, establezca la propiedad <xref:System.Windows.Media.ScaleTransform.ScaleY%2A> del objeto <xref:System.Windows.Media.ScaleTransform> en lugar de su propiedad <xref:System.Windows.Media.ScaleTransform.ScaleX%2A>.  
+## <a name="example"></a>Ejemplo  
+ Para voltear verticalmente el botón, establezca la <xref:System.Windows.Media.ScaleTransform> del objeto <xref:System.Windows.Media.ScaleTransform.ScaleY%2A> propiedad en lugar de su <xref:System.Windows.Media.ScaleTransform.ScaleX%2A> propiedad.  
   
- [!code-xml[Transforms_snip#GraphicsMMVerticalFlipButtonExample2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/FlipExample.xaml#graphicsmmverticalflipbuttonexample2)]  
+ [!code-xaml[Transforms_snip#GraphicsMMVerticalFlipButtonExample2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/FlipExample.xaml#graphicsmmverticalflipbuttonexample2)]  
   
- ![Botón volteado verticalmente alrededor de su centro](../../../../docs/framework/wpf/advanced/media/graphicsmm-buttonflipverticalflip-inplace.png "graphicsmm\_buttonflipverticalflip\_inplace")  
-El botón volteado en sentido vertical  
+ ![Botón volteado verticalmente alrededor de su centro](../../../../docs/framework/wpf/advanced/media/graphicsmm-buttonflipverticalflip-inplace.gif "graphicsmm_buttonflipverticalflip_inplace")  
+El botón volteado verticalmente  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Información general sobre transformaciones](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)

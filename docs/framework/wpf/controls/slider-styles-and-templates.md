@@ -1,69 +1,71 @@
 ---
-title: "Estilos y plantillas de Slider | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ControlTemplate [WPF], Control deslizante"
-  - "partes [WPF], Control deslizante"
-  - "Slider [WPF], estilos y plantillas"
-  - "estados [WPF], Control deslizante"
-  - "estilos [WPF], Control deslizante"
-  - "plantillas [WPF], Control deslizante"
+title: Estilos y plantillas de Slider
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- parts [WPF], Slider
+- states [WPF], Slider
+- Slider [WPF], styles and templates
+- styles [WPF], Slider
+- templates [WPF], Slider
+- ControlTemplate [WPF], Slider
 ms.assetid: d89aa97b-075a-4752-9c41-9679df65c491
-caps.latest.revision: 19
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 19
+caps.latest.revision: "19"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 9dfa340cf42e5e7ed105bf14eb0f7a24ea85a1b4
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Estilos y plantillas de Slider
-En este tema, se describen los estilos y plantillas del control <xref:System.Windows.Controls.Slider>.  Puede modificar la plantilla <xref:System.Windows.Controls.ControlTemplate> predeterminada para dar un aspecto único al control.  Para obtener más información, vea [Personalizar la apariencia de un control existente creando una clase ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
+# <a name="slider-styles-and-templates"></a>Estilos y plantillas de Slider
+En este tema se describe los estilos y plantillas para el <xref:System.Windows.Controls.Slider> control. Puede modificar el valor predeterminado <xref:System.Windows.Controls.ControlTemplate> para dar al control una apariencia única. Para más información, consulte [Customizing the Appearance of an Existing Control by Creating a ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md) (Personalizar la apariencia de un control existente mediante la creación de una clase ControlTemplate).  
   
-## Elementos de Slider  
- En la siguiente tabla se muestran los elementos con nombre del control <xref:System.Windows.Controls.Slider>.  
+## <a name="slider-parts"></a>Elementos de control deslizante  
+ En la tabla siguiente se enumera los elementos con nombre para el <xref:System.Windows.Controls.Slider> control.  
   
-||||  
-|-|-|-|  
 |Parte|Tipo|Descripción|  
-|PART\_Track|<xref:System.Windows.Controls.Primitives.Track>|Contenedor del elemento que indica la posición de <xref:System.Windows.Controls.Slider>.|  
-|PART\_SelectionRange|<xref:System.Windows.FrameworkElement>|Elemento que muestra un intervalo de selección a lo largo de <xref:System.Windows.Controls.Slider>.  El intervalo de selección está visible sólo si la propiedad <xref:System.Windows.Controls.Slider.IsSelectionRangeEnabled%2A> es `true`.|  
+|-|-|-|  
+|PART_Track|<xref:System.Windows.Controls.Primitives.Track>|El contenedor para el elemento que indica la posición de la <xref:System.Windows.Controls.Slider>.|  
+|PART_SelectionRange|<xref:System.Windows.FrameworkElement>|El elemento que muestra un intervalo de selección a lo largo de la <xref:System.Windows.Controls.Slider>.  El intervalo de selección esté visible solo si la <xref:System.Windows.Controls.Slider.IsSelectionRangeEnabled%2A> propiedad es `true`.|  
   
-## Estados de Slider  
- En la tabla siguiente se muestran los estados visuales del control <xref:System.Windows.Controls.Slider>.  
+## <a name="slider-states"></a>Estados de control deslizante  
+ La tabla siguiente enumera los estados visuales para el <xref:System.Windows.Controls.Slider> control.  
   
 |Nombre de VisualState|Nombre de VisualStateGroup|Descripción|  
-|---------------------------|--------------------------------|-----------------|  
-|Normal|CommonStates|Estado predeterminado.|  
-|MouseOver|CommonStates|El puntero del mouse está situado sobre el control.|  
-|Disabled|CommonStates|El control está deshabilitado.|  
-|Focused|FocusStates|El control tiene el foco.|  
-|Unfocused|FocusStates|El control no tiene el foco.|  
-|Valid|ValidationStates|El control utiliza la clase <xref:System.Windows.Controls.Validation> y la propiedad adjunta <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName> es `false`.|  
-|InvalidFocused|ValidationStates|La propiedad adjunta <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName> es `true`, tiene el control y tiene el foco.|  
-|InvalidUnfocused|ValidationStates|La propiedad adjunta <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName> es `true`, tiene el control pero no tiene el foco.|  
+|----------------------|---------------------------|-----------------|  
+|Normal|CommonStates|El estado predeterminado.|  
+|MouseOver|CommonStates|El puntero del mouse se coloca sobre el control.|  
+|Deshabilitado|CommonStates|El control está deshabilitado.|  
+|Con foco|FocusStates|El control tiene el foco.|  
+|Sin foco|FocusStates|El control no tiene el foco.|  
+|Válido|ValidationStates|El control usa la <xref:System.Windows.Controls.Validation> clase y la <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> propiedad adjunta es `false`.|  
+|InvalidFocused|ValidationStates|El <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> propiedad adjunta es `true` tiene el control tiene el foco.|  
+|InvalidUnfocused|ValidationStates|El <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> propiedad adjunta es `true` tiene el control no tiene el foco.|  
   
-## Ejemplo de ControlTemplate de Slider  
- En el ejemplo siguiente se muestra cómo definir <xref:System.Windows.Controls.ControlTemplate> para el control <xref:System.Windows.Controls.Slider>.  
+## <a name="slider-controltemplate-example"></a>Ejemplo de ControlTemplate de control deslizante  
+ En el ejemplo siguiente se muestra cómo definir un <xref:System.Windows.Controls.ControlTemplate> para el <xref:System.Windows.Controls.Slider> control.  
   
- [!code-xml[ControlTemplateExamples#Slider](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/slider.xaml#slider)]  
+ [!code-xaml[ControlTemplateExamples#Slider](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/slider.xaml#slider)]  
   
- El ejemplo anterior utiliza uno o más de los siguientes recursos.  
+ En el ejemplo anterior se usa uno o varios de los recursos siguientes.  
   
- [!code-xml[ControlTemplateExamples#Resources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
+ [!code-xaml[ControlTemplateExamples#Resources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
   
- Para obtener el ejemplo completo, vea          [Styling with ControlTemplates Sample](http://go.microsoft.com/fwlink/?LinkID=160041) .  
+ Para ver un ejemplo completo, consulte [Aplicación de estilos con el ejemplo ControlTemplates](http://go.microsoft.com/fwlink/?LinkID=160041).  
   
-## Vea también  
- <xref:System.Windows.FrameworkElement.Style%2A>   
- <xref:System.Windows.Controls.ControlTemplate>   
- [Estilos y plantillas de controles](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)   
- [Personalización de controles](../../../../docs/framework/wpf/controls/control-customization.md)   
- [Aplicar estilos y plantillas](../../../../docs/framework/wpf/controls/styling-and-templating.md)   
- [Personalizar la apariencia de un control existente creando una clase ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)
+## <a name="see-also"></a>Vea también  
+ <xref:System.Windows.FrameworkElement.Style%2A>  
+ <xref:System.Windows.Controls.ControlTemplate>  
+ [Estilos y plantillas de controles](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)  
+ [Control Customization](../../../../docs/framework/wpf/controls/control-customization.md) (Personalización de controles)  
+ [Aplicar estilos y plantillas](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
+ [Personalización de la apariencia de un control existente mediante la creación de una clase ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)

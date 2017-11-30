@@ -1,39 +1,40 @@
 ---
-title: "C&#243;mo: Cambiar el tama&#241;o de un control Label de formularios Windows Forms para ajustar su contenido | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "títulos, ajustar el tamaño"
-  - "Label (control) [Windows Forms], ajustar tamaño al contenido"
-  - "etiquetas, ajustar tamaño al contenido"
-  - "tamaño, controles"
-  - "ajustar tamaño de los controles"
+title: "Cómo: Cambiar el tamaño de un control Label de formularios Windows Forms para ajustar su contenido"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- captions [Windows Forms], sizing
+- sizing controls
+- size [Windows Forms], controls
+- labels [Windows Forms], sizing to fit contents
+- Label control [Windows Forms], sizing to fit contents
 ms.assetid: 99648964-63b2-438c-980e-d24103ad602b
-caps.latest.revision: 7
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: bd89d72264e5837d2c41fcb0ab024a7b16f4205b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo: Cambiar el tama&#241;o de un control Label de formularios Windows Forms para ajustar su contenido
-El control <xref:System.Windows.Forms.Label> de formularios Windows Forms puede tener una sola línea o varias líneas, y tener tamaño fijo o cambiar automáticamente de tamaño para adaptarse a la leyenda.  La propiedad <xref:System.Windows.Forms.Label.AutoSize%2A> permite cambiar el tamaño de los controles para que se ajuste leyendas mayores o menores, lo que resulta especialmente útil si la leyenda cambia en tiempo de ejecución.  
+# <a name="how-to-size-a-windows-forms-label-control-to-fit-its-contents"></a>Cómo: Cambiar el tamaño de un control Label de formularios Windows Forms para ajustar su contenido
+Los formularios Windows Forms <xref:System.Windows.Forms.Label> control puede ser una línea o varias líneas, y ser tamaño fijo o cambiar automáticamente de tamaño para adaptarse al título. El <xref:System.Windows.Forms.Label.AutoSize%2A> propiedad ayuda a cambiar el tamaño de los controles para que se ajuste a títulos mayores o menores, lo que es especialmente útil si va a cambiar el título en tiempo de ejecución.  
   
-### Para hacer que un control cambie dinámicamente de tamaño a fin de ajustarse a su contenido  
+### <a name="to-make-a-label-control-resize-dynamically-to-fit-its-contents"></a>Para crear un control de etiqueta de tamaño dinámicamente para ajustarse a su contenido  
   
-1.  Establezca la propiedad <xref:System.Windows.Forms.Label.AutoSize%2A> en `true`.  
+1.  Establecer su <xref:System.Windows.Forms.Label.AutoSize%2A> propiedad `true`.  
   
- Si <xref:System.Windows.Forms.Label.AutoSize%2A> se establece en `false`, se pasarán, si es posible, las palabras especificadas en la propiedad <xref:System.Windows.Forms.Label.Text%2A> a la línea siguiente, pero no aumentará el tamaño del control.  
+ Si <xref:System.Windows.Forms.Label.AutoSize%2A> está establecido en `false`, las palabras especificadas en el <xref:System.Windows.Forms.Label.Text%2A> propiedad se ajustará a la línea siguiente si es posible, pero el control no crecerán.  
   
-## Vea también  
- [Cómo: Crear teclas de acceso con controles Label de formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-create-access-keys-with-windows-forms-label-controls.md)   
- [Información general sobre el control Label](../../../../docs/framework/winforms/controls/label-control-overview-windows-forms.md)   
- [Label \(Control\)](../../../../docs/framework/winforms/controls/label-control-windows-forms.md)
+## <a name="see-also"></a>Vea también  
+ [Crear teclas de acceso con controles Label de formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-create-access-keys-with-windows-forms-label-controls.md)  
+ [Información general sobre el control Label](../../../../docs/framework/winforms/controls/label-control-overview-windows-forms.md)  
+ [Etiqueta (control)](../../../../docs/framework/winforms/controls/label-control-windows-forms.md)

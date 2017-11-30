@@ -1,80 +1,78 @@
 ---
-title: "Inherits (Instrucci&#243;n) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.Inherits"
-  - "Inherits"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Inherits (instrucción)"
-  - "Inherits (instrucción), sintaxis"
+title: Inherits Statement
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vb.Inherits
+- Inherits
+helpviewer_keywords:
+- Inherits statement [Visual Basic]
+- Inherits statement [Visual Basic], syntax
 ms.assetid: 9e6fe042-9af3-4341-8093-fc3537770cf2
-caps.latest.revision: 16
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: ae9ba54c3fd1ec3332c9f6260bc19a1293270ad8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Inherits (Instrucci&#243;n)
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
+# <a name="inherits-statement"></a>Inherits Statement
 Hace que la clase o interfaz actual herede los atributos, variables, propiedades, procedimientos y eventos de otra clase o conjunto de interfaces.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 Inherits basetypenames  
 ```  
   
-## Elementos  
+## <a name="parts"></a>Elementos  
   
-|||  
-|-|-|  
 |Término|Definición|  
-|`basetypenames`|Obligatorio.  Nombre de la clase de la que se deriva esta clase.<br /><br /> O bien<br /><br /> Nombres de las interfaces de las que deriva esta interfaz.  Utilice comas para separar varios nombres.|  
+|---|---|  
+|`basetypenames`|Obligatorio. El nombre de la clase del que se deriva esta clase.<br /><br /> O bien<br /><br /> Los nombres de las interfaces del que se deriva esta interfaz. Use comas para separar varios nombres.|  
   
-## Comentarios  
- Si se utiliza, la instrucción `Inherits` debe ser la primera línea no vacía, sin comentario, en una definición de clase o de interfaz.  Debe seguir inmediatamente a la instrucción `Class` o `Interface`.  
+## <a name="remarks"></a>Comentarios  
+ Si usa, el `Inherits` instrucción debe ser la primera línea no vacía, sin comentarios en una definición de clase o interfaz. Debe seguir inmediatamente el `Class` o `Interface` instrucción.  
   
- Sólo puede utilizar `Inherits` en una clase o una interfaz.  Esto significa que el contexto de declaración de una herencia no puede ser un archivo de código fuente, espacio de nombres, estructura, módulo, procedimiento o bloque.  
+ Puede usar `Inherits` sólo en una clase o interfaz. Esto significa que el contexto de la declaración de una herencia no puede ser un archivo de código fuente, espacio de nombres, estructura, módulo, procedimiento o bloque.  
   
-## Reglas  
+## <a name="rules"></a>Reglas  
   
--   **Herencia de clase.** Si una clase utiliza la instrucción `Inherits`, solo se puede especificar una clase base.  
+-   **Herencia de clases.** Si utiliza una clase de la `Inherits` (instrucción), puede especificar sólo una clase base.  
   
-     Una clase no puede heredar de una clase anidada dentro de ella.  
+     Una clase no puede heredar de una clase anidada dentro de él.  
   
--   **Herencia de interfaz.** Si una interfaz utiliza la instrucción `Inherits`, se pueden especificar una o más interfaces base.  Puede heredar de dos interfaces incluso si cada una define un miembro con el mismo nombre.  Si lo hace así, el código de implementación debe utilizar la calificación del nombre para especificar qué miembro se implementa.  
+-   **Herencia de interfaz.** Si usa una interfaz el `Inherits` (instrucción), puede especificar una o varias interfaces base. Puede heredar de dos interfaces incluso si cada una definen a un miembro con el mismo nombre. Si lo hace, el código que implementa debe utilizar la calificación de nombres para especificar qué miembro está implementando.  
   
-     Una interfaz no puede heredar de otra interfaz con un nivel de acceso más restrictivo.  Por ejemplo, una interfaz de tipo `Public` no puede heredar una interfaz de tipo `Friend`.  
+     Una interfaz no puede heredar de otra interfaz con un nivel de acceso más restrictivo. Por ejemplo, un `Public` interfaz no puede heredar de un `Friend` interfaz.  
   
-     Una interfaz no puede heredar de una interfaz anidada en ella.  
+     Una interfaz no puede heredar de una interfaz anidada dentro de ella.  
   
- Un ejemplo de herencia de clases en .NET Framework es la clase <xref:System.ArgumentException>, que hereda de la clase <xref:System.SystemException>.  Esto proporciona a <xref:System.ArgumentException> todas las propiedades y procedimientos predefinidos que necesitan las excepciones de sistema, como la propiedad <xref:System.Exception.Message%2A> y el método <xref:System.Exception.ToString%2A>.  
+ Un ejemplo de herencia de clases de .NET Framework es la <xref:System.ArgumentException> (clase), que se hereda de la <xref:System.SystemException> clase. Esto proporciona al <xref:System.ArgumentException> todas las propiedades predefinidas y procedimientos necesarios para excepciones del sistema, como el <xref:System.Exception.Message%2A> propiedad y el <xref:System.Exception.ToString%2A> método.  
   
- Un ejemplo de herencia de interfaces en .NET Framework es la interfaz <xref:System.Collections.ICollection>, que hereda de la interfaz <xref:System.Collections.IEnumerable>.  Esto hace que <xref:System.Collections.ICollection> herede la definición del enumerador necesario para recorrer una colección.  
+ Un ejemplo de herencia de interfaz en .NET Framework es la <xref:System.Collections.ICollection> interfaz que hereda de la <xref:System.Collections.IEnumerable> interfaz. Esto hace que <xref:System.Collections.ICollection> para heredar la definición del enumerador necesario para recorrer una colección.  
   
-## Ejemplo  
- En el ejemplo siguiente se utiliza la instrucción `Inherits` para mostrar cómo una clase denominada `thisClass` puede heredar todos los miembros de una clase base denominada `anotherClass`.  
+## <a name="example"></a>Ejemplo  
+ En el ejemplo siguiente se usa el `Inherits` instrucción para mostrar cómo una clase denominada `thisClass` puede heredar todos los miembros de una clase base denominada `anotherClass`.  
   
  [!code-vb[VbVbalrStatements#37](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/inherits-statement_1.vb)]  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se muestra la herencia de varias interfaces.  
   
  [!code-vb[VbVbalrStatements#38](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/inherits-statement_2.vb)]  
   
- Ahora, la interfaz denominada `thisInterface` incluye todas las definiciones de las interfaces <xref:System.IComparable>, <xref:System.IDisposable> y <xref:System.IFormattable>. Los miembros heredados proporcionan, respectivamente, la comparación específica de tipos de dos objetos, la liberación de recursos asignados y la expresión del valor de un objeto como un elemento de tipo `String`.  Una clase que implementa `thisInterface` debe implementar cada miembro de cada interfaz base.  
+ La interfaz denominada `thisInterface` ahora incluye todas las definiciones en el <xref:System.IComparable>, <xref:System.IDisposable>, y <xref:System.IFormattable> interfaces de los miembros heredados proporcionan respectivamente para la comparación específico del tipo de dos objetos, liberar recursos asignan y expresar el valor de un objeto como un `String`. Una clase que implementa `thisInterface` debe implementar todos los miembros de cada interfaz base.  
   
-## Vea también  
- [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md)   
- [NotInheritable](../../../visual-basic/language-reference/modifiers/notinheritable.md)   
- [Objetos y clases](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)   
- [Fundamentos de la herencia](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)   
+## <a name="see-also"></a>Vea también  
+ [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md)  
+ [NotInheritable](../../../visual-basic/language-reference/modifiers/notinheritable.md)  
+ [Objetos y clases](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)  
+ [Fundamentos de la herencia](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)  
  [Interfaces](../../../visual-basic/programming-guide/language-features/interfaces/index.md)

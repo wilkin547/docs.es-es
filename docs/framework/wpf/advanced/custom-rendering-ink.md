@@ -1,32 +1,33 @@
 ---
-title: "Personalizar la representaci&#243;n de la entrada manuscrita | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "clases, DynamicRenderer"
-  - "clases, InkCanvas"
-  - "clases, Trazo"
-  - "personalizar la representación de la entrada manuscrita"
-  - "DynamicRenderer (clase)"
-  - "entrada manuscrita, representación personalizada"
-  - "InkCanvas (clase)"
-  - "Stroke (clase)"
+title: "Personalizar la representación de la entrada manuscrita"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- custom-rendering ink
+- ink [WPF], custom-rendering
+- classes [WPF], InkCanvas
 ms.assetid: 65c978a7-0ee0-454f-ac7f-b1bd2efecac5
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 90d2ab68f76bef8d8f437a7dd6096011889303fa
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/22/2017
 ---
-# Personalizar la representaci&#243;n de la entrada manuscrita
-La propiedad <xref:System.Windows.Ink.Stroke.DrawingAttributes%2A> de un trazo permite especificar su apariencia \(por ejemplo, su tamaño, color y forma\), pero puede haber ocasiones en las que desee personalizar la apariencia más de lo que <xref:System.Windows.Ink.Stroke.DrawingAttributes%2A> permite.  Quizás desee personalizar la apariencia de la entrada de lápiz representándola con la apariencia de un aerógrafo, pintura al óleo y muchos otros efectos.  [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] permite personalizar la representación de la entrada de lápiz mediante la implementación de un <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> personalizado y un objeto <xref:System.Windows.Ink.Stroke>.  
+# <a name="custom-rendering-ink"></a>Personalizar la representación de la entrada manuscrita
+El <xref:System.Windows.Ink.Stroke.DrawingAttributes%2A> propiedad de un trazo permite especificar la apariencia de un trazo, como su tamaño, color y forma, pero puede haber ocasiones en que se desea personalizar el aspecto más allá de lo que <xref:System.Windows.Ink.Stroke.DrawingAttributes%2A> permitir. Si quiere personalizar la apariencia de la entrada de lápiz, la puede representar como un aerógrafo, pintura al óleo y muchos otros efectos. El [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] permite personalizar representa tinta implementando un personalizado <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> y <xref:System.Windows.Ink.Stroke> objeto.  
   
  Este tema contiene las siguientes subsecciones:  
   
@@ -34,29 +35,29 @@ La propiedad <xref:System.Windows.Ink.Stroke.DrawingAttributes%2A> de un trazo p
   
 -   [Implementación de un representador dinámico](#ImplementingADynamicRenderer)  
   
--   [Implementing a Custom Stroke](#ImplementingACustomStroke)  
+-   [Implementación de trazos personalizados](#ImplementingCustomStrokes)  
   
--   [Implementación de una clase InkCanvas personalizada](#ImplementingACustomInkCanvas)  
+-   [Implementación de un objeto InkCanvas personalizado](#ImplementingACustomInkCanvas)  
   
 -   [Conclusión](#Conclusion)  
   
 <a name="Architecture"></a>   
-## Arquitectura  
- La representación de la entrada de lápiz se produce en dos tiempos: cuando el usuario escribe en una superficie habilitada para entrada de lápiz y después de que se agrega el trazo a dicha superficie.  <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> representa la entrada de lápiz cuando el usuario mueve el lápiz de Tablet PC en el digitalizador y <xref:System.Windows.Ink.Stroke> se representa después de que se ha agregado a un elemento.  
+## <a name="architecture"></a>Arquitectura  
+ La representación de la entrada de lápiz se produce dos veces: cuando un usuario escribe con el lápiz en una superficie de entrada de lápiz y, de nuevo, cuando el trazo se agrega a la superficie habilitada para la entrada de lápiz. El <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> la tinta se representa cuando el usuario mueve el lápiz de tablet PC sobre el digitalizador y <xref:System.Windows.Ink.Stroke> representa a sí misma una vez que se agrega a un elemento.  
   
- Al representar la entrada de lápiz de forma dinámica, se implementan tres clases.  
+ Existen tres clases que se implementan al representar la entrada de lápiz de forma dinámica.  
   
-1.  **DynamicRenderer**: implemente una clase que se derive de <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>.  Esta clase es un <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> especializado que representa el trazo a medida que se dibuja.  <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> realiza la representación en un subproceso aparte, por lo que la superficie de entrada de lápiz parece recopilar la entrada de lápiz incluso cuando el subproceso de la interfaz de usuario de la aplicación está bloqueado.  Para obtener más información acerca del modelo de subprocesos, consulte [Modelo de subprocesamiento de entrada manuscrita](../../../../docs/framework/wpf/advanced/the-ink-threading-model.md).  Para personalizar la representación dinámica de un trazo, invalide el método <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer.OnDraw%2A>.  
+1.  **DynamicRenderer**: implementar una clase que deriva de <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>. Esta clase es un especializado <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> que representa el trazo a medida que se dibuja. El <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> realiza el procesamiento en un subproceso independiente, por lo que muestra la superficie de escritura a mano recopilar tinta incluso cuando se bloquea el subproceso de interfaz de usuario de aplicación. Para obtener más información sobre el modelo de subprocesos, consulte [Modelo de subprocesamiento de entrada manuscrita](../../../../docs/framework/wpf/advanced/the-ink-threading-model.md). Para personalizar la representación dinámica de un trazo, invalide el <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer.OnDraw%2A> método.  
   
-2.  **Stroke**: implemente una clase que se derive de <xref:System.Windows.Ink.Stroke>.  Esta clase es responsable de la representación estática de los datos de <xref:System.Windows.Input.StylusPoint> una vez convertidos en un objeto <xref:System.Windows.Ink.Stroke>.  Invalide el método <xref:System.Windows.Ink.Stroke.DrawCore%2A> para asegurarse de que la representación estática del trazo es coherente con la representación dinámica.  
+2.  **Trazo**: implementar una clase que deriva de <xref:System.Windows.Ink.Stroke>. Esta clase es responsable de la representación estática de la <xref:System.Windows.Input.StylusPoint> datos después de que se ha convertido en un <xref:System.Windows.Ink.Stroke> objeto. Invalidar el <xref:System.Windows.Ink.Stroke.DrawCore%2A> método para asegurarse de esa representación estática del trazo es coherente con la representación dinámica.  
   
-3.  **InkCanvas:** implemente una clase que se derive de <xref:System.Windows.Controls.InkCanvas>.  Asigne el objeto <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> personalizado a la propiedad <xref:System.Windows.Controls.InkCanvas.DynamicRenderer%2A>.  Invalide el método <xref:System.Windows.Controls.InkCanvas.OnStrokeCollected%2A> y agregue un trazo personalizado a la propiedad <xref:System.Windows.Controls.InkCanvas.Strokes%2A>.  De esta forma se garantiza que la apariencia de la entrada de lápiz es coherente.  
+3.  **InkCanvas:** implementar una clase que deriva de <xref:System.Windows.Controls.InkCanvas>. Asignar la personalizada <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> a la <xref:System.Windows.Controls.InkCanvas.DynamicRenderer%2A> propiedad. Invalidar el <xref:System.Windows.Controls.InkCanvas.OnStrokeCollected%2A> método y agregue un trazo personalizado a la <xref:System.Windows.Controls.InkCanvas.Strokes%2A> propiedad. Esto garantiza que la apariencia de la entrada de lápiz sea coherente.  
   
 <a name="ImplementingADynamicRenderer"></a>   
-## Implementación de un representador dinámico  
- Aunque la clase <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> es una parte estándar de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], para realizar una representación más especializada, debe crear un representador dinámico personalizado que se derive de <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> e invalidar el método <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer.OnDraw%2A>.  
+## <a name="implementing-a-dynamic-renderer"></a>Implementación de un representador dinámico  
+ Aunque la <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> clase es una parte estándar de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]realizar más especializado de representación, debe crear un representador dinámico personalizado que deriva de la <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> e invalide el <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer.OnDraw%2A> método.  
   
- En el ejemplo siguiente se muestra un <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> personalizado que dibuja la entrada de lápiz con un efecto de pincel de degradado lineal.  
+ En el ejemplo siguiente se muestra una personalizada <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> que dibuja tinta con un efecto de pincel de degradado lineal.  
   
  [!code-csharp[AdvancedInkTopicsSamples#19](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/DynamicRenderer.cs#19)]
  [!code-vb[AdvancedInkTopicsSamples#19](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/AdvancedInkTopicsSamples/VisualBasic/DynamicRenderer.vb#19)]  
@@ -64,14 +65,14 @@ La propiedad <xref:System.Windows.Ink.Stroke.DrawingAttributes%2A> de un trazo p
 [!code-vb[AdvancedInkTopicsSamples#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/AdvancedInkTopicsSamples/VisualBasic/DynamicRenderer.vb#1)]  
   
 <a name="ImplementingCustomStrokes"></a>   
-## Implementación de trazos personalizados  
- Implemente una clase que se derive de <xref:System.Windows.Ink.Stroke>.  Esta clase es responsable de la representación de los datos de <xref:System.Windows.Input.StylusPoint> una vez convertidos en un objeto <xref:System.Windows.Ink.Stroke>.  Invalide la clase <xref:System.Windows.Ink.Stroke.DrawCore%2A> para crear el verdadero dibujo.  
+## <a name="implementing-custom-strokes"></a>Implementación de trazos personalizados  
+ Implemente una clase derivada de <xref:System.Windows.Ink.Stroke>. Esta clase es responsable de la representación <xref:System.Windows.Input.StylusPoint> datos después de que se ha convertido en un <xref:System.Windows.Ink.Stroke> objeto. Invalidar el <xref:System.Windows.Ink.Stroke.DrawCore%2A> clase para realizar el dibujo real.  
   
- Su clase Stroke también puede almacenar datos personalizados si usa el método <xref:System.Windows.Ink.Stroke.AddPropertyData%2A>.  Estos datos se almacenan con los datos de trazo cuando se guardan.  
+ Su clase Stroke también puede almacenar datos personalizados mediante el uso de la <xref:System.Windows.Ink.Stroke.AddPropertyData%2A> método. Estos datos se almacenan con los datos del trazo cuando se conservan.  
   
- La clase <xref:System.Windows.Ink.Stroke> también puede realizar pruebas de posicionamiento.  También puede implementar un algoritmo de prueba de posicionamiento propio si invalida el método <xref:System.Windows.Ink.Stroke.HitTest%2A> en la clase actual.  
+ La <xref:System.Windows.Ink.Stroke> clase también puede realizar la prueba de posicionamiento. También puede implementar su propia prueba algoritmo mediante la invalidación de posicionamiento del <xref:System.Windows.Ink.Stroke.HitTest%2A> método en la clase actual.  
   
- El código de C\# siguiente muestra una clase <xref:System.Windows.Ink.Stroke> personalizada que representa los datos de <xref:System.Windows.Input.StylusPoint> como un trazo 3D.  
+ El código de C# siguiente muestra un personalizado <xref:System.Windows.Ink.Stroke> clase que representa <xref:System.Windows.Input.StylusPoint> datos como un trazo 3D.  
   
  [!code-csharp[AdvancedInkTopicsSamples#19](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/DynamicRenderer.cs#19)]
  [!code-vb[AdvancedInkTopicsSamples#19](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/AdvancedInkTopicsSamples/VisualBasic/DynamicRenderer.vb#19)]  
@@ -79,26 +80,26 @@ La propiedad <xref:System.Windows.Ink.Stroke.DrawingAttributes%2A> de un trazo p
 [!code-vb[AdvancedInkTopicsSamples#2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/AdvancedInkTopicsSamples/VisualBasic/DynamicRenderer.vb#2)]  
   
 <a name="ImplementingACustomInkCanvas"></a>   
-## Implementación de una clase InkCanvas personalizada  
- La manera más fácil de usar su <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> y trazo personalizados es implementar una clase que se derive de <xref:System.Windows.Controls.InkCanvas> y use estas clases.  <xref:System.Windows.Controls.InkCanvas> tiene una propiedad <xref:System.Windows.Controls.InkCanvas.DynamicRenderer%2A> que especifica cómo se representa el trazo cuando el usuario está dibujándolo.  
+## <a name="implementing-a-custom-inkcanvas"></a>Implementación de un objeto InkCanvas personalizado  
+ La manera más fácil de usar su personalizada <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> y trazo consiste en implementar una clase que deriva de <xref:System.Windows.Controls.InkCanvas> y usa estas clases. El <xref:System.Windows.Controls.InkCanvas> tiene un <xref:System.Windows.Controls.InkCanvas.DynamicRenderer%2A> propiedad que especifica cómo se representa el trazo cuando el usuario lo está dibujando.  
   
- Para personalizar la representación de trazos en <xref:System.Windows.Controls.InkCanvas>, realice estos pasos:  
+ Para personalizar la representación trazos en un <xref:System.Windows.Controls.InkCanvas> haga lo siguiente:  
   
--   Cree una clase que se derive de <xref:System.Windows.Controls.InkCanvas>.  
+-   Cree una clase que deriva de la <xref:System.Windows.Controls.InkCanvas>.  
   
--   Asigne su <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> personalizado a la propiedad <xref:System.Windows.Controls.InkCanvas.DynamicRenderer%2A?displayProperty=fullName>.  
+-   Asignar su personalizada <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> a la <xref:System.Windows.Controls.InkCanvas.DynamicRenderer%2A?displayProperty=nameWithType> propiedad.  
   
--   Invalide el método <xref:System.Windows.Controls.InkCanvas.OnStrokeCollected%2A>.  En este método, quite el trazo original que se agregó a InkCanvas.  A continuación, cree un trazo personalizado, agréguelo a la propiedad <xref:System.Windows.Controls.InkCanvas.Strokes%2A> y llame a la clase base con una nueva clase <xref:System.Windows.Controls.InkCanvasStrokeCollectedEventArgs> que contenga el trazo personalizado.  
+-   Invalide el método <xref:System.Windows.Controls.InkCanvas.OnStrokeCollected%2A>. En este método, quite el trazo original que se agregó al objeto InkCanvas. A continuación, cree un trazo personalizado, agréguelo a la <xref:System.Windows.Controls.InkCanvas.Strokes%2A> propiedad y llame a la clase base con un nuevo <xref:System.Windows.Controls.InkCanvasStrokeCollectedEventArgs> que contenga el trazo personalizado.  
   
- El código de C\# siguiente muestra una clase <xref:System.Windows.Controls.InkCanvas> personalizada que usa un <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> personalizado y recopila los trazos personalizados.  
+ El código de C# siguiente muestra un personalizado <xref:System.Windows.Controls.InkCanvas> clase que utiliza un personalizada <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> y recopila los trazos personalizados.  
   
  [!code-csharp[AdvancedInkTopicsSamples#9](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/Window1.xaml.cs#9)]  
   
- <xref:System.Windows.Controls.InkCanvas> puede tener más de un <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>.  Para agregar varios objetos <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> a <xref:System.Windows.Controls.InkCanvas>, agréguelos a la propiedad <xref:System.Windows.UIElement.StylusPlugIns%2A>.  
+ Un <xref:System.Windows.Controls.InkCanvas> puede tener más de un <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>. Puede agregar varias <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> objetos a la <xref:System.Windows.Controls.InkCanvas> agregándolos a la <xref:System.Windows.UIElement.StylusPlugIns%2A> propiedad.  
   
 <a name="Conclusion"></a>   
-## Conclusión  
- Puede personalizar la apariencia de la entrada de lápiz al derivar sus propias clases <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>, <xref:System.Windows.Ink.Stroke> y <xref:System.Windows.Controls.InkCanvas>.  Juntas, estas clases garantizan que la apariencia del trazo es coherente cuando el usuario dibuja el trazo y después de que se ha recopilado.  
+## <a name="conclusion"></a>Conclusión  
+ Puede personalizar la apariencia de la tinta, derive su propia <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>, <xref:System.Windows.Ink.Stroke>, y <xref:System.Windows.Controls.InkCanvas> clases. Juntas, estas clases garantizan que la apariencia del trazo sea coherente cuando el usuario dibuja el trazo y después de su recopilación.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Control avanzado de entrada manuscrita](../../../../docs/framework/wpf/advanced/advanced-ink-handling.md)

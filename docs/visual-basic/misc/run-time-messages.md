@@ -1,40 +1,24 @@
 ---
-title: "Mensajes de tiempo de ejecución de Visual Basic | Documentos de Microsoft"
-ms.date: 2015-07-20
+title: "Mensajes en tiempo de ejecución de Visual Basic"
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - errors [Visual Basic], run-time
-- run-time errors, Visual Basic
+- run-time errors [Visual Basic], Visual Basic
 ms.assetid: 130f7c2b-8eb1-4a6e-81aa-e30e27d3d4f7
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 5837e133909d2723bbcb8071cc9feb4c2544b95c
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: bceda3e102ec79bda6607d77c3b778f9a2014a33
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="visual-basic-run-time-messages"></a>Mensajes en tiempo de ejecución de Visual Basic
-Esta sección contiene los [!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] mensajes de error que se producen en tiempo de ejecución.  
+Esta sección contiene los mensajes de error de [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] que se producen en tiempo de ejecución.  
   
  [\<dirección > no es una dirección de archivo remoto válida](../../visual-basic/misc/address-is-not-a-valid-remote-file-address.md)  
   
@@ -48,7 +32,7 @@ Esta sección contiene los [!INCLUDE[vbprvb](../../csharp/programming-guide/conc
   
  [No se ha especificado un formulario de inicio](../../visual-basic/language-reference/error-messages/a-startup-form-has-not-been-specified.md)  
   
- [Acceso denegado a '\<nombre >'](../../visual-basic/misc/access-denied-to-name.md)  
+ [Deniega el acceso a '\<nombre >'](../../visual-basic/misc/access-denied-to-name.md)  
   
  [Error al agregar. Se proporcionó un valor de clave duplicado](../../visual-basic/misc/add-failed-duplicate-key-value-supplied.md)  
   
@@ -62,7 +46,7 @@ Esta sección contiene los [!INCLUDE[vbprvb](../../csharp/programming-guide/conc
   
  [Error definido por la aplicación o por el objeto](../../visual-basic/misc/application-defined-or-object-defined-error.md)  
   
- [Argumento '\<argumento1 >' debe ser menor o igual que la longitud del argumento '\<argumento2 >'](../../visual-basic/misc/argument-argument1-must-be-less-than-or-equal-to-the-length-of-argument2.md)  
+ [Argumento '\<argument1 >' debe ser menor o igual que la longitud del argumento '\<argument2 >'](../../visual-basic/misc/argument-argument1-must-be-less-than-or-equal-to-the-length-of-argument2.md)  
   
  [Argumento '\<argumentname >' no puede ser una matriz multidimensional](../../visual-basic/misc/argument-argumentname-cannot-be-a-multidimensional-array.md)  
   
@@ -72,35 +56,35 @@ Esta sección contiene los [!INCLUDE[vbprvb](../../csharp/programming-guide/conc
   
  [Argumento '\<argumentname >' no se puede convertir al tipo '\<typename >'](../../visual-basic/misc/argument-argumentname-cannot-be-converted-to-type-typename.md)  
   
- [Argumento '\<argumentname >' no se puede convertir al tipo 'Date'](../../visual-basic/misc/argument-argumentname-cannot-be-converted-to-type-date.md)  
+ [Argumento '\<argumentname >' no se puede convertir al tipo 'Date'.](../../visual-basic/misc/argument-argumentname-cannot-be-converted-to-type-date.md)  
   
  [Argumento '\<argumentname >' no es un valor válido](../../visual-basic/misc/argument-argumentname-is-not-a-valid-value.md)  
   
  [Argumento '\<argumentname >' no es válido para la matriz](../../visual-basic/misc/argument-argumentname-is-not-valid-for-the-array.md)  
   
- [Argumento '\<argumentname >' no es nada](../../visual-basic/misc/argument-argumentname-is-nothing.md)  
+ [Argumento '\<argumentname >' tiene un valor Nothing](../../visual-basic/misc/argument-argumentname-is-nothing.md)  
   
- [Argumento '\<argumentname >' es o está vacío](../../visual-basic/misc/argument-argumentname-is-nothing-or-empty.md)  
+ [Argumento '\<argumentname >' tiene un valor o está vacío](../../visual-basic/misc/argument-argumentname-is-nothing-or-empty.md)  
   
  [Argumento '\<argumentname >' debe ser mayor que 0 o igual a -1](../../visual-basic/misc/argument-argumentname-must-be-greater-than-0-or-equal-to-1.md)  
   
- [Argumento '\<argumentname >' debe ser mayor o igual a 1](../../visual-basic/misc/argument-argumentname-must-be-greater-than-or-equal-to-1.md)  
+ [Argumento '\<argumentname >' debe ser mayor o igual que 1.](../../visual-basic/misc/argument-argumentname-must-be-greater-than-or-equal-to-1.md)  
   
- [Argumento '\<argumentname >' debe ser mayor o igual que -1](../../visual-basic/misc/argument-argumentname-must-be-greater-than-or-equal-to-1-1.md)  
+ [Argumento '\<argumentname >' debe ser mayor o igual a -1](../../visual-basic/misc/argument-argumentname-must-be-greater-than-or-equal-to-1-1.md)  
   
  [Argumento \<argumentname > debe ser mayor o igual a cero.](../../visual-basic/misc/argument-argumentname-must-be-greater-than-or-equal-to-zero-1.md)  
   
  [Argumento '\<argumentname >' debe ser mayor o igual a cero.](../../visual-basic/misc/argument-argumentname-must-be-greater-than-or-equal-to-zero.md)  
   
- [Argumento '\<argumentname >' debe ser mayor que cero](../../visual-basic/misc/argument-argumentname-must-be-greater-than-zero.md)  
+ [Argumento '\<argumentname >' debe ser mayor que cero.](../../visual-basic/misc/argument-argumentname-must-be-greater-than-zero.md)  
   
- [Argumento '\<argumentname >' debe estar en el intervalo de -32768 a 65535](../../visual-basic/misc/argument-argumentname-must-be-in-the-range-of-32768-to-65535.md)  
+ [Argumento '\<argumentname >' debe estar en el intervalo entre-32768 y 65535](../../visual-basic/misc/argument-argumentname-must-be-in-the-range-of-32768-to-65535.md)  
   
  [Argumento '\<argumentname >' debe estar dentro del intervalo de 0 a 99](../../visual-basic/misc/argument-argumentname-must-be-within-the-range-0-to-99.md)  
   
- [Argumento '\<argumentname >' debe estar comprendido entre 1 y 255](../../visual-basic/misc/argument-argumentname-must-be-within-the-range-1-to-255.md)  
+ [Argumento '\<argumentname >' debe estar dentro del intervalo de 1 a 255](../../visual-basic/misc/argument-argumentname-must-be-within-the-range-1-to-255.md)  
   
- [Argumento '\<argumentname1 >' debe ser menor o igual la longitud del argumento '\<argumentname2 >'](../../visual-basic/misc/argument-argumentname1-must-be-less-than-or-equal-the-length-of-argumentname2.md)  
+ [Argumento '\<nombreargumento1 >' debe ser menor o igual la longitud del argumento '\<nombreargumento2 >'](../../visual-basic/misc/argument-argumentname1-must-be-less-than-or-equal-the-length-of-argumentname2.md)  
   
  [El argumento 'Access' no es válido. Los valores válidos para el modo Append son 'OpenAccess.Write' y 'OpenAccess.Default'](../../visual-basic/misc/argument-access-is-not-valid-append-mode.md)  
   
@@ -164,9 +148,9 @@ Esta sección contiene los [!INCLUDE[vbprvb](../../csharp/programming-guide/conc
   
  [No se puede convertir el argumento '\<argumentname >' de tipo '\<type1 >' al tipo '\<type2 >'](../../visual-basic/misc/cannot-convert-argument-argumentname-of-type-type1-to-type-type2.md)  
   
- [No se puede convertir el valor de inicio de tipo '\<type1 >' y el valor step de tipo '\<type2 >' a un tipo común](../../visual-basic/misc/cannot-convert-start-value-of-type1-and-step-value-of-type2-to-a-common-type.md)  
+ [No se puede convertir el valor de inicio de tipo '\<type1 >' y el valor de step de tipo '\<type2 >' a un tipo común](../../visual-basic/misc/cannot-convert-start-value-of-type1-and-step-value-of-type2-to-a-common-type.md)  
   
- [No se puede convertir el valor de inicio de tipo '\<type1 >', valor de límite '\<type2 >' y el valor de step '\<type3 >' a un tipo común](../../visual-basic/misc/cannot-convert-start-value-to-a-common-type.md)  
+ [No se puede convertir el valor de inicio de tipo '\<type1 >', valor de límite '\<type2 >' y el valor de step '\<Tipo3 >' a un tipo común](../../visual-basic/misc/cannot-convert-start-value-to-a-common-type.md)  
   
  [No se puede crear el componente ActiveX](../../visual-basic/language-reference/error-messages/cannot-create-activex-component.md)  
   
@@ -184,9 +168,9 @@ Esta sección contiene los [!INCLUDE[vbprvb](../../csharp/programming-guide/conc
   
  [Conversión de la cadena "\<cadena >" al tipo '\<typename >' no es válido](../../visual-basic/misc/cast-from-string-string-to-type-typename-is-not-valid.md)  
   
- [Conversión del tipo '\<NombreTipo1 >' al tipo '\<en NombreTipo2 >' no es válido](../../visual-basic/misc/cast-from-type-typename1-to-type-typename2-is-not-valid.md)  
+ [Conversión de valores de tipo '\<NombreTipo1 >' al tipo '\<nombredetipo2 >' no es válido](../../visual-basic/misc/cast-from-type-typename1-to-type-typename2-is-not-valid.md)  
   
- [La clase\<classname >' no implementa la interfaz System.Collections.ICollection](../../visual-basic/misc/class-classname-does-not-implement-the-system-collections-icollection-interface.md)  
+ [Clase\<classname >' no implementa la interfaz System.Collections.ICollection](../../visual-basic/misc/class-classname-does-not-implement-the-system-collections-icollection-interface.md)  
   
  [Esta clase no admite Automation o no admite la interfaz esperada](../../visual-basic/language-reference/error-messages/class-does-not-support-automation-or-does-not-support-expected-interface.md)  
   
@@ -224,15 +208,15 @@ Esta sección contiene los [!INCLUDE[vbprvb](../../csharp/programming-guide/conc
   
  [División por cero (error en tiempo de ejecución de Visual Basic)](../../visual-basic/misc/division-by-zero-run-time-error.md)  
   
- [La unidad '\<drivename >' no encontrado](../../visual-basic/misc/drive-drivename-not-found.md)  
+ [Unidad '\<drivename >' no encontrado](../../visual-basic/misc/drive-drivename-not-found.md)  
   
  [La codificación no se puede establecer en Nothing](../../visual-basic/misc/encoding-cannot-be-set-to-nothing.md)  
   
- [Error al cargar la biblioteca DLL (Visual Basic)](../../visual-basic/language-reference/error-messages/error-in-loading-dll.md)  
+ [Error al cargar el archivo DLL (Visual Basic)](../../visual-basic/language-reference/error-messages/error-in-loading-dll.md)  
   
  [El número de errores debe estar en el intervalo entre 0 y 65535](../../visual-basic/misc/error-number-must-be-within-the-range-0-and-65535.md)  
   
- [Expresión '\<nombre >' no es un procedimiento, pero es el destino de una llamada a procedimiento](../../visual-basic/misc/expression-name-is-not-a-procedure-but-occurs-as-the-target-of-a-procedure-call.md)  
+ [Expresión '\<nombre >' no es un procedimiento, pero se produce cuando el destino de una llamada a procedimiento](../../visual-basic/misc/expression-name-is-not-a-procedure-but-occurs-as-the-target-of-a-procedure-call.md)  
   
  [Expresión demasiado compleja](../../visual-basic/language-reference/error-messages/expression-too-complex.md)  
   
@@ -300,11 +284,11 @@ Esta sección contiene los [!INCLUDE[vbprvb](../../csharp/programming-guide/conc
   
  [Asignación de tiempo de ejecución a un campo de tipo de valor '\<typename >' no es válida cuando '\<nombre >' es el resultado de una expresión en tiempo de ejecución](../../visual-basic/misc/late-bound-assignment-to-a-field-of-value-type-typename-is-not-valid.md)  
   
- [La longitud del argumento '\<argumentname >' debe ser mayor que cero](../../visual-basic/misc/length-of-argument-argumentname-must-be-greater-than-zero.md)  
+ [La longitud del argumento '\<argumentname >' debe ser mayor que cero.](../../visual-basic/misc/length-of-argument-argumentname-must-be-greater-than-zero.md)  
   
- [Línea \<número > no se puede analizar utilizando los delimitadores actuales](../../visual-basic/misc/line-number-cannot-be-parsed-using-the-current-delimiters.md)  
+ [Línea \<número > no se puede analizar mediante el método Delimiters actual](../../visual-basic/misc/line-number-cannot-be-parsed-using-the-current-delimiters.md)  
   
- [Línea \<número > no se puede analizar utilizando los anchos de campo actuales](../../visual-basic/misc/line-number-cannot-be-parsed-using-the-current-fieldwidths.md)  
+ [Línea \<número > no se puede analizar mediante los FieldWidths actuales](../../visual-basic/misc/line-number-cannot-be-parsed-using-the-current-fieldwidths.md)  
   
  [Línea \<número > no se puede leer porque supera el tamaño máximo de línea.](../../visual-basic/misc/line-number-cannot-be-read-because-it-exceeds-the-maximum-line-size.md)  
   
@@ -322,7 +306,7 @@ Esta sección contiene los [!INCLUDE[vbprvb](../../csharp/programming-guide/conc
   
  [My.Application.Log no puede determinar la cantidad de espacio libre en disco](../../visual-basic/misc/my-application-log-cannot-determine-the-amount-of-free-disk-space.md)  
   
- [El argumento con nombre '\<argumentname >' especificado varias veces](../../visual-basic/misc/named-argument-argumentname-specified-multiple-times.md)  
+ [Un argumento con nombre '\<argumentname >' se especificó varias veces](../../visual-basic/misc/named-argument-argumentname-specified-multiple-times.md)  
   
  [Argumento con nombre no encontrado (Visual Basic)](../../visual-basic/misc/named-argument-not-found.md)  
   
@@ -330,17 +314,17 @@ Esta sección contiene los [!INCLUDE[vbprvb](../../csharp/programming-guide/conc
   
  [Se necesita un índice de matriz de propiedades](../../visual-basic/language-reference/error-messages/need-property-array-index.md)  
   
- [Ninguna sobrecarga accesible '\<methodname >' se puede llamar con estos argumentos sin una conversión de restricción](../../visual-basic/misc/no-accessible-overloaded-methodname-can-be-called-with-these-arguments.md)  
+ [Ninguna sobrecarga accesible '\<methodname >' puede llamar con estos argumentos sin una conversión de restricción](../../visual-basic/misc/no-accessible-overloaded-methodname-can-be-called-with-these-arguments.md)  
   
- [Ninguna sobrecarga accesible '\<methodname >' se puede llamar con estos argumentos sin una conversión de restricción: \<lista >](../../visual-basic/misc/no-accessible-overloaded-methodname-can-be-called-with-these-arguments-list-2.md)  
+ [Ninguna sobrecarga accesible '\<methodname >' puede llamar con estos argumentos sin una conversión de restricción: \<lista >](../../visual-basic/misc/no-accessible-overloaded-methodname-can-be-called-with-these-arguments-list-2.md)  
   
- [Ninguna sobrecarga accesible '\<methodname >' se puede llamar con estos argumentos sin una conversión de ampliación: \<lista >](../../visual-basic/misc/no-accessible-overloaded-methodname-can-be-called-without-widening.md)  
+ [Ninguna sobrecarga accesible '\<methodname >' puede llamar con estos argumentos sin una conversión de ampliación: \<lista >](../../visual-basic/misc/no-accessible-overloaded-methodname-can-be-called-without-widening.md)  
   
  [Ninguna sobrecarga accesible '\<methodname >' puede llamar con estos argumentos: \<lista >](../../visual-basic/misc/no-accessible-overloaded-methodname-can-be-called-with-these-arguments-list.md)  
   
- [No encontrar ningún miembro predeterminado para el tipo '\<typename >'](../../visual-basic/misc/no-default-member-found-for-type-typename.md)  
+ [Se encontró ningún miembro predeterminado para el tipo '\<typename >'](../../visual-basic/misc/no-default-member-found-for-type-typename.md)  
   
- [No encontraron archivos coincidentes '\<filename >'](../../visual-basic/misc/no-files-found-matching-filename.md)  
+ [No encuentran archivos coincidentes '\<filename >'](../../visual-basic/misc/no-files-found-matching-filename.md)  
   
  [No hay ningún método '\<methodname >' puede aceptar un argumento de tipo '\<typename >' para el parámetro '\<parametername >'](../../visual-basic/misc/no-method-methodname-can-accept-an-argument-of-type-typename-for-parameter.md)  
   
@@ -376,9 +360,9 @@ Esta sección contiene los [!INCLUDE[vbprvb](../../csharp/programming-guide/conc
   
  [Memoria insuficiente (error en tiempo de ejecución de Visual Basic)](../../visual-basic/misc/out-of-memory-run-time-error.md)  
   
- [Sin espacio de pila (Visual Basic)](../../visual-basic/language-reference/error-messages/out-of-stack-space.md)  
+ [Espacio de pila (Visual Basic)](../../visual-basic/language-reference/error-messages/out-of-stack-space.md)  
   
- [Sin espacio de cadena (Visual Basic)](../../visual-basic/language-reference/error-messages/out-of-string-space.md)  
+ [Espacio de cadena (Visual Basic)](../../visual-basic/language-reference/error-messages/out-of-string-space.md)  
   
  [Desbordamiento (error en tiempo de ejecución de Visual Basic)](../../visual-basic/language-reference/error-messages/overflow-visual-basic-run-time-error.md)  
   
@@ -412,7 +396,7 @@ Esta sección contiene los [!INCLUDE[vbprvb](../../csharp/programming-guide/conc
   
  [Valor de propiedad no válido](../../visual-basic/misc/property-value-is-not-valid.md)  
   
- [Miembro público '\<membername >' tipo '\<typename >' no encontrado](../../visual-basic/misc/public-member-membername-on-type-typename-not-found.md)  
+ [Miembro público '\<nombreDeMiembro >' en el tipo '\<typename >' no encontrado](../../visual-basic/misc/public-member-membername-on-type-typename-not-found.md)  
   
  ['ReDim' solo puede cambiar la dimensión situada más a la derecha](../../visual-basic/misc/redim-can-only-change-the-right-most-dimension.md)  
   
@@ -422,7 +406,7 @@ Esta sección contiene los [!INCLUDE[vbprvb](../../csharp/programming-guide/conc
   
  [Clave del registro '\<keyname >' no se pudo crear](../../visual-basic/misc/registry-key-keyname-could-not-be-created.md)  
   
- [Clave del registro '\<keyname >' no se encontró](../../visual-basic/misc/registry-key-keyname-could-not-be-found.md)  
+ [Clave del registro '\<keyname >' no se pudo encontrar](../../visual-basic/misc/registry-key-keyname-could-not-be-found.md)  
   
  [Los reemplazos son demasiado largos](../../visual-basic/misc/replacements-too-long.md)  
   
@@ -466,7 +450,7 @@ Esta sección contiene los [!INCLUDE[vbprvb](../../csharp/programming-guide/conc
   
  [Sub o Function no definida (Visual Basic)](../../visual-basic/language-reference/error-messages/sub-or-function-not-defined.md)  
   
- [Subíndice está fuera del intervalo (Visual Basic)](../../visual-basic/language-reference/error-messages/subscript-out-of-range.md)  
+ [Subíndice está fuera de intervalo (Visual Basic)](../../visual-basic/language-reference/error-messages/subscript-out-of-range.md)  
   
  [No se puede eliminar el registro de eventos del sistema](../../visual-basic/misc/system-event-log-cannot-be-deleted.md)  
   
@@ -506,7 +490,7 @@ Esta sección contiene los [!INCLUDE[vbprvb](../../csharp/programming-guide/conc
   
  [La secuencia pasada a TextFieldParser no se puede leer](../../visual-basic/misc/the-stream-passed-to-textfieldparser-cannot-be-read.md)  
   
- [El valor de \<argumentname > debe ser un número positivo](../../visual-basic/misc/the-value-of-argumentname-must-be-a-positive-number.md)  
+ [El valor de \<argumentname > debe ser un número positivo.](../../visual-basic/misc/the-value-of-argumentname-must-be-a-positive-number.md)  
   
  [El valor de \<argumentname > debe ser mayor o igual que 1000](../../visual-basic/misc/the-value-of-argumentname-must-be-greater-than-or-equal-to-1000.md)  
   
@@ -530,7 +514,7 @@ Esta sección contiene los [!INCLUDE[vbprvb](../../csharp/programming-guide/conc
   
  [Demasiados archivos](../../visual-basic/language-reference/error-messages/too-many-files.md)  
   
- [Error de coincidencia de tipo (Visual Basic)](../../visual-basic/language-reference/error-messages/type-mismatch.md)  
+ [Discordancia de tipos (Visual Basic)](../../visual-basic/language-reference/error-messages/type-mismatch.md)  
   
  [Tipo de argumento '\<argumentname >' es '\<typename >', que no es numérico](../../visual-basic/misc/type-of-argument-argumentname-is-typename-which-is-not-numeric.md)  
   
@@ -575,5 +559,5 @@ Esta sección contiene los [!INCLUDE[vbprvb](../../csharp/programming-guide/conc
  [Debe especificar una ruta de acceso que se encuentre en la carpeta actual o en una de sus subcarpetas](../../visual-basic/misc/you-must-specify-path-that-is-under-the-current-folder-or-one-of-sub-folders.md)  
   
 ## <a name="see-also"></a>Vea también  
- [NOTINBUILD Cómo: obtener información acerca de los errores de tiempo de ejecución de Visual Basic](http://msdn.microsoft.com/en-us/22a7d0a6-b7d7-4c5d-971c-52ff0583c656)   
+ [NOTINBUILD Cómo: obtener información acerca de los errores de tiempo de ejecución de Visual Basic](http://msdn.microsoft.com/en-us/22a7d0a6-b7d7-4c5d-971c-52ff0583c656)  
  [Mensajes de error](../../visual-basic/language-reference/error-messages/index.md)

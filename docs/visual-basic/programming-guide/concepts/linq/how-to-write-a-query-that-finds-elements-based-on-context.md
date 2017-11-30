@@ -1,28 +1,24 @@
 ---
-title: "Cómo: escribir una consulta que busca elementos basándose en el contexto (Visual Basic) | Documentos de Microsoft"
+title: "Cómo: escribir una consulta que busca elementos basados en contexto (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 0b085290-ddc1-4126-aaa0-e4c95a3d9a09
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: c26a6f0debd165a925bf45e2ac5063e1afff693f
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: 635a8c06d5ad928e192b8cd15862aa02192f94d2
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-write-a-query-that-finds-elements-based-on-context-visual-basic"></a>Cómo: escribir una consulta que busca elementos basándose en el contexto (Visual Basic)
+# <a name="how-to-write-a-query-that-finds-elements-based-on-context-visual-basic"></a>Cómo: escribir una consulta que busca elementos basados en contexto (Visual Basic)
 Es posible que alguna vez tenga que escribir una consulta que seleccione elementos basándose en su contexto. Quizás desea filtrar basándose en elementos de mismo nivel precedentes o siguientes. Quizás desea filtrar basándose e elementos secundarios o elementos antecesores.  
   
  Puede hacerlo escribiendo una consulta y utilizando los resultados de la consulta en la cláusula `where`. Si primero tiene que realizar una prueba con valores NULL y después probar el valor, resulta más cómodo realizar la consulta en una cláusula `let` y después utilizar los resultados en la cláusula `where`.  
@@ -60,7 +56,6 @@ Dim items As IEnumerable(Of XElement) = _
 For Each e As XElement In items  
     Console.WriteLine("id = {0}", e.@<id>)  
 Next  
-  
 ```  
   
  Este código genera el siguiente resultado:  
@@ -121,8 +116,8 @@ id = 6
 ```  
   
 ## <a name="see-also"></a>Vea también  
- <xref:System.Xml.Linq.XElement.Parse%2A></xref:System.Xml.Linq.XElement.Parse%2A>   
- <xref:System.Xml.Linq.XContainer.Descendants%2A></xref:System.Xml.Linq.XContainer.Descendants%2A>   
- <xref:System.Xml.Linq.XNode.ElementsAfterSelf%2A></xref:System.Xml.Linq.XNode.ElementsAfterSelf%2A>   
- <xref:System.Linq.Enumerable.FirstOrDefault%2A></xref:System.Linq.Enumerable.FirstOrDefault%2A>   
+ <xref:System.Xml.Linq.XElement.Parse%2A>  
+ <xref:System.Xml.Linq.XContainer.Descendants%2A>  
+ <xref:System.Xml.Linq.XNode.ElementsAfterSelf%2A>  
+ <xref:System.Linq.Enumerable.FirstOrDefault%2A>  
  [Consultas básicas (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
