@@ -1,65 +1,74 @@
 ---
-title: "Elemento &lt;message&gt; de &lt;basicHttpBinding&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Elemento &lt;message&gt; de &lt;basicHttpBinding&gt;
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 51cdd329-6461-471a-8747-56c2299b61e5
-caps.latest.revision: 23
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 23
+caps.latest.revision: "23"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 014e7d5ca9d6bc379edb82a71d52dccb73fa23f0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Elemento &lt;message&gt; de &lt;basicHttpBinding&gt;
-Define la configuración de seguridad de nivel de mensaje para un enlace [\<basicHttpBinding\>](../../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md).  
+# <a name="ltmessagegt-of-ltbasichttpbindinggt"></a><span data-ttu-id="d12dd-102">Elemento &lt;message&gt; de &lt;basicHttpBinding&gt;</span><span class="sxs-lookup"><span data-stu-id="d12dd-102">&lt;message&gt; of &lt;basicHttpBinding&gt;</span></span>
+<span data-ttu-id="d12dd-103">Define la configuración de seguridad de nivel de mensaje de la [ \<basicHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md).</span><span class="sxs-lookup"><span data-stu-id="d12dd-103">Defines the settings for message-level security of the [\<basicHttpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md).</span></span>  
   
-## Sintaxis  
+ <span data-ttu-id="d12dd-104">\<sistema. ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="d12dd-104">\<system.ServiceModel></span></span>  
+<span data-ttu-id="d12dd-105">\<enlaces ></span><span class="sxs-lookup"><span data-stu-id="d12dd-105">\<bindings></span></span>  
+<span data-ttu-id="d12dd-106">\<basicHttpBinding ></span><span class="sxs-lookup"><span data-stu-id="d12dd-106">\<basicHttpBinding></span></span>  
+<span data-ttu-id="d12dd-107">\<enlace ></span><span class="sxs-lookup"><span data-stu-id="d12dd-107">\<binding></span></span>  
+<span data-ttu-id="d12dd-108">\<seguridad ></span><span class="sxs-lookup"><span data-stu-id="d12dd-108">\<security></span></span>  
+<span data-ttu-id="d12dd-109">\<mensaje ></span><span class="sxs-lookup"><span data-stu-id="d12dd-109">\<message></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="d12dd-110">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="d12dd-110">Syntax</span></span>  
   
+```xml  
 <message   
    algorithmSuite="Basic128/Basic192/Basic256/Basic128Rsa15/Basic256Rsa15/TripleDes/TripleDesRsa15/Basic128Sha256/Basic192Sha256/TripleDesSha256/Basic128Sha256Rsa15/Basic192Sha256Rsa15/Basic256Sha256Rsa15/TripleDesSha256Rsa15"  
       clientCredentialType="UserName/Certificate"/>  
 ```  
   
-## Atributos y elementos  
- En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios  
+## <a name="attributes-and-elements"></a><span data-ttu-id="d12dd-111">Atributos y elementos</span><span class="sxs-lookup"><span data-stu-id="d12dd-111">Attributes and Elements</span></span>  
+ <span data-ttu-id="d12dd-112">En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios</span><span class="sxs-lookup"><span data-stu-id="d12dd-112">The following sections describe attributes, child elements, and parent elements</span></span>  
   
-### Atributos  
+### <a name="attributes"></a><span data-ttu-id="d12dd-113">Atributos</span><span class="sxs-lookup"><span data-stu-id="d12dd-113">Attributes</span></span>  
   
-|Atributo|Descripción|  
-|--------------|-----------------|  
-|algorithmSuite|Establece el cifrado de mensajes y los algoritmos de encapsulado de claves.  Este atributo es de tipo <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>, que especifica los algoritmos y los tamaños clave.  Estos algoritmos se asignan a los indicados en la especificación Lenguaje de directiva de seguridad \(WS\-SecurityPolicy\).<br /><br /> El valor predeterminado es `Basic256`.|  
-|clientCredentialType|Especifica el tipo de credenciales que se van a usar al realizar la autenticación del cliente mediante seguridad basada en mensaje.  De manera predeterminada, es `UserName`.|  
+|<span data-ttu-id="d12dd-114">Atributo</span><span class="sxs-lookup"><span data-stu-id="d12dd-114">Attribute</span></span>|<span data-ttu-id="d12dd-115">Descripción</span><span class="sxs-lookup"><span data-stu-id="d12dd-115">Description</span></span>|  
+|---------------|-----------------|  
+|<span data-ttu-id="d12dd-116">algorithmSuite</span><span class="sxs-lookup"><span data-stu-id="d12dd-116">algorithmSuite</span></span>|<span data-ttu-id="d12dd-117">Establece el cifrado de mensajes y los algoritmos de encapsulado de claves.</span><span class="sxs-lookup"><span data-stu-id="d12dd-117">Sets the message encryption and key-wrap algorithms.</span></span> <span data-ttu-id="d12dd-118">Este atributo es de tipo <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>, que especifica los algoritmos y los tamaños clave.</span><span class="sxs-lookup"><span data-stu-id="d12dd-118">This attribute is of type <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>, which specifies the algorithms and the key sizes.</span></span> <span data-ttu-id="d12dd-119">Estos algoritmos se asignan a los indicados en la especificación Lenguaje de directiva de seguridad (WS-SecurityPolicy).</span><span class="sxs-lookup"><span data-stu-id="d12dd-119">These algorithms map to those specified in the Security Policy Language (WS-SecurityPolicy) specification.</span></span><br /><br /> <span data-ttu-id="d12dd-120">El valor predeterminado es `Basic256`.</span><span class="sxs-lookup"><span data-stu-id="d12dd-120">The default value is `Basic256`.</span></span>|  
+|<span data-ttu-id="d12dd-121">clientCredentialType</span><span class="sxs-lookup"><span data-stu-id="d12dd-121">clientCredentialType</span></span>|<span data-ttu-id="d12dd-122">Especifica el tipo de credenciales que se van a usar al realizar la autenticación del cliente mediante seguridad basada en mensaje.</span><span class="sxs-lookup"><span data-stu-id="d12dd-122">Specifies the type of credential to be used when performing client authentication using message-based security.</span></span> <span data-ttu-id="d12dd-123">De manera predeterminada, es `UserName`.</span><span class="sxs-lookup"><span data-stu-id="d12dd-123">The default is `UserName`.</span></span>|  
   
-## Atributo clientCredentialType  
+## <a name="clientcredentialtype-attribute"></a><span data-ttu-id="d12dd-124">Atributo clientCredentialType</span><span class="sxs-lookup"><span data-stu-id="d12dd-124">clientCredentialType Attribute</span></span>  
   
-|Valor|Descripción|  
+|<span data-ttu-id="d12dd-125">Valor</span><span class="sxs-lookup"><span data-stu-id="d12dd-125">Value</span></span>|<span data-ttu-id="d12dd-126">Descripción</span><span class="sxs-lookup"><span data-stu-id="d12dd-126">Description</span></span>|  
 |-----------|-----------------|  
-|UserName|-   Requiere que el cliente se autentique al servidor con una credencial UserName.  Esta credencial se tiene que especificar mediante [\<clientCredentials\>](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md).<br />-   [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] no permite enviar un resumen de contraseña ni derivar claves mediante contraseñas, así como tampoco usar dichas claves para seguridad de mensajes.  Por lo tanto, [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] garantiza que el transporte sea seguro al usar credenciales UserName.  Para `basicHttpBinding`, esto requiere configurar un canal de SSL.|  
-|Certificado|Exige la autenticación del cliente en el servidor mediante un certificado.  La credencial del cliente en este caso necesita ser especificada utilizando [\<clientCredentials\>](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) y [\<clientCertificate\>](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-servicecredentials.md).  Además, cuando se utiliza el modo de seguridad de mensajes, se debe proporcionar el cliente con el certificado del servicio.  Las credenciales del servicio en este caso tienes que especificarse con la clase <xref:System.ServiceModel.Description.ClientCredentials> o el comportamiento `ClientCredentials` especificando el certificado de servicio mediante [\<serviceCertificate\>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md).|  
+|<span data-ttu-id="d12dd-127">UserName</span><span class="sxs-lookup"><span data-stu-id="d12dd-127">UserName</span></span>|<span data-ttu-id="d12dd-128">-Requiere la autenticación del cliente en el servidor con una credencial de nombre de usuario.</span><span class="sxs-lookup"><span data-stu-id="d12dd-128">-   Requires the client be authenticated to the server with a UserName credential.</span></span> <span data-ttu-id="d12dd-129">Esta credencial se tiene que especificarse con el [ \<clientCredentials >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md).</span><span class="sxs-lookup"><span data-stu-id="d12dd-129">This credential needs to be specified using the [\<clientCredentials>](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md).</span></span><br /><span data-ttu-id="d12dd-130">-   [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]no admite enviar un resumen de contraseña ni derivar claves mediante contraseñas y utilizar tales claves para seguridad de mensajes.</span><span class="sxs-lookup"><span data-stu-id="d12dd-130">-   [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] does not support sending a password digest or deriving keys using passwords and using such keys for message security.</span></span> <span data-ttu-id="d12dd-131">Por lo tanto, [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] garantiza que el transporte sea seguro al usar credenciales UserName.</span><span class="sxs-lookup"><span data-stu-id="d12dd-131">Therefore, [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] enforces that the transport be secured when using UserName credentials.</span></span> <span data-ttu-id="d12dd-132">Para `basicHttpBinding`, esto requiere configurar un canal de SSL.</span><span class="sxs-lookup"><span data-stu-id="d12dd-132">For the `basicHttpBinding`, this requires setting up an SSL channel.</span></span>|  
+|<span data-ttu-id="d12dd-133">Certificado</span><span class="sxs-lookup"><span data-stu-id="d12dd-133">Certificate</span></span>|<span data-ttu-id="d12dd-134">Exige la autenticación del cliente en el servidor mediante un certificado.</span><span class="sxs-lookup"><span data-stu-id="d12dd-134">Requires that the client be authenticated to the server using a certificate.</span></span> <span data-ttu-id="d12dd-135">La credencial del cliente en este caso debe especificarse mediante [ \<clientCredentials >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) y [ \<clientCertificate >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-servicecredentials.md).</span><span class="sxs-lookup"><span data-stu-id="d12dd-135">The client credential in this case needs to be specified using [\<clientCredentials>](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) and the [\<clientCertificate>](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-servicecredentials.md).</span></span> <span data-ttu-id="d12dd-136">Además, cuando se utiliza el modo de seguridad de mensajes, se debe proporcionar el cliente con el certificado del servicio.</span><span class="sxs-lookup"><span data-stu-id="d12dd-136">In addition, when using message security mode, the client needs to be provisioned with the service certificate.</span></span> <span data-ttu-id="d12dd-137">La credencial de servicio en este caso debe especificarse mediante <xref:System.ServiceModel.Description.ClientCredentials> clase o `ClientCredentials` elemento de comportamiento y especificar el servicio de certificados utilizando el [ \<serviceCertificate >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md).</span><span class="sxs-lookup"><span data-stu-id="d12dd-137">The service credential in this case needs to be specified using <xref:System.ServiceModel.Description.ClientCredentials> class or `ClientCredentials` behavior element and specifying the service certificate using the [\<serviceCertificate>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md).</span></span>|  
   
-### Elementos secundarios  
- Ninguna  
+### <a name="child-elements"></a><span data-ttu-id="d12dd-138">Elementos secundarios</span><span class="sxs-lookup"><span data-stu-id="d12dd-138">Child Elements</span></span>  
+ <span data-ttu-id="d12dd-139">Ninguna</span><span class="sxs-lookup"><span data-stu-id="d12dd-139">None</span></span>  
   
-### Elementos primarios  
+### <a name="parent-elements"></a><span data-ttu-id="d12dd-140">Elementos primarios</span><span class="sxs-lookup"><span data-stu-id="d12dd-140">Parent Elements</span></span>  
   
-|Elemento|Descripción|  
-|--------------|-----------------|  
-|[\<seguridad\>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-basichttpbinding.md)|Define las funciones de seguridad para [\<basicHttpBinding\>](../../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md).|  
+|<span data-ttu-id="d12dd-141">Elemento</span><span class="sxs-lookup"><span data-stu-id="d12dd-141">Element</span></span>|<span data-ttu-id="d12dd-142">Descripción</span><span class="sxs-lookup"><span data-stu-id="d12dd-142">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="d12dd-143">\<seguridad ></span><span class="sxs-lookup"><span data-stu-id="d12dd-143">\<security></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-basichttpbinding.md)|<span data-ttu-id="d12dd-144">Define las funciones de seguridad para la [ \<basicHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md).</span><span class="sxs-lookup"><span data-stu-id="d12dd-144">Defines the security capabilities for the [\<basicHttpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md).</span></span>|  
   
-## Ejemplo  
- Este ejemplo muestra cómo implementar una aplicación que utiliza basicHttpBinding y modo de seguridad.  En el ejemplo de configuración de un servicio siguiente, la definición de extremo especifica basicHttpBinding y hace referencia a una configuración de enlace denominada `Binding1`.  El certificado que el servicio utiliza para autenticarse al cliente se establece en la sección `behaviors` del archivo de configuración bajo el elemento `serviceCredentials`.  El modo de la validación que se aplica al certificado que el cliente utiliza para autenticarse al servicio también se establece en la sección `behaviors` bajo el elemento `clientCertificate`.  
+## <a name="example"></a><span data-ttu-id="d12dd-145">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="d12dd-145">Example</span></span>  
+ <span data-ttu-id="d12dd-146">Este ejemplo muestra cómo implementar una aplicación que utiliza basicHttpBinding y modo de seguridad.</span><span class="sxs-lookup"><span data-stu-id="d12dd-146">This sample demonstrates how to implement an application that uses the basicHttpBinding and message security.</span></span> <span data-ttu-id="d12dd-147">En el ejemplo de configuración de un servicio siguiente, la definición de extremo especifica basicHttpBinding y hace referencia a una configuración de enlace denominada `Binding1`.</span><span class="sxs-lookup"><span data-stu-id="d12dd-147">In the following configuration example for a service, the endpoint definition specifies the basicHttpBinding and references a binding configuration named `Binding1`.</span></span> <span data-ttu-id="d12dd-148">El certificado que el servicio utiliza para autenticarse al cliente se establece en la sección `behaviors` del archivo de configuración bajo el elemento `serviceCredentials`.</span><span class="sxs-lookup"><span data-stu-id="d12dd-148">The certificate that the service uses to authenticate itself to the client is set in the `behaviors` section of the configuration file under the `serviceCredentials` element.</span></span> <span data-ttu-id="d12dd-149">El modo de la validación que se aplica al certificado que el cliente utiliza para autenticarse al servicio también se establece en la sección `behaviors` bajo el elemento `clientCertificate`.</span><span class="sxs-lookup"><span data-stu-id="d12dd-149">The validation mode that applies to the certificate that the client uses to authenticate itself to the service is also set in the `behaviors` section under the `clientCertificate` element.</span></span>  
   
- El mismo enlace y detalles de seguridad se especifican en el archivo de configuración del cliente.  
+ <span data-ttu-id="d12dd-150">El mismo enlace y detalles de seguridad se especifican en el archivo de configuración del cliente.</span><span class="sxs-lookup"><span data-stu-id="d12dd-150">The same binding and security details are specified in the client configuration file.</span></span>  
   
-```  
+```xml  
 <system.serviceModel>  
     <services>  
       <service name="Microsoft.ServiceModel.Samples.CalculatorService"  
@@ -126,13 +135,13 @@ Define la configuración de seguridad de nivel de mensaje para un enlace [\<basi
 </system.serviceModel>  
 ```  
   
-## Vea también  
- <xref:System.ServiceModel.BasicHttpMessageSecurity>   
- <xref:System.ServiceModel.Configuration.BasicHttpSecurityElement.Message%2A>   
- <xref:System.ServiceModel.BasicHttpSecurity.Message%2A>   
- <xref:System.ServiceModel.Configuration.BasicHttpMessageSecurityElement>   
- [Protección de servicios y clientes](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)   
- [Enlaces](../../../../../docs/framework/wcf/bindings.md)   
- [Configuración de enlaces proporcionados por el sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)   
- [Using Bindings to Configure Windows Communication Foundation Services and Clients](http://msdn.microsoft.com/es-es/bd8b277b-932f-472f-a42a-b02bb5257dfb)   
- [\<enlace\>](../../../../../docs/framework/misc/binding.md)
+## <a name="see-also"></a><span data-ttu-id="d12dd-151">Vea también</span><span class="sxs-lookup"><span data-stu-id="d12dd-151">See Also</span></span>  
+ <xref:System.ServiceModel.BasicHttpMessageSecurity>  
+ <xref:System.ServiceModel.Configuration.BasicHttpSecurityElement.Message%2A>  
+ <xref:System.ServiceModel.BasicHttpSecurity.Message%2A>  
+ <xref:System.ServiceModel.Configuration.BasicHttpMessageSecurityElement>  
+ [<span data-ttu-id="d12dd-152">Protección de servicios y clientes</span><span class="sxs-lookup"><span data-stu-id="d12dd-152">Securing Services and Clients</span></span>](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
+ [<span data-ttu-id="d12dd-153">Enlaces</span><span class="sxs-lookup"><span data-stu-id="d12dd-153">Bindings</span></span>](../../../../../docs/framework/wcf/bindings.md)  
+ [<span data-ttu-id="d12dd-154">Configuración de enlaces proporcionados por el sistema</span><span class="sxs-lookup"><span data-stu-id="d12dd-154">Configuring System-Provided Bindings</span></span>](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
+ [<span data-ttu-id="d12dd-155">Utilización de enlaces para configurar los clientes y servicios de Windows Communication Foundation</span><span class="sxs-lookup"><span data-stu-id="d12dd-155">Using Bindings to Configure Windows Communication Foundation Services and Clients</span></span>](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [<span data-ttu-id="d12dd-156">\<enlace ></span><span class="sxs-lookup"><span data-stu-id="d12dd-156">\<binding></span></span>](../../../../../docs/framework/misc/binding.md)

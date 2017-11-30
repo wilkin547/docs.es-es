@@ -1,56 +1,38 @@
 ---
-title: "Implementación de aplicaciones que hacen referencia a controles de Power Packs (Visual Studio) | Documentos de Microsoft"
-ms.date: 2015-07-20
+title: "Implementación de aplicaciones que hacen referencia a controles Power Packs (Visual Studio)"
+ms.date: 07/20/2015
 ms.prod: .net
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
-helpviewer_keywords:
-- Power Packs, deploying
+helpviewer_keywords: Power Packs, deploying
 ms.assetid: f2230f53-a745-4731-89e6-033943faa209
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 4d342e655dcfe18ed3b5fc1d2710571ed8e3369e
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 2a9562acf05cd27eed7bc1ad963845af9a7ca5f9
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="deploying-applications-that-reference-power-packs-controls-visual-studio"></a>Implementación de aplicaciones que hacen referencia a controles de Power Packs (Visual Studio)
-Si desea implementar una aplicación que hace referencia a los controles Power Packs (<xref:Microsoft.VisualBasic.PowerPacks.LineShape>, <xref:Microsoft.VisualBasic.PowerPacks.OvalShape>, <xref:Microsoft.VisualBasic.PowerPacks.RectangleShape>, o <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>), los controles deben instalarse en el equipo de destino.</xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> </xref:Microsoft.VisualBasic.PowerPacks.RectangleShape> </xref:Microsoft.VisualBasic.PowerPacks.OvalShape> </xref:Microsoft.VisualBasic.PowerPacks.LineShape>  
+# <a name="deploying-applications-that-reference-power-packs-controls-visual-studio"></a><span data-ttu-id="dd978-102">Implementación de aplicaciones que hacen referencia a controles Power Packs (Visual Studio)</span><span class="sxs-lookup"><span data-stu-id="dd978-102">Deploying applications that reference Power Packs controls (Visual Studio)</span></span>
+<span data-ttu-id="dd978-103">Si va a implementar una aplicación que hace referencia a los controles Power Packs (<xref:Microsoft.VisualBasic.PowerPacks.LineShape>, <xref:Microsoft.VisualBasic.PowerPacks.OvalShape>, <xref:Microsoft.VisualBasic.PowerPacks.RectangleShape>, o <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>), los controles deben instalarse en el equipo de destino.</span><span class="sxs-lookup"><span data-stu-id="dd978-103">If you want to deploy an application that references the Power Packs controls (<xref:Microsoft.VisualBasic.PowerPacks.LineShape>, <xref:Microsoft.VisualBasic.PowerPacks.OvalShape>, <xref:Microsoft.VisualBasic.PowerPacks.RectangleShape>, or <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>), the controls must be installed on the destination computer.</span></span>  
   
-## <a name="installing-the-power-packs-controls-as-a-prerequisite"></a>Instalar los controles Power Packs como requisito previo  
- Para implementar correctamente una aplicación, también debe implementar todos los componentes a los que hace referencia la aplicación. El proceso de instalación de componentes de requisito previo se conoce como *arranque*.  
+## <a name="installing-the-power-packs-controls-as-a-prerequisite"></a><span data-ttu-id="dd978-104">Instalación de los controles Power Packs como requisito previo</span><span class="sxs-lookup"><span data-stu-id="dd978-104">Installing the Power Packs controls as a prerequisite</span></span>  
+ <span data-ttu-id="dd978-105">Para implementar correctamente una aplicación, también debe implementar todos los componentes a los que hace referencia la aplicación.</span><span class="sxs-lookup"><span data-stu-id="dd978-105">To successfully deploy an application, you must also deploy all components that are referenced by the application.</span></span> <span data-ttu-id="dd978-106">El proceso de instalación de componentes de requisito previo se conoce como *arranque*.</span><span class="sxs-lookup"><span data-stu-id="dd978-106">The process of installing prerequisite components is known as *bootstrapping*.</span></span>  
   
- Cuando [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs_md.md)] está instalado en el equipo de desarrollo, Power Packs de un paquete de programa previo se agrega a la [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs_md.md)] directorio de arranque. Este paquete está disponible al seguir los procedimientos para agregar los requisitos previos para cualquiera [!INCLUDE[ndptecclick](../../../visual-basic/developing-apps/printing/includes/ndptecclick_md.md)] o implementación de Windows Installer.  
+ <span data-ttu-id="dd978-107">Cuando [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] está instalado en el equipo de desarrollo, un PowerPacks paquete del programa previo se agrega a la [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] al directorio de arranque.</span><span class="sxs-lookup"><span data-stu-id="dd978-107">When [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] is installed on your development computer, a Power Packs bootstrapper package is added to the [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] bootstrapper directory.</span></span> <span data-ttu-id="dd978-108">Este paquete está disponible al seguir los procedimientos para agregar requisitos previos para cualquier implementación de [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] o Windows Installer.</span><span class="sxs-lookup"><span data-stu-id="dd978-108">This package is then available when you follow the procedures for adding prerequisites for either [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] or Windows Installer deployment.</span></span>  
   
- De forma predeterminada, los componentes de arranque se implementan desde la misma ubicación que el paquete de instalación. Como alternativa, puede implementar los componentes desde una dirección URL o una ubicación de recurso compartido de archivo desde la que los usuarios pueden descargarlos según sea necesario.  
+ <span data-ttu-id="dd978-109">De forma predeterminada, los componentes de arranque se implementan desde la misma ubicación que el paquete de instalación.</span><span class="sxs-lookup"><span data-stu-id="dd978-109">By default, bootstrapped components are deployed from the same location as the installation package.</span></span> <span data-ttu-id="dd978-110">Como alternativa, puede implementar los componentes desde una dirección URL o una ubicación de recurso compartido de archivo desde la que los usuarios pueden descargarlos según sea necesario.</span><span class="sxs-lookup"><span data-stu-id="dd978-110">Alternatively, you can choose to deploy the components from a URL or file share location from which users can download them as necessary.</span></span>  
   
 > [!NOTE]
->  Para instalar los componentes de arranque, el usuario podría necesitar permisos de usuario administrativo o similares en el equipo. Para [!INCLUDE[ndptecclick](../../../visual-basic/developing-apps/printing/includes/ndptecclick_md.md)] aplicaciones, esto significa que el usuario necesitará permisos administrativos para instalar la aplicación, independientemente del nivel de seguridad especificado por la aplicación. Una vez instalada la aplicación, el usuario puede ejecutarla sin permisos administrativos.  
+>  <span data-ttu-id="dd978-111">Para instalar los componentes de arranque, el usuario podría necesitar permisos de usuario administrativo o similares en el equipo.</span><span class="sxs-lookup"><span data-stu-id="dd978-111">To install bootstrapped components, the user might need administrative or similar user permissions on the computer.</span></span> <span data-ttu-id="dd978-112">Para las aplicaciones [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] , esto significa que el usuario necesitará permisos administrativos para instalar la aplicación, independientemente del nivel de seguridad especificado por la aplicación.</span><span class="sxs-lookup"><span data-stu-id="dd978-112">For [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] applications, this means that the user will need administrative permissions to install the application, regardless of the security level specified by the application.</span></span> <span data-ttu-id="dd978-113">Una vez instalada la aplicación, el usuario puede ejecutarla sin permisos administrativos.</span><span class="sxs-lookup"><span data-stu-id="dd978-113">After the application is installed, the user can run the application without administrative permissions.</span></span>  
   
- Durante la instalación, los usuarios le pedirá que instale los controles Power Packs si no están presentes en el equipo de destino.  
+ <span data-ttu-id="dd978-114">Durante la instalación, los usuarios se le pedirá que instale los controles Power Packs si no están presentes en el equipo de destino.</span><span class="sxs-lookup"><span data-stu-id="dd978-114">During installation, users will be prompted to install the Power Packs controls if they are not present on the destination computer.</span></span>  
   
- Como alternativa al arranque, puede implementar los controles Power Packs previamente mediante un sistema de distribución electrónica de software como Microsoft Systems Management Server.  
+ <span data-ttu-id="dd978-115">Como alternativa al arranque, puede implementar previamente los controles Power Packs mediante un sistema de distribución electrónica de software como Microsoft Systems Management Server.</span><span class="sxs-lookup"><span data-stu-id="dd978-115">As an alternative to bootstrapping, you can pre-deploy the Power Packs controls by using an electronic software distribution system such as Microsoft Systems Management Server.</span></span>  
   
-## <a name="see-also"></a>Vea también  
- [Cómo: instalar requisitos previos mediante una aplicación ClickOnce](http://msdn.microsoft.com/library/e964fca5-fdfd-47cf-a1c9-7fb96b1c88b5)   
- [Controles Visual Basic Power Packs](../../../visual-basic/developing-apps/windows-forms/power-packs-controls.md)
+## <a name="see-also"></a><span data-ttu-id="dd978-116">Vea también</span><span class="sxs-lookup"><span data-stu-id="dd978-116">See also</span></span>  
+ [<span data-ttu-id="dd978-117">Cómo: Instalar requisitos previos mediante una aplicación ClickOnce</span><span class="sxs-lookup"><span data-stu-id="dd978-117">How to: Install Prerequisites with a ClickOnce Application</span></span>](/visualstudio/deployment/how-to-install-prerequisites-with-a-clickonce-application)  
+ [<span data-ttu-id="dd978-118">Controles de Power Packs de Visual Basic</span><span class="sxs-lookup"><span data-stu-id="dd978-118">Visual Basic Power Packs Controls</span></span>](../../../visual-basic/developing-apps/windows-forms/power-packs-controls.md)

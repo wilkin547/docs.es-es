@@ -1,67 +1,68 @@
 ---
-title: "Estilos y plantillas de ToolBar | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ControlTemplate [WPF], ToolBar"
-  - "partes [WPF], ToolBar"
-  - "estados [WPF], ToolBar"
-  - "estilos [WPF], ToolBar"
-  - "plantillas [WPF], ToolBar"
-  - "ToolBar [WPF], estilos y plantillas"
+title: Estilos y plantillas de ToolBar
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- states [WPF], ToolBar
+- styles [WPF], ToolBar
+- ControlTemplate [WPF], ToolBar
+- parts [WPF], ToolBar
+- ToolBar [WPF], styles and templates
+- templates [WPF], ToolBar
 ms.assetid: bd875f46-4690-46f5-81e0-f11a9822484f
-caps.latest.revision: 15
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 3e153ff0fd89259dafedf6f8abb669090a944e91
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Estilos y plantillas de ToolBar
-En este tema, se describen los estilos y plantillas del control <xref:System.Windows.Controls.ToolBar>.  Puede modificar la plantilla <xref:System.Windows.Controls.ControlTemplate> predeterminada para dar un aspecto único al control.  Para obtener más información, vea [Personalizar la apariencia de un control existente creando una clase ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
+# <a name="toolbar-styles-and-templates"></a><span data-ttu-id="8fbf7-102">Estilos y plantillas de ToolBar</span><span class="sxs-lookup"><span data-stu-id="8fbf7-102">ToolBar Styles and Templates</span></span>
+<span data-ttu-id="8fbf7-103">En este tema se describe los estilos y plantillas para el <xref:System.Windows.Controls.ToolBar> control.</span><span class="sxs-lookup"><span data-stu-id="8fbf7-103">This topic describes the styles and templates for the <xref:System.Windows.Controls.ToolBar> control.</span></span> <span data-ttu-id="8fbf7-104">Puede modificar el valor predeterminado <xref:System.Windows.Controls.ControlTemplate> para dar al control una apariencia única.</span><span class="sxs-lookup"><span data-stu-id="8fbf7-104">You can modify the default <xref:System.Windows.Controls.ControlTemplate> to give the control a unique appearance.</span></span> <span data-ttu-id="8fbf7-105">Para más información, consulte [Customizing the Appearance of an Existing Control by Creating a ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md) (Personalizar la apariencia de un control existente mediante la creación de una clase ControlTemplate).</span><span class="sxs-lookup"><span data-stu-id="8fbf7-105">For more information, see [Customizing the Appearance of an Existing Control by Creating a ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).</span></span>  
   
-## Elementos de ToolBar  
- En la siguiente tabla se muestran los elementos con nombre del control <xref:System.Windows.Controls.ToolBar>.  
+## <a name="toolbar-parts"></a><span data-ttu-id="8fbf7-106">Partes de la barra de herramientas</span><span class="sxs-lookup"><span data-stu-id="8fbf7-106">ToolBar Parts</span></span>  
+ <span data-ttu-id="8fbf7-107">En la tabla siguiente se enumera los elementos con nombre para el <xref:System.Windows.Controls.ToolBar> control.</span><span class="sxs-lookup"><span data-stu-id="8fbf7-107">The following table lists the named parts for the <xref:System.Windows.Controls.ToolBar> control.</span></span>  
   
-||||  
+|<span data-ttu-id="8fbf7-108">Parte</span><span class="sxs-lookup"><span data-stu-id="8fbf7-108">Part</span></span>|<span data-ttu-id="8fbf7-109">Tipo</span><span class="sxs-lookup"><span data-stu-id="8fbf7-109">Type</span></span>|<span data-ttu-id="8fbf7-110">Descripción</span><span class="sxs-lookup"><span data-stu-id="8fbf7-110">Description</span></span>|  
 |-|-|-|  
-|Parte|Tipo|Descripción|  
-|PART\_ToolBarPanel|<xref:System.Windows.Controls.Primitives.ToolBarPanel>|Objeto que contiene los controles en <xref:System.Windows.Controls.ToolBar>.|  
-|PART\_ToolBarOverflowPanel|<xref:System.Windows.Controls.Primitives.ToolBarOverflowPanel>|Objeto que contiene los controles que están en el área de desbordamiento de <xref:System.Windows.Controls.ToolBar>.|  
+|<span data-ttu-id="8fbf7-111">PART_ToolBarPanel</span><span class="sxs-lookup"><span data-stu-id="8fbf7-111">PART_ToolBarPanel</span></span>|<xref:System.Windows.Controls.Primitives.ToolBarPanel>|<span data-ttu-id="8fbf7-112">El objeto que contiene los controles en el <xref:System.Windows.Controls.ToolBar>.</span><span class="sxs-lookup"><span data-stu-id="8fbf7-112">The object that contains the controls on the <xref:System.Windows.Controls.ToolBar>.</span></span>|  
+|<span data-ttu-id="8fbf7-113">PART_ToolBarOverflowPanel</span><span class="sxs-lookup"><span data-stu-id="8fbf7-113">PART_ToolBarOverflowPanel</span></span>|<xref:System.Windows.Controls.Primitives.ToolBarOverflowPanel>|<span data-ttu-id="8fbf7-114">El objeto que contiene los controles que se encuentran en el área de desbordamiento de la <xref:System.Windows.Controls.ToolBar>.</span><span class="sxs-lookup"><span data-stu-id="8fbf7-114">The object that contains the controls that are in the overflow area of the <xref:System.Windows.Controls.ToolBar>.</span></span>|  
   
- Cuando se crea una <xref:System.Windows.Controls.ControlTemplate> para un <xref:System.Windows.Controls.ToolBar>, la plantilla puede contener un <xref:System.Windows.Controls.ItemsPresenter> dentro de un <xref:System.Windows.Controls.ScrollViewer>.  \(El <xref:System.Windows.Controls.ItemsPresenter> muestra cada elemento del <xref:System.Windows.Controls.ToolBar>; el <xref:System.Windows.Controls.ScrollViewer> permite el desplazamiento dentro del control\).  Si el <xref:System.Windows.Controls.ItemsPresenter> no es el elemento secundario directo del <xref:System.Windows.Controls.ScrollViewer>, debe asignar al <xref:System.Windows.Controls.ItemsPresenter> el nombre `ItemsPresenter`.  
+ <span data-ttu-id="8fbf7-115">Cuando se crea un <xref:System.Windows.Controls.ControlTemplate> para un <xref:System.Windows.Controls.ToolBar>, la plantilla podría contener una <xref:System.Windows.Controls.ItemsPresenter> dentro de un <xref:System.Windows.Controls.ScrollViewer>.</span><span class="sxs-lookup"><span data-stu-id="8fbf7-115">When you create a <xref:System.Windows.Controls.ControlTemplate> for a <xref:System.Windows.Controls.ToolBar>, your template might contain an <xref:System.Windows.Controls.ItemsPresenter> within a <xref:System.Windows.Controls.ScrollViewer>.</span></span> <span data-ttu-id="8fbf7-116">(El <xref:System.Windows.Controls.ItemsPresenter> muestra cada elemento de la <xref:System.Windows.Controls.ToolBar>; el <xref:System.Windows.Controls.ScrollViewer> habilita el desplazamiento en el control).</span><span class="sxs-lookup"><span data-stu-id="8fbf7-116">(The <xref:System.Windows.Controls.ItemsPresenter> displays each item in the <xref:System.Windows.Controls.ToolBar>; the <xref:System.Windows.Controls.ScrollViewer> enables scrolling within the control).</span></span>  <span data-ttu-id="8fbf7-117">Si el <xref:System.Windows.Controls.ItemsPresenter> no es el elemento secundario directo de la <xref:System.Windows.Controls.ScrollViewer>, debe asignar a la <xref:System.Windows.Controls.ItemsPresenter> el nombre `ItemsPresenter`.</span><span class="sxs-lookup"><span data-stu-id="8fbf7-117">If the <xref:System.Windows.Controls.ItemsPresenter> is not the direct child of the <xref:System.Windows.Controls.ScrollViewer>, you must give the <xref:System.Windows.Controls.ItemsPresenter> the name, `ItemsPresenter`.</span></span>  
   
-## Estados de ToolBar  
- En la tabla siguiente se muestran los estados visuales del control <xref:System.Windows.Controls.ToolBar>.  
+## <a name="toolbar-states"></a><span data-ttu-id="8fbf7-118">Estados de la barra de herramientas</span><span class="sxs-lookup"><span data-stu-id="8fbf7-118">ToolBar States</span></span>  
+ <span data-ttu-id="8fbf7-119">La tabla siguiente enumera los estados visuales para el <xref:System.Windows.Controls.ToolBar> control.</span><span class="sxs-lookup"><span data-stu-id="8fbf7-119">The following table lists the visual states for the <xref:System.Windows.Controls.ToolBar> control.</span></span>  
   
-||||  
+|<span data-ttu-id="8fbf7-120">Nombre de VisualState</span><span class="sxs-lookup"><span data-stu-id="8fbf7-120">VisualState Name</span></span>|<span data-ttu-id="8fbf7-121">Nombre de VisualStateGroup</span><span class="sxs-lookup"><span data-stu-id="8fbf7-121">VisualStateGroup Name</span></span>|<span data-ttu-id="8fbf7-122">Descripción</span><span class="sxs-lookup"><span data-stu-id="8fbf7-122">Description</span></span>|  
 |-|-|-|  
-|Nombre de VisualState|Nombre de VisualStateGroup|Descripción|  
-|Valid|ValidationStates|El control utiliza la clase <xref:System.Windows.Controls.Validation> y la propiedad adjunta <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName> es `false`.|  
-|InvalidFocused|ValidationStates|La propiedad adjunta <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName> es `true`, tiene el control y tiene el foco.|  
-|InvalidUnfocused|ValidationStates|La propiedad adjunta <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName> es `true`, tiene el control pero no tiene el foco.|  
+|<span data-ttu-id="8fbf7-123">Válido</span><span class="sxs-lookup"><span data-stu-id="8fbf7-123">Valid</span></span>|<span data-ttu-id="8fbf7-124">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="8fbf7-124">ValidationStates</span></span>|<span data-ttu-id="8fbf7-125">El control usa la <xref:System.Windows.Controls.Validation> clase y la <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> propiedad adjunta es `false`.</span><span class="sxs-lookup"><span data-stu-id="8fbf7-125">The control uses the <xref:System.Windows.Controls.Validation> class and the <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> attached property is `false`.</span></span>|  
+|<span data-ttu-id="8fbf7-126">InvalidFocused</span><span class="sxs-lookup"><span data-stu-id="8fbf7-126">InvalidFocused</span></span>|<span data-ttu-id="8fbf7-127">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="8fbf7-127">ValidationStates</span></span>|<span data-ttu-id="8fbf7-128">El <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> propiedad adjunta es `true` tiene el control tiene el foco.</span><span class="sxs-lookup"><span data-stu-id="8fbf7-128">The <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> attached property is `true` has the control has focus.</span></span>|  
+|<span data-ttu-id="8fbf7-129">InvalidUnfocused</span><span class="sxs-lookup"><span data-stu-id="8fbf7-129">InvalidUnfocused</span></span>|<span data-ttu-id="8fbf7-130">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="8fbf7-130">ValidationStates</span></span>|<span data-ttu-id="8fbf7-131">El <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> propiedad adjunta es `true` tiene el control no tiene el foco.</span><span class="sxs-lookup"><span data-stu-id="8fbf7-131">The <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> attached property is `true` has the control does not have focus.</span></span>|  
   
-## Ejemplo de ControlTemplate de ToolBar  
- En el ejemplo siguiente se muestra cómo definir <xref:System.Windows.Controls.ControlTemplate> para el control <xref:System.Windows.Controls.ToolBar>.  
+## <a name="toolbar-controltemplate-example"></a><span data-ttu-id="8fbf7-132">Ejemplo de ControlTemplate de barra de herramientas</span><span class="sxs-lookup"><span data-stu-id="8fbf7-132">ToolBar ControlTemplate Example</span></span>  
+ <span data-ttu-id="8fbf7-133">En el ejemplo siguiente se muestra cómo definir un <xref:System.Windows.Controls.ControlTemplate> para el <xref:System.Windows.Controls.ToolBar> control.</span><span class="sxs-lookup"><span data-stu-id="8fbf7-133">The following example shows how to define a <xref:System.Windows.Controls.ControlTemplate> for the <xref:System.Windows.Controls.ToolBar> control.</span></span>  
   
- [!code-xml[ControlTemplateExamples#ToolBar](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/toolbar.xaml#toolbar)]  
+ [!code-xaml[ControlTemplateExamples#ToolBar](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/toolbar.xaml#toolbar)]  
   
- El ejemplo anterior utiliza uno o más de los siguientes recursos.  
+ <span data-ttu-id="8fbf7-134">En el ejemplo anterior se usa uno o varios de los recursos siguientes.</span><span class="sxs-lookup"><span data-stu-id="8fbf7-134">The preceding example uses one or more of the following resources.</span></span>  
   
- [!code-xml[ControlTemplateExamples#Resources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
+ [!code-xaml[ControlTemplateExamples#Resources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
   
- Para obtener el ejemplo completo, vea [Styling with ControlTemplates Sample](http://go.microsoft.com/fwlink/?LinkID=160041).  
+ <span data-ttu-id="8fbf7-135">Para ver un ejemplo completo, consulte [Aplicación de estilos con el ejemplo ControlTemplates](http://go.microsoft.com/fwlink/?LinkID=160041).</span><span class="sxs-lookup"><span data-stu-id="8fbf7-135">For the complete sample, see [Styling with ControlTemplates Sample](http://go.microsoft.com/fwlink/?LinkID=160041).</span></span>  
   
-## Vea también  
- <xref:System.Windows.FrameworkElement.Style%2A>   
- <xref:System.Windows.Controls.ControlTemplate>   
- [Estilos y plantillas de controles](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)   
- [Personalización de controles](../../../../docs/framework/wpf/controls/control-customization.md)   
- [Aplicar estilos y plantillas](../../../../docs/framework/wpf/controls/styling-and-templating.md)   
- [Personalizar la apariencia de un control existente creando una clase ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)
+## <a name="see-also"></a><span data-ttu-id="8fbf7-136">Vea también</span><span class="sxs-lookup"><span data-stu-id="8fbf7-136">See Also</span></span>  
+ <xref:System.Windows.FrameworkElement.Style%2A>  
+ <xref:System.Windows.Controls.ControlTemplate>  
+ [<span data-ttu-id="8fbf7-137">Estilos y plantillas de controles</span><span class="sxs-lookup"><span data-stu-id="8fbf7-137">Control Styles and Templates</span></span>](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)  
+ <span data-ttu-id="8fbf7-138">[Control Customization](../../../../docs/framework/wpf/controls/control-customization.md) (Personalización de controles)</span><span class="sxs-lookup"><span data-stu-id="8fbf7-138">[Control Customization](../../../../docs/framework/wpf/controls/control-customization.md)</span></span>  
+ [<span data-ttu-id="8fbf7-139">Aplicar estilos y plantillas</span><span class="sxs-lookup"><span data-stu-id="8fbf7-139">Styling and Templating</span></span>](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
+ [<span data-ttu-id="8fbf7-140">Personalización de la apariencia de un control existente mediante la creación de una clase ControlTemplate</span><span class="sxs-lookup"><span data-stu-id="8fbf7-140">Customizing the Appearance of an Existing Control by Creating a ControlTemplate</span></span>](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)

@@ -7,93 +7,86 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - network resources
 - networks [.NET Framework], programming how-tos
 - networking how-tos [.NET Framework]
 - network
 ms.assetid: 8fd6c675-9ea6-4fad-a412-e2c2c1f233d8
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 6e63c65f0ebef37e854bd3cfd62a33e396470a57
-ms.contentlocale: es-es
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 1b6e63c0db9815c7bcfc32ec962e3f85362cce4f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="network-programming-how-to-topics"></a>Temas de procedimientos de programación de red
-La lista siguiente incluye vínculos a los temas de procedimientos relacionados con la programación de red que se pueden encontrar en la documentación conceptual.  
+# <a name="network-programming-how-to-topics"></a><span data-ttu-id="73eaf-102">Temas de procedimientos de programación de red</span><span class="sxs-lookup"><span data-stu-id="73eaf-102">Network Programming How-to Topics</span></span>
+<span data-ttu-id="73eaf-103">La lista siguiente incluye vínculos a los temas de procedimientos relacionados con la programación de red que se pueden encontrar en la documentación conceptual.</span><span class="sxs-lookup"><span data-stu-id="73eaf-103">The following list includes links to the How-to topics found in the conceptual documentation for network programming.</span></span>  
   
- **Solicitud de datos:**  
+ <span data-ttu-id="73eaf-104">**Solicitud de datos:**</span><span class="sxs-lookup"><span data-stu-id="73eaf-104">**Requesting Data:**</span></span>  
   
--   [Cómo: solicitar una página web y recuperar los resultados como una secuencia](../../../docs/framework/network-programming/how-to-request-a-web-page-and-retrieve-the-results-as-a-stream.md)  
+-   [<span data-ttu-id="73eaf-105">Cómo: solicitar una página web y recuperar los resultados como una secuencia</span><span class="sxs-lookup"><span data-stu-id="73eaf-105">How to: Request a Web Page and Retrieve the Results as a Stream</span></span>](../../../docs/framework/network-programming/how-to-request-a-web-page-and-retrieve-the-results-as-a-stream.md)  
   
--   [Cómo solicitar datos mediante la clase WebRequest](../../../docs/framework/network-programming/how-to-request-data-using-the-webrequest-class.md)  
+-   [<span data-ttu-id="73eaf-106">Cómo solicitar datos mediante la clase WebRequest</span><span class="sxs-lookup"><span data-stu-id="73eaf-106">How to: Request Data Using the WebRequest Class</span></span>](../../../docs/framework/network-programming/how-to-request-data-using-the-webrequest-class.md)  
   
--   [Cómo enviar datos mediante la clase WebRequest](../../../docs/framework/network-programming/how-to-send-data-using-the-webrequest-class.md)  
+-   [<span data-ttu-id="73eaf-107">Cómo enviar datos mediante la clase WebRequest</span><span class="sxs-lookup"><span data-stu-id="73eaf-107">How to: Send Data Using the WebRequest Class</span></span>](../../../docs/framework/network-programming/how-to-send-data-using-the-webrequest-class.md)  
   
--   [Cómo: recuperar una WebResponse específica de protocolo que coincida con una WebRequest](../../../docs/framework/network-programming/how-to-retrieve-a-protocol-specific-webresponse-that-matches-a-webrequest.md)  
+-   [<span data-ttu-id="73eaf-108">Cómo: recuperar una WebResponse específica de protocolo que coincida con una WebRequest</span><span class="sxs-lookup"><span data-stu-id="73eaf-108">How to: Retrieve a Protocol-Specific WebResponse that Matches a WebRequest</span></span>](../../../docs/framework/network-programming/how-to-retrieve-a-protocol-specific-webresponse-that-matches-a-webrequest.md)  
   
- **Protocolos acoplables y de aplicaciones:**  
+ <span data-ttu-id="73eaf-109">**Protocolos acoplables y de aplicaciones:**</span><span class="sxs-lookup"><span data-stu-id="73eaf-109">**Pluggable and Application Protocols:**</span></span>  
   
--   [Cómo: registrar un protocolo personalizado mediante WebRequest](../../../docs/framework/network-programming/how-to-register-a-custom-protocol-using-webrequest.md)  
+-   [<span data-ttu-id="73eaf-110">Cómo: registrar un protocolo personalizado mediante WebRequest</span><span class="sxs-lookup"><span data-stu-id="73eaf-110">How to: Register a Custom Protocol Using WebRequest</span></span>](../../../docs/framework/network-programming/how-to-register-a-custom-protocol-using-webrequest.md)  
   
--   [Cómo: convertir una WebRequest a propiedades específicas del protocolo de acceso](../../../docs/framework/network-programming/how-to-typecast-a-webrequest-to-access-protocol-specific-properties.md)  
+-   [<span data-ttu-id="73eaf-111">Cómo: convertir una WebRequest a propiedades específicas del protocolo de acceso</span><span class="sxs-lookup"><span data-stu-id="73eaf-111">How to: Typecast a WebRequest to Access Protocol Specific Properties</span></span>](../../../docs/framework/network-programming/how-to-typecast-a-webrequest-to-access-protocol-specific-properties.md)  
   
--   [Cómo: obtener acceso a propiedades específicas de HTTP](../../../docs/framework/network-programming/how-to-access-http-specific-properties.md)  
+-   [<span data-ttu-id="73eaf-112">Cómo: obtener acceso a propiedades específicas de HTTP</span><span class="sxs-lookup"><span data-stu-id="73eaf-112">How to: Access HTTP-Specific Properties</span></span>](../../../docs/framework/network-programming/how-to-access-http-specific-properties.md)  
   
--   [Cómo: asignar la información de usuario para agrupar conexiones](../../../docs/framework/network-programming/how-to-assign-user-information-to-group-connections.md)  
+-   [<span data-ttu-id="73eaf-113">Cómo: asignar la información de usuario para agrupar conexiones</span><span class="sxs-lookup"><span data-stu-id="73eaf-113">How to: Assign User Information to Group Connections</span></span>](../../../docs/framework/network-programming/how-to-assign-user-information-to-group-connections.md)  
   
--   [Cómo: crear un socket](../../../docs/framework/network-programming/how-to-create-a-socket.md)  
+-   [<span data-ttu-id="73eaf-114">Cómo: crear un socket</span><span class="sxs-lookup"><span data-stu-id="73eaf-114">How to: Create a Socket</span></span>](../../../docs/framework/network-programming/how-to-create-a-socket.md)  
   
--   [Cómo: descargar archivos mediante FTP](../../../docs/framework/network-programming/how-to-download-files-with-ftp.md)  
+-   [<span data-ttu-id="73eaf-115">Cómo: descargar archivos mediante FTP</span><span class="sxs-lookup"><span data-stu-id="73eaf-115">How to: Download Files with FTP</span></span>](../../../docs/framework/network-programming/how-to-download-files-with-ftp.md)  
   
--   [Cómo: cargar archivos con FTP](../../../docs/framework/network-programming/how-to-upload-files-with-ftp.md)  
+-   [<span data-ttu-id="73eaf-116">Cómo: cargar archivos con FTP</span><span class="sxs-lookup"><span data-stu-id="73eaf-116">How to: Upload Files with FTP</span></span>](../../../docs/framework/network-programming/how-to-upload-files-with-ftp.md)  
   
--   [Cómo: enumerar los contenidos del directorio con FTP](../../../docs/framework/network-programming/how-to-list-directory-contents-with-ftp.md)  
+-   [<span data-ttu-id="73eaf-117">Cómo: enumerar los contenidos del directorio con FTP</span><span class="sxs-lookup"><span data-stu-id="73eaf-117">How to: List Directory Contents with FTP</span></span>](../../../docs/framework/network-programming/how-to-list-directory-contents-with-ftp.md)  
   
- **Protocolo de Internet versión 6:**  
+ <span data-ttu-id="73eaf-118">**Protocolo de Internet versión 6:**</span><span class="sxs-lookup"><span data-stu-id="73eaf-118">**Internet Protocol Version 6:**</span></span>  
   
--   [Cómo: modificar el archivo de configuración de equipo para habilitar la compatibilidad con IPv6](../../../docs/framework/network-programming/how-to-modify-the-computer-configuration-file-to-enable-ipv6-support.md)  
+-   [<span data-ttu-id="73eaf-119">Cómo: modificar el archivo de configuración de equipo para habilitar la compatibilidad con IPv6</span><span class="sxs-lookup"><span data-stu-id="73eaf-119">How to: Modify the Computer Configuration File to Enable IPv6 Support</span></span>](../../../docs/framework/network-programming/how-to-modify-the-computer-configuration-file-to-enable-ipv6-support.md)  
   
- **Seguimiento de red:**  
+ <span data-ttu-id="73eaf-120">**Seguimiento de red:**</span><span class="sxs-lookup"><span data-stu-id="73eaf-120">**Network Tracing:**</span></span>  
   
--   [Cómo: configurar el seguimiento de red](../../../docs/framework/network-programming/how-to-configure-network-tracing.md)  
+-   [<span data-ttu-id="73eaf-121">Cómo: configurar el seguimiento de red</span><span class="sxs-lookup"><span data-stu-id="73eaf-121">How to: Configure Network Tracing</span></span>](../../../docs/framework/network-programming/how-to-configure-network-tracing.md)  
   
- **Configurar almacenamiento en caché:**  
+ <span data-ttu-id="73eaf-122">**Configurar almacenamiento en caché:**</span><span class="sxs-lookup"><span data-stu-id="73eaf-122">**Configuring Caching:**</span></span>  
   
--   [Cómo establecer en una aplicación una directiva de caché basada en la ubicación](../../../docs/framework/network-programming/how-to-set-a-location-based-cache-policy-for-an-application.md)  
+-   [<span data-ttu-id="73eaf-123">Cómo establecer en una aplicación una directiva de caché basada en la ubicación</span><span class="sxs-lookup"><span data-stu-id="73eaf-123">How to: Set a Location-Based Cache Policy for an Application</span></span>](../../../docs/framework/network-programming/how-to-set-a-location-based-cache-policy-for-an-application.md)  
   
--   [Cómo establecer en una aplicación una directiva de caché predeterminada de duración definida](../../../docs/framework/network-programming/how-to-set-the-default-time-based-cache-policy-for-an-application.md)  
+-   [<span data-ttu-id="73eaf-124">Cómo establecer en una aplicación una directiva de caché predeterminada de duración definida</span><span class="sxs-lookup"><span data-stu-id="73eaf-124">How to: Set the Default Time-Based Cache Policy for an Application</span></span>](../../../docs/framework/network-programming/how-to-set-the-default-time-based-cache-policy-for-an-application.md)  
   
--   [Cómo: personalizar una directiva de caché de duración definida](../../../docs/framework/network-programming/how-to-customize-a-time-based-cache-policy.md)  
+-   [<span data-ttu-id="73eaf-125">Cómo: personalizar una directiva de caché de duración definida</span><span class="sxs-lookup"><span data-stu-id="73eaf-125">How to: Customize a Time-Based Cache Policy</span></span>](../../../docs/framework/network-programming/how-to-customize-a-time-based-cache-policy.md)  
   
--   [Cómo establecer una directiva de caché para una solicitud](../../../docs/framework/network-programming/how-to-set-cache-policy-for-a-request.md)  
+-   [<span data-ttu-id="73eaf-126">Cómo establecer una directiva de caché para una solicitud</span><span class="sxs-lookup"><span data-stu-id="73eaf-126">How to: Set Cache Policy for a Request</span></span>](../../../docs/framework/network-programming/how-to-set-cache-policy-for-a-request.md)  
   
- **Uso de servidores proxy:**  
+ <span data-ttu-id="73eaf-127">**Uso de servidores proxy:**</span><span class="sxs-lookup"><span data-stu-id="73eaf-127">**Using Proxies:**</span></span>  
   
--   [Cómo: habilitar un elemento WebRequest para usar un proxy para comunicarse con Internet](../../../docs/framework/network-programming/how-to-enable-a-webrequest-to-use-a-proxy-to-communicate-with-the-internet.md)  
+-   [<span data-ttu-id="73eaf-128">Cómo: habilitar un elemento WebRequest para usar un proxy para comunicarse con Internet</span><span class="sxs-lookup"><span data-stu-id="73eaf-128">How to: Enable a WebRequest to Use a Proxy to Communicate With the Internet</span></span>](../../../docs/framework/network-programming/how-to-enable-a-webrequest-to-use-a-proxy-to-communicate-with-the-internet.md)  
   
--   [Cómo: reemplazar una selección del proxy global](../../../docs/framework/network-programming/how-to-override-a-global-proxy-selection.md)  
+-   [<span data-ttu-id="73eaf-129">Cómo: reemplazar una selección del proxy global</span><span class="sxs-lookup"><span data-stu-id="73eaf-129">How to: Override a Global Proxy Selection</span></span>](../../../docs/framework/network-programming/how-to-override-a-global-proxy-selection.md)  
   
- **Información de red:**  
+ <span data-ttu-id="73eaf-130">**Información de red:**</span><span class="sxs-lookup"><span data-stu-id="73eaf-130">**Network Information:**</span></span>  
   
--   [Cómo: detectar la disponibilidad de la red y los cambios de dirección](../../../docs/framework/network-programming/how-to-detect-network-availability-and-address-changes.md)  
+-   [<span data-ttu-id="73eaf-131">Cómo: detectar la disponibilidad de la red y los cambios de dirección</span><span class="sxs-lookup"><span data-stu-id="73eaf-131">How to: Detect Network Availability and Address Changes</span></span>](../../../docs/framework/network-programming/how-to-detect-network-availability-and-address-changes.md)  
   
--   [Cómo: obtener información sobre el protocolo y la interfaz](../../../docs/framework/network-programming/how-to-get-interface-and-protocol-information.md)  
+-   [<span data-ttu-id="73eaf-132">Cómo: obtener información sobre el protocolo y la interfaz</span><span class="sxs-lookup"><span data-stu-id="73eaf-132">How to: Get Interface and Protocol Information</span></span>](../../../docs/framework/network-programming/how-to-get-interface-and-protocol-information.md)  
   
--   [Cómo: hacer ping a un host](../../../docs/framework/network-programming/how-to-ping-a-host.md)  
+-   [<span data-ttu-id="73eaf-133">Cómo: hacer ping a un host</span><span class="sxs-lookup"><span data-stu-id="73eaf-133">How to: Ping a Host</span></span>](../../../docs/framework/network-programming/how-to-ping-a-host.md)  
   
-## <a name="see-also"></a>Vea también  
- [Network Programming in the .NET Framework (Programación para redes en .NET Framework)](../../../docs/framework/network-programming/index.md)   
- [Network Programming Samples (Ejemplos de programación de red)](../../../docs/framework/network-programming/network-programming-samples.md)   
- [Ejemplos de red para .NET en la galería de código de MSDN](http://code.msdn.microsoft.com/Wiki/View.aspx?ProjectName=nclsamples)
-
+## <a name="see-also"></a><span data-ttu-id="73eaf-134">Vea también</span><span class="sxs-lookup"><span data-stu-id="73eaf-134">See Also</span></span>  
+ [<span data-ttu-id="73eaf-135">Programación para redes en .NET Framework</span><span class="sxs-lookup"><span data-stu-id="73eaf-135">Network Programming in the .NET Framework</span></span>](../../../docs/framework/network-programming/index.md)  
+ [<span data-ttu-id="73eaf-136">Network Programming Samples (Ejemplos de programación de red)</span><span class="sxs-lookup"><span data-stu-id="73eaf-136">Network Programming Samples</span></span>](../../../docs/framework/network-programming/network-programming-samples.md)  
+ [<span data-ttu-id="73eaf-137">Ejemplos de red para .NET en la galería de código de MSDN</span><span class="sxs-lookup"><span data-stu-id="73eaf-137">Networking Samples for .NET on MSDN Code Gallery</span></span>](http://code.msdn.microsoft.com/Wiki/View.aspx?ProjectName=nclsamples)

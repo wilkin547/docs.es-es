@@ -1,59 +1,62 @@
 ---
-title: "How to: Continue a Windows Service (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ServiceController.Continue"
-helpviewer_keywords: 
-  - "Windows Service applications, pausing"
-  - "pausing Windows Service applications"
+title: "Cómo: Continuar un servicio de Windows (Visual Basic)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: vb
+f1_keywords: ServiceController.Continue
+helpviewer_keywords:
+- Windows Service applications, pausing
+- pausing Windows Service applications
 ms.assetid: e5d13760-4c83-4b0d-abef-39852677cd7a
-caps.latest.revision: 16
-author: "ghogen"
-ms.author: "ghogen"
-manager: "douge"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: ghogen
+ms.author: ghogen
+manager: douge
+ms.openlocfilehash: 28dbbf2376416a340ad7853c026b2f763f695dcb
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# How to: Continue a Windows Service (Visual Basic)
-En este ejemplo se utiliza el componente <xref:System.ServiceProcess.ServiceController> para reanudar el servicio de administración de IIS en el equipo local.  
+# <a name="how-to-continue-a-windows-service-visual-basic"></a><span data-ttu-id="03e6c-102">Cómo: Continuar un servicio de Windows (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="03e6c-102">How to: Continue a Windows Service (Visual Basic)</span></span>
+<span data-ttu-id="03e6c-103">Este ejemplo se utiliza la <xref:System.ServiceProcess.ServiceController> componente para reanudar el servicio de administración de IIS en el equipo local.</span><span class="sxs-lookup"><span data-stu-id="03e6c-103">This example uses the <xref:System.ServiceProcess.ServiceController> component to continue the IIS Admin service on the local computer.</span></span>  
   
-## Ejemplo  
+## <a name="example"></a><span data-ttu-id="03e6c-104">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="03e6c-104">Example</span></span>  
  [!code-vb[VbRadconService#11](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#11)]  
 [!code-vb[VbRadconService#13](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#13)]  
   
- Este ejemplo de código también está disponible como fragmento de código de IntelliSense.  En el selector de fragmentos de código, se encuentra en **Sistema operativo Windows \> Servicios de Windows**.  Para obtener más información, vea [Fragmentos de código](../Topic/Code%20Snippets.md).  
+ <span data-ttu-id="03e6c-105">Este ejemplo de código también está disponible como fragmento de código de IntelliSense.</span><span class="sxs-lookup"><span data-stu-id="03e6c-105">This code example is also available as an IntelliSense code snippet.</span></span> <span data-ttu-id="03e6c-106">En el selector de fragmentos de código, se encuentra en **sistema operativo Windows > Servicios de Windows**.</span><span class="sxs-lookup"><span data-stu-id="03e6c-106">In the code snippet picker, it is located in **Windows Operating System > Windows Services**.</span></span> <span data-ttu-id="03e6c-107">Para obtener más información, vea [Fragmentos de código](/visualstudio/ide/code-snippets).</span><span class="sxs-lookup"><span data-stu-id="03e6c-107">For more information, see [Code Snippets](/visualstudio/ide/code-snippets).</span></span>  
   
-## Compilar el código  
- Para este ejemplo se necesita:  
+## <a name="compiling-the-code"></a><span data-ttu-id="03e6c-108">Compilar el código</span><span class="sxs-lookup"><span data-stu-id="03e6c-108">Compiling the Code</span></span>  
+ <span data-ttu-id="03e6c-109">Para este ejemplo se necesita:</span><span class="sxs-lookup"><span data-stu-id="03e6c-109">This example requires:</span></span>  
   
--   Referencia de proyecto a System.serviceprocess.dll.  
+-   <span data-ttu-id="03e6c-110">Una referencia de proyecto a System.serviceprocess.dll.</span><span class="sxs-lookup"><span data-stu-id="03e6c-110">A project reference to System.serviceprocess.dll.</span></span>  
   
--   Acceso a los miembros del espacio de nombres <xref:System.ServiceProcess>.  Agregar una instrucción `Imports` si no se incluyen nombres de miembro completos en el código.  Para obtener más información, vea [Instrucción Imports \(Tipo y espacio de nombres de .NET\)](../../../ocs/visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).  
+-   <span data-ttu-id="03e6c-111">Acceso a los miembros del espacio de nombres <xref:System.ServiceProcess>.</span><span class="sxs-lookup"><span data-stu-id="03e6c-111">Access to the members of the <xref:System.ServiceProcess> namespace.</span></span> <span data-ttu-id="03e6c-112">Agregue una instrucción `Imports` si no hay nombres de miembros completos en el código.</span><span class="sxs-lookup"><span data-stu-id="03e6c-112">Add an `Imports` statement if you are not fully qualifying member names in your code.</span></span> <span data-ttu-id="03e6c-113">Para obtener más información, consulte [Instrucción Imports (Tipo y espacio de nombres de .NET)](~/docs/visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).</span><span class="sxs-lookup"><span data-stu-id="03e6c-113">For more information, see [Imports Statement (.NET Namespace and Type)](~/docs/visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).</span></span>  
   
-## Programación eficaz  
- La propiedad <xref:System.ServiceProcess.ServiceController.MachineName%2A> de la clase <xref:System.ServiceProcess.ServiceController> es el equipo local de forma predeterminada.  Para hacer referencia a los servicios de Windows de otro equipo, cambie la propiedad <xref:System.ServiceProcess.ServiceController.MachineName%2A> al nombre de ese equipo.  
+## <a name="robust-programming"></a><span data-ttu-id="03e6c-114">Programación sólida</span><span class="sxs-lookup"><span data-stu-id="03e6c-114">Robust Programming</span></span>  
+ <span data-ttu-id="03e6c-115">El <xref:System.ServiceProcess.ServiceController.MachineName%2A> propiedad de la <xref:System.ServiceProcess.ServiceController> clase es el equipo local de forma predeterminada.</span><span class="sxs-lookup"><span data-stu-id="03e6c-115">The <xref:System.ServiceProcess.ServiceController.MachineName%2A> property of the <xref:System.ServiceProcess.ServiceController> class is the local computer by default.</span></span> <span data-ttu-id="03e6c-116">Para hacer referencia a los servicios de Windows en otro equipo, cambie el <xref:System.ServiceProcess.ServiceController.MachineName%2A> propiedad en el nombre de ese equipo.</span><span class="sxs-lookup"><span data-stu-id="03e6c-116">To reference Windows services on another computer, change the <xref:System.ServiceProcess.ServiceController.MachineName%2A> property to the name of that computer.</span></span>  
   
- No se podrá llamar al método <xref:System.ServiceProcess.ServiceController.Continue%2A> en un servicio hasta que el estado del controlador de servicio sea <xref:System.ServiceProcess.ServiceControllerStatus>.  
+ <span data-ttu-id="03e6c-117">No se puede llamar el <xref:System.ServiceProcess.ServiceController.Continue%2A> método en un servicio hasta que el estado del controlador de servicio es <xref:System.ServiceProcess.ServiceControllerStatus.Paused>.</span><span class="sxs-lookup"><span data-stu-id="03e6c-117">You cannot call the <xref:System.ServiceProcess.ServiceController.Continue%2A> method on a service until the service controller status is <xref:System.ServiceProcess.ServiceControllerStatus.Paused>.</span></span>  
   
- Las condiciones siguientes pueden provocar una excepción:  
+ <span data-ttu-id="03e6c-118">Las condiciones siguientes pueden provocar una excepción:</span><span class="sxs-lookup"><span data-stu-id="03e6c-118">The following conditions may cause an exception:</span></span>  
   
--   El servicio no se puede reanudar.  \(<xref:System.InvalidOperationException>\)  
+-   <span data-ttu-id="03e6c-119">No se puede reanudar el servicio.</span><span class="sxs-lookup"><span data-stu-id="03e6c-119">The service cannot be resumed.</span></span> <span data-ttu-id="03e6c-120">(<xref:System.InvalidOperationException>)</span><span class="sxs-lookup"><span data-stu-id="03e6c-120">(<xref:System.InvalidOperationException>)</span></span>  
   
--   Se ha producido un error en el acceso a una API del sistema.  \(<xref:System.ComponentModel.Win32Exception>\)  
+-   <span data-ttu-id="03e6c-121">Error de acceso a la API del sistema.</span><span class="sxs-lookup"><span data-stu-id="03e6c-121">An error occurred when accessing a system API.</span></span> <span data-ttu-id="03e6c-122">(<xref:System.ComponentModel.Win32Exception>)</span><span class="sxs-lookup"><span data-stu-id="03e6c-122">(<xref:System.ComponentModel.Win32Exception>)</span></span>  
   
-## Seguridad de .NET Framework  
- El control de los servicios del equipo se puede restringir mediante el uso de la enumeración <xref:System.ServiceProcess.ServiceControllerPermissionAccess> para establecer los permisos de la clase <xref:System.ServiceProcess.ServiceControllerPermission>.  
+## <a name="net-framework-security"></a><span data-ttu-id="03e6c-123">Seguridad de .NET Framework</span><span class="sxs-lookup"><span data-stu-id="03e6c-123">.NET Framework Security</span></span>  
+ <span data-ttu-id="03e6c-124">Control de servicios en el equipo puede restringirse mediante el uso de la <xref:System.ServiceProcess.ServiceControllerPermissionAccess> enumeración para establecer permisos en el <xref:System.ServiceProcess.ServiceControllerPermission> clase.</span><span class="sxs-lookup"><span data-stu-id="03e6c-124">Control of services on the computer may be restricted by using the <xref:System.ServiceProcess.ServiceControllerPermissionAccess> enumeration to set permissions in the <xref:System.ServiceProcess.ServiceControllerPermission> class.</span></span>  
   
- El acceso a la información del servicio se puede restringir mediante el uso de la enumeración <xref:System.Security.Permissions.PermissionState> para establecer los permisos de la clase <xref:System.Security.Permissions.SecurityPermission>.  
+ <span data-ttu-id="03e6c-125">Acceso a la información del servicio puede restringirse mediante el uso de la <xref:System.Security.Permissions.PermissionState> enumeración para establecer permisos en el <xref:System.Security.Permissions.SecurityPermission> clase.</span><span class="sxs-lookup"><span data-stu-id="03e6c-125">Access to service information may be restricted by using the <xref:System.Security.Permissions.PermissionState> enumeration to set permissions in the <xref:System.Security.Permissions.SecurityPermission> class.</span></span>  
   
-## Vea también  
- <xref:System.ServiceProcess.ServiceController>   
- <xref:System.ServiceProcess.ServiceControllerStatus>   
- [How to: Pause a Windows Service \(Visual Basic\)](../../../docs/framework/windows-services/how-to-pause-a-windows-service-visual-basic.md)
+## <a name="see-also"></a><span data-ttu-id="03e6c-126">Vea también</span><span class="sxs-lookup"><span data-stu-id="03e6c-126">See Also</span></span>  
+ <xref:System.ServiceProcess.ServiceController>  
+ <xref:System.ServiceProcess.ServiceControllerStatus>  
+ [<span data-ttu-id="03e6c-127">Cómo: pausar un servicio de Windows (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="03e6c-127">How to: Pause a Windows Service (Visual Basic)</span></span>](../../../docs/framework/windows-services/how-to-pause-a-windows-service-visual-basic.md)
