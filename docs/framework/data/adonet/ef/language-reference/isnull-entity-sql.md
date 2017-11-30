@@ -1,47 +1,45 @@
 ---
-title: "ISNULL (Entity SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
+title: ISNULL (Entity SQL)
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: dc7a0173-3664-4c90-a57b-5cbb0a8ed7ee
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 31e0b77e397bd4f190119a01719da185211f7715
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# ISNULL (Entity SQL)
-Determina si una expresión de consulta es nula.  
+# <a name="isnull-entity-sql"></a><span data-ttu-id="f85cd-102">ISNULL (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="f85cd-102">ISNULL (Entity SQL)</span></span>
+<span data-ttu-id="f85cd-103">Determina si una expresión de consulta es nula.</span><span class="sxs-lookup"><span data-stu-id="f85cd-103">Determines if a query expression is null.</span></span>  
   
-## Sintaxis  
+## <a name="syntax"></a><span data-ttu-id="f85cd-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="f85cd-104">Syntax</span></span>  
   
 ```  
-  
 expression IS [ NOT ] NULL  
 ```  
   
-## Argumentos  
+## <a name="arguments"></a><span data-ttu-id="f85cd-105">Argumentos</span><span class="sxs-lookup"><span data-stu-id="f85cd-105">Arguments</span></span>  
  `expression`  
- Cualquier expresión de consulta válida. No puede ser una colección, tener miembros de una colección, o un tipo de registro con propiedades de tipo de colección.  
+ <span data-ttu-id="f85cd-106">Cualquier expresión de consulta válida.</span><span class="sxs-lookup"><span data-stu-id="f85cd-106">Any valid query expression.</span></span> <span data-ttu-id="f85cd-107">No puede ser una colección, tener miembros de una colección, o un tipo de registro con propiedades de tipo de colección.</span><span class="sxs-lookup"><span data-stu-id="f85cd-107">Cannot be a collection, have collection members, or a record type with collection type properties.</span></span>  
   
- NOT  
- Niega el resultado EDM.Boolean de IS NULL.  
+ <span data-ttu-id="f85cd-108">NOT</span><span class="sxs-lookup"><span data-stu-id="f85cd-108">NOT</span></span>  
+ <span data-ttu-id="f85cd-109">Niega el resultado EDM.Boolean de IS NULL.</span><span class="sxs-lookup"><span data-stu-id="f85cd-109">Negates the EDM.Boolean result of IS NULL.</span></span>  
   
-## Valor devuelto  
- `true` si `expression` devuelve null; en caso contrario, `false`.  
+## <a name="return-value"></a><span data-ttu-id="f85cd-110">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="f85cd-110">Return Value</span></span>  
+ <span data-ttu-id="f85cd-111">`true` si `expression` devuelve null; en caso contrario, `false`.</span><span class="sxs-lookup"><span data-stu-id="f85cd-111">`true` if `expression` returns null; otherwise, `false`.</span></span>  
   
-## Comentarios  
- Utilice `IS NULL` para determinar si el elemento de una combinación externa es nulo:  
+## <a name="remarks"></a><span data-ttu-id="f85cd-112">Comentarios</span><span class="sxs-lookup"><span data-stu-id="f85cd-112">Remarks</span></span>  
+ <span data-ttu-id="f85cd-113">Utilice `IS NULL` para determinar si el elemento de una combinación externa es nulo:</span><span class="sxs-lookup"><span data-stu-id="f85cd-113">Use `IS NULL` to determine if the element of an outer join is null:</span></span>  
   
 ```  
 select c   
@@ -50,32 +48,32 @@ select c
       where o is not null and o.OrderQuantity = @x  
 ```  
   
- Utilice `IS NULL` para determinar si un miembro tiene un valor real:  
+ <span data-ttu-id="f85cd-114">Utilice `IS NULL` para determinar si un miembro tiene un valor real:</span><span class="sxs-lookup"><span data-stu-id="f85cd-114">Use `IS NULL` to determine if a member has an actual value:</span></span>  
   
 ```  
 select c from LOB.Customer as c where c.DOB is not null  
 ```  
   
- En la tabla siguiente se muestra el comportamiento de `IS NULL` en algunos patrones. Todas las excepciones se producen en el cliente antes de que se llame al proveedor:  
+ <span data-ttu-id="f85cd-115">En la tabla siguiente se muestra el comportamiento de `IS NULL` en algunos patrones.</span><span class="sxs-lookup"><span data-stu-id="f85cd-115">The following table shows the behavior of `IS NULL` over some patterns.</span></span> <span data-ttu-id="f85cd-116">Todas las excepciones se producen en el cliente antes de que se llame al proveedor:</span><span class="sxs-lookup"><span data-stu-id="f85cd-116">All exceptions are thrown from the client side before the provider gets invoked:</span></span>  
   
-|Modelo|Comportamiento|  
-|------------|--------------------|  
-|null IS NULL|Devuelve `true`.|  
-|TREAT \(null AS EntityType\) IS NULL|Devuelve `true`.|  
-|TREAT \(null AS ComplexType\) IS NULL|Produce un error.|  
-|TREAT \(null AS RowType\) IS NULL|Produce un error.|  
-|EntityType IS NULL|Devuelve `true` o `false`.|  
-|ComplexType IS NULL|Produce un error.|  
-|RowType IS NULL|Produce un error.|  
+|<span data-ttu-id="f85cd-117">Modelo</span><span class="sxs-lookup"><span data-stu-id="f85cd-117">Pattern</span></span>|<span data-ttu-id="f85cd-118">Comportamiento</span><span class="sxs-lookup"><span data-stu-id="f85cd-118">Behavior</span></span>|  
+|-------------|--------------|  
+|<span data-ttu-id="f85cd-119">null IS NULL</span><span class="sxs-lookup"><span data-stu-id="f85cd-119">null IS NULL</span></span>|<span data-ttu-id="f85cd-120">Devuelve `true`.</span><span class="sxs-lookup"><span data-stu-id="f85cd-120">Returns `true`.</span></span>|  
+|<span data-ttu-id="f85cd-121">TREAT (null AS EntityType) IS NULL</span><span class="sxs-lookup"><span data-stu-id="f85cd-121">TREAT (null AS EntityType) IS NULL</span></span>|<span data-ttu-id="f85cd-122">Devuelve `true`.</span><span class="sxs-lookup"><span data-stu-id="f85cd-122">Returns `true`.</span></span>|  
+|<span data-ttu-id="f85cd-123">TREAT (null AS ComplexType) IS NULL</span><span class="sxs-lookup"><span data-stu-id="f85cd-123">TREAT (null AS ComplexType) IS NULL</span></span>|<span data-ttu-id="f85cd-124">Produce un error.</span><span class="sxs-lookup"><span data-stu-id="f85cd-124">Throws an error.</span></span>|  
+|<span data-ttu-id="f85cd-125">TREAT (null AS RowType) IS NULL</span><span class="sxs-lookup"><span data-stu-id="f85cd-125">TREAT (null AS RowType) IS NULL</span></span>|<span data-ttu-id="f85cd-126">Produce un error.</span><span class="sxs-lookup"><span data-stu-id="f85cd-126">Throws an error.</span></span>|  
+|<span data-ttu-id="f85cd-127">EntityType IS NULL</span><span class="sxs-lookup"><span data-stu-id="f85cd-127">EntityType IS NULL</span></span>|<span data-ttu-id="f85cd-128">Devuelve `true` o `false`.</span><span class="sxs-lookup"><span data-stu-id="f85cd-128">Returns `true` or `false`.</span></span>|  
+|<span data-ttu-id="f85cd-129">ComplexType IS NULL</span><span class="sxs-lookup"><span data-stu-id="f85cd-129">ComplexType IS NULL</span></span>|<span data-ttu-id="f85cd-130">Produce un error.</span><span class="sxs-lookup"><span data-stu-id="f85cd-130">Throws an error.</span></span>|  
+|<span data-ttu-id="f85cd-131">RowType IS NULL</span><span class="sxs-lookup"><span data-stu-id="f85cd-131">RowType IS NULL</span></span>|<span data-ttu-id="f85cd-132">Produce un error.</span><span class="sxs-lookup"><span data-stu-id="f85cd-132">Throws an error.</span></span>|  
   
-## Ejemplo  
- La consulta de [!INCLUDE[esql](../../../../../../includes/esql-md.md)] siguiente utiliza el operador IS NOT NULL para determinar si una expresión de consulta no es nula. La consulta se basa en el modelo AdventureWorks Sales. Para compilar y ejecutar esta consulta, siga estos pasos:  
+## <a name="example"></a><span data-ttu-id="f85cd-133">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="f85cd-133">Example</span></span>  
+ <span data-ttu-id="f85cd-134">El siguiente [!INCLUDE[esql](../../../../../../includes/esql-md.md)] consulta utiliza el operador IS NOT NULL para determinar si una expresión de consulta no es null.</span><span class="sxs-lookup"><span data-stu-id="f85cd-134">The following [!INCLUDE[esql](../../../../../../includes/esql-md.md)] query uses the IS NOT NULL operator to determine if a query expression is not null.</span></span> <span data-ttu-id="f85cd-135">La consulta se basa en el modelo AdventureWorks Sales.</span><span class="sxs-lookup"><span data-stu-id="f85cd-135">The query is based on the AdventureWorks Sales Model.</span></span> <span data-ttu-id="f85cd-136">Para compilar y ejecutar esta consulta, siga estos pasos:</span><span class="sxs-lookup"><span data-stu-id="f85cd-136">To compile and run this query, follow these steps:</span></span>  
   
-1.  Siga el procedimiento de [Ejecutar una consulta que devuelve resultados StructuralType](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).  
+1.  <span data-ttu-id="f85cd-137">Siga el procedimiento de [How to: Execute a Query that Returns StructuralType Results](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).</span><span class="sxs-lookup"><span data-stu-id="f85cd-137">Follow the procedure in [How to: Execute a Query that Returns StructuralType Results](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).</span></span>  
   
-2.  Pase la consulta siguiente como argumento al método `ExecuteStructuralTypeQuery`:  
+2.  <span data-ttu-id="f85cd-138">Pase la consulta siguiente como argumento al método `ExecuteStructuralTypeQuery` :</span><span class="sxs-lookup"><span data-stu-id="f85cd-138">Pass the following query as an argument to the `ExecuteStructuralTypeQuery` method:</span></span>  
   
  [!code-csharp[DP EntityServices Concepts 2#ISNULL](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#isnull)]  
   
-## Vea también  
- [Referencia de Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+## <a name="see-also"></a><span data-ttu-id="f85cd-139">Vea también</span><span class="sxs-lookup"><span data-stu-id="f85cd-139">See Also</span></span>  
+ [<span data-ttu-id="f85cd-140">Referencia de Entity SQL</span><span class="sxs-lookup"><span data-stu-id="f85cd-140">Entity SQL Reference</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

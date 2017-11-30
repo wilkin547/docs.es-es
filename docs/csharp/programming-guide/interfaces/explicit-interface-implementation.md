@@ -1,65 +1,45 @@
 ---
 title: "Implementación de interfaz explícita (Guía de programación de C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - explicit interfaces [C#]
 - interfaces [C#], explicit
 ms.assetid: 181c901f-0d4c-4f29-97fc-895079617bf2
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: b746a69484b73a4212c729e02a1256ee1c83ea41
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 6baf985e8031e1e859d20570168222ca8f368eff
-ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="explicit-interface-implementation-c-programming-guide"></a>Implementación de interfaz explícita (Guía de programación de C#)
-Si una [clase](../../../csharp/language-reference/keywords/class.md) implementa dos interfaces que contienen un miembro con la misma firma, entonces al implementar ese miembro en la clase ambas interfaces usarán ese miembro como su implementación. En el ejemplo siguiente, todas las llamadas a `Paint` invocan el mismo método.  
+# <a name="explicit-interface-implementation-c-programming-guide"></a><span data-ttu-id="5bf7b-102">Implementación de interfaz explícita (Guía de programación de C#)</span><span class="sxs-lookup"><span data-stu-id="5bf7b-102">Explicit Interface Implementation (C# Programming Guide)</span></span>
+<span data-ttu-id="5bf7b-103">Si una [clase](../../../csharp/language-reference/keywords/class.md) implementa dos interfaces que contienen un miembro con la misma firma, entonces al implementar ese miembro en la clase ambas interfaces usarán ese miembro como su implementación.</span><span class="sxs-lookup"><span data-stu-id="5bf7b-103">If a [class](../../../csharp/language-reference/keywords/class.md) implements two interfaces that contain a member with the same signature, then implementing that member on the class will cause both interfaces to use that member as their implementation.</span></span> <span data-ttu-id="5bf7b-104">En el ejemplo siguiente, todas las llamadas a `Paint` invocan el mismo método.</span><span class="sxs-lookup"><span data-stu-id="5bf7b-104">In the following example, all the calls to `Paint` invoke the same method.</span></span>  
   
- [!code-cs[csProgGuideInheritance#39](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/explicit-interface-implementation_1.cs)]  
+ [!code-csharp[csProgGuideInheritance#39](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/explicit-interface-implementation_1.cs)]  
   
- En cambio, si los dos miembros de [interfaz](../../../csharp/language-reference/keywords/interface.md) no realizan la misma función, esto puede provocar una implementación incorrecta de una o ambas interfaces. Es posible implementar un miembro de interfaz explícitamente, mediante la creación de un miembro de clase que solo se llama a través de la interfaz, y es específico de esa interfaz. Esto se consigue asignando un nombre al miembro de clase con el nombre de la interfaz y un período. Por ejemplo:  
+ <span data-ttu-id="5bf7b-105">En cambio, si los dos miembros de [interfaz](../../../csharp/language-reference/keywords/interface.md) no realizan la misma función, esto puede provocar una implementación incorrecta de una o ambas interfaces.</span><span class="sxs-lookup"><span data-stu-id="5bf7b-105">If the two [interface](../../../csharp/language-reference/keywords/interface.md) members do not perform the same function, however, this can lead to an incorrect implementation of one or both of the interfaces.</span></span> <span data-ttu-id="5bf7b-106">Es posible implementar un miembro de interfaz explícitamente, mediante la creación de un miembro de clase que solo se llama a través de la interfaz, y es específico de esa interfaz.</span><span class="sxs-lookup"><span data-stu-id="5bf7b-106">It is possible to implement an interface member explicitly—creating a class member that is only called through the interface, and is specific to that interface.</span></span> <span data-ttu-id="5bf7b-107">Esto se consigue asignando un nombre al miembro de clase con el nombre de la interfaz y un período.</span><span class="sxs-lookup"><span data-stu-id="5bf7b-107">This is accomplished by naming the class member with the name of the interface and a period.</span></span> <span data-ttu-id="5bf7b-108">Por ejemplo:</span><span class="sxs-lookup"><span data-stu-id="5bf7b-108">For example:</span></span>  
   
- [!code-cs[csProgGuideInheritance#40](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/explicit-interface-implementation_2.cs)]  
+ [!code-csharp[csProgGuideInheritance#40](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/explicit-interface-implementation_2.cs)]  
   
- El miembro de clase `IControl.Paint` solo está disponible a través de la interfaz `IControl`, y `ISurface.Paint` solo está disponible mediante `ISurface`. Ambas implementaciones de método son independientes, y ninguna está disponible directamente en la clase. Por ejemplo:  
+ <span data-ttu-id="5bf7b-109">El miembro de clase `IControl.Paint` solo está disponible a través de la interfaz `IControl`, y `ISurface.Paint` solo está disponible mediante `ISurface`.</span><span class="sxs-lookup"><span data-stu-id="5bf7b-109">The class member `IControl.Paint` is only available through the `IControl` interface, and `ISurface.Paint` is only available through `ISurface`.</span></span> <span data-ttu-id="5bf7b-110">Ambas implementaciones de método son independientes, y ninguna está disponible directamente en la clase.</span><span class="sxs-lookup"><span data-stu-id="5bf7b-110">Both method implementations are separate, and neither is available directly on the class.</span></span> <span data-ttu-id="5bf7b-111">Por ejemplo:</span><span class="sxs-lookup"><span data-stu-id="5bf7b-111">For example:</span></span>  
   
- [!code-cs[csProgGuideInheritance#41](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/explicit-interface-implementation_3.cs)]  
+ [!code-csharp[csProgGuideInheritance#41](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/explicit-interface-implementation_3.cs)]  
   
- La implementación explícita también se usa para resolver casos donde dos interfaces declaran miembros diferentes del mismo nombre como una propiedad y un método:  
+ <span data-ttu-id="5bf7b-112">La implementación explícita también se usa para resolver casos donde dos interfaces declaran miembros diferentes del mismo nombre como una propiedad y un método:</span><span class="sxs-lookup"><span data-stu-id="5bf7b-112">Explicit implementation is also used to resolve cases where two interfaces each declare different members of the same name such as a property and a method:</span></span>  
   
- [!code-cs[csProgGuideInheritance#42](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/explicit-interface-implementation_4.cs)]  
+ [!code-csharp[csProgGuideInheritance#42](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/explicit-interface-implementation_4.cs)]  
   
- Para implementar ambas interfaces, una clase tiene que usar la implementación explícita para la propiedad P, o el método P o ambos, para evitar un error del compilador. Por ejemplo:  
+ <span data-ttu-id="5bf7b-113">Para implementar ambas interfaces, una clase tiene que usar la implementación explícita para la propiedad P, o el método P o ambos, para evitar un error del compilador.</span><span class="sxs-lookup"><span data-stu-id="5bf7b-113">To implement both interfaces, a class has to use explicit implementation either for the property P, or the method P, or both, to avoid a compiler error.</span></span> <span data-ttu-id="5bf7b-114">Por ejemplo:</span><span class="sxs-lookup"><span data-stu-id="5bf7b-114">For example:</span></span>  
   
- [!code-cs[csProgGuideInheritance#43](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/explicit-interface-implementation_5.cs)]  
+ [!code-csharp[csProgGuideInheritance#43](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/explicit-interface-implementation_5.cs)]  
   
-## <a name="see-also"></a>Vea también  
- [Guía de programación de C#](../../../csharp/programming-guide/index.md)   
- [Clases y structs](../../../csharp/programming-guide/classes-and-structs/index.md)   
- [Interfaces](../../../csharp/programming-guide/interfaces/index.md)   
- [Herencia](../../../csharp/programming-guide/classes-and-structs/inheritance.md)
-
+## <a name="see-also"></a><span data-ttu-id="5bf7b-115">Vea también</span><span class="sxs-lookup"><span data-stu-id="5bf7b-115">See Also</span></span>  
+ [<span data-ttu-id="5bf7b-116">Guía de programación de C#</span><span class="sxs-lookup"><span data-stu-id="5bf7b-116">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+ [<span data-ttu-id="5bf7b-117">Clases y structs</span><span class="sxs-lookup"><span data-stu-id="5bf7b-117">Classes and Structs</span></span>](../../../csharp/programming-guide/classes-and-structs/index.md)  
+ [<span data-ttu-id="5bf7b-118">Interfaces</span><span class="sxs-lookup"><span data-stu-id="5bf7b-118">Interfaces</span></span>](../../../csharp/programming-guide/interfaces/index.md)  
+ [<span data-ttu-id="5bf7b-119">Herencia</span><span class="sxs-lookup"><span data-stu-id="5bf7b-119">Inheritance</span></span>](../../../csharp/programming-guide/classes-and-structs/inheritance.md)

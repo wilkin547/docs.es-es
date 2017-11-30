@@ -1,1 +1,1 @@
-Componente Imágenes de Microsoft Windows Presentation Foundation
+<span data-ttu-id="93ef9-101">Componente Imágenes de Microsoft Windows Presentation Foundation</span><span class="sxs-lookup"><span data-stu-id="93ef9-101">Microsoft Windows Presentation Foundation Imaging Component</span></span>

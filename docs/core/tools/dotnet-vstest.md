@@ -7,74 +7,73 @@ ms.date: 08/14/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.translationtype: HT
-ms.sourcegitcommit: a19ab54a6cc44bd7acd1e40a4ca94da52bf14297
 ms.openlocfilehash: c5a7ee0ba306cea641b0ff34f0b521c92bd03719
-ms.contentlocale: es-es
-ms.lasthandoff: 08/14/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="dotnet-vstest"></a>dotnet vstest
+# <a name="dotnet-vstest"></a><span data-ttu-id="1cfa0-103">dotnet vstest</span><span class="sxs-lookup"><span data-stu-id="1cfa0-103">dotnet vstest</span></span>
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a>Nombre
+## <a name="name"></a><span data-ttu-id="1cfa0-104">Name</span><span class="sxs-lookup"><span data-stu-id="1cfa0-104">Name</span></span>
 
-`dotnet-vstest`: ejecuta pruebas desde los archivos especificados.
+<span data-ttu-id="1cfa0-105">`dotnet-vstest`: ejecuta pruebas desde los archivos especificados.</span><span class="sxs-lookup"><span data-stu-id="1cfa0-105">`dotnet-vstest` - Runs tests from the specified files.</span></span>
 
-## <a name="synopsis"></a>Sinopsis
+## <a name="synopsis"></a><span data-ttu-id="1cfa0-106">Sinopsis</span><span class="sxs-lookup"><span data-stu-id="1cfa0-106">Synopsis</span></span>
 
 `dotnet vstest [<TEST_FILE_NAMES>] [--Settings|/Settings] [--Tests|/Tests] [--TestAdapterPath|/TestAdapterPath] [--Platform|/Platform] [--Framework|/Framework] [--Parallel|/Parallel] [--TestCaseFilter|/TestCaseFilter] [--logger|/logger] [-lt|--ListTests|/lt|/ListTests] [--ParentProcessId|/ParentProcessId] [--Port|/Port] [--Diag|/Diag] [[--] <args>...]] [-?|--Help|/?|/Help]`
 
-## <a name="description"></a>Descripción
+## <a name="description"></a><span data-ttu-id="1cfa0-107">Descripción</span><span class="sxs-lookup"><span data-stu-id="1cfa0-107">Description</span></span>
 
-El comando `dotnet-vstest` ejecuta la aplicación de línea de comandos `VSTest.Console` para ejecutar pruebas de aplicaciones de interfaz de usuario codificadas y unitarias automatizadas.
+<span data-ttu-id="1cfa0-108">El comando `dotnet-vstest` ejecuta la aplicación de línea de comandos `VSTest.Console` para ejecutar pruebas de aplicaciones de interfaz de usuario codificadas y unitarias automatizadas.</span><span class="sxs-lookup"><span data-stu-id="1cfa0-108">The `dotnet-vstest` command runs the `VSTest.Console` command-line application to run automated unit and coded UI application tests.</span></span>
 
-## <a name="arguments"></a>Argumentos
+## <a name="arguments"></a><span data-ttu-id="1cfa0-109">Argumentos</span><span class="sxs-lookup"><span data-stu-id="1cfa0-109">Arguments</span></span>
 
 `TEST_FILE_NAMES`
 
-Ejecutar pruebas desde los ensamblados especificados. Separar varios nombres de ensamblado de prueba con espacios.
+<span data-ttu-id="1cfa0-110">Ejecutar pruebas desde los ensamblados especificados.</span><span class="sxs-lookup"><span data-stu-id="1cfa0-110">Run tests from the specified assemblies.</span></span> <span data-ttu-id="1cfa0-111">Separar varios nombres de ensamblado de prueba con espacios.</span><span class="sxs-lookup"><span data-stu-id="1cfa0-111">Separate multiple test assembly names with spaces.</span></span>
 
-## <a name="options"></a>Opciones
+## <a name="options"></a><span data-ttu-id="1cfa0-112">Opciones</span><span class="sxs-lookup"><span data-stu-id="1cfa0-112">Options</span></span>
 
 `--Settings|/Settings:<Settings File>`
 
-Configuración que se usará al ejecutar las pruebas.
+<span data-ttu-id="1cfa0-113">Configuración que se usará al ejecutar las pruebas.</span><span class="sxs-lookup"><span data-stu-id="1cfa0-113">Settings to use when running tests.</span></span>
 
 `--Tests|/Tests:<Test Names>`
 
-Ejecuta las pruebas con nombres que coinciden con los Separar varios valores con comas.
+<span data-ttu-id="1cfa0-114">Ejecuta las pruebas con nombres que coinciden con los</span><span class="sxs-lookup"><span data-stu-id="1cfa0-114">Run tests with names that match the provided values.</span></span> <span data-ttu-id="1cfa0-115">Separar varios valores con comas.</span><span class="sxs-lookup"><span data-stu-id="1cfa0-115">Separate multiple values with commas.</span></span>
 
 `--TestAdapterPath|/TestAdapterPath`
 
-Usar adaptadores de prueba personalizados desde una ruta de acceso especificada (si existe) en la serie de pruebas.
+<span data-ttu-id="1cfa0-116">Usar adaptadores de prueba personalizados desde una ruta de acceso especificada (si existe) en la serie de pruebas.</span><span class="sxs-lookup"><span data-stu-id="1cfa0-116">Use custom test adapters from a given path (if any) in the test run.</span></span>
 
 `--Platform|/Platform:<Platform type>`
 
-Identificar la arquitectura de la plataforma usada en la ejecución de pruebas. Valores válidos son `x86`, `x64` y `ARM`.
+<span data-ttu-id="1cfa0-117">Identificar la arquitectura de la plataforma usada en la ejecución de pruebas.</span><span class="sxs-lookup"><span data-stu-id="1cfa0-117">Target platform architecture used for test execution.</span></span> <span data-ttu-id="1cfa0-118">Valores válidos son `x86`, `x64` y `ARM`.</span><span class="sxs-lookup"><span data-stu-id="1cfa0-118">Valid values are `x86`, `x64`, and `ARM`.</span></span>
 
 `--Framework|/Framework:<Framework Version>`
 
-Identificar la versión de .NET Framework usada en la ejecución de pruebas. Ejemplos de valores válidos son `.NETFramework,Version=v4.6`, `.NETCoreApp,Version=v1.0`, etc. Otros valores admitidos son `Framework35`, `Framework40`, `Framework45` y `FrameworkCore10`.
+<span data-ttu-id="1cfa0-119">Identificar la versión de .NET Framework usada en la ejecución de pruebas.</span><span class="sxs-lookup"><span data-stu-id="1cfa0-119">Target .NET Framework version used for test execution.</span></span> <span data-ttu-id="1cfa0-120">Ejemplos de valores válidos son `.NETFramework,Version=v4.6`, `.NETCoreApp,Version=v1.0`, etc. Otros valores admitidos son `Framework35`, `Framework40`, `Framework45` y `FrameworkCore10`.</span><span class="sxs-lookup"><span data-stu-id="1cfa0-120">Examples of valid values are `.NETFramework,Version=v4.6`, `.NETCoreApp,Version=v1.0`, etc. Other supported values are `Framework35`, `Framework40`, `Framework45`, and `FrameworkCore10`.</span></span>
 
 `--Parallel|/Parallel`
 
-Ejecutar pruebas en paralelo. De forma predeterminada, todos los núcleos disponibles en el equipo están disponibles para su uso. Establecer un número explícito de núcleos con un archivo de configuración.
+<span data-ttu-id="1cfa0-121">Ejecutar pruebas en paralelo.</span><span class="sxs-lookup"><span data-stu-id="1cfa0-121">Execute tests in parallel.</span></span> <span data-ttu-id="1cfa0-122">De forma predeterminada, todos los núcleos disponibles en el equipo están disponibles para su uso.</span><span class="sxs-lookup"><span data-stu-id="1cfa0-122">By default, all available cores on the machine are available for use.</span></span> <span data-ttu-id="1cfa0-123">Establecer un número explícito de núcleos con un archivo de configuración.</span><span class="sxs-lookup"><span data-stu-id="1cfa0-123">Set an explicit number of cores with a settings file.</span></span>
 
 `--TestCaseFilter|/TestCaseFilter:<Expression>`
 
-Ejecuta pruebas que coinciden con la expresión dada. `<Expression>` tiene el formato `<property>Operator<value>[|&<Expression>]`, donde Operator es `=`, `!=` o `~`.  El operador `~` tiene semántica "contains" y se aplica a las propiedades de cadena como `DisplayName`. Los paréntesis `()` se usan para agrupar expresiones secundarias.
+<span data-ttu-id="1cfa0-124">Ejecuta pruebas que coinciden con la expresión dada.</span><span class="sxs-lookup"><span data-stu-id="1cfa0-124">Run tests that match the given expression.</span></span> <span data-ttu-id="1cfa0-125">`<Expression>` tiene el formato `<property>Operator<value>[|&<Expression>]`, donde Operator es `=`, `!=` o `~`.</span><span class="sxs-lookup"><span data-stu-id="1cfa0-125">`<Expression>` is of the format `<property>Operator<value>[|&<Expression>]`, where Operator is one of `=`, `!=`, or `~`.</span></span>  <span data-ttu-id="1cfa0-126">El operador `~` tiene semántica "contains" y se aplica a las propiedades de cadena como `DisplayName`.</span><span class="sxs-lookup"><span data-stu-id="1cfa0-126">Operator `~` has 'contains' semantics and is applicable for string properties like `DisplayName`.</span></span> <span data-ttu-id="1cfa0-127">Los paréntesis `()` se usan para agrupar expresiones secundarias.</span><span class="sxs-lookup"><span data-stu-id="1cfa0-127">Parenthesis `()` are used to group sub-expressions.</span></span>
 
 `-?|--Help|/?|/Help`
 
-Imprime una corta ayuda para el comando.
+<span data-ttu-id="1cfa0-128">Imprime una corta ayuda para el comando.</span><span class="sxs-lookup"><span data-stu-id="1cfa0-128">Prints out a short help for the command.</span></span>
 
 `--logger|/logger:<Logger Uri/FriendlyName>`
 
-Especifica un registrador para resultados de pruebas.  
+<span data-ttu-id="1cfa0-129">Especifica un registrador para resultados de pruebas.</span><span class="sxs-lookup"><span data-stu-id="1cfa0-129">Specify a logger for test results.</span></span>  
 
-* Para publicar resultados de pruebas en Team Foundation Server, use el proveedor de registrador `TfsPublisher`:
+* <span data-ttu-id="1cfa0-130">Para publicar resultados de pruebas en Team Foundation Server, use el proveedor de registrador `TfsPublisher`:</span><span class="sxs-lookup"><span data-stu-id="1cfa0-130">To publish test results to Team Foundation Server, use the `TfsPublisher` logger provider:</span></span>
 
   ```
   /logger:TfsPublisher;
@@ -86,7 +85,7 @@ Especifica un registrador para resultados de pruebas.
       [;RunTitle=<title>]
   ```
 
-* Para registrar los resultados en un archivo de resultados de pruebas (TRX) de Visual Studio, use el proveedor de registrador `trx`. Este modificador, crea un archivo en el directorio de resultados de pruebas con un nombre de archivo de registro dado. Si no se proporciona `LogFileName`, se crea un nombre de archivo único para contener los resultados de las pruebas.
+* <span data-ttu-id="1cfa0-131">Para registrar los resultados en un archivo de resultados de pruebas (TRX) de Visual Studio, use el proveedor de registrador `trx`.</span><span class="sxs-lookup"><span data-stu-id="1cfa0-131">To log results to a Visual Studio Test Results File (TRX), use the `trx` logger provider.</span></span> <span data-ttu-id="1cfa0-132">Este modificador, crea un archivo en el directorio de resultados de pruebas con un nombre de archivo de registro dado.</span><span class="sxs-lookup"><span data-stu-id="1cfa0-132">This switch creates a file in the test results directory with given log file name.</span></span> <span data-ttu-id="1cfa0-133">Si no se proporciona `LogFileName`, se crea un nombre de archivo único para contener los resultados de las pruebas.</span><span class="sxs-lookup"><span data-stu-id="1cfa0-133">If `LogFileName` isn't provided, a unique file name is created to hold the test results.</span></span>
 
   ```
   /logger:trx [;LogFileName=<Defaults to unique file name>]
@@ -94,39 +93,38 @@ Especifica un registrador para resultados de pruebas.
 
 `-lt|--ListTests|/lt|/ListTests:<File Name>`
 
-Muestra las pruebas detectadas del contenedor de pruebas especificado.
+<span data-ttu-id="1cfa0-134">Muestra las pruebas detectadas del contenedor de pruebas especificado.</span><span class="sxs-lookup"><span data-stu-id="1cfa0-134">Lists discovered tests from the given test container.</span></span>
 
 `--ParentProcessId|/ParentProcessId:<ParentProcessId>`
 
-Id. de proceso del proceso principal responsable de iniciar el proceso actual.
+<span data-ttu-id="1cfa0-135">Id. de proceso del proceso principal responsable de iniciar el proceso actual.</span><span class="sxs-lookup"><span data-stu-id="1cfa0-135">Process Id of the parent process responsible for launching the current process.</span></span>
 
 `--Port|/Port:<Port>`
 
-Especifica el puerto para la conexión de socket y la recepción de mensajes de eventos.
+<span data-ttu-id="1cfa0-136">Especifica el puerto para la conexión de socket y la recepción de mensajes de eventos.</span><span class="sxs-lookup"><span data-stu-id="1cfa0-136">Specifies the port for the socket connection and receiving the event messages.</span></span>
 
 `--Diag|/Diag:<Path to log file>`
 
-Permite registros detallados para la plataforma de prueba. Los registros se escriben en el archivo proporcionado.
+<span data-ttu-id="1cfa0-137">Permite registros detallados para la plataforma de prueba.</span><span class="sxs-lookup"><span data-stu-id="1cfa0-137">Enables verbose logs for the test platform.</span></span> <span data-ttu-id="1cfa0-138">Los registros se escriben en el archivo proporcionado.</span><span class="sxs-lookup"><span data-stu-id="1cfa0-138">Logs are written to the provided file.</span></span>
 
 `args`
 
-Especifica argumentos adicionales para pasar al adaptador. Los argumentos se especifican como pares de nombre-valor en el formato `<n>=<v>`, donde `<n>` es el nombre del argumento y `<v>` es el valor del argumento. Use un espacio para separar varios argumentos.
+<span data-ttu-id="1cfa0-139">Especifica argumentos adicionales para pasar al adaptador.</span><span class="sxs-lookup"><span data-stu-id="1cfa0-139">Specifies extra arguments to pass to the adapter.</span></span> <span data-ttu-id="1cfa0-140">Los argumentos se especifican como pares de nombre-valor en el formato `<n>=<v>`, donde `<n>` es el nombre del argumento y `<v>` es el valor del argumento.</span><span class="sxs-lookup"><span data-stu-id="1cfa0-140">Arguments are specified as name-value pairs of the form `<n>=<v>`, where `<n>` is the argument name and `<v>` is the argument value.</span></span> <span data-ttu-id="1cfa0-141">Use un espacio para separar varios argumentos.</span><span class="sxs-lookup"><span data-stu-id="1cfa0-141">Use a space to separate multiple arguments.</span></span>
 
-## <a name="examples"></a>Ejemplos
+## <a name="examples"></a><span data-ttu-id="1cfa0-142">Ejemplos</span><span class="sxs-lookup"><span data-stu-id="1cfa0-142">Examples</span></span>
 
-Ejecutar pruebas en `mytestproject.dll`:
+<span data-ttu-id="1cfa0-143">Ejecutar pruebas en `mytestproject.dll`:</span><span class="sxs-lookup"><span data-stu-id="1cfa0-143">Run tests in `mytestproject.dll`:</span></span>
 
 `dotnet vstest mytestproject.dll`
 
-Ejecutar pruebas en `mytestproject.dll` y `myothertestproject.exe`:
+<span data-ttu-id="1cfa0-144">Ejecutar pruebas en `mytestproject.dll` y `myothertestproject.exe`:</span><span class="sxs-lookup"><span data-stu-id="1cfa0-144">Run tests in `mytestproject.dll` and `myothertestproject.exe`:</span></span>
 
 `dotnet vstest mytestproject.dll myothertestproject.exe`
 
-Ejecutar pruebas `TestMethod1`:
+<span data-ttu-id="1cfa0-145">Ejecutar pruebas `TestMethod1`:</span><span class="sxs-lookup"><span data-stu-id="1cfa0-145">Run `TestMethod1` tests:</span></span>
 
 `dotnet vstest /Tests:TestMethod1`
 
-Ejecutar pruebas `TestMethod1` y `TestMethod2`:
+<span data-ttu-id="1cfa0-146">Ejecutar pruebas `TestMethod1` y `TestMethod2`:</span><span class="sxs-lookup"><span data-stu-id="1cfa0-146">Run `TestMethod1` and `TestMethod2` tests:</span></span>
 
 `dotnet vstest /Tests:TestMethod1,TestMethod2`
-

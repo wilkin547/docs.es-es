@@ -1,45 +1,46 @@
 ---
-title: "Proporcionar informaci&#243;n de accesibilidad de controles en Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "formularios Windows Forms (controles), accesibilidad"
-  - "controles [Windows Forms], accesibilidad"
-  - "accesibilidad, controles de formularios Windows Forms"
+title: "Proporcionar información de accesibilidad de controles en Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Windows Forms controls, accessibility
+- controls [Windows Forms], accessibility
+- accessibility [Windows Forms], Windows Forms controls
 ms.assetid: 887dee6f-5059-4d57-957d-7c6fcd4acb10
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 7d7afc8cc67dc3a428e4995230345938075fbcc0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Proporcionar informaci&#243;n de accesibilidad de controles en Windows Forms
-Las ayudas de accesibilidad son programas y dispositivos especializados que ayudan a las personas con discapacidades a usar los equipos de forma más eficaz. Algunos ejemplos son los lectores de pantalla para invidentes y las utilidades de entrada de voz para las personas que usan comandos verbales en lugar del mouse o el teclado. Estas ayudas de accesibilidad interactúan con las propiedades de accesibilidad que exponen los controles de Windows Forms. Dichas propiedades son:  
+# <a name="providing-accessibility-information-for-controls-on-a-windows-form"></a><span data-ttu-id="e2b06-102">Proporcionar información de accesibilidad de controles en Windows Forms</span><span class="sxs-lookup"><span data-stu-id="e2b06-102">Providing Accessibility Information for Controls on a Windows Form</span></span>
+<span data-ttu-id="e2b06-103">Las ayudas de accesibilidad son programas y dispositivos especializados que ayudan a las personas con discapacidades a usar los equipos de forma más eficaz.</span><span class="sxs-lookup"><span data-stu-id="e2b06-103">Accessibility aids are specialized programs and devices that help people with disabilities use computers more effectively.</span></span> <span data-ttu-id="e2b06-104">Algunos ejemplos son los lectores de pantalla para invidentes y las utilidades de entrada de voz para las personas que usan comandos verbales en lugar del mouse o el teclado.</span><span class="sxs-lookup"><span data-stu-id="e2b06-104">Examples include screen readers for people who are blind and voice input utilities for people who provide verbal commands instead of using the mouse or keyboard.</span></span> <span data-ttu-id="e2b06-105">Estas ayudas de accesibilidad interactúan con las propiedades de accesibilidad que exponen los controles de Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="e2b06-105">These accessibility aids interact with the accessibility properties exposed by Windows Forms controls.</span></span> <span data-ttu-id="e2b06-106">Dichas propiedades son:</span><span class="sxs-lookup"><span data-stu-id="e2b06-106">These properties are:</span></span>  
   
--   **AccessibilityObject**  
+-   <span data-ttu-id="e2b06-107">**AccessibilityObject**</span><span class="sxs-lookup"><span data-stu-id="e2b06-107">**AccessibilityObject**</span></span>  
   
--   **AccessibleDefaultActionDescription**  
+-   <span data-ttu-id="e2b06-108">**AccessibleDefaultActionDescription**</span><span class="sxs-lookup"><span data-stu-id="e2b06-108">**AccessibleDefaultActionDescription**</span></span>  
   
--   **AccessibleDescription**  
+-   <span data-ttu-id="e2b06-109">**AccessibleDescription**</span><span class="sxs-lookup"><span data-stu-id="e2b06-109">**AccessibleDescription**</span></span>  
   
--   **AccessibleName**  
+-   <span data-ttu-id="e2b06-110">**AccessibleName**</span><span class="sxs-lookup"><span data-stu-id="e2b06-110">**AccessibleName**</span></span>  
   
--   **AccessibleRole**  
+-   <span data-ttu-id="e2b06-111">**AccessibleRole**</span><span class="sxs-lookup"><span data-stu-id="e2b06-111">**AccessibleRole**</span></span>  
   
-## AccessibilityObject Property  
- Esta propiedad de solo lectura contiene una instancia de la [clase AccessibleObject](frlrfSystemWindowsFormsAccessibleObjectClassTopic). La propiedad **AccessibleObject** implementa la interfaz de <xref:Accessibility.IAccessible>, que proporciona información acerca de la descripción, la ubicación de la pantalla, las funciones de desplazamiento y valor del control. El diseñador establece este valor cuando se agrega el control al formulario.  
+## <a name="accessibilityobject-property"></a><span data-ttu-id="e2b06-112">AccessibilityObject Property</span><span class="sxs-lookup"><span data-stu-id="e2b06-112">AccessibilityObject Property</span></span>  
+ <span data-ttu-id="e2b06-113">Esta propiedad de solo lectura contiene una instancia de la <xref:System.Windows.Forms.AccessibleObject> .</span><span class="sxs-lookup"><span data-stu-id="e2b06-113">This read-only property contains an <xref:System.Windows.Forms.AccessibleObject> instance.</span></span> <span data-ttu-id="e2b06-114">La propiedad **AccessibleObject** implementa la interfaz de <xref:Accessibility.IAccessible> , que proporciona información acerca de la descripción, la ubicación de la pantalla, las funciones de desplazamiento y valor del control.</span><span class="sxs-lookup"><span data-stu-id="e2b06-114">The **AccessibleObject** implements the <xref:Accessibility.IAccessible> interface, which provides information about the control's description, screen location, navigational abilities, and value.</span></span> <span data-ttu-id="e2b06-115">El diseñador establece este valor cuando se agrega el control al formulario.</span><span class="sxs-lookup"><span data-stu-id="e2b06-115">The designer sets this value when the control is added to the form.</span></span>  
   
-## Propiedad AccessibleDefaultActionDescription  
- Esta cadena describe la acción del control. No aparece en la ventana Propiedades y es posible que solo se establezca en el código. Los ejemplos siguientes establecen esta propiedad para un control de botón:  
+## <a name="accessibledefaultactiondescription-property"></a><span data-ttu-id="e2b06-116">Propiedad AccessibleDefaultActionDescription</span><span class="sxs-lookup"><span data-stu-id="e2b06-116">AccessibleDefaultActionDescription Property</span></span>  
+ <span data-ttu-id="e2b06-117">Esta cadena describe la acción del control.</span><span class="sxs-lookup"><span data-stu-id="e2b06-117">This string describes the action of the control.</span></span> <span data-ttu-id="e2b06-118">No aparece en la ventana Propiedades y es posible que solo se establezca en el código.</span><span class="sxs-lookup"><span data-stu-id="e2b06-118">It does not appear in the Properties window and may only be set in code.</span></span> <span data-ttu-id="e2b06-119">Los ejemplos siguientes establecen esta propiedad para un control de botón:</span><span class="sxs-lookup"><span data-stu-id="e2b06-119">The following example sets this property for a button control:</span></span>  
   
 ```  
 ' Visual Basic  
@@ -55,8 +56,8 @@ button1->AccessibleDefaultActionDescription =
    "Closes the application.";  
 ```  
   
-## Propiedad AccessibleDescription  
- Esta cadena describe el control. Se puede establecer en la ventana Propiedades o en el código de la manera siguiente:  
+## <a name="accessibledescription-property"></a><span data-ttu-id="e2b06-120">Propiedad AccessibleDescription</span><span class="sxs-lookup"><span data-stu-id="e2b06-120">AccessibleDescription Property</span></span>  
+ <span data-ttu-id="e2b06-121">Esta cadena describe el control.</span><span class="sxs-lookup"><span data-stu-id="e2b06-121">This string describes the control.</span></span> <span data-ttu-id="e2b06-122">Se puede establecer en la ventana Propiedades o en el código de la manera siguiente:</span><span class="sxs-lookup"><span data-stu-id="e2b06-122">It may be set in the Properties window, or in code as follows:</span></span>  
   
 ```  
 ' Visual Basic  
@@ -69,8 +70,8 @@ Button1.AccessibleDescription = "A button with text 'Exit'";
 button1->AccessibleDescription = "A button with text 'Exit'";  
 ```  
   
-## Propiedad AccessibleName  
- Este es el nombre de un control notificado a las ayudas de accesibilidad. Se puede establecer en la ventana Propiedades o en el código de la manera siguiente:  
+## <a name="accessiblename-property"></a><span data-ttu-id="e2b06-123">Propiedad AccessibleName</span><span class="sxs-lookup"><span data-stu-id="e2b06-123">AccessibleName Property</span></span>  
+ <span data-ttu-id="e2b06-124">Este es el nombre de un control notificado a las ayudas de accesibilidad.</span><span class="sxs-lookup"><span data-stu-id="e2b06-124">This is the name of a control reported to accessibility aids.</span></span> <span data-ttu-id="e2b06-125">Se puede establecer en la ventana Propiedades o en el código de la manera siguiente:</span><span class="sxs-lookup"><span data-stu-id="e2b06-125">It may be set in the Properties window, or in code as follows:</span></span>  
   
 ```  
 ' Visual Basic  
@@ -83,8 +84,8 @@ Button1.AccessibleName = "Order";
 button1->AccessibleName = "Order";  
 ```  
   
-## Propiedad AccessibleRole  
- Esta propiedad, que contiene una [enumeración AccessibleRole](frlrfSystemWindowsFormsAccessibleRoleClassTopic), describe el rol de la interfaz de usuario del control. Un nuevo control tiene el valor establecido en `Default`. Esto significa que, de forma predeterminada, un control **Button** actúa como un **Button**. Es posible que quiera restablecer esta propiedad si un control tiene otro rol. Por ejemplo, puede que esté usando un control **PictureBox** como un control **Chart** y quiera que las ayudas de accesibilidad informen del rol como **Chart** y no como **PictureBox**. Es posible que también quiera especificar esta propiedad para los controles personalizados que ha desarrollado. Esta propiedad se puede establecer en la ventana Propiedades o en el código de la manera siguiente:  
+## <a name="accessiblerole-property"></a><span data-ttu-id="e2b06-126">Propiedad AccessibleRole</span><span class="sxs-lookup"><span data-stu-id="e2b06-126">AccessibleRole Property</span></span>  
+ <span data-ttu-id="e2b06-127">Esta propiedad, que contiene una <xref:System.Windows.Forms.AccessibleRole> , describe el rol de la interfaz de usuario del control.</span><span class="sxs-lookup"><span data-stu-id="e2b06-127">This property, which contains an <xref:System.Windows.Forms.AccessibleRole> enumeration, describes the user interface role of the control.</span></span> <span data-ttu-id="e2b06-128">Un nuevo control tiene el valor establecido en `Default`.</span><span class="sxs-lookup"><span data-stu-id="e2b06-128">A new control has the value set to `Default`.</span></span> <span data-ttu-id="e2b06-129">Esto significa que, de forma predeterminada, un control **Button** actúa como un **Button**.</span><span class="sxs-lookup"><span data-stu-id="e2b06-129">This would mean that by default, a **Button** control acts as a **Button**.</span></span> <span data-ttu-id="e2b06-130">Es posible que quiera restablecer esta propiedad si un control tiene otro rol.</span><span class="sxs-lookup"><span data-stu-id="e2b06-130">You may want to reset this property if a control has another role.</span></span> <span data-ttu-id="e2b06-131">Por ejemplo, puede que esté usando un control **PictureBox** como un control **Chart**y quiera que las ayudas de accesibilidad informen del rol como **Chart**y no como **PictureBox**.</span><span class="sxs-lookup"><span data-stu-id="e2b06-131">For example, you may be using a **PictureBox** control as a **Chart**, and you may want accessibility aids to report the role as a **Chart**, not as a **PictureBox**.</span></span> <span data-ttu-id="e2b06-132">Es posible que también quiera especificar esta propiedad para los controles personalizados que ha desarrollado.</span><span class="sxs-lookup"><span data-stu-id="e2b06-132">You may also want to specify this property for custom controls you have developed.</span></span> <span data-ttu-id="e2b06-133">Esta propiedad se puede establecer en la ventana Propiedades o en el código de la manera siguiente:</span><span class="sxs-lookup"><span data-stu-id="e2b06-133">This property may be set in the Properties window, or in code as follows:</span></span>  
   
 ```  
 ' Visual Basic  
@@ -97,11 +98,11 @@ PictureBox1.AccessibleRole = AccessibleRole.Chart;
 pictureBox1->AccessibleRole = AccessibleRole::Chart;  
 ```  
   
-## Vea también  
- <xref:System.Windows.Forms.AccessibleObject>   
- <xref:System.Windows.Forms.Control.AccessibilityObject%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.Control.AccessibleDefaultActionDescription%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.Control.AccessibleDescription%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.Control.AccessibleName%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.Control.AccessibleRole%2A?displayProperty=fullName>   
+## <a name="see-also"></a><span data-ttu-id="e2b06-134">Vea también</span><span class="sxs-lookup"><span data-stu-id="e2b06-134">See Also</span></span>  
+ <xref:System.Windows.Forms.AccessibleObject>  
+ <xref:System.Windows.Forms.Control.AccessibilityObject%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.Control.AccessibleDefaultActionDescription%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.Control.AccessibleDescription%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.Control.AccessibleName%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.Control.AccessibleRole%2A?displayProperty=nameWithType>  
  <xref:System.Windows.Forms.AccessibleRole>

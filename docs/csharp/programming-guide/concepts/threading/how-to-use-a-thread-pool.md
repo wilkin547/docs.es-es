@@ -1,39 +1,30 @@
 ---
 title: "Cómo: Usar un grupo de subprocesos (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 210a9235-83a6-420b-af52-2d6a58e5133f
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 9ad5ffb224821c67d227297f8a5a4a1476d77b0a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: f90262cdfa6e4d6c8c37c553e999d51fee736d6a
-ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-use-a-thread-pool-c"></a>Cómo: Usar un grupo de subprocesos (C#)
-La *agrupación de subprocesos* es una forma de multithreading en la que se agregan tareas a una cola y se inician automáticamente cuando se crean subprocesos. Para obtener más información, vea [Thread Pooling (C#)](../../../../csharp/programming-guide/concepts/threading/thread-pooling.md) (Agrupación de subprocesos [C#]).  
+# <a name="how-to-use-a-thread-pool-c"></a><span data-ttu-id="2472a-102">Cómo: Usar un grupo de subprocesos (C#)</span><span class="sxs-lookup"><span data-stu-id="2472a-102">How to: Use a Thread Pool (C#)</span></span>
+<span data-ttu-id="2472a-103">La *agrupación de subprocesos* es una forma de multithreading en la que se agregan tareas a una cola y se inician automáticamente cuando se crean subprocesos.</span><span class="sxs-lookup"><span data-stu-id="2472a-103">*Thread pooling* is a form of multithreading in which tasks are added to a queue and automatically started when threads are created.</span></span> <span data-ttu-id="2472a-104">Para obtener más información, vea [Thread Pooling (C#)](../../../../csharp/programming-guide/concepts/threading/thread-pooling.md) (Agrupación de subprocesos [C#]).</span><span class="sxs-lookup"><span data-stu-id="2472a-104">For more information, see [Thread Pooling (C#)](../../../../csharp/programming-guide/concepts/threading/thread-pooling.md).</span></span>  
   
- En el ejemplo siguiente se usa el grupo de subprocesos de .NET Framework para calcular el resultado de `Fibonacci` para diez números entre 20 y 40. Cada resultado de `Fibonacci` se representa mediante la clase `Fibonacci`, que proporciona un método denominado `ThreadPoolCallback` que realiza el cálculo. Se crea un objeto que representa cada valor de `Fibonacci` y el método `ThreadPoolCallback` se pasa a <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A>, que asigna un subproceso disponible en el grupo para ejecutar el método.  
+ <span data-ttu-id="2472a-105">En el ejemplo siguiente se usa el grupo de subprocesos de .NET Framework para calcular el resultado de `Fibonacci` para diez números entre 20 y 40.</span><span class="sxs-lookup"><span data-stu-id="2472a-105">The following example uses the .NET Framework thread pool to calculate the `Fibonacci` result for ten numbers between 20 and 40.</span></span> <span data-ttu-id="2472a-106">Cada resultado de `Fibonacci` se representa mediante la clase `Fibonacci`, que proporciona un método denominado `ThreadPoolCallback` que realiza el cálculo.</span><span class="sxs-lookup"><span data-stu-id="2472a-106">Each `Fibonacci` result is represented by the `Fibonacci` class, which provides a method named `ThreadPoolCallback` that performs the calculation.</span></span> <span data-ttu-id="2472a-107">Se crea un objeto que representa cada valor de `Fibonacci` y el método `ThreadPoolCallback` se pasa a <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A>, que asigna un subproceso disponible en el grupo para ejecutar el método.</span><span class="sxs-lookup"><span data-stu-id="2472a-107">An object that represents each `Fibonacci` value is created, and the `ThreadPoolCallback` method is passed to <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A>, which assigns an available thread in the pool to execute the method.</span></span>  
   
- Dado que a cada objeto `Fibonacci` se le asigna un valor semialeatorio para calcular y dado que cada subproceso compite para obtener tiempo de procesador, no se puede saber de antemano cuánto tardarán en calcularse los diez resultados. Por eso se pasa a cada objeto `Fibonacci` una instancia de la clase <xref:System.Threading.ManualResetEvent> durante la construcción. Cada objeto indica al objeto de evento proporcionado que su cálculo está completo, lo que permite que el subproceso principal bloquee la ejecución con <xref:System.Threading.WaitHandle.WaitAll%2A> hasta que los diez objetos `Fibonacci` hayan calculado un resultado. El método `Main` muestra entonces cada resultado de `Fibonacci`.  
+ <span data-ttu-id="2472a-108">Dado que a cada objeto `Fibonacci` se le asigna un valor semialeatorio para calcular y dado que cada subproceso compite para obtener tiempo de procesador, no se puede saber de antemano cuánto tardarán en calcularse los diez resultados.</span><span class="sxs-lookup"><span data-stu-id="2472a-108">Because each `Fibonacci` object is given a semi-random value to compute, and because each thread will be competing for processor time, you cannot know in advance how long it will take for all ten results to be calculated.</span></span> <span data-ttu-id="2472a-109">Por eso se pasa a cada objeto `Fibonacci` una instancia de la clase <xref:System.Threading.ManualResetEvent> durante la construcción.</span><span class="sxs-lookup"><span data-stu-id="2472a-109">That is why each `Fibonacci` object is passed an instance of the <xref:System.Threading.ManualResetEvent> class during construction.</span></span> <span data-ttu-id="2472a-110">Cada objeto indica al objeto de evento proporcionado que su cálculo está completo, lo que permite que el subproceso principal bloquee la ejecución con <xref:System.Threading.WaitHandle.WaitAll%2A> hasta que los diez objetos `Fibonacci` hayan calculado un resultado.</span><span class="sxs-lookup"><span data-stu-id="2472a-110">Each object signals the provided event object when its calculation is complete, which allows the primary thread to block execution with <xref:System.Threading.WaitHandle.WaitAll%2A> until all ten `Fibonacci` objects have calculated a result.</span></span> <span data-ttu-id="2472a-111">El método `Main` muestra entonces cada resultado de `Fibonacci`.</span><span class="sxs-lookup"><span data-stu-id="2472a-111">The `Main` method then displays each `Fibonacci` result.</span></span>  
   
-## <a name="example"></a>Ejemplo  
+## <a name="example"></a><span data-ttu-id="2472a-112">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="2472a-112">Example</span></span>  
   
 ```csharp  
 using System;  
@@ -112,7 +103,7 @@ public class ThreadPoolExample
 }  
 ```  
   
- El siguiente es un ejemplo de la salida.  
+ <span data-ttu-id="2472a-113">El siguiente es un ejemplo de la salida.</span><span class="sxs-lookup"><span data-stu-id="2472a-113">Following is an example of the output.</span></span>  
   
 ```  
 launching 10 tasks...  
@@ -149,16 +140,15 @@ Fibonacci(21) = 10946
 Fibonacci(27) = 196418  
 ```  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Threading.Mutex>   
- <xref:System.Threading.WaitHandle.WaitAll%2A>   
- <xref:System.Threading.ManualResetEvent>   
- <xref:System.Threading.EventWaitHandle.Set%2A>   
- <xref:System.Threading.ThreadPool>   
- <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A>   
- <xref:System.Threading.ManualResetEvent>   
- [Thread Pooling (C#)](../../../../csharp/programming-guide/concepts/threading/thread-pooling.md)  (Agrupación de subprocesos [C#])  
- [Threading (C#)](../../../../csharp/programming-guide/concepts/threading/index.md)  (Subprocesos [C#])  
- @System.Threading.Monitor   
- [Seguridad](../../../../standard/security/index.md)
-
+## <a name="see-also"></a><span data-ttu-id="2472a-114">Vea también</span><span class="sxs-lookup"><span data-stu-id="2472a-114">See Also</span></span>  
+ <xref:System.Threading.Mutex>  
+ <xref:System.Threading.WaitHandle.WaitAll%2A>  
+ <xref:System.Threading.ManualResetEvent>  
+ <xref:System.Threading.EventWaitHandle.Set%2A>  
+ <xref:System.Threading.ThreadPool>  
+ <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A>  
+ <xref:System.Threading.ManualResetEvent>  
+ <xref:System.Threading.Monitor>  
+ [<span data-ttu-id="2472a-115">Agrupación de subprocesos (C#)</span><span class="sxs-lookup"><span data-stu-id="2472a-115">Thread Pooling (C#)</span></span>](../../../../csharp/programming-guide/concepts/threading/thread-pooling.md)  
+ [<span data-ttu-id="2472a-116">Subprocesamiento (C#)</span><span class="sxs-lookup"><span data-stu-id="2472a-116">Threading (C#)</span></span>](../../../../csharp/programming-guide/concepts/threading/index.md)  
+ [<span data-ttu-id="2472a-117">Seguridad</span><span class="sxs-lookup"><span data-stu-id="2472a-117">Security</span></span>](../../../../standard/security/index.md)

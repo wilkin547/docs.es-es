@@ -1,69 +1,50 @@
 ---
 title: "Miembros (Guía de programación de C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - types [C#], nested types
 - C# language, type members
 ms.assetid: 4a30a4ab-d690-4936-9124-92ce9448665a
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 184d4f2976b8594c308efeb113a0490499e3460e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 98446a2eb0415c92aa44cbddf8539477a00a2666
-ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="members-c-programming-guide"></a>Miembros (Guía de programación de C#)
-Las clases y structs tienen miembros que representan sus datos y comportamiento. Los miembros de una clase incluyen todos los miembros declarados en la clase, junto con todos los miembros (excepto constructores y finalizadores) declarados en todas las clases de su jerarquía de herencia. Los miembros privados de clases base se heredan en las clases derivadas, pero estas no pueden tener acceso a ellos.  
+# <a name="members-c-programming-guide"></a><span data-ttu-id="8092c-102">Miembros (Guía de programación de C#)</span><span class="sxs-lookup"><span data-stu-id="8092c-102">Members (C# Programming Guide)</span></span>
+<span data-ttu-id="8092c-103">Las clases y structs tienen miembros que representan sus datos y comportamiento.</span><span class="sxs-lookup"><span data-stu-id="8092c-103">Classes and structs have members that represent their data and behavior.</span></span> <span data-ttu-id="8092c-104">Los miembros de una clase incluyen todos los miembros declarados en la clase, junto con todos los miembros (excepto constructores y finalizadores) declarados en todas las clases de su jerarquía de herencia.</span><span class="sxs-lookup"><span data-stu-id="8092c-104">A class's members include all the members declared in the class, along with all members (except constructors and finalizers) declared in all classes in its inheritance hierarchy.</span></span> <span data-ttu-id="8092c-105">Los miembros privados de clases base se heredan en las clases derivadas, pero estas no pueden tener acceso a ellos.</span><span class="sxs-lookup"><span data-stu-id="8092c-105">Private members in base classes are inherited but are not accessible from derived classes.</span></span>  
   
- En la tabla siguiente se enumeran los tipos de miembros que puede contener una clase o struct:  
+ <span data-ttu-id="8092c-106">En la tabla siguiente se enumeran los tipos de miembros que puede contener una clase o struct:</span><span class="sxs-lookup"><span data-stu-id="8092c-106">The following table lists the kinds of members a class or struct may contain:</span></span>  
   
-|Miembro|Descripción|  
+|<span data-ttu-id="8092c-107">Miembro</span><span class="sxs-lookup"><span data-stu-id="8092c-107">Member</span></span>|<span data-ttu-id="8092c-108">Descripción</span><span class="sxs-lookup"><span data-stu-id="8092c-108">Description</span></span>|  
 |------------|-----------------|  
-|[Campos](../../../csharp/programming-guide/classes-and-structs/fields.md)|Los campos son variables declaradas en el ámbito de clase. Un campo puede ser un tipo numérico integrado o una instancia de otra clase. Por ejemplo, una clase de calendario puede tener un campo con la fecha actual.|  
-|[Constantes](../../../csharp/programming-guide/classes-and-structs/constants.md)|Las constantes son campos o propiedades cuyo valor se establece en tiempo de compilación y no se puede cambiar.|  
-|[Propiedades](../../../csharp/programming-guide/classes-and-structs/properties.md)|Las propiedades son métodos de una clase a los que se obtiene acceso como si fueran campos de esa clase. Una propiedad puede proporcionar protección a un campo de clase con el fin de evitar que se cambie sin el conocimiento del objeto.|  
-|[Métodos](../../../csharp/programming-guide/classes-and-structs/methods.md)|Los métodos definen las acciones que una clase puede realizar. Los métodos pueden aceptar parámetros que proporcionan datos de entrada y devolver datos de salida a través de parámetros. Los métodos también pueden devolver un valor directamente, sin usar ningún parámetro.|  
-|[Eventos](../../../csharp/programming-guide/events/index.md)|Los eventos proporcionan a otros objetos notificaciones sobre lo que ocurre, como clics en botones o la realización correcta de un método. Los eventos se definen y desencadenan mediante delegados.|  
-|[Operadores](../../../csharp/programming-guide/statements-expressions-operators/operators.md)|Los operadores sobrecargados se consideran miembros de clase. Si se sobrecarga un operador, se define como método estático público en una clase. Los operadores predefinidos (`+`, `*`, `<`, etc.) no se consideran miembros. Para obtener más información, vea [Operadores sobrecargables](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md).|  
-|[Indizadores](../../../csharp/programming-guide/indexers/index.md)|Los indizadores permiten indizar un objeto de manera similar a como se hace con las matrices.|  
-|[Constructores](../../../csharp/programming-guide/classes-and-structs/constructors.md)|Los constructores son métodos a los que se llama cuando el objeto se crea por primera vez. Se usan a menudo para inicializar los datos de un objeto.|  
-|[Finalizadores](../../../csharp/programming-guide/classes-and-structs/destructors.md)|En C#, los finalizadores se usan en raras ocasiones. Son métodos a los que llama el motor de ejecución del runtime cuando el objeto está a punto de quitarse de la memoria. Generalmente se utilizan para asegurarse de que los recursos que se deben liberar se controlan apropiadamente.|  
-|[Tipos anidados](../../../csharp/programming-guide/classes-and-structs/nested-types.md)|Los tipos anidados son tipos declarados dentro de otro tipo. Los tipos anidados se usan a menudo para describir objetos utilizados únicamente por los tipos que los contienen.|  
+|[<span data-ttu-id="8092c-109">Campos</span><span class="sxs-lookup"><span data-stu-id="8092c-109">Fields</span></span>](../../../csharp/programming-guide/classes-and-structs/fields.md)|<span data-ttu-id="8092c-110">Los campos son variables declaradas en el ámbito de clase.</span><span class="sxs-lookup"><span data-stu-id="8092c-110">Fields are variables declared at class scope.</span></span> <span data-ttu-id="8092c-111">Un campo puede ser un tipo numérico integrado o una instancia de otra clase.</span><span class="sxs-lookup"><span data-stu-id="8092c-111">A field may be a built-in numeric type or an instance of another class.</span></span> <span data-ttu-id="8092c-112">Por ejemplo, una clase de calendario puede tener un campo con la fecha actual.</span><span class="sxs-lookup"><span data-stu-id="8092c-112">For example, a calendar class may have a field that contains the current date.</span></span>|  
+|[<span data-ttu-id="8092c-113">Constantes</span><span class="sxs-lookup"><span data-stu-id="8092c-113">Constants</span></span>](../../../csharp/programming-guide/classes-and-structs/constants.md)|<span data-ttu-id="8092c-114">Las constantes son campos o propiedades cuyo valor se establece en tiempo de compilación y no se puede cambiar.</span><span class="sxs-lookup"><span data-stu-id="8092c-114">Constants are fields or properties whose value is set at compile time and cannot be changed.</span></span>|  
+|[<span data-ttu-id="8092c-115">Propiedades</span><span class="sxs-lookup"><span data-stu-id="8092c-115">Properties</span></span>](../../../csharp/programming-guide/classes-and-structs/properties.md)|<span data-ttu-id="8092c-116">Las propiedades son métodos de una clase a los que se obtiene acceso como si fueran campos de esa clase.</span><span class="sxs-lookup"><span data-stu-id="8092c-116">Properties are methods on a class that are accessed as if they were fields on that class.</span></span> <span data-ttu-id="8092c-117">Una propiedad puede proporcionar protección a un campo de clase con el fin de evitar que se cambie sin el conocimiento del objeto.</span><span class="sxs-lookup"><span data-stu-id="8092c-117">A property can provide protection for a class field to keep it from being changed without the knowledge of the object.</span></span>|  
+|[<span data-ttu-id="8092c-118">Métodos</span><span class="sxs-lookup"><span data-stu-id="8092c-118">Methods</span></span>](../../../csharp/programming-guide/classes-and-structs/methods.md)|<span data-ttu-id="8092c-119">Los métodos definen las acciones que una clase puede realizar.</span><span class="sxs-lookup"><span data-stu-id="8092c-119">Methods define the actions that a class can perform.</span></span> <span data-ttu-id="8092c-120">Los métodos pueden aceptar parámetros que proporcionan datos de entrada y devolver datos de salida a través de parámetros.</span><span class="sxs-lookup"><span data-stu-id="8092c-120">Methods can take parameters that provide input data, and can return output data through parameters.</span></span> <span data-ttu-id="8092c-121">Los métodos también pueden devolver un valor directamente, sin usar ningún parámetro.</span><span class="sxs-lookup"><span data-stu-id="8092c-121">Methods can also return a value directly, without using a parameter.</span></span>|  
+|[<span data-ttu-id="8092c-122">Eventos</span><span class="sxs-lookup"><span data-stu-id="8092c-122">Events</span></span>](../../../csharp/programming-guide/events/index.md)|<span data-ttu-id="8092c-123">Los eventos proporcionan a otros objetos notificaciones sobre lo que ocurre, como clics en botones o la realización correcta de un método.</span><span class="sxs-lookup"><span data-stu-id="8092c-123">Events provide notifications about occurrences, such as button clicks or the successful completion of a method, to other objects.</span></span> <span data-ttu-id="8092c-124">Los eventos se definen y desencadenan mediante delegados.</span><span class="sxs-lookup"><span data-stu-id="8092c-124">Events are defined and triggered by using delegates.</span></span>|  
+|[<span data-ttu-id="8092c-125">Operadores</span><span class="sxs-lookup"><span data-stu-id="8092c-125">Operators</span></span>](../../../csharp/programming-guide/statements-expressions-operators/operators.md)|<span data-ttu-id="8092c-126">Los operadores sobrecargados se consideran miembros de clase.</span><span class="sxs-lookup"><span data-stu-id="8092c-126">Overloaded operators are considered class members.</span></span> <span data-ttu-id="8092c-127">Si se sobrecarga un operador, se define como método estático público en una clase.</span><span class="sxs-lookup"><span data-stu-id="8092c-127">When you overload an operator, you define it as a public static method in a class.</span></span> <span data-ttu-id="8092c-128">Los operadores predefinidos (`+`, `*`, `<`, etc.) no se consideran miembros.</span><span class="sxs-lookup"><span data-stu-id="8092c-128">The predefined operators (`+`, `*`, `<`, and so on) are not considered members.</span></span> <span data-ttu-id="8092c-129">Para obtener más información, vea [Operadores sobrecargables](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md).</span><span class="sxs-lookup"><span data-stu-id="8092c-129">For more information, see [Overloadable Operators](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md).</span></span>|  
+|[<span data-ttu-id="8092c-130">Indizadores</span><span class="sxs-lookup"><span data-stu-id="8092c-130">Indexers</span></span>](../../../csharp/programming-guide/indexers/index.md)|<span data-ttu-id="8092c-131">Los indizadores permiten indizar un objeto de manera similar a como se hace con las matrices.</span><span class="sxs-lookup"><span data-stu-id="8092c-131">Indexers enable an object to be indexed in a manner similar to arrays.</span></span>|  
+|[<span data-ttu-id="8092c-132">Constructores</span><span class="sxs-lookup"><span data-stu-id="8092c-132">Constructors</span></span>](../../../csharp/programming-guide/classes-and-structs/constructors.md)|<span data-ttu-id="8092c-133">Los constructores son métodos a los que se llama cuando el objeto se crea por primera vez.</span><span class="sxs-lookup"><span data-stu-id="8092c-133">Constructors are methods that are called when the object is first created.</span></span> <span data-ttu-id="8092c-134">Se usan a menudo para inicializar los datos de un objeto.</span><span class="sxs-lookup"><span data-stu-id="8092c-134">They are often used to initialize the data of an object.</span></span>|  
+|[<span data-ttu-id="8092c-135">Finalizadores</span><span class="sxs-lookup"><span data-stu-id="8092c-135">Finalizers</span></span>](../../../csharp/programming-guide/classes-and-structs/destructors.md)|<span data-ttu-id="8092c-136">En C#, los finalizadores se usan en raras ocasiones.</span><span class="sxs-lookup"><span data-stu-id="8092c-136">Finalizers are used very rarely in C#.</span></span> <span data-ttu-id="8092c-137">Son métodos a los que llama el motor de ejecución del runtime cuando el objeto está a punto de quitarse de la memoria.</span><span class="sxs-lookup"><span data-stu-id="8092c-137">They are methods that are called by the runtime execution engine when the object is about to be removed from memory.</span></span> <span data-ttu-id="8092c-138">Generalmente se utilizan para asegurarse de que los recursos que se deben liberar se controlan apropiadamente.</span><span class="sxs-lookup"><span data-stu-id="8092c-138">They are generally used to make sure that any resources which must be released are handled appropriately.</span></span>|  
+|[<span data-ttu-id="8092c-139">Tipos anidados</span><span class="sxs-lookup"><span data-stu-id="8092c-139">Nested Types</span></span>](../../../csharp/programming-guide/classes-and-structs/nested-types.md)|<span data-ttu-id="8092c-140">Los tipos anidados son tipos declarados dentro de otro tipo.</span><span class="sxs-lookup"><span data-stu-id="8092c-140">Nested types are types declared within another type.</span></span> <span data-ttu-id="8092c-141">Los tipos anidados se usan a menudo para describir objetos utilizados únicamente por los tipos que los contienen.</span><span class="sxs-lookup"><span data-stu-id="8092c-141">Nested types are often used to describe objects that are used only by the types that contain them.</span></span>|  
   
-## <a name="see-also"></a>Vea también  
- [Guía de programación de C#](../../../csharp/programming-guide/index.md)   
- [Clases](../../../csharp/programming-guide/classes-and-structs/classes.md)   
- [Métodos](../../../csharp/programming-guide/classes-and-structs/methods.md)   
- [Constructors](../../../csharp/programming-guide/classes-and-structs/constructors.md)  (Constructores [Guía de programación de C#])  
- [Finalizadores](../../../csharp/programming-guide/classes-and-structs/destructors.md)   
- [Propiedades](../../../csharp/programming-guide/classes-and-structs/properties.md)   
- [Campos](../../../csharp/programming-guide/classes-and-structs/fields.md)   
- [Indexers](../../../csharp/programming-guide/indexers/index.md)  (Indexadores)  
- [Eventos](../../../csharp/programming-guide/events/index.md)   
- [Tipos anidados](../../../csharp/programming-guide/classes-and-structs/nested-types.md)   
- [Operadores](../../../csharp/programming-guide/statements-expressions-operators/operators.md)   
- [Operadores sobrecargables](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md)
-
+## <a name="see-also"></a><span data-ttu-id="8092c-142">Vea también</span><span class="sxs-lookup"><span data-stu-id="8092c-142">See Also</span></span>  
+ [<span data-ttu-id="8092c-143">Guía de programación de C#</span><span class="sxs-lookup"><span data-stu-id="8092c-143">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+ [<span data-ttu-id="8092c-144">Clases</span><span class="sxs-lookup"><span data-stu-id="8092c-144">Classes</span></span>](../../../csharp/programming-guide/classes-and-structs/classes.md)  
+ [<span data-ttu-id="8092c-145">Métodos</span><span class="sxs-lookup"><span data-stu-id="8092c-145">Methods</span></span>](../../../csharp/programming-guide/classes-and-structs/methods.md)  
+ [<span data-ttu-id="8092c-146">Constructores</span><span class="sxs-lookup"><span data-stu-id="8092c-146">Constructors</span></span>](../../../csharp/programming-guide/classes-and-structs/constructors.md)  
+ [<span data-ttu-id="8092c-147">Finalizadores</span><span class="sxs-lookup"><span data-stu-id="8092c-147">Finalizers</span></span>](../../../csharp/programming-guide/classes-and-structs/destructors.md)  
+ [<span data-ttu-id="8092c-148">Propiedades</span><span class="sxs-lookup"><span data-stu-id="8092c-148">Properties</span></span>](../../../csharp/programming-guide/classes-and-structs/properties.md)  
+ [<span data-ttu-id="8092c-149">Campos</span><span class="sxs-lookup"><span data-stu-id="8092c-149">Fields</span></span>](../../../csharp/programming-guide/classes-and-structs/fields.md)  
+ [<span data-ttu-id="8092c-150">Indizadores</span><span class="sxs-lookup"><span data-stu-id="8092c-150">Indexers</span></span>](../../../csharp/programming-guide/indexers/index.md)  
+ [<span data-ttu-id="8092c-151">Eventos</span><span class="sxs-lookup"><span data-stu-id="8092c-151">Events</span></span>](../../../csharp/programming-guide/events/index.md)  
+ [<span data-ttu-id="8092c-152">Tipos anidados</span><span class="sxs-lookup"><span data-stu-id="8092c-152">Nested Types</span></span>](../../../csharp/programming-guide/classes-and-structs/nested-types.md)  
+ [<span data-ttu-id="8092c-153">Operadores</span><span class="sxs-lookup"><span data-stu-id="8092c-153">Operators</span></span>](../../../csharp/programming-guide/statements-expressions-operators/operators.md)  
+ [<span data-ttu-id="8092c-154">Operadores sobrecargables</span><span class="sxs-lookup"><span data-stu-id="8092c-154">Overloadable Operators</span></span>](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md)

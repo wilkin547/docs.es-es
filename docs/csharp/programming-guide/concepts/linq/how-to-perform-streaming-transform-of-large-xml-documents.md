@@ -1,48 +1,39 @@
 ---
 title: "Cómo: Realizar una transformación de streaming de documentos XML grandes (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 5f16d1f8-5370-4b55-b0c8-e497df163037
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 1f3bc1876097474eae6f329711139a2f3797db97
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 952fad19f9abdea464e2763b721446ab5fe68301
-ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="how-to-perform-streaming-transform-of-large-xml-documents-c"></a>Cómo: Realizar una transformación de streaming de documentos XML grandes (C#)
-A veces tiene que transformar los archivos XML grandes y escribir la aplicación para que sea predecible la superficie en memoria de la aplicación. Si intenta rellenar un árbol XML con un archivo XML de gran tamaño, su utilización de memoria será proporcional al tamaño del archivo (es decir, excesivo). Por consiguiente, debe utilizar en su lugar una técnica de transmisión por secuencias.  
+# <a name="how-to-perform-streaming-transform-of-large-xml-documents-c"></a><span data-ttu-id="ed232-102">Cómo: Realizar una transformación de streaming de documentos XML grandes (C#)</span><span class="sxs-lookup"><span data-stu-id="ed232-102">How to: Perform Streaming Transform of Large XML Documents (C#)</span></span>
+<span data-ttu-id="ed232-103">A veces tiene que transformar los archivos XML grandes y escribir la aplicación para que sea predecible la superficie en memoria de la aplicación.</span><span class="sxs-lookup"><span data-stu-id="ed232-103">Sometimes you have to transform large XML files, and write your application so that the memory footprint of the application is predictable.</span></span> <span data-ttu-id="ed232-104">Si intenta rellenar un árbol XML con un archivo XML de gran tamaño, su utilización de memoria será proporcional al tamaño del archivo (es decir, excesivo).</span><span class="sxs-lookup"><span data-stu-id="ed232-104">If you try to populate an XML tree with a very large XML file, your memory usage will be proportional to the size of the file (that is, excessive).</span></span> <span data-ttu-id="ed232-105">Por consiguiente, debe utilizar en su lugar una técnica de transmisión por secuencias.</span><span class="sxs-lookup"><span data-stu-id="ed232-105">Therefore, you should use a streaming technique instead.</span></span>  
   
- Las técnicas de transmisión por secuencias se aplican mejor en situaciones en las que el documento de origen solo se debe procesar una vez y se pueden procesar los elementos en el orden del documento. Ciertos operadores de consulta estándar, como <xref:System.Linq.Enumerable.OrderBy%2A>, recorren en iteración su origen, recaban todos los datos, los ordenan y finalmente producen el primer elemento de la secuencia. Tenga en cuenta que si utiliza un operador de consulta que materializa su origen antes de producir el primer elemento, no retendrá una superficie de memoria pequeña para la aplicación.  
+ <span data-ttu-id="ed232-106">Las técnicas de transmisión por secuencias se aplican mejor en situaciones en las que el documento de origen solo se debe procesar una vez y se pueden procesar los elementos en el orden del documento.</span><span class="sxs-lookup"><span data-stu-id="ed232-106">Streaming techniques are best applied in situations where you need to process the source document only once, and you can process the elements in document order.</span></span> <span data-ttu-id="ed232-107">Ciertos operadores de consulta estándar, como <xref:System.Linq.Enumerable.OrderBy%2A>, recorren en iteración su origen, recaban todos los datos, los ordenan y finalmente producen el primer elemento de la secuencia.</span><span class="sxs-lookup"><span data-stu-id="ed232-107">Certain standard query operators, such as <xref:System.Linq.Enumerable.OrderBy%2A>, iterate their source, collect all of the data, sort it, and then finally yield the first item in the sequence.</span></span> <span data-ttu-id="ed232-108">Tenga en cuenta que si utiliza un operador de consulta que materializa su origen antes de producir el primer elemento, no retendrá una superficie de memoria pequeña para la aplicación.</span><span class="sxs-lookup"><span data-stu-id="ed232-108">Note that if you use a query operator that materializes its source before yielding the first item, you will not retain a small memory footprint for your application.</span></span>  
   
- Incluso si se usa la técnica descrita en [Cómo: Hacer streaming de fragmentos XML con acceso a la información del encabezado (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md), si se intenta ensamblar un árbol XML que contiene el documento transformado, el uso de memoria será excesivo.  
+ <span data-ttu-id="ed232-109">Incluso si se usa la técnica descrita en [Cómo: Hacer streaming de fragmentos XML con acceso a la información del encabezado (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md), si se intenta ensamblar un árbol XML que contiene el documento transformado, el uso de memoria será excesivo.</span><span class="sxs-lookup"><span data-stu-id="ed232-109">Even if you use the technique described in [How to: Stream XML Fragments with Access to Header Information (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md), if you try to assemble an XML tree that contains the transformed document, memory usage will be too great.</span></span>  
   
- Hay dos grandes enfoques. Un enfoque consiste en utilizar las características de procesamiento aplazada de <xref:System.Xml.Linq.XStreamingElement>. El otro enfoque consiste en crear un <xref:System.Xml.XmlWriter> y utilizar las capacidades de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] para escribir elementos en un <xref:System.Xml.XmlWriter>. En este tema se muestran ambos enfoques.  
+ <span data-ttu-id="ed232-110">Hay dos grandes enfoques.</span><span class="sxs-lookup"><span data-stu-id="ed232-110">There are two main approaches.</span></span> <span data-ttu-id="ed232-111">Un enfoque consiste en utilizar las características de procesamiento aplazada de <xref:System.Xml.Linq.XStreamingElement>.</span><span class="sxs-lookup"><span data-stu-id="ed232-111">One approach is to use the deferred processing characteristics of <xref:System.Xml.Linq.XStreamingElement>.</span></span> <span data-ttu-id="ed232-112">El otro enfoque consiste en crear un <xref:System.Xml.XmlWriter> y utilizar las capacidades de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] para escribir elementos en un <xref:System.Xml.XmlWriter>.</span><span class="sxs-lookup"><span data-stu-id="ed232-112">Another approach is to create an <xref:System.Xml.XmlWriter>, and use the capabilities of [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] to write elements to an <xref:System.Xml.XmlWriter>.</span></span> <span data-ttu-id="ed232-113">En este tema se muestran ambos enfoques.</span><span class="sxs-lookup"><span data-stu-id="ed232-113">This topic demonstrates both approaches.</span></span>  
   
-## <a name="example"></a>Ejemplo  
- El ejemplo siguiente se basa en el ejemplo de [Cómo: Hacer streaming de fragmentos XML con acceso a la información del encabezado (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md).  
+## <a name="example"></a><span data-ttu-id="ed232-114">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="ed232-114">Example</span></span>  
+ <span data-ttu-id="ed232-115">El ejemplo siguiente se basa en el ejemplo de [Cómo: Hacer streaming de fragmentos XML con acceso a la información del encabezado (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md).</span><span class="sxs-lookup"><span data-stu-id="ed232-115">The following example builds on the example in [How to: Stream XML Fragments with Access to Header Information (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md).</span></span>  
   
- Este ejemplo utiliza las funciones de ejecución aplazada de <xref:System.Xml.Linq.XStreamingElement> para transmitir por secuencias el resultado. Este ejemplo puede transformar un documento muy grande a la vez que mantiene una pequeña superficie de memoria.  
+ <span data-ttu-id="ed232-116">Este ejemplo utiliza las funciones de ejecución aplazada de <xref:System.Xml.Linq.XStreamingElement> para transmitir por secuencias el resultado.</span><span class="sxs-lookup"><span data-stu-id="ed232-116">This example uses the deferred execution capabilities of <xref:System.Xml.Linq.XStreamingElement> to stream the output.</span></span> <span data-ttu-id="ed232-117">Este ejemplo puede transformar un documento muy grande a la vez que mantiene una pequeña superficie de memoria.</span><span class="sxs-lookup"><span data-stu-id="ed232-117">This example can transform a very large document while maintaining a small memory footprint.</span></span>  
   
- Observe que se escribe el eje personalizado (`StreamCustomerItem`) específicamente para que espere un documento que tiene los elementos `Customer`, `Name` e `Item`, y que esos elementos se organizarán como en el documento Source.xml siguiente. No obstante, una implementación más sólida estaría preparada para analizar un documento no válido.  
+ <span data-ttu-id="ed232-118">Observe que se escribe el eje personalizado (`StreamCustomerItem`) específicamente para que espere un documento que tiene los elementos `Customer`, `Name` e `Item`, y que esos elementos se organizarán como en el documento Source.xml siguiente.</span><span class="sxs-lookup"><span data-stu-id="ed232-118">Note that the custom axis (`StreamCustomerItem`) is specifically written so that it expects a document that has `Customer`, `Name`, and `Item` elements, and that those elements will be arranged as in the following Source.xml document.</span></span> <span data-ttu-id="ed232-119">No obstante, una implementación más sólida estaría preparada para analizar un documento no válido.</span><span class="sxs-lookup"><span data-stu-id="ed232-119">A more robust implementation, however, would be prepared to parse an invalid document.</span></span>  
   
- A continuación, se muestra el documento de origen, Source.xml:  
+ <span data-ttu-id="ed232-120">A continuación, se muestra el documento de origen, Source.xml:</span><span class="sxs-lookup"><span data-stu-id="ed232-120">The following is the source document, Source.xml:</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" ?>   
@@ -157,7 +148,7 @@ static void Main(string[] args)
 }  
 ```  
   
- Este código genera el siguiente resultado:  
+ <span data-ttu-id="ed232-121">Este código genera el siguiente resultado:</span><span class="sxs-lookup"><span data-stu-id="ed232-121">This code produces the following output:</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -205,16 +196,16 @@ static void Main(string[] args)
 </Root>  
 ```  
   
-## <a name="example"></a>Ejemplo  
- El ejemplo siguiente también se basa en el ejemplo de [Cómo: Hacer streaming de fragmentos XML con acceso a la información del encabezado (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md).  
+## <a name="example"></a><span data-ttu-id="ed232-122">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="ed232-122">Example</span></span>  
+ <span data-ttu-id="ed232-123">El ejemplo siguiente también se basa en el ejemplo de [Cómo: Hacer streaming de fragmentos XML con acceso a la información del encabezado (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md).</span><span class="sxs-lookup"><span data-stu-id="ed232-123">The following example also builds on the example in [How to: Stream XML Fragments with Access to Header Information (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md).</span></span>  
   
- Este ejemplo utiliza la capacidad de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] para escribir elementos en un <xref:System.Xml.XmlWriter>. Este ejemplo puede transformar un documento muy grande a la vez que mantiene una pequeña superficie de memoria.  
+ <span data-ttu-id="ed232-124">Este ejemplo utiliza la capacidad de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] para escribir elementos en un <xref:System.Xml.XmlWriter>.</span><span class="sxs-lookup"><span data-stu-id="ed232-124">This example uses the capability of [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] to write elements to an <xref:System.Xml.XmlWriter>.</span></span> <span data-ttu-id="ed232-125">Este ejemplo puede transformar un documento muy grande a la vez que mantiene una pequeña superficie de memoria.</span><span class="sxs-lookup"><span data-stu-id="ed232-125">This example can transform a very large document while maintaining a small memory footprint.</span></span>  
   
- Observe que se escribe el eje personalizado (`StreamCustomerItem`) específicamente para que espere un documento que tiene los elementos `Customer`, `Name` e `Item`, y que esos elementos se organizarán como en el documento Source.xml siguiente. Una implementación más sólida, sin embargo, validaría el documento de origen con XSD o se prepararía para analizar un documento no válido.  
+ <span data-ttu-id="ed232-126">Observe que se escribe el eje personalizado (`StreamCustomerItem`) específicamente para que espere un documento que tiene los elementos `Customer`, `Name` e `Item`, y que esos elementos se organizarán como en el documento Source.xml siguiente.</span><span class="sxs-lookup"><span data-stu-id="ed232-126">Note that the custom axis (`StreamCustomerItem`) is specifically written so that it expects a document that has `Customer`, `Name`, and `Item` elements, and that those elements will be arranged as in the following Source.xml document.</span></span> <span data-ttu-id="ed232-127">Una implementación más sólida, sin embargo, validaría el documento de origen con XSD o se prepararía para analizar un documento no válido.</span><span class="sxs-lookup"><span data-stu-id="ed232-127">A more robust implementation, however, would either validate the source document with an XSD, or would be prepared to parse an invalid document.</span></span>  
   
- Este ejemplo utiliza el mismo documento de origen, Source.xml, que el ejemplo anterior de este tema. También produce exactamente el mismo resultado.  
+ <span data-ttu-id="ed232-128">Este ejemplo utiliza el mismo documento de origen, Source.xml, que el ejemplo anterior de este tema.</span><span class="sxs-lookup"><span data-stu-id="ed232-128">This example uses the same source document, Source.xml, as the previous example in this topic.</span></span> <span data-ttu-id="ed232-129">También produce exactamente el mismo resultado.</span><span class="sxs-lookup"><span data-stu-id="ed232-129">It also produces exactly the same output.</span></span>  
   
- Se prefiere usar la clase <xref:System.Xml.Linq.XStreamingElement> para la transmisión por secuencias de la salida XML a sobrescribir una clase <xref:System.Xml.XmlWriter>.  
+ <span data-ttu-id="ed232-130">Se prefiere usar la clase <xref:System.Xml.Linq.XStreamingElement> para la transmisión por secuencias de la salida XML a sobrescribir una clase <xref:System.Xml.XmlWriter>.</span><span class="sxs-lookup"><span data-stu-id="ed232-130">Using <xref:System.Xml.Linq.XStreamingElement> for streaming the output XML is preferred over writing to an <xref:System.Xml.XmlWriter>.</span></span>  
   
 ```csharp  
 static IEnumerable<XElement> StreamCustomerItem(string uri)  
@@ -292,7 +283,7 @@ static void Main(string[] args)
 }  
 ```  
   
- Este código genera el siguiente resultado:  
+ <span data-ttu-id="ed232-131">Este código genera el siguiente resultado:</span><span class="sxs-lookup"><span data-stu-id="ed232-131">This code produces the following output:</span></span>  
   
 ```xml  
 <Root>  
@@ -339,6 +330,5 @@ static void Main(string[] args)
 </Root>  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Programación avanzada de LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
-
+## <a name="see-also"></a><span data-ttu-id="ed232-132">Vea también</span><span class="sxs-lookup"><span data-stu-id="ed232-132">See Also</span></span>  
+ [<span data-ttu-id="ed232-133">Programación avanzada de LINQ to XML (C#)</span><span class="sxs-lookup"><span data-stu-id="ed232-133">Advanced LINQ to XML Programming (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

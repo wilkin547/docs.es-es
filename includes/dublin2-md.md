@@ -1,1 +1,1 @@
-características de hospedaje
+<span data-ttu-id="3cb07-101">características de hospedaje</span><span class="sxs-lookup"><span data-stu-id="3cb07-101">hosting features</span></span>

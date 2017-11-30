@@ -1,85 +1,66 @@
 ---
 title: "Cómo: Leer un valor a partir de una clave del Registro en Visual Basic"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
-- registry keys, determining if a value exists in
+- registry keys [Visual Basic], determining if a value exists in
 - My.Computer.Registry object, examples
-- registry, determining if values exist
-- registry keys, reading from
-- registry, reading
+- registry [Visual Basic], determining if values exist
+- registry keys [Visual Basic], reading from
+- registry [Visual Basic], reading
 ms.assetid: 775d0a57-68c9-464e-8949-9a39bd29cc64
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: f88401f6daa7a2108522496c845521474c22cc30
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 69b833777629cfd642ab75ac055b96b59c1da70b
-ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-read-a-value-from-a-registry-key-in-visual-basic"></a>Cómo: Leer un valor a partir de una clave del Registro en Visual Basic
-El método `GetValue` del objeto `My.Computer.Registry` se puede usar para leer valores en el Registro de Windows.  
+# <a name="how-to-read-a-value-from-a-registry-key-in-visual-basic"></a><span data-ttu-id="9fbef-102">Cómo: Leer un valor a partir de una clave del Registro en Visual Basic</span><span class="sxs-lookup"><span data-stu-id="9fbef-102">How to: Read a Value from a Registry Key in Visual Basic</span></span>
+<span data-ttu-id="9fbef-103">El método `GetValue` del objeto `My.Computer.Registry` se puede usar para leer valores en el Registro de Windows.</span><span class="sxs-lookup"><span data-stu-id="9fbef-103">The `GetValue` method of the `My.Computer.Registry` object can be used to read values in the Windows registry.</span></span>  
   
- Si la clave, "Software\MyApp" en el ejemplo siguiente, no existe, se produce una excepción. Si `ValueName`, "Nombre" en el ejemplo siguiente, no existe, se devuelve `Nothing`.  
+ <span data-ttu-id="9fbef-104">Si la clave, "Software\MyApp" en el ejemplo siguiente, no existe, se produce una excepción.</span><span class="sxs-lookup"><span data-stu-id="9fbef-104">If the key, "Software\MyApp" in the following example, does not exist, an exception is thrown.</span></span> <span data-ttu-id="9fbef-105">Si `ValueName`, "Nombre" en el ejemplo siguiente, no existe, se devuelve `Nothing`.</span><span class="sxs-lookup"><span data-stu-id="9fbef-105">If the `ValueName`,  "Name" in the following example, does not exist, `Nothing` is returned.</span></span>  
   
- El método `GetValue` también se puede usar para determinar si existe un valor determinado en una clave del Registro específica.  
+ <span data-ttu-id="9fbef-106">El método `GetValue` también se puede usar para determinar si existe un valor determinado en una clave del Registro específica.</span><span class="sxs-lookup"><span data-stu-id="9fbef-106">The `GetValue` method can also be used to determine whether a given value exists in a specific registry key.</span></span>  
   
- Cuando el código lee el registro de una aplicación web, la autenticación y la suplantación determinan el usuario actual que se implementa en la aplicación web.  
+ <span data-ttu-id="9fbef-107">Cuando el código lee el registro de una aplicación web, la autenticación y la suplantación determinan el usuario actual que se implementa en la aplicación web.</span><span class="sxs-lookup"><span data-stu-id="9fbef-107">When code reads the registry from a Web application, the current user is determined by the authentication and impersonation that is implemented in the Web application.</span></span>  
   
-### <a name="to-read-a-value-from-a-registry-key"></a>Para leer un valor en una clave del Registro  
+### <a name="to-read-a-value-from-a-registry-key"></a><span data-ttu-id="9fbef-108">Para leer un valor en una clave del Registro</span><span class="sxs-lookup"><span data-stu-id="9fbef-108">To read a value from a registry key</span></span>  
   
--   Use el método `GetValue` (especificando la ruta de acceso y el nombre) para leer un valor de la clave del Registro. En el ejemplo siguiente se lee el valor `Name` de `HKEY_CURRENT_USER\Software\MyApp` y lo muestra en un cuadro de mensaje.  
+-   <span data-ttu-id="9fbef-109">Use el método `GetValue` (especificando la ruta de acceso y el nombre) para leer un valor de la clave del Registro.</span><span class="sxs-lookup"><span data-stu-id="9fbef-109">Use the `GetValue` method, specifying the path and name) to read a value from registry key.</span></span> <span data-ttu-id="9fbef-110">En el ejemplo siguiente se lee el valor `Name` de `HKEY_CURRENT_USER\Software\MyApp` y lo muestra en un cuadro de mensaje.</span><span class="sxs-lookup"><span data-stu-id="9fbef-110">The following example reads the value `Name` from `HKEY_CURRENT_USER\Software\MyApp` and displays it in a message box.</span></span>  
   
      [!code-vb[VbResourceTasks#4](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-read-a-value-from-a-registry-key_1.vb)]  
   
- Este ejemplo de código también está disponible como fragmento de código de IntelliSense. En el selector de fragmentos de código, se encuentra en **Sistema operativo Windows > Registro**. Para obtener más información, vea [Fragmentos de código](/visualstudio/ide/code-snippets).  
+ <span data-ttu-id="9fbef-111">Este ejemplo de código también está disponible como fragmento de código de IntelliSense.</span><span class="sxs-lookup"><span data-stu-id="9fbef-111">This code example is also available as an IntelliSense code snippet.</span></span> <span data-ttu-id="9fbef-112">En el selector de fragmentos de código, se encuentra en **Sistema operativo Windows > Registro**.</span><span class="sxs-lookup"><span data-stu-id="9fbef-112">In the code snippet picker, it is located in **Windows Operating System > Registry**.</span></span> <span data-ttu-id="9fbef-113">Para obtener más información, vea [Fragmentos de código](/visualstudio/ide/code-snippets).</span><span class="sxs-lookup"><span data-stu-id="9fbef-113">For more information, see [Code Snippets](/visualstudio/ide/code-snippets).</span></span>  
   
-### <a name="to-determine-whether-a-value-exists-in-a-registry-key"></a>Para determinar si un valor existe en una clave del Registro  
+### <a name="to-determine-whether-a-value-exists-in-a-registry-key"></a><span data-ttu-id="9fbef-114">Para determinar si un valor existe en una clave del Registro</span><span class="sxs-lookup"><span data-stu-id="9fbef-114">To determine whether a value exists in a registry key</span></span>  
   
--   Use el método `GetValue` para recuperar el valor. El siguiente código comprueba si el valor existe y devuelve un mensaje si no es así.  
+-   <span data-ttu-id="9fbef-115">Use el método `GetValue` para recuperar el valor.</span><span class="sxs-lookup"><span data-stu-id="9fbef-115">Use the `GetValue` method to retrieve the value.</span></span> <span data-ttu-id="9fbef-116">El siguiente código comprueba si el valor existe y devuelve un mensaje si no es así.</span><span class="sxs-lookup"><span data-stu-id="9fbef-116">The following code checks whether the value exists and returns a message if it does not.</span></span>  
   
      [!code-vb[VbResourceTasks#12](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-read-a-value-from-a-registry-key_2.vb)]  
   
-## <a name="robust-programming"></a>Programación sólida  
- El registro contiene claves de nivel superior o raíz que se usan para almacenar datos. Por ejemplo, la clave raíz HKEY_LOCAL_MACHINE se usa para almacenar una configuración de nivel de equipo que usan todos los usuarios, mientras que HKEY_CURRENT_USER se usa para almacenar datos específicos de un usuario individual.  
+## <a name="robust-programming"></a><span data-ttu-id="9fbef-117">Programación sólida</span><span class="sxs-lookup"><span data-stu-id="9fbef-117">Robust Programming</span></span>  
+ <span data-ttu-id="9fbef-118">El registro contiene claves de nivel superior o raíz que se usan para almacenar datos.</span><span class="sxs-lookup"><span data-stu-id="9fbef-118">The registry holds top-level, or root, keys that are used to store data.</span></span> <span data-ttu-id="9fbef-119">Por ejemplo, la clave raíz HKEY_LOCAL_MACHINE se usa para almacenar una configuración de nivel de equipo que usan todos los usuarios, mientras que HKEY_CURRENT_USER se usa para almacenar datos específicos de un usuario individual.</span><span class="sxs-lookup"><span data-stu-id="9fbef-119">For instance, the HKEY_LOCAL_MACHINE root key is used for storing machine-level settings used by all users, while HKEY_CURRENT_USER is used for storing data specific to an individual user.</span></span>  
   
- Las condiciones siguientes pueden provocar una excepción:  
+ <span data-ttu-id="9fbef-120">Las condiciones siguientes pueden provocar una excepción:</span><span class="sxs-lookup"><span data-stu-id="9fbef-120">The following conditions may cause an exception:</span></span>  
   
--   Que el nombre de la clave sea `Nothing` (<xref:System.ArgumentNullException>).  
+-   <span data-ttu-id="9fbef-121">Que el nombre de la clave sea `Nothing` (<xref:System.ArgumentNullException>).</span><span class="sxs-lookup"><span data-stu-id="9fbef-121">The name of the key is `Nothing` (<xref:System.ArgumentNullException>).</span></span>  
   
--   Que el usuario tenga permisos para leer de las claves del Registro (<xref:System.Security.SecurityException>).  
+-   <span data-ttu-id="9fbef-122">Que el usuario tenga permisos para leer de las claves del Registro (<xref:System.Security.SecurityException>).</span><span class="sxs-lookup"><span data-stu-id="9fbef-122">The user does not have permissions to read from registry keys (<xref:System.Security.SecurityException>).</span></span>  
   
--   Que el nombre de la clave supere el límite de 255 caracteres (<xref:System.ArgumentException>).  
+-   <span data-ttu-id="9fbef-123">Que el nombre de la clave supere el límite de 255 caracteres (<xref:System.ArgumentException>).</span><span class="sxs-lookup"><span data-stu-id="9fbef-123">The key name exceeds the 255-character limit (<xref:System.ArgumentException>).</span></span>  
   
-## <a name="net-framework-security"></a>Seguridad de .NET Framework  
- Para ejecutar este proceso, el ensamblado necesita un nivel de privilegio concedido por la clase <xref:System.Security.Permissions.RegistryPermission>. Si ejecuta el proceso en un contexto de confianza parcial, este podría desencadenar una excepción por falta de privilegios. De igual manera, el usuario debe tener las ACL correctas para crear o escribir en la configuración. Por ejemplo, una aplicación local que tenga permiso de seguridad de acceso del código puede que no tenga permiso para el sistema operativo. Para obtener más información, vea [Code Access Security Basics](https://msdn.microsoft.com/library/33tceax8) (Aspectos básicos de seguridad de acceso del código).  
+## <a name="net-framework-security"></a><span data-ttu-id="9fbef-124">Seguridad de .NET Framework</span><span class="sxs-lookup"><span data-stu-id="9fbef-124">.NET Framework Security</span></span>  
+ <span data-ttu-id="9fbef-125">Para ejecutar este proceso, el ensamblado necesita un nivel de privilegio concedido por la clase <xref:System.Security.Permissions.RegistryPermission>.</span><span class="sxs-lookup"><span data-stu-id="9fbef-125">To run this process, your assembly requires a privilege level granted by the <xref:System.Security.Permissions.RegistryPermission> class.</span></span> <span data-ttu-id="9fbef-126">Si ejecuta el proceso en un contexto de confianza parcial, este podría desencadenar una excepción por falta de privilegios.</span><span class="sxs-lookup"><span data-stu-id="9fbef-126">If you are running in a partial-trust context, the process might throw an exception due to insufficient privileges.</span></span> <span data-ttu-id="9fbef-127">De igual manera, el usuario debe tener las ACL correctas para crear o escribir en la configuración.</span><span class="sxs-lookup"><span data-stu-id="9fbef-127">Similarly, the user must have the correct ACLs for creating or writing to settings.</span></span> <span data-ttu-id="9fbef-128">Por ejemplo, una aplicación local que tenga permiso de seguridad de acceso del código puede que no tenga permiso para el sistema operativo.</span><span class="sxs-lookup"><span data-stu-id="9fbef-128">For example, a local application that has the code access security permission might not have operating system permission.</span></span> <span data-ttu-id="9fbef-129">Para obtener más información, vea [Code Access Security Basics](https://msdn.microsoft.com/library/33tceax8) (Aspectos básicos de seguridad de acceso del código).</span><span class="sxs-lookup"><span data-stu-id="9fbef-129">For more information, see [Code Access Security Basics](https://msdn.microsoft.com/library/33tceax8).</span></span>  
   
-## <a name="see-also"></a>Vea también  
- <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>   
- <xref:Microsoft.Win32.RegistryHive>   
- [Leer y escribir en el Registro](../../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md)
-
+## <a name="see-also"></a><span data-ttu-id="9fbef-130">Vea también</span><span class="sxs-lookup"><span data-stu-id="9fbef-130">See Also</span></span>  
+ <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>  
+ <xref:Microsoft.Win32.RegistryHive>  
+ [<span data-ttu-id="9fbef-131">Leer y escribir en el Registro</span><span class="sxs-lookup"><span data-stu-id="9fbef-131">Reading from and Writing to the Registry</span></span>](../../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md)

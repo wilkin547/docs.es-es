@@ -1,1 +1,1 @@
-Microsoft Windows XP
+<span data-ttu-id="ee6a5-101">Microsoft Windows XP</span><span class="sxs-lookup"><span data-stu-id="ee6a5-101">Microsoft Windows XP</span></span>

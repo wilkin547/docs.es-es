@@ -1,120 +1,100 @@
 ---
 title: "Utilizar espacios de nombres (Guía de programación de C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- cs.names
-dev_langs:
-- CSharp
+f1_keywords: cs.names
 helpviewer_keywords:
 - fully qualified names [C#]
 - namespaces [C#], how to use
 ms.assetid: 1fe8bf39-addc-438a-bd9e-86410e32381d
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: f485992f5d4b7bc16aaefeec8c7c76ce39f48ef0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 61b5d78f1c4924e3858c14876d36e52d4ee46ceb
-ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="using-namespaces-c-programming-guide"></a>Utilizar espacios de nombres (Guía de programación de C#)
-Los espacios de nombres se usan mucho en programas de C# de dos maneras. En primer lugar, las clases de .NET Framework usan espacios de nombres para organizar sus clases. En segundo lugar, declarar sus propios espacios de nombres puede ayudar a controlar el ámbito de nombres de clase y método en proyectos de programación grandes.  
+# <a name="using-namespaces-c-programming-guide"></a><span data-ttu-id="623ac-102">Utilizar espacios de nombres (Guía de programación de C#)</span><span class="sxs-lookup"><span data-stu-id="623ac-102">Using Namespaces (C# Programming Guide)</span></span>
+<span data-ttu-id="623ac-103">Los espacios de nombres se usan mucho en programas de C# de dos maneras.</span><span class="sxs-lookup"><span data-stu-id="623ac-103">Namespaces are heavily used within C# programs in two ways.</span></span> <span data-ttu-id="623ac-104">En primer lugar, las clases de .NET Framework usan espacios de nombres para organizar sus clases.</span><span class="sxs-lookup"><span data-stu-id="623ac-104">Firstly, the .NET Framework classes use namespaces to organize its many classes.</span></span> <span data-ttu-id="623ac-105">En segundo lugar, declarar sus propios espacios de nombres puede ayudar a controlar el ámbito de nombres de clase y método en proyectos de programación grandes.</span><span class="sxs-lookup"><span data-stu-id="623ac-105">Secondly, declaring your own namespaces can help control the scope of class and method names in larger programming projects.</span></span>  
   
-## <a name="accessing-namespaces"></a>Acceder a los espacios de nombres  
- La mayoría de las aplicaciones de C# comienzan con una sección de directivas `using`. En esta sección se muestran los espacios de nombres que la aplicación usará frecuentemente, y evita que el programador especifique un nombre completo cada vez que se use un método que se incluye dentro.  
+## <a name="accessing-namespaces"></a><span data-ttu-id="623ac-106">Acceder a los espacios de nombres</span><span class="sxs-lookup"><span data-stu-id="623ac-106">Accessing Namespaces</span></span>  
+ <span data-ttu-id="623ac-107">La mayoría de las aplicaciones de C# comienzan con una sección de directivas `using`.</span><span class="sxs-lookup"><span data-stu-id="623ac-107">Most C# applications begin with a section of `using` directives.</span></span> <span data-ttu-id="623ac-108">En esta sección se muestran los espacios de nombres que la aplicación usará frecuentemente, y evita que el programador especifique un nombre completo cada vez que se use un método que se incluye dentro.</span><span class="sxs-lookup"><span data-stu-id="623ac-108">This section lists the namespaces that the application will be using frequently, and saves the programmer from specifying a fully qualified name every time that a method that is contained within is used.</span></span>  
   
- Por ejemplo, incluyendo la línea:  
+ <span data-ttu-id="623ac-109">Por ejemplo, incluyendo la línea:</span><span class="sxs-lookup"><span data-stu-id="623ac-109">For example, by including the line:</span></span>  
   
- [!code-cs[csProgGuide#1](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/using-namespaces_1.cs)]  
+ [!code-csharp[csProgGuide#1](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/using-namespaces_1.cs)]  
   
- Al comienzo de un programa, el programador puede usar el código:  
+ <span data-ttu-id="623ac-110">Al comienzo de un programa, el programador puede usar el código:</span><span class="sxs-lookup"><span data-stu-id="623ac-110">At the start of a program, the programmer can use the code:</span></span>  
   
- [!code-cs[csProgGuide#31](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/using-namespaces_2.cs)]  
+ [!code-csharp[csProgGuide#31](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/using-namespaces_2.cs)]  
   
- En lugar de:  
+ <span data-ttu-id="623ac-111">En lugar de:</span><span class="sxs-lookup"><span data-stu-id="623ac-111">Instead of:</span></span>  
   
- [!code-cs[csProgGuide#30](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/using-namespaces_3.cs)]  
+ [!code-csharp[csProgGuide#30](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/using-namespaces_3.cs)]  
   
-## <a name="namespace-aliases"></a>Alias de espacios de nombres  
- La [directiva Using](../../../csharp/language-reference/keywords/using-directive.md) también puede usarse para crear un alias para un [espacio de nombres](../../../csharp/language-reference/keywords/namespace.md). Por ejemplo, si está usando un espacio de nombres escrito previamente que contiene espacios de nombres anidados, puede que quiera declarar un alias para proporcionar una manera abreviada de hacer referencia a uno en concreto, como se muestra en el ejemplo siguiente:  
+## <a name="namespace-aliases"></a><span data-ttu-id="623ac-112">Alias de espacios de nombres</span><span class="sxs-lookup"><span data-stu-id="623ac-112">Namespace Aliases</span></span>  
+ <span data-ttu-id="623ac-113">La [directiva Using](../../../csharp/language-reference/keywords/using-directive.md) también puede usarse para crear un alias para un [espacio de nombres](../../../csharp/language-reference/keywords/namespace.md).</span><span class="sxs-lookup"><span data-stu-id="623ac-113">The [using Directive](../../../csharp/language-reference/keywords/using-directive.md) can also be used to create an alias for a [namespace](../../../csharp/language-reference/keywords/namespace.md).</span></span> <span data-ttu-id="623ac-114">Por ejemplo, si está usando un espacio de nombres escrito previamente que contiene espacios de nombres anidados, puede que quiera declarar un alias para proporcionar una manera abreviada de hacer referencia a uno en concreto, como se muestra en el ejemplo siguiente:</span><span class="sxs-lookup"><span data-stu-id="623ac-114">For example, if you are using a previously written namespace that contains nested namespaces, you might want to declare an alias to provide a shorthand way of referencing one in particular, as in the following example:</span></span>  
   
- [!code-cs[csProgGuideNamespaces#7](../../../csharp/programming-guide/namespaces/codesnippet/CSharp/using-namespaces_4.cs)]  
+ [!code-csharp[csProgGuideNamespaces#7](../../../csharp/programming-guide/namespaces/codesnippet/CSharp/using-namespaces_4.cs)]  
   
-## <a name="using-namespaces-to-control-scope"></a>Usar los espacios de nombres para controlar el ámbito  
- La palabra clave `namespace` se usa para declarar un ámbito. La capacidad de crear ámbitos en su proyecto le ayuda a organizar código y le permite crear tipos únicos globalmente. En el ejemplo siguiente, una clase denominada `SampleClass` se define en dos espacios de nombres, uno anidado dentro de otro. [. El operador ](../../../csharp/language-reference/operators/member-access-operator.md) se usa para diferenciar a qué método se llama.  
+## <a name="using-namespaces-to-control-scope"></a><span data-ttu-id="623ac-115">Usar los espacios de nombres para controlar el ámbito</span><span class="sxs-lookup"><span data-stu-id="623ac-115">Using Namespaces to control scope</span></span>  
+ <span data-ttu-id="623ac-116">La palabra clave `namespace` se usa para declarar un ámbito.</span><span class="sxs-lookup"><span data-stu-id="623ac-116">The `namespace` keyword is used to declare a scope.</span></span> <span data-ttu-id="623ac-117">La capacidad de crear ámbitos en su proyecto le ayuda a organizar código y le permite crear tipos únicos globalmente.</span><span class="sxs-lookup"><span data-stu-id="623ac-117">The ability to create scopes within your project helps organize code and lets you create globally-unique types.</span></span> <span data-ttu-id="623ac-118">En el ejemplo siguiente, una clase denominada `SampleClass` se define en dos espacios de nombres, uno anidado dentro de otro.</span><span class="sxs-lookup"><span data-stu-id="623ac-118">In the following example, a class titled `SampleClass` is defined in two namespaces, one nested inside the other.</span></span> <span data-ttu-id="623ac-119">[. El operador ](../../../csharp/language-reference/operators/member-access-operator.md) se usa para diferenciar a qué método se llama.</span><span class="sxs-lookup"><span data-stu-id="623ac-119">The [. Operator](../../../csharp/language-reference/operators/member-access-operator.md) is used to differentiate which method gets called.</span></span>  
   
- [!code-cs[csProgGuideNamespaces#8](../../../csharp/programming-guide/namespaces/codesnippet/CSharp/using-namespaces_5.cs)]  
+ [!code-csharp[csProgGuideNamespaces#8](../../../csharp/programming-guide/namespaces/codesnippet/CSharp/using-namespaces_5.cs)]  
   
-## <a name="fully-qualified-names"></a>nombres completos  
- Los espacios de nombres y los tipos tienen títulos únicos descritos mediante nombres completos que indican una jerarquía lógica. Por ejemplo, la instrucción `A.B` implica que `A` es el nombre del espacio de nombres o el tipo, y `B` está anidado en su interior.  
+## <a name="fully-qualified-names"></a><span data-ttu-id="623ac-120">nombres completos</span><span class="sxs-lookup"><span data-stu-id="623ac-120">Fully Qualified Names</span></span>  
+ <span data-ttu-id="623ac-121">Los espacios de nombres y los tipos tienen títulos únicos descritos mediante nombres completos que indican una jerarquía lógica.</span><span class="sxs-lookup"><span data-stu-id="623ac-121">Namespaces and types have unique titles described by fully qualified names that indicate a logical hierarchy.</span></span> <span data-ttu-id="623ac-122">Por ejemplo, la instrucción `A.B` implica que `A` es el nombre del espacio de nombres o el tipo, y `B` está anidado en su interior.</span><span class="sxs-lookup"><span data-stu-id="623ac-122">For example, the statement `A.B` implies that `A` is the name of the namespace or type, and `B` is nested inside it.</span></span>  
   
- En el ejemplo siguiente, existen espacios de nombres y clases anidadas. El nombre completo se indica como un comentario que sigue a cada entidad.  
+ <span data-ttu-id="623ac-123">En el ejemplo siguiente, existen espacios de nombres y clases anidadas.</span><span class="sxs-lookup"><span data-stu-id="623ac-123">In the following example, there are nested classes and namespaces.</span></span> <span data-ttu-id="623ac-124">El nombre completo se indica como un comentario que sigue a cada entidad.</span><span class="sxs-lookup"><span data-stu-id="623ac-124">The fully qualified name is indicated as a comment following each entity.</span></span>  
   
- [!code-cs[csProgGuideNamespaces#9](../../../csharp/programming-guide/namespaces/codesnippet/CSharp/using-namespaces_6.cs)]  
+ [!code-csharp[csProgGuideNamespaces#9](../../../csharp/programming-guide/namespaces/codesnippet/CSharp/using-namespaces_6.cs)]  
   
- En el segmento de código anterior:  
+ <span data-ttu-id="623ac-125">En el segmento de código anterior:</span><span class="sxs-lookup"><span data-stu-id="623ac-125">In the previous code segment:</span></span>  
   
--   El espacio de nombres `N1` es un miembro del espacio de nombres global. Su nombre completo es `N1`.  
+-   <span data-ttu-id="623ac-126">El espacio de nombres `N1` es un miembro del espacio de nombres global.</span><span class="sxs-lookup"><span data-stu-id="623ac-126">The namespace `N1` is a member of the global namespace.</span></span> <span data-ttu-id="623ac-127">Su nombre completo es `N1`.</span><span class="sxs-lookup"><span data-stu-id="623ac-127">Its fully qualified name is `N1`.</span></span>  
   
--   El espacio de nombres `N2` es un miembro de `N1`. Su nombre completo es `N1.N2`.  
+-   <span data-ttu-id="623ac-128">El espacio de nombres `N2` es un miembro de `N1`.</span><span class="sxs-lookup"><span data-stu-id="623ac-128">The namespace `N2` is a member of `N1`.</span></span> <span data-ttu-id="623ac-129">Su nombre completo es `N1.N2`.</span><span class="sxs-lookup"><span data-stu-id="623ac-129">Its fully qualified name is `N1.N2`.</span></span>  
   
--   La clase `C1` es un miembro de `N1`. Su nombre completo es `N1.C1`.  
+-   <span data-ttu-id="623ac-130">La clase `C1` es un miembro de `N1`.</span><span class="sxs-lookup"><span data-stu-id="623ac-130">The class `C1` is a member of `N1`.</span></span> <span data-ttu-id="623ac-131">Su nombre completo es `N1.C1`.</span><span class="sxs-lookup"><span data-stu-id="623ac-131">Its fully qualified name is `N1.C1`.</span></span>  
   
--   El nombre de la clase `C2` se usa dos veces en este código. En cambio, los nombres completos son únicos. La primera instancia de `C2` se declara dentro de `C1`; por lo tanto, su nombre completo es: `N1.C1.C2`. La segunda instancia de `C2` se declara dentro de un espacio de nombres `N2`; por lo tanto, su nombre completo es `N1.N2.C2`.  
+-   <span data-ttu-id="623ac-132">El nombre de la clase `C2` se usa dos veces en este código.</span><span class="sxs-lookup"><span data-stu-id="623ac-132">The class name `C2` is used two times in this code.</span></span> <span data-ttu-id="623ac-133">En cambio, los nombres completos son únicos.</span><span class="sxs-lookup"><span data-stu-id="623ac-133">However, the fully qualified names are unique.</span></span> <span data-ttu-id="623ac-134">La primera instancia de `C2` se declara dentro de `C1`; por lo tanto, su nombre completo es: `N1.C1.C2`.</span><span class="sxs-lookup"><span data-stu-id="623ac-134">The first instance of `C2` is declared inside `C1`; therefore, its fully qualified name is: `N1.C1.C2`.</span></span> <span data-ttu-id="623ac-135">La segunda instancia de `C2` se declara dentro de un espacio de nombres `N2`; por lo tanto, su nombre completo es `N1.N2.C2`.</span><span class="sxs-lookup"><span data-stu-id="623ac-135">The second instance of `C2` is declared inside a namespace `N2`; therefore, its fully qualified name is `N1.N2.C2`.</span></span>  
   
- Con el segmento de código anterior, puede agregar un nuevo miembro de clase, `C3`, al espacio de nombres `N1.N2` de la manera siguiente:  
+ <span data-ttu-id="623ac-136">Con el segmento de código anterior, puede agregar un nuevo miembro de clase, `C3`, al espacio de nombres `N1.N2` de la manera siguiente:</span><span class="sxs-lookup"><span data-stu-id="623ac-136">Using the previous code segment, you can add a new class member, `C3`, to the namespace `N1.N2` as follows:</span></span>  
   
- [!code-cs[csProgGuideNamespaces#10](../../../csharp/programming-guide/namespaces/codesnippet/CSharp/using-namespaces_7.cs)]  
+ [!code-csharp[csProgGuideNamespaces#10](../../../csharp/programming-guide/namespaces/codesnippet/CSharp/using-namespaces_7.cs)]  
   
- En general, use `::` para hacer referencia a un alias de espacio de nombres o `global::` para hacer referencia al espacio de nombres global y `.` para calificar tipos o miembros.  
+ <span data-ttu-id="623ac-137">En general, use `::` para hacer referencia a un alias de espacio de nombres o `global::` para hacer referencia al espacio de nombres global y `.` para calificar tipos o miembros.</span><span class="sxs-lookup"><span data-stu-id="623ac-137">In general, use `::` to reference a namespace alias or `global::` to reference the global namespace and `.` to qualify types or members.</span></span>  
   
- Es un error usar `::` con un alias que haga referencia a un tipo en lugar de a un espacio de nombres. Por ejemplo:  
+ <span data-ttu-id="623ac-138">Es un error usar `::` con un alias que haga referencia a un tipo en lugar de a un espacio de nombres.</span><span class="sxs-lookup"><span data-stu-id="623ac-138">It is an error to use `::` with an alias that references a type instead of a namespace.</span></span> <span data-ttu-id="623ac-139">Por ejemplo:</span><span class="sxs-lookup"><span data-stu-id="623ac-139">For example:</span></span>  
   
- [!code-cs[csProgGuideNamespaces#11](../../../csharp/programming-guide/namespaces/codesnippet/CSharp/using-namespaces_8.cs)]  
+ [!code-csharp[csProgGuideNamespaces#11](../../../csharp/programming-guide/namespaces/codesnippet/CSharp/using-namespaces_8.cs)]  
   
- [!code-cs[csProgGuideNamespaces#12](../../../csharp/programming-guide/namespaces/codesnippet/CSharp/using-namespaces_9.cs)]  
+ [!code-csharp[csProgGuideNamespaces#12](../../../csharp/programming-guide/namespaces/codesnippet/CSharp/using-namespaces_9.cs)]  
   
- Recuerde que la palabra `global` no es un alias predefinido; por lo tanto, `global.X` no tiene ningún significado especial. Adquiere un significado especial solo cuando se usa con `::`.  
+ <span data-ttu-id="623ac-140">Recuerde que la palabra `global` no es un alias predefinido; por lo tanto, `global.X` no tiene ningún significado especial.</span><span class="sxs-lookup"><span data-stu-id="623ac-140">Remember that the word `global` is not a predefined alias; therefore, `global.X` does not have any special meaning.</span></span> <span data-ttu-id="623ac-141">Adquiere un significado especial solo cuando se usa con `::`.</span><span class="sxs-lookup"><span data-stu-id="623ac-141">It acquires a special meaning only when it is used with `::`.</span></span>  
   
- La advertencia del compilador CS0440 se genera si define un alias denominado global porque `global::` siempre hace referencia al espacio de nombres global y no a un alias. Por ejemplo, la línea siguiente genera la advertencia:  
+ <span data-ttu-id="623ac-142">La advertencia del compilador CS0440 se genera si define un alias denominado global porque `global::` siempre hace referencia al espacio de nombres global y no a un alias.</span><span class="sxs-lookup"><span data-stu-id="623ac-142">Compiler warning CS0440 is generated if you define an alias named global because `global::` always references the global namespace and not an alias.</span></span> <span data-ttu-id="623ac-143">Por ejemplo, la línea siguiente genera la advertencia:</span><span class="sxs-lookup"><span data-stu-id="623ac-143">For example, the following line generates the warning:</span></span>  
   
- [!code-cs[csProgGuideNamespaces#13](../../../csharp/programming-guide/namespaces/codesnippet/CSharp/using-namespaces_10.cs)]  
+ [!code-csharp[csProgGuideNamespaces#13](../../../csharp/programming-guide/namespaces/codesnippet/CSharp/using-namespaces_10.cs)]  
   
- Usar `::` con alias es una buena idea y protege contra la introducción inesperada de tipos adicionales. Por ejemplo, considere este ejemplo:  
+ <span data-ttu-id="623ac-144">Usar `::` con alias es una buena idea y protege contra la introducción inesperada de tipos adicionales.</span><span class="sxs-lookup"><span data-stu-id="623ac-144">Using `::` with aliases is a good idea and protects against the unexpected introduction of additional types.</span></span> <span data-ttu-id="623ac-145">Por ejemplo, considere este ejemplo:</span><span class="sxs-lookup"><span data-stu-id="623ac-145">For example, consider this example:</span></span>  
   
- [!code-cs[csProgGuideNamespaces#14](../../../csharp/programming-guide/namespaces/codesnippet/CSharp/using-namespaces_11.cs)]  
+ [!code-csharp[csProgGuideNamespaces#14](../../../csharp/programming-guide/namespaces/codesnippet/CSharp/using-namespaces_11.cs)]  
   
- [!code-cs[csProgGuideNamespaces#15](../../../csharp/programming-guide/namespaces/codesnippet/CSharp/using-namespaces_12.cs)]  
+ [!code-csharp[csProgGuideNamespaces#15](../../../csharp/programming-guide/namespaces/codesnippet/CSharp/using-namespaces_12.cs)]  
   
- Esto funciona, pero si un tipo denominado `Alias` fuera a introducirse posteriormente, `Alias.` se enlazaría a ese tipo en su lugar. Usar `Alias::Exception` garantiza que `Alias` se trata como un alias de espacio de nombres y no se confunde con un tipo.  
+ <span data-ttu-id="623ac-146">Esto funciona, pero si un tipo denominado `Alias` fuera a introducirse posteriormente, `Alias.` se enlazaría a ese tipo en su lugar.</span><span class="sxs-lookup"><span data-stu-id="623ac-146">This works, but if a type named `Alias` were to subsequently be introduced, `Alias.` would bind to that type instead.</span></span> <span data-ttu-id="623ac-147">Usar `Alias::Exception` garantiza que `Alias` se trata como un alias de espacio de nombres y no se confunde con un tipo.</span><span class="sxs-lookup"><span data-stu-id="623ac-147">Using `Alias::Exception` insures that `Alias` is treated as a namespace alias and not mistaken for a type.</span></span>  
   
- Vea el tema [Cómo: Usar el alias del espacio de nombres global](../../../csharp/programming-guide/namespaces/how-to-use-the-global-namespace-alias.md) para obtener más información sobre el alias `global`.  
+ <span data-ttu-id="623ac-148">Vea el tema [Cómo: Usar el alias del espacio de nombres global](../../../csharp/programming-guide/namespaces/how-to-use-the-global-namespace-alias.md) para obtener más información sobre el alias `global`.</span><span class="sxs-lookup"><span data-stu-id="623ac-148">See the topic [How to: Use the Global Namespace Alias](../../../csharp/programming-guide/namespaces/how-to-use-the-global-namespace-alias.md) for more information regarding the `global` alias.</span></span>  
   
-## <a name="see-also"></a>Vea también  
- [Guía de programación de C#](../../../csharp/programming-guide/index.md)   
- [Namespaces](../../../csharp/programming-guide/namespaces/index.md)  (Espacios de nombres)  
- [Palabras clave del espacio de nombres](../../../csharp/language-reference/keywords/namespace-keywords.md)   
- [. Operador](../../../csharp/language-reference/operators/member-access-operator.md)   
- [Operador ::](../../../csharp/language-reference/operators/namespace-alias-qualifer.md)   
- [extern](../../../csharp/language-reference/keywords/extern.md)
-
+## <a name="see-also"></a><span data-ttu-id="623ac-149">Vea también</span><span class="sxs-lookup"><span data-stu-id="623ac-149">See Also</span></span>  
+ [<span data-ttu-id="623ac-150">Guía de programación de C#</span><span class="sxs-lookup"><span data-stu-id="623ac-150">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+ [<span data-ttu-id="623ac-151">Espacios de nombres</span><span class="sxs-lookup"><span data-stu-id="623ac-151">Namespaces</span></span>](../../../csharp/programming-guide/namespaces/index.md)  
+ [<span data-ttu-id="623ac-152">Palabras clave del espacio de nombres</span><span class="sxs-lookup"><span data-stu-id="623ac-152">Namespace Keywords</span></span>](../../../csharp/language-reference/keywords/namespace-keywords.md)  
+ [<span data-ttu-id="623ac-153">. .</span><span class="sxs-lookup"><span data-stu-id="623ac-153">. Operator</span></span>](../../../csharp/language-reference/operators/member-access-operator.md)  
+ [<span data-ttu-id="623ac-154">Operador ::</span><span class="sxs-lookup"><span data-stu-id="623ac-154">:: Operator</span></span>](../../../csharp/language-reference/operators/namespace-alias-qualifer.md)  
+ [<span data-ttu-id="623ac-155">extern</span><span class="sxs-lookup"><span data-stu-id="623ac-155">extern</span></span>](../../../csharp/language-reference/keywords/extern.md)

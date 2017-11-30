@@ -1,122 +1,102 @@
 ---
 title: enum (Referencia de C#)
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
 f1_keywords:
 - enum
 - enum_CSharpKeyword
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- enum keyword [C#]
+helpviewer_keywords: enum keyword [C#]
 ms.assetid: bbeb9a0f-e9b3-41ab-b0a6-c41b1a08974c
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 00ae9b555ae73db445fe4a4facf00753bf8c759a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 81117b1419c2a9c3babd6a7429052e2b23e08a70
-ms.openlocfilehash: fbadbcf92a6ac8ed46c3e81fa9eda1ceac8f6631
-ms.contentlocale: es-es
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="enum-c-reference"></a>enum (Referencia de C#)
-La palabra clave `enum` se utiliza para declarar una enumeración, un tipo distinto que consiste en un conjunto de constantes con nombre denominado lista de enumeradores.  
+# <a name="enum-c-reference"></a><span data-ttu-id="c395f-102">enum (Referencia de C#)</span><span class="sxs-lookup"><span data-stu-id="c395f-102">enum (C# Reference)</span></span>
+<span data-ttu-id="c395f-103">La palabra clave `enum` se utiliza para declarar una enumeración, un tipo distinto que consiste en un conjunto de constantes con nombre denominado lista de enumeradores.</span><span class="sxs-lookup"><span data-stu-id="c395f-103">The `enum` keyword is used to declare an enumeration, a distinct type that consists of a set of named constants called the enumerator list.</span></span>  
   
- Normalmente suele ser recomendable definir una enumeración directamente dentro de un espacio de nombres para que todas las clases de dicho espacio puedan tener acceso a esta con la misma facilidad. Sin embargo, una enumeración también puede anidarse dentro de una clase o estructura.  
+ <span data-ttu-id="c395f-104">Normalmente suele ser recomendable definir una enumeración directamente dentro de un espacio de nombres para que todas las clases de dicho espacio puedan tener acceso a esta con la misma facilidad.</span><span class="sxs-lookup"><span data-stu-id="c395f-104">Usually it is best to define an enum directly within a namespace so that all classes in the namespace can access it with equal convenience.</span></span> <span data-ttu-id="c395f-105">Sin embargo, una enumeración también puede anidarse dentro de una clase o estructura.</span><span class="sxs-lookup"><span data-stu-id="c395f-105">However, an enum can also be nested within a class or struct.</span></span>  
   
- De manera predeterminada, el primer enumerador tiene el valor 0 y el valor de cada enumerador sucesivo se incrementa en 1. Por ejemplo, en la siguiente enumeración, `Sat` es `0`, `Sun` es `1`, `Mon` es `2`, y así sucesivamente.  
+ <span data-ttu-id="c395f-106">De manera predeterminada, el primer enumerador tiene el valor 0 y el valor de cada enumerador sucesivo se incrementa en 1.</span><span class="sxs-lookup"><span data-stu-id="c395f-106">By default, the first enumerator has the value 0, and the value of each successive enumerator is increased by 1.</span></span> <span data-ttu-id="c395f-107">Por ejemplo, en la siguiente enumeración, `Sat` es `0`, `Sun` es `1`, `Mon` es `2`, y así sucesivamente.</span><span class="sxs-lookup"><span data-stu-id="c395f-107">For example, in the following enumeration, `Sat` is `0`, `Sun` is `1`, `Mon` is `2`, and so forth.</span></span>  
   
 ```  
 enum Days {Sat, Sun, Mon, Tue, Wed, Thu, Fri};  
 ```  
   
- Los enumeradores pueden usar inicializadores para invalidar los valores predeterminados, como se muestra en el ejemplo siguiente.  
+ <span data-ttu-id="c395f-108">Los enumeradores pueden usar inicializadores para invalidar los valores predeterminados, como se muestra en el ejemplo siguiente.</span><span class="sxs-lookup"><span data-stu-id="c395f-108">Enumerators can use initializers to override the default values, as shown in the following example.</span></span>  
   
 ```  
 enum Days {Sat=1, Sun, Mon, Tue, Wed, Thu, Fri};  
 ```  
   
- En esta enumeración, la secuencia de elementos debe iniciarse a partir de `1` en lugar de `0`. Sin embargo, se recomienda incluir una constante con el valor 0. Para obtener más información, vea [Tipos de enumeración](../../../csharp/programming-guide/enumeration-types.md).  
+ <span data-ttu-id="c395f-109">En esta enumeración, la secuencia de elementos debe iniciarse a partir de `1` en lugar de `0`.</span><span class="sxs-lookup"><span data-stu-id="c395f-109">In this enumeration, the sequence of elements is forced to start from `1` instead of `0`.</span></span> <span data-ttu-id="c395f-110">Sin embargo, se recomienda incluir una constante con el valor 0.</span><span class="sxs-lookup"><span data-stu-id="c395f-110">However, including a constant that has the value of 0 is recommended.</span></span> <span data-ttu-id="c395f-111">Para obtener más información, vea [Tipos de enumeración](../../../csharp/programming-guide/enumeration-types.md).</span><span class="sxs-lookup"><span data-stu-id="c395f-111">For more information, see [Enumeration Types](../../../csharp/programming-guide/enumeration-types.md).</span></span>  
   
- Cada tipo de enumeración tiene un tipo subyacente, que puede ser cualquier tipo entero excepto [char](../../../csharp/language-reference/keywords/char.md). El tipo subyacente predeterminado de los elementos de la enumeración es [int](../../../csharp/language-reference/keywords/int.md). Para declarar una enumeración de otro tipo entero, como [byte](../../../csharp/language-reference/keywords/byte.md), use el carácter de dos puntos después del identificador y escriba a continuación el tipo, como se muestra en el ejemplo siguiente.  
+ <span data-ttu-id="c395f-112">Cada tipo de enumeración tiene un tipo subyacente, que puede ser cualquier tipo entero excepto [char](../../../csharp/language-reference/keywords/char.md).</span><span class="sxs-lookup"><span data-stu-id="c395f-112">Every enumeration type has an underlying type, which can be any integral type except [char](../../../csharp/language-reference/keywords/char.md).</span></span> <span data-ttu-id="c395f-113">El tipo subyacente predeterminado de los elementos de la enumeración es [int](../../../csharp/language-reference/keywords/int.md). Para declarar una enumeración de otro tipo entero, como [byte](../../../csharp/language-reference/keywords/byte.md), use el carácter de dos puntos después del identificador y escriba a continuación el tipo, como se muestra en el ejemplo siguiente.</span><span class="sxs-lookup"><span data-stu-id="c395f-113">The default underlying type of enumeration elements is [int](../../../csharp/language-reference/keywords/int.md). To declare an enum of another integral type, such as [byte](../../../csharp/language-reference/keywords/byte.md), use a colon after the identifier followed by the type, as shown in the following example.</span></span>  
   
 ```  
 enum Days : byte {Sat=1, Sun, Mon, Tue, Wed, Thu, Fri};  
 ```  
   
- Los tipos admitidos para una enumeración son `byte`, [sbyte](../../../csharp/language-reference/keywords/sbyte.md), [short](../../../csharp/language-reference/keywords/short.md), [ushort](../../../csharp/language-reference/keywords/ushort.md), [int](../../../csharp/language-reference/keywords/int.md), [uint](../../../csharp/language-reference/keywords/uint.md), [long](../../../csharp/language-reference/keywords/long.md)o [ulong](../../../csharp/language-reference/keywords/ulong.md).  
+ <span data-ttu-id="c395f-114">Los tipos admitidos para una enumeración son `byte`, [sbyte](../../../csharp/language-reference/keywords/sbyte.md), [short](../../../csharp/language-reference/keywords/short.md), [ushort](../../../csharp/language-reference/keywords/ushort.md), [int](../../../csharp/language-reference/keywords/int.md), [uint](../../../csharp/language-reference/keywords/uint.md), [long](../../../csharp/language-reference/keywords/long.md)o [ulong](../../../csharp/language-reference/keywords/ulong.md).</span><span class="sxs-lookup"><span data-stu-id="c395f-114">The approved types for an enum are `byte`, [sbyte](../../../csharp/language-reference/keywords/sbyte.md), [short](../../../csharp/language-reference/keywords/short.md), [ushort](../../../csharp/language-reference/keywords/ushort.md), [int](../../../csharp/language-reference/keywords/int.md), [uint](../../../csharp/language-reference/keywords/uint.md), [long](../../../csharp/language-reference/keywords/long.md), or [ulong](../../../csharp/language-reference/keywords/ulong.md).</span></span>  
   
- A una variable de tipo `Days` se le puede asignar cualquier valor en el intervalo del tipo subyacente; los valores no se limitan a las constantes con nombre.  
+ <span data-ttu-id="c395f-115">A una variable de tipo `Days` se le puede asignar cualquier valor en el intervalo del tipo subyacente; los valores no se limitan a las constantes con nombre.</span><span class="sxs-lookup"><span data-stu-id="c395f-115">A variable of type `Days` can be assigned any value in the range of the underlying type; the values are not limited to the named constants.</span></span>  
   
- El valor predeterminado de `enum E` es el valor que produce la expresión `(E)0`.  
+ <span data-ttu-id="c395f-116">El valor predeterminado de `enum E` es el valor que produce la expresión `(E)0`.</span><span class="sxs-lookup"><span data-stu-id="c395f-116">The default value of an `enum E` is the value produced by the expression `(E)0`.</span></span>  
   
 > [!NOTE]
->  Un enumerador no puede contener espacios en blanco en su nombre.  
+>  <span data-ttu-id="c395f-117">Un enumerador no puede contener espacios en blanco en su nombre.</span><span class="sxs-lookup"><span data-stu-id="c395f-117">An enumerator cannot contain white space in its name.</span></span>  
   
- El tipo subyacente especifica la cantidad de almacenamiento asignado a cada enumerador. No obstante, se necesita una conversión explícita para convertir un tipo `enum` a un tipo entero. Por ejemplo, la siguiente instrucción asigna el enumerador `Sun` a una variable de tipo [int](../../../csharp/language-reference/keywords/int.md) utilizando una conversión de tipos para convertir de `enum` a `int`.  
+ <span data-ttu-id="c395f-118">El tipo subyacente especifica la cantidad de almacenamiento asignado a cada enumerador.</span><span class="sxs-lookup"><span data-stu-id="c395f-118">The underlying type specifies how much storage is allocated for each enumerator.</span></span> <span data-ttu-id="c395f-119">No obstante, se necesita una conversión explícita para convertir un tipo `enum` a un tipo entero.</span><span class="sxs-lookup"><span data-stu-id="c395f-119">However, an explicit cast is necessary to convert from `enum` type to an integral type.</span></span> <span data-ttu-id="c395f-120">Por ejemplo, la siguiente instrucción asigna el enumerador `Sun` a una variable de tipo [int](../../../csharp/language-reference/keywords/int.md) utilizando una conversión de tipos para convertir de `enum` a `int`.</span><span class="sxs-lookup"><span data-stu-id="c395f-120">For example, the following statement assigns the enumerator `Sun` to a variable of the type [int](../../../csharp/language-reference/keywords/int.md) by using a cast to convert from `enum` to `int`.</span></span>  
   
 ```  
 int x = (int)Days.Sun;  
 ```  
   
- Cuando se aplica <xref:System.FlagsAttribute?displayProperty=nameWithType> a una enumeración que contiene algunos elementos que se pueden combinar con una operación `OR` bit a bit, se observará que el atributo afecta al comportamiento de `enum` cuando se utiliza con algunas herramientas. Se pueden observar estos cambios al utilizar herramientas tales como los métodos de la clase <xref:System.Console> y el Evaluador de expresiones. (Vea el tercer ejemplo.)  
+ <span data-ttu-id="c395f-121">Cuando se aplica <xref:System.FlagsAttribute?displayProperty=nameWithType> a una enumeración que contiene algunos elementos que se pueden combinar con una operación `OR` bit a bit, se observará que el atributo afecta al comportamiento de `enum` cuando se utiliza con algunas herramientas.</span><span class="sxs-lookup"><span data-stu-id="c395f-121">When you apply <xref:System.FlagsAttribute?displayProperty=nameWithType> to an enumeration that contains elements that can be combined with a bitwise `OR` operation, the attribute affects the behavior of the `enum` when it is used with some tools.</span></span> <span data-ttu-id="c395f-122">Se pueden observar estos cambios al utilizar herramientas tales como los métodos de la clase <xref:System.Console> y el Evaluador de expresiones.</span><span class="sxs-lookup"><span data-stu-id="c395f-122">You can notice these changes when you use tools such as the <xref:System.Console> class methods and the Expression Evaluator.</span></span> <span data-ttu-id="c395f-123">(Vea el tercer ejemplo.)</span><span class="sxs-lookup"><span data-stu-id="c395f-123">(See the third example.)</span></span>  
   
-## <a name="robust-programming"></a>Programación sólida  
- Como ocurre con cualquier constante, todas las referencias a los valores individuales de una enumeración se convierten en literales numéricos en tiempo de compilación. Esto puede crear posibles problemas de versiones como se describe en [Constantes](../../../csharp/programming-guide/classes-and-structs/constants.md).  
+## <a name="robust-programming"></a><span data-ttu-id="c395f-124">Programación sólida</span><span class="sxs-lookup"><span data-stu-id="c395f-124">Robust Programming</span></span>  
+ <span data-ttu-id="c395f-125">Como ocurre con cualquier constante, todas las referencias a los valores individuales de una enumeración se convierten en literales numéricos en tiempo de compilación.</span><span class="sxs-lookup"><span data-stu-id="c395f-125">Just as with any constant, all references to the individual values of an enum are converted to numeric literals at compile time.</span></span> <span data-ttu-id="c395f-126">Esto puede crear posibles problemas de versiones como se describe en [Constantes](../../../csharp/programming-guide/classes-and-structs/constants.md).</span><span class="sxs-lookup"><span data-stu-id="c395f-126">This can create potential versioning issues as described in [Constants](../../../csharp/programming-guide/classes-and-structs/constants.md).</span></span>  
   
- La asignación de valores adicionales a nuevas versiones de enumeraciones o el cambio de los valores de los miembros de enumeración en una nueva versión puede producir problemas para el código fuente dependiente. Los valores enum se utilizan a menudo en instrucciones [switch](../../../csharp/language-reference/keywords/switch.md) . Si los elementos adicionales se han agregado al tipo `enum` , la sección predeterminada de la instrucción switch se puede seleccionar de forma inesperada.  
+ <span data-ttu-id="c395f-127">La asignación de valores adicionales a nuevas versiones de enumeraciones o el cambio de los valores de los miembros de enumeración en una nueva versión puede producir problemas para el código fuente dependiente.</span><span class="sxs-lookup"><span data-stu-id="c395f-127">Assigning additional values to new versions of enums, or changing the values of the enum members in a new version, can cause problems for dependent source code.</span></span> <span data-ttu-id="c395f-128">Los valores enum se utilizan a menudo en instrucciones [switch](../../../csharp/language-reference/keywords/switch.md) .</span><span class="sxs-lookup"><span data-stu-id="c395f-128">Enum values often are used in [switch](../../../csharp/language-reference/keywords/switch.md) statements.</span></span> <span data-ttu-id="c395f-129">Si los elementos adicionales se han agregado al tipo `enum` , la sección predeterminada de la instrucción switch se puede seleccionar de forma inesperada.</span><span class="sxs-lookup"><span data-stu-id="c395f-129">If additional elements have been added to the `enum` type, the default section of the switch statement can be selected unexpectedly.</span></span>  
   
- Si otros desarrolladores utilizan su código, debería proporcionar instrucciones sobre cómo debería reaccionar el código de ellos al agregar nuevos elementos a cualquier tipo `enum` .  
+ <span data-ttu-id="c395f-130">Si otros desarrolladores utilizan su código, debería proporcionar instrucciones sobre cómo debería reaccionar el código de ellos al agregar nuevos elementos a cualquier tipo `enum` .</span><span class="sxs-lookup"><span data-stu-id="c395f-130">If other developers use your code, you should provide guidelines about how their code should react if new elements are added to any `enum` types.</span></span>  
   
-## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente, se declara una enumeración, `Days`. Dos enumeradores se convierten explícitamente en un número entero y se asignan a variables de número entero.  
+## <a name="example"></a><span data-ttu-id="c395f-131">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="c395f-131">Example</span></span>  
+ <span data-ttu-id="c395f-132">En el ejemplo siguiente, se declara una enumeración, `Days`.</span><span class="sxs-lookup"><span data-stu-id="c395f-132">In the following example, an enumeration, `Days`, is declared.</span></span> <span data-ttu-id="c395f-133">Dos enumeradores se convierten explícitamente en un número entero y se asignan a variables de número entero.</span><span class="sxs-lookup"><span data-stu-id="c395f-133">Two enumerators are explicitly converted to integer and assigned to integer variables.</span></span>  
   
- [!code-cs[csrefKeywordsTypes#10](../../../csharp/language-reference/keywords/codesnippet/CSharp/enum_1.cs)]  
+ [!code-csharp[csrefKeywordsTypes#10](../../../csharp/language-reference/keywords/codesnippet/CSharp/enum_1.cs)]  
   
-## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente, la opción de tipo base se utiliza para declarar un `enum` cuyos miembros son del tipo `long`. Observe que a pesar de que el tipo subyacente de la enumeración es `long`, los miembros de la enumeración todavía deben convertirse explícitamente al tipo `long` mediante una conversión de tipos.  
+## <a name="example"></a><span data-ttu-id="c395f-134">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="c395f-134">Example</span></span>  
+ <span data-ttu-id="c395f-135">En el ejemplo siguiente, la opción de tipo base se utiliza para declarar un `enum` cuyos miembros son del tipo `long`.</span><span class="sxs-lookup"><span data-stu-id="c395f-135">In the following example, the base-type option is used to declare an `enum` whose members are of type `long`.</span></span> <span data-ttu-id="c395f-136">Observe que a pesar de que el tipo subyacente de la enumeración es `long`, los miembros de la enumeración todavía deben convertirse explícitamente al tipo `long` mediante una conversión de tipos.</span><span class="sxs-lookup"><span data-stu-id="c395f-136">Notice that even though the underlying type of the enumeration is `long`, the enumeration members still must be explicitly converted to type `long` by using a cast.</span></span>  
   
- [!code-cs[csrefKeywordsTypes#11](../../../csharp/language-reference/keywords/codesnippet/CSharp/enum_2.cs)]  
+ [!code-csharp[csrefKeywordsTypes#11](../../../csharp/language-reference/keywords/codesnippet/CSharp/enum_2.cs)]  
   
-## <a name="example"></a>Ejemplo  
- En el ejemplo de código siguiente se ilustra el uso y efecto del atributo <xref:System.FlagsAttribute?displayProperty=nameWithType> en una declaración `enum` .  
+## <a name="example"></a><span data-ttu-id="c395f-137">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="c395f-137">Example</span></span>  
+ <span data-ttu-id="c395f-138">En el ejemplo de código siguiente se ilustra el uso y efecto del atributo <xref:System.FlagsAttribute?displayProperty=nameWithType> en una declaración `enum` .</span><span class="sxs-lookup"><span data-stu-id="c395f-138">The following code example illustrates the use and effect of the <xref:System.FlagsAttribute?displayProperty=nameWithType> attribute on an `enum` declaration.</span></span>  
   
- [!code-cs[csrefKeywordsTypes#12](../../../csharp/language-reference/keywords/codesnippet/CSharp/enum_3.cs)]  
+ [!code-csharp[csrefKeywordsTypes#12](../../../csharp/language-reference/keywords/codesnippet/CSharp/enum_3.cs)]  
   
-## <a name="comments"></a>Comentarios  
- Si quita `Flags`, el ejemplo muestra los siguientes valores:  
-  
- `5`  
+## <a name="comments"></a><span data-ttu-id="c395f-139">Comentarios</span><span class="sxs-lookup"><span data-stu-id="c395f-139">Comments</span></span>  
+ <span data-ttu-id="c395f-140">Si quita `Flags`, el ejemplo muestra los siguientes valores:</span><span class="sxs-lookup"><span data-stu-id="c395f-140">If you remove `Flags`, the example displays the following values:</span></span>  
   
  `5`  
   
-## <a name="c-language-specification"></a>Especificación del lenguaje C#  
+ `5`  
+  
+## <a name="c-language-specification"></a><span data-ttu-id="c395f-141">Especificación del lenguaje C#</span><span class="sxs-lookup"><span data-stu-id="c395f-141">C# Language Specification</span></span>  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [Referencia de C#](../../../csharp/language-reference/index.md)   
- [Tipos de enumeración](../../../csharp/programming-guide/enumeration-types.md)   
- [Palabras clave de C#](../../../csharp/language-reference/keywords/index.md)   
- [Tabla de tipos enteros](../../../csharp/language-reference/keywords/integral-types-table.md)   
- [Tabla de tipos integrados](../../../csharp/language-reference/keywords/built-in-types-table.md)   
- [Tabla de conversiones numéricas implícitas](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)   
- [Tabla de conversiones numéricas explícitas](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)
-
+## <a name="see-also"></a><span data-ttu-id="c395f-142">Vea también</span><span class="sxs-lookup"><span data-stu-id="c395f-142">See Also</span></span>  
+ [<span data-ttu-id="c395f-143">Referencia de C#</span><span class="sxs-lookup"><span data-stu-id="c395f-143">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
+ [<span data-ttu-id="c395f-144">Tipos de enumeración</span><span class="sxs-lookup"><span data-stu-id="c395f-144">Enumeration Types</span></span>](../../../csharp/programming-guide/enumeration-types.md)  
+ [<span data-ttu-id="c395f-145">Palabras clave de C#</span><span class="sxs-lookup"><span data-stu-id="c395f-145">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)  
+ [<span data-ttu-id="c395f-146">Tabla de tipos enteros</span><span class="sxs-lookup"><span data-stu-id="c395f-146">Integral Types Table</span></span>](../../../csharp/language-reference/keywords/integral-types-table.md)  
+ [<span data-ttu-id="c395f-147">Tabla de tipos integrados</span><span class="sxs-lookup"><span data-stu-id="c395f-147">Built-In Types Table</span></span>](../../../csharp/language-reference/keywords/built-in-types-table.md)  
+ [<span data-ttu-id="c395f-148">Tabla de conversiones numéricas implícitas</span><span class="sxs-lookup"><span data-stu-id="c395f-148">Implicit Numeric Conversions Table</span></span>](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)  
+ [<span data-ttu-id="c395f-149">Tabla de conversiones numéricas explícitas</span><span class="sxs-lookup"><span data-stu-id="c395f-149">Explicit Numeric Conversions Table</span></span>](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)

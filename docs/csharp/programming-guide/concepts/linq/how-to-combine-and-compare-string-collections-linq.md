@@ -1,37 +1,28 @@
 ---
 title: "Cómo: Combinar y comparar colecciones de cadenas (LINQ) (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 25926e5b-fde2-4dc1-86a0-16ead7aa13d2
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: c84e472b9b836fd996170543479e24a406ec2e8f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 9738a804ac1bf58aa904b503544419a7eb5b7902
-ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-combine-and-compare-string-collections-linq-c"></a>Cómo: Combinar y comparar colecciones de cadenas (LINQ) (C#)
-En este ejemplo se muestra cómo combinar archivos que contienen líneas de texto y después ordenar los resultados. En concreto, se muestra cómo realizar una concatenación simple, una unión y una intersección en los dos conjuntos de líneas de texto.  
+# <a name="how-to-combine-and-compare-string-collections-linq-c"></a><span data-ttu-id="185b0-102">Cómo: Combinar y comparar colecciones de cadenas (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="185b0-102">How to: Combine and Compare String Collections (LINQ) (C#)</span></span>
+<span data-ttu-id="185b0-103">En este ejemplo se muestra cómo combinar archivos que contienen líneas de texto y después ordenar los resultados.</span><span class="sxs-lookup"><span data-stu-id="185b0-103">This example shows how to merge files that contain lines of text and then sort the results.</span></span> <span data-ttu-id="185b0-104">En concreto, se muestra cómo realizar una concatenación simple, una unión y una intersección en los dos conjuntos de líneas de texto.</span><span class="sxs-lookup"><span data-stu-id="185b0-104">Specifically, it shows how to perform a simple concatenation, a union, and an intersection on the two sets of text lines.</span></span>  
   
-### <a name="to-set-up-the-project-and-the-text-files"></a>Para configurar el proyecto y los archivos de texto  
+### <a name="to-set-up-the-project-and-the-text-files"></a><span data-ttu-id="185b0-105">Para configurar el proyecto y los archivos de texto</span><span class="sxs-lookup"><span data-stu-id="185b0-105">To set up the project and the text files</span></span>  
   
-1.  Copie estos nombres en un archivo de texto denominado names1.txt y guárdelo en la carpeta del proyecto:  
+1.  <span data-ttu-id="185b0-106">Copie estos nombres en un archivo de texto denominado names1.txt y guárdelo en la carpeta del proyecto:</span><span class="sxs-lookup"><span data-stu-id="185b0-106">Copy these names into a text file that is named names1.txt and save it in your project folder:</span></span>  
   
     ```  
     Bankov, Peter  
@@ -46,7 +37,7 @@ En este ejemplo se muestra cómo combinar archivos que contienen líneas de text
     Garcia, Debra  
     ```  
   
-2.  Copie estos nombres en un archivo de texto denominado names2.txt y guárdelo en la carpeta del proyecto. Tenga en cuenta que los dos archivos tienen algunos nombres en común.  
+2.  <span data-ttu-id="185b0-107">Copie estos nombres en un archivo de texto denominado names2.txt y guárdelo en la carpeta del proyecto.</span><span class="sxs-lookup"><span data-stu-id="185b0-107">Copy these names into a text file that is named names2.txt and save it in your project folder.</span></span> <span data-ttu-id="185b0-108">Tenga en cuenta que los dos archivos tienen algunos nombres en común.</span><span class="sxs-lookup"><span data-stu-id="185b0-108">Note that the two files have some names in common.</span></span>  
   
     ```  
     Liu, Jinghao  
@@ -61,7 +52,7 @@ En este ejemplo se muestra cómo combinar archivos que contienen líneas de text
     El Yassir, Mehdi  
     ```  
   
-## <a name="example"></a>Ejemplo  
+## <a name="example"></a><span data-ttu-id="185b0-109">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="185b0-109">Example</span></span>  
   
 ```csharp  
 class MergeStrings  
@@ -185,10 +176,9 @@ class MergeStrings
 */  
 ```  
   
-## <a name="compiling-the-code"></a>Compilar el código  
- Cree un proyecto destinado a .NET Framework versión 3.5 o posterior, con una referencia a System.Core.dll y directivas `using` para los espacios de nombres System.Linq y System.IO.  
+## <a name="compiling-the-code"></a><span data-ttu-id="185b0-110">Compilar el código</span><span class="sxs-lookup"><span data-stu-id="185b0-110">Compiling the Code</span></span>  
+ <span data-ttu-id="185b0-111">Cree un proyecto destinado a .NET Framework versión 3.5 o posterior, con una referencia a System.Core.dll y directivas `using` para los espacios de nombres System.Linq y System.IO.</span><span class="sxs-lookup"><span data-stu-id="185b0-111">Create a project that targets the .NET Framework  version 3.5 or higher, with a reference to System.Core.dll and `using` directives for the System.Linq and System.IO namespaces.</span></span>  
   
-## <a name="see-also"></a>Vea también  
- [LINQ y cadenas (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)   
- [LINQ y directorios de archivos (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)
-
+## <a name="see-also"></a><span data-ttu-id="185b0-112">Vea también</span><span class="sxs-lookup"><span data-stu-id="185b0-112">See Also</span></span>  
+ [<span data-ttu-id="185b0-113">LINQ y cadenas (C#)</span><span class="sxs-lookup"><span data-stu-id="185b0-113">LINQ and Strings (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)  
+ [<span data-ttu-id="185b0-114">LINQ y directorios de archivos (C#)</span><span class="sxs-lookup"><span data-stu-id="185b0-114">LINQ and File Directories (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)

@@ -1,1 +1,1 @@
-Hojas de estilos en cascada (CSS, Cascading Style Sheets)
+<span data-ttu-id="7b052-101">Hojas de estilos en cascada (CSS, Cascading Style Sheets)</span><span class="sxs-lookup"><span data-stu-id="7b052-101">Cascading Style Sheets (CSS)</span></span>

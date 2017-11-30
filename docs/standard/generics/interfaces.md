@@ -1,55 +1,58 @@
 ---
-title: "Interfaces gen&#233;ricas | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "comparaciones de igualdad [.NET Framework]"
-  - "interfaces genéricas [.NET Framework]"
-  - "genéricos [.NET Framework], interfaces"
-  - "ordenar comparaciones [.NET Framework]"
+title: "Interfaces genéricas"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- generic interfaces [.NET Framework]
+- equality comparisons [.NET Framework]
+- generics [.NET Framework], interfaces
+- ordering comparisons [.NET Framework]
 ms.assetid: 88bf5b04-d371-4edb-ba38-01ec7cabaacf
-caps.latest.revision: 9
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: 71cc1410a13fc73cce931a063a929ba94aab91be
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Interfaces gen&#233;ricas
-Este tema ofrece una introducción a las interfaces genéricas que proporcionan funcionalidad común a distintas familias de tipos genéricos.  
+# <a name="generic-interfaces"></a><span data-ttu-id="235bb-102">Interfaces genéricas</span><span class="sxs-lookup"><span data-stu-id="235bb-102">Generic Interfaces</span></span>
+<span data-ttu-id="235bb-103">Este tema ofrece una introducción a las interfaces genéricas que proporcionan funcionalidad común a distintas familias de tipos genéricos.</span><span class="sxs-lookup"><span data-stu-id="235bb-103">This topic provides an overview of generic interfaces that provide common functionality across families of generic types.</span></span>  
   
-## Interfaces genéricas  
- Las interfaces genéricas proporcionan homólogas con seguridad de tipos a las interfaces no genéricas para realizar comparaciones de ordenación y de igualdad, y para obtener funcionalidad compartida por los tipos de colección genéricos.  
+## <a name="generic-interfaces"></a><span data-ttu-id="235bb-104">Interfaces genéricas</span><span class="sxs-lookup"><span data-stu-id="235bb-104">Generic Interfaces</span></span>  
+ <span data-ttu-id="235bb-105">Las interfaces genéricas proporcionan homólogas con seguridad de tipos a las interfaces no genéricas para realizar comparaciones de ordenación y de igualdad, y para obtener funcionalidad compartida por los tipos de colección genéricos.</span><span class="sxs-lookup"><span data-stu-id="235bb-105">Generic interfaces provide type-safe counterparts to nongeneric interfaces for ordering and equality comparisons and for functionality that is shared by generic collection types.</span></span>  
   
 > [!NOTE]
->  A partir de [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], los parámetros de tipo de varias interfaces genéricas están marcados como covariantes o contravariantes, y ofrecen una mayor flexibilidad para asignar y usar tipos que implementan estas interfaces.  Consulte [Covarianza y contravarianza](../../../docs/standard/generics/covariance-and-contravariance.md).  
+>  <span data-ttu-id="235bb-106">A partir de [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], los parámetros de tipo de varias interfaces genéricas están marcados como covariantes o contravariantes, y ofrecen una mayor flexibilidad para asignar y usar tipos que implementan estas interfaces.</span><span class="sxs-lookup"><span data-stu-id="235bb-106">Starting with the [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], the type parameters of several generic interfaces are marked covariant or contravariant, providing greater flexibility in assigning and using types that implement these interfaces.</span></span> <span data-ttu-id="235bb-107">Vea [Covarianza y contravarianza](../../../docs/standard/generics/covariance-and-contravariance.md).</span><span class="sxs-lookup"><span data-stu-id="235bb-107">See [Covariance and Contravariance](../../../docs/standard/generics/covariance-and-contravariance.md).</span></span>  
   
-### Comparaciones de igualdad y ordenación  
- En el espacio de nombres <xref:System>, las interfaces genéricas <xref:System.IComparable%601?displayProperty=fullName> y <xref:System.IEquatable%601?displayProperty=fullName>, igual que sus homólogas no genéricas, definen métodos para realizar comparaciones de ordenación y comparaciones de igualdad, respectivamente.  Los tipos implementan estas interfaces para proporcionar la capacidad de realizar dichas comparaciones.  
+### <a name="equality-and-ordering-comparisons"></a><span data-ttu-id="235bb-108">Comparaciones de igualdad y ordenación</span><span class="sxs-lookup"><span data-stu-id="235bb-108">Equality and Ordering Comparisons</span></span>  
+ <span data-ttu-id="235bb-109">En el espacio de nombres <xref:System>, las interfaces genéricas <xref:System.IComparable%601?displayProperty=nameWithType> y <xref:System.IEquatable%601?displayProperty=nameWithType>, igual que sus homólogas no genéricas, definen métodos para realizar comparaciones de ordenación y comparaciones de igualdad, respectivamente.</span><span class="sxs-lookup"><span data-stu-id="235bb-109">In the <xref:System> namespace, the <xref:System.IComparable%601?displayProperty=nameWithType> and <xref:System.IEquatable%601?displayProperty=nameWithType> generic interfaces, like their nongeneric counterparts, define methods for ordering comparisons and equality comparisons, respectively.</span></span> <span data-ttu-id="235bb-110">Los tipos implementan estas interfaces para proporcionar la capacidad de realizar dichas comparaciones.</span><span class="sxs-lookup"><span data-stu-id="235bb-110">Types implement these interfaces to provide the ability to perform such comparisons.</span></span>  
   
- En el espacio de nombres <xref:System.Collections.Generic>, las interfaces genéricas <xref:System.Collections.Generic.IComparer%601> y <xref:System.Collections.Generic.IEqualityComparer%601> ofrecen una manera de definir una comparación de ordenación o de igualdad para los tipos que no implementan las interfaces genéricas <xref:System.IComparable%601?displayProperty=fullName> o <xref:System.IEquatable%601?displayProperty=fullName> y proporcionan una manera de redefinir esas relaciones para los tipos que sí lo hacen.  Estas interfaces son usadas por métodos y constructores de muchas de las clases de colección genéricas.  Por ejemplo, puede pasar un objeto genérico <xref:System.Collections.Generic.IComparer%601> al constructor de la clase <xref:System.Collections.Generic.SortedDictionary%602> para especificar un criterio de ordenación para un tipo que no implementa una interfaz <xref:System.IComparable%601?displayProperty=fullName> genérica.  Hay sobrecargas del método estático genérico <xref:System.Array.Sort%2A?displayProperty=fullName> y el método de instancia <xref:System.Collections.Generic.List%601.Sort%2A?displayProperty=fullName> para ordenar matrices y listas usando implementaciones genéricas <xref:System.Collections.Generic.IComparer%601>.  
+ <span data-ttu-id="235bb-111">En el espacio de nombres <xref:System.Collections.Generic>, las interfaces genéricas <xref:System.Collections.Generic.IComparer%601> y <xref:System.Collections.Generic.IEqualityComparer%601> ofrecen una manera de definir una comparación de ordenación o de igualdad para los tipos que no implementan las interfaces genéricas <xref:System.IComparable%601?displayProperty=nameWithType> o <xref:System.IEquatable%601?displayProperty=nameWithType> y proporcionan una manera de redefinir esas relaciones para los tipos que sí lo hacen.</span><span class="sxs-lookup"><span data-stu-id="235bb-111">In the <xref:System.Collections.Generic> namespace, the <xref:System.Collections.Generic.IComparer%601> and <xref:System.Collections.Generic.IEqualityComparer%601> generic interfaces offer a way to define an ordering or equality comparison for types that do not implement the <xref:System.IComparable%601?displayProperty=nameWithType> or <xref:System.IEquatable%601?displayProperty=nameWithType> generic interface, and they provide a way to redefine those relationships for types that do.</span></span> <span data-ttu-id="235bb-112">Estas interfaces son usadas por métodos y constructores de muchas de las clases de colección genéricas.</span><span class="sxs-lookup"><span data-stu-id="235bb-112">These interfaces are used by methods and constructors of many of the generic collection classes.</span></span> <span data-ttu-id="235bb-113">Por ejemplo, puede pasar un objeto genérico <xref:System.Collections.Generic.IComparer%601> al constructor de la clase <xref:System.Collections.Generic.SortedDictionary%602> para especificar un criterio de ordenación para un tipo que no implementa una interfaz <xref:System.IComparable%601?displayProperty=nameWithType> genérica.</span><span class="sxs-lookup"><span data-stu-id="235bb-113">For example, you can pass a generic <xref:System.Collections.Generic.IComparer%601> object to the constructor of the <xref:System.Collections.Generic.SortedDictionary%602> class to specify a sort order for a type that does not implement generic <xref:System.IComparable%601?displayProperty=nameWithType>.</span></span> <span data-ttu-id="235bb-114">Hay sobrecargas del método estático genérico <xref:System.Array.Sort%2A?displayProperty=nameWithType> y el método de instancia <xref:System.Collections.Generic.List%601.Sort%2A?displayProperty=nameWithType> para ordenar matrices y listas usando implementaciones genéricas <xref:System.Collections.Generic.IComparer%601>.</span><span class="sxs-lookup"><span data-stu-id="235bb-114">There are overloads of the <xref:System.Array.Sort%2A?displayProperty=nameWithType> generic static method and the <xref:System.Collections.Generic.List%601.Sort%2A?displayProperty=nameWithType> instance method for sorting arrays and lists using generic <xref:System.Collections.Generic.IComparer%601> implementations.</span></span>  
   
- Las clases genéricas <xref:System.Collections.Generic.Comparer%601> y <xref:System.Collections.Generic.EqualityComparer%601> proporcionan clases base para las implementaciones de las interfaces genéricas <xref:System.Collections.Generic.IComparer%601> y <xref:System.Collections.Generic.IEqualityComparer%601>, y también proporcionan comparaciones de ordenación y de igualdad predeterminadas mediante sus respectivas propiedades <xref:System.Collections.Generic.Comparer%601.Default%2A?displayProperty=fullName> y <xref:System.Collections.Generic.EqualityComparer%601.Default%2A?displayProperty=fullName>.  
+ <span data-ttu-id="235bb-115">Las clases genéricas <xref:System.Collections.Generic.Comparer%601> y <xref:System.Collections.Generic.EqualityComparer%601> proporcionan clases base para las implementaciones de las interfaces genéricas <xref:System.Collections.Generic.IComparer%601> y <xref:System.Collections.Generic.IEqualityComparer%601>, y también proporcionan comparaciones de ordenación y de igualdad predeterminadas mediante sus respectivas propiedades <xref:System.Collections.Generic.Comparer%601.Default%2A?displayProperty=nameWithType> y <xref:System.Collections.Generic.EqualityComparer%601.Default%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="235bb-115">The <xref:System.Collections.Generic.Comparer%601> and <xref:System.Collections.Generic.EqualityComparer%601> generic classes provide base classes for implementations of the <xref:System.Collections.Generic.IComparer%601> and <xref:System.Collections.Generic.IEqualityComparer%601> generic interfaces, and also provide default ordering and equality comparisons through their respective <xref:System.Collections.Generic.Comparer%601.Default%2A?displayProperty=nameWithType> and <xref:System.Collections.Generic.EqualityComparer%601.Default%2A?displayProperty=nameWithType> properties.</span></span>  
   
-### Funcionalidad de colección  
- La interfaz genérica <xref:System.Collections.Generic.ICollection%601> es la interfaz básica para los tipos de colección genéricos.  Proporciona la funcionalidad básica para agregar, quitar, copiar y enumerar elementos.  <xref:System.Collections.Generic.ICollection%601> hereda tanto de la interfaz genérica <xref:System.Collections.Generic.IEnumerable%601> como de la interfaz no genérica <xref:System.Collections.IEnumerable>.  
+### <a name="collection-functionality"></a><span data-ttu-id="235bb-116">Funcionalidad de colección</span><span class="sxs-lookup"><span data-stu-id="235bb-116">Collection Functionality</span></span>  
+ <span data-ttu-id="235bb-117">La interfaz genérica <xref:System.Collections.Generic.ICollection%601> es la interfaz básica para los tipos de colección genéricos.</span><span class="sxs-lookup"><span data-stu-id="235bb-117">The <xref:System.Collections.Generic.ICollection%601> generic interface is the basic interface for generic collection types.</span></span> <span data-ttu-id="235bb-118">Proporciona la funcionalidad básica para agregar, quitar, copiar y enumerar elementos.</span><span class="sxs-lookup"><span data-stu-id="235bb-118">It provides basic functionality for adding, removing, copying, and enumerating elements.</span></span> <span data-ttu-id="235bb-119"><xref:System.Collections.Generic.ICollection%601> hereda tanto de la interfaz genérica <xref:System.Collections.Generic.IEnumerable%601> como de la interfaz no genérica <xref:System.Collections.IEnumerable>.</span><span class="sxs-lookup"><span data-stu-id="235bb-119"><xref:System.Collections.Generic.ICollection%601> inherits from both generic <xref:System.Collections.Generic.IEnumerable%601> and nongeneric <xref:System.Collections.IEnumerable>.</span></span>  
   
- La interfaz genérica <xref:System.Collections.Generic.IList%601> extiende la interfaz genérica <xref:System.Collections.Generic.ICollection%601> con métodos para la recuperación indizada.  
+ <span data-ttu-id="235bb-120">La interfaz genérica <xref:System.Collections.Generic.IList%601> extiende la interfaz genérica <xref:System.Collections.Generic.ICollection%601> con métodos para la recuperación indizada.</span><span class="sxs-lookup"><span data-stu-id="235bb-120">The <xref:System.Collections.Generic.IList%601> generic interface extends the <xref:System.Collections.Generic.ICollection%601> generic interface with methods for indexed retrieval.</span></span>  
   
- La interfaz genérica <xref:System.Collections.Generic.IDictionary%602> extiende la interfaz genérica <xref:System.Collections.Generic.ICollection%601> con métodos para la recuperación con clave.  Los tipos de diccionario genéricos de la biblioteca de clases base de .NET Framework también implementan la interfaz no genérica <xref:System.Collections.IDictionary>.  
+ <span data-ttu-id="235bb-121">La interfaz genérica <xref:System.Collections.Generic.IDictionary%602> extiende la interfaz genérica <xref:System.Collections.Generic.ICollection%601> con métodos para la recuperación con clave.</span><span class="sxs-lookup"><span data-stu-id="235bb-121">The <xref:System.Collections.Generic.IDictionary%602> generic interface extends the <xref:System.Collections.Generic.ICollection%601> generic interface with methods for keyed retrieval.</span></span> <span data-ttu-id="235bb-122">Los tipos de diccionario genéricos de la biblioteca de clases base de .NET Framework también implementan la interfaz no genérica <xref:System.Collections.IDictionary>.</span><span class="sxs-lookup"><span data-stu-id="235bb-122">Generic dictionary types in the .NET Framework base class library also implement the nongeneric <xref:System.Collections.IDictionary> interface.</span></span>  
   
- La interfaz genérica <xref:System.Collections.Generic.IEnumerable%601> proporciona una estructura de enumerador genérica.  La interfaz genérica <xref:System.Collections.Generic.IEnumerator%601> implementada por enumeradores genéricos hereda la interfaz no genérica <xref:System.Collections.IEnumerator>; los miembros <xref:System.Collections.IEnumerator.MoveNext%2A> y <xref:System.Collections.IEnumerator.Reset%2A>, que no dependen del parámetro de tipo `T`, solo aparecen en la interfaz no genérica.  Esto significa que cualquier consumidor de la interfaz no genérica también puede usar la interfaz genérica.  
+ <span data-ttu-id="235bb-123">La interfaz genérica <xref:System.Collections.Generic.IEnumerable%601> proporciona una estructura de enumerador genérica.</span><span class="sxs-lookup"><span data-stu-id="235bb-123">The <xref:System.Collections.Generic.IEnumerable%601> generic interface provides a generic enumerator structure.</span></span> <span data-ttu-id="235bb-124">La interfaz genérica <xref:System.Collections.Generic.IEnumerator%601> implementada por enumeradores genéricos hereda la interfaz no genérica <xref:System.Collections.IEnumerator>; los miembros <xref:System.Collections.IEnumerator.MoveNext%2A> y <xref:System.Collections.IEnumerator.Reset%2A>, que no dependen del parámetro de tipo `T`, solo aparecen en la interfaz no genérica.</span><span class="sxs-lookup"><span data-stu-id="235bb-124">The <xref:System.Collections.Generic.IEnumerator%601> generic interface implemented by generic enumerators inherits the nongeneric <xref:System.Collections.IEnumerator> interface; the <xref:System.Collections.IEnumerator.MoveNext%2A> and <xref:System.Collections.IEnumerator.Reset%2A> members, which do not depend on the type parameter `T`, appear only on the nongeneric interface.</span></span> <span data-ttu-id="235bb-125">Esto significa que cualquier consumidor de la interfaz no genérica también puede usar la interfaz genérica.</span><span class="sxs-lookup"><span data-stu-id="235bb-125">This means that any consumer of the nongeneric interface can also consume the generic interface.</span></span>  
   
-## Vea también  
- <xref:System.Collections.Generic?displayProperty=fullName>   
- <xref:System.Collections.ObjectModel?displayProperty=fullName>   
- [Genéricos](../../../docs/standard/generics/index.md)   
- [Colecciones genéricas en .NET Framework](../../../docs/standard/generics/collections.md)   
- [Delegados genéricos para manipular matrices y listas](../../../docs/standard/generics/delegates-for-manipulating-arrays-and-lists.md)   
- [Covarianza y contravarianza](../../../docs/standard/generics/covariance-and-contravariance.md)
+## <a name="see-also"></a><span data-ttu-id="235bb-126">Vea también</span><span class="sxs-lookup"><span data-stu-id="235bb-126">See Also</span></span>  
+ <xref:System.Collections.Generic?displayProperty=nameWithType>  
+ <xref:System.Collections.ObjectModel?displayProperty=nameWithType>  
+ [<span data-ttu-id="235bb-127">Genéricos</span><span class="sxs-lookup"><span data-stu-id="235bb-127">Generics</span></span>](../../../docs/standard/generics/index.md)  
+ [<span data-ttu-id="235bb-128">Colecciones genéricas en .NET Framework</span><span class="sxs-lookup"><span data-stu-id="235bb-128">Generic Collections in the .NET Framework</span></span>](../../../docs/standard/generics/collections.md)  
+ [<span data-ttu-id="235bb-129">Delegados genéricos para manipular matrices y listas</span><span class="sxs-lookup"><span data-stu-id="235bb-129">Generic Delegates for Manipulating Arrays and Lists</span></span>](../../../docs/standard/generics/delegates-for-manipulating-arrays-and-lists.md)  
+ [<span data-ttu-id="235bb-130">Covarianza y contravarianza</span><span class="sxs-lookup"><span data-stu-id="235bb-130">Covariance and Contravariance</span></span>](../../../docs/standard/generics/covariance-and-contravariance.md)

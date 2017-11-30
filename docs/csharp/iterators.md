@@ -10,32 +10,30 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 5cf36f45-f91a-4fca-a0b7-87f233e108e9
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 18a5819402c752f32aecd0cd4c3bd5a490292ebf
-ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
+# <a name="iterators"></a><span data-ttu-id="56793-104">Iteradores</span><span class="sxs-lookup"><span data-stu-id="56793-104">Iterators</span></span>
 
-# <a name="iterators"></a>Iteradores
+<span data-ttu-id="56793-105">Prácticamente todos los programas que escriba tendrán alguna necesidad de recorrer en iteración una colección.</span><span class="sxs-lookup"><span data-stu-id="56793-105">Almost every program you write will have some need to iterate over a collection.</span></span> <span data-ttu-id="56793-106">Va a escribir código que examine cada elemento de una colección.</span><span class="sxs-lookup"><span data-stu-id="56793-106">You'll write code that examines every item in a collection.</span></span> 
 
-Prácticamente todos los programas que escriba tendrán alguna necesidad de recorrer en iteración una colección. Va a escribir código que examine cada elemento de una colección. 
+<span data-ttu-id="56793-107">También va a crear métodos de iterador, que son los métodos que genera un iterador para los elementos de esa clase.</span><span class="sxs-lookup"><span data-stu-id="56793-107">You'll also create iterator methods which are methods that produces an iterator for the elements of that class.</span></span> <span data-ttu-id="56793-108">Se pueden usar para:</span><span class="sxs-lookup"><span data-stu-id="56793-108">These can be used for:</span></span>
 
-También va a crear métodos de iterador, que son los métodos que genera un iterador para los elementos de esa clase. Se pueden usar para:
++ <span data-ttu-id="56793-109">Realizar una acción en cada elemento de una colección.</span><span class="sxs-lookup"><span data-stu-id="56793-109">Performing an action on each item in a collection.</span></span>
++ <span data-ttu-id="56793-110">Enumerar una colección personalizada.</span><span class="sxs-lookup"><span data-stu-id="56793-110">Enumerating a custom collection.</span></span>
++ <span data-ttu-id="56793-111">Extender [LINQ](linq/index.md) u otras bibliotecas.</span><span class="sxs-lookup"><span data-stu-id="56793-111">Extending [LINQ](linq/index.md) or other libraries.</span></span>
++ <span data-ttu-id="56793-112">Crear una canalización de datos en la que los datos fluyan de forma eficaz mediante métodos de iterador.</span><span class="sxs-lookup"><span data-stu-id="56793-112">Creating a data pipeline where data flows efficiently through iterator methods.</span></span>
 
-+ Realizar una acción en cada elemento de una colección.
-+ Enumerar una colección personalizada.
-+ Extender [LINQ](linq/index.md) u otras bibliotecas.
-+ Crear una canalización de datos en la que los datos fluyan de forma eficaz mediante métodos de iterador.
+<span data-ttu-id="56793-113">El lenguaje C# proporciona características para ambos escenarios.</span><span class="sxs-lookup"><span data-stu-id="56793-113">The C# language provides features for both these scenarios.</span></span> <span data-ttu-id="56793-114">Este artículo proporciona información general sobre esas características.</span><span class="sxs-lookup"><span data-stu-id="56793-114">This article provides an overview of those features.</span></span>
 
-El lenguaje C# proporciona características para ambos escenarios. Este artículo proporciona información general sobre esas características.
+<span data-ttu-id="56793-115">Este tutorial consta de varios pasos.</span><span class="sxs-lookup"><span data-stu-id="56793-115">This tutorial has multiple steps.</span></span> <span data-ttu-id="56793-116">Después de cada paso, puede ejecutar la aplicación y ver el progreso.</span><span class="sxs-lookup"><span data-stu-id="56793-116">After each step, you can run the application and see the progress.</span></span> <span data-ttu-id="56793-117">También puede [ver o descargar el ejemplo completo](https://github.com/dotnet/docs/blob/master/samples/csharp/iterators) para este tema.</span><span class="sxs-lookup"><span data-stu-id="56793-117">You can also [view or download the completed sample](https://github.com/dotnet/docs/blob/master/samples/csharp/iterators) for this topic.</span></span> <span data-ttu-id="56793-118">Para obtener instrucciones de descarga, vea [Ejemplos y tutoriales](../samples-and-tutorials/index.md#viewing-and-downloading-samples).</span><span class="sxs-lookup"><span data-stu-id="56793-118">For download instructions, see [Samples and Tutorials](../samples-and-tutorials/index.md#viewing-and-downloading-samples).</span></span>
 
-Este tutorial consta de varios pasos. Después de cada paso, puede ejecutar la aplicación y ver el progreso. También puede [ver o descargar el ejemplo completo](https://github.com/dotnet/docs/blob/master/samples/csharp/iterators) para este tema. Para obtener instrucciones de descarga, vea [Ejemplos y tutoriales](../samples-and-tutorials/index.md#viewing-and-downloading-samples).
+## <a name="iterating-with-foreach"></a><span data-ttu-id="56793-119">Iteración con foreach</span><span class="sxs-lookup"><span data-stu-id="56793-119">Iterating with foreach</span></span>
 
-## <a name="iterating-with-foreach"></a>Iteración con foreach
-
-Enumerar una colección es sencillo: la palabra clave `foreach` enumera una colección, ejecutando la instrucción incrustada una vez para cada elemento de la colección:
+<span data-ttu-id="56793-120">Enumerar una colección es sencillo: la palabra clave `foreach` enumera una colección, ejecutando la instrucción incrustada una vez para cada elemento de la colección:</span><span class="sxs-lookup"><span data-stu-id="56793-120">Enumerating a collection is simple: The `foreach` keyword enumerates a collection, executing the embedded statement once for each element in the collection:</span></span>
  
 ```csharp
 foreach (var item in collection)
@@ -44,15 +42,15 @@ foreach (var item in collection)
 }
 ```
 
-Así de simple. Para recorrer en iteración todo el contenido de una colección, la instrucción `foreach` es todo lo que necesita. Pero la instrucción `foreach` no es mágica. Depende de dos interfaces genéricas definidas en la biblioteca de .NET Core para generar el código necesario para recorrer en iteración una colección: `IEnumerable<T>` e `IEnumerator<T>`. Este mecanismo se explica con más detalle a continuación.
+<span data-ttu-id="56793-121">Así de simple.</span><span class="sxs-lookup"><span data-stu-id="56793-121">That's all there is to it.</span></span> <span data-ttu-id="56793-122">Para recorrer en iteración todo el contenido de una colección, la instrucción `foreach` es todo lo que necesita.</span><span class="sxs-lookup"><span data-stu-id="56793-122">To iterate over all the contents of a collection, the `foreach` statement is all you need.</span></span> <span data-ttu-id="56793-123">Pero la instrucción `foreach` no es mágica.</span><span class="sxs-lookup"><span data-stu-id="56793-123">The `foreach` statement isn't magic, though.</span></span> <span data-ttu-id="56793-124">Depende de dos interfaces genéricas definidas en la biblioteca de .NET Core para generar el código necesario para recorrer en iteración una colección: `IEnumerable<T>` e `IEnumerator<T>`.</span><span class="sxs-lookup"><span data-stu-id="56793-124">It relies on two generic interfaces defined in the .NET core library in order to generate the code necessary to iterate a collection: `IEnumerable<T>` and `IEnumerator<T>`.</span></span> <span data-ttu-id="56793-125">Este mecanismo se explica con más detalle a continuación.</span><span class="sxs-lookup"><span data-stu-id="56793-125">This mechanism is explained in more detail below.</span></span>
 
-Ambas interfaces tienen también homólogas no genéricas: `IEnumerable` e `IEnumerator`. Para el código moderno se prefieren las versiones [genéricas](programming-guide/generics/index.md).
+<span data-ttu-id="56793-126">Ambas interfaces tienen también homólogas no genéricas: `IEnumerable` e `IEnumerator`.</span><span class="sxs-lookup"><span data-stu-id="56793-126">Both of these interfaces also have non-generic counterparts: `IEnumerable` and `IEnumerator`.</span></span> <span data-ttu-id="56793-127">Para el código moderno se prefieren las versiones [genéricas](programming-guide/generics/index.md).</span><span class="sxs-lookup"><span data-stu-id="56793-127">The [generic](programming-guide/generics/index.md) versions are preferred for modern code.</span></span>
 
-## <a name="enumeration-sources-with-iterator-methods"></a>Orígenes de enumeración con métodos de iterador
+## <a name="enumeration-sources-with-iterator-methods"></a><span data-ttu-id="56793-128">Orígenes de enumeración con métodos de iterador</span><span class="sxs-lookup"><span data-stu-id="56793-128">Enumeration sources with iterator methods</span></span>
 
-Otra magnífica característica del lenguaje C# permite generar métodos que crean un origen para una enumeración. Se conocen como *métodos de iterador*. Un método de iterador define cómo generar los objetos de una secuencia cuando se solicita. Para definir un método de iterador se usan las palabras clave contextuales `yield return`. 
+<span data-ttu-id="56793-129">Otra magnífica característica del lenguaje C# permite generar métodos que crean un origen para una enumeración.</span><span class="sxs-lookup"><span data-stu-id="56793-129">Another great feature of the C# language enables you to build methods that create a source for an enumeration.</span></span> <span data-ttu-id="56793-130">Se conocen como *métodos de iterador*.</span><span class="sxs-lookup"><span data-stu-id="56793-130">These are referred to as *iterator methods*.</span></span> <span data-ttu-id="56793-131">Un método de iterador define cómo generar los objetos de una secuencia cuando se solicita.</span><span class="sxs-lookup"><span data-stu-id="56793-131">An iterator method defines how to generate the objects in a sequence when requested.</span></span> <span data-ttu-id="56793-132">Para definir un método de iterador se usan las palabras clave contextuales `yield return`.</span><span class="sxs-lookup"><span data-stu-id="56793-132">You use the `yield return` contextual keywords to define an iterator method.</span></span> 
 
-Podría escribir este método para generar la secuencia de enteros de 0 a 9:
+<span data-ttu-id="56793-133">Podría escribir este método para generar la secuencia de enteros de 0 a 9:</span><span class="sxs-lookup"><span data-stu-id="56793-133">You could write this method to produce the sequence of integers from 0 through 9:</span></span>
 
 ```csharp
 public IEnumerable<int> GetSingleDigitNumbers()
@@ -70,8 +68,8 @@ public IEnumerable<int> GetSingleDigitNumbers()
 }
 ```
 
-El código anterior muestra instrucciones distintivas `yield return` para resaltar el hecho de que se pueden usar varias instrucciones discretas `yield return` en un método de iterador.
-Puede usar (y hágalo a menudo) otras construcciones de lenguaje para simplificar el código de un método de iterador. La definición del método siguiente genera la misma secuencia de números:
+<span data-ttu-id="56793-134">El código anterior muestra instrucciones distintivas `yield return` para resaltar el hecho de que se pueden usar varias instrucciones discretas `yield return` en un método de iterador.</span><span class="sxs-lookup"><span data-stu-id="56793-134">The code above shows distinct `yield return` statements to highlight the fact that you can use multiple discrete `yield return` statements in an iterator method.</span></span>
+<span data-ttu-id="56793-135">Puede usar (y hágalo a menudo) otras construcciones de lenguaje para simplificar el código de un método de iterador.</span><span class="sxs-lookup"><span data-stu-id="56793-135">You can (and often do) use other language constructs to simplify the code of an iterator method.</span></span> <span data-ttu-id="56793-136">La definición del método siguiente genera la misma secuencia de números:</span><span class="sxs-lookup"><span data-stu-id="56793-136">The method definition below produces the exact same sequence of numbers:</span></span>
 
 ```csharp
 public IEnumerable<int> GetSingleDigitNumbers()
@@ -82,7 +80,7 @@ public IEnumerable<int> GetSingleDigitNumbers()
 }
 ```
 
-No tiene que elegir entre una y otra. Puede tener tantas instrucciones `yield return` como sea necesario para satisfacer las necesidades del método:
+<span data-ttu-id="56793-137">No tiene que elegir entre una y otra.</span><span class="sxs-lookup"><span data-stu-id="56793-137">You don't have to decide one or the other.</span></span> <span data-ttu-id="56793-138">Puede tener tantas instrucciones `yield return` como sea necesario para satisfacer las necesidades del método:</span><span class="sxs-lookup"><span data-stu-id="56793-138">You can have as many `yield return` statements as necessary to meet the needs of your method:</span></span>
 
 ```csharp
 public IEnumerable<int> GetSingleDigitNumbers()
@@ -99,7 +97,7 @@ public IEnumerable<int> GetSingleDigitNumbers()
 }
 ```
 
-Esa es la sintaxis básica. Veamos un ejemplo del mundo real en el que se escribe un método de iterador. Imagine que se encuentra en un proyecto de IoT y los sensores del dispositivo generan un flujo de datos muy grande. Para hacerse una idea de los datos, podría escribir un método que tomara muestras de cada enésimo elemento de datos. Este pequeño método de iterador lo hace:
+<span data-ttu-id="56793-139">Esa es la sintaxis básica.</span><span class="sxs-lookup"><span data-stu-id="56793-139">That's the basic syntax.</span></span> <span data-ttu-id="56793-140">Veamos un ejemplo del mundo real en el que se escribe un método de iterador.</span><span class="sxs-lookup"><span data-stu-id="56793-140">Let's consider a real world example where you would write an iterator method.</span></span> <span data-ttu-id="56793-141">Imagine que se encuentra en un proyecto de IoT y los sensores del dispositivo generan un flujo de datos muy grande.</span><span class="sxs-lookup"><span data-stu-id="56793-141">Imagine you're on an IoT project and the device sensors generate a very large stream of data.</span></span> <span data-ttu-id="56793-142">Para hacerse una idea de los datos, podría escribir un método que tomara muestras de cada enésimo elemento de datos.</span><span class="sxs-lookup"><span data-stu-id="56793-142">To get a feel for the data, you might write a method that samples every Nth data element.</span></span> <span data-ttu-id="56793-143">Este pequeño método de iterador lo hace:</span><span class="sxs-lookup"><span data-stu-id="56793-143">This small iterator method does the trick:</span></span>
 
 ```csharp
 public static IEnumerable<T> Sample(this IEnumerable<T> sourceSequence, int interval)
@@ -113,7 +111,7 @@ public static IEnumerable<T> Sample(this IEnumerable<T> sourceSequence, int inte
 }
 ```
 
-Hay una restricción importante en los métodos de iterador: no puede tener una instrucción `return` y una instrucción `yield return` en el mismo método. Lo siguiente no se compilará:
+<span data-ttu-id="56793-144">Hay una restricción importante en los métodos de iterador: no puede tener una instrucción `return` y una instrucción `yield return` en el mismo método.</span><span class="sxs-lookup"><span data-stu-id="56793-144">There is one important restriction on iterator methods: you can't have both a `return` statement and a `yield return` statement in the same method.</span></span> <span data-ttu-id="56793-145">Lo siguiente no se compilará:</span><span class="sxs-lookup"><span data-stu-id="56793-145">The following will not compile:</span></span>
 
 ```csharp
 public IEnumerable<int> GetSingleDigitNumbers()
@@ -130,9 +128,9 @@ public IEnumerable<int> GetSingleDigitNumbers()
 }
 ```
 
-Normalmente esta restricción no supone un problema. Tiene la opción de usar `yield return` en todo el método o de separar el método original en varios métodos, unos con `return` y otros con `yield return`.
+<span data-ttu-id="56793-146">Normalmente esta restricción no supone un problema.</span><span class="sxs-lookup"><span data-stu-id="56793-146">This restriction normally isn't a problem.</span></span> <span data-ttu-id="56793-147">Tiene la opción de usar `yield return` en todo el método o de separar el método original en varios métodos, unos con `return` y otros con `yield return`.</span><span class="sxs-lookup"><span data-stu-id="56793-147">You have a choice of either using `yield return` throughout the method, or separating the original method into multiple methods, some using `return`, and some using `yield return`.</span></span>
 
-Puede modificar el último método ligeramente para usar `yield return` en todas partes:
+<span data-ttu-id="56793-148">Puede modificar el último método ligeramente para usar `yield return` en todas partes:</span><span class="sxs-lookup"><span data-stu-id="56793-148">You can modify the last method slightly to use `yield return` everywhere:</span></span>
 
 ```csharp
 public IEnumerable<int> GetSingleDigitNumbers()
@@ -149,7 +147,7 @@ public IEnumerable<int> GetSingleDigitNumbers()
 }
 ```
  
-A veces, la respuesta correcta es dividir un método de iterador en dos métodos distintos. Uno que use `return` y un segundo que use `yield return`. Imagine una situación en la que quiera devolver una colección vacía, o los 5 primeros números impares, basándose en un argumento booleano. Eso se podría escribir como estos dos métodos:
+<span data-ttu-id="56793-149">A veces, la respuesta correcta es dividir un método de iterador en dos métodos distintos.</span><span class="sxs-lookup"><span data-stu-id="56793-149">Sometimes, the right answer is to split an iterator method into two different methods.</span></span> <span data-ttu-id="56793-150">Uno que use `return` y un segundo que use `yield return`.</span><span class="sxs-lookup"><span data-stu-id="56793-150">One that uses `return`, and a second that uses `yield return`.</span></span> <span data-ttu-id="56793-151">Imagine una situación en la que quiera devolver una colección vacía, o los 5 primeros números impares, basándose en un argumento booleano.</span><span class="sxs-lookup"><span data-stu-id="56793-151">Consider a situation where you might want to return an empty collection, or the first 5 odd numbers, based on a boolean argument.</span></span> <span data-ttu-id="56793-152">Eso se podría escribir como estos dos métodos:</span><span class="sxs-lookup"><span data-stu-id="56793-152">You could write that as these two methods:</span></span>
 
 ```csharp
 public IEnumerable<int> GetSingleDigitOddNumbers(bool getCollection)
@@ -169,13 +167,13 @@ private IEnumerable<int> IteratorMethod()
 }
 ```
  
-Observe los métodos anteriores. El primero usa la instrucción estándar `return` para devolver una colección vacía o el iterador creado por el segundo método. El segundo método usa la instrucción `yield return` para crear la secuencia solicitada.
+<span data-ttu-id="56793-153">Observe los métodos anteriores.</span><span class="sxs-lookup"><span data-stu-id="56793-153">Look at the methods above.</span></span> <span data-ttu-id="56793-154">El primero usa la instrucción estándar `return` para devolver una colección vacía o el iterador creado por el segundo método.</span><span class="sxs-lookup"><span data-stu-id="56793-154">The first uses the standard `return` statement to return either an empty collection, or the iterator created by the second method.</span></span> <span data-ttu-id="56793-155">El segundo método usa la instrucción `yield return` para crear la secuencia solicitada.</span><span class="sxs-lookup"><span data-stu-id="56793-155">The second method uses the `yield return` statement to create the requested sequence.</span></span>
 
-## <a name="deeper-dive-into-foreach"></a>Profundización en `foreach`
+## <a name="deeper-dive-into-foreach"></a><span data-ttu-id="56793-156">Profundización en `foreach`</span><span class="sxs-lookup"><span data-stu-id="56793-156">Deeper Dive into `foreach`</span></span>
 
-La instrucción `foreach` se expande en un elemento estándar que usa las interfaces `IEnumable<T>` e `IEnumerator<T>` para recorrer en iteración todos los elementos de una colección. También minimiza los errores cometidos por los desarrolladores al no administrar correctamente los recursos. 
+<span data-ttu-id="56793-157">La instrucción `foreach` se expande en un elemento estándar que usa las interfaces `IEnumable<T>` e `IEnumerator<T>` para recorrer en iteración todos los elementos de una colección.</span><span class="sxs-lookup"><span data-stu-id="56793-157">The `foreach` statement expands into a standard idiom that uses the `IEnumable<T>` and `IEnumerator<T>` interfaces to iterate across all elements of a collection.</span></span> <span data-ttu-id="56793-158">También minimiza los errores cometidos por los desarrolladores al no administrar correctamente los recursos.</span><span class="sxs-lookup"><span data-stu-id="56793-158">It also  minimizes errors developers make by not properly managing resources.</span></span> 
 
-El compilador traduce el bucle `foreach` que se muestra en el primer ejemplo en algo similar a esta construcción:
+<span data-ttu-id="56793-159">El compilador traduce el bucle `foreach` que se muestra en el primer ejemplo en algo similar a esta construcción:</span><span class="sxs-lookup"><span data-stu-id="56793-159">The compiler translates the `foreach` loop shown in the first example into something similar to this construct:</span></span>
 
 ```csharp
 IEnumerator<int> enumerator = collection.GetEnumerator();
@@ -186,7 +184,7 @@ while (enumerator.MoveNext())
 }
 ```
 
-La construcción anterior representa el código generado por el compilador de C# a partir de la versión 5 y superiores. Antes de la versión 5, la variable `item` tenía un ámbito diferente:
+<span data-ttu-id="56793-160">La construcción anterior representa el código generado por el compilador de C# a partir de la versión 5 y superiores.</span><span class="sxs-lookup"><span data-stu-id="56793-160">The construct above represents the code generated by the C# compiler as of version 5 and above.</span></span> <span data-ttu-id="56793-161">Antes de la versión 5, la variable `item` tenía un ámbito diferente:</span><span class="sxs-lookup"><span data-stu-id="56793-161">Prior to version 5, the `item` variable had a different scope:</span></span>
 
 ```csharp
 // C# versions 1 through 4:
@@ -199,9 +197,9 @@ while (enumerator.MoveNext())
 }
 ```
 
-Se modificó porque el comportamiento anterior podía provocar errores leves y difíciles de diagnosticar en las expresiones lambda. Vea la sección sobre [expresiones lambda](lambda-expressions.md) para obtener más información. 
+<span data-ttu-id="56793-162">Se modificó porque el comportamiento anterior podía provocar errores leves y difíciles de diagnosticar en las expresiones lambda.</span><span class="sxs-lookup"><span data-stu-id="56793-162">This was changed because the earlier behavior could lead to subtle and hard to diagnose bugs involving lambda expressions.</span></span> <span data-ttu-id="56793-163">Vea la sección sobre [expresiones lambda](lambda-expressions.md) para obtener más información.</span><span class="sxs-lookup"><span data-stu-id="56793-163">See the section on [lambda expressions](lambda-expressions.md) for more information.</span></span> 
 
-El código exacto generado por el compilador es algo más complicado y controla las situaciones en las que el objeto devuelto por `GetEnumerator()` implementa la interfaz `IDisposable`. La expansión completa genera código más parecido al siguiente:
+<span data-ttu-id="56793-164">El código exacto generado por el compilador es algo más complicado y controla las situaciones en las que el objeto devuelto por `GetEnumerator()` implementa la interfaz `IDisposable`.</span><span class="sxs-lookup"><span data-stu-id="56793-164">The exact code generated by the compiler is somewhat more complicated, and handles situations where the object returned by `GetEnumerator()` implements the `IDisposable` interface.</span></span> <span data-ttu-id="56793-165">La expansión completa genera código más parecido al siguiente:</span><span class="sxs-lookup"><span data-stu-id="56793-165">The full expansion generates code more like this:</span></span>
 
 ```csharp
 {
@@ -220,7 +218,7 @@ El código exacto generado por el compilador es algo más complicado y controla 
 }
 ```
 
-La manera en que el enumerador se elimina depende de las características del tipo de `enumerator`. En el caso general, la cláusula `finally` se expande en:
+<span data-ttu-id="56793-166">La manera en que el enumerador se elimina depende de las características del tipo de `enumerator`.</span><span class="sxs-lookup"><span data-stu-id="56793-166">The manner in which the enumerator is disposed of depends on the characteristics of the type of `enumerator`.</span></span> <span data-ttu-id="56793-167">En el caso general, la cláusula `finally` se expande en:</span><span class="sxs-lookup"><span data-stu-id="56793-167">In the general case, the `finally` clause expands to:</span></span>
 
 ```csharp
 finally 
@@ -229,14 +227,14 @@ finally
 } 
 ```
 
-Pero si el tipo de `enumerator` es un tipo sellado y no hay conversión implícita del tipo de `enumerator` a `IDisposable`, la cláusula `finally` se expande en un bloque vacío:
+<span data-ttu-id="56793-168">Pero si el tipo de `enumerator` es un tipo sellado y no hay conversión implícita del tipo de `enumerator` a `IDisposable`, la cláusula `finally` se expande en un bloque vacío:</span><span class="sxs-lookup"><span data-stu-id="56793-168">However, if the type of `enumerator` is a sealed type and there is no implicit conversion from the type of `enumerator` to `IDisposable`, the `finally` clause expands to an empty block:</span></span>
 ```csharp
 finally 
 {
 } 
 ```
 
-Si hay una conversión implícita del tipo de `enumerator` a `IDisposable`, y `enumerator` es un tipo de valor que no acepta valores Null, la cláusula `finally` se expande en:
+<span data-ttu-id="56793-169">Si hay una conversión implícita del tipo de `enumerator` a `IDisposable`, y `enumerator` es un tipo de valor que no acepta valores Null, la cláusula `finally` se expande en:</span><span class="sxs-lookup"><span data-stu-id="56793-169">If there is an implicit conversion from the type of `enumerator` to `IDisposable`, and `enumerator` is a non-nullable value type, the `finally` clause expands to:</span></span>
 
 ```csharp
 finally 
@@ -245,7 +243,6 @@ finally
 } 
 ```
 
-Afortunadamente, no es necesario recordar todos estos detalles. La instrucción `foreach` controla todos esos matices. El compilador generará el código correcto para cualquiera de estas construcciones. 
-
+<span data-ttu-id="56793-170">Afortunadamente, no es necesario recordar todos estos detalles.</span><span class="sxs-lookup"><span data-stu-id="56793-170">Thankfully, you don't need to remember all these details.</span></span> <span data-ttu-id="56793-171">La instrucción `foreach` controla todos esos matices.</span><span class="sxs-lookup"><span data-stu-id="56793-171">The `foreach` statement handles all those nuances for you.</span></span> <span data-ttu-id="56793-172">El compilador generará el código correcto para cualquiera de estas construcciones.</span><span class="sxs-lookup"><span data-stu-id="56793-172">The compiler will generate the correct code for any of these constructs.</span></span> 
 
 

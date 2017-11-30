@@ -1,1 +1,1 @@
-DirectX
+<span data-ttu-id="f8011-101">DirectX</span><span class="sxs-lookup"><span data-stu-id="f8011-101">DirectX</span></span>

@@ -7,104 +7,102 @@ ms.date: 08/13/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.translationtype: HT
-ms.sourcegitcommit: a19ab54a6cc44bd7acd1e40a4ca94da52bf14297
 ms.openlocfilehash: 4836f07ec1a8b59c343b4d0181587e602f61d45e
-ms.contentlocale: es-es
-ms.lasthandoff: 08/14/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="dotnet-clean"></a>dotnet-clean
+# <a name="dotnet-clean"></a><span data-ttu-id="3e9d2-103">dotnet-clean</span><span class="sxs-lookup"><span data-stu-id="3e9d2-103">dotnet-clean</span></span>
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a>Name
+## <a name="name"></a><span data-ttu-id="3e9d2-104">Name</span><span class="sxs-lookup"><span data-stu-id="3e9d2-104">Name</span></span>
 
-`dotnet clean`: limpia la salida de un proyecto.
+<span data-ttu-id="3e9d2-105">`dotnet clean`: limpia la salida de un proyecto.</span><span class="sxs-lookup"><span data-stu-id="3e9d2-105">`dotnet clean` - Cleans the output of a project.</span></span>
 
-## <a name="synopsis"></a>Sinopsis
+## <a name="synopsis"></a><span data-ttu-id="3e9d2-106">Sinopsis</span><span class="sxs-lookup"><span data-stu-id="3e9d2-106">Synopsis</span></span>
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
+# <a name="net-core-2xtabnetcore2x"></a>[<span data-ttu-id="3e9d2-107">.NET Core 2.x</span><span class="sxs-lookup"><span data-stu-id="3e9d2-107">.NET Core 2.x</span></span>](#tab/netcore2x)
 ```
 dotnet clean [<PROJECT>] [-c|--configuration] [-f|--framework] [-o|--output] [-r|--runtime] [-v|--verbosity]
 dotnet clean [-h|--help]
 ```
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+# <a name="net-core-1xtabnetcore1x"></a>[<span data-ttu-id="3e9d2-108">.NET Core 1.x</span><span class="sxs-lookup"><span data-stu-id="3e9d2-108">.NET Core 1.x</span></span>](#tab/netcore1x)
 ```
 dotnet clean [<PROJECT>] [-c|--configuration] [-f|--framework] [-o|--output] [-v|--verbosity]
 dotnet clean [-h|--help]
 ```
 ---
 
-## <a name="description"></a>Descripción
+## <a name="description"></a><span data-ttu-id="3e9d2-109">Descripción</span><span class="sxs-lookup"><span data-stu-id="3e9d2-109">Description</span></span>
 
-El comando `dotnet clean` limpia la salida de la compilación anterior. Se implementa como un [destino MSBuild](/visualstudio/msbuild/msbuild-targets), por lo que el proyecto se evalúa cuando se ejecuta el comando. Solo se limpian las salidas que se crearon durante la compilación. Se limpian las carpetas intermedias (*obj*) y de la salida final (*bin*).
+<span data-ttu-id="3e9d2-110">El comando `dotnet clean` limpia la salida de la compilación anterior.</span><span class="sxs-lookup"><span data-stu-id="3e9d2-110">The `dotnet clean` command cleans the output of the previous build.</span></span> <span data-ttu-id="3e9d2-111">Se implementa como un [destino MSBuild](/visualstudio/msbuild/msbuild-targets), por lo que el proyecto se evalúa cuando se ejecuta el comando.</span><span class="sxs-lookup"><span data-stu-id="3e9d2-111">It's implemented as an [MSBuild target](/visualstudio/msbuild/msbuild-targets), so the project is evaluated when the command is run.</span></span> <span data-ttu-id="3e9d2-112">Solo se limpian las salidas que se crearon durante la compilación.</span><span class="sxs-lookup"><span data-stu-id="3e9d2-112">Only the outputs created during the build are cleaned.</span></span> <span data-ttu-id="3e9d2-113">Se limpian las carpetas intermedias (*obj*) y de la salida final (*bin*).</span><span class="sxs-lookup"><span data-stu-id="3e9d2-113">Both intermediate (*obj*) and final output (*bin*) folders are cleaned.</span></span>
 
-## <a name="arguments"></a>Argumentos
+## <a name="arguments"></a><span data-ttu-id="3e9d2-114">Argumentos</span><span class="sxs-lookup"><span data-stu-id="3e9d2-114">Arguments</span></span>
 
 `PROJECT`
 
-El proyecto de MSBuild para limpiar. Si no se especifica un archivo de proyecto, MSBuild busca en el directorio de trabajo actual un archivo que tenga una extensión de archivo que termine en *proj* y usa ese archivo.
+<span data-ttu-id="3e9d2-115">El proyecto de MSBuild para limpiar.</span><span class="sxs-lookup"><span data-stu-id="3e9d2-115">The MSBuild project to clean.</span></span> <span data-ttu-id="3e9d2-116">Si no se especifica un archivo de proyecto, MSBuild busca en el directorio de trabajo actual un archivo que tenga una extensión de archivo que termine en *proj* y usa ese archivo.</span><span class="sxs-lookup"><span data-stu-id="3e9d2-116">If a project file is not specified, MSBuild searches the current working directory for a file that has a file extension that ends in *proj* and uses that file.</span></span>
 
-## <a name="options"></a>Opciones
+## <a name="options"></a><span data-ttu-id="3e9d2-117">Opciones</span><span class="sxs-lookup"><span data-stu-id="3e9d2-117">Options</span></span>
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
+# <a name="net-core-2xtabnetcore2x"></a>[<span data-ttu-id="3e9d2-118">.NET Core 2.x</span><span class="sxs-lookup"><span data-stu-id="3e9d2-118">.NET Core 2.x</span></span>](#tab/netcore2x)
 
 `-c|--configuration {Debug|Release}`
 
-Define la configuración de compilación. El valor predeterminado es `Debug`. Esta opción solo es necesaria al realizar la limpieza si la especificó durante el tiempo de compilación.
+<span data-ttu-id="3e9d2-119">Define la configuración de compilación.</span><span class="sxs-lookup"><span data-stu-id="3e9d2-119">Defines the build configuration.</span></span> <span data-ttu-id="3e9d2-120">El valor predeterminado es `Debug`.</span><span class="sxs-lookup"><span data-stu-id="3e9d2-120">The default value is `Debug`.</span></span> <span data-ttu-id="3e9d2-121">Esta opción solo es necesaria al realizar la limpieza si la especificó durante el tiempo de compilación.</span><span class="sxs-lookup"><span data-stu-id="3e9d2-121">This option is only required when cleaning if you specified it during build time.</span></span>
 
 `-f|--framework <FRAMEWORK>`
 
-El [marco](../../standard/frameworks.md) que se especificó en tiempo de compilación. El marco se debe definir en el [archivo de proyecto](csproj.md). Si especificó el marco en tiempo de compilación, debe especificar el marco al realizar la limpieza.
+<span data-ttu-id="3e9d2-122">El [marco](../../standard/frameworks.md) que se especificó en tiempo de compilación.</span><span class="sxs-lookup"><span data-stu-id="3e9d2-122">The [framework](../../standard/frameworks.md) that was specified at build time.</span></span> <span data-ttu-id="3e9d2-123">El marco se debe definir en el [archivo de proyecto](csproj.md).</span><span class="sxs-lookup"><span data-stu-id="3e9d2-123">The framework must be defined in the [project file](csproj.md).</span></span> <span data-ttu-id="3e9d2-124">Si especificó el marco en tiempo de compilación, debe especificar el marco al realizar la limpieza.</span><span class="sxs-lookup"><span data-stu-id="3e9d2-124">If you specified the framework at build time, you must specify the framework when cleaning.</span></span>
 
 `-h|--help`
 
-Imprime una corta ayuda para el comando.
+<span data-ttu-id="3e9d2-125">Imprime una corta ayuda para el comando.</span><span class="sxs-lookup"><span data-stu-id="3e9d2-125">Prints out a short help for the command.</span></span>
 
 `-o|--output <OUTPUT_DIRECTORY>`
 
-Directorio en el que se colocan las salidas de compilación. Especifique el modificador `-f|--framework <FRAMEWORK>` con el modificador del directorio de salida si especificó el marco cuando se compiló el proyecto.
+<span data-ttu-id="3e9d2-126">Directorio en el que se colocan las salidas de compilación.</span><span class="sxs-lookup"><span data-stu-id="3e9d2-126">Directory in which the build outputs are placed.</span></span> <span data-ttu-id="3e9d2-127">Especifique el modificador `-f|--framework <FRAMEWORK>` con el modificador del directorio de salida si especificó el marco cuando se compiló el proyecto.</span><span class="sxs-lookup"><span data-stu-id="3e9d2-127">Specify the `-f|--framework <FRAMEWORK>` switch with the output directory switch if you specified the framework when the project was built.</span></span>
 
 `-r|--runtime <RUNTIME_IDENTIFIER>`
 
-Limpia la carpeta de salida del tiempo de ejecución especificado. Esto se usa si se ha creado una [implementación autocontenida](../deploying/index.md#self-contained-deployments-scd).
+<span data-ttu-id="3e9d2-128">Limpia la carpeta de salida del tiempo de ejecución especificado.</span><span class="sxs-lookup"><span data-stu-id="3e9d2-128">Cleans the output folder of the specified runtime.</span></span> <span data-ttu-id="3e9d2-129">Esto se usa si se ha creado una [implementación autocontenida](../deploying/index.md#self-contained-deployments-scd).</span><span class="sxs-lookup"><span data-stu-id="3e9d2-129">This is used when a [self-contained deployment](../deploying/index.md#self-contained-deployments-scd) was created.</span></span>
 
 `-v|--verbosity <LEVEL>`
 
-Establece el nivel de detalle del comando. Niveles permitidos son q[uiet], m[inimal], n[ormal], d[etailed] y diag[nostic].
+<span data-ttu-id="3e9d2-130">Establece el nivel de detalle del comando.</span><span class="sxs-lookup"><span data-stu-id="3e9d2-130">Sets the verbosity level of the command.</span></span> <span data-ttu-id="3e9d2-131">Niveles permitidos son q[uiet], m[inimal], n[ormal], d[etailed] y diag[nostic].</span><span class="sxs-lookup"><span data-stu-id="3e9d2-131">Allowed levels are q[uiet], m[inimal], n[ormal], d[etailed], and diag[nostic].</span></span>
 
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+# <a name="net-core-1xtabnetcore1x"></a>[<span data-ttu-id="3e9d2-132">.NET Core 1.x</span><span class="sxs-lookup"><span data-stu-id="3e9d2-132">.NET Core 1.x</span></span>](#tab/netcore1x)
 
 `-c|--configuration {Debug|Release}`
 
-Define la configuración de compilación. El valor predeterminado es `Debug`. Esta opción solo es necesaria al realizar la limpieza si la especificó durante el tiempo de compilación.
+<span data-ttu-id="3e9d2-133">Define la configuración de compilación.</span><span class="sxs-lookup"><span data-stu-id="3e9d2-133">Defines the build configuration.</span></span> <span data-ttu-id="3e9d2-134">El valor predeterminado es `Debug`.</span><span class="sxs-lookup"><span data-stu-id="3e9d2-134">The default value is `Debug`.</span></span> <span data-ttu-id="3e9d2-135">Esta opción solo es necesaria al realizar la limpieza si la especificó durante el tiempo de compilación.</span><span class="sxs-lookup"><span data-stu-id="3e9d2-135">This option is only required when cleaning if you specified it during build time.</span></span>
 
 `-f|--framework <FRAMEWORK>`
 
-El [marco](../../standard/frameworks.md) que se especificó en tiempo de compilación. El marco se debe definir en el [archivo de proyecto](csproj.md). Si especificó el marco en tiempo de compilación, debe especificar el marco al realizar la limpieza.
+<span data-ttu-id="3e9d2-136">El [marco](../../standard/frameworks.md) que se especificó en tiempo de compilación.</span><span class="sxs-lookup"><span data-stu-id="3e9d2-136">The [framework](../../standard/frameworks.md) that was specified at build time.</span></span> <span data-ttu-id="3e9d2-137">El marco se debe definir en el [archivo de proyecto](csproj.md).</span><span class="sxs-lookup"><span data-stu-id="3e9d2-137">The framework must be defined in the [project file](csproj.md).</span></span> <span data-ttu-id="3e9d2-138">Si especificó el marco en tiempo de compilación, debe especificar el marco al realizar la limpieza.</span><span class="sxs-lookup"><span data-stu-id="3e9d2-138">If you specified the framework at build time, you must specify the framework when cleaning.</span></span>
 
 `-h|--help`
 
-Imprime una corta ayuda para el comando.
+<span data-ttu-id="3e9d2-139">Imprime una corta ayuda para el comando.</span><span class="sxs-lookup"><span data-stu-id="3e9d2-139">Prints out a short help for the command.</span></span>
 
 `-o|--output <OUTPUT_DIRECTORY>`
 
-Directorio en el que se colocan las salidas de compilación. Especifique el modificador `-f|--framework <FRAMEWORK>` con el modificador del directorio de salida si especificó el marco cuando se compiló el proyecto.
+<span data-ttu-id="3e9d2-140">Directorio en el que se colocan las salidas de compilación.</span><span class="sxs-lookup"><span data-stu-id="3e9d2-140">Directory in which the build outputs are placed.</span></span> <span data-ttu-id="3e9d2-141">Especifique el modificador `-f|--framework <FRAMEWORK>` con el modificador del directorio de salida si especificó el marco cuando se compiló el proyecto.</span><span class="sxs-lookup"><span data-stu-id="3e9d2-141">Specify the `-f|--framework <FRAMEWORK>` switch with the output directory switch if you specified the framework when the project was built.</span></span>
 
 `-v|--verbosity <LEVEL>`
 
-Establece el nivel de detalle del comando. Niveles permitidos son q[uiet], m[inimal], n[ormal], d[etailed] y diag[nostic].
+<span data-ttu-id="3e9d2-142">Establece el nivel de detalle del comando.</span><span class="sxs-lookup"><span data-stu-id="3e9d2-142">Sets the verbosity level of the command.</span></span> <span data-ttu-id="3e9d2-143">Niveles permitidos son q[uiet], m[inimal], n[ormal], d[etailed] y diag[nostic].</span><span class="sxs-lookup"><span data-stu-id="3e9d2-143">Allowed levels are q[uiet], m[inimal], n[ormal], d[etailed], and diag[nostic].</span></span>
 
 ---
 
-## <a name="examples"></a>Ejemplos
+## <a name="examples"></a><span data-ttu-id="3e9d2-144">Ejemplos</span><span class="sxs-lookup"><span data-stu-id="3e9d2-144">Examples</span></span>
 
-Limpie una compilación predeterminada del proyecto:
+<span data-ttu-id="3e9d2-145">Limpie una compilación predeterminada del proyecto:</span><span class="sxs-lookup"><span data-stu-id="3e9d2-145">Clean a default build of the project:</span></span>
 
 `dotnet clean`
 
-Limpie un proyecto creado con la configuración de lanzamiento:
+<span data-ttu-id="3e9d2-146">Limpie un proyecto creado con la configuración de lanzamiento:</span><span class="sxs-lookup"><span data-stu-id="3e9d2-146">Clean a project built using the Release configuration:</span></span>
 
 `dotnet clean --configuration Release`
-

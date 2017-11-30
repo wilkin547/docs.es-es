@@ -1,67 +1,50 @@
 ---
-title: Valores de Variable (Visual Basic) del objeto | Documentos de Microsoft
+title: Valores de las variables de objeto (Visual Basic)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
-- object variables, values
-- values, of object variables
+- object variables [Visual Basic], values
+- values [Visual Basic], of object variables
 - data types [Visual Basic], object variable
 - variables [Visual Basic], object
 ms.assetid: 31555704-58a3-49f1-9a0a-6421f605664f
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: ff219571de9c76802d3f8d3046cf6b6f9d5be9d5
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: ccab22920923500a2332db2372e52813c890e5e8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="object-variable-values-visual-basic"></a>Valores de las variables de objeto (Visual Basic)
-Una variable de la [tipo de datos Object](../../../../visual-basic/language-reference/data-types/object-data-type.md) pueden hacer referencia a datos de cualquier tipo. El valor que se almacena en un `Object` variable se guarda en otra parte en memoria, mientras que la propia variable contiene un puntero a los datos.  
+# <a name="object-variable-values-visual-basic"></a><span data-ttu-id="390d6-102">Valores de las variables de objeto (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="390d6-102">Object Variable Values (Visual Basic)</span></span>
+<span data-ttu-id="390d6-103">Una variable de la [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md) puede hacer referencia a datos de cualquier tipo.</span><span class="sxs-lookup"><span data-stu-id="390d6-103">A variable of the [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md) can refer to data of any type.</span></span> <span data-ttu-id="390d6-104">El valor que se almacena en un `Object` variable se mantiene en otra ubicación en memoria, mientras que la propia variable contiene un puntero a los datos.</span><span class="sxs-lookup"><span data-stu-id="390d6-104">The value you store in an `Object` variable is kept elsewhere in memory, while the variable itself holds a pointer to the data.</span></span>  
   
-## <a name="object-classifier-functions"></a>Funciones del clasificador de objetos  
- [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]proporciona funciones que devuelven información acerca de qué una `Object` variable hace referencia a, como se muestra en la tabla siguiente.  
+## <a name="object-classifier-functions"></a><span data-ttu-id="390d6-105">Funciones de clasificador de objetos</span><span class="sxs-lookup"><span data-stu-id="390d6-105">Object Classifier Functions</span></span>  
+ [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]<span data-ttu-id="390d6-106">proporciona funciones que devuelven información acerca de lo que un `Object` variable hace referencia a, como se muestra en la tabla siguiente.</span><span class="sxs-lookup"><span data-stu-id="390d6-106"> supplies functions that return information about what an `Object` variable refers to, as shown in the following table.</span></span>  
   
-|Función|Devuelve True si la variable de objeto hace referencia a|  
+|<span data-ttu-id="390d6-107">Función</span><span class="sxs-lookup"><span data-stu-id="390d6-107">Function</span></span>|<span data-ttu-id="390d6-108">Devuelve True si la variable de objeto hace referencia a</span><span class="sxs-lookup"><span data-stu-id="390d6-108">Returns True if the Object variable refers to</span></span>|  
 |--------------|---------------------------------------------------|  
-|<xref:Microsoft.VisualBasic.Information.IsArray%2A></xref:Microsoft.VisualBasic.Information.IsArray%2A>|Una matriz de valores, en lugar de un solo valor|  
-|<xref:Microsoft.VisualBasic.Information.IsDate%2A></xref:Microsoft.VisualBasic.Information.IsDate%2A>|Un [tipo de datos Date](../../../../visual-basic/language-reference/data-types/date-data-type.md) valor o una cadena que puede interpretarse como un valor de fecha y hora|  
-|<xref:Microsoft.VisualBasic.Information.IsDBNull%2A></xref:Microsoft.VisualBasic.Information.IsDBNull%2A>|Un objeto de tipo <xref:System.DBNull>que representa datos que faltan o que no existentes</xref:System.DBNull>|  
-|<xref:Microsoft.VisualBasic.Information.IsError%2A></xref:Microsoft.VisualBasic.Information.IsError%2A>|Un objeto de excepción que se deriva de<xref:System.Exception></xref:System.Exception>|  
-|<xref:Microsoft.VisualBasic.Information.IsNothing%2A></xref:Microsoft.VisualBasic.Information.IsNothing%2A>|[Nada](../../../../visual-basic/language-reference/nothing.md), es decir, no hay ningún objeto está asignado actualmente a la variable|  
-|<xref:Microsoft.VisualBasic.Information.IsNumeric%2A></xref:Microsoft.VisualBasic.Information.IsNumeric%2A>|Un número o una cadena que puede interpretarse como un número|  
-|<xref:Microsoft.VisualBasic.Information.IsReference%2A></xref:Microsoft.VisualBasic.Information.IsReference%2A>|Un tipo de referencia (como una cadena, matriz, delegado o tipo de clase)|  
+|<xref:Microsoft.VisualBasic.Information.IsArray%2A>|<span data-ttu-id="390d6-109">Una matriz de valores, en lugar de un solo valor</span><span class="sxs-lookup"><span data-stu-id="390d6-109">An array of values, rather than a single value</span></span>|  
+|<xref:Microsoft.VisualBasic.Information.IsDate%2A>|<span data-ttu-id="390d6-110">A [tipo de datos Date](../../../../visual-basic/language-reference/data-types/date-data-type.md) valor o una cadena que se puede interpretar como un valor de fecha y hora</span><span class="sxs-lookup"><span data-stu-id="390d6-110">A [Date Data Type](../../../../visual-basic/language-reference/data-types/date-data-type.md) value, or a string that can be interpreted as a date and time value</span></span>|  
+|<xref:Microsoft.VisualBasic.Information.IsDBNull%2A>|<span data-ttu-id="390d6-111">Un objeto de tipo <xref:System.DBNull>, que representa los datos que faltan o que no existe</span><span class="sxs-lookup"><span data-stu-id="390d6-111">An object of type <xref:System.DBNull>, which represents missing or nonexistent data</span></span>|  
+|<xref:Microsoft.VisualBasic.Information.IsError%2A>|<span data-ttu-id="390d6-112">Un objeto de excepción, que se deriva de<xref:System.Exception></span><span class="sxs-lookup"><span data-stu-id="390d6-112">An exception object, which derives from <xref:System.Exception></span></span>|  
+|<xref:Microsoft.VisualBasic.Information.IsNothing%2A>|<span data-ttu-id="390d6-113">[Nada](../../../../visual-basic/language-reference/nothing.md), es decir, no hay ningún objeto está asignado actualmente a la variable</span><span class="sxs-lookup"><span data-stu-id="390d6-113">[Nothing](../../../../visual-basic/language-reference/nothing.md), that is, no object is currently assigned to the variable</span></span>|  
+|<xref:Microsoft.VisualBasic.Information.IsNumeric%2A>|<span data-ttu-id="390d6-114">Un número o una cadena que se puede interpretar como un número</span><span class="sxs-lookup"><span data-stu-id="390d6-114">A number, or a string that can be interpreted as a number</span></span>|  
+|<xref:Microsoft.VisualBasic.Information.IsReference%2A>|<span data-ttu-id="390d6-115">Un tipo de referencia (por ejemplo, una cadena, matriz, delegado o tipo de clase)</span><span class="sxs-lookup"><span data-stu-id="390d6-115">A reference type (such as a string, array, delegate, or class type)</span></span>|  
   
- Puede utilizar estas funciones para impedir que se envíe un valor no válido a una operación o un procedimiento.  
+ <span data-ttu-id="390d6-116">Puede utilizar estas funciones para impedir que se envíe un valor no válido a una operación o un procedimiento.</span><span class="sxs-lookup"><span data-stu-id="390d6-116">You can use these functions to avoid submitting an invalid value to an operation or a procedure.</span></span>  
   
-## <a name="typeof-operator"></a>Operador TypeOf  
- También puede utilizar el [operador TypeOf](../../../../visual-basic/language-reference/operators/typeof-operator.md) para determinar si una variable de objeto hace referencia actualmente a un tipo de datos específico. The `TypeOf`... `Is` expresión se evalúa como `True` si el tipo de tiempo de ejecución del operando se deriva de o implementa el tipo especificado.  
+## <a name="typeof-operator"></a><span data-ttu-id="390d6-117">Operador TypeOf</span><span class="sxs-lookup"><span data-stu-id="390d6-117">TypeOf Operator</span></span>  
+ <span data-ttu-id="390d6-118">También puede usar el [del operador TypeOf](../../../../visual-basic/language-reference/operators/typeof-operator.md) para determinar si una variable de objeto hace referencia actualmente a un tipo de datos específico.</span><span class="sxs-lookup"><span data-stu-id="390d6-118">You can also use the [TypeOf Operator](../../../../visual-basic/language-reference/operators/typeof-operator.md) to determine whether an object variable currently refers to a specific data type.</span></span> <span data-ttu-id="390d6-119">El `TypeOf`... `Is` expresión se evalúa como `True` si el tipo de tiempo de ejecución del operando se deriva de o implementa el tipo especificado.</span><span class="sxs-lookup"><span data-stu-id="390d6-119">The `TypeOf`...`Is` expression evaluates to `True` if the run-time type of the operand is derived from or implements the specified type.</span></span>  
   
- En el ejemplo siguiente se utiliza `TypeOf` en variables de objeto que hace referencia a tipos de valor y de referencia.  
+ <span data-ttu-id="390d6-120">En el ejemplo siguiente se usa `TypeOf` en variables de objeto que hacen referencia a tipos de valor y de referencia.</span><span class="sxs-lookup"><span data-stu-id="390d6-120">The following example uses `TypeOf` on object variables referring to value and reference types.</span></span>  
   
 ```  
 ' The following statement puts a value type (Integer) in an Object variable.  
@@ -77,7 +60,7 @@ If TypeOf frm Is Label Then Debug.WriteLine("frm is Label")
 If TypeOf frm Is Object Then Debug.WriteLine("frm is Object")  
 ```  
   
- En el ejemplo anterior, se escribe las siguientes líneas a la **depurar** ventana:  
+ <span data-ttu-id="390d6-121">En el ejemplo anterior, se escribe las siguientes líneas a la **depurar** ventana:</span><span class="sxs-lookup"><span data-stu-id="390d6-121">The preceding example writes the following lines to the **Debug** window:</span></span>  
   
  `num is Integer`  
   
@@ -87,17 +70,17 @@ If TypeOf frm Is Object Then Debug.WriteLine("frm is Object")
   
  `frm is Object`  
   
- La variable de objeto `num` hace referencia a datos de tipo `Integer`, y `frm` hace referencia a un objeto de clase <xref:System.Windows.Forms.Form>.</xref:System.Windows.Forms.Form>  
+ <span data-ttu-id="390d6-122">La variable de objeto `num` hace referencia a datos de tipo `Integer`, y `frm` hace referencia a un objeto de clase <xref:System.Windows.Forms.Form>.</span><span class="sxs-lookup"><span data-stu-id="390d6-122">The object variable `num` refers to data of type `Integer`, and `frm` refers to an object of class <xref:System.Windows.Forms.Form>.</span></span>  
   
-## <a name="object-arrays"></a>Matrices de objetos  
- Puede declarar y utilizar una matriz de `Object` variables. Esto es útil si necesita controlar una variedad de tipos de datos y las clases de objeto. Todos los elementos de la matriz deben tener los mismos datos declarados de tipo. Este tipo de datos como declara `Object` le permite almacenar objetos e instancias junto con otros tipos de datos de la matriz de clase.  
+## <a name="object-arrays"></a><span data-ttu-id="390d6-123">Matrices de objetos</span><span class="sxs-lookup"><span data-stu-id="390d6-123">Object Arrays</span></span>  
+ <span data-ttu-id="390d6-124">Puede declarar y utilizar una matriz de `Object` variables.</span><span class="sxs-lookup"><span data-stu-id="390d6-124">You can declare and use an array of `Object` variables.</span></span> <span data-ttu-id="390d6-125">Esto es útil si necesita controlar una variedad de tipos de datos y las clases de objeto.</span><span class="sxs-lookup"><span data-stu-id="390d6-125">This is useful when you need to handle a variety of data types and object classes.</span></span> <span data-ttu-id="390d6-126">Todos los elementos de matriz deben tener los mismos datos declarados de tipo.</span><span class="sxs-lookup"><span data-stu-id="390d6-126">All the elements in an array must have the same declared data type.</span></span> <span data-ttu-id="390d6-127">Este tipo de datos que se declara `Object` le permite almacenar objetos e instancias junto con otros tipos de datos de la matriz de clase.</span><span class="sxs-lookup"><span data-stu-id="390d6-127">Declaring this data type as `Object` allows you to store objects and class instances alongside other data types in the array.</span></span>  
   
-## <a name="see-also"></a>Vea también  
- [Variables de objeto](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)   
- [Declaración de Variable de objeto](../../../../visual-basic/programming-guide/language-features/variables/object-variable-declaration.md)   
- [Asignación de variables de objeto](../../../../visual-basic/programming-guide/language-features/variables/object-variable-assignment.md)   
- [Cómo: hacer referencia a la instancia actual de un objeto](../../../../visual-basic/programming-guide/language-features/variables/how-to-refer-to-the-current-instance-of-an-object.md)   
- [Cómo: determinar qué tipo de una Variable de objeto hace referencia a](../../../../visual-basic/programming-guide/language-features/variables/how-to-determine-what-type-an-object-variable-refers-to.md)   
- [Cómo: determinar si dos objetos están relacionados](../../../../visual-basic/programming-guide/language-features/variables/how-to-determine-whether-two-objects-are-related.md)   
- [Cómo: determinar si dos objetos son idénticos](../../../../visual-basic/programming-guide/language-features/variables/how-to-determine-whether-two-objects-are-identical.md)   
- [Tipos de datos](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
+## <a name="see-also"></a><span data-ttu-id="390d6-128">Vea también</span><span class="sxs-lookup"><span data-stu-id="390d6-128">See Also</span></span>  
+ [<span data-ttu-id="390d6-129">Variables de objeto</span><span class="sxs-lookup"><span data-stu-id="390d6-129">Object Variables</span></span>](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)  
+ [<span data-ttu-id="390d6-130">Declaración de variables de objeto</span><span class="sxs-lookup"><span data-stu-id="390d6-130">Object Variable Declaration</span></span>](../../../../visual-basic/programming-guide/language-features/variables/object-variable-declaration.md)  
+ [<span data-ttu-id="390d6-131">Asignación de variables de objeto</span><span class="sxs-lookup"><span data-stu-id="390d6-131">Object Variable Assignment</span></span>](../../../../visual-basic/programming-guide/language-features/variables/object-variable-assignment.md)  
+ [<span data-ttu-id="390d6-132">Hacer referencia a la instancia actual de un objeto</span><span class="sxs-lookup"><span data-stu-id="390d6-132">How to: Refer to the Current Instance of an Object</span></span>](../../../../visual-basic/programming-guide/language-features/variables/how-to-refer-to-the-current-instance-of-an-object.md)  
+ [<span data-ttu-id="390d6-133">Determinar el tipo al que hace referencia una variable de objeto</span><span class="sxs-lookup"><span data-stu-id="390d6-133">How to: Determine What Type an Object Variable Refers To</span></span>](../../../../visual-basic/programming-guide/language-features/variables/how-to-determine-what-type-an-object-variable-refers-to.md)  
+ [<span data-ttu-id="390d6-134">Determinar si dos objetos están relacionados</span><span class="sxs-lookup"><span data-stu-id="390d6-134">How to: Determine Whether Two Objects Are Related</span></span>](../../../../visual-basic/programming-guide/language-features/variables/how-to-determine-whether-two-objects-are-related.md)  
+ [<span data-ttu-id="390d6-135">Determinar si dos objetos son idénticos</span><span class="sxs-lookup"><span data-stu-id="390d6-135">How to: Determine Whether Two Objects Are Identical</span></span>](../../../../visual-basic/programming-guide/language-features/variables/how-to-determine-whether-two-objects-are-identical.md)  
+ [<span data-ttu-id="390d6-136">Tipos de datos</span><span class="sxs-lookup"><span data-stu-id="390d6-136">Data Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/index.md)

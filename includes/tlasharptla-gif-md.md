@@ -1,1 +1,1 @@
-Formato de intercambio de gráficos (GIF)
+<span data-ttu-id="2f246-101">Formato de intercambio de gráficos (GIF)</span><span class="sxs-lookup"><span data-stu-id="2f246-101">Graphics Interchange Format (GIF)</span></span>

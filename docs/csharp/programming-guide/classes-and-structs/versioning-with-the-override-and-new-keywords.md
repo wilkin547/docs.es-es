@@ -1,109 +1,90 @@
 ---
 title: "Control de versiones con las palabras clave Override y New (Guía de programación de C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - C# language, versioning
 - C# language, override and new
 ms.assetid: 88247d07-bd0d-49e9-a619-45ccbbfdf0c5
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: be51a5b3d3eecc58d43dcbbcb0802cce7fd16c45
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 167262f7b2423fffec61b1e903f849d2ab387ed2
-ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="versioning-with-the-override-and-new-keywords-c-programming-guide"></a>Control de versiones con las palabras clave Override y New (Guía de programación de C#)
-El lenguaje C# está diseñado para que las versiones entre clases [base](../../../csharp/language-reference/keywords/base.md) y derivadas de diferentes bibliotecas puedan evolucionar y mantener la compatibilidad con versiones anteriores. Esto significa, por ejemplo, que la introducción de un nuevo miembro en una [clase](../../../csharp/language-reference/keywords/class.md) base con el mismo nombre que un miembro de una clase derivada es totalmente compatible con C# y no lleva a un comportamiento inesperado. Además, implica que una clase debe declarar explícitamente si un método está pensado para reemplazar un método heredado o si se trata de un nuevo método que oculta un método heredado de nombre similar.  
+# <a name="versioning-with-the-override-and-new-keywords-c-programming-guide"></a><span data-ttu-id="19ce0-102">Control de versiones con las palabras clave Override y New (Guía de programación de C#)</span><span class="sxs-lookup"><span data-stu-id="19ce0-102">Versioning with the Override and New Keywords (C# Programming Guide)</span></span>
+<span data-ttu-id="19ce0-103">El lenguaje C# está diseñado para que las versiones entre clases [base](../../../csharp/language-reference/keywords/base.md) y derivadas de diferentes bibliotecas puedan evolucionar y mantener la compatibilidad con versiones anteriores.</span><span class="sxs-lookup"><span data-stu-id="19ce0-103">The C# language is designed so that versioning between [base](../../../csharp/language-reference/keywords/base.md) and derived classes in different libraries can evolve and maintain backward compatibility.</span></span> <span data-ttu-id="19ce0-104">Esto significa, por ejemplo, que la introducción de un nuevo miembro en una [clase](../../../csharp/language-reference/keywords/class.md) base con el mismo nombre que un miembro de una clase derivada es totalmente compatible con C# y no lleva a un comportamiento inesperado.</span><span class="sxs-lookup"><span data-stu-id="19ce0-104">This means, for example, that the introduction of a new member in a base [class](../../../csharp/language-reference/keywords/class.md) with the same name as a member in a derived class is completely supported by C# and does not lead to unexpected behavior.</span></span> <span data-ttu-id="19ce0-105">Además, implica que una clase debe declarar explícitamente si un método está pensado para reemplazar un método heredado o si se trata de un nuevo método que oculta un método heredado de nombre similar.</span><span class="sxs-lookup"><span data-stu-id="19ce0-105">It also means that a class must explicitly state whether a method is intended to override an inherited method, or whether a method is a new method that hides a similarly named inherited method.</span></span>  
   
- En C#, las clases derivadas pueden contener métodos con el mismo nombre que los métodos de clase base.  
+ <span data-ttu-id="19ce0-106">En C#, las clases derivadas pueden contener métodos con el mismo nombre que los métodos de clase base.</span><span class="sxs-lookup"><span data-stu-id="19ce0-106">In C#, derived classes can contain methods with the same name as base class methods.</span></span>  
   
--   El método de clase base debe definirse como [virtual](../../../csharp/language-reference/keywords/virtual.md).  
+-   <span data-ttu-id="19ce0-107">El método de clase base debe definirse como [virtual](../../../csharp/language-reference/keywords/virtual.md).</span><span class="sxs-lookup"><span data-stu-id="19ce0-107">The base class method must be defined [virtual](../../../csharp/language-reference/keywords/virtual.md).</span></span>  
   
--   Si el método de la clase derivada no va precedido por las palabras clave [new](../../../csharp/language-reference/keywords/new.md) u [override](../../../csharp/language-reference/keywords/override.md), el compilador emite una advertencia y el método se comporta como si la palabra clave `new` estuviese presente.  
+-   <span data-ttu-id="19ce0-108">Si el método de la clase derivada no va precedido por las palabras clave [new](../../../csharp/language-reference/keywords/new.md) u [override](../../../csharp/language-reference/keywords/override.md), el compilador emite una advertencia y el método se comporta como si la palabra clave `new` estuviese presente.</span><span class="sxs-lookup"><span data-stu-id="19ce0-108">If the method in the derived class is not preceded by [new](../../../csharp/language-reference/keywords/new.md) or [override](../../../csharp/language-reference/keywords/override.md) keywords, the compiler will issue a warning and the method will behave as if the `new` keyword were present.</span></span>  
   
--   Si el método de la clase derivada va precedido de la palabra clave `new`, el método se define como independiente del método de la clase base.  
+-   <span data-ttu-id="19ce0-109">Si el método de la clase derivada va precedido de la palabra clave `new`, el método se define como independiente del método de la clase base.</span><span class="sxs-lookup"><span data-stu-id="19ce0-109">If the method in the derived class is preceded with the `new` keyword, the method is defined as being independent of the method in the base class.</span></span>  
   
--   Si el método de la clase derivada va precedido de la palabra clave `override`, los objetos de la clase derivada llamarán a ese método y no al método de la clase base.  
+-   <span data-ttu-id="19ce0-110">Si el método de la clase derivada va precedido de la palabra clave `override`, los objetos de la clase derivada llamarán a ese método y no al método de la clase base.</span><span class="sxs-lookup"><span data-stu-id="19ce0-110">If the method in the derived class is preceded with the `override` keyword, objects of the derived class will call that method instead of the base class method.</span></span>  
   
--   El método de clase base puede llamarse desde dentro de la clase derivada mediante la palabra clave `base`.  
+-   <span data-ttu-id="19ce0-111">El método de clase base puede llamarse desde dentro de la clase derivada mediante la palabra clave `base`.</span><span class="sxs-lookup"><span data-stu-id="19ce0-111">The base class method can be called from within the derived class using the `base` keyword.</span></span>  
   
--   Las palabras clave `override`, `virtual` y `new` también pueden aplicarse a propiedades, indexadores y eventos.  
+-   <span data-ttu-id="19ce0-112">Las palabras clave `override`, `virtual` y `new` también pueden aplicarse a propiedades, indexadores y eventos.</span><span class="sxs-lookup"><span data-stu-id="19ce0-112">The `override`, `virtual`, and `new` keywords can also be applied to properties, indexers, and events.</span></span>  
   
- De forma predeterminada, los métodos de C# no son virtuales. Si se declara un método como virtual, toda clase que hereda el método puede implementar su propia versión Para que un método sea virtual, se usa el modificador `virtual` en la declaración del método de la clase base. La clase derivada puede luego reemplazar el método base virtual mediante la palabra clave `override` u ocultar el método virtual en la clase base mediante la palabra clave `new`. Si no se especifican las palabras clave `override` o `new`, el compilador emite una advertencia y el método de la clase derivada oculta el método de la clase base.  
+ <span data-ttu-id="19ce0-113">De forma predeterminada, los métodos de C# no son virtuales.</span><span class="sxs-lookup"><span data-stu-id="19ce0-113">By default, C# methods are not virtual.</span></span> <span data-ttu-id="19ce0-114">Si se declara un método como virtual, toda clase que hereda el método puede implementar su propia versión</span><span class="sxs-lookup"><span data-stu-id="19ce0-114">If a method is declared as virtual, any class inheriting the method can implement its own version.</span></span> <span data-ttu-id="19ce0-115">Para que un método sea virtual, se usa el modificador `virtual` en la declaración del método de la clase base.</span><span class="sxs-lookup"><span data-stu-id="19ce0-115">To make a method virtual, the `virtual` modifier is used in the method declaration of the base class.</span></span> <span data-ttu-id="19ce0-116">La clase derivada puede luego reemplazar el método base virtual mediante la palabra clave `override` u ocultar el método virtual en la clase base mediante la palabra clave `new`.</span><span class="sxs-lookup"><span data-stu-id="19ce0-116">The derived class can then override the base virtual method by using the `override` keyword or hide the virtual method in the base class by using the `new` keyword.</span></span> <span data-ttu-id="19ce0-117">Si no se especifican las palabras clave `override` o `new`, el compilador emite una advertencia y el método de la clase derivada oculta el método de la clase base.</span><span class="sxs-lookup"><span data-stu-id="19ce0-117">If neither the `override` keyword nor the `new` keyword is specified, the compiler will issue a warning and the method in the derived class will hide the method in the base class.</span></span>  
   
- Para demostrar esto en la práctica, supongamos por un momento que la compañía A ha creado una clase denominada `GraphicsClass`, que su programa usa. La siguiente es `GraphicsClass`:  
+ <span data-ttu-id="19ce0-118">Para demostrar esto en la práctica, supongamos por un momento que la compañía A ha creado una clase denominada `GraphicsClass`, que su programa usa.</span><span class="sxs-lookup"><span data-stu-id="19ce0-118">To demonstrate this in practice, assume for a moment that Company A has created a class named `GraphicsClass`, which your program uses.</span></span> <span data-ttu-id="19ce0-119">La siguiente es `GraphicsClass`:</span><span class="sxs-lookup"><span data-stu-id="19ce0-119">The following is `GraphicsClass`:</span></span>  
   
- [!code-cs[csProgGuideInheritance#27](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/versioning-with-the-override-and-new-keywords_1.cs)]  
+ [!code-csharp[csProgGuideInheritance#27](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/versioning-with-the-override-and-new-keywords_1.cs)]  
   
- Su compañía usa esta clase y usted la usa para derivar su propia clase, agregando un nuevo método:  
+ <span data-ttu-id="19ce0-120">Su compañía usa esta clase y usted la usa para derivar su propia clase, agregando un nuevo método:</span><span class="sxs-lookup"><span data-stu-id="19ce0-120">Your company uses this class, and you use it to derive your own class, adding a new method:</span></span>  
   
- [!code-cs[csProgGuideInheritance#28](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/versioning-with-the-override-and-new-keywords_2.cs)]  
+ [!code-csharp[csProgGuideInheritance#28](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/versioning-with-the-override-and-new-keywords_2.cs)]  
   
- La aplicación se usa sin problemas, hasta que la compañía A lanza una nueva versión de `GraphicsClass`, que es similar al código siguiente:  
+ <span data-ttu-id="19ce0-121">La aplicación se usa sin problemas, hasta que la compañía A lanza una nueva versión de `GraphicsClass`, que es similar al código siguiente:</span><span class="sxs-lookup"><span data-stu-id="19ce0-121">Your application is used without problems, until Company A releases a new version of `GraphicsClass`, which resembles the following code:</span></span>  
   
- [!code-cs[csProgGuideInheritance#29](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/versioning-with-the-override-and-new-keywords_3.cs)]  
+ [!code-csharp[csProgGuideInheritance#29](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/versioning-with-the-override-and-new-keywords_3.cs)]  
   
- La nueva versión de `GraphicsClass` contiene ahora un método denominado `DrawRectangle`. Inicialmente, no sucede nada. La nueva versión sigue siendo compatible a nivel binario con la versión anterior. Cualquier software que haya implementado seguirá funcionando, aunque la nueva clase se instale en esos sistemas informáticos. Cualquier llamada existente al método `DrawRectangle` seguirá haciendo referencia a su versión en la clase derivada.  
+ <span data-ttu-id="19ce0-122">La nueva versión de `GraphicsClass` contiene ahora un método denominado `DrawRectangle`.</span><span class="sxs-lookup"><span data-stu-id="19ce0-122">The new version of `GraphicsClass` now contains a method named `DrawRectangle`.</span></span> <span data-ttu-id="19ce0-123">Inicialmente, no sucede nada.</span><span class="sxs-lookup"><span data-stu-id="19ce0-123">Initially, nothing occurs.</span></span> <span data-ttu-id="19ce0-124">La nueva versión sigue siendo compatible a nivel binario con la versión anterior.</span><span class="sxs-lookup"><span data-stu-id="19ce0-124">The new version is still binary compatible with the old version.</span></span> <span data-ttu-id="19ce0-125">Cualquier software que haya implementado seguirá funcionando, aunque la nueva clase se instale en esos sistemas informáticos.</span><span class="sxs-lookup"><span data-stu-id="19ce0-125">Any software that you have deployed will continue to work, even if the new class is installed on those computer systems.</span></span> <span data-ttu-id="19ce0-126">Cualquier llamada existente al método `DrawRectangle` seguirá haciendo referencia a su versión en la clase derivada.</span><span class="sxs-lookup"><span data-stu-id="19ce0-126">Any existing calls to the method `DrawRectangle` will continue to reference your version, in your derived class.</span></span>  
   
- Pero en cuanto vuelva a compilar la aplicación con la nueva versión de `GraphicsClass`, recibirá una advertencia del compilador, CS0108. Esta advertencia le informa de que debe plantearse cómo quiere que el método `DrawRectangle` se comporte en la aplicación.  
+ <span data-ttu-id="19ce0-127">Pero en cuanto vuelva a compilar la aplicación con la nueva versión de `GraphicsClass`, recibirá una advertencia del compilador, CS0108.</span><span class="sxs-lookup"><span data-stu-id="19ce0-127">However, as soon as you recompile your application by using the new version of `GraphicsClass`, you will receive a warning from the compiler, CS0108.</span></span> <span data-ttu-id="19ce0-128">Esta advertencia le informa de que debe plantearse cómo quiere que el método `DrawRectangle` se comporte en la aplicación.</span><span class="sxs-lookup"><span data-stu-id="19ce0-128">This warning informs you that you have to consider how you want your `DrawRectangle` method to behave in your application.</span></span>  
   
- Si quiere que su método reemplace al nuevo método de clase base, use la palabra clave `override`:  
+ <span data-ttu-id="19ce0-129">Si quiere que su método reemplace al nuevo método de clase base, use la palabra clave `override`:</span><span class="sxs-lookup"><span data-stu-id="19ce0-129">If you want your method to override the new base class method, use the `override` keyword:</span></span>  
   
- [!code-cs[csProgGuideInheritance#30](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/versioning-with-the-override-and-new-keywords_4.cs)]  
+ [!code-csharp[csProgGuideInheritance#30](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/versioning-with-the-override-and-new-keywords_4.cs)]  
   
- La palabra clave `override` se asegura de que los objetos derivados de `YourDerivedGraphicsClass` usen la versión de la clase derivada de `DrawRectangle`. Los objetos derivados de `YourDerivedGraphicsClass` todavía pueden acceder a la versión de clase base `DrawRectangle` mediante la palabra clave base:  
+ <span data-ttu-id="19ce0-130">La palabra clave `override` se asegura de que los objetos derivados de `YourDerivedGraphicsClass` usen la versión de la clase derivada de `DrawRectangle`.</span><span class="sxs-lookup"><span data-stu-id="19ce0-130">The `override` keyword makes sure that any objects derived from `YourDerivedGraphicsClass` will use the derived class version of `DrawRectangle`.</span></span> <span data-ttu-id="19ce0-131">Los objetos derivados de `YourDerivedGraphicsClass` todavía pueden acceder a la versión de clase base `DrawRectangle` mediante la palabra clave base:</span><span class="sxs-lookup"><span data-stu-id="19ce0-131">Objects derived from `YourDerivedGraphicsClass` can still access the base class version of `DrawRectangle` by using the base keyword:</span></span>  
   
- [!code-cs[csProgGuideInheritance#44](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/versioning-with-the-override-and-new-keywords_5.cs)]  
+ [!code-csharp[csProgGuideInheritance#44](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/versioning-with-the-override-and-new-keywords_5.cs)]  
   
- Si no quiere que el método reemplace al nuevo método de clase base, se aplican las consideraciones siguientes. Para evitar la confusión entre los dos métodos, puede cambiarle el nombre a su método. Esto puede ser un proceso lento y propenso a errores y no resultar práctico en algunos casos. Pero si el proyecto es relativamente pequeño, puede usar opciones de refactorización de Visual Studio para cambiar el nombre del método. Para obtener más información, vea [Refactoring Classes and Types (Class Designer)](/visualstudio/ide/refactoring-classes-and-types-class-designer) (Refactorización de clases y tipos [Diseñador de clases]).  
+ <span data-ttu-id="19ce0-132">Si no quiere que el método reemplace al nuevo método de clase base, se aplican las consideraciones siguientes.</span><span class="sxs-lookup"><span data-stu-id="19ce0-132">If you do not want your method to override the new base class method, the following considerations apply.</span></span> <span data-ttu-id="19ce0-133">Para evitar la confusión entre los dos métodos, puede cambiarle el nombre a su método.</span><span class="sxs-lookup"><span data-stu-id="19ce0-133">To avoid confusion between the two methods, you can rename your method.</span></span> <span data-ttu-id="19ce0-134">Esto puede ser un proceso lento y propenso a errores y no resultar práctico en algunos casos.</span><span class="sxs-lookup"><span data-stu-id="19ce0-134">This can be time-consuming and error-prone, and just not practical in some cases.</span></span> <span data-ttu-id="19ce0-135">Pero si el proyecto es relativamente pequeño, puede usar opciones de refactorización de Visual Studio para cambiar el nombre del método.</span><span class="sxs-lookup"><span data-stu-id="19ce0-135">However, if your project is relatively small, you can use Visual Studio's Refactoring options to rename the method.</span></span> <span data-ttu-id="19ce0-136">Para obtener más información, vea [Refactoring Classes and Types (Class Designer)](/visualstudio/ide/refactoring-classes-and-types-class-designer) (Refactorización de clases y tipos [Diseñador de clases]).</span><span class="sxs-lookup"><span data-stu-id="19ce0-136">For more information, see [Refactoring Classes and Types (Class Designer)](/visualstudio/ide/refactoring-classes-and-types-class-designer).</span></span>  
   
- También puede evitar la advertencia mediante la palabra clave `new` en la definición de clase derivada:  
+ <span data-ttu-id="19ce0-137">También puede evitar la advertencia mediante la palabra clave `new` en la definición de clase derivada:</span><span class="sxs-lookup"><span data-stu-id="19ce0-137">Alternatively, you can prevent the warning by using the keyword `new` in your derived class definition:</span></span>  
   
- [!code-cs[csProgGuideInheritance#31](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/versioning-with-the-override-and-new-keywords_6.cs)]  
+ [!code-csharp[csProgGuideInheritance#31](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/versioning-with-the-override-and-new-keywords_6.cs)]  
   
- Con la palabra clave `new` se indica al compilador que su definición oculta la definición contenida en la clase base. Éste es el comportamiento predeterminado.  
+ <span data-ttu-id="19ce0-138">Con la palabra clave `new` se indica al compilador que su definición oculta la definición contenida en la clase base.</span><span class="sxs-lookup"><span data-stu-id="19ce0-138">Using the `new` keyword tells the compiler that your definition hides the definition that is contained in the base class.</span></span> <span data-ttu-id="19ce0-139">Éste es el comportamiento predeterminado.</span><span class="sxs-lookup"><span data-stu-id="19ce0-139">This is the default behavior.</span></span>  
   
-## <a name="override-and-method-selection"></a>Selección de método y reemplazo  
- Cuando se llama a un método en una clase, el compilador de C# selecciona el mejor método para llamar si hay más de uno compatible con la llamada, como cuando hay dos métodos con el mismo nombre y parámetros que son compatibles con el parámetro pasado. Los métodos siguientes serían compatibles:  
+## <a name="override-and-method-selection"></a><span data-ttu-id="19ce0-140">Selección de método y reemplazo</span><span class="sxs-lookup"><span data-stu-id="19ce0-140">Override and Method Selection</span></span>  
+ <span data-ttu-id="19ce0-141">Cuando se llama a un método en una clase, el compilador de C# selecciona el mejor método para llamar si hay más de uno compatible con la llamada, como cuando hay dos métodos con el mismo nombre y parámetros que son compatibles con el parámetro pasado.</span><span class="sxs-lookup"><span data-stu-id="19ce0-141">When a method is named on a class, the C# compiler selects the best method to call if more than one method is compatible with the call, such as when there are two methods with the same name, and parameters that are compatible with the parameter passed.</span></span> <span data-ttu-id="19ce0-142">Los métodos siguientes serían compatibles:</span><span class="sxs-lookup"><span data-stu-id="19ce0-142">The following methods would be compatible:</span></span>  
   
- [!code-cs[csProgGuideInheritance#32](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/versioning-with-the-override-and-new-keywords_7.cs)]  
+ [!code-csharp[csProgGuideInheritance#32](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/versioning-with-the-override-and-new-keywords_7.cs)]  
   
- Cuando se llama a `DoWork` en una instancia de `Derived`, el compilador de C# intentará en primer lugar que la llamada sea compatible con las versiones de `DoWork` declaradas originalmente en `Derived`. Los métodos de reemplazo no se consideran como declarados en una clase, son nuevas implementaciones de un método que se declara en una clase base. Solo si el compilador de C# no puede hacer coincidir la llamada al método con un método original en `Derived`, intentará hacer coincidir la llamada con un método reemplazado con el mismo nombre y parámetros compatibles. Por ejemplo:  
+ <span data-ttu-id="19ce0-143">Cuando se llama a `DoWork` en una instancia de `Derived`, el compilador de C# intentará en primer lugar que la llamada sea compatible con las versiones de `DoWork` declaradas originalmente en `Derived`.</span><span class="sxs-lookup"><span data-stu-id="19ce0-143">When `DoWork` is called on an instance of `Derived`, the C# compiler will first try to make the call compatible with the versions of `DoWork` declared originally on `Derived`.</span></span> <span data-ttu-id="19ce0-144">Los métodos de reemplazo no se consideran como declarados en una clase, son nuevas implementaciones de un método que se declara en una clase base.</span><span class="sxs-lookup"><span data-stu-id="19ce0-144">Override methods are not considered as declared on a class, they are new implementations of a method declared on a base class.</span></span> <span data-ttu-id="19ce0-145">Solo si el compilador de C# no puede hacer coincidir la llamada al método con un método original en `Derived`, intentará hacer coincidir la llamada con un método reemplazado con el mismo nombre y parámetros compatibles.</span><span class="sxs-lookup"><span data-stu-id="19ce0-145">Only if the C# compiler cannot match the method call to an original method on `Derived` will it try to match the call to an overridden method with the same name and compatible parameters.</span></span> <span data-ttu-id="19ce0-146">Por ejemplo:</span><span class="sxs-lookup"><span data-stu-id="19ce0-146">For example:</span></span>  
   
- [!code-cs[csProgGuideInheritance#33](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/versioning-with-the-override-and-new-keywords_8.cs)]  
+ [!code-csharp[csProgGuideInheritance#33](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/versioning-with-the-override-and-new-keywords_8.cs)]  
   
- Dado que la variable `val` se puede convertir implícitamente en un valor doble, el compilador de C# llama a `DoWork(double)` en lugar de a `DoWork(int)`. Hay dos maneras de evitarlo. En primer lugar, evite declarar nuevos métodos con el mismo nombre que los métodos virtuales. En segundo lugar, puede indicar al compilador de C# que llame al método virtual haciendo que busque la lista de métodos de clase base mediante la conversión de la instancia de `Derived` a `Base`. Como el método es virtual, se llamará a la implementación de `DoWork(int)` en `Derived`. Por ejemplo:  
+ <span data-ttu-id="19ce0-147">Dado que la variable `val` se puede convertir implícitamente en un valor doble, el compilador de C# llama a `DoWork(double)` en lugar de a `DoWork(int)`.</span><span class="sxs-lookup"><span data-stu-id="19ce0-147">Because the variable `val` can be converted to a double implicitly, the C# compiler calls `DoWork(double)` instead of `DoWork(int)`.</span></span> <span data-ttu-id="19ce0-148">Hay dos maneras de evitarlo.</span><span class="sxs-lookup"><span data-stu-id="19ce0-148">There are two ways to avoid this.</span></span> <span data-ttu-id="19ce0-149">En primer lugar, evite declarar nuevos métodos con el mismo nombre que los métodos virtuales.</span><span class="sxs-lookup"><span data-stu-id="19ce0-149">First, avoid declaring new methods with the same name as virtual methods.</span></span> <span data-ttu-id="19ce0-150">En segundo lugar, puede indicar al compilador de C# que llame al método virtual haciendo que busque la lista de métodos de clase base mediante la conversión de la instancia de `Derived` a `Base`.</span><span class="sxs-lookup"><span data-stu-id="19ce0-150">Second, you can instruct the C# compiler to call the virtual method by making it search the base class method list by casting the instance of `Derived` to `Base`.</span></span> <span data-ttu-id="19ce0-151">Como el método es virtual, se llamará a la implementación de `DoWork(int)` en `Derived`.</span><span class="sxs-lookup"><span data-stu-id="19ce0-151">Because the method is virtual, the implementation of `DoWork(int)` on `Derived` will be called.</span></span> <span data-ttu-id="19ce0-152">Por ejemplo:</span><span class="sxs-lookup"><span data-stu-id="19ce0-152">For example:</span></span>  
   
- [!code-cs[csProgGuideInheritance#34](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/versioning-with-the-override-and-new-keywords_9.cs)]  
+ [!code-csharp[csProgGuideInheritance#34](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/versioning-with-the-override-and-new-keywords_9.cs)]  
   
- Para obtener otros ejemplos de `new` y `override`, vea [Knowing When to Use Override and New Keywords](../../../csharp/programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md) (Saber cuándo usar las palabras clave override y new [Guía de programación de C#]).  
+ <span data-ttu-id="19ce0-153">Para obtener otros ejemplos de `new` y `override`, vea [Knowing When to Use Override and New Keywords](../../../csharp/programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md) (Saber cuándo usar las palabras clave override y new [Guía de programación de C#]).</span><span class="sxs-lookup"><span data-stu-id="19ce0-153">For more examples of `new` and `override`, see [Knowing When to Use Override and New Keywords](../../../csharp/programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md).</span></span>  
   
-## <a name="see-also"></a>Vea también  
- [Guía de programación de C#](../../../csharp/programming-guide/index.md)   
- [Clases y estructuras](../../../csharp/programming-guide/classes-and-structs/index.md)   
- [Methods](../../../csharp/programming-guide/classes-and-structs/methods.md)  (Métodos [Guía de programación de C#])  
- [Herencia](../../../csharp/programming-guide/classes-and-structs/inheritance.md)
-
+## <a name="see-also"></a><span data-ttu-id="19ce0-154">Vea también</span><span class="sxs-lookup"><span data-stu-id="19ce0-154">See Also</span></span>  
+ [<span data-ttu-id="19ce0-155">Guía de programación de C#</span><span class="sxs-lookup"><span data-stu-id="19ce0-155">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+ [<span data-ttu-id="19ce0-156">Clases y structs</span><span class="sxs-lookup"><span data-stu-id="19ce0-156">Classes and Structs</span></span>](../../../csharp/programming-guide/classes-and-structs/index.md)  
+ [<span data-ttu-id="19ce0-157">Métodos</span><span class="sxs-lookup"><span data-stu-id="19ce0-157">Methods</span></span>](../../../csharp/programming-guide/classes-and-structs/methods.md)  
+ [<span data-ttu-id="19ce0-158">Herencia</span><span class="sxs-lookup"><span data-stu-id="19ce0-158">Inheritance</span></span>](../../../csharp/programming-guide/classes-and-structs/inheritance.md)

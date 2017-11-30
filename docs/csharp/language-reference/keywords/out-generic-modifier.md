@@ -1,77 +1,58 @@
 ---
 title: "out (Modificador genérico) (Referencia de C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - covariance, out keyword [C#]
 - out keyword [C#]
 ms.assetid: f8c20dec-a8bc-426a-9882-4076b1db1e00
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 5c63fe2229d4b7190397d3ba98fa150c84a12fb2
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 775e4512a5ff31c7059961f6332c6bdc0dc5247a
-ms.openlocfilehash: a560a0307723d32750a7e26ad4ee1afec360a849
-ms.contentlocale: es-es
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="out-generic-modifier-c-reference"></a>out (Modificador genérico) (Referencia de C#)
-Para los parámetros de tipo genérico, la palabra clave `out` especifica que el parámetro de tipo es covariante. Puede usar la palabra clave `out` en las interfaces y delegados genéricos.  
+# <a name="out-generic-modifier-c-reference"></a><span data-ttu-id="213a1-102">out (Modificador genérico) (Referencia de C#)</span><span class="sxs-lookup"><span data-stu-id="213a1-102">out (Generic Modifier) (C# Reference)</span></span>
+<span data-ttu-id="213a1-103">Para los parámetros de tipo genérico, la palabra clave `out` especifica que el parámetro de tipo es covariante.</span><span class="sxs-lookup"><span data-stu-id="213a1-103">For generic type parameters, the `out` keyword specifies that the type parameter is covariant.</span></span> <span data-ttu-id="213a1-104">Puede usar la palabra clave `out` en las interfaces y delegados genéricos.</span><span class="sxs-lookup"><span data-stu-id="213a1-104">You can use the `out` keyword in generic interfaces and delegates.</span></span>  
   
- La covarianza le permite usar un tipo más derivado que el que se especifica en el parámetro genérico. Esto permite la conversión implícita de las clases que implementan interfaces variantes y la conversión implícita de los tipos de delegado. La covarianza y la contravarianza son compatibles con los tipos de referencia, pero no lo son con los tipos de valor.  
+ <span data-ttu-id="213a1-105">La covarianza le permite usar un tipo más derivado que el que se especifica en el parámetro genérico.</span><span class="sxs-lookup"><span data-stu-id="213a1-105">Covariance enables you to use a more derived type than that specified by the generic parameter.</span></span> <span data-ttu-id="213a1-106">Esto permite la conversión implícita de las clases que implementan interfaces variantes y la conversión implícita de los tipos de delegado.</span><span class="sxs-lookup"><span data-stu-id="213a1-106">This allows for implicit conversion of classes that implement variant interfaces and implicit conversion of delegate types.</span></span> <span data-ttu-id="213a1-107">La covarianza y la contravarianza son compatibles con los tipos de referencia, pero no lo son con los tipos de valor.</span><span class="sxs-lookup"><span data-stu-id="213a1-107">Covariance and contravariance are supported for reference types, but they are not supported for value types.</span></span>  
   
- Una interfaz con un parámetro de tipo covariante permite que sus métodos devuelvan tipos más derivados que los especificados por el parámetro de tipo. Por ejemplo, dado que en .NET Framework 4, en <xref:System.Collections.Generic.IEnumerable%601>, el tipo T es covariante, puede asignar un objeto del tipo `IEnumerabe(Of String)` a otro objeto del tipo `IEnumerable(Of Object)` sin usar ningún método de conversión especial.  
+ <span data-ttu-id="213a1-108">Una interfaz con un parámetro de tipo covariante permite que sus métodos devuelvan tipos más derivados que los especificados por el parámetro de tipo.</span><span class="sxs-lookup"><span data-stu-id="213a1-108">An interface that has a covariant type parameter enables its methods to return more derived types than those specified by the type parameter.</span></span> <span data-ttu-id="213a1-109">Por ejemplo, dado que en .NET Framework 4, en <xref:System.Collections.Generic.IEnumerable%601>, el tipo T es covariante, puede asignar un objeto del tipo `IEnumerabe(Of String)` a otro objeto del tipo `IEnumerable(Of Object)` sin usar ningún método de conversión especial.</span><span class="sxs-lookup"><span data-stu-id="213a1-109">For example, because in .NET Framework 4, in <xref:System.Collections.Generic.IEnumerable%601>, type T is covariant, you can assign an object of the `IEnumerabe(Of String)` type to an object of the `IEnumerable(Of Object)` type without using any special conversion methods.</span></span>  
   
- A un delegado covariante se le puede asignar otro delegado del mismo tipo, pero con un parámetro de tipo genérico más derivado.  
+ <span data-ttu-id="213a1-110">A un delegado covariante se le puede asignar otro delegado del mismo tipo, pero con un parámetro de tipo genérico más derivado.</span><span class="sxs-lookup"><span data-stu-id="213a1-110">A covariant delegate can be assigned another delegate of the same type, but with a more derived generic type parameter.</span></span>  
   
- Para obtener más información, vea [Covarianza y contravarianza](../../programming-guide/concepts/covariance-contravariance/index.md).  
+ <span data-ttu-id="213a1-111">Para obtener más información, vea [Covarianza y contravarianza](../../programming-guide/concepts/covariance-contravariance/index.md).</span><span class="sxs-lookup"><span data-stu-id="213a1-111">For more information, see [Covariance and Contravariance](../../programming-guide/concepts/covariance-contravariance/index.md).</span></span>  
   
-## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se muestra cómo declarar, extender e implementar una interfaz genérica covariante. También se muestra cómo usar la conversión implícita para las clases que implementan una interfaz covariante.  
+## <a name="example"></a><span data-ttu-id="213a1-112">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="213a1-112">Example</span></span>  
+ <span data-ttu-id="213a1-113">En el ejemplo siguiente se muestra cómo declarar, extender e implementar una interfaz genérica covariante.</span><span class="sxs-lookup"><span data-stu-id="213a1-113">The following example shows how to declare, extend, and implement a covariant generic interface.</span></span> <span data-ttu-id="213a1-114">También se muestra cómo usar la conversión implícita para las clases que implementan una interfaz covariante.</span><span class="sxs-lookup"><span data-stu-id="213a1-114">It also shows how to use implicit conversion for classes that implement a covariant interface.</span></span>  
   
- [!code-cs[csVarianceKeywords#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/out-generic-modifier_1.cs)]  
+ [!code-csharp[csVarianceKeywords#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/out-generic-modifier_1.cs)]  
   
- En una interfaz genérica, un parámetro de tipo se puede declarar como covariante si cumple las siguientes condiciones:  
+ <span data-ttu-id="213a1-115">En una interfaz genérica, un parámetro de tipo se puede declarar como covariante si cumple las siguientes condiciones:</span><span class="sxs-lookup"><span data-stu-id="213a1-115">In a generic interface, a type parameter can be declared covariant if it satisfies the following conditions:</span></span>  
   
--   El parámetro de tipo se usa solamente como tipo de valor devuelto de los métodos de interfaz y no como tipo de los argumentos de método.  
+-   <span data-ttu-id="213a1-116">El parámetro de tipo se usa solamente como tipo de valor devuelto de los métodos de interfaz y no como tipo de los argumentos de método.</span><span class="sxs-lookup"><span data-stu-id="213a1-116">The type parameter is used only as a return type of interface methods and not used as a type of method arguments.</span></span>  
   
     > [!NOTE]
-    >  Hay una excepción para esta regla. Si en una interfaz covariante tiene un delegado genérico contravariante como parámetro de método, puede usar el tipo covariante como parámetro de tipo genérico para este delegado. Para obtener más información sobre los delegados genéricos covariantes y contravariantes, vea [Varianza en delegados](http://msdn.microsoft.com/library/e3b98197-6c5b-4e55-9c6e-9739b60645ca) y [Usar la varianza para los delegados genéricos Func y Action](http://msdn.microsoft.com/library/e69c4f39-09aa-4c6d-a752-08cc767d8290).  
+    >  <span data-ttu-id="213a1-117">Hay una excepción para esta regla.</span><span class="sxs-lookup"><span data-stu-id="213a1-117">There is one exception to this rule.</span></span> <span data-ttu-id="213a1-118">Si en una interfaz covariante tiene un delegado genérico contravariante como parámetro de método, puede usar el tipo covariante como parámetro de tipo genérico para este delegado.</span><span class="sxs-lookup"><span data-stu-id="213a1-118">If in a covariant interface you have a contravariant generic delegate as a method parameter, you can use the covariant type as a generic type parameter for this delegate.</span></span> <span data-ttu-id="213a1-119">Para obtener más información sobre los delegados genéricos covariantes y contravariantes, vea [Varianza en delegados](../../programming-guide/concepts/covariance-contravariance/variance-in-delegates.md) y [Usar la varianza para los delegados genéricos Func y Action](../../programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md).</span><span class="sxs-lookup"><span data-stu-id="213a1-119">For more information about covariant and contravariant generic delegates, see [Variance in Delegates](../../programming-guide/concepts/covariance-contravariance/variance-in-delegates.md) and [Using Variance for Func and Action Generic Delegates](../../programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md).</span></span>  
   
--   El parámetro de tipo no se usa como restricción genérica para los métodos de interfaz.  
+-   <span data-ttu-id="213a1-120">El parámetro de tipo no se usa como restricción genérica para los métodos de interfaz.</span><span class="sxs-lookup"><span data-stu-id="213a1-120">The type parameter is not used as a generic constraint for the interface methods.</span></span>  
   
-## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se muestra cómo declarar, invocar y crear instancias de un delegado genérico covariante. También se muestra cómo convertir implícitamente los tipos de delegado.  
+## <a name="example"></a><span data-ttu-id="213a1-121">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="213a1-121">Example</span></span>  
+ <span data-ttu-id="213a1-122">En el ejemplo siguiente se muestra cómo declarar, invocar y crear instancias de un delegado genérico covariante.</span><span class="sxs-lookup"><span data-stu-id="213a1-122">The following example shows how to declare, instantiate, and invoke a covariant generic delegate.</span></span> <span data-ttu-id="213a1-123">También se muestra cómo convertir implícitamente los tipos de delegado.</span><span class="sxs-lookup"><span data-stu-id="213a1-123">It also shows how to implicitly convert delegate types.</span></span>  
   
- [!code-cs[csVarianceKeywords#4](../../../csharp/language-reference/keywords/codesnippet/CSharp/out-generic-modifier_2.cs)]  
+ [!code-csharp[csVarianceKeywords#4](../../../csharp/language-reference/keywords/codesnippet/CSharp/out-generic-modifier_2.cs)]  
   
- En un delegado genérico, un tipo se puede declarar como covariante si se usa solamente como tipo de valor devuelto por un método y no se usa para los argumentos de método.  
+ <span data-ttu-id="213a1-124">En un delegado genérico, un tipo se puede declarar como covariante si se usa solamente como tipo de valor devuelto por un método y no se usa para los argumentos de método.</span><span class="sxs-lookup"><span data-stu-id="213a1-124">In a generic delegate, a type can be declared covariant if it is used only as a method return type and not used for method arguments.</span></span>  
   
-## <a name="c-language-specification"></a>Especificación del lenguaje C#  
+## <a name="c-language-specification"></a><span data-ttu-id="213a1-125">Especificación del lenguaje C#</span><span class="sxs-lookup"><span data-stu-id="213a1-125">C# Language Specification</span></span>  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [Varianza en interfaces genéricas](../../programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)   
- [in (Modificador genérico)](../../../csharp/language-reference/keywords/in-generic-modifier.md)   
- [Modificadores](../../../csharp/language-reference/keywords/modifiers.md)
-
+## <a name="see-also"></a><span data-ttu-id="213a1-126">Vea también</span><span class="sxs-lookup"><span data-stu-id="213a1-126">See Also</span></span>  
+ [<span data-ttu-id="213a1-127">Varianza en interfaces genéricas</span><span class="sxs-lookup"><span data-stu-id="213a1-127">Variance in Generic Interfaces</span></span>](../../programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)  
+ [<span data-ttu-id="213a1-128">in</span><span class="sxs-lookup"><span data-stu-id="213a1-128">in</span></span>](../../../csharp/language-reference/keywords/in-generic-modifier.md)  
+ [<span data-ttu-id="213a1-129">Modificadores</span><span class="sxs-lookup"><span data-stu-id="213a1-129">Modifiers</span></span>](../../../csharp/language-reference/keywords/modifiers.md)

@@ -1,76 +1,56 @@
 ---
 title: "Métodos genéricos (Guía de programación de C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- generics [C#], methods
+helpviewer_keywords: generics [C#], methods
 ms.assetid: 673eeea2-4b48-4faa-9c4e-2e89449221b9
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 63252dbe4307889f57d35e23eb0575f84358d737
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 14461773303bafc098f79c3686b1f76827f11005
-ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="generic-methods-c-programming-guide"></a>Métodos genéricos (Guía de programación de C#)
-Un método genérico es un método que se declara con parámetros de tipo, de la manera siguiente:  
+# <a name="generic-methods-c-programming-guide"></a><span data-ttu-id="9488c-102">Métodos genéricos (Guía de programación de C#)</span><span class="sxs-lookup"><span data-stu-id="9488c-102">Generic Methods (C# Programming Guide)</span></span>
+<span data-ttu-id="9488c-103">Un método genérico es un método que se declara con parámetros de tipo, de la manera siguiente:</span><span class="sxs-lookup"><span data-stu-id="9488c-103">A generic method is a method that is declared with type parameters, as follows:</span></span>  
   
- [!code-cs[csProgGuideGenerics#22](../../../csharp/programming-guide/generics/codesnippet/CSharp/generic-methods_1.cs)]  
+ [!code-csharp[csProgGuideGenerics#22](../../../csharp/programming-guide/generics/codesnippet/CSharp/generic-methods_1.cs)]  
   
- En el siguiente ejemplo de código se muestra una manera de llamar al método con `int` para el argumento de tipo:  
+ <span data-ttu-id="9488c-104">En el siguiente ejemplo de código se muestra una manera de llamar al método con `int` para el argumento de tipo:</span><span class="sxs-lookup"><span data-stu-id="9488c-104">The following code example shows one way to call the method by using `int` for the type argument:</span></span>  
   
- [!code-cs[csProgGuideGenerics#23](../../../csharp/programming-guide/generics/codesnippet/CSharp/generic-methods_2.cs)]  
+ [!code-csharp[csProgGuideGenerics#23](../../../csharp/programming-guide/generics/codesnippet/CSharp/generic-methods_2.cs)]  
   
- También puede omitir el argumento de tipo y el compilador lo deducirá. La siguiente llamada a `Swap` es equivalente a la llamada anterior:  
+ <span data-ttu-id="9488c-105">También puede omitir el argumento de tipo y el compilador lo deducirá.</span><span class="sxs-lookup"><span data-stu-id="9488c-105">You can also omit the type argument and the compiler will infer it.</span></span> <span data-ttu-id="9488c-106">La siguiente llamada a `Swap` es equivalente a la llamada anterior:</span><span class="sxs-lookup"><span data-stu-id="9488c-106">The following call to `Swap` is equivalent to the previous call:</span></span>  
   
- [!code-cs[csProgGuideGenerics#24](../../../csharp/programming-guide/generics/codesnippet/CSharp/generic-methods_3.cs)]  
+ [!code-csharp[csProgGuideGenerics#24](../../../csharp/programming-guide/generics/codesnippet/CSharp/generic-methods_3.cs)]  
   
- Las mismas reglas para la inferencia de tipos se aplican a los métodos estáticos y a los métodos de instancia. El compilador puede deducir los parámetros de tipo basados en los argumentos de método que se pasan; no puede deducir los parámetros de tipo solo desde un valor devuelto o una restricción. Por lo tanto, la inferencia de tipos no funciona con métodos que no tienen parámetros. La inferencia de tipos se produce en tiempo de compilación antes de que el compilador intente resolver las firmas de método sobrecargadas. El compilador aplica la lógica de inferencia de tipos a todos los métodos genéricos que comparten el mismo nombre. En el paso de resolución de sobrecarga, el compilador incluye solo esos métodos genéricos en los que la inferencia de tipos se ha realizado correctamente.  
+ <span data-ttu-id="9488c-107">Las mismas reglas para la inferencia de tipos se aplican a los métodos estáticos y a los métodos de instancia.</span><span class="sxs-lookup"><span data-stu-id="9488c-107">The same rules for type inference apply to static methods and instance methods.</span></span> <span data-ttu-id="9488c-108">El compilador puede deducir los parámetros de tipo basados en los argumentos de método que se pasan; no puede deducir los parámetros de tipo solo desde un valor devuelto o una restricción.</span><span class="sxs-lookup"><span data-stu-id="9488c-108">The compiler can infer the type parameters based on the method arguments you pass in; it cannot infer the type parameters only from a constraint or return value.</span></span> <span data-ttu-id="9488c-109">Por lo tanto, la inferencia de tipos no funciona con métodos que no tienen parámetros.</span><span class="sxs-lookup"><span data-stu-id="9488c-109">Therefore type inference does not work with methods that have no parameters.</span></span> <span data-ttu-id="9488c-110">La inferencia de tipos se produce en tiempo de compilación antes de que el compilador intente resolver las firmas de método sobrecargadas.</span><span class="sxs-lookup"><span data-stu-id="9488c-110">Type inference occurs at compile time before the compiler tries to resolve overloaded method signatures.</span></span> <span data-ttu-id="9488c-111">El compilador aplica la lógica de inferencia de tipos a todos los métodos genéricos que comparten el mismo nombre.</span><span class="sxs-lookup"><span data-stu-id="9488c-111">The compiler applies type inference logic to all generic methods that share the same name.</span></span> <span data-ttu-id="9488c-112">En el paso de resolución de sobrecarga, el compilador incluye solo esos métodos genéricos en los que la inferencia de tipos se ha realizado correctamente.</span><span class="sxs-lookup"><span data-stu-id="9488c-112">In the overload resolution step, the compiler includes only those generic methods on which type inference succeeded.</span></span>  
   
- Dentro de una clase genérica, los métodos no genéricos pueden tener acceso a los parámetros de tipo de nivel de clase, de la manera siguiente:  
+ <span data-ttu-id="9488c-113">Dentro de una clase genérica, los métodos no genéricos pueden tener acceso a los parámetros de tipo de nivel de clase, de la manera siguiente:</span><span class="sxs-lookup"><span data-stu-id="9488c-113">Within a generic class, non-generic methods can access the class-level type parameters, as follows:</span></span>  
   
- [!code-cs[csProgGuideGenerics#25](../../../csharp/programming-guide/generics/codesnippet/CSharp/generic-methods_4.cs)]  
+ [!code-csharp[csProgGuideGenerics#25](../../../csharp/programming-guide/generics/codesnippet/CSharp/generic-methods_4.cs)]  
   
- Si define un método genérico que toma los mismos parámetros de tipo que la clase contenedora, el compilador genera la advertencia CS0693 porque dentro del ámbito del método, el argumento que se ha proporcionado para el `T` interno oculta el argumento que se ha proporcionado para el `T` externo. Si necesita la flexibilidad de llamar a un método de la clase genérica con argumentos de tipo diferentes de los que se han proporcionado cuando se ha creado una instancia de la clase, considere la posibilidad de proporcionar otro identificador para el parámetro de tipo del método, como se muestra en `GenericList2<T>` en el ejemplo siguiente.  
+ <span data-ttu-id="9488c-114">Si define un método genérico que toma los mismos parámetros de tipo que la clase contenedora, el compilador genera la advertencia CS0693 porque dentro del ámbito del método, el argumento que se ha proporcionado para el `T` interno oculta el argumento que se ha proporcionado para el `T` externo.</span><span class="sxs-lookup"><span data-stu-id="9488c-114">If you define a generic method that takes the same type parameters as the containing class, the compiler generates warning CS0693 because within the method scope, the argument supplied for the inner `T` hides the argument supplied for the outer `T`.</span></span> <span data-ttu-id="9488c-115">Si necesita la flexibilidad de llamar a un método de la clase genérica con argumentos de tipo diferentes de los que se han proporcionado cuando se ha creado una instancia de la clase, considere la posibilidad de proporcionar otro identificador para el parámetro de tipo del método, como se muestra en `GenericList2<T>` en el ejemplo siguiente.</span><span class="sxs-lookup"><span data-stu-id="9488c-115">If you require the flexibility of calling a generic class method with type arguments other than the ones provided when the class was instantiated, consider providing another identifier for the type parameter of the method, as shown in `GenericList2<T>` in the following example.</span></span>  
   
- [!code-cs[csProgGuideGenerics#26](../../../csharp/programming-guide/generics/codesnippet/CSharp/generic-methods_5.cs)]  
+ [!code-csharp[csProgGuideGenerics#26](../../../csharp/programming-guide/generics/codesnippet/CSharp/generic-methods_5.cs)]  
   
- Use restricciones para permitir operaciones más especializadas en parámetros de tipo de métodos. Esta versión de `Swap<T>`, ahora denominada `SwapIfGreater<T>`, solo puede usarse con argumentos de tipo que implementan <xref:System.IComparable%601>.  
+ <span data-ttu-id="9488c-116">Use restricciones para permitir operaciones más especializadas en parámetros de tipo de métodos.</span><span class="sxs-lookup"><span data-stu-id="9488c-116">Use constraints to enable more specialized operations on type parameters in methods.</span></span> <span data-ttu-id="9488c-117">Esta versión de `Swap<T>`, ahora denominada `SwapIfGreater<T>`, solo puede usarse con argumentos de tipo que implementan <xref:System.IComparable%601>.</span><span class="sxs-lookup"><span data-stu-id="9488c-117">This version of `Swap<T>`, now named `SwapIfGreater<T>`, can only be used with type arguments that implement <xref:System.IComparable%601>.</span></span>  
   
- [!code-cs[csProgGuideGenerics#27](../../../csharp/programming-guide/generics/codesnippet/CSharp/generic-methods_6.cs)]  
+ [!code-csharp[csProgGuideGenerics#27](../../../csharp/programming-guide/generics/codesnippet/CSharp/generic-methods_6.cs)]  
   
- Los métodos genéricos pueden sobrecargarse en varios parámetros de tipo. Por ejemplo, todos los métodos siguientes pueden ubicarse en la misma clase:  
+ <span data-ttu-id="9488c-118">Los métodos genéricos pueden sobrecargarse en varios parámetros de tipo.</span><span class="sxs-lookup"><span data-stu-id="9488c-118">Generic methods can be overloaded on several type parameters.</span></span> <span data-ttu-id="9488c-119">Por ejemplo, todos los métodos siguientes pueden ubicarse en la misma clase:</span><span class="sxs-lookup"><span data-stu-id="9488c-119">For example, the following methods can all be located in the same class:</span></span>  
   
- [!code-cs[csProgGuideGenerics#28](../../../csharp/programming-guide/generics/codesnippet/CSharp/generic-methods_7.cs)]  
+ [!code-csharp[csProgGuideGenerics#28](../../../csharp/programming-guide/generics/codesnippet/CSharp/generic-methods_7.cs)]  
   
-## <a name="c-language-specification"></a>Especificación del lenguaje C#  
- Para obtener más información, consulte la [Especificación del lenguaje C#](../../../csharp/language-reference/language-specification/index.md).  
+## <a name="c-language-specification"></a><span data-ttu-id="9488c-120">Especificación del lenguaje C#</span><span class="sxs-lookup"><span data-stu-id="9488c-120">C# Language Specification</span></span>  
+ <span data-ttu-id="9488c-121">Para obtener más información, consulte la [Especificación del lenguaje C#](../../../csharp/language-reference/language-specification/index.md).</span><span class="sxs-lookup"><span data-stu-id="9488c-121">For more information, see the [C# Language Specification](../../../csharp/language-reference/language-specification/index.md).</span></span>  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Collections.Generic>   
- [Guía de programación de C#](../../../csharp/programming-guide/index.md)   
- [Introducción a los genéricos](../../../csharp/programming-guide/generics/introduction-to-generics.md)   
- [Métodos](../../../csharp/programming-guide/classes-and-structs/methods.md)
-
+## <a name="see-also"></a><span data-ttu-id="9488c-122">Vea también</span><span class="sxs-lookup"><span data-stu-id="9488c-122">See Also</span></span>  
+ <xref:System.Collections.Generic>  
+ [<span data-ttu-id="9488c-123">Guía de programación de C#</span><span class="sxs-lookup"><span data-stu-id="9488c-123">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+ [<span data-ttu-id="9488c-124">Introducción a los genéricos</span><span class="sxs-lookup"><span data-stu-id="9488c-124">Introduction to Generics</span></span>](../../../csharp/programming-guide/generics/introduction-to-generics.md)  
+ [<span data-ttu-id="9488c-125">Métodos</span><span class="sxs-lookup"><span data-stu-id="9488c-125">Methods</span></span>](../../../csharp/programming-guide/classes-and-structs/methods.md)

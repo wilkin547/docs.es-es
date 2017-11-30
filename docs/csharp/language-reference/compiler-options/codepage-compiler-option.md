@@ -1,66 +1,46 @@
 ---
 title: -codepage (Opciones del compilador de C#)
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- /codepage
-dev_langs:
-- CSharp
+f1_keywords: /codepage
 helpviewer_keywords:
 - /codepage compiler option [C#]
 - codepage compiler option [C#]
 - -codepage compiler option [C#]
 ms.assetid: 75942989-b69a-4308-90a0-840c73d2c478
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 37f40312f1218b8e666eae7cb2de6c768ee32108
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: b80f6fcf8891d2f0b921af01cc094f624d807aa1
-ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="codepage-c-compiler-options"></a>/codepage (Opciones del compilador de C#)
-Esta opción especifica qué página de códigos se va a usar durante la compilación si la página necesaria no es la página de códigos predeterminada actual del sistema.  
+# <a name="codepage-c-compiler-options"></a><span data-ttu-id="aefd8-102">/codepage (Opciones del compilador de C#)</span><span class="sxs-lookup"><span data-stu-id="aefd8-102">/codepage (C# Compiler Options)</span></span>
+<span data-ttu-id="aefd8-103">Esta opción especifica qué página de códigos se va a usar durante la compilación si la página necesaria no es la página de códigos predeterminada actual del sistema.</span><span class="sxs-lookup"><span data-stu-id="aefd8-103">This option specifies which codepage to use during compilation if the required page is not the current default codepage for the system.</span></span>  
   
-## <a name="syntax"></a>Sintaxis  
+## <a name="syntax"></a><span data-ttu-id="aefd8-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="aefd8-104">Syntax</span></span>  
   
 ```console  
 /codepage:id  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+## <a name="arguments"></a><span data-ttu-id="aefd8-105">Argumentos</span><span class="sxs-lookup"><span data-stu-id="aefd8-105">Arguments</span></span>  
  `id`  
- El id. de la página de códigos que se va a usar para todos los archivos de código fuente de la compilación.  
+ <span data-ttu-id="aefd8-106">El id. de la página de códigos que se va a usar para todos los archivos de código fuente de la compilación.</span><span class="sxs-lookup"><span data-stu-id="aefd8-106">The id of the code page to use for all source code files in the compilation.</span></span>  
   
-## <a name="remarks"></a>Comentarios  
- Si compila uno o más archivos de código fuente que no se han creado para usar la página de códigos predeterminada en su equipo, puede usar la opción **/codepage** para especificar qué página de códigos debe usarse. **/codepage** se aplica a todos los archivos de código fuente de su compilación.  
+## <a name="remarks"></a><span data-ttu-id="aefd8-107">Comentarios</span><span class="sxs-lookup"><span data-stu-id="aefd8-107">Remarks</span></span>  
+ <span data-ttu-id="aefd8-108">Si compila uno o más archivos de código fuente que no se han creado para usar la página de códigos predeterminada en su equipo, puede usar la opción **/codepage** para especificar qué página de códigos debe usarse.</span><span class="sxs-lookup"><span data-stu-id="aefd8-108">If you compile one or more source code files that were not created to use the default code page on your computer, you can use the **/codepage** option to specify which code page should be used.</span></span> <span data-ttu-id="aefd8-109">**/codepage** se aplica a todos los archivos de código fuente de su compilación.</span><span class="sxs-lookup"><span data-stu-id="aefd8-109">**/codepage** applies to all source code files in your compilation.</span></span>  
   
- Si los archivos de código fuente se han creado con la misma página de códigos que está en vigor en su equipo o si los archivos de código fuente se han creado con UNICODE o UTF-8, no necesita usar **/codepage**.  
+ <span data-ttu-id="aefd8-110">Si los archivos de código fuente se han creado con la misma página de códigos que está en vigor en su equipo o si los archivos de código fuente se han creado con UNICODE o UTF-8, no necesita usar **/codepage**.</span><span class="sxs-lookup"><span data-stu-id="aefd8-110">If the source code files were created with the same codepage that is in effect on your computer or if the source code files were created with UNICODE or UTF-8, you need not use **/codepage**.</span></span>  
   
- Vea [GetCPInfo](http://go.microsoft.com/fwlink/?LinkId=148371) para obtener información sobre cómo buscar las páginas de códigos que se admiten en su sistema.  
+ <span data-ttu-id="aefd8-111">Vea [GetCPInfo](http://go.microsoft.com/fwlink/?LinkId=148371) para obtener información sobre cómo buscar las páginas de códigos que se admiten en su sistema.</span><span class="sxs-lookup"><span data-stu-id="aefd8-111">See [GetCPInfo](http://go.microsoft.com/fwlink/?LinkId=148371) for information on how to find which code pages are supported on your system.</span></span>  
   
- Esta opción del compilador no está disponible en Visual Studio y no se puede cambiar mediante programación.  
+ <span data-ttu-id="aefd8-112">Esta opción del compilador no está disponible en Visual Studio y no se puede cambiar mediante programación.</span><span class="sxs-lookup"><span data-stu-id="aefd8-112">This compiler option is unavailable in Visual Studio and cannot be changed programmatically.</span></span>  
   
-## <a name="see-also"></a>Vea también  
- [Opciones del compilador de C#](../../../csharp/language-reference/compiler-options/index.md)   
- [Administrar propiedades de soluciones y proyectos](/visualstudio/ide/managing-project-and-solution-properties)
-
+## <a name="see-also"></a><span data-ttu-id="aefd8-113">Vea también</span><span class="sxs-lookup"><span data-stu-id="aefd8-113">See Also</span></span>  
+ [<span data-ttu-id="aefd8-114">Opciones del compilador de C#</span><span class="sxs-lookup"><span data-stu-id="aefd8-114">C# Compiler Options</span></span>](../../../csharp/language-reference/compiler-options/index.md)  
+ [<span data-ttu-id="aefd8-115">Administrar propiedades de soluciones y proyectos</span><span class="sxs-lookup"><span data-stu-id="aefd8-115">Managing Project and Solution Properties</span></span>](/visualstudio/ide/managing-project-and-solution-properties)

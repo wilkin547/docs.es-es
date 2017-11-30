@@ -1,73 +1,72 @@
 ---
-title: "C&#243;mo: Controlar el &#225;mbito de una variable (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "elementos declarados, ámbito"
-  - "elementos declarados, visibilidad"
-  - "ámbito, elementos declarados"
-  - "ámbito, variables"
-  - "ámbito, Visual Basic"
-  - "variables [Visual Basic], ámbito"
-  - "variables [Visual Basic], visibilidad"
-  - "visibilidad, elementos declarados"
-  - "visibilidad, variables"
+title: "Cómo: Controlar el ámbito de una variable (Visual Basic)"
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- variables [Visual Basic], scope
+- declared elements [Visual Basic], scope
+- visibility [Visual Basic], declared elements
+- variables [Visual Basic], visibility
+- scope [Visual Basic], declared elements
+- scope [Visual Basic], variables
+- scope [Visual Basic], Visual Basic
+- declared elements [Visual Basic], visibility
+- visibility [Visual Basic], variables
 ms.assetid: 44b7f62a-cb5c-4d50-bce9-60ae68f87072
-caps.latest.revision: 12
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 7284d344e3bf0fdd0f900f2a820d6c8db4a4bf74
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo: Controlar el &#225;mbito de una variable (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-Normalmente, una variable está en *ámbito*, o visible para referencia, en toda la región donde se declara.  En algunos casos, el *nivel de acceso* de la variable puede influir en su ámbito.  
+# <a name="how-to-control-the-scope-of-a-variable-visual-basic"></a><span data-ttu-id="8be2b-102">Cómo: Controlar el ámbito de una variable (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="8be2b-102">How to: Control the Scope of a Variable (Visual Basic)</span></span>
+<span data-ttu-id="8be2b-103">Normalmente, una variable consiste en *ámbito*, o como referencia, en toda la región en la que se declara está visible.</span><span class="sxs-lookup"><span data-stu-id="8be2b-103">Normally, a variable is in *scope*, or visible for reference, throughout the region in which you declare it.</span></span> <span data-ttu-id="8be2b-104">En del algunos casos, la variable *nivel de acceso* puede influir en su ámbito.</span><span class="sxs-lookup"><span data-stu-id="8be2b-104">In some cases, the variable's *access level* can influence its scope.</span></span>  
   
- Para obtener más información, vea [Ámbito en Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md).  
+ <span data-ttu-id="8be2b-105">Para obtener más información, consulte [ámbito en Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md).</span><span class="sxs-lookup"><span data-stu-id="8be2b-105">For more information, see [Scope in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md).</span></span>  
   
-## Ámbito en el nivel de bloque o procedimiento  
+## <a name="scope-at-block-or-procedure-level"></a><span data-ttu-id="8be2b-106">Ámbito en el nivel de procedimiento o bloque</span><span class="sxs-lookup"><span data-stu-id="8be2b-106">Scope at Block or Procedure Level</span></span>  
   
-#### Para hacer que una variable sea visible sólo dentro de un bloque  
+#### <a name="to-make-a-variable-visible-only-within-a-block"></a><span data-ttu-id="8be2b-107">Para hacer visible solo dentro de un bloque de una variable</span><span class="sxs-lookup"><span data-stu-id="8be2b-107">To make a variable visible only within a block</span></span>  
   
--   Coloque [Dim \(Instrucción\)](../../../../visual-basic/language-reference/statements/dim-statement.md) para la variable entre las instrucciones de declaración de inicio y fin de ese bloque, por ejemplo entre las instrucciones `For` y `Next` de un bucle `For`.  
+-   <span data-ttu-id="8be2b-108">Lugar la [Dim (instrucción)](../../../../visual-basic/language-reference/statements/dim-statement.md) para la variable entre el inicio y finalización de instrucciones de declaración de dicho bloque, por ejemplo entre el `For` y `Next` las instrucciones de un `For` bucle.</span><span class="sxs-lookup"><span data-stu-id="8be2b-108">Place the [Dim Statement](../../../../visual-basic/language-reference/statements/dim-statement.md) for the variable between the initiating and terminating declaration statements of that block, for example between the `For` and `Next` statements of a `For` loop.</span></span>  
   
-     Sólo puede hacer referencia a la variable desde dentro del bloque.  
+     <span data-ttu-id="8be2b-109">Puede hacer referencia a la variable únicamente desde dentro del bloque.</span><span class="sxs-lookup"><span data-stu-id="8be2b-109">You can refer to the variable only from within the block.</span></span>  
   
-#### Para hacer que una variable sea visible sólo dentro de un procedimiento  
+#### <a name="to-make-a-variable-visible-only-within-a-procedure"></a><span data-ttu-id="8be2b-110">Para hacer que una variable sea visible sólo dentro de un procedimiento</span><span class="sxs-lookup"><span data-stu-id="8be2b-110">To make a variable visible only within a procedure</span></span>  
   
--   Coloque la instrucción `Dim` para la variable dentro del procedimiento pero fuera de cualquier bloque \(como un bloque `With`...`End With`\).  
+-   <span data-ttu-id="8be2b-111">Lugar la `Dim` instrucción para la variable dentro del procedimiento pero fuera de cualquier bloque (como un `With`... `End With` bloque).</span><span class="sxs-lookup"><span data-stu-id="8be2b-111">Place the `Dim` statement for the variable inside the procedure but outside any block (such as a `With`...`End With` block).</span></span>  
   
-     Sólo puede hacer referencia a la variable desde dentro del procedimiento, incluyendo dentro de cualquier bloque contenido en el procedimiento.  
+     <span data-ttu-id="8be2b-112">Puede hacer referencia a la variable únicamente desde dentro del procedimiento, incluso dentro de cualquier bloque contenido en el procedimiento.</span><span class="sxs-lookup"><span data-stu-id="8be2b-112">You can refer to the variable only from within the procedure, including inside any block contained in the procedure.</span></span>  
   
-## Ámbito en el nivel de módulo o espacio de nombres  
- Por comodidad, el término *nivel de módulo* se aplica por igual a módulos, clases y estructuras.  El nivel de acceso de una variable de nivel de módulo determina su ámbito.  El espacio de nombres que contiene el módulo, la clase o la estructura también influye en el ámbito.  
+## <a name="scope-at-module-or-namespace-level"></a><span data-ttu-id="8be2b-113">Ámbito en el nivel de módulo o Namespace</span><span class="sxs-lookup"><span data-stu-id="8be2b-113">Scope at Module or Namespace Level</span></span>  
+ <span data-ttu-id="8be2b-114">Para mayor comodidad, el término único *nivel de módulo* se aplica por igual a módulos, clases y estructuras.</span><span class="sxs-lookup"><span data-stu-id="8be2b-114">For convenience, the single term *module level* applies equally to modules, classes, and structures.</span></span> <span data-ttu-id="8be2b-115">El nivel de acceso de una variable de nivel de módulo determina su ámbito.</span><span class="sxs-lookup"><span data-stu-id="8be2b-115">The access level of a module level variable determines its scope.</span></span> <span data-ttu-id="8be2b-116">El espacio de nombres que contiene el módulo, clase o estructura también influye en el ámbito.</span><span class="sxs-lookup"><span data-stu-id="8be2b-116">The namespace that contains the module, class, or structure also influences the scope.</span></span>  
   
-#### Para hacer que una variable sea visible en todo un módulo, clase o estructura  
+#### <a name="to-make-a-variable-visible-throughout-a-module-class-or-structure"></a><span data-ttu-id="8be2b-117">Para hacer que una variable sea visible a lo largo de un módulo, clase o estructura</span><span class="sxs-lookup"><span data-stu-id="8be2b-117">To make a variable visible throughout a module, class, or structure</span></span>  
   
-1.  Coloque la instrucción `Dim` para la variable dentro del módulo, clase o estructura, pero fuera de cualquier procedimiento.  
+1.  <span data-ttu-id="8be2b-118">Lugar el `Dim` instrucción para la variable dentro del módulo, clase o estructura, pero fuera de cualquier procedimiento.</span><span class="sxs-lookup"><span data-stu-id="8be2b-118">Place the `Dim` statement for the variable inside the module, class, or structure, but outside any procedure.</span></span>  
   
-2.  Incluya la palabra clave [Private](../../../../visual-basic/language-reference/modifiers/private.md) en la instrucción `Dim`.  
+2.  <span data-ttu-id="8be2b-119">Incluir el [privada](../../../../visual-basic/language-reference/modifiers/private.md) palabra clave en el `Dim` instrucción.</span><span class="sxs-lookup"><span data-stu-id="8be2b-119">Include the [Private](../../../../visual-basic/language-reference/modifiers/private.md) keyword in the `Dim` statement.</span></span>  
   
-3.  Puede hacer referencia a la variable desde cualquier parte dentro del módulo, clase o estructura, pero no desde fuera de él.  
+3.  <span data-ttu-id="8be2b-120">Puede hacer referencia a la variable desde cualquier lugar dentro del módulo, clase o estructura, pero no desde fuera de él.</span><span class="sxs-lookup"><span data-stu-id="8be2b-120">You can refer to the variable from anywhere within the module, class, or structure, but not from outside it.</span></span>  
   
-#### Para hacer que una variable sea visible en todo un espacio de nombres  
+#### <a name="to-make-a-variable-visible-throughout-a-namespace"></a><span data-ttu-id="8be2b-121">Para hacer que una variable sea visible a lo largo de un espacio de nombres</span><span class="sxs-lookup"><span data-stu-id="8be2b-121">To make a variable visible throughout a namespace</span></span>  
   
-1.  Coloque la instrucción `Dim` para la variable dentro del módulo, clase o estructura, pero fuera de cualquier procedimiento.  
+1.  <span data-ttu-id="8be2b-122">Lugar el `Dim` instrucción para la variable dentro del módulo, clase o estructura, pero fuera de cualquier procedimiento.</span><span class="sxs-lookup"><span data-stu-id="8be2b-122">Place the `Dim` statement for the variable inside the module, class, or structure, but outside any procedure.</span></span>  
   
-2.  Incluya la palabra clave [Friend](../../../../visual-basic/language-reference/modifiers/friend.md) o [Public](../../../../visual-basic/language-reference/modifiers/public.md) en la instrucción `Dim`.  
+2.  <span data-ttu-id="8be2b-123">Incluir el [Friend](../../../../visual-basic/language-reference/modifiers/friend.md) o [público](../../../../visual-basic/language-reference/modifiers/public.md) palabra clave en el `Dim` instrucción.</span><span class="sxs-lookup"><span data-stu-id="8be2b-123">Include the [Friend](../../../../visual-basic/language-reference/modifiers/friend.md) or [Public](../../../../visual-basic/language-reference/modifiers/public.md) keyword in the `Dim` statement.</span></span>  
   
-3.  Puede hacer referencia a la variable desde cualquier parte dentro del espacio de nombres que contiene el módulo, clase o estructura.  
+3.  <span data-ttu-id="8be2b-124">Puede hacer referencia a la variable desde cualquier lugar dentro del espacio de nombres que contiene el módulo, clase o estructura.</span><span class="sxs-lookup"><span data-stu-id="8be2b-124">You can refer to the variable from anywhere within the namespace containing the module, class, or structure.</span></span>  
   
-## Ejemplo  
- En el ejemplo siguiente se declara una variable en el nivel de módulo y se limita su visibilidad al código dentro del módulo.  
+## <a name="example"></a><span data-ttu-id="8be2b-125">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="8be2b-125">Example</span></span>  
+ <span data-ttu-id="8be2b-126">En el ejemplo siguiente se declara una variable en el nivel de módulo y se limita su visibilidad al código dentro del módulo.</span><span class="sxs-lookup"><span data-stu-id="8be2b-126">The following example declares a variable at module level and limits its visibility to code within the module.</span></span>  
   
 ```  
 Module demonstrateScope  
@@ -81,24 +80,24 @@ Module demonstrateScope
 End Module  
 ```  
   
- En el ejemplo anterior, todos los procedimientos definidos en el módulo `demonstrateScope` pueden hacer referencia a la variable `String` `strMsg`.  Cuando se llama al procedimiento `usePrivateVariable`, se muestra el contenido de la variable `strMsg` en un cuadro de diálogo.  
+ <span data-ttu-id="8be2b-127">En el ejemplo anterior, todos los procedimientos definen en el módulo `demonstrateScope` pueden hacer referencia a la `String` variable `strMsg`.</span><span class="sxs-lookup"><span data-stu-id="8be2b-127">In the preceding example, all the procedures defined in module `demonstrateScope` can refer to the `String` variable `strMsg`.</span></span> <span data-ttu-id="8be2b-128">Cuando el `usePrivateVariable` se llama al procedimiento, se muestra el contenido de la variable de cadena `strMsg` en un cuadro de diálogo.</span><span class="sxs-lookup"><span data-stu-id="8be2b-128">When the `usePrivateVariable` procedure is called, it displays the contents of the string variable `strMsg` in a dialog box.</span></span>  
   
- La siguiente modificación del ejemplo anterior permite que el código haga referencia a la variable de cadena `strMsg` en cualquier parte del espacio de nombres de su declaración.  
+ <span data-ttu-id="8be2b-129">Con la modificación siguiente al ejemplo anterior, la variable de cadena `strMsg` puede hacer referencia a código en cualquier lugar en el espacio de nombres de su declaración.</span><span class="sxs-lookup"><span data-stu-id="8be2b-129">With the following alteration to the preceding example, the string variable `strMsg` can be referred to by code anywhere in the namespace of its declaration.</span></span>  
   
 ```  
 Public strMsg As String  
 ```  
   
-## Programación eficaz  
- Cuanto más estrecho sea el ámbito de una variable, menos probabilidades tendrá de hacer referencia accidentalmente a ella en lugar de a otra variable con el mismo nombre.  También puede minimizar los problemas de concordancia de referencias.  
+## <a name="robust-programming"></a><span data-ttu-id="8be2b-130">Programación sólida</span><span class="sxs-lookup"><span data-stu-id="8be2b-130">Robust Programming</span></span>  
+ <span data-ttu-id="8be2b-131">El ámbito más restringido el de una variable, menos posibilidades que tendrá de hacer referencia accidentalmente a ella en lugar de otra variable con el mismo nombre.</span><span class="sxs-lookup"><span data-stu-id="8be2b-131">The narrower the scope of a variable, the fewer opportunities you have for accidentally referring to it in place of another variable with the same name.</span></span> <span data-ttu-id="8be2b-132">También puede minimizar los problemas de concordancia de referencias.</span><span class="sxs-lookup"><span data-stu-id="8be2b-132">You can also minimize problems of reference matching.</span></span>  
   
-## Seguridad de .NET Framework  
- Cuanto más estrecho sea el ámbito de una variable, menos posibilidades habrá de que un código malintencionado puede hacer un uso indebido de ella.  
+## <a name="net-framework-security"></a><span data-ttu-id="8be2b-133">Seguridad de .NET Framework</span><span class="sxs-lookup"><span data-stu-id="8be2b-133">.NET Framework Security</span></span>  
+ <span data-ttu-id="8be2b-134">Más se limita el ámbito de una variable, cuanto más pequeño las posibilidades de que un código malintencionado puede hacer incorrecto usar del mismo.</span><span class="sxs-lookup"><span data-stu-id="8be2b-134">The narrower the scope of a variable, the smaller the chances that malicious code can make improper use of it.</span></span>  
   
-## Vea también  
- [Ámbito en Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)   
- [Período de duración en Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)   
- [Niveles de acceso en Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)   
- [Variables](../../../../visual-basic/programming-guide/language-features/variables/index.md)   
- [Declaración de variable](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)   
- [Dim \(Instrucción\)](../../../../visual-basic/language-reference/statements/dim-statement.md)
+## <a name="see-also"></a><span data-ttu-id="8be2b-135">Vea también</span><span class="sxs-lookup"><span data-stu-id="8be2b-135">See Also</span></span>  
+ [<span data-ttu-id="8be2b-136">Ámbito en Visual Basic</span><span class="sxs-lookup"><span data-stu-id="8be2b-136">Scope in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)  
+ [<span data-ttu-id="8be2b-137">Duración en Visual Basic</span><span class="sxs-lookup"><span data-stu-id="8be2b-137">Lifetime in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)  
+ [<span data-ttu-id="8be2b-138">Niveles de acceso en Visual Basic</span><span class="sxs-lookup"><span data-stu-id="8be2b-138">Access levels in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)  
+ [<span data-ttu-id="8be2b-139">Variables</span><span class="sxs-lookup"><span data-stu-id="8be2b-139">Variables</span></span>](../../../../visual-basic/programming-guide/language-features/variables/index.md)  
+ [<span data-ttu-id="8be2b-140">Declaración de variables</span><span class="sxs-lookup"><span data-stu-id="8be2b-140">Variable Declaration</span></span>](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)  
+ [<span data-ttu-id="8be2b-141">Dim (instrucción)</span><span class="sxs-lookup"><span data-stu-id="8be2b-141">Dim Statement</span></span>](../../../../visual-basic/language-reference/statements/dim-statement.md)

@@ -1,55 +1,36 @@
 ---
 title: "Cómo: Analizar cadenas mediante String.Split (Guía de programación de C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - splitting strings [C#]
 - Split method [C#]
 - strings [C#], splitting
 - parse strings
 ms.assetid: 729c2923-4169-41c6-9c90-ef176c1e2953
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 7b97d1d89a4c74a4c759d1ed41a0bc2476b3b07a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: c0ef96f1cb074c32208457c192d53c69d95a102d
-ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-parse-strings-using-stringsplit-c-programming-guide"></a>Cómo: Analizar cadenas mediante String.Split (Guía de programación de C#)
-En el ejemplo de código siguiente se muestra cómo se puede analizar una consulta mediante el método <xref:System.String.Split%2A?displayProperty=fullName> . Como entrada, <xref:System.String.Split%2A> toma una matriz de caracteres que indica qué caracteres separan las cadenas sub interesantes de la cadena de destino.  La función devuelve una matriz de cadenas sub.  
+# <a name="how-to-parse-strings-using-stringsplit-c-programming-guide"></a><span data-ttu-id="19e4f-102">Cómo: Analizar cadenas mediante String.Split (Guía de programación de C#)</span><span class="sxs-lookup"><span data-stu-id="19e4f-102">How to: Parse Strings Using String.Split (C# Programming Guide)</span></span>
+<span data-ttu-id="19e4f-103">En el ejemplo de código siguiente se muestra cómo se puede analizar una consulta mediante el método <xref:System.String.Split%2A?displayProperty=nameWithType> .</span><span class="sxs-lookup"><span data-stu-id="19e4f-103">The following code example demonstrates how a string can be parsed using the <xref:System.String.Split%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="19e4f-104">Como entrada, <xref:System.String.Split%2A> toma una matriz de caracteres que indica qué caracteres separan las cadenas sub interesantes de la cadena de destino.</span><span class="sxs-lookup"><span data-stu-id="19e4f-104">As input, <xref:System.String.Split%2A> takes an array of characters that indicate which characters separate interesting sub strings of the target string.</span></span>  <span data-ttu-id="19e4f-105">La función devuelve una matriz de cadenas sub.</span><span class="sxs-lookup"><span data-stu-id="19e4f-105">The function returns an array of the sub strings.</span></span>  
   
- Este ejemplo usa espacios, comas, puntos, dos puntos y tabulaciones pasados en una matriz que contiene estos caracteres de separación <xref:System.String.Split%2A>.  Cada palabra de la frase de la cadena de destino se muestra por separado de la matriz de cadenas resultante.  
+ <span data-ttu-id="19e4f-106">Este ejemplo usa espacios, comas, puntos, dos puntos y tabulaciones pasados en una matriz que contiene estos caracteres de separación <xref:System.String.Split%2A>.</span><span class="sxs-lookup"><span data-stu-id="19e4f-106">This example uses spaces, commas, periods, colons, and tabs, all passed in an array containing these separating characters to <xref:System.String.Split%2A>.</span></span>  <span data-ttu-id="19e4f-107">Cada palabra de la frase de la cadena de destino se muestra por separado de la matriz de cadenas resultante.</span><span class="sxs-lookup"><span data-stu-id="19e4f-107">Each word in the target string's sentence displays separately from the resulting array of strings.</span></span>  
   
-## <a name="example"></a>Ejemplo  
- [!code-cs[csProgGuideStrings#16](../../../csharp/programming-guide/strings/codesnippet/CSharp/how-to-parse-strings-using-string-split_1.cs)]  
+## <a name="example"></a><span data-ttu-id="19e4f-108">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="19e4f-108">Example</span></span>  
+ [!code-csharp[csProgGuideStrings#16](../../../csharp/programming-guide/strings/codesnippet/CSharp/how-to-parse-strings-using-string-split_1.cs)]  
   
-## <a name="example"></a>Ejemplo  
- De forma predeterminada, String.Split devuelve las cadenas vacías cuando dos caracteres de separación aparecen de manera contigua en la cadena de destino.  Puede pasar un parámetro StringSplitOptions.RemoveEmptyEntries opcional para excluir las cadenas vacías en la salida.  
+## <a name="example"></a><span data-ttu-id="19e4f-109">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="19e4f-109">Example</span></span>  
+ <span data-ttu-id="19e4f-110">De forma predeterminada, String.Split devuelve las cadenas vacías cuando dos caracteres de separación aparecen de manera contigua en la cadena de destino.</span><span class="sxs-lookup"><span data-stu-id="19e4f-110">By default, String.Split returns empty strings when two separating characters appear contiguously in the target string.</span></span>  <span data-ttu-id="19e4f-111">Puede pasar un parámetro StringSplitOptions.RemoveEmptyEntries opcional para excluir las cadenas vacías en la salida.</span><span class="sxs-lookup"><span data-stu-id="19e4f-111">You can pass an optional StringSplitOptions.RemoveEmptyEntries parameter to exclude any empty strings in the output.</span></span>  
   
- String.Split puede tomar una matriz de cadenas (secuencias de caracteres que actúan como separadores para analizar la cadena de destino, en lugar de caracteres individuales).  
+ <span data-ttu-id="19e4f-112">String.Split puede tomar una matriz de cadenas (secuencias de caracteres que actúan como separadores para analizar la cadena de destino, en lugar de caracteres individuales).</span><span class="sxs-lookup"><span data-stu-id="19e4f-112">String.Split can take an array of strings (character sequences that act as separators for parsing the target string, instead of single characters).</span></span>  
   
 ```csharp  
 class TestStringSplit  
@@ -83,8 +64,7 @@ class TestStringSplit
 */  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Guía de programación de C#](../../../csharp/programming-guide/index.md)   
- [Cadenas](../../../csharp/programming-guide/strings/index.md)   
- [Expresiones regulares de .NET Framework](https://msdn.microsoft.com/library/hs600312)
-
+## <a name="see-also"></a><span data-ttu-id="19e4f-113">Vea también</span><span class="sxs-lookup"><span data-stu-id="19e4f-113">See Also</span></span>  
+ [<span data-ttu-id="19e4f-114">Guía de programación de C#</span><span class="sxs-lookup"><span data-stu-id="19e4f-114">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+ [<span data-ttu-id="19e4f-115">Cadenas</span><span class="sxs-lookup"><span data-stu-id="19e4f-115">Strings</span></span>](../../../csharp/programming-guide/strings/index.md)  
+ [<span data-ttu-id="19e4f-116">Expresiones regulares de .NET Framework</span><span class="sxs-lookup"><span data-stu-id="19e4f-116">.NET Framework Regular Expressions</span></span>](https://msdn.microsoft.com/library/hs600312)

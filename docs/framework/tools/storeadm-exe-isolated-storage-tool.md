@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - Storeadm.exe
 - listing stores for current user
@@ -21,62 +15,60 @@ helpviewer_keywords:
 - stores, current user
 - removing stores
 ms.assetid: b81202b8-d91d-4b23-9c53-4a112f74a44a
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: d9ae6b007fe32dfbef973105311ba929cc247e6b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: e2304bd0e2ac9115c9d937e502b960399d793356
-ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="storeadmexe-isolated-storage-tool"></a>Storeadm.exe (herramienta de almacenamiento aislado)
-La herramienta de almacenamiento aislado incluye o quita todos los almacenes existentes del usuario actual.  
+# <a name="storeadmexe-isolated-storage-tool"></a><span data-ttu-id="79b4c-102">Storeadm.exe (herramienta de almacenamiento aislado)</span><span class="sxs-lookup"><span data-stu-id="79b4c-102">Storeadm.exe (Isolated Storage Tool)</span></span>
+<span data-ttu-id="79b4c-103">La herramienta de almacenamiento aislado incluye o quita todos los almacenes existentes del usuario actual.</span><span class="sxs-lookup"><span data-stu-id="79b4c-103">The Isolated Storage tool lists or removes all existing stores for the current user.</span></span>  
   
- Esta herramienta se instala automáticamente con Visual Studio. Para ejecutar la herramienta, utilice el Símbolo del sistema para desarrolladores (o el Símbolo del sistema de Visual Studio en Windows 7). Para más información, consulte [Símbolos del sistema](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
+ <span data-ttu-id="79b4c-104">Esta herramienta se instala automáticamente con Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="79b4c-104">This tool is automatically installed with Visual Studio.</span></span> <span data-ttu-id="79b4c-105">Para ejecutar la herramienta, utilice el Símbolo del sistema para desarrolladores (o el Símbolo del sistema de Visual Studio en Windows 7).</span><span class="sxs-lookup"><span data-stu-id="79b4c-105">To run the tool, use the Developer Command Prompt (or the Visual Studio Command Prompt in Windows 7).</span></span> <span data-ttu-id="79b4c-106">Para más información, consulte [Símbolos del sistema](../../../docs/framework/tools/developer-command-prompt-for-vs.md).</span><span class="sxs-lookup"><span data-stu-id="79b4c-106">For more information, see [Command Prompts](../../../docs/framework/tools/developer-command-prompt-for-vs.md).</span></span>  
   
- En el símbolo del sistema, escriba lo siguiente:  
+ <span data-ttu-id="79b4c-107">En el símbolo del sistema, escriba lo siguiente:</span><span class="sxs-lookup"><span data-stu-id="79b4c-107">At the command prompt, type the following:</span></span>  
   
-## <a name="syntax"></a>Sintaxis  
+## <a name="syntax"></a><span data-ttu-id="79b4c-108">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="79b4c-108">Syntax</span></span>  
   
 ```  
 storeadm [/list][/machine][/remove][/roaming][/quiet]  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+#### <a name="parameters"></a><span data-ttu-id="79b4c-109">Parámetros</span><span class="sxs-lookup"><span data-stu-id="79b4c-109">Parameters</span></span>  
   
-|Opción|Descripción|  
+|<span data-ttu-id="79b4c-110">Opción</span><span class="sxs-lookup"><span data-stu-id="79b4c-110">Option</span></span>|<span data-ttu-id="79b4c-111">Descripción</span><span class="sxs-lookup"><span data-stu-id="79b4c-111">Description</span></span>|  
 |------------|-----------------|  
-|**/h**[**elp**]|Muestra las opciones y la sintaxis de los comandos para la herramienta.|  
-|**/list**|Muestra todos los almacenes existentes del usuario actual. Entre estos se incluyen los almacenes de todas las aplicaciones o ensamblados ejecutados por este usuario.|  
-|**/machine**|Selecciona el almacén del equipo. Use esta opción con las opciones **/list** o **/remove** para especificar que la acción se debe aplicar al almacén del equipo.<br /><br /> Se trata de una novedad de la versión 2.0 de .NET Framework|  
-|**/quiet**|Especifica el modo silencioso; suprime los resultados que contienen información mostrándose únicamente mensajes de error.|  
-|**/remove**|Quita de forma permanente todos los almacenes existentes del usuario actual.|  
-|**/roaming**|Selecciona el almacén móvil. Use esta opción con las opciones **/list** o **/remove** para especificar que la acción se debe aplicar al almacén móvil.|  
-|**/?**|Muestra las opciones y la sintaxis de los comandos para la herramienta.|  
+|<span data-ttu-id="79b4c-112">**/h**[**elp**]</span><span class="sxs-lookup"><span data-stu-id="79b4c-112">**/h**[**elp**]</span></span>|<span data-ttu-id="79b4c-113">Muestra las opciones y la sintaxis de los comandos para la herramienta.</span><span class="sxs-lookup"><span data-stu-id="79b4c-113">Displays command syntax and options for the tool.</span></span>|  
+|<span data-ttu-id="79b4c-114">**/list**</span><span class="sxs-lookup"><span data-stu-id="79b4c-114">**/list**</span></span>|<span data-ttu-id="79b4c-115">Muestra todos los almacenes existentes del usuario actual.</span><span class="sxs-lookup"><span data-stu-id="79b4c-115">Displays all existing stores for the current user.</span></span> <span data-ttu-id="79b4c-116">Entre estos se incluyen los almacenes de todas las aplicaciones o ensamblados ejecutados por este usuario.</span><span class="sxs-lookup"><span data-stu-id="79b4c-116">This includes the stores for all applications or assemblies executed by this user.</span></span>|  
+|<span data-ttu-id="79b4c-117">**/machine**</span><span class="sxs-lookup"><span data-stu-id="79b4c-117">**/machine**</span></span>|<span data-ttu-id="79b4c-118">Selecciona el almacén del equipo.</span><span class="sxs-lookup"><span data-stu-id="79b4c-118">Selects the machine store.</span></span> <span data-ttu-id="79b4c-119">Use esta opción con las opciones **/list** o **/remove** para especificar que la acción se debe aplicar al almacén del equipo.</span><span class="sxs-lookup"><span data-stu-id="79b4c-119">Use this option with the **/list** or **/remove** option to specify that the action should apply to the machine store.</span></span><br /><br /> <span data-ttu-id="79b4c-120">Se trata de una novedad de la versión 2.0 de .NET Framework</span><span class="sxs-lookup"><span data-stu-id="79b4c-120">New in the .NET Framework 2.0</span></span>|  
+|<span data-ttu-id="79b4c-121">**/quiet**</span><span class="sxs-lookup"><span data-stu-id="79b4c-121">**/quiet**</span></span>|<span data-ttu-id="79b4c-122">Especifica el modo silencioso; suprime los resultados que contienen información mostrándose únicamente mensajes de error.</span><span class="sxs-lookup"><span data-stu-id="79b4c-122">Specifies quiet mode; suppresses informational output so that only error messages appear.</span></span>|  
+|<span data-ttu-id="79b4c-123">**/remove**</span><span class="sxs-lookup"><span data-stu-id="79b4c-123">**/remove**</span></span>|<span data-ttu-id="79b4c-124">Quita de forma permanente todos los almacenes existentes del usuario actual.</span><span class="sxs-lookup"><span data-stu-id="79b4c-124">Permanently removes all existing stores for the current user.</span></span>|  
+|<span data-ttu-id="79b4c-125">**/roaming**</span><span class="sxs-lookup"><span data-stu-id="79b4c-125">**/roaming**</span></span>|<span data-ttu-id="79b4c-126">Selecciona el almacén móvil.</span><span class="sxs-lookup"><span data-stu-id="79b4c-126">Selects the roaming store.</span></span> <span data-ttu-id="79b4c-127">Use esta opción con las opciones **/list** o **/remove** para especificar que la acción se debe aplicar al almacén móvil.</span><span class="sxs-lookup"><span data-stu-id="79b4c-127">Use this option with the **/list** or **/remove** options to specify that the action should apply to the roaming store.</span></span>|  
+|<span data-ttu-id="79b4c-128">**/?**</span><span class="sxs-lookup"><span data-stu-id="79b4c-128">**/?**</span></span>|<span data-ttu-id="79b4c-129">Muestra las opciones y la sintaxis de los comandos para la herramienta.</span><span class="sxs-lookup"><span data-stu-id="79b4c-129">Displays command syntax and options for the tool.</span></span>|  
   
-## <a name="remarks"></a>Comentarios  
- La ejecución de Storeadm.exe desde la línea de comandos sin especificar ninguna opción muestra la sintaxis y las opciones para la herramienta.  
+## <a name="remarks"></a><span data-ttu-id="79b4c-130">Comentarios</span><span class="sxs-lookup"><span data-stu-id="79b4c-130">Remarks</span></span>  
+ <span data-ttu-id="79b4c-131">La ejecución de Storeadm.exe desde la línea de comandos sin especificar ninguna opción muestra la sintaxis y las opciones para la herramienta.</span><span class="sxs-lookup"><span data-stu-id="79b4c-131">Running Storeadm.exe from the command line without specifying any options displays the syntax and options for the tool.</span></span>  
   
- Las opciones **/list** y **/remove** se usan normalmente de una en una, pero si se especifican dos o más opciones, se ejecutarán en el orden en que aparezcan en la línea de comandos.  
+ <span data-ttu-id="79b4c-132">Las opciones **/list** y **/remove** se usan normalmente de una en una, pero si se especifican dos o más opciones, se ejecutarán en el orden en que aparezcan en la línea de comandos.</span><span class="sxs-lookup"><span data-stu-id="79b4c-132">The **/list** and **/remove** options are typically used one at a time; however, if two or more options are specified they will be performed in the order in which they appear on the command line.</span></span>  
   
- Las aplicaciones tienen la opción de guardar los datos en uno de los dos siguientes almacenes de usuario o en el almacén del equipo:  
+ <span data-ttu-id="79b4c-133">Las aplicaciones tienen la opción de guardar los datos en uno de los dos siguientes almacenes de usuario o en el almacén del equipo:</span><span class="sxs-lookup"><span data-stu-id="79b4c-133">Applications have a choice of saving to one of two stores for a user or to the machine store:</span></span>  
   
--   El almacén local, que está situado en una ubicación donde se anula la posibilidad de movilidad (en Windows 2000 y posterior), aunque la movilidad de datos de usuario esté habilitada para el usuario.  
+-   <span data-ttu-id="79b4c-134">El almacén local, que está situado en una ubicación donde se anula la posibilidad de movilidad (en Windows 2000 y posterior), aunque la movilidad de datos de usuario esté habilitada para el usuario.</span><span class="sxs-lookup"><span data-stu-id="79b4c-134">The local store exists in a location that is guaranteed not to roam (on Windows 2000 and later) even if user data roaming is enabled for the user.</span></span>  
   
--   El almacén móvil, que se encuentra en una ubicación con posibilidad de movilidad, pero esta acción solo es posible si la movilidad está habilitada para el usuario mediante la administración de Windows NT.  
+-   <span data-ttu-id="79b4c-135">El almacén móvil, que se encuentra en una ubicación con posibilidad de movilidad, pero esta acción solo es posible si la movilidad está habilitada para el usuario mediante la administración de Windows NT.</span><span class="sxs-lookup"><span data-stu-id="79b4c-135">The roaming store exists in a location that is able to roam, but can only do so if roaming is enabled for the user via Windows NT administration.</span></span>  
   
--   El almacén del equipo, que es común a todos los usuarios del equipo y se almacena bajo un directorio común en dicho equipo.  
+-   <span data-ttu-id="79b4c-136">El almacén del equipo, que es común a todos los usuarios del equipo y se almacena bajo un directorio común en dicho equipo.</span><span class="sxs-lookup"><span data-stu-id="79b4c-136">The machine store is common to all users on a machine and is stored under a common directory on that machine.</span></span>  
   
     > [!NOTE]
-    >  El almacén del equipo es una novedad de la versión 2.0 de .NET Framework.  
+    >  <span data-ttu-id="79b4c-137">El almacén del equipo es una novedad de la versión 2.0 de .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="79b4c-137">The machine store is new in the .NET Framework version 2.0.</span></span>  
   
- Si la movilidad está habilitada realmente para el usuario, no afecta a la administración de Storeadm.exe. Si la herramienta se ejecuta sin ninguna opción, todas las acciones se aplican al almacén local. Si la herramienta se ejecuta con la opción **/roaming**, todas las acciones se aplican al almacén que tiene posibilidad de movilidad. Si la herramienta se ejecuta con la opción **/machine**, todas las acciones se aplican al almacén del equipo.  
+ <span data-ttu-id="79b4c-138">Si la movilidad está habilitada realmente para el usuario, no afecta a la administración de Storeadm.exe.</span><span class="sxs-lookup"><span data-stu-id="79b4c-138">Whether roaming is actually enabled for the user does not affect the administration of Storeadm.exe.</span></span> <span data-ttu-id="79b4c-139">Si la herramienta se ejecuta sin ninguna opción, todas las acciones se aplican al almacén local.</span><span class="sxs-lookup"><span data-stu-id="79b4c-139">Running the tool without any options applies all actions to the local store.</span></span> <span data-ttu-id="79b4c-140">Si la herramienta se ejecuta con la opción **/roaming**, todas las acciones se aplican al almacén que tiene posibilidad de movilidad.</span><span class="sxs-lookup"><span data-stu-id="79b4c-140">Running the tool with the **/roaming** option applies all actions to the store that is able to roam.</span></span> <span data-ttu-id="79b4c-141">Si la herramienta se ejecuta con la opción **/machine**, todas las acciones se aplican al almacén del equipo.</span><span class="sxs-lookup"><span data-stu-id="79b4c-141">Running the tool with the **/machine** option applies all actions to the machine store.</span></span>  
   
-## <a name="see-also"></a>Vea también  
- [Herramientas](../../../docs/framework/tools/index.md)   
- [Almacenamiento aislado](../../../docs/standard/io/isolated-storage.md)   
- [Símbolos del sistema](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
-
+## <a name="see-also"></a><span data-ttu-id="79b4c-142">Vea también</span><span class="sxs-lookup"><span data-stu-id="79b4c-142">See Also</span></span>  
+ [<span data-ttu-id="79b4c-143">Herramientas</span><span class="sxs-lookup"><span data-stu-id="79b4c-143">Tools</span></span>](../../../docs/framework/tools/index.md)  
+ [<span data-ttu-id="79b4c-144">Almacenamiento aislado</span><span class="sxs-lookup"><span data-stu-id="79b4c-144">Isolated Storage</span></span>](../../../docs/standard/io/isolated-storage.md)  
+ [<span data-ttu-id="79b4c-145">Símbolos del sistema</span><span class="sxs-lookup"><span data-stu-id="79b4c-145">Command Prompts</span></span>](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

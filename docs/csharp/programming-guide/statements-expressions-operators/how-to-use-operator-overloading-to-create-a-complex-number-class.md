@@ -1,12 +1,9 @@
 ---
 title: "Cómo: Utilizar la sobrecarga de operadores para crear una clase de números complejos (Guía de programación de C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - complex numbers [C#]
 - classes [C#], operator overloading
@@ -14,39 +11,23 @@ helpviewer_keywords:
 - operator overloading [C#], using to create classes
 - operators [C#], overloading to create a complex number class
 ms.assetid: c9b8d982-5112-413f-bae3-b42ae3248ddf
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 2053684a9b20c3ec8f4d8ac275832516b3f2c265
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 2ce629320744d46787aaabba48740f05c917fdcb
-ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-use-operator-overloading-to-create-a-complex-number-class-c-programming-guide"></a>Cómo: Utilizar la sobrecarga de operadores para crear una clase de números complejos (Guía de programación de C#)
-En este ejemplo, se muestra cómo puede usar la sobrecarga de operador para crear una clase de números complejos `Complex` que define la suma compleja. El programa muestra el imaginario y las partes reales de los números y el resultado de la suma con una invalidación del método `ToString`.  
+# <a name="how-to-use-operator-overloading-to-create-a-complex-number-class-c-programming-guide"></a><span data-ttu-id="9da39-102">Cómo: Utilizar la sobrecarga de operadores para crear una clase de números complejos (Guía de programación de C#)</span><span class="sxs-lookup"><span data-stu-id="9da39-102">How to: Use Operator Overloading to Create a Complex Number Class (C# Programming Guide)</span></span>
+<span data-ttu-id="9da39-103">En este ejemplo, se muestra cómo puede usar la sobrecarga de operador para crear una clase de números complejos `Complex` que define la suma compleja.</span><span class="sxs-lookup"><span data-stu-id="9da39-103">This example shows how you can use operator overloading to create a complex number class `Complex` that defines complex addition.</span></span> <span data-ttu-id="9da39-104">El programa muestra el imaginario y las partes reales de los números y el resultado de la suma con una invalidación del método `ToString`.</span><span class="sxs-lookup"><span data-stu-id="9da39-104">The program displays the imaginary and the real parts of the numbers and the addition result using an override of the `ToString` method.</span></span>  
   
-## <a name="example"></a>Ejemplo  
- [!code-cs[csProgGuideStatements#16](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-use-operator-overloading-to-create-a-complex-number-class_1.cs)]  
+## <a name="example"></a><span data-ttu-id="9da39-105">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="9da39-105">Example</span></span>  
+ [!code-csharp[csProgGuideStatements#16](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-use-operator-overloading-to-create-a-complex-number-class_1.cs)]  
   
-## <a name="see-also"></a>Vea también  
- [Guía de programación de C#](../../../csharp/programming-guide/index.md)   
- [Operadores de C#](../../../csharp/language-reference/operators/index.md)   
- [operator (Referencia de C#)](../../../csharp/language-reference/keywords/operator.md)   
- [Why are overloaded operators always static in C#?](http://go.microsoft.com/fwlink/?LinkId=112383) (¿Por qué los operadores sobrecargados son siempre estáticos en C#?)
-
+## <a name="see-also"></a><span data-ttu-id="9da39-106">Vea también</span><span class="sxs-lookup"><span data-stu-id="9da39-106">See Also</span></span>  
+ [<span data-ttu-id="9da39-107">Guía de programación de C#</span><span class="sxs-lookup"><span data-stu-id="9da39-107">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+ [<span data-ttu-id="9da39-108">Operadores de C#</span><span class="sxs-lookup"><span data-stu-id="9da39-108">C# Operators</span></span>](../../../csharp/language-reference/operators/index.md)  
+ [<span data-ttu-id="9da39-109">Operador (Referencia de C#)</span><span class="sxs-lookup"><span data-stu-id="9da39-109">operator (C# Reference)</span></span>](../../../csharp/language-reference/keywords/operator.md)  
+ <span data-ttu-id="9da39-110">[Why are overloaded operators always static in C#?](http://go.microsoft.com/fwlink/?LinkId=112383) (¿Por qué los operadores sobrecargados son siempre estáticos en C#?)</span><span class="sxs-lookup"><span data-stu-id="9da39-110">[Why are overloaded operators always static in C#?](http://go.microsoft.com/fwlink/?LinkId=112383)</span></span>

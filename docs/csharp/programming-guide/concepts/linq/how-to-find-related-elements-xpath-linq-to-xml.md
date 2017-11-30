@@ -1,39 +1,35 @@
 ---
 title: "Cómo: Buscar elementos relacionados (XPath-LINQ to XML) (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 41b386ee-562d-4841-bd6b-e44a7eb69f26
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
+ms.openlocfilehash: 3b128c8aa801c445e5e8cd2b4aab4e55f22b086c
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 3cc73ab69adb66fd1158637a8a3c67008d8e8663
-ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="how-to-find-related-elements-xpath-linq-to-xml-c"></a>Cómo: Buscar elementos relacionados (XPath-LINQ to XML) (C#)
-Este tema muestra cómo obtener un elemento seleccionando en un atributo al que hace referencia el valor de otro elemento.  
+# <a name="how-to-find-related-elements-xpath-linq-to-xml-c"></a><span data-ttu-id="0647e-102">Cómo: Buscar elementos relacionados (XPath-LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="0647e-102">How to: Find Related Elements (XPath-LINQ to XML) (C#)</span></span>
+<span data-ttu-id="0647e-103">Este tema muestra cómo obtener un elemento seleccionando en un atributo al que hace referencia el valor de otro elemento.</span><span class="sxs-lookup"><span data-stu-id="0647e-103">This topic shows how to get an element selecting on an attribute that is referred to by the value of another element.</span></span>  
   
- La expresión XPath es:  
+ <span data-ttu-id="0647e-104">La expresión XPath es:</span><span class="sxs-lookup"><span data-stu-id="0647e-104">The XPath expression is:</span></span>  
   
  `.//Customer[@CustomerID=/Root/Orders/Order[12]/CustomerID]`  
   
-## <a name="example"></a>Ejemplo  
- Este ejemplo encuentra el duodécimo (12) elemento `Order`, y después encuentra el cliente de dicho pedido.  
+## <a name="example"></a><span data-ttu-id="0647e-105">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="0647e-105">Example</span></span>  
+ <span data-ttu-id="0647e-106">Este ejemplo encuentra el duodécimo (12) elemento `Order`, y después encuentra el cliente de dicho pedido.</span><span class="sxs-lookup"><span data-stu-id="0647e-106">This example finds the 12th `Order` element, and then finds the customer for that order.</span></span>  
   
- Tenga en cuenta que la indización en una lista de .Net se basa en "cero". Sin embargo, la indización en una colección de nodos de un predicado XPath se basa en "uno". Este ejemplo refleja esta diferencia.  
+ <span data-ttu-id="0647e-107">Tenga en cuenta que la indización en una lista de .Net se basa en "cero".</span><span class="sxs-lookup"><span data-stu-id="0647e-107">Note that indexing into a list in .Net is 'zero' based.</span></span> <span data-ttu-id="0647e-108">Sin embargo, la indización en una colección de nodos de un predicado XPath se basa en "uno".</span><span class="sxs-lookup"><span data-stu-id="0647e-108">Indexing into a collection of nodes in an XPath predicate is 'one' based.</span></span> <span data-ttu-id="0647e-109">Este ejemplo refleja esta diferencia.</span><span class="sxs-lookup"><span data-stu-id="0647e-109">This example reflects this difference.</span></span>  
   
- En este ejemplo se usa el siguiente documento XML: [Archivo XML de muestra: clientes y pedidos (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md).  
+ <span data-ttu-id="0647e-110">En este ejemplo se usa el siguiente documento XML: [Archivo XML de muestra: clientes y pedidos (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md).</span><span class="sxs-lookup"><span data-stu-id="0647e-110">This example uses the following XML document: [Sample XML File: Customers and Orders (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md).</span></span>  
   
 ```csharp  
 XDocument co = XDocument.Load("CustomersOrders.xml");  
@@ -76,7 +72,7 @@ else
 Console.WriteLine(customer1);  
 ```  
   
- Este ejemplo produce el siguiente resultado:  
+ <span data-ttu-id="0647e-111">Este ejemplo produce el siguiente resultado:</span><span class="sxs-lookup"><span data-stu-id="0647e-111">This example produces the following output:</span></span>  
   
 ```  
 Results are identical  
@@ -96,6 +92,5 @@ Results are identical
 </Customer>  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [LINQ to XML para usuarios de XPath (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
-
+## <a name="see-also"></a><span data-ttu-id="0647e-112">Vea también</span><span class="sxs-lookup"><span data-stu-id="0647e-112">See Also</span></span>  
+ [<span data-ttu-id="0647e-113">LINQ to XML para usuarios de XPath (C#)</span><span class="sxs-lookup"><span data-stu-id="0647e-113">LINQ to XML for XPath Users (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

@@ -1,81 +1,61 @@
 ---
 title: "Clases y miembros de clase abstractos y sellados (Guía de programación de C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - abstract classes [C#]
 - sealed classes [C#]
 - C# language, abstract classes
 - C# language, sealed
 ms.assetid: 99aa52f7-b435-43f9-936e-2470af734c4e
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: dac7570c018bd577faac4540e4d800cc11143578
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 0788ea0778b3f8b846231fc2408938b2236314c9
-ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="abstract-and-sealed-classes-and-class-members-c-programming-guide"></a>Clases y miembros de clase abstractos y sellados (Guía de programación de C#)
-La palabra clave [abstract](../../../csharp/language-reference/keywords/abstract.md) permite crear clases y miembros [class](../../../csharp/language-reference/keywords/class.md) que están incompletos y se deben implementar en una clase derivada.  
+# <a name="abstract-and-sealed-classes-and-class-members-c-programming-guide"></a><span data-ttu-id="1e804-102">Clases y miembros de clase abstractos y sellados (Guía de programación de C#)</span><span class="sxs-lookup"><span data-stu-id="1e804-102">Abstract and Sealed Classes and Class Members (C# Programming Guide)</span></span>
+<span data-ttu-id="1e804-103">La palabra clave [abstract](../../../csharp/language-reference/keywords/abstract.md) permite crear clases y miembros [class](../../../csharp/language-reference/keywords/class.md) que están incompletos y se deben implementar en una clase derivada.</span><span class="sxs-lookup"><span data-stu-id="1e804-103">The [abstract](../../../csharp/language-reference/keywords/abstract.md) keyword enables you to create classes and [class](../../../csharp/language-reference/keywords/class.md) members that are incomplete and must be implemented in a derived class.</span></span>  
   
- La palabra clave [sealed](../../../csharp/language-reference/keywords/sealed.md) permite impedir la herencia de una clase o de ciertos miembros de clase marcados previamente como [virtual](../../../csharp/language-reference/keywords/virtual.md).  
+ <span data-ttu-id="1e804-104">La palabra clave [sealed](../../../csharp/language-reference/keywords/sealed.md) permite impedir la herencia de una clase o de ciertos miembros de clase marcados previamente como [virtual](../../../csharp/language-reference/keywords/virtual.md).</span><span class="sxs-lookup"><span data-stu-id="1e804-104">The [sealed](../../../csharp/language-reference/keywords/sealed.md) keyword enables you to prevent the inheritance of a class or certain class members that were previously marked [virtual](../../../csharp/language-reference/keywords/virtual.md).</span></span>  
   
-## <a name="abstract-classes-and-class-members"></a>Clases y miembros de clase abstractos  
- Las clases se pueden declarar como abstractas si se incluye la palabra clave `abstract` antes de la definición de clase. Por ejemplo:  
+## <a name="abstract-classes-and-class-members"></a><span data-ttu-id="1e804-105">Clases y miembros de clase abstractos</span><span class="sxs-lookup"><span data-stu-id="1e804-105">Abstract Classes and Class Members</span></span>  
+ <span data-ttu-id="1e804-106">Las clases se pueden declarar como abstractas si se incluye la palabra clave `abstract` antes de la definición de clase.</span><span class="sxs-lookup"><span data-stu-id="1e804-106">Classes can be declared as abstract by putting the keyword `abstract` before the class definition.</span></span> <span data-ttu-id="1e804-107">Por ejemplo:</span><span class="sxs-lookup"><span data-stu-id="1e804-107">For example:</span></span>  
   
- [!code-cs[csProgGuideInheritance#13](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/abstract-and-sealed-classes-and-class-members_1.cs)]  
+ [!code-csharp[csProgGuideInheritance#13](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/abstract-and-sealed-classes-and-class-members_1.cs)]  
   
- No se pueden crear instancias de una clase abstracta. El propósito de una clase abstracta es proporcionar una definición común de una clase base que múltiples clases derivadas pueden compartir. Por ejemplo, una biblioteca de clases puede definir una clase abstracta que se utiliza como parámetro para muchas de sus funciones y solicitar a los programadores que utilizan esa biblioteca que proporcionen su propia implementación de la clase mediante la creación de una clase derivada.  
+ <span data-ttu-id="1e804-108">No se pueden crear instancias de una clase abstracta.</span><span class="sxs-lookup"><span data-stu-id="1e804-108">An abstract class cannot be instantiated.</span></span> <span data-ttu-id="1e804-109">El propósito de una clase abstracta es proporcionar una definición común de una clase base que múltiples clases derivadas pueden compartir.</span><span class="sxs-lookup"><span data-stu-id="1e804-109">The purpose of an abstract class is to provide a common definition of a base class that multiple derived classes can share.</span></span> <span data-ttu-id="1e804-110">Por ejemplo, una biblioteca de clases puede definir una clase abstracta que se utiliza como parámetro para muchas de sus funciones y solicitar a los programadores que utilizan esa biblioteca que proporcionen su propia implementación de la clase mediante la creación de una clase derivada.</span><span class="sxs-lookup"><span data-stu-id="1e804-110">For example, a class library may define an abstract class that is used as a parameter to many of its functions, and require programmers using that library to provide their own implementation of the class by creating a derived class.</span></span>  
   
- Las clases abstractas también pueden definir métodos abstractos. Esto se consigue agregando la palabra clave `abstract` antes del tipo de valor que devuelve el método. Por ejemplo:  
+ <span data-ttu-id="1e804-111">Las clases abstractas también pueden definir métodos abstractos.</span><span class="sxs-lookup"><span data-stu-id="1e804-111">Abstract classes may also define abstract methods.</span></span> <span data-ttu-id="1e804-112">Esto se consigue agregando la palabra clave `abstract` antes del tipo de valor que devuelve el método.</span><span class="sxs-lookup"><span data-stu-id="1e804-112">This is accomplished by adding the keyword `abstract` before the return type of the method.</span></span> <span data-ttu-id="1e804-113">Por ejemplo:</span><span class="sxs-lookup"><span data-stu-id="1e804-113">For example:</span></span>  
   
- [!code-cs[csProgGuideInheritance#14](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/abstract-and-sealed-classes-and-class-members_2.cs)]  
+ [!code-csharp[csProgGuideInheritance#14](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/abstract-and-sealed-classes-and-class-members_2.cs)]  
   
- Los métodos abstractos no tienen ninguna implementación, de modo que la definición de método va seguida por un punto y coma en lugar de un bloque de método normal. Las clases derivadas de la clase abstracta deben implementar todos los métodos abstractos. Cuando una clase abstracta hereda un método virtual de una clase base, la clase abstracta puede reemplazar el método virtual con un método abstracto. Por ejemplo:  
+ <span data-ttu-id="1e804-114">Los métodos abstractos no tienen ninguna implementación, de modo que la definición de método va seguida por un punto y coma en lugar de un bloque de método normal.</span><span class="sxs-lookup"><span data-stu-id="1e804-114">Abstract methods have no implementation, so the method definition is followed by a semicolon instead of a normal method block.</span></span> <span data-ttu-id="1e804-115">Las clases derivadas de la clase abstracta deben implementar todos los métodos abstractos.</span><span class="sxs-lookup"><span data-stu-id="1e804-115">Derived classes of the abstract class must implement all abstract methods.</span></span> <span data-ttu-id="1e804-116">Cuando una clase abstracta hereda un método virtual de una clase base, la clase abstracta puede reemplazar el método virtual con un método abstracto.</span><span class="sxs-lookup"><span data-stu-id="1e804-116">When an abstract class inherits a virtual method from a base class, the abstract class can override the virtual method with an abstract method.</span></span> <span data-ttu-id="1e804-117">Por ejemplo:</span><span class="sxs-lookup"><span data-stu-id="1e804-117">For example:</span></span>  
   
- [!code-cs[csProgGuideInheritance#15](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/abstract-and-sealed-classes-and-class-members_3.cs)]  
+ [!code-csharp[csProgGuideInheritance#15](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/abstract-and-sealed-classes-and-class-members_3.cs)]  
   
- Si un método `virtual` se declara como `abstract`, sigue siendo virtual para cualquier clase que herede de la clase abstracta. Una clase que hereda un método abstracto no puede tener acceso a la implementación original del método: en el ejemplo anterior, `DoWork` en la clase F no puede llamar a `DoWork` en la clase D. De esta manera, una clase abstracta puede exigir a las clases derivadas que proporcionen nuevas implementaciones de método para los métodos virtuales.  
+ <span data-ttu-id="1e804-118">Si un método `virtual` se declara como `abstract`, sigue siendo virtual para cualquier clase que herede de la clase abstracta.</span><span class="sxs-lookup"><span data-stu-id="1e804-118">If a `virtual` method is declared `abstract`, it is still virtual to any class inheriting from the abstract class.</span></span> <span data-ttu-id="1e804-119">Una clase que hereda un método abstracto no puede tener acceso a la implementación original del método: en el ejemplo anterior, `DoWork` en la clase F no puede llamar a `DoWork` en la clase D. De esta manera, una clase abstracta puede exigir a las clases derivadas que proporcionen nuevas implementaciones de método para los métodos virtuales.</span><span class="sxs-lookup"><span data-stu-id="1e804-119">A class inheriting an abstract method cannot access the original implementation of the method—in the previous example, `DoWork` on class F cannot call `DoWork` on class D. In this way, an abstract class can force derived classes to provide new method implementations for virtual methods.</span></span>  
   
-## <a name="sealed-classes-and-class-members"></a>Clases y miembros de clase sellados  
- Las clases se pueden declarar como [selladas](../../../csharp/language-reference/keywords/sealed.md) si se incluye la palabra clave `sealed` antes de la definición de clase. Por ejemplo:  
+## <a name="sealed-classes-and-class-members"></a><span data-ttu-id="1e804-120">Clases y miembros de clase sellados</span><span class="sxs-lookup"><span data-stu-id="1e804-120">Sealed Classes and Class Members</span></span>  
+ <span data-ttu-id="1e804-121">Las clases se pueden declarar como [selladas](../../../csharp/language-reference/keywords/sealed.md) si se incluye la palabra clave `sealed` antes de la definición de clase.</span><span class="sxs-lookup"><span data-stu-id="1e804-121">Classes can be declared as [sealed](../../../csharp/language-reference/keywords/sealed.md) by putting the keyword `sealed` before the class definition.</span></span> <span data-ttu-id="1e804-122">Por ejemplo:</span><span class="sxs-lookup"><span data-stu-id="1e804-122">For example:</span></span>  
   
- [!code-cs[csProgGuideInheritance#16](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/abstract-and-sealed-classes-and-class-members_4.cs)]  
+ [!code-csharp[csProgGuideInheritance#16](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/abstract-and-sealed-classes-and-class-members_4.cs)]  
   
- Una clase sellada no se puede utilizar como clase base. Por esta razón, tampoco puede ser una clase abstracta. Las clases selladas evitan la derivación. Puesto que nunca se pueden utilizar como clase base, algunas optimizaciones en tiempo de ejecución pueden hacer que sea un poco más rápido llamar a miembros de clase sellada.  
+ <span data-ttu-id="1e804-123">Una clase sellada no se puede utilizar como clase base.</span><span class="sxs-lookup"><span data-stu-id="1e804-123">A sealed class cannot be used as a base class.</span></span> <span data-ttu-id="1e804-124">Por esta razón, tampoco puede ser una clase abstracta.</span><span class="sxs-lookup"><span data-stu-id="1e804-124">For this reason, it cannot also be an abstract class.</span></span> <span data-ttu-id="1e804-125">Las clases selladas evitan la derivación.</span><span class="sxs-lookup"><span data-stu-id="1e804-125">Sealed classes prevent derivation.</span></span> <span data-ttu-id="1e804-126">Puesto que nunca se pueden utilizar como clase base, algunas optimizaciones en tiempo de ejecución pueden hacer que sea un poco más rápido llamar a miembros de clase sellada.</span><span class="sxs-lookup"><span data-stu-id="1e804-126">Because they can never be used as a base class, some run-time optimizations can make calling sealed class members slightly faster.</span></span>  
   
- Un método, indizador, propiedad o evento de una clase derivada que reemplaza a un miembro virtual de la clase base puede declarar ese miembro como sellado. Esto niega el aspecto virtual del miembro para cualquier clase derivada adicional. Esto se logra colocando la palabra clave `sealed` antes de la palabra clave [override](../../../csharp/language-reference/keywords/override.md) en la declaración del miembro de clase. Por ejemplo:  
+ <span data-ttu-id="1e804-127">Un método, indizador, propiedad o evento de una clase derivada que reemplaza a un miembro virtual de la clase base puede declarar ese miembro como sellado.</span><span class="sxs-lookup"><span data-stu-id="1e804-127">A method, indexer, property, or event, on a derived class that is overriding a virtual member of the base class can declare that member as sealed.</span></span> <span data-ttu-id="1e804-128">Esto niega el aspecto virtual del miembro para cualquier clase derivada adicional.</span><span class="sxs-lookup"><span data-stu-id="1e804-128">This negates the virtual aspect of the member for any further derived class.</span></span> <span data-ttu-id="1e804-129">Esto se logra colocando la palabra clave `sealed` antes de la palabra clave [override](../../../csharp/language-reference/keywords/override.md) en la declaración del miembro de clase.</span><span class="sxs-lookup"><span data-stu-id="1e804-129">This is accomplished by putting the `sealed` keyword before the [override](../../../csharp/language-reference/keywords/override.md) keyword in the class member declaration.</span></span> <span data-ttu-id="1e804-130">Por ejemplo:</span><span class="sxs-lookup"><span data-stu-id="1e804-130">For example:</span></span>  
   
- [!code-cs[csProgGuideInheritance#17](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/abstract-and-sealed-classes-and-class-members_5.cs)]  
+ [!code-csharp[csProgGuideInheritance#17](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/abstract-and-sealed-classes-and-class-members_5.cs)]  
   
-## <a name="see-also"></a>Vea también  
- [Guía de programación de C#](../../../csharp/programming-guide/index.md)   
- [Clases y structs](../../../csharp/programming-guide/classes-and-structs/index.md)   
- [Herencia](../../../csharp/programming-guide/classes-and-structs/inheritance.md)   
- [Métodos](../../../csharp/programming-guide/classes-and-structs/methods.md)   
- [Campos](../../../csharp/programming-guide/classes-and-structs/fields.md)   
- [Cómo: Definir propiedades abstractas](../../../csharp/programming-guide/classes-and-structs/how-to-define-abstract-properties.md)
-
+## <a name="see-also"></a><span data-ttu-id="1e804-131">Vea también</span><span class="sxs-lookup"><span data-stu-id="1e804-131">See Also</span></span>  
+ [<span data-ttu-id="1e804-132">Guía de programación de C#</span><span class="sxs-lookup"><span data-stu-id="1e804-132">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+ [<span data-ttu-id="1e804-133">Clases y structs</span><span class="sxs-lookup"><span data-stu-id="1e804-133">Classes and Structs</span></span>](../../../csharp/programming-guide/classes-and-structs/index.md)  
+ [<span data-ttu-id="1e804-134">Herencia</span><span class="sxs-lookup"><span data-stu-id="1e804-134">Inheritance</span></span>](../../../csharp/programming-guide/classes-and-structs/inheritance.md)  
+ [<span data-ttu-id="1e804-135">Métodos</span><span class="sxs-lookup"><span data-stu-id="1e804-135">Methods</span></span>](../../../csharp/programming-guide/classes-and-structs/methods.md)  
+ [<span data-ttu-id="1e804-136">Campos</span><span class="sxs-lookup"><span data-stu-id="1e804-136">Fields</span></span>](../../../csharp/programming-guide/classes-and-structs/fields.md)  
+ [<span data-ttu-id="1e804-137">Cómo: Definir propiedades abstractas</span><span class="sxs-lookup"><span data-stu-id="1e804-137">How to: Define Abstract Properties</span></span>](../../../csharp/programming-guide/classes-and-structs/how-to-define-abstract-properties.md)

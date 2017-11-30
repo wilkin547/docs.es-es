@@ -1,1 +1,1 @@
-caché global de ensamblados (GAC)
+<span data-ttu-id="4eca7-101">caché global de ensamblados (GAC)</span><span class="sxs-lookup"><span data-stu-id="4eca7-101">global assembly cache (GAC)</span></span>

@@ -1,43 +1,23 @@
 ---
 title: '#<a name="endif-c-reference"></a>endif (Referencia de C#)'
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- '#endif'
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- '#endif directive [C#]'
+f1_keywords: '#endif'
+helpviewer_keywords: '#endif directive [C#]'
 ms.assetid: 6a5fca55-5aee-441f-86f6-1c99fbe9ec05
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: d7e68dd20d914052c3fe5cabcb83abdae100465c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: e4c37657a1ca81b7e5403e58123cf630a224b8ec
-ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="endif-c-reference"></a>#endif (Referencia de C#)
-`#endif` especifica el final de una directiva condicional, que comienza con la directiva [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md). Por ejemplo,  
+# <a name="endif-c-reference"></a><span data-ttu-id="f421c-102">#endif (Referencia de C#)</span><span class="sxs-lookup"><span data-stu-id="f421c-102">#endif (C# Reference)</span></span>
+<span data-ttu-id="f421c-103">`#endif` especifica el final de una directiva condicional, que comienza con la directiva [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md).</span><span class="sxs-lookup"><span data-stu-id="f421c-103">`#endif` specifies the end of a conditional directive, which began with the [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md) directive.</span></span> <span data-ttu-id="f421c-104">Por ejemplo,</span><span class="sxs-lookup"><span data-stu-id="f421c-104">For example,</span></span>  
   
 ```csharp
 #define DEBUG  
@@ -47,11 +27,10 @@ ms.lasthandoff: 07/28/2017
 #endif  
 ```  
   
-## <a name="remarks"></a>Comentarios  
- Una directiva condicional que empieza con una directiva `#if` debe terminar de forma explícita con una directiva `#endif`. Vea [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md) para obtener un ejemplo de cómo usar `#endif`.  
+## <a name="remarks"></a><span data-ttu-id="f421c-105">Comentarios</span><span class="sxs-lookup"><span data-stu-id="f421c-105">Remarks</span></span>  
+ <span data-ttu-id="f421c-106">Una directiva condicional que empieza con una directiva `#if` debe terminar de forma explícita con una directiva `#endif`.</span><span class="sxs-lookup"><span data-stu-id="f421c-106">A conditional directive, beginning with a `#if` directive, must explicitly be terminated with a `#endif` directive.</span></span> <span data-ttu-id="f421c-107">Vea [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md) para obtener un ejemplo de cómo usar `#endif`.</span><span class="sxs-lookup"><span data-stu-id="f421c-107">See [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md) for an example of how to use `#endif`.</span></span>  
   
-## <a name="see-also"></a>Vea también  
- [Referencia de C#](../../../csharp/language-reference/index.md)   
- [Guía de programación de C#](../../../csharp/programming-guide/index.md)   
- [Directivas de preprocesador de C#](../../../csharp/language-reference/preprocessor-directives/index.md)
-
+## <a name="see-also"></a><span data-ttu-id="f421c-108">Vea también</span><span class="sxs-lookup"><span data-stu-id="f421c-108">See Also</span></span>  
+ [<span data-ttu-id="f421c-109">Referencia de C#</span><span class="sxs-lookup"><span data-stu-id="f421c-109">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
+ [<span data-ttu-id="f421c-110">Guía de programación de C#</span><span class="sxs-lookup"><span data-stu-id="f421c-110">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+ [<span data-ttu-id="f421c-111">Directivas de preprocesador de C#</span><span class="sxs-lookup"><span data-stu-id="f421c-111">C# Preprocessor Directives</span></span>](../../../csharp/language-reference/preprocessor-directives/index.md)

@@ -1,80 +1,60 @@
 ---
 title: -win32res (Opciones del compilador de C#)
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- /win32res
-dev_langs:
-- CSharp
+f1_keywords: /win32res
 helpviewer_keywords:
 - win32res compiler option
 - /win32res compiler option [C#]
 - -win32res compiler option [C#]
 - win32res compiler option [C#]
 ms.assetid: 3c33f750-6948-4c7e-a27e-bef98f77255b
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 96583542c62305cbaa5a24f66e9e54ec9b525c90
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 4552b526767584e62106b2b10f8a1e6394a23b46
-ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="win32res-c-compiler-options"></a>/win32res (Opciones del compilador de C#)
-La opción **/win32res** inserta un recurso de Win32 en el archivo de salida.  
+# <a name="win32res-c-compiler-options"></a><span data-ttu-id="6dcb4-102">/win32res (Opciones del compilador de C#)</span><span class="sxs-lookup"><span data-stu-id="6dcb4-102">/win32res (C# Compiler Options)</span></span>
+<span data-ttu-id="6dcb4-103">La opción **/win32res** inserta un recurso de Win32 en el archivo de salida.</span><span class="sxs-lookup"><span data-stu-id="6dcb4-103">The **/win32res** option inserts a Win32 resource in the output file.</span></span>  
   
-## <a name="syntax"></a>Sintaxis  
+## <a name="syntax"></a><span data-ttu-id="6dcb4-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="6dcb4-104">Syntax</span></span>  
   
 ```console  
 /win32res:filename  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+## <a name="arguments"></a><span data-ttu-id="6dcb4-105">Argumentos</span><span class="sxs-lookup"><span data-stu-id="6dcb4-105">Arguments</span></span>  
  `filename`  
- El archivo de recursos que quiere agregar a su archivo de salida.  
+ <span data-ttu-id="6dcb4-106">El archivo de recursos que quiere agregar a su archivo de salida.</span><span class="sxs-lookup"><span data-stu-id="6dcb4-106">The resource file that you want to add to your output file.</span></span>  
   
-## <a name="remarks"></a>Comentarios  
- Se puede crear un archivo de recursos de Win32 con el [compilador de recursos](http://go.microsoft.com/fwlink/?LinkId=148370). Cuando se compila un programa de Visual C++, se invoca el compilador de recursos y se crea un archivo .res a partir del archivo .rc.  
+## <a name="remarks"></a><span data-ttu-id="6dcb4-107">Comentarios</span><span class="sxs-lookup"><span data-stu-id="6dcb4-107">Remarks</span></span>  
+ <span data-ttu-id="6dcb4-108">Se puede crear un archivo de recursos de Win32 con el [compilador de recursos](../../language-reference/compiler-options/resource-compiler-option.md).</span><span class="sxs-lookup"><span data-stu-id="6dcb4-108">A Win32 resource file can be created with the [Resource Compiler](../../language-reference/compiler-options/resource-compiler-option.md).</span></span> <span data-ttu-id="6dcb4-109">Cuando se compila un programa de Visual C++, se invoca el compilador de recursos y se crea un archivo .res a partir del archivo .rc.</span><span class="sxs-lookup"><span data-stu-id="6dcb4-109">The Resource Compiler is invoked when you compile a Visual C++ program; a .res file is created from the .rc file.</span></span>  
   
- Un recurso de Win32 puede contener información de versión o de mapa de bits (icono) que ayudaría a identificar la aplicación en el Explorador de archivos. Si no especifica **/win32res**, el compilador generará información de versión basada en la versión del ensamblado.  
+ <span data-ttu-id="6dcb4-110">Un recurso de Win32 puede contener información de versión o de mapa de bits (icono) que ayudaría a identificar la aplicación en el Explorador de archivos.</span><span class="sxs-lookup"><span data-stu-id="6dcb4-110">A Win32 resource can contain version or bitmap (icon) information that would help identify your application in the File Explorer.</span></span> <span data-ttu-id="6dcb4-111">Si no especifica **/win32res**, el compilador generará información de versión basada en la versión del ensamblado.</span><span class="sxs-lookup"><span data-stu-id="6dcb4-111">If you do not specify **/win32res**, the compiler will generate version information based on the assembly version.</span></span>  
   
- Vea [/linkresource](../../../csharp/language-reference/compiler-options/linkresource-compiler-option.md) (para hacer referencia) o [/resource](../../../csharp/language-reference/compiler-options/resource-compiler-option.md) (para adjuntar) un archivo de recursos de .NET Framework.  
+ <span data-ttu-id="6dcb4-112">Vea [/linkresource](../../../csharp/language-reference/compiler-options/linkresource-compiler-option.md) (para hacer referencia) o [/resource](../../../csharp/language-reference/compiler-options/resource-compiler-option.md) (para adjuntar) un archivo de recursos de .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="6dcb4-112">See [/linkresource](../../../csharp/language-reference/compiler-options/linkresource-compiler-option.md) (to reference) or [/resource](../../../csharp/language-reference/compiler-options/resource-compiler-option.md) (to attach) a .NET Framework resource file.</span></span>  
   
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del compilador en el entorno de desarrollo de Visual Studio  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a><span data-ttu-id="6dcb4-113">Para establecer esta opción del compilador en el entorno de desarrollo de Visual Studio</span><span class="sxs-lookup"><span data-stu-id="6dcb4-113">To set this compiler option in the Visual Studio development environment</span></span>  
   
-1.  Abra la página **Propiedades** del proyecto.  
+1.  <span data-ttu-id="6dcb4-114">Abra la página **Propiedades** del proyecto.</span><span class="sxs-lookup"><span data-stu-id="6dcb4-114">Open the project's **Properties** page.</span></span>  
   
-2.  Haga clic en la página de propiedades **Aplicación**.  
+2.  <span data-ttu-id="6dcb4-115">Haga clic en la página de propiedades **Aplicación**.</span><span class="sxs-lookup"><span data-stu-id="6dcb4-115">Click the **Application** property page.</span></span>  
   
-3.  Haga clic en el botón **Archivo de recursos** y seleccione un archivo mediante el cuadro combinado.  
+3.  <span data-ttu-id="6dcb4-116">Haga clic en el botón **Archivo de recursos** y seleccione un archivo mediante el cuadro combinado.</span><span class="sxs-lookup"><span data-stu-id="6dcb4-116">Click on the **Resource File** button and choose a file by using the combo box.</span></span>  
   
-## <a name="example"></a>Ejemplo  
- Compile `in.cs` y adjunte un archivo de recursos de Win32 `rf.res` para producir `in.exe`:  
+## <a name="example"></a><span data-ttu-id="6dcb4-117">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="6dcb4-117">Example</span></span>  
+ <span data-ttu-id="6dcb4-118">Compile `in.cs` y adjunte un archivo de recursos de Win32 `rf.res` para producir `in.exe`:</span><span class="sxs-lookup"><span data-stu-id="6dcb4-118">Compile `in.cs` and attach a Win32 resource file `rf.res` to produce `in.exe`:</span></span>  
   
 ```console  
 csc /win32res:rf.res in.cs  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Opciones del compilador de C#](../../../csharp/language-reference/compiler-options/index.md)   
- [Administrar propiedades de soluciones y proyectos](/visualstudio/ide/managing-project-and-solution-properties)
-
+## <a name="see-also"></a><span data-ttu-id="6dcb4-119">Vea también</span><span class="sxs-lookup"><span data-stu-id="6dcb4-119">See Also</span></span>  
+ [<span data-ttu-id="6dcb4-120">Opciones del compilador de C#</span><span class="sxs-lookup"><span data-stu-id="6dcb4-120">C# Compiler Options</span></span>](../../../csharp/language-reference/compiler-options/index.md)  
+ [<span data-ttu-id="6dcb4-121">Administrar propiedades de soluciones y proyectos</span><span class="sxs-lookup"><span data-stu-id="6dcb4-121">Managing Project and Solution Properties</span></span>](/visualstudio/ide/managing-project-and-solution-properties)

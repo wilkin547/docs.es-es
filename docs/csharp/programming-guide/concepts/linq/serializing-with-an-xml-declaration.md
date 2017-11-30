@@ -1,41 +1,32 @@
 ---
 title: "Serializar con una declaración XML (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: c237fa4a-a042-40fd-886f-17b54c66bb75
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 44d7f199508abd6d60bb554806409cebb1b7f845
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 36ffb8ddd584785c660896ca77707d504638852f
-ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="serializing-with-an-xml-declaration-c"></a>Serializar con una declaración XML (C#)
-En este tema se describe cómo controlar si la serialización genera una declaración XML.  
+# <a name="serializing-with-an-xml-declaration-c"></a><span data-ttu-id="cd027-102">Serializar con una declaración XML (C#)</span><span class="sxs-lookup"><span data-stu-id="cd027-102">Serializing with an XML Declaration (C#)</span></span>
+<span data-ttu-id="cd027-103">En este tema se describe cómo controlar si la serialización genera una declaración XML.</span><span class="sxs-lookup"><span data-stu-id="cd027-103">This topic describes how to control whether serialization generates an XML declaration.</span></span>  
   
-## <a name="xml-declaration-generation"></a>Generación de declaración XML  
- La serialización en <xref:System.IO.File> o <xref:System.IO.TextWriter> mediante el método <xref:System.Xml.Linq.XElement.Save%2A?displayProperty=fullName> o el método <xref:System.Xml.Linq.XDocument.Save%2A?displayProperty=fullName> genera una declaración XML. Cuando serializa en <xref:System.Xml.XmlWriter>, la configuración del escritor (especificada en un objeto <xref:System.Xml.XmlWriterSettings>) determina si se genera una declaración XML.  
+## <a name="xml-declaration-generation"></a><span data-ttu-id="cd027-104">Generación de declaración XML</span><span class="sxs-lookup"><span data-stu-id="cd027-104">XML Declaration Generation</span></span>  
+ <span data-ttu-id="cd027-105">La serialización en <xref:System.IO.File> o <xref:System.IO.TextWriter> mediante el método <xref:System.Xml.Linq.XElement.Save%2A?displayProperty=nameWithType> o el método <xref:System.Xml.Linq.XDocument.Save%2A?displayProperty=nameWithType> genera una declaración XML.</span><span class="sxs-lookup"><span data-stu-id="cd027-105">Serializing to a <xref:System.IO.File> or a <xref:System.IO.TextWriter> using the <xref:System.Xml.Linq.XElement.Save%2A?displayProperty=nameWithType> method or the <xref:System.Xml.Linq.XDocument.Save%2A?displayProperty=nameWithType> method generates an XML declaration.</span></span> <span data-ttu-id="cd027-106">Cuando serializa en <xref:System.Xml.XmlWriter>, la configuración del escritor (especificada en un objeto <xref:System.Xml.XmlWriterSettings>) determina si se genera una declaración XML.</span><span class="sxs-lookup"><span data-stu-id="cd027-106">When you serialize to an <xref:System.Xml.XmlWriter>, the writer settings (specified in an <xref:System.Xml.XmlWriterSettings> object) determine whether an XML declaration is generated or not.</span></span>  
   
- Si está serializando en una cadena mediante el método `ToString`, el XML resultante no incluirá una declaración XML.  
+ <span data-ttu-id="cd027-107">Si está serializando en una cadena mediante el método `ToString`, el XML resultante no incluirá una declaración XML.</span><span class="sxs-lookup"><span data-stu-id="cd027-107">If you are serializing to a string using the `ToString` method, the resulting XML will not include an XML declaration.</span></span>  
   
-### <a name="serializing-with-an-xml-declaration"></a>Serializar con una declaración XML  
- En el ejemplo siguiente se crea un <xref:System.Xml.Linq.XElement>, se guarda el documento en un archivo y, a continuación, se imprime el archivo en la consola:  
+### <a name="serializing-with-an-xml-declaration"></a><span data-ttu-id="cd027-108">Serializar con una declaración XML</span><span class="sxs-lookup"><span data-stu-id="cd027-108">Serializing with an XML Declaration</span></span>  
+ <span data-ttu-id="cd027-109">En el ejemplo siguiente se crea un <xref:System.Xml.Linq.XElement>, se guarda el documento en un archivo y, a continuación, se imprime el archivo en la consola:</span><span class="sxs-lookup"><span data-stu-id="cd027-109">The following example creates an <xref:System.Xml.Linq.XElement>, saves the document to a file, and then prints the file to the console:</span></span>  
   
 ```csharp  
 XElement root = new XElement("Root",  
@@ -46,7 +37,7 @@ string str = File.ReadAllText("Root.xml");
 Console.WriteLine(str);  
 ```  
   
- Este ejemplo produce el siguiente resultado:  
+ <span data-ttu-id="cd027-110">Este ejemplo produce el siguiente resultado:</span><span class="sxs-lookup"><span data-stu-id="cd027-110">This example produces the following output:</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -55,8 +46,8 @@ Console.WriteLine(str);
 </Root>  
 ```  
   
-### <a name="serializing-without-an-xml-declaration"></a>Serializar sin una declaración XML  
- En el siguiente ejemplo se muestra cómo guardar un <xref:System.Xml.Linq.XElement> en un <xref:System.Xml.XmlWriter>.  
+### <a name="serializing-without-an-xml-declaration"></a><span data-ttu-id="cd027-111">Serializar sin una declaración XML</span><span class="sxs-lookup"><span data-stu-id="cd027-111">Serializing without an XML Declaration</span></span>  
+ <span data-ttu-id="cd027-112">En el siguiente ejemplo se muestra cómo guardar un <xref:System.Xml.Linq.XElement> en un <xref:System.Xml.XmlWriter>.</span><span class="sxs-lookup"><span data-stu-id="cd027-112">The following example shows how to save an <xref:System.Xml.Linq.XElement> to an <xref:System.Xml.XmlWriter>.</span></span>  
   
 ```csharp  
 StringBuilder sb = new StringBuilder();  
@@ -72,12 +63,11 @@ using (XmlWriter xw = XmlWriter.Create(sb, xws)) {
 Console.WriteLine(sb.ToString());  
 ```  
   
- Este ejemplo produce el siguiente resultado:  
+ <span data-ttu-id="cd027-113">Este ejemplo produce el siguiente resultado:</span><span class="sxs-lookup"><span data-stu-id="cd027-113">This example produces the following output:</span></span>  
   
 ```xml  
 <Root><Child>child content</Child></Root>  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Serializar árboles XML (C#)](../../../../csharp/programming-guide/concepts/linq/serializing-xml-trees.md)
-
+## <a name="see-also"></a><span data-ttu-id="cd027-114">Vea también</span><span class="sxs-lookup"><span data-stu-id="cd027-114">See Also</span></span>  
+ [<span data-ttu-id="cd027-115">Serializar árboles XML (C#)</span><span class="sxs-lookup"><span data-stu-id="cd027-115">Serializing XML Trees (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/serializing-xml-trees.md)

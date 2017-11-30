@@ -1,45 +1,27 @@
 ---
 title: "Cómo: Crear una clave en el Registro (Visual C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - registry, adding keys and values [C#]
 - registry keys, creating [C#]
 - keys, creating in registry
 ms.assetid: 8fa475b0-e01f-483a-9327-fd03488fdf5d
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: f6cc79a8a914d3ef5b7c496db4dc0d2b3eb17768
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 96d34df3314494fc96ad8b55d7462b67dcc7bd72
-ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-create-a-key-in-the-registry-visual-c"></a>Cómo: Crear una clave en el Registro (Visual C#)
-En este ejemplo se agrega el par de valores "Name" e "Isabella" al Registro del usuario actual en la clave "Names".  
+# <a name="how-to-create-a-key-in-the-registry-visual-c"></a><span data-ttu-id="f8efc-102">Cómo: Crear una clave en el Registro (Visual C#)</span><span class="sxs-lookup"><span data-stu-id="f8efc-102">How to: Create a Key In the Registry (Visual C#)</span></span>
+<span data-ttu-id="f8efc-103">En este ejemplo se agrega el par de valores "Name" e "Isabella" al Registro del usuario actual en la clave "Names".</span><span class="sxs-lookup"><span data-stu-id="f8efc-103">This example adds the value pair, "Name" and "Isabella", to the current user's registry, under the key "Names".</span></span>  
   
-## <a name="example"></a>Ejemplo  
+## <a name="example"></a><span data-ttu-id="f8efc-104">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="f8efc-104">Example</span></span>  
   
 ```  
 Microsoft.Win32.RegistryKey key;  
@@ -48,39 +30,38 @@ key.SetValue("Name", "Isabella");
 key.Close();  
 ```  
   
-## <a name="compiling-the-code"></a>Compilar el código  
+## <a name="compiling-the-code"></a><span data-ttu-id="f8efc-105">Compilar el código</span><span class="sxs-lookup"><span data-stu-id="f8efc-105">Compiling the Code</span></span>  
   
--   Copie el código y péguelo en el método `Main` de una aplicación de consola.  
+-   <span data-ttu-id="f8efc-106">Copie el código y péguelo en el método `Main` de una aplicación de consola.</span><span class="sxs-lookup"><span data-stu-id="f8efc-106">Copy the code and paste it into the `Main` method of a console application.</span></span>  
   
--   Sustituya el parámetro `Names` por el nombre de una clave que exista directamente en el nodo HKEY_CURRENT_USER del Registro.  
+-   <span data-ttu-id="f8efc-107">Sustituya el parámetro `Names` por el nombre de una clave que exista directamente en el nodo HKEY_CURRENT_USER del Registro.</span><span class="sxs-lookup"><span data-stu-id="f8efc-107">Replace the `Names` parameter with the name of a key that exists directly under the HKEY_CURRENT_USER node of the registry.</span></span>  
   
--   Sustituya el parámetro `Name` por el nombre de un valor que exista directamente en el nodo Names.  
+-   <span data-ttu-id="f8efc-108">Sustituya el parámetro `Name` por el nombre de un valor que exista directamente en el nodo Names.</span><span class="sxs-lookup"><span data-stu-id="f8efc-108">Replace the `Name` parameter with the name of a value that exists directly under the Names node.</span></span>  
   
-## <a name="robust-programming"></a>Programación sólida  
- Examine la estructura del Registro para buscar una ubicación adecuada para la clave. Por ejemplo, es posible que quiera abrir la clave Software del usuario actual y crear una clave con el nombre de la empresa. Luego agregue los valores del Registro a la clave de la empresa.  
+## <a name="robust-programming"></a><span data-ttu-id="f8efc-109">Programación sólida</span><span class="sxs-lookup"><span data-stu-id="f8efc-109">Robust Programming</span></span>  
+ <span data-ttu-id="f8efc-110">Examine la estructura del Registro para buscar una ubicación adecuada para la clave.</span><span class="sxs-lookup"><span data-stu-id="f8efc-110">Examine the registry structure to find a suitable location for your key.</span></span> <span data-ttu-id="f8efc-111">Por ejemplo, es posible que quiera abrir la clave Software del usuario actual y crear una clave con el nombre de la empresa.</span><span class="sxs-lookup"><span data-stu-id="f8efc-111">For example, you might want to open the Software key of the current user, and create a key with your company's name.</span></span> <span data-ttu-id="f8efc-112">Luego agregue los valores del Registro a la clave de la empresa.</span><span class="sxs-lookup"><span data-stu-id="f8efc-112">Then add the registry values to your company's key.</span></span>  
   
- Las condiciones siguientes pueden generar una excepción:  
+ <span data-ttu-id="f8efc-113">Las condiciones siguientes pueden generar una excepción:</span><span class="sxs-lookup"><span data-stu-id="f8efc-113">The following conditions might cause an exception:</span></span>  
   
--   Que el nombre de la clave sea nulo.  
+-   <span data-ttu-id="f8efc-114">Que el nombre de la clave sea nulo.</span><span class="sxs-lookup"><span data-stu-id="f8efc-114">The name of the key is null.</span></span>  
   
--   Que el usuario no tenga permisos para crear claves del Registro.  
+-   <span data-ttu-id="f8efc-115">Que el usuario no tenga permisos para crear claves del Registro.</span><span class="sxs-lookup"><span data-stu-id="f8efc-115">The user does not have permissions to create registry keys.</span></span>  
   
--   Que el nombre de la clave supere el límite de 255 caracteres.  
+-   <span data-ttu-id="f8efc-116">Que el nombre de la clave supere el límite de 255 caracteres.</span><span class="sxs-lookup"><span data-stu-id="f8efc-116">The key name exceeds the 255-character limit.</span></span>  
   
--   Que la clave esté cerrada.  
+-   <span data-ttu-id="f8efc-117">Que la clave esté cerrada.</span><span class="sxs-lookup"><span data-stu-id="f8efc-117">The key is closed.</span></span>  
   
--   Que la clave del Registro sea de solo lectura.  
+-   <span data-ttu-id="f8efc-118">Que la clave del Registro sea de solo lectura.</span><span class="sxs-lookup"><span data-stu-id="f8efc-118">The registry key is read-only.</span></span>  
   
-## <a name="net-framework-security"></a>Seguridad de .NET Framework  
- Es más seguro escribir datos en la carpeta de usuario (`Microsoft.Win32.Registry.CurrentUser`) que en el equipo local (`Microsoft.Win32.Registry.LocalMachine`).  
+## <a name="net-framework-security"></a><span data-ttu-id="f8efc-119">Seguridad de .NET Framework</span><span class="sxs-lookup"><span data-stu-id="f8efc-119">.NET Framework Security</span></span>  
+ <span data-ttu-id="f8efc-120">Es más seguro escribir datos en la carpeta de usuario (`Microsoft.Win32.Registry.CurrentUser`) que en el equipo local (`Microsoft.Win32.Registry.LocalMachine`).</span><span class="sxs-lookup"><span data-stu-id="f8efc-120">It is more secure to write data to the user folder — `Microsoft.Win32.Registry.CurrentUser` — rather than to the local computer — `Microsoft.Win32.Registry.LocalMachine`.</span></span>  
   
- Cuando se crea un valor del Registro, se debe decidir qué hacer si ese valor ya existe. Puede que otro proceso, quizás uno malintencionado, ya haya creado el valor y tenga acceso a él. Al colocar datos en el valor del Registro, estos están a disposición del otro proceso. Para evitarlo, use el método `Overload:Microsoft.Win32.RegistryKey.GetValue` . Si la clave aún no existe, devuelve null.  
+ <span data-ttu-id="f8efc-121">Cuando se crea un valor del Registro, se debe decidir qué hacer si ese valor ya existe.</span><span class="sxs-lookup"><span data-stu-id="f8efc-121">When you create a registry value, you need to decide what to do if that value already exists.</span></span> <span data-ttu-id="f8efc-122">Puede que otro proceso, quizás uno malintencionado, ya haya creado el valor y tenga acceso a él.</span><span class="sxs-lookup"><span data-stu-id="f8efc-122">Another process, perhaps a malicious one, may have already created the value and have access to it.</span></span> <span data-ttu-id="f8efc-123">Al colocar datos en el valor del Registro, estos están a disposición del otro proceso.</span><span class="sxs-lookup"><span data-stu-id="f8efc-123">When you put data in the registry value, the data is available to the other process.</span></span> <span data-ttu-id="f8efc-124">Para evitarlo, use el método `Overload:Microsoft.Win32.RegistryKey.GetValue`</span><span class="sxs-lookup"><span data-stu-id="f8efc-124">To prevent this, use the.`Overload:Microsoft.Win32.RegistryKey.GetValue`</span></span> <span data-ttu-id="f8efc-125">.</span><span class="sxs-lookup"><span data-stu-id="f8efc-125">method.</span></span> <span data-ttu-id="f8efc-126">Si la clave aún no existe, devuelve null.</span><span class="sxs-lookup"><span data-stu-id="f8efc-126">It returns null if the key does not already exist.</span></span>  
   
- No es seguro almacenar secretos, como contraseñas, en el Registro como texto sin formato, aunque la clave del Registro esté protegida mediante listas de control de acceso (ACL).  
+ <span data-ttu-id="f8efc-127">No es seguro almacenar secretos, como contraseñas, en el Registro como texto sin formato, aunque la clave del Registro esté protegida mediante listas de control de acceso (ACL).</span><span class="sxs-lookup"><span data-stu-id="f8efc-127">It is not secure to store secrets, such as passwords, in the registry as plain text, even if the registry key is protected by access control lists (ACL).</span></span>  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.IO?displayProperty=fullName>   
- [Guía de programación de C#](../../../csharp/programming-guide/index.md)   
- [Registro y sistema de archivos (Guía de programación de C#)](../../../csharp/programming-guide/file-system/index.md)   
- [Read, write and delete from the registry with C# (Leer, escribir y eliminar en el Registro con C#)](http://www.codeproject.com/Articles/3389/Read-write-and-delete-from-registry-with-C)
-
+## <a name="see-also"></a><span data-ttu-id="f8efc-128">Vea también</span><span class="sxs-lookup"><span data-stu-id="f8efc-128">See Also</span></span>  
+ <xref:System.IO?displayProperty=nameWithType>  
+ [<span data-ttu-id="f8efc-129">Guía de programación de C#</span><span class="sxs-lookup"><span data-stu-id="f8efc-129">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+ [<span data-ttu-id="f8efc-130">Registro y sistema de archivos (Guía de programación de C#)</span><span class="sxs-lookup"><span data-stu-id="f8efc-130">File System and the Registry (C# Programming Guide)</span></span>](../../../csharp/programming-guide/file-system/index.md)  
+ [<span data-ttu-id="f8efc-131">Read, write and delete from the registry with C# (Leer, escribir y eliminar en el Registro con C#)</span><span class="sxs-lookup"><span data-stu-id="f8efc-131">Read, write and delete from the registry with C#</span></span>](http://www.codeproject.com/Articles/3389/Read-write-and-delete-from-registry-with-C)

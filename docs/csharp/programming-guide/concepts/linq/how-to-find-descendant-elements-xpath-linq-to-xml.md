@@ -1,35 +1,31 @@
 ---
 title: "Cómo: Buscar elementos descendientes (XPath-LINQ to XML) (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: b318da39-bb8b-4c56-a019-e13b12b01831
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
+ms.openlocfilehash: 3d3551054b345d9ec1d18b33f697cf5c139bfab6
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 27b9b08fea2cfed476f4caf10b65b2b7e5eb74c5
-ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="how-to-find-descendant-elements-xpath-linq-to-xml-c"></a>Cómo: Buscar elementos descendientes (XPath-LINQ to XML) (C#)
-En este tema se muestra cómo obtener los elementos descendientes con un nombre particular.  
+# <a name="how-to-find-descendant-elements-xpath-linq-to-xml-c"></a><span data-ttu-id="1c6b3-102">Cómo: Buscar elementos descendientes (XPath-LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="1c6b3-102">How to: Find Descendant Elements (XPath-LINQ to XML) (C#)</span></span>
+<span data-ttu-id="1c6b3-103">En este tema se muestra cómo obtener los elementos descendientes con un nombre particular.</span><span class="sxs-lookup"><span data-stu-id="1c6b3-103">This topic shows how to get the descendant elements with a particular name.</span></span>  
   
- La expresión XPath es `//Name`.  
+ <span data-ttu-id="1c6b3-104">La expresión XPath es `//Name`.</span><span class="sxs-lookup"><span data-stu-id="1c6b3-104">The XPath expression is `//Name`.</span></span>  
   
-## <a name="example"></a>Ejemplo  
- Este ejemplo busca todos los descendientes con el nombre `Name`.  
+## <a name="example"></a><span data-ttu-id="1c6b3-105">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="1c6b3-105">Example</span></span>  
+ <span data-ttu-id="1c6b3-106">Este ejemplo busca todos los descendientes con el nombre `Name`.</span><span class="sxs-lookup"><span data-stu-id="1c6b3-106">This example finds all descendants named `Name`.</span></span>  
   
- En este ejemplo se usa el siguiente documento XML: [Archivo XML de muestra: varios pedidos de compra (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
+ <span data-ttu-id="1c6b3-107">En este ejemplo se usa el siguiente documento XML: [Archivo XML de muestra: varios pedidos de compra (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="1c6b3-107">This example uses the following XML document: [Sample XML File: Multiple Purchase Orders (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).</span></span>  
   
 ```csharp  
 XDocument po = XDocument.Load("PurchaseOrders.xml");  
@@ -49,7 +45,7 @@ foreach (XElement el in list1)
     Console.WriteLine(el);  
 ```  
   
- Este ejemplo produce el siguiente resultado:  
+ <span data-ttu-id="1c6b3-108">Este ejemplo produce el siguiente resultado:</span><span class="sxs-lookup"><span data-stu-id="1c6b3-108">This example produces the following output:</span></span>  
   
 ```  
 Results are identical  
@@ -61,6 +57,5 @@ Results are identical
 <Name>Jessica Arnold</Name>  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [LINQ to XML para usuarios de XPath (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
-
+## <a name="see-also"></a><span data-ttu-id="1c6b3-109">Vea también</span><span class="sxs-lookup"><span data-stu-id="1c6b3-109">See Also</span></span>  
+ [<span data-ttu-id="1c6b3-110">LINQ to XML para usuarios de XPath (C#)</span><span class="sxs-lookup"><span data-stu-id="1c6b3-110">LINQ to XML for XPath Users (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

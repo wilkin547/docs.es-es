@@ -5,93 +5,90 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-bcl
+ms.technology: dotnet-bcl
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - assemblies [.NET Framework], programming
 - programming assemblies
 ms.assetid: 25918b15-701d-42c7-95fc-c290d08648d6
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 368021062a3ad49d2c63f92797c59b8c0f1cddfc
-ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="programming-with-assemblies"></a>Programar con ensamblados
-Los ensamblados son los bloques de creación de .NET Framework; constituyen la unidad fundamental de implementación, control de versiones, reutilización, ámbitos de activación y permisos de seguridad. Los ensamblados proporcionan a Common Language Runtime la información necesaria para conocer las implementaciones de tipos. Son una colección de tipos y recursos compilados para funcionar en conjunto y formar una unidad lógica de funcionalidad. Para la ejecución, un tipo no existe fuera del contexto de un ensamblado.  
+# <a name="programming-with-assemblies"></a><span data-ttu-id="4df9c-102">Programar con ensamblados</span><span class="sxs-lookup"><span data-stu-id="4df9c-102">Programming with Assemblies</span></span>
+<span data-ttu-id="4df9c-103">Los ensamblados son los bloques de creación de .NET Framework; constituyen la unidad fundamental de implementación, control de versiones, reutilización, ámbitos de activación y permisos de seguridad.</span><span class="sxs-lookup"><span data-stu-id="4df9c-103">Assemblies are the building blocks of the .NET Framework; they form the fundamental unit of deployment, version control, reuse, activation scoping, and security permissions.</span></span> <span data-ttu-id="4df9c-104">Los ensamblados proporcionan a Common Language Runtime la información necesaria para conocer las implementaciones de tipos.</span><span class="sxs-lookup"><span data-stu-id="4df9c-104">An assembly provides the common language runtime with the information it needs to be aware of type implementations.</span></span> <span data-ttu-id="4df9c-105">Son una colección de tipos y recursos compilados para funcionar en conjunto y formar una unidad lógica de funcionalidad.</span><span class="sxs-lookup"><span data-stu-id="4df9c-105">It is a collection of types and resources that are built to work together and form a logical unit of functionality.</span></span> <span data-ttu-id="4df9c-106">Para la ejecución, un tipo no existe fuera del contexto de un ensamblado.</span><span class="sxs-lookup"><span data-stu-id="4df9c-106">To the runtime, a type does not exist outside the context of an assembly.</span></span>  
   
- En esta sección se describe cómo crear módulos, crear ensamblados a partir de módulos, crear un par de claves y firmar un ensamblado con un nombre seguro, e instalar un ensamblado en la caché global de ensamblados. Además, se explica cómo usar el [Desensamblador de MSIL (Ildasm.exe)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) para ver la información del manifiesto del ensamblado.  
+ <span data-ttu-id="4df9c-107">En esta sección se describe cómo crear módulos, crear ensamblados a partir de módulos, crear un par de claves y firmar un ensamblado con un nombre seguro, e instalar un ensamblado en la caché global de ensamblados.</span><span class="sxs-lookup"><span data-stu-id="4df9c-107">This section describes how to create modules, create assemblies from modules, create a key pair and sign an assembly with a strong name, and install an assembly into the global assembly cache.</span></span> <span data-ttu-id="4df9c-108">Además, se explica cómo usar el [Desensamblador de MSIL (Ildasm.exe)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) para ver la información del manifiesto del ensamblado.</span><span class="sxs-lookup"><span data-stu-id="4df9c-108">In addition, this section describes how to use the [MSIL Disassembler (Ildasm.exe)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) to view assembly manifest information.</span></span>  
   
 > [!NOTE]
->  A partir de la versión 2.0 de .NET Framework, el tiempo de ejecución no cargará ningún ensamblado compilado con una versión de .NET Framework que tenga un número de versión superior al tiempo de ejecución cargado actualmente. Esto se aplica a la combinación de los componentes principal y secundario del número de versión.  
+>  <span data-ttu-id="4df9c-109">A partir de la versión 2.0 de .NET Framework, el tiempo de ejecución no cargará ningún ensamblado compilado con una versión de .NET Framework que tenga un número de versión superior al tiempo de ejecución cargado actualmente.</span><span class="sxs-lookup"><span data-stu-id="4df9c-109">Starting with the .NET Framework version 2.0, the runtime will not load an assembly that was compiled with a version of the .NET Framework that has a higher version number than the currently loaded runtime.</span></span> <span data-ttu-id="4df9c-110">Esto se aplica a la combinación de los componentes principal y secundario del número de versión.</span><span class="sxs-lookup"><span data-stu-id="4df9c-110">This applies to the combination of the major and minor components of the version number.</span></span>  
   
-## <a name="in-this-section"></a>En esta sección  
- [Creación de ensamblados](../../../docs/framework/app-domains/create-assemblies.md)  
- Proporciona información general sobre los ensamblados de archivos individuales y múltiples archivos.  
+## <a name="in-this-section"></a><span data-ttu-id="4df9c-111">En esta sección</span><span class="sxs-lookup"><span data-stu-id="4df9c-111">In This Section</span></span>  
+ [<span data-ttu-id="4df9c-112">Creación de ensamblados</span><span class="sxs-lookup"><span data-stu-id="4df9c-112">Creating Assemblies</span></span>](../../../docs/framework/app-domains/create-assemblies.md)  
+ <span data-ttu-id="4df9c-113">Proporciona información general sobre los ensamblados de archivos individuales y múltiples archivos.</span><span class="sxs-lookup"><span data-stu-id="4df9c-113">Provides an overview of single-file and multifile assemblies.</span></span>  
   
- [Nombres de ensamblado](../../../docs/framework/app-domains/assembly-names.md)  
- Proporciona información general sobre la nomenclatura del ensamblado.  
+ [<span data-ttu-id="4df9c-114">Nombres de ensamblado</span><span class="sxs-lookup"><span data-stu-id="4df9c-114">Assembly Names</span></span>](../../../docs/framework/app-domains/assembly-names.md)  
+ <span data-ttu-id="4df9c-115">Proporciona información general sobre la nomenclatura del ensamblado.</span><span class="sxs-lookup"><span data-stu-id="4df9c-115">Provides an overview of assembly naming.</span></span>  
   
- [Determinar el nombre completo de un ensamblado](../../../docs/framework/app-domains/how-to-determine-assembly-fully-qualified-name.md)  
- Describe cómo determinar el nombre completo de un ensamblado.  
+ [<span data-ttu-id="4df9c-116">Determinar el nombre completo de un ensamblado</span><span class="sxs-lookup"><span data-stu-id="4df9c-116">How to: Determine an Assembly's Fully Qualified Name</span></span>](../../../docs/framework/app-domains/how-to-determine-assembly-fully-qualified-name.md)  
+ <span data-ttu-id="4df9c-117">Describe cómo determinar el nombre completo de un ensamblado.</span><span class="sxs-lookup"><span data-stu-id="4df9c-117">Describes how to determine the fully qualified name of an assembly.</span></span>  
   
- [Ejecutar aplicaciones de Intranet con plena confianza](../../../docs/framework/app-domains/running-intranet-applications-in-full-trust.md)  
- Describe cómo especificar la directiva de seguridad heredada para los ensamblados de plena confianza en un recurso compartido de la intranet.  
+ [<span data-ttu-id="4df9c-118">Ejecutar aplicaciones de Intranet con plena confianza</span><span class="sxs-lookup"><span data-stu-id="4df9c-118">Running Intranet Applications in Full Trust</span></span>](../../../docs/framework/app-domains/running-intranet-applications-in-full-trust.md)  
+ <span data-ttu-id="4df9c-119">Describe cómo especificar la directiva de seguridad heredada para los ensamblados de plena confianza en un recurso compartido de la intranet.</span><span class="sxs-lookup"><span data-stu-id="4df9c-119">Describes how to specify legacy security policy for full-trust assemblies on an intranet share.</span></span>  
   
- [Ubicación del ensamblado](../../../docs/framework/app-domains/assembly-location.md)  
- Proporciona una visión general de dónde ubicar los ensamblados.  
+ [<span data-ttu-id="4df9c-120">Ubicación del ensamblado</span><span class="sxs-lookup"><span data-stu-id="4df9c-120">Assembly Location</span></span>](../../../docs/framework/app-domains/assembly-location.md)  
+ <span data-ttu-id="4df9c-121">Proporciona una visión general de dónde ubicar los ensamblados.</span><span class="sxs-lookup"><span data-stu-id="4df9c-121">Provides an overview of where to locate assemblies.</span></span>  
   
- [Compilar un ensamblado de un solo archivo](../../../docs/framework/app-domains/how-to-build-a-single-file-assembly.md)  
- Describe cómo crear un ensamblado de un solo archivo.  
+ [<span data-ttu-id="4df9c-122">Compilar un ensamblado de un solo archivo</span><span class="sxs-lookup"><span data-stu-id="4df9c-122">How to: Build a Single-File Assembly</span></span>](../../../docs/framework/app-domains/how-to-build-a-single-file-assembly.md)  
+ <span data-ttu-id="4df9c-123">Describe cómo crear un ensamblado de un solo archivo.</span><span class="sxs-lookup"><span data-stu-id="4df9c-123">Describes how to create a single-file assembly.</span></span>  
   
- [Ensamblados de múltiples archivos](../../../docs/framework/app-domains/multifile-assemblies.md)  
- Describe las razones para crear ensamblados de varios archivos.  
+ [<span data-ttu-id="4df9c-124">Ensamblados de múltiples archivos</span><span class="sxs-lookup"><span data-stu-id="4df9c-124">Multifile Assemblies</span></span>](../../../docs/framework/app-domains/multifile-assemblies.md)  
+ <span data-ttu-id="4df9c-125">Describe las razones para crear ensamblados de varios archivos.</span><span class="sxs-lookup"><span data-stu-id="4df9c-125">Describes reasons for creating multifile assemblies.</span></span>  
   
- [Compilar un ensamblado de varios archivos](../../../docs/framework/app-domains/how-to-build-a-multifile-assembly.md)  
- Describe cómo crear un ensamblado de varios archivos.  
+ [<span data-ttu-id="4df9c-126">Compilar un ensamblado de varios archivos</span><span class="sxs-lookup"><span data-stu-id="4df9c-126">How to: Build a Multifile Assembly</span></span>](../../../docs/framework/app-domains/how-to-build-a-multifile-assembly.md)  
+ <span data-ttu-id="4df9c-127">Describe cómo crear un ensamblado de varios archivos.</span><span class="sxs-lookup"><span data-stu-id="4df9c-127">Describes how to create a multifile assembly.</span></span>  
   
- [Configurar atributos de ensamblados](../../../docs/framework/app-domains/set-assembly-attributes.md)  
- Describe los atributos de ensamblado y cómo establecerlos.  
+ [<span data-ttu-id="4df9c-128">Configurar atributos de ensamblados</span><span class="sxs-lookup"><span data-stu-id="4df9c-128">Setting Assembly Attributes</span></span>](../../../docs/framework/app-domains/set-assembly-attributes.md)  
+ <span data-ttu-id="4df9c-129">Describe los atributos de ensamblado y cómo establecerlos.</span><span class="sxs-lookup"><span data-stu-id="4df9c-129">Describes assembly attributes and how to set them.</span></span>  
   
- [Crear y utilizar ensamblados con nombre seguro](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)  
- Describe cómo y por qué se firman los ensamblados con un nombre seguro e incluye temas de procedimientos.  
+ [<span data-ttu-id="4df9c-130">Crear y utilizar ensamblados con nombre seguro</span><span class="sxs-lookup"><span data-stu-id="4df9c-130">Creating and Using Strong-Named Assemblies</span></span>](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)  
+ <span data-ttu-id="4df9c-131">Describe cómo y por qué se firman los ensamblados con un nombre seguro e incluye temas de procedimientos.</span><span class="sxs-lookup"><span data-stu-id="4df9c-131">Describes how and why you sign an assembly with a strong name, and includes how-to topics.</span></span>  
   
- [Retrasar la firma de un ensamblado](../../../docs/framework/app-domains/delay-sign-assembly.md)  
- Describe cómo se retrasa la firma de un ensamblado.  
+ [<span data-ttu-id="4df9c-132">Retrasar la firma de un ensamblado</span><span class="sxs-lookup"><span data-stu-id="4df9c-132">Delay Signing an Assembly</span></span>](../../../docs/framework/app-domains/delay-sign-assembly.md)  
+ <span data-ttu-id="4df9c-133">Describe cómo se retrasa la firma de un ensamblado.</span><span class="sxs-lookup"><span data-stu-id="4df9c-133">Describes how to delay-sign an assembly.</span></span>  
   
- [Trabajar con ensamblados y la memoria caché global de ensamblados](../../../docs/framework/app-domains/working-with-assemblies-and-the-gac.md)  
- Explica cómo y por qué se agregan ensamblados a la caché global de ensamblados e incluye temas de procedimientos.  
+ [<span data-ttu-id="4df9c-134">Trabajar con ensamblados y la memoria caché global de ensamblados</span><span class="sxs-lookup"><span data-stu-id="4df9c-134">Working with Assemblies and the Global Assembly Cache</span></span>](../../../docs/framework/app-domains/working-with-assemblies-and-the-gac.md)  
+ <span data-ttu-id="4df9c-135">Explica cómo y por qué se agregan ensamblados a la caché global de ensamblados e incluye temas de procedimientos.</span><span class="sxs-lookup"><span data-stu-id="4df9c-135">Describes how and why you add assemblies to the global assembly cache, and includes how-to topics.</span></span>  
   
- [Ver el contenido de un ensamblado](../../../docs/framework/app-domains/how-to-view-assembly-contents.md)  
- Describe cómo usar el Desensamblador de MSIL (Ildasm.exe) para ver el contenido del ensamblado.  
+ [<span data-ttu-id="4df9c-136">Ver el contenido de un ensamblado</span><span class="sxs-lookup"><span data-stu-id="4df9c-136">How to: View Assembly Contents</span></span>](../../../docs/framework/app-domains/how-to-view-assembly-contents.md)  
+ <span data-ttu-id="4df9c-137">Describe cómo usar el Desensamblador de MSIL (Ildasm.exe) para ver el contenido del ensamblado.</span><span class="sxs-lookup"><span data-stu-id="4df9c-137">Describes how to use the MSIL Disassembler (Ildasm.exe) to view assembly contents.</span></span>  
   
- [Reenvío de tipos en Common Language Runtime](../../../docs/framework/app-domains/type-forwarding-in-the-common-language-runtime.md)  
- Describe cómo usar el reenvío de tipos para pasar un tipo a un ensamblado diferente sin interrumpir las aplicaciones existentes.  
+ [<span data-ttu-id="4df9c-138">Reenvío de tipos en Common Language Runtime</span><span class="sxs-lookup"><span data-stu-id="4df9c-138">Type Forwarding in the Common Language Runtime</span></span>](../../../docs/framework/app-domains/type-forwarding-in-the-common-language-runtime.md)  
+ <span data-ttu-id="4df9c-139">Describe cómo usar el reenvío de tipos para pasar un tipo a un ensamblado diferente sin interrumpir las aplicaciones existentes.</span><span class="sxs-lookup"><span data-stu-id="4df9c-139">Describes how to use type forwarding to move a type into a different assembly without breaking existing applications.</span></span>  
   
-## <a name="reference"></a>Referencia  
+## <a name="reference"></a><span data-ttu-id="4df9c-140">Referencia</span><span class="sxs-lookup"><span data-stu-id="4df9c-140">Reference</span></span>  
  <xref:System.Reflection.Assembly>  
- Clase de .NET Framework que representa un ensamblado.  
+ <span data-ttu-id="4df9c-141">Clase de .NET Framework que representa un ensamblado.</span><span class="sxs-lookup"><span data-stu-id="4df9c-141">The .NET Framework class that represents an assembly.</span></span>  
   
-## <a name="related-sections"></a>Secciones relacionadas  
- [Obtener información sobre tipos y miembros desde un ensamblado](../../../docs/framework/app-domains/how-to-obtain-type-and-member-information-from-an-assembly.md)  
- Describe cómo obtener mediante programación el tipo y otra información de un ensamblado.  
+## <a name="related-sections"></a><span data-ttu-id="4df9c-142">Secciones relacionadas</span><span class="sxs-lookup"><span data-stu-id="4df9c-142">Related Sections</span></span>  
+ [<span data-ttu-id="4df9c-143">Obtener información sobre tipos y miembros desde un ensamblado</span><span class="sxs-lookup"><span data-stu-id="4df9c-143">How to: Obtain Type and Member Information from an Assembly</span></span>](../../../docs/framework/app-domains/how-to-obtain-type-and-member-information-from-an-assembly.md)  
+ <span data-ttu-id="4df9c-144">Describe cómo obtener mediante programación el tipo y otra información de un ensamblado.</span><span class="sxs-lookup"><span data-stu-id="4df9c-144">Describes how to programmatically obtain type and other information from an assembly.</span></span>  
   
- [Ensamblados en Common Language Runtime](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
- Proporciona información conceptual sobre los ensamblados Common Language Runtime.  
+ [<span data-ttu-id="4df9c-145">Ensamblados en Common Language Runtime</span><span class="sxs-lookup"><span data-stu-id="4df9c-145">Assemblies in the Common Language Runtime</span></span>](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
+ <span data-ttu-id="4df9c-146">Proporciona información conceptual sobre los ensamblados Common Language Runtime.</span><span class="sxs-lookup"><span data-stu-id="4df9c-146">Provides a conceptual overview of common language runtime assemblies.</span></span>  
   
- [Versiones de los ensamblados](../../../docs/framework/app-domains/assembly-versioning.md)  
- Proporciona información general sobre el enlace de ensamblado y los atributos <xref:System.Reflection.AssemblyVersionAttribute> y <xref:System.Reflection.AssemblyInformationalVersionAttribute>.  
+ [<span data-ttu-id="4df9c-147">Versiones de los ensamblados</span><span class="sxs-lookup"><span data-stu-id="4df9c-147">Assembly Versioning</span></span>](../../../docs/framework/app-domains/assembly-versioning.md)  
+ <span data-ttu-id="4df9c-148">Proporciona información general sobre el enlace de ensamblado y los atributos <xref:System.Reflection.AssemblyVersionAttribute> y <xref:System.Reflection.AssemblyInformationalVersionAttribute>.</span><span class="sxs-lookup"><span data-stu-id="4df9c-148">Provides an overview of assembly binding and of the <xref:System.Reflection.AssemblyVersionAttribute> and <xref:System.Reflection.AssemblyInformationalVersionAttribute> attributes.</span></span>  
   
- [Cómo el motor en tiempo de ejecución ubica ensamblados](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
- Describe la forma en que el tiempo de ejecución determina el ensamblado que se va a usar para llevar a cabo una solicitud de enlace.  
+ [<span data-ttu-id="4df9c-149">Cómo el motor en tiempo de ejecución ubica ensamblados</span><span class="sxs-lookup"><span data-stu-id="4df9c-149">How the Runtime Locates Assemblies</span></span>](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
+ <span data-ttu-id="4df9c-150">Describe la forma en que el tiempo de ejecución determina el ensamblado que se va a usar para llevar a cabo una solicitud de enlace.</span><span class="sxs-lookup"><span data-stu-id="4df9c-150">Describes how the runtime determines which assembly to use to fulfill a binding request.</span></span>  
   
- [Reflexión](../../../docs/framework/reflection-and-codedom/reflection.md)  
- Describe cómo usar la clase **Reflection** para obtener información sobre un ensamblado.
-
+ [<span data-ttu-id="4df9c-151">Reflexión</span><span class="sxs-lookup"><span data-stu-id="4df9c-151">Reflection</span></span>](../../../docs/framework/reflection-and-codedom/reflection.md)  
+ <span data-ttu-id="4df9c-152">Describe cómo usar la clase **Reflection** para obtener información sobre un ensamblado.</span><span class="sxs-lookup"><span data-stu-id="4df9c-152">Describes how to use the **Reflection** class to obtain information about an assembly.</span></span>

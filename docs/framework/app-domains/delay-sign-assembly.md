@@ -2,9 +2,12 @@
 title: Retrasar la firma de un ensamblado
 ms.date: 07/31/2017
 ms.prod: .net-framework
-ms.technology:
-- dotnet-bcl
+ms.technology: dotnet-bcl
 ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
 helpviewer_keywords:
 - deferring assembly signing
 - signing assemblies
@@ -12,69 +15,69 @@ helpviewer_keywords:
 - strong-named assemblies, delaying assembly signing
 - partial assembly signing
 ms.assetid: 9d300e17-5bf1-4360-97da-2aa55efd9070
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 08f0f48a71415878cd24640272a41de4c0a5ade6
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 0ee5fed355e0d8418500f1ecee53019548d9f7f8
-ms.openlocfilehash: 2c50a652c834dba80595f2ea419bc75148e13419
-ms.contentlocale: es-es
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="delay-signing-an-assembly"></a>Retrasar la firma de un ensamblado
-Una organización podría tener un par de claves muy bien guardado al que los desarrolladores no tuvieran acceso cada día. La clave pública suele estar disponible, pero el acceso a la clave privada estaría restringido a algunas personas. Al desarrollar ensamblados con nombres seguros, cada ensamblado que hace referencia al ensamblado de destino con nombre seguro contiene el token de la clave pública usada para asignar un nombre seguro al ensamblado de destino. Esto requiere que la clave pública esté disponible durante el proceso de desarrollo.  
+# <a name="delay-signing-an-assembly"></a><span data-ttu-id="f355f-102">Retrasar la firma de un ensamblado</span><span class="sxs-lookup"><span data-stu-id="f355f-102">Delay Signing an Assembly</span></span>
+<span data-ttu-id="f355f-103">Una organización podría tener un par de claves muy bien guardado al que los desarrolladores no tuvieran acceso cada día.</span><span class="sxs-lookup"><span data-stu-id="f355f-103">An organization can have a closely guarded key pair that developers do not have access to on a daily basis.</span></span> <span data-ttu-id="f355f-104">La clave pública suele estar disponible, pero el acceso a la clave privada estaría restringido a algunas personas.</span><span class="sxs-lookup"><span data-stu-id="f355f-104">The public key is often available, but access to the private key is restricted to only a few individuals.</span></span> <span data-ttu-id="f355f-105">Al desarrollar ensamblados con nombres seguros, cada ensamblado que hace referencia al ensamblado de destino con nombre seguro contiene el token de la clave pública usada para asignar un nombre seguro al ensamblado de destino.</span><span class="sxs-lookup"><span data-stu-id="f355f-105">When developing assemblies with strong names, each assembly that references the strong-named target assembly contains the token of the public key used to give the target assembly a strong name.</span></span> <span data-ttu-id="f355f-106">Esto requiere que la clave pública esté disponible durante el proceso de desarrollo.</span><span class="sxs-lookup"><span data-stu-id="f355f-106">This requires that the public key be available during the development process.</span></span>  
   
- Puede usar la firma retardada o parcial en tiempo de compilación para reservar espacio en el archivo portable ejecutable (PE) para la firma de nombre seguro, pero retrase la firma real hasta una fase posterior (normalmente justo antes de enviar el ensamblado).  
+ <span data-ttu-id="f355f-107">Puede usar la firma retardada o parcial en tiempo de compilación para reservar espacio en el archivo portable ejecutable (PE) para la firma de nombre seguro, pero retrase la firma real hasta una fase posterior (normalmente justo antes de enviar el ensamblado).</span><span class="sxs-lookup"><span data-stu-id="f355f-107">You can use delayed or partial signing at build time to reserve space in the portable executable (PE) file for the strong name signature, but defer the actual signing until some later stage (typically just before shipping the assembly).</span></span>  
   
- En los pasos siguientes se describe el proceso para retrasar la firma de un ensamblado:  
+ <span data-ttu-id="f355f-108">En los pasos siguientes se describe el proceso para retrasar la firma de un ensamblado:</span><span class="sxs-lookup"><span data-stu-id="f355f-108">The following steps outline the process to delay sign an assembly:</span></span>  
   
-1.  Se obtiene la parte de la clave pública del par de claves de la organización que se encargará de la firma. Normalmente, esta clave tiene la forma de un archivo .snk, que se puede crear mediante la [herramienta de nombre seguro (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) proporcionada por el [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)].  
+1.  <span data-ttu-id="f355f-109">Se obtiene la parte de la clave pública del par de claves de la organización que se encargará de la firma.</span><span class="sxs-lookup"><span data-stu-id="f355f-109">Obtain the public key portion of the key pair from the organization that will do the eventual signing.</span></span> <span data-ttu-id="f355f-110">Normalmente, esta clave tiene la forma de un archivo .snk, que se puede crear mediante la [herramienta de nombre seguro (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) proporcionada por el [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)].</span><span class="sxs-lookup"><span data-stu-id="f355f-110">Typically this key is in the form of an .snk file, which can be created using the [Strong Name tool (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) provided by the [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)].</span></span>  
   
-2.  Se anota el código fuente del ensamblado con dos atributos personalizados de <xref:System.Reflection>:  
+2.  <span data-ttu-id="f355f-111">Se anota el código fuente del ensamblado con dos atributos personalizados de <xref:System.Reflection>:</span><span class="sxs-lookup"><span data-stu-id="f355f-111">Annotate the source code for the assembly with two custom attributes from <xref:System.Reflection>:</span></span>  
   
-    -   <xref:System.Reflection.AssemblyKeyFileAttribute>, que pasa el nombre del archivo que contiene la clave pública como parámetro a su constructor.  
+    -   <span data-ttu-id="f355f-112"><xref:System.Reflection.AssemblyKeyFileAttribute>, que pasa el nombre del archivo que contiene la clave pública como parámetro a su constructor.</span><span class="sxs-lookup"><span data-stu-id="f355f-112"><xref:System.Reflection.AssemblyKeyFileAttribute>, which passes the name of the file containing the public key as a parameter to its constructor.</span></span>  
   
-    -   <xref:System.Reflection.AssemblyDelaySignAttribute>, que indica que se está retrasando la firma. Para ello, se pasa **true** como parámetro a su constructor. Por ejemplo:  
+    -   <span data-ttu-id="f355f-113"><xref:System.Reflection.AssemblyDelaySignAttribute>, que indica que se está retrasando la firma. Para ello, se pasa **true** como parámetro a su constructor.</span><span class="sxs-lookup"><span data-stu-id="f355f-113"><xref:System.Reflection.AssemblyDelaySignAttribute>, which indicates that delay signing is being used by passing **true** as a parameter to its constructor.</span></span> <span data-ttu-id="f355f-114">Por ejemplo:</span><span class="sxs-lookup"><span data-stu-id="f355f-114">For example:</span></span>  
   
-         [!code-cpp[AssemblyDelaySignAttribute#4](../../../samples/snippets/cpp/VS_Snippets_CLR/AssemblyDelaySignAttribute/cpp/source2.cpp#4)] [!code-csharp[AssemblyDelaySignAttribute#4](../../../samples/snippets/csharp/VS_Snippets_CLR/AssemblyDelaySignAttribute/cs/source2.cs#4)] [!code-vb[AssemblyDelaySignAttribute#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/AssemblyDelaySignAttribute/vb/source2.vb#4)]  
+         [!code-cpp[AssemblyDelaySignAttribute#4](../../../samples/snippets/cpp/VS_Snippets_CLR/AssemblyDelaySignAttribute/cpp/source2.cpp#4)]
+         [!code-csharp[AssemblyDelaySignAttribute#4](../../../samples/snippets/csharp/VS_Snippets_CLR/AssemblyDelaySignAttribute/cs/source2.cs#4)]
+         [!code-vb[AssemblyDelaySignAttribute#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/AssemblyDelaySignAttribute/vb/source2.vb#4)]  
   
-3.  El compilador inserta la clave pública en el manifiesto del ensamblado y reserva espacio en el archivo PE para la firma de nombre seguro completo. La clave pública real se debe guardar mientras se compila el ensamblado para que otros ensamblados que hagan referencia a este puedan obtenerla y guardarla en su propia referencia al ensamblado.  
+3.  <span data-ttu-id="f355f-115">El compilador inserta la clave pública en el manifiesto del ensamblado y reserva espacio en el archivo PE para la firma de nombre seguro completo.</span><span class="sxs-lookup"><span data-stu-id="f355f-115">The compiler inserts the public key into the assembly manifest and reserves space in the PE file for the full strong name signature.</span></span> <span data-ttu-id="f355f-116">La clave pública real se debe guardar mientras se compila el ensamblado para que otros ensamblados que hagan referencia a este puedan obtenerla y guardarla en su propia referencia al ensamblado.</span><span class="sxs-lookup"><span data-stu-id="f355f-116">The real public key must be stored while the assembly is built so that other assemblies that reference this assembly can obtain the key to store in their own assembly reference.</span></span>  
   
-4.  Dado que el ensamblado no tiene una firma de nombre seguro válida, la comprobación de firma debe estar desactivada. Puede hacerlo mediante la opción **–Vr** con la herramienta de nombre seguro.  
+4.  <span data-ttu-id="f355f-117">Dado que el ensamblado no tiene una firma de nombre seguro válida, la comprobación de firma debe estar desactivada.</span><span class="sxs-lookup"><span data-stu-id="f355f-117">Because the assembly does not have a valid strong name signature, the verification of that signature must be turned off.</span></span> <span data-ttu-id="f355f-118">Puede hacerlo mediante la opción **–Vr** con la herramienta de nombre seguro.</span><span class="sxs-lookup"><span data-stu-id="f355f-118">You can do this by using the **–Vr** option with the Strong Name tool.</span></span>  
   
-     En el ejemplo siguiente se desactiva la comprobación para un ensamblado denominado `myAssembly.dll`.  
+     <span data-ttu-id="f355f-119">En el ejemplo siguiente se desactiva la comprobación para un ensamblado denominado `myAssembly.dll`.</span><span class="sxs-lookup"><span data-stu-id="f355f-119">The following example turns off verification for an assembly called `myAssembly.dll`.</span></span>  
   
     ```  
     sn –Vr myAssembly.dll  
     ```  
   
-     Para desactivar la comprobación en plataformas en las que no se puede ejecutar la herramienta de nombre seguro, como los microprocesadores de Advanced RISC Machine (ARM), use la opción **–Vk** para crear un archivo del Registro. Importe el archivo del Registro en el Registro del equipo en el que quiere desactivar la comprobación. En el ejemplo siguiente se crea un archivo del Registro para `myAssembly.dll`.  
+     <span data-ttu-id="f355f-120">Para desactivar la comprobación en plataformas en las que no se puede ejecutar la herramienta de nombre seguro, como los microprocesadores de Advanced RISC Machine (ARM), use la opción **–Vk** para crear un archivo del Registro.</span><span class="sxs-lookup"><span data-stu-id="f355f-120">To turn off verification on platforms where you can’t run the Strong Name tool, such as Advanced RISC Machine (ARM) microprocessors, use the **–Vk** option to create a registry file.</span></span> <span data-ttu-id="f355f-121">Importe el archivo del Registro en el Registro del equipo en el que quiere desactivar la comprobación.</span><span class="sxs-lookup"><span data-stu-id="f355f-121">Import the registry file into the registry on the computer where you want to turn off verification.</span></span> <span data-ttu-id="f355f-122">En el ejemplo siguiente se crea un archivo del Registro para `myAssembly.dll`.</span><span class="sxs-lookup"><span data-stu-id="f355f-122">The following example creates a registry file for `myAssembly.dll`.</span></span>  
   
     ```  
     sn –Vk myRegFile.reg myAssembly.dll  
     ```  
   
-     Con la opción **–Vr** o **–Vk**, puede incluir opcionalmente un archivo .snk para probar la firma de la clave.  
+     <span data-ttu-id="f355f-123">Con la opción **–Vr** o **–Vk**, puede incluir opcionalmente un archivo .snk para probar la firma de la clave.</span><span class="sxs-lookup"><span data-stu-id="f355f-123">With either the **–Vr** or **–Vk** option, you can optionally include an .snk file for test key signing.</span></span>  
   
     > [!WARNING]
-    > Para garantizar la seguridad, no confíe únicamente en el uso de nombres seguros. Estos solo proporcionan una identidad única.
+    > <span data-ttu-id="f355f-124">Para garantizar la seguridad, no confíe únicamente en el uso de nombres seguros.</span><span class="sxs-lookup"><span data-stu-id="f355f-124">Do not rely on strong names for security.</span></span> <span data-ttu-id="f355f-125">Estos solo proporcionan una identidad única.</span><span class="sxs-lookup"><span data-stu-id="f355f-125">They provide a unique identity only.</span></span>
   
     > [!NOTE]
-    >  Si usa la firma retardada durante el desarrollo con Visual Studio en un equipo de 64 bits y compila un ensamblado para **Cualquier CPU**, es posible que deba aplicar la opción **-Vr** dos veces. (En Visual Studio, **Cualquier CPU** es un valor de la propiedad de compilación **Destino de la plataforma**. Cuando se compila desde la línea de comandos, es el valor predeterminado). Para ejecutar la aplicación desde la línea de comandos o desde el Explorador de archivos, use la versión de 64 bits de [Sn.exe (herramienta de nombre seguro)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) para aplicar la opción **-Vr** al ensamblado. Para cargar el ensamblado en Visual Studio en tiempo de diseño (por ejemplo, si el ensamblado contiene componentes que usan otros ensamblados de la aplicación), use la versión de 32 bits de la herramienta de nombre seguro. Esto se debe a que el compilador Just-In-Time (JIT) compila el ensamblado en código nativo de 64 bits cuando el ensamblado se ejecuta desde la línea de comandos y en código nativo de 32 bits cuando el ensamblado se carga en el entorno de tiempo de diseño.  
+    >  <span data-ttu-id="f355f-126">Si usa la firma retardada durante el desarrollo con Visual Studio en un equipo de 64 bits y compila un ensamblado para **Cualquier CPU**, es posible que deba aplicar la opción **-Vr** dos veces.</span><span class="sxs-lookup"><span data-stu-id="f355f-126">If you use delay signing during development with Visual Studio on a 64-bit computer, and you compile an assembly for **Any CPU**, you might have to apply the **-Vr** option twice.</span></span> <span data-ttu-id="f355f-127">(En Visual Studio, **Cualquier CPU** es un valor de la propiedad de compilación **Destino de la plataforma**. Cuando se compila desde la línea de comandos, es el valor predeterminado). Para ejecutar la aplicación desde la línea de comandos o desde el Explorador de archivos, use la versión de 64 bits de [Sn.exe (herramienta de nombre seguro)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) para aplicar la opción **-Vr** al ensamblado.</span><span class="sxs-lookup"><span data-stu-id="f355f-127">(In Visual Studio, **Any CPU** is a value of the **Platform Target** build property; when you compile from the command line, it is the default.) To run your application from the command line or from File Explorer, use the 64-bit version of the [Sn.exe (Strong Name Tool)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) to apply the **-Vr** option to the assembly.</span></span> <span data-ttu-id="f355f-128">Para cargar el ensamblado en Visual Studio en tiempo de diseño (por ejemplo, si el ensamblado contiene componentes que usan otros ensamblados de la aplicación), use la versión de 32 bits de la herramienta de nombre seguro.</span><span class="sxs-lookup"><span data-stu-id="f355f-128">To load the assembly into Visual Studio at design time (for example, if the assembly contains components that are used by other assemblies in your application), use the 32-bit version of the strong-name tool.</span></span> <span data-ttu-id="f355f-129">Esto se debe a que el compilador Just-In-Time (JIT) compila el ensamblado en código nativo de 64 bits cuando el ensamblado se ejecuta desde la línea de comandos y en código nativo de 32 bits cuando el ensamblado se carga en el entorno de tiempo de diseño.</span><span class="sxs-lookup"><span data-stu-id="f355f-129">This is because the just-in-time (JIT) compiler compiles the assembly to 64-bit native code when the assembly is run from the command line, and to 32-bit native code when the assembly is loaded into the design-time environment.</span></span>  
   
-5.  Después, normalmente justo antes del envío, se envía el ensamblado a la autoridad de firma de la organización para que lleve a cabo la firma de nombre seguro real mediante la opción **–R** con la herramienta de nombre seguro.  
+5.  <span data-ttu-id="f355f-130">Después, normalmente justo antes del envío, se envía el ensamblado a la autoridad de firma de la organización para que lleve a cabo la firma de nombre seguro real mediante la opción **–R** con la herramienta de nombre seguro.</span><span class="sxs-lookup"><span data-stu-id="f355f-130">Later, usually just before shipping, you submit the assembly to your organization's signing authority for the actual strong name signing using the **–R** option with the Strong Name tool.</span></span>  
   
-     En el ejemplo siguiente se firma un ensamblado denominado `myAssembly.dll` con un nombre seguro mediante el par de claves `sgKey.snk`.  
+     <span data-ttu-id="f355f-131">En el ejemplo siguiente se firma un ensamblado denominado `myAssembly.dll` con un nombre seguro mediante el par de claves `sgKey.snk`.</span><span class="sxs-lookup"><span data-stu-id="f355f-131">The following example signs an assembly called `myAssembly.dll` with a strong name using the `sgKey.snk` key pair.</span></span>  
   
     ```  
     sn -R myAssembly.dll sgKey.snk  
     ```  
   
-## <a name="see-also"></a>Vea también  
- [Crear ensamblados](../../../docs/framework/app-domains/create-assemblies.md)   
- [Cómo: Crear un par de claves privada y pública](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)   
- [Sn.exe (Herramienta de nombre seguro)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)   
- [Programar con ensamblados](../../../docs/framework/app-domains/programming-with-assemblies.md)
-
+## <a name="see-also"></a><span data-ttu-id="f355f-132">Vea también</span><span class="sxs-lookup"><span data-stu-id="f355f-132">See Also</span></span>  
+ [<span data-ttu-id="f355f-133">Creación de ensamblados</span><span class="sxs-lookup"><span data-stu-id="f355f-133">Creating Assemblies</span></span>](../../../docs/framework/app-domains/create-assemblies.md)  
+ <span data-ttu-id="f355f-134">[How to: Create a Public-Private Key Pair](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md) (Cómo: Crear un par de claves pública y privada)</span><span class="sxs-lookup"><span data-stu-id="f355f-134">[How to: Create a Public-Private Key Pair](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)</span></span>  
+ [<span data-ttu-id="f355f-135">Sn.exe (Herramienta de nombre seguro)</span><span class="sxs-lookup"><span data-stu-id="f355f-135">Sn.exe (Strong Name Tool)</span></span>](../../../docs/framework/tools/sn-exe-strong-name-tool.md)  
+ [<span data-ttu-id="f355f-136">Programar con ensamblados</span><span class="sxs-lookup"><span data-stu-id="f355f-136">Programming with Assemblies</span></span>](../../../docs/framework/app-domains/programming-with-assemblies.md)

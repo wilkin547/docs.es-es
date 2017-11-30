@@ -1,55 +1,61 @@
 ---
-title: "Personalizar las operaciones mediante procedimientos almacenados exclusivamente | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Personalizar operaciones utilizando procedimientos almacenados
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: aedbecc1-c33c-4fb4-8861-fdf7e1dc6b8a
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 9110cec32075c85807d3ef1550ae1a9e63b4239f
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Personalizar las operaciones mediante procedimientos almacenados exclusivamente
-Los procedimientos almacenados representan un enfoque común para invalidar el comportamiento predeterminado.  Los ejemplos de este tema muestran cómo utilizar los contenedores de método generados para los procedimientos almacenados, y cómo se puede llamar directamente a los procedimientos almacenados.  
+# <a name="customizing-operations-by-using-stored-procedures"></a><span data-ttu-id="39242-102">Personalizar operaciones utilizando procedimientos almacenados</span><span class="sxs-lookup"><span data-stu-id="39242-102">Customizing Operations By Using Stored Procedures</span></span>
+<span data-ttu-id="39242-103">Los procedimientos almacenados representan un enfoque común para invalidar el comportamiento predeterminado.</span><span class="sxs-lookup"><span data-stu-id="39242-103">Stored procedures represent a common approach to overriding default behavior.</span></span> <span data-ttu-id="39242-104">Los ejemplos de este tema muestran cómo utilizar los contenedores de método generados para los procedimientos almacenados, y cómo se puede llamar directamente a los procedimientos almacenados.</span><span class="sxs-lookup"><span data-stu-id="39242-104">The examples in this topic show how you can use generated method wrappers for stored procedures, and how you can call stored procedures directly.</span></span>  
   
- Si utiliza [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)], puede usar el [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] para asignar los procedimientos almacenados para realizar operaciones de inserción, actualización y eliminación.  
+ <span data-ttu-id="39242-105">Si utiliza [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)], puede usar el [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] para asignar los procedimientos almacenados para realizar operaciones de inserción, actualización y eliminación.</span><span class="sxs-lookup"><span data-stu-id="39242-105">If you are using [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)], you can use the [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] to assign stored procedures to perform inserts, updates, and deletes.</span></span>  
   
 > [!NOTE]
->  Para volver a leer los valores generados por la base de datos, utilice parámetros de salida en los procedimientos almacenados.  Si no puede usar parámetros de salida, escriba una implementación de método parcial en lugar de confiar en las invalidaciones generadas por el [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)].  Los miembros asignados a los valores generados por la base de datos deben establecerse en los valores adecuados una vez que se ha completado correctamente una operación `INSERT` o `UPDATE`.  Para obtener más información, consulte [Responsabilidades del desarrollador en la invalidación del comportamiento predeterminado](../../../../../../docs/framework/data/adonet/sql/linq/responsibilities-of-the-developer-in-overriding-default-behavior.md)  
+>  <span data-ttu-id="39242-106">Para volver a leer los valores generados por la base de datos, utilice parámetros de salida en los procedimientos almacenados.</span><span class="sxs-lookup"><span data-stu-id="39242-106">To read back database-generated values, use output parameters in your stored procedures.</span></span> <span data-ttu-id="39242-107">Si no puede usar parámetros de salida, escriba una implementación de método parcial en lugar de confiar en las invalidaciones generadas por el [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)].</span><span class="sxs-lookup"><span data-stu-id="39242-107">If you cannot use output parameters, write a partial method implementation instead of relying on overrides generated by the [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)].</span></span> <span data-ttu-id="39242-108">Los miembros asignados a los valores generados por la base de datos deben establecerse en los valores adecuados una vez que se ha completado correctamente una operación `INSERT` o `UPDATE`.</span><span class="sxs-lookup"><span data-stu-id="39242-108">Members mapped to database-generated values must be set to appropriate values after `INSERT` or `UPDATE` operations have successfully completed.</span></span> <span data-ttu-id="39242-109">Para obtener más información, consulte [las responsabilidades de los desarrolladores invalidar un comportamiento predeterminado](../../../../../../docs/framework/data/adonet/sql/linq/responsibilities-of-the-developer-in-overriding-default-behavior.md).</span><span class="sxs-lookup"><span data-stu-id="39242-109">For more information, see [Responsibilities of the Developer In Overriding Default Behavior](../../../../../../docs/framework/data/adonet/sql/linq/responsibilities-of-the-developer-in-overriding-default-behavior.md).</span></span>  
   
-## Ejemplo  
+## <a name="example"></a><span data-ttu-id="39242-110">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="39242-110">Example</span></span>  
   
-### Descripción  
- En el ejemplo siguiente se da por hecho que la clase `Northwind` contiene dos métodos para llamar a los procedimientos almacenados que se utilizan para las invalidaciones en una clase derivada.  
+### <a name="description"></a><span data-ttu-id="39242-111">Descripción</span><span class="sxs-lookup"><span data-stu-id="39242-111">Description</span></span>  
+ <span data-ttu-id="39242-112">En el ejemplo siguiente se da por hecho que la clase `Northwind` contiene dos métodos para llamar a los procedimientos almacenados que se utilizan para las invalidaciones en una clase derivada.</span><span class="sxs-lookup"><span data-stu-id="39242-112">In the following example, assume that the `Northwind` class contains two methods to call stored procedures that are being used for overrides in a derived class.</span></span>  
   
-### Código  
+### <a name="code"></a><span data-ttu-id="39242-113">Código</span><span class="sxs-lookup"><span data-stu-id="39242-113">Code</span></span>  
  [!code-csharp[DLinqOverrideDefaultSproc#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqOverrideDefaultSproc/cs/northwind.cs#1)]
  [!code-vb[DLinqOverrideDefaultSproc#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqOverrideDefaultSproc/vb/northwind.vb#1)]  
   
-## Ejemplo  
+## <a name="example"></a><span data-ttu-id="39242-114">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="39242-114">Example</span></span>  
   
-### Descripción  
- La clase siguiente utiliza estos métodos para la invalidación.  
+### <a name="description"></a><span data-ttu-id="39242-115">Descripción</span><span class="sxs-lookup"><span data-stu-id="39242-115">Description</span></span>  
+ <span data-ttu-id="39242-116">La clase siguiente utiliza estos métodos para la invalidación.</span><span class="sxs-lookup"><span data-stu-id="39242-116">The following class uses these methods for the override.</span></span>  
   
-### Código  
+### <a name="code"></a><span data-ttu-id="39242-117">Código</span><span class="sxs-lookup"><span data-stu-id="39242-117">Code</span></span>  
  [!code-csharp[DLinqOverrideDefaultSproc#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqOverrideDefaultSproc/cs/northwind.cs#2)]
  [!code-vb[DLinqOverrideDefaultSproc#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqOverrideDefaultSproc/vb/northwind.vb#2)]  
   
-## Ejemplo  
+## <a name="example"></a><span data-ttu-id="39242-118">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="39242-118">Example</span></span>  
   
-### Descripción  
- Puede utilizar `NorthwindThroughSprocs` de la misma forma que utilizaría `Northwnd`.  
+### <a name="description"></a><span data-ttu-id="39242-119">Descripción</span><span class="sxs-lookup"><span data-stu-id="39242-119">Description</span></span>  
+ <span data-ttu-id="39242-120">Puede utilizar `NorthwindThroughSprocs` de la misma forma que utilizaría `Northwnd`.</span><span class="sxs-lookup"><span data-stu-id="39242-120">You can use `NorthwindThroughSprocs` exactly as you would use `Northwnd`.</span></span>  
   
-### Código  
+### <a name="code"></a><span data-ttu-id="39242-121">Código</span><span class="sxs-lookup"><span data-stu-id="39242-121">Code</span></span>  
  [!code-csharp[DLinqOverrideDefaultSproc#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqOverrideDefaultSproc/cs/Program.cs#3)]
  [!code-vb[DLinqOverrideDefaultSproc#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqOverrideDefaultSproc/vb/Module1.vb#3)]  
   
-## Vea también  
- [Responsabilidades del desarrollador en la invalidación del comportamiento predeterminado](../../../../../../docs/framework/data/adonet/sql/linq/responsibilities-of-the-developer-in-overriding-default-behavior.md)
+## <a name="see-also"></a><span data-ttu-id="39242-122">Vea también</span><span class="sxs-lookup"><span data-stu-id="39242-122">See Also</span></span>  
+ [<span data-ttu-id="39242-123">Responsabilidades del desarrollador al invalidar un comportamiento predeterminado</span><span class="sxs-lookup"><span data-stu-id="39242-123">Responsibilities of the Developer In Overriding Default Behavior</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/responsibilities-of-the-developer-in-overriding-default-behavior.md)

@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - binding failure
 - binding, failures
@@ -22,64 +16,63 @@ helpviewer_keywords:
 - managed debugging assistants (MDAs), binding failures
 - BindingFailure MDA
 ms.assetid: 26ada5af-175c-4576-931a-9f07fa1723e9
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 4e78cdcc5bcf69902675fceacc9dac245bfec336
-ms.contentlocale: es-es
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 89c1ce4b39379aeae80240750cdbcd2e61b6ec11
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="bindingfailure-mda"></a>MDA de bindingFailure
-El asistente para la depuración administrada (MDA) `bindingFailure` se activa cuando no se puede cargar un ensamblado.  
+# <a name="bindingfailure-mda"></a><span data-ttu-id="0b632-102">MDA de bindingFailure</span><span class="sxs-lookup"><span data-stu-id="0b632-102">bindingFailure MDA</span></span>
+<span data-ttu-id="0b632-103">El asistente para la depuración administrada (MDA) `bindingFailure` se activa cuando no se puede cargar un ensamblado.</span><span class="sxs-lookup"><span data-stu-id="0b632-103">The `bindingFailure` managed debugging assistant (MDA) is activated when an assembly fails to load.</span></span>  
   
-## <a name="symptoms"></a>Síntomas  
- El código ha intentado cargar un ensamblado con una referencia estática o uno de los métodos del cargador, como <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName> o <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=fullName>. No se ha cargado el ensamblado y se ha producido una excepción <xref:System.IO.FileNotFoundException> o <xref:System.IO.FileLoadException>.  
+## <a name="symptoms"></a><span data-ttu-id="0b632-104">Síntomas</span><span class="sxs-lookup"><span data-stu-id="0b632-104">Symptoms</span></span>  
+ <span data-ttu-id="0b632-105">El código ha intentado cargar un ensamblado con una referencia estática o uno de los métodos del cargador, como <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> o <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="0b632-105">Code has attempted to load an assembly using a static reference or one of the loader methods, such as <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> or <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>.</span></span> <span data-ttu-id="0b632-106">No se ha cargado el ensamblado y se ha producido una excepción <xref:System.IO.FileNotFoundException> o <xref:System.IO.FileLoadException>.</span><span class="sxs-lookup"><span data-stu-id="0b632-106">The assembly is not loaded and a <xref:System.IO.FileNotFoundException> or <xref:System.IO.FileLoadException> exception is thrown.</span></span>  
   
-## <a name="cause"></a>Motivo  
- Si el tiempo de ejecución no puede cargar un ensamblado, se produce un error de enlace. Un error de enlace podría deberse a una de las siguientes situaciones:  
+## <a name="cause"></a><span data-ttu-id="0b632-107">Motivo</span><span class="sxs-lookup"><span data-stu-id="0b632-107">Cause</span></span>  
+ <span data-ttu-id="0b632-108">Si el tiempo de ejecución no puede cargar un ensamblado, se produce un error de enlace.</span><span class="sxs-lookup"><span data-stu-id="0b632-108">A binding failure occurs when the runtime is unable to load an assembly.</span></span> <span data-ttu-id="0b632-109">Un error de enlace podría deberse a una de las siguientes situaciones:</span><span class="sxs-lookup"><span data-stu-id="0b632-109">A binding failure might be the result of one of the following situations:</span></span>  
   
--   Common Language Runtime (CLR) no encuentra el ensamblado solicitado. Hay muchas razones por las que esto puede suceder, por ejemplo, que el ensamblado no esté instalado o que la aplicación no esté configurada correctamente para encontrar el ensamblado.  
+-   <span data-ttu-id="0b632-110">Common Language Runtime (CLR) no encuentra el ensamblado solicitado.</span><span class="sxs-lookup"><span data-stu-id="0b632-110">The common language runtime (CLR) cannot find the requested assembly.</span></span> <span data-ttu-id="0b632-111">Hay muchas razones por las que esto puede suceder, por ejemplo, que el ensamblado no esté instalado o que la aplicación no esté configurada correctamente para encontrar el ensamblado.</span><span class="sxs-lookup"><span data-stu-id="0b632-111">There are many reasons this can occur, such as the assembly not being installed or the application not being correctly configured to find the assembly.</span></span>  
   
--   Un problema habitual es cuando se pasa un tipo a otro dominio de aplicación, lo que exige que CLR cargue el ensamblado que contiene ese tipo en el otro dominio de aplicación. Es posible que el tiempo de ejecución no pueda cargar el ensamblado si el otro dominio de aplicación está configurado de forma diferente al dominio de aplicación original. Por ejemplo, los dos dominios de aplicación pueden tener diferentes valores de propiedad <xref:System.AppDomain.BaseDirectory%2A>.  
+-   <span data-ttu-id="0b632-112">Un problema habitual es cuando se pasa un tipo a otro dominio de aplicación, lo que exige que CLR cargue el ensamblado que contiene ese tipo en el otro dominio de aplicación.</span><span class="sxs-lookup"><span data-stu-id="0b632-112">A common problem scenario is passing a type to another application domain, which requires the CLR to load the assembly containing that type in the other application domain.</span></span> <span data-ttu-id="0b632-113">Es posible que el tiempo de ejecución no pueda cargar el ensamblado si el otro dominio de aplicación está configurado de forma diferente al dominio de aplicación original.</span><span class="sxs-lookup"><span data-stu-id="0b632-113">It may not be possible for the runtime to load the assembly if the other application domain is configured differently from the original application domain.</span></span> <span data-ttu-id="0b632-114">Por ejemplo, los dos dominios de aplicación pueden tener diferentes valores de propiedad <xref:System.AppDomain.BaseDirectory%2A>.</span><span class="sxs-lookup"><span data-stu-id="0b632-114">For example, the two application domains might have different <xref:System.AppDomain.BaseDirectory%2A> property values.</span></span>  
   
--   El ensamblado solicitado está dañado o no es un ensamblado.  
+-   <span data-ttu-id="0b632-115">El ensamblado solicitado está dañado o no es un ensamblado.</span><span class="sxs-lookup"><span data-stu-id="0b632-115">The requested assembly is corrupted or is not an assembly.</span></span>  
   
--   El código que intenta cargar el ensamblado no tiene los permisos de seguridad de acceso de código correctos para cargar ensamblados.  
+-   <span data-ttu-id="0b632-116">El código que intenta cargar el ensamblado no tiene los permisos de seguridad de acceso de código correctos para cargar ensamblados.</span><span class="sxs-lookup"><span data-stu-id="0b632-116">The code attempting to load the assembly does not have the correct code access security permissions to load assemblies.</span></span>  
   
--   Las credenciales de usuario no proporcionan los permisos necesarios para leer el archivo.  
+-   <span data-ttu-id="0b632-117">Las credenciales de usuario no proporcionan los permisos necesarios para leer el archivo.</span><span class="sxs-lookup"><span data-stu-id="0b632-117">The user credentials do not provide the required permissions to read the file.</span></span>  
   
-## <a name="resolution"></a>Resolución  
- El primer paso es determinar por qué CLR no ha podido enlazar con el ensamblado solicitado. Hay muchas razones por las que el tiempo de ejecución puede no haber encontrado o cargado el ensamblado solicitado, como los escenarios de la sección Causa. Para eliminar la causa del error de enlace, se recomiendan las siguientes acciones:  
+## <a name="resolution"></a><span data-ttu-id="0b632-118">Resolución</span><span class="sxs-lookup"><span data-stu-id="0b632-118">Resolution</span></span>  
+ <span data-ttu-id="0b632-119">El primer paso es determinar por qué CLR no ha podido enlazar con el ensamblado solicitado.</span><span class="sxs-lookup"><span data-stu-id="0b632-119">The first step is to determine why the CLR could not bind to the requested assembly.</span></span> <span data-ttu-id="0b632-120">Hay muchas razones por las que el tiempo de ejecución puede no haber encontrado o cargado el ensamblado solicitado, como los escenarios de la sección Causa.</span><span class="sxs-lookup"><span data-stu-id="0b632-120">There are many reasons why the runtime might not have found or been able load the requested assembly, such as the scenarios listed in the Cause section.</span></span> <span data-ttu-id="0b632-121">Para eliminar la causa del error de enlace, se recomiendan las siguientes acciones:</span><span class="sxs-lookup"><span data-stu-id="0b632-121">The following actions are recommended to eliminate the cause of the binding failure:</span></span>  
   
--   Determine la causa con los datos proporcionados por el MDA `bindingFailure`:  
+-   <span data-ttu-id="0b632-122">Determine la causa con los datos proporcionados por el MDA `bindingFailure`:</span><span class="sxs-lookup"><span data-stu-id="0b632-122">Determine the cause by using the data provided by the `bindingFailure` MDA:</span></span>  
   
-    -   Ejecute [Fuslogvw.exe (Visor de registro de enlaces de ensamblados)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md) para leer los registros de errores generados por el enlazador de ensamblados.  
+    -   <span data-ttu-id="0b632-123">Ejecute [Fuslogvw.exe (Visor de registro de enlaces de ensamblados)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md) para leer los registros de errores generados por el enlazador de ensamblados.</span><span class="sxs-lookup"><span data-stu-id="0b632-123">Run the [Fuslogvw.exe (Assembly Binding Log Viewer)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md) to read the error logs produced by the assembly binder.</span></span>  
   
-    -   Determine si el ensamblado se encuentra en la ubicación solicitada. En el caso de los métodos <xref:System.Reflection.Assembly.LoadFrom%2A> y <xref:System.Reflection.Assembly.LoadFile%2A>, la ubicación solicitada se puede determinar fácilmente. En el caso del método <xref:System.Reflection.Assembly.Load%2A>, que enlaza con la identidad del ensamblado, debe buscar ensamblados que coincidan con esa identidad en la ruta de acceso de sondeo de la propiedad <xref:System.AppDomain.BaseDirectory%2A> del dominio de aplicación y la memoria caché global de ensamblados.  
+    -   <span data-ttu-id="0b632-124">Determine si el ensamblado se encuentra en la ubicación solicitada.</span><span class="sxs-lookup"><span data-stu-id="0b632-124">Determine if the assembly is at the location requested.</span></span> <span data-ttu-id="0b632-125">En el caso de los métodos <xref:System.Reflection.Assembly.LoadFrom%2A> y <xref:System.Reflection.Assembly.LoadFile%2A>, la ubicación solicitada se puede determinar fácilmente.</span><span class="sxs-lookup"><span data-stu-id="0b632-125">In the case of the <xref:System.Reflection.Assembly.LoadFrom%2A> and <xref:System.Reflection.Assembly.LoadFile%2A> methods, the requested location can be easily determined.</span></span> <span data-ttu-id="0b632-126">En el caso del método <xref:System.Reflection.Assembly.Load%2A>, que enlaza con la identidad del ensamblado, debe buscar ensamblados que coincidan con esa identidad en la ruta de acceso de sondeo de la propiedad <xref:System.AppDomain.BaseDirectory%2A> del dominio de aplicación y la memoria caché global de ensamblados.</span><span class="sxs-lookup"><span data-stu-id="0b632-126">In the case of the <xref:System.Reflection.Assembly.Load%2A> method, which binds using the assembly identity, you must look for assemblies that match that identity in the application domain's <xref:System.AppDomain.BaseDirectory%2A> property probe path and the global assembly cache.</span></span>  
   
--   Resuelva la causa en función de la determinación anterior. Las opciones de resolución posibles son las siguientes:  
+-   <span data-ttu-id="0b632-127">Resuelva la causa en función de la determinación anterior.</span><span class="sxs-lookup"><span data-stu-id="0b632-127">Resolve the cause based on the preceding determination.</span></span> <span data-ttu-id="0b632-128">Las opciones de resolución posibles son las siguientes:</span><span class="sxs-lookup"><span data-stu-id="0b632-128">Possible resolution options are the following:</span></span>  
   
-    -   Instale el ensamblado solicitado en la caché global de ensamblados y llame al método <xref:System.Reflection.Assembly.Load%2A> para cargar el ensamblado por identidad.  
+    -   <span data-ttu-id="0b632-129">Instale el ensamblado solicitado en la caché global de ensamblados y llame al método</span><span class="sxs-lookup"><span data-stu-id="0b632-129">Install the requested assembly in the global assembly cache and call the.</span></span> <span data-ttu-id="0b632-130"><xref:System.Reflection.Assembly.Load%2A> para cargar el ensamblado por identidad.</span><span class="sxs-lookup"><span data-stu-id="0b632-130"><xref:System.Reflection.Assembly.Load%2A> method to load the assembly by identity.</span></span>  
   
-    -   Copie el ensamblado solicitado en el directorio de la aplicación y llame al método <xref:System.Reflection.Assembly.Load%2A> para cargar el ensamblado por identidad.  
+    -   <span data-ttu-id="0b632-131">Copie el ensamblado solicitado en el directorio de la aplicación y llame al método <xref:System.Reflection.Assembly.Load%2A> para cargar el ensamblado por identidad.</span><span class="sxs-lookup"><span data-stu-id="0b632-131">Copy the requested assembly into the application directory and call the <xref:System.Reflection.Assembly.Load%2A> method to load the assembly by identity.</span></span>  
   
-    -   Vuelva a configurar el dominio de aplicación en el que se produjo el error de enlace para que incluya la ruta de acceso del ensamblado al cambiar la propiedad <xref:System.AppDomain.BaseDirectory%2A> o agregar rutas de acceso de sondeo privadas.  
+    -   <span data-ttu-id="0b632-132">Vuelva a configurar el dominio de aplicación en el que se produjo el error de enlace para que incluya la ruta de acceso del ensamblado al cambiar la propiedad <xref:System.AppDomain.BaseDirectory%2A> o agregar rutas de acceso de sondeo privadas.</span><span class="sxs-lookup"><span data-stu-id="0b632-132">Reconfigure the application domain in which the binding failure occurred to include the assembly path by either changing the <xref:System.AppDomain.BaseDirectory%2A> property or adding private probing paths.</span></span>  
   
-    -   Cambie la lista de control de acceso del archivo para permitir que el usuario que ha iniciado sesión lea el archivo.  
+    -   <span data-ttu-id="0b632-133">Cambie la lista de control de acceso del archivo para permitir que el usuario que ha iniciado sesión lea el archivo.</span><span class="sxs-lookup"><span data-stu-id="0b632-133">Change the access control list for the file to allow the logged-on user to read the file.</span></span>  
   
-## <a name="effect-on-the-runtime"></a>Efecto en el Runtime  
- Este MDA no tiene ningún efecto en el CLR. Solo notifica datos sobre errores de enlace.  
+## <a name="effect-on-the-runtime"></a><span data-ttu-id="0b632-134">Efecto en el Runtime</span><span class="sxs-lookup"><span data-stu-id="0b632-134">Effect on the Runtime</span></span>  
+ <span data-ttu-id="0b632-135">Este MDA no tiene ningún efecto en el CLR.</span><span class="sxs-lookup"><span data-stu-id="0b632-135">This MDA has no effect on the CLR.</span></span> <span data-ttu-id="0b632-136">Solo notifica datos sobre errores de enlace.</span><span class="sxs-lookup"><span data-stu-id="0b632-136">It only reports data about binding failures.</span></span>  
   
-## <a name="output"></a>Resultado  
- El MDA notifica qué ensamblado no se ha podido cargar, incluida la ruta de acceso solicitada o el nombre para mostrar, el contexto de enlace, el dominio de aplicación en el que se ha solicitado la carga y el motivo del error.  
+## <a name="output"></a><span data-ttu-id="0b632-137">Resultado</span><span class="sxs-lookup"><span data-stu-id="0b632-137">Output</span></span>  
+ <span data-ttu-id="0b632-138">El MDA notifica qué ensamblado no se ha podido cargar, incluida la ruta de acceso solicitada o el nombre para mostrar, el contexto de enlace, el dominio de aplicación en el que se ha solicitado la carga y el motivo del error.</span><span class="sxs-lookup"><span data-stu-id="0b632-138">The MDA reports the assembly that failed to load, including the requested path and/or display name, the binding context, the application domain in which the load was requested, and the reason for the failure.</span></span>  
   
- El nombre para mostrar o la ruta de acceso solicitada pueden estar en blanco si estos datos no estaban a disposición de CLR. Si la llamada errónea era al método <xref:System.Reflection.Assembly.Load%2A>, es probable que el tiempo de ejecución no pudiera determinar el nombre para mostrar del ensamblado.  
+ <span data-ttu-id="0b632-139">El nombre para mostrar o la ruta de acceso solicitada pueden estar en blanco si estos datos no estaban a disposición de CLR.</span><span class="sxs-lookup"><span data-stu-id="0b632-139">The display name or requested path may be blank if that data was not available to the CLR.</span></span> <span data-ttu-id="0b632-140">Si la llamada errónea era al método <xref:System.Reflection.Assembly.Load%2A>, es probable que el tiempo de ejecución no pudiera determinar el nombre para mostrar del ensamblado.</span><span class="sxs-lookup"><span data-stu-id="0b632-140">If the call that failed was to the <xref:System.Reflection.Assembly.Load%2A> method, it is likely the runtime could not determine the display name for the assembly.</span></span>  
   
-## <a name="configuration"></a>Configuración  
+## <a name="configuration"></a><span data-ttu-id="0b632-141">Configuración</span><span class="sxs-lookup"><span data-stu-id="0b632-141">Configuration</span></span>  
   
 ```xml  
 <mdaConfig>  
@@ -89,8 +82,8 @@ El asistente para la depuración administrada (MDA) `bindingFailure` se activa c
 </mdaConfig>  
 ```  
   
-## <a name="example"></a>Ejemplo  
- En el ejemplo de código siguiente se muestra una situación que puede activar este MDA:  
+## <a name="example"></a><span data-ttu-id="0b632-142">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="0b632-142">Example</span></span>  
+ <span data-ttu-id="0b632-143">En el ejemplo de código siguiente se muestra una situación que puede activar este MDA:</span><span class="sxs-lookup"><span data-stu-id="0b632-143">The following code example demonstrates a situation that can activate this MDA:</span></span>  
   
 ```  
 using System;  
@@ -113,6 +106,5 @@ namespace ConsoleApplication1
 }  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Diagnosing Errors with Managed Debugging Assistants (Diagnóstico de errores con asistentes para la depuración administrada)](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-
+## <a name="see-also"></a><span data-ttu-id="0b632-144">Vea también</span><span class="sxs-lookup"><span data-stu-id="0b632-144">See Also</span></span>  
+ [<span data-ttu-id="0b632-145">Diagnosing Errors with Managed Debugging Assistants (Diagnóstico de errores con asistentes para la depuración administrada)</span><span class="sxs-lookup"><span data-stu-id="0b632-145">Diagnosing Errors with Managed Debugging Assistants</span></span>](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)

@@ -1,50 +1,54 @@
 ---
-title: "118 - WorkflowInstanceUnhandledExceptionRecordWithId | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 118 - WorkflowInstanceUnhandledExceptionRecordWithId
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 2ce4b193-e141-4cc4-86a3-2e8c984c110d
-caps.latest.revision: 4
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: a1c20182b5f53a188e95a31124e30f04418eb909
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# 118 - WorkflowInstanceUnhandledExceptionRecordWithId
-## Propiedades  
+# <a name="118---workflowinstanceunhandledexceptionrecordwithid"></a><span data-ttu-id="5287a-102">118 - WorkflowInstanceUnhandledExceptionRecordWithId</span><span class="sxs-lookup"><span data-stu-id="5287a-102">118 - WorkflowInstanceUnhandledExceptionRecordWithId</span></span>
+## <a name="properties"></a><span data-ttu-id="5287a-103">Propiedades</span><span class="sxs-lookup"><span data-stu-id="5287a-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|Id.|118|  
-|Palabras clave|HealthMonitoring, WFTracking|  
-|Nivel|Error|  
-|Canal|Microsoft\-Windows\-Application Server\-Applications\/Analytic|  
+|<span data-ttu-id="5287a-104">Id.</span><span class="sxs-lookup"><span data-stu-id="5287a-104">ID</span></span>|<span data-ttu-id="5287a-105">118</span><span class="sxs-lookup"><span data-stu-id="5287a-105">118</span></span>|  
+|<span data-ttu-id="5287a-106">Palabras clave</span><span class="sxs-lookup"><span data-stu-id="5287a-106">Keywords</span></span>|<span data-ttu-id="5287a-107">HealthMonitoring, WFTracking</span><span class="sxs-lookup"><span data-stu-id="5287a-107">HealthMonitoring, WFTracking</span></span>|  
+|<span data-ttu-id="5287a-108">Nivel</span><span class="sxs-lookup"><span data-stu-id="5287a-108">Level</span></span>|<span data-ttu-id="5287a-109">Error</span><span class="sxs-lookup"><span data-stu-id="5287a-109">Error</span></span>|  
+|<span data-ttu-id="5287a-110">Canal</span><span class="sxs-lookup"><span data-stu-id="5287a-110">Channel</span></span>|<span data-ttu-id="5287a-111">Microsoft-Windows-Application Server-Applications/Analytic</span><span class="sxs-lookup"><span data-stu-id="5287a-111">Microsoft-Windows-Application Server-Applications/Analytic</span></span>|  
   
-## Descripción  
- El participante de seguimiento de ETW emite este evento cuando una instancia de flujo de trabajo emite WorkflowInstanceUnhandledExceptionRecord.  
+## <a name="description"></a><span data-ttu-id="5287a-112">Descripción</span><span class="sxs-lookup"><span data-stu-id="5287a-112">Description</span></span>  
+ <span data-ttu-id="5287a-113">El participante de seguimiento de ETW emite este evento cuando una instancia de flujo de trabajo emite WorkflowInstanceUnhandledExceptionRecord.</span><span class="sxs-lookup"><span data-stu-id="5287a-113">This event is emitted by the ETW tracking participant when a workflow instance emits WorkflowInstanceUnhandledExceptionRecord.</span></span>  
   
-## Mensaje  
- TrackRecord \= WorkflowInstanceUnhandledExceptionRecord, InstanceID \= %1, RecordNumber \= %2, EventTime \= %3, ActivityDefinitionId \= %4, SourceName \= %5, SourceId \= %6, SourceInstanceId \= %7, SourceTypeName\=%8, Exception\=%9,  Annotations\= %10, ProfileName \= %11, WorkflowDefinitionIdentity \= %12  
+## <a name="message"></a><span data-ttu-id="5287a-114">Mensaje</span><span class="sxs-lookup"><span data-stu-id="5287a-114">Message</span></span>  
+ <span data-ttu-id="5287a-115">TrackRecord = WorkflowInstanceUnhandledExceptionRecord, InstanceID = %1, RecordNumber = %2, EventTime = %3, ActivityDefinitionId = %4, SourceName = %5, SourceId = %6, SourceInstanceId = %7, SourceTypeName = %8, excepción = %9, Annotations = % 10, ProfileName = % 11, WorkflowDefinitionIdentity = % 12</span><span class="sxs-lookup"><span data-stu-id="5287a-115">TrackRecord = WorkflowInstanceUnhandledExceptionRecord, InstanceID = %1, RecordNumber = %2, EventTime = %3, ActivityDefinitionId = %4, SourceName = %5, SourceId = %6, SourceInstanceId = %7, SourceTypeName=%8, Exception=%9,  Annotations= %10, ProfileName = %11, WorkflowDefinitionIdentity = %12</span></span>  
   
-## Detalles  
+## <a name="details"></a><span data-ttu-id="5287a-116">Detalles</span><span class="sxs-lookup"><span data-stu-id="5287a-116">Details</span></span>  
   
-|Nombre del elemento de datos|Tipo del elemento de datos|Descripción|  
-|----------------------------------|--------------------------------|-----------------|  
-|InstanceId|xs:GUID|El id. de instancia del flujo de trabajo.|  
-|RecordNumber|xs:long|El número de secuencia del registro emitido.|  
-|EventTime|xs:dateTime|La hora en UTC cuando se emitió el evento.|  
-|ActivityDefinitionId|xs:string|El nombre de la actividad raíz del flujo de trabajo.|  
-|SourceName|xs:string|El nombre de la actividad de origen con errores que dio como resultado unhandledException.|  
-|SourceId|xs:string|El id. de la actividad de origen con errores.|  
-|SourceInstanceId|xs:string|El id. de instancia de la actividad de origen con errores.|  
-|SourceTypeName|xs:string|El nombre del tipo de actividad de origen con errores que dio como resultado unhandledException.|  
-|Excepción|xs:string|La excepción de información sobre la excepción no controlada.|  
-|Estado|xs:string|El estado actual del flujo de trabajo.|  
-|Anotaciones|xs:string|Las anotaciones que se agregaron a este evento.  Los valores se almacenan en un elemento xml con el formato \<items\>\< item name \= "annotationName" type\="System.String"\>annotationValue\<\/item\>\<\/items\>.  Si no se especifica ninguna anotación, la cadena contendrá \<items\/\>.  El tamaño del evento ETW está limitado por el tamaño de búfer de ETW o la carga útil máxima para un evento ETW.  Si el tamaño del evento supera los límites de ETW, el evento se trunca quitando las anotaciones y reemplazando el valor de anotación por \<items\>...\<\/items\>.|  
-|ProfileName|xs:string|El nombre o el perfil de seguimiento que dio como resultado que se emitiera este evento.|  
-|WorkflowDefinitionIdentity|xs:string|Id. de definición de flujo de trabajo.|  
-|AppDomain|xs:string|La cadena devuelta por AppDomain.CurrentDomain.FriendlyName.|
+|<span data-ttu-id="5287a-117">Nombre del elemento de datos</span><span class="sxs-lookup"><span data-stu-id="5287a-117">Data Item Name</span></span>|<span data-ttu-id="5287a-118">Tipo del elemento de datos</span><span class="sxs-lookup"><span data-stu-id="5287a-118">Data Item Type</span></span>|<span data-ttu-id="5287a-119">Descripción</span><span class="sxs-lookup"><span data-stu-id="5287a-119">Description</span></span>|  
+|--------------------|--------------------|-----------------|  
+|<span data-ttu-id="5287a-120">InstanceId</span><span class="sxs-lookup"><span data-stu-id="5287a-120">InstanceId</span></span>|<span data-ttu-id="5287a-121">xs:GUID</span><span class="sxs-lookup"><span data-stu-id="5287a-121">xs:GUID</span></span>|<span data-ttu-id="5287a-122">El id. de instancia del flujo de trabajo.</span><span class="sxs-lookup"><span data-stu-id="5287a-122">The instance id for the workflow</span></span>|  
+|<span data-ttu-id="5287a-123">RecordNumber</span><span class="sxs-lookup"><span data-stu-id="5287a-123">RecordNumber</span></span>|<span data-ttu-id="5287a-124">xs:long</span><span class="sxs-lookup"><span data-stu-id="5287a-124">xs:long</span></span>|<span data-ttu-id="5287a-125">El número de secuencia del registro emitido.</span><span class="sxs-lookup"><span data-stu-id="5287a-125">The sequence number of the emitted record</span></span>|  
+|<span data-ttu-id="5287a-126">EventTime</span><span class="sxs-lookup"><span data-stu-id="5287a-126">EventTime</span></span>|<span data-ttu-id="5287a-127">xs:dateTime</span><span class="sxs-lookup"><span data-stu-id="5287a-127">xs:dateTime</span></span>|<span data-ttu-id="5287a-128">La hora en UTC cuando se emitió el evento.</span><span class="sxs-lookup"><span data-stu-id="5287a-128">The time in UTC when the event was emitted</span></span>|  
+|<span data-ttu-id="5287a-129">ActivityDefinitionId</span><span class="sxs-lookup"><span data-stu-id="5287a-129">ActivityDefinitionId</span></span>|<span data-ttu-id="5287a-130">xs:string</span><span class="sxs-lookup"><span data-stu-id="5287a-130">xs:string</span></span>|<span data-ttu-id="5287a-131">El nombre de la actividad raíz del flujo de trabajo.</span><span class="sxs-lookup"><span data-stu-id="5287a-131">The name of the root activity in the workflow</span></span>|  
+|<span data-ttu-id="5287a-132">SourceName</span><span class="sxs-lookup"><span data-stu-id="5287a-132">SourceName</span></span>|<span data-ttu-id="5287a-133">xs:string</span><span class="sxs-lookup"><span data-stu-id="5287a-133">xs:string</span></span>|<span data-ttu-id="5287a-134">El nombre de la actividad de origen con errores que dio como resultado unhandledException.</span><span class="sxs-lookup"><span data-stu-id="5287a-134">The source activity name that faulted resulting in the unhandledException</span></span>|  
+|<span data-ttu-id="5287a-135">SourceId</span><span class="sxs-lookup"><span data-stu-id="5287a-135">SourceId</span></span>|<span data-ttu-id="5287a-136">xs:string</span><span class="sxs-lookup"><span data-stu-id="5287a-136">xs:string</span></span>|<span data-ttu-id="5287a-137">El id. de la actividad de origen con errores.</span><span class="sxs-lookup"><span data-stu-id="5287a-137">The activity id of the fault source activity</span></span>|  
+|<span data-ttu-id="5287a-138">SourceInstanceId</span><span class="sxs-lookup"><span data-stu-id="5287a-138">SourceInstanceId</span></span>|<span data-ttu-id="5287a-139">xs:string</span><span class="sxs-lookup"><span data-stu-id="5287a-139">xs:string</span></span>|<span data-ttu-id="5287a-140">El id. de instancia de la actividad de origen con errores.</span><span class="sxs-lookup"><span data-stu-id="5287a-140">The activity instance id of the fault source activity</span></span>|  
+|<span data-ttu-id="5287a-141">SourceTypeName</span><span class="sxs-lookup"><span data-stu-id="5287a-141">SourceTypeName</span></span>|<span data-ttu-id="5287a-142">xs:string</span><span class="sxs-lookup"><span data-stu-id="5287a-142">xs:string</span></span>|<span data-ttu-id="5287a-143">El nombre del tipo de actividad de origen con errores que dio como resultado unhandledException.</span><span class="sxs-lookup"><span data-stu-id="5287a-143">The source activity type name that faulted resulting in the unhandledException</span></span>|  
+|<span data-ttu-id="5287a-144">Excepción</span><span class="sxs-lookup"><span data-stu-id="5287a-144">Exception</span></span>|<span data-ttu-id="5287a-145">xs:string</span><span class="sxs-lookup"><span data-stu-id="5287a-145">xs:string</span></span>|<span data-ttu-id="5287a-146">La excepción de información sobre la excepción no controlada.</span><span class="sxs-lookup"><span data-stu-id="5287a-146">The exception details for the unhandled exception</span></span>|  
+|<span data-ttu-id="5287a-147">Estado</span><span class="sxs-lookup"><span data-stu-id="5287a-147">State</span></span>|<span data-ttu-id="5287a-148">xs:string</span><span class="sxs-lookup"><span data-stu-id="5287a-148">xs:string</span></span>|<span data-ttu-id="5287a-149">El estado actual del flujo de trabajo.</span><span class="sxs-lookup"><span data-stu-id="5287a-149">The current state of the Workflow.</span></span>|  
+|<span data-ttu-id="5287a-150">Anotaciones</span><span class="sxs-lookup"><span data-stu-id="5287a-150">Annotations</span></span>|<span data-ttu-id="5287a-151">xs:string</span><span class="sxs-lookup"><span data-stu-id="5287a-151">xs:string</span></span>|<span data-ttu-id="5287a-152">Las anotaciones que se agregaron a este evento.</span><span class="sxs-lookup"><span data-stu-id="5287a-152">The annotations that were added to this event.</span></span> <span data-ttu-id="5287a-153">Los valores se almacenan en un elemento xml con el formato \<elementos >\< nombre de elemento = "annotationName" Type = "> annotationValue\</artículo > \< /artículos >.</span><span class="sxs-lookup"><span data-stu-id="5287a-153">The values are stored in an xml element in the format \<items>\< item name = "annotationName" type="System.String">annotationValue\</item>\</items>.</span></span> <span data-ttu-id="5287a-154">Si se especifica ninguna anotación, a continuación, la cadena contiene \<elementos / >.</span><span class="sxs-lookup"><span data-stu-id="5287a-154">If no annotations are specified then the string contains \<items/>.</span></span> <span data-ttu-id="5287a-155">El tamaño del evento ETW está limitado por el tamaño de búfer de ETW o la carga útil máxima para un evento ETW.</span><span class="sxs-lookup"><span data-stu-id="5287a-155">The ETW event size is limited by the ETW buffer size or the max payload for an ETW event.</span></span> <span data-ttu-id="5287a-156">Si el tamaño del evento supera los límites de ETW, el evento se trunca quitando las anotaciones y reemplazando el valor de anotación con \<elementos >...  \< /artículos >.</span><span class="sxs-lookup"><span data-stu-id="5287a-156">If the size of the event exceeds the ETW limits, then the event is truncated by dropping the annotations and replacing the annotation value with \<items>...\</items>.</span></span>|  
+|<span data-ttu-id="5287a-157">ProfileName</span><span class="sxs-lookup"><span data-stu-id="5287a-157">ProfileName</span></span>|<span data-ttu-id="5287a-158">xs:string</span><span class="sxs-lookup"><span data-stu-id="5287a-158">xs:string</span></span>|<span data-ttu-id="5287a-159">El nombre o el perfil de seguimiento que dio como resultado que se emitiera este evento.</span><span class="sxs-lookup"><span data-stu-id="5287a-159">The name or the tracking profile that resulted in this event being emitted</span></span>|  
+|<span data-ttu-id="5287a-160">WorkflowDefinitionIdentity</span><span class="sxs-lookup"><span data-stu-id="5287a-160">WorkflowDefinitionIdentity</span></span>|<span data-ttu-id="5287a-161">xs:string</span><span class="sxs-lookup"><span data-stu-id="5287a-161">xs:string</span></span>|<span data-ttu-id="5287a-162">Id. de definición de flujo de trabajo.</span><span class="sxs-lookup"><span data-stu-id="5287a-162">The workflow definition id</span></span>|  
+|<span data-ttu-id="5287a-163">AppDomain</span><span class="sxs-lookup"><span data-stu-id="5287a-163">AppDomain</span></span>|<span data-ttu-id="5287a-164">xs:string</span><span class="sxs-lookup"><span data-stu-id="5287a-164">xs:string</span></span>|<span data-ttu-id="5287a-165">La cadena devuelta por AppDomain.CurrentDomain.FriendlyName.</span><span class="sxs-lookup"><span data-stu-id="5287a-165">The string returned by AppDomain.CurrentDomain.FriendlyName.</span></span>|

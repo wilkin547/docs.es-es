@@ -1,193 +1,174 @@
 ---
 title: Manipular archivos y directorios en Visual Basic
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
-- files, reading text
-- reading files, text
+- files [Visual Basic], reading text
+- reading files [Visual Basic], text
 - I/O [Visual Basic], walkthroughs
 - text, writing to files
 - text, reading from files
-- reading text from files, walkthroughs
+- reading text from files [Visual Basic], walkthroughs
 - Visual Basic code, file access
-- files, writing text
+- files [Visual Basic], writing text
 - I/O [Visual Basic], writing text to files
 - file access, walkthroughs
-- writing to files, walkthroughs
+- writing to files [Visual Basic], walkthroughs
 - I/O [Visual Basic], reading text from files
 ms.assetid: cae77565-9f78-4e46-8e42-eb2f9f8e1ffd
-caps.latest.revision: 49
+caps.latest.revision: "49"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: bd1e61503394741e7943d30d383f2e7c5ea35f68
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 9e66d062df07fc23dfbd5d509e08ccd08813db15
-ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="walkthrough-manipulating-files-and-directories-in-visual-basic"></a>Tutorial: Manipular archivos y directorios en Visual Basic
-En este tutorial se ofrece una introducción a los conceptos básicos de E/S de archivos en [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. En él se describe cómo crear una pequeña aplicación que enumera y examina archivos de texto en un directorio. Para cada archivo de texto seleccionado, la aplicación proporciona atributos de archivo y la primera línea de contenido. Existe una opción para escribir información en un archivo de registro.  
+# <a name="walkthrough-manipulating-files-and-directories-in-visual-basic"></a><span data-ttu-id="6d9b2-102">Tutorial: Manipular archivos y directorios en Visual Basic</span><span class="sxs-lookup"><span data-stu-id="6d9b2-102">Walkthrough: Manipulating Files and Directories in Visual Basic</span></span>
+<span data-ttu-id="6d9b2-103">En este tutorial se ofrece una introducción a los conceptos básicos de E/S de archivos en [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].</span><span class="sxs-lookup"><span data-stu-id="6d9b2-103">This walkthrough provides an introduction to the fundamentals of file I/O in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].</span></span> <span data-ttu-id="6d9b2-104">En él se describe cómo crear una pequeña aplicación que enumera y examina archivos de texto en un directorio.</span><span class="sxs-lookup"><span data-stu-id="6d9b2-104">It describes how to create a small application that lists and examines text files in a directory.</span></span> <span data-ttu-id="6d9b2-105">Para cada archivo de texto seleccionado, la aplicación proporciona atributos de archivo y la primera línea de contenido.</span><span class="sxs-lookup"><span data-stu-id="6d9b2-105">For each selected text file, the application provides file attributes and the first line of content.</span></span> <span data-ttu-id="6d9b2-106">Existe una opción para escribir información en un archivo de registro.</span><span class="sxs-lookup"><span data-stu-id="6d9b2-106">There is an option to write information to a log file.</span></span>  
   
- En este tutorial se usan los miembros del objeto `My.Computer.FileSystem Object`, que están disponibles en [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. Vea <xref:Microsoft.VisualBasic.FileIO.FileSystem> para obtener más información. Al final del tutorial, se incluye un ejemplo equivalente que usa clases del espacio de nombres <xref:System.IO>.  
+ <span data-ttu-id="6d9b2-107">En este tutorial se usan los miembros del objeto `My.Computer.FileSystem Object`, que están disponibles en [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].</span><span class="sxs-lookup"><span data-stu-id="6d9b2-107">This walkthrough uses members of the `My.Computer.FileSystem Object`, which are available in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].</span></span> <span data-ttu-id="6d9b2-108">Vea <xref:Microsoft.VisualBasic.FileIO.FileSystem> para obtener más información.</span><span class="sxs-lookup"><span data-stu-id="6d9b2-108">See <xref:Microsoft.VisualBasic.FileIO.FileSystem> for more information.</span></span> <span data-ttu-id="6d9b2-109">Al final del tutorial, se incluye un ejemplo equivalente que usa clases del espacio de nombres <xref:System.IO>.</span><span class="sxs-lookup"><span data-stu-id="6d9b2-109">At the end of the walkthrough, an equivalent example is provided that uses classes from the <xref:System.IO> namespace.</span></span>  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
-### <a name="to-create-the-project"></a>Para crear el proyecto  
+### <a name="to-create-the-project"></a><span data-ttu-id="6d9b2-110">Para crear el proyecto</span><span class="sxs-lookup"><span data-stu-id="6d9b2-110">To create the project</span></span>  
   
-1.  En el menú **Archivo**, haga clic en **Nuevo proyecto**.  
+1.  <span data-ttu-id="6d9b2-111">En el menú **Archivo**, haga clic en **Nuevo proyecto**.</span><span class="sxs-lookup"><span data-stu-id="6d9b2-111">On the **File** menu, click **New Project**.</span></span>  
   
-     Aparecerá el cuadro de diálogo **Nuevo proyecto** .  
+     <span data-ttu-id="6d9b2-112">Aparecerá el cuadro de diálogo **Nuevo proyecto** .</span><span class="sxs-lookup"><span data-stu-id="6d9b2-112">The **New Project** dialog box appears.</span></span>  
   
-2.  En el panel **Plantillas instaladas**, expanda **Visual Basic** y haga clic en **Windows**. En el panel **Plantillas** situado en el medio, haga clic en **Aplicación de Windows Forms**.  
+2.  <span data-ttu-id="6d9b2-113">En el panel **Plantillas instaladas**, expanda **Visual Basic** y haga clic en **Windows**.</span><span class="sxs-lookup"><span data-stu-id="6d9b2-113">In the **Installed Templates** pane, expand **Visual Basic**, and then click **Windows**.</span></span> <span data-ttu-id="6d9b2-114">En el panel **Plantillas** situado en el medio, haga clic en **Aplicación de Windows Forms**.</span><span class="sxs-lookup"><span data-stu-id="6d9b2-114">In the **Templates** pane in the middle, click **Windows Forms Application**.</span></span>  
   
-3.  En la casilla **Nombre**, escriba `FileExplorer` para establecer el nombre del proyecto y, luego, haga clic en **Aceptar**.  
+3.  <span data-ttu-id="6d9b2-115">En la casilla **Nombre**, escriba `FileExplorer` para establecer el nombre del proyecto y, luego, haga clic en **Aceptar**.</span><span class="sxs-lookup"><span data-stu-id="6d9b2-115">In the **Name** box, type `FileExplorer` to set the project name, and then click **OK**.</span></span>  
   
-     [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] agrega el proyecto al **Explorador de soluciones** y se abre el Diseñador de Windows Forms.  
+     [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]<span data-ttu-id="6d9b2-116"> agrega el proyecto al **Explorador de soluciones** y se abre el Diseñador de Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="6d9b2-116"> adds the project to **Solution Explorer**, and the Windows Forms Designer opens.</span></span>  
   
-4.  Agregue los controles de la siguiente tabla al formulario y establezca los valores correspondientes para sus propiedades.  
+4.  <span data-ttu-id="6d9b2-117">Agregue los controles de la siguiente tabla al formulario y establezca los valores correspondientes para sus propiedades.</span><span class="sxs-lookup"><span data-stu-id="6d9b2-117">Add the controls in the following table to the form, and set the corresponding values for their properties.</span></span>  
   
-    |Control|Propiedad|Valor|  
+    |<span data-ttu-id="6d9b2-118">Control</span><span class="sxs-lookup"><span data-stu-id="6d9b2-118">Control</span></span>|<span data-ttu-id="6d9b2-119">Propiedad</span><span class="sxs-lookup"><span data-stu-id="6d9b2-119">Property</span></span>|<span data-ttu-id="6d9b2-120">Valor</span><span class="sxs-lookup"><span data-stu-id="6d9b2-120">Value</span></span>|  
     |-------------|--------------|-----------|  
-    |**ListBox**|**Nombre**|`filesListBox`|  
-    |**Button**|**Nombre**<br /><br /> **Text**|`browseButton`<br /><br /> **Examinar**|  
-    |**Button**|**Nombre**<br /><br /> **Text**|`examineButton`<br /><br /> **Examine** (Examinar)|  
-    |**CheckBox**|**Nombre**<br /><br /> **Text**|`saveCheckBox`<br /><br /> **Guardar resultados**|  
-    |**FolderBrowserDialog**|**Nombre**|`FolderBrowserDialog1`|  
+    |<span data-ttu-id="6d9b2-121">**ListBox**</span><span class="sxs-lookup"><span data-stu-id="6d9b2-121">**ListBox**</span></span>|<span data-ttu-id="6d9b2-122">**Nombre**</span><span class="sxs-lookup"><span data-stu-id="6d9b2-122">**Name**</span></span>|`filesListBox`|  
+    |<span data-ttu-id="6d9b2-123">**Button**</span><span class="sxs-lookup"><span data-stu-id="6d9b2-123">**Button**</span></span>|<span data-ttu-id="6d9b2-124">**Nombre**</span><span class="sxs-lookup"><span data-stu-id="6d9b2-124">**Name**</span></span><br /><br /> <span data-ttu-id="6d9b2-125">**Text**</span><span class="sxs-lookup"><span data-stu-id="6d9b2-125">**Text**</span></span>|`browseButton`<br /><br /> <span data-ttu-id="6d9b2-126">**Examinar**</span><span class="sxs-lookup"><span data-stu-id="6d9b2-126">**Browse**</span></span>|  
+    |<span data-ttu-id="6d9b2-127">**Button**</span><span class="sxs-lookup"><span data-stu-id="6d9b2-127">**Button**</span></span>|<span data-ttu-id="6d9b2-128">**Nombre**</span><span class="sxs-lookup"><span data-stu-id="6d9b2-128">**Name**</span></span><br /><br /> <span data-ttu-id="6d9b2-129">**Text**</span><span class="sxs-lookup"><span data-stu-id="6d9b2-129">**Text**</span></span>|`examineButton`<br /><br /> <span data-ttu-id="6d9b2-130">**Examine** (Examinar)</span><span class="sxs-lookup"><span data-stu-id="6d9b2-130">**Examine**</span></span>|  
+    |<span data-ttu-id="6d9b2-131">**CheckBox**</span><span class="sxs-lookup"><span data-stu-id="6d9b2-131">**CheckBox**</span></span>|<span data-ttu-id="6d9b2-132">**Nombre**</span><span class="sxs-lookup"><span data-stu-id="6d9b2-132">**Name**</span></span><br /><br /> <span data-ttu-id="6d9b2-133">**Text**</span><span class="sxs-lookup"><span data-stu-id="6d9b2-133">**Text**</span></span>|`saveCheckBox`<br /><br /> <span data-ttu-id="6d9b2-134">**Guardar resultados**</span><span class="sxs-lookup"><span data-stu-id="6d9b2-134">**Save Results**</span></span>|  
+    |<span data-ttu-id="6d9b2-135">**FolderBrowserDialog**</span><span class="sxs-lookup"><span data-stu-id="6d9b2-135">**FolderBrowserDialog**</span></span>|<span data-ttu-id="6d9b2-136">**Nombre**</span><span class="sxs-lookup"><span data-stu-id="6d9b2-136">**Name**</span></span>|`FolderBrowserDialog1`|  
   
-### <a name="to-select-a-folder-and-list-files-in-a-folder"></a>Para seleccionar una carpeta y enumerar archivos en una carpeta  
+### <a name="to-select-a-folder-and-list-files-in-a-folder"></a><span data-ttu-id="6d9b2-137">Para seleccionar una carpeta y enumerar archivos en una carpeta</span><span class="sxs-lookup"><span data-stu-id="6d9b2-137">To select a folder, and list files in a folder</span></span>  
   
-1.  Cree un controlador de eventos `Click` para `browseButton` haciendo doble clic en el control del formulario. Se abrirá el Editor de código.  
+1.  <span data-ttu-id="6d9b2-138">Cree un controlador de eventos `Click` para `browseButton` haciendo doble clic en el control del formulario.</span><span class="sxs-lookup"><span data-stu-id="6d9b2-138">Create a `Click` event handler for `browseButton` by double-clicking the control on the form.</span></span> <span data-ttu-id="6d9b2-139">Se abrirá el Editor de código.</span><span class="sxs-lookup"><span data-stu-id="6d9b2-139">The Code Editor opens.</span></span>  
   
-2.  Agregue el código siguiente al controlador de eventos `Click`.  
+2.  <span data-ttu-id="6d9b2-140">Agregue el código siguiente al controlador de eventos `Click`.</span><span class="sxs-lookup"><span data-stu-id="6d9b2-140">Add the following code to the `Click` event handler.</span></span>  
   
      [!code-vb[VbVbcnMyFileSystem#103](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_1.vb)]  
   
-     La llamada `FolderBrowserDialog1.ShowDialog` abre el cuadro de diálogo **Buscar carpeta**. Después de que el usuario hace clic en **Aceptar**, la propiedad <xref:System.Windows.Forms.FolderBrowserDialog.SelectedPath%2A> se envía como un argumento al método `ListFiles`, que se agrega en el paso siguiente.  
+     <span data-ttu-id="6d9b2-141">La llamada `FolderBrowserDialog1.ShowDialog` abre el cuadro de diálogo **Buscar carpeta**.</span><span class="sxs-lookup"><span data-stu-id="6d9b2-141">The `FolderBrowserDialog1.ShowDialog` call opens the **Browse For Folder** dialog box.</span></span> <span data-ttu-id="6d9b2-142">Después de que el usuario hace clic en **Aceptar**, la propiedad <xref:System.Windows.Forms.FolderBrowserDialog.SelectedPath%2A> se envía como un argumento al método `ListFiles`, que se agrega en el paso siguiente.</span><span class="sxs-lookup"><span data-stu-id="6d9b2-142">After the user clicks **OK**, the <xref:System.Windows.Forms.FolderBrowserDialog.SelectedPath%2A> property is sent as an argument to the `ListFiles` method, which is added in the next step.</span></span>  
   
-3.  Agregue el siguiente método `ListFiles`.  
+3.  <span data-ttu-id="6d9b2-143">Agregue el siguiente método `ListFiles`.</span><span class="sxs-lookup"><span data-stu-id="6d9b2-143">Add the following `ListFiles` method.</span></span>  
   
      [!code-vb[VbVbcnMyFileSystem#104](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_2.vb)]  
   
-     Este código primero elimina el elemento **ListBox**.  
+     <span data-ttu-id="6d9b2-144">Este código primero elimina el elemento **ListBox**.</span><span class="sxs-lookup"><span data-stu-id="6d9b2-144">This code first clears the **ListBox**.</span></span>  
   
-     El método <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFiles%2A> recupera entonces una colección de cadenas, una para cada archivo del directorio. El método `GetFiles` acepta un argumento de patrón de búsqueda para recuperar los archivos que coinciden con un patrón determinado. En este ejemplo, se devuelven solo los archivos que tengan la extensión .txt.  
+     <span data-ttu-id="6d9b2-145">El método <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFiles%2A> recupera entonces una colección de cadenas, una para cada archivo del directorio.</span><span class="sxs-lookup"><span data-stu-id="6d9b2-145">The <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFiles%2A> method then retrieves a collection of strings, one for each file in the directory.</span></span> <span data-ttu-id="6d9b2-146">El método `GetFiles` acepta un argumento de patrón de búsqueda para recuperar los archivos que coinciden con un patrón determinado.</span><span class="sxs-lookup"><span data-stu-id="6d9b2-146">The `GetFiles` method accepts a search pattern argument to retrieve files that match a particular pattern.</span></span> <span data-ttu-id="6d9b2-147">En este ejemplo, se devuelven solo los archivos que tengan la extensión .txt.</span><span class="sxs-lookup"><span data-stu-id="6d9b2-147">In this example, only files that have the extension .txt are returned.</span></span>  
   
-     Las cadenas devueltas por el método `GetFiles` se agregan luego al elemento **ListBox**.  
+     <span data-ttu-id="6d9b2-148">Las cadenas devueltas por el método `GetFiles` se agregan luego al elemento **ListBox**.</span><span class="sxs-lookup"><span data-stu-id="6d9b2-148">The strings that are returned by the `GetFiles` method are then added to the **ListBox**.</span></span>  
   
-4.  Ejecute la aplicación. Haga clic en el botón **Examinar**. En el cuadro de diálogo **Buscar carpeta**, busque una carpeta que contenga archivos .txt y, luego, selecciónela y haga clic en **Aceptar**.  
+4.  <span data-ttu-id="6d9b2-149">Ejecute la aplicación.</span><span class="sxs-lookup"><span data-stu-id="6d9b2-149">Run the application.</span></span> <span data-ttu-id="6d9b2-150">Haga clic en el botón **Examinar**.</span><span class="sxs-lookup"><span data-stu-id="6d9b2-150">Click the **Browse** button.</span></span> <span data-ttu-id="6d9b2-151">En el cuadro de diálogo **Buscar carpeta**, busque una carpeta que contenga archivos .txt y, luego, selecciónela y haga clic en **Aceptar**.</span><span class="sxs-lookup"><span data-stu-id="6d9b2-151">In the **Browse For Folder** dialog box, browse to a folder that contains .txt files, and then select the folder and click **OK**.</span></span>  
   
-     El elemento `ListBox` contiene una lista de archivos .txt de la carpeta seleccionada.  
+     <span data-ttu-id="6d9b2-152">El elemento `ListBox` contiene una lista de archivos .txt de la carpeta seleccionada.</span><span class="sxs-lookup"><span data-stu-id="6d9b2-152">The `ListBox` contains a list of .txt files in the selected folder.</span></span>  
   
-5.  Deje de ejecutar la aplicación.  
+5.  <span data-ttu-id="6d9b2-153">Deje de ejecutar la aplicación.</span><span class="sxs-lookup"><span data-stu-id="6d9b2-153">Stop running the application.</span></span>  
   
-### <a name="to-obtain-attributes-of-a-file-and-content-from-a-text-file"></a>Para obtener los atributos de un archivo y contenido de un archivo de texto  
+### <a name="to-obtain-attributes-of-a-file-and-content-from-a-text-file"></a><span data-ttu-id="6d9b2-154">Para obtener los atributos de un archivo y contenido de un archivo de texto</span><span class="sxs-lookup"><span data-stu-id="6d9b2-154">To obtain attributes of a file, and content from a text file</span></span>  
   
-1.  Cree un controlador de eventos `Click` para `examineButton` haciendo doble clic en el control del formulario.  
+1.  <span data-ttu-id="6d9b2-155">Cree un controlador de eventos `Click` para `examineButton` haciendo doble clic en el control del formulario.</span><span class="sxs-lookup"><span data-stu-id="6d9b2-155">Create a `Click` event handler for `examineButton` by double-clicking the control on the form.</span></span>  
   
-2.  Agregue el código siguiente al controlador de eventos `Click`.  
+2.  <span data-ttu-id="6d9b2-156">Agregue el código siguiente al controlador de eventos `Click`.</span><span class="sxs-lookup"><span data-stu-id="6d9b2-156">Add the following code to the `Click` event handler.</span></span>  
   
      [!code-vb[VbVbcnMyFileSystem#105](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_3.vb)]  
   
-     El código comprueba que hay un elemento seleccionado en `ListBox`. Después, obtiene la entrada de ruta de archivo de `ListBox`. El método <xref:Microsoft.VisualBasic.FileIO.FileSystem.FileExists%2A> se usa para comprobar si el archivo todavía existe.  
+     <span data-ttu-id="6d9b2-157">El código comprueba que hay un elemento seleccionado en `ListBox`.</span><span class="sxs-lookup"><span data-stu-id="6d9b2-157">The code verifies that an item is selected in the `ListBox`.</span></span> <span data-ttu-id="6d9b2-158">Después, obtiene la entrada de ruta de archivo de `ListBox`.</span><span class="sxs-lookup"><span data-stu-id="6d9b2-158">It then obtains the file path entry from the `ListBox`.</span></span> <span data-ttu-id="6d9b2-159">El método <xref:Microsoft.VisualBasic.FileIO.FileSystem.FileExists%2A> se usa para comprobar si el archivo todavía existe.</span><span class="sxs-lookup"><span data-stu-id="6d9b2-159">The <xref:Microsoft.VisualBasic.FileIO.FileSystem.FileExists%2A> method is used to check whether the file still exists.</span></span>  
   
-     La ruta del archivo se envía como argumento al método `GetTextForOutput`, que se agrega en el paso siguiente. Este método devuelve una cadena que contiene información del archivo. La información del archivo aparece en un elemento **MessageBox**.  
+     <span data-ttu-id="6d9b2-160">La ruta del archivo se envía como argumento al método `GetTextForOutput`, que se agrega en el paso siguiente.</span><span class="sxs-lookup"><span data-stu-id="6d9b2-160">The file path is sent as an argument to the `GetTextForOutput` method, which is added in the next step.</span></span> <span data-ttu-id="6d9b2-161">Este método devuelve una cadena que contiene información del archivo.</span><span class="sxs-lookup"><span data-stu-id="6d9b2-161">This method returns a string that contains file information.</span></span> <span data-ttu-id="6d9b2-162">La información del archivo aparece en un elemento **MessageBox**.</span><span class="sxs-lookup"><span data-stu-id="6d9b2-162">The file information appears in a **MessageBox**.</span></span>  
   
-3.  Agregue el siguiente método `GetTextForOutput`.  
+3.  <span data-ttu-id="6d9b2-163">Agregue el siguiente método `GetTextForOutput`.</span><span class="sxs-lookup"><span data-stu-id="6d9b2-163">Add the following `GetTextForOutput` method.</span></span>  
   
      [!code-vb[VbVbcnMyFileSystem#107](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_4.vb)]  
   
-     El código usa el método <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFileInfo%2A> para obtener los parámetros del archivo. Los parámetros del archivo se agregan a <xref:System.Text.StringBuilder>.  
+     <span data-ttu-id="6d9b2-164">El código usa el método <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFileInfo%2A> para obtener los parámetros del archivo.</span><span class="sxs-lookup"><span data-stu-id="6d9b2-164">The code uses the <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFileInfo%2A> method to obtain file parameters.</span></span> <span data-ttu-id="6d9b2-165">Los parámetros del archivo se agregan a <xref:System.Text.StringBuilder>.</span><span class="sxs-lookup"><span data-stu-id="6d9b2-165">The file parameters are added to a <xref:System.Text.StringBuilder>.</span></span>  
   
-     El método <xref:Microsoft.VisualBasic.FileIO.FileSystem.OpenTextFileReader%2A> lee el contenido del archivo en <xref:System.IO.StreamReader>. La primera línea del contenido se obtiene de `StreamReader` y se agrega a `StringBuilder`.  
+     <span data-ttu-id="6d9b2-166">El método <xref:Microsoft.VisualBasic.FileIO.FileSystem.OpenTextFileReader%2A> lee el contenido del archivo en <xref:System.IO.StreamReader>.</span><span class="sxs-lookup"><span data-stu-id="6d9b2-166">The <xref:Microsoft.VisualBasic.FileIO.FileSystem.OpenTextFileReader%2A> method reads the file contents into a <xref:System.IO.StreamReader>.</span></span> <span data-ttu-id="6d9b2-167">La primera línea del contenido se obtiene de `StreamReader` y se agrega a `StringBuilder`.</span><span class="sxs-lookup"><span data-stu-id="6d9b2-167">The first line of the contents is obtained from the `StreamReader` and is added to the `StringBuilder`.</span></span>  
   
-4.  Ejecute la aplicación. Haga clic en **Examinar** y busque una carpeta que contenga archivos .txt. Haga clic en **Aceptar**.  
+4.  <span data-ttu-id="6d9b2-168">Ejecute la aplicación.</span><span class="sxs-lookup"><span data-stu-id="6d9b2-168">Run the application.</span></span> <span data-ttu-id="6d9b2-169">Haga clic en **Examinar** y busque una carpeta que contenga archivos .txt.</span><span class="sxs-lookup"><span data-stu-id="6d9b2-169">Click **Browse**, and browse to a folder that contains .txt files.</span></span> <span data-ttu-id="6d9b2-170">Haga clic en **Aceptar**.</span><span class="sxs-lookup"><span data-stu-id="6d9b2-170">Click **OK**.</span></span>  
   
-     Seleccione un archivo en `ListBox` y, luego, haga clic en **Examine** (Examinar). La información del archivo se muestra en un `MessageBox`.  
+     <span data-ttu-id="6d9b2-171">Seleccione un archivo en `ListBox` y, luego, haga clic en **Examine** (Examinar).</span><span class="sxs-lookup"><span data-stu-id="6d9b2-171">Select a file in the `ListBox`, and then click **Examine**.</span></span> <span data-ttu-id="6d9b2-172">La información del archivo se muestra en un `MessageBox`.</span><span class="sxs-lookup"><span data-stu-id="6d9b2-172">A `MessageBox` shows the file information.</span></span>  
   
-5.  Deje de ejecutar la aplicación.  
+5.  <span data-ttu-id="6d9b2-173">Deje de ejecutar la aplicación.</span><span class="sxs-lookup"><span data-stu-id="6d9b2-173">Stop running the application.</span></span>  
   
-### <a name="to-add-a-log-entry"></a>Para agregar una entrada de registro  
+### <a name="to-add-a-log-entry"></a><span data-ttu-id="6d9b2-174">Para agregar una entrada de registro</span><span class="sxs-lookup"><span data-stu-id="6d9b2-174">To add a log entry</span></span>  
   
-1.  Agregue el siguiente código al final del controlador de eventos `examineButton_Click`.  
+1.  <span data-ttu-id="6d9b2-175">Agregue el siguiente código al final del controlador de eventos `examineButton_Click`.</span><span class="sxs-lookup"><span data-stu-id="6d9b2-175">Add the following code to the end of the `examineButton_Click` event handler.</span></span>  
   
      [!code-vb[VbVbcnMyFileSystem#106](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_5.vb)]  
   
-     El código establece la ruta del archivo de registro para colocarlo en el mismo directorio que el archivo seleccionado. El texto de la entrada de registro se establece en la fecha y hora actuales, seguido de la información del archivo.  
+     <span data-ttu-id="6d9b2-176">El código establece la ruta del archivo de registro para colocarlo en el mismo directorio que el archivo seleccionado.</span><span class="sxs-lookup"><span data-stu-id="6d9b2-176">The code sets the log file path to put the log file in the same directory as that of the selected file.</span></span> <span data-ttu-id="6d9b2-177">El texto de la entrada de registro se establece en la fecha y hora actuales, seguido de la información del archivo.</span><span class="sxs-lookup"><span data-stu-id="6d9b2-177">The text of the log entry is set to the current date and time followed by the file information.</span></span>  
   
-     El método <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A>, con el argumento `append` establecido en `True`, se usa para crear la entrada de registro.  
+     <span data-ttu-id="6d9b2-178">El método <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A>, con el argumento `append` establecido en `True`, se usa para crear la entrada de registro.</span><span class="sxs-lookup"><span data-stu-id="6d9b2-178">The <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A> method, with the `append` argument set to `True`, is used to create the log entry.</span></span>  
   
-2.  Ejecute la aplicación. Busque un archivo de texto, selecciónelo en `ListBox`, seleccione la casilla **Guardar resultados** y, luego, haga clic en **Examine** (Examinar). Compruebe que la entrada de registro se ha escrito en el archivo `log.txt`.  
+2.  <span data-ttu-id="6d9b2-179">Ejecute la aplicación.</span><span class="sxs-lookup"><span data-stu-id="6d9b2-179">Run the application.</span></span> <span data-ttu-id="6d9b2-180">Busque un archivo de texto, selecciónelo en `ListBox`, seleccione la casilla **Guardar resultados** y, luego, haga clic en **Examine** (Examinar).</span><span class="sxs-lookup"><span data-stu-id="6d9b2-180">Browse to a text file, select it in the `ListBox`, select the **Save Results** check box, and then click **Examine**.</span></span> <span data-ttu-id="6d9b2-181">Compruebe que la entrada de registro se ha escrito en el archivo `log.txt`.</span><span class="sxs-lookup"><span data-stu-id="6d9b2-181">Verify that the log entry is written to the `log.txt` file.</span></span>  
   
-3.  Deje de ejecutar la aplicación.  
+3.  <span data-ttu-id="6d9b2-182">Deje de ejecutar la aplicación.</span><span class="sxs-lookup"><span data-stu-id="6d9b2-182">Stop running the application.</span></span>  
   
-### <a name="to-use-the-current-directory"></a>Para usar el directorio actual  
+### <a name="to-use-the-current-directory"></a><span data-ttu-id="6d9b2-183">Para usar el directorio actual</span><span class="sxs-lookup"><span data-stu-id="6d9b2-183">To use the current directory</span></span>  
   
-1.  Cree un controlador de eventos para `Form1_Load` haciendo doble clic en el formulario.  
+1.  <span data-ttu-id="6d9b2-184">Cree un controlador de eventos para `Form1_Load` haciendo doble clic en el formulario.</span><span class="sxs-lookup"><span data-stu-id="6d9b2-184">Create an event handler for `Form1_Load` by double-clicking the form.</span></span>  
   
-2.  Agregue el siguiente código al controlador de eventos.  
+2.  <span data-ttu-id="6d9b2-185">Agregue el siguiente código al controlador de eventos.</span><span class="sxs-lookup"><span data-stu-id="6d9b2-185">Add the following code to the event handler.</span></span>  
   
      [!code-vb[VbVbcnMyFileSystem#102](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_6.vb)]  
   
-     Este código establece el directorio predeterminado del explorador de carpetas en el directorio actual.  
+     <span data-ttu-id="6d9b2-186">Este código establece el directorio predeterminado del explorador de carpetas en el directorio actual.</span><span class="sxs-lookup"><span data-stu-id="6d9b2-186">This code sets the default directory of the folder browser to the current directory.</span></span>  
   
-3.  Ejecute la aplicación. Al hacer clic en **Examinar** la primera vez, se abre el cuadro de diálogo **Buscar carpeta** en el directorio actual.  
+3.  <span data-ttu-id="6d9b2-187">Ejecute la aplicación.</span><span class="sxs-lookup"><span data-stu-id="6d9b2-187">Run the application.</span></span> <span data-ttu-id="6d9b2-188">Al hacer clic en **Examinar** la primera vez, se abre el cuadro de diálogo **Buscar carpeta** en el directorio actual.</span><span class="sxs-lookup"><span data-stu-id="6d9b2-188">When you click **Browse** the first time, the **Browse For Folder** dialog box opens to the current directory.</span></span>  
   
-4.  Deje de ejecutar la aplicación.  
+4.  <span data-ttu-id="6d9b2-189">Deje de ejecutar la aplicación.</span><span class="sxs-lookup"><span data-stu-id="6d9b2-189">Stop running the application.</span></span>  
   
-### <a name="to-selectively-enable-controls"></a>Para habilitar los controles de forma selectiva  
+### <a name="to-selectively-enable-controls"></a><span data-ttu-id="6d9b2-190">Para habilitar los controles de forma selectiva</span><span class="sxs-lookup"><span data-stu-id="6d9b2-190">To selectively enable controls</span></span>  
   
-1.  Agregue el siguiente método `SetEnabled`.  
+1.  <span data-ttu-id="6d9b2-191">Agregue el siguiente método `SetEnabled`.</span><span class="sxs-lookup"><span data-stu-id="6d9b2-191">Add the following `SetEnabled` method.</span></span>  
   
      [!code-vb[VbVbcnMyFileSystem#108](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_7.vb)]  
   
-     El método `SetEnabled` habilita o deshabilita los controles dependiendo de si hay un elemento seleccionado en `ListBox`.  
+     <span data-ttu-id="6d9b2-192">El método `SetEnabled` habilita o deshabilita los controles dependiendo de si hay un elemento seleccionado en `ListBox`.</span><span class="sxs-lookup"><span data-stu-id="6d9b2-192">The `SetEnabled` method enables or disables controls depending on whether an item is selected in the `ListBox`.</span></span>  
   
-2.  Cree un controlador de eventos `SelectedIndexChanged` para `filesListBox` haciendo doble clic en el control `ListBox` del formulario.  
+2.  <span data-ttu-id="6d9b2-193">Cree un controlador de eventos `SelectedIndexChanged` para `filesListBox` haciendo doble clic en el control `ListBox` del formulario.</span><span class="sxs-lookup"><span data-stu-id="6d9b2-193">Create a `SelectedIndexChanged` event handler for `filesListBox` by double-clicking the `ListBox` control on the form.</span></span>  
   
-3.  Agregue una llamada a `SetEnabled` en el nuevo controlador de eventos `filesListBox_SelectedIndexChanged`.  
+3.  <span data-ttu-id="6d9b2-194">Agregue una llamada a `SetEnabled` en el nuevo controlador de eventos `filesListBox_SelectedIndexChanged`.</span><span class="sxs-lookup"><span data-stu-id="6d9b2-194">Add a call to `SetEnabled` in the new `filesListBox_SelectedIndexChanged` event handler.</span></span>  
   
-4.  Agregue una llamada a `SetEnabled` al final del controlador de eventos `browseButton_Click`.  
+4.  <span data-ttu-id="6d9b2-195">Agregue una llamada a `SetEnabled` al final del controlador de eventos `browseButton_Click`.</span><span class="sxs-lookup"><span data-stu-id="6d9b2-195">Add a call to `SetEnabled` at the end of the `browseButton_Click` event handler.</span></span>  
   
-5.  Agregue una llamada a `SetEnabled` al final del controlador de eventos `Form1_Load`.  
+5.  <span data-ttu-id="6d9b2-196">Agregue una llamada a `SetEnabled` al final del controlador de eventos `Form1_Load`.</span><span class="sxs-lookup"><span data-stu-id="6d9b2-196">Add a call to `SetEnabled` at the end of the `Form1_Load` event handler.</span></span>  
   
-6.  Ejecute la aplicación. La casilla **Guardar resultados** y el botón **Examine** (Examinar) se deshabilitan si no hay ningún elemento seleccionado en `ListBox`.  
+6.  <span data-ttu-id="6d9b2-197">Ejecute la aplicación.</span><span class="sxs-lookup"><span data-stu-id="6d9b2-197">Run the application.</span></span> <span data-ttu-id="6d9b2-198">La casilla **Guardar resultados** y el botón **Examine** (Examinar) se deshabilitan si no hay ningún elemento seleccionado en `ListBox`.</span><span class="sxs-lookup"><span data-stu-id="6d9b2-198">The **Save Results** check box and the **Examine** button are disabled if an item is not selected in the `ListBox`.</span></span>  
   
-## <a name="full-example-using-mycomputerfilesystem"></a>Ejemplo completo usando My.Computer.FileSystem  
- A continuación, se muestra el ejemplo completo.  
+## <a name="full-example-using-mycomputerfilesystem"></a><span data-ttu-id="6d9b2-199">Ejemplo completo usando My.Computer.FileSystem</span><span class="sxs-lookup"><span data-stu-id="6d9b2-199">Full example using My.Computer.FileSystem</span></span>  
+ <span data-ttu-id="6d9b2-200">A continuación, se muestra el ejemplo completo.</span><span class="sxs-lookup"><span data-stu-id="6d9b2-200">Following is the complete example.</span></span>  
   
  [!code-vb[VbVbcnMyFileSystem#101](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_8.vb)]  
   
-## <a name="full-example-using-systemio"></a>Ejemplo completo usando System.IO  
- En el siguiente ejemplo equivalente se usan clases del espacio de nombres <xref:System.IO> en lugar de usar objetos `My.Computer.FileSystem`.  
+## <a name="full-example-using-systemio"></a><span data-ttu-id="6d9b2-201">Ejemplo completo usando System.IO</span><span class="sxs-lookup"><span data-stu-id="6d9b2-201">Full example using System.IO</span></span>  
+ <span data-ttu-id="6d9b2-202">En el siguiente ejemplo equivalente se usan clases del espacio de nombres <xref:System.IO> en lugar de usar objetos `My.Computer.FileSystem`.</span><span class="sxs-lookup"><span data-stu-id="6d9b2-202">The following equivalent example uses classes from the <xref:System.IO> namespace instead of using `My.Computer.FileSystem` objects.</span></span>  
   
  [!code-vb[VbVbcnMyFileSystem#111](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_9.vb)]  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.IO>   
- <xref:Microsoft.VisualBasic.FileIO.FileSystem>   
- <xref:Microsoft.VisualBasic.FileIO.FileSystem.CurrentDirectory%2A>   
- [Tutorial: Manipulación de archivos utilizando métodos de .NET Framework](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-by-using-net-framework-methods.md)
-
+## <a name="see-also"></a><span data-ttu-id="6d9b2-203">Vea también</span><span class="sxs-lookup"><span data-stu-id="6d9b2-203">See Also</span></span>  
+ <xref:System.IO>  
+ <xref:Microsoft.VisualBasic.FileIO.FileSystem>  
+ <xref:Microsoft.VisualBasic.FileIO.FileSystem.CurrentDirectory%2A>  
+ [<span data-ttu-id="6d9b2-204">Tutorial: Manipulación de archivos utilizando métodos de .NET Framework</span><span class="sxs-lookup"><span data-stu-id="6d9b2-204">Walkthrough: Manipulating Files by Using .NET Framework Methods</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-by-using-net-framework-methods.md)

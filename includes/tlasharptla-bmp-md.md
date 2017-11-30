@@ -1,1 +1,1 @@
-mapa de bits (BMP)
+<span data-ttu-id="c84df-101">mapa de bits (BMP)</span><span class="sxs-lookup"><span data-stu-id="c84df-101">bitmap (BMP)</span></span>

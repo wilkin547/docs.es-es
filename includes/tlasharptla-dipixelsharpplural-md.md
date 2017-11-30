@@ -1,1 +1,1 @@
-unidades independientes de dispositivo (1/96 de pulgada por unidad)
+<span data-ttu-id="b8c5c-101">unidades independientes de dispositivo (1/96 de pulgada por unidad)</span><span class="sxs-lookup"><span data-stu-id="b8c5c-101">device-independent units (1/96th inch per unit)</span></span>

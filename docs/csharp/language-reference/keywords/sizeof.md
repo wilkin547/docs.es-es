@@ -1,94 +1,74 @@
 ---
 title: sizeof (Referencia de C#)
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
 f1_keywords:
 - sizeof_CSharpKeyword
 - sizeof
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- sizeof keyword [C#]
+helpviewer_keywords: sizeof keyword [C#]
 ms.assetid: c548592c-677c-4f40-a4ce-e613f7529141
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 0148ae8381804ca9286315251582c8ab40778369
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 81117b1419c2a9c3babd6a7429052e2b23e08a70
-ms.openlocfilehash: 6b3e0b5d0b91da3cc63c7caeed8d4ba4ea0b2ad1
-ms.contentlocale: es-es
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="sizeof-c-reference"></a>sizeof (Referencia de C#)
-Se usa para obtener el tamaño en bytes de un tipo no administrado. Los tipos no administrados incluyen los tipos integrados que se muestran en la tabla que aparece a continuación, además de estos:  
+# <a name="sizeof-c-reference"></a><span data-ttu-id="4e8ff-102">sizeof (Referencia de C#)</span><span class="sxs-lookup"><span data-stu-id="4e8ff-102">sizeof (C# Reference)</span></span>
+<span data-ttu-id="4e8ff-103">Se usa para obtener el tamaño en bytes de un tipo no administrado.</span><span class="sxs-lookup"><span data-stu-id="4e8ff-103">Used to obtain the size in bytes for an unmanaged type.</span></span> <span data-ttu-id="4e8ff-104">Los tipos no administrados incluyen los tipos integrados que se muestran en la tabla que aparece a continuación, además de estos:</span><span class="sxs-lookup"><span data-stu-id="4e8ff-104">Unmanaged types include the built-in types that are listed in the table that follows, and also the following:</span></span>  
   
--   Tipos de enumeración  
+-   <span data-ttu-id="4e8ff-105">Tipos de enumeración</span><span class="sxs-lookup"><span data-stu-id="4e8ff-105">Enum types</span></span>  
   
--   Tipos de puntero  
+-   <span data-ttu-id="4e8ff-106">Tipos de puntero</span><span class="sxs-lookup"><span data-stu-id="4e8ff-106">Pointer types</span></span>  
   
--   Structs definidos por el usuario que no contienen ningún campo o propiedad que sea un tipo de referencia  
+-   <span data-ttu-id="4e8ff-107">Structs definidos por el usuario que no contienen ningún campo o propiedad que sea un tipo de referencia</span><span class="sxs-lookup"><span data-stu-id="4e8ff-107">User-defined structs that do not contain any fields or properties that are reference types</span></span>  
   
- En el ejemplo siguiente, se muestra cómo recuperar el tamaño de un valor de tipo `int`:  
+ <span data-ttu-id="4e8ff-108">En el ejemplo siguiente, se muestra cómo recuperar el tamaño de un valor de tipo `int`:</span><span class="sxs-lookup"><span data-stu-id="4e8ff-108">The following example shows how to retrieve the size of an `int`:</span></span>  
   
 ```csharp  
 // Constant value 4:  
 int intSize = sizeof(int);   
 ```  
   
-## <a name="remarks"></a>Comentarios  
- A partir de la versión 2.0 de C#, la aplicación de `sizeof` a los tipos integrados ya no necesita el uso del modo [no seguro](../../../csharp/language-reference/keywords/unsafe.md).  
+## <a name="remarks"></a><span data-ttu-id="4e8ff-109">Comentarios</span><span class="sxs-lookup"><span data-stu-id="4e8ff-109">Remarks</span></span>  
+ <span data-ttu-id="4e8ff-110">A partir de la versión 2.0 de C#, la aplicación de `sizeof` a los tipos integrados ya no necesita el uso del modo [no seguro](../../../csharp/language-reference/keywords/unsafe.md).</span><span class="sxs-lookup"><span data-stu-id="4e8ff-110">Starting with version 2.0 of C#, applying `sizeof` to built-in types no longer requires that [unsafe](../../../csharp/language-reference/keywords/unsafe.md) mode be used.</span></span>  
   
- El operador `sizeof` no se puede sobrecargar. Los valores devueltos por el operador `sizeof` son del tipo `int`. En la tabla siguiente, se muestran los valores constantes que se sustituyen por expresiones `sizeof` que tienen determinados tipos integrados como operandos.  
+ <span data-ttu-id="4e8ff-111">El operador `sizeof` no se puede sobrecargar.</span><span class="sxs-lookup"><span data-stu-id="4e8ff-111">The `sizeof` operator cannot be overloaded.</span></span> <span data-ttu-id="4e8ff-112">Los valores devueltos por el operador `sizeof` son del tipo `int`.</span><span class="sxs-lookup"><span data-stu-id="4e8ff-112">The values returned by the `sizeof` operator are of type `int`.</span></span> <span data-ttu-id="4e8ff-113">En la tabla siguiente, se muestran los valores constantes que se sustituyen por expresiones `sizeof` que tienen determinados tipos integrados como operandos.</span><span class="sxs-lookup"><span data-stu-id="4e8ff-113">The following table shows the constant values that are substituted for `sizeof` expressions that have certain built-in types as operands.</span></span>  
   
-|Expresión|Valor constante|  
+|<span data-ttu-id="4e8ff-114">Expresión</span><span class="sxs-lookup"><span data-stu-id="4e8ff-114">Expression</span></span>|<span data-ttu-id="4e8ff-115">Valor constante</span><span class="sxs-lookup"><span data-stu-id="4e8ff-115">Constant value</span></span>|  
 |----------------|--------------------|  
-|`sizeof(sbyte)`|1|  
-|`sizeof(byte)`|1|  
-|`sizeof(short)`|2|  
-|`sizeof(ushort)`|2|  
-|`sizeof(int)`|4|  
-|`sizeof(uint)`|4|  
-|`sizeof(long)`|8|  
-|`sizeof(ulong)`|8|  
-|`sizeof(char)`|2 (Unicode)|  
-|`sizeof(float)`|4|  
-|`sizeof(double)`|8|  
-|`sizeof(decimal)`|16|  
-|`sizeof(bool)`|1|  
+|`sizeof(sbyte)`|<span data-ttu-id="4e8ff-116">1</span><span class="sxs-lookup"><span data-stu-id="4e8ff-116">1</span></span>|  
+|`sizeof(byte)`|<span data-ttu-id="4e8ff-117">1</span><span class="sxs-lookup"><span data-stu-id="4e8ff-117">1</span></span>|  
+|`sizeof(short)`|<span data-ttu-id="4e8ff-118">2</span><span class="sxs-lookup"><span data-stu-id="4e8ff-118">2</span></span>|  
+|`sizeof(ushort)`|<span data-ttu-id="4e8ff-119">2</span><span class="sxs-lookup"><span data-stu-id="4e8ff-119">2</span></span>|  
+|`sizeof(int)`|<span data-ttu-id="4e8ff-120">4</span><span class="sxs-lookup"><span data-stu-id="4e8ff-120">4</span></span>|  
+|`sizeof(uint)`|<span data-ttu-id="4e8ff-121">4</span><span class="sxs-lookup"><span data-stu-id="4e8ff-121">4</span></span>|  
+|`sizeof(long)`|<span data-ttu-id="4e8ff-122">8</span><span class="sxs-lookup"><span data-stu-id="4e8ff-122">8</span></span>|  
+|`sizeof(ulong)`|<span data-ttu-id="4e8ff-123">8</span><span class="sxs-lookup"><span data-stu-id="4e8ff-123">8</span></span>|  
+|`sizeof(char)`|<span data-ttu-id="4e8ff-124">2 (Unicode)</span><span class="sxs-lookup"><span data-stu-id="4e8ff-124">2 (Unicode)</span></span>|  
+|`sizeof(float)`|<span data-ttu-id="4e8ff-125">4</span><span class="sxs-lookup"><span data-stu-id="4e8ff-125">4</span></span>|  
+|`sizeof(double)`|<span data-ttu-id="4e8ff-126">8</span><span class="sxs-lookup"><span data-stu-id="4e8ff-126">8</span></span>|  
+|`sizeof(decimal)`|<span data-ttu-id="4e8ff-127">16</span><span class="sxs-lookup"><span data-stu-id="4e8ff-127">16</span></span>|  
+|`sizeof(bool)`|<span data-ttu-id="4e8ff-128">1</span><span class="sxs-lookup"><span data-stu-id="4e8ff-128">1</span></span>|  
   
- Para todos los demás tipos, incluidos los structs, el operador `sizeof` se puede usar únicamente en bloques de código no seguro. Aunque puede usar el método <xref:System.Runtime.InteropServices.Marshal.SizeOf%2A?displayProperty=nameWithType>, el valor devuelto mediante este método no es siempre el mismo que el valor devuelto por `sizeof`. <xref:System.Runtime.InteropServices.Marshal.SizeOf%2A?displayProperty=nameWithType> devuelve el tamaño una vez calculado el tipo, mientras que `sizeof` devuelve el tamaño asignado por Common Language Runtime, incluido el relleno.  
+ <span data-ttu-id="4e8ff-129">Para todos los demás tipos, incluidos los structs, el operador `sizeof` se puede usar únicamente en bloques de código no seguro.</span><span class="sxs-lookup"><span data-stu-id="4e8ff-129">For all other types, including structs, the `sizeof` operator can be used only in unsafe code blocks.</span></span> <span data-ttu-id="4e8ff-130">Aunque puede usar el método <xref:System.Runtime.InteropServices.Marshal.SizeOf%2A?displayProperty=nameWithType>, el valor devuelto mediante este método no es siempre el mismo que el valor devuelto por `sizeof`.</span><span class="sxs-lookup"><span data-stu-id="4e8ff-130">Although you can use the <xref:System.Runtime.InteropServices.Marshal.SizeOf%2A?displayProperty=nameWithType> method, the value returned by this method is not always the same as the value returned by `sizeof`.</span></span> <span data-ttu-id="4e8ff-131"><xref:System.Runtime.InteropServices.Marshal.SizeOf%2A?displayProperty=nameWithType> devuelve el tamaño una vez calculado el tipo, mientras que `sizeof` devuelve el tamaño asignado por Common Language Runtime, incluido el relleno.</span><span class="sxs-lookup"><span data-stu-id="4e8ff-131"><xref:System.Runtime.InteropServices.Marshal.SizeOf%2A?displayProperty=nameWithType> returns the size after the type has been marshaled, whereas `sizeof` returns the size as it has been allocated by the common language runtime, including any padding.</span></span>  
   
-## <a name="example"></a>Ejemplo  
- [!code-cs[csrefKeywordsOperator#11](../../../csharp/language-reference/keywords/codesnippet/CSharp/sizeof_1.cs)]  
+## <a name="example"></a><span data-ttu-id="4e8ff-132">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="4e8ff-132">Example</span></span>  
+ [!code-csharp[csrefKeywordsOperator#11](../../../csharp/language-reference/keywords/codesnippet/CSharp/sizeof_1.cs)]  
   
-## <a name="c-language-specification"></a>Especificación del lenguaje C#  
+## <a name="c-language-specification"></a><span data-ttu-id="4e8ff-133">Especificación del lenguaje C#</span><span class="sxs-lookup"><span data-stu-id="4e8ff-133">C# Language Specification</span></span>  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [Referencia de C#](../../../csharp/language-reference/index.md)   
- [Guía de programación de C#](../../../csharp/programming-guide/index.md)   
- [Palabras clave de C#](../../../csharp/language-reference/keywords/index.md)   
- [Palabras clave de operador](../../../csharp/language-reference/keywords/operator-keywords.md)   
- [enum](../../../csharp/language-reference/keywords/enum.md)   
- [Código no seguro y punteros](../../../csharp/programming-guide/unsafe-code-pointers/index.md)   
- [Structs](../../../csharp/programming-guide/classes-and-structs/structs.md)   
- [Constantes](../../../csharp/programming-guide/classes-and-structs/constants.md)
-
+## <a name="see-also"></a><span data-ttu-id="4e8ff-134">Vea también</span><span class="sxs-lookup"><span data-stu-id="4e8ff-134">See Also</span></span>  
+ [<span data-ttu-id="4e8ff-135">Referencia de C#</span><span class="sxs-lookup"><span data-stu-id="4e8ff-135">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
+ [<span data-ttu-id="4e8ff-136">Guía de programación de C#</span><span class="sxs-lookup"><span data-stu-id="4e8ff-136">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+ [<span data-ttu-id="4e8ff-137">Palabras clave de C#</span><span class="sxs-lookup"><span data-stu-id="4e8ff-137">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)  
+ [<span data-ttu-id="4e8ff-138">Palabras clave de operador</span><span class="sxs-lookup"><span data-stu-id="4e8ff-138">Operator Keywords</span></span>](../../../csharp/language-reference/keywords/operator-keywords.md)  
+ [<span data-ttu-id="4e8ff-139">enum</span><span class="sxs-lookup"><span data-stu-id="4e8ff-139">enum</span></span>](../../../csharp/language-reference/keywords/enum.md)  
+ [<span data-ttu-id="4e8ff-140">Código no seguro y punteros</span><span class="sxs-lookup"><span data-stu-id="4e8ff-140">Unsafe Code and Pointers</span></span>](../../../csharp/programming-guide/unsafe-code-pointers/index.md)  
+ [<span data-ttu-id="4e8ff-141">Estructuras</span><span class="sxs-lookup"><span data-stu-id="4e8ff-141">Structs</span></span>](../../../csharp/programming-guide/classes-and-structs/structs.md)  
+ [<span data-ttu-id="4e8ff-142">Constantes</span><span class="sxs-lookup"><span data-stu-id="4e8ff-142">Constants</span></span>](../../../csharp/programming-guide/classes-and-structs/constants.md)

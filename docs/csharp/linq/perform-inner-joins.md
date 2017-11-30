@@ -7,80 +7,77 @@ manager: wpickett
 ms.author: wiwagn
 ms.date: 12/1/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
-ms.devlang: dotnet
+ms.prod: .net
+ms.technology: devlang-csharp
 ms.assetid: 45bceed6-f549-4114-a9b1-b44feb497742
+ms.openlocfilehash: fdf75c0b7195742bdce70566ebb3880bb0565f31
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 2b73b954dbb090484a320302a3af72509fccd9d3
-ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="perform-inner-joins"></a>Realizar combinaciones internas
+# <a name="perform-inner-joins"></a><span data-ttu-id="49bb6-104">Realizar combinaciones internas</span><span class="sxs-lookup"><span data-stu-id="49bb6-104">Perform inner joins</span></span>
 
-En términos de la base de datos relacional, una *combinación interna* genera un conjunto de resultados en el que cada elemento de la primera colección aparece una vez para cada elemento coincidente en la segunda colección. Si un elemento de la primera colección no tiene ningún elemento coincidente, no aparece en el conjunto de resultados. El método <xref:System.Linq.Enumerable.Join%2A>, que se llama mediante la cláusula `join` de C#, implementa una combinación interna.  
+<span data-ttu-id="49bb6-105">En términos de la base de datos relacional, una *combinación interna* genera un conjunto de resultados en el que cada elemento de la primera colección aparece una vez para cada elemento coincidente en la segunda colección.</span><span class="sxs-lookup"><span data-stu-id="49bb6-105">In relational database terms, an *inner join* produces a result set in which each element of the first collection appears one time for every matching element in the second collection.</span></span> <span data-ttu-id="49bb6-106">Si un elemento de la primera colección no tiene ningún elemento coincidente, no aparece en el conjunto de resultados.</span><span class="sxs-lookup"><span data-stu-id="49bb6-106">If an element in the first collection has no matching elements, it does not appear in the result set.</span></span> <span data-ttu-id="49bb6-107">El método <xref:System.Linq.Enumerable.Join%2A>, que se llama mediante la cláusula `join` de C#, implementa una combinación interna.</span><span class="sxs-lookup"><span data-stu-id="49bb6-107">The <xref:System.Linq.Enumerable.Join%2A> method, which is called by the `join` clause in C#, implements an inner join.</span></span>  
   
- En este tema se muestra cómo realizar cuatro variaciones de una combinación interna:  
+ <span data-ttu-id="49bb6-108">En este tema se muestra cómo realizar cuatro variaciones de una combinación interna:</span><span class="sxs-lookup"><span data-stu-id="49bb6-108">This topic shows you how to perform four variations of an inner join:</span></span>  
   
--   Una combinación interna simple que correlaciona elementos de dos orígenes de datos según una clave simple.  
+-   <span data-ttu-id="49bb6-109">Una combinación interna simple que correlaciona elementos de dos orígenes de datos según una clave simple.</span><span class="sxs-lookup"><span data-stu-id="49bb6-109">A simple inner join that correlates elements from two data sources based on a simple key.</span></span>  
   
--   Una combinación interna que correlaciona elementos de dos orígenes de datos según una clave *compuesta*. Una clave compuesta, que es una clave formada por más de un valor, permite correlacionar elementos en función de más de una propiedad.  
+-   <span data-ttu-id="49bb6-110">Una combinación interna que correlaciona elementos de dos orígenes de datos según una clave *compuesta*.</span><span class="sxs-lookup"><span data-stu-id="49bb6-110">An inner join that correlates elements from two data sources based on a *composite* key.</span></span> <span data-ttu-id="49bb6-111">Una clave compuesta, que es una clave formada por más de un valor, permite correlacionar elementos en función de más de una propiedad.</span><span class="sxs-lookup"><span data-stu-id="49bb6-111">A composite key, which is a key that consists of more than one value, enables you to correlate elements based on more than one property.</span></span>  
   
--   Una *combinación múltiple* en la que las sucesivas operaciones de combinación se anexan entre sí.  
+-   <span data-ttu-id="49bb6-112">Una *combinación múltiple* en la que las sucesivas operaciones de combinación se anexan entre sí.</span><span class="sxs-lookup"><span data-stu-id="49bb6-112">A *multiple join* in which successive join operations are appended to each other.</span></span>  
   
--   Una combinación interna que se implementa mediante una combinación agrupada.  
+-   <span data-ttu-id="49bb6-113">Una combinación interna que se implementa mediante una combinación agrupada.</span><span class="sxs-lookup"><span data-stu-id="49bb6-113">An inner join that is implemented by using a group join.</span></span>  
   
-## <a name="example"></a>Ejemplo  
+## <a name="example"></a><span data-ttu-id="49bb6-114">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="49bb6-114">Example</span></span>  
   
-## <a name="simple-key-join-example"></a>Ejemplo de combinación de clave simple  
- En el ejemplo siguiente se crean dos colecciones que contienen objetos de dos tipos definidos por el usuario, `Person` y `Pet`. La consulta usa la cláusula `join` de C# para emparejar objetos `Person` con objetos `Pet` cuyo `Owner` sea ese `Person`. La cláusula `select` de C# define el aspecto que tendrán los objetos resultantes. En este ejemplo, los objetos resultantes son tipos anónimos que consisten en el nombre de propietario y el nombre de mascota.  
+## <a name="simple-key-join-example"></a><span data-ttu-id="49bb6-115">Ejemplo de combinación de clave simple</span><span class="sxs-lookup"><span data-stu-id="49bb6-115">Simple key join example</span></span>  
+ <span data-ttu-id="49bb6-116">En el ejemplo siguiente se crean dos colecciones que contienen objetos de dos tipos definidos por el usuario, `Person` y `Pet`.</span><span class="sxs-lookup"><span data-stu-id="49bb6-116">The following example creates two collections that contain objects of two user-defined types, `Person` and `Pet`.</span></span> <span data-ttu-id="49bb6-117">La consulta usa la cláusula `join` de C# para emparejar objetos `Person` con objetos `Pet` cuyo `Owner` sea ese `Person`.</span><span class="sxs-lookup"><span data-stu-id="49bb6-117">The query uses the `join` clause in C# to match `Person` objects with `Pet` objects whose `Owner` is that `Person`.</span></span> <span data-ttu-id="49bb6-118">La cláusula `select` de C# define el aspecto que tendrán los objetos resultantes.</span><span class="sxs-lookup"><span data-stu-id="49bb6-118">The `select` clause in C# defines how the resulting objects will look.</span></span> <span data-ttu-id="49bb6-119">En este ejemplo, los objetos resultantes son tipos anónimos que consisten en el nombre de propietario y el nombre de mascota.</span><span class="sxs-lookup"><span data-stu-id="49bb6-119">In this example the resulting objects are anonymous types that consist of the owner's first name and the pet's name.</span></span>  
   
- [!code-cs[CsLINQProgJoining#1](../../../samples/snippets/csharp/concepts/linq/how-to-perform-inner-joins_1.cs)]  
+ [!code-csharp[CsLINQProgJoining#1](../../../samples/snippets/csharp/concepts/linq/how-to-perform-inner-joins_1.cs)]  
   
- Tenga en cuenta que el objeto `Person` cuyo `LastName` es "Huff" no aparece en el conjunto de resultados porque no hay ningún objeto `Pet` que tenga `Pet.Owner` igual que `Person`.  
+ <span data-ttu-id="49bb6-120">Tenga en cuenta que el objeto `Person` cuyo `LastName` es "Huff" no aparece en el conjunto de resultados porque no hay ningún objeto `Pet` que tenga `Pet.Owner` igual que `Person`.</span><span class="sxs-lookup"><span data-stu-id="49bb6-120">Note that the `Person` object whose `LastName` is "Huff" does not appear in the result set because there is no `Pet` object that has `Pet.Owner` equal to that `Person`.</span></span>  
   
-## <a name="example"></a>Ejemplo  
+## <a name="example"></a><span data-ttu-id="49bb6-121">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="49bb6-121">Example</span></span>  
   
-## <a name="composite-key-join-example"></a>Ejemplo de combinación de clave compuesta  
- En lugar de correlacionar elementos en función de una sola propiedad, puede usar una clave compuesta para comparar elementos según varias propiedades. Para ello, especifique la función del selector de claves de cada colección para que devuelva un tipo anónimo que conste de las propiedades que quiere comparar. Si etiqueta las propiedades, deben tener la misma etiqueta de tipo anónimo en cada clave. Las propiedades también deben aparecer en el mismo orden.  
+## <a name="composite-key-join-example"></a><span data-ttu-id="49bb6-122">Ejemplo de combinación de clave compuesta</span><span class="sxs-lookup"><span data-stu-id="49bb6-122">Composite key join example</span></span>  
+ <span data-ttu-id="49bb6-123">En lugar de correlacionar elementos en función de una sola propiedad, puede usar una clave compuesta para comparar elementos según varias propiedades.</span><span class="sxs-lookup"><span data-stu-id="49bb6-123">Instead of correlating elements based on just one property, you can use a composite key to compare elements based on multiple properties.</span></span> <span data-ttu-id="49bb6-124">Para ello, especifique la función del selector de claves de cada colección para que devuelva un tipo anónimo que conste de las propiedades que quiere comparar.</span><span class="sxs-lookup"><span data-stu-id="49bb6-124">To do this, specify the key selector function for each collection to return an anonymous type that consists of the properties you want to compare.</span></span> <span data-ttu-id="49bb6-125">Si etiqueta las propiedades, deben tener la misma etiqueta de tipo anónimo en cada clave.</span><span class="sxs-lookup"><span data-stu-id="49bb6-125">If you label the properties, they must have the same label in each key's anonymous type.</span></span> <span data-ttu-id="49bb6-126">Las propiedades también deben aparecer en el mismo orden.</span><span class="sxs-lookup"><span data-stu-id="49bb6-126">The properties must also appear in the same order.</span></span>  
   
- En el ejemplo siguiente se usa una lista de objetos `Employee` y una lista de objetos `Student` para determinar qué empleados son también alumnos. Estos dos tipos tienen una propiedad `FirstName` y una propiedad `LastName` de tipo <xref:System.String>. Las funciones que crean las claves de combinación de los elementos de cada lista devuelven un tipo anónimo formado por las propiedades `FirstName` y `LastName` de cada elemento. La operación de combinación compara la igualdad de estas claves compuestas y devuelve pares de objetos de cada lista en los que el nombre y el apellido coinciden.  
+ <span data-ttu-id="49bb6-127">En el ejemplo siguiente se usa una lista de objetos `Employee` y una lista de objetos `Student` para determinar qué empleados son también alumnos.</span><span class="sxs-lookup"><span data-stu-id="49bb6-127">The following example uses a list of `Employee` objects and a list of `Student` objects to determine which employees are also students.</span></span> <span data-ttu-id="49bb6-128">Estos dos tipos tienen una propiedad `FirstName` y una propiedad `LastName` de tipo <xref:System.String>.</span><span class="sxs-lookup"><span data-stu-id="49bb6-128">Both of these types have a `FirstName` and a `LastName` property of type <xref:System.String>.</span></span> <span data-ttu-id="49bb6-129">Las funciones que crean las claves de combinación de los elementos de cada lista devuelven un tipo anónimo formado por las propiedades `FirstName` y `LastName` de cada elemento.</span><span class="sxs-lookup"><span data-stu-id="49bb6-129">The functions that create the join keys from each list's elements return an anonymous type that consists of the `FirstName` and `LastName` properties of each element.</span></span> <span data-ttu-id="49bb6-130">La operación de combinación compara la igualdad de estas claves compuestas y devuelve pares de objetos de cada lista en los que el nombre y el apellido coinciden.</span><span class="sxs-lookup"><span data-stu-id="49bb6-130">The join operation compares these composite keys for equality and returns pairs of objects from each list where both the first name and the last name match.</span></span>  
   
- [!code-cs[CsLINQProgJoining#2](../../../samples/snippets/csharp/concepts/linq/how-to-perform-inner-joins_2.cs)]  
+ [!code-csharp[CsLINQProgJoining#2](../../../samples/snippets/csharp/concepts/linq/how-to-perform-inner-joins_2.cs)]  
   
-## <a name="example"></a>Ejemplo  
+## <a name="example"></a><span data-ttu-id="49bb6-131">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="49bb6-131">Example</span></span>  
   
-## <a name="multiple-join-example"></a>Ejemplo de combinación múltiple  
- Se puede anexar cualquier número de operaciones de combinación entre sí para realizar una combinación múltiple. Cada cláusula `join` de C# correlaciona un origen de datos especificado con los resultados de la combinación anterior.  
+## <a name="multiple-join-example"></a><span data-ttu-id="49bb6-132">Ejemplo de combinación múltiple</span><span class="sxs-lookup"><span data-stu-id="49bb6-132">Multiple join example</span></span>  
+ <span data-ttu-id="49bb6-133">Se puede anexar cualquier número de operaciones de combinación entre sí para realizar una combinación múltiple.</span><span class="sxs-lookup"><span data-stu-id="49bb6-133">Any number of join operations can be appended to each other to perform a multiple join.</span></span> <span data-ttu-id="49bb6-134">Cada cláusula `join` de C# correlaciona un origen de datos especificado con los resultados de la combinación anterior.</span><span class="sxs-lookup"><span data-stu-id="49bb6-134">Each `join` clause in C# correlates a specified data source with the results of the previous join.</span></span>  
   
- En el ejemplo siguiente se crean tres colecciones: una lista de objetos `Person`, una lista de objetos `Cat` y una lista de objetos `Dog`.  
+ <span data-ttu-id="49bb6-135">En el ejemplo siguiente se crean tres colecciones: una lista de objetos `Person`, una lista de objetos `Cat` y una lista de objetos `Dog`.</span><span class="sxs-lookup"><span data-stu-id="49bb6-135">The following example creates three collections: a list of `Person` objects, a list of `Cat` objects, and a list of `Dog` objects.</span></span>  
   
- La primera cláusula `join` de C# empareja personas y gatos según un objeto `Person` que coincida con `Cat.Owner`. Devuelve una secuencia de tipos anónimos que contienen el objeto `Person` y `Cat.Name`.  
+ <span data-ttu-id="49bb6-136">La primera cláusula `join` de C# empareja personas y gatos según un objeto `Person` que coincida con `Cat.Owner`.</span><span class="sxs-lookup"><span data-stu-id="49bb6-136">The first `join` clause in C# matches people and cats based on a `Person` object matching `Cat.Owner`.</span></span> <span data-ttu-id="49bb6-137">Devuelve una secuencia de tipos anónimos que contienen el objeto `Person` y `Cat.Name`.</span><span class="sxs-lookup"><span data-stu-id="49bb6-137">It returns a sequence of anonymous types that contain the `Person` object and `Cat.Name`.</span></span>  
   
- La segunda cláusula `join` de C# correlaciona los tipos anónimos devueltos por la primera combinación con objetos `Dog` de la lista de perros proporcionada, según una clave compuesta formada por la propiedad `Owner` de tipo `Person` y la primera letra del nombre del animal. Devuelve una secuencia de tipos anónimos que contienen las propiedades `Cat.Name` y `Dog.Name` de cada par coincidente. Como se trata de una combinación interna, solo se devuelven los objetos del primer origen de datos que tienen una correspondencia en el segundo origen de datos.  
+ <span data-ttu-id="49bb6-138">La segunda cláusula `join` de C# correlaciona los tipos anónimos devueltos por la primera combinación con objetos `Dog` de la lista de perros proporcionada, según una clave compuesta formada por la propiedad `Owner` de tipo `Person` y la primera letra del nombre del animal.</span><span class="sxs-lookup"><span data-stu-id="49bb6-138">The second `join` clause in C# correlates the anonymous types returned by the first join with `Dog` objects in the supplied list of dogs, based on a composite key that consists of the `Owner` property of type `Person`, and the first letter of the animal's name.</span></span> <span data-ttu-id="49bb6-139">Devuelve una secuencia de tipos anónimos que contienen las propiedades `Cat.Name` y `Dog.Name` de cada par coincidente.</span><span class="sxs-lookup"><span data-stu-id="49bb6-139">It returns a sequence of anonymous types that contain the `Cat.Name` and `Dog.Name` properties from each matching pair.</span></span> <span data-ttu-id="49bb6-140">Como se trata de una combinación interna, solo se devuelven los objetos del primer origen de datos que tienen una correspondencia en el segundo origen de datos.</span><span class="sxs-lookup"><span data-stu-id="49bb6-140">Because this is an inner join, only those objects from the first data source that have a match in the second data source are returned.</span></span>  
   
- [!code-cs[CsLINQProgJoining#3](../../../samples/snippets/csharp/concepts/linq/how-to-perform-inner-joins_3.cs)]  
+ [!code-csharp[CsLINQProgJoining#3](../../../samples/snippets/csharp/concepts/linq/how-to-perform-inner-joins_3.cs)]  
   
-## <a name="example"></a>Ejemplo  
+## <a name="example"></a><span data-ttu-id="49bb6-141">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="49bb6-141">Example</span></span>  
   
-## <a name="inner-join-by-using-grouped-join-example"></a>Ejemplo de combinación interna mediante combinación agrupada  
- El ejemplo siguiente muestra cómo implementar una combinación interna mediante una combinación agrupada.  
+## <a name="inner-join-by-using-grouped-join-example"></a><span data-ttu-id="49bb6-142">Ejemplo de combinación interna mediante combinación agrupada</span><span class="sxs-lookup"><span data-stu-id="49bb6-142">Inner join by using grouped join example</span></span>  
+ <span data-ttu-id="49bb6-143">El ejemplo siguiente muestra cómo implementar una combinación interna mediante una combinación agrupada.</span><span class="sxs-lookup"><span data-stu-id="49bb6-143">The following example shows you how to implement an inner join by using a group join.</span></span>  
   
- En `query1`, la lista de objetos `Person` forma una combinación agrupada con la lista de objetos `Pet` según el `Person` que coincide con la propiedad `Pet.Owner`. La combinación agrupada crea una colección de grupos intermedios, donde cada grupo consta de un objeto `Person` y una secuencia de objetos `Pet` coincidentes.  
+ <span data-ttu-id="49bb6-144">En `query1`, la lista de objetos `Person` forma una combinación agrupada con la lista de objetos `Pet` según el `Person` que coincide con la propiedad `Pet.Owner`.</span><span class="sxs-lookup"><span data-stu-id="49bb6-144">In `query1`, the list of `Person` objects is group-joined to the list of `Pet` objects based on the `Person` matching the `Pet.Owner` property.</span></span> <span data-ttu-id="49bb6-145">La combinación agrupada crea una colección de grupos intermedios, donde cada grupo consta de un objeto `Person` y una secuencia de objetos `Pet` coincidentes.</span><span class="sxs-lookup"><span data-stu-id="49bb6-145">The group join creates a collection of intermediate groups, where each group consists of a `Person` object and a sequence of matching `Pet` objects.</span></span>  
   
- Al agregar una segunda cláusula `from` a la consulta, esta secuencia de secuencias se combina (se acopla) en una secuencia mayor. El tipo de los elementos de la secuencia final se especifica con la cláusula `select`. En este ejemplo, ese tipo es un tipo anónimo que consta de las propiedades `Person.FirstName` y `Pet.Name` de cada par coincidente.  
+ <span data-ttu-id="49bb6-146">Al agregar una segunda cláusula `from` a la consulta, esta secuencia de secuencias se combina (se acopla) en una secuencia mayor.</span><span class="sxs-lookup"><span data-stu-id="49bb6-146">By adding a second `from` clause to the query, this sequence of sequences is combined (or flattened) into one longer sequence.</span></span> <span data-ttu-id="49bb6-147">El tipo de los elementos de la secuencia final se especifica con la cláusula `select`.</span><span class="sxs-lookup"><span data-stu-id="49bb6-147">The type of the elements of the final sequence is specified by the `select` clause.</span></span> <span data-ttu-id="49bb6-148">En este ejemplo, ese tipo es un tipo anónimo que consta de las propiedades `Person.FirstName` y `Pet.Name` de cada par coincidente.</span><span class="sxs-lookup"><span data-stu-id="49bb6-148">In this example, that type is an anonymous type that consists of the `Person.FirstName` and `Pet.Name` properties for each matching pair.</span></span>  
   
- El resultado de `query1` es equivalente al conjunto de resultados que se habría obtenido con la cláusula `join` sin la cláusula `into` para realizar una combinación interna. La variable `query2` muestra esta consulta equivalente.  
+ <span data-ttu-id="49bb6-149">El resultado de `query1` es equivalente al conjunto de resultados que se habría obtenido con la cláusula `join` sin la cláusula `into` para realizar una combinación interna.</span><span class="sxs-lookup"><span data-stu-id="49bb6-149">The result of `query1` is equivalent to the result set that would have been obtained by using the `join` clause without the `into` clause to perform an inner join.</span></span> <span data-ttu-id="49bb6-150">La variable `query2` muestra esta consulta equivalente.</span><span class="sxs-lookup"><span data-stu-id="49bb6-150">The `query2` variable demonstrates this equivalent query.</span></span>  
   
- [!code-cs[CsLINQProgJoining#4](../../../samples/snippets/csharp/concepts/linq/how-to-perform-inner-joins_4.cs)]  
+ [!code-csharp[CsLINQProgJoining#4](../../../samples/snippets/csharp/concepts/linq/how-to-perform-inner-joins_4.cs)]  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Linq.Enumerable.Join%2A>   
- <xref:System.Linq.Enumerable.GroupJoin%2A>   
- [Realizar combinaciones agrupadas](perform-grouped-joins.md)   
- [Perform left outer joins](perform-left-outer-joins.md)  (Realizar operaciones de combinación externa izquierda)  
- [Anonymous Types](../programming-guide/classes-and-structs/anonymous-types.md) (Tipos anónimos [Guía de programación de C#])   
+## <a name="see-also"></a><span data-ttu-id="49bb6-151">Vea también</span><span class="sxs-lookup"><span data-stu-id="49bb6-151">See also</span></span>  
+ <xref:System.Linq.Enumerable.Join%2A>  
+ <xref:System.Linq.Enumerable.GroupJoin%2A>  
+ [<span data-ttu-id="49bb6-152">Realizar combinaciones agrupadas</span><span class="sxs-lookup"><span data-stu-id="49bb6-152">Perform grouped joins</span></span>](perform-grouped-joins.md)  
+ [<span data-ttu-id="49bb6-153">Realizar operaciones de combinación externa izquierda</span><span class="sxs-lookup"><span data-stu-id="49bb6-153">Perform left outer joins</span></span>](perform-left-outer-joins.md)  
+ <span data-ttu-id="49bb6-154">[Anonymous Types](../programming-guide/classes-and-structs/anonymous-types.md) (Tipos anónimos [Guía de programación de C#])</span><span class="sxs-lookup"><span data-stu-id="49bb6-154">[Anonymous types](../programming-guide/classes-and-structs/anonymous-types.md)</span></span>  
  
-

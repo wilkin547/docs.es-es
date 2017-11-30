@@ -1,1 +1,1 @@
-International Press Telecommunications Council (IPTC)
+<span data-ttu-id="3e948-101">International Press Telecommunications Council (IPTC)</span><span class="sxs-lookup"><span data-stu-id="3e948-101">International Press Telecommunications Council (IPTC)</span></span>

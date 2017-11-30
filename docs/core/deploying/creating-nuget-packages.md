@@ -10,34 +10,35 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 2f0415c1-110b-433d-87c1-ae3d543a8844
+ms.openlocfilehash: a5738a4f3755a959660db4be683677673af61ef9
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 9e5c762de0a14407c92c9752edc9619caa07d500
-ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-
-# <a name="how-to-create-a-nuget-package-with-cross-platform-tools"></a>Cómo crear un paquete de NuGet con herramientas multiplataforma
+# <a name="how-to-create-a-nuget-package-with-cross-platform-tools"></a><span data-ttu-id="46815-104">Cómo crear un paquete de NuGet con herramientas multiplataforma</span><span class="sxs-lookup"><span data-stu-id="46815-104">How to Create a NuGet Package with Cross Platform Tools</span></span>
 
 > [!NOTE]
-> A continuación se muestran ejemplos de línea de comandos mediante Unix.  El comando `dotnet pack`, tal como se muestra aquí, funciona del mismo modo en Windows.
+> <span data-ttu-id="46815-105">A continuación se muestran ejemplos de línea de comandos mediante Unix.</span><span class="sxs-lookup"><span data-stu-id="46815-105">The following shows command-line samples using Unix.</span></span>  <span data-ttu-id="46815-106">El comando `dotnet pack`, tal como se muestra aquí, funciona del mismo modo en Windows.</span><span class="sxs-lookup"><span data-stu-id="46815-106">The `dotnet pack` command as shown here works the same way on Windows.</span></span>
 
-Para .NET Core 1.0, está previsto que las bibliotecas se distribuyan como paquetes de NuGet.  De hecho, es así como se distribuyen y consumen todas las bibliotecas estándar .NET.  Esto se hace más fácil con el comando `dotnet pack`.
+<span data-ttu-id="46815-107">Para .NET Core 1.0, está previsto que las bibliotecas se distribuyan como paquetes de NuGet.</span><span class="sxs-lookup"><span data-stu-id="46815-107">For .NET Core 1.0, libraries are expected to be distributed as NuGet packages.</span></span>  <span data-ttu-id="46815-108">De hecho, es así como se distribuyen y consumen todas las bibliotecas estándar .NET.</span><span class="sxs-lookup"><span data-stu-id="46815-108">This is in fact how all of the .NET Standard libraries are distributed and consumed.</span></span>  <span data-ttu-id="46815-109">Esto se hace más fácil con el comando `dotnet pack`.</span><span class="sxs-lookup"><span data-stu-id="46815-109">This is most easily done with the `dotnet pack` command.</span></span>
 
-Imagine que acaba de escribir una nueva biblioteca sorprendente que quiere distribuir a través de NuGet.  Puede crear un paquete de NuGet con herramientas multiplataforma para hacer exactamente eso.  En el ejemplo siguiente, hay una biblioteca denominada **SuperAwesomeLibrary** con destino a `netstandard1.0`.
+<span data-ttu-id="46815-110">Imagine que acaba de escribir una nueva biblioteca sorprendente que quiere distribuir a través de NuGet.</span><span class="sxs-lookup"><span data-stu-id="46815-110">Imagine that you just wrote an awesome new library that you would like to distribute over NuGet.</span></span>  <span data-ttu-id="46815-111">Puede crear un paquete de NuGet con herramientas multiplataforma para hacer exactamente eso.</span><span class="sxs-lookup"><span data-stu-id="46815-111">You can create a NuGet package with cross platform tools to do exactly that!</span></span>  <span data-ttu-id="46815-112">En el ejemplo siguiente, hay una biblioteca denominada **SuperAwesomeLibrary** con destino a `netstandard1.0`.</span><span class="sxs-lookup"><span data-stu-id="46815-112">The following example assumes a library called **SuperAwesomeLibrary** which targets `netstandard1.0`.</span></span>
 
-Si tiene dependencias transitivas; es decir, un proyecto que depende de otro, deberá asegurarse de restaurar los paquetes para toda la solución con el comando `dotnet restore` antes de crear un paquete de NuGet.  Si no lo hace, el comando `dotnet pack` no funcionará correctamente.
+<span data-ttu-id="46815-113">Si tiene dependencias transitivas; es decir, un proyecto que depende de otro, deberá asegurarse de restaurar los paquetes para toda la solución con el comando `dotnet restore` antes de crear un paquete de NuGet.</span><span class="sxs-lookup"><span data-stu-id="46815-113">If you have transitive dependencies; that is, a project which depends on another project, you'll need to make sure to restore packages for your entire solution with the `dotnet restore` command before creating a NuGet package.</span></span>  <span data-ttu-id="46815-114">Si no lo hace, el comando `dotnet pack` no funcionará correctamente.</span><span class="sxs-lookup"><span data-stu-id="46815-114">Failing to do so will result in the `dotnet pack` command to not work properly.</span></span>
 
-Después de asegurarse de que se restauran los paquetes, puede ir hasta el directorio donde reside una biblioteca:
+[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
+
+
+<span data-ttu-id="46815-115">Después de asegurarse de que se restauran los paquetes, puede ir hasta el directorio donde reside una biblioteca:</span><span class="sxs-lookup"><span data-stu-id="46815-115">After ensuring packages are restored, you can navigate to the directory where a library lives:</span></span>
 
 `$ cd src/SuperAwesomeLibrary`
 
-Luego, es solo cuestión de un comando desde la línea de comandos:
+<span data-ttu-id="46815-116">Luego, es solo cuestión de un comando desde la línea de comandos:</span><span class="sxs-lookup"><span data-stu-id="46815-116">Then it's just a single command from the command line:</span></span>
     
 `$ dotnet pack`
 
-Su carpeta `/bin/Debug` tendrá un aspecto similar al siguiente:
+<span data-ttu-id="46815-117">Su carpeta `/bin/Debug` tendrá un aspecto similar al siguiente:</span><span class="sxs-lookup"><span data-stu-id="46815-117">Your `/bin/Debug` folder will now look like this:</span></span>
 
 ```
 $ ls bin/Debug
@@ -47,11 +48,11 @@ SuperAwesomeLibrary.1.0.0.nupkg
 SuperAwesomeLibrary.1.0.0.symbols.nupkg
 ```
 
-Tenga en cuenta que esto producirá un paquete que se puede depurar.  Si quiere compilar un paquete de NuGet con archivos binarios de versión comercial, todo lo que tiene que hacer es agregar el modificador `-c`/`--configuration` y usar `release` como argumento.
+<span data-ttu-id="46815-118">Tenga en cuenta que esto producirá un paquete que se puede depurar.</span><span class="sxs-lookup"><span data-stu-id="46815-118">Note that this will produce a package which is capable of being debugged.</span></span>  <span data-ttu-id="46815-119">Si quiere compilar un paquete de NuGet con archivos binarios de versión comercial, todo lo que tiene que hacer es agregar el modificador `-c`/`--configuration` y usar `release` como argumento.</span><span class="sxs-lookup"><span data-stu-id="46815-119">If you want to build a NuGet package with release binaries, all you need to do is add the `-c`/`--configuration` switch and use `release` as the argument.</span></span>
 
 `$ dotnet pack --configuration release`
 
-Su `/bin` carpeta tendrá ahora una `release` carpeta que contiene el paquete de NuGet con archivos binarios de versión:
+<span data-ttu-id="46815-120">Su `/bin` carpeta tendrá ahora una `release` carpeta que contiene el paquete de NuGet con archivos binarios de versión:</span><span class="sxs-lookup"><span data-stu-id="46815-120">Your `/bin` folder will now have a `release` folder containing your NuGet package with release binaries:</span></span>
 
 ```
 $ ls bin/release
@@ -61,9 +62,8 @@ SuperAwesomeLibrary.1.0.0.nupkg
 SuperAwesomeLibrary.1.0.0.symbols.nupkg
 ```
 
-Y ahora tiene los archivos necesarios para publicar un paquete de NuGet.
+<span data-ttu-id="46815-121">Y ahora tiene los archivos necesarios para publicar un paquete de NuGet.</span><span class="sxs-lookup"><span data-stu-id="46815-121">And now you have the necessary files to publish a NuGet package!</span></span>
 
-## <a name="dont-confuse-dotnet-pack-with-dotnet-publish"></a>`dotnet pack`No confunda `dotnet publish` con
+## <a name="dont-confuse-dotnet-pack-with-dotnet-publish"></a><span data-ttu-id="46815-122">`dotnet pack`No confunda `dotnet publish` con</span><span class="sxs-lookup"><span data-stu-id="46815-122">Don't confuse `dotnet pack` with `dotnet publish`</span></span>
 
-Es importante tener en cuenta que en ningún momento participa el comando `dotnet publish`.  El comando `dotnet publish` es para la implementación de aplicaciones con todas sus dependencias en el mismo paquete, no para generar un paquete de NuGet para distribuir y consumir a través de NuGet.
-
+<span data-ttu-id="46815-123">Es importante tener en cuenta que en ningún momento participa el comando `dotnet publish`.</span><span class="sxs-lookup"><span data-stu-id="46815-123">It is important to note that at no point is the `dotnet publish` command involved.</span></span>  <span data-ttu-id="46815-124">El comando `dotnet publish` es para la implementación de aplicaciones con todas sus dependencias en el mismo paquete, no para generar un paquete de NuGet para distribuir y consumir a través de NuGet.</span><span class="sxs-lookup"><span data-stu-id="46815-124">The `dotnet publish` command is for deploying applications with all of their dependencies in the same bundle -  not for generating a NuGet package to be distributed and consumed via NuGet.</span></span>

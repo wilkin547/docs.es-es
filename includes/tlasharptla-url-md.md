@@ -1,1 +1,1 @@
-Dirección URL
+<span data-ttu-id="e4e0b-101">Dirección URL</span><span class="sxs-lookup"><span data-stu-id="e4e0b-101">URL</span></span>

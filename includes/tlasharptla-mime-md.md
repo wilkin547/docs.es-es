@@ -1,1 +1,1 @@
-Extensiones multipropósito de correo Internet (MIME)
+<span data-ttu-id="46304-101">Extensiones multipropósito de correo Internet (MIME)</span><span class="sxs-lookup"><span data-stu-id="46304-101">Multipurpose Internet Mail Extensions (MIME)</span></span>

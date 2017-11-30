@@ -1,1 +1,1 @@
-Aplicación del explorador XAML (WPF)
+<span data-ttu-id="83ae4-101">Aplicación del explorador XAML (WPF)</span><span class="sxs-lookup"><span data-stu-id="83ae4-101">XAML Browser Application (WPF)</span></span>
