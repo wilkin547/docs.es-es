@@ -1,113 +1,111 @@
 ---
-title: "Convenciones generales de nomenclatura | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "nombres [.NET Framework], conflictos"
-  - "nombres de tipo de conflictos"
-  - "nombres de tipo específicos de idioma"
-  - "nombres [.NET Framework], acerca de las directrices de nomenclatura"
-  - "abreviaturas de los nombres [.NET Framework]"
-  - "instrucciones de nomenclatura de abreviatura"
-  - "instrucciones de acrónimos de nomenclatura"
-  - "Notación húngara"
-  - "nombres [.NET Framework], nombres de tipo"
-  - "nombres [.NET Framework], acrónimos"
+title: Convenciones generales de nomenclatura
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- names [.NET Framework], conflicts
+- type names, conflicts
+- language-specific type names
+- names [.NET Framework], about naming guidelines
+- names [.NET Framework], abbreviations
+- abbreviation naming guidelines
+- acronym naming guidelines
+- Hungarian notation
+- names [.NET Framework], type names
+- names [.NET Framework], acronyms
 ms.assetid: d3a77ea1-75d2-4969-a8c3-3e1e3e1aaedc
-caps.latest.revision: 18
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: dde3adbb7640978829dea4b977ed14eec38a9077
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Convenciones generales de nomenclatura
-Esta sección describe las convenciones generales de nomenclatura relacionadas con la elección de palabras, instrucciones de uso de las abreviaturas y acrónimos y recomendaciones acerca de cómo evitar el uso de nombres específicos de idioma.  
+# <a name="general-naming-conventions"></a>Convenciones generales de nomenclatura
+Esta sección describe generales convenciones de nomenclatura que se relacionan con la elección de palabras, directrices sobre el uso de las abreviaturas y acrónimos y recomendaciones sobre cómo evitar el uso de nombres específicos del idioma.  
   
-## Elección de palabras  
- **✓ hacer** elegir nombres de identificador fácilmente legible.  
+## <a name="word-choice"></a>Elección de palabras  
+ **✓ HACER** elegir nombres fácilmente legibles para los identificadores.  
   
- Por ejemplo, una propiedad denominada `HorizontalAlignment` es inglés\-lee mejor que `AlignmentHorizontal`.  
+ Por ejemplo, una propiedad denominada `HorizontalAlignment` es inglés-lee mejor que `AlignmentHorizontal`.  
   
- **✓ hacer** preferible la legibilidad a la brevedad.  
+ **✓ HACER** preferible la legibilidad a la mayor brevedad.  
   
- El nombre de propiedad `CanScrollHorizontally` es mejor que `ScrollableX` \(una referencia oculta al eje x\).  
+ El nombre de propiedad `CanScrollHorizontally` es mejor que `ScrollableX` (una referencia oculta al eje x).  
   
- **X no** usar caracteres de subrayado, guiones o caracteres no alfanuméricos.  
+ **X DO NOT** usar caracteres de subrayado, guiones o caracteres no alfanuméricos.  
   
- **X no** utilizar la notación húngara.  
+ **X DO NOT** utilizar la notación húngara.  
   
- **Evitar X** mediante identificadores que están en conflicto con las palabras clave de ampliamente utilizado lenguajes de programación.  
+ **X evitar** utilizando identificadores que están en conflicto con las palabras clave de ampliamente utilizar lenguajes de programación.  
   
- Según la regla 4 de Common Language Specification \(CLS\), todos los lenguajes compatibles con deben proporcionar un mecanismo que permite el acceso a elementos con nombre que utilizar una palabra clave de ese idioma como identificador. C\#, por ejemplo, utiliza el signo como un mecanismo de escape en este caso @. Sin embargo, todavía es una buena idea evitar palabras clave comunes porque es mucho más difícil de usar un método con la secuencia de escape que uno sin él.  
+ Según la regla 4 de Common Language Specification (CLS), todos los lenguajes compatibles con deben proporcionar un mecanismo que permite el acceso a elementos con nombre que utiliza una palabra clave de ese idioma como un identificador. C#, por ejemplo, utiliza el @ inicio de sesión como un mecanismo de escape en este caso. Sin embargo, todavía es una buena idea para evitar palabras clave comunes porque es mucho más difícil de usar un método con la secuencia de escape que uno sin él.  
   
-## Uso de las abreviaturas y acrónimos  
- **X no** utilice abreviaturas ni contracciones como parte de los nombres de identificador.  
+## <a name="using-abbreviations-and-acronyms"></a>Uso de las abreviaturas y acrónimos  
+ **X DO NOT** utilice abreviaturas ni contracciones como parte de los nombres de identificador.  
   
  Por ejemplo, utilice `GetWindow` en lugar de `GetWin`.  
   
- **X no** utilice cualquier ningún acrónimo que no es ampliamente aceptado e incluso si lo son, sólo cuando sea necesario.  
+ **X DO NOT** usar los acrónimos que no son ampliamente aceptada e incluso si son, solo cuando sea necesario.  
   
-## Evitar los nombres específicos de lenguaje  
- **✓ hacer** utilice nombres con interés semántico en lugar de palabras clave específicas del idioma para nombres de tipo.  
+## <a name="avoiding-language-specific-names"></a>Evitar los nombres específicos del idioma  
+ **✓ HACER** utilice nombres con interés semántico en lugar de palabras clave específicas del idioma para los nombres de tipo.  
   
- Por ejemplo, `GetLength` es mejor nombre que `GetInt`.  
+ Por ejemplo, `GetLength` es un nombre más adecuado que `GetInt`.  
   
- **✓ hacer** utilizar un nombre de tipo genérico de CLR, en lugar de un nombre de idioma específico, en casos raros cuando un identificador no tiene ningún significado semántico más allá de su tipo.  
+ **✓ HACER** utilizar un nombre de tipo genérico de CLR, en lugar de un nombre específico del lenguaje, en los casos poco frecuentes cuando un identificador no tiene ningún significado semántico más allá de su tipo.  
   
- Por ejemplo, un método de conversión a <xref:System.Int64> deben llamarse `ToInt64`, no `ToLong` \(porque <xref:System.Int64> es un nombre CLR para C\#\-alias específico `long`\). La tabla siguiente presenta varios tipos de base de datos utilizando los nombres de tipo CLR \(así como los nombres de tipo correspondiente para C\#, Visual Basic y C\+\+\).  
+ Por ejemplo, un método de conversión a <xref:System.Int64> debe denominarse `ToInt64`, no `ToLong` (porque <xref:System.Int64> es un nombre CLR para C#-alias específico `long`). En la tabla siguiente presenta varios tipos de base de datos con los nombres de tipo CLR (así como los nombres de tipo correspondiente para C#, Visual Basic y C++).  
   
-|C\#|Visual Basic|C\+\+|CLR|  
+|C#|Visual Basic|C++|CLR|  
 |---------|------------------|-----------|---------|  
 |**sbyte**|**SByte**|**char**|**SByte**|  
 |**byte**|**Byte**|**unsigned char**|**Byte**|  
-|**short**|**Corto**|**short**|**Int16**|  
+|**short**|**Short**|**short**|**Int16**|  
 |**ushort**|**UInt16**|**unsigned short**|**UInt16**|  
 |**int**|**Integer**|**int**|**Int32**|  
 |**uint**|**UInt32**|**unsigned int**|**UInt32**|  
-|**long**|**Long**|**\_\_int64**|**Int64**|  
-|**ulong**|**UInt64**|**unsigned \_\_int64**|**UInt64**|  
+|**long**|**Long**|**__int64**|**Int64**|  
+|**ulong**|**UInt64**|**unsigned __int64**|**UInt64**|  
 |**float**|**Single**|**float**|**Single**|  
-|**double**|**Doble**|**double**|**Doble**|  
-|**bool**|**Booleano**|**bool**|**Booleano**|  
-|**char**|**Char**|**wchar\_t**|**Char**|  
+|**double**|**Double**|**double**|**Double**|  
+|**bool**|**Boolean**|**bool**|**Boolean**|  
+|**char**|**Char**|**wchar_t**|**Char**|  
 |**string**|**String**|**String**|**String**|  
-|**objeto**|**Objeto**|**Objeto**|**Objeto**|  
+|**object**|**Objeto**|**Objeto**|**Objeto**|  
   
- **✓ hacer**  utilizar un nombre común, como `value` o `item`, en lugar de repetir el nombre de tipo, en casos raros cuando un identificador no tiene ningún significado semántico y el tipo del parámetro no es importante.  
+ **✓ HACER** utilizar un nombre común, como `value` o `item`, en lugar de repetir el nombre de tipo, en los casos poco frecuentes cuando un identificador no tiene ningún significado semántico y el tipo del parámetro no es importante.  
   
-## Nomenclatura de las nuevas versiones de API existentes  
- **✓ hacer** utilizar un nombre similar a la API antigua al crear nuevas versiones de una API existente.  
+## <a name="naming-new-versions-of-existing-apis"></a>Nomenclatura de las nuevas versiones de API existentes  
+ **✓ HACER** usar un nombre similar a la API anterior al crear nuevas versiones de una API existente.  
   
  Esto ayuda a resaltar la relación entre las API.  
   
- **✓ hacer** prefiera agregar un sufijo, en lugar de un prefijo para indicar una nueva versión de una API existente.  
+ **✓ HACER** prefiera agregar un sufijo, en lugar de un prefijo para indicar una nueva versión de una API existente.  
   
- Esto le ayudará a detección al examinar la documentación, o mediante Intellisense. La versión anterior de la API se organizarán cerca de las nuevas API, porque la mayoría de los exploradores y Intellisense muestran los identificadores en orden alfabético.  
+ Esto ayudará a detección al examinar la documentación, o usar Intellisense. La versión anterior de la API se organizarán cerca de las nuevas API, dado que la mayoría de los exploradores e Intellisense mostrar identificadores en orden alfabético.  
   
- **✓ considere** con un identificador nuevo, pero significativo, en lugar de agregar un prefijo o un sufijo.  
+ **✓ Considere la posibilidad de** con un identificador nuevo, pero significativo, en lugar de agregar un prefijo o un sufijo.  
   
- **✓ hacer** use un sufijo numérico para indicar una nueva versión de una API existente, especialmente si el nombre de la API existente es el único nombre que tenga sentido \(por ejemplo, si es un estándar del sector\) y si agregar significativo cualquier sufijo \(o cambiar el nombre\) no es una opción adecuada.  
+ **✓ HACER** use un sufijo numérico para indicar una nueva versión de una API existente, especialmente si el nombre de la API existente es el nombre único que tenga sentido (es decir, si es un estándar del sector) y si agregar cualquier significativo sufijo (o cambiar el nombre) no es una aplicación opción de ropriate.  
   
- **X no** utilizar "Ex" \(o similar\) sufijo para un identificador para distinguir de una versión anterior de la misma API.  
+ **X DO NOT** usar "Ex" (u otro similar) sufijo para un identificador distinguir de una versión anterior de la misma API.  
   
- **✓ hacer** utilizar el sufijo "64" al introducir las versiones de API que operan en un entero de 64 bits \(un entero largo\) en lugar de un entero de 32 bits. Sólo necesitará adoptar este enfoque cuando exista la API de 32 bits existente. no lo haga para la nuevas API con sólo una versión de 64 bits.  
+ **✓ HACER** utilizar el sufijo "64" al introducir las versiones de API que operan en un entero de 64 bits (un entero largo) en lugar de un entero de 32 bits. Solo debe adoptar este enfoque cuando existe la API de 32 bits existente; no lo haga para la nuevas API con solo una versión de 64 bits.  
   
- *Partes © 2009, 2005 Microsoft Corporation. Todos los derechos reservados.*  
+ *Partes © 2005, 2009 Microsoft Corporation. Reservados todos los derechos.*  
   
- *Reimpreso con permiso de Pearson Education, Inc. de [las directrices de diseño de Framework: convenciones, expresiones idiomáticas y patrones para las bibliotecas .NET de reutilizable, 2nd Edition](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina y Brad Abrams, publicado el 22 de octubre de 2008 por Addison\-Wesley Professional como parte de la serie de desarrollo de Microsoft Windows.*  
+ *Volver a imprimir en el permiso de educación de Pearson, Inc. de [directrices de diseño de marco de trabajo: convenciones, expresiones y patrones para las bibliotecas .NET de reutilizable, 2ª edición](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina y Brad Abrams, publicado el 22 de octubre de 2008 por Addison-Wesley Professional como parte de la serie de desarrollo de Microsoft Windows.*  
   
-## Vea también  
- [Instrucciones de diseño de Framework](../../../docs/standard/design-guidelines/index.md)   
- [Instrucciones de nomenclatura](../../../docs/standard/design-guidelines/naming-guidelines.md)
+## <a name="see-also"></a>Vea también  
+ [Instrucciones de diseño de .NET Framework](../../../docs/standard/design-guidelines/index.md)  
+ [Las directrices de nomenclatura](../../../docs/standard/design-guidelines/naming-guidelines.md)

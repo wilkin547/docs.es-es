@@ -1,82 +1,84 @@
 ---
-title: "&lt;add&gt; (Elemento para webRequestModules, Configuraci&#243;n de red) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/webRequestModules/add"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#add"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<add> (elemento), webRequestModules"
-  - "<webRequestModules>, add (elemento)"
-  - "add (elemento), webRequestModules"
-  - "webRequestModules, add (elemento)"
+title: "&lt;agregar&gt; elemento para webRequestModules (configuración de red)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/webRequestModules/add
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#add
+helpviewer_keywords:
+- <webRequestModules>, add element
+- webRequestModules, add element
+- add element, webRequestModules
+- <add> element, webRequestModules
 ms.assetid: 47ec4adc-f39f-4bcd-8680-1ec21fd26890
-caps.latest.revision: 16
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: fd407f77e75bce4bdbc37acd5f28bbe39f92d564
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;add&gt; (Elemento para webRequestModules, Configuraci&#243;n de red)
+# <a name="ltaddgt-element-for-webrequestmodules-network-settings"></a>&lt;agregar&gt; elemento para webRequestModules (configuración de red)
 Agrega un módulo de solicitud Web personalizado a la aplicación.  
   
-## Sintaxis  
+ \<configuration>  
+\<System.NET >  
+\<webRequestModules >  
+\<add>  
   
-```  
+## <a name="syntax"></a>Sintaxis  
   
-      <add   
-  prefix = "URI prefix"   
-  type = "module name, Version, Culture, PublicKeyToken"   
+```xml  
+<add   
+  prefix="URI prefix"   
+  type="type_fullname, assembly_fullname"   
 />  
 ```  
   
-## Atributos y elementos  
+## <a name="attributes-and-elements"></a>Atributos y elementos  
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
-### Atributos  
+### <a name="attributes"></a>Atributos  
   
-|**Atributo**|**Descripción**|  
-|------------------|---------------------|  
-|`prefix`|Prefijo URI para las solicitudes controladas por este módulo de solicitud Web.|  
-|`type`|Nombre de ensamblado y de clase del módulo que implementa este módulo de solicitud Web.|  
+|**Attribute**|**Descripción**|  
+|-------------------|---------------------|  
+|`prefix`|El prefijo URI para las solicitudes administradas por este módulo de solicitud Web.|  
+|`type`|El nombre de tipo completo (indicado por la <xref:System.Type.FullName%2A> propiedad) y el nombre del ensamblado (indicado por el <xref:System.Reflection.Assembly.FullName%2A> propiedad), separados por comas, que implementa este módulo de solicitud Web.|  
   
-### Elementos secundarios  
+### <a name="child-elements"></a>Elementos secundarios  
  Ninguno.  
   
-### Elementos primarios  
+### <a name="parent-elements"></a>Elementos primarios  
   
-|**Elemento**|**Descripción**|  
-|------------------|---------------------|  
-|[webRequestModules](../../../../../docs/framework/configure-apps/file-schema/network/webrequestmodules-element-network-settings.md)|Especifica los módulos que se utilizan para solicitar información a hosts de la red.|  
+|**Element**|**Descripción**|  
+|-----------------|---------------------|  
+|[webRequestModules](../../../../../docs/framework/configure-apps/file-schema/network/webrequestmodules-element-network-settings.md)|Especifica los módulos que se utilizan para solicitar información de hosts de la red.|  
   
-## Comentarios  
- El atributo `prefix` define el prefijo URI que utiliza el módulo de solicitud Web especificado.  Los módulos de solicitud Web normalmente se registran con el fin de controlar un protocolo específico, como HTTP o FTP, pero también se pueden registrar para controlar una solicitud en un servidor específico o en una ruta de acceso de un servidor.  
+## <a name="remarks"></a>Comentarios  
+ El `prefix` atributo define el prefijo URI que utiliza el módulo de solicitud Web especificado. Módulos de solicitud Web suelen registrarse para controlar un protocolo específico, como HTTP o FTP, pero se pueden registrar para controlar una solicitud a un servidor específico o una ruta de acceso en un servidor.  
   
- El módulo de solicitud web se crea cuando se pasa al método <xref:System.Net.WebRequest.Create%2A?displayProperty=fullName> un prefijo URI coincidente.  
+ El módulo de solicitud Web se crea cuando se pasa a la <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> método.  
   
- El valor para el atributo `prefix` debería corresponder a los caracteres principales de un URI válido \(por ejemplo, "http" o "http:\/\/www.contoso.com".  
+ El valor de la `prefix` atributo debe ser los primeros caracteres de un URI válido, por ejemplo, "http" o "http://www.contoso.com".  
   
- El valor para el atributo `type` debería ser un nombre de archivo DLL válido y el nombre de clase correspondiente, separados por una coma.  
+ El valor de la `type` atributo debe ser un nombre de tipo válido y el nombre de ensamblado correspondiente, separados por punto y coma.  
   
-## Archivos de configuración  
- Este elemento puede utilizarse en el archivo de configuración de la aplicación o en el archivo de configuración del equipo \(Machine.config\).  
+## <a name="configuration-files"></a>Archivos de configuración  
+ Este elemento se puede usar en el archivo de configuración de la aplicación o en el archivo de configuración del equipo (Machine.config).  
   
-## Ejemplo  
- En el ejemplo de código siguiente se registra un módulo de solicitud Web personalizado para HTTP.  Deberían reemplazarse los valores de Version y PublicKeyToken con los valores correctos para el módulo especificado.  
+## <a name="example"></a>Ejemplo  
+ En el ejemplo siguiente se registra un módulo de solicitud Web personalizado para HTTP. Debe reemplazar los valores de Version y PublicKeyToken con los valores correctos para el módulo especificado.  
   
-```  
+```xml  
 <configuration>  
   <system.net>  
     <webRequestModules>  
@@ -89,6 +91,6 @@ Agrega un módulo de solicitud Web personalizado a la aplicación.
 </configuration>  
 ```  
   
-## Vea también  
- <xref:System.Net.WebRequest>   
+## <a name="see-also"></a>Vea también  
+ <xref:System.Net.WebRequest>  
  [Esquema de la configuración de red](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
