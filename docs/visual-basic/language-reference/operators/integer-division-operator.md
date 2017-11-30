@@ -1,87 +1,85 @@
 ---
-title: "\ (Operador, Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.\"
-  - "\"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "\ (operador) [Visual Basic]"
-  - "operadores aritméticos, división"
-  - "barra diagonal inversa (\) [Visual Basic]"
-  - "operador de división, enteros"
-  - "división, entre cero"
-  - "operador de división de número entero"
-  - "cociente entero"
-  - "operadores matemáticos"
-  - "cocientes, enteros"
-  - "truncamiento, división de enteros"
-  - "cero, división por cero"
+title: '\ (Operador, Visual Basic)'
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vb.\
+- '\'
+helpviewer_keywords:
+- division operator [Visual Basic], integer
+- integer division operator [Visual Basic]
+- zero, division by zero
+- arithmetic operators [Visual Basic], division
+- division [Visual Basic], by zero
+- backslash (\) [Visual Basic]
+- '\ operator [Visual Basic]'
+- integer quotient
+- math operators [Visual Basic]
+- quotients, integer
+- truncation [Visual Basic], integer division
 ms.assetid: 4b0ee347-950c-45c9-8e23-54bc85df208e
-caps.latest.revision: 17
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 38718b109b4b3865238267039908ea1d51d06229
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# \ (Operador, Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-Divide dos números y devuelve un resultado de número entero.  
+# <a name="-operator-visual-basic"></a><span data-ttu-id="df1c3-102">\ (Operador, Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="df1c3-102">\ Operator (Visual Basic)</span></span>
+<span data-ttu-id="df1c3-103">Divide dos números y devuelve un resultado entero.</span><span class="sxs-lookup"><span data-stu-id="df1c3-103">Divides two numbers and returns an integer result.</span></span>  
   
-## Sintaxis  
+## <a name="syntax"></a><span data-ttu-id="df1c3-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="df1c3-104">Syntax</span></span>  
   
 ```  
-  
 expression1 \ expression2  
 ```  
   
-## Elementos  
+## <a name="parts"></a><span data-ttu-id="df1c3-105">Elementos</span><span class="sxs-lookup"><span data-stu-id="df1c3-105">Parts</span></span>  
  `expression1`  
- Obligatorio.  Cualquier expresión numérica.  
+ <span data-ttu-id="df1c3-106">Obligatorio.</span><span class="sxs-lookup"><span data-stu-id="df1c3-106">Required.</span></span> <span data-ttu-id="df1c3-107">Cualquier expresión numérica.</span><span class="sxs-lookup"><span data-stu-id="df1c3-107">Any numeric expression.</span></span>  
   
  `expression2`  
- Obligatorio.  Cualquier expresión numérica.  
+ <span data-ttu-id="df1c3-108">Obligatorio.</span><span class="sxs-lookup"><span data-stu-id="df1c3-108">Required.</span></span> <span data-ttu-id="df1c3-109">Cualquier expresión numérica.</span><span class="sxs-lookup"><span data-stu-id="df1c3-109">Any numeric expression.</span></span>  
   
-## Tipos admitidos  
- Todos los tipos numéricos, incluidos los tipos de punto flotante, sin signo y `Decimal`.  
+## <a name="supported-types"></a><span data-ttu-id="df1c3-110">Tipos admitidos</span><span class="sxs-lookup"><span data-stu-id="df1c3-110">Supported Types</span></span>  
+ <span data-ttu-id="df1c3-111">Todos los tipos numéricos, incluidos los tipos sin signo y de punto flotante y `Decimal`.</span><span class="sxs-lookup"><span data-stu-id="df1c3-111">All numeric types, including the unsigned and floating-point types and `Decimal`.</span></span>  
   
-## Resultado  
- El resultado es el cociente entero de `expression1` dividido por `expression2` que descarta cualquier resto y conserva sólo la parte entera.  Esto se conoce como *truncado*.  
+## <a name="result"></a><span data-ttu-id="df1c3-112">Resultado</span><span class="sxs-lookup"><span data-stu-id="df1c3-112">Result</span></span>  
+ <span data-ttu-id="df1c3-113">El resultado es el cociente entero de `expression1` dividido por `expression2`, que descarta cualquier resto y conserva sólo la parte entera.</span><span class="sxs-lookup"><span data-stu-id="df1c3-113">The result is the integer quotient of `expression1` divided by `expression2`, which discards any remainder and retains only the integer portion.</span></span> <span data-ttu-id="df1c3-114">Esto se conoce como *truncamiento*.</span><span class="sxs-lookup"><span data-stu-id="df1c3-114">This is known as *truncation*.</span></span>  
   
- El tipo de datos resultante es un tipo numérico adecuado para los tipos de datos de `expression1` y `expression2`.  Vea las tablas "Aritmética de enteros" en [Tipos de datos de resultados de operador](../../../visual-basic/language-reference/operators/data-types-of-operator-results.md).  
+ <span data-ttu-id="df1c3-115">El tipo de datos del resultado es un tipo numérico adecuado para los tipos de datos de `expression1` y `expression2`.</span><span class="sxs-lookup"><span data-stu-id="df1c3-115">The result data type is a numeric type appropriate for the data types of `expression1` and `expression2`.</span></span> <span data-ttu-id="df1c3-116">Vea las tablas "Aritmética de enteros" en [tipos de datos de resultados de operador](../../../visual-basic/language-reference/operators/data-types-of-operator-results.md).</span><span class="sxs-lookup"><span data-stu-id="df1c3-116">See the "Integer Arithmetic" tables in [Data Types of Operator Results](../../../visual-basic/language-reference/operators/data-types-of-operator-results.md).</span></span>  
   
- [\/ \(Operador\)](../../../visual-basic/language-reference/operators/floating-point-division-operator.md) devuelve el cociente completo que conserva el resto en la parte decimal.  
+ <span data-ttu-id="df1c3-117">El [/ (operador) (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-operator.md) devuelve el cociente completo, que conserva el resto en la parte fraccionaria.</span><span class="sxs-lookup"><span data-stu-id="df1c3-117">The [/ Operator (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-operator.md) returns the full quotient, which retains the remainder in the fractional portion.</span></span>  
   
-## Comentarios  
- Antes de realizar la división, Visual Basic intenta convertir cualquier expresión numérica de punto flotante en `Long`.  Si `Option Strict` es `On`, se produce un error del compilador.  Si `Option Strict` es `Off`, es posible que se produzca <xref:System.OverflowException> si el valor está fuera del intervalo de [Long \(Tipo de datos\)](../../../visual-basic/language-reference/data-types/long-data-type.md).  La conversión a `Long` también está sujeta al *redondeo bancario*.  Para obtener más información, vea "Partes decimales" en [Funciones de conversión de tipos](../../../visual-basic/language-reference/functions/type-conversion-functions.md).  
+## <a name="remarks"></a><span data-ttu-id="df1c3-118">Comentarios</span><span class="sxs-lookup"><span data-stu-id="df1c3-118">Remarks</span></span>  
+ <span data-ttu-id="df1c3-119">Antes de realizar la división, Visual Basic intenta convertir cualquier expresión numérica de punto flotante a `Long`.</span><span class="sxs-lookup"><span data-stu-id="df1c3-119">Before performing the division, Visual Basic attempts to convert any floating-point numeric expression to `Long`.</span></span> <span data-ttu-id="df1c3-120">Si `Option Strict` es `On`, se produce un error del compilador.</span><span class="sxs-lookup"><span data-stu-id="df1c3-120">If `Option Strict` is `On`, a compiler error occurs.</span></span> <span data-ttu-id="df1c3-121">Si `Option Strict` es `Off`, <xref:System.OverflowException> es posible si el valor está fuera del intervalo de la [tipo de datos Long](../../../visual-basic/language-reference/data-types/long-data-type.md).</span><span class="sxs-lookup"><span data-stu-id="df1c3-121">If `Option Strict` is `Off`, an <xref:System.OverflowException> is possible if the value is outside the range of the [Long Data Type](../../../visual-basic/language-reference/data-types/long-data-type.md).</span></span> <span data-ttu-id="df1c3-122">La conversión a `Long` también está sujeto a *el redondeo bancario*.</span><span class="sxs-lookup"><span data-stu-id="df1c3-122">The conversion to `Long` is also subject to *banker's rounding*.</span></span> <span data-ttu-id="df1c3-123">Para obtener más información, vea "Partes fraccionarias" en [funciones de conversión de tipo](../../../visual-basic/language-reference/functions/type-conversion-functions.md).</span><span class="sxs-lookup"><span data-stu-id="df1c3-123">For more information, see "Fractional Parts" in [Type Conversion Functions](../../../visual-basic/language-reference/functions/type-conversion-functions.md).</span></span>  
   
- Si se evalúa `expression1` o `expression2` como [Nothing](../../../visual-basic/language-reference/nothing.md), se trata como si fuese cero.  
+ <span data-ttu-id="df1c3-124">Si `expression1` o `expression2` se evalúa como [nada](../../../visual-basic/language-reference/nothing.md), se trata como cero.</span><span class="sxs-lookup"><span data-stu-id="df1c3-124">If `expression1` or `expression2` evaluates to [Nothing](../../../visual-basic/language-reference/nothing.md), it is treated as zero.</span></span>  
   
-## Intento de dividir por cero  
- Si se evalúa `expression2` a cero, el operador `\` produce una excepción <xref:System.DivideByZeroException>.  Esto es verdad para todos los tipos de datos numéricos de los operandos.  
+## <a name="attempted-division-by-zero"></a><span data-ttu-id="df1c3-125">División por cero intentada</span><span class="sxs-lookup"><span data-stu-id="df1c3-125">Attempted Division by Zero</span></span>  
+ <span data-ttu-id="df1c3-126">Si `expression2` se evalúa como cero, el `\` operador produce una <xref:System.DivideByZeroException> excepción.</span><span class="sxs-lookup"><span data-stu-id="df1c3-126">If `expression2` evaluates to zero, the `\` operator throws a <xref:System.DivideByZeroException> exception.</span></span> <span data-ttu-id="df1c3-127">Esto es cierto para todos los tipos de datos numéricos de los operandos.</span><span class="sxs-lookup"><span data-stu-id="df1c3-127">This is true for all numeric data types of the operands.</span></span>  
   
 > [!NOTE]
->  El operador `\` se puede *sobrecargar*, lo que significa que una clase o una estructura pueden definir de nuevo su comportamiento cuando un operando tiene el tipo de dicha clase o estructura.  Si el código utiliza este operador en una clase o estructura de este tipo, asegúrese de conocer su comportamiento redefinido.  Para obtener más información, vea [Procedimientos de operador](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+>  <span data-ttu-id="df1c3-128">El `\` puede ser *sobrecargados*, lo que significa que una clase o estructura puede definir de nuevo su comportamiento cuando un operando tiene el tipo de esa clase o estructura.</span><span class="sxs-lookup"><span data-stu-id="df1c3-128">The `\` operator can be *overloaded*, which means that a class or structure can redefine its behavior when an operand has the type of that class or structure.</span></span> <span data-ttu-id="df1c3-129">Si el código usa este operador en una clase o estructura de este tipo, asegúrese de que conocer su comportamiento redefinido.</span><span class="sxs-lookup"><span data-stu-id="df1c3-129">If your code uses this operator on such a class or structure, be sure you understand its redefined behavior.</span></span> <span data-ttu-id="df1c3-130">Para obtener más información, consulte [procedimientos de operadores](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).</span><span class="sxs-lookup"><span data-stu-id="df1c3-130">For more information, see [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).</span></span>  
   
-## Ejemplo  
- En el siguiente ejemplo se usa el operador `\` para realizar una división de entero.  El resultado será un número entero que representa el cociente entero de ambos operandos, con el resto descartado.  
+## <a name="example"></a><span data-ttu-id="df1c3-131">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="df1c3-131">Example</span></span>  
+ <span data-ttu-id="df1c3-132">En el ejemplo siguiente se usa el `\` operador que se va a realizar la división de enteros.</span><span class="sxs-lookup"><span data-stu-id="df1c3-132">The following example uses the `\` operator to perform integer division.</span></span> <span data-ttu-id="df1c3-133">El resultado es un entero que representa el cociente entero de los dos operandos, rechazando el resto.</span><span class="sxs-lookup"><span data-stu-id="df1c3-133">The result is an integer that represents the integer quotient of the two operands, with the remainder discarded.</span></span>  
   
  [!code-vb[VbVbalrOperators#18](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/integer-division-operator_1.vb)]  
   
- Las expresiones en el ejemplo anterior devuelven valores de 2, 3, 33 y \-22 respectivamente.  
+ <span data-ttu-id="df1c3-134">Las expresiones en el ejemplo anterior devuelven valores de 2, 3, 33 y -22 respectivamente.</span><span class="sxs-lookup"><span data-stu-id="df1c3-134">The expressions in the preceding example return values of 2, 3, 33, and -22, respectively.</span></span>  
   
-## Vea también  
- [\\\= \(Operador\)](../../../visual-basic/language-reference/operators/subtraction-assignment-operator.md)   
- [\/ \(Operador\)](../../../visual-basic/language-reference/operators/floating-point-division-operator.md)   
- [Option Strict \(Instrucción\)](../../../visual-basic/language-reference/statements/option-strict-statement.md)   
- [Operadores aritméticos](../../../visual-basic/language-reference/operators/arithmetic-operators.md)   
- [Prioridad de operador en Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)   
- [Operadores enumerados por funcionalidad](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)   
- [Operadores aritméticos en Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
+## <a name="see-also"></a><span data-ttu-id="df1c3-135">Vea también</span><span class="sxs-lookup"><span data-stu-id="df1c3-135">See Also</span></span>  
+ [<span data-ttu-id="df1c3-136">\\= (Operador)</span><span class="sxs-lookup"><span data-stu-id="df1c3-136">\\= Operator</span></span>](../../../visual-basic/language-reference/operators/integer-division-assignment-operator.md)  
+ [<span data-ttu-id="df1c3-137">/ (Operador, Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="df1c3-137">/ Operator (Visual Basic)</span></span>](../../../visual-basic/language-reference/operators/floating-point-division-operator.md)  
+ [<span data-ttu-id="df1c3-138">Option Strict (instrucción)</span><span class="sxs-lookup"><span data-stu-id="df1c3-138">Option Strict Statement</span></span>](../../../visual-basic/language-reference/statements/option-strict-statement.md)  
+ [<span data-ttu-id="df1c3-139">Operadores aritméticos</span><span class="sxs-lookup"><span data-stu-id="df1c3-139">Arithmetic Operators</span></span>](../../../visual-basic/language-reference/operators/arithmetic-operators.md)  
+ [<span data-ttu-id="df1c3-140">Prioridad de operador en Visual Basic</span><span class="sxs-lookup"><span data-stu-id="df1c3-140">Operator Precedence in Visual Basic</span></span>](../../../visual-basic/language-reference/operators/operator-precedence.md)  
+ [<span data-ttu-id="df1c3-141">Operadores enumerados por funcionalidad</span><span class="sxs-lookup"><span data-stu-id="df1c3-141">Operators Listed by Functionality</span></span>](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)  
+ [<span data-ttu-id="df1c3-142">Operadores aritméticos en Visual Basic</span><span class="sxs-lookup"><span data-stu-id="df1c3-142">Arithmetic Operators in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
