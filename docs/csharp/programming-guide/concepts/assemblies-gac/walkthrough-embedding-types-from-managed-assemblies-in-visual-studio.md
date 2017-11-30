@@ -1,30 +1,21 @@
 ---
 title: 'Tutorial: Insertar tipos de ensamblados administrados en Visual Studio (C#)'
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 55ed13c9-c5bb-4bc2-bcd8-0587eb568864
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: cbd95c71525a92714ab5758855964e323345b2e5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 7b003e76229a06883adc22f933f08663330f0c9d
-ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="walkthrough-embedding-types-from-managed-assemblies-in-visual-studio-c"></a>Tutorial: Insertar tipos de ensamblados administrados en Visual Studio (C#)
 Si inserta información de tipos de un ensamblado administrado con nombre seguro, puede acoplar tipos holgadamente en una aplicación para lograr independencia de versiones. Es decir, el programa puede escribirse de modo que use tipos de varias versiones de una biblioteca administrada sin tener que volver a compilarse para cada versión.  
@@ -49,7 +40,7 @@ Si inserta información de tipos de un ensamblado administrado con nombre seguro
   
 -   Las constantes no se insertan.  
   
--   La clase <xref:System.Collections.Generic.Dictionary%602?displayProperty=fullName> no admite un tipo insertado como clave. Puede implementar su propio tipo de diccionario que admita un tipo insertado como clave.  
+-   La clase <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> no admite un tipo insertado como clave. Puede implementar su propio tipo de diccionario que admita un tipo insertado como clave.  
   
  En este tutorial, se realizarán las siguientes tareas:  
   
@@ -250,8 +241,7 @@ Si inserta información de tipos de un ensamblado administrado con nombre seguro
 6.  En el Explorador de archivos, abra la carpeta de la ruta de acceso de salida (por ejemplo, C:\TypeEquivalenceSample). Haga doble clic en el archivo TypeEquivalenceClient.exe para ejecutar el programa. El programa reflejará la nueva versión del ensamblado TypeEquivalenceRuntime sin tener que volver a compilarse de nuevo.  
   
 ## <a name="see-also"></a>Vea también  
- [/link (Opciones del compilador de C#)](../../../../csharp/language-reference/compiler-options/link-compiler-option.md)   
- [Guía de programación de C#](../../../../csharp/programming-guide/index.md)   
- [Programar con ensamblados](../../../../framework/app-domains/programming-with-assemblies.md)   
+ [/link (Opciones del compilador de C#)](../../../../csharp/language-reference/compiler-options/link-compiler-option.md)  
+ [Guía de programación de C#](../../../../csharp/programming-guide/index.md)  
+ [Programar con ensamblados](../../../../framework/app-domains/programming-with-assemblies.md)  
  [Assemblies and the Global Assembly Cache (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md) (Ensamblados y caché global de ensamblados [C#])
-

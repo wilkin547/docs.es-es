@@ -1,41 +1,23 @@
 ---
 title: "Especificación del lenguaje C# 6.0 (borrador)"
-ms.date: 2017-07-01
+ms.date: 07/01/2017
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: reference
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - C# language, specification
 - what's new [C#], language specification
 - Visual C#, C# language specification
 - language specification [C#]
 ms.assetid: e5d5a5cc-636b-4bff-b9c8-a8edc6207c22
-caps.latest.revision: 46
+caps.latest.revision: "46"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 0b29fac68cec80687cb6aab35a821a731cd237a5
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: dbc7f6ad4e6ddd30b3c808840420335a0c0155ad
-ms.openlocfilehash: 904b0f5bf99ed133eb505f65faaa63ca99053f5a
-ms.contentlocale: es-es
-ms.lasthandoff: 08/23/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="c-60-draft-language-specification"></a>Especificación del lenguaje C# 6.0 (borrador)
 La especificación del lenguaje C# es el origen definitivo de la sintaxis y el uso de C#. Esta especificación contiene información detallada sobre todos los aspectos del lenguaje, incluidos muchos aspectos que la documentación de Visual C# no abarca.
@@ -52,4 +34,3 @@ Los problemas del borrador de especificación deben crearse en el repositorio [d
 
 >[!div class="step-by-step"]
 [Siguiente](../../../../_csharplang/spec/lexical-structure.md)
-

@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - command prompt, Windows SDK
 - Visual Studio command prompt
@@ -23,16 +17,15 @@ helpviewer_keywords:
 - environment variables, setting for tools
 - developer command prompt
 ms.assetid: 94fcf524-9045-4993-bfb2-e2d8bad44219
-caps.latest.revision: 45
+caps.latest.revision: "45"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: e93a1d116ac0480c80e259ddbadbc65fd9539389
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 0287c3f250a57f7a685191702be3ad5cc28fbec6
-ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="developer-command-prompt-for-visual-studio"></a>Símbolo del sistema para desarrolladores de Visual Studio
 El símbolo del sistema para desarrolladores de Visual Studio establece automáticamente las variables de entorno que permiten usar fácilmente las herramientas de .NET Framework. El símbolo del sistema para desarrolladores se instala con la edición completa o la edición Community de Visual Studio. No se instala con las versiones Express de Visual Studio.  
@@ -102,6 +95,5 @@ El símbolo del sistema para desarrolladores de Visual Studio establece automát
  De este modo, se agregará el nuevo elemento de menú y ya podrá acceder al símbolo del sistema desde el menú **Herramientas**.  
   
 ## <a name="see-also"></a>Vea también  
- [Herramientas](../../../docs/framework/tools/index.md)   
+ [Herramientas](../../../docs/framework/tools/index.md)  
  [Administrar herramientas externas](/visualstudio/ide/managing-external-tools)
-

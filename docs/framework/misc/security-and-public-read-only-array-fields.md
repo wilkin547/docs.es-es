@@ -1,39 +1,36 @@
 ---
-title: "Security and Public Read-only Array Fields | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "security [.NET Framework], public read-only array fields"
+title: "Seguridad y campos de matriz públicos de sólo lectura"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: security [.NET Framework], public read-only array fields
 ms.assetid: 3df28dee-2a9f-40ff-9852-bfdbe59c27f3
-caps.latest.revision: 7
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: ae2e9a7dd9e08344c254b52c7139c6d1dd2776a3
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Security and Public Read-only Array Fields
-No utilice nunca los campos de matriz públicos de sólo lectura de las bibliotecas administradas para definir el comportamiento del límite o la seguridad de las aplicaciones porque dichos campos pueden modificarse.  
+# <a name="security-and-public-read-only-array-fields"></a>Seguridad y campos de matriz públicos de sólo lectura
+Nunca use campos de matriz públicos de sólo lectura de bibliotecas administradas para definir el comportamiento de límite o la seguridad de las aplicaciones porque se pueden modificar los campos de matriz públicos de sólo lectura.  
   
-## Comentarios  
- Algunas clases de .NET Framework incluyen campos públicos de sólo lectura que contienen parámetros de límite específicos de la plataforma.  Por ejemplo, el campo <xref:System.IO.Path.InvalidPathChars> es una matriz que describe los caracteres no permitidos en una cadena de ruta de acceso a un archivo.  En .NET Framework existen muchos campos similares.  
+## <a name="remarks"></a>Comentarios  
+ Algunas clases de .NET framework incluyen campos públicos de sólo lectura que contienen parámetros de límite específicos de la plataforma.  Por ejemplo, el <xref:System.IO.Path.InvalidPathChars> campo es una matriz que describe los caracteres que no se permiten en una cadena de ruta de acceso de archivo.  Existen muchos campos similares a lo largo de .NET Framework.  
   
- Su código o el código que comparte el dominio de aplicación de su código puede modificar los valores de los campos de sólo lectura públicos tales como <xref:System.IO.Path.InvalidPathChars>.  No debe utilizar campos de matriz públicos de sólo lectura como éste para definir el comportamiento del límite de sus aplicaciones.  Si lo hace, el código malintencionado podrá modificar las definiciones del límite y utilizar su código de manera inesperada.  
+ Al igual que los valores de los campos públicos de sólo lectura <xref:System.IO.Path.InvalidPathChars> pueden modificarse mediante el código o el código que comparte el dominio de aplicación de su código.  No se deben usar campos de matriz públicos de sólo lectura similar al siguiente para definir el comportamiento del límite de las aplicaciones.  Si lo hace, código malintencionado puede modificar las definiciones de límite y usar el código de manera inesperada.  
   
- En la versión 2.0 y posteriores de .NET Framework, debe utilizar métodos que devuelvan una nueva matriz en lugar de usar campos de matriz públicos.  Por ejemplo, en lugar de utilizar el campo <xref:System.IO.Path.InvalidPathChars>, deberá utilizar el método <xref:System.IO.Path.GetInvalidPathChars%2A>.  
+ En la versión 2.0 y versiones posteriores de .NET Framework, debe utilizar métodos que devuelven una nueva matriz en lugar de usar campos de matriz públicos.  Por ejemplo, en lugar de utilizar el <xref:System.IO.Path.InvalidPathChars> campo, debe usar el <xref:System.IO.Path.GetInvalidPathChars%2A> método.  
   
- Observe que los tipos de .NET Framework no utilizan campos públicos para definir tipos de límites internamente.  En lugar de ello, .NET Framework utiliza campos privados separados.  Si se cambian los valores de estos campos públicos, no se modifica el comportamiento de los tipos de .NET Framework.  
+ Tenga en cuenta que los tipos de .NET Framework no utilizan los campos públicos para definir tipos de límites internamente.  En su lugar, .NET Framework utiliza campos privados separados.  Cambiar los valores de estos campos públicos no altera el comportamiento de los tipos de .NET Framework.  
   
-## Vea también  
- [Secure Coding Guidelines](../../../docs/standard/security/secure-coding-guidelines.md)
+## <a name="see-also"></a>Vea también  
+ [Instrucciones de codificación segura](../../../docs/standard/security/secure-coding-guidelines.md)

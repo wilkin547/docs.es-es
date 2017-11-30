@@ -2,8 +2,7 @@
 title: "Problemas de migración de .NET Framework 4"
 ms.date: 05/02/2017
 ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.topic: article
 helpviewer_keywords:
 - .NET Framework 4, migration
@@ -12,14 +11,12 @@ ms.assetid: df478548-8c05-4de2-8ba7-adcdbe1c2a60
 author: rpetrusha
 ms.author: mariaw
 manager: wpickett
+ms.openlocfilehash: a959e49fe4b400efc93de382837741083085de9c
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 6170e096e36f8d054fdfe9cbd8311e6492e32a04
-ms.openlocfilehash: c3803a6bd9f64c89197f8514c624e1bd54d36886
-ms.contentlocale: es-es
-ms.lasthandoff: 08/28/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="net-framework-4-migration-issues"></a>Problemas de migración de .NET Framework 4
 
 En este tema se describen los problemas de migración entre .NET Framework versión 3.5 Service Pack 1 y .NET Framework versión 4, incluidas las correcciones, los cambios para el cumplimiento de estándares y la seguridad, y los cambios basados en los comentarios de los clientes. La mayoría de estos cambios no exigen que realice ningún tipo de modificación de programación en sus aplicaciones. Para ver los cambios que podrían implicar modificaciones, consulte la columna Cambios recomendados de la tabla.
@@ -263,7 +260,7 @@ Espacios de nombres: <xref:System.Windows>, <xref:System.Windows.Controls>, <xre
 | **Enlazar instancias de comandos** | Para proporcionar un mecanismo para enlazar instancias de comandos basadas en el modelo de vista a gestos de entrada basados en vistas, la clase <xref:System.Windows.Input.InputBinding> ahora hereda de <xref:System.Windows.Freezable> en lugar de <xref:System.Windows.DependencyObject>. Ahora, las propiedades siguientes son propiedades de dependencia:<br><br>* <xref:System.Windows.Input.InputBinding.Command><br>* <xref:System.Windows.Input.InputBinding.CommandParameter><br>* <xref:System.Windows.Input.InputBinding.CommandTarget><br><br>Este cambio tiene como resultado lo siguiente:<br><br>* Los objetos <xref:System.Windows.Input.InputBinding> ahora se inmovilizan cuando se registran, en lugar de seguir siendo mutables.<br>* No se puede obtener acceso a objetos <xref:System.Windows.Input.InputBinding> de nivel de instancia desde varios subprocesos debido a las restricciones de la clase <xref:System.Windows.DependencyObject>.<br>* No se pueden modificar los enlaces de entrada de nivel de clase después de su registro debido a las restricciones de la clase <xref:System.Windows.Freezable>.<br>* No se pueden especificar enlaces de entrada en las instancias de comando que se crean en un modelo de vista. | Cree instancias independientes de una clase <xref:System.Windows.Input.InputBinding> en subprocesos independientes si los enlaces deben ser mutables. En caso contrario, inmovilícelos. No modifique una clase estática <xref:System.Windows.Input.InputBinding> de nivel de clase después de que se haya registrado. |
 | **Aplicaciones de explorador** | Las aplicaciones de explorador WPF (.XBAP) ahora procesan los eventos clave exactamente igual que las aplicaciones de WPF independientes para que los objetos reciban los eventos clave enrutados en el orden correcto. | Ninguno. |
 | **Combinaciones de teclas inactivas** | WPF ofusca las teclas inactivas, que no producen ningún carácter visible, pero indica que la tecla debe combinarse con la tecla de letra siguiente para generar un carácter. Los eventos de entrada de tecla, como el evento <xref:System.Windows.Input.Keyboard.KeyDownEvent>, notifican que una tecla es inactiva mediante el establecimiento de la propiedad <xref:System.Windows.Input.KeyEventArgs.Key> en el valor <xref:System.Windows.Input.Key>. Este suele ser el comportamiento esperado, ya que las aplicaciones normalmente no responden a la entrada de teclado que crea un carácter combinado. | Las aplicaciones que esperan leer teclas que formaban parte de caracteres combinados ahora pueden obtener la tecla ofuscada mediante la propiedad <xref:System.Windows.Input.KeyEventArgs.DeadCharProcessedKey>. |
-| **Administrador de foco** | Cuando se pasa al método <xref:System.Windows.Input.FocusManager.GetFocusedElement(System.Windows.DependencyObject)?displayProperty=fullName> un elemento que tiene la propiedad adjunta [IsFocusScope](https://msdn.microsoft.com/library/system.windows.input.focusmanager.isfocusscope.aspx) establecida en `true`, el método devuelve un elemento que es el último elemento con el foco en el teclado dentro de ese ámbito del foco únicamente si el elemento devuelto pertenece al mismo objeto <xref:System.Windows.PresentationSource> que el elemento que se pasa al método. | Ninguno. |
+| **Administrador de foco** | Cuando se pasa al método <xref:System.Windows.Input.FocusManager.GetFocusedElement(System.Windows.DependencyObject)?displayProperty=nameWithType> un elemento que tiene la propiedad adjunta [IsFocusScope](https://msdn.microsoft.com/library/system.windows.input.focusmanager.isfocusscope.aspx) establecida en `true`, el método devuelve un elemento que es el último elemento con el foco en el teclado dentro de ese ámbito del foco únicamente si el elemento devuelto pertenece al mismo objeto <xref:System.Windows.PresentationSource> que el elemento que se pasa al método. | Ninguno. |
 
 ### <a name="ui-automation"></a>Automatización de la interfaz de usuario
 
@@ -340,4 +337,3 @@ Espacios de nombres: <xref:System.Xml.Linq>; <xref:System.Xml.Schema>, <xref:Sys
 
 [Lo obsoleto en .NET Framework](https://msdn.microsoft.com/library/ee461502(v=vs.110).aspx)   
 [Problemas de migración de aplicaciones de .NET Framework 4: de Beta 2 a RTM](http://go.microsoft.com/fwlink/?LinkId=191505)
-

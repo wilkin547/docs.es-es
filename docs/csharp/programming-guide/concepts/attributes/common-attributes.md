@@ -1,30 +1,21 @@
 ---
 title: Atributos comunes (C#)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 785a0526-6c0e-4599-8c61-ccdc88dd9965
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: aded9c9b2e8c253eebd6c71782f0bff6ca0104ea
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 98bb21ef0b5582202578b72fd6eaf459801747cc
-ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="common-attributes-c"></a>Atributos comunes (C#)
 En este tema se describen los atributos que más se usan en los programas de C#.  
@@ -67,7 +58,7 @@ En este tema se describen los atributos que más se usan en los programas de C#.
 |<xref:System.Reflection.AssemblyFlagsAttribute>|Especifica si un ensamblado admite la ejecución en paralelo en el mismo equipo, en el mismo proceso o en el mismo dominio de aplicación.|  
   
 ### <a name="informational-attributes"></a>Atributos informativos  
- Puede utilizar atributos informativos para proporcionar información adicional de la compañía o de producto para un ensamblado. En la tabla siguiente se muestran los atributos informativos definidos en el espacio de nombres <xref:System.Reflection?displayProperty=fullName>.  
+ Puede utilizar atributos informativos para proporcionar información adicional de la compañía o de producto para un ensamblado. En la tabla siguiente se muestran los atributos informativos definidos en el espacio de nombres <xref:System.Reflection?displayProperty=nameWithType>.  
   
 |Atributo|Propósito|  
 |---------------|-------------|  
@@ -80,7 +71,7 @@ En este tema se describen los atributos que más se usan en los programas de C#.
 |<xref:System.CLSCompliantAttribute>|Indica si el ensamblado es compatible con Common Language Specification (CLS).|  
   
 ### <a name="assembly-manifest-attributes"></a>Atributos de manifiesto del ensamblado  
- Puede usar los atributos de manifiesto del ensamblado para proporcionar información en el manifiesto del ensamblado (título, descripción, alias predeterminado y configuración). En la tabla siguiente se muestran los atributos de manifiesto del ensamblado definidos en el espacio de nombres <xref:System.Reflection?displayProperty=fullName>.  
+ Puede usar los atributos de manifiesto del ensamblado para proporcionar información en el manifiesto del ensamblado (título, descripción, alias predeterminado y configuración). En la tabla siguiente se muestran los atributos de manifiesto del ensamblado definidos en el espacio de nombres <xref:System.Reflection?displayProperty=nameWithType>.  
   
 |Atributo|Propósito|  
 |---------------|-------------|  
@@ -236,7 +227,7 @@ class SampleClass
 ##  <a name="CallerInfo"></a> Atributos de información del llamador  
  Mediante los atributos de información del llamador, se puede obtener información sobre el llamador de un método. Puede obtener la ruta de acceso al código fuente, el número de línea del código fuente y el nombre del miembro del llamador.  
   
- Para obtener la información del llamador del miembro, use los atributos que se aplican a los parámetros opcionales. Cada parámetro opcional especifica un valor predeterminado. En la tabla siguiente se enumeran los atributos de información del llamador que se definen en el espacio de nombres <xref:System.Runtime.CompilerServices?displayProperty=fullName>:  
+ Para obtener la información del llamador del miembro, use los atributos que se aplican a los parámetros opcionales. Cada parámetro opcional especifica un valor predeterminado. En la tabla siguiente se enumeran los atributos de información del llamador que se definen en el espacio de nombres <xref:System.Runtime.CompilerServices?displayProperty=nameWithType>:  
   
 |Atributo|Descripción|Tipo|  
 |---|---|---|  
@@ -247,10 +238,9 @@ class SampleClass
  Para obtener más información sobre los atributos de información del llamador, vea [Caller Information (C#)](../../../../csharp/programming-guide/concepts/caller-information.md) (Información del llamador (C#)).  
   
 ## <a name="see-also"></a>Vea también  
- <xref:System.Reflection>   
- <xref:System.Attribute>   
- [Guía de programación de C#](../../../../csharp/programming-guide/index.md)   
- [Attributes](https://msdn.microsoft.com/library/5x6cd29c)  (Atributos)  
- [Reflection (C#)](../../../../csharp/programming-guide/concepts/reflection.md)  (Reflexión (C#))  
- [Accessing Attributes by Using Reflection (C#)](../../../../csharp/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md) (Acceso a atributos mediante reflexión (C#))
-
+ <xref:System.Reflection>  
+ <xref:System.Attribute>  
+ [Guía de programación de C#](../../../../csharp/programming-guide/index.md)  
+ [Atributos](https://msdn.microsoft.com/library/5x6cd29c)  
+ [Reflexión (C#)](../../../../csharp/programming-guide/concepts/reflection.md)  
+ [Acceder a atributos mediante reflexión (C#)](../../../../csharp/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)

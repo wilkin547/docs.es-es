@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: a67484c3-fe92-44d8-8fa3-36fa2071d880
-ms.translationtype: HT
-ms.sourcegitcommit: 3155295489e1188640dae5aa5bf9fdceb7480ed6
 ms.openlocfilehash: c72cdcbbe20c3c7a6890cdacb446e3db8de1b37a
-ms.contentlocale: es-es
-ms.lasthandoff: 08/21/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="net-class-libraries"></a>Bibliotecas de clases de .NET
 
 Las bibliotecas de clases son el concepto de [biblioteca compartida](http://en.wikipedia.org/wiki/Library_%28computing%29#Shared_libraries) de .NET. Le permiten dividir funcionalidades útiles en módulos que pueden usar varias aplicaciones. También se pueden usar para cargar la funcionalidad no necesaria o no conocida al inicio de la aplicación. Las bibliotecas de clases se describen mediante el [formato de archivo de Ensamblado de .NET](assembly-format.md).
@@ -63,4 +61,3 @@ Las siguientes plataformas admiten las bibliotecas de .NET Standard:
 ### <a name="mono-class-libraries"></a>Bibliotecas de clases de Mono
 
 Las bibliotecas de clases se admiten en Mono, incluidos los tres tipos de bibliotecas que se han descrito anteriormente. A menudo, Mono se ha visto (correctamente) como una implementación multiplataforma de Microsoft .NET Framework. En parte, se debía a que las bibliotecas de .NET Framework específicas de la plataforma podrían ejecutarse en el tiempo de ejecución Mono sin modificarse ni volver a compilarse. Esta característica ya existía antes de la creación de las bibliotecas de clases portables, por lo que era una elección obvia para habilitar la portabilidad binaria entre .NET Framework y Mono (aunque solo funcionaba en una dirección).
-

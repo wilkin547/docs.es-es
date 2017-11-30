@@ -1,39 +1,21 @@
 ---
 title: "in (Modificador genérico) (Referencia de C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - contravariance, in keyword [C#]
 - in keyword [C#]
 ms.assetid: 3a778c36-8aed-4ebe-aa8b-39f4057215b1
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 84773fca826b5a25679f1385a11c51b590ea20f2
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 775e4512a5ff31c7059961f6332c6bdc0dc5247a
-ms.openlocfilehash: 663fa75a7e214ed97efb45dda2c9ac298559653d
-ms.contentlocale: es-es
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="in-generic-modifier-c-reference"></a>in (Modificador genérico) (Referencia de C#)
 Para los parámetros de tipo genérico, la palabra clave `in` especifica que el parámetro de tipo es contravariante. Puede usar la palabra clave `in` en las interfaces y delegados genéricos.  
@@ -51,18 +33,17 @@ Para los parámetros de tipo genérico, la palabra clave `in` especifica que el 
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se muestra cómo declarar, extender e implementar una interfaz genérica contravariante. También se muestra cómo puede usar la conversión implícita para las clases que implementan esta interfaz.  
   
- [!code-cs[csVarianceKeywords#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/in-generic-modifier_1.cs)]  
+ [!code-csharp[csVarianceKeywords#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/in-generic-modifier_1.cs)]  
   
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se muestra cómo declarar e invocar un delegado genérico contravariante, y crear instancias de este. También se muestra cómo puede convertir implícitamente un tipo de delegado.  
   
- [!code-cs[csVarianceKeywords#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/in-generic-modifier_2.cs)]  
+ [!code-csharp[csVarianceKeywords#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/in-generic-modifier_2.cs)]  
   
 ## <a name="c-language-specification"></a>Especificación del lenguaje C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Vea también  
- [out](../../../csharp/language-reference/keywords/out-generic-modifier.md)   
- [Covariance and Contravariance](../../programming-guide/concepts/covariance-contravariance/index.md)  (Covarianza y contravarianza)  
+ [out](../../../csharp/language-reference/keywords/out-generic-modifier.md)  
+ [Covarianza y contravarianza](../../programming-guide/concepts/covariance-contravariance/index.md)  
  [Modificadores](../../../csharp/language-reference/keywords/modifiers.md)
-

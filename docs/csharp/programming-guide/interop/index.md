@@ -1,41 +1,23 @@
 ---
 title: "Interoperabilidad (Guía de programación de C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - COM interop
 - interoperability
 - platform invoke, accessing APIs with C#
 - C# language, interoperability
 ms.assetid: 238bb95a-e962-4026-bbd5-197055bdb8ee
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 5822f2e4e120f476d925520f0681055f058e3df1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 81117b1419c2a9c3babd6a7429052e2b23e08a70
-ms.openlocfilehash: 910b0e0675fe416fae71a6e46c4a6cf2293327e6
-ms.contentlocale: es-es
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="interoperability-c-programming-guide"></a>Interoperabilidad (Guía de programación de C#)
 La interoperabilidad permite conservar y aprovechar las inversiones existentes en código no administrado. El código que se ejecuta bajo el control de Common Language Runtime (CLR) se denomina *código administrado*, y el código que se ejecuta fuera de CLR se denomina *código no administrado*. COM, COM+, los componentes de C++, los componentes de ActiveX y la API Win32 de Microsoft son ejemplos de código no administrado.  
@@ -65,8 +47,7 @@ La interoperabilidad permite conservar y aprovechar las inversiones existentes e
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Vea también  
- <xref:System.Runtime.InteropServices.Marshal.ReleaseComObject%2A?displayProperty=nameWithType>   
- [Guía de programación de C#](../../../csharp/programming-guide/index.md)   
- [Interoperating with Unmanaged Code](https://msdn.microsoft.com/library/sd10k43k)  (Interoperabilidad con código no administrado)  
+ <xref:System.Runtime.InteropServices.Marshal.ReleaseComObject%2A?displayProperty=nameWithType>  
+ [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
+ [Interoperating with Unmanaged Code](https://msdn.microsoft.com/library/sd10k43k) (Interoperar con código no administrado)  
  [Tutorial: Programación de Office](../../../csharp/programming-guide/interop/walkthrough-office-programming.md)
-

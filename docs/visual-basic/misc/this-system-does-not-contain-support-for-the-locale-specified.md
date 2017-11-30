@@ -1,36 +1,19 @@
 ---
-title: "Este sistema no es compatible con la configuración regional especificada | Documentos de Microsoft"
-ms.date: 2015-07-20
+title: "Este sistema no admite la configuración regional especificada"
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-f1_keywords:
-- vbrArgument_LocalNotSupported
+f1_keywords: vbrArgument_LocalNotSupported
 ms.assetid: 59bfa215-556b-4bfa-8f25-b090ea83298d
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: b9898fd7d1e3e1774c45d50388c045c6364efeb3
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 6095a1bebf2a4ea9450051c48b268ed009e08d63
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="this-system-does-not-contain-support-for-the-locale-specified"></a>Este sistema no admite la configuración regional especificada
 Está intentando usar la enumeración `VbStrConv` , pero el sistema no admite la configuración regional especificada.  
@@ -40,6 +23,6 @@ Está intentando usar la enumeración `VbStrConv` , pero el sistema no admite la
 1.  Actualice la máquina para que admita la configuración regional o ejecute la aplicación en una máquina que la admita.  
   
 ## <a name="see-also"></a>Vea también  
- <xref:System.Globalization>   
- [NOTINBUILD VbStrConv (enumeración)](http://msdn.microsoft.com/en-us/59f83dd9-6361-47df-a836-02ba9d4cb936)   
- [Introducción a aplicaciones internacionales basadas en .NET Framework](https://docs.microsoft.com/visualstudio/ide/introduction-to-international-applications-based-on-the-dotnet-framework)
+ <xref:System.Globalization>  
+ [NOTINBUILD Enumeración VbStrConv](http://msdn.microsoft.com/en-us/59f83dd9-6361-47df-a836-02ba9d4cb936)  
+ [Introducción a aplicaciones internacionales basadas en .NET Framework](/visualstudio/ide/introduction-to-international-applications-based-on-the-dotnet-framework)

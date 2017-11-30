@@ -1,39 +1,43 @@
 ---
-title: "118 - WorkflowInstanceUnhandledExceptionRecordWithId | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 118 - WorkflowInstanceUnhandledExceptionRecordWithId
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 2ce4b193-e141-4cc4-86a3-2e8c984c110d
-caps.latest.revision: 4
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: a1c20182b5f53a188e95a31124e30f04418eb909
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# 118 - WorkflowInstanceUnhandledExceptionRecordWithId
-## Propiedades  
+# <a name="118---workflowinstanceunhandledexceptionrecordwithid"></a>118 - WorkflowInstanceUnhandledExceptionRecordWithId
+## <a name="properties"></a>Propiedades  
   
 |||  
 |-|-|  
 |Id.|118|  
 |Palabras clave|HealthMonitoring, WFTracking|  
 |Nivel|Error|  
-|Canal|Microsoft\-Windows\-Application Server\-Applications\/Analytic|  
+|Canal|Microsoft-Windows-Application Server-Applications/Analytic|  
   
-## Descripción  
+## <a name="description"></a>Descripción  
  El participante de seguimiento de ETW emite este evento cuando una instancia de flujo de trabajo emite WorkflowInstanceUnhandledExceptionRecord.  
   
-## Mensaje  
- TrackRecord \= WorkflowInstanceUnhandledExceptionRecord, InstanceID \= %1, RecordNumber \= %2, EventTime \= %3, ActivityDefinitionId \= %4, SourceName \= %5, SourceId \= %6, SourceInstanceId \= %7, SourceTypeName\=%8, Exception\=%9,  Annotations\= %10, ProfileName \= %11, WorkflowDefinitionIdentity \= %12  
+## <a name="message"></a>Mensaje  
+ TrackRecord = WorkflowInstanceUnhandledExceptionRecord, InstanceID = %1, RecordNumber = %2, EventTime = %3, ActivityDefinitionId = %4, SourceName = %5, SourceId = %6, SourceInstanceId = %7, SourceTypeName = %8, excepción = %9, Annotations = % 10, ProfileName = % 11, WorkflowDefinitionIdentity = % 12  
   
-## Detalles  
+## <a name="details"></a>Detalles  
   
 |Nombre del elemento de datos|Tipo del elemento de datos|Descripción|  
-|----------------------------------|--------------------------------|-----------------|  
+|--------------------|--------------------|-----------------|  
 |InstanceId|xs:GUID|El id. de instancia del flujo de trabajo.|  
 |RecordNumber|xs:long|El número de secuencia del registro emitido.|  
 |EventTime|xs:dateTime|La hora en UTC cuando se emitió el evento.|  
@@ -44,7 +48,7 @@ caps.handback.revision: 4
 |SourceTypeName|xs:string|El nombre del tipo de actividad de origen con errores que dio como resultado unhandledException.|  
 |Excepción|xs:string|La excepción de información sobre la excepción no controlada.|  
 |Estado|xs:string|El estado actual del flujo de trabajo.|  
-|Anotaciones|xs:string|Las anotaciones que se agregaron a este evento.  Los valores se almacenan en un elemento xml con el formato \<items\>\< item name \= "annotationName" type\="System.String"\>annotationValue\<\/item\>\<\/items\>.  Si no se especifica ninguna anotación, la cadena contendrá \<items\/\>.  El tamaño del evento ETW está limitado por el tamaño de búfer de ETW o la carga útil máxima para un evento ETW.  Si el tamaño del evento supera los límites de ETW, el evento se trunca quitando las anotaciones y reemplazando el valor de anotación por \<items\>...\<\/items\>.|  
+|Anotaciones|xs:string|Las anotaciones que se agregaron a este evento. Los valores se almacenan en un elemento xml con el formato \<elementos >\< nombre de elemento = "annotationName" Type = "> annotationValue\</artículo > \< /artículos >. Si se especifica ninguna anotación, a continuación, la cadena contiene \<elementos / >. El tamaño del evento ETW está limitado por el tamaño de búfer de ETW o la carga útil máxima para un evento ETW. Si el tamaño del evento supera los límites de ETW, el evento se trunca quitando las anotaciones y reemplazando el valor de anotación con \<elementos >...  \< /artículos >.|  
 |ProfileName|xs:string|El nombre o el perfil de seguimiento que dio como resultado que se emitiera este evento.|  
 |WorkflowDefinitionIdentity|xs:string|Id. de definición de flujo de trabajo.|  
 |AppDomain|xs:string|La cadena devuelta por AppDomain.CurrentDomain.FriendlyName.|

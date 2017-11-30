@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 542754a9-7f40-4293-b299-b9f80241902c
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: c0d7bcf6e07f4a49e15e6f6f4e028eebfe82d8bf
-ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="building-expression-trees"></a>Crear árboles de expresión
 
 [Previous -- Interpreting Expressions](expression-trees-interpreting.md) (Anterior: Interpretación de expresiones)
@@ -180,4 +178,3 @@ Las API del árbol de expresión son algunas de las más difíciles para navegar
 Además, en este momento, existen expresiones de C# que no pueden crearse directamente con métodos de clase `Expression`. En general, estos serán las expresiones y los operadores más recientes que se han agregado a C# 5 y C# 6. (Por ejemplo, las expresiones `async` no pueden crearse y el operador `?.` nuevo no puede crearse directamente).
 
 [Next -- Translating Expressions](expression-trees-translating.md) (Siguiente: Traducción de expresiones)
-

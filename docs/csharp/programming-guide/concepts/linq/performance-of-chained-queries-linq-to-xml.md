@@ -1,25 +1,21 @@
 ---
 title: Rendimiento de consultas encadenadas (LINQ to XML) (C#)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: b2f1d715-8946-4dc0-8d56-fb3d1bba54a6
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
+ms.openlocfilehash: 1014b7790f0ea465e10cf8fc03e59ca4d3f2d55c
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 7c72c4eebd29152ed4fb95f2ee42075797c60b8a
-ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="performance-of-chained-queries-linq-to-xml-c"></a>Rendimiento de consultas encadenadas (LINQ to XML) (C#)
 Una de las ventajas más importantes de LINQ (y LINQ to XML) es que las consultas encadenadas funcionan igual de bien que una sola consulta más grande y complicada.  
@@ -70,4 +66,3 @@ foreach (var i in query2)
   
 ## <a name="see-also"></a>Vea también  
  [Rendimiento (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/performance-linq-to-xml.md)
-

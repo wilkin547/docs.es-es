@@ -1,46 +1,27 @@
 ---
 title: "Cómo: Leer de un archivo de texto (Guía de programación de C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- StreamReader.ReadToEnd
-dev_langs:
-- CSharp
+f1_keywords: StreamReader.ReadToEnd
 helpviewer_keywords:
 - text files, writing to
 - reading text files
 - reading data, text files
 - text files, reading
 ms.assetid: 92246c5b-e819-4eea-9370-1a9460e12de3
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: d2af6102ac6793b4612a6fbc41f8c50189cc24d5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: bd0ad3e062c4d4b32fb6140cacba9a4a32674759
-ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-read-from-a-text-file-c-programming-guide"></a>Cómo: Leer de un archivo de texto (Guía de programación de C#)
-En este ejemplo se lee el contenido de un archivo de texto con los métodos estáticos <xref:System.IO.File.ReadAllText%2A> y <xref:System.IO.File.ReadAllLines%2A> de la clase <xref:System.IO.File?displayProperty=fullName>.  
+En este ejemplo se lee el contenido de un archivo de texto con los métodos estáticos <xref:System.IO.File.ReadAllText%2A> y <xref:System.IO.File.ReadAllLines%2A> de la clase <xref:System.IO.File?displayProperty=nameWithType>.  
   
  Para obtener un ejemplo en el que se usa <xref:System.IO.StreamReader>, vea [Cómo: Leer un archivo de texto línea a línea](../../../csharp/programming-guide/file-system/how-to-read-a-text-file-one-line-at-a-time.md).  
   
@@ -48,7 +29,7 @@ En este ejemplo se lee el contenido de un archivo de texto con los métodos est�
 >  Los archivos que se usan en este ejemplo se crean en el tema [Cómo: Escribir en un archivo texto](../../../csharp/programming-guide/file-system/how-to-write-to-a-text-file.md).  
   
 ## <a name="example"></a>Ejemplo  
- [!code-cs[csFilesandFolders#4](../../../csharp/programming-guide/file-system/codesnippet/CSharp/how-to-read-from-a-text-file_1.cs)]  
+ [!code-csharp[csFilesandFolders#4](../../../csharp/programming-guide/file-system/codesnippet/CSharp/how-to-read-from-a-text-file_1.cs)]  
   
 ## <a name="compiling-the-code"></a>Compilar el código  
  Copie el código y péguelo en una aplicación de consola de C#.  
@@ -64,7 +45,6 @@ En este ejemplo se lee el contenido de un archivo de texto con los métodos est�
  No confíe en el nombre de un archivo para determinar el contenido del archivo. Por ejemplo, el archivo `myFile.cs` puede que no sea un archivo de código fuente de C#.  
   
 ## <a name="see-also"></a>Vea también  
- <xref:System.IO?displayProperty=fullName>   
- [Guía de programación de C#](../../../csharp/programming-guide/index.md)   
+ <xref:System.IO?displayProperty=nameWithType>  
+ [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
  [Registro y sistema de archivos (Guía de programación de C#)](../../../csharp/programming-guide/file-system/index.md)
-

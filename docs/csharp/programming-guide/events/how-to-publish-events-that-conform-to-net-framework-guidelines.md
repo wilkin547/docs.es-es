@@ -1,38 +1,19 @@
 ---
 title: "Cómo: Publicar eventos que cumplan las directrices de .NET Framework (Guía de programación de C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- events [C#], implementation guidelines
+helpviewer_keywords: events [C#], implementation guidelines
 ms.assetid: 9310ae16-8627-44a2-b08c-05e5976202b1
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 570729e432146b4ef97e4c487f644b12b354bb4a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 21badd504a54c7000fef76e901cc952134eff61e
-ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-publish-events-that-conform-to-net-framework-guidelines-c-programming-guide"></a>Cómo: Publicar eventos que cumplan las directrices de .NET Framework (Guía de programación de C#)
 En el siguiente procedimiento se muestra cómo agregar eventos que cumplan el patrón [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] estándar a las clases y structs. Todos los eventos de la biblioteca de clases [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] se basan en el delegado <xref:System.EventHandler>, que se define de la siguiente manera:  
@@ -94,11 +75,10 @@ public delegate void EventHandler(object sender, EventArgs e);
 ## <a name="example"></a>Ejemplo  
  En el siguiente ejemplo se muestran los pasos anteriores mediante el uso de una clase EventArgs personalizada y <xref:System.EventHandler%601> como tipo de evento.  
   
- [!code-cs[csProgGuideEvents#2](../../../csharp/programming-guide/events/codesnippet/CSharp/how-to-publish-events-that-conform-to-net-framework-guidelines_1.cs)]  
+ [!code-csharp[csProgGuideEvents#2](../../../csharp/programming-guide/events/codesnippet/CSharp/how-to-publish-events-that-conform-to-net-framework-guidelines_1.cs)]  
   
 ## <a name="see-also"></a>Vea también  
- <xref:System.Delegate>   
- [Guía de programación de C#](../../../csharp/programming-guide/index.md)   
- [Eventos](../../../csharp/programming-guide/events/index.md)   
+ <xref:System.Delegate>  
+ [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
+ [Eventos](../../../csharp/programming-guide/events/index.md)  
  [Delegados](../../../csharp/programming-guide/delegates/index.md)
-

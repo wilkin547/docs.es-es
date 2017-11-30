@@ -9,14 +9,12 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 609b0845-49e7-4864-957b-21ffe1b93bf2
-ms.translationtype: HT
-ms.sourcegitcommit: 2762cdc983465979a530192716c33de7044dd1ed
 ms.openlocfilehash: 6e614986dc91310dea40971987969e7433cb79e8
-ms.contentlocale: es-es
-ms.lasthandoff: 08/04/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="packages-metapackages-and-frameworks"></a>Paquetes, metapaquetes y marcos de trabajo
 
 .NET Core es una plataforma conformada por paquetes NuGet. Algunas experiencias del producto se benefician de la definición específica de los paquetes, mientras que otras lo hacen de la definición general de las mismas. Para dar cabida a esta dualidad, el producto se distribuye como un conjunto específico de paquetes y, luego, se describe en fragmentos más generales con un tipo de paquete que recibe informalmente el nombre de "metapaquete".
@@ -149,4 +147,3 @@ El marco de trabajo de la aplicación .NET Core (TFM: `netcoreapp`) representa l
 El metapaquete `Microsoft.NETCore.App` tiene como destino el marco de trabajo `netcoreapp`. Proporciona acceso aproximadamente a 60 bibliotecas, de las cuales el paquete `NETStandard.Library` proporciona unas 40, además de otras 20. Puede hacer referencia a bibliotecas adicionales que establecen como destino a `netcoreapp` o marcos de trabajo compatibles, como `netstandard`, para obtener acceso a API adicionales. 
 
 La mayoría de las bibliotecas adicionales que `Microsoft.NETCore.App` proporciona también establecen como destino a `netstandard`, dado que otras bibliotecas `netstandard` satisfacen sus dependencias. Esto significa que las bibliotecas `netstandard` también pueden hacer referencia a esos paquetes como dependencias. 
-

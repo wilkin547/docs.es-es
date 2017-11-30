@@ -9,14 +9,12 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: f6f654b1-1d2c-4105-8376-7c1959e23803
-ms.translationtype: HT
-ms.sourcegitcommit: e0271ba3392ce8861dc916714af8c16d4581ce4f
 ms.openlocfilehash: 9932555d5a5b029b4faaf3edcaa3ab523eebe77e
-ms.contentlocale: es-es
-ms.lasthandoff: 08/13/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="net-core-tutorials"></a>Tutoriales de .NET Core
 
 Los siguientes tutoriales están disponibles para aprender sobre .NET Core.
@@ -58,4 +56,3 @@ Los siguientes tutoriales están disponibles para aprender sobre .NET Core.
 - [Creación de una plantilla personalizada para dotnet new](create-custom-template.md)
 
 Para ver tutoriales sobre el desarrollo de aplicaciones web ASP.NET Core, vea la [documentación de ASP.NET Core](/aspnet/core/).
-

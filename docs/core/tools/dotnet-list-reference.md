@@ -7,18 +7,17 @@ ms.date: 08/14/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.translationtype: HT
-ms.sourcegitcommit: a19ab54a6cc44bd7acd1e40a4ca94da52bf14297
 ms.openlocfilehash: b3e903c15a7486faa279d47ad5e2e00c090b19af
-ms.contentlocale: es-es
-ms.lasthandoff: 08/14/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="dotnet-list-reference"></a>dotnet list reference
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a>Nombre
+## <a name="name"></a>Name
 
 `dotnet list reference`: enumera referencias entre proyectos.
 
@@ -51,4 +50,3 @@ Enumerar las referencias del proyecto para el proyecto especificado:
 Enumerar las referencias del proyecto para el proyecto en el directorio actual:
 
 `dotnet list reference`
-

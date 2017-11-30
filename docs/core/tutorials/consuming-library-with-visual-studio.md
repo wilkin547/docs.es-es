@@ -6,14 +6,15 @@ ms.author: wiwagn
 ms.date: 08/07/2017
 ms.topic: article
 ms.prod: .net-core
+dev_langs:
+- csharp
+- vb
+ms.openlocfilehash: 180ed868116967b03c5d4058b5618927242defc2
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 1b028e5880f9e57e87c16eabeb442e0a46a369da
-ms.openlocfilehash: 38e6c7d8797285abc4eb2e87602cc0bbf46ba590
-ms.contentlocale: es-es
-ms.lasthandoff: 09/08/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="consuming-a-class-library-with-net-core-in-visual-studio-2017"></a>Consumo de una biblioteca de clases con .NET Core en Visual Studio 2017
 
 Una vez que haya creado una biblioteca de clases siguiendo los pasos de [Building a C# class library with .NET Core in Visual Studio 2017](./library-with-visual-studio.md) (Creación de una biblioteca de clases de C# con .NET Core en Visual Studio 2017) o [Building a Visual Basic class library with .NET Core in Visual Studio 2017](vb-library-with-visual-studio.md) (Creación de una biblioteca de clases de Visual Basic con .NET Core en Visual Studio 2017), pruébela en [Testing a class library with .NET Core in Visual Studio 2017](testing-library-with-visual-studio.md) (Prueba de una biblioteca de clases con .NET Core en Visual Studio 2017), y compile una versión de lanzamiento de la biblioteca; el paso siguiente consiste en hacer que esté disponible para los autores de llamadas. Existen dos maneras de hacerlo:
@@ -104,4 +105,3 @@ Puede hacer que la biblioteca de clases tenga una disponibilidad amplia si la pu
    > Si el directorio que contiene *dotnet.exe* no está en la ruta de acceso, puede encontrar su ubicación escribiendo `where dotnet.exe` en la ventana de consola.
 
 Para más información sobre la creación de paquetes NuGet, consulte [Cómo crear un paquete NuGet con herramientas multiplataforma ](../../core/deploying/creating-nuget-packages.md).
-

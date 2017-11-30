@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 7faba1cc-6ea9-4a19-adb9-0335e4b132e5
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 77d315dd87d9cab32605de415674d146eb9115fa
-ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-    
 # <a name="enums"></a>Enumeraciones
 
 Un ***tipo de enumeración*** es un tipo de valor distinto con un conjunto de constantes con nombre. Las enumeraciones se definen cuando se necesita fijar un tipo que pueda tener un conjunto de valores discretos. Usan uno de los tipos de valor integral como almacenamiento subyacente. Proporcionan significado semántico a los valores discretos.
@@ -45,4 +43,3 @@ El valor predeterminado de cualquier tipo `enum` es el valor integral cero conve
 >[!div class="step-by-step"]
 [Anterior](interfaces.md)
 [Siguiente](delegates.md)
-

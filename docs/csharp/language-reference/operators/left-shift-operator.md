@@ -1,41 +1,22 @@
 ---
 title: Operador &lt;&lt; (Referencia de C#)
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- <<_CSharpKeyword
-dev_langs:
-- CSharp
+f1_keywords: <<_CSharpKeyword
 helpviewer_keywords:
 - left shift operator (<<) [C#]
 - << operator [C#]
 ms.assetid: a654eb56-1ff7-4bf3-9064-b631be0cdccc
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 400dbc799c68bb9e1bc00695954115f2eb6af7c6
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 4e6ad17232ec4eb087ca300342331af6a30789b1
-ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="ltlt-operator-c-reference"></a>Operador &lt;&lt; (Referencia de C#)
 El operador de desplazamiento a la izquierda (`<<`) desplaza su primer operando a la izquierda el número de bits especificado por su segundo operando. El tipo del segundo operando debe ser [int](../../../csharp/language-reference/keywords/int.md) o un tipo que tiene una conversión numérica implícita predefinida en `int`.  
@@ -50,13 +31,12 @@ El operador de desplazamiento a la izquierda (`<<`) desplaza su primer operando 
  Los tipos definidos por el usuario pueden sobrecargar el operador `<<` (vea [operator](../../../csharp/language-reference/keywords/operator.md)); el tipo del primer operando debe ser el tipo definido por el usuario y el tipo del segundo operando debe ser `int`. Cuando se sobrecarga un operador binario, el operador de asignación correspondiente, si lo hay, también se sobrecarga de modo implícito.  
   
 ## <a name="example"></a>Ejemplo  
- [!code-cs[csRefOperators#14](../../../csharp/language-reference/operators/codesnippet/CSharp/left-shift-operator_1.cs)]  
+ [!code-csharp[csRefOperators#14](../../../csharp/language-reference/operators/codesnippet/CSharp/left-shift-operator_1.cs)]  
   
 ## <a name="comments"></a>Comentarios  
  Tenga en cuenta que `i<<1` y `i<<33` dan el mismo resultado, ya que 1 y 33 tienen los mismos cinco bits de orden inferior.  
   
 ## <a name="see-also"></a>Vea también  
- [Referencia de C#](../../../csharp/language-reference/index.md)   
- [Guía de programación de C#](../../../csharp/programming-guide/index.md)   
+ [Referencia de C#](../../../csharp/language-reference/index.md)  
+ [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
  [Operadores de C#](../../../csharp/language-reference/operators/index.md)
-

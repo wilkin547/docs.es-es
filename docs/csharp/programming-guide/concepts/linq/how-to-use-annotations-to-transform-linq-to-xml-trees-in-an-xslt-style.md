@@ -1,30 +1,21 @@
 ---
 title: "Cómo: Usar anotaciones para transformar árboles LINQ to XML en un estilo XSLT (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 12a95902-a6b7-4a1e-ad52-04a518db226f
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 335f6efd0086eda93b9bcf8af1dcc1532086ff0e
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 29cdf1ef54545bdbd96395dd4fe1d7c6b9f375e9
-ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="how-to-use-annotations-to-transform-linq-to-xml-trees-in-an-xslt-style-c"></a>Cómo: Usar anotaciones para transformar árboles LINQ to XML en un estilo XSLT (C#)
 Se puede usar anotaciones para facilitar transformaciones de un árbol XML.  
@@ -450,4 +441,3 @@ After Transform
   
 ## <a name="see-also"></a>Vea también  
  [Programación avanzada de LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
-

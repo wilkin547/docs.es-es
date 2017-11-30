@@ -5,8 +5,7 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-bcl
+ms.technology: dotnet-bcl
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,16 +19,15 @@ helpviewer_keywords:
 - code, verification process
 - verification testing code
 ms.assetid: 113a8bbf-6875-4a72-a49d-ca2d92e19cc8
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 7a41a6bf29ec9310d88778b55aa0c27672ba0568
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 46b25b9eb518d2dadb3ec069c5d4d61a929262f2
-ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="application-domains"></a>Dominios de aplicación
 Normalmente, los sistemas operativos y los entornos de Common Language Runtime proporcionan algún tipo de aislamiento entre las aplicaciones. Por ejemplo, Windows utiliza procesos para aislar las aplicaciones. Este aislamiento es necesario para garantizar que el código que se ejecuta en una aplicación no afecta negativamente a otras aplicaciones no relacionadas.  
@@ -65,7 +63,7 @@ Normalmente, los sistemas operativos y los entornos de Common Language Runtime p
     > [!NOTE]
     >  No se puede descargar ensamblados o tipos por separado. Sólo se puede descargar un dominio completo.  
   
--   El código que se ejecuta en una aplicación no puede tener acceso directo al código o a los recursos de otra aplicación. Common Language Runtime impone este aislamiento al impedir que se realicen llamadas directas entre objetos de dominios de aplicación diferentes. Los objetos que se pasan entre dominios se copian o se obtiene acceso a ellos mediante proxy. Si el objeto se copia, la llamada al objeto es local. En otras palabras, el llamador y el objeto al que se hace referencia se encuentran en el mismo dominio de aplicación. Si se tiene acceso al objeto a través de un proxy, la llamada al objeto es remota. En este caso, el llamador y el objeto al que se hace referencia se encuentran en dominios de aplicación diferentes. En las llamadas entre dominios se utiliza la misma infraestructura de llamada remota que en las llamadas entre dos procesos o entre dos equipos. En consecuencia, los metadatos del objeto al que se hace referencia deben estar disponibles para ambos dominios de aplicación a fin de que la llamada al método no provoque un error en la compilación JIT. Si el dominio que llama no tiene acceso a los metadatos del objeto al que se está llamando, se podría producir un error de compilación con una excepción del tipo **System.IO.FileNotFound**. Consulte [Objetos remotos](http://msdn.microsoft.com/en-us/515686e6-0a8d-42f7-8188-73abede57c58) para obtener más información. El objeto es quien decide el mecanismo para determinar cómo se puede obtener acceso a los objetos entre dominios. Para obtener más información, consulta <xref:System.MarshalByRefObject?displayProperty=fullName>.  
+-   El código que se ejecuta en una aplicación no puede tener acceso directo al código o a los recursos de otra aplicación. Common Language Runtime impone este aislamiento al impedir que se realicen llamadas directas entre objetos de dominios de aplicación diferentes. Los objetos que se pasan entre dominios se copian o se obtiene acceso a ellos mediante proxy. Si el objeto se copia, la llamada al objeto es local. En otras palabras, el llamador y el objeto al que se hace referencia se encuentran en el mismo dominio de aplicación. Si se tiene acceso al objeto a través de un proxy, la llamada al objeto es remota. En este caso, el llamador y el objeto al que se hace referencia se encuentran en dominios de aplicación diferentes. En las llamadas entre dominios se utiliza la misma infraestructura de llamada remota que en las llamadas entre dos procesos o entre dos equipos. En consecuencia, los metadatos del objeto al que se hace referencia deben estar disponibles para ambos dominios de aplicación a fin de que la llamada al método no provoque un error en la compilación JIT. Si el dominio que llama no tiene acceso a los metadatos del objeto al que se está llamando, se podría producir un error de compilación con una excepción del tipo **System.IO.FileNotFound**. Consulte [Objetos remotos](http://msdn.microsoft.com/en-us/515686e6-0a8d-42f7-8188-73abede57c58) para obtener más información. El objeto es quien decide el mecanismo para determinar cómo se puede obtener acceso a los objetos entre dominios. Para obtener más información, consulta <xref:System.MarshalByRefObject?displayProperty=nameWithType>.  
   
 -   La aplicación en la que se ejecuta el código establece el comportamiento del mismo. En otras palabras, el dominio de aplicación proporciona valores de configuración tales como las directivas de versión de la aplicación, la ubicación de los ensamblados remotos a los que tiene acceso e información sobre dónde encontrar los ensamblados que se cargan en el dominio.  
   
@@ -110,12 +108,12 @@ Normalmente, los sistemas operativos y los entornos de Common Language Runtime p
   
  No existe una correlación uno a uno entre los dominios de aplicación y los subprocesos. En un momento dado haber varios subprocesos ejecutándose en un único dominio de aplicación. Además, cada subproceso concreto no está confinado a un solo dominio de aplicación. En otras palabras, los subprocesos pueden cruzar los límites del dominio de aplicación; no se crea un nuevo subproceso para cada dominio de aplicación.  
   
- En un momento dado, todos los subprocesos se ejecutan en un dominio de aplicación. Por tanto, podría haber cero, uno o varios subprocesos ejecutándose en un dominio de aplicación determinado. En tiempo de ejecución, se realiza un seguimiento de qué subprocesos se están ejecutando en qué dominios de aplicación. Se puede localizar en cualquier momento el dominio donde se está ejecutando un subproceso llamando al método <xref:System.Threading.Thread.GetDomain%2A?displayProperty=fullName>.  
+ En un momento dado, todos los subprocesos se ejecutan en un dominio de aplicación. Por tanto, podría haber cero, uno o varios subprocesos ejecutándose en un dominio de aplicación determinado. En tiempo de ejecución, se realiza un seguimiento de qué subprocesos se están ejecutando en qué dominios de aplicación. Se puede localizar en cualquier momento el dominio donde se está ejecutando un subproceso llamando al método <xref:System.Threading.Thread.GetDomain%2A?displayProperty=nameWithType>.  
   
 ### <a name="application-domains-and-cultures"></a>Dominios de aplicación y referencias culturales  
- La referencia cultural, representada por un objeto <xref:System.Globalization.CultureInfo>, se asocia con subprocesos. Puede obtener la referencia cultural asociada al subproceso que está actualmente en ejecución utilizando la propiedad <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=fullName>, y puede utilizar la propiedad <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=fullName> para obtener o establecer la referencia cultural asociada al subproceso que está actualmente en ejecución. Si la referencia cultural asociada a un subproceso se ha establecido explícitamente mediante la propiedad <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=fullName>, seguirá asociada a ese subproceso cuando el subproceso cruce los límites del dominio de aplicación. De lo contrario, la referencia cultural que estaba asociada al subproceso en un momento concreto vendrá determinada por el valor de la propiedad <xref:System.Globalization.CultureInfo.DefaultThreadCurrentCulture%2A?displayProperty=fullName> en el dominio de aplicación en el que se está ejecutando el subproceso:  
+ La referencia cultural, representada por un objeto <xref:System.Globalization.CultureInfo>, se asocia con subprocesos. Puede obtener la referencia cultural asociada al subproceso que está actualmente en ejecución utilizando la propiedad <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType>, y puede utilizar la propiedad <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> para obtener o establecer la referencia cultural asociada al subproceso que está actualmente en ejecución. Si la referencia cultural asociada a un subproceso se ha establecido explícitamente mediante la propiedad <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType>, seguirá asociada a ese subproceso cuando el subproceso cruce los límites del dominio de aplicación. De lo contrario, la referencia cultural que estaba asociada al subproceso en un momento concreto vendrá determinada por el valor de la propiedad <xref:System.Globalization.CultureInfo.DefaultThreadCurrentCulture%2A?displayProperty=nameWithType> en el dominio de aplicación en el que se está ejecutando el subproceso:  
   
--   Si el valor de la propiedad no es `null`, se asociará al subproceso la referencia cultural devuelta por la propiedad (y por consiguiente devuelta por las propiedades <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=fullName> y <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=fullName>).  
+-   Si el valor de la propiedad no es `null`, se asociará al subproceso la referencia cultural devuelta por la propiedad (y por consiguiente devuelta por las propiedades <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> y <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType>).  
   
 -   Si el valor de la propiedad es `null`, se asociará al subproceso la referencia cultural actual del sistema.  
   
@@ -171,5 +169,4 @@ Value (to append) = COMPLUS_LoaderOptimization=1
   
 <a name="reference"></a>   
 ## <a name="reference"></a>Referencia  
- <xref:System.MarshalByRefObject?displayProperty=fullName>
-
+ <xref:System.MarshalByRefObject?displayProperty=nameWithType>

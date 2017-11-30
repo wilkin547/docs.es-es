@@ -1,40 +1,22 @@
 ---
 title: "Finalizadores (Guía de programación de C#)"
-ms.date: 2017-05-10
+ms.date: 05/10/2017
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - ~ [C#], in finalizers
 - C# language, finalizers
 - finalizers [C#]
 ms.assetid: 1ae6e46d-a4b1-4a49-abe5-b97f53d9e049
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: b1efe92c371e44eb2d650eb07facc3e7030e9766
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 43bb7e6488da5eda863e7ad70b25c9bf55bebb52
-ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="finalizers-c-programming-guide"></a>Finalizadores (Guía de programación de C#)
 Los finalizadores se usan para destruir instancias de clases.  
@@ -53,11 +35,11 @@ Los finalizadores se usan para destruir instancias de clases.
   
  Por ejemplo, el siguiente código muestra una declaración de un finalizador para la clase `Car`.
   
- [!code-cs[csProgGuideObjects#86](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/destructors_1.cs)]  
+ [!code-csharp[csProgGuideObjects#86](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/destructors_1.cs)]  
 
 Un finalizador también puede implementarse como una definición de cuerpo de expresión, como se muestra en el ejemplo siguiente.
 
-[!code-cs[expression-bodied-finalizer](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/expr-bodied-destructor.cs#1)]  
+[!code-csharp[expression-bodied-finalizer](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/expr-bodied-destructor.cs#1)]  
   
  El finalizador llama implícitamente a <xref:System.Object.Finalize%2A> en la clase base del objeto. Por lo tanto, una llamada a un finalizador se convierte implícitamente al siguiente código:  
   
@@ -101,14 +83,13 @@ protected override void Finalize()
 ## <a name="example"></a>Ejemplo  
  En el siguiente ejemplo se crean tres clases que forman una cadena de herencia. La clase `First` es la clase base, `Second` se deriva de `First` y `Third` se deriva de `Second`. Los tres tienen finalizadores. En `Main`, se crea una instancia de la clase más derivada. Cuando ejecute el programa, observe que se llama a los finalizadores de las tres clases automáticamente y en orden, desde la más derivada hasta la menos derivada.  
   
- [!code-cs[csProgGuideObjects#85](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/destructors_2.cs)]  
+ [!code-csharp[csProgGuideObjects#85](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/destructors_2.cs)]  
   
 ## <a name="c-language-specification"></a>Especificación del lenguaje C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Vea también  
- <xref:System.IDisposable>   
- [Guía de programación de C#](../../../csharp/programming-guide/index.md)   
- [Constructores](../../../csharp/programming-guide/classes-and-structs/constructors.md)   
+ <xref:System.IDisposable>  
+ [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
+ [Constructores](../../../csharp/programming-guide/classes-and-structs/constructors.md)  
  [Recolección de elementos no utilizados](../../../standard/garbage-collection/index.md)
-

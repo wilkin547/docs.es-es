@@ -5,8 +5,7 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-bcl
+ms.technology: dotnet-bcl
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,16 +13,15 @@ helpviewer_keywords:
 - common language runtime, application domains
 - runtime, application domains
 ms.assetid: c6d99815-e022-4d2c-9420-1d7ab5b9d504
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 53180d5d3d9314c3f078ddca8f5c155b01981f4e
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: b2dac2238ae9117d3678335748c680d594a8b5c6
-ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="using-application-domains"></a>Utilizar dominios de aplicación
 Los dominios de aplicación proporcionan una unidad de aislamiento para Common Language Runtime. Se crean y se ejecutan dentro de un proceso. Los dominios de aplicación suele crearlos un host en tiempo de ejecución, que es una aplicación encargada de cargar el tiempo de ejecución en un proceso y ejecutar el código de usuario dentro de un dominio de aplicación. El host en tiempo de ejecución crea un proceso y un dominio de aplicación predeterminado y ejecuta el código administrado dentro de él. Entre los hosts en tiempo de ejecución se incluyen ASP.NET, Microsoft Internet Explorer y el shell de Windows.  
@@ -56,7 +54,7 @@ Los dominios de aplicación proporcionan una unidad de aislamiento para Common L
  Explica cómo se puede recibir una notificación de que se ha producido una excepción antes de que Common Language Runtime empiece a buscar controladores de excepciones.  
   
  [Resolver cargas de ensamblado](../../../docs/framework/app-domains/resolve-assembly-loads.md)  
- Proporciona instrucciones sobre cómo usar el evento <xref:System.AppDomain.AssemblyResolve?displayProperty=fullName> para resolver errores en la carga de ensamblados.  
+ Proporciona instrucciones sobre cómo usar el evento <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> para resolver errores en la carga de ensamblados.  
   
 ## <a name="reference"></a>Referencia  
  <xref:System.AppDomain>  
@@ -77,4 +75,3 @@ Los dominios de aplicación proporcionan una unidad de aislamiento para Common L
   
  [Información general de la reflexión](../../../docs/framework/reflection-and-codedom/reflection.md)  
  Describe cómo usar la clase **Reflection** para obtener información sobre un ensamblado.
-

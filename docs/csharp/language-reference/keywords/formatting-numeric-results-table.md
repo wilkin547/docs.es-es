@@ -1,47 +1,28 @@
 ---
 title: "Tabla de formatos de presentación para valores numéricos (Referencia de C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - formatting [C#]
 - numeric formatting [C#]
 - String.Format method
 - Console.Write method
 ms.assetid: 120ba537-4448-4c62-8676-7a8fdd98f496
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: cce14d5124ffdf030701ae0fc769278da51f86cc
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 16976f5a59bd4eb0eca29553aff87d4fe0b1d247
-ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="formatting-numeric-results-table-c-reference"></a>Tabla de formatos de presentación para valores numéricos (Referencia de C#)
-Se pueden aplicar formatos a los resultados numéricos mediante el método <xref:System.String.Format%2A?displayProperty=fullName>, o con el método <xref:System.Console.Write%2A?displayProperty=fullName> o <xref:System.Console.WriteLine%2A?displayProperty=fullName> que realiza una llamada a `String.Format`. El formato se especifica mediante cadenas de formato. La tabla siguiente contiene las cadenas de formato estándar admitidas. La cadena de formato toma la siguiente forma: `Axx`, donde `A` es el especificador de formato y `xx` es el especificador de precisión. El especificador de formato controla el tipo de formato aplicado al valor numérico, mientras que el especificador de precisión controla el número de dígitos significativos o posiciones decimales del resultado. El valor de los intervalos del especificador de precisión comprende de 0 a 99.  
+Se pueden aplicar formatos a los resultados numéricos mediante el método <xref:System.String.Format%2A?displayProperty=nameWithType>, o con el método <xref:System.Console.Write%2A?displayProperty=nameWithType> o <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> que realiza una llamada a `String.Format`. El formato se especifica mediante cadenas de formato. La tabla siguiente contiene las cadenas de formato estándar admitidas. La cadena de formato toma la siguiente forma: `Axx`, donde `A` es el especificador de formato y `xx` es el especificador de precisión. El especificador de formato controla el tipo de formato aplicado al valor numérico, mientras que el especificador de precisión controla el número de dígitos significativos o posiciones decimales del resultado. El valor de los intervalos del especificador de precisión comprende de 0 a 99.  
   
- Para obtener más información sobre cadenas de formato estándar y personalizadas, vea [Aplicación de formato a tipo](../../../standard/base-types/formatting-types.md). Para obtener más información sobre el método `String.Format`, vea <xref:System.String.Format%2A?displayProperty=fullName>.  
+ Para obtener más información sobre cadenas de formato estándar y personalizadas, vea [Aplicación de formato a tipo](../../../standard/base-types/formatting-types.md). Para obtener más información sobre el método `String.Format`, vea <xref:System.String.Format%2A?displayProperty=nameWithType>.  
   
 |Especificador de formato|Descripción|Ejemplos|Salida|  
 |----------------------|-----------------|--------------|------------|  
@@ -54,9 +35,8 @@ Se pueden aplicar formatos a los resultados numéricos mediante el método <xref
 |X o x|Hexadecimal|Console.Write("{0:X}", 250);<br /><br /> Console.Write("{0:X}", 0xffff);|FA<br /><br /> FFFF|  
   
 ## <a name="see-also"></a>Vea también  
- [Referencia de C#](../../../csharp/language-reference/index.md)   
- [Guía de programación de C#](../../../csharp/programming-guide/index.md)   
- [Cadenas con formato numérico estándar](../../../standard/base-types/standard-numeric-format-strings.md)   
- [Tablas de referencia para tipos](../../../csharp/language-reference/keywords/reference-tables-for-types.md)   
+ [Referencia de C#](../../../csharp/language-reference/index.md)  
+ [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
+ [Cadenas con formato numérico estándar](../../../standard/base-types/standard-numeric-format-strings.md)  
+ [Tablas de referencia para tipos](../../../csharp/language-reference/keywords/reference-tables-for-types.md)  
  [string](../../../csharp/language-reference/keywords/string.md)
-

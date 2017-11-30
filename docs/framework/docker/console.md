@@ -9,14 +9,12 @@ ms.prod: .net-framework
 ms.technology: vs-ide-deployment
 ms.devlang: dotnet
 ms.assetid: 85cca1d5-c9a4-4eb2-93e6-4f878de07fd7
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 2fdce1e131eaa0d6952b2910f73105f097487711
-ms.contentlocale: es-es
-ms.lasthandoff: 08/11/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="running-console-applications-in-windows-containers"></a>Ejecución de aplicaciones de consola en contenedores de Windows
 
 Las aplicaciones de consola se usan para muchos fines, que abarcan desde la consulta simple de un estado a tareas de procesamiento de imágenes de documentos de ejecución prolongada. En cualquier caso, la posibilidad de iniciar y escalar estas aplicaciones se enfrenta a limitaciones de adquisiciones de hardware, tiempos de inicio o ejecución de varias instancias.
@@ -145,4 +143,3 @@ Para ejecutar, abra PowerShell y use el comando siguiente:
 
 ## <a name="summary"></a>Resumen
 Con solo agregar un Dockerfile y publicar la aplicación, puede colocar en contenedores las aplicaciones de consola de .NET Framework y aprovechar las ventajas que ofrece la ejecución de varias instancias, el inicio y la detención limpios y otras capacidades de Windows Server 2016 sin realizar cambio alguno en el código de las aplicaciones.
-

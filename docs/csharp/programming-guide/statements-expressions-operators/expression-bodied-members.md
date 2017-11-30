@@ -1,23 +1,19 @@
 ---
 title: "Miembros con cuerpo de expresión (Guía de programación de C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - expression-bodied members[C#]
 - C# language, expresion-bodied members
 author: rpetrusha
 ms.author: ronpet
+ms.openlocfilehash: ead1e474fe87bd9fbd0f972bc0f2fc4fefc12ecf
+ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: d12f9f3af9a57e142311f6d1676b5f97e8b60d19
-ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="expression-bodied-members-c-programming-guide"></a>Miembros con cuerpo de expresión (Guía de programación de C#)
 Las definiciones de cuerpos de expresión permiten proporcionar la implementación de un miembro de una forma muy concisa y legible. Se puede usar una definición de cuerpo de expresión siempre que la lógica de cualquier miembro compatible, como un método o propiedad, se componga de una expresión única. Una definición de cuerpo de expresión tiene la siguiente sintaxis general:
@@ -45,7 +41,7 @@ Un método con cuerpo de expresión consta de una sola expresión que devuelve u
 
 En el ejemplo siguiente se define una clase `Person` que reemplaza el método <xref:System.Object.ToString%2A> con una definición de cuerpo de expresión. También define un método `Show` que muestra un nombre en la consola. Tenga en cuenta que la palabra clave `return` no se usa en la definición de cuerpo de expresión de `ToString`.
 
-[!code-cs[métodos con cuerpo de expresión](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/expr-bodied-methods.cs)]  
+[!code-csharp[expression-bodied-methods](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/expr-bodied-methods.cs)]  
 
 Para más información, vea [Métodos (Guía de programación de C#)](../classes-and-structs/methods.md).
  
@@ -55,7 +51,7 @@ Una definición de cuerpo de expresión para un constructor normalmente consta d
 
 En el ejemplo siguiente se define una clase `Location` cuyo constructor tiene un único parámetro de cadena denominado *name*. La definición del cuerpo de expresión asigna el argumento a la propiedad `Name`.
 
-[!code-cs[constructor con cuerpo de expresión](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/expr-bodied-ctor.cs#1)]  
+[!code-csharp[expression-bodied-constructor](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/expr-bodied-ctor.cs#1)]  
 
 Para más información, vea [Constructores (Guía de programación de C#)](../classes-and-structs/constructors.md).
 
@@ -65,7 +61,7 @@ Una definición de cuerpo de expresión para un finalizador normalmente contiene
 
 En el ejemplo siguiente se define un finalizador que usa una definición de cuerpo de expresión para indicar que el finalizador se ha llamado.
 
-[!code-cs[expression-bodied-finalizer](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/expr-bodied-destructor.cs#1)]  
+[!code-csharp[expression-bodied-finalizer](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/expr-bodied-destructor.cs#1)]  
 
 Para más información, vea [Finalizadores (Guía de programación de C#)](../classes-and-structs/destructors.md).
 
@@ -75,7 +71,7 @@ Si decide implementar un descriptor de acceso get de la propiedad usted mismo, p
 
 En el ejemplo siguiente se define una propiedad `Location.Name` cuyo descriptor de acceso get de propiedad devuelve el valor del campo `locationName` privado que respalda la propiedad. 
 
-[!code-cs[captador de propiedad con cuerpo de expresión](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/expr-bodied-ctor.cs#1)]  
+[!code-csharp[expression-bodied-property-getter](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/expr-bodied-ctor.cs#1)]  
 
 Las propiedades de solo lectura que usan una definición de cuerpo de expresión se pueden implementar sin una instrucción `set` explícita. La sintaxis es la siguiente:
 
@@ -85,7 +81,7 @@ PropertyName => returnValue;
 
 En el ejemplo siguiente se define una clase `Location` cuya propiedad `Name` de solo lectura se implementa como una definición de cuerpo de expresión que devuelve el valor del campo privado `locationName`.
 
-[!code-cs[constructor con cuerpo de expresión](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/expr-bodied-readonly.cs#1)]  
+[!code-csharp[expression-bodied-constructor](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/expr-bodied-readonly.cs#1)]  
 
 Para más información, vea [Propiedades (Guía de programación de C#)](../classes-and-structs/properties.md).
 
@@ -95,7 +91,7 @@ Si decide implementar un descriptor de acceso set de propiedad usted mismo, pued
 
 En el ejemplo siguiente se define una propiedad `Location.Name` cuya instrucción set de propiedad asigna su argumento de entrada al valor del campo `locationName` privado que respalda la propiedad.
 
-[!code-cs[establecedor de propiedad con cuerpo de expresión](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/expr-bodied-ctor.cs#1)]  
+[!code-csharp[expression-bodied-property-setter](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/expr-bodied-ctor.cs#1)]  
 
 Para más información, vea [Propiedades (Guía de programación de C#)](../classes-and-structs/properties.md).
 
@@ -105,8 +101,7 @@ Como las propiedades, los descriptores de acceso get y set de un indizador const
 
 En el ejemplo siguiente se define una clase denominada `Sports` que incluye una matriz <xref:System.String> interna que contiene los nombres de varios deportes. Los descriptores de acceso get y set del indizador se implementan como definiciones de cuerpos de expresión.
 
-[!code-cs[indizador con cuerpo de expresión](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/expr-bodied-indexers.cs#1)] 
+[!code-csharp[expression-bodied-indexer](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/expr-bodied-indexers.cs#1)] 
 
 Para más información, vea [Indizadores (Guía de programación de C#)](../indexers/index.md).
-
 

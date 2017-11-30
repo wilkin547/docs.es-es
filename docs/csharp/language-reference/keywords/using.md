@@ -1,41 +1,22 @@
 ---
 title: using (Referencia de C#)
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
 f1_keywords:
 - using_CSharpKeyword
 - using
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- using keyword [C#]
+helpviewer_keywords: using keyword [C#]
 ms.assetid: 124e1a63-2a4b-4132-b269-3b6d8d3ef72d
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 06a1ff73ec79b8e071c08bd72a7a64490f6d43db
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: b6aaa2837e0c6850956f51b7ded979cc46f9b3a2
-ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="using-c-reference"></a>using (Referencia de C#)
 La palabra clave `using` tiene dos usos principales:  
@@ -47,10 +28,9 @@ La palabra clave `using` tiene dos usos principales:
 Además, la directiva [using static](using-static.md) permite definir un tipo a cuyos miembros estáticos se puede acceder sin especificar un nombre de tipo.
 
 ## <a name="see-also"></a>Vea también  
- [Referencia de C#](../../../csharp/language-reference/index.md)   
- [Guía de programación de C#](../../../csharp/programming-guide/index.md)   
- [Palabras clave de C#](../../../csharp/language-reference/keywords/index.md)   
- [Palabras clave del espacio de nombres](../../../csharp/language-reference/keywords/namespace-keywords.md)   
- [Namespaces](../../../csharp/programming-guide/namespaces/index.md)  (Espacios de nombres)  
+ [Referencia de C#](../../../csharp/language-reference/index.md)  
+ [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
+ [Palabras clave de C#](../../../csharp/language-reference/keywords/index.md)  
+ [Palabras clave del espacio de nombres](../../../csharp/language-reference/keywords/namespace-keywords.md)  
+ [Espacios de nombres](../../../csharp/programming-guide/namespaces/index.md)  
  [extern](../../../csharp/language-reference/keywords/extern.md)
-

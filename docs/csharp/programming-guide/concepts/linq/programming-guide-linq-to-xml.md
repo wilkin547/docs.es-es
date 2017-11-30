@@ -1,30 +1,21 @@
 ---
 title: "Guía de programación (LINQ to XML) (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 4b1ffd10-ab81-4a0d-a0ca-e9876478d924
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 7ee6ac9d13d265442e6d5b9f02c6d5788e75c50f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: ed4b0aff72654b9ac0928fae933e34268aede7fe
-ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="programming-guide-linq-to-xml-c"></a>Guía de programación (LINQ to XML) (C#)
 En esta sección se ofrece información conceptual y paso a paso acerca de la programación con [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
@@ -52,6 +43,5 @@ En esta sección se ofrece información conceptual y paso a paso acerca de la pr
 |[Documentos XML de ejemplo (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)|Contiene los documentos XML de muestra que utilizan numerosos ejemplos de esta documentación.|  
   
 ## <a name="see-also"></a>Vea también  
- [Introducción (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/getting-started-linq-to-xml.md)   
+ [Introducción (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/getting-started-linq-to-xml.md)  
  [LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml.md)
-

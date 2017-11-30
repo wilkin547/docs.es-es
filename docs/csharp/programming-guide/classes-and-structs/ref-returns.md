@@ -9,12 +9,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 18cf7a4b-29f0-4b14-85b8-80af754aabd8
+ms.openlocfilehash: 1d8fb092b578602b5d4f791a3fd14f47dfae1ba6
+ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
 ms.translationtype: HT
-ms.sourcegitcommit: 4582cb0ee091526423cce3fc1d8243029f34f59c
-ms.openlocfilehash: 3f2ee35db5b77efcce629b6315060a723429b19c
-ms.contentlocale: es-es
-ms.lasthandoff: 08/16/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="ref-returns-and-ref-locals"></a>Valores devueltos y variables locales de tipo ref
 
@@ -86,15 +85,14 @@ Si `p` no está definido como una variable local de tipo ref mediante la palabra
 
 En el ejemplo siguiente, se define una clase `NumberStore` que almacena una matriz de valores enteros. El método `FindNumber` devuelve por referencia el primer número que es mayor o igual que el número que se pasa como argumento. Si ningún número es mayor o igual que el argumento, el método devuelve el número en el índice 0. 
 
-[!CODE-cs[ref-returns](../../../../samples/snippets/csharp/programming-guide/ref-returns/ref-returns1.cs#1)]
+[!code-csharp[ref-returns](../../../../samples/snippets/csharp/programming-guide/ref-returns/ref-returns1.cs#1)]
 
 En el ejemplo siguiente, se llama al método `NumberStore.FindNumber` para recuperar el primer valor que es mayor o igual que 16. Después, el autor de la llamada duplica el valor devuelto por el método. Como se muestra en el resultado del ejemplo, este cambio se refleja en el valor de los elementos de matriz de la instancia `NumberStore`.
 
-[!CODE-cs[ref-returns](../../../../samples/snippets/csharp/programming-guide/ref-returns/ref-returns1.cs#2)]
+[!code-csharp[ref-returns](../../../../samples/snippets/csharp/programming-guide/ref-returns/ref-returns1.cs#2)]
 
 Sin que se admitan los valores devueltos de referencia, este tipo de operación se realiza normalmente devolviendo el índice del elemento de matriz junto con su valor. Después, el autor de la llamada puede usar este índice para modificar el valor en una llamada al método independiente. En cambio, el autor de la llamada también puede modificar el índice para tener acceso a otros valores de matriz y, posiblemente, modificarlos.  
  
 ## <a name="see-also"></a>Vea también
 
 [ref (palabra clave)](../../language-reference/keywords/ref.md)
-

@@ -1,14 +1,11 @@
 ---
-title: /define (Visual Basic) | Documentos de Microsoft
-ms.date: 2015-07-20
+title: /define (Visual Basic)
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - -d compiler option [Visual Basic]
 - /d compiler option [Visual Basic]
@@ -17,28 +14,14 @@ helpviewer_keywords:
 - /define compiler option [Visual Basic]
 - define compiler option [Visual Basic]
 ms.assetid: f735c57d-1cf9-4f2f-a26f-0de630fd4077
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 48c3bae1c6cf5831f95ce86dbcf6adadab9d5db8
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 8bc3056c3e2d7a4aad469d3bf2c404f5f5248384
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="define-visual-basic"></a>/define (Visual Basic)
 Permite definir constantes condicionales para el compilador.  
@@ -69,15 +52,15 @@ Permite definir constantes condicionales para el compilador.
   
 |Para definir/establecer en el entorno de desarrollo integrado de Visual Studio|  
 |---|  
-|1.  Seleccione un proyecto en el **Explorador de soluciones**. En el **proyecto** menú, haga clic en **propiedades**. Para obtener más información, consulte [Introducción al Diseñador de proyectos](http://msdn.microsoft.com/en-us/898dd854-c98d-430c-ba1b-a913ce3c73d7).<br />2.  Haga clic en el **compilar** ficha.<br />3.  Haga clic en **Avanzado**.<br />4.  Modifique el valor en el **constantes personalizadas** cuadro.|  
+|1.  Seleccione un proyecto en el **Explorador de soluciones**. En el menú **Proyecto**, haga clic en **Propiedades**. Para obtener más información, consulte [Introducción al Diseñador de proyectos](http://msdn.microsoft.com/en-us/898dd854-c98d-430c-ba1b-a913ce3c73d7).<br />2.  Haga clic en la pestaña **Compilar**.<br />3.  Haga clic en **Avanzado**.<br />4.  Modifique el valor en el **constantes personalizadas** cuadro.|  
   
 ## <a name="example"></a>Ejemplo  
  En el siguiente código se definen y usan dos constantes de compilador condicionales.  
   
- [!code-vb[VbVbalrCompiler nº&45;](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/define_1.vb)]  
+ [!code-vb[VbVbalrCompiler#45](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/define_1.vb)]  
   
 ## <a name="see-also"></a>Vea también  
- [Compilador de línea de comandos de Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)   
- [#If... Then... #Else directivas](../../../visual-basic/language-reference/directives/if-then-else-directives.md)   
- [#Const (directiva)](../../../visual-basic/language-reference/directives/const-directive.md)   
+ [Compilador de línea de comandos de Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)  
+ [#If...Then...#Else (directivas)](../../../visual-basic/language-reference/directives/if-then-else-directives.md)  
+ [#Const (directiva)](../../../visual-basic/language-reference/directives/const-directive.md)  
  [Líneas de comandos de compilación de ejemplo](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

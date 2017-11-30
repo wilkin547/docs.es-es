@@ -5,24 +5,25 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
+dev_langs:
+- csharp
+- vb
 helpviewer_keywords:
 - updates, determining for .NET Framework
 - .NET Framework, determining updates
 ms.assetid: 53c7b5f7-d47a-402a-b194-7244a696a88b
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: ba734dd3a9585b52b96cb2d27743da6190961126
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: b29b402e859688dcced6bd4429b18298070fb5e4
-ms.contentlocale: es-es
-ms.lasthandoff: 09/19/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="how-to-determine-which-net-framework-updates-are-installed"></a>Cómo: Determinar qué actualizaciones de .NET Framework están instaladas
 Las actualizaciones instaladas para cada versión de .NET Framework instalada en un equipo se enumeran en el Registro de Windows. Puede utilizar el Editor del Registro (regedit.exe) para ver esta información.  
@@ -80,4 +81,3 @@ Microsoft .NET Framework 4 Extended
 [Cómo: Determinar qué versiones de .NET Framework están instaladas](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)   
 [Instalar .NET Framework](../../../docs/framework/install/guide-for-developers.md)   
 [Versiones y dependencias](../../../docs/framework/migration-guide/versions-and-dependencies.md)
-

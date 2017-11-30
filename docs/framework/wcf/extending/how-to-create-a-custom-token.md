@@ -1,121 +1,127 @@
 ---
-title: "C&#243;mo: Crear un token personalizado | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "seguridad [WCF], creación de tokens personalizados"
-  - "Clase SecurityToken"
-  - "Clase SecurityTokenParameters"
-  - "Clase WSSecurityTokenSerializer"
+title: "Cómo: Crear un token personalizado"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- SecurityTokenParameters class
+- security [WCF], creating custom tokens
+- WSSecurityTokenSerializer class
+- SecurityToken class
 ms.assetid: 6d892973-1558-4115-a9e1-696777776125
-caps.latest.revision: 14
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 7cdcb6d48fe3da9bf63dc1a97bfab1743dc78a3d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo: Crear un token personalizado
-Este tema muestra cómo crear un token de seguridad personalizado mediante la clase <xref:System.IdentityModel.Tokens.SecurityToken> y cómo integrarlo en un autenticador y en un proveedor de token de seguridad personalizado.Para ver un ejemplo de código completo, vea el ejemplo [Token personalizado](../../../../docs/framework/wcf/samples/custom-token.md).  
+# <a name="how-to-create-a-custom-token"></a>Cómo: Crear un token personalizado
+Este tema muestra cómo crear un token de seguridad personalizado mediante la clase <xref:System.IdentityModel.Tokens.SecurityToken> y cómo integrarlo en un autenticador y en un proveedor de token de seguridad personalizado. Para obtener un ejemplo de código completo, vea el [personalizado Token](../../../../docs/framework/wcf/samples/custom-token.md) ejemplo.  
   
- Un *token de seguridad* es esencialmente un elemento XML que el marco de seguridad de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] emplea para representar notificaciones sobre un remitente dentro del mensaje SOAP.La seguridad de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] proporciona varios tokens para los modos de autenticación proporcionados por el sistema.En los ejemplos se incluye un token de seguridad de certificado X.509 representado por la clase <xref:System.IdentityModel.Tokens.X509SecurityToken> o un token de seguridad Username representado por la clase <xref:System.IdentityModel.Tokens.UserNameSecurityToken>.  
+ A *token de seguridad* es esencialmente un elemento XML que se usa por la [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] marco de seguridad para representar notificaciones sobre un remitente dentro del mensaje SOAP. La seguridad de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] proporciona varios tokens para los modos de autenticación proporcionados por el sistema. En los ejemplos se incluye un token de seguridad de certificado X.509 representado por la clase <xref:System.IdentityModel.Tokens.X509SecurityToken> o un token de seguridad Username representado por la clase <xref:System.IdentityModel.Tokens.UserNameSecurityToken>.  
   
- A veces los tipos proporcionados no admiten un modo de autenticación o credencial.En ese caso, es necesario para crear un token de seguridad personalizado para proporcionar una representación XML de la credencial personalizada dentro del mensaje SOAP.  
+ A veces los tipos proporcionados no admiten un modo de autenticación o credencial. En ese caso, es necesario para crear un token de seguridad personalizado para proporcionar una representación XML de la credencial personalizada dentro del mensaje SOAP.  
   
- Los siguientes procedimientos muestran cómo crear un token de seguridad personalizado y cómo integrarlo en la infraestructura de seguridad de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].En este tema se crea un token de tarjeta de crédito que se utiliza para pasar información sobre la tarjeta de crédito del cliente al servidor.  
+ Los siguientes procedimientos muestran cómo crear un token de seguridad personalizado y cómo integrarlo en la infraestructura de seguridad de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. En este tema se crea un token de tarjeta de crédito que se utiliza para pasar información sobre la tarjeta de crédito del cliente al servidor.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] las credenciales personalizadas y el administrador de tokens de seguridad, vea [Tutorial: Crear credenciales de cliente y servicio personalizadas](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md).  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)]las credenciales personalizadas y Administrador de tokens de seguridad, consulte [Tutorial: creación de cliente personalizada y las credenciales de servicio](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md).  
   
  Vea el espacio de nombres <xref:System.IdentityModel.Tokens> para obtener más clases que representen tokens de seguridad.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] las credenciales, el administrador de tokens de seguridad y las clases de proveedor y de autenticador, vea [Security Architecture](http://msdn.microsoft.com/es-es/16593476-d36a-408d-808c-ae6fd483e28f).  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)]las credenciales, el Administrador de tokens de seguridad y las clases de proveedor y el autenticador, vea [arquitectura de seguridad](http://msdn.microsoft.com/en-us/16593476-d36a-408d-808c-ae6fd483e28f).  
   
-## Procedimientos  
- Es necesario proporcionar a una aplicación cliente una manera de especificar información de la tarjeta de crédito para la infraestructura de seguridad.Una clase de credenciales de cliente personalizada pone esta información a disposición de la aplicación.El primer paso es crear una clase para que represente la información de la tarjeta de crédito para las credenciales de cliente personalizadas.  
+## <a name="procedures"></a>Procedimientos  
+ Es necesario proporcionar a una aplicación cliente una manera de especificar información de la tarjeta de crédito para la infraestructura de seguridad. Una clase de credenciales de cliente personalizada pone esta información a disposición de la aplicación. El primer paso es crear una clase para que represente la información de la tarjeta de crédito para las credenciales de cliente personalizadas.  
   
-#### Para crear una clase que represente información de la tarjeta de crédito dentro de las credenciales de cliente  
+#### <a name="to-create-a-class-that-represents-credit-card-information-inside-client-credentials"></a>Para crear una clase que represente información de la tarjeta de crédito dentro de las credenciales de cliente  
   
-1.  Defina una nueva clase que represente la información de la tarjeta de crédito para la aplicación.En el siguiente ejemplo se nombra la clase `CreditCardInfo`.  
+1.  Defina una nueva clase que represente la información de la tarjeta de crédito para la aplicación. En el siguiente ejemplo se nombra la clase `CreditCardInfo`.  
   
-2.  Agregue las propiedades adecuadas a la clase para permitir que una aplicación establezca la información necesaria para el token personalizado.En este ejemplo, la clase tiene tres propiedades: `CardNumber`, `CardIssuer`y `ExpirationDate`.  
+2.  Agregue las propiedades adecuadas a la clase para permitir que una aplicación establezca la información necesaria para el token personalizado. En este ejemplo, la clase tiene tres propiedades: `CardNumber`, `CardIssuer`y `ExpirationDate`.  
   
      [!code-csharp[c_CustomToken#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtoken/cs/source.cs#4)]
      [!code-vb[c_CustomToken#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtoken/vb/source.vb#4)]  
   
- A continuación, se ha de crear una clase que represente el token de seguridad personalizado.El proveedor de tokens de seguridad, el autenticador y las clases del serializador usan esta clase para pasar información sobre el token de seguridad a y desde la infraestructura de seguridad de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ A continuación, se ha de crear una clase que represente el token de seguridad personalizado. El proveedor de tokens de seguridad, el autenticador y las clases del serializador usan esta clase para pasar información sobre el token de seguridad a y desde la infraestructura de seguridad de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
   
-#### Para crear una clase de token de seguridad personalizada  
+#### <a name="to-create-a-custom-security-token-class"></a>Para crear una clase de token de seguridad personalizada  
   
-1.  Defina una clase nueva derivada de la clase <xref:System.IdentityModel.Tokens.SecurityToken>.En este ejemplo se crea una clase denominada `CreditCardToken`.  
+1.  Defina una clase nueva derivada de la clase <xref:System.IdentityModel.Tokens.SecurityToken>. En este ejemplo se crea una clase denominada `CreditCardToken`.  
   
-2.  Invalide la propiedad <xref:System.IdentityModel.Tokens.SecurityToken.Id%2A>.Esta propiedad se utiliza para obtener el identificador local del token de seguridad que se utiliza para señalar a la representación XML del token de seguridad desde otros elementos dentro del mensaje SOAP.En este ejemplo, se le puede pasar un identificador de token como parámetro de constructor o se puede generar uno nuevo aleatorio cada vez que se cree una instancia de token de seguridad.  
+2.  Invalide la propiedad <xref:System.IdentityModel.Tokens.SecurityToken.Id%2A>. Esta propiedad se utiliza para obtener el identificador local del token de seguridad que se utiliza para señalar a la representación XML del token de seguridad desde otros elementos dentro del mensaje SOAP. En este ejemplo, se le puede pasar un identificador de token como parámetro de constructor o se puede generar uno nuevo aleatorio cada vez que se cree una instancia de token de seguridad.  
   
-3.  Implemente la propiedad <xref:System.IdentityModel.Tokens.SecurityToken.SecurityKeys%2A>.Esta propiedad devuelve una colección de claves de seguridad que representa la instancia del token de seguridad.[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] puede utilizar este tipo de claves para firmar o cifrar partes del mensaje SOAP.En este ejemplo, el token de seguridad de la tarjeta de crédito no puede contener ninguna clave de seguridad; por consiguiente, la implementación siempre devuelve una colección vacía.  
+3.  Implemente la propiedad <xref:System.IdentityModel.Tokens.SecurityToken.SecurityKeys%2A>. Esta propiedad devuelve una colección de claves de seguridad que representa la instancia del token de seguridad. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] puede utilizar este tipo de claves para firmar o cifrar partes del mensaje SOAP. En este ejemplo, el token de seguridad de la tarjeta de crédito no puede contener ninguna clave de seguridad; por consiguiente, la implementación siempre devuelve una colección vacía.  
   
-4.  Invalide las propiedades <xref:System.IdentityModel.Tokens.SecurityToken.ValidFrom%2A> y <xref:System.IdentityModel.Tokens.SecurityToken.ValidTo%2A>.[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] utiliza estas propiedades para determinar la validez de la instancia del token de seguridad.En este ejemplo, el token de seguridad de la tarjeta de crédito solo tiene una fecha de expiración, por lo que la propiedad `ValidFrom` devuelve <xref:System.DateTime> que representa la fecha y hora de creación de la instancia.  
+4.  Invalide las propiedades <xref:System.IdentityModel.Tokens.SecurityToken.ValidFrom%2A> y <xref:System.IdentityModel.Tokens.SecurityToken.ValidTo%2A>. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] utiliza estas propiedades para determinar la validez de la instancia del token de seguridad. En este ejemplo, el token de seguridad de la tarjeta de crédito solo tiene una fecha de expiración, por lo que la propiedad `ValidFrom` devuelve <xref:System.DateTime> que representa la fecha y hora de creación de la instancia.  
   
      [!code-csharp[c_CustomToken#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtoken/cs/source.cs#1)]
      [!code-vb[c_CustomToken#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtoken/vb/source.vb#1)]  
   
- Cuando se crea un nuevo tipo de token de seguridad, requiere una implementación de la clase <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters>.La implementación se utiliza en la configuración del elemento de enlace de seguridad para representar el nuevo tipo de token.La clase de los parámetros de token de seguridad sirve como plantilla que se emplea para igualar a la instancia del token de seguridad real cuando se procesa un mensaje.La plantilla proporciona propiedades adicionales que una aplicación puede utilizar para especificar los criterios a los que debe ajustarse el token de seguridad para que pueda usarse o autenticarse.En el siguiente ejemplo no se agrega ninguna propiedad, de modo que solo se busca la coincidencia del tipo de token de seguridad cuando la infraestructura de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] busca una instancia del token de seguridad que debe utilizar o validar.  
+ Cuando se crea un nuevo tipo de token de seguridad, requiere una implementación de la clase <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters>. La implementación se utiliza en la configuración del elemento de enlace de seguridad para representar el nuevo tipo de token. La clase de los parámetros de token de seguridad sirve como plantilla que se emplea para igualar a la instancia del token de seguridad real cuando se procesa un mensaje. La plantilla proporciona propiedades adicionales que una aplicación puede utilizar para especificar los criterios a los que debe ajustarse el token de seguridad para que pueda usarse o autenticarse. En el siguiente ejemplo no se agrega ninguna propiedad, de modo que solo se busca la coincidencia del tipo de token de seguridad cuando la infraestructura de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] busca una instancia del token de seguridad que debe utilizar o validar.  
   
-#### Para crear una clase de parámetros de token de seguridad personalizada  
+#### <a name="to-create-a-custom-security-token-parameters-class"></a>Para crear una clase de parámetros de token de seguridad personalizada  
   
 1.  Defina una clase nueva derivada de la clase <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters>.  
   
-2.  Implemente el método <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.CloneCore%2A>.Copie todos los campos internos definidos en su clase, si hubiese alguno.Este ejemplo no define ningún campo adicional.  
+2.  Implemente el método <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.CloneCore%2A>. Copie todos los campos internos definidos en su clase, si hubiese alguno. Este ejemplo no define ningún campo adicional.  
   
-3.  Implemente la propiedad de solo lectura <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.SupportsClientAuthentication%2A>.Esta propiedad devuelve `true` si el tipo de token de seguridad representado por esta clase se puede utilizar para autenticar un cliente a un servicio.En este ejemplo, el token de seguridad de la tarjeta de crédito se puede utilizar para autenticar un cliente a un servicio.  
+3.  Implemente la propiedad de solo lectura <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.SupportsClientAuthentication%2A>. Esta propiedad devuelve `true` si el tipo de token de seguridad representado por esta clase se puede utilizar para autenticar un cliente a un servicio. En este ejemplo, el token de seguridad de la tarjeta de crédito se puede utilizar para autenticar un cliente a un servicio.  
   
-4.  Implemente la propiedad de solo lectura <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.SupportsServerAuthentication%2A>.Esta propiedad devuelve `true` si el tipo de token de seguridad representado por esta clase se puede utilizar para autenticar un servicio a un cliente.En este ejemplo, el token de seguridad de la tarjeta de crédito no se puede utilizar para autenticar un servicio a un cliente.  
+4.  Implemente la propiedad de solo lectura <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.SupportsServerAuthentication%2A>. Esta propiedad devuelve `true` si el tipo de token de seguridad representado por esta clase se puede utilizar para autenticar un servicio a un cliente. En este ejemplo, el token de seguridad de la tarjeta de crédito no se puede utilizar para autenticar un servicio a un cliente.  
   
-5.  Implemente la propiedad de solo lectura <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.SupportsClientWindowsIdentity%2A>.Esta propiedad devuelve `true` si el tipo de token de seguridad representado por esta clase puede asignarse a una cuenta de Windows.En ese caso, el resultado de la autenticación se representa mediante una instancia de la clase <xref:System.Security.Principal.WindowsIdentity>.En este ejemplo, el token no se puede asignar a una cuenta de Windows.  
+5.  Implemente la propiedad de solo lectura <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.SupportsClientWindowsIdentity%2A>. Esta propiedad devuelve `true` si el tipo de token de seguridad representado por esta clase puede asignarse a una cuenta de Windows. En ese caso, el resultado de la autenticación se representa mediante una instancia de la clase <xref:System.Security.Principal.WindowsIdentity>. En este ejemplo, el token no se puede asignar a una cuenta de Windows.  
   
-6.  Implemente el método <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.CreateKeyIdentifierClause%28System.IdentityModel.Tokens.SecurityToken%2CSystem.ServiceModel.Security.Tokens.SecurityTokenReferenceStyle%29>.El marco de seguridad de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] llama a este método cuando requiere una referencia a la instancia del token de seguridad representada por esta clase de parámetros de tokens de seguridad.Tanto la instancia del token de seguridad real como el <xref:System.ServiceModel.Security.Tokens.SecurityTokenReferenceStyle> que especifica el tipo de la referencia que se solicita se pasan a este método como argumentos.En este ejemplo el token de seguridad de la tarjeta de crédito solo admite referencias internas.La clase <xref:System.IdentityModel.Tokens.SecurityToken> tiene funcionalidad para crear referencias internas, por lo que la implementación no precisa código adicional.  
+6.  Implemente el método <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.CreateKeyIdentifierClause%28System.IdentityModel.Tokens.SecurityToken%2CSystem.ServiceModel.Security.Tokens.SecurityTokenReferenceStyle%29>. El marco de seguridad de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] llama a este método cuando requiere una referencia a la instancia del token de seguridad representada por esta clase de parámetros de tokens de seguridad. Tanto la instancia del token de seguridad real como el <xref:System.ServiceModel.Security.Tokens.SecurityTokenReferenceStyle> que especifica el tipo de la referencia que se solicita se pasan a este método como argumentos. En este ejemplo el token de seguridad de la tarjeta de crédito solo admite referencias internas. La clase <xref:System.IdentityModel.Tokens.SecurityToken> tiene funcionalidad para crear referencias internas, por lo que la implementación no precisa código adicional.  
   
-7.  Implemente el método <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.InitializeSecurityTokenRequirement%28System.IdentityModel.Selectors.SecurityTokenRequirement%29>.[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] llama a este método para convertir la instancia de la clase de parámetros de tokens de seguridad en una instancia de la clase <xref:System.IdentityModel.Selectors.SecurityTokenRequirement>.Los proveedores de tokens de seguridad utilizan el resultado para crear la instancia del token de seguridad adecuada.  
+7.  Implemente el método <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.InitializeSecurityTokenRequirement%28System.IdentityModel.Selectors.SecurityTokenRequirement%29>. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] llama a este método para convertir la instancia de la clase de parámetros de tokens de seguridad en una instancia de la clase <xref:System.IdentityModel.Selectors.SecurityTokenRequirement>. Los proveedores de tokens de seguridad utilizan el resultado para crear la instancia del token de seguridad adecuada.  
   
      [!code-csharp[c_CustomToken#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtoken/cs/source.cs#2)]
      [!code-vb[c_CustomToken#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtoken/vb/source.vb#2)]  
   
- Los tokens de seguridad se transmiten dentro de los mensajes SOAP, lo que necesita un mecanismo de traducción entre la representación del token de seguridad en memoria y la representación en tránsito.[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usa un serializador de token de seguridad para realizar esta tarea.Todos los tokens personalizados deben estar acompañados de un serializador de tokens de seguridad personalizado que pueda serializar y deserializar el token de seguridad personalizado del mensaje SOAP.  
+ Los tokens de seguridad se transmiten dentro de los mensajes SOAP, lo que necesita un mecanismo de traducción entre la representación del token de seguridad en memoria y la representación en tránsito. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usa un serializador de token de seguridad para realizar esta tarea. Todos los tokens personalizados deben estar acompañados de un serializador de tokens de seguridad personalizado que pueda serializar y deserializar el token de seguridad personalizado del mensaje SOAP.  
   
 > [!NOTE]
->  Las claves derivadas están habilitadas de forma predeterminada.Si crea un token de seguridad personalizado y lo utiliza como token primario, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] deriva una clave a partir de éste.En este proceso, llama al serializador del token de seguridad personalizado para escribir la <xref:System.IdentityModel.Tokens.SecurityKeyIdentifierClause> para el token de seguridad personalizado durante la serialización de `DerivedKeyToken` en la conexión.En el extremo receptor, al deserializar el token fuera de la conexión, el serializador `DerivedKeyToken` espera un elemento `SecurityTokenReference` como elemento secundario de nivel superior bajo sí mismo.Si el serializador del token de seguridad personalizado no agregó un elemento `SecurityTokenReference` durante la serialización de su tipo de cláusula, se produce una excepción.  
+>  Las claves derivadas están habilitadas de forma predeterminada. Si crea un token de seguridad personalizado y lo utiliza como token primario, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] deriva una clave a partir de éste. En este proceso, llama al serializador del token de seguridad personalizado para escribir la <xref:System.IdentityModel.Tokens.SecurityKeyIdentifierClause> para el token de seguridad personalizado durante la serialización de `DerivedKeyToken` en la conexión. En el extremo receptor, al deserializar el token fuera de la conexión, el serializador `DerivedKeyToken` espera un elemento `SecurityTokenReference` como elemento secundario de nivel superior bajo sí mismo. Si el serializador del token de seguridad personalizado no agregó un elemento `SecurityTokenReference` durante la serialización de su tipo de cláusula, se produce una excepción.  
   
-#### Para crear un serializador de tokens de seguridad personalizado  
+#### <a name="to-create-a-custom-security-token-serializer"></a>Para crear un serializador de tokens de seguridad personalizado  
   
 1.  Defina una clase nueva derivada de la clase <xref:System.ServiceModel.Security.WSSecurityTokenSerializer>.  
   
-2.  Invalide el método <xref:System.ServiceModel.Security.WSSecurityTokenSerializer.CanReadTokenCore%28System.Xml.XmlReader%29>, que se basa en un <xref:System.Xml.XmlReader> para leer la secuencia XML.El método devuelve `true` si la implementación del serializador puede deserializar el token de seguridad dado su elemento actual.En este ejemplo, este método comprueba si el elemento XML actual del lector XML tiene el nombre de elemento y espacio de nombres correctos.Si no es así, llama a la implementación de la clase base de este método para controlar el elemento XML.  
+2.  Invalide el método <xref:System.ServiceModel.Security.WSSecurityTokenSerializer.CanReadTokenCore%28System.Xml.XmlReader%29>, que se basa en un <xref:System.Xml.XmlReader> para leer la secuencia XML. El método devuelve `true` si la implementación del serializador puede deserializar el token de seguridad dado su elemento actual. En este ejemplo, este método comprueba si el elemento XML actual del lector XML tiene el nombre de elemento y espacio de nombres correctos. Si no es así, llama a la implementación de la clase base de este método para controlar el elemento XML.  
   
-3.  Invalide el método <xref:System.ServiceModel.Security.WSSecurityTokenSerializer.ReadTokenCore%28System.Xml.XmlReader%2CSystem.IdentityModel.Selectors.SecurityTokenResolver%29>.Este método lee el contenido XML del token de seguridad y construye la representación en memoria adecuada para el mismo.Si no reconoce el elemento XML sobre el que se alza el lector XML pasado, llama a la implementación de la clase base para procesar los tipos de token proporcionados por el sistema.  
+3.  Invalide el método <xref:System.ServiceModel.Security.WSSecurityTokenSerializer.ReadTokenCore%28System.Xml.XmlReader%2CSystem.IdentityModel.Selectors.SecurityTokenResolver%29>. Este método lee el contenido XML del token de seguridad y construye la representación en memoria adecuada para el mismo. Si no reconoce el elemento XML sobre el que se alza el lector XML pasado, llama a la implementación de la clase base para procesar los tipos de token proporcionados por el sistema.  
   
-4.  Invalide el método <xref:System.ServiceModel.Security.WSSecurityTokenSerializer.CanWriteTokenCore%28System.IdentityModel.Tokens.SecurityToken%29>.Este método devuelve `true` si puede convertir la representación del token en memoria \(pasado como argumento\) en la representación XML.Si no puede convertirlo, llama a la implementación de la clase base.  
+4.  Invalide el método <xref:System.ServiceModel.Security.WSSecurityTokenSerializer.CanWriteTokenCore%28System.IdentityModel.Tokens.SecurityToken%29>. Este método devuelve `true` si puede convertir la representación del token en memoria (pasado como argumento) en la representación XML. Si no puede convertirlo, llama a la implementación de la clase base.  
   
-5.  Invalide el método <xref:System.ServiceModel.Security.WSSecurityTokenSerializer.WriteTokenCore%28System.Xml.XmlWriter%2CSystem.IdentityModel.Tokens.SecurityToken%29>.Este método convierte una representación de tokens de seguridad en memoria en una representación XML.Si el método no puede convertirlo, llama a la implementación de la clase base.  
+5.  Invalide el método <xref:System.ServiceModel.Security.WSSecurityTokenSerializer.WriteTokenCore%28System.Xml.XmlWriter%2CSystem.IdentityModel.Tokens.SecurityToken%29>. Este método convierte una representación de tokens de seguridad en memoria en una representación XML. Si el método no puede convertirlo, llama a la implementación de la clase base.  
   
      [!code-csharp[c_CustomToken#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtoken/cs/source.cs#3)]
      [!code-vb[c_CustomToken#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtoken/vb/source.vb#3)]  
   
  Después de completar los cuatro procedimientos anteriores, integre el token de seguridad personalizado con el proveedor de tokens de seguridad, autenticador, administrador y credenciales de cliente y servicio.  
   
-#### Para integrar el token de seguridad personalizado con un proveedor de tokens de seguridad  
+#### <a name="to-integrate-the-custom-security-token-with-a-security-token-provider"></a>Para integrar el token de seguridad personalizado con un proveedor de tokens de seguridad  
   
-1.  El proveedor de tokens de seguridad crea, modifica \(si es necesario\) y devuelve una instancia del token.Para crear un proveedor personalizado para el token de seguridad personalizado, cree una clase que herede de la clase <xref:System.IdentityModel.Selectors.SecurityTokenProvider>.En el ejemplo siguiente se invalida el método <xref:System.IdentityModel.Selectors.SecurityTokenProvider.GetTokenCore%2A> para devolver una instancia de `CreditCardToken`.[!INCLUDE[crabout](../../../../includes/crabout-md.md)] los proveedores de tokens de seguridad personalizados, vea [Cómo crear un proveedor de tokens de seguridad personalizado](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md).  
+1.  El proveedor de tokens de seguridad crea, modifica (si es necesario) y devuelve una instancia del token. Para crear un proveedor personalizado para el token de seguridad personalizado, cree una clase que herede de la clase <xref:System.IdentityModel.Selectors.SecurityTokenProvider>. En el ejemplo siguiente se invalida el método <xref:System.IdentityModel.Selectors.SecurityTokenProvider.GetTokenCore%2A> para devolver una instancia de `CreditCardToken`. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]proveedores de tokens de seguridad personalizado, vea [Cómo: crear un proveedor de tokens de seguridad personalizado](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md).  
   
      [!code-csharp[c_CustomToken#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtoken/cs/source.cs#6)]
      [!code-vb[c_CustomToken#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtoken/vb/source.vb#6)]  
   
-#### Para integrar el token de seguridad personalizado con un autenticador de tokens de seguridad  
+#### <a name="to-integrate-the-custom-security-token-with-a-security-token-authenticator"></a>Para integrar el token de seguridad personalizado con un autenticador de tokens de seguridad  
   
-1.  El autenticador de tokens de seguridad valida el contenido del token de seguridad cuando se extrae del mensaje.Para crear un autenticador personalizado para el token de seguridad personalizado, cree una clase que herede de la clase <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator>.En el siguiente ejemplo se reemplaza el método <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator.ValidateTokenCore%2A>.[!INCLUDE[crabout](../../../../includes/crabout-md.md)] los autenticadores de tokens de seguridad personalizados, vea [Cómo: Crear un autenticador de tokens de seguridad personalizado](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md).  
+1.  El autenticador de tokens de seguridad valida el contenido del token de seguridad cuando se extrae del mensaje. Para crear un autenticador personalizado para el token de seguridad personalizado, cree una clase que herede de la clase <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator>. En el siguiente ejemplo se reemplaza el método <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator.ValidateTokenCore%2A>. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Autenticadores de tokens de seguridad personalizado, vea [Cómo: crear un autenticador de tokens de seguridad personalizado](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md).  
   
      [!code-csharp[c_CustomToken#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtoken/cs/source.cs#7)]
      [!code-vb[c_CustomToken#7](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtoken/vb/source.vb#7)]  
@@ -123,9 +129,9 @@ Este tema muestra cómo crear un token de seguridad personalizado mediante la cl
      [!code-csharp[c_CustomToken#12](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtoken/cs/source.cs#12)]
      [!code-vb[c_CustomToken#12](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtoken/vb/source.vb#12)]  
   
-#### Para integrar el token de seguridad personalizado con un administrador de tokens de seguridad  
+#### <a name="to-integrate-the-custom-security-token-with-a-security-token-manager"></a>Para integrar el token de seguridad personalizado con un administrador de tokens de seguridad  
   
-1.  El administrador de tokens de seguridad crea el proveedor de tokens, el autenticador de seguridad y las instancias del serializador de tokens adecuados.Para crear un administrador de tokens personalizado, cree una clase que herede de la clase <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager>.Los métodos principales de la clase usan un <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> para crear el proveedor y las credenciales de cliente o servicio adecuados.[!INCLUDE[crabout](../../../../includes/crabout-md.md)] los administradores de tokens de seguridad personalizados, vea [Tutorial: Crear credenciales de cliente y servicio personalizadas](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md).  
+1.  El administrador de tokens de seguridad crea el proveedor de tokens, el autenticador de seguridad y las instancias del serializador de tokens adecuados. Para crear un administrador de tokens personalizado, cree una clase que herede de la clase <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager>. Los métodos principales de la clase usan un <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> para crear el proveedor y las credenciales de cliente o servicio adecuados. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]administradores de token de seguridad personalizados, consulte [Tutorial: creación de cliente personalizada y las credenciales de servicio](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md).  
   
      [!code-csharp[c_CustomToken#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtoken/cs/source.cs#8)]
      [!code-vb[c_CustomToken#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtoken/vb/source.vb#8)]  
@@ -133,9 +139,9 @@ Este tema muestra cómo crear un token de seguridad personalizado mediante la cl
      [!code-csharp[c_CustomToken#9](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtoken/cs/source.cs#9)]
      [!code-vb[c_CustomToken#9](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtoken/vb/source.vb#9)]  
   
-#### Para integrar el token de seguridad personalizado con credenciales de cliente y servicio personalizadas  
+#### <a name="to-integrate-the-custom-security-token-with-custom-client-and-service-credentials"></a>Para integrar el token de seguridad personalizado con credenciales de cliente y servicio personalizadas  
   
-1.  Es necesario agregar credenciales de cliente y servicio personalizadas para proporcionar una API de manera que la aplicación permita especificar la información de tokens personalizados que utiliza la infraestructura de tokens de seguridad personalizados antes creada para proporcionar y autenticar el contenido del token de seguridad personalizado.Los ejemplos siguientes muestran cómo hacerlo.[!INCLUDE[crabout](../../../../includes/crabout-md.md)] las credenciales personalizadas del cliente y del servicio, vea [Tutorial: Crear credenciales de cliente y servicio personalizadas](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md).  
+1.  Es necesario agregar credenciales de cliente y servicio personalizadas para proporcionar una API de manera que la aplicación permita especificar la información de tokens personalizados que utiliza la infraestructura de tokens de seguridad personalizados antes creada para proporcionar y autenticar el contenido del token de seguridad personalizado. Los ejemplos siguientes muestran cómo hacerlo. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]cliente personalizado y las credenciales de servicio, consulte [Tutorial: creación de cliente personalizada y las credenciales de servicio](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md).  
   
      [!code-csharp[c_CustomToken#10](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtoken/cs/source.cs#10)]
      [!code-vb[c_CustomToken#10](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtoken/vb/source.vb#10)]  
@@ -143,30 +149,30 @@ Este tema muestra cómo crear un token de seguridad personalizado mediante la cl
      [!code-csharp[c_customToken#11](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtoken/cs/source.cs#11)]
      [!code-vb[c_customToken#11](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtoken/vb/source.vb#11)]  
   
- La clase de parámetros de tokens de seguridad personalizados creada anteriormente se utiliza para indicar al marco de seguridad de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] que se ha de utilizar un token de seguridad personalizado al comunicarse con un servicio.En el siguiente procedimiento se muestra cómo hacerlo:  
+ La clase de parámetros de tokens de seguridad personalizados creada anteriormente se utiliza para indicar al marco de seguridad de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] que se ha de utilizar un token de seguridad personalizado al comunicarse con un servicio. En el siguiente procedimiento se muestra cómo hacerlo:  
   
-#### Para integrar el token de seguridad personalizado con el enlace  
+#### <a name="to-integrate-the-custom-security-token-with-the-binding"></a>Para integrar el token de seguridad personalizado con el enlace  
   
-1.  La clase de parámetros de tokens de seguridad personalizados ha de especificarse en una de las colecciones de parámetros de tokens que se exponen en la clase <xref:System.ServiceModel.Channels.SecurityBindingElement>.El siguiente ejemplo usa la colección devuelta por `SignedEncrypted`.El código agrega el token personalizado de la tarjeta de crédito a cada mensaje enviado desde el cliente al servicio con su contenido firmado y cifrado automáticamente.  
+1.  La clase de parámetros de tokens de seguridad personalizados ha de especificarse en una de las colecciones de parámetros de tokens que se exponen en la clase <xref:System.ServiceModel.Channels.SecurityBindingElement>. El siguiente ejemplo usa la colección devuelta por `SignedEncrypted`. El código agrega el token personalizado de la tarjeta de crédito a cada mensaje enviado desde el cliente al servicio con su contenido firmado y cifrado automáticamente.  
   
      [!code-csharp[c_CustomToken#13](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtoken/cs/source.cs#13)]
      [!code-vb[c_CustomToken#13](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtoken/vb/source.vb#13)]  
   
- En este tema se muestran los distintos elementos de código necesarios para implementar y usar un token personalizado.Para ver un ejemplo completo de cómo encajan todos estos fragmentos de código vea, [Token personalizado](../../../../docs/framework/wcf/samples/custom-token.md).  
+ En este tema se muestran los distintos elementos de código necesarios para implementar y usar un token personalizado. Para ver un ejemplo completo de cómo todos encajan estas piezas de código, vea [personalizado Token](../../../../docs/framework/wcf/samples/custom-token.md).  
   
-## Vea también  
- <xref:System.IdentityModel.Tokens.SecurityToken>   
- <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters>   
- <xref:System.ServiceModel.Security.WSSecurityTokenSerializer>   
- <xref:System.IdentityModel.Selectors.SecurityTokenProvider>   
- <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator>   
- <xref:System.IdentityModel.Policy.IAuthorizationPolicy>   
- <xref:System.IdentityModel.Selectors.SecurityTokenRequirement>   
- <xref:System.IdentityModel.Selectors.SecurityTokenManager>   
- <xref:System.ServiceModel.Description.ClientCredentials>   
- <xref:System.ServiceModel.Description.ServiceCredentials>   
- <xref:System.ServiceModel.Channels.SecurityBindingElement>   
- [Tutorial: Crear credenciales de cliente y servicio personalizadas](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)   
- [Cómo: Crear un autenticador de tokens de seguridad personalizado](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)   
- [Cómo crear un proveedor de tokens de seguridad personalizado](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)   
- [Security Architecture](http://msdn.microsoft.com/es-es/16593476-d36a-408d-808c-ae6fd483e28f)
+## <a name="see-also"></a>Vea también  
+ <xref:System.IdentityModel.Tokens.SecurityToken>  
+ <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters>  
+ <xref:System.ServiceModel.Security.WSSecurityTokenSerializer>  
+ <xref:System.IdentityModel.Selectors.SecurityTokenProvider>  
+ <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator>  
+ <xref:System.IdentityModel.Policy.IAuthorizationPolicy>  
+ <xref:System.IdentityModel.Selectors.SecurityTokenRequirement>  
+ <xref:System.IdentityModel.Selectors.SecurityTokenManager>  
+ <xref:System.ServiceModel.Description.ClientCredentials>  
+ <xref:System.ServiceModel.Description.ServiceCredentials>  
+ <xref:System.ServiceModel.Channels.SecurityBindingElement>  
+ [Tutorial: Crear cliente personalizada y las credenciales de servicio](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)  
+ [Cómo: crear un autenticador de tokens de seguridad personalizado](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)  
+ [Cómo: crear un proveedor de tokens de seguridad personalizado](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)  
+ [Arquitectura de seguridad](http://msdn.microsoft.com/en-us/16593476-d36a-408d-808c-ae6fd483e28f)

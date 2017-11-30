@@ -1,30 +1,21 @@
 ---
 title: LINQ to XML (C#)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 26c907b1-bc58-465f-bcdc-adbe89df6e55
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 9d8058d9eb1452e2f70c9c958808f55c21a8ec0e
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: ccfecd45f68d60d2bbb58d51aa516a20c567a853
-ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="linq-to-xml-c"></a>LINQ to XML (C#)
 LINQ to XML proporciona una interfaz de programación XML en memoria que aprovecha .NET Language-Integrated Query (LINQ) Framework. LINQ to XML usa las características más recientes del lenguaje .NET Framework y es comparable a una actualizada y rediseñada interfaz de programación XML para el Modelo de objetos de documento (DOM).  
@@ -33,7 +24,7 @@ LINQ to XML proporciona una interfaz de programación XML en memoria que aprovec
   
 ## <a name="in-this-section"></a>En esta sección  
  [Introducción (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/getting-started-linq-to-xml.md)  
- Ofrece una introducción a LINQ to XML, incluyendo una descripción general a nivel conceptual e información general de las clases <xref:System.Xml.Linq?displayProperty=fullName>.  
+ Ofrece una introducción a LINQ to XML, incluyendo una descripción general a nivel conceptual e información general de las clases <xref:System.Xml.Linq?displayProperty=nameWithType>.  
   
  [Guía de programación (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)  
  Ofrece información conceptual y de procedimientos sobre la programación con LINQ to XML.  
@@ -43,4 +34,3 @@ LINQ to XML proporciona una interfaz de programación XML en memoria que aprovec
   
 ## <a name="see-also"></a>Vea también  
  [Language Integrated Query (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/index.md)
-

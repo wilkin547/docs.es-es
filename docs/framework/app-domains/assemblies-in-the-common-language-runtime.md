@@ -5,8 +5,7 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-bcl
+ms.technology: dotnet-bcl
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,16 +19,15 @@ helpviewer_keywords:
 - version boundaries
 - type boundaries
 ms.assetid: 2cfebe19-7436-49f1-bd99-3c4019f0b676
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 7dfa8bab1d142462d49524495e3e5dc0b4960a4d
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: faa41efa7f3ad898557e966d141aa8f5108d60bd
-ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="assemblies-in-the-common-language-runtime"></a>Ensamblados en Common Language Runtime
 Los ensamblados son los bloques de creación de las aplicaciones .NET Framework; constituyen la unidad fundamental de implementación, control de versiones, reutilización, ámbitos de activación y permisos de seguridad. Un ensamblado es una colección de tipos y recursos compilados para funcionar en conjunto y formar una unidad lógica de funcionalidad. Los ensamblados proporcionan a Common Language Runtime la información necesaria para conocer las implementaciones de tipos. Para la ejecución, un tipo no existe fuera del contexto de un ensamblado.  
@@ -52,7 +50,7 @@ Los ensamblados son los bloques de creación de las aplicaciones .NET Framework;
   
  Los ensamblados pueden ser estáticos o dinámicos. Los ensamblados estáticos pueden incluir tipos de .NET Framework (interfaces y clases), así como recursos para el ensamblado (mapas de bits, archivos JPEG, archivos de recursos, etc.). Los ensamblados estáticos se almacenan en el disco, en archivos ejecutables portables PE. También se puede utilizar .NET Framework para crear ensamblados dinámicos, que se ejecutan directamente desde la memoria y no se guardan en el disco antes de su ejecución. Los ensamblados dinámicos se pueden guardar en el disco una vez que se hayan ejecutado.  
   
- Existen varias formas de crear ensamblados. Puede usar herramientas de desarrollo, como Visual Studio, que haya empleado anteriormente para crear archivos .dll o .exe. Puede utilizar las herramientas suministradas en [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] para generar ensamblados con módulos creados en otros entornos de programación. También puede utilizar las API de Common Language Runtime, como <xref:System.Reflection.Emit?displayProperty=fullName>, para crear ensamblados dinámicos.  
+ Existen varias formas de crear ensamblados. Puede usar herramientas de desarrollo, como Visual Studio, que haya empleado anteriormente para crear archivos .dll o .exe. Puede utilizar las herramientas suministradas en [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] para generar ensamblados con módulos creados en otros entornos de programación. También puede utilizar las API de Common Language Runtime, como <xref:System.Reflection.Emit?displayProperty=nameWithType>, para crear ensamblados dinámicos.  
   
 ## <a name="related-topics"></a>Temas relacionados  
   
@@ -71,5 +69,4 @@ Los ensamblados son los bloques de creación de las aplicaciones .NET Framework;
 |[Cómo el motor en tiempo de ejecución ubica ensamblados](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)|Describe cómo resuelve .NET Framework las referencias de ensamblado en tiempo de ejecución.|  
   
 ## <a name="reference"></a>Referencia  
- <xref:System.Reflection.Assembly?displayProperty=fullName>
-
+ <xref:System.Reflection.Assembly?displayProperty=nameWithType>

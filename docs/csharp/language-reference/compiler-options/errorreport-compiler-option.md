@@ -1,42 +1,23 @@
 ---
 title: -errorreport (Opciones del compilador de C#)
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- /errorreport
-dev_langs:
-- CSharp
+f1_keywords: /errorreport
 helpviewer_keywords:
 - -errorreport compiler option [C#]
 - errorreport compiler option [C#]
 - /errorreport compiler option [C#]
 ms.assetid: bd0e7493-b79d-4369-9c3f-ba26ebdfbedf
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 3063a29452d90a09d5904d2a598b62530104d739
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: d32ec08da36509527b153166ae15019f129aad71
-ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="errorreport-c-compiler-options"></a>/errorreport (Opciones del compilador de C#)
 Esta opción proporciona una forma cómoda de notificar un error interno del compilador de C# a Microsoft.  
@@ -62,9 +43,7 @@ Esta opción proporciona una forma cómoda de notificar un error interno del com
   
  **send**  
  Envía automáticamente informes de errores internos del compilador a Microsoft. Para habilitar esta opción, debe aceptar la directiva de recopilación de datos de Microsoft. La primera vez que especifique **/errorreport:send** en un equipo, un mensaje del compilador le remitirá a un sitio web que contiene la directiva de recopilación de datos de Microsoft.  
-  
- Esta opción depende de la configuración del Registro. Para obtener información sobre cómo establecer los valores apropiados en el Registro, vea las instrucciones sobre [cómo activar la creación automática de informes de errores en las herramientas de línea de comandos de Visual Studio 2008](http://go.microsoft.com/fwlink/?LinkID=184695) en el sitio web de MSDN.  
-  
+    
 ## <a name="remarks"></a>Comentarios  
  Cuando el compilador no puede procesar un archivo de código fuente, se produce un error interno del compilador (ICE). Cuando se produce un ICE, el compilador no genera un archivo de salida ni otro tipo de diagnóstico útil que pueda usar para corregir el código.  
   
@@ -88,4 +67,3 @@ Esta opción proporciona una forma cómoda de notificar un error interno del com
   
 ## <a name="see-also"></a>Vea también  
  [Opciones del compilador de C#](../../../csharp/language-reference/compiler-options/index.md)
-

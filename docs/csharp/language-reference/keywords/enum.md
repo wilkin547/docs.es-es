@@ -1,41 +1,22 @@
 ---
 title: enum (Referencia de C#)
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
 f1_keywords:
 - enum
 - enum_CSharpKeyword
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- enum keyword [C#]
+helpviewer_keywords: enum keyword [C#]
 ms.assetid: bbeb9a0f-e9b3-41ab-b0a6-c41b1a08974c
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 00ae9b555ae73db445fe4a4facf00753bf8c759a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 81117b1419c2a9c3babd6a7429052e2b23e08a70
-ms.openlocfilehash: fbadbcf92a6ac8ed46c3e81fa9eda1ceac8f6631
-ms.contentlocale: es-es
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="enum-c-reference"></a>enum (Referencia de C#)
 La palabra clave `enum` se utiliza para declarar una enumeración, un tipo distinto que consiste en un conjunto de constantes con nombre denominado lista de enumeradores.  
@@ -89,17 +70,17 @@ int x = (int)Days.Sun;
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente, se declara una enumeración, `Days`. Dos enumeradores se convierten explícitamente en un número entero y se asignan a variables de número entero.  
   
- [!code-cs[csrefKeywordsTypes#10](../../../csharp/language-reference/keywords/codesnippet/CSharp/enum_1.cs)]  
+ [!code-csharp[csrefKeywordsTypes#10](../../../csharp/language-reference/keywords/codesnippet/CSharp/enum_1.cs)]  
   
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente, la opción de tipo base se utiliza para declarar un `enum` cuyos miembros son del tipo `long`. Observe que a pesar de que el tipo subyacente de la enumeración es `long`, los miembros de la enumeración todavía deben convertirse explícitamente al tipo `long` mediante una conversión de tipos.  
   
- [!code-cs[csrefKeywordsTypes#11](../../../csharp/language-reference/keywords/codesnippet/CSharp/enum_2.cs)]  
+ [!code-csharp[csrefKeywordsTypes#11](../../../csharp/language-reference/keywords/codesnippet/CSharp/enum_2.cs)]  
   
 ## <a name="example"></a>Ejemplo  
  En el ejemplo de código siguiente se ilustra el uso y efecto del atributo <xref:System.FlagsAttribute?displayProperty=nameWithType> en una declaración `enum` .  
   
- [!code-cs[csrefKeywordsTypes#12](../../../csharp/language-reference/keywords/codesnippet/CSharp/enum_3.cs)]  
+ [!code-csharp[csrefKeywordsTypes#12](../../../csharp/language-reference/keywords/codesnippet/CSharp/enum_3.cs)]  
   
 ## <a name="comments"></a>Comentarios  
  Si quita `Flags`, el ejemplo muestra los siguientes valores:  
@@ -112,11 +93,10 @@ int x = (int)Days.Sun;
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Vea también  
- [Referencia de C#](../../../csharp/language-reference/index.md)   
- [Tipos de enumeración](../../../csharp/programming-guide/enumeration-types.md)   
- [Palabras clave de C#](../../../csharp/language-reference/keywords/index.md)   
- [Tabla de tipos enteros](../../../csharp/language-reference/keywords/integral-types-table.md)   
- [Tabla de tipos integrados](../../../csharp/language-reference/keywords/built-in-types-table.md)   
- [Tabla de conversiones numéricas implícitas](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)   
+ [Referencia de C#](../../../csharp/language-reference/index.md)  
+ [Tipos de enumeración](../../../csharp/programming-guide/enumeration-types.md)  
+ [Palabras clave de C#](../../../csharp/language-reference/keywords/index.md)  
+ [Tabla de tipos enteros](../../../csharp/language-reference/keywords/integral-types-table.md)  
+ [Tabla de tipos integrados](../../../csharp/language-reference/keywords/built-in-types-table.md)  
+ [Tabla de conversiones numéricas implícitas](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)  
  [Tabla de conversiones numéricas explícitas](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)
-

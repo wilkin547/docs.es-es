@@ -10,14 +10,12 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: fffc3400-aeb9-4c07-9fea-83bc8dbdcbf3
+ms.openlocfilehash: a8f70505d1bb043ab21f87edbb5aa2d9f18a7071
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 434b27f6c2d44c63b4ce4deee094ac6c322cf2b5
-ms.openlocfilehash: 62de584fe5d7f1029e73e4c8c5f9b428c567751a
-ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="net-core-cli-tools-extensibility-model"></a>Modelo de extensibilidad de las herramientas de la CLI de .NET Core
 
 En este documento se tratan las maneras diferentes en las que puede ampliar las herramientas de la interfaz de la línea de comandos (CLI) de .NET Core y se explican los escenarios que impulsan cada una de ellas.
@@ -49,6 +47,8 @@ Finalmente, este modelo de extensibilidad proporciona compatibilidad con la crea
 
 ### <a name="consuming-per-project-tools"></a>Consumo de herramientas por proyecto
 Para consumir estas herramientas es necesario agregar un elemento `<DotNetCliToolReference>` a su archivo del proyecto para cada herramienta que quiera usar. Dentro del elemento `<DotNetCliToolReference>`, se hace referencia al paquete en el que reside la herramienta y se especifica la versión necesaria. Después de ejecutar [`dotnet restore`](dotnet-restore.md), se restauran la herramienta y sus dependencias.
+
+[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
 Para las herramientas que necesitan cargar la salida de compilación del proyecto para su ejecución, hay normalmente otra dependencia que aparece en las dependencias normales del archivo de proyecto. Como la CLI usa MSBuild como motor de compilación, recomendamos que estas partes de la herramienta se escriban como [destinos](/visualstudio/msbuild/msbuild-targets) y [tareas](/visualstudio/msbuild/msbuild-tasks) de MSBuild personalizados, ya que pueden formar parte del proceso de compilación general. Además, pueden obtener fácilmente todos y cada uno de los datos que se producen mediante la compilación, como la ubicación de los archivos de salida, la configuración actual que se compila, etc. Toda esta información se convierte en un conjunto de propiedades de MSBuild que se puede leer desde cualquier destino. Más adelante en este documento puede ver cómo agregar un destino personalizado mediante NuGet.
 
@@ -165,4 +165,3 @@ echo "Hello World"
 En macOS, podemos guardar este script como `dotnet-hello` y establecer su bit ejecutable con `chmod +x dotnet-hello`. Luego, podemos crear un vínculo simbólico a él en `/usr/local/bin` con el comando `ln -s <full_path>/dotnet-hello /usr/local/bin/`. De esta manera se podrá invocar el comando mediante la sintaxis `dotnet hello`.
 
 En Windows, podemos guardar este script como `dotnet-hello.cmd` y colocarlo en una ubicación que esté en una ruta de acceso del sistema (o puede agregarlo en una carpeta que ya se encuentre en la ruta de acceso). Después de esto, simplemente puede usar `dotnet hello` para ejecutar este ejemplo.
-

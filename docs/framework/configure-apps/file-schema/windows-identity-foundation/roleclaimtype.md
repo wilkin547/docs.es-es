@@ -1,64 +1,75 @@
 ---
-title: "&lt;roleClaimType&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;roleClaimType&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 69a49deb-6369-41ba-806b-ae8d21fac64b
-caps.latest.revision: 4
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: 8a5de30d60478b6601781ac34fd481a6167462e0
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# &lt;roleClaimType&gt;
-Especifica la petición de tipos que define el rol de las peticiones de tipo en la colección de objetos <xref:System.Security.Claims.ClaimsIdentity> devueltos por el método de <xref:System.IdentityModel.Tokens.SecurityTokenHandler.ValidateToken%2A> de controlador de token.  
+# <a name="ltroleclaimtypegt"></a>&lt;roleClaimType&gt;
+Especifica el tipo de notificación que define las notificaciones de tipo de rol de la colección de <xref:System.Security.Claims.ClaimsIdentity> objetos devueltos por la <xref:System.IdentityModel.Tokens.SecurityTokenHandler.ValidateToken%2A> método del controlador de token.  
   
-## Sintaxis  
+ \<system.identityModel >  
+\<identityConfiguration >  
+\<securityTokenHandlers >  
+\<add>  
+\<samlSecurityTokenRequirement >  
+\<roleClaimType >  
   
-```  
+## <a name="syntax"></a>Sintaxis  
+  
+```xml  
 <system.identityModel>  
-  <identityConfiguration>  
-    <securityTokenHandlers>  
-      <add>  
-        <samlSecurityTokenRequirement>  
-          <roleClaimType value=xs:string>  
-          </roleClaimType>  
-        </samlSecurityTokenRequirement>  
-      </add>  
-    </securityTokenHandlers>  
-  </identityConfiguration>  
+  <identityConfiguration>  
+    <securityTokenHandlers>  
+      <add>  
+        <samlSecurityTokenRequirement>  
+          <roleClaimType value=xs:string>  
+          </roleClaimType>  
+        </samlSecurityTokenRequirement>  
+      </add>  
+    </securityTokenHandlers>  
+  </identityConfiguration>  
 </system.identityModel>  
 ```  
   
-## Atributos y elementos  
- En las próximas secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
+## <a name="attributes-and-elements"></a>Atributos y elementos  
+ En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
-### Atributos  
+### <a name="attributes"></a>Atributos  
   
 |Atributo|Descripción|  
-|--------------|-----------------|  
-|value|Una cadena que especifica el URI que representa el tipo de petición de petición de utilizar para el rol del tipo de petición.|  
+|---------------|-----------------|  
+|valor|Una cadena que especifica el URI que representa el tipo de notificación de la notificación que se usará para el tipo de notificación de rol.|  
   
-### Elementos secundarios  
- None  
+### <a name="child-elements"></a>Elementos secundarios  
+ Ninguna  
   
-### Elementos primarios  
+### <a name="parent-elements"></a>Elementos primarios  
   
 |Elemento|Descripción|  
-|--------------|-----------------|  
-|[\<samlSecurityTokenRequirement\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/samlsecuritytokenrequirement.md)|Proporciona la configuración para la clase de <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler> , la clase de <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler> , o una clase derivada de cualquiera de estas clases.|  
+|-------------|-----------------|  
+|[\<samlSecurityTokenRequirement >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/samlsecuritytokenrequirement.md)|Proporciona la configuración para la <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler> (clase), el <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler> clase o una clase derivada de cualquiera de estas clases.|  
   
-## Comentarios  
- El elemento de `<roleClaimType>` la propiedad de <xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement.RoleClaimType%2A> cuando un objeto de <xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement> inicializa de la configuración.  
+## <a name="remarks"></a>Comentarios  
+ El `<roleClaimType>` conjuntos de elementos del <xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement.RoleClaimType%2A> propiedad cuando un <xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement> se inicializa el objeto de configuración.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
-```  
+```xml  
 <add type="System.IdentityModel.Tokens.SamlSecurityTokenHandler, System.IdentityModel">  
     <samlSecurityTokenRequirement>  
         <roleClaimType value="schemas.microsoft.com/ws/2006/04/identity/claims/role" />  
@@ -66,5 +77,5 @@ Especifica la petición de tipos que define el rol de las peticiones de tipo en 
 </add>  
 ```  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  <xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement.RoleClaimType%2A>

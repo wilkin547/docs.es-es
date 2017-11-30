@@ -1,43 +1,24 @@
 ---
 title: "&lt;summary&gt; (Guía de programación de C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
 f1_keywords:
 - <summary>
 - summary
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - <summary> C# XML tag
 - summary C# XML tag
 ms.assetid: b4c43d92-2067-4eac-a59a-d32f5248c08b
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 5a8aa1f8a07019ff6ccefe90f03b217067ae22c1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: bd96e58494196fcfdeb46e9e59481666ec9466f3
-ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="ltsummarygt-c-programming-guide"></a>&lt;summary&gt; (Guía de programación de C#)
 ## <a name="syntax"></a>Sintaxis  
@@ -58,7 +39,7 @@ ms.lasthandoff: 07/28/2017
  Compile con el parámetro [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) para procesar los comentarios de documentación y generar un archivo con ellos. Para crear la documentación final basada en el archivo generado por el compilador, puede crear una herramienta personalizada o usar una herramienta como [Sandcastle](https://github.com/EWSoftware/SHFB).  
   
 ## <a name="example"></a>Ejemplo  
- [!code-cs[csProgGuideDocComments#12](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/summary_1.cs)]  
+ [!code-csharp[csProgGuideDocComments#12](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/summary_1.cs)]  
   
  En el ejemplo anterior se genera el siguiente archivo XML.  
   
@@ -88,7 +69,7 @@ ms.lasthandoff: 07/28/2017
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se muestra cómo hacer una referencia `cref` a un tipo genérico.  
   
- [!code-cs[csProgGuideDocComments#11](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/summary_2.cs)]  
+ [!code-csharp[csProgGuideDocComments#11](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/summary_2.cs)]  
   
  En el ejemplo anterior se genera el siguiente archivo XML.  
   
@@ -117,6 +98,5 @@ ms.lasthandoff: 07/28/2017
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Guía de programación de C#](../../../csharp/programming-guide/index.md)   
+ [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
  [Etiquetas recomendadas para los comentarios de documentación](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)
-

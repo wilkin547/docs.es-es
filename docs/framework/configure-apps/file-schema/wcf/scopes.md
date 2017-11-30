@@ -1,59 +1,67 @@
 ---
-title: "&lt;scopes&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "&lt;ámbitos&gt;"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 9a0dd3ce-e383-4ac3-b7be-7d604388304a
-caps.latest.revision: 2
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 6b35696cbecb0badf397d6d48e7c97aae3d0232e
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# &lt;scopes&gt;
-Contiene una colección de elementos de configuración que especifican URI del ámbito personalizado que se pueden usar para filtrar extremos de servicio durante la consulta.  
+# <a name="ltscopesgt"></a>&lt;ámbitos&gt;
+Contiene una colección de elementos de configuración que especifican URI del ámbito personalizado que se pueden usar para filtrar puntos de conexión de servicio durante la consulta.  
   
-## Sintaxis  
+\<sistema. ServiceModel >  
+\<comportamientos >  
+\<endpointBehaviors >  
+\<comportamiento >  
+\<endpointDiscovery >  
+\<ámbitos >  
   
-```  
+## <a name="syntax"></a>Sintaxis  
   
-<behaviors>  
-  <endpointBehaviors>  
-    <behavior name="String">  
-      <endpointDiscovery enable="Boolean">  
-        <scopes>  
-          <add scope="URI"/>  
-        </scopes>  
-      </endpointDiscovery>  
-    </behavior>  
-  </endpointBehaviors>  
+```xml  
+<behaviors>
+  <endpointBehaviors>
+    <behavior name="String">
+      <endpointDiscovery enable="Boolean">
+        <scopes>
+          <add scope="URI" />
+        </scopes>
+      </endpointDiscovery>
+    </behavior>
+  </endpointBehaviors>
 </behaviors>  
-  
 ```  
   
-## Atributos y elementos  
+## <a name="attributes-and-elements"></a>Atributos y elementos  
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
-### Atributos  
+### <a name="attributes"></a>Atributos  
  Ninguno.  
   
-### Elementos secundarios  
+### <a name="child-elements"></a>Elementos secundarios  
   
 |Atributo|Descripción|  
-|--------------|-----------------|  
-|[\<agregar\>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-scopes.md)|Agrega la información sobre el ámbito del extremo que se puede usar en los criterios de coincidencia para buscar los servicios.|  
+|---------------|-----------------|  
+|[\<add>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-scopes.md)|Agrega la información sobre el ámbito del punto de conexión que se puede usar en los criterios de coincidencia para buscar los servicios.|  
   
-### Elementos primarios  
+### <a name="parent-elements"></a>Elementos primarios  
   
 |Elemento|Descripción|  
-|--------------|-----------------|  
-|[\<endpointDiscovery\>](../../../../../docs/framework/configure-apps/file-schema/wcf/endpointdiscovery.md)|Especifica las distintas configuraciones de detección para un extremo, como su detectabilidad, ámbitos y cualquier extensión personalizada a sus metadatos.|  
+|-------------|-----------------|  
+|[\<endpointDiscovery >](../../../../../docs/framework/configure-apps/file-schema/wcf/endpointdiscovery.md)|Especifica las distintas configuraciones de detección para un punto de conexión, como su detectabilidad, ámbitos y cualquier extensión personalizada a sus metadatos.|  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior>

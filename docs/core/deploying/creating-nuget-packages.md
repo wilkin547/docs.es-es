@@ -10,14 +10,12 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 2f0415c1-110b-433d-87c1-ae3d543a8844
+ms.openlocfilehash: a5738a4f3755a959660db4be683677673af61ef9
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 9e5c762de0a14407c92c9752edc9619caa07d500
-ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="how-to-create-a-nuget-package-with-cross-platform-tools"></a>Cómo crear un paquete de NuGet con herramientas multiplataforma
 
 > [!NOTE]
@@ -28,6 +26,9 @@ Para .NET Core 1.0, está previsto que las bibliotecas se distribuyan como paque
 Imagine que acaba de escribir una nueva biblioteca sorprendente que quiere distribuir a través de NuGet.  Puede crear un paquete de NuGet con herramientas multiplataforma para hacer exactamente eso.  En el ejemplo siguiente, hay una biblioteca denominada **SuperAwesomeLibrary** con destino a `netstandard1.0`.
 
 Si tiene dependencias transitivas; es decir, un proyecto que depende de otro, deberá asegurarse de restaurar los paquetes para toda la solución con el comando `dotnet restore` antes de crear un paquete de NuGet.  Si no lo hace, el comando `dotnet pack` no funcionará correctamente.
+
+[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
+
 
 Después de asegurarse de que se restauran los paquetes, puede ir hasta el directorio donde reside una biblioteca:
 
@@ -66,4 +67,3 @@ Y ahora tiene los archivos necesarios para publicar un paquete de NuGet.
 ## <a name="dont-confuse-dotnet-pack-with-dotnet-publish"></a>`dotnet pack`No confunda `dotnet publish` con
 
 Es importante tener en cuenta que en ningún momento participa el comando `dotnet publish`.  El comando `dotnet publish` es para la implementación de aplicaciones con todas sus dependencias en el mismo paquete, no para generar un paquete de NuGet para distribuir y consumir a través de NuGet.
-

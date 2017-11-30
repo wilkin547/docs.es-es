@@ -9,14 +9,12 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 01049a21-fd50-4419-9ab2-0e4a2e091050
+ms.openlocfilehash: 884ecb110b4168c6dc1e4c664de1dcb8db3734c5
+ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
 ms.translationtype: HT
-ms.sourcegitcommit: b647c5dc4e565f9813212d75fab4a2e46c1a47b9
-ms.openlocfilehash: 19f5234ce667b2064a1e5b3fb50222c1ef4fe2a5
-ms.contentlocale: es-es
-ms.lasthandoff: 09/12/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/18/2017
 ---
-
 # <a name="deploying-net-core-apps-with-visual-studio"></a>Implementación de aplicaciones de .NET Core con Visual Studio
 
 Puede implementar una aplicación de .NET Core como una *implementación dependiente de la plataforma*, que incluye los archivos binarios de la aplicación pero depende de la presencia de .NET Core en el sistema de destino, o como una *implementación independiente*, que incluye la aplicación y los archivos binarios de .NET Core. Para obtener información general sobre la implementación de aplicaciones de NET Core, vea [Implementación de aplicaciones .NET Core](index.md).
@@ -42,7 +40,7 @@ La implementación de una implementación dependiente del marco sin dependencias
 
    Abra el archivo *Program.cs* en el editor y reemplace el código generado automáticamente por el código siguiente. Pide al usuario que escriba texto y muestra las palabras individuales escritas por el usuario. Se usa la expresión regular `\w+` para separar las palabras en el texto de entrada.
 
-   [!code-cs[deployment#1](../../../samples/snippets/core/deploying/deployment-example.cs)]
+   [!code-csharp[deployment#1](../../../samples/snippets/core/deploying/deployment-example.cs)]
 
 1. Crear una versión de depuración de la aplicación.
 
@@ -92,7 +90,7 @@ La implementación de una implementación independiente sin dependencias de terc
 
    Abra el archivo *Program.cs* en el editor y reemplace el código generado automáticamente por el código siguiente. Pide al usuario que escriba texto y muestra las palabras individuales escritas por el usuario. Se usa la expresión regular `\w+` para separar las palabras en el texto de entrada.
 
-   [!code-cs[deployment#1](../../../samples/snippets/core/deploying/deployment-example.cs)]
+   [!code-csharp[deployment#1](../../../samples/snippets/core/deploying/deployment-example.cs)]
 
 1. Definir las plataformas de destino de la aplicación.
 
@@ -189,4 +187,3 @@ Tenga en cuenta que solo puede implementar una implementación autocontenida con
 # <a name="see-also"></a>Vea también
 [Implementación de aplicaciones .NET Core](index.md)   
 [Catálogo de identificadores de entorno de ejecución (RID) de .NET Core](../rid-catalog.md)   
-

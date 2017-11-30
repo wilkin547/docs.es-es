@@ -1,38 +1,19 @@
 ---
 title: Restricciones en el uso de los niveles de accesibilidad (Referencia de C#)
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- access modifiers [C#], accessibility level restrictions
+helpviewer_keywords: access modifiers [C#], accessibility level restrictions
 ms.assetid: 987e2f22-46bf-4fea-80ee-270b9cd01045
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 44d065429f67d717d7c50e3877294eadd462a99d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 8e49afd38fd776593b87f065a079da0d546df4a6
-ms.contentlocale: es-es
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="restrictions-on-using-accessibility-levels-c-reference"></a>Restricciones en el uso de los niveles de accesibilidad (Referencia de C#)
 Cuando especifique un tipo en una declaración, compruebe si el nivel de accesibilidad de este depende del nivel de accesibilidad de un miembro o de otro tipo. Por ejemplo, la clase base directa debe ser al menos igual de accesible que la clase derivada. Las siguientes declaraciones producen un error del compilador porque la clase base `BaseClass` es menos accesible que `MyClass`:  
@@ -128,15 +109,14 @@ public class A
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Vea también  
- [Referencia de C#](../../../csharp/language-reference/index.md)   
- [Guía de programación de C#](../../../csharp/programming-guide/index.md)   
- [Palabras clave de C#](../../../csharp/language-reference/keywords/index.md)   
- [Modificadores de acceso](../../../csharp/language-reference/keywords/access-modifiers.md)   
- [Dominio de accesibilidad](../../../csharp/language-reference/keywords/accessibility-domain.md)   
- [Niveles de accesibilidad](../../../csharp/language-reference/keywords/accessibility-levels.md)   
- [Modificadores de acceso](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)   
- [public](../../../csharp/language-reference/keywords/public.md)   
- [private](../../../csharp/language-reference/keywords/private.md)   
- [protected](../../../csharp/language-reference/keywords/protected.md)   
+ [Referencia de C#](../../../csharp/language-reference/index.md)  
+ [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
+ [Palabras clave de C#](../../../csharp/language-reference/keywords/index.md)  
+ [Modificadores de acceso](../../../csharp/language-reference/keywords/access-modifiers.md)  
+ [Dominio de accesibilidad](../../../csharp/language-reference/keywords/accessibility-domain.md)  
+ [Niveles de accesibilidad](../../../csharp/language-reference/keywords/accessibility-levels.md)  
+ [Modificadores de acceso](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)  
+ [public](../../../csharp/language-reference/keywords/public.md)  
+ [private](../../../csharp/language-reference/keywords/private.md)  
+ [protected](../../../csharp/language-reference/keywords/protected.md)  
  [internal](../../../csharp/language-reference/keywords/internal.md)
-

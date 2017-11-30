@@ -16,16 +16,15 @@ helpviewer_keywords:
 - Collections classes
 - grouping data in collections, selecting collection class
 ms.assetid: ba049f9a-ce87-4cc4-b319-3f75c8ddac8a
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: 64b50839a5500b671a4bd5dd92eec2f0db9787a1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: b37d1d7ff75aebfcdf3e849931a5d2b3924d5d7a
-ms.openlocfilehash: 01abb535567429780a8a0776aebecaf64307950d
-ms.contentlocale: es-es
-ms.lasthandoff: 09/06/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="selecting-a-collection-class"></a>Seleccionar una clase de colección
 Asegúrese de elegir con cuidado la clase de colección. Usar un tipo incorrecto puede restringir el uso de la colección. En general, evite usar los tipos del espacio de nombres <xref:System.Collections> a menos que su objetivo sea específicamente la versión 1.1 de .NET Framework. Se preferirán las versiones genéricas y simultáneas de las colecciones por la mayor seguridad de los tipos y otras mejoras.  
@@ -88,8 +87,7 @@ Asegúrese de elegir con cuidado la clase de colección. Usar un tipo incorrecto
  PLINQ proporciona una implementación paralela de LINQ to Objects que puede ofrecer una ejecución de consultas más rápida en muchos escenarios gracias a un uso más eficaz de los equipos de varios núcleos. Para más información, consulte [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md).  
   
 ## <a name="see-also"></a>Vea también  
- <xref:System.Collections>   
- <xref:System.Collections.Specialized>   
- <xref:System.Collections.Generic>   
+ <xref:System.Collections>  
+ <xref:System.Collections.Specialized>  
+ <xref:System.Collections.Generic>  
  [Colecciones seguras para subprocesos](../../../docs/standard/collections/thread-safe/index.md)
-

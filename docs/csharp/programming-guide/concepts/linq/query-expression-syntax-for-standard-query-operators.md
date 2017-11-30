@@ -1,30 +1,21 @@
 ---
 title: "Sintaxis de las expresiones de consulta para operadores de consulta estándar (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: e1e17ef2-68ff-4c26-b6e2-015668227fa5
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: f662f23948f5d18c31a981a2f46d78f382ff5c96
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 30e994329234b8bd455f739694e50121bac63d5d
-ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="query-expression-syntax-for-standard-query-operators-c"></a>Sintaxis de las expresiones de consulta para operadores de consulta estándar (C#)
 Algunos de los operadores de consulta estándar que se usan con más frecuencia tienen una sintaxis especial de palabras clave de lenguaje C# para que se puedan invocar como parte de una *expresión de consulta*. Una expresión de consulta constituye una forma diferente de expresar una consulta, más legible que su equivalente *basada en métodos*. Las cláusulas de las expresiones de consulta se convierten en llamadas a los métodos de consulta en tiempo de compilación.  
@@ -47,8 +38,7 @@ Algunos de los operadores de consulta estándar que se usan con más frecuencia 
 |<xref:System.Linq.Enumerable.Where%2A>|`where`<br /><br /> (Para obtener más información, vea [where (Cláusula)](../../../../csharp/language-reference/keywords/where-clause.md)).|  
   
 ## <a name="see-also"></a>Vea también  
- <xref:System.Linq.Enumerable>   
- <xref:System.Linq.Queryable>   
- [Información general sobre operadores de consulta estándar (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)   
+ <xref:System.Linq.Enumerable>  
+ <xref:System.Linq.Queryable>  
+ [Standard Query Operators Overview (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)(Información general sobre operadores de consulta estándar (C#))  
  [Clasificación de operadores de consulta estándar por modo de ejecución (C#)](../../../../csharp/programming-guide/concepts/linq/classification-of-standard-query-operators-by-manner-of-execution.md)
-

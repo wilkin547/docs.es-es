@@ -10,14 +10,12 @@ ms.prod: .net-core
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 97aa50bf-bdf8-416d-a56c-ac77504c14ea
+ms.openlocfilehash: f6f94b06e88e5fb58a9a7af787270609077a9610
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: b041fbec3ff22157d00af2447e76a7ce242007fc
-ms.openlocfilehash: 86c772bd98978fe06f648eec9ca750b86ab2bfec
-ms.contentlocale: es-es
-ms.lasthandoff: 09/14/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="build-a-c-hello-world-application-with-net-core-in-visual-studio-2017"></a>Compilación de una aplicación Hola a todos en C# con .NET Core en Visual Studio 2017
 
 En este tema se proporciona una introducción detallada para compilar, depurar y publicar una sencilla aplicación de consola .NET Core con C# en Visual Studio 2017. Visual Studio 2017 proporciona un entorno de desarrollo completo para la compilación de aplicaciones .NET Core. Siempre que la aplicación no tenga dependencias específicas de la plataforma, la aplicación puede ejecutarse en cualquier plataforma que tenga como destino .NET Core y en cualquier sistema que tenga instalado .NET Core.
@@ -40,9 +38,9 @@ Comience creando una aplicación de consola "Hola mundo" sencilla. Siga estos pa
 
    ![Visual Studio y el nuevo proyecto Hola mundo](./media/with-visual-studio/devenv.png)
 
-   La plantilla crea una aplicación "Hola mundo" sencilla. Llama al método <xref:System.Console.WriteLine(System.String)?displayProperty=fullName> para mostrar la cadena literal "Hola mundo" en la ventana de la consola. Al seleccionar el botón **HelloWorld** con la flecha verde en la barra de herramientas, puede ejecutar el programa en modo de depuración. Si lo hace, la ventana de la consola se mostrará durante poco tiempo antes de cerrarse. Esto ocurre porque el método `Main` finaliza y la aplicación termina en cuanto se ejecuta la única instrucción en el método `Main`.
+   La plantilla crea una aplicación "Hola mundo" sencilla. Llama al método <xref:System.Console.WriteLine(System.String)?displayProperty=nameWithType> para mostrar la cadena literal "Hola mundo" en la ventana de la consola. Al seleccionar el botón **HelloWorld** con la flecha verde en la barra de herramientas, puede ejecutar el programa en modo de depuración. Si lo hace, la ventana de la consola se mostrará durante poco tiempo antes de cerrarse. Esto ocurre porque el método `Main` finaliza y la aplicación termina en cuanto se ejecuta la única instrucción en el método `Main`.
 
-1. Para que la aplicación se pause antes de que se cierre la ventana de la consola, agregue el siguiente código inmediatamente después de la llamada al método <xref:System.Console.WriteLine(System.String)?displayProperty=fullName>:
+1. Para que la aplicación se pause antes de que se cierre la ventana de la consola, agregue el siguiente código inmediatamente después de la llamada al método <xref:System.Console.WriteLine(System.String)?displayProperty=nameWithType>:
 
    ```csharp
    Console.Write("Press any key to continue...");
@@ -66,11 +64,11 @@ Mejore su aplicación para pedir su nombre al usuario y mostrarlo junto con la f
 
    [!code-csharp[GettingStarted#1](../../../samples/snippets/csharp/getting_started/with_visual_studio/helloworld.cs#1)]
 
-   Este código reemplaza las instrucciones <xref:System.Console.WriteLine%2A?displayProperty=fullName>, <xref:System.Console.Write%2A?displayProperty=fullName> y <xref:System.Console.ReadKey%2A?displayProperty=fullName> existentes.
+   Este código reemplaza las instrucciones <xref:System.Console.WriteLine%2A?displayProperty=nameWithType>, <xref:System.Console.Write%2A?displayProperty=nameWithType> y <xref:System.Console.ReadKey%2A?displayProperty=nameWithType> existentes.
 
    ![Archivo c-sharp del programa Visual Studio con el método Main actualizado](./media/with-visual-studio/codewindow.png)
 
-   Este código muestra "What is your name?" en la ventana de la consola y espera a que el usuario escriba una cadena seguida de la tecla Entrar. Almacena esta cadena en una variable denominada `name`. También recupera el valor de la propiedad <xref:System.DateTime.Now?displayProperty=fullName>, que contiene la hora local actual, y lo asigna a una variable denominada `date`. Por último, usa una [cadena interpolada](../../csharp/language-reference/keywords/interpolated-strings.md) para mostrar estos valores en la ventana de la consola.
+   Este código muestra "What is your name?" en la ventana de la consola y espera a que el usuario escriba una cadena seguida de la tecla Entrar. Almacena esta cadena en una variable denominada `name`. También recupera el valor de la propiedad <xref:System.DateTime.Now?displayProperty=nameWithType>, que contiene la hora local actual, y lo asigna a una variable denominada `date`. Por último, usa una [cadena interpolada](../../csharp/language-reference/keywords/interpolated-strings.md) para mostrar estos valores en la ventana de la consola.
 
 1. Compile el programa; para ello, seleccione **Generar** > **Compilar solución**.
 
@@ -91,4 +89,3 @@ Ha creado y ejecutado la aplicación. Para desarrollar una aplicación profesion
 En lugar de una aplicación de consola, también puede crear una biblioteca de clases con .NET Core y Visual Studio 2017. Para consultar una introducción detallada, vea [Building a class library with C# and .NET Core in Visual Studio 2017](library-with-visual-studio.md) (Creación de una biblioteca de clases con C# y .NET Core en Visual Studio 2017).
 
 También puede desarrollar una aplicación de consola .NET Core en Mac, Linux y Windows mediante [Visual Studio Code](https://code.visualstudio.com/), un editor de código descargable. Para obtener un tutorial detallado, vea [Introducción a Visual Studio Code](with-visual-studio-code.md).
-

@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 5cf36f45-f91a-4fca-a0b7-87f233e108e9
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 18a5819402c752f32aecd0cd4c3bd5a490292ebf
-ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="iterators"></a>Iteradores
 
 Prácticamente todos los programas que escriba tendrán alguna necesidad de recorrer en iteración una colección. Va a escribir código que examine cada elemento de una colección. 
@@ -246,6 +244,5 @@ finally
 ```
 
 Afortunadamente, no es necesario recordar todos estos detalles. La instrucción `foreach` controla todos esos matices. El compilador generará el código correcto para cualquiera de estas construcciones. 
-
 
 

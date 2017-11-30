@@ -8,19 +8,20 @@ ms.suite:
 ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- BlockingCollection, overview
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords: BlockingCollection, overview
 ms.assetid: 987ea3d7-0ad5-4238-8b64-331ce4eb3f0b
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: 6dc6729bf4627164fbcde5980d4fcccd41b67645
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 10e59c246914c17c4a0803de52cf891b2e0d3a3f
-ms.contentlocale: es-es
-ms.lasthandoff: 09/19/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="blockingcollection-overview"></a>Información general sobre BlockingCollection
 <xref:System.Collections.Concurrent.BlockingCollection%601> es una clase de colección segura para subprocesos que proporciona las siguientes características:  
@@ -86,7 +87,6 @@ BlockingCollection<string> bc = new BlockingCollection<string>(new ConcurrentBag
  Para escenarios en los que un consumidor necesita tomar elementos de varias colecciones de forma simultánea, se pueden crear matrices de <xref:System.Collections.Concurrent.BlockingCollection%601> y usar los métodos estáticos, como <xref:System.Collections.Concurrent.BlockingCollection%601.TakeFromAny%2A> y <xref:System.Collections.Concurrent.BlockingCollection%601.AddToAny%2A>, que agregarán a cualquiera de las colecciones de la matriz o tomarán desde ellas. Si se bloquea una colección, el método intenta otra de forma inmediata hasta que encuentra una que pueda realizar la operación. Para obtener más información, consulte [Cómo: Usar matrices de colecciones de bloqueo en una canalización](../../../../docs/standard/collections/thread-safe/how-to-use-arrays-of-blockingcollections.md).  
   
 ## <a name="see-also"></a>Vea también  
- <xref:System.Collections.Concurrent?displayProperty=fullName>   
- [Colecciones y estructuras de datos](../../../../docs/standard/collections/index.md)   
+ <xref:System.Collections.Concurrent?displayProperty=nameWithType>  
+ [Colecciones y estructuras de datos](../../../../docs/standard/collections/index.md)  
  [Colecciones seguras para subprocesos](../../../../docs/standard/collections/thread-safe/index.md)
-

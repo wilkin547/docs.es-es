@@ -7,12 +7,11 @@ ms.date: 08/23/2017
 ms.topic: article
 ms.prod: .net
 ms.technology: dotnet-standard
-ms.translationtype: HT
-ms.sourcegitcommit: 1b028e5880f9e57e87c16eabeb442e0a46a369da
 ms.openlocfilehash: ce3368f4c34a8e4b20a7deb2a6c6e4d163927cd4
-ms.contentlocale: es-es
-ms.lasthandoff: 08/23/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="net-architectural-components"></a>Componentes de la arquitectura .NET
 
@@ -94,5 +93,4 @@ Tiene acceso a un amplio conjunto de herramientas y componentes de infraestructu
 [Guía de C#](../csharp/index.md)  
 [Guía de F#](../fsharp/index.md)  
 [Guía de VB.NET](../visual-basic/index.md)  
-
 

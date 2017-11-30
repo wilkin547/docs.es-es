@@ -1,38 +1,19 @@
 ---
 title: Palabras clave del espacio de nombres (Referencia de C#)
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- namespaces [C#], keywords
+helpviewer_keywords: namespaces [C#], keywords
 ms.assetid: 091a66eb-b10d-4f54-9102-5ac0d4bdb84b
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: c5b0d112aed01bcddbe34d73093b70be65212b88
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 0613bb81446e1c6b0cde94b0c0bdd6dd810ce264
-ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="namespace-keywords-c-reference"></a>Palabras clave del espacio de nombres (Referencia de C#)
 En esta sección se describen las palabras clave y los operadores asociados con el uso de espacios de nombres:  
@@ -50,8 +31,7 @@ En esta sección se describen las palabras clave y los operadores asociados con 
 -   [extern alias](../../../csharp/language-reference/keywords/extern-alias.md)  
   
 ## <a name="see-also"></a>Vea también  
- [Referencia de C#](../../../csharp/language-reference/index.md)   
- [Guía de programación de C#](../../../csharp/programming-guide/index.md)   
- [Palabras clave de C#](../../../csharp/language-reference/keywords/index.md)   
+ [Referencia de C#](../../../csharp/language-reference/index.md)  
+ [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
+ [Palabras clave de C#](../../../csharp/language-reference/keywords/index.md)  
  [Espacios de nombres](../../../csharp/programming-guide/namespaces/index.md)
-

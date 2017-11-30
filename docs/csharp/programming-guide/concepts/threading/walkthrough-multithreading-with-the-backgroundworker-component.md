@@ -1,30 +1,21 @@
 ---
 title: 'Tutorial: Multithreading con el componente BackgroundWorker (C#)'
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: ff670fbf-a0ac-40c1-ab08-9ed53768f880
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 72d6e9ab42ca270ebe0691be23ebe181b973620d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 541a1ec788c337eea9965b8a46155e5c6606ea2f
-ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="walkthrough-multithreading-with-the-backgroundworker-component-c"></a>Tutorial: Multithreading con el componente BackgroundWorker (C#)
 Este tutorial muestra cómo crear una aplicación multiproceso de Windows Forms que busque las repeticiones de una palabra en un archivo de texto. Muestra cómo:  
@@ -292,6 +283,5 @@ Este tutorial muestra cómo crear una aplicación multiproceso de Windows Forms 
  Esta aplicación contiene un control de errores básico. Detecta cadenas de búsqueda en blanco. Puede hacer que el programa sea más sólido mediante el control de otros errores, como, por ejemplo, que se supere el número máximo de palabras o líneas que se pueden contar.  
   
 ## <a name="see-also"></a>Vea también  
- [Threading (C#)](../../../../csharp/programming-guide/concepts/threading/index.md)  (Subprocesos [C#])  
+ [Subprocesamiento (C#)](../../../../csharp/programming-guide/concepts/threading/index.md)  
  [Cómo: Suscribir y cancelar la suscripción a eventos](../../../../csharp/programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md)
-

@@ -1,33 +1,24 @@
 ---
 title: "Iniciar varias tareas asincrónicas y procesarlas a medida que se completan (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 25331850-35a7-43b3-ab76-3908e4346b9d
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: bf70bd5e79e962d8edaea2dc037f191707f4e047
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 770655005a3cf9cd13eb13cff1ca1d7e291e54e8
-ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="start-multiple-async-tasks-and-process-them-as-they-complete-c"></a>Iniciar varias tareas asincrónicas y procesarlas a medida que se completan (C#)
-Si usa <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=fullName>, puede iniciar varias tareas a la vez y procesarlas una por una a medida que se completen, en lugar de procesarlas en el orden en el que se han iniciado.  
+Si usa <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType>, puede iniciar varias tareas a la vez y procesarlas una por una a medida que se completen, en lugar de procesarlas en el orden en el que se han iniciado.  
   
  En el siguiente ejemplo se usa una consulta para crear una colección de tareas. Cada tarea descarga el contenido de un sitio web especificado. En cada iteración de un bucle while, una llamada awaited a `WhenAny` devuelve la tarea en la colección de tareas que termine primero su descarga. Esa tarea se quita de la colección y se procesa. El bucle se repite hasta que la colección no contiene más tareas.  
   
@@ -67,7 +58,7 @@ IEnumerable<Task<int>> downloadTasksQuery =
   
  En el archivo MainWindow.xaml.cs del proyecto, realice los siguientes cambios en el método `AccessTheWebAsync`.  
   
--   Ejecute la consulta aplicando <xref:System.Linq.Enumerable.ToList%2A?displayProperty=fullName> en lugar de <xref:System.Linq.Enumerable.ToArray%2A>.  
+-   Ejecute la consulta aplicando <xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType> en lugar de <xref:System.Linq.Enumerable.ToArray%2A>.  
   
     ```csharp  
     List<Task<int>> downloadTasks = downloadTasksQuery.ToList();  
@@ -243,8 +234,7 @@ namespace ProcessTasksAsTheyFinish
 ```  
   
 ## <a name="see-also"></a>Vea también  
- <xref:System.Threading.Tasks.Task.WhenAny%2A>   
- [Ajustar una aplicación asincrónica (C#)](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md)   
- [Programación asincrónica con async y await (C#)](../../../../csharp/programming-guide/concepts/async/index.md)   
- [Async Sample: Fine Tuning Your Application](http://go.microsoft.com/fwlink/?LinkId=255046) (Ejemplo asincrónico: Ajustar la aplicación)
-
+ <xref:System.Threading.Tasks.Task.WhenAny%2A>  
+ [Fine-Tuning Your Async Application (C#)](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md) (Ajuste de la aplicación asincrónica [C#])  
+ [Programación asincrónica con async y await (C#)](../../../../csharp/programming-guide/concepts/async/index.md)  
+ [Async Sample: Fine Tuning Your Application](http://go.microsoft.com/fwlink/?LinkId=255046) (Ejemplo asincrónico: ajuste de la aplicación)

@@ -1,30 +1,21 @@
 ---
 title: "Acceder a atributos mediante reflexión (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: dce3a696-4ceb-489a-b5e4-322a83052f18
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 162bdd6b968def391a2f3413596ee8c2a8b01cc3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 36724c7b6a2a786aff837db5bcf2ad2ccfa39205
-ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="accessing-attributes-by-using-reflection-c"></a>Acceder a atributos mediante reflexión (C#)
 El hecho de que pueda definir atributos personalizados y colocarlos en el código fuente no serviría de mucho si no existiera ninguna forma de recuperar la información y actuar en consecuencia. Mediante la reflexión, puede recuperar la información que se ha definido con atributos personalizados. El método clave es `GetCustomAttributes`, que devuelve una matriz de objetos que son los equivalentes en tiempo de ejecución de los atributos de código fuente. Este método tiene varias versiones sobrecargadas. Para obtener más información, consulta <xref:System.Attribute>.  
@@ -131,11 +122,10 @@ class TestAuthorAttribute
 ```  
   
 ## <a name="see-also"></a>Vea también  
- <xref:System.Reflection>   
- <xref:System.Attribute>   
- [Guía de programación de C#](../../../../csharp/programming-guide/index.md)   
- [Retrieving Information Stored in Attributes](../../../../standard/attributes/retrieving-information-stored-in-attributes.md)  (Recuperar la información almacenada en atributos)  
- [Reflection (C#)](../../../../csharp/programming-guide/concepts/reflection.md)  (Reflexión [C#])  
- [Attributes (C#)](../../../../csharp/programming-guide/concepts/attributes/index.md)  (Atributos [C#])  
+ <xref:System.Reflection>  
+ <xref:System.Attribute>  
+ [Guía de programación de C#](../../../../csharp/programming-guide/index.md)  
+ [Retrieving Information Stored in Attributes](../../../../standard/attributes/retrieving-information-stored-in-attributes.md) (Recuperar la información almacenada en atributos)  
+ [Reflexión (C#)](../../../../csharp/programming-guide/concepts/reflection.md)  
+ [Atributos (C#)](../../../../csharp/programming-guide/concepts/attributes/index.md)  
  [Crear atributos personalizados (C#)](../../../../csharp/programming-guide/concepts/attributes/creating-custom-attributes.md)
-

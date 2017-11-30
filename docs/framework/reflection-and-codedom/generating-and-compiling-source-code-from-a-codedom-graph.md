@@ -5,10 +5,13 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
 helpviewer_keywords:
 - code compilers
 - CodeDOM, generating source code
@@ -30,16 +33,15 @@ helpviewer_keywords:
 - compiling source code, multiple languages
 - CodeDOM, graphs
 ms.assetid: 6c864c8e-6dd3-4a65-ace0-36879d9a9c42
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 55ba7c1b9dd7e8c912903fb9827e0073a8329abb
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 4b01517d7d8c12d9a0191293fb52f429bb83bf40
-ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="generating-and-compiling-source-code-from-a-codedom-graph"></a>Generar y compilar código fuente a partir de un gráfico CodeDOM
 El espacio de nombres <xref:System.CodeDom.Compiler> proporciona interfaces para generar código fuente a partir de gráficos de objetos CodeDOM y para administrar la compilación con compiladores compatibles. Un proveedor de código puede generar código fuente en un lenguaje de programación determinado según un gráfico CodeDOM. Una clase que deriva de <xref:System.CodeDom.Compiler.CodeDomProvider> normalmente puede proporcionar métodos para generar y compilar código para el lenguaje admitido por el proveedor.  
@@ -49,11 +51,15 @@ El espacio de nombres <xref:System.CodeDom.Compiler> proporciona interfaces para
   
  En el ejemplo siguiente se muestra cómo crear una instancia de <xref:Microsoft.CSharp.CSharpCodeProvider>:  
   
- [!code-cpp[CodeDomExample#21](../../../samples/snippets/cpp/VS_Snippets_CLR/CodeDomExample/CPP/source3.cpp#21)] [!code-csharp[CodeDomExample#21](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDomExample/CS/source3.cs#21)] [!code-vb[CodeDomExample#21](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDomExample/VB/source3.vb#21)]  
+ [!code-cpp[CodeDomExample#21](../../../samples/snippets/cpp/VS_Snippets_CLR/CodeDomExample/CPP/source3.cpp#21)]
+ [!code-csharp[CodeDomExample#21](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDomExample/CS/source3.cs#21)]
+ [!code-vb[CodeDomExample#21](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDomExample/VB/source3.vb#21)]  
   
  El gráfico para la generación de código normalmente se encuentra en un elemento <xref:System.CodeDom.CodeCompileUnit>. Para generar código para un elemento **CodeCompileUnit** que contiene un gráfico CodeDOM, llame al método <xref:System.CodeDom.Compiler.CodeDomProvider.GenerateCodeFromCompileUnit%2A> del proveedor de código. Este método tiene un parámetro para <xref:System.IO.TextWriter> que se usa para generar el código fuente, por lo que a veces es necesario crear primero un elemento **TextWriter** en el que se pueda escribir. En el ejemplo siguiente se muestra la generación de código a partir de un elemento **CodeCompileUnit** y la escritura del código fuente generado en un archivo denominado HelloWorld.cs.  
   
- [!code-cpp[CodeDomExample#22](../../../samples/snippets/cpp/VS_Snippets_CLR/CodeDomExample/CPP/source3.cpp#22)] [!code-csharp[CodeDomExample#22](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDomExample/CS/source3.cs#22)] [!code-vb[CodeDomExample#22](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDomExample/VB/source3.vb#22)]  
+ [!code-cpp[CodeDomExample#22](../../../samples/snippets/cpp/VS_Snippets_CLR/CodeDomExample/CPP/source3.cpp#22)]
+ [!code-csharp[CodeDomExample#22](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDomExample/CS/source3.cs#22)]
+ [!code-vb[CodeDomExample#22](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDomExample/VB/source3.vb#22)]  
   
 ## <a name="using-a-codedom-code-provider-to-compile-assemblies"></a>Uso de un proveedor de código CodeDOM para compilar ensamblados  
  **Invocación de la compilación**  
@@ -88,14 +94,15 @@ El espacio de nombres <xref:System.CodeDom.Compiler> proporciona interfaces para
   
  En el ejemplo de código siguiente se muestra cómo compilar un archivo de origen con un proveedor CodeDom derivado de la clase <xref:System.CodeDom.Compiler.CodeDomProvider>.  
   
- [!code-cpp[CodeDomExample#23](../../../samples/snippets/cpp/VS_Snippets_CLR/CodeDomExample/CPP/source3.cpp#23)] [!code-csharp[CodeDomExample#23](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDomExample/CS/source3.cs#23)] [!code-vb[CodeDomExample#23](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDomExample/VB/source3.vb#23)]  
+ [!code-cpp[CodeDomExample#23](../../../samples/snippets/cpp/VS_Snippets_CLR/CodeDomExample/CPP/source3.cpp#23)]
+ [!code-csharp[CodeDomExample#23](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDomExample/CS/source3.cs#23)]
+ [!code-vb[CodeDomExample#23](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDomExample/VB/source3.vb#23)]  
   
 ## <a name="languages-with-initial-support"></a>Lenguajes con compatibilidad inicial  
  .NET Framework proporciona compiladores y generadores de código para los siguientes lenguajes: C#, Visual Basic, C++ y JScript. La compatibilidad de CodeDOM se puede extender a otros lenguajes si se implementan generadores y compiladores de código específicos del lenguaje.  
   
 ## <a name="see-also"></a>Vea también  
- <xref:System.CodeDom>   
- <xref:System.CodeDom.Compiler>   
- [Dynamic Source Code Generation and Compilation (Generación y compilación dinámicas de código fuente)](../../../docs/framework/reflection-and-codedom/dynamic-source-code-generation-and-compilation.md)   
+ <xref:System.CodeDom>  
+ <xref:System.CodeDom.Compiler>  
+ [Generación y compilación dinámicas de código fuente](../../../docs/framework/reflection-and-codedom/dynamic-source-code-generation-and-compilation.md)  
  [Referencia rápida de CodeDOM](http://msdn.microsoft.com/en-us/c77b8bfd-0a32-4e36-b59a-4f687f32c524)
-

@@ -5,28 +5,20 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
-helpviewer_keywords:
-- CLR activation, debugging issues
+helpviewer_keywords: CLR activation, debugging issues
 ms.assetid: 4fe17546-d56e-4344-a930-6d8e4a545914
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: 5d923f97b6c3954f07467f9fbfe40913f427bb99
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: f1f1f3393457c783fe8f73d987a287f1afb18f40
-ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-debug-clr-activation-issues"></a>Cómo: Depurar problemas de activación de CLR
 Si detecta problemas al intentar que la aplicación se ejecute con la versión correcta de Common Language Runtime (CLR), puede ver y depurar los registros de activación de CLR. Estos registros pueden resultar muy útiles a la hora de determinar la causa de un problema de activación, cuando la aplicación carga una versión de CLR que no es la prevista o simplemente no lo carga. En [.NET Framework Initialization Errors: Managing the User Experience](../../../docs/framework/deployment/initialization-errors-managing-the-user-experience.md) (Errores de inicialización de .NET Framework: Administrar la experiencia del usuario) se habla de la experiencia de no encontrar ningún CLR para una aplicación.  
@@ -132,6 +124,5 @@ Si detecta problemas al intentar que la aplicación se ejecute con la versión c
     ```  
   
 ## <a name="see-also"></a>Vea también  
- [Implementación](../../../docs/framework/deployment/index.md)   
+ [Implementación](../../../docs/framework/deployment/index.md)  
  [Configurar una aplicación para que admita .NET Framework 4 o 4.5](../../../docs/framework/migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)
-

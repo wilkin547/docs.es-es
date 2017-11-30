@@ -1,48 +1,29 @@
 ---
 title: "Cómo: Eliminar una clave del Registro en Visual Basic"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-f1_keywords:
-- vb.DeleteSetting
-dev_langs:
-- VB
+f1_keywords: vb.DeleteSetting
 helpviewer_keywords:
-- GetSetting function
-- registry, deleting values
+- GetSetting function [Visual Basic]
+- registry [Visual Basic], deleting values
 - GetAllSettings function
-- registry keys, deleting
-- registry, deleting keys
+- registry keys [Visual Basic], deleting
+- registry [Visual Basic], deleting keys
 - examples [Visual Basic], registry
 ms.assetid: ab9aca0e-42b0-4ff7-8ff9-845a4bfdf9f2
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 0cb98c02531bac133b9dc37a92f75d5c0418dc7c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 0fc37aff9f6a0ae3a7953377ebf95179d01bb693
-ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-delete-a-registry-key-in-visual-basic"></a>Cómo: Eliminar una clave del Registro en Visual Basic
 Los métodos <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%28System.String%29> y <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%28System.String%2CSystem.Boolean%29> se pueden usar para eliminar las claves del Registro.  
@@ -72,9 +53,8 @@ Los métodos <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%28System.String%29> 
  Las llamadas del Registro producen errores si no se conceden permisos suficientes en tiempo de ejecución (<xref:System.Security.Permissions.RegistryPermission>) o si el usuario no tiene el acceso correcto (como se determina en las ACL) para crear o escribir en la configuración. Por ejemplo, una aplicación local que tenga permiso de seguridad de acceso del código puede que no tenga permiso para el sistema operativo.  
   
 ## <a name="see-also"></a>Vea también  
- <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%2A>   
- <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%2A>   
- <xref:Microsoft.Win32.RegistryKey>   
- [Seguridad y Registro](../../../../visual-basic/developing-apps/programming/computer-resources/security-and-the-registry.md)   
+ <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%2A>  
+ <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%2A>  
+ <xref:Microsoft.Win32.RegistryKey>  
+ [Seguridad y Registro](../../../../visual-basic/developing-apps/programming/computer-resources/security-and-the-registry.md)  
  [Leer y escribir en el Registro](../../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md)
-

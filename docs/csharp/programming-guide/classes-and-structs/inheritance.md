@@ -1,12 +1,9 @@
 ---
 title: "Herencia (Guía de programación de C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - abstract methods [C#]
 - abstract classes [C#]
@@ -15,29 +12,14 @@ helpviewer_keywords:
 - virtual methods [C#]
 - C# language, inheritance
 ms.assetid: 81d64ee4-50f9-4d6c-a8dc-257c348d2eea
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: dc3d448d311fe0a67839757fa43a209d92141214
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 01092b94c83f50b16604428780b2786496017732
-ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="inheritance-c-programming-guide"></a>Herencia (Guía de programación de C#)
 
@@ -50,14 +32,14 @@ La herencia, junto con la encapsulación y el polimorfismo, es una de las tres c
   
  Cuando se define una clase para que derive de otra clase, la clase derivada obtiene implícitamente todos los miembros de la clase base, salvo sus constructores y sus finalizadores. La clase derivada puede reutilizar el código de la clase base sin tener que volver a implementarlo. Puede agregar más miembros en la clase derivada. De esta manera, la clase derivada amplía la funcionalidad de la clase base.  
   
- En la ilustración siguiente se muestra una clase `WorkItem` que representa un elemento de trabajo de un proceso empresarial. Como con todas las clases, se deriva de <xref:System.Object?displayProperty=fullName> y hereda todos sus métodos. `WorkItem` agrega cinco miembros propios. Entre estos se incluye un constructor, dado que los constructores no se heredan. La clase `ChangeRequest` hereda de `WorkItem` y representa un tipo concreto de elemento de trabajo. `ChangeRequest` agrega dos miembros más a los miembros que hereda de `WorkItem` y de <xref:System.Object>. Debe agregar su propio constructor y además agrega `originalItemID`. La propiedad `originalItemID` permite que la instancia `ChangeRequest` se asocie con el `WorkItem` original al que se aplica la solicitud de cambio.  
+ En la ilustración siguiente se muestra una clase `WorkItem` que representa un elemento de trabajo de un proceso empresarial. Como con todas las clases, se deriva de <xref:System.Object?displayProperty=nameWithType> y hereda todos sus métodos. `WorkItem` agrega cinco miembros propios. Entre estos se incluye un constructor, dado que los constructores no se heredan. La clase `ChangeRequest` hereda de `WorkItem` y representa un tipo concreto de elemento de trabajo. `ChangeRequest` agrega dos miembros más a los miembros que hereda de `WorkItem` y de <xref:System.Object>. Debe agregar su propio constructor y además agrega `originalItemID`. La propiedad `originalItemID` permite que la instancia `ChangeRequest` se asocie con el `WorkItem` original al que se aplica la solicitud de cambio.  
   
  ![Herencia de clases](../../../csharp/programming-guide/classes-and-structs/media/class_inheritance.png "Class_Inheritance")  
 Herencia de clases  
   
- En el ejemplo siguiente se muestra cómo se expresan en C# las relaciones de clase de la ilustración anterior. En el ejemplo también se muestra cómo `WorkItem` reemplaza el método virtual <xref:System.Object.ToString%2A?displayProperty=fullName> y cómo la clase `ChangeRequest` hereda la implementación `WorkItem` del método.  
+ En el ejemplo siguiente se muestra cómo se expresan en C# las relaciones de clase de la ilustración anterior. En el ejemplo también se muestra cómo `WorkItem` reemplaza el método virtual <xref:System.Object.ToString%2A?displayProperty=nameWithType> y cómo la clase `ChangeRequest` hereda la implementación `WorkItem` del método.  
   
- [!code-cs[csProgGuideInheritance#49](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/inheritance_1.cs)]  
+ [!code-csharp[csProgGuideInheritance#49](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/inheritance_1.cs)]  
   
 ## <a name="abstract-and-virtual-methods"></a>Métodos abstractos y virtuales  
  Cuando una clase base declara un método como [virtual](../../../csharp/language-reference/keywords/virtual.md), una clase derivada puede [reemplazar](../../../csharp/language-reference/keywords/override.md) el método con su propia implementación. Si una clase base declara un miembro como [abstracto](../../../csharp/language-reference/keywords/abstract.md), ese método se debe reemplazar en todas las clases no abstractas que hereden directamente de dicha clase. Si una clase derivada es abstracta, hereda los miembros abstractos sin implementarlos. Los miembros abstractos y virtuales son la base del polimorfismo, que es la segunda característica principal de la programación orientada a objetos. Para obtener más información, vea [Polimorfismo ](../../../csharp/programming-guide/classes-and-structs/polymorphism.md).  
@@ -68,7 +50,7 @@ Herencia de clases
 ## <a name="interfaces"></a>Interfaces  
  Una *interfaz* es un tipo de referencia similar a una clase base abstracta formada únicamente por miembros abstractos. Cuando una clase implementa una interfaz, debe proporcionar una implementación para todos los miembros de la interfaz. Una clase puede implementar varias interfaces, aunque solo puede derivar de una única clase base directa.  
   
- Las interfaces se usan para definir funciones específicas para clases que no tienen necesariamente una relación "es un/una". Por ejemplo, la interfaz <xref:System.IEquatable%601?displayProperty=fullName> se puede implementar mediante cualquier clase o struct que deba permitir que el código de cliente determine si dos objetos del tipo son equivalentes (pero el tipo define la equivalencia). <xref:System.IEquatable%601> no implica el mismo tipo de relación "es un/una" que existe entre una clase base y una clase derivada (por ejemplo, `Mammal` es `Animal`). Para más información, vea [Interfaces](../../../csharp/programming-guide/interfaces/index.md).  
+ Las interfaces se usan para definir funciones específicas para clases que no tienen necesariamente una relación "es un/una". Por ejemplo, la interfaz <xref:System.IEquatable%601?displayProperty=nameWithType> se puede implementar mediante cualquier clase o struct que deba permitir que el código de cliente determine si dos objetos del tipo son equivalentes (pero el tipo define la equivalencia). <xref:System.IEquatable%601> no implica el mismo tipo de relación "es un/una" que existe entre una clase base y una clase derivada (por ejemplo, `Mammal` es `Animal`). Para más información, vea [Interfaces](../../../csharp/programming-guide/interfaces/index.md).  
   
 ## <a name="preventing-further-derivation"></a>Impedir la derivación adicional  
  Una clase puede impedir que otras clases hereden de ella o de cualquiera de sus miembros. Para ello, se declara a sí misma o declara su miembro como [sellado](../../../csharp/language-reference/keywords/sealed.md). Para obtener más información, vea [Clases y miembros de clase abstractos y sellados](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md).  
@@ -77,8 +59,7 @@ Herencia de clases
  Una clase derivada puede ocultar miembros de clase base si declara los miembros con el mismo nombre y firma. Se puede usar el modificador [new](../../../csharp/language-reference/keywords/new.md) para indicar explícitamente que el miembro no está diseñado para reemplazar al miembro base. No es necesario usar [new](../../../csharp/language-reference/keywords/new.md), pero se generará una advertencia del compilador si no se usa [new](../../../csharp/language-reference/keywords/new.md). Para obtener más información, vea [Control de versiones con las palabras clave Override y New ](../../../csharp/programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md) y [Saber cuándo usar las palabras clave Override y New](../../../csharp/programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Guía de programación de C#](../../../csharp/programming-guide/index.md)   
- [Clases y structs](../../../csharp/programming-guide/classes-and-structs/index.md)   
- [class](../../../csharp/language-reference/keywords/class.md)   
+ [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
+ [Clases y structs](../../../csharp/programming-guide/classes-and-structs/index.md)  
+ [class](../../../csharp/language-reference/keywords/class.md)  
  [struct](../../../csharp/language-reference/keywords/struct.md)
-

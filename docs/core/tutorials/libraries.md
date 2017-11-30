@@ -10,14 +10,12 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 9f6e8679-bd7e-4317-b3f9-7255a260d9cf
+ms.openlocfilehash: 21f8a4f4862cabd21ab9017056f3f71706e8e9a1
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 3155295489e1188640dae5aa5bf9fdceb7480ed6
-ms.openlocfilehash: c0525462ac5efaa8d96ac2bf4c12a823ef40df31
-ms.contentlocale: es-es
-ms.lasthandoff: 09/19/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="developing-libraries-with-cross-platform-tools"></a>Desarrollo de bibliotecas con herramientas multiplataforma
 
 En este artículo se explica cómo escribir bibliotecas para .NET mediante el uso de herramientas multiplataforma de la CLI. La CLI proporciona una experiencia eficaz y de bajo nivel que funciona en todos los SO compatibles. De todos modos puede seguir compilando bibliotecas con Visual Studio; si esa es la experiencia de su preferencia, [consulte la guía sobre Visual Studio](libraries-with-vs.md).
@@ -260,6 +258,8 @@ Es importante poder probar las plataformas. Puede usar [xUnit](http://xunit.gith
    dotnet build
    ```
 
+   [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
+
 1. Compruebe que xUnit se ejecuta mediante la ejecución del comando `dotnet test`. Si decide usar MSTest, entonces debe ejecutarse en su lugar el ejecutor de la consola de MSTest.
     
 Y listo. Ahora puede probar la biblioteca en todas las plataformas; para ello, use herramientas de línea de comandos. Para seguir con las pruebas ahora que ya está todo configurado, probar la biblioteca es un proceso muy simple:
@@ -342,4 +342,3 @@ Puede agregar esta sección a cada archivo del proyecto manualmente si prefiere 
 ### <a name="structuring-a-solution"></a>Estructura de una solución
 
 Otro aspecto importante de las soluciones de varios proyectos es establecer una buena estructura de proyecto general. Puede organizar el código de la manera que quiera, y siempre y cuando vincule cada proyecto a su archivo de solución con `dotnet sln add`, podrá ejecutar `dotnet restore` y `dotnet build` en el nivel de solución.
-

@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: a315b111-8e48-446c-ab19-acb6405894a7
-ms.translationtype: HT
-ms.sourcegitcommit: 934373d61407c8cc19b7d6424898a582880f9c21
 ms.openlocfilehash: 08b8de2fe17a0032a1c1180667f39b1d6ce0feb6
-ms.contentlocale: es-es
-ms.lasthandoff: 08/21/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="generic-types-generics-overview"></a>Información general (genéricos) de tipos genéricos
 
 Usamos genéricos en todo momento en C#, ya sea implícita o explícitamente. Al usar LINQ en C#, ¿alguna vez observó que estaba trabajando con IEnumerable<T>? O si alguna vez ha visto un ejemplo en línea de un "repositorio genérico" para comunicarse con bases de datos mediante Entity Framework, ¿observó que la mayoría de los métodos devuelven IQueryable<T>? ¿Probablemente se pregunte qué significa la **T** en estos ejemplos y por qué aparece?
@@ -75,4 +73,3 @@ El último dato útil sobre el runtime es que conocer el tipo de la clase genér
 
 *   [Introducción a los genéricos C#](https://msdn.microsoft.com/library/ms379564.aspx)
 *   [Guía de programación de C#: genéricos](https://msdn.microsoft.com/library/512aeb7t.aspx)
-

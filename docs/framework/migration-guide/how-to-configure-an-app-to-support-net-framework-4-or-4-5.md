@@ -5,8 +5,7 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,16 +13,15 @@ helpviewer_keywords:
 - .NET Framework 4, configuring apps
 - .NET Framework 4.5, configuring apps
 ms.assetid: 63c6b9a8-0088-4077-9aa3-521ab7290f79
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: 95266f9f28d5054db3ea8552ebb45e5a83aba060
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 3fea03fd2b660368b72ad111effffe7a64e381f2
-ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-configure-an-app-to-support-net-framework-4-or-45"></a>Cómo: Configurar una aplicación para que admita .NET Framework 4 o 4.5
 Todas las aplicaciones que hospedan Common Language Runtime (CLR) necesitan iniciar o *activar* CLR para ejecutar código administrado. Normalmente, una aplicación de .NET Framework se ejecuta en la versión de CLR en la que se compiló, pero puede cambiar este comportamiento para las aplicaciones de escritorio mediante un archivo de configuración de la aplicación (que suele recibir el nombre de archivo app.config). Sin embargo, no puede cambiar el comportamiento predeterminado de activación para las aplicaciones de la Tienda Windows o Windows Phone mediante un archivo de configuración de la aplicación. En este artículo se explica cómo permitir que la aplicación de escritorio se ejecute en otra versión de .NET Framework y se proporciona un ejemplo de cómo establecer la versión 4 o 4.5 como destino.  
@@ -92,6 +90,5 @@ Todas las aplicaciones que hospedan Common Language Runtime (CLR) necesitan inic
  \* Para obtener más información sobre este mensaje de error y cómo evitarlo, vea [Errores de inicialización de .NET Framework: Administrar la experiencia del usuario](../../../docs/framework/deployment/initialization-errors-managing-the-user-experience.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Migración desde .NET Framework 1.1](../../../docs/framework/migration-guide/migrating-from-the-net-framework-1-1.md)   
+ [Migración desde .NET Framework 1.1](../../../docs/framework/migration-guide/migrating-from-the-net-framework-1-1.md)  
  [Guía de migración](../../../docs/framework/migration-guide/index.md)
-

@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - app.config files, assembly locations
 - deploying applications [.NET Framework], assembly locations
@@ -22,16 +16,15 @@ helpviewer_keywords:
 - locating assemblies
 - assemblies [.NET Framework], location
 ms.assetid: 772ac6f4-64d2-4cfb-92fd-58096dcd6c34
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: f1a4fd55688f03cbd9de2ceb815c49423aff5fad
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 81117b1419c2a9c3babd6a7429052e2b23e08a70
-ms.openlocfilehash: 75353ad43d76ceecd60bb9edd207c56c759e52c2
-ms.contentlocale: es-es
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-the-runtime-locates-assemblies"></a>Cómo el motor en tiempo de ejecución ubica ensamblados
 Para implementar correctamente una aplicación de .NET Framework, debe entender la manera en que Common Language Runtime busca y enlaza los ensamblados que componen la aplicación. De forma predeterminada, runtime intenta enlazar con la versión exacta de un ensamblado con el que se creó la aplicación. Este comportamiento predeterminado puede reemplazarse con los valores del archivo de configuración.  
@@ -263,6 +256,5 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
  Por ejemplo, si Assembly1 hace referencia a Assembly2 y Assembly1 se descargó desde http://www.code.microsoft.com/utils, dicha ubicación se considera una pista sobre dónde buscar Assembly2.dll. A continuación, el tiempo de ejecución sondea el ensamblado en http://www.code.microsoft.com/utils/Assembly2.dll y en http://www.code.microsoft.com/utils/Assembly2/Assembly2.dll. Si no se encuentra Assembly2 en ninguna de estas ubicaciones, el tiempo de ejecución consulta a Windows Installer.  
   
 ## <a name="see-also"></a>Vea también  
- [Procedimientos recomendados para cargar ensamblados](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)   
+ [Procedimientos recomendados para cargar ensamblados](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)  
  [Implementación](../../../docs/framework/deployment/index.md)
-

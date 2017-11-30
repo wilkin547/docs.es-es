@@ -10,14 +10,12 @@ ms.prod: .net-core
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: cb213625-cc60-438b-9b9e-49aed0e4a974
+ms.openlocfilehash: 6fbebf69b2772b4159841d13068e7b95a39bea92
+ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
 ms.translationtype: HT
-ms.sourcegitcommit: e0271ba3392ce8861dc916714af8c16d4581ce4f
-ms.openlocfilehash: 19744773d18f6ea43e4b4a7518405b60e6b53acf
-ms.contentlocale: es-es
-ms.lasthandoff: 08/13/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/21/2017
 ---
-
 # <a name="debug-your-hello-world-application-with-visual-studio-2017"></a>Depuración de la aplicación Hola a todos con Visual Studio 2017
 
 Hasta ahora, ha seguido los pasos descritos en [Compilación de una aplicación Hola a todos en C# con .NET Core en Visual Studio 2017](.\with-visual-studio.md) o [Compilación de una aplicación Hola a todos en Visual Basic con .NET Core en Visual Studio 2017](vb-with-visual-studio.md) para crear y ejecutar una aplicación de consola sencilla. Cuando haya escrito y compilado la aplicación, puede comenzar a probarla. Visual Studio incluye un conjunto completo de herramientas de depuración que puede usar para probar y solucionar problemas de la aplicación.
@@ -65,13 +63,13 @@ Ejecute su programa en el modo de depuración y pruebe algunas características 
 # <a name="ctabcsharp"></a>[C#](#tab/csharp)
 1. Escriba `date = new DateTime(2016,11,01,11,59,00)` en la **ventana Inmediato** y presione la tecla Entrar.
 
-   La **ventana Inmediato** muestra el valor de la variable de cadena y las propiedades del valor @System.DateTime. Además, el valor de las variables se actualiza en las ventanas **Automático** y **Variables locales**.
+   La **ventana Inmediato** muestra el valor de la variable de cadena y las propiedades del valor <xref:System.DateTime>. Además, el valor de las variables se actualiza en las ventanas **Automático** y **Variables locales**.
 
    ![Ventana Automático y ventana Inmediato](./media/debugging-with-visual-studio/autosimmediate.png)
 # <a name="visual-basictabvisual-basic"></a>[Visual Basic](#tab/visual-basic)
 1. Escriba `currentDate = new DateTime(2016,11,01,11,59,00)` en la **ventana Inmediato** y presione la tecla Entrar.
 
-<!-- The **Immediate Window** displays the value of the string variable and the properties of the @System.DateTime value. In addition, the value of the variables is updated in the **Autos** and **Locals** windows.
+<!-- The **Immediate Window** displays the value of the string variable and the properties of the <xref:System.DateTime> value. In addition, the value of the variables is updated in the **Autos** and **Locals** windows.
 
    ![Autos window and Immediate Window](./media/debugging-with-visual-studio/vb-autosimmediate.png)
 -->
@@ -119,9 +117,9 @@ Para establecer un punto de interrupción condicional y probar lo que sucede cua
 
 1. En la ventana de consola, cuando se le pida que escriba su nombre, presione la tecla Entrar.
 
-1. Como la condición que hemos especificado, `name` es `null` o <xref:System.String.Empty?displayProperty=fullName>, se ha cumplido, la ejecución del programa se detiene cuando se alcanza el punto de interrupción y antes de que se ejecute el método `Console.WriteLine`.
+1. Como la condición que hemos especificado, `name` es `null` o <xref:System.String.Empty?displayProperty=nameWithType>, se ha cumplido, la ejecución del programa se detiene cuando se alcanza el punto de interrupción y antes de que se ejecute el método `Console.WriteLine`.
 
-1. Seleccione la ventana **Variables locales**, que muestra los valores de las variables que son locales para el método que se ejecuta actualmente, que es el método `Main` en su programa. Observe que el valor de la variable `name` es `""` o <xref:System.String.Empty?displayProperty=fullName>.
+1. Seleccione la ventana **Variables locales**, que muestra los valores de las variables que son locales para el método que se ejecuta actualmente, que es el método `Main` en su programa. Observe que el valor de la variable `name` es `""` o <xref:System.String.Empty?displayProperty=nameWithType>.
 
 # <a name="ctabcsharp"></a>[C#](#tab/csharp)
 1. Confirme que el valor es una cadena vacía escribiendo la siguiente instrucción en la **ventana Inmediato**. El resultado es `true`.
@@ -175,13 +173,13 @@ Visual Studio también le permite recorrer línea a línea un programa y supervi
 
 1. Seleccione **Depurar** > **Paso a paso por instrucciones** o presione la tecla F11. Visual Studio resalta la instrucción que incluye la asignación de variables `name`. La ventana **Automático** muestra que `name` es `null` (en C#) o `Nothing` (en Visual Basic), y la ventana de consola muestra la cadena "What is your name?".
 
-1. Para responder a la solicitud, escriba una cadena en la ventana de consola y presione Entrar. La consola no responde y la cadena que especifique no se muestra en la ventana de la consola, pero el método <xref:System.Console.ReadLine%2A?displayProperty=fullName> capturará en cambio la entrada.
+1. Para responder a la solicitud, escriba una cadena en la ventana de consola y presione Entrar. La consola no responde y la cadena que especifique no se muestra en la ventana de la consola, pero el método <xref:System.Console.ReadLine%2A?displayProperty=nameWithType> capturará en cambio la entrada.
 
-1. Seleccione **Depurar** > **Paso a paso por instrucciones** o presione la tecla F11. Visual Studio resalta la instrucción que incluye la asignación de variables `date` (en C#) o `currentDate` (en Visual Basic). La ventana **Automático** muestra el valor de propiedad <xref:System.DateTime.Now?displayProperty=fullName> y el valor devuelto por la llamada al método <xref:System.Console.ReadLine%2A?displayProperty=fullName>. La ventana de la consola también muestra la cadena especificada cuando se solicitó la entrada.
+1. Seleccione **Depurar** > **Paso a paso por instrucciones** o presione la tecla F11. Visual Studio resalta la instrucción que incluye la asignación de variables `date` (en C#) o `currentDate` (en Visual Basic). La ventana **Automático** muestra el valor de propiedad <xref:System.DateTime.Now?displayProperty=nameWithType> y el valor devuelto por la llamada al método <xref:System.Console.ReadLine%2A?displayProperty=nameWithType>. La ventana de la consola también muestra la cadena especificada cuando se solicitó la entrada.
 
-1. Seleccione **Depurar** > **Paso a paso por instrucciones** o presione la tecla F11. La ventana **Automático** muestra el valor de la variable `date` tras la asignación desde la propiedad <xref:System.DateTime.Now?displayProperty=fullName>. La ventana de consola permanece sin cambios.
+1. Seleccione **Depurar** > **Paso a paso por instrucciones** o presione la tecla F11. La ventana **Automático** muestra el valor de la variable `date` tras la asignación desde la propiedad <xref:System.DateTime.Now?displayProperty=nameWithType>. La ventana de consola permanece sin cambios.
 
-1. Seleccione **Depurar** > **Paso a paso por instrucciones** o presione la tecla F11. Visual Studio llama al método <xref:System.Console.WriteLine(System.String,System.Object,System.Object)?displayProperty=fullName>. Los valores de las variables `date` (o `currentDate`) y `name` aparecen en la ventana **Automático** y la ventana de consola muestra la cadena con formato.
+1. Seleccione **Depurar** > **Paso a paso por instrucciones** o presione la tecla F11. Visual Studio llama al método <xref:System.Console.WriteLine(System.String,System.Object,System.Object)?displayProperty=nameWithType>. Los valores de las variables `date` (o `currentDate`) y `name` aparecen en la ventana **Automático** y la ventana de consola muestra la cadena con formato.
 
 1. Seleccione **Depurar** > **Paso a paso para salir** o presione la tecla Mayús y la tecla F11. Esta acción detiene la ejecución paso a paso. La ventana de la consola muestra un mensaje y espera a que presione una tecla.
 
@@ -198,4 +196,3 @@ Para compilar y probar la versión de lanzamiento de la aplicación de la consol
 Cuando presiona F5 o selecciona **Compilar solución** en el menú **Compilar**, Visual Studio compila la versión de lanzamiento de la aplicación de consola. Puede probarla como hizo con la versión de depuración de la aplicación.
 
 Cuando haya terminado de depurar la aplicación, el siguiente paso es publicar una versión implementable de la aplicación. Para obtener más información sobre cómo hacerlo, vea [Publicación de la aplicación Hola a todos con Visual Studio 2017](./publishing-with-visual-studio.md).
-
