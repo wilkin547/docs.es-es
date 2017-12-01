@@ -31,11 +31,11 @@
 ### [Compilar un ensamblado de varios archivos](how-to-build-a-multifile-assembly.md)
 ### [Configurar atributos de ensamblados](set-assembly-attributes.md)
 ### [Crear y utilizar ensamblados con nombre seguro](create-and-use-strong-named-assemblies.md)
-#### [How to: Create a Public-Private Key Pair](how-to-create-a-public-private-key-pair.md)(Cómo: Crear un par de claves pública y privada)
+#### [Cómo: Crear un par de claves pública y privada](how-to-create-a-public-private-key-pair.md)
 #### [Cómo: Firmar un ensamblado con un nombre seguro](how-to-sign-an-assembly-with-a-strong-name.md)
 #### [Nombres seguros mejorados](enhanced-strong-naming.md)
-#### [How to: Reference a Strong-Named Assembly](how-to-reference-a-strong-named-assembly.md) (Cómo: Hacer referencia a un ensamblado con nombre seguro)
-#### [How to: Disable the Strong-Name Bypass Feature](how-to-disable-the-strong-name-bypass-feature.md) (Cómo: Deshabilitar la característica de omisión de nombres seguros).
+#### [Cómo: Hacer referencia a un ensamblado con nombre seguro](how-to-reference-a-strong-named-assembly.md)
+#### [Cómo: Deshabilitar la característica de omisión de nombres seguros](how-to-disable-the-strong-name-bypass-feature.md).
 ### [Retrasar la firma de un ensamblado](delay-sign-assembly.md)
 ### [Trabajar con ensamblados y la memoria caché global de ensamblados](working-with-assemblies-and-the-gac.md)
 #### [Instalar un ensamblado en la memoria caché global de ensamblados](how-to-install-an-assembly-into-the-gac.md)
