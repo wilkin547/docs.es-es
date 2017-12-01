@@ -31,7 +31,7 @@
 ### [Compilar un ensamblado de varios archivos](how-to-build-a-multifile-assembly.md)
 ### [Configurar atributos de ensamblados](set-assembly-attributes.md)
 ### [Crear y utilizar ensamblados con nombre seguro](create-and-use-strong-named-assemblies.md)
-#### [How to: Create a Public-Private Key Pair](how-to-create-a-public-private-key-pair.md) (Cómo: Crear un par de claves pública y privada)
+#### [How to: Create a Public-Private Key Pair](how-to-create-a-public-private-key-pair.md)(Cómo: Crear un par de claves pública y privada)
 #### [Cómo: Firmar un ensamblado con un nombre seguro](how-to-sign-an-assembly-with-a-strong-name.md)
 #### [Nombres seguros mejorados](enhanced-strong-naming.md)
 #### [How to: Reference a Strong-Named Assembly](how-to-reference-a-strong-named-assembly.md) (Cómo: Hacer referencia a un ensamblado con nombre seguro)
