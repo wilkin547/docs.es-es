@@ -1,6 +1,6 @@
 ---
 title: "Administración automática de la memoria y recolección de elementos no utilizados"
-description: "Administración automática de la memoria y recolección de elementos no utilizados"
+description: "Obtenga información acerca de cómo automática de la memoria administración es uno de los servicios que proporciona Common Language Runtime durante la ejecución administrada."
 keywords: .NET, .NET Core
 author: dotnet-bot
 ms.author: dotnetcontent
@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: d095b0b6-2454-4e23-80b4-c9e8a447116c
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9cd688d1e62c06274d5d49edcda5146977952b60
-ms.openlocfilehash: 36423ac3248b14a9bb95611d5997d06b927fa88e
-ms.contentlocale: es-es
-ms.lasthandoff: 03/02/2017
-
+ms.openlocfilehash: 30bcf08ebb4e05706d5b25e2f805474dd1ee428e
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="automatic-memory-management-and-garbage-collection"></a>Administración automática de la memoria y recolección de elementos no utilizados
 
 La administración de memoria automática es uno de los servicios que proporciona Common Language Runtime durante la ejecución administrada. El recolector de elementos no utilizados de Common Language Runtime administra la asignación y liberación de la memoria de una aplicación. Esto significa que los programadores no tienen que escribir código para realizar tareas de administración de memoria al programar aplicaciones administradas. La administración automática de la memoria puede eliminar problemas frecuentes, como olvidar liberar un objeto y causar una pérdida de memoria, o intentar tener acceso a la memoria de un objeto que ya se ha liberado. En esta sección se describe cómo asigna y libera memoria el recolector de elementos no utilizados.
@@ -57,5 +55,4 @@ En el caso de la mayoría de los objetos creados por la aplicación, puede utili
 [System.GC](xref:System.GC)
 
 [Recolección de elementos no utilizados en .NET](index.md)
-
 

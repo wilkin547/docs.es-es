@@ -1,30 +1,21 @@
 ---
 title: "Cómo: Ejecutar árboles de expresiones (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: get-started-article
-dev_langs:
-- CSharp
 ms.assetid: b8c40db5-2464-4bb9-9001-8c2bc7f006c5
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 9a87c9893de2b70c47f0ed78a92adc6bce10db7b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: d230adee877c214dfef0f60ae2c6e7547fedb869
-ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-execute-expression-trees-c"></a>Cómo: Ejecutar árboles de expresiones (C#)
 En este tema se muestra cómo ejecutar un árbol de expresión. La ejecución de un árbol de expresión puede devolver un valor o simplemente realizar una acción, como llamar a un método.  
@@ -66,6 +57,5 @@ Console.WriteLine(result);
 -   Incluya el espacio de nombres System.Linq.Expressions.  
   
 ## <a name="see-also"></a>Vea también  
- [Árboles de expresiones (C#)](../../../../csharp/programming-guide/concepts/expression-trees/index.md)   
+ [Árboles de expresión (C#)](../../../../csharp/programming-guide/concepts/expression-trees/index.md)  
  [Cómo: Modificar árboles de expresiones (C#)](../../../../csharp/programming-guide/concepts/expression-trees/how-to-modify-expression-trees.md)
-

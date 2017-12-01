@@ -1,34 +1,35 @@
 ---
-title: "C&#243;mo realizar una transformaci&#243;n XSLT mediante un ensamblado | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: "Cómo realizar una transformación XSLT mediante un ensamblado"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 76ee440b-d134-4f8f-8262-b917ad6dcbf6
-caps.latest.revision: 2
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: f236296d604bc465973d17d63883e7b212b7f02d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo realizar una transformaci&#243;n XSLT mediante un ensamblado
-El compilador XSLT \(xsltc.exe\) compila hojas de estilo XSLT y genera un ensamblado.  Dicho ensamblado se puede pasar directamente al método <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=fullName>.  
+# <a name="how-to-perform-an-xslt-transformation-by-using-an-assembly"></a>Cómo realizar una transformación XSLT mediante un ensamblado
+El compilador XSLT (xsltc.exe) compila hojas de estilo XSLT y genera un ensamblado. Dicho ensamblado se puede pasar directamente al método <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType>.  
   
-### Para copiar los archivos XML y XSLT al ordenador  
+### <a name="to-copy-the-xml-and-xslt-files-to-your-local-computer"></a>Para copiar los archivos XML y XSLT al ordenador  
   
 -   Copie el archivo XSLT en su ordenador y llámelo Transform.xsl.  
   
-    ```  
+    ```xml  
     <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"  
       xmlns:msxsl="urn:schemas-microsoft-com:xslt"  
       xmlns:user="urn:my-scripts">  
@@ -95,7 +96,7 @@ El compilador XSLT \(xsltc.exe\) compila hojas de estilo XSLT y genera un ensamb
   
 -   Copie el archivo XML en su ordenador y llámelo `books.xml`.  
   
-    ```  
+    ```xml  
     <?xml version="1.0"?>  
     <catalog>  
        <book id="bk101">  
@@ -136,9 +137,9 @@ El compilador XSLT \(xsltc.exe\) compila hojas de estilo XSLT y genera un ensamb
     </catalog>  
     ```  
   
-### Para compilar la hoja de estilos con el script habilitado.  
+### <a name="to-compile-the-style-sheet-with-the-script-enabled"></a>Para compilar la hoja de estilos con el script habilitado.  
   
-1.  Si ejecuta la siguiente instrucción desde la línea de comandos, se crearán dos ensamblados, cuyos nombres son `Transform.dll` y `Transform_Script1.dll` \(este es el comportamiento predeterminado.  A menos que se especifique lo contrario, el nombre de la clase y del ensamblado será, de forma predeterminada, el nombre de la hoja de estilos principal\):  
+1.  Si ejecuta la siguiente instrucción desde la línea de comandos, se crearán dos ensamblados, cuyos nombres son `Transform.dll` y `Transform_Script1.dll` (este es el comportamiento predeterminado. A menos que se especifique lo contrario, el nombre de la clase y del ensamblado será, de forma predeterminada, el nombre de la hoja de estilos principal):  
   
     ```  
     xsltc /settings:script+ Transform.xsl  
@@ -150,11 +151,11 @@ El compilador XSLT \(xsltc.exe\) compila hojas de estilo XSLT y genera un ensamb
 xsltc /settings:script+ /class:Transform Transform.xsl  
 ```  
   
-### Para incluir el ensamblado compilado como referencia a la hora de compilar el código.  
+### <a name="to-include-the-compiled-assembly-as-a-reference-when-you-compile-your-code"></a>Para incluir el ensamblado compilado como referencia a la hora de compilar el código.  
   
 1.  Puede incluir un ensamblado en Visual Studio agregando una referencia en el Explorador de soluciones, o bien desde la línea de comandos.  
   
-2.  En C\#, utilice lo siguiente en la línea de comandos:  
+2.  En C#, utilice lo siguiente en la línea de comandos:  
   
     ```  
     csc myCode.cs /r:system.dll;system.xml.dll;Transform.dll  
@@ -166,7 +167,7 @@ xsltc /settings:script+ /class:Transform Transform.xsl
     vbc myCode.vb /r:system.dll;system.xml.dll;Transform.dll  
     ```  
   
-### Para utilizar el ensamblado compilado en su código.  
+### <a name="to-use-the-compiled-assembly-in-your-code"></a>Para utilizar el ensamblado compilado en su código.  
   
 1.  El siguiente ejemplo muestra cómo ejecutar la transformación XSLT utilizando la hoja de estilos compilada.  
   
@@ -185,10 +186,10 @@ xslt.Load(typeof(Transform))
 xslt.Load(System.Reflection.Assembly.Load("Transform").GetType("Transform"))  
 ```  
   
- en el ejemplo anterior.  Para obtener más información acerca del método Assembly.Load, vea <xref:System.Reflection.Assembly.Load%2A>  
+ en el ejemplo anterior. Para obtener más información acerca del método Assembly.Load, vea <xref:System.Reflection.Assembly.Load%2A>  
   
-## Vea también  
- <xref:System.Xml.Xsl.XslCompiledTransform>   
- [Compilador XSLT \(xsltc.exe\)](../../../../docs/standard/data/xml/xslt-compiler-xsltc-exe.md)   
- [Transformaciones XSLT](../../../../docs/standard/data/xml/xslt-transformations.md)   
- [Compilar la línea de comandos con csc.exe](../../../../ocs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)
+## <a name="see-also"></a>Vea también  
+ <xref:System.Xml.Xsl.XslCompiledTransform>  
+ [Compilador XSLT (xsltc.exe)](../../../../docs/standard/data/xml/xslt-compiler-xsltc-exe.md)  
+ [Transformaciones XSLT](../../../../docs/standard/data/xml/xslt-transformations.md)  
+ [Compilar la línea de comandos con csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)

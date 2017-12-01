@@ -1,64 +1,71 @@
 ---
-title: "Interlocked Operations | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Interlocked class, about Interlocked class"
-  - "threading [.NET Framework], Interlocked class"
+title: Operaciones de bloqueo
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- Interlocked class, about Interlocked class
+- threading [.NET Framework], Interlocked class
 ms.assetid: cbda7114-c752-4f3e-ada1-b1e8dd262f2b
-caps.latest.revision: 13
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 122058b7e826e27fe6c60c5b07610f7c63e64f78
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Interlocked Operations
-La clase <xref:System.Threading.Interlocked> proporciona métodos que sincronizan el acceso a una variable compartida por varios subprocesos.  Los subprocesos de diferentes procesos pueden utilizar este mecanismo si la variable está en la memoria compartida.  Las operaciones de bloqueo son atómicas, es decir, el conjunto de la operación constituye una unidad que ninguna otra operación de bloqueo puede interrumpir en la misma variable.  Esto último tiene importancia en sistemas operativos con multithreading preferente, donde se puede suspender un subproceso después de cargar un valor desde una dirección de memoria, pero antes de tener oportunidad de alterarlo y almacenarlo.  
+# <a name="interlocked-operations"></a>Operaciones de bloqueo
+La <xref:System.Threading.Interlocked> clase proporciona métodos que sincronización el acceso a una variable compartida por varios subprocesos. Los subprocesos de distintos procesos pueden usar este mecanismo si la variable está en una memoria compartida. Las operaciones de bloqueo son atómicas, es decir, toda la operación es una unidad que no se puede interrumpir por otra operación de bloqueo en la misma variable. Esto es importante en los sistemas operativos con multithreading preferente, donde se puede suspender un subproceso después de cargar un valor desde una dirección de memoria, pero antes de tener la oportunidad de alterarlo y almacenarlo.  
   
- La clase <xref:System.Threading.Interlocked> proporciona las siguientes operaciones:  
+ La <xref:System.Threading.Interlocked> clase proporciona las siguientes operaciones:  
   
--   En la versión 2.0 de .NET Framework, el método <xref:System.Threading.Interlocked.Add%2A> agrega un valor entero a una variable y devuelve el nuevo valor de la variable.  
+-   En .NET Framework versión 2.0, el <xref:System.Threading.Interlocked.Add%2A> método agrega un valor entero a una variable y devuelve el nuevo valor de la variable.  
   
--   En la versión 2.0 de .NET Framework, el método <xref:System.Threading.Interlocked.Read%2A> lee un valor entero de 64 bits como una operación atómica.  Esto resulta útil en sistemas operativos de 32 bits, donde leer un entero de 64 bits no constituye habitualmente una operación atómica.  
+-   En .NET Framework versión 2.0, el <xref:System.Threading.Interlocked.Read%2A> método lee un valor entero de 64 bits como una operación atómica. Esto resulta útil en los sistemas operativos de 32 bits, en los que leer un entero de 64 bits no es habitualmente una operación atómica.  
   
--   Los métodos <xref:System.Threading.Interlocked.Increment%2A> y <xref:System.Threading.Interlocked.Decrement%2A> incrementan o decrementan una variable y devuelven el valor resultante.  
+-   El <xref:System.Threading.Interlocked.Increment%2A> y <xref:System.Threading.Interlocked.Decrement%2A> métodos incrementar o disminuir una variable y devuelven el valor resultante.  
   
--   El método <xref:System.Threading.Interlocked.Exchange%2A> realiza un intercambio atómico del valor en la variable especificada, devolviendo dicho valor y reemplazándolo por un valor nuevo.  En la versión 2.0 de .NET Framework, puede utilizarse una sobrecarga genérica de este método para realizar este intercambio en una variable con cualquier tipo de referencia.  Vea <xref:System.Threading.Interlocked.Exchange%60%601%28%60%600%40%2C%60%600%29>.  
+-   El <xref:System.Threading.Interlocked.Exchange%2A> método realiza un intercambio atómico del valor en una variable especificada, que no devuelve ese valor y reemplazarlo con un nuevo valor. En la versión 2.0 de .NET Framework, se puede usar una sobrecarga genérica de este método para realizar este intercambio en una variable de cualquier tipo de referencia. Consulta <xref:System.Threading.Interlocked.Exchange%60%601%28%60%600%40%2C%60%600%29>.  
   
--   El método <xref:System.Threading.Interlocked.CompareExchange%2A> también intercambia dos valores, pero en función del resultado de una comparación.  En la versión 2.0 de .NET Framework, puede utilizarse una sobrecarga genérica de este método para realizar este intercambio en una variable con cualquier tipo de referencia.  Vea <xref:System.Threading.Interlocked.CompareExchange%60%601%28%60%600%40%2C%60%600%2C%60%600%29>.  
+-   El <xref:System.Threading.Interlocked.CompareExchange%2A> método también intercambia dos valores, pero el resultado de una comparación. En la versión 2.0 de .NET Framework, se puede usar una sobrecarga genérica de este método para realizar este intercambio en una variable de cualquier tipo de referencia. Consulta <xref:System.Threading.Interlocked.CompareExchange%60%601%28%60%600%40%2C%60%600%2C%60%600%29>.  
   
- En los procesadores modernos, los métodos de la clase <xref:System.Threading.Interlocked> a menudo pueden implementarse mediante una única instrucción.  Así, proporcionan una sincronización con un rendimiento muy elevado y pueden utilizarse para compilar mecanismos de sincronización de nivel superior, como bloqueos circulares.  
+ En los procesadores modernos, los métodos de la <xref:System.Threading.Interlocked> clase a menudo puede implementarse mediante una única instrucción. De este modo, proporcionan una sincronización de rendimiento muy elevado y se pueden usar para crear mecanismos de sincronización de nivel superior, como bloqueos de giro.  
   
- Para obtener un ejemplo que utiliza las clases <xref:System.Threading.Monitor> y <xref:System.Threading.Interlocked> en combinación, vea [Monitores](../Topic/Monitors.md).  
+ Para obtener un ejemplo que usa el <xref:System.Threading.Monitor> y <xref:System.Threading.Interlocked> clases de combinación, vea el artículo [monitores](http://msdn.microsoft.com/library/33fe4aef-b44b-42fd-9e72-c908e39e75db).  
   
-## Ejemplo de CompareExchange  
- El método <xref:System.Threading.Interlocked.CompareExchange%2A> se puede utilizar para proteger cálculos más complicados que un simple incremento y decremento.  En el siguiente ejemplo se muestra un método seguro para subprocesos que se agrega a un total actualizado almacenado como un número de punto flotante. \(En el caso de los números enteros, el método <xref:System.Threading.Interlocked.Add%2A> constituye una solución más sencilla.\) Para obtener ejemplos de código completos, vea las sobrecargas de <xref:System.Threading.Interlocked.CompareExchange%2A> que toma argumentos de punto flotante de precisión sencilla y doble \(<xref:System.Threading.Interlocked.CompareExchange%28System.Single%40%2CSystem.Single%2CSystem.Single%29> y <xref:System.Threading.Interlocked.CompareExchange%28System.Double%40%2CSystem.Double%2CSystem.Double%29>\).  
+## <a name="compareexchange-example"></a>Ejemplo de CompareExchange  
+ El <xref:System.Threading.Interlocked.CompareExchange%2A> método se puede utilizar para proteger cálculos que son más complicados que simple incremento y decremento. El ejemplo siguiente muestra un método seguro para subprocesos que se agrega a un total acumulado almacenado como número de punto flotante. (Para números enteros, el <xref:System.Threading.Interlocked.Add%2A> método es una solución más sencilla.) Para obtener ejemplos de código completo, vea las sobrecargas de <xref:System.Threading.Interlocked.CompareExchange%2A> que toman argumentos de punto flotante de precisión simple y doble precisión (<xref:System.Threading.Interlocked.CompareExchange%28System.Single%40%2CSystem.Single%2CSystem.Single%29> y <xref:System.Threading.Interlocked.CompareExchange%28System.Double%40%2CSystem.Double%2CSystem.Double%29>).  
   
  [!code-cpp[Conceptual.Interlocked#1](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.interlocked/cpp/source1.cpp#1)]
  [!code-csharp[Conceptual.Interlocked#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.interlocked/cs/source1.cs#1)]
  [!code-vb[Conceptual.Interlocked#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.interlocked/vb/source1.vb#1)]  
   
-## Sobrecargas sin tipo de Exchange y CompareExchange  
- Los métodos <xref:System.Threading.Interlocked.Exchange%2A> y <xref:System.Threading.Interlocked.CompareExchange%2A> disponen de sobrecargas que aceptan argumentos de tipo <xref:System.Object>.  El primer argumento de cada una de estas sobrecargas es `ref Object` \(`ByRef … As Object` en Visual Basic\) y la seguridad de tipos requiere que se pase la variable a este argumento para que sea estrictamente de tipo <xref:System.Object>; no se puede transformar simplemente el primer argumento a tipo <xref:System.Object> cuando se realiza la llamada a estos métodos.  
+## <a name="untyped-overloads-of-exchange-and-compareexchange"></a>Sobrecargas de Exchange y CompareExchange sin tipo  
+ El <xref:System.Threading.Interlocked.Exchange%2A> y <xref:System.Threading.Interlocked.CompareExchange%2A> métodos tienen sobrecargas que toman argumentos de tipo <xref:System.Object>. El primer argumento de cada una de estas sobrecargas es `ref Object` (`ByRef … As Object` en Visual Basic), y seguridad de tipos requiere que la variable que se pasa a este argumento para que sea estrictamente de tipo como <xref:System.Object>; simplemente no se puede convertir el primer argumento de tipo <xref:System.Object> Cuando se llama a estos métodos.  
   
 > [!NOTE]
->  En la versión 2.0 de .NET Framework, utilice las sobrecargas genéricas de los métodos <xref:System.Threading.Interlocked.Exchange%2A> y <xref:System.Threading.Interlocked.CompareExchange%2A> para intercambiar variables fuertemente tipadas.  
+>  En la versión 2.0 de .NET Framework, use las sobrecargas genéricas de la <xref:System.Threading.Interlocked.Exchange%2A> y <xref:System.Threading.Interlocked.CompareExchange%2A> métodos para intercambiar fuertemente tipados variables.  
   
- En el siguiente ejemplo de código se muestra una propiedad de tipo `ClassA` que sólo puede establecerse una vez, ya que debería implementarse en la versión 1.0 o 1.1 de .NET Framework.  
+ El ejemplo de código siguiente muestra una propiedad de tipo`ClassA` que solo se puede establecer una vez, tal como se podría implementar en la versión 1.0 o 1.1 de .NET Framework.  
   
  [!code-cpp[Conceptual.Interlocked#2](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.interlocked/cpp/source2.cpp#2)]
  [!code-csharp[Conceptual.Interlocked#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.interlocked/cs/source2.cs#2)]
  [!code-vb[Conceptual.Interlocked#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.interlocked/vb/source2.vb#2)]  
   
-## Vea también  
- <xref:System.Threading.Interlocked>   
- <xref:System.Threading.Monitor>   
- [Threading](../../../docs/standard/threading/index.md)   
- [Threading Objects and Features](../../../docs/standard/threading/threading-objects-and-features.md)
+## <a name="see-also"></a>Vea también  
+ <xref:System.Threading.Interlocked>  
+ <xref:System.Threading.Monitor>  
+ [Subprocesamiento](../../../docs/standard/threading/index.md)  
+ [Objetos y características de subprocesos](../../../docs/standard/threading/threading-objects-and-features.md)

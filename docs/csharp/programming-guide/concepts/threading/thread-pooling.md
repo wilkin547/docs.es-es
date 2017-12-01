@@ -1,30 +1,21 @@
 ---
 title: "Agrupación de subprocesos (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 98ae68c1-ace8-44b9-9317-8920ac9ef2b6
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 09dd597e8ac7a6b336f71891ccc89984ea659614
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: d2f8e5a2d7a83dc6fef72ef87b4003ae49656d8f
-ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="thread-pooling-c"></a>Agrupación de subprocesos (C#)
 Un *grupo de subprocesos* es una colección de subprocesos que puede usarse para realizar varias tareas en segundo plano. (Vea [Threading (C#)](../../../../csharp/programming-guide/concepts/threading/index.md) (Subprocesos (C#)) para obtener información general). Esto deja libre el subproceso primario para realizar otras tareas de forma asincrónica.  
@@ -37,7 +28,7 @@ Un *grupo de subprocesos* es una colección de subprocesos que puede usarse para
   
  Puede implementar su propio grupo de subprocesos, pero es más fácil usar el grupo de subprocesos proporcionado por .NET Framework a través de la clase <xref:System.Threading.ThreadPool>.  
   
- Con la agrupación de subprocesos, se llama al método <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A?displayProperty=fullName> con un delegado para el procedimiento que se quiere ejecutar, y C# crea el subproceso y ejecuta el procedimiento.  
+ Con la agrupación de subprocesos, se llama al método <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A?displayProperty=nameWithType> con un delegado para el procedimiento que se quiere ejecutar, y C# crea el subproceso y ejecuta el procedimiento.  
   
 ## <a name="thread-pooling-example"></a>Ejemplo de agrupación de subprocesos  
  En el ejemplo siguiente se muestra cómo se puede usar la agrupación de subprocesos para iniciar varias tareas.  
@@ -76,11 +67,10 @@ private void AnotherLongTask(Object state)
  Las estructuras no se pueden usar para devolver valores dentro de objetos de estado. Dado que las estructuras son tipos de valor, los cambios que realiza el proceso asincrónico no cambian los miembros de la estructura original. Use estructuras para proporcionar parámetros cuando no se necesiten valores devueltos.  
   
 ## <a name="see-also"></a>Vea también  
- <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A>   
- <xref:System.Threading>   
- <xref:System.Threading.ThreadPool>   
- [Cómo: Usar un grupo de subprocesos (C#)](../../../../csharp/programming-guide/concepts/threading/how-to-use-a-thread-pool.md)   
- [Subprocesos (C#)](../../../../csharp/programming-guide/concepts/threading/index.md)   
- [Aplicaciones multiproceso (C#)](../../../../csharp/programming-guide/concepts/threading/multithreaded-applications.md)   
+ <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A>  
+ <xref:System.Threading>  
+ <xref:System.Threading.ThreadPool>  
+ [Cómo: Usar un grupo de subprocesos (C#)](../../../../csharp/programming-guide/concepts/threading/how-to-use-a-thread-pool.md)  
+ [Subprocesamiento (C#)](../../../../csharp/programming-guide/concepts/threading/index.md)  
+ [Aplicaciones multiproceso (C#)](../../../../csharp/programming-guide/concepts/threading/multithreaded-applications.md)  
  [Sincronización de subprocesos (C#)](../../../../csharp/programming-guide/concepts/threading/thread-synchronization.md)
-

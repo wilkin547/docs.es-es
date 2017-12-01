@@ -4,33 +4,49 @@ description: "Versiones de macOS admitidas y dependencias de .NET Core para desa
 keywords: .NET, .NET Core, macOS, Mac
 author: guardrex
 ms.author: mairaw
-ms.date: 07/07/2017
+ms.date: 09/27/2017
 ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: c33b1241-ab66-4583-9eba-52cf51146f5a
+ms.openlocfilehash: 16f3cfd482bddfff1b9ad56e7ffe58ae2aed4980
+ms.sourcegitcommit: 62d3e3e74c1b7ffa927590012c0b9f87de1b0848
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 8feaee2cbfa55e23bd49c0ab76d995f15be343b4
-ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/27/2017
 ---
-
-# <a name="prerequisites-for-net-core-on-mac"></a>Requisitos previos para .NET Core en Mac
+# <a name="prerequisites-for-net-core-on-macos"></a>Requisitos previos para .NET Core en macOS
 
 En este artículo se muestran las versiones de macOS admitidas y las dependencias de .NET Core que necesita para desarrollar, implementar y ejecutar aplicaciones .NET Core en máquinas de macOS. Las versiones de SO admitidas y las dependencias que se indican a continuación se aplican a las tres formas de desarrollar aplicaciones .NET Core en un equipo Mac: mediante la [línea de comandos con su editor favorito](tutorials/using-with-xplat-cli.md), [Visual Studio Code](https://code.visualstudio.com/) y [Visual Studio para Mac](https://www.visualstudio.com/vs/visual-studio-mac/).
 
 ## <a name="supported-macos-versions"></a>Versiones de macOS compatibles
 
-.NET Core es compatible con las siguientes versiones de macOS:
+# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
+
+.NET core 2.x es compatible en las siguientes versiones de Mac OS:
+
+* macOS 10.12 "Sierra" y versiones posteriores
+
+Vea [.NET Core 2.x Supported OS Versions](https://github.com/dotnet/core/blob/master/release-notes/2.0/2.0-supported-os.md) (.NET Core 2.x: versiones de SO compatibles) para obtener una lista completa de sistemas operativos compatibles con .NET Core 2.x, fuera de las versiones de sistema operativo compatibles y los vínculos de directiva de ciclo de vida.
+
+# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+
+Núcleo de .NET 1.x se admite en las siguientes versiones de Mac OS:
 
 * macOS 10.12 "Sierra"
-* macOS 10.11 "El Capitan" (solo .NET Core 1.x)
+* macOS 10.11 "El Capitan"
 
-Vea las [versiones de sistemas operativos compatibles](https://github.com/dotnet/core/blob/master/roadmap.md#supported-os-versions) para obtener una lista completa de sistemas operativos compatibles.
+Vea [.NET Core 1.x Supported OS Versions](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0-supported-os.md) (.NET Core 1.x: versiones de SO compatibles) para obtener una lista completa de sistemas operativos compatibles con .NET Core 1.x, fuera de las versiones de sistema operativo compatibles y los vínculos de directiva de ciclo de vida.
+
+---
 
 ## <a name="net-core-dependencies"></a>Dependencias de .NET Core
+
+# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
+
+Descargue e instale el SDK de .NET Core desde el portal de [descargas de .NET](https://www.microsoft.com/net/download/core). Si tiene problemas con la instalación en macOS, vea el tema sobre [problemas conocidos](https://github.com/dotnet/core/tree/master/release-notes/2.0) para la versión instalada.
+
+# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
 **.NET Core 1.x**
 
@@ -46,9 +62,47 @@ ln -s /usr/local/opt/openssl/lib/libssl.1.0.0.dylib /usr/local/lib/
 
 Descargue e instale el SDK de .NET Core desde el portal de [descargas de .NET](https://www.microsoft.com/net/download/core). Si tiene problemas con la instalación en macOS, vea los temas sobre problemas conocidos [1.0.0 Known Issues](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0.0-known-issues.md) y [1.0.1 Known Issues](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0.1-known-issues.md).
 
-**.NET Core 2.x**
+---
 
-Descargue e instale el SDK de .NET Core desde el portal de [descargas de .NET](https://www.microsoft.com/net/download/core). Si tiene problemas con la instalación en macOS, vea el tema sobre [problemas conocidos](https://github.com/dotnet/core/tree/master/release-notes/2.0) para la versión instalada.
+## <a name="increase-the-maximum-open-file-limit"></a>Aumentar el límite máximo de archivos abiertos
+
+El límite de archivos abiertos de forma predeterminada en macOS puede no ser suficiente para algunas cargas de trabajo de .NET Core, como restaurar proyectos o ejecutar pruebas unitarias.
+
+Puede aumentar este límite, siga estos pasos:
+
+1. Con un editor de texto, cree un nuevo archivo _/Library/LaunchDaemons/limit.maxfiles.plist_y guarde el archivo con este contenido:
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
+        "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>Label</key>
+    <string>limit.maxfiles</string>
+    <key>ProgramArguments</key>
+    <array>
+      <string>launchctl</string>
+      <string>limit</string>
+      <string>maxfiles</string>
+      <string>2048</string>
+      <string>4096</string>
+    </array>
+    <key>RunAtLoad</key>
+    <true/>
+    <key>ServiceIPC</key>
+    <false/>
+  </dict>
+</plist>
+```
+
+2. En una ventana de terminal, ejecute el siguiente comando:
+
+```console
+echo 'ulimit -n 2048' | sudo tee -a /etc/profile
+```
+
+3. Reinicie el equipo Mac para aplicar esta configuración.
 
 ## <a name="visual-studio-for-mac"></a>Visual Studio para Mac
 
@@ -60,4 +114,3 @@ El desarrollo de .NET Core en macOS con Visual Studio para Mac requiere:
 * OpenSSL (solo .NET Core 1.x; .NET Core 2.x usa los servicios de seguridad disponibles de forma nativa en macOS)
 * SDK de .NET Core para Mac
 * [Visual Studio para Mac](https://www.visualstudio.com/vs/visual-studio-mac/)
-

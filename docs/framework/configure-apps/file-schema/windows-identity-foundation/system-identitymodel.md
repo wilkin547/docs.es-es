@@ -1,57 +1,61 @@
 ---
-title: "&lt;system.identityModel&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;system.identityModel&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 210ce7e9-d07b-400c-800f-5f525dcf95e8
-caps.latest.revision: 5
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: 356dd1531f093282a1a8463b7d697400f8b45862
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# &lt;system.identityModel&gt;
-En las próximas secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
+# <a name="ltsystemidentitymodelgt"></a>&lt;system.identityModel&gt;
+Proporciona la configuración para habilitar las opciones de Windows Identity Foundation (WIF) en las aplicaciones.  
   
- \<system.identityModel\>  
+ \<system.identityModel >  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
-```  
+```xml  
 <system.identityModel>  
 </system.identityModel>  
 ```  
   
-## Atributos y elementos  
- En las próximas secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
+## <a name="attributes-and-elements"></a>Atributos y elementos  
+ En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
-### Atributos  
- None  
+### <a name="attributes"></a>Atributos  
+ Ninguna  
   
-### Elementos secundarios  
-  
-|Elemento|Descripción|  
-|--------------|-----------------|  
-|[\<identityConfiguration\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)|Atributo|  
-  
-### Elementos primarios  
+### <a name="child-elements"></a>Elementos secundarios  
   
 |Elemento|Descripción|  
-|--------------|-----------------|  
+|-------------|-----------------|  
+|[\<identityConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)|Especifica los valores de identidad de nivel de servicio.|  
+  
+### <a name="parent-elements"></a>Elementos primarios  
+  
+|Elemento|Descripción|  
+|-------------|-----------------|  
 |`<configuration>`|Elemento raíz de cada archivo de configuración usado por las aplicaciones de Common Language Runtime y .NET Framework.|  
   
-## Comentarios  
- Descripción  El `<system.identityModel>` elemento está representado por el <xref:System.IdentityModel.Configuration.SystemIdentityModelSection> clase.  
+## <a name="remarks"></a>Comentarios  
+ Agregar un `<system.identityModel>` sección al archivo de configuración para configurar un servicio o aplicación para que use Windows Identity Foundation (WIF). El `<system.identityModel>` elemento representado por la <xref:System.IdentityModel.Configuration.SystemIdentityModelSection> clase.  
   
-## Ejemplo  
- En el ejemplo siguiente se muestra cómo agregar un `<system.identityModel>` sección a un archivo de configuración.  En primer lugar debe agregar la declaración de sección y espacio de nombres de configuración en el `<configSections>` elemento.  A continuación, puede agregar el `<system.IdentityModel>` elemento a su archivo de configuración para especificar una o varias configuraciones de identidad.  
+## <a name="example"></a>Ejemplo  
+ En el ejemplo siguiente se muestra cómo agregar un `<system.identityModel>` sección a un archivo de configuración. Primero debe agregar la declaración de espacio de nombres y la sección de configuración en el `<configSections>` elemento. A continuación, puede agregar el `<system.IdentityModel>` elemento al archivo de configuración para especificar una o varias configuraciones de identidad.  
   
-```  
+```xml  
 <configuration>  
   <configSections>  
     <!--WIF 4.5 sections -->  
@@ -80,5 +84,5 @@ En las próximas secciones se describen los atributos, los elementos secundarios
 </configuration>  
 ```  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  <xref:System.IdentityModel.Configuration.SystemIdentityModelSection>

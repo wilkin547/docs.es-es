@@ -1,40 +1,21 @@
 ---
 title: "Clases (Guía de programación de C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - classes [C#]
 - C# language, classes
 ms.assetid: e8848524-7273-429f-8aba-c658d5eff5ad
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 37e810fc5a5397a6b9240346ac28505b11b1e817
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: eedb087f177b1bff6f4d4177cd56ac4cca016490
-ms.contentlocale: es-es
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="classes-c-programming-guide"></a>Clases (Guía de programación de C#)
 Una *class* es una construcción que le permite crear sus propios tipos personalizados agrupando las variables de otros tipos, métodos y eventos. Una clase es como un plano. Define los datos y el comportamiento de un tipo. Si la clase no se declara como estática, el código de cliente puede usarla mediante la creación de *objetos* o *instancias* que se asignan a una variable. La variable permanece en memoria hasta que todas las referencias a ella están fuera del ámbito. En ese momento, CLR la marca como apta para la recolección de elementos no utilizados. Si la clase se declara como [estática](../../../csharp/language-reference/keywords/static.md), solo habrá una copia en la memoria y el código de cliente solo podrá tener acceso a ella a través de la propia clase, y no a través de una *variable de instancia*. Para obtener más información, vea [Clases estáticas y sus miembros](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md).  
@@ -44,7 +25,7 @@ Una *class* es una construcción que le permite crear sus propios tipos personal
 ## <a name="declaring-classes"></a>Declarar clases  
  Las clases se declaran mediante la palabra clave [class](../../../csharp/language-reference/keywords/class.md), como se muestra en el siguiente ejemplo:  
   
- [!code-cs[csProgGuideObjects#79](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/classes_1.cs)]  
+ [!code-csharp[csProgGuideObjects#79](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/classes_1.cs)]  
   
  La palabra clave `class` va precedida del nivel de acceso. Como en este caso se usa [public](../../../csharp/language-reference/keywords/public.md), cualquier usuario puede crear objetos de esta clase. El nombre de la clase sigue a la palabra clave `class`. El resto de la definición es el cuerpo de la clase, donde se definen los datos y el comportamiento. Los campos, las propiedades, los métodos y los eventos de una clase se denominan de forma colectiva *miembros de clase*.  
   
@@ -53,22 +34,22 @@ Una *class* es una construcción que le permite crear sus propios tipos personal
   
  Los objetos se pueden crear usando la palabra clave [new](../../../csharp/language-reference/keywords/new.md), seguida del nombre de la clase en la que se basará el objeto, como en este ejemplo:  
   
- [!code-cs[csProgGuideObjects#80](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/classes_2.cs)]  
+ [!code-csharp[csProgGuideObjects#80](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/classes_2.cs)]  
   
  Cuando se crea una instancia de una clase, se vuelve a pasar al programador una referencia al objeto. En el ejemplo anterior, `object1` es una referencia a un objeto que se basa en `Customer`. Esta referencia apunta al objeto nuevo, pero no contiene los datos del objeto. De hecho, puede crear una referencia de objeto sin tener que crear ningún objeto:  
   
- [!code-cs[csProgGuideObjects#81](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/classes_3.cs)]  
+ [!code-csharp[csProgGuideObjects#81](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/classes_3.cs)]  
   
  No se recomienda crear referencias de objeto como esta, que no hace referencia a ningún objeto, ya que, si se intenta obtener acceso a un objeto a través de este tipo de referencia, se producirá un error en tiempo de ejecución. Pero dicha referencia puede haberse creado para hacer referencia a un objeto, ya sea creando un nuevo objeto o asignándola a un objeto existente, como en el siguiente ejemplo:  
   
- [!code-cs[csProgGuideObjects#82](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/classes_4.cs)]  
+ [!code-csharp[csProgGuideObjects#82](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/classes_4.cs)]  
   
  Este código crea dos referencias de objeto que hacen referencia al mismo objeto. Por lo tanto, los cambios efectuados en el objeto mediante `object3` se reflejarán en los usos posteriores de `object4`. Dado que los objetos basados en clases se tratan por referencia, las clases se denominan "tipos de referencia".  
   
 ## <a name="class-inheritance"></a>Herencia de clases  
  La herencia se consigue mediante una *derivación*, en la que se declara una clase mediante una *clase base*, desde la que hereda los datos y el comportamiento. Una clase base se especifica anexando dos puntos y el nombre de la clase base seguido del nombre de la clase derivada, como en el siguiente ejemplo:  
   
- [!code-cs[csProgGuideObjects#83](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/classes_5.cs)]  
+ [!code-csharp[csProgGuideObjects#83](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/classes_5.cs)]  
   
  Cuando una clase declara una clase base, hereda todos los miembros de la clase base excepto los constructores.  
   
@@ -82,18 +63,17 @@ Una *class* es una construcción que le permite crear sus propios tipos personal
  En el ejemplo siguiente se define una clase pública que contiene un solo campo, un método y un método especial denominado "constructor". Para obtener más información, vea [Constructores](../../../csharp/programming-guide/classes-and-structs/constructors.md). Luego, se crea una instancia de la clase con la palabra clave `new`.  
   
 ## <a name="example"></a>Ejemplo  
- [!code-cs[csProgGuideObjects#84](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/classes_6.cs)]  
+ [!code-csharp[csProgGuideObjects#84](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/classes_6.cs)]  
   
 ## <a name="c-language-specification"></a>Especificación del lenguaje C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Vea también  
- [Guía de programación de C#](../../../csharp/programming-guide/index.md)   
- [Object-Oriented Programming](../concepts/object-oriented-programming.md)  (Programación orientada a objetos)  
- [Polimorfismo](../../../csharp/programming-guide/classes-and-structs/polymorphism.md)   
- [Miembros](../../../csharp/programming-guide/classes-and-structs/members.md)   
- [Métodos](../../../csharp/programming-guide/classes-and-structs/methods.md)   
- [Constructors](../../../csharp/programming-guide/classes-and-structs/constructors.md)  (Constructores [Guía de programación de C#])  
- [Finalizadores](../../../csharp/programming-guide/classes-and-structs/destructors.md)   
+ [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
+ [Programación orientada a objetos](../concepts/object-oriented-programming.md)  
+ [Polimorfismo](../../../csharp/programming-guide/classes-and-structs/polymorphism.md)  
+ [Miembros](../../../csharp/programming-guide/classes-and-structs/members.md)  
+ [Métodos](../../../csharp/programming-guide/classes-and-structs/methods.md)  
+ [Constructores](../../../csharp/programming-guide/classes-and-structs/constructors.md)  
+ [Finalizadores](../../../csharp/programming-guide/classes-and-structs/destructors.md)  
  [Objects](../../../csharp/programming-guide/classes-and-structs/objects.md)
-

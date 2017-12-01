@@ -41,16 +41,15 @@ helpviewer_keywords:
 - integer value type
 - base types, class library
 ms.assetid: 7e4c5921-955d-4b06-8709-101873acf157
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 05af1b2a881cabb418adcaaee44a819ae323e62a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: b88c85eaeabc7fa87b483c7302bd5e135e3fd276
-ms.contentlocale: es-es
-ms.lasthandoff: 08/21/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="net-framework-class-library-overview"></a>Información general de la biblioteca de clases de .NET Framework
 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] incluye clases, interfaces y tipos de valor que agilizan y optimizan el proceso de desarrollo y proporcionan acceso a las funciones del sistema. Para facilitar la interoperabilidad entre lenguajes, la mayoría de los tipos de .NET Framework son conformes a CLS y, por tanto, se pueden utilizar en todos los lenguajes de programación cuyo compilador satisfaga los requisitos de CLS.  
@@ -114,7 +113,6 @@ Objetos de clase|<xref:System.Object>|Base de la jerarquía de objetos.|**Objeto
  Para obtener más información sobre los espacios de nombres, vea [Biblioteca de clases de .NET Framework](http://go.microsoft.com/fwlink/?LinkID=227195). La documentación de referencia proporciona información general breve de cada espacio de nombres así como una descripción precisa de cada tipo y sus miembros.  
   
 ## <a name="see-also"></a>Vea también  
- [Common Type System](../../docs/standard/base-types/common-type-system.md)   
- [Biblioteca de clases .NET Framework](http://go.microsoft.com/fwlink/?LinkID=227195)   
+ [Sistema de tipos comunes](../../docs/standard/base-types/common-type-system.md)  
+ [Biblioteca de clases .NET Framework](http://go.microsoft.com/fwlink/?LinkID=227195)  
  [Información general](../../docs/framework/get-started/overview.md)
-

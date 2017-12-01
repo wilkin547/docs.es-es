@@ -1,37 +1,35 @@
 ---
-title: "&#39;&lt;palabraClave&gt;&#39; s&#243;lo es v&#225;lida en un m&#233;todo de instancia | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "bc30043"
-  - "vbc30043"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "BC30043"
+title: "&#39; &lt;palabra clave&gt;&#39; es válida sólo dentro de un método de instancia"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- bc30043
+- vbc30043
+helpviewer_keywords: BC30043
 ms.assetid: 7973aa82-a681-440c-9bca-242627d7ba86
-caps.latest.revision: 10
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: a61314c036cec0fd1412a9c844a610fbd1401add
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# &#39;&lt;palabraClave&gt;&#39; s&#243;lo es v&#225;lida en un m&#233;todo de instancia
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-Las palabras clave `Me`,`MyClass` y `MyBase` hacen referencia a instancias de clase específicas.  No se pueden utilizar dentro de un procedimiento `Function` o `Sub`.  
+# <a name="39ltkeywordgt39-is-valid-only-within-an-instance-method"></a>&#39; &lt;palabra clave&gt;&#39; es válida sólo dentro de un método de instancia
+El `Me`, `MyClass`, y `MyBase` palabras clave hacen referencia a instancias de clase específica. No se pueden usar dentro de un compartido `Function` o `Sub` procedimiento.  
   
- **Identificador de error:** BC30043  
+ **Id. de error:** BC30043  
   
-### Para corregir este error  
+## <a name="to-correct-this-error"></a>Para corregir este error  
   
--   Quite la palabra clave del procedimiento o quite la palabra clave `Shared` de la declaración del procedimiento.  
+-   Quite la palabra clave del procedimiento o quite la `Shared` palabra clave de la declaración de procedimiento.  
   
-## Vea también  
- [Asignación de variables de objeto](../../../visual-basic/programming-guide/language-features/variables/object-variable-assignment.md)   
- [Me, My, MyBase y MyClass](../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)   
+## <a name="see-also"></a>Vea también  
+ [Asignación de variables de objeto](../../../visual-basic/programming-guide/language-features/variables/object-variable-assignment.md)  
+ [Me, My, MyBase y MyClass](../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)  
  [Fundamentos de la herencia](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)

@@ -1,35 +1,36 @@
 ---
-title: "Acceso a atributos en DOM | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: Acceso a atributos en DOM
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: ce2df341-a1a4-4e97-8e1b-cd45b8e3e71e
-caps.latest.revision: 4
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 3
+caps.latest.revision: "4"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: a433ec5f83a50aa4fe4b2017a0dac3d2a5e5710c
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Acceso a atributos en DOM
-Los atributos son propiedades del elemento, no elementos secundarios del elemento.  Es importante hacer esta distinción, debido a los métodos utilizados para navegar por los nodos relacionados, principales y secundarios del DOM.  Por ejemplo, los métodos **PreviousSibling** y **NextSibling** no se utilizan para navegar de un elemento a un atributo, ni entre atributos.  En su lugar, un atributo es una propiedad de un elemento y pertenece a un elemento, tiene una propiedad **OwnerElement** y no una propiedad **parentNode**, y tiene métodos de navegación distintos.  
+# <a name="accessing-attributes-in-the-dom"></a>Acceso a atributos en DOM
+Los atributos son propiedades del elemento, no elementos secundarios del elemento. Es importante hacer esta distinción, debido a los métodos utilizados para navegar por los nodos relacionados, principales y secundarios del DOM. Por ejemplo, el **PreviousSibling** y **NextSibling** métodos no se utilizan para navegar de un elemento a un atributo, ni entre atributos. En su lugar, un atributo es una propiedad de un elemento y pertenece a un elemento, tiene una **OwnerElement** propiedad y no un **parentNode** propiedad, y tiene métodos de navegación distintos.  
   
- Cuando el nodo actual es un elemento, utilice el método **HasAttribute** para ver si hay algún atributo asociado a dicho elemento.  Una vez que se sabe que un elemento tiene atributos, existen múltiples métodos de acceso a atributos.  Para recuperar un único atributo de un elemento, utilice los métodos **GetAttribute** y **GetAttributeNode** de **XmlElement**, u obtenga todos los atributos en una colección.  La obtención de la colección resulta útil si es necesario recorrerla en iteración.  Si desea obtener todos los atributos del elemento, utilice la propiedad **Attributes** del elemento para recuperar todos los atributos en una colección.  
+ Cuando el nodo actual es un elemento, utilice la **HasAttribute** método para ver si hay algún atributo asociado con el elemento. Una vez que se sabe que un elemento tiene atributos, existen múltiples métodos de acceso a atributos. Para recuperar un solo atributo del elemento, puede usar el **GetAttribute** y **GetAttributeNode** métodos de la **XmlElement** u obtenga todos los atributos en una colección. La obtención de la colección resulta útil si es necesario recorrerla en iteración. Si desea que todos los atributos del elemento, utilice la **atributos** propiedad del elemento para recuperar todos los atributos en una colección.  
   
-## Recuperar todos los atributos en una colección  
- Si desea obtener todos los atributos de un nodo de elemento en una colección, llame a la propiedad **XmlElement.Attributes**.  De este modo se obtiene la **XmlAttributeCollection** que contiene todos los atributos de un elemento.  La clase **XmlAttributeCollection** se hereda de la asignación **XmlNamedNode**.  Por tanto, los métodos y propiedades disponibles en la colección incluyen los disponibles en la asignación de nodo especificada, además de los métodos y propiedades específicos de la clase **XmlAttributeCollection**, como la propiedad **ItemOf** o el método **Append**.  Cada elemento de la colección de atributos representa un nodo **XmlAttribute**.  Para buscar el número de atributos de un elemento, obtenga el **XmlAttributeCollection** y utilice la propiedad **Count** para saber cuántos nodos **XmlAttribute** hay en la colección.  
+## <a name="retrieving-all-attributes-into-a-collection"></a>Recuperar todos los atributos en una colección  
+ Si desea que todos los atributos de un nodo de elemento en una colección, llame a la **XmlElement.Attributes** propiedad. Este modo se obtiene la **XmlAttributeCollection** que contiene todos los atributos de un elemento. El **XmlAttributeCollection** clase hereda de la **XmlNamedNode** mapa. Por lo tanto, los métodos y propiedades disponibles en la colección incluyen los disponibles en un mapa de nodo denominado además a los métodos y propiedades específicas de la **XmlAttributeCollection** de la clase, como el **ItemOf**  propiedad o el **anexado** método. Cada elemento de la colección de atributos representa un **XmlAttribute** nodo. Para buscar el número de atributos de un elemento, obtenga el **XmlAttributeCollection**y usar el **recuento** propiedad para ver cuántos **XmlAttribute** nodos están en la colección.  
   
- El siguiente ejemplo de código muestra cómo recuperar una colección de atributos y cómo utilizar el método **Count** de forma que el índice de bucle la recorra en iteración.  El código muestra, a continuación, cómo recuperar un solo atributo de la colección y mostrar su valor.  
+ En el ejemplo de código siguiente se muestra cómo recuperar un atributo de colección y, mediante la **recuento** método el índice de bucle la recorra en iteración. El código muestra, a continuación, cómo recuperar un solo atributo de la colección y mostrar su valor.  
   
 ```vb  
 Imports System  
@@ -134,13 +135,13 @@ Display the attribute information.
 sale item  
 ```  
   
- La información de una colección de atributos puede recuperarse por nombre o por número de índice.  El ejemplo anterior muestra cómo recuperar los datos por nombre.  El ejemplo siguiente muestra cómo recuperar los datos por número de índice.  
+ La información de una colección de atributos puede recuperarse por nombre o por número de índice. El ejemplo anterior muestra cómo recuperar los datos por nombre. El ejemplo siguiente muestra cómo recuperar los datos por número de índice.  
   
- Como **XmlAttributeCollection** es una colección y se puede iterar por nombre o por índice, este ejemplo muestra la selección del primer atributo en la colección mediante un índice de base cero y mediante **baseuri.xml** como archivo de entrada.  
+ Dado que la **XmlAttributeCollection** es una colección y se puede iterar por nombre o por índice, este ejemplo muestra la selección del primer atributo en la colección mediante un índice de base cero y mediante el siguiente archivo **baseuri.xml**como entrada.  
   
-### Entrada  
+### <a name="input"></a>Entrada  
   
-```  
+```xml  
 <!-- XML fragment -->  
 <book genre="novel">  
   <title>Pride And Prejudice</title>  
@@ -196,8 +197,8 @@ public class Sample
 }  
 ```  
   
-## Recuperar un nodo de atributo individual  
- Para recuperar un solo nodo de atributo del elemento, se utiliza método <xref:System.Xml.XmlElement.GetAttributeNode%2A?displayProperty=fullName>.  Este método devuelve un objeto de tipo **XmlAttribute**.  Una vez que se tiene el objeto **XmlAttribute**, todos los métodos y propiedades de la clase de [miembros XmlAttribute](frlrfsystemxmlxmlattributeclasstopic) están disponibles en ese objeto, como **OwnerElement**.  
+## <a name="retrieving-an-individual-attribute-node"></a>Recuperar un nodo de atributo individual  
+ Para recuperar un solo nodo de atributo del elemento, se utiliza método <xref:System.Xml.XmlElement.GetAttributeNode%2A?displayProperty=nameWithType>. Devuelve un objeto de tipo **XmlAttribute**. Una vez que tenga una **XmlAttribute**, todos los métodos y propiedades disponibles en la <xref:System.Xml.XmlAttribute?displayProperty=nameWithType> clase están disponibles en ese objeto, como el **OwnerElement**.  
   
 ```vb  
 Imports System  
@@ -260,11 +261,11 @@ using System.Xml;
 }  
 ```  
   
- Se puede hacer lo mismo que en el ejemplo anterior, donde se recupera un solo nodo de atributo de la colección de atributos.  El siguiente ejemplo de código muestra cómo se puede escribir una línea de código para recuperar un solo atributo por número de índice del elemento raíz del árbol de documentos XML, que también se denomina propiedad **DocumentElement**.  
+ Se puede hacer lo mismo que en el ejemplo anterior, donde se recupera un solo nodo de atributo de la colección de atributos. El ejemplo de código siguiente se muestra cómo se puede escribir una línea de código para recuperar un solo atributo por número de índice desde la raíz del documento XML de árbol, también se conoce como el **DocumentElement** propiedad.  
   
 ```  
 XmlAttribute attr = doc.DocumentElement.Attributes[0];  
 ```  
   
-## Vea también  
- [Modelo de objetos de documento XML \(DOM\)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+## <a name="see-also"></a>Vea también  
+ [Modelo de objetos de documento (DOM) de XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

@@ -1,37 +1,42 @@
 ---
-title: "How to: Combine Parallel and Sequential LINQ Queries | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "parallel queries, combine parallel and sequential"
+title: "Cómo: Combinar consultas LINQ paralelas y secuenciales"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords: parallel queries, combine parallel and sequential
 ms.assetid: 1167cfe6-c8aa-4096-94ba-c66c3a4edf4c
-caps.latest.revision: 10
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 4da91ff535059b181baa637164a854cd75d06334
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# How to: Combine Parallel and Sequential LINQ Queries
-En este ejemplo, se muestra cómo usar el método <xref:System.Linq.ParallelEnumerable.AsSequential%2A> para indicar a PLINQ que procese secuencialmente todos los operadores posteriores de la consulta.  Aunque el procesamiento secuencial es por lo general más lento que el procesamiento en paralelo, a veces es necesario para generar resultados correctos.  
+# <a name="how-to-combine-parallel-and-sequential-linq-queries"></a>Cómo: Combinar consultas LINQ paralelas y secuenciales
+Este ejemplo muestra cómo utilizar el <xref:System.Linq.ParallelEnumerable.AsSequential%2A> método para indicar a PLINQ que procese secuencialmente todos los operadores subsiguientes en la consulta. Aunque el procesamiento secuencial es normalmente más lento que paralelo, a veces es necesario para generar resultados correctos.  
   
 > [!WARNING]
->  Este ejemplo está diseñado para mostrar el uso y podría no ejecutarse más rápidamente que la consulta secuencial equivalente de LINQ to Objects.  Para obtener más información sobre la aceleración, vea [Understanding Speedup in PLINQ](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md).  
+>  La finalidad de este ejemplo es mostrar el uso, y puede que su ejecución no sea tan rápida como la de la consulta LINQ to Objects secuencial equivalente. Para obtener más información acerca de la velocidad, consulte [Introducción a la velocidad en PLINQ](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md).  
   
-## Ejemplo  
- En el siguiente ejemplo se muestra un escenario en el que se requiere <xref:System.Linq.ParallelEnumerable.AsSequential%2A>, a saber, para conservar el orden que se estableció en una cláusula anterior de la consulta.  
+## <a name="example"></a>Ejemplo  
+ En el ejemplo siguiente se muestra un escenario en el que <xref:System.Linq.ParallelEnumerable.AsSequential%2A> es necesario, es decir, para conservar el orden que se estableció en una cláusula de la consulta anterior.  
   
  [!code-csharp[PLINQ#24](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinqsamples.cs#24)]
  [!code-vb[PLINQ#24](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/plinqsnippets1.vb#24)]  
   
-## Compilar el código  
- Para compilar y ejecutar este código, péguelo en el proyecto [PLINQ Data Sample](../../../docs/standard/parallel-programming/plinq-data-sample.md), agregue una línea para llamar al método desde `Main` y, a continuación, presione F5.  
+## <a name="compiling-the-code"></a>Compilar el código  
+ Para compilar y ejecutar este código, péguelo en el [PLINQ Data Sample](../../../docs/standard/parallel-programming/plinq-data-sample.md) del proyecto, agregue una línea para llamar al método de `Main`, y presione F5.  
   
-## Vea también  
- [Parallel LINQ \(PLINQ\)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)
+## <a name="see-also"></a>Vea también  
+ [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)

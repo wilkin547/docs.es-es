@@ -1,79 +1,82 @@
 ---
-title: "Synchronizing Data for Multithreading | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "synchronization, threads"
-  - "threading [.NET Framework], synchronizing threads"
-  - "managed threading"
+title: "Sincronizar datos para subprocesamiento múltiple"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- synchronization, threads
+- threading [.NET Framework], synchronizing threads
+- managed threading
 ms.assetid: b980eb4c-71d5-4860-864a-6dfe3692430a
-caps.latest.revision: 16
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: a17eba2f930fda06d643d78c73c117e89ae86928
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Synchronizing Data for Multithreading
-Cuando varios subprocesos pueden llamar a las propiedades y métodos de un solo objeto, es fundamental sincronizar las llamadas.  En caso contrario, un subproceso puede interrumpir la ejecución de otro subproceso, y el objeto puede terminar teniendo un estado no válido.  Se dice que una clase es segura para subprocesos cuando sus miembros están protegidos contra este tipo de interrupciones.  
+# <a name="synchronizing-data-for-multithreading"></a>Sincronizar datos para subprocesamiento múltiple
+Cuando varios subprocesos pueden realizar llamadas a las propiedades y los métodos de un objeto individual, es fundamental sincronizarlas. De lo contrario, un subproceso puede interrumpir lo que esté realizando otro y el objeto podría quedar en un estado no válido. La clase cuyos miembros están protegidos de tales interrupciones se conoce como segura para subprocesos.  
   
- La infraestructura de Common Language proporciona diversas estrategias para sincronizar el acceso a instancias y miembros estáticos:  
+ Common Language Infrastructure proporciona diversas estrategias para sincronizar el acceso a miembros estáticos y de instancia:  
   
--   Regiones de código sincronizado.  Puede utilizar la clase <xref:System.Threading.Monitor> o la compatibilidad del compilador de esta clase para sincronizar sólo el bloque de código necesario y así mejorar el rendimiento.  
+-   Regiones de código sincronizado. Puede usar el <xref:System.Threading.Monitor> compatibilidad de compilador o clase de esta clase Sincronizar sólo el bloque de código que lo necesite, mejorar el rendimiento.  
   
--   Sincronización manual.  Puede utilizar los objetos de sincronización proporcionados por la biblioteca de clases de .NET Framework.  Vea [Overview of Synchronization Primitives](../../../docs/standard/threading/overview-of-synchronization-primitives.md), que incluye una discusión de la clase <xref:System.Threading.Monitor>.  
+-   Sincronización manual. Puede utilizar los objetos de sincronización que proporciona la biblioteca de clases .NET Framework. Vea [información general sobre los primitivos de sincronización](../../../docs/standard/threading/overview-of-synchronization-primitives.md), que incluye una explicación de la <xref:System.Threading.Monitor> clase.  
   
--   Contextos sincronizados.  Puede utilizar <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute> para habilitar la sincronización automática y simple de objetos <xref:System.ContextBoundObject>.  
+-   Contextos sincronizados. Puede usar el <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute> para habilitar la sincronización automática y simple de <xref:System.ContextBoundObject> objetos.  
   
--   Clases de colección del espacio de nombres <xref:System.Collections.Concurrent?displayProperty=fullName>.  Estas clases proporcionan operaciones integradas sincronizadas de agregar y quitar.  Para obtener más información, vea [Colecciones seguras para subprocesos](../../../docs/standard/collections/thread-safe/index.md).  
+-   Clases de colección en el <xref:System.Collections.Concurrent?displayProperty=nameWithType> espacio de nombres. Estas clases proporcionan operaciones de incorporación y eliminación sincronizadas incorporadas. Para obtener más información, consulte [Colecciones seguras para subprocesos](../../../docs/standard/collections/thread-safe/index.md).  
   
- Common Language Runtime proporciona un modelo de subproceso en el que las clases pertenecen a un número de categorías que pueden sincronizarse de varias formas diferentes en función de los requisitos.  En la tabla siguiente se muestra la compatibilidad de sincronización proporcionada para campos y métodos con una categoría de sincronización dada.  
+ Common Language Runtime proporciona un modelo de subprocesos en el que las clases se dividen en varias categorías que se pueden sincronizar de distintas maneras (según sea necesario). En la siguiente tabla se muestra la compatibilidad de sincronización que se proporciona para los campos y los métodos de determinadas categorías de sincronización.  
   
-|Categoría|Campos globales|Campos estáticos|Métodos estáticos|Campos de instancia|Métodos de instancia|Bloques de código específico|  
-|---------------|---------------------|----------------------|-----------------------|-------------------------|--------------------------|----------------------------------|  
+|Categoría|Campos generales|Campos estáticos|Métodos estáticos|Campos de instancia|Métodos de instancia|Bloques de código específicos|  
+|--------------|-------------------|-------------------|--------------------|---------------------|----------------------|--------------------------|  
 |Sin sincronización|No|No|No|No|No|No|  
 |Contexto sincronizado|No|No|No|Sí|Sí|No|  
-|Regiones de código sincronizado|No|No|Sólo si se marca|No|Sólo si se marca|Sólo si se marca|  
+|Regiones de código sincronizado|No|No|Solo si se marcan|No|Solo si se marcan|Solo si se marcan|  
 |Sincronización manual|Manual|Manual|Manual|Manual|Manual|Manual|  
   
-## Sin sincronización  
- Ésta es la opción predeterminada para objetos.  Cualquier subproceso puede tener acceso a un método o campo en cualquier momento.  Sólo debería tener acceso a estos objetos un subproceso cada vez.  
+## <a name="no-synchronization"></a>Sin sincronización  
+ Este es el valor predeterminado para los objetos. Todos los subprocesos pueden acceder a cualquier método o campo en cualquier momento. Solo puede acceder a estos objetos un subproceso a la vez.  
   
-## Sincronización manual  
- La biblioteca de clases de .NET Framework proporciona una serie de clases para sincronizar los subprocesos.  Vea [Overview of Synchronization Primitives](../../../docs/standard/threading/overview-of-synchronization-primitives.md).  
+## <a name="manual-synchronization"></a>Sincronización manual  
+ La biblioteca de clases .NET Framework proporciona una serie de clases para sincronizar los subprocesos. Consulte [Overview of Synchronization Primitives](../../../docs/standard/threading/overview-of-synchronization-primitives.md) (Introducción a los primitivos de sincronización).  
   
-## Regiones de código sincronizado  
- Puede utilizar la clase <xref:System.Threading.Monitor> o una palabra clave del compilador para sincronizar bloques de código, métodos de instancia y métodos estáticos.  No se admiten los campos estáticos sincronizados.  
+## <a name="synchronized-code-regions"></a>Regiones de código sincronizado  
+ Puede usar el <xref:System.Threading.Monitor> clase o una palabra clave del compilador para sincronizar bloques de código, métodos de instancia y métodos estáticos. No se admiten los campos estáticos sincronizados.  
   
- Visual Basic y C\# admiten el marcado de bloques de código con una determinada palabra clave de lenguaje, la instrucción `lock` en C\# o la instrucción `SyncLock` en Visual Basic.  Cuando un subproceso ejecuta el código, se realiza un intento de bloqueo.  Si otro subproceso ha realizado ya el bloqueo, el subproceso se bloquea hasta que esté disponible el bloqueo.  Cuando el subproceso sale del bloque sincronizado de código, el bloqueo se libera, independientemente de cómo salga del bloque el subproceso.  
+ Visual Basic y C# admiten el marcado de bloques de código con una palabra clave de lenguaje concreta, la instrucción `lock` de C# o la instrucción `SyncLock` de Visual Basic. Cuando se ejecuta el código en un subproceso, se realiza un intento de adquirir el bloqueo. Si otro subproceso ya lo ha adquirido, el subproceso se bloquea hasta que el bloqueo vuelva a estar disponible. Cuando el subproceso sale del bloque de código sincronizado, el bloqueo se libera, independientemente de la manera en que lo haga.  
   
 > [!NOTE]
->  Las instrucciones `lock` y `SyncLock` se implementan mediante <xref:System.Threading.Monitor.Enter%2A?displayProperty=fullName> y <xref:System.Threading.Monitor.Exit%2A?displayProperty=fullName>, por lo que se pueden utilizar otros métodos de <xref:System.Threading.Monitor> con ellas en el área sincronizada.  
+>  El `lock` y `SyncLock` instrucciones se implementan utilizando <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType> y <xref:System.Threading.Monitor.Exit%2A?displayProperty=nameWithType>, por lo que otros métodos de <xref:System.Threading.Monitor> puede utilizarse junto con ellas dentro de la región sincronizada.  
   
- También puede decorar un método con **MethodImplAttribute** y **MethodImplOptions.Synchronized**, lo que tiene el mismo efecto que utilizar **Monitor** o una de las palabras clave del compilador para bloquear todo el cuerpo del método.  
+ También puede decorar un método con **MethodImplAttribute** y **MethodImplOptions.Synchronized**, que tiene el mismo efecto que usar **Monitor** o una de las palabras clave del compilador para bloquear todo el cuerpo del método.  
   
- Se puede utilizar <xref:System.Threading.Thread.Interrupt%2A?displayProperty=fullName> para que un subproceso salga de operaciones de bloqueo, por ejemplo, de la espera para tener acceso a una región de código sincronizado.  También se utiliza **Thread.Interrupt** para que los subprocesos salgan de operaciones como <xref:System.Threading.Thread.Sleep%2A?displayProperty=fullName>.  
+ <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType>puede usarse para interrumpir un subproceso de operaciones de bloqueo como esperando el acceso a una región de código sincronizado. **Thread.Interrupt** también se utiliza para subprocesos salgan de operaciones como <xref:System.Threading.Thread.Sleep%2A?displayProperty=nameWithType>.  
   
 > [!IMPORTANT]
->  No bloquee el tipo, es decir, `typeof(MyType)` en C\#, `GetType(MyType)` en Visual Basic o `MyType::typeid` en C\+\+, para proteger los métodos `static` \(métodos `Shared` en Visual Basic\).  Utilice en su lugar un objeto estático privado.  De igual forma, no utilice `this` en C\# \(`Me` en Visual Basic\) para bloquear los métodos de instancia.  Utilice en su lugar un objeto privado.  Una clase o instancia se puede bloquear por código distinto del suyo propio, produciendo potenciales interbloqueos o problemas de rendimiento.  
+>  No bloquee el tipo, es decir, `typeof(MyType)` en C#, `GetType(MyType)` en Visual Basic o `MyType::typeid` en C++, para proteger los métodos `static` (métodos `Shared` en Visual Basic). Utilice en su lugar un objeto estático privado. Asimismo, no utilice `this` en C# (`Me` en Visual Basic) para bloquear los métodos de instancia. Utilice en su lugar un objeto privado. Una clase o instancia se puede bloquear por código distinto del suyo, lo que puede producir interbloqueos o problemas de rendimiento.  
   
-### Compatibilidad del compilador  
- Visual Basic y C\# admiten una palabra clave que utiliza <xref:System.Threading.Monitor.Enter%2A?displayProperty=fullName> y <xref:System.Threading.Monitor.Exit%2A?displayProperty=fullName> para bloquear el objeto.  Visual Basic admite la instrucción [SyncLock](../../../ocs/visual-basic/language-reference/statements/synclock-statement.md) y C\# admite la instrucción [lock](../Topic/lock%20Statement%20\(C%23%20Reference\).md).  
+### <a name="compiler-support"></a>Compatibilidad con un compilador  
+ Visual Basic y C# admiten una palabra clave que utiliza <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType> y <xref:System.Threading.Monitor.Exit%2A?displayProperty=nameWithType> para bloquear el objeto. Visual Basic admite la instrucción [SyncLock](~/docs/visual-basic/language-reference/statements/synclock-statement.md); C# admite la instrucción [lock](~/docs/csharp/language-reference/keywords/lock-statement.md).  
   
- En ambos casos, si se inicia una excepción en el bloque de código, el bloqueo adquirido por **lock** o **SyncLock** se libera automáticamente.  Los compiladores de C\# y de Visual Basic emiten un bloque **try**\/**finally** con **Monitor.Enter** al principio de try y **Monitor.Exit** en el bloque **finally**.  Si se inicia una excepción dentro del bloque **lock** o **SyncLock**, se ejecuta el controlador **finally** para permitir realizar cualquier trabajo de limpieza.  
+ En ambos casos, si se produce una excepción en el bloque de código, el bloqueo de **lock** o **SyncLock** se anula automáticamente. Los compiladores de C# y Visual Basic emiten un bloque **try**/**finally** con **Monitor.Enter** al principio de try, y **Monitor.Exit** en el bloque **finalmente**. Si se produce una excepción en el bloque **lock** o **SyncLock**, el controlador**finally** se ejecuta para que realice los trabajos de limpieza.  
   
-## Contexto sincronizado  
- Puede utilizar el atributo **SynchronizationAttribute** en cualquier objeto **ContextBoundObject** para sincronizar todos los métodos y campos de instancia.  Todos los objetos del mismo dominio de contexto comparten el mismo bloqueo.  Varios subprocesos pueden tener acceso a los métodos y campos, pero sólo uno al mismo tiempo.  
+## <a name="synchronized-context"></a>Contexto sincronizado  
+ Puede usar **SynchronizationAttribute** en cualquier **ContextBoundObject** para sincronizar todos los campos y métodos de instancia. Todos los objetos del mismo dominio de contexto comparten la misma instrucción lock. Varios subprocesos pueden acceder a los métodos y los campos, pero solo se permite uno a la vez.  
   
-## Vea también  
- <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute>   
- [Threads and Threading](../../../docs/standard/threading/threads-and-threading.md)   
- [Overview of Synchronization Primitives](../../../docs/standard/threading/overview-of-synchronization-primitives.md)   
- [SyncLock \(Instrucción\)](../../../ocs/visual-basic/language-reference/statements/synclock-statement.md)   
- [lock \(Instrucción\)](../Topic/lock%20Statement%20\(C%23%20Reference\).md)
+## <a name="see-also"></a>Vea también  
+ <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute>  
+ [Subprocesos y subprocesamiento](../../../docs/standard/threading/threads-and-threading.md)  
+ [Overview of Synchronization Primitives](../../../docs/standard/threading/overview-of-synchronization-primitives.md) (Introducción a los primitivos de sincronización)  
+ [SyncLock (instrucción)](~/docs/visual-basic/language-reference/statements/synclock-statement.md)  
+ [lock (instrucción)](~/docs/csharp/language-reference/keywords/lock-statement.md)

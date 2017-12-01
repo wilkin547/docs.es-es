@@ -16,19 +16,18 @@ helpviewer_keywords:
 - hash function
 - collections [.NET Framework], Hashtable collection type
 ms.assetid: bfc20837-3d02-4fc7-8a8f-c5215b6b7913
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: aa2392775f0bd2d68c0aeb28aa0654b690b11808
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: b37d1d7ff75aebfcdf3e849931a5d2b3924d5d7a
-ms.openlocfilehash: 223174392019e0958360858740d7cae37d934f4c
-ms.contentlocale: es-es
-ms.lasthandoff: 09/06/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="hashtable-and-dictionary-collection-types"></a>Tipos de las colecciones Hashtable y Dictionary
-La clase <xref:System.Collections.Hashtable?displayProperty=fullName> y las clases genéricas <xref:System.Collections.Generic.Dictionary%602?displayProperty=fullName> y <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=fullName> implementan la interfaz <xref:System.Collections.IDictionary?displayProperty=fullName>. La clase genérica <xref:System.Collections.Generic.Dictionary%602> también implementa la interfaz genérica <xref:System.Collections.Generic.IDictionary%602>. Por lo tanto, cada elemento de esta colección es un par de clave y valor.  
+La clase <xref:System.Collections.Hashtable?displayProperty=nameWithType> y las clases genéricas <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> y <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=nameWithType> implementan la interfaz <xref:System.Collections.IDictionary?displayProperty=nameWithType>. La clase genérica <xref:System.Collections.Generic.Dictionary%602> también implementa la interfaz genérica <xref:System.Collections.Generic.IDictionary%602>. Por lo tanto, cada elemento de esta colección es un par de clave y valor.  
   
  Un objeto <xref:System.Collections.Hashtable> consta de depósitos que contienen los elementos de la colección. Un depósito es un subgrupo virtual de elementos dentro de la colección <xref:System.Collections.Hashtable>, lo que permite buscar y recuperar más fácil y rápidamente que en la mayoría de las colecciones. Cada depósito está asociado con un código hash, que se genera usando una función hash y se basa en la clave del elemento.  
   
@@ -45,11 +44,10 @@ La clase <xref:System.Collections.Hashtable?displayProperty=fullName> y las clas
  Las clases <xref:System.Collections.Generic.Dictionary%602> y <xref:System.Collections.Concurrent.ConcurrentDictionary%602> tienen la misma funcionalidad que la clase <xref:System.Collections.Hashtable>. Una clase <xref:System.Collections.Generic.Dictionary%602> de un tipo específico (distinto de <xref:System.Object>) proporciona un rendimiento mejor que una clase <xref:System.Collections.Hashtable> para tipos de valor. Esto se debe a que los elementos de <xref:System.Collections.Hashtable> son del tipo <xref:System.Object> y, por lo tanto, las conversiones boxing y unboxing se suelen producir al almacenar o recuperar un tipo de valor. La clase <xref:System.Collections.Concurrent.ConcurrentDictionary%602> debe usarse cuando varios subprocesos puedan tener acceso a la colección simultáneamente.  
   
 ## <a name="see-also"></a>Vea también  
- <xref:System.Collections.Hashtable>   
- <xref:System.Collections.IDictionary>   
- <xref:System.Collections.IHashCodeProvider>   
- <xref:System.Collections.Generic.Dictionary%602>   
- <xref:System.Collections.Generic.IDictionary%602?displayProperty=fullName>   
- <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=fullName>   
+ <xref:System.Collections.Hashtable>  
+ <xref:System.Collections.IDictionary>  
+ <xref:System.Collections.IHashCodeProvider>  
+ <xref:System.Collections.Generic.Dictionary%602>  
+ <xref:System.Collections.Generic.IDictionary%602?displayProperty=nameWithType>  
+ <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=nameWithType>  
  [Tipos de colección utilizados normalmente](../../../docs/standard/collections/commonly-used-collection-types.md)
-

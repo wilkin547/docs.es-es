@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: eb687ebd-1149-4453-9fc1-12a084495a66
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 8088ce0c138cdb05a6e4a4fb6467e43efd252ba7
-ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="expression-trees-summary"></a>Resumen de árboles de expresión
 
 [Anterior: Traducción de expresiones](expression-trees-translating.md)
@@ -33,5 +31,4 @@ También se pueden usar árboles de expresión para buscar en un algoritmo y tra
 Hay algunos elementos de lenguaje de C# nuevos que no se traducen correctamente en árboles de expresión. Los árboles de expresión no pueden contener expresiones `await` ni expresiones lambda `async`. Muchas de las características agregadas en la versión 6 de C# no aparecen tal y como se escriben en árboles de expresión. En su lugar, se expondrán las características más recientes de los árboles de expresión en la sintaxis equivalente anterior. Es posible que esta limitación no sea tanta como podría parecer. De hecho, significa que el código que interpreta los árboles de expresión probablemente funcionará igual cuando se introduzcan las nuevas características de lenguaje.
 
 Incluso con estas limitaciones, los árboles de expresión permiten crear algoritmos dinámicos que se basan en la interpretación y la modificación del código que se representa como una estructura de datos. Es una herramienta eficaz y es una de las características del ecosistema .NET que permite que las bibliotecas enriquecidas como Entity Framework realicen lo que hacen.
-
 

@@ -1,46 +1,48 @@
 ---
-title: "C&#243;mo: Buscar datos en un control DataRepeater (Visual Studio) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "DataRepeater, implementar la búsqueda"
-  - "DataRepeater, buscar datos"
+title: "Cómo: Buscar datos en un control DataRepeater (Visual Studio)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- DataRepeater, implementing search
+- DataRepeater, searching data
 ms.assetid: a8ab5d17-b94f-43c4-8dd7-d0450226d73f
-caps.latest.revision: 11
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: a3ed7138c142a83584ecd19ccaebe0e31e421ce3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo: Buscar datos en un control DataRepeater (Visual Studio)
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-Cuando utiliza un control <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> que contiene muchos registros, es posible que desee permitir a los usuarios buscar un registro concreto.  En lugar de buscar los datos en el propio control, puede implementar una búsqueda consultando el <xref:System.Windows.Forms.BindingSource> subyacente.  Si se encuentra el elemento, puede utilizar la propiedad <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.CurrentItemIndex%2A> para seleccionarlo y desplazarlo en la vista.  
+# <a name="how-to-search-data-in-a-datarepeater-control-visual-studio"></a>Cómo: Buscar datos en un control DataRepeater (Visual Studio)
+Cuando se usa un <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> control que contiene el número de registros, puede que desee que los usuarios busquen un registro específico. En lugar de buscar los datos en el propio control, puede implementar una búsqueda consultando subyacente <xref:System.Windows.Forms.BindingSource>. Si se encuentra el elemento, a continuación, puede usar el <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.CurrentItemIndex%2A> propiedad para seleccionar el elemento y desplazar en la vista.  
   
-### Para implementar la búsqueda  
+### <a name="to-implement-search"></a>Para implementar la búsqueda  
   
-1.  Arrastre un control <xref:System.Windows.Forms.TextBox> desde el **Cuadro de herramientas** hasta el formulario que contenga el control <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>.  
+1.  Arrastre un control <xref:System.Windows.Forms.TextBox> desde el **Cuadro de herramientas** hasta el formulario que contenga el control <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> .  
   
-2.  En la ventana Propiedades, cambie la propiedad **Name** a SearchTextBox.  
+2.  En la ventana Propiedades, cambie la propiedad **Name** a **SearchTextBox**.  
   
-3.  Arrastre un control <xref:System.Windows.Forms.Button> desde el **Cuadro de herramientas** hasta el formulario que contenga el control <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>.  
+3.  Arrastre un control <xref:System.Windows.Forms.Button> desde el **Cuadro de herramientas** hasta el formulario que contenga el control <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> .  
   
-4.  En la ventana Propiedades, cambie la propiedad **Name** a SearchButton.  Cambie la propiedad **Text** a Search.  
+4.  En la ventana Propiedades, cambie la propiedad **Name** a **SearchButton**. Cambie la propiedad **Text** a **Search**.  
   
-5.  Haga doble clic en el control <xref:System.Windows.Forms.Button> para abrir el Editor de código y agregue el código siguiente al controlador de eventos `SearchButton_Click`.  
+5.  Haga doble clic en el control <xref:System.Windows.Forms.Button> para abrir el Editor de código y agregue el código siguiente al controlador de eventos `SearchButton_Click` .  
   
      [!code-vb[VbPowerPacksDataRepeaterSearch#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/VisualBasic/how-to-search-data-in-a-datarepeater-control-visual-studio_1.vb)]
-     [!code-cs[VbPowerPacksDataRepeaterSearch#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/CSharp/how-to-search-data-in-a-datarepeater-control-visual-studio_1.cs)]  
+     [!code-csharp[VbPowerPacksDataRepeaterSearch#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/CSharp/how-to-search-data-in-a-datarepeater-control-visual-studio_1.cs)]  
   
-     Reemplace *ProductsBindingSource* por el nombre de <xref:System.Windows.Forms.BindingSource> para <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> y *ProductID* por el nombre del campo que desea buscar.  
+     Reemplace *ProductsBindingSource* con el nombre de la <xref:System.Windows.Forms.BindingSource> para su <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>y reemplace *ProductID* con el nombre del campo que se va a buscar.  
   
-## Vea también  
- <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>   
- [Introducción al control DataRepeater](../../../visual-basic/developing-apps/windows-forms/introduction-to-the-datarepeater-control-visual-studio.md)   
- [Solución de problemas del control DataRepeater](../../../visual-basic/developing-apps/windows-forms/troubleshooting-the-datarepeater-control-visual-studio.md)   
- [Cómo: Cambiar la apariencia de un control DataRepeater](../../../visual-basic/developing-apps/windows-forms/how-to-change-the-appearance-of-a-datarepeater-control-visual-studio.md)
+## <a name="see-also"></a>Vea también  
+ <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>  
+ [Introducción al control DataRepeater](../../../visual-basic/developing-apps/windows-forms/introduction-to-the-datarepeater-control-visual-studio.md)  
+ [Solución de problemas del control DataRepeater](../../../visual-basic/developing-apps/windows-forms/troubleshooting-the-datarepeater-control-visual-studio.md)  
+ [Cambiar la apariencia de un control DataRepeater](../../../visual-basic/developing-apps/windows-forms/how-to-change-the-appearance-of-a-datarepeater-control-visual-studio.md)

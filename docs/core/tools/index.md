@@ -7,12 +7,11 @@ ms.date: 08/14/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
+ms.openlocfilehash: d66738593a1542affc956e08bbc38a3b2b1841b9
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: a19ab54a6cc44bd7acd1e40a4ca94da52bf14297
-ms.openlocfilehash: f56b571e61f82132718ecf5890024c0f1c177227
-ms.contentlocale: es-es
-ms.lasthandoff: 08/14/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="net-core-command-line-interface-cli-tools"></a>Herramientas de la interfaz de la línea de comandos (CLI) de .NET Core
 
@@ -122,6 +121,7 @@ dotnet build --output /build_output
 dotnet /build_output/my_app.dll
 ```
 
+
 ---
 
 ### <a name="driver"></a>Controlador
@@ -150,5 +150,5 @@ Si usó herramientas de la versión preliminar 2 para producir proyectos basados
 
 ## <a name="see-also"></a>Vea también
 
- [dotnet/repositorio de GitHub de la CLI](https://github.com/dotnet/cli/)   
- [.NET Core installation guide](https://aka.ms/dotnetcoregs) (Guía de instalación de .NET Core)   
+ [dotnet/repositorio de GitHub de la CLI](https://github.com/dotnet/cli/)  
+ [.NET Core installation guide](https://aka.ms/dotnetcoregs) (Guía de instalación de .NET Core)  

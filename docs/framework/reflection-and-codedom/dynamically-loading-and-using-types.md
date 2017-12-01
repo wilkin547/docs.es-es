@@ -5,10 +5,13 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
 helpviewer_keywords:
 - late binding, about late binding
 - early binding
@@ -16,21 +19,20 @@ helpviewer_keywords:
 - implicit late binding
 - reflection, dynamically using types
 ms.assetid: db985bec-5942-40ec-b13a-771ae98623dc
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 3c3e2a8eac4383433888c324a3d36a6e62314462
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 64abd2832ad14f09a8e3079818bddf78c32ee13d
-ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="dynamically-loading-and-using-types"></a>Cargar y utilizar tipos dinámicamente
 La reflexión proporciona la infraestructura que los compiladores de lenguaje como [!INCLUDE[vbprvbext](../../../includes/vbprvbext-md.md)] y JScript usan para implementar el enlace en tiempo de ejecución implícito. El enlace es el proceso de buscar la declaración (es decir, la implementación) que corresponde a un tipo especificado de manera exclusiva. Cuando este proceso se produce en tiempo de ejecución, en lugar de en tiempo de compilación, se denomina enlace en tiempo de ejecución. [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)] permite usar el enlace en tiempo de ejecución en el código; el compilador de Visual Basic llama a un método auxiliar que usa la reflexión para obtener el tipo de objeto. Los argumentos pasados al método auxiliar hacen que se invoque el método adecuado en tiempo de ejecución. Estos argumentos son la instancia (un objeto) en la que se invoca el método, el nombre del método invocado (una cadena) y los argumentos pasados al método invocado (una matriz de objetos).  
   
- En el ejemplo siguiente, el compilador de Visual Basic usa implícitamente la reflexión para llamar a un método en un objeto cuyo tipo se desconoce en tiempo de compilación. Una clase **HelloWorld** tiene un método **PrintHello** que imprime "Hello World" de forma concatenada con texto que se pasa al método **PrintHello**. El método **PrintHello** llamado en este ejemplo es en realidad <xref:System.Type.InvokeMember%2A?displayProperty=fullName>; el código de Visual Basic permite invocar el método **PrintHello** como si se conociera el tipo del objeto (helloObj) en tiempo de compilación (enlace anticipado), y no en tiempo de ejecución (enlace en tiempo de ejecución).  
+ En el ejemplo siguiente, el compilador de Visual Basic usa implícitamente la reflexión para llamar a un método en un objeto cuyo tipo se desconoce en tiempo de compilación. Una clase **HelloWorld** tiene un método **PrintHello** que imprime "Hello World" de forma concatenada con texto que se pasa al método **PrintHello**. El método **PrintHello** llamado en este ejemplo es en realidad <xref:System.Type.InvokeMember%2A?displayProperty=nameWithType>; el código de Visual Basic permite invocar el método **PrintHello** como si se conociera el tipo del objeto (helloObj) en tiempo de compilación (enlace anticipado), y no en tiempo de ejecución (enlace en tiempo de ejecución).  
   
 ```  
 Imports System  
@@ -56,20 +58,24 @@ End Module
   
  En el ejemplo siguiente se muestra un enlazador simple personalizado que no proporciona conversión de tipos de argumento. El ejemplo principal va precedido del código de `Simple_Type.dll`. Asegúrese de compilar `Simple_Type.dll` y, después, incluir una referencia a él en el proyecto en tiempo de compilación.  
   
- [!code-cpp[Conceptual.Types.Dynamic#1](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.types.dynamic/cpp/source1.cpp#1)] [!code-csharp[Conceptual.Types.Dynamic#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.types.dynamic/cs/source1.cs#1)] [!code-vb[Conceptual.Types.Dynamic#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.types.dynamic/vb/source1.vb#1)]  
+ [!code-cpp[Conceptual.Types.Dynamic#1](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.types.dynamic/cpp/source1.cpp#1)]
+ [!code-csharp[Conceptual.Types.Dynamic#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.types.dynamic/cs/source1.cs#1)]
+ [!code-vb[Conceptual.Types.Dynamic#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.types.dynamic/vb/source1.vb#1)]  
   
 ### <a name="invokemember-and-createinstance"></a>InvokeMember y CreateInstance  
- Use <xref:System.Type.InvokeMember%2A?displayProperty=fullName> para invocar un miembro de un tipo. Los métodos **CreateInstance** de diversas clases, como <xref:System.Activator.CreateInstance%2A?displayProperty=fullName> y <xref:System.Reflection.Assembly.CreateInstance%2A?displayProperty=fullName>, son formas especializadas de **InvokeMember** que crean nuevas instancias del tipo especificado. La clase **Binder** se usa para la resolución de sobrecarga y la conversión de argumentos en estos métodos.  
+ Use <xref:System.Type.InvokeMember%2A?displayProperty=nameWithType> para invocar un miembro de un tipo. Los métodos **CreateInstance** de diversas clases, como <xref:System.Activator.CreateInstance%2A?displayProperty=nameWithType> y <xref:System.Reflection.Assembly.CreateInstance%2A?displayProperty=nameWithType>, son formas especializadas de **InvokeMember** que crean nuevas instancias del tipo especificado. La clase **Binder** se usa para la resolución de sobrecarga y la conversión de argumentos en estos métodos.  
   
  En el ejemplo siguiente se muestran las tres posibles combinaciones de conversión de argumentos (conversión de tipos) y selección de miembros. En el caso 1, no se necesita ni conversión de argumentos ni selección de miembros. En el caso 2, solo se necesita la selección de miembros. En el caso 3, solo se necesita la conversión de argumentos.  
   
- [!code-cpp[Conceptual.Types.Dynamic#2](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.types.dynamic/cpp/source2.cpp#2)] [!code-csharp[Conceptual.Types.Dynamic#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.types.dynamic/cs/source2.cs#2)] [!code-vb[Conceptual.Types.Dynamic#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.types.dynamic/vb/source2.vb#2)]  
+ [!code-cpp[Conceptual.Types.Dynamic#2](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.types.dynamic/cpp/source2.cpp#2)]
+ [!code-csharp[Conceptual.Types.Dynamic#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.types.dynamic/cs/source2.cs#2)]
+ [!code-vb[Conceptual.Types.Dynamic#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.types.dynamic/vb/source2.vb#2)]  
   
- Se necesita la resolución de sobrecarga cuando hay más de un miembro con el mismo nombre. Los métodos <xref:System.Reflection.Binder.BindToMethod%2A?displayProperty=fullName> y <xref:System.Reflection.Binder.BindToField%2A?displayProperty=fullName> se usan para resolver el enlace en un solo miembro. **Binder.BindToMethod** también proporciona resolución de propiedades mediante los descriptores de acceso de propiedades **get** y **set**.  
+ Se necesita la resolución de sobrecarga cuando hay más de un miembro con el mismo nombre. Los métodos <xref:System.Reflection.Binder.BindToMethod%2A?displayProperty=nameWithType> y <xref:System.Reflection.Binder.BindToField%2A?displayProperty=nameWithType> se usan para resolver el enlace en un solo miembro. **Binder.BindToMethod** también proporciona resolución de propiedades mediante los descriptores de acceso de propiedades **get** y **set**.  
   
  **BindToMethod** devuelve el <xref:System.Reflection.MethodBase> que se va a invocar o una referencia nula (**Nothing** en Visual Basic) si la invocación no es posible. No es necesario que el valor devuelto de **MethodBase** sea uno de los contenidos en el parámetro *match*, aunque esto es lo habitual.  
   
- Cuando hay argumentos ByRef, el llamador podría querer recuperarlos. Por lo tanto, **Binder** permite que un cliente asigne la matriz de argumentos de nuevo a su forma original si **BindToMethod** ha manipulado la matriz de argumentos. Para ello, debe garantizarse al llamador que el orden de los argumentos no se ha modificado. Cuando los argumentos se pasan por nombre, **Binder** reordena la matriz de argumentos, y esto es lo que ve el llamador. Para obtener más información, consulta <xref:System.Reflection.Binder.ReorderArgumentArray%2A?displayProperty=fullName>.  
+ Cuando hay argumentos ByRef, el llamador podría querer recuperarlos. Por lo tanto, **Binder** permite que un cliente asigne la matriz de argumentos de nuevo a su forma original si **BindToMethod** ha manipulado la matriz de argumentos. Para ello, debe garantizarse al llamador que el orden de los argumentos no se ha modificado. Cuando los argumentos se pasan por nombre, **Binder** reordena la matriz de argumentos, y esto es lo que ve el llamador. Para obtener más información, consulta <xref:System.Reflection.Binder.ReorderArgumentArray%2A?displayProperty=nameWithType>.  
   
  El conjunto de miembros disponibles está integrado por los miembros definidos en el tipo o en cualquier tipo base. Si se especifica <xref:System.Reflection.BindingFlags>, se devolverán en el conjunto miembros de cualquier tipo de accesibilidad. Si no se especifica **BindingFlags.NonPublic**, el enlazador deberá imponer reglas de accesibilidad. Cuando especifique la marca de enlace **Public** o **NonPublic**, también debe especificar la marca de enlace **Instance** o **Static**. En caso contrario, no se devolverá ningún miembro.  
   
@@ -99,11 +105,10 @@ End Module
 |Single|Doble|  
 |Tipo sin referencia|Tipo de referencia|  
   
- La clase <xref:System.Type> tiene métodos **Get** que usan parámetros de tipo **Binder** para resolver las referencias a un miembro concreto. <xref:System.Type.GetConstructor%2A?displayProperty=fullName>, <xref:System.Type.GetMethod%2A?displayProperty=fullName> y <xref:System.Type.GetProperty%2A?displayProperty=fullName> buscan un miembro determinado del tipo actual, para lo que proporcionan información de firma de ese miembro. Se vuelve a llamar a <xref:System.Reflection.Binder.SelectMethod%2A?displayProperty=fullName> y <xref:System.Reflection.Binder.SelectProperty%2A?displayProperty=fullName> para seleccionar la información de firma especificada de los métodos apropiados.  
+ La clase <xref:System.Type> tiene métodos **Get** que usan parámetros de tipo **Binder** para resolver las referencias a un miembro concreto. <xref:System.Type.GetConstructor%2A?displayProperty=nameWithType>, <xref:System.Type.GetMethod%2A?displayProperty=nameWithType> y <xref:System.Type.GetProperty%2A?displayProperty=nameWithType> buscan un miembro determinado del tipo actual, para lo que proporcionan información de firma de ese miembro. Se vuelve a llamar a <xref:System.Reflection.Binder.SelectMethod%2A?displayProperty=nameWithType> y <xref:System.Reflection.Binder.SelectProperty%2A?displayProperty=nameWithType> para seleccionar la información de firma especificada de los métodos apropiados.  
   
 ## <a name="see-also"></a>Vea también  
- <xref:System.Type.InvokeMember%2A?displayProperty=fullName>   
- <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName>   
- [Ver información de tipos](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)   
+ <xref:System.Type.InvokeMember%2A?displayProperty=nameWithType>  
+ <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>  
+ [Viewing Type Information](../../../docs/framework/reflection-and-codedom/viewing-type-information.md) (Ver información tipos)  
  [Conversión de tipos en .NET Framework](../../../docs/standard/base-types/type-conversion.md)
-

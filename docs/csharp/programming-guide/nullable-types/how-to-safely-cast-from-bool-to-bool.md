@@ -1,39 +1,21 @@
 ---
 title: "Cómo: Convertir con seguridad de bool? a bool (Guía de programación de C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - casting [C#], nullable types
 - nullable types [C#], casting bool? to bool
 ms.assetid: e06e4274-a443-422d-8ef1-9dbf9df55237
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 1a6fa65c15bb5f1da9960dbc17bd25b4087ab862
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: c8a3dc3280b7dca802b327d9454c7f0ba9ed44be
-ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-safely-cast-from-bool-to-bool-c-programming-guide"></a>Cómo: Convertir con seguridad de bool? a bool (Guía de programación de C#)
 El tipo que acepta valores NULL `bool?` puede contener tres valores distintos: `true`, `false` y `null`. Por lo tanto, el tipo `bool?` no se puede usar en instrucciones condicionales como `if`, `for` o `while`. Por ejemplo, el siguiente código causa un error del compilador.  
@@ -66,8 +48,7 @@ if((bool)test) //now this cast is safe
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Guía de programación de C#](../../../csharp/programming-guide/index.md)   
- [Palabras clave de literales](../../../csharp/language-reference/keywords/literal-keywords.md)   
- [Tipos que aceptan valores NULL](../../../csharp/programming-guide/nullable-types/index.md)   
+ [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
+ [Palabras clave de literales](../../../csharp/language-reference/keywords/literal-keywords.md)  
+ [Tipos que aceptan valores NULL](../../../csharp/programming-guide/nullable-types/index.md)  
  [Operador !](../../../csharp/language-reference/operators/null-conditional-operator.md)
-

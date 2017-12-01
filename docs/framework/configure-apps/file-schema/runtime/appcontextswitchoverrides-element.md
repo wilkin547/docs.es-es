@@ -20,11 +20,11 @@ caps.latest.revision: "16"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 9ed1b11cef909af153e43d61e71a4875648bdbfb
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d0c87092786e1057bb925f55cfe46e3f4ef58b9d
+ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="ltappcontextswitchoverridesgt-element"></a>&lt;AppContextSwitchOverrides&gt; elemento
 Define uno o varios modificadores usados por la clase <xref:System.AppContext> para proporcionar un mecanismo para cancelar la participación con nueva funcionalidad.  
@@ -128,6 +128,6 @@ Define uno o varios modificadores usados por la clase <xref:System.AppContext> p
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [AppContext](xref:System.AppContext?qualifyHint=False&autoUpgrade=True)  
+<xref:System.AppContext>  
  [\<en tiempo de ejecución > elemento](runtime-element.md)  
  [Elemento \<configuration>](../configuration-element.md)

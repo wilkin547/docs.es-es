@@ -15,16 +15,15 @@ helpviewer_keywords:
 - JIT compilation, 64-bit
 - RyuJIT compiler
 ms.assetid: 0332dabc-72c5-4bdc-8975-20d717802b17
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 091b83cc0d7829c8ff078e6397aa480895b7a115
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: b67c622531321e5cd1efa7db657d62d94c0f73e4
-ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="mitigation-new-64-bit-jit-compiler"></a>Mitigación: Nuevo compilador JIT de 64 bits
 A partir de .NET Framework 4.6, el tiempo d ejecución incluye un nuevo compilador JIT de 64 bits para la compilación Just-In-Time. Este cambio no afecta a la compilación con el compilador JIT de 32 bits.  
@@ -43,7 +42,7 @@ A partir de .NET Framework 4.6, el tiempo d ejecución incluye un nuevo compilad
   
 -   En determinadas condiciones, la comparación de los valores <xref:System.UInt16> con su conjunto de bits altos es incorrecta si se habilita la optimización.  
   
--   En determinadas condiciones, especialmente al indexar los valores de matriz, la inicialización de la memoria mediante la instrucción IL <xref:System.Reflection.Emit.OpCodes.Initblk?displayProperty=fullName> puede inicializar la memoria con un valor incorrecto. Esto puede producir una excepción no controlada o resultados incorrectos.  
+-   En determinadas condiciones, especialmente al indexar los valores de matriz, la inicialización de la memoria mediante la instrucción IL <xref:System.Reflection.Emit.OpCodes.Initblk?displayProperty=nameWithType> puede inicializar la memoria con un valor incorrecto. Esto puede producir una excepción no controlada o resultados incorrectos.  
   
 -   En determinadas condiciones poco frecuentes, una prueba de bits condicional puede devolver el valor <xref:System.Boolean> incorrecto o producir una excepción si se habilitan las optimizaciones del compilador.  
   
@@ -81,6 +80,5 @@ A partir de .NET Framework 4.6, el tiempo d ejecución incluye un nuevo compilad
  También puede informar del problema indicándonos el error en [Microsoft Connect](https://connect.microsoft.com/VisualStudio).  
   
 ## <a name="see-also"></a>Vea también  
- [Cambios en el tiempo d ejecución](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-6.md)   
+ [Cambios en el runtime](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-6.md)  
  [Elemento \<useLegacyJIT>](../../../docs/framework/configure-apps/file-schema/runtime/uselegacyjit-element.md)
-

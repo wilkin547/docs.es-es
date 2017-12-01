@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: f3742fda-13c2-4283-8966-9e21c2674393
+ms.openlocfilehash: 09c7da7c780389d3819cf23a533cc425b43ad5ff
+ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 465326fe520d6a062609e0c4c471135ef88b0dd6
-ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/21/2017
 ---
-
 # <a name="systemdelegate-and-the-delegate-keyword"></a>System.Delegate y la palabra clave `delegate`
 
 [Anterior](delegates-overview.md)
@@ -26,7 +24,7 @@ Este artículo trata sobre las clases de .NET Framework que admiten delegados y 
 
 ## <a name="defining-delegate-types"></a>Definir tipos de delegados
 
-Comencemos con la palabra clave "delegate", ya que es lo que usará principalmente al trabajar con delegados. El código que genere el compilador cuando se usa la palabra clave `delegate` se asignará a las llamadas de método que invocan a miembros de las clases @System.Delegate y @System.MulticastDelegate. 
+Comencemos con la palabra clave "delegate", ya que es lo que usará principalmente al trabajar con delegados. El código que genere el compilador cuando se usa la palabra clave `delegate` se asignará a las llamadas de método que invocan a miembros de las clases <xref:System.Delegate> y <xref:System.MulticastDelegate>. 
 
 Para definir un tipo de delegado, se usa una sintaxis similar a la definición de una firma de método. Solo hace falta agregar la palabra clave `delegate` a la definición.
 
@@ -122,7 +120,7 @@ En el ejemplo de Sort() se suele asociar un método de destino único al delegad
 
 ## <a name="delegate-and-multicastdelegate-classes"></a>Clases Delegate y MulticastDelegate
 
-La compatibilidad de lenguaje descrita anteriormente proporciona las características y la compatibilidad que normalmente necesitará para trabajar con delegados. Estas características están integradas en dos clases en .NET Core Framework: @System.Delegate y @"System.MulticastDelegate".
+La compatibilidad de lenguaje descrita anteriormente proporciona las características y la compatibilidad que normalmente necesitará para trabajar con delegados. Estas características están integradas en las dos clases en el marco de trabajo de .NET Core: <xref:System.Delegate> y <xref:System.MulticastDelegate>.
 
 La clase `System.Delegate` y su única subclase directa `System.MulticastDelegate` proporcionan la compatibilidad con el marco para crear delegados, registrar métodos como destinos de delegados e invocar todos los métodos que se registran como un destino del delegado. 
 
@@ -143,4 +141,3 @@ Los métodos que usará más a menudo con los delegados son `Invoke()` y `BeginI
 Ahora que ha visto la sintaxis del lenguaje y las clases que admiten delegados, examinemos cómo se usan, se crean y se invocan delegados fuertemente tipados.
 
 [Siguiente](delegates-strongly-typed.md)
-

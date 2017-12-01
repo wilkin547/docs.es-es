@@ -10,14 +10,12 @@ ms.prod: visual-studio-dev-14
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: aa8732d7-5cd0-46e1-994a-78017f20d861
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 0b671333019c00abafcfb72533e30936f8fc6ad7
-ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="versioning-in-c"></a>Control de versiones en C# #
 
 En este tutorial, obtendrá información sobre qué significa el control de versiones en .NET. También obtendrá información sobre los factores que deben tenerse en cuenta para controlar las versiones de su biblioteca así como para actualizar a una versión nueva de esta.
@@ -89,7 +87,7 @@ Use el modificador `new` para ocultar los miembros heredados de una clase base. 
 
 Considere el ejemplo siguiente:
 
-[!code-csharp[Uso del ejemplo del modificador "new"](../../samples/csharp/versioning/new/Program.cs#sample)]
+[!code-csharp[Sample usage of the 'new' modifier](../../samples/csharp/versioning/new/Program.cs#sample)]
 
 **Salida**
 
@@ -107,7 +105,7 @@ Cuando no se especifica ningún modificador `new`, una clase derivada ocultará 
 
 El modificador `override` significa que una implementación derivada extiende la implementación de un miembro de clase base en lugar de ocultarlo. El miembro de clase base necesita que se le aplique el modificador `virtual`.
 
-[!code-csharp[Uso del ejemplo del modificador "override"](../../samples/csharp/versioning/override/Program.cs#sample)]
+[!code-csharp[Sample usage of the 'override' modifier](../../samples/csharp/versioning/override/Program.cs#sample)]
 
 **Salida**
 
@@ -119,4 +117,3 @@ Derived Method One: Derived Method One
 El modificador `override` se evalúa en tiempo de compilación y el compilador producirá un error si no encuentra un miembro virtual que reemplazar.
 
 Su conocimiento de las técnicas que se han tratado y su comprensión de las situaciones para usarlas harán mucho por mejorar la facilidad de la transición entre las versiones de una biblioteca.
-

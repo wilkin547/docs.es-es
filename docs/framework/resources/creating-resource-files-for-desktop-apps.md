@@ -5,26 +5,27 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-bcl
+ms.technology: dotnet-bcl
 ms.tgt_pltfrm: 
 ms.topic: article
+dev_langs:
+- csharp
+- vb
 helpviewer_keywords:
 - resource files, .resources files
 - .resources files
 - application resources, creating files
 - resource files, creating
 ms.assetid: 6c5ad891-66a0-4e7a-adcf-f41863ba6d8d
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 10f714f5793fff4d6081c9fc910159a02e34e53b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 2afcde97f5056c23f8d6bc294e955b75b5f166fd
-ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="creating-resource-files-for-desktop-apps"></a>Crear archivos de recursos para aplicaciones de escritorio
 Puede incluir recursos, como cadenas, imágenes o datos de objeto, en los archivos de recursos para hacer que estén disponibles fácilmente en su aplicación. .NET Framework ofrece cinco mecanismos para crear archivos de recursos:  
@@ -65,7 +66,7 @@ name2=value2
   
  El formato de archivo de recursos de los archivos .txt y .restext es idéntico. La extensión de archivo .restext solo sirve para permitir que los archivos de texto se identifiquen de forma inmediata como archivos de recursos basados ​​en texto.  
   
- Los recursos de cadena aparecen como pares *name/value*, donde *name* es una cadena que identifica el recurso y *value* es la cadena de recurso que se devuelve al pasar *name* a un método de recuperación de recursos como <xref:System.Resources.ResourceManager.GetString%2A?displayProperty=fullName>. *name* y *value* deben separarse mediante el signo igual (=). Por ejemplo:  
+ Los recursos de cadena aparecen como pares *name/value*, donde *name* es una cadena que identifica el recurso y *value* es la cadena de recurso que se devuelve al pasar *name* a un método de recuperación de recursos como <xref:System.Resources.ResourceManager.GetString%2A?displayProperty=nameWithType>. *name* y *value* deben separarse mediante el signo igual (=). Por ejemplo:  
   
 ```  
 FileMenuName=File  
@@ -77,7 +78,7 @@ HelpMenuName=Help
 > [!CAUTION]
 >  No utilice archivos de recursos para almacenar contraseñas, información relativa a la seguridad o datos privados.  
   
- Las cadenas vacías (es decir, un recurso cuyo valor es <xref:System.String.Empty?displayProperty=fullName>) se permiten en los archivos de texto. Por ejemplo:  
+ Las cadenas vacías (es decir, un recurso cuyo valor es <xref:System.String.Empty?displayProperty=nameWithType>) se permiten en los archivos de texto. Por ejemplo:  
   
 ```  
 EmptyString=  
@@ -123,7 +124,8 @@ greeting=Hello, {0}!
   
  En el ejemplo siguiente se muestra el código fuente de una aplicación de consola que utiliza el archivo .resources para mostrar mensajes al usuario.  
   
- [!code-csharp[Conceptual.Resources.TextFiles#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.textfiles/cs/greeting.cs#1)] [!code-vb[Conceptual.Resources.TextFiles#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.textfiles/vb/greeting.vb#1)]  
+ [!code-csharp[Conceptual.Resources.TextFiles#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.textfiles/cs/greeting.cs#1)]
+ [!code-vb[Conceptual.Resources.TextFiles#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.textfiles/vb/greeting.vb#1)]  
   
  Si está utilizando Visual Basic y el archivo de código fuente se denomina Greeting.vb, el siguiente comando crea un archivo ejecutable que incluye el archivo .resources incrustado:  
   
@@ -174,20 +176,21 @@ greeting=Hello, {0}!
   
 <a name="ResourcesFiles"></a>   
 ## <a name="resources-in-resources-files"></a>Recursos en archivos .resources  
- Puede usar la clase <xref:System.Resources.ResourceWriter?displayProperty=fullName> para crear mediante programación un archivo de recursos binario (.resources) directamente desde el código. También puede usar el [Generador de archivos de recursos (Resgen.exe)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) para crear un archivo .resources a partir de un archivo de texto o un archivo .resx. El archivo .resources puede contener datos binarios (matrices de bytes) y datos de objeto además de datos de cadena. Al crear un archivo .resources mediante programación, se requieren los siguientes pasos:  
+ Puede usar la clase <xref:System.Resources.ResourceWriter?displayProperty=nameWithType> para crear mediante programación un archivo de recursos binario (.resources) directamente desde el código. También puede usar el [Generador de archivos de recursos (Resgen.exe)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) para crear un archivo .resources a partir de un archivo de texto o un archivo .resx. El archivo .resources puede contener datos binarios (matrices de bytes) y datos de objeto además de datos de cadena. Al crear un archivo .resources mediante programación, se requieren los siguientes pasos:  
   
 1.  Cree un objeto <xref:System.Resources.ResourceWriter> con un nombre de archivo único. Puede hacerlo especificando el nombre de archivo o una secuencia de archivos en un constructor de clase <xref:System.Resources.ResourceWriter>.  
   
-2.  Llame a una de las sobrecargas del método <xref:System.Resources.ResourceWriter.AddResource%2A?displayProperty=fullName> para que cada recurso con nombre se agregue al archivo. El recurso puede ser una cadena, un objeto o una colección de datos binarios (una matriz de bytes).  
+2.  Llame a una de las sobrecargas del método <xref:System.Resources.ResourceWriter.AddResource%2A?displayProperty=nameWithType> para que cada recurso con nombre se agregue al archivo. El recurso puede ser una cadena, un objeto o una colección de datos binarios (una matriz de bytes).  
   
-3.  Llame al método <xref:System.Resources.ResourceWriter.Close%2A?displayProperty=fullName> para que escriba los recursos en el archivo y cierre el objeto <xref:System.Resources.ResourceWriter>.  
+3.  Llame al método <xref:System.Resources.ResourceWriter.Close%2A?displayProperty=nameWithType> para que escriba los recursos en el archivo y cierre el objeto <xref:System.Resources.ResourceWriter>.  
   
 > [!NOTE]
 >  No utilice archivos de recursos para almacenar contraseñas, información relativa a la seguridad o datos privados.  
   
  En el ejemplo siguiente se crea mediante programación un archivo .resources denominado CarResources.resources que almacena seis cadenas, un icono y dos objetos definidos por la aplicación (dos objetos `Automobile`). Tenga en cuenta la clase `Automobile`, que se define y de la que se crean instancias en el ejemplo, está etiquetada con el atributo <xref:System.SerializableAttribute>, lo que permite que el formateador de serialización binaria la mantenga.  
   
- [!code-csharp[Conceptual.Resources.Resources#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.resources/cs/resources1.cs#1)] [!code-vb[Conceptual.Resources.Resources#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.resources/vb/resources1.vb#1)]  
+ [!code-csharp[Conceptual.Resources.Resources#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.resources/cs/resources1.cs#1)]
+ [!code-vb[Conceptual.Resources.Resources#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.resources/vb/resources1.vb#1)]  
   
  Después de crear el archivo .resources, puede insertarlo en un ejecutable o una biblioteca en tiempo de ejecución si incluye el modificador `/resource` del compilador del lenguaje o insertarlo en un ensamblado satélite mediante [Assembly Linker (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md).  
   
@@ -200,7 +203,6 @@ greeting=Hello, {0}!
  En tiempo de compilación, Visual Studio convierte primero los archivos .resx en un proyecto para los archivos de recursos binarios (.resources) y los almacena en un subdirectorio del directorio obj del proyecto. Visual Studio incrusta los archivos de recursos que no contienen recursos localizados en el ensamblado principal que el proyecto genera. Si los archivos de recursos contienen recursos localizados, Visual Studio los incrusta en un ensamblado satélite distinto para cada referencia cultural localizada. A continuación, almacena cada ensamblado satélite en un directorio cuyo nombre se corresponde con la referencia cultural localizada. Por ejemplo, los recursos localizados en inglés (Estados Unidos) se almacenan en un ensamblado satélite del subdirectorio en-US.  
   
 ## <a name="see-also"></a>Vea también  
- <xref:System.Resources>   
- [Recursos de aplicaciones de escritorio](../../../docs/framework/resources/index.md)   
+ <xref:System.Resources>  
+ [Recursos de aplicaciones de escritorio](../../../docs/framework/resources/index.md)  
  [Empaquetar e implementar recursos](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)
-

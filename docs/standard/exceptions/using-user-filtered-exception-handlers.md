@@ -1,30 +1,33 @@
 ---
-title: "Utilizar controladores de excepciones filtradas por el usuario | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "excepciones, filtradas por el usuario"
-  - "excepciones filtradas por el usuario"
+title: Utilizar controladores de excepciones filtradas por el usuario
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- user-filtered exceptions
+- exceptions, user-filtered
 ms.assetid: aa80d155-060d-41b4-a636-1ceb424afee8
-caps.latest.revision: 10
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "10"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: a71a722063448fb0d568f4bfb4f71d4e01c57454
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Utilizar controladores de excepciones filtradas por el usuario
-Actualmente, Visual Basic admite las excepciones filtradas por el usuario.  Los controladores de excepciones filtrados por el usuario detectan y controlan las excepciones basándose en requisitos que se definen para la excepción.  Estos controladores utilizan la instrucción **Catch** con la palabra clave **When**.  
+# <a name="using-user-filtered-exception-handlers"></a>Utilizar controladores de excepciones filtradas por el usuario
+Actualmente, Visual Basic admite excepciones filtradas por el usuario. Los controladores de excepciones filtradas por usuario detectan y controlan las excepciones en función de los requisitos que se definen para la excepción. Estos controladores utilizan la instrucción **Catch** con la palabra clave **When**.  
   
- Esta técnica resulta útil cuando un objeto de excepción concreto corresponde a varios errores.  En este caso, normalmente, el objeto tiene una propiedad que contiene el código de error específico asociado al error.  La propiedad del código de error se puede usar en la expresión para seleccionar sólo el error concreto que se desea controlar en esa cláusula **Catch**.  
+ Esta técnica es útil cuando un objeto de excepción concreto corresponde a varios errores. En este caso, el objeto normalmente tiene una propiedad que contiene el código de error específico asociado con el error. Puede utilizar la propiedad de código de error en la expresión para seleccionar solo el error concreto que desea administrar en esa cláusula **Catch**.  
   
- El siguiente ejemplo de Visual Basic ilustra la instrucción **Catch\/When**.  
+ El siguiente ejemplo de Visual Basic ilustra la instrucción **Catch/When**.  
   
 ```  
 Try  
@@ -34,12 +37,12 @@ Try
 End Try  
 ```  
   
- La expresión de la cláusula definida por el usuario no tiene ningún tipo de restricción.  Si ocurre una excepción durante la ejecución de la expresión filtrada por el usuario, se descarta dicha excepción y la expresión de filtro se evalúa como False.  En este caso, el Common Language Runtime continúa buscando un controlador para la excepción actual.  
+ La expresión de la cláusula filtrada por el usuario no está restringida en modo alguno. Si se produce una excepción durante la ejecución de la expresión filtrada por el usuario, esa excepción se descarta y la expresión de filtro se considera evaluada como false. En este caso, Common Language Runtime continúa la búsqueda de un controlador para la excepción actual.  
   
-## Combinar las cláusulas de excepción específica y filtrada por el usuario  
- Una instrucción Catch puede contener las cláusulas de excepción específica y la filtrada por el usuario.  El motor en tiempo de ejecución prueba primero la excepción específica.  Si la excepción específica se realiza correctamente, el motor en tiempo de ejecución ejecuta el filtro de usuario.  El filtro genérico puede contener una referencia a la variable declarada en el filtro de la clase.  Tenga en cuenta que el orden de las dos cláusulas de filtro no se puede invertir.  
+## <a name="combining-the-specific-exception-and-the-user-filtered-clauses"></a>Combinar la excepción específica y las cláusulas filtradas por el usuario  
+ Una instrucción Catch puede contener tanto la excepción específica como las cláusulas filtradas por el usuario. El motor de tiempo de ejecución comprueba primero la excepción específica. Si la comprobación de la excepción específica es correcta, el motor de tiempo de ejecución ejecuta el filtro de usuario. El filtro genérico puede contener una referencia a la variable declarada en el filtro de clase. Tenga en cuenta que no se puede revertir el orden de las dos cláusulas de filtro.  
   
- En el siguiente ejemplo de Visual Basic se muestra la excepción específica `ClassLoadException` de la instrucción **Catch** además de la cláusula filtrada por el usuario que utiliza la palabra clave **When**.  
+ El siguiente ejemplo de Visual Basic muestra la excepción específica `ClassLoadException` en la instrucción **Catch**, así como la cláusula filtrada por el usuario mediante la palabra clave **When**.  
   
 ```  
 Try  
@@ -48,9 +51,6 @@ Try
       'Catch statements.  
 End Try  
 ```  
-  
-## Vea también  
- [Cómo: Utilizar el bloque Try\/Catch para detectar excepciones](../../../docs/standard/exceptions/how-to-use-the-try-catch-block-to-catch-exceptions.md)   
- [Cómo: Utilizar excepciones específicas en un bloque Catch](../../../docs/standard/exceptions/how-to-use-specific-exceptions-in-a-catch-block.md)   
- [Procedimientos recomendados para excepciones](../../../docs/standard/exceptions/best-practices-for-exceptions.md)   
- [Fundamentos del control de excepciones](../../../docs/standard/exceptions/exception-handling-fundamentals.md)
+
+## <a name="see-also"></a>Vea también
+[Excepciones](index.md)

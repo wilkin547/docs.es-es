@@ -5,29 +5,22 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - in-process side-by-side execution
 - side-by-side execution, in-process
 ms.assetid: 18019342-a810-4986-8ec2-b933a17c2267
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: fa65be2eee481e20231bacb5d0861fa3d2c03f92
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 5ad204e06868b21ac6f37bbdf02d29670a284496
-ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="in-process-side-by-side-execution"></a>Ejecución en paralelo y en proceso
 A partir de [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], puede usar el hospedaje en paralelo en el mismo proceso para ejecutar varias versiones de Common Language Runtime (CLR) en un único proceso. De forma predeterminada, los componentes COM administrados se ejecutan con la versión de .NET Framework con la que se han compilado, independientemente de la versión de .NET Framework que se haya cargado para el proceso.  
@@ -47,7 +40,7 @@ A partir de [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], pued
   
 -   **Desarrolladores de aplicaciones**. El hospedaje en paralelo prácticamente no afecta a los desarrolladores de aplicaciones. De forma predeterminada, las aplicaciones siempre se ejecutan en la versión de .NET Framework en la que se han compilado; esto no ha cambiado. Aun así, los desarrolladores pueden invalidar este comportamiento e indicarle a la aplicación que se ejecute en una versión más reciente de .NET Framework (vea el [escenario 2](#scenarios)).  
   
--   **Desarrolladores de bibliotecas y consumidores**. El hospedaje en paralelo no resuelve los problemas de compatibilidad a los que se enfrentan los desarrolladores de bibliotecas. Una biblioteca cargada directamente por una aplicación, ya sea a través de una referencia directa o de una llamada a <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName>, sigue usando el tiempo de ejecución del <xref:System.AppDomain> en el que se carga. Debe probar las bibliotecas con todas las versiones de .NET Framework que quiera admitir. Si una aplicación se compila con el tiempo de ejecución de [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] pero incluye una biblioteca compilada con un tiempo de ejecución anterior, la biblioteca también usará el tiempo de ejecución de [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]. Sin embargo, si tiene una aplicación compilada con un tiempo de ejecución anterior y una biblioteca compilada con [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], debe forzar que la aplicación también use [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] (vea el [escenario 3](#scenarios)).  
+-   **Desarrolladores de bibliotecas y consumidores**. El hospedaje en paralelo no resuelve los problemas de compatibilidad a los que se enfrentan los desarrolladores de bibliotecas. Una biblioteca cargada directamente por una aplicación, ya sea a través de una referencia directa o de una llamada a <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>, sigue usando el tiempo de ejecución del <xref:System.AppDomain> en el que se carga. Debe probar las bibliotecas con todas las versiones de .NET Framework que quiera admitir. Si una aplicación se compila con el tiempo de ejecución de [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] pero incluye una biblioteca compilada con un tiempo de ejecución anterior, la biblioteca también usará el tiempo de ejecución de [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]. Sin embargo, si tiene una aplicación compilada con un tiempo de ejecución anterior y una biblioteca compilada con [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], debe forzar que la aplicación también use [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] (vea el [escenario 3](#scenarios)).  
   
 -   **Desarrolladores de componentes COM administrados**. Antes, los componentes COM administrados se ejecutaban automáticamente con la versión más reciente del tiempo de ejecución instalada en el equipo. Ahora puede ejecutar los componentes COM con la versión del tiempo de ejecución en la que se han compilado.  
   
@@ -189,6 +182,5 @@ int _tmain(int argc, _TCHAR* argv[])
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Elemento \<startup>](../../../docs/framework/configure-apps/file-schema/startup/startup-element.md)   
+ [\<Inicio > elemento](../../../docs/framework/configure-apps/file-schema/startup/startup-element.md)  
  [\<supportedRuntime > Elemento](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md)
-

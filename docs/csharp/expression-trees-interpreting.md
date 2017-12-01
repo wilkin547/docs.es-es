@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: adf73dde-1e52-4df3-9929-2e0670e28e16
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: e7c5f7404546c6f3812fc5cc3d0320c77816634d
-ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="interpreting-expressions"></a>Interpretación de expresiones
 
 [Previous -- Executing Expressions](expression-trees-execution.md) (Anterior: Ejecución de expresiones)
@@ -529,4 +527,3 @@ Por último, la biblioteca que he usado en este artículo se ha creado con fines
 Incluso con esas limitaciones, se encuentra en el camino correcto para escribir algoritmos que lean y comprendan árboles de expresión.
 
 [Next -- Building Expressions](expression-trees-building.md) (Siguiente: Creación de expresiones)
-

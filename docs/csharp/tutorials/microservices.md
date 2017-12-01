@@ -10,14 +10,12 @@ ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.devlang: csharp
 ms.assetid: 87e93838-a363-4813-b859-7356023d98ed
+ms.openlocfilehash: 6cdc4eb0d0fea93b5210532210ad0c928e35a7a5
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 5585db33fb5020ed18c26f32ce0b63f97353d20f
-ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="microservices-hosted-in-docker"></a>Microservicios alojados en Docker
 
 ## <a name="introduction"></a>Introducción
@@ -94,6 +92,7 @@ La restauración de Dotnet emplea el Administrador de paquetes NuGet para instal
 ```console
 dotnet build
 ```
+[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
 Una vez compilada, ejecútela desde la línea de comandos:
 
@@ -140,7 +139,7 @@ Todos los cambios que debe realzar se encuentran en la expresión lambda definid
 
 El argumento en la expresión lambda es el elemento `HttpContext` para la solicitud. Una de sus propiedades es el objeto `Request`. El objeto `Request` tiene una propiedad `Query` que contiene un diccionario de todos los valores en la cadena de consulta de la solicitud. La primera adición consiste en encontrar los valores de latitud y longitud:
 
-[!code-csharp[ReadQueryString](../../../samples/csharp/getting-started/WeatherMicroservice/Startup.cs#ReadQueryString "lectura de variables de la cadena de consulta")]
+[!code-csharp[ReadQueryString](../../../samples/csharp/getting-started/WeatherMicroservice/Startup.cs#ReadQueryString "read variables from the query string")]
 
 Los valores del diccionario de consulta son de tipo `StringValue`. Ese tipo puede contener una colección de cadenas. Para el servicio de información meteorológica, cada valor es una única cadena. Es por eso que existe la llamada a `FirstOrDefault()` en el código anterior. 
 
@@ -156,17 +155,17 @@ Puede adaptar dicha API con el uso de un *método de extensión* que devuelve un
 
 Los métodos de extensión son métodos que se definen como métodos estáticos, pero al agregar el modificador `this` en el primer parámetro, se pueden llamar como si fueran miembros de esa clase. Los métodos de extensión solo se pueden definir en clases estáticas. Esta es la definición de la clase que contiene el método de extensión para el análisis:
 
-[!code-csharp[TryParseExtension](../../../samples/csharp/getting-started/WeatherMicroservice/Extensions.cs#TryParseExtension "try parse para un tipo que acepta valores NULL")]
+[!code-csharp[TryParseExtension](../../../samples/csharp/getting-started/WeatherMicroservice/Extensions.cs#TryParseExtension "try parse to a nullable")]
 
 La expresión `default(double?)` devuelve el valor predeterminado del tipo `double?`. Este valor predeterminado es el valor NULL (o que falta).
 
 Puede usar este método de extensión para convertir los argumentos de cadena de consulta en el tipo doble:
 
-[!code-csharp[UseTryParse](../../../samples/csharp/getting-started/WeatherMicroservice/Startup.cs#UseTryParse "Uso del método de extensión try parse")]
+[!code-csharp[UseTryParse](../../../samples/csharp/getting-started/WeatherMicroservice/Startup.cs#UseTryParse "Use the try parse extension method")]
 
 Para probar fácilmente el código de análisis, actualice la respuesta para incluir los valores de los argumentos:
 
-[!code-csharp[WriteResponse](../../../samples/csharp/getting-started/WeatherMicroservice/Startup.cs#WriteResponse "Escritura de la respuesta de salida")]
+[!code-csharp[WriteResponse](../../../samples/csharp/getting-started/WeatherMicroservice/Startup.cs#WriteResponse "Write the output response")]
 
 En este punto, puede ejecutar la aplicación web y ver si su código de análisis está funcionando. Agregue valores a la solicitud web en un explorador y verá los resultados actualizados.
 
@@ -196,11 +195,11 @@ public class WeatherReport
 
 A continuación, cree un constructor que establezca esos valores de forma aleatoria. Este constructor usa los valores de la latitud y la longitud para inicializar el generador de números aleatorios. Esto significa que el pronóstico para la misma ubicación es el mismo. Si cambia los argumentos para la latitud y la longitud, obtendrá un pronóstico diferente (ya que comienza con un valor de inicialización diferente).
 
-[!code-csharp[WeatherReportConstructor](../../../samples/csharp/getting-started/WeatherMicroservice/WeatherReport.cs#WeatherReportConstructor "Constructor de informes meteorológicos")]
+[!code-csharp[WeatherReportConstructor](../../../samples/csharp/getting-started/WeatherMicroservice/WeatherReport.cs#WeatherReportConstructor "Weather Report Constructor")]
 
 Ahora puede generar el pronóstico de cinco días en el método de respuesta:
 
-[!code-csharp[GenerateRandomReport](../../../samples/csharp/getting-started/WeatherMicroservice/Startup.cs#GenerateRandomReport "Generación de un informe meteorológico aleatorio")]
+[!code-csharp[GenerateRandomReport](../../../samples/csharp/getting-started/WeatherMicroservice/Startup.cs#GenerateRandomReport "Generate a random weather report")]
 
 ### <a name="build-the-json-response"></a>Compile la respuesta JSON.
 
@@ -212,7 +211,7 @@ dotnet add package Newtonsoft.Json
 
 A continuación, puede usar la clase `JsonConvert` para escribir el objeto en una cadena:
 
-[!code-csharp[ConvertToJson](../../../samples/csharp/getting-started/WeatherMicroservice/Startup.cs#ConvertToJSON "Conversión de objetos en JSON")]
+[!code-csharp[ConvertToJson](../../../samples/csharp/getting-started/WeatherMicroservice/Startup.cs#ConvertToJSON "Convert objects to JSON")]
 
 El código anterior convierte el objeto de pronóstico (una lista de objetos `WeatherForecast`) en un paquete JSON. Después de haber construido el paquete de respuesta, establezca el tipo de contenido en `application/json` y escriba la cadena.
 
@@ -248,7 +247,7 @@ WORKDIR /app
 # copy csproj and restore as distinct layers
 
 COPY WeatherMicroservice.csproj .
-RUN dotnet restore
+RUN dotnet restore 
 
 # copy and build everything else
 
@@ -257,6 +256,8 @@ COPY . .
 # RUN dotnet restore
 RUN dotnet publish -c Release -o out
 ```
+
+[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
 El archivo de proyecto se copia del directorio actual a la máquina virtual de Docker y se restauran todos los paquetes. El uso de la CLI de dotnet significa que la imagen de Docker debe incluir el SDK de .NET Core. Luego, se copia el resto de la aplicación y el comando de publicación de dotnet compila y empaqueta la aplicación.
 
@@ -350,4 +351,3 @@ En este tutorial, ha creado un microservicio de ASP.NET Core y ha agregado unas 
 Ha compilado una imagen de un contenedor de Docker para ese servicio y ha ejecutado ese contenedor en su máquina. Ha conectado una ventana de terminal al servicio y ha visto los mensajes de diagnóstico de su servicio.
 
 Por el camino, ha visto varias características del lenguaje C# en acción.
-

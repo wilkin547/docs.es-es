@@ -14,30 +14,27 @@ helpviewer_keywords:
 - application compatibility
 - .NET Framework application compatibility
 - .NET Framework changes
-caps.latest.revision: 19
+caps.latest.revision: "19"
 ms.assetid: c4ba3ff2-fe59-4c5d-9e0b-86bba3cd865c
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: e67fff19c4b187010b35519081f46e11effbad6c
+ms.sourcegitcommit: d0f7646d67db5809cf43ff1d27b399a4020e8ee2
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: b3c7df2984c2c9e8af308ca8070f7207d11ba49e
-ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/25/2017
 ---
-
 # <a name="application-compatibility-in-the-net-framework"></a>Compatibilidad de aplicaciones en .NET Framework
 
 ## <a name="introduction"></a>Introducción
-
 La compatibilidad es un objetivo muy importante de cada versión .NET. La compatibilidad garantiza que cada versión es adicional, por lo que las versiones anteriores siguen funcionando. Por otro lado, los cambios en las funciones anteriores (para mejorar el rendimiento, tratar los problemas de seguridad o corregir errores) pueden provocar problemas de compatibilidad en el código existente o en las aplicaciones existentes que se ejecutan en una versión posterior. .NET Framework reconoce los cambios de redestinación y los cambios en tiempo de ejecución. Los cambios de redestinación afectan a las aplicaciones que se refieren a una versión específica de .NET Framework pero se ejecutan en una versión posterior. Los cambios en tiempo de ejecución afectan a todas las aplicaciones que se ejecutan en una versión determinada.
 
 Cada aplicación se refiere a una versión específica de .NET Framework, que puede especificarse:
 
-- Al definir una plataforma de destino en Visual Studio.
-- Al especificar la plataforma de destino en un archivo de proyecto.
-- Al aplicar <xref:System.Runtime.Versioning.TargetFrameworkAttribute> en el código fuente.
+* Al definir una plataforma de destino en Visual Studio.
+* Al especificar la plataforma de destino en un archivo de proyecto.
+* Al aplicar <xref:System.Runtime.Versioning.TargetFrameworkAttribute> en el código fuente.
 
 Al ejecutarse en una versión más reciente que a la que se refería, .NET Framework usará un comportamiento anómalo para imitar la versión de destino anterior. En otras palabras, la aplicación se ejecutará en la versión más reciente de Framework pero actuará como si se estuviera ejecutando en la versión anterior. Muchos de los problemas de compatibilidad entre versiones de .NET Framework se mitigan a través de este peculiar modelo.
 
@@ -82,16 +79,14 @@ Cada problema incluye la siguiente información:
 -   Los identificadores de los diagnósticos disponibles.
 
 ## <a name="usage"></a>Uso
-
 Para comenzar, seleccione el tipo de cambio de compatibilidad a continuación:
 
-- [Cambios de redestinación](./retargeting/index.md)
-- [Cambios en el runtime](./runtime/index.md)
+* [Cambios de redestinación](./retargeting/index.md)
+* [Cambios en el runtime](./runtime/index.md)
 
 
 ## <a name="see-also"></a>Vea también
 
-[Versiones y dependencias](../../../docs/framework/migration-guide/versions-and-dependencies.md)   
-[Novedades](../../../docs/framework/whats-new/index.md)   
-[Lo obsoleto en la biblioteca de clases](../../../docs/framework/whats-new/whats-obsolete.md)
-
+* [Versiones y dependencias](../../../docs/framework/migration-guide/versions-and-dependencies.md)
+* [Novedades](../../../docs/framework/whats-new/index.md)
+* [Lo obsoleto en la biblioteca de clases](../../../docs/framework/whats-new/whats-obsolete.md)

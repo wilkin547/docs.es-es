@@ -9,14 +9,12 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: b446e9e0-72f6-48f6-92c6-70ad0ce3f86a
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: a074978f2817abafa7b8a9fefe7c67c9c52195b3
-ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="porting-to-net-core---analyzing-your-third-party-party-dependencies"></a>Migración a .NET Core - Análisis de las dependencias de terceros
 
 El primer paso en el proceso de conversión es comprender las dependencias de terceros.  Debe averiguar cuáles de ellos, si los hay, todavía no se ejecuta en .NET Core y desarrollar un plan de contingencia para aquellos que no se ejecutan en .NET Core.
@@ -97,4 +95,3 @@ Puede que tenga una dependencia que no sea un paquete NuGet, como un archivo DLL
 ## <a name="next-steps"></a>Pasos siguientes
 
 Si está realizando la portabilidad de una biblioteca, consulte [Porting your Libraries](libraries.md) (Portabilidad de las bibliotecas).
-

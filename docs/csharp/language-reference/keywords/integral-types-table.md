@@ -1,41 +1,23 @@
 ---
 title: Tabla de tipos enteros (Referencia de C#)
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - integral types, C#
 - Visual C#, integral types
 - types [C#], integral types
 - ranges of integral types [C#]
 ms.assetid: 62e86126-46ff-40b0-9028-e61d7558268c
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 663ea9a64284c25999564eca9ea5ccec861e9662
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: a2932d0b7c8e1b01a4965b29d90bdd5711ddb5dc
-ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="integral-types-table-c-reference"></a>Tabla de tipos enteros (Referencia de C#)
 En la siguiente tabla, se muestran los tamaños e intervalos de los tipos enteros, que constituyen un subconjunto de tipos simples.  
@@ -55,12 +37,11 @@ En la siguiente tabla, se muestran los tamaños e intervalos de los tipos entero
  Si el valor que representa un literal entero supera el intervalo de `ulong`, se producirá un error de compilación.  
   
 ## <a name="see-also"></a>Vea también  
- [Referencia de C#](../../../csharp/language-reference/index.md)   
- [Guía de programación de C#](../../../csharp/programming-guide/index.md)   
- [Palabras clave de C#](../../../csharp/language-reference/keywords/index.md)   
- [Tabla de tipos integrados](../../../csharp/language-reference/keywords/built-in-types-table.md)   
- [Tabla de tipos de punto flotante](../../../csharp/language-reference/keywords/floating-point-types-table.md)   
- [Tabla de valores predeterminados](../../../csharp/language-reference/keywords/default-values-table.md)   
- [Tabla de formatos de presentación para valores numéricos](../../../csharp/language-reference/keywords/formatting-numeric-results-table.md)   
+ [Referencia de C#](../../../csharp/language-reference/index.md)  
+ [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
+ [Palabras clave de C#](../../../csharp/language-reference/keywords/index.md)  
+ [Tabla de tipos integrados](../../../csharp/language-reference/keywords/built-in-types-table.md)  
+ [Tabla de tipos de punto flotante](../../../csharp/language-reference/keywords/floating-point-types-table.md)  
+ [Tabla de valores predeterminados](../../../csharp/language-reference/keywords/default-values-table.md)  
+ [Tabla de formatos de presentación para valores numéricos](../../../csharp/language-reference/keywords/formatting-numeric-results-table.md)  
  [Tablas de referencia para tipos](../../../csharp/language-reference/keywords/reference-tables-for-types.md)
-

@@ -1,51 +1,56 @@
 ---
-title: "How to: Control Ordering in a PLINQ Query | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "PLINQ queries, how to control ordering"
+title: "Cómo: Controlar la ordenación en una consulta PLINQ"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords: PLINQ queries, how to control ordering
 ms.assetid: c67eccc7-004d-4b2f-987e-919cbbd62ef7
-caps.latest.revision: 10
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: b9e29aa825a68154e32a34a23ca170258092b88a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# How to: Control Ordering in a PLINQ Query
-En estos ejemplos, se muestra cómo se controla el orden en una consulta PLINQ usando el método de extensión <xref:System.Linq.ParallelEnumerable.AsOrdered%2A>.  
+# <a name="how-to-control-ordering-in-a-plinq-query"></a>Cómo: Controlar la ordenación en una consulta PLINQ
+Estos ejemplos muestra cómo controlar la ordenación en una consulta PLINQ usando el <xref:System.Linq.ParallelEnumerable.AsOrdered%2A> método de extensión.  
   
 > [!WARNING]
->  Estos ejemplos sirven principalmente para mostrar el uso y podría no ejecutarse más rápidamente que la consulta secuencial equivalente de LINQ to Objects.  
+>  Estos ejemplos están pensados principalmente para mostrar el uso y pueden o no pueden ejecutarse más rápido que LINQ secuencial equivalente a las consultas de objetos.  
   
-## Ejemplo  
- En el siguiente ejemplo se mantiene el orden de la secuencia de origen.  A veces esto resulta necesario, por ejemplo, cuando algunos operadores de consulta necesitan una secuencia de origen ordenada para generar los resultados correctos.  
+## <a name="example"></a>Ejemplo  
+ En el ejemplo siguiente se conserva el orden de la secuencia de origen. Esto a veces es necesario; Por ejemplo, algunos operadores de consulta requieren una secuencia de origen ordenadas para generar resultados correctos.  
   
  [!code-csharp[PLINQ#12](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinqsamples.cs#12)]
  [!code-vb[PLINQ#12](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/plinqsnippets1.vb#12)]  
   
-## Ejemplo  
- En el siguiente ejemplo se muestran algunos operadores de consulta cuya secuencia de origen es muy probable que esté ordenada.  Estos operadores pueden funcionar en secuencias no ordenadas, aunque pueden generar resultados inesperados.  
+## <a name="example"></a>Ejemplo  
+ El ejemplo siguiente muestra algunas cuya secuencia de origen es muy probable que se ordenan de operadores de consulta. Estos operadores pueden funcionar en secuencias no ordenadas, pero podría producir resultados inesperados.  
   
  [!code-csharp[PLINQ#14](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinqsamples.cs#14)]
  [!code-vb[PLINQ#14](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/plinqsnippets1.vb#14)]  
   
- Para ejecutar este método, péguelo en la clase PLINQDataSample del proyecto [PLINQ Data Sample](../../../docs/standard/parallel-programming/plinq-data-sample.md) y presione F5.  
+ Para ejecutar este método, péguelo en la clase PLINQDataSample el [PLINQ Data Sample](../../../docs/standard/parallel-programming/plinq-data-sample.md) del proyecto y presione F5.  
   
-## Ejemplo  
- En el ejemplo siguiente se muestra cómo se mantiene el orden en la primera parte de una consulta, cómo se quita el orden para aumentar el rendimiento de una cláusula de combinación y cómo se aplica de nuevo el orden a la secuencia del resultado final.  
+## <a name="example"></a>Ejemplo  
+ En el ejemplo siguiente se muestra cómo se conserva el orden de la primera parte de una consulta, a continuación, quita el orden para aumentar el rendimiento de una cláusula de combinación y, a continuación, volver a aplicar el orden de la secuencia del resultado final.  
   
  [!code-csharp[PLINQ#15](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinqsamples.cs#15)]
  [!code-vb[PLINQ#15](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/plinqsnippets1.vb#15)]  
   
- Para ejecutar este método, péguelo en la clase PLINQDataSample del proyecto [PLINQ Data Sample](../../../docs/standard/parallel-programming/plinq-data-sample.md) y presione F5.  
+ Para ejecutar este método, péguelo en la clase PLINQDataSample el [PLINQ Data Sample](../../../docs/standard/parallel-programming/plinq-data-sample.md) del proyecto y presione F5.  
   
-## Vea también  
- <xref:System.Linq.ParallelEnumerable>   
- [Parallel LINQ \(PLINQ\)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)
+## <a name="see-also"></a>Vea también  
+ <xref:System.Linq.ParallelEnumerable>  
+ [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)

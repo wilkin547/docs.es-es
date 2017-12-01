@@ -9,14 +9,12 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 82ebe16d-5e1c-46cc-91e8-71974296429c
+ms.openlocfilehash: fc7a40667c9b0a623bb0ebdf4ad60783fa58e6c5
+ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
 ms.translationtype: HT
-ms.sourcegitcommit: b647c5dc4e565f9813212d75fab4a2e46c1a47b9
-ms.openlocfilehash: 3d799c6f824bd5cf08c0e939b069a21092395268
-ms.contentlocale: es-es
-ms.lasthandoff: 09/12/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/18/2017
 ---
-
 # <a name="deploying-net-core-apps-with-command-line-interface-cli-tools"></a>Implementación de aplicaciones de .NET Core con herramientas de la interfaz de la línea de comandos (CLI)
 
 Puede implementar una aplicación de .NET Core como una *implementación dependiente de la plataforma*, que incluye los archivos binarios de aplicación pero depende de la presencia de .NET Core en el sistema de destino, o como una *implementación independiente*, que incluye la aplicación y los archivos binarios de .NET Core. Para obtener información general, vea [Implementación de aplicaciones .NET Core](index.md).
@@ -46,11 +44,11 @@ La implementación de una implementación dependiente del marco sin dependencias
 
    Abra el archivo *Program.cs* en el editor y reemplace el código generado automáticamente por el código siguiente. Pide al usuario que escriba texto y muestra las palabras individuales escritas por el usuario. Se usa la expresión regular `\w+` para separar las palabras en el texto de entrada.
 
-   [!code-cs[deployment#1](../../../samples/snippets/core/deploying/deployment-example.cs)]
+   [!code-csharp[deployment#1](../../../samples/snippets/core/deploying/deployment-example.cs)]
 
 1. Actualizar las herramientas y las dependencias del proyecto.
  
-   Ejecute el comando [dotnet restore](../tools/dotnet-restore.md) para restaurar las dependencias especificadas en el proyecto.
+   Ejecute el [dotnet restauración](../tools/dotnet-restore.md) ([Véase la nota](#dotnet-restore-note)) comando para restaurar las dependencias especificadas en el proyecto.
 
 1. Crear una versión de depuración de la aplicación.
 
@@ -73,7 +71,7 @@ Además de los archivos binarios de la aplicación, el instalador también debe 
 
 ## <a name="framework-dependent-deployment-with-third-party-dependencies"></a>Implementación dependiente de marco de trabajo con dependencias de terceros
 
-La implementación de una implementación dependiente de la plataforma con una o más dependencias de terceros requiere que esas dependencias estén disponibles para el proyecto. Se requieren dos pasos adicionales antes de poder ejecutar el comando `dotnet restore`:
+La implementación de una implementación dependiente de la plataforma con una o más dependencias de terceros requiere que esas dependencias estén disponibles para el proyecto. Se requieren dos pasos adicionales antes de poder ejecutar el `dotnet restore` ([Véase la nota](#dotnet-restore-note)) comando:
 
 1. Agregue referencias a las bibliotecas de terceros requeridas a la sección `<ItemGroup>` del archivo *csproj*. La siguiente sección `<ItemGroup>` contiene una dependencia de [Json.NET](http://www.newtonsoft.com/json) como biblioteca de terceros:
 
@@ -83,7 +81,7 @@ La implementación de una implementación dependiente de la plataforma con una o
       </ItemGroup>
       ```
 
-1. Si no lo ha hecho ya, descargue el paquete de NuGet que contiene la dependencia de terceros. Para descargar el paquete, ejecute el comando `dotnet restore` después de agregar la dependencia. Como la dependencia se resuelve fuera de la caché local de NuGet en tiempo de publicación, debe estar disponible en el sistema.
+1. Si no lo ha hecho ya, descargue el paquete de NuGet que contiene la dependencia de terceros. Para descargar el paquete, ejecute el `dotnet restore` ([Véase la nota](#dotnet-restore-note)) comando después de agregar la dependencia. Como la dependencia se resuelve fuera de la caché local de NuGet en tiempo de publicación, debe estar disponible en el sistema.
 
 Tenga en cuenta que una implementación dependiente de la plataforma con dependencias de terceros solo será tan portátil como sus dependencias de terceros. Por ejemplo, si una biblioteca de terceros solo admite macOS, la aplicación no se puede portar a sistemas Windows. Esto ocurre si la dependencia de terceros propiamente dicha depende del código nativo. Un buen ejemplo de esto es [el servidor Kestrel](/aspnet/core/fundamentals/servers/kestrel), que requiere una dependencia nativa de [libuv](https://github.com/libuv/libuv). Cuando se crea una FDD para una aplicación con esta clase de dependencia de terceros, el resultado publicado contiene una carpeta para cada [identificador en tiempo de ejecución (RID)](../rid-catalog.md) que admita la dependencia nativa (y que exista en su paquete de NuGet).
 
@@ -103,7 +101,7 @@ La implementación de una implementación independiente sin dependencias de terc
 
    Abra el archivo *Program.cs* en el editor y reemplace el código generado automáticamente por el código siguiente. Pide al usuario que escriba texto y muestra las palabras individuales escritas por el usuario. Se usa la expresión regular `\w+` para separar las palabras en el texto de entrada.
 
-   [!code-cs[deployment#1](../../../samples/snippets/core/deploying/deployment-example.cs)]
+   [!code-csharp[deployment#1](../../../samples/snippets/core/deploying/deployment-example.cs)]
 
 1. Definir las plataformas de destino de la aplicación.
 
@@ -121,7 +119,7 @@ La implementación de una implementación independiente sin dependencias de terc
 
 1. Actualizar las herramientas y las dependencias del proyecto.
 
-   Ejecute el comando [dotnet restore](../tools/dotnet-restore.md) para restaurar las dependencias especificadas en el proyecto.
+   Ejecute el [dotnet restauración](../tools/dotnet-restore.md) ([Véase la nota](#dotnet-restore-note)) comando para restaurar las dependencias especificadas en el proyecto.
 
 1. Crear una versión de depuración de la aplicación.
 
@@ -156,7 +154,7 @@ A continuación se muestra el archivo *csproj* completo para este proyecto.
 
 ## <a name="self-contained-deployment-with-third-party-dependencies"></a>Implementación autocontenida con dependencias de terceros
 
-Implementar una implementación independiente con una o varias dependencias de terceros implica agregar las dependencias. Se requieren dos pasos adicionales antes de poder ejecutar el comando `dotnet restore`:
+Implementar una implementación independiente con una o varias dependencias de terceros implica agregar las dependencias. Se requieren dos pasos adicionales antes de poder ejecutar el `dotnet restore` ([Véase la nota](#dotnet-restore-note)) comando:
 
 1. Agregue referencias a las bibliotecas de terceros a la sección `<ItemGroup>` del archivo *csproj*. La siguiente sección `<ItemGroup>` usa Json.NET como biblioteca de terceros.
 
@@ -166,7 +164,7 @@ Implementar una implementación independiente con una o varias dependencias de t
       </ItemGroup>
     ```
 
-1. Si aún no lo ha hecho, descargue el paquete de NuGet que contiene la dependencia de terceros en el sistema. Para que la dependencia esté disponibles para la aplicación, ejecute el comando `dotnet restore` después de agregar la dependencia. Como la dependencia se resuelve fuera de la caché local de NuGet en tiempo de publicación, debe estar disponible en el sistema.
+1. Si aún no lo ha hecho, descargue el paquete de NuGet que contiene la dependencia de terceros en el sistema. Para disponer de la dependencia a la aplicación, ejecute el `dotnet restore` ([Véase la nota](#dotnet-restore-note)) comando después de agregar la dependencia. Como la dependencia se resuelve fuera de la caché local de NuGet en tiempo de publicación, debe estar disponible en el sistema.
 
 A continuación se muestra el archivo *csproj* completo de este proyecto:
 
@@ -186,6 +184,9 @@ A continuación se muestra el archivo *csproj* completo de este proyecto:
 Al implementar la aplicación, los archivos de aplicación también contienen las dependencias de terceros usadas en la aplicación. No se requieren las bibliotecas de terceros en el sistema en el que se ejecuta la aplicación.
 
 Tenga en cuenta que solo puede implementar una implementación autocontenida con una biblioteca de terceros en plataformas compatibles con esa biblioteca. Esto es similar a tener dependencias de terceros con dependencias nativas en una implementación dependiente de la plataforma, donde las dependencias nativas deben ser compatibles con la plataforma en la que se implementa la aplicación.
+
+<a name="dotnet-restore-note"></a>
+[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
 # <a name="see-also"></a>Vea también
 

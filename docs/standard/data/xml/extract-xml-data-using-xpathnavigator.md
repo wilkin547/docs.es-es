@@ -1,30 +1,31 @@
 ---
-title: "Extraer datos XML con XPathNavigator | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: Extraer datos XML con XPathNavigator
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 095b0987-ee4b-4595-a160-da1c956ad576
-caps.latest.revision: 2
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: c42539db3750ebc2a4220ef776b89bbabe6aaca3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Extraer datos XML con XPathNavigator
-Existen varias formas de representar un documento XML en Microsoft .NET Framework.  Entre ellas se incluye el uso de <xref:System.String> o de las clases <xref:System.Xml.XmlReader>, <xref:System.Xml.XmlWriter>, <xref:System.Xml.XmlDocument> o <xref:System.Xml.XPath.XPathDocument>.  Para que sea más fácil moverse entre estas diferentes representaciones de un documento XML, la clase <xref:System.Xml.XPath.XPathNavigator> incluye una serie de métodos y propiedades para extraer el código XML como un objeto <xref:System.String>, <xref:System.Xml.XmlReader> o <xref:System.Xml.XmlWriter>.  
+# <a name="extract-xml-data-using-xpathnavigator"></a>Extraer datos XML con XPathNavigator
+Existen varias formas de representar un documento XML en Microsoft .NET Framework. Entre ellas se incluye el uso de <xref:System.String> o de las clases <xref:System.Xml.XmlReader>, <xref:System.Xml.XmlWriter>, <xref:System.Xml.XmlDocument> o <xref:System.Xml.XPath.XPathDocument>. Para que sea más fácil moverse entre estas diferentes representaciones de un documento XML, la clase <xref:System.Xml.XPath.XPathNavigator> incluye una serie de métodos y propiedades para extraer el código XML como un objeto <xref:System.String>, <xref:System.Xml.XmlReader> o <xref:System.Xml.XmlWriter>.  
   
-## Conversión de XPathNavigator en una cadena  
+## <a name="convert-an-xpathnavigator-to-a-string"></a>Conversión de XPathNavigator en una cadena  
  La propiedad <xref:System.Xml.XPath.XPathNavigator.OuterXml%2A> de la clase <xref:System.Xml.XPath.XPathNavigator> se utiliza para obtener el marcado de todo el documento XML o tan sólo el de un nodo y sus nodos secundarios.  
   
 > [!NOTE]
@@ -56,12 +57,12 @@ navigator.MoveToChild(XPathNodeType.Element);
 string root = navigator.OuterXml;  
 ```  
   
-## Conversión de XPathNavigator en XmlReader  
+## <a name="convert-an-xpathnavigator-to-an-xmlreader"></a>Conversión de XPathNavigator en XmlReader  
  El método <xref:System.Xml.XPath.XPathNavigator.ReadSubtree%2A> se utiliza para secuenciar todo el contenido de un documento XML o tan sólo un nodo y sus nodos secundarios en un objeto <xref:System.Xml.XmlReader>.  
   
- Cuando se crea el objeto <xref:System.Xml.XmlReader> con el nodo actual y sus nodos secundarios, la propiedad <xref:System.Xml.XmlReader.ReadState%2A> del objeto <xref:System.Xml.XmlReader> se establece en <xref:System.Xml.ReadState>.  Cuando por primera vez se llama al método <xref:System.Xml.XmlReader.Read%2A> del objeto <xref:System.Xml.XmlReader>, <xref:System.Xml.XmlReader> se desplaza al nodo actual de <xref:System.Xml.XPath.XPathNavigator>.  El nuevo objeto <xref:System.Xml.XmlReader> continúa leyendo hasta llegar al final del árbol de XML.  En este punto, el método <xref:System.Xml.XmlReader.Read%2A> devuelve `false` y la propiedad <xref:System.Xml.XmlReader.ReadState%2A> del objeto <xref:System.Xml.XmlReader> se establece en <xref:System.Xml.ReadState>.  
+ Cuando se crea el objeto <xref:System.Xml.XmlReader> con el nodo actual y sus nodos secundarios, la propiedad <xref:System.Xml.XmlReader> del objeto <xref:System.Xml.XmlReader.ReadState%2A> se establece en <xref:System.Xml.ReadState.Initial>. Cuando por primera vez se llama al método <xref:System.Xml.XmlReader> del objeto <xref:System.Xml.XmlReader.Read%2A>, <xref:System.Xml.XmlReader> se desplaza al nodo actual de <xref:System.Xml.XPath.XPathNavigator>. El nuevo objeto <xref:System.Xml.XmlReader> continúa leyendo hasta llegar al final del árbol de XML. En este punto, el método <xref:System.Xml.XmlReader.Read%2A> devuelve `false` y la propiedad <xref:System.Xml.XmlReader> del objeto <xref:System.Xml.XmlReader.ReadState%2A> se establece en <xref:System.Xml.ReadState.EndOfFile>.  
   
- La posición del objeto <xref:System.Xml.XPath.XPathNavigator> no cambia debido a la creación o el movimiento del objeto <xref:System.Xml.XmlReader>.  El método <xref:System.Xml.XPath.XPathNavigator.ReadSubtree%2A> sólo es válido cuando se encuentra situado en un elemento o en un nodo raíz.  
+ La posición del objeto <xref:System.Xml.XPath.XPathNavigator> no cambia debido a la creación o el movimiento del objeto <xref:System.Xml.XmlReader>. El método <xref:System.Xml.XPath.XPathNavigator.ReadSubtree%2A> sólo es válido cuando se encuentra situado en un elemento o en un nodo raíz.  
   
  En el siguiente ejemplo se muestra cómo obtener un objeto <xref:System.Xml.XmlReader> que contiene todo el documento XML de un objeto <xref:System.Xml.XPath.XPathDocument>, así como un solo nodo y sus nodos secundarios.  
   
@@ -123,7 +124,7 @@ book.Close();
   
  [!code-xml[XPathXMLExamples#1](../../../../samples/snippets/xml/VS_Snippets_Data/XPathXMLExamples/XML/books.xml#1)]  
   
-## Conversión de XPathNavigator en XmlWriter  
+## <a name="converting-an-xpathnavigator-to-an-xmlwriter"></a>Conversión de XPathNavigator en XmlWriter  
  El método <xref:System.Xml.XPath.XPathNavigator.WriteSubtree%2A> se utiliza para secuenciar todo el contenido de un documento XML o tan sólo un nodo y sus nodos secundarios en un objeto <xref:System.Xml.XmlWriter>.  
   
  La posición del objeto <xref:System.Xml.XPath.XPathNavigator> no cambia debido a la creación del objeto <xref:System.Xml.XmlWriter>.  
@@ -168,11 +169,11 @@ book.Close();
   
  El ejemplo toma como entrada el archivo `books.xml` que aparecía anteriormente en este tema.  
   
-## Vea también  
- <xref:System.Xml.XmlDocument>   
- <xref:System.Xml.XPath.XPathDocument>   
- <xref:System.Xml.XPath.XPathNavigator>   
- [Procesamiento de datos XML con el modelo de datos XPath](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)   
- [Navegación por un conjunto de nodos con XPathNavigator](../../../../docs/standard/data/xml/node-set-navigation-using-xpathnavigator.md)   
- [Navegación por nodos de espacios de nombres y atributos con XPathNavigator](../../../../docs/standard/data/xml/attribute-and-namespace-node-navigation-using-xpathnavigator.md)   
- [Acceso a datos XML fuertemente tipados utilizando XPathNavigator](../../../../docs/standard/data/xml/accessing-strongly-typed-xml-data-using-xpathnavigator.md)
+## <a name="see-also"></a>Vea también  
+ <xref:System.Xml.XmlDocument>  
+ <xref:System.Xml.XPath.XPathDocument>  
+ <xref:System.Xml.XPath.XPathNavigator>  
+ [Procesamiento de datos XML con el modelo de datos XPath](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)  
+ [Navegación de conjunto de nodos con XPathNavigator](../../../../docs/standard/data/xml/node-set-navigation-using-xpathnavigator.md)  
+ [Atributo y navegación Namespace nodos con XPathNavigator](../../../../docs/standard/data/xml/attribute-and-namespace-node-navigation-using-xpathnavigator.md)  
+ [Acceso a fuertemente tipados datos XML con XPathNavigator](../../../../docs/standard/data/xml/accessing-strongly-typed-xml-data-using-xpathnavigator.md)

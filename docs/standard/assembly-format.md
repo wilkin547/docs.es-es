@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 6520323e-ff28-4c8a-ba80-e64a413199e6
+ms.openlocfilehash: 797bd4a7c160feda69a3190d9e364b166a51c703
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 934373d61407c8cc19b7d6424898a582880f9c21
-ms.openlocfilehash: 47e895274f6d400639878e0bd5c700e04b554ce5
-ms.contentlocale: es-es
-ms.lasthandoff: 08/21/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="net-assembly-file-format"></a>Formato de archivo de ensamblado .NET
 
 .NET define un formato de archivo binario ("ensamblado") que se usa para describir por completo y contener programas de .NET. Los ensamblados se usan para los programas, así como para las bibliotecas dependientes. Un programa de .NET se puede ejecutar como uno de varios ensamblados, no se necesitan otros artefactos, además de la implementación de .NET adecuada. Las dependencias nativas, incluidas las API del sistema operativo, constituyen un asunto independiente y no se incluyen en el formato de ensamblado. NET, aunque a veces se describen con este formato (por ejemplo, WinRT).
@@ -40,5 +38,4 @@ Encabezados de ensamblado de ECMA 335 II.25.1, Estructura del formato de archivo
 
 ## <a name="processing-the-assemblies"></a>Procesar los ensamblados
 
-Se pueden escribir herramientas o API para procesar ensamblados. La información de ensamblado permite tomar decisiones mediante programación en tiempo de ejecución, volver a escribir ensamblados, proporcionar API IntelliSense en un editor y generar documentación. <xref:System.Reflection?displayProperty=fullName> y [Mono.Cecil](http://www.mono-project.com/docs/tools+libraries/libraries/Mono.Cecil/) son buenos ejemplos de herramientas que se usan con frecuencia con este propósito.
-
+Se pueden escribir herramientas o API para procesar ensamblados. La información de ensamblado permite tomar decisiones mediante programación en tiempo de ejecución, volver a escribir ensamblados, proporcionar API IntelliSense en un editor y generar documentación. <xref:System.Reflection?displayProperty=nameWithType> y [Mono.Cecil](http://www.mono-project.com/docs/tools+libraries/libraries/Mono.Cecil/) son buenos ejemplos de herramientas que se usan con frecuencia con este propósito.

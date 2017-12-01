@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 7819424510fe33c775cefb195f78697aef8b512d
-ms.contentlocale: es-es
-ms.lasthandoff: 09/14/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="net-guide"></a>Guía de .NET
 
 En esta guía de .NET encontrará mucha información sobre .NET.  En función de cómo de familiarizado esté con .NET, es posible que quiera ver varias secciones de esta guía y otras también incluidas en la documentación de .NET.
@@ -68,4 +66,3 @@ Consulte también la guía correspondiente a cada lenguaje de programación para
 ## <a name="api-reference"></a>Referencia de API
 
 Para obtener más información sobre la gran variedad de API disponibles, consulte la [Referencia de API de .NET](../../api/index.md).
-

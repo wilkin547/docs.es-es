@@ -1,60 +1,63 @@
 ---
-title: "SRMP | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: SRMP
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: cf37078c-dcb4-45e0-acaf-2f196521b226
-caps.latest.revision: 14
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: d42c6f19091703242a730cb40495cfb073631682
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# SRMP
-Este ejemplo muestra cómo llevar a cabo la comunicación en cola por transacciones utilizando Message Queuing \(MSMQ\) a través de HTTP.  
+# <a name="srmp"></a>SRMP
+Este ejemplo muestra cómo llevar a cabo la comunicación en cola por transacciones utilizando Message Queuing (MSMQ) a través de HTTP.  
   
- En la comunicación con colas, el cliente se comunica con el servicio mediante una cola.  Más exactamente, el cliente envía los mensajes a una cola.  El servicio recibe los mensajes de la cola.  El servicio y el cliente no necesitan ejecutarse simultáneamente para comunicarse mediante una cola.  
+ En la comunicación con colas, el cliente se comunica con el servicio mediante una cola. Más exactamente, el cliente envía los mensajes a una cola. El servicio recibe los mensajes de la cola. El servicio y el cliente no necesitan ejecutarse simultáneamente para comunicarse mediante una cola.  
   
- MSMQ permite al uso de HTTP \(incluso el uso de HTTPS\) para enviar los mensajes a una cola.  En este ejemplo, mostramos cómo utilizar la comunicación puesta en cola[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] y cómo enviar los mensajes sobre HTTP.  MSMQ utiliza un protocolo llamado SRMP, que es un protocolo basado en SOAP para la comunicación sobre HTTP.  
+ MSMQ permite al uso de HTTP (incluso el uso de HTTPS) para enviar los mensajes a una cola. En este ejemplo, mostramos cómo utilizar la comunicación puesta en cola[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] y cómo enviar los mensajes sobre HTTP. MSMQ utiliza un protocolo llamado SRMP, que es un protocolo basado en SOAP para la comunicación sobre HTTP.  
   
-### Configurar, compilar y ejecutar el ejemplo  
+### <a name="to-set-up-build-and-run-the-sample"></a>Configurar, compilar y ejecutar el ejemplo  
   
-1.  Asegúrese de realizar el procedimiento de [Procedimiento de instalación única para los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  Asegúrese de que ha llevado a cabo la [procedimiento de instalación de un solo uso para los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Para compilar el código C\# o Visual Basic .NET Edition de la solución, siga las instrucciones de [Compilación de los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2.  Para compilar el código C# o Visual Basic .NET Edition de la solución, siga las instrucciones de [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  Para ejecutar el ejemplo en una configuración con un único equipo o con varios, siga las instrucciones de [Ejecución de los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3.  Para ejecutar el ejemplo en una configuración de equipo único o de varios, siga las instrucciones de [ejecutando los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
-4.  Antes de ejecutar el ejemplo en **Agregar\/Quitar componentes de Windows**, asegúrese de que MSMQ se instala con compatibilidad del HTTP.  Instalando la compatibilidad HTTP se instala automáticamente Internet Information Services \(IIS\) y se agrega la compatibilidad con protocolos en IIS para MSMQ.  
+4.  Antes de ejecutar el ejemplo **agregar o quitar componentes de Windows**, asegúrese de que MSMQ está instalado con compatibilidad con HTTP. Instalando la compatibilidad HTTP se instala automáticamente Internet Information Services (IIS) y se agrega la compatibilidad con protocolos en IIS para MSMQ.  
   
-5.  Si desea asegurarse de que HTTP se utiliza para la comunicación, puede permitirle a MSMQ ejecutarse en modo endurecido.  Esto asegurar que ningún mensaje dirigido a cualquier cola hospedada en el equipo puede llegar utilizando cualquier transporte no HTTP.  
+5.  Si desea asegurarse de que HTTP se utiliza para la comunicación, puede permitirle a MSMQ ejecutarse en modo endurecido. Esto asegurar que ningún mensaje dirigido a cualquier cola hospedada en el equipo puede llegar utilizando cualquier transporte no HTTP.  
   
 6.  Después de haber seleccionado MSMQ para ejecutarse en modo endurecido, el equipo requiere un reinicio en [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)].  
   
 7.  Ejecute el servicio.  
   
-8.  Ejecute el cliente.  Aseguúrese de que cambia la dirección del extremo para señalar al nombre de equipo o dirección IP en lugar del host local.  El cliente envía un mensaje y sale.  
+8.  Ejecute el cliente. Aseguúrese de que cambia la dirección del extremo para señalar al nombre de equipo o dirección IP en lugar del host local. El cliente envía un mensaje y sale.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  Para ejecutar este ejemplo, IIS se debe instalar en el servicio y en los equipos cliente además de en MSMQ.  
   
-## Demostraciones  
- El ejemplo muestra cómo enviar mensajes puestos en cola [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] utilizando MSMQ sobre HTTP.  Esto también se denomina mensajería de SRMP.  Cuando se envía un mensaje en cola, MSMQ en el equipo emisor transfiere los mensajes al administrador receptor de cola mediante TCP o transporte HTTP.  Eligiendo SRMP, el usuario indica la opción de HTTP como un transporte para la transferencia de la cola.  SRMP Secure habilita el uso de HTTPS.  
+## <a name="demonstrates"></a>Demostraciones  
+ El ejemplo muestra cómo enviar mensajes puestos en cola [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] utilizando MSMQ sobre HTTP. Esto también se denomina mensajería de SRMP. Cuando se envía un mensaje en cola, MSMQ en el equipo emisor transfiere los mensajes al administrador receptor de cola mediante TCP o transporte HTTP. Eligiendo SRMP, el usuario indica la opción de HTTP como un transporte para la transferencia de la cola. SRMP Secure habilita el uso de HTTPS.  
   
-## Ejemplo  
- El código muestra de este ejemplo está basado en el ejemplo de transacción.  El modo en que se envía un mensaje a la cola y se recibe un mensaje de la cola utilizando SRMP es igual al modo en que se envían y reciben mensajes mediante un protocolo Native.  
+## <a name="example"></a>Ejemplo  
+ El código muestra de este ejemplo está basado en el ejemplo de transacción. El modo en que se envía un mensaje a la cola y se recibe un mensaje de la cola utilizando SRMP es igual al modo en que se envían y reciben mensajes mediante un protocolo Native.  
   
- La configuración para el cliente se cambia para indicar la opción del protocolo de transferencia de la cola.  El protocolo de transferencia de la cola puede ser uno de Nativo, SRMP o SrmpSecure.  De forma predeterminada, el protocolo de transferencia es Nativo.  El cliente y el servicio se especifican en la configuración para utilizar SRMP en este ejemplo.  
+ La configuración para el cliente se cambia para indicar la opción del protocolo de transferencia de la cola. El protocolo de transferencia de la cola puede ser uno de Nativo, SRMP o SrmpSecure. De forma predeterminada, el protocolo de transferencia es Nativo. El cliente y el servicio se especifican en la configuración para utilizar SRMP en este ejemplo.  
   
- Hay respecto a limitaciones a SRMP la seguridad de transporte.  La seguridad de transporte de MSMQ predeterminada requiere Active Directory, que a su vez requiere que el administrador de cola emisor y el administrador de cola receptor residan en el mismo dominio de Windows.  Esto no es posible al enviar los mensajes sobre el límite del HTTP..  Como tal, la seguridad de transporte predeterminada no funciona.  La seguridad de transporte se debe establecer para Certificar si se desea la seguridad de transporte.  El modo de seguridad también se puede utilizar para proteger el mensaje.  En este ejemplo, transporte y el modo de seguridad están desactivados para mostrar la mensajería de SRMP.  
+ Hay respecto a limitaciones a SRMP la seguridad de transporte. La seguridad de transporte de MSMQ predeterminada requiere Active Directory, que a su vez requiere que el administrador de cola emisor y el administrador de cola receptor residan en el mismo dominio de Windows. Esto no es posible al enviar los mensajes sobre el límite del HTTP. Como tal, la seguridad de transporte predeterminada no funciona. La seguridad de transporte se debe establecer para Certificar si se desea la seguridad de transporte. El modo de seguridad también se puede utilizar para proteger el mensaje. En este ejemplo, transporte y el modo de seguridad están desactivados para mostrar la mensajería de SRMP.  
   
-```  
+```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
 <configuration>  
   
@@ -95,12 +98,12 @@ OrderDetails
 ```  
   
 > [!IMPORTANT]
->  Puede que los ejemplos ya estén instalados en su equipo.  Compruebe el siguiente directorio \(predeterminado\) antes de continuar.  
+>  Puede que los ejemplos ya estén instalados en su equipo. Compruebe el siguiente directorio (predeterminado) antes de continuar.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si este directorio no existe, vaya a la página de [ejemplos de Windows Communication Foundation \(WCF\) y Windows Workflow Foundation \(WF\) para .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los ejemplos de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] y [!INCLUDE[wf1](../../../../includes/wf1-md.md)].  Este ejemplo se encuentra en el siguiente directorio.  
+>  Si no existe este directorio, vaya a la página [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) [Ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4] para descargar todos los ejemplos de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Este ejemplo se encuentra en el siguiente directorio.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\SRMP`  
   
-## Vea también
+## <a name="see-also"></a>Vea también

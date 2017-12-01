@@ -1,45 +1,26 @@
 ---
 title: string (Referencia de C#)
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
 f1_keywords:
 - string
 - string_CSharpKeyword
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - strings [C#], reference
 - '@ string literal'
 - string literals [C#]
 - string keyword [C#]
 ms.assetid: 3037e558-fb22-494d-bca1-a15ade11b11a
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 87df2b158b173072aad5257594e1b1482ae61067
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 56847aad4cb8b0427594a299df2306d21675506b
-ms.contentlocale: es-es
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="string-c-reference"></a>string (Referencia de C#)
 El tipo `string` representa una secuencia de cero o más caracteres Unicode. `string` es un alias de <xref:System.String> en .NET Framework.  
@@ -118,20 +99,19 @@ Console.WriteLine(a);
  Para obtener más información sobre las cadenas en C#, vea [Strings](../../../csharp/programming-guide/strings/index.md) (Cadenas [Guía de programación de C#]).  
   
 ## <a name="example"></a>Ejemplo  
- [!code-cs[csrefKeywordsTypes#17](../../../csharp/language-reference/keywords/codesnippet/CSharp/string_1.cs)]  
+ [!code-csharp[csrefKeywordsTypes#17](../../../csharp/language-reference/keywords/codesnippet/CSharp/string_1.cs)]  
   
 ## <a name="c-language-specification"></a>Especificación del lenguaje C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Vea también  
- [Referencia de C#](../../../csharp/language-reference/index.md)   
- [Guía de programación de C#](../../../csharp/programming-guide/index.md)   
- [Procedimientos recomendados para el uso de cadenas en .NET Framework](../../../standard/base-types/best-practices-strings.md)   
- [Palabras clave de C#](../../../csharp/language-reference/keywords/index.md)   
- [Guía de programación de C#](../../../csharp/programming-guide/index.md)   
- [Reference Types](../../../csharp/language-reference/keywords/reference-types.md)  (Tipos de referencia [Referencia de C#])  
- [Value Types](../../../csharp/language-reference/keywords/value-types.md)  (Tipos de valor [Referencia de C#])  
- [Operaciones básicas de cadenas](../../../standard/base-types/basic-string-operations.md)   
- [Creación de nuevas cadenas](../../../standard/base-types/creating-new.md)   
+ [Referencia de C#](../../../csharp/language-reference/index.md)  
+ [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
+ [Procedimientos recomendados para el uso de cadenas](../../../standard/base-types/best-practices-strings.md)  
+ [Palabras clave de C#](../../../csharp/language-reference/keywords/index.md)  
+ [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
+ [Tipos de referencia](../../../csharp/language-reference/keywords/reference-types.md)  
+ [Tipos de valor](../../../csharp/language-reference/keywords/value-types.md)  
+ [Operaciones básicas de cadenas](../../../standard/base-types/basic-string-operations.md)  
+ [Creación de cadenas nuevas](../../../standard/base-types/creating-new.md)  
  [Tabla de formatos de presentación para valores numéricos](../../../csharp/language-reference/keywords/formatting-numeric-results-table.md)
-

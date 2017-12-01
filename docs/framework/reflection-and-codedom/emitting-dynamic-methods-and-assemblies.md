@@ -1,12 +1,11 @@
 ---
 title: "Emitir métodos y ensamblados dinámicos"
 ms.custom: 
-ms.date: 03/30/2017
+ms.date: 08/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +14,14 @@ helpviewer_keywords:
 - metadata, emit interfaces
 - reflection emit, overview
 - assemblies [.NET Framework], emitting dynamic assemblies
-ms.assetid: 8e8e2631-62fd-40e7-a8ee-0039b06749bc
-caps.latest.revision: 18
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 91b0cc4614834f2ad8f7b54d9364d484ca9a6990
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: c28a5b71a93ea5159adc73316771d490dbe0db87
-ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="emitting-dynamic-methods-and-assemblies"></a>Emitir métodos y ensamblados dinámicos
 En esta sección se describe un conjunto de tipos administrados del espacio de nombres <xref:System.Reflection.Emit> que permite a un compilador o una herramienta emitir metadatos y el Lenguaje Intermedio de Microsoft (MSIL) en tiempo de ejecución y, opcionalmente, generar un archivo portable ejecutable (PE) en el disco. Los motores de scripts y los compiladores son los principales usuarios de este espacio de nombres. En esta sección, la funcionalidad proporcionada por el espacio de nombres <xref:System.Reflection.Emit> se conoce como emisión de la reflexión.  
@@ -48,9 +44,22 @@ En esta sección se describe un conjunto de tipos administrados del espacio de n
   
  Otro recurso útil para trabajar con metadatos y MSIL es la documentación de Common Language Infrastructure (CLI), especialmente la sección II sobre la definición y la semántica de los metadatos y la partición III sobre el conjunto de instrucciones de CIL. La documentación está disponible en línea en [MSDN](http://go.microsoft.com/fwlink/?LinkID=65555) y en el [sitio web de Ecma](http://go.microsoft.com/fwlink/?LinkId=116487).  
   
-## <a name="in-this-section"></a>En esta sección  
- [Problemas de seguridad en la emisión de la reflexión](../../../docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md)  
- Describe los problemas de seguridad relacionados con la creación de ensamblados dinámicos mediante emisión de la reflexión.  
+## <a name="in-this-section"></a>En esta sección
+  
+[Problemas de seguridad en la reflexión de la emisión](../../../docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md)  
+Describe los problemas de seguridad relacionados con la creación de ensamblados dinámicos mediante emisión de la reflexión.  
+
+[Cómo: definir y ejecutar métodos dinámicos](how-to-define-and-execute-dynamic-methods.md)   
+Muestra cómo ejecutar un método dinámico simple y un método dinámico enlazado a una instancia de una clase.
+
+[Cómo: definir un tipo genérico con reflection emit](how-to-define-a-generic-type-with-reflection-emit.md)   
+Muestra cómo crear un tipo genérico simple con dos parámetros de tipo, cómo aplicar la clase, interfaz y restricciones especiales a los parámetros de tipo y cómo crear a memers que usa los parámetros de tipo de la clase como tipos de parámetro y tipos de valor devuelto.
+
+[Cómo: definir un método genérico con reflection emit](how-to-define-a-generic-method-with-reflection-emit.md)   
+Muestra cómo crear, emitir e invocar un método genérico simple.
+
+[Ensamblados recopilables para la generación de tipo dinámico](collectible-assemblies.md)   
+Presenta a los ensamblados recopilables, que son ensamblados dinámicos que se pueden descargar sin descargar el dominio de aplicación en el que se crearon.
   
 ## <a name="reference"></a>Referencia  
  <xref:System.Reflection.Emit.OpCodes>  
@@ -70,5 +79,4 @@ En esta sección se describe un conjunto de tipos administrados del espacio de n
  Explica cómo explorar metadatos y código administrado.  
   
  [Ensamblados en Common Language Runtime](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
- Proporciona información general de los ensamblados de .NET Framework.
-
+ Proporciona información general de los ensamblados de implementaciones de. NET.

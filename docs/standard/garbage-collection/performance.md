@@ -1,26 +1,29 @@
 ---
-title: "Garbage Collection and Performance | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "garbage collection, troubleshooting"
-  - "garbage collection, performance"
+title: "Recolección de elementos no utilizados y rendimiento"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- garbage collection, troubleshooting
+- garbage collection, performance
 ms.assetid: c203467b-e95c-4ccf-b30b-953eb3463134
-caps.latest.revision: 35
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 33
+caps.latest.revision: "35"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 13f89749a4df3496b8c169e67c2f221a940568bf
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Garbage Collection and Performance
-En este tema se describen los problemas relacionados con la recolección de elementos no utilizados y el uso de memoria.  Se tratan problemas relativos al montón administrado y se explica cómo minimizar el efecto de la recolección de elementos no utilizados en las aplicaciones.  Cada problema contiene vínculos a procedimientos que puede emplear para investigar los problemas.  
+# <a name="garbage-collection-and-performance"></a>Recolección de elementos no utilizados y rendimiento
+<a name="top"></a> En este tema se describen problemas relacionados con la recolección de elementos no utilizados y el uso de memoria. Se tratan problemas relativos al montón administrado y se explica cómo minimizar el efecto de la recolección de elementos no utilizados en las aplicaciones. Cada problema contiene vínculos a procedimientos que puede emplear para investigar los problemas.  
   
  Este tema contiene las siguientes secciones:  
   
@@ -33,47 +36,47 @@ En este tema se describen los problemas relacionados con la recolección de elem
 -   [Procedimientos para comprobar el rendimiento](#performance_check_procedures)  
   
 <a name="performance_analysis_tools"></a>   
-## Herramientas de análisis de rendimiento  
- En las próximas siguientes se describen las herramientas disponibles para investigar los problemas de uso de memoria y de recolección de elementos no utilizados.  Los [procedimientos](#performance_check_procedures) que se muestran más adelante en este tema hacen referencia a estas herramientas.  
+## <a name="performance-analysis-tools"></a>Herramientas de análisis de rendimiento  
+ En las próximas siguientes se describen las herramientas disponibles para investigar los problemas de uso de memoria y de recolección de elementos no utilizados. Los [procedimientos](#performance_check_procedures) que se muestran más adelante en este tema hacen referencia a estas herramientas.  
   
 <a name="perf_counters"></a>   
-### Contadores de rendimiento de memoria  
- Puede usar contadores de rendimiento para recopilar datos de rendimiento.  Para obtener instrucciones, consulte [Generar perfiles en tiempo de ejecución](../../../docs/framework/debug-trace-profile/runtime-profiling.md).  La categoría CLR Memory de contadores de rendimiento de .NET, tal y como se describe en [Contadores de rendimiento en .NET Framework](../../../docs/framework/debug-trace-profile/performance-counters.md), proporciona información sobre el recolector de elementos no utilizados.  
+### <a name="memory-performance-counters"></a>Contadores de rendimiento de memoria  
+ Puede usar contadores de rendimiento para recopilar datos de rendimiento. Para obtener instrucciones, vea [Runtime Profiling](../../../docs/framework/debug-trace-profile/runtime-profiling.md) (Generación de perfiles en tiempo de ejecución). La categoría CLR Memory de contadores de rendimiento de .NET, tal y como se describe en [Performance Counters in the .NET Framework](../../../docs/framework/debug-trace-profile/performance-counters.md) (Contadores de rendimiento de .NET Framework), ofrece información sobre el recolector de elementos no utilizados.  
   
 <a name="sos"></a>   
-### Depurar con SOS  
- Puede usar el [depurador de Windows \(WinDbg\)](http://go.microsoft.com/fwlink/?LinkId=186482) para inspeccionar los objetos del montón administrado.  
+### <a name="debugging-with-sos"></a>Depurar con SOS  
+ Puede usar el [depurador de Windows (WinDbg)](http://go.microsoft.com/fwlink/?LinkId=186482) para inspeccionar objetos del montón administrado.  
   
  Para instalar WinDbg, instale las herramientas de depuración para Windows desde el [sitio web de herramientas de desarrollo y WDK](http://go.microsoft.com/fwlink/?LinkID=103787).  
   
 <a name="etw"></a>   
-### Eventos ETW de recolección de elementos no utilizados  
- El seguimiento de eventos para Windows \(ETW\) es un sistema de traza que complementa la compatibilidad con generación de perfiles y depuración proporcionada por .NET Framework.  A partir de [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], los [eventos ETW de recolección de elementos no utilizados](../../../docs/framework/performance/garbage-collection-etw-events.md) capturan información útil para analizar el montón administrado desde un punto de vista estadístico.  Por ejemplo, el evento `GCStart_V1`, que se genera cuando está a punto de producirse una recolección de elementos no utilizados, proporciona la siguiente información:  
+### <a name="garbage-collection-etw-events"></a>Eventos ETW de recolección de elementos no utilizados  
+ El seguimiento de eventos para Windows (ETW) es un sistema de traza que complementa la compatibilidad con generación de perfiles y depuración proporcionada por .NET Framework. A partir de [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], los [eventos ETW de recolección de elementos no utilizados](../../../docs/framework/performance/garbage-collection-etw-events.md) capturan información útil para analizar el montón administrado desde un punto de vista estadístico. Por ejemplo, el evento `GCStart_V1`, que se genera cuando está a punto de producirse una recolección de elementos no utilizados, proporciona la siguiente información:  
   
 -   La generación de objetos que se recolecta.  
   
 -   Lo que desencadenó la recolección de elementos no utilizados.  
   
--   Tipo de recolección de elementos no utilizados \(simultánea o no simultánea\).  
+-   Tipo de recolección de elementos no utilizados (simultánea o no simultánea).  
   
- El registro de eventos ETW es eficaz y no enmascara ningún problema de rendimiento asociado a la recolección de elementos no utilizados.  Un proceso puede proporcionar sus propios eventos junto con los eventos ETW.  Cuando se registran, tanto los eventos de la aplicación como los eventos de la recolección de elementos no utilizados se pueden poner en correlación para determinar cómo y cuándo se producen problemas de pila.  Por ejemplo, una aplicación de servidor puede proporcionar eventos al comienzo y al final de una solicitud de cliente.  
+ El registro de eventos ETW es eficaz y no enmascara ningún problema de rendimiento asociado a la recolección de elementos no utilizados. Un proceso puede proporcionar sus propios eventos junto con los eventos ETW. Cuando se registran, tanto los eventos de la aplicación como los eventos de la recolección de elementos no utilizados se pueden poner en correlación para determinar cómo y cuándo se producen problemas de pila. Por ejemplo, una aplicación de servidor puede proporcionar eventos al comienzo y al final de una solicitud de cliente.  
   
 <a name="profiling_api"></a>   
-### La API de generación de perfiles  
- Las interfaces de generación de perfiles de Common Language Runtime \(CLR\) proporcionan información detallada sobre los objetos que se vieron afectados durante la recolección de elementos no utilizados.  Un generador de perfiles puede recibir una notificación cuando se inicia y finaliza una recolección de elementos no utilizados.  Puede proporcionar informes sobre los objetos del montón administrado, incluida una identificación de los objetos de cada generación.  Para obtener más información, consulte [Información general sobre la generación de perfiles](../../../ocs/framework/unmanaged-api/profiling/profiling-overview.md).  
+### <a name="the-profiling-api"></a>La API de generación de perfiles  
+ Las interfaces de generación de perfiles de Common Language Runtime (CLR) proporcionan información detallada sobre los objetos que se vieron afectados durante la recolección de elementos no utilizados. Un generador de perfiles puede recibir una notificación cuando se inicia y finaliza una recolección de elementos no utilizados. Puede proporcionar informes sobre los objetos del montón administrado, incluida una identificación de los objetos de cada generación. Para más información, consulte [Profiling Overview](../../../docs/framework/unmanaged-api/profiling/profiling-overview.md) (Información general sobre generación de perfiles).  
   
- Los generadores de perfiles pueden proporcionar información completa.  Sin embargo, los generadores de perfiles complejos pueden modificar el comportamiento de una aplicación.  
+ Los generadores de perfiles pueden proporcionar información completa. Sin embargo, los generadores de perfiles complejos pueden modificar el comportamiento de una aplicación.  
   
-### Supervisión de recursos de dominio de aplicación  
- A partir de [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], la supervisión de recursos de dominio de aplicación \(ARM\) permite a los hosts supervisar el uso de CPU y de memoria por parte del dominio de aplicación.  Para obtener más información, consulte [Application Domain Resource Monitoring](../../../docs/standard/garbage-collection/app-domain-resource-monitoring.md).  
+### <a name="application-domain-resource-monitoring"></a>Supervisión de recursos de dominio de aplicación  
+ A partir de [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], la supervisión de recursos de dominio de aplicación (ARM) permite a los hosts supervisar el uso de CPU y de memoria por parte del dominio de aplicación. Para más información, consulte [Application Domain Resource Monitoring](../../../docs/standard/garbage-collection/app-domain-resource-monitoring.md) (Supervisión de recursos de dominio de aplicación).  
   
  [Volver al principio](#top)  
   
 <a name="troubleshooting_performance_issues"></a>   
-## Solucionar problemas de rendimiento  
- El primer paso consiste en [determinar si el problema es realmente la recolección de elementos no utilizados](#IsGC).  Si determina que lo es, seleccione un elemento de la lista siguiente para solucionar el problema.  
+## <a name="troubleshooting-performance-issues"></a>Solucionar problemas de rendimiento  
+ El primer paso consiste en [determinar si el problema es realmente la recolección de elementos no utilizados](#IsGC). Si determina que lo es, seleccione un elemento de la lista siguiente para solucionar el problema.  
   
--   [Se produce una excepción de memoria insuficiente](#Issue_OOM)  
+-   [Se inicia una excepción de memoria insuficiente](#Issue_OOM)  
   
 -   [El proceso usa demasiada memoria](#Issue_TooMuchMemory)  
   
@@ -88,17 +91,17 @@ En este tema se describen los problemas relacionados con la recolección de elem
 -   [El uso de CPU durante una recolección de elementos no utilizados es demasiado alto](#Issue_HighCPU)  
   
 <a name="Issue_OOM"></a>   
-### Problema: Se produce una excepción de memoria insuficiente  
+### <a name="issue-an-out-of-memory-exception-is-thrown"></a>Problema: Se produce una excepción de memoria insuficiente  
  Hay dos casos justificados para que se produzca una excepción <xref:System.OutOfMemoryException> administrada:  
   
 -   La escasez de memoria virtual.  
   
-     El recolector de elementos no utilizados asigna memoria del sistema en segmentos de un tamaño predeterminado.  Si una asignación necesita un segmento adicional, pero no queda ningún bloque libre contiguo en el espacio de memoria virtual del proceso, se producirá un error en la asignación del montón administrado.  
+     El recolector de elementos no utilizados asigna memoria del sistema en segmentos de un tamaño predeterminado. Si una asignación necesita un segmento adicional, pero no queda ningún bloque libre contiguo en el espacio de memoria virtual del proceso, se producirá un error en la asignación del montón administrado.  
   
 -   No tener suficiente memoria física para asignar.  
   
 |Comprobaciones de rendimiento|  
-|-----------------------------------|  
+|------------------------|  
 |[Determine si la excepción de memoria insuficiente está administrada.](#OOMIsManaged)<br /><br /> [Determine cuánta memoria virtual se puede reservar.](#GetVM)<br /><br /> [Determine si hay suficiente memoria física.](#Physical)|  
   
  Si determina que la excepción no es legítima, póngase en contacto con el servicio de atención al cliente y soporte técnico de Microsoft, y proporcione la información siguiente:  
@@ -110,38 +113,38 @@ En este tema se describen los problemas relacionados con la recolección de elem
 -   Los datos que demuestran que no es una excepción legítima de memoria insuficiente, incluidos los datos que muestran que la memoria virtual o la memoria física no supone ningún problema.  
   
 <a name="Issue_TooMuchMemory"></a>   
-### Problema: El proceso usa demasiada memoria  
- Un supuesto común es que la presentación del uso de memoria en la pestaña **Rendimiento** del Administrador de tareas de Windows puede indicar cuándo se está usando demasiada memoria.  Sin embargo, esa información pertenece al espacio de trabajo; no proporciona información sobre el uso de memoria virtual.  
+### <a name="issue-the-process-uses-too-much-memory"></a>Problema: El proceso usa demasiada memoria  
+ Un supuesto común es que el uso de memoria que aparece en la pestaña **Rendimiento** del Administrador de tareas de Windows puede indicar cuándo se está usando demasiada memoria. Sin embargo, esa información pertenece al espacio de trabajo; no proporciona información sobre el uso de memoria virtual.  
   
  Si determina que el problema está provocado por el montón administrado, debe medir el montón administrado a lo largo del tiempo para determinar cualquier patrón.  
   
  Si determina que el problema no está provocado por el montón administrado, debe usar la depuración nativa.  
   
 |Comprobaciones de rendimiento|  
-|-----------------------------------|  
+|------------------------|  
 |[Determine cuánta memoria virtual se puede reservar.](#GetVM)<br /><br /> [Determine cuánta memoria está confirmando el montón administrado.](#ManagedHeapCommit)<br /><br /> [Determine cuánta memoria reserva el montón administrado.](#ManagedHeapReserve)<br /><br /> [Determine los objetos grandes de la generación 2.](#ExamineGen2)<br /><br /> [Determine las referencias a objetos.](#ObjRef)|  
   
 <a name="Issue_NotFastEnough"></a>   
-### Problema: El recolector de elementos no utilizados no recupera los objetos con la rapidez suficiente  
+### <a name="issue-the-garbage-collector-does-not-reclaim-objects-fast-enough"></a>Problema: El recolector de elementos no utilizados no recupera los objetos con la rapidez suficiente  
  Cuando parezca que la recolección de elementos no utilizados no está recuperando los objetos según lo esperado, debe determinar si hay alguna referencia segura a esos objetos.  
   
- También puede encontrar este problema si no se ha producido ninguna recolección de elementos no utilizados para la generación que contiene un objeto muerto, lo que indica que el finalizador del objeto muerto no se ha ejecutado.  Por ejemplo, esto puede ocurrir cuando se ejecuta una aplicación de contenedor uniproceso \(STA\) y el subproceso que atiende a la cola del finalizador no la puede llamar.  
+ También puede encontrar este problema si no se ha producido ninguna recolección de elementos no utilizados para la generación que contiene un objeto muerto, lo que indica que el finalizador del objeto muerto no se ha ejecutado. Por ejemplo, esto puede ocurrir cuando se ejecuta una aplicación de contenedor uniproceso (STA) y el subproceso que atiende a la cola del finalizador no la puede llamar.  
   
 |Comprobaciones de rendimiento|  
-|-----------------------------------|  
+|------------------------|  
 |[Compruebe las referencias a objetos.](#ObjRef)<br /><br /> [Determine si se ha ejecutado un finalizador.](#Induce)<br /><br /> [Determine si hay objetos en espera de finalización.](#Finalize)|  
   
 <a name="Issue_Fragmentation"></a>   
-### Problema: El montón administrado está demasiado fragmentado  
- El nivel de fragmentación se calcula como la proporción de espacio disponible con respecto a la memoria total asignada para la generación.  Para la generación 2, un nivel aceptable de fragmentación es inferior al 20%.  Puesto que la generación 2 puede llegar a ser muy grande, la proporción de fragmentación es más importante que el valor absoluto.  
+### <a name="issue-the-managed-heap-is-too-fragmented"></a>Problema: El montón administrado está demasiado fragmentado  
+ El nivel de fragmentación se calcula como la proporción de espacio disponible con respecto a la memoria total asignada para la generación. Para la generación 2, un nivel aceptable de fragmentación es inferior al 20%. Puesto que la generación 2 puede llegar a ser muy grande, la proporción de fragmentación es más importante que el valor absoluto.  
   
  El hecho de tener mucho espacio disponible en la generación 0 no supone ningún problema porque esta es la generación donde se asignan nuevos objetos.  
   
- Siempre se produce fragmentación en el montón de objetos grandes porque no se compacta.  Los objetos libres adyacentes se contraen de forma natural en un único espacio para satisfacer las solicitudes de asignación de objetos grandes.  
+ Siempre se produce fragmentación en el montón de objetos grandes porque no se compacta. Los objetos libres adyacentes se contraen de forma natural en un único espacio para satisfacer las solicitudes de asignación de objetos grandes.  
   
- La fragmentación puede convertirse en un problema en las generaciones 1 y 2.  Si estas generaciones tienen una gran cantidad de espacio disponible después de una recolección de elementos no utilizados, el uso de objetos de una aplicación puede necesitar modificaciones y debe considerar la posibilidad de volver a evaluar la duración de los objetos de larga duración.  
+ La fragmentación puede convertirse en un problema en las generaciones 1 y 2. Si estas generaciones tienen una gran cantidad de espacio disponible después de una recolección de elementos no utilizados, el uso de objetos de una aplicación puede necesitar modificaciones y debe considerar la posibilidad de volver a evaluar la duración de los objetos de larga duración.  
   
- El anclaje excesivo de objetos puede aumentar la fragmentación.  Si la fragmentación es elevada, puede que haya demasiados objetos anclados.  
+ El anclaje excesivo de objetos puede aumentar la fragmentación. Si la fragmentación es elevada, puede que haya demasiados objetos anclados.  
   
  Si la fragmentación de la memoria virtual está impidiendo que el recolector de elementos no utilizados agregue segmentos, puede deberse a una de las causas siguientes:  
   
@@ -151,91 +154,91 @@ En este tema se describen los problemas relacionados con la recolección de elem
   
 -   Creación de objetos grandes transitorios, lo que hace que el montón de objetos grandes asigne y libere segmentos del montón con frecuencia.  
   
-     Al hospedar el CLR, una aplicación puede solicitar que el recolector de elementos no utilizados conserve sus segmentos.  Esto reduce la frecuencia de las asignaciones de segmentos.  Esto se logra usando la marca STARTUP\_HOARD\_GC\_VM en la [STARTUP\_FLAGS \(Enumeración\)](../../../ocs/framework/unmanaged-api/hosting/startup-flags-enumeration.md).  
+     Al hospedar el CLR, una aplicación puede solicitar que el recolector de elementos no utilizados conserve sus segmentos. Esto reduce la frecuencia de las asignaciones de segmentos. Para ello se emplea la marca STARTUP_HOARD_GC_VM en la [enumeración STARTUP_FLAGS](../../../docs/framework/unmanaged-api/hosting/startup-flags-enumeration.md).  
   
 |Comprobaciones de rendimiento|  
-|-----------------------------------|  
+|------------------------|  
 |[Determine la cantidad de espacio disponible en el montón administrado.](#Fragmented)<br /><br /> [Determine el número de objetos anclados.](#Pinned)|  
   
  Si cree que no hay ninguna causa que justifique la fragmentación, póngase en contacto con el servicio de atención al cliente y soporte técnico de Microsoft.  
   
 <a name="Issue_LongPauses"></a>   
-### Problema: Las pausas de la recolección de elementos no utilizados son demasiado largas  
- La recolección de elementos no utilizados funciona en tiempo real flexible, por lo que una aplicación debe poder tolerar algunas pausas.  Un criterio para el tiempo real flexible es que el 95% de las operaciones debe finalizar a tiempo.  
+### <a name="issue-garbage-collection-pauses-are-too-long"></a>Problema: Las pausas de la recolección de elementos no utilizados son demasiado largas  
+ La recolección de elementos no utilizados funciona en tiempo real flexible, por lo que una aplicación debe poder tolerar algunas pausas. Un criterio para el tiempo real flexible es que el 95% de las operaciones debe finalizar a tiempo.  
   
  En la recolección de elementos no utilizados simultánea, se permite la ejecución de subprocesos administrados durante una recolección, lo que significa que las pausas son mínimas.  
   
- Las recolecciones de elementos no utilizados efímeras \(las generaciones 0 y 1\) solo duran algunos milisegundos, por lo que no suele ser viable reducir las pausas.  Sin embargo, puede reducir las pausas en las recolecciones de la generación 2 cambiando el modelo de las solicitudes de asignación de una aplicación.  
+ Las recolecciones de elementos no utilizados efímeras (las generaciones 0 y 1) solo duran algunos milisegundos, por lo que no suele ser viable reducir las pausas. Sin embargo, puede reducir las pausas en las recolecciones de la generación 2 cambiando el modelo de las solicitudes de asignación de una aplicación.  
   
- Otro método más preciso consiste en usar [eventos ETW de recolección de elementos no utilizados](../../../docs/framework/performance/garbage-collection-etw-events.md).  Puede averiguar los controles de tiempo para las recolecciones si suma las diferencias de marca de tiempo para una secuencia de eventos.  La secuencia de recolección completa incluye la suspensión del motor de ejecución, la recolección de elementos no utilizados propiamente dicha y la reanudación del motor de ejecución.  
+ Otro método más preciso consiste en usar [eventos ETW de recolección de elementos no utilizados](../../../docs/framework/performance/garbage-collection-etw-events.md). Puede averiguar los controles de tiempo para las recolecciones si suma las diferencias de marca de tiempo para una secuencia de eventos. La secuencia de recolección completa incluye la suspensión del motor de ejecución, la recolección de elementos no utilizados propiamente dicha y la reanudación del motor de ejecución.  
   
- Puede usar [Garbage Collection Notifications](../../../docs/standard/garbage-collection/notifications.md) para determinar si en un servidor se va a realizar una recolección de generación 2 y si redirigir las solicitudes a otro servidor podría solucionar los problemas de las pausas.  
+ Puede usar [notificaciones de recolección de elementos no utilizados](../../../docs/standard/garbage-collection/notifications.md) para determinar si se va a realizar una recolección de generación 2 en un servidor y si redirigir las solicitudes a otro servidor podría solucionar los problemas de las pausas.  
   
 |Comprobaciones de rendimiento|  
-|-----------------------------------|  
-|[Determine la duración de una recolección de elementos no utilizados.](#TimeInGC)<br /><br /> [Determine qué produjo una recolección de elementos no utilizados.](#Triggered)|  
+|------------------------|  
+|[Determine la duración de una recolección de elementos no utilizados.](#TimeInGC)<br /><br /> [Determine lo que desencadenó una recolección de elementos no utilizados.](#Triggered)|  
   
 <a name="Issue_Gen0"></a>   
-### Problema: La generación 0 es demasiado grande  
- Es probable que la generación 0 tenga un número mayor de objetos en un sistema de 64 bits, sobre todo cuando se usa la recolección de elementos no utilizados de servidor en lugar de la de estación de trabajo.  Esto se debe a que el umbral para desencadenar una recolección de elementos no utilizados de generación 0 es más alto en estos entornos y las recolecciones de generación 0 pueden llegar a ser mucho mayores.  El rendimiento mejora cuando una aplicación asigna más memoria antes de que se desencadene una recolección de elementos no utilizados.  
+### <a name="issue-generation-0-is-too-big"></a>Problema: La generación 0 es demasiado grande  
+ Es probable que la generación 0 tenga un número mayor de objetos en un sistema de 64 bits, sobre todo cuando se usa la recolección de elementos no utilizados de servidor en lugar de la de estación de trabajo. Esto se debe a que el umbral para desencadenar una recolección de elementos no utilizados de generación 0 es más alto en estos entornos y las recolecciones de generación 0 pueden llegar a ser mucho mayores. El rendimiento mejora cuando una aplicación asigna más memoria antes de que se desencadene una recolección de elementos no utilizados.  
   
 <a name="Issue_HighCPU"></a>   
-### Problema: El uso de CPU durante una recolección de elementos no utilizados es demasiado alto  
- El uso de CPU será elevado durante una recolección de elementos no utilizados.  Si se dedica una cantidad significativa de tiempo de proceso a una recolección de elementos no utilizados, el número de recolecciones es demasiado frecuente o la recolección está durando demasiado.  Una proporción de asignación de objetos mayor en el montón administrado hace que la recolección de elementos no utilizados se realice con más frecuencia.  Al disminuir la proporción de asignación se reduce la frecuencia de las recolecciones de elementos no utilizados.  
+### <a name="issue-cpu-usage-during-a-garbage-collection-is-too-high"></a>Problema: El uso de CPU durante una recolección de elementos no utilizados es demasiado alto  
+ El uso de CPU será elevado durante una recolección de elementos no utilizados. Si se dedica una cantidad significativa de tiempo de proceso a una recolección de elementos no utilizados, el número de recolecciones es demasiado frecuente o la recolección está durando demasiado. Una proporción de asignación de objetos mayor en el montón administrado hace que la recolección de elementos no utilizados se realice con más frecuencia. Al disminuir la proporción de asignación se reduce la frecuencia de las recolecciones de elementos no utilizados.  
   
- Puede supervisar las proporciones de asignación mediante el contador de rendimiento `Allocated Bytes/second`.  Para obtener más información, consulte [Contadores de rendimiento en .NET Framework](../../../docs/framework/debug-trace-profile/performance-counters.md).  
+ Puede supervisar las proporciones de asignación mediante el contador de rendimiento `Allocated Bytes/second`. Para más información, consulte [Performance Counters in the .NET Framework](../../../docs/framework/debug-trace-profile/performance-counters.md) (Contadores de rendimiento de .NET Framework).  
   
- La duración de una recolección suele depender del número de objetos que sobrevivan después de la asignación.  El recolector de elementos no utilizados debe pasar por una gran cantidad de memoria si hay que recolectar muchos objetos.  El trabajo para compactar los supervivientes lleva mucho tiempo.  Para determinar cuántos objetos se controlaron durante una recolección, establezca un punto de interrupción en el depurador al final de una recolección de elementos no utilizados para una generación especificada.  
+ La duración de una recolección suele depender del número de objetos que sobrevivan después de la asignación. El recolector de elementos no utilizados debe pasar por una gran cantidad de memoria si hay que recolectar muchos objetos. El trabajo para compactar los supervivientes lleva mucho tiempo. Para determinar cuántos objetos se controlaron durante una recolección, establezca un punto de interrupción en el depurador al final de una recolección de elementos no utilizados para una generación especificada.  
   
 |Comprobaciones de rendimiento|  
-|-----------------------------------|  
+|------------------------|  
 |[Determine si el uso elevado de CPU está provocado por la recolección de elementos no utilizados.](#HighCPU)<br /><br /> [Establezca un punto de interrupción al final de la recolección de elementos no utilizados.](#GenBreak)|  
   
  [Volver al principio](#top)  
   
 <a name="troubleshooting_guidelines"></a>   
-## Instrucciones para la solución de problemas  
+## <a name="troubleshooting-guidelines"></a>Instrucciones para la solución de problemas  
  En esta sección se describen instrucciones debe tener en cuenta cuando empiece las investigaciones.  
   
-### Recolección de elementos no utilizados de estación de trabajo o de servidor  
- Determine si está usando el tipo correcto de recolección de elementos no utilizados.  Si la aplicación emplea varios subprocesos e instancias de objeto, use la recolección de elementos no utilizados de servidor en lugar de la de estación de trabajo.  La recolección de elementos no utilizados de servidor funciona en varios subprocesos, mientras que la de estación de trabajo necesita que varias instancias de una aplicación ejecuten sus propios subprocesos de recolección de elementos no utilizados y compitan por el tiempo de CPU.  
+### <a name="workstation-or-server-garbage-collection"></a>Recolección de elementos no utilizados de estación de trabajo o de servidor  
+ Determine si está usando el tipo correcto de recolección de elementos no utilizados. Si la aplicación emplea varios subprocesos e instancias de objeto, use la recolección de elementos no utilizados de servidor en lugar de la de estación de trabajo. La recolección de elementos no utilizados de servidor funciona en varios subprocesos, mientras que la de estación de trabajo necesita que varias instancias de una aplicación ejecuten sus propios subprocesos de recolección de elementos no utilizados y compitan por el tiempo de CPU.  
   
  Una aplicación que tenga una carga baja y realice tareas con poca frecuencia en segundo plano, como un servicio, puede usar la recolección de elementos no utilizados de estación de trabajo con la recolección simultánea de elementos no utilizados deshabilitada.  
   
-### Cuándo medir el tamaño del montón administrado  
- A menos que esté usando un generador de perfiles, tendrá que establecer un modelo de medida coherente para diagnosticar eficazmente los problemas de rendimiento.  Tenga en cuenta lo siguiente a la hora de establecer una programación:  
+### <a name="when-to-measure-the-managed-heap-size"></a>Cuándo medir el tamaño del montón administrado  
+ A menos que esté usando un generador de perfiles, tendrá que establecer un modelo de medida coherente para diagnosticar eficazmente los problemas de rendimiento. Tenga en cuenta lo siguiente a la hora de establecer una programación:  
   
--   Si mide después de una recolección de elementos no utilizados de generación 2, todo el montón administrado estará libre de elementos no utilizados \(objetos muertos\).  
+-   Si mide después de una recolección de elementos no utilizados de generación 2, todo el montón administrado estará libre de elementos no utilizados (objetos muertos).  
   
 -   Si mide inmediatamente después de una recolección de elementos no utilizados de generación 0, los objetos de las generaciones 1 y 2 no se recolectarán todavía.  
   
 -   Si mide inmediatamente antes de una recolección de elementos no utilizados, se medirá toda la asignación posible antes de que comience dicha recolección.  
   
--   La medición durante una recolección de elementos no utilizados es problemática, ya que las estructuras de datos del recolector de elementos no utilizados no están en un estado válido para el cruce seguro y quizás no se obtengan resultados completos.  Esto es intencionado.  
+-   La medición durante una recolección de elementos no utilizados es problemática, ya que las estructuras de datos del recolector de elementos no utilizados no están en un estado válido para el cruce seguro y quizás no se obtengan resultados completos. Esto es intencionado.  
   
--   Cuando se usa la recolección de elementos no utilizados de estación de trabajo con la recolección simultánea de elementos no utilizados, los objetos recuperados no se compactan, por lo que el tamaño del montón puede ser igual o mayor \(la fragmentación puede hacer que parezca mayor\).  
+-   Cuando se usa la recolección de elementos no utilizados de estación de trabajo con la recolección simultánea de elementos no utilizados, los objetos recuperados no se compactan, por lo que el tamaño del montón puede ser igual o mayor (la fragmentación puede hacer que parezca mayor).  
   
 -   La recolección de elementos no utilizados simultánea en la generación 2 se retrasa cuando la carga de memoria física es demasiado alta.  
   
  En el procedimiento siguiente se describe cómo establecer un punto de interrupción para que pueda medir el montón administrado.  
   
 <a name="GenBreak"></a>   
-##### Para establecer un punto de interrupción al final de la recolección de elementos no utilizados  
+##### <a name="to-set-a-breakpoint-at-the-end-of-garbage-collection"></a>Para establecer un punto de interrupción al final de la recolección de elementos no utilizados  
   
 -   En WinDbg con la extensión del depurador de SOS cargada, escriba el comando siguiente:  
   
-     **bp mscorwks\!WKS::GCHeap::RestartEE "j \(dwo\(mscorwks\!WKS::GCHeap::GcCondemnedGeneration\)\=\=2\) 'kb';'g'"**  
+     **bp mscorwks!WKS::GCHeap::RestartEE "j (dwo(mscorwks!WKS::GCHeap::GcCondemnedGeneration)==2) 'kb';'g'"**  
   
-     donde **GcCondemnedGeneration** se establece en la generación deseada.  Este comando necesita símbolos privados.  
+     donde **GcCondemnedGeneration** se establece en la generación que se prefiera. Este comando necesita símbolos privados.  
   
-     Este comando fuerza una interrupción si se ejecuta **RestartEE** después de que se hayan recuperado los objetos de la generación 2 para la recolección de elementos no utilizados.  
+     Este comando fuerza una interrupción si **RestartEE** se ejecuta una vez recuperados los objetos de generación 2 para la recolección de elementos no utilizados.  
   
      En la recolección de elementos no utilizados de servidor, solo un subproceso llama a **RestartEE**, por lo que el punto de interrupción solo se producirá una vez durante una recolección de elementos no utilizados de generación 2.  
   
  [Volver al principio](#top)  
   
 <a name="performance_check_procedures"></a>   
-## Procedimientos para comprobar el rendimiento  
+## <a name="performance-check-procedures"></a>Procedimientos para comprobar el rendimiento  
  En esta sección se describen los procedimientos siguientes para aislar la causa del problema de rendimiento:  
   
 -   [Determine si el problema está provocado por la recolección de elementos no utilizados.](#IsGC)  
@@ -264,27 +267,27 @@ En este tema se describen los problemas relacionados con la recolección de elem
   
 -   [Determine la duración de una recolección de elementos no utilizados.](#TimeInGC)  
   
--   [Determine qué desencadenó una recolección de elementos no utilizados.](#Triggered)  
+-   [Determine lo que desencadenó una recolección de elementos no utilizados.](#Triggered)  
   
 -   [Determine si el uso elevado de CPU está provocado por la recolección de elementos no utilizados.](#HighCPU)  
   
 <a name="IsGC"></a>   
-##### Para determinar si el problema está provocado por la recolección de elementos no utilizados  
+##### <a name="to-determine-whether-the-problem-is-caused-by-garbage-collection"></a>Para determinar si el problema está provocado por la recolección de elementos no utilizados  
   
 -   Examine los dos contadores de rendimiento de memoria siguientes:  
   
-    -   **% de tiempo del GC**.  Muestra el porcentaje de tiempo transcurrido que se dedicó a realizar una recolección de elementos no utilizados después del último ciclo de recolección.  Use este contador para determinar si el recolector de elementos no utilizados está dedicando demasiado tiempo a hacer que haya espacio disponible en el montón administrado.  Si el tiempo dedicado a la recolección de elementos no utilizados es relativamente bajo, podría indicar un problema de recursos fuera del montón administrado.  Puede que este contador no sea exacto cuando se invoca una recolección de elementos no utilizados simultánea o en segundo plano.  
+    -   **% de tiempo de la GC**. Muestra el porcentaje de tiempo transcurrido que se dedicó a realizar una recolección de elementos no utilizados después del último ciclo de recolección. Use este contador para determinar si el recolector de elementos no utilizados está dedicando demasiado tiempo a hacer que haya espacio disponible en el montón administrado. Si el tiempo dedicado a la recolección de elementos no utilizados es relativamente bajo, podría indicar un problema de recursos fuera del montón administrado. Puede que este contador no sea exacto cuando se invoca una recolección de elementos no utilizados simultánea o en segundo plano.  
   
-    -   **Número de bytes totales confirmados**.  Muestra la cantidad de memoria virtual confirmada actualmente por el recolector de elementos no utilizados.  Use este contador para determinar si la memoria usada por el recolector de elementos no utilizados es una parte excesiva de la memoria que su aplicación emplea.  
+    -   **Número de bytes totales confirmados**. Muestra la cantidad de memoria virtual confirmada actualmente por el recolector de elementos no utilizados. Use este contador para determinar si la memoria usada por el recolector de elementos no utilizados es una parte excesiva de la memoria que su aplicación emplea.  
   
-     La mayoría de los contadores de rendimiento de memoria se actualizan al final de cada recolección de elementos no utilizados.  Por tanto, puede que no reflejen las condiciones actuales sobre las que desea obtener información.  
+     La mayoría de los contadores de rendimiento de memoria se actualizan al final de cada recolección de elementos no utilizados. Por tanto, puede que no reflejen las condiciones actuales sobre las que desea obtener información.  
   
 <a name="OOMIsManaged"></a>   
-##### Para determinar si la excepción de memoria insuficiente está administrada  
+##### <a name="to-determine-whether-the-out-of-memory-exception-is-managed"></a>Para determinar si la excepción de memoria insuficiente está administrada  
   
-1.  En WinDbg o en el depurador de Visual Studio con la extensión del depurador de SOS cargada, escriba el comando de imprimir excepción \(**pe**\):  
+1.  En WinDbg o en el depurador de Visual Studio con la extensión del depurador de SOS cargada, escriba el comando de impresión de excepciones (**pe**):  
   
-     **\!pe**  
+     **!pe**  
   
      Si la excepción es administrada, se mostrará <xref:System.OutOfMemoryException> como el tipo de excepción, como se muestra en el ejemplo siguiente.  
   
@@ -296,11 +299,11 @@ En este tema se describen los problemas relacionados con la recolección de elem
     StackTrace (generated):  
     ```  
   
-2.  Si el resultado no especifica ninguna excepción, tiene que determinar de qué subproceso procede la excepción de memoria insuficiente.  Escriba el comando siguiente en el depurador para mostrar todos los subprocesos con sus pilas de llamadas:  
+2.  Si el resultado no especifica ninguna excepción, tiene que determinar de qué subproceso procede la excepción de memoria insuficiente. Escriba el comando siguiente en el depurador para mostrar todos los subprocesos con sus pilas de llamadas:  
   
-     **~\*kb**  
+     **~\*KB**  
   
-     El argumento `RaiseTheException` indica el subproceso con la pila que tiene llamadas de excepción.  Este es el objeto de excepción administrado.  
+     El argumento `RaiseTheException` indica el subproceso con la pila que tiene llamadas de excepción. Este es el objeto de excepción administrado.  
   
     ```  
     28adfb44 7923918f 5b61f2b4 00000000 5b61f2b4 mscorwks!RaiseTheException+0xa0   
@@ -308,16 +311,16 @@ En este tema se describen los problemas relacionados con la recolección de elem
   
 3.  Puede usar el comando siguiente para volcar las excepciones anidadas.  
   
-     **\!pe \-nested**  
+     **!pe -nested**  
   
      Si no encuentra ninguna excepción, la excepción de memoria insuficiente se originó desde código no administrado.  
   
 <a name="GetVM"></a>   
-##### Para determinar cuánta memoria virtual se puede reservar  
+##### <a name="to-determine-how-much-virtual-memory-can-be-reserved"></a>Para determinar cuánta memoria virtual se puede reservar  
   
 -   En WinDbg con la extensión del depurador de SOS cargada, escriba el comando siguiente para obtener la mayor región disponible:  
   
-     **\!address \-summary**  
+     **!address -summary**  
   
      La mayor región disponible se muestra como en el resultado siguiente.  
   
@@ -325,13 +328,13 @@ En este tema se describen los problemas relacionados con la recolección de elem
     Largest free region: Base 54000000 - Size 0003A980  
     ```  
   
-     En este ejemplo, el tamaño de la mayor región disponible es de aproximadamente 24000 KB \(3A980 en hexadecimal\).  Esta región es mucho menor que cuando el recolector de elementos no utilizados necesita un segmento.  
+     En este ejemplo, el tamaño de la mayor región disponible es de aproximadamente 24000 KB (3A980 en hexadecimal). Esta región es mucho menor que cuando el recolector de elementos no utilizados necesita un segmento.  
   
      O bien  
   
 -   Use el comando **vmstat**:  
   
-     **\!vmstat**  
+     **!vmstat**  
   
      La mayor región disponible es el valor mayor de la columna MAXIMUM, como se muestra en el resultado siguiente.  
   
@@ -346,35 +349,35 @@ En este tema se describen los problemas relacionados con la recolección de elem
     ```  
   
 <a name="Physical"></a>   
-##### Para determinar si hay suficiente memoria física  
+##### <a name="to-determine-whether-there-is-enough-physical-memory"></a>Para determinar si hay suficiente memoria física  
   
 1.  Inicie el Administrador de tareas de Windows.  
   
-2.  En la pestaña **Rendimiento**, examine el valor confirmado.  \(En Windows 7, busque **Asignación \(KB\)** en el grupo **Sistema**.\)  
+2.  En la pestaña **Rendimiento**, busque el valor confirmado. (En Windows 7, busque **Asignación (KB)** en el grupo **Sistema**).  
   
-     Si el **Total** está cerca del **Límite**, hay poca memoria física.  
+     Si el **Total** se aproxima al **Límite** hay poca memoria física.  
   
 <a name="ManagedHeapCommit"></a>   
-##### Para determinar cuánta memoria está confirmando el montón administrado  
+##### <a name="to-determine-how-much-memory-the-managed-heap-is-committing"></a>Para determinar cuánta memoria está confirmando el montón administrado  
   
--   Use el contador de rendimiento de memoria `# Total committed bytes` para obtener el número de bytes que el montón administrado está confirmando.  El recolector de elementos no utilizados confirma fragmentos de un segmento a medida que son necesarios, no todos al mismo tiempo.  
+-   Use el contador de rendimiento de memoria `# Total committed bytes` para obtener el número de bytes que el montón administrado está confirmando. El recolector de elementos no utilizados confirma fragmentos de un segmento a medida que son necesarios, no todos al mismo tiempo.  
   
     > [!NOTE]
-    >  No use el contador de rendimiento `# Bytes in all Heaps`, ya que no representa el uso de memoria real por parte del montón administrado.  En este valor se incluye el tamaño de una generación y es realmente su tamaño umbral; es decir, el tamaño que induce una recolección de elementos no utilizados si la generación se llena de objetos.  Por tanto, este valor suele ser cero.  
+    >  No use el contador de rendimiento `# Bytes in all Heaps`, ya que no representa el uso de memoria real por parte del montón administrado. En este valor se incluye el tamaño de una generación y es realmente su tamaño umbral; es decir, el tamaño que induce una recolección de elementos no utilizados si la generación se llena de objetos. Por tanto, este valor suele ser cero.  
   
 <a name="ManagedHeapReserve"></a>   
-##### Para determinar cuánta memoria reserva el montón administrado  
+##### <a name="to-determine-how-much-memory-the-managed-heap-reserves"></a>Para determinar cuánta memoria reserva el montón administrado  
   
 -   Use el contador de rendimiento de memoria `# Total reserved bytes`.  
   
      El recolector de elementos no utilizados reserva memoria en segmentos y puede determinar dónde comienza un segmento mediante el comando **eeheap**.  
   
     > [!IMPORTANT]
-    >  Aunque puede determinar la cantidad de memoria que el recolector de elementos no utilizados asigna a cada segmento, el tamaño del segmento es específico de la implementación y está sujeto a cambios en cualquier momento, incluso en las actualizaciones periódicas.  La aplicación nunca debe realizar suposiciones sobre el tamaño de un sector determinado ni depender de él, y tampoco debe intentar configurar la cantidad de memoria disponible para las asignaciones de segmentos.  
+    >  Aunque puede determinar la cantidad de memoria que el recolector de elementos no utilizados asigna a cada segmento, el tamaño del segmento es específico de la implementación y está sujeto a cambios en cualquier momento, incluso en las actualizaciones periódicas. La aplicación nunca debe realizar suposiciones sobre el tamaño de un sector determinado ni depender de él, y tampoco debe intentar configurar la cantidad de memoria disponible para las asignaciones de segmentos.  
   
 -   En WinDbg o en el depurador de Visual Studio con la extensión del depurador de SOS cargada, escriba el comando siguiente:  
   
-     **\!eeheap \-gc**  
+     **!eeheap -gc**  
   
      El resultado es el siguiente.  
   
@@ -411,15 +414,15 @@ En este tema se describen los problemas relacionados con la recolección de elem
      Las direcciones indicadas por "segment" son las direcciones iniciales de los segmentos.  
   
 <a name="ExamineGen2"></a>   
-##### Para determinar los objetos grandes de la generación 2  
+##### <a name="to-determine-large-objects-in-generation-2"></a>Para determinar los objetos grandes de la generación 2  
   
 -   En WinDbg o en el depurador de Visual Studio con la extensión del depurador de SOS cargada, escriba el comando siguiente:  
   
-     **\!dumpheap –stat**  
+     **!dumpheap –stat**  
   
-     Si el montón administrado es grande, **dumpheap** puede tardar bastante tiempo en finalizar.  
+     Si el montón administrado es grande, **dumpheap** puede tardar bastante en finalizar.  
   
-     Puede empezar el análisis por las últimas líneas del resultado, ya que muestran los objetos que usan la mayor parte del espacio.  Por ejemplo:  
+     Puede empezar el análisis por las últimas líneas del resultado, ya que muestran los objetos que usan la mayor parte del espacio. Por ejemplo:  
   
     ```  
     2c6108d4   173712     14591808 DevExpress.XtraGrid.Views.Grid.ViewInfo.GridCellInfo  
@@ -435,9 +438,9 @@ En este tema se describen los problemas relacionados con la recolección de elem
     Total 8454945 objects  
     ```  
   
-     El último objeto mostrado es una cadena y es el que ocupa más espacio.  Puede examinar la aplicación para ver cómo se pueden optimizar los objetos de cadena.  Para ver las cadenas comprendidas entre 150 y 200 bytes, escriba lo siguiente:  
+     El último objeto mostrado es una cadena y es el que ocupa más espacio. Puede examinar la aplicación para ver cómo se pueden optimizar los objetos de cadena. Para ver las cadenas comprendidas entre 150 y 200 bytes, escriba lo siguiente:  
   
-     **\!dumpheap \-type System.String \-min 150 \-max 200**  
+     **!dumpheap -type System.String -min 150 -max 200**  
   
      A continuación se muestra un ejemplo de los resultados.  
   
@@ -447,22 +450,22 @@ En este tema se describen los problemas relacionados con la recolección de elem
     …  
     ```  
   
-     Puede ser más eficaz usar un entero en lugar de una cadena para un identificador.  Si la misma cadena se está repitiendo miles de veces, considere la posibilidad de asignación al grupo interno de cadenas.  Para obtener más información sobre la asignación al grupo interno de cadenas, vea el tema de referencia sobre el método <xref:System.String.Intern%2A?displayProperty=fullName>.  
+     Puede ser más eficaz usar un entero en lugar de una cadena para un identificador. Si la misma cadena se está repitiendo miles de veces, considere la posibilidad de asignación al grupo interno de cadenas. Para obtener más información sobre la asignación al grupo interno de cadenas, vea el tema de referencia sobre el método <xref:System.String.Intern%2A?displayProperty=nameWithType>.  
   
 <a name="ObjRef"></a>   
-##### Para determinar las referencias a objetos  
+##### <a name="to-determine-references-to-objects"></a>Para determinar las referencias a objetos  
   
 -   En WinDbg con la extensión del depurador de SOS cargada, escriba el comando siguiente para mostrar las referencias a objetos:  
   
-     **\!gcroot**  
+     **!gcroot**  
   
      `-or-`  
   
 -   Para determinar las referencias para un objeto concreto, incluya la dirección:  
   
-     **\!gcroot 1c37b2ac**  
+     **!gcroot 1c37b2ac**  
   
-     Las raíces encontradas en pilas pueden ser falsos positivos.  Para obtener más información, use el comando `!help gcroot`.  
+     Las raíces encontradas en pilas pueden ser falsos positivos. Para obtener más información, use el comando `!help gcroot`.  
   
     ```  
     ebx:Root:19011c5c(System.Windows.Forms.Application+ThreadContext)->  
@@ -480,10 +483,10 @@ En este tema se describen los problemas relacionados con la recolección de elem
     Scan Thread 6 OSTHread 484  
     ```  
   
-     El comando **gcroot** puede tardar mucho tiempo en finalizar.  Todo objeto no reclamado en la recolección de elementos no utilizados es un objeto activo.  Esto significa que alguna raíz se está almacenando directa o indirectamente en el objeto, por lo que **gcroot** debe devolver información de ruta de acceso al objeto.  Debe examinar los gráficos devueltos y ver por qué todavía se hace referencia a estos objetos.  
+     El comando **gcroot** puede tardar mucho en finalizar. Todo objeto no reclamado en la recolección de elementos no utilizados es un objeto activo. Esto implica que alguna raíz se almacena directa o indirectamente en el objeto, por lo que **gcroot** debe devolver información de ruta de acceso al objeto. Debe examinar los gráficos devueltos y ver por qué todavía se hace referencia a estos objetos.  
   
 <a name="Induce"></a>   
-##### Para determinar si se ha ejecutado un finalizador  
+##### <a name="to-determine-whether-a-finalizer-has-been-run"></a>Para determinar si se ha ejecutado un finalizador  
   
 -   Ejecute un programa de prueba que contenga el código siguiente:  
   
@@ -493,20 +496,20 @@ En este tema se describen los problemas relacionados con la recolección de elem
     GC.Collect();  
     ```  
   
-     Si la prueba resuelve el problema, significa que el recolector de elementos no utilizados no estaba recuperando objetos porque los finalizadores de esos objetos se habían suspendido.  El método <xref:System.GC.WaitForPendingFinalizers%2A?displayProperty=fullName> permite que los finalizadores completen sus tareas y corrige el problema.  
+     Si la prueba resuelve el problema, significa que el recolector de elementos no utilizados no estaba recuperando objetos porque los finalizadores de esos objetos se habían suspendido. El método <xref:System.GC.WaitForPendingFinalizers%2A?displayProperty=nameWithType> permite que los finalizadores completen sus tareas y corrige el problema.  
   
 <a name="Finalize"></a>   
-##### Para determinar si hay objetos en espera de finalización  
+##### <a name="to-determine-whether-there-are-objects-waiting-to-be-finalized"></a>Para determinar si hay objetos en espera de finalización  
   
 1.  En WinDbg o en el depurador de Visual Studio con la extensión del depurador de SOS cargada, escriba el comando siguiente:  
   
-     **\!finalizequeue**  
+     **!finalizequeue**  
   
-     Observe el número de objetos que están listos para la finalización.  Si el número es elevado, debe examinar por qué estos finalizadores no pueden progresar en absoluto o con la rapidez suficiente.  
+     Observe el número de objetos que están listos para la finalización. Si el número es elevado, debe examinar por qué estos finalizadores no pueden progresar en absoluto o con la rapidez suficiente.  
   
 2.  Para obtener un resultado de subprocesos, escriba el comando siguiente:  
   
-     **threads \-special**  
+     **threads -special**  
   
      Este comando proporciona resultados como el siguiente.  
   
@@ -517,14 +520,14 @@ En este tema se describen los problemas relacionados con la recolección de elem
     4    df0    GC SuspendEE   
     ```  
   
-     El subproceso finalizador indica qué finalizador, si hay alguno, se está ejecutando actualmente.  Cuando un subproceso finalizador no está ejecutando ningún finalizador, está esperando un evento para indicarle que haga su trabajo.  La mayoría de las veces verá el subproceso finalizador en este estado porque se ejecuta en THREAD\_HIGHEST\_PRIORITY y se presupone que termina de ejecutar los finalizadores, si hay alguno, muy rápidamente.  
+     El subproceso finalizador indica qué finalizador, si hay alguno, se está ejecutando actualmente. Cuando un subproceso finalizador no está ejecutando ningún finalizador, está esperando un evento para indicarle que haga su trabajo. La mayoría de las veces verá el subproceso finalizador en este estado porque se ejecuta en THREAD_HIGHEST_PRIORITY y se presupone que termina de ejecutar los finalizadores, si hay alguno, muy rápidamente.  
   
 <a name="Fragmented"></a>   
-##### Para determinar la cantidad de espacio disponible en el montón administrado  
+##### <a name="to-determine-the-amount-of-free-space-in-the-managed-heap"></a>Para determinar la cantidad de espacio disponible en el montón administrado  
   
 -   En WinDbg o en el depurador de Visual Studio con la extensión del depurador de SOS cargada, escriba el comando siguiente:  
   
-     **\!dumpheap \-type Free \-stat**  
+     **!dumpheap -type Free -stat**  
   
      Este comando muestra el tamaño total de todos los objetos disponibles en el montón administrado, como se muestra en el ejemplo siguiente.  
   
@@ -538,9 +541,9 @@ En este tema se describen los problemas relacionados con la recolección de elem
   
 -   Para determinar el espacio disponible en la generación 0, escriba el comando siguiente para obtener información sobre el consumo de memoria por generación:  
   
-     **\!eeheap \-gc**  
+     **!eeheap -gc**  
   
-     Este comando muestra un resultado similar al siguiente.  La última línea muestra el segmento efímero.  
+     Este comando muestra un resultado similar al siguiente. La última línea muestra el segmento efímero.  
   
     ```  
     Heap 0 (0015ad08)  
@@ -558,9 +561,9 @@ En este tema se describen los problemas relacionados con la recolección de elem
   
 -   Calcule el espacio usado por la generación 0:  
   
-     **?  49e05d04\-0x49521f8c**  
+     **? 49e05d04-0x49521f8c**  
   
-     El resultado es el siguiente.  La generación 0 ocupa aproximadamente 9 MB.  
+     El resultado es el siguiente. La generación 0 ocupa aproximadamente 9 MB.  
   
     ```  
     Evaluate expression: 9321848 = 008e3d78  
@@ -568,7 +571,7 @@ En este tema se describen los problemas relacionados con la recolección de elem
   
 -   El comando siguiente vuelca el espacio disponible dentro del intervalo de la generación 0:  
   
-     **\!dumpheap \-type Free \-stat 0x49521f8c 49e05d04**  
+     **!dumpheap -type Free -stat 0x49521f8c 49e05d04**  
   
      El resultado es el siguiente.  
   
@@ -593,14 +596,14 @@ En este tema se describen los problemas relacionados con la recolección de elem
     Total 409 objects  
     ```  
   
-     Este resultado muestra que la parte de la generación 0 del montón está usando 9 MB de espacio para los objetos y tiene 7 MB disponibles.  Este análisis muestra hasta qué punto la generación 0 contribuye a la fragmentación.  Esta cantidad de uso del montón se debe descontar de la cantidad total como la causa de fragmentación por parte de los objetos de larga duración.  
+     Este resultado muestra que la parte de la generación 0 del montón está usando 9 MB de espacio para los objetos y tiene 7 MB disponibles. Este análisis muestra hasta qué punto la generación 0 contribuye a la fragmentación. Esta cantidad de uso del montón se debe descontar de la cantidad total como la causa de fragmentación por parte de los objetos de larga duración.  
   
 <a name="Pinned"></a>   
-##### Para determinar el número de objetos anclados  
+##### <a name="to-determine-the-number-of-pinned-objects"></a>Para determinar el número de objetos anclados  
   
 -   En WinDbg o en el depurador de Visual Studio con la extensión del depurador de SOS cargada, escriba el comando siguiente:  
   
-     **\!gchandles**  
+     **!gchandles**  
   
      Las estadísticas mostradas incluyen el número de identificadores anclados, como se muestra en el ejemplo siguiente.  
   
@@ -611,15 +614,15 @@ En este tema se describen los problemas relacionados con la recolección de elem
     ```  
   
 <a name="TimeInGC"></a>   
-##### Para determinar la duración de una recolección de elementos no utilizados  
+##### <a name="to-determine-the-length-of-time-in-a-garbage-collection"></a>Para determinar la duración de una recolección de elementos no utilizados  
   
 -   Examine el contador de rendimiento de memoria `% Time in GC`.  
   
-     El valor se calcula usando un tiempo de intervalo de muestra.  Como los contadores se actualizan al final de cada recolección de elementos no utilizados, el ejemplo actual tendrá el mismo valor que el ejemplo anterior si no se realizó ninguna recolección durante el intervalo.  
+     El valor se calcula usando un tiempo de intervalo de muestra. Como los contadores se actualizan al final de cada recolección de elementos no utilizados, el ejemplo actual tendrá el mismo valor que el ejemplo anterior si no se realizó ninguna recolección durante el intervalo.  
   
      Tiempo de recolección se obtiene multiplicando el tiempo de intervalo de muestra por el valor de porcentaje.  
   
-     Los datos siguientes muestran cuatro intervalos de muestreo de dos segundos para un estudio de 8 segundos.  Las columnas `Gen0`, `Gen1` y `Gen2` muestran el número de recolecciones de elementos no utilizados que se produjeron durante ese intervalo para esa generación.  
+     Los datos siguientes muestran cuatro intervalos de muestreo de dos segundos para un estudio de 8 segundos. Las columnas `Gen0`, `Gen1` y `Gen2` muestran el número de recolecciones de elementos no utilizados que se produjeron durante ese intervalo para esa generación.  
   
     ```  
     Interval    Gen0    Gen1    Gen2    % Time in GC  
@@ -629,7 +632,7 @@ En este tema se describen los problemas relacionados con la recolección de elem
            4      11       3       1               3  
     ```  
   
-     Esta información no indica cuándo se produjo la recolección de elementos no utilizados, pero puede determinar el número de recolecciones de elementos no utilizados que se produjeron en un intervalo de tiempo.  Suponiendo el caso peor, la décima recolección de elementos no utilizados de generación 0 terminó al principio del segundo intervalo y la undécima recolección de elementos no utilizados de generación 0 terminó al final del quinto intervalo.  El tiempo transcurrido entre el final de la décima recolección de elementos no utilizados y el final de la undécima recolección de elementos no utilizados es de aproximadamente 2 segundos y el contador de rendimiento muestra un 3%, por lo que la duración de la undécima recolección de elementos no utilizados de generación 0 fue de \(2 segundos \* 3% \= 60 ms\).  
+     Esta información no indica cuándo se produjo la recolección de elementos no utilizados, pero puede determinar el número de recolecciones de elementos no utilizados que se produjeron en un intervalo de tiempo. Suponiendo el caso peor, la décima recolección de elementos no utilizados de generación 0 terminó al principio del segundo intervalo y la undécima recolección de elementos no utilizados de generación 0 terminó al final del quinto intervalo. El tiempo transcurrido entre el final de la décima recolección de elementos no utilizados y el final de la undécima recolección de elementos no utilizados es de aproximadamente 2 segundos y el contador de rendimiento muestra un 3%, por lo que la duración de la undécima recolección de elementos no utilizados de generación 0 fue de (2 segundos * 3% = 60 ms).  
   
      En este ejemplo, hay 5 periodos.  
   
@@ -642,7 +645,7 @@ En este tema se describen los problemas relacionados con la recolección de elem
            5      11       4       2               20  
     ```  
   
-     La segunda recolección de elementos no utilizados de generación 2 se inició durante el tercer intervalo y terminó en el quinto intervalo.  Suponiendo el caso peor, la última recolección de elementos no utilizados fue de una generación 0 que terminó al principio del segundo intervalo y la recolección de elementos no utilizados de generación 2 terminó al final del quinto intervalo.  Por tanto, el tiempo transcurrido entre el final de la recolección de elementos no utilizados de generación 0 y el final de la recolección de elementos no utilizados de generación 2 es de 4 segundos.  Puesto que el contador `% Time in GC` muestra un 20%, el tiempo máximo que la recolección de elementos no utilizados de generación 2 podría haber tardado es \(4 segundos \* 20% \= 800 ms\).  
+     La segunda recolección de elementos no utilizados de generación 2 se inició durante el tercer intervalo y terminó en el quinto intervalo. Suponiendo el caso peor, la última recolección de elementos no utilizados fue de una generación 0 que terminó al principio del segundo intervalo y la recolección de elementos no utilizados de generación 2 terminó al final del quinto intervalo. Por tanto, el tiempo transcurrido entre el final de la recolección de elementos no utilizados de generación 0 y el final de la recolección de elementos no utilizados de generación 2 es de 4 segundos. Puesto que el contador `% Time in GC` muestra un 20%, el tiempo máximo que la recolección de elementos no utilizados de generación 2 podría haber tardado es (4 segundos * 20% = 800 ms).  
   
 -   También puede determinar la duración de una recolección de elementos no utilizados mediante [eventos ETW de recolección de elementos no utilizados](../../../docs/framework/performance/garbage-collection-etw-events.md) y analizar la información para averiguar la duración de la recolección de elementos no utilizados.  
   
@@ -659,13 +662,13 @@ En este tema se describen los problemas relacionados con la recolección de elem
     517918        GCRestartEEEnd  
     ```  
   
-     La suspensión del subproceso administrado tardó 26 us \(`GCSuspendEEEnd` – `GCSuspendEEBegin_V1`\).  
+     La suspensión del subproceso administrado tardó 26 us (`GCSuspendEEEnd` – `GCSuspendEEBegin_V1`).  
   
-     La recolección de elementos no utilizados real tardó 4,8 ms \(`GCEnd_V1` – `GCStart_V1`\).  
+     La recolección de elementos no utilizados real tardó 4,8 ms (`GCEnd_V1` – `GCStart_V1`).  
   
-     La reanudación de los subprocesos administrados tardó 21 us \(`GCRestartEEEnd` – `GCRestartEEBegin`\).  
+     La reanudación de los subprocesos administrados tardó 21 us (`GCRestartEEEnd` – `GCRestartEEBegin`).  
   
-     El resultado siguiente proporciona un ejemplo de recolección de elementos no utilizados en segundo plano, e incluye los campos de proceso, subproceso y evento.  \(No se muestra todos los datos.\)  
+     El resultado siguiente proporciona un ejemplo de recolección de elementos no utilizados en segundo plano, e incluye los campos de proceso, subproceso y evento. (No se muestra todos los datos.)  
   
     ```  
     timestamp(us)    event name            process    thread    event field  
@@ -685,24 +688,24 @@ En este tema se describen los problemas relacionados con la recolección de elem
     89931464        GCHeapStats            Test.exe    4372          
     ```  
   
-     El evento `GCStart_V1` en 42504816 indica que se trata de una recolección de elementos no utilizados en segundo plano, ya que el último campo es `1`.  Esta se convierte en la recolección de elementos no utilizados número  102019.  
+     El evento `GCStart_V1` en 42504816 indica que se trata de una recolección de elementos no utilizados en segundo plano, ya que el último campo es `1`. Esta se convierte en la recolección de elementos no utilizados número 102019.  
   
-     El evento `GCStart` se produce porque se necesita una recolección de elementos no utilizados efímera antes de iniciar una recolección de elementos no utilizados en segundo plano.  Esta se convierte en la recolección de elementos no utilizados número  102020.  
+     El evento `GCStart` se produce porque se necesita una recolección de elementos no utilizados efímera antes de iniciar una recolección de elementos no utilizados en segundo plano. Esta se convierte en la recolección de elementos no utilizados número 102020.  
   
-     En 42514170, la recolección de elementos no utilizados número  102020 finaliza.  Los subprocesos administrados se reinician en este momento.  Esto se completa en el subproceso 4372, que desencadenó esta recolección de elementos no utilizados en segundo plano.  
+     En 42514170, la recolección de elementos no utilizados número 102020 finaliza. Los subprocesos administrados se reinician en este momento. Esto se completa en el subproceso 4372, que desencadenó esta recolección de elementos no utilizados en segundo plano.  
   
-     En el subproceso 4744, se produce una suspensión.  Esta es la última vez que la recolección de elementos no utilizados en segundo plano tiene que suspender subprocesos administrados.  Esta duración es de aproximadamente 99 ms \(\(63784407\-63685394\)\/1000\).  
+     En el subproceso 4744, se produce una suspensión. Esta es la última vez que la recolección de elementos no utilizados en segundo plano tiene que suspender subprocesos administrados. Esta duración es de aproximadamente 99 ms ((63784407-63685394)/1000).  
   
-     El evento `GCEnd` para la recolección de elementos no utilizados en segundo plano está en 89931423.  Esto significa que la recolección de elementos no utilizados en segundo plano duró alrededor de 47 segundos \(\(89931423\-42504816\)\/1000\).  
+     El evento `GCEnd` para la recolección de elementos no utilizados en segundo plano está en 89931423. Esto significa que la recolección de elementos no utilizados en segundo plano duró alrededor de 47 segundos ((89931423-42504816)/1000).  
   
      Mientras los subprocesos administrados se están ejecutando, puede producirse cualquier número de recolecciones de elementos no utilizados efímeras.  
   
 <a name="Triggered"></a>   
-##### Para determinar qué desencadenó una recolección de elementos no utilizados  
+##### <a name="to-determine-what-triggered-a-garbage-collection"></a>Para determinar qué desencadenó una recolección de elementos no utilizados  
   
 -   En WinDbg o en el depurador de Visual Studio con la extensión del depurador de SOS cargada, escriba el comando siguiente para mostrar todos los subprocesos con sus pilas de llamadas:  
   
-     **~\*kb**  
+     **~\*KB**  
   
      Este comando muestra un resultado similar al siguiente.  
   
@@ -712,7 +715,7 @@ En este tema se describen los problemas relacionados con la recolección de elem
     0012f490 79fa22bd fragment_ni!request.Main(System.String[])+0x48  
     ```  
   
-     Si la recolección de elementos no utilizados se produjo por una notificación de memoria insuficiente del sistema operativo, la pila de llamadas es similar, salvo que el subproceso es el subproceso finalizador.  El subproceso finalizador obtiene una notificación asincrónica de memoria insuficiente e induce la recolección de elementos no utilizados.  
+     Si la recolección de elementos no utilizados se produjo por una notificación de memoria insuficiente del sistema operativo, la pila de llamadas es similar, salvo que el subproceso es el subproceso finalizador. El subproceso finalizador obtiene una notificación asincrónica de memoria insuficiente e induce la recolección de elementos no utilizados.  
   
      Si la recolección de elementos no utilizados se produjo por la asignación de memoria, la pila aparece de la manera siguiente:  
   
@@ -728,13 +731,13 @@ En este tema se describen los problemas relacionados con la recolección de elem
     0000002a 79fa22bd fragment_ni!request.Main(System.String[])+0x153  
     ```  
   
-     Un código auxiliar Just\-In\-Time \(`JIT_New*`\) llama finalmente a `GCHeap::GarbageCollectGeneration`.  Si determina que las recolecciones de elementos no utilizados de generación 2 se deben a asignaciones, debe averiguar qué objetos recolecta una recolección de elementos no utilizados de generación 2 y cómo evitarlas.  Es decir, debe determinar la diferencia entre el inicio y el final de una recolección de elementos no utilizados de generación 2 y los objetos que causaron la recolección de generación 2.  
+     Un código auxiliar Just-In-Time (`JIT_New*`) llama finalmente a `GCHeap::GarbageCollectGeneration`. Si determina que las recolecciones de elementos no utilizados de generación 2 se deben a asignaciones, debe averiguar qué objetos recolecta una recolección de elementos no utilizados de generación 2 y cómo evitarlas. Es decir, debe determinar la diferencia entre el inicio y el final de una recolección de elementos no utilizados de generación 2 y los objetos que causaron la recolección de generación 2.  
   
      Por ejemplo, escriba el comando siguiente en el depurador para mostrar el comienzo de una recolección de generación 2:  
   
-     **\!dumpheap –stat**  
+     **!dumpheap –stat**  
   
-     Resultado de ejemplo \(abreviado para mostrar los objetos que usan más espacio\):  
+     Resultado de ejemplo (abreviado para mostrar los objetos que usan más espacio):  
   
     ```  
     79124228    31857      9862328 System.Object[]  
@@ -754,9 +757,9 @@ En este tema se describen los problemas relacionados con la recolección de elem
   
      Repita el comando al final de la generación 2:  
   
-     **\!dumpheap –stat**  
+     **!dumpheap –stat**  
   
-     Resultado de ejemplo \(abreviado para mostrar los objetos que usan más espacio\):  
+     Resultado de ejemplo (abreviado para mostrar los objetos que usan más espacio):  
   
     ```  
     79124228    26648      9314256 System.Object[]  
@@ -773,14 +776,14 @@ En este tema se describen los problemas relacionados con la recolección de elem
     Total 6417525 objects  
     ```  
   
-     Los objetos `double[]` desaparecieron del final del resultado, lo que significa que se recopilaron.  Estos objetos ocupan aproximadamente 70 MB.  Los objetos restantes no cambiaron mucho.  Por tanto, estos objetos `double[]` eran la razón por la que se produjo esta recolección de elementos no utilizados de generación 2.  El paso siguiente consiste en determinar por qué están allí los objetos `double[]` y por qué murieron.  Puede preguntar al desarrollador del código el origen de estos objetos o puede usar el comando **gcroot**.  
+     Los objetos `double[]` desaparecieron del final del resultado, lo que significa que se recopilaron. Estos objetos ocupan aproximadamente 70 MB. Los objetos restantes no cambiaron mucho. Por tanto, estos objetos `double[]` eran la razón por la que se produjo esta recolección de elementos no utilizados de generación 2. El paso siguiente consiste en determinar por qué están allí los objetos `double[]` y por qué murieron. Puede preguntar al desarrollador del código la procedencia de estos objetos o puede usar el comando **gcroot**.  
   
 <a name="HighCPU"></a>   
-##### Para determinar si el uso elevado de CPU está provocado por la recolección de elementos no utilizados  
+##### <a name="to-determine-whether-high-cpu-usage-is-caused-by-garbage-collection"></a>Para determinar si el uso elevado de CPU está provocado por la recolección de elementos no utilizados  
   
 -   Correlacione el valor del contador de rendimiento de memoria `% Time in GC` con el tiempo de proceso.  
   
-     Si el valor de `% Time in GC` tiene un pico a la vez que el tiempo de proceso, la recolección de elementos no utilizados está provocando un uso de CPU elevado.  De lo contrario, genere un perfil de la aplicación para averiguar dónde se está produciendo el uso elevado.  
+     Si el valor de `% Time in GC` tiene un pico a la vez que el tiempo de proceso, la recolección de elementos no utilizados está provocando un uso de CPU elevado. De lo contrario, genere un perfil de la aplicación para averiguar dónde se está produciendo el uso elevado.  
   
-## Vea también  
- [Garbage Collection](../../../docs/standard/garbage-collection/index.md)
+## <a name="see-also"></a>Vea también  
+ [Recolección de elementos no utilizados](../../../docs/standard/garbage-collection/index.md)

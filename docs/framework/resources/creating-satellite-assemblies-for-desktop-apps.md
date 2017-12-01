@@ -5,10 +5,12 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-bcl
+ms.technology: dotnet-bcl
 ms.tgt_pltfrm: 
 ms.topic: article
+dev_langs:
+- csharp
+- vb
 helpviewer_keywords:
 - deploying applications [.NET Framework], resources
 - resource files, deploying
@@ -28,22 +30,21 @@ helpviewer_keywords:
 - compiling satellite assemblies
 - re-signing assemblies
 ms.assetid: 8d5c6044-2919-41d2-8321-274706b295ac
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 11d455f16c5ee3ce78c26c7642831900e527b960
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: febb9d50bd61eef53f39bb0f36cd4e3a6049e9f5
-ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="creating-satellite-assemblies-for-desktop-apps"></a>Crear ensamblados satélite para aplicaciones de escritorio
 Los archivos de recursos desempeñan un papel fundamental en las aplicaciones localizadas. Permiten que una aplicación muestre cadenas, imágenes y otros datos en el idioma y la referencia cultural del usuario, y que proporcione datos alternativos si los recursos para el idioma o la referencia cultural del usuario no están disponibles. .NET Framework usa un modelo de concentrador y radio para buscar y recuperar recursos localizados. El concentrador es el ensamblado principal que contiene el código ejecutable no localizable y los recursos de una referencia cultural única, denominada referencia cultural neutra o predeterminada. La referencia cultural predeterminada es la referencia cultural de reserva de la aplicación y se usa si no hay recursos localizados disponibles. El atributo <xref:System.Resources.NeutralResourcesLanguageAttribute> se usa para designar la referencia cultural predeterminada de la aplicación. Cada radio se conecta a un ensamblado satélite que contiene los recursos de una única referencia cultural localizada, pero no contiene código. Debido a que los ensamblados satélite no forman parte del ensamblado principal, los recursos correspondientes a una referencia cultural específica se pueden actualizar o reemplazar fácilmente sin reemplazar el ensamblado principal de la aplicación.  
   
 > [!NOTE]
->  Los recursos de la referencia cultural predeterminada de una aplicación también se pueden almacenar en un ensamblado satélite. Para ello, asigne al atributo <xref:System.Resources.NeutralResourcesLanguageAttribute> un valor de <xref:System.Resources.UltimateResourceFallbackLocation.Satellite?displayProperty=fullName>.  
+>  Los recursos de la referencia cultural predeterminada de una aplicación también se pueden almacenar en un ensamblado satélite. Para ello, asigne al atributo <xref:System.Resources.NeutralResourcesLanguageAttribute> un valor de <xref:System.Resources.UltimateResourceFallbackLocation.Satellite?displayProperty=nameWithType>.  
   
 ## <a name="satellite-assembly-name-and-location"></a>Nombre y ubicación del ensamblado satélite  
  El modelo de concentrador y radio requiere colocar recursos en ubicaciones específicas para que sea fácil ubicarlos y usarlos. Si no compila los recursos y les asigna el nombre de la manera prevista, o si no los coloca en las ubicaciones correctas, Common Language Runtime no podrá encontrarlos y usará en su lugar los recursos de la referencia cultural predeterminada. Para tener acceso automáticamente a los recursos localizados se usa el Administrador de recursos de .NET Framework, representado por un objeto <xref:System.Resources.ResourceManager>. El Administrador de recursos requiere lo siguiente:  
@@ -96,9 +97,10 @@ al /target:lib /embed:strings.de.resources /culture:de /out:Example.resources.dl
   
 1.  Cree un archivo de recursos denominado Greeting.resx o Greeting.txt para que contenga el recurso para la referencia cultural predeterminada. Almacene una sola cadena denominada `HelloString` cuyo valor sea "Hola a todos" en este archivo.  
   
-2.  Para indicar que el inglés (en) es la referencia cultural predeterminada de la aplicación, agregue el siguiente atributo <xref:System.Resources.NeutralResourcesLanguageAttribute?displayProperty=fullName> al archivo AssemblyInfo de la aplicación o al archivo de código fuente principal que se compilará en el ensamblado principal de la aplicación.  
+2.  Para indicar que el inglés (en) es la referencia cultural predeterminada de la aplicación, agregue el siguiente atributo <xref:System.Resources.NeutralResourcesLanguageAttribute?displayProperty=nameWithType> al archivo AssemblyInfo de la aplicación o al archivo de código fuente principal que se compilará en el ensamblado principal de la aplicación.  
   
-     [!code-csharp[Conceptual.Resources.Locating#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.locating/cs/assemblyinfo.cs#2)] [!code-vb[Conceptual.Resources.Locating#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.locating/vb/assemblyinfo.vb#2)]  
+     [!code-csharp[Conceptual.Resources.Locating#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.locating/cs/assemblyinfo.cs#2)]
+     [!code-vb[Conceptual.Resources.Locating#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.locating/vb/assemblyinfo.vb#2)]  
   
 3.  Agregue compatibilidad para referencias culturales adicionales (en-US, fr-FR y ru-RU) a la aplicación de la manera siguiente:  
   
@@ -122,9 +124,10 @@ al /target:lib /embed:strings.de.resources /culture:de /out:Example.resources.dl
 5.  Compile el código fuente siguiente junto con los recursos para la referencia cultural predeterminada en el ensamblado principal de la aplicación:  
   
     > [!IMPORTANT]
-    >  Si usa la línea de comandos en lugar de Visual Studio para crear el ejemplo, debe modificar la llamada al constructor de clase <xref:System.Resources.ResourceManager> de la siguiente manera: `ResourceManager rm = new ResourceManager("Greetings",``typeof(Example).Assembly);`  
+    >  Si usa la línea de comandos en lugar de Visual Studio para crear el ejemplo, debe modificar la llamada al constructor de clase <xref:System.Resources.ResourceManager> de la siguiente manera: `ResourceManager rm = new ResourceManager("Greetings", typeof(Example).Assembly);`  
   
-     [!code-csharp[Conceptual.Resources.Locating#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.locating/cs/program.cs#1)] [!code-vb[Conceptual.Resources.Locating#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.locating/vb/module1.vb#1)]  
+     [!code-csharp[Conceptual.Resources.Locating#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.locating/cs/program.cs#1)]
+     [!code-vb[Conceptual.Resources.Locating#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.locating/vb/module1.vb#1)]  
   
      Si la aplicación se denomina Example y está compilando desde la línea de comandos, el comando para el compilador de C# es el siguiente:  
   
@@ -223,9 +226,10 @@ gacutil /i:StringLibrary.resources.dll
   
 3.  Cree un archivo de recursos denominado Strings.resx para que contenga el recurso para la referencia cultural predeterminada. Almacene una sola cadena denominada `Greeting` cuyo valor sea "¿Qué tal?" en ese archivo.  
   
-4.  Para indicar que "en" es la referencia cultural predeterminada de la aplicación, agregue el siguiente atributo <xref:System.Resources.NeutralResourcesLanguageAttribute?displayProperty=fullName> al archivo AssemblyInfo de la aplicación o al archivo de código fuente principal que se compilará en el ensamblado principal de la aplicación:  
+4.  Para indicar que "en" es la referencia cultural predeterminada de la aplicación, agregue el siguiente atributo <xref:System.Resources.NeutralResourcesLanguageAttribute?displayProperty=nameWithType> al archivo AssemblyInfo de la aplicación o al archivo de código fuente principal que se compilará en el ensamblado principal de la aplicación:  
   
-     [!code-csharp[Conceptual.Resources.Satellites#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.satellites/cs/stringlibrary.cs#2)] [!code-vb[Conceptual.Resources.Satellites#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.satellites/vb/stringlibrary.vb#2)]  
+     [!code-csharp[Conceptual.Resources.Satellites#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.satellites/cs/stringlibrary.cs#2)]
+     [!code-vb[Conceptual.Resources.Satellites#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.satellites/vb/stringlibrary.vb#2)]  
   
 5.  Agregue compatibilidad para referencias culturales adicionales (en-US, fr-FR y ru-RU) a la aplicación de la manera siguiente:  
   
@@ -246,9 +250,10 @@ gacutil /i:StringLibrary.resources.dll
 7.  Compile el siguiente código fuente para StringLibrary.vb o StringLibrary.cs junto con los recursos para la referencia cultural predeterminada en un ensamblado de biblioteca con firma retrasada denominado StringLibrary.dll:  
   
     > [!IMPORTANT]
-    >  Si usa la línea de comandos en lugar de Visual Studio para crear el ejemplo, debe modificar la llamada al constructor de clase <xref:System.Resources.ResourceManager> de la siguiente manera: `ResourceManager rm = new ResourceManager("Strings",` `typeof(Example).Assembly);`.  
+    >  Si está utilizando la línea de comandos en lugar de Visual Studio para crear el ejemplo, debe modificar la llamada a la <xref:System.Resources.ResourceManager> constructor de clase para `ResourceManager rm = new ResourceManager("Strings",` `typeof(Example).Assembly);`.  
   
-     [!code-csharp[Conceptual.Resources.Satellites#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.satellites/cs/stringlibrary.cs#1)] [!code-vb[Conceptual.Resources.Satellites#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.satellites/vb/stringlibrary.vb#1)]  
+     [!code-csharp[Conceptual.Resources.Satellites#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.satellites/cs/stringlibrary.cs#1)]
+     [!code-vb[Conceptual.Resources.Satellites#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.satellites/vb/stringlibrary.vb#1)]  
   
      El comando para el compilador de C# es el siguiente:  
   
@@ -294,7 +299,8 @@ gacutil /i:StringLibrary.resources.dll
   
 13. Si está usando Visual Studio, cree un proyecto de **aplicación de consola** denominado `Example`, agréguele una referencia a StringLibrary.dll y el siguiente código fuente, y compílelo.  
   
-     [!code-csharp[Conceptual.Resources.Satellites#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.satellites/cs/example.cs#3)] [!code-vb[Conceptual.Resources.Satellites#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.satellites/vb/example.vb#3)]  
+     [!code-csharp[Conceptual.Resources.Satellites#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.satellites/cs/example.cs#3)]
+     [!code-vb[Conceptual.Resources.Satellites#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.satellites/vb/example.vb#3)]  
   
      Para compilar desde la línea de comandos, use el comando siguiente para el compilador de C#:  
   
@@ -311,10 +317,9 @@ gacutil /i:StringLibrary.resources.dll
 14. Ejecute Example.exe.  
   
 ## <a name="see-also"></a>Vea también  
- [Empaquetar e implementar recursos](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)   
- [Retrasar la firma de un ensamblado](../../../docs/framework/app-domains/delay-sign-assembly.md)   
- [Al.exe (Assembly Linker)](../../../docs/framework/tools/al-exe-assembly-linker.md)   
- [Sn.exe (Herramienta de nombre seguro)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)   
- [Gacutil.exe (Herramienta Caché global de ensamblados)](../../../docs/framework/tools/gacutil-exe-gac-tool.md)   
+ [Empaquetar e implementar recursos](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)  
+ [Retrasar la firma de un ensamblado](../../../docs/framework/app-domains/delay-sign-assembly.md)  
+ [Al.exe (Assembly Linker)](../../../docs/framework/tools/al-exe-assembly-linker.md)  
+ [Sn.exe (Herramienta de nombre seguro)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)  
+ [Gacutil.exe (Herramienta Caché global de ensamblados)](../../../docs/framework/tools/gacutil-exe-gac-tool.md)  
  [Recursos de aplicaciones de escritorio](../../../docs/framework/resources/index.md)
-

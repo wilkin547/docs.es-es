@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 3b1f5725-ac94-4f17-8e5f-244442438a4d
-ms.translationtype: HT
-ms.sourcegitcommit: 3155295489e1188640dae5aa5bf9fdceb7480ed6
 ms.openlocfilehash: 9c2cc090dfd5405def0cd6ab9ec1771be4a332a5
-ms.contentlocale: es-es
-ms.lasthandoff: 08/21/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="common-type-system--common-language-specification"></a>Common Type System y Common Language Specification
 
 De nuevo, dos términos que se usan libremente en el mundo de .NET, en realidad, son cruciales para entender cómo permite una implementación de .NET el desarrollo de varios lenguajes y para entender cómo funciona.
@@ -61,4 +59,3 @@ Puede consultar los documentos de la sección [Más recursos](#more-resources) a
 
 *   [Sistema de tipos comunes](https://msdn.microsoft.com/library/zcx1eb1e.aspx)
 *   [Common Language Specification](https://msdn.microsoft.com/library/12a7a7h3.aspx)
-

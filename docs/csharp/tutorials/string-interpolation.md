@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: f8806f6b-3ac7-4ee6-9b3e-c524d5301ae9
+ms.openlocfilehash: ac19d4208da4f8ee6dd3e071ab70dbc41a0cd065
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: de8f77e44319731f87f00d227a5373a78bf40e32
-ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="string-interpolation-in-c"></a>Interpolación de cadenas en C# #
 
 La interpolación de cadenas es la forma en que los marcadores de posición de una cadena se reemplazan por el valor de una variable de cadena. Antes de C# 6, la manera de hacerlo era con `System.String.Format`. Aunque este sistema funciona bien, como se usan marcadores de posición numerados, puede ser más difícil de leer y más detallado.
@@ -46,23 +44,27 @@ dotnet new console
 
 Este comando creará un proyecto de .NET Core esencial con un archivo de proyecto, *interpolated.csproj*, y un archivo de código fuente, *Program.cs*. Debe ejecutar `dotnet restore` para restaurar las dependencias necesarias para compilar este proyecto.
 
+[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
+
 Para ejecutar el programa, use `dotnet run`. Deberá ver la salida "Hola a todos" a la consola.
+
+
 
 ## <a name="intro-to-string-interpolation"></a>Introducción a la interpolación de cadenas
 
 Con `System.String.Format`, se especifican "marcadores de posición" en una cadena que se reemplazan por los parámetros que siguen a la cadena. Por ejemplo:
 
-[!code-csharp[Ejemplo de String.Format](../../../samples/snippets/csharp/new-in-6/string-interpolation.cs#StringFormatExample)]  
+[!code-csharp[String.Format example](../../../samples/snippets/csharp/new-in-6/string-interpolation.cs#StringFormatExample)]  
 
 El resultado será "My name is Matt Groves".
 
 En C# 6, en lugar de usar `String.Format`, se define una cadena interpolada colocando delante el símbolo `$` y luego usando las variables directamente en la cadena. Por ejemplo:
 
-[!code-csharp[Ejemplo de interpolación](../../../samples/snippets/csharp/new-in-6/string-interpolation.cs#InterpolationExample)]  
+[!code-csharp[Interpolation example](../../../samples/snippets/csharp/new-in-6/string-interpolation.cs#InterpolationExample)]  
 
 No tiene que usar solo variables. Puede usar cualquier expresión entre corchetes. Por ejemplo:
 
-[!code-csharp[Ejemplo de expresiones de interpolación](../../../samples/snippets/csharp/new-in-6/string-interpolation.cs#InterpolationExpressionExample)]  
+[!code-csharp[Interpolation expression example](../../../samples/snippets/csharp/new-in-6/string-interpolation.cs#InterpolationExpressionExample)]  
 
 Cuya salida sería:
 
@@ -80,7 +82,7 @@ En segundo plano, el compilador convierte esta sintaxis de interpolación de cad
 
 Por ejemplo, puede agregar relleno y formato numérico:
 
-[!code-csharp[Ejemplo de formato de interpolación](../../../samples/snippets/csharp/new-in-6/string-interpolation.cs#InterpolationFormattingExample)]  
+[!code-csharp[Interpolation formatting example](../../../samples/snippets/csharp/new-in-6/string-interpolation.cs#InterpolationFormattingExample)]  
 
 El comando anterior generaría la siguiente salida:
 
@@ -118,9 +120,8 @@ De forma predeterminada, una cadena interpolada usa la referencia cultural actua
 
 Por ejemplo:
 
-[!code-csharp[Ejemplo de internacionalización de interpolación](../../../samples/snippets/csharp/new-in-6/string-interpolation.cs#InterpolationInternationalizationExample)]  
+[!code-csharp[Interpolation internationalization example](../../../samples/snippets/csharp/new-in-6/string-interpolation.cs#InterpolationInternationalizationExample)]  
 
 ## <a name="conclusion"></a>Conclusión 
 
 En este tutorial, aprendió a usar las características de interpolación de cadenas de C# 6. Básicamente es una manera más concisa de escribir instrucciones simples `String.Format`, con algunas advertencias para usos más avanzados de ellas.
-

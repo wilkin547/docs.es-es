@@ -5,8 +5,7 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-bcl
+ms.technology: dotnet-bcl
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +15,15 @@ helpviewer_keywords:
 - GAC (global assembly cache), benefits
 - access control lists [.NET Framework]
 ms.assetid: 8a18e5c2-d41d-49ef-abcb-7c27e2469433
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 0c656cbad746e044a6dbf187ce86fd4738d6ef98
-ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="working-with-assemblies-and-the-global-assembly-cache"></a>Trabajar con ensamblados y la memoria caché global de ensamblados
 Si se piensa compartir un ensamblado entre varias aplicaciones, puede instalarlo en la caché global de ensamblados. Cada equipo tiene esta memoria caché de código donde se instala Common Language Runtime. La caché global de ensamblados almacena los ensamblados designados específicamente para ser compartidos por varias aplicaciones del equipo. Un ensamblado debe tener un nombre seguro para que se pueda instalar en la caché global de ensamblados.  
@@ -83,4 +81,3 @@ Si se piensa compartir un ensamblado entre varias aplicaciones, puede instalarlo
   
  [Programar con ensamblados](../../../docs/framework/app-domains/programming-with-assemblies.md)  
  Describe los ensamblados, los bloques de creación de las aplicaciones administradas.
-

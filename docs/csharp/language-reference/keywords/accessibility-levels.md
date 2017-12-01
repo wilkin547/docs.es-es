@@ -1,39 +1,21 @@
 ---
 title: Niveles de accesibilidad (Referencia de C#)
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - access modifiers [C#], accessibility levels
 - accessibility levels
 ms.assetid: dc083921-0073-413e-8936-a613e8bb7df4
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 77124554d7a0b38414e154e024aceddbfffcfbd4
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 796802a407c486c1df5332d5b4920467f3a1171b
-ms.contentlocale: es-es
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="accessibility-levels-c-reference"></a>Niveles de accesibilidad (Referencia de C#)
 Use los modificadores de acceso [public](../../../csharp/language-reference/keywords/public.md), [protected](../../../csharp/language-reference/keywords/protected.md), [internal](../../../csharp/language-reference/keywords/internal.md) o [private](../../../csharp/language-reference/keywords/private.md) para especificar uno de los siguientes niveles de accesibilidad declarada para miembros.  
@@ -45,8 +27,9 @@ Use los modificadores de acceso [public](../../../csharp/language-reference/keyw
 |`internal`|El acceso está limitado al ensamblado actual.|  
 |`protected internal`|El acceso está limitado al ensamblado actual o a los tipos derivados de la clase contenedora.|  
 |`private`|El acceso está limitado al tipo contenedor.|  
+|`private protected`|Acceso está limitado a la clase contenedora o tipos derivados de la clase contenedora dentro del ensamblado actual.|  
   
- Solo se permite un modificador de acceso para un miembro o tipo, excepto cuando se usa la combinación `protected internal`.  
+ Solo un modificador de acceso se permite para un miembro o tipo, excepto cuando se usa el `protected internal` o `private protected` combinaciones.  
   
  No se permiten modificadores de acceso en espacios de nombres. Los espacios de nombres no tienen restricciones de acceso.  
   
@@ -59,7 +42,7 @@ Use los modificadores de acceso [public](../../../csharp/language-reference/keyw
 |Miembros de|Accesibilidad de miembro predeterminada|Accesibilidad declarada permitida del miembro|  
 |----------------|----------------------------------|--------------------------------------------------|  
 |`enum`|`public`|Ninguna|  
-|`class`|`private`|`public`<br /><br /> `protected`<br /><br /> `internal`<br /><br /> `private`<br /><br /> `protected internal`|  
+|`class`|`private`|`public`<br /><br /> `protected`<br /><br /> `internal`<br /><br /> `private`<br /><br /> `protected internal` <br /><br />`private protected`|  
 |`interface`|`public`|Ninguna|  
 |`struct`|`private`|`public`<br /><br /> `internal`<br /><br /> `private`|  
   
@@ -69,15 +52,14 @@ Use los modificadores de acceso [public](../../../csharp/language-reference/keyw
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Vea también  
- [Referencia de C#](../../../csharp/language-reference/index.md)   
- [Guía de programación de C#](../../../csharp/programming-guide/index.md)   
- [Palabras clave de C#](../../../csharp/language-reference/keywords/index.md)   
- [Modificadores de acceso](../../../csharp/language-reference/keywords/access-modifiers.md)   
- [Dominio de accesibilidad](../../../csharp/language-reference/keywords/accessibility-domain.md)   
- [Restricciones en el uso de los niveles de accesibilidad](../../../csharp/language-reference/keywords/restrictions-on-using-accessibility-levels.md)   
- [Modificadores de acceso](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)   
- [public](../../../csharp/language-reference/keywords/public.md)   
- [private](../../../csharp/language-reference/keywords/private.md)   
- [protected](../../../csharp/language-reference/keywords/protected.md)   
+ [Referencia de C#](../../../csharp/language-reference/index.md)  
+ [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
+ [Palabras clave de C#](../../../csharp/language-reference/keywords/index.md)  
+ [Modificadores de acceso](../../../csharp/language-reference/keywords/access-modifiers.md)  
+ [Dominio de accesibilidad](../../../csharp/language-reference/keywords/accessibility-domain.md)  
+ [Restricciones en el uso de los niveles de accesibilidad](../../../csharp/language-reference/keywords/restrictions-on-using-accessibility-levels.md)  
+ [Modificadores de acceso](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)  
+ [public](../../../csharp/language-reference/keywords/public.md)  
+ [private](../../../csharp/language-reference/keywords/private.md)  
+ [protected](../../../csharp/language-reference/keywords/protected.md)  
  [internal](../../../csharp/language-reference/keywords/internal.md)
-

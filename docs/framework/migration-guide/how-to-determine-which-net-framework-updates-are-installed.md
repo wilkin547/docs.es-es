@@ -1,83 +1,117 @@
 ---
-title: "Cómo: Determinar qué actualizaciones de .NET Framework están instaladas"
-ms.custom: 
-ms.date: 03/30/2017
+title: "Cómo: determinar qué revisiones y actualizaciones de seguridad de .NET Framework están instaladas"
+description: "Obtenga información acerca de cómo determinar qué actualizaciones de seguridad de .NET Framework y las revisiones se instalan en un equipo."
+ms.date: 11/21/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
+ms.technology: dotnet-clr
 ms.topic: article
+dev_langs:
+- csharp
+- vb
 helpviewer_keywords:
 - updates, determining for .NET Framework
 - .NET Framework, determining updates
 ms.assetid: 53c7b5f7-d47a-402a-b194-7244a696a88b
-caps.latest.revision: 6
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: c35705470a8e1b553eca2ca0c68d3b8b9b3f6fa6
+ms.sourcegitcommit: a3ba258f7a8cab5c6d19a3743dd95e904ecebc44
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: b29b402e859688dcced6bd4429b18298070fb5e4
-ms.contentlocale: es-es
-ms.lasthandoff: 09/19/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/27/2017
 ---
-# <a name="how-to-determine-which-net-framework-updates-are-installed"></a>Cómo: Determinar qué actualizaciones de .NET Framework están instaladas
-Las actualizaciones instaladas para cada versión de .NET Framework instalada en un equipo se enumeran en el Registro de Windows. Puede utilizar el Editor del Registro (regedit.exe) para ver esta información.  
-  
- En el Editor del Registro, las versiones de .NET Framework y las actualizaciones instaladas para cada versión se almacenan en diferentes subclaves. Para obtener información sobre cómo detectar los números de la versión instalada, consulte [Cómo: Determinar qué versiones de .NET Framework están instaladas](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md). Para obtener información sobre cómo instalar .NET Framework, consulte [Install the .NET Framework for developers](../../../docs/framework/install/guide-for-developers.md) (Instalar .NET Framework para desarrolladores).  
-  
-### <a name="to-find-installed-updates"></a>Para buscar las actualizaciones instaladas  
-  
-1.  Abra el programa **regedit.exe**. En Windows 8 y versiones posteriores, abra la pantalla Inicio y escriba el nombre. En versiones anteriores de Windows, en el menú **Iniciar**, elija **Ejecutar** y, después, en el cuadro **Abrir**, escriba **regedit.exe**.  
-  
-     Debe tener credenciales de administrador para ejecutar regedit.exe.  
-  
-2.  En el Editor del Registro, abra la subclave siguiente:  
-  
-     HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Updates  
-  
-     Las actualizaciones instaladas se muestran bajo subclaves que identifican la versión de .NET Framework a la que se aplican. Cada actualización se identifica mediante un número de la Knowledge Base (KB).  
-  
-## <a name="example"></a>Ejemplo  
- El código siguiente determina mediante programación las actualizaciones de .NET Framework instaladas en un equipo. Debe tener credenciales administrativas para ejecutar este ejemplo.  
-  
- [!code-csharp[ListUpdates#1](../../../samples/snippets/csharp/VS_Snippets_CLR/listupdates/cs/program.cs#1)]
- [!code-vb[ListUpdates#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/listupdates/vb/program.vb#1)]  
-  
- El ejemplo genera un resultado similar al siguiente:  
-  
-```  
-Microsoft .NET Framework 3.5 SP1  
-  KB953595  Hotfix for Microsoft .NET Framework 3.5 SP1 (KB953595)  
-  SP1  
-    KB2657424  Security Update for Microsoft .NET Framework 3.5 SP1 (KB2657424)  
-    KB958484  Hotfix for Microsoft .NET Framework 3.5 SP1 (KB958484)  
-    KB963707  Update for Microsoft .NET Framework 3.5 SP1 (KB963707)  
-Microsoft .NET Framework 4 Client Profile  
-  KB2160841  Security Update for Microsoft .NET Framework 4 Client Profile (KB2160841)  
-  KB2446708  Security Update for Microsoft .NET Framework 4 Client Profile (KB2446708)  
-  KB2468871  Update for Microsoft .NET Framework 4 Client Profile (KB2468871)  
-  KB2478663  Security Update for Microsoft .NET Framework 4 Client Profile (KB2478663)  
-  KB2518870  Security Update for Microsoft .NET Framework 4 Client Profile (KB2518870)  
-  KB2533523  Update for Microsoft .NET Framework 4 Client Profile (KB2533523)  
-  KB2539636  Security Update for Microsoft .NET Framework 4 Client Profile (KB2539636)  
-  KB2572078  Security Update for Microsoft .NET Framework 4 Client Profile (KB2572078)  
-  KB2633870  Security Update for Microsoft .NET Framework 4 Client Profile (KB2633870)  
-  KB2656351  Security Update for Microsoft .NET Framework 4 Client Profile (KB2656351)  
-Microsoft .NET Framework 4 Extended  
-  KB2416472  Security Update for Microsoft .NET Framework 4 Extended (KB2416472)  
-  KB2468871  Update for Microsoft .NET Framework 4 Extended (KB2468871)  
-  KB2487367  Security Update for Microsoft .NET Framework 4 Extended (KB2487367)  
-  KB2533523  Update for Microsoft .NET Framework 4 Extended (KB2533523)  
-  KB2656351  Security Update for Microsoft .NET Framework 4 Extended (KB2656351)  
-```  
-  
+# <a name="how-to-determine-which-net-framework-security-updates-and-hotfixes-are-installed"></a>Cómo: determinar qué revisiones y actualizaciones de seguridad de .NET Framework están instaladas
+
+Este artículo muestra cómo averiguar qué seguridad de .NET Framework de actualizaciones y revisiones se instalan en un equipo.
+
+> [!NOTE]
+> Todas las técnicas que se muestra en este artículo requieren una cuenta con privilegios administrativos.
+
+## <a name="to-find-installed-updates-using-the-registry"></a>Para buscar las actualizaciones instaladas mediante el registro
+
+Las actualizaciones de seguridad instaladas y revisiones para cada versión de .NET Framework instalada en un equipo se muestran en el registro de Windows. Puede usar el Editor del registro (*regedit.exe*) programa para ver esta información.
+
+1. Abra el programa **regedit.exe**. En Windows 8 y versiones posteriores, haga clic en **iniciar** ![logotipo de Windows](../get-started/media/windowskeyboardlogo.png "Windowskeyboardlogo"), a continuación, seleccione **ejecutar**. En el **abiertos** cuadro, escriba **regedit** y seleccione **Aceptar**.
+
+2. En el Editor del Registro, abra la subclave siguiente:
+
+     `HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Updates`
+
+     Las actualizaciones instaladas se muestran bajo subclaves que identifican la versión de .NET Framework a la que se aplican. Cada actualización se identifica mediante un número de la Knowledge Base (KB).
+
+En el Editor del Registro, las versiones de .NET Framework y las actualizaciones instaladas para cada versión se almacenan en diferentes subclaves. Para obtener información sobre cómo detectar los números de versión instalada, consulte [Cómo: determinar qué versiones de .NET Framework están instaladas](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md).
+
+## <a name="to-find-installed-updates-by-querying-the-registry-in-code"></a>Para buscar actualizaciones instaladas consultando el registro en el código
+
+En el ejemplo siguiente se determina mediante programación las actualizaciones de seguridad de .NET Framework y revisiones que se instalan en un equipo:
+
+[!code-csharp[ListUpdates](../../../samples/snippets/csharp/VS_Snippets_CLR/listupdates/cs/program.cs)]
+[!code-vb[ListUpdates](../../../samples/snippets/visualbasic/VS_Snippets_CLR/listupdates/vb/program.vb)]
+
+El ejemplo genera una salida similar a la siguiente:
+
+```console
+Microsoft .NET Framework 4 Client Profile
+  KB2468871
+  KB2468871v2
+  KB2478063
+  KB2533523
+  KB2544514
+  KB2600211
+  KB2600217
+Microsoft .NET Framework 4 Extended
+  KB2468871
+  KB2468871v2
+  KB2478063
+  KB2533523
+  KB2544514
+  KB2600211
+  KB2600217
+```
+
+## <a name="to-find-installed-updates-by-querying-the-registry-in-powershell"></a>Para buscar actualizaciones instaladas consultando el registro en PowerShell
+
+En el ejemplo siguiente se muestra cómo determinar las actualizaciones de seguridad de .NET Framework y revisiones que se instalan en un equipo con PowerShell:
+
+```powershell
+ Get-ChildItem "HKLM:SOFTWARE\Wow6432Node\Microsoft\Updates\*" -Recurse | Where-Object {$_.name -like
+ "*.NET Framework*"}
+```
+
+El ejemplo genera una salida similar a la siguiente:
+
+```console
+    Hive: HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Updates\Microsoft .NET Framework 4 Client Profile
+
+
+Name                           Property
+----                           --------
+KB2468871                      ThisVersionInstalled : Y
+KB2468871v2                    ThisVersionInstalled : Y
+KB2478063                      ThisVersionInstalled : Y
+KB2533523                      ThisVersionInstalled : Y
+KB2544514                      ThisVersionInstalled : Y
+KB2600211                      ThisVersionInstalled : Y
+KB2600217                      ThisVersionInstalled : Y
+
+
+    Hive: HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Updates\Microsoft .NET Framework 4 Extended
+
+
+Name                           Property
+----                           --------
+KB2468871                      ThisVersionInstalled : Y
+KB2468871v2                    ThisVersionInstalled : Y
+KB2478063                      ThisVersionInstalled : Y
+KB2533523                      ThisVersionInstalled : Y
+KB2544514                      ThisVersionInstalled : Y
+KB2600211                      ThisVersionInstalled : Y
+KB2600217                      ThisVersionInstalled : Y
+```
+
 ## <a name="see-also"></a>Vea también
 
-[Cómo: Determinar qué versiones de .NET Framework están instaladas](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)   
-[Instalar .NET Framework](../../../docs/framework/install/guide-for-developers.md)   
+[Cómo: determinar qué versiones de .NET Framework están instaladas](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)  
+[Instalar .NET Framework para desarrolladores](../../../docs/framework/install/guide-for-developers.md)  
 [Versiones y dependencias](../../../docs/framework/migration-guide/versions-and-dependencies.md)
-

@@ -1,43 +1,24 @@
 ---
 title: "Guía de programación de C#"
-ms.date: 2017-05-02
+ms.date: 05/02/2017
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- cs.langref
-dev_langs:
-- CSharp
+f1_keywords: cs.langref
 helpviewer_keywords:
 - reference tables [C#]
 - C# language, programming guide
 - Visual C#, programming concepts
 - C# language, concepts
 ms.assetid: ac0f23a2-6bf3-4077-be99-538ae5fd3bc5
-caps.latest.revision: 45
+caps.latest.revision: "45"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 556d5f55f7564e960ac35ece2fba6eacb3e82b66
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 9bb64ea7199f5699ff166d1affb7f8126dcc6612
-ms.openlocfilehash: 0c95459f21aebf1d5efe1482e74ca2724d283821
-ms.contentlocale: es-es
-ms.lasthandoff: 09/02/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="c-programming-guide"></a>Guía de programación de C#
 Esta sección proporciona información detallada sobre las funcionalidades y características claves del lenguaje C# a las que C# puede acceder a través de .NET Framework.  
@@ -109,6 +90,5 @@ Esta sección proporciona información detallada sobre las funcionalidades y car
  [Reflexión](../../csharp/programming-guide/concepts/reflection.md)  
   
 ## <a name="see-also"></a>Vea también  
- [Referencia de C#](../../csharp/language-reference/index.md)   
+ [Referencia de C#](../../csharp/language-reference/index.md)  
  [C#](../../csharp/index.md)
-

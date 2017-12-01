@@ -1,55 +1,56 @@
 ---
-title: "How to: Store Asymmetric Keys in a Key Container | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "cryptography [.NET Framework], asymmetric keys"
-  - "storing asymmetric keys"
-  - "keys, asymmetric"
-  - "encryption keys"
-  - "keys, storing in key containers"
-  - "asymmetric keys [.NET Framework]"
-  - "encryption [.NET Framework], asymmetric keys"
-  - "decryption keys"
+title: "Cómo: Almacenar claves asimétricas en un contenedor de claves"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- cryptography [.NET Framework], asymmetric keys
+- storing asymmetric keys
+- keys, asymmetric
+- encryption keys
+- keys, storing in key containers
+- asymmetric keys [.NET Framework]
+- encryption [.NET Framework], asymmetric keys
+- decryption keys
 ms.assetid: 0dbcbd8d-0dcf-40e9-9f0c-e3f162d35ccc
-caps.latest.revision: 20
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 17
+caps.latest.revision: "20"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: 475139230c4b58bc6dcc307bd99eeafdc3e89e53
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# How to: Store Asymmetric Keys in a Key Container
-Las claves privadas asimétricas nunca deben almacenarse literalmente o en texto sin formato en el equipo local.  Si debe almacenar una clave privada, utilice un contenedor de claves.  Para obtener más información sobre contenedores de claves, consulte esta [Understanding Machine\-Level and User\-Level RSA Key Containers](../Topic/Understanding%20Machine-Level%20and%20User-Level%20RSA%20Key%20Containers.md).  
+# <a name="how-to-store-asymmetric-keys-in-a-key-container"></a>Cómo: Almacenar claves asimétricas en un contenedor de claves
+Las claves privadas asimétricas nunca deben almacenarse literalmente o en texto sin formato en el equipo local. Si debe almacenar una clave privada, utilice un contenedor de claves. Para más información sobre contenedores de claves, consulte [Descripción de los contenedores de claves RSA en el nivel de equipo y de usuario](http://msdn.microsoft.com/library/9a179f38-8fb7-4442-964c-fb7b9f39f5b9).  
   
-### Para crear una clave asimétrica y guardarla en un contenedor de claves  
+### <a name="to-create-an-asymmetric-key-and-save-it-in-a-key-container"></a>Para crear una clave asimétrica y guardarla en un contenedor de claves  
   
-1.  Cree una instancia nueva de una clase <xref:System.Security.Cryptography.CspParameters> y pase el nombre que quiera darle al contenedor de claves al campo <xref:System.Security.Cryptography.CspParameters.KeyContainerName?displayProperty=fullName>.  
+1.  Crear una nueva instancia de un <xref:System.Security.Cryptography.CspParameters> clase y pase el nombre que quiera darle al contenedor de claves para el <xref:System.Security.Cryptography.CspParameters.KeyContainerName?displayProperty=nameWithType> campo.  
   
-2.  Cree una instancia nueva de una clase que derive de la clase <xref:System.Security.Cryptography.AsymmetricAlgorithm> \(normalmente, **RSACryptoServiceProvider** o **DSACryptoServiceProvider**\) y pase el objeto **CspParameters** creado previamente a su constructor.  
+2.  Crear una nueva instancia de una clase que deriva de la <xref:System.Security.Cryptography.AsymmetricAlgorithm> clase (normalmente **RSACryptoServiceProvider** o **DSACryptoServiceProvider**) y pasar creado previamente  **CspParameters** objeto a su constructor.  
   
-### Para eliminar la clave de un contenedor de claves  
+### <a name="to-delete-the-key-from-a-key-container"></a>Para eliminar la clave de un contenedor de claves  
   
-1.  Cree una instancia nueva de una clase **CspParameters** y pase el nombre que quiera darle al contenedor de claves al campo **CspParameters.KeyContainerName**.  
+1.  Cree una instancia nueva de una clase **CspParameters** y pase el nombre que quiera darle al contenedor de claves al campo. **CspParameters.KeyContainerName**.  
   
-2.  Cree una instancia nueva de una clase que derive de la clase **AsymmetricAlgorithm** \(normalmente, **RSACryptoServiceProvider** o **DSACryptoServiceProvider**\) y pase el objeto **CspParameters** creado previamente a su constructor.  
+2.  Cree una instancia nueva de una clase que derive de la clase **AsymmetricAlgorithm** (normalmente, **RSACryptoServiceProvider** o **DSACryptoServiceProvider**) y pase el objeto **CspParameters** creado previamente a su constructor.  
   
-3.  Establezca la propiedad **PersistKeyInCSP** de la clase que deriva de **AsymmetricAlgorithm** en **false** \(**False** en Visual Basic\).  
+3.  Establezca la propiedad **PersistKeyInCSP** de la clase que derive de **AsymmetricAlgorithm** en **false** (**False** en Visual Basic).  
   
-4.  Llame al método **Clear** de la clase que deriva de **AsymmetricAlgorithm**.  Este método libera todos los recursos de la clase y borra el contenedor de claves.  
+4.  Llame al método **Clear** de la clase que derive de **AsymmetricAlgorithm**. Este método libera todos los recursos de la clase y borra el contenedor de claves.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se muestra cómo crear una clave asimétrica, guardarla en un contenedor de claves, recuperarla posteriormente y eliminarla del contenedor.  
   
  Observe que el código de los métodos `GenKey_SaveInContainer` y `GetKeyFromContainer` es similar.  Si especifica el nombre de un contenedor de claves para un objeto <xref:System.Security.Cryptography.CspParameters> y lo pasa a un objeto <xref:System.Security.Cryptography.AsymmetricAlgorithm> con la propiedad <xref:System.Security.Cryptography.RSACryptoServiceProvider.PersistKeyInCsp%2A> o la propiedad <xref:System.Security.Cryptography.DSACryptoServiceProvider.PersistKeyInCsp%2A> establecidas en true, ocurre lo siguiente.  Si no existe un contenedor de claves con el nombre especificado, se crea uno y la clave se conserva.  Si no existe un contenedor de claves con el nombre especificado, la clave del contenedor se carga automáticamente en el objeto <xref:System.Security.Cryptography.AsymmetricAlgorithm> actual.  Por lo tanto, el código del método `GenKey_SaveInContainer` conserva la clave porque se ejecuta primero, mientras que el código del método `GetKeyFromContainer` carga la clave porque se ejecuta en segundo lugar.  
@@ -130,7 +131,6 @@ Public Class StoreKey
         Console.WriteLine("Key deleted.")  
     End Sub  
 End Class  
-  
 ```  
   
 ```csharp  
@@ -220,18 +220,18 @@ public class StoreKey
 ```  
   
 ```Output  
-  
-            Clave agregada al contenedor:  
-<RSAKeyValue> Información de clave A</RSAKeyValue>  
-Clave recuperada del contenedor:  
-<RSAKeyValue> Información de clave A</RSAKeyValue>  
-Clave eliminada.  Clave agregada al contenedor:  
-<RSAKeyValue> Información de clave B</RSAKeyValue>  
-Clave eliminada.    
+Key added to container:  
+<RSAKeyValue> Key Information A</RSAKeyValue>  
+Key retrieved from container :  
+<RSAKeyValue> Key Information A</RSAKeyValue>  
+Key deleted.  
+Key added to container:  
+<RSAKeyValue> Key Information B</RSAKeyValue>  
+Key deleted.  
 ```  
   
-## Vea también  
- [Generating Keys for Encryption and Decryption](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md)   
- [Encrypting Data](../../../docs/standard/security/encrypting-data.md)   
- [Decrypting Data](../../../docs/standard/security/decrypting-data.md)   
- [Servicios criptográficos](../../../docs/standard/security/cryptographic-services.md)
+## <a name="see-also"></a>Vea también  
+ [Generar claves para cifrado y descifrado](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md)  
+ [Cifrar datos](../../../docs/standard/security/encrypting-data.md)  
+ [Descifrar datos](../../../docs/standard/security/decrypting-data.md)  
+ [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)

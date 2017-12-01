@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: bbcdd339-86eb-4ae5-9911-4c214a39a92d
+ms.openlocfilehash: 1de856a139ac7a6dee25f1dae54924e33f14a33b
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 14673f86d7d228bc1fc17a3154e0337b4c6e5f57
-ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="expression-trees-explained"></a>Árboles de expresiones en detalle
 
 [Anterior: Información general](expression-trees.md)
@@ -50,7 +48,7 @@ Visualmente, toda la instrucción es un árbol: puede empezar en el nodo raíz y
 
 Esto puede parecer complicado, pero resulta muy eficaz. Siguiendo el mismo proceso, puede descomponer expresiones mucho más complicadas. Tomemos esta expresión como ejemplo:
 ```csharp
-var finalAnswer = this.SecretSauceFuncion(
+var finalAnswer = this.SecretSauceFunction(
     currentState.createInterimResult(), currentState.createSecondValue(1, 2),
     decisionServer.considerFinalOptions("hello")) +
     MoreSecretSauce('A', DateTime.Now, true);
@@ -75,4 +73,3 @@ Las API de los árboles de expresiones permiten crear árboles que representan c
 Lo único lo que no se puede hacer es modificar un árbol de expresión.  Los árboles de expresiones son estructuras de datos inmutables. Si quiere mutar (cambiar) un árbol de expresión, debe crear un nuevo árbol que sea una copia del original, pero con los cambios que quiera. 
 
 [Siguiente: Tipos de marco que admiten árboles de expresión](expression-classes.md)
-

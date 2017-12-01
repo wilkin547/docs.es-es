@@ -5,29 +5,23 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+dev_langs: cpp
 helpviewer_keywords:
 - progress information, .NET Framework installer
 - .NET Framework, installing
 ms.assetid: 0a1a3ba3-7e46-4df2-afd3-f3a8237e1c4f
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: ea2e878ca4894612dda77075d04c924c3db8e293
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 404a092c6c05bcef568b234c9abeaf7969703cce
-ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-get-progress-from-the-net-framework-45-installer"></a>Cómo: Obtener el progreso del instalador de .NET Framework 4.5
 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] es un runtime redistribuible. Si desarrolla aplicaciones para esta versión de .NET Framework, puede incluir (encadenar) el programa de instalación de [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] como un requisito previo para la instalación de su aplicación. Para presentar al usuario una experiencia de instalación personalizada o unificada, tal vez desee iniciar silenciosamente el proceso de instalación de [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] y realizar su seguimiento mientras se muestra el progreso de la instalación de la aplicación. Para habilitar el seguimiento silencioso, el programa de instalación de [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] (que se puede observar) define un protocolo mediante el uso de un segmento de E/S (MMIO) asignado a la memoria para comunicarse con el programa de instalación (el proceso observador o encadenador). Este protocolo proporciona al encadenador una manera de obtener información de progreso, conseguir resultados detallados, responder a mensajes y cancelar el programa de instalación de [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].  
@@ -323,6 +317,5 @@ ms.lasthandoff: 07/28/2017
  Un servidor normal crea un nombre de archivo MMIO aleatorio, crea el archivo (tal y como se muestra en el ejemplo de código anterior, en `Server::CreateSection`) e inicia el programa redistribuible usando el método `CreateProcess` y pasando el nombre de la canalización con la opción `-pipe someFileSectionName`. El servidor debe implementar los métodos `OnProgress`, `Send` y `Finished` con código específico de la interfaz de usuario de la aplicación.  
   
 ## <a name="see-also"></a>Vea también  
- [Guía de implementación para desarrolladores](../../../docs/framework/deployment/deployment-guide-for-developers.md)   
+ [Guía de implementación para desarrolladores](../../../docs/framework/deployment/deployment-guide-for-developers.md)  
  [Implementación](../../../docs/framework/deployment/index.md)
-

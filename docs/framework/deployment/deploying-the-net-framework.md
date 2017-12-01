@@ -5,29 +5,22 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - .NET Framework, deploying
 - deployment [.NET Framework]
 ms.assetid: 19df26c5-4008-461d-a7d7-18f4506312d2
-caps.latest.revision: 2
+caps.latest.revision: "2"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: b3a33b57ee7cf38e06195244023e8bb918dea02b
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: fd06e38413d7a7fc666743938d0f03067717b6f2
-ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="deploying-the-net-framework"></a>Implementación de .NET Framework
 En esta sección de la documentación de .NET Framework se proporciona información para los desarrolladores que quieran instalar .NET Framework con sus aplicaciones y para los administradores que quieran implementar .NET Framework en una red. También se describen los problemas de activación y reinicio asociados a la implementación, así como la manera de supervisar el progreso de la instalación de .NET Framework.  
@@ -53,4 +46,3 @@ En esta sección de la documentación de .NET Framework se proporciona informaci
   
 ## <a name="see-also"></a>Vea también  
  [Guía de desarrollo](../../../docs/framework/development-guide.md)
-

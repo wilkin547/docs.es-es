@@ -1,28 +1,31 @@
 ---
-title: "&lt;system.serviceModel.activation&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;system.serviceModel.activation&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c0cae85f-56cb-4030-8807-6f96edff8d2d
-caps.latest.revision: 9
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 18376f3553bc0a39b82cb0f223081c09a674e062
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# &lt;system.serviceModel.activation&gt;
-Esta sección de configuración representa la configuración de la herramienta SMSvcHost.exe.  Los elementos de configuración se pueden configurar en el archivo SMSvcHost.exe.config.  Específicamente, incluye todos los valores de equipo que se deben configurar.  
+# <a name="ltsystemservicemodelactivationgt"></a>&lt;system.serviceModel.activation&gt;
+Esta sección de configuración representa la configuración de la herramienta SMSvcHost.exe. Los elementos de configuración se pueden configurar en el archivo SMSvcHost.exe.config. Específicamente, incluye todos los valores de equipo que se deben configurar.  
   
-## Archivo de configuración del ejemplo  
- A continuación, se muestra un archivo de configuración del ejemplo \(SMSvcHost.exe.config\), que es utilizado por el proceso de agente de escucha SMSvcHost.exe.  
+## <a name="sample-configuration-file"></a>Archivo de configuración del ejemplo  
+ A continuación, se muestra un archivo de configuración del ejemplo (SMSvcHost.exe.config), que es utilizado por el proceso de agente de escucha SMSvcHost.exe.  
   
-```  
+```xml  
 <configuration>  
    <runtime>  
       <gcConcurrent enabled="false" />  
@@ -67,5 +70,5 @@ Esta sección de configuración representa la configuración de la herramienta S
 </configuration>  
 ```  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  <xref:System.ServiceModel.Activation.Configuration>

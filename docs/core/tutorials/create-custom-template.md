@@ -9,14 +9,12 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 519b910a-6efe-4394-9b81-0546aa3e7462
+ms.openlocfilehash: c3955951c0367e1933342172c1bc1888fb58f60c
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: a7af88d8d7b19e201c0f7829915e817daa61c838
-ms.openlocfilehash: 243c924826a54907840b337a91cf1e5d19cff985
-ms.contentlocale: es-es
-ms.lasthandoff: 09/08/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="create-a-custom-template-for-dotnet-new"></a>Creación de una plantilla personalizada para dotnet new
 
 En este tutorial se le enseñará a hacer lo siguiente:
@@ -41,7 +39,7 @@ Si quiere usar el ejemplo descargado con la distribución del sistema de archivo
 
 ## <a name="create-a-template-from-a-project"></a>Creación de una plantilla a partir de un proyecto
 
-Use un proyecto existente que se haya confirmado que se compila y se ejecuta, o cree un proyecto de aplicación de consola en una carpeta del disco duro. En este tutorial se da por hecho que el nombre de la carpeta de proyecto es *GarciaSoftware.ConsoleTemplate.CSharp* y que está almacenada en *Documentos/Plantillas* en el perfil del usuario. El nombre de la plantilla de proyecto del tutorial tiene el formato *\<nombre de la compañía>.\<tipo de plantilla>.\<lenguaje de programación>*, pero puede asignar el nombre que quiera al proyecto y a la plantilla.
+Use un proyecto existente que haya confirmado que se compila y se ejecuta o crea un nuevo proyecto de aplicación de consola en una carpeta en el disco duro. En este tutorial se da por hecho que el nombre de la carpeta de proyecto es *GarciaSoftware.ConsoleTemplate.CSharp* y que está almacenada en *Documentos/Plantillas* en el perfil del usuario. El nombre de la plantilla de proyecto del tutorial tiene el formato *\<nombre de la compañía>.\<tipo de plantilla>.\<lenguaje de programación>*, pero puede asignar el nombre que quiera al proyecto y a la plantilla.
 
 1. Agregue una carpeta a la raíz del proyecto denominada *.template.config*.
 1. Dentro de la carpeta *.template.config*, cree un archivo *template.json* para configurar la plantilla. Para obtener más información y definiciones de miembros para el archivo *template.json*, vea el tema [Custom templates for dotnet new](../tools/custom-templates.md#templatejson) (Plantillas personalizadas para dotnet new) y el esquema [*template.json* en el almacenamiento del esquema JSON](http://json.schemastore.org/template).
@@ -219,4 +217,3 @@ dotnet new -u C:/Users/<USER>/Documents/Templates/GarciaSoftware.ConsoleTemplate
 [Repositorio de GitHub dotnet/dotnet-template-samples](https://github.com/dotnet/dotnet-template-samples)  
 [How to create your own templates for dotnet new](https://blogs.msdn.microsoft.com/dotnet/2017/04/02/how-to-create-your-own-templates-for-dotnet-new/) (Cómo crear sus propias plantillas para dotnet new)  
 [Esquema *template.json* en el Almacenamiento del esquema JSON](http://json.schemastore.org/template)  
-

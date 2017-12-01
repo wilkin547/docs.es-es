@@ -1,41 +1,22 @@
 ---
 title: "Propiedades (Guía de programación de C#)"
-ms.date: 2017-03-10
+ms.date: 03/10/2017
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- cs.properties
-dev_langs:
-- CSharp
+f1_keywords: cs.properties
 helpviewer_keywords:
 - properties [C#]
 - C# language, properties
 ms.assetid: e295a8a2-b357-4ee7-a12e-385a44146fa8
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 6f40bea2c7d39d88839a70e73e391113bee86f14
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 127299a617cacee15f87964a12bb3877a2586204
-ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="properties-c-programming-guide"></a>Propiedades (Guía de programación de C#)
 
@@ -56,9 +37,9 @@ Una propiedad es un miembro que proporciona un mecanismo flexible para leer, esc
 
 Un patrón básico para implementar una propiedad conlleva el uso de un campo de respaldo privado para establecer y recuperar el valor de la propiedad. El descriptor de acceso `get` devuelve el valor del campo privado y el descriptor de acceso `set` puede realizar alguna validación de datos antes de asignar un valor al campo privado. Ambos descriptores de acceso además pueden realizar algún cálculo o conversión en los datos antes de que se almacenen o se devuelvan.
 
-En el ejemplo siguiente se muestra este patrón. En este ejemplo, la clase `TimePeriod` representa un intervalo de tiempo. Internamente, la clase almacena el intervalo de tiempo en segundos en un campo privado denominado `seconds`. Una propiedad de lectura y escritura denominada `Hours` permite al cliente especificar el intervalo de tiempo en horas. Los descriptores de acceso `get` y `set` realizan la conversión necesaria entre horas y segundos. Además, el descriptor de acceso `set` valida los datos e inicia una excepción @System.ArgumentOutOfRangeException si el número de horas no es válido. 
+En el ejemplo siguiente se muestra este patrón. En este ejemplo, la clase `TimePeriod` representa un intervalo de tiempo. Internamente, la clase almacena el intervalo de tiempo en segundos en un campo privado denominado `seconds`. Una propiedad de lectura y escritura denominada `Hours` permite al cliente especificar el intervalo de tiempo en horas. Los descriptores de acceso `get` y `set` realizan la conversión necesaria entre horas y segundos. Además, el descriptor de acceso `set` valida los datos e inicia una excepción <xref:System.ArgumentOutOfRangeException> si el número de horas no es válido. 
    
- [!code-cs[Properties#1](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/properties-1.cs)]  
+ [!code-csharp[Properties#1](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/properties-1.cs)]  
   
 ## <a name="expression-body-definitions"></a>Definiciones de cuerpos de expresión  
 
@@ -66,11 +47,11 @@ En el ejemplo siguiente se muestra este patrón. En este ejemplo, la clase `Time
 
  A partir de C# 6, las propiedades de solo lectura pueden implementar el descriptor de acceso `get` como miembro con forma de expresión. En este caso, no se usan ni la palabra clave del descriptor de acceso `get` ni la palabra clave `return`. En el ejemplo siguiente se implementa la propiedad de solo lectura `Name` como miembro con forma de expresión.
 
- [!code-cs[Properties#2](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/properties-2.cs)]  
+ [!code-csharp[Properties#2](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/properties-2.cs)]  
 
  A partir de C# 7, los descriptores de acceso `get` y `set` se pueden implementar como miembros con forma de expresión. En este caso, las palabras clave `get` y `set` deben estar presentes. En el ejemplo siguiente se muestra el uso de definiciones de cuerpos de expresión para ambos descriptores de acceso. Observe que no se usa la palabra clave `return` con el descriptor de acceso `get`.
  
-  [!code-cs[Properties#3](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/properties-3.cs)]  
+  [!code-csharp[Properties#3](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/properties-3.cs)]  
 
 ## <a name="auto-implemented-properties"></a>Propiedades implementadas automáticamente
 
@@ -78,7 +59,7 @@ En algunos casos, los descriptores de acceso de propiedad `get` y `set` simpleme
 
 Si una propiedad tiene un descriptor de acceso `get` y `set`, ambos deben ser implementados automáticamente. Una propiedad implementada automáticamente se define mediante las palabras clave `get` y `set` sin proporcionar ninguna implementación. El ejemplo siguiente repite el anterior, salvo que `Name` y `Price` son propiedades implementadas automáticamente. Observe que en el ejemplo también se quita el constructor parametrizado, por lo que los objetos `SaleItem` ahora se inicializan con una llamada al constructor predeterminado y un [inicializador de objeto](object-and-collection-initializers.md).
 
-  [!code-cs[Properties#4](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/properties-4.cs)]  
+  [!code-csharp[Properties#4](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/properties-4.cs)]  
 
 ## <a name="related-sections"></a>Secciones relacionadas  
   
@@ -96,9 +77,8 @@ Si una propiedad tiene un descriptor de acceso `get` y `set`, ambos deben ser im
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Vea también
- [Guía de programación de C#](../../../csharp/programming-guide/index.md)   
- [Utilizar propiedades](../../../csharp/programming-guide/classes-and-structs/using-properties.md)   
- [Indizadores](../../../csharp/programming-guide/indexers/index.md)   
+ [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
+ [Utilizar propiedades](../../../csharp/programming-guide/classes-and-structs/using-properties.md)  
+ [Indizadores](../../../csharp/programming-guide/indexers/index.md)  
  [get (palabra clave)](../../../csharp/language-reference/keywords/get.md)    
  [set (palabra clave)](../../../csharp/language-reference/keywords/set.md)    
-

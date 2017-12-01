@@ -1,27 +1,23 @@
 ---
 title: 'Comando dotnet publish: CLI de .NET Core'
 description: El comando dotnet publish publica el proyecto de .NET Core en un directorio.
-keywords: dotnet-publish, CLI, comando de la CLI, .NET Core
-author: blackdwarf
+author: mairaw
 ms.author: mairaw
-ms.date: 08/12/2017
+ms.date: 09/01/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.devlang: dotnet
-ms.assetid: f2ef275a-7c5e-430a-8c30-65f52af62771
+ms.openlocfilehash: d59ba8cf74a63c7d4a2234989477b5778fa0148f
+ms.sourcegitcommit: a19548e5167cbe7e9e58df4ffd8c3b23f17d5c7a
 ms.translationtype: HT
-ms.sourcegitcommit: a19ab54a6cc44bd7acd1e40a4ca94da52bf14297
-ms.openlocfilehash: db6e527a6132be0b6362c68945bb68884f5ad619
-ms.contentlocale: es-es
-ms.lasthandoff: 08/14/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/02/2017
 ---
 # <a name="dotnet-publish"></a>dotnet publish
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a>Nombre
+## <a name="name"></a>Name
 
 `dotnet publish`: empaqueta la aplicación y sus dependencias en una carpeta para su implementación en un sistema de hospedaje.
 
@@ -95,10 +91,11 @@ No realiza una restauración implícita al ejecutar el comando.
 `-o|--output <OUTPUT_DIRECTORY>`
 
 Especifica la ruta de acceso del directorio de salida. Si no se especifica, el valor predeterminado es *./bin/[configuration]/[framework]/* para una implementación dependiente del marco de trabajo o *./bin/[configuration]/[framework]/[runtime]* para una implementación independiente.
+Si se proporciona una ruta de acceso relativa, el directorio de salida generado es relativa a la ubicación del archivo de proyecto, no en el directorio de trabajo actual.
 
 `--self-contained`
 
-Publica el tiempo de ejecución de .NET Core con la aplicación para que no sea necesario tener instalado el tiempo de ejecución en la máquina de destino. Si se especifica un identificador de tiempo de ejecución, su valor predeterminado es `true`. Para obtener más información sobre los diferentes tipos de implementación, consulte [Implementación de aplicaciones .NET Core](../deploying/index.md).
+Publica el tiempo de ejecución de .NET Core con la aplicación para que no sea necesario tener instalado el tiempo de ejecución en la máquina de destino. Si se especifica un identificador de tiempo de ejecución, su valor predeterminado es `true`. Para obtener más información acerca de los diferentes tipos de implementación, consulte [implementación de aplicaciones .NET Core](../deploying/index.md).
 
 `-r|--runtime <RUNTIME_IDENTIFIER>`
 
@@ -133,6 +130,7 @@ Especifica uno o varios [manifiestos de destino](../deploying/runtime-store.md) 
 `-o|--output <OUTPUT_DIRECTORY>`
 
 Especifica la ruta de acceso del directorio de salida. Si no se especifica, el valor predeterminado es *./bin/[configuration]/[framework]/* para una implementación dependiente del marco de trabajo o *./bin/[configuration]/[framework]/[runtime]* para una implementación independiente.
+Si se proporciona una ruta de acceso relativa, el directorio de salida generado es relativa a la ubicación del archivo de proyecto, no en el directorio de trabajo actual.
 
 `-r|--runtime <RUNTIME_IDENTIFIER>`
 
@@ -170,4 +168,3 @@ Publica la aplicación actual mediante el marco de trabajo `netcoreapp1.1` y el 
 
 * [Marcos de trabajo de destino](../../standard/frameworks.md)
 * [Catálogo de identificadores de tiempo de ejecución (RID)](../rid-catalog.md)
-

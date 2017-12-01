@@ -5,8 +5,7 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-bcl
+ms.technology: dotnet-bcl
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,16 +22,15 @@ helpviewer_keywords:
 - security [.NET Framework], assemblies
 - integrity with assemblies
 ms.assetid: 1b5439c1-f3d5-4529-bd69-01814703d067
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 11c66af3a855dac649d5f09944d68fb77a0e8619
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: be4fc9f9f2fc9ae57f22a7e59eca05a331ebfb32
-ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="assembly-security-considerations"></a>Consideraciones de seguridad sobre ensamblados
 <a name="top"></a> Cuando se compila un ensamblado, se puede especificar el conjunto de permisos que son necesarios para la ejecución del mismo. La concesión de permisos específicos para un ensamblado se basa en la evidencia.  
@@ -69,7 +67,6 @@ ms.lasthandoff: 07/28/2017
  Debido a que los nombres seguros y las firmas que utilizan [SignTool.exe (Sign Tool)](../../../docs/framework/tools/signtool-exe.md) garantizan la integridad, se puede basar la directiva de seguridad de acceso del código en estas dos formas de evidencia de ensamblado. Los nombres seguros y las firmas que utilizan [SignTool.exe (Sign Tool)](../../../docs/framework/tools/signtool-exe.md) garantizan la integridad mediante firmas digitales y certificados. Todas las tecnologías mencionadas (comprobación de código hash, nombres seguros y firmas que utilizan [SignTool.exe (Sign Tool)](../../../docs/framework/tools/signtool-exe.md)) se combinan para garantizar que el ensamblado no ha sufrido ninguna alteración.  
   
 ## <a name="see-also"></a>Vea también  
- [Ensamblados con nombre seguro](../../../docs/framework/app-domains/strong-named-assemblies.md)   
- [Ensamblados en Common Language Runtime](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)   
- [SignTool.exe (Sign Tool)](../../../docs/framework/tools/signtool-exe.md)
-
+ [Ensamblados con nombre seguro](../../../docs/framework/app-domains/strong-named-assemblies.md)  
+ [Ensamblados en Common Language Runtime](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
+ [SignTool.exe (Herramienta de firma)](../../../docs/framework/tools/signtool-exe.md)

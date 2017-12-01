@@ -1,39 +1,21 @@
 ---
 title: "Pasar parámetros Reference-Type (Guía de programación de C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - method parameters [C#], reference types
 - parameters [C#], reference
 ms.assetid: 9e6eb65c-942e-48ab-920a-b7ba9df4ea20
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 2cd862a9179e027ab82631631784203993d0465a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 3f57dc9f0de6fae6da3ec8e6e6cfdc3a21baeaea
-ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="passing-reference-type-parameters-c-programming-guide"></a>Pasar parámetros Reference-Type (Guía de programación de C#)
 Una variable de un [tipo de referencia](../../../csharp/language-reference/keywords/reference-types.md) no contiene sus datos directamente, contiene una referencia a sus datos. Al pasar un parámetro de tipo de referencia por valor, es posible cambiar los datos a los que apunta el tipo de referencia, como el valor de un miembro de clase. En cambio, no se puede cambiar el valor de la propia referencia; es decir, no puede usar la misma referencia para asignar memoria para una nueva clase y hacer que persista fuera del bloque. Para ello, pase el parámetro mediante las palabras clave [ref](../../../csharp/language-reference/keywords/ref.md) u [out](../../../csharp/language-reference/keywords/out.md). Para simplificar, en el ejemplo siguiente se usa `ref`.  
@@ -41,30 +23,29 @@ Una variable de un [tipo de referencia](../../../csharp/language-reference/keywo
 ## <a name="passing-reference-types-by-value"></a>Pasar tipos de referencia en función del valor  
  En el ejemplo siguiente, se muestra cómo pasar un parámetro de tipo de referencia, `arr`, en función del valor a un método, `Change`. Dado que el parámetro es una referencia a `arr`, es posible cambiar los valores de los elementos de matriz. En cambio, el intento de volver a asignar el parámetro a otra ubicación de memoria solo funciona dentro del método y no afecta a la variable original, `arr`.  
   
- [!code-cs[csProgGuideParameters#7](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/passing-reference-type-parameters_1.cs)]  
+ [!code-csharp[csProgGuideParameters#7](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/passing-reference-type-parameters_1.cs)]  
   
  En el ejemplo anterior, la matriz, `arr`, que es un tipo de referencia, se pasa al método sin el parámetro `ref`. En tal caso, se pasa al método una copia de la referencia, que apunta a `arr`. El resultado muestra que es posible que el método cambie el contenido de un elemento de matriz, en este caso de `1` a `888`. En cambio, si se asigna una nueva porción de memoria al usar el operador [new](../../../csharp/language-reference/keywords/new.md) dentro del método `Change`, la variable `pArray` hace referencia a una nueva matriz. Por tanto, cualquier cambio que hubiese después no afectará a la matriz original, `arr`, que se ha creado dentro de `Main`. De hecho, se crean dos matrices en este ejemplo, una dentro de `Main` y otra dentro del método `Change`.  
   
 ## <a name="passing-reference-types-by-reference"></a>Pasar tipos de referencia en función de la referencia  
  El ejemplo siguiente es el mismo que el anterior, salvo que la palabra clave `ref` se agrega a la llamada y al encabezado de método. Los cambios que tengan lugar en el método afectan a la variable original en el programa que realiza la llamada.  
   
- [!code-cs[csProgGuideParameters#8](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/passing-reference-type-parameters_2.cs)]  
+ [!code-csharp[csProgGuideParameters#8](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/passing-reference-type-parameters_2.cs)]  
   
  Todos los cambios que tienen lugar dentro del método afectan a la matriz original en `Main`. De hecho, la matriz original se reasigna mediante el operador `new`. Por tanto, después de llamar al método `Change`, cualquier referencia a `arr` apunta a la matriz de cinco elementos, que se crea en el método `Change`.  
   
 ## <a name="swapping-two-strings"></a>Intercambiar dos cadenas  
  Intercambiar cadenas es un buen ejemplo de pasar parámetros de tipo de referencia en función de la referencia. En el ejemplo, se inicializan dos cadenas, `str1` y `str2`, en `Main` y se pasan al método `SwapStrings` como parámetros modificados por la palabra clave `ref`. Las dos cadenas se intercambian dentro del método y también dentro de `Main`.  
   
- [!code-cs[csProgGuideParameters#9](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/passing-reference-type-parameters_3.cs)]  
+ [!code-csharp[csProgGuideParameters#9](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/passing-reference-type-parameters_3.cs)]  
   
  En este ejemplo, los parámetros tienen que pasarse en función de la referencia para afectar a las variables en el programa que realiza la llamada. Si quita la palabra clave `ref` tanto del encabezado de método como de la llamada al método, no se llevará a cabo ningún cambio en el programa que realiza la llamada.  
   
  Para obtener más información sobre las cadenas, vea [string](../../../csharp/language-reference/keywords/string.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Guía de programación de C#](../../../csharp/programming-guide/index.md)   
- [Pasar parámetros](../../../csharp/programming-guide/classes-and-structs/passing-parameters.md)   
- [Pasar matrices mediante Ref y Out](../../../csharp/programming-guide/arrays/passing-arrays-using-ref-and-out.md)   
- [ref](../../../csharp/language-reference/keywords/ref.md)   
+ [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
+ [Pasar parámetros](../../../csharp/programming-guide/classes-and-structs/passing-parameters.md)  
+ [Pasar matrices mediante Ref y Out](../../../csharp/programming-guide/arrays/passing-arrays-using-ref-and-out.md)  
+ [ref](../../../csharp/language-reference/keywords/ref.md)  
  [Tipos de referencia](../../../csharp/language-reference/keywords/reference-types.md)
-

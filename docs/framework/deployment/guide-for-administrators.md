@@ -5,29 +5,22 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - administrator's guide, deploying .NET Framework
 - deployment [.NET Framework], administrator's guide
 ms.assetid: bee14036-0436-44e8-89f5-4bc61317977a
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: d208867789fc78a82a2e339596a5692280d95ff3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 07b7381ddc94e3bc40a4eb0ed546f9526b57600a
-ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="net-framework-deployment-guide-for-administrators"></a>Guía de implementación de .NET Framework para administradores
 Este artículo paso a paso describe cómo un administrador del sistema puede implementar [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] y sus dependencias del sistema en una red mediante Microsoft System Center Configuration Manager. En este artículo se supone que todos los equipos cliente de destino cumplen los requisitos mínimos para .NET Framework. Para obtener una lista de los requisitos de software y hardware para instalar [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], consulte [Requisitos del sistema](../../../docs/framework/get-started/system-requirements.md).  
@@ -39,8 +32,8 @@ Este artículo paso a paso describe cómo un administrador del sistema puede imp
   
  Este tema contiene las siguientes secciones:  
   
- [Proceso de implementación](#the_deployment_process)   
- [Implementación de .NET Framework](#deploying_in_a_test_environment)   
+ [El proceso de implementación](#the_deployment_process)  
+ [Implementación de .NET Framework](#deploying_in_a_test_environment)  
  [Crear una colección](#creating_a_collection)  
  [Crear un paquete y un programa](#creating_a_package)  
  [Seleccionar un punto de distribución](#select_dist_point)  
@@ -145,8 +138,8 @@ Este artículo paso a paso describe cómo un administrador del sistema puede imp
 |**/norestart**|Evita que el programa de instalación se reinicie automáticamente. Si usa esta opción, Configuration Manager debe controlar el reinicio del equipo.|  
 |**/chainingpackage** *NombrePaquete*|Especifica el nombre del paquete que realiza el encadenamiento. Esta información se notifica con otra información de sesión de instalación para los usuarios que se hayan registrado en el [Programa para la mejora de la experiencia del usuario (CEIP) de Microsoft](http://go.microsoft.com/fwlink/p/?LinkId=248244). Si el nombre del paquete incluye espacios, use comillas dobles como delimitadores; por ejemplo: **/chainingpackage "Chaining Product"**.|  
   
- Mediante estos pasos se crea un paquete denominado .NET Framework 4.5. El programa implementa una instalación silenciosa de .NET Framework 4.5. En una instalación silenciosa, los usuarios no interactúan con el proceso de instalación y la aplicación de encadenamiento tiene que capturar el código devuelto y controlar el reinicio; vea el tema para [obtener información de progreso de un paquete de instalación](http://go.microsoft.com/fwlink/?LinkId=179606) en MSDN Library.  
-  
+ Mediante estos pasos se crea un paquete denominado .NET Framework 4.5. El programa implementa una instalación silenciosa de .NET Framework 4.5. En una instalación silenciosa, los usuarios no interactúan con el proceso de instalación y la aplicación de encadenamiento tiene que capturar el código de retorno y controlar el reinicio; vea [obtener información de progreso de un paquete de instalación](http://go.microsoft.com/fwlink/?LinkId=179606).  
+ 
 <a name="select_dist_point"></a>   
 ### <a name="select-a-distribution-point"></a>Seleccionar un punto de distribución  
  Para distribuir el paquete y el programa a los equipos cliente de un servidor, deberá designar primero un sistema de sitio como punto de distribución y después distribuir el paquete al punto de distribución.  
@@ -236,7 +229,7 @@ Este artículo paso a paso describe cómo un administrador del sistema puede imp
 ### <a name="log-file-locations"></a>Ubicaciones de archivos de registro  
  Los siguientes archivos de registro se generan durante la configuración de [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]:  
   
- %temp%\Microsoft .NET Framework 4.5*.txt   
+ %temp%\Microsoft .NET Framework 4.5*.txt  
  %temp%\Microsoft .NET Framework 4.5\*.html  
   
  Puede usar la [herramienta de recopilación de registros](http://www.microsoft.com/download/details.aspx?id=12493) para recopilar los archivos de registro de [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] y crear un archivo .cab comprimido que reduzca el tamaño de los archivos.  
@@ -272,6 +265,5 @@ Este artículo paso a paso describe cómo un administrador del sistema puede imp
 -   [Códigos de resultado del Agente de Windows Update](http://technet.microsoft.com/library/cc720442.aspx)  
   
 ## <a name="see-also"></a>Vea también  
- [Guía de implementación para desarrolladores](../../../docs/framework/deployment/deployment-guide-for-developers.md)   
+ [Guía de implementación para desarrolladores](../../../docs/framework/deployment/deployment-guide-for-developers.md)  
  [Requisitos del sistema](../../../docs/framework/get-started/system-requirements.md)
-

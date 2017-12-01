@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 3c357112-35fb-44ba-a07b-6a1c140370ac
-ms.translationtype: HT
-ms.sourcegitcommit: 3155295489e1188640dae5aa5bf9fdceb7480ed6
 ms.openlocfilehash: 9652986491f087b8fa175e2b4041063c71211178
-ms.contentlocale: es-es
-ms.lasthandoff: 08/21/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="native-interoperability"></a>Interoperabilidad nativa
 
 En este documento se profundiza un poco más en las tres formas de obtener "interoperabilidad nativa" disponibles mediante .NET.
@@ -342,4 +340,3 @@ La clase `StatClass` representa una estructura que se devuelve mediante la llama
 *   [Wiki de PInvoke.net](http://www.pinvoke.net): una wiki excelente con información sobre API comunes de Win32 y cómo llamarlas.
 *   [P/Invoke on MSDN](https://msdn.microsoft.com/library/zbz07712.aspx)
 *   [Documentación de Mono en P/Invoke](http://www.mono-project.com/docs/advanced/pinvoke/)
-

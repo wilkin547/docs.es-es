@@ -7,16 +7,14 @@ manager: wpickett
 ms.author: wiwagn
 ms.date: 12/1/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
-ms.devlang: dotnet
+ms.prod: .net
+ms.technology: devlang-csharp
 ms.assetid: cbda9c08-151b-4c9e-82f7-c3d7f3dac66b
+ms.openlocfilehash: cdd06a6fad037291bbc5aa011b47bb668fa2f062
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: ddd028a3aad5186ef6773b32e9f9e8e1cbff95fc
-ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="group-results-by-contiguous-keys"></a>Agrupar resultados por claves contiguas
 
@@ -52,11 +50,10 @@ En el ejemplo siguiente se muestra cómo agrupar elementos en fragmentos que rep
 ## <a name="example"></a>Ejemplo  
  En el siguiente ejemplo se muestran el método de extensión y el código de cliente que lo usa.  
   
- [!code-cs[cscsrefContiguousGroups#1](../../../samples/snippets/csharp/concepts/linq/how-to-group-results-by-contiguous-keys_1.cs)]  
+ [!code-csharp[cscsrefContiguousGroups#1](../../../samples/snippets/csharp/concepts/linq/how-to-group-results-by-contiguous-keys_1.cs)]  
   
  Para usar el método de extensión en el proyecto, copie la clase estática `MyExtensions` en un archivo de código fuente nuevo o ya existente y, si es necesario, agregue una directiva `using` para el espacio de nombres donde se encuentra.  
   
 ## <a name="see-also"></a>Vea también  
- [Expresiones de consulta LINQ](index.md)   
+ [Expresiones de consulta LINQ](index.md)  
  
-

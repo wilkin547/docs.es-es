@@ -1,23 +1,19 @@
 ---
 title: Versiones de .NET Framework de destino
 description: "Obtenga información sobre las plataforma de destino para las aplicaciones y bibliotecas de .NET Core."
-keywords: .NET, .NET Core, marco de trabajo, TFM
 author: richlander
 ms.author: mairaw
-ms.date: 08/25/2017
+ms.date: 09/22/2017
 ms.topic: article
+ms.custom: updateeachrelease
 ms.prod: .net
 ms.technology: dotnet-standard
-ms.devlang: dotnet
-ms.assetid: 6ef56a2e-593d-497b-925a-1e25bb6df2e6
+ms.openlocfilehash: 20152a951f11b1b923209b56b31663a9a8a81587
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 18b2f7a1c0857abb5f7e09a39ca120b521ba4ddc
-ms.openlocfilehash: 7f25cdd52cf5249d3b201978eacb98aaa4a74fa9
-ms.contentlocale: es-es
-ms.lasthandoff: 08/25/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="target-frameworks"></a>Versiones de .NET Framework de destino
 
 Cuando se dirige a un marco en una aplicación o biblioteca, debe especificar el conjunto de API que quiere poner a disposición de la aplicación o biblioteca. La plataforma de destino se especifica en el archivo del proyecto, mediante monikers de la plataforma de destino (TFM).
@@ -34,11 +30,11 @@ Para plataformas de destino basadas en paquetes (por ejemplo, .NET Standard y .N
 
 En la tabla siguiente, se definen las plataformas de destino más usadas, cómo se hace referencia a ellas y la versión de [.NET Standard](~/docs/standard/net-standard.md) que implementan. Estas versiones de plataformas de destino son las últimas versiones estables. No se muestran las versiones preliminares. Un moniker de la plataforma de destino (TFM) es un formato de token normalizado para especificar la plataforma de destino de una aplicación o biblioteca de .NET. 
 
-| Plataforma de destino      | Última versión | Moniker de la plataforma de destino (TFM) | Versión de .NET Standard | Metapaquete |
-| :-------------------: | :------------: | :----------------------------: | :-------------------: | :---------: |
-| Estándar .NET         | 2.0.0          | netstandard2.0                 | N/D                   | [NETStandard.Library](https://www.nuget.org/packages/NETStandard.Library) |
-| Aplicación .NET Core | 2.0.0          | netcoreapp2.0                  | 2.0                   | [Microsoft.NETCore.App](https://www.nuget.org/packages/Microsoft.NETCore.App) |
-| .NET Framework        | 4.7            | net47                          | 1.5                   | N/D |
+| Plataforma de destino      | Última versión | Moniker de la plataforma de destino (TFM) | Implementa <br/> Versión de .NET Standard |
+| :-------------------: | :------------: | :----------------------------: | :-------------------------------------: |
+| Estándar .NET         | 2.0            | netstandard2.0                 | N/D                                     |
+| Aplicación .NET Core | 2.0            | netcoreapp2.0                  | 2.0                                     |
+| .NET Framework        | 4.7.1          | net471                         | 2.0                                     |
 
 ## <a name="supported-target-framework-versions"></a>Versiones compatibles de las plataformas de destino
 
@@ -48,7 +44,7 @@ Normalmente, un TFM hace referencia a una plataforma de destino. En la tabla sig
 | -------------------------- | --- |
 | Estándar .NET              | netstandard1.0<br>netstandard1.1<br>netstandard1.2<br>netstandard1.3<br>netstandard1.4<br>netstandard1.5<br>netstandard1.6<br>netstandard2.0 |
 | Núcleo de .NET                  | netcoreapp1.0<br>netcoreapp1.1<br>netcoreapp2.0 |
-| .NET Framework             | net11<br>net20<br>net35<br>net40<br>net403<br>net45<br>net451<br>net452<br>net46<br>net461<br>net462<br>net47 |
+| .NET Framework             | net11<br>net20<br>net35<br>net40<br>net403<br>net45<br>net451<br>net452<br>net46<br>net461<br>net462<br>net47<br>net471 |
 | Tienda Windows              | netcore [netcore45]<br>netcore45 [win] [win8]<br>netcore451 [win81] |
 | .NET Micro Framework       | netmf |
 | Silverlight                | sl4<br>sl5 |
@@ -143,4 +139,3 @@ Las siguientes plataformas de destino están en desuso. Los paquetes destinados 
 [Repositorio de GitHub dotnet/standard](https://github.com/dotnet/standard)  
 [Repositorio de GitHub de herramientas de NuGet](https://github.com/joelverhagen/NuGetTools)  
 [Framework Profiles in .NET](http://blog.stephencleary.com/2012/05/framework-profiles-in-net.html) (Perfiles de marco de trabajo en .NET)
-

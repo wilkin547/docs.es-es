@@ -1,5 +1,5 @@
 ---
-title: Paseo por .NET | Microsoft Docs
+title: Paseo por .NET
 description: "Un paseo guiado a través de algunas de las características más importantes de .NET."
 keywords: ".NET, .NET Core, Paseo, Lenguajes de programación, Unsafe, Administración de memoria, Seguridad de tipos, Asincrónico"
 author: cartermp
@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
+ms.openlocfilehash: 809f0eaddf298b0d6a57e217c2bcf5450675c3e9
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 2762cdc983465979a530192716c33de7044dd1ed
-ms.openlocfilehash: c64a3113cf4e9e9ff203ed2cf449359f67ee9d10
-ms.contentlocale: es-es
-ms.lasthandoff: 08/21/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="tour-of-net"></a>Paseo por .NET
 
 .NET es una plataforma de desarrollo de uso general. Tiene varias características clave, como la compatibilidad con varios lenguajes de programación, modelos de programación asincrónica y simultánea e interoperabilidad nativa, que permiten una amplia variedad de escenarios en diversas plataformas.
@@ -149,4 +147,3 @@ Si está interesado en un paseo por las características de F#, consulte [Tour o
 Si quiere empezar a escribir su propio código, consulte [Introducción](get-started.md).
 
 Para más información sobre los principales componentes de. NET, consulte [Componentes de la arquitectura .NET](components.md).
-

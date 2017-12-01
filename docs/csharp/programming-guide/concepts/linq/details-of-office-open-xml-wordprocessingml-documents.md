@@ -1,25 +1,21 @@
 ---
 title: Detalles de los documentos de WordprocessingML de Office Open XML (C#)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 40c9ed57-b827-4c9e-a3e7-8b2163122106
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: BillWagner
 ms.author: wiwagn
+ms.openlocfilehash: acf09956b6399bb3944f43a5ecf741ccb82e7add
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: e36174c28b857922e7e23bff7017b340f0e4769c
-ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="details-of-office-open-xml-wordprocessingml-documents-c"></a>Detalles de los documentos de WordprocessingML de Office Open XML (C#)
 Esta sección proporciona información acerca de los detalles de los documentos WordprocessingML XML abierto de Office. Muestra ejemplos de las partes de documento y estilo de un documento XML abierto.  
@@ -34,4 +30,3 @@ Esta sección proporciona información acerca de los detalles de los documentos 
   
 ## <a name="see-also"></a>Vea también  
  [Tutorial: Manipular contenido en un documento de WordprocessingML (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
-

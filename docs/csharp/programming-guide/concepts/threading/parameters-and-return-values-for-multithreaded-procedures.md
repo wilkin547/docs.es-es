@@ -1,30 +1,21 @@
 ---
 title: "Parámetros y valores devueltos para procedimientos multiproceso (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: ba63c30c-d9f0-4962-b5c7-9d83ba851e6a
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: fec0ad955439f0cd683ad56c8d6433eed2417304
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 5e377a006409dbae49b3c00297f69e8d55a01295
-ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="parameters-and-return-values-for-multithreaded-procedures-c"></a>Parámetros y valores devueltos para procedimientos multiproceso (C#)
 El suministro y la devolución de valores en una aplicación multiproceso son complicados porque se debe pasar una referencia a un procedimiento que no tome ningún argumento ni devuelva ningún valor al constructor de la clase de subproceso. En las secciones siguientes se muestran algunas maneras sencillas de proporcionar parámetros y devolver valores desde procedimientos en subprocesos independientes.  
@@ -135,11 +126,10 @@ private void BackgroundWorker1_RunWorkerCompleted(
  Puede proporcionar parámetros y devolver valores a subprocesos de grupo de subprocesos mediante la variable opcional de objeto de estado `ByVal` del método <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A>. Los subprocesos de temporizador de subprocesos también admiten un objeto de estado para este fin. Para más información sobre la agrupación de subprocesos y los temporizadores de subprocesos, vea [Thread Pooling (C#) (Agrupación de subprocesos (C#))](../../../../csharp/programming-guide/concepts/threading/thread-pooling.md) y [Thread Timers (C#) (Temporizadores de subprocesos (C#))](../../../../csharp/programming-guide/concepts/threading/thread-timers.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Walkthrough: Multithreading with the BackgroundWorker Component (C#) (Tutorial: Multithreading con el componente BackgroundWorker (C#))](../../../../csharp/programming-guide/concepts/threading/walkthrough-multithreading-with-the-backgroundworker-component.md)   
- [Thread Pooling (C#) (Agrupación de subprocesos (C#))](../../../../csharp/programming-guide/concepts/threading/thread-pooling.md)   
- [Sincronización de subprocesos (C#)](../../../../csharp/programming-guide/concepts/threading/thread-synchronization.md)   
- [Eventos](../../../../csharp/programming-guide/events/index.md)   
- [Aplicaciones multiproceso (C#)](../../../../csharp/programming-guide/concepts/threading/multithreaded-applications.md)   
- [Delegados](../../../../csharp/programming-guide/delegates/index.md)   
+ [Walkthrough: Multithreading with the BackgroundWorker Component (C#) (Tutorial: Multithreading con el componente BackgroundWorker (C#))](../../../../csharp/programming-guide/concepts/threading/walkthrough-multithreading-with-the-backgroundworker-component.md)  
+ [Agrupación de subprocesos (C#)](../../../../csharp/programming-guide/concepts/threading/thread-pooling.md)  
+ [Sincronización de subprocesos (C#)](../../../../csharp/programming-guide/concepts/threading/thread-synchronization.md)  
+ [Eventos](../../../../csharp/programming-guide/events/index.md)  
+ [Aplicaciones multiproceso (C#)](../../../../csharp/programming-guide/concepts/threading/multithreaded-applications.md)  
+ [Delegados](../../../../csharp/programming-guide/delegates/index.md)  
  [Subprocesamiento múltiple en componentes](http://msdn.microsoft.com/library/2fc31e68-fb71-4544-b654-0ce720478779)
-

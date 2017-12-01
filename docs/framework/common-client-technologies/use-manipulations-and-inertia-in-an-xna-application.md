@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b7c18905-850c-4da4-8977-a074406a4263
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
+ms.openlocfilehash: adf48310c1c2e0c59224ab820211e818a2401579
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 7d623a8c2276811ae443a4d745faffeeb79ffc6f
-ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="using-manipulations-and-inertia-in-an-xna-application"></a>Usar manipulaciones e inercia en una aplicación XNA
 En este artículo se describe cómo usar manipulaciones y procesamiento de inercia en una aplicación Microsoft XNA para controlar el movimiento de las piezas de juego. Antes de leer este artículo, debe estar familiarizado con el tema [Manipulations and Inertia Overview](../../../docs/framework/common-client-technologies/manipulations-and-inertia-overview.md) (Información general sobre manipulaciones e inercia) y estar familiarizado con los conceptos básicos de programación con XNA.  
@@ -42,6 +40,5 @@ En este artículo se describe cómo usar manipulaciones y procesamiento de inerc
  [Listas de código completas](../../../docs/framework/common-client-technologies/full-code-listings.md)  
   
 ## <a name="see-also"></a>Vea también  
- <xref:System.Windows.Input.Manipulations>   
+ <xref:System.Windows.Input.Manipulations>  
  [Información general sobre manipulaciones e inercia](../../../docs/framework/common-client-technologies/manipulations-and-inertia-overview.md)
-

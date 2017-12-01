@@ -5,23 +5,20 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- .NET Framework, development guide
+helpviewer_keywords: .NET Framework, development guide
 ms.assetid: 26e3d285-24c3-435c-a797-9fe5affb8525
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 429eae61ab311d2a7a68567c97f40e1fdc0a1f3e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 7233827b9c331529cb70daf13aeb1308a053b1c1
-ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="net-framework-development-guide"></a>Guía de desarrollo para .NET Framework
 En esta sección se explica cómo crear, configurar, depurar, proteger e implementar aplicaciones de .NET Framework. Esta sección contiene también información sobre diversas áreas tecnológicas, como programación dinámica, interoperabilidad, extensibilidad, administración de memoria y subprocesamiento.  
@@ -43,7 +40,7 @@ En esta sección se explica cómo crear, configurar, depurar, proteger e impleme
  Describe cómo utilizar Windows Communication Foundation (WCF) para compilar aplicaciones orientadas a servicios que sean seguras y confiables.  
   
  [Creación de flujos de trabajo con Windows Workflow Foundation](windows-workflow-foundation/index.md)     
- Proporciona información sobre el modelo de programación, las muestras y las herramientas para usar Windows Workflow Foundation (WF).   
+ Proporciona información sobre el modelo de programación, las muestras y las herramientas para usar Windows Workflow Foundation (WF).  
 
  [Aplicaciones de servicios de Windows](../../docs/framework/windows-services/index.md)  
  Explica cómo puede utilizar Visual Studio y .NET Framework para crear una aplicación que se instala como servicio, iniciarla, detenerla y controlar su comportamiento de cualquier otro modo.  
@@ -94,4 +91,3 @@ En esta sección se explica cómo crear, configurar, depurar, proteger e impleme
   
  [Ejemplos de .NET Framework](http://msdn.microsoft.com/en-us/177055f8-4a1f-43e7-aee6-995c196079b1)  
  Proporciona vínculos al sitio web de galería de ejemplos de código de MSDN, que contiene aplicaciones de ejemplo en las que se muestran las tecnologías de .NET Framework.
-

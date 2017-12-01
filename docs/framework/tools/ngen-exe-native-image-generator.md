@@ -5,15 +5,13 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
+- cpp
 helpviewer_keywords:
 - Native Image Generator
 - images [.NET Framework], native
@@ -27,16 +25,15 @@ helpviewer_keywords:
 - BypassNGenAttribute
 - System.Runtime.BypassNGenAttribute
 ms.assetid: 44bf97aa-a9a4-4eba-9a0d-cfaa6fc53a66
-caps.latest.revision: 57
+caps.latest.revision: "57"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: af79c4309dfd048562b2ee14a71c6da791040397
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 75c329c2d57e1731c1f3cd0d34f680c3706763ce
-ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="ngenexe-native-image-generator"></a>Ngen.exe (Generador de imágenes nativas)
 El Generador de imágenes nativas (Ngen.exe) es una herramienta que mejora el rendimiento de las aplicaciones administradas. Ngen.exe crea imágenes nativas, que son archivos que contienen código máquina compilado específicamente para un procesador, e instala estas imágenes en la memoria caché de imágenes nativas del equipo local. El runtime puede usar imágenes nativas de la memoria caché en lugar de usar el compilador Just-In-Time (JIT) para compilar el ensamblado original.  
@@ -89,7 +86,7 @@ ngen /? | /help
 |`uninstall` [`assemblyName` &#124; `assemblyPath`] [`scenarios`] [`config`]|Elimina las imágenes nativas de un ensamblado y sus dependencias de la memoria caché de imágenes nativas.<br /><br /> Para desinstalar una imagen y sus dependencias, use los mismos argumentos de la línea de comandos que usó para instalar la imagen. **Nota:** A partir de [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], ya no se admite la acción `uninstall` *.|  
 |`update` [`/queue`]|Actualiza las imágenes nativas que han dejado de ser válidas.<br /><br /> Si se especifica `/queue`, las actualizaciones se ponen en la cola del servicio de imágenes nativas. Las actualizaciones siempre se programan con una prioridad de 3, por lo que se ejecutan cuando el equipo se encuentra inactivo.|  
 |`display` [`assemblyName` &#124; `assemblyPath`]|Muestra el estado de las imágenes nativas para un ensamblado y sus dependencias.<br /><br /> Si no se proporciona ningún argumento, se muestra todo el contenido de la memoria caché de imágenes nativas.|  
-|`executeQueuedItems` [`1``&#124;``2``&#124;``3`]<br /><br /> O bien<br /><br /> `eqi` [1&#124;2&#124;3]|Ejecuta los trabajos de compilación en cola.<br /><br /> Si se especifica una prioridad, se ejecutan los trabajos de compilación con una prioridad mayor o igual a la especificada. Si no se especifica ninguna prioridad, se ejecutan todos los trabajos de compilación en cola.|  
+|`executeQueuedItems` [<code>1&#124;2&#124;3</code>]<br /><br /> O bien<br /><br /> `eqi` [1&#124;2&#124;3]|Ejecuta los trabajos de compilación en cola.<br /><br /> Si se especifica una prioridad, se ejecutan los trabajos de compilación con una prioridad mayor o igual a la especificada. Si no se especifica ninguna prioridad, se ejecutan todos los trabajos de compilación en cola.|  
 |`queue` {`pause` &#124; `continue` &#124; `status`}|Pausa el servicio de imágenes nativas, permite la reanudación del servicio en pausa o consulta el estado del servicio.|  
   
 <a name="ArgumentTable"></a>   
@@ -144,20 +141,20 @@ ngen /? | /help
   
  A partir de [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], las imágenes nativas que se generan con Ngen.exe ya no se pueden cargar en las aplicaciones que se están ejecutando con confianza parcial. En su lugar, se invoca el compilador Just-In-Time (JIT).  
   
- Ngen.exe genera imágenes nativas para el ensamblado que el argumento `assemblyname` especifica para la acción `install` y todas sus dependencias. Las dependencias se determinan a partir de las referencias del manifiesto del ensamblado. El único escenario en el que es necesario instalar una dependencia por separado es aquel donde la aplicación carga la dependencia usando la reflexión, por ejemplo, llamando al método <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName>.  
+ Ngen.exe genera imágenes nativas para el ensamblado que el argumento `assemblyname` especifica para la acción `install` y todas sus dependencias. Las dependencias se determinan a partir de las referencias del manifiesto del ensamblado. El único escenario en el que es necesario instalar una dependencia por separado es aquel donde la aplicación carga la dependencia usando la reflexión, por ejemplo, llamando al método <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>.  
   
 > [!IMPORTANT]
->  No use el método <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=fullName> con imágenes nativas. Una imagen cargada con este método no la podrán usar otros ensamblados en el contexto de ejecución.  
+>  No use el método <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> con imágenes nativas. Una imagen cargada con este método no la podrán usar otros ensamblados en el contexto de ejecución.  
   
  Ngen.exe mantiene un recuento de las dependencias. Por ejemplo, suponga que `MyAssembly.exe` y `YourAssembly.exe` están instalados en la memoria caché de imágenes nativas y que ambos tienen referencias a `OurDependency.dll`. Si se desinstala `MyAssembly.exe`, no se desinstala `OurDependency.dll`. Solo se quita cuando también se desinstala `YourAssembly.exe`.  
   
- Si va a generar una imagen nativa para un ensamblado en la caché global de ensamblados, especifique su nombre para mostrar. Vea <xref:System.Reflection.Assembly.FullName%2A?displayProperty=fullName>.  
+ Si va a generar una imagen nativa para un ensamblado en la caché global de ensamblados, especifique su nombre para mostrar. Vea <xref:System.Reflection.Assembly.FullName%2A?displayProperty=nameWithType>.  
   
  Las imágenes nativas generadas por Ngen.exe se pueden compartir en los dominios de aplicación. Esto significa que Ngen.exe puede usarse en escenarios de aplicación que requieren el uso compartido de los ensamblados entre los dominios de aplicación. Para especificar una neutralidad de dominios:  
   
 -   Aplique el atributo <xref:System.LoaderOptimizationAttribute> a la aplicación.  
   
--   Establezca la propiedad <xref:System.AppDomainSetup.LoaderOptimization%2A?displayProperty=fullName> al crear la información de instalación de un nuevo dominio de aplicación.  
+-   Establezca la propiedad <xref:System.AppDomainSetup.LoaderOptimization%2A?displayProperty=nameWithType> al crear la información de instalación de un nuevo dominio de aplicación.  
   
  Use siempre código con dominio neutro al cargar el mismo ensamblado en varios dominios de aplicación. Si una imagen nativa se carga en un dominio de aplicación no compartido después de haberse cargado en un dominio compartido, no se podrá usar.  
   
@@ -289,7 +286,7 @@ ngen /? | /help
   
 <a name="DependencyHint"></a>   
 ### <a name="specifying-a-binding-hint-for-a-dependency"></a>Especificación de una sugerencia de enlace para una dependencia  
- Aplique <xref:System.Runtime.CompilerServices.DependencyAttribute> a un ensamblado para indicar la probabilidad de que se cargue una dependencia especificada. <xref:System.Runtime.CompilerServices.LoadHint.Always?displayProperty=fullName> indica que el enlace fuerte es adecuado, <xref:System.Runtime.CompilerServices.LoadHint.Default> indica que debe usarse el valor predeterminado de la dependencia y <xref:System.Runtime.CompilerServices.LoadHint.Sometimes> indica que el enlace fuerte no es adecuado.  
+ Aplique <xref:System.Runtime.CompilerServices.DependencyAttribute> a un ensamblado para indicar la probabilidad de que se cargue una dependencia especificada. <xref:System.Runtime.CompilerServices.LoadHint.Always?displayProperty=nameWithType> indica que el enlace fuerte es adecuado, <xref:System.Runtime.CompilerServices.LoadHint.Default> indica que debe usarse el valor predeterminado de la dependencia y <xref:System.Runtime.CompilerServices.LoadHint.Sometimes> indica que el enlace fuerte no es adecuado.  
   
  En el siguiente código se muestran los atributos de un ensamblado que tiene dos dependencias. La primera dependencia (Assembly1) es una candidata adecuada para el enlace fuerte, pero la segunda (Assembly2) no lo es.  
   
@@ -315,10 +312,10 @@ using namespace System::Runtime::CompilerServices;
   
 <a name="AssemblyHint"></a>   
 ### <a name="specifying-a-default-binding-hint-for-an-assembly"></a>Especificación de una sugerencia de enlace predeterminado para un ensamblado  
- Las sugerencias de enlace predeterminado solo son necesarias para los ensamblados que cualquier aplicación con una dependencia sobre los mismos vaya a usar inmediatamente y con frecuencia. Aplique el atributo <xref:System.Runtime.CompilerServices.DefaultDependencyAttribute> con <xref:System.Runtime.CompilerServices.LoadHint.Always?displayProperty=fullName> a dichos ensamblados para especificar que debe usarse un enlace fuerte.  
+ Las sugerencias de enlace predeterminado solo son necesarias para los ensamblados que cualquier aplicación con una dependencia sobre los mismos vaya a usar inmediatamente y con frecuencia. Aplique el atributo <xref:System.Runtime.CompilerServices.DefaultDependencyAttribute> con <xref:System.Runtime.CompilerServices.LoadHint.Always?displayProperty=nameWithType> a dichos ensamblados para especificar que debe usarse un enlace fuerte.  
   
 > [!NOTE]
->  No hay ningún motivo para aplicar el atributo <xref:System.Runtime.CompilerServices.DefaultDependencyAttribute> a los ensamblados .dll que no pertenezcan a esta categoría, porque el hecho de aplicar el atributo con cualquier valor distinto de <xref:System.Runtime.CompilerServices.LoadHint.Always?displayProperty=fullName> produce el mismo efecto que no aplicar el atributo.  
+>  No hay ningún motivo para aplicar el atributo <xref:System.Runtime.CompilerServices.DefaultDependencyAttribute> a los ensamblados .dll que no pertenezcan a esta categoría, porque el hecho de aplicar el atributo con cualquier valor distinto de <xref:System.Runtime.CompilerServices.LoadHint.Always?displayProperty=nameWithType> produce el mismo efecto que no aplicar el atributo.  
   
  Microsoft usa el atributo <xref:System.Runtime.CompilerServices.DefaultDependencyAttribute> para especificar que el enlace fuerte es el valor predeterminado para un pequeño número de ensamblados de .NET Framework, como mscorlib.dll.  
   
@@ -388,11 +385,13 @@ using namespace System::Runtime::CompilerServices;
   
  Sin embargo, tenga en cuenta que `BypassNGenAttribute` no está definido como tipo en la biblioteca de clases .NET Framework. Para usar el atributo en el código, primero debe definirlo de la manera siguiente:  
   
- [!code-csharp[System.Runtime.BypassNGenAttribute#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/System.Runtime.BypassNGenAttribute/cs/Optout1.cs#1)] [!code-vb[System.Runtime.BypassNGenAttribute#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/System.Runtime.BypassNGenAttribute/vb/Optout1.vb#1)]  
+ [!code-csharp[System.Runtime.BypassNGenAttribute#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/System.Runtime.BypassNGenAttribute/cs/Optout1.cs#1)]
+ [!code-vb[System.Runtime.BypassNGenAttribute#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/System.Runtime.BypassNGenAttribute/vb/Optout1.vb#1)]  
   
  Luego puede aplicar el atributo a cada método. En el ejemplo siguiente se indica al Generador de imágenes nativas que no debe generar una imagen nativa para el método `ExampleClass.ToJITCompile`.  
   
- [!code-csharp[System.Runtime.BypassNGenAttribute#2](../../../samples/snippets/csharp/VS_Snippets_CLR_System/System.Runtime.BypassNGenAttribute/cs/Optout1.cs#2)] [!code-vb[System.Runtime.BypassNGenAttribute#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/System.Runtime.BypassNGenAttribute/vb/Optout1.vb#2)]  
+ [!code-csharp[System.Runtime.BypassNGenAttribute#2](../../../samples/snippets/csharp/VS_Snippets_CLR_System/System.Runtime.BypassNGenAttribute/cs/Optout1.cs#2)]
+ [!code-vb[System.Runtime.BypassNGenAttribute#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/System.Runtime.BypassNGenAttribute/vb/Optout1.vb#2)]  
   
 ## <a name="examples"></a>Ejemplos  
  El siguiente comando genera una imagen nativa para `ClientApp.exe`, que se encuentra en el directorio actual, e instala la imagen en la memoria caché de imágenes nativas. Si existe un archivo de configuración para el ensamblado, Ngen.exe usará dicho archivo. Además, se generarán imágenes nativas para cualquier archivo .dll al que haga referencia `ClientApp.exe`.  
@@ -414,7 +413,7 @@ ngen install c:\myfiles\MyAssembly.exe
 > [!NOTE]
 >  Se trata de un cambio de comportamiento de Ngen.exe en las versiones 1.0 y 1.1 de .NET Framework, donde la base de la aplicación está establecida en el directorio actual.  
   
- Un ensamblado puede disponer de una dependencia sin referencia alguna; por ejemplo, si carga un archivo .dll mediante el método <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName>. Se puede crear una imagen nativa de este archivo .dll usando la información de configuración del ensamblado de aplicación, con la opción `/ExeConfig`. El siguiente comando genera una imagen nativa de `MyLib.dll,` usando la información de configuración de `MyApp.exe`.  
+ Un ensamblado puede disponer de una dependencia sin referencia alguna; por ejemplo, si carga un archivo .dll mediante el método <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>. Se puede crear una imagen nativa de este archivo .dll usando la información de configuración del ensamblado de aplicación, con la opción `/ExeConfig`. El siguiente comando genera una imagen nativa de `MyLib.dll,` usando la información de configuración de `MyApp.exe`.  
   
 ```  
 ngen install c:\myfiles\MyLib.dll /ExeConfig:c:\myapps\MyApp.exe  
@@ -594,10 +593,9 @@ ngen executeQueuedItems
  En la versión 2.0 de .NET Framework, la única interacción con el servicio de imágenes nativas es a través de la herramienta de línea de comandos Ngen.exe. Utilice la herramienta de línea de comandos en los scripts de instalación para poner en cola las acciones del servicio de imágenes nativas e interactuar con el servicio.  
   
 ## <a name="see-also"></a>Vea también  
- [Servicio de imágenes nativas](http://msdn.microsoft.com/en-us/b15e0e32-59cb-4ae4-967c-6c9527781309)   
- [Tarea de imagen nativa](http://msdn.microsoft.com/en-us/9b1f7590-4e0d-4737-90ef-eaf696932afb)   
- [Herramientas](../../../docs/framework/tools/index.md)   
- [Proceso de ejecución administrada](../../../docs/standard/managed-execution-process.md)   
- [Cómo el motor en tiempo de ejecución ubica ensamblados](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)   
+ [Servicio de imágenes nativas](http://msdn.microsoft.com/en-us/b15e0e32-59cb-4ae4-967c-6c9527781309)  
+ [Tarea de imagen nativa](http://msdn.microsoft.com/en-us/9b1f7590-4e0d-4737-90ef-eaf696932afb)  
+ [Herramientas](../../../docs/framework/tools/index.md)  
+ [Proceso de ejecución administrada](../../../docs/standard/managed-execution-process.md)  
+ [Cómo el motor en tiempo de ejecución ubica ensamblados](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
  [Símbolos del sistema](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
-
