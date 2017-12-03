@@ -16,14 +16,14 @@ helpviewer_keywords:
 - authorization [WCF], managing with the Identity Model
 ms.assetid: 099defbb-5d35-434e-9336-1a49b9ec7663
 caps.latest.revision: "20"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: a5734065a82c6b45b837c9cb5a74ba6e46207fb7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: b69c17b9fcb14bbd70b60c32965fb1163c22e765
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="managing-claims-and-authorization-with-the-identity-model"></a>Administración de notificaciones y autorización con el modelo de identidad
 La autorización es el proceso de determinar qué entidades tienen permiso para cambiar, ver o tener acceso a un recurso informático. Por ejemplo, en una empresa, solo se puede permitir a los administradores el acceso a los archivos de sus empleados. [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] admite dos mecanismos para realizar el procesamiento de la autorización. El primer mecanismo le permite controlar la autorización utilizando construcciones de Common Language Runtime (CLR). El segundo es un modelo basado en notificaciones conocido como el *modelo de identidad*. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usa el modelo de identidad para crear notificaciones mensajes entrantes; las clases del modelo de identidad se pueden extender para admitir nuevos tipos de notificación para esquemas personalizados de autorización. En este tema se presenta información general de los conceptos de programación principales de la característica Modelo de identidad, así como una lista de las clases más importantes que la característica utiliza.  
@@ -135,7 +135,7 @@ La autorización es el proceso de determinar qué entidades tienen permiso para 
  ![Administración de notificaciones y autorización](../../../../docs/framework/wcf/feature-details/media/xsi-recap.gif "xsi_recap")  
   
 ## <a name="wcf-and-identity-model"></a>WCF y el modelo de identidad  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] utiliza la infraestructura del modelo de identidad como la base para realizar la autorización. En [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior> clase le permite especificar *autorización* directivas como parte de un servicio. Dichas directivas de autorización se conocen como *directivas de autorización externas*, y pueden realizar procesamiento de reclamaciones basado en directiva local o mediante interacción con un servicio remoto. El Administrador de autorización, representado por la <xref:System.ServiceModel.ServiceAuthorizationManager> clase, evalúa las directivas de autorización externas junto con directivas de autorización que reconocen los distintos tipos (tokens) de credencial y rellena lo que se denomina un  *contexto de autorización* con las notificaciones adecuadas para un mensaje entrante. El contexto de autorización está representando por la clase <xref:System.IdentityModel.Policy.AuthorizationContext>.  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] utiliza la infraestructura del modelo de identidad como la base para realizar la autorización. En [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior> clase le permite especificar *autorización* directivas como parte de un servicio. Dichas directivas de autorización se conocen como *directivas de autorización externas*, y pueden realizar procesamiento de reclamaciones basado en directiva local o mediante interacción con un servicio remoto. El Administrador de autorización, representado por la <xref:System.ServiceModel.ServiceAuthorizationManager> clase, evalúa las directivas de autorización externas junto con directivas de autorización que reconocen los distintos tipos (tokens) de credencial y rellena lo que se denomina un * contexto de autorización* con las notificaciones adecuadas para un mensaje entrante. El contexto de autorización está representando por la clase <xref:System.IdentityModel.Policy.AuthorizationContext>.  
   
 ## <a name="identity-model-programming"></a>Programación del modelo de identidad  
  La tabla siguiente describe el modelo de objetos utilizado para programar las extensiones del modelo de identidad. Estas clases existen todas en los espacios de nombre <xref:System.IdentityModel.Policy> o <xref:System.IdentityModel.Claims>.  

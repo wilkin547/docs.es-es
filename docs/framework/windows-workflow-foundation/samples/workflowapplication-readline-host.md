@@ -9,14 +9,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: f7b362be-cb42-40d7-b9ef-cfc4aed2455b
 caps.latest.revision: "14"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 5efe784f434ff357120343061c1c4b9447cc8cd1
-ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 1ba33dff4be8ae3e75ee4d1873feeb4d5e5944b7
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="workflowapplication-readline-host"></a>Host RedLIne WorkflowApplication
 Este ejemplo es un host ReadLine genérico. Puede cargar y ejecutar cualquier flujo de trabajo mediante la actividad `ReadLine` incluida (u otras actividades similares que reciban datos de marcadores reanudados con cadenas). El resultado de la actividad `WriteLine` o cualquier escritura que se realice en la extensión <xref:System.Activities.Statements.WriteLine.TextWriter%2A> se dirige a la ventana del host. Cuando una instancia está inactiva, los marcadores disponibles para esa instancia aparecen en un cuadro combinado. Seleccione un marcador, escriba algún texto o presione el botón de reanudación del marcador para continuar con la ejecución del flujo de trabajo. También puede cancelar, anular o finalizar un flujo de trabajo seleccionado. La persistencia está activada de forma predeterminada; puede cerrar el host y volver a iniciarlo, y la lista de instancias se rellena con las instancias almacenadas en la base de datos. El seguimiento se utiliza para generar eventos de nivel de <xref:System.Activities.WorkflowApplication> en el host con la opción de agregar seguimiento detallado en el nivel de actividad.  

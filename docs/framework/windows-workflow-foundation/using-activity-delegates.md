@@ -9,14 +9,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: e33cf876-8979-440b-9b23-4a12d1139960
 caps.latest.revision: "12"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: cf39f9e9cb877afed68c8e5b1b5c33f4276c4a15
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: de37cc2a366d4a69130c68b09de78caa58cf67fc
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="using-activity-delegates"></a>Usar delegados de actividad
 Los delegados de actividad permiten a los autores de actividad exponer devoluciones de llamada con firmas específicas, para las que los usuarios de la actividad pueden proporcionar controladores basados en actividades. Hay dos tipos de delegados de actividad disponibles: <xref:System.Activities.ActivityAction%601> se usa para definir delegados de actividad que no tienen un valor devuelto y <xref:System.Activities.ActivityFunc%601> se utiliza para definir delegados de actividad que tienen un valor devuelto.  
