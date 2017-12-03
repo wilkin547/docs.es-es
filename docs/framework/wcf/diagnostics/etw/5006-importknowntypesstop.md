@@ -10,29 +10,29 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 2e1786c1-cbdd-4427-b8fc-cbf86b8debae
 caps.latest.revision: "3"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 8fbec22b7e7c97050e490dc76649753d863c8807
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 9b2fc4b495368995437a5f9707dcab97eff8fce7
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
-# <a name="5006---importknowntypesstop"></a><span data-ttu-id="02116-102">5006 - ImportKnownTypesStop</span><span class="sxs-lookup"><span data-stu-id="02116-102">5006 - ImportKnownTypesStop</span></span>
-## <a name="properties"></a><span data-ttu-id="02116-103">Propiedades</span><span class="sxs-lookup"><span data-stu-id="02116-103">Properties</span></span>  
+# <a name="5006---importknowntypesstop"></a><span data-ttu-id="be39d-102">5006 - ImportKnownTypesStop</span><span class="sxs-lookup"><span data-stu-id="be39d-102">5006 - ImportKnownTypesStop</span></span>
+## <a name="properties"></a><span data-ttu-id="be39d-103">Propiedades</span><span class="sxs-lookup"><span data-stu-id="be39d-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="02116-104">Id.</span><span class="sxs-lookup"><span data-stu-id="02116-104">ID</span></span>|<span data-ttu-id="02116-105">5006</span><span class="sxs-lookup"><span data-stu-id="02116-105">5006</span></span>|  
-|<span data-ttu-id="02116-106">Palabras clave</span><span class="sxs-lookup"><span data-stu-id="02116-106">Keywords</span></span>|<span data-ttu-id="02116-107">Serialización</span><span class="sxs-lookup"><span data-stu-id="02116-107">Serialization</span></span>|  
-|<span data-ttu-id="02116-108">Nivel</span><span class="sxs-lookup"><span data-stu-id="02116-108">Level</span></span>|<span data-ttu-id="02116-109">Detallado</span><span class="sxs-lookup"><span data-stu-id="02116-109">Verbose</span></span>|  
-|<span data-ttu-id="02116-110">Canal</span><span class="sxs-lookup"><span data-stu-id="02116-110">Channel</span></span>|<span data-ttu-id="02116-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="02116-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
+|<span data-ttu-id="be39d-104">Id.</span><span class="sxs-lookup"><span data-stu-id="be39d-104">ID</span></span>|<span data-ttu-id="be39d-105">5006</span><span class="sxs-lookup"><span data-stu-id="be39d-105">5006</span></span>|  
+|<span data-ttu-id="be39d-106">Palabras clave</span><span class="sxs-lookup"><span data-stu-id="be39d-106">Keywords</span></span>|<span data-ttu-id="be39d-107">Serialización</span><span class="sxs-lookup"><span data-stu-id="be39d-107">Serialization</span></span>|  
+|<span data-ttu-id="be39d-108">Nivel</span><span class="sxs-lookup"><span data-stu-id="be39d-108">Level</span></span>|<span data-ttu-id="be39d-109">Detallado</span><span class="sxs-lookup"><span data-stu-id="be39d-109">Verbose</span></span>|  
+|<span data-ttu-id="be39d-110">Canal</span><span class="sxs-lookup"><span data-stu-id="be39d-110">Channel</span></span>|<span data-ttu-id="be39d-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="be39d-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="02116-112">Descripción</span><span class="sxs-lookup"><span data-stu-id="02116-112">Description</span></span>  
- <span data-ttu-id="02116-113">Se genera este evento cuando ImportKnownTypes se detiene.</span><span class="sxs-lookup"><span data-stu-id="02116-113">This event is emitted when the ImportKnownTypes stops.</span></span>  
+## <a name="description"></a><span data-ttu-id="be39d-112">Descripción</span><span class="sxs-lookup"><span data-stu-id="be39d-112">Description</span></span>  
+ <span data-ttu-id="be39d-113">Se genera este evento cuando ImportKnownTypes se detiene.</span><span class="sxs-lookup"><span data-stu-id="be39d-113">This event is emitted when the ImportKnownTypes stops.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="02116-114">Mensaje</span><span class="sxs-lookup"><span data-stu-id="02116-114">Message</span></span>  
- <span data-ttu-id="02116-115">Detención de ImportKnownTypes.</span><span class="sxs-lookup"><span data-stu-id="02116-115">ImportKnownTypes stop.</span></span>  
+## <a name="message"></a><span data-ttu-id="be39d-114">Mensaje</span><span class="sxs-lookup"><span data-stu-id="be39d-114">Message</span></span>  
+ <span data-ttu-id="be39d-115">Detención de ImportKnownTypes.</span><span class="sxs-lookup"><span data-stu-id="be39d-115">ImportKnownTypes stop.</span></span>  
   
-## <a name="details"></a><span data-ttu-id="02116-116">Detalles</span><span class="sxs-lookup"><span data-stu-id="02116-116">Details</span></span>
+## <a name="details"></a><span data-ttu-id="be39d-116">Detalles</span><span class="sxs-lookup"><span data-stu-id="be39d-116">Details</span></span>

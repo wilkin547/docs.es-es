@@ -10,22 +10,22 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 0bc74839-6e28-449b-80c9-b62ad7e58207
 caps.latest.revision: "4"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: c567d4fa191e2b71fe7ecb15dfc92cad132139ce
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 5f64348558c7a55f8ab9e7f079c497ebccb61eb4
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
-# <a name="systemservicemodelelementtypedoesntmatchconfiguredtype"></a><span data-ttu-id="b8f99-102">System.ServiceModel.ElementTypeDoesntMatchConfiguredType</span><span class="sxs-lookup"><span data-stu-id="b8f99-102">System.ServiceModel.ElementTypeDoesntMatchConfiguredType</span></span>
-<span data-ttu-id="b8f99-103">System.ServiceModel.ElementTypeDoesntMatchConfiguredType</span><span class="sxs-lookup"><span data-stu-id="b8f99-103">System.ServiceModel.ElementTypeDoesntMatchConfiguredType</span></span>  
+# <a name="systemservicemodelelementtypedoesntmatchconfiguredtype"></a><span data-ttu-id="0a167-102">System.ServiceModel.ElementTypeDoesntMatchConfiguredType</span><span class="sxs-lookup"><span data-stu-id="0a167-102">System.ServiceModel.ElementTypeDoesntMatchConfiguredType</span></span>
+<span data-ttu-id="0a167-103">System.ServiceModel.ElementTypeDoesntMatchConfiguredType</span><span class="sxs-lookup"><span data-stu-id="0a167-103">System.ServiceModel.ElementTypeDoesntMatchConfiguredType</span></span>  
   
-## <a name="description"></a><span data-ttu-id="b8f99-104">Descripción</span><span class="sxs-lookup"><span data-stu-id="b8f99-104">Description</span></span>  
- <span data-ttu-id="b8f99-105">El tipo del elemento no coincide con el tipo de configuración.</span><span class="sxs-lookup"><span data-stu-id="b8f99-105">The type of the element does not match the configuration type.</span></span>  
+## <a name="description"></a><span data-ttu-id="0a167-104">Descripción</span><span class="sxs-lookup"><span data-stu-id="0a167-104">Description</span></span>  
+ <span data-ttu-id="0a167-105">El tipo del elemento no coincide con el tipo de configuración.</span><span class="sxs-lookup"><span data-stu-id="0a167-105">The type of the element does not match the configuration type.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b8f99-106">Vea también</span><span class="sxs-lookup"><span data-stu-id="b8f99-106">See Also</span></span>  
- [<span data-ttu-id="b8f99-107">Seguimiento</span><span class="sxs-lookup"><span data-stu-id="b8f99-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="b8f99-108">Uso del seguimiento para solucionar problemas de la aplicación</span><span class="sxs-lookup"><span data-stu-id="b8f99-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="b8f99-109">Administración y diagnóstico</span><span class="sxs-lookup"><span data-stu-id="b8f99-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="0a167-106">Vea también</span><span class="sxs-lookup"><span data-stu-id="0a167-106">See Also</span></span>  
+ [<span data-ttu-id="0a167-107">Seguimiento</span><span class="sxs-lookup"><span data-stu-id="0a167-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="0a167-108">Uso del seguimiento para solucionar problemas de la aplicación</span><span class="sxs-lookup"><span data-stu-id="0a167-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="0a167-109">Administración y diagnóstico</span><span class="sxs-lookup"><span data-stu-id="0a167-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

@@ -10,22 +10,22 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: ba02fed9-331a-4aea-b5e1-fe16c7dd4ddd
 caps.latest.revision: "4"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: ea4bb4b73c8849eeb1c0d3b3ce19af09aa0ede1a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 0b9c086727ecbc96aec5bec1177ca79784913051
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
-# <a name="systemservicemodelmetadataexchangeclientsendrequest"></a><span data-ttu-id="650fa-102">System.ServiceModel.MetadataExchangeClientSendRequest</span><span class="sxs-lookup"><span data-stu-id="650fa-102">System.ServiceModel.MetadataExchangeClientSendRequest</span></span>
-<span data-ttu-id="650fa-103">System.ServiceModel.MetadataExchangeClientSendRequest</span><span class="sxs-lookup"><span data-stu-id="650fa-103">System.ServiceModel.MetadataExchangeClientSendRequest</span></span>  
+# <a name="systemservicemodelmetadataexchangeclientsendrequest"></a><span data-ttu-id="8cb70-102">System.ServiceModel.MetadataExchangeClientSendRequest</span><span class="sxs-lookup"><span data-stu-id="8cb70-102">System.ServiceModel.MetadataExchangeClientSendRequest</span></span>
+<span data-ttu-id="8cb70-103">System.ServiceModel.MetadataExchangeClientSendRequest</span><span class="sxs-lookup"><span data-stu-id="8cb70-103">System.ServiceModel.MetadataExchangeClientSendRequest</span></span>  
   
-## <a name="description"></a><span data-ttu-id="650fa-104">Descripción</span><span class="sxs-lookup"><span data-stu-id="650fa-104">Description</span></span>  
- <span data-ttu-id="650fa-105">MetadataExchangeClient está enviando una solicitud para los metadatos.</span><span class="sxs-lookup"><span data-stu-id="650fa-105">The MetadataExchangeClient is sending a request for metadata.</span></span>  
+## <a name="description"></a><span data-ttu-id="8cb70-104">Descripción</span><span class="sxs-lookup"><span data-stu-id="8cb70-104">Description</span></span>  
+ <span data-ttu-id="8cb70-105">MetadataExchangeClient está enviando una solicitud para los metadatos.</span><span class="sxs-lookup"><span data-stu-id="8cb70-105">The MetadataExchangeClient is sending a request for metadata.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="650fa-106">Vea también</span><span class="sxs-lookup"><span data-stu-id="650fa-106">See Also</span></span>  
- [<span data-ttu-id="650fa-107">Seguimiento</span><span class="sxs-lookup"><span data-stu-id="650fa-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="650fa-108">Uso del seguimiento para solucionar problemas de la aplicación</span><span class="sxs-lookup"><span data-stu-id="650fa-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="650fa-109">Administración y diagnóstico</span><span class="sxs-lookup"><span data-stu-id="650fa-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="8cb70-106">Vea también</span><span class="sxs-lookup"><span data-stu-id="8cb70-106">See Also</span></span>  
+ [<span data-ttu-id="8cb70-107">Seguimiento</span><span class="sxs-lookup"><span data-stu-id="8cb70-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="8cb70-108">Uso del seguimiento para solucionar problemas de la aplicación</span><span class="sxs-lookup"><span data-stu-id="8cb70-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="8cb70-109">Administración y diagnóstico</span><span class="sxs-lookup"><span data-stu-id="8cb70-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

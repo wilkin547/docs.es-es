@@ -10,29 +10,29 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 71ebd2ee-aedd-47ef-9a2b-00f778f7e225
 caps.latest.revision: "3"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 0b378e7a7c0d61a5b59feb36c5e48c2079d46bae
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 93c7db6e9cf8da6abb2942f9a4d2bf00d2dd1423
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
-# <a name="3414---httppipelineprocessresponsestop"></a><span data-ttu-id="4ecd3-102">3414 - HttpPipelineProcessResponseStop</span><span class="sxs-lookup"><span data-stu-id="4ecd3-102">3414 - HttpPipelineProcessResponseStop</span></span>
-## <a name="properties"></a><span data-ttu-id="4ecd3-103">Propiedades</span><span class="sxs-lookup"><span data-stu-id="4ecd3-103">Properties</span></span>  
+# <a name="3414---httppipelineprocessresponsestop"></a><span data-ttu-id="60193-102">3414 - HttpPipelineProcessResponseStop</span><span class="sxs-lookup"><span data-stu-id="60193-102">3414 - HttpPipelineProcessResponseStop</span></span>
+## <a name="properties"></a><span data-ttu-id="60193-103">Propiedades</span><span class="sxs-lookup"><span data-stu-id="60193-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="4ecd3-104">Id.</span><span class="sxs-lookup"><span data-stu-id="4ecd3-104">ID</span></span>|<span data-ttu-id="4ecd3-105">3414</span><span class="sxs-lookup"><span data-stu-id="4ecd3-105">3414</span></span>|  
-|<span data-ttu-id="4ecd3-106">Palabras clave</span><span class="sxs-lookup"><span data-stu-id="4ecd3-106">Keywords</span></span>|<span data-ttu-id="4ecd3-107">HTTP</span><span class="sxs-lookup"><span data-stu-id="4ecd3-107">HTTP</span></span>|  
-|<span data-ttu-id="4ecd3-108">Nivel</span><span class="sxs-lookup"><span data-stu-id="4ecd3-108">Level</span></span>|<span data-ttu-id="4ecd3-109">Detallado</span><span class="sxs-lookup"><span data-stu-id="4ecd3-109">Verbose</span></span>|  
-|<span data-ttu-id="4ecd3-110">Canal</span><span class="sxs-lookup"><span data-stu-id="4ecd3-110">Channel</span></span>|<span data-ttu-id="4ecd3-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="4ecd3-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
+|<span data-ttu-id="60193-104">Id.</span><span class="sxs-lookup"><span data-stu-id="60193-104">ID</span></span>|<span data-ttu-id="60193-105">3414</span><span class="sxs-lookup"><span data-stu-id="60193-105">3414</span></span>|  
+|<span data-ttu-id="60193-106">Palabras clave</span><span class="sxs-lookup"><span data-stu-id="60193-106">Keywords</span></span>|<span data-ttu-id="60193-107">HTTP</span><span class="sxs-lookup"><span data-stu-id="60193-107">HTTP</span></span>|  
+|<span data-ttu-id="60193-108">Nivel</span><span class="sxs-lookup"><span data-stu-id="60193-108">Level</span></span>|<span data-ttu-id="60193-109">Detallado</span><span class="sxs-lookup"><span data-stu-id="60193-109">Verbose</span></span>|  
+|<span data-ttu-id="60193-110">Canal</span><span class="sxs-lookup"><span data-stu-id="60193-110">Channel</span></span>|<span data-ttu-id="60193-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="60193-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="4ecd3-112">Descripción</span><span class="sxs-lookup"><span data-stu-id="4ecd3-112">Description</span></span>  
- <span data-ttu-id="4ecd3-113">Se genera este evento cuando el controlador de mensajes de HTTP completó el procesamiento de la respuesta.</span><span class="sxs-lookup"><span data-stu-id="4ecd3-113">This event is emitted when the Http message handler completed processing the response.</span></span>  
+## <a name="description"></a><span data-ttu-id="60193-112">Descripción</span><span class="sxs-lookup"><span data-stu-id="60193-112">Description</span></span>  
+ <span data-ttu-id="60193-113">Se genera este evento cuando el controlador de mensajes de HTTP completó el procesamiento de la respuesta.</span><span class="sxs-lookup"><span data-stu-id="60193-113">This event is emitted when the Http message handler completed processing the response.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="4ecd3-114">Mensaje</span><span class="sxs-lookup"><span data-stu-id="4ecd3-114">Message</span></span>  
- <span data-ttu-id="4ecd3-115">El controlador de mensajes HTTP completó el procesamiento de la respuesta.</span><span class="sxs-lookup"><span data-stu-id="4ecd3-115">Http message handler completed processing the response.</span></span>  
+## <a name="message"></a><span data-ttu-id="60193-114">Mensaje</span><span class="sxs-lookup"><span data-stu-id="60193-114">Message</span></span>  
+ <span data-ttu-id="60193-115">El controlador de mensajes HTTP completó el procesamiento de la respuesta.</span><span class="sxs-lookup"><span data-stu-id="60193-115">Http message handler completed processing the response.</span></span>  
   
-## <a name="details"></a><span data-ttu-id="4ecd3-116">Detalles</span><span class="sxs-lookup"><span data-stu-id="4ecd3-116">Details</span></span>
+## <a name="details"></a><span data-ttu-id="60193-116">Detalles</span><span class="sxs-lookup"><span data-stu-id="60193-116">Details</span></span>

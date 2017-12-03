@@ -10,22 +10,22 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: f395f028-8c9c-4b5d-857b-8d18f94d3375
 caps.latest.revision: "4"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: df5743f17dcdf5f175f447831b74d491ae0baf47
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 97a33a475c10eaf0ee21099974c71e9652e4eb3a
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
-# <a name="systemservicemodelcomintegrationcomintegrationservicehoststartedservice"></a><span data-ttu-id="9eb12-102">System.ServiceModel.ComIntegration.ComIntegrationServiceHostStartedService</span><span class="sxs-lookup"><span data-stu-id="9eb12-102">System.ServiceModel.ComIntegration.ComIntegrationServiceHostStartedService</span></span>
-<span data-ttu-id="9eb12-103">System.ServiceModel.ComIntegration.ComIntegrationServiceHostStartedService</span><span class="sxs-lookup"><span data-stu-id="9eb12-103">System.ServiceModel.ComIntegration.ComIntegrationServiceHostStartedService</span></span>  
+# <a name="systemservicemodelcomintegrationcomintegrationservicehoststartedservice"></a><span data-ttu-id="c026e-102">System.ServiceModel.ComIntegration.ComIntegrationServiceHostStartedService</span><span class="sxs-lookup"><span data-stu-id="c026e-102">System.ServiceModel.ComIntegration.ComIntegrationServiceHostStartedService</span></span>
+<span data-ttu-id="c026e-103">System.ServiceModel.ComIntegration.ComIntegrationServiceHostStartedService</span><span class="sxs-lookup"><span data-stu-id="c026e-103">System.ServiceModel.ComIntegration.ComIntegrationServiceHostStartedService</span></span>  
   
-## <a name="description"></a><span data-ttu-id="9eb12-104">Descripción</span><span class="sxs-lookup"><span data-stu-id="9eb12-104">Description</span></span>  
- <span data-ttu-id="9eb12-105">ComPlus: servicio iniciado.</span><span class="sxs-lookup"><span data-stu-id="9eb12-105">ComPlus: Started service.</span></span>  
+## <a name="description"></a><span data-ttu-id="c026e-104">Descripción</span><span class="sxs-lookup"><span data-stu-id="c026e-104">Description</span></span>  
+ <span data-ttu-id="c026e-105">ComPlus: servicio iniciado.</span><span class="sxs-lookup"><span data-stu-id="c026e-105">ComPlus: Started service.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9eb12-106">Vea también</span><span class="sxs-lookup"><span data-stu-id="9eb12-106">See Also</span></span>  
- [<span data-ttu-id="9eb12-107">Seguimiento</span><span class="sxs-lookup"><span data-stu-id="9eb12-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="9eb12-108">Uso del seguimiento para solucionar problemas de la aplicación</span><span class="sxs-lookup"><span data-stu-id="9eb12-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="9eb12-109">Administración y diagnóstico</span><span class="sxs-lookup"><span data-stu-id="9eb12-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="c026e-106">Vea también</span><span class="sxs-lookup"><span data-stu-id="c026e-106">See Also</span></span>  
+ [<span data-ttu-id="c026e-107">Seguimiento</span><span class="sxs-lookup"><span data-stu-id="c026e-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="c026e-108">Uso del seguimiento para solucionar problemas de la aplicación</span><span class="sxs-lookup"><span data-stu-id="c026e-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="c026e-109">Administración y diagnóstico</span><span class="sxs-lookup"><span data-stu-id="c026e-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

@@ -10,22 +10,22 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: b41c78a2-c885-418d-831f-2db86fa3a52d
 caps.latest.revision: "4"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 3e2708ae291b1d78ef375b8c8e133b8a2730d598
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: ebc931a3fa1f99cd3cc959dded9f1a278e5dc78a
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
-# <a name="systemservicemodelchannelsrequestcontextabort"></a><span data-ttu-id="919e0-102">System.ServiceModel.Channels.RequestContextAbort</span><span class="sxs-lookup"><span data-stu-id="919e0-102">System.ServiceModel.Channels.RequestContextAbort</span></span>
-<span data-ttu-id="919e0-103">System.ServiceModel.Channels.RequestContextAbort</span><span class="sxs-lookup"><span data-stu-id="919e0-103">System.ServiceModel.Channels.RequestContextAbort</span></span>  
+# <a name="systemservicemodelchannelsrequestcontextabort"></a><span data-ttu-id="17b10-102">System.ServiceModel.Channels.RequestContextAbort</span><span class="sxs-lookup"><span data-stu-id="17b10-102">System.ServiceModel.Channels.RequestContextAbort</span></span>
+<span data-ttu-id="17b10-103">System.ServiceModel.Channels.RequestContextAbort</span><span class="sxs-lookup"><span data-stu-id="17b10-103">System.ServiceModel.Channels.RequestContextAbort</span></span>  
   
-## <a name="description"></a><span data-ttu-id="919e0-104">Descripción</span><span class="sxs-lookup"><span data-stu-id="919e0-104">Description</span></span>  
- <span data-ttu-id="919e0-105">RequestContext anulado.</span><span class="sxs-lookup"><span data-stu-id="919e0-105">RequestContext aborted.</span></span>  
+## <a name="description"></a><span data-ttu-id="17b10-104">Descripción</span><span class="sxs-lookup"><span data-stu-id="17b10-104">Description</span></span>  
+ <span data-ttu-id="17b10-105">RequestContext anulado.</span><span class="sxs-lookup"><span data-stu-id="17b10-105">RequestContext aborted.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="919e0-106">Vea también</span><span class="sxs-lookup"><span data-stu-id="919e0-106">See Also</span></span>  
- [<span data-ttu-id="919e0-107">Seguimiento</span><span class="sxs-lookup"><span data-stu-id="919e0-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="919e0-108">Uso del seguimiento para solucionar problemas de la aplicación</span><span class="sxs-lookup"><span data-stu-id="919e0-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="919e0-109">Administración y diagnóstico</span><span class="sxs-lookup"><span data-stu-id="919e0-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="17b10-106">Vea también</span><span class="sxs-lookup"><span data-stu-id="17b10-106">See Also</span></span>  
+ [<span data-ttu-id="17b10-107">Seguimiento</span><span class="sxs-lookup"><span data-stu-id="17b10-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="17b10-108">Uso del seguimiento para solucionar problemas de la aplicación</span><span class="sxs-lookup"><span data-stu-id="17b10-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="17b10-109">Administración y diagnóstico</span><span class="sxs-lookup"><span data-stu-id="17b10-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

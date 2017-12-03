@@ -10,26 +10,26 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 21e38acf-450a-4bda-82b6-de305e1f7cd8
 caps.latest.revision: "11"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: bae88c2a929ca7f59139eb3c0aff7822a0c66246
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: e1ea5fc60f4dc64fd895469b580b81379da26191
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
-# <a name="lttransportgt-of-ltwshttpbindinggt"></a><span data-ttu-id="e5f05-102">Elemento &lt;transport&gt; de &lt;wsHttpBinding&gt;</span><span class="sxs-lookup"><span data-stu-id="e5f05-102">&lt;transport&gt; of &lt;wsHttpBinding&gt;</span></span>
-<span data-ttu-id="e5f05-103">Define la configuración de autenticación del transporte HTTP.</span><span class="sxs-lookup"><span data-stu-id="e5f05-103">Defines authentication settings for the HTTP transport.</span></span>  
+# <a name="lttransportgt-of-ltwshttpbindinggt"></a><span data-ttu-id="c3f9e-102">Elemento &lt;transport&gt; de &lt;wsHttpBinding&gt;</span><span class="sxs-lookup"><span data-stu-id="c3f9e-102">&lt;transport&gt; of &lt;wsHttpBinding&gt;</span></span>
+<span data-ttu-id="c3f9e-103">Define la configuración de autenticación del transporte HTTP.</span><span class="sxs-lookup"><span data-stu-id="c3f9e-103">Defines authentication settings for the HTTP transport.</span></span>  
   
- <span data-ttu-id="e5f05-104">\<system.serviceModel ></span><span class="sxs-lookup"><span data-stu-id="e5f05-104">\<system.serviceModel></span></span>  
-<span data-ttu-id="e5f05-105">\<enlaces ></span><span class="sxs-lookup"><span data-stu-id="e5f05-105">\<bindings></span></span>  
-<span data-ttu-id="e5f05-106">\<wsHttpBinding ></span><span class="sxs-lookup"><span data-stu-id="e5f05-106">\<wsHttpBinding></span></span>  
-<span data-ttu-id="e5f05-107">\<enlace ></span><span class="sxs-lookup"><span data-stu-id="e5f05-107">\<binding></span></span>  
-<span data-ttu-id="e5f05-108">\<seguridad ></span><span class="sxs-lookup"><span data-stu-id="e5f05-108">\<security></span></span>  
-<span data-ttu-id="e5f05-109">\<transporte ></span><span class="sxs-lookup"><span data-stu-id="e5f05-109">\<transport></span></span>  
+ <span data-ttu-id="c3f9e-104">\<system.serviceModel ></span><span class="sxs-lookup"><span data-stu-id="c3f9e-104">\<system.serviceModel></span></span>  
+<span data-ttu-id="c3f9e-105">\<enlaces ></span><span class="sxs-lookup"><span data-stu-id="c3f9e-105">\<bindings></span></span>  
+<span data-ttu-id="c3f9e-106">\<wsHttpBinding ></span><span class="sxs-lookup"><span data-stu-id="c3f9e-106">\<wsHttpBinding></span></span>  
+<span data-ttu-id="c3f9e-107">\<enlace ></span><span class="sxs-lookup"><span data-stu-id="c3f9e-107">\<binding></span></span>  
+<span data-ttu-id="c3f9e-108">\<seguridad ></span><span class="sxs-lookup"><span data-stu-id="c3f9e-108">\<security></span></span>  
+<span data-ttu-id="c3f9e-109">\<transporte ></span><span class="sxs-lookup"><span data-stu-id="c3f9e-109">\<transport></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e5f05-110">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="e5f05-110">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c3f9e-110">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="c3f9e-110">Syntax</span></span>  
   
 ```xml  
 <wsHttpBinding>  
@@ -48,59 +48,59 @@ ms.lasthandoff: 11/21/2017
 </wsHttpBinding>  
 ```  
   
-## <a name="type"></a><span data-ttu-id="e5f05-111">Tipo</span><span class="sxs-lookup"><span data-stu-id="e5f05-111">Type</span></span>  
+## <a name="type"></a><span data-ttu-id="c3f9e-111">Tipo</span><span class="sxs-lookup"><span data-stu-id="c3f9e-111">Type</span></span>  
  <xref:System.ServiceModel.HttpTransportSecurity>  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="e5f05-112">Atributos y elementos</span><span class="sxs-lookup"><span data-stu-id="e5f05-112">Attributes and Elements</span></span>  
- <span data-ttu-id="e5f05-113">En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.</span><span class="sxs-lookup"><span data-stu-id="e5f05-113">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="c3f9e-112">Atributos y elementos</span><span class="sxs-lookup"><span data-stu-id="c3f9e-112">Attributes and Elements</span></span>  
+ <span data-ttu-id="c3f9e-113">En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.</span><span class="sxs-lookup"><span data-stu-id="c3f9e-113">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="e5f05-114">Atributos</span><span class="sxs-lookup"><span data-stu-id="e5f05-114">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="c3f9e-114">Atributos</span><span class="sxs-lookup"><span data-stu-id="c3f9e-114">Attributes</span></span>  
   
-|<span data-ttu-id="e5f05-115">Atributo</span><span class="sxs-lookup"><span data-stu-id="e5f05-115">Attribute</span></span>|<span data-ttu-id="e5f05-116">Descripción</span><span class="sxs-lookup"><span data-stu-id="e5f05-116">Description</span></span>|  
+|<span data-ttu-id="c3f9e-115">Atributo</span><span class="sxs-lookup"><span data-stu-id="c3f9e-115">Attribute</span></span>|<span data-ttu-id="c3f9e-116">Descripción</span><span class="sxs-lookup"><span data-stu-id="c3f9e-116">Description</span></span>|  
 |---------------|-----------------|  
-|`clientCredentialType`|<span data-ttu-id="e5f05-117">Especifica la credencial utilizada para autenticar el cliente al servicio.</span><span class="sxs-lookup"><span data-stu-id="e5f05-117">Specifies the credential used to authenticate the client to the service.</span></span> <span data-ttu-id="e5f05-118">Este atributo es del tipo <xref:System.ServiceModel.HttpClientCredentialType>.</span><span class="sxs-lookup"><span data-stu-id="e5f05-118">This attribute is of type <xref:System.ServiceModel.HttpClientCredentialType>.</span></span>|  
-|`proxyCredentialType`|<span data-ttu-id="e5f05-119">Especifica la credencial usada para autenticar al cliente en un proxy del dominio.</span><span class="sxs-lookup"><span data-stu-id="e5f05-119">Specifies the credential used to authenticate the client to a domain proxy.</span></span> <span data-ttu-id="e5f05-120">Este atributo es del tipo <xref:System.ServiceModel.HttpProxyCredentialType>.</span><span class="sxs-lookup"><span data-stu-id="e5f05-120">This attribute is of type <xref:System.ServiceModel.HttpProxyCredentialType>.</span></span>|  
-|`realm`|<span data-ttu-id="e5f05-121">Una cadena que especifica el dominio de autenticación para autenticación implícita o básica.</span><span class="sxs-lookup"><span data-stu-id="e5f05-121">A string that specifies the authentication realm for digest or basic authentication.</span></span> <span data-ttu-id="e5f05-122">El valor predeterminado es una cadena vacía.</span><span class="sxs-lookup"><span data-stu-id="e5f05-122">The default is an empty string.</span></span><br /><br /> <span data-ttu-id="e5f05-123">Un dominio de autenticación especifica por lo menos el nombre del host que realiza la autenticación.</span><span class="sxs-lookup"><span data-stu-id="e5f05-123">An authentication realm specifies at least the name of the host that performs the authentication.</span></span> <span data-ttu-id="e5f05-124">También puede especificar una colección de usuarios que tiene acceso.</span><span class="sxs-lookup"><span data-stu-id="e5f05-124">It can also specify a collection of users that has access.</span></span> <span data-ttu-id="e5f05-125">Un usuario puede consultar el dominio de autenticación para determinar cuál de los posibles nombres de usuario y contraseñas se puede utilizar.</span><span class="sxs-lookup"><span data-stu-id="e5f05-125">A user can query the authentication realm to ascertain which one of the several possible usernames and passwords can be used.</span></span>|  
-|`policyEnforcement`|<span data-ttu-id="e5f05-126">Esta enumeración especifica cuándo se debe aplicar <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy>.</span><span class="sxs-lookup"><span data-stu-id="e5f05-126">This enumeration specifies when the <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy> should be enforced.</span></span><br /><br /> <span data-ttu-id="e5f05-127">1.  Never: la directiva nunca se aplica (la protección extendida está deshabilitada).</span><span class="sxs-lookup"><span data-stu-id="e5f05-127">1.  Never – The policy is never enforced (Extended Protection is disabled).</span></span><br /><span data-ttu-id="e5f05-128">2.  WhenSupported: la directiva solamente se aplica si el cliente admite la protección extendida.</span><span class="sxs-lookup"><span data-stu-id="e5f05-128">2.  WhenSupported – The policy is enforced only if the client supports Extended Protection.</span></span><br /><span data-ttu-id="e5f05-129">3.  Always: la directiva siempre se aplica.</span><span class="sxs-lookup"><span data-stu-id="e5f05-129">3.  Always – The policy is always enforced.</span></span> <span data-ttu-id="e5f05-130">Los clientes que no admitan la protección extendida no podrán autenticarse.</span><span class="sxs-lookup"><span data-stu-id="e5f05-130">Clients which don’t support Extended Protection will fail to authenticate.</span></span>|  
+|`clientCredentialType`|<span data-ttu-id="c3f9e-117">Especifica la credencial utilizada para autenticar el cliente al servicio.</span><span class="sxs-lookup"><span data-stu-id="c3f9e-117">Specifies the credential used to authenticate the client to the service.</span></span> <span data-ttu-id="c3f9e-118">Este atributo es del tipo <xref:System.ServiceModel.HttpClientCredentialType>.</span><span class="sxs-lookup"><span data-stu-id="c3f9e-118">This attribute is of type <xref:System.ServiceModel.HttpClientCredentialType>.</span></span>|  
+|`proxyCredentialType`|<span data-ttu-id="c3f9e-119">Especifica la credencial usada para autenticar al cliente en un proxy del dominio.</span><span class="sxs-lookup"><span data-stu-id="c3f9e-119">Specifies the credential used to authenticate the client to a domain proxy.</span></span> <span data-ttu-id="c3f9e-120">Este atributo es del tipo <xref:System.ServiceModel.HttpProxyCredentialType>.</span><span class="sxs-lookup"><span data-stu-id="c3f9e-120">This attribute is of type <xref:System.ServiceModel.HttpProxyCredentialType>.</span></span>|  
+|`realm`|<span data-ttu-id="c3f9e-121">Una cadena que especifica el dominio de autenticación para autenticación implícita o básica.</span><span class="sxs-lookup"><span data-stu-id="c3f9e-121">A string that specifies the authentication realm for digest or basic authentication.</span></span> <span data-ttu-id="c3f9e-122">El valor predeterminado es una cadena vacía.</span><span class="sxs-lookup"><span data-stu-id="c3f9e-122">The default is an empty string.</span></span><br /><br /> <span data-ttu-id="c3f9e-123">Un dominio de autenticación especifica por lo menos el nombre del host que realiza la autenticación.</span><span class="sxs-lookup"><span data-stu-id="c3f9e-123">An authentication realm specifies at least the name of the host that performs the authentication.</span></span> <span data-ttu-id="c3f9e-124">También puede especificar una colección de usuarios que tiene acceso.</span><span class="sxs-lookup"><span data-stu-id="c3f9e-124">It can also specify a collection of users that has access.</span></span> <span data-ttu-id="c3f9e-125">Un usuario puede consultar el dominio de autenticación para determinar cuál de los posibles nombres de usuario y contraseñas se puede utilizar.</span><span class="sxs-lookup"><span data-stu-id="c3f9e-125">A user can query the authentication realm to ascertain which one of the several possible usernames and passwords can be used.</span></span>|  
+|`policyEnforcement`|<span data-ttu-id="c3f9e-126">Esta enumeración especifica cuándo se debe aplicar <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy>.</span><span class="sxs-lookup"><span data-stu-id="c3f9e-126">This enumeration specifies when the <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy> should be enforced.</span></span><br /><br /> <span data-ttu-id="c3f9e-127">1.  Never: la directiva nunca se aplica (la protección extendida está deshabilitada).</span><span class="sxs-lookup"><span data-stu-id="c3f9e-127">1.  Never – The policy is never enforced (Extended Protection is disabled).</span></span><br /><span data-ttu-id="c3f9e-128">2.  WhenSupported: la directiva solamente se aplica si el cliente admite la protección extendida.</span><span class="sxs-lookup"><span data-stu-id="c3f9e-128">2.  WhenSupported – The policy is enforced only if the client supports Extended Protection.</span></span><br /><span data-ttu-id="c3f9e-129">3.  Always: la directiva siempre se aplica.</span><span class="sxs-lookup"><span data-stu-id="c3f9e-129">3.  Always – The policy is always enforced.</span></span> <span data-ttu-id="c3f9e-130">Los clientes que no admitan la protección extendida no podrán autenticarse.</span><span class="sxs-lookup"><span data-stu-id="c3f9e-130">Clients which don’t support Extended Protection will fail to authenticate.</span></span>|  
   
-## <a name="clientcredentialtype-attribute"></a><span data-ttu-id="e5f05-131">Atributo clientCredentialType</span><span class="sxs-lookup"><span data-stu-id="e5f05-131">clientCredentialType Attribute</span></span>  
+## <a name="clientcredentialtype-attribute"></a><span data-ttu-id="c3f9e-131">Atributo clientCredentialType</span><span class="sxs-lookup"><span data-stu-id="c3f9e-131">clientCredentialType Attribute</span></span>  
   
-|<span data-ttu-id="e5f05-132">Valor</span><span class="sxs-lookup"><span data-stu-id="e5f05-132">Value</span></span>|<span data-ttu-id="e5f05-133">Descripción</span><span class="sxs-lookup"><span data-stu-id="e5f05-133">Description</span></span>|  
+|<span data-ttu-id="c3f9e-132">Valor</span><span class="sxs-lookup"><span data-stu-id="c3f9e-132">Value</span></span>|<span data-ttu-id="c3f9e-133">Descripción</span><span class="sxs-lookup"><span data-stu-id="c3f9e-133">Description</span></span>|  
 |-----------|-----------------|  
-|`None`|<span data-ttu-id="e5f05-134">La seguridad está deshabilitada.</span><span class="sxs-lookup"><span data-stu-id="e5f05-134">Security is disabled.</span></span>|  
-|`Basic`|<span data-ttu-id="e5f05-135">Usa la autenticación básica.</span><span class="sxs-lookup"><span data-stu-id="e5f05-135">Uses basic authentication.</span></span>|  
-|`Digest`|<span data-ttu-id="e5f05-136">Usa la autenticación implícita.</span><span class="sxs-lookup"><span data-stu-id="e5f05-136">Uses digest authentication.</span></span>|  
-|`Ntlm`|<span data-ttu-id="e5f05-137">Utiliza la autenticación NTLM como reserva con un dominio de Windows.</span><span class="sxs-lookup"><span data-stu-id="e5f05-137">Uses NTLM authentication as a fallback with a Windows domain.</span></span>|  
-|`Windows`|<span data-ttu-id="e5f05-138">Utiliza la autenticación de Windows integrada.</span><span class="sxs-lookup"><span data-stu-id="e5f05-138">Uses integrated Windows authentication.</span></span>|  
-|`Certificate`|<span data-ttu-id="e5f05-139">Utiliza los certificados X.509 para autenticar al cliente.</span><span class="sxs-lookup"><span data-stu-id="e5f05-139">Uses X.509 certificates to authenticate the client.</span></span>|  
+|`None`|<span data-ttu-id="c3f9e-134">La seguridad está deshabilitada.</span><span class="sxs-lookup"><span data-stu-id="c3f9e-134">Security is disabled.</span></span>|  
+|`Basic`|<span data-ttu-id="c3f9e-135">Usa la autenticación básica.</span><span class="sxs-lookup"><span data-stu-id="c3f9e-135">Uses basic authentication.</span></span>|  
+|`Digest`|<span data-ttu-id="c3f9e-136">Usa la autenticación implícita.</span><span class="sxs-lookup"><span data-stu-id="c3f9e-136">Uses digest authentication.</span></span>|  
+|`Ntlm`|<span data-ttu-id="c3f9e-137">Utiliza la autenticación NTLM como reserva con un dominio de Windows.</span><span class="sxs-lookup"><span data-stu-id="c3f9e-137">Uses NTLM authentication as a fallback with a Windows domain.</span></span>|  
+|`Windows`|<span data-ttu-id="c3f9e-138">Utiliza la autenticación de Windows integrada.</span><span class="sxs-lookup"><span data-stu-id="c3f9e-138">Uses integrated Windows authentication.</span></span>|  
+|`Certificate`|<span data-ttu-id="c3f9e-139">Utiliza los certificados X.509 para autenticar al cliente.</span><span class="sxs-lookup"><span data-stu-id="c3f9e-139">Uses X.509 certificates to authenticate the client.</span></span>|  
   
-## <a name="proxycredentialtype-attribute"></a><span data-ttu-id="e5f05-140">Atributo proxyCredentialType</span><span class="sxs-lookup"><span data-stu-id="e5f05-140">proxyCredentialType Attribute</span></span>  
+## <a name="proxycredentialtype-attribute"></a><span data-ttu-id="c3f9e-140">Atributo proxyCredentialType</span><span class="sxs-lookup"><span data-stu-id="c3f9e-140">proxyCredentialType Attribute</span></span>  
   
-|<span data-ttu-id="e5f05-141">Valor</span><span class="sxs-lookup"><span data-stu-id="e5f05-141">Value</span></span>|<span data-ttu-id="e5f05-142">Descripción</span><span class="sxs-lookup"><span data-stu-id="e5f05-142">Description</span></span>|  
+|<span data-ttu-id="c3f9e-141">Valor</span><span class="sxs-lookup"><span data-stu-id="c3f9e-141">Value</span></span>|<span data-ttu-id="c3f9e-142">Descripción</span><span class="sxs-lookup"><span data-stu-id="c3f9e-142">Description</span></span>|  
 |-----------|-----------------|  
-|`None`|<span data-ttu-id="e5f05-143">La seguridad está deshabilitada.</span><span class="sxs-lookup"><span data-stu-id="e5f05-143">Security is disabled.</span></span>|  
-|`Basic`|<span data-ttu-id="e5f05-144">Usa la autenticación básica.</span><span class="sxs-lookup"><span data-stu-id="e5f05-144">Uses basic authentication.</span></span>|  
-|`Digest`|<span data-ttu-id="e5f05-145">Usa la autenticación implícita.</span><span class="sxs-lookup"><span data-stu-id="e5f05-145">Uses digest authentication.</span></span>|  
-|`Ntlm`|<span data-ttu-id="e5f05-146">Utiliza NTLM como reserva con un dominio de Windows.</span><span class="sxs-lookup"><span data-stu-id="e5f05-146">Uses NTLM as a fallback with a Windows domain.</span></span>|  
-|`Windows`|<span data-ttu-id="e5f05-147">Utiliza la autenticación de Windows integrada.</span><span class="sxs-lookup"><span data-stu-id="e5f05-147">Uses integrated Windows authentication.</span></span>|  
-|`Certificate`|<span data-ttu-id="e5f05-148">Utiliza los certificados X.509 para autenticar al cliente.</span><span class="sxs-lookup"><span data-stu-id="e5f05-148">Uses X.509 certificates to authenticate the client.</span></span>|  
+|`None`|<span data-ttu-id="c3f9e-143">La seguridad está deshabilitada.</span><span class="sxs-lookup"><span data-stu-id="c3f9e-143">Security is disabled.</span></span>|  
+|`Basic`|<span data-ttu-id="c3f9e-144">Usa la autenticación básica.</span><span class="sxs-lookup"><span data-stu-id="c3f9e-144">Uses basic authentication.</span></span>|  
+|`Digest`|<span data-ttu-id="c3f9e-145">Usa la autenticación implícita.</span><span class="sxs-lookup"><span data-stu-id="c3f9e-145">Uses digest authentication.</span></span>|  
+|`Ntlm`|<span data-ttu-id="c3f9e-146">Utiliza NTLM como reserva con un dominio de Windows.</span><span class="sxs-lookup"><span data-stu-id="c3f9e-146">Uses NTLM as a fallback with a Windows domain.</span></span>|  
+|`Windows`|<span data-ttu-id="c3f9e-147">Utiliza la autenticación de Windows integrada.</span><span class="sxs-lookup"><span data-stu-id="c3f9e-147">Uses integrated Windows authentication.</span></span>|  
+|`Certificate`|<span data-ttu-id="c3f9e-148">Utiliza los certificados X.509 para autenticar al cliente.</span><span class="sxs-lookup"><span data-stu-id="c3f9e-148">Uses X.509 certificates to authenticate the client.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="e5f05-149">Elementos secundarios</span><span class="sxs-lookup"><span data-stu-id="e5f05-149">Child Elements</span></span>  
- <span data-ttu-id="e5f05-150">Ninguno.</span><span class="sxs-lookup"><span data-stu-id="e5f05-150">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="c3f9e-149">Elementos secundarios</span><span class="sxs-lookup"><span data-stu-id="c3f9e-149">Child Elements</span></span>  
+ <span data-ttu-id="c3f9e-150">Ninguno.</span><span class="sxs-lookup"><span data-stu-id="c3f9e-150">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="e5f05-151">Elementos primarios</span><span class="sxs-lookup"><span data-stu-id="e5f05-151">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="c3f9e-151">Elementos primarios</span><span class="sxs-lookup"><span data-stu-id="c3f9e-151">Parent Elements</span></span>  
   
-|<span data-ttu-id="e5f05-152">Elemento</span><span class="sxs-lookup"><span data-stu-id="e5f05-152">Element</span></span>|<span data-ttu-id="e5f05-153">Descripción</span><span class="sxs-lookup"><span data-stu-id="e5f05-153">Description</span></span>|  
+|<span data-ttu-id="c3f9e-152">Elemento</span><span class="sxs-lookup"><span data-stu-id="c3f9e-152">Element</span></span>|<span data-ttu-id="c3f9e-153">Descripción</span><span class="sxs-lookup"><span data-stu-id="c3f9e-153">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="e5f05-154">\<seguridad ></span><span class="sxs-lookup"><span data-stu-id="e5f05-154">\<security></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wshttpbinding.md)|<span data-ttu-id="e5f05-155">Representa las funciones de seguridad de la [ \<wsHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md).</span><span class="sxs-lookup"><span data-stu-id="e5f05-155">Represents the security capabilities of the [\<wsHttpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md).</span></span>|  
+|[<span data-ttu-id="c3f9e-154">\<seguridad ></span><span class="sxs-lookup"><span data-stu-id="c3f9e-154">\<security></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wshttpbinding.md)|<span data-ttu-id="c3f9e-155">Representa las funciones de seguridad de la [ \<wsHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md).</span><span class="sxs-lookup"><span data-stu-id="c3f9e-155">Represents the security capabilities of the [\<wsHttpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md).</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="e5f05-156">Vea también</span><span class="sxs-lookup"><span data-stu-id="e5f05-156">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="c3f9e-156">Vea también</span><span class="sxs-lookup"><span data-stu-id="c3f9e-156">See Also</span></span>  
  <xref:System.ServiceModel.HttpTransportSecurity>  
  <xref:System.ServiceModel.WSHttpSecurity.Transport%2A>  
  <xref:System.ServiceModel.Configuration.WSHttpSecurityElement.Transport%2A>  
  <xref:System.ServiceModel.Configuration.HttpTransportSecurityElement>  
- [<span data-ttu-id="e5f05-157">Protección de servicios y clientes</span><span class="sxs-lookup"><span data-stu-id="e5f05-157">Securing Services and Clients</span></span>](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- [<span data-ttu-id="e5f05-158">Enlaces</span><span class="sxs-lookup"><span data-stu-id="e5f05-158">Bindings</span></span>](../../../../../docs/framework/wcf/bindings.md)  
- [<span data-ttu-id="e5f05-159">Configuración de enlaces proporcionados por el sistema</span><span class="sxs-lookup"><span data-stu-id="e5f05-159">Configuring System-Provided Bindings</span></span>](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [<span data-ttu-id="e5f05-160">Utilización de enlaces para configurar los clientes y servicios de Windows Communication Foundation</span><span class="sxs-lookup"><span data-stu-id="e5f05-160">Using Bindings to Configure Windows Communication Foundation Services and Clients</span></span>](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
- [<span data-ttu-id="e5f05-161">\<enlace ></span><span class="sxs-lookup"><span data-stu-id="e5f05-161">\<binding></span></span>](../../../../../docs/framework/misc/binding.md)
+ [<span data-ttu-id="c3f9e-157">Protección de servicios y clientes</span><span class="sxs-lookup"><span data-stu-id="c3f9e-157">Securing Services and Clients</span></span>](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
+ [<span data-ttu-id="c3f9e-158">Enlaces</span><span class="sxs-lookup"><span data-stu-id="c3f9e-158">Bindings</span></span>](../../../../../docs/framework/wcf/bindings.md)  
+ [<span data-ttu-id="c3f9e-159">Configuración de enlaces proporcionados por el sistema</span><span class="sxs-lookup"><span data-stu-id="c3f9e-159">Configuring System-Provided Bindings</span></span>](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
+ [<span data-ttu-id="c3f9e-160">Utilización de enlaces para configurar los clientes y servicios de Windows Communication Foundation</span><span class="sxs-lookup"><span data-stu-id="c3f9e-160">Using Bindings to Configure Windows Communication Foundation Services and Clients</span></span>](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [<span data-ttu-id="c3f9e-161">\<enlace ></span><span class="sxs-lookup"><span data-stu-id="c3f9e-161">\<binding></span></span>](../../../../../docs/framework/misc/binding.md)

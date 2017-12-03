@@ -10,29 +10,29 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: a8b6efce-cf46-485f-9cd6-58126b627032
 caps.latest.revision: "3"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: cc83ff6ec28b5dc72a1ff512736431274d804445
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: d0b8c0553a998b4d4e3027650e029a27a8314724
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
-# <a name="1432---concurrentsessionsratio"></a><span data-ttu-id="58289-102">1432 - ConcurrentSessionsRatio</span><span class="sxs-lookup"><span data-stu-id="58289-102">1432 - ConcurrentSessionsRatio</span></span>
-## <a name="properties"></a><span data-ttu-id="58289-103">Propiedades</span><span class="sxs-lookup"><span data-stu-id="58289-103">Properties</span></span>  
+# <a name="1432---concurrentsessionsratio"></a><span data-ttu-id="162d3-102">1432 - ConcurrentSessionsRatio</span><span class="sxs-lookup"><span data-stu-id="162d3-102">1432 - ConcurrentSessionsRatio</span></span>
+## <a name="properties"></a><span data-ttu-id="162d3-103">Propiedades</span><span class="sxs-lookup"><span data-stu-id="162d3-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="58289-104">Id.</span><span class="sxs-lookup"><span data-stu-id="58289-104">ID</span></span>|<span data-ttu-id="58289-105">1432</span><span class="sxs-lookup"><span data-stu-id="58289-105">1432</span></span>|  
-|<span data-ttu-id="58289-106">Palabras clave</span><span class="sxs-lookup"><span data-stu-id="58289-106">Keywords</span></span>|<span data-ttu-id="58289-107">Cuota</span><span class="sxs-lookup"><span data-stu-id="58289-107">Quota</span></span>|  
-|<span data-ttu-id="58289-108">Nivel</span><span class="sxs-lookup"><span data-stu-id="58289-108">Level</span></span>|<span data-ttu-id="58289-109">Detallado</span><span class="sxs-lookup"><span data-stu-id="58289-109">Verbose</span></span>|  
-|<span data-ttu-id="58289-110">Canal</span><span class="sxs-lookup"><span data-stu-id="58289-110">Channel</span></span>|<span data-ttu-id="58289-111">Microsoft-Windows-Application Server-Applications/Analytic</span><span class="sxs-lookup"><span data-stu-id="58289-111">Microsoft-Windows-Application Server-Applications/Analytic</span></span>|  
+|<span data-ttu-id="162d3-104">Id.</span><span class="sxs-lookup"><span data-stu-id="162d3-104">ID</span></span>|<span data-ttu-id="162d3-105">1432</span><span class="sxs-lookup"><span data-stu-id="162d3-105">1432</span></span>|  
+|<span data-ttu-id="162d3-106">Palabras clave</span><span class="sxs-lookup"><span data-stu-id="162d3-106">Keywords</span></span>|<span data-ttu-id="162d3-107">Cuota</span><span class="sxs-lookup"><span data-stu-id="162d3-107">Quota</span></span>|  
+|<span data-ttu-id="162d3-108">Nivel</span><span class="sxs-lookup"><span data-stu-id="162d3-108">Level</span></span>|<span data-ttu-id="162d3-109">Detallado</span><span class="sxs-lookup"><span data-stu-id="162d3-109">Verbose</span></span>|  
+|<span data-ttu-id="162d3-110">Canal</span><span class="sxs-lookup"><span data-stu-id="162d3-110">Channel</span></span>|<span data-ttu-id="162d3-111">Microsoft-Windows-Application Server-Applications/Analytic</span><span class="sxs-lookup"><span data-stu-id="162d3-111">Microsoft-Windows-Application Server-Applications/Analytic</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="58289-112">Descripción</span><span class="sxs-lookup"><span data-stu-id="58289-112">Description</span></span>  
- <span data-ttu-id="58289-113">Este evento se genera para proporcionar la información de relación de sesiones simultáneas.</span><span class="sxs-lookup"><span data-stu-id="58289-113">This event is emitted to provide the concurrent sessions ratio information.</span></span>  
+## <a name="description"></a><span data-ttu-id="162d3-112">Descripción</span><span class="sxs-lookup"><span data-stu-id="162d3-112">Description</span></span>  
+ <span data-ttu-id="162d3-113">Este evento se genera para proporcionar la información de relación de sesiones simultáneas.</span><span class="sxs-lookup"><span data-stu-id="162d3-113">This event is emitted to provide the concurrent sessions ratio information.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="58289-114">Mensaje</span><span class="sxs-lookup"><span data-stu-id="58289-114">Message</span></span>  
- <span data-ttu-id="58289-115">Proporción de sesiones simultáneas: %1/%2</span><span class="sxs-lookup"><span data-stu-id="58289-115">Concurrent sessions ratio: %1/%2</span></span>  
+## <a name="message"></a><span data-ttu-id="162d3-114">Mensaje</span><span class="sxs-lookup"><span data-stu-id="162d3-114">Message</span></span>  
+ <span data-ttu-id="162d3-115">Proporción de sesiones simultáneas: %1/%2</span><span class="sxs-lookup"><span data-stu-id="162d3-115">Concurrent sessions ratio: %1/%2</span></span>  
   
-## <a name="details"></a><span data-ttu-id="58289-116">Detalles</span><span class="sxs-lookup"><span data-stu-id="58289-116">Details</span></span>
+## <a name="details"></a><span data-ttu-id="162d3-116">Detalles</span><span class="sxs-lookup"><span data-stu-id="162d3-116">Details</span></span>

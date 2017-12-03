@@ -10,29 +10,29 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: def9b441-9bb2-4bc0-a4b3-4db07b80b557
 caps.latest.revision: "3"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 0deb6eb058553051aab5d95164fa3f714ba8e68c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 6d5cffa20d43e326cb765e92c53ee6ffb0f2308c
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
-# <a name="3388---httpgetcontextstart"></a><span data-ttu-id="391b5-102">3388 - HttpGetContextStart</span><span class="sxs-lookup"><span data-stu-id="391b5-102">3388 - HttpGetContextStart</span></span>
-## <a name="properties"></a><span data-ttu-id="391b5-103">Propiedades</span><span class="sxs-lookup"><span data-stu-id="391b5-103">Properties</span></span>  
+# <a name="3388---httpgetcontextstart"></a><span data-ttu-id="f3624-102">3388 - HttpGetContextStart</span><span class="sxs-lookup"><span data-stu-id="f3624-102">3388 - HttpGetContextStart</span></span>
+## <a name="properties"></a><span data-ttu-id="f3624-103">Propiedades</span><span class="sxs-lookup"><span data-stu-id="f3624-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="391b5-104">Id.</span><span class="sxs-lookup"><span data-stu-id="391b5-104">ID</span></span>|<span data-ttu-id="391b5-105">3388</span><span class="sxs-lookup"><span data-stu-id="391b5-105">3388</span></span>|  
-|<span data-ttu-id="391b5-106">Palabras clave</span><span class="sxs-lookup"><span data-stu-id="391b5-106">Keywords</span></span>|<span data-ttu-id="391b5-107">HTTP</span><span class="sxs-lookup"><span data-stu-id="391b5-107">HTTP</span></span>|  
-|<span data-ttu-id="391b5-108">Nivel</span><span class="sxs-lookup"><span data-stu-id="391b5-108">Level</span></span>|<span data-ttu-id="391b5-109">Detallado</span><span class="sxs-lookup"><span data-stu-id="391b5-109">Verbose</span></span>|  
-|<span data-ttu-id="391b5-110">Canal</span><span class="sxs-lookup"><span data-stu-id="391b5-110">Channel</span></span>|<span data-ttu-id="391b5-111">Microsoft-Windows-Application Server-Applications/Analytic</span><span class="sxs-lookup"><span data-stu-id="391b5-111">Microsoft-Windows-Application Server-Applications/Analytic</span></span>|  
+|<span data-ttu-id="f3624-104">Id.</span><span class="sxs-lookup"><span data-stu-id="f3624-104">ID</span></span>|<span data-ttu-id="f3624-105">3388</span><span class="sxs-lookup"><span data-stu-id="f3624-105">3388</span></span>|  
+|<span data-ttu-id="f3624-106">Palabras clave</span><span class="sxs-lookup"><span data-stu-id="f3624-106">Keywords</span></span>|<span data-ttu-id="f3624-107">HTTP</span><span class="sxs-lookup"><span data-stu-id="f3624-107">HTTP</span></span>|  
+|<span data-ttu-id="f3624-108">Nivel</span><span class="sxs-lookup"><span data-stu-id="f3624-108">Level</span></span>|<span data-ttu-id="f3624-109">Detallado</span><span class="sxs-lookup"><span data-stu-id="f3624-109">Verbose</span></span>|  
+|<span data-ttu-id="f3624-110">Canal</span><span class="sxs-lookup"><span data-stu-id="f3624-110">Channel</span></span>|<span data-ttu-id="f3624-111">Microsoft-Windows-Application Server-Applications/Analytic</span><span class="sxs-lookup"><span data-stu-id="f3624-111">Microsoft-Windows-Application Server-Applications/Analytic</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="391b5-112">Descripción</span><span class="sxs-lookup"><span data-stu-id="391b5-112">Description</span></span>  
- <span data-ttu-id="391b5-113">Este evento se genera en el inicio de HttpGetContext.</span><span class="sxs-lookup"><span data-stu-id="391b5-113">This event is emitted on the HttpGetContext start.</span></span>  
+## <a name="description"></a><span data-ttu-id="f3624-112">Descripción</span><span class="sxs-lookup"><span data-stu-id="f3624-112">Description</span></span>  
+ <span data-ttu-id="f3624-113">Este evento se genera en el inicio de HttpGetContext.</span><span class="sxs-lookup"><span data-stu-id="f3624-113">This event is emitted on the HttpGetContext start.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="391b5-114">Mensaje</span><span class="sxs-lookup"><span data-stu-id="391b5-114">Message</span></span>  
- <span data-ttu-id="391b5-115">Inicio de HttpGetContext.</span><span class="sxs-lookup"><span data-stu-id="391b5-115">HttpGetContext start.</span></span>  
+## <a name="message"></a><span data-ttu-id="f3624-114">Mensaje</span><span class="sxs-lookup"><span data-stu-id="f3624-114">Message</span></span>  
+ <span data-ttu-id="f3624-115">Inicio de HttpGetContext.</span><span class="sxs-lookup"><span data-stu-id="f3624-115">HttpGetContext start.</span></span>  
   
-## <a name="details"></a><span data-ttu-id="391b5-116">Detalles</span><span class="sxs-lookup"><span data-stu-id="391b5-116">Details</span></span>
+## <a name="details"></a><span data-ttu-id="f3624-116">Detalles</span><span class="sxs-lookup"><span data-stu-id="f3624-116">Details</span></span>

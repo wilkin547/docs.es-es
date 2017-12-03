@@ -10,20 +10,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: f474e25d-2a27-4f31-84c5-395c442b8e70
 caps.latest.revision: "14"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: bf9b6eed2ce4270c9faecc27cb4626a155eb4a6c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 8e60708ecf5ae7ed15b42e982b9ae40c00d72ecc
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
-# <a name="how-to-create-a-service-endpoint-in-configuration"></a><span data-ttu-id="434c4-102">Cómo crear un punto de conexión de servicio en configuración</span><span class="sxs-lookup"><span data-stu-id="434c4-102">How to: Create a Service Endpoint in Configuration</span></span>
-<span data-ttu-id="434c4-103">Los extremos proporcionan a los clientes acceso a la funcionalidad que ofrece un servicio de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].</span><span class="sxs-lookup"><span data-stu-id="434c4-103">Endpoints provide clients with access to the functionality a [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] service offers.</span></span> <span data-ttu-id="434c4-104">Puede definir uno o más extremos para un servicio usando una combinación de direcciones de extremo relativas y absolutas; si no se define ninguno, el tiempo de ejecución proporciona varios de forma predeterminada.</span><span class="sxs-lookup"><span data-stu-id="434c4-104">You can define one or more endpoints for a service by using a combination of relative and absolute endpoint addresses, or if you do not define any service endpoints, the runtime provides some by default for you.</span></span> <span data-ttu-id="434c4-105">En este tema se muestra cómo agregar extremos mediante un archivo de configuración que contiene tanto direcciones absolutas como relativas.</span><span class="sxs-lookup"><span data-stu-id="434c4-105">This topic shows how to add endpoints using a configuration file that contain both relative and absolute addresses.</span></span>  
+# <a name="how-to-create-a-service-endpoint-in-configuration"></a><span data-ttu-id="3a5af-102">Cómo crear un punto de conexión de servicio en configuración</span><span class="sxs-lookup"><span data-stu-id="3a5af-102">How to: Create a Service Endpoint in Configuration</span></span>
+<span data-ttu-id="3a5af-103">Los extremos proporcionan a los clientes acceso a la funcionalidad que ofrece un servicio de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].</span><span class="sxs-lookup"><span data-stu-id="3a5af-103">Endpoints provide clients with access to the functionality a [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] service offers.</span></span> <span data-ttu-id="3a5af-104">Puede definir uno o más extremos para un servicio usando una combinación de direcciones de extremo relativas y absolutas; si no se define ninguno, el tiempo de ejecución proporciona varios de forma predeterminada.</span><span class="sxs-lookup"><span data-stu-id="3a5af-104">You can define one or more endpoints for a service by using a combination of relative and absolute endpoint addresses, or if you do not define any service endpoints, the runtime provides some by default for you.</span></span> <span data-ttu-id="3a5af-105">En este tema se muestra cómo agregar extremos mediante un archivo de configuración que contiene tanto direcciones absolutas como relativas.</span><span class="sxs-lookup"><span data-stu-id="3a5af-105">This topic shows how to add endpoints using a configuration file that contain both relative and absolute addresses.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="434c4-106">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="434c4-106">Example</span></span>  
- <span data-ttu-id="434c4-107">La siguiente configuración de servicio especifica una dirección base y cinco extremos.</span><span class="sxs-lookup"><span data-stu-id="434c4-107">The following service configuration specifies a base address and five endpoints.</span></span>  
+## <a name="example"></a><span data-ttu-id="3a5af-106">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="3a5af-106">Example</span></span>  
+ <span data-ttu-id="3a5af-107">La siguiente configuración de servicio especifica una dirección base y cinco extremos.</span><span class="sxs-lookup"><span data-stu-id="3a5af-107">The following service configuration specifies a base address and five endpoints.</span></span>  
   
 ```xml  
 <configuration>  
@@ -79,8 +79,8 @@ ms.lasthandoff: 10/18/2017
 </configuration>  
 ```  
   
-## <a name="example"></a><span data-ttu-id="434c4-108">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="434c4-108">Example</span></span>  
- <span data-ttu-id="434c4-109">La dirección base se especifica utilizando el elemento `add`, bajo service/host/baseAddresses, como se muestra en el siguiente ejemplo.</span><span class="sxs-lookup"><span data-stu-id="434c4-109">The base address is specified using the `add` element, under service/host/baseAddresses, as shown in the following sample.</span></span>  
+## <a name="example"></a><span data-ttu-id="3a5af-108">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="3a5af-108">Example</span></span>  
+ <span data-ttu-id="3a5af-109">La dirección base se especifica utilizando el elemento `add`, bajo service/host/baseAddresses, como se muestra en el siguiente ejemplo.</span><span class="sxs-lookup"><span data-stu-id="3a5af-109">The base address is specified using the `add` element, under service/host/baseAddresses, as shown in the following sample.</span></span>  
   
 ```xml  
 <service   
@@ -92,8 +92,8 @@ ms.lasthandoff: 10/18/2017
   </host>  
 ```  
   
-## <a name="example"></a><span data-ttu-id="434c4-110">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="434c4-110">Example</span></span>  
- <span data-ttu-id="434c4-111">La primera definición de extremo mostrada en el siguiente ejemplo especifica una dirección relativa, que significa que la dirección del extremo es una combinación de la dirección base y la dirección relativa siguiendo las reglas de composición de identificadores uniformes de recursos (URI).</span><span class="sxs-lookup"><span data-stu-id="434c4-111">The first endpoint definition shown in the following sample specifies a relative address, which means the endpoint address is a combination of the base address and the relative address following the rules of Uniform Resource Identifier (URI) composition.</span></span> <span data-ttu-id="434c4-112">La dirección relativa está vacía (""), por lo que la dirección del extremo es igual a la dirección base.</span><span class="sxs-lookup"><span data-stu-id="434c4-112">The relative address is empty (""), so the endpoint address is the same as the base address.</span></span> <span data-ttu-id="434c4-113">La dirección del punto de conexión real es http://localhost:8000/servicemodelsamples/service.</span><span class="sxs-lookup"><span data-stu-id="434c4-113">The actual endpoint address is http://localhost:8000/servicemodelsamples/service.</span></span>  
+## <a name="example"></a><span data-ttu-id="3a5af-110">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="3a5af-110">Example</span></span>  
+ <span data-ttu-id="3a5af-111">La primera definición de extremo mostrada en el siguiente ejemplo especifica una dirección relativa, que significa que la dirección del extremo es una combinación de la dirección base y la dirección relativa siguiendo las reglas de composición de identificadores uniformes de recursos (URI).</span><span class="sxs-lookup"><span data-stu-id="3a5af-111">The first endpoint definition shown in the following sample specifies a relative address, which means the endpoint address is a combination of the base address and the relative address following the rules of Uniform Resource Identifier (URI) composition.</span></span> <span data-ttu-id="3a5af-112">La dirección relativa está vacía (""), por lo que la dirección del extremo es igual a la dirección base.</span><span class="sxs-lookup"><span data-stu-id="3a5af-112">The relative address is empty (""), so the endpoint address is the same as the base address.</span></span> <span data-ttu-id="3a5af-113">La dirección del punto de conexión real es http://localhost:8000/servicemodelsamples/service.</span><span class="sxs-lookup"><span data-stu-id="3a5af-113">The actual endpoint address is http://localhost:8000/servicemodelsamples/service.</span></span>  
   
 ```xml  
 <endpoint address=""   
@@ -101,8 +101,8 @@ ms.lasthandoff: 10/18/2017
     contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
-## <a name="example"></a><span data-ttu-id="434c4-114">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="434c4-114">Example</span></span>  
- <span data-ttu-id="434c4-115">La segunda definición de extremo también especifica una dirección relativa, como se muestra en el siguiente ejemplo de configuración.</span><span class="sxs-lookup"><span data-stu-id="434c4-115">The second endpoint definition also specifies a relative address, as shown in the following sample configuration.</span></span> <span data-ttu-id="434c4-116">La dirección relativa, "test", se anexa a la dirección base.</span><span class="sxs-lookup"><span data-stu-id="434c4-116">The relative address, "test", is appended to the base address.</span></span> <span data-ttu-id="434c4-117">La dirección del extremo real es http://localhost:8000/servicemodelsamples/service/test.</span><span class="sxs-lookup"><span data-stu-id="434c4-117">The actual endpoint address is http://localhost:8000/servicemodelsamples/service/test.</span></span>  
+## <a name="example"></a><span data-ttu-id="3a5af-114">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="3a5af-114">Example</span></span>  
+ <span data-ttu-id="3a5af-115">La segunda definición de extremo también especifica una dirección relativa, como se muestra en el siguiente ejemplo de configuración.</span><span class="sxs-lookup"><span data-stu-id="3a5af-115">The second endpoint definition also specifies a relative address, as shown in the following sample configuration.</span></span> <span data-ttu-id="3a5af-116">La dirección relativa, "test", se anexa a la dirección base.</span><span class="sxs-lookup"><span data-stu-id="3a5af-116">The relative address, "test", is appended to the base address.</span></span> <span data-ttu-id="3a5af-117">La dirección del extremo real es http://localhost:8000/servicemodelsamples/service/test.</span><span class="sxs-lookup"><span data-stu-id="3a5af-117">The actual endpoint address is http://localhost:8000/servicemodelsamples/service/test.</span></span>  
   
 ```xml  
 <endpoint address="/test"  
@@ -110,8 +110,8 @@ ms.lasthandoff: 10/18/2017
     contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
-## <a name="example"></a><span data-ttu-id="434c4-118">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="434c4-118">Example</span></span>  
- <span data-ttu-id="434c4-119">La tercera definición de extremo especifica una dirección absoluta, como se muestra en el siguiente ejemplo de configuración.</span><span class="sxs-lookup"><span data-stu-id="434c4-119">The third endpoint definition specifies an absolute address, as shown in the following sample configuration.</span></span> <span data-ttu-id="434c4-120">La dirección base no desempeña ningún papel en la dirección.</span><span class="sxs-lookup"><span data-stu-id="434c4-120">The base address plays no role in the address.</span></span> <span data-ttu-id="434c4-121">La dirección del extremo real es http://localhost:8001/hello/servicemodelsamples.</span><span class="sxs-lookup"><span data-stu-id="434c4-121">The actual endpoint address is http://localhost:8001/hello/servicemodelsamples.</span></span>  
+## <a name="example"></a><span data-ttu-id="3a5af-118">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="3a5af-118">Example</span></span>  
+ <span data-ttu-id="3a5af-119">La tercera definición de extremo especifica una dirección absoluta, como se muestra en el siguiente ejemplo de configuración.</span><span class="sxs-lookup"><span data-stu-id="3a5af-119">The third endpoint definition specifies an absolute address, as shown in the following sample configuration.</span></span> <span data-ttu-id="3a5af-120">La dirección base no desempeña ningún papel en la dirección.</span><span class="sxs-lookup"><span data-stu-id="3a5af-120">The base address plays no role in the address.</span></span> <span data-ttu-id="3a5af-121">La dirección del extremo real es http://localhost:8001/hello/servicemodelsamples.</span><span class="sxs-lookup"><span data-stu-id="3a5af-121">The actual endpoint address is http://localhost:8001/hello/servicemodelsamples.</span></span>  
   
 ```xml  
 <endpoint address="http://localhost:8001/hello/servicemodelsamples"  
@@ -119,8 +119,8 @@ ms.lasthandoff: 10/18/2017
     contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
-## <a name="example"></a><span data-ttu-id="434c4-122">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="434c4-122">Example</span></span>  
- <span data-ttu-id="434c4-123">La cuarta dirección del extremo especifica una dirección absoluta y un TCP de transporte diferente.</span><span class="sxs-lookup"><span data-stu-id="434c4-123">The fourth endpoint address specifies an absolute address and a different transport—TCP.</span></span> <span data-ttu-id="434c4-124">La dirección base no desempeña ningún papel en la dirección.</span><span class="sxs-lookup"><span data-stu-id="434c4-124">The base address plays no role in the address.</span></span> <span data-ttu-id="434c4-125">La dirección del punto de conexión real es net.tcp://localhost:9000/servicemodelsamples/service.</span><span class="sxs-lookup"><span data-stu-id="434c4-125">The actual endpoint address is net.tcp://localhost:9000/servicemodelsamples/service.</span></span>  
+## <a name="example"></a><span data-ttu-id="3a5af-122">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="3a5af-122">Example</span></span>  
+ <span data-ttu-id="3a5af-123">La cuarta dirección del extremo especifica una dirección absoluta y un TCP de transporte diferente.</span><span class="sxs-lookup"><span data-stu-id="3a5af-123">The fourth endpoint address specifies an absolute address and a different transport—TCP.</span></span> <span data-ttu-id="3a5af-124">La dirección base no desempeña ningún papel en la dirección.</span><span class="sxs-lookup"><span data-stu-id="3a5af-124">The base address plays no role in the address.</span></span> <span data-ttu-id="3a5af-125">La dirección del punto de conexión real es net.tcp://localhost:9000/servicemodelsamples/service.</span><span class="sxs-lookup"><span data-stu-id="3a5af-125">The actual endpoint address is net.tcp://localhost:9000/servicemodelsamples/service.</span></span>  
   
 ```xml  
 <endpoint address="net.tcp://localhost:9000/servicemodelsamples/service"  
@@ -128,8 +128,8 @@ ms.lasthandoff: 10/18/2017
     contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
-## <a name="example"></a><span data-ttu-id="434c4-126">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="434c4-126">Example</span></span>  
- <span data-ttu-id="434c4-127">Para usar los puntos de conexión predeterminados proporcionados por el tiempo de ejecución, no especifique ningún punto de conexión de servicio en el código ni en el archivo de configuración.</span><span class="sxs-lookup"><span data-stu-id="434c4-127">To use the default endpoints provided by the runtime, do not specify any service endpoints in either the code or the configuration file.</span></span> <span data-ttu-id="434c4-128">En este ejemplo, el tiempo de ejecución crea los puntos de conexión predeterminados al abrir el servicio.</span><span class="sxs-lookup"><span data-stu-id="434c4-128">In this example, the runtime creates the default endpoints when the service is opened.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="434c4-129">puntos de conexión predeterminados, enlaces y comportamientos, consulte [configuración simplificada](../../../../docs/framework/wcf/simplified-configuration.md) y [configuración simplificada para los servicios WCF](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).</span><span class="sxs-lookup"><span data-stu-id="434c4-129"> default endpoints, bindings, and behaviors, see [Simplified Configuration](../../../../docs/framework/wcf/simplified-configuration.md) and [Simplified Configuration for WCF Services](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).</span></span>  
+## <a name="example"></a><span data-ttu-id="3a5af-126">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="3a5af-126">Example</span></span>  
+ <span data-ttu-id="3a5af-127">Para usar los puntos de conexión predeterminados proporcionados por el tiempo de ejecución, no especifique ningún punto de conexión de servicio en el código ni en el archivo de configuración.</span><span class="sxs-lookup"><span data-stu-id="3a5af-127">To use the default endpoints provided by the runtime, do not specify any service endpoints in either the code or the configuration file.</span></span> <span data-ttu-id="3a5af-128">En este ejemplo, el tiempo de ejecución crea los puntos de conexión predeterminados al abrir el servicio.</span><span class="sxs-lookup"><span data-stu-id="3a5af-128">In this example, the runtime creates the default endpoints when the service is opened.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="3a5af-129">puntos de conexión predeterminados, enlaces y comportamientos, consulte [configuración simplificada](../../../../docs/framework/wcf/simplified-configuration.md) y [configuración simplificada para los servicios WCF](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).</span><span class="sxs-lookup"><span data-stu-id="3a5af-129"> default endpoints, bindings, and behaviors, see [Simplified Configuration](../../../../docs/framework/wcf/simplified-configuration.md) and [Simplified Configuration for WCF Services](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).</span></span>  
   
 ```xml  
 <configuration>  

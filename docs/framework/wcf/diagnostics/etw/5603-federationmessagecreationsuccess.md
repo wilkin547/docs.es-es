@@ -10,29 +10,29 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: b55abdf4-cbe1-401e-b23e-f2bf1bcca719
 caps.latest.revision: "3"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 431b529122f2a4d929c0bf80951662e618774dc5
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: a11d5452b67b0d991288a06ce2ecdedaad400324
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
-# <a name="5603---federationmessagecreationsuccess"></a><span data-ttu-id="e4690-102">5603 - FederationMessageCreationSuccess</span><span class="sxs-lookup"><span data-stu-id="e4690-102">5603 - FederationMessageCreationSuccess</span></span>
-## <a name="properties"></a><span data-ttu-id="e4690-103">Propiedades</span><span class="sxs-lookup"><span data-stu-id="e4690-103">Properties</span></span>  
+# <a name="5603---federationmessagecreationsuccess"></a><span data-ttu-id="b94fb-102">5603 - FederationMessageCreationSuccess</span><span class="sxs-lookup"><span data-stu-id="b94fb-102">5603 - FederationMessageCreationSuccess</span></span>
+## <a name="properties"></a><span data-ttu-id="b94fb-103">Propiedades</span><span class="sxs-lookup"><span data-stu-id="b94fb-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="e4690-104">Id.</span><span class="sxs-lookup"><span data-stu-id="e4690-104">ID</span></span>|<span data-ttu-id="e4690-105">5603</span><span class="sxs-lookup"><span data-stu-id="e4690-105">5603</span></span>|  
-|<span data-ttu-id="e4690-106">Palabras clave</span><span class="sxs-lookup"><span data-stu-id="e4690-106">Keywords</span></span>|<span data-ttu-id="e4690-107">Seguridad</span><span class="sxs-lookup"><span data-stu-id="e4690-107">Security</span></span>|  
-|<span data-ttu-id="e4690-108">Nivel</span><span class="sxs-lookup"><span data-stu-id="e4690-108">Level</span></span>|<span data-ttu-id="e4690-109">Detallado</span><span class="sxs-lookup"><span data-stu-id="e4690-109">Verbose</span></span>|  
-|<span data-ttu-id="e4690-110">Canal</span><span class="sxs-lookup"><span data-stu-id="e4690-110">Channel</span></span>|<span data-ttu-id="e4690-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="e4690-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
+|<span data-ttu-id="b94fb-104">Id.</span><span class="sxs-lookup"><span data-stu-id="b94fb-104">ID</span></span>|<span data-ttu-id="b94fb-105">5603</span><span class="sxs-lookup"><span data-stu-id="b94fb-105">5603</span></span>|  
+|<span data-ttu-id="b94fb-106">Palabras clave</span><span class="sxs-lookup"><span data-stu-id="b94fb-106">Keywords</span></span>|<span data-ttu-id="b94fb-107">Seguridad</span><span class="sxs-lookup"><span data-stu-id="b94fb-107">Security</span></span>|  
+|<span data-ttu-id="b94fb-108">Nivel</span><span class="sxs-lookup"><span data-stu-id="b94fb-108">Level</span></span>|<span data-ttu-id="b94fb-109">Detallado</span><span class="sxs-lookup"><span data-stu-id="b94fb-109">Verbose</span></span>|  
+|<span data-ttu-id="b94fb-110">Canal</span><span class="sxs-lookup"><span data-stu-id="b94fb-110">Channel</span></span>|<span data-ttu-id="b94fb-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="b94fb-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="e4690-112">Descripción</span><span class="sxs-lookup"><span data-stu-id="e4690-112">Description</span></span>  
- <span data-ttu-id="e4690-113">Este evento se genera cuando la creación del mensaje de federación a partir del formulario post se produce correctamente.</span><span class="sxs-lookup"><span data-stu-id="e4690-113">This event is emitted when the creating federation message from form post succeeded.</span></span>  
+## <a name="description"></a><span data-ttu-id="b94fb-112">Descripción</span><span class="sxs-lookup"><span data-stu-id="b94fb-112">Description</span></span>  
+ <span data-ttu-id="b94fb-113">Este evento se genera cuando la creación del mensaje de federación a partir del formulario post se produce correctamente.</span><span class="sxs-lookup"><span data-stu-id="b94fb-113">This event is emitted when the creating federation message from form post succeeded.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="e4690-114">Mensaje</span><span class="sxs-lookup"><span data-stu-id="e4690-114">Message</span></span>  
- <span data-ttu-id="e4690-115">La creación del mensaje de federación a partir del formulario post se realizó correctamente.</span><span class="sxs-lookup"><span data-stu-id="e4690-115">Creating federation message from form post succeeded.</span></span>  
+## <a name="message"></a><span data-ttu-id="b94fb-114">Mensaje</span><span class="sxs-lookup"><span data-stu-id="b94fb-114">Message</span></span>  
+ <span data-ttu-id="b94fb-115">La creación del mensaje de federación a partir del formulario post se realizó correctamente.</span><span class="sxs-lookup"><span data-stu-id="b94fb-115">Creating federation message from form post succeeded.</span></span>  
   
-## <a name="details"></a><span data-ttu-id="e4690-116">Detalles</span><span class="sxs-lookup"><span data-stu-id="e4690-116">Details</span></span>
+## <a name="details"></a><span data-ttu-id="b94fb-116">Detalles</span><span class="sxs-lookup"><span data-stu-id="b94fb-116">Details</span></span>

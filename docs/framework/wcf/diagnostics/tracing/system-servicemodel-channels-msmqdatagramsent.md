@@ -10,22 +10,22 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: eab449e8-e01b-4af8-bd8e-0f3a24689c82
 caps.latest.revision: "4"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 84a25426d29aba83afd84edf6842209b387db5de
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 8c75f4519820b88c7eaa0d2e51787b9581be00b9
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
-# <a name="systemservicemodelchannelsmsmqdatagramsent"></a><span data-ttu-id="bc454-102">System.ServiceModel.Channels.MsmqDatagramSent</span><span class="sxs-lookup"><span data-stu-id="bc454-102">System.ServiceModel.Channels.MsmqDatagramSent</span></span>
-<span data-ttu-id="bc454-103">System.ServiceModel.Channels.MsmqDatagramSent</span><span class="sxs-lookup"><span data-stu-id="bc454-103">System.ServiceModel.Channels.MsmqDatagramSent</span></span>  
+# <a name="systemservicemodelchannelsmsmqdatagramsent"></a><span data-ttu-id="ac0f7-102">System.ServiceModel.Channels.MsmqDatagramSent</span><span class="sxs-lookup"><span data-stu-id="ac0f7-102">System.ServiceModel.Channels.MsmqDatagramSent</span></span>
+<span data-ttu-id="ac0f7-103">System.ServiceModel.Channels.MsmqDatagramSent</span><span class="sxs-lookup"><span data-stu-id="ac0f7-103">System.ServiceModel.Channels.MsmqDatagramSent</span></span>  
   
-## <a name="description"></a><span data-ttu-id="bc454-104">Descripción</span><span class="sxs-lookup"><span data-stu-id="bc454-104">Description</span></span>  
- <span data-ttu-id="bc454-105">Mensaje de datagrama de MSMQ enviado.</span><span class="sxs-lookup"><span data-stu-id="bc454-105">MSMQ datagram message sent.</span></span>  
+## <a name="description"></a><span data-ttu-id="ac0f7-104">Descripción</span><span class="sxs-lookup"><span data-stu-id="ac0f7-104">Description</span></span>  
+ <span data-ttu-id="ac0f7-105">Mensaje de datagrama de MSMQ enviado.</span><span class="sxs-lookup"><span data-stu-id="ac0f7-105">MSMQ datagram message sent.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="bc454-106">Vea también</span><span class="sxs-lookup"><span data-stu-id="bc454-106">See Also</span></span>  
- [<span data-ttu-id="bc454-107">Seguimiento</span><span class="sxs-lookup"><span data-stu-id="bc454-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="bc454-108">Uso del seguimiento para solucionar problemas de la aplicación</span><span class="sxs-lookup"><span data-stu-id="bc454-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="bc454-109">Administración y diagnóstico</span><span class="sxs-lookup"><span data-stu-id="bc454-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="ac0f7-106">Vea también</span><span class="sxs-lookup"><span data-stu-id="ac0f7-106">See Also</span></span>  
+ [<span data-ttu-id="ac0f7-107">Seguimiento</span><span class="sxs-lookup"><span data-stu-id="ac0f7-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="ac0f7-108">Uso del seguimiento para solucionar problemas de la aplicación</span><span class="sxs-lookup"><span data-stu-id="ac0f7-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="ac0f7-109">Administración y diagnóstico</span><span class="sxs-lookup"><span data-stu-id="ac0f7-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

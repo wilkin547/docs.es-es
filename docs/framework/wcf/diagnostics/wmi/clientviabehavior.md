@@ -10,19 +10,19 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 594f6046-4752-4a54-9374-b256f8dd1431
 caps.latest.revision: "7"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: b4112c8d414d60dd90f34c58f63e36e8bdd1709d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: f3ba95d94f720cacbad9733a243f14f00da8e22a
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
-# <a name="clientviabehavior"></a><span data-ttu-id="ce7a1-102">ClientViaBehavior</span><span class="sxs-lookup"><span data-stu-id="ce7a1-102">ClientViaBehavior</span></span>
-<span data-ttu-id="ce7a1-103">ClientViaBehavior</span><span class="sxs-lookup"><span data-stu-id="ce7a1-103">ClientViaBehavior</span></span>  
+# <a name="clientviabehavior"></a><span data-ttu-id="edd7d-102">ClientViaBehavior</span><span class="sxs-lookup"><span data-stu-id="edd7d-102">ClientViaBehavior</span></span>
+<span data-ttu-id="edd7d-103">ClientViaBehavior</span><span class="sxs-lookup"><span data-stu-id="edd7d-103">ClientViaBehavior</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ce7a1-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="ce7a1-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="edd7d-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="edd7d-104">Syntax</span></span>  
   
 ```  
 class ClientViaBehavior : Behavior  
@@ -31,24 +31,24 @@ class ClientViaBehavior : Behavior
 };  
 ```  
   
-## <a name="methods"></a><span data-ttu-id="ce7a1-105">Métodos</span><span class="sxs-lookup"><span data-stu-id="ce7a1-105">Methods</span></span>  
- <span data-ttu-id="ce7a1-106">La clase ClientViaBehavior no define ningún método.</span><span class="sxs-lookup"><span data-stu-id="ce7a1-106">The ClientViaBehavior class does not define any methods.</span></span>  
+## <a name="methods"></a><span data-ttu-id="edd7d-105">Métodos</span><span class="sxs-lookup"><span data-stu-id="edd7d-105">Methods</span></span>  
+ <span data-ttu-id="edd7d-106">La clase ClientViaBehavior no define ningún método.</span><span class="sxs-lookup"><span data-stu-id="edd7d-106">The ClientViaBehavior class does not define any methods.</span></span>  
   
-## <a name="properties"></a><span data-ttu-id="ce7a1-107">Propiedades</span><span class="sxs-lookup"><span data-stu-id="ce7a1-107">Properties</span></span>  
- <span data-ttu-id="ce7a1-108">La clase ClientViaBehavior tiene la propiedad siguiente:</span><span class="sxs-lookup"><span data-stu-id="ce7a1-108">The ClientViaBehavior class has the following property:</span></span>  
+## <a name="properties"></a><span data-ttu-id="edd7d-107">Propiedades</span><span class="sxs-lookup"><span data-stu-id="edd7d-107">Properties</span></span>  
+ <span data-ttu-id="edd7d-108">La clase ClientViaBehavior tiene la propiedad siguiente:</span><span class="sxs-lookup"><span data-stu-id="edd7d-108">The ClientViaBehavior class has the following property:</span></span>  
   
-### <a name="uri"></a><span data-ttu-id="ce7a1-109">Uri</span><span class="sxs-lookup"><span data-stu-id="ce7a1-109">Uri</span></span>  
- <span data-ttu-id="ce7a1-110">Tipo de datos: cadena</span><span class="sxs-lookup"><span data-stu-id="ce7a1-110">Data type: string</span></span>  
+### <a name="uri"></a><span data-ttu-id="edd7d-109">Uri</span><span class="sxs-lookup"><span data-stu-id="edd7d-109">Uri</span></span>  
+ <span data-ttu-id="edd7d-110">Tipo de datos: cadena</span><span class="sxs-lookup"><span data-stu-id="edd7d-110">Data type: string</span></span>  
   
- <span data-ttu-id="ce7a1-111">Tipo de acceso: solo lectura</span><span class="sxs-lookup"><span data-stu-id="ce7a1-111">Access type: Read-only</span></span>  
+ <span data-ttu-id="edd7d-111">Tipo de acceso: solo lectura</span><span class="sxs-lookup"><span data-stu-id="edd7d-111">Access type: Read-only</span></span>  
   
- <span data-ttu-id="ce7a1-112">ViaUri.</span><span class="sxs-lookup"><span data-stu-id="ce7a1-112">The ViaUri.</span></span>  
+ <span data-ttu-id="edd7d-112">ViaUri.</span><span class="sxs-lookup"><span data-stu-id="edd7d-112">The ViaUri.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ce7a1-113">Requisitos</span><span class="sxs-lookup"><span data-stu-id="ce7a1-113">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="edd7d-113">Requisitos</span><span class="sxs-lookup"><span data-stu-id="edd7d-113">Requirements</span></span>  
   
-|<span data-ttu-id="ce7a1-114">MOF</span><span class="sxs-lookup"><span data-stu-id="ce7a1-114">MOF</span></span>|<span data-ttu-id="ce7a1-115">Se declara en Servicemodel.mof.</span><span class="sxs-lookup"><span data-stu-id="ce7a1-115">Declared in Servicemodel.mof.</span></span>|  
+|<span data-ttu-id="edd7d-114">MOF</span><span class="sxs-lookup"><span data-stu-id="edd7d-114">MOF</span></span>|<span data-ttu-id="edd7d-115">Se declara en Servicemodel.mof.</span><span class="sxs-lookup"><span data-stu-id="edd7d-115">Declared in Servicemodel.mof.</span></span>|  
 |---------|-----------------------------------|  
-|<span data-ttu-id="ce7a1-116">Espacio de nombres</span><span class="sxs-lookup"><span data-stu-id="ce7a1-116">Namespace</span></span>|<span data-ttu-id="ce7a1-117">Se define en root\ServiceModel</span><span class="sxs-lookup"><span data-stu-id="ce7a1-117">Defined in root\ServiceModel</span></span>|  
+|<span data-ttu-id="edd7d-116">Espacio de nombres</span><span class="sxs-lookup"><span data-stu-id="edd7d-116">Namespace</span></span>|<span data-ttu-id="edd7d-117">Se define en root\ServiceModel</span><span class="sxs-lookup"><span data-stu-id="edd7d-117">Defined in root\ServiceModel</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="ce7a1-118">Vea también</span><span class="sxs-lookup"><span data-stu-id="ce7a1-118">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="edd7d-118">Vea también</span><span class="sxs-lookup"><span data-stu-id="edd7d-118">See Also</span></span>  
  <xref:System.ServiceModel.Description.ClientViaBehavior>

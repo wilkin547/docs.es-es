@@ -13,22 +13,22 @@ dev_langs:
 - vb
 ms.assetid: df5b32fa-e73b-4e8e-b66f-357c748e0173
 caps.latest.revision: "7"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 6f16f32128c7223fa600802ae593d36286847dc8
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: c63a91683817311b8d644eb4285101e32eaea7f1
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
-# <a name="configuring-client-behaviors"></a><span data-ttu-id="80915-102">Configuración de los comportamientos del cliente</span><span class="sxs-lookup"><span data-stu-id="80915-102">Configuring Client Behaviors</span></span>
-[!INCLUDE[indigo1](../../../includes/indigo1-md.md)]<span data-ttu-id="80915-103"> configura los comportamientos de dos maneras: haciendo referencia a las configuraciones de comportamiento (que se definen en la sección `<behavior>` de un archivo de configuración de la aplicación cliente) o mediante programación, en la aplicación que realiza la llamada.</span><span class="sxs-lookup"><span data-stu-id="80915-103"> configures behaviors in two ways: either by referring to behavior configurations -- which are defined in the `<behavior>` section of a client application configuration file – or programmatically in the calling application.</span></span> <span data-ttu-id="80915-104">En este tema se describen ambos métodos.</span><span class="sxs-lookup"><span data-stu-id="80915-104">This topic describes both approaches.</span></span>  
+# <a name="configuring-client-behaviors"></a><span data-ttu-id="5704b-102">Configuración de los comportamientos del cliente</span><span class="sxs-lookup"><span data-stu-id="5704b-102">Configuring Client Behaviors</span></span>
+[!INCLUDE[indigo1](../../../includes/indigo1-md.md)]<span data-ttu-id="5704b-103"> configura los comportamientos de dos maneras: haciendo referencia a las configuraciones de comportamiento (que se definen en la sección `<behavior>` de un archivo de configuración de la aplicación cliente) o mediante programación, en la aplicación que realiza la llamada.</span><span class="sxs-lookup"><span data-stu-id="5704b-103"> configures behaviors in two ways: either by referring to behavior configurations -- which are defined in the `<behavior>` section of a client application configuration file – or programmatically in the calling application.</span></span> <span data-ttu-id="5704b-104">En este tema se describen ambos métodos.</span><span class="sxs-lookup"><span data-stu-id="5704b-104">This topic describes both approaches.</span></span>  
   
- <span data-ttu-id="80915-105">Al usar un archivo de configuración, la configuración del comportamiento es una colección con nombre de valores de configuración.</span><span class="sxs-lookup"><span data-stu-id="80915-105">When using a configuration file, behavior configuration is a named collection of configuration settings.</span></span> <span data-ttu-id="80915-106">El nombre de cada configuración de comportamiento debe ser único.</span><span class="sxs-lookup"><span data-stu-id="80915-106">The name of each behavior configuration must be unique.</span></span> <span data-ttu-id="80915-107">Esta cadena se usa en el atributo `behaviorConfiguration` de una configuración de extremo para vincular el extremo al comportamiento.</span><span class="sxs-lookup"><span data-stu-id="80915-107">This string is used in the `behaviorConfiguration` attribute of an endpoint configuration to link the endpoint to the behavior.</span></span>  
+ <span data-ttu-id="5704b-105">Al usar un archivo de configuración, la configuración del comportamiento es una colección con nombre de valores de configuración.</span><span class="sxs-lookup"><span data-stu-id="5704b-105">When using a configuration file, behavior configuration is a named collection of configuration settings.</span></span> <span data-ttu-id="5704b-106">El nombre de cada configuración de comportamiento debe ser único.</span><span class="sxs-lookup"><span data-stu-id="5704b-106">The name of each behavior configuration must be unique.</span></span> <span data-ttu-id="5704b-107">Esta cadena se usa en el atributo `behaviorConfiguration` de una configuración de extremo para vincular el extremo al comportamiento.</span><span class="sxs-lookup"><span data-stu-id="5704b-107">This string is used in the `behaviorConfiguration` attribute of an endpoint configuration to link the endpoint to the behavior.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="80915-108">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="80915-108">Example</span></span>  
- <span data-ttu-id="80915-109">El código de configuración siguiente define un comportamiento llamado `myBehavior`.</span><span class="sxs-lookup"><span data-stu-id="80915-109">The following configuration code defines a behavior called `myBehavior`.</span></span> <span data-ttu-id="80915-110">El extremo de cliente hace referencia a este comportamiento en el atributo `behaviorConfiguration`.</span><span class="sxs-lookup"><span data-stu-id="80915-110">The client endpoint references this behavior in the `behaviorConfiguration` attribute.</span></span>  
+## <a name="example"></a><span data-ttu-id="5704b-108">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="5704b-108">Example</span></span>  
+ <span data-ttu-id="5704b-109">El código de configuración siguiente define un comportamiento llamado `myBehavior`.</span><span class="sxs-lookup"><span data-stu-id="5704b-109">The following configuration code defines a behavior called `myBehavior`.</span></span> <span data-ttu-id="5704b-110">El extremo de cliente hace referencia a este comportamiento en el atributo `behaviorConfiguration`.</span><span class="sxs-lookup"><span data-stu-id="5704b-110">The client endpoint references this behavior in the `behaviorConfiguration` attribute.</span></span>  
   
 ```xml  
 <configuration>  
@@ -52,14 +52,14 @@ ms.lasthandoff: 10/18/2017
 </configuration>  
 ```  
   
-## <a name="using-behaviors-programmatically"></a><span data-ttu-id="80915-111">Uso de comportamientos mediante programación</span><span class="sxs-lookup"><span data-stu-id="80915-111">Using Behaviors Programmatically</span></span>  
- <span data-ttu-id="80915-112">También puede configurar o insertar los comportamientos mediante programación buscando la propiedad `Behaviors` adecuada en el objeto de cliente [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] o en el objeto de generador de canal de cliente antes de abrir el cliente.</span><span class="sxs-lookup"><span data-stu-id="80915-112">You can also configure or insert behaviors programmatically by locating the appropriate `Behaviors` property on the [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] client object or on the client channel factory object prior to opening the client.</span></span>  
+## <a name="using-behaviors-programmatically"></a><span data-ttu-id="5704b-111">Uso de comportamientos mediante programación</span><span class="sxs-lookup"><span data-stu-id="5704b-111">Using Behaviors Programmatically</span></span>  
+ <span data-ttu-id="5704b-112">También puede configurar o insertar los comportamientos mediante programación buscando la propiedad `Behaviors` adecuada en el objeto de cliente [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] o en el objeto de generador de canal de cliente antes de abrir el cliente.</span><span class="sxs-lookup"><span data-stu-id="5704b-112">You can also configure or insert behaviors programmatically by locating the appropriate `Behaviors` property on the [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] client object or on the client channel factory object prior to opening the client.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="80915-113">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="80915-113">Example</span></span>  
- <span data-ttu-id="80915-114">En el ejemplo de código siguiente se muestra cómo insertar un comportamiento mediante programación teniendo acceso a la propiedad <xref:System.ServiceModel.Description.ServiceEndpoint.Behaviors%2A> en el <xref:System.ServiceModel.Description.ServiceEndpoint> devuelto por la propiedad <xref:System.ServiceModel.ChannelFactory.Endpoint%2A> antes de la creación del objeto del canal.</span><span class="sxs-lookup"><span data-stu-id="80915-114">The following code example shows how to programmatically insert a behavior by accessing the <xref:System.ServiceModel.Description.ServiceEndpoint.Behaviors%2A> property on the <xref:System.ServiceModel.Description.ServiceEndpoint> returned from the <xref:System.ServiceModel.ChannelFactory.Endpoint%2A> property prior to the creation of the channel object.</span></span>  
+## <a name="example"></a><span data-ttu-id="5704b-113">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="5704b-113">Example</span></span>  
+ <span data-ttu-id="5704b-114">En el ejemplo de código siguiente se muestra cómo insertar un comportamiento mediante programación teniendo acceso a la propiedad <xref:System.ServiceModel.Description.ServiceEndpoint.Behaviors%2A> en el <xref:System.ServiceModel.Description.ServiceEndpoint> devuelto por la propiedad <xref:System.ServiceModel.ChannelFactory.Endpoint%2A> antes de la creación del objeto del canal.</span><span class="sxs-lookup"><span data-stu-id="5704b-114">The following code example shows how to programmatically insert a behavior by accessing the <xref:System.ServiceModel.Description.ServiceEndpoint.Behaviors%2A> property on the <xref:System.ServiceModel.Description.ServiceEndpoint> returned from the <xref:System.ServiceModel.ChannelFactory.Endpoint%2A> property prior to the creation of the channel object.</span></span>  
   
  [!code-csharp[ChannelFactoryBehaviors#10](../../../samples/snippets/csharp/VS_Snippets_CFX/channelfactorybehaviors/cs/client.cs#10)]
  [!code-vb[ChannelFactoryBehaviors#10](../../../samples/snippets/visualbasic/VS_Snippets_CFX/channelfactorybehaviors/vb/client.vb#10)]  
   
-## <a name="see-also"></a><span data-ttu-id="80915-115">Vea también</span><span class="sxs-lookup"><span data-stu-id="80915-115">See Also</span></span>  
- [<span data-ttu-id="80915-116">\<comportamientos ></span><span class="sxs-lookup"><span data-stu-id="80915-116">\<behaviors></span></span>](../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)
+## <a name="see-also"></a><span data-ttu-id="5704b-115">Vea también</span><span class="sxs-lookup"><span data-stu-id="5704b-115">See Also</span></span>  
+ [<span data-ttu-id="5704b-116">\<comportamientos ></span><span class="sxs-lookup"><span data-stu-id="5704b-116">\<behaviors></span></span>](../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)

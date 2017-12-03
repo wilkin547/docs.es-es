@@ -12,26 +12,26 @@ api_location: Microsoft.VisualStudio.Activities.dll
 api_type: Assembly
 ms.assetid: d83033b0-a4cb-4d40-835e-5c1a176cde5b
 caps.latest.revision: "4"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 8f52dad6149df78cacb77d0d18ba044aee573563
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 21e3ed09e590a5c01e5e9ca4c9f763a24df0c8df
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
-# <a name="microsoftvisualstudioactivitiesasrclientactivitybuilderbuild"></a><span data-ttu-id="21edb-102">Microsoft.VisualStudio.Activities.Asr.ClientActivityBuilder.Build</span><span class="sxs-lookup"><span data-stu-id="21edb-102">Microsoft.VisualStudio.Activities.Asr.ClientActivityBuilder.Build</span></span>
-<span data-ttu-id="21edb-103">Crea y configura un objeto <xref:System.Activities.ActivityBuilder> que proporciona los datos de una actividad de flujo de trabajo.</span><span class="sxs-lookup"><span data-stu-id="21edb-103">Creates and configures a <xref:System.Activities.ActivityBuilder> object that provides data for a workflow activity.</span></span>  
+# <a name="microsoftvisualstudioactivitiesasrclientactivitybuilderbuild"></a><span data-ttu-id="06653-102">Microsoft.VisualStudio.Activities.Asr.ClientActivityBuilder.Build</span><span class="sxs-lookup"><span data-stu-id="06653-102">Microsoft.VisualStudio.Activities.Asr.ClientActivityBuilder.Build</span></span>
+<span data-ttu-id="06653-103">Crea y configura un objeto <xref:System.Activities.ActivityBuilder> que proporciona los datos de una actividad de flujo de trabajo.</span><span class="sxs-lookup"><span data-stu-id="06653-103">Creates and configures a <xref:System.Activities.ActivityBuilder> object that provides data for a workflow activity.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="21edb-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="21edb-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="06653-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="06653-104">Syntax</span></span>  
   
 ```csharp  
 public ActivityBuilder Build();   
 ```  
   
-## <a name="return-value"></a><span data-ttu-id="21edb-105">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="21edb-105">Return Value</span></span>  
- <span data-ttu-id="21edb-106">Devuelve un objeto <xref:System.Activities.ActivityBuilder>.</span><span class="sxs-lookup"><span data-stu-id="21edb-106">Returns a <xref:System.Activities.ActivityBuilder> object.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="06653-105">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="06653-105">Return Value</span></span>  
+ <span data-ttu-id="06653-106">Devuelve un objeto <xref:System.Activities.ActivityBuilder>.</span><span class="sxs-lookup"><span data-stu-id="06653-106">Returns a <xref:System.Activities.ActivityBuilder> object.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="21edb-107">Vea también</span><span class="sxs-lookup"><span data-stu-id="21edb-107">See Also</span></span>  
- [<span data-ttu-id="21edb-108">Microsoft.VisualStudio.Activities.Asr.ClientActivityBuilder</span><span class="sxs-lookup"><span data-stu-id="21edb-108">Microsoft.VisualStudio.Activities.Asr.ClientActivityBuilder</span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/microsoft-visualstudio-activities-asr-clientactivitybuilder.md)
+## <a name="see-also"></a><span data-ttu-id="06653-107">Vea también</span><span class="sxs-lookup"><span data-stu-id="06653-107">See Also</span></span>  
+ [<span data-ttu-id="06653-108">Microsoft.VisualStudio.Activities.Asr.ClientActivityBuilder</span><span class="sxs-lookup"><span data-stu-id="06653-108">Microsoft.VisualStudio.Activities.Asr.ClientActivityBuilder</span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/microsoft-visualstudio-activities-asr-clientactivitybuilder.md)

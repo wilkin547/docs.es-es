@@ -10,19 +10,19 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 0a9c8674-29f7-4f14-aa1f-dc2644ca57e4
 caps.latest.revision: "7"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 2eb7be7fb1acbfb9ccd46aee341e001156795ebc
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: e33bd0e5e399b2c531503986582bd155cd2cf08f
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
-# <a name="transactionflowattribute"></a><span data-ttu-id="f57bc-102">TransactionFlowAttribute</span><span class="sxs-lookup"><span data-stu-id="f57bc-102">TransactionFlowAttribute</span></span>
-<span data-ttu-id="f57bc-103">TransactionFlowAttribute</span><span class="sxs-lookup"><span data-stu-id="f57bc-103">TransactionFlowAttribute</span></span>  
+# <a name="transactionflowattribute"></a><span data-ttu-id="54945-102">TransactionFlowAttribute</span><span class="sxs-lookup"><span data-stu-id="54945-102">TransactionFlowAttribute</span></span>
+<span data-ttu-id="54945-103">TransactionFlowAttribute</span><span class="sxs-lookup"><span data-stu-id="54945-103">TransactionFlowAttribute</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f57bc-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="f57bc-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="54945-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="54945-104">Syntax</span></span>  
   
 ```  
 class TransactionFlowAttribute : Behavior  
@@ -31,24 +31,24 @@ class TransactionFlowAttribute : Behavior
 };  
 ```  
   
-## <a name="methods"></a><span data-ttu-id="f57bc-105">Métodos</span><span class="sxs-lookup"><span data-stu-id="f57bc-105">Methods</span></span>  
- <span data-ttu-id="f57bc-106">La clase TransactionFlowAttribute no define ningún método.</span><span class="sxs-lookup"><span data-stu-id="f57bc-106">The TransactionFlowAttribute class does not define any methods.</span></span>  
+## <a name="methods"></a><span data-ttu-id="54945-105">Métodos</span><span class="sxs-lookup"><span data-stu-id="54945-105">Methods</span></span>  
+ <span data-ttu-id="54945-106">La clase TransactionFlowAttribute no define ningún método.</span><span class="sxs-lookup"><span data-stu-id="54945-106">The TransactionFlowAttribute class does not define any methods.</span></span>  
   
-## <a name="properties"></a><span data-ttu-id="f57bc-107">Propiedades</span><span class="sxs-lookup"><span data-stu-id="f57bc-107">Properties</span></span>  
- <span data-ttu-id="f57bc-108">La clase TransactionFlowAttribute tiene la propiedad siguiente:</span><span class="sxs-lookup"><span data-stu-id="f57bc-108">The TransactionFlowAttribute class has the following property:</span></span>  
+## <a name="properties"></a><span data-ttu-id="54945-107">Propiedades</span><span class="sxs-lookup"><span data-stu-id="54945-107">Properties</span></span>  
+ <span data-ttu-id="54945-108">La clase TransactionFlowAttribute tiene la propiedad siguiente:</span><span class="sxs-lookup"><span data-stu-id="54945-108">The TransactionFlowAttribute class has the following property:</span></span>  
   
-### <a name="transactionflowoption"></a><span data-ttu-id="f57bc-109">TransactionFlowOption</span><span class="sxs-lookup"><span data-stu-id="f57bc-109">TransactionFlowOption</span></span>  
- <span data-ttu-id="f57bc-110">Tipo de datos: cadena</span><span class="sxs-lookup"><span data-stu-id="f57bc-110">Data type: string</span></span>  
+### <a name="transactionflowoption"></a><span data-ttu-id="54945-109">TransactionFlowOption</span><span class="sxs-lookup"><span data-stu-id="54945-109">TransactionFlowOption</span></span>  
+ <span data-ttu-id="54945-110">Tipo de datos: cadena</span><span class="sxs-lookup"><span data-stu-id="54945-110">Data type: string</span></span>  
   
- <span data-ttu-id="f57bc-111">Tipo de acceso: solo lectura</span><span class="sxs-lookup"><span data-stu-id="f57bc-111">Access type: Read-only</span></span>  
+ <span data-ttu-id="54945-111">Tipo de acceso: solo lectura</span><span class="sxs-lookup"><span data-stu-id="54945-111">Access type: Read-only</span></span>  
   
- <span data-ttu-id="f57bc-112">Indica si las transacciones fluyen.</span><span class="sxs-lookup"><span data-stu-id="f57bc-112">Indicates whether transactions flow.</span></span>  
+ <span data-ttu-id="54945-112">Indica si las transacciones fluyen.</span><span class="sxs-lookup"><span data-stu-id="54945-112">Indicates whether transactions flow.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="f57bc-113">Requisitos</span><span class="sxs-lookup"><span data-stu-id="f57bc-113">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="54945-113">Requisitos</span><span class="sxs-lookup"><span data-stu-id="54945-113">Requirements</span></span>  
   
-|<span data-ttu-id="f57bc-114">MOF</span><span class="sxs-lookup"><span data-stu-id="f57bc-114">MOF</span></span>|<span data-ttu-id="f57bc-115">Se declara en Servicemodel.mof.</span><span class="sxs-lookup"><span data-stu-id="f57bc-115">Declared in Servicemodel.mof.</span></span>|  
+|<span data-ttu-id="54945-114">MOF</span><span class="sxs-lookup"><span data-stu-id="54945-114">MOF</span></span>|<span data-ttu-id="54945-115">Se declara en Servicemodel.mof.</span><span class="sxs-lookup"><span data-stu-id="54945-115">Declared in Servicemodel.mof.</span></span>|  
 |---------|-----------------------------------|  
-|<span data-ttu-id="f57bc-116">Espacio de nombres</span><span class="sxs-lookup"><span data-stu-id="f57bc-116">Namespace</span></span>|<span data-ttu-id="f57bc-117">Se define en root\ServiceModel</span><span class="sxs-lookup"><span data-stu-id="f57bc-117">Defined in root\ServiceModel</span></span>|  
+|<span data-ttu-id="54945-116">Espacio de nombres</span><span class="sxs-lookup"><span data-stu-id="54945-116">Namespace</span></span>|<span data-ttu-id="54945-117">Se define en root\ServiceModel</span><span class="sxs-lookup"><span data-stu-id="54945-117">Defined in root\ServiceModel</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="f57bc-118">Vea también</span><span class="sxs-lookup"><span data-stu-id="f57bc-118">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="54945-118">Vea también</span><span class="sxs-lookup"><span data-stu-id="54945-118">See Also</span></span>  
  <xref:System.ServiceModel.TransactionFlowAttribute>
