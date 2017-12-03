@@ -9,36 +9,36 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: cb678fda-79aa-4495-833b-ef570539d4c3
 caps.latest.revision: "5"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 622e164f70efd3051fbb54f413d5cfead1dd94d3
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 91ef5c2c0d581575f60456e19920185a285cab07
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
-# <a name="scenario"></a><span data-ttu-id="de94b-102">Escenario</span><span class="sxs-lookup"><span data-stu-id="de94b-102">Scenario</span></span>
-<span data-ttu-id="de94b-103">Esta sección contiene ejemplos de escenarios [!INCLUDE[wf](../../../../includes/wf-md.md)].</span><span class="sxs-lookup"><span data-stu-id="de94b-103">This section contains examples of [!INCLUDE[wf](../../../../includes/wf-md.md)] scenarios.</span></span>  
+# <a name="scenario"></a><span data-ttu-id="e7e97-102">Escenario</span><span class="sxs-lookup"><span data-stu-id="e7e97-102">Scenario</span></span>
+<span data-ttu-id="e7e97-103">Esta sección contiene ejemplos de escenarios [!INCLUDE[wf](../../../../includes/wf-md.md)].</span><span class="sxs-lookup"><span data-stu-id="e7e97-103">This section contains examples of [!INCLUDE[wf](../../../../includes/wf-md.md)] scenarios.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="de94b-104">En esta sección</span><span class="sxs-lookup"><span data-stu-id="de94b-104">In This Section</span></span>  
- [<span data-ttu-id="de94b-105">Biblioteca de actividades</span><span class="sxs-lookup"><span data-stu-id="de94b-105">Activity Library</span></span>](../../../../docs/framework/windows-workflow-foundation/samples/activity-library.md)  
- <span data-ttu-id="de94b-106">Contiene ejemplos que muestran escenarios mediante la biblioteca de actividades integrada.</span><span class="sxs-lookup"><span data-stu-id="de94b-106">Contains samples that demonstrate scenarios using the built-in activity library.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="e7e97-104">En esta sección</span><span class="sxs-lookup"><span data-stu-id="e7e97-104">In This Section</span></span>  
+ [<span data-ttu-id="e7e97-105">Biblioteca de actividades</span><span class="sxs-lookup"><span data-stu-id="e7e97-105">Activity Library</span></span>](../../../../docs/framework/windows-workflow-foundation/samples/activity-library.md)  
+ <span data-ttu-id="e7e97-106">Contiene ejemplos que muestran escenarios mediante la biblioteca de actividades integrada.</span><span class="sxs-lookup"><span data-stu-id="e7e97-106">Contains samples that demonstrate scenarios using the built-in activity library.</span></span>  
   
- [<span data-ttu-id="de94b-107">Servicios de</span><span class="sxs-lookup"><span data-stu-id="de94b-107">Services</span></span>](../../../../docs/framework/windows-workflow-foundation/samples/services.md)  
- <span data-ttu-id="de94b-108">Contiene ejemplos que muestran escenarios mediante servicios de flujo de trabajo.</span><span class="sxs-lookup"><span data-stu-id="de94b-108">Contains samples that demonstrate scenarios using workflow services.</span></span>  
+ [<span data-ttu-id="e7e97-107">Servicios de</span><span class="sxs-lookup"><span data-stu-id="e7e97-107">Services</span></span>](../../../../docs/framework/windows-workflow-foundation/samples/services.md)  
+ <span data-ttu-id="e7e97-108">Contiene ejemplos que muestran escenarios mediante servicios de flujo de trabajo.</span><span class="sxs-lookup"><span data-stu-id="e7e97-108">Contains samples that demonstrate scenarios using workflow services.</span></span>  
   
- [<span data-ttu-id="de94b-109">Transacciones</span><span class="sxs-lookup"><span data-stu-id="de94b-109">Transactions</span></span>](../../../../docs/framework/windows-workflow-foundation/samples/transactions.md)  
- <span data-ttu-id="de94b-110">Contiene ejemplos que muestran escenarios mediante transacciones.</span><span class="sxs-lookup"><span data-stu-id="de94b-110">Contains samples that demonstrate scenarios using transactions.</span></span>  
+ [<span data-ttu-id="e7e97-109">Transacciones</span><span class="sxs-lookup"><span data-stu-id="e7e97-109">Transactions</span></span>](../../../../docs/framework/windows-workflow-foundation/samples/transactions.md)  
+ <span data-ttu-id="e7e97-110">Contiene ejemplos que muestran escenarios mediante transacciones.</span><span class="sxs-lookup"><span data-stu-id="e7e97-110">Contains samples that demonstrate scenarios using transactions.</span></span>  
   
- [<span data-ttu-id="de94b-111">Patrón de Autoconfirmación</span><span class="sxs-lookup"><span data-stu-id="de94b-111">Auto-Confirm Pattern</span></span>](../../../../docs/framework/windows-workflow-foundation/samples/auto-confirm-pattern.md)  
- <span data-ttu-id="de94b-112">Está compuesto de tres escenarios que se ejecutan y muestran una actividad `AutoConfirmScope` personalizada.</span><span class="sxs-lookup"><span data-stu-id="de94b-112">Consists of three scenarios that run illustrating a custom `AutoConfirmScope` activity.</span></span>  
+ [<span data-ttu-id="e7e97-111">Patrón de Autoconfirmación</span><span class="sxs-lookup"><span data-stu-id="e7e97-111">Auto-Confirm Pattern</span></span>](../../../../docs/framework/windows-workflow-foundation/samples/auto-confirm-pattern.md)  
+ <span data-ttu-id="e7e97-112">Está compuesto de tres escenarios que se ejecutan y muestran una actividad `AutoConfirmScope` personalizada.</span><span class="sxs-lookup"><span data-stu-id="e7e97-112">Consists of three scenarios that run illustrating a custom `AutoConfirmScope` activity.</span></span>  
   
- [<span data-ttu-id="de94b-113">Escenario StateMachine utilizando una combinación de actividades FlowChart y Pick</span><span class="sxs-lookup"><span data-stu-id="de94b-113">StateMachine Scenario Using a Combination of FlowChart and Pick</span></span>](../../../../docs/framework/windows-workflow-foundation/samples/statemachine-scenario-using-a-combination-of-flowchart-and-pick.md)  
- <span data-ttu-id="de94b-114">Muestra cómo implementar un escenario de cronómetro simple mediante una combinación de actividades <xref:System.Activities.Statements.Flowchart> y <xref:System.Activities.Statements.Pick>.</span><span class="sxs-lookup"><span data-stu-id="de94b-114">Demonstrates how to implement a simple stopwatch scenario using a combination of the <xref:System.Activities.Statements.Flowchart> and <xref:System.Activities.Statements.Pick> activities.</span></span>  
+ [<span data-ttu-id="e7e97-113">Escenario StateMachine utilizando una combinación de actividades FlowChart y Pick</span><span class="sxs-lookup"><span data-stu-id="e7e97-113">StateMachine Scenario Using a Combination of FlowChart and Pick</span></span>](../../../../docs/framework/windows-workflow-foundation/samples/statemachine-scenario-using-a-combination-of-flowchart-and-pick.md)  
+ <span data-ttu-id="e7e97-114">Muestra cómo implementar un escenario de cronómetro simple mediante una combinación de actividades <xref:System.Activities.Statements.Flowchart> y <xref:System.Activities.Statements.Pick>.</span><span class="sxs-lookup"><span data-stu-id="e7e97-114">Demonstrates how to implement a simple stopwatch scenario using a combination of the <xref:System.Activities.Statements.Flowchart> and <xref:System.Activities.Statements.Pick> activities.</span></span>  
   
- [<span data-ttu-id="de94b-115">Integración de WF en XAML y WPF</span><span class="sxs-lookup"><span data-stu-id="de94b-115">WPF and WF Integration in XAML</span></span>](../../../../docs/framework/windows-workflow-foundation/samples/wpf-and-wf-integration-in-xaml.md)  
- <span data-ttu-id="de94b-116">Muestra cómo crear una aplicación que utiliza características [!INCLUDE[avalon1](../../../../includes/avalon1-md.md)] y [!INCLUDE[wf](../../../../includes/wf-md.md)] en un documento XAML único.</span><span class="sxs-lookup"><span data-stu-id="de94b-116">Demonstrates how to create an application that uses [!INCLUDE[avalon1](../../../../includes/avalon1-md.md)] and [!INCLUDE[wf](../../../../includes/wf-md.md)] features in a single XAML document.</span></span> <span data-ttu-id="de94b-117">Para lograr esto, el ejemplo utiliza [!INCLUDE[wf](../../../../includes/wf-md.md)] y extensibilidad de XAML.</span><span class="sxs-lookup"><span data-stu-id="de94b-117">To accomplish this, the sample uses [!INCLUDE[wf](../../../../includes/wf-md.md)] and XAML extensibility.</span></span>  
+ [<span data-ttu-id="e7e97-115">Integración de WF en XAML y WPF</span><span class="sxs-lookup"><span data-stu-id="e7e97-115">WPF and WF Integration in XAML</span></span>](../../../../docs/framework/windows-workflow-foundation/samples/wpf-and-wf-integration-in-xaml.md)  
+ <span data-ttu-id="e7e97-116">Muestra cómo crear una aplicación que utiliza características [!INCLUDE[avalon1](../../../../includes/avalon1-md.md)] y [!INCLUDE[wf](../../../../includes/wf-md.md)] en un documento XAML único.</span><span class="sxs-lookup"><span data-stu-id="e7e97-116">Demonstrates how to create an application that uses [!INCLUDE[avalon1](../../../../includes/avalon1-md.md)] and [!INCLUDE[wf](../../../../includes/wf-md.md)] features in a single XAML document.</span></span> <span data-ttu-id="e7e97-117">Para lograr esto, el ejemplo utiliza [!INCLUDE[wf](../../../../includes/wf-md.md)] y extensibilidad de XAML.</span><span class="sxs-lookup"><span data-stu-id="e7e97-117">To accomplish this, the sample uses [!INCLUDE[wf](../../../../includes/wf-md.md)] and XAML extensibility.</span></span>  
   
- [<span data-ttu-id="de94b-118">Kit de herramientas de Ruleset externo</span><span class="sxs-lookup"><span data-stu-id="de94b-118">External Ruleset Toolkit</span></span>](../../../../docs/framework/windows-workflow-foundation/samples/external-ruleset-toolkit.md)  
- <span data-ttu-id="de94b-119">Muestra cómo administrar y modificar conjuntos de reglas en una base de datos y cómo tener acceso a ellos desde un flujo de trabajo en tiempo de ejecución.</span><span class="sxs-lookup"><span data-stu-id="de94b-119">Demonstrates how to manage and edit RuleSets in a database and access those RuleSets from a workflow at runtime.</span></span>
+ [<span data-ttu-id="e7e97-118">Kit de herramientas de Ruleset externo</span><span class="sxs-lookup"><span data-stu-id="e7e97-118">External Ruleset Toolkit</span></span>](../../../../docs/framework/windows-workflow-foundation/samples/external-ruleset-toolkit.md)  
+ <span data-ttu-id="e7e97-119">Muestra cómo administrar y modificar conjuntos de reglas en una base de datos y cómo tener acceso a ellos desde un flujo de trabajo en tiempo de ejecución.</span><span class="sxs-lookup"><span data-stu-id="e7e97-119">Demonstrates how to manage and edit RuleSets in a database and access those RuleSets from a workflow at runtime.</span></span>
