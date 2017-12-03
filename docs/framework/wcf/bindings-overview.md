@@ -11,14 +11,14 @@ ms.topic: article
 helpviewer_keywords: bindings [WCF], overview
 ms.assetid: cfb5842f-e0f9-4c56-a015-f2b33f258232
 caps.latest.revision: "16"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: a131574e0e3de8507a91807d5de2899238c14628
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: eb2d66217202ee43fb2377f4a8ef26a47b676c11
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="windows-communication-foundation-bindings-overview"></a>Información general de enlaces de Windows Communication Foundation
 Los enlaces son objetos que se utilizan para especificar los datos de la comunicación requeridos para conectar al extremo de un servicio [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]. Cada extremo en un servicio [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] requiere que un enlace esté bien especificado. En este tema, se describen los tipos de datos de comunicación que los enlaces definen, los elementos de un enlace, qué enlaces están incluidos en [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]y cómo se puede especificar un enlace para un extremo.  

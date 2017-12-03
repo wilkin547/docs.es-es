@@ -13,14 +13,14 @@ dev_langs:
 - vb
 ms.assetid: 938e7825-f63a-4c3d-b603-63772fabfdb3
 caps.latest.revision: "18"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 4b52fe96bc88f09b807640dedcc54a8468dc26e0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: a6c50d9c6740b0c680e349a71bf4b3bdece2b34f
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="how-to-exchange-queued-messages-with-wcf-endpoints"></a>Cómo: Intercambiar mensajes en cola con puntos de conexión de WCF
 Las colas garantizan que la mensajería de confianza puede tener lugar entre un cliente y un servicio [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], aun cuando el servicio no esté disponible en el momento de la comunicación. Los procedimientos siguientes muestran cómo garantizar una comunicación duradera entre un cliente y un servicio utilizando el enlace en cola estándar al implementar el servicio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  

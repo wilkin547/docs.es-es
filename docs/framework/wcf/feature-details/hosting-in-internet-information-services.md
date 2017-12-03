@@ -11,14 +11,14 @@ ms.topic: article
 helpviewer_keywords: hosting services [WCF], IIS
 ms.assetid: ddae14e8-143c-442d-b660-2046809b2d43
 caps.latest.revision: "13"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: dc0a2692e105588d482156dfa870d8e587008b8d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 3b929765580f392b5fbd825a9c14bdc6f53c1e96
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="hosting-in-internet-information-services"></a>Hospedaje en Internet Information Services
 Una opción para hospedar servicios de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] se encuentra dentro de una aplicación de Internet Information Services (IIS). Este modelo de hospedaje es similar al modelo utilizado por [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] y los servicios Web ASP.NET (ASMX).  

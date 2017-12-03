@@ -11,14 +11,14 @@ ms.topic: article
 helpviewer_keywords: proxy extensions [WCF]
 ms.assetid: 1328c61c-06e5-455f-9ebd-ceefb59d3867
 caps.latest.revision: "17"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: ed401f3c132cf2dd223e98a7e622a30de511139f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 23cfa64aa698643f30409119e162b815e58e2379
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="extending-clients"></a>Extensión de clientes
 En una aplicación que realiza la llamada, el nivel de modelo de servicio es responsable de traducir invocaciones de método en el código de la aplicación a mensajes salientes, insertarlos en los canales subyacentes, traducir los resultados en valores devueltos y los parámetros de salida en el código de la aplicación, y devolver los resultados al autor de la llamada. Las extensiones de modelo de servicio modifican o implementan el comportamiento de la comunicación o la ejecución y características implicadas en la funcionalidad de distribuidor o cliente, comportamientos personalizados, interceptación de mensajes y parámetros, y otra funcionalidad de extensibilidad.  

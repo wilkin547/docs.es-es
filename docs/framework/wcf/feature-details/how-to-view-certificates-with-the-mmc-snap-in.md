@@ -11,14 +11,14 @@ ms.topic: article
 helpviewer_keywords: certificates [WCF], viewing with the MMC snap-in
 ms.assetid: 2b8782aa-ebb4-4ee7-974b-90299e356dc5
 caps.latest.revision: "12"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 43925a301d4f0d2ca1a852912255be49dd330ae5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 5981e68ebe2870870fff5e92e87d7582ac2c42b5
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="how-to-view-certificates-with-the-mmc-snap-in"></a>Cómo: Ver certificados con el complemento de MMC
 Un tipo común de credencial es el certificado X.509. Al crear servicios o clientes seguros, puede especificar que un certificado se utilice como la credencial del cliente o servicio utilizando métodos como el método <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A>. El método requiere varios parámetros, como el almacén donde se guarda el certificado y un valor que utilizar al buscar el certificado. El siguiente procedimiento muestra cómo examinar los almacenes de un equipo para encontrar un certificado adecuado. Para obtener un ejemplo de encontrar la huella digital del certificado, consulte [Cómo: recuperar la huella digital de un certificado](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md).  

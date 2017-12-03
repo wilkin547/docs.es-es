@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 31fe2a4f-5c47-4e5d-8ee1-84c524609d41
 caps.latest.revision: "7"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: d1c1493e344bfe60a12ad16e3c0d257392b3545a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 73ec25ab5376841b2970fedf17ad1de176923f16
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="systemwebrouting-integration"></a>Integración de System.Web.Routing
 Al hospedar un servicio de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] en Internet Information Service (IIS), se coloca un archivo .svc en el directorio virtual. Este archivo .svc especifica el generador de host de servicio que se debe usar, así como la clase que implementa el servicio. Al realizar solicitudes al servicio, debe especificar el archivo .svc en el URI, por ejemplo: http://contoso.com/ServicioDeEmpleados.svc. Para programadores que escriben servicios de REST, este tipo de URI no es óptimo. Los URI para los servicios de REST especifican un recurso determinado y normalmente no tienen ninguna extensión. La característica de integración <xref:System.Web.Routing> le permite hospedar un servicio de REST de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] que responde a URI sin extensión. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Vea enrutamiento [el enrutamiento de ASP.NET](http://go.microsoft.com/fwlink/?LinkId=184660) y [AspNetRouteIntegration](../../../../docs/framework/wcf/samples/aspnetrouteintegration.md) ejemplo.  

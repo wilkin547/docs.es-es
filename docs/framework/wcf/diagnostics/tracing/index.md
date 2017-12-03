@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 2649eae2-dbf8-421c-9cfb-cfa9e01de87f
 caps.latest.revision: "12"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: e0a291e3ca277bc58f69b8016c523b383b3cece8
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 3d57517daaf78e737ea4417d5d46cf33400ff97a
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="tracing"></a>Traza
 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] proporciona instrumental de la aplicación y datos de diagnóstico para la supervisión y el análisis de errores. Puede utilizar el seguimiento en lugar de un depurador para entender cómo se está comportando una aplicación o por qué genera errores. También puede correlacionar los errores y el procesamiento en los componentes para proporcionar una experiencia de extremo a extremo.  

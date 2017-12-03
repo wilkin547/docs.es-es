@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: f362562c-767d-401b-8257-916616568fd4
 caps.latest.revision: "7"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 892875fb8340220dc152f91ab2239257c7b96fb8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 0abc1ac1cea6c9799c3d6bb349869b77f1d0b7c3
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="how-to-host-a-non-service-workflow-in-iis"></a>Cómo: Hospedar un flujo de trabajo no perteneciente al servicio en IIS
 Los flujos de trabajo que no sean servicios de flujo de trabajo se pueden hospedar en IIS/WAS. Esto es útil cuando deba hospedar un flujo de trabajo escrito por otra persona. Por ejemplo, si hospeda en otro host el diseñador de flujo de trabajo y permite a los usuarios que creen sus propios flujos de trabajo.  Si se hospedan flujos de trabajo no pertenecientes al servicio en IIS, se proporciona compatibilidad con características como el reciclaje de proceso, el apagado por inactividad, la supervisión del estado de los procesos y la activación basada en mensajes. Los servicios de flujo de trabajo hospedados en IIS contienen actividades de la clase <xref:System.ServiceModel.Activities.Receive> y se activan cuando IIS recibe un mensaje. Los flujos de trabajo no pertenecientes al servicio no contienen actividades de mensajería y no se pueden activar enviando un mensaje de forma predeterminada.  Debe derivar una clase de la clase <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> y definir un contrato de servicio que contenga operaciones para crear una instancia de flujo de trabajo. Este tema le guiará a través de la creación de un flujo de trabajo simple, definir un contrato de servicio que un cliente puede utilizar para activar el flujo de trabajo y derivar una clase de <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> que utiliza el contrato de servicio para escuchar las solicitudes de creación de flujo de trabajo.  

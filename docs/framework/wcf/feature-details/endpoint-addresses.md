@@ -14,14 +14,14 @@ helpviewer_keywords:
 - WCF [WCF], addresses
 ms.assetid: 13f269e3-ebb1-433c-86cf-54fbd866a627
 caps.latest.revision: "18"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 52c5dfd84a55e727e465e2bd6214462fd57c334f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 3231e5b043dd0e65c09f25eed56341e660bf1f87
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="endpoint-addresses"></a>Direcciones de punto de conexión
 Cada punto de conexión tiene una dirección asociada a él, que se utiliza para ubicar e identificar el punto de conexión. Esta dirección está compuesta principalmente de un Identificador uniforme de recursos (URI), que especifica la ubicación del extremo. La dirección del extremo se representa en el modelo de programación de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] mediante la clase <xref:System.ServiceModel.EndpointAddress>, que contiene una propiedad <xref:System.ServiceModel.EndpointAddress.Identity%2A> opcional que permite la autenticación del extremo por parte otros extremos que intercambian mensajes con él, y un conjunto de propiedades <xref:System.ServiceModel.EndpointAddress.Headers%2A> opcionales, que definen cualquier otro encabezado SOAP requerido para alcanzar el servicio. Los encabezados opcionales proporcionan información de direccionamiento adicional y más detallada para identificar o interactuar con el extremo de servicio. La dirección de un extremo se representa en la conexión como una referencia de extremo (EPR) WS-Addressing.  

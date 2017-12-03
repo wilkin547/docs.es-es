@@ -11,14 +11,14 @@ ms.topic: article
 helpviewer_keywords: attaching extensions using behaviors [WCF]
 ms.assetid: 149b99b6-6eb6-4f45-be22-c967279677d9
 caps.latest.revision: "20"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: aab2d1d8c676a70b0fb4cfa80a16d52cd6f8b800
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 7eb8e0853adbc24deb43fc1006804d7707d9a4b8
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="configuring-and-extending-the-runtime-with-behaviors"></a>Configuración y extensión del tiempo de ejecución con comportamientos
 Los comportamientos le permiten modificar el comportamiento predeterminado y agregar extensiones personalizadas que inspeccionan y validan la configuración de servicio o modifican el comportamiento del tiempo de ejecución en el cliente [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] y las aplicaciones de servicio. En este tema se describen las interfaces de comportamiento, cómo implementarlas y cómo agregarlas mediante programación a la descripción del servicio (en una aplicación de servicio) o punto de conexión (en una aplicación cliente) o en un archivo de configuración. Para obtener más información acerca del uso de comportamientos proporcionados por el sistema, consulte [especificar el comportamiento de tiempo de ejecución de servicio](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md) y [especificar el comportamiento de tiempo de ejecución de cliente](../../../../docs/framework/wcf/specifying-client-run-time-behavior.md).  

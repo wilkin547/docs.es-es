@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: fa54186a-8ffa-4332-b0e7-63867126fd49
 caps.latest.revision: "9"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: d743ae68955bba844f84fed71047d9331fd349af
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 2162377fbe8f8329c12dfd88a55d893d26f5b2bf
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="emitting-user-code-traces"></a>Emisión de trazas del código de usuario
 Además de permitir el seguimiento de traza en la configuración para recopilar los datos de instrumentación generados por [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)], también se pueden emitir trazas mediante la programación del código de usuario. De esta manera, puede crear proactivamente datos de instrumentación que examinará más tarde con el fin de realizar un diagnóstico. En este tema se describe cómo hacerlo.  

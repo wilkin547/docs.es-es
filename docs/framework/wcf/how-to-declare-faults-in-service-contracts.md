@@ -13,14 +13,14 @@ dev_langs:
 - vb
 ms.assetid: e8da98e7-d22f-4f60-ac82-3fb0928a353f
 caps.latest.revision: "5"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 1ebfe56a0e073534840ce81eebb64ce3f5db48a1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: f53f8396dc16f9f4538b772d376287cc1695ff47
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="how-to-declare-faults-in-service-contracts"></a>Cómo declarar errores en contratos de servicios
 En código administrado, las excepciones se inician al producirse condiciones de error. No obstante, en aplicaciones [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] los contratos de servicios especifican qué información de error se devuelve a los clientes mediante la declaración de los errores de SOAP en el contrato de servicios. Para obtener información general de la relación entre las excepciones y errores, vea [especificar y control de errores en contactos y servicios](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).  

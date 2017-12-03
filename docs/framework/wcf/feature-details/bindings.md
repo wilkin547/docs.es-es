@@ -14,14 +14,14 @@ helpviewer_keywords:
 - bindings [WCF]
 ms.assetid: 83639133-89f7-43f0-b4ef-8d9e57c08d25
 caps.latest.revision: "11"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 22b7b8f568b3350972ace128fdc3164c4f3ba179
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: d6fd1bf29af743e5bfcd466ffdf7430c389635de
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="windows-communcation-foundation-bindings"></a>Enlaces de Windows Communication Foundation
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] separa cómo se escribe el software para una aplicación de cómo se comunica con otro software. Los enlaces se usan para especificar el transporte, codificación y detalles protocolares requeridos para que los clientes y servicios se comuniquen entre sí. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usa enlaces para generar la representación subyacente de conexión del extremo, por lo que la mayoría de los detalles de enlace se deben acordar entre las partes que están en comunicación. La manera más sencilla de lograrlo es que los clientes de un servicio usen el mismo enlace que emplea el punto de conexión para el servicio. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Cómo hacer esto, consulte [utilizando enlaces para configurar los servicios de Windows Communication Foundation y los clientes](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb).  

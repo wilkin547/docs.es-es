@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: c41a07e5-cb9d-45d6-9ea4-34511e227faf
 caps.latest.revision: "11"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: ed6ce9b87a5e2d8945a57110c02cce8024439f14
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 31720b0639f9be68a2124b4ff844a2837787ef81
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="how-to-use-a-service-moniker-with-metadata-exchange-contracts"></a>Cómo: Utilizar un moniker de servicio con contratos de intercambio de metadatos
 Después de desarrollar algunos servicios [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] nuevos, puede decidir que quiere poder llamar a estos servicios desde un script o una aplicación de Visual Basic 6.0. Un método sería generar un ensamblado de cliente [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], registre el ensamblado con COM, instale el ensamblado en la GAC y, a continuación, haga referencia a los tipos COM de su código de Visual Basic. Al distribuir la aplicación, tendrá que distribuir también el ensamblado de cliente [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. El usuario tendrá que registrar, a continuación, el ensamblado de cliente de WCF con COM y colocarlo en la GAC. Interoperabilidad COM [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] también le permite realizar las mismas llamadas de servicio sin confiar en un ensamblado de cliente [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. El moniker [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] le permite llamar a cualquier servicio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] desde cualquier lenguaje COM compatible (Visual Basic, VBScript, Visual Basic para Aplicaciones (VBA), etc.) especificando un extremo URI de intercambio de metadatos (Mex) que el moniker de servicio utiliza para extraer información de tipo sobre el servicio. En este tema se describe cómo llamar al ejemplo [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] de la Introducción mediante un moniker [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] que especifica un extremo de Mex.  

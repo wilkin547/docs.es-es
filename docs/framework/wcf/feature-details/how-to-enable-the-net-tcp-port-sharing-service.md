@@ -13,14 +13,14 @@ helpviewer_keywords:
 - activation services [WCF]
 ms.assetid: c9175af4-c27c-4765-bf45-b8f7528a7282
 caps.latest.revision: "12"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: e9934d198b8f3e30a4dc350c968263851ebeab1e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 1a64c72a8f69abc220a311c2a204074ea83d0f58
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="how-to-enable-the-nettcp-port-sharing-service"></a>Cómo habilitar el servicio de uso compartido de puertos Net.TCP
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] utiliza un servicio de Windows llamado Servicio de uso compartido de puertos de Net.TCP para facilitar el uso compartido de puertos TCP por varios procesos. Este servicio se instala como parte de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], pero el servicio no está habilitado de forma predeterminada como precaución de seguridad, por lo que debe habilitarse manualmente antes de su primer uso. En este tema se describe cómo configurar el Servicio de uso compartido de puertos Net.TCP mediante el complemento de Microsoft Management Console (MMC).  

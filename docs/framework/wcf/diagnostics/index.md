@@ -17,14 +17,14 @@ helpviewer_keywords:
 - WCF, administration
 ms.assetid: 34c81c08-0e0f-4fbc-9ae8-91948640ee43
 caps.latest.revision: "19"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 2f103570cf7d94a9ac6256f3db991c44767fa7c4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 4aa9cacfaa966bbe37618406f4b1413dec433726
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="administration-and-diagnostics"></a>Administración y diagnóstico
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] proporciona un conjunto enriquecido de funcionalidades que pueden ayudarle a supervisar las diferentes fases de la vida de una aplicación. Por ejemplo, puede usar la configuración para configurar servicios y clientes en la implementación. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] incluye un conjunto grande de contadores de rendimiento para ayudarle a calibrar el rendimiento de su aplicación. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] también expone datos de la inspección de un servicio en el tiempo de ejecución a través de un proveedor del Instrumental de administración de Windows (WMI) [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Cuando la aplicación experimenta un error o comienza a actuar incorrectamente, puede utilizar el Registro de eventos para ver si algo significativo ha sucedido. También puede utilizar el registro y seguimiento de mensajes para ver qué eventos están pasando de un extremo a otro en su aplicación. Estas características ayudan a los programadores y a profesionales de TI a solucionar problemas de una aplicación de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] cuando estas no se comportan correctamente.  

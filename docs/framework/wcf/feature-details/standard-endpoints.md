@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 3fcb4225-addc-44f2-935d-30e4943a8812
 caps.latest.revision: "11"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 755669b1305060efeb6af592867844b571b67020
-ms.sourcegitcommit: 5d0e069655439984862a835f400058b7e8bbadc6
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 869861ce1e2ba4456c8e8fbd06f9ff590fb3576a
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/28/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="standard-endpoints"></a>puntos de conexión estándar
 Los puntos de conexión se definen mediante la especificación de una dirección, un enlace y un contrato. Otros parámetros que se pueden establecer en un extremo incluyen la configuración del comportamiento, los encabezados y los URI de escucha.  Para ciertos tipos de extremos, estos valores no cambian. Por ejemplo, los extremos de intercambio de metadatos siempre utilizan el contrato <xref:System.ServiceModel.Description.IMetadataExchange>. Otros extremos, como <xref:System.ServiceModel.Description.WebHttpEndpoint>, siempre requieren un comportamiento de extremo especificado. La utilidad de un extremo se puede mejorar teniendo extremos con valores predeterminado para las propiedades de extremo utilizadas normalmente. Los extremos estándar permiten a un desarrollador definir un extremo que tenga los valores predeterminados o en el que una o más propiedades del extremo no cambien.  Estos extremos le permiten utilizar un extremo de este tipo sin tener que especificar información de tipo estático. Los extremos estándar se pueden usar para extremos de la aplicación y de la infraestructura.  

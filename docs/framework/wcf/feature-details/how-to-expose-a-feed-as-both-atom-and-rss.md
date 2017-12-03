@@ -13,14 +13,14 @@ dev_langs:
 - vb
 ms.assetid: fe374932-67f5-487d-9325-f868812b92e4
 caps.latest.revision: "23"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 66b8ee21159d2900972a9cd8b42a9d26eefb8e01
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 2dad8fe137cfc495d1edc6936d13830861e1654e
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="how-to-expose-a-feed-as-both-atom-and-rss"></a>Cómo: Exponer una fuente como Atom y RSS
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] le permite crear un servicio que exponga una fuente de distribución. En este tema se explica cómo crear un servicio de distribución que exponga una fuente de distribución mediante Atom 1.0 y RSS 2.0. Este servicio expone un extremo que puede devolver cualquiera de los dos formatos de distribución. Para simplificar, el servicio usado en este ejemplo tiene host propio. En un entorno de producción un servicio de este tipo estaría hospedado en IIS o WAS. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]los diferentes [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] opciones de hospedaje, vea [hospedaje](../../../../docs/framework/wcf/feature-details/hosting.md).  

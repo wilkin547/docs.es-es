@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: f5ac7fc7-f97c-4313-b068-54e0c471b2aa
 caps.latest.revision: "6"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: b4cdbc12f57c733d8e8ba3753ce5a2f29ab28ffd
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: c3f5c9f80bbf124440952e35049969c7cfa4f19c
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="end-to-end-tracing"></a>Seguimiento de traza de un extremo a otro
 El seguimiento de un extremo a otro (e2e) permite a los desarrolladores realizar el seguimiento de la ejecución del código en la infraestructura de [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] para investigar por qué se ha producido un error en una ruta de acceso al código o proporcionar un seguimiento detallado para el diseño de la capacidad y el análisis del rendimiento. [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] proporciona tres mecanismos de correlación para ayudar a diagnosticar la causa de un error: actividades, transferencias y propagación.  

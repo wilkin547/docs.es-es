@@ -20,14 +20,14 @@ helpviewer_keywords:
 - OnSerializingAttribute class, custom serialization
 ms.assetid: 12ed422d-5280-49b8-9b71-a2ed129c0384
 caps.latest.revision: "11"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 85ca84865305b588a9214db6e6f4e28b47937827
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 4e85ee15223bc135384d698a175d57b4fd543747
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="custom-serialization"></a>Serialización personalizada
 La serialización personalizada es el proceso de controlar la serialización y deserialización de un tipo. Controlando la serialización, es posible asegurarse compatibilidad de la serialización, que es la capacidad para serializar y deserializar entre las versiones de un tipo sin interrumpir la función básica del tipo. En la primera versión de un tipo, puede haber por ejemplo, solo dos campos. En la versión siguiente de un tipo, se agregan varios campos más. Todavía la segunda versión de una aplicación debe poder serializar y deserializar ambos tipos. En las secciones siguientes se describe cómo controlar la serialización.

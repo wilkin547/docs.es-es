@@ -16,14 +16,14 @@ helpviewer_keywords:
 - handling faults [WCF], defining
 ms.assetid: c00c84f1-962d-46a7-b07f-ebc4f80fbfc1
 caps.latest.revision: "13"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 71df440ee9234071d0ab21cc3c18c5b080279bf4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 754c938242035549b9deb94a2fe3b975b1384fc0
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="defining-and-specifying-faults"></a>Definición y especificación de errores
 Los errores de SOAP transmiten información de condición de error desde un servicio a un cliente y, en caso de comunicación dúplex, desde un cliente a un servicio de una manera interoperable. Este tema describe cuándo y cómo definir contenido personalizado de error y especificar qué operaciones pueden devolverlos. [!INCLUDE[crabout](../../../includes/crabout-md.md)]cómo un servicio o cliente dúplex, puede enviar los errores y cómo una aplicación cliente o servicio administra estos errores, vea [enviar y recibir errores](../../../docs/framework/wcf/sending-and-receiving-faults.md). Para obtener información general de control de errores en [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] las aplicaciones, vea [especificar y control de errores en contactos y servicios](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).  

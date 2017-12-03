@@ -17,14 +17,14 @@ helpviewer_keywords:
 - ClientCredentialsSecurityTokenManager class
 ms.assetid: 0b06ce4e-7835-4d82-8baf-d525c71a0e49
 caps.latest.revision: "11"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 51ee500b048bbd8ba2b26fdd993a18663bd433c4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 312a4b854cb527e63d6866247d4147720ce0710c
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="how-to-use-separate-x509-certificates-for-signing-and-encryption"></a>Cómo: Utilizar diferentes certificados X.509 para la firma y el cifrado
 En este tema se muestra cómo configurar [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] para utilizar certificados diferentes para la firma y el cifrado de mensajes tanto en el cliente como en el servicio.  

@@ -11,14 +11,14 @@ ms.topic: article
 helpviewer_keywords: batching messages [WCF]
 ms.assetid: 53305392-e82e-4e89-aedc-3efb6ebcd28c
 caps.latest.revision: "19"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 2aa633d2e89612549d1dbe6703e80f4a5e713bf0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: d9effe9b44a8e6f786103162930852de80ab4f8d
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="batching-messages-in-a-transaction"></a>Mensajes por lotes en una transacción
 Las aplicaciones en cola utilizan las transacciones para garantizar la exactitud y la entrega fiable de mensajes. Las transacciones, sin embargo, son operaciones caras y pueden reducir dramáticamente el rendimiento de los mensajes. Una manera de mejorar el rendimiento de los mensajes consiste en hacer que una aplicación lea y procese varios mensajes dentro de una transacción única. La balanza está entre el rendimiento y la recuperación: a medida que el número de mensajes de un lote aumenta, lo hace la cantidad de trabajo de recuperación requerida si se deshacen las transacciones. Es importante tener en cuenta la diferencia entre los mensajes por lotes en una transacción y en sesiones. A *sesión* es una agrupación de mensajes relacionados que son procesados por una única aplicación y se confirman como una sola unidad. Las sesiones se utilizan generalmente cuando se debe procesar conjuntamente un grupo de mensajes relacionados. Un ejemplo de esto es el sitio web de una tienda en línea. *Lotes* se utilizan para procesar varios, no relacionados con mensajes de la manera que aumenta el rendimiento de mensajes. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]las sesiones, consulte [agrupar los mensajes en cola en una sesión de](../../../../docs/framework/wcf/feature-details/grouping-queued-messages-in-a-session.md). Los mensajes de un lote también se procesan mediante una aplicación única y se confirman como una sola unidad, pero no puede haber ninguna relación entre los mensajes del lote. Los mensajes por lotes en una transacción son una optimización que no cambia cómo se ejecuta la aplicación.  

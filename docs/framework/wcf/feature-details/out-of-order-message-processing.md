@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 33fc62a5-5d59-461c-a37a-0e1b51ac763d
 caps.latest.revision: "10"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 2ffd220babe99661d8b6aaf271a566d415af5eb1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: f70283e15bbfaf111c8e677641682538a2361942
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="out-of-order-message-processing"></a>Procesar un mensaje sin orden
 Los servicios del flujo de trabajo pueden depender de mensajes enviados en un orden concreto. Un servicio del flujo de trabajo contiene una o más actividades <xref:System.ServiceModel.Activities.Receive> y cada actividad <xref:System.ServiceModel.Activities.Receive> espera un mensaje concreto. Sin garantías de entrega de transporte específicas, se pueden retrasar los mensajes enviados por los clientes y, por lo tanto, se pueden entregar en un orden que el servicio del flujo de trabajo no se espera. La implementación de un servicio del flujo de trabajo que no requiera que los mensajes se envíen en un orden concreto se suele llevar a cabo mediante una actividad paralela. Si el protocolo de aplicación es más complicado, el flujo de trabajo se volvería muy complejo con mucha rapidez.  La característica de procesamiento de mensajes desordenado en [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] le permite crear este tipo de flujo de trabajo sin toda la complejidad de las actividades paralelas anidadas. El procesamiento de mensajes desordenado solo se admite en canales que admitan <xref:System.ServiceModel.Channels.ReceiveContext>, como los enlaces de MSMQ de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  

@@ -13,14 +13,14 @@ dev_langs:
 - vb
 ms.assetid: 99030386-43b0-4f7b-866d-17ea307f5cbd
 caps.latest.revision: "12"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 466aecb5102332d3e246fd340e43b482d2c17a4c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 1cfce32a7e7099a601c76874c8ca951488335fc6
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="how-to-export-custom-policy-assertions"></a>Cómo: Exportar aserciones de directivas personalizadas
 Las aserciones de directivas describen las funciones y requisitos de un punto de conexión de servicio. Las aplicaciones de servicio pueden utilizar las aserciones de directivas personalizadas en metadatos del servicio para comunicarse el extremo, enlace o información de personalización de contrato a la aplicación cliente. Puede utilizar [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] para exportar las aserciones en expresiones de directivas adjuntas a enlaces de WSDL en el extremo, operación o asuntos del mensaje, dependiendo de las funciones o requisitos que esté comunicando.  

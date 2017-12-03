@@ -16,14 +16,14 @@ helpviewer_keywords:
 - cryptographic provider [WCF]
 ms.assetid: b4254406-272e-4774-bd61-27e39bbb6c12
 caps.latest.revision: "7"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 1158d1fc2d906737087fa4bdf7d2070e5ff4cfae
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: c9a42d644d4d51332c89764a4e6516c7d15e828d
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="how-to-change-the-cryptographic-provider-for-an-x509-certificate39s-private-key"></a>Cómo: cambiar el proveedor de servicios criptográfico para un certificado X.509 &#39; s de clave privada
 En este tema se muestra cómo cambiar el proveedor criptográfico utilizado para proporcionar una clave privada de un certificado X.509 y cómo integrar el proveedor en el marco de seguridad [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. Para obtener más información sobre el uso de certificados, consulte [trabajar con certificados](../../../../docs/framework/wcf/feature-details/working-with-certificates.md).  

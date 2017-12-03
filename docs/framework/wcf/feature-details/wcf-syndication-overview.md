@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: af6d4c39-e5e8-4099-aee6-5261feff9107
 caps.latest.revision: "11"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 629ec17ea01ec29480f15f5921d09e7497e9f8c8
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 4f1595cbb1d225e3dd4e73a354028745d4cd0428
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="wcf-syndication-overview"></a>Información general de distribución de WCF
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] permite exponer fuentes de distribución desde un servicio de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. La distribución es un mecanismo de integración de aplicaciones en el que un servidor expone algunos datos de la aplicación en un formato interoperable conocido como fuente. Una fuente es una colección de datos de la aplicación que está compuesta de algunos metadatos de fuente (título, autor, dirección URL y otros metadatos) y una serie de elementos de fuente. Dentro de la fuente, los elementos de fuente están ordenados normalmente en orden cronológico inverso. Un elemento de fuente está compuesto por un conjunto estándar de metadatos de elementos (título, dirección URL, fecha de creación, categoría y otros metadatos de elementos) y una cantidad arbitraria de datos específicos de la aplicación. Los dos tipos más comunes de fuentes de distribución son Really Simple Syndication (RSS) 2.0 y Atom 1.0, ambos admitidos por [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  

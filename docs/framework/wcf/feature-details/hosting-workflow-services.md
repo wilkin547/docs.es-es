@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 2d55217e-8697-4113-94ce-10b60863342e
 caps.latest.revision: "12"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: ad4e5af26291c210f4f46f20e5b9585e3e095ae7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 1bf0b63d3de750b5ec2aea41dcb6bb700385663a
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="hosting-workflow-services"></a>Hospedar servicios de flujo de trabajo
 Debe hospedarse un servicio del flujo de trabajo para que responda a los mensajes entrantes. Los servicios del flujo de trabajo usan la infraestructura de mensajería de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] y, por lo tanto, se hospedan de maneras similares. Como los servicios [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], los servicios de flujo de trabajo se pueden hospedar en cualquier aplicación administrada, en Internet Information Services (IIS) o en Windows Process Activation Services (WAS). Además, los servicios de flujo de trabajo se pueden hospedar en Windows Server App Fabric. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Vea Windows Server App Fabric [documentación de Windows Server App Fabric](http://go.microsoft.com/fwlink/?LinkId=193037), [características de hospedaje de AppFabric](http://go.microsoft.com/fwlink/?LinkId=196494), y [conceptos de hospedaje de AppFabric](http://go.microsoft.com/fwlink/?LinkId=196495). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]las diversas maneras host [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] services; vea [servicios de hospedaje](../../../../docs/framework/wcf/hosting-services.md).  

@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: bf707063-3f30-4304-ab53-0e63413728a8
 caps.latest.revision: "25"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 0c913896611ea4b336f7626b21f9fe959ef4fd09
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 455dec4adefc479433945f9f9b02708c23437991
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="selecting-a-credential-type"></a>Selección de tipos de credenciales
 *Credenciales* son los datos [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] se utiliza para establecer una identidad reivindicada o funciones. Por ejemplo, una contraseña es una credencial que un gobierno emite para demostrar la ciudadanía en un país o región. En [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], las credenciales pueden tener muchas formas, como tokens de nombre de usuario y certificados X.509. En este tema se describen las credenciales, cómo se usan en [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] y cómo seleccionar la credencial correcta para la aplicación.  

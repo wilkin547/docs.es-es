@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 8d1c5e5a-7928-4a80-95ed-d8da211b8595
 caps.latest.revision: "29"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 719210e91fc98c7ceb0f6c51252cfcdfe2f1339c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 609f53431e52da3629f5107adf91994a55eca89d
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="poison-message-handling"></a>Control de mensajes dudosos
 A *mensaje dudoso* es un mensaje que ha superado el número máximo de intentos de entrega a la aplicación. Esta situación se puede presentar cuando una aplicación basada en cola no puede procesar un mensaje debido a los errores. Para satisfacer la confiabilidad que exige, una aplicación en cola recibe los mensajes bajo una transacción. Anular la transacción en la que un mensaje en cola se recibió deja el mensaje en la cola para que el mensaje se vuelva a intentar con una nueva transacción. Si no se corrige el problema que produjo la anulación de la transacción, la aplicación receptora se puede atascar en una recepción de bucle y anulando el mismo mensaje hasta que supere el número máximo de intentos de entrega, y se produzca un mensaje dudoso.  

@@ -14,14 +14,14 @@ helpviewer_keywords:
 - getting started [WCF]
 ms.assetid: df939177-73cb-4440-bd95-092a421516a1
 caps.latest.revision: "47"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 5f34ac7ec2761efda640e3c4838a5f44f2e244e2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 649fc2572e809238977ca3deb5740ada2dd5dc14
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="getting-started-tutorial"></a>Tutorial de introducción
 Los temas contenidos en esta sección están pensados para ofrecerle una visión rápida a la programación en [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]. Están diseñados para ser completados en el orden en que aparecen en la lista incluida al final de este tema. Este tutorial constituye una introducción a los pasos necesarios para crear aplicaciones de cliente y servicio de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. Un servicio expone uno o más puntos de conexión, donde cada uno de ellos expone una o más operaciones de servicio. El *extremo* especifica una dirección donde se puede encontrar el servicio, un enlace que contiene la información que describe cómo un cliente debe comunicar con el servicio y un contrato que define la funcionalidad de un servicio proporciona el servicio a sus clientes.  

@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 3399f208-3504-4c70-a22e-a7c02a8b94a6
 caps.latest.revision: "20"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 22dcace51b2c73193356450b4b210d1c1a899e28
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 5886b327f1ea6d2866b9fc76bb29031ee870934e
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="supported-deployment-scenarios"></a>Escenarios de implementación admitidos
 El subconjunto de características de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] admitido para su uso en aplicaciones de confianza parcial está diseñado para cumplir los requisitos de algunos, aunque no todos, escenarios de uso de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. En el servidor, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] cumple los requisitos de proveedores de hospedaje compartido de escala de Internet que ejecutan aplicaciones de terceros en el conjunto de permisos de Nivel de confianza medio [!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)] por razones de seguridad. En el cliente, la compatibilidad de confianza parcial de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] está diseñada para cumplir los requisitos de tecnologías de implementación como [ClickOnce Deployment](http://go.microsoft.com/fwlink/?LinkId=83712) o la tecnología de aplicación de explorador XAML de [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)], que permiten una implementación perfecta y segura de aplicaciones de escritorio de los sitios que no son de confianza.  

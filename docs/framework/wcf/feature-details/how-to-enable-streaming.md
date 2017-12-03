@@ -13,14 +13,14 @@ dev_langs:
 - vb
 ms.assetid: 6ca2cf4b-c7a1-49d8-a79b-843a90556ba4
 caps.latest.revision: "13"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 8436ceefea936ddbf708aa3f79c5f7bd8153ac66
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: ea506499cf6678beb51195654739f2537b98a188
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="how-to-enable-streaming"></a>Cómo habilitar la transmisión
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] puede enviar mensajes mediante transferencias almacenadas en búfer o por secuencias. En el modo de transferencia almacenado en búfer (predeterminado), se debe entregar completamente un mensaje antes de que un receptor pueda leerlo. En modo de transferencia de transmisión por secuencias, el receptor puede empezar a procesar el mensaje antes de se entregue completamente. El modo de transmisión por secuencias es útil cuando la información que se pasa es larga y puede procesarse en serie. El modo de transmisión por secuencias también es útil cuando el mensaje es demasiado grande para que se almacene en búfer completamente.  

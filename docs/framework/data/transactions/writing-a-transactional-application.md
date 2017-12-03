@@ -9,14 +9,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: a4d891f2-6fc8-4395-93c6-6819492406e0
 caps.latest.revision: "3"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: ec8537c4fdf80ffe448bba1376eacf519d67bcbe
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: c988f5ab5a342ad3282414634ca3bfc21f481ea5
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="writing-a-transactional-application"></a>Crear una aplicación transaccional
 Como un programador de la aplicación transaccional, puede tomar la ventaja de los dos modelos de programación proporcionados por el espacio de nombres <xref:System.Transactions> para crear una transacción. Puede utilizar el modelo de programación explícito mediante el uso de la <xref:System.Transactions.Transaction> clase o el modelo de programación implícito en el que las transacciones se administran automáticamente por la infraestructura, mediante el uso de la <xref:System.Transactions.TransactionScope> clase. Se recomienda que utilice el modelo de transacción implícita para el desarrollo. Puede encontrar más información sobre cómo utilizar un ámbito de transacción en el [implementar una transacción implícita con ámbito de transacción](../../../../docs/framework/data/transactions/implementing-an-implicit-transaction-using-transaction-scope.md) tema.  

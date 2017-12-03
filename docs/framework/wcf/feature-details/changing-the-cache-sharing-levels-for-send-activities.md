@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 03926a64-753d-460e-ac06-2a4ff8e1bbf5
 caps.latest.revision: "12"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 321daca64218bfe2d8644c31df68b80aa8c775d1
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: d0254673277cf6435ec835351b89fc03db01b2ae
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="changing-the-cache-sharing-levels-for-send-activities"></a>Cambiar los niveles de uso compartido de caché para actividades Send
 La extensión <xref:System.ServiceModel.Activities.SendMessageChannelCache> le permite personalizar los niveles de uso compartido de la memoria caché, la configuración de la memoria caché del generador de canales y la de la memoria caché del canal para los flujos de trabajo que envían mensajes a los extremos de servicio utilizando las actividades de mensajería de <xref:System.ServiceModel.Activities.Send>. Estos flujos de trabajo son normalmente flujos de trabajo del cliente pero podrían ser también servicios de flujo de trabajo que se hospedan en <xref:System.ServiceModel.WorkflowServiceHost>. La memoria caché del generador de canales contiene objetos <xref:System.ServiceModel.ChannelFactory%601> almacenados en caché. La memoria caché del canal contiene canales almacenados en memoria caché.  

@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 3028bba8-6355-4ee0-9ecd-c56e614cb474
 caps.latest.revision: "7"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 8f60b2566895acfd7d2b749729fab9c3f5deb20c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: ccf6e5363da872d3902c12713bd19f5820370428
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="anticipating-adopting-the-windows-communication-foundation-easing-future-integration"></a>Anticipación de la adopción de Windows Communication Foundation: cómo facilitar la futura integración
 Si utiliza ASP.NET hoy, y prevé que utilizará [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] en el futuro, este tema proporciona la orientación para garantizar que los nuevos servicios web ASP.NET funcionarán bien junto con las aplicaciones de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  

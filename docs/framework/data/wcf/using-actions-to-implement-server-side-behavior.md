@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 11a372db-7168-498b-80d2-9419ff557ba5
 caps.latest.revision: "3"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: d5f3a949e8cade47876bb578725a130ef7dac934
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 7879a600ec0ecfebc96b18476121f2ad205ece8f
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="using-actions-to-implement-server-side-behavior"></a>Usar acciones para implementar el comportamiento del servidor
 Las acciones OData proporcionan una manera de implementar un comportamiento que actúa sobre un recurso obtenido de un servicio OData.  Por ejemplo, considere una película digital como un recurso; se pueden hacer muchas cosas con ella: desproteger, valorar/comentar o proteger. Todos estos son ejemplos de acciones que se pueden implementar mediante un Servicio de datos de WCF que administre películas digitales. Las acciones se describen en una respuesta OData que contiene un recurso en el que se puede invocar la acción. Cuando un usuario solicita un recurso que representa una película digital, la respuesta devuelta por el Servicio de datos de WCF contiene información sobre las acciones disponibles para dicho recurso. La disponibilidad de una acción puede depender del estado del servicio de datos o del recurso. Por ejemplo, una vez desprotegida una película digital otro usuario no la puede desproteger. Los clientes pueden invocar una acción con solo especificar una dirección URL. Por ejemplo, http://MiServidor/MovieService.svc/Movies(6) identificaría una película digital concreta y http://MiServidor/MovieService.svc/Movies(6)/Checkout invocaría la acción en esa película específica. Las acciones le permiten exponer su modelo de servicio sin exponer el modelo de datos. Continuando con el ejemplo de servicio de películas, quizás desee permitir que un usuario valore una película pero no desee exponer directamente los datos de valoración como un recurso. Podría implementar una acción de valoración que permitiera al usuario valorar una película pero no tener acceso directamente a los datos de valoración como un recurso.  

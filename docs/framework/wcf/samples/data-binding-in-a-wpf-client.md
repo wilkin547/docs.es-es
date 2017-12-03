@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: bb8c8293-5973-4aef-9b07-afeff5d3293c
 caps.latest.revision: "21"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 0fba3f83bbff42f570ce6da1544d2c0f1ea32393
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 7306c58f04483d0e4230b39b05cbebc3de857736
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="data-binding-in-a-windows-presentation-foundation-client"></a>Enlace de datos en un cliente de Windows Presentation Foundation
 Este ejemplo muestra el uso de enlace de datos en un cliente de la Windows Presentation Foundation (WPF). El ejemplo utiliza un servicio [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] que genera de manera aleatoria genera una matriz de álbumes para devolver al cliente. Cada álbum tiene un nombre, un precio y una lista de pistas. Las pistas del álbum tienen un nombre y duración. La información que devuelve el servicio se enlaza automáticamente a la interfaz de usuario (IU) que proporciona el cliente de [!INCLUDE[avalon1](../../../../includes/avalon1-md.md)].  

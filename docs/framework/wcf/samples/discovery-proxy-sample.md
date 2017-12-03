@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 1dfa02df-15b1-4e97-9c8e-f5f2772711b0
 caps.latest.revision: "14"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: f16cf2ffc9e03308ce3b8a5e967c29e624ffd1af
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 515f91baf48f68ba0c1cb32e00152bf025fe7323
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="discovery-proxy-sample"></a>Ejemplo de proxy de detección
 En este ejemplo se muestra cómo crear una implementación de un proxy de detección para almacenar información acerca de los servicios existentes y el modo en que los clientes pueden consultar información en ese proxy. Este ejemplo consta de tres proyectos:  

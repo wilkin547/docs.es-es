@@ -11,14 +11,14 @@ ms.topic: article
 helpviewer_keywords: COM [WCF], integration overview
 ms.assetid: 02c5697f-6e2e-47d6-b715-f3a28aebfbd5
 caps.latest.revision: "17"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 4e995fc66a925cb0ebe272c9dceca1ba63b9459d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 6ae704ad9542c162b1c37f3eb9edf31f864cd42e
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="integrating-with-com-applications-overview"></a>Integración con la información general de las aplicaciones COM
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] proporciona un entorno enriquecido al desarrollador del código administrado para crear aplicaciones conectadas. Sin embargo, si tiene una inversión sustancial en código basado en COM no administrado y no desea migrar, aún podrá integrar directamente los servicios web de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] en el código existente mediante el moniker del servicio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. El moniker de servicio se puede utilizar a partir de una gama amplia de entornos de desarrollo basados en COM, como Office VBA, Visual Basic 6.0 o Visual C++ 6.0.  

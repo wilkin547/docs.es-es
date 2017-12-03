@@ -9,14 +9,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 9b51a346-09ae-455c-a70a-e2264ddeb9e2
 caps.latest.revision: "8"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: f570db1e677445239cec537f66bdf66fad66b37d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: ebd6586500c82144f7bceca01dea278a76759b1f
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="bookmarks"></a>Marcadores
 Los marcadores son el mecanismo que permite a una actividad esperar datos pasivamente sin tener que mantener un subproceso de flujo de trabajo. Cuando una actividad indica que está esperando un estímulo, puede crear un marcador. Esto indica al tiempo de ejecución que la ejecución de la actividad no debería considerarse completada aun cuando se devuelva el método que se está ejecutando actualmente (que creó <xref:System.Activities.Bookmark>).  

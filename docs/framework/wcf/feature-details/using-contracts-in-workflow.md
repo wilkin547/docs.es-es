@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 939c64e9-e7cc-4abc-b41e-27cfce1d7e50
 caps.latest.revision: "8"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 1493728809721c125b371e0d2ade2050b4909e5d
-ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 5c13da32e304e54d1826c6dd4ad83d5fbb17702a
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="using-contracts-in-workflow"></a>Utilizar contratos en flujo de trabajo
 Al implementar un servicio, defina varios contratos que describan el servicio y los datos que envía y recibe. Los datos se representan como contratos de datos y de mensajes; los servicios de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] y de flujo de trabajo usan datos de contrato y definiciones de contrato de mensaje como parte de las descripciones del servicio. El servicio expone metadatos (en el formulario de WSDL) para describir las operaciones del servicio. En [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], los contratos de servicios y los contratos de operación definen el servicio y las operaciones que admite. Sin embargo, en un servicio de flujo de trabajo, estos contratos forman parte del propio proceso de negocio; se exponen en metadatos mediante un proceso llamado inferencia del contrato.  

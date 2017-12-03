@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: ad6cb67b-fd1c-4ca1-a767-b410da2e16ca
 caps.latest.revision: "17"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 7e66a2f87d69ddba1676ed5e210859edfb5d8e41
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: d3ef21d4ab431ea4e1e1ac0392b3f088a7053c80
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="peer-to-peer-networking"></a>Conexión de redes punto a punto
 El canal del mismo nivel es una tecnología de comunicaciones punto a punto (P2P) entre varias partes de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. Proporciona un canal de comunicación P2P basado en mensajes seguros y escalables para los desarrolladores de aplicaciones. Un ejemplo común de una aplicación con varias partes que se puede beneficiar del canal del mismo nivel es el caso de una aplicación de colaboración, como el chat, donde un grupo de personas conversan entre ellas de igual a igual, sin necesidad de servidores. Peer Channel habilita la colaboración P2P la distribución del contenido, el equilibrio de la carga y el procesamiento distribuido de los escenarios de consumidor y empresa.  

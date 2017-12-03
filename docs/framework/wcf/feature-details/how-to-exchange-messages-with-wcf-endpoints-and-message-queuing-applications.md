@@ -13,14 +13,14 @@ dev_langs:
 - vb
 ms.assetid: 62210fd8-a372-4d55-ab9b-c99827d1885e
 caps.latest.revision: "18"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: d09b8e662b2876fa5d5c5246ea7e7a4998cde9ea
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 75b18dab37a18723671cebf51c3cc943b907b38a
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications"></a>Cómo: Intercambiar mensajes con puntos de conexión de WCF y aplicaciones de Message Queuing
 Puede integrar aplicaciones Message Queuing existentes (MSMQ) con aplicaciones de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] utilizando el enlace de integración de MSMQ para convertir los mensajes de MSMQ a y desde mensajes de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Esto le permite llamar a aplicaciones de receptor de MSMQ desde clientes de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], así como llamar a servicios de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] desde aplicaciones de remitente de MSMQ.  

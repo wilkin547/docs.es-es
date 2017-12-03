@@ -11,14 +11,14 @@ ms.topic: article
 helpviewer_keywords: syndication [WCF]
 ms.assetid: ebf80384-0fc9-4919-a1e8-23ca2a13e300
 caps.latest.revision: "13"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 51cf7c6e4db1ee0ff68bcc7fccb46fd643f04bf4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 14f2aa18b1fba92f5559b463d90dcfb5b34e2a3f
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="wcf-syndication"></a>Sindicación en WCF
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] proporciona compatibilidad para trabajar con facilidad con las fuentes de distribución de Atom, RSS u otros formatos personalizados, que permiten su lectura y creación, así como su exposición en un extremo de servicio. Los temas de esta sección describen en detalle este modelo de programación para la sindicación.  

@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 01a35307-a41f-4ef6-a3db-322af40afc99
 caps.latest.revision: "12"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 6fa68698c6c343b29ca39e66150753502cb8f673
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: bdd547a62391d11050071e1ede648b28c28bd3f4
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="creating-a-bindingelement"></a>Creación de un BindingElement
 Los enlaces y elementos de enlace (los objetos que extienden <xref:System.ServiceModel.Channels.Binding?displayProperty=nameWithType> y <xref:System.ServiceModel.Channels.BindingElement?displayProperty=nameWithType>, respectivamente) son el lugar donde el modelo de aplicación de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] está asociado a generadores de canales y agentes de escucha de canal. Sin enlaces, usar canales personalizados requiere la programación en el nivel de canal tal y como se describe en [nivel de canal del servicio de programación](../../../../docs/framework/wcf/extending/service-channel-level-programming.md) y [programación de nivel de canal de cliente](../../../../docs/framework/wcf/extending/client-channel-level-programming.md). Este tema describen los requisitos mínimos para habilitar el uso de su canal de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], el desarrollo de un <xref:System.ServiceModel.Channels.BindingElement> de canal y habilitar el uso de la aplicación tal como se describe en el paso 4 de [canales de desarrollo](../../../../docs/framework/wcf/extending/developing-channels.md).  

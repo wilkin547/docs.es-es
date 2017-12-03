@@ -9,14 +9,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 67001ed1-7f4d-4ada-ae57-a31176901a53
 caps.latest.revision: "12"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: a51f77864478dcefbe5b2742288f9cc91648f7bb
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: a07b5d3b3451a9e5e29680fb74ea8411db6d11f7
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="declarative-constraints"></a>Restricciones declarativas
 Las restricciones declarativas proporcionan un método eficaz de validación para una actividad y sus relaciones con otras actividades. Las restricciones se configuran para una actividad durante el proceso de creación, aunque el host del flujo de trabajo puede especificar también las restricciones adicionales. En este tema se ofrece información general sobre cómo usar restricciones declarativas para proporcionar la validación de actividad.  

@@ -11,14 +11,14 @@ ms.topic: article
 dev_langs: csharp
 ms.assetid: 9917a0e9-ec93-49e5-a366-fd39b892eb8b
 caps.latest.revision: "4"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 0c1e2b9092abd54fd62848f58e2385bee5058553
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: eeee9dcf27d63f5bc40dfdfce1ff7d8104060b6a
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="writing-a-windows-store-app-that-consumes-an-odata-service"></a>Escribir una Aplicación de la Tienda Windows que usa un servicio de OData
 Windows 8 presenta un nuevo tipo de aplicación: la aplicación de la tienda de Windows. Las aplicaciones de la Tienda de Windows tienen una apariencia y funcionamiento actualizados, que se ejecutan en una serie de dispositivos y están disponibles en la Tienda de Windows. Este tema describe cómo escribir una aplicación de la Tienda de Windows que use un servicio de OData, específicamente el servicio OData del catálogo de NetFlix. Para obtener más información acerca de aplicaciones de la tienda de Windows, lea [Introducción a aplicaciones de la tienda de Windows](http://msdn.microsoft.com/library/windows/apps/br211386.aspx).  

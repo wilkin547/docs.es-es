@@ -14,14 +14,14 @@ dev_langs:
 helpviewer_keywords: certificates [WCF]
 ms.assetid: 6ffb8682-8f07-4a45-afbb-8d2487e9dbc3
 caps.latest.revision: "26"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 4c38a697cc5f4693977e11ff71142322533e9ded
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 63f9d22c571a007653fc794dc7638c8221a676aa
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="working-with-certificates"></a>Trabajar con certificados
 Para programar la seguridad de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], los certificados digitales de X.509 se utilizan normalmente para autenticar clientes y servidores, cifrar y firmar mensajes digitalmente. En este tema se explican brevemente las características de los certificados digitales de X.509 y cómo utilizarlos en [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] e incluye vínculos a los temas que explican estos conceptos en mayor profundidad o que muestran cómo llevar a cabo tareas comunes mediante [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] y los certificados.  
