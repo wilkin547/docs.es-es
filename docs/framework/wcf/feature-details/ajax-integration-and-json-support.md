@@ -11,14 +11,14 @@ ms.topic: article
 helpviewer_keywords: AJAX integration and JSON support [WCF]
 ms.assetid: 3851a8fc-d861-4ac1-873c-96af0343d3a7
 caps.latest.revision: "17"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 4889c88dab77759f854da0069bb300d63ebb1a08
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 98efc62a133b86ab71e34671bc6385a5a94897ea
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="ajax-integration-and-json-support"></a>Integración de AJAX y compatibilidad de JSON
 La compatibilidad de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] con JavaScript asincrónico y XML (AJAX) de ASP.NET y el formato de datos de la notación de objetos JavaScript (JSON) permiten a los servicios de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] exponer las operaciones a los clientes de AJAX. Los clientes de AJAX son páginas web que ejecutan código JavaScript y obtienen acceso a estos servicios de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usando solicitudes HTTP. Los temas de esta sección proporcionan información sobre esta compatibilidad y sobre cómo implementarla.  
