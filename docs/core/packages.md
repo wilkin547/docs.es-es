@@ -9,11 +9,11 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 609b0845-49e7-4864-957b-21ffe1b93bf2
-ms.openlocfilehash: 6e614986dc91310dea40971987969e7433cb79e8
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 1d46992d9f5666c87522630c7a4926aaac82475a
+ms.sourcegitcommit: 39b65a49271e082add68cb737b48fdbe09d24718
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 11/30/2017
 ---
 # <a name="packages-metapackages-and-frameworks"></a>Paquetes, metapaquetes y marcos de trabajo
 
@@ -129,10 +129,8 @@ En cambio, las referencias del metapaquete y el marco en el archivo del proyecto
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>netstandard1.3</TargetFramework>
+    <NetStandardImplicitPackageVersion>1.6.0</NetStandardImplicitPackageVersion>
   </PropertyGroup>
-  <ItemGroup>
-    <NetStandardImplicitPackageVersion Include="NetStandardLibrary" Version="1.6.0" />
-  </ItemGroup>
 </Project>
 ```
 
