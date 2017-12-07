@@ -11,11 +11,11 @@ ms.assetid: 6e81ee82-224f-4a12-9baf-a0dca2656c5b
 caps.latest.revision: "32"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: c29ee4b05d350f8dc5cf7595124c402aa5dc7a4e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: a567dea6418ff9cfc94c8180a88c872bcf4c96a4
+ms.sourcegitcommit: 39b65a49271e082add68cb737b48fdbe09d24718
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 11/30/2017
 ---
 # <a name="access-modifiers-c-programming-guide"></a>Modificadores de acceso (Guía de programación de C#)
 Todos los tipos y miembros de tipo tienen un nivel de accesibilidad que controla si se pueden usar desde otro código del ensamblado u otros ensamblados. Puede usar los siguientes modificadores de acceso para especificar la accesibilidad de un tipo o miembro cuando lo declare:  
@@ -27,13 +27,13 @@ Todos los tipos y miembros de tipo tienen un nivel de accesibilidad que controla
  Solamente el código de la misma clase o estructura puede acceder al tipo o miembro.  
   
  [protected](../../../csharp/language-reference/keywords/protected.md)  
- El tipo o miembro puede tener acceso a código en la misma clase o en una clase que se deriva de esa clase.  
+ Solamente el código de la misma clase, o de una clase derivada de esa clase, puede acceder al tipo o miembro.  
  [internal](../../../csharp/language-reference/keywords/internal.md)  
  Puede obtener acceso al tipo o miembro cualquier código del mismo ensamblado, pero no de un ensamblado distinto.  
   
- [protected internal](../../../csharp/language-reference/keywords/protected-internal.md) puede obtenerse el tipo o miembro cualquier código en el ensamblado en el que se declara o desde una clase derivada de otro ensamblado. 
+ [protected internal](../../../csharp/language-reference/keywords/protected-internal.md) Cualquier código del ensamblado en el que se ha declarado, o desde cualquier clase derivada de otro ensamblado, puede acceder al tipo o miembro. 
 
- [privado protegido](../../../csharp/language-reference/keywords/private-protected.md) el tipo o miembro son accesibles solo dentro de su ensamblado declarativo, código de la misma clase o en un tipo que se deriva de esa clase.
+ [private protected](../../../csharp/language-reference/keywords/private-protected.md) El código de la misma clase, o de un tipo derivado de esa clase, puede acceder al tipo o miembro solo dentro de su ensamblado que declara.
   
  En los ejemplos siguientes se muestra cómo especificar modificadores de acceso en un tipo y miembro:  
   
@@ -44,14 +44,14 @@ Todos los tipos y miembros de tipo tienen un nivel de accesibilidad que controla
 ## <a name="class-and-struct-accessibility"></a>Accesibilidad de clase y estructura  
  Las clases y estructuras que se declaran directamente en un espacio de nombres (es decir, que no están anidadas en otras clases o estructuras) pueden ser públicas o internas. Si no se especifica ningún modificador de acceso, el valor predeterminado es internal.  
   
- Los miembros de estructura, incluidas las clases y las estructuras anidadas, se pueden declarar como public, internal, o private. Miembros, incluidas las clases anidadas y las estructuras de clase, puede ser public, protected internal, protected, internal privado protegido o privado. El nivel de acceso de los miembros de clase y los miembros de estructura, incluidas las clases y estructuras anidadas, es private de forma predeterminada. Los tipos anidados privados no son accesibles desde fuera del tipo contenedor.  
+ Los miembros de estructura, incluidas las clases y las estructuras anidadas, se pueden declarar como public, internal, o private. Los miembros de clase, incluidas las clases y las estructuras anidadas, pueden ser public, protected internal, protected, internal, private protected o private. El nivel de acceso de los miembros de clase y los miembros de estructura, incluidas las clases y estructuras anidadas, es private de forma predeterminada. Los tipos anidados privados no son accesibles desde fuera del tipo contenedor.  
   
  Las clases derivadas no pueden tener mayor accesibilidad que sus tipos base. En otras palabras, no puede tener una clase pública `B` que derive de una clase interna `A`. Si se permitiera, convertiría `A` en público, porque todos los miembros protegidos o internos de `A` son accesibles desde la clase derivada.  
   
  Puede habilitar otros ensamblados concretos para acceder a los tipos internos mediante InternalsVisibleToAttribute. Para más información, vea [Ensamblados de confianza](http://msdn.microsoft.com/library/df0c70ea-2c2a-4bdc-9526-df951ad2d055).  
   
 ## <a name="class-and-struct-member-accessibility"></a>Accesibilidad de miembros de clase y estructura  
- Los miembros de clase (incluidas las clases y las estructuras anidadas) se pueden declarar con cualquiera de los cinco tipos de acceso. Los miembros de estructura no se pueden declarar como protegidos porque las estructuras no admiten la herencia.  
+ Los miembros de clase (incluidas las clases y las estructuras anidadas) se pueden declarar con cualquiera de los seis tipos de acceso. Los miembros de estructura no se pueden declarar como protegidos porque las estructuras no admiten la herencia.  
   
  Normalmente, la accesibilidad de un miembro no es mayor que la del tipo que lo contiene. Pero un miembro público de una clase interna podría ser accesible desde fuera del ensamblado si el miembro implementa los métodos de interfaz o invalida los métodos virtuales definidos en una clase base pública.  
   
@@ -66,7 +66,7 @@ Todos los tipos y miembros de tipo tienen un nivel de accesibilidad que controla
  [!code-csharp[csProgGuideObjects#73](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/access-modifiers_2.cs)]  
   
 > [!NOTE]
->  El nivel de accesibilidad protected internal significa protected O internal, no protected E internal. Es decir, se puede acceder a un miembro protegido interno desde cualquier clase del mismo ensamblado, incluidas las clases derivadas. Para limitar la accesibilidad a las clases derivadas del mismo ensamblado, declare la propia clase como internal y sus miembros como protected. Además, a partir de C# 7.2, puede usar el modificador de acceso protegido privada para lograr el mismo resultado sin necesidad de realizar la clase contenedora interno.  
+>  El nivel de accesibilidad protected internal significa protected O internal, no protected E internal. Es decir, se puede acceder a un miembro protegido interno desde cualquier clase del mismo ensamblado, incluidas las clases derivadas. Para limitar la accesibilidad a las clases derivadas del mismo ensamblado, declare la propia clase como internal y sus miembros como protected. Además, a partir de C# 7.2, puede usar el modificador de acceso private protected para lograr el mismo resultado sin necesidad de convertir en internal la clase contenedora.  
   
 ## <a name="other-types"></a>Otros tipos  
  Las interfaces declaradas directamente en un espacio de nombres se pueden declarar como public o internal y, al igual que las clases y las estructuras, su valor predeterminado es el acceso interno. Los miembros de interfaz son siempre públicos porque el propósito de una interfaz es permitir que otros tipos accedan a una clase o estructura. A los miembros de interfaz no se les puede aplicar ningún modificador de acceso.  
@@ -87,7 +87,7 @@ Todos los tipos y miembros de tipo tienen un nivel de accesibilidad que controla
  [internal](../../../csharp/language-reference/keywords/internal.md)  
  [protected](../../../csharp/language-reference/keywords/protected.md)  
  [protected internal](../../../csharp/language-reference/keywords/protected-internal.md)  
- [privado protegido](../../../csharp/language-reference/keywords/private-protected.md)  
+ [private protected](../../../csharp/language-reference/keywords/private-protected.md)  
  [class](../../../csharp/language-reference/keywords/class.md)  
  [struct](../../../csharp/language-reference/keywords/struct.md)  
  [interface](../../../csharp/language-reference/keywords/interface.md)
