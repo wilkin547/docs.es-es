@@ -13,11 +13,11 @@ caps.latest.revision: "2"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9b311dc5b328a09bd301cc1d012ca4d13cfb70f9
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.openlocfilehash: 932db4ef12666d20ba497cc8f6d78b43c7670373
+ms.sourcegitcommit: 5126483ef09c487296801bbac368dd8a55a6b709
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/07/2017
 ---
 # <a name="wcf-and-aspnet-web-api"></a>WCF y ASP.NET Web API
 WCF es el modelo de programación unificado de Microsoft para compilar aplicaciones orientadas a servicios. Permite a los desarrolladores compilar soluciones de transacción seguras y confiables que se integran en diferentes plataformas y que interactúan con las inversiones existentes. [ASP.NET Web API](http://www.asp.net/web-api) es un marco que facilita la creación de servicios HTTP que llegan a una amplia gama de clientes, incluidos los exploradores y dispositivos móviles. ASP.NET Web API es una plataforma ideal para compilar aplicaciones de RESTful en .NET Framework. En este tema se incluyen indicaciones para ayudarle a decidir qué tecnología se adapta mejor a sus necesidades.  
@@ -29,7 +29,7 @@ WCF es el modelo de programación unificado de Microsoft para compilar aplicacio
 |---------|---------------------|  
 |Habilita los servicios de compilación que admiten varios protocolos de transporte (HTTP, TCP, UDP y transportes personalizados) y permite cambiar entre ellos.|Sólo HTTP. Modelo de programación de primera clase para HTTP. Más adecuado para el acceso de varios exploradores, dispositivos móviles, habilitar etcetera alcanzar todo.|  
 |Habilita servicios de compilación que admiten varias codificaciones (texto, MTOM y binario) del mismo tipo de mensaje y permite cambiar entre ellas.|Permite compilar API web que admiten una amplia variedad de tipos de medios, incluso XML, JSON, etc.|  
-|Admite servicios de compilación con estándares WS-* como mensajería confiable, transacciones o seguridad de mensajes.|Usa el protocolo básico y formatos como HTTP, WebSockets, SSL, JQuery, JSON y XML. No hay compatibilidad para protocolos de nivel superior como la mensajería confiable o las transacciones.|  
+|Admite servicios de compilación con estándares WS-* como mensajería confiable, transacciones o seguridad de mensajes.|Usa el protocolo básico y formatos como HTTP, WebSockets, SSL, JSON y XML. No hay compatibilidad para protocolos de nivel superior como la mensajería confiable o las transacciones.|  
 |Admite patrones de intercambio de mensajes de solicitud-respuesta, unidireccionales y dúplex.|HTTP es solicitud/respuesta, pero otros patrones que pueden ser compatibles mediante [SignalR](https://github.com/SignalR/SignalR) e integración de WebSockets.|  
 |Los servicios WCF SOAP se pueden describir en WSDL lo que permite que las herramientas automatizadas generen servidores proxy de cliente incluso para los servicios con esquemas complejos.|Existen varias formar de describir una API web, desde páginas de ayuda HTML generadas automáticamente que describen fragmentos de código hasta metadatos estructurados para API integradas OData.|  
 |Se incluye en .NET Framework.|Se incluye en .NET framework pero es código abierto y también está disponible fuera de banda como una descarga independiente.|  
