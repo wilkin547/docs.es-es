@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 0b0c4b0f-4a47-4f66-9b8e-f5c63b195960
-ms.openlocfilehash: 2bb94b3f1f4966ed44b2a5d4f14dfeee29707059
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: e626eeb1f3de2716e1ffe4fcbec1c16558e5bf0e
+ms.sourcegitcommit: a3ba258f7a8cab5c6d19a3743dd95e904ecebc44
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="deconstructing-tuples-and-other-types"></a>Deconstruir tuplas y otros tipos #
 
@@ -34,7 +34,7 @@ C# incluye compatibilidad integrada para deconstruir tuplas, lo que permite dese
 var (name, address, city, zip) = contact.GetAddressInfo();
 ```
 
-Hay dos formas de deconstruir una tupla:
+Hay tres formas de anular una tupla:
 
 - Se puede declarar explícitamente el tipo de cada campo entre paréntesis. En el ejemplo siguiente se usa este enfoque para deconstruir la tupla de 3 devuelta por el método `QueryCityData`.
 
@@ -50,9 +50,15 @@ Hay dos formas de deconstruir una tupla:
 
     Esto es complicado y no se recomienda.
 
+- Por último, puede anular la tupla en variables que ya se ha declarado.
+
+    [!code-csharp[Deconstruction-Declared](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-tuple5.cs#1)]
+
 Tenga en cuenta que no se puede especificar un tipo determinado fuera de los paréntesis, aunque todos los campos de la tupla tengan el mismo tipo. Esto genera el error del compilador CS8136: “El formato de desconstrucción ‘var (...)’ no permite especificar un tipo determinado para ‘var’”.
 
 Tenga en cuenta que también debe asignar cada elemento de la tupla a una variable. Si se omite algún elemento, el compilador genera el error CS8132: "No se puede deconstruir una tupla de 'x' elementos en 'y' variables".
+
+Tenga en cuenta que no se pueden mezclar las declaraciones y las asignaciones de variables existentes en el lado izquierdo de una anulación de la construcción. El compilador genera el error CS8184, "no puede mezclar una anulación de la construcción declaraciones y expresiones situadas a la izquierda en el lado". Cuando los miembros incluyen variables recién declaradas y existentes.
 
 ## <a name="deconstructing-tuple-elements-with-discards"></a>Deconstruir elementos de tupla con descartes
 
