@@ -23,7 +23,7 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 10/18/2017
 ---
 # <a name="thread-pool-etw-events"></a><span data-ttu-id="78bbc-102">Eventos ETW de grupo de subprocesos</span><span class="sxs-lookup"><span data-stu-id="78bbc-102">Thread Pool ETW Events</span></span>
-<span data-ttu-id="78bbc-103"><a name="top"></a> Estos eventos recopilan información sobre los subprocesos de E/S y de trabajo.</span><span class="sxs-lookup"><span data-stu-id="78bbc-103"><a name="top"></a> These events collect information about worker and I/O threads.</span></span>  
+<a name="top"></a> <span data-ttu-id="78bbc-103">Estos eventos recopilan información sobre los subprocesos de E/S y de trabajo.</span><span class="sxs-lookup"><span data-stu-id="78bbc-103">These events collect information about worker and I/O threads.</span></span>  
   
  <span data-ttu-id="78bbc-104">Hay dos grupos de eventos de grupo de subprocesos:</span><span class="sxs-lookup"><span data-stu-id="78bbc-104">There are two groups of thread pool events:</span></span>  
   
