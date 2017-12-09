@@ -27,7 +27,7 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/21/2017
 ---
 # <a name="managed-execution-process"></a><span data-ttu-id="363ae-102">proceso de ejecución administrada</span><span class="sxs-lookup"><span data-stu-id="363ae-102">Managed Execution Process</span></span>
-<span data-ttu-id="363ae-103"><a name="introduction"></a> El proceso de ejecución administrada incluye los pasos siguientes, que se describen en detalle más adelante en este tema:</span><span class="sxs-lookup"><span data-stu-id="363ae-103"><a name="introduction"></a> The managed execution process includes the following steps, which are discussed in detail later in this topic:</span></span>  
+<a name="introduction"></a> <span data-ttu-id="363ae-103">El proceso de ejecución administrada incluye los pasos siguientes, que se describen en detalle más adelante en este tema:</span><span class="sxs-lookup"><span data-stu-id="363ae-103">The managed execution process includes the following steps, which are discussed in detail later in this topic:</span></span>  
   
 1.  <span data-ttu-id="363ae-104">[Elegir un compilador](#choosing_a_compiler).</span><span class="sxs-lookup"><span data-stu-id="363ae-104">[Choosing a compiler](#choosing_a_compiler).</span></span>  
   

@@ -31,7 +31,7 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 10/18/2017
 ---
 # <a name="alternation-constructs-in-regular-expressions"></a><span data-ttu-id="4827d-102">Construcciones de alternancia en expresiones regulares</span><span class="sxs-lookup"><span data-stu-id="4827d-102">Alternation Constructs in Regular Expressions</span></span>
-<span data-ttu-id="4827d-103"><a name="top"></a> Las construcciones de alternancia modifican una expresión regular para habilitar la coincidencia condicional o “either/or”.</span><span class="sxs-lookup"><span data-stu-id="4827d-103"><a name="top"></a> Alternation constructs modify a regular expression to enable either/or or conditional matching.</span></span> <span data-ttu-id="4827d-104">.NET admite tres construcciones de alternancia:</span><span class="sxs-lookup"><span data-stu-id="4827d-104">.NET supports three alternation constructs:</span></span>  
+<a name="top"></a> <span data-ttu-id="4827d-103">Las construcciones de alternancia modifican una expresión regular para habilitar la coincidencia condicional o “either/or”.</span><span class="sxs-lookup"><span data-stu-id="4827d-103">Alternation constructs modify a regular expression to enable either/or or conditional matching.</span></span> <span data-ttu-id="4827d-104">.NET admite tres construcciones de alternancia:</span><span class="sxs-lookup"><span data-stu-id="4827d-104">.NET supports three alternation constructs:</span></span>  
   
 -   [<span data-ttu-id="4827d-105">Coincidencia de patrones con &#124;</span><span class="sxs-lookup"><span data-stu-id="4827d-105">Pattern matching with &#124;</span></span>](#Either_Or)  
   

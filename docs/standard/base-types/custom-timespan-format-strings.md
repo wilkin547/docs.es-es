@@ -47,7 +47,7 @@ ms.lasthandoff: 11/21/2017
  [!code-csharp[Conceptual.TimeSpan.Custom#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.timespan.custom/cs/customparseexample1.cs#2)]
  [!code-vb[Conceptual.TimeSpan.Custom#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.custom/vb/customparseexample1.vb#2)]  
   
-<span data-ttu-id="f02d7-117"><a name="table"></a>En la tabla siguiente describe los especificadores de formato de tiempo y fechas personalizado.</span><span class="sxs-lookup"><span data-stu-id="f02d7-117"><a name="table"></a> The following table describes the custom date and time format specifiers.</span></span>  
+<a name="table"></a><span data-ttu-id="f02d7-117">En la tabla siguiente describe los especificadores de formato de tiempo y fechas personalizado.</span><span class="sxs-lookup"><span data-stu-id="f02d7-117">The following table describes the custom date and time format specifiers.</span></span>  
   
 |<span data-ttu-id="f02d7-118">Especificador de formato</span><span class="sxs-lookup"><span data-stu-id="f02d7-118">Format specifier</span></span>|<span data-ttu-id="f02d7-119">Descripción</span><span class="sxs-lookup"><span data-stu-id="f02d7-119">Description</span></span>|<span data-ttu-id="f02d7-120">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="f02d7-120">Example</span></span>|  
 |----------------------|-----------------|-------------|  
