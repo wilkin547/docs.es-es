@@ -12,11 +12,11 @@ ms.assetid: 50725c24-ac76-4ca7-bca1-dd57642ffedb
 caps.latest.revision: "36"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 69a3a575347a62b298c17af050cb925f7819b552
-ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
+ms.openlocfilehash: 23a3299492c538963e9a5dceaadc81a44d386b19
+ms.sourcegitcommit: 401c4427a3ec0d1263543033b3084039278509dc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 12/06/2017
 ---
 # <a name="await-c-reference"></a>await (Referencia de C#)
 El operador `await` se aplica a una tarea de un método asincrónico para insertar un punto de suspensión en la ejecución del método hasta que la tarea en espera se complete. La tarea representa el trabajo en curso.  
@@ -34,7 +34,7 @@ La tarea a la que se aplica el operador `await` se devuelve normalmente mediante
 [!code-csharp[await-example](../../../../samples/snippets/csharp/language-reference/keywords/await/await1.cs)]  
 
 > [!IMPORTANT]
->  Para obtener el ejemplo completo, vea [Walkthrough: Accessing the Web by Using Async and Await](../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md) (Tutorial: Acceso a la web usando Async y Await). Puede descargar el ejemplo desde [Ejemplos de código para desarrolladores](http://go.microsoft.com/fwlink/?LinkID=255191) en el sitio web de Microsoft. El ejemplo está en el proyecto AsyncWalkthrough_HttpClient.  
+>  Para obtener el ejemplo completo, vea [Walkthrough: Accessing the Web by Using Async and Await](../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md) (Tutorial: Acceso a la web usando Async y Await). Puede descargar el ejemplo desde [Ejemplos de código para desarrolladores](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f) en el sitio web de Microsoft. El ejemplo está en el proyecto AsyncWalkthrough_HttpClient.  
   
 Tal y como se muestra en el ejemplo anterior, si `await` se aplica al resultado de una llamada al método que devuelve `Task<TResult>`, el tipo de la expresión `await` es `TResult`. Si `await` se aplica al resultado de una llamada al método que devuelve `Task`, el tipo de la expresión `await` es `void`. En el siguiente ejemplo se ilustra la diferencia.  
   

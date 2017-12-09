@@ -1,3 +1,4 @@
+### YamlMime:YamlDocument
 documentType: Tutorial
 title: "Números en C#"
 metadata:
@@ -10,14 +11,14 @@ metadata:
   nextTutorialTitle: Bifurcaciones y bucles en C#
   displayType: two-column
   interactive: csharp
-items:
-- durationInMinutes: 1
-  content: "Este inicio rápido explican los tipos numéricos en C# de forma interactiva, usando el explorador para escribir C# y ver los resultados de compilación y ejecución del código. Contiene una serie de lecciones que ofrecen información detallada sobre los números y las operaciones matemáticas en C#. En ellas se enseñan los aspectos básicos del lenguaje C#.\n"
   ms.openlocfilehash: bc859589078d1e2d16145125a80e738837c1ebf9
   ms.sourcegitcommit: 43c656811dd38a66a6672084c65d10c0cbbf2015
   ms.translationtype: HT
   ms.contentlocale: es-ES
   ms.lasthandoff: 11/22/2017
+items:
+- durationInMinutes: 1
+  content: "Este inicio rápido explican los tipos numéricos en C# de forma interactiva, usando el explorador para escribir C# y ver los resultados de compilación y ejecución del código. Contiene una serie de lecciones que ofrecen información detallada sobre los números y las operaciones matemáticas en C#. En ellas se enseñan los aspectos básicos del lenguaje C#.\n"
 - title: "Análisis de las operaciones matemáticas con enteros"
   durationInMinutes: 4
   content: "Ejecute el código siguiente en la ventana interactiva. Para ello, escriba el siguiente bloque de código en la ventana interactiva y haga clic en el botón **Ejecutar**:\n\n```csharp\nint a = 18;\nint b = 6;\nint c = a + b;\nConsole.WriteLine(c);\n```\n\nYa ha visto una de las operaciones matemáticas fundamentales con enteros. El tipo `int` representa un **entero**, que puede ser un número entero positivo o negativo. Use el símbolo `+` para la suma. Otros operadores matemáticos comunes con enteros son:\n\n- `-` para resta\n- `*` para multiplicación\n- `/` para división\n\n> [!TIP]\n> En esta guía de inicio rápido, puede explorarlo por su cuenta modificando el código que ha escrito en la ventana interactiva. Este tutorial proporciona ejemplos que puede probar en cada paso.\n\nComience por explorar esas operaciones diferentes. Modifique la tercera línea para probar cada una de estas operaciones. Después de cada modificación, haga clic en el botón **Ejecutar**.\n\nResta:\n\n```csharp\nint c = a - b;\n```\n\nMultiplicación:\n\n```csharp\nint c = a * b;\n```\n\nDivisión: \n\n```csharp\nint c = a / b;\n```\n\nSi lo desea, también puede experimentar con la realización de varias operaciones matemáticas en la misma línea.\n\n> [!TIP]\n> Cuando explore C# o cualquier otro lenguaje de programación, cometerá errores al escribir código. El **compilador** buscará dichos errores y los notificará. Si la salida contiene mensajes de error, revise detenidamente el ejemplo de código y el código de la ventana interactiva para saber qué debe corregir.\n> Este ejercicio le ayudará a aprender la estructura del código de C#.     \n\n> [!NOTE]\n> Esta experiencia de codificación en línea se encuentra disponible actualmente en versión preliminar. Si tiene problemas, notifíquelos [en el repositorio de dotnet/try](https://github.com/dotnet/try/issues).\n"

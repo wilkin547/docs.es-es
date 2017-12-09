@@ -12,11 +12,11 @@ ms.assetid: cfb8f42a-e411-4db2-af9b-796b05644846
 caps.latest.revision: "21"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 2661f46d79b13808bfb169bfbfffc1a17b866b2b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: eab79d3ac48192f3c176ed44685ab58e50fc89be
+ms.sourcegitcommit: 401c4427a3ec0d1263543033b3084039278509dc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/06/2017
 ---
 # <a name="explicit-c-reference"></a>explicit (Referencia de C#)
 La palabra clave `explicit` declara un operador de conversión de tipo definido por el usuario que se debe invocar con una conversión. Por ejemplo, este operador convierte una clase denominada Fahrenheit en una clase denominada Celsius:  
@@ -53,4 +53,4 @@ La palabra clave `explicit` declara un operador de conversión de tipo definido 
  [implicit](../../../csharp/language-reference/keywords/implicit.md)  
  [Operador (Referencia de C#)](../../../csharp/language-reference/keywords/operator.md)  
  [Cómo: Implementar conversiones definidas por el usuario entre structs](../../../csharp/programming-guide/statements-expressions-operators/how-to-implement-user-defined-conversions-between-structs.md)  
- [Chained user-defined explicit conversions in C#](http://go.microsoft.com/fwlink/?LinkId=112384) (Conversiones explícitas encadenadas definidas por el usuario en C#)
+ [Chained user-defined explicit conversions in C#](https://blogs.msdn.microsoft.com/ericlippert/2007/04/16/chained-user-defined-explicit-conversions-in-c/) (Conversiones explícitas encadenadas definidas por el usuario en C#)

@@ -13,11 +13,11 @@ ms.assetid: bd0e7493-b79d-4369-9c3f-ba26ebdfbedf
 caps.latest.revision: "35"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 3063a29452d90a09d5904d2a598b62530104d739
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: bc8720662fb4c91953e2d399f08613f5055b1158
+ms.sourcegitcommit: 401c4427a3ec0d1263543033b3084039278509dc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/06/2017
 ---
 # <a name="errorreport-c-compiler-options"></a>/errorreport (Opciones del compilador de C#)
 Esta opción proporciona una forma cómoda de notificar un error interno del compilador de C# a Microsoft.  
@@ -51,7 +51,7 @@ Esta opción proporciona una forma cómoda de notificar un error interno del com
   
  La capacidad de un usuario de enviar informes depende de los permisos de directiva de equipo y de usuario.  
   
- Para obtener más información sobre el depurador de errores, vea [Descripción de la herramienta Dr. Watson para Windows (Drwtsn32.exe)](http://go.microsoft.com/fwlink/?LinkId=147286).  
+ Para obtener más información sobre el depurador de errores, vea [Descripción de la herramienta Dr. Watson para Windows (Drwtsn32.exe)](https://support.microsoft.com/help/308538/description-of-the-dr--watson-for-windows-drwtsn32-exe-tool).  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del compilador en el entorno de desarrollo de Visual Studio  
   

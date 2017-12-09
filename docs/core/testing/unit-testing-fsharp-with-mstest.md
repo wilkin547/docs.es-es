@@ -7,11 +7,11 @@ ms.date: 08/30/2017
 ms.topic: article
 dev_langs: fsharp
 ms.prod: .net-core
-ms.openlocfilehash: f8ea697596f144fdd6d50c871399388a075ba935
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: ad869d6b66ad5d966037a3ef38154fadcfa5978b
+ms.sourcegitcommit: 401c4427a3ec0d1263543033b3084039278509dc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/06/2017
 ---
 # <a name="unit-testing-f-libraries-in-net-core-using-dotnet-test-and-mstest"></a>Bibliotecas de F# de prueba unitaria en .NET Core con pruebas de dotnet y MSTest
 
@@ -106,7 +106,7 @@ type TestClass () =
      member this.FailEveryTime() = Assert.IsTrue(false)
 ```
 
-El atributo `[<TestClass>]` indica una clase que contiene pruebas. El atributo `[<TestMethod>]` indica un método de prueba que el ejecutor de pruebas ejecuta. En el directorio *unit-testing-with-fsharp*, ejecute [`dotnet test`](../tools/dotnet-test.md) para compilar las pruebas y la biblioteca de clases y luego ejecutar las pruebas. El ejecutor de pruebas de xUnit tiene el punto de entrada del programa para ejecutar las pruebas desde la consola. `dotnet test` inicia el ejecutor de pruebas con el proyecto de prueba unitaria que creó.
+El atributo `[<TestClass>]` indica una clase que contiene pruebas. El atributo `[<TestMethod>]` indica un método de prueba que el ejecutor de pruebas ejecuta. En el directorio *unit-testing-with-fsharp*, ejecute [`dotnet test`](../tools/dotnet-test.md) para compilar las pruebas y la biblioteca de clases y luego ejecutar las pruebas. El ejecutor de pruebas de MSTest tiene el punto de entrada del programa para ejecutar las pruebas desde la consola. `dotnet test` inicia el ejecutor de pruebas con el proyecto de prueba unitaria que creó.
 
 Estas dos pruebas muestran las pruebas superadas y con errores más básicas. `My test` indica que se supera y `Fail every time` indica que no. Ahora, cree una prueba para el método `sumOfSquares`. El método `sumOfSquares` devuelve la suma de los cuadrados de todos los valores enteros impares que forman parte de la secuencia de entrada. En lugar de intentar escribir todas esas funciones a la vez, puede crear de forma iterativa pruebas que validen la funcionalidad. Hacer cada prueba superada significa crear la funcionalidad necesaria para el método.
 
@@ -114,13 +114,13 @@ La prueba más sencilla que se puede escribir es llamar a `sumOfSquares` con tod
 
 ```fsharp
 [<TestMethod>]
-member this.TestEvenSequence() = 
+member this.TestEvenSequence() =
     let expected = Seq.empty<int> |> Seq.toList
     let actual = MyMath.sumOfSquares [2; 4; 6; 8; 10]
     Assert.AreEqual(expected, actual)
 ```
 
-Observe que la secuencia `expected` se convirtió en lista. La biblioteca de MSTest se basa en muchos tipos de .NET estándar. Esa dependencia significa que la interfaz pública y los resultados esperados admiten <xref:System.Collections.ICollection> en lugar de <xref:System.Collections.IEnumerable>. 
+Observe que la secuencia `expected` se convirtió en lista. La biblioteca de MSTest se basa en muchos tipos de .NET estándar. Esa dependencia significa que la interfaz pública y los resultados esperados admiten <xref:System.Collections.ICollection> en lugar de <xref:System.Collections.IEnumerable>.
 
 Cuando ejecuta la prueba, se observa que no se supera la prueba. Todavía no ha creado la implementación. Cree esta prueba escribiendo el código más simple en la clase `Mathservice` que funciona:
 
@@ -171,9 +171,9 @@ Puede corregir la prueba si canaliza la secuencia filtrada a través de una oper
 let private square x = x * x
 let private isOdd x = x % 2 <> 0
 
-let sumOfSquares xs = 
-    xs 
-    |> Seq.filter isOdd 
+let sumOfSquares xs =
+    xs
+    |> Seq.filter isOdd
     |> Seq.map square
     |> Seq.toList
 ```
