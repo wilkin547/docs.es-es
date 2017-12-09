@@ -30,7 +30,7 @@ ms.lasthandoff: 11/21/2017
   
 -   <span data-ttu-id="fbc99-111">Un segundo equipo en el que estén instalados .NET Framework 4 o superior y una versión diferente de Excel.</span><span class="sxs-lookup"><span data-stu-id="fbc99-111">A second computer on which the .NET Framework 4 or higher and a different version of Excel are installed.</span></span>  
   
-##  <span data-ttu-id="fbc99-112"><a name="BKMK_createapp"></a> Para crear una aplicación que funcione con varias versiones de Microsoft Office</span><span class="sxs-lookup"><span data-stu-id="fbc99-112"><a name="BKMK_createapp"></a> To create an application that works with multiple versions of Microsoft Office</span></span>  
+##  <a name="BKMK_createapp"></a> <span data-ttu-id="fbc99-112">Para crear una aplicación que funcione con varias versiones de Microsoft Office</span><span class="sxs-lookup"><span data-stu-id="fbc99-112">To create an application that works with multiple versions of Microsoft Office</span></span>  
   
 1.  <span data-ttu-id="fbc99-113">Inicie Visual Studio en un equipo en el que esté instalado Excel.</span><span class="sxs-lookup"><span data-stu-id="fbc99-113">Start Visual Studio on a computer on which Excel is installed.</span></span>  
   
@@ -106,7 +106,7 @@ ms.lasthandoff: 11/21/2017
   
 9. <span data-ttu-id="fbc99-131">Pulse CTRL+F5 para compilar y ejecutar el proyecto.</span><span class="sxs-lookup"><span data-stu-id="fbc99-131">Press CTRL+F5 to build and run the project.</span></span> <span data-ttu-id="fbc99-132">Compruebe que se ha creado un libro de Excel en la ubicación especificada en el código de ejemplo: C:\SampleFolder\SampleWorkbook.xls.</span><span class="sxs-lookup"><span data-stu-id="fbc99-132">Verify that an Excel workbook has been created at the location specified in the example code: C:\SampleFolder\SampleWorkbook.xls.</span></span>  
   
-##  <span data-ttu-id="fbc99-133"><a name="BKMK_publishapp"></a> Para publicar la aplicación en un equipo en el que está instalada una versión diferente de Microsoft Office</span><span class="sxs-lookup"><span data-stu-id="fbc99-133"><a name="BKMK_publishapp"></a> To publish the application to a computer on which a different version of Microsoft Office is installed</span></span>  
+##  <a name="BKMK_publishapp"></a> <span data-ttu-id="fbc99-133">Para publicar la aplicación en un equipo en el que está instalada una versión diferente de Microsoft Office</span><span class="sxs-lookup"><span data-stu-id="fbc99-133">To publish the application to a computer on which a different version of Microsoft Office is installed</span></span>  
   
 1.  <span data-ttu-id="fbc99-134">Abra el proyecto creado mediante este tutorial en Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="fbc99-134">Open the project created by this walkthrough in Visual Studio.</span></span>  
   
