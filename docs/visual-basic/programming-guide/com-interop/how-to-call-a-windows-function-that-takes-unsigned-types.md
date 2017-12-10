@@ -23,11 +23,11 @@ ms.assetid: c2c0e712-8dc2-43b9-b4c6-345fbb02e7ce
 caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: d1d59c29a83ede97d90926c8e499788676e2c235
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 5b1a306ba694d4bbfc4719fc728112964b1ce40f
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="how-to-call-a-windows-function-that-takes-unsigned-types-visual-basic"></a>Cómo: Llamar a una función de Windows que adopta tipos sin signo (Visual Basic)
 Si va a consumir una clase, módulo o estructura que contiene los miembros de tipos enteros sin signo, puede tener acceso a estos miembros con [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
@@ -77,7 +77,7 @@ Si va a consumir una clase, módulo o estructura que contiene los miembros de ti
     ```  
   
     > [!CAUTION]
-    >  El `UInteger`, `ULong`, `UShort`, y `SByte` tipos de datos no son parte de la [independencia del lenguaje y componentes independientes del lenguaje](https://msdn.microsoft.com/library/12a7a7h3) (CLS), por lo que el código conforme a CLS no puede utilizar un componente que los utiliza.  
+    >  El `UInteger`, `ULong`, `UShort`, y `SByte` tipos de datos no son parte de la [independencia del lenguaje y componentes independientes del lenguaje](../../../../docs/standard/language-independence-and-language-independent-components.md) (CLS), por lo que el código conforme a CLS no puede utilizar un componente que los utiliza.  
   
     > [!IMPORTANT]
     >  Realizar una llamada a código no administrado, como la interfaz de programación de aplicaciones (API) de Windows expone su código a posibles riesgos de seguridad.  

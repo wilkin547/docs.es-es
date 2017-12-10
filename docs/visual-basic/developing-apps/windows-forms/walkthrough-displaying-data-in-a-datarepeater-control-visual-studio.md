@@ -13,11 +13,11 @@ ms.assetid: 65dcdb95-6c3e-47cc-987d-190000f71653
 caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 39c3b56404c981e674766354463e23aa349994cf
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 6f0cf690b816d57dc4a2646eb82d649727d033a9
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="walkthrough-displaying-data-in-a-datarepeater-control-visual-studio"></a>Tutorial: Mostrar los datos enlazados en un control DataRepeater (Visual Studio)
 En este tutorial se proporciona un escenario básico de principio a fin para mostrar datos enlazados en un control <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> .  
@@ -25,7 +25,7 @@ En este tutorial se proporciona un escenario básico de principio a fin para mos
 ## <a name="prerequisite"></a>Requisito previo  
  Este tutorial requiere la base de datos de ejemplo Northwind.  
   
- Si no dispone de esta base de datos en el equipo de desarrollo, puede descargarla del [Centro de descarga de Microsoft](http://go.microsoft.com/fwlink/?LinkID=98088). Para obtener instrucciones, consulte [descargar bases de datos de ejemplo](https://msdn.microsoft.com/library/bb399411).  
+ Si no dispone de esta base de datos en el equipo de desarrollo, puede descargarla del [Centro de descarga de Microsoft](http://go.microsoft.com/fwlink/?LinkID=98088). Para obtener instrucciones, consulte [descargar bases de datos de ejemplo](../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md).  
   
 ## <a name="overview"></a>Información general  
  La primera parte de este tutorial se compone de cuatro tareas principales:  

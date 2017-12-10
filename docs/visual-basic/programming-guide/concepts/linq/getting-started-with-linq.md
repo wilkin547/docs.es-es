@@ -18,11 +18,11 @@ ms.assetid: 53c66373-ff43-431f-b4bb-f98362830279
 caps.latest.revision: "23"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 02672e88709dbe01aedcc31c76819728ca30dfb9
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 53087db3225ffd66be39a496057758cfc80d27b6
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="getting-started-with-linq-in-visual-basic"></a>Introducción a LINQ en Visual Basic
 Esta sección contiene información general, ejemplos e información general que le ayudará a comprender y usar Visual Basic y Language-Integrated Query (LINQ).  
@@ -53,7 +53,7 @@ Esta sección contiene información general, ejemplos e información general que
  [Información general del conjunto de datos LINQ to](../../../../framework/data/adonet/linq-to-dataset-overview.md)  
  Proporciona una introducción general de LINQ to DataSet.  
   
- [LINQ to SQL](https://msdn.microsoft.com/library/bb386976)  
+ [LINQ to SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md)  
  Explica el LINQ a la tecnología SQL y proporciona vínculos a temas que le ayudarán a usan LINQ to SQL.  
   
  [Compatibilidad del IDE y las herramientas de Visual Studio con LINQ (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/visual-studio-ide-and-tools-support-for-linq.md)  

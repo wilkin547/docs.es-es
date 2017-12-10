@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 8b2ed206-34e4-4256-a6ce-0c2499561165
-ms.openlocfilehash: d2a92f725c40443c8dc6af593d28deccd3ee88de
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f56fed1e16b4de1d97766f37cb1c72297d5502d5
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="configuring-projects-in-visual-studio"></a>Configurar los proyectos en Visual Studio
 
@@ -32,7 +32,7 @@ El **Diseñador de proyectos** y su uso general se describen totalmente en el te
 |`Build`|[Generar página, Diseñador de proyectos &#40; C &#35; &#41;](https://msdn.microsoft.com/library/kb4wyys2.aspx)|Le permite controlar cómo se compila el código.|
 |`Build Events`|[Crear página de eventos, Diseñador de proyectos &#40; C &#35; &#41;](https://msdn.microsoft.com/library/kb4wyys2.aspx)|Le permite especificar comandos que se ejecuten antes o después de la compilación.|
 |`Debug`|[Página Depuración, Diseñador de proyectos](https://msdn.microsoft.com/library/2wcdezs5.aspx)|Le permite controlar cómo se ejecuta la aplicación durante la depuración. Esto incluye qué línea de comandos que se usará y ¿qué es el directorio de inicio de la aplicación y cualquier especiales que desea habilitar, como código nativo y SQL de modos de depuración.|
-|`Reference Paths`|[Administrar referencias en un proyecto](https://msdn.microsoft.com/library/ez524kew.aspx)|Le permite especificar dónde buscar los ensamblados que depende el código.|
+|`Reference Paths`|[Administrar referencias en un proyecto](/visualstudio/ide/managing-references-in-a-project)|Le permite especificar dónde buscar los ensamblados que depende el código.|
 
 ## <a name="f-specific-settings"></a>F #-configuración específica
 En la tabla siguiente resume la configuración que es específicos de F #:

@@ -15,11 +15,11 @@ ms.assetid: f5a72143-c268-4dff-a019-974ad940e17d
 caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: d9347f7771e0e86f9a19cbec94ef59dcf1bdb250
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.openlocfilehash: 28ec54dc062d4fdea4836b0ecc8699982dace623
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="com-interoperability-in-net-framework-applications-visual-basic"></a>Interoperabilidad COM en aplicaciones .NET Framework (Visual Basic)
 Si desea utilizar objetos COM y objetos de .NET Framework en la misma aplicación, debe resolver las diferencias en cómo los objetos existen en la memoria. Un objeto de .NET Framework se encuentra en la memoria administrada, la memoria controlada por common language runtime y se pueden mover en tiempo de ejecución según sea necesario. Un objeto COM se encuentra en la memoria no administrada y no se prevé que se mueva a otra ubicación de memoria. [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]y el [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] proporcionan herramientas para controlar la interacción de estos administrados y componentes. Para obtener más información sobre el código administrado, consulte [Common Language Runtime](../../../standard/clr.md).  
@@ -35,7 +35,7 @@ Si desea utilizar objetos COM y objetos de .NET Framework en la misma aplicació
  [Error de contenedor de interoperabilidad COM](/cpp/misc/com-interop-wrapper-error)  
  Describe las opciones y las consecuencias si el sistema del proyecto no puede crear un contenedor de interoperabilidad COM para un componente determinado.  
   
- [Interoperating with Unmanaged Code](https://msdn.microsoft.com/library/sd10k43k) (Interoperar con código no administrado)  
+ [Interoperating with Unmanaged Code](../../../../docs/framework/interop/index.md) (Interoperar con código no administrado)  
  Describe algunos de los problemas de interacción entre código administrado y brevemente y proporciona vínculos a más información.  
   
  [Contenedores COM](../../../framework/interop/com-wrappers.md)  

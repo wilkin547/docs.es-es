@@ -12,22 +12,22 @@ ms.assetid: fcf78ff1-f1ab-4a5d-b6d8-00d2046b6c80
 caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 8a53a153851973c735a430056520b01c27b1ef59
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9ef4306da5c093b8302e377cc3b68d5700b8dfa8
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="assemblies-and-the-global-assembly-cache-visual-basic"></a>Ensamblados y caché global de ensamblados (Visual Basic)
 Los ensamblados componen la unidad fundamental de implementación, control de versiones, reutilización, ámbito de activación y permisos de seguridad en una aplicación basada en .NET. Los ensamblados adoptan la forma de un archivo ejecutable (.exe) o de un archivo de biblioteca de vínculos dinámicos (.dll) y son bloques de compilación de .NET Framework. Proporcionan a Common Language Runtime la información necesaria para conocer las implementaciones de tipos. Puede pensar en un ensamblado como si fuera una colección de tipos y recursos que forman una unidad lógica de funcionalidad y se compilan para funcionar en conjunto.  
   
- Los ensamblados pueden contener uno o varios módulos. Por ejemplo, los proyectos más grandes pueden planearse de forma que varios desarrolladores individuales trabajen en módulos separados, que se unen para crear un ensamblado único. Para obtener más información sobre los módulos, vea el tema [Creación de un ensamblado de varios archivos](https://msdn.microsoft.com/library/226t7yxe).  
+ Los ensamblados pueden contener uno o varios módulos. Por ejemplo, los proyectos más grandes pueden planearse de forma que varios desarrolladores individuales trabajen en módulos separados, que se unen para crear un ensamblado único. Para obtener más información sobre los módulos, vea el tema [Creación de un ensamblado de varios archivos](../../../../../docs/framework/app-domains/how-to-build-a-multifile-assembly.md).  
   
  Los ensamblados tienen las propiedades siguientes:  
   
 -   Los ensamblados son archivos .exe o .dll implementados.  
   
--   Puede compartir un ensamblado entre aplicaciones colocándolo en la caché global de ensamblados. Los ensamblados deben tener un nombre seguro antes de que se puedan incluir en la caché global de ensamblados. Para más información, vea [Ensamblados con nombre seguro](https://msdn.microsoft.com/library/wd40t7ad).  
+-   Puede compartir un ensamblado entre aplicaciones colocándolo en la caché global de ensamblados. Los ensamblados deben tener un nombre seguro antes de que se puedan incluir en la caché global de ensamblados. Para más información, vea [Ensamblados con nombre seguro](../../../../../docs/framework/app-domains/strong-named-assemblies.md).  
   
 -   Los ensamblados solo se cargan en memoria si son necesarios. Si no se utilizan, no se cargan. Esto significa que los ensamblados pueden ser una manera eficaz de administrar recursos en proyectos más grandes.  
   
@@ -46,7 +46,7 @@ Los ensamblados componen la unidad fundamental de implementación, control de ve
   
  Dado que los ensamblados contienen información sobre contenido, control de versiones y dependencias, las aplicaciones creadas con Visual Basic no dependen de los valores del Registro de Windows para funcionar correctamente. Los ensamblados reducen los conflictos de .dll y hacen las aplicaciones más confiables y fáciles de implementar. En muchos casos, puede instalar una aplicación basada en .NET con tan solo copiar sus archivos en el equipo de destino.  
   
- Para más información, vea [Manifiesto del ensamblado](https://msdn.microsoft.com/library/1w45z383).  
+ Para más información, vea [Manifiesto del ensamblado](../../../../../docs/framework/app-domains/assembly-manifest.md).  
   
 ## <a name="adding-a-reference-to-an-assembly"></a>Incorporación de una referencia a un ensamblado  
  Para usar un ensamblado, debe agregar una referencia a él. A continuación, use la [instrucción Imports](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) para elegir el espacio de nombres de los elementos que desea utilizar. Una vez que se hace referencia a un ensamblado y se importa, todas las clases accesibles, propiedades, métodos y otros miembros de sus espacios de nombres están disponibles para la aplicación como si su código formara parte del archivo de origen.  
@@ -58,7 +58,7 @@ Los ensamblados componen la unidad fundamental de implementación, control de ve
 >  Para compilar un ensamblado en Visual Studio, en el menú **Compilar**, seleccione **Compilar**.  
   
 ## <a name="see-also"></a>Vea también  
- [Ensamblados en Common Language Runtime](https://msdn.microsoft.com/library/k3677y81)  
+ [Ensamblados en Common Language Runtime](../../../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
  [Ensamblados de confianza (Visual Basic)](friend-assemblies.md)  
  [Cómo: compartir un ensamblado con otras aplicaciones (Visual Basic)](how-to-share-an-assembly-with-other-applications.md)  
  [Cómo: cargar y descargar ensamblados (Visual Basic)](how-to-load-and-unload-assemblies.md)  

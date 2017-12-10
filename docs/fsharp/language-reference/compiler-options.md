@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: c797cf0b-5953-4053-8626-0558e9eaf10f
-ms.openlocfilehash: 0857418141a2383795d736fd507fcab5dbeaba24
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 4bc9861f489eb068ca58656ab4ee9d43e8d212d5
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="compiler-options"></a>Opciones del compilador
 
@@ -81,4 +81,4 @@ La siguiente tabla muestra las opciones del compilador por orden alfabético. Al
 |Título|Descripción|
 |-----|-----------|
 |[Opciones de F# Interactive](../tutorials/fsharp-interactive/fsharp-interactive-options.md)|Describe las opciones de línea de comandos admitidas por el intérprete de F #, fsi.exe.|
-|[Referencia de propiedades del proyecto](https://msdn.microsoft.com/library/16satcwx.aspx)|Describe la interfaz de usuario para los proyectos, incluidas las páginas de propiedades de proyecto que proporcionan opciones de compilación.|
+|[Referencia de propiedades del proyecto](/visualstudio/ide/reference/project-properties-reference)|Describe la interfaz de usuario para los proyectos, incluidas las páginas de propiedades de proyecto que proporcionan opciones de compilación.|

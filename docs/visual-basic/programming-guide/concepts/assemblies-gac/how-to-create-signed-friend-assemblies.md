@@ -12,11 +12,11 @@ ms.assetid: f2afd83d-b044-484b-a56d-56d0a8a40647
 caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: f87f816992bdfa9ed347c35ba651c59187551772
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9e549eeb67c41b3172dd5a5885d59aa6069716a0
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="how-to-create-signed-friend-assemblies-visual-basic"></a>Cómo: crear ensamblados de confianza firmados (Visual Basic)
 En este ejemplo se muestra cómo usar ensamblados de confianza con ensamblados que tienen nombres seguros. Ambos ensamblados deben tener nombres seguros. Aunque los dos ensamblados de este ejemplo usan las mismas claves, es posible usar claves diferentes para dos ensamblados.  
@@ -100,5 +100,5 @@ En este ejemplo se muestra cómo usar ensamblados de confianza con ensamblados q
  [Cómo: crear ensamblados de confianza sin firmar (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-unsigned-friend-assemblies.md)  
  [/keyfile](../../../../visual-basic/reference/command-line-compiler/keyfile.md)  
  [Sn.exe (Herramienta de nombre seguro)](https://msdn.microsoft.com/library/k5b5tt23)  
- [Crear y utilizar ensamblados con nombre seguro](https://msdn.microsoft.com/library/xwb8f617)  
+ [Crear y utilizar ensamblados con nombre seguro](../../../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)  
  [Conceptos de programación](../../../../visual-basic/programming-guide/concepts/index.md)

@@ -14,11 +14,11 @@ ms.assetid: c76e61a4-1884-4252-9fb2-377f99caa690
 caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 6c42e351808281d90eafdb6e61a3f1736ef15c9d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: dc457a1a32048441f82976488158f223e7e3e087
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="delaysign"></a>/delaysign
 Especifica si el ensamblado estará firmado total o parcialmente.  
@@ -40,7 +40,7 @@ Especifica si el ensamblado estará firmado total o parcialmente.
   
  Por ejemplo, al usar `/delaysign+`, un desarrollador de una organización distribuye versiones de prueba sin firma de un ensamblado que los evaluadores pueden utilizar y registrar con la caché global de ensamblados. Cuando se completa el trabajo en el ensamblado, la persona responsable de la clave privada de la organización puede firmar completamente el ensamblado. Esta división de funciones protege la clave privada de la organización contra la divulgación, permitiendo a los desarrolladores trabajar en los ensamblados.  
   
- Vea [crear y utilizar ensamblados](https://msdn.microsoft.com/library/xwb8f617) para obtener más información sobre cómo firmar un ensamblado.  
+ Vea [crear y utilizar ensamblados](../../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md) para obtener más información sobre cómo firmar un ensamblado.  
   
 ### <a name="to-set-delaysign-in-the-visual-studio-integrated-development-environment"></a>Para establecer /delaysign en Visual Studio integra el entorno de desarrollo  
   

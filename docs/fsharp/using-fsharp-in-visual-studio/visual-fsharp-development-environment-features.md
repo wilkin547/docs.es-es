@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 809e9a34-b271-4c87-8356-2426b44f4721
-ms.openlocfilehash: bcba1e5d1cae1c610525c51bdbdd54088359e79a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 05727bf11eccfd64f823dd280b1a19210815ca5a
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="visual-f-development-environment-features"></a>Características del entorno de desarrollo de Visual F#
 
@@ -50,7 +50,7 @@ En la tabla siguiente se resume las características de propiedades del proyecto
 |Seguridad (cambiar niveles de confianza)|No||
 
 ## <a name="code-and-text-editor-features"></a>Características de Editor de texto y código
-Se admiten las siguientes características de los editores de texto y Studiocode Visual en F #. Para obtener información general sobre la edición de código en Visual Studio y las características del editor de texto, consulte [escribir código en el Editor de texto y código](https://msdn.microsoft.com/library/efc4xwkb.aspx).
+Se admiten las siguientes características de los editores de texto y Studiocode Visual en F #. Para obtener información general sobre la edición de código en Visual Studio y las características del editor de texto, consulte [escribir código en el Editor de texto y código](/visualstudio/ide/writing-code-in-the-code-and-text-editor).
 
 |Característica|Descripción|¿Se admite en F #?|
 |-------|-----------|----------------|
@@ -58,18 +58,18 @@ Se admiten las siguientes características de los editores de texto y Studiocode
 |Dar formato automáticamente|Cambia el formato de código con sangría estándar y el estilo.|No|
 |Marcadores|Permite guardar lugares en el editor.|Sí|
 |Cambiar la sangría|Aplica una sangría o anula la sangría de las líneas seleccionadas.|Sí|
-|[Buscar y reemplazar texto](https://msdn.microsoft.com/library/139eef4h.aspx)|Permite buscar en un archivo, proyecto o solución y, potencialmente, cambiar texto.|Sí|
+|[Buscar y reemplazar texto](/visualstudio/ide/finding-and-replacing-text)|Permite buscar en un archivo, proyecto o solución y, potencialmente, cambiar texto.|Sí|
 |Vaya a la definición de la API de .NET Framework|Cuando el cursor se sitúa en una API de .NET Framework, muestra código generado a partir de metadatos de .NET Framework.|No|
 |Vaya a la definición de la API definida por el usuario|Cuando el cursor está en una entidad de programa que ha definido, mueve el cursor a la ubicación en el código donde se define la entidad.|Sí|
 |Ir a la línea|Le permite obtener acceso a una línea específica en un archivo, por número de línea.|Sí|
 |Barras de navegación en la parte superior del archivo|Le permite saltar a ubicaciones del código, por ejemplo, nombre de la función.|Sí|
-|Esquematización. Vea [esquematización](https://msdn.microsoft.com/library/td6a5x4s.aspx).|Puede contraer secciones del código para crear una vista más compacta.|Sí|
+|Esquematización. Vea [esquematización](/visualstudio/ide/outlining).|Puede contraer secciones del código para crear una vista más compacta.|Sí|
 |Aplicar tabulaciones a|Convierte los espacios en tabulaciones.|Sí|
 |Uso de colores para el tipo|Muestra los nombres de tipo definidos en un color especial.|Sí|
 |Búsqueda rápida. Vea búsqueda rápida, buscar y reemplazar (ventana).|Permite buscar en un archivo o proyecto.|Sí|
 
 ## <a name="intellisense-features"></a>Características de IntelliSense
-En la tabla siguiente se resume las características de IntelliSense compatibles y no compatibles en F #. Para obtener información general acerca de IntelliSense, vea [utilizar IntelliSense](https://msdn.microsoft.com/library/hcw1s69b.aspx).
+En la tabla siguiente se resume las características de IntelliSense compatibles y no compatibles en F #. Para obtener información general acerca de IntelliSense, vea [utilizar IntelliSense](/visualstudio/ide/using-intellisense).
 
 |Característica|Descripción|¿Se admite en F #?|
 |-------|-----------|----------------|
@@ -108,10 +108,10 @@ En la tabla siguiente se resume la compatibilidad de F # en Visual Studio tools.
 |Jerarquía de llamadas|Muestra la estructura anidada de función que se llama en el código.|No|
 |Métricas de código|Recopila información acerca del código, como números de línea.|No|
 |Vista de clases|Proporciona una vista basada en el tipo del código en un proyecto.|No|
-|[Lista de errores (Ventana)](https://msdn.microsoft.com/library/33df3b7a.aspx)|Muestra una lista de errores en el código.|Sí|
+|[Lista de errores (Ventana)](/visualstudio/ide/reference/error-list-window)|Muestra una lista de errores en el código.|Sí|
 |[F# Interactive](../tutorials/fsharp-interactive/index.md)|Permite que escriba (o copie y pegue) F # de código y ejecutarlo inmediatamente, independientemente de la generación del proyecto. La ventana de F # Interactive es una lectura, Evaluate, Print Loop (REPL).|Sí|
 |Examinador de objetos|Le permite ver los tipos en un ensamblado.|Tipos de F # tal y como aparecen en los ensamblados compilados no aparecen tal y como se crearlos. Puede examinar la representación compilada de tipos de F #, pero no podrá ver los tipos tal y como aparecen en F #.|
-|[Resultados (Ventana)](https://msdn.microsoft.com/library/3hk6fby3.aspx)|Muestra los resultados de compilación.|Sí|
+|[Resultados (Ventana)](/visualstudio/ide/reference/output-window)|Muestra los resultados de compilación.|Sí|
 |Análisis de rendimiento|Proporciona herramientas para medir el rendimiento del código.|Sí|
 |Ventana Propiedades|Muestra y permite la edición de propiedades del objeto en el entorno de desarrollo que tiene el foco.|Sí|
 |[Explorador de servidores](https://msdn.microsoft.com/library/x603htbk.aspx)|Proporciona métodos para interactuar con una variedad de recursos del servidor.|Sí|

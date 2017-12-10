@@ -12,11 +12,11 @@ ms.assetid: 704bb04b-ff23-471d-ab12-3cec1c2bca59
 caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: eb942047278fec7c6446190a98666532c2769c17
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: acf9e15aa03b177533f87417278842735c1d6318
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="threading-visual-basic"></a>Subprocesamiento (Visual Basic)
 El subprocesamiento permite a los programas de Visual Basic llevar a cabo un procesamiento simultáneo para que pueda hacer más de una operación a la vez. Por ejemplo, puede usar el subprocesamiento para hacer un seguimiento de los datos escritos por un usuario, realizar tareas en segundo plano y administrar transmisiones simultáneas de los datos escritos.  
@@ -27,7 +27,7 @@ El subprocesamiento permite a los programas de Visual Basic llevar a cabo un pro
   
 -   El espacio de nombres <xref:System.Threading> de .NET Framework permite usar subprocesos con más facilidad.  
   
--   Comparten los recursos de una aplicación. Para obtener más información, vea [Using Threads and Threading](https://msdn.microsoft.com/library/e1dx6b2h) (Uso de subprocesos y subprocesamiento).  
+-   Comparten los recursos de una aplicación. Para obtener más información, vea [Using Threads and Threading](../../../../../docs/standard/threading/using-threads-and-threading.md) (Uso de subprocesos y subprocesamiento).  
   
  De forma predeterminada, un programa de Visual Basic contiene un subproceso. Sin embargo, se pueden crear y usar subprocesos auxiliares para ejecutar código en paralelo con el subproceso principal. Estos subprocesos se denominan a menudo *subprocesos de trabajo*.  
   
@@ -40,7 +40,7 @@ El subprocesamiento permite a los programas de Visual Basic llevar a cabo un pro
  Puede usar todas estas clases o solo algunas de ellas para sincronizar las actividades de varios subprocesos, pero el lenguaje Visual Basic proporciona una parte de compatibilidad con los subprocesos. Por ejemplo, una [instrucción SyncLock](../../../../visual-basic/language-reference/statements/synclock-statement.md) proporciona características de sincronización mediante el uso implícito de <xref:System.Threading.Monitor>.  
   
 > [!NOTE]
->  Empezando por [!INCLUDE[net_v40_long](~/includes/net-v40-long-md.md)], la programación multiproceso se simplifica significativamente con las clases <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> y <xref:System.Threading.Tasks.Task?displayProperty=nameWithType>, [Parallel LINQ (PLINQ)](https://msdn.microsoft.com/library/dd460688), clases de colecciones simultáneas nuevas en el espacio de nombres <xref:System.Collections.Concurrent?displayProperty=nameWithType> y un nuevo modelo de programación basado en el concepto de tareas en lugar de subprocesos. Para más información, consulte [Parallel Programming](https://msdn.microsoft.com/library/dd460693) (Programación en paralelo).  
+>  Empezando por [!INCLUDE[net_v40_long](~/includes/net-v40-long-md.md)], la programación multiproceso se simplifica significativamente con las clases <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> y <xref:System.Threading.Tasks.Task?displayProperty=nameWithType>, [Parallel LINQ (PLINQ)](https://msdn.microsoft.com/library/dd460688), clases de colecciones simultáneas nuevas en el espacio de nombres <xref:System.Collections.Concurrent?displayProperty=nameWithType> y un nuevo modelo de programación basado en el concepto de tareas en lugar de subprocesos. Para más información, consulte [Parallel Programming](../../../../../docs/standard/parallel-programming/index.md) (Programación en paralelo).  
   
 ## <a name="related-topics"></a>Temas relacionados  
   
@@ -53,4 +53,4 @@ El subprocesamiento permite a los programas de Visual Basic llevar a cabo un pro
 |[Temporizadores de subprocesos (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/thread-timers.md)|Describe cómo ejecutar procedimientos en subprocesos distintos a intervalos fijos.|  
 |[Agrupación de subprocesos (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/thread-pooling.md)|Describe cómo usar un grupo de subprocesos de trabajo administrados por el sistema.|  
 |[Cómo: Usar un grupo de subprocesos (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/how-to-use-a-thread-pool.md)|Muestra el uso sincronizado de varios subprocesos en el grupo de subprocesos.|  
-|[Subprocesamiento](https://msdn.microsoft.com/library/3e8s7xdd)|Describe cómo implementar subprocesamientos en .NET Framework.|
+|[Subprocesamiento](../../../../../docs/standard/threading/index.md)|Describe cómo implementar subprocesamientos en .NET Framework.|

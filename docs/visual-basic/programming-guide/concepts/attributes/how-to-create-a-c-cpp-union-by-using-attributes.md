@@ -12,11 +12,11 @@ ms.assetid: 9352a7e4-c0da-4d07-aa14-55ed43736fcb
 caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: eb25f8e8664bf0c99fd19dd66031fcb5ba8dd799
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: bcb5291737a9f4763f680daaf625c58d308423f8
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="how-to-create-a-cc-union-by-using-attributes-visual-basic"></a>Cómo: crear una unión de C/c ++ mediante atributos (Visual Basic)
 Mediante el uso de atributos, puede personalizar la manera en que los structs se disponen en la memoria. Por ejemplo, puede crear lo que se conoce como una unión en C/ C++ mediante los atributos `StructLayout(LayoutKind.Explicit)` y `FieldOffset`.  
@@ -79,7 +79,7 @@ Structure TestExplicit
  <xref:System.Reflection>  
  <xref:System.Attribute>  
  [Guía de programación en Visual Basic](../../../../visual-basic/programming-guide/index.md)  
- [Atributos](https://msdn.microsoft.com/library/5x6cd29c)  
+ [Atributos](../../../../../docs/standard/attributes/index.md)  
  [Reflexión (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)  
  [Atributos (Visual Basic)](../../../../visual-basic/language-reference/attributes.md)  
  [Creating Custom Attributes (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md) (Creación de atributos personalizados [Visual Basic])  

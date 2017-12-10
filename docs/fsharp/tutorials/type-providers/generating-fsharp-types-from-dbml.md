@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 6fbb6ccc-248f-4226-95e9-f6f99541dbe4
-ms.openlocfilehash: 50e0a2bb6378c82b5c6425589da8a982b5fc496a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: a919c2acb2b5b8c2ce93124f2f541bd092d15c35
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="walkthrough-generating-f-types-from-a-dbml-file"></a>Tutorial: Generar tipos en F# a partir de un archivo DBML
 
@@ -24,7 +24,7 @@ Esta guía se escribió para F # 3.0 y se actualizará.  Vea [FSharp.Data](http:
 > [!NOTE]
 Los vínculos de referencia de API le llevará a MSDN.  La referencia de API de docs.microsoft.com no está completa.
 
-En este tutorial sobre F # 3.0 se describe cómo crear tipos de datos desde una base de datos cuando se dispone de información de esquema codificado en un archivo. dbml. LINQ to SQL utiliza este formato de archivo para representar el esquema de base de datos. Puede generar un archivo LINQ to SQL esquema en Visual Studio mediante el Diseñador relacional de objetos (Object Relational). Para obtener más información, consulte [Object Relational Designer Overview](https://msdn.microsoft.com/library/bb384511.aspx) y [generación de código en LINQ to SQL](https://msdn.microsoft.com/library/bb386976).
+En este tutorial sobre F # 3.0 se describe cómo crear tipos de datos desde una base de datos cuando se dispone de información de esquema codificado en un archivo. dbml. LINQ to SQL utiliza este formato de archivo para representar el esquema de base de datos. Puede generar un archivo LINQ to SQL esquema en Visual Studio mediante el Diseñador relacional de objetos (Object Relational). Para obtener más información, consulte [Object Relational Designer Overview](https://msdn.microsoft.com/library/bb384511.aspx) y [generación de código en LINQ to SQL](../../../../docs/framework/data/adonet/sql/linq/index.md).
 
 El proveedor de tipo de lenguaje de marcado de base de datos (DBML) permite escribir código que utiliza tipos basados en un esquema de base de datos sin necesidad de especificar una cadena de conexión estática en tiempo de compilación. Que puede ser útil si necesita permitir la posibilidad de que la aplicación final va a usar una base de datos diferente, unas credenciales distintas o una cadena de conexión diferente que aquel que se utiliza para desarrollar la aplicación. Si tiene una conexión directa de la base de datos que puede usar en tiempo de compilación y se trata de la misma base de datos y las credenciales que finalmente utilizará en la aplicación integrada, también puede usar el proveedor de tipos SQLDataConnection. Para obtener más información, consulte [Tutorial: obtener acceso a una base de datos SQL mediante proveedores de tipo](accessing-a-sql-database.md).
 

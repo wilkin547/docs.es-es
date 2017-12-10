@@ -14,11 +14,11 @@ ms.assetid: 50a66dbe-2c1e-41bf-96bc-369301c891ac
 caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: fa9fca7f0590846f60577787aa476539a2c872a2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9cdbd8edaefba4554e8de92cb600f045dc39f780
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="ltproceduresignature1gt-is-not-cls-compliant-because-it-overloads-ltproceduresignature2gt-which-differs-from-it-only-by-array-of-array-parameter-types-or-by-the-rank-of-the-array-parameter-types"></a>&lt;proceduresignature1&gt; no es conforme a CLS porque sobrecarga &lt;proceduresignature2&gt; que difiere de él en la matriz de tipos de parámetro de matriz o el rango de los tipos de parámetro de matriz
 Un procedimiento o propiedad está marcada como `<CLSCompliant(True)>` cuando reemplaza otro procedimiento o propiedad y la única diferencia entre sus listas de parámetros es el nivel de anidamiento de una matriz escalonada o el rango de una matriz.  
@@ -31,7 +31,7 @@ Un procedimiento o propiedad está marcada como `<CLSCompliant(True)>` cuando re
   
  `Overloads Sub processArray(ByVal arrayParam(,) As Integer)`  
   
- La segunda declaración cambia el parámetro unidimensional original `arrayParam` a una matriz de matrices. Los cambios en la terceros declaración `arrayParam` a una matriz bidimensional (rango 2). Aunque Visual Basic permite sobrecargas para solamente se distinguen por uno de estos cambios, la sobrecarga de este tipo no es compatible con la [independencia del lenguaje y componentes independientes del lenguaje](https://msdn.microsoft.com/library/12a7a7h3) (CLS).  
+ La segunda declaración cambia el parámetro unidimensional original `arrayParam` a una matriz de matrices. Los cambios en la terceros declaración `arrayParam` a una matriz bidimensional (rango 2). Aunque Visual Basic permite sobrecargas para solamente se distinguen por uno de estos cambios, la sobrecarga de este tipo no es compatible con la [independencia del lenguaje y componentes independientes del lenguaje](../../../../docs/standard/language-independence-and-language-independent-components.md) (CLS).  
   
  Al aplicar <xref:System.CLSCompliantAttribute> a un elemento de programación, establezca el parámetro `isCompliant` del atributo en `True` o `False` para indicar conformidad o disconformidad. No hay ningún valor predeterminado para este parámetro y debe proporcionar un valor.  
   

@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 82bec076-19d4-470c-979f-6c3a14b7c70a
-ms.openlocfilehash: a1d6315c2546de12e85efdd06cf2520605cb6e91
-ms.sourcegitcommit: a19548e5167cbe7e9e58df4ffd8c3b23f17d5c7a
+ms.openlocfilehash: 58003c88baf0f8aeea1a511334b99bd0295f8bf1
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="tutorial-creating-a-type-provider"></a>Tutorial: Crear un proveedor de tipos
 
@@ -169,7 +169,7 @@ devenv.exe /debugexe fsc.exe -r:bin\Debug\HelloWorldTypeProvider.dll script.fsx
 
 Como alternativa, abra Visual Studio, abra el menú Depurar, elija `Debug/Attach to process…`y asociarlo a otro `devenv` proceso donde puede editar la secuencia de comandos. Con este método, le resultará más fácil centrarse en la lógica particular del proveedor de tipos escribiendo interactivamente expresiones en la segunda instancia (con IntelliSense completo y otras características).
 
-Puede deshabilitar la depuración "Solo mi código" para identificar mejor los errores en el código generado. Para obtener información acerca de cómo habilitar o deshabilitar esta característica, consulte [desplazarse por el código con el depurador](https://msdn.microsoft.com/library/y740d9d3.aspx). Además, también puede establecer excepciones de primera oportunidad detectar abriendo el `Debug` menú y, a continuación, eligiendo `Exceptions` o eligiendo las teclas Ctrl + Alt + E para abrir el `Exceptions` cuadro de diálogo. Este cuadro de diálogo, en `Common Language Runtime Exceptions`, seleccione la `Thrown` casilla de verificación.
+Puede deshabilitar la depuración "Solo mi código" para identificar mejor los errores en el código generado. Para obtener información acerca de cómo habilitar o deshabilitar esta característica, consulte [desplazarse por el código con el depurador](/visualstudio/debugger/navigating-through-code-with-the-debugger). Además, también puede establecer excepciones de primera oportunidad detectar abriendo el `Debug` menú y, a continuación, eligiendo `Exceptions` o eligiendo las teclas Ctrl + Alt + E para abrir el `Exceptions` cuadro de diálogo. Este cuadro de diálogo, en `Common Language Runtime Exceptions`, seleccione la `Thrown` casilla de verificación.
 
 
 ### <a name="implementation-of-the-type-provider"></a>Implementación del proveedor de tipos
