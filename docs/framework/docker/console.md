@@ -9,11 +9,11 @@ ms.prod: .net-framework
 ms.technology: vs-ide-deployment
 ms.devlang: dotnet
 ms.assetid: 85cca1d5-c9a4-4eb2-93e6-4f878de07fd7
-ms.openlocfilehash: 2fdce1e131eaa0d6952b2910f73105f097487711
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 037d94452dd62c06fe6d8ac7aea1143f52b96d32
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="running-console-applications-in-windows-containers"></a>Ejecución de aplicaciones de consola en contenedores de Windows
 
@@ -59,7 +59,7 @@ Para admitir los contenedores de Windows, debe tener Docker para Windows, versi�
 ## <a name="building-the-application"></a>Compilación de la aplicación
 Normalmente las aplicaciones de consola se distribuyen a través de un instalador, un FTP o una implementación de recurso compartido de archivos. Al implementar en un contenedor, los activos tienen que compilarse y colocarse en una ubicación que se pueda usar una vez creada la imagen de Docker.
 
-En *build.ps1*, el script usa [MSBuild](https://msdn.microsoft.com/library/dd393574.aspx) para compilar la aplicación a fin de completar la tarea de creación de los activos. Algunos parámetros se pasan a MSBuild para finalizar los activos necesarios. El nombre del archivo del proyecto o la solución que se va a compilar, la ubicación de la salida y, por último, la configuración (lanzamiento o depuración).
+En *build.ps1*, el script usa [MSBuild](/visualstudio/msbuild/msbuild) para compilar la aplicación a fin de completar la tarea de creación de los activos. Algunos parámetros se pasan a MSBuild para finalizar los activos necesarios. El nombre del archivo del proyecto o la solución que se va a compilar, la ubicación de la salida y, por último, la configuración (lanzamiento o depuración).
 
 En la llamada a `Invoke-MSBuild`, `OutputPath` se establece en **publish** y `Configuration` en **Release**. 
 

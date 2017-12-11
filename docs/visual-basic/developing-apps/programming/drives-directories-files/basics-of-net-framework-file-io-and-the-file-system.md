@@ -18,11 +18,11 @@ ms.assetid: 49d837c0-cf28-416f-8606-4d83d7b479ef
 caps.latest.revision: "30"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 4a148aa9b7dad357aeaa6f88ec11098418005719
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 53bd56647d04c40c44a240edcd084f0719c3d4aa
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="basics-of-net-framework-file-io-and-the-file-system-visual-basic"></a>Fundamentos del sistema de archivos y la E/S de archivos en .NET Framework (Visual Basic)
 Las clases del espacio de nombres <xref:System.IO> se usan para trabajar con unidades, archivos y directorios.  
@@ -46,7 +46,7 @@ Las clases del espacio de nombres <xref:System.IO> se usan para trabajar con uni
   
 -   **Búsqueda**. Puede consultar y modificar su posición en la secuencia.  
   
- Para obtener más información, consulta [Composing Streams](https://msdn.microsoft.com/library/e4y2dch9).  
+ Para obtener más información, consulta [Composing Streams](../../../../../docs/standard/io/composing-streams.md).  
   
 ## <a name="types-of-streams"></a>Tipos de secuencias  
  En [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], una secuencia se representa mediante la clase <xref:System.IO.Stream>, que constituye la clase abstracta para las demás secuencias. No se puede crear directamente una instancia de la clase <xref:System.IO.Stream>, sino que se debe usar una de las clases que implementa.  
@@ -65,13 +65,13 @@ Las clases del espacio de nombres <xref:System.IO> se usan para trabajar con uni
   
 |Para|Vea|
 |---|---|   
-|Leer y escribir en un archivo de datos|[Cómo: Leer y escribir en un archivo de datos recién creado](https://msdn.microsoft.com/library/36b93480.aspx)|  
-|Leer texto de un archivo|[Cómo: Leer texto de un archivo](https://msdn.microsoft.com/library/db5x7c0d.aspx)|  
-|Escribir texto en un archivo|[Cómo: Escribir texto en un archivo](https://msdn.microsoft.com/library/6ka1wd3w.aspx)|  
-|Leer caracteres de una cadena|[Cómo: Leer caracteres de una cadena](https://msdn.microsoft.com/library/9yyz8a6c.aspx)|  
-|Escribir caracteres en una cadena|[Cómo: Escribir caracteres en una cadena](https://msdn.microsoft.com/library/z4kzt0dd.aspx)|  
-|Cifrar datos|[Cifrar datos](https://msdn.microsoft.com/library/as0w18af.aspx)|  
-|Descifrar datos|[Descifrar datos](https://msdn.microsoft.com/library/te15te69.aspx)|  
+|Leer y escribir en un archivo de datos|[Cómo: Leer y escribir en un archivo de datos recién creado](../../../../../docs/standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)|  
+|Leer texto de un archivo|[Cómo: Leer texto de un archivo](../../../../../docs/standard/io/how-to-read-text-from-a-file.md)|  
+|Escribir texto en un archivo|[Cómo: Escribir texto en un archivo](../../../../../docs/standard/io/how-to-write-text-to-a-file.md)|  
+|Leer caracteres de una cadena|[Cómo: Leer caracteres de una cadena](../../../../../docs/standard/io/how-to-read-characters-from-a-string.md)|  
+|Escribir caracteres en una cadena|[Cómo: Escribir caracteres en una cadena](../../../../../docs/standard/io/how-to-write-characters-to-a-string.md)|  
+|Cifrar datos|[Cifrar datos](../../../../../docs/standard/security/encrypting-data.md)|  
+|Descifrar datos|[Descifrar datos](../../../../../docs/standard/security/decrypting-data.md)|  
   
 ## <a name="file-access-and-attributes"></a>Acceso a archivos y atributos  
  Puede controlar cómo se crean, se abren y se comparten los archivos con las enumeraciones <xref:System.IO.FileAccess>, <xref:System.IO.FileMode> y <xref:System.IO.FileShare>, que contienen las marcas usadas por los constructores de la clase <xref:System.IO.FileStream>. Por ejemplo, cuando se abre o se crea una clase <xref:System.IO.FileStream>, la enumeración <xref:System.IO.FileMode> permite especificar si el archivo se abre para anexarlo, si se crea un archivo en caso de que no exista el archivo especificado, si el archivo se sobrescribe, etc.  
@@ -82,7 +82,7 @@ Las clases del espacio de nombres <xref:System.IO> se usan para trabajar con uni
   
 |Para|Vea|  
 |---|---|
-|Abrir y anexar texto a un archivo de registro|[Cómo: Abrir y anexar a un archivo de registro](https://msdn.microsoft.com/library/3zc0w663.aspx)|  
+|Abrir y anexar texto a un archivo de registro|[Cómo: Abrir y anexar a un archivo de registro](../../../../../docs/standard/io/how-to-open-and-append-to-a-log-file.md)|  
 |Determinar los atributos de un archivo|<xref:System.IO.FileAttributes>|  
   
 ## <a name="file-permissions"></a>Permisos de archivo  
@@ -95,19 +95,19 @@ Las clases del espacio de nombres <xref:System.IO> se usan para trabajar con uni
   
 |Para|Vea|
 |---|---|  
-|Crear un almacenamiento aislado|[Cómo: Obtener los almacenes de almacenamiento aislado](https://msdn.microsoft.com/library/k48a6h13.aspx)|  
-|Enumerar almacenamientos aislados|[Cómo: Enumerar los almacenes de almacenamiento aislado](https://msdn.microsoft.com/library/c3dy613a.aspx)|  
-|Eliminar un almacenamiento aislado|[Cómo: Eliminar almacenes de almacenamiento aislado](https://msdn.microsoft.com/library/5w71t104.aspx)|  
-|Crear un archivo o directorio en almacenamiento aislado|[Cómo: Crear archivos y directorios en almacenamiento aislado](https://msdn.microsoft.com/library/6h2ws3ft.aspx)|  
-|Buscar un archivo en almacenamiento aislado|[Cómo: Buscar archivos y directorios existentes en almacenamiento aislado](https://msdn.microsoft.com/library/zd5e2z84.aspx)|  
-|Leer un archivo en almacenamiento aislado o escribir en él|[Cómo: Leer y escribir en archivos en almacenamiento aislado](https://msdn.microsoft.com/library/xf96a1wz.aspx)|  
-|Eliminar un archivo o directorio en almacenamiento aislado|[Cómo: Eliminar archivos y directorios en almacenamiento aislado](https://msdn.microsoft.com/library/kx3852wf.aspx)|  
+|Crear un almacenamiento aislado|[Cómo: Obtener los almacenes de almacenamiento aislado](../../../../../docs/standard/io/how-to-obtain-stores-for-isolated-storage.md)|  
+|Enumerar almacenamientos aislados|[Cómo: Enumerar los almacenes de almacenamiento aislado](../../../../../docs/standard/io/how-to-enumerate-stores-for-isolated-storage.md)|  
+|Eliminar un almacenamiento aislado|[Cómo: Eliminar almacenes de almacenamiento aislado](../../../../../docs/standard/io/how-to-delete-stores-in-isolated-storage.md)|  
+|Crear un archivo o directorio en almacenamiento aislado|[Cómo: Crear archivos y directorios en almacenamiento aislado](../../../../../docs/standard/io/how-to-create-files-and-directories-in-isolated-storage.md)|  
+|Buscar un archivo en almacenamiento aislado|[Cómo: Buscar archivos y directorios existentes en almacenamiento aislado](../../../../../docs/standard/io/how-to-find-existing-files-and-directories-in-isolated-storage.md)|  
+|Leer un archivo en almacenamiento aislado o escribir en él|[Cómo: Leer y escribir en archivos en almacenamiento aislado](../../../../../docs/standard/io/how-to-read-and-write-to-files-in-isolated-storage.md)|  
+|Eliminar un archivo o directorio en almacenamiento aislado|[Cómo: Eliminar archivos y directorios en almacenamiento aislado](../../../../../docs/standard/io/how-to-delete-files-and-directories-in-isolated-storage.md)|  
   
 ## <a name="file-events"></a>Eventos de archivo  
  El componente <xref:System.IO.FileSystemWatcher> permite ver los cambios en los archivos y los directorios del sistema o en cualquier equipo al que tenga acceso de red. Por ejemplo, si se modifica un archivo, puede enviar una alerta a un usuario para indicarle que se ha realizado un cambio. Cuando se producen cambios, se generan uno o varios eventos que se almacenan en un búfer y se entregan al componente <xref:System.IO.FileSystemWatcher> para su procesamiento.  
   
 ## <a name="see-also"></a>Vea también  
- [Crear secuencias](https://msdn.microsoft.com/library/e4y2dch9)  
+ [Crear secuencias](../../../../../docs/standard/io/composing-streams.md)  
  [E/S de archivos y secuencias](https://msdn.microsoft.com/library/k3352a4t)  
  [Asynchronous File I/O](https://msdn.microsoft.com/library/kztecsys) (E/S de archivos asincrónica)  
  [Clases utilizadas en el sistema de archivos y la E/S de archivos en .NET Framework (Visual Basic)](../../../../visual-basic/developing-apps/programming/drives-directories-files/classes-used-in-net-framework-file-io-and-the-file-system.md)

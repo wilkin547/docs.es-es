@@ -19,11 +19,11 @@ ms.assetid: 674eae9e-bc72-4a88-aed3-802b45b25811
 caps.latest.revision: "17"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: f77bd40ea8ec0745dda3d40eee273d9e7338263b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 0633e348c762879caa4e3f72a3662722b3894e4c
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="data-transformations-with-linq-c"></a>Transformaciones de datos con LINQ (C#)
 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] no solo sirve para la recuperación de datos. También es una herramienta eficaz para transformarlos. Mediante el uso de un consulta [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], se puede usar una secuencia de origen como entrada y modificarla de muchas maneras para crear una nueva secuencia de salida. Por medio de ordenaciones y agrupaciones se puede modificar la propia secuencia sin modificar los elementos. Pero quizás la característica más eficaz de las consultas [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] es la capacidad para crear nuevos tipos. Esto se realiza en la cláusula [select](../../../../csharp/language-reference/keywords/select-clause.md). Por ejemplo, puede realizar las tareas siguientes:  
@@ -107,7 +107,7 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>Vea también  
  [Language Integrated Query (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/index.md)  
- [LINQ to SQL](https://msdn.microsoft.com/library/bb386976)  
+ [LINQ to SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md)  
  [LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset.md)  
  [LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml.md)  
  [Expresiones de consulta LINQ](../../../../csharp/programming-guide/linq-query-expressions/index.md)  

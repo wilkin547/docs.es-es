@@ -11,11 +11,11 @@ ms.assetid: 3086ab38-3be5-4b22-9385-7d0e16b04f6a
 caps.latest.revision: "23"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: da2fb9171a6b09ad94cea62877445bcb77c521ee
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: fd4dbc66f37325afa64b7bf9720cad23e08c6bfb
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="accessing-data-in-visual-basic-applications"></a>Obtener acceso a datos en aplicaciones de Visual Basic
 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] incluye varias características nuevas que ayudan en el desarrollo de aplicaciones que tienen acceso a datos. Los formularios enlazados a datos para aplicaciones Windows se crean arrastrando elementos desde la [ventana Orígenes de datos](/visualstudio/data-tools/add-new-data-sources) hasta el formulario. Se puede enlazar controles a datos arrastrando elementos desde la **ventana de orígenes de datos** a los controles existentes.  
@@ -30,11 +30,11 @@ ms.lasthandoff: 10/18/2017
  [LINQ](../../visual-basic/programming-guide/language-features/linq/index.md)  
  Proporciona vínculos a temas en los que se describe cómo usar LINQ en Visual Basic.  
   
- [LINQ to SQL](https://msdn.microsoft.com/library/bb386976)  
+ [LINQ to SQL](../../../docs/framework/data/adonet/sql/linq/index.md)  
  Proporciona información sobre [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)]. Incluye ejemplos de programación.  
   
  [Herramientas LINQ to SQL en Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)  
- Proporciona vínculos a temas sobre cómo crear un modelo de objetos [LINQ to SQL](https://msdn.microsoft.com/library/bb386976) en aplicaciones.  
+ Proporciona vínculos a temas sobre cómo crear un modelo de objetos [LINQ to SQL](../../../docs/framework/data/adonet/sql/linq/index.md) en aplicaciones.  
   
  [Trabajar con conjuntos de datos en aplicaciones de n capas](/visualstudio/data-tools/work-with-datasets-in-n-tier-applications)  
  Proporciona vínculos a temas sobre cómo crear aplicaciones de datos de niveles múltiples.  

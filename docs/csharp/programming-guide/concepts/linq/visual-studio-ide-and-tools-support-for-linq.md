@@ -11,17 +11,17 @@ ms.assetid: c1f6cfdf-c96f-417f-acc8-4a049772ead3
 caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 42d38e34c1b6474a3892fd091c9f344234f7ca68
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 577338cc70bf9c335b162ca32bb3fc026addd49e
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="visual-studio-ide-and-tools-support-for-linq-c"></a>Compatibilidad del IDE y las herramientas de Visual Studio con LINQ (C#)
 El entorno de desarrollo integrado (IDE) de Visual Studio proporciona las siguientes características que admiten el desarrollo de aplicaciones de LINQ:  
   
 ## <a name="object-relational-designer"></a>Object Relational Designer  
- Object Relational Designer es una herramienta de diseño visual que puede usar en aplicaciones de [LINQ to SQL](https://msdn.microsoft.com/library/bb386976) para generar clases en C# que representan los datos relacionales en una base de datos subyacente. Para obtener más información, vea [LINQ to SQL Tools en Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).  
+ Object Relational Designer es una herramienta de diseño visual que puede usar en aplicaciones de [LINQ to SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md) para generar clases en C# que representan los datos relacionales en una base de datos subyacente. Para obtener más información, vea [LINQ to SQL Tools en Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).  
   
 ## <a name="sqlmetal-command-line-tool"></a>Herramienta de línea de comandos SQLMetal  
  SQLMetal es una herramienta de línea de comandos que puede usarse en procesos de compilación para generar clases de bases de datos existentes para su uso en aplicaciones de LINQ to SQL. Para obtener más información, vea [SqlMetal.exe (Herramienta de generación de código)](http://msdn.microsoft.com/library/819e5a96-7646-4fdb-b14b-fe31221b0614).  

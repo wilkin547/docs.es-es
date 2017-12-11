@@ -11,14 +11,14 @@ ms.topic: article
 helpviewer_keywords: channel model [WCF]
 ms.assetid: 07a81e11-3911-4632-90d2-cca99825b5bd
 caps.latest.revision: "10"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 19dfb8d6a75496cf193831c1d9e6e71ee6bb1a7a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 9be7f226c331ad20c58a06b5c7497c7942db013d
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="channel-model-overview"></a>Información general del modelo de canales
 La pila del canal [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] es una pila de comunicación superpuesta con uno o más canales que procesan los mensajes. En la parte inferior de la pila hay un canal de transporte que es responsable de adaptar la pila del canal al transporte subyacente (por ejemplo, TCP, HTTP, SMTP y otros tipos de transporte). Los canales proporcionan un modelo de programación de bajo nivel para enviar y recibir mensajes. Este modelo de programación confía en varias interfaces y otros tipos colectivamente conocidos como el modelo de canal [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. En este tema se tratan diversas formas de canal, la construcción de un agente de escucha básico del canal (en el servicio) y el generador de canales (en el cliente).  

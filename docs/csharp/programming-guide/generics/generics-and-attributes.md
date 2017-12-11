@@ -11,11 +11,11 @@ ms.assetid: da9fc326-4648-454a-8e13-3911a2edefd7
 caps.latest.revision: "13"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 5535334514afb0b9891dfce2e0cc0a0e95526069
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e6fdd32fb41c3bda83e848952f70cbd736a0fc60
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="generics-and-attributes-c-programming-guide"></a>Genéricos y atributos (Guía de programación de C#)
 Los atributos pueden aplicarse a los tipos genéricos de la misma manera que los tipos no genéricos. Para obtener más información sobre la aplicación de los atributos, vea [Atributos](../../../csharp/programming-guide/concepts/attributes/index.md).  
@@ -51,4 +51,4 @@ Los atributos pueden aplicarse a los tipos genéricos de la misma manera que los
 ## <a name="see-also"></a>Vea también  
  [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
  [Genéricos](../../../csharp/programming-guide/generics/index.md)  
- [Atributos](https://msdn.microsoft.com/library/5x6cd29c)
+ [Atributos](../../../../docs/standard/attributes/index.md)

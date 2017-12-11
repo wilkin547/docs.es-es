@@ -11,11 +11,11 @@ ms.assetid: c30e972b-1693-4e05-b115-c31831fdf9f2
 caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: dedbd90cdc6f33bfa03ce5e38138ca3b23178b95
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 2317b608c57b4883d1e892e9419cd735fefbb3d9
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="how-to-share-an-assembly-with-other-applications-c"></a>Cómo: Compartir un ensamblado con otras aplicaciones (C#)
 Los ensamblados pueden ser privados o compartidos: de forma predeterminada, la mayoría de los programas sencillos constan de un ensamblado privado porque no se diseñaron para ser usados por otras aplicaciones.  
@@ -28,7 +28,7 @@ Los ensamblados pueden ser privados o compartidos: de forma predeterminada, la m
   
 2.  Asigne un nombre seguro al ensamblado. Para obtener más información, vea [Cómo: Firmar un ensamblado con un nombre seguro](../../../../framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md).  
   
-3.  Asigne la información de versión al ensamblado. Para obtener más información, vea [Versiones de los ensamblados](https://msdn.microsoft.com/library/51ket42z).  
+3.  Asigne la información de versión al ensamblado. Para obtener más información, vea [Versiones de los ensamblados](../../../../../docs/framework/app-domains/assembly-versioning.md).  
   
 4.  Agregue el ensamblado a la caché global de ensamblados. Para obtener más información, vea [Cómo: Instalar un ensamblado en la memoria caché global de ensamblados](../../../../framework/app-domains/how-to-install-an-assembly-into-the-gac.md).  
   

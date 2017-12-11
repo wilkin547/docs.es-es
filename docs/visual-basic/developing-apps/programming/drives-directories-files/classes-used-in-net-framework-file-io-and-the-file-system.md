@@ -12,16 +12,16 @@ ms.assetid: 4a5ca924-eea8-4a95-a5f0-6ac10de276a3
 caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: abb2291ce797f3630eebd24e563994a2d86242bd
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 772d3e59dbc84f77dc6f94e7cc60a89c7888551a
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="classes-used-in-net-framework-file-io-and-the-file-system-visual-basic"></a>Clases utilizadas en el sistema de archivos y la E/S de archivos en .NET Framework (Visual Basic)
 En las tablas siguientes se incluyen las clases usadas más comúnmente para las operaciones de E/S de archivos en .NET Framework, clasificadas en clases de E/S de archivos, clases usadas para crear secuencias y clases usadas para leer y escribir en secuencias.  
   
- Para entrar en la documentación de [!INCLUDE[dnprdnlong](~/includes/dnprdnlong-md.md)] y consultar una lista más completa, vea [Información general de la biblioteca de clases](https://msdn.microsoft.com/library/hfa3fa08).  
+ Para entrar en la documentación de [!INCLUDE[dnprdnlong](~/includes/dnprdnlong-md.md)] y consultar una lista más completa, vea [Información general de la biblioteca de clases](../../../../../docs/standard/class-library-overview.md).  
   
 ## <a name="basic-io-classes-for-files-drives-and-directories"></a>Clases básicas de E/S para archivos, unidades y directorios  
  En la tabla siguiente se muestran y describen las clases principales usadas para las operaciones de E/S de archivos.  
@@ -64,7 +64,7 @@ En las tablas siguientes se incluyen las clases usadas más comúnmente para las
 |<xref:System.IO.StringWriter?displayProperty=nameWithType>|Escribe caracteres en `String`. El resultado puede ser una secuencia en cualquier codificación o `String`.|  
   
 ## <a name="see-also"></a>Vea también  
- [Crear secuencias](https://msdn.microsoft.com/library/e4y2dch9)  
+ [Crear secuencias](../../../../../docs/standard/io/composing-streams.md)  
  [E/S de archivos y secuencias](https://msdn.microsoft.com/library/k3352a4t)  
  [Asynchronous File I/O](https://msdn.microsoft.com/library/kztecsys) (E/S de archivos asincrónica)  
  [Fundamentos del sistema de archivos y la E/S de archivos en .NET Framework (Visual Basic)](../../../../visual-basic/developing-apps/programming/drives-directories-files/basics-of-net-framework-file-io-and-the-file-system.md)
