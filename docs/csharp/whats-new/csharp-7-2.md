@@ -1,57 +1,57 @@
 ---
 title: Novedades de C# 7.2
-description: "Información general sobre las nuevas características de C# 7.2."
-keywords: "Diseño del lenguaje C#, 7.2, Visual Studio 2017"
+description: "Información general sobre las nuevas características en C# 7.2."
+keywords: "Diseño del lenguaje C#, 7.2, Visual Studio 2017,"
 author: billwagner
 ms.author: wiwagn
 ms.date: 08/16/2017
 ms.topic: article
 ms.prod: .net
 ms.devlang: devlang-csharp
-ms.openlocfilehash: a580a4a3a0a49e97ea8fb96699d1d978a9bc0a64
-ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
+ms.openlocfilehash: cc861f186bea681bb32a2f8041a7155026679987
+ms.sourcegitcommit: 401c4427a3ec0d1263543033b3084039278509dc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 12/06/2017
 ---
 # <a name="whats-new-in-c-72"></a>Novedades de C# 7.2
 
-C# 7.2 es otra versión de punto que agrega un número de características útiles.
-Un tema para esta versión funciona más eficazmente con tipos de valor al evitar la copia innecesaria o asignaciones. 
+C# 7.2 es otra versión de punto que agrega varias características útiles.
+Una de las ventajas de esta versión es que funciona mejor con tipos de valor, ya que evita copias o asignaciones innecesarias. 
 
-Las características restantes son pequeños, nice tienen.
+El resto de características son menos importantes, pero igualmente útiles.
 
-7.2 C# usa el [selección de la versión de idioma](csharp-7-1.md#language-version-selection) elemento de configuración para seleccionar la versión de idioma de compilador.
+C# 7.2 usa el elemento de configuración de [selección de versión de lenguaje](csharp-7-1.md#language-version-selection) para seleccionar la versión del lenguaje del compilador.
 
-Las nuevas características de lenguaje en esta versión son:
+Las nuevas características de lenguaje de esta versión son las siguientes:
 
 * [Semántica de referencia con tipos de valor](#reference-semantics-with-value-types)
-  - Una combinación de mejoras de sintaxis que permiten trabajar con tipos de valor mediante la semántica de referencia.
-* [No son finales argumentos con nombre](#non-trailing-named-arguments)
-  - Argumentos con nombre pueden ir seguidos de argumentos posicionales.
-* [Carácter de subrayado inicial en literales numéricos](#leading-underscores-in-numeric-literals)
-  - Literales numéricos ahora pueden tener caracteres de subrayado iniciales antes de los dígitos impresos.
-* [`private protected`modificador de acceso](#private-protected)
-  - El `private protected` modificador de acceso permite el acceso para las clases derivadas en el mismo ensamblado.
+  - Una combinación de mejoras en la sintaxis que permiten trabajar con tipos de valor mediante la semántica de referencia.
+* [Argumentos con nombre no finales](#non-trailing-named-arguments)
+  - Los argumentos con nombre pueden ir seguidos de argumentos posicionales.
+* [Caracteres de subrayado iniciales en literales numéricos](#leading-underscores-in-numeric-literals)
+  - Los literales numéricos ahora pueden tener caracteres de subrayado iniciales antes de los dígitos impresos.
+* [Modificador de acceso `private protected`](#private-protected)
+  - El modificador de acceso `private protected` permite el acceso de clases derivadas en el mismo ensamblado.
 
 ## <a name="reference-semantics-with-value-types"></a>Semántica de referencia con tipos de valor
 
-Características de lenguaje incluidas en 7.2 permiten trabajar con tipos de valor al usar la semántica de referencia. Están diseñadas para aumentar el rendimiento, pues minimiza las copias de los tipos de valor sin incurrir en las asignaciones de memoria asociadas al uso de tipos de referencia. Las características incluyen:
+Las características de lenguaje que presenta la versión 7.2 permiten trabajar con tipos de valor usando la semántica de referencia. Están diseñadas para aumentar el rendimiento minimizando la copia de tipos de valor sin usar las asignaciones de memoria asociadas al uso de tipos de referencia. Las características incluyen:
 
- - El `in` modificador de parámetros, para especificar que un argumento se pasa por referencia pero no modifica el método llamado.
- - El `ref readonly` modificador en el método devuelve, para indicar que un método devuelve su valor por referencia, pero no permite operaciones de escritura en ese objeto.
- - El `readonly struct` declaración, para indicar que un struct es inmutable y se debe pasar como un `in` parámetro a sus métodos de miembro.
- - El `ref struct` declaración, para indicar que un tipo de estructura tiene acceso directo a memoria administrada y siempre debe ser pila asignada.
+ - El modificador `in` en los parámetros para especificar que un argumento se pasa mediante una referencia sin que el método al que se realiza una llamada lo modifique.
+ - El modificador `ref readonly` en las devoluciones de método para indicar que un método devuelve su valor mediante una referencia, pero que no permite operaciones de escritura en el objeto.
+ - La declaración `readonly struct` para indicar que una estructura es fija y que debería pasarse como parámetro `in` a los métodos de su miembro.
+ - La declaración `ref struct` para indicar que un tipo de estructura tiene acceso directo a la memoria administrada y que siempre debe estar asignada a la pila.
 
-Puede obtener más información acerca de todos los cambios en [con semántica de referencias a tipos de valor](../reference-semantics-with-value-types.md).
+Puede obtener más información sobre todos los cambios en [Semántica de referencia con tipos de valor](../reference-semantics-with-value-types.md).
 
-## <a name="non-trailing-named-arguments"></a>No son finales argumentos con nombre
+## <a name="non-trailing-named-arguments"></a>Argumentos con nombre no finales
 
-Llamadas de método ahora pueden usar argumentos con nombre que preceden a los argumentos posicionales cuando los argumentos con nombre se encuentran en las posiciones correctas. Para obtener más información, consulte [argumentos opcionales y con nombre](../programming-guide/classes-and-structs/named-and-optional-arguments.md).
+Las llamadas de método ya pueden usar argumentos con nombre que precedan a argumentos posicionales si están en la posición adecuada. Para obtener más información, vea [Argumentos opcionales y con nombre](../programming-guide/classes-and-structs/named-and-optional-arguments.md).
 
-## <a name="leading-underscores-in-numeric-literals"></a>Carácter de subrayado inicial en literales numéricos
+## <a name="leading-underscores-in-numeric-literals"></a>Caracteres de subrayado iniciales en literales numéricos
 
-La implementación de la compatibilidad con separadores de dígitos en C# 7.0 no permitió la `_` a ser el primer carácter del valor literal. Hex y literales numéricos binarios ahora pueden empezar con un `_`. 
+La implementación de la compatibilidad con separadores de dígitos en C# 7.0 no permitía que `_` fuera el primer carácter del valor literal. Los literales numéricos hexadecimales y binarios ya pueden empezar con un `_`. 
 
 Por ejemplo:
 
@@ -61,6 +61,6 @@ int binaryValue = 0b_0101_0101;
 
 ## `private protected`
 
-Por último, un nuevo modificador de acceso compuestos: `private protected` indica que las clases derivadas que se declaran en el mismo ensamblado puede tener acceso a un miembro. Mientras `protected internal` permite el acceso a las clases derivadas o las clases que se encuentran en el mismo ensamblado, `private protected` limita el acceso a los tipos derivados que se declaran en el mismo ensamblado.
+Por último, presentamos un nuevo modificador de acceso compuesto: `private protected` indica que se puede tener acceso a un miembro mediante una clase o clases derivadas declaradas en un mismo ensamblado. Mientras que `protected internal` permite el acceso a las clases derivadas o clases que se encuentran en un mismo ensamblado, `private protected` limita el acceso a los tipos derivados que se declaran en un mismo ensamblado.
 
-Para obtener más información, consulte [los modificadores de acceso](../language-reference/keywords/access-modifiers.md) en la referencia del lenguaje.
+Para obtener más información, vea los [modificadores de acceso](../language-reference/keywords/access-modifiers.md) en el material de referencia del lenguaje.

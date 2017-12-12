@@ -13,14 +13,14 @@ ms.assetid: ce13c965-dfe4-4433-94f5-63b476e3a608
 caps.latest.revision: "18"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 7cd3269754f783ab8b26683f5215aa81825673e6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f8cc5e19565a0e5044626c4fb8eb9d684fbe0a73
+ms.sourcegitcommit: 401c4427a3ec0d1263543033b3084039278509dc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/06/2017
 ---
 # <a name="baseaddress-c-compiler-options"></a>/baseaddress (Opciones del compilador de C#)
-La opción **/baseaddress** le permite especificar la dirección base preferida para cargar un archivo DLL. Para obtener más información acerca de cuándo y por qué utilizar esta opción, vea [WebLog de Larry Osterman](http://go.microsoft.com/fwlink/?LinkId=107044).  
+La opción **/baseaddress** le permite especificar la dirección base preferida para cargar un archivo DLL. Para obtener más información sobre cuándo y por qué usar esta opción, vea el [blog de Larry Osterman](https://blogs.msdn.microsoft.com/larryosterman/2004/07/06/why-should-i-even-bother-to-use-dlls-in-my-system/).  
   
 ## <a name="syntax"></a>Sintaxis  
   

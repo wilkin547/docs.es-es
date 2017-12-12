@@ -1,5 +1,5 @@
 ---
-title: "¿Qué es nueva en C# 7 - Guía de C#"
+title: "Novedades de C# 7: guía de C#"
 description: "Obtenga información general sobre las nuevas características que entran en la próxima versión 7 del lenguaje C#."
 keywords: "C#, .NET, .NET Core, Características más recientes, Novedades"
 author: BillWagner
@@ -10,21 +10,21 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
-ms.openlocfilehash: f98039404789e8886154e04c4b97a21741c4d885
-ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
+ms.openlocfilehash: 3f3598fce5abeb67b772f51ed6f93e6ada4c92d0
+ms.sourcegitcommit: 401c4427a3ec0d1263543033b3084039278509dc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/21/2017
+ms.lasthandoff: 12/06/2017
 ---
 # <a name="whats-new-in-c-7"></a>Novedades de C# 7
 
 C# 7 incorpora varias características nuevas al lenguaje C#:
-* [`out`variables](#out-variables)
+* [Variables de `out`](#out-variables)
     - Puede declarar valores `out` que se inserten como argumentos en el método en que se usen.
 * [Tuplas](#tuples)
     - Puede crear tipos ligeros sin nombre que contengan varios campos públicos. Los compiladores y las herramientas IDE comprenden la semántica de estos tipos.
 * [Descartes](#discards)
-    - Descarta es temporales, solo escritura de las variables utilizadas en las asignaciones cuando no le interesa el valor asignado. Son especialmente útiles cuando Deconstruyendo tuplas y tipos definidos por el usuario, así como al llamar a métodos con `out` parámetros.
+    - Los descartes son variables temporales y de solo escritura que se usan en argumentos cuando el valor asignado es indiferente. Son especialmente útiles al deconstruir tuplas y tipos definidos por el usuario, así como al realizar llamadas a métodos mediante parámetros de `out`.
 * [Coincidencia de patrones](#pattern-matching)
     - Puede crear la lógica de bifurcación en función de tipos y valores arbitrarios de los miembros de esos tipos.
 * [Devoluciones y variables locales `ref`](#ref-locals-and-returns)
@@ -82,30 +82,30 @@ return result;
 > Las nuevas características de tupla requieren los tipos <xref:System.ValueTuple>.
 > Debe agregar el paquete NuGet [`System.ValueTuple`](https://www.nuget.org/packages/System.ValueTuple/) para usarlo en plataformas que no incluyen los tipos.
 >
-> Esto es similar a otras características del lenguaje que se basan en tipos que se han proporcionado en el marco. En el ejemplo se incluyen `async` y `await` confiar en la `INotifyCompletion` interfaz y LINQ depender `IEnumerable<T>`. En cambio, el mecanismo de entrega está cambiando a medida que .NET está pasando a ser más independiente de las plataformas. Puede que .NET Framework no proporcione siempre la misma cadencia que el compilador de lenguaje. Cuando las nuevas características del lenguaje se basan en tipos nuevos, esos tipos estarán disponibles como paquetes NuGet cuando se proporcionen las características del lenguaje. Como estos tipos nuevos se agregan a la API de .NET Standard y se proporcionan como parte del marco, el requisito del paquete NuGet se quitará.
+> Esto es similar a otras características del lenguaje que se basan en tipos que se han proporcionado en el marco. El ejemplo incluye `async` y `await`, que se basan en la interfaz `INotifyCompletion`. LINQ se basa en `IEnumerable<T>`. En cambio, el mecanismo de entrega está cambiando a medida que .NET está pasando a ser más independiente de las plataformas. Puede que .NET Framework no proporcione siempre la misma cadencia que el compilador de lenguaje. Cuando las nuevas características del lenguaje se basan en tipos nuevos, esos tipos estarán disponibles como paquetes NuGet cuando se proporcionen las características del lenguaje. Como estos tipos nuevos se agregan a la API de .NET Standard y se proporcionan como parte del marco, el requisito del paquete NuGet se quitará.
 
 C# ofrece una sintaxis enriquecida para clases y estructuras que se usa para explicar la intención del diseño. Pero a veces esa sintaxis enriquecida requiere trabajo adicional con apenas beneficio. Puede que a menudo escriba métodos que requieren una estructura simple que contenga más de un elemento de datos. Para admitir estos escenarios, se han agregado *tuplas* a C#. Las tuplas son estructuras de datos ligeros que contienen varios campos para representar los miembros de datos.
 Los campos no se validan y no se pueden definir métodos propios
 
 > [!NOTE]
-> Tuplas, no estaban disponibles antes de C# 7, pero ineficaz y no tuvieron ninguna compatibilidad de idioma.
-> Esto significaba que solo se pueden hacer referencia a elementos de tupla como `Item1`, `Item2` y así sucesivamente. C# 7 introduce compatibilidad con idiomas de tuplas, lo que permite nombres semántica para los campos de una tupla con tipos de tupla nuevo y más eficaz.
+> Las tuplas estaban disponibles antes de C# 7, pero no eran eficientes y no eran compatibles con ningún lenguaje.
+> Esto significaba que solo se podía hacer referencia a los elementos tupla como `Item1`, `Item2`, por ejemplo. C# 7 presenta la compatibilidad con lenguajes para las tuplas, lo que permite usar nombres de semántica en los campos de una tupla mediante tipos de tupla nuevos y más eficientes.
 
 Puede crear una tupla asignando cada miembro a un valor:
 
 [!code-csharp[UnnamedTuple](../../../samples/snippets/csharp/new-in-7/program.cs#04_UnnamedTuple "Unnamed tuple")]
 
-Que la asignación crea una tupla cuyos miembros son `Item1` y `Item2`, que puede usar en la misma manera que <xref:System.Tuple> puede cambiar la sintaxis para crear una tupla que proporciona semántica nombres a cada uno de los miembros de la tupla:
+Esta asignación crea una tupla con los miembros `Item1` y `Item2`. Se puede usar del mismo modo que <xref:System.Tuple>. Además, puede cambiar la sintaxis para crear una tupla que proporciona nombres de semántica a cada uno de sus miembros:
 
 [!code-csharp[NamedTuple](../../../samples/snippets/csharp/new-in-7/program.cs#05_NamedTuple "Named tuple")]
 
-La tupla `namedLetters` contiene campos denominados `Alpha` y `Beta`. Esos nombres sólo existen en tiempo de compilación y no se conservan por ejemplo, al inspeccionar la tupla utilizando la reflexión en tiempo de ejecución.
+La tupla `namedLetters` contiene campos denominados `Alpha` y `Beta`. Esos nombres solo existen en el tiempo de compilación y no se conservan, por ejemplo, al inspeccionar la tupla mediante una reflexión en tiempo de ejecución.
 
 En la asignación de una tupla, también pueden especificarse los nombres de los campos a la derecha de la asignación:
 
 [!code-csharp[ImplicitNamedTuple](../../../samples/snippets/csharp/new-in-7/program.cs#06_ImplicitNamedTuple "Implicitly named tuple")]
 
-Puede especificar los nombres de campos en el lado izquierdo y derecho de la asignación:
+Puede especificar nombres para los campos a la izquierda y la derecha de la asignación:
 
 [!code-csharp[NamedTupleConflict](../../../samples/snippets/csharp/new-in-7/program.cs#07_NamedTupleConflict "Named tuple conflict")]
 
@@ -149,25 +149,25 @@ No está obligado por los nombres definidos en el método `Deconstruct`. Puede c
 
 Puede aprender más sobre tuplas en el [tema sobre tuplas](../tuples.md).
 
-## <a name="discards"></a>Descarta
+## <a name="discards"></a>Descartes
 
-A menudo, cuando Deconstruyendo una tupla o una llamada a un método con `out` parámetros, se obliga a definir una variable cuyo valor no le interesa y no tiene intención de usar. C# agrega compatibilidad para *descarta* para controlar este escenario. Discard es una variable de solo escritura cuyo nombre es `_` (el carácter de subrayado); puede asignar todos los valores que desea descartar a la única variable. Discard es similar a una variable no asignada; Además de la instrucción de asignación, el descarte no se puede usar en el código.
+Habitualmente, al deconstruir una tupla o realizar una llamada a un método mediante parámetros `out`, debe definir una variable con un valor indiferente y que no vaya a usar. C# agrega la compatibilidad con *descartes* para gestionar este tipo de escenarios. Un descarte es una variable de solo escritura con el nombre `_` (el carácter de guion bajo). Puede asignar todos los valores que quiera descartar a una única variable. Un descarte se parece a una variable no asignada, aunque no puede usarse en el código (excepto la instrucción de asignación).
 
-Descarta se admite en los escenarios siguientes:
+Los descartes se admiten en los escenarios siguientes:
 
-* Cuando Deconstruyendo tuplas o tipos definidos por el usuario.
+* Al deconstruir tuplas o tipos definidos por el usuario.
 
-* Al llamar a métodos con [out](../language-reference/keywords/out.md) parámetros.
+* Al realizar llamadas a métodos mediante parámetros [out](../language-reference/keywords/out.md).
 
-* En una coincidencia de operación con el [es](../language-reference/keywords/is.md) y [cambiar](../language-reference/keywords/switch.md) instrucciones.
+* En una operación de coincidencia de patrones con las instrucciones [is](../language-reference/keywords/is.md) y [switch](../language-reference/keywords/switch.md).
 
-* Como un identificador independiente cuando desea explícitamente identifican el valor de una asignación como un descarte.
+* Como un identificador independiente cuando quiera identificar explícitamente el valor de una asignación como descarte.
 
-En el ejemplo siguiente se define un `QueryCityDataForYears` método que devuelve una tupla de 6 que contiene datos de una ciudad para dos años diferentes. La llamada al método en el ejemplo se refiere únicamente a los valores de dos rellenado devueltos por el método y por lo que trata los valores restantes de la tupla, tal y como se descarta cuando deconstruyen la tupla.
+En el ejemplo siguiente se define un método `QueryCityDataForYears` que devuelve una tupla de tipo 6 con datos de una ciudad correspondientes a dos años diferentes. La llamada de método del ejemplo se refiere únicamente a los dos valores de rellenado que devuelve el método, por lo que trata los valores restantes de la tupla como descartes al deconstruirla.
 
 [!code-csharp[Tuple-discard](../../../samples/snippets/csharp/programming-guide/deconstructing-tuples/discard-tuple1.cs)]
 
-Para obtener más información, consulte [descarta](../discards.md).
+Para obtener más información, vea [Descartes](../discards.md).
  
 ## <a name="pattern-matching"></a>Detección de patrones
 
@@ -175,9 +175,9 @@ La *coincidencia de patrones* es una característica que permite implementar la 
 
 La coincidencia de patrones admite expresiones `is` y `switch`. Cada una de ellas habilita la inspección de un objeto y sus propiedades para determinar si el objeto cumple el patrón buscado. Use la palabra clave `when` para especificar reglas adicionales para el patrón.
 
-### <a name="is-expression"></a>`is`expresión
+### <a name="is-expression"></a>Expresión `is`
 
-El `is` expresión de modelo extiende el conocido `is` operador que se va a consultar un objeto más allá de su tipo.
+Las expresiones de patrón `is` extienden el conocido operador `is` para consultar un objeto más allá de su tipo.
 
 Comencemos por un escenario sencillo. Agregaremos funciones a este escenario que muestren cómo las expresiones de coincidencia de patrones crean algoritmos que funcionan fácilmente con tipos no relacionados. Empezaremos por un método que calcule la suma de varias tiradas de dados:
 
@@ -203,7 +203,7 @@ Las expresiones de coincidencia también admiten constantes. Esto puede ahorrar 
 
 [!code-csharp[SwitchWithConstants](../../../samples/snippets/csharp/new-in-7/patternmatch.cs#17_SwitchWithConstants "Switch with constants")]
 
-El código anterior agrega casos de `0` como un caso especial de `int` y `null` como un caso especial cuando no hay ninguna entrada. Muestra una nueva característica importante en expresiones de patrón de modificador: el orden de las expresiones `case` ahora cuenta. El caso `0` debe aparecer antes del caso general `int`. De lo contrario, el primer patrón que coincida sería el caso `int`, aunque el valor sea `0`. Si accidentalmente pedido expresiones de coincidencia de forma que ya se ha controlado un caso de una versión posterior, el compilador marca y generar un error.
+El código anterior agrega casos de `0` como un caso especial de `int` y `null` como un caso especial cuando no hay ninguna entrada. Muestra una nueva característica importante en expresiones de patrón de modificador: el orden de las expresiones `case` ahora cuenta. El caso `0` debe aparecer antes del caso general `int`. De lo contrario, el primer patrón que coincida sería el caso `int`, aunque el valor sea `0`. Si accidentalmente ordena expresiones de coincidencia como estas una vez controlado el último caso, el compilador las marcará y generará un error.
 
 Este mismo comportamiento habilita el caso especial en una secuencia de entrada vacía.
 Puede ver que el caso de un elemento `IEnumerable` que tiene elementos debe aparecer antes que el caso general `IEnumerable`.
@@ -215,9 +215,9 @@ Por último, agregaremos un último `case` para un nuevo estilo de dado. Algunos
 > [!NOTE]
 > Dos dados de percentil de 10 caras pueden representar todos los números del 0 al 99. Un dado tiene caras etiquetadas con `00`, `10`, `20`, ...`90`. El otro tiene caras etiquetadas con `0`, `1`, `2`, ...`9`. Sume los valores de los dos dados y podrá obtener todos los números del 0 al 99.
 
-Para agregar este tipo de dado a la colección, defina primero un tipo que represente el dado de percentil:
+Para agregar este tipo de dado a la colección, defina primero un tipo que represente el dado de percentil. La propiedad `TensDigit` almacena hasta `90` valores `0`, `10` y `20`:
 
-[!code-csharp[18_PercentileDie](../../../samples/snippets/csharp/new-in-7/patternmatch.cs#18_PercentileDie "Percentile Die type")]
+[!code-csharp[18_PercentileDice](../../../samples/snippets/csharp/new-in-7/patternmatch.cs#18_PercentileDice "Percentile Die type")]
 
 Después agregue una expresión de coincidencia `case` para el nuevo tipo:
 
@@ -277,14 +277,14 @@ Para obtener el resultado que quiere, debe agregar el modificador `ref` a la dec
 
 Ahora, la segunda instrucción `WriteLine` del ejemplo anterior imprimirá el valor `24`, que indica que se ha modificado el almacenamiento en la matriz. La variable local se ha declarado con el modificador `ref` y tomará un valor devuelto `ref`. Debe inicializar una variable `ref` cuando se declara, no puede separar la declaración de la inicialización.
 
-El lenguaje C# tiene tres otras reglas que protección de la utilización inadecuada de la `ref` variables locales y devuelve:
+El lenguaje C# tiene otras tres reglas que protegen del uso incorrecto de las variables locales y devoluciones de `ref`:
 
-* No se puede asignar un valor devuelto del método estándar para un `ref` variable local.
+* No se puede asignar un valor devuelto del método estándar para una variable local `ref`.
     - No permite instrucciones como `ref int i = sequence.Count();`
 * No puede devolver un `ref` a una variable cuya duración se extiende más allá de la ejecución del método.
-    - Esto significa que no puede devolver una referencia a una variable local o una variable con un ámbito similar.
-* `ref`Devuelve y variables locales no se puede usar con métodos asincrónicos.
-    - El compilador no puede saber si se ha establecido la variable que se hace referencia a su valor final cuando vuelve el método asincrónico.
+    - Esto significa que no puede devolver una referencia a una variable local o a una variable con un ámbito similar.
+* Las `ref` locales y las devoluciones no se pueden usar con métodos asíncronos.
+    - El compilador no puede identificar si una variable a la que se hace referencia se ha establecido en su valor final en la devolución del método asíncrono.
 
 La incorporación de variables locales ref y devoluciones de ref permite usar algoritmos que resultan más eficientes si se evita copiar los valores o se realizan operaciones de desreferencia varias veces. 
 
@@ -366,7 +366,7 @@ La nueva característica de lenguaje significa que los métodos asincrónicos pu
 [!code-csharp[UsingValueTask](../../../samples/snippets/csharp/new-in-7/AsyncWork.cs#30_UsingValueTask "Using ValueTask")]
 
 > [!NOTE]
-> Debe agregar el paquete de NuGet [ `System.Threading.Tasks.Extensions` ](https://www.nuget.org/packages/System.Threading.Tasks.Extensions/) para poder usar el <xref:System.Threading.Tasks.ValueTask%601> tipo.
+> Debe agregar el paquete de NuGet [`System.Threading.Tasks.Extensions`](https://www.nuget.org/packages/System.Threading.Tasks.Extensions/) para poder usar el tipo <xref:System.Threading.Tasks.ValueTask%601>.
 
 Una optimización simple sería usar `ValueTask` en lugares donde antes se usaría `Task`. Pero si quiere realizar otras optimizaciones a mano, puede almacenar en caché los resultados del trabajo asincrónico y volver a usar el resultado en llamadas posteriores. La estructura `ValueTask` tiene un constructor con un parámetro `Task` para que se pueda diseñar un `ValueTask` a partir del valor devuelto de cualquier método asincrónico existente:
 
