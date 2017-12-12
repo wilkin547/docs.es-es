@@ -16,14 +16,14 @@ helpviewer_keywords:
 - WCF, security
 ms.assetid: 2424c137-c7c2-4aa9-8d5d-a066e12fefda
 caps.latest.revision: "11"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 1cf2048a630b3556291577565bed47c40665b156
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: fced2ddd16ae244e2ea3d945082f48ffd23302e6
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="how-to-set-up-a-signature-confirmation"></a>Cómo: Establecer una confirmación de firma
 *Confirmación de firma* es un mecanismo para que un iniciador de mensaje para asegurarse de que se generó una respuesta recibida en respuesta al mensaje original del remitente. La confirmación de la firma se define en la especificación WS-Security 1.1. Si un extremo admite WS-Security 1.0, no puede utilizar la confirmación de firma.  
@@ -44,13 +44,13 @@ ms.lasthandoff: 11/21/2017
   
 ### <a name="to-enable-signature-confirmation-in-configuration"></a>Para habilitar la confirmación de firma en configuración  
   
-1.  Agregue un elemento `<customBinding>` a la sección `<bindings>` del archivo de configuración.  
+1.  Agregue un elemento `<customBinding>` a la sección`<bindings>` del archivo de configuración.  
   
 2.  Agregue un elemento `<binding>` y establezca el atributo de nombre en un valor adecuado.  
   
 3.  Agregue un elemento de codificación adecuado. El siguiente ejemplo agrega un elemento `<TextMessageEncoding>`.  
   
-4.  Agregue un elemento secundario `<security>` y establezca el atributo `requireSignatureConfirmation` true en `true`.  
+4.  Agregue un elemento secundario `<security>` y establezca el atributo`requireSignatureConfirmation` en`true`.  
   
 5.  Opcional. Para habilitar la confirmación de firma durante el arranque, agregar un [ \<secureConversationBootstrap >](../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md) elemento secundario y establezca la `equireSignatureConfirmation` atribuir a `true`.  
   

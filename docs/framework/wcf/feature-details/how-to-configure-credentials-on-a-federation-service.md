@@ -16,14 +16,14 @@ helpviewer_keywords:
 - federation
 ms.assetid: 149ab165-0ef3-490a-83a9-4322a07bd98a
 caps.latest.revision: "21"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: e6a15f5b0b68252ada1587e66ea601d1f55e8a06
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: cb5e3cc0e33947f1797e283461738f96b6d4a8b4
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="how-to-configure-credentials-on-a-federation-service"></a>Cómo: Configurar las credenciales en un servicio de federación
 En [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], crear un servicio federado consta de los siguientes procedimientos principales:  
@@ -61,7 +61,7 @@ En [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], crear un servicio fe
   
 3.  Cree un elemento `<knownCertificates>` como elemento secundario del elemento de `<issuedTokenAuthentication>`.  
   
-4.  Cree cero o más elementos `<add>` como elementos secundarios del elemento `<knownCertificates>` y especifique cómo buscar el certificado mediante los atributos `storeLocation`, `storeName`, `x509FindType` y `findValue`.  
+4.  Cree cero o más elementos `<add>` como elementos secundarios del elemento`<knownCertificates>`y especifique cómo buscar el certificado mediante los atributos`storeLocation`,`storeName`, `x509FindType` y `findValue`.  
   
 5.  Si es necesario, establezca el `samlSerializer` atributo de la <`issuedTokenAuthentication`> elemento en el nombre de tipo de personalizado <xref:System.IdentityModel.Tokens.SamlSerializer> clase.  
   

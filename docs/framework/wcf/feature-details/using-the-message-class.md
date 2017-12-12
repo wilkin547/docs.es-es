@@ -13,14 +13,14 @@ dev_langs:
 - vb
 ms.assetid: d1d62bfb-2aa3-4170-b6f8-c93d3afdbbed
 caps.latest.revision: "14"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 18cb2162712ffac74972ba20a61cd84657685af0
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 999b0105bf6ab97eb3ab38423efbc31f9b322254
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="using-the-message-class"></a>Uso de la clase de mensajes
 La clase <xref:System.ServiceModel.Channels.Message> es fundamental para [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. Toda la comunicación entre clientes y servicios, en última instancia, produce como resultado instancias <xref:System.ServiceModel.Channels.Message> que se envían y reciben.  
@@ -203,7 +203,7 @@ La clase <xref:System.ServiceModel.Channels.Message> es fundamental para [!INCLU
  Tenga en cuenta que si crea una copia de un mensaje, la copia utiliza los encabezados del mensaje del original.  
   
 ### <a name="other-members-that-can-be-overridden"></a>Otros miembros que se pueden invalidar  
- Puede invalidar <xref:System.ServiceModel.Channels.Message.OnWriteStartEnvelope%2A>, <xref:System.ServiceModel.Channels.Message.OnWriteStartHeaders%2A>y los métodos <xref:System.ServiceModel.Channels.Message.OnWriteStartBody%2A> para especificar cómo se escribe la envoltura SOAP, encabezados SOAP y etiquetas iniciales del elemento de cuerpo SOAP. Éstos corresponden normalmente a `<soap:Envelope>`, `<soap:Header>` y `<soap:Body>`. Estos métodos no deberían escribir normalmente nada si la propiedad `Version` devuelve `MessageVersion.None`.  
+ Puede invalidar <xref:System.ServiceModel.Channels.Message.OnWriteStartEnvelope%2A>, <xref:System.ServiceModel.Channels.Message.OnWriteStartHeaders%2A>y los métodos <xref:System.ServiceModel.Channels.Message.OnWriteStartBody%2A> para especificar cómo se escribe la envoltura SOAP, encabezados SOAP y etiquetas iniciales del elemento de cuerpo SOAP. Éstos corresponden normalmente a `<soap:Envelope>``<soap:Header>``<soap:Body>`, y . Estos métodos no deberían escribir normalmente nada si la propiedad `Version` devuelve `MessageVersion.None`.  
   
 > [!NOTE]
 >  La implementación predeterminada de `OnGetReaderAtBodyContents` llama `OnWriteStartEnvelope` y `OnWriteStartBody` antes de llamar `OnWriteBodyContents` y almacenar en búfer los resultados. Los encabezados no se escriben.  

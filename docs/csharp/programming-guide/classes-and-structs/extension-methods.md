@@ -12,11 +12,11 @@ ms.assetid: 175ce3ff-9bbf-4e64-8421-faeb81a0bb51
 caps.latest.revision: "35"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 30058a461dddb872e76bef574273c62910e8b2c8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 34a80e4bf129c6104d50a8a0877271136c0c4198
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="extension-methods-c-programming-guide"></a>Métodos de extensión (Guía de programación de C#)
 Los métodos de extensión permiten "agregar" métodos a los tipos existentes sin crear un nuevo tipo derivado, recompilar o modificar de otra manera el tipo original. Los métodos de extensión son una clase especial de método estático, pero se les llama como si fueran métodos de instancia en el tipo extendido. En el caso del código de cliente escrito en C#, F# y Visual Basic, no existe ninguna diferencia aparente entre llamar a un método de extensión y llamar a los métodos realmente definidos en un tipo.  
@@ -84,14 +84,14 @@ using System.Linq;
   
 -   Los métodos de extensión se incluyen en el ámbito en el nivel de espacio de nombres. Por ejemplo, si se tienen varias clases estáticas que contienen métodos de extensión en un único espacio de nombres denominado `Extensions`, la directiva `using Extensions;` los incluirá a todos en el ámbito.  
   
- Para una biblioteca de clases ya implementada, no deben usarse métodos de extensión para evitar incrementar el número de versión de un ensamblado. Si desea agregar una funcionalidad significativa a una biblioteca de la que es propietario del código fuente, deben seguirse las instrucciones de .NET Framework estándar para el control de versiones de ensamblado. Para obtener más información, vea [Versiones de los ensamblados](https://msdn.microsoft.com/library/51ket42z).  
+ Para una biblioteca de clases ya implementada, no deben usarse métodos de extensión para evitar incrementar el número de versión de un ensamblado. Si desea agregar una funcionalidad significativa a una biblioteca de la que es propietario del código fuente, deben seguirse las instrucciones de .NET Framework estándar para el control de versiones de ensamblado. Para obtener más información, vea [Versiones de los ensamblados](../../../../docs/framework/app-domains/assembly-versioning.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
- [Ejemplos de programación paralela (que incluyen muchos ejemplos de métodos de extensión)](http://code.msdn.microsoft.com/Samples-for-Parallel-b4b76364)  
+ [Ejemplos de programación en paralelo (incluyen numerosos métodos de extensión de ejemplo)](http://code.msdn.microsoft.com/Samples-for-Parallel-b4b76364)  
  [Expresiones lambda](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)  
  [Información general sobre operadores de consulta estándar](http://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)  
- [Conversión de las reglas para la instancia parámetros y su impacto](http://go.microsoft.com/fwlink/?LinkId=112385)  
- [Métodos de extensión interoperabilidad entre lenguajes](http://go.microsoft.com/fwlink/?LinkId=112386)  
- [Métodos de extensión y delegados currificadas](http://go.microsoft.com/fwlink/?LinkId=112387)  
+ [Conversion rules for Instance parameters and their impact](http://go.microsoft.com/fwlink/?LinkId=112385) (Reglas de conversión para los parámetros de instancia y su impacto)  
+ [Extension methods Interoperability between languages](http://go.microsoft.com/fwlink/?LinkId=112386) (Interoperabilidad de los métodos de extensión entre lenguajes)  
+ [Extension methods and Curried Delegates](http://go.microsoft.com/fwlink/?LinkId=112387) (Métodos de extensión y delegados currificados)  
  [Extension method Binding and Error reporting](http://go.microsoft.com/fwlink/?LinkId=112388) (Enlazar métodos de extensión y notificación de errores)

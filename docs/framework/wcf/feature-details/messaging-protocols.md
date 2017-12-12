@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 5b20bca7-87b3-4c8f-811b-f215b5987104
 caps.latest.revision: "14"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 4052971746086061cb2ed091bd13c962318b2d89
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: fef5fc58adeac99bcd2cac0fda8a72dde2797001
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="messaging-protocols"></a>Protocolos de mensajería
 La pila del canal [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] emplea codificación y canales de transporte para transformar la representación interna de mensajes en su formato de conexión y enviarla utilizando un transporte determinado. El transporte más común utilizado para la interoperabilidad de servicios Web es HTTP y las codificaciones más comunes utilizadas por los servicios Web son las basadas en XML, SOAP 1.1, SOAP 1.2 y el Mecanismo de optimización de transmisión de mensajes (MTOM).  
@@ -323,11 +323,11 @@ dp|http://schemas.microsoft.com/net/2006/06/duplex|
 #### <a name="use-endpoint-reference-inside-wsdl-port"></a>Uso de la referencia de extremo dentro del puerto WSDL  
  La sección 4.1 de WS-ADDR10-WSDL extiende el elemento `wsdl:port` para incluir el elemento secundario `<wsa10:EndpointReference…/>` para describir el extremo en términos de WS-Addressing. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] expande esta utilidad en WS-Addressing 2004/08, permitiendo que `<wsa:EndpointReference…/>` aparezca como un elemento secundario de `wsdl:port`.  
   
--   R3531: si un extremo tiene una directiva alternativa adjunta con una aserción de directiva `<wsaw10:UsingAddressing/>`, el elemento `wsdl:port` correspondiente puede contener un elemento secundario `<wsa10:EndpointReference …/>`.  
+-   R3531: si un extremo tiene una directiva alternativa adjunta con una aserción de directiva `<wsaw10:UsingAddressing/>`, el elemento`wsdl:port` correspondiente puede contener un elemento secundario`<wsa10:EndpointReference …/>`.  
   
 -   R3532: Si un `wsdl:port` contiene un elemento secundario `<wsa10:EndpointReference …/>`, `wsa10:EndpointReference/wsa10:Address` valor del elemento secundario debe coincidir con el valor de la `@address` atributo del nodo relacionado `wsdl:port` / `wsdl:location` elemento.  
   
--   R3533: si un extremo tiene una directiva alternativa adjunta con una aserción de directiva `<wsap:UsingAddressing/>`, el elemento `wsdl:port` correspondiente puede contener un elemento secundario `<wsa:EndpointReference …/>`.  
+-   R3533: si un extremo tiene una directiva alternativa adjunta con una aserción de directiva `<wsap:UsingAddressing/>`, el elemento`wsdl:port` correspondiente puede contener un elemento secundario`<wsa:EndpointReference …/>`.  
   
 -   R3534: Si un `wsdl:port` contiene un elemento secundario `<wsa:EndpointReference …/>`, `wsa:EndpointReference/wsa:Address` valor del elemento secundario debe coincidir con el valor de la `@address` atributo del nodo relacionado `wsdl:port` / `wsdl:location` elemento.  
   

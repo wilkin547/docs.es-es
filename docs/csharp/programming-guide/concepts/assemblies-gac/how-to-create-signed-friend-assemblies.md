@@ -11,11 +11,11 @@ ms.assetid: bab62063-61e6-453f-905f-77673df9534e
 caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 79f5ff0615a572db162906c698c47196c6f045da
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d3d9d4c549654341c0739cc8132d953623482d62
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="how-to-create-signed-friend-assemblies-c"></a>Cómo: Crear ensamblados de confianza con signo (C#)
 En este ejemplo se muestra cómo usar ensamblados de confianza con ensamblados que tienen nombres seguros. Ambos ensamblados deben tener nombres seguros. Aunque los dos ensamblados de este ejemplo usan las mismas claves, es posible usar claves diferentes para dos ensamblados.  
@@ -99,9 +99,9 @@ En este ejemplo se muestra cómo usar ensamblados de confianza con ensamblados q
 ## <a name="see-also"></a>Vea también  
  <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>  
  [Assemblies and the Global Assembly Cache (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md) (Ensamblados y caché global de ensamblados [C#])  
- [Friend (ensamblados) (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/friend-assemblies.md)  
- [Cómo: crear ensamblados de confianza sin firmar (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-unsigned-friend-assemblies.md)  
+ [Ensamblados de confianza (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/friend-assemblies.md)  
+ [Cómo: Crear ensamblados de confianza sin firmar (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-unsigned-friend-assemblies.md)  
  [/keyfile](../../../../visual-basic/reference/command-line-compiler/keyfile.md)  
  [Sn.exe (Herramienta de nombre seguro)](https://msdn.microsoft.com/library/k5b5tt23)  
- [Crear y utilizar ensamblados con nombre seguro](https://msdn.microsoft.com/library/xwb8f617)  
+ [Crear y utilizar ensamblados con nombre seguro](../../../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)  
  [Guía de programación de C#](../../../../csharp/programming-guide/index.md)

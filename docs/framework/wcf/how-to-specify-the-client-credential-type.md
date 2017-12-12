@@ -16,14 +16,14 @@ helpviewer_keywords:
 - WCF, security
 ms.assetid: 10f51bee-5f92-4c1a-9126-fa5418535d8f
 caps.latest.revision: "8"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 35c3b5ee429f7c9337fa3c3e3eb0d0476e3f56d1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: c6959ec7f2226f0d6554e9210b3ee1311871cdcf
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="how-to-specify-the-client-credential-type"></a>Cómo: Especificar el tipo de credencial de cliente
 Después de establecer un modo de seguridad (ya sea transporte o mensaje), tiene la opción de establecer el tipo de credencial de cliente. Esta propiedad especifica qué tipo de credencial debe proporcionar el cliente al servicio para la autenticación. [!INCLUDE[crabout](../../../includes/crabout-md.md)]configuración del modo de seguridad (un paso necesario antes de establecer tipo de credencial de cliente), consulte [Cómo: establecer el modo de seguridad](../../../docs/framework/wcf/how-to-set-the-security-mode.md).  
@@ -51,7 +51,7 @@ Después de establecer un modo de seguridad (ya sea transporte o mensaje), tiene
   
 5.  Agregue un enlace `<security>`. Establezca el atributo `mode` en un valor adecuado. Este ejemplo lo define en `"Message"`.  
   
-6.  Agregue un elemento `<message>` o `<transport>`, tal y como se haya determinado en el modo de seguridad. Establezca el atributo `clientCredentialType` en un valor adecuado. Este ejemplo usa `"Windows"`.  
+6.  Agregue un elemento `<message>` o`<transport>`, tal y como se haya determinado en el modo de seguridad. Establezca el atributo `clientCredentialType` en un valor adecuado. Este ejemplo usa `"Windows"`.  
   
     ```xml  
     <system.serviceModel>  
