@@ -13,11 +13,11 @@ caps.latest.revision: "11"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 2b1347ff4e04a638ed5973f20ae64ef0058dc025
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f0205f4bc468d4a38a50fd2be36d05583ad87906
+ms.sourcegitcommit: 9bee08539b1886c9d57fa3d5bd8a58dfdd7cad94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="routing-introduction"></a>Introducción al enrutamiento
 El servicio de enrutamiento proporciona un intermediario de SOAP conectable genérico que es capaz de enrutar mensajes en función de su contenido. Con el servicio de enrutamiento, puede crear una lógica de enrutamiento compleja que le permita implementar escenarios como la agregación de servicios, el control de versiones del servicio, el enrutamiento de prioridad y el enrutamiento de multidifusión. El servicio de enrutamiento también proporciona un control de errores, que le permite preparar listas de extremos de reserva a los que se envían los mensajes si se produce un error al realizar un envío al extremo de destino principal.  
@@ -48,7 +48,7 @@ El servicio de enrutamiento proporciona un intermediario de SOAP conectable gen�
  En el siguiente ejemplo, se definen los puntos de conexión de cliente y servicio que usa el servicio de enrutamiento tanto mediante programación como por medio de un archivo de configuración.  
   
 ```xml  
-<services>  
+    <services>  
       <!--ROUTING SERVICE -->  
       <service behaviorConfiguration="routingData"  
                name="System.ServiceModel.Routing.RoutingService">  
@@ -61,7 +61,8 @@ El servicio de enrutamiento proporciona un intermediario de SOAP conectable gen�
         <endpoint address=""  
                   binding="wsHttpBinding"  
                   name="reqReplyEndpoint"  
-                  contract="System.ServiceModel.Routing.IRequestReplyRouter" />      </service>  
+                  contract="System.ServiceModel.Routing.IRequestReplyRouter" />      
+      </service>  
     </services>  
     <behaviors>  
       <serviceBehaviors>  
