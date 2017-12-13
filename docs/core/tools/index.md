@@ -7,11 +7,11 @@ ms.date: 08/14/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.openlocfilehash: d66738593a1542affc956e08bbc38a3b2b1841b9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 0f43f569cdb8b9e4be68b61ba7b5cc4686fdb871
+ms.sourcegitcommit: 9bee08539b1886c9d57fa3d5bd8a58dfdd7cad94
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="net-core-command-line-interface-cli-tools"></a>Herramientas de la interfaz de la línea de comandos (CLI) de .NET Core
 
@@ -146,7 +146,7 @@ Las opciones que se pasan en la línea de comandos son las opciones para el coma
 
 ## <a name="migration-from-projectjson"></a>Migración desde project.json
 
-Si usó herramientas de la versión preliminar 2 para producir proyectos basados en *project.json*, consulte el tema sobre [dotnet migrate](dotnet-migrate.md) para más información sobre cómo migrar su proyecto a MSBuild/*.csproj*  para usarlo con herramientas de versión. Para los proyectos de .NET Core creados antes del lanzamiento de las herramientas de versión preliminar 2, actualice manualmente el proyecto siguiendo las instrucciones que se indican en [Migración de DNX a CLI de .NET Core (project.json)](../migration/from-dnx.md) y luego use `dotnet migrate` o actualice directamente los proyectos.
+Si usó herramientas de la versión preliminar 2 para producir proyectos basados en *project.json*, consulte el tema sobre [dotnet migrate](dotnet-migrate.md) para más información sobre cómo migrar su proyecto a MSBuild/*.csproj*  para usarlo con herramientas de versión. Para los proyectos de .NET Core creados antes del lanzamiento de las herramientas de la versión preliminar 2, actualice manualmente el proyecto siguiendo las instrucciones que se indican en [Migración de DNX a CLI de .NET Core (project.json)](../migration/from-dnx.md) y, luego, use `dotnet migrate` o actualice directamente los proyectos.
 
 ## <a name="see-also"></a>Vea también
 
