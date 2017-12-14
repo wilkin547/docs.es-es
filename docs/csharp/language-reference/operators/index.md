@@ -1,14 +1,10 @@
 ---
 title: operadores de C#
-ms.date: 2017-03-09
+ms.date: 03/09/2017
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- cs.operators
-dev_langs:
-- CSharp
+f1_keywords: cs.operators
 helpviewer_keywords:
 - boolean operators [C#]
 - expressions [C#], operators
@@ -24,29 +20,14 @@ helpviewer_keywords:
 - keywords [C#], operators
 - arithmetic operators [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 0ac5c6bfb129f0367c2d62ebf139e44b8eb60379
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 9bb64ea7199f5699ff166d1affb7f8126dcc6612
-ms.openlocfilehash: eb8c4f11e540aa2685989ef11b2515a32d8d1fd6
-ms.contentlocale: es-es
-ms.lasthandoff: 09/02/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="c-operators"></a>operadores de C#
 C# proporciona muchos operadores, que son símbolos que especifican las operaciones (matemáticas, indización, llamada de función, etc.) que se realizan en una expresión.  Puede [sobrecargar](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md) muchos operadores para cambiar su significado al aplicarlos a un tipo definido por el usuario.  
@@ -221,7 +202,7 @@ C# proporciona muchos operadores, que son símbolos que especifican las operacio
 ## <a name="arithmetic-overflow"></a>Desbordamiento aritmético  
  Los operadores aritméticos ([+](../../../csharp/language-reference/operators/addition-operator.md), [-](../../../csharp/language-reference/operators/subtraction-operator.md), [*](../../../csharp/language-reference/operators/multiplication-operator.md) y [/](../../../csharp/language-reference/operators/division-operator.md)) pueden producir resultados fuera del rango de valores posibles para el tipo numérico implicado. Para obtener detalles debe ir a la sección del operador en cuestión, pero en general:  
   
-- El desbordamiento aritmético de enteros produce una <xref:System.OverflowException> o descarta los bits más significativos del resultado. La división de enteros por cero siempre produce una @System.DivideByZeroException.  
+- El desbordamiento aritmético de enteros produce una <xref:System.OverflowException> o descarta los bits más significativos del resultado. La división de enteros por cero siempre produce una <xref:System.DivideByZeroException>.  
 
    Cuando se produce el desbordamiento de enteros, lo que suceda dependerá del contexto de ejecución, que puede ser [comprobado o no comprobado](../../../csharp/language-reference/keywords/checked-and-unchecked.md). En un contexto comprobado, se produce una <xref:System.OverflowException>. En un contexto no comprobado, se descartan los bits más significativos del resultado y la ejecución continúa. Por lo tanto, C# ofrece la posibilidad de controlar u omitir el desbordamiento. De forma predeterminada, las operaciones aritméticas se producen en un contexto *no comprobado*. 
 
@@ -233,8 +214,7 @@ C# proporciona muchos operadores, que son símbolos que especifican las operacio
   
   
 ## <a name="see-also"></a>Vea también  
- [Referencia de C#](../../../csharp/language-reference/index.md)   
- [Guía de programación de C#](../../../csharp/programming-guide/index.md)   
- [C#](../../../csharp/index.md) [Operadores sobrecargables](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md)   
+ [Referencia de C#](../../../csharp/language-reference/index.md)  
+ [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
+ [C#](../../../csharp/index.md) [Operadores sobrecargables](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md)  
  [Palabras clave de C#](../../../csharp/language-reference/keywords/index.md)
-

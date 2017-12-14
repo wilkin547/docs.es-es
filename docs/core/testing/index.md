@@ -9,11 +9,11 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 815ac74c-4bd9-4a94-a87c-78288b27c0e2
-ms.openlocfilehash: 666c06b236ad870c5c683749ab57d4488b4b8a39
-ms.sourcegitcommit: 7296449e03f747528f9bc59954c74bf4e359cc1e
+ms.openlocfilehash: 780c2655b6d6a660939fb79ea58bec463ec97aa9
+ms.sourcegitcommit: 401c4427a3ec0d1263543033b3084039278509dc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/06/2017
 ---
 # <a name="unit-testing-in-net-core-and-net-standard"></a>Prueba unitaria en .NET Core y .NET Standard
 
@@ -34,15 +34,18 @@ Al escribir pruebas unitarias, tenga cuidado de no introducir accidentalmente de
 
 Más información sobre las pruebas unitarias en proyectos de .NET Core:
 
-Los proyectos de prueba unitaria para .NET Core son compatibles con [C#](../../csharp/index.md), [F#](../../fsharp/index.md) y [Visual Basic](../../visual-basic/index.md). También puede elegir entre [xUnit](http://xunit.github.io) y [MSTest](https://github.com/Microsoft/vstest-docs).
+Los proyectos de prueba unitaria para .NET Core son compatibles con [C#](../../csharp/index.md), [F#](../../fsharp/index.md) y [Visual Basic](../../visual-basic/index.md). También puede elegir entre [xUnit](http://xunit.github.io), [NUnit](http://nunit.org) y [MSTest](https://github.com/Microsoft/vstest-docs).
 
 Puede leer sobre esas combinaciones en estos tutoriales:
 
 * Cree pruebas unitarias mediante [*XUnit* y *C#* con la CLI de .NET Core](unit-testing-with-dotnet-test.md).
+* Cree pruebas unitarias mediante [*NUnit* y *C#* con la CLI de .NET Core](unit-testing-with-nunit.md).
 * Cree pruebas unitarias mediante [*MSTest* y *C#* con la CLI de .NET Core](unit-testing-with-mstest.md).
 * Cree pruebas unitarias mediante [*XUnit* y *F#* con la CLI de .NET Core](unit-testing-fsharp-with-dotnet-test.md).
+* Cree pruebas unitarias mediante [*NUnit* y *F#* con la CLI de .NET Core](unit-testing-fsharp-with-nunit.md).
 * Cree pruebas unitarias mediante [*MSTest* y *F#* con la CLI de .NET Core](unit-testing-fsharp-with-mstest.md).
 * Cree pruebas unitarias mediante [*XUnit* y *Visual Basic* con la CLI de .NET Core](unit-testing-visual-basic-with-dotnet-test.md).
+* Cree pruebas unitarias mediante [*NUnit* y *Visual Basic* con la CLI de .NET Core](unit-testing-visual-basic-with-nunit.md).
 * Cree pruebas unitarias mediante [*MSTest* y *Visual Basic* con la CLI de .NET Core](unit-testing-visual-basic-with-mstest.md).
 
 Puede elegir varios lenguajes para las bibliotecas de clases y las bibliotecas de pruebas unitarias. Puede obtener información sobre cómo combinar y hacer coincidir los tutoriales mencionados anteriormente.

@@ -4,6 +4,7 @@
 ### [Tipos de métodos de manipulación de cadenas](types-of-string-manipulation-methods.md)
 ### [Nothing y cadenas](nothing-and-strings.md)
 ### [Cómo afecta la referencia cultural a las cadenas](how-culture-affects-strings.md)
+### [Cadenas interpoladas](interpolated-strings.md)
 ### [Acceso a cadenas basado en cero y basado en uno](zero-based-vs-one-based-string-access.md)
 ## [Crear cadenas mediante StringBuilder](how-to-create-strings-using-a-stringbuilder.md)
 ## [Buscar en una cadena](how-to-search-within-a-string.md)

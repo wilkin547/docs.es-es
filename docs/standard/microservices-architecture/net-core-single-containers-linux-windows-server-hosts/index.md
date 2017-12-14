@@ -8,12 +8,11 @@ ms.date: 05/26/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
+ms.openlocfilehash: 73d733a45837d047319312ea7b2e558a02b39eba
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 9bb64ea7199f5699ff166d1affb7f8126dcc6612
-ms.openlocfilehash: a50c2ad3183c80fd76e6db042674e49367d7ffc9
-ms.contentlocale: es-es
-ms.lasthandoff: 09/05/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="deploying-single-container-based-net-core-web-applications-on-linux-or-windows-nano-server-hosts"></a>Implementar aplicaciones web de .NET Core basadas en un solo contenedor en hosts de Linux o Windows Nano Server
 
@@ -119,9 +118,11 @@ services:
   command: /bin/bash -c "dotnet restore ./eShopWeb.sln && dotnet publish  ./eShopWeb.sln -c Release -o ./obj/Docker/publish"
 ```
 
+**Nota**: A partir de .NET Core 2.0, el comando de restauración dotnet se ejecuta automáticamente cuando se ejecuta la publicación de dotnet.
+
 Tenga en cuenta que la imagen es una imagen de compilación de ASP.NET Core. Esta imagen incluye las herramientas de compilación y el SDK para compilar la aplicación y crear las imágenes necesarias. Al ejecutar el proyecto **docker-compose** con este archivo, se inicia el contenedor de compilación desde la imagen y se compila la imagen de la aplicación en ese contenedor. Debe especificar ese archivo docker-compose como parte de la línea de comandos para compilar la aplicación en un contenedor de Docker y, después, iniciarlo.
 
-En Visual Studio, puede ejecutar la aplicación en contenedores de Docker. Para ello, seleccione el proyecto **docker-compose** como proyecto de inicio y presione Ctrl+F5 (F5 para depurar), como haría con cualquier otra aplicación. Cuando se inicia el proyecto **docker-compose**, Visual Studio ejecuta **docker-compose** mediante el archivo docker-compose.yml, el archivo docker-compose.override.yml y uno de los archivos docker-compose.vs.\*. Una vez que se ha iniciado la aplicación, Visual Studio abre automáticamente el explorador.
+En Visual Studio, puede ejecutar la aplicación en contenedores de Docker. Para ello, seleccione el proyecto **docker-compose** como proyecto de inicio y presione Ctrl+F5 (F5 para depurar), como haría con cualquier otra aplicación. Cuando se inicia el proyecto **docker-compose**, Visual Studio ejecuta **docker-compose** mediante el archivo docker-compose.yml, el archivo docker-compose.override.yml y uno de los archivos docker-compose.vs\*. Una vez que se ha iniciado la aplicación, Visual Studio abre automáticamente el explorador.
 
 Si inicia la aplicación en el depurador, Visual Studio se asociará a la aplicación en ejecución en Docker.
 
@@ -145,4 +146,3 @@ El asistente que agrega compatibilidad con Docker se comunica con el proceso de 
 
 >[!div class="step-by-step"]
 [Anterior] (../docker-application-development-process/docker-app-development-workflow.md) [Siguiente] (../containerize-net-framework-applications/index.md)
-

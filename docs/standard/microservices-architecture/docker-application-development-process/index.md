@@ -4,16 +4,15 @@ description: Arquitectura de microservicios de .NET para aplicaciones .NET en co
 keywords: Docker, microservicios, ASP.NET, contenedor
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
+ms.date: 10/18/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
+ms.openlocfilehash: 97dfa3261c8ddc7a869b0991673b7a8d298972dd
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
 ms.translationtype: HT
-ms.sourcegitcommit: 9bb64ea7199f5699ff166d1affb7f8126dcc6612
-ms.openlocfilehash: f4c241f463ff1270037c7d66ba39409ca5d9e728
-ms.contentlocale: es-es
-ms.lasthandoff: 09/05/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/22/2017
 ---
 # <a name="development-process-for-docker-based-applications"></a>Proceso de desarrollo de aplicaciones basadas en Docker
 
@@ -25,16 +24,18 @@ ms.lasthandoff: 09/05/2017
 
 Tanto si quiere un IDE eficaz y completo como si prefiere un editor ligero y ágil, Microsoft dispone de herramientas que puede usar para desarrollar aplicaciones de Docker.
 
-**Visual Studio Tools para Docker**. Si usa Visual Studio 2015, puede instalar el complemento [Visual Studio Tools para Docker](https://marketplace.visualstudio.com/items?itemName=MicrosoftCloudExplorer.VisualStudioToolsforDocker-Preview). Si usa Visual Studio 2017, las herramientas para Docker ya están integradas. En cualquier caso, las herramientas para Docker permiten desarrollar, ejecutar y validar las aplicaciones directamente en el entorno de Docker de destino. Puede presionar F5 para ejecutar y depurar la aplicación (de un solo contenedor o de varios contenedores) directamente en un host de Docker, o bien presionar CTRL+F5 para editar y actualizar la aplicación sin tener que volver a compilar el contenedor. Esta es la opción más sencilla y más eficaz para los desarrolladores de Windows que tienen como destino contenedores de Docker para Linux o Windows.
+**Visual Studio (para Windows)**. Para desarrollar aplicaciones basadas en Docker, use Visual Studio 2017 o versiones posteriores que se incluyen con las herramientas de Docker ya integradas. Las herramientas de Docker permiten desarrollar, ejecutar y validar las aplicaciones directamente en el entorno de Docker de destino. Puede presionar F5 para ejecutar y depurar la aplicación (de un solo contenedor o de varios contenedores) directamente en un host de Docker, o bien presionar CTRL+F5 para editar y actualizar la aplicación sin tener que volver a compilar el contenedor. Se trata de la opción de desarrollo más eficaz para aplicaciones basadas en Docker.
+
+**Visual Studio para Mac**. Se trata de un IDE, una evolución de Xamarin Studio, que se ejecuta en Mac OS y admite el desarrollo de aplicaciones basadas en Docker. Debe ser la opción preferida para los desarrolladores que trabajan en equipos Mac y que también deseen usar un IDE eficaz.
 
 **Visual Studio Code y la CLI de Docker**. Si prefiere un editor ligero multiplataforma que admita todos los lenguajes de programación, puede usar Microsoft Visual Studio Code (VS Code) y la CLI de Docker. Se trata de un enfoque de desarrollo multiplataforma para Mac, Linux y Windows.
 
-Estos productos proporcionan una experiencia sencilla pero sólida que agiliza el flujo de trabajo del desarrollador. Mediante la instalación de las herramientas de [Docker Community Edition (CE)](https://www.docker.com/community-edition), puede usar una sola CLI de Docker para compilar aplicaciones para Windows y Linux. Además, Visual Studio Code admite extensiones para Docker como IntelliSense para Dockerfiles y tareas de acceso directo para ejecutar comandos de Docker desde el editor.
+Mediante la instalación de las herramientas de [Docker Community Edition (CE)](https://www.docker.com/community-edition), puede usar una sola CLI de Docker para compilar aplicaciones para Windows y Linux. Además, Visual Studio Code admite extensiones para Docker como IntelliSense para Dockerfiles y tareas de acceso directo para ejecutar comandos de Docker desde el editor.
 
 ### <a name="additional-resources"></a>Recursos adicionales
 
 -   **Visual Studio Tools para Docker**
-    [*https://visualstudiogallery.msdn.microsoft.com/0f5b2caa-ea00-41c8-b8a2-058c7da0b3e4*](https://visualstudiogallery.msdn.microsoft.com/0f5b2caa-ea00-41c8-b8a2-058c7da0b3e4)
+    [*https://docs.microsoft.com/aspnet/core/publishing/visual-studio-tools-for-docker*](https://docs.microsoft.com/aspnet/core/publishing/visual-studio-tools-for-docker)
 
 -   **Visual Studio Code**. Sitio oficial.
     [*https://code.visualstudio.com/download*](https://code.visualstudio.com/download)
@@ -49,4 +50,3 @@ Como se ha mencionado en secciones anteriores de esta guía, puede usar .NET Fra
 
 >[!div class="step-by-step"]
 [Anterior] (../architect-microservice-container-applications/using-azure-service-fabric.md) [Siguiente] (docker-app-development-workflow.md)
-

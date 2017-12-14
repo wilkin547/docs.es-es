@@ -17,16 +17,15 @@ helpviewer_keywords:
 - exceptions [.NET Framework]
 - common language runtime, exceptions
 ms.assetid: f99a1d29-a2a8-47af-9707-9909f9010735
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: b064dc39f5807b154a1529eebe17493ae84981cf
+ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 5d44996042d167c029291f2b454dc1a22cfbcfb4
-ms.contentlocale: es-es
-ms.lasthandoff: 09/05/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/21/2017
 ---
 # <a name="handling-and-throwing-exceptions-in-net"></a>Controlar y generar excepciones en .NET
 
@@ -36,7 +35,7 @@ Las aplicaciones tienen que ser capaces de controlar de forma coherente los erro
 
 Una excepción es cualquier condición de error o comportamiento inesperado que encuentra un programa en ejecución. Las excepciones pueden iniciarse debido a un error en el código propio o en el código al que se llama (por ejemplo, una biblioteca compartida), a recursos del sistema operativo no disponibles, a condiciones inesperadas que encuentra el runtime (por ejemplo, imposibilidad de comprobar el código), etc. La aplicación puede recuperarse de algunas de estas condiciones, pero no de todas. Aunque es posible recuperarse de la mayoría de las excepciones que se producen en la aplicación, no ocurre lo mismo con las excepciones de runtime.
 
-En .NET, una excepción es un objeto que hereda de la clase [System.Exception](xref:System.Exception). Una excepción se inicia desde un área del código en la que ha producido un problema. La excepción se pasa hacia arriba en la pila hasta que la aplicación la controla o el programa finaliza.
+En .NET, una excepción es un objeto que hereda de la clase <xref:System.Exception?displayProperty=nameWithType>. Una excepción se inicia desde un área del código en la que ha producido un problema. La excepción se pasa hacia arriba en la pila hasta que la aplicación la controla o el programa finaliza.
 
 ## <a name="exceptions-vs-traditional-error-handling-methods"></a>Excepciones vs. métodos tradicionales de control de errores
 
@@ -58,13 +57,13 @@ En la tabla siguiente se muestra algunas excepciones comunes con ejemplos de las
 
 | Tipo de excepción | Tipo base | Descripción | Ejemplo |
 | -------------- | --------- | ----------- | ------- |
-| @System.Exception | @System.Object | Clase base de todas las excepciones. | Ninguno (utilice una clase derivada de esta excepción). |
-| @System.IndexOutOfRangeException | @System.Exception | El tiempo de ejecución la genera solo cuando una matriz no está correctamente indexada. | La indexación de una matriz fuera de su intervalo válido: `arr[arr.Length+1]` |
-| @System.NullReferenceException | @System.Exception | El tiempo de ejecución la genera solo cuando se hace referencia a un objeto null. | `object o = null; o.ToString();` |
-| @System.InvalidOperationException | @System.Exception | Los métodos la generan si se produce un estado no válido. | Llamada a `Enumerator.GetNext()` después de quitar un elemento de la colección subyacente. |
-| @System.ArgumentException | @System.Exception | Clase base de todas las excepciones de argumento. | Ninguno (utilice una clase derivada de esta excepción). |
-| @System.ArgumentNullException | @System.Exception | Los métodos que no permiten que un argumento sea null la generan. | `String s = null; "Calculate".IndexOf (s);` |
-| @System.ArgumentOutOfRangeException | @System.Exception | Los métodos que comprueban que los argumentos se encuentran en un intervalo determinado la generan. | `String s = "string"; s.Substring(s.Length+1);` |
+| <xref:System.Exception> | <xref:System.Object> | Clase base de todas las excepciones. | Ninguno (utilice una clase derivada de esta excepción). |
+| <xref:System.IndexOutOfRangeException> | <xref:System.Exception> | El tiempo de ejecución la genera solo cuando una matriz no está correctamente indexada. | La indexación de una matriz fuera de su intervalo válido: `arr[arr.Length+1]` |
+| <xref:System.NullReferenceException> | <xref:System.Exception> | El tiempo de ejecución la genera solo cuando se hace referencia a un objeto null. | `object o = null; o.ToString();` |
+| <xref:System.InvalidOperationException> | <xref:System.Exception> | Los métodos la generan si se produce un estado no válido. | Llamada a `Enumerator.GetNext()` después de quitar un elemento de la colección subyacente. |
+| <xref:System.ArgumentException> | <xref:System.Exception> | Clase base de todas las excepciones de argumento. | Ninguno (utilice una clase derivada de esta excepción). |
+| <xref:System.ArgumentNullException> | <xref:System.Exception> | Los métodos que no permiten que un argumento sea null la generan. | `String s = null; "Calculate".IndexOf (s);` |
+| <xref:System.ArgumentOutOfRangeException> | <xref:System.Exception> | Los métodos que comprueban que los argumentos se encuentran en un intervalo determinado la generan. | `String s = "string"; s.Substring(s.Length+1);` |
 
 ## <a name="see-also"></a>Vea también
 
@@ -79,4 +78,3 @@ En la tabla siguiente se muestra algunas excepciones comunes con ejemplos de las
 * [Procedimientos recomendados para excepciones](best-practices-for-exceptions.md)
 
 Para obtener más información acerca de cómo funcionan las excepciones en. NET, consulte [Qué deben saber los desarrolladores sobre las excepciones en runtime](https://github.com/dotnet/coreclr/blob/master/Documentation/botr/exceptions.md).
-

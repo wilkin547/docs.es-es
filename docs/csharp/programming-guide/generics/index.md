@@ -1,44 +1,26 @@
 ---
 title: "Genéricos (Guía de programación de C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - C# language, generics
 - generics [C#]
 ms.assetid: 75ea8509-a4ea-4e7a-a2b3-cf72482e9282
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 0804ca0fcefcc53e06352accf9a2db19edb31037
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 0dc2fcee3903b80816c98bab47e2b9a2e5ef78b0
-ms.openlocfilehash: de81058173b0985577474e8601aa84d4e83336a5
-ms.contentlocale: es-es
-ms.lasthandoff: 08/28/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="generics-c-programming-guide"></a>Genéricos (Guía de programación de C#)
 Los genéricos se han agregado a la versión 2.0 del lenguaje C# y Common Language Runtime (CLR). Los genéricos introducen en .NET Framework el concepto de parámetros de tipo, lo que le permite diseñar clases y métodos que aplazan la especificación de uno o varios tipos hasta que el código de cliente declare y cree una instancia de la clase o el método. Por ejemplo, al usar un parámetro de tipo genérico T puede escribir una clase única que otro código de cliente puede usar sin incurrir en el costo o riesgo de conversiones en tiempo de ejecución u operaciones de conversión boxing, como se muestra aquí:  
   
- [!code-cs[csProgGuideGenerics#1](../../../csharp/programming-guide/generics/codesnippet/CSharp/index_1.cs)]  
+ [!code-csharp[csProgGuideGenerics#1](../../../csharp/programming-guide/generics/codesnippet/CSharp/index_1.cs)]  
   
 ## <a name="generics-overview"></a>Información general sobre los genéricos  
   
@@ -85,9 +67,8 @@ Los genéricos se han agregado a la versión 2.0 del lenguaje C# y Common Langua
  Para obtener más información, consulte la [Especificación del lenguaje C#](../../../csharp/language-reference/language-specification/index.md).  
   
 ## <a name="see-also"></a>Vea también  
- <xref:System.Collections.Generic>   
- [Guía de programación de C#](../../../csharp/programming-guide/index.md)   
- [Tipos](../../../csharp/programming-guide/types/index.md)   
- [\<typeparam>](../../../csharp/programming-guide/xmldoc/typeparam.md)   
+ <xref:System.Collections.Generic>  
+ [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
+ [Tipos](../../../csharp/programming-guide/types/index.md)  
+ [\<typeparam>](../../../csharp/programming-guide/xmldoc/typeparam.md)  
  [\<typeparamref>](../../../csharp/programming-guide/xmldoc/typeparamref.md)
-

@@ -1,40 +1,22 @@
 ---
 title: "Excepciones y control de excepciones (Guía de programación de C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - exception handling [C#]
 - exceptions [C#]
 - C# language, exceptions
 ms.assetid: 0001887f-4fa2-47e2-8034-2819477e2344
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 458f6770a89f28dce1e441cd38ec9a56a1c58bc1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: e372cfa3239c39af86a29cda06b5817f0aeff0a2
-ms.contentlocale: es-es
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="exceptions-and-exception-handling-c-programming-guide"></a>Excepciones y control de excepciones (Guía de programación de C#)
 Las características de control de excepciones del lenguaje C# le ayudan a afrontar cualquier situación inesperada o excepcional que se produce cuando se ejecuta un programa. El control de excepciones usa las palabras clave `try`, `catch` y `finally` para intentar realizar acciones que pueden no completarse correctamente, para controlar errores cuando decide que es razonable hacerlo y para limpiar recursos más adelante. Las excepciones las puede generar Common Language Runtime (CLR), .NET Framework, cualquier biblioteca de terceros o el código de aplicación. Las excepciones se crean mediante el uso de la palabra clave `throw`.  
@@ -43,7 +25,7 @@ Las características de control de excepciones del lenguaje C# le ayudan a afron
   
  En este ejemplo, un método prueba a hacer la división entre cero y detecta el error. Sin el control de excepciones, este programa finalizaría con un error **DivideByZeroException no controlada**.  
   
- [!code-cs[csProgGuideExceptions#18](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/exceptions-and-exception-handling_1.cs)]  
+ [!code-csharp[csProgGuideExceptions#18](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/exceptions-and-exception-handling_1.cs)]  
   
 ## <a name="exceptions-overview"></a>Información general sobre excepciones  
  Las excepciones tienen las siguientes propiedades:  
@@ -87,15 +69,14 @@ Las características de control de excepciones del lenguaje C# le ayudan a afron
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Vea también  
- <xref:System.SystemException>   
- [Guía de programación de C#](../../../csharp/programming-guide/index.md)   
- [Palabras clave de C#](../../../csharp/language-reference/keywords/index.md)   
- [throw](../../../csharp/language-reference/keywords/throw.md)   
- [try-catch](../../../csharp/language-reference/keywords/try-catch.md)   
- [try-finally](../../../csharp/language-reference/keywords/try-finally.md)   
- [try-catch-finally](../../../csharp/language-reference/keywords/try-catch-finally.md)   
- [Excepciones](../../../standard/exceptions/index.md)   
- [Jerarquía de excepciones](http://msdn.microsoft.com/library/f7d68675-be06-40fb-a555-05f0c5a6f66b)   
- [Escritura segura de código .NET](http://go.microsoft.com/fwlink/?LinkId=112400)   
+ <xref:System.SystemException>  
+ [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
+ [Palabras clave de C#](../../../csharp/language-reference/keywords/index.md)  
+ [throw](../../../csharp/language-reference/keywords/throw.md)  
+ [try-catch](../../../csharp/language-reference/keywords/try-catch.md)  
+ [try-finally](../../../csharp/language-reference/keywords/try-finally.md)  
+ [try-catch-finally](../../../csharp/language-reference/keywords/try-catch-finally.md)  
+ [Excepciones](../../../standard/exceptions/index.md)  
+ [Jerarquía de excepciones](http://msdn.microsoft.com/library/f7d68675-be06-40fb-a555-05f0c5a6f66b)  
+ [Escritura segura de código .NET](http://go.microsoft.com/fwlink/?LinkId=112400)  
  [Minivolcados para excepciones concretas](http://go.microsoft.com/fwlink/?LinkId=112408)
-

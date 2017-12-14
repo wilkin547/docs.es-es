@@ -7,13 +7,11 @@ ms.author: ronpet
 ms.date: 08/13/2017
 ms.topic: article
 ms.prod: .net-core
-ms.devlang: dotnet
+ms.openlocfilehash: e54cabe67558300b5c5fb9552d78397850d4c782
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: b47d4c74a01b99d743b69328c201096bc8d89794
-ms.openlocfilehash: e43f72ebd26c34636c239d8ac9f749d52d3f60a0
-ms.contentlocale: es-es
-ms.lasthandoff: 08/14/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="whats-new-in-net-core"></a>Novedades de .NET Core
 
@@ -24,19 +22,21 @@ ms.lasthandoff: 08/14/2017
 - [Mejoras en la plataforma](#platform-improvements)
 - [Cambios en la API](#api-changes-and-library-support)
 - [Integración de Visual Studio](#visual-studio-integration)
-- [Mejoras en la documentación](#documentation-improvements) 
+- [Mejoras en la documentación](#documentation-improvements)
 
 ## <a name="tooling"></a>Tooling
 
 ### <a name="dotnet-restore-runs-implicitly"></a>dotnet restore se ejecuta de manera implícita
 
-En las versiones anteriores de .NET Core, era necesario ejecutar el comando [dotnet restore](../tools/dotnet-restore.md) para descargar dependencias inmediatamente después de crear un proyecto nuevo con el comando [dotnet new](../tools/dotnet-new.md), así como también cada vez que se agregaba una dependencia nueva al proyecto. En .NET Core 2.0, `dotnet restore` se ejecuta de manera implícita cuando se ejecuta el comando `dotnet new`. También se ejecuta de manera implícita si es necesario actualizar las dependencias cuando se ejecutan otros comandos, como `run`, `build` y `publish`.
+En las versiones anteriores de .NET Core, era necesario ejecutar el comando [dotnet restore](../tools/dotnet-restore.md) para descargar dependencias inmediatamente después de crear un proyecto nuevo con el comando [dotnet new](../tools/dotnet-new.md), así como también cada vez que se agregaba una dependencia nueva al proyecto.
+
+[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
 También puede deshabilitar la invocación automática de `dotnet restore` si pasa el modificador `--no-restore` a los comandos `new`, `run`, `build`, `publish`, `pack` y `test`. 
 
 ### <a name="retargeting-to-net-core-20"></a>Redestinación a .NET Core 2.0
 
-Si el SDK de .NET Core 2.0 SDK está instalado, los proyectos que tienen .NET Core 1.x como destino se pueden redestinar a .NET Core 2.0. 
+Si el SDK de .NET Core 2.0 SDK está instalado, los proyectos que tienen .NET Core 1.x como destino se pueden redestinar a .NET Core 2.0.
 
 Para redestinar a .NET Core 2.0, edite el archivo del proyecto cambiando el valor del elemento `<TargetFramework>` (o del elemento `<TargetFrameworks>`, si tiene más de un destino en el archivo del proyecto) de 1.x a 2.0:
 
@@ -68,7 +68,7 @@ Con la versión 2.0, .NET Core ahora es compatible con Visual Basic 2017. Puede 
 - Bibliotecas de clases .NET Core
 - Bibliotecas de clases .NET Standard
 - Proyectos de prueba unitaria .NET Core
-- Proyectos de prueba xUnit .NET Core 
+- Proyectos de prueba xUnit .NET Core
 
 Por ejemplo, para crear una aplicación "Hola mundo" de Visual Basic, haga estos pasos en la línea de comandos:
 
@@ -77,7 +77,7 @@ Por ejemplo, para crear una aplicación "Hola mundo" de Visual Basic, haga estos
 1. Escriba el comando `dotnet new console -lang vb`.
 
    El comando crea un archivo del proyecto con una extensión de archivo `.vbproj`, además de un archivo de código fuente de Visual Basic llamado *Program.vb*. Este archivo contiene el código fuente para escribir la cadena "Hola mundo" en la ventana de consola.
-  
+
 1.  Escriba el comando `dotnet run`. Las [herramientas de la CLI de .NET Core](../tools/index.md) compila y ejecuta automáticamente la aplicación, con lo que se muestra el mensaje "Hola mundo" en la ventana de la consola.
 
 ### <a name="support-for-c-71"></a>Compatibilidad con C# 7.1
@@ -98,11 +98,11 @@ Por ejemplo, para crear una aplicación "Hola mundo" de Visual Basic, haga estos
 
 .NET Core 2.0 ofrece una sola implementación de Linux que funciona en varias distribuciones de Linux. .NET Core 1.x requería que descargara una implementación de Linux específica para la distribución.
 
-También puede desarrollar aplicaciones que tienen Linux como destino como un solo sistema operativo. .NET Core 1.x requería que se tuviera cada distribución de Linux como destino de forma independiente. 
+También puede desarrollar aplicaciones que tienen Linux como destino como un solo sistema operativo. .NET Core 1.x requería que se tuviera cada distribución de Linux como destino de forma independiente.
 
 ### <a name="support-for-the-apple-cryptographic-libraries"></a>Compatibilidad con las bibliotecas de cifrado de Apple
 
-.NET Core 1.x en macOS requería la biblioteca de cifrado del kit de herramientas OpenSSL. .NET Core 2.0 usa las bibliotecas de cifrado de Apple y no requiere OpenSSL, por lo que ya no es necesario instalarlo. 
+.NET Core 1.x en macOS requería la biblioteca de cifrado del kit de herramientas OpenSSL. .NET Core 2.0 usa las bibliotecas de cifrado de Apple y no requiere OpenSSL, por lo que ya no es necesario instalarlo.
 
 ## <a name="api-changes-and-library-support"></a>Cambios en la API y compatibilidad con bibliotecas
 
@@ -118,7 +118,9 @@ Si desea ver una lista de las API que se agregaron a .NET Standard desde la últ
 
 ### <a name="expanded-surface-area"></a>Área expuesta expandida
 
-La cantidad total de API disponibles en .NET Core 2.0 aumentó más del doble en comparación con .NET Core 1.1. 
+La cantidad total de API disponibles en .NET Core 2.0 aumentó más del doble en comparación con .NET Core 1.1.
+
+Además, con el [paquete de compatibilidad de Windows](../porting/windows-compat-pack.md), la migración desde .NET Framework ahora es mucho más fácil.
 
 ### <a name="support-for-net-framework-libraries"></a>Compatibilidad con las bibliotecas .NET Framework
 
@@ -130,13 +132,13 @@ Visual Studio 2017 versión 15.3 y, en algunos casos, Visual Studio para Mac, of
 
 ### <a name="retargeting-net-core-apps-and-net-standard-libraries"></a>Redestinación de aplicaciones .NET Core y bibliotecas .NET Standard
 
-Si el SDK de .NET Core 2.0 SDK está instalado, puede redestinar los proyectos de .NET Core 1.x a .NET Core 2.0 y las bibliotecas .NET Standard 1.x a .NET Standard 2.0. 
+Si el SDK de .NET Core 2.0 SDK está instalado, puede redestinar los proyectos de .NET Core 1.x a .NET Core 2.0 y las bibliotecas .NET Standard 1.x a .NET Standard 2.0.
 
 Para redestinar el proyecto en Visual Studio, abra la pestaña **Aplicación** del cuadro de diálogo de propiedades del proyecto y cambie el valor de **plataforma de destino** a **.NET Core 2.0** o **.NET Standard 2.0**. También puede cambiarlo si hace clic con el botón derecho en el proyecto y selecciona la opción **Edit \*.csproj file** (Editar archivo .csproj). Para más información, consulte la sección [Herramientas](#tooling) anteriormente en este tema.
 
 ### <a name="live-unit-testing-support-for-net-core"></a>Compatibilidad con Live Unit Testing en .NET Core
 
-Cada vez que modifique el código, Live Unit Testing ejecuta automáticamente y en segundo plano cualquier prueba unitaria afectada y presenta los resultados y la cobertura de código en vivo en el entorno de Visual Studio. .NET Core 2.0 ahora admite Live Unit Testing. Anteriormente, Live Unit Testing solo estaba disponible para aplicaciones .NET Framework. 
+Cada vez que modifique el código, Live Unit Testing ejecuta automáticamente y en segundo plano cualquier prueba unitaria afectada y presenta los resultados y la cobertura de código en vivo en el entorno de Visual Studio. .NET Core 2.0 ahora admite Live Unit Testing. Anteriormente, Live Unit Testing solo estaba disponible para aplicaciones .NET Framework.
 
 Para más información, consulte [Live Unit Testing con Visual Studio 2017](/visualstudio/test/live-unit-testing) y las [Preguntas más frecuentes de Live Unit Testing](/visualstudio/test/live-unit-testing-faq).
 
@@ -144,7 +146,7 @@ Para más información, consulte [Live Unit Testing con Visual Studio 2017](/vis
 
 Si compila un proyecto para varias plataformas de destino, ahora puede seleccionar la plataforma de destino en el menú de nivel superior. En la figura siguiente, un proyecto llamado SCD1 tiene como destino Mac OS X 10.11 (`osx.10.11-x64`) de 64 bits y Windows 10/Windows Server 2016 (`win10-x64`) de 64 bits. Puede seleccionar la plataforma de destino antes de seleccionar el botón del proyecto, en este caso para ejecutar una compilación de depuración.
 
-![Selección de la plataforma de destino al compilar un proyecto](media/multitarget.png) 
+![Selección de la plataforma de destino al compilar un proyecto](media/multitarget.png)
 
 ### <a name="side-by-side-support-for-net-core-sdks"></a>Compatibilidad en paralelo con SDK de .NET Core
 
@@ -154,7 +156,7 @@ Ahora es posible instalar el SDK de .NET Core de manera independiente de Visual 
 
 ### <a name="net-application-architecture"></a>Arquitectura de aplicación de .NET
 
-[Arquitectura de aplicación de .NET](https://www.microsoft.com/net/learn/architecture) le permite acceder a un conjunto de libros electrónicos que brindan guía, procedimientos recomendados y aplicaciones de ejemplo cuando use .NET para compilar:
+[Arquitectura de aplicación de .NET](https://www.microsoft.com/net/learn/architecture) le permite acceder a un conjunto de libros electrónicos que ofrecen orientación, procedimientos recomendados y aplicaciones de ejemplo cuando use .NET para compilar:
 
 - Microservicios y contenedores Docker.
 - Aplicaciones web con ASP.NET.
@@ -163,4 +165,3 @@ Ahora es posible instalar el SDK de .NET Core de manera independiente de Visual 
 
 ## <a name="see-also"></a>Vea también
  [Novedades de ASP.NET Core 2.0](/aspnet/core/aspnetcore-2.0)
-

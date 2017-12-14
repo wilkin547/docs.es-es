@@ -1,40 +1,21 @@
 ---
 title: "Introducción a Visual Basic"
-ms.date: 2017-08-10
+ms.date: 08/10/2017
 ms.prod: .net
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - get started, Visual Basic
 - Visual Basic, get started
 ms.assetid: 6685467b-28fa-4cde-9516-f0e00ad08911
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 1593475bf5b4a34f854bc3e89be84d7720cd497b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 9bb64ea7199f5699ff166d1affb7f8126dcc6612
-ms.openlocfilehash: 4e3c1a1e6728d4a5e256b81b0f8a8b29851dc625
-ms.contentlocale: es-es
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="get-started-with-visual-basic"></a>Introducción a Visual Basic
 Esta sección de la documentación sirve como introducción al desarrollo de aplicaciones con Visual Basic.  
@@ -66,7 +47,7 @@ Proporciona una lista de sitios Web y grupos de noticias que le ayudarán a enco
  [Obtener Visual Basic](https://www.visualstudio.com/downloads/)  
  Ofrece vínculos de descarga para las versiones de Visual Studio que incluyen compatibilidad con Visual Basic, incluidas las versiones gratuitas.  
 
- [Aspectos básicos de Visual Basic para principiantes sin ninguna experiencia](https://mva.microsoft.com/training-courses/visual-basic-fundamentals-for-absolute-beginners-16507)   
+ [Aspectos básicos de Visual Basic para principiantes sin ninguna experiencia](https://mva.microsoft.com/training-courses/visual-basic-fundamentals-for-absolute-beginners-16507)  
  Curso de la Academia virtual de Microsoft que enseña los aspectos básicos de programación de Visual Basic.
 
  [Programación orientada a objetos](../programming-guide/concepts/object-oriented-programming.md)  
@@ -91,4 +72,3 @@ Proporciona una lista de sitios Web y grupos de noticias que le ayudarán a enco
   
  [Desarrollo de Office y SharePoint](https://msdn.microsoft.com/library/d2tx7z6d)  
  Proporciona información sobre cómo usar Microsoft Office y [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] como parte de una aplicación empresarial.
-

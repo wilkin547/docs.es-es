@@ -8,12 +8,11 @@ ms.date: 05/26/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
+ms.openlocfilehash: 246605b301f6bcea4cced2cb7d1c494e9f66aa4a
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
 ms.translationtype: HT
-ms.sourcegitcommit: 9bb64ea7199f5699ff166d1affb7f8126dcc6612
-ms.openlocfilehash: 360b4745e768a751154f3f1445ffb0bf5b62c825
-ms.contentlocale: es-es
-ms.lasthandoff: 09/05/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/22/2017
 ---
 # <a name="architecting-container--and-microservice-based-applications"></a>Diseñar la arquitectura de aplicaciones basadas en contenedores y microservicios
 
@@ -29,11 +28,10 @@ En el modelo de contenedor, una instancia de imagen de contenedor representa un 
 
 Cuando diseñe una imagen de contenedor, verá una definición [ENTRYPOINT](https://docs.docker.com/engine/reference/builder/) en el archivo Dockerfile. Esto define el proceso cuya duración controla la duración del contenedor. Cuando se completa el proceso, finaliza el ciclo de vida del contenedor. Los contenedores pueden representar procesos de ejecución prolongada como servidores web, pero también pueden representar procesos de corta duración, como trabajos por lotes, que anteriormente se implementarían como [WebJobs](https://docs.microsoft.com/azure/app-service-web/websites-webjobs-resources) de Azure.
 
-Si se produce un error en el proceso, el contenedor finaliza y lo sustituye el orquestador. Si el orquestador está configurado para mantener cinco instancias en ejecución y se produce un error en una de ellas, el orquestador creará otra instancia del contenedor para reemplazar al proceso con error. En un trabajo por lotes, el proceso se inicia con parámetros. Cuando el proceso finalice, el trabajo se habrá completado.
+Si se produce un error en el proceso, el contenedor finaliza y lo sustituye el orquestador. Si el orquestador está configurado para mantener cinco instancias en ejecución y se produce un error en una de ellas, el orquestador creará otra instancia del contenedor para reemplazar al proceso con error. En un trabajo por lotes, el proceso se inicia con parámetros. Cuando el proceso finalice, el trabajo se habrá completado. Más adelante en esta guía se exploran en profundidad los orquestadores.
 
 Es posible que en algún momento le interese que varios procesos se ejecuten en un solo contenedor. En ese caso, dado que solo puede haber un punto de entrada por contenedor, puede ejecutar dentro del contenedor un script que inicie todos los programas que sean necesarios. Por ejemplo, puede usar [Supervisor](http://supervisord.org/) o una herramienta similar para que se encargue de iniciar varios procesos dentro de un único contenedor. Este método no es muy habitual, aunque existan arquitecturas que contengan varios procesos por contenedor.
 
 
 >[!div class="step-by-step"]
 [Anterior] (../net-core-net-framework-containers/official-net-docker-images.md) [Siguiente] (containerize-monolithic-applications.md)
-
