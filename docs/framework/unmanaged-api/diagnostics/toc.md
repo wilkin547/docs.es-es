@@ -177,6 +177,6 @@
 ### [CorSymVarFlag (enumeración)](corsymvarflag-enumeration.md)
 ### [NOTIFY_FILTER (enumeración)](notify-filter-enumeration.md)
 ## [Estructuras de almacén de símbolos de diagnósticos](diagnostics-symbol-store-structures.md)
-### [Call_id (estructura)](call-id-structure.md)
+### [CALL_ID (estructura)](call-id-structure.md)
 ### [SYMLINEDELTA (estructura)](symlinedelta-structure.md)
 ### [USER_THREAD (estructura)](user-thread-structure.md)

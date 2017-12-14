@@ -1,80 +1,70 @@
 ---
 title: "Ensamblados y caché global de ensamblados (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 149f5ca5-5b34-4746-9542-1ae43b2d0256
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 3743c07f1de1d39f07d559aa161e4547422a6e52
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 2b98bd872bfdcbebb34fff3d878b92f39e27bbe0
-ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="assemblies-and-the-global-assembly-cache-c"></a>Ensamblados y caché global de ensamblados (C#)
-Los ensamblados componen la unidad fundamental de implementación, control de versiones, reutilización, ámbito de activación y permisos de seguridad en una aplicación basada en .NET. Los ensamblados adoptan la forma de un archivo ejecutable (.exe) o de un archivo de biblioteca de vínculos dinámicos (.dll) y son bloques de compilación de .NET Framework. Proporcionan a Common Language Runtime la información necesaria para conocer las implementaciones de tipos. Puede pensar en un ensamblado como si fuera una colección de tipos y recursos que forman una unidad lógica de funcionalidad y se compilan para funcionar en conjunto.  
+# <a name="assemblies-and-the-global-assembly-cache-c"></a><span data-ttu-id="80a27-102">Ensamblados y caché global de ensamblados (C#)</span><span class="sxs-lookup"><span data-stu-id="80a27-102">Assemblies and the Global Assembly Cache (C#)</span></span>
+<span data-ttu-id="80a27-103">Los ensamblados componen la unidad fundamental de implementación, control de versiones, reutilización, ámbito de activación y permisos de seguridad en una aplicación basada en .NET.</span><span class="sxs-lookup"><span data-stu-id="80a27-103">Assemblies form the fundamental unit of deployment, version control, reuse, activation scoping, and security permissions for a .NET-based application.</span></span> <span data-ttu-id="80a27-104">Los ensamblados adoptan la forma de un archivo ejecutable (.exe) o de un archivo de biblioteca de vínculos dinámicos (.dll) y son bloques de compilación de .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="80a27-104">Assemblies take the form of an executable (.exe) file or dynamic link library (.dll) file, and are the building blocks of the .NET Framework.</span></span> <span data-ttu-id="80a27-105">Proporcionan a Common Language Runtime la información necesaria para conocer las implementaciones de tipos.</span><span class="sxs-lookup"><span data-stu-id="80a27-105">They provide the common language runtime with the information it needs to be aware of type implementations.</span></span> <span data-ttu-id="80a27-106">Puede pensar en un ensamblado como si fuera una colección de tipos y recursos que forman una unidad lógica de funcionalidad y se compilan para funcionar en conjunto.</span><span class="sxs-lookup"><span data-stu-id="80a27-106">You can think of an assembly as a collection of types and resources that form a logical unit of functionality and are built to work together.</span></span>  
   
- Los ensamblados pueden contener uno o varios módulos. Por ejemplo, los proyectos más grandes pueden planearse de forma que varios desarrolladores individuales trabajen en módulos separados, que se unen para crear un ensamblado único. Para obtener más información sobre los módulos, vea el tema [Creación de un ensamblado de varios archivos](https://msdn.microsoft.com/library/226t7yxe).  
+ <span data-ttu-id="80a27-107">Los ensamblados pueden contener uno o varios módulos.</span><span class="sxs-lookup"><span data-stu-id="80a27-107">Assemblies can contain one or more modules.</span></span> <span data-ttu-id="80a27-108">Por ejemplo, los proyectos más grandes pueden planearse de forma que varios desarrolladores individuales trabajen en módulos separados, que se unen para crear un ensamblado único.</span><span class="sxs-lookup"><span data-stu-id="80a27-108">For example, larger projects may be planned in such a way that several individual developers work on separate modules, all coming together to create a single assembly.</span></span> <span data-ttu-id="80a27-109">Para obtener más información sobre los módulos, vea el tema [Creación de un ensamblado de varios archivos](https://msdn.microsoft.com/library/226t7yxe).</span><span class="sxs-lookup"><span data-stu-id="80a27-109">For more information about modules, see the topic [How to: Build a Multifile Assembly](https://msdn.microsoft.com/library/226t7yxe).</span></span>  
   
- Los ensamblados tienen las propiedades siguientes:  
+ <span data-ttu-id="80a27-110">Los ensamblados tienen las propiedades siguientes:</span><span class="sxs-lookup"><span data-stu-id="80a27-110">Assemblies have the following properties:</span></span>  
   
--   Los ensamblados son archivos .exe o .dll implementados.  
+-   <span data-ttu-id="80a27-111">Los ensamblados son archivos .exe o .dll implementados.</span><span class="sxs-lookup"><span data-stu-id="80a27-111">Assemblies are implemented as .exe or .dll files.</span></span>  
   
--   Puede compartir un ensamblado entre aplicaciones colocándolo en la caché global de ensamblados. Los ensamblados deben tener un nombre seguro antes de que se puedan incluir en la caché global de ensamblados. Para más información, vea [Ensamblados con nombre seguro](https://msdn.microsoft.com/library/wd40t7ad).  
+-   <span data-ttu-id="80a27-112">Puede compartir un ensamblado entre aplicaciones colocándolo en la caché global de ensamblados.</span><span class="sxs-lookup"><span data-stu-id="80a27-112">You can share an assembly between applications by putting it in the global assembly cache.</span></span> <span data-ttu-id="80a27-113">Los ensamblados deben tener un nombre seguro antes de que se puedan incluir en la caché global de ensamblados.</span><span class="sxs-lookup"><span data-stu-id="80a27-113">Assemblies must be strong-named before they can be included in the global assembly cache.</span></span> <span data-ttu-id="80a27-114">Para más información, vea [Ensamblados con nombre seguro](https://msdn.microsoft.com/library/wd40t7ad).</span><span class="sxs-lookup"><span data-stu-id="80a27-114">For more information, see [Strong-Named Assemblies](https://msdn.microsoft.com/library/wd40t7ad).</span></span>  
   
--   Los ensamblados solo se cargan en memoria si son necesarios. Si no se utilizan, no se cargan. Esto significa que los ensamblados pueden ser una manera eficaz de administrar recursos en proyectos más grandes.  
+-   <span data-ttu-id="80a27-115">Los ensamblados solo se cargan en memoria si son necesarios.</span><span class="sxs-lookup"><span data-stu-id="80a27-115">Assemblies are only loaded into memory if they are required.</span></span> <span data-ttu-id="80a27-116">Si no se utilizan, no se cargan.</span><span class="sxs-lookup"><span data-stu-id="80a27-116">If they are not used, they are not loaded.</span></span> <span data-ttu-id="80a27-117">Esto significa que los ensamblados pueden ser una manera eficaz de administrar recursos en proyectos más grandes.</span><span class="sxs-lookup"><span data-stu-id="80a27-117">This means that assemblies can be an efficient way to manage resources in larger projects.</span></span>  
   
--   Mediante programación, puede obtener información sobre un ensamblado mediante reflexión. Para obtener más información, vea [Reflexión (C#)](../../../../csharp/programming-guide/concepts/reflection.md).  
+-   <span data-ttu-id="80a27-118">Mediante programación, puede obtener información sobre un ensamblado mediante reflexión.</span><span class="sxs-lookup"><span data-stu-id="80a27-118">You can programmatically obtain information about an assembly by using reflection.</span></span> <span data-ttu-id="80a27-119">Para obtener más información, vea [Reflexión (C#)](../../../../csharp/programming-guide/concepts/reflection.md).</span><span class="sxs-lookup"><span data-stu-id="80a27-119">For more information, see [Reflection (C#)](../../../../csharp/programming-guide/concepts/reflection.md).</span></span>  
   
--   Si quiere cargar un ensamblado solo para inspeccionarlo, use un método como <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A>.  
+-   <span data-ttu-id="80a27-120">Si quiere cargar un ensamblado solo para inspeccionarlo, use un método como <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A>.</span><span class="sxs-lookup"><span data-stu-id="80a27-120">If you want to load an assembly only to inspect it, use a method such as <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A>.</span></span>  
   
-## <a name="assembly-manifest"></a>Manifiesto del ensamblado  
- Dentro de cada ensamblado hay un *manifiesto del ensamblado*. De forma similar a una tabla de contenido, el manifiesto del ensamblado contiene lo siguiente:  
+## <a name="assembly-manifest"></a><span data-ttu-id="80a27-121">Manifiesto del ensamblado</span><span class="sxs-lookup"><span data-stu-id="80a27-121">Assembly Manifest</span></span>  
+ <span data-ttu-id="80a27-122">Dentro de cada ensamblado hay un *manifiesto del ensamblado*.</span><span class="sxs-lookup"><span data-stu-id="80a27-122">Within every assembly is an *assembly manifest*.</span></span> <span data-ttu-id="80a27-123">De forma similar a una tabla de contenido, el manifiesto del ensamblado contiene lo siguiente:</span><span class="sxs-lookup"><span data-stu-id="80a27-123">Similar to a table of contents, the assembly manifest contains the following:</span></span>  
   
--   La identidad del ensamblado (su nombre y versión).  
+-   <span data-ttu-id="80a27-124">La identidad del ensamblado (su nombre y versión).</span><span class="sxs-lookup"><span data-stu-id="80a27-124">The assembly's identity (its name and version).</span></span>  
   
--   Una tabla de archivos que describe todos los demás archivos que componen el ensamblado, por ejemplo, cualquier otro ensamblado creado en que se basan los archivos .exe o .dll, o incluso archivos de mapa de bits o Léame.  
+-   <span data-ttu-id="80a27-125">Una tabla de archivos que describe todos los demás archivos que componen el ensamblado, por ejemplo, cualquier otro ensamblado creado en que se basan los archivos .exe o .dll, o incluso archivos de mapa de bits o Léame.</span><span class="sxs-lookup"><span data-stu-id="80a27-125">A file table describing all the other files that make up the assembly, for example, any other assemblies you created that your .exe or .dll file relies on, or even bitmap or Readme files.</span></span>  
   
--   Una *lista de referencia de ensamblado*, que es una lista de todas las dependencias externas, archivos .dll u otros archivos que la aplicación necesita que alguien puede haber creado. Las referencias de ensamblado contienen referencias a objetos globales y privados. Los objetos globales residen en la caché global de ensamblados, un área disponible para otras aplicaciones. Los objetos privados deben estar en un directorio del mismo nivel o debajo del directorio en el que se instala la aplicación.  
+-   <span data-ttu-id="80a27-126">Una *lista de referencia de ensamblado*, que es una lista de todas las dependencias externas, archivos .dll u otros archivos que la aplicación necesita que alguien puede haber creado.</span><span class="sxs-lookup"><span data-stu-id="80a27-126">An *assembly reference list*, which is a list of all external dependencies—.dlls or other files your application needs that may have been created by someone else.</span></span> <span data-ttu-id="80a27-127">Las referencias de ensamblado contienen referencias a objetos globales y privados.</span><span class="sxs-lookup"><span data-stu-id="80a27-127">Assembly references contain references to both global and private objects.</span></span> <span data-ttu-id="80a27-128">Los objetos globales residen en la caché global de ensamblados, un área disponible para otras aplicaciones.</span><span class="sxs-lookup"><span data-stu-id="80a27-128">Global objects reside in the global assembly cache, an area available to other applications.</span></span> <span data-ttu-id="80a27-129">Los objetos privados deben estar en un directorio del mismo nivel o debajo del directorio en el que se instala la aplicación.</span><span class="sxs-lookup"><span data-stu-id="80a27-129">Private objects must be in a directory at either the same level as or below the directory in which your application is installed.</span></span>  
   
- Dado que los ensamblados contienen información sobre contenido, control de versiones y dependencias, las aplicaciones creadas con C# no dependen de los valores del Registro de Windows para funcionar correctamente. Los ensamblados reducen los conflictos de .dll y hacen las aplicaciones más confiables y fáciles de implementar. En muchos casos, puede instalar una aplicación basada en .NET con tan solo copiar sus archivos en el equipo de destino.  
+ <span data-ttu-id="80a27-130">Dado que los ensamblados contienen información sobre contenido, control de versiones y dependencias, las aplicaciones creadas con C# no dependen de los valores del Registro de Windows para funcionar correctamente.</span><span class="sxs-lookup"><span data-stu-id="80a27-130">Because assemblies contain information about content, versioning, and dependencies, the applications you create with C# do not rely on Windows registry values to function properly.</span></span> <span data-ttu-id="80a27-131">Los ensamblados reducen los conflictos de .dll y hacen las aplicaciones más confiables y fáciles de implementar.</span><span class="sxs-lookup"><span data-stu-id="80a27-131">Assemblies reduce .dll conflicts and make your applications more reliable and easier to deploy.</span></span> <span data-ttu-id="80a27-132">En muchos casos, puede instalar una aplicación basada en .NET con tan solo copiar sus archivos en el equipo de destino.</span><span class="sxs-lookup"><span data-stu-id="80a27-132">In many cases, you can install a .NET-based application simply by copying its files to the target computer.</span></span>  
   
- Para más información, vea [Manifiesto del ensamblado](https://msdn.microsoft.com/library/1w45z383).  
+ <span data-ttu-id="80a27-133">Para más información, vea [Manifiesto del ensamblado](https://msdn.microsoft.com/library/1w45z383).</span><span class="sxs-lookup"><span data-stu-id="80a27-133">For more information see [Assembly Manifest](https://msdn.microsoft.com/library/1w45z383).</span></span>  
   
-## <a name="adding-a-reference-to-an-assembly"></a>Incorporación de una referencia a un ensamblado  
- Para usar un ensamblado, debe agregar una referencia a él. Después, use la [directiva using](../../../../csharp/language-reference/keywords/using-directive.md) para elegir el espacio de nombres de los elementos que quiere usar. Una vez que se hace referencia a un ensamblado y se importa, todas las clases accesibles, propiedades, métodos y otros miembros de sus espacios de nombres están disponibles para la aplicación como si su código formara parte del archivo de origen.  
+## <a name="adding-a-reference-to-an-assembly"></a><span data-ttu-id="80a27-134">Incorporación de una referencia a un ensamblado</span><span class="sxs-lookup"><span data-stu-id="80a27-134">Adding a Reference to an Assembly</span></span>  
+ <span data-ttu-id="80a27-135">Para usar un ensamblado, debe agregar una referencia a él.</span><span class="sxs-lookup"><span data-stu-id="80a27-135">To use an assembly, you must add a reference to it.</span></span> <span data-ttu-id="80a27-136">Después, use la [directiva using](../../../../csharp/language-reference/keywords/using-directive.md) para elegir el espacio de nombres de los elementos que quiere usar.</span><span class="sxs-lookup"><span data-stu-id="80a27-136">Next, you use the [using directive](../../../../csharp/language-reference/keywords/using-directive.md) to choose the namespace of the items you want to use.</span></span> <span data-ttu-id="80a27-137">Una vez que se hace referencia a un ensamblado y se importa, todas las clases accesibles, propiedades, métodos y otros miembros de sus espacios de nombres están disponibles para la aplicación como si su código formara parte del archivo de origen.</span><span class="sxs-lookup"><span data-stu-id="80a27-137">Once an assembly is referenced and imported, all the accessible classes, properties, methods, and other members of its namespaces are available to your application as if their code were part of your source file.</span></span>  
   
- En C#, también puede usar dos versiones del mismo ensamblado en una sola aplicación. Para obtener más información, vea [alias externo](../../../../csharp/language-reference/keywords/extern-alias.md).  
+ <span data-ttu-id="80a27-138">En C#, también puede usar dos versiones del mismo ensamblado en una sola aplicación.</span><span class="sxs-lookup"><span data-stu-id="80a27-138">In C#, you can also use two versions of the same assembly in a single application.</span></span> <span data-ttu-id="80a27-139">Para obtener más información, vea [alias externo](../../../../csharp/language-reference/keywords/extern-alias.md).</span><span class="sxs-lookup"><span data-stu-id="80a27-139">For more information, see [extern alias](../../../../csharp/language-reference/keywords/extern-alias.md).</span></span>  
   
-## <a name="creating-an-assembly"></a>Creación de un ensamblado  
- Para compilar la aplicación, haga clic en **Compilar** en el menú **Compilar** o compílela desde la línea de comandos con el compilador de línea de comandos. Para obtener información detallada sobre la compilación de ensamblados desde la línea de comandos, vea [Compilar la línea de comandos con csc.exe](../../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).  
+## <a name="creating-an-assembly"></a><span data-ttu-id="80a27-140">Creación de un ensamblado</span><span class="sxs-lookup"><span data-stu-id="80a27-140">Creating an Assembly</span></span>  
+ <span data-ttu-id="80a27-141">Para compilar la aplicación, haga clic en **Compilar** en el menú **Compilar** o compílela desde la línea de comandos con el compilador de línea de comandos.</span><span class="sxs-lookup"><span data-stu-id="80a27-141">Compile your application by clicking **Build** on the **Build** menu or by building it from the command line using the command-line compiler.</span></span> <span data-ttu-id="80a27-142">Para obtener información detallada sobre la compilación de ensamblados desde la línea de comandos, vea [Compilar la línea de comandos con csc.exe](../../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).</span><span class="sxs-lookup"><span data-stu-id="80a27-142">For details about building assemblies from the command line, see [Command-line Building With csc.exe](../../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).</span></span>  
   
 > [!NOTE]
->  Para compilar un ensamblado en Visual Studio, en el menú **Compilar**, seleccione **Compilar**.  
+>  <span data-ttu-id="80a27-143">Para compilar un ensamblado en Visual Studio, en el menú **Compilar**, seleccione **Compilar**.</span><span class="sxs-lookup"><span data-stu-id="80a27-143">To build an assembly in Visual Studio, on the **Build** menu choose **Build**.</span></span>  
   
-## <a name="see-also"></a>Vea también  
- [Guía de programación de C#](../../../../csharp/programming-guide/index.md)   
- [Ensamblados en Common Language Runtime](https://msdn.microsoft.com/library/k3677y81)   
- [Ensamblados de confianza (C#)](friend-assemblies.md)   
- [Cómo: Compartir un ensamblado con otras aplicaciones (C#)](how-to-share-an-assembly-with-other-applications.md)   
- [Cómo: Cargar y descargar ensamblados (C#)](how-to-load-and-unload-assemblies.md)   
- [Cómo: Determinar si un archivo es un ensamblado (C#)](how-to-determine-if-a-file-is-an-assembly.md)   
- [Cómo: Crear y usar ensamblados desde la línea de comandos (C#)](how-to-create-and-use-assemblies-using-the-command-line.md)   
- [Tutorial: Incrustar los tipos de los ensamblados administrados en Visual Studio (C#)](walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)   
- [Tutorial: Insertar información de tipos de los ensamblados de Microsoft Office en Visual Studio (C#)](walkthrough-embedding-type-information-from-microsoft-office-assemblies.md)
-
+## <a name="see-also"></a><span data-ttu-id="80a27-144">Vea también</span><span class="sxs-lookup"><span data-stu-id="80a27-144">See Also</span></span>  
+ [<span data-ttu-id="80a27-145">Guía de programación de C#</span><span class="sxs-lookup"><span data-stu-id="80a27-145">C# Programming Guide</span></span>](../../../../csharp/programming-guide/index.md)  
+ [<span data-ttu-id="80a27-146">Ensamblados en Common Language Runtime</span><span class="sxs-lookup"><span data-stu-id="80a27-146">Assemblies in the Common Language Runtime</span></span>](https://msdn.microsoft.com/library/k3677y81)  
+ [<span data-ttu-id="80a27-147">Ensamblados de confianza (C#)</span><span class="sxs-lookup"><span data-stu-id="80a27-147">Friend Assemblies (C#)</span></span>](friend-assemblies.md)  
+ [<span data-ttu-id="80a27-148">Uso compartido de un ensamblado con otras aplicaciones (C#)</span><span class="sxs-lookup"><span data-stu-id="80a27-148">How to: Share an Assembly with Other Applications (C#)</span></span>](how-to-share-an-assembly-with-other-applications.md)  
+ [<span data-ttu-id="80a27-149">Carga y descarga de ensamblados (C#)</span><span class="sxs-lookup"><span data-stu-id="80a27-149">How to: Load and Unload Assemblies (C#)</span></span>](how-to-load-and-unload-assemblies.md)  
+ [<span data-ttu-id="80a27-150">Determinar si un archivo es un ensamblado (C#)</span><span class="sxs-lookup"><span data-stu-id="80a27-150">How to: Determine If a File Is an Assembly (C#)</span></span>](how-to-determine-if-a-file-is-an-assembly.md)  
+ [<span data-ttu-id="80a27-151">Creación y uso de ensamblados con la línea de comandos (C#)</span><span class="sxs-lookup"><span data-stu-id="80a27-151">How to: Create and Use Assemblies Using the Command Line (C#)</span></span>](how-to-create-and-use-assemblies-using-the-command-line.md)  
+ [<span data-ttu-id="80a27-152">Tutorial: Incrustar los tipos de los ensamblados administrados en Visual Studio (C#)</span><span class="sxs-lookup"><span data-stu-id="80a27-152">Walkthrough: Embedding Types from Managed Assemblies in Visual Studio (C#)</span></span>](walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)  
+ [<span data-ttu-id="80a27-153">Tutorial: Insertar información de tipos de los ensamblados de Microsoft Office en Visual Studio (C#)</span><span class="sxs-lookup"><span data-stu-id="80a27-153">Walkthrough: Embedding Type Information from Microsoft Office Assemblies in Visual Studio (C#)</span></span>](walkthrough-embedding-type-information-from-microsoft-office-assemblies.md)

@@ -240,7 +240,7 @@
 ### [CorCallingConvention (enumeración)](corcallingconvention-enumeration.md)
 ### [CorCheckDuplicatesFor (enumeración)](corcheckduplicatesfor-enumeration.md)
 ### [CorDeclSecurity (enumeración)](cordeclsecurity-enumeration.md)
-### [CorElementType Enumeration1](corelementtype-enumeration.md)
+### [CorElementType (enumeración1)](corelementtype-enumeration.md)
 ### [CorErrorIfEmitOutOfOrder (enumeración)](corerrorifemitoutoforder-enumeration.md)
 ### [CorEventAttr (enumeración)](coreventattr-enumeration.md)
 ### [CorFieldAttr (enumeración)](corfieldattr-enumeration.md)

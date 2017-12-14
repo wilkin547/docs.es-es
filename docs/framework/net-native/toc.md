@@ -4,7 +4,7 @@
 ### [Ejemplo: solucionar problemas de programación dinámica](example-troubleshooting-dynamic-programming.md)
 ### [Ejemplo: control de excepciones al enlazar datos](example-handling-exceptions-when-binding-data.md)
 ### [Excepciones de tiempo de ejecución en las aplicaciones nativas de .NET](runtime-exceptions-in-net-native-apps.md)
-## [Medir la mejora de inicio con .NET Native](measuring-startup-improvement-with-net-native.md)
+## [Medida de la mejora del inicio con .NET Native](measuring-startup-improvement-with-net-native.md)
 ## [Reflection and .NET Native](reflection-and-net-native.md) (Reflexión y .NET Native)
 ### [APIs That Rely on Reflection](apis-that-rely-on-reflection.md) (API basadas en Reflection)
 ### [Referencia de la API de reflexión](net-native-reflection-api-reference.md)
