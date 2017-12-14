@@ -14,11 +14,11 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d1b6d24356841e8b385bef47bcba0e5694b48240
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 543e6496c826c864dc77e50fd096fc4cb43f600e
+ms.sourcegitcommit: 01ea3686e74ff05e4f6de3d8d46dc603d051ec00
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/13/2017
 ---
 # <a name="walkthrough-create-a-button-by-using-xaml"></a>Tutorial: Crear un botón mediante el uso de XAML
 El objetivo de este tutorial es aprender a crear un botón animado para su uso en un [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] aplicación. En este tutorial usa estilos y una plantilla para crear un recurso de botón personalizado que permite la reutilización del código y la separación de la lógica de botón de la declaración del botón. En este tutorial se escribe completamente en [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].  
@@ -76,7 +76,7 @@ El objetivo de este tutorial es aprender a crear un botón animado para su uso e
     </Application>  
     ```  
   
-     Determina el ámbito de recursos donde definir el recurso. Definir recursos de `Application.Resoureses` en el app.xaml archivo permite el recurso que se va a utilizarse desde cualquier lugar en la aplicación. Para más información acerca de cómo definir el ámbito de los recursos, consulte [recursos XAML](../../../../docs/framework/wpf/advanced/xaml-resources.md).  
+     Determina el ámbito de recursos donde definir el recurso. Definir recursos de `Application.Resources` en el app.xaml archivo permite el recurso que se va a utilizarse desde cualquier lugar en la aplicación. Para más información acerca de cómo definir el ámbito de los recursos, consulte [recursos XAML](../../../../docs/framework/wpf/advanced/xaml-resources.md).  
   
 2.  **Cree un estilo y definir valores de propiedad básicas con él:** agregue el siguiente marcado para la `Application.Resources` bloque. Este marcado crea un <xref:System.Windows.Style> que se aplica a todos los botones en la configuración de la aplicación, el <xref:System.Windows.FrameworkElement.Width%2A> de los botones en 90 y <xref:System.Windows.FrameworkElement.Margin%2A> a 10:  
   
@@ -328,7 +328,7 @@ El objetivo de este tutorial es aprender a crear un botón animado para su uso e
   
      Presione F5 para ejecutar la aplicación y haga clic en uno de los botones. Tenga en cuenta que el botón permanece resaltado después de hacer clic en él porque aún tiene el foco. Si hace clic en otro botón, el nuevo botón recibe el foco mientras el último lo pierde.  
   
-4.  **Agregar animaciones para** <xref:System.Windows.UIElement.MouseEnter> **y** <xref:System.Windows.UIElement.MouseLeave> **:** a continuación, agregamos algunas animaciones a los desencadenadores.   Agregue el siguiente marcado en cualquier lugar dentro de la `ControlTemplate.Triggers` bloque.  
+4.  **Agregar animaciones para** <xref:System.Windows.UIElement.MouseEnter> **y** <xref:System.Windows.UIElement.MouseLeave> **:** a continuación, agregamos algunas animaciones a los desencadenadores. Agregue el siguiente marcado en cualquier lugar dentro de la `ControlTemplate.Triggers` bloque.  
   
     ```  
     <!-- Animations that start when mouse enters and leaves button. -->  
