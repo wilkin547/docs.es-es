@@ -17,11 +17,11 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a27e17e4940ff68f34d1e7e4accfb9e112bc412b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 3f024ae77740c596d8646b10a036428e2342d084
+ms.sourcegitcommit: 8ed4ebc15b5ef89d06a7507dc9d5e306e30accf7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/14/2017
 ---
 # <a name="weak-event-patterns"></a>Modelos de evento débil
 En las aplicaciones, es posible que los controladores que están conectados a los orígenes de eventos no se destruirán en coordinación con el objeto de agente de escucha que se adjunta el controlador para el origen. Esta situación puede provocar pérdidas de memoria. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]Introduce un modelo de diseño que puede utilizarse para solucionar este problema, debe proporcionar una clase de administrador dedicada para eventos concretos e implementando una interfaz en los agentes de escucha para ese evento. Este patrón de diseño se conoce como el *modelo de evento débil*.  
@@ -45,7 +45,7 @@ En las aplicaciones, es posible que los controladores que están conectados a lo
 |--------------|-----------------------|  
 |Utilizar una clase de administrador de eventos débiles existente|Si el evento que desea suscribirse a tiene su correspondiente <xref:System.Windows.WeakEventManager>, use el Administrador de eventos débiles existentes. Para obtener una lista de administradores de eventos débiles que se incluyen con WPF, vea la jerarquía de herencia en la <xref:System.Windows.WeakEventManager> clase. Sin embargo, tenga en cuenta que hay relativamente pocos administradores de eventos débiles que se incluyen con WPF, por lo que probablemente tendrá que elegir uno de los otros métodos.|  
 |Use una clase de administrador de eventos débiles genérico|Usar un tipo genérico <xref:System.Windows.WeakEventManager%602> cuando existente <xref:System.Windows.WeakEventManager> es no disponible, desea una manera fácil de implementar, y no están preocupada con eficacia. La interfaz genérica <xref:System.Windows.WeakEventManager%602> resulta menos eficaz que un administrador de eventos débiles existentes o personalizadas. Por ejemplo, la clase genérica hace más de reflexión para detectar el evento que tiene el nombre del evento. Además, el código para registrar el evento mediante la interfaz genérica <xref:System.Windows.WeakEventManager%602> es más detallado que el uso de una existente o personalizado <xref:System.Windows.WeakEventManager>.|  
-|Crear una clase de administrador de eventos débiles personalizado|Crear una personalizada <xref:System.Windows.WeakEventManager> cuando se existente <xref:System.Windows.WeakEventManager> no está disponible y desea que la mejor eficacia. Usando un comparador <xref:System.Windows.WeakEventManager> para suscribirse a un evento será más eficaz, pero se incurre en el costo de escribir más código al principio.|  
+|Crear una clase de administrador de eventos débiles personalizado|Crear una personalizada <xref:System.Windows.WeakEventManager> cuando existente <xref:System.Windows.WeakEventManager> no está disponible y desea que la mejor eficacia. Usando un comparador <xref:System.Windows.WeakEventManager> para suscribirse a un evento será más eficaz, pero se incurre en el costo de escribir más código al principio.|  
   
  Las secciones siguientes describen cómo implementar el patrón de eventos débiles.  Para fines de este análisis, el evento para suscribirse a tiene las siguientes características.  
   

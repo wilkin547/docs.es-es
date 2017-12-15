@@ -12,11 +12,11 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 369c8738addeb083b42063161957cf9f97e2cd1c
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.openlocfilehash: e60ed6fb2fb85faa1d2d744bf29e40d3eaa639c3
+ms.sourcegitcommit: 8ed4ebc15b5ef89d06a7507dc9d5e306e30accf7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/14/2017
 ---
 # <a name="windows-workflow-foundation-feature-specifics"></a>Detalles de las características de Windows Workflow Foundation
 [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)] agrega una serie de características a Windows Workflow Foundation. Este documento describe algunas de las nuevas características y proporciona detalles sobre los escenarios en que pueden ser útiles.  
@@ -82,7 +82,7 @@ ms.lasthandoff: 12/02/2017
   
 -   Un ejemplo de correlación utilizado para agrupar mensajes es una correlación solicitud-respuesta que agrupa los mensajes.  
   
-    -   En una actividad <xref:System.ServiceModel.Activities.Receive>, haga clic en la propiedad <xref:System.ServiceModel.Activities.Receive.CorrelationInitializers%2A> y agregue un elemento <xref:System.ServiceModel.Activities.RequestReplyCorrelationInitializer> utilizando la variable de tipo CorrelationHandle creada anteriormente en el primer paso.  
+    -   En un <xref:System.ServiceModel.Activities.Receive> actividad, haga clic en el <xref:System.ServiceModel.Activities.Receive.CorrelationInitializers%2A> propiedad y agregue una <xref:System.ServiceModel.Activities.RequestReplyCorrelationInitializer> usando el CorrelationHandle creado en el primer paso anterior.  
   
     -   Crear un <xref:System.ServiceModel.Activities.SendReply> actividad con el botón secundario en el <xref:System.ServiceModel.Activities.Receive> y haga clic en "Crear SendReply". Péguela en su flujo de trabajo después de la actividad <xref:System.ServiceModel.Activities.Receive>.  
   
@@ -260,7 +260,7 @@ ms.lasthandoff: 12/02/2017
   
     1.  [Control de errores en una actividad de diagrama de flujo utilizando TryCatch](../../../docs/framework/windows-workflow-foundation/samples/fault-handling-in-a-flowchart-activity-using-trycatch.md)  
   
-    2.  [Usar actividades de procedimiento](../../../docs/framework/windows-workflow-foundation/samples/using-procedural-activities.md)  
+    2.  [Uso de actividades de procedimiento](../../../docs/framework/windows-workflow-foundation/samples/using-procedural-activities.md)  
   
 -   Documentación del diseñador: [diseñadores de actividad de control de errores](/visualstudio/workflow-designer/error-handling-activity-designers)  
   

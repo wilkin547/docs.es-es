@@ -16,11 +16,11 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: b82b409f27b14109c8e13fc8909235befc7a8d1d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 4363e4e4e444a2c34b79e3b3ad8d8e2f36fe8e1a
+ms.sourcegitcommit: 8ed4ebc15b5ef89d06a7507dc9d5e306e30accf7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/14/2017
 ---
 # <a name="creating-a-dataview-object-linq-to-dataset"></a>Crear un objeto DataView (LINQ to DataSet)
 Existen dos maneras de crear <xref:System.Data.DataView> en el contexto de [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]. Se puede crear <xref:System.Data.DataView> a partir de una consulta [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] en <xref:System.Data.DataTable> o a partir de <xref:System.Data.DataTable> con o sin tipo. En ambos casos, se crea el <xref:System.Data.DataView> mediante uno de los <xref:System.Data.DataTableExtensions.AsDataView%2A> métodos de extensión; <xref:System.Data.DataView> no puede construir directamente en el [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] contexto.  
@@ -60,7 +60,7 @@ Existen dos maneras de crear <xref:System.Data.DataView> en el contexto de [!INC
  [!code-csharp[DP DataView Samples#CreateLDVFromQuery1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP DataView Samples/CS/Form1.cs#createldvfromquery1)]
  [!code-vb[DP DataView Samples#CreateLDVFromQuery1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP DataView Samples/VB/Form1.vb#createldvfromquery1)]  
   
- También se pueden utilizar las propiedades basadas en cadena <xref:System.Data.DataView.RowFilter%2A> y <xref:System.Data.DataView.Sort%2A> para filtrar y ordenar <xref:System.Data.DataView> después de haber sido creado a partir de una consulta. Observe que con esto se borrará la información de ordenación y filtro heredada de la consulta. El ejemplo siguiente crea <xref:System.Data.DataView> a partir de una consulta [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] que filtra por apellidos que empiezan por "S". La propiedad basada en cadena <xref:System.Data.DataView.Sort%2A> se establece para ordenar por apellidos en orden ascendente y después por nombres en orden descendente:  
+ También puede utilizar basado en la cadena <xref:System.Data.DataView.RowFilter%2A> y <xref:System.Data.DataView.Sort%2A> propiedades para filtrar y ordenar un <xref:System.Data.DataView> después de que se ha creado a partir de una consulta. Observe que con esto se borrará la información de ordenación y filtro heredada de la consulta. El ejemplo siguiente crea <xref:System.Data.DataView> a partir de una consulta [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] que filtra por apellidos que empiezan por "S". La propiedad basada en cadena <xref:System.Data.DataView.Sort%2A> se establece para ordenar por apellidos en orden ascendente y después por nombres en orden descendente:  
   
  [!code-csharp[DP DataView Samples#CreateLDVFromQueryStringSort](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP DataView Samples/CS/Form1.cs#createldvfromquerystringsort)]
  [!code-vb[DP DataView Samples#CreateLDVFromQueryStringSort](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP DataView Samples/VB/Form1.vb#createldvfromquerystringsort)]  
@@ -82,5 +82,5 @@ Existen dos maneras de crear <xref:System.Data.DataView> en el contexto de [!INC
   
 ## <a name="see-also"></a>Vea también  
  [Enlace de datos y LINQ to DataSet](../../../../docs/framework/data/adonet/data-binding-and-linq-to-dataset.md)  
- [Filtrar con DataView](../../../../docs/framework/data/adonet/filtering-with-dataview-linq-to-dataset.md)  
- [Ordenar con DataView](../../../../docs/framework/data/adonet/sorting-with-dataview-linq-to-dataset.md)
+ [Filtrado con DataView](../../../../docs/framework/data/adonet/filtering-with-dataview-linq-to-dataset.md)  
+ [Ordenación con DataView](../../../../docs/framework/data/adonet/sorting-with-dataview-linq-to-dataset.md)

@@ -13,11 +13,11 @@ ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 53205ca9fd304d1dd1c76c5d6952d78634c5b231
-ms.sourcegitcommit: 6f49c973f62855ffd6c4a322903e7dd50c5c1b50
+ms.openlocfilehash: 2c8c7f8c4d4c7c882f4f295b13fa4add3a11582f
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="whats-new-in-the-net-framework"></a>Novedades de .NET Framework
 <a name="introduction"></a> En este artículo se resumen las nuevas características y mejoras en las siguientes versiones de .NET Framework:  
@@ -777,7 +777,7 @@ Para obtener más información sobre la estructura <xref:System.TimeZoneInfo> y 
 ### <a name="native-image-generator-ngen-pdbs"></a>PDB del generador de imágenes nativas (NGEN)
  El seguimiento de eventos de varios equipos permite a los clientes generar perfiles de un programa en la máquina A y mirar los datos de generación de perfiles con la asignación de la línea de origen en la máquina B. Al usar versiones anteriores de .NET Framework, el usuario copiaría todos los módulos y las imágenes nativas de la máquina con generación de perfiles a la máquina de análisis que contiene el archivo PDB de IL para crear la asignación de código fuente a nativo. Aunque este proceso puede funcionar bien cuando los archivos son relativamente pequeños, como en aplicaciones de teléfono, los archivos pueden ser muy grandes en sistemas de escritorio y requieren mucho tiempo para copiarse.
 
- Con los archivos PDB de NGen, NGen puede crear un archivo PDB que contenga la asignación de IL a nativo sin una dependencia del archivo PDB de IL. En nuestro escenario de seguimiento de eventos de varias máquinas, todo lo que se necesita es copiar la imagen nativa PDB generada por la máquina A a la máquina B y utilizar [Depurar API de acceso de interfaz](https://msdn.microsoft.com/library/ee8x173s.aspx) para leer la asignación de origen al IL del archivo PDB de IL y la asignación del IL a nativo del archivo PDB de imágenes nativas. La combinación de ambas asignaciones permite asignar código fuente a nativo. Dado que el PDB de imagen nativa es mucho menor que todos los módulos y las imágenes nativas, el proceso de copiar de la máquina A a la máquina B es mucho más rápido.
+ Con los archivos PDB de NGen, NGen puede crear un archivo PDB que contenga la asignación de IL a nativo sin una dependencia del archivo PDB de IL. En nuestro escenario de seguimiento de eventos de varias máquinas, todo lo que se necesita es copiar la imagen nativa PDB generada por la máquina A a la máquina B y utilizar [Depurar API de acceso de interfaz](/visualstudio/debugger/debug-interface-access/debug-interface-access-sdk-reference) para leer la asignación de origen al IL del archivo PDB de IL y la asignación del IL a nativo del archivo PDB de imágenes nativas. La combinación de ambas asignaciones permite asignar código fuente a nativo. Dado que el PDB de imagen nativa es mucho menor que todos los módulos y las imágenes nativas, el proceso de copiar de la máquina A a la máquina B es mucho más rápido.
 
 <a name="v46"></a> 
 ## <a name="whats-new-in-net-2015"></a>Novedades de .NET 2015

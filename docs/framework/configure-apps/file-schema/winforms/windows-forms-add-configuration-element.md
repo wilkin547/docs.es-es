@@ -15,11 +15,11 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 367ca30c577cbb4ed7fed130bdcbd4faac2d46c0
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 828a28769e164535d4dde989ef8cce91caf9cb48
+ms.sourcegitcommit: 8ed4ebc15b5ef89d06a7507dc9d5e306e30accf7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/14/2017
 ---
 # <a name="windows-forms-add-configuration-element"></a>Formularios Windows Forms Agregar elemento de configuración
 
@@ -113,7 +113,7 @@ A partir de la 4.7 de .NET Framework, los controles de formularios Windows Forms
 
 ### <a name="single-pass-scaling"></a>Ajuste de escala de paso único
 
-El ajuste de escala única o pasar varios influye en la capacidad de respuesta percibida de la interfaz de usuario y los elementos de la interfaz de la apariencia visual del usuario puesto que se pueden escalar. A partir de la 4.7 de .NET Framework, Windows Forms utiliza una escala de paso único. En versiones anteriores de .NET Framework, el ajuste de escala se realizó a través de varios supera, lo que provocó algunos controles escalar más que era necesario. Ajuste de escala en un solo paso sólo debe deshabilitarse si la aplicación utiliza el comportamiento anterior.  
+Escalar único o pasar varios influye en la capacidad de respuesta percibida de la interfaz de usuario y la apariencia visual de los elementos de la interfaz de usuario puesto que se pueden escalar. A partir de la 4.7 de .NET Framework, Windows Forms utiliza una escala de paso único. En versiones anteriores de .NET Framework, el ajuste de escala se realizó a través de varios supera, lo que provocó algunos controles escalar más que era necesario. Ajuste de escala en un solo paso sólo debe deshabilitarse si la aplicación utiliza el comportamiento anterior.  
 
 ## <a name="see-also"></a>Vea también
  

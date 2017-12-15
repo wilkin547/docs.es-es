@@ -12,11 +12,11 @@ ms.assetid: 2dfb446b-5a07-4c00-9ab3-a74ba734ff3a
 caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: f29ed78062337c7036ada2405fa610ff1f883feb
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 5809e8148e7ac426b876ad11948878ee0bfcd016
+ms.sourcegitcommit: 8ed4ebc15b5ef89d06a7507dc9d5e306e30accf7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/14/2017
 ---
 # <a name="shape-of-wordprocessingml-documents-visual-basic"></a>Forma de los documentos WordprocessingML (Visual Basic)
 En este tema se presenta la forma XML de un documento WordprocessingML.  
@@ -24,7 +24,7 @@ En este tema se presenta la forma XML de un documento WordprocessingML.
 ## <a name="microsoft-office-formats"></a>Formatos de Microsoft Office  
  El formato de archivo nativo para el sistema Microsoft Office 2007 es XML abierto de Office (comúnmente denominado XML abierto). XML abierto es un formato basado en XML que sigue la norma Ecma y que actualmente está sometido al proceso de estándares ISO-IEC. El lenguaje de marcado para los archivos de procesamiento de texto en XML abierto se denomina WordprocessingML. Este tutorial usa los archivos de origen WordprocessingML como datos para los ejemplos.  
   
- Si está utilizando Microsoft Office 2003, puede guardar documentos en el formato XML abierto de Office si ha instalado el Paquete de compatibilidad de Microsoft Office para los formatos de archivo Word, Excel y PowerPoint 2007.  
+ Si está utilizando Microsoft Office 2003, puede guardar documentos en el formato XML abierto de Office si ha instalado el paquete de compatibilidad de Microsoft Office para Word, Excel y formatos de archivo de PowerPoint 2007.  
   
 ## <a name="the-shape-of-wordprocessingml-documents"></a>Forma de los documentos WordprocessingML  
  Lo primero que hay que comprender es la forma de los documentos WordprocessingML. Un documento WordprocessingML contiene un elemento de Body (con el nombre `w:body`) que contiene los párrafos del documento. Cada párrafo contiene una o más ejecuciones de texto (denominadas `w:r`). Cada ejecución de texto contiene uno o más fragmentos de texto (con el nombre `w:t`).  

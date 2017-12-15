@@ -13,11 +13,11 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 67d4c4f08661bbf2febefead64e62c8a84045f47
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: ddc93c7d707b9569bd2ea1e2c09889d68ff056bf
+ms.sourcegitcommit: 8ed4ebc15b5ef89d06a7507dc9d5e306e30accf7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/14/2017
 ---
 # <a name="known-issues-in-sqlclient-for-entity-framework"></a>Problemas conocidos en SqlClient para Entity Framework
 En esta sección se describen problemas conocidos relacionados con el proveedor de datos .NET Framework para SQL Server (SqlClient).  
@@ -58,7 +58,7 @@ SELECT [E] FROM Container.EntitySet AS [E] ORDER BY [E].[NonKeyColumn] DESC SKIP
  Ciertos comportamientos de las bases de datos dependen del nivel de compatibilidad establecida en la base de datos. Si el atributo `ProviderManifestToken` está establecido en 2005 y la versión de SQL Server es 2005, pero el nivel de compatibilidad de una base de datos está establecido en "80" (SQL Server 2000), el código [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] generado estará destinado a SQL Server 2005, pero podría no ejecutarse tal y como se esperaba debido a la configuración del nivel de compatibilidad. Por ejemplo, podría perder la información de los pedidos si un nombre de columna de la lista ORDER BY coincide con un nombre de columna en el selector.  
   
 ## <a name="nested-queries-in-projection"></a>Consultas anidadas en proyección  
- Las consultas anidadas en una cláusula de proyección se podrían traducir en consultas de producto cartesiano en el servidor. Esto puede hacer que la tabla TempDB crezca demasiado en algunos servidores back-end, incluido SLQ Server. Esto puede hacer que disminuya el rendimiento del servidor.  
+ Las consultas anidadas en una cláusula de proyección se podrían traducir en consultas de producto cartesiano en el servidor. En algunos servidores back-end, incluido SLQ Server, esto puede hacer que la tabla TempDB crezca demasiado. Esto puede hacer que disminuya el rendimiento del servidor.  
   
  El siguiente es un ejemplo de una consulta anidada en una cláusula de proyección:  
   
