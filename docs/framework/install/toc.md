@@ -9,5 +9,4 @@
 ## [Reparación de .NET Framework](repair.md)
 ## [Solución de problemas en instalaciones y desinstalaciones bloqueadas de .NET Framework](troubleshoot-blocked-installations-and-uninstallations.md)
 ## [Instalación de .NET Framework 3.5 en Windows 10, Windows 8.1 y Windows 8](dotnet-35-windows-10.md)
-### [Solución de problemas de instalación de .NET Framework 3.5](net-framework-3-5-on-windows-8-plus.md)
 ## [Ejecución de aplicaciones de .NET Framework 1.1 en Windows 8, Windows 8.1 o Windows 10](run-net-framework-1-1-apps.md)
