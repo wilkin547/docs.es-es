@@ -3,15 +3,15 @@ title: 'Comando dotnet pack: CLI de .NET Core'
 description: El comando dotnet pack crea paquetes de NuGet para el proyecto de .NET Core.
 author: mairaw
 ms.author: mairaw
-ms.date: 08/14/2017
+ms.date: 12/13/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.openlocfilehash: 8594c863d67baf0237b63e61f28ca9ee315eeddf
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: ac1ff90cb97fa4802883e70b0abdf4e77b58dd65
+ms.sourcegitcommit: 8ed4ebc15b5ef89d06a7507dc9d5e306e30accf7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/14/2017
 ---
 # <a name="dotnet-pack"></a>dotnet pack
 
@@ -45,7 +45,7 @@ Las dependencias de NuGet del proyecto empaquetado se agregan al archivo *.nuspe
 
 De forma predeterminada, `dotnet pack` compila primero el proyecto. Si desea evitar este comportamiento, pase la opción `--no-build`. A menudo resulta útil en escenarios de compilación de integración continua (CI) donde se conoce el código que se compiló anteriormente.
 
-Puede proporcionar propiedades de MSBuild en el comando `dotnet pack` para el proceso de empaquetado. Para obtener más información, vea [Propiedades de metadatos de NuGet](csproj.md#nuget-metadata-properties) y la [Referencia de la línea de comandos de MSBuild](/visualstudio/msbuild/msbuild-command-line-reference).
+Puede proporcionar propiedades de MSBuild en el comando `dotnet pack` para el proceso de empaquetado. Para obtener más información, vea [Propiedades de metadatos de NuGet](csproj.md#nuget-metadata-properties) y la [Referencia de la línea de comandos de MSBuild](/visualstudio/msbuild/msbuild-command-line-reference). La sección [Ejemplos](#examples) muestra cómo utilizar el modificador /p de MSBuild en un par de escenarios diferentes.
 
 ## <a name="arguments"></a>Argumentos
 
@@ -172,3 +172,7 @@ Con el sufijo de la versión del proyecto configurado como `<VersionSuffix>$(Ver
 Establecer la versión del paquete en `2.1.0` con la propiedad de MSBuild `PackageVersion`:
 
 `dotnet pack /p:PackageVersion=2.1.0`
+
+Empaquete el proyecto para un determinado [marco de destino](../../standard/frameworks.md):
+
+`dotnet pack /p:TargetFrameworks=net45`

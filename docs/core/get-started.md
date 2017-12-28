@@ -9,11 +9,11 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: d1453a0d-317c-4da6-b68e-422a2c0bfe49
-ms.openlocfilehash: 45b361a40148c287511fafe25de4000c1dd54102
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 1800eb5c69e2436d89f4abd3b519902c5724e411
+ms.sourcegitcommit: 8ed4ebc15b5ef89d06a7507dc9d5e306e30accf7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/14/2017
 ---
 # <a name="get-started-with-net-core"></a>Introducción a .NET Core
 
@@ -37,14 +37,14 @@ Consulte el tema [Prerequisites for Windows development](windows-prerequisites.m
 
 ## <a name="linux"></a>Linux
 
-Instalar .NET Core en [Linux](https://www.microsoft.com/net/core#linuxredhat).
+Instale .NET Core en [Linux](https://www.microsoft.com/net/core#linuxredhat).
 
 Para comenzar a desarrollar aplicaciones .NET Core, puede seguir estos tutoriales paso a paso.
 
 * [Getting started with .NET Core using the command-line](tutorials/using-with-xplat-cli.md) (Introducción a .NET Core mediante la línea de comandos): use cualquier editor de código con la [interfaz de línea de comandos (CLI) multiplataforma de .NET Core](tools/index.md).
 * [Get started with VS Code using C# and .NET Core on Ubuntu](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-Csharp-dotnet-Core-Ubuntu) (Introducción a Visual Studio Code mediante C# y .NET Core en Ubuntu): este vídeo de [Channel9](https://channel9.msdn.com) le muestra cómo instalar y usar [Visual Studio Code](https://code.visualstudio.com/), el editor de código ligero multiplataforma de Microsoft, para crear su primera aplicación de consola de .NET Core en Ubuntu 14.04.
 
-Consulte la [requisitos previos para el desarrollo de Linux](linux-prerequisites.md) tema para obtener una lista de las distribuciones de Linux y las versiones compatibles.
+Consulte el tema [Requisitos previos para .NET Core en Linux](linux-prerequisites.md) para ver una lista de las versiones y las distribuciones de Linux admitidas.
 
 ## <a name="os-x--macos"></a>OS X / macOS
 

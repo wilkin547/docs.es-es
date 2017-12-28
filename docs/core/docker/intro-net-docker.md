@@ -1,6 +1,6 @@
 ---
 title: "Introducción a .NET y Docker"
-description: "Descripción Docker y .NET Core"
+description: "Descripción de Docker y .NET Core"
 keywords: .NET, .NET Core, Docker
 author: jralexander
 ms.author: johalex
@@ -12,118 +12,120 @@ ms.devlang: dotnet
 ms.assetid: 03c28597-7e73-46d6-a9c3-f9cb55642739
 manager: wpickett
 ms.custom: mvc
-ms.openlocfilehash: 1c9ce7a008c86d1c245ce8b7d616e05fcb3d4bbc
-ms.sourcegitcommit: a53799f81351ad9afb3007cd68846ce6aeeb10cb
+ms.openlocfilehash: ce02033a7994d48494b4e627f1ed8f1dea4caadb
+ms.sourcegitcommit: 5bfcb8d341239df251351f318038d31cdc9159d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 12/15/2017
 ---
 # <a name="introduction-to-net-and-docker"></a>Introducción a .NET y Docker
 
- Este artículo proporciona una introducción e información general conceptual de trabajar con .NET en Docker. 
+En este artículo se proporciona información de tipo introductorio y general conceptual para trabajar con .NET en Docker.
 
-## <a name="docker-packaging-your-apps-to-deploy-and-run-anywhere"></a>Docker: Empaquetar las aplicaciones existentes para implementar y ejecutar desde cualquier lugar
+## <a name="docker-packaging-your-apps-to-deploy-and-run-anywhere"></a>Docker: empaquetado de las aplicaciones existentes para implementar y ejecutar desde cualquier lugar
 
-[Docker](https://docs.microsoft.com/dotnet/standard/microservices-architecture/container-docker-introduction/docker-defined) es una plataforma abierta que permite a los desarrolladores y administradores de compilación [imágenes](https://docs.docker.com/glossary/?term=image), distribuir y ejecutar aplicaciones distribuidas en un entorno con aislamiento flexible denominado un [contenedor](https://www.docker.com/what-container). Este enfoque permite la administración de ciclo de vida de aplicación eficaz entre el desarrollo, preguntas y respuestas y entornos de producción.
+[Docker](../../standard/microservices-architecture/container-docker-introduction/docker-defined.md) es una plataforma abierta que permite a los desarrolladores y administradores compilar [imágenes](https://docs.docker.com/glossary/?term=image), así como enviar y ejecutar aplicaciones distribuidas en un entorno con aislamiento flexible denominado [contenedor](https://www.docker.com/what-container). Este enfoque hace posible una eficaz administración del ciclo de vida de las aplicaciones entre los entornos de desarrollo, control de la calidad y producción.
  
-El [plataforma Docker](https://docs.docker.com/engine/docker-overview/#the-docker-platform) utiliza la [motor de Docker](https://docs.docker.com/engine/docker-overview/#docker-engine) para generar y empaquetar aplicaciones como rápidamente [imágenes de Docker](https://docs.docker.com/glossary/?term=image) creado con los archivos escritos el [Dockerfile ](https://docs.docker.com/glossary/?term=Dockerfile) formato que, a continuación, implementa y ejecuta en un [superpuesto contenedor](https://docs.docker.com/engine/userguide/storagedriver/imagesandcontainers/#container-and-layers).
+La [plataforma Docker](https://docs.docker.com/engine/docker-overview/#the-docker-platform) utiliza el [motor de Docker](https://docs.docker.com/engine/docker-overview/#docker-engine) para generar y empaquetar rápidamente aplicaciones como [imágenes de Docker](https://docs.docker.com/glossary/?term=image) creadas con archivos escritos en el formato [Dockerfile](https://docs.docker.com/glossary/?term=Dockerfile) que, a continuación, se implementan y ejecutan en un [contenedor con capas](https://docs.docker.com/engine/userguide/storagedriver/imagesandcontainers/#container-and-layers).
 
-Puede crear sus propios [superpuesto imágenes](https://docs.docker.com/engine/userguide/storagedriver/imagesandcontainers/#images-and-layers) como dockerfiles o utilizar existentes desde un [registro](https://docs.docker.com/glossary/?term=registry), como [Docker Hub](https://docs.docker.com/glossary/?term=Docker%20Hub).
+Puede crear sus propias [imágenes con capas](https://docs.docker.com/engine/userguide/storagedriver/imagesandcontainers/#images-and-layers) como dockerfiles o utilizar las existentes desde un [registro](https://docs.docker.com/glossary/?term=registry), como [Docker Hub](https://docs.docker.com/glossary/?term=Docker%20Hub).
 
-El [relación entre los contenedores de Docker, imágenes y registros](https://docs.microsoft.com/dotnet/standard/microservices-architecture/container-docker-introduction/docker-containers-images-registries) es un concepto importante cuando [en contenedores diseñar y compilar las aplicaciones o microservicios](https://docs.microsoft.com/dotnet/standard/microservices-architecture/architect-microservice-container-applications/). Este enfoque reduce en gran medida el tiempo entre el desarrollo e implementación.
+La [relación entre los contenedores, las imágenes y los registros de Docker](../../standard/microservices-architecture/container-docker-introduction/docker-containers-images-registries.md) es un concepto importante a la hora de [diseñar y compilar aplicaciones o microservicios en contenedores](../../standard/microservices-architecture/architect-microservice-container-applications/index.md). Este enfoque reduce en gran medida el tiempo que transcurre entre el desarrollo y la implementación.
 
-### <a name="further-reading-and-watching"></a>Información adicional (y ver)
+### <a name="further-reading-and-watching"></a>Seguir leyendo (y viendo)
 
 * [Contenedores basados en Windows: desarrollo de aplicaciones modernas con control de nivel empresarial.](https://www.youtube.com/watch?v=Ryx3o0rD5lY&feature=youtu.be)
-* [Introducción a docker](https://docs.docker.com/engine/docker-overview/)
-* [Dockerfile en contenedores de Windows](https://docs.microsoft.com/virtualization/windowscontainers/manage-docker/manage-windows-dockerfile)
+* [Información general de Docker](https://docs.docker.com/engine/docker-overview/)
+* [Dockerfile en contenedores de Windows](/virtualization/windowscontainers/manage-docker/manage-windows-dockerfile.md)
 * [Procedimientos recomendados para escribir Dockerfiles](https://docs.docker.com/engine/userguide/eng-image/dockerfile_best-practices/)
-* [Creación de imágenes de Docker para las aplicaciones de .NET Core](../docker/building-net-docker-images.md)
+* [Creación de imágenes de Docker para aplicaciones de .NET Core](../docker/building-net-docker-images.md)
 
 
-### <a name="getting-net-docker-images"></a>Obtener imágenes de Docker de .NET
+### <a name="getting-net-docker-images"></a>Obtención de imágenes de Docker de .NET
 
-Las imágenes de Docker oficial de .NET se crearon y optimizaron Microsoft. Están disponibles públicamente en los repositorios de Microsoft en Docker Hub. Cada repositorio puede contener varias imágenes, dependiendo de las versiones de .NET y en versiones de sistema operativo. Repositorios de imagen mayoría proporcionan etiquetado amplia para ayudarle a seleccionar una versión de un marco concreto y un sistema operativo (distribución de Linux o versión de Windows).
+Las imágenes oficiales de Docker de .NET se han creado y optimizado por parte de Microsoft. Están disponibles públicamente en los repositorios de Microsoft en Docker Hub. Cada repositorio puede contener varias imágenes, dependiendo de las versiones de .NET y de las versiones del sistema operativo. La mayoría de repositorios de imágenes ofrecen un exhaustivo etiquetado que le ayuda a seleccionar una versión de un marco concreto y un sistema operativo (distribución de Linux o versión de Windows).
 
-## <a name="scenario-based-guidance"></a>Escenario de asistencia telefónica
+## <a name="scenario-based-guidance"></a>Información orientativa en función del escenario
 
-El intento de Microsoft de los repositorios de .NET es tener repositorios granular y tiene el foco, que representan un escenario específico o carga de trabajo.
+Lo que pretende Microsoft con los repositorios de .NET es disponer de repositorios orientados y detallados que representen un escenario o una carga de trabajo específicos.
 
-El `microsoft/aspnetcore` imágenes se optimizan para las aplicaciones de ASP.NET Core en Docker, por lo que pueden empezar a contenedores con mayor rapidez.
+Las imágenes de `microsoft/aspnetcore` se optimizan para las aplicaciones de ASP.NET Core en Docker, de manera que los contenedores puedan iniciar más rápido.
 
-Las imágenes de .NET Core (`microsoft/dotnet`) están diseñados para las aplicaciones de consola basadas en .NET Core. Por ejemplo, procesos por lotes, los trabajos Web de Azure y otros escenarios de consola deben utilizar imágenes optimizadas de .NET Core.
+Las imágenes de .NET Core (`microsoft/dotnet`) están diseñadas para las aplicaciones de consola basadas en .NET Core. Por ejemplo, los procesos por lotes, las instancias de Azure WebJobs y otros escenarios de consola deben utilizar imágenes optimizadas de .NET Core.
 
-El escenario más evidente horizontal para el uso de las aplicaciones de Docker y .NET es para la implementación de producción y de hospedaje. Esto resulta que producción es un caso y los otros son igualmente útiles. Estos escenarios no son específicos de. NET, pero deberían aplicarse a la mayoría de las plataformas para desarrolladores.
+El escenario horizontal más evidente para el uso de las aplicaciones de Docker y .NET es la implementación y el hospedaje en producción. Resulta que la producción es simplemente un escenario y el resto son igualmente útiles. Estos escenarios no son específicos de. NET, pero deberían aplicarse a la mayoría de las plataformas para desarrolladores.
 
-* **Instalar baja fricción** , puede probar .NET sin una instalación local. Simplemente descargar una imagen de Docker con .NET en ella.
+* **Instalación de baja fricción**: puede probar .NET sin una instalación local. Simplemente descargue una imagen de Docker que contenga .NET.
 
-* **Desarrollar en un contenedor** : puede desarrollar en un entorno coherente, lo entornos de desarrollo y producción similar (evitando problemas como el estado global en equipos de desarrollador). Visual Studio Tools para Docker incluso permiten iniciar un contenedor directamente desde Visual Studio.
+* **Desarrollo en un contenedor**: puede llevar a cabo el desarrollo en un entorno coherente, creando similitudes entre los entornos de desarrollo y producción (evitando problemas de estado global en máquinas de desarrolladores). Visual Studio Tools para Docker incluso le permite iniciar un contenedor directamente desde Visual Studio.
 
-* **En un contenedor de prueba** , puede probar en un contenedor, lo que reduce errores debidos a entornos no está configurados correctamente u otros cambios quedan atrás desde la última prueba.
+* **Prueba en un contenedor**: puede probar en un contenedor, lo que reduce los errores debidos a entornos que no están configurados correctamente u otros cambios que permanecen desde la última prueba.
 
-* **Compilar en un contenedor** : puede compilar código en un contenedor, evitando la necesidad de configurar correctamente las máquinas de compilación compartidos para varios entornos, pero en su lugar, se mueve a un "BYOC" (traiga su propio contenedor) enfoque.
+* **Compilación en un contenedor**: puede compilar código en un contenedor, sin que sea necesario configurar correctamente las máquinas de compilación compartidas para varios entornos. En su lugar, se utiliza un enfoque del tipo "traiga su propio contenedor".
 
-* **Implementación en todos los entornos** , puede implementar una imagen a través de todos los entornos. Este enfoque reduce errores debido a diferencias de configuración, suele cambiar el comportamiento de la imagen a través de configuración externo (por ejemplo, variables de entorno insertado).
+* **Implementación en todos los entornos**: puede implementar una imagen en todos los entornos. Este enfoque reduce los errores debidos a diferencias de configuración,que suelen cambiar el comportamiento de la imagen a través de una configuración externa (por ejemplo, variables de entorno insertadas).
 
-[Instrucciones generales](https://docs.microsoft.com/dotnet/standard/microservices-architecture/net-core-net-framework-containers/general-guidance) para decidir entre .NET Core y .NET Framework para el desarrollo de contenedor de Docker.
+[Instrucciones generales](../../standard/microservices-architecture/net-core-net-framework-containers/general-guidance.md) para decidir entre .NET Core y .NET Framework para el desarrollo de contenedores de Docker.
 
 ### <a name="common-docker-development-scenarios"></a>Escenarios comunes de desarrollo de Docker
 
 #### <a name="net-core"></a>Núcleo de .NET
 
-**Recursos principales de .NET**
+**Recursos de .NET Core**
 
- Elija los ejemplos de .NET Core que se ajusten a los escenarios de interés. Todas las instrucciones de ejemplo describen cómo tener como destino Windows o Linux Docker imágenes en hosts de Windows, Linux o Mac OS.
+ Elija los ejemplos de .NET Core que se ajusten a los escenarios pertinentes. Todas las instrucciones de ejemplo describen cómo adaptar las imágenes de Docker de Windows o Linux desde hosts de Windows, Linux o macOS.
 
-Los ejemplos usan el núcleo de .NET 2.0. Usan Docker [varias etapa compilación](https://github.com/dotnet/announcements/issues/18) y [arch varias etiquetas](https://github.com/dotnet/announcements/issues/14) según proceda.
+En estos ejemplos se usa .NET Core 2.0. Usan [compilación de varias etapas](https://github.com/dotnet/announcements/issues/18) y [etiquetas de varias arquitecturas](https://github.com/dotnet/announcements/issues/14) cuando corresponda.
 
-* [Imágenes de .NET core en DockerHub](https://hub.docker.com/r/microsoft/dotnet/)
+* [Imágenes de .NET Core en DockerHub](https://hub.docker.com/r/microsoft/dotnet/)
 
-* [Dockerize una aplicación .NET Core](https://docs.docker.com/engine/examples/dotnetcore/)
+* [Aplicar Docker a una aplicación .NET Core](https://docs.docker.com/engine/examples/dotnetcore/)
 
-* Este ejemplo de .NET Core Docker se muestra cómo [utilizará Docker en el proceso de desarrollo de .NET Core](https://github.com/dotnet/dotnet-docker-samples/tree/master/dotnetapp-dev). El ejemplo funciona con contenedores de Linux y Windows.
+* En este ejemplo de Docker de .NET Core se muestra cómo [utilizar Docker en el proceso de desarrollo de .NET Core](https://github.com/dotnet/dotnet-docker-samples/tree/master/dotnetapp-dev). El ejemplo funciona con contenedores de Linux y Windows.
 
-* Este ejemplo de .NET Core Docker muestra un patrón de prácticas recomendado para [crear imágenes de Docker para las aplicaciones de .NET Core para entornos de producción.](https://github.com/dotnet/dotnet-docker-samples/tree/master/dotnetapp-prod) El ejemplo funciona con contenedores de Linux y Windows.
+* En este ejemplo de Docker de .NET Core se muestra un patrón de prácticas recomendadas para [compilar imágenes de Docker para aplicaciones de .NET Core para entornos de producción.](https://github.com/dotnet/dotnet-docker-samples/tree/master/dotnetapp-prod) El ejemplo funciona con contenedores de Linux y Windows.
 
-* Esto [ejemplo .NET Core Docker](https://github.com/dotnet/dotnet-docker-samples/tree/master/dotnetapp-selfcontained) muestra un patrón de prácticas recomendado para la creación de imágenes de Docker para [independiente de las aplicaciones de .NET Core](https://docs.microsoft.com/dotnet/core/deploying/). Utilizado para el contenedor más pequeño de producción sin una de las ventajas de [compartir imágenes base entre contenedores](https://docs.docker.com/engine/userguide/storagedriver/imagesandcontainers/). Sin embargo, se podrían compartir capas inferiores de Docker.
+* En este [ejemplo de Docker de .NET Core](https://github.com/dotnet/dotnet-docker-samples/tree/master/dotnetapp-selfcontained) se muestra un patrón de prácticas recomendadas para compilar imágenes de Docker para [aplicaciones de .NET Core independientes](../deploying/index.md). Se utiliza para el contenedor más pequeño de producción sin la ventaja de [compartir imágenes base entre contenedores](https://docs.docker.com/engine/userguide/storagedriver/imagesandcontainers/). Sin embargo, se podrían compartir las capas inferiores de Docker.
 
-#### <a name="arm32--raspberry-pi"></a>ARM32 / frambuesa Pi
+#### <a name="arm32--raspberry-pi"></a>ARM32 / Raspberry Pi
 
-* [Anuncio de .NET core en tiempo de ejecución ARM32 compilaciones](https://github.com/dotnet/announcements/issues/29)
+* [Anuncio de compilaciones de ARM32 para .NET Core Runtime](https://github.com/dotnet/announcements/issues/29)
 
-* [ARM32 / images frambuesa Pi .NET Core en DockerHub](https://hub.docker.com/r/microsoft/dotnet/)
+* [Imágenes de ARM32 / Raspberry Pi .NET Core en DockerHub](https://hub.docker.com/r/microsoft/dotnet/)
 
-* [ARM32 / Pi frambuesas .NET Core Docker los ejemplos en GitHub](https://github.com/dotnet/dotnet-docker-samples#arm32--raspberry-pi)
+* [Ejemplos de ARM32 / Raspberry Pi .NET Core Docker en GitHub](https://github.com/dotnet/dotnet-docker-samples#arm32--raspberry-pi)
 
 #### <a name="net-framework"></a>.NET Framework
 
-* [Imágenes de .NET framework en DockerHub](https://hub.docker.com/r/microsoft/dotnet-framework/) este repositorio contiene ejemplos que muestran diversas configuraciones de Docker de .NET Framework. Puede utilizar estas imágenes como base de sus propias imágenes de Docker.
+* [Imágenes de .NET Framework en DockerHub](https://hub.docker.com/r/microsoft/dotnet-framework/)
 
-**.NET framework 4.7**
+Este repositorio contiene ejemplos que muestran diversas configuraciones de Docker en .NET Framework. Puede utilizar estas imágenes como base para sus propias imágenes de Docker.
 
-[La [dotnet-framework: 4.7 ejemplo](https://github.com/Microsoft/dotnet-framework-docker-samples/tree/master/dotnetapp-4.7) muestra el uso básico "Hola a todos" de la [.NET Framework 4.7](https://docs.microsoft.com/dotnet/framework/whats-new/index#introducing-the-net-framework-47). Muestra cómo puede compilar e implementar la aplicación de confianza en el [imagen de docker de .NET Framework 4.7](https://github.com/Microsoft/dotnet-framework-docker/blob/master/4.7/Dockerfile).
+**.NET Framework 4.7**
 
-**.NET framework 4.6.2**
+[El [ejemplo de dotnet-framework:4.7](https://github.com/Microsoft/dotnet-framework-docker-samples/tree/master/dotnetapp-4.7) muestra el uso básico de "hola mundo" de [.NET Framework 4.7](../../framework/whats-new/index.md#v47). Muestra cómo puede compilar e implementar la aplicación que se basa en la [imagen de docker de .NET Framework 4.7](https://github.com/Microsoft/dotnet-framework-docker/blob/master/4.7/Dockerfile).
 
-El [dotnet-framework: 4.6.2 ejemplo](https://github.com/Microsoft/dotnet-framework-docker-samples/tree/master/dotnetapp-4.6.2) muestra el uso básico "Hola a todos" de la [.NET Framework 4.6.2](https://docs.microsoft.com/dotnet/framework/whats-new/index#whats-new-in-the-net-framework-462). Muestra cómo puede compilar e implementar la aplicación de confianza en el [imagen de docker de .NET Framework 4.6.2](https://github.com/Microsoft/dotnet-framework-docker/tree/master/4.6.2).
+**.NET Framework 4.6.2**
 
-**.NET framework 3.5**
+El [ejemplo de dotnet-framework:4.6.2](https://github.com/Microsoft/dotnet-framework-docker-samples/tree/master/dotnetapp-4.6.2) muestra el uso básico de "hola mundo" de [.NET Framework 4.6.2](../../framework/whats-new/index.md#v462). Muestra cómo puede compilar e implementar la aplicación que se basa en la [imagen de docker de .NET Framework 4.6.2](https://github.com/Microsoft/dotnet-framework-docker/tree/master/4.6.2).
 
- El [dotnet-ejemplo: 3.5 framework](https://github.com/Microsoft/dotnet-framework-docker-samples/tree/master/dotnetapp-3.5) muestra el uso básico "Hola a todos" de [.NET Framework 3.5](https://github.com/Microsoft/dotnet-framework-docker/tree/master/3.5). Muestra cómo puede compilar e implementar un proyecto de basarse en .NET Framework 3.5 en Docker.
+**.NET Framework 3.5**
+
+ El [ejemplo de dotnet-framework:3.5](https://github.com/Microsoft/dotnet-framework-docker-samples/tree/master/dotnetapp-3.5) muestra el uso básico de "hola mundo" de [.NET Framework 3.5](https://github.com/Microsoft/dotnet-framework-docker/tree/master/3.5). Muestra cómo puede compilar e implementar un proyecto que se basa en .NET Framework 3.5 en Docker.
 
 #### <a name="aspnet-core"></a>ASP.NET Core
 
-* [Este ejemplo de ASP.NET Core Docker](https://github.com/dotnet/dotnet-docker-samples/tree/master/aspnetapp) muestra un patrón de prácticas recomendado para la creación de imágenes de Docker para ASP.NET Core aplicaciones de producción. El ejemplo funciona con contenedores de Linux y Windows.
+* [En este ejemplo de Docker de ASP.NET Core](https://github.com/dotnet/dotnet-docker-samples/tree/master/aspnetapp) se muestra un patrón de prácticas recomendadas para compilar imágenes de Docker para aplicaciones de ASP.NET Core para entornos de producción. El ejemplo funciona con contenedores de Linux y Windows.
 
 * [Imágenes de ASP.NET Core en DockerHub](https://hub.docker.com/r/microsoft/aspnetcore-build/)
 
 * [Imágenes de ASP.NET Core en GitHub](https://github.com/aspnet/aspnet-docker)
 
-#### <a name="aspnet-framework"></a>Marco de ASP.NET 
+#### <a name="aspnet-framework"></a>ASP.NET Framework
 
-* [Imágenes de marco de ASP.NET en DockerHub](https://hub.docker.com/r/microsoft/aspnet/)
+* [Imágenes de ASP.NET Framework en DockerHub](https://hub.docker.com/r/microsoft/aspnet/)
 
-* [Aplicación de formularios Web Forms ASP.NET en el ejemplo de .NET Framework 4.6.2](https://github.com/Microsoft/dotnet-framework-docker-samples/tree/master/aspnetapp)
+* [Aplicación de ASP.NET Web Forms en un ejemplo de .NET Framework 4.6.2](https://github.com/Microsoft/dotnet-framework-docker-samples/tree/master/aspnetapp)
 
 #### <a name="windows-communication-framework-wcf"></a>Windows Communication Framework (WCF)
 
@@ -131,21 +133,21 @@ El [dotnet-framework: 4.6.2 ejemplo](https://github.com/Microsoft/dotnet-framewo
 
 * [Imágenes de Windows Communication Framework (WCF) en GitHub](https://github.com/microsoft/iis-docker)
 
-* [Ejemplos de Docker de Windows Communication Framework (WCF) mediante completa de .NET Framework 4.6.2](https://github.com/Microsoft/wcf-docker-samples)
+* [Ejemplos de Docker de Windows Communication Framework (WCF) que usan .NET Full Framework 4.6.2](https://github.com/Microsoft/wcf-docker-samples)
 
-#### <a name="internet-information-server-iis"></a>Servidor de Internet Information Server (IIS)
+#### <a name="internet-information-server-iis"></a>Internet Information Server (IIS)
 
 * [Imágenes de Internet Information Server (IIS) en DockerHub](https://hub.docker.com/r/microsoft/iis/)
 
 * [Imágenes de Internet Information Server (IIS) en GitHub](https://github.com/microsoft/wcf-docker)
 
-### <a name="interact-with-other-microsoft-stack-container-images"></a>Interactuar con otras imágenes de contenedor de pila de Microsoft
+### <a name="interact-with-other-microsoft-stack-container-images"></a>Interacción con otras imágenes de contenedor de pila de Microsoft
 
 #### <a name="microsoft-sql-server"></a>Microsoft SQL Server
 
-* [Ejecutar Microsoft SQL Server para la imagen del contenedor de 2017 Linux con inicio rápido de Docker](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker)
+* [Guía de inicio rápido para ejecutar la imagen de contenedor de Microsoft SQL Server para Linux 2017 con Docker](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker)
 
-* [Microsoft SQL Server para las imágenes de Linux en DockerHub](https://hub.docker.com/r/microsoft/mssql-server-windows/)
+* [Imágenes de Microsoft SQL Server para Linux en DockerHub](https://hub.docker.com/r/microsoft/mssql-server-windows/)
 
 * [Imágenes de Microsoft SQL Server para contenedores de Windows en DockerHub](https://hub.docker.com/r/microsoft/mssql-server-windows/)
 
@@ -153,53 +155,53 @@ El [dotnet-framework: 4.6.2 ejemplo](https://github.com/Microsoft/dotnet-framewo
 
 * [Imágenes de Microsoft SQL Server Developer Edition para contenedores de Windows en DockerHub](https://hub.docker.com/r/microsoft/mssql-server-windows-developer/)
 
-#### <a name="visual-studio-team-services-vsts-agent"></a>Agente Visual Studio Team Services (VSTS)
+#### <a name="visual-studio-team-services-vsts-agent"></a>Agente de Visual Studio Team Services (VSTS)
 
-* [Imágenes de Visual Studio Team Services (VSTS) agente en DockerHub](https://hub.docker.com/r/microsoft/vsts-agent/)
+* [Imágenes de agente de Visual Studio Team Services (VSTS) en DockerHub](https://hub.docker.com/r/microsoft/vsts-agent/)
 
-* [Imágenes de Visual Studio Team Services (VSTS) agente en GitHub](https://github.com/Microsoft/vsts-agent-docker)
+* [Imágenes de agente de Visual Studio Team Services (VSTS) en GitHub](https://github.com/Microsoft/vsts-agent-docker)
 
-#### <a name="operations-management-suite-oms-linux-agent"></a>Agente de Operations Management Suite (OMS) Linux
+#### <a name="operations-management-suite-oms-linux-agent"></a>Agente de Linux de Operations Management Suite (OMS)
 
-* [Introducción al agente de Operations Management Suite (OMS) Linux](https://github.com/Microsoft/OMS-Agent-for-Linux/blob/master/docs/Docker-Instructions.md#overview)
+* [Información general de agente de Linux de Operations Management Suite (OMS)](https://github.com/Microsoft/OMS-Agent-for-Linux/blob/master/docs/Docker-Instructions.md#overview)
 
-* [Imágenes de Operations Management Suite (OMS) en DockerHub](https://hub.docker.com/r/microsoft/vsts-agent/) 
+* [Imágenes de Operations Management Suite (OMS) en DockerHub](https://hub.docker.com/r/microsoft/vsts-agent/)
 
 * [Imágenes de Operations Management Suite (OMS) en GitHub](https://github.com/Microsoft/OMS-docker)
 
 #### <a name="microsoft-azure-command-line-interface-cli"></a>Interfaz de línea de comandos (CLI) de Microsoft Azure
 
-* [Imágenes de Microsoft Azure interfaz de línea de comandos (CLI) en DockerHub](Docker image for Microsoft Azure Command Line Interface) 
+* [Imágenes de interfaz de línea de comandos (CLI) de Microsoft Azure en DockerHub](https://hub.docker.com/r/microsoft/azure-cli/) 
 
-* [Imágenes de Microsoft Azure interfaz de línea de comandos (CLI) en GitHub](https://github.com/Microsoft/OMS-docker)
+* [Imágenes de interfaz de línea de comandos (CLI) de Microsoft Azure en GitHub](https://github.com/Microsoft/OMS-docker)
 
-> [!Note]
-> Si no tiene una suscripción de Azure, [Regístrese hoy](https://azure.microsoft.com/free/?b=16.48) para una cuenta gratuita de 30 días y get 200 dólares en créditos de Azure para probar cualquier combinación de los servicios de Azure.
->
+> [!NOTE]
+> Si no tiene una suscripción de Azure, [regístrese hoy](https://azure.microsoft.com/free/?b=16.48) para obtener una cuenta gratuita durante 30 días y obtenga 200 dólares en créditos de Azure para probar cualquier combinación de servicios de Azure.
 
-#### <a name="microsoft-azure-cosmos-db-emulator-windows-containers-only"></a>Emulador de Cosmos DB de Microsoft Azure (solo los contenedores de Windows)
+#### <a name="microsoft-azure-cosmos-db-emulator-windows-containers-only"></a>Emulador de Cosmos DB de Microsoft Azure (solo contenedores de Windows)
 
-* [Imágenes del emulador de base de datos de Microsoft Azure Cosmos en DockerHub](https://hub.docker.com/r/microsoft/azure-cosmosdb-emulator) 
+* [Imágenes del emulador de Cosmos DB de Microsoft Azure en DockerHub](https://hub.docker.com/r/microsoft/azure-cosmosdb-emulator) 
 
-* [Usar el emulador de base de datos de Cosmos de Azure para desarrollo local y las pruebas](https://docs.microsoft.com/azure/cosmos-db/local-emulator#developing-with-the-emulator)
+* [Uso del emulador de Cosmos DB de Azure para desarrollo y pruebas a nivel local](/azure/cosmos-db/local-emulator.md#developing-with-the-emulator)
 
-## <a name="exploring-the-rich-docker-development-ecosystem"></a>Explorar el amplio ecosistema de desarrollo de Docker
+## <a name="exploring-the-rich-docker-development-ecosystem"></a>Exploración del amplio ecosistema de desarrollo de Docker
 
-Ahora que ha aprendido sobre la plataforma Docker y las imágenes de Docker diferentes, el paso siguiente consiste en explorar el amplio ecosistema de Docker. Los vínculos siguientes muestran cómo las herramientas de Microsoft complementan desarrollo del contenedor.
+Ahora que ha aprendido sobre la plataforma Docker y las diferentes imágenes de Docker, el paso siguiente consiste en explorar el amplio ecosistema de Docker. Los vínculos siguientes muestran cómo las herramientas de Microsoft complementan el desarrollo de contenedores.
 
-* [Usar conjuntamente .NET y Docker](https://blogs.msdn.microsoft.com/dotnet/2017/05/25/using-net-and-docker-together/) 
-* [Diseñar y desarrollar aplicaciones .NET basadas en Microservicio y contenedor múltiples](../standard/microservices-architecture/multi-container-microservice-net-applications)
-* [Extensión de Visual Studio código Docker](https://code.visualstudio.com/docs/languages/dockerfile) 
-* [Obtenga información acerca de cómo usar Azure Service Fabric](https://docs.microsoft.com/azure/service-fabric/) 
-* [Ejemplo de introducción de obtención de Service Fabric](https://azure.microsoft.com/resources/samples/service-fabric-dotnet-getting-started/)
-* [Ventajas de los contenedores de Windows](https://docs.microsoft.com/virtualization/windowscontainers/about/index#video-overview)
-* [Trabajar con herramientas de Docker de Visual Studio](https://docs.microsoft.com/aspnet/core/publishing/visual-studio-tools-for-docker)
-* [Implementación de imágenes de Docker desde el registro de contenedor de Azure a las instancias de contenedor de Azure](https://blogs.msdn.microsoft.com/stevelasker/2017/07/28/deploying-docker-images-from-the-azure-container-registry-to-azure-container-instances/)
-* [Depuración con el código de Visual Studio](https://code.visualstudio.com/docs/nodejs/debugging-recipes#_nodejs-typescript-docker-container) 
-* [Obtener las manos con Visual Studio para Mac, contenedores y el código sin servidor en la nube](https://blogs.msdn.microsoft.com/visualstudio/2017/08/31/hands-on-with-visual-studio-for-mac-containers-serverless-code-in-the-cloud/#comments)
-* [Introducción a Docker y Visual Studio para Mac laboratorio](https://github.com/Microsoft/vs4mac-labs/tree/master/Docker/Getting-Started)
+* [Using .NET and Docker together](https://blogs.msdn.microsoft.com/dotnet/2017/05/25/using-net-and-docker-together/) (Uso conjunto de .NET y Docker)
+* [Diseñar y desarrollar aplicaciones .NET basadas en varios contenedores y microservicios](../../standard/microservices-architecture/multi-container-microservice-net-applications/index.md)
+* [Visual Studio Code Docker extension](https://code.visualstudio.com/docs/languages/dockerfile) (Extensión de Docker de Visual Studio Code)
+* [Learn how to use Azure Service Fabric](/azure/service-fabric/index.md) (Información acerca de cómo usar Azure Service Fabric)
+* [Service Fabric Getting Started Sample](https://azure.microsoft.com/resources/samples/service-fabric-dotnet-getting-started/) (Ejemplo de introducción a Service Fabric)
+* [Benefits of Windows Containers](/virtualization/windowscontainers/about/index.md#video-overview) (Beneficios de los contenedores de Windows)
+* [Working with Visual Studio Docker Tools](/aspnet/core/publishing/visual-studio-tools-for-docker/index.md) (Trabajo con Visual Studio Docker Tools)
+* [Deploying Docker Images from the Azure Container Registry to Azure Container Instances](https://blogs.msdn.microsoft.com/stevelasker/2017/07/28/deploying-docker-images-from-the-azure-container-registry-to-azure-container-instances/) (Implementación de imágenes de Docker desde Azure Container Registry a Azure Container Instances)
+* [Depuración con Visual Studio Code](https://code.visualstudio.com/docs/nodejs/debugging-recipes#_nodejs-typescript-docker-container)
+* [Getting hands on with Visual Studio for Mac, containers, and serverless code in the cloud](https://blogs.msdn.microsoft.com/visualstudio/2017/08/31/hands-on-with-visual-studio-for-mac-containers-serverless-code-in-the-cloud/#comments) (Información práctica sobre Visual Studio para Mac, contenedores y código sin servidor en la nube)
+* [Getting Started with Docker and Visual Studio for Mac Lab](https://github.com/Microsoft/vs4mac-labs/tree/master/Docker/Getting-Started) (Introducción a Docker y Visual Studio para Mac Lab)
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-* [Obtenga información acerca de los aspectos básicos de Docker con .NET Core](../docker/docker-basics-dotnet-core.md)
-* [Creación de imágenes de Docker de núcleo de .NET](../docker/building-net-docker-images)
+* [Información sobre los aspectos básicos de Docker con .NET Core](docker-basics-dotnet-core.md)
+* [Creación de imágenes de Docker de .NET Core](building-net-docker-images.md)
+\

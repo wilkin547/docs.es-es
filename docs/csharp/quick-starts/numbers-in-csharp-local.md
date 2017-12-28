@@ -1,6 +1,6 @@
 ---
-title: "Guía de inicio rápido - números en C#, C#"
-description: "Aprender C# examinando sus propiedades y métodos tipos numéricos."
+title: "Guía de inicio rápido; números en C#; guía de C#"
+description: "Obtenga información sobre C# mediante la exploración de tipos numéricos, sus propiedades y métodos."
 author: billwagner
 ms.author: wiwagn
 ms.date: 10/31/2017
@@ -9,23 +9,23 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 821cca4ea6d6148410e9b179f05d5b74c4844628
-ms.sourcegitcommit: 43c656811dd38a66a6672084c65d10c0cbbf2015
+ms.openlocfilehash: f275f157d9a9e41407be0beac83c337c7706a95d
+ms.sourcegitcommit: 9bee08539b1886c9d57fa3d5bd8a58dfdd7cad94
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2017
+ms.lasthandoff: 12/12/2017
 ---
-# <a name="numbers-in-c-quick-start"></a>Números de C# de inicio rápido #
+# <a name="numbers-in-c-quick-start"></a>Guía de inicio rápido sobre números en C# #
 
-Esta guía de inicio rápido explican los tipos numéricos en C# interactivamente. Deberá escribir pequeñas cantidades de código y vuelva a compilar y ejecutar ese código. El inicio rápido contiene una serie de lecciones que explorar números y las operaciones matemáticas en C#. En ellas se enseñan los aspectos básicos del lenguaje C#.
+En esta guía de inicio rápido se explican los tipos numéricos en C# de manera interactiva. Escribirá pequeñas cantidades de código y luego compilará y ejecutará ese código. Esta guía de inicio rápido contiene una serie de lecciones que ofrecen información detallada sobre los números y las operaciones matemáticas en C#. En ellas se enseñan los aspectos básicos del lenguaje C#.
 
-Este inicio rápido en el que se espera que debe disponer de una máquina que se puede usar para el desarrollo. El tema de .NET [empezar a trabajar en 10 minutos](https://www.microsoft.com/net/core) tiene instrucciones sobre cómo configurar el entorno de desarrollo local en Linux, Mac o PC.
+En esta guía de inicio rápido se supone que cuenta con una máquina que puede usar para el desarrollo. El tema de .NET [Iniciar en 10 minutos](https://www.microsoft.com/net/core) cuenta con instrucciones para configurar el entorno de desarrollo local en Mac, PC o Linux. En las [guías de inicio rápido de introducción al entorno local](local-environment.md) puede obtener información general sobre los comandos que usará con vínculos que amplían la información.
 
 ## <a name="explore-integer-math"></a>Análisis de las operaciones matemáticas con enteros
 
-Cree un directorio denominado **inicio rápido de números**. Conviértalo en el directorio actual y ejecute `dotnet new console -n NumbersInCSharp -o .`.
+Cree un directorio denominado **numbers-quickstart**. Conviértalo en el directorio actual y ejecute `dotnet new console -n NumbersInCSharp -o .`.
 
-Abra **Program.cs** en su editor favorito y reemplace la línea `Console.Writeline("Hello World!");` con lo siguiente:
+Abra **Program.cs** en su editor favorito y reemplace la línea `Console.Writeline("Hello World!");` por lo siguiente:
 
 ```csharp
 int a = 18;
@@ -34,7 +34,7 @@ int c = a + b;
 Console.WriteLine(c);
 ```
 
-Ejecutar este código, escriba `dotnet run` en la ventana de comandos. 
+Ejecute este código escribiendo `dotnet run` en la ventana de comandos. 
 
 Ya ha visto una de las operaciones matemáticas fundamentales con enteros. El tipo `int` representa un **entero**, que puede ser un número entero positivo o negativo. Use el símbolo `+` para la suma. Otros operadores matemáticos comunes con enteros son:
 
@@ -53,12 +53,12 @@ c = a / b;
 Console.WriteLine(c);
 ```
 
-Ejecutar este código, escriba `dotnet run` en la ventana de comandos. 
+Ejecute este código escribiendo `dotnet run` en la ventana de comandos. 
     
-Si lo desea, también puede experimentar con la realización de varias operaciones matemáticas en la misma línea. Intente `c = a + b - 12 * 17;` por ejemplo. Se permite mezclar las variables y constantes números.
+Si lo desea, también puede experimentar con la realización de varias operaciones matemáticas en la misma línea. Pruebe `c = a + b - 12 * 17;` por ejemplo. Se permite la combinación de variables y números constantes.
 
 > [!TIP]
-> Cuando explore C# o cualquier otro lenguaje de programación, cometerá errores al escribir código. El **compilador** buscará dichos errores y los notificará. Cuando la salida contiene mensajes de error, fíjese en el código de ejemplo y el código en la ventana para ver qué se debe corregir.
+> Cuando explore C# o cualquier otro lenguaje de programación, cometerá errores al escribir código. El **compilador** buscará dichos errores y los notificará. Si la salida contiene mensajes de error, revise detenidamente el código de ejemplo y el código de la ventana para saber qué debe corregir.
 > Este ejercicio le ayudará a aprender la estructura del código de C#.     
 
 Ha terminado el primer paso. Antes comenzar con la siguiente sección, se va a mover el código actual a un método independiente. Con este paso, resulta más fácil empezar con un nuevo ejemplo. Cambie el nombre del método `Main` por `WorkingWithIntegers` y escriba un método `Main` nuevo que llame a `WorkingWithIntegers`. Cuando termine, el código debe tener un aspecto similar al siguiente:
@@ -94,17 +94,17 @@ namespace NumbersInCSharp
 
 ## <a name="explore-order-of-operations"></a>Análisis sobre el orden de las operaciones
 
-Marcar como comentario la llamada a `WorkingWithIntegers()`. Realizará la salida que menos saturado mientras trabaja en esta sección:
+Convierta en comentario la llamada a `WorkingWithIntegers()`. De este modo la salida estará menos saturada a medida que trabaje en esta sección:
 
 ```csharp
 //WorkingWithIntegers();
 ```
 
-El `//` inicia un **comentario** en C#. Los comentarios son cualquier texto que desea mantener en el código fuente, pero no se ejecutan como código. El compilador no genera ningún código ejecutable de comentarios.
+El `//` inicia un **comentario** en C#. Los comentarios son cualquier texto que desea mantener en el código fuente pero que no se ejecuta como código. El compilador no genera ningún código ejecutable a partir de comentarios.
 
 El lenguaje C# define la prioridad de las diferentes operaciones matemáticas con reglas compatibles con las reglas aprendidas en las operaciones matemáticas.
 La multiplicación y división tienen prioridad sobre la suma y resta.
-Explorar que agregando el código siguiente a su `Main` método y execuing `dotnet run`:
+Explórelo mediante la adición del código siguiente a su método `Main` y la ejecución de `dotnet run`:
 
 ```csharp
 int a = 5;
@@ -116,23 +116,23 @@ Console.WriteLine(d);
 
 La salida muestra que la multiplicación se realiza antes que la suma.
 
-Las operaciones que desee llevar a cabo en primer lugar o puede forzar un orden diferente de operación mediante la adición de paréntesis alrededor de la operación. Agregue las líneas siguientes y vuelva a ejecutar:
+Puede forzar la ejecución de un orden diferente de las operaciones si la operación o las operaciones que realizó primero se incluyen entre paréntesis. Agregue las líneas siguientes y ejecute de nuevo:
 
 ```csharp
 d = (a  + b) * c;
 Console.WriteLine(d);
 ```
 
-Combine muchas operaciones distintas para indagar más. Agregar algo parecido a las líneas siguientes en la parte inferior de la `Main` método. Intente `dotnet run` nuevo.
+Combine muchas operaciones distintas para indagar más. Agregue algo parecido a las líneas siguientes en la parte inferior del método `Main`. Pruebe `dotnet run` de nuevo.
 
 ```csharp
 d = (a + b) - 6 * c + (12 * 4) / 3 + 12;
 Console.WriteLine(d);
 ```
 
-Puede que haya observado un comportamiento interesante de los enteros. División de enteros siempre genera un resultado entero, incluso cuando se podría esperar el resultado para incluir una parte decimal o fraccionaria.
+Puede que haya observado un comportamiento interesante de los enteros. La división de enteros siempre genera un entero como resultado, incluso cuando se espera que el resultado incluya un decimal o una parte de una fracción.
 
-Si aún no lo ha visto este comportamiento, pruebe el código siguiente al final de su `Main` método:
+Si no ha observado este comportamiento, pruebe el código siguiente al final de su método `Main`.
 
 ```csharp
 int e = 7;
@@ -142,10 +142,10 @@ int h = (e  + f) / g;
 Console.WriteLine(h);
 ```
 
-Tipo `dotnet run` nuevo para ver los resultados.
+Escriba `dotnet run` de nuevo para ver los resultados.
 
-Antes de continuar, echemos todo el código que ha escrito en esta sección y colocarla en un nuevo método. Llame a ese nuevo método `OrderPrecedence`.
-Debe acabar con algo parecido a esto:
+Antes de continuar, vamos a tomar todo el código que ha escrito en esta sección y a colocarlo en un nuevo método. Llame a ese nuevo método `OrderPrecedence`.
+Deberían terminar con algo similar a esto:
 
 ```csharp
 using System;
@@ -202,7 +202,7 @@ namespace NumbersInCSharp
 
 ## <a name="explore-integer-precision-and-limits"></a>Información sobre los límites y la precisión de los enteros
 En el último ejemplo se ha mostrado que la división de enteros trunca el resultado.
-Puede obtener el **resto** mediante el uso de la **módulo** (operador), el `%` caracteres. Pruebe el código siguiente en su `Main` método:
+Puede obtener el **resto** con el operador de **módulo**, el carácter `%`. Pruebe el código siguiente en el método `Main`:
 
 ```csharp
 int a = 7;
@@ -214,7 +214,7 @@ Console.WriteLine($"quotient: {d}");
 Console.WriteLine($"remainder: {e}");
 ```
 
-El tipo de entero de C# difiere de los enteros matemáticos en un aspecto: el tipo `int` tiene límites mínimo y máximo. Agregue este código a su `Main` método para ver esos límites:
+El tipo de entero de C# difiere de los enteros matemáticos en un aspecto: el tipo `int` tiene límites mínimo y máximo. Agregue este código a su método `Main` para ver esos límites:
     
 ```csharp
 int max = int.MaxValue;
@@ -222,7 +222,7 @@ int min = int.MinValue;
 Console.WriteLine($"The range of integers is {min} to {max}");
 ```
 
-Si un cálculo genera un valor que supera los límites, se producirá una condición de **subdesbordamiento** o **desbordamiento**. La respuesta parece ajustarse de un límite al otro. Agregue estas dos líneas para su `Main` método para ver un ejemplo:
+Si un cálculo genera un valor que supera los límites, se producirá una condición de **subdesbordamiento** o **desbordamiento**. La respuesta parece ajustarse de un límite al otro. Agregue estas dos líneas a su método `Main` para ver un ejemplo:
 
 ```csharp
 int what = max + 3;
@@ -234,12 +234,12 @@ La respuesta es un número negativo muy grande porque un desbordamiento "se ajus
 
 Hay otros tipos numéricos con distintos límites y precisiones que podría usar si el tipo `int` no satisface sus necesidades. Veámoslo a continuación.
 
-Una vez más, vamos a mover el código que escribió en esta sección en un método independiente. Denomínelo `TestLimits`. 
+Una vez más, vamos a mover el código que escribió en esta sección a un método independiente. Denomínelo `TestLimits`. 
 
 ## <a name="work-with-the-double-type"></a>Operaciones con el tipo double
 
-El tipo numérico `double` representa números de punto flotante de doble precisión. Puede que no esté familiarizado con estos términos. A **punto flotante** número resulta útil para representar números no entero que pueden ser muy grandes o pequeños en magnitud. **Doble precisión** significa que estos números se almacenan con mayor precisión que en el caso de la **precisión sencilla**. En los equipos modernos, es más habitual utilizar números con doble precisión que con precisión sencilla.
-Comencemos a explorar. Agregue el siguiente código y ver el resultado:
+El tipo numérico `double` representa números de punto flotante de doble precisión. Puede que no esté familiarizado con estos términos. Un número de **punto flotante** resulta útil para representar números no enteros cuya magnitud puede ser muy grande o pequeña. **Doble precisión** significa que estos números se almacenan con mayor precisión que en el caso de la **precisión sencilla**. En los equipos modernos, es más habitual utilizar números con doble precisión que con precisión sencilla.
+Comencemos a explorar. Agregue el siguiente código y observe el resultado:
 
 ```csharp
 double a = 5;
@@ -259,7 +259,7 @@ double h = (e  + f) / g;
 Console.WriteLine(h);
 ```
 
-El intervalo de un valor double es mucho más amplio que en el caso de los valores enteros. Pruebe el código siguiente debajo de lo que ha escrito hasta ahora:
+El intervalo de un valor double es mucho más amplio que en el caso de los valores enteros. Pruebe el código siguiente debajo del que ha escrito hasta ahora:
 
 ```csharp
 double max = double.MaxValue;
@@ -267,7 +267,7 @@ double min = double.MinValue;
 Console.WriteLine($"The range of double is {min} to {max}");
 ```
 
-Estos valores se imprimen en notación científica. El número a la izquierda de la `E` es la mantisa. El número a la derecha es el exponente, como una potencia de diez. 
+Estos valores se imprimen en notación científica. El número a la izquierda de `E` es la mantisa. El número a la derecha es el exponente, como una potencia de diez. 
 
 Al igual que sucede con los números decimales en las operaciones matemáticas, los tipos double en C# pueden presentar errores de redondeo. Pruebe este código:
 
@@ -282,11 +282,11 @@ Sabe que repetir `0.3` no es exactamente lo mismo que `1/3`.
 
 Pruebe otros cálculos con números grandes, números pequeños, multiplicaciones y divisiones con el tipo `double`.  Intente realizar cálculos más complicados.
 
-Una vez que ha invertido un tiempo con el desafío, tomar el código que ha escrito y lo coloca en un nuevo método. Nombre ese nuevo método `WorkWithDoubles`.
+Una vez que haya invertido un tiempo en ello, tome el código que ha escrito y colóquelo en un nuevo método. Ponga a ese nuevo método el nombre `WorkWithDoubles`.
 
 ## <a name="work-with-fixed-point-types"></a>Operaciones con tipos de punto fijo
 
-Hasta el momento ha visto los tipos numéricos básicos en C#: los tipos integer y double.  Sin embargo, hay otro tipo más que debe aprender: el tipo `decimal`. El `decimal` tipo tiene un intervalo más pequeño pero mayor precisión que `double`. El término **punto fijo** significa que el punto decimal o el punto binario no se mueven. Observemos lo siguiente:
+Hasta el momento ha visto los tipos numéricos básicos en C#: los tipos integer y double.  Sin embargo, hay otro tipo más que debe aprender: el tipo `decimal`. El tipo `decimal` tiene un intervalo más pequeño, pero mayor precisión que `double`. El término **punto fijo** significa que el punto decimal o el punto binario no se mueven. Observemos lo siguiente:
 
 ```csharp
 decimal min = decimal.MinValue;
@@ -312,13 +312,14 @@ Observe que la expresión matemática con el tipo decimal tiene más dígitos a 
 
 ***Desafío***
 
-Ahora que ya conoce los diferentes tipos numéricos, escriba código para calcular el área de un círculo cuyo radio sea de 6,35 cm. Recuerde que el área de un circulo es igual al valor de su radio elevado al cuadrado multiplicado por Pi. Una sugerencia: C# contiene una constante de PI, <xref:System.Math.PI?displayProperty=nameWithType> que puede usar para ese valor. 
+Ahora que ya conoce los diferentes tipos numéricos, escriba código para calcular el área de un círculo cuyo radio sea de 6,35 cm. Recuerde que el área de un circulo es igual al valor de su radio elevado al cuadrado multiplicado por Pi. Sugerencia: .NET contiene una constante de Pi, <xref:System.Math.PI?displayProperty=nameWithType>, que puede usar para ese valor. 
 
-Puede comprobar la respuesta por [examinando el código de ejemplo terminado en GitHub](https://github.com/dotnet/docs/tree/master/samples/csharp/numbers-quickstart/Program.cs#L104-L106)
+Debe obtener una respuesta entre 19 y 20.
+Puede comprobar la respuesta si [consulta el ejemplo de código terminado en GitHub](https://github.com/dotnet/docs/tree/master/samples/csharp/numbers-quickstart/Program.cs#L104-L106).
 
-Si lo desea, intente algunas otras fórmulas. 
+Si lo desea, pruebe con otras fórmulas. 
 
-Ha completado el inicio rápido "números en C#". Puede continuar con la [bifurcaciones y bucles](branches-and-loops-local.md) inicio rápido en su propio entorno de desarrollo.
+Ha completado el inicio rápido "Números en C#". Puede continuar con la guía de inicio rápido [Bifurcaciones y bucles](branches-and-loops-local.md) en su propio entorno de desarrollo.
 
 Puede obtener más información sobre los números en C# en los temas siguientes:
 

@@ -10,24 +10,24 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 228a9dd88d0a511492ccb8b70e0231278969acbe
-ms.sourcegitcommit: 43c656811dd38a66a6672084c65d10c0cbbf2015
+ms.openlocfilehash: 6f559c7a3290e7db2266e10ec792c283394fb904
+ms.sourcegitcommit: 9bee08539b1886c9d57fa3d5bd8a58dfdd7cad94
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="c-quick-start-collections"></a>Inicio rápido de C#: colecciones #
 
-Este inicio rápido proporciona una introducción al lenguaje C# y los conceptos básicos de la <xref:System.Collections.Generic.List%601> clase.
+En esta guía de inicio rápido se proporciona una introducción al lenguaje C# y se exponen los conceptos básicos de la clase <xref:System.Collections.Generic.List%601>.
 
-Este inicio rápido en el que se espera que debe disponer de una máquina que se puede usar para el desarrollo. El tema de .NET [empezar a trabajar en 10 minutos](https://www.microsoft.com/net/core) tiene instrucciones sobre cómo configurar el entorno de desarrollo local en Linux, Mac o PC.
+En esta guía de inicio rápido se supone que cuenta con una máquina que puede usar para el desarrollo. El tema de .NET [Iniciar en 10 minutos](https://www.microsoft.com/net/core) cuenta con instrucciones para configurar el entorno de desarrollo local en Mac, PC o Linux. En las [guías de inicio rápido de introducción al entorno local](local-environment.md) puede obtener información general sobre los comandos que usará con vínculos que amplían la información.
 
-## <a name="a-basic-list-example"></a>Un ejemplo de lista básica.
+## <a name="a-basic-list-example"></a>Un ejemplo de lista básico.
 
 Cree un directorio denominado **inicio rápido-lista**. Conviértalo en el directorio actual y ejecute `dotnet new console`.
 
 > [!NOTE]
-> Si acaba de completar [Introducción a .NET en 10 minutos](https://www.microsoft.com/net), puede seguir usando la aplicación myApp que acaba de crear.
+> Si acaba de completar [Get started with .NET in 10 minutes](https://www.microsoft.com/net) (Introducción a .NET en 10 minutos), puede seguir usando la aplicación myApp que acaba de crear.
  
 Abra **Program.cs** en su editor favorito y reemplace el código existente por el siguiente:
 
@@ -210,7 +210,7 @@ Guarde el archivo y escriba `dotnet run` para ver los resultados.
 > Para centrarse solo en esta sección, puede comentar el código que llama a `WorkingWithStrings();`. Solo debe colocar dos caracteres `/` delante de la llamada, como en: `// WorkingWithStrings();`. 
 
 ## <a name="challenge"></a>Desafío
-Trate de recopilar los conocimientos que ha aprendido en esta lección y en las anteriores. Amplíe lo que ha creado hasta el momento con los números de Fibonacci. Pruebe y escriba el código para generar los veinte primeros números de la secuencia.
+Trate de recopilar los conceptos que ha aprendido en esta lección y en las anteriores. Amplíe lo que ha creado hasta el momento con los números de Fibonacci. Pruebe a escribir el código para generar los veinte primeros números de la secuencia. (Como sugerencia, el 20º número de la serie de Fibonacci es 6765).
 
 ## <a name="complete-challenge"></a>Desafío completo
 
@@ -218,6 +218,6 @@ Puede ver un ejemplo de solución si [consulta el ejemplo de código terminado e
 
 Con cada iteración del bucle, se obtienen los dos últimos enteros de la lista, se suman y se agrega el valor resultante a la lista. El bucle se repite hasta que se hayan agregado veinte elementos a la lista.
 
-Enhorabuena, ha completado el inicio rápido de la lista. Puede continuar con la [Introducción a las clases](introduction-to-classes.md) inicio rápido en su propio entorno de desarrollo.
+Enhorabuena, ha completado la guía de inicio rápido sobre las listas. Puede continuar con la guía de inicio rápido [Introducción a las clases](introduction-to-classes.md) en su propio entorno de desarrollo.
 
 Puede obtener más información sobre cómo trabajar con el tipo `List` en el tema de la [Guía de .NET](../../standard/index.md) que trata sobre las [colecciones](../../standard/collections/index.md). Ahí también podrá conocer muchos otros tipos de colecciones.
