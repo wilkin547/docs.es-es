@@ -19,48 +19,49 @@ caps.latest.revision: "9"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 44a978eae9ae85e1ba12f117288a3c9ce4db75b4
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 59899178fd9fc8da2334883ed62d9f8655eb335b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="ltsystemwebgt-element-web-settings"></a><span data-ttu-id="5029c-102">&lt;System.Web&gt; elemento (configuración Web)</span><span class="sxs-lookup"><span data-stu-id="5029c-102">&lt;system.web&gt; Element (Web Settings)</span></span>
-<span data-ttu-id="5029c-103">Contiene información acerca de cómo el nivel de hospedaje de ASP.NET administra el comportamiento de todo el proceso.</span><span class="sxs-lookup"><span data-stu-id="5029c-103">Contains information about how the ASP.NET hosting layer manages process-wide behavior.</span></span>  
+# <a name="ltsystemwebgt-element-web-settings"></a><span data-ttu-id="8fd10-102">&lt;System.Web&gt; elemento (configuración Web)</span><span class="sxs-lookup"><span data-stu-id="8fd10-102">&lt;system.web&gt; Element (Web Settings)</span></span>
+<span data-ttu-id="8fd10-103">Contiene información acerca de cómo el nivel de hospedaje de ASP.NET administra el comportamiento de todo el proceso.</span><span class="sxs-lookup"><span data-stu-id="8fd10-103">Contains information about how the ASP.NET hosting layer manages process-wide behavior.</span></span>  
   
- <span data-ttu-id="5029c-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="5029c-104">\<configuration></span></span>  
-<span data-ttu-id="5029c-105">\<System.Web > elemento (configuración Web)</span><span class="sxs-lookup"><span data-stu-id="5029c-105">\<system.web> Element (Web Settings)</span></span>  
+ <span data-ttu-id="8fd10-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="8fd10-104">\<configuration></span></span>  
+<span data-ttu-id="8fd10-105">\<System.Web > elemento (configuración Web)</span><span class="sxs-lookup"><span data-stu-id="8fd10-105">\<system.web> Element (Web Settings)</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="5029c-106">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="5029c-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="8fd10-106">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="8fd10-106">Syntax</span></span>  
   
 ```xml  
 <system.web>  
 </system.web>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="5029c-107">Atributos y elementos</span><span class="sxs-lookup"><span data-stu-id="5029c-107">Attributes and Elements</span></span>  
- <span data-ttu-id="5029c-108">En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.</span><span class="sxs-lookup"><span data-stu-id="5029c-108">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="8fd10-107">Atributos y elementos</span><span class="sxs-lookup"><span data-stu-id="8fd10-107">Attributes and Elements</span></span>  
+ <span data-ttu-id="8fd10-108">En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.</span><span class="sxs-lookup"><span data-stu-id="8fd10-108">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="5029c-109">Atributos</span><span class="sxs-lookup"><span data-stu-id="5029c-109">Attributes</span></span>  
- <span data-ttu-id="5029c-110">Ninguno.</span><span class="sxs-lookup"><span data-stu-id="5029c-110">None.</span></span>  
+### <a name="attributes"></a><span data-ttu-id="8fd10-109">Atributos</span><span class="sxs-lookup"><span data-stu-id="8fd10-109">Attributes</span></span>  
+ <span data-ttu-id="8fd10-110">Ninguno.</span><span class="sxs-lookup"><span data-stu-id="8fd10-110">None.</span></span>  
   
-### <a name="child-elements"></a><span data-ttu-id="5029c-111">Elementos secundarios</span><span class="sxs-lookup"><span data-stu-id="5029c-111">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="8fd10-111">Elementos secundarios</span><span class="sxs-lookup"><span data-stu-id="8fd10-111">Child Elements</span></span>  
   
-|<span data-ttu-id="5029c-112">Elemento</span><span class="sxs-lookup"><span data-stu-id="5029c-112">Element</span></span>|<span data-ttu-id="5029c-113">Descripción</span><span class="sxs-lookup"><span data-stu-id="5029c-113">Description</span></span>|  
+|<span data-ttu-id="8fd10-112">Elemento</span><span class="sxs-lookup"><span data-stu-id="8fd10-112">Element</span></span>|<span data-ttu-id="8fd10-113">Descripción</span><span class="sxs-lookup"><span data-stu-id="8fd10-113">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="5029c-114">\<applicationPool></span><span class="sxs-lookup"><span data-stu-id="5029c-114">\<applicationPool></span></span>](../../../../../docs/framework/configure-apps/file-schema/web/applicationpool-element-web-settings.md)|<span data-ttu-id="5029c-115">Especifica la configuración de grupos de aplicaciones de IIS en un archivo aspnet.config.</span><span class="sxs-lookup"><span data-stu-id="5029c-115">Specifies configuration settings for IIS application pools in an aspnet.config file.</span></span>|  
+|[<span data-ttu-id="8fd10-114">\<applicationPool></span><span class="sxs-lookup"><span data-stu-id="8fd10-114">\<applicationPool></span></span>](../../../../../docs/framework/configure-apps/file-schema/web/applicationpool-element-web-settings.md)|<span data-ttu-id="8fd10-115">Especifica la configuración de grupos de aplicaciones de IIS en un archivo aspnet.config.</span><span class="sxs-lookup"><span data-stu-id="8fd10-115">Specifies configuration settings for IIS application pools in an aspnet.config file.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="5029c-116">Elementos primarios</span><span class="sxs-lookup"><span data-stu-id="5029c-116">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="8fd10-116">Elementos primarios</span><span class="sxs-lookup"><span data-stu-id="8fd10-116">Parent Elements</span></span>  
   
-|<span data-ttu-id="5029c-117">Elemento</span><span class="sxs-lookup"><span data-stu-id="5029c-117">Element</span></span>|<span data-ttu-id="5029c-118">Descripción</span><span class="sxs-lookup"><span data-stu-id="5029c-118">Description</span></span>|  
+|<span data-ttu-id="8fd10-117">Elemento</span><span class="sxs-lookup"><span data-stu-id="8fd10-117">Element</span></span>|<span data-ttu-id="8fd10-118">Descripción</span><span class="sxs-lookup"><span data-stu-id="8fd10-118">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="5029c-119">\<configuration></span><span class="sxs-lookup"><span data-stu-id="5029c-119">\<configuration></span></span>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|<span data-ttu-id="5029c-120">Especifica el elemento raíz necesario en cada archivo de configuración usado por Common Language Runtime y por las aplicaciones de [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="5029c-120">Specifies the root element in every configuration file that is used by the common language runtime and [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] applications.</span></span>|  
+|[<span data-ttu-id="8fd10-119">\<configuration></span><span class="sxs-lookup"><span data-stu-id="8fd10-119">\<configuration></span></span>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|<span data-ttu-id="8fd10-120">Especifica el elemento raíz necesario en cada archivo de configuración usado por Common Language Runtime y por las aplicaciones de [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="8fd10-120">Specifies the root element in every configuration file that is used by the common language runtime and [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] applications.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="5029c-121">Comentarios</span><span class="sxs-lookup"><span data-stu-id="5029c-121">Remarks</span></span>  
- <span data-ttu-id="5029c-122">El `system.web` elemento y su elemento secundario `applicationPool` elemento se agregaron a la [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] de [!INCLUDE[net_v35SP1_short](../../../../../includes/net-v35sp1-short-md.md)].</span><span class="sxs-lookup"><span data-stu-id="5029c-122">The `system.web` element and its child `applicationPool` element were added to the [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] as of [!INCLUDE[net_v35SP1_short](../../../../../includes/net-v35sp1-short-md.md)].</span></span> <span data-ttu-id="5029c-123">Al ejecutar [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] o versiones posteriores en el modo integrado, esta combinación de elementos permite configurar cómo administra ASP.NET los subprocesos y cómo pone en cola las solicitudes cuando ASP.NET se hospeda en un grupo de aplicaciones de IIS.</span><span class="sxs-lookup"><span data-stu-id="5029c-123">When you run [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] or later versions in Integrated mode, this element combination lets you configure how ASP.NET manages threads and how it queues requests when ASP.NET is hosted in an IIS application pool.</span></span> <span data-ttu-id="5029c-124">Si ejecuta [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] o versiones posteriores en modo ISAPI o clásico, se pasa por alto esta configuración.</span><span class="sxs-lookup"><span data-stu-id="5029c-124">If you run [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] or later versions in Classic or ISAPI mode, these settings are ignored.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="8fd10-121">Comentarios</span><span class="sxs-lookup"><span data-stu-id="8fd10-121">Remarks</span></span>  
+ <span data-ttu-id="8fd10-122">El `system.web` elemento y su elemento secundario `applicationPool` elemento se agregaron a la [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] de [!INCLUDE[net_v35SP1_short](../../../../../includes/net-v35sp1-short-md.md)].</span><span class="sxs-lookup"><span data-stu-id="8fd10-122">The `system.web` element and its child `applicationPool` element were added to the [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] as of [!INCLUDE[net_v35SP1_short](../../../../../includes/net-v35sp1-short-md.md)].</span></span> <span data-ttu-id="8fd10-123">Al ejecutar [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] o versiones posteriores en el modo integrado, esta combinación de elementos permite configurar cómo administra ASP.NET los subprocesos y cómo pone en cola las solicitudes cuando ASP.NET se hospeda en un grupo de aplicaciones de IIS.</span><span class="sxs-lookup"><span data-stu-id="8fd10-123">When you run [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] or later versions in Integrated mode, this element combination lets you configure how ASP.NET manages threads and how it queues requests when ASP.NET is hosted in an IIS application pool.</span></span> <span data-ttu-id="8fd10-124">Si ejecuta [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] o versiones posteriores en modo ISAPI o clásico, se pasa por alto esta configuración.</span><span class="sxs-lookup"><span data-stu-id="8fd10-124">If you run [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] or later versions in Classic or ISAPI mode, these settings are ignored.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="5029c-125">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="5029c-125">Example</span></span>  
- <span data-ttu-id="5029c-126">En el ejemplo siguiente se muestra cómo configurar el comportamiento de todo el proceso ASP.NET en el archivo aspnet.config cuando ASP.NET se hospeda en un grupo de aplicaciones de IIS.</span><span class="sxs-lookup"><span data-stu-id="5029c-126">The following example shows how to configure ASP.NET process-wide behavior in the aspnet.config file when ASP.NET is hosted in an IIS application pool.</span></span> <span data-ttu-id="5029c-127">En el ejemplo se da por supuesto que está ejecutando IIS en integrado modo y que la aplicación está utilizando el [!INCLUDE[net_v35SP1_short](../../../../../includes/net-v35sp1-short-md.md)] o una versión posterior.</span><span class="sxs-lookup"><span data-stu-id="5029c-127">The example assumes that IIS is running in Integrated mode and that the application is using the [!INCLUDE[net_v35SP1_short](../../../../../includes/net-v35sp1-short-md.md)] or a later version.</span></span> <span data-ttu-id="5029c-128">Este comportamiento no se produce en las versiones de la [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] anteriores a la [!INCLUDE[net_v35SP1_short](../../../../../includes/net-v35sp1-short-md.md)].</span><span class="sxs-lookup"><span data-stu-id="5029c-128">This behavior does not occur in versions of the [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] earlier than the [!INCLUDE[net_v35SP1_short](../../../../../includes/net-v35sp1-short-md.md)].</span></span> <span data-ttu-id="5029c-129">Los valores en el ejemplo son los valores predeterminados.</span><span class="sxs-lookup"><span data-stu-id="5029c-129">The values in the example are the default values.</span></span>  
+## <a name="example"></a><span data-ttu-id="8fd10-125">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="8fd10-125">Example</span></span>  
+ <span data-ttu-id="8fd10-126">En el ejemplo siguiente se muestra cómo configurar el comportamiento de todo el proceso ASP.NET en el archivo aspnet.config cuando ASP.NET se hospeda en un grupo de aplicaciones de IIS.</span><span class="sxs-lookup"><span data-stu-id="8fd10-126">The following example shows how to configure ASP.NET process-wide behavior in the aspnet.config file when ASP.NET is hosted in an IIS application pool.</span></span> <span data-ttu-id="8fd10-127">En el ejemplo se da por supuesto que está ejecutando IIS en integrado modo y que la aplicación está utilizando el [!INCLUDE[net_v35SP1_short](../../../../../includes/net-v35sp1-short-md.md)] o una versión posterior.</span><span class="sxs-lookup"><span data-stu-id="8fd10-127">The example assumes that IIS is running in Integrated mode and that the application is using the [!INCLUDE[net_v35SP1_short](../../../../../includes/net-v35sp1-short-md.md)] or a later version.</span></span> <span data-ttu-id="8fd10-128">Este comportamiento no se produce en las versiones de la [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] anteriores a la [!INCLUDE[net_v35SP1_short](../../../../../includes/net-v35sp1-short-md.md)].</span><span class="sxs-lookup"><span data-stu-id="8fd10-128">This behavior does not occur in versions of the [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] earlier than the [!INCLUDE[net_v35SP1_short](../../../../../includes/net-v35sp1-short-md.md)].</span></span> <span data-ttu-id="8fd10-129">Los valores en el ejemplo son los valores predeterminados.</span><span class="sxs-lookup"><span data-stu-id="8fd10-129">The values in the example are the default values.</span></span>  
   
 ```xml  
 <configuration>  
@@ -73,14 +74,14 @@ ms.lasthandoff: 10/18/2017
 </configuration>  
 ```  
   
-## <a name="element-information"></a><span data-ttu-id="5029c-130">Información de elemento</span><span class="sxs-lookup"><span data-stu-id="5029c-130">Element Information</span></span>  
+## <a name="element-information"></a><span data-ttu-id="8fd10-130">Información de elemento</span><span class="sxs-lookup"><span data-stu-id="8fd10-130">Element Information</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="5029c-131">Espacio de nombres</span><span class="sxs-lookup"><span data-stu-id="5029c-131">Namespace</span></span>||  
-|<span data-ttu-id="5029c-132">Nombre de esquema</span><span class="sxs-lookup"><span data-stu-id="5029c-132">Schema Name</span></span>||  
-|<span data-ttu-id="5029c-133">Archivo de validación</span><span class="sxs-lookup"><span data-stu-id="5029c-133">Validation File</span></span>||  
-|<span data-ttu-id="5029c-134">Puede estar vacío</span><span class="sxs-lookup"><span data-stu-id="5029c-134">Can be Empty</span></span>||  
+|<span data-ttu-id="8fd10-131">Espacio de nombres</span><span class="sxs-lookup"><span data-stu-id="8fd10-131">Namespace</span></span>||  
+|<span data-ttu-id="8fd10-132">Nombre de esquema</span><span class="sxs-lookup"><span data-stu-id="8fd10-132">Schema Name</span></span>||  
+|<span data-ttu-id="8fd10-133">Archivo de validación</span><span class="sxs-lookup"><span data-stu-id="8fd10-133">Validation File</span></span>||  
+|<span data-ttu-id="8fd10-134">Puede estar vacío</span><span class="sxs-lookup"><span data-stu-id="8fd10-134">Can be Empty</span></span>||  
   
-## <a name="see-also"></a><span data-ttu-id="5029c-135">Vea también</span><span class="sxs-lookup"><span data-stu-id="5029c-135">See Also</span></span>  
- [<span data-ttu-id="5029c-136">Elemento \<applicationPool> (configuración web)</span><span class="sxs-lookup"><span data-stu-id="5029c-136">\<applicationPool> Element (Web Settings)</span></span>](../../../../../docs/framework/configure-apps/file-schema/web/applicationpool-element-web-settings.md)
+## <a name="see-also"></a><span data-ttu-id="8fd10-135">Vea también</span><span class="sxs-lookup"><span data-stu-id="8fd10-135">See Also</span></span>  
+ [<span data-ttu-id="8fd10-136">Elemento \<applicationPool> (configuración web)</span><span class="sxs-lookup"><span data-stu-id="8fd10-136">\<applicationPool> Element (Web Settings)</span></span>](../../../../../docs/framework/configure-apps/file-schema/web/applicationpool-element-web-settings.md)

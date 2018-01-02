@@ -13,24 +13,25 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b36eb762de3864eb786d0b7157d316ab071dc2fa
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 702b5ea1331aa0ac284d62809367a90e200a8ba3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="ltxmlelementgt"></a><span data-ttu-id="8a9ea-102">&lt;xmlElement&gt;</span><span class="sxs-lookup"><span data-stu-id="8a9ea-102">&lt;xmlElement&gt;</span></span>
-<span data-ttu-id="8a9ea-103">Especifica un elemento XML que se envía en el cuerpo del mensaje al servicio de token de seguridad cuando se solicita un token.</span><span class="sxs-lookup"><span data-stu-id="8a9ea-103">Specifies an XML element that is sent in the message body to the Security Token Service when requesting a token.</span></span>  
+# <a name="ltxmlelementgt"></a><span data-ttu-id="4836a-102">&lt;xmlElement&gt;</span><span class="sxs-lookup"><span data-stu-id="4836a-102">&lt;xmlElement&gt;</span></span>
+<span data-ttu-id="4836a-103">Especifica un elemento XML que se envía en el cuerpo del mensaje al servicio de token de seguridad cuando se solicita un token.</span><span class="sxs-lookup"><span data-stu-id="4836a-103">Specifies an XML element that is sent in the message body to the Security Token Service when requesting a token.</span></span>  
   
- <span data-ttu-id="8a9ea-104">\<sistema. ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="8a9ea-104">\<system.ServiceModel></span></span>  
-<span data-ttu-id="8a9ea-105">\<enlaces ></span><span class="sxs-lookup"><span data-stu-id="8a9ea-105">\<bindings></span></span>  
-<span data-ttu-id="8a9ea-106">\<wsFederatedBinding ></span><span class="sxs-lookup"><span data-stu-id="8a9ea-106">\<wsFederatedBinding></span></span>  
-<span data-ttu-id="8a9ea-107">\<enlace ></span><span class="sxs-lookup"><span data-stu-id="8a9ea-107">\<binding></span></span>  
-<span data-ttu-id="8a9ea-108">\<seguridad ></span><span class="sxs-lookup"><span data-stu-id="8a9ea-108">\<security></span></span>  
-<span data-ttu-id="8a9ea-109">\<mensaje ></span><span class="sxs-lookup"><span data-stu-id="8a9ea-109">\<message></span></span>  
-<span data-ttu-id="8a9ea-110">\<tokenRequestParameters ></span><span class="sxs-lookup"><span data-stu-id="8a9ea-110">\<tokenRequestParameters></span></span>  
+ <span data-ttu-id="4836a-104">\<sistema. ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="4836a-104">\<system.ServiceModel></span></span>  
+<span data-ttu-id="4836a-105">\<enlaces ></span><span class="sxs-lookup"><span data-stu-id="4836a-105">\<bindings></span></span>  
+<span data-ttu-id="4836a-106">\<wsFederatedBinding ></span><span class="sxs-lookup"><span data-stu-id="4836a-106">\<wsFederatedBinding></span></span>  
+<span data-ttu-id="4836a-107">\<enlace ></span><span class="sxs-lookup"><span data-stu-id="4836a-107">\<binding></span></span>  
+<span data-ttu-id="4836a-108">\<seguridad ></span><span class="sxs-lookup"><span data-stu-id="4836a-108">\<security></span></span>  
+<span data-ttu-id="4836a-109">\<mensaje ></span><span class="sxs-lookup"><span data-stu-id="4836a-109">\<message></span></span>  
+<span data-ttu-id="4836a-110">\<tokenRequestParameters ></span><span class="sxs-lookup"><span data-stu-id="4836a-110">\<tokenRequestParameters></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="8a9ea-111">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="8a9ea-111">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="4836a-111">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="4836a-111">Syntax</span></span>  
   
 ```xml  
 <tokenRequestParameters>  
@@ -38,29 +39,29 @@ ms.lasthandoff: 12/02/2017
 </tokenRequestParameters>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="8a9ea-112">Atributos y elementos</span><span class="sxs-lookup"><span data-stu-id="8a9ea-112">Attributes and Elements</span></span>  
- <span data-ttu-id="8a9ea-113">En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.</span><span class="sxs-lookup"><span data-stu-id="8a9ea-113">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="4836a-112">Atributos y elementos</span><span class="sxs-lookup"><span data-stu-id="4836a-112">Attributes and Elements</span></span>  
+ <span data-ttu-id="4836a-113">En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.</span><span class="sxs-lookup"><span data-stu-id="4836a-113">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="8a9ea-114">Atributos</span><span class="sxs-lookup"><span data-stu-id="8a9ea-114">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="4836a-114">Atributos</span><span class="sxs-lookup"><span data-stu-id="4836a-114">Attributes</span></span>  
   
-|<span data-ttu-id="8a9ea-115">Atributo</span><span class="sxs-lookup"><span data-stu-id="8a9ea-115">Attribute</span></span>|<span data-ttu-id="8a9ea-116">Descripción</span><span class="sxs-lookup"><span data-stu-id="8a9ea-116">Description</span></span>|  
+|<span data-ttu-id="4836a-115">Atributo</span><span class="sxs-lookup"><span data-stu-id="4836a-115">Attribute</span></span>|<span data-ttu-id="4836a-116">Descripción</span><span class="sxs-lookup"><span data-stu-id="4836a-116">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="8a9ea-117">xmlElement</span><span class="sxs-lookup"><span data-stu-id="8a9ea-117">xmlElement</span></span>|<span data-ttu-id="8a9ea-118">Cadena que especifica un elemento XML que se envía en el cuerpo del mensaje al servicio de token de seguridad cuando se solicita un token.</span><span class="sxs-lookup"><span data-stu-id="8a9ea-118">A string specifying an XML element that is sent in the message body to the Security Token Service when requesting a token.</span></span>|  
+|<span data-ttu-id="4836a-117">xmlElement</span><span class="sxs-lookup"><span data-stu-id="4836a-117">xmlElement</span></span>|<span data-ttu-id="4836a-118">Cadena que especifica un elemento XML que se envía en el cuerpo del mensaje al servicio de token de seguridad cuando se solicita un token.</span><span class="sxs-lookup"><span data-stu-id="4836a-118">A string specifying an XML element that is sent in the message body to the Security Token Service when requesting a token.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="8a9ea-119">Elementos secundarios</span><span class="sxs-lookup"><span data-stu-id="8a9ea-119">Child Elements</span></span>  
- <span data-ttu-id="8a9ea-120">Ninguno.</span><span class="sxs-lookup"><span data-stu-id="8a9ea-120">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="4836a-119">Elementos secundarios</span><span class="sxs-lookup"><span data-stu-id="4836a-119">Child Elements</span></span>  
+ <span data-ttu-id="4836a-120">Ninguno.</span><span class="sxs-lookup"><span data-stu-id="4836a-120">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="8a9ea-121">Elementos primarios</span><span class="sxs-lookup"><span data-stu-id="8a9ea-121">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="4836a-121">Elementos primarios</span><span class="sxs-lookup"><span data-stu-id="4836a-121">Parent Elements</span></span>  
   
-|<span data-ttu-id="8a9ea-122">Elemento</span><span class="sxs-lookup"><span data-stu-id="8a9ea-122">Element</span></span>|<span data-ttu-id="8a9ea-123">Descripción</span><span class="sxs-lookup"><span data-stu-id="8a9ea-123">Description</span></span>|  
+|<span data-ttu-id="4836a-122">Elemento</span><span class="sxs-lookup"><span data-stu-id="4836a-122">Element</span></span>|<span data-ttu-id="4836a-123">Descripción</span><span class="sxs-lookup"><span data-stu-id="4836a-123">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="8a9ea-124">\<tokenRequestParameters ></span><span class="sxs-lookup"><span data-stu-id="8a9ea-124">\<tokenRequestParameters></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/tokenrequestparameters.md)|<span data-ttu-id="8a9ea-125">Una colección de parámetros de solicitud de token.</span><span class="sxs-lookup"><span data-stu-id="8a9ea-125">A collection of token request parameters.</span></span> <span data-ttu-id="8a9ea-126">Cada parámetro es un elemento XML.</span><span class="sxs-lookup"><span data-stu-id="8a9ea-126">Each parameter is an XML element.</span></span>|  
+|[<span data-ttu-id="4836a-124">\<tokenRequestParameters ></span><span class="sxs-lookup"><span data-stu-id="4836a-124">\<tokenRequestParameters></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/tokenrequestparameters.md)|<span data-ttu-id="4836a-125">Una colección de parámetros de solicitud de token.</span><span class="sxs-lookup"><span data-stu-id="4836a-125">A collection of token request parameters.</span></span> <span data-ttu-id="4836a-126">Cada parámetro es un elemento XML.</span><span class="sxs-lookup"><span data-stu-id="4836a-126">Each parameter is an XML element.</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="8a9ea-127">Vea también</span><span class="sxs-lookup"><span data-stu-id="8a9ea-127">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="4836a-127">Vea también</span><span class="sxs-lookup"><span data-stu-id="4836a-127">See Also</span></span>  
  <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.TokenRequestParameters%2A>  
  <xref:System.ServiceModel.Configuration.FederatedMessageSecurityOverHttpElement.TokenRequestParameters%2A>  
- [<span data-ttu-id="8a9ea-128">Autenticación e identidad de servicio</span><span class="sxs-lookup"><span data-stu-id="8a9ea-128">Service Identity and Authentication</span></span>](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
- [<span data-ttu-id="8a9ea-129">Federación y Tokens emitidos</span><span class="sxs-lookup"><span data-stu-id="8a9ea-129">Federation and Issued Tokens</span></span>](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)  
- [<span data-ttu-id="8a9ea-130">Capacidades de seguridad con enlaces personalizados</span><span class="sxs-lookup"><span data-stu-id="8a9ea-130">Security Capabilities with Custom Bindings</span></span>](../../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)  
- [<span data-ttu-id="8a9ea-131">Federación y Tokens emitidos</span><span class="sxs-lookup"><span data-stu-id="8a9ea-131">Federation and Issued Tokens</span></span>](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)  
- [<span data-ttu-id="8a9ea-132">Enlaces</span><span class="sxs-lookup"><span data-stu-id="8a9ea-132">Bindings</span></span>](../../../../../docs/framework/wcf/bindings.md)
+ [<span data-ttu-id="4836a-128">Identidad del servicio y autenticación</span><span class="sxs-lookup"><span data-stu-id="4836a-128">Service Identity and Authentication</span></span>](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
+ [<span data-ttu-id="4836a-129">Federación y tokens emitidos</span><span class="sxs-lookup"><span data-stu-id="4836a-129">Federation and Issued Tokens</span></span>](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)  
+ [<span data-ttu-id="4836a-130">Funcionalidades de seguridad con enlaces personalizados</span><span class="sxs-lookup"><span data-stu-id="4836a-130">Security Capabilities with Custom Bindings</span></span>](../../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)  
+ [<span data-ttu-id="4836a-131">Federación y tokens emitidos</span><span class="sxs-lookup"><span data-stu-id="4836a-131">Federation and Issued Tokens</span></span>](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)  
+ [<span data-ttu-id="4836a-132">Enlaces</span><span class="sxs-lookup"><span data-stu-id="4836a-132">Bindings</span></span>](../../../../../docs/framework/wcf/bindings.md)
