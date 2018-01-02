@@ -1,5 +1,4 @@
-### YamlMime:YamlDocument
-documentType: Tutorial
+### YamlMime:Tutorial
 title: "Números en C#"
 metadata:
   title: "Números en C#"
@@ -8,32 +7,142 @@ metadata:
   ms.custom: mvc
   level: Beginner
   nextTutorialHref: branches-and-loops
-  nextTutorialTitle: Bifurcaciones y bucles en C#
+  nextTutorialTitle: Branches and loops in C#
   displayType: two-column
   interactive: csharp
-  ms.openlocfilehash: bc859589078d1e2d16145125a80e738837c1ebf9
-  ms.sourcegitcommit: 401c4427a3ec0d1263543033b3084039278509dc
+  ms.openlocfilehash: 655cc4e4a8575ebd194911490dafd8e7da241c7b
+  ms.sourcegitcommit: 01ea3686e74ff05e4f6de3d8d46dc603d051ec00
   ms.translationtype: HT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 12/07/2017
+  ms.lasthandoff: 12/13/2017
 items:
 - durationInMinutes: 1
-  content: "En este inicio rápido se ofrece información sobre el uso de los tipos numéricos en C# de forma interactiva, con el uso del explorador para escribir código de C# y ver los resultados de la compilación y ejecución del código. Contiene una serie de lecciones que ofrecen información detallada sobre los números y las operaciones matemáticas en C#. En ellas se enseñan los aspectos básicos del lenguaje C#.\n"
+  content: >
+    This quick start teaches you about the number types in C# interactively, using your browser to write C# and see the results of compiling and running your code. It contains a series of lessons that explore numbers and math operations in C#. These lessons teach you the fundamentals of the C# language.
 - title: "Análisis de las operaciones matemáticas con enteros"
   durationInMinutes: 4
-  content: "Ejecute el código siguiente en la ventana interactiva. Para ello, escriba el siguiente bloque de código en la ventana interactiva y haga clic en el botón **Ejecutar**:\n\n```csharp\nint a = 18;\nint b = 6;\nint c = a + b;\nConsole.WriteLine(c);\n```\n\nYa ha visto una de las operaciones matemáticas fundamentales con enteros. El tipo `int` representa un **entero**, que puede ser un número entero positivo o negativo. Use el símbolo `+` para la suma. Otros operadores matemáticos comunes con enteros son:\n\n- `-` para resta\n- `*` para multiplicación\n- `/` para división\n\n> [!TIP]\n> En este inicio rápido puede indagar por su cuenta con la modificación del código que ha escrito en la ventana interactiva. En este inicio rápido se proporcionan ejemplos que puede probar en cada paso.\n\nComience por explorar esas operaciones diferentes. Modifique la tercera línea para probar cada una de estas operaciones. Después de cada modificación, haga clic en el botón **Ejecutar**.\n\nResta:\n\n```csharp\nint c = a - b;\n```\n\nMultiplicación:\n\n```csharp\nint c = a * b;\n```\n\nDivisión: \n\n```csharp\nint c = a / b;\n```\n\nSi lo desea, también puede experimentar con la realización de varias operaciones matemáticas en la misma línea.\n\n> [!TIP]\n> Cuando explore C# o cualquier otro lenguaje de programación, cometerá errores al escribir código. El **compilador** buscará dichos errores y los notificará. Si la salida contiene mensajes de error, revise detenidamente el ejemplo de código y el código de la ventana interactiva para saber qué debe corregir.\n> Este ejercicio le ayudará a aprender la estructura del código de C#.     \n\n> [!NOTE]\n> Esta experiencia de codificación en línea se encuentra disponible actualmente en versión preliminar. Si tiene problemas, notifíquelos [en el repositorio de dotnet/try](https://github.com/dotnet/try/issues).\n"
+  content: "Run the following code in the interactive window. To do that, type the following code block in the interactive window and click the **Run** button:\n\n```csharp\nint a = 18;\nint b = 6;\nint c = a + b;\nConsole.WriteLine(c);\n```\n\nYou've just seen one of the fundamental math operations with integers. The `int` type represents an **integer**, a positive or negative whole number. You use the `+` symbol for addition. Other common mathematical operations for integers include:\n\n- `-` for subtraction\n- `*` for multiplication\n- `/` for division\n\n> [!TIP]\n> Throughout this quick start, you can explore on your own by modifying the code you've written in the interactive window. This quick start provides examples that you can try at each step.\n\nStart by exploring those different operations. Modify the third line to try each of these operations. After each edit, click the **Run** button.\n\nSubtraction:\n\n```csharp\nint c = a - b;\n```\n\nMultiplication:\n\n```csharp\nint c = a * b;\n```\n\nDivision: \n\n```csharp\nint c = a / b;\n```\n\nYou can also experiment by performing multiple mathematics operations in the same line, if you'd like.\n\n> [!TIP]\n> As you explore C# (or any programming language), you'll\n> make mistakes when you write code. The **compiler** will\n> find those errors and report them to you. When the output\n> contains error messages, look closely at the example code,\n> and the code in the interactive window to see what to fix.\n> That exercise will help you learn the structure of C# code.     \n\n> [!NOTE]\n> This online coding experience is in preview mode. If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).\n"
 - title: "Análisis sobre el orden de las operaciones"
   durationInMinutes: 7
-  content: "El lenguaje C# define la prioridad de las diferentes operaciones matemáticas con reglas compatibles con las reglas aprendidas en las operaciones matemáticas.\nLa multiplicación y división tienen prioridad sobre la suma y resta.\nIndague sobre ello con la ejecución del código siguiente en la ventana interactiva:\n\n```csharp\nint a = 5;\nint b = 4;\nint c = 2;\nint d = a + b * c;\nConsole.WriteLine(d);\n```\n\nLa salida muestra que la multiplicación se realiza antes que la suma.\n\nPuede forzar la ejecución de un orden diferente de las operaciones si la operación o las operaciones que realizó primero se incluyen entre paréntesis:\n\n```csharp\nint a = 5;\nint b = 4;\nint c = 2;\nint d = (a  + b) * c;\nConsole.WriteLine(d);\n```\n\nCombine muchas operaciones distintas para indagar más. Reemplace la cuarta línea anterior con algo parecido a esto:\n\n```csharp\nint d = (a + b) - 6 * c + (12 * 4) / 3 + 12;\n```\n\nPuede que haya observado un comportamiento interesante de los enteros. La división de enteros siempre genera un entero como resultado, incluso cuando se espera que el resultado incluya un decimal o una parte de una fracción.\n\nSi no ha observado este comportamiento, pruebe lo siguiente:\n\n```csharp\nint a = 7;\nint b = 4;\nint c = 3;\nint d = (a  + b) / c;\nConsole.WriteLine(d);\n```\n\nVuelva a hacer clic en **Ejecutar** para ver los resultados.\n\n> [!NOTE]\n> Esta experiencia de codificación en línea se encuentra disponible actualmente en versión preliminar. Si tiene problemas, notifíquelos [en el repositorio de dotnet/try](https://github.com/dotnet/try/issues).\n"
+  content: >
+    The C# language defines the precedence of different mathematics operations
+
+    with rules consistent with the rules you learned in mathematics.
+
+    Multiplication and division take precedence over addition and subtraction.
+
+    Explore that by running the following code in the interactive window:
+
+
+    ```csharp
+
+    int a = 5;
+
+    int b = 4;
+
+    int c = 2;
+
+    int d = a + b * c;
+
+    Console.WriteLine(d);
+
+    ```
+
+
+    The output demonstrates that the multiplication is performed before the addition.
+
+
+    You can force a different order of operation by adding parentheses around
+
+    the operation or operations you want performed first:
+
+
+    ```csharp
+
+    int a = 5;
+
+    int b = 4;
+
+    int c = 2;
+
+    int d = (a  + b) * c;
+
+    Console.WriteLine(d);
+
+    ```
+
+
+    Explore more by combining many different operations. Replace the fourth line above with something like this:
+
+
+    ```csharp
+
+    int d = (a + b) - 6 * c + (12 * 4) / 3 + 12;
+
+    ```
+
+
+    You may have noticed an interesting behavior for integers. Integer
+
+    division always produces an integer result, even when you'd expect
+
+    the result to include a decimal or fractional portion.
+
+
+    If you haven't seen this behavior, try the following:
+
+
+    ```csharp
+
+    int a = 7;
+
+    int b = 4;
+
+    int c = 3;
+
+    int d = (a  + b) / c;
+
+    Console.WriteLine(d);
+
+    ```
+
+
+    Click **Run** again to see the results.
+
+
+    > [!NOTE]
+
+    > This online coding experience is in preview mode. If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).
 - title: "Información sobre los límites y la precisión de los enteros"
   durationInMinutes: 5
-  content: "En el último ejemplo se ha mostrado que la división de enteros trunca el resultado.\nPuede obtener el **resto** con el operador de **módulo**, el carácter `%`:\n\n```csharp\nint a = 7;\nint b = 4;\nint c = 3;\nint d = (a  + b) / c;\nint e = (a + b) % c;\nConsole.WriteLine($\"quotient: {d}\");\nConsole.WriteLine($\"remainder: {e}\");\n```\n\nEl tipo de entero de C# difiere de los enteros matemáticos en un aspecto: el tipo `int` tiene límites mínimo y máximo. Ejecute este código en la ventana interactiva para ver esos límites:\n\n```csharp\nint max = int.MaxValue;\nint min = int.MinValue;\nConsole.WriteLine($\"The range of integers is {min} to {max}\");\n```\n\nSi un cálculo genera un valor que supera los límites, se producirá una condición de **subdesbordamiento** o **desbordamiento**. La respuesta parece ajustarse de un límite al otro. Agregue estas dos líneas en la ventana interactiva para ver un ejemplo:\n\n```csharp\nint what = max + 3;\nConsole.WriteLine($\"An example of overflow: {what}\");\n```\n\nTenga en cuenta que la respuesta está muy próxima al entero mínimo (negativo). Es lo mismo que `min + 2`. La operación de suma **desbordó** los valores permitidos para los enteros.\nLa respuesta es un número negativo muy grande porque un desbordamiento \"se ajusta\" desde el valor de entero más alto posible al más bajo.\n\nHay otros tipos numéricos con distintos límites y precisiones que podría usar si el tipo `int` no satisface sus necesidades. Veámoslo a continuación.\n\n> [!NOTE]\n> Esta experiencia de codificación en línea se encuentra disponible actualmente en versión preliminar. Si tiene problemas, notifíquelos [en el repositorio de dotnet/try](https://github.com/dotnet/try/issues).\n"
+  content: "That last sample showed you that integer division truncates the result.\nYou can get the **remainder** by using the **modulo** operator, the `%` character:\n\n```csharp\nint a = 7;\nint b = 4;\nint c = 3;\nint d = (a  + b) / c;\nint e = (a + b) % c;\nConsole.WriteLine($\"quotient: {d}\");\nConsole.WriteLine($\"remainder: {e}\");\n```\n\nThe C# integer type differs from mathematical integers in one other\nway: the `int` type has minimum and maximum limits. Run this code\nin the interactive window to see those limits:\n\n```csharp\nint max = int.MaxValue;\nint min = int.MinValue;\nConsole.WriteLine($\"The range of integers is {min} to {max}\");\n```\n\nIf a calculation produces a value that exceeds those limits, you\nhave an **underflow** or **overflow** condition. The answer appears\nto wrap from one limit to the other. Add these two lines to the interactive\nwindow to see an example:\n\n```csharp\nint what = max + 3;\nConsole.WriteLine($\"An example of overflow: {what}\");\n```\n\nNotice that the answer is very close to the minimum (negative) integer. It's\nthe same as `min + 2`. \nThe addition operation **overflowed** the allowed values for integers.\nThe answer is a very large negative number because an overflow \"wraps around\"\nfrom the largest possible integer value to the smallest.\n\nThere are other numeric types with different limits and precision that you\nwould use when the `int` type doesn't meet your needs. Let's explore those next.\n\n> [!NOTE]\n> This online coding experience is in preview mode. If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).\n"
 - title: Operaciones con el tipo double
   durationInMinutes: 5
-  content: "El tipo numérico `double` representa números de punto flotante de doble precisión. Puede que no esté familiarizado con estos términos. Un número de **punto flotante** resulta útil para representar números no enteros cuya magnitud puede ser muy grande o pequeña. **Doble precisión** significa que estos números se almacenan con mayor precisión que en el caso de la **precisión sencilla**. En los equipos modernos, es más habitual utilizar números con doble precisión que con precisión sencilla.\nComencemos a explorar. Pruebe el código siguiente en la ventana interactiva y observe el resultado:\n\n```csharp\ndouble a = 5;\ndouble b = 4;\ndouble c = 2;\ndouble d = (a  + b) / c;\nConsole.WriteLine(d);\n```\n\nTenga en cuenta que la respuesta incluye la parte decimal del cociente. Pruebe una expresión algo más complicada con tipos double:\n\n```csharp\ndouble a = 19;\ndouble b = 23;\ndouble c = 8;\ndouble d = (a  + b) / c;\nConsole.WriteLine(d);\n```\n\nEl intervalo de un valor double es mucho más amplio que en el caso de los valores enteros. Pruebe el código siguiente en la ventana interactiva:\n\n```csharp\ndouble max = double.MaxValue;\ndouble min = double.MinValue;\nConsole.WriteLine($\"The range of double is {min} to {max}\");\n```\n\nEstos valores se imprimen en notación científica. El número a la izquierda de `E` es la mantisa. El número a la derecha es el exponente, como una potencia de diez. \n\nAl igual que sucede con los números decimales en las operaciones matemáticas, los tipos double en C# pueden presentar errores de redondeo. Pruebe este código:\n\n```csharp\ndouble third = 1.0 / 3.0;\nConsole.WriteLine(third);\n```\n\nSabe que repetir `0.3` no es exactamente lo mismo que `1/3`.\n\n***Desafío***\n\nPruebe otros cálculos con números grandes, números pequeños, multiplicaciones y divisiones con el tipo `double`.  Intente realizar cálculos más complicados.\n\n> [!NOTE]\n> Esta experiencia de codificación en línea se encuentra disponible actualmente en versión preliminar. Si tiene problemas, notifíquelos [en el repositorio de dotnet/try](https://github.com/dotnet/try/issues).\n"
+  content: "The `double` numeric type represents a double-precision floating point\nnumber. Those terms may be new to you. A **floating point** number is\nuseful to represent non-integral numbers that may be very large or small\nin magnitude. **Double-precision** means that these numbers are stored\nusing greater precision than **single-precision**. On modern computers,\nit is more common to use double precision than single precision numbers.\nLet's explore. Try the following code in the interactive window and see the result:\n\n```csharp\ndouble a = 5;\ndouble b = 4;\ndouble c = 2;\ndouble d = (a  + b) / c;\nConsole.WriteLine(d);\n```\n\nNotice that the answer includes the decimal portion of the quotient. Try a slightly\nmore complicated expression with doubles:\n\n```csharp\ndouble a = 19;\ndouble b = 23;\ndouble c = 8;\ndouble d = (a  + b) / c;\nConsole.WriteLine(d);\n```\n\nThe range of a double value is much greater than integer values. Try the following\ncode in the interactive window:\n\n```csharp\ndouble max = double.MaxValue;\ndouble min = double.MinValue;\nConsole.WriteLine($\"The range of double is {min} to {max}\");\n```\n\nThese values are printed out in scientific notation. The number to\nthe left of the `E` is the significand. The number to the right is the exponent,\nas a power of 10. \n\nJust like decimal numbers in math, doubles in C# can have rounding errors. Try this code:\n\n```csharp\ndouble third = 1.0 / 3.0;\nConsole.WriteLine(third);\n```\n\nYou know that `0.3` repeating is not exactly the same as `1/3`.\n\n***Challenge***\n\nTry other calculations with large numbers, small numbers, multiplication\nand division using the `double` type.  Try more complicated calculations.\n\n> [!NOTE]\n> This online coding experience is in preview mode. If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).\n"
 - title: Operaciones con tipos de punto fijo
   durationInMinutes: 8
-  content: "Hasta el momento ha visto los tipos numéricos básicos en C#: los tipos integer y double.  Sin embargo, hay otro tipo más que debe aprender: el tipo `decimal`. El tipo `decimal` tiene un intervalo más pequeño, pero mayor precisión que `double`. El término **punto fijo** significa que el punto decimal o el punto binario no se mueven. Observemos lo siguiente:\n\n```csharp\ndecimal min = decimal.MinValue;\ndecimal max = decimal.MaxValue;\nConsole.WriteLine($\"The range of the decimal type is {min} to {max}\");\n```\n\nTenga en cuenta que el intervalo es más pequeño que con el tipo `double`. Puede observar una precisión mayor con el tipo decimal si prueba el siguiente código:\n\n```csharp\ndouble a = 1.0;\ndouble b = 3.0;\nConsole.WriteLine(a / b);\n\ndecimal c = 1.0M;\ndecimal d = 3.0M;\nConsole.WriteLine(c / d);\n```\n\nEl sufijo `M` en los números es la forma de indicar que una constante debe usar el tipo `decimal`.\n\nObserve que la expresión matemática con el tipo decimal tiene más dígitos a la derecha del punto decimal. \n\n***Desafío***\n\nAhora que ya conoce los diferentes tipos numéricos, escriba código para calcular el área de un círculo cuyo radio sea de 6,35 cm. Recuerde que el área de un circulo es igual al valor de su radio elevado al cuadrado multiplicado por Pi. Sugerencia: C# contiene una constante de Pi, <xref:System.Math.PI?displayProperty=nameWithType>, que puede usar para ese valor. \n\n> [!NOTE]\n> Esta experiencia de codificación en línea se encuentra disponible actualmente en versión preliminar. Si tiene problemas, notifíquelos [en el repositorio de dotnet/try](https://github.com/dotnet/try/issues).\n"
+  content: "You've seen the basic numeric types in C#: integers and doubles.  There is one\nother type to learn: the `decimal` type. The `decimal` type has a smaller\nrange but greater precision than `double`. The term **fixed point** means\nthat the decimal point (or binary point) doesn't move. Let's take a look:\n\n```csharp\ndecimal min = decimal.MinValue;\ndecimal max = decimal.MaxValue;\nConsole.WriteLine($\"The range of the decimal type is {min} to {max}\");\n```\n\nNotice that the range is smaller than the `double` type. You can see the greater\nprecision with the decimal type by trying the following code:\n\n```csharp\ndouble a = 1.0;\ndouble b = 3.0;\nConsole.WriteLine(a / b);\n\ndecimal c = 1.0M;\ndecimal d = 3.0M;\nConsole.WriteLine(c / d);\n```\n\nThe `M` suffix on the numbers is how you indicate that a constant should use the\n`decimal` type.\n\nNotice that the math using the decimal type has more digits to the right\nof the decimal point. \n\n***Challenge***\n\nNow that you've seen the different numeric types, write code that calculates\nthe area of a circle whose radius is 2.50 inches. Remember that the area of a circle\nis the radius squared multiplied by PI. One hint: .NET contains a constant\nfor PI, <xref:System.Math.PI?displayProperty=nameWithType> that you can use for that value. \n\n> [!NOTE]\n> This online coding experience is in preview mode. If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).\n\nYou should get an answer between 19 and 20.\n"
 - title: "Desafío completo"
   durationInMinutes: 1
-  content: "Ha completado el inicio rápido \"Números en C#\". \n\nPuede seguir estas guías de inicio rápido en su propio entorno de desarrollo. El tema de .NET [Iniciar en 10 minutos](https://www.microsoft.com/net/core) cuenta con instrucciones para configurar el entorno de desarrollo local. Una vez hecho esto, continúe con [Bifurcaciones y bucles](branches-and-loops-local.md) en su entorno local.\n\nPuede obtener más información sobre los números en C# en los temas siguientes:\n\n[Tabla de tipos enteros](../language-reference/keywords/integral-types-table.md)   \n[Tabla de tipos de punto flotante](../language-reference/keywords/floating-point-types-table.md)   \n[Tabla de tipos integrados](../language-reference/keywords/built-in-types-table.md)   \n[Tabla de conversiones numéricas implícitas](../language-reference/keywords/implicit-numeric-conversions-table.md)   \n[Tabla de conversiones numéricas explícitas](../language-reference/keywords/explicit-numeric-conversions-table.md)\0"
+  content: >
+    Did you come up with something like this?
+
+
+    ```csharp
+
+    double radius = 2.50;
+
+    double area = Math.PI * radius * radius;
+
+    Console.WriteLine(area);
+
+    ```
+
+
+    Try some other formulas if you'd like.
+
+
+    > [!NOTE]
+
+    > This online coding experience is in preview mode. If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).
+- content: "You've completed the \"Numbers in C#\" quick start. \n\nYou can continue these quick starts on your own development environment. Learn the basics of [local development](local-environment.md) and then pick a quick start. You can try this same exercise, move directly to the next quick start, or start again at with the [numbers in C#](numbers-in-csharp-local.md) quickstart.\n\nYou can learn more about numbers in C# in the following topics:\n\n[Integral Types Table](../language-reference/keywords/integral-types-table.md)   \n[Floating-Point Types Table](../language-reference/keywords/floating-point-types-table.md)   \n[Built-In Types Table](../language-reference/keywords/built-in-types-table.md)   \n[Implicit Numeric Conversions Table](../language-reference/keywords/implicit-numeric-conversions-table.md)   \n[Explicit Numeric Conversions Table](../language-reference/keywords/explicit-numeric-conversions-table.md)\0"

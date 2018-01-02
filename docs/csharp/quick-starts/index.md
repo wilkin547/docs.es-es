@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: af7b04969519cce49e9d753993245e1347f596d4
-ms.sourcegitcommit: 43c656811dd38a66a6672084c65d10c0cbbf2015
+ms.openlocfilehash: 4443609c9494ca93cbc5934dd62fedf434599962
+ms.sourcegitcommit: 9bee08539b1886c9d57fa3d5bd8a58dfdd7cad94
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="c-quick-starts"></a>Inicios rápidos de C# #
 
@@ -30,19 +30,19 @@ En la guía de inicio rápido [Hola mundo](hello-world.yml), creará el programa
 
 ## <a name="numbers-in-cnumbers-in-csharpyml"></a>[Números en C#](numbers-in-csharp.yml)
 
-En la guía de inicio rápido [Números en C#](numbers-in-csharp.yml), obtendrá información sobre cómo los equipos almacenan números y la forma de realizar cálculos con distintos tipos de números. Conocerá los datos básicos sobre cómo realizar redondeos y cálculos matemáticos con C#. Esta guía de inicio rápido también se encuentra disponible [para ejecutarse localmente en su equipo](numbers-in-csharp-local.md).
+En la guía de inicio rápido [Números en C#](numbers-in-csharp.yml), obtendrá información sobre cómo los equipos almacenan números y la forma de realizar cálculos con distintos tipos numéricos. Conocerá los datos básicos sobre cómo realizar redondeos y cálculos matemáticos con C#. Este inicio rápido también está disponible [para ejecutarse localmente en su equipo](numbers-in-csharp-local.md).
 
 En esta guía de inicio rápido se asume que ha completado el tutorial [Hola mundo](hello-world.yml).
 
 ## <a name="branches-and-loopsbranches-and-loopsyml"></a>[Bifurcaciones y bucles](branches-and-loops.yml)
 
-En la guía de inicio rápido [Bifurcaciones y bucles](branches-and-loops.yml) se explican los datos básicos sobre la selección de diferentes rutas de acceso del código en función de los valores almacenados en variables. Aprenderá los datos básicos del flujo de control, es decir, cómo los programas toman decisiones y eligen distintas acciones. Este inicio rápido también está disponible [para ejecutarse localmente en su equipo](branches-and-loops-local.md).
+En la guía de inicio rápido [Bifurcaciones y bucles](branches-and-loops.yml) se explican los datos básicos sobre la selección de diferentes rutas de acceso de la ejecución del código en función de los valores almacenados en variables. Aprenderá los datos básicos del flujo de control, es decir, cómo los programas toman decisiones y eligen distintas acciones. Este inicio rápido también está disponible [para ejecutarse localmente en su equipo](branches-and-loops-local.md).
 
 En esta lección para principiantes se supone que ha completado las lecciones [Hola mundo](hello-world.yml) y [Números en C#](numbers-in-csharp.yml).
 
 ## <a name="list-collectionlist-collectionyml"></a>[Colección de listas](list-collection.yml)
 
-En la lección [Colección de listas](list-collection.yml) se ofrece información general sobre el tipo de colección de listas que almacena secuencias de datos. Se explica cómo agregar y eliminar elementos, buscarlos y quitarlos y ordenar las listas. Explorará los diferentes tipos de listas. Este inicio rápido también está disponible [para ejecutarse localmente en su equipo](arrays-and-collections.md).
+En la lección [Colección de listas](list-collection.yml) se ofrece información general sobre el tipo de colección de listas que almacena secuencias de datos. Se explica cómo agregar y quitar elementos, buscarlos y ordenar las listas. Explorará los diferentes tipos de listas. Este inicio rápido también está disponible [para ejecutarse localmente en su equipo](arrays-and-collections.md).
 
 En esta guía de inicio rápido para principiantes se asume que ha completado los inicios rápidos anteriores.
 
