@@ -18,11 +18,12 @@ caps.latest.revision: "13"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: fd8e7d18ca72cbeb558876eefcde17ebdc6c095f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 490e58d4514667c5ec781dd76644012b0c97509d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltaddgt-element-for-ltsharedlistenersgt"></a>&lt;agregar&gt; (elemento) para &lt;sharedListeners&gt;
 Agrega un agente de escucha a la colección `sharedListeners`. `sharedListeners`es una colección de agentes de escucha que cualquier [ \<origen >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md) o [ \<seguimiento >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/trace-element.md) pueden hacer referencia.  De forma predeterminada, los agentes de escucha en el `sharedListeners` colección no se colocan en un `Listeners` colección. Deben agregarse por el nombre a la [ \<origen >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md) o [ \<seguimiento >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/trace-element.md). No es posible obtener los agentes de escucha el `sharedListeners` colección en el código en tiempo de ejecución.  

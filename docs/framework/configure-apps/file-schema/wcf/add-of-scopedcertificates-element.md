@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4ce1a24cb9a41e5b0ef090cd898c44b481b3bbd4
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: eff535f7eb779a69c2368f3ad815f1eb124946ff
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltaddgt-of-ltscopedcertificatesgt-element"></a>&lt;add&gt; de &lt;scopedCertificates&gt; (elemento)
 Agrega un certificado X.509 a la colección de certificados con ámbito.  
@@ -124,7 +125,7 @@ sección endpointBehaviors
  <xref:System.ServiceModel.Configuration.X509ScopedServiceCertificateElement>  
  <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential>  
  <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.ScopedCertificates%2A>  
- [Cómo: crear un cliente federado](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)  
- [Trabajar con certificados](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
+ [Creación de un cliente federado](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)  
+ [Trabajo con certificados](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
  [Protección de clientes](../../../../../docs/framework/wcf/securing-clients.md)  
  [Protección de servicios y clientes](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

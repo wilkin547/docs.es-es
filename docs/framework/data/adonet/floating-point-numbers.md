@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: c3e8ac8b5a97c62bb173fba57ac8aeb26a1dad42
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f041fc4e42d2b1e18ef701cd80396e92e571bff0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="floating-point-numbers"></a>Números de punto flotante
 En este tema se describen algunos de los problemas que con frecuencia se encuentran los programadores al trabajar con números de punto flotante en [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]. Estos problemas se deben a la forma que los equipos almacenan los números de punto flotante y no son específicos de un proveedor determinado como <xref:System.Data.SqlClient> o <xref:System.Data.OracleClient>.  

@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 165bf4cd1c0c5c1a6adae91650d38984bc47ef6e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 1996a33666ac6b92f1b7bca8c2e2e0ef51456dea
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltbytestreammessageencodinggt"></a>&lt;byteStreamMessageEncoding&gt;
 Especifica la codificación de mensajes como un flujo de bytes, con la opción especificar la codificación de caracteres.  
@@ -61,7 +62,7 @@ Especifica la codificación de mensajes como un flujo de bytes, con la opción e
  <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>  
  <xref:System.ServiceModel.Channels.ByteStreamMessageEncodingBindingElement>  
  [Codificación de mensajes](../../../../../docs/framework/configure-apps/file-schema/wcf/message-encoding.md)  
- [Elegir un codificador de mensajes](../../../../../docs/framework/wcf/feature-details/choosing-a-message-encoder.md)  
+ [Elección de un codificador de mensajes](../../../../../docs/framework/wcf/feature-details/choosing-a-message-encoder.md)  
  [Enlaces](../../../../../docs/framework/wcf/bindings.md)  
  [Extensión de enlaces](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
  [Enlaces personalizados](../../../../../docs/framework/wcf/extending/custom-bindings.md)  

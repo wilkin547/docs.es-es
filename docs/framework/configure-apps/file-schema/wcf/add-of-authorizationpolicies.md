@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7a039500281f02aa6ae891065255174c2353ba33
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 72af0529cea2e6810bdb7a518874a313e3ceab40
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltaddgt-of-ltauthorizationpoliciesgt"></a>&lt;add&gt; de &lt;authorizationPolicies&gt;
 Especifica una directiva de autorización para la transformación de notificaciones.  
@@ -69,7 +70,7 @@ Especifica una directiva de autorización para la transformación de notificacio
  <xref:System.ServiceModel.Configuration.ServiceAuthorizationElement.AuthorizationPolicies%2A>  
  <xref:System.ServiceModel.Configuration.AuthorizationPolicyTypeElementCollection>  
  <xref:System.IdentityModel.Policy.IAuthorizationPolicy>  
- [Autorizar el acceso a las operaciones de servicio](../../../../../docs/framework/wcf/samples/authorizing-access-to-service-operations.md)  
- [Cómo: crear un administrador de autorización personalizado para un servicio](../../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)  
+ [Autorización de acceso a operaciones de servicio](../../../../../docs/framework/wcf/samples/authorizing-access-to-service-operations.md)  
+ [Creación de un administrador de autorización personalizado para un servicio](../../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)  
  [\<add>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-authorizationpolicies.md)  
  [Directiva de autorización](../../../../../docs/framework/wcf/samples/authorization-policy.md)

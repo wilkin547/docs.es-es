@@ -18,11 +18,12 @@ caps.latest.revision: "3"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: d93a18b17e0d6b8e413903fb84dc6b427d94f6af
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 3581c8079132de5f1faad4a01e6b43c8e4833316
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="application-settings-schema"></a>Esquema de la configuración de aplicación
 
@@ -53,8 +54,8 @@ Este elemento define un valor. Tiene los siguientes atributos.
 
 | Atributo        | Descripción |
 | ---------------- | ----------- |
-| **name**         | Obligatorio. El identificador único de la configuración. La configuración creada con Visual Studio se guarda con el nombre `ProjectName.Properties.Settings`. |
-| **serializedAs** | Obligatorio. Formato que se va a usar para serializar el valor en texto. Los valores válidos son:<br><br>- `string`. El valor se serializa como una cadena con un <xref:System.ComponentModel.TypeConverter>.<br>- `xml`. El valor se serializa utilizando la serialización XML.<br>- `binary`. El valor se serializa como binario codificado en texto utilizando la serialización binaria.<br />- `custom`. El proveedor de configuración tiene un conocimiento inherente de esta configuración y serializa y deserializa lo. |
+| **name**         | Requerido. El identificador único de la configuración. La configuración creada con Visual Studio se guarda con el nombre `ProjectName.Properties.Settings`. |
+| **serializedAs** | Requerido. Formato que se va a usar para serializar el valor en texto. Los valores válidos son:<br><br>- `string`. El valor se serializa como una cadena con un <xref:System.ComponentModel.TypeConverter>.<br>- `xml`. El valor se serializa utilizando la serialización XML.<br>- `binary`. El valor se serializa como binario codificado en texto utilizando la serialización binaria.<br />- `custom`. El proveedor de configuración tiene un conocimiento inherente de esta configuración y serializa y deserializa lo. |
 
 ## <a name="value-element"></a>\<valor > elemento
 

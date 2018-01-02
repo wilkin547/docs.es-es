@@ -13,11 +13,12 @@ caps.latest.revision: "9"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: a71b28a1653b72d212455e99f8aa0101bb74e7a0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: fcd149b34282ef6ae21593e4549478bab91e0189
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="data-tracing-in-adonet"></a>Traza de datos en ADO.NET
 ADO.NET 2.0 ofrece nueva funcionalidad integrada de seguimiento de datos compatible con los proveedores de datos de .NET para [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)], Oracle, OLE DB y ODBC, así como <xref:System.Data.DataSet> de ADO.NET y los protocolos de red de [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)].  

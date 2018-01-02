@@ -13,11 +13,12 @@ caps.latest.revision: "2"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 255cd8518bd9c6c6c199c75aa32ca086c801d23f
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 6a254b8a4de8f66cb0d051d246be2d07e905615a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltaddgt-of-ltprotocolmappinggt"></a>&lt;add&gt; de &lt;protocolMapping&gt;
 Representa una asignación de protocolo predeterminado entre un esquema de protocolo de transporte (por ejemplo, http, net.tcp, net.pipe, etc.) y un [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] enlace. Al crear extremos predeterminados en tiempo de ejecución, [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] observa las asignaciones configuradas y decide qué enlace usar para una dirección base determinada.  

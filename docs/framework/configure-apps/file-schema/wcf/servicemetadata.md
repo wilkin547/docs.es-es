@@ -13,11 +13,12 @@ caps.latest.revision: "28"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f4e88c6e5f03cef83e640fbca7434d10f82653f1
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 26dd46cc8915dffdafe211a33ea80e8e46d5acf5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltservicemetadatagt"></a>&lt;serviceMetadata&gt;
 Especifica la publicación de metadatos e información asociada del servicio.  
@@ -134,4 +135,4 @@ Especifica la publicación de metadatos e información asociada del servicio.
  <xref:System.ServiceModel.Configuration.ServiceMetadataPublishingElement>  
  <xref:System.ServiceModel.Description.ServiceMetadataBehavior>  
  [Comportamientos de seguridad](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)  
- [Metadatos que publican el comportamiento](../../../../../docs/framework/wcf/samples/metadata-publishing-behavior.md)
+ [Comportamiento de publicación de metadatos](../../../../../docs/framework/wcf/samples/metadata-publishing-behavior.md)

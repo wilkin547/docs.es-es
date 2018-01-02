@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 906a9e7cafca14dc4ee13dcb9eb9e59736464fd9
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: c5d526ccd48ea5e822d5d29fb38dacd895c2556c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltchunkedcookiehandlergt"></a>&lt;chunkedCookieHandler&gt;
 Configura el <xref:System.IdentityModel.Services.ChunkedCookieHandler>. Este elemento sólo puede estar presente si el `mode` atributo de la `<cookieHandler>` elemento es "Default" o "Fragmentada".  
@@ -47,7 +48,7 @@ Configura el <xref:System.IdentityModel.Services.ChunkedCookieHandler>. Este ele
   
 |Atributo|Descripción|  
 |---------------|-----------------|  
-|chunkSize|El tamaño máximo, en caracteres, de los datos de cookies HTTP para una cookie HTTP. Debe tener cuidado al ajustar el tamaño del fragmento. Los exploradores Web tienen distintos límites en el tamaño de las cookies y el número permitido para cada dominio. Por ejemplo, la especificación Netscape original estipulada estos límites: total de 300 cookies, 4096 bytes por encabezado cookie HTTP (incluidos los metadatos, no solo el valor de la cookie) y 20 cookies por dominio. El valor predeterminado es 2000. Obligatorio.|  
+|chunkSize|El tamaño máximo, en caracteres, de los datos de cookies HTTP para una cookie HTTP. Debe tener cuidado al ajustar el tamaño del fragmento. Los exploradores Web tienen distintos límites en el tamaño de las cookies y el número permitido para cada dominio. Por ejemplo, la especificación Netscape original estipulada estos límites: total de 300 cookies, 4096 bytes por encabezado cookie HTTP (incluidos los metadatos, no solo el valor de la cookie) y 20 cookies por dominio. El valor predeterminado es 2000. Requerido.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
  Ninguna  

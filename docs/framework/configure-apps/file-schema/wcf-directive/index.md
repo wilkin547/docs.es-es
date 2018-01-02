@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f91e4ac7b74b0ee3ab92e8ae59fe0f20e8f66287
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 34ea3b412af75f136255c7e95cc4f321bafe075b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wcf-directive-syntax"></a>Sintaxis de directivas WCF
 Especifica valores usados por las directivas [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] en los archivos .svc para dirigir los compiladores. Cada directiva puede contener uno o varios atributos (emparejados con valores), que son específicos de esa directiva. [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] solo tiene la directiva [@ServiceHost](../../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md).  

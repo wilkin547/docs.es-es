@@ -16,11 +16,12 @@ caps.latest.revision: "7"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 261962819e9b2b37682a13bffb53d2912a660566
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: bae98c91c8a9b68ec7c21b142bc9f004c7bc1394
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltshadowcopyverifybytimestampgt-element"></a>&lt;shadowCopyVerifyByTimestamp&gt; elemento
 Especifica si la creación de instantáneas usa el comportamiento de inicio predeterminado especificado en [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] o se revierte el comportamiento de inicio de versiones anteriores de .NET Framework.  
@@ -49,7 +50,7 @@ Especifica si la creación de instantáneas usa el comportamiento de inicio pred
 |Valor|Descripción|  
 |-----------|-----------------|  
 |true|Al iniciarse, copia solo los ensamblados que se han actualizado desde la última que se copiaron en el directorio de instantáneas. Este es el valor predeterminado para el [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)].|  
-|false|Revierte el comportamiento de inicio de las versiones anteriores de .NET Framework, que era copiar todos los archivos en el inicio.|  
+|False|Revierte el comportamiento de inicio de las versiones anteriores de .NET Framework, que era copiar todos los archivos en el inicio.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
  Ninguno.  

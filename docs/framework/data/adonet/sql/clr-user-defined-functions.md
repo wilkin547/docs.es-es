@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 48ba6f0ce6f95ac14fccaa4e5c1e8a89d78f3cd1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a556bf85e68cc123bd16feb1020c341ab2a74a59
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="clr-user-defined-functions"></a>Funciones definidas por el usuario de CLR
 Las funciones definidas por el usuario son rutinas que pueden aceptar parámetros, realizar cálculos u otras acciones y devolver un resultado. Puede escribir funciones definidas por el usuario en cualquier lenguaje de programación de Microsoft .NET Framework, como Microsoft Visual Basic .NET o Microsoft Visual C#.  
@@ -25,5 +26,5 @@ Las funciones definidas por el usuario son rutinas que pueden aceptar parámetro
  Para obtener más información, consulte [funciones definidos](http://msdn.microsoft.com/library/ms131077.aspx).  
   
 ## <a name="see-also"></a>Vea también  
- [Integración Common Language Runtime SQL Server](../../../../../docs/framework/data/adonet/sql/sql-server-common-language-runtime-integration.md)  
+ [Integración con Common Language Runtime de SQL Server](../../../../../docs/framework/data/adonet/sql/sql-server-common-language-runtime-integration.md)  
  [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](http://go.microsoft.com/fwlink/?LinkId=217917)

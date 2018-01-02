@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ff083cfbcdfa772bb5904f4311d95e399c22c97e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: b1ca0d5ae73d01e5bbb719f7bcc9a3f5a19fc291
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltaddgt-of-ltfiltersgt"></a>Elemento &lt;add&gt; de &lt;filters&gt;
 Filtro de XPath que especifica el tipo de mensaje que se va a registrar.  
@@ -86,6 +87,6 @@ Filtro de XPath que especifica el tipo de mensaje que se va a registrar.
  <xref:System.ServiceModel.Configuration.MessageLoggingElement.Filters%2A>  
  <xref:System.ServiceModel.Configuration.XPathMessageFilterElement>  
  <xref:System.ServiceModel.Dispatcher.XPathMessageFilter>  
- [Configurar el registro de mensajes](../../../../../docs/framework/wcf/diagnostics/configuring-message-logging.md)  
- [Configurar el registro de mensajes](../../../../../docs/framework/wcf/diagnostics/configuring-message-logging.md)  
+ [Configuración del registro de mensajes](../../../../../docs/framework/wcf/diagnostics/configuring-message-logging.md)  
+ [Configuración del registro de mensajes](../../../../../docs/framework/wcf/diagnostics/configuring-message-logging.md)  
  [\<registro de mensajes >](../../../../../docs/framework/configure-apps/file-schema/wcf/messagelogging.md)

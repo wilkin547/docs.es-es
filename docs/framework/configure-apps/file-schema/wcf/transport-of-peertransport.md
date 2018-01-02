@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 69b62699f5db0ab11fac3cc4d1ba4e2aa022934d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 8bb0fbce0d7b45fd051db187cd6d7e920b08cab3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="lttransportgt-of-ltpeertransportgt"></a>&lt;transport&gt; de &lt;peerTransport&gt;
 Especifica el tipo de transporte para mensajes seguros enviados por pares configurados con este enlace.  
@@ -73,7 +74,7 @@ Especifica el tipo de transporte para mensajes seguros enviados por pares config
  <xref:System.ServiceModel.Channels.CustomBinding>  
  [Seguridad de transporte](../../../../../docs/framework/wcf/feature-details/transport-security.md)  
  [Transportes](../../../../../docs/framework/wcf/feature-details/transports.md)  
- [Elegir un transporte](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)  
+ [Elección del transporte](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)  
  [Enlaces](../../../../../docs/framework/wcf/bindings.md)  
  [Extensión de enlaces](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
  [Enlaces personalizados](../../../../../docs/framework/wcf/extending/custom-bindings.md)  

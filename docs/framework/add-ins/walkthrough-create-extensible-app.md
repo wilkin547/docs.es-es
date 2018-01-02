@@ -22,11 +22,12 @@ caps.latest.revision: "32"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 6609f30844421f94965fbe05114db96ed8edbb31
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ac4b6fc2ae36d848306178f281cceeeb0654ec03
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-creating-an-extensible-application"></a>Tutorial: Crear una aplicación extensible
 Este tutorial describe cómo crear una canalización para un complemento que realiza funciones de calculadora sencillo. No se muestra un escenario real; en su lugar, muestra la funcionalidad básica de una canalización y cómo un complemento puede proporcionar servicios para un host.  
@@ -367,4 +368,4 @@ Este tutorial describe cómo crear una canalización para un complemento que rea
  [Tutorial: Pasar colecciones entre Hosts y complementos](http://msdn.microsoft.com/en-us/b532c604-548e-4fab-b11c-377257dd0ee5)  
  [Requisitos del desarrollo de canalizaciones](http://msdn.microsoft.com/en-us/ef9fa986-e80b-43e1-868b-247f4c1d9da5)  
  [Contratos, vistas y adaptadores](http://msdn.microsoft.com/en-us/a6460173-9507-4b87-8c07-d4ee245d715c)  
- [Pipeline Development](../../../docs/framework/add-ins/pipeline-development.md)
+ [Desarrollo de canalizaciones](../../../docs/framework/add-ins/pipeline-development.md)

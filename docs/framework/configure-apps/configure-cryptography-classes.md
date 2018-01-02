@@ -20,11 +20,12 @@ caps.latest.revision: "9"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 79eb9f9ef95dae24dd38fa93b137c9303815143b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 23bd6007beb870895316a565283ee7e7354c931b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="configuring-cryptography-classes"></a>Configurar clases de criptografía
 El [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] permite a los administradores de equipo configurar los algoritmos criptográficos predeterminados y las implementaciones de algoritmos que utilizan .NET Framework y las aplicaciones escritas correctamente.  Por ejemplo, una empresa que tenga su propia implementación de un algoritmo criptográfico puede hacer que la implementación el valor predeterminado en lugar de la implementación que se incluye en el [!INCLUDE[winsdkshort](../../../includes/winsdkshort-md.md)]. Aunque las aplicaciones administradas que utilizan criptografía siempre pueden elegir enlazarse de forma explícita a una implementación concreta, se recomienda que creen objetos criptográficos mediante el sistema de configuración de criptografía.  

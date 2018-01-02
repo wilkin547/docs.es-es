@@ -14,11 +14,12 @@ caps.latest.revision: "43"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7842efe074d5487a5917e7ee669027a420d9d713
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 44bc7a3ef40b08d7cee4e515e6628aef9987c0c8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltbasichttpbindinggt"></a>&lt;basicHttpBinding&gt;
 Representa un enlace que un servicio [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] puede utilizar para configurar y exponer extremos que pueden comunicarse con servicios Web basados en ASMX y clientes y otros servicios que cumplan con el WS-I Basic Profile 1.1.  

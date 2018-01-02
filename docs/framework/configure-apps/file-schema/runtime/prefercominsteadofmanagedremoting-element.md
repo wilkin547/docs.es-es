@@ -16,11 +16,12 @@ caps.latest.revision: "17"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 7aed6baa227b2bdf90c26f02d38ee67c1ffbbda1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ad60d73e30bf02fd52f9c8f3bd707b571959bdd0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltprefercominsteadofmanagedremotinggt-element"></a>&lt;PreferComInsteadOfManagedRemoting&gt; elemento
 Especifica si el tiempo de ejecución utilizará la interoperabilidad COM en lugar de comunicación remota para todas las llamadas a través de los límites del dominio de aplicación.  

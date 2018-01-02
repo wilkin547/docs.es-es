@@ -13,11 +13,12 @@ caps.latest.revision: "9"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 02e2beb285cb0c4d88f98c3155ab5a3ff5e31e0b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: e859f99768eae5c931618d5902caf40dfad95d54
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltissuertokenresolvergt"></a>&lt;issuerTokenResolver&gt;
 Registra a la resolución del token de emisor que se usa por los controladores de la colección de controlador de token. La resolución del token de emisor se utiliza para resolver el token de firma en mensajes y los tokens entrantes.  
@@ -50,7 +51,7 @@ Registra a la resolución del token de emisor que se usa por los controladores d
   
 |Atributo|Descripción|  
 |---------------|-----------------|  
-|type|Especifica el tipo de la resolución del token de emisor. Debe ser el <xref:System.IdentityModel.Tokens.IssuerTokenResolver> clase o un tipo que deriva de la <xref:System.IdentityModel.Tokens.IssuerTokenResolver> clase. Obligatorio.|  
+|type|Especifica el tipo de la resolución del token de emisor. Debe ser el <xref:System.IdentityModel.Tokens.IssuerTokenResolver> clase o un tipo que deriva de la <xref:System.IdentityModel.Tokens.IssuerTokenResolver> clase. Requerido.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
  Ninguna  

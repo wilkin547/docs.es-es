@@ -13,11 +13,12 @@ caps.latest.revision: "2"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: bb187302000291fd6b540b562ed7aebf1db7add2
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: a43801f4c45d7ac518c3b24cadc58ffbec40adb4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltendtoendtracinggt"></a>&lt;endToEndTracing&gt;
 Elemento de configuración que le permite habilitar y deshabilitar aspectos diferentes de traza de un punto de conexión a otro durante el funcionamiento de una aplicación de servicio.  
@@ -63,4 +64,4 @@ Elemento de configuración que le permite habilitar y deshabilitar aspectos dife
  <xref:System.ServiceModel.Diagnostics>  
  <xref:System.ServiceModel.Configuration.DiagnosticSection.EndToEndTracing%2A>  
  <xref:System.ServiceModel.Configuration.EndToEndTracingElement>  
- [Seguimiento to-End](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing.md)
+ [Traza de un extremo a otro](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing.md)

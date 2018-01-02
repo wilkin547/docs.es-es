@@ -17,11 +17,11 @@ ms.assetid: b5a65ef0-c408-4836-afb6-e6828c0771ca
 caps.latest.revision: "43"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 35a40d6dfb6c66183afb0f3a2980a3b7863353fa
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.openlocfilehash: 2ee98b317e9d94cad5087e708bd71ca88d2bae63
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="keywords-visual-basic"></a>Palabras clave de Visual Basic
 En las tablas siguientes se enumeran todas las palabras clave del lenguaje [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
@@ -107,7 +107,6 @@ En las tablas siguientes se enumeran todas las palabras clave del lenguaje [!INC
 |-----------|-----------------|  
 |[Resumen de matrices](../../../visual-basic/language-reference/keywords/arrays-summary.md)|Enumera los elementos del lenguaje que se usan para crear, definir y usar matrices.|  
 |[Resumen de objetos de colección](../../../visual-basic/language-reference/keywords/collection-object-summary.md)|Enumera los elementos del lenguaje que se usan para las colecciones.|  
-|[Resumen de directivas del compilador (Visual Basic)](http://msdn.microsoft.com/en-us/874dad02-d4a5-4a9d-8a48-0191a0ac794a)|Enumera las directivas que controlan el comportamiento del compilador.|  
 |[Resumen de flujo de control](../../../visual-basic/language-reference/keywords/control-flow-summary.md)|Enumera las instrucciones que se usan para crear bucles y controlar el flujo del procedimiento.|  
 |[Resumen de conversión](../../../visual-basic/language-reference/keywords/conversion-summary.md)|Enumera las funciones que se usan para convertir números, fechas, horas y cadenas.|  
 |[Resumen de tipos de datos](../../../visual-basic/language-reference/keywords/data-types-summary.md)|Enumera tipos de datos. También enumera las funciones que se usan para convertir entre tipos de datos y comprobar tipos de datos.|  
