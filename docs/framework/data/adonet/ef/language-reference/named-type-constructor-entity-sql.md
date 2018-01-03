@@ -13,61 +13,62 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 72a19094beb03982448a102a4c7362a026d9e611
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ab743f3132dc15548735771b13967898b4c3f15f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="named-type-constructor-entity-sql"></a><span data-ttu-id="78358-102">Constructor de tipos con nombre (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="78358-102">Named Type Constructor (Entity SQL)</span></span>
-<span data-ttu-id="78358-103">Se usa para crear instancias de los tipos nominales del modelo conceptual como los tipos de entidad o los tipos complejos.</span><span class="sxs-lookup"><span data-stu-id="78358-103">Used to create instances of conceptual model nominal types such as Entity or Complex types.</span></span>  
+# <a name="named-type-constructor-entity-sql"></a><span data-ttu-id="0adb9-102">Constructor de tipos con nombre (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="0adb9-102">Named Type Constructor (Entity SQL)</span></span>
+<span data-ttu-id="0adb9-103">Se usa para crear instancias de los tipos nominales del modelo conceptual como los tipos de entidad o los tipos complejos.</span><span class="sxs-lookup"><span data-stu-id="0adb9-103">Used to create instances of conceptual model nominal types such as Entity or Complex types.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="78358-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="78358-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="0adb9-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="0adb9-104">Syntax</span></span>  
   
 ```  
 [{identifier. }] identifier( [expression [{, expression }]] )  
 ```  
   
-## <a name="arguments"></a><span data-ttu-id="78358-105">Argumentos</span><span class="sxs-lookup"><span data-stu-id="78358-105">Arguments</span></span>  
+## <a name="arguments"></a><span data-ttu-id="0adb9-105">Argumentos</span><span class="sxs-lookup"><span data-stu-id="0adb9-105">Arguments</span></span>  
  `identifier`  
- <span data-ttu-id="78358-106">Valor que es un identificador simple o incluido entre comillas.</span><span class="sxs-lookup"><span data-stu-id="78358-106">Value that is a simple or quoted identifier.</span></span> <span data-ttu-id="78358-107">Para obtener más información, vea [identificadores](../../../../../../docs/framework/data/adonet/ef/language-reference/identifiers-entity-sql.md)</span><span class="sxs-lookup"><span data-stu-id="78358-107">For more information see, [Identifiers](../../../../../../docs/framework/data/adonet/ef/language-reference/identifiers-entity-sql.md)</span></span>  
+ <span data-ttu-id="0adb9-106">Valor que es un identificador simple o incluido entre comillas.</span><span class="sxs-lookup"><span data-stu-id="0adb9-106">Value that is a simple or quoted identifier.</span></span> <span data-ttu-id="0adb9-107">Para obtener más información, vea [identificadores](../../../../../../docs/framework/data/adonet/ef/language-reference/identifiers-entity-sql.md)</span><span class="sxs-lookup"><span data-stu-id="0adb9-107">For more information see, [Identifiers](../../../../../../docs/framework/data/adonet/ef/language-reference/identifiers-entity-sql.md)</span></span>  
   
  `expression`  
- <span data-ttu-id="78358-108">Atributos del tipo que se suponen que conservan el mismo orden que cuando aparecen en la declaración del tipo.</span><span class="sxs-lookup"><span data-stu-id="78358-108">Attributes of the type that are assumed to be in the same order as they appear in the declaration of the type.</span></span>  
+ <span data-ttu-id="0adb9-108">Atributos del tipo que se suponen que conservan el mismo orden que cuando aparecen en la declaración del tipo.</span><span class="sxs-lookup"><span data-stu-id="0adb9-108">Attributes of the type that are assumed to be in the same order as they appear in the declaration of the type.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="78358-109">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="78358-109">Return Value</span></span>  
- <span data-ttu-id="78358-110">Instancias de tipos complejos con nombre y de tipos de entidad.</span><span class="sxs-lookup"><span data-stu-id="78358-110">Instances of named complex types and entity types.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="0adb9-109">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="0adb9-109">Return Value</span></span>  
+ <span data-ttu-id="0adb9-110">Instancias de tipos complejos con nombre y de tipos de entidad.</span><span class="sxs-lookup"><span data-stu-id="0adb9-110">Instances of named complex types and entity types.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="78358-111">Comentarios</span><span class="sxs-lookup"><span data-stu-id="78358-111">Remarks</span></span>  
- <span data-ttu-id="78358-112">En los ejemplos siguientes se muestra cómo crear tipos nominales y complejos:</span><span class="sxs-lookup"><span data-stu-id="78358-112">The following examples show how to construct nominal and complex types:</span></span>  
+## <a name="remarks"></a><span data-ttu-id="0adb9-111">Comentarios</span><span class="sxs-lookup"><span data-stu-id="0adb9-111">Remarks</span></span>  
+ <span data-ttu-id="0adb9-112">En los ejemplos siguientes se muestra cómo crear tipos nominales y complejos:</span><span class="sxs-lookup"><span data-stu-id="0adb9-112">The following examples show how to construct nominal and complex types:</span></span>  
   
- <span data-ttu-id="78358-113">La expresión siguiente crea una instancia de un tipo `Person` :</span><span class="sxs-lookup"><span data-stu-id="78358-113">The expression below creates an instance of a `Person` type:</span></span>  
+ <span data-ttu-id="0adb9-113">La expresión siguiente crea una instancia de un tipo `Person` :</span><span class="sxs-lookup"><span data-stu-id="0adb9-113">The expression below creates an instance of a `Person` type:</span></span>  
   
  `Person("abc", 12)`  
   
- <span data-ttu-id="78358-114">La expresión siguiente crea una instancia de un tipo complejo:</span><span class="sxs-lookup"><span data-stu-id="78358-114">The expression below creates an instance of a complex type:</span></span>  
+ <span data-ttu-id="0adb9-114">La expresión siguiente crea una instancia de un tipo complejo:</span><span class="sxs-lookup"><span data-stu-id="0adb9-114">The expression below creates an instance of a complex type:</span></span>  
   
  `MyModel.ZipCode(‘98118’, ‘4567’)`  
   
- <span data-ttu-id="78358-115">La expresión siguiente crea una instancia de un tipo complejo anidado:</span><span class="sxs-lookup"><span data-stu-id="78358-115">The expression below creates an instance of a nested complex type:</span></span>  
+ <span data-ttu-id="0adb9-115">La expresión siguiente crea una instancia de un tipo complejo anidado:</span><span class="sxs-lookup"><span data-stu-id="0adb9-115">The expression below creates an instance of a nested complex type:</span></span>  
   
  `MyModel.AddressInfo('My street address', 'Seattle', 'WA', MyModel.ZipCode('98118', '4567'))`  
   
- <span data-ttu-id="78358-116">La expresión siguiente crea una instancia de una entidad con un tipo complejo anidado:</span><span class="sxs-lookup"><span data-stu-id="78358-116">The expression below creates an instance of an entity with a nested complex type:</span></span>  
+ <span data-ttu-id="0adb9-116">La expresión siguiente crea una instancia de una entidad con un tipo complejo anidado:</span><span class="sxs-lookup"><span data-stu-id="0adb9-116">The expression below creates an instance of an entity with a nested complex type:</span></span>  
   
  `MyModel.Person("Bill", MyModel.AddressInfo('My street address', 'Seattle', 'WA', MyModel.ZipCode('98118', '4567')))`  
   
- <span data-ttu-id="78358-117">En el ejemplo siguiente se muestra cómo inicializar una propiedad de un tipo complejo en NULL:`MyModel.ZipCode(‘98118’, null)`</span><span class="sxs-lookup"><span data-stu-id="78358-117">The following example shows how to initialize a property of a complex type to null:`MyModel.ZipCode(‘98118’, null)`</span></span>  
+ <span data-ttu-id="0adb9-117">En el ejemplo siguiente se muestra cómo inicializar una propiedad de un tipo complejo en NULL:`MyModel.ZipCode(‘98118’, null)`</span><span class="sxs-lookup"><span data-stu-id="0adb9-117">The following example shows how to initialize a property of a complex type to null:`MyModel.ZipCode(‘98118’, null)`</span></span>  
   
-## <a name="example"></a><span data-ttu-id="78358-118">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="78358-118">Example</span></span>  
- <span data-ttu-id="78358-119">La consulta de Entity SQL siguiente usa el constructor de tipos con nombre para crear una instancia de un tipo del modelo conceptual.</span><span class="sxs-lookup"><span data-stu-id="78358-119">The following Entity SQL query uses the named type constructor to create an instance of a conceptual model type.</span></span> <span data-ttu-id="78358-120">La consulta se basa en el modelo AdventureWorks Sales.</span><span class="sxs-lookup"><span data-stu-id="78358-120">The query is based on the AdventureWorks Sales Model.</span></span> <span data-ttu-id="78358-121">Para compilar y ejecutar esta consulta, siga estos pasos:</span><span class="sxs-lookup"><span data-stu-id="78358-121">To compile and run this query, follow these steps:</span></span>  
+## <a name="example"></a><span data-ttu-id="0adb9-118">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="0adb9-118">Example</span></span>  
+ <span data-ttu-id="0adb9-119">La consulta de Entity SQL siguiente usa el constructor de tipos con nombre para crear una instancia de un tipo del modelo conceptual.</span><span class="sxs-lookup"><span data-stu-id="0adb9-119">The following Entity SQL query uses the named type constructor to create an instance of a conceptual model type.</span></span> <span data-ttu-id="0adb9-120">La consulta se basa en el modelo AdventureWorks Sales.</span><span class="sxs-lookup"><span data-stu-id="0adb9-120">The query is based on the AdventureWorks Sales Model.</span></span> <span data-ttu-id="0adb9-121">Para compilar y ejecutar esta consulta, siga estos pasos:</span><span class="sxs-lookup"><span data-stu-id="0adb9-121">To compile and run this query, follow these steps:</span></span>  
   
-1.  <span data-ttu-id="78358-122">Siga el procedimiento de [How to: Execute a Query that Returns StructuralType Results](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).</span><span class="sxs-lookup"><span data-stu-id="78358-122">Follow the procedure in [How to: Execute a Query that Returns StructuralType Results](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).</span></span>  
+1.  <span data-ttu-id="0adb9-122">Siga el procedimiento de [How to: Execute a Query that Returns StructuralType Results](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).</span><span class="sxs-lookup"><span data-stu-id="0adb9-122">Follow the procedure in [How to: Execute a Query that Returns StructuralType Results](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).</span></span>  
   
-2.  <span data-ttu-id="78358-123">Pase la consulta siguiente como argumento al método `ExecuteStructuralTypeQuery` :</span><span class="sxs-lookup"><span data-stu-id="78358-123">Pass the following query as an argument to the `ExecuteStructuralTypeQuery` method:</span></span>  
+2.  <span data-ttu-id="0adb9-123">Pase la consulta siguiente como argumento al método `ExecuteStructuralTypeQuery` :</span><span class="sxs-lookup"><span data-stu-id="0adb9-123">Pass the following query as an argument to the `ExecuteStructuralTypeQuery` method:</span></span>  
   
  [!code-csharp[DP EntityServices Concepts 2#NAMED_TYPE_CONSTRUCTOR](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#named_type_constructor)]  
   
-## <a name="see-also"></a><span data-ttu-id="78358-124">Vea también</span><span class="sxs-lookup"><span data-stu-id="78358-124">See Also</span></span>  
- [<span data-ttu-id="78358-125">Tipos de constructores</span><span class="sxs-lookup"><span data-stu-id="78358-125">Constructing Types</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/constructing-types-entity-sql.md)  
- [<span data-ttu-id="78358-126">Referencia de Entity SQL</span><span class="sxs-lookup"><span data-stu-id="78358-126">Entity SQL Reference</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+## <a name="see-also"></a><span data-ttu-id="0adb9-124">Vea también</span><span class="sxs-lookup"><span data-stu-id="0adb9-124">See Also</span></span>  
+ [<span data-ttu-id="0adb9-125">Tipos de constructores</span><span class="sxs-lookup"><span data-stu-id="0adb9-125">Constructing Types</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/constructing-types-entity-sql.md)  
+ [<span data-ttu-id="0adb9-126">Referencia de Entity SQL</span><span class="sxs-lookup"><span data-stu-id="0adb9-126">Entity SQL Reference</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

@@ -13,20 +13,21 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 56443902885e191d93897096e55742f7665ba00a
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: a3064727eeda30c05f38558f4f0977c71e5abb48
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="ltpersistabletypegt"></a><span data-ttu-id="75f3b-102">&lt;Type con persistencia&gt;</span><span class="sxs-lookup"><span data-stu-id="75f3b-102">&lt;persistableType&gt;</span></span>
-<span data-ttu-id="75f3b-103">Especifica todos los tipos con persistencia.</span><span class="sxs-lookup"><span data-stu-id="75f3b-103">Specifies all the persistable types.</span></span>  
+# <a name="ltpersistabletypegt"></a><span data-ttu-id="2b916-102">&lt;Type con persistencia&gt;</span><span class="sxs-lookup"><span data-stu-id="2b916-102">&lt;persistableType&gt;</span></span>
+<span data-ttu-id="2b916-103">Especifica todos los tipos con persistencia.</span><span class="sxs-lookup"><span data-stu-id="2b916-103">Specifies all the persistable types.</span></span>  
   
- <span data-ttu-id="75f3b-104">\<sistema. ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="75f3b-104">\<system.ServiceModel></span></span>  
-<span data-ttu-id="75f3b-105">\<comContracts ></span><span class="sxs-lookup"><span data-stu-id="75f3b-105">\<comContracts></span></span>  
-<span data-ttu-id="75f3b-106">\<comContract ></span><span class="sxs-lookup"><span data-stu-id="75f3b-106">\<comContract></span></span>  
+ <span data-ttu-id="2b916-104">\<sistema. ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="2b916-104">\<system.ServiceModel></span></span>  
+<span data-ttu-id="2b916-105">\<comContracts ></span><span class="sxs-lookup"><span data-stu-id="2b916-105">\<comContracts></span></span>  
+<span data-ttu-id="2b916-106">\<comContract ></span><span class="sxs-lookup"><span data-stu-id="2b916-106">\<comContract></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="75f3b-107">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="75f3b-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="2b916-107">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="2b916-107">Syntax</span></span>  
   
 ```xml  
 <comContracts>  
@@ -40,31 +41,31 @@ ms.lasthandoff: 12/02/2017
 </comContracts>  
 ```  
   
-## <a name="type"></a><span data-ttu-id="75f3b-108">Tipo</span><span class="sxs-lookup"><span data-stu-id="75f3b-108">Type</span></span>  
+## <a name="type"></a><span data-ttu-id="2b916-108">Tipo</span><span class="sxs-lookup"><span data-stu-id="2b916-108">Type</span></span>  
  `Type`  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="75f3b-109">Atributos y elementos</span><span class="sxs-lookup"><span data-stu-id="75f3b-109">Attributes and Elements</span></span>  
- <span data-ttu-id="75f3b-110">En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.</span><span class="sxs-lookup"><span data-stu-id="75f3b-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="2b916-109">Atributos y elementos</span><span class="sxs-lookup"><span data-stu-id="2b916-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="2b916-110">En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.</span><span class="sxs-lookup"><span data-stu-id="2b916-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="75f3b-111">Atributos</span><span class="sxs-lookup"><span data-stu-id="75f3b-111">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="2b916-111">Atributos</span><span class="sxs-lookup"><span data-stu-id="2b916-111">Attributes</span></span>  
   
-|<span data-ttu-id="75f3b-112">Atributo</span><span class="sxs-lookup"><span data-stu-id="75f3b-112">Attribute</span></span>|<span data-ttu-id="75f3b-113">Descripción</span><span class="sxs-lookup"><span data-stu-id="75f3b-113">Description</span></span>|  
+|<span data-ttu-id="2b916-112">Atributo</span><span class="sxs-lookup"><span data-stu-id="2b916-112">Attribute</span></span>|<span data-ttu-id="2b916-113">Descripción</span><span class="sxs-lookup"><span data-stu-id="2b916-113">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="75f3b-114">id</span><span class="sxs-lookup"><span data-stu-id="75f3b-114">id</span></span>|<span data-ttu-id="75f3b-115">Un atributo necesario que contiene una cadena que especifica un identificador único para un tipo con persistencia.</span><span class="sxs-lookup"><span data-stu-id="75f3b-115">A required attribute that contains a string that specifies a unique identifier for a persistable type.</span></span>|  
-|<span data-ttu-id="75f3b-116">name</span><span class="sxs-lookup"><span data-stu-id="75f3b-116">name</span></span>|<span data-ttu-id="75f3b-117">Un atributo opcional que contiene una cadena que especifica el nombre del tipo con persistencia.</span><span class="sxs-lookup"><span data-stu-id="75f3b-117">An optional attribute that contains a string that specifies the name of the persistable type.</span></span>|  
+|<span data-ttu-id="2b916-114">id</span><span class="sxs-lookup"><span data-stu-id="2b916-114">id</span></span>|<span data-ttu-id="2b916-115">Un atributo necesario que contiene una cadena que especifica un identificador único para un tipo con persistencia.</span><span class="sxs-lookup"><span data-stu-id="2b916-115">A required attribute that contains a string that specifies a unique identifier for a persistable type.</span></span>|  
+|<span data-ttu-id="2b916-116">name</span><span class="sxs-lookup"><span data-stu-id="2b916-116">name</span></span>|<span data-ttu-id="2b916-117">Un atributo opcional que contiene una cadena que especifica el nombre del tipo con persistencia.</span><span class="sxs-lookup"><span data-stu-id="2b916-117">An optional attribute that contains a string that specifies the name of the persistable type.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="75f3b-118">Elementos secundarios</span><span class="sxs-lookup"><span data-stu-id="75f3b-118">Child Elements</span></span>  
- <span data-ttu-id="75f3b-119">Ninguna</span><span class="sxs-lookup"><span data-stu-id="75f3b-119">None</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="2b916-118">Elementos secundarios</span><span class="sxs-lookup"><span data-stu-id="2b916-118">Child Elements</span></span>  
+ <span data-ttu-id="2b916-119">Ninguna</span><span class="sxs-lookup"><span data-stu-id="2b916-119">None</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="75f3b-120">Elementos primarios</span><span class="sxs-lookup"><span data-stu-id="75f3b-120">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="2b916-120">Elementos primarios</span><span class="sxs-lookup"><span data-stu-id="2b916-120">Parent Elements</span></span>  
   
-|<span data-ttu-id="75f3b-121">Elemento</span><span class="sxs-lookup"><span data-stu-id="75f3b-121">Element</span></span>|<span data-ttu-id="75f3b-122">Descripción</span><span class="sxs-lookup"><span data-stu-id="75f3b-122">Description</span></span>|  
+|<span data-ttu-id="2b916-121">Elemento</span><span class="sxs-lookup"><span data-stu-id="2b916-121">Element</span></span>|<span data-ttu-id="2b916-122">Descripción</span><span class="sxs-lookup"><span data-stu-id="2b916-122">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="75f3b-123">\<persistableTypes ></span><span class="sxs-lookup"><span data-stu-id="75f3b-123">\<persistableTypes></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/persistabletypes.md)|<span data-ttu-id="75f3b-124">Una colección de elementos de `persistableType`.</span><span class="sxs-lookup"><span data-stu-id="75f3b-124">A collection of `persistableType` elements.</span></span>|  
+|[<span data-ttu-id="2b916-123">\<persistableTypes ></span><span class="sxs-lookup"><span data-stu-id="2b916-123">\<persistableTypes></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/persistabletypes.md)|<span data-ttu-id="2b916-124">Una colección de elementos de `persistableType`.</span><span class="sxs-lookup"><span data-stu-id="2b916-124">A collection of `persistableType` elements.</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="75f3b-125">Vea también</span><span class="sxs-lookup"><span data-stu-id="75f3b-125">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="2b916-125">Vea también</span><span class="sxs-lookup"><span data-stu-id="2b916-125">See Also</span></span>  
  <xref:System.ServiceModel.Configuration.ComPersistableTypeElementCollection>  
  <xref:System.ServiceModel.Configuration.ComPersistableTypeElement>  
- [<span data-ttu-id="75f3b-126">\<comContracts ></span><span class="sxs-lookup"><span data-stu-id="75f3b-126">\<comContracts></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/comcontracts.md)  
- [<span data-ttu-id="75f3b-127">Integración con aplicaciones COM +</span><span class="sxs-lookup"><span data-stu-id="75f3b-127">Integrating with COM+ Applications</span></span>](../../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)  
- [<span data-ttu-id="75f3b-128">Cómo: configurar el servicio COM +</span><span class="sxs-lookup"><span data-stu-id="75f3b-128">How to: Configure COM+ Service Settings</span></span>](../../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)
+ [<span data-ttu-id="2b916-126">\<comContracts ></span><span class="sxs-lookup"><span data-stu-id="2b916-126">\<comContracts></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/comcontracts.md)  
+ [<span data-ttu-id="2b916-127">Integración en aplicaciones COM+</span><span class="sxs-lookup"><span data-stu-id="2b916-127">Integrating with COM+ Applications</span></span>](../../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)  
+ [<span data-ttu-id="2b916-128">Configuración de los parámetros de los servicios COM+</span><span class="sxs-lookup"><span data-stu-id="2b916-128">How to: Configure COM+ Service Settings</span></span>](../../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)

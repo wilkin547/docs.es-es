@@ -9,20 +9,20 @@ ms.assetid: 59bfa215-556b-4bfa-8f25-b090ea83298d
 caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 6095a1bebf2a4ea9450051c48b268ed009e08d63
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 47829eed150f2437ee7a06e9715730876e97a9bf
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
-# <a name="this-system-does-not-contain-support-for-the-locale-specified"></a><span data-ttu-id="96f20-102">Este sistema no admite la configuración regional especificada</span><span class="sxs-lookup"><span data-stu-id="96f20-102">This system does not contain support for the Locale specified</span></span>
-<span data-ttu-id="96f20-103">Está intentando usar la enumeración `VbStrConv` , pero el sistema no admite la configuración regional especificada.</span><span class="sxs-lookup"><span data-stu-id="96f20-103">You are attempting to use the `VbStrConv` enumeration, but your system does not support the specified locale.</span></span>  
+# <a name="this-system-does-not-contain-support-for-the-locale-specified"></a><span data-ttu-id="3c1b1-102">Este sistema no admite la configuración regional especificada</span><span class="sxs-lookup"><span data-stu-id="3c1b1-102">This system does not contain support for the Locale specified</span></span>
+<span data-ttu-id="3c1b1-103">Está intentando usar la enumeración `VbStrConv` , pero el sistema no admite la configuración regional especificada.</span><span class="sxs-lookup"><span data-stu-id="3c1b1-103">You are attempting to use the `VbStrConv` enumeration, but your system does not support the specified locale.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="96f20-104">Para corregir este error</span><span class="sxs-lookup"><span data-stu-id="96f20-104">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="3c1b1-104">Para corregir este error</span><span class="sxs-lookup"><span data-stu-id="3c1b1-104">To correct this error</span></span>  
   
-1.  <span data-ttu-id="96f20-105">Actualice la máquina para que admita la configuración regional o ejecute la aplicación en una máquina que la admita.</span><span class="sxs-lookup"><span data-stu-id="96f20-105">Upgrade the machine to support the locale, or run the application on a machine that supports it.</span></span>  
+1.  <span data-ttu-id="3c1b1-105">Actualice la máquina para que admita la configuración regional o ejecute la aplicación en una máquina que la admita.</span><span class="sxs-lookup"><span data-stu-id="3c1b1-105">Upgrade the machine to support the locale, or run the application on a machine that supports it.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="96f20-106">Vea también</span><span class="sxs-lookup"><span data-stu-id="96f20-106">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="3c1b1-106">Vea también</span><span class="sxs-lookup"><span data-stu-id="3c1b1-106">See Also</span></span>  
  <xref:System.Globalization>  
- [<span data-ttu-id="96f20-107">NOTINBUILD Enumeración VbStrConv</span><span class="sxs-lookup"><span data-stu-id="96f20-107">NOTINBUILD VbStrConv Enumeration</span></span>](http://msdn.microsoft.com/en-us/59f83dd9-6361-47df-a836-02ba9d4cb936)  
- [<span data-ttu-id="96f20-108">Introducción a aplicaciones internacionales basadas en .NET Framework</span><span class="sxs-lookup"><span data-stu-id="96f20-108">Introduction to International Applications Based on the .NET Framework</span></span>](/visualstudio/ide/introduction-to-international-applications-based-on-the-dotnet-framework)
+   
+ [<span data-ttu-id="3c1b1-107">Introducción a aplicaciones internacionales basadas en .NET Framework</span><span class="sxs-lookup"><span data-stu-id="3c1b1-107">Introduction to International Applications Based on the .NET Framework</span></span>](/visualstudio/ide/introduction-to-international-applications-based-on-the-dotnet-framework)

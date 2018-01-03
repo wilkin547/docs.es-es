@@ -23,31 +23,32 @@ caps.latest.revision: "14"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: e8d2391ba9ba1d17f2cbce54f52863f74a5dc646
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 3bc02f12a49ef65614114a056f9263f9ef7f5322
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="gcunmanagedtomanaged-mda"></a><span data-ttu-id="c1fae-102">MDA de gcUnmanagedToManaged</span><span class="sxs-lookup"><span data-stu-id="c1fae-102">gcUnmanagedToManaged MDA</span></span>
-<span data-ttu-id="c1fae-103">El asistente para la depuración administrada (MDA) `gcUnmanagedToManaged` produce una recolección de elementos no utilizados siempre que un subproceso realice la transición de código no administrado a administrado.</span><span class="sxs-lookup"><span data-stu-id="c1fae-103">The `gcUnmanagedToManaged` managed debugging assistant (MDA) causes a garbage collection whenever a thread transitions from unmanaged to managed code.</span></span>  
+# <a name="gcunmanagedtomanaged-mda"></a><span data-ttu-id="94464-102">MDA de gcUnmanagedToManaged</span><span class="sxs-lookup"><span data-stu-id="94464-102">gcUnmanagedToManaged MDA</span></span>
+<span data-ttu-id="94464-103">El asistente para la depuración administrada (MDA) `gcUnmanagedToManaged` produce una recolección de elementos no utilizados siempre que un subproceso realice la transición de código no administrado a administrado.</span><span class="sxs-lookup"><span data-stu-id="94464-103">The `gcUnmanagedToManaged` managed debugging assistant (MDA) causes a garbage collection whenever a thread transitions from unmanaged to managed code.</span></span>  
   
-## <a name="symptoms"></a><span data-ttu-id="c1fae-104">Síntomas</span><span class="sxs-lookup"><span data-stu-id="c1fae-104">Symptoms</span></span>  
- <span data-ttu-id="c1fae-105">Una aplicación que ejecute componentes de usuario no administrados con la invocación de plataforma y COM genera una infracción de acceso no determinista en CLR.</span><span class="sxs-lookup"><span data-stu-id="c1fae-105">An application running unmanaged user components using COM and platform invoke is causing a nondeterministic access violation in the CLR.</span></span>  
+## <a name="symptoms"></a><span data-ttu-id="94464-104">Síntomas</span><span class="sxs-lookup"><span data-stu-id="94464-104">Symptoms</span></span>  
+ <span data-ttu-id="94464-105">Una aplicación que ejecute componentes de usuario no administrados con la invocación de plataforma y COM genera una infracción de acceso no determinista en CLR.</span><span class="sxs-lookup"><span data-stu-id="94464-105">An application running unmanaged user components using COM and platform invoke is causing a nondeterministic access violation in the CLR.</span></span>  
   
-## <a name="cause"></a><span data-ttu-id="c1fae-106">Motivo</span><span class="sxs-lookup"><span data-stu-id="c1fae-106">Cause</span></span>  
- <span data-ttu-id="c1fae-107">Si una aplicación está ejecutando componentes de usuario no administrados, dichos componentes podrían haber dañado el montón de recolección de elementos no utilizados.</span><span class="sxs-lookup"><span data-stu-id="c1fae-107">If an application is running unmanaged user components, then those components might have corrupted the garbage-collected heap.</span></span> <span data-ttu-id="c1fae-108">Esto provoca una infracción de acceso en CLR cuando el recolector de elementos no utilizados intenta desplazarse por el gráfico de objetos.</span><span class="sxs-lookup"><span data-stu-id="c1fae-108">This causes an access violation in the CLR when the garbage collector tries to walk the object graph.</span></span>  
+## <a name="cause"></a><span data-ttu-id="94464-106">Motivo</span><span class="sxs-lookup"><span data-stu-id="94464-106">Cause</span></span>  
+ <span data-ttu-id="94464-107">Si una aplicación está ejecutando componentes de usuario no administrados, dichos componentes podrían haber dañado el montón de recolección de elementos no utilizados.</span><span class="sxs-lookup"><span data-stu-id="94464-107">If an application is running unmanaged user components, then those components might have corrupted the garbage-collected heap.</span></span> <span data-ttu-id="94464-108">Esto provoca una infracción de acceso en CLR cuando el recolector de elementos no utilizados intenta desplazarse por el gráfico de objetos.</span><span class="sxs-lookup"><span data-stu-id="94464-108">This causes an access violation in the CLR when the garbage collector tries to walk the object graph.</span></span>  
   
-## <a name="resolution"></a><span data-ttu-id="c1fae-109">Resolución</span><span class="sxs-lookup"><span data-stu-id="c1fae-109">Resolution</span></span>  
- <span data-ttu-id="c1fae-110">Al habilitar este asistente, se reduce el tiempo entre el momento en que el componente no administrado daña la pila de recolección de elementos no utilizados y el momento en que se produce la infracción de acceso al forzar que tenga lugar una recolección antes de cada transición administrada.</span><span class="sxs-lookup"><span data-stu-id="c1fae-110">Enabling this assistant reduces the time between when the unmanaged component corrupts the garbage-collected heap and when the access violation happens by forcing a garbage collection to occur before every managed transition.</span></span>  
+## <a name="resolution"></a><span data-ttu-id="94464-109">Resolución</span><span class="sxs-lookup"><span data-stu-id="94464-109">Resolution</span></span>  
+ <span data-ttu-id="94464-110">Al habilitar este asistente, se reduce el tiempo entre el momento en que el componente no administrado daña la pila de recolección de elementos no utilizados y el momento en que se produce la infracción de acceso al forzar que tenga lugar una recolección antes de cada transición administrada.</span><span class="sxs-lookup"><span data-stu-id="94464-110">Enabling this assistant reduces the time between when the unmanaged component corrupts the garbage-collected heap and when the access violation happens by forcing a garbage collection to occur before every managed transition.</span></span>  
   
-## <a name="effect-on-the-runtime"></a><span data-ttu-id="c1fae-111">Efecto en el Runtime</span><span class="sxs-lookup"><span data-stu-id="c1fae-111">Effect on the Runtime</span></span>  
- <span data-ttu-id="c1fae-112">Produce una recolección de elementos no utilizados siempre que un subproceso realice la transición de código no administrado a administrado.</span><span class="sxs-lookup"><span data-stu-id="c1fae-112">Causes a garbage collection whenever a thread transitions from unmanaged to managed code.</span></span>  
+## <a name="effect-on-the-runtime"></a><span data-ttu-id="94464-111">Efecto en el Runtime</span><span class="sxs-lookup"><span data-stu-id="94464-111">Effect on the Runtime</span></span>  
+ <span data-ttu-id="94464-112">Produce una recolección de elementos no utilizados siempre que un subproceso realice la transición de código no administrado a administrado.</span><span class="sxs-lookup"><span data-stu-id="94464-112">Causes a garbage collection whenever a thread transitions from unmanaged to managed code.</span></span>  
   
-## <a name="output"></a><span data-ttu-id="c1fae-113">Resultado</span><span class="sxs-lookup"><span data-stu-id="c1fae-113">Output</span></span>  
- <span data-ttu-id="c1fae-114">Este MDA no produce ninguna salida.</span><span class="sxs-lookup"><span data-stu-id="c1fae-114">This MDA produces no output.</span></span>  
+## <a name="output"></a><span data-ttu-id="94464-113">Resultado</span><span class="sxs-lookup"><span data-stu-id="94464-113">Output</span></span>  
+ <span data-ttu-id="94464-114">Este MDA no produce ninguna salida.</span><span class="sxs-lookup"><span data-stu-id="94464-114">This MDA produces no output.</span></span>  
   
-## <a name="configuration"></a><span data-ttu-id="c1fae-115">Configuración</span><span class="sxs-lookup"><span data-stu-id="c1fae-115">Configuration</span></span>  
+## <a name="configuration"></a><span data-ttu-id="94464-115">Configuración</span><span class="sxs-lookup"><span data-stu-id="94464-115">Configuration</span></span>  
   
 ```xml  
 <mdaConfig>  
@@ -57,8 +58,8 @@ ms.lasthandoff: 11/21/2017
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="c1fae-116">Vea también</span><span class="sxs-lookup"><span data-stu-id="c1fae-116">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="94464-116">Vea también</span><span class="sxs-lookup"><span data-stu-id="94464-116">See Also</span></span>  
  <xref:System.Runtime.InteropServices.MarshalAsAttribute>  
- [<span data-ttu-id="c1fae-117">Diagnosing Errors with Managed Debugging Assistants (Diagnóstico de errores con asistentes para la depuración administrada)</span><span class="sxs-lookup"><span data-stu-id="c1fae-117">Diagnosing Errors with Managed Debugging Assistants</span></span>](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)  
- [<span data-ttu-id="c1fae-118">gcManagedToUnmanaged</span><span class="sxs-lookup"><span data-stu-id="c1fae-118">gcManagedToUnmanaged</span></span>](../../../docs/framework/debug-trace-profile/gcmanagedtounmanaged-mda.md)  
- [<span data-ttu-id="c1fae-119">Serialización para interoperabilidad</span><span class="sxs-lookup"><span data-stu-id="c1fae-119">Interop Marshaling</span></span>](../../../docs/framework/interop/interop-marshaling.md)
+ [<span data-ttu-id="94464-117">Diagnosing Errors with Managed Debugging Assistants (Diagnóstico de errores con asistentes para la depuración administrada)</span><span class="sxs-lookup"><span data-stu-id="94464-117">Diagnosing Errors with Managed Debugging Assistants</span></span>](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)  
+ [<span data-ttu-id="94464-118">gcManagedToUnmanaged</span><span class="sxs-lookup"><span data-stu-id="94464-118">gcManagedToUnmanaged</span></span>](../../../docs/framework/debug-trace-profile/gcmanagedtounmanaged-mda.md)  
+ [<span data-ttu-id="94464-119">Serialización de interoperabilidad</span><span class="sxs-lookup"><span data-stu-id="94464-119">Interop Marshaling</span></span>](../../../docs/framework/interop/interop-marshaling.md)

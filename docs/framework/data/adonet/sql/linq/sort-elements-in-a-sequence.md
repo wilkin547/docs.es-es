@@ -16,55 +16,56 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 2f4f89c1391b6582d77acccb8b256bef617ecff3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 7a0dd445254d0434fe0825a5da0134084fbddbab
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="sort-elements-in-a-sequence"></a><span data-ttu-id="e8eb9-102">Ordenar los elementos de una secuencia</span><span class="sxs-lookup"><span data-stu-id="e8eb9-102">Sort Elements in a Sequence</span></span>
-<span data-ttu-id="e8eb9-103">Utilice el operador <xref:System.Linq.Enumerable.OrderBy%2A> para ordenar una secuencia según una o más claves.</span><span class="sxs-lookup"><span data-stu-id="e8eb9-103">Use the <xref:System.Linq.Enumerable.OrderBy%2A> operator to sort a sequence according to one or more keys.</span></span>  
+# <a name="sort-elements-in-a-sequence"></a><span data-ttu-id="06ed9-102">Ordenar los elementos de una secuencia</span><span class="sxs-lookup"><span data-stu-id="06ed9-102">Sort Elements in a Sequence</span></span>
+<span data-ttu-id="06ed9-103">Utilice el operador <xref:System.Linq.Enumerable.OrderBy%2A> para ordenar una secuencia según una o más claves.</span><span class="sxs-lookup"><span data-stu-id="06ed9-103">Use the <xref:System.Linq.Enumerable.OrderBy%2A> operator to sort a sequence according to one or more keys.</span></span>  
   
 > [!NOTE]
->  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<span data-ttu-id="e8eb9-104">está diseñado para permitir la ordenación según tipos primitivos simples, como `string`, `int`, y así sucesivamente.</span><span class="sxs-lookup"><span data-stu-id="e8eb9-104"> is designed to support ordering by simple primitive types, such as `string`, `int`, and so on.</span></span> <span data-ttu-id="e8eb9-105">No admite la ordenación de clases complejas con valores múltiples, como los tipos anónimos.</span><span class="sxs-lookup"><span data-stu-id="e8eb9-105">It does not support ordering for complex multi-valued classes, such as anonymous types.</span></span> <span data-ttu-id="e8eb9-106">Tampoco admite los tipos de datos `byte`.</span><span class="sxs-lookup"><span data-stu-id="e8eb9-106">It also does not support `byte` datatypes.</span></span>  
+>  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<span data-ttu-id="06ed9-104">está diseñado para permitir la ordenación según tipos primitivos simples, como `string`, `int`, y así sucesivamente.</span><span class="sxs-lookup"><span data-stu-id="06ed9-104"> is designed to support ordering by simple primitive types, such as `string`, `int`, and so on.</span></span> <span data-ttu-id="06ed9-105">No admite la ordenación de clases complejas con valores múltiples, como los tipos anónimos.</span><span class="sxs-lookup"><span data-stu-id="06ed9-105">It does not support ordering for complex multi-valued classes, such as anonymous types.</span></span> <span data-ttu-id="06ed9-106">Tampoco admite los tipos de datos `byte`.</span><span class="sxs-lookup"><span data-stu-id="06ed9-106">It also does not support `byte` datatypes.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="e8eb9-107">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="e8eb9-107">Example</span></span>  
- <span data-ttu-id="e8eb9-108">En el ejemplo siguiente se ordena `Employees` por fecha de contratación.</span><span class="sxs-lookup"><span data-stu-id="e8eb9-108">The following example sorts `Employees` by date of hire.</span></span>  
+## <a name="example"></a><span data-ttu-id="06ed9-107">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="06ed9-107">Example</span></span>  
+ <span data-ttu-id="06ed9-108">En el ejemplo siguiente se ordena `Employees` por fecha de contratación.</span><span class="sxs-lookup"><span data-stu-id="06ed9-108">The following example sorts `Employees` by date of hire.</span></span>  
   
  [!code-csharp[DLinqQueryExamples#20](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#20)]
  [!code-vb[DLinqQueryExamples#20](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#20)]  
   
-## <a name="example"></a><span data-ttu-id="e8eb9-109">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="e8eb9-109">Example</span></span>  
- <span data-ttu-id="e8eb9-110">En el ejemplo siguiente se utiliza `where` para ordenar los `Orders` distribuidos a `London` por flete.</span><span class="sxs-lookup"><span data-stu-id="e8eb9-110">The following example uses `where` to sort `Orders` shipped to `London` by freight.</span></span>  
+## <a name="example"></a><span data-ttu-id="06ed9-109">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="06ed9-109">Example</span></span>  
+ <span data-ttu-id="06ed9-110">En el ejemplo siguiente se utiliza `where` para ordenar los `Orders` distribuidos a `London` por flete.</span><span class="sxs-lookup"><span data-stu-id="06ed9-110">The following example uses `where` to sort `Orders` shipped to `London` by freight.</span></span>  
   
  [!code-csharp[DLinqQueryExamples#21](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#21)]
  [!code-vb[DLinqQueryExamples#21](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#21)]  
   
-## <a name="example"></a><span data-ttu-id="e8eb9-111">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="e8eb9-111">Example</span></span>  
- <span data-ttu-id="e8eb9-112">En el ejemplo siguiente se ordenan los `Products` por precio unitario, de mayor a menor.</span><span class="sxs-lookup"><span data-stu-id="e8eb9-112">The following example sorts `Products` by unit price from highest to lowest.</span></span>  
+## <a name="example"></a><span data-ttu-id="06ed9-111">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="06ed9-111">Example</span></span>  
+ <span data-ttu-id="06ed9-112">En el ejemplo siguiente se ordenan los `Products` por precio unitario, de mayor a menor.</span><span class="sxs-lookup"><span data-stu-id="06ed9-112">The following example sorts `Products` by unit price from highest to lowest.</span></span>  
   
  [!code-csharp[DLinqQueryExamples#22](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#22)]
  [!code-vb[DLinqQueryExamples#22](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#22)]  
   
-## <a name="example"></a><span data-ttu-id="e8eb9-113">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="e8eb9-113">Example</span></span>  
- <span data-ttu-id="e8eb9-114">En el ejemplo siguiente se utiliza una cláusula `OrderBy` compuesta para ordenar los `Customers` por ciudad y, después, por nombre de contacto.</span><span class="sxs-lookup"><span data-stu-id="e8eb9-114">The following example uses a compound `OrderBy` to sort `Customers` by city and then by contact name.</span></span>  
+## <a name="example"></a><span data-ttu-id="06ed9-113">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="06ed9-113">Example</span></span>  
+ <span data-ttu-id="06ed9-114">En el ejemplo siguiente se utiliza una cláusula `OrderBy` compuesta para ordenar los `Customers` por ciudad y, después, por nombre de contacto.</span><span class="sxs-lookup"><span data-stu-id="06ed9-114">The following example uses a compound `OrderBy` to sort `Customers` by city and then by contact name.</span></span>  
   
  [!code-csharp[DLinqQueryExamples#24](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#24)]
  [!code-vb[DLinqQueryExamples#24](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#24)]  
   
-## <a name="example"></a><span data-ttu-id="e8eb9-115">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="e8eb9-115">Example</span></span>  
- <span data-ttu-id="e8eb9-116">En el ejemplo siguiente se ordenan los pedidos de `EmployeeID 1` por país de destino y, después, por flete, de mayor a menor.</span><span class="sxs-lookup"><span data-stu-id="e8eb9-116">The following example sorts Orders from `EmployeeID 1` by ship-to country, and then by highest to lowest freight.</span></span>  
+## <a name="example"></a><span data-ttu-id="06ed9-115">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="06ed9-115">Example</span></span>  
+ <span data-ttu-id="06ed9-116">En el ejemplo siguiente se ordenan los pedidos de `EmployeeID 1` por país de destino y, después, por flete, de mayor a menor.</span><span class="sxs-lookup"><span data-stu-id="06ed9-116">The following example sorts Orders from `EmployeeID 1` by ship-to country, and then by highest to lowest freight.</span></span>  
   
  [!code-csharp[DLinqQueryExamples#25](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#25)]
  [!code-vb[DLinqQueryExamples#25](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#25)]  
   
-## <a name="example"></a><span data-ttu-id="e8eb9-117">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="e8eb9-117">Example</span></span>  
- <span data-ttu-id="e8eb9-118">En el ejemplo siguiente se combinan los operadores <xref:System.Linq.Enumerable.OrderBy%2A>, <xref:System.Linq.Enumerable.Max%2A> y <xref:System.Linq.Enumerable.GroupBy%2A> para buscar los `Products` que tienen el precio unitario más alto en cada categoría y, después, se ordena el grupo por identificador de categoría.</span><span class="sxs-lookup"><span data-stu-id="e8eb9-118">The following example combines <xref:System.Linq.Enumerable.OrderBy%2A>, <xref:System.Linq.Enumerable.Max%2A>, and <xref:System.Linq.Enumerable.GroupBy%2A> operators to find the `Products` that have the highest unit price in each category, and then sorts the group by category id.</span></span>  
+## <a name="example"></a><span data-ttu-id="06ed9-117">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="06ed9-117">Example</span></span>  
+ <span data-ttu-id="06ed9-118">En el ejemplo siguiente se combinan los operadores <xref:System.Linq.Enumerable.OrderBy%2A>, <xref:System.Linq.Enumerable.Max%2A> y <xref:System.Linq.Enumerable.GroupBy%2A> para buscar los `Products` que tienen el precio unitario más alto en cada categoría y, después, se ordena el grupo por identificador de categoría.</span><span class="sxs-lookup"><span data-stu-id="06ed9-118">The following example combines <xref:System.Linq.Enumerable.OrderBy%2A>, <xref:System.Linq.Enumerable.Max%2A>, and <xref:System.Linq.Enumerable.GroupBy%2A> operators to find the `Products` that have the highest unit price in each category, and then sorts the group by category id.</span></span>  
   
  [!code-csharp[DLinqQueryExamples#26](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#26)]
  [!code-vb[DLinqQueryExamples#26](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#26)]  
   
- <span data-ttu-id="e8eb9-119">Si ejecuta la consulta anterior en la base de datos de ejemplo Northwind, los resultados se parecerán a los siguientes:</span><span class="sxs-lookup"><span data-stu-id="e8eb9-119">If you run the previous query against the Northwind sample database, the results will resemble the following:</span></span>  
+ <span data-ttu-id="06ed9-119">Si ejecuta la consulta anterior en la base de datos de ejemplo Northwind, los resultados se parecerán a los siguientes:</span><span class="sxs-lookup"><span data-stu-id="06ed9-119">If you run the previous query against the Northwind sample database, the results will resemble the following:</span></span>  
   
  `1`  
   
@@ -98,6 +99,6 @@ ms.lasthandoff: 11/21/2017
   
  `Carnarvon Tigers`  
   
-## <a name="see-also"></a><span data-ttu-id="e8eb9-120">Vea también</span><span class="sxs-lookup"><span data-stu-id="e8eb9-120">See Also</span></span>  
- [<span data-ttu-id="e8eb9-121">Ejemplos de consultas</span><span class="sxs-lookup"><span data-stu-id="e8eb9-121">Query Examples</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)  
- [<span data-ttu-id="e8eb9-122">Descargar bases de datos de ejemplo</span><span class="sxs-lookup"><span data-stu-id="e8eb9-122">Downloading Sample Databases</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)
+## <a name="see-also"></a><span data-ttu-id="06ed9-120">Vea también</span><span class="sxs-lookup"><span data-stu-id="06ed9-120">See Also</span></span>  
+ [<span data-ttu-id="06ed9-121">Ejemplos de consultas</span><span class="sxs-lookup"><span data-stu-id="06ed9-121">Query Examples</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)  
+ [<span data-ttu-id="06ed9-122">Descargar bases de datos de ejemplo</span><span class="sxs-lookup"><span data-stu-id="06ed9-122">Downloading Sample Databases</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)

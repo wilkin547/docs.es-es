@@ -13,16 +13,17 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: a2187e317229961b0929f1415cd40f6f65f5c593
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 81643b9a4a1cd49e950010c0023b27108d34180c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="-not-equal-to-entity-sql"></a><span data-ttu-id="1ac82-102">!= (Distinto de) (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="1ac82-102">!= (Not Equal To) (Entity SQL)</span></span>
-<span data-ttu-id="1ac82-103">Compara dos expresiones para determinar si la expresión de la izquierda no es igual que la expresión de la derecha.</span><span class="sxs-lookup"><span data-stu-id="1ac82-103">Compares two expressions to determine whether the left expression is not equal to the right expression.</span></span> <span data-ttu-id="1ac82-104">El operador != (No es igual a) es funcionalmente equivalente al operador <>.</span><span class="sxs-lookup"><span data-stu-id="1ac82-104">The != (Not Equal To) operator is functionally equivalent to the <> operator.</span></span>  
+# <a name="-not-equal-to-entity-sql"></a><span data-ttu-id="fe380-102">!= (Distinto de) (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="fe380-102">!= (Not Equal To) (Entity SQL)</span></span>
+<span data-ttu-id="fe380-103">Compara dos expresiones para determinar si la expresión de la izquierda no es igual que la expresión de la derecha.</span><span class="sxs-lookup"><span data-stu-id="fe380-103">Compares two expressions to determine whether the left expression is not equal to the right expression.</span></span> <span data-ttu-id="fe380-104">El operador != (No es igual a) es funcionalmente equivalente al operador <>.</span><span class="sxs-lookup"><span data-stu-id="fe380-104">The != (Not Equal To) operator is functionally equivalent to the <> operator.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="1ac82-105">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="1ac82-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="fe380-105">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="fe380-105">Syntax</span></span>  
   
 ```  
 expression != expression  
@@ -30,21 +31,21 @@ or
 expression <> expression  
 ```  
   
-## <a name="arguments"></a><span data-ttu-id="1ac82-106">Argumentos</span><span class="sxs-lookup"><span data-stu-id="1ac82-106">Arguments</span></span>  
+## <a name="arguments"></a><span data-ttu-id="fe380-106">Argumentos</span><span class="sxs-lookup"><span data-stu-id="fe380-106">Arguments</span></span>  
  `expression`  
- <span data-ttu-id="1ac82-107">Cualquier expresión válida.</span><span class="sxs-lookup"><span data-stu-id="1ac82-107">Any valid expression.</span></span> <span data-ttu-id="1ac82-108">Ambas expresiones deben tener tipos de datos convertibles implícitamente.</span><span class="sxs-lookup"><span data-stu-id="1ac82-108">Both expressions must have implicitly convertible data types.</span></span>  
+ <span data-ttu-id="fe380-107">Cualquier expresión válida.</span><span class="sxs-lookup"><span data-stu-id="fe380-107">Any valid expression.</span></span> <span data-ttu-id="fe380-108">Ambas expresiones deben tener tipos de datos convertibles implícitamente.</span><span class="sxs-lookup"><span data-stu-id="fe380-108">Both expressions must have implicitly convertible data types.</span></span>  
   
-## <a name="result-types"></a><span data-ttu-id="1ac82-109">Tipos de resultado</span><span class="sxs-lookup"><span data-stu-id="1ac82-109">Result Types</span></span>  
- <span data-ttu-id="1ac82-110">`true` si la expresión de la izquierda no es igual a la expresión de la derecha; de lo contrario, `false`.</span><span class="sxs-lookup"><span data-stu-id="1ac82-110">`true` if the left expression is not equal to the right expression; otherwise, `false`.</span></span>  
+## <a name="result-types"></a><span data-ttu-id="fe380-109">Tipos de resultado</span><span class="sxs-lookup"><span data-stu-id="fe380-109">Result Types</span></span>  
+ <span data-ttu-id="fe380-110">`true` si la expresión de la izquierda no es igual a la expresión de la derecha; de lo contrario, `false`.</span><span class="sxs-lookup"><span data-stu-id="fe380-110">`true` if the left expression is not equal to the right expression; otherwise, `false`.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="1ac82-111">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="1ac82-111">Example</span></span>  
- <span data-ttu-id="1ac82-112">La consulta de Entity SQL siguiente usa el operador != para comparar dos expresiones con el fin de determinar si la expresión de la izquierda es distinta de la expresión de la derecha.</span><span class="sxs-lookup"><span data-stu-id="1ac82-112">The following Entity SQL query uses the != operator to compare two expressions to determine whether the left expression is not equal to the right expression.</span></span> <span data-ttu-id="1ac82-113">La consulta se basa en el modelo AdventureWorks Sales.</span><span class="sxs-lookup"><span data-stu-id="1ac82-113">The query is based on the AdventureWorks Sales Model.</span></span> <span data-ttu-id="1ac82-114">Para compilar y ejecutar esta consulta, siga estos pasos:</span><span class="sxs-lookup"><span data-stu-id="1ac82-114">To compile and run this query, follow these steps:</span></span>  
+## <a name="example"></a><span data-ttu-id="fe380-111">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="fe380-111">Example</span></span>  
+ <span data-ttu-id="fe380-112">La consulta de Entity SQL siguiente usa el operador != para comparar dos expresiones con el fin de determinar si la expresión de la izquierda es distinta de la expresión de la derecha.</span><span class="sxs-lookup"><span data-stu-id="fe380-112">The following Entity SQL query uses the != operator to compare two expressions to determine whether the left expression is not equal to the right expression.</span></span> <span data-ttu-id="fe380-113">La consulta se basa en el modelo AdventureWorks Sales.</span><span class="sxs-lookup"><span data-stu-id="fe380-113">The query is based on the AdventureWorks Sales Model.</span></span> <span data-ttu-id="fe380-114">Para compilar y ejecutar esta consulta, siga estos pasos:</span><span class="sxs-lookup"><span data-stu-id="fe380-114">To compile and run this query, follow these steps:</span></span>  
   
-1.  <span data-ttu-id="1ac82-115">Siga el procedimiento de [How to: Execute a Query that Returns StructuralType Results](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).</span><span class="sxs-lookup"><span data-stu-id="1ac82-115">Follow the procedure in [How to: Execute a Query that Returns StructuralType Results](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).</span></span>  
+1.  <span data-ttu-id="fe380-115">Siga el procedimiento de [How to: Execute a Query that Returns StructuralType Results](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).</span><span class="sxs-lookup"><span data-stu-id="fe380-115">Follow the procedure in [How to: Execute a Query that Returns StructuralType Results](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).</span></span>  
   
-2.  <span data-ttu-id="1ac82-116">Pase la consulta siguiente como argumento al método `ExecuteStructuralTypeQuery` :</span><span class="sxs-lookup"><span data-stu-id="1ac82-116">Pass the following query as an argument to the `ExecuteStructuralTypeQuery` method:</span></span>  
+2.  <span data-ttu-id="fe380-116">Pase la consulta siguiente como argumento al método `ExecuteStructuralTypeQuery` :</span><span class="sxs-lookup"><span data-stu-id="fe380-116">Pass the following query as an argument to the `ExecuteStructuralTypeQuery` method:</span></span>  
   
  [!code-csharp[DP EntityServices Concepts 2#NOT_EQUALS](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#not_equals)]  
   
-## <a name="see-also"></a><span data-ttu-id="1ac82-117">Vea también</span><span class="sxs-lookup"><span data-stu-id="1ac82-117">See Also</span></span>  
- [<span data-ttu-id="1ac82-118">Referencia de Entity SQL</span><span class="sxs-lookup"><span data-stu-id="1ac82-118">Entity SQL Reference</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+## <a name="see-also"></a><span data-ttu-id="fe380-117">Vea también</span><span class="sxs-lookup"><span data-stu-id="fe380-117">See Also</span></span>  
+ [<span data-ttu-id="fe380-118">Referencia de Entity SQL</span><span class="sxs-lookup"><span data-stu-id="fe380-118">Entity SQL Reference</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
