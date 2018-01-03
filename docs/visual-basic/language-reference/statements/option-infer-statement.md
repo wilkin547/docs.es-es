@@ -19,11 +19,11 @@ ms.assetid: 4ad3e6e9-8f5b-4209-a248-de22ef6e4652
 caps.latest.revision: "72"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 4634c198b5fc41a4834cbd3cd96f9d3f1863d09b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 1c8bd94bc8dd379edfda8c4350428684a5cda0b1
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="option-infer-statement"></a>Option Infer (instrucción)
 Permite el uso de la inferencia de tipo de variable local en la declaración de variables.  
@@ -68,13 +68,13 @@ IntelliSense cuando Option Infer está desactivado
   
 #### <a name="to-set-option-infer-in-the-ide"></a>Cómo establecer Option Infer en el IDE  
   
-1.  En el **Explorador de soluciones**, seleccione un proyecto. En el menú **Proyecto**, haga clic en **Propiedades**. Para obtener más información, consulte [NIB: administración de propiedades del proyecto con el Diseñador de proyectos](http://msdn.microsoft.com/en-us/983f3c18-832f-4666-afec-74b716ff3e0e).  
+1.  En el **Explorador de soluciones**, seleccione un proyecto. En el menú **Proyecto**, haga clic en **Propiedades**.  
   
 2.  Haga clic en la pestaña **Compilar**.  
   
 3.  Establezca el valor el **Option infer** cuadro.  
   
- Cuando se crea un nuevo proyecto, el **Option Infer** en el **compilar** ficha está establecida en el **Option Infer** en el **valores predeterminados de VB** cuadro de diálogo. Para tener acceso a la **valores predeterminados de VB** cuadro de diálogo, en la **herramientas** menú, haga clic en **opciones**. En el **opciones** cuadro de diálogo, expanda **proyectos y soluciones**y, a continuación, haga clic en **valores predeterminados de VB**. El valor predeterminado inicial de **valores predeterminados de VB** es `On`.  
+ Cuando se crea un nuevo proyecto, el **Option Infer** en el **compilar** ficha está establecida en el **Option Infer** en el **valores predeterminados de VB** cuadro de diálogo. Para tener acceso a la **valores predeterminados de VB** cuadro de diálogo, en la **herramientas** menú, haga clic en **opciones**. En el cuadro de diálogo **Opciones**, expanda **Proyectos y soluciones** y, después, haga clic en **Valores predeterminados de VB**. El valor predeterminado inicial de **valores predeterminados de VB** es `On`.  
   
 #### <a name="to-set-option-infer-on-the-command-line"></a>Cómo establecer Option Infer en la línea de comandos  
   

@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: f820ad757fa6bf5b8367c5c39beff5cc680e519a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: c97d98415e1b303c5849f15c4a7bfcca6fd285a4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="entity-data-model-key-concepts"></a>Conceptos clave de Entity Data Model
 Entity Data Model (EDM) utiliza tres conceptos clave para describir la estructura de datos: *tipo de entidad*, *tipo de asociación*, y *propiedad*. Estos son los conceptos más importantes para describir la estructura de datos en cualquier implementación de EDM.  
@@ -32,7 +33,7 @@ Entity Data Model (EDM) utiliza tres conceptos clave para describir la estructur
   
  En una aplicación, una instancia de una asociación representa una asociación concreta (como por ejemplo una asociación entre una instancia Customer y una instancia Order). Instancias de la asociación se agrupan lógicamente en un [conjunto de asociaciones](../../../../docs/framework/data/adonet/association-set.md). Conjuntos de asociaciones (y [conjuntos de entidades](../../../../docs/framework/data/adonet/entity-set.md)) se agrupan lógicamente en un [contenedor de entidades](../../../../docs/framework/data/adonet/entity-container.md).  
   
-## <a name="property"></a>Propiedad  
+## <a name="property"></a>Property  
  [Tipos de entidad](../../../../docs/framework/data/adonet/entity-type.md) contienen [propiedades](../../../../docs/framework/data/adonet/property.md) que definen su estructura y sus características. Por ejemplo, un tipo de entidad Customer puede tener propiedades como CustomerId, Name y Address.  
   
  Las propiedades en un modelo conceptual son análogas a las propiedades definidas en una clase en un programa. Del mismo modo que las propiedades en una clase definen la forma de la clase y proporcionan información sobre los objetos, las propiedades en un modelo conceptual definen la forma de un tipo de entidad y proporcionan información sobre las instancias del tipo de entidad.  

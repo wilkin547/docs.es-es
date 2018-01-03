@@ -13,11 +13,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 87fd7dc848e59cd8fb58131cf24cae4038ea82d3
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 441ec2cd07d46d44f527da7799e9df6d3bec4408
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltmsmqtransportgt"></a>&lt;msmqTransport&gt;
 Produce un canal a los mensajes de las transferencias en el transporte de MSMQ cuando está incluido en un enlace personalizado.  
@@ -103,7 +104,7 @@ Produce un canal a los mensajes de las transferencias en el transporte de MSMQ c
  <xref:System.ServiceModel.Channels.CustomBinding>  
  [Colas en WCF](../../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)  
  [Transportes](../../../../../docs/framework/wcf/feature-details/transports.md)  
- [Elegir un transporte](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)  
+ [Elección del transporte](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)  
  [Enlaces](../../../../../docs/framework/wcf/bindings.md)  
  [Extensión de enlaces](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
  [Enlaces personalizados](../../../../../docs/framework/wcf/extending/custom-bindings.md)  

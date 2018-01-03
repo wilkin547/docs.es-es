@@ -16,11 +16,12 @@ caps.latest.revision: "5"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 4d48cc329644873be268606409c154ffe832cd91
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 5957dee03d7f3cd54b3fdacd0d38dead5bbc077d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="specifying-xml-values-as-parameters"></a>Especificar valores XML como parámetros
 Si una consulta requiere un parámetro cuyo valor es una cadena XML, los programadores pueden suministrar ese valor mediante una instancia de la **SqlXml** tipo de datos. En realidad no se trata de ningún truco; las columnas XML de [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] aceptan valores de parámetros exactamente igual que otros tipos de datos.  

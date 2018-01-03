@@ -14,11 +14,11 @@ ms.assetid: ffa82a4b-517a-4c6c-9889-5bae7b534bb8
 caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: b7f41b659399ae5a12663d4e359c02606bb6f952
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: e0be7d230f16750395aaceb3c94539546716b8fd
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="keyfile"></a>/keyfile
 Especifica un archivo que contiene una clave o un par de claves que asigna un nombre seguro al ensamblado.  
@@ -31,10 +31,10 @@ Especifica un archivo que contiene una clave o un par de claves que asigna un no
   
 ## <a name="arguments"></a>Argumentos  
  `file`  
- Obligatorio. Archivo que contiene la clave. Si el nombre de archivo contiene un espacio, incluya el nombre entre comillas ("").  
+ Requerido. Archivo que contiene la clave. Si el nombre de archivo contiene un espacio, incluya el nombre entre comillas ("").  
   
 ## <a name="remarks"></a>Comentarios  
- El compilador inserta la clave pública en el manifiesto del ensamblado y firma después el ensamblado final con la clave privada. Para generar un archivo de clave, escriba `sn -k file` en la línea de comandos. Para obtener más información, vea [Sn.exe (Strong Name Tool)](https://msdn.microsoft.com/library/k5b5tt23).  
+ El compilador inserta la clave pública en el manifiesto del ensamblado y firma después el ensamblado final con la clave privada. Para generar un archivo de clave, escriba `sn -k file` en la línea de comandos. Para obtener más información, consulte [Sn.exe (herramienta de nombre seguro)][Sn.exe (herramienta de nombre seguro)](../../../framework/tools/sn-exe-strong-name-tool.md)).  
   
  Si se compila con `/target:module`, el nombre del archivo de clave se mantiene en el módulo y se incorpora en el ensamblado que se crea cuando se compila un ensamblado con [/addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md).  
   
@@ -46,7 +46,7 @@ Especifica un archivo que contiene una clave o un par de claves que asigna un no
   
  Tenga en cuenta que un archivo de clave puede contener solo la clave pública.  
   
- Vea [crear y utilizar ensamblados](../../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md) para obtener más información sobre cómo firmar un ensamblado.  
+ Vea [crear y utilizar ensamblados](../../../framework/app-domains/create-and-use-strong-named-assemblies.md) para obtener más información sobre cómo firmar un ensamblado.  
   
 > [!NOTE]
 >  El `/keyfile` opción no está disponible en la [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] entorno de desarrollo; está disponible solo cuando se compila desde la línea de comandos.  

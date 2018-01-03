@@ -14,11 +14,11 @@ ms.assetid: 2e7eb2b9-eda6-4bdb-95cc-72c7f0be7528
 caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 9dcf3d4bec379faa5783ca17847b91f9739df598
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: b19b6439d85822c69adac0b3e0e04b2f31299836
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="unable-to-emit-assembly-lterror-messagegt"></a>No se puede emitir el ensamblado: &lt;mensaje de error&gt;
 El compilador de [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] llama a Assembly Linker (Al.exe, también denominado Alink) para generar un ensamblado con un manifiesto; el vinculador informa de un error en la fase de emisión de la creación del ensamblado.  
@@ -27,15 +27,15 @@ El compilador de [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] llama a Assembly Li
   
 ## <a name="to-correct-this-error"></a>Para corregir este error  
   
-1.  Examine el mensaje de error citado y consulte el tema [Errores y advertencias de la herramienta Al.exe](http://msdn.microsoft.com/en-us/7f125d49-0a03-47a6-9ba9-d61a679a7d4b) para obtener una explicación más detallada y consejos.  
+1.  Examine el mensaje de error citado y consulte el tema [Al.exe](../../../framework/tools/al-exe-assembly-linker.md). Para obtener una explicación y consejos.  
   
-2.  Intente firmar el ensamblado manualmente, mediante la [Al.exe (Assembly Linker)](https://msdn.microsoft.com/library/c405shex) o [Sn.exe (herramienta de nombre seguro)](https://msdn.microsoft.com/library/k5b5tt23).  
+2.  Intente firmar el ensamblado manualmente, mediante la [Al.exe](../../../framework/tools/al-exe-assembly-linker.md) o [Sn.exe (herramienta de nombre seguro)](../../../framework/tools/sn-exe-strong-name-tool.md).  
   
 3.  Si el error persiste, reúna información sobre las circunstancias y notifíquelo a los Servicios de soporte técnico de Microsoft.  
   
 ### <a name="to-sign-the-assembly-manually"></a>Para firmar el ensamblado manualmente  
   
-1.  Use la [Sn.exe (herramienta de nombre seguro)](https://msdn.microsoft.com/library/k5b5tt23) para crear un archivo de par de claves pública y privada.  
+1.  Use el [Sn.exe (herramienta de nombre seguro)][Sn.exe (herramienta de nombre seguro)](../../../framework/tools/sn-exe-strong-name-tool.md)) para crear un archivo de par de claves pública y privada.  
   
      Este archivo tiene la extensión .snk.  
   
@@ -62,8 +62,8 @@ El compilador de [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] llama a Assembly Li
 6.  En [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)], agregue una referencia de ensamblado de .NET al archivo que acaba de crear.  
   
 ## <a name="see-also"></a>Vea también  
- [Al.exe (Assembly Linker)](https://msdn.microsoft.com/library/c405shex)  
- [Las advertencias y errores de la herramienta Al.exe](http://msdn.microsoft.com/en-us/7f125d49-0a03-47a6-9ba9-d61a679a7d4b)  
- [Sn.exe (Herramienta de nombre seguro)](https://msdn.microsoft.com/library/k5b5tt23)  
- [How to: Create a Public-Private Key Pair](http://msdn.microsoft.com/library/05026813-f3bd-4d7c-9e0b-fc588eb3d114) (Cómo: Crear un par de claves pública y privada)  
+ 
+ [Al.exe](../../../framework/tools/al-exe-assembly-linker.md).  
+ [Sn.exe (herramienta de nombre seguro)] [Sn.exe (herramienta de nombre seguro)](../../../framework/tools/sn-exe-strong-name-tool.md))  
+ [Cómo: Crear un par de claves pública y privada](../../../framework/app-domains/how-to-create-a-public-private-key-pair.md)  
  [Hable con nosotros](/visualstudio/ide/talk-to-us)

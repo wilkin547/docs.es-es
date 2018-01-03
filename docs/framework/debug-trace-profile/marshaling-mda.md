@@ -18,11 +18,12 @@ caps.latest.revision: "12"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 3f92e849798f03702ca9a5eab3120067a651c999
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 83b621f78e3ba4641540f6125ed14d600cc292d1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="marshaling-mda"></a>MDA de serialización
 El asistente para la depuración administrada (MDA) `marshaling` se activa cuando el CLR establece la información de cálculo de referencias para un parámetro de método o un campo de una estructura. Este MDA no funciona para los ensamblados con compilación JIT.  
@@ -61,4 +62,4 @@ name="assembly!Namespace.Class::myChar
 ## <a name="see-also"></a>Vea también  
  <xref:System.Runtime.InteropServices.MarshalAsAttribute>  
  [Diagnosing Errors with Managed Debugging Assistants (Diagnóstico de errores con asistentes para la depuración administrada)](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)  
- [Serialización para interoperabilidad](../../../docs/framework/interop/interop-marshaling.md)
+ [Serialización de interoperabilidad](../../../docs/framework/interop/interop-marshaling.md)

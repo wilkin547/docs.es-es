@@ -14,11 +14,11 @@ ms.assetid: aecaab01-9353-46c5-941c-6edabd4eff92
 caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 65149c617220966bc3bb6897d757a71cd60167d6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 4fc5210d2dcf30d9c4603b67b890c78510af1338
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="win32icon"></a>/win32icon
 Inserta un archivo .ico en el archivo de salida. Este archivo .ico representa el archivo de salida en **Explorador de archivos**.  
@@ -42,7 +42,7 @@ Inserta un archivo .ico en el archivo de salida. Este archivo .ico representa el
   
 |Para establecer /win32icon en el IDE de Visual Studio|  
 |---|  
-|1.  Seleccione un proyecto en el **Explorador de soluciones**. En el menú **Proyecto**, haga clic en **Propiedades**. Para obtener más información, consulte [Introducción al Diseñador de proyectos](http://msdn.microsoft.com/en-us/898dd854-c98d-430c-ba1b-a913ce3c73d7).<br />2.  Haga clic en la pestaña **Aplicación** .<br />3.  Modifique el valor en el **icono** cuadro.|  
+|1.  Seleccione un proyecto en el **Explorador de soluciones**. En el menú **Proyecto**, haga clic en **Propiedades**. <br />2.  Haga clic en la pestaña **Aplicación** .<br />3.  Modifique el valor en el **icono** cuadro.|  
   
 ## <a name="example"></a>Ejemplo  
  El siguiente código compila `In.vb` y adjunta un archivo .ico, `Rf.ico`.  

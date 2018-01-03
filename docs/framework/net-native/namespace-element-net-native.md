@@ -13,11 +13,12 @@ caps.latest.revision: "20"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 014dc690d034c27f0f004172fb8108249bb5c89b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ed448ea3af702706b45e27e923ebe540d83de868
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltnamespacegt-element-net-native"></a>Elemento &lt;Namespace&gt; (.NET Native)
 Aplica la de reflexión en tiempo de ejecución a todos los tipos en un espacio de nombres especificado.  
@@ -63,7 +64,7 @@ Aplica la de reflexión en tiempo de ejecución a todos los tipos en un espacio 
 |-----------|-----------------|  
 |*namespace_name*|El espacio de nombres. Si \<Namespace> es un elemento secundario de un elemento [\<Application>](../../../docs/framework/net-native/application-element-net-native.md), [\<Library>](../../../docs/framework/net-native/library-element-net-native.md) o [\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md), *namespace_name* debe ser un nombre de espacio de nombres completo. Si \<Namespace> es un elemento secundario de otro elemento \<Namespace>, *namespace_name* debe ser un nombre de espacio de nombres relativo.|  
   
-## <a name="all-other-attributes"></a>Resto de atributos  
+## <a name="all-other-attributes"></a>Todos los demás atributos  
   
 |Valor|Descripción|  
 |-----------|-----------------|  

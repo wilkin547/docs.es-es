@@ -19,11 +19,12 @@ caps.latest.revision: "11"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: ee537dcb03dc76968b829f827c73542c07922a3b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f97fb7f9bdb144f2b586c387f33211734f664eb0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="invalidvariant-mda"></a>MDA de invalidVariant
 El asistente para la depuración administrada (MDA) de `invalidVariant` se activa cuando se encuentra una estructura `VARIANT` no válida durante una llamada de código nativo o no administrado a un código administrado.  
@@ -56,4 +57,4 @@ El asistente para la depuración administrada (MDA) de `invalidVariant` se activ
 ## <a name="see-also"></a>Vea también  
  <xref:System.Runtime.InteropServices.MarshalAsAttribute>  
  [Diagnosing Errors with Managed Debugging Assistants (Diagnóstico de errores con asistentes para la depuración administrada)](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)  
- [Serialización para interoperabilidad](../../../docs/framework/interop/interop-marshaling.md)
+ [Serialización de interoperabilidad](../../../docs/framework/interop/interop-marshaling.md)

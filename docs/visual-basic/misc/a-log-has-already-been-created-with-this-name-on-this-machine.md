@@ -8,11 +8,11 @@ ms.assetid: 3dd78d9f-890e-4409-bebb-048fdf34711b
 caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: c6c0b29660d222c4499a90ac6a5095f509cde6e2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f2052fd81fa5856914a676aa6985eeb51c892788
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="a-log-has-already-been-created-with-this-name-on-this-machine"></a>Ya ha creado un registro con este nombre en esta máquina
 Se ha intentado crear un registro con un nombre que ya está en uso.  
@@ -24,7 +24,7 @@ Se ha intentado crear un registro con un nombre que ya está en uso.
 -   Use un nombre diferente para el registro.  
   
 ## <a name="see-also"></a>Vea también  
- [My.Application.Log (objeto)](../../visual-basic/language-reference/objects/my-application-log-object.md)  
+ [My.Application.Log](xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.Log)  
  [Escribir mensajes de registro](../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)  
  [Registrar mensajes cuando se inicia o se cierra la aplicación](../../visual-basic/developing-apps/programming/log-info/how-to-log-messages-when-the-application-starts-or-shuts-down.md)  
  [Cómo: Escribir el registro de eventos de una aplicación](../../visual-basic/developing-apps/programming/log-info/how-to-write-to-an-application-event-log.md)  

@@ -15,11 +15,11 @@ ms.assetid: f33126c5-d7c4-43e2-8e36-4ae3f0703d97
 caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 99f5129d5cb43cddfb17731f337a72fae22d3626
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 0bc2f5c2dca1fbd6039f10ddd6204673f60a679d
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="yield-statement-visual-basic"></a>Yield (Instrucción) (Visual Basic)
 Envía el siguiente elemento de una colección para un `For Each...Next` instrucción.  
@@ -34,7 +34,7 @@ Yield expression
   
 |Término|Definición|  
 |---|---|  
-|`expression`|Obligatorio. Una expresión que sea implícitamente convertible al tipo de la función del iterador o `Get` descriptor de acceso que contiene el `Yield` instrucción.|  
+|`expression`|Requerido. Una expresión que sea implícitamente convertible al tipo de la función del iterador o `Get` descriptor de acceso que contiene el `Yield` instrucción.|  
   
 ## <a name="remarks"></a>Comentarios  
  El `Yield` instrucción devuelve un elemento de una colección a la vez. El `Yield` instrucción se incluye en una función de iterador o `Get` descriptor de acceso, que realizan iteraciones personalizadas en una colección.  
@@ -47,7 +47,7 @@ Yield expression
   
  "Producción" no es una palabra reservada y tiene un significado especial solo cuando se usa en un `Iterator` función o `Get` descriptor de acceso.  
   
- Para obtener más información acerca de las funciones de iterador y `Get` descriptores de acceso, consulte [iteradores](http://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7).  
+ Para obtener más información acerca de las funciones de iterador y `Get` descriptores de acceso, consulte [iteradores](../../programming-guide/concepts/iterators.md).  
   
 ## <a name="iterator-functions-and-get-accessors"></a>Funciones de iterador y descriptores de acceso Get  
  La declaración de una función de iterador o `Get` descriptor de acceso debe cumplir los siguientes requisitos:  
@@ -60,7 +60,7 @@ Yield expression
   
  Una función de iterador no se puede producir en un evento, un constructor de instancia, un constructor estático o un destructor estático.  
   
- Una función de iterador puede ser una función anónima. Para más información, vea [Iteradores](http://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7).  
+ Una función de iterador puede ser una función anónima. Para obtener más información, consulta [Iteradores](../../programming-guide/concepts/iterators.md).  
   
 ## <a name="exception-handling"></a>Control de excepciones  
  A `Yield` instrucción puede estar dentro de un `Try` bloquear de un [intente... Catch... Finally (instrucción)](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md). A `Try` bloque con un `Yield` instrucción puede tener `Catch` bloquea y puede tener un `Finally` bloque.  
@@ -97,8 +97,7 @@ Next
   
  [!code-vb[VbVbalrStatements#99](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/yield-statement_2.vb)]  
   
- Para obtener ejemplos adicionales, vea [iteradores](http://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7).  
+ Para obtener ejemplos adicionales, vea [iteradores](../../programming-guide/concepts/iterators.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Iteradores](http://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7)  
  [Instrucciones](../../../visual-basic/language-reference/statements/index.md)

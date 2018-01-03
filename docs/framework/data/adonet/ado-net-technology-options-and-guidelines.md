@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 7f679cdf65d30b47037c1d94a1e7fb6eba3572c8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 11ca23427460ed4c469fc45e43f3b32e4ec5eb25
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="adonet-technology-options-and-guidelines"></a>Directrices y opciones de tecnología de ADO.NET
 La plataforma de datos ADO.NET es una estrategia para varias versiones mediante la cual se reduce la cantidad de código y el mantenimiento que necesitan los programadores con el fin de poder programar en modelos de datos de entidades conceptuales. Esta plataforma incluye ADO.NET Entity Framework y tecnologías relacionadas.  
@@ -29,7 +30,7 @@ La plataforma de datos ADO.NET es una estrategia para varias versiones mediante 
  Entity Data Model (EDM) es una especificación de diseño que define datos de aplicación como conjuntos de entidades y relaciones. Los datos de este modelo admiten la asignación relacional de objetos y la capacidad de programación de los datos entre los límites de aplicación.  
   
 ### <a name="object-services"></a>Servicios de objeto  
- Los servicios de objeto permiten a los programadores interactuar con los modelos conceptuales a través de un conjunto de clases de Common Language Runtime (CLR). Estas clases se pueden generar de manera automática desde el modelo conceptual o se pueden desarrollar de manera independiente para reflejar la estructura del modelo conceptual. Los servicios de objeto también proporcionan compatibilidad de infraestructura con Entity Framework, con servicios como administración de estados, seguimiento de cambios, resolución de identidad, relaciones de carga y navegación, propagación de cambios de objeto a modificaciones de base de datos y compatibilidad de creación de consultas para Entity SQL. Para obtener más información, consulte [Object Services Overview (Entity Framework)](http://msdn.microsoft.com/en-us/43014cf9-c9cb-4538-bfbb-197820b60038).  
+ Los servicios de objeto permiten a los programadores interactuar con los modelos conceptuales a través de un conjunto de clases de Common Language Runtime (CLR). Estas clases se pueden generar de manera automática desde el modelo conceptual o se pueden desarrollar de manera independiente para reflejar la estructura del modelo conceptual. Los servicios de objeto también proporcionan compatibilidad de infraestructura con Entity Framework, con servicios como administración de estados, seguimiento de cambios, resolución de identidad, relaciones de carga y navegación, propagación de cambios de objeto a modificaciones de base de datos y compatibilidad de creación de consultas para Entity SQL. Para más información, vea [Información general de Servicios de objeto (Entity Framework)](http://msdn.microsoft.com/en-us/43014cf9-c9cb-4538-bfbb-197820b60038).  
   
 ### <a name="linq-to-entities"></a>LINQ to Entities  
  LINQ to Entities es una implementación de Language-Integrated Query (LINQ) que permite a los desarrolladores crear consultas fuertemente tipadas en el contexto de objeto de Entity Framework mediante expresiones de LINQ y operadores de consulta estándar de LINQ. LINQ to Entities permite a los programadores trabajar con un modelo conceptual con una asignación de objetos relacionales entre bases de datos de Microsoft SQL Server y de terceros. Para obtener más información, consulte [LINQ to Entities](../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md).  

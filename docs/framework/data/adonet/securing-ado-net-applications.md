@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 143447020f41368a3553a0c8cda78e80806b75ba
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0424a92f2308c21404cf35cd59c797498e6af992
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="securing-adonet-applications"></a>Proteger aplicaciones de ADO.NET
 Para escribir una aplicación de ADO.NET segura es necesario algo más que evitar los errores de codificación más comunes, como no validar los datos proporcionados por el usuario. Una aplicación que tiene acceso a datos tiene muchos puntos débiles potenciales que un agresor puede aprovechar para obtener, manipular o destruir datos confidenciales. Por eso es importante comprender todos los aspectos de la seguridad, desde el proceso de modelo de amenazas durante la fase de diseño de su aplicación hasta la implementación y el posterior mantenimiento.  
@@ -30,7 +31,7 @@ Para escribir una aplicación de ADO.NET segura es necesario algo más que evita
  [Información general sobre seguridad](../../../../docs/framework/data/adonet/security-overview.md)  
  Proporciona recomendaciones para diseñar aplicaciones seguras de ADO.NET.  
   
- [Proteger el acceso a datos](../../../../docs/framework/data/adonet/secure-data-access.md)  
+ [Acceso seguro a datos](../../../../docs/framework/data/adonet/secure-data-access.md)  
  Describe cómo trabajar con datos de un origen de datos protegido.  
   
  [Aplicaciones cliente seguras](../../../../docs/framework/data/adonet/secure-client-applications.md)  
@@ -39,7 +40,7 @@ Para escribir una aplicación de ADO.NET segura es necesario algo más que evita
  [Seguridad de acceso del código y ADO.NET](../../../../docs/framework/data/adonet/code-access-security.md)  
  Describe cómo se puede proteger el código de ADO.NET mediante la seguridad de acceso del código. También explica cómo trabajar con confianza parcial.  
   
- [Privacidad y seguridad de los datos](../../../../docs/framework/data/adonet/privacy-and-data-security.md)  
+ [Privacidad y seguridad de datos](../../../../docs/framework/data/adonet/privacy-and-data-security.md)  
  Describe las opciones de cifrado para las aplicaciones de ADO.NET.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  

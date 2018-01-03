@@ -23,11 +23,12 @@ caps.latest.revision: "8"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 3181acec440f2d01e928bb051b297fba75de1e2c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c70315cec9dca23605dc46f4cf090f4358c76e53
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="datetimeinvalidlocalformat-mda"></a>MDA de dateTimeInvalidLocalFormat
 El MDA `dateTimeInvalidLocalFormat` se activa cuando una instancia de <xref:System.DateTime> que está almacenada como horario universal coordinado (UTC) tiene un formato pensado para usarse solo para instancias locales de <xref:System.DateTime>. Este MDA no está activado para instancias de <xref:System.DateTime> sin especificar o predeterminadas.  
@@ -61,7 +62,7 @@ Serialize(myDateTime.ToString("o"));
 ## <a name="effect-on-the-runtime"></a>Efecto en el Runtime  
  Este MDA no afecta al tiempo de ejecución.  
   
-## <a name="output"></a>Resultado  
+## <a name="output"></a>Salida  
  No hay ningún resultado especial como consecuencia de la activación de este MDA, aunque se puede usar la pila de llamadas para determinar la ubicación de la llamada a <xref:System.DateTime.ToString%2A> que ha activado el MDA.  
   
 ## <a name="configuration"></a>Configuración  

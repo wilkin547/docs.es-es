@@ -23,11 +23,12 @@ caps.latest.revision: "13"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 1aa528eb2acc872b1956edef3af3724bb3b54d67
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d461ff702f756df6d599d7082edc6c5c4719c537
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="gcmanagedtounmanaged-mda"></a>MDA de gcManagedToUnmanaged
 El asistente para la depuración administrada (MDA) `gcManagedToUnmanaged` produce una recolección de elementos no utilizados siempre que un subproceso realiza la transición de código administrado a no administrado.  
@@ -60,5 +61,5 @@ El asistente para la depuración administrada (MDA) `gcManagedToUnmanaged` produ
 ## <a name="see-also"></a>Vea también  
  <xref:System.Runtime.InteropServices.MarshalAsAttribute>  
  [Diagnosing Errors with Managed Debugging Assistants (Diagnóstico de errores con asistentes para la depuración administrada)](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)  
- [Serialización para interoperabilidad](../../../docs/framework/interop/interop-marshaling.md)  
+ [Serialización de interoperabilidad](../../../docs/framework/interop/interop-marshaling.md)  
  [gcUnmanagedToManaged](../../../docs/framework/debug-trace-profile/gcunmanagedtomanaged-mda.md)

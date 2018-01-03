@@ -15,11 +15,11 @@ ms.assetid: f6c09db1-0553-464a-abe3-d4510c61d6ed
 caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 4400ee58214c8f9990d4b123e17ef0f6553a5a69
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 2df7fa743e72d12dcef1aa9be5ea43d24ef43cee
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="optioninfer"></a>/optioninfer
 Permite el uso de la inferencia de tipo de variable local en declaraciones de variables.  
@@ -44,7 +44,7 @@ Permite el uso de la inferencia de tipo de variable local en declaraciones de va
   
 ### <a name="to-set-optioninfer-in-the-visual-studio-ide"></a>Cómo establecer /optioninfer en el IDE de Visual Studio  
   
-1.  Seleccione un proyecto en **el Explorador de soluciones**. En el menú **Proyecto**, haga clic en **Propiedades**. Para obtener más información, consulte [NIB: administración de propiedades del proyecto con el Diseñador de proyectos](http://msdn.microsoft.com/en-us/983f3c18-832f-4666-afec-74b716ff3e0e).  
+1.  Seleccione un proyecto en **el Explorador de soluciones**. En el menú **Proyecto**, haga clic en **Propiedades**.  
   
 2.  En el **compilar** ficha, modifique el valor en el **Option infer** cuadro.  
   

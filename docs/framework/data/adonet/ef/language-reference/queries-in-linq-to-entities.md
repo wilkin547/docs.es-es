@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 220416aa4e282cb342ee6080d9040f9f4818fbf0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 6fe20fd26b78bde19ed73e2415b1b5c283a0d1f4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="queries-in-linq-to-entities"></a>Consultas en LINQ to Entities
 Una consulta es una expresión que recupera datos de un origen de datos. Las consultas se suelen expresar en un lenguaje de consulta especializado, como SQL para bases de datos relacionales y XQuery para XML. Por lo tanto, los programadores han tenido que aprender un lenguaje de consultas nuevo para cada tipo de origen de datos o formato de datos que consultan. Language-Integrated Query (LINQ) ofrece un modelo coherente y más sencillo para trabajar con los datos de varios formatos y orígenes de datos. En una consulta de LINQ siempre se trabaja con objetos de programación.  
@@ -40,40 +41,40 @@ Una consulta es una expresión que recupera datos de un origen de datos. Las con
   
 -   [Ejemplos de sintaxis de expresiones de consulta: ordenación](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expression-syntax-examples-ordering.md)  
   
--   [Ejemplos de sintaxis de expresiones de consulta: Operadores de agregado](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expression-syntax-examples-aggregate-operators.md)  
+-   [Ejemplos de sintaxis de expresiones de consulta: operadores de agregado](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expression-syntax-examples-aggregate-operators.md)  
   
--   [Ejemplos de sintaxis de expresiones de consulta: creación de particiones](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expression-syntax-examples-partitioning.md)  
+-   [Ejemplos de sintaxis de expresiones de consulta: particionamiento](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expression-syntax-examples-partitioning.md)  
   
--   [Ejemplos de sintaxis de expresiones de consulta: Operadores de combinación](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expression-syntax-examples-join-operators.md)  
+-   [Ejemplos de sintaxis de expresiones de consulta: operadores de combinación](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expression-syntax-examples-join-operators.md)  
   
--   [Ejemplos de sintaxis de expresiones de consulta: Operadores de elementos](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expression-syntax-examples-element-operators.md)  
+-   [Ejemplos de sintaxis de expresiones de consulta: operadores de elementos](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expression-syntax-examples-element-operators.md)  
   
 -   [Ejemplos de sintaxis de expresiones de consulta: agrupación](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expression-syntax-examples-grouping.md)  
   
--   [Ejemplos de sintaxis de expresiones de consulta: Navegar por relaciones](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expression-syntax-examples-navigating-relationships.md)  
+-   [Ejemplos de sintaxis de expresión de consulta: navegar por relaciones](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expression-syntax-examples-navigating-relationships.md)  
   
 ### <a name="method-based-query-syntax"></a>Sintaxis de consultas basadas en métodos  
- Otra forma de formular consultas de [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] es usar las consultas basadas en métodos. La sintaxis de consultas basadas en métodos es una secuencia de llamadas a métodos directas a los métodos de operador LINQ que pasan expresiones lambda como parámetros. Para obtener más información, vea [Lambda Expressions](~/docs/csharp/programming-guide/statements-expressions-operators/lambda-expressions.md) (Expresiones lambda). Para obtener ejemplos que muestran cómo utilizar la sintaxis basada en métodos, vea los siguientes temas:  
+ Otra forma de formular consultas de [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] es usar las consultas basadas en métodos. La sintaxis de consultas basadas en métodos es una secuencia de llamadas a métodos directas a los métodos de operador LINQ que pasan expresiones lambda como parámetros. Para obtener más información, vea [Expresiones lambda](~/docs/csharp/programming-guide/statements-expressions-operators/lambda-expressions.md). Para obtener ejemplos que muestran cómo utilizar la sintaxis basada en métodos, vea los siguientes temas:  
   
--   [Ejemplos de sintaxis de consulta basada en métodos: proyección](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-projection.md)  
+-   [Ejemplos de sintaxis de consultas basadas en métodos: proyección](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-projection.md)  
   
--   [Ejemplos de sintaxis de consulta basada en métodos: filtrado](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-filtering.md)  
+-   [Ejemplos de sintaxis de consultas basadas en métodos: filtrado](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-filtering.md)  
   
--   [Ejemplos de sintaxis de consulta basada en métodos: ordenación](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-ordering.md)  
+-   [Ejemplos de sintaxis de consultas basadas en métodos: ordenación](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-ordering.md)  
   
--   [Ejemplos de sintaxis de consulta basada en métodos: Operadores de agregado](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-aggregate-operators.md)  
+-   [Ejemplos de sintaxis de consultas basadas en métodos: operadores de agregación](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-aggregate-operators.md)  
   
--   [Ejemplos de sintaxis de consulta basada en métodos: creación de particiones](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-partitioning.md)  
+-   [Ejemplos de sintaxis de consultas basadas en métodos: partición](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-partitioning.md)  
   
--   [Ejemplos de sintaxis de consulta basada en métodos: conversión](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-conversion.md)  
+-   [Ejemplos de sintaxis de consultas basadas en métodos: conversión](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-conversion.md)  
   
--   [Ejemplos de sintaxis de consulta basada en métodos: Operadores de combinación](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-join-operators.md)  
+-   [Ejemplos de sintaxis de consultas basadas en métodos: operadores de combinación](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-join-operators.md)  
   
--   [Ejemplos de sintaxis de consulta basada en métodos: Operadores de elementos](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-element-operators.md)  
+-   [Ejemplos de sintaxis de consultas basadas en métodos: operadores de elementos](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-element-operators.md)  
   
--   [Ejemplos de sintaxis de consulta basada en métodos: agrupación](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-grouping.md)  
+-   [Ejemplos de sintaxis de consultas basadas en métodos: agrupación](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-grouping.md)  
   
--   [Ejemplos de sintaxis de consulta basada en métodos: Navegar por relaciones](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-navigating-relationships.md)  
+-   [Ejemplos de sintaxis de consultas basadas en métodos: navegar por relaciones](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-navigating-relationships.md)  
   
 ## <a name="see-also"></a>Vea también  
  [LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)  

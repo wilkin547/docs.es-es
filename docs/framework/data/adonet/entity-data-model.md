@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 69b72a824e6f9468c9b3d86073243d506382e766
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 8433376c9950594b57b800b401d68d849e743d85
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="entity-data-model"></a>Entity Data Model
 Entity Data Model (EDM) es un conjunto de conceptos que describen la estructura de los datos, independientemente del formato en el que estén almacenados. EDM se basa en el modelo entidad-relación (Entity-Relationship Model) descrito por Peter Chen en 1976, pero también incorpora nuevas funciones y amplía sus usos tradicionales.  
@@ -29,13 +30,13 @@ Entity Data Model (EDM) es un conjunto de conceptos que describen la estructura 
 ## <a name="in-this-section"></a>En esta sección  
  Los temas de esta sección describen los conceptos de Entity Data Model. Cualquier ADSL que implemente EDM debe incluir los conceptos descritos a continuación. Tenga en cuenta que la [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md) usa CSDL para definir los modelos conceptuales. Para obtener más información, consulte [especificación de CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md).  
   
- [Conceptos básicos de modelo de datos de entidad](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)  
+ [Conceptos clave de Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)  
   
- [Entity Data Model: espacios de nombres](../../../../docs/framework/data/adonet/entity-data-model-namespaces.md)  
+ [Entity Data Model: Espacios de nombres](../../../../docs/framework/data/adonet/entity-data-model-namespaces.md)  
   
  [Entity Data Model: Tipos de datos primitivos](../../../../docs/framework/data/adonet/entity-data-model-primitive-data-types.md)  
   
- [Entity Data Model: herencia](../../../../docs/framework/data/adonet/entity-data-model-inheritance.md)  
+ [Entity Data Model: Herencia](../../../../docs/framework/data/adonet/entity-data-model-inheritance.md)  
   
  [extremo de asociación](../../../../docs/framework/data/adonet/association-end.md)  
   
@@ -43,7 +44,7 @@ Entity Data Model (EDM) es un conjunto de conceptos que describen la estructura 
   
  [conjunto de asociaciones](../../../../docs/framework/data/adonet/association-set.md)  
   
- [final del conjunto de asociaciones](../../../../docs/framework/data/adonet/association-set-end.md)  
+ [extremo del conjunto de asociaciones](../../../../docs/framework/data/adonet/association-set-end.md)  
   
  [tipo de asociación](../../../../docs/framework/data/adonet/association-type.md)  
   
@@ -61,7 +62,7 @@ Entity Data Model (EDM) es un conjunto de conceptos que describen la estructura 
   
  [propiedad de clave externa](../../../../docs/framework/data/adonet/foreign-key-property.md)  
   
- [función declarada por modelo](../../../../docs/framework/data/adonet/model-declared-function.md)  
+ [función declarada por el modelo](../../../../docs/framework/data/adonet/model-declared-function.md)  
   
  [función definida por el modelo](../../../../docs/framework/data/adonet/model-defined-function.md)  
   
@@ -74,4 +75,4 @@ Entity Data Model (EDM) es un conjunto de conceptos que describen la estructura 
 ## <a name="see-also"></a>Vea también  
  [Herramientas de Entity Data Model de ADO.NET](http://msdn.microsoft.com/en-us/91076853-0881-421b-837a-f582f36be527)  
  [información general de archivo .edmx](http://msdn.microsoft.com/en-us/f4c8e7ce-1db6-417e-9759-15f8b55155d4)  
- [Especificación de CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)
+ [Especificación CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)

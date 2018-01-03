@@ -13,11 +13,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: cb1f26ec1fb8e5344946938206bb2418eeb6cd2d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 0f76178d6b10e8253fd135c35504389e03d8acae
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="aggregate-queries"></a>Consultas de agregado
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] admite los operadores de agregado `Average`, `Count`, `Max`, `Min` y `Sum`. Tener en cuenta las características siguientes de los operadores de agregado en [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]:  
@@ -35,19 +36,19 @@ ms.lasthandoff: 10/18/2017
  Los ejemplos de los temas siguientes se derivan de la base de datos de ejemplo Northwind. Para obtener más información, consulte [descargar bases de datos de ejemplo](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md).  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Devolver el valor medio de una secuencia numérica](../../../../../../docs/framework/data/adonet/sql/linq/return-the-average-value-from-a-numeric-sequence.md)  
+ [Devolución del valor medio de una secuencia numérica](../../../../../../docs/framework/data/adonet/sql/linq/return-the-average-value-from-a-numeric-sequence.md)  
  Muestra cómo utilizar el operador <xref:System.Linq.Enumerable.Average%2A>.  
   
- [Contar el número de elementos de una secuencia](../../../../../../docs/framework/data/adonet/sql/linq/count-the-number-of-elements-in-a-sequence.md)  
+ [Conteo del número de elementos de una secuencia](../../../../../../docs/framework/data/adonet/sql/linq/count-the-number-of-elements-in-a-sequence.md)  
  Muestra cómo utilizar el operador <xref:System.Linq.Enumerable.Count%2A>.  
   
- [Buscar el valor máximo de una secuencia numérica](../../../../../../docs/framework/data/adonet/sql/linq/find-the-maximum-value-in-a-numeric-sequence.md)  
+ [Búsqueda del valor máximo de una secuencia numérica](../../../../../../docs/framework/data/adonet/sql/linq/find-the-maximum-value-in-a-numeric-sequence.md)  
  Muestra cómo utilizar el operador <xref:System.Linq.Enumerable.Max%2A>.  
   
- [Buscar el valor mínimo de una secuencia numérica](../../../../../../docs/framework/data/adonet/sql/linq/find-the-minimum-value-in-a-numeric-sequence.md)  
+ [Búsqueda del valor mínimo de una secuencia numérica](../../../../../../docs/framework/data/adonet/sql/linq/find-the-minimum-value-in-a-numeric-sequence.md)  
  Muestra cómo utilizar el operador <xref:System.Linq.Enumerable.Min%2A>.  
   
- [Calcular la suma de los valores de una secuencia numérica](../../../../../../docs/framework/data/adonet/sql/linq/compute-the-sum-of-values-in-a-numeric-sequence.md)  
+ [Cálculo de la suma de valores de una secuencia numérica](../../../../../../docs/framework/data/adonet/sql/linq/compute-the-sum-of-values-in-a-numeric-sequence.md)  
  Muestra cómo utilizar el operador <xref:System.Linq.Enumerable.Sum%2A>.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  

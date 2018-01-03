@@ -14,11 +14,11 @@ ms.assetid: e0954147-548b-461f-9c4b-a8f88845616c
 caps.latest.revision: "29"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 8a8a9fcd6fa6dfaace01f8fbb7fa407145acc16f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 900693ac3793fb59133b31d8fc0136df63c11a10
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="target-visual-basic"></a>/target (Visual Basic)
 Especifica el formato de salida del compilador.  
@@ -49,7 +49,7 @@ Especifica el formato de salida del compilador.
   
 ### <a name="to-set-target-in-the-visual-studio-ide"></a>Para establecer /target en el IDE de Visual Studio  
   
-1.  Seleccione un proyecto en el **Explorador de soluciones**. En el menú **Proyecto**, haga clic en **Propiedades**. Para obtener más información, consulte [Introducción al Diseñador de proyectos](http://msdn.microsoft.com/en-us/898dd854-c98d-430c-ba1b-a913ce3c73d7).  
+1.  Seleccione un proyecto en el **Explorador de soluciones**. En el menú **Proyecto**, haga clic en **Propiedades**.   
   
 2.  Haga clic en la pestaña **Aplicación** .  
   

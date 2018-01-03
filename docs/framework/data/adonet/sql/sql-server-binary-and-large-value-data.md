@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 9065f467cd353c17471db2c0d67001a188459819
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 015003becc47910b875629f021a9e196ba8445f3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sql-server-binary-and-large-value-data"></a>Datos binarios y datos de valores grandes de SQL Server
 SQL Server proporciona el especificador `max`, que amplía la capacidad de almacenamiento de los tipos de datos `varchar`, `nvarchar` y `varbinary`. `varchar(max)`, `nvarchar(max)`, y `varbinary(max)` se denominan colectivamente *tipos de datos de valores grandes*. Puede utilizar los tipos de datos de valores grandes para almacenar hasta 2^31-1 bytes de datos.  
@@ -25,7 +26,7 @@ SQL Server proporciona el especificador `max`, que amplía la capacidad de almac
  SQL Server 2008 incorpora el atributo FILESTREAM, que no es un tipo de datos, sino un atributo que se puede definir en una columna, y permite almacenar datos de valores grandes en el sistema de archivos en lugar de almacenarlos en la base de datos.  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Modificar datos (max) de valores grandes en ADO.NET](../../../../../docs/framework/data/adonet/sql/modifying-large-value-max-data.md)  
+ [Modificación de datos de valores grandes (max) en ADO.NET](../../../../../docs/framework/data/adonet/sql/modifying-large-value-max-data.md)  
  Describe cómo trabajar con tipos de datos de valores grandes.  
   
  [Datos FILESTREAM](../../../../../docs/framework/data/adonet/sql/filestream-data.md)  

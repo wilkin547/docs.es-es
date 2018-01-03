@@ -17,11 +17,11 @@ ms.assetid: f735c57d-1cf9-4f2f-a26f-0de630fd4077
 caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 8bc3056c3e2d7a4aad469d3bf2c404f5f5248384
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 62669ec40803170cb623382b09472b82121d26bb
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="define-visual-basic"></a>/define (Visual Basic)
 Permite definir constantes condicionales para el compilador.  
@@ -52,7 +52,7 @@ Permite definir constantes condicionales para el compilador.
   
 |Para definir/establecer en el entorno de desarrollo integrado de Visual Studio|  
 |---|  
-|1.  Seleccione un proyecto en el **Explorador de soluciones**. En el menú **Proyecto**, haga clic en **Propiedades**. Para obtener más información, consulte [Introducción al Diseñador de proyectos](http://msdn.microsoft.com/en-us/898dd854-c98d-430c-ba1b-a913ce3c73d7).<br />2.  Haga clic en la pestaña **Compilar**.<br />3.  Haga clic en **Avanzado**.<br />4.  Modifique el valor en el **constantes personalizadas** cuadro.|  
+|1.  Seleccione un proyecto en el **Explorador de soluciones**. En el menú **Proyecto**, haga clic en **Propiedades**. <br />2.  Haga clic en la pestaña **Compilar**.<br />3.  Haga clic en **Avanzado**.<br />4.  Modifique el valor en el **constantes personalizadas** cuadro.|  
   
 ## <a name="example"></a>Ejemplo  
  En el siguiente código se definen y usan dos constantes de compilador condicionales.  

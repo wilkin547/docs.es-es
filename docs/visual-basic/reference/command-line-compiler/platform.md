@@ -14,11 +14,11 @@ ms.assetid: f9bc61e6-e854-4ae1-87b9-d6244de23fd1
 caps.latest.revision: "34"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 4177b9da15bb89f37a7b3cbb27937e09d1c12635
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: 90e2a6a0f6a7b1eb3b919cca22ae8ce37a9c00bc
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="platform-visual-basic"></a>/platform (Visual Basic)
 Especifica qué versión de la plataforma de Common Language Runtime (CLR) puede ejecutar el archivo de salida.  
@@ -71,13 +71,11 @@ Especifica qué versión de la plataforma de Common Language Runtime (CLR) puede
   
 -   Los archivos ejecutables que se compilan con `/platform:anycpu32bitpreferred` se ejecutarán en el CLR de 32 bits.  
   
- Para obtener más información sobre cómo desarrollar una aplicación se ejecute en una versión de 64 bits de Windows, vea [aplicaciones de 64 bits](../../../../docs/framework/64-bit-apps.md).  
+ Para obtener más información sobre cómo desarrollar una aplicación se ejecute en una versión de 64 bits de Windows, vea [aplicaciones de 64 bits](../../../framework/64-bit-apps.md).  
   
 ### <a name="to-set-platform-in-the-visual-studio-ide"></a>Cómo establecer /platform en el IDE de Visual Studio  
   
 1.  En **el Explorador de soluciones**, elija el proyecto, abra el **proyecto** menú y, a continuación, haga clic en **propiedades**.  
-  
-     Para obtener más información, consulte [NIB: administración de propiedades del proyecto con el Diseñador de proyectos](http://msdn.microsoft.com/en-us/983f3c18-832f-4666-afec-74b716ff3e0e).  
   
 2.  En el **compilar** ficha, active o desactive el **preferencia de 32 bits** casilla de verificación, o bien, en la **CPU de destino** lista, elija un valor.  
   

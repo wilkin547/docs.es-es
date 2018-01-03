@@ -16,14 +16,15 @@ caps.latest.revision: "13"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 4c11b826a51cc4f1563729728626fb8041e31ee1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ff16c00f1e0e87c9f046c1f5944e11a9111f6e1a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="net-framework-data-providers"></a>Proveedores de datos .NET Framework
-Los proveedores de datos [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] sirven para conectarse a una base de datos, ejecutar comandos y recuperar resultados. Esos resultados se procesan directamente, se colocan en un <xref:System.Data.DataSet> con el fin de que el usuario pueda verlos cuando los necesite, se combinan con datos de varios orígenes o se utilizan de forma remota entre niveles. Los proveedores de datos[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] son ligeros, de manera que crean un nivel mínimo entre el origen de datos y el código, con lo que aumenta el rendimiento sin sacrificar funcionalidad.  
+Los proveedores de datos [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] sirven para conectarse a una base de datos, ejecutar comandos y recuperar resultados. Esos resultados se procesan directamente, se colocan en un <xref:System.Data.DataSet> con el fin de que el usuario pueda verlos cuando los necesite, se combinan con datos de varios orígenes o se utilizan de forma remota entre niveles. Los proveedores de datos [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] son ligeros, de manera que crean un nivel mínimo entre el origen de datos y el código, con lo que aumenta el rendimiento sin sacrificar funcionalidad.  
   
  En la tabla siguiente se enumeran los proveedores de datos que se incluyen en [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)].  
   
@@ -31,10 +32,10 @@ Los proveedores de datos [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort
 |-------------------------------------------------------------------------------|-----------------|  
 |[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Proveedor de datos para [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]|Proporciona acceso a datos para Microsoft [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]. Utiliza el espacio de nombres <xref:System.Data.SqlClient> .|  
 |Proveedor de datos[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] para OLE DB|Para orígenes de datos que se exponen mediante OLE DB. Utiliza el espacio de nombres <xref:System.Data.OleDb> .|  
-|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] para OBDC|Para orígenes de datos que se exponen mediante ODBC. Utiliza el espacio de nombres <xref:System.Data.Odbc> .|  
+|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]para OBDC|Para orígenes de datos que se exponen mediante ODBC. Utiliza el espacio de nombres <xref:System.Data.Odbc> .|  
 |[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] para Oracle|Para orígenes de datos de Oracle. El proveedor de datos [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] para Oracle es compatible con la versión 8.1.7 y posteriores del software de cliente de Oracle y utiliza el espacio de nombres <xref:System.Data.OracleClient> .|  
 |Proveedor para EntityClient|Proporciona acceso a datos para las aplicaciones de Entity Data Model (EDM). Utiliza el espacio de nombres <xref:System.Data.EntityClient> .|  
-|El proveedor de datos[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] para [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] Compact 4.0.|Proporciona acceso de datos para Microsoft [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] Compact 4.0. Usa el espacio de nombres [System.Data.SqlServerCe](http://msdn.microsoft.com/library/system.data.sqlserverce.aspx) .|  
+|El proveedor de datos [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] para [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] Compact 4.0.|Proporciona acceso de datos para Microsoft [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] Compact 4.0. Usa el espacio de nombres [System.Data.SqlServerCe](http://msdn.microsoft.com/library/system.data.sqlserverce.aspx) .|  
   
 ## <a name="core-objects-of-net-framework-data-providers"></a>Objetos principales de los proveedores de datos .NET Framework  
  En la tabla siguiente se describen los cuatro objetos centrales que constituyen un proveedor de datos de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] .  
@@ -51,10 +52,10 @@ Los proveedores de datos [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort
 |Objeto|Descripción|  
 |------------|-----------------|  
 |`Transaction`|Incluye comandos en las transacciones que se realizan en el origen de datos. La clase base para todos los objetos `Transaction` es <xref:System.Data.Common.DbTransaction> . ADO.NET es también compatible con las transacciones que usan clases en el espacio de nombres <xref:System.Transactions> .|  
-|`CommandBuilder`|Un objeto auxiliar que genera automáticamente las propiedades de comando de un `DataAdapter` o que obtiene de un procedimiento almacenado información acerca de parámetros con la que puede rellenar la colección `Parameters` de un objeto `Command` . La clase base para todos los objetos `CommandBuilder` es <xref:System.Data.Common.DbCommandBuilder> .|  
+|`CommandBuilder`|Un objeto auxiliar que genera automáticamente las propiedades de comando de un `DataAdapter` o que obtiene de un procedimiento almacenado información acerca de parámetros con la que puede rellenar la colección `Parameters` de un objeto `Command`. La clase base para todos los objetos `CommandBuilder` es <xref:System.Data.Common.DbCommandBuilder> .|  
 |`ConnectionStringBuilder`|Un objeto auxiliar que proporciona un modo sencillo de crear y administrar el contenido de las cadenas de conexión utilizadas por los objetos `Connection` . La clase base para todos los objetos `ConnectionStringBuilder` es <xref:System.Data.Common.DbConnectionStringBuilder> .|  
 |`Parameter`|Define los parámetros de entrada, salida y valores devueltos para los comandos y procedimientos almacenados. La clase base para todos los objetos `Parameter` es <xref:System.Data.Common.DbParameter> .|  
-|`Exception`|Se devuelve cuando se detecta un error en el origen de datos. En el caso de que el error se detecte en el cliente, los proveedores de datos [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] generan una excepción de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] . La clase base para todos los objetos `Exception` es <xref:System.Data.Common.DbException> .|  
+|`Exception`|Se devuelve cuando se detecta un error en el origen de datos. En el caso de que el error se detecte en el cliente, los proveedores de datos [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] generan una excepción de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]. La clase base para todos los objetos `Exception` es <xref:System.Data.Common.DbException> .|  
 |`Error`|Expone la información relacionada con una advertencia o error devueltos por un origen de datos.|  
 |`ClientPermission`|Se proporciona para los atributos de seguridad de acceso del código de los proveedores de datos [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] . La clase base para todos los objetos `ClientPermission` es <xref:System.Data.Common.DBDataPermission> .|  
   

@@ -19,11 +19,12 @@ caps.latest.revision: "26"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 7446c43deff85e1a15288c0c847c9e3646870b72
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 8abf7868312883e264848b0de1aa803ce3be5839
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="redirecting-assembly-versions"></a>Redirigir versiones de ensamblado
 Puede redirigir referencias de enlace en tiempo de compilación a los ensamblados de .NET Framework, ensamblados de terceros o ensamblados de su propia aplicación. Puede redirigir la aplicación para que use una versión diferente de un ensamblado de varias maneras: mediante la directiva de edición, a través de un archivo de configuración de la aplicación o mediante el archivo de configuración de la máquina. En este artículo se describe cómo funciona el enlace de ensamblado en .NET Framework y cómo se puede configurar.  

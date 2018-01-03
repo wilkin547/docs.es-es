@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 16c675491a378d72d82a252d79a73379f494893c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: fd3982cf8eeeb88a162e77a3ef4b9d6e75e19fc6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sql-server-data-types-and-adonet"></a>Tipos de datos de SQL Server y ADO.NET
 SQL Server y .NET Framework están basados en sistemas de tipos distintos, lo que puede dar lugar a posibles pérdidas de datos. Para conservar la integridad de los datos, el proveedor de datos .NET Framework para SQL Server (<xref:System.Data.SqlClient>) proporciona métodos de descriptor de acceso con tipo para trabajar con datos de SQL Server. Puede usar las enumeraciones de las clases <xref:System.Data.SqlDbType> para especificar los tipos de datos <xref:System.Data.SqlClient.SqlParameter>.  
@@ -36,10 +37,10 @@ SQL Server y .NET Framework están basados en sistemas de tipos distintos, lo qu
  [SqlTypes y DataSet](../../../../../docs/framework/data/adonet/sql/sqltypes-and-the-dataset.md)  
  Describe la compatibilidad de tipos con `SqlTypes` en el `DataSet`.  
   
- [Tratamiento de valores Null](../../../../../docs/framework/data/adonet/sql/handling-null-values.md)  
+ [Control de valores Null](../../../../../docs/framework/data/adonet/sql/handling-null-values.md)  
  Muestra cómo trabajar con valores NULL y la lógica de tres valores.  
   
- [Valores comparar GUID y uniqueidentifier](../../../../../docs/framework/data/adonet/sql/comparing-guid-and-uniqueidentifier-values.md)  
+ [Comparación de valores GUID y uniqueidentifier](../../../../../docs/framework/data/adonet/sql/comparing-guid-and-uniqueidentifier-values.md)  
  Muestra cómo trabajar con los valores GUID y uniqueidentifier en SQL Server y .NET Framework.  
   
  [Datos de fecha y hora](../../../../../docs/framework/data/adonet/sql/date-and-time-data.md)  
@@ -65,8 +66,8 @@ SQL Server y .NET Framework están basados en sistemas de tipos distintos, lo qu
  Describe la enumeración `DbType`, así como todos sus miembros.  
   
 ## <a name="see-also"></a>Vea también  
- [Asignaciones de tipos de datos SQL Server](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)  
- [Configurar parámetros y tipos de datos de parámetro](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)  
+ [Asignaciones de tipos de datos de SQL Server](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)  
+ [Configuración de parámetros y tipos de datos de parámetros](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)  
  [Parámetros con valores de tabla](../../../../../docs/framework/data/adonet/sql/table-valued-parameters.md)  
  [Datos binarios y datos de valores grandes de SQL Server](../../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)  
  [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](http://go.microsoft.com/fwlink/?LinkId=217917)

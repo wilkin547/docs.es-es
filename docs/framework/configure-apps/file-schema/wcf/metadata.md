@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 06444f30ab06f04644a7a6c5ad596388ecceeaf1
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: e1da05ebd48a3fff7c35510db4093d56831a8fcd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltmetadatagt"></a>&lt;metadatos&gt;
 Especifica cómo se pueden procesar los metadatos del servicio.  
@@ -67,5 +68,5 @@ Especifica cómo se pueden procesar los metadatos del servicio.
  <xref:System.ServiceModel.Configuration.WsdlImporterElementCollection>  
  <xref:System.ServiceModel.Description.MetadataImporter>  
  <xref:System.ServiceModel.Description.WsdlImporter>  
- [Configuración de cliente WCF](../../../../../docs/framework/wcf/feature-details/client-configuration.md)  
+ [Configuración del cliente de WCF](../../../../../docs/framework/wcf/feature-details/client-configuration.md)  
  [Clientes](../../../../../docs/framework/wcf/feature-details/clients.md)

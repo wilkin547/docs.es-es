@@ -13,11 +13,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 5a5aea48b1c70c550641f3450dff16e57dd4f62b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 071c6b41d24465a599afa87a296c0797e8ca6ed9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="aggregate-canonical-functions"></a>Funciones canónicas de agregado
 
@@ -28,8 +29,8 @@ En la tabla siguiente se muestran las funciones canónicas de [!INCLUDE[esql](..
 | Función | Descripción |
 | -------- | ----------- |
 | `Avg(expression)` | Devuelve el promedio de los valores no NULL.<br><br>**Argumentos**<br><br>Un `Int32`, `Int64`, `Double`, y `Decimal`.<br><br>**Valor devuelto**<br><br>Tipo de `expression`. `Null` si los valores de entrada son `null`.<br><br>**En el ejemplo se** [!code-csharp [DP EntityServices Concepts#EDM_AVG](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_avg)][!code-sql[DP EntityServices Concepts#EDM_AVG](../../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_avg)] |
-| `BigCount(expression)` | Devuelve el tamaño del agregado, incluyendo los valores NULL y los duplicados.<br><br>**Argumentos**<br><br>Cualquier tipo.<br><br>**Valor devuelto**<br><br>Interfaz `Int64`.<br><br>**En el ejemplo se** [!code-csharp [DP EntityServices Concepts#EDM_BIGCOUNT](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_bigcount)][!code-sql[DP EntityServices Concepts#EDM_BIGCOUNT](../../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_bigcount)] |
-| `Count(expression)` | Devuelve el tamaño del agregado, incluyendo los valores NULL y los duplicados.<br><br>**Argumentos**<br><br>Cualquier tipo.<br><br>**Valor devuelto**<br><br>Interfaz `Int32`.<br><br>**En el ejemplo se** [!code-csharp [DP EntityServices Concepts#EDM_COUNT](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_count)][!code-sql[DP EntityServices Concepts#EDM_COUNT](../../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_count)] |
+| `BigCount(expression)` | Devuelve el tamaño del agregado, incluyendo los valores NULL y los duplicados.<br><br>**Argumentos**<br><br>Cualquier tipo.<br><br>**Valor devuelto**<br><br>Una clase `Int64`.<br><br>**En el ejemplo se** [!code-csharp [DP EntityServices Concepts#EDM_BIGCOUNT](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_bigcount)][!code-sql[DP EntityServices Concepts#EDM_BIGCOUNT](../../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_bigcount)] |
+| `Count(expression)` | Devuelve el tamaño del agregado, incluyendo los valores NULL y los duplicados.<br><br>**Argumentos**<br><br>Cualquier tipo.<br><br>**Valor devuelto**<br><br>Una clase `Int32`.<br><br>**En el ejemplo se** [!code-csharp [DP EntityServices Concepts#EDM_COUNT](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_count)][!code-sql[DP EntityServices Concepts#EDM_COUNT](../../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_count)] |
 | `Max(expression)` | Devuelve el máximo de los valores no NULL.<br><br>**Argumentos**<br><br>Valor de tipo `Int16``Byte``Int64`, `Int32``Single`, `Byte``Decimal`, `Double``DateTimeOffset`, `DateTime``String`, `Time`, `Binary`, , , , , .<br><br>**Valor devuelto**<br><br>Tipo de `expression`. `Null` si los valores de entrada son `null`.<br><br>**En el ejemplo se** [!code-csharp [DP EntityServices Concepts#EDM_MAX](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_max)][!code-sql[DP EntityServices Concepts#EDM_MAX](../../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_max)] |
 | `Min(expression)` | Devuelve el mínimo de los valores no NULL.<br><br>**Argumentos**<br><br>Valor de tipo `Int16``Byte``Int64`, `Int32``Single`, `Byte``Decimal`, `Double``DateTimeOffset`, `DateTime``String`, `Time`, `Binary`, , , , , .<br><br>**Valor devuelto**<br><br>Tipo de `expression`. `Null` si los valores de entrada son `null`.<br><br>**En el ejemplo se** [!code-csharp [DP EntityServices Concepts#EDM_MIN](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_min)][!code-sql[DP EntityServices Concepts#EDM_MIN](../../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_min)] |
 | `StDev(expression)` | Devuelve la desviación estándar de los valores no NULL.<br><br>**Argumentos**<br><br>Valor de tipo `Int32`, `Int64`, `Double` o `Decimal`.<br><br>**Valor devuelto**<br><br>Objeto `Double`. `Null` si los valores de entrada son `null`.<br><br>**En el ejemplo se** [!code-csharp [DP EntityServices Concepts#EDM_STDEV](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_stdev)][!code-sql[DP EntityServices Concepts#EDM_STDEV](../../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_stdev)] |
@@ -48,7 +49,7 @@ Los agregados basados en una colección (funciones de colección) operan en las 
 min(select value o.ShipDate from LOB.Orders as o)
 ```
 
-Las expresiones que se encuentran dentro de agregados basados en una colección se evalúan dentro del ámbito actual de la resolución de nombres.
+Las expresiones que se encuentran dentro de agregados basados en una colección se evalúan dentro del ámbito de resolución de nombres actual
 
 ## <a name="group-based-aggregates"></a>Agregados basados en grupo
 

@@ -16,11 +16,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: adc5d50707155495c43703b6586cedf5da209b69
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 84a72642636be2238a81f1b9c00e3ac4e7037272
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="data-retrieval-and-cud-operations-in-n-tier-applications-linq-to-sql"></a>Recuperación de datos y operaciones CUD en aplicaciones de n niveles (LINQ to SQL)
 Al serializar objetos entidad, como Clientes o Pedidos, con destino a un cliente a través de una red, esas entidades se desasocian de su contexto de datos. El contexto de datos ya no realiza un seguimiento de sus cambios o sus asociaciones con otros objetos. Esto no constituye un problema mientras los clientes solo estén leyendo los datos. También es relativamente sencillo permitir a los clientes agregar nuevas filas a una base de datos. Sin embargo, si su aplicación requiere que los clientes pueden actualizar o eliminar datos, deberá asociar las entidades a un nuevo contexto de datos antes de llamar a <xref:System.Data.Linq.DataContext.SubmitChanges%2A?displayProperty=nameWithType>. Además, si está utilizando una comprobación de simultaneidad optimista con valores originales, también necesitará un medio para proporcionar a la base de datos la entidad original y la entidad modificada. Los métodos `Attach` se utilizan para colocar las entidades en un nuevo contexto de datos después de haber sido desasociadas.  
@@ -417,5 +418,5 @@ public void UpdateProductInfo(Product newProd, Product originalProd)
  Al asociar con un conjunto de objetos `IEnumerable`, se producirá una excepción <xref:System.Data.Linq.DuplicateKeyException> cuando esté presente una clave existente. Los objetos restantes no se asociarán.  
   
 ## <a name="see-also"></a>Vea también  
- [N niveles y las aplicaciones remotas con LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/n-tier-and-remote-applications-with-linq-to-sql.md)  
+ [Aplicaciones de n niveles y remotas con LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/n-tier-and-remote-applications-with-linq-to-sql.md)  
  [Información general](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)

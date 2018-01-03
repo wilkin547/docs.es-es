@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 90e079b593ed124da79f5f87b5189d199bc4572a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 36620e8a8f6cb96b11f951ee5477e6edad9c925a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltimpliestypegt-element-net-native"></a>Elemento &lt;ImpliesType&gt; (.NET Native)
 Aplica una directiva a un tipo, si dicha directiva se ha aplicado al tipo contenedor o al método.  
@@ -63,7 +64,7 @@ Aplica una directiva a un tipo, si dicha directiva se ha aplicado al tipo conten
 |-----------|-----------------|  
 |*type_name*|Nombre del tipo. Si el tipo representado por este elemento `<ImpliesType>` se encuentra en el mismo espacio de nombres que su elemento contenedor `<Type>`, *type_name* puede incluir el nombre del tipo sin su espacio de nombres. De lo contrario, *type_name* debe incluir el nombre de tipo completo.|  
   
-## <a name="all-other-attributes"></a>Resto de atributos  
+## <a name="all-other-attributes"></a>Todos los demás atributos  
   
 |Valor|Descripción|  
 |-----------|-----------------|  

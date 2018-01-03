@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: bda9ff0052c6dc2462f007e3febb3cbf9ca7d5ac
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 916b9ad24c2ae2334635760a520116b4c19df314
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="generating-dataset-relations-from-xml-schema-xsd"></a>Generar relaciones de objetos DataSet en un esquema XML (XSD)
 En un <xref:System.Data.DataSet>, para formar una asociación entre dos o más columnas se debe crear una relación primaria-secundaria. Hay tres formas de representar un **conjunto de datos** relación dentro de un esquema de lenguaje (XSD) de definición de esquema XML:  
@@ -91,20 +92,20 @@ msdata:childkey="" />
  El proceso de asignación utiliza el **relación** elemento que se va a crear una relación de elementos primarios y secundarios entre el **OrderNumber** columna en el **orden** tabla y la **OrderNo** columna en el **OrderDetail** tabla el **conjunto de datos**. El proceso de asignación sólo especifica la relación; no especifica automáticamente ninguna restricción para los valores de estas columnas, como ocurre en las restricciones de clave principal y clave externa de las bases de datos relacionales.  
   
 ### <a name="in-this-section"></a>En esta sección  
- [Asignar relaciones implícitas entre elementos de esquema anidados](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/map-implicit-relations-between-nested-schema-elements.md)  
+ [Asignación de relaciones implícitas entre elementos de esquema anidados](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/map-implicit-relations-between-nested-schema-elements.md)  
  Describe las restricciones y relaciones que se crean implícitamente en un **conjunto de datos** cuando se encuentran elementos anidados en el esquema XML.  
   
- [Asignar relaciones especificadas para elementos anidados](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/map-relations-specified-for-nested-elements.md)  
+ [Asignación de relaciones especificadas para elementos anidados](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/map-relations-specified-for-nested-elements.md)  
  Describe cómo establecer explícitamente relaciones en un **conjunto de datos** para los elementos anidados del esquema XML.  
   
- [Especificar relaciones entre elementos sin anidamiento](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/specify-relations-between-elements-with-no-nesting.md)  
+ [Definición de relaciones entre elementos sin anidamiento](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/specify-relations-between-elements-with-no-nesting.md)  
  Describe cómo crear relaciones en un **conjunto de datos** entre elementos de esquema XML que no están anidados.  
   
 ### <a name="related-sections"></a>Secciones relacionadas  
- [Derivar la estructura relacional de un conjunto de datos de esquema XML (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md)  
+ [Derivación de una estructura relacional de un conjunto de datos a partir de un esquema XML (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md)  
  Describe la estructura relacional, o esquema, de un **conjunto de datos** creado a partir de esquema XML Schema definition language (XSD).  
   
- [Asignar restricciones de esquema (XSD) de XML a las restricciones de conjunto de datos](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)  
+ [Asignación de restricciones de un esquema XML (XSD) a restricciones de conjuntos de datos](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)  
  Describe los elementos de esquema XML utilizados para crear restricciones de clave únicas y externas en un **conjunto de datos**.  
   
 ## <a name="see-also"></a>Vea también  

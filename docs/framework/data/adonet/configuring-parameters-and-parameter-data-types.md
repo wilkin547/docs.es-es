@@ -16,11 +16,12 @@ caps.latest.revision: "6"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 9119b6db6b1d3c2099af3c7bdbe042ced4dca94e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0f5aed56ba4958d44e0628f55115308751afae55
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="configuring-parameters-and-parameter-data-types"></a>Configurar parámetros y tipos de datos de parámetros
 Los objetos de comando usan parámetros para pasar valores a instrucciones SQL o procedimientos almacenados que permiten realizar operaciones de comprobación de tipos y validación. A diferencia del texto de comando, la entrada de parámetros se trata como un valor literal, y no como código ejecutable. De esta forma, se protege contra ataques por "inyección de código SQL", en los que un atacante inserta un comando que pone en peligro la seguridad del servidor en una instrucción SQL.  
@@ -56,14 +57,14 @@ Los objetos de comando usan parámetros para pasar valores a instrucciones SQL o
   
 |Tipo de .NET Framework|DbType|SqlDbType|OleDbType|OdbcType|OracleType|  
 |-------------------------|------------|---------------|---------------|--------------|----------------|  
-|<xref:System.Boolean>|Booleano|Bit|Booleano|Bit|Byte|  
+|<xref:System.Boolean>|Boolean|Bit|Booleano|Bit|Byte|  
 |<xref:System.Byte>|Byte|TinyInt|UnsignedTinyInt|TinyInt|Byte|  
 |byte[]|Binary|VarBinary`.` esta conversión implícita se producirá un error si la matriz de bytes es mayor que el tamaño máximo de un tipo VarBinary, que es de 8000 bytes. Matrices de bytes mayores de 8.000 bytes, debe establecer explícitamente el <xref:System.Data.SqlDbType>.|VarBinary|Binary|Raw|  
 |<xref:System.Char>|``|No se admite la deducción de un tipo <xref:System.Data.SqlDbType> a partir de char.|Char|Char|Byte|  
 |<xref:System.DateTime>|DateTime|DateTime|DBTimeStamp|DateTime|DateTime|  
 |<xref:System.DateTimeOffset>|DateTimeOffset|DateTimeOffset en SQL Server 2008. La deducción de un elemento <xref:System.Data.SqlDbType> a partir de DateTimeOffset no se admite en versiones de SQL Server anteriores a SQL Server 2008.|||DateTime|  
 |<xref:System.Decimal>|Decimal|Decimal|Decimal|Numérica|Número|  
-|<xref:System.Double>|Doble|Float|Doble|Doble|Doble|  
+|<xref:System.Double>|Double|Float|Double|Doble|Double|  
 |<xref:System.Single>|Single|Real|Single|Real|Float|  
 |<xref:System.Guid>|Guid|UniqueIdentifier|Guid|UniqueIdentifier|Raw|  
 |<xref:System.Int16 >|Int16|SmallInt|SmallInt|SmallInt|Int16|  
@@ -71,7 +72,7 @@ Los objetos de comando usan parámetros para pasar valores a instrucciones SQL o
 |<xref:System.Int64>|Int64|BigInt|BigInt|BigInt|Número|  
 |<xref:System.Object>|Objeto|Variante|Variante|No se admite la deducción de un tipo OdbcType a partir de Object.|Blob|  
 |<xref:System.String>|String|NVarChar. Esta conversión implícita generará un error en el caso de que la cadena tenga un tamaño superior al tamaño máximo de un tipo NVarChar, que es de 4.000 caracteres. En cadenas con más de 4.000 caracteres, establezca de forma explícita el tipo <xref:System.Data.SqlDbType>.|VarWChar|NVarChar|NVarChar|  
-|<xref:System.TimeSpan>|Tiempo|Time en SQL Server 2008. La deducción de un elemento <xref:System.Data.SqlDbType> a partir de TimeSpan no se admite en versiones de SQL Server anteriores a SQL Server 2008.|DBTime|Tiempo|DateTime|  
+|<xref:System.TimeSpan>|Tiempo|Time en SQL Server 2008. La deducción de un elemento <xref:System.Data.SqlDbType> a partir de TimeSpan no se admite en versiones de SQL Server anteriores a SQL Server 2008.|DBTime|Hora|DateTime|  
 |<xref:System.UInt16>|UInt16|No se admite la deducción de un tipo <xref:System.Data.SqlDbType> a partir de UInt16.|UnsignedSmallInt|Valor int.|UInt16|  
 |<xref:System.UInt32>|UInt32|No se admite la deducción de un tipo <xref:System.Data.SqlDbType> a partir de UInt32.|UnsignedInt|BigInt|UInt32|  
 |<xref:System.UInt64>|UInt64|No se admite la deducción de un tipo <xref:System.Data.SqlDbType> a partir de UInt64.|UnsignedBigInt|Numérica|Número|  
@@ -81,7 +82,7 @@ Los objetos de comando usan parámetros para pasar valores a instrucciones SQL o
 |``|Fecha|Date en SQL Server 2008. La deducción de un elemento <xref:System.Data.SqlDbType> a partir de Date no se admite en versiones de SQL Server anteriores a SQL Server 2008.|DBDate|Fecha|DateTime|  
 |``|SByte|No se admite la deducción de un elemento <xref:System.Data.SqlDbType> a partir de SByte.|TinyInt|No se admite la deducción de un tipo `OdbcType` a partir de SByte.|SByte|  
 ||StringFixedLength|NChar|WChar|NChar|NChar|  
-||Tiempo|Time en SQL Server 2008. La deducción de un elemento <xref:System.Data.SqlDbType> a partir de Time no se admite en versiones de SQL Server anteriores a SQL Server 2008.|DBTime|Tiempo|DateTime|  
+||Hora|Time en SQL Server 2008. La deducción de un elemento <xref:System.Data.SqlDbType> a partir de Time no se admite en versiones de SQL Server anteriores a SQL Server 2008.|DBTime|Hora|DateTime|  
 ||VarNumeric|No se admite la deducción de un elemento <xref:System.Data.SqlDbType> a partir de VarNumeric.|VarNumeric|No se admite la deducción de un tipo `OdbcType` a partir de VarNumeric.|Número|  
 |tipo definido por el usuario (un objeto con <xref:Microsoft.SqlServer.Server.SqlUserDefinedAggregateAttribute>|Object o String según el proveedor (SqlClient siempre devuelve Object, ODBC siempre devuelve String y el proveedor de datos administrados OleDb puede ver ambos)|SqlDbType.Udt si <xref:Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute> está presente; de lo contrario, Variant.|OleDbType.VarWChar (si el valor es NULL); de lo contrario, OleDbType.Variant.|OdbcType.NVarChar|no admitido|  
   

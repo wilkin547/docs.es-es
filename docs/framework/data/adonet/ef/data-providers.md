@@ -13,11 +13,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: f52ab1be62f6e196bc1c8aa8874d5aa440ba606f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: f9afc2798a4d23425f7308445f96dc87b5159c97
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="entity-framework-data-providers"></a>Proveedores de datos de Entity Framework
 En esta sección se proporciona información sobre los proveedores de datos que admiten [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)].  
@@ -37,4 +38,4 @@ En esta sección se proporciona información sobre los proveedores de datos que 
  Lista de otros proveedores de datos disponibles actualmente para Entity Framework.  
   
 ## <a name="see-also"></a>Vea también  
- [Trabajar con proveedores de datos](../../../../../docs/framework/data/adonet/ef/working-with-data-providers.md)
+ [Trabajo con proveedores de datos](../../../../../docs/framework/data/adonet/ef/working-with-data-providers.md)

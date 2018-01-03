@@ -16,11 +16,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 31923631d5b93368f8b71ff38d1244d726341fdc
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f41a55cce6834b58526c84d9a82fb38e10f46b42
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="queries-in-linq-to-dataset"></a>Consultas en LINQ to DataSet
 Una consulta es una expresión que recupera datos de un origen de datos. Las consultas se suelen expresar en un lenguaje de consulta especializado, como SQL para bases de datos relacionales y XQuery para XML. Por lo tanto, los programadores han tenido que aprender un lenguaje de consultas nuevo para cada tipo de origen de datos o formato de datos que consultan. [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] ofrece un modelo coherente y más sencillo para trabajar con los datos de varios formatos y orígenes de datos. En una consulta de [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] siempre se trabaja con objetos de programación.  
@@ -49,7 +50,7 @@ Una consulta es una expresión que recupera datos de un origen de datos. Las con
  [!code-vb[DP LINQ to DataSet Examples#SelectSimple1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#selectsimple1)]  
   
 ### <a name="method-based-query-syntax"></a>Sintaxis de consultas basadas en métodos  
- La otra forma de formular consultas de [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] es usar las consultas basadas en métodos. La sintaxis de consultas basadas en métodos es una secuencia de llamadas a métodos directas a los métodos de operador de [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)], pasando expresiones lambda como parámetros. Para obtener más información, vea [Lambda Expressions](~/docs/csharp/programming-guide/statements-expressions-operators/lambda-expressions.md) (Expresiones lambda).  
+ La otra forma de formular consultas de [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] es usar las consultas basadas en métodos. La sintaxis de consultas basadas en métodos es una secuencia de llamadas a métodos directas a los métodos de operador de [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)], pasando expresiones lambda como parámetros. Para obtener más información, vea [Expresiones lambda](~/docs/csharp/programming-guide/statements-expressions-operators/lambda-expressions.md).  
   
  Este ejemplo usa <xref:System.Linq.Enumerable.Select%2A> para devolver todas las filas de `Product` y mostrar los nombres de producto.  
   
@@ -71,6 +72,6 @@ Una consulta es una expresión que recupera datos de un origen de datos. Las con
   
 ## <a name="see-also"></a>Vea también  
  [Guía de programación](../../../../docs/framework/data/adonet/programming-guide-linq-to-dataset.md)  
- [Consultar conjuntos de datos](../../../../docs/framework/data/adonet/querying-datasets-linq-to-dataset.md)  
+ [Consulta de conjuntos de datos](../../../../docs/framework/data/adonet/querying-datasets-linq-to-dataset.md)  
  [Introducción a LINQ en C#](~/docs/csharp/programming-guide/concepts/linq/getting-started-with-linq.md)  
  [Introducción a LINQ en Visual Basic](~/docs/visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)

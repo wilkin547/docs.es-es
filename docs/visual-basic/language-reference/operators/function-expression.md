@@ -14,11 +14,11 @@ ms.assetid: e8a47a45-4b8a-4f45-a623-7653625dffbc
 caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: e1d9d1223b340b2172c12bd8c2f364e314e764b4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: cb1790d363755fe9b8bd711409734f7c3a405f3e
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="function-expression-visual-basic"></a>Expresión de función (Visual Basic)
 Declara los parámetros y el código que definen una expresión lambda de función.  
@@ -38,8 +38,8 @@ End Function
 |Término|Definición|  
 |---|---|  
 |`parameterlist`|Opcional. Una lista de nombres de variables locales que representan los parámetros de este procedimiento. Los paréntesis deben estar presentes incluso cuando la lista está vacía. Vea [lista de parámetros](../../../visual-basic/language-reference/statements/parameter-list.md).|  
-|`expression`|Obligatorio. Una sola expresión. El tipo de la expresión es el tipo de valor devuelto de la función.|  
-|`statements`|Obligatorio. Una lista de instrucciones que devuelve un valor mediante la `Return` instrucción. (Consulte [Return (instrucción)](../../../visual-basic/language-reference/statements/return-statement.md).) El tipo de valor devuelto es el tipo de valor devuelto de la función.|  
+|`expression`|Requerido. Una sola expresión. El tipo de la expresión es el tipo de valor devuelto de la función.|  
+|`statements`|Requerido. Una lista de instrucciones que devuelve un valor mediante la `Return` instrucción. (Consulte [Return (instrucción)](../../../visual-basic/language-reference/statements/return-statement.md).) El tipo de valor devuelto es el tipo de valor devuelto de la función.|  
   
 ## <a name="remarks"></a>Comentarios  
  A *expresión lambda* es una función sin un nombre que calcule y devuelva un valor. Puede usar una expresión lambda en cualquier lugar puede utilizar un tipo de delegado, excepto como argumento a `RemoveHandler`. Para obtener más información sobre los delegados y el uso de expresiones lambda con delegados, vea [instrucción Delegate](../../../visual-basic/language-reference/statements/delegate-statement.md) y [conversión de delegado flexible](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md).  
@@ -92,7 +92,7 @@ Dim londonCusts = db.Customers.
                   Select(Function(cust) cust)  
 ```  
   
- Para obtener más información acerca de los métodos de consulta, vea [consultas](../../../visual-basic/language-reference/queries/queries.md). Para obtener más información acerca de los operadores de consulta estándar, vea [información general sobre operadores de consulta estándar](http://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2).  
+ Para obtener más información acerca de los métodos de consulta, vea [consultas](../../../visual-basic/language-reference/queries/queries.md). Para obtener más información acerca de los operadores de consulta estándar, vea [información general sobre operadores de consulta estándar](../../programming-guide/concepts/linq/standard-query-operators-overview.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Function (instrucción)](../../../visual-basic/language-reference/statements/function-statement.md)  

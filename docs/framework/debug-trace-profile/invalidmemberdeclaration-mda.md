@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 71313a14ba1f9222e19dbf9f8180280d0e8c444d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d4f625cbc7d7c46eee5b2eb8d7e47d4a5754fc26
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="invalidmemberdeclaration-mda"></a>MDA de invalidMemberDeclaration
 El asistente para la depuración administrada (MDA) de `invalidMemberDeclaration` se activa para informar acerca de un error que se produce a la hora de determinar cómo calcular las referencias de los parámetros de un miembro al que se va a llamar desde COM.  
@@ -56,4 +57,4 @@ El asistente para la depuración administrada (MDA) de `invalidMemberDeclaration
 ## <a name="see-also"></a>Vea también  
  <xref:System.Runtime.InteropServices.MarshalAsAttribute>  
  [Diagnosing Errors with Managed Debugging Assistants (Diagnóstico de errores con asistentes para la depuración administrada)](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)  
- [Serialización para interoperabilidad](../../../docs/framework/interop/interop-marshaling.md)
+ [Serialización de interoperabilidad](../../../docs/framework/interop/interop-marshaling.md)

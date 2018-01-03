@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 911a770fb4dc6d11f17c1f287a53ddb6552c690a
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 47799c5eb10a3274b8b5f10d4ccec96a575da949
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="transports"></a>Transportes
 El nivel de transporte está en el nivel más bajo de la pila del canal. Los transportes principales utilizados en [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] son HTTP, HTTPS, TCP y canalizaciones con nombre. En esta sección se enumeran todos los elementos de configuración que le permiten configurar tipos diferentes de transportes.  
@@ -27,7 +28,7 @@ El nivel de transporte está en el nivel más bajo de la pila del canal. Los tra
  <xref:System.ServiceModel.Channels.TransportBindingElement>  
  <xref:System.ServiceModel.Channels.CustomBinding>  
  [Transportes](../../../../../docs/framework/wcf/feature-details/transports.md)  
- [Elegir un transporte](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)  
+ [Elección del transporte](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)  
  [Enlaces](../../../../../docs/framework/wcf/bindings.md)  
  [Extensión de enlaces](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
  [Enlaces personalizados](../../../../../docs/framework/wcf/extending/custom-bindings.md)  

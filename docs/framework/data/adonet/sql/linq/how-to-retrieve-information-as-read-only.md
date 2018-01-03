@@ -16,11 +16,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 9a9765d8d8330c7ad2a6e8cb25166427cdd9414a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 04a20a06cd8ed8785b37bdc604a817b475f93873
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-retrieve-information-as-read-only"></a>Cómo: Recuperar información con formato de solo lectura
 Cuando no se tiene pensado cambiar los datos, puede aumentar el rendimiento de las consultas buscando resultados de solo lectura.  
@@ -38,5 +39,5 @@ Cuando no se tiene pensado cambiar los datos, puede aumentar el rendimiento de l
   
 ## <a name="see-also"></a>Vea también  
  [Conceptos sobre consultas](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)  
- [Consultar la base de datos](../../../../../../docs/framework/data/adonet/sql/linq/querying-the-database.md)  
- [Ejecución diferida frente a la carga inmediata](../../../../../../docs/framework/data/adonet/sql/linq/deferred-versus-immediate-loading.md)
+ [Consulta de la base de datos](../../../../../../docs/framework/data/adonet/sql/linq/querying-the-database.md)  
+ [Carga inmediata y carga diferida](../../../../../../docs/framework/data/adonet/sql/linq/deferred-versus-immediate-loading.md)

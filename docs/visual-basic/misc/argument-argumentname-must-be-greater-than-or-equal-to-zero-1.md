@@ -9,11 +9,11 @@ ms.assetid: 6f54fdc6-e263-4b2f-a66f-f206f3a59818
 caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: dba7ebe86d3c34198171556b3895cb6925b5f876
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 5d002c820dab758a7592bb6de438c112af1ad94b
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="argument-ltargumentnamegt-must-be-greater-than-or-equal-to-zero"></a>Argumento &lt;argumentname&gt; debe ser mayor o igual a cero.
 Un valor de argumento es menor que cero. Los valores de argumento deben ser mayores o iguales a cero.  
@@ -26,4 +26,4 @@ Un valor de argumento es menor que cero. Los valores de argumento deben ser mayo
   
 ## <a name="see-also"></a>Vea también  
  [Paso de argumentos por valor y por referencia](../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)  
- [Mecanismo para usuarios de Visual Basic 6.0 pasar parámetros](http://msdn.microsoft.com/en-us/0fa2b0dc-aa1c-4797-bbd6-aa13c611cab2)
+

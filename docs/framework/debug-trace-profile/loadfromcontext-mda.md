@@ -18,11 +18,12 @@ caps.latest.revision: "8"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: acd8291eda97caee72de4632f8715e6211deb7a3
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 0910e4bdd2cc9c99afc55c5f70f4d225a87deb5c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="loadfromcontext-mda"></a>MDA de loadFromContext
 El asistente para la depuración administrada (MDA) `loadFromContext` se activa si se carga un ensamblado en el contexto de `LoadFrom`. Esta situación puede producirse como resultado de llamar a <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> u otros métodos similares.  
@@ -47,7 +48,7 @@ El asistente para la depuración administrada (MDA) `loadFromContext` se activa 
 ## <a name="effect-on-the-runtime"></a>Efecto en el Runtime  
  El MDA no tiene ningún efecto en el CLR. Informa del contexto que se usó como resultado de una solicitud de carga.  
   
-## <a name="output"></a>Resultado  
+## <a name="output"></a>Salida  
  El MDA informa de que el ensamblado se cargó en el contexto de `LoadFrom`. Especifica el nombre simple del ensamblado y la ruta de acceso. También sugiere mitigaciones para evitar el uso del contexto de `LoadFrom`.  
   
 ## <a name="configuration"></a>Configuración  

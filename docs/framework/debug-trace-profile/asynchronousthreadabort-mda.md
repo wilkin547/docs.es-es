@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 6f7bfee4375a14a4456493333e65a953d406c732
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: ecd99b098a619d4ad132432f4fd163d32598c2ba
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="asynchronousthreadabort-mda"></a>MDA de asynchronousThreadAbort
 El Asistente para la depuración administrada (MDA) `asynchronousThreadAbort` se activa cuando un subproceso intenta incorporar una anulación asincrónica a otro subproceso. Las anulaciones de subproceso sincrónicas no activan el MDA `asynchronousThreadAbort`.
@@ -50,7 +51,7 @@ El Asistente para la depuración administrada (MDA) `asynchronousThreadAbort` se
 ## <a name="effect-on-the-runtime"></a>Efecto en el Runtime
  Este MDA no tiene ningún efecto en el CLR. Solo notifica datos sobre las anulaciones de subproceso asincrónicas.
 
-## <a name="output"></a>Resultado
+## <a name="output"></a>Salida
  El MDA notifica el identificador del subproceso que realiza la anulación y el identificador del subproceso que es el destino de ella. Nunca serán iguales, porque eso está limitado a las interrupciones asincrónicas.
 
 ## <a name="configuration"></a>Configuración

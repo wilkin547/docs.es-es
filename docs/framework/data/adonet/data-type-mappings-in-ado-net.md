@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 65f9d8a6182c5882a173a3a3733c1c0c220efbf6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b30f4e36ffd98289bb971e04b55b0249138e0efd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="data-type-mappings-in-adonet"></a>Asignaciones de tipos de datos en ADO.NET
 .NET Framework se basa en el sistema de tipos común, que define cómo se declaran, usan y administran los tipos en tiempo de ejecución. Consta de tipos de valor y de tipos de referencia, que derivan todos del tipo base <xref:System.Object>. Al trabajar con un origen de datos, el tipo de datos se deduce del proveedor de datos si no se especifica explícitamente. Por ejemplo, un objeto <xref:System.Data.DataSet> es independiente de cualquier origen de datos específico. Los datos de `DataSet` se recuperan desde un origen de datos y los cambios que se realizan en ellos se reflejan en el origen de datos mediante el uso de `DataAdapter`. Esto significa que cuando `DataAdapter` rellena un objeto <xref:System.Data.DataTable> en `DataSet` con valores obtenidos de un origen de datos, los tipos de datos resultantes de las columnas de `DataTable` son tipos de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] en lugar de tipos específicos del proveedor de datos de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] que se utiliza para realizar la conexión con el origen de datos.  
@@ -30,13 +31,13 @@ ms.lasthandoff: 11/21/2017
 >  Los valores nulos de los tipo de datos del proveedor de datos de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] se representan mediante `DBNull.Value`.  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Asignaciones de tipos de datos SQL Server](../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)  
+ [Asignaciones de tipos de datos de SQL Server](../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)  
  Enumera las asignaciones de tipos de datos deducidas y los métodos de descriptor de acceso a datos de <xref:System.Data.SqlClient>.  
   
- [Asignaciones de tipos de datos OLE DB](../../../../docs/framework/data/adonet/ole-db-data-type-mappings.md)  
+ [Asignaciones de tipos de datos de OLE DB](../../../../docs/framework/data/adonet/ole-db-data-type-mappings.md)  
  Enumera las asignaciones de tipos de datos deducidas y los métodos de descriptor de acceso a datos de <xref:System.Data.OleDb>.  
   
- [Asignaciones de tipos de datos ODBC](../../../../docs/framework/data/adonet/odbc-data-type-mappings.md)  
+ [Asignaciones de tipos de datos de ODBC](../../../../docs/framework/data/adonet/odbc-data-type-mappings.md)  
  Enumera las asignaciones de tipos de datos deducidas y los métodos de descriptor de acceso a datos de <xref:System.Data.Odbc>.  
   
  [Asignaciones de tipos de datos de Oracle](../../../../docs/framework/data/adonet/oracle-data-type-mappings.md)  
@@ -47,8 +48,8 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>Vea también  
  [Tipos de datos de SQL Server y ADO.NET](../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)  
- [Configurar parámetros y tipos de datos de parámetro](../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)  
- [Recuperar información del esquema de base de datos](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)  
+ [Configuración de parámetros y tipos de datos de parámetros](../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)  
+ [Recuperación de información del esquema de la base de datos](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)  
  [Sistema de tipos comunes](../../../../docs/standard/base-types/common-type-system.md)  
  [Convertir tipos](http://msdn.microsoft.com/en-us/6038316e-bdaf-4f55-8006-407f591ce156)  
  [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](http://go.microsoft.com/fwlink/?LinkId=217917)

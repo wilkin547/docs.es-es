@@ -16,11 +16,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: d078476e881c3823d7772a9db4cdbdb23dac8bb4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 8497f728019c97bb59162d39a9f77e34e4e6f3c6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="retrieving-objects-from-the-identity-cache"></a>Recuperar objetos de la memoria caché de identidades
 En este tema se describen los tipos de consultas LINQ to SQL que devuelven un objeto desde la memoria caché de identidad que está administrado por el <xref:System.Data.Linq.DataContext>.  
@@ -76,6 +77,6 @@ En este tema se describen los tipos de consultas LINQ to SQL que devuelven un ob
   
 ## <a name="see-also"></a>Vea también  
  [Conceptos sobre consultas](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)  
- [Identidad del objeto.](../../../../../../docs/framework/data/adonet/sql/linq/object-identity.md)  
+ [Identidad de objetos](../../../../../../docs/framework/data/adonet/sql/linq/object-identity.md)  
  [Información general](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)  
- [Identidad del objeto.](../../../../../../docs/framework/data/adonet/sql/linq/object-identity.md)
+ [Identidad de objetos](../../../../../../docs/framework/data/adonet/sql/linq/object-identity.md)

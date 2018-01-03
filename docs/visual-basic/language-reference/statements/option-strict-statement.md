@@ -19,11 +19,11 @@ ms.assetid: 5883e0c1-a920-4274-8e46-b0ff047eaee5
 caps.latest.revision: "49"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 238f64001b097b86306e0ed9630bd5df2e6a189f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 1a01edd918ea49c08defddb45bf23c33307e814f
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="option-strict-statement"></a>Option Strict Statement
 Restringe las conversiones de tipos de datos implícitos a conversiones de ampliación únicamente, no permite el enlace más tarde y no permite tipos implícitos que da como resultado un `Object` tipo.  
@@ -48,7 +48,7 @@ Option Strict { On | Off }
   
 -   Enlace en tiempo de ejecución  
   
--   Tipos implícitos que da como resultado un `Object` tipo  
+-   Tipos implícitos que dan como resultado un tipo `Object`  
   
 > [!NOTE]
 >  En las configuraciones de advertencia que se pueden establecer en el [página compilación, Diseñador de proyectos (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic), hay tres opciones que corresponden a las tres condiciones que producen un error en tiempo de compilación. Para obtener información sobre cómo usar esta configuración, consulte [para establecer configuraciones de advertencia en el IDE](../../../visual-basic/language-reference/statements/option-strict-statement.md#conditions) más adelante en este tema.  
@@ -66,7 +66,7 @@ Option Strict { On | Off }
 -   Acelera la ejecución del código. Una razón para esto es que si no especifica un tipo de datos para un elemento de programación, el compilador de Visual Basic le asigna el `Object` tipo. Código compilado que sea necesario convertir entre `Object` y otros tipos de datos, lo que reduce el rendimiento.  
   
 ## <a name="implicit-narrowing-conversion-errors"></a>Errores de conversión de restricción implícitas  
- Errores de conversión de restricción implícitas se producen cuando existe una conversión de tipos implícita de datos que es una conversión de restricción.  
+ Los errores de conversión de restricción implícita se producen cuando existe una conversión de tipos de datos implícita que es una conversión de restricción.  
   
  [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]puede convertir a muchos tipos de datos en otros tipos de datos. Puede producirse una pérdida de datos cuando el valor de un tipo de datos se convierte en un tipo de datos que tiene menor precisión o menor capacidad. Si se produce un error de este tipo una conversión de restricción, se produce un error de tiempo de ejecución. `Option Strict`garantiza la notificación en tiempo de compilación de estas conversiones de restricción para que pueda evitarlas. Para obtener más información, consulte [conversiones implícitas y explícitas](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md) y [conversiones de ampliación y de restricción](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md).  
   
@@ -89,10 +89,10 @@ Option Strict { On | Off }
  Errores de conversión de restricción implícitas se suprimen en tiempo de compilación para las conversiones de los elementos en una `For Each…Next` colección a la variable de control de bucle. Esto ocurre incluso si `Option Strict` se encuentra en. Para obtener más información, vea la sección "Conversiones de restricción" en [For Each... Next (instrucción)](../../../visual-basic/language-reference/statements/for-each-next-statement.md).  
   
 ## <a name="late-binding-errors"></a>Errores de enlace en tiempo de ejecución  
- Tiempo de ejecución se enlaza un objeto cuando se asigna a una propiedad o método de una variable que se declara como de tipo `Object`. Para obtener más información, consulte [Early and Late Binding](../../../visual-basic/programming-guide/language-features/early-late-binding/index.md).  
+ Un objeto se enlaza en tiempo de ejecución cuando se asigna a una propiedad o un método de una variable que se declara como variable de tipo `Object`. Para obtener más información, consulte [Early and Late Binding](../../../visual-basic/programming-guide/language-features/early-late-binding/index.md).  
   
 ## <a name="implicit-object-type-errors"></a>Errores de tipo de objeto implícito  
- Se producen errores de tipo de objeto implícito cuando no puede ser un tipo adecuado para una variable declarada, por lo que un tipo deducido de `Object` se deduce. Esto se produce principalmente cuando se usa un `Dim` instrucción para declarar una variable sin utilizar un `As` cláusula, y `Option Infer` está desactivada. Para obtener más información, consulte [Option Infer instrucción](../../../visual-basic/language-reference/statements/option-infer-statement.md) y [especificación del lenguaje Visual Basic](../../../visual-basic/reference/language-specification/index.md).  
+ Los errores de tipo de objeto implícito se producen cuando no se puede inferir un tipo adecuado para una variable declarada, por lo que se infiere un tipo de `Object`. Esto se produce principalmente cuando se usa una instrucción `Dim` para declarar una variable sin usar una cláusula `As` y `Option Infer` está desactivado. Para obtener más información, consulte [Option Infer instrucción](../../../visual-basic/language-reference/statements/option-infer-statement.md) y [especificación del lenguaje Visual Basic](../../../visual-basic/reference/language-specification/index.md).  
   
  Para los parámetros de método, el `As` cláusula es opcional si `Option Strict` está desactivada. Sin embargo, si utiliza un parámetro un `As` cláusula, todas ellas deben usarlo. Si `Option Strict` está activado, el `As` cláusula es necesaria para cada definición de parámetro.  
   
@@ -116,7 +116,7 @@ Option Strict { On | Off }
 ### <a name="to-set-option-strict-in-the-ide"></a>Para establecer Option Strict en el IDE  
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
-1.  En el **Explorador de soluciones**, seleccione un proyecto. En el menú **Proyecto**, haga clic en **Propiedades**. Para obtener más información, consulte [Introducción al Diseñador de proyectos](http://msdn.microsoft.com/en-us/898dd854-c98d-430c-ba1b-a913ce3c73d7).  
+1.  En el **Explorador de soluciones**, seleccione un proyecto. En el menú **Proyecto**, haga clic en **Propiedades**.  
   
 2.  En el **compilar** pestaña, establezca el valor de la **Option Strict** cuadro.  
   
@@ -125,18 +125,18 @@ Option Strict { On | Off }
   
 -   **Conversión implícita**  
   
--   **Enlace en tiempo de ejecución; la llamada podría fallar en tiempo de ejecución**  
+-   **Enlace en tiempo de ejecución; la llamada podría generar un error en tiempo de ejecución**  
   
 -   **Tipo implícito; se supone el objeto**  
   
- Al establecer **Option Strict** a **en**, se establecen las tres de estos valores de configuración de la advertencia en **Error**. Al establecer **Option Strict** a **desactivar**, las tres opciones se establecen en **ninguno**.  
+ Al establecer **Option Strict** en **On**, estos tres valores de configuración de advertencias se establecen en **Error**. Al establecer **Option Strict** en **Off**, las tres opciones se establecen en **None**.  
   
- Puede cambiar individualmente cada configuración de advertencia si se establece en **ninguno**, **advertencia**, o **Error**. Si se establecen las tres opciones de configuración de advertencia en **Error**, `On` aparece en la `Option strict` cuadro. Si se establecen las tres en **ninguno**, `Off` aparece en este cuadro. Para cualquier otra combinación de estas opciones, **(personalizada)** aparece.  
+ Puede cambiar individualmente cada valor de configuración de advertencia por **None**, **Warning** o **Error**. Si se establecen las tres opciones de configuración de advertencia en **Error**, `On` aparece en el cuadro `Option strict`. Si se establecen las tres en **None**, `Off` aparece en este cuadro. Para cualquier otra combinación de estas opciones, aparece **(personalizado)**.  
   
 ### <a name="to-set-the-option-strict-default-setting-for-new-projects"></a>Para establecer el valor predeterminado Option Strict para los nuevos proyectos  
  Cuando se crea un proyecto, el **Option Strict** en el **compilar** pestaña está establecida en el **Option Strict** en el **opciones** cuadro de diálogo.  
   
- Para establecer `Option Strict` en este cuadro de diálogo, en la **herramientas** menú, haga clic en **opciones**. En el **opciones** cuadro de diálogo, expanda **proyectos y soluciones**y, a continuación, haga clic en **valores predeterminados de VB**. El valor predeterminado inicial de **valores predeterminados de VB** es `Off`.  
+ Para establecer `Option Strict` en este cuadro de diálogo, en la **herramientas** menú, haga clic en **opciones**. En el cuadro de diálogo **Opciones**, expanda **Proyectos y soluciones** y, después, haga clic en **Valores predeterminados de VB**. El valor predeterminado inicial de **valores predeterminados de VB** es `Off`.  
   
 ### <a name="to-set-option-strict-on-the-command-line"></a>Para establecer Option Strict en la línea de comandos  
  Incluir el [/optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md) opción del compilador en el **vbc** comando.  

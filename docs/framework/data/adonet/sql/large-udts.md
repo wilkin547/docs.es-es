@@ -16,11 +16,12 @@ caps.latest.revision: "6"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 1133db68d233032b64d113a09e367781cf73321e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 876ebeb5568ffff0a10aa5a54ce96c256d237d86
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="large-udts"></a>UDT grandes
 Los tipos definidos por el usuario (UDT) permiten que el desarrollador amplíe el sistema de tipos escalares del servidor mediante el almacenamiento de objetos Common Language Runtime (CLR) en una base de datos de SQL Server. Los UDT pueden contener varios elementos y presentar diversos comportamientos, a diferencia de los tipos de datos de alias tradicionales, que constan de un solo tipo de datos del sistema SQL Server.  
@@ -34,7 +35,7 @@ Los tipos definidos por el usuario (UDT) permiten que el desarrollador amplíe e
   
  **Libros en pantalla de SQL Server**  
   
-1.  [Tipos definidos por el usuario CLR](http://go.microsoft.com/fwlink/?LinkId=98366)  
+1.  [Tipos CLR definidos por el usuario](http://go.microsoft.com/fwlink/?LinkId=98366)  
   
 ## <a name="retrieving-udt-schemas-using-getschema"></a>Recuperar los esquemas UDT mediante GetSchema  
  El método <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A> de <xref:System.Data.SqlClient.SqlConnection> devuelve la información de un esquema de base de datos de un elemento <xref:System.Data.DataTable>. Para obtener más información, consulte [colecciones de esquemas de SQL Server](../../../../../docs/framework/data/adonet/sql-server-schema-collections.md).  
@@ -142,8 +143,8 @@ End Using
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Configurar parámetros y tipos de datos de parámetro](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)  
- [Recuperar información del esquema de base de datos](../../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)  
- [Asignaciones de tipos de datos SQL Server](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)  
+ [Configuración de parámetros y tipos de datos de parámetros](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)  
+ [Recuperación de información del esquema de la base de datos](../../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)  
+ [Asignaciones de tipos de datos de SQL Server](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)  
  [Datos binarios y datos de valores grandes de SQL Server](../../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)  
  [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](http://go.microsoft.com/fwlink/?LinkId=217917)

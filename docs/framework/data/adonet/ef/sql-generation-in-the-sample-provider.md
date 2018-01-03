@@ -13,11 +13,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 58a49f7bf5d385466810a3c59bda748ef66d5840
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 853bf55f96be3adeba11ff14e36fd56631536b69
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sql-generation-in-the-sample-provider"></a>Generación de SQL en el proveedor de ejemplo
 El [proveedor de ejemplo de Entity Framework](http://go.microsoft.com/fwlink/?LinkId=180616) muestra los nuevos componentes de proveedores de datos de ADO.NET que admiten la [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)].  Funciona con una base de datos SQL Server 2005 y se implementa como un contenedor del proveedor de datos ADO.NET 2.0 System.Data.SqlClient.  
@@ -29,7 +30,7 @@ El [proveedor de ejemplo de Entity Framework](http://go.microsoft.com/fwlink/?Li
   
  [Arquitectura y diseño](../../../../../docs/framework/data/adonet/ef/architecture-and-design.md)  
   
- [Tutorial: Generar SQL](../../../../../docs/framework/data/adonet/ef/walkthrough-sql-generation.md)  
+ [Tutorial: generación de SQL](../../../../../docs/framework/data/adonet/ef/walkthrough-sql-generation.md)  
   
 ## <a name="see-also"></a>Vea también  
  [Generación de SQL](../../../../../docs/framework/data/adonet/ef/sql-generation.md)

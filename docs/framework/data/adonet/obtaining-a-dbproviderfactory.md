@@ -16,11 +16,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: d230a122cbc02521c8d300d96cdd074bd7faa979
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 379ec77c5a291ff0fcfa535b808f8976bb416d15
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="obtaining-a-dbproviderfactory"></a>Obtener un objeto DbProviderFactory
 El proceso de obtención de <xref:System.Data.Common.DbProviderFactory> implica pasar información sobre un proveedor de datos a la clase <xref:System.Data.Common.DbProviderFactories>. En función de esta información, el método <xref:System.Data.Common.DbProviderFactories.GetFactory%2A> crea un generador del proveedor fuertemente tipado. Por ejemplo, para crear <xref:System.Data.SqlClient.SqlClientFactory>, se puede pasar a `GetFactory` una cadena con el nombre de proveedor especificado como "System.Data.SqlClient". La otra sobrecarga de `GetFactory` toma <xref:System.Data.DataRow>. Una vez creado el generador del proveedor, se pueden utilizar sus métodos para crear objetos adicionales. Entre los métodos de `SqlClientFactory` se incluyen <xref:System.Data.SqlClient.SqlClientFactory.CreateConnection%2A>, <xref:System.Data.SqlClient.SqlClientFactory.CreateCommand%2A> y <xref:System.Data.SqlClient.SqlClientFactory.CreateDataAdapter%2A>.  
@@ -51,7 +52,7 @@ El proceso de obtención de <xref:System.Data.Common.DbProviderFactory> implica 
   
 |Índice de columna|Nombre de columna|Resultado de ejemplo|Descripción|  
 |--------------------|-----------------|--------------------|-----------------|  
-|0|**Nombre**|Proveedor de datos SqlClient|Nombre legible del proveedor de datos|  
+|0|**Name**|Proveedor de datos SqlClient|Nombre legible del proveedor de datos|  
 |1|**Descripción**|Proveedor de datos .NET Framework para SqlServer|Descripción legible del proveedor de datos|  
 |2|**InvariantName**|
           System.Data.SqlClient|Nombre que se puede utilizar mediante programación para hacer referencia al proveedor de datos|  
@@ -107,7 +108,7 @@ El proceso de obtención de <xref:System.Data.Common.DbProviderFactory> implica 
  [!code-vb[DataWorks DbProviderFactories.GetFactory#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks DbProviderFactories.GetFactory/VB/source.vb#1)]  
   
 ## <a name="see-also"></a>Vea también  
- [DbProviderFactories](../../../../docs/framework/data/adonet/dbproviderfactories.md)  
+ [Objetos DbProviderFactory](../../../../docs/framework/data/adonet/dbproviderfactories.md)  
  [Cadenas de conexión](../../../../docs/framework/data/adonet/connection-strings.md)  
  [Utilizar las clases de configuración](http://msdn.microsoft.com/library/98d2b386-baf6-4a17-974b-76e3b4c87acc)  
  [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](http://go.microsoft.com/fwlink/?LinkId=217917)

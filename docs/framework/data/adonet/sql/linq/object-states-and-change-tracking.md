@@ -13,11 +13,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 2d6685bc3dc17294f786a572e6f11165ee011b83
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 92f2aa2aea721c424ba59af913b868907be36317
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="object-states-and-change-tracking"></a>Estados de objetos y seguimiento de cambios
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]objetos siempre participan en algún *estado*. Por ejemplo, cuando [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] crea un nuevo objeto, el objeto está en estado `Unchanged`. Un nuevo objeto que ha creado es desconocido para el <xref:System.Data.Linq.DataContext> y se encuentra en `Untracked` estado. Después de la ejecución correcta de <xref:System.Data.Linq.DataContext.SubmitChanges%2A>, todos los objetos que [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] reconoce están en estado `Unchanged`. (La única excepción son los objetos que se han eliminado correctamente de la base de datos, que están en estado `Deleted` y no se pueden utilizar en esa instancia de <xref:System.Data.Linq.DataContext>.)  
@@ -74,4 +75,4 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>Vea también  
  [Información general](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)  
- [Insertar, actualizar y eliminar operaciones](../../../../../../docs/framework/data/adonet/sql/linq/insert-update-and-delete-operations.md)
+ [Operaciones de inserción, actualización y eliminación](../../../../../../docs/framework/data/adonet/sql/linq/insert-update-and-delete-operations.md)

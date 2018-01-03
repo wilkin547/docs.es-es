@@ -26,11 +26,11 @@ ms.assetid: 54e8eeeb-3b0d-4fb9-acce-fbfbd5975f6e
 caps.latest.revision: "37"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 281b18322f5be4e7dadcb9533680b25016a44c96
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 00753eddb641c07ef9c6e6282fe00c5e8d00547a
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="option-compare-statement"></a>Option Compare (Instrucción)
 Declara el método de comparación predeterminado que se utiliza al comparar datos de cadena.  
@@ -72,13 +72,13 @@ Option Compare { Binary | Text }
   
 #### <a name="to-set-option-compare-in-the-ide"></a>Cómo establecer Option Compare en el IDE  
   
-1.  En el **Explorador de soluciones**, seleccione un proyecto. En el menú **Proyecto**, haga clic en **Propiedades**. Para obtener más información, consulte [NIB: administración de propiedades del proyecto con el Diseñador de proyectos](http://msdn.microsoft.com/en-us/983f3c18-832f-4666-afec-74b716ff3e0e).  
+1.  En el **Explorador de soluciones**, seleccione un proyecto. En el menú **Proyecto**, haga clic en **Propiedades**.  
   
 2.  Haga clic en la pestaña **Compilar**.  
   
 3.  Establezca el valor el **Option Compare** cuadro.  
   
- Cuando se crea un proyecto, el **Option Compare** en el **compilar** pestaña está establecida en el **Option Compare** en el **opciones** cuadro de diálogo. Para cambiar esta configuración, en la **herramientas** menú, haga clic en **opciones**. En el **opciones** cuadro de diálogo, expanda **proyectos y soluciones**y, a continuación, haga clic en **valores predeterminados de VB**. El valor predeterminado inicial de **valores predeterminados de VB** es **binario**.  
+ Cuando se crea un proyecto, el **Option Compare** en el **compilar** pestaña está establecida en el **Option Compare** en el **opciones** cuadro de diálogo. Para cambiar esta configuración, en la **herramientas** menú, haga clic en **opciones**. En el cuadro de diálogo **Opciones**, expanda **Proyectos y soluciones** y, después, haga clic en **Valores predeterminados de VB**. El valor predeterminado inicial de **valores predeterminados de VB** es **binario**.  
   
 #### <a name="to-set-option-compare-on-the-command-line"></a>Cómo establecer Option Compare en la línea de comandos  
   

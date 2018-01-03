@@ -17,11 +17,12 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 65b02945aa81fdf18ad328a833f8f85744035871
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 8e8f5626ab7439b34377ba0200fd232c41017652
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wcf-data-services-client-library"></a>Biblioteca cliente de Data Services de WCF
 Cualquier aplicación puede interactuar con un servicio de datos basado en [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] si puede enviar una solicitud HTTP y procesar la fuente de [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] que devuelve un servicio de datos. Esta interoperabilidad permite tener acceso a los servicios basados en [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] de una amplia gama de aplicaciones habilitadas para web. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]incluye bibliotecas de cliente que proporcionan una experiencia de programación más enriquecida cuando se usan [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] fuentes de distribución de .NET Framework o aplicaciones basadas en Silverlight.  
@@ -37,28 +38,28 @@ Cualquier aplicación puede interactuar con un servicio de datos basado en [!INC
  [Consultar el servicio de datos](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)  
  Describe cómo consultar un servicio de datos desde una aplicación basada en .NET Framework usando bibliotecas de cliente.  
   
- [Cargar contenido diferido](../../../../docs/framework/data/wcf/loading-deferred-content-wcf-data-services.md)  
+ [Carga de contenido diferido](../../../../docs/framework/data/wcf/loading-deferred-content-wcf-data-services.md)  
  Describe cómo cargar contenido adicional no incluido en la respuesta de la consulta inicial.  
   
- [Actualizar el servicio de datos](../../../../docs/framework/data/wcf/updating-the-data-service-wcf-data-services.md)  
+ [Actualización del servicio de datos](../../../../docs/framework/data/wcf/updating-the-data-service-wcf-data-services.md)  
  Describe cómo crear, modificar y eliminar entidades y relaciones usando bibliotecas de cliente.  
   
  [Operaciones asincrónicas](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md)  
  Describe los medios proporcionados por las bibliotecas de cliente para trabajar con un servicio de datos de manera asincrónica.  
   
- [Las operaciones por lotes](../../../../docs/framework/data/wcf/batching-operations-wcf-data-services.md)  
+ [Procesamiento por lotes de operaciones](../../../../docs/framework/data/wcf/batching-operations-wcf-data-services.md)  
  Describe cómo enviar varias solicitudes al servicio de datos en un solo lote usando las bibliotecas de cliente.  
   
- [Enlazar datos a controles](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md)  
+ [Enlace de datos a los controles](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md)  
  Describe cómo enlazar controles a un [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] fuente devuelta por un servicio de datos.  
   
- [Operaciones del servicio que realiza la llamada](../../../../docs/framework/data/wcf/calling-service-operations-wcf-data-services.md)  
+ [Operaciones de servicio de llamada](../../../../docs/framework/data/wcf/calling-service-operations-wcf-data-services.md)  
  Describe cómo usar la biblioteca de cliente para llamar a operaciones de servicio.  
   
- [Administrar el contexto de servicio de datos](../../../../docs/framework/data/wcf/managing-the-data-service-context-wcf-data-services.md)  
+ [Administración del contexto del servicio de datos](../../../../docs/framework/data/wcf/managing-the-data-service-context-wcf-data-services.md)  
  Describe las opciones para administrar el comportamiento de la biblioteca cliente.  
   
- [Trabajar con datos binarios](../../../../docs/framework/data/wcf/working-with-binary-data-wcf-data-services.md)  
+ [Trabajo con datos binarios](../../../../docs/framework/data/wcf/working-with-binary-data-wcf-data-services.md)  
  Describe cómo obtener acceso y cambiar los datos binarios devueltos por el servicio de datos como un flujo de datos.  
   
 ## <a name="see-also"></a>Vea también  

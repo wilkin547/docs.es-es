@@ -13,11 +13,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b3fbb3ef0fddd287fa3feb30732b26c651ac0067
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 5f6f52eae3ed9ac3236f54c62ce8712656392f0f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltservicecertificategt-of-ltclientcredentialsgt-element"></a>Elemento &lt;serviceCertificate&gt; de &lt;clientCredentials&gt;
 Especifica el certificado que se va a utilizar al autenticar un servicio al cliente.  
@@ -69,5 +70,5 @@ Especifica el certificado que se va a utilizar al autenticar un servicio al clie
  <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential>  
  [Comportamientos de seguridad](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)  
  [Protección de clientes](../../../../../docs/framework/wcf/securing-clients.md)  
- [Trabajar con certificados](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
+ [Trabajo con certificados](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
  [Protección de servicios y clientes](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

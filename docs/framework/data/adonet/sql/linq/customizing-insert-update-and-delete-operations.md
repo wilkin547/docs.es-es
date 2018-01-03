@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: e48ac307087d5b90567c720d0c215ac0d52ccb6b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 99a87a3d0dfabb053ca05644e0b3e53361821b9b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="customizing-insert-update-and-delete-operations"></a>Personalizar operaciones de actualización, inserción y eliminación
 De forma predeterminada, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] genera SQL dinámico para implementar operaciones de inserción, lectura, actualización y eliminación. Sin embargo, en la práctica, normalmente se personaliza la aplicación para satisfacer las necesidades de la empresa.  
@@ -28,14 +29,14 @@ De forma predeterminada, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecd
  En esta sección de temas se describen las técnicas que [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] proporciona para personalizar las operaciones de inserción, lectura, actualización y eliminación en una aplicación.  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Personalizar operaciones: información general](../../../../../../docs/framework/data/adonet/sql/linq/customizing-operations-overview.md)  
+ [Personalización de operaciones: información general](../../../../../../docs/framework/data/adonet/sql/linq/customizing-operations-overview.md)  
  Describe las distintas técnicas que [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] proporciona para personalizar las operaciones de inserción, lectura, actualización y eliminación.  
   
- [Insertar, actualizar y eliminar operaciones](../../../../../../docs/framework/data/adonet/sql/linq/insert-update-and-delete-operations.md)  
+ [Operaciones de inserción, actualización y eliminación](../../../../../../docs/framework/data/adonet/sql/linq/insert-update-and-delete-operations.md)  
  Describe los procesos predeterminados de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] para manipular los datos de la base de datos.  
   
  [Responsabilidades del desarrollador al invalidar un comportamiento predeterminado](../../../../../../docs/framework/data/adonet/sql/linq/responsibilities-of-the-developer-in-overriding-default-behavior.md)  
  Describe el rol del programador en la implementación de requisitos que [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] no aplica.  
   
- [Agregar lógica de negocios utilizando métodos parciales](../../../../../../docs/framework/data/adonet/sql/linq/adding-business-logic-by-using-partial-methods.md)  
+ [Adición de lógica de negocios utilizando métodos parciales](../../../../../../docs/framework/data/adonet/sql/linq/adding-business-logic-by-using-partial-methods.md)  
  Describe cómo utilizar métodos parciales para invalidar los métodos generados automáticamente.

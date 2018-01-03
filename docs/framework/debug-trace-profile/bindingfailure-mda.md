@@ -20,11 +20,12 @@ caps.latest.revision: "13"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 89c1ce4b39379aeae80240750cdbcd2e61b6ec11
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: fc87000e5b3f3a0f464929764eaeafaab4c3089a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="bindingfailure-mda"></a>MDA de bindingFailure
 El asistente para la depuración administrada (MDA) `bindingFailure` se activa cuando no se puede cargar un ensamblado.  
@@ -67,7 +68,7 @@ El asistente para la depuración administrada (MDA) `bindingFailure` se activa c
 ## <a name="effect-on-the-runtime"></a>Efecto en el Runtime  
  Este MDA no tiene ningún efecto en el CLR. Solo notifica datos sobre errores de enlace.  
   
-## <a name="output"></a>Resultado  
+## <a name="output"></a>Salida  
  El MDA notifica qué ensamblado no se ha podido cargar, incluida la ruta de acceso solicitada o el nombre para mostrar, el contexto de enlace, el dominio de aplicación en el que se ha solicitado la carga y el motivo del error.  
   
  El nombre para mostrar o la ruta de acceso solicitada pueden estar en blanco si estos datos no estaban a disposición de CLR. Si la llamada errónea era al método <xref:System.Reflection.Assembly.Load%2A>, es probable que el tiempo de ejecución no pudiera determinar el nombre para mostrar del ensamblado.  

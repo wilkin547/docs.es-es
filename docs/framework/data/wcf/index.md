@@ -16,11 +16,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a8a0ab816aa21082cf98462f5f9d7ffd20e4dcfd
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 9b6b9ddd27422c09f21833548634afd7945afa89
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wcf-data-services-45"></a>WCF Data Services 4.5
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] (antes conocido como "ADO.NET Data Services") es un componente de .NET Framework que permite crear servicios que usan [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] para exponer y usar datos a través de la Web o de una intranet mediante la semántica de [transferencia de estado de representación (REST)](http://go.microsoft.com/fwlink/?LinkId=113919). [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] expone los datos como recursos direccionables a través de identificadores uniformes de recursos (URI). Para tener acceso a los datos y cambiarlos se utilizan los verbos HTTP estándar GET, PUT, POST y DELETE. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] usa las convenciones del modelo entidad-relación de [Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model.md) para exponer los recursos como conjuntos de entidades que están relacionadas por medio de asociaciones.  
@@ -76,7 +77,7 @@ ms.lasthandoff: 12/02/2017
  ¿Cómo se integra con Visual Studio?  
  -   [Generar la biblioteca cliente del servicio de datos](../../../../docs/framework/data/wcf/generating-the-data-service-client-library-wcf-data-services.md)  
   
--   [Crear el servicio de datos](../../../../docs/framework/data/wcf/creating-the-data-service.md)  
+-   [Creación del servicio de datos](../../../../docs/framework/data/wcf/creating-the-data-service.md)  
   
 -   [Proveedor de Entity Framework](../../../../docs/framework/data/wcf/entity-framework-provider-wcf-data-services.md)  
   

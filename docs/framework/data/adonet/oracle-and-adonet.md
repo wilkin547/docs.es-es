@@ -16,11 +16,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: c615c985f885734800b471ee31451cfb8a4c8500
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f77d5c98c96bd4b6085c30b6d1dd713bd324fbad
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="oracle-and-adonet"></a>Oracle y ADO.NET
 > [!NOTE]
@@ -53,10 +54,10 @@ csc /r:System.Data.OracleClient.dll
  [Objetos BFILE de Oracle](../../../../docs/framework/data/adonet/oracle-bfiles.md)  
  Describe la clase <xref:System.Data.OracleClient.OracleBFile>, que se utiliza para trabajar con el tipo de datos BFILE de Oracle.  
   
- [LOB de Oracle](../../../../docs/framework/data/adonet/oracle-lobs.md)  
+ [Objetos LOB de Oracle](../../../../docs/framework/data/adonet/oracle-lobs.md)  
  Describe la clase <xref:System.Data.OracleClient.OracleLob>, que se utiliza para trabajar con tipos de datos LOB de Oracle.  
   
- [Cursores REF cursor de Oracle](../../../../docs/framework/data/adonet/oracle-ref-cursors.md)  
+ [Parámetros REF CURSOR de Oracle](../../../../docs/framework/data/adonet/oracle-ref-cursors.md)  
  Describe la compatibilidad con el tipo de datos REF CURSOR de Oracle.  
   
  [Tipos de Oracle](../../../../docs/framework/data/adonet/oracletypes.md)  
@@ -84,7 +85,7 @@ csc /r:System.Data.OracleClient.dll
  [SQL Server y ADO.NET](../../../../docs/framework/data/adonet/sql/index.md)  
  Describe cómo trabajar con características y funcionalidad específicas de [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)].  
   
- [DbProviderFactories](../../../../docs/framework/data/adonet/dbproviderfactories.md)  
+ [Objetos DbProviderFactory](../../../../docs/framework/data/adonet/dbproviderfactories.md)  
  Describe clases genéricas que permiten escribir código independiente del proveedor en [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)].  
   
 ## <a name="see-also"></a>Vea también  

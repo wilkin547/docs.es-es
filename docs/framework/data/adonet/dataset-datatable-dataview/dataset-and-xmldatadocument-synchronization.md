@@ -16,11 +16,12 @@ caps.latest.revision: "5"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 923a6b6cf1523c8a11cb509679443b9658e07ce5
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: acc68fd36d2887e5e951f9ba5adc20e8cfd87fd2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="dataset-and-xmldatadocument-synchronization"></a>Sincronización de DataSet y XmlDataDocument
 El <xref:System.Data.DataSet> de ADO.NET proporciona una representación relacional de datos. Para el acceso a datos jerárquicos puede utilizar las clases XML disponibles en .NET Framework. Históricamente, estas dos representaciones de datos se han utilizado independientemente. Sin embargo, .NET Framework permite el acceso sincrónico en tiempo real a las representaciones relacionales y jerárquicas de los datos mediante la **conjunto de datos** objeto y el <xref:System.Xml.XmlDataDocument> objeto, respectivamente.  
@@ -100,20 +101,20 @@ El <xref:System.Data.DataSet> de ADO.NET proporciona una representación relacio
  Al sincronizar un **conjunto de datos** con una **XmlDataDocument**, los resultados pueden diferir dependiendo de si o no su <xref:System.Data.DataRelation> objetos están anidados. Para obtener más información, consulte [anidar objetos DataRelation](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations.md).  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Sincronizar DataSet con XmlDataDocument](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/synchronizing-a-dataset-with-an-xmldatadocument.md)  
+ [Sincronización de un objeto DataSet con un objeto XmlDataDocument](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/synchronizing-a-dataset-with-an-xmldatadocument.md)  
  Muestra cómo sincronizar un fuertemente tipado **conjunto de datos**, con un esquema mínimo con un **XmlDataDocument**.  
   
- [Realizar una consulta XPath en un conjunto de datos](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/performing-an-xpath-query-on-a-dataset.md)  
+ [Realización de una consulta XPath en un objeto DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/performing-an-xpath-query-on-a-dataset.md)  
  Muestra cómo realizar una consulta XPath en el contenido de un **conjunto de datos**.  
   
- [Aplicar una transformación XSL a un conjunto de datos](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/applying-an-xslt-transform-to-a-dataset.md)  
+ [Aplicación de una transformación XSL a un DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/applying-an-xslt-transform-to-a-dataset.md)  
  Muestra cómo aplicar una transformación XSLT al contenido de un **conjunto de datos**.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
  [Usar XML en un conjunto de datos](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)  
  Describe cómo el **conjunto de datos** interactúa con XML como origen de datos, como cargar y hacer persistente el contenido de un **conjunto de datos** como datos XML.  
   
- [Anidar objetos DataRelation](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations.md)  
+ [Anidado de objetos DataRelation](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations.md)  
  Explica la importancia de anidada **DataRelation** objetos al representar el contenido de un **conjunto de datos** como datos XML y describe cómo crear estas relaciones.  
   
  [Objetos DataSet, DataTable y DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  

@@ -1,6 +1,6 @@
 ---
 title: "Empezar a trabajar con F # con herramientas de línea de comandos"
-description: "Obtenga información acerca de cómo usar F # con la CLI de núcleo de .NET de multiplataforma."
+description: "Obtener información sobre cómo usar F # en cualquier sistema operativo (Windows, Mac OS, Linux) con la CLI de núcleo de .NET de multiplataforma."
 keywords: "visual f#, f#, programación funcional, .NET, .NET Core"
 author: cartermp
 ms.author: phcart
@@ -10,15 +10,15 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 615db1ec-6ef3-4de2-bae6-4586affa9771
-ms.openlocfilehash: a23d4861ce599f20f37ecd0564a0187e7b9b739f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 4820a8a306bd478429b497a8b7c70ff170c1c655
+ms.sourcegitcommit: d095094e942eedf09530ea5636fbaf9029853027
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/19/2017
 ---
 # <a name="get-started-with-f-with-the-net-core-cli"></a>Empezar a trabajar con F # con la CLI de núcleo de .NET
 
-Este artículo explican cómo puede empezar a usar F # en .NET Core. Se desplazará por la creación de una solución de varios proyecto con una biblioteca de clases que se llama a una aplicación de consola.
+Este artículo explican cómo puede comenzar a trabajar en cualquier sistema operativo (Windows, Mac OS o Linux) mediante el uso de F # con la CLI de .NET Core. Se desplazará por la creación de una solución de varios proyecto con una biblioteca de clases que se llama a una aplicación de consola.
 
 ## <a name="prerequisites"></a>Requisitos previos
 

@@ -13,11 +13,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 82456bf5b892bc32a6eba0d3cf074b4adc76a305
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0df2c3eea706bae92a9cbef9165c374e8efb368a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sql-clr-custom-type-mappings"></a>Asignaciones de tipos personalizadas entre SQL y CLR
 La asignación de tipos entre SQL Server y Common Language Runtime (CLR) se especifica automáticamente al usar la herramienta de línea de comandos SQLMetal, Object Relational Designer.  
@@ -42,5 +43,5 @@ La asignación de tipos entre SQL Server y Common Language Runtime (CLR) se espe
  Cuando la base de datos cambia, tendrá que actualizar el archivo DBML para reflejar esos cambios. Uno modo de hacer esto es crear automáticamente un archivo DBML nuevo y, a continuación, volver a efectuar las personalizaciones de asignación de tipos. Como alternativa, podría comparar las diferencias entre el archivo DBML nuevo y el archivo DBML personalizado y actualizar el archivo DBML personalizado para reflejar el cambio en la base de datos.  
   
 ## <a name="see-also"></a>Vea también  
- [Asignación de tipos de CLR de SQL](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)  
+ [Asignación de tipos entre CLR y SQL](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)  
  [Generación de código en LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)

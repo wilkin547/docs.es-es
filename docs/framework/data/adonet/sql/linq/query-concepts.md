@@ -13,33 +13,34 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 14be34b5d988a51a4785defbfcec95a4a073cc2c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 907761184256b7cf51c7c0f20fa43ee603e0ab12
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="query-concepts"></a>Conceptos sobre consultas
 En esta sección se describen los conceptos fundamentales del diseño de consultas [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] en [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Consultas LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/linq-to-sql-queries.md)  
+ [Consultas de LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/linq-to-sql-queries.md)  
  Hace referencia a temas generales sobre [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] y explica elementos específicos de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
   
- [Realizar consultas en varias relaciones](../../../../../../docs/framework/data/adonet/sql/linq/querying-across-relationships.md)  
+ [Realización de consultas en varias relaciones](../../../../../../docs/framework/data/adonet/sql/linq/querying-across-relationships.md)  
  Explica cómo utilizar las asociaciones en el modelo de objetos de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
   
- [Ejecución remota o. Ejecución local](../../../../../../docs/framework/data/adonet/sql/linq/remote-vs-local-execution.md)  
+ [Ejecución remota o ejecución local](../../../../../../docs/framework/data/adonet/sql/linq/remote-vs-local-execution.md)  
  Explica cómo especificar donde desea que se ejecute una consulta.  
   
- [Ejecución diferida frente a la carga inmediata](../../../../../../docs/framework/data/adonet/sql/linq/deferred-versus-immediate-loading.md)  
+ [Carga inmediata y carga diferida](../../../../../../docs/framework/data/adonet/sql/linq/deferred-versus-immediate-loading.md)  
  Describe cómo especificar cuándo se cargan objetos relacionados.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
  [Guía de programación](../../../../../../docs/framework/data/adonet/sql/linq/programming-guide.md)  
  Contiene vínculos a temas que explican la tecnología de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
   
- [Identidad del objeto.](../../../../../../docs/framework/data/adonet/sql/linq/object-identity.md)  
+ [Identidad de objetos](../../../../../../docs/framework/data/adonet/sql/linq/object-identity.md)  
  Explica el concepto de identidad de objeto en [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
   
  [Introducción a las consultas LINQ (C#)](~/docs/csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md)  

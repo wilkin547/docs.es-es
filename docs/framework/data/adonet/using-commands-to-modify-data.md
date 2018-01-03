@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 853f8e4e75df3fffad4a2d5ecd4f7ae21b5d674f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 5c574a5e880dd838397b35df48138079cb58e2cf
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-commands-to-modify-data"></a>Usar comandos para modificar datos
 Mediante un proveedor de datos .NET Framework puede ejecutar procedimientos almacenados o instrucciones de lenguaje de definición de datos, como CREATE TABLE y ALTER COLUMN, para manipular los esquemas de una base de datos o catálogo. Estos comandos no devuelven filas tal y como haría una consulta y, por lo que la **comando** objeto proporciona un **ExecuteNonQuery** para procesarlos.  
@@ -27,10 +28,10 @@ Mediante un proveedor de datos .NET Framework puede ejecutar procedimientos alma
  Aunque no se devuelven filas por la **ExecuteNonQuery** parámetros de entrada y salida de método y valores devueltos pueden pasar y devolver a través de la **parámetros** colección de la **comando**  objeto.  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Actualizar datos en un origen de datos](../../../../docs/framework/data/adonet/updating-data-in-a-data-source.md)  
+ [Actualización de datos de un origen de datos](../../../../docs/framework/data/adonet/updating-data-in-a-data-source.md)  
  Describe la forma de ejecutar comandos o procedimientos almacenados que modifican datos en una base de datos.  
   
- [Realizar operaciones de catálogo](../../../../docs/framework/data/adonet/performing-catalog-operations.md)  
+ [Realización de operaciones de catálogo](../../../../docs/framework/data/adonet/performing-catalog-operations.md)  
  Describe la forma de ejecutar comandos que modifican esquemas de la base de datos.  
   
 ## <a name="see-also"></a>Vea también  

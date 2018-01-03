@@ -12,11 +12,11 @@ ms.assetid: 8b202505-608b-4223-bbd9-2ace3d73e6cd
 caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 158da956015e022c20550171ebe867e7c975c03a
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: b52323cb5c7049f87b27c24a987fcb7ba1834b6a
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="net-framework-reference-information-visual-basic"></a>Información de referencia de .NET Framework (Visual Basic)
 Este tema proporcionan vínculos a información sobre cómo trabajar con el [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] biblioteca de clases.  
@@ -25,13 +25,13 @@ Este tema proporcionan vínculos a información sobre cómo trabajar con el [!IN
  [Introducción](../../framework/get-started/index.md)  
  Proporciona información general completa de .NET Framework y vínculos a recursos adicionales.  
   
- [Información general de la biblioteca de clases](../../../docs/standard/class-library-overview.md)  
+ [Información general de la biblioteca de clases](../../standard/class-library-overview.md)  
  Presenta las clases, interfaces y tipos de valor que le ayudan a agilizan y optimizan el proceso de desarrollo y proporcionan acceso a la funcionalidad del sistema.  
   
- [Guía de desarrollo](../../../docs/framework/development-guide.md)  
+ [Guía de desarrollo](../../framework/development-guide.md)  
  Proporciona a una guía para todas las áreas de tecnología de claves y las tareas para el desarrollo de aplicaciones, como crear, configurar, depurar, proteger e implementar la aplicación. En este tema también proporciona información acerca de dynamic programación, interoperabilidad, extensibilidad, administración de memoria y subprocesamiento.  
   
- [Herramientas](../../../docs/framework/tools/index.md)  
+ [Herramientas](../../framework/tools/index.md)  
  Describe las herramientas que puede usar para desarrollar, configurar e implementar aplicaciones mediante el uso de tecnologías de .NET Framework.  
   
  [Ejemplos de .NET Framework](http://msdn.microsoft.com/en-us/177055f8-4a1f-43e7-aee6-995c196079b1)  

@@ -30,11 +30,11 @@ ms.assetid: ebce3120-95c3-42b1-b70b-fa7da40c75e2
 caps.latest.revision: "56"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 4aefacd33e0b3c8f64fd26929af06469136237f3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 11601eb1caad1c6cc6d9898f590436a977a78fa1
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="for-eachnext-statement-visual-basic"></a>Instrucción For Each...Next (Visual Basic)
 Repite un grupo de instrucciones para cada elemento de una colección.  
@@ -57,11 +57,11 @@ Next [ element ]
 |---|---|  
 |`element`|Necesario en el `For Each` instrucción. Opcional en la `Next` instrucción. Variable. Utilizar para recorrer en iteración los elementos de la colección.|  
 |`datatype`|Obligatorio si `element` ya no está declarado. Tipo de datos de `element`.|  
-|`group`|Obligatorio. Una variable con un tipo que es un tipo de colección o el objeto. Hace referencia a la colección en el cual el `statements` deben repetirse.|  
+|`group`|Requerido. Una variable con un tipo que es un tipo de colección o el objeto. Hace referencia a la colección en el cual el `statements` deben repetirse.|  
 |`statements`|Opcional. Una o varias instrucciones entre `For Each` y `Next` que se ejecutan en cada elemento de `group`.|  
 |`Continue For`|Opcional. Transfiere el control al principio de la `For Each` bucle.|  
 |`Exit For`|Opcional. Transfiere el control fuera de la `For Each` bucle.|  
-|`Next`|Obligatorio. Termina la definición de la `For Each` bucle.|  
+|`Next`|Requerido. Termina la definición de la `For Each` bucle.|  
   
 ## <a name="simple-example"></a>Ejemplo sencillo  
  Use un `For Each`... `Next` bucle cuando desea repetir un conjunto de instrucciones para cada elemento de una colección o matriz.  
@@ -73,7 +73,7 @@ Next [ element ]
   
  [!code-vb[VbVbalrStatements#121](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-each-next-statement_1.vb)]  
   
- Para obtener más ejemplos, vea [colecciones](http://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b) y [matrices](../../../visual-basic/programming-guide/language-features/arrays/index.md).  
+ Para obtener más ejemplos, vea [colecciones](../../../standard/collections/index.md) y [matrices](../../../visual-basic/programming-guide/language-features/arrays/index.md).  
   
 ## <a name="nested-loops"></a>Bucles anidados  
  Puede anidar `For Each` bucles colocando un bucle dentro de otra.  
@@ -105,7 +105,7 @@ Next [ element ]
   
 -   Hay un bucle infinito, que es un bucle que pueda ejecutar un número grande o incluso infinito de veces. Si se detecta una condición de ese tipo, puede usar `Exit For` para salir del bucle. Para obtener más información, vea [hacer... Instrucción de bucle](../../../visual-basic/language-reference/statements/do-loop-statement.md).  
   
-## <a name="iterators"></a>Iteradores  
+## <a name="iterators"></a>Iterators  
  Usa un *iterador* para realizar una iteración personalizada en una colección. Un iterador puede ser una función o un `Get` descriptor de acceso. Usa un `Yield` instrucción para devolver cada elemento de la colección a la vez.  
   
  Llamar a un iterador mediante un `For Each...Next` instrucción. Cada iteración del bucle `For Each` llama al iterador. Cuando un `Yield` se alcanza la instrucción en el iterador, la expresión en el `Yield` instrucción se devuelve y se conserva la ubicación actual en el código. La ejecución se reinicia desde esa ubicación la próxima vez que se llama al iterador.  
@@ -114,7 +114,7 @@ Next [ element ]
   
  [!code-vb[VbVbalrStatements#127](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-each-next-statement_4.vb)]  
   
- Para obtener más información, consulte [iteradores](http://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7), [instrucción Yield](../../../visual-basic/language-reference/statements/yield-statement.md), y [iterador](../../../visual-basic/language-reference/modifiers/iterator.md).  
+ Para obtener más información, consulte [iteradores](../../programming-guide/concepts/iterators.md), [instrucción Yield](../../../visual-basic/language-reference/statements/yield-statement.md), y [iterador](../../../visual-basic/language-reference/modifiers/iterator.md).  
   
 ## <a name="technical-implementation"></a>Implementación técnica  
  Cuando un `For Each`...`Next` ejecuciones de instrucción, Visual Basic evalúa la colección solo una vez, antes de que comience el bucle. Si cambia el bloque de instrucciones `element` o `group`, estos cambios no afectan a la iteración del bucle.  
@@ -180,7 +180,7 @@ End Sub
  [!code-vb[VbVbalrStatements#125](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-each-next-statement_7.vb)]  
   
 ## <a name="see-also"></a>Vea también  
- [Colecciones](http://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b)  
+ [Colecciones](../../../standard/collections/index.md)  
  [For...Next (instrucción)](../../../visual-basic/language-reference/statements/for-next-statement.md)  
  [Estructuras de bucle](../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)  
  [While...End While (instrucción)](../../../visual-basic/language-reference/statements/while-end-while-statement.md)  

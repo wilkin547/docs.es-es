@@ -13,11 +13,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 103ee50e86a809ee4a5e36451fd9e6b99fc3bb2c
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: b1de8b8ceaf56931dfd3f09e5cc21ac939c49b4a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltpeerauthenticationgt"></a>&lt;peerAuthentication&gt;
 Especifica los valores de autenticación para un certificado del mismo nivel usado por el remitente del mensaje.  
@@ -71,8 +72,8 @@ Especifica los valores de autenticación para un certificado del mismo nivel usa
  <xref:System.ServiceModel.Security.PeerCredential.PeerAuthentication%2A>  
  <xref:System.ServiceModel.Configuration.PeerCredentialElement.PeerAuthentication%2A>  
  <xref:System.ServiceModel.Configuration.X509PeerCertificateAuthenticationElement>  
- [Trabajar con certificados](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
- [Redes de punto a punto](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)  
+ [Trabajo con certificados](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
+ [Conexión de redes punto a punto](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)  
  [Autenticación de mensajes del canal del mismo nivel](http://msdn.microsoft.com/en-us/80e73386-514e-4c30-9e4a-b9ca8c173a95)  
  [Canal del mismo nivel de autenticación personalizada](http://msdn.microsoft.com/en-us/4aa8a82e-41a8-48e2-8621-7e1cbabdca7c)  
- [Proteger las aplicaciones de canal del mismo nivel](../../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md)
+ [Protección de las aplicaciones de canal del mismo nivel](../../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md)

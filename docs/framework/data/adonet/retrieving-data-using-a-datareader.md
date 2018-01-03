@@ -16,11 +16,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 0b66ca2fbcc760598b771b4c02a46acc3c9c1d4e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b36f76516d4ddf94e177a5ecbb705e1d729318b8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="retrieving-data-using-a-datareader"></a>Recuperar datos utilizando un objeto DataReader
 Recuperar datos mediante un **DataReader** implica la creación de una instancia de la **comando** objeto y, a continuación, crear un **DataReader** mediante una llamada a  **Command.ExecuteReader** para recuperar filas de un origen de datos. En el ejemplo siguiente se muestra cómo utilizar un **DataReader** donde `reader` representa un DataReader válido y `command` representa un objeto Command válido.  
@@ -262,5 +263,5 @@ adapter.Fill(ds);
  [Trabajar con DataReaders](http://msdn.microsoft.com/en-us/126a966a-d08d-4d22-a19f-f432908b2b54)  
  [Objetos DataAdapter y DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
  [Comandos y parámetros](../../../../docs/framework/data/adonet/commands-and-parameters.md)  
- [Recuperar información del esquema de base de datos](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)  
+ [Recuperación de información del esquema de la base de datos](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)  
  [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](http://go.microsoft.com/fwlink/?LinkId=217917)

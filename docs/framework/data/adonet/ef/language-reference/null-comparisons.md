@@ -16,11 +16,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: fefbd3894063c0298a7ad5110ed6867408869107
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 0b29caeed4bf60a5a7ad723ffd46520a89a5bd87
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="null-comparisons"></a>Comparaciones NULL
 Un valor `null` en el origen de datos indica que el valor es desconocido. En las consultas de [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)], puede comprobar si ha valores NULL para que ciertos cálculos o comparaciones solo se realicen en las filas que tengan datos válidos, que no sean NULL. Sin embargo, la semántica de NULL de CLR puede diferir de la del origen de datos. La mayoría de las bases de datos utilizan una versión de lógica con tres valores para tratar las comparaciones de NULL. Es decir, una comparación con un valor null no se evalúa como `true` o `false`, se evalúa como `unknown`. A menudo ésta es una implementación de los valores NULL ANSI, pero este no es siempre el caso.  
@@ -57,4 +58,4 @@ WHERE h.ShipDate IS Null
  En [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)], al pasar una colección que admite `IQueryable` a una función de agregado, se realizan las operaciones de agregado en la base de datos. Puede haber diferencias en los resultados de una consulta que se realizó en memoria y una consulta que se realiza en la base de datos. Con una consulta en la memoria, si no hay ninguna coincidencia, la consulta devuelve cero. En la base de datos, la misma consulta devuelve `null`. Si un `null` valor se pasa a una función de agregado de LINQ, se producirá una excepción. Para aceptar posible `null` valores, convierta los tipos y las propiedades de los tipos que reciben los resultados de la consulta a los tipos que aceptan valores NULL.  
   
 ## <a name="see-also"></a>Vea también  
- [Expresiones en consultas LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/expressions-in-linq-to-entities-queries.md)
+ [Expresiones en consultas de LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/expressions-in-linq-to-entities-queries.md)

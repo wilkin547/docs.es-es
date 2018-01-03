@@ -16,11 +16,12 @@ caps.latest.revision: "6"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 1f29cbd51c036ecc15306f67fdd32dee6a4f1b68
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 8467d1748cec216c01756049d889ea29f02c3c7c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="handling-null-values"></a>Controlar valores Null
 Los valores NULL se utilizan en bases de datos relacionales cuando el valor de una columna se desconoce o falta. Un NULL no es ni una cadena vacía (en los tipos de datos de caracteres o de fecha y hora) ni un valor cero (en los tipos de datos numéricos). La especificación ANSI SQL-92 afirma que un NULL debe ser igual en todos los tipos de datos; por lo tanto, todos los NULL se tratan de forma coherente. El espacio de nombres <xref:System.Data.SqlTypes> proporciona semántica para valores NULL mediante la implementación de la interfaz <xref:System.Data.SqlTypes.INullable>. Cada uno de los tipos de datos de <xref:System.Data.SqlTypes> tiene su propia propiedad  `IsNull` y un valor `Null` que se puede asignar a una instancia de ese tipo de datos.  
@@ -128,7 +129,7 @@ isColumnNull=True, ID=Null, Description=Null
 ```  
   
 ## <a name="comparing-null-values-with-sqltypes-and-clr-types"></a>Comparación de valores NULL con SqlTypes y tipos CLR  
- Al comparar valores NULL, es importante comprender la diferencia entre la forma en que el método `Equals` evalúa los valores NULL en <xref:System.Data.SqlTypes> por contraposición a cómo funciona con tipos CLR. Todos los métodos de <xref:System.Data.SqlTypes>`Equals` usan semántica de base de datos para evaluar valores NULL: si alguno de los valores es NULL, o lo son ambos, la comparación produce NULL. Por otra parte, el uso del método `Equals` de CLR en dos <xref:System.Data.SqlTypes> producirá TRUE si ambos son NULL. Esto refleja la diferencia entre el uso de un método de instancia como el método `String.Equals` de CLR y el uso del método estático o compartido `SqlString.Equals`.  
+ Al comparar valores NULL, es importante comprender la diferencia entre la forma en que el método `Equals` evalúa los valores NULL en <xref:System.Data.SqlTypes> por contraposición a cómo funciona con tipos CLR. Todos los <xref:System.Data.SqlTypes> `Equals` métodos utilizan la semántica de base de datos para evaluar valores null: si uno o ambos de los valores es null, la comparación produce null. Por otra parte, el uso del método `Equals` de CLR en dos <xref:System.Data.SqlTypes> producirá TRUE si ambos son NULL. Esto refleja la diferencia entre el uso de un método de instancia como el método `String.Equals` de CLR y el uso del método estático o compartido `SqlString.Equals`.  
   
  En el siguiente ejemplo se muestra la diferencia entre los resultados del método `SqlString.Equals` y del método `String.Equals` cuando se pasa a cada uno un par de valores NULL y, a continuación, un par de cadenas vacías.  
   

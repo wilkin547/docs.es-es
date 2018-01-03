@@ -21,11 +21,12 @@ caps.latest.revision: "15"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 2db5b8c2425637e24086f54e8ef69b0e5aac3633
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: f475877bcb7a794d1a58ef9202735e016363678b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="interoperating-with-unmanaged-code"></a>Interoperar con código no administrado
 .NET Framework promueve la interacción con componentes COM, servicios COM+, bibliotecas de tipos externas y muchos servicios del sistema operativo. Los tipos de datos, las firmas de método y los mecanismos de control de errores varían entre los modelos de objetos administrados y no administrados. Para simplificar la interoperación entre los componentes de .NET Framework y el código no administrado, así como para facilitar la ruta de migración, Common Language Runtime oculta a los clientes y servidores las diferencias en estos modelos de objetos.  
@@ -48,7 +49,7 @@ ms.lasthandoff: 10/18/2017
  [Consideraciones de diseño para interoperaciones](http://msdn.microsoft.com/en-us/b59637f6-fe35-40d6-ae72-901e7a707689)  
  Proporciona sugerencias para escribir componentes COM integrados.  
   
- [Serialización para interoperabilidad](../../../docs/framework/interop/interop-marshaling.md)  
+ [Serialización de interoperabilidad](../../../docs/framework/interop/interop-marshaling.md)  
  Se describe la serialización de la interoperabilidad COM y la invocación de plataforma.  
   
  [Asignar resultados HRESULT y excepciones](../../../docs/framework/interop/how-to-map-hresults-and-exceptions.md)  

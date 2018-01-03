@@ -16,11 +16,12 @@ caps.latest.revision: "5"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 69709fea628e6cb1d10a23f29b60911ab07e1111
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d8f9eac80d7a6679e7b3717446e79caf54a5fed3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="copying-dataset-contents"></a>Copiar el contenido de DataSet
 Puede crear una copia de un <xref:System.Data.DataSet> para que puedan trabajar con datos sin afectar a los datos originales, o trabajar con un subconjunto de los datos de un **conjunto de datos**. Al copiar un **conjunto de datos**, puede:  

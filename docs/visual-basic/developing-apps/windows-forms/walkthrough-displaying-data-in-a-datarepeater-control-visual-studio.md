@@ -13,11 +13,11 @@ ms.assetid: 65dcdb95-6c3e-47cc-987d-190000f71653
 caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 6f0cf690b816d57dc4a2646eb82d649727d033a9
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: 93072bf30c8ee2a4a44c4862de0882072c298f8b
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="walkthrough-displaying-data-in-a-datarepeater-control-visual-studio"></a>Tutorial: Mostrar los datos enlazados en un control DataRepeater (Visual Studio)
 En este tutorial se proporciona un escenario básico de principio a fin para mostrar datos enlazados en un control <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> .  
@@ -25,7 +25,7 @@ En este tutorial se proporciona un escenario básico de principio a fin para mos
 ## <a name="prerequisite"></a>Requisito previo  
  Este tutorial requiere la base de datos de ejemplo Northwind.  
   
- Si no dispone de esta base de datos en el equipo de desarrollo, puede descargarla del [Centro de descarga de Microsoft](http://go.microsoft.com/fwlink/?LinkID=98088). Para obtener instrucciones, consulte [descargar bases de datos de ejemplo](../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md).  
+ Si no dispone de esta base de datos en el equipo de desarrollo, puede descargarla del [Centro de descarga de Microsoft](http://go.microsoft.com/fwlink/?LinkID=98088). Para obtener instrucciones, consulte [descargar bases de datos de ejemplo](../../../framework/data/adonet/sql/linq/downloading-sample-databases.md).  
   
 ## <a name="overview"></a>Información general  
  La primera parte de este tutorial se compone de cuatro tareas principales:  
@@ -93,7 +93,7 @@ En este tutorial se proporciona un escenario básico de principio a fin para mos
   
          O bien  
   
-    -   Haga clic en **Nueva conexión** para configurar una nueva conexión de datos. Para obtener más información, consulta [How to: Create Connections to SQL Server Databases](http://msdn.microsoft.com/en-us/360c340d-e5a6-4a7e-a569-e95d500be43d).  
+    -   Haga clic en **Nueva conexión** para configurar una nueva conexión de datos. Para obtener más información, consulte [agregar nuevas conexiones](/visualstudio/data-tools/add-new-connections).  
   
 5.  Si la base de datos requiere una contraseña, seleccione la opción para incluir datos confidenciales y, a continuación, haga clic en **Siguiente**.  
   

@@ -12,11 +12,12 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d9fe72090de3722137c2b0c2190c11f190be5fbc
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 25a45626564bb58950b251ae5e9041609d96a207
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="implementing-a-resource-manager"></a>Implementar un administrador de recursos
 Un administrador de recursos administra cada recurso utilizado, cuyas acciones coordina un administrador de transacciones. Los administradores de recursos trabajan en cooperación con el administrador de transacciones para proporcionar una garantía de atomicidad y aislamiento a la aplicación. Microsoft SQL Server, colas de mensajes durables, las tablas hash en memoria, son ejemplos de administradores de recursos.  
@@ -44,22 +45,22 @@ Un administrador de recursos administra cada recurso utilizado, cuyas acciones c
 ## <a name="in-this-section"></a>En esta sección  
  Los pasos generalmente seguidos por un administrador de recursos se describen en los temas siguientes.  
   
- [Dar de alta los recursos como los participantes en una transacción](../../../../docs/framework/data/transactions/enlisting-resources-as-participants-in-a-transaction.md)  
+ [Inscribir recursos como participantes en una transacción](../../../../docs/framework/data/transactions/enlisting-resources-as-participants-in-a-transaction.md)  
   
  Describe cómo un recurso duradero o volátil puede darse de alta en una transacción.  
   
- [Confirmar una transacción en una fase y en varias fases](../../../../docs/framework/data/transactions/committing-a-transaction-in-single-phase-and-multi-phase.md)  
+ [Confirmación de una transacción en fase única y múltiple](../../../../docs/framework/data/transactions/committing-a-transaction-in-single-phase-and-multi-phase.md)  
   
  Describe cómo un administrador de recursos responde para confirmar la notificación y preparar la confirmación.  
   
- [Realizar la recuperación](../../../../docs/framework/data/transactions/performing-recovery.md)  
+ [Realización de la recuperación](../../../../docs/framework/data/transactions/performing-recovery.md)  
   
  Describe cómo un administrador de recursos duradero se recupera del error.  
   
- [Niveles de confianza de seguridad de acceso a los recursos](../../../../docs/framework/data/transactions/security-trust-levels-in-accessing-resources.md)  
+ [Niveles de confianza de seguridad para acceder a los recursos](../../../../docs/framework/data/transactions/security-trust-levels-in-accessing-resources.md)  
   
  Define cómo tres niveles de confianza para System.Transactions restringen el acceso a los tipos de recursos que <xref:System.Transactions> expone.  
   
- [Optimización mediante la notificación de la fase única promocionable y confirmación de fase única](../../../../docs/framework/data/transactions/optimization-spc-and-promotable-spn.md)  
+ [Optimización mediante el uso de la confirmación de fase única y de la inscripción de fase única promovible](../../../../docs/framework/data/transactions/optimization-spc-and-promotable-spn.md)  
   
  Describe los ejercicios de la optimización disponible sobre las implementaciones de administradores de recursos.

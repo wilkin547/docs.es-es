@@ -31,11 +31,11 @@ ms.assetid: f5fc0d51-67ce-4c36-9f09-31c9a91c94e9
 caps.latest.revision: "64"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 009c5a383cc3296f7f92888a344fa265547f1077
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 8a50f44a167952c735c6ed2830ca87105413401b
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fornext-statement-visual-basic"></a>Instrucción For...Next (Visual Basic)
 Repite un grupo de instrucciones un número especificado de veces.  
@@ -58,13 +58,13 @@ Next [ counter ]
 |----------|-----------------|  
 |`counter`|Necesario en el `For` instrucción. Variable numérica. La variable de control del bucle. Para obtener más información, consulte [contador argumento](#BKMK_Counter) más adelante en este tema.|  
 |`datatype`|Opcional. Tipo de datos de `counter`. Para obtener más información, consulte [contador argumento](#BKMK_Counter) más adelante en este tema.|  
-|`start`|Obligatorio. Expresión numérica. Valor inicial de `counter`.|  
-|`end`|Obligatorio. Expresión numérica. El valor final de `counter`.|  
+|`start`|Requerido. Expresión numérica. Valor inicial de `counter`.|  
+|`end`|Requerido. Expresión numérica. El valor final de `counter`.|  
 |`step`|Opcional. Expresión numérica. La cantidad en la que `counter` se incrementa cada vez que el bucle.|  
 |`statements`|Opcional. Una o varias instrucciones entre `For` y `Next` que el número especificado de veces que ejecutan.|  
 |`Continue For`|Opcional. Transfiere el control a la siguiente iteración del bucle.|  
 |`Exit For`|Opcional. Transfiere el control fuera de la `For` bucle.|  
-|`Next`|Obligatorio. Termina la definición de la `For` bucle.|  
+|`Next`|Requerido. Termina la definición de la `For` bucle.|  
   
 > [!NOTE]
 >  El `To` palabra clave se utiliza en esta declaración para especificar el intervalo para el contador. También puede usar esta palabra clave en el [seleccione... Caso instrucción](../../../visual-basic/language-reference/statements/select-case-statement.md) y en las declaraciones de matriz. Para obtener más información acerca de las declaraciones de matriz, vea [Dim (instrucción)](../../../visual-basic/language-reference/statements/dim-statement.md).  
@@ -148,7 +148,7 @@ Next [ counter ]
   
 -   Una enumeración que se declara mediante un [Enum (instrucción)](../../../visual-basic/language-reference/statements/enum-statement.md).  
   
--   Interfaz `Object`.  
+-   Una clase `Object`.  
   
 -   Un tipo `T` que tiene los siguientes operadores, donde `B` es un tipo que se puede usar en un `Boolean` expresión.  
   
@@ -186,4 +186,4 @@ Next [ counter ]
  [Do...Loop (instrucción)](../../../visual-basic/language-reference/statements/do-loop-statement.md)  
  [Estructuras de control anidadas](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)  
  [Exit (instrucción)](../../../visual-basic/language-reference/statements/exit-statement.md)  
- [Colecciones](http://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b)
+ [Colecciones](../../programming-guide/concepts/collections.md)

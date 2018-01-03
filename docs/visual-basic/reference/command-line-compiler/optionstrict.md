@@ -15,11 +15,11 @@ ms.assetid: c7b10086-0fa4-49db-b3c8-4ae0db5957da
 caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: f783cc5b20c4fe6d7812a05a66cbc4cdfc0b9395
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 692681b21c243432ec8e7160bcc1eaa4e718d64d
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="optionstrict"></a>/optionstrict
 Exige la semántica estricta de tipos para restringir las conversiones implícitas de tipos.  
@@ -36,7 +36,7 @@ Exige la semántica estricta de tipos para restringir las conversiones implícit
  Opcional. El `/optionstrict+` opción restringe la conversión de tipos implícita. El valor predeterminado para esta opción es `/optionstrict-`. El `/optionstrict+` opción es el mismo que `/optionstrict`. Puede utilizar ambos semántica de tipos permisiva.  
   
  `custom`  
- Obligatorio. Advertir cuando no se respete la semántica estricta del lenguaje.  
+ Requerido. Advertir cuando no se respete la semántica estricta del lenguaje.  
   
 ## <a name="remarks"></a>Comentarios  
  Cuando `/optionstrict+` está en vigor, conversiones de tipos de ampliación solo se pueden realizar implícitamente. Conversiones de tipos, como la asignación de restricción implícitas un `Decimal` tipo object a un objeto de tipo entero, se notifican como errores.  
@@ -45,7 +45,7 @@ Exige la semántica estricta de tipos para restringir las conversiones implícit
   
 ### <a name="to-set-optionstrict-in-the-visual-studio-ide"></a>Para establecer /optionstrict en el IDE de Visual Studio  
   
-1.  Seleccione un proyecto en el **Explorador de soluciones**. En el **proyecto** menú, haga clic en **propiedades.** Para obtener más información, consulte [Introducción al Diseñador de proyectos](http://msdn.microsoft.com/en-us/898dd854-c98d-430c-ba1b-a913ce3c73d7).  
+1.  Seleccione un proyecto en el **Explorador de soluciones**. En el **proyecto** menú, haga clic en **propiedades.**   
   
 2.  Haga clic en la pestaña **Compilar**.  
   

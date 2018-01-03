@@ -16,11 +16,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 5f45addd61f275a0bba4b61552bb629bfc6ee7df
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 44d171cab4099436d7daea26def831f149b75b13
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="merging-dataset-contents"></a>Combinar contenido de DataSet
 Se puede utilizar el método <xref:System.Data.DataSet.Merge%2A> para combinar el contenido de <xref:System.Data.DataSet>, <xref:System.Data.DataTable> o matriz de <xref:System.Data.DataRow> en un `DataSet` existente. Hay varios factores y opciones que afectan a cómo se combinan los datos nuevos en un `DataSet` existente.  
@@ -90,8 +91,8 @@ Se puede utilizar el método <xref:System.Data.DataSet.Merge%2A> para combinar e
   
 ## <a name="see-also"></a>Vea también  
  [Objetos DataSet, DataTable y DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
- [Estados de fila y versiones de fila](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md)  
+ [Estados y versiones de filas](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md)  
  [Objetos DataAdapter y DataReader](../../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
  [Recuperar y modificar datos en ADO.NET](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
- [Recuperar valores Autonuméricos e identidad](../../../../../docs/framework/data/adonet/retrieving-identity-or-autonumber-values.md)  
+ [Recuperación de valores autonuméricos y de identidad](../../../../../docs/framework/data/adonet/retrieving-identity-or-autonumber-values.md)  
  [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](http://go.microsoft.com/fwlink/?LinkId=217917)

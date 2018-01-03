@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 3705db8b9d359ce83c6c47bef58de327745bed44
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: de415a6282b1d27d803d448bd3225355c08e011b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sql-server-common-language-runtime-integration"></a>Integración con Common Language Runtime de SQL Server
 SQL Server 2005 introdujo la integración del componente Common Language Runtime (CLR) de .NET Framework para Microsoft Windows. Esto significa que ahora se pueden escribir procedimientos almacenados, desencadenadores, tipos definidos por el usuario, funciones definidas por el usuario, agregados definidos por el usuario y funciones con valores de tabla de transmisión por secuencias mediante cualquier lenguaje de .NET Framework, como Microsoft Visual Basic .NET y Microsoft Visual C#. El espacio de nombres <xref:Microsoft.SqlServer.Server> contiene un conjunto de nuevas interfaces de programación de aplicaciones (API) que permiten que el código administrado interactúe con el entorno de Microsoft SQL Server.  
@@ -31,25 +32,25 @@ SQL Server 2005 introdujo la integración del componente Common Language Runtime
 1.  [Conceptos de programación integración de Common Language Runtime (CLR)](http://go.microsoft.com/fwlink/?LinkId=115240)  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Introducción a la integración de CLR de SQL Server](../../../../../docs/framework/data/adonet/sql/introduction-to-sql-server-clr-integration.md)  
+ [Introducción a la integración con CLR de SQL Server](../../../../../docs/framework/data/adonet/sql/introduction-to-sql-server-clr-integration.md)  
  Proporciona una introducción a la integración CLR de SQL Server. También proporciona vínculos a temas adicionales.  
   
- [Funciones definidas por el usuario CLR](../../../../../docs/framework/data/adonet/sql/clr-user-defined-functions.md)  
+ [Funciones definidas por el usuario de CLR](../../../../../docs/framework/data/adonet/sql/clr-user-defined-functions.md)  
  Describe cómo implementar y utilizar los diferentes tipos de funciones CLR: con valores de tabla, escalares y funciones de agregado definidas por el usuario.  
   
- [Tipos definidos por el usuario CLR](../../../../../docs/framework/data/adonet/sql/clr-user-defined-types.md)  
+ [Tipos CLR definidos por el usuario](../../../../../docs/framework/data/adonet/sql/clr-user-defined-types.md)  
  Describe cómo implementar y utilizar tipos definidos por el usuario CLR. También proporciona vínculos a temas adicionales.  
   
  [Procedimientos almacenados de CLR](../../../../../docs/framework/data/adonet/sql/clr-stored-procedures.md)  
  Describe cómo implementar y utilizar procedimientos almacenados CLR. También proporciona vínculos a temas adicionales.  
   
- [Desencadenadores CLR](../../../../../docs/framework/data/adonet/sql/clr-triggers.md)  
+ [Desencadenadores de CLR](../../../../../docs/framework/data/adonet/sql/clr-triggers.md)  
  Describe cómo implementar y utilizar desencadenadores CLR. También proporciona vínculos a temas adicionales.  
   
- [La conexión de contexto](../../../../../docs/framework/data/adonet/sql/the-context-connection.md)  
+ [Conexión del contexto](../../../../../docs/framework/data/adonet/sql/the-context-connection.md)  
  Describe la conexión de contexto.  
   
- [Comportamiento específico en proceso de SQL Server de ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-in-process-specific-behavior-of-adonet.md)  
+ [Comportamiento específico en proceso de SQL Server en ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-in-process-specific-behavior-of-adonet.md)  
  Describe las extensiones específicas en proceso de SQL Server a ADO.NET, y la conexión de contexto. También proporciona vínculos a temas adicionales.  
   
 ## <a name="see-also"></a>Vea también  

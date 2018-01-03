@@ -16,11 +16,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: c254865800694af8eb754c3e8d4072688fd7e89a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 4a3cc1f0c27af1ad41e14374b4c155e6b8620f28
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="schema-restrictions"></a>Restricciones de esquema
 El segundo parámetro opcional de la **GetSchema** método es las restricciones que se utilizan para limitar la cantidad de información de esquema devuelven se pasa a la **GetSchema** método como una matriz de cadenas . La posición en la matriz determina los valores que puede pasar, y es equivalente al número de restricciones.  
@@ -153,7 +154,7 @@ class Program
   
 |Nombre de la restricción|Nombre de parámetro|Valor predeterminado de la restricción|Número de restricciones|  
 |----------------------|--------------------|-------------------------|------------------------|  
-|Name|@Name|Name|1|  
+|nombre|@Name|nombre|1|  
   
 ### <a name="tables"></a>Tablas  
   
@@ -205,7 +206,7 @@ class Program
 |----------------------|--------------------|-------------------------|------------------------|  
 |Catálogo|@Catalog|SPECIFIC_CATALOG|1|  
 |Propietario|@Owner|SPECIFIC_SCHEMA|2|  
-|Name|@Name|SPECIFIC_NAME|3|  
+|nombre|@Name|SPECIFIC_NAME|3|  
 |Parámetro|@Parameter|PARAMETER_NAME|4|  
   
 ### <a name="procedures"></a>Procedimientos  
@@ -214,7 +215,7 @@ class Program
 |----------------------|--------------------|-------------------------|------------------------|  
 |Catálogo|@Catalog|SPECIFIC_CATALOG|1|  
 |Propietario|@Owner|SPECIFIC_SCHEMA|2|  
-|Name|@Name|SPECIFIC_NAME|3|  
+|nombre|@Name|SPECIFIC_NAME|3|  
 |Tipo|@Type|ROUTINE_TYPE|4|  
   
 ### <a name="indexcolumns"></a>IndexColumns  
@@ -249,7 +250,7 @@ class Program
 |Catálogo|@Catalog|CONSTRAINT_CATALOG|1|  
 |Propietario|@Owner|CONSTRAINT_SCHEMA|2|  
 |Tabla|@Table|TABLE_NAME|3|  
-|Name|@Name|CONSTRAINT_NAME|4|  
+|nombre|@Name|CONSTRAINT_NAME|4|  
   
 ## <a name="sql-server-2008-schema-restrictions"></a>Restricciones de esquema de SQL Server 2008  
  En la tabla siguiente se muestran las restricciones de las colecciones de esquemas de SQL Server 2008. Estas restricciones son válidas a partir de la versión 3.5 SP1 de .NET Framework y SQL Server 2008. No se admiten en versiones anteriores de .NET Framework y SQL Server.  

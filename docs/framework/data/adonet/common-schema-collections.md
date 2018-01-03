@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 19a95cf5d8d9b5fc5f805574b6de15c90fb38efd
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 2b3d1a42430a02e4b3dd4a715ef27acd3e46b8ea
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="common-schema-collections"></a>Colecciones de esquemas comunes
 Las colecciones de esquemas comunes son las colecciones de esquemas que implementa cada uno de los proveedores administrados de .NET Framework. Puede consultar un proveedor administrado de .NET Framework para determinar la lista de colecciones de esquemas admitidas mediante la llamada la **GetSchema** método sin argumentos o con el nombre de la colección de esquemas "MetaDataCollections". Esto devolverá una <xref:System.Data.DataTable> con una lista de colecciones de esquemas admitidas, el número de restricciones que admite cada una y el número de partes de identificador que emplean. Estas colecciones describen todas las columnas necesarias. Los proveedores pueden agregar más columnas si lo desean. Por ejemplo, `SqlClient` y `OracleClient` agregan ParameterName a la colección con restricciones.  
@@ -31,7 +32,7 @@ Las colecciones de esquemas comunes son las colecciones de esquemas que implemen
   
 |ColumName|DataType|Descripción|  
 |----------------|--------------|-----------------|  
-|CollectionName|string|El nombre de la colección que se pasa a la **GetSchema** método para devolver la colección.|  
+|CollectionName|cadena|El nombre de la colección que se pasa a la **GetSchema** método para devolver la colección.|  
 |NumberOfRestrictions|int|El número de restricciones que se pueden especificar para la colección.|  
 |NumberOfIdentifierParts|int|El número de partes del identificador compuesto y nombre del objeto de base de datos. Por ejemplo, en SQL Server, sería 3 para las tablas y 4 para las columnas. En Oracle, sería 2 para las tablas y 3 para las columnas.|  
   
@@ -84,7 +85,7 @@ Las colecciones de esquemas comunes son las colecciones de esquemas que implemen
 |IsConcurrencyType|bool|true: la base de datos actualiza el tipo de datos cada vez que cambia la fila y el valor de la columna es diferente de todos los valores anteriores.<br /><br /> false: la base de datos no actualiza el tipo de datos cada vez que cambia la fila.<br /><br /> DBNull.Value: la base de datos no admite este tipo de datos.|  
 |IsLiteralSupported|bool|true: el tipo de datos se puede expresar como un literal.<br /><br /> false: el tipo de datos no se puede expresar como un literal.|  
 |LiteralPrefix|string|El prefijo aplicado a un literal dado.|  
-|LiteralSuffix|string|El sufijo aplicado a un literal dado.|  
+|LiteralSuffix|cadena|El sufijo aplicado a un literal dado.|  
 |NativeDataType|String|NativeDataType es una columna específica de OLE DB para la exposición del tipo de datos de OLE DB.|  
   
 ## <a name="restrictions"></a>Restricciones  
@@ -102,9 +103,9 @@ Las colecciones de esquemas comunes son las colecciones de esquemas que implemen
   
 |ColumName|DataType|Descripción|  
 |----------------|--------------|-----------------|  
-|ReservedWord|string|Palabras reservadas específicas del proveedor.|  
+|ReservedWord|cadena|Palabras reservadas específicas del proveedor.|  
   
 ## <a name="see-also"></a>Vea también  
- [Recuperar información del esquema de base de datos](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)  
- [GetSchema y colecciones de esquemas](../../../../docs/framework/data/adonet/getschema-and-schema-collections.md)  
+ [Recuperación de información del esquema de la base de datos](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)  
+ [GetSchema y colecciones de esquema](../../../../docs/framework/data/adonet/getschema-and-schema-collections.md)  
  [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](http://go.microsoft.com/fwlink/?LinkId=217917)

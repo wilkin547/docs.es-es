@@ -14,11 +14,11 @@ ms.assetid: 8fb0353a-e41b-4e23-b78f-da65db832f70
 caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 10213597fa65c44a56b30c37e2e6f4e732d96954
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: 5a1edd7976f1e22117e1f4f31354388d5257ffc1
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="events-visual-basic"></a>Eventos (Visual Basic)
 Aunque puede visualizar un proyecto [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] como una serie de procedimientos que se ejecutan en una secuencia, en realidad, la mayoría de los programas está dirigidos por eventos, lo que significa que el flujo de ejecución está determinado por elementos externos denominados *eventos*.  
@@ -105,7 +105,7 @@ Aunque puede visualizar un proyecto [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 
   
 ## <a name="related-sections"></a>Secciones relacionadas  
   
-|Título|Descripción|  
+|Title|Descripción|  
 |-----------|-----------------|  
 |[Tutorial: Declarar y provocar eventos](../../../../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md)|Proporciona una descripción detallada de cómo declarar y generar eventos para una clase.|  
 |[Tutorial: Controlar eventos](../../../../visual-basic/programming-guide/language-features/events/walkthrough-handling-events.md)|Muestra cómo escribir un procedimiento de controlador de eventos.|  
@@ -113,5 +113,5 @@ Aunque puede visualizar un proyecto [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 
 |[Declarar eventos personalizados para conservar memoria](../../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md)|Muestra cómo definir un evento personalizado que utiliza la memoria solo cuando se controla el evento.|  
 |[Solucionar problemas de controladores de eventos heredados en Visual Basic](../../../../visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)|Enumera los problemas habituales que se producen con los controladores de eventos en componentes heredados.|  
 |[Eventos](../../../../standard/events/index.md)|Proporciona una descripción general del modelo de eventos de [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].|  
-|[Crear controladores de eventos en Windows Forms](../../../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)|Describe cómo trabajar con eventos asociados a objetos de Windows Forms.|  
+|[Crear controladores de eventos en Windows Forms](../../../../framework/winforms/creating-event-handlers-in-windows-forms.md)|Describe cómo trabajar con eventos asociados a objetos de Windows Forms.|  
 |[Delegados](../../../../visual-basic/programming-guide/language-features/delegates/index.md)|Proporciona información general sobre delegados en Visual Basic.|

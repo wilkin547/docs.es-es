@@ -13,11 +13,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 19be8e04f8bb0cb11c98d5361deb6deffe797fca
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 14d666624ac4572956364b3db3fd5ee7aad8799b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="entity-sql-quick-reference"></a>Referencia rápida de Entity SQL
 Este tema proporciona una referencia rápida a las consultas de [!INCLUDE[esql](../../../../../../includes/esql-md.md)]. Las consultas en este tema se basan en el modelo AdventureWorks Sales.  
@@ -103,7 +104,7 @@ SELECT VALUE row (product.ProductID as ProductID, product.Name
 ### <a name="multiset"></a>MULTISET  
  [MULTISET](../../../../../../docs/framework/data/adonet/ef/language-reference/multiset-entity-sql.md) crea colecciones, como:  
   
- `MULTISET(1,2,2,3)``--same as`-`{1,2,2,3}.`  
+ `MULTISET(1,2,2,3)` `--same as`-`{1,2,2,3}.`  
   
  Ejemplo:  
   
@@ -117,7 +118,7 @@ SELECT VALUE product FROM AdventureWorksEntities.Product AS product WHERE produc
 |---------------|----------|-------------------|-------|  
 |842|Touring-Panniers, Large|PA-T100|…|  
   
-### <a name="object"></a>Objeto  
+### <a name="object"></a>Object  
  [Con el nombre de tipo al Constructor de](../../../../../../docs/framework/data/adonet/ef/language-reference/named-type-constructor-entity-sql.md) construye objetos definidos por el usuario (con nombre), como `person("abc", 12)`.  
   
  Ejemplo:  
@@ -374,4 +375,4 @@ CASE WHEN AVG({25,12,11}) < 100 THEN TRUE ELSE FALSE END
   
 ## <a name="see-also"></a>Vea también  
  [Referencia de Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)  
- [Información general sobre de Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+ [Información general sobre Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)

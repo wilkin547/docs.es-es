@@ -16,11 +16,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: e8a993c75f33dd3c98da5534658d02b4eeeda51a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 62c5cef51e125443d87c47f7f62dc76aa5d352b8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="performing-an-xpath-query-on-a-dataset"></a>Realizar una consulta XPath en un objeto DataSet
 La relación entre un sincronizada <xref:System.Data.DataSet> y <xref:System.Xml.XmlDataDocument> le permite hacer uso de XML servicios, como las consultas XML Path Language (XPath), que tienen acceso a la **XmlDataDocument** y puede realizar ciertas funciones más cómodamente que si tuviera acceso la **conjunto de datos** directamente. Por ejemplo, en lugar de usar el **seleccione** método de un <xref:System.Data.DataTable> para navegar por relaciones con otras tablas de un **conjunto de datos**, puede realizar una consulta XPath en un **XmlDataDocument**  que está sincronizado con el **conjunto de datos**, para obtener una lista de elementos XML en forma de un <xref:System.Xml.XmlNodeList>. Los nodos de la **XmlNodeList**, convertidos en <xref:System.Xml.XmlElement> nodos, a continuación, puede pasarse a la **GetRowFromElement** método de la **XmlDataDocument**para devolver la búsqueda de coincidencias <xref:System.Data.DataRow> referencias a las filas de la tabla en sincronizada **conjunto de datos**.  

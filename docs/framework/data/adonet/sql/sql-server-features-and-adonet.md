@@ -13,11 +13,12 @@ caps.latest.revision: "9"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 27a46a4dbb98d5c2bdcd30c485ae1b3b047a1a13
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 2513f5ce139d23750c977f4f12396415cc4d913b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sql-server-features-and-adonet"></a>Características de SQL Server y ADO.NET
 En los temas de esta sección se describen las características de SQL Server orientadas al desarrollo de aplicaciones de base de datos con ADO.NET.  
@@ -29,19 +30,19 @@ En los temas de esta sección se describen las características de SQL Server or
 1.  [Desarrollo (motor de base de datos)](http://go.microsoft.com/fwlink/?LinkId=115245)  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Enumerar instancias de SQL Server (ADO.NET)](../../../../../docs/framework/data/adonet/sql/enumerating-instances-of-sql-server.md)  
+ [Enumeración de instancias de SQL Server (ADO.NET)](../../../../../docs/framework/data/adonet/sql/enumerating-instances-of-sql-server.md)  
  Describe cómo enumerar instancias activas de SQL Server.  
   
- [Estadísticas de proveedor para SQL Server](../../../../../docs/framework/data/adonet/sql/provider-statistics-for-sql-server.md)  
+ [Estadísticas de proveedor de SQL Server](../../../../../docs/framework/data/adonet/sql/provider-statistics-for-sql-server.md)  
  Describe el soporte técnico para obtener estadísticas de SQL Server en tiempo de ejecución.  
   
- [Instancias de SQL Server Express de usuario](../../../../../docs/framework/data/adonet/sql/sql-server-express-user-instances.md)  
+ [Instancias de usuario de SQL Server Express](../../../../../docs/framework/data/adonet/sql/sql-server-express-user-instances.md)  
  Describe la compatibilidad con las instancias de usuario de SQL Server Express.  
   
- [Creación de reflejo de SQL Server de la base de datos](../../../../../docs/framework/data/adonet/sql/database-mirroring-in-sql-server.md)  
+ [Creación de reflejo de la base de datos en SQL Server](../../../../../docs/framework/data/adonet/sql/database-mirroring-in-sql-server.md)  
  Describe la funcionalidad de reflejo de base de datos.  
   
- [Integración Common Language Runtime SQL Server](../../../../../docs/framework/data/adonet/sql/sql-server-common-language-runtime-integration.md)  
+ [Integración con Common Language Runtime de SQL Server](../../../../../docs/framework/data/adonet/sql/sql-server-common-language-runtime-integration.md)  
  Describe cómo obtener acceso a datos desde un objeto de base de datos de Common Language Runtime (CLR) en SQL Server.  
   
  [Notificaciones de consulta en SQL Server](../../../../../docs/framework/data/adonet/sql/query-notifications-in-sql-server.md)  

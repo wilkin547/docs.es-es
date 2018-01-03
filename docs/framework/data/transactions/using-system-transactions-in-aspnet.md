@@ -12,11 +12,12 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 321489a2b32bafe4a73f56e0a5dba20f5661bdc2
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: caa0f8cc5b98ae50e1c9d2da716dd03eb5cb4565
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-systemtransactions-in-aspnet"></a>Usar System.Transactions en ASP.NET
 En este tema se describe cómo se puede usar <xref:System.Transactions> correctamente en una aplicación [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] .  
@@ -71,4 +72,4 @@ En este tema se describe cómo se puede usar <xref:System.Transactions> correcta
 ## <a name="see-also"></a>Vea también  
  [Niveles de confianza de ASP.NET y archivos de directivas](http://msdn.microsoft.com/library/f897c794-10d3-414c-86b7-59b66564bbf1)  
  [securityPolicy Element (ASP.NET Settings Schema)](http://msdn.microsoft.com/en-us/469d8d22-d263-46bb-8400-40d8d027faba)  
- [Extensión de administración de transacciones](../../../../docs/framework/data/transactions/transaction-management-escalation.md)
+ [Escalado de administración de transacciones](../../../../docs/framework/data/transactions/transaction-management-escalation.md)

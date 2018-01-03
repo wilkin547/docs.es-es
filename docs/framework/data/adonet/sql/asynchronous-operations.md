@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: b616a6cf08dd47a9e46e8e887efbc88469dedfd3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 6f631d785698ae59370053c4e35307514c44087c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="asynchronous-operations"></a>Operaciones asincrónicas
 Algunas operaciones de base de datos, como las ejecuciones de comandos, pueden tardar bastante tiempo en completarse. En estos casos, las aplicaciones de un único subproceso deben bloquear otras operaciones y esperar a que el comando termine antes de poder continuar sus propias operaciones. En contraposición, la posibilidad de asignar la operación cuya ejecución tiene una larga duración a un subproceso en segundo plano permite que el subproceso en primer plano permanezca activo durante toda la operación. En las aplicaciones Windows, por ejemplo, delegar aquellas operaciones cuya ejecución tiene una larga duración en subprocesos en segundo plano permite que el subproceso de interfaz de usuario permanezca alerta mientras se ejecuta la operación.  
@@ -30,13 +31,13 @@ Algunas operaciones de base de datos, como las ejecuciones de comandos, pueden t
  Aunque el uso de técnicas asincrónicas con las características de ADO.NET no agrega ninguna consideración especial, es probable que más programadores utilicen las características asincrónicas en ADO.NET que en otras áreas de .NET Framework. Es importante tener en cuenta las ventajas e inconvenientes de crear aplicaciones multithreading. Los ejemplos que a continuación se muestran en esta sección señalan varios aspectos importantes que deben tener en cuenta los programadores al compilar aplicaciones que incorporan funcionalidad multithreading.  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Aplicaciones para Windows mediante devoluciones de llamada](../../../../../docs/framework/data/adonet/sql/windows-applications-using-callbacks.md)  
+ [Aplicaciones Windows que usan devoluciones de llamada](../../../../../docs/framework/data/adonet/sql/windows-applications-using-callbacks.md)  
  Proporciona un ejemplo en el que se muestra cómo ejecutar un comando asincrónico de forma segura y controlar correctamente la interacción con un formulario y su contenido desde un subproceso independiente.  
   
- [Aplicaciones ASP.NET mediante controladores de espera](../../../../../docs/framework/data/adonet/sql/aspnet-apps-using-wait-handles.md)  
+ [Aplicaciones ASP.NET que usan identificadores de espera](../../../../../docs/framework/data/adonet/sql/aspnet-apps-using-wait-handles.md)  
  Proporciona un ejemplo en el que se muestra cómo ejecutar varios comandos simultáneos desde una página de ASP.NET, mediante el uso de controladores de espera que administran la operación al completarse todos los comandos.  
   
- [Sondeo en aplicaciones de consola](../../../../../docs/framework/data/adonet/sql/polling-in-console-applications.md)  
+ [Sondeo de aplicaciones de consola](../../../../../docs/framework/data/adonet/sql/polling-in-console-applications.md)  
  Proporciona un ejemplo en el que se muestra el uso del sondeo para esperar a que se complete la ejecución de un comando asincrónico desde una aplicación de consola. Esta técnica también es válida en una biblioteca de clases u otra aplicación sin una interfaz de usuario.  
   
 ## <a name="see-also"></a>Vea también  

@@ -39,11 +39,12 @@ caps.latest.revision: "63"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: e23de3ea6e9693c05aa81da056ac7763bced8e9a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 12a96068412f05d48b8b006385c66f3efbbf9870
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="diagnosing-errors-with-managed-debugging-assistants"></a>Diagnóstico de errores con asistentes de depuraciones administradas
 Los asistentes de depuración administrada (MDA) son ayudas para la depuración que funcionan en conjunción con Common Language Runtime (CLR) para proporcionar información sobre estado en tiempo de ejecución. Los asistentes generan mensajes informativos sobre eventos en tiempo de ejecución que de otra forma no pueden interceptar. Puede utilizar MDA para aislar errores de la aplicación difíciles de encontrar que aparecen al realizar la transición entre código administrado y no administrado. Puede habilitar o deshabilitar todos los MDA si agrega una clave al Registro de Windows o establece una variable de entorno. Puede habilitar MDA específicos mediante los valores de configuración de la aplicación. Puede establecer opciones de configuración adicionales para algunos MDA concretos en el archivo de configuración de la aplicación. Dado que estos archivos de configuración se analizan cuando se carga el motor en tiempo de ejecución, debe habilitar el MDA antes de que se inicie la aplicación administrada. No puede habilitarlo para aplicaciones que ya se han iniciado.  

@@ -11,11 +11,11 @@ ms.assetid: 69cb0b04-ac87-49d0-bcfe-810c0d60daff
 caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 503d586c0515b4cb53f8ec5656e5fe765cc094a7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: fd6c0b1fa422dc4ab659d8c59472e5c098c729bc
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="iterator-visual-basic"></a>Iterador (Visual Basic)
 Especifica que una función o `Get` descriptor de acceso es un iterador.  
@@ -33,9 +33,7 @@ Especifica que una función o `Get` descriptor de acceso es un iterador.
   
  Un iterador no puede aparecer en un evento, un constructor de instancia, un constructor estático o un destructor estático.  
   
- Un iterador puede ser una función anónima. Para más información, vea [Iteradores](http://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7).  
-  
- Para obtener más información sobre los iteradores, vea [Iteradores](http://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7).  
+ Un iterador puede ser una función anónima. Para obtener más información, consulta [Iteradores](../../programming-guide/concepts/iterators.md).  
   
 ## <a name="usage"></a>Uso  
  El modificador `Iterator` se puede utilizar en los contextos siguientes:  
@@ -54,9 +52,9 @@ Especifica que una función o `Get` descriptor de acceso es un iterador.
   
  [!code-vb[VbVbalrStatements#99](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/iterator_2.vb)]  
   
- Para obtener ejemplos adicionales, vea [iteradores](http://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7).  
+ Para obtener ejemplos adicionales, vea [iteradores](../../programming-guide/concepts/iterators.md).  
   
 ## <a name="see-also"></a>Vea también  
  <xref:System.Runtime.CompilerServices.IteratorStateMachineAttribute>  
- [Iteradores](http://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7)  
+ [Iteradores](../../programming-guide/concepts/iterators.md)  
  [Yield (instrucción)](../../../visual-basic/language-reference/statements/yield-statement.md)

@@ -26,11 +26,11 @@ ms.assetid: 306ff8ed-74dd-4b6a-bd2f-e91b17474042
 caps.latest.revision: "33"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: b863ed5c8aca3332f4af3d759789eec153a79aed
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 4ba49d6582eb2ecac4846eaee570a4d92439a5d9
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="event-statement"></a>Event (Instrucción)
 Declara un evento definido por el usuario.  
@@ -69,22 +69,22 @@ End Event
 |`accessmodifier`|Opcional. Especifica qué código puede tener acceso al evento. Puede ser uno de los siguientes:<br /><br /> -   [Pública](../../../visual-basic/language-reference/modifiers/public.md): cualquier código que puede tener acceso al elemento que lo declara puede tener acceso a él.<br />-   [Protegido](../../../visual-basic/language-reference/modifiers/protected.md): solo el código de su clase o una clase derivada puede obtener acceso a él.<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md): solo el código en el mismo ensamblado puede tener acceso a él.<br />-   [Privada](../../../visual-basic/language-reference/modifiers/private.md): sólo el código en el elemento que lo declara puede tener acceso a él.<br /><br /> Puede especificar `Protected Friend` para habilitar el acceso desde el código de la clase del evento, una clase derivada o el mismo ensamblado.|  
 |`Shared`|Opcional. Especifica que este evento no está asociado a una instancia específica de una clase o estructura.|  
 |`Shadows`|Opcional. Indica que este evento vuelve a declarar y oculta un elemento de programación con el mismo nombre, o un conjunto de elementos sobrecargados, en una clase base. Puede reemplazar cualquier tipo de elemento declarado con cualquier otro tipo.<br /><br /> Un elemento reemplazado no está disponible desde la clase derivada que lo reemplaza, excepto desde donde el elemento reemplazado es inaccesible. Por ejemplo, si un elemento `Private` reemplaza un elemento de clase base, el código que no tiene permiso para acceder al elemento `Private` accede en su lugar al elemento de clase base.|  
-|`eventname`|Obligatorio. Nombre del evento; sigue las convenciones estándar de nomenclatura de variables.|  
+|`eventname`|Requerido. Nombre del evento; sigue las convenciones estándar de nomenclatura de variables.|  
 |`parameterlist`|Opcional. Lista de variables locales que representan los parámetros de este evento. Debe incluir el [lista de parámetros](../../../visual-basic/language-reference/statements/parameter-list.md) entre paréntesis.|  
 |`Implements`|Opcional. Indica que este evento implementa un evento de una interfaz.|  
 |`implementslist`|Es necesario si se proporciona `Implements`. Lista de procedimientos `Sub` que se implementan. Los diversos procedimientos se separan con comas:<br /><br /> *procedimientoImplementado* [, *implementedprocedure* ...]<br /><br /> Cada `implementedprocedure` tiene la sintaxis y las partes siguientes:<br /><br /> `interface`.`definedname`<br /><br /> -   `interface`-Required. Nombre de una interfaz que implementan la estructura o clase contenedora de este procedimiento.<br />-   `Definedname`-Required. Nombre por el que se define el procedimiento en `interface`. No tiene que ser el mismo que `name`, el nombre que usa este procedimiento para implementar el procedimiento definido.|  
-|`Custom`|Obligatorio. Los eventos declarados como `Custom` deben definir descriptores de acceso `AddHandler`, `RemoveHandler` y `RaiseEvent` personalizados.|  
+|`Custom`|Requerido. Los eventos declarados como `Custom` deben definir descriptores de acceso `AddHandler`, `RemoveHandler` y `RaiseEvent` personalizados.|  
 |`delegatename`|Opcional. Nombre de un delegado que especifica la firma del controlador de eventos.|  
-|`AddHandler`|Obligatorio. Declara un descriptor de acceso `AddHandler`, que especifica las instrucciones que se deben ejecutar cuando se agrega un controlador de eventos, ya sea explícitamente mediante la instrucción `AddHandler` o implícitamente mediante la cláusula `Handles`.|  
-|`End AddHandler`|Obligatorio. Finaliza el bloque `AddHandler`.|  
-|`value`|Obligatorio. Nombre del parámetro.|  
-|`RemoveHandler`|Obligatorio. Declara un descriptor de acceso `RemoveHandler`, que especifica las instrucciones que se ejecutan cuando se quita un controlador de eventos mediante la instrucción `RemoveHandler`.|  
-|`End RemoveHandler`|Obligatorio. Finaliza el bloque `RemoveHandler`.|  
-|`RaiseEvent`|Obligatorio. Declara un descriptor de acceso `RaiseEvent`, que especifica las instrucciones que se ejecutan cuando se produce el evento mediante la instrucción `RaiseEvent`. Normalmente, invoca una lista de delegados mantenida por los descriptores de acceso `AddHandler` y `RemoveHandler`.|  
-|`End RaiseEvent`|Obligatorio. Finaliza el bloque `RaiseEvent`.|  
-|`delegatesignature`|Obligatorio. Lista de parámetros que coincide con los parámetros requeridos por el delegado `delegatename`. Debe incluir el [lista de parámetros](../../../visual-basic/language-reference/statements/parameter-list.md) entre paréntesis.|  
+|`AddHandler`|Requerido. Declara un descriptor de acceso `AddHandler`, que especifica las instrucciones que se deben ejecutar cuando se agrega un controlador de eventos, ya sea explícitamente mediante la instrucción `AddHandler` o implícitamente mediante la cláusula `Handles`.|  
+|`End AddHandler`|Requerido. Finaliza el bloque `AddHandler`.|  
+|`value`|Requerido. Nombre del parámetro.|  
+|`RemoveHandler`|Requerido. Declara un descriptor de acceso `RemoveHandler`, que especifica las instrucciones que se ejecutan cuando se quita un controlador de eventos mediante la instrucción `RemoveHandler`.|  
+|`End RemoveHandler`|Requerido. Finaliza el bloque `RemoveHandler`.|  
+|`RaiseEvent`|Requerido. Declara un descriptor de acceso `RaiseEvent`, que especifica las instrucciones que se ejecutan cuando se produce el evento mediante la instrucción `RaiseEvent`. Normalmente, invoca una lista de delegados mantenida por los descriptores de acceso `AddHandler` y `RemoveHandler`.|  
+|`End RaiseEvent`|Requerido. Finaliza el bloque `RaiseEvent`.|  
+|`delegatesignature`|Requerido. Lista de parámetros que coincide con los parámetros requeridos por el delegado `delegatename`. Debe incluir el [lista de parámetros](../../../visual-basic/language-reference/statements/parameter-list.md) entre paréntesis.|  
 |`statements`|Opcional. Instrucciones que contienen los cuerpos de los métodos `AddHandler`, `RemoveHandler` y `RaiseEvent`.|  
-|`End Event`|Obligatorio. Finaliza el bloque `Event`.|  
+|`End Event`|Requerido. Finaliza el bloque `Event`.|  
   
 ## <a name="remarks"></a>Comentarios  
  Una vez declarado el evento, use la instrucción `RaiseEvent` para generar el evento. Un evento típico podría declararse y provocarse tal como se muestra en los fragmentos siguientes:  
@@ -122,7 +122,7 @@ End Event
  Presione F5 para ejecutar el ejemplo anterior y haga clic en el botón con la etiqueta **iniciar**. El primer cuadro de texto empieza la cuenta atrás de los segundos. Cuando transcurre el tiempo (10 segundos), el primer cuadro de texto muestra "Done".  
   
 > [!NOTE]
->  El método `My.Application.DoEvents` no procesa los eventos de la misma manera que el formulario. Para habilitar el formulario de modo que controle directamente los eventos, puede usar multithreading. Para obtener más información, consulte [subprocesos](http://msdn.microsoft.com/library/552f6c68-dbdb-4327-ae36-32cf9063d88c).  
+>  El método `My.Application.DoEvents` no procesa los eventos de la misma manera que el formulario. Para habilitar el formulario de modo que controle directamente los eventos, puede usar multithreading. Para obtener más información, consulte [subprocesos](../../programming-guide/concepts/threading/index.md).  
   
 ## <a name="see-also"></a>Vea también  
  [RaiseEvent (instrucción)](../../../visual-basic/language-reference/statements/raiseevent-statement.md)  

@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 7c0f93a5c4e515db937945d374ee7cbe8d9b3cf8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: cfe6a2137b3f3c9b5bcde6de0f0c692904bd7529
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="clr-triggers"></a>Desencadenadores de CLR
 Un desencadenador es un tipo especial de procedimiento almacenado que se ejecuta automáticamente cuando tiene lugar un evento de lenguaje. Debido a la integración de Microsoft SQL Server con Common Language Runtime (CLR) de .NET Framework, es posible utilizar cualquier lenguaje .NET Framework para crear desencadenadores CLR.  
@@ -26,7 +27,7 @@ Un desencadenador es un tipo especial de procedimiento almacenado que se ejecuta
   
  **Libros en pantalla de SQL Server**  
   
-1.  [Desencadenadores CLR](http://go.microsoft.com/fwlink/?LinkId=115397)  
+1.  [Desencadenadores de CLR](http://go.microsoft.com/fwlink/?LinkId=115397)  
   
 ## <a name="see-also"></a>Vea también  
  [Crear objetos de SQL Server 2005 en código administrado](http://msdn.microsoft.com/en-us/5358a825-e19b-49aa-8214-674ce5fed1da)  

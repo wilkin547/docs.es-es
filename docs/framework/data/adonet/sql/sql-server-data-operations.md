@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: f40fa8a29ea1c4204c6c3c9aa10507bd0a8a4789
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ee19f9816650f544552a19c6b80f38d7b0ff46e1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sql-server-data-operations-in-adonet"></a>Operaciones de datos de SQL Server en ADO.NET
 En esta sección se describen características y funcionalidad de SQL Server específicos del proveedor de datos .NET Framework para SQL Server (<xref:System.Data.SqlClient>).  

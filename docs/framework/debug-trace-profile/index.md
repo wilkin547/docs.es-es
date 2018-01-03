@@ -24,11 +24,12 @@ caps.latest.revision: "28"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 21032358c9edb1b79d9e170e477502670f781fc3
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 4368ce1256e1e0637907768b3698ca7dab97c5f9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="debugging-tracing-and-profiling"></a>Depurar, trazar y generar perfiles
 Para depurar una aplicación de .NET Framework, el compilador y el entorno de CLR deben configurarse para poder asociar un depurador a la aplicación y para poder producir símbolos y mapas de líneas, si es posible, para la aplicación y su Lenguaje Intermedio de Microsoft (MSIL) correspondiente. Una vez depurada una aplicación administrada, se puede generar un perfil para mejorar el rendimiento. La generación de perfiles evalúa y describe las líneas de código fuente que generan el código que se ejecuta con más frecuencia, y cuánto tiempo se necesita para ejecutarlas.  
@@ -51,7 +52,7 @@ Para depurar una aplicación de .NET Framework, el compilador y el entorno de CL
  [Mejorar la depuración con los atributos de visualización del depurador](../../../docs/framework/debug-trace-profile/enhancing-debugging-with-the-debugger-display-attributes.md)  
  Describe el procedimiento que puede seguir el desarrollador de un tipo para especificar cómo se mostrará ese tipo en un depurador.  
   
- [Performance Counters](../../../docs/framework/debug-trace-profile/performance-counters.md)  
+ [Contadores de rendimiento](../../../docs/framework/debug-trace-profile/performance-counters.md)  
  Describe los contadores que puede usar para supervisar el rendimiento de una aplicación.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  

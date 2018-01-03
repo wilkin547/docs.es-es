@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 7bd381706c9ceb7c1c8f80002cee3b857b695372
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 81803df493d53b94a57720755f9bc351404b7d49
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="reference"></a>Referencia
 En esta sección se proporciona información de referencia para programadores de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
@@ -25,7 +26,7 @@ En esta sección se proporciona información de referencia para programadores de
  También se recomienda para buscar Microsoft Docs problemas concretos y participar en la [foro de LINQ](http://go.microsoft.com/fwlink/?LinkId=76488), dónde debatirá detalladamente temas más complejos con expertos. Además, puede leer las notas del producto que detallan la tecnología [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] e incluyen ejemplos de código de Visual Basic y C#. Para obtener más información, consulte [LINQ to SQL: consultas de .NET para datos relacionales](http://go.microsoft.com/fwlink/?LinkId=93205).  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Funciones y tipos de datos](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)  
+ [Tipos de datos y funciones](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)  
  Describe cómo common language runtime (CLR) construcciones tienen expresiones correspondientes en SQL sólo si [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] ha proporcionado explícitamente una conversión en el motor de conversión.  
   
  [Asignación basada en atributos](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md)  
@@ -43,7 +44,7 @@ En esta sección se proporciona información de referencia para programadores de
  [SQL Server Compact y LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/sql-server-compact-and-linq-to-sql.md)  
  Describe las diferencias entre [!INCLUDE[ssEW](../../../../../../includes/ssew-md.md)] y [!INCLUDE[ssNoVersion](../../../../../../includes/ssnoversion-md.md)] en las aplicaciones [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
   
- [Conversión de operadores de consulta estándar](../../../../../../docs/framework/data/adonet/sql/linq/standard-query-operator-translation.md)  
+ [Traslación del operador de consulta estándar](../../../../../../docs/framework/data/adonet/sql/linq/standard-query-operator-translation.md)  
  Describe cómo [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] convierte los operadores de consulta estándar en comandos SQL.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  

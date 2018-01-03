@@ -16,11 +16,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 523a6cbd0174da4c294e5fd2ab2d0217fc63cb5c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 8ee5af338b0cbb979e923ba17f69bca2c6c64bc2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-display-generated-sql"></a>Cómo: Mostrar el código SQL generado
 Puede ver el código de SQL generado para las consultas y cambiar su procesamiento por medio de la propiedad <xref:System.Data.Linq.DataContext.Log%2A>. Este enfoque puede ser útil para entender la funcionalidad de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] y para depurar problemas concretos.  
@@ -53,4 +54,4 @@ SEVES
  [!code-vb[DLinqDebuggingSupport#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqDebuggingSupport/vb/Module1.vb#1)]  
   
 ## <a name="see-also"></a>Vea también  
- [Compatibilidad con la depuración](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md)
+ [Capacidad de depuración](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md)

@@ -16,11 +16,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 844f206219fed527b73b5125ab82f1c044c59b5b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 60f73644a047230a590e75f095575cf85140f3a6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="serialization"></a>Serialización
 Este tema se describe [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] características de la serialización. En los párrafos siguientes se proporciona información sobre cómo agregar la característica de serialización durante la generación de código en tiempo de diseño y el comportamiento de serialización en tiempo de ejecución de las clases [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
@@ -85,4 +86,4 @@ Este tema se describe [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlin
 ## <a name="see-also"></a>Vea también  
  [Información general](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)  
  [SqlMetal.exe (Herramienta de generación de código)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)  
- [Cómo: serializar entidades](../../../../../../docs/framework/data/adonet/sql/linq/how-to-make-entities-serializable.md)
+ [Serialización de entidades](../../../../../../docs/framework/data/adonet/sql/linq/how-to-make-entities-serializable.md)

@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 4f41a794916c63672ca0c844f086629f77b90aa0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4b8eafeedd03097488b1493b5654db360eab94fb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sql-server-security"></a>Seguridad de SQL Server
 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] incluye muchas características que admiten la creación de aplicaciones de base de datos seguras.  
@@ -33,13 +34,13 @@ ms.lasthandoff: 11/21/2017
  Los temas de esta sección describen brevemente las características de seguridad en [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] de interés para los desarrolladores, con vínculos a temas relevantes en los Libros en pantalla de [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] y otros recursos que proporcionan cobertura más detallada.  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Información general de seguridad de SQL Server](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)  
+ [Información general sobre la seguridad de SQL Server](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)  
  Describe la arquitectura y las características de seguridad de [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)].  
   
- [Escenarios de seguridad de la aplicación en SQL Server](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)  
+ [Escenarios de seguridad de aplicaciones en SQL Server](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)  
  Contiene temas que describen diferentes escenarios de seguridad de aplicaciones para aplicaciones de ADO.NET y [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)].  
   
- [Seguridad SQL Server Express](../../../../../docs/framework/data/adonet/sql/sql-server-express-security.md)  
+ [Seguridad de SQL Server Express](../../../../../docs/framework/data/adonet/sql/sql-server-express-security.md)  
  Describe cuestiones de seguridad relacionadas con [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] Express.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  

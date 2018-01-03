@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 854407d2e6d1341d5917cc78664c1f653e55fa35
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d922598cb31e60b1c1648884555695c1ba089726
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="query-notifications-in-sql-server"></a>Notificaciones de consulta en SQL Server
 Las notificaciones de consulta, que están basadas en la infraestructura Service Broker, permiten que se notifique a las aplicaciones cuando cambian los datos. Esta característica es especialmente útil en aplicaciones que proporcionan una caché de información desde una base de datos, por ejemplo, una aplicación web, y necesitan recibir notificación cuando cambian los datos de origen.  
@@ -49,16 +50,16 @@ Las notificaciones de consulta, que están basadas en la infraestructura Service
 -   [Desarrollo (Service Broker)](http://msdn.microsoft.com/library/bb522908.aspx)  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Habilitar las notificaciones de consulta](../../../../../docs/framework/data/adonet/sql/enabling-query-notifications.md)  
+ [Habilitación de notificaciones de consulta](../../../../../docs/framework/data/adonet/sql/enabling-query-notifications.md)  
  Describe cómo utilizar las notificaciones de consulta, junto con los requisitos para habilitarlas y usarlas.  
   
  [SqlDependency en una aplicación ASP.NET](../../../../../docs/framework/data/adonet/sql/sqldependency-in-an-aspnet-app.md)  
  Muestra cómo usar notificaciones de consulta desde una aplicación ASP.NET.  
   
- [Detectar cambios con SqlDependency](../../../../../docs/framework/data/adonet/sql/detecting-changes-with-sqldependency.md)  
+ [Detección de cambios con SqlDependency](../../../../../docs/framework/data/adonet/sql/detecting-changes-with-sqldependency.md)  
  Muestra cómo detectar cuándo los resultados de las consultas serán diferentes de los recibidos originalmente.  
   
- [Ejecución de SqlCommand Execution con SqlNotificationRequest](../../../../../docs/framework/data/adonet/sql/sqlcommand-execution-with-a-sqlnotificationrequest.md)  
+ [Ejecución de SqlCommand con SqlNotificationRequest](../../../../../docs/framework/data/adonet/sql/sqlcommand-execution-with-a-sqlnotificationrequest.md)  
  Muestra cómo configurar un objeto <xref:System.Data.SqlClient.SqlCommand> para trabajar con una notificación de consulta.  
   
 ## <a name="reference"></a>Referencia  

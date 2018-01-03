@@ -27,11 +27,11 @@ ms.assetid: d6488026-ccb3-42b8-a810-0d97b9d6472b
 caps.latest.revision: "69"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 56dd7fc339c452d64eb18211337b9a7674a83e1c
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: c297a84b37b455a4b30b1848aa9bdd30dc567ec1
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="trycatchfinally-statement-visual-basic"></a>Instrucción Try...Catch...Finally (Visual Basic)
 Proporciona un medio para controlar algunos o todos los errores posibles que pueden producirse en un bloque de código determinado mientras se sigue ejecutando el código.  
@@ -134,10 +134,10 @@ End Try
   
  Un `Await` expresión no puede estar dentro de un `Catch` bloque o `Finally` bloque.  
   
-## <a name="iterators"></a>Iteradores  
+## <a name="iterators"></a>Iterators  
  Una función de iterador o `Get` descriptor de acceso realiza una iteración personalizada en una colección. Un iterador utiliza un [producen](../../../visual-basic/language-reference/statements/yield-statement.md) instrucción para devolver cada elemento de la colección a la vez. Llamar a una función de iterador mediante un [For Each... Next (instrucción)](../../../visual-basic/language-reference/statements/for-each-next-statement.md).  
   
- A `Yield` instrucción puede estar dentro de un `Try` bloque. A `Try` bloque que contiene un `Yield` instrucción puede tener `Catch` bloquea y puede tener un `Finally` bloque. Vea la sección "intente bloques en Visual Basic" de [iteradores](http://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7) para obtener un ejemplo.  
+ A `Yield` instrucción puede estar dentro de un `Try` bloque. A `Try` bloque que contiene un `Yield` instrucción puede tener `Catch` bloquea y puede tener un `Finally` bloque. Vea la sección "intente bloques en Visual Basic" de [iteradores](../../programming-guide/concepts/iterators.md) para obtener un ejemplo.  
   
  A `Yield` instrucción no puede estar dentro de un `Catch` bloque o una `Finally` bloque.  
   
@@ -194,5 +194,5 @@ End Try
  [Exit (instrucción)](../../../visual-basic/language-reference/statements/exit-statement.md)  
  [On Error (instrucción)](../../../visual-basic/language-reference/statements/on-error-statement.md)  
  [Procedimientos recomendados para usar fragmentos de código](/visualstudio/ide/best-practices-for-using-code-snippets)  
- [Control de excepciones](../../../../docs/standard/parallel-programming/exception-handling-task-parallel-library.md)  
+ [Control de excepciones](../../../standard/parallel-programming/exception-handling-task-parallel-library.md)  
  [Throw (instrucción)](../../../visual-basic/language-reference/statements/throw-statement.md)

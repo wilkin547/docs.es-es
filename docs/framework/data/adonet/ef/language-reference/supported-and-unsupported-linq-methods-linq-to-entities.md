@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 73b0c48b4aa4b4f54090e380e85bd35b89cc3f25
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 2573ff7ff4a03d5ec8a56ef311a3c065d040ccf9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="supported-and-unsupported-linq-methods-linq-to-entities"></a>Métodos de LINQ compatibles y no compatibles (LINQ to Entities)
 En esta sección se proporciona información sobre los operadores de consulta estándar de Language-Integrated Query (LINQ) que se admiten o no en las consultas de [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)]. Muchos de los operadores de consulta estándar de LINQ tienen una versión sobrecargada que acepta un argumento entero. El argumento entero corresponde a un índice de base cero de la secuencia que se opera, un <xref:System.Collections.Generic.IEqualityComparer%601>, o <xref:System.Collections.Generic.IComparer%601>. A menos que se especifique lo contrario, estas versiones sobrecargadas de los operadores de consulta estándar de LINQ no se admiten y, si intenta utilizarlos, se iniciará una excepción.  
@@ -189,4 +190,4 @@ En esta sección se proporciona información sobre los operadores de consulta es
 |<xref:System.Linq.Queryable.TakeWhile%2A>|No compatibles|`Function TakeWhile(Of TSource) ( _ source As IQueryable(Of TSource), _ predicate As Expression(Of Func(Of TSource, Integer, Boolean)) _ ) As IQueryable(Of TSource)`|`IQueryable<TSource> TakeWhile<TSource>( this IQueryable<TSource> source, Expression<Func\<TSource, int, bool>> predicate )`|  
   
 ## <a name="see-also"></a>Vea también  
- [Operadores de consulta estándar en consultas LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/standard-query-operators-in-linq-to-entities-queries.md)
+ [Operadores de consulta estándar en consultas de LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/standard-query-operators-in-linq-to-entities-queries.md)

@@ -14,11 +14,11 @@ ms.assetid: 5f1c26c9-3455-4e89-bdf3-b12d6c2e655b
 caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 2be2c460fddf2e8ea4fe1239ec073f208c072d34
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 4f8a87ea3f3e551dfc84212e92f1409ef61bcba2
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="libpath"></a>/libpath
 Especifica la ubicación de los ensamblados que se hace referencia.  
@@ -33,7 +33,7 @@ Especifica la ubicación de los ensamblados que se hace referencia.
   
 |Término|Definición|  
 |---|---|  
-|`dirList`|Obligatorio. Lista delimitada por punto y coma de directorios para que el compilador buscar en caso de un ensamblado de referencia no se encuentra en el directorio de trabajo actual (el directorio desde el que se invoca el compilador) o el directorio del sistema de common language runtime. Si el nombre del directorio contiene un espacio, ponga el nombre entre comillas ("").|  
+|`dirList`|Requerido. Lista delimitada por punto y coma de directorios para que el compilador buscar en caso de un ensamblado de referencia no se encuentra en el directorio de trabajo actual (el directorio desde el que se invoca el compilador) o el directorio del sistema de common language runtime. Si el nombre del directorio contiene un espacio, ponga el nombre entre comillas ("").|  
   
 ## <a name="remarks"></a>Comentarios  
  El `/libpath` opción especifica la ubicación de ensamblados al que hace referencia el [/reference](../../../visual-basic/reference/command-line-compiler/reference.md) opción.  
@@ -54,7 +54,7 @@ Especifica la ubicación de los ensamblados que se hace referencia.
   
 |Para establecer /libpath en Visual Studio integra el entorno de desarrollo|  
 |---|  
-|1.  Seleccione un proyecto en el **Explorador de soluciones**. En el menú **Proyecto**, haga clic en **Propiedades**. Para obtener más información, consulte [Introducción al Diseñador de proyectos](http://msdn.microsoft.com/en-us/898dd854-c98d-430c-ba1b-a913ce3c73d7).<br />2.  Haga clic en la pestaña **Referencias**.<br />3.  Haga clic en el **hacen referencia a las rutas de acceso...**  botón.<br />4.  En el **las rutas de acceso de referencia** diálogo cuadro, escriba el nombre del directorio en el **carpeta:** cuadro.<br />5.  Haga clic en **Agregar carpeta**.|  
+|1.  Seleccione un proyecto en el **Explorador de soluciones**. En el menú **Proyecto**, haga clic en **Propiedades**. <br />2.  Haga clic en la pestaña **Referencias**.<br />3.  Haga clic en el **hacen referencia a las rutas de acceso...**  botón.<br />4.  En el **las rutas de acceso de referencia** diálogo cuadro, escriba el nombre del directorio en el **carpeta:** cuadro.<br />5.  Haga clic en **Agregar carpeta**.|  
   
 ## <a name="example"></a>Ejemplo  
  El siguiente código compila `T2.vb` para crear un archivo .exe. El compilador busca en el directorio de trabajo, en el directorio raíz de la unidad C: y en el directorio de nuevos ensamblados de la unidad C: de referencias de ensamblado.  

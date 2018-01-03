@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: bd7bad0734007b68fe6089a11b6b59d5d22e9954
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 594d0516a739986580d37e86eab32da14c359e99
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="development-and-deployment-considerations"></a>Consideraciones de desarrollo e implementación
 Los temas de esta sección tratan aspectos que hay que considerar cuando se desarrolla o implementa una aplicación basada en ADO.NET Entity Framework.  
@@ -25,14 +26,14 @@ Los temas de esta sección tratan aspectos que hay que considerar cuando se desa
 ## <a name="in-this-section"></a>En esta sección  
  [Consideraciones de seguridad](../../../../../docs/framework/data/adonet/ef/security-considerations.md)  
   
- [Consideraciones de rendimiento](../../../../../docs/framework/data/adonet/ef/performance-considerations.md)  
+ [Consideraciones sobre el rendimiento](../../../../../docs/framework/data/adonet/ef/performance-considerations.md)  
   
- [Consideraciones sobre la migración](../../../../../docs/framework/data/adonet/ef/migration-considerations.md)  
+ [Consideraciones de migración](../../../../../docs/framework/data/adonet/ef/migration-considerations.md)  
   
  [Consideraciones de implementación](../../../../../docs/framework/data/adonet/ef/deployment-considerations.md)  
   
 ## <a name="see-also"></a>Vea también  
  [ADO.NET Entity Framework](../../../../../docs/framework/data/adonet/ef/index.md)  
- [Introducción a Entity Framework](../../../../../docs/framework/data/adonet/ef/overview.md)  
+ [Información general sobre Entity Framework](../../../../../docs/framework/data/adonet/ef/overview.md)  
  [Introducción](../../../../../docs/framework/data/adonet/ef/getting-started.md)  
  [Herramientas de Entity Data Model de ADO.NET](http://msdn.microsoft.com/en-us/91076853-0881-421b-837a-f582f36be527)

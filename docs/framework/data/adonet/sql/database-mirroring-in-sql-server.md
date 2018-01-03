@@ -16,11 +16,12 @@ caps.latest.revision: "6"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 0ec0b25976b1b54c91fcdebbc80bc048d2b48823
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 6956d48163f9b9da66258c0dbb3452beab5420d9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="database-mirroring-in-sql-server"></a>Creación de reflejo de la base de datos en SQL Server
 La creación de reflejo de base de datos de SQL Server permite mantener una copia, o reflejo, de una base de datos de SQL Server en un servidor en modo de espera. El reflejo garantiza que en todo momento existen dos copias distintas de los datos, lo que proporciona una alta disponibilidad y una completa redundancia de datos. El proveedor de datos .NET para SQL Server ofrece compatibilidad implícita con la creación de reflejo de base de datos; de modo que el desarrollador no tiene que realizar ninguna acción ni escribir ningún código una vez que se ha configurado para una base de datos de SQL Server. Además, el objeto <xref:System.Data.SqlClient.SqlConnection> admite un modo de conexión explícita que permita proporcionar el nombre de un servidor asociado de conmutación por error en la propiedad <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>.  

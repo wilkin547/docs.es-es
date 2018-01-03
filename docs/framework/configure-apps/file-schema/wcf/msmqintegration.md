@@ -13,11 +13,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7c4f552e15ee045b0e388a29ecf0f302327ee50f
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: efa224477dfdf396af2403f509f252b8e0f2a55f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltmsmqintegrationgt"></a>&lt;msmqIntegration&gt;
 Especifica un transporte de MSMQ para enlace personalizado.  
@@ -96,7 +97,7 @@ Especifica un transporte de MSMQ para enlace personalizado.
  <xref:System.ServiceModel.Channels.CustomBinding>  
  [Transportes](../../../../../docs/framework/wcf/feature-details/transports.md)  
  [Colas en WCF](../../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)  
- [Elegir un transporte](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)  
+ [Elección del transporte](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)  
  [Enlaces](../../../../../docs/framework/wcf/bindings.md)  
  [Extensión de enlaces](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
  [Enlaces personalizados](../../../../../docs/framework/wcf/extending/custom-bindings.md)  

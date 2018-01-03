@@ -14,11 +14,11 @@ ms.assetid: 9f148c15-0909-4cb8-a2db-777f8a8b45ae
 caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: d98a9f3cadc42021c302915cfc5b058b41e11ec6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 53b77dec53be1d97c5f2526cb117933a2b8fe046
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="out-visual-basic"></a>/out (Visual Basic)
 Especifica el nombre del archivo de salida.  
@@ -33,7 +33,7 @@ Especifica el nombre del archivo de salida.
   
 |Término|Definición|  
 |---|---|  
-|`filename`|Obligatorio. Crea el nombre del archivo de salida del compilador. Si el nombre de archivo contiene un espacio, incluya el nombre entre comillas ("").|  
+|`filename`|Requerido. Crea el nombre del archivo de salida del compilador. Si el nombre de archivo contiene un espacio, incluya el nombre entre comillas ("").|  
   
 ## <a name="remarks"></a>Comentarios  
  Especifique el nombre completo y la extensión de archivo que desea crear. Si no lo hace, el archivo .exe adopta el nombre del archivo de código fuente que contiene el `Sub Main` procedimiento y el archivo .dll adopta el nombre del primer archivo de código fuente.  
@@ -42,7 +42,7 @@ Especifica el nombre del archivo de salida.
   
 |Para establecer/out en el entorno de desarrollo integrado de Visual Studio|  
 |---|  
-|1.  Seleccione un proyecto en el **Explorador de soluciones**. En el menú **Proyecto**, haga clic en **Propiedades**. Para obtener más información, consulte [Introducción al Diseñador de proyectos](http://msdn.microsoft.com/en-us/898dd854-c98d-430c-ba1b-a913ce3c73d7).<br />2.  Haga clic en la pestaña **Aplicación** .<br />3.  Modifique el valor en el **nombre de ensamblado** cuadro.|  
+|1.  Seleccione un proyecto en el **Explorador de soluciones**. En el menú **Proyecto**, haga clic en **Propiedades**. <br />2.  Haga clic en la pestaña **Aplicación** .<br />3.  Modifique el valor en el **nombre de ensamblado** cuadro.|  
   
 ## <a name="example"></a>Ejemplo  
  El siguiente código compila `T2.vb` y crea el archivo de salida `T2.exe`.  

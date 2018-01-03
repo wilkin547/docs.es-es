@@ -13,17 +13,17 @@ ms.assetid: f6bff4e6-6769-4294-956b-037aa6106d2a
 caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: a5aa7af1f07a29660335d968c1ecc17be5f8beec
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: fe548caacf2c8e7498e3b7abc814b4f89af9b3d6
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="myforms-object"></a>My.Forms (Objeto)
 Proporciona propiedades para tener acceso a una instancia de cada formulario Windows Forms declarado en el proyecto actual.  
   
 ## <a name="remarks"></a>Comentarios  
- La `My.Forms` objeto proporciona una instancia de cada formulario en el proyecto actual. El nombre de la propiedad es el mismo que el nombre del formulario que tiene acceso la propiedad. Para obtener información acerca de cómo agregar formas a un proyecto, vea [Cómo: agregar Windows Forms a un proyecto](http://msdn.microsoft.com/en-us/3d7bb25f-fd90-47cf-9378-fa0d764686c1).  
+ La `My.Forms` objeto proporciona una instancia de cada formulario en el proyecto actual. El nombre de la propiedad es el mismo que el nombre del formulario que tiene acceso la propiedad.   
   
  Puede tener acceso a los formularios proporcionados por el `My.Forms` objeto mediante el nombre del formulario, sin calificación. Dado que el nombre de propiedad es el mismo que el nombre de tipo del formulario, esto le permite tener acceso a un formulario como si tuviera una instancia predeterminada. Por ejemplo, `My.Forms.Form1.Show` es equivalente a `Form1.Show`.  
   
@@ -53,7 +53,7 @@ Proporciona propiedades para tener acceso a una instancia de cada formulario Win
   
  [!code-vb[VbVbalrMyForms#2](../../../visual-basic/language-reference/objects/codesnippet/VisualBasic/my-forms-object_1.vb)]  
   
- Para que funcione este ejemplo, el proyecto debe tener un formulario denominado `SidebarMenu`. Para obtener más información, consulte [Cómo: agregar Windows Forms a un proyecto](http://msdn.microsoft.com/en-us/3d7bb25f-fd90-47cf-9378-fa0d764686c1).  
+ Para que funcione este ejemplo, el proyecto debe tener un formulario denominado `SidebarMenu`.  
   
  Este código funcionará solamente en un proyecto de aplicación de Windows.  
   
@@ -76,7 +76,6 @@ Proporciona propiedades para tener acceso a una instancia de cada formulario Win
  <xref:System.Windows.Forms.Form>  
  <xref:System.Windows.Forms.Form.Close%2A>  
  [Objects](../../../visual-basic/language-reference/objects/index.md)  
- [Cómo: agregar formularios Windows Forms a un proyecto](http://msdn.microsoft.com/en-us/3d7bb25f-fd90-47cf-9378-fa0d764686c1)  
  [Is (operador)](../../../visual-basic/language-reference/operators/is-operator.md)  
  [IsNot (operador)](../../../visual-basic/language-reference/operators/isnot-operator.md)  
  [Acceso ad los formularios de la aplicación](../../../visual-basic/developing-apps/programming/accessing-application-forms.md)

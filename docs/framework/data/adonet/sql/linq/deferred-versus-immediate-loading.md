@@ -16,11 +16,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 5daf7ac2769128943d98600be08a7ee705028ce2
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 992d9a018f81bbd3f0c9204168f513024769e079
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="deferred-versus-immediate-loading"></a>Carga inmediata y carga diferida
 Al consultar un objeto, en realidad se recupera únicamente el objeto solicitado. El *relacionados* objetos no se capturan automáticamente al mismo tiempo. (Para obtener más información, consulte [consultas en varias relaciones](../../../../../../docs/framework/data/adonet/sql/linq/querying-across-relationships.md).) No hay forma de saber si los objetos relacionados están ya cargados, porque, si se intenta tener acceso a ellos, se genera una solicitud que los recupera.  

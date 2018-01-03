@@ -14,11 +14,11 @@ ms.assetid: 9a93fb53-c080-497b-bf9b-441022dbbc39
 caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: e8e9cd761263b3b61a4e6d3e33c5f7f875be7a1d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 6cdb7cff2221930113d6b49a640da0844f175f1b
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="imports-visual-basic"></a>/imports (Visual Basic)
 Importa los espacios de nombres desde un ensamblado especificado.  
@@ -33,7 +33,7 @@ Importa los espacios de nombres desde un ensamblado especificado.
   
 |Término|Definición|  
 |---|---|  
-|`namespaceList`|Obligatorio. Lista delimitada por comas de espacios de nombres que desea importar.|  
+|`namespaceList`|Requerido. Lista delimitada por comas de espacios de nombres que desea importar.|  
   
 ## <a name="remarks"></a>Comentarios  
  El `/imports` opción importa cualquier espacio de nombres definido dentro del conjunto actual de archivos de origen o de cualquier ensamblado que se hace referencia.  
@@ -42,7 +42,7 @@ Importa los espacios de nombres desde un ensamblado especificado.
   
 |Para establecer/importa en el entorno de desarrollo integrado de Visual Studio|  
 |---|  
-|1.  Seleccione un proyecto en el **Explorador de soluciones**. En el menú **Proyecto**, haga clic en **Propiedades**. Para obtener más información, consulte [Introducción al Diseñador de proyectos](http://msdn.microsoft.com/en-us/898dd854-c98d-430c-ba1b-a913ce3c73d7).<br />2.  Haga clic en la pestaña **Referencias**.<br />3.  Escriba el nombre de espacio de nombres en la casilla situada junto a la **Agregar importación del usuario** botón.<br />4.  Haga clic en el **Agregar importación del usuario** botón.|  
+|1.  Seleccione un proyecto en el **Explorador de soluciones**. En el menú **Proyecto**, haga clic en **Propiedades**. <br />2.  Haga clic en la pestaña **Referencias**.<br />3.  Escriba el nombre de espacio de nombres en la casilla situada junto a la **Agregar importación del usuario** botón.<br />4.  Haga clic en el **Agregar importación del usuario** botón.|  
   
 ## <a name="example"></a>Ejemplo  
  El siguiente código compila cuando `/imports:system` se especifica.  

@@ -18,11 +18,11 @@ ms.assetid: f82e380a-1e6b-4047-bea8-c853f4d2c742
 caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 2575598577820bd7a72fae2d9b8ba52978f5952d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e6ba5ce4b009e0d8c675db07b56b9811c595ae2f
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="raiseevent-statement"></a>RaiseEvent (Instrucción)
 Desencadena un evento declarado en el nivel de módulo dentro de una clase, un formulario o un documento.  
@@ -35,7 +35,7 @@ RaiseEvent eventname[( argumentlist )]
   
 ## <a name="parts"></a>Elementos  
  `eventname`  
- Obligatorio. Nombre del evento que se va a desencadenar.  
+ Requerido. Nombre del evento que se va a desencadenar.  
   
  `argumentlist`  
  Opcional. Lista delimitada por comas de variables, matrices o expresiones. El `argumentlist` argumento debe aparecer entre paréntesis. Si no hay ningún argumento, se deben omitir los paréntesis.  
@@ -80,7 +80,7 @@ RaiseEvent eventname[( argumentlist )]
  Presione F5 para ejecutar el ejemplo anterior y haga clic en el botón con la etiqueta **iniciar**. El primer cuadro de texto empieza la cuenta atrás de los segundos. Cuando transcurre el tiempo (10 segundos), el primer cuadro de texto muestra "Done".  
   
 > [!NOTE]
->  El `My.Application.DoEvents` método no procesa los eventos exactamente la misma manera como lo hace el formulario. Para permitir que el formulario controle directamente los eventos, puede usar multithreading. Para obtener más información, consulte [subprocesos](http://msdn.microsoft.com/library/552f6c68-dbdb-4327-ae36-32cf9063d88c).  
+>  El `My.Application.DoEvents` método no procesa los eventos exactamente la misma manera como lo hace el formulario. Para permitir que el formulario controle directamente los eventos, puede usar multithreading. Para obtener más información, consulte [subprocesos](../../programming-guide/concepts/threading/index.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Eventos](../../../visual-basic/programming-guide/language-features/events/index.md)  

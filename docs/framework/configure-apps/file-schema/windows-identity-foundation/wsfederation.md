@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: e4779baa24e172affad2ed5e04451ad791d7cdf5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 7fd4e12d77380942204d37b59644c46aed3a0148
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltwsfederationgt"></a>&lt;wsFederation&gt;
 Proporciona la configuración para el <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WSFAM).  
@@ -66,7 +67,7 @@ Proporciona la configuración para el <xref:System.IdentityModel.Services.WSFede
 |persistentCookiesOnPassiveRedirects|Especifica si las cookies persistentes se emiten en la autenticación. Opcional. El valor predeterminado es "false", no se emiten las cookies.|  
 |passiveRedirectEnabled|Especifica si está habilitado el WSFAM para redirigir solicitudes no autorizadas de manera automática a un STS. Opcional. El valor predeterminado es "true", automáticamente se redirigen las solicitudes no autorizadas.|  
 |de excepción no controlada|Una dirección URL que especifica la ubicación de la directiva correspondiente a usar en las solicitudes de inicio de sesión. El valor predeterminado es una cadena vacía. Establece el parámetro de wp de inicio de sesión de la solicitud de WS-Federation. Opcional. El valor predeterminado es una cadena vacía, que especifica que el parámetro wp no está incluido en la solicitud.|  
-|realm|El URI del territorio del solicitante. (Un URI que identifica el usuario de confianza (RP) para el servicio de token de seguridad (STS).) Establece el parámetro de solicitud de solicitud wtrealm inicio de sesión de WS-Federation. Obligatorio.|  
+|realm|El URI del territorio del solicitante. (Un URI que identifica el usuario de confianza (RP) para el servicio de token de seguridad (STS).) Establece el parámetro de solicitud de solicitud wtrealm inicio de sesión de WS-Federation. Requerido.|  
 |reply|Una dirección URL que identifica la dirección a la que la aplicación del usuario (RP) autenticado le gustaría recibir respuestas desde el servicio de Token de seguridad (STS). Establece el parámetro de wreply de inicio de sesión de la solicitud de WS-Federation. Opcional. El valor predeterminado es una cadena vacía, que especifica que el parámetro wreply no está incluido en la solicitud.|  
 |request|La solicitud de emisión de tokens. Establece el parámetro wreq de WebRequest de inicio de sesión de la solicitud de WS-Federation. Opcional. El valor predeterminado es una cadena vacía, que especifica que el parámetro wreq de WebRequest no se incluye en la solicitud. No incluya el wreq de WebRequest o el parámetro wreqptr en la solicitud implica que el STS sabe qué tipo de token que se va a emitir.|  
 |requestPtr|Una dirección URL que especifica la ubicación de la solicitud de emisión de tokens. Establece el parámetro de solicitud wreqptr. Opcional. El valor predeterminado es una cadena vacía, que especifica que el parámetro wreqptr no está incluido en la solicitud. No incluya el wreq de WebRequest o el parámetro wreqptr en la solicitud implica que el STS sabe qué tipo de token que se va a emitir.|  

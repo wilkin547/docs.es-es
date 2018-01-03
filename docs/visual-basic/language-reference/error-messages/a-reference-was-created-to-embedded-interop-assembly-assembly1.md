@@ -15,11 +15,11 @@ ms.assetid: 520e39cb-8ab6-46f5-aa00-08afd51b4b7c
 caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: bc2fbb044fc839aa24abf3dc1ea864457efb0653
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: aaaa7460ade00ad4232807ce11ee125e270742bf
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="a-reference-was-created-to-embedded-interop-assembly-39ltassembly1gt39-because-of-an-indirect-reference-to-that-assembly-from-assembly-39ltassembly2gt39"></a>Se crea una referencia al ensamblado de interoperabilidad incrustado &#39; &lt;ensamblado1&gt;&#39; debido a una referencia indirecta a dicho ensamblado desde el ensamblado &#39;&lt; Assembly2&gt;&#39;
 Se ha creado una referencia al ensamblado de interoperabilidad "\<ensamblado1>" insertado debido a una referencia indirecta a dicho ensamblado desde el ensamblado "\<ensamblado2>". Considere cambiar la propiedad "Incrustar tipos de interoperabilidad" en uno de los ensamblados.  
@@ -39,4 +39,4 @@ Se ha creado una referencia al ensamblado de interoperabilidad "\<ensamblado1>" 
   
 ## <a name="see-also"></a>Vea también  
  [/link (Visual Basic)](../../../visual-basic/reference/command-line-compiler/link.md)  
- [Programar con ensamblados de interoperabilidad primarios](http://msdn.microsoft.com/en-us/306fa1d6-0703-4004-9e93-d0a57f1be81e)
+ [Interoperating with Unmanaged Code](../../../framework/interop/index.md) (Interoperar con código no administrado)

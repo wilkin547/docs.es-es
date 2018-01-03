@@ -19,11 +19,12 @@ caps.latest.revision: "7"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 2c26b3b538517c216aa31b2cfa0c6174a9b76ab1
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 7bf7bed76503f9ee0919826d39fe3df502a55511
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="com-interop-sample-com-client-and-net-server"></a>Ejemplo de interoperabilidad COM: cliente COM y servidor .NET
 En este ejemplo se muestra la interoperación de un [cliente COM](#cpconcominteropsamplecomclientnetserveranchor1) y un [servidor .NET](#cpconcominteropsamplecomclientnetserveranchor2) que realiza cálculos de hipotecas. En este ejemplo, el cliente crea y llama a una instancia de la clase administrada `Loan`, pasa cuatro argumentos (uno de ellos igual a cero) a la instancia y muestra los cálculos. A lo largo de esta sección aparecen ejemplos de código de este ejemplo.  

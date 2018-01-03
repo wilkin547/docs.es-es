@@ -35,11 +35,11 @@ ms.assetid: a4497077-0f46-4ede-a27f-9e8670df52b9
 caps.latest.revision: "62"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 667ab7ceb54e1f339fd645883ca2686c0cbb72b0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 52e9210f9e715b6055e6ed199ef1aa4b919c6dd6
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="function-statement-visual-basic"></a>Function (Instrucción, Visual Basic)
 Declara el nombre, parámetros y código que definen un `Function` procedimiento.  
@@ -113,7 +113,7 @@ End Function
   
 -   `name`  
   
-     Obligatorio. Nombre del procedimiento. Vea [nombres de elementos declarados](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).  
+     Requerido. Nombre del procedimiento. Vea [nombres de elementos declarados](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).  
   
 -   `typeparamlist`  
   
@@ -143,8 +143,8 @@ End Function
   
     |Parte|Descripción|  
     |---|---|  
-    |`interface`|Obligatorio. Nombre de una interfaz implementada por este procedimiento contenedora de clase o estructura.|  
-    |`definedname`|Obligatorio. Nombre por el que se define el procedimiento en `interface`.|  
+    |`interface`|Requerido. Nombre de una interfaz implementada por este procedimiento contenedora de clase o estructura.|  
+    |`definedname`|Requerido. Nombre por el que se define el procedimiento en `interface`.|  
   
 -   `Handles`  
   
@@ -162,8 +162,8 @@ End Function
   
     |Parte|Descripción|  
     |---|---|  
-    |`eventvariable`|Obligatorio. Variable de objeto declarada con el tipo de datos de la clase o estructura que genera el evento.|  
-    |`event`|Obligatorio. Nombre del evento que controla este procedimiento.|  
+    |`eventvariable`|Requerido. Variable de objeto declarada con el tipo de datos de la clase o estructura que genera el evento.|  
+    |`event`|Requerido. Nombre del evento que controla este procedimiento.|  
   
 -   `statements`  
   
@@ -239,7 +239,7 @@ End Function
   
  Puede ser el tipo de valor devuelto de una función de iterador <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>, <xref:System.Collections.IEnumerator>, o <xref:System.Collections.Generic.IEnumerator%601>.  
   
- Para más información, vea [Iteradores](http://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7).  
+ Para obtener más información, consulta [Iteradores](../../programming-guide/concepts/iterators.md).  
   
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se usa el `Function` instrucción para declarar el nombre, parámetros y código que forman el cuerpo de un `Function` procedimiento. El `ParamArray` modificador permite que la función aceptar un número variable de argumentos.  

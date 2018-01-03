@@ -12,11 +12,12 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6512fa09bf83b03b1a294caffdfbbdf778ee0bb6
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: ffda721459ef81d148d55359362fe1aeaf9e699e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="managing-concurrency-with-dependenttransaction"></a>Administrar la simultaneidad con DependentTransaction
 Se crea un objeto <xref:System.Transactions.Transaction> utilizando el método <xref:System.Transactions.Transaction.DependentClone%2A>. Su solo propósito es garantizar que la transacción no pueda confirmar mientras algunas otras partes de código (por ejemplo, un subproceso de trabajo) todavía están realizando el trabajo en la transacción. Cuando finalmente se completa el proceso de la transacción clonada y está preparada para confirmarse, se puede notificar al creador de la transacción con el método <xref:System.Transactions.DependentTransaction.Complete%2A>. Así se puede conservar la coherencia y exactitud de los datos.  

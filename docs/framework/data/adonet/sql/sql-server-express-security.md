@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 2052656a524eafd7b9a137ac7d5006aba53fc075
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 77658b1c4b40090b8e532f1a0566ecb927328d65
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sql-server-express-security"></a>Seguridad de SQL Server Express
 Microsoft SQL Server Express Edition (SQL Server Express) se basa en Microsoft SQL Server y es compatible con la mayoría de las características del motor de base de datos. Está diseñado de manera que las características que no sean esenciales y la conectividad de red están desactivadas de manera predeterminada. Con ello se reduce la superficie expuesta a los ataques de usuarios malintencionados.  
@@ -45,9 +46,9 @@ Microsoft SQL Server Express Edition (SQL Server Express) se basa en Microsoft S
 |[Conectarse a SQL Server Express](http://msdn.microsoft.com/library/ms165679.aspx) en libros en pantalla de SQL Server|Describe cómo usar SQL Server Express Edition en una red.|  
 |[Libros en pantalla de Microsoft SQL Server 2005 Express Edition](http://msdn.microsoft.com/library/ms165706.aspx)|Documentación completa sobre SQL Server Express 2005 Express Edition.|  
 |[Instancias de usuario para usuarios no administradores](http://msdn.microsoft.com/library/ms143684.aspx) en libros en pantalla de SQL Server|Describe cómo crear e implementar instancias de usuario.|  
-|[Instancias de SQL Server Express de usuario](../../../../../docs/framework/data/adonet/sql/sql-server-express-user-instances.md)|Describe las capacidades de instancia de usuario en una aplicación de ADO.NET. Proporciona información sobre cómo habilitar una instancia de usuario, cómo conectar a una instancia de usuario utilizando <xref:System.Data.SqlClient.SqlConnection>, ciclo de vida y casos de instancia de usuario.|  
+|[Instancias de usuario de SQL Server Express](../../../../../docs/framework/data/adonet/sql/sql-server-express-user-instances.md)|Describe las capacidades de instancia de usuario en una aplicación de ADO.NET. Proporciona información sobre cómo habilitar una instancia de usuario, cómo conectar a una instancia de usuario utilizando <xref:System.Data.SqlClient.SqlConnection>, ciclo de vida y casos de instancia de usuario.|  
   
 ## <a name="see-also"></a>Vea también  
  [Seguridad de SQL Server](../../../../../docs/framework/data/adonet/sql/sql-server-security.md)  
- [Instancias de SQL Server Express de usuario](../../../../../docs/framework/data/adonet/sql/sql-server-express-user-instances.md)  
+ [Instancias de usuario de SQL Server Express](../../../../../docs/framework/data/adonet/sql/sql-server-express-user-instances.md)  
  [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](http://go.microsoft.com/fwlink/?LinkId=217917)
