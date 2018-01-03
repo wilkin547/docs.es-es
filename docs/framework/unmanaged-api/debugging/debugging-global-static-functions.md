@@ -17,11 +17,12 @@ caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: ad5d3ef689a251ea4b154afc5d1bfb387388ddb3
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: a7fde0941959619f4832019806401be0ffddb81e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="debugging-global-static-functions"></a>Funciones estáticas globales para la depuración
 Esta sección describe las funciones estáticas globales no administradas que utiliza la API de depuración.  
@@ -30,19 +31,19 @@ Esta sección describe las funciones estáticas globales no administradas que ut
  [_EFN_GetManagedExcepStack (función)](../../../../docs/framework/unmanaged-api/debugging/efn-getmanagedexcepstack-function.md)  
  Dada una dirección de objeto de excepción administrado, devuelve una versión de cadena del seguimiento de pila que contiene.  
   
- [_EFN_GetManagedObjectFieldInfo (función)](../../../../docs/framework/unmanaged-api/debugging/efn-getmanagedobjectfieldinfo-function.md)  
+ [_EFN_GetManagedObjectFieldInfo (Función)](../../../../docs/framework/unmanaged-api/debugging/efn-getmanagedobjectfieldinfo-function.md)  
  Obtiene el desplazamiento desde el inicio de un objeto hasta un campo y el valor del campo, a partir del puntero de objeto y nombre de campo especificados.  
   
- [_EFN_GetManagedObjectName (función)](../../../../docs/framework/unmanaged-api/debugging/efn-getmanagedobjectname-function.md)  
+ [_EFN_GetManagedObjectName (Función)](../../../../docs/framework/unmanaged-api/debugging/efn-getmanagedobjectname-function.md)  
  Obtiene el nombre de un tipo mediante el puntero de objeto administrado proporcionado.  
   
- [_EFN_StackTrace (función)](../../../../docs/framework/unmanaged-api/debugging/efn-stacktrace-function.md)  
+ [_EFN_StackTrace (Función)](../../../../docs/framework/unmanaged-api/debugging/efn-stacktrace-function.md)  
  Proporciona una representación de texto de un seguimiento de pila administrado y una matriz de registros `CONTEXT`, uno por cada transición entre código no administrado y código administrado.  
   
- [CLRDataCreateInstance (función)](../../../../docs/framework/unmanaged-api/debugging/clrdatacreateinstance-function.md)  
+ [CLRDataCreateInstance (Función)](../../../../docs/framework/unmanaged-api/debugging/clrdatacreateinstance-function.md)  
  Los servicios de acceso a datos de Common Language Runtime (CLR) llaman a esta función para crear el objeto de interfaz especificado para el proceso de destino especificado.  
   
- [La función Pfn_clrdatacreateinstance](../../../../docs/framework/unmanaged-api/debugging/pfn-clrdatacreateinstance-function-pointer.md)  
+ [PFN_CLRDataCreateInstance (puntero de función)](../../../../docs/framework/unmanaged-api/debugging/pfn-clrdatacreateinstance-function-pointer.md)  
  Señala una función a la que llaman los servicios de acceso a datos de CLR para crear el objeto de interfaz especificado para el proceso de destino especificado.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  

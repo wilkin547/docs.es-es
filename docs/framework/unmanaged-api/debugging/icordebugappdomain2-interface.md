@@ -19,11 +19,12 @@ caps.latest.revision: "14"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: ebd1e504cbf2f74ad82e7fea6b6c3f355a1bda34
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: c811107fcf32696aee17810af06ac0b2ddc9102d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugappdomain2-interface1"></a>ICorDebugAppDomain2 Interfaz1
 Proporciona métodos para trabajar con matrices, punteros, punteros a función y tipos de referencia. Esta interfaz es una extensión de ICorDebugAppDomain (interfaz).  

@@ -19,11 +19,12 @@ caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 9c4f96f084a96ccdc9857a64217284b485aa73a0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 5053ea14ac7a8af33319bbbb289db01dbbc86169
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugclass2-interface1"></a>ICorDebugClass2 Interfaz1
 Representa una clase genérica o una clase con un parámetro de método de tipo <xref:System.Type>. Esta interfaz extiende [ICorDebugClass](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-interface.md).  
@@ -50,5 +51,5 @@ Representa una clase genérica o una clase con un parámetro de método de tipo 
  **Versiones de .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también  
- [ICorDebugClass Interfaz1](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-interface.md)  
+ [ICorDebugClass (interfaz1)](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-interface.md)  
  [Interfaces de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
