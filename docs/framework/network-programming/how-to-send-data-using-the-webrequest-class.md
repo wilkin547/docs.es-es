@@ -18,11 +18,12 @@ caps.latest.revision: "12"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 2102fce150f512a49093eb2b214258ac35e276e5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b4cc524b3b3c1dbe42f3fe3926ed44c1e917e871
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-send-data-using-the-webrequest-class"></a>Cómo enviar datos mediante la clase WebRequest
 En el procedimiento siguiente se describen los pasos que se llevan a cabo para enviar datos a un servidor. Este procedimiento se suele usar para publicar datos en una página web.  
@@ -265,8 +266,8 @@ End Namespace
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Crear solicitudes de Internet](../../../docs/framework/network-programming/creating-internet-requests.md)  
- [Al utilizar secuencias en la red](../../../docs/framework/network-programming/using-streams-on-the-network.md)  
+ [Creación de solicitudes de Internet](../../../docs/framework/network-programming/creating-internet-requests.md)  
+ [Uso de secuencias en la red](../../../docs/framework/network-programming/using-streams-on-the-network.md)  
  [Acceso a Internet a través de un proxy](../../../docs/framework/network-programming/accessing-the-internet-through-a-proxy.md)  
  [Solicitud de datos](../../../docs/framework/network-programming/requesting-data.md)  
  [Cómo solicitar datos mediante la clase WebRequest](../../../docs/framework/network-programming/how-to-request-data-using-the-webrequest-class.md)

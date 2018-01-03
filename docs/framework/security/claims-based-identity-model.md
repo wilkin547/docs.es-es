@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 7219e982f755542a35a33dddf74ee24f4b67e8e6
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: c205aec714d06b5d2aaf2806867fe51ef508385e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="claims-based-identity-model"></a>Modelo de identidad basado en notificaciones
 Al compilar aplicaciones para notificaciones, la identidad del usuario se representa en la aplicación como un conjunto de notificaciones. Una notificación podría ser el nombre del usuario y otra, una dirección de correo electrónico. La idea es que se configure un sistema de identidad externo para proporcionar a la aplicación la información que necesita sobre el usuario con cada solicitud realizada, junto con la garantía criptográfica de que los datos de identidad recibidos proceden de una fuente de confianza.  
@@ -44,7 +45,7 @@ Al compilar aplicaciones para notificaciones, la identidad del usuario se repres
 ## <a name="introduction-to-claims-based-identity"></a>Introducción a la identidad basada en notificaciones  
  La terminología y los conceptos siguientes pueden ayudar a entender esta nueva arquitectura de identidad.  
   
-### <a name="identity"></a>Identidad  
+### <a name="identity"></a>identidad  
  En las descripciones del modelo de programación de Windows Identity Foundation (WIF), se usa el término "identidad" para representar un conjunto de atributos que describen a un usuario o a alguna otra entidad de un sistema que se quiere proteger.  
   
 ### <a name="claim"></a>Notificación  
@@ -67,7 +68,7 @@ Al compilar aplicaciones para notificaciones, la identidad del usuario se repres
  Cuando se compila una aplicación basada en las notificaciones, se está compilando una aplicación de usuario de confianza (RP). Entre los sinónimos de RP se incluyen "aplicación para notificaciones" y "aplicación basada en notificaciones". Tanto las aplicaciones web como los servicios Web pueden ser de este tipo. Una aplicación de usuario de confianza usa los tokens emitidos por un STS y extrae las notificaciones de los tokens para usarlas en tareas relacionadas con la identidad. WIF ofrece funcionalidades para ayudar a compilar aplicaciones de usuario de confianza.  
   
 ### <a name="standards"></a>Estándares  
- Para que haya interoperabilidad, en el escenario anterior se usan varios estándares WS-*. La directiva se recupera usando WS-MetadataExchange, mientras que la propia directiva se estructura según la especificación WS-Policy. El STS expone los extremos que implementan la especificación WS-Trust, que describe cómo solicitar y recibir tokens de seguridad. En la actualidad, la mayoría de los STS emiten tokens con lenguaje de marcado de aserción de seguridad (SAML) como formato. El lenguaje SAML es un vocabulario XML reconocido del sector que se puede usar para representar las notificaciones de forma interoperable. Asimismo, en una situación multiplataforma, este permite comunicarse con un STS o una plataforma completamente distinta y lograr un inicio de sesión único en todas las aplicaciones, independientemente de la plataforma.  
+ Para que haya interoperabilidad, en el escenario anterior se usan varios estándares WS-*. La directiva se recupera usando WS-MetadataExchange, mientras que la propia directiva se estructura según la especificación WS-Policy. El STS expone los puntos de conexión que implementan la especificación WS-Trust, que describe cómo solicitar y recibir tokens de seguridad. En la actualidad, la mayoría de los STS emiten tokens con lenguaje de marcado de aserción de seguridad (SAML) como formato. El lenguaje SAML es un vocabulario XML reconocido del sector que se puede usar para representar las notificaciones de forma interoperable. Asimismo, en una situación multiplataforma, este permite comunicarse con un STS o una plataforma completamente distinta y lograr un inicio de sesión único en todas las aplicaciones, independientemente de la plataforma.  
   
 ### <a name="browser-based-applications"></a>Aplicaciones basadas en el explorador  
  Los clientes inteligentes no son los únicos que pueden usar el modelo de identidad basado en notificaciones. Las aplicaciones basadas en el explorador (también conocidas como clientes pasivos) también pueden usarlo. En el escenario siguiente se describe su funcionamiento.  

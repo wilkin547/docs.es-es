@@ -14,11 +14,12 @@ caps.latest.revision: "7"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 9e3ff6c4ec8febda93136c5ac88223b5baf80124
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a84fdb104296cf15b5f0d2d04f4ddd7ea1419643
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="etw-events-in-task-parallel-library-and-plinq"></a>Eventos ETW en Task Parallel Library y PLINQ
 Tanto la biblioteca TPL como PLINQ generan eventos ETW (Seguimiento de eventos de Windows) que puede usar para generar perfiles y solucionar problemas de aplicaciones con herramientas como el Analizador de rendimiento de Windows. En cambio, en la mayoría de los escenarios, la mejor forma de generar perfiles del código de aplicación paralelo es usar el [Visualizador de simultaneidad](/visualstudio/profiling/concurrency-visualizer) en [!INCLUDE[vsUltShort](../../../includes/vsultshort-md.md)].  
@@ -37,7 +38,7 @@ Tanto la biblioteca TPL como PLINQ generan eventos ETW (Seguimiento de eventos d
   
 #### <a name="user-data"></a>Datos del usuario  
   
-|**Nombre**|**ype**|**Descripción**|  
+|**Name**|**Type**|**Descripción**|  
 |--------------|--------------|---------------------|  
 |OriginatingTaskSchedulerID|<xref:System.Int32?displayProperty=nameWithType>|El identificador del objeto TaskScheduler que ha iniciado el bucle.|  
 |OriginatingTaskID|<xref:System.Int32?displayProperty=nameWithType>|El identificador de la tarea que ha iniciado el bucle.|  
@@ -53,7 +54,7 @@ Tanto la biblioteca TPL como PLINQ generan eventos ETW (Seguimiento de eventos d
   
 #### <a name="user-data"></a>Datos del usuario  
   
-|**Nombre**|**ype**|**Descripción**|  
+|**Name**|**Type**|**Descripción**|  
 |--------------|--------------|---------------------|  
 |OriginatingTaskSchedulerID|<xref:System.Int32?displayProperty=nameWithType>|El identificador del objeto TaskScheduler que ha iniciado el bucle.|  
 |OriginatingTaskID|<xref:System.Int32?displayProperty=nameWithType>|El identificador de la tarea que ha iniciado el bucle.|  
@@ -67,7 +68,7 @@ Tanto la biblioteca TPL como PLINQ generan eventos ETW (Seguimiento de eventos d
   
 #### <a name="user-data"></a>Datos del usuario  
   
-|**Nombre**|**ype**|**Descripción**|  
+|**Name**|**Type**|**Descripción**|  
 |--------------|--------------|---------------------|  
 |OriginatingTaskSchedulerID|<xref:System.Int32?displayProperty=nameWithType>|El identificador del objeto TaskScheduler que ha iniciado el bucle.|  
 |OriginatingTaskID|<xref:System.Int32?displayProperty=nameWithType>|El identificador de la tarea que ha iniciado el bucle.|  
@@ -83,7 +84,7 @@ Tanto la biblioteca TPL como PLINQ generan eventos ETW (Seguimiento de eventos d
   
 #### <a name="user-data"></a>Datos del usuario  
   
-|**Nombre**|**ype**|**Descripción**|  
+|**Name**|**Type**|**Descripción**|  
 |--------------|--------------|---------------------|  
 |OriginatingTaskSchedulerID|<xref:System.Int32?displayProperty=nameWithType>|El identificador del objeto TaskScheduler que ha iniciado el bucle.|  
 |OriginatingTaskID|<xref:System.Int32?displayProperty=nameWithType>|El identificador de la tarea que ha iniciado el bucle.|  
@@ -103,7 +104,7 @@ Tanto la biblioteca TPL como PLINQ generan eventos ETW (Seguimiento de eventos d
   
 #### <a name="user-data"></a>Datos del usuario  
   
-|**Nombre**|**ype**|**Descripción**|  
+|**Name**|**Type**|**Descripción**|  
 |--------------|--------------|---------------------|  
 |OriginatingTaskSchedulerID|<xref:System.Int32?displayProperty=nameWithType>|El identificador del objeto TaskScheduler que ha iniciado el bucle.|  
 |OriginatingTaskID|<xref:System.Int32?displayProperty=nameWithType>|El identificador de la tarea que ha iniciado el bucle.|  
@@ -116,7 +117,7 @@ Tanto la biblioteca TPL como PLINQ generan eventos ETW (Seguimiento de eventos d
   
 #### <a name="user-data"></a>Datos del usuario  
   
-|**Nombre**|**ype**|**Descripción**|  
+|**Name**|**Type**|**Descripción**|  
 |--------------|--------------|---------------------|  
 |OriginatingTaskSchedulerID|<xref:System.Int32?displayProperty=nameWithType>|El identificador del objeto TaskScheduler que ha iniciado el bucle.|  
 |OriginatingTaskID|<xref:System.Int32?displayProperty=nameWithType>|El identificador de la tarea que ha iniciado el bucle.|  

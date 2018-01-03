@@ -15,11 +15,12 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 98ac35edc458e370f2b7b9b116d2872d0db2da71
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 270b3755901e3c5bc95352b5f3d07a338e73a90e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="enlisting-resources-as-participants-in-a-transaction"></a>Dar de alta los recursos como participantes en una transacción
 Un administrador de recursos administra cada recurso participante, cuyas acciones coordina un administrador de transacciones. La coordinación se hace a través de las notificaciones dadas a los suscriptores que han dado de alta una transacción a través del administrador de transacciones.  
@@ -58,5 +59,5 @@ Un administrador de recursos administra cada recurso participante, cuyas accione
  La clase <xref:System.Transactions.Transaction> también proporciona el método <xref:System.Transactions.Transaction.EnlistPromotableSinglePhase%2A> para dar de alta una Inscripción de fase única promocional (PSPE). Esto permite a un administrador de recursos duradero (RM) hospedar y "poseer" una transacción que puede realizar una escalada para que sea administrada por MSDTC si es necesario. Para obtener más información sobre esto, consulte [optimización con la única fase de confirmación y notificación de la fase única promocionable](../../../../docs/framework/data/transactions/optimization-spc-and-promotable-spn.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Optimización mediante la notificación de la fase única promocionable y confirmación de fase única](../../../../docs/framework/data/transactions/optimization-spc-and-promotable-spn.md)  
- [Confirmar una transacción en una fase y en varias fases](../../../../docs/framework/data/transactions/committing-a-transaction-in-single-phase-and-multi-phase.md)
+ [Optimización mediante el uso de la confirmación de fase única y de la inscripción de fase única promovible](../../../../docs/framework/data/transactions/optimization-spc-and-promotable-spn.md)  
+ [Confirmación de una transacción en fase única y múltiple](../../../../docs/framework/data/transactions/committing-a-transaction-in-single-phase-and-multi-phase.md)

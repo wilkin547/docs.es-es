@@ -17,11 +17,12 @@ caps.latest.revision: "61"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: e521f07048e37533e052dc8a43fb2c522750f92a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 658c5aca3dc8d70400cdd26d9e0af1e253e175c8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ui-automation-control-types"></a>Tipos de control de UI Automation
 **Tenga en cuenta** esta documentación está destinada a desarrolladores de .NET Framework que quieran usar los recursos administrados [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] clases definidas en el <xref:System.Windows.Automation> espacio de nombres. Para ver la información más reciente acerca de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: automatización de la interfaz de usuario](http://go.microsoft.com/fwlink/?LinkID=156746).  
@@ -29,45 +30,45 @@ ms.lasthandoff: 10/18/2017
  Esta sección contiene información sobre la compatibilidad con tipos de control en [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)].  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Información general de tipos del Control de automatización de interfaz de usuario](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)  
- [Compatibilidad de UI Automation para el tipo de Control Button](../../../docs/framework/ui-automation/ui-automation-support-for-the-button-control-type.md)  
- [Compatibilidad de UI Automation para el tipo de Control Calendar](../../../docs/framework/ui-automation/ui-automation-support-for-the-calendar-control-type.md)  
- [Compatibilidad de UI Automation para el tipo de Control CheckBox](../../../docs/framework/ui-automation/ui-automation-support-for-the-checkbox-control-type.md)  
- [Compatibilidad de UI Automation para el tipo de Control ComboBox](../../../docs/framework/ui-automation/ui-automation-support-for-the-combobox-control-type.md)  
- [Compatibilidad de UI Automation para el tipo de Control DataGrid](../../../docs/framework/ui-automation/ui-automation-support-for-the-datagrid-control-type.md)  
- [Compatibilidad de UI Automation para el tipo de Control DataItem](../../../docs/framework/ui-automation/ui-automation-support-for-the-dataitem-control-type.md)  
- [Compatibilidad de UI Automation para el tipo de Control Document](../../../docs/framework/ui-automation/ui-automation-support-for-the-document-control-type.md)  
- [Compatibilidad de UI Automation para el tipo de Control Edit.](../../../docs/framework/ui-automation/ui-automation-support-for-the-edit-control-type.md)  
- [Compatibilidad de UI Automation para el tipo de Control Group](../../../docs/framework/ui-automation/ui-automation-support-for-the-group-control-type.md)  
- [Compatibilidad de UI Automation para el tipo de Control Header](../../../docs/framework/ui-automation/ui-automation-support-for-the-header-control-type.md)  
- [Compatibilidad de UI Automation para el tipo de Control HeaderItem](../../../docs/framework/ui-automation/ui-automation-support-for-the-headeritem-control-type.md)  
- [Compatibilidad de UI Automation para el tipo de Control Hyperlink](../../../docs/framework/ui-automation/ui-automation-support-for-the-hyperlink-control-type.md)  
- [Compatibilidad de UI Automation para el tipo de Control Image](../../../docs/framework/ui-automation/ui-automation-support-for-the-image-control-type.md)  
- [Compatibilidad de UI Automation para el tipo de Control List](../../../docs/framework/ui-automation/ui-automation-support-for-the-list-control-type.md)  
- [Compatibilidad de UI Automation para el tipo de Control ListItem](../../../docs/framework/ui-automation/ui-automation-support-for-the-listitem-control-type.md)  
- [Compatibilidad de UI Automation para el tipo de Control Menu](../../../docs/framework/ui-automation/ui-automation-support-for-the-menu-control-type.md)  
- [Compatibilidad de UI Automation para el tipo de Control MenuBar](../../../docs/framework/ui-automation/ui-automation-support-for-the-menubar-control-type.md)  
- [Compatibilidad de UI Automation para el tipo de Control MenuItem](../../../docs/framework/ui-automation/ui-automation-support-for-the-menuitem-control-type.md)  
- [Compatibilidad de UI Automation para el tipo de Control Pane](../../../docs/framework/ui-automation/ui-automation-support-for-the-pane-control-type.md)  
- [Compatibilidad de UI Automation para el tipo de Control ProgressBar](../../../docs/framework/ui-automation/ui-automation-support-for-the-progressbar-control-type.md)  
- [Compatibilidad de UI Automation para el tipo de Control RadioButton](../../../docs/framework/ui-automation/ui-automation-support-for-the-radiobutton-control-type.md)  
- [Compatibilidad de UI Automation para el tipo de Control ScrollBar](../../../docs/framework/ui-automation/ui-automation-support-for-the-scrollbar-control-type.md)  
- [Compatibilidad de UI Automation para el tipo de Control Separator](../../../docs/framework/ui-automation/ui-automation-support-for-the-separator-control-type.md)  
- [Compatibilidad de UI Automation para el tipo de Control Slider](../../../docs/framework/ui-automation/ui-automation-support-for-the-slider-control-type.md)  
- [Compatibilidad de UI Automation para el tipo de Control Spinner](../../../docs/framework/ui-automation/ui-automation-support-for-the-spinner-control-type.md)  
- [Compatibilidad de UI Automation para el tipo de Control SplitButton](../../../docs/framework/ui-automation/ui-automation-support-for-the-splitbutton-control-type.md)  
- [Compatibilidad de UI Automation para el tipo de Control StatusBar](../../../docs/framework/ui-automation/ui-automation-support-for-the-statusbar-control-type.md)  
- [Compatibilidad de UI Automation para el tipo de Control Tab](../../../docs/framework/ui-automation/ui-automation-support-for-the-tab-control-type.md)  
- [Compatibilidad de UI Automation para el tipo de Control TabItem](../../../docs/framework/ui-automation/ui-automation-support-for-the-tabitem-control-type.md)  
- [Compatibilidad de UI Automation para el tipo de Control Table](../../../docs/framework/ui-automation/ui-automation-support-for-the-table-control-type.md)  
- [Compatibilidad de UI Automation para el tipo de Control Text](../../../docs/framework/ui-automation/ui-automation-support-for-the-text-control-type.md)  
- [Compatibilidad de UI Automation para el tipo de Control de posición](../../../docs/framework/ui-automation/ui-automation-support-for-the-thumb-control-type.md)  
- [Compatibilidad de UI Automation para el tipo de Control TitleBar](../../../docs/framework/ui-automation/ui-automation-support-for-the-titlebar-control-type.md)  
- [Compatibilidad de UI Automation para el tipo de Control de barra de herramientas](../../../docs/framework/ui-automation/ui-automation-support-for-the-toolbar-control-type.md)  
- [Compatibilidad de UI Automation para el tipo de Control ToolTip](../../../docs/framework/ui-automation/ui-automation-support-for-the-tooltip-control-type.md)  
- [Compatibilidad de UI Automation para el tipo de Control Tree](../../../docs/framework/ui-automation/ui-automation-support-for-the-tree-control-type.md)  
- [Compatibilidad de UI Automation para el tipo de Control TreeItem](../../../docs/framework/ui-automation/ui-automation-support-for-the-treeitem-control-type.md)  
- [Compatibilidad de UI Automation para el tipo de Control Window](../../../docs/framework/ui-automation/ui-automation-support-for-the-window-control-type.md)  
+ [Información general sobre tipos de control de Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)  
+ [Compatibilidad de Automatización de la interfaz de usuario para el tipo de control de botón](../../../docs/framework/ui-automation/ui-automation-support-for-the-button-control-type.md)  
+ [Compatibilidad de Automatización de la interfaz de usuario para el tipo de control Calendar](../../../docs/framework/ui-automation/ui-automation-support-for-the-calendar-control-type.md)  
+ [Compatibilidad de Automatización de la interfaz de usuario para el tipo de control CheckBox](../../../docs/framework/ui-automation/ui-automation-support-for-the-checkbox-control-type.md)  
+ [Compatibilidad de Automatización de la interfaz de usuario para el tipo de control ComboBox](../../../docs/framework/ui-automation/ui-automation-support-for-the-combobox-control-type.md)  
+ [Compatibilidad de Automatización de la interfaz de usuario para el tipo de control DataGrid](../../../docs/framework/ui-automation/ui-automation-support-for-the-datagrid-control-type.md)  
+ [Compatibilidad de Automatización de la interfaz de usuario para el tipo de control DataItem](../../../docs/framework/ui-automation/ui-automation-support-for-the-dataitem-control-type.md)  
+ [Compatibilidad de Automatización de la interfaz de usuario para el tipo de control Document](../../../docs/framework/ui-automation/ui-automation-support-for-the-document-control-type.md)  
+ [Compatibilidad de Automatización de la interfaz de usuario para el tipo de control Edit](../../../docs/framework/ui-automation/ui-automation-support-for-the-edit-control-type.md)  
+ [Compatibilidad de Automatización de la interfaz de usuario para el tipo de control Group](../../../docs/framework/ui-automation/ui-automation-support-for-the-group-control-type.md)  
+ [Compatibilidad de Automatización de la interfaz de usuario para el tipo de control Header](../../../docs/framework/ui-automation/ui-automation-support-for-the-header-control-type.md)  
+ [Compatibilidad de Automatización de la interfaz de usuario para el tipo de control HeaderItem](../../../docs/framework/ui-automation/ui-automation-support-for-the-headeritem-control-type.md)  
+ [Compatibilidad de Automatización de la interfaz de usuario para el tipo de control Hyperlink](../../../docs/framework/ui-automation/ui-automation-support-for-the-hyperlink-control-type.md)  
+ [Compatibilidad de Automatización de la interfaz de usuario para el tipo de control Image](../../../docs/framework/ui-automation/ui-automation-support-for-the-image-control-type.md)  
+ [Compatibilidad de Automatización de la interfaz de usuario para el tipo de control List](../../../docs/framework/ui-automation/ui-automation-support-for-the-list-control-type.md)  
+ [Compatibilidad de Automatización de la interfaz de usuario para el tipo de control ListItem](../../../docs/framework/ui-automation/ui-automation-support-for-the-listitem-control-type.md)  
+ [Compatibilidad de Automatización de la interfaz de usuario para el tipo de control Menu](../../../docs/framework/ui-automation/ui-automation-support-for-the-menu-control-type.md)  
+ [Compatibilidad de Automatización de la interfaz de usuario para el tipo de control MenuBar](../../../docs/framework/ui-automation/ui-automation-support-for-the-menubar-control-type.md)  
+ [Compatibilidad de Automatización de la interfaz de usuario para el tipo de control MenuItem](../../../docs/framework/ui-automation/ui-automation-support-for-the-menuitem-control-type.md)  
+ [Compatibilidad de Automatización de la interfaz de usuario para el tipo de control Pane](../../../docs/framework/ui-automation/ui-automation-support-for-the-pane-control-type.md)  
+ [Compatibilidad de Automatización de la interfaz de usuario para el tipo de control ProgressBar](../../../docs/framework/ui-automation/ui-automation-support-for-the-progressbar-control-type.md)  
+ [Compatibilidad de Automatización de la interfaz de usuario para el tipo de control RadioButton](../../../docs/framework/ui-automation/ui-automation-support-for-the-radiobutton-control-type.md)  
+ [Compatibilidad de Automatización de la interfaz de usuario para el tipo de control ScrollBar](../../../docs/framework/ui-automation/ui-automation-support-for-the-scrollbar-control-type.md)  
+ [Compatibilidad de Automatización de la interfaz de usuario para el tipo de control Separator](../../../docs/framework/ui-automation/ui-automation-support-for-the-separator-control-type.md)  
+ [Compatibilidad de Automatización de la interfaz de usuario para el tipo de control Slider](../../../docs/framework/ui-automation/ui-automation-support-for-the-slider-control-type.md)  
+ [Compatibilidad de Automatización de la interfaz de usuario para el tipo de control Spinner](../../../docs/framework/ui-automation/ui-automation-support-for-the-spinner-control-type.md)  
+ [Compatibilidad de Automatización de la interfaz de usuario para el tipo de control SplitButton](../../../docs/framework/ui-automation/ui-automation-support-for-the-splitbutton-control-type.md)  
+ [Compatibilidad de Automatización de la interfaz de usuario para el tipo de control StatusBar](../../../docs/framework/ui-automation/ui-automation-support-for-the-statusbar-control-type.md)  
+ [Compatibilidad de Automatización de la interfaz de usuario para el tipo de control Tab](../../../docs/framework/ui-automation/ui-automation-support-for-the-tab-control-type.md)  
+ [Compatibilidad de Automatización de la interfaz de usuario para el tipo de control TabItem](../../../docs/framework/ui-automation/ui-automation-support-for-the-tabitem-control-type.md)  
+ [Compatibilidad de Automatización de la interfaz de usuario para el tipo de control Table](../../../docs/framework/ui-automation/ui-automation-support-for-the-table-control-type.md)  
+ [Compatibilidad de Automatización de la interfaz de usuario para el tipo de control Text](../../../docs/framework/ui-automation/ui-automation-support-for-the-text-control-type.md)  
+ [Compatibilidad de Automatización de la interfaz de usuario para el tipo de control de posición](../../../docs/framework/ui-automation/ui-automation-support-for-the-thumb-control-type.md)  
+ [Compatibilidad de Automatización de la interfaz de usuario para el tipo de control TitleBar](../../../docs/framework/ui-automation/ui-automation-support-for-the-titlebar-control-type.md)  
+ [Compatibilidad de Automatización de la interfaz de usuario para el tipo de control ToolBar](../../../docs/framework/ui-automation/ui-automation-support-for-the-toolbar-control-type.md)  
+ [Compatibilidad de Automatización de la interfaz de usuario para el tipo de control ToolTip](../../../docs/framework/ui-automation/ui-automation-support-for-the-tooltip-control-type.md)  
+ [Compatibilidad de Automatización de la interfaz de usuario para el tipo de control Tree](../../../docs/framework/ui-automation/ui-automation-support-for-the-tree-control-type.md)  
+ [Compatibilidad de Automatización de la interfaz de usuario para el tipo de control TreeItem](../../../docs/framework/ui-automation/ui-automation-support-for-the-treeitem-control-type.md)  
+ [Compatibilidad de Automatización de la interfaz de usuario para el tipo de control Window](../../../docs/framework/ui-automation/ui-automation-support-for-the-window-control-type.md)  
   
 ## <a name="reference"></a>Referencia  
  <xref:System.Windows.Automation.ControlType>  

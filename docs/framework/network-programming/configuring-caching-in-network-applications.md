@@ -13,11 +13,12 @@ caps.latest.revision: "10"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 3c06c05f2d5102d1822aa11c81f2814090e10ff6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: fe70c8952451f5af8ac46549919ca164816819e5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="configuring-caching-in-network-applications"></a>Configurar el almacenamiento en caché de las aplicaciones de red
 Para configurar el almacenamiento en caché, debe especificar una directiva de caché en el nivel de aplicación o <xref:System.Net.WebRequest>. Los temas siguientes proporcionan ejemplos de código que muestran cómo configurar aplicaciones y solicitudes para usar el almacenamiento en caché.  

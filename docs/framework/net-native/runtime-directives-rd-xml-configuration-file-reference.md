@@ -13,11 +13,12 @@ caps.latest.revision: "27"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 2ecfc61c5b586dd3385890d73ded729a38fb41c2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f452a32b209c30175f95aec7a8a90e0783c10086
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="runtime-directives-rdxml-configuration-file-reference"></a>Referencia del archivo de configuración de directivas en tiempo de ejecución (rd.xml)
 Un archivo de directivas de tiempo de ejecución (.rd.xml) es un archivo de configuración XML que especifica si los elementos de programa designados están disponibles para reflexión. A continuación se muestra un ejemplo de un archivo de directivas de tiempo de ejecución:  
@@ -171,9 +172,9 @@ Un archivo de directivas de tiempo de ejecución (.rd.xml) es un archivo de conf
   
 -   `XmlSerializer`. Controla la directiva de serialización XML que usa la clase <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType>.  
   
--   `MarshalObject`. Controla la directiva de cálculo de referencias de tipos de referencia para WinRT y COM.  
+-   `MarshalObject`. Controla la directiva de serialización de tipos de referencia para WinRT y COM.  
   
--   `MarshalDelegate`. Controla la directiva de cálculo de referencias de tipos de delegado como punteros de función a código nativo.  
+-   `MarshalDelegate`. Controla la directiva de serialización de tipos de delegado como punteros de función a código nativo.  
   
 -   `MarshalStructure` . Controla la directiva de cálculo de referencias de estructuras a código nativo.  
   

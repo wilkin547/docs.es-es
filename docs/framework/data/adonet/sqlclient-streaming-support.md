@@ -13,11 +13,12 @@ caps.latest.revision: "14"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 85999a6aa15b04ffa2751d7312f71aaab1582ea3
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 99b5af9f33fa92c6e635ee0190893e377724d970
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sqlclient-streaming-support"></a>Compatibilidad de transmisión de datos de SqlClient
 Gracias a la compatibilidad con streaming entre [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] y una aplicación (novedad en [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]) se admiten datos no estructurados en el servidor (documentos, imágenes y archivos multimedia). Una base de datos de [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] puede almacenar objetos binarios grandes (BLOB), pero la recuperación de BLOB puede usar mucha memoria.  

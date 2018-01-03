@@ -12,11 +12,12 @@ caps.latest.revision: "6"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: d29321297a880ca961805687e51c7bb63f70ffbf
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d59f30e71001adee0e6e1e68be3cf9cfd1952161
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="understanding-webrequest-problems-and-exceptions"></a>Información acerca de los problemas y excepciones del elemento WebRequest
 <xref:System.Net.WebRequest> y sus clases derivadas (<xref:System.Net.HttpWebRequest>, <xref:System.Net.FtpWebRequest> y <xref:System.Net.FileWebRequest>) generan excepciones para indicar una condición anormal. A veces, la resolución de estos problemas no es obvia.  
@@ -24,7 +25,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="solutions"></a>Soluciones  
  Examine la propiedad <xref:System.Net.WebException.Status%2A> de la <xref:System.Net.WebException> para determinar el problema. En la tabla siguiente se muestran varios valores de estado y algunas posibles soluciones.  
   
-|Estado|Detalles|Solución|  
+|Estado|Detalles|Soluciones|  
 |------------|-------------|--------------|  
 |<xref:System.Net.WebExceptionStatus.SendFailure><br /><br /> O bien<br /><br /> <xref:System.Net.WebExceptionStatus.ReceiveFailure>|Hay un problema con el socket subyacente. Es posible que se haya restablecido la conexión.|Vuelva a conectarse y vuelva a enviar la solicitud.<br /><br /> Asegúrese de que tiene instalado el Service Pack más reciente.<br /><br /> Aumente el valor de la propiedad <xref:System.Net.ServicePointManager.MaxServicePointIdleTime%2A?displayProperty=nameWithType>.<br /><br /> Establezca <xref:System.Net.HttpWebRequest.KeepAlive%2A?displayProperty=nameWithType> en `false`.<br /><br /> Aumente el número de conexiones máximas con la propiedad <xref:System.Net.ServicePointManager.DefaultConnectionLimit%2A>.<br /><br /> Compruebe la configuración de proxy.<br /><br /> Si usa SSL, asegúrese de que el proceso de servidor tiene permiso para obtener acceso al almacén de certificados.<br /><br /> Si envía una gran cantidad de datos, establezca <xref:System.Net.HttpWebRequest.AllowWriteStreamBuffering%2A> en `false`.|  
 |<xref:System.Net.WebExceptionStatus.TrustFailure>|No se pudo validar el certificado de servidor.|Intente abrir el identificador URI con Internet Explorer. Resuelva todas las alertas de seguridad que muestre Internet Explorer. Si no puede resolver las alertas de seguridad, puede crear una clase de directiva de certificados que implemente <xref:System.Net.ICertificatePolicy> que devuelva `true` y luego pasarla a <xref:System.Net.ServicePointManager.CertificatePolicy%2A>.<br /><br /> Vea [http://support.microsoft.com/?id=823177](http://go.microsoft.com/fwlink/?LinkID=179653).<br /><br /> Asegúrese de que el certificado de la entidad de certificación que firmó el certificado de servidor se ha agregado a la lista de entidades de certificación de confianza de Internet Explorer.<br /><br /> Asegúrese de que el nombre de host de la dirección URL coincide con el nombre común del certificado de servidor.|  

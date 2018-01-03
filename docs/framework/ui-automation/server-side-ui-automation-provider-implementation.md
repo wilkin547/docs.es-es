@@ -17,11 +17,12 @@ caps.latest.revision: "39"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 079a778a3518e6632f429a261ee229db0b46d9b1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 03ebb5a8193d3376d40fa830f13ab9324846ba2c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="server-side-ui-automation-provider-implementation"></a>Implementación del proveedor de UI Automation en el servidor
 > [!NOTE]
@@ -180,11 +181,11 @@ ms.lasthandoff: 11/21/2017
  Para ello, el proveedor de raíz de fragmento del rebar expone un conjunto de elementos secundarios que representan a las bandas. Cada banda tiene un proveedor único que puede exponer propiedades y patrones. En su implementación de <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.HostRawElementProvider%2A>, el proveedor de banda devuelve el proveedor de ventana predeterminado para el HWND de control. Para obtenerlo, llama a <xref:System.Windows.Automation.Provider.AutomationInteropProvider.HostProviderFromHandle%2A>y pasa el identificador de ventana del control. Por último, el proveedor de raíz de fragmento del rebar implementa la interfaz de <xref:System.Windows.Automation.Provider.IRawElementProviderHwndOverride> y, en su implementación de <xref:System.Windows.Automation.Provider.IRawElementProviderHwndOverride.GetOverrideProviderForHwnd%2A> , devuelve el proveedor de banda adecuado para el control que contiene el HWND especificado.  
   
 ## <a name="see-also"></a>Vea también  
- [Información general sobre proveedores UI Automation](../../../docs/framework/ui-automation/ui-automation-providers-overview.md)  
- [Exponer un proveedor de automatización de la interfaz de usuario de servidor](../../../docs/framework/ui-automation/expose-a-server-side-ui-automation-provider.md)  
- [Devolver propiedades de un proveedor de UI Automation](../../../docs/framework/ui-automation/return-properties-from-a-ui-automation-provider.md)  
- [Provocar eventos desde un proveedor de UI Automation](../../../docs/framework/ui-automation/raise-events-from-a-ui-automation-provider.md)  
- [Habilitar la navegación en un proveedor de fragmentos UI Automation](../../../docs/framework/ui-automation/enable-navigation-in-a-ui-automation-fragment-provider.md)  
- [Patrones de Control compatibles en un proveedor de UI Automation](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)  
+ [Información general sobre proveedores de la Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/ui-automation-providers-overview.md)  
+ [Exposición de un proveedor de Automatización de la interfaz de usuario en el servidor](../../../docs/framework/ui-automation/expose-a-server-side-ui-automation-provider.md)  
+ [Devolución de propiedades de un proveedor de Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/return-properties-from-a-ui-automation-provider.md)  
+ [Provocación de eventos desde un proveedor de Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/raise-events-from-a-ui-automation-provider.md)  
+ [Habilitar la navegación en un proveedor de fragmentos de Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/enable-navigation-in-a-ui-automation-fragment-provider.md)  
+ [Patrones de control compatibles en un proveedor de Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)  
  [Ejemplo de proveedor simple](http://msdn.microsoft.com/en-us/c10a6255-e8dc-494b-a051-15111b47984a)  
  [Ejemplo de proveedor de fragmento](http://msdn.microsoft.com/en-us/778ef1bc-8610-4bc9-886e-aeff94a8a13e)

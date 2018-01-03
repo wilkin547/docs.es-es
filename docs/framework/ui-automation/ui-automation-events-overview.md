@@ -20,11 +20,12 @@ caps.latest.revision: "22"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 9634c686d23503dcb4deae171f0023055c41ce2d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 8b28d6aafc0e9680123859ee0e9a28dd71a2249c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ui-automation-events-overview"></a>Información general sobre eventos de UI Automation
 > [!NOTE]
@@ -38,7 +39,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="types-of-events"></a>Tipos de eventos  
  Existen varias categorías de eventos[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] :  
   
-|Evento|Descripción|  
+|evento|Descripción|  
 |-----------|-----------------|  
 |Cambio de propiedad|Se genera cuando se produce un cambio en un patrón de control o elemento de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] . Por ejemplo, si un cliente necesita supervisar un control de casilla de una aplicación, se puede registrar para escuchar si se produce un evento de cambio de propiedad en la propiedad <xref:System.Windows.Automation.TogglePattern.TogglePatternInformation.ToggleState%2A> . Cuando el control de casilla se activa o desactiva, el proveedor genera el evento y el cliente puede actuar según sea necesario.|  
 |Acción de elemento|Se genera cuando se produce un cambio en la [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] como resultado de la actividad del usuario final o de programación, por ejemplo, cuando se hace clic en un botón o se invoca mediante <xref:System.Windows.Automation.InvokePattern>.|  
@@ -92,6 +93,6 @@ ms.lasthandoff: 11/21/2017
  Para obtener una lista de identificadores de eventos, consulte [UI Automation Events for Clients](../../../docs/framework/ui-automation/ui-automation-events-for-clients.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Eventos de UI Automation para clientes](../../../docs/framework/ui-automation/ui-automation-events-for-clients.md)  
+ [Eventos de Automatización de la interfaz de usuario para clientes](../../../docs/framework/ui-automation/ui-automation-events-for-clients.md)  
  [Implementación del proveedor de automatización de la interfaz de usuario en el servidor](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)  
- [Suscribirse a eventos de UI Automation](../../../docs/framework/ui-automation/subscribe-to-ui-automation-events.md)
+ [Suscripción a eventos de Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/subscribe-to-ui-automation-events.md)

@@ -16,11 +16,12 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a8f20023e158b388ddd71e518ebcaa48c214252c
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: b093fce50de6a0437456f4fb0e025e3c853777e4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="object-materialization-wcf-data-services"></a>Materialización de objetos (Data Services de WCF)
 Cuando se usa el **Agregar referencia de servicio** cuadro de diálogo para consumir un [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] de la fuente en una aplicación de cliente basada en .NET Framework, se generarán clases equivalentes para cada tipo de entidad en el modelo de datos expuesto por la fuente. Para obtener más información, consulte [generar la biblioteca de cliente de servicio de datos](../../../../docs/framework/data/wcf/generating-the-data-service-client-library-wcf-data-services.md). Los datos de entidad devueltos por una consulta se materializan en una instancia de una de estas clases de servicio de datos de cliente generadas. Para obtener información sobre las opciones de combinación y resolución de identidades para los objetos, consulte [administrar el contexto de servicio de datos](../../../../docs/framework/data/wcf/managing-the-data-service-context-wcf-data-services.md).  
@@ -58,4 +59,4 @@ Cuando se usa el **Agregar referencia de servicio** cuadro de diálogo para cons
   
 ## <a name="see-also"></a>Vea también  
  [Consultar el servicio de datos](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)  
- [Proyecciones de consulta](../../../../docs/framework/data/wcf/query-projections-wcf-data-services.md)
+ [Proyecciones de consultas](../../../../docs/framework/data/wcf/query-projections-wcf-data-services.md)

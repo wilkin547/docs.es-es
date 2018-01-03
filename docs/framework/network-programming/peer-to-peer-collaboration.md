@@ -12,11 +12,12 @@ caps.latest.revision: "7"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 3928c6b3690bd03a4365d21d5fbf2f4bd2a4f457
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 607fadad19d4fe69800798583a14d7fd9082ff23
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="peer-to-peer-collaboration"></a>Colaboración de punto a punto
 La función de las redes punto a punto es permitir que los equipos PC que existen en el perímetro de Internet puedan realizar tareas informáticas que van más allá de las simplemente basadas en el cliente. Los equipos PC modernos cuentan con un procesador muy rápido, una memoria amplia y un disco duro grande, si bien ninguna de estas características se usa en su totalidad para realizar las tareas informáticas habituales, como el correo electrónico y la exploración web. Estos equipos pueden actuar fácilmente como cliente y servidor (del mismo nivel) para varios tipos de aplicaciones.  

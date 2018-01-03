@@ -25,11 +25,12 @@ caps.latest.revision: "10"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 6f96463b4f9cb7e61c403cfd77f747c8aefd99a1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 6b799f57644420653b371ac0e65b414c807008b1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="listening-with-sockets"></a>escuchas con sockets
 Los sockets de escucha o de servidor abren un puerto en la red y esperan a que un cliente se conecte a ese puerto. Aunque existen otros protocolos y familias de direcciones de red, en este ejemplo se muestra cómo crear un servicio remoto para una red TCP/IP.  
@@ -69,8 +70,8 @@ listener.Listen(100);
  El método **Listen** toma un único parámetro que especifica cuántas conexiones pendientes con el **socket** se permiten antes de que se devuelva un error de servidor ocupado al cliente que intenta conectarse. En este caso, se colocan en la cola de conexión hasta 100 clientes antes de que se devuelva una respuesta de servidor ocupado al cliente 101.  
   
 ## <a name="see-also"></a>Vea también  
- [Usar un Socket de servidor sincrónico](../../../docs/framework/network-programming/using-a-synchronous-server-socket.md)  
- [Usar un Socket de servidor asincrónicos](../../../docs/framework/network-programming/using-an-asynchronous-server-socket.md)  
- [Utilizar Sockets de cliente](../../../docs/framework/network-programming/using-client-sockets.md)  
+ [Uso de un socket de servidor sincrónico](../../../docs/framework/network-programming/using-a-synchronous-server-socket.md)  
+ [Uso de un socket de servidor asincrónico](../../../docs/framework/network-programming/using-an-asynchronous-server-socket.md)  
+ [Uso de sockets de cliente](../../../docs/framework/network-programming/using-client-sockets.md)  
  [Cómo: crear un socket](../../../docs/framework/network-programming/how-to-create-a-socket.md)  
  [Sockets](../../../docs/framework/network-programming/sockets.md)

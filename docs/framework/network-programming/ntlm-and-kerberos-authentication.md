@@ -29,11 +29,12 @@ caps.latest.revision: "9"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 36e88b163ab857180a02278828dba7dcec457736
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c1662e5b0f8afd4ef92d2893a11c25457dbce024
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ntlm-and-kerberos-authentication"></a>Autenticación de NTLM y Kerberos
 La autenticación NTLM predeterminada y la autenticación Kerberos usan las credenciales de usuario de Microsoft Windows NT asociadas a la aplicación que realiza la llamada para intentar la autenticación con el servidor. Cuando se usa la autenticación NTLM no predeterminada, la aplicación establece el tipo de autenticación en NTLM y usa un objeto <xref:System.Net.NetworkCredential> para pasar el nombre de usuario, la contraseña y el dominio al host, como se muestra en el ejemplo siguiente.  
@@ -72,5 +73,5 @@ WReq.Credentials = CredentialCache.DefaultCredentials;
 >  La autenticación NTLM no funciona a través de un servidor proxy.  
   
 ## <a name="see-also"></a>Vea también  
- [Básica y la autenticación implícita](../../../docs/framework/network-programming/basic-and-digest-authentication.md)  
- [Internet Authentication](../../../docs/framework/network-programming/internet-authentication.md) (Autenticación de Internet)
+ [Autenticación básica e implícita](../../../docs/framework/network-programming/basic-and-digest-authentication.md)  
+ [Autenticación de Internet](../../../docs/framework/network-programming/internet-authentication.md)

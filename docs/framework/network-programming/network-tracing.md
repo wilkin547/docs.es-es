@@ -28,11 +28,12 @@ caps.latest.revision: "9"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: faeb028733ef008f3862e95fde0412f51bf7d1c7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 24494ec700054f73e83e8cb8c33bd86eb265b8e1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="network-tracing-in-the-net-framework"></a>Traza de la red en .NET Framework
 El seguimiento de red de .NET Framework proporciona acceso a información sobre las invocaciones de métodos y el tráfico de red generado por una aplicación administrada. Esta característica es útil para depurar las aplicaciones en desarrollo y para analizar las aplicaciones implementadas. El resultado proporcionado por la traza de la red se puede personalizar para admitir diferentes escenarios de uso en tiempo de desarrollo y en un entorno de producción.  
@@ -47,5 +48,5 @@ El seguimiento de red de .NET Framework proporciona acceso a información sobre 
 ## <a name="see-also"></a>Vea también  
  [Habilitar el seguimiento de red](../../../docs/framework/network-programming/enabling-network-tracing.md)  
  [Cómo: configurar el seguimiento de red](../../../docs/framework/network-programming/how-to-configure-network-tracing.md)  
- [Interpretar el seguimiento de red](../../../docs/framework/network-programming/interpreting-network-tracing.md)  
+ [Interpretación del seguimiento de red](../../../docs/framework/network-programming/interpreting-network-tracing.md)  
  [Introducción a la instrumentación y el seguimiento](http://msdn.microsoft.com/en-us/e924e57c-33cf-4b0e-9e7f-a45d13e38f2c)

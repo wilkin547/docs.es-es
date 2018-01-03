@@ -26,11 +26,12 @@ caps.latest.revision: "8"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 04a3bb1c7499a60175aaaa9715e780ea5ddceb31
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f62475e8b44d9cdda13322dc223509572c4ae541
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="tcp-udp"></a>TCP-UDP
 Las aplicaciones pueden usar servicios de Protocolo de control de transmisión (TCP) y de Protocolo de datagramas de usuario (UDP) con las clases <xref:System.Net.Sockets.TcpClient>, <xref:System.Net.Sockets.TcpListener> y <xref:System.Net.Sockets.UdpClient>. Estas clases de protocolo se basan en la clase <xref:System.Net.Sockets.Socket?displayProperty=nameWithType> y se encargan de los detalles de la transferencia de datos.  
@@ -42,9 +43,9 @@ Las aplicaciones pueden usar servicios de Protocolo de control de transmisión (
  La clase **UdpClient** usa una matriz de bytes para almacenar el datagrama de UDP. Use el método <xref:System.Net.Sockets.UdpClient.Send%2A> para enviar los datos a la red y el método <xref:System.Net.Sockets.UdpClient.Receive%2A> para recibir un datagrama entrante.  
   
 ## <a name="see-also"></a>Vea también  
- [Usar servicios TCP](../../../docs/framework/network-programming/using-tcp-services.md)  
- [Usar servicios UDP](../../../docs/framework/network-programming/using-udp-services.md)  
- [Al utilizar secuencias en la red](../../../docs/framework/network-programming/using-streams-on-the-network.md)  
- [Usar un Socket de servidor asincrónicos](../../../docs/framework/network-programming/using-an-asynchronous-server-socket.md)  
- [Usar un Socket de cliente asincrónico](../../../docs/framework/network-programming/using-an-asynchronous-client-socket.md)  
+ [Uso de servicios TCP](../../../docs/framework/network-programming/using-tcp-services.md)  
+ [Uso de servicios UDP](../../../docs/framework/network-programming/using-udp-services.md)  
+ [Uso de secuencias en la red](../../../docs/framework/network-programming/using-streams-on-the-network.md)  
+ [Uso de un socket de servidor asincrónico](../../../docs/framework/network-programming/using-an-asynchronous-server-socket.md)  
+ [Uso de un socket de cliente asincrónico](../../../docs/framework/network-programming/using-an-asynchronous-client-socket.md)  
  [Usar protocolos de aplicaciones](../../../docs/framework/network-programming/using-application-protocols.md)

@@ -17,11 +17,12 @@ caps.latest.revision: "14"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: df871c7f7214a6135db2493972dd76f41ce31aaa
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 629428f2f5e30d0b7dee07f270fcf5bacaeb5f30
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="implementing-the-ui-automation-transform-control-pattern"></a>Implementación del patrón de control Transformación de UI Automation
 > [!NOTE]
@@ -49,12 +50,12 @@ ms.lasthandoff: 11/21/2017
   
 |Miembros requeridos|Tipo de miembro|Notas|  
 |----------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.Provider.ITransformProvider.CanMove%2A>|Propiedad|Ninguno|  
-|<xref:System.Windows.Automation.Provider.ITransformProvider.CanResize%2A>|Propiedad|Ninguno|  
-|<xref:System.Windows.Automation.Provider.ITransformProvider.CanRotate%2A>|Propiedad|Ninguno|  
-|<xref:System.Windows.Automation.Provider.ITransformProvider.Move%2A>|Método|Ninguno|  
-|<xref:System.Windows.Automation.Provider.ITransformProvider.Resize%2A>|Método|Ninguno|  
-|<xref:System.Windows.Automation.Provider.ITransformProvider.Rotate%2A>|Método|Ninguno|  
+|<xref:System.Windows.Automation.Provider.ITransformProvider.CanMove%2A>|Property|Ninguna|  
+|<xref:System.Windows.Automation.Provider.ITransformProvider.CanResize%2A>|Property|Ninguna|  
+|<xref:System.Windows.Automation.Provider.ITransformProvider.CanRotate%2A>|Property|Ninguna|  
+|<xref:System.Windows.Automation.Provider.ITransformProvider.Move%2A>|Método|Ninguna|  
+|<xref:System.Windows.Automation.Provider.ITransformProvider.Resize%2A>|Método|Ninguna|  
+|<xref:System.Windows.Automation.Provider.ITransformProvider.Rotate%2A>|Método|Ninguna|  
   
  Este patrón de control no tiene eventos asociados.  
   
@@ -69,8 +70,8 @@ ms.lasthandoff: 11/21/2017
 |<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.ITransformProvider.Rotate%2A><br /><br /> -If el <xref:System.Windows.Automation.TransformPatternIdentifiers.CanRotateProperty> es false.|  
   
 ## <a name="see-also"></a>Vea también  
- [Información general del patrones de Control UI Automation](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)  
- [Patrones de Control compatibles en un proveedor de UI Automation](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)  
- [Patrones de Control UI Automation para clientes](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)  
- [Información general sobre el árbol de automatización de interfaz de usuario](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)  
- [Usar almacenamiento en caché en la UI Automation](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)
+ [Información general sobre los patrones de control de la Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)  
+ [Patrones de control compatibles en un proveedor de Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)  
+ [Patrones de control de Automatización de la interfaz de usuario para clientes](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)  
+ [Información general sobre el árbol de la Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)  
+ [Uso del almacenamiento en caché en la Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)

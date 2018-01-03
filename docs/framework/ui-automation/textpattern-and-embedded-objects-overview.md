@@ -18,11 +18,12 @@ caps.latest.revision: "17"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: af8d519b8036c5598740331960cacce07f375ac0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0b08bb2b4d9cdb5e90582fbce280a03f6fc04d13
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="textpattern-and-embedded-objects-overview"></a>Información general sobre TextPattern y objetos incrustados
 > [!NOTE]
@@ -163,7 +164,7 @@ Ejemplos de cómo se ajusta un intervalo de texto para Move() y ExpandToEnclosin
  <xref:System.Windows.Automation.Text.TextPatternRange>  
  <xref:System.Windows.Automation.Provider.ITextProvider>  
  <xref:System.Windows.Automation.Provider.ITextRangeProvider>  
- [Acceso a objetos incrustados mediante la automatización de la interfaz de usuario](../../../docs/framework/ui-automation/access-embedded-objects-using-ui-automation.md)  
- [Expose the Content of a Table Using UI Automation](../../../docs/framework/ui-automation/expose-the-content-of-a-table-using-ui-automation.md)  
- [Recorrer texto mediante UI Automation](../../../docs/framework/ui-automation/traverse-text-using-ui-automation.md)  
+ [Acceso a objetos incrustados mediante Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/access-embedded-objects-using-ui-automation.md)  
+ [Exposición del contenido de una tabla con Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/expose-the-content-of-a-table-using-ui-automation.md)  
+ [Recorrido de texto mediante Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/traverse-text-using-ui-automation.md)  
  [Ejemplo de selección y búsqueda de TextPattern](http://msdn.microsoft.com/en-us/0a3bca57-8b72-489d-a57c-da85b7a22c7f)

@@ -19,11 +19,12 @@ caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: c5bfafcad5f1f60e7e763b69f220188517d29f17
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 157b5648af4ef429a73fe71a924e15ad3973f7f5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="default-marshaling-for-objects"></a>Serialización predeterminada para objetos
 Los parámetros y campos de tipo <xref:System.Object?displayProperty=nameWithType> pueden exponerse a código no administrado como uno de los siguientes tipos:  
@@ -329,7 +330,7 @@ Variantes pasadas por valor y por referencia
   
  En la tabla siguiente se resumen las reglas de propagación para variantes y objetos.  
   
-|De|Para|Los cambios se propagan|  
+|De|En|Los cambios se propagan|  
 |----------|--------|-----------------------------|  
 |**Variante**  *v*|**Objeto**  *o*|Nunca|  
 |**Objeto**  *o*|**Variante**  *v*|Nunca|  

@@ -16,11 +16,12 @@ caps.latest.revision: "11"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 71a5a2e4319debf1a4d8ddd08d7f0979443682b9
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: f7529c68e96f93ebbba9fc5e750e09331bda9699
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ui-automation-support-for-standard-controls"></a>Compatibilidad de UI Automation con controles estándar
 > [!NOTE]
@@ -83,7 +84,7 @@ ms.lasthandoff: 10/18/2017
 |ToolbarWindow32|Separador|  
 |tooltips_class32|Información sobre herramientas|  
 |#32774|Información sobre herramientas|  
-|ReBarWindow32|ToolBar|  
+|ReBarWindow32|Barra de herramientas|  
 |SysTreeView32|Árbol|  
 |SysTreeView32|TreeItem|  
   
@@ -178,4 +179,4 @@ ms.lasthandoff: 10/18/2017
 |StatusStrip|  
   
 ## <a name="see-also"></a>Vea también  
- [UI Automation Control Types](../../../docs/framework/ui-automation/ui-automation-control-types.md)
+ [Tipos de control de Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/ui-automation-control-types.md)

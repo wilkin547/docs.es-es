@@ -17,11 +17,12 @@ caps.latest.revision: "14"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: cf8a054b832b1accdfa8e1d63b2d971a10f244b0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 50335994fab424b3100c91a202a7ea53643db551
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="client-side-ui-automation-provider-implementation"></a>Implementación del proveedor de UI Automation en el cliente
 > [!NOTE]
@@ -60,5 +61,5 @@ ms.lasthandoff: 11/21/2017
  Los dos últimos parámetros son opcionales. El cliente puede especificar el nombre de la imagen de la aplicación de destino cuando quiera usar diferentes proveedores para distintas aplicaciones. Por ejemplo, el cliente puede usar un proveedor para un control de vista de lista [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] de una aplicación conocida que admita el patrón de vista múltiple y otro para un control similar de otra aplicación conocida que no lo hace.  
   
 ## <a name="see-also"></a>Vea también  
- [Crear un proveedor de automatización de la interfaz de usuario de cliente](../../../docs/framework/ui-automation/create-a-client-side-ui-automation-provider.md)  
- [Implementar proveedores de UI Automation en una aplicación de cliente](../../../docs/framework/ui-automation/implement-ui-automation-providers-in-a-client-application.md)
+ [Creación de un proveedor de Automatización de la interfaz de usuario en el cliente](../../../docs/framework/ui-automation/create-a-client-side-ui-automation-provider.md)  
+ [Implementación de proveedores de Automatización de la interfaz de usuario en una aplicación cliente](../../../docs/framework/ui-automation/implement-ui-automation-providers-in-a-client-application.md)

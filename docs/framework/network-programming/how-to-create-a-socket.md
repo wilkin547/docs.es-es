@@ -27,11 +27,12 @@ caps.latest.revision: "7"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 721839e0e27682477f7ba3739d3c666208fae417
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 24ec39798f5f31cf20cc5c84714efaae6ccbed52
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-socket"></a>Cómo crear un socket
 Para poder usar un socket a fin de comunicarse con dispositivos remotos, es necesario inicializarlo con la información del protocolo y de la dirección de red. El constructor para la clase <xref:System.Net.Sockets.Socket> tiene parámetros que especifican la familia de direcciones, el tipo de socket y el tipo de protocolo que el socket usa para establecer conexiones.  
@@ -70,5 +71,5 @@ Dim s as New Socket(AddressFamily.InterNetwork, _
  Una vez que se ha creado un **socket**, puede iniciar una conexión con un punto de conexión remoto o recibir conexiones procedentes de dispositivos remotos.  
   
 ## <a name="see-also"></a>Vea también  
- [Utilizar Sockets de cliente](../../../docs/framework/network-programming/using-client-sockets.md)  
+ [Uso de sockets de cliente](../../../docs/framework/network-programming/using-client-sockets.md)  
  [Escuchas con sockets](../../../docs/framework/network-programming/listening-with-sockets.md)

@@ -17,11 +17,12 @@ caps.latest.revision: "19"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 9ae70f1dfc4c0a8d97d2fbcfd23822450727e59e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a53f5f802d451d7575188d4687b6d88f96ec64fb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="implementing-the-ui-automation-rangevalue-control-pattern"></a>Implementar el patrón de control RangeValue de UI Automation
 > [!NOTE]
@@ -47,12 +48,12 @@ Ejemplo de una barra de progreso donde el valor es de tipo entero y los valores 
   
 |Miembro requerido|Tipo de miembro|Notas|  
 |---------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.RangeValuePattern.IsReadOnlyProperty>|Propiedad|Ninguno|  
-|<xref:System.Windows.Automation.RangeValuePattern.ValueProperty>|Propiedad|Ninguno|  
-|<xref:System.Windows.Automation.RangeValuePattern.LargeChangeProperty>|Propiedad|Ninguno|  
-|<xref:System.Windows.Automation.RangeValuePattern.SmallChangeProperty>|Propiedad|Ninguno|  
-|<xref:System.Windows.Automation.RangeValuePattern.MaximumProperty>|Propiedad|Ninguno|  
-|<xref:System.Windows.Automation.RangeValuePattern.MinimumProperty>|Propiedad|Ninguna|  
+|<xref:System.Windows.Automation.RangeValuePattern.IsReadOnlyProperty>|Property|Ninguna|  
+|<xref:System.Windows.Automation.RangeValuePattern.ValueProperty>|Property|Ninguna|  
+|<xref:System.Windows.Automation.RangeValuePattern.LargeChangeProperty>|Property|Ninguna|  
+|<xref:System.Windows.Automation.RangeValuePattern.SmallChangeProperty>|Property|Ninguna|  
+|<xref:System.Windows.Automation.RangeValuePattern.MaximumProperty>|Property|Ninguna|  
+|<xref:System.Windows.Automation.RangeValuePattern.MinimumProperty>|Property|Ninguna|  
 |<xref:System.Windows.Automation.RangeValuePattern.SetValue%2A>|Métodos|Ninguna|  
   
  Este patrón de control no tiene eventos asociados.  
@@ -66,8 +67,8 @@ Ejemplo de una barra de progreso donde el valor es de tipo entero y los valores 
 |<xref:System.ArgumentOutOfRangeException>|Se llama a<xref:System.Windows.Automation.RangeValuePattern.SetValue%2A> con un valor que es mayor que <xref:System.Windows.Automation.RangeValuePattern.MaximumProperty> o menor que <xref:System.Windows.Automation.RangeValuePattern.MinimumProperty>.|  
   
 ## <a name="see-also"></a>Vea también  
- [Información general del patrones de Control UI Automation](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)  
- [Patrones de Control compatibles en un proveedor de UI Automation](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)  
- [Patrones de Control UI Automation para clientes](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)  
- [Información general sobre el árbol de automatización de interfaz de usuario](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)  
- [Usar almacenamiento en caché en la UI Automation](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)
+ [Información general sobre los patrones de control de la Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)  
+ [Patrones de control compatibles en un proveedor de Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)  
+ [Patrones de control de Automatización de la interfaz de usuario para clientes](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)  
+ [Información general sobre el árbol de la Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)  
+ [Uso del almacenamiento en caché en la Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)

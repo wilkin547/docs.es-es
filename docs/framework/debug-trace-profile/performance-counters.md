@@ -17,11 +17,12 @@ caps.latest.revision: "18"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 2e21b1f92c6694c6572d4651e94964e5d2d93c51
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 15486a55fc15ba2cc3cc64db50f317b39dfd77bb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="performance-counters-in-the-net-framework"></a>Contadores de rendimiento de .NET Framework
 En este tema se proporciona una lista de los contadores de rendimiento que se pueden encontrar en el [Monitor de rendimiento](http://technet.microsoft.com/library/cc749249.aspx).  
@@ -260,5 +261,5 @@ for (int i = 0; i < Array.Length; i++)
 |**Número total de comprobaciones en tiempo de ejecución**|Muestra el número total de comprobaciones de seguridad de acceso del código en tiempo de ejecución realizadas desde que se inició la aplicación. Las comprobaciones de seguridad de acceso del código en tiempo de ejecución se realizan cuando un llamador solicita un determinado permiso. La comprobación en tiempo de ejecución se realiza en cada llamada del llamador y examina la pila del subproceso actual del llamador. Cuando se usa con el contador de **Profundidad del recorrido de la pila**, este contador indica la disminución del rendimiento que tiene lugar para las comprobaciones de seguridad.|  
   
 ## <a name="see-also"></a>Vea también  
- [Performance Counters](../../../docs/framework/debug-trace-profile/performance-counters.md)  
+ [Contadores de rendimiento](../../../docs/framework/debug-trace-profile/performance-counters.md)  
  [Generar perfiles en tiempo de ejecución](../../../docs/framework/debug-trace-profile/runtime-profiling.md)

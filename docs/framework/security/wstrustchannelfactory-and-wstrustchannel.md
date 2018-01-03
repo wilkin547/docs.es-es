@@ -13,11 +13,12 @@ caps.latest.revision: "9"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: e400d68924f1ed57ea1e71892e52f5aae2f5eebc
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 35f4449f7a826ea49be750cd750cb989c8c455fb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wstrustchannelfactory-and-wstrustchannel"></a>WSTrustChannelFactory y WSTrustChannel
 Si ya está familiarizado con Windows Communication Foundation (WCF), sabe que un cliente WCF ya reconoce la federación. Al configurar un cliente WCF con <xref:System.ServiceModel.WSFederationHttpBinding> o un enlace personalizado similar, puede habilitar la autenticación federada en un servicio.  
@@ -52,7 +53,7 @@ Si ya está familiarizado con Windows Communication Foundation (WCF), sabe que u
 >  La característica OnBehalfOf se utiliza en escenarios donde solo es importante la identidad del cliente original y es en la práctica igual que la característica de suplantación de identidad disponible en Windows. Cuando se utiliza OnBehalfOf, el destinatario final del token emitido solo puede ver notificaciones acerca del cliente original y no se conserva la información sobre los intermediarios. Un patrón común donde se utiliza la característica OnBehalfOf es el patrón de proxy donde el cliente no puede tener acceso al STS directamente, sino que se comunica en su lugar a través de una puerta de enlace de proxy. La puerta de enlace de proxy autentica al llamador y coloca la información sobre el llamador en el elemento OnBehalfOf del mensaje de RST que envía a continuación al STS real para su procesamiento. El token resultante contiene solo las notificaciones relacionadas con el cliente del proxy, lo que hace que el proxy sea completamente transparente para el receptor del token emitido. Tenga en cuenta que WIF no admite \<wsse:SecurityTokenReference> ni \<wsa:EndpointReferences> como elemento secundario de \<wst:OnBehalfOf>. La especificación WS-Trust permite tres maneras de identificar el solicitante original (en nombre del cual está actuando el proxy). Estos son:  
 >   
 >  -   Referencia del token de seguridad. Una referencia a un token, en el mensaje, o posiblemente recuperado fuera de banda.  
-> -   Referencia de extremo. Se utiliza como clave para buscar datos, de nuevo fuera de banda.  
+> -   Referencia de punto de conexión. Se utiliza como clave para buscar datos, de nuevo fuera de banda.  
 > -   Token de seguridad. Identifica el solicitante original directamente.  
 >   
 >  WIF solo admite tokens de seguridad, cifrados o no cifrados, como elemento secundario directo de \<wst:OnBehalfOf>.  

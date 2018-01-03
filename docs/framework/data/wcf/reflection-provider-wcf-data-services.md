@@ -14,11 +14,12 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 52fe7e777cfea04b6da2a04c0badfe92b2a0a756
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 617754fcd9515f080dc6cf8ae923c2c6fc34ad3a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="reflection-provider-wcf-data-services"></a>Proveedor de reflexión (Data Services de WCF)
 Además de exponer los datos de un modelo de datos a través de Entity Framework, [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] puede exponer los datos que no estén definidos estrictamente en un modelo basado en entidad. El proveedor de reflexión expone los datos en clases que devuelven tipos que implementan la interfaz <xref:System.Linq.IQueryable%601>. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] usa la reflexión con el fin de deducir un modelo de datos para estas clases y puede convertir las consultas basadas en direcciones realizadas en recursos en consultas basadas en el lenguaje de consulta integrado (LINQ) realizadas en los tipos <xref:System.Linq.IQueryable%601> expuestos.  
@@ -104,4 +105,4 @@ Además de exponer los datos de un modelo de datos a través de Entity Framework
  Dado que Entity Framework se admite nativamente de forma predeterminada, es el proveedor de datos recomendado para usar datos relacionales con [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]. Sin embargo, puede utilizar el proveedor de reflexión para usar las clases LINQ to SQL con un servicio de datos. El <xref:System.Data.Linq.Table%601> como resultado conjuntos que devuelven los métodos en el <xref:System.Data.Linq.DataContext> generadas por LINQ to implement SQL Object Relational Designer (Object Relational Designer) el <xref:System.Linq.IQueryable%601> interfaz. Esto permite que el proveedor de reflexión tenga acceso a estos métodos y datos de entidades devueltos en SQL Server utilizando las clases LINQ to SQL generadas. Sin embargo, dado que LINQ to SQL no implementa la interfaz de <xref:System.Data.Services.IUpdatable>, necesita agregar una clase parcial que extiende la clase parcial existente <xref:System.Data.Linq.DataContext> para agregar la implementación <xref:System.Data.Services.IUpdatable>. Para obtener más información, consulte [Cómo: crear un servicio de datos mediante un origen de datos SQL de LINQ](../../../../docs/framework/data/wcf/create-a-data-service-using-linq-to-sql-wcf.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Proveedores de servicios de datos](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)
+ [Proveedores de Data Services](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)

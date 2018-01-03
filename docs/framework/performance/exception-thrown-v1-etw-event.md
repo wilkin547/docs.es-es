@@ -16,11 +16,12 @@ caps.latest.revision: "6"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: dcf3390821c4210ced4c43dab5a94c93802d5f9d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 60013d0df8c63033f6da8d61479bacac7b944094
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="exception-thrownv1-etw-event"></a>Evento ETW de excepción Thrown_V1
 Este evento captura información sobre las excepciones que se generan.  
@@ -33,7 +34,7 @@ Este evento captura información sobre las excepciones que se generan.
   
  En la siguiente tabla se muestra la información del evento.  
   
-|Evento|Id. de evento|Se genera cuando|  
+|evento|Id. de evento|Se genera cuando|  
 |-----------|--------------|-----------------|  
 |`ExceptionThrown_V1`|80|Se genera una excepción administrada.|  
   
