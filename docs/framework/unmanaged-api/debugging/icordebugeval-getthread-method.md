@@ -21,16 +21,17 @@ caps.latest.revision: "13"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: cde844d0664f7dc7643ef60b65befa95f2d039e5
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 5a2ed99c2a939d2b39f6b236165b79634f2fc2c2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="icordebugevalgetthread-method"></a><span data-ttu-id="f9dc3-102">ICorDebugEval::GetThread (Método)</span><span class="sxs-lookup"><span data-stu-id="f9dc3-102">ICorDebugEval::GetThread Method</span></span>
-<span data-ttu-id="f9dc3-103">Obtiene el subproceso en el que se está ejecutando o se ejecutará esta evaluación.</span><span class="sxs-lookup"><span data-stu-id="f9dc3-103">Gets the thread in which this evaluation is executing or will execute.</span></span>  
+# <a name="icordebugevalgetthread-method"></a><span data-ttu-id="78673-102">ICorDebugEval::GetThread (Método)</span><span class="sxs-lookup"><span data-stu-id="78673-102">ICorDebugEval::GetThread Method</span></span>
+<span data-ttu-id="78673-103">Obtiene el subproceso en el que se está ejecutando o se ejecutará esta evaluación.</span><span class="sxs-lookup"><span data-stu-id="78673-103">Gets the thread in which this evaluation is executing or will execute.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f9dc3-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="f9dc3-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="78673-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="78673-104">Syntax</span></span>  
   
 ```  
 HRESULT GetThread (  
@@ -38,15 +39,15 @@ HRESULT GetThread (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="f9dc3-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="f9dc3-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="78673-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="78673-105">Parameters</span></span>  
  `ppThread`  
- <span data-ttu-id="f9dc3-106">[out] Un puntero a la dirección de un objeto ICorDebugThread que representa el subproceso.</span><span class="sxs-lookup"><span data-stu-id="f9dc3-106">[out] A pointer to the address of an ICorDebugThread object that represents the thread.</span></span>  
+ <span data-ttu-id="78673-106">[out] Un puntero a la dirección de un objeto ICorDebugThread que representa el subproceso.</span><span class="sxs-lookup"><span data-stu-id="78673-106">[out] A pointer to the address of an ICorDebugThread object that represents the thread.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="f9dc3-107">Requisitos</span><span class="sxs-lookup"><span data-stu-id="f9dc3-107">Requirements</span></span>  
- <span data-ttu-id="f9dc3-108">**Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f9dc3-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="78673-107">Requisitos</span><span class="sxs-lookup"><span data-stu-id="78673-107">Requirements</span></span>  
+ <span data-ttu-id="78673-108">**Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="78673-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="f9dc3-109">**Encabezado:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="f9dc3-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="78673-109">**Encabezado:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="78673-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="f9dc3-110">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f9dc3-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="78673-110">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="78673-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="f9dc3-111">**Versiones de .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f9dc3-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="78673-111">**Versiones de .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="78673-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
