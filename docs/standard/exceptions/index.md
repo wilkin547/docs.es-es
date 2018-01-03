@@ -21,11 +21,14 @@ caps.latest.revision: "16"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: b064dc39f5807b154a1529eebe17493ae84981cf
-ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 82e314dacc9fb2657a3a7088a928b59d00282a5d
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="handling-and-throwing-exceptions-in-net"></a>Controlar y generar excepciones en .NET
 
@@ -55,7 +58,7 @@ Las excepciones ofrecen ventajas sobre otros métodos de notificación de errore
 
 En la tabla siguiente se muestra algunas excepciones comunes con ejemplos de las causas que las originan.
 
-| Tipo de excepción | Tipo base | Descripción | Ejemplo |
+| Tipo de excepción | Tipo base | Description | Ejemplo |
 | -------------- | --------- | ----------- | ------- |
 | <xref:System.Exception> | <xref:System.Object> | Clase base de todas las excepciones. | Ninguno (utilice una clase derivada de esta excepción). |
 | <xref:System.IndexOutOfRangeException> | <xref:System.Exception> | El tiempo de ejecución la genera solo cuando una matriz no está correctamente indexada. | La indexación de una matriz fuera de su intervalo válido: `arr[arr.Length+1]` |

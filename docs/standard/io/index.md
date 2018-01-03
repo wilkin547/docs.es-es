@@ -20,11 +20,14 @@ caps.latest.revision: "33"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 48a3c0e0e00e9fd55dd3e4dfde8e20522b801bc8
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 33d33826037197a0c679dacfff57eb77de5f5341
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="file-and-stream-io"></a>E/S de archivos y secuencias
 La E/S (entrada/salida) de archivos y secuencias hace referencia a la transferencia de datos con destino u origen en un medio de almacenamiento. En .NET Framework, los espacios de nombres [System.IO](http://go.microsoft.com/fwlink/?LinkId=231142) contienen tipos que permiten la lectura y escritura, tanto sincrónica como asincrónica, en archivos y flujos de datos. Estos espacios de nombres también contienen tipos que realizan la compresión y la descompresión de archivos, así como tipos que permiten la comunicación a través de canalizaciones y puertos de serie.  
@@ -125,7 +128,7 @@ La E/S (entrada/salida) de archivos y secuencias hace referencia a la transferen
 ## <a name="isolated-storage"></a>Almacenamiento aislado  
  El almacenamiento aislado es un mecanismo de almacenamiento de datos que proporciona aislamiento y seguridad mediante la definición de modos estándar de asociar código a los datos guardados. El almacenamiento proporciona un sistema de archivos virtual que está aislado para cada usuario, ensamblado y (opcionalmente) dominio. El almacenamiento aislado es especialmente útil cuando la aplicación no tiene permiso para obtener acceso a los archivos del usuario. Se pueden guardar los valores o los archivos de la aplicación de una forma controlada por la directiva de seguridad del equipo.  
   
- El almacenamiento aislado no está disponible para aplicaciones de la [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)], sino que deben usarse las clases de datos de aplicaciones del espacio de nombres [Windows.Storage](http://msdn.microsoft.com/library/windows/apps/windows.storage.aspx). Para más información, consulte [Almacenamiento de datos de aplicación](http://go.microsoft.com/fwlink/?LinkId=229175) en el Centro de desarrollo de Windows.  
+ El almacenamiento aislado no está disponible para aplicaciones de la [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)], sino que deben usarse las clases de datos de aplicaciones del espacio de nombres [Windows.Storage](http://msdn.microsoft.com/library/windows/apps/windows.storage.aspx). Para más información, vea [Datos de aplicación](http://go.microsoft.com/fwlink/?LinkId=229175) en el Centro de desarrollo de Windows.  
   
  Las clases siguientes se utilizan con frecuencia al implementar el almacenamiento aislado:  
   

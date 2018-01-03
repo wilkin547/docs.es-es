@@ -16,11 +16,14 @@ caps.latest.revision: "5"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: a527824ba11928d59bc700f253c5a4d77056abf0
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 42298bc8e3101b03f6c3e03fec453b72cd959efb
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="asynchronous-programming-patterns"></a>Modelos para la programación asincrónica
 
@@ -78,11 +81,11 @@ Para obtener información completa sobre TAP, APM y EAP, consulte los vínculos 
   
 ## <a name="related-topics"></a>Temas relacionados
 
-| Título | Descripción |
+| Title | Description |
 | ----- | ----------- |
 | [Modelo para la programación asincrónica (APM)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md) | Describe el patrón heredado que utiliza la interfaz <xref:System.IAsyncResult> para proporcionar un comportamiento asincrónico. Este patrón ya no se recomienda para nuevo desarrollo. |
 | [Modelo asincrónico basado en eventos (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md) | Describe el patrón heredado basado en eventos para proporcionar el comportamiento asincrónico. Este patrón ya no se recomienda para nuevo desarrollo. |
-| [Task-based Asynchronous Pattern (TAP)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md) (Modelo asincrónico basado en tareas [TAP]) | Describe el nuevo patrón asincrónico basado en el espacio de nombres <xref:System.Threading.Tasks>. Este patrón es el método recomendado para la programación asincrónica en .NET Framework 4 y versiones posteriores. |
+| [Modelo asincrónico basado en tareas [TAP]](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md) | Describe el nuevo patrón asincrónico basado en el espacio de nombres <xref:System.Threading.Tasks>. Este patrón es el método recomendado para la programación asincrónica en .NET Framework 4 y versiones posteriores. |
 
 ## <a name="see-also"></a>Vea también
 
