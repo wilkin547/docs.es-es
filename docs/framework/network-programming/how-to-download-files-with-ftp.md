@@ -12,16 +12,17 @@ caps.latest.revision: "5"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 656a8de6a508d6834fd1866df14ec5378d4f84af
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 6309bf4885b7a0f2ab7cedfb48af70dc76bf31f4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="how-to-download-files-with-ftp"></a><span data-ttu-id="ea98d-102">Cómo: descargar archivos mediante FTP</span><span class="sxs-lookup"><span data-stu-id="ea98d-102">How to: Download Files with FTP</span></span>
-<span data-ttu-id="ea98d-103">En este ejemplo se muestra cómo descargar un archivo de un servidor FTP.</span><span class="sxs-lookup"><span data-stu-id="ea98d-103">This sample shows how to download a file from an FTP server.</span></span>  
+# <a name="how-to-download-files-with-ftp"></a><span data-ttu-id="f8cf4-102">Cómo: descargar archivos mediante FTP</span><span class="sxs-lookup"><span data-stu-id="f8cf4-102">How to: Download Files with FTP</span></span>
+<span data-ttu-id="f8cf4-103">En este ejemplo se muestra cómo descargar un archivo de un servidor FTP.</span><span class="sxs-lookup"><span data-stu-id="f8cf4-103">This sample shows how to download a file from an FTP server.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="ea98d-104">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="ea98d-104">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="f8cf4-104">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="f8cf4-104">Example</span></span>  
   
 ```csharp  
 using System;  
@@ -57,11 +58,11 @@ namespace Examples.System.Net
 }  
 ```  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="ea98d-105">Compilar el código</span><span class="sxs-lookup"><span data-stu-id="ea98d-105">Compiling the Code</span></span>  
- <span data-ttu-id="ea98d-106">Para este ejemplo se necesita:</span><span class="sxs-lookup"><span data-stu-id="ea98d-106">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="f8cf4-105">Compilar el código</span><span class="sxs-lookup"><span data-stu-id="f8cf4-105">Compiling the Code</span></span>  
+ <span data-ttu-id="f8cf4-106">Para este ejemplo se necesita:</span><span class="sxs-lookup"><span data-stu-id="f8cf4-106">This example requires:</span></span>  
   
--   <span data-ttu-id="ea98d-107">Referencias al espacio de nombres **System.Net**.</span><span class="sxs-lookup"><span data-stu-id="ea98d-107">References to the **System.Net** namespace.</span></span>  
+-   <span data-ttu-id="f8cf4-107">Referencias al espacio de nombres **System.Net**.</span><span class="sxs-lookup"><span data-stu-id="f8cf4-107">References to the **System.Net** namespace.</span></span>  
   
-## <a name="robust-programming"></a><span data-ttu-id="ea98d-108">Programación sólida</span><span class="sxs-lookup"><span data-stu-id="ea98d-108">Robust Programming</span></span>  
+## <a name="robust-programming"></a><span data-ttu-id="f8cf4-108">Programación sólida</span><span class="sxs-lookup"><span data-stu-id="f8cf4-108">Robust Programming</span></span>  
   
-## <a name="net-framework-security"></a><span data-ttu-id="ea98d-109">Seguridad de .NET Framework</span><span class="sxs-lookup"><span data-stu-id="ea98d-109">.NET Framework Security</span></span>
+## <a name="net-framework-security"></a><span data-ttu-id="f8cf4-109">Seguridad de .NET Framework</span><span class="sxs-lookup"><span data-stu-id="f8cf4-109">.NET Framework Security</span></span>

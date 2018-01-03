@@ -22,16 +22,17 @@ caps.latest.revision: "4"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: d1f52bddb5d5f11d36fcf8b833dd6fe65f9c0a4c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: e5b05cc6c84f2f891691613a485d35d008ef79e5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="createcoreclrdebugtarget-function"></a><span data-ttu-id="b2630-102">CreateCoreClrDebugTarget (Función)</span><span class="sxs-lookup"><span data-stu-id="b2630-102">CreateCoreClrDebugTarget Function</span></span>
-<span data-ttu-id="b2630-103">Crea una conexión a un proxy del depurador que se ejecuta en un equipo remoto y devuelve un [ICoreClrDebugTarget](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-interface.md) objeto que puede utilizarse para consultar procesos en ejecución y tiempos de ejecución cargados en el equipo remoto.</span><span class="sxs-lookup"><span data-stu-id="b2630-103">Creates a connection to a debugger proxy that is running on a remote machine, and returns an [ICoreClrDebugTarget](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-interface.md) object that can be used to query running processes and loaded runtimes on the remote machine.</span></span>  
+# <a name="createcoreclrdebugtarget-function"></a><span data-ttu-id="7f2e2-102">CreateCoreClrDebugTarget (Función)</span><span class="sxs-lookup"><span data-stu-id="7f2e2-102">CreateCoreClrDebugTarget Function</span></span>
+<span data-ttu-id="7f2e2-103">Crea una conexión a un proxy del depurador que se ejecuta en un equipo remoto y devuelve un [ICoreClrDebugTarget](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-interface.md) objeto que puede utilizarse para consultar procesos en ejecución y tiempos de ejecución cargados en el equipo remoto.</span><span class="sxs-lookup"><span data-stu-id="7f2e2-103">Creates a connection to a debugger proxy that is running on a remote machine, and returns an [ICoreClrDebugTarget](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-interface.md) object that can be used to query running processes and loaded runtimes on the remote machine.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b2630-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="b2630-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="7f2e2-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="7f2e2-104">Syntax</span></span>  
   
 ```  
 HRESULT CreateCoreClrDebugTarget (  
@@ -40,28 +41,28 @@ HRESULT CreateCoreClrDebugTarget (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="b2630-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="b2630-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="7f2e2-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="7f2e2-105">Parameters</span></span>  
  `dwAddress`  
- <span data-ttu-id="b2630-106">[in] Dirección IPv4 de un equipo de destino remoto.</span><span class="sxs-lookup"><span data-stu-id="b2630-106">[in] IPv4 address of a remote target machine.</span></span>  
+ <span data-ttu-id="7f2e2-106">[in] Dirección IPv4 de un equipo de destino remoto.</span><span class="sxs-lookup"><span data-stu-id="7f2e2-106">[in] IPv4 address of a remote target machine.</span></span>  
   
  `ppTarget`  
- <span data-ttu-id="b2630-107">[out] Puntero a un puntero a un [ICoreClrDebugTarget](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-interface.md) objeto que se va a crear.</span><span class="sxs-lookup"><span data-stu-id="b2630-107">[out] Pointer to a pointer to an [ICoreClrDebugTarget](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-interface.md) object that will be created.</span></span>  
+ <span data-ttu-id="7f2e2-107">[out] Puntero a un puntero a un [ICoreClrDebugTarget](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-interface.md) objeto que se va a crear.</span><span class="sxs-lookup"><span data-stu-id="7f2e2-107">[out] Pointer to a pointer to an [ICoreClrDebugTarget](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-interface.md) object that will be created.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="b2630-108">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="b2630-108">Return Value</span></span>  
- <span data-ttu-id="b2630-109">S_OK</span><span class="sxs-lookup"><span data-stu-id="b2630-109">S_OK</span></span>  
- <span data-ttu-id="b2630-110">El número de CLR en el proceso se determinó correctamente y las matrices de ruta de acceso y el identificador correspondiente se rellenaron de forma adecuada.</span><span class="sxs-lookup"><span data-stu-id="b2630-110">The number of CLRs in the process was successfully determined, and the corresponding handle and path arrays were properly filled.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="7f2e2-108">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="7f2e2-108">Return Value</span></span>  
+ <span data-ttu-id="7f2e2-109">S_OK</span><span class="sxs-lookup"><span data-stu-id="7f2e2-109">S_OK</span></span>  
+ <span data-ttu-id="7f2e2-110">El número de CLR en el proceso se determinó correctamente y las matrices de ruta de acceso y el identificador correspondiente se rellenaron de forma adecuada.</span><span class="sxs-lookup"><span data-stu-id="7f2e2-110">The number of CLRs in the process was successfully determined, and the corresponding handle and path arrays were properly filled.</span></span>  
   
- <span data-ttu-id="b2630-111">E_OUTOFMEMORY</span><span class="sxs-lookup"><span data-stu-id="b2630-111">E_OUTOFMEMORY</span></span>  
- <span data-ttu-id="b2630-112">No se puede asignar memoria suficiente para `ppTarget`.</span><span class="sxs-lookup"><span data-stu-id="b2630-112">Unable to allocate enough memory for `ppTarget`.</span></span>  
+ <span data-ttu-id="7f2e2-111">E_OUTOFMEMORY</span><span class="sxs-lookup"><span data-stu-id="7f2e2-111">E_OUTOFMEMORY</span></span>  
+ <span data-ttu-id="7f2e2-112">No se puede asignar memoria suficiente para `ppTarget`.</span><span class="sxs-lookup"><span data-stu-id="7f2e2-112">Unable to allocate enough memory for `ppTarget`.</span></span>  
   
- <span data-ttu-id="b2630-113">E_FAIL (u otros códigos devueltos de E_)</span><span class="sxs-lookup"><span data-stu-id="b2630-113">E_FAIL (or other E_ return codes)</span></span>  
- <span data-ttu-id="b2630-114">Otros errores.</span><span class="sxs-lookup"><span data-stu-id="b2630-114">Other failures.</span></span>  
+ <span data-ttu-id="7f2e2-113">E_FAIL (u otros códigos devueltos de E_)</span><span class="sxs-lookup"><span data-stu-id="7f2e2-113">E_FAIL (or other E_ return codes)</span></span>  
+ <span data-ttu-id="7f2e2-114">Otros errores.</span><span class="sxs-lookup"><span data-stu-id="7f2e2-114">Other failures.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="b2630-115">Requisitos</span><span class="sxs-lookup"><span data-stu-id="b2630-115">Requirements</span></span>  
- <span data-ttu-id="b2630-116">**Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b2630-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="7f2e2-115">Requisitos</span><span class="sxs-lookup"><span data-stu-id="7f2e2-115">Requirements</span></span>  
+ <span data-ttu-id="7f2e2-116">**Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="7f2e2-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="b2630-117">**Encabezado:** CoreClrRemoteDebuggingInterfaces.h</span><span class="sxs-lookup"><span data-stu-id="b2630-117">**Header:** CoreClrRemoteDebuggingInterfaces.h</span></span>  
+ <span data-ttu-id="7f2e2-117">**Encabezado:** CoreClrRemoteDebuggingInterfaces.h</span><span class="sxs-lookup"><span data-stu-id="7f2e2-117">**Header:** CoreClrRemoteDebuggingInterfaces.h</span></span>  
   
- <span data-ttu-id="b2630-118">**Biblioteca:** mscordbi_macx86.dll</span><span class="sxs-lookup"><span data-stu-id="b2630-118">**Library:** mscordbi_macx86.dll</span></span>  
+ <span data-ttu-id="7f2e2-118">**Biblioteca:** mscordbi_macx86.dll</span><span class="sxs-lookup"><span data-stu-id="7f2e2-118">**Library:** mscordbi_macx86.dll</span></span>  
   
- <span data-ttu-id="b2630-119">**Versiones de .NET framework:** 3.5 SP1</span><span class="sxs-lookup"><span data-stu-id="b2630-119">**.NET Framework Versions:** 3.5 SP1</span></span>
+ <span data-ttu-id="7f2e2-119">**Versiones de .NET framework:** 3.5 SP1</span><span class="sxs-lookup"><span data-stu-id="7f2e2-119">**.NET Framework Versions:** 3.5 SP1</span></span>

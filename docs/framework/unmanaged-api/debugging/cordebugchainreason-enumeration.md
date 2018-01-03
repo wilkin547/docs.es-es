@@ -19,16 +19,17 @@ caps.latest.revision: "15"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 0d501db111256861a3d0a602712e4c32f40b7b6e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 1951983c9d167862169bd6178dc65693d724dc0b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="cordebugchainreason-enumeration"></a><span data-ttu-id="5f347-102">CorDebugChainReason (Enumeración)</span><span class="sxs-lookup"><span data-stu-id="5f347-102">CorDebugChainReason Enumeration</span></span>
-<span data-ttu-id="5f347-103">Indica el motivo o los motivos para que se inicie una cadena de llamadas.</span><span class="sxs-lookup"><span data-stu-id="5f347-103">Indicates the reason or reasons for the initiation of a call chain.</span></span>  
+# <a name="cordebugchainreason-enumeration"></a><span data-ttu-id="2012e-102">CorDebugChainReason (Enumeración)</span><span class="sxs-lookup"><span data-stu-id="2012e-102">CorDebugChainReason Enumeration</span></span>
+<span data-ttu-id="2012e-103">Indica el motivo o los motivos para que se inicie una cadena de llamadas.</span><span class="sxs-lookup"><span data-stu-id="2012e-103">Indicates the reason or reasons for the initiation of a call chain.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="5f347-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="5f347-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="2012e-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="2012e-104">Syntax</span></span>  
   
 ```  
 typedef enum CorDebugChainReason {  
@@ -48,35 +49,35 @@ typedef enum CorDebugChainReason {
 } CorDebugChainReason;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="5f347-105">Miembros</span><span class="sxs-lookup"><span data-stu-id="5f347-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="2012e-105">Miembros</span><span class="sxs-lookup"><span data-stu-id="2012e-105">Members</span></span>  
   
-|<span data-ttu-id="5f347-106">Miembro</span><span class="sxs-lookup"><span data-stu-id="5f347-106">Member</span></span>|<span data-ttu-id="5f347-107">Descripción</span><span class="sxs-lookup"><span data-stu-id="5f347-107">Description</span></span>|  
+|<span data-ttu-id="2012e-106">Miembro</span><span class="sxs-lookup"><span data-stu-id="2012e-106">Member</span></span>|<span data-ttu-id="2012e-107">Descripción</span><span class="sxs-lookup"><span data-stu-id="2012e-107">Description</span></span>|  
 |------------|-----------------|  
-|`CHAIN_NONE`|<span data-ttu-id="5f347-108">No se inició ninguna cadena de llamadas.</span><span class="sxs-lookup"><span data-stu-id="5f347-108">No call chain has been initiated.</span></span>|  
-|`CHAIN_CLASS_INIT`|<span data-ttu-id="5f347-109">Un constructor inició la cadena.</span><span class="sxs-lookup"><span data-stu-id="5f347-109">The chain was initiated by a constructor.</span></span>|  
-|`CHAIN_EXCEPTION_FILTER`|<span data-ttu-id="5f347-110">Un constructor inició la cadena.</span><span class="sxs-lookup"><span data-stu-id="5f347-110">The chain was initiated by an exception filter.</span></span>|  
-|`CHAIN_SECURITY`|<span data-ttu-id="5f347-111">El código que exige la seguridad inició la cadena.</span><span class="sxs-lookup"><span data-stu-id="5f347-111">The chain was initiated by code that enforces security.</span></span>|  
-|`CHAIN_CONTEXT_POLICY`|<span data-ttu-id="5f347-112">Una directiva de contexto inició la cadena.</span><span class="sxs-lookup"><span data-stu-id="5f347-112">The chain was initiated by a context policy.</span></span>|  
-|`CHAIN_INTERCEPTION`|<span data-ttu-id="5f347-113">No usado.</span><span class="sxs-lookup"><span data-stu-id="5f347-113">Not used.</span></span>|  
-|`CHAIN_PROCESS_START`|<span data-ttu-id="5f347-114">No usado.</span><span class="sxs-lookup"><span data-stu-id="5f347-114">Not used.</span></span>|  
-|`CHAIN_THREAD_START`|<span data-ttu-id="5f347-115">El inicio de la ejecución de un subproceso inició la cadena.</span><span class="sxs-lookup"><span data-stu-id="5f347-115">The chain was initiated by the start of a thread execution.</span></span>|  
-|`CHAIN_ENTER_MANAGED`|<span data-ttu-id="5f347-116">Una entrada en código administrado inició la cadena.</span><span class="sxs-lookup"><span data-stu-id="5f347-116">The chain was initiated by entry into managed code.</span></span>|  
-|`CHAIN_ENTER_UNMANAGED`|<span data-ttu-id="5f347-117">Una entrada en código no administrado inició la cadena.</span><span class="sxs-lookup"><span data-stu-id="5f347-117">The chain was initiated by entry into unmanaged code.</span></span>|  
-|`CHAIN_DEBUGGER_EVAL`|<span data-ttu-id="5f347-118">No usado.</span><span class="sxs-lookup"><span data-stu-id="5f347-118">Not used.</span></span>|  
-|`CHAIN_CONTEXT_SWITCH`|<span data-ttu-id="5f347-119">No usado.</span><span class="sxs-lookup"><span data-stu-id="5f347-119">Not used.</span></span>|  
-|`CHAIN_FUNC_EVAL`|<span data-ttu-id="5f347-120">Una evaluación de función inició la cadena.</span><span class="sxs-lookup"><span data-stu-id="5f347-120">The chain was initiated by a function evaluation.</span></span>|  
+|`CHAIN_NONE`|<span data-ttu-id="2012e-108">No se inició ninguna cadena de llamadas.</span><span class="sxs-lookup"><span data-stu-id="2012e-108">No call chain has been initiated.</span></span>|  
+|`CHAIN_CLASS_INIT`|<span data-ttu-id="2012e-109">Un constructor inició la cadena.</span><span class="sxs-lookup"><span data-stu-id="2012e-109">The chain was initiated by a constructor.</span></span>|  
+|`CHAIN_EXCEPTION_FILTER`|<span data-ttu-id="2012e-110">Un constructor inició la cadena.</span><span class="sxs-lookup"><span data-stu-id="2012e-110">The chain was initiated by an exception filter.</span></span>|  
+|`CHAIN_SECURITY`|<span data-ttu-id="2012e-111">El código que exige la seguridad inició la cadena.</span><span class="sxs-lookup"><span data-stu-id="2012e-111">The chain was initiated by code that enforces security.</span></span>|  
+|`CHAIN_CONTEXT_POLICY`|<span data-ttu-id="2012e-112">Una directiva de contexto inició la cadena.</span><span class="sxs-lookup"><span data-stu-id="2012e-112">The chain was initiated by a context policy.</span></span>|  
+|`CHAIN_INTERCEPTION`|<span data-ttu-id="2012e-113">No usado.</span><span class="sxs-lookup"><span data-stu-id="2012e-113">Not used.</span></span>|  
+|`CHAIN_PROCESS_START`|<span data-ttu-id="2012e-114">No usado.</span><span class="sxs-lookup"><span data-stu-id="2012e-114">Not used.</span></span>|  
+|`CHAIN_THREAD_START`|<span data-ttu-id="2012e-115">El inicio de la ejecución de un subproceso inició la cadena.</span><span class="sxs-lookup"><span data-stu-id="2012e-115">The chain was initiated by the start of a thread execution.</span></span>|  
+|`CHAIN_ENTER_MANAGED`|<span data-ttu-id="2012e-116">Una entrada en código administrado inició la cadena.</span><span class="sxs-lookup"><span data-stu-id="2012e-116">The chain was initiated by entry into managed code.</span></span>|  
+|`CHAIN_ENTER_UNMANAGED`|<span data-ttu-id="2012e-117">Una entrada en código no administrado inició la cadena.</span><span class="sxs-lookup"><span data-stu-id="2012e-117">The chain was initiated by entry into unmanaged code.</span></span>|  
+|`CHAIN_DEBUGGER_EVAL`|<span data-ttu-id="2012e-118">No usado.</span><span class="sxs-lookup"><span data-stu-id="2012e-118">Not used.</span></span>|  
+|`CHAIN_CONTEXT_SWITCH`|<span data-ttu-id="2012e-119">No usado.</span><span class="sxs-lookup"><span data-stu-id="2012e-119">Not used.</span></span>|  
+|`CHAIN_FUNC_EVAL`|<span data-ttu-id="2012e-120">Una evaluación de función inició la cadena.</span><span class="sxs-lookup"><span data-stu-id="2012e-120">The chain was initiated by a function evaluation.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="5f347-121">Comentarios</span><span class="sxs-lookup"><span data-stu-id="5f347-121">Remarks</span></span>  
- <span data-ttu-id="5f347-122">Use la [ICorDebugChain:: GetReason](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-getreason-method.md) método para determinar las razones para la iniciación de una cadena de llamadas.</span><span class="sxs-lookup"><span data-stu-id="5f347-122">Use the [ICorDebugChain::GetReason](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-getreason-method.md) method to ascertain the reasons for the initiation of a call chain.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="2012e-121">Comentarios</span><span class="sxs-lookup"><span data-stu-id="2012e-121">Remarks</span></span>  
+ <span data-ttu-id="2012e-122">Use la [ICorDebugChain:: GetReason](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-getreason-method.md) método para determinar las razones para la iniciación de una cadena de llamadas.</span><span class="sxs-lookup"><span data-stu-id="2012e-122">Use the [ICorDebugChain::GetReason](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-getreason-method.md) method to ascertain the reasons for the initiation of a call chain.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="5f347-123">Requisitos</span><span class="sxs-lookup"><span data-stu-id="5f347-123">Requirements</span></span>  
- <span data-ttu-id="5f347-124">**Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="5f347-124">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="2012e-123">Requisitos</span><span class="sxs-lookup"><span data-stu-id="2012e-123">Requirements</span></span>  
+ <span data-ttu-id="2012e-124">**Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="2012e-124">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="5f347-125">**Encabezado:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="5f347-125">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="2012e-125">**Encabezado:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="2012e-125">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="5f347-126">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="5f347-126">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="2012e-126">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="2012e-126">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="5f347-127">**Versiones de .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5f347-127">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="2012e-127">**Versiones de .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2012e-127">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5f347-128">Vea también</span><span class="sxs-lookup"><span data-stu-id="5f347-128">See Also</span></span>  
- [<span data-ttu-id="5f347-129">Enumeraciones de depuración</span><span class="sxs-lookup"><span data-stu-id="5f347-129">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+## <a name="see-also"></a><span data-ttu-id="2012e-128">Vea también</span><span class="sxs-lookup"><span data-stu-id="2012e-128">See Also</span></span>  
+ [<span data-ttu-id="2012e-129">Enumeraciones de depuración</span><span class="sxs-lookup"><span data-stu-id="2012e-129">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

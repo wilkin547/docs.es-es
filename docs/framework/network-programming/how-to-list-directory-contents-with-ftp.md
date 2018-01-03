@@ -12,16 +12,17 @@ caps.latest.revision: "5"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: f5f74b215fb753d8d5a12a3e203b8598fc258053
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: b3c0a5090709999ee5ab17e857bb5334d6982954
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="how-to-list-directory-contents-with-ftp"></a><span data-ttu-id="74d5b-102">Cómo: enumerar los contenidos del directorio con FTP</span><span class="sxs-lookup"><span data-stu-id="74d5b-102">How to: List Directory Contents with FTP</span></span>
-<span data-ttu-id="74d5b-103">En este ejemplo se muestra cómo enumerar el contenido del directorio de un servidor FTP.</span><span class="sxs-lookup"><span data-stu-id="74d5b-103">This sample shows how to list the directory contents of an FTP server.</span></span>  
+# <a name="how-to-list-directory-contents-with-ftp"></a><span data-ttu-id="1c466-102">Cómo: enumerar los contenidos del directorio con FTP</span><span class="sxs-lookup"><span data-stu-id="1c466-102">How to: List Directory Contents with FTP</span></span>
+<span data-ttu-id="1c466-103">En este ejemplo se muestra cómo enumerar el contenido del directorio de un servidor FTP.</span><span class="sxs-lookup"><span data-stu-id="1c466-103">This sample shows how to list the directory contents of an FTP server.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="74d5b-104">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="74d5b-104">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="1c466-104">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="1c466-104">Example</span></span>  
   
 ```csharp  
 using System;  
@@ -57,11 +58,11 @@ namespace Examples.System.Net
 }  
 ```  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="74d5b-105">Compilar el código</span><span class="sxs-lookup"><span data-stu-id="74d5b-105">Compiling the Code</span></span>  
- <span data-ttu-id="74d5b-106">Para este ejemplo se necesita:</span><span class="sxs-lookup"><span data-stu-id="74d5b-106">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="1c466-105">Compilar el código</span><span class="sxs-lookup"><span data-stu-id="1c466-105">Compiling the Code</span></span>  
+ <span data-ttu-id="1c466-106">Para este ejemplo se necesita:</span><span class="sxs-lookup"><span data-stu-id="1c466-106">This example requires:</span></span>  
   
--   <span data-ttu-id="74d5b-107">Referencias al espacio de nombres **System.Net**.</span><span class="sxs-lookup"><span data-stu-id="74d5b-107">References to the **System.Net** namespace.</span></span>  
+-   <span data-ttu-id="1c466-107">Referencias al espacio de nombres **System.Net**.</span><span class="sxs-lookup"><span data-stu-id="1c466-107">References to the **System.Net** namespace.</span></span>  
   
-## <a name="robust-programming"></a><span data-ttu-id="74d5b-108">Programación sólida</span><span class="sxs-lookup"><span data-stu-id="74d5b-108">Robust Programming</span></span>  
+## <a name="robust-programming"></a><span data-ttu-id="1c466-108">Programación sólida</span><span class="sxs-lookup"><span data-stu-id="1c466-108">Robust Programming</span></span>  
   
-## <a name="net-framework-security"></a><span data-ttu-id="74d5b-109">Seguridad de .NET Framework</span><span class="sxs-lookup"><span data-stu-id="74d5b-109">.NET Framework Security</span></span>
+## <a name="net-framework-security"></a><span data-ttu-id="1c466-109">Seguridad de .NET Framework</span><span class="sxs-lookup"><span data-stu-id="1c466-109">.NET Framework Security</span></span>

@@ -13,15 +13,16 @@ caps.latest.revision: "3"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 52f2b474a5c3d9b9a1a2d412ef787f722a6dc380
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 8c21576fd9c9e1a778a40913c536d43f52ab4564
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="wif-extensions"></a><span data-ttu-id="47dcf-102">Extensiones WIF</span><span class="sxs-lookup"><span data-stu-id="47dcf-102">WIF Extensions</span></span>
-<span data-ttu-id="47dcf-103">En esta sección se describen las extensiones para Windows Identity Foundation.</span><span class="sxs-lookup"><span data-stu-id="47dcf-103">This section describes the extensions for Windows Identity Foundation.</span></span>  
+# <a name="wif-extensions"></a><span data-ttu-id="1664a-102">Extensiones WIF</span><span class="sxs-lookup"><span data-stu-id="1664a-102">WIF Extensions</span></span>
+<span data-ttu-id="1664a-103">En esta sección se describen las extensiones para Windows Identity Foundation.</span><span class="sxs-lookup"><span data-stu-id="1664a-103">This section describes the extensions for Windows Identity Foundation.</span></span>  
   
--   [<span data-ttu-id="47dcf-104">Controlador de token web de JSON</span><span class="sxs-lookup"><span data-stu-id="47dcf-104">JSON Web Token Handler</span></span>](../../../docs/framework/security/json-web-token-handler.md)  
+-   [<span data-ttu-id="1664a-104">Controlador de token web de JSON</span><span class="sxs-lookup"><span data-stu-id="1664a-104">JSON Web Token Handler</span></span>](../../../docs/framework/security/json-web-token-handler.md)  
   
--   [<span data-ttu-id="47dcf-105">Validar el Registro de nombres de emisores</span><span class="sxs-lookup"><span data-stu-id="47dcf-105">Validating Issuer Name Registry</span></span>](../../../docs/framework/security/validating-issuer-name-registry.md)
+-   [<span data-ttu-id="1664a-105">Validar el Registro de nombres de emisores</span><span class="sxs-lookup"><span data-stu-id="1664a-105">Validating Issuer Name Registry</span></span>](../../../docs/framework/security/validating-issuer-name-registry.md)
