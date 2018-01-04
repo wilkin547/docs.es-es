@@ -20,11 +20,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8e7cb01c81b5fb24830cbe0cc39befbadaf4405e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 78d90414d86d06040065ad8ae18a037412723ce0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-override-metadata-for-a-dependency-property"></a>Cómo: Invalidar metadatos en una propiedad de dependencia
 Este ejemplo muestra cómo invalidar los metadatos de propiedad de dependencia predeterminados que proceden de una clase heredada, mediante una llamada a la <xref:System.Windows.DependencyProperty.OverrideMetadata%2A> método y proporcionar metadatos específicos del tipo.  
@@ -45,4 +46,4 @@ Este ejemplo muestra cómo invalidar los metadatos de propiedad de dependencia p
  <xref:System.Windows.DependencyProperty>  
  [Información general sobre las propiedades de dependencia](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)  
  [Propiedades de dependencia personalizadas](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)  
- [Temas de procedimientos](../../../../docs/framework/wpf/advanced/properties-how-to-topics.md)
+ [Temas "Cómo..."](../../../../docs/framework/wpf/advanced/properties-how-to-topics.md)

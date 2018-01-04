@@ -17,11 +17,12 @@ caps.latest.revision: "67"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3046e88e26e16172a9c7e6c50123145ce7664f28
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 0616507752c3053b71b2f050997eacfea22240a1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-in-wpf-applications"></a>Windows en aplicaciones para WPF
 Los usuarios interactúan con las aplicaciones a través de windows. El objetivo fundamental de una ventana es hospedar y mostrar el contenido. El tipo de contenido que una ventana hospeda depende del tipo de datos que una aplicación funciona a través de, que puede incluir multimedia, páginas de lenguaje de marcado de aplicaciones Extensible (XAML), páginas Web, documentos, tablas de base de datos y registros e información del sistema.  
@@ -29,7 +30,7 @@ Los usuarios interactúan con las aplicaciones a través de windows. El objetivo
 ## <a name="in-this-section"></a>En esta sección  
  [Información general sobre ventanas de WPF](../../../../docs/framework/wpf/app-development/wpf-windows-overview.md)  
  [Información general sobre cuadros de diálogo](../../../../docs/framework/wpf/app-development/dialog-boxes-overview.md)  
- [Temas de procedimientos](../../../../docs/framework/wpf/app-development/window-management-how-to-topics.md)  
+ [Temas "Cómo..."](../../../../docs/framework/wpf/app-development/window-management-how-to-topics.md)  
   
 ## <a name="reference"></a>Referencia  
  <xref:System.Windows.Window>  

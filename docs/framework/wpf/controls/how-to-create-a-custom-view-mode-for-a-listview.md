@@ -17,11 +17,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c62bcb14f444490991b36dc21eb7676a67007906
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e67777b5568214dff889088708db166efc6ae4dd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-custom-view-mode-for-a-listview"></a>Cómo: Crear un modo de vista personalizado para un control ListView
 Este ejemplo muestra cómo crear una personalizada <xref:System.Windows.Controls.ListView.View%2A> modo para un <xref:System.Windows.Controls.ListView> control.  
@@ -54,6 +55,6 @@ Este ejemplo muestra cómo crear una personalizada <xref:System.Windows.Controls
 ## <a name="see-also"></a>Vea también  
  <xref:System.Windows.Controls.ListView>  
  <xref:System.Windows.Controls.GridView>  
- [Temas de procedimientos](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)  
+ [Temas "Cómo..."](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)  
  [Información general sobre ListView](../../../../docs/framework/wpf/controls/listview-overview.md)  
  [Información general sobre GridView](../../../../docs/framework/wpf/controls/gridview-overview.md)

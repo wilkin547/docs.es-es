@@ -21,11 +21,12 @@ caps.latest.revision: "25"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: d006c8d0937a454dcbe092dcc3e35c4644088e59
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 647bfed7b321a949090f6da047f9b8105d335101
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="xstatic-markup-extension"></a>Extensiones de marcado x:Static
 Hace referencia a cualquier entidad de código por valor estático que se define en un [!INCLUDE[TLA#tla_cls](../../../includes/tlasharptla-cls-md.md)]: modo compatible. La propiedad estática que se hace referencia puede usarse para proporcionar el valor de una propiedad en XAML.  
@@ -41,8 +42,8 @@ Hace referencia a cualquier entidad de código por valor estático que se define
 |||  
 |-|-|  
 |`prefix`|Opcional. Un prefijo que hace referencia a un espacio de nombres XAML asignado, no predeterminado. `prefix`se muestra explícitamente el uso de porque rara vez hacen referencia a propiedades estáticas que proceden de un espacio de nombres XAML predeterminado. Vea la sección Comentarios.|  
-|`typeName`|Obligatorio. El nombre del tipo que define al miembro estático deseado.|  
-|`staticMemberName`|Obligatorio. El nombre del miembro de valor estático deseado (una constante, una propiedad estática, un campo o un valor de enumeración).|  
+|`typeName`|Requerido. El nombre del tipo que define al miembro estático deseado.|  
+|`staticMemberName`|Requerido. El nombre del miembro de valor estático deseado (una constante, una propiedad estática, un campo o un valor de enumeración).|  
   
 ## <a name="remarks"></a>Comentarios  
  La entidad de código que se hace referencia debe ser uno de los siguientes:  

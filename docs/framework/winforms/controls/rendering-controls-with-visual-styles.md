@@ -21,11 +21,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e463e1571b33e8ed877bd79d980e2f24d336a7df
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 127e3c411b4c75e5a2bd9f133defc447992b95f6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="rendering-controls-with-visual-styles"></a>Representar controles con estilos visuales
 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] proporciona compatibilidad para representar controles y otros elementos de la interfaz de usuario (IU) de Windows usando estilos visuales en los sistemas operativos compatibles. En este tema se tratan los distintos niveles de compatibilidad de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] para representar controles y otros elementos de IU con el estilo visual actual del sistema operativo.  
@@ -71,7 +72,7 @@ ms.lasthandoff: 10/22/2017
  Para obtener más información sobre el uso de <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> y <xref:System.Windows.Forms.VisualStyles.VisualStyleElement>, consulte [How to: Render a Visual Style Element](../../../../docs/framework/winforms/controls/how-to-render-a-visual-style-element.md).  
   
 ## <a name="enabling-visual-styles"></a>Habilitar los estilos visuales  
- Para habilitar los estilos visuales de una aplicación escrita para la versión 1.0 de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] , los programadores deben incluir un manifiesto de aplicación que especifique que se usará la versión 6 o posterior de ComCtl32.dll para dibujar los controles. Para las aplicaciones compiladas con la versión 1.1 o posterior de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], se puede usar el método <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType> de la clase <xref:System.Windows.Forms.Application>.  
+ Para habilitar los estilos visuales de una aplicación escrita para la versión 1.0 de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], los programadores deben incluir un manifiesto de aplicación que especifique que se usará la versión 6 o posterior de ComCtl32.dll para dibujar los controles. Para las aplicaciones compiladas con la versión 1.1 o posterior de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], se puede usar el método <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType> de la clase <xref:System.Windows.Forms.Application>.  
   
 ## <a name="checking-for-visual-styles-support"></a>Comprobar la compatibilidad de los estilos visuales  
  La propiedad <xref:System.Windows.Forms.Application.RenderWithVisualStyles%2A> de la clase <xref:System.Windows.Forms.Application> indica si la aplicación actual dibuja los controles con estilos visuales. Al pintar un control personalizado, puede comprobar el valor de <xref:System.Windows.Forms.Application.RenderWithVisualStyles%2A> para determinar si debe representar el control con o sin estilos visuales. En la siguiente tabla se muestran las cuatro condiciones que deben cumplirse para que <xref:System.Windows.Forms.Application.RenderWithVisualStyles%2A> devuelva `true`.  

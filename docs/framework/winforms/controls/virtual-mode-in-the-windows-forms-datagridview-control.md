@@ -14,11 +14,12 @@ caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 10c6afbcde22a82e6227ce1d95d57749bee1a88c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 06c5bb1d4a36d51bb07d59b48c730f722af23f8c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="virtual-mode-in-the-windows-forms-datagridview-control"></a>Modo virtual del control DataGridView de formularios Windows Forms
 Con el modo virtual, puede administrar la interacción entre el <xref:System.Windows.Forms.DataGridView> control y una memoria caché de datos personalizados. Para implementar el modo virtual, establezca la <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> propiedad `true` y administrar uno o varios de los eventos descritos en este tema. Normalmente controlará por lo menos el `CellValueNeeded` eventos, lo que permite el control buscar valores en la caché de datos.  
@@ -49,7 +50,7 @@ Con el modo virtual, puede administrar la interacción entre el <xref:System.Win
   
  Los siguientes eventos se producen solo cuando la <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> propiedad está establecida en `true`.  
   
-|Evento|Descripción|  
+|evento|Descripción|  
 |-----------|-----------------|  
 |<xref:System.Windows.Forms.DataGridView.CellValueNeeded>|Utilizados por el control para recuperar un valor de celda de la caché de datos para su presentación. Este evento sólo se produce para las celdas de las columnas sin enlazar.|  
 |<xref:System.Windows.Forms.DataGridView.CellValuePushed>|Utiliza el control para confirmar proporcionados por el usuario para una celda en la caché de datos. Este evento sólo se produce para las celdas de las columnas sin enlazar.<br /><br /> Llame a la <xref:System.Windows.Forms.DataGridView.UpdateCellValue%2A> método cuando se cambia un valor almacenado en caché fuera de un <xref:System.Windows.Forms.DataGridView.CellValuePushed> controlador de eventos para asegurarse de que el valor actual se muestra en el control y para aplicar los modos de ajuste automático de tamaño actualmente en vigor.|  

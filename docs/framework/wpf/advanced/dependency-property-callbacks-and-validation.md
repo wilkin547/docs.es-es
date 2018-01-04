@@ -22,11 +22,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0d1b62c7f49653627c626bce2583b2799df931dc
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 15ba7f3315b2ce71357bd4735e2dfca1b3de616d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="dependency-property-callbacks-and-validation"></a>Devoluciones de llamada y validación de las propiedades de dependencia
 En este tema se describe cómo crear propiedades de dependencia mediante implementaciones personalizadas alternativas de características relacionadas con las propiedades, como la determinación de la validación, las devoluciones de llamada que se invocan cuando cambia el valor efectivo de la propiedad y la invalidación de posibles influencias externas en la determinación del valor. En este tema también se describen los escenarios donde es apropiado expandir los comportamientos predeterminados del sistema de propiedades mediante estas técnicas.  

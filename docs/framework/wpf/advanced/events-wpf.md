@@ -18,11 +18,12 @@ caps.latest.revision: "73"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: dda7f9497751356c4c650e7fb672f7721ec3dd09
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: cf622066bbfca8260670ca139f4acfe9affca07e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="events-wpf"></a>Eventos (WPF)
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] presenta los eventos enrutados, que pueden invocar controladores que existen en varios agentes de escucha en el árbol de elementos de una aplicación.  
@@ -54,5 +55,5 @@ ms.lasthandoff: 10/22/2017
   [Entrada](../../../../docs/framework/wpf/advanced/input-wpf.md)  
   [Recursos](../../../../docs/framework/wpf/advanced/resources-wpf.md)  
   [Aplicar estilos y plantillas](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
-  [Modelo de contenido de WPF](../../../../docs/framework/wpf/controls/wpf-content-model.md)  
+  [WPF Content Model](../../../../docs/framework/wpf/controls/wpf-content-model.md) (Modelo de contenido de WPF)  
   [Modelo de subprocesos](../../../../docs/framework/wpf/advanced/threading-model.md)

@@ -19,11 +19,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: bbfb61db786286209ed24e79026d4759a46c84d8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f645a5719425742ba02f8f9056ca788fd6fdb931
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="change-selection-in-a-richtextbox-programmatically"></a>Cambiar mediante programación la selección en un control RichTextBox
 Este ejemplo muestra cómo cambiar mediante programación la selección actual en un <xref:System.Windows.Controls.RichTextBox>. Esta selección es el mismo, como si el usuario hubiera seleccionado el contenido mediante la interfaz de usuario.  

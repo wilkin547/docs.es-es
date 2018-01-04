@@ -20,11 +20,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 85ee852c868f26937494d5d340d2db4210224754
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 5314f39c3012826f25fa6c64baf7eb8e42329f58
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-use-the-attached-properties-of-canvas-to-position-child-elements"></a>Cómo: Utilizar las propiedades asociadas de Canvas para situar elementos secundarios
 Este ejemplo muestra cómo utilizar las propiedades asociadas de <xref:System.Windows.Controls.Canvas> para colocar los elementos secundarios.  
@@ -44,5 +45,5 @@ Este ejemplo muestra cómo utilizar las propiedades asociadas de <xref:System.Wi
  <xref:System.Windows.Controls.Canvas.Top%2A>  
  <xref:System.Windows.Controls.Button>  
  [Información general sobre elementos Panel](../../../../docs/framework/wpf/controls/panels-overview.md)  
- [Temas de procedimientos](../../../../docs/framework/wpf/controls/canvas-how-to-topics.md)  
+ [Temas "Cómo..."](../../../../docs/framework/wpf/controls/canvas-how-to-topics.md)  
  [Información general sobre propiedades asociadas](../../../../docs/framework/wpf/advanced/attached-properties-overview.md)

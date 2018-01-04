@@ -17,11 +17,12 @@ caps.latest.revision: "26"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 44574b5737873371f9a7bc9be2d851a8ae1e101b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 099584ff5149891f406d5ad24a28a6b3e3faafb4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="gridview-overview"></a>Información general sobre GridView
 <xref:System.Windows.Controls.GridView>modo de vista es uno de los modos de vista para un <xref:System.Windows.Controls.ListView> control. La <xref:System.Windows.Controls.GridView> clase y sus clases auxiliares permiten que usted y los usuarios ver el elemento colecciones en una tabla que normalmente utiliza botones como encabezados de columna interactivos. Este tema se presentan los <xref:System.Windows.Controls.GridView> clase y se describe su uso.  
@@ -148,4 +149,4 @@ ms.lasthandoff: 11/21/2017
  <xref:System.Windows.Controls.ViewBase>  
  [Información general sobre ListView](../../../../docs/framework/wpf/controls/listview-overview.md)  
  [Ordenar una columna de GridView cuando se hace clic en un encabezado](../../../../docs/framework/wpf/controls/how-to-sort-a-gridview-column-when-a-header-is-clicked.md)  
- [Temas de procedimientos](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)
+ [Temas "Cómo..."](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)

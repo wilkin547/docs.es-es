@@ -19,11 +19,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 15e24e0350071fabd32342402abdf497937ee90d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 45dab820072b3eb0bcc448ce32251e3ff5a3e622
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="toolstrip-control-overview-windows-forms"></a>Información sobre el control ToolStrip (formularios Windows Forms)
 Los formularios Windows Forms <xref:System.Windows.Forms.ToolStrip> control y sus clases asociadas proporcionan un marco común para combinar elementos de la interfaz de usuario en las barras de herramientas, barras de estado y menús. <xref:System.Windows.Forms.ToolStrip>controles de ofrecen una experiencia en tiempo de diseño enriquecida que incluye la edición y activación en contexto, el diseño personalizado y espacio compartido, que es la capacidad de las barras de herramientas para compartir el espacio horizontal o vertical.  
@@ -55,7 +56,7 @@ Los formularios Windows Forms <xref:System.Windows.Forms.ToolStrip> control y su
   
 ### <a name="important-toolstrip-members"></a>Miembros importantes de ToolStrip  
   
-|Nombre|Descripción|  
+|nombre|Descripción|  
 |----------|-----------------|  
 |<xref:System.Windows.Forms.ToolStrip.Dock%2A>|Obtiene o establece el borde del contenedor primario un <xref:System.Windows.Forms.ToolStrip> está acoplado.|  
 |<xref:System.Windows.Forms.ToolStrip.AllowItemReorder%2A>|Obtiene o establece un valor que indica si la clase <xref:System.Windows.Forms.ToolStrip> controla la organización de elementos y las operaciones de arrastrar y colocar de forma privada|  
@@ -71,7 +72,7 @@ Los formularios Windows Forms <xref:System.Windows.Forms.ToolStrip> control y su
   
 ### <a name="important-toolstrip-companion-classes"></a>Clases complementarias importantes de ToolStrip  
   
-|Nombre|Descripción|  
+|nombre|Descripción|  
 |----------|-----------------|  
 |<xref:System.Windows.Forms.MenuStrip>|Reemplaza y agrega funcionalidad a la <xref:System.Windows.Forms.MainMenu> clase.|  
 |<xref:System.Windows.Forms.StatusStrip>|Reemplaza y agrega funcionalidad a la <xref:System.Windows.Forms.StatusBar> clase.|  

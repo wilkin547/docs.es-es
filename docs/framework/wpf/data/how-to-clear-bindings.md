@@ -20,11 +20,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9f8e009d00960f40abcd3c3913a15fa51f1be4f6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: af45d504eb4e7d45808f787925a90c8e0ed19476
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-clear-bindings"></a>Cómo: Borrar enlaces
 En este ejemplo se muestra cómo borrar los enlaces de un objeto.  
@@ -42,4 +43,4 @@ En este ejemplo se muestra cómo borrar los enlaces de un objeto.
 ## <a name="see-also"></a>Vea también  
  <xref:System.Windows.Data.BindingOperations>  
  [Información general sobre el enlace de datos](../../../../docs/framework/wpf/data/data-binding-overview.md)  
- [Temas de procedimientos](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+ [Temas "Cómo..."](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)

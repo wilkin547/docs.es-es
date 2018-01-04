@@ -20,11 +20,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1895507c30ad5267d4c2b1afff3acf004e872d40
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ae6d9439ad76258105d615960bd05ecf458eb613
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-scroll-content-by-using-the-iscrollinfo-interface"></a>Cómo: Desplazarse por contenido utilizando la interfaz IScrollInfo
 Este ejemplo muestra cómo desplazarse por el contenido mediante el uso de la <xref:System.Windows.Controls.Primitives.IScrollInfo> interfaz.  
@@ -44,5 +45,5 @@ Este ejemplo muestra cómo desplazarse por el contenido mediante el uso de la <x
  <xref:System.Windows.Controls.Primitives.IScrollInfo>  
  <xref:System.Windows.Controls.StackPanel>  
  [Información general sobre ScrollViewer](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)  
- [Temas de procedimientos](../../../../docs/framework/wpf/controls/scrollviewer-how-to-topics.md)  
+ [Temas "Cómo..."](../../../../docs/framework/wpf/controls/scrollviewer-how-to-topics.md)  
  [Información general sobre elementos Panel](../../../../docs/framework/wpf/controls/panels-overview.md)

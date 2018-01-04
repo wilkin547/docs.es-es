@@ -17,11 +17,12 @@ caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d1b414aee19082196ab242706c7730c031cf3a76
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1b8008d104437454f36f6f425634c40968d5481a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="optimizing-performance-controls"></a>Optimizar el rendimiento: Controles
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] incluye muchos de los componentes de interfaz de usuario (UI) comunes que se usan en la mayoría de las aplicaciones Windows. Este tema contiene técnicas para mejorar el rendimiento de la interfaz de usuario.  
@@ -42,7 +43,7 @@ ms.lasthandoff: 11/21/2017
   
 -   Establecer <xref:System.Windows.Controls.ScrollViewer.CanContentScroll%2A> a `false`.  
   
--   Establecer <!--zz <xref:System.Windows.Controls.VirtualizingStackPanel.IsVirtualizing%2A>--> `IsVirtualizing` a `false`.    
+-   Establecer <!--zz <xref:System.Windows.Controls.VirtualizingStackPanel.IsVirtualizing%2A>--> `IsVirtualizing` a `false`.  
   
  Una consideración importante que se debe tener en cuenta al virtualizar contenedores de elementos es si tiene información adicional de estado asociada a un contenedor de elemento que pertenece al elemento. Si es el caso, debe guardar el estado adicional. Por ejemplo, podría tener un elemento de un <xref:System.Windows.Controls.Expander> control y la <xref:System.Windows.Controls.Expander.IsExpanded%2A> estado enlazado al contenedor del elemento y no el propio elemento. Cuando el contenedor se reutiliza para un nuevo elemento, el valor actual de <xref:System.Windows.Controls.Expander.IsExpanded%2A> se usa para el nuevo elemento. Además, el elemento antiguo pierde el valor correcto <xref:System.Windows.Controls.Expander.IsExpanded%2A> valor.  
   

@@ -14,11 +14,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b5ba089c671fe54afe1c97da0a7bd786949cb5c1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 9226ac10e4f221cc381b7c59179b2667e20aa757
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-stackpanel"></a>Cómo: Crear un StackPanel
 Este ejemplo muestra cómo crear un <xref:System.Windows.Controls.StackPanel>.  
@@ -55,4 +56,4 @@ Este ejemplo muestra cómo crear un <xref:System.Windows.Controls.StackPanel>.
 ## <a name="see-also"></a>Vea también  
  <xref:System.Windows.Controls.StackPanel>  
  [Información general sobre elementos Panel](../../../../docs/framework/wpf/controls/panels-overview.md)  
- [Temas de procedimientos](../../../../docs/framework/wpf/controls/stackpanel-how-to-topics.md)
+ [Temas "Cómo..."](../../../../docs/framework/wpf/controls/stackpanel-how-to-topics.md)

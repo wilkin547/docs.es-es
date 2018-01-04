@@ -17,17 +17,18 @@ caps.latest.revision: "62"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 81217c3ce9ee9f29b92ad63cb94c61bf6a316b0d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: b59711d308d267cb30be134e4fd35bbb69f8ebc5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="dockpanel"></a>DockPanel
 El <xref:System.Windows.Controls.DockPanel> elemento se utiliza para colocar el contenido secundario a lo largo del borde de un contenedor de diseño.  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Temas de procedimientos](../../../../docs/framework/wpf/controls/dockpanel-how-to-topics.md)  
+ [Temas "Cómo..."](../../../../docs/framework/wpf/controls/dockpanel-how-to-topics.md)  
   
 ## <a name="reference"></a>Referencia  
  <xref:System.Windows.Controls.Panel>  

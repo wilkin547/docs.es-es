@@ -24,11 +24,12 @@ caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c86a3d420b85c1287597cda738c6d72f0433d0f7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c31e76e9f190990f0a3dddab359ef9523783d955
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-authoring-a-composite-control-with-visual-basic"></a>Tutorial: Crear un control compuesto con Visual Basic
 Los controles compuestos proporcionan una forma de crear y reutilizar interfaces gráficas personalizadas. Un control compuesto es esencialmente un componente con una representación visual. Como tal, puede constar de uno o varios controles de Windows Forms, componentes o bloques de código que pueden extender funcionalidad al validar la entrada del usuario, modificar propiedades de presentación o realizar otras tareas requeridas por el autor. Los controles compuestos se pueden colocar en Windows Forms de la misma manera que otros controles. En la primera parte de este tutorial, creará un control compuesto simple denominado `ctlClock`. En la segunda parte, extenderá la funcionalidad de `ctlClock` mediante herencia.  
@@ -67,10 +68,10 @@ Los controles compuestos proporcionan una forma de crear y reutilizar interfaces
   
 3.  En el diseñador, haga clic en **label1**. En la ventana Propiedades, establezca las propiedades siguientes.  
   
-    |Propiedad|Cambiar a|  
+    |Property|Cambiar a|  
     |--------------|---------------|  
-    |**Nombre**|`lblDisplay`|  
-    |**Text**|`(blank space)`|  
+    |**Name**|`lblDisplay`|  
+    |**Texto**|`(blank space)`|  
     |**TextAlign**|`MiddleCenter`|  
     |**Font.Size**|`14`|  
   
@@ -157,7 +158,7 @@ Los controles compuestos proporcionan una forma de crear y reutilizar interfaces
 4.  En el menú **Archivo**, haga clic en **Guardar todo** para guardar el proyecto.  
   
 ## <a name="testing-the-control"></a>Probar el control  
- Los controles no son proyectos independientes; deben hospedarse en un contenedor. Pruebe el comportamiento en tiempo de ejecución del control y sus propiedades con **UserControl Test Container**. Para más información, consulte [Cómo: Comprobar el comportamiento de un control UserControl en tiempo de ejecución](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md).  
+ Los controles no son proyectos independientes; deben hospedarse en un contenedor. Pruebe el comportamiento en tiempo de ejecución del control y sus propiedades con **UserControl Test Container**. Para más información, consulte [Cómo: Comprobar el comportamiento de un control de usuario en tiempo de ejecución](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md).  
   
 #### <a name="to-test-your-control"></a>Para probar el control  
   
@@ -252,10 +253,10 @@ Los controles compuestos proporcionan una forma de crear y reutilizar interfaces
   
 4.  Con el mouse, arrastre el <xref:System.Windows.Forms.Label> control inmediatamente debajo del cuadro de visualización. En la ventana Propiedades, establezca las propiedades siguientes.  
   
-    |Propiedad|Parámetro|  
+    |Property|Parámetro|  
     |--------------|-------------|  
-    |**Nombre**|`lblAlarm`|  
-    |**Text**|**¡Alarma!**|  
+    |**Name**|`lblAlarm`|  
+    |**Texto**|**¡Alarma!**|  
     |**TextAlign**|`MiddleCenter`|  
     |**Visible**|`False`|  
   
@@ -368,9 +369,9 @@ Los controles compuestos proporcionan una forma de crear y reutilizar interfaces
   
     |Control|Propiedad|Valor|  
     |-------------|--------------|-----------|  
-    |`label1`|**Text**|`(blank space)`|  
-    ||**Nombre**|`lblTest`|  
-    |`dateTimePicker1`|**Nombre**|`dtpTest`|  
+    |`label1`|**Texto**|`(blank space)`|  
+    ||**Name**|`lblTest`|  
+    |`dateTimePicker1`|**Name**|`dtpTest`|  
     ||**Format**|<xref:System.Windows.Forms.DateTimePickerFormat.Time>|  
   
 12. En el diseñador, haga doble clic en **dtpTest**.  

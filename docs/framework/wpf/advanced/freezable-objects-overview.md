@@ -20,11 +20,12 @@ caps.latest.revision: "30"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 49778dc9551652ee4a4d36426b4b396652b9dcd2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 7390181570c6deeea77e5e76493a62e84107286b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="freezable-objects-overview"></a>Información general sobre objetos Freezable
 Este tema describe cómo utilizar y crear de forma eficaz <xref:System.Windows.Freezable> objetos, que proporcionan características especiales que pueden ayudar a mejorar el rendimiento de la aplicación. Pinceles, lápices, las transformaciones, las geometrías y las animaciones son ejemplos de objetos freezable.  

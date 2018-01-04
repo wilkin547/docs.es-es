@@ -19,11 +19,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8f50923d9e314d2f677e26416cef59fdf380213e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 79669bdc4b5f9cfb8bdac92efa07e932cc14ac57
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="timing-events-overview"></a>Información general sobre eventos de control de tiempo
 Este tema describe cómo utilizar los cinco eventos de control de tiempo disponible en <xref:System.Windows.Media.Animation.Timeline> y <xref:System.Windows.Media.Animation.Clock> objetos.  
@@ -64,7 +65,7 @@ Este tema describe cómo utilizar los cinco eventos de control de tiempo disponi
 ## <a name="public-events"></a>Eventos públicos  
  El <xref:System.Windows.Media.Animation.Timeline> y <xref:System.Windows.Media.Animation.Clock> clases proporcionan cinco eventos de control de tiempo. En la tabla siguiente se enumeran estos eventos y las condiciones que los desencadenan.  
   
-|Evento|Operación interactiva desencadenante|Otros desencadenadores|  
+|evento|Operación interactiva desencadenante|Otros desencadenadores|  
 |-----------|--------------------------------------|--------------------|  
 |**Completed**|Omitir hasta completar|El reloj se completa.|  
 |**CurrentGlobalSpeedInvalidated**|Pausar, reanudar, buscar, establecer la relación de velocidad, omitir hasta completar, detener|El reloj se invierte, acelera, inicia o detiene.|  

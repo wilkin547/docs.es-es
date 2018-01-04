@@ -20,11 +20,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0eb555bb9f21385d2d0b66fe0dd39112c8350dec
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 760b59bfa0d556974109ccc0211c021ee76df5dc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-bind-to-an-adonet-data-source"></a>Cómo: Enlazar a un origen de datos ADO.NET
 Este ejemplo muestra cómo enlazar un [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <xref:System.Windows.Controls.ListBox> el control a un [!INCLUDE[TLA#tla_adonet](../../../../includes/tlasharptla-adonet-md.md)] `DataSet`.  
@@ -48,4 +49,4 @@ Este ejemplo muestra cómo enlazar un [!INCLUDE[TLA#tla_winclient](../../../../i
 ## <a name="see-also"></a>Vea también  
  <xref:System.Windows.Data.BindingListCollectionView>  
  [Información general sobre el enlace de datos](../../../../docs/framework/wpf/data/data-binding-overview.md)  
- [Temas de procedimientos](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+ [Temas "Cómo..."](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)

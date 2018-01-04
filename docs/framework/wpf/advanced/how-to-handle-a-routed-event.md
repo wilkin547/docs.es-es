@@ -19,11 +19,12 @@ caps.latest.revision: "23"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 83f59f2df9311f30995b18529a733a5569c85ee0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c491ff4e231d932b3714d2d059b52bad2502368c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-handle-a-routed-event"></a>Cómo: Controlar un evento enrutado
 En este ejemplo se muestra cómo funciona la propagación de eventos y cómo se escribe un controlador capaz de procesar los datos de eventos enrutados.  
@@ -48,5 +49,5 @@ En este ejemplo se muestra cómo funciona la propagación de eventos y cómo se 
  <xref:System.Windows.RoutedEvent>  
  [Información general sobre acciones del usuario](../../../../docs/framework/wpf/advanced/input-overview.md)  
  [Información general sobre eventos enrutados](../../../../docs/framework/wpf/advanced/routed-events-overview.md)  
- [Temas de procedimientos](../../../../docs/framework/wpf/advanced/events-how-to-topics.md)  
+ [Temas "Cómo..."](../../../../docs/framework/wpf/advanced/events-how-to-topics.md)  
  [Detalles de la sintaxis XAML](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md)

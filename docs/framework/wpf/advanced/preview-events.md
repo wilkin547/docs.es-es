@@ -18,11 +18,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 04bdf32ea329ff25fd62255b4512d8a9d5703b8f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a258a0e145e9a24e6e87bb511fdbd6166422a656
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="preview-events"></a>Eventos de vista previa
 Eventos de vista previa, también conocidos como eventos de túnel, son eventos enrutados que se pasa la dirección de la ruta desde la raíz de la aplicación hacia el elemento que provocó el evento y se notifica como el origen de datos del evento. No todos los escenarios de eventos admiten o requieren los eventos de vista previa. en este tema se describe las situaciones donde existen eventos de vista previa, cómo las aplicaciones o componentes deben controlar, y los casos donde la creación de eventos de vista previa en componentes personalizados o de clases puede ser adecuado.  

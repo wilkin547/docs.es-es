@@ -25,11 +25,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 774c612b09d5cb0ffdf36024a7e6a543f407cf67
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 958595cdfa521b372270d6283c7134ef0ba0ef79
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-override-the-panel-onrender-method"></a>Cómo: Invalidar el método OnRender de un objeto Panel
 Este ejemplo muestra cómo invalidar el <xref:System.Windows.Controls.Panel.OnRender%2A> método <xref:System.Windows.Controls.Panel> para agregar efectos gráficos personalizados a un elemento de diseño.  
@@ -44,4 +45,4 @@ Este ejemplo muestra cómo invalidar el <xref:System.Windows.Controls.Panel.OnRe
  <xref:System.Windows.Controls.Panel>  
  [Información general sobre elementos Panel](../../../../docs/framework/wpf/controls/panels-overview.md)  
  [Ejemplo Custom Radial Panel](http://go.microsoft.com/fwlink/?LinkID=159982)  
- [Temas de procedimientos](../../../../docs/framework/wpf/controls/panel-how-to-topics.md)
+ [Temas "Cómo..."](../../../../docs/framework/wpf/controls/panel-how-to-topics.md)

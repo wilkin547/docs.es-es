@@ -21,11 +21,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 41a995223742e21f3bcc32d23c21882ac7eef465
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 5044339e1d06bddad05151b2db99d5f96d068e77
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-implement-validation-logic-on-custom-objects"></a>Cómo: Implementar lógica de validación en objetos personalizados
 Este ejemplo muestra cómo implementar la lógica de validación en un objeto personalizado y, a continuación, enlazar a él.  
@@ -45,4 +46,4 @@ Este ejemplo muestra cómo implementar la lógica de validación en un objeto pe
 ## <a name="see-also"></a>Vea también  
  <xref:System.Windows.Controls.ExceptionValidationRule>  
  [Implementar la validación de enlaces](../../../../docs/framework/wpf/data/how-to-implement-binding-validation.md)  
- [Temas de procedimientos](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+ [Temas "Cómo..."](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)

@@ -17,11 +17,12 @@ caps.latest.revision: "65"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 447c836b7df937abf347f65acdd3ee4e2710e55b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 62a8e11ec654b0db232cc71021b7b94d5c0d2fd8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="flowdocumentpageviewer"></a>FlowDocumentPageViewer
 El <xref:System.Windows.Controls.FlowDocumentPageViewer> control sirve para ver los <xref:System.Windows.Documents.FlowDocument> contenido en cada página por separado. Por otra parte del <xref:System.Windows.Controls.FlowDocumentScrollViewer>, que presenta <xref:System.Windows.Documents.FlowDocument> contenido en un visor de desplazamiento.  
@@ -29,5 +30,5 @@ El <xref:System.Windows.Controls.FlowDocumentPageViewer> control sirve para ver 
 ## <a name="see-also"></a>Vea también  
  <xref:System.Windows.Documents.FlowDocument>  
  [Información general sobre documentos dinámicos](../../../../docs/framework/wpf/advanced/flow-document-overview.md)  
- [Temas de procedimientos](../../../../docs/framework/wpf/advanced/flow-content-elements-how-to-topics.md)  
+ [Temas "Cómo..."](../../../../docs/framework/wpf/advanced/flow-content-elements-how-to-topics.md)  
  [Documentos en WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
