@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c86950be7fbe583a7b53e2174591923a3b898f49
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 5388b8db09f60e5507c7a65e9e593fd1396f02a9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodelchannelsmsmqcannotpeekonqueue"></a>System.ServiceModel.Channels.MsmqCannotPeekOnQueue
 System.ServiceModel.Channels.MsmqCannotPeekOnQueue  
@@ -26,6 +27,6 @@ System.ServiceModel.Channels.MsmqCannotPeekOnQueue
  El servicio de activación MSMQ no puede ejecutar el método Peek en la cola.  
   
 ## <a name="see-also"></a>Vea también  
- [Seguimiento](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [Uso del seguimiento para solucionar problemas de la aplicación](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [Traza](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [Uso del seguimiento para solucionar problemas de su aplicación](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
  [Administración y diagnóstico](../../../../../docs/framework/wcf/diagnostics/index.md)

@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a993ec836417906229e47b7f415f4aee8b1a9eb1
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 17b20b76d4932272c8e2a9e26603dc8483505242
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="propagation"></a>Propagación
 En este tema se describe la propagación de actividad en [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] el modelo de seguimiento de traza.  
@@ -89,7 +90,7 @@ En este tema se describe la propagación de actividad en [!INCLUDE[indigo1](../.
  Para sincronizar los eventos a través de los extremos que se ejecutan en distintos equipos, CorrelationId se agrega al encabezado de ActivityId que se propaga en los mensajes. Las herramientas pueden utilizar este id. para sincronizar eventos entre equipos con discrepancia de reloj. En concreto, la herramienta Service Trace Viewer utiliza este identificador para mostrar los flujos de mensaje entre los puntos de conexión.  
   
 ## <a name="see-also"></a>Vea también  
- [Configuración del seguimiento](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)  
+ [Configuración de la traza](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)  
  [Uso del visor de seguimiento de servicios para ver seguimientos asociados y para la solución de problemas](../../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)  
- [Escenarios de seguimiento de extremo a extremo](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)  
+ [Escenarios de traza de un extremo a otro](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)  
  [Herramienta del visor de seguimiento de servicio (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)

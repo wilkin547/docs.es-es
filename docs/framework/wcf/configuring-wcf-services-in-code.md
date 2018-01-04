@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c05cc5947a36bbe8573c5308cdfbbe3f6c990815
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 202214a6c9279eb61db560321a8f36943ce5d635
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="configuring-wcf-services-in-code"></a>Configurar servicios WCF en el código
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] permite a los desarrolladores configurar servicios mediante archivos de configuración o código.  Los archivos de configuración son útiles cuando un servicio se debe configurar después de implementarse. Cuando se usan archivos de configuración, un profesional de TI solo debe actualizar el archivo de configuración; no es necesario que realice ninguna recompilación. Los archivos de configuración, sin embargo, pueden ser complejos y difíciles de mantener. No se admite la depuración de archivos de configuración y se hace referencia a los elementos de configuración por nombre, con lo que la creación de archivos de configuración resulta propensa a errores y difícil. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] también permite configurar servicios en el código. En versiones anteriores de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] (4.0 y anteriores), la configuración de servicios en código era sencilla en escenarios autohospedados; la clase <xref:System.ServiceModel.ServiceHost> permitía configurar extremos y comportamientos antes de llamar a ServiceHost.Open. En escenarios hospedados en web, sin embargo, no tiene acceso directo a la clase <xref:System.ServiceModel.ServiceHost>. Para configurar un servicio hospedado en web era necesario crear un `System.ServiceModel.ServiceHostFactory` que creó el <xref:System.ServiceModel.Activation.ServiceHostFactory> y realizar cualquier configuración necesaria. A partir de .NET 4.5, [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] proporciona una manera más fácil de configurar los servicios autohospedados y los hospedados en web en el código.  
@@ -66,7 +67,7 @@ public class Service1 : IService1
     }  
 ```  
   
- Para habilitar un protocolo como https para un servicio, puede agregar explícitamente un extremo que use el protocolo o puede agregar automáticamente extremos llamando a ServiceConfiguration.EnableProtocol (Binding) que agregue un extremo para cada dirección base compatible con el protocolo y cada contrato de servicio definido. El código siguiente ilustra cómo usar el método ServiceConfiguration.EnableProtocol:  
+ Para habilitar un protocolo como https para un servicio, puede agregar explícitamente un punto de conexión que use el protocolo o puede agregar automáticamente puntos de conexión llamando a ServiceConfiguration.EnableProtocol (enlace) que agregue un punto de conexión para cada dirección base compatible con el protocolo y cada contrato de servicio definido. El código siguiente ilustra cómo usar el método ServiceConfiguration.EnableProtocol:  
   
 ```csharp  
 public class Service1 : IService1   
@@ -107,12 +108,12 @@ public class Service1 : IService1
  [Configuración de servicios mediante archivos de configuración](../../../docs/framework/wcf/configuring-services-using-configuration-files.md)  
  [Configuración de los comportamientos del cliente](../../../docs/framework/wcf/configuring-client-behaviors.md)  
  [Configuración simplificada](../../../docs/framework/wcf/simplified-configuration.md)  
- [Activación basada en configuración](../../../docs/framework/wcf/samples/configuration-based-activation.md)  
+ [Activación basada en la configuración](../../../docs/framework/wcf/samples/configuration-based-activation.md)  
  [Configuración](../../../docs/framework/wcf/samples/configuration-sample.md)  
- [Activación basada en la configuración de IIS y WAS](../../../docs/framework/wcf/feature-details/configuration-based-activation-in-iis-and-was.md)  
+ [Activación basada en la configuración en IIS y WAS](../../../docs/framework/wcf/feature-details/configuration-based-activation-in-iis-and-was.md)  
  [Compatibilidad con metadatos y configuración](../../../docs/framework/wcf/extending/configuration-and-metadata-support.md)  
  [Configuración](../../../docs/framework/wcf/diagnostics/exceptions-reference/configuration.md)  
  [Cómo especificar un enlace de servicio en la configuración](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md)  
- [Cómo: crear un extremo de servicio en configuración](../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)  
- [Cómo: publicar los metadatos para un servicio mediante un archivo de configuración](../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)  
+ [Creación de un punto de conexión de servicio en configuración](../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)  
+ [Publicación de metadatos para un servicio mediante un archivo de configuración](../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)  
  [Cómo especificar un enlace de cliente en la configuración](../../../docs/framework/wcf/how-to-specify-a-client-binding-in-configuration.md)

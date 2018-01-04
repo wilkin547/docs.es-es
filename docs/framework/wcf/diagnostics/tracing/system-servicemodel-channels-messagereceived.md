@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e6932d67a372595d77f8fe821edd4788d950e4d5
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: d23623be9a8c360a84094e874eed93a5f8a25552
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodelchannelsmessagereceived"></a>System.ServiceModel.Channels.MessageReceived
 System.ServiceModel.Channels.MessageReceived  
@@ -28,6 +29,6 @@ System.ServiceModel.Channels.MessageReceived
  Este seguimiento se emite cuando se recibe un mensaje [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] si el origen de seguimiento de `System.ServiceModel` está habilitado de modo informativo o detallado. Este seguimiento es necesario para ver la flecha de correlación de mensajes en la vista gráfica de actividad.  
   
 ## <a name="see-also"></a>Vea también  
- [Seguimiento](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [Uso del seguimiento para solucionar problemas de la aplicación](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [Traza](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [Uso del seguimiento para solucionar problemas de su aplicación](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
  [Administración y diagnóstico](../../../../../docs/framework/wcf/diagnostics/index.md)

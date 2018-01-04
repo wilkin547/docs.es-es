@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 43ce0200a48ec9b470b7ec98f447b6e37512d06f
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 96e5fa1f547157ea709a9ef6d4b6bcf7089154e8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodelchannelsnoexistingtransportmanager"></a>System.ServiceModel.Channels.NoExistingTransportManager
 System.ServiceModel.Channels.NoExistingTransportManager  
@@ -26,6 +27,6 @@ System.ServiceModel.Channels.NoExistingTransportManager
  No se encontró ningún administrador de transporte existente para el URI especificado.  
   
 ## <a name="see-also"></a>Vea también  
- [Seguimiento](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [Uso del seguimiento para solucionar problemas de la aplicación](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [Traza](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [Uso del seguimiento para solucionar problemas de su aplicación](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
  [Administración y diagnóstico](../../../../../docs/framework/wcf/diagnostics/index.md)

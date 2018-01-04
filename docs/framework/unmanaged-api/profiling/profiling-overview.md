@@ -38,11 +38,12 @@ caps.latest.revision: "27"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 6d7918a369b5a5656fa2e059bdaaf6c211bd022c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 84688ed80d0cb1b802290176400eb45998052a34
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="profiling-overview"></a>Información general sobre la generación de perfiles
 <a name="top"></a>Un generador de perfiles es una herramienta que supervisa la ejecución de otra aplicación. Un generador de perfiles de Common Language Runtime (CLR) es una biblioteca de vínculos dinámicos (DLL) compuesta de funciones que intercambian mensajes con el CLR utilizando la API de generación de perfiles. CLR carga en tiempo de ejecución la DLL del generador de perfiles.  
@@ -238,7 +239,7 @@ Arquitectura de generación de perfiles
 |Título|Descripción|  
 |-----------|-----------------|  
 |[Configuración de un entorno de generación de perfiles](../../../../docs/framework/unmanaged-api/profiling/setting-up-a-profiling-environment.md)|Explica cómo inicializar un generador de perfiles, establecer notificaciones de eventos y generar perfiles para un servicio de Windows.|  
-|[Interfaces de generación de perfiles](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)|Describe las interfaces no administradas que utiliza la API de generación de perfiles.|  
-|[Funciones estáticas globales de generación de perfiles](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md)|Describe las funciones estáticas globales no administradas que utiliza la API de generación de perfiles.|  
-|[Enumeraciones de generación de perfiles](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)|Describe las enumeraciones no administradas que utiliza la API de generación de perfiles.|  
-|[Estructuras de generación de perfiles](../../../../docs/framework/unmanaged-api/profiling/profiling-structures.md)|Describe las estructuras no administradas que utiliza la API de generación de perfiles.|
+|[Interfaces para generación de perfiles](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)|Describe las interfaces no administradas que utiliza la API de generación de perfiles.|  
+|[Funciones estáticas globales para generación de perfiles](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md)|Describe las funciones estáticas globales no administradas que utiliza la API de generación de perfiles.|  
+|[Enumeraciones para generación de perfiles](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)|Describe las enumeraciones no administradas que utiliza la API de generación de perfiles.|  
+|[Estructuras para generación de perfiles](../../../../docs/framework/unmanaged-api/profiling/profiling-structures.md)|Describe las estructuras no administradas que utiliza la API de generación de perfiles.|

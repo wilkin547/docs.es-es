@@ -13,17 +13,18 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 58d1bec0110d669258e8f003cb1e882207133a5d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: fe894d16aee91b893015efdfc627350abcdb6c72
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="endpoint-transactions-flowed-per-second"></a>punto de conexión: Flujo de transacciones por segundo
 Nombre del contador: flujo de transacciones por segundo.  
   
 ## <a name="description"></a>Descripción  
- Número de transacciones de flujo a las operaciones en este extremo en un segundo. Este contador se incrementa siempre que se encuentra un id. de transacción en un mensaje enviado al punto de conexión.  
+ Número de transacciones de flujo a las operaciones en este punto de conexión en un segundo. Este contador se incrementa siempre que se encuentra un id. de transacción en un mensaje enviado al punto de conexión.  
   
  Este contador es de tipo de contador de rendimiento [PERF_COUNTER_COUNTER](http://go.microsoft.com/fwlink/?LinkID=94649), cuyo valor se calcula con la siguiente fórmula.  
   

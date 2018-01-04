@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1dd58fdbdbdcf2f7bf8f69b86276a24c17df79e3
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 8cf9f8a9fba43a915fd71e397c4aed54c8d95197
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="microsofttransactionstransactionbridgeregistrationcoordinatorfaulted"></a>Microsoft.Transactions.TransactionBridge.RegistrationCoordinatorFaulted
 El servicio de protocolo WS-AT recibió un error de su coordinador en respuesta a un mensaje del registro.  
@@ -29,6 +30,6 @@ El servicio de protocolo WS-AT recibió un error de su coordinador en respuesta 
  Inspeccione el mensaje de seguimiento para el error devuelto.  
   
 ## <a name="see-also"></a>Vea también  
- [Seguimiento](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [Uso del seguimiento para solucionar problemas de la aplicación](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [Traza](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [Uso del seguimiento para solucionar problemas de su aplicación](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
  [Administración y diagnóstico](../../../../../docs/framework/wcf/diagnostics/index.md)

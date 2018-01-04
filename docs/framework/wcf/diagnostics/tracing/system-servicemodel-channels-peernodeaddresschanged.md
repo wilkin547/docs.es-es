@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: deeefcf39a886b26890d6871669e274535db37fd
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 556ea6e75c7704208a864518df7f2748ef614f79
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodelchannelspeernodeaddresschanged"></a>System.ServiceModel.Channels.PeerNodeAddressChanged
 Una o varias de las direcciones de PeerNode ha cambiado.  
@@ -26,6 +27,6 @@ Una o varias de las direcciones de PeerNode ha cambiado.
  Este seguimiento se produce en la finalización de la devolución de llamada de notificación de cambio de dirección.  
   
 ## <a name="see-also"></a>Vea también  
- [Seguimiento](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [Uso del seguimiento para solucionar problemas de la aplicación](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [Traza](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [Uso del seguimiento para solucionar problemas de su aplicación](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
  [Administración y diagnóstico](../../../../../docs/framework/wcf/diagnostics/index.md)

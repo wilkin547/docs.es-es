@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f0a2009e29292c2bc21d9b94a54c7e6482837258
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 5d1895c549e79af39241ee4914369bd21d9d641a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="thumbprintnotvalidated"></a>ThumbPrintNotValidated
 Id: 153  
@@ -31,4 +32,4 @@ Id: 153
   
 ## <a name="see-also"></a>Vea también  
  [Registro de eventos](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)  
- [Referencia General de eventos](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)
+ [Referencia general de eventos](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)

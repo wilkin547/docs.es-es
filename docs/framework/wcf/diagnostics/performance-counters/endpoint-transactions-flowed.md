@@ -13,14 +13,15 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 930e06a70bc7975b5370ab47050da929aa29e33c
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 3a57b3f29c1e7d187a803609c43ea48958c1850f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="endpoint-transactions-flowed"></a>punto de conexión: Flujo de transacciones
 Nombre de contador: Flujo de transacciones.  
   
 ## <a name="description"></a>Descripción  
- El número de transacciones que han fluido a las operaciones en este extremo. Este contador se incrementa siempre que se encuentra un id. de transacción en un mensaje enviado al extremo.
+ El número de transacciones que han fluido a las operaciones en este punto de conexión. Este contador se incrementa siempre que se encuentra un id. de transacción en un mensaje enviado al punto de conexión.

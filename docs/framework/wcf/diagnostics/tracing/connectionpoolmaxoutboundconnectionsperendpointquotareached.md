@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a0c1d3a58f59f9a45583bf5f0b5c70fe2e7ea446
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 2eae5a3019b77ace6b67d7487d621a47439534e6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodelchannelsconnectionpoolmaxoutboundconnectionsperendpointquotareached"></a>System.ServiceModel.Channels.ConnectionPoolMaxOutboundConnectionsPerEndpointQuotaReached
 System.ServiceModel.Channels.ConnectionPoolMaxOutboundConnectionsPerEndpointQuotaReached  
@@ -26,6 +27,6 @@ System.ServiceModel.Channels.ConnectionPoolMaxOutboundConnectionsPerEndpointQuot
  Se alcanzó la cuota de MaxOutboundConnectionsPerEndpoint, por lo que se cerró la conexión y no se almacenó en este grupo de conexiones.  
   
 ## <a name="see-also"></a>Vea también  
- [Seguimiento](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [Uso del seguimiento para solucionar problemas de la aplicación](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [Traza](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [Uso del seguimiento para solucionar problemas de su aplicación](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
  [Administración y diagnóstico](../../../../../docs/framework/wcf/diagnostics/index.md)

@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0eb62631b654dd2762a8220cdafacc9373564052
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 30adea272d7b6b3fc99f9f3c66de51d934043569
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodelchannelsincompatibleexistingtransportmanager"></a>System.ServiceModel.Channels.IncompatibleExistingTransportManager
 Se encontró un administrador de transporte incompatible existente para el URI especificado.  
@@ -26,6 +27,6 @@ Se encontró un administrador de transporte incompatible existente para el URI e
  Este seguimiento de traza informativo indica que se encontró un registro coincidente para el agente de escucha que se está abriendo, sin embargo, el administrador de trasporte existente es incompatible. El agente de escucha intentará utilizar otro administrador de transporte e iniciar una excepción si no lo logra.  
   
 ## <a name="see-also"></a>Vea también  
- [Seguimiento](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [Uso del seguimiento para solucionar problemas de la aplicación](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [Traza](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [Uso del seguimiento para solucionar problemas de su aplicación](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
  [Administración y diagnóstico](../../../../../docs/framework/wcf/diagnostics/index.md)

@@ -21,11 +21,12 @@ caps.latest.revision: "10"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: d62dbb2829480e8972d1d4966673ba8eb58f1831
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4da57e95813afa1135482bef7cf6ab50ee6365cf
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icorprofilerinfo4requestrejit-method"></a>ICorProfilerInfo4::RequestReJIT (Método)
 Solicita una recompilación con JIT de todas las instancias de las funciones especificadas.  
@@ -50,7 +51,7 @@ HRESULT RequestReJIT (
  [in] Especifica la parte `methodId` de los pares (`module`, `methodDef`) que identifican las funciones que se van a recompilar.  
   
 ## <a name="return-value"></a>Valor devuelto  
- Este método devuelve los siguientes HRESULT específicos así como los errores HRESULT que indican un error del método.  
+ Este método devuelve los siguientes HRESULT específicos y los errores HRESULT que indican un error del método.  
   
 |HRESULT|Descripción|  
 |-------------|-----------------|  
@@ -77,5 +78,5 @@ HRESULT RequestReJIT (
   
 ## <a name="see-also"></a>Vea también  
  [ICorProfilerInfo4 (interfaz)](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-interface.md)  
- [Interfaces de generación de perfiles](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)  
+ [Interfaces para generación de perfiles](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)  
  [Generación de perfiles](../../../../docs/framework/unmanaged-api/profiling/index.md)

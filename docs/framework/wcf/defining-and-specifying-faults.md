@@ -19,11 +19,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 754c938242035549b9deb94a2fe3b975b1384fc0
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 713b9594ac628c2c256e8592d3894feee8029332
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="defining-and-specifying-faults"></a>Definición y especificación de errores
 Los errores de SOAP transmiten información de condición de error desde un servicio a un cliente y, en caso de comunicación dúplex, desde un cliente a un servicio de una manera interoperable. Este tema describe cuándo y cómo definir contenido personalizado de error y especificar qué operaciones pueden devolverlos. [!INCLUDE[crabout](../../../includes/crabout-md.md)]cómo un servicio o cliente dúplex, puede enviar los errores y cómo una aplicación cliente o servicio administra estos errores, vea [enviar y recibir errores](../../../docs/framework/wcf/sending-and-receiving-faults.md). Para obtener información general de control de errores en [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] las aplicaciones, vea [especificar y control de errores en contactos y servicios](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).  
@@ -106,4 +107,4 @@ End Class
  [Cómo declarar errores en contratos de servicio](../../../docs/framework/wcf/how-to-declare-faults-in-service-contracts.md)  
  [Descripción de los niveles de protección](../../../docs/framework/wcf/understanding-protection-level.md)  
  [Cómo establecerla propiedad ProtectionLevel Property](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md)  
- [Transferencia de datos especificando en contratos de servicio](../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)
+ [Definición de transferencias de datos en contratos de servicio](../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)

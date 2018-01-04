@@ -13,11 +13,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4984cb7fd89b69f0006c5294c24184bd8d1f1d09
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 18dda3f63a12a9f9a2320f413137943e5864ad27
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="dynamically-enabling-analytic-tracing"></a>Habilitar dinámicamente la traza analítica
 Con las herramientas que se distribuyen con el sistema operativo Windows, puede habilitar o deshabilitar la traza de forma dinámica mediante el Seguimiento de eventos para Windows (ETW). Para todos los servicios [!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)] [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] , el seguimiento analítica puede habilitarse y deshabilitarse de forma dinámica sin modificar el archivo Web.config de la aplicación ni reiniciar el servicio. Esto permite que la aplicación que emite los eventos de traza siga sin más.  
@@ -51,4 +52,4 @@ Con las herramientas que se distribuyen con el sistema operativo Windows, puede 
 |`WCFMessageLogging`|Eventos de registro de mensajes de[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] .|  
   
 ## <a name="see-also"></a>Vea también  
- [WCF Services and Event Tracing for Windows](../../../../../docs/framework/wcf/samples/wcf-services-and-event-tracing-for-windows.md)
+ [Servicios WCF y Seguimiento de eventos para Windows](../../../../../docs/framework/wcf/samples/wcf-services-and-event-tracing-for-windows.md)

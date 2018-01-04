@@ -13,11 +13,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 064f396d0a757e5b2f5f12c4a2a836b74f5e66a6
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 72fd6dba860906fb87d67e19148f13b70dc64136
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="configuring-your-application"></a>Configuración de su aplicación
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] utiliza el sistema de configuración .NET y le permite configurar los servicios en el equipo y ámbito de aplicación.  

@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 24f1bc22e088c0198ec8a8f8183611d2b43941b5
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 2c96aa6752feca637f89ed309d1a5c87cea4a3a9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="determining-service-operation-duration"></a>Determinar la duración de la operación de servicio
 Si la traza analítica está habilitada en una aplicación de [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)], la duración de la ejecución de una operación del servicio se puede determinar con facilidad examinando el registro de eventos.  En este tema se muestra cómo determinar la cantidad de tiempo que una operación de servicio tarda en completarse.  

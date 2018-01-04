@@ -21,11 +21,12 @@ caps.latest.revision: "29"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 7ff2c57be82166ecf5eb8a012491044eb2cb79d4
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: dc3d490284e371aefb2de712cb5721b0246caa6a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="setting-up-a-profiling-environment"></a>Configurar un entorno de generación de perfiles
 > [!NOTE]
@@ -104,4 +105,4 @@ pInfo->SetEventMask(COR_PRF_MONITOR_ENTERLEAVE | COR_PRF_MONITOR_GC)
  Esta técnica también provoca que se generen perfiles para todos los procesos de CLR. El generador de perfiles debe agregar lógica a su [ICorProfilerCallback:: Initialize](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md) devolución de llamada para detectar si el proceso actual es de interés. Si no es así, el generador de perfiles puede producir un error en la devolución de llamada sin realizar la inicialización.  
   
 ## <a name="see-also"></a>Vea también  
- [Información general de generación de perfiles](../../../../docs/framework/unmanaged-api/profiling/profiling-overview.md)
+ [Información general sobre la generación de perfiles](../../../../docs/framework/unmanaged-api/profiling/profiling-overview.md)

@@ -21,11 +21,12 @@ caps.latest.revision: "12"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 9c5142b091ec32c162daaca9c53cb65763bb5ed7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ddde6069072092cfc0441686ce4d53aa0a4bd534
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icorprofilerfunctionenumskip-method"></a>ICorProfilerFunctionEnum::Skip (Método)
 Desplaza el cursor del enumerador desde su posición actual de manera que se omita el número especificado de elementos.  
@@ -41,7 +42,7 @@ HRESULT Skip([in] ULONG celt);
  [in] El número de elementos que se van a omitir.  
   
 ## <a name="return-value"></a>Valor devuelto  
- Este método devuelve los siguientes HRESULT específicos así como los errores HRESULT que indican un error del método.  
+ Este método devuelve los siguientes HRESULT específicos y los errores HRESULT que indican un error del método.  
   
 |HRESULT|Descripción|  
 |-------------|-----------------|  
@@ -62,4 +63,4 @@ HRESULT Skip([in] ULONG celt);
   
 ## <a name="see-also"></a>Vea también  
  [ICorProfilerFunctionEnum (interfaz)](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctionenum-interface.md)  
- [Interfaces de generación de perfiles](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+ [Interfaces para generación de perfiles](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)

@@ -22,11 +22,12 @@ caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: db1152e82edde34dc8dbaba09f20b9f769dffbca
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d884b80ba8ccc42d1b6acc671db408305a095a7d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="clr-profilers-and-windows-store-apps"></a>Los generadores de perfiles CLR y aplicaciones de la tienda de Windows
 En este tema se describe lo que debe pensar cuando herramientas de diagnóstico de escritura que analizan los administra el código que se ejecuta dentro de una aplicación de la tienda de Windows.  También proporciona instrucciones para modificar sus herramientas de desarrollo existentes, por lo que pueden seguir funcionando cuando se ejecutan en aplicaciones de la tienda de Windows.  Para entender esta información, es mejor que si está familiarizado con la API de generación de perfiles de Common Language en tiempo de ejecución, ya ha usado esta API en una herramienta de diagnóstico que se ejecuta correctamente en aplicaciones de escritorio de Windows y ahora está interesado en modificar la herramienta Para ejecutar correctamente en aplicaciones de la tienda de Windows.  
@@ -82,7 +83,7 @@ En este tema se describe lo que debe pensar cuando herramientas de diagnóstico 
   
  En este tema se utiliza la siguiente terminología:  
   
- Aplicación  
+ Application  
  Se trata de la aplicación que está analizando el generador de perfiles.  Normalmente, el desarrollador de esta aplicación está utilizando el generador de perfiles para ayudar a diagnosticar problemas con la aplicación.  Tradicionalmente, esta aplicación sería una aplicación de escritorio de Windows, pero en este tema se analizan en aplicaciones de la tienda de Windows.  
   
  Archivo DLL del generador de perfiles  

@@ -17,11 +17,12 @@ caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 86d741a16a0293892d0d6d90f1763d744ed3675d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 2127cdb1178da37bcfe77a0e1a02ccd34be2d800
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="strong-naming-unmanaged-api-reference"></a>Nombres seguros (Referencia de la API no administrada)
 La API de nombres seguros permite a un cliente administrar la firma de ensamblados con nombre seguro.  
@@ -35,82 +36,82 @@ La API de nombres seguros permite a un cliente administrar la firma de ensamblad
 > [!NOTE]
 >  Todas estas funciones han quedado en desuso a partir de la [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]. Para alternativas sugeridas, consulte el [ICLRStrongName](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md) interfaz.  
   
- [GetHashFromAssemblyFile (función)](../../../../docs/framework/unmanaged-api/strong-naming/gethashfromassemblyfile-function.md)  
+ [GetHashFromAssemblyFile (Función)](../../../../docs/framework/unmanaged-api/strong-naming/gethashfromassemblyfile-function.md)  
  Obtiene un valor hash del archivo de ensamblado especificado, utilizando el algoritmo hash especificado. En desuso a partir de la [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)].  
   
- [GetHashFromAssemblyFileW (función)](../../../../docs/framework/unmanaged-api/strong-naming/gethashfromassemblyfilew-function.md)  
+ [GetHashFromAssemblyFileW (Función)](../../../../docs/framework/unmanaged-api/strong-naming/gethashfromassemblyfilew-function.md)  
  Obtiene un valor hash del archivo de ensamblado especificado como una cadena Unicode, mediante el algoritmo hash especificado. En desuso a partir de la [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)].  
   
- [GetHashFromBlob (función)](../../../../docs/framework/unmanaged-api/strong-naming/gethashfromblob-function.md)  
+ [GetHashFromBlob (Función)](../../../../docs/framework/unmanaged-api/strong-naming/gethashfromblob-function.md)  
  Obtiene un valor hash del ensamblado en la dirección de memoria especificada, utilizando el algoritmo hash especificado. En desuso a partir de la [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)].  
   
- [GetHashFromFile (función)](../../../../docs/framework/unmanaged-api/strong-naming/gethashfromfile-function.md)  
+ [GetHashFromFile (Función)](../../../../docs/framework/unmanaged-api/strong-naming/gethashfromfile-function.md)  
  Genera un hash sobre el contenido del archivo especificado.  En desuso a partir de la [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)].  
   
- [GetHashFromFileW (función)](../../../../docs/framework/unmanaged-api/strong-naming/gethashfromfilew-function.md)  
+ [GetHashFromFileW (Función)](../../../../docs/framework/unmanaged-api/strong-naming/gethashfromfilew-function.md)  
  Genera un hash sobre el contenido del archivo especificado por una cadena Unicode. En desuso a partir de la [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)].  
   
- [GetHashFromHandle (función)](../../../../docs/framework/unmanaged-api/strong-naming/gethashfromhandle-function.md)  
+ [GetHashFromHandle (Función)](../../../../docs/framework/unmanaged-api/strong-naming/gethashfromhandle-function.md)  
  Genera un hash sobre el contenido del archivo con el identificador de archivo especificado, utilizando el algoritmo hash especificado.  En desuso a partir de la [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)].  
   
- [StrongNameCompareAssemblies (función)](../../../../docs/framework/unmanaged-api/strong-naming/strongnamecompareassemblies-function.md)  
+ [StrongNameCompareAssemblies (Función)](../../../../docs/framework/unmanaged-api/strong-naming/strongnamecompareassemblies-function.md)  
  Determina si dos ensamblados difieren solo en sus firmas de nombre seguro. En desuso a partir de la [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)].  
   
- [StrongNameErrorInfo (función)](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md)  
+ [StrongNameErrorInfo (Función)](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md)  
  Obtiene el último código de error que se genera mediante una de las funciones de nombre seguro.  
   
- [StrongNameFreeBuffer (función)](../../../../docs/framework/unmanaged-api/strong-naming/strongnamefreebuffer-function.md)  
+ [StrongNameFreeBuffer (Función)](../../../../docs/framework/unmanaged-api/strong-naming/strongnamefreebuffer-function.md)  
  Libera la memoria que se asignó con una llamada anterior a una función de nombre seguro como [StrongNameGetPublicKey](../../../../docs/framework/unmanaged-api/strong-naming/strongnamegetpublickey-function.md), [StrongNameTokenFromPublicKey](../../../../docs/framework/unmanaged-api/strong-naming/strongnametokenfrompublickey-function.md), o [StrongNameSignatureGeneration ](../../../../docs/framework/unmanaged-api/strong-naming/strongnamesignaturegeneration-function.md).   En desuso a partir de la [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)].  
   
- [StrongNameGetBlob (función)](../../../../docs/framework/unmanaged-api/strong-naming/strongnamegetblob-function.md)  
+ [StrongNameGetBlob (Función)](../../../../docs/framework/unmanaged-api/strong-naming/strongnamegetblob-function.md)  
  Llena el búfer especificado con la representación binaria del archivo ejecutable en la dirección especificada. En desuso a partir de la [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)].  
   
- [StrongNameGetBlobFromImage (función)](../../../../docs/framework/unmanaged-api/strong-naming/strongnamegetblobfromimage-function.md)  
+ [StrongNameGetBlobFromImage (Función)](../../../../docs/framework/unmanaged-api/strong-naming/strongnamegetblobfromimage-function.md)  
  Obtiene una representación binaria de la imagen de ensamblado en la dirección de memoria especificada. En desuso a partir de la [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)].  
   
- [StrongNameGetPublicKey (función)](../../../../docs/framework/unmanaged-api/strong-naming/strongnamegetpublickey-function.md)  
+ [StrongNameGetPublicKey (Función)](../../../../docs/framework/unmanaged-api/strong-naming/strongnamegetpublickey-function.md)  
  Obtiene la clave pública de un par de claves pública y privada. En desuso a partir de la [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)].  
   
- [StrongNameHashSize (función)](../../../../docs/framework/unmanaged-api/strong-naming/strongnamehashsize-function.md)  
+ [StrongNameHashSize (Función)](../../../../docs/framework/unmanaged-api/strong-naming/strongnamehashsize-function.md)  
  Obtiene el tamaño de búfer requerido para un hash mediante el algoritmo hash especificado.  En desuso a partir de la [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)].  
   
- [StrongNameKeyDelete (función)](../../../../docs/framework/unmanaged-api/strong-naming/strongnamekeydelete-function.md)  
+ [StrongNameKeyDelete (Función)](../../../../docs/framework/unmanaged-api/strong-naming/strongnamekeydelete-function.md)  
  Elimina el contenedor de claves especificado. En desuso a partir de la [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)].  
   
- [StrongNameKeyGen (función)](../../../../docs/framework/unmanaged-api/strong-naming/strongnamekeygen-function.md)  
+ [StrongNameKeyGen (Función)](../../../../docs/framework/unmanaged-api/strong-naming/strongnamekeygen-function.md)  
  Crea un nuevo par de claves pública y privada para su uso de nombre seguro.  En desuso a partir de la [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)].  
   
- [StrongNameKeyGenEx (función)](../../../../docs/framework/unmanaged-api/strong-naming/strongnamekeygenex-function.md)  
+ [StrongNameKeyGenEx (Función)](../../../../docs/framework/unmanaged-api/strong-naming/strongnamekeygenex-function.md)  
  Genera un nuevo par de claves pública/privada con el tamaño de clave especificado para su uso de nombre seguro. En desuso a partir de la [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)].  
   
- [StrongNameKeyInstall (función)](../../../../docs/framework/unmanaged-api/strong-naming/strongnamekeyinstall-function.md)  
+ [StrongNameKeyInstall (Función)](../../../../docs/framework/unmanaged-api/strong-naming/strongnamekeyinstall-function.md)  
  Importa un par de claves pública/privada en un contenedor.  En desuso a partir de la [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)].  
   
- [StrongNameSignatureGeneration (función)](../../../../docs/framework/unmanaged-api/strong-naming/strongnamesignaturegeneration-function.md)  
+ [StrongNameSignatureGeneration (Función)](../../../../docs/framework/unmanaged-api/strong-naming/strongnamesignaturegeneration-function.md)  
  Genera una firma de nombre seguro para el ensamblado especificado.   En desuso a partir de la [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)].  
   
- [StrongNameSignatureGenerationEx (función)](../../../../docs/framework/unmanaged-api/strong-naming/strongnamesignaturegenerationex-function.md)  
+ [StrongNameSignatureGenerationEx (Función)](../../../../docs/framework/unmanaged-api/strong-naming/strongnamesignaturegenerationex-function.md)  
  Genera una firma de nombre seguro para el ensamblado especificado, en función de las marcas especificadas.    En desuso a partir de la [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)].  
   
- [StrongNameSignatureSize (función)](../../../../docs/framework/unmanaged-api/strong-naming/strongnamesignaturesize-function.md)  
+ [StrongNameSignatureSize (Función)](../../../../docs/framework/unmanaged-api/strong-naming/strongnamesignaturesize-function.md)  
  Devuelve el tamaño de la firma de nombre seguro. En desuso a partir de la [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)].  
   
- [StrongNameSignatureVerification (función)](../../../../docs/framework/unmanaged-api/strong-naming/strongnamesignatureverification-function.md)  
+ [StrongNameSignatureVerification (Función)](../../../../docs/framework/unmanaged-api/strong-naming/strongnamesignatureverification-function.md)  
  Obtiene un valor que indica si el manifiesto del ensamblado en la ruta de acceso proporcionada contiene una firma de nombre seguro, que se comprueba según los marcadores especificados. En desuso a partir de la [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)].  
   
- [StrongNameSignatureVerificationEx (función)](../../../../docs/framework/unmanaged-api/strong-naming/strongnamesignatureverificationex-function.md)  
+ [StrongNameSignatureVerificationEx (Función)](../../../../docs/framework/unmanaged-api/strong-naming/strongnamesignatureverificationex-function.md)  
  Obtiene un valor que indica si el manifiesto del ensamblado en la ruta de acceso proporcionada contiene una firma de nombre seguro.  En desuso a partir de la [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)].  
   
- [StrongNameSignatureVerificationFromImage (función)](../../../../docs/framework/unmanaged-api/strong-naming/strongnamesignatureverificationfromimage-function.md)  
+ [StrongNameSignatureVerificationFromImage (Función)](../../../../docs/framework/unmanaged-api/strong-naming/strongnamesignatureverificationfromimage-function.md)  
  Comprueba que un ensamblado que ya se ha asignado a la memoria es válido para la clave pública asociada. En desuso a partir de la [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)].  
   
- [StrongNameTokenFromAssembly (función)](../../../../docs/framework/unmanaged-api/strong-naming/strongnametokenfromassembly-function.md)  
+ [StrongNameTokenFromAssembly (Función)](../../../../docs/framework/unmanaged-api/strong-naming/strongnametokenfromassembly-function.md)  
  Crea un token de nombre seguro del archivo de ensamblado especificado.  En desuso a partir de la [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)].  
   
- [StrongNameTokenFromAssemblyEx (función)](../../../../docs/framework/unmanaged-api/strong-naming/strongnametokenfromassemblyex-function.md)  
+ [StrongNameTokenFromAssemblyEx (Función)](../../../../docs/framework/unmanaged-api/strong-naming/strongnametokenfromassemblyex-function.md)  
  Crea un token de nombre seguro del archivo de ensamblado especificado y devuelve la clave pública. En desuso a partir de la [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)].  
   
- [StrongNameTokenFromPublicKey (función)](../../../../docs/framework/unmanaged-api/strong-naming/strongnametokenfrompublickey-function.md)  
+ [StrongNameTokenFromPublicKey (Función)](../../../../docs/framework/unmanaged-api/strong-naming/strongnametokenfrompublickey-function.md)  
  Obtiene un token que representa una clave pública. En desuso a partir de la [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)].  
   
  [Estructura de nombres seguros](http://msdn.microsoft.com/en-us/4b041a2f-fd12-4b91-aacd-bc3b34a5124d)  

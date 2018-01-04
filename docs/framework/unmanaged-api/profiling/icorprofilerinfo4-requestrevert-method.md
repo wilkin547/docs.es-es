@@ -21,11 +21,12 @@ caps.latest.revision: "10"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 014b220e0f0eea46a298b64f8f3be9f079b0d397
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 8f0bf926bc6ba458745231bc17ce20dbe5cdbd1c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icorprofilerinfo4requestrevert-method"></a>ICorProfilerInfo4::RequestRevert (Método)
 Revierte todas las instancias de las funciones especificadas a sus versiones originales.  
@@ -54,7 +55,7 @@ HRESULT RequestRevert (
  [out] Matriz de valores HRESULT enumerados en la sección "HRESULT de estado" más adelante en este tema. Cada HRESULT indica el intento correcto o erróneo de revertir cada función especificada en las matrices paralelas `moduleIds` y `methodIds`.  
   
 ## <a name="return-value"></a>Valor devuelto  
- Este método devuelve los siguientes HRESULT específicos así como los errores HRESULT que indican un error del método.  
+ Este método devuelve los siguientes HRESULT específicos y los errores HRESULT que indican un error del método.  
   
 |HRESULT|Descripción|  
 |-------------|-----------------|  
@@ -89,5 +90,5 @@ HRESULT RequestRevert (
   
 ## <a name="see-also"></a>Vea también  
  [ICorProfilerInfo4 (interfaz)](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-interface.md)  
- [Interfaces de generación de perfiles](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)  
+ [Interfaces para generación de perfiles](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)  
  [Generación de perfiles](../../../../docs/framework/unmanaged-api/profiling/index.md)
