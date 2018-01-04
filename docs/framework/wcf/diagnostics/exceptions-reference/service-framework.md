@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2ced290c0644fcf89fdf3f87778e705794164b0f
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 67e856aff583513fa8a16d289cf5190a9698c52c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="service-framework"></a>Marco de servicios
 En este tema se enumeran las excepciones generadas por Service Framework Data.  
@@ -26,10 +27,10 @@ En este tema se enumeran las excepciones generadas por Service Framework Data.
   
 |Código de recurso|Cadena de recurso|  
 |-------------------|---------------------|  
-|ABindingInstanceHasAlreadyBeenAssociatedTo1|Una instancia de enlace ya se ha asociado para que escuche al identificador uniforme de recursos especificado. Si dos extremos desean compartir el mismo indicador de recurso ListenUniform, también deben compartir la misma instancia de objeto de enlace. Los dos extremos en conflicto se especificaron en llamadas AddServiceEndpoint (), en un archivo de configuración, o una combinación de AddServiceEndpoint () y configuración.|  
-|AChannelServiceEndpointIsNull0|Un canal o extremo de servicio es nulo.|  
-|AChannelServiceEndpointSContractSNameIsNull0|Un nombre del contrato de extremo de servicio/canal es nulo o vacío.|  
-|AChannelServiceEndpointSContractSNamespace0|Un espacio de nombres de contrato de extremo de servicio/canal es nulo.|  
+|ABindingInstanceHasAlreadyBeenAssociatedTo1|Una instancia de enlace ya se ha asociado para que escuche al identificador uniforme de recursos especificado. Si dos puntos de conexión desean compartir el mismo indicador de recurso ListenUniform, también deben compartir la misma instancia de objeto de enlace. Los dos extremos en conflicto se especificaron en llamadas AddServiceEndpoint (), en un archivo de configuración, o una combinación de AddServiceEndpoint () y configuración.|  
+|AChannelServiceEndpointIsNull0|Un canal o punto de conexión de servicio es nulo.|  
+|AChannelServiceEndpointSContractSNameIsNull0|Un nombre del contrato de punto de conexión de servicio/canal es nulo o vacío.|  
+|AChannelServiceEndpointSContractSNamespace0|Un espacio de nombres de contrato de punto de conexión de servicio/canal es nulo.|  
 |BaseAddressCannotHaveFragment|Una dirección base no puede contener un fragmento de identificador uniforme de recursos.|  
 |BaseAddressCannotHaveQuery|Una dirección base no puede contener una cadena de solicitud de identificador uniforme de recursos.|  
 |BaseAddressCannotHaveUserInfo|Una dirección base no puede contener una sección de información del usuario de identificador uniforme de recursos.|  
@@ -60,7 +61,7 @@ En este tema se enumeran las excepciones generadas por Service Framework Data.
 |NoChannelBuilderAvailable|El enlace no se puede utilizar para crear un generador de canales o un escuchador de canales porque no tiene un TransportBindingElement. Cada enlace debe tener al menos un elemento de enlace que derive de TransportBindingElement.|  
 |NotAllBindingElementsBuilt|No se utilizaron algunos de los elementos de enlace de este enlace al compilar el generador y el escuchador de canales. Los elementos de enlace no están ordenados correctamente. El orden recomendado para los elementos de enlace es: TransactionFlow, ReliableSession, Security, CompositeDuplex, OneWay, StreamSecurity, MessageEncoding, Transport.  Tenga en cuenta que TransportBindingElement debe ser el último. Los elementos de enlace especificados no se compilaron.|  
 |RuntimeRequiresInvoker0|La operación de distribución requiere un invocador.|  
-|ServiceHasZeroAppEndpoints|El Servicio especificado no tiene extremos de aplicación (sin infraestructura). Esto podría deberse a que no se encontrón ningún archivo de configuración para su aplicación o a que no se encontró ningún elemento de servicio que coincidiese con el nombre del servicio en el archivo de configuración o porque no se definió ningún extremo en el elemento de servicio.|  
+|ServiceHasZeroAppEndpoints|El Servicio especificado no tiene puntos de conexión de aplicación (sin infraestructura). Esto podría deberse a que no se encontrón ningún archivo de configuración para su aplicación o a que no se encontró ningún elemento de servicio que coincidiese con el nombre del servicio en el archivo de configuración o porque no se definió ningún extremo en el elemento de servicio.|  
 |SFxActionMismatch|No se puede crear un mensaje escrito debido a una desigualdad de acción. Se esperaba la acción especificada se pero encontró otra|  
 |SFxAnonymousTypeNotSupported|La parte especificada en el mensaje especificado no se puede exportar con RPC ni codificar porque es de tipo anónimo.|  
 |SFxBadMetadataLocationNoAppropriateBaseAddress|La dirección URL proporcionada a ServiceMetadataBehavior que utiliza la propiedad ExternalMetadataLocation o el atributo externalMetadataLocation en la sección serviceMetadata de la sección de configuración era una dirección URL relativa y no hay ninguna dirección base con la que resolverla.|  
@@ -80,13 +81,13 @@ En este tema se enumeran las excepciones generadas por Service Framework Data.
 |SFxCannotImportAsParameters_Message|Generación de un contrato de mensaje porque la operación especificada tiene un Mensaje sin tipo como argumento o tipo de valor devuelto.|  
 |SFxCannotImportAsParameters_MessageHasProtectionLevel|Generación del contrato de mensaje porque el mensaje especificado requiere protección.|  
 |SFxCannotImportAsParameters_NamespaceMismatch|Generación del contrato de mensaje porque el nombre de espacios de la parte del mensaje especificado no coincide con el valor predeterminado.|  
-|SFxCannotRequireBothSessionAndDatagram3|El contrato especificado especifica SessionMode.NotAllowed y el contrato especificado especifica SessionMode.Required. Cambie uno de los valores SessionMode o especifique una dirección diferente, o ListenURI, para cada extremo.|  
+|SFxCannotRequireBothSessionAndDatagram3|El contrato especificado especifica SessionMode.NotAllowed y el contrato especificado especifica SessionMode.Required. Cambie uno de los valores SessionMode o especifique una dirección diferente, o ListenURI, para cada punto de conexión.|  
 |SFxCannotSetExtensionsByIndex|Esta colección no permite establecer las extensiones por índice. Utilice el InsertItem o los métodos RemoveItem.|  
 |SFxChannelDispatcherDifferentHost0|El ChannelDispatcher no está adjunto actualmente al ServiceHost que se proporcionó.|  
 |SFxChannelDispatcherMultipleHost0|El ChannelDispatcher no se puede agregar a más de un ServiceHost.|  
 |SFxChannelDispatcherNoHost0|No se puede abrir el ChannelDispatcher porque no está adjunto a un ServiceHost.|  
 |SfxChannelFactoryDisposed|No se puede abrir este ChannelFactory puesto que ya se ha dispuesto el ChannelFactory. Cree de nuevo el ChannelFactory antes de utilizarlo.|  
-|SFxChannelFactoryNoBinding|No se puede abrir el ChannelFactory porque no se ha asociado ningún enlace a su extremo. Especifique un enlace con el constructor o la propiedad del extremo.|  
+|SFxChannelFactoryNoBinding|No se puede abrir el ChannelFactory porque no se ha asociado ningún enlace a su punto de conexión. Especifique un enlace con el constructor o la propiedad del punto de conexión.|  
 |SFxChannelTerminated0|Una operación marcada como IsTerminating ya se ha invocado en este canal, haciendo que se termine la conexión del canal. No se pueden invocar más operaciones en este canal. Recree el canal para continuar la comunicación.|  
 |SFxCloseTimedOut1|La operación de cierre de ServiceHost se detuvo después de lo especificado. Esto podría deberse a que un cliente no cerró un canal con sesión en el tiempo requerido. Puede que el tiempo permitido para esta operación sea parte de un tiempo de espera mayor.|  
 |SfxCloseTimedOutWaitingForDispatchToComplete|Se superó el tiempo de espera del proceso de cierre mientras se esperaba que se completase la distribución del servicio.|  
@@ -106,7 +107,7 @@ En este tema se enumeran las excepciones generadas por Service Framework Data.
 |SFxDataContractSerializerDoesNotSupportBareArray|DataContractSerializer no admite la colección especificada en el elemento especificado.|  
 |SFxDictionaryIsEmpty|La operación no se puede realizar porque el diccionario está vacío.|  
 |SFxDocEncodedNotSupported|Error que refleja lo especificado. No se admite la codificación por documento. Cambie “Uso” a Literal o “Estilo” a RPC.|  
-|SFxDuplicateInitiatingActionAtSameVia|Este servicio tiene varios extremos que escuchan al especificado. Los extremos comparten la misma acción de iniciación especificada. Los mensajes con esta acción se quitarían porque el distribuidor no sería capaz de determinar el extremo correcto para administrar el mensaje.|  
+|SFxDuplicateInitiatingActionAtSameVia|Este servicio tiene varios puntos de conexión que escuchan al especificado. Los puntos de conexión comparten la misma acción de iniciación especificada. Los mensajes con esta acción se quitarían porque el distribuidor no sería capaz de determinar el punto de conexión correcto para administrar el mensaje.|  
 |SFXEndpointBehaviorUsedOnWrongSide|El IEndpointBehavior especificado no se puede utilizar en el servidor. Este comportamiento solo se puede aplicar a los clientes.|  
 |SFxEndpointNoMatchingScheme|No se puede encontrar la dirección base que coincide con el esquema especificado para el extremo con el enlace especificado. Se especifican los esquemas de direcciones base registrados.|  
 |SFxErrorCreatingMtomReader|Se produjo un error al crear un lector para el mensaje del mecanismo de optimización de la transmisión de mensajes.|  
@@ -169,6 +170,6 @@ En este tema se enumeran las excepciones generadas por Service Framework Data.
 |SFxUserCodeThrewException|La operación especificada por el usuario produjo una excepción que no se controla en código de usuario. Si éste es un problema recurrente, puede indicar que hay un error en la implementación del método especificado.|  
 |SfxUseTypedMessageForCustomAttributes|El parámetro especificado no puede estar asignado al parámetro de operación porque requiere atributos adicionales.|  
 |SFxVersionMismatchInOperationContextAndMessage2|No se puede agregar encabezados de salida al mensaje porque MessageVersion en OperationContext.Current no coincide con la versión de encabezado del mensaje que se procesa|  
-|SFxWellKnownNonSingleton0|Para utilizar uno de los constructores ServiceHost que toma una instancia del servicio, el InstanceContextMode del servicio debe establecerse en InstanceContextMode.Single. Esto se puede configurar mediante el ServiceBehaviorAttribute. De lo contrario, utilice los constructores ServiceHost que toman un argumento Type.|  
+|SFxWellKnownNonSingleton0|Para utilizar uno de los constructores ServiceHost que toma una instancia del servicio, el InstanceContextMode del servicio debe establecerse en InstanceContextMode.Single. Esto se puede configurar mediante el ServiceBehaviorAttribute. De lo contrario, utilice los constructores ServiceHost que toman un argumento de tipo.|  
 |SFxWrapperTypeHasMultipleNamespaces|El tipo de contenedor para el mensaje especificado no se puede proyectar como un tipo de contrato de datos porque tiene varios espacios de nombres. Utilice el XmlSerializer.|  
 |UriMustBeAbsolute|El URI debe ser absoluto.|

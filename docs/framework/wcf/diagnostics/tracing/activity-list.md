@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3c3b478d88eff022d8cb28f4123291f4662644ba
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 5e7a371d43237b795536711cf1745030e14d6eca
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="activity-list"></a>Lista de actividades
 En este tema se muestra una lista de todas las actividades definidas por [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)].  
@@ -39,7 +40,7 @@ En este tema se muestra una lista de todas las actividades definidas por [!INCLU
 |Z|Cerrar ServiceHost. ServiceType: ‘[Type]’.|Cerrar||  
 |O|Escuchar en ‘[address]’.|ListenAt|Esta actividad y la siguiente son específicas del transporte. La actividad ListenAt representa el contenido que asigna a la dirección donde el agente de escucha realiza escuchas. En el caso de MSMQ, es la propia cola puesto que la cola asigna a una dirección. Esta actividad realiza escuchas para las conexiones entrantes en el caso de transportes orientados a conexiones, para los mensajes de MSMQ en el caso de MSMQ. Esta actividad se crea durante ServiceHost.Open () y contiene las trazas relacionadas con la creación y disposición del agente de escucha, así como la transferencia de salida a todas las actividades ReceiveBytes.|  
 |P|Recibir los bytes en la conexión ‘[address]’. Recibir mensaje MSMQ.|ReceiveBytes|En esta actividad, se procesan los datos que obtendrá eventualmente un mensaje de [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]. Los bytes de entrada se esperan en el caso de http o transporte orientado a conexiones. Para TCP/canalización con nombre, la duración de esta actividad es igual a la vida la conexión, puesto que se crea al mismo tiempo que la conexión. Para http, es de la duración de una solicitud de mensaje y se crea cuando se envía el mensaje. Esta actividad contiene las trazas relacionadas con la creación y disposición de la conexión si fuese pertinente, así como las transferencias hacia fuera a todas las actividades de procesamiento de mensajes (objetos).<br /><br /> En el caso de MSMQ, es la actividad donde se recupera el mensaje MSMQ.|  
-|Q|Procese el mensaje [number]. (Tenga en cuenta que [number] es un valor que aumenta de manera monótona que comienza en 1.)|ProcessMessage|Procese un mensaje entrante. Esta actividad se inicia cuando todos los datos (bytes, mensaje MSMQ) se reciben para formar un objeto de mensaje de [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]. Los seguimientos dentro de esta actividad tratan con el procesamiento de encabezados.<br /><br /> Una vez formado un mensaje que se puede enviar, se cambia a la actividad ServiceHost ProcessAction después de buscar el identificador de actividad correspondiente.|  
+|C|Procese el mensaje [number]. (Tenga en cuenta que [number] es un valor que aumenta de manera monótona que comienza en 1.)|ProcessMessage|Procese un mensaje entrante. Esta actividad se inicia cuando todos los datos (bytes, mensaje MSMQ) se reciben para formar un objeto de mensaje de [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]. Los seguimientos dentro de esta actividad tratan con el procesamiento de encabezados.<br /><br /> Una vez formado un mensaje que se puede enviar, se cambia a la actividad ServiceHost ProcessAction después de buscar el identificador de actividad correspondiente.|  
 |D, S|Procese la acción ‘[action]’.|ProcessAction|Procese el mensaje a través de la pila Transporte/Seguridad/RM para enviar el mensaje al código de usuario en la recepción y en el orden inverso en el envío.<br /><br /> En el servidor, esta actividad utiliza el Id. de actividad propagado si se envía en el encabezado del mensaje mediante "Propagación de actividad"; en caso contrario, se crea un nuevo GUID.<br /><br /> El mensaje de respuesta para contratos de solicitud/respuesta también se procesa en esa actividad.|  
 |T|Ejecute ‘[IContract.Operation]’.|ExecuteUserCode|Ejecute el código de usuario tras el envío en el lado de servicio. Esta actividad proporciona un límite para delinear el código de ServiceHost del código proporcionado por el usuario.|  
   

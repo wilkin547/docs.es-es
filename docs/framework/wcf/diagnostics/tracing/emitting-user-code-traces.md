@@ -13,11 +13,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2162377fbe8f8329c12dfd88a55d893d26f5b2bf
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: a71ab8d8b4f96900e6d0f83541b6ae17f09ddeee
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="emitting-user-code-traces"></a>Emisión de trazas del código de usuario
 Además de permitir el seguimiento de traza en la configuración para recopilar los datos de instrumentación generados por [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)], también se pueden emitir trazas mediante la programación del código de usuario. De esta manera, puede crear proactivamente datos de instrumentación que examinará más tarde con el fin de realizar un diagnóstico. En este tema se describe cómo hacerlo.  
@@ -141,7 +142,7 @@ Lista de actividades por hora de creación (panel izquierdo) y sus actividades a
  ![Uso del Visor de seguimiento para emitir el usuario &#45; realiza un seguimiento de código](../../../../../docs/framework/wcf/diagnostics/tracing/media/e2etrace2.gif "e2eTrace2")  
 Los errores en los puntos de conexión de una solicitud determinada aparecen en la misma actividad, si se propagó el identificador de actividad de solicitud  
   
- Al hacer doble clic en la actividad de multiplicación, en el panel izquierdo, se muestra el siguiente gráfico con las trazas de la actividad de multiplicación de cada proceso implicado. Podemos ver que primero tuvo lugar una advertencia en el servicio (excepción iniciada), que estuvo seguida de advertencias y errores en el cliente al no poder procesarse la solicitud. Por lo tanto, podemos deducir la relación del error causal entre los extremos, y derivar la causa raíz del error.  
+ Al hacer doble clic en la actividad de multiplicación, en el panel izquierdo, se muestra el siguiente gráfico con las trazas de la actividad de multiplicación de cada proceso implicado. Podemos ver que primero tuvo lugar una advertencia en el servicio (excepción iniciada), que estuvo seguida de advertencias y errores en el cliente al no poder procesarse la solicitud. Por lo tanto, podemos deducir la relación del error causal entre los puntos de conexión, y derivar la causa principal del error.  
   
  ![Uso del Visor de seguimiento para emitir el usuario &#45; realiza un seguimiento de código](../../../../../docs/framework/wcf/diagnostics/tracing/media/e2etrace3.gif "e2eTrace3")  
 Vista del gráfico de la correlación del error  

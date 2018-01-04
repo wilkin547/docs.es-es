@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 174459c23bd6ecd336394146b6d91e265cb820d3
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 5badbb9142261fc1dc6c2b2d5af3c89c7af776b6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="tools"></a>Herramientas
 En este tema se enumeran todas las excepciones generadas por las herramientas [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)].  
@@ -88,7 +89,7 @@ En este tema se enumeran todas las excepciones generadas por las herramientas [!
 |ErrCouldNotCreateCodeProvider|Un proveedor de código no se puede crear para el valor especificado, que se pasó al /{1} el argumento. Compruebe que el proveedor de código se instala y configura correctamente.|  
 |ErrPathTooLongDirOnly|El resultante la ruta de acceso especificada es demasiado largo. Revise el argumento especificado.|  
 |HelpDataContractSerializer|Genere tipos de datos que utilicen el serializador DataContract para la serialización y deserialización.|  
-|ErrUnableToExportEndpoint|Se produjo un error al exportar el nombre de extremo especificado en el espacio de nombres especificado en el tipo de servicio especificado situado en el archivo de configuración cargado para el ensamblado.|  
+|ErrUnableToExportEndpoint|Se produjo un error al exportar el nombre de punto de conexión especificado en el espacio de nombres especificado en el tipo de servicio especificado situado en el archivo de configuración cargado para el ensamblado.|  
 |HelpUsage1|Muestra el uso de la Ayuda.|  
 |HelpUsage2|Muestra el uso de la Ayuda.|  
 |HelpUsage3|Muestra el uso de la Ayuda.|  

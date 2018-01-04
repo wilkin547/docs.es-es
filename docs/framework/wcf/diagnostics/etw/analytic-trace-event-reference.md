@@ -14,11 +14,12 @@ caps.latest.revision: "50"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 616751adfd14e2f07de764b37d684ecdc276847b
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 9a07aed6ade7d5eb806b666711a49c0b9507d3ee
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="analytic-trace-event-reference"></a>Referencia de evento de traza analítica
 En la siguiente tabla, se definen los niveles de eventos, los identificadores y los mensajes asociados a la traza analítica de [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)].  
@@ -59,7 +60,7 @@ En la siguiente tabla, se definen los niveles de eventos, los identificadores y 
 |[301 - UserDefinedErrorOccurred](../../../../../docs/framework/wcf/diagnostics/etw/301-userdefinederroroccurred.md)|Error|Nombre: '%1', referencia: '%2', carga: %3.|UserEvents, HealthMonitoring, EndToEndMonitoring, Troubleshooting, ServiceModel|  
 |[302 - UserDefinedWarningOccurred](../../../../../docs/framework/wcf/diagnostics/etw/302-userdefinedwarningoccurred.md)|Advertencia|Nombre: '%1', referencia: '%2', carga: %3.|UserEvents, HealthMonitoring, EndToEndMonitoring, Troubleshooting, ServiceModel|  
 |[303 - UserDefinedInformationEventOccured](../../../../../docs/framework/wcf/diagnostics/etw/303-userdefinedinformationeventoccured.md)|Información|Nombre: '%1', referencia: '%2', carga: %3.|UserEvents, HealthMonitoring, EndToEndMonitoring, Troubleshooting, ServiceModel|  
-|[401 - StopSignPostEvent](../../../../../docs/framework/wcf/diagnostics/etw/401-stopsignpostevent.md)|Información|Límite de la actividad.|Solución de problemas|  
+|[401- StopSignPostEvent](../../../../../docs/framework/wcf/diagnostics/etw/401-stopsignpostevent.md)|Información|Límite de la actividad.|Solución de problemas|  
 |[402 - StartSignpostEvent](../../../../../docs/framework/wcf/diagnostics/etw/402-startsignpostevent.md)|Información|Límite de la actividad.|Solución de problemas|  
 |[403 - SuspendSignpostEvent](../../../../../docs/framework/wcf/diagnostics/etw/403-suspendsignpostevent.md)|Información|Límite de la actividad.|Solución de problemas|  
 |[404 - ResumeSignpostEvent](../../../../../docs/framework/wcf/diagnostics/etw/404-resumesignpostevent.md)|Información|Límite de la actividad.|Solución de problemas|  
@@ -67,7 +68,7 @@ En la siguiente tabla, se definen los niveles de eventos, los identificadores y 
 |[452 - MessageLogWarning](../../../../../docs/framework/wcf/diagnostics/etw/452-messagelogwarning.md)|Advertencia|%1|Solución de problemas, WCFMessageLogging|  
 |[499 - TransferEmitted](../../../../../docs/framework/wcf/diagnostics/etw/499-transferemitted.md)|LogAlways|Evento de transferencia emitido.|Solución de problemas, UserEvents, EndToEndMonitoring, ServiceModel, WFTracking, ServiceHost, WCFMessageLogging|  
 |[501 - CompilationStart](../../../../../docs/framework/wcf/diagnostics/etw/501-compilationstart.md)|Información|Comenzar compilación.|WebHost|  
-|[502: CompilationStop](../../../../../docs/framework/wcf/diagnostics/etw/502-compilationstop.md)|Información|Finalizar compilación.|WebHost|  
+|[502 - CompilationStop](../../../../../docs/framework/wcf/diagnostics/etw/502-compilationstop.md)|Información|Finalizar compilación.|WebHost|  
 |[503 - ServiceHostFactoryCreationStart](../../../../../docs/framework/wcf/diagnostics/etw/503-servicehostfactorycreationstart.md)|Información|Comienzo de creación de ServiceHostFactory.|WebHost|  
 |[504 - ServiceHostFactoryCreationStop](../../../../../docs/framework/wcf/diagnostics/etw/504-servicehostfactorycreationstop.md)|Información|Finalización de creación de ServiceHostFactory.|WebHost|  
 |[505 - CreateServiceHostStart](../../../../../docs/framework/wcf/diagnostics/etw/505-createservicehoststart.md)|Información|Comenzar CreateServiceHost.|WebHost|  
@@ -82,8 +83,8 @@ En la siguiente tabla, se definen los niveles de eventos, los identificadores y 
 |[602 - CBAMatchFound](../../../../../docs/framework/wcf/diagnostics/etw/602-cbamatchfound.md)|Detallado|La solicitud entrante coincide con un elemento ServiceActivation con la dirección '%1'.||  
 |[603 - AspNetRoutingService](../../../../../docs/framework/wcf/diagnostics/etw/603-aspnetroutingservice.md)|Detallado|La solicitud entrante coincide con un servicio de WCF definido en la ruta de Asp.Net con la dirección %1.|RoutingServices|  
 |[604 - AspNetRoute](../../../../../docs/framework/wcf/diagnostics/etw/604-aspnetroute.md)|Detallado|Se agregó una nueva ruta de Asp.Net '%1' con serviceType '%2' y serviceHostFactoryType '%3'.|RoutingServices|  
-|[605 - a IncrementBusyCount](../../../../../docs/framework/wcf/diagnostics/etw/605-incrementbusycount.md)|Detallado|Se llamó a IncrementBusyCount. Origen: %1|WebHost|  
-|[606 - a DecrementBusyCount](../../../../../docs/framework/wcf/diagnostics/etw/606-decrementbusycount.md)|Detallado|Llamado a DecrementBusyCount. Origen: %1|WebHost|  
+|[605 - IncrementBusyCount](../../../../../docs/framework/wcf/diagnostics/etw/605-incrementbusycount.md)|Detallado|Se llamó a IncrementBusyCount. Origen: %1|WebHost|  
+|[606 - DecrementBusyCount](../../../../../docs/framework/wcf/diagnostics/etw/606-decrementbusycount.md)|Detallado|Llamado a DecrementBusyCount. Origen: %1|WebHost|  
 |[701 - ServiceChannelOpenStart](../../../../../docs/framework/wcf/diagnostics/etw/701-servicechannelopenstart.md)|Detallado|Se inició ServiceChannelOpen.|WebHost|  
 |[702 - ServiceChannelOpenStop](../../../../../docs/framework/wcf/diagnostics/etw/702-servicechannelopenstop.md)|Información|Se completó ServiceChannelOpen.|ServiceModel|  
 |[703 - ServiceChannelCallStart](../../../../../docs/framework/wcf/diagnostics/etw/703-servicechannelcallstart.md)|Información|Se inició ServiceChannelCall.|ServiceModel|  
@@ -368,11 +369,11 @@ En la siguiente tabla, se definen los niveles de eventos, los identificadores y 
 |[5605 - SessionCookieReadingSuccess](../../../../../docs/framework/wcf/diagnostics/etw/5605-sessioncookiereadingsuccess.md)|Detallado|La lectura del token de sesión de la cookie de sesión se realizó correctamente.|Seguridad|  
 |[5606 - PrincipalSettingFromSessionTokenStarted](../../../../../docs/framework/wcf/diagnostics/etw/5606-principalsettingfromsessiontokenstarted.md)|Detallado|Se inició la configuración principal del token de sesión.|Seguridad|  
 |[5607 - PrincipalSettingFromSessionTokenSuccess](../../../../../docs/framework/wcf/diagnostics/etw/5607-principalsettingfromsessiontokensuccess.md)|Detallado|La configuración principal de token de sesión se realizó correctamente.|Seguridad|  
-|[57393 - appDomainUnload](../../../../../docs/framework/wcf/diagnostics/etw/57393-appdomainunload.md)|Información|Descargando AppDomain. AppDomain.FriendlyName %1 ProcessName %2, ProcessId %3.|Infraestructura|  
+|[57393 - AppDomainUnload](../../../../../docs/framework/wcf/diagnostics/etw/57393-appdomainunload.md)|Información|Descargando AppDomain. AppDomain.FriendlyName %1 ProcessName %2, ProcessId %3.|Infraestructura|  
 |[57394 - HandledException](../../../../../docs/framework/wcf/diagnostics/etw/57394-handledexception.md)|Información|Control de una excepción.|Infraestructura|  
 |[57395 - ShipAssertExceptionMessage](../../../../../docs/framework/wcf/diagnostics/etw/57395-shipassertexceptionmessage.md)|Error|Error inesperado. Las aplicaciones no deberían intentar controlar este error. Para el diagnóstico, este mensaje en inglés se asocia con el error: %1.|Infraestructura|  
 |[57396 - ThrowingException](../../../../../docs/framework/wcf/diagnostics/etw/57396-throwingexception.md)|Advertencia|Generación de una excepción. Origen %1.|Infraestructura|  
-|[57397 - UnhandledException.](../../../../../docs/framework/wcf/diagnostics/etw/57397-unhandledexception.md)|Crítico|Excepción no controlada.|Infraestructura|  
+|[57397 - UnhandledException](../../../../../docs/framework/wcf/diagnostics/etw/57397-unhandledexception.md)|Crítico|Excepción no controlada.|Infraestructura|  
 |[57399 - TraceCodeEventLogCritical](../../../../../docs/framework/wcf/diagnostics/etw/57399-tracecodeeventlogcritical.md)|Crítico|Se escribió en el registro de sucesos.|Infraestructura|  
 |[57400 - TraceCodeEventLogError](../../../../../docs/framework/wcf/diagnostics/etw/57400-tracecodeeventlogerror.md)|Error|Se escribió en el registro de sucesos.|Infraestructura|  
 |[57401 - TraceCodeEventLogInfo](../../../../../docs/framework/wcf/diagnostics/etw/57401-tracecodeeventloginfo.md)|Información|Se escribió en el registro de sucesos.|Infraestructura|  

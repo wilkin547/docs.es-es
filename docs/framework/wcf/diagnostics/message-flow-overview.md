@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 072f50a53c8596a09e1a7ee0cdb8585c3778f245
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 6fe4d8222bfed231c618ee4e5616dab37f912836
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="message-flow-overview"></a>Información general del flujo de mensajes
 En un sistema distribuido que contiene servicios interconectados es necesario determinar las relaciones causales entre los servicios. Es importante conocer los distintos componentes que formaron parte de un flujo de solicitud para admitir escenarios críticos, como los de supervisión de estado, solución de problemas y análisis de la causa raíz. Para habilitar la correlación de seguimientos entre varios servicios, en .NET Framework 4 agregamos compatibilidad a través de las siguientes características:  

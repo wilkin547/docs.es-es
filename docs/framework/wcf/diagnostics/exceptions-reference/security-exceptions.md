@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 0c1b3e921714d104ab2bb5018184a9517c7ad345
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 431226f8ce56300f83df64a713b477f0065e2f56
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="security-exceptions"></a>Excepciones de seguridad
 En este tema se enumeran todas las excepciones de seguridad.  
@@ -48,7 +49,7 @@ En este tema se enumeran todas las excepciones de seguridad.
 |CannotImportSupportingTokensForOperationWithoutRequestAction|Error en la importación de la directiva de seguridad. La directiva de seguridad contiene los requisitos de tokens auxiliares en el ámbito de la operación. La descripción del contrato no especifica la acción para el mensaje de solicitud asociado a esta operación.|  
 |CannotIssueRstTokenType|No puede emitir el token o especificar el tipo.|  
 |CannotObtainIssuedTokenKeySize|No puede determinar el tamaño de clave del token emitido.|  
-|CannotPerformImpersonationOnUsernameToken|No se puede realizar la suplantación mediante el token del cliente. El enlace especificado para el contrato especificado utiliza el token de de seguridad de nombre de usuario para la autenticación de cliente con un proveedor de pertenencia registrado. Use otro tipo de token de seguridad para el cliente.|  
+|CannotPerformImpersonationOnUsernameToken|No se puede realizar la suplantación mediante el token del cliente. El enlace especificado para el contrato especificado utiliza el token de seguridad de nombre de usuario para la autenticación de cliente con un proveedor de pertenencia registrado. Use otro tipo de token de seguridad para el cliente.|  
 |CannotPerformS4UImpersonationOnPlatform|El enlace especificado para el contrato especificado solo admite suplantación en [!INCLUDE[ws2003](../../../../../includes/ws2003-md.md)] y versiones más recientes de Windows. Utilice autenticación de SspiNegotiated y un enlace con Secure Conversation con la cancelación habilitada.|  
 |CannotReadKeyIdentifier|No se puede leer el KeyIdentifier del elemento especificado con el espacio de nombres especificado.|  
 |CannotReadToken|No se puede leer el token del elemento especificado con el espacio de nombres especificado para BinarySecretSecurityToken, con un ValueType especificado. Si se espera que este elemento sea válido, asegúrese de que la seguridad se configura para utilizar los tokens con el nombre, espacio de nombres y tipo de valor especificados.|  
@@ -59,7 +60,7 @@ En este tema se enumeran todas las excepciones de seguridad.
 |ConfigurationSchemaInsuffientForSecurityBindingElementInstance|El esquema de configuración no es suficiente para describir la configuración no estándar del siguiente elemento de enlace de seguridad:|  
 |DerivedKeyTokenGenerationAndLengthTooHigh|La generación y longitud especificada de la clave derivada producen un desplazamiento de derivación de claves mayor que el desplazamiento máximo permitido.|  
 |DnsIdentityCheckFailedForIncomingMessage|Error en la comprobación de identidad para el mensaje entrante. Se especificó la identidad del sistema de nombres de dominio (DNS) esperada del extremo remoto. El extremo remoto proporcionó la demanda especificada del sistema de nombres de dominio (DNS). Si éste es un extremo remoto legítimo, puede corregir el problema especificando la identidad del sistema de nombres de dominio como la propiedad de identidad de EndpointAddress al crear el proxy del canal.|  
-|DnsIdentityCheckFailedForOutgoingMessage|Error en la comprobación de identidad para el mensaje que estaba saliendo. El extremo remoto debería haber tenido la identidad especificada del sistema de nombres de dominio. El extremo remoto proporcionó la demanda del sistema de nombres de dominio (DNS). Si éste es un extremo remoto legítimo, puede corregir el problema especificando de manera explícita la identidad DNS como la propiedad Identity de EndpointAddress al crear el proxy del canal.|  
+|DnsIdentityCheckFailedForOutgoingMessage|Error en la comprobación de identidad para el mensaje que estaba saliendo. El punto de conexión remoto debería haber tenido la identidad especificada del sistema de nombres de dominio. El extremo remoto proporcionó la demanda del sistema de nombres de dominio (DNS). Si éste es un punto de conexión remoto legítimo, puede corregir el problema especificando de manera explícita la identidad DNS como la propiedad Identity de EndpointAddress al crear el proxy del canal.|  
 |DuplicateIdInMessageToBeVerified|El id. especificado se produjo dos veces en el mensaje que se suministra para la comprobación.|  
 |EmptyBase64Attribute|Un valor vacío se encontró para el espacio de nombres y nombre de atributo de base64 necesario.|  
 |ExportOfBindingWithAsymmetricAndTransportSecurityNotSupported|Error en la exportación de la directiva de seguridad. El enlace contiene un elemento AsymmetricSecurityBindingElement y otro de enlace de transporte seguro. No se admite la exportación de directivas para este tipo de enlaces.|  
@@ -68,7 +69,7 @@ En este tema se enumeran todas las excepciones de seguridad.
 |FoundMultipleCerts|Se encontraron varios certificados X.509 mediante el criterio de búsqueda especificado: StoreName, StoreLocation, FindType, FindValue. Proporcione un valor de búsqueda más concreto.|  
 |FoundMultipleCertsForTarget|Se encontraron múltiples certificados X.509 mediante el criterio de búsqueda especificado: StoreName, StoreLocation, FindType, FindValue para el destino especificado. Proporcione un valor de búsqueda más concreto.|  
 |HeaderDecryptionNotSupportedInWsSecurityJan2004|SecurityVersion.WSSecurityJan2004 no admite el descifrado de encabezados. Utilice SecurityVersion.WsSecurityXXX2005 y superiores o utilice seguridad de transporte para cifrar el mensaje completo.|  
-|IdentityCheckFailedForIncomingMessage|Error en la comprobación de identidad para el mensaje entrante. La identidad esperada se especifica para el extremo de destino.|  
+|IdentityCheckFailedForIncomingMessage|Error en la comprobación de identidad para el mensaje entrante. La identidad esperada se especifica para el punto de conexión de destino.|  
 |IdentityCheckFailedForOutgoingMessage|Error en la comprobación de identidad para el mensaje saliente. La identidad esperada se especifica para el extremo de destino.|  
 |IncorrectSpnOrUpnSpecified|Error de autenticación de la interfaz del proveedor de compatibilidad para seguridad (SSPI). Es posible que el servidor no se esté ejecutando en una cuenta con la identidad especificada. Si el servidor se está ejecutando en una cuenta de servicio (servicio de red, por ejemplo), especifique el ServicePrincipalName de la cuenta como la identidad en la EndpointAddress para el servidor. Si el servidor se está ejecutando en una cuenta de usuario, especifique el UserPrincipalName de la cuenta como la identidad en la EndpointAddress para el servidor.|  
 |InvalidAttributeInSignedHeader|El encabezado firmado especificado contiene el atributo especificado. Se especifica el atributo esperado.|  
@@ -122,7 +123,7 @@ En este tema se enumeran todas las excepciones de seguridad.
 |SecurityAuditFailToLoadDll|No se pudo cargar la biblioteca de vínculos dinámicos especificada (dll).|  
 |SecurityAuditNotSupportedOnChannelFactory|SecurityAuditBehavior no se admite en el generador de canales.|  
 |SecurityAuditPlatformNotSupported|La plataforma actual no admite la escritura de mensajes de auditoría en el registro de seguridad. Debe escribir los mensajes de auditoría en el registro de aplicaciones.|  
-|SecurityBindingElementCannotBeExpressedInConfig|Una directiva de seguridad se importó para el extremo. La directiva de seguridad contiene requisitos que no se pueden representar en una configuración de Windows Communication Foundation. Busque un comentario acerca de los parámetros SecurityBindingElement que se requieren en el archivo de configuración generado. Cree el elemento de enlace correcto con código. La configuración de enlace que se encuentra en el archivo de configuración no es segura.|  
+|SecurityBindingElementCannotBeExpressedInConfig|Una directiva de seguridad se importó para el punto de conexión. La directiva de seguridad contiene requisitos que no se pueden representar en una configuración de Windows Communication Foundation. Busque un comentario acerca de los parámetros SecurityBindingElement que se requieren en el archivo de configuración generado. Cree el elemento de enlace correcto con código. La configuración de enlace que se encuentra en el archivo de configuración no es segura.|  
 |SecurityBindingSupportsOneWayOnly|El SecurityBinding para el enlace especificado para el contrato especificado solo admite la operación OneWay.|  
 |SecurityContextDoesNotAllowImpersonation|No se puede iniciar la suplantación porque el SecurityContext para la función UltimateReceiver del mensaje de solicitud con la acción especificada no está asignado a una identidad de Windows.|  
 |SecurityListenerClosing|El agente de escucha no acepta nuevas conversaciones seguras porque se está cerrando.|  

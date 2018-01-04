@@ -14,11 +14,12 @@ caps.latest.revision: "53"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1b3b200e26d4d615dd67c13770073b76dac78005
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 3beeaec1ed9982fc49f6bf81e2717db862e7882f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="configuring-tracing"></a>Configurar seguimiento
 En este tema se describe cómo se puede habilitar el seguimiento, configurar los orígenes de seguimiento para emitir trazas y establecer niveles de seguimiento, establecer el seguimiento y la propagación de actividades para admitir la correlación de seguimiento de un extremo a otro, y establecer escuchas de seguimiento para tener acceso a las trazas.  
@@ -190,7 +191,7 @@ En este tema se describe cómo se puede habilitar el seguimiento, configurar los
  No puede utilizar el atributo `propagateActivity` con orígenes de seguimiento definidos por el usuario. Para la propagación del identificador de actividad de código de usuario, asegúrese de no establecer ServiceModel `ActivityTracing`, mientras todavía tenga el atributo ServiceModel `propagateActivity` establecido en `true`.  
   
 ## <a name="see-also"></a>Vea también  
- [Seguimiento](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [Traza](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
  [Administración y diagnóstico](../../../../../docs/framework/wcf/diagnostics/index.md)  
- [Cómo: crear e inicializar agentes de escucha de seguimiento](http://go.microsoft.com/fwlink/?LinkId=94648)  
+ [Creación e inicialización de agentes de escucha de seguimiento](http://go.microsoft.com/fwlink/?LinkId=94648)  
  [Crear un TraceListener personalizado](http://go.microsoft.com/fwlink/?LinkId=96239)
