@@ -8,11 +8,12 @@ ms.date: 11/06/2017
 ms.topic: article-type-from-white-list
 ms.prod: .net-framework
 ms.devlang: cpp
-ms.openlocfilehash: 461d90aaf5beca1c0f1d1965ce0ea07411e56e79
-ms.sourcegitcommit: 43c656811dd38a66a6672084c65d10c0cbbf2015
+ms.workload: dotnet
+ms.openlocfilehash: 466ba410f7d6c13eb5f1949bf3aa32c3951a8ba7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-management-instrumentation-wmi-and-performance-counters-unmanaged-api-reference"></a>Instrumental de administración de Windows (WMI) y los contadores de rendimiento (referencia de API no administrada)
 
@@ -34,7 +35,7 @@ La API incluye las siguientes funciones:
 | [ConnectServerWmi (función)](connectserverwmi.md) | Crea una conexión a través de DCOM a un espacio de nombres WMI en un equipo especificado. |
 | [CreateClassEnumWmi (función)](createclassenumwmi.md) | Devuelve un enumerador para todas las clases que cumplen los criterios de selección especificado. |
 | [CreateInstanceEnumWmi (función)](createinstanceenumwmi.md) | Devuelve un enumerador que devuelve el aceptadas de una clase especificada que cumplen los criterios de selección especificados. |
-| [Eliminar (función)](delete.md) | Elimina una propiedad especificada de una definición de clase y todos sus calificadores. |
+| [Delete (función)](delete.md) | Elimina una propiedad especificada de una definición de clase y todos sus calificadores. |
 | [DeleteMethod (función)](deletemethod.md) | Elimina un método especificado de una definición de clase CIM. |
 | [EndEnumeration (función)](endenumeration.md) | Finaliza una secuencia de enumeración. | 
 | [EndMethodEnumeration (función)](endmethodenumeration.md) | Finaliza una secuencia de enumeración iniciada mediante la llamada la [BeginMethodEnumeration función](beginmethodenumeration.md). |

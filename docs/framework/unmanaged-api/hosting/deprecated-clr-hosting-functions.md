@@ -18,11 +18,12 @@ caps.latest.revision: "20"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 9530fecb4f2ca6f59d165e49c282320966fd2fa8
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 985425ad44003f5971b21f107fad322f2123f6ad
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="deprecated-clr-hosting-functions"></a>Funciones de hospedaje de CLR en desuso
 Esta sección describen las funciones estáticas globales no administradas que utiliza versiones anteriores de la API de hospedaje.  
@@ -54,37 +55,37 @@ Esta sección describen las funciones estáticas globales no administradas que u
  [CorBindToRuntimeHost (función)](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimehost-function.md)  
  Desusado. Permite a los hosts cargar una versión especificada de CLR en un proceso.  
   
- [GetCORRequiredVersion (función)](../../../../docs/framework/unmanaged-api/hosting/getcorrequiredversion-function.md)  
+ [GetCORRequiredVersion (Función)](../../../../docs/framework/unmanaged-api/hosting/getcorrequiredversion-function.md)  
  Desusado. Obtiene el número de versión CLR necesario.  
   
- [GetCORSystemDirectory (función)](../../../../docs/framework/unmanaged-api/hosting/getcorsystemdirectory-function.md)  
+ [GetCORSystemDirectory (Función)](../../../../docs/framework/unmanaged-api/hosting/getcorsystemdirectory-function.md)  
  Desusado. Devuelve el directorio de instalación de CLR que se carga en el proceso.  
   
- [GetRealProcAddress (función)](../../../../docs/framework/unmanaged-api/hosting/getrealprocaddress-function.md)  
+ [GetRealProcAddress (Función)](../../../../docs/framework/unmanaged-api/hosting/getrealprocaddress-function.md)  
  Desusado. Obtiene la dirección de la función especificada que se exporta desde la última versión instalada de CLR.  
   
- [GetRequestedRuntimeInfo (función)](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeinfo-function.md)  
+ [GetRequestedRuntimeInfo (Función)](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeinfo-function.md)  
  Desusado. Obtiene información de versión y directorio acerca del entorno CLR solicitado por una aplicación.  
   
 ## <a name="clr-version-functions"></a>Funciones de la versión CLR  
  Las funciones de esta sección devuelven una versión CLR; no activa el CLR.  
   
- [GetCORVersion (función)](../../../../docs/framework/unmanaged-api/hosting/getcorversion-function.md)  
+ [GetCORVersion (Función)](../../../../docs/framework/unmanaged-api/hosting/getcorversion-function.md)  
  Desusado. Devuelve el número de versión de CLR que se ejecuta en el proceso actual.  
   
- [GetFileVersion (función)](../../../../docs/framework/unmanaged-api/hosting/getfileversion-function.md)  
+ [GetFileVersion (Función)](../../../../docs/framework/unmanaged-api/hosting/getfileversion-function.md)  
  Desusado. Obtiene la información de versión CLR del archivo especificado, utilizando el búfer especificado.  
   
- [GetRequestedRuntimeVersion (función)](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeversion-function.md)  
+ [GetRequestedRuntimeVersion (Función)](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeversion-function.md)  
  Desusado. Obtiene el número de versión de CLR solicitado por la aplicación especificada. Si no está instalada esa versión, obtiene la versión más reciente que esté instalada antes de la versión solicitada.  
   
- [GetRequestedRuntimeVersionForCLSID (función)](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeversionforclsid-function.md)  
+ [GetRequestedRuntimeVersionForCLSID (Función)](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeversionforclsid-function.md)  
  Desusado. Obtiene la información de versión CLR correspondiente para la clase con el CLSID especificado.  
   
- [GetVersionFromProcess (función)](../../../../docs/framework/unmanaged-api/hosting/getversionfromprocess-function.md)  
+ [GetVersionFromProcess (Función)](../../../../docs/framework/unmanaged-api/hosting/getversionfromprocess-function.md)  
  Desusado. Obtiene el número de versión de CLR que está asociado con el identificador de proceso especificado.  
   
- [LockClrVersion (función)](../../../../docs/framework/unmanaged-api/hosting/lockclrversion-function.md)  
+ [LockClrVersion (Función)](../../../../docs/framework/unmanaged-api/hosting/lockclrversion-function.md)  
  Desusado. Permite al host determinar qué versión de CLR se utilizará en el proceso antes de inicializar el CLR de forma explícita.  
   
 ## <a name="hosting-functions"></a>Funciones de hospedaje  
@@ -109,7 +110,7 @@ Esta sección describen las funciones estáticas globales no administradas que u
  [CoUninitializeEE (función)](../../../../docs/framework/unmanaged-api/hosting/couninitializeee-function.md)  
  Obsoleto.  
   
- [CreateDebuggingInterfaceFromVersion (función)](../../../../docs/framework/unmanaged-api/hosting/createdebugginginterfacefromversion-function.md)  
+ [CreateDebuggingInterfaceFromVersion (Función)](../../../../docs/framework/unmanaged-api/hosting/createdebugginginterfacefromversion-function.md)  
  Desusado. Crea un [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) objeto basándose en la información de versión especificada.  
   
  [CreateICeeFileGen (función)](../../../../docs/framework/unmanaged-api/hosting/createiceefilegen-function.md)  
@@ -118,7 +119,7 @@ Esta sección describen las funciones estáticas globales no administradas que u
  [DestroyICeeFileGen (función)](../../../../docs/framework/unmanaged-api/hosting/destroyiceefilegen-function.md)  
  Desusado. Destruye una [ICeeFileGen](../../../../docs/framework/unmanaged-api/hosting/iceefilegen-class.md) objeto.  
   
- [Función FExecuteInAppDomainCallback](../../../../docs/framework/unmanaged-api/hosting/fexecuteinappdomaincallback-function-pointer.md)  
+ [Puntero a la función FExecuteInAppDomainCallback](../../../../docs/framework/unmanaged-api/hosting/fexecuteinappdomaincallback-function-pointer.md)  
  Desusado. Señala a una función que llama a CLR para ejecutar código administrado.  
   
  [Puntero a la función FLockClrVersionCallback](../../../../docs/framework/unmanaged-api/hosting/flockclrversioncallback-function-pointer.md)  
@@ -127,25 +128,25 @@ Esta sección describen las funciones estáticas globales no administradas que u
  [GetCLRIdentityManager (función)](../../../../docs/framework/unmanaged-api/hosting/getclridentitymanager-function.md)  
  Desusado. Obtiene un puntero a una interfaz que permite a CLR administrar identidades.  
   
- [LoadLibraryShim (función)](../../../../docs/framework/unmanaged-api/hosting/loadlibraryshim-function.md)  
+ [LoadLibraryShim (Función)](../../../../docs/framework/unmanaged-api/hosting/loadlibraryshim-function.md)  
  Desusado. Carga la versión especificada de una DLL de .NET Framework.  
   
- [LoadStringRC (función)](../../../../docs/framework/unmanaged-api/hosting/loadstringrc-function.md)  
+ [LoadStringRC (Función)](../../../../docs/framework/unmanaged-api/hosting/loadstringrc-function.md)  
  Desusado. Convierte un valor HRESULT en un mensaje de error mediante el uso de la referencia cultural predeterminada del subproceso actual.  
   
- [LoadStringRCEx (función)](../../../../docs/framework/unmanaged-api/hosting/loadstringrcex-function.md)  
+ [LoadStringRCEx (Función)](../../../../docs/framework/unmanaged-api/hosting/loadstringrcex-function.md)  
  Desusado. Convierte un valor HRESULT a un mensaje de error adecuado para la referencia cultural especificada.  
   
- [La función Lpoverlapped_completion_routine](../../../../docs/framework/unmanaged-api/hosting/lpoverlapped-completion-routine-function-pointer.md)  
+ [Puntero a la función LPOVERLAPPED_COMPLETION_ROUTINE](../../../../docs/framework/unmanaged-api/hosting/lpoverlapped-completion-routine-function-pointer.md)  
  Desusado. Señala a una función que notifica al host cuándo una superposición (es decir, asincrónica) ha completado la E/S en un dispositivo.  
   
- [La función Lpthread_start_routine](../../../../docs/framework/unmanaged-api/hosting/lpthread-start-routine-function-pointer.md)  
+ [Puntero a la función LPTHREAD_START_ROUTINE](../../../../docs/framework/unmanaged-api/hosting/lpthread-start-routine-function-pointer.md)  
  Desusado. Señala a una función que notifica al host que ha empezado a ejecutar un subproceso.  
   
- [RunDll32ShimW (función)](../../../../docs/framework/unmanaged-api/hosting/rundll32shimw-function.md)  
+ [RunDll32ShimW (Función)](../../../../docs/framework/unmanaged-api/hosting/rundll32shimw-function.md)  
  Desusado. Ejecuta el comando especificado.  
   
- [Puntero a función WAITORTIMERCALLBACK](../../../../docs/framework/unmanaged-api/hosting/waitortimercallback-function-pointer.md)  
+ [Puntero a la función WAITORTIMERCALLBACK](../../../../docs/framework/unmanaged-api/hosting/waitortimercallback-function-pointer.md)  
  Desusado. Señala a una función que notifica al host que un identificador de espera se ha señalado o agotó el tiempo.  
   
 ## <a name="infrastructure-functions"></a>Funciones de infraestructura  
@@ -167,4 +168,4 @@ Esta sección describen las funciones estáticas globales no administradas que u
  Valida las imágenes del módulo administrado y notifica el cargador del sistema operativo después de que se han cargado.  
   
 ## <a name="see-also"></a>Vea también  
- [.NET framework 4 aloja funciones estáticas globales](../../../../docs/framework/unmanaged-api/hosting/net-framework-4-hosting-global-static-functions.md) 
+ [Funciones estáticas globales de hospedaje de .NET Framework 4](../../../../docs/framework/unmanaged-api/hosting/net-framework-4-hosting-global-static-functions.md) 

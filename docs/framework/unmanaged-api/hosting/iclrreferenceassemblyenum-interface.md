@@ -19,11 +19,12 @@ caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 07877ea0137ae6864113f3ecdbca010703781ada
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a7d2a295c4c35761d0a47e1690cd7b88387cecdb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="iclrreferenceassemblyenum-interface"></a>ICLRReferenceAssemblyEnum (Interfaz)
 Proporciona métodos que permiten al host manipular el conjunto de ensamblados que se hace referencia a un archivo o una secuencia utilizando los datos de identidad de ensamblado que están internos de common language runtime (CLR), sin necesidad de crear o entender dichas identidades.  

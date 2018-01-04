@@ -21,11 +21,12 @@ caps.latest.revision: "6"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 3571f546f71515a980c5415e568ae85eb0863d42
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1a2198e54c764fde0248563b040ac98984001888
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugheapvalue3getthreadowningmonitorlock-method"></a>ICorDebugHeapValue3::GetThreadOwningMonitorLock (Método)
 Devuelve el subproceso administrado que posee el bloqueo de monitor en este objeto.  
@@ -47,7 +48,7 @@ HRESULT GetThreadOwningMonitorLock (
  [out] El número de veces que este subproceso tendría que liberar el bloqueo antes de volver a ser desenredado.  
   
 ## <a name="return-value"></a>Valor devuelto  
- Este método devuelve los siguientes HRESULT específicos así como los errores HRESULT que indican un error del método.  
+ Este método devuelve los siguientes HRESULT específicos y los errores HRESULT que indican un error del método.  
   
 |HRESULT|Descripción|  
 |-------------|-----------------|  

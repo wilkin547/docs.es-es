@@ -19,11 +19,12 @@ caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: eed5a72cb9da95f79831784d2bb53a6d60f92988
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d2dd55268e9f54554ec3e9a9b61573b708aa5acc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="iclrhostbindingpolicymanager-interface"></a>ICLRHostBindingPolicyManager (Interfaz)
 Proporciona métodos para el host evaluar la directiva de enlace actual y comunicar los cambios de directiva para un ensamblado especificado.  

@@ -19,11 +19,12 @@ caps.latest.revision: "6"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 8654f28cc4d82a5ed1419215807ec3360522fd55
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 2e176679b4fdb4d0a2c5c4fbcbc09403e45f1ad1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="isymunmanageddocument-interface"></a>ISymUnmanagedDocument (Interfaz)
 Representa un documento al que hace referencia un almacén de símbolos. Un documento viene definido por un localizador uniforme de recursos (URL) y un GUID de tipo de documento. Puede encontrar el documento sin tener en cuenta cómo se almacena utilizando la dirección URL y GUID de tipo de documento. Puede almacenar el código fuente del documento en el almacén de símbolos y recuperarlo a través de esta interfaz.  

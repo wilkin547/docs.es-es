@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 0e537b955524f2721868ddf5da9fccf68f9d4efd
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 8e712f22156e96cfc58e9c1a835077ba21ecd184
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="iclrdebugmanager-interface"></a>ICLRDebugManager (Interfaz)
 Proporciona métodos que permiten a un host asociar un conjunto de tareas a un identificador y un nombre descriptivo.  

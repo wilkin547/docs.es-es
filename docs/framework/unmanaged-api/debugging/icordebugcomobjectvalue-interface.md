@@ -19,11 +19,12 @@ caps.latest.revision: "6"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 8d339d3146a8a9214c3518eac6c31ed5222f9b31
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 9adeec14e102ef575f24566980477a285f87ba40
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugcomobjectvalue-interface"></a>Interfaz ICorDebugComObjectValue
 Proporciona métodos para recuperar la información asociada a un contenedor invocable en tiempo de ejecución (RCW).  
@@ -32,7 +33,7 @@ Proporciona métodos para recuperar la información asociada a un contenedor inv
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[Getcachedinterfacepointers (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugcomobjectvalue-getcachedinterfacepointers-method.md)|Obtiene los punteros de interfaz sin formato almacenados en memoria caché en el contenedor RCW actual.|  
+|[GetCachedInterfacePointers (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugcomobjectvalue-getcachedinterfacepointers-method.md)|Obtiene los punteros de interfaz sin formato almacenados en memoria caché en el contenedor RCW actual.|  
 |[GetCachedInterfaceTypes (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugcomobjectvalue-getcachedinterfacetypes-method.md)|Proporciona un enumerador para los tipos de interfaz que el objeto actual se ha a las mayúsculas y minúsculas o usar como.|  
   
 ## <a name="remarks"></a>Comentarios  

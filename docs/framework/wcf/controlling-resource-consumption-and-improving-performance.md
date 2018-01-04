@@ -13,11 +13,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8cd80805eee58db16f5865683cbd322a49c554a8
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: ecb8ae5edfb35ccaffecbfb4e960d3f4a46bad0e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="controlling-resource-consumption-and-improving-performance"></a>Control del consumo de recursos y mejora del rendimiento
 En este tema se describen varias propiedades en diferentes áreas de la arquitectura [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] que trabajan para controlar el consumo de recursos y que afectan a las mediciones del rendimiento.  
@@ -58,4 +59,4 @@ En este tema se describen varias propiedades en diferentes áreas de la arquitec
   
 ## <a name="see-also"></a>Vea también  
  [Administración y diagnóstico](../../../docs/framework/wcf/diagnostics/index.md)  
- [Datos de gran tamaño y la transmisión por secuencias](../../../docs/framework/wcf/feature-details/large-data-and-streaming.md)
+ [Grandes datos y streaming](../../../docs/framework/wcf/feature-details/large-data-and-streaming.md)

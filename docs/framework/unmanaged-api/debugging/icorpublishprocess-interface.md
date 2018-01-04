@@ -19,11 +19,12 @@ caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: cb62da277ff13bea33969bb9c728cac5d5a15554
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 765be4e0ae7657d169ea561bc6a36bcf8cc11153
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icorpublishprocess-interface"></a>ICorPublishProcess (Interfaz)
 Proporciona métodos que tienen acceso a la información que se mostrará un proceso.  
@@ -48,4 +49,4 @@ Proporciona métodos que tienen acceso a la información que se mostrará un pro
   
 ## <a name="see-also"></a>Vea también  
  [Interfaces de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- [CorpubPublish (Coclase)](../../../../docs/framework/unmanaged-api/debugging/corpubpublish-coclass.md)
+ [CorpubPublish (coclase)](../../../../docs/framework/unmanaged-api/debugging/corpubpublish-coclass.md)

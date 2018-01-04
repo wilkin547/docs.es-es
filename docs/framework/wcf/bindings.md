@@ -14,14 +14,15 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 36924bdc79a9789a991befb53c0025b7ea1fd601
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: e878aadf1c7df6042323c008ff52a4be8a9d817f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-communication-foundation-bindings"></a>Enlaces de Windows Communication Foundation
-Los enlaces especifican cómo un extremo de servicio [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] se comunica con otros extremos. En lo más básico, un enlace debe especificar el transporte (por ejemplo, HTTP o TCP) a utilizar. También puede establecer otras características, como seguridad y soporte de transacciones, a través de los enlaces.  
+Los enlaces especifican cómo un extremo de servicio [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] se comunica con otros extremos. En lo más básico, un enlace debe especificar el transporte (por ejemplo, HTTP o TCP) a utilizar. También puede establecer otras características, como seguridad y soporte de transacción, a través de los enlaces.  
   
 ## <a name="in-this-section"></a>En esta sección  
  [Información general sobre enlaces WCF](../../../docs/framework/wcf/bindings-overview.md)  
@@ -40,7 +41,7 @@ Los enlaces especifican cómo un extremo de servicio [!INCLUDE[indigo1](../../..
  <xref:System.ServiceModel.Channels>  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
- [Los puntos de conexión: Direcciones, enlaces y contratos](../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)  
+ [Puntos de conexión: direcciones, enlaces y contratos](../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)  
   
  [Enlaces](../../../docs/framework/wcf/feature-details/bindings.md)  
   

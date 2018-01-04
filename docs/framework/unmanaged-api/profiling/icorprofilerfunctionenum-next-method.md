@@ -21,11 +21,12 @@ caps.latest.revision: "14"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 6cf37beced15305de60c3f57edb701adc7379a1f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: fd9c01e014ee19c5e30fdc293d39787638e8b1d9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icorprofilerfunctionenumnext-method"></a>ICorProfilerFunctionEnum::Next (Método)
 Obtiene el número especificado de funciones contiguas de una colección secuencial de funciones, comenzando en la posición actual del enumerador en la secuencia.  
@@ -50,7 +51,7 @@ HRESULT Next([in]  ULONG      celt,
  [out] Puntero al número de funciones realmente devueltos en la matriz `ids`.  
   
 ## <a name="return-value"></a>Valor devuelto  
- Este método devuelve los siguientes HRESULT específicos así como los errores HRESULT que indican un error del método.  
+ Este método devuelve los siguientes HRESULT específicos y los errores HRESULT que indican un error del método.  
   
 |HRESULT|Descripción|  
 |-------------|-----------------|  
@@ -68,4 +69,4 @@ HRESULT Next([in]  ULONG      celt,
   
 ## <a name="see-also"></a>Vea también  
  [ICorProfilerFunctionEnum (interfaz)](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctionenum-interface.md)  
- [Interfaces de generación de perfiles](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+ [Interfaces para generación de perfiles](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)

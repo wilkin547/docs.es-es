@@ -17,11 +17,12 @@ caps.latest.revision: "5"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 2fd6b7b6b097010a307abbc260cda7c4b73e0f00
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f126d92cebe3261dc92b89cbf66bbcff5fd8808e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugilcode2-interface"></a>ICorDebugILCode2 (Interfaz)
 [Compatible con .NET Framework 4.5.2 y versiones posteriores]  

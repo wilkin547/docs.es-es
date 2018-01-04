@@ -19,11 +19,12 @@ caps.latest.revision: "18"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 7a5086f3349b3756e507855a87bd724d2618212f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 9573891a2c27a2a92eccd0522f84175effa8037a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ihosttaskmanager-interface"></a>IHostTaskManager (Interfaz)
 Proporciona métodos que permiten a common language runtime (CLR) para trabajar con tareas a través del host en lugar de utilizar las funciones de sistema operativo estándar de subprocesos o fibras.  

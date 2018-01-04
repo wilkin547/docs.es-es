@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 56cfe60c221062e3ad7ae1b8cbdc9b135e6fa2e8
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: b24d54930a29a24dab97ce403c2808fb74b8cbfe
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="301---userdefinederroroccurred"></a>301 - UserDefinedErrorOccurred
 ## <a name="properties"></a>Propiedades  
@@ -39,6 +40,6 @@ ms.lasthandoff: 12/02/2017
   
 |Nombre del elemento de datos|Tipo del elemento de datos|Descripción|  
 |--------------------|--------------------|-----------------|  
-|Name|`xs:string`|El nombre del evento definido por el usuario.|  
+|nombre|`xs:string`|El nombre del evento definido por el usuario.|  
 |HostReference|`xs:string`|En el caso de los servicios hospedados en web, este campo identifica de manera única el servicio en la jerarquía web. El formato se define como ' ruta de acceso Virtual de sitio Web de nombre de aplicación &#124; Ruta de acceso Virtual del servicio &#124; ServiceName'. Ejemplo: ' sitio Web/CalculatorApplication &#124;/CalculatorService.svc &#124; predeterminada CalculatorService'.|  
 |Payload|`xs:string`|La carga del evento definida por el usuario.|

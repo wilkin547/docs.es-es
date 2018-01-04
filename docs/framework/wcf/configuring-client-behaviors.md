@@ -16,11 +16,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c63a91683817311b8d644eb4285101e32eaea7f1
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: ee79900b52ae0fa58e8fb9a5cbbf50f5a882c295
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="configuring-client-behaviors"></a>Configuración de los comportamientos del cliente
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] configura los comportamientos de dos maneras: haciendo referencia a las configuraciones de comportamiento (que se definen en la sección `<behavior>` de un archivo de configuración de la aplicación cliente) o mediante programación, en la aplicación que realiza la llamada. En este tema se describen ambos métodos.  

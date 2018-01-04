@@ -17,11 +17,12 @@ caps.latest.revision: "23"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: a3cad92c204fa10f72d7a9a61460f1234206cb39
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 46208d6db716f7e1e7a443d958c059b22f74c46f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="hosting-interfaces"></a>Interfaces de hospedaje
 Esta sección describen las interfaces que no administrada de hosts pueden usar para integrar common language runtime (CLR) en sus aplicaciones.  
@@ -33,7 +34,7 @@ Esta sección describen las interfaces que no administrada de hosts pueden usar 
  El [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] interfaces de hospedaje sustituyen a las interfaces de .NET Framework 2.0.
   
 ## <a name="in-this-section"></a>En esta sección  
- [Coclases e Interfaces de hospedaje de CLR en desuso](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-interfaces-and-coclasses.md)  
+ [Coclases e interfaces de hospedaje de CLR en desuso](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-interfaces-and-coclasses.md)  
  Describe las interfaces de hospedaje presentadas en las versiones 1.0 y 1.1 de .NET Framework.  
   
  [Interfaces de hospedaje de CLR](../../../../docs/framework/unmanaged-api/hosting/clr-hosting-interfaces.md)  

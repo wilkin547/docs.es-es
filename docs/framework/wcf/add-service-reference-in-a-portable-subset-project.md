@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8c39a60d3b34ca1b5c219d12bda4af5217f389f3
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 2a4074920d3ca616498c14511bf39763d7d87ed3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="add-service-reference-in-a-portable-subset-project"></a>Agregar referencia de servicio en un proyecto de subconjuntos portátiles
 Proyectos de subconjuntos portátiles permiten a los programadores de ensamblados .NET mantener un único árbol de origen y el sistema de compilación al que se admiten varias implementaciones de .NET (escritorio, Silverlight, Windows Phone y XBOX). Proyectos de subconjuntos portátiles solo hacen referencia a bibliotecas portátiles de .NET que son un ensamblado de .NET framework que se puede usar en cualquier implementación. NET.  
@@ -55,4 +56,4 @@ Proyectos de subconjuntos portátiles permiten a los programadores de ensamblado
   
 ## <a name="see-also"></a>Vea también  
  [Acceso a los servicios mediante un cliente WCF](../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md)  
- [Biblioteca de clases Portable](http://msdn.microsoft.com/library/gg597391\(v=vs.110\))
+ [Biblioteca de clases portable](http://msdn.microsoft.com/library/gg597391\(v=vs.110\))

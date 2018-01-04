@@ -21,11 +21,12 @@ caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 72a68000691dd23a55b77265cae839bea8b4ae1e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: a02efe1b701506cc3de695c5b79d5e9c84b25b8f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugsteppersteprange-method"></a>ICorDebugStepper::StepRange (Método)
 Hace que esta instancia de ICorDebugStepper paso a paso a través de un subproceso que lo contiene y que se devolverán cuando llegue al código situado más allá del último de los intervalos especificados.  

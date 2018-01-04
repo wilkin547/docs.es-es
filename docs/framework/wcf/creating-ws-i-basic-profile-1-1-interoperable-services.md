@@ -17,18 +17,19 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 500e57b36bbbdd1d23e6efb2c50421e3e134bcb3
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 61c4f26c9880d8a7f6a8fb356bafcc0d312509dc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="creating-ws-i-basic-profile-11-interoperable-services"></a>Creación de servicios interoperables de WS-I Basic Profile 1.1
 Para configurar un extremo del servicio [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] para ser interoperable con clientes de servicios Web [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]:  
   
 -   Utilice el tipo <xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType> como tipo de enlace para su extremo de servicio.  
   
--   No utilice devolución de llamada sino características de contrato de sesión o comportamientos de transacción en su extremo de servicio  
+-   No utilice devolución de llamada sino características de contrato de sesión o comportamientos de transacción en su punto de conexión de servicio  
   
  Puede habilitar opcionalmente el soporte para HTTPS y la autenticación del cliente del nivel de transporte en el enlace.  
   
@@ -51,4 +52,4 @@ Para configurar un extremo del servicio [!INCLUDE[indigo2](../../../includes/ind
  [!code-xml[C_HowTo-WCFServiceAndASMXClient#1](../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto-wcfserviceandasmxclient/common/app.config#1)]  
   
 ## <a name="see-also"></a>Vea también  
- [Interoperabilidad con servicios Web de ASP.NET](../../../docs/framework/wcf/feature-details/interop-with-aspnet-web-services.md)
+ [Interoperabilidad con servicios web ASP.NET](../../../docs/framework/wcf/feature-details/interop-with-aspnet-web-services.md)

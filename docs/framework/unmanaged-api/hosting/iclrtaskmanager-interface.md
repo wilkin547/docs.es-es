@@ -19,11 +19,12 @@ caps.latest.revision: "13"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 3144338ddce262aaa6772f588a4f1a652cc57e01
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 342d7b82802fcfbe9e179d85d6d692205f19e382
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="iclrtaskmanager-interface"></a>ICLRTaskManager (Interfaz)
 Proporciona métodos que permiten al host solicitar explícitamente que common language runtime (CLR) crean una nueva tarea, obtención la tarea que se está ejecuta actualmente y establecer el idioma geográfico y la referencia cultural para la tarea.  

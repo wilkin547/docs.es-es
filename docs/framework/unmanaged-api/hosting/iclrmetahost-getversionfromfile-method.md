@@ -21,11 +21,12 @@ caps.latest.revision: "20"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 90fcf5ca8306c4e91ff6b96bac36ad2639d81d5d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 61e6cd1c83cc369e06099c72a6012eb448d6d37a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="iclrmetahostgetversionfromfile-method"></a>ICLRMetaHost::GetVersionFromFile (Método)
 Obtiene .NET Framework versión de compilación original de un ensamblado (que se almacena en los metadatos), dada su ruta de acceso de archivo. Este método reemplaza a la [GetFileVersion](../../../../docs/framework/unmanaged-api/hosting/getfileversion-function.md) función.  
@@ -56,7 +57,7 @@ HRESULT GetVersionFromFile (
  [entrada, salida] El tamaño de `pwzbuffer` para evitar saturaciones del búfer.  
   
 ## <a name="return-value"></a>Valor devuelto  
- Este método devuelve los siguientes HRESULT específicos así como los errores HRESULT que indican un error del método.  
+ Este método devuelve los siguientes HRESULT específicos y los errores HRESULT que indican un error del método.  
   
 |HRESULT|Descripción|  
 |-------------|-----------------|  

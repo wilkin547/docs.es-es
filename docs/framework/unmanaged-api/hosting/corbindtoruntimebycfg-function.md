@@ -19,11 +19,12 @@ caps.latest.revision: "15"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: bbf5a486246d1fb596c08f1510e6d5d89b03df62
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 2dccd777ef20f68d091cfdd7939c57a1f8d42ad5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="corbindtoruntimebycfg-function"></a>CorBindToRuntimeByCfg (Función)
 Carga common language runtime (CLR) en un proceso usando la información de versión que se lee desde un archivo XML.  

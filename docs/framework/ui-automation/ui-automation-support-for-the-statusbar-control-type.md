@@ -17,11 +17,12 @@ caps.latest.revision: "22"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 434d853aae2404bb907e06ebf021a6d04be20c31
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 82805aab8f375206f520eb57a88a750fba346a31
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ui-automation-support-for-the-statusbar-control-type"></a>Compatibilidad de UI Automation para el tipo de control StatusBar
 > [!NOTE]
@@ -68,7 +69,7 @@ ms.lasthandoff: 11/21/2017
   
 |Patrón de control|Compatibilidad|Notas|  
 |---------------------|-------------|-----------|  
-|<xref:System.Windows.Automation.Provider.IGridProvider>|Opcional|Los controles de barra de estado deben admitir el patrón de control de cuadrícula para que se puedan supervisar las piezas individuales y se haga referencia a ellas de manera sencilla para obtener información.|  
+|<xref:System.Windows.Automation.Provider.IGridProvider>|Optional|Los controles de barra de estado deben admitir el patrón de control de cuadrícula para que se puedan supervisar las piezas individuales y se haga referencia a ellas de manera sencilla para obtener información.|  
   
 <a name="Required_UI_Automation_Events"></a>   
 ## <a name="required-ui-automation-events"></a>Eventos de automatización de la interfaz de usuario necesarios  
@@ -84,5 +85,5 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>Vea también  
  <xref:System.Windows.Automation.ControlType.StatusBar>  
- [Información general de tipos del Control de automatización de interfaz de usuario](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)  
- [Información general sobre la automatización de interfaz de usuario](../../../docs/framework/ui-automation/ui-automation-overview.md)
+ [Información general sobre tipos de control de Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)  
+ [Información general sobre la Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/ui-automation-overview.md)

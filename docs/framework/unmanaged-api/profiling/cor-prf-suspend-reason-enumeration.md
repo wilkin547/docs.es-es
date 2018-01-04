@@ -19,11 +19,12 @@ caps.latest.revision: "16"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: aef9688d3da047645d53f6fcf113153393780c8c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 713360b3cdc30ce7bca3e0df115016d66e59b0df
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="corprfsuspendreason-enumeration"></a>COR_PRF_SUSPEND_REASON (Enumeración)
 Indica la razón por la que se suspende el tiempo de ejecución.  
@@ -68,4 +69,4 @@ typedef enum {
  **Versiones de .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también  
- [Enumeraciones de generación de perfiles](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
+ [Enumeraciones para generación de perfiles](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)

@@ -19,11 +19,12 @@ caps.latest.revision: "6"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 3948a4c404036235767f8de6747966709b75bc4c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 6a470113dc54876937850294f6d99fc15a2cf98e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugvalue3-interface"></a>ICorDebugValue3 (Interfaz)
 Extiende las interfaces "ICorDebugValue" y "ICorDebugValue2" para proporcionar compatibilidad con matrices mayores de 2 GB.  
@@ -32,7 +33,7 @@ Extiende las interfaces "ICorDebugValue" y "ICorDebugValue2" para proporcionar c
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[Getsize64 (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue3-getsize64-method.md)|Obtiene el tamaño, en bytes, de este `ICorDebugValue3` objeto.|  
+|[GetSize64 (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue3-getsize64-method.md)|Obtiene el tamaño, en bytes, de este `ICorDebugValue3` objeto.|  
   
 ## <a name="remarks"></a>Comentarios  
  El [ICorDebugValue:: GetSize](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue3-getsize64-method.md) método devuelve un tamaño de objeto que va de 0 a 2.147.483.647 bytes. En el [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)], el tamaño de las matrices puede superar los 2 GB. El `ICorDebugValue3` interfaz le permite determinar el tamaño de estas matrices.  

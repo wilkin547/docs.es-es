@@ -17,11 +17,12 @@ ms.assetid: 9aa000ee-c04c-492c-ae4f-83ecdf4fdbbe
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: a7069762dd95636399c53c98e8bdef6f00be62c1
-ms.sourcegitcommit: a53799f81351ad9afb3007cd68846ce6aeeb10cb
+ms.workload: dotnet
+ms.openlocfilehash: 9836d8d02bb81fc19a5b3a1714e32fcefeb8791d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="unmanaged-api-reference"></a>Referencia de la API no administrada
 En esta sección se incluye información acerca de las API no administradas que se pueden utilizar en aplicaciones relacionadas con código administrado, como hosts en tiempo de ejecución, compiladores, desensambladores, ofuscadores, depuradores y generadores de perfiles.  
@@ -60,13 +61,13 @@ En esta sección se incluye información acerca de las API no administradas que 
  [Generación de perfiles](../../../docs/framework/unmanaged-api/profiling/index.md)  
  Describe la API de generación de perfiles, que permite a un generador de perfiles supervisar la ejecución que CLR hace de un programa.  
   
- [Nombre seguro](../../../docs/framework/unmanaged-api/strong-naming/index.md)  
+ [Nombres seguros](../../../docs/framework/unmanaged-api/strong-naming/index.md)  
  Describe la API de nombres seguros, que permite a un cliente administrar la firma de ensamblados con nombre seguro.  
 
- [Contadores de rendimiento y WMI](wmi/index.md)  
+ [WMI y contadores de rendimiento](wmi/index.md)  
  Describe las API que encapsulan llamadas a las bibliotecas de Windows Management Instrumentation (WMI).
   
- [Funciones auxiliares de Tlbexp](../../../docs/framework/unmanaged-api/tlbexp/index.md)  
+ [Funciones auxiliares Tlbexp](../../../docs/framework/unmanaged-api/tlbexp/index.md)  
  Describe las dos funciones auxiliares y la interfaz que usa el Exportador de la biblioteca de tipos (Tlbexp.exe) durante el proceso de conversión de ensamblado a biblioteca de tipos.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  

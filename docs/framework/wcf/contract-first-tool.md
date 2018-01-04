@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d00a4bac555166368114951625e18991e955cc02
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 5079a4b45c7adf0cfd4d9ae1069379184422dc98
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="contract-first-tool"></a>Herramienta de contrato primero
 Los contratos de servicio deben crearse a menudo desde servicios existentes. En [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], las clases de contrato de datos se pueden crear automáticamente a partir de servicios existentes mediante la herramienta de contrato primero. Para usar la herramienta de contrato primero, el archivo de definición de esquema XML (XSD) se debe descargar localmente; la herramienta no puede importar contratos de datos remotos a través de HTTP.  
@@ -355,4 +356,4 @@ namespace TestXSD3.ContractTypes
  Los errores y advertencias detectados al analizar el esquema XSD aparecerán como errores de compilación y advertencias.  
   
 ## <a name="interface-inheritance"></a>Herencia de interfaz  
- No es posible usar la herencia de interfaz con el desarrollo de contrato primero; esto es coherente con el modo en el que las interfaces interactúan en otras operaciones. Para usar una interfaz que herede una interfaz base, use dos extremos independientes. El primer extremo usa el contrato heredado y el segundo implementa la interfaz base.
+ No es posible usar la herencia de interfaz con el desarrollo de contrato primero; esto es coherente con el modo en el que las interfaces interactúan en otras operaciones. Para usar una interfaz que herede una interfaz base, use dos puntos de conexión independientes. El primer punto de conexión usa el contrato heredado y el segundo implementa la interfaz base.

@@ -19,11 +19,12 @@ caps.latest.revision: "4"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: b025ec31e3797fec3ac184929f1274cb5f68501b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4a8b51cf4297c1ccadbef8730c06148263d310e2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="iclrgcmanager2-interface"></a>ICLRGCManager2 (Interfaz)
 Proporciona métodos que permiten a un host interactuar con el sistema de recopilación de elementos no utilizados de common language runtime.  
@@ -32,7 +33,7 @@ Proporciona métodos que permiten a un host interactuar con el sistema de recopi
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[Setgcstartuplimitsex (método)](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager2-setgcstartuplimitsex-method.md)|Establece el tamaño de un segmento de la colección de elementos no utilizados y el tamaño máximo de la generación 0 del sistema de recopilación de elementos no utilizados. Permite la generación 0 y tamaño de segmento mayor que `DWORD`.|  
+|[SetGCStartupLimitsEx (método)](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager2-setgcstartuplimitsex-method.md)|Establece el tamaño de un segmento de la colección de elementos no utilizados y el tamaño máximo de la generación 0 del sistema de recopilación de elementos no utilizados. Permite la generación 0 y tamaño de segmento mayor que `DWORD`.|  
   
 ## <a name="remarks"></a>Comentarios  
  Esta interfaz se hereda de la [ICLRGCManager (interfaz)](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-interface.md).  

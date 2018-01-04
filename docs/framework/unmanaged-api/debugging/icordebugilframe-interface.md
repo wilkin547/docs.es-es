@@ -19,11 +19,12 @@ caps.latest.revision: "14"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: d8d370fa971f698eb694127c72ff96499b85143d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 1db53f50e942e70517fc06dfd90e75d04158ea9a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugilframe-interface1"></a>ICorDebugILFrame Interfaz1
 Representa un marco de pila del código de lenguaje intermedio (MSIL) de Microsoft. Esta interfaz es una subclase de ICorDebugFrame (interfaz).  

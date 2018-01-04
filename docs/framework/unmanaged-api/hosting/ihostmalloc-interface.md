@@ -19,11 +19,12 @@ caps.latest.revision: "14"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: f788456065a5508441b9fec38ad4a7f531f9f303
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e1690f5fe8f1417e6547ed94db8c71f079ebf5e6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ihostmalloc-interface"></a>IHostMalloc (Interfaz)
 Proporciona métodos que permiten a common language runtime (CLR) para solicitar asignaciones concretas del montón a través del host.  

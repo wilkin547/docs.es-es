@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 8fba6d04a3d91cf51ce843230a36b1844a400381
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 2985352cf8b209e98f749fbe40170e49014c9d9d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugprocess8-interface"></a>Interfaz de ICorDebugProcess8
 [compatible con la versión [!INCLUDE[net_v46](../../../../includes/net-v46-md.md)] y posteriores]  
@@ -28,7 +29,7 @@ ms.lasthandoff: 11/21/2017
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[Método de EnableExceptionCallbacksOutsideOfMyCode](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess8-enableexceptioncallbacksoutsideofmycode-method.md)|Habilita o deshabilita ciertos tipos de [ICorDebugManagedCallback2](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md) las devoluciones de llamada de excepción.|  
+|[EnableExceptionCallbacksOutsideOfMyCode (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess8-enableexceptioncallbacksoutsideofmycode-method.md)|Habilita o deshabilita ciertos tipos de [ICorDebugManagedCallback2](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md) las devoluciones de llamada de excepción.|  
   
 ## <a name="remarks"></a>Comentarios  
   

@@ -21,14 +21,15 @@ caps.latest.revision: "26"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 424694770bac05611288279b2b42992a17afaa6f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 6d62fbdf4b6dd2acbb67b0655938990d625f8df8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icorprofilercallbackmovedreferences-method"></a>ICorProfilerCallback::MovedReferences (Método)
-Se le llama para informar del diseño de objetos del montón como resultado de una recolección de elementos no utilizados con compactación.  
+Se le llama para informar de la nueva distribución de los objetos del montón como resultado de una recolección de elementos no utilizados con compactación.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -94,5 +95,5 @@ HRESULT MovedReferences(
 ## <a name="see-also"></a>Vea también  
  [ICorProfilerCallback (interfaz)](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)  
  [MovedReferences2 (método)](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-movedreferences2-method.md)  
- [Interfaces de generación de perfiles](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)  
+ [Interfaces para generación de perfiles](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)  
  [Generación de perfiles](../../../../docs/framework/unmanaged-api/profiling/index.md)

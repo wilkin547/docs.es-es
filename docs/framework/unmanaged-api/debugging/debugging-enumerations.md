@@ -17,11 +17,12 @@ caps.latest.revision: "27"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: c24882f2bd9819043bbc786bd2e5f35129a92744
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: a5e294275da45575a3aed457fb2428c4768e78d8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="debugging-enumerations"></a>Enumeraciones de depuración
 En esta sección se describen las enumeraciones no administradas que utiliza la API de depuración.  
@@ -45,16 +46,16 @@ En esta sección se describen las enumeraciones no administradas que utiliza la 
  [CorDebugCodeInvokeKind (enumeración)](../../../../docs/framework/unmanaged-api/debugging/cordebugcodeinvokekind-enumeration.md)  
  Describe cómo una función exportada invoca a código administrado.  
   
- [Enumeración CorDebugCodeInvokePurpose](../../../../docs/framework/unmanaged-api/debugging/cordebugcodeinvokepurpose-enumeration.md)  
+ [CorDebugCodeInvokePurpose (enumeración)](../../../../docs/framework/unmanaged-api/debugging/cordebugcodeinvokepurpose-enumeration.md)  
  Explica los motivos por los que una función exportada llama a código administrado.  
   
  CorDebugCreateProcessFlags  
  Proporciona opciones de depuración adicionales que pueden usarse en una llamada a la [ICorDebug:: CreateProcess](../../../../docs/framework/unmanaged-api/debugging/icordebug-createprocess-method.md) método.  
   
- [Enumeración CorDebugDebugEventKind](../../../../docs/framework/unmanaged-api/debugging/cordebugdebugeventkind-enumeration.md)  
+ [CorDebugDebugEventKind (enumeración)](../../../../docs/framework/unmanaged-api/debugging/cordebugdebugeventkind-enumeration.md)  
  Indica el tipo de evento cuya información se descodifica por la [DecodeEvent](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-decodeevent-method.md) método.  
   
- [Enumeración CorDebugDecodeEventFlagsWindows](../../../../docs/framework/unmanaged-api/debugging/cordebugdecodeeventflagswindows-enumeration.md)  
+ [CorDebugDecodeEventFlagsWindows (enumeración)](../../../../docs/framework/unmanaged-api/debugging/cordebugdecodeeventflagswindows-enumeration.md)  
  Proporciona información extra sobre los eventos de depuración en la plataforma Windows.  
   
  CorDebugExceptionCallbackType  
@@ -105,7 +106,7 @@ En esta sección se describen las enumeraciones no administradas que utiliza la 
  [CorDebugPlatform (enumeración)](../../../../docs/framework/unmanaged-api/debugging/cordebugplatform-enumeration.md)  
  Proporciona valores de plataforma de destino que usan el [ICorDebugDataTarget:: GetPlatform](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-getplatform-method.md) método.  
   
- [Enumeración CorDebugRecordFormat](../../../../docs/framework/unmanaged-api/debugging/cordebugrecordformat-enumeration.md)  
+ [CorDebugRecordFormat (enumeración)](../../../../docs/framework/unmanaged-api/debugging/cordebugrecordformat-enumeration.md)  
  Describe el formato de los datos de una matriz de bytes que contiene información sobre un evento de depuración de excepción nativo.  
   
  CorDebugRegister  
@@ -114,7 +115,7 @@ En esta sección se describen las enumeraciones no administradas que utiliza la 
  [CorDebugSetContextFlag (enumeración)](../../../../docs/framework/unmanaged-api/debugging/cordebugsetcontextflag-enumeration.md)  
  Indica si el contexto procede del marco activo (u hoja) en la pila o si se ha calculado mediante desenredo de otro marco.  
   
- [Enumeración CorDebugStateChange](../../../../docs/framework/unmanaged-api/debugging/cordebugstatechange-enumeration.md)  
+ [CorDebugStateChange (enumeración)](../../../../docs/framework/unmanaged-api/debugging/cordebugstatechange-enumeration.md)  
  Describe la cantidad de datos almacenados en caché que se debe descartar según los cambios en el proceso.  
   
  CorDebugStepReason  
@@ -152,6 +153,6 @@ En esta sección se describen las enumeraciones no administradas que utiliza la 
   
  [Interfaces de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
   
- [Funciones estáticas globales para la depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)  
+ [Funciones estáticas globales de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)  
   
  [Estructuras de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)

@@ -17,11 +17,12 @@ caps.latest.revision: "38"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 56b0774db462c92c6ab0d66ab7158dcc01da0c9e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 610b2d44fca43f2745b7b423a5cdb73c5a7d74d1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ui-automation-textpattern-overview"></a>Información general sobre el modelo de texto de UI Automation
 > [!NOTE]
@@ -116,7 +117,7 @@ ms.lasthandoff: 11/21/2017
   
 <a name="Glossary"></a>   
 ## <a name="textpattern-terminology"></a>Terminología de TextPattern  
- **Atributo**  
+ **Attribute**  
  Es una característica de formato de un intervalo de texto (por ejemplo, <xref:System.Windows.Automation.TextPattern.IsItalicAttribute> o <xref:System.Windows.Automation.TextPattern.FontNameAttribute>).  
   
  **Intervalo degenerado**  
@@ -138,10 +139,10 @@ En el siguiente ejemplo se muestra un conjunto de puntos de inicio y final.
  Unidad predefinida de texto (carácter, palabra, línea o párrafo) usada para navegar por los segmentos lógicos de un intervalo de texto.  
   
 ## <a name="see-also"></a>Vea también  
- [Patrones de Control UI Automation para clientes](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)  
- [Información general del patrones de Control UI Automation](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)  
- [Información general sobre el árbol de automatización de interfaz de usuario](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)  
- [Usar almacenamiento en caché en la UI Automation](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)  
- [Patrones de Control compatibles en un proveedor de UI Automation](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)  
- [Asignación de patrones de control para clientes de UI Automation](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md)  
+ [Patrones de control de Automatización de la interfaz de usuario para clientes](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)  
+ [Información general sobre los patrones de control de la Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)  
+ [Información general sobre el árbol de la Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)  
+ [Uso del almacenamiento en caché en la Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)  
+ [Patrones de control compatibles en un proveedor de Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)  
+ [Asignación de patrones de control para clientes de Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md)  
  [Text Services Framework](http://msdn.microsoft.com/library/default.asp?url=/library/tsf/tsf/text_services_framework.asp)

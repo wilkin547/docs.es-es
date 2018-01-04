@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: eeed3a27d57c8fff82f1b05db8c6fd11eb20269e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ba9193fe0871f5112c3123c034d134665896ad7a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idebuggerinfo-interface"></a>IDebuggerInfo (Interfaz)
 Proporciona métodos para obtener información sobre el estado de los servicios de depuración.  
@@ -45,4 +46,4 @@ Proporciona métodos para obtener información sobre el estado de los servicios 
   
 ## <a name="see-also"></a>Vea también  
  [Interfaces de hospedaje](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)  
- [CorRuntimeHost (Coclase)](../../../../docs/framework/unmanaged-api/hosting/corruntimehost-coclass.md)
+ [CorRuntimeHost (coclase)](../../../../docs/framework/unmanaged-api/hosting/corruntimehost-coclass.md)

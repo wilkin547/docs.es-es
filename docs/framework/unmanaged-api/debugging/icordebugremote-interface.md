@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: a6195b53d11877c6b7b2a52c3fd8d194dfb51810
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: cc34c3a1049a24a27fae4d13288efbd5a98a4dc9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugremote-interface"></a>ICorDebugRemote (Interfaz)
 Proporciona la capacidad de iniciar o de adjuntar un depurador administrado a un proceso remoto de destino.  
@@ -64,8 +65,8 @@ interface ICorDebugRemote : IUnknown
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[Icordebugremote:: Createprocessex (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugremote-createprocessex-method.md)|Crea un proceso en un equipo remoto para la depuración administrada.|  
-|[Icordebugremote:: Debugactiveprocessex (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugremote-debugactiveprocessex-method.md)|Inicia un proceso en un equipo remoto en el depurador.|  
+|[ICorDebugRemote::CreateProcessEx (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugremote-createprocessex-method.md)|Crea un proceso en un equipo remoto para la depuración administrada.|  
+|[ICorDebugRemote::DebugActiveProcessEx (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugremote-debugactiveprocessex-method.md)|Inicia un proceso en un equipo remoto en el depurador.|  
   
 ## <a name="remarks"></a>Comentarios  
  Actualmente, esta funcionalidad solo se admite para la depuración de un destino de la aplicación basada en Silverlight que se ejecuta en un equipo Macintosh remoto.  

@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: f1742025bed977dfd377a78db42df42c1bc43966
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 9226eba1b9f03138180430b2abb960f43f4b4260
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="fusion-interfaces"></a>Interfaces de Fusion
 Esta sección describen las interfaces no administradas que utiliza la API de fusión para tener acceso a las propiedades de recursos de la aplicación y a encontrar las versiones correctas de estos recursos para la aplicación.  
@@ -78,7 +79,7 @@ Esta sección describen las interfaces no administradas que utiliza la API de fu
  <xref:System.Reflection.Emit>  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
- [Funciones estáticas globales de fusión](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)  
+ [Funciones estáticas globales de la fusión](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)  
   
  [Enumeraciones de fusión](../../../../docs/framework/unmanaged-api/fusion/fusion-enumerations.md)  
   

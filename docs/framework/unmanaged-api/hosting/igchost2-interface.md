@@ -19,11 +19,12 @@ caps.latest.revision: "4"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: c6706696e3fd5158d2b49a4d114d978a26510b67
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a616e724d6fb26734fcda48d6a9b39605e0284a5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="igchost2-interface"></a>IGCHost2 (Interfaz)
 Proporciona métodos para obtener información sobre el sistema de recopilación de elementos no utilizados y para controlar algunos aspectos de la recolección de elementos.  
@@ -35,7 +36,7 @@ Proporciona métodos para obtener información sobre el sistema de recopilación
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[Setgcstartuplimitsex (método)](../../../../docs/framework/unmanaged-api/hosting/igchost2-setgcstartuplimitsex-method.md)|Establece el tamaño del segmento y el tamaño máximo para la generación 0. Permite la generación 0 y tamaño de segmento mayor que `DWORD`.|  
+|[SetGCStartupLimitsEx (método)](../../../../docs/framework/unmanaged-api/hosting/igchost2-setgcstartuplimitsex-method.md)|Establece el tamaño del segmento y el tamaño máximo para la generación 0. Permite la generación 0 y tamaño de segmento mayor que `DWORD`.|  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
@@ -49,4 +50,4 @@ Proporciona métodos para obtener información sobre el sistema de recopilación
 ## <a name="see-also"></a>Vea también  
  [Interfaces de hospedaje](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)  
  [Interfaces de hospedaje de CLR](../../../../docs/framework/unmanaged-api/hosting/clr-hosting-interfaces.md)  
- [CorRuntimeHost (Coclase)](../../../../docs/framework/unmanaged-api/hosting/corruntimehost-coclass.md)
+ [CorRuntimeHost (coclase)](../../../../docs/framework/unmanaged-api/hosting/corruntimehost-coclass.md)

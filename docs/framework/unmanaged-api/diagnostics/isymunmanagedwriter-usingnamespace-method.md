@@ -21,11 +21,12 @@ caps.latest.revision: "7"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: b9bfd5ca0c22a9b4da1acb1f93b29150beba865a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 2d02a36a43e8a831fbbef051f5898696d4d8e04c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="isymunmanagedwriterusingnamespace-method"></a>ISymUnmanagedWriter::UsingNamespace (Método)
 Especifica que el nombre completo del espacio de nombres especificado se utiliza dentro del ámbito léxico abierto. El espacio de nombres se utilizará en todos los ámbitos que heredan del ámbito abierto actualmente. Cerrar el ámbito actual, también se detendrá el uso del espacio de nombres.  

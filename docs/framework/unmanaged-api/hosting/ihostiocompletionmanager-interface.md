@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 847d4c3aa3e3da94b4aac4679ada047577379f82
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: cbb4b87b57d4f5e11a9dab04d20dfb73170bb4a5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ihostiocompletionmanager-interface"></a>IHostIoCompletionManager (Interfaz)
 Proporciona métodos que permiten a common language runtime (CLR) para interactuar con los puertos de finalización de E/S proporcionados por el host.  

@@ -19,11 +19,12 @@ caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 75c53e750ad031ccec944625be130547404767bd
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f2c38561a804a331df102a600d4b0b0f6312aaa6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="assemblycomparisonresult-enumeration"></a>AssemblyComparisonResult (Enumeración)
 Indica la equivalencia de dos identidades de ensamblado, según lo determinado por la [CompareAssemblyIdentity](../../../../docs/framework/unmanaged-api/fusion/compareassemblyidentity-function.md) función.  
@@ -74,5 +75,5 @@ typedef enum _tagAssemblyComparisonResult {
  **Versiones de .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también  
- [CompareAssemblyIdentity (función)](../../../../docs/framework/unmanaged-api/fusion/compareassemblyidentity-function.md)  
+ [CompareAssemblyIdentity (Función)](../../../../docs/framework/unmanaged-api/fusion/compareassemblyidentity-function.md)  
  [Enumeraciones de fusión](../../../../docs/framework/unmanaged-api/fusion/fusion-enumerations.md)

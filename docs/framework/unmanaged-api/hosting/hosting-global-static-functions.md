@@ -17,17 +17,18 @@ caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 105ba4dd213542e6dd441bb774ebb76123366304
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: d4955da9abe91d10af70934a24e4d2bda954b487
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="hosting-global-static-functions"></a>Funciones estáticas globales para hospedaje
 Esta sección describen las funciones de hospedaje no administradas que utiliza la API de hospedaje de .NET Framework.  
   
 ## <a name="in-this-section"></a>En esta sección  
- [.NET framework 4 aloja funciones estáticas globales](../../../../docs/framework/unmanaged-api/hosting/net-framework-4-hosting-global-static-functions.md)  
+ [Funciones estáticas globales de hospedaje de .NET Framework 4](../../../../docs/framework/unmanaged-api/hosting/net-framework-4-hosting-global-static-functions.md)  
  Describe las funciones introducidas en .NET Framework 4.  
   
  [Funciones de hospedaje de CLR en desuso](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)  

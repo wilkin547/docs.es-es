@@ -21,11 +21,12 @@ caps.latest.revision: "17"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 6218714030892531f3b9ed4b4a79917347d250db
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: c61dd0b10bc0229d8f0d7dd4f6357ddaf5986637
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="getcorversion-function"></a>GetCORVersion (Función)
 Devuelve el número de versión de common language runtime (CLR) que se ejecuta en el proceso actual.  

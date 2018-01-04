@@ -14,11 +14,12 @@ caps.latest.revision: "36"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 78ad1159232ecfb75745dd72b7da1e3153a79574
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 4f5c45cad0b1e4ae1aa6b1963e9acdab47cd9203
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="basic-programming-lifecycle"></a>Ciclo de vida de programación básica
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] permite a las aplicaciones comunicar si están en el mismo equipo, en Internet o en diferentes plataformas de aplicación. En este tema se describen las tareas necesarias para crear una aplicación de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. Para una aplicación de ejemplo de trabajo, consulte [Tutorial de introducción](../../../docs/framework/wcf/getting-started-tutorial.md).  
@@ -30,7 +31,7 @@ ms.lasthandoff: 12/02/2017
   
 2.  Implementar el contrato. Para implementar un contrato de servicio, cree una clase que implemente el contrato y especifique comportamientos personalizados que deba tener el tiempo de ejecución. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Implementación de contratos de servicio](../../../docs/framework/wcf/implementing-service-contracts.md).  
   
-3.  Configurar el servicio especificando los extremos y el resto de la información de comportamiento. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Configuración de servicios](../../../docs/framework/wcf/configuring-services.md).  
+3.  Configurar el servicio especificando los puntos de conexión y el resto de la información de comportamiento. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Configuración de servicios](../../../docs/framework/wcf/configuring-services.md).  
   
 4.  Hospedar el servicio. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Servicios de hospedaje](../../../docs/framework/wcf/hosting-services.md).  
   

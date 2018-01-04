@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 0057be1457ad369b84f311008180dc7c4a3c323d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 434111cc5955c5145bf7cd6fff4d76f138aeda7c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="iclrvalidator-interface"></a>ICLRValidator (Interfaz)
 Proporciona métodos para validar imágenes portables de ejecutable (PE) e informar de errores de validación.  
@@ -47,4 +48,4 @@ Proporciona métodos para validar imágenes portables de ejecutable (PE) e infor
 ## <a name="see-also"></a>Vea también  
  [ICLRErrorReportingManager (interfaz)](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-interface.md)  
  [Interfaces de hospedaje](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)  
- [CLRRuntimeHost (Coclase)](../../../../docs/framework/unmanaged-api/hosting/clrruntimehost-coclass.md)
+ [CLRRuntimeHost (coclase)](../../../../docs/framework/unmanaged-api/hosting/clrruntimehost-coclass.md)

@@ -20,11 +20,12 @@ caps.latest.revision: "12"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 50ef54c90609bf8ef1e3a943664daef95f50d926
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 9a9550bf1e3e5500356584b1bdd53f5d3061e190
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="diagnostics-symbol-store-interfaces"></a>Interfaces de almacén de símbolos de diagnósticos
 En este tema se describe las interfaces no administradas que permiten a un compilador generar información de símbolos para su uso por un depurador.  

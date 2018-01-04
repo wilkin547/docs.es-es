@@ -19,11 +19,12 @@ caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 0585cea00865f4798c57ef5276076c2b0a5ff284
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 5d453cf7d3c7613397890c2d49a2dbe81a2e5d81
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="eclrevent-enumeration"></a>EClrEvent (Enumeración)
 Describe los eventos de common language runtime (CLR) para los que el host puede registrar devoluciones de llamada.  

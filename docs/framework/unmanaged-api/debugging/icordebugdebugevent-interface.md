@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: b4422b165f06b60dedff95fc3de58e5627db7fac
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1c4d777d601866ca9600a7e2b88aca8854f32a17
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugdebugevent-interface"></a>Interfaz ICorDebugDebugEvent
 Define la interfaz base de la que derivan todos los eventos de depuración `ICorDebug`.  
@@ -26,7 +27,7 @@ Define la interfaz base de la que derivan todos los eventos de depuración `ICor
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[Método GetEventKind](../../../../docs/framework/unmanaged-api/debugging/icordebugdebugevent-geteventkind-method.md)|Indica el tipo de evento que este objeto `ICorDebugDebugEvent` representa.|  
+|[GetEventKind (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugdebugevent-geteventkind-method.md)|Indica el tipo de evento que este objeto `ICorDebugDebugEvent` representa.|  
 |[GetThread (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugdebugevent-getthread-method.md)|Obtiene el subproceso en el que se produjo el evento.|  
   
 ## <a name="remarks"></a>Comentarios  

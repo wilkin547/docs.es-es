@@ -19,11 +19,12 @@ caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 4bf929335fb9cc32988d590266857b4ed70f64c6
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: f7dcbf9e5f655e78581de3929ea6125a66a0e1cc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugframeenum-interface1"></a>ICorDebugFrameEnum Interfaz1
 Implementa los métodos ICorDebugEnum y enumera las matrices de ICorDebugFrame.  

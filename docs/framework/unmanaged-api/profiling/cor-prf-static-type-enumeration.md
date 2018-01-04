@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 446967cc157962a1ec4a87193bbf84b1a356efa6
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 76d43a620b64c771427cd30af770e70642dabe7a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="corprfstatictype-enumeration"></a>COR_PRF_STATIC_TYPE (Enumeración)
 Indica si un campo es estático y, si lo es, la calidad estática que se aplica al campo. Estos valores pueden combinarse mediante la operación OR bit a bit para indicar que el campo tiene varias cualidades estáticas.  
@@ -60,4 +61,4 @@ typedef enum {
  **Versiones de .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también  
- [Enumeraciones de generación de perfiles](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
+ [Enumeraciones para generación de perfiles](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)

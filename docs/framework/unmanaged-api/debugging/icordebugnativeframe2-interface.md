@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: c33eaa36313f0cf6aae904761fb40bb2dbf9d753
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f501d49f007e22c6f7db0e759ee19b40f87b4b33
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugnativeframe2-interface"></a>ICorDebugNativeFrame2 (Interfaz)
 Proporciona métodos que comprueban las relaciones entre marcos primarios y secundarios.  

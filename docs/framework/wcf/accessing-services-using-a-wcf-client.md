@@ -17,11 +17,12 @@ caps.latest.revision: "36"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d8698e0657de31d78699df478da5e716bf831fc4
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 1f33d64e9ec1881b1ef7b93ba29d233f2f580c29
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="accessing-services-using-a-wcf-client"></a>Acceso a los servicios mediante un cliente WCF
 Después de crear un servicio, el paso siguiente es crear un cliente proxy [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. Una aplicación de cliente usa el cliente proxy [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] para comunicarse con el servicio. Las aplicaciones de cliente suelen importar los metadatos de un servicio para generar el código de cliente [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] que se puede usar para invocar el servicio.  
@@ -194,11 +195,11 @@ Console.WriteLine("Add({0},{1}) = {2}", value1, value2, result)
   
 ## <a name="see-also"></a>Vea también  
  [Cómo crear un cliente](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)  
- [Cómo: obtener acceso a servicios con un contrato dúplex](../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)  
- [Cómo: llamar a las operaciones del servicio de forma asincrónica](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)  
- [Cómo: tener acceso a servicios con unidireccional y los contratos de solicitud-respuesta](../../../docs/framework/wcf/feature-details/how-to-access-wcf-services-with-one-way-and-request-reply-contracts.md)  
- [Cómo: obtener acceso a un WSE 3.0 Service](../../../docs/framework/wcf/feature-details/how-to-access-a-wse-3-0-service-with-a-wcf-client.md)  
- [Comprender códigos de cliente generado](../../../docs/framework/wcf/feature-details/understanding-generated-client-code.md)  
- [Cómo: mejorar el inicio del tiempo de aplicaciones cliente de WCF mediante XmlSerializer](../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)  
+ [Acceso a los servicios con un contrato dúplex](../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)  
+ [Llamada a operaciones de servicio de forma asincrónica](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)  
+ [Acceso a los servicios con contratos unidireccionales y de solicitud-respuesta](../../../docs/framework/wcf/feature-details/how-to-access-wcf-services-with-one-way-and-request-reply-contracts.md)  
+ [Acceso a un servicio WSE 3.0](../../../docs/framework/wcf/feature-details/how-to-access-a-wse-3-0-service-with-a-wcf-client.md)  
+ [Información sobre códigos de cliente generado](../../../docs/framework/wcf/feature-details/understanding-generated-client-code.md)  
+ [Mejora del tiempo de inicio de las aplicaciones cliente WCF mediante XmlSerializer](../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)  
  [Especificación del comportamiento de tiempo de ejecución del cliente](../../../docs/framework/wcf/specifying-client-run-time-behavior.md)  
  [Configuración de los comportamientos del cliente](../../../docs/framework/wcf/configuring-client-behaviors.md)

@@ -13,14 +13,15 @@ caps.latest.revision: "4"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: b747d2d43fd7ff4dc901dff14277dbce9606497f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a25e19bf43d852670bc5f4f491fb25707395e04a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugstaticfieldsymbol-interface"></a>ICorDebugStaticFieldSymbol (Interfaz)
-Representa la información de símbolos de depuración para un campo estático.  
+Representa la información de símbolo de depuración para un campo estático.  
   
 ## <a name="methods"></a>Métodos  
   
@@ -46,6 +47,6 @@ Representa la información de símbolos de depuración para un campo estático.
  **Versiones de .NET framework:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Vea también  
- [Interfaz ICorDebugInstanceFieldSymbol](../../../../docs/framework/unmanaged-api/debugging/icordebuginstancefieldsymbol-interface.md)  
+ [ICorDebugInstanceFieldSymbol (interfaz)](../../../../docs/framework/unmanaged-api/debugging/icordebuginstancefieldsymbol-interface.md)  
  [Interfaces de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
  [Depuración](../../../../docs/framework/unmanaged-api/debugging/index.md)
