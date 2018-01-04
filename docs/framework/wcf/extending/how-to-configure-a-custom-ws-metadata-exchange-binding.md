@@ -16,11 +16,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 497d7242b581a61aa156741a8c2f0ea278fe2372
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 7bfa4ab0696083c78578517748cfdc2e79e001d1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-configure-a-custom-ws-metadata-exchange-binding"></a>Cómo: Configurar un enlace de WS-Metadata Exchange Binding personalizado
 En este tema se explica cómo configurar un enlace personalizado de intercambio de WS-Metadata. [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] incluye cuatro enlaces de metadatos definidos por el sistema, pero puede publicar metadatos usando cualquier enlace que desee. En este tema, se mostrará cómo publicar metadatos mediante `wsHttpBinding`. Este enlace le da la opción de exponer los metadatos de una manera segura. El código de este artículo se basa en el [Introducción](../../../../docs/framework/wcf/samples/getting-started-sample.md).  
@@ -124,8 +125,8 @@ En este tema se explica cómo configurar un enlace personalizado de intercambio 
     ```  
   
 ## <a name="see-also"></a>Vea también  
- [Metadatos que publican el comportamiento](../../../../docs/framework/wcf/samples/metadata-publishing-behavior.md)  
- [Recuperar metadatos](../../../../docs/framework/wcf/samples/retrieve-metadata.md)  
+ [Comportamiento de publicación de metadatos](../../../../docs/framework/wcf/samples/metadata-publishing-behavior.md)  
+ [Recuperación de metadatos](../../../../docs/framework/wcf/samples/retrieve-metadata.md)  
  [Metadatos](../../../../docs/framework/wcf/feature-details/metadata.md)  
  [Publicación de metadatos](../../../../docs/framework/wcf/feature-details/publishing-metadata.md)  
  [Publicación de puntos de conexión de metadatos](../../../../docs/framework/wcf/publishing-metadata-endpoints.md)

@@ -13,11 +13,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 382197f2a8d2375903f286dc5aa54ce5dc632bce
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: cbcf33aa734cde1d2458e46cd161f9ea5197a827
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="activity"></a>Actividad
 En este tema se describen los seguimientos de actividades en el modelo de seguimiento [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]. Las actividades procesan unidades que ayudan al usuario a reducir el ámbito de un error. Los errores que se producen en la misma actividad están directamente relacionados. Por ejemplo, se produce un error en una operación porque se ha producido un error en el descifrado del mensaje. Los seguimientos para el error de descifrado del mensaje y la operación aparecen en la misma actividad, mostrando una correlación directa entre el error del descifrado y el error de la solicitud.  
@@ -48,7 +49,7 @@ En este tema se describen los seguimientos de actividades en el modelo de seguim
 ## <a name="defining-the-scope-of-an-activity"></a>Definición del ámbito de una actividad  
  Una actividad se define durante el diseño y denota una unidad lógica de trabajo. Los seguimientos emitidos con el mismo identificador de actividad están directamente relacionados, forman parte de la misma actividad. Debido a que una actividad puede cruzar los límites de extremos (una solicitud), se definen dos ámbitos para una actividad.  
   
--   Ámbito `Global`, por aplicación. En este ámbito, la actividad se identifica por su identificador de actividad único globalmente de 128 bits, el gAId. El gAId es lo que se propaga por los extremos.  
+-   Ámbito `Global`, por aplicación. En este ámbito, la actividad se identifica por su identificador de actividad único globalmente de 128 bits, el gAId. El gAId es lo que se propaga por los puntos de conexión.  
   
 -   Ámbito `Local`, por extremo. En este ámbito, GAId identifica la actividad, junto con el nombre del origen de seguimiento que emite los seguimientos de actividad y el identificador de proceso. Este triplete constituye el id. de actividad local, lAId. El lAId se utiliza para definir los límites (locales) de una actividad.  
   
@@ -88,7 +89,7 @@ traceSource.TraceEvent(TraceEventType.Warning, eventId, "Information");
   
  Mediante el uso de estos tipos, las herramientas pueden optimizar la navegación a través de los registros de seguimiento para encontrar los eventos inmediatamente relacionados de la misma actividad, o eventos en actividades relacionadas si la herramienta sigue los seguimientos de la transferencia. Por ejemplo, las herramientas dejarán de analizar los registros para una actividad determinada cuando vean un seguimiento Iniciar/Detener.  
   
- Estos tipos de seguimiento también se pueden utilizar para la creación de perfiles. Los recursos utilizados entre los marcadores de inicio y detención representan la duración de la actividad incluyendo las actividades lógicas contenidas. Restar los intervalos de tiempo entre los seguimientos Suspender y Reanudar proporciona la duración real de la actividad.  
+ Estos tipos de seguimiento también se pueden utilizar para la creación de perfiles. Los recursos utilizados entre los marcadores de inicio y detención representan el tiempo inclusivo de la actividad incluyendo las actividades lógicas contenidas. Restar los intervalos de tiempo entre los seguimientos Suspender y Reanudar proporciona la duración real de la actividad.  
   
  El seguimiento Detener también es particularmente útil para validar el ámbito de las actividades implementadas. Si algunos seguimientos del procesamiento aparecen después del seguimiento Detener en lugar de dentro de una actividad determinada, esto puede sugerir un defecto en el código.  
   
@@ -108,8 +109,8 @@ traceSource.TraceEvent(TraceEventType.Warning, eventId, "Information");
 -   Las actividades representan actividades, no necesariamente objetos. Una actividad se debe interpretar como "Esto sucedía cuando. . . (se produjo una emisión de seguimientos significativa)”.  
   
 ## <a name="see-also"></a>Vea también  
- [Configuración del seguimiento](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)  
+ [Configuración de la traza](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)  
  [Uso del visor de seguimiento de servicios para ver seguimientos asociados y para la solución de problemas](../../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)  
- [Escenarios de seguimiento de extremo a extremo](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)  
+ [Escenarios de traza de un extremo a otro](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)  
  [Herramienta del visor de seguimiento de servicio (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)  
  [Emisión de trazas del código de usuario](../../../../../docs/framework/wcf/diagnostics/tracing/emitting-user-code-traces.md)

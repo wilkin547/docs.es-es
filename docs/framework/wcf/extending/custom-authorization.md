@@ -13,29 +13,30 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d065f4af7476e90c789c0647b1944aa50b5af5fc
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 35994b76498d9287f5f0c22c024afc176d1f9260
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="custom-authorization"></a>Autorización personalizada
 La autorización es el proceso de controlar el acceso a los recursos y tareas. Los temas en esta sección le permiten crear para implementar los diferentes tipos de demanda, o directivas.  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Cómo: crear una directiva de autorización personalizada](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-policy.md)  
+ [Creación de una directiva de autorización personalizada](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-policy.md)  
  Explica cómo crear una directiva personalizada.  
   
- [Cómo: crear un administrador de autorización personalizado para un servicio](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)  
+ [Creación de un administrador de autorización personalizado para un servicio](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)  
  Explica cómo crear un administrador personalizado.  
   
- [Cómo: crear una demanda personalizada](../../../../docs/framework/wcf/extending/how-to-create-a-custom-claim.md)  
+ [Creación de una notificación personalizada](../../../../docs/framework/wcf/extending/how-to-create-a-custom-claim.md)  
  Explica cómo crear una demanda personalizada.  
   
- [Cómo: comparar las notificaciones](../../../../docs/framework/wcf/extending/how-to-compare-claims.md)  
+ [Comparación de notificaciones](../../../../docs/framework/wcf/extending/how-to-compare-claims.md)  
  Describe cómo comparar demandas.  
   
- [Cómo: crear una identidad de la entidad de seguridad personalizada](../../../../docs/framework/wcf/extending/how-to-create-a-custom-principal-identity.md)  
+ [Creación de una identidad de entidad de seguridad personalizada](../../../../docs/framework/wcf/extending/how-to-create-a-custom-principal-identity.md)  
  Muestra el escenario cuando <xref:System.ServiceModel.Description.PrincipalPermissionMode.Custom> se utiliza en combinación con una directiva de autorización personalizada y una entidad de seguridad personalizada.  
   
 ## <a name="reference"></a>Referencia  

@@ -20,11 +20,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4aa9cacfaa966bbe37618406f4b1413dec433726
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: d26386a0669c92b1b21559474c8f5f61862e6de7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="administration-and-diagnostics"></a>Administración y diagnóstico
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] proporciona un conjunto enriquecido de funcionalidades que pueden ayudarle a supervisar las diferentes fases de la vida de una aplicación. Por ejemplo, puede usar la configuración para configurar servicios y clientes en la implementación. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] incluye un conjunto grande de contadores de rendimiento para ayudarle a calibrar el rendimiento de su aplicación. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] también expone datos de la inspección de un servicio en el tiempo de ejecución a través de un proveedor del Instrumental de administración de Windows (WMI) [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Cuando la aplicación experimenta un error o comienza a actuar incorrectamente, puede utilizar el Registro de eventos para ver si algo significativo ha sucedido. También puede utilizar el registro y seguimiento de mensajes para ver qué eventos están pasando de un extremo a otro en su aplicación. Estas características ayudan a los programadores y a profesionales de TI a solucionar problemas de una aplicación de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] cuando estas no se comportan correctamente.  
@@ -50,7 +51,7 @@ ms.lasthandoff: 12/02/2017
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] también proporciona varias herramientas de línea de comandos y GUI para facilitar la creación, implementación y administración de aplicaciones de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Herramientas de Windows Communication Foundation](../../../../docs/framework/wcf/tools.md). Por ejemplo, puede usar el [herramienta Editor de configuración (SvcConfigEditor.exe)](../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md) para crear y editar [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] opciones de configuración mediante un asistente, en lugar de editar el XML directamente. También puede usar el [herramienta Service Trace Viewer (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) para ver, agrupar y filtrar los mensajes de seguimiento de modo que pueda diagnosticar, reparar y comprobar los problemas con [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] servicios.  
   
 ## <a name="see-also"></a>Vea también  
- [Configuración de la aplicación](../../../../docs/framework/wcf/diagnostics/configuring-your-application.md)  
+ [Configuración de su aplicación](../../../../docs/framework/wcf/diagnostics/configuring-your-application.md)  
  [Implementación de servicios](../../../../docs/framework/wcf/diagnostics/deploying-services.md)  
  [Referencia de excepciones](../../../../docs/framework/wcf/diagnostics/exceptions-reference/index.md)  
  [Registro de eventos](../../../../docs/framework/wcf/diagnostics/event-logging/index.md)  
@@ -58,7 +59,7 @@ ms.lasthandoff: 12/02/2017
  [Herramienta del editor de configuración (SvcConfigEditor.exe)](../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md)  
  [Herramienta del visor de seguimiento de servicio (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)  
  [Herramienta de registro ServiceModel](../../../../docs/framework/wcf/diagnostics/servicemodel-registration-tool.md)  
- [Seguimiento](../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [Mediante Instrumental de administración de Windows para diagnósticos](../../../../docs/framework/wcf/diagnostics/wmi/index.md)  
+ [Traza](../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [Utilización del Instrumental de administración de Windows (WMI) para diagnósticos](../../../../docs/framework/wcf/diagnostics/wmi/index.md)  
  [Contadores de rendimiento](../../../../docs/framework/wcf/diagnostics/performance-counters/index.md)  
  [Herramientas de Windows Communication Foundation](../../../../docs/framework/wcf/tools.md)

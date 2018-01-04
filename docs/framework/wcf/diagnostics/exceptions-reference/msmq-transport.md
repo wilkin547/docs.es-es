@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 904f3a42f8a733546d058c0c4962a50f3c93b5bc
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 3c8f1283a27488c56a866973270409c22efc1fb1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="msmq-transport"></a>Transporte MSMQ
 En este tema se hace una lista de todas las excepciones generadas por el transporte MSMQ.  
@@ -27,13 +28,13 @@ En este tema se hace una lista de todas las excepciones generadas por el transpo
 |Código de recurso|Cadena de recurso|  
 |-------------------|---------------------|  
 |MsmqActiveDirectoryRequiresNativeTransfer|Error de la validación del enlace para el mensaje. El cliente no puede enviar mensajes. Un conflicto en las propiedades del enlace produjo este error. UseActiveDirectory está establecido en true y QueueTransferProtocol se establece en Native. Para resolver el conflicto, corrija una de las propiedades.|  
-|MsmqAuthNoneRequiresProtectionNone|Error en la validación del enlace para el servicio. No se puede iniciar el extremo de servicio o el cliente. Un conflicto en las propiedades del enlace produjo este error. MsmqAuthenticationMode se establece en None y MsmqProtectionLevel no se establece en None. Para resolver el conflicto, corrija una de las propiedades.|  
+|MsmqAuthNoneRequiresProtectionNone|Error en la validación del enlace para el servicio. No se puede iniciar el punto de conexión de servicio o el cliente. Un conflicto en las propiedades del enlace produjo este error. MsmqAuthenticationMode se establece en None y MsmqProtectionLevel no se establece en None. Para resolver el conflicto, corrija una de las propiedades.|  
 |MsmqCustomRequiresPerAddDLQ|Error de la validación del enlace para el mensaje. El cliente no puede enviar los mensajes. DeadLetterQueue está establecido en Custom, pero no se especifica CustomDeadLetterQueue. Especifique el URI de la cola de mensajes no enviados de cada aplicación en la propiedad CustomDeadLetterQueue.|  
 |MsmqDeserializationError|Se encontró un error al deserializar el mensaje XML. El mensaje no se puede recibir y se quita.|  
 |MsmqDLQNotWriteable|Error en la validación del enlace para el cliente. El cliente no puede enviar un mensaje. La cola de mensajes no enviados especificada no existe o no se puede escribir en ella. Asegúrese de que la cola existe con la autorización apropiada para escribir en ella.|  
 |MsmqGetPrivateComputerInformationError|Error en la comprobación de la versión con el error especificado. No se puede detectar la versión de MSMQ. Se producirá un error en todas las operaciones que estén en el canal en cola. Asegúrese de que MSMQ está instalado y disponible.|  
 |MsmqNoAssurancesForVolatile|Error en la validación del enlace para el servicio. No se puede iniciar el extremo de servicio o el cliente. La propiedad ExactlyOnce está establecida en true y la propiedad Durable está establecida en false. Esto no se admite. Para resolver el conflicto, corrija una de estas propiedades.|  
-|MsmqNonTransactionalQueueNeeded|Se detectó una desigualdad entre el enlace y la configuración de cola de MSMQ. No se puede iniciar el extremo de servicio. La propiedad ExactlyOnce está establecida en false y la cola de la que leer los mensajes es una cola transaccional. Corrija el error estableciendo la propiedad ExactlyOnce en true o cree un enlace no transaccional.|  
+|MsmqNonTransactionalQueueNeeded|Se detectó una desigualdad entre el enlace y la configuración de cola de MSMQ. No se puede iniciar el punto de conexión de servicio. La propiedad ExactlyOnce está establecida en false y la cola de la que leer los mensajes es una cola transaccional. Corrija el error estableciendo la propiedad ExactlyOnce en true o cree un enlace no transaccional.|  
 |MsmqOpenError|Se produjo un error al abrir la cola especificada. El mensaje no se puede enviar o recibir desde la cola. Asegúrese de que MSMQ está instalado y ejecutándose. También asegúrese de que la cola está disponible para abrir con la autorización y el modo de acceso necesario.|  
 |MsmqPathLookupError|Se produjo un error al convertir el nombre de ruta de la cola especificado en el nombre de formato. Error en todas las operaciones del canal en cola. Asegúrese de que la dirección de la cola es válida. MSMQ debe estar instalado con la integración de Active Directory habilitada y se ha de poder obtener acceso a él.|  
 |MsmqPerAppDLQRequiresCustom|Error en la validación del enlace en el cliente. El cliente no puede enviar mensajes. La propiedad CustomDeadLetterQueue se establece, pero la propiedad DeadLetterQueue no se establece en Custom. Establezca la propiedad DeadLetterQueue en Custom.|  
@@ -45,7 +46,7 @@ En este tema se hace una lista de todas las excepciones generadas por el transpo
 |MsmqTimeSpanTooLarge|El período de vida del mensaje es demasiado grande. No se puede enviar el mensaje. El mensaje Time To Live (TTL) no puede superar el valor máximo de Int32.|  
 |MsmqTokenProviderNeededForCertificates|No se puede encontrar un X509SecurityTokenProvider. No se puede enviar el mensaje. El modo de autenticación del certificado requiere un proveedor de tokens de X.509. Asegúrese de que un proveedor de tokens de seguridad está disponible para el certificado instalado.|  
 |MsmqTransactedDLQExpected|Se produjo una desigualdad entre el enlace y la configuración de MSMQ. No se pueden enviar mensajes. La cola de mensajes no enviados personalizada especificada en el enlace debe ser una cola de transacción. Asegúrese de que la dirección de la cola de mensajes no enviados personalizada es correcta y de que la cola es transaccional.|  
-|MsmqTransactionalQueueNeeded|Se produjo una desigualdad entre el enlace y la configuración de cola de MSMQ. No se puede iniciar el extremo de servicio. La propiedad ExactlyOnce se establece en true y la cola de la que leer los mensajes no es una cola transaccional. Para corregir el error, establezca la propiedad ExactlyOnce en false o cree una cola transaccional para este enlace.|  
+|MsmqTransactionalQueueNeeded|Se produjo una desigualdad entre el enlace y la configuración de cola de MSMQ. No se puede iniciar el punto de conexión de servicio. La propiedad ExactlyOnce se establece en true y la cola de la que leer los mensajes no es una cola transaccional. Para corregir el error, establezca la propiedad ExactlyOnce en false o cree una cola transaccional para este enlace.|  
 |MsmqTransactionCurrentRequired|Ninguna transacción está disponible para enviar mensajes en la sesión. Enviar un mensaje en una sesión en cola requiere una transacción. Asegúrese de que un ámbito de la transacción se especifica para enviar el mensaje en la sesión.|  
 |MsmqTransactionRequired|Se requiere una transacción pero no está disponible. No se puede enviar ni recibir mensajes. Asegúrese de que el ámbito de la transacción se especifica para enviar o recibir mensajes.|  
 |MsmqUnsupportedSerializationFormat|Se produjo un error de deserialización. El mensaje no se puede recibir y se quita. No se admite el formato de serialización especificado.|  

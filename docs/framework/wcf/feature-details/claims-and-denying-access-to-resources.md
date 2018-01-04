@@ -14,11 +14,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 00d6a797b8099313c15d075457ee757c1f22f744
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 156856ddd1a4c3b1d8f77a8a61f7e0336f993839
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="claims-and-denying-access-to-resources"></a>Notificaciones y denegación de acceso a los recursos
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] admite un mecanismo de autorización basado en notificaciones. Además de permitir el acceso a recursos basados en la presencia de notificaciones, los sistemas deniegan el acceso con frecuencia a los recursos basados en la presencia de notificaciones. Tales sistemas deberían examinar <xref:System.IdentityModel.Policy.AuthorizationContext> para notificaciones a las que se les deniega el acceso antes de buscar notificaciones a las que sí se les permite.  
@@ -27,4 +28,4 @@ ms.lasthandoff: 12/02/2017
   
 ## <a name="see-also"></a>Vea también  
  [Administración de notificaciones y autorización con el modelo de identidad](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)  
- [Tokens y notificaciones](../../../../docs/framework/wcf/feature-details/claims-and-tokens.md)
+ [Notificaciones y tokens](../../../../docs/framework/wcf/feature-details/claims-and-tokens.md)
