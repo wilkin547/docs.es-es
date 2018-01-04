@@ -13,20 +13,21 @@ caps.latest.revision: "11"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 3d589b5411da147b3ae8f17ab862d00026867822
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1ac16afc6ee22665188d5df5e79288341072026e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="security-concepts"></a>Conceptos de seguridad
 Esta sección explica brevemente los conceptos asociados a seguridad [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Conceptos de seguridad que se usan en WCF](../../../../docs/framework/wcf/feature-details/security-concepts-used-in-wcf.md)  
+ [Conceptos de seguridad empleados en WCF](../../../../docs/framework/wcf/feature-details/security-concepts-used-in-wcf.md)  
  Una información general de conceptos de alto nivel utilizada en implementaciones de seguridad.  
   
- [Seguridad de la aplicación distribuida](../../../../docs/framework/wcf/feature-details/distributed-application-security.md)  
+ [Seguridad distribuida de aplicaciones](../../../../docs/framework/wcf/feature-details/distributed-application-security.md)  
  Información general sobre cómo [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] proporciona seguridad en topografías de aplicaciones distribuidas.  
   
  [Terminología de seguridad](../../../../docs/framework/wcf/feature-details/wcf-security-terminology.md)  

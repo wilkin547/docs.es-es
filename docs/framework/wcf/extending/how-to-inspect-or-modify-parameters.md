@@ -16,11 +16,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c974e37856fff60cd90ec435b1501393654253c5
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 5f1a0ef31ba074082e4c3aa8a26e6a59502a7566
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-inspect-or-modify-parameters"></a>Cómo: inspeccionar o modificar parámetros
 Puede inspeccionar o modificar los mensajes entrantes o salientes de una sola operación en un objeto de cliente [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] o un servicio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] implementando la interfaz <xref:System.ServiceModel.Dispatcher.IParameterInspector?displayProperty=nameWithType> e insertándola en el cliente o servicio en tiempo de ejecución. Normalmente se utiliza un comportamiento de operación para agregar inspectores de parámetro en una sola operación; se pueden utilizar otros comportamientos para proporcionar acceso fácil al tiempo de ejecución en un ámbito mayor. Para obtener más información, consulte [clientes extender](../../../../docs/framework/wcf/extending/extending-clients.md) y [extender distribuidores](../../../../docs/framework/wcf/extending/extending-dispatchers.md).  
@@ -51,4 +52,4 @@ Puede inspeccionar o modificar los mensajes entrantes o salientes de una sola op
  [!code-xml[Interceptors#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/interceptors/cs/client.exe.config#3)]  
   
 ## <a name="see-also"></a>Vea también  
- [Configurar y extender el tiempo de ejecución con comportamientos](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)
+ [Configuración y extensión del tiempo de ejecución con comportamientos](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)

@@ -13,11 +13,12 @@ caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 048ef839db0656340827a5928056a3c063f5aa3c
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 13c862c8191a9bc312de743fc3ed99396c600f8f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting"></a>Uso del visor de seguimiento de servicios para ver seguimientos asociados y para la solución de problemas
 En este tema se describe el formato de datos de seguimiento, cómo verlo y enfoques sobre el uso de Service Trace Viewer para solucionar problemas de la aplicación.  
@@ -209,6 +210,6 @@ Expansión de actividades para llegar hasta la causa raíz de un problema
 Para iniciar la solución de problemas, también puede escoger un seguimiento de mensaje rojo o amarillo y hacer doble clic en él para llegar hasta la causa raíz.  
   
 ## <a name="see-also"></a>Vea también  
- [Escenarios de seguimiento de extremo a extremo](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)  
+ [Escenarios de traza de un extremo a otro](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)  
  [Herramienta del visor de seguimiento de servicio (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)  
- [Seguimiento](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
+ [Traza](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)

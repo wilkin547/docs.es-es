@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b367b5133cd765fe7e160cd2706589c1773eeb59
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 470fb0788aa3407fff14d1e4df4a89180c5e079d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="discovery-find-and-findcriteria"></a>Búsqueda de detección y FindCriteria
 La operación de búsqueda de detección la inicia un cliente para detectar uno o más servicios, y es una de las acciones principales en detección. Al realizar una búsqueda, se envía un mensaje de sondeo de WS-Discovery a través de la red. Los servicios que coinciden con los criterios especificados responden con mensajes ProbeMatch de WS-Discovery. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]mensajes de detección, consulte el [especificación de WS-Discovery](http://go.microsoft.com/fwlink/?LinkID=122347).  
@@ -30,9 +31,9 @@ La operación de búsqueda de detección la inicia un cliente para detectar uno 
   
  Los criterios de búsqueda incluyen:  
   
--   <xref:System.ServiceModel.Discovery.Configuration.ContractTypeNameElement> (opcional). El nombre del contrato del servicio que se busca y los criterios normalmente utilizados al buscar un servicio. Si se especifica más de un nombre de contrato, solo responderán los extremos del servicio que coincidan con TODOS los contratos. Observe que, en [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], un extremo solo puede admitir un contrato.  
+-   <xref:System.ServiceModel.Discovery.Configuration.ContractTypeNameElement> (opcional). El nombre del contrato del servicio que se busca y los criterios normalmente utilizados al buscar un servicio. Si se especifica más de un nombre de contrato, solo responderán los puntos de conexión del servicio que coincidan con TODOS los contratos. Observe que, en [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], un extremo solo puede admitir un contrato.  
   
--   <xref:System.ServiceModel.Discovery.Configuration.ScopeElement> (opcional). Los ámbitos son URI absolutos que se usan para categorizar extremos de servicio individuales. Puede que quiera usar esto en casos en los que varios extremos expongan el mismo contrato y desee averiguar un método para buscar un subconjunto de extremos. Si se especifica más de un ámbito, solo responderán los extremos de servicio que coincidan con TODOS los ámbitos.  
+-   <xref:System.ServiceModel.Discovery.Configuration.ScopeElement> (opcional). Los ámbitos son URI absolutos que se usan para categorizar extremos de servicio individuales. Puede que quiera usar esto en casos en los que varios extremos expongan el mismo contrato y desee averiguar un método para buscar un subconjunto de extremos. Si se especifica más de un ámbito, solo responderán los puntos de conexión de servicio que coincidan con TODOS los ámbitos.  
   
 -   <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchBy%2A>. Especifica el algoritmo de coincidencia que se va a usar al establecer las coincidencias de los ámbitos del mensaje de sondeo con los del extremo. Hay cinco reglas de coincidencia de ámbito admitidas:  
   
@@ -75,8 +76,8 @@ Console.WriteLine("Found {0} ICalculatorService endpoint(s).", findResponse.Endp
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Información general sobre la detección WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)  
- [Usar el canal de cliente de detección](../../../../docs/framework/wcf/feature-details/using-the-discovery-client-channel.md)  
+ [Información general de Detección de WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)  
+ [Uso del canal del cliente de detección](../../../../docs/framework/wcf/feature-details/using-the-discovery-client-channel.md)  
  [Detección con ámbitos](../../../../docs/framework/wcf/samples/discovery-with-scopes-sample.md)  
  [Búsqueda asincrónica](../../../../docs/framework/wcf/samples/asynchronous-find-sample.md)  
  [Básico](../../../../docs/framework/wcf/samples/basic-sample.md)

@@ -13,11 +13,12 @@ caps.latest.revision: "25"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 33387a9b155a471209039e5977bc7134b1439ff3
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 3bfa798bf2f2c758905512df32e03214634b6c2e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-host-a-wcf-service-in-was"></a>Procedimiento para hospedar un servicio WCF en WAS
 Este tema describe los pasos básicos requeridos para crear un servicio de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] hospedado de Windows Process Activation Services (también conocido como WAS). WAS es el nuevo servicio de activación de procesos que es una generalización de las características de Internet Information Services (IIS) que funcionan con protocolos de transporte no HTTP. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usa la interfaz de adaptador de agentes de escucha para comunicar solicitudes de activación que se reciben a través de protocolos no HTTP admitidos por [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], como TCP, canalizaciones con nombre y Message Queuing.  
@@ -27,7 +28,7 @@ Este tema describe los pasos básicos requeridos para crear un servicio de [!INC
 > [!WARNING]
 >  La activación de WAS no se admite si la canalización de procesamiento de solicitudes del servidor web está establecida en el modo clásico. La canalización de procesamiento de solicitudes del servidor web debe estar establecida en el modo integrado si debe usarse la activación de WAS.  
   
- Cuando un servicio de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] se hospeda en WAS, los enlaces estándar se utilizan de la manera habitual. Sin embargo, al utilizar <xref:System.ServiceModel.NetTcpBinding> y <xref:System.ServiceModel.NetNamedPipeBinding> para configurar un servicio hospedado en WAS, se debe satisfacer una restricción. Cuando extremos diferentes utilizan el mismo transporte, las configuraciones del enlace tienen que coincidir en las siete propiedades siguientes:  
+ Cuando un servicio de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] se hospeda en WAS, los enlaces estándar se utilizan de la manera habitual. Sin embargo, al utilizar <xref:System.ServiceModel.NetTcpBinding> y <xref:System.ServiceModel.NetNamedPipeBinding> para configurar un servicio hospedado en WAS, se debe satisfacer una restricción. Cuando puntos de conexión diferentes utilizan el mismo transporte, las configuraciones del enlace tienen que coincidir en las siete propiedades siguientes:  
   
 -   ConnectionBufferSize  
   
@@ -109,5 +110,5 @@ Este tema describe los pasos básicos requeridos para crear un servicio de [!INC
 6.  Compile y ejecute el cliente.  
   
 ## <a name="see-also"></a>Vea también  
- [Activación de TCP](../../../../docs/framework/wcf/samples/tcp-activation.md)  
+ [Activación TCP](../../../../docs/framework/wcf/samples/tcp-activation.md)  
  [Características de hospedaje de Windows Server App Fabric](http://go.microsoft.com/fwlink/?LinkId=201276)

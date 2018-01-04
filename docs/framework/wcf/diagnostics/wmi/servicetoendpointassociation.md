@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f576c2f82590f683aa51d5cc70c67a4a2b15a1e0
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: da8703b80f2fbcc2f02eb64c94baf0707a1a93bd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="servicetoendpointassociation"></a>ServiceToEndpointAssociation
 Asigna un servicio a un punto de conexión.  
@@ -44,7 +45,7 @@ class ServiceToEndpointAssociation
  Tipo de acceso: solo lectura  
 Calificadores: clave  
   
- El servicio asociado con el extremo.  
+ El servicio asociado con el punto de conexión.  
   
 ### <a name="ref"></a>ref  
  Tipo de datos: extremo  
@@ -52,7 +53,7 @@ Calificadores: clave
  Tipo de acceso: solo lectura  
 Calificadores: clave  
   
- El extremo asociado con el servicio.  
+ El punto de conexión asociado con el servicio.  
   
 ## <a name="requirements"></a>Requisitos  
   

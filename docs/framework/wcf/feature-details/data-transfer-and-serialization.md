@@ -16,44 +16,45 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 29ca4041e24a99546dfb665b0ce9e695732442d4
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 8daadec1eef20e62747cdbfcafd1fd13cfc16093
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="data-transfer-and-serialization"></a>Transferencia y serialización de datos
 En un sistema conectado, los servicios y clientes dependen del intercambio de datos para realizar cualquier tarea. Como programador de un servicio o cliente, también debe entender cómo [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] administra los datos y la serialización de los datos para crear aplicaciones eficaces y fáciles de mantener.  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Specifying Data Transfer in Service Contracts](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)  
+ [Definición de transferencias de datos en contratos de servicio](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)  
  Describe los conceptos básicos de la transferencia de datos en los servicios.  
   
- [Usar contratos de datos](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
+ [Utilización de contratos de datos](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
  Describe qué son los contratos de datos y cómo crearlos y utilizarlos.  
   
  [Serializador de contratos de datos](../../../../docs/framework/wcf/feature-details/data-contract-serializer.md)  
  Describe cómo lograr la serialización de los datos con la clase <xref:System.Runtime.Serialization.DataContractSerializer> o cualquier extensión de la clase <xref:System.Runtime.Serialization.XmlObjectSerializer>.  
   
- [Mediante la clase XmlSerializer](../../../../docs/framework/wcf/feature-details/using-the-xmlserializer-class.md)  
+ [Utilización de la clase XmlSerializer](../../../../docs/framework/wcf/feature-details/using-the-xmlserializer-class.md)  
  Describe cómo y por qué utilizar la clase <xref:System.Xml.Serialization.XmlSerializer>, una alternativa a la clase <xref:System.Runtime.Serialization.DataContractSerializer>.  
   
- [Usar contratos de mensaje](../../../../docs/framework/wcf/feature-details/using-message-contracts.md)  
+ [Uso de contratos de mensaje](../../../../docs/framework/wcf/feature-details/using-message-contracts.md)  
  Describe cómo permiten los contratos de mensajes un control estrecho sobre los mensajes SOAP.  
   
- [Uso de la clase de mensaje](../../../../docs/framework/wcf/feature-details/using-the-message-class.md)  
+ [Uso de la clase de mensajes](../../../../docs/framework/wcf/feature-details/using-the-message-class.md)  
  Describe cómo utilizar las características de la clase Message.  
   
  [Filtrado](../../../../docs/framework/wcf/feature-details/filtering.md)  
  Describe el filtrado, que permite el preprocesado de un mensaje en función de varios criterios.  
   
- [Datos de gran tamaño y la transmisión por secuencias](../../../../docs/framework/wcf/feature-details/large-data-and-streaming.md)  
+ [Grandes datos y streaming](../../../../docs/framework/wcf/feature-details/large-data-and-streaming.md)  
  Describe cómo enviar un bloque grande de datos, como, por ejemplo, un archivo binario.  
   
- [Consideraciones de seguridad de datos](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md)  
+ [Consideraciones de seguridad para datos](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md)  
  Describe los elementos que se han de tener en cuenta a la hora de programar la transferencia y serialización de datos.  
   
- [Introducción a la arquitectura de transferencia de datos](../../../../docs/framework/wcf/feature-details/data-transfer-architectural-overview.md)  
+ [Información general sobre la arquitectura de transferencia de datos](../../../../docs/framework/wcf/feature-details/data-transfer-architectural-overview.md)  
  Describe una vista del diseño general de la transferencia de datos en [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
   
 ## <a name="reference"></a>Referencia  

@@ -14,11 +14,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d00f8847e64e30b42490f319ea3e1df5e5a1850d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: c87e384b3186a1dd4b53ba6c21d92bf4d0e6a8c7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="queues-in-windows-communication-foundation"></a>Colas en Windows Communication Foundation
 En los temas de esta sección se describe la compatibilidad de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] con colas. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] admite la puesta en cola reutilizando Microsoft Message Queuing (previamente conocido como MSMQ) como un transporte y habilita los siguientes escenarios:  
@@ -29,7 +30,7 @@ En los temas de esta sección se describe la compatibilidad de [!INCLUDE[indigo1
   
 -   Nivelación de la carga. Las aplicaciones emisoras pueden agobiar a las aplicaciones receptoras con mensajes. Las colas pueden administrar tasas de consumo y producciones de mensajes desequilibradas, de modo que el receptor no se agobie.  
   
--   Operaciones desconectadas. Las operaciones de envío, recepción y procesamiento se pueden desconectar al comunicar a través de redes de latencia alta o redes de disponibilidad limitada, como es el caso de los dispositivos móviles. Las colas permiten a estas operaciones continuar, incluso cuando los extremos están desconectados. Cuando se restablece la conexión, la cola reenvía los mensajes a la aplicación receptora.  
+-   Operaciones desconectadas. Las operaciones de envío, recepción y procesamiento se pueden desconectar al comunicar a través de redes de latencia alta o redes de disponibilidad limitada, como es el caso de los dispositivos móviles. Las colas permiten a estas operaciones continuar, incluso cuando los puntos de conexión están desconectados. Cuando se restablece la conexión, la cola reenvía los mensajes a la aplicación receptora.  
   
  Para usar la característica de colas en una aplicación de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], puede usar uno de los enlaces estándar o puede crear un enlace personalizado si uno de los enlaces estándar no satisface sus requisitos. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]enlaces estándar relevantes y cómo elegir una de ellas, vea [Cómo: intercambian mensajes con extremos de WCF y las aplicaciones de Message Queue Server](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]cómo crear enlaces personalizados, consulte [enlaces personalizados](../../../../docs/framework/wcf/extending/custom-bindings.md).  
   
@@ -37,40 +38,40 @@ En los temas de esta sección se describe la compatibilidad de [!INCLUDE[indigo1
  [Información general de colas](../../../../docs/framework/wcf/feature-details/queues-overview.md)  
  Una información general de conceptos de colas de mensajes.  
   
- [Las colas en WCF](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)  
+ [Colas en WCF](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)  
  Una información general de compatibilidad de cola de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
   
- [Cómo: intercambiar mensajes con extremos de WCF en cola](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)  
+ [Intercambio de mensajes en cola con puntos de conexión de WCF](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)  
  Explica cómo utilizar la clase <xref:System.ServiceModel.NetMsmqBinding> para comunicarse entre un cliente [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] y un servicio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
   
- [Cómo: intercambiar mensajes con extremos de WCF y aplicaciones de Message Queuing](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)  
+ [Intercambio de mensajes con puntos de conexión de WCF y aplicaciones de Message Queue Server](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)  
  Explica cómo utilizar <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> para comunicarse entre [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] y aplicaciones Message Queuing.  
   
- [Agrupar los mensajes en cola en una sesión](../../../../docs/framework/wcf/feature-details/grouping-queued-messages-in-a-session.md)  
+ [Agrupación de los mensajes en cola de una sesión](../../../../docs/framework/wcf/feature-details/grouping-queued-messages-in-a-session.md)  
  Explica cómo agrupar los mensajes en una cola para facilitar el procesamiento de mensajes correlacionado por una aplicación receptora única.  
   
- [Los mensajes en una transacción por lotes](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md)  
+ [Mensajes por lotes en una transacción](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md)  
  Explica cómo procesar mensajes por lotes en una transacción.  
   
- [Uso de colas de mensajes no enviados para administrar los errores de transferencia de mensajes](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md)  
+ [Utilización de las colas de mensajes no enviados para administrar los errores en la transferencia de mensajes](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md)  
  Explica cómo administrar los errores de entrega y transferencia de mensajes mediante las colas de mensajes no enviados y cómo procesar mensajes desde la cola de mensajes no enviados.  
   
  [Control de mensajes dudosos](../../../../docs/framework/wcf/feature-details/poison-message-handling.md)  
  Explica cómo administrar los mensajes dudosos (mensajes que han superado el número máximo de intentos de entrega a la aplicación receptora).  
   
- [Diferencias en las características de puesta en cola en Windows Vista, Windows Server 2003 y Windows XP](../../../../docs/framework/wcf/feature-details/diff-in-queue-in-vista-server-2003-windows-xp.md)  
+ [Diferencias en las características de cola en Windows Vista, Windows Server 2003 y Windows XP](../../../../docs/framework/wcf/feature-details/diff-in-queue-in-vista-server-2003-windows-xp.md)  
  Resume las diferencias en la característica de colas [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] entre [!INCLUDE[wv](../../../../includes/wv-md.md)], [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] y [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
   
- [Proteger mensajes mediante la seguridad de transporte](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md)  
+ [Protección de mensajes utilizando la seguridad de transporte](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md)  
  Describe cómo utilizar la seguridad de transporte para proteger los mensajes en cola.  
   
- [Proteger mensajes mediante la seguridad del mensaje](../../../../docs/framework/wcf/feature-details/securing-messages-using-message-security.md)  
+ [Protección de mensajes mediante la seguridad de mensajes](../../../../docs/framework/wcf/feature-details/securing-messages-using-message-security.md)  
  Describe cómo utilizar la seguridad de mensaje para proteger los mensajes en cola.  
   
- [Solución de problemas de mensajería en cola](../../../../docs/framework/wcf/feature-details/troubleshooting-queued-messaging.md)  
+ [Solución de problemas de la mensajería en cola](../../../../docs/framework/wcf/feature-details/troubleshooting-queued-messaging.md)  
  Explica cómo solucionar los problemas comunes de la puesta en cola.  
   
- [Prácticas recomendadas para la comunicación en cola](../../../../docs/framework/wcf/feature-details/best-practices-for-queued-communication.md)  
+ [Procedimientos recomendados para la comunicación en cola](../../../../docs/framework/wcf/feature-details/best-practices-for-queued-communication.md)  
  Explica los procedimientos recomendados para utilizar la comunicación mediante cola de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
   
 ## <a name="see-also"></a>Vea también  

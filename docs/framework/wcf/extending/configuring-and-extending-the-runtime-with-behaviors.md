@@ -14,11 +14,12 @@ caps.latest.revision: "20"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7eb8e0853adbc24deb43fc1006804d7707d9a4b8
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 2ea157ea1ac73a287ba39c1468e7e9a5781d40a0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="configuring-and-extending-the-runtime-with-behaviors"></a>Configuración y extensión del tiempo de ejecución con comportamientos
 Los comportamientos le permiten modificar el comportamiento predeterminado y agregar extensiones personalizadas que inspeccionan y validan la configuración de servicio o modifican el comportamiento del tiempo de ejecución en el cliente [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] y las aplicaciones de servicio. En este tema se describen las interfaces de comportamiento, cómo implementarlas y cómo agregarlas mediante programación a la descripción del servicio (en una aplicación de servicio) o punto de conexión (en una aplicación cliente) o en un archivo de configuración. Para obtener más información acerca del uso de comportamientos proporcionados por el sistema, consulte [especificar el comportamiento de tiempo de ejecución de servicio](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md) y [especificar el comportamiento de tiempo de ejecución de cliente](../../../../docs/framework/wcf/specifying-client-run-time-behavior.md).  
@@ -96,7 +97,7 @@ Los comportamientos le permiten modificar el comportamiento predeterminado y agr
 #### <a name="endpoint-behaviors"></a>Comportamientos del extremo  
  Los comportamientos del extremo, que implementan <xref:System.ServiceModel.Description.IEndpointBehavior>, son el mecanismo principal por medio del cual modifica todo el servicio o el tiempo de ejecución del cliente para un extremo concreto.  
   
- Hay dos mecanismos para agregar los comportamientos del extremo a un servicio.  
+ Hay dos mecanismos para agregar los comportamientos del punto de conexión a un servicio.  
   
 1.  Agregue el comportamiento a la propiedad <xref:System.ServiceModel.Description.ServiceEndpoint.Behaviors%2A>.  
   
@@ -201,7 +202,7 @@ Los comportamientos le permiten modificar el comportamiento predeterminado y agr
   
 2.  Contrato  
   
-3.  Extremo  
+3.  punto de conexión  
   
 4.  Operación  
   
@@ -211,7 +212,7 @@ Los comportamientos le permiten modificar el comportamiento predeterminado y agr
   
 1.  Contrato  
   
-2.  Extremo  
+2.  punto de conexión  
   
 3.  Operación  
   

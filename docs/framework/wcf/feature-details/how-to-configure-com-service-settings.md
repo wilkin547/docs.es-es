@@ -14,11 +14,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: fa497567c5cf380d7764499991ad9e7e95a5cbe0
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 1bdbdbae857685ddb447843fd704896de018b1c1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-configure-com-service-settings"></a>Cómo configurar los parámetros de los servicios COM+
 Cuando se agrega o quita una interfaz de aplicaciones mediante la herramienta de configuración de servicio de COM+, la configuración del servicio web se actualiza en el archivo de configuración de la aplicación. En el modo hospedado de COM +, el archivo Application.config se coloca en el directorio raíz de la aplicación (%PROGRAMFILES%\ComPlus aplicaciones\\{appid} es el valor predeterminado). En cualquiera de los modos hospedados en la web, el archivo Web.config se encuentra en el directorio vroot especificado.  
@@ -106,4 +107,4 @@ public interface IFinancesContract : IDisposable
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Integración con aplicaciones COM +](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)
+ [Integración en aplicaciones COM+](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)

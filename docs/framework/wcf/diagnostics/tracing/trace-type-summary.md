@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c1570832e5f179b6d2685ad33fad743c9530bb16
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: fe4222ac124174341a28035c955a2a9bef4a167c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="trace-type-summary"></a>Resumen del tipo de seguimiento
 [Niveles de origen](http://go.microsoft.com/fwlink/?LinkID=94943) define distintos niveles de seguimiento: crítico, Error, advertencia, información y detallado, así, proporciona una descripción de la `ActivityTracing` marca, que alterna el resultado de seguimiento de eventos de transferencia de límite y la actividad.  
@@ -35,7 +36,7 @@ ms.lasthandoff: 12/02/2017
 |Detallado|Traza de depuración.|  
 |Iniciar|Inicio de una unidad lógica de procesamiento.|  
 |Suspender|Suspensión de una unidad lógica de procesamiento.|  
-|Resume|Reanudación de una unidad lógica de procesamiento.|  
+|Reanudar|Reanudación de una unidad lógica de procesamiento.|  
 |Detener|Detención de una unidad lógica de procesamiento.|  
 |Transferir|Cambio de la identidad de correlación.|  
   

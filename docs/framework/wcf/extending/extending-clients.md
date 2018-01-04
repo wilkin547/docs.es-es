@@ -14,11 +14,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 23cfa64aa698643f30409119e162b815e58e2379
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 2444488418b7647111cf4b89db0c41a8e66470d4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="extending-clients"></a>Extensión de clientes
 En una aplicación que realiza la llamada, el nivel de modelo de servicio es responsable de traducir invocaciones de método en el código de la aplicación a mensajes salientes, insertarlos en los canales subyacentes, traducir los resultados en valores devueltos y los parámetros de salida en el código de la aplicación, y devolver los resultados al autor de la llamada. Las extensiones de modelo de servicio modifican o implementan el comportamiento de la comunicación o la ejecución y características implicadas en la funcionalidad de distribuidor o cliente, comportamientos personalizados, interceptación de mensajes y parámetros, y otra funcionalidad de extensibilidad.  
@@ -39,7 +40,7 @@ En una aplicación que realiza la llamada, el nivel de modelo de servicio es res
   
 -   Validación personalizada del mensaje. Un usuario puede querer exigir que un mensaje sea válido para un determinado esquema. Esto se puede hacer implementando la interfaz <xref:System.ServiceModel.Dispatcher.IClientMessageInspector> y asignando la implementación en la propiedad <xref:System.ServiceModel.Dispatcher.DispatchRuntime.MessageInspectors%2A>. Para obtener ejemplos, vea [Cómo: inspeccionar o modificar mensajes en el cliente](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-messages-on-the-client.md) y [Cómo: inspeccionar o modificar mensajes en el cliente](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-messages-on-the-client.md).  
   
--   Registro personalizado de mensajes. Un usuario puede desear inspeccionar y registrar un conjunto de mensajes de la aplicación que fluyen a través de un extremo. Esto también se puede lograr con las interfaces del interceptor de mensajes.  
+-   Registro personalizado de mensajes. Un usuario puede desear inspeccionar y registrar un conjunto de mensajes de la aplicación que fluyen a través de un punto de conexión. Esto también se puede lograr con las interfaces del interceptor de mensajes.  
   
 -   Transformaciones personalizadas del mensaje. En lugar de modificar el código de aplicación, el usuario puede querer aplicar ciertas transformaciones al mensaje en el tiempo de ejecución (por ejemplo, para controlar las versiones). Esto también se puede lograr, de nuevo, con las interfaces del interceptor de mensajes.  
   
@@ -126,5 +127,5 @@ En una aplicación que realiza la llamada, el nivel de modelo de servicio es res
 ## <a name="see-also"></a>Vea también  
  <xref:System.ServiceModel.Dispatcher.ClientRuntime>  
  <xref:System.ServiceModel.Dispatcher.ClientOperation>  
- [Cómo: inspeccionar o modificar mensajes en el cliente](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-messages-on-the-client.md)  
- [Cómo: inspeccionar o modificar parámetros](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-parameters.md)
+ [Inspección o modificación de mensajes en el cliente](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-messages-on-the-client.md)  
+ [Inspección o modificación de parámetros](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-parameters.md)

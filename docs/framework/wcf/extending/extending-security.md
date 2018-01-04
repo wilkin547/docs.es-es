@@ -14,11 +14,12 @@ caps.latest.revision: "23"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: a3950b156ede806382bbe4e013db5d94a8b20a23
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: ecbbaac0023ca528967abe2cb60c3d790772fb2e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="extending-security"></a>Extensión de la seguridad
 Para alojar nuevos tipos de notificación y tokens personalizados, puede extender la infraestructura de seguridad de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. Los temas de esta sección le muestran cómo hacerlo.  
@@ -27,7 +28,7 @@ Para alojar nuevos tipos de notificación y tokens personalizados, puede extende
  [Arquitectura de seguridad](http://msdn.microsoft.com/en-us/16593476-d36a-408d-808c-ae6fd483e28f)  
  Describe la arquitectura del sistema de seguridad [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
   
- [Credencial personalizada y validación de credencial](../../../../docs/framework/wcf/extending/custom-credential-and-credential-validation.md)  
+ [Credencial personalizada y validación de la credencial](../../../../docs/framework/wcf/extending/custom-credential-and-credential-validation.md)  
  Explica cómo se utiliza el modelo de identidad al validar las credenciales personalizadas.  
   
  [Tokens personalizados](../../../../docs/framework/wcf/extending/custom-tokens.md)  
@@ -36,16 +37,16 @@ Para alojar nuevos tipos de notificación y tokens personalizados, puede extende
  [Autorización personalizada](../../../../docs/framework/wcf/extending/custom-authorization.md)  
  Explica cómo implementar la autorización personalizada.  
   
- [Invalidación de la identidad de un servicio de autenticación](../../../../docs/framework/wcf/extending/overriding-the-identity-of-a-service-for-authentication.md)  
+ [Invalidación de la identidad de un servicio para la autenticación](../../../../docs/framework/wcf/extending/overriding-the-identity-of-a-service-for-authentication.md)  
  Describe cómo invalidar la identidad de un servicio para la autenticación.  
   
- [Cómo: crear un comprobador de identidad de cliente personalizada](../../../../docs/framework/wcf/extending/how-to-create-a-custom-client-identity-verifier.md)  
+ [Creación de un comprobador de identidad de cliente personalizado](../../../../docs/framework/wcf/extending/how-to-create-a-custom-client-identity-verifier.md)  
  Muestra cómo validar una identidad del punto de conexión personalizada.  
   
- [Cómo: utilizar diferentes certificados X.509 para la firma y cifrado](../../../../docs/framework/wcf/extending/how-to-use-separate-x-509-certificates-for-signing-and-encryption.md)  
+ [Uso de diferentes certificados X.509 para la firma y el cifrado](../../../../docs/framework/wcf/extending/how-to-use-separate-x-509-certificates-for-signing-and-encryption.md)  
  Los mensajes normalmente se firman y cifran con un certificado único. En este tema se explica cómo se pueden utilizar dos certificados, cuando se requiere.  
   
- [Cómo: cambiar el proveedor de servicios criptográfico de clave privada de un certificado X.509](../../../../docs/framework/wcf/extending/change-cryptographic-provider-x509-certificate-private-key.md)  
+ [Cambio de proveedor criptográfico para la clave privada de un certificado X.509](../../../../docs/framework/wcf/extending/change-cryptographic-provider-x509-certificate-private-key.md)  
  Explica cómo cambiar el proveedor criptográfico utilizado para proporcionar la clave privada de un certificado X.509 y cómo integrar el proveedor en el marco [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
   
 ## <a name="reference"></a>Referencia  

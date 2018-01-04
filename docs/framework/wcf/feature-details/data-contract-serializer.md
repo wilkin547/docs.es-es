@@ -17,11 +17,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9c8243524b2de57c58143b7dfb74050a116c5186
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 8591a2b42f375f0b0e275fa9f6e34e69e7c054ef
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="data-contract-serializer"></a>El serializador de contratos de datos
 La infraestructura de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] utiliza la clase <xref:System.Runtime.Serialization.DataContractSerializer> como el serializador predeterminado. Los temas en esta sección proporcionan más detalles para utilizarlo como un serializador independiente.  
@@ -30,7 +31,7 @@ La infraestructura de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ut
  [Serialización y deserialización](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md)  
  Detalla cómo utilizar la clase <xref:System.Runtime.Serialization.DataContractSerializer> para serializar gráficos de objetos y deserializar documentos XML a objetos.  
   
- [Exportación e importación del esquema](../../../../docs/framework/wcf/feature-details/schema-import-and-export.md)  
+ [Importación y exportación de esquemas](../../../../docs/framework/wcf/feature-details/schema-import-and-export.md)  
  Explica cómo generar un esquema del lenguaje de definición de esquemas XML (XSD) de una clase [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] o cómo generar el código de un documento de esquema XSD.  
   
 ## <a name="reference"></a>Referencia  
@@ -43,10 +44,10 @@ La infraestructura de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ut
  <xref:System.Runtime.Serialization.DataMemberAttribute>  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
- [Usar contratos de datos](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
+ [Utilización de contratos de datos](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
   
- [Transferencia de datos y serialización](../../../../docs/framework/wcf/feature-details/data-transfer-and-serialization.md)  
+ [Transferencia y serialización de datos](../../../../docs/framework/wcf/feature-details/data-transfer-and-serialization.md)  
   
 ## <a name="see-also"></a>Vea también  
  [Referencia de esquema de contrato de datos](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)  
- [Specifying Data Transfer in Service Contracts](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)
+ [Definición de transferencias de datos en contratos de servicio](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)

@@ -16,11 +16,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3cc7eecbef66c3e4a80759912260b973d441a8a3
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 916f5b820ce9e1c30c13a9834548c83e32bc3579
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-import-custom-policy-assertions"></a>Cómo: Importar aserciones de directivas personalizadas
 Las aserciones de directivas describen las funciones y requisitos de un punto de conexión de servicio.  Las aplicaciones cliente pueden utilizar aserciones de directivas en metadatos del servicio para configurar el enlace de cliente o para personalizar el contrato de servicio de un extremo de servicio.  
@@ -77,4 +78,4 @@ Las aserciones de directivas describen las funciones y requisitos de un punto de
  <xref:System.ServiceModel.Description.MetadataResolver?displayProperty=nameWithType>  
  <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType>  
  <xref:System.ServiceModel.Description.MetadataResolver?displayProperty=nameWithType>  
- [Extender el sistema de metadatos](../../../../docs/framework/wcf/extending/extending-the-metadata-system.md)
+ [Extensión del sistema de metadatos](../../../../docs/framework/wcf/extending/extending-the-metadata-system.md)

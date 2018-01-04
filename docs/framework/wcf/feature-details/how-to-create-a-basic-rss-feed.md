@@ -16,11 +16,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 54b9932e081ab5f35b3c15c9e7d4025dfbb3703b
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 79e5bc1bedbe6fd0911931c83878ed20bc4bd17e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-basic-rss-feed"></a>Creación de una fuente RSS básica
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] le permite crear un servicio que exponga una fuente de distribución. En este tema se discute cómo crear un servicio de distribución que exponga una fuente de  distribución RSS.  
@@ -74,7 +75,7 @@ ms.lasthandoff: 12/02/2017
   
 ### <a name="to-call-getblog-with-an-http-get"></a>Realización de llamadas a GetBlog() mediante HTTP GET  
   
-1.  Abra Internet Explorer, escriba la siguiente URL y presione Entrar: http://localhost:8000/BlogService/GetBlog La URL contiene la dirección base del servicio (http://localhost:8000/BlogService), la dirección relativa del extremo y la operación del servicio que se va a llamar.  
+1.  Abra Internet Explorer, escriba la siguiente URL y presione Entrar: http://localhost:8000/BlogService/GetBlog La URL contiene la dirección base del servicio (http://localhost:8000/BlogService), la dirección relativa del punto de conexión y la operación del servicio que se va a llamar.  
   
 ### <a name="to-call-getblog-from-code"></a>Llamar a GetBlog() mediante código  
   

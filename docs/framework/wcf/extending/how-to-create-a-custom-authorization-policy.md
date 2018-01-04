@@ -16,11 +16,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0086dc0c82fefad3cb1e5a73ddd9ced909f05453
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 1af5e2cbf7c124e490fea04deadd1afffcde5cbb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-custom-authorization-policy"></a>Cómo: Crear una directiva de autorización personalizada
 La infraestructura del modelo de identidad en [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] admite un modelo de autorización basado en una notificación. Las notificaciones se extraen de los tokens, procesados opcionalmente por la directiva de autorización personalizada. Después se colocan en un <xref:System.IdentityModel.Policy.AuthorizationContext> que se puede examinar a continuación para tomar las decisiones de autorización. Se puede utilizar una directiva personalizada para transformar las notificaciones de tokens entrantes en notificaciones esperadas por la aplicación. De esta manera, el nivel de aplicación se puede aislar de los detalles en las distintas notificaciones servidas por los distintos tokens que [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] admite. En este tema se muestra cómo implementar una directiva de autorización personalizada y cómo agregarla a la colección de directivas utilizada por un servicio.  
@@ -87,6 +88,6 @@ La infraestructura del modelo de identidad en [!INCLUDE[indigo1](../../../../inc
   
 ## <a name="see-also"></a>Vea también  
  <xref:System.ServiceModel.ServiceAuthorizationManager>  
- [Cómo: comparar las notificaciones](../../../../docs/framework/wcf/extending/how-to-compare-claims.md)  
- [Cómo: crear un administrador de autorización personalizado para un servicio](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)  
+ [Comparación de notificaciones](../../../../docs/framework/wcf/extending/how-to-compare-claims.md)  
+ [Creación de un administrador de autorización personalizado para un servicio](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)  
  [Directiva de autorización](../../../../docs/framework/wcf/samples/authorization-policy.md)

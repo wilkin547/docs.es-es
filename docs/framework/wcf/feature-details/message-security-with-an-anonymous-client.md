@@ -16,11 +16,12 @@ caps.latest.revision: "15"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: edf1dd36fe8c0f3e6c1ae8087d1bacbc00cf307a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e8c10c9d4838a2b6c9d3a021d22d2dfd4dc865da
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="message-security-with-an-anonymous-client"></a>Seguridad de mensajes con clientes anónimos
 El escenario siguiente muestra un cliente y el servicio protegido por la seguridad del mensaje [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. Un objetivo del diseño es usar la seguridad del mensaje en lugar de la seguridad de transporte, para que en el futuro pueda admitir un modelo basado en notificaciones más completo. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]uso de notificaciones completo para la autorización, consulte [Administrar notificaciones y autorización con el modelo de identidad](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md).  
@@ -143,7 +144,7 @@ El escenario siguiente muestra un cliente y el servicio protegido por la segurid
   
 ## <a name="see-also"></a>Vea también  
  [Información general sobre seguridad](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- [Seguridad de la aplicación distribuida](../../../../docs/framework/wcf/feature-details/distributed-application-security.md)  
+ [Seguridad distribuida de aplicaciones](../../../../docs/framework/wcf/feature-details/distributed-application-security.md)  
  [Seguridad de mensaje anónima](../../../../docs/framework/wcf/samples/message-security-anonymous.md)  
- [Autenticación e identidad de servicio](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
+ [Identidad del servicio y autenticación](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
  [Modelo de seguridad de Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

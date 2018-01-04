@@ -14,11 +14,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9be7f226c331ad20c58a06b5c7497c7942db013d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 7f6f45b788d825fed3c8f5d627190dd8911ec4c9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="channel-model-overview"></a>Información general del modelo de canales
 La pila del canal [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] es una pila de comunicación superpuesta con uno o más canales que procesan los mensajes. En la parte inferior de la pila hay un canal de transporte que es responsable de adaptar la pila del canal al transporte subyacente (por ejemplo, TCP, HTTP, SMTP y otros tipos de transporte). Los canales proporcionan un modelo de programación de bajo nivel para enviar y recibir mensajes. Este modelo de programación confía en varias interfaces y otros tipos colectivamente conocidos como el modelo de canal [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. En este tema se tratan diversas formas de canal, la construcción de un agente de escucha básico del canal (en el servicio) y el generador de canales (en el cliente).  
@@ -81,9 +82,9 @@ La pila del canal [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] es una
   
 |Tema|Descripción|  
 |-----------|-----------------|  
-|[Servicio: Los agentes de escucha de canales y canales](../../../../docs/framework/wcf/extending/service-channel-listeners-and-channels.md)|Describe los agentes de escucha del canal, que realizan escuchas de los canales entrantes en una aplicación de servicio.|  
-|[Cliente: Los generadores de canales y canales](../../../../docs/framework/wcf/extending/client-channel-factories-and-channels.md)|Describe generadores de canales, que crean canales para conectar a una aplicación de servicio.|  
-|[Cambios de estado de descripción](../../../../docs/framework/wcf/extending/understanding-state-changes.md)|Describe cómo cambia el estado de los modelos de interfaz <xref:System.ServiceModel.ICommunicationObject?displayProperty=nameWithType> en los canales.|  
-|[Elegir un patrón de intercambio de mensajes](../../../../docs/framework/wcf/extending/choosing-a-message-exchange-pattern.md)|Describe los seis patrones de intercambio de mensajes básicos que los canales pueden admitir.|  
-|[Control de excepciones y errores](../../../../docs/framework/wcf/extending/handling-exceptions-and-faults.md)|Describe cómo administrar errores y excepciones en canales personalizados.|  
+|[Servicio: canales y escuchas de canales](../../../../docs/framework/wcf/extending/service-channel-listeners-and-channels.md)|Describe los agentes de escucha del canal, que realizan escuchas de los canales entrantes en una aplicación de servicio.|  
+|[Cliente: generadores de canales y canales](../../../../docs/framework/wcf/extending/client-channel-factories-and-channels.md)|Describe generadores de canales, que crean canales para conectar a una aplicación de servicio.|  
+|[Introducción a los cambios de estado](../../../../docs/framework/wcf/extending/understanding-state-changes.md)|Describe cómo cambia el estado de los modelos de interfaz <xref:System.ServiceModel.ICommunicationObject?displayProperty=nameWithType> en los canales.|  
+|[Elección de un patrón de intercambio de mensajes](../../../../docs/framework/wcf/extending/choosing-a-message-exchange-pattern.md)|Describe los seis patrones de intercambio de mensajes básicos que los canales pueden admitir.|  
+|[Administración de excepciones y errores](../../../../docs/framework/wcf/extending/handling-exceptions-and-faults.md)|Describe cómo administrar errores y excepciones en canales personalizados.|  
 |[Compatibilidad con metadatos y configuración](../../../../docs/framework/wcf/extending/configuration-and-metadata-support.md)|Describe cómo admitir el uso de canales personalizados desde el modelo de la aplicación y cómo exportar e importar metadatos mediante enlaces y elementos de enlace.|

@@ -17,11 +17,12 @@ caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ef25e349ca6245ff3247f3a136d9a950d03d81d5
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 5ffd4a09de508a2353af356863f9e4f41fc253e8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="forward-compatible-data-contracts"></a>Contratos de datos compatibles con el reenvío
 Una característica del sistema de contrato de datos de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] es que los contratos pueden evolucionar con el tiempo sin causar interrupciones. Es decir, un cliente con una versión anterior de un contrato de datos puede comunicarse con un servicio con una versión más reciente del mismo contrato de datos, o un cliente con una versión más reciente de un contrato de datos puede comunicarse con una versión anterior del mismo contrato de datos. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Procedimientos recomendados: control de versiones de contrato de datos](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md).  
@@ -44,7 +45,7 @@ Una característica del sistema de contrato de datos de [!INCLUDE[indigo1](../..
  [!code-csharp[C_DataContract#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_datacontract/cs/source.cs#8)]
  [!code-vb[C_DataContract#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_datacontract/vb/source.vb#8)]  
   
- Cuando la infraestructura de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] encuentra datos que no forman parte del contrato de datos original, los datos se almacenan en la propiedad y se conservan. No se procesa para nada más, salvo para el almacenamiento temporal. Si el objeto se devuelve a donde se originó, se devuelven también los datos originales (desconocidos). Por consiguiente, los datos han realizado un viaje de ida y vuelta (round trip) hasta y desde el extremo de origen sin sufrir pérdidas. Tenga en cuenta, sin embargo, que si el extremo de origen exigiera que se procesasen los datos, la expectativa no se cumple, y el extremo debe detectar y adaptar el cambio de algún modo.  
+ Cuando la infraestructura de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] encuentra datos que no forman parte del contrato de datos original, los datos se almacenan en la propiedad y se conservan. No se procesa para nada más, salvo para el almacenamiento temporal. Si el objeto se devuelve a donde se originó, se devuelven también los datos originales (desconocidos). Por consiguiente, los datos han realizado un viaje de ida y vuelta (round trip) hasta y desde el punto de conexión de origen sin sufrir pérdidas. Tenga en cuenta, sin embargo, que si el punto de conexión de origen exigiera que se procesasen los datos, la expectativa no se cumple, y el punto de conexión debe detectar y adaptar el cambio de algún modo.  
   
  El tipo <xref:System.Runtime.Serialization.ExtensionDataObject> no contiene ningún método público ni propiedades. Por tanto, es imposible obtener acceso directo a los datos almacenados dentro de la propiedad <xref:System.Runtime.Serialization.IExtensibleDataObject.ExtensionData%2A>.  
   

@@ -16,11 +16,12 @@ caps.latest.revision: "23"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 98bce70d7092a8ce9b9244479f7ff6d999bb0825
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: bb7a40bc38a3fdf3f7be2b31e30e768e26be2d15
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="security-considerations-for-data"></a>Consideraciones de seguridad para datos
 Al tratar con datos en [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], debe considerar varias categorías de amenaza. La tabla siguiente enumera las clases más importantes de amenazas relacionadas con el procesamiento de datos. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] proporciona herramientas para mitigar estas amenazas.  
@@ -202,7 +203,7 @@ Al tratar con datos en [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], 
  Las secciones siguientes abordan detalladamente estas clases de amenazas.  
   
 ## <a name="datacontractserializer"></a>DataContractSerializer  
- (Para obtener información de seguridad en <xref:System.Xml.Serialization.XmlSerializer>, consulte la documentación pertinente.) El modelo de seguridad para <xref:System.Xml.Serialization.XmlSerializer> es similar al de <xref:System.Runtime.Serialization.DataContractSerializer>y difiere principalmente en detalles. Por ejemplo, el atributo <xref:System.Xml.Serialization.XmlIncludeAttribute> se utiliza para la inclusión de tipo en lugar del atributo <xref:System.Runtime.Serialization.KnownTypeAttribute>. Sin embargo, algunas amenazas únicas de <xref:System.Xml.Serialization.XmlSerializer> se discuten más adelante en este tema.  
+ (Para obtener información de seguridad en <xref:System.Xml.Serialization.XmlSerializer>, consulte la documentación pertinente.) El modelo de seguridad para <xref:System.Xml.Serialization.XmlSerializer> es similar al de <xref:System.Runtime.Serialization.DataContractSerializer>y difiere principalmente en detalles. Por ejemplo, el atributo <xref:System.Xml.Serialization.XmlIncludeAttribute> se utiliza para la inclusión de tipo en lugar del atributo <xref:System.Runtime.Serialization.KnownTypeAttribute> . Sin embargo, algunas amenazas únicas de <xref:System.Xml.Serialization.XmlSerializer> se discuten más adelante en este tema.  
   
 ### <a name="preventing-unintended-types-from-being-loaded"></a>Evitar que se carguen tipos imprevistos  
  Cargar tipos imprevistos puede tener consecuencias significativas, tanto si el tipo es malintencionado o simplemente tiene efectos secundarios que afectan a la seguridad. Un tipo puede contener vulnerabilidad de seguridad explotable, realizar acciones que afecten a la seguridad en su constructor o constructor de clase, tener una superficie de memoria grande que facilite los ataques por denegación de servicio, o bien puede provocar excepciones no recuperables. Los tipos pueden tener constructores de clase que se ejecutan en cuanto se cargue el tipo y antes de que se cree cualquier instancia. Por estas razones, es importante controlar el conjunto de tipos que el deserializador puede cargar.  
@@ -367,4 +368,4 @@ Al tratar con datos en [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], 
  <xref:System.Runtime.Serialization.DataContractSerializer>  
  <xref:System.Xml.XmlDictionaryReader>  
  <xref:System.Xml.Serialization.XmlSerializer>  
- [Los tipos conocidos de contrato de datos](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)
+ [Tipos conocidos de contratos de datos](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)

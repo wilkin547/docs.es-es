@@ -13,11 +13,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ab9a894ad57a5324d466e0eb94e49e2cf6104a19
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 961f5e84fb46a791127a9d80c0f03d2b87fdea77
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="choosing-a-message-exchange-pattern"></a>Elección de un patrón de intercambio de mensajes
 El primer paso para escribir un transporte personalizado es decidir qué *patrones de intercambio de mensajes* (o MEP) son necesarios para el canal que está desarrollando. Este tema describe las opciones disponibles y trata sobre los distintos requisitos. Se trata de la primera tarea de la lista de tareas de desarrollo de canal se describe en [canales de desarrollo](../../../../docs/framework/wcf/extending/developing-channels.md).  
@@ -27,7 +28,7 @@ El primer paso para escribir un transporte personalizado es decidir qué *patron
   
 -   Datagrama (<xref:System.ServiceModel.Channels.IInputChannel> y <xref:System.ServiceModel.Channels.IOutputChannel>)  
   
-     Al utilizar un MEP de datagrama, un cliente envía un mensaje mediante un *desencadenar y omitir* exchange. Un intercambio de este tipo es uno que exige una confirmación fuera de banda de entrega correcta. El mensaje se podría perderse por el camino y no llegar nunca al servicio. Si la operación de envío se completa correctamente en la parte del cliente, no garantiza que el extremo remoto haya recibido el mensaje. El datagrama es un bloque de creación fundamental para la mensajería, ya que puede crear sus propios protocolos encima de él, incluidos protocolos confiables y seguros. Los canales de datagrama del cliente implementan la interfaz <xref:System.ServiceModel.Channels.IOutputChannel> y los del servicio, la interfaz <xref:System.ServiceModel.Channels.IInputChannel>.  
+     Al utilizar un MEP de datagrama, un cliente envía un mensaje mediante un *desencadenar y omitir* exchange. Un intercambio de este tipo es uno que exige una confirmación fuera de banda de entrega correcta. El mensaje se podría perderse por el camino y no llegar nunca al servicio. Si la operación de envío se completa correctamente en la parte del cliente, no garantiza que el punto de conexión remoto haya recibido el mensaje. El datagrama es un bloque de creación fundamental para la mensajería, ya que puede crear sus propios protocolos encima de él, incluidos protocolos confiables y seguros. Los canales de datagrama del cliente implementan la interfaz <xref:System.ServiceModel.Channels.IOutputChannel> y los del servicio, la interfaz <xref:System.ServiceModel.Channels.IInputChannel>.  
   
 -   Solicitud-respuesta (<xref:System.ServiceModel.Channels.IRequestChannel> y <xref:System.ServiceModel.Channels.IReplyChannel>)  
   
@@ -103,4 +104,4 @@ Los tres patrones de intercambio de mensajes básicos. De arriba abajo: datagram
 -   Cuando se llama a <xref:System.ServiceModel.ICommunicationObject.Abort%2A> en su canal, finalice la sesión bruscamente sin realizar E/S. De nuevo, esto puede significar no hacer nada o puede suponer interrumpir la conexión de red o algún otro recurso.  
   
 ## <a name="see-also"></a>Vea también  
- [Información general del modelo de canal](../../../../docs/framework/wcf/extending/channel-model-overview.md)
+ [Información general del modelo de canales](../../../../docs/framework/wcf/extending/channel-model-overview.md)

@@ -13,11 +13,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e1f2fe2b7634b57e424773c16023fb657f09f23a
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 6879694c0c6490de5f591f9aed82075c539fbc1f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-retrieve-metadata-over-a-non-mex-binding"></a>Cómo: Recuperar metadatos mediante un enlace que no sea MEX
 En este tema se describe cómo recuperar metadatos de un punto de conexión MEX mediante un enlace que no sea MEX. El código en este ejemplo se basa en el [personalizado extremo de metadatos seguros](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md) ejemplo.  
@@ -58,7 +59,7 @@ En este tema se describe cómo recuperar metadatos de un punto de conexión MEX 
      </bindings>  
     ```  
   
-2.  En el archivo de configuración del cliente, configure el mismo enlace personalizado. Aquí, el cliente también define un comportamiento `clientCredentials` para proporcionar un certificado que utilizar para autenticarse en el servicio al solicitar metadatos del extremo MEX. Al utilizar Svcutil.exe para solicitar metadatos mediante un enlace personalizado, debería agregar la configuración del extremo MEX al archivo de configuración para Svcutil.exe (Svcutil.exe.config) y el nombre de la configuración del extremo debería coincidir con el esquema del URI de la dirección del extremo MEX, tal y como se muestra en el código siguiente:  
+2.  En el archivo de configuración del cliente, configure el mismo enlace personalizado. Aquí, el cliente también define un comportamiento `clientCredentials` para proporcionar un certificado que utilizar para autenticarse en el servicio al solicitar metadatos del extremo MEX. Al utilizar Svcutil.exe para solicitar metadatos mediante un enlace personalizado, debería agregar la configuración del punto de conexión MEX al archivo de configuración para Svcutil.exe (Svcutil.exe.config) y el nombre de la configuración del punto de conexión debería coincidir con el esquema del URI de la dirección del punto de conexión MEX, tal y como se muestra en el código siguiente:  
   
     ```xml  
     <system.serviceModel>  

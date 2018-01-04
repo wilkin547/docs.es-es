@@ -20,11 +20,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7a65f2c1daaac7e0e795412d666bb7d15e639361
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 79ca0be932f473c99f8e9aeb64635e4bcd4397bb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="schema-import-and-export"></a>Importación y exportación de esquemas
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] incluye un nuevo motor de serialización, el <xref:System.Runtime.Serialization.DataContractSerializer>. `DataContractSerializer` traduce entre los objetos [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] y XML (en ambas direcciones). Además del propio serializador, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] incluye la importación del esquema asociado y los mecanismos de exportación de esquema. *Esquema* es una descripción formal, exacta y legible por el equipo de la forma del XML que el serializador genera o al que puede tener acceso el deserializador. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usa el Lenguaje de definición de esquemas (XSD) XML de World Wide Web Consortium (W3C) como su representación de esquema, que es muy interoperable con numerosas plataformas de terceros.  

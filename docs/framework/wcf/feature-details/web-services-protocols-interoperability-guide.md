@@ -13,11 +13,12 @@ caps.latest.revision: "20"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a7dfcd092cb7b21e31ec1098df5e9534cd27cfc9
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 6b962452b6127d259733418969f1fb7b5036b1e5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="web-services-protocols-interoperability-guide"></a>Guía de interoperabilidad de los protocolos de servicios web
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] implementa varios protocolos de servicio web. Muchos de estos protocolos incluyen distintas opciones y puntos de extensibilidad que son decisión del responsable de la implementación. Este tema ofrece una lista de los protocolos de servicios web implementados por [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Otros temas incluidos en esta sección proporcionan información detallada acerca de la implementación de cada protocolo admitido.  
@@ -75,7 +76,7 @@ ms.lasthandoff: 12/02/2017
 |WS-Secure Conversation|[Lenguaje de conversación segura de servicios Web](http://go.microsoft.com/fwlink/?LinkId=95317)|  
 |WS-Trust 1.4|[Lenguaje de confianza de servicios Web](http://go.microsoft.com/fwlink/?LinkId=169514)|  
 |WS-SecurityPolicy 2005/07|[Lenguaje de conversación segura de servicios Web](http://go.microsoft.com/fwlink/?LinkId=95317)<br /><br /> Según la corrección de las erratas enviadas al comité técnico de OASIS WS-SX.<br /><br /> [mensaje de WS-sx](http://go.microsoft.com/fwlink/?LinkId=96700)|  
-|WS-ReliableMessaging 1.1|[Versión 1.1 del protocolo de mensajería confiable](../../../../docs/framework/wcf/feature-details/reliable-messaging-protocol-version-1-1.md)|  
+|WS-ReliableMessaging 1.1|[Protocolo de mensajería de confianza versión 1.1](../../../../docs/framework/wcf/feature-details/reliable-messaging-protocol-version-1-1.md)|  
   
  <xref:System.ServiceModel.Channels.TransactionFlowBindingElement> admite las especificaciones de la tabla siguiente.  
   
@@ -111,12 +112,12 @@ ms.lasthandoff: 12/02/2017
 -   [Basic Security Profile 1.0 trabajo borrador](http://go.microsoft.com/fwlink/?LinkId=96711)  
   
 ## <a name="see-also"></a>Vea también  
- [Protocolos admitidos por los enlaces de interoperabilidad proporcionados por el sistema de servicios Web](../../../../docs/framework/wcf/feature-details/web-services-protocols-supported-by-system-provided-interoperability-bindings.md)  
+ [Protocolos de servicios web compatibles con los enlaces de interoperabilidad proporcionados por el sistema](../../../../docs/framework/wcf/feature-details/web-services-protocols-supported-by-system-provided-interoperability-bindings.md)  
  [Protocolos de mensajería](../../../../docs/framework/wcf/feature-details/messaging-protocols.md)  
  [Referencia de esquema de contrato de datos](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)  
- [WSDL y directiva](../../../../docs/framework/wcf/feature-details/wsdl-and-policy.md)  
+ [WSDL y directivas](../../../../docs/framework/wcf/feature-details/wsdl-and-policy.md)  
  [Protocolos de seguridad](../../../../docs/framework/wcf/feature-details/security-protocols.md)  
  [Protocolo de mensajería de confianza versión 1.0](../../../../docs/framework/wcf/feature-details/reliable-messaging-protocol-version-1-0.md)  
- [Versión 1.1 del protocolo de mensajería confiable](../../../../docs/framework/wcf/feature-details/reliable-messaging-protocol-version-1-1.md)  
- [Protocolos de transacción](../../../../docs/framework/wcf/feature-details/transaction-protocols.md)  
+ [Protocolo de mensajería de confianza versión 1.1](../../../../docs/framework/wcf/feature-details/reliable-messaging-protocol-version-1-1.md)  
+ [Protocolos de transacciones](../../../../docs/framework/wcf/feature-details/transaction-protocols.md)  
  [Protocolo de intercambio de contexto](../../../../docs/framework/wcf/feature-details/context-exchange-protocol.md)

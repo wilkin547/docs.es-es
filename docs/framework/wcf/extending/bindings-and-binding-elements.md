@@ -14,11 +14,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 39615c7a74d30ebd5f316988704992b49982c4a4
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 232d2d23ea88c834d2e28bae99cd2e001f6efac6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="bindings-and-binding-elements"></a>Enlaces y elementos de enlace
 Los enlaces son colecciones de elementos de configuración especial, denominados *elementos de enlace*, que son evaluados por el runtime del servicio siempre que un cliente o el punto de conexión de servicio se está construyendo. El tipo y orden de los elementos de enlace dentro de un enlace determina la selección y el orden de apilamiento del protocolo y los canales de transporte en la pila de canales de un punto de conexión.  
@@ -43,7 +44,7 @@ Los enlaces son colecciones de elementos de configuración especial, denominados
 ## <a name="channels-bindings-and-binding-elements"></a>Canales, enlaces y elementos de enlace  
  Los enlaces y elementos de enlace son la conexión entre el modelo de programación de aplicaciones, que incluye los atributos y comportamientos, y el modelo del canal, que incluye los generadores y agentes de escucha, codificadores de mensajes e implementaciones de protocolo y transporte. Normalmente, los elementos de enlace y los enlaces se implementan para permitir al nivel de aplicaciones el uso de los canales.  
   
- La capa de canales entrega o recibe mensajes a y desde la capa del servicio y transporta esos mensajes entre extremos. En un cliente, la capa de canales es una pila de generadores de canales que crean canales para un extremo de la red. En un servicio, la capa de canales es una pila de agentes de escucha de canales que aceptan los canales recibidos en un extremo de la red.  
+ La capa de canales entrega o recibe mensajes a y desde la capa del servicio y transporta esos mensajes entre extremos. En un cliente, la capa de canales es una pila de generadores de canales que crean canales para un punto de conexión de la red. En un servicio, la capa de canales es una pila de agentes de escucha de canales que aceptan los canales recibidos en un extremo de la red.  
   
  Hay dos tipos de canales generales: canales de transporte y canales de protocolo. Los canales de transporte son responsables de la transmisión real de un mensaje des un extremo de la red a otro. Los canales de transporte deben tener un codificador de mensajes predeterminado y poder utilizar un codificador de mensajes alternativo proporcionado a través de un elemento de enlace del codificador de mensajes. Un codificador de mensajes es responsable de convertir un<xref:System.ServiceModel.Channels.Message?displayProperty=nameWithType> en una representación de la conexión y viceversa. Los canales protocolares son responsables de la implementación de los protocolos de nivel SOAP (por ejemplo, WS-Security o WS-ReliableMessaging).  
   

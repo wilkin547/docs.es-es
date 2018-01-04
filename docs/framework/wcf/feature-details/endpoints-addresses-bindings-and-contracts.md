@@ -17,31 +17,32 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6c0b13ee48ed729d89f4b4b506e3608abe7e82b5
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: af82cb934570b371d332c0e08ebc9b2338d0c0d6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="endpoints-addresses-bindings-and-contracts"></a>puntos de conexión: direcciones, enlaces y contratos
 Toda la comunicación con un [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] servicio se produce a través de la *extremos* del servicio. Los extremos proporcionan acceso a los clientes a la funcionalidad que ofrece un servicio de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
   
- Cada extremo está compuesto de cuatro propiedades:  
+ Cada punto de conexión está compuesto de cuatro propiedades:  
   
 -   Una dirección que indica dónde se puede encontrar el extremo.  
   
--   Un enlace que especifica cómo un se puede comunicar un cliente con el extremo.  
+-   Un enlace que especifica cómo un se puede comunicar un cliente con el punto de conexión.  
   
 -   Un contrato que identifica las operaciones disponibles.  
   
--   Un conjunto de comportamientos que especifican detalles de implementación local del extremo.  
+-   Un conjunto de comportamientos que especifican detalles de implementación local del punto de conexión.  
   
  En este tema se describe esta estructura de extremo y se explica cómo se representa en el modelo de objetos de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
   
-## <a name="the-structure-of-an-endpoint"></a>Estructura de un extremo  
- Cada extremo está compuesto de lo siguiente:  
+## <a name="the-structure-of-an-endpoint"></a>Estructura de un punto de conexión  
+ Cada punto de conexión está compuesto de lo siguiente:  
   
--   Dirección: la dirección identifica únicamente el extremo e indica a los consumidores potenciales del servicio dónde se ubica éste. Está representado en el modelo de objetos de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] por la clase <xref:System.ServiceModel.EndpointAddress>. Una clase <xref:System.ServiceModel.EndpointAddress> contiene:  
+-   Dirección: la dirección identifica únicamente el punto de conexión e indica a los consumidores potenciales del servicio dónde se ubica éste. Está representado en el modelo de objetos de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] por la clase <xref:System.ServiceModel.EndpointAddress>. Una clase <xref:System.ServiceModel.EndpointAddress> contiene:  
   
     -   Una propiedad <xref:System.ServiceModel.EndpointAddress.Uri%2A>, que representa la dirección del servicio.  
   
@@ -88,13 +89,13 @@ Toda la comunicación con un [!INCLUDE[indigo1](../../../../includes/indigo1-md.
  [Contratos](../../../../docs/framework/wcf/feature-details/contracts.md)  
  Describe cómo los contratos definen los métodos de un servicio.  
   
- [Cómo: crear un extremo de servicio en configuración](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)  
+ [Creación de un punto de conexión de servicio en configuración](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)  
  Describe cómo crear un punto de conexión de servicio mediante configuración  
   
- [Cómo: crear un extremo de servicio en el código](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-code.md)  
+ [Creación de un punto de conexión de servicio en código](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-code.md)  
  Describe cómo crear un punto de conexión de servicio mediante código.  
   
- [Cómo: utilizar Svcutil.exe para validar código de servicio compilado](../../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-validate-compiled-service-code.md)  
+ [Uso de Svcutil.exe para validar el código del servicio compilado](../../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-validate-compiled-service-code.md)  
  Describe cómo detectar errores en las configuraciones y las implementaciones del servicio sin hospedar el servicio utilizando la [la herramienta de utilidad de metadatos de ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).  
   
 ## <a name="see-also"></a>Vea también  

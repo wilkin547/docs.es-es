@@ -16,11 +16,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 937e879fc6104f06234ab5201eae8e330dbb68f0
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 51a42e9b954fba7ccd58d74248fb65dc2b57a76b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-basic-atom-feed"></a>Creación de una fuente básica de Atom
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] le permite crear un servicio que exponga una fuente de distribución. En este tema se discute cómo crear un servicio de distribución que exponga una fuente de distribución Atom.  
@@ -76,7 +77,7 @@ ms.lasthandoff: 12/02/2017
   
 1.  Abra Internet Explorer, escriba la siguiente URL y presione Entrar: http://localhost:8000/BlogService/GetBlog  
   
-     La URL contiene la dirección base del servicio (http://localhost:8000/BlogService), la dirección relativa del extremo y la operación del servicio que se va a llamar.  
+     La URL contiene la dirección base del servicio (http://localhost:8000/BlogService), la dirección relativa del punto de conexión y la operación del servicio que se va a llamar.  
   
 ### <a name="to-call-getblog-from-code"></a>Llamar a GetBlog() mediante código  
   

@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d637dfaa4b3639d1e47280c423489735844a2a47
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0b0faa62d75c506fd93c17c6a67aaecdd22bc8c4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="creating-a-custom-header-that-is-signed-and-or-encrypted"></a>Crear un encabezado personalizado que está firmado y- o cifrados
 Al llamar a un servicio no WCF utilizando un cliente WCF a veces es necesario utilizar encabezados SOAP personalizados. Hay un error de canonización en WCF que impide que los encabezados personalizados firmados y cifrados funcionen con un servicio no WCF. El problema se debe a la canonización incorrecta de los espacios de nombres XML predeterminados. Este hecho es problemático únicamente al llamar a servicios no WCF con encabezados personalizados firmados o cifrados.  Cuando el servicio recibe el mensaje que contiene el encabezado personalizado firmado o cifrado, no puede comprobar la firma. Esta solución evita el error de canonización, permite la interoperabilidad con servicios no WCF, pero no impide la interoperabilidad con servicios WCF.  
@@ -68,5 +69,5 @@ public  class MyMessageContract
   
 ## <a name="see-also"></a>Vea también  
  [Contrato de mensaje predeterminado](../../../../docs/framework/wcf/samples/default-message-contract.md)  
- [Contratos de mensaje](../../../../docs/framework/wcf/samples/message-contracts.md)  
- [Usar contratos de mensaje](../../../../docs/framework/wcf/feature-details/using-message-contracts.md)
+ [Contratos de mensajes](../../../../docs/framework/wcf/samples/message-contracts.md)  
+ [Uso de contratos de mensaje](../../../../docs/framework/wcf/feature-details/using-message-contracts.md)

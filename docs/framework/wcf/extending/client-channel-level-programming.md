@@ -16,11 +16,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: eac1a8b49ac9936455d11553ccc697897c088cb6
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 4c3d9bc1819045c8261f003cbab52dd71c4da408
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="client-channel-level-programming"></a>Programación a nivel de canal de cliente
 En este tema se describe cómo escribir una aplicación de cliente de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] sin utilizar la clase <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType> y su modelo de objetos asociado.  
@@ -45,7 +46,7 @@ En este tema se describe cómo escribir una aplicación de cliente de [!INCLUDE[
  En lugar de crear un <xref:System.ServiceModel.Channels.IChannelListener?displayProperty=nameWithType>, en esta ocasión creamos un <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType> llamando a <xref:System.ServiceModel.ChannelFactory.CreateFactory%2A?displayProperty=nameWithType> en el enlace donde está el parámetro de tipo <xref:System.ServiceModel.Channels.IRequestChannel?displayProperty=nameWithType>. Aunque el lado que espera mensajes entrantes usa los agentes de escuchas de canales, el lado que inicia la comunicación para crear un canal emplea los generadores de canales. Al igual que los agentes de escuchas de canales, los generadores de canales se han de abrir primero antes de que puedan utilizarse.  
   
 #### <a name="creating-a-channel"></a>Creación de un canal  
- A continuación llamamos a <xref:System.ServiceModel.ChannelFactory%601.CreateChannel%2A?displayProperty=nameWithType> para crear un <xref:System.ServiceModel.Channels.IRequestChannel>. Esta llamada toma la dirección del extremo con el que deseamos comunicarnos utilizando el nuevo canal que se crea. Una vez que tenemos un canal, llamamos a Open para dejarlo listo para la comunicación. Dependiendo de la naturaleza del transporte, esta llamada a Open puede iniciar una conexión con el extremo de destino o puede que no haga nada en absoluto en la red.  
+ A continuación llamamos a <xref:System.ServiceModel.ChannelFactory%601.CreateChannel%2A?displayProperty=nameWithType> para crear un <xref:System.ServiceModel.Channels.IRequestChannel>. Esta llamada toma la dirección del extremo con el que deseamos comunicarnos utilizando el nuevo canal que se crea. Una vez que tenemos un canal, llamamos a Open para dejarlo listo para la comunicación. Dependiendo de la naturaleza del transporte, esta llamada a Open puede iniciar una conexión con el punto de conexión de destino o puede que no haga nada en absoluto en la red.  
   
 #### <a name="sending-a-request-and-reading-the-reply"></a>Envío de una solicitud y lectura de la respuesta  
  Una vez que tenemos un canal abierto, podemos crear un mensaje y utilizar el método Request del canal para enviar la solicitud y esperar a que la respuesta regrese. Cuando este método devuelve, tenemos un mensaje de respuesta que podemos leer para averiguar cuál fue la respuesta del extremo.  

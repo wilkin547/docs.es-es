@@ -14,11 +14,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a5228ffaab43e24849d461080cdf3ef09b2fa6c0
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 98b1274866dec2a4ca923d390f33df68449cf286
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="federation-and-trust"></a>Federación y confianza
 En este tema se cubren varios aspectos relacionados con las aplicaciones federadas, los límites de confianza y configuración y el uso de tokens emitidos en [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
@@ -33,8 +34,8 @@ En este tema se cubren varios aspectos relacionados con las aplicaciones federad
 > [!NOTE]
 >  La importancia de sesgo de reloj aumenta a medida que se reduce la vida del token emitido. En la mayoría de los casos, el sesgo del reloj no es un problema significativo si la duración del token es de 30 minutos o más. Los escenarios con duraciones más cortas o donde la hora de validez exacta del token es importante deberían estar diseñados para tener en cuenta el sesgo del reloj.  
   
-## <a name="federated-endpoints-and-time-outs"></a>Extremos federados y tiempos de espera  
- Cuando un cliente se comunica con un extremo federado, debe adquirir primero un token adecuado de un servicio de tokens de seguridad. Si el servicio de tokens de seguridad expone un extremo federado, el cliente debe obtener primero un token del emisor para ese extremo. Cada adquisición del token lleva tiempo y ese tiempo está sujeto al tiempo de espera total para enviar el mensaje real al extremo final.  
+## <a name="federated-endpoints-and-time-outs"></a>puntos de conexión federados y tiempos de espera  
+ Cuando un cliente se comunica con un punto de conexión federado, debe adquirir primero un token adecuado de un servicio de tokens de seguridad. Si el servicio de tokens de seguridad expone un punto de conexión federado, el cliente debe obtener primero un token del emisor para ese punto de conexión. Cada adquisición del token lleva tiempo y ese tiempo está sujeto al tiempo de espera total para enviar el mensaje real al punto de conexión final.  
   
  Por ejemplo, el tiempo de espera en el canal del lado de cliente está establecido en 30 segundos. Se ha de llamar a dos emisores de tokens para recuperar los tokens antes de enviar el mensaje al último extremo y cada uno tarda 15 segundos en emitir un token. En este caso, no se realizará el intento correctamente y se produce una <xref:System.TimeoutException>. Por tanto, debe establecer el valor <xref:System.ServiceModel.IContextChannel.OperationTimeout%2A> en el canal de cliente en un valor lo suficientemente grande como para incluir el tiempo que se tarda en recuperar todos los tokens emitidos. En el caso en el que no se especifique un valor para la propiedad <xref:System.ServiceModel.IContextChannel.OperationTimeout%2A>, la propiedad <xref:System.ServiceModel.Channels.Binding.OpenTimeout%2A> o la propiedad (o ambas) <xref:System.ServiceModel.Channels.Binding.SendTimeout%2A> han de establecerse en un valor lo suficientemente grande como para incluir el tiempo invertido en recuperar todos los tokens emitidos.  
   
@@ -48,6 +49,6 @@ En este tema se cubren varios aspectos relacionados con las aplicaciones federad
   
 ## <a name="see-also"></a>Vea también  
  <xref:System.ServiceModel.Security.Tokens.SecurityTokenInclusionMode>  
- [Cómo: crear un cliente federado](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)  
- [Cómo: configurar las credenciales en un servicio de federación](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)  
- [Cómo: crear un WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)
+ [Creación de un cliente federado](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)  
+ [Configuración de las credenciales en un servicio de federación](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)  
+ [Creación de un WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)

@@ -16,11 +16,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 61c7dd84b802d116721170080bb55a0be1ef1dfc
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 60a2537f1ddc4563c1514032f7df4894f6ef47af
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-control-service-instancing"></a>Cómo controlar la creación de instancias de servicio
 Establecer el modo de instancia de un servicio le permite especificar cuándo se crea (y su objeto de servicio  asociado definido por el usuario) <xref:System.ServiceModel.InstanceContext?displayProperty=nameWithType>. Vea la enumeración de <xref:System.ServiceModel.InstanceContextMode> para los posibles modos. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]comportamientos, consulte [configuración y al ampliar el tiempo de ejecución con comportamientos](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md). Para obtener ejemplos prácticos, vea [comportamientos](../../../../docs/framework/wcf/samples/behaviors.md).  

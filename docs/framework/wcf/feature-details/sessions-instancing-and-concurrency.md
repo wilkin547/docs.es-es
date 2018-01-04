@@ -13,11 +13,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 44aebb701eb7222773c030994fbaa9c0109dce70
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 5d4559f177b05f7d238c9f30649a5b01af7fb6f9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sessions-instancing-and-concurrency"></a>Sesiones, creación de instancias y simultaneidad
 Una *sesión* es una correlación de todos los mensajes enviados entre dos extremos. *Creación de instancias* hace referencia al control de la vida de los objetos de servicio definidos por el usuario y sus objetos <xref:System.ServiceModel.InstanceContext> relacionados. La*simultaneidad* es el término dado al control del número de subprocesos que se ejecutan al mismo tiempo en un <xref:System.ServiceModel.InstanceContext> .  
@@ -39,7 +40,7 @@ Una *sesión* es una correlación de todos los mensajes enviados entre dos extre
   
  Si está familiarizado con la clase <xref:System.Web.SessionState.HttpSessionState?displayProperty=nameWithType> en aplicaciones [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] y la funcionalidad que proporciona, podría observar las siguientes diferencias entre ese tipo de sesión y las sesiones de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]:  
   
--   Las sesiones[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] siempre son iniciadas por servidor.  
+-   Las sesiones [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] siempre son iniciadas por servidor.  
   
 -   Las sesiones[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] están implícitamente desordenadas.  
   
@@ -119,8 +120,8 @@ public class CalculatorService : ICalculatorConcurrency
   
 ## <a name="see-also"></a>Vea también  
  [Uso de sesiones](../../../../docs/framework/wcf/using-sessions.md)  
- [Cómo: crear un servicio que requiere sesiones](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-that-requires-sessions.md)  
- [Cómo: crear instancias de servicio de Control](../../../../docs/framework/wcf/feature-details/how-to-control-service-instancing.md)  
+ [Creación de un servicio que requiere sesiones](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-that-requires-sessions.md)  
+ [Control de la creación de instancias de servicio](../../../../docs/framework/wcf/feature-details/how-to-control-service-instancing.md)  
  [Simultaneidad](../../../../docs/framework/wcf/samples/concurrency.md)  
  [Creación de instancias](../../../../docs/framework/wcf/samples/instancing.md)  
  [Sesión](../../../../docs/framework/wcf/samples/session.md)

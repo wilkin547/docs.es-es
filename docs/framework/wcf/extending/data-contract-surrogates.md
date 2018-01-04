@@ -14,11 +14,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b8d353b50cf9439a9741199a52ca650e02e4d49f
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: f6fcae1989b75a668fd6ff38596b06feca7be9e8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="data-contract-surrogates"></a>Suplentes de contratos de datos
 El contrato de datos *suplente* es una característica avanzada basada en el modelo de contrato de datos. Esta característica está diseñada para ser utilizada para la personalización de tipo y substitución en situaciones donde los usuarios desean cambiar cómo un tipo se serializa, deserializa o se proyecta en metadatos. Algunos escenarios donde se puede utilizar un suplente es cuando un contrato de datos no se ha especificado para el tipo, los campos y las propiedades no están marcados con el atributo <xref:System.Runtime.Serialization.DataMemberAttribute> o los usuarios desean crear dinámicamente las variaciones del esquema.  
@@ -206,4 +207,4 @@ El contrato de datos *suplente* es una característica avanzada basada en el mod
  <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior>  
  <xref:System.Runtime.Serialization.ImportOptions>  
  <xref:System.Runtime.Serialization.ExportOptions>  
- [Usar contratos de datos](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)
+ [Utilización de contratos de datos](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)

@@ -17,11 +17,12 @@ caps.latest.revision: "40"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 309d19ee75f506ab781703ebe1068d6d90d9c47c
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: fa20edd8fa43fb1e6a28f7b1ec18f83fedd96bca
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="endpoint-creation-overview"></a>Información general acerca de la creación de puntos finales
 Toda la comunicación con un [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] servicio se produce a través de la *extremos* del servicio. Los extremos proporcionan a los clientes acceso a la funcionalidad que ofrece un servicio [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. Esta sección describe la estructura de un extremo, y detalla cómo definir un extremo en la configuración y el código.  
@@ -31,7 +32,7 @@ Toda la comunicación con un [!INCLUDE[indigo1](../../../includes/indigo1-md.md)
   
 -   **Dirección**. La dirección identifica únicamente el punto de conexión e indica a los consumidores potenciales dónde se ubica el servicio. En el modelo de objeto [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] está representada por la dirección <xref:System.ServiceModel.EndpointAddress>, que contiene un Identificador uniforme de recursos (URI) y propiedades de dirección que incluyen una identidad, algunos elementos del lenguaje de descripción de servicios Web (WSDL), y una colección de encabezados opcionales. Los encabezados opcionales proporcionan información de direccionamiento adicional para identificar o interactuar con el punto de conexión. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Al especificar una dirección de punto de conexión](../../../docs/framework/wcf/specifying-an-endpoint-address.md).  
   
--   **Enlace**. El enlace especifica cómo comunicarse con el punto de conexión. También especifica cómo se comunica el punto de conexión con el mundo, incluido el protocolo de transporte que utiliza (por ejemplo, TCP o HTTP), la codificación utilizada en los mensajes (por ejemplo, texto o binario) y los requisitos de seguridad necesarios (por ejemplo, capa de sockets seguros [SSL] o seguridad del mensaje SOAP). [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Utilización de enlaces para configurar servicios y clientes](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md).  
+-   **Enlace**. El enlace especifica cómo comunicarse con el punto de conexión. El enlace especifica cómo se comunica el punto de conexión con el mundo, incluido el protocolo de transporte que utiliza (por ejemplo, TCP o HTTP), la codificación utilizada en los mensajes (por ejemplo, texto o binario) y los requisitos de seguridad necesarios (por ejemplo, capa de sockets seguros [SSL] o seguridad del mensaje SOAP). [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Utilización de enlaces para configurar servicios y clientes](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md).  
   
 -   **Contrato de servicio**. El contrato de servicios describe qué funcionalidad expone el punto de conexión al cliente. Un contrato especifica las operaciones a las que puede llamar un cliente, la forma del mensaje y el tipo de parámetros de entrada o los datos necesarios para llamar a la operación, así como el tipo de mensaje de procesamiento o respuesta que puede esperar el cliente. Existen tres tipos básicos de contratos que se corresponden con los patrones de intercambio de mensajes básicos (MEP): datagrama (unidireccional), solicitud/respuesta y dúplex (bidireccional). El contrato de servicio también puede emplear contratos de datos y mensajes para exigir tipos de datos y formatos de mensaje específicos cuando se obtiene acceso. [!INCLUDE[crabout](../../../includes/crabout-md.md)]cómo definir un contrato de servicio, consulte [diseñar contratos de servicio](../../../docs/framework/wcf/designing-service-contracts.md). Tenga en cuenta que también pueden exigírsele a un cliente que implemente un contrato definido por servicio, denominado un contrato de devolución de llamada, para recibir los mensajes del servicio en un MEP dúplex. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Servicios dúplex](../../../docs/framework/wcf/feature-details/duplex-services.md).  
   
