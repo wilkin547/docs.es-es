@@ -13,19 +13,20 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: de5f50d6240cd24f5227cc113c99cc76ce12c29e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: dd0760d1d041e42aae9757f113accc852169186e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelchannelsmsmqsessiongramreceived"></a><span data-ttu-id="63723-102">System.ServiceModel.Channels.MsmqSessiongramReceived</span><span class="sxs-lookup"><span data-stu-id="63723-102">System.ServiceModel.Channels.MsmqSessiongramReceived</span></span>
-<span data-ttu-id="63723-103">System.ServiceModel.Channels.MsmqSessiongramReceived</span><span class="sxs-lookup"><span data-stu-id="63723-103">System.ServiceModel.Channels.MsmqSessiongramReceived</span></span>  
+# <a name="systemservicemodelchannelsmsmqsessiongramreceived"></a><span data-ttu-id="90025-102">System.ServiceModel.Channels.MsmqSessiongramReceived</span><span class="sxs-lookup"><span data-stu-id="90025-102">System.ServiceModel.Channels.MsmqSessiongramReceived</span></span>
+<span data-ttu-id="90025-103">System.ServiceModel.Channels.MsmqSessiongramReceived</span><span class="sxs-lookup"><span data-stu-id="90025-103">System.ServiceModel.Channels.MsmqSessiongramReceived</span></span>  
   
-## <a name="description"></a><span data-ttu-id="63723-104">Descripción</span><span class="sxs-lookup"><span data-stu-id="63723-104">Description</span></span>  
- <span data-ttu-id="63723-105">Sesión de transporte de MSMQ recibida.</span><span class="sxs-lookup"><span data-stu-id="63723-105">MSMQ transport session received.</span></span>  
+## <a name="description"></a><span data-ttu-id="90025-104">Descripción</span><span class="sxs-lookup"><span data-stu-id="90025-104">Description</span></span>  
+ <span data-ttu-id="90025-105">Sesión de transporte de MSMQ recibida.</span><span class="sxs-lookup"><span data-stu-id="90025-105">MSMQ transport session received.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="63723-106">Vea también</span><span class="sxs-lookup"><span data-stu-id="63723-106">See Also</span></span>  
- [<span data-ttu-id="63723-107">Seguimiento</span><span class="sxs-lookup"><span data-stu-id="63723-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="63723-108">Uso del seguimiento para solucionar problemas de la aplicación</span><span class="sxs-lookup"><span data-stu-id="63723-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="63723-109">Administración y diagnóstico</span><span class="sxs-lookup"><span data-stu-id="63723-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="90025-106">Vea también</span><span class="sxs-lookup"><span data-stu-id="90025-106">See Also</span></span>  
+ [<span data-ttu-id="90025-107">Traza</span><span class="sxs-lookup"><span data-stu-id="90025-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="90025-108">Uso del seguimiento para solucionar problemas de su aplicación</span><span class="sxs-lookup"><span data-stu-id="90025-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="90025-109">Administración y diagnóstico</span><span class="sxs-lookup"><span data-stu-id="90025-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

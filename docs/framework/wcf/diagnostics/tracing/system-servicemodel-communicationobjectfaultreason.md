@@ -13,19 +13,20 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6b09307be0f9ea452598f895e2507d77fca4733a
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: f4632ddc6be277e421e6d43aee22a7745a4b4b3d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelcommunicationobjectfaultreason"></a><span data-ttu-id="c9333-102">System.ServiceModel.CommunicationObjectFaultReason</span><span class="sxs-lookup"><span data-stu-id="c9333-102">System.ServiceModel.CommunicationObjectFaultReason</span></span>
-<span data-ttu-id="c9333-103">System.ServiceModel.CommunicationObjectFaultReason</span><span class="sxs-lookup"><span data-stu-id="c9333-103">System.ServiceModel.CommunicationObjectFaultReason</span></span>  
+# <a name="systemservicemodelcommunicationobjectfaultreason"></a><span data-ttu-id="80d30-102">System.ServiceModel.CommunicationObjectFaultReason</span><span class="sxs-lookup"><span data-stu-id="80d30-102">System.ServiceModel.CommunicationObjectFaultReason</span></span>
+<span data-ttu-id="80d30-103">System.ServiceModel.CommunicationObjectFaultReason</span><span class="sxs-lookup"><span data-stu-id="80d30-103">System.ServiceModel.CommunicationObjectFaultReason</span></span>  
   
-## <a name="description"></a><span data-ttu-id="c9333-104">Descripción</span><span class="sxs-lookup"><span data-stu-id="c9333-104">Description</span></span>  
- <span data-ttu-id="c9333-105">Error en un objeto de comunicación debido a una excepción.</span><span class="sxs-lookup"><span data-stu-id="c9333-105">A communication object faulted due to exception.</span></span>  
+## <a name="description"></a><span data-ttu-id="80d30-104">Descripción</span><span class="sxs-lookup"><span data-stu-id="80d30-104">Description</span></span>  
+ <span data-ttu-id="80d30-105">Error en un objeto de comunicación debido a una excepción.</span><span class="sxs-lookup"><span data-stu-id="80d30-105">A communication object faulted due to exception.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c9333-106">Vea también</span><span class="sxs-lookup"><span data-stu-id="c9333-106">See Also</span></span>  
- [<span data-ttu-id="c9333-107">Seguimiento</span><span class="sxs-lookup"><span data-stu-id="c9333-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="c9333-108">Uso del seguimiento para solucionar problemas de la aplicación</span><span class="sxs-lookup"><span data-stu-id="c9333-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="c9333-109">Administración y diagnóstico</span><span class="sxs-lookup"><span data-stu-id="c9333-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="80d30-106">Vea también</span><span class="sxs-lookup"><span data-stu-id="80d30-106">See Also</span></span>  
+ [<span data-ttu-id="80d30-107">Traza</span><span class="sxs-lookup"><span data-stu-id="80d30-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="80d30-108">Uso del seguimiento para solucionar problemas de su aplicación</span><span class="sxs-lookup"><span data-stu-id="80d30-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="80d30-109">Administración y diagnóstico</span><span class="sxs-lookup"><span data-stu-id="80d30-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
