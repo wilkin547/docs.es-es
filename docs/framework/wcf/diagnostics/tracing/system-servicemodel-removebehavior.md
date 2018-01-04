@@ -13,19 +13,20 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5ad674408bbef33b01593037b09f27d28149beb1
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 35e6af5c1357572d03ba60268f44df7afadcc566
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelremovebehavior"></a><span data-ttu-id="ee1b1-102">System.ServiceModel.RemoveBehavior</span><span class="sxs-lookup"><span data-stu-id="ee1b1-102">System.ServiceModel.RemoveBehavior</span></span>
-<span data-ttu-id="ee1b1-103">System.ServiceModel.RemoveBehavior</span><span class="sxs-lookup"><span data-stu-id="ee1b1-103">System.ServiceModel.RemoveBehavior</span></span>  
+# <a name="systemservicemodelremovebehavior"></a><span data-ttu-id="5f7be-102">System.ServiceModel.RemoveBehavior</span><span class="sxs-lookup"><span data-stu-id="5f7be-102">System.ServiceModel.RemoveBehavior</span></span>
+<span data-ttu-id="5f7be-103">System.ServiceModel.RemoveBehavior</span><span class="sxs-lookup"><span data-stu-id="5f7be-103">System.ServiceModel.RemoveBehavior</span></span>  
   
-## <a name="description"></a><span data-ttu-id="ee1b1-104">Descripción</span><span class="sxs-lookup"><span data-stu-id="ee1b1-104">Description</span></span>  
- <span data-ttu-id="ee1b1-105">Este tipo de comportamiento ya existe en la colección.</span><span class="sxs-lookup"><span data-stu-id="ee1b1-105">This behavior type already exists in the collection.</span></span>  
+## <a name="description"></a><span data-ttu-id="5f7be-104">Descripción</span><span class="sxs-lookup"><span data-stu-id="5f7be-104">Description</span></span>  
+ <span data-ttu-id="5f7be-105">Este tipo de comportamiento ya existe en la colección.</span><span class="sxs-lookup"><span data-stu-id="5f7be-105">This behavior type already exists in the collection.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ee1b1-106">Vea también</span><span class="sxs-lookup"><span data-stu-id="ee1b1-106">See Also</span></span>  
- [<span data-ttu-id="ee1b1-107">Seguimiento</span><span class="sxs-lookup"><span data-stu-id="ee1b1-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="ee1b1-108">Uso del seguimiento para solucionar problemas de la aplicación</span><span class="sxs-lookup"><span data-stu-id="ee1b1-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="ee1b1-109">Administración y diagnóstico</span><span class="sxs-lookup"><span data-stu-id="ee1b1-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="5f7be-106">Vea también</span><span class="sxs-lookup"><span data-stu-id="5f7be-106">See Also</span></span>  
+ [<span data-ttu-id="5f7be-107">Traza</span><span class="sxs-lookup"><span data-stu-id="5f7be-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="5f7be-108">Uso del seguimiento para solucionar problemas de su aplicación</span><span class="sxs-lookup"><span data-stu-id="5f7be-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="5f7be-109">Administración y diagnóstico</span><span class="sxs-lookup"><span data-stu-id="5f7be-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

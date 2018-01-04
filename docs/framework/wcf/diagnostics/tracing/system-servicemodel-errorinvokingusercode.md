@@ -13,19 +13,20 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0a1190d63f38eed86594ede43afae1d3e7cd29b4
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: f3a7dfbb9b88a09588b4d62e1da5a4211d1035c5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelerrorinvokingusercode"></a><span data-ttu-id="5e390-102">System.ServiceModel.ErrorInvokingUserCode</span><span class="sxs-lookup"><span data-stu-id="5e390-102">System.ServiceModel.ErrorInvokingUserCode</span></span>
-<span data-ttu-id="5e390-103">System.ServiceModel.ErrorInvokingUserCode</span><span class="sxs-lookup"><span data-stu-id="5e390-103">System.ServiceModel.ErrorInvokingUserCode</span></span>  
+# <a name="systemservicemodelerrorinvokingusercode"></a><span data-ttu-id="6e5e0-102">System.ServiceModel.ErrorInvokingUserCode</span><span class="sxs-lookup"><span data-stu-id="6e5e0-102">System.ServiceModel.ErrorInvokingUserCode</span></span>
+<span data-ttu-id="6e5e0-103">System.ServiceModel.ErrorInvokingUserCode</span><span class="sxs-lookup"><span data-stu-id="6e5e0-103">System.ServiceModel.ErrorInvokingUserCode</span></span>  
   
-## <a name="description"></a><span data-ttu-id="5e390-104">Descripción</span><span class="sxs-lookup"><span data-stu-id="5e390-104">Description</span></span>  
- <span data-ttu-id="5e390-105">Error en la invocación de código de usuario.</span><span class="sxs-lookup"><span data-stu-id="5e390-105">An error occurred while invoking user code.</span></span>  
+## <a name="description"></a><span data-ttu-id="6e5e0-104">Descripción</span><span class="sxs-lookup"><span data-stu-id="6e5e0-104">Description</span></span>  
+ <span data-ttu-id="6e5e0-105">Error en la invocación de código de usuario.</span><span class="sxs-lookup"><span data-stu-id="6e5e0-105">An error occurred while invoking user code.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5e390-106">Vea también</span><span class="sxs-lookup"><span data-stu-id="5e390-106">See Also</span></span>  
- [<span data-ttu-id="5e390-107">Seguimiento</span><span class="sxs-lookup"><span data-stu-id="5e390-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="5e390-108">Uso del seguimiento para solucionar problemas de la aplicación</span><span class="sxs-lookup"><span data-stu-id="5e390-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="5e390-109">Administración y diagnóstico</span><span class="sxs-lookup"><span data-stu-id="5e390-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="6e5e0-106">Vea también</span><span class="sxs-lookup"><span data-stu-id="6e5e0-106">See Also</span></span>  
+ [<span data-ttu-id="6e5e0-107">Traza</span><span class="sxs-lookup"><span data-stu-id="6e5e0-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="6e5e0-108">Uso del seguimiento para solucionar problemas de su aplicación</span><span class="sxs-lookup"><span data-stu-id="6e5e0-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="6e5e0-109">Administración y diagnóstico</span><span class="sxs-lookup"><span data-stu-id="6e5e0-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

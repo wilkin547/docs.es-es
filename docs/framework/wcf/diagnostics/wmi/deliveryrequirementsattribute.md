@@ -13,16 +13,17 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 172f7df4f028c1ddc0f5565e95291e857ee6fa1d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: e297bfc0499ea3ee8d3dd8395165ca22b2baa1de
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="deliveryrequirementsattribute"></a><span data-ttu-id="26b27-102">DeliveryRequirementsAttribute</span><span class="sxs-lookup"><span data-stu-id="26b27-102">DeliveryRequirementsAttribute</span></span>
-<span data-ttu-id="26b27-103">DeliveryRequirementsAttribute</span><span class="sxs-lookup"><span data-stu-id="26b27-103">DeliveryRequirementsAttribute</span></span>  
+# <a name="deliveryrequirementsattribute"></a><span data-ttu-id="b17a4-102">DeliveryRequirementsAttribute</span><span class="sxs-lookup"><span data-stu-id="b17a4-102">DeliveryRequirementsAttribute</span></span>
+<span data-ttu-id="b17a4-103">DeliveryRequirementsAttribute</span><span class="sxs-lookup"><span data-stu-id="b17a4-103">DeliveryRequirementsAttribute</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="26b27-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="26b27-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b17a4-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="b17a4-104">Syntax</span></span>  
   
 ```  
 class DeliveryRequirementsAttribute : Behavior  
@@ -33,38 +34,38 @@ class DeliveryRequirementsAttribute : Behavior
 };  
 ```  
   
-## <a name="methods"></a><span data-ttu-id="26b27-105">Métodos</span><span class="sxs-lookup"><span data-stu-id="26b27-105">Methods</span></span>  
- <span data-ttu-id="26b27-106">La clase DeliveryRequirementsAttribute no define ningún método.</span><span class="sxs-lookup"><span data-stu-id="26b27-106">The DeliveryRequirementsAttribute class does not define any methods.</span></span>  
+## <a name="methods"></a><span data-ttu-id="b17a4-105">Métodos</span><span class="sxs-lookup"><span data-stu-id="b17a4-105">Methods</span></span>  
+ <span data-ttu-id="b17a4-106">La clase DeliveryRequirementsAttribute no define ningún método.</span><span class="sxs-lookup"><span data-stu-id="b17a4-106">The DeliveryRequirementsAttribute class does not define any methods.</span></span>  
   
-## <a name="properties"></a><span data-ttu-id="26b27-107">Propiedades</span><span class="sxs-lookup"><span data-stu-id="26b27-107">Properties</span></span>  
- <span data-ttu-id="26b27-108">La clase DeliveryRequirementsAttribute tiene las propiedades siguientes:</span><span class="sxs-lookup"><span data-stu-id="26b27-108">The DeliveryRequirementsAttribute class has the following properties:</span></span>  
+## <a name="properties"></a><span data-ttu-id="b17a4-107">Propiedades</span><span class="sxs-lookup"><span data-stu-id="b17a4-107">Properties</span></span>  
+ <span data-ttu-id="b17a4-108">La clase DeliveryRequirementsAttribute tiene las propiedades siguientes:</span><span class="sxs-lookup"><span data-stu-id="b17a4-108">The DeliveryRequirementsAttribute class has the following properties:</span></span>  
   
-### <a name="queueddeliveryrequirements"></a><span data-ttu-id="26b27-109">QueuedDeliveryRequirements</span><span class="sxs-lookup"><span data-stu-id="26b27-109">QueuedDeliveryRequirements</span></span>  
- <span data-ttu-id="26b27-110">Tipo de datos: cadena</span><span class="sxs-lookup"><span data-stu-id="26b27-110">Data type: string</span></span>  
+### <a name="queueddeliveryrequirements"></a><span data-ttu-id="b17a4-109">QueuedDeliveryRequirements</span><span class="sxs-lookup"><span data-stu-id="b17a4-109">QueuedDeliveryRequirements</span></span>  
+ <span data-ttu-id="b17a4-110">Tipo de datos: cadena</span><span class="sxs-lookup"><span data-stu-id="b17a4-110">Data type: string</span></span>  
   
- <span data-ttu-id="26b27-111">Tipo de acceso: solo lectura</span><span class="sxs-lookup"><span data-stu-id="26b27-111">Access type: Read-only</span></span>  
+ <span data-ttu-id="b17a4-111">Tipo de acceso: solo lectura</span><span class="sxs-lookup"><span data-stu-id="b17a4-111">Access type: Read-only</span></span>  
   
- <span data-ttu-id="26b27-112">Especifica si el enlace para un servicio admite contratos.</span><span class="sxs-lookup"><span data-stu-id="26b27-112">Specifies whether the binding for a service supports contracts.</span></span>  
+ <span data-ttu-id="b17a4-112">Especifica si el enlace para un servicio admite contratos.</span><span class="sxs-lookup"><span data-stu-id="b17a4-112">Specifies whether the binding for a service supports contracts.</span></span>  
   
-### <a name="requireordereddelivery"></a><span data-ttu-id="26b27-113">RequireOrderedDelivery</span><span class="sxs-lookup"><span data-stu-id="26b27-113">RequireOrderedDelivery</span></span>  
- <span data-ttu-id="26b27-114">Tipo de datos: booleano</span><span class="sxs-lookup"><span data-stu-id="26b27-114">Data type: boolean</span></span>  
+### <a name="requireordereddelivery"></a><span data-ttu-id="b17a4-113">RequireOrderedDelivery</span><span class="sxs-lookup"><span data-stu-id="b17a4-113">RequireOrderedDelivery</span></span>  
+ <span data-ttu-id="b17a4-114">Tipo de datos: booleano</span><span class="sxs-lookup"><span data-stu-id="b17a4-114">Data type: boolean</span></span>  
   
- <span data-ttu-id="26b27-115">Tipo de acceso: solo lectura</span><span class="sxs-lookup"><span data-stu-id="26b27-115">Access type: Read-only</span></span>  
+ <span data-ttu-id="b17a4-115">Tipo de acceso: solo lectura</span><span class="sxs-lookup"><span data-stu-id="b17a4-115">Access type: Read-only</span></span>  
   
- <span data-ttu-id="26b27-116">Especifica si el enlace admite mensajes ordenados.</span><span class="sxs-lookup"><span data-stu-id="26b27-116">Specifies whether the binding supports ordered messages.</span></span>  
+ <span data-ttu-id="b17a4-116">Especifica si el enlace admite mensajes ordenados.</span><span class="sxs-lookup"><span data-stu-id="b17a4-116">Specifies whether the binding supports ordered messages.</span></span>  
   
-### <a name="targetcontract"></a><span data-ttu-id="26b27-117">TargetContract</span><span class="sxs-lookup"><span data-stu-id="26b27-117">TargetContract</span></span>  
- <span data-ttu-id="26b27-118">Tipo de datos: cadena</span><span class="sxs-lookup"><span data-stu-id="26b27-118">Data type: string</span></span>  
+### <a name="targetcontract"></a><span data-ttu-id="b17a4-117">TargetContract</span><span class="sxs-lookup"><span data-stu-id="b17a4-117">TargetContract</span></span>  
+ <span data-ttu-id="b17a4-118">Tipo de datos: cadena</span><span class="sxs-lookup"><span data-stu-id="b17a4-118">Data type: string</span></span>  
   
- <span data-ttu-id="26b27-119">Tipo de acceso: solo lectura</span><span class="sxs-lookup"><span data-stu-id="26b27-119">Access type: Read-only</span></span>  
+ <span data-ttu-id="b17a4-119">Tipo de acceso: solo lectura</span><span class="sxs-lookup"><span data-stu-id="b17a4-119">Access type: Read-only</span></span>  
   
- <span data-ttu-id="26b27-120">El contrato al que se aplica.</span><span class="sxs-lookup"><span data-stu-id="26b27-120">The contract to which it applies.</span></span>  
+ <span data-ttu-id="b17a4-120">El contrato al que se aplica.</span><span class="sxs-lookup"><span data-stu-id="b17a4-120">The contract to which it applies.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="26b27-121">Requisitos</span><span class="sxs-lookup"><span data-stu-id="26b27-121">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b17a4-121">Requisitos</span><span class="sxs-lookup"><span data-stu-id="b17a4-121">Requirements</span></span>  
   
-|<span data-ttu-id="26b27-122">MOF</span><span class="sxs-lookup"><span data-stu-id="26b27-122">MOF</span></span>|<span data-ttu-id="26b27-123">Se declara en Servicemodel.mof.</span><span class="sxs-lookup"><span data-stu-id="26b27-123">Declared in Servicemodel.mof.</span></span>|  
+|<span data-ttu-id="b17a4-122">MOF</span><span class="sxs-lookup"><span data-stu-id="b17a4-122">MOF</span></span>|<span data-ttu-id="b17a4-123">Se declara en Servicemodel.mof.</span><span class="sxs-lookup"><span data-stu-id="b17a4-123">Declared in Servicemodel.mof.</span></span>|  
 |---------|-----------------------------------|  
-|<span data-ttu-id="26b27-124">Espacio de nombres</span><span class="sxs-lookup"><span data-stu-id="26b27-124">Namespace</span></span>|<span data-ttu-id="26b27-125">Se define en root\ServiceModel</span><span class="sxs-lookup"><span data-stu-id="26b27-125">Defined in root\ServiceModel</span></span>|  
+|<span data-ttu-id="b17a4-124">Espacio de nombres</span><span class="sxs-lookup"><span data-stu-id="b17a4-124">Namespace</span></span>|<span data-ttu-id="b17a4-125">Se define en root\ServiceModel</span><span class="sxs-lookup"><span data-stu-id="b17a4-125">Defined in root\ServiceModel</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="26b27-126">Vea también</span><span class="sxs-lookup"><span data-stu-id="26b27-126">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="b17a4-126">Vea también</span><span class="sxs-lookup"><span data-stu-id="b17a4-126">See Also</span></span>  
  <xref:System.ServiceModel.DeliveryRequirementsAttribute>

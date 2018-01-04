@@ -13,18 +13,19 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 383d96e661ca7872108b40f69be86ef4e1ca63b5
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0f51f48d6eefcc0f8ae5129526477d6e2a5b2385
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="how-todetermine-the-discovery-version-of-a-probe-request"></a><span data-ttu-id="f5960-102">Cómo: determinar la versión de detección de una solicitud de sondeo</span><span class="sxs-lookup"><span data-stu-id="f5960-102">How to:Determine the Discovery Version of a Probe Request</span></span>
-<span data-ttu-id="f5960-103">Un proxy de detección puede exponer varios puntos de conexión de detección mediante distintas versiones de detección.</span><span class="sxs-lookup"><span data-stu-id="f5960-103">A discovery proxy may expose multiple discovery endpoints using different discovery versions.</span></span> <span data-ttu-id="f5960-104">Cuando llega una solicitud de sondeo multidifusión UDP al proxy, este debe responder con un mensaje de supresión de multidifusión.</span><span class="sxs-lookup"><span data-stu-id="f5960-104">When a UDP multicast Probe request arrives at the proxy the proxy should respond with a multicast suppression message.</span></span> <span data-ttu-id="f5960-105">Para ello, se debe conocer la versión de detección de la solicitud.</span><span class="sxs-lookup"><span data-stu-id="f5960-105">In order to do this it would have to know the discovery version of the request.</span></span>  
+# <a name="how-todetermine-the-discovery-version-of-a-probe-request"></a><span data-ttu-id="6c28c-102">Cómo: determinar la versión de detección de una solicitud de sondeo</span><span class="sxs-lookup"><span data-stu-id="6c28c-102">How to:Determine the Discovery Version of a Probe Request</span></span>
+<span data-ttu-id="6c28c-103">Un proxy de detección puede exponer varios puntos de conexión de detección mediante distintas versiones de detección.</span><span class="sxs-lookup"><span data-stu-id="6c28c-103">A discovery proxy may expose multiple discovery endpoints using different discovery versions.</span></span> <span data-ttu-id="6c28c-104">Cuando llega una solicitud de sondeo multidifusión UDP al proxy, este debe responder con un mensaje de supresión de multidifusión.</span><span class="sxs-lookup"><span data-stu-id="6c28c-104">When a UDP multicast Probe request arrives at the proxy the proxy should respond with a multicast suppression message.</span></span> <span data-ttu-id="6c28c-105">Para ello, se debe conocer la versión de detección de la solicitud.</span><span class="sxs-lookup"><span data-stu-id="6c28c-105">In order to do this it would have to know the discovery version of the request.</span></span>  
   
-### <a name="to-determine-the-discovery-version-of-a-probe-request"></a><span data-ttu-id="f5960-106">Para determinar la versión de detección de una solicitud de sondeo</span><span class="sxs-lookup"><span data-stu-id="f5960-106">To Determine the Discovery Version of a Probe Request</span></span>  
+### <a name="to-determine-the-discovery-version-of-a-probe-request"></a><span data-ttu-id="6c28c-106">Para determinar la versión de detección de una solicitud de sondeo</span><span class="sxs-lookup"><span data-stu-id="6c28c-106">To Determine the Discovery Version of a Probe Request</span></span>  
   
-1.  <span data-ttu-id="f5960-107">En el método que responda a una solicitud de sondeo (por ejemplo, el método <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginFind%2A>) use la propiedad estática <xref:System.ServiceModel.OperationContext.Current%2A> para buscar una extensión <xref:System.ServiceModel.Discovery.DiscoveryOperationContextExtension> como se muestra en el código siguiente.</span><span class="sxs-lookup"><span data-stu-id="f5960-107">In the method that responds to a Probe request (for example <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginFind%2A>) use the static <xref:System.ServiceModel.OperationContext.Current%2A> property to search for a <xref:System.ServiceModel.Discovery.DiscoveryOperationContextExtension> as shown in the following code.</span></span>  
+1.  <span data-ttu-id="6c28c-107">En el método que responda a una solicitud de sondeo (por ejemplo, el método <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginFind%2A>) use la propiedad estática <xref:System.ServiceModel.OperationContext.Current%2A> para buscar una extensión <xref:System.ServiceModel.Discovery.DiscoveryOperationContextExtension> como se muestra en el código siguiente.</span><span class="sxs-lookup"><span data-stu-id="6c28c-107">In the method that responds to a Probe request (for example <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginFind%2A>) use the static <xref:System.ServiceModel.OperationContext.Current%2A> property to search for a <xref:System.ServiceModel.Discovery.DiscoveryOperationContextExtension> as shown in the following code.</span></span>  
   
     ```  
     DiscoveryOperationContextExtension doce = OperationContext.Current.Extensions.Find<DiscoveryOperationContextExtension>();  
@@ -32,7 +33,7 @@ ms.lasthandoff: 12/02/2017
     doce.DiscoveryVersion;  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="f5960-108">Vea también</span><span class="sxs-lookup"><span data-stu-id="f5960-108">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="6c28c-108">Vea también</span><span class="sxs-lookup"><span data-stu-id="6c28c-108">See Also</span></span>  
  <xref:System.ServiceModel.Discovery.Configuration.AnnouncementEndpointElement.DiscoveryVersion%2A>  
- [<span data-ttu-id="f5960-109">Implementar a un Proxy de detección</span><span class="sxs-lookup"><span data-stu-id="f5960-109">Implementing a Discovery Proxy</span></span>](../../../../docs/framework/wcf/feature-details/implementing-a-discovery-proxy.md)  
- [<span data-ttu-id="f5960-110">Ejemplo de Proxy de detección</span><span class="sxs-lookup"><span data-stu-id="f5960-110">Discovery Proxy Sample</span></span>](../../../../docs/framework/wcf/samples/discovery-proxy-sample.md)
+ [<span data-ttu-id="6c28c-109">Implementación de un proxy de detección</span><span class="sxs-lookup"><span data-stu-id="6c28c-109">Implementing a Discovery Proxy</span></span>](../../../../docs/framework/wcf/feature-details/implementing-a-discovery-proxy.md)  
+ [<span data-ttu-id="6c28c-110">Ejemplo de proxy de detección</span><span class="sxs-lookup"><span data-stu-id="6c28c-110">Discovery Proxy Sample</span></span>](../../../../docs/framework/wcf/samples/discovery-proxy-sample.md)

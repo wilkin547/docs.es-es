@@ -14,15 +14,16 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b36910f9448fadc6ffb5efc86a091fbac58c35f9
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 1fdb016cac94f9a77ae05445ea05ed263e3df1f9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="custom-tokens"></a><span data-ttu-id="ff8ed-102">Tokens personalizados</span><span class="sxs-lookup"><span data-stu-id="ff8ed-102">Custom Tokens</span></span>
-<span data-ttu-id="ff8ed-103">Aunque [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] admite de forma nativa los certificados X.509, los tokens de contexto de seguridad, los vales de Kerberos y los tokens del nombre de usuario como credenciales, es lo bastante flexible como para permitirle utilizar sus propias credenciales personalizadas.</span><span class="sxs-lookup"><span data-stu-id="ff8ed-103">Although [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] natively supports X.509 certificates, Security Context Tokens, Kerberos tickets, and user name tokens as credentials, it is flexible enough to allow you to use your own custom credentials.</span></span>  
+# <a name="custom-tokens"></a><span data-ttu-id="9c526-102">Tokens personalizados</span><span class="sxs-lookup"><span data-stu-id="9c526-102">Custom Tokens</span></span>
+<span data-ttu-id="9c526-103">Aunque [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] admite de forma nativa los certificados X.509, los tokens de contexto de seguridad, los vales de Kerberos y los tokens del nombre de usuario como credenciales, es lo bastante flexible como para permitirle utilizar sus propias credenciales personalizadas.</span><span class="sxs-lookup"><span data-stu-id="9c526-103">Although [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] natively supports X.509 certificates, Security Context Tokens, Kerberos tickets, and user name tokens as credentials, it is flexible enough to allow you to use your own custom credentials.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="ff8ed-104">En esta sección</span><span class="sxs-lookup"><span data-stu-id="ff8ed-104">In This Section</span></span>  
- [<span data-ttu-id="ff8ed-105">Cómo: crear un Token personalizado</span><span class="sxs-lookup"><span data-stu-id="ff8ed-105">How to: Create a Custom Token</span></span>](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md)  
- <span data-ttu-id="ff8ed-106">Describe cómo crear un token de seguridad personalizado mediante la clase <xref:System.IdentityModel.Tokens.SecurityToken> y cómo integrarlo con un proveedor de token de seguridad personalizado y autenticador.</span><span class="sxs-lookup"><span data-stu-id="ff8ed-106">Describes how to create a custom security token using the <xref:System.IdentityModel.Tokens.SecurityToken> class, and how to integrate it with a custom security token provider and authenticator.</span></span>
+## <a name="in-this-section"></a><span data-ttu-id="9c526-104">En esta sección</span><span class="sxs-lookup"><span data-stu-id="9c526-104">In This Section</span></span>  
+ [<span data-ttu-id="9c526-105">Creación de un token personalizado</span><span class="sxs-lookup"><span data-stu-id="9c526-105">How to: Create a Custom Token</span></span>](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md)  
+ <span data-ttu-id="9c526-106">Describe cómo crear un token de seguridad personalizado mediante la clase <xref:System.IdentityModel.Tokens.SecurityToken> y cómo integrarlo con un proveedor de token de seguridad personalizado y autenticador.</span><span class="sxs-lookup"><span data-stu-id="9c526-106">Describes how to create a custom security token using the <xref:System.IdentityModel.Tokens.SecurityToken> class, and how to integrate it with a custom security token provider and authenticator.</span></span>

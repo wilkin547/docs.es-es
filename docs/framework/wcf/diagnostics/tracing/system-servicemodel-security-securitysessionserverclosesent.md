@@ -13,19 +13,20 @@ caps.latest.revision: "4"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 07cc3c17411d0429b3976dd543465b058d07b509
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d26add8256cb3bb2d17259c57f6733e49e2799ed
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelsecuritysecuritysessionserverclosesent"></a><span data-ttu-id="44bba-102">System.ServiceModel.Security.SecuritySessionServerCloseSent</span><span class="sxs-lookup"><span data-stu-id="44bba-102">System.ServiceModel.Security.SecuritySessionServerCloseSent</span></span>
-<span data-ttu-id="44bba-103">System.ServiceModel.Security.SecuritySessionServerCloseSent</span><span class="sxs-lookup"><span data-stu-id="44bba-103">System.ServiceModel.Security.SecuritySessionServerCloseSent</span></span>  
+# <a name="systemservicemodelsecuritysecuritysessionserverclosesent"></a><span data-ttu-id="5b1e4-102">System.ServiceModel.Security.SecuritySessionServerCloseSent</span><span class="sxs-lookup"><span data-stu-id="5b1e4-102">System.ServiceModel.Security.SecuritySessionServerCloseSent</span></span>
+<span data-ttu-id="5b1e4-103">System.ServiceModel.Security.SecuritySessionServerCloseSent</span><span class="sxs-lookup"><span data-stu-id="5b1e4-103">System.ServiceModel.Security.SecuritySessionServerCloseSent</span></span>  
   
-## <a name="description"></a><span data-ttu-id="44bba-104">Descripción</span><span class="sxs-lookup"><span data-stu-id="44bba-104">Description</span></span>  
- <span data-ttu-id="44bba-105">La sesión de seguridad de servidor envió Cerrar al cliente.</span><span class="sxs-lookup"><span data-stu-id="44bba-105">The server security session sent Close to client.</span></span>  
+## <a name="description"></a><span data-ttu-id="5b1e4-104">Descripción</span><span class="sxs-lookup"><span data-stu-id="5b1e4-104">Description</span></span>  
+ <span data-ttu-id="5b1e4-105">La sesión de seguridad de servidor envió Cerrar al cliente.</span><span class="sxs-lookup"><span data-stu-id="5b1e4-105">The server security session sent Close to client.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="44bba-106">Vea también</span><span class="sxs-lookup"><span data-stu-id="44bba-106">See Also</span></span>  
- [<span data-ttu-id="44bba-107">Seguimiento</span><span class="sxs-lookup"><span data-stu-id="44bba-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="44bba-108">Uso del seguimiento para solucionar problemas de la aplicación</span><span class="sxs-lookup"><span data-stu-id="44bba-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="44bba-109">Administración y diagnóstico</span><span class="sxs-lookup"><span data-stu-id="44bba-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="5b1e4-106">Vea también</span><span class="sxs-lookup"><span data-stu-id="5b1e4-106">See Also</span></span>  
+ [<span data-ttu-id="5b1e4-107">Traza</span><span class="sxs-lookup"><span data-stu-id="5b1e4-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="5b1e4-108">Uso del seguimiento para solucionar problemas de su aplicación</span><span class="sxs-lookup"><span data-stu-id="5b1e4-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="5b1e4-109">Administración y diagnóstico</span><span class="sxs-lookup"><span data-stu-id="5b1e4-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

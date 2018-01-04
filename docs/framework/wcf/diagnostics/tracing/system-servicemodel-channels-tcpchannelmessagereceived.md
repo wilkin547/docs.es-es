@@ -13,19 +13,20 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 35b3fc86deb6d0da02373a9c0ec2baf0d718acd0
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 819237265701c7b00efd817618bb08479b95b3d7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelchannelstcpchannelmessagereceived"></a><span data-ttu-id="3c27b-102">System.ServiceModel.Channels.TcpChannelMessageReceived</span><span class="sxs-lookup"><span data-stu-id="3c27b-102">System.ServiceModel.Channels.TcpChannelMessageReceived</span></span>
-<span data-ttu-id="3c27b-103">System.ServiceModel.Channels.TcpChannelMessageReceived</span><span class="sxs-lookup"><span data-stu-id="3c27b-103">System.ServiceModel.Channels.TcpChannelMessageReceived</span></span>  
+# <a name="systemservicemodelchannelstcpchannelmessagereceived"></a><span data-ttu-id="5a9c0-102">System.ServiceModel.Channels.TcpChannelMessageReceived</span><span class="sxs-lookup"><span data-stu-id="5a9c0-102">System.ServiceModel.Channels.TcpChannelMessageReceived</span></span>
+<span data-ttu-id="5a9c0-103">System.ServiceModel.Channels.TcpChannelMessageReceived</span><span class="sxs-lookup"><span data-stu-id="5a9c0-103">System.ServiceModel.Channels.TcpChannelMessageReceived</span></span>  
   
-## <a name="description"></a><span data-ttu-id="3c27b-104">Descripción</span><span class="sxs-lookup"><span data-stu-id="3c27b-104">Description</span></span>  
- <span data-ttu-id="3c27b-105">Recepción de un mensaje en el canal TCP.</span><span class="sxs-lookup"><span data-stu-id="3c27b-105">Received a message over TCP channel.</span></span>  
+## <a name="description"></a><span data-ttu-id="5a9c0-104">Descripción</span><span class="sxs-lookup"><span data-stu-id="5a9c0-104">Description</span></span>  
+ <span data-ttu-id="5a9c0-105">Recepción de un mensaje en el canal TCP.</span><span class="sxs-lookup"><span data-stu-id="5a9c0-105">Received a message over TCP channel.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3c27b-106">Vea también</span><span class="sxs-lookup"><span data-stu-id="3c27b-106">See Also</span></span>  
- [<span data-ttu-id="3c27b-107">Seguimiento</span><span class="sxs-lookup"><span data-stu-id="3c27b-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="3c27b-108">Uso del seguimiento para solucionar problemas de la aplicación</span><span class="sxs-lookup"><span data-stu-id="3c27b-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="3c27b-109">Administración y diagnóstico</span><span class="sxs-lookup"><span data-stu-id="3c27b-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="5a9c0-106">Vea también</span><span class="sxs-lookup"><span data-stu-id="5a9c0-106">See Also</span></span>  
+ [<span data-ttu-id="5a9c0-107">Traza</span><span class="sxs-lookup"><span data-stu-id="5a9c0-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="5a9c0-108">Uso del seguimiento para solucionar problemas de su aplicación</span><span class="sxs-lookup"><span data-stu-id="5a9c0-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="5a9c0-109">Administración y diagnóstico</span><span class="sxs-lookup"><span data-stu-id="5a9c0-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

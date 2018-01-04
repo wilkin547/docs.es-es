@@ -13,19 +13,20 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1b7ee6cda688472ba3b038d1fa93fcb7b29565d8
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0b483d93d83dedf1ccf6da06a415f24f911dbb2c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelchannelspeerneighborstatechanged"></a><span data-ttu-id="f0f4e-102">System.ServiceModel.Channels.PeerNeighborStateChanged</span><span class="sxs-lookup"><span data-stu-id="f0f4e-102">System.ServiceModel.Channels.PeerNeighborStateChanged</span></span>
-<span data-ttu-id="f0f4e-103">Un estado del vecino del mismo nivel ha cambiado.</span><span class="sxs-lookup"><span data-stu-id="f0f4e-103">A peer neighbor state has changed.</span></span>  
+# <a name="systemservicemodelchannelspeerneighborstatechanged"></a><span data-ttu-id="fd1d6-102">System.ServiceModel.Channels.PeerNeighborStateChanged</span><span class="sxs-lookup"><span data-stu-id="fd1d6-102">System.ServiceModel.Channels.PeerNeighborStateChanged</span></span>
+<span data-ttu-id="fd1d6-103">Un estado del vecino del mismo nivel ha cambiado.</span><span class="sxs-lookup"><span data-stu-id="fd1d6-103">A peer neighbor state has changed.</span></span>  
   
-## <a name="description"></a><span data-ttu-id="f0f4e-104">Descripción</span><span class="sxs-lookup"><span data-stu-id="f0f4e-104">Description</span></span>  
- <span data-ttu-id="f0f4e-105">Esta traza se produce durante un intento para cambiar el estado de un vecino.</span><span class="sxs-lookup"><span data-stu-id="f0f4e-105">This trace occurs upon an attempt to change a neighbor's state.</span></span>  
+## <a name="description"></a><span data-ttu-id="fd1d6-104">Descripción</span><span class="sxs-lookup"><span data-stu-id="fd1d6-104">Description</span></span>  
+ <span data-ttu-id="fd1d6-105">Esta traza se produce durante un intento para cambiar el estado de un vecino.</span><span class="sxs-lookup"><span data-stu-id="fd1d6-105">This trace occurs upon an attempt to change a neighbor's state.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f0f4e-106">Vea también</span><span class="sxs-lookup"><span data-stu-id="f0f4e-106">See Also</span></span>  
- [<span data-ttu-id="f0f4e-107">Seguimiento</span><span class="sxs-lookup"><span data-stu-id="f0f4e-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="f0f4e-108">Uso del seguimiento para solucionar problemas de la aplicación</span><span class="sxs-lookup"><span data-stu-id="f0f4e-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="f0f4e-109">Administración y diagnóstico</span><span class="sxs-lookup"><span data-stu-id="f0f4e-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="fd1d6-106">Vea también</span><span class="sxs-lookup"><span data-stu-id="fd1d6-106">See Also</span></span>  
+ [<span data-ttu-id="fd1d6-107">Traza</span><span class="sxs-lookup"><span data-stu-id="fd1d6-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="fd1d6-108">Uso del seguimiento para solucionar problemas de su aplicación</span><span class="sxs-lookup"><span data-stu-id="fd1d6-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="fd1d6-109">Administración y diagnóstico</span><span class="sxs-lookup"><span data-stu-id="fd1d6-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

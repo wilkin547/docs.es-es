@@ -13,19 +13,20 @@ caps.latest.revision: "4"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 5c12b7313705983f2958778f01882460831c28c1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 33dec9a1f8341021cdaf504afe39f3f54e8fab54
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelsecuritysecuritybindingsecureoutgoingmessagefailure"></a><span data-ttu-id="69046-102">System.ServiceModel.Security.SecurityBindingSecureOutgoingMessageFailure</span><span class="sxs-lookup"><span data-stu-id="69046-102">System.ServiceModel.Security.SecurityBindingSecureOutgoingMessageFailure</span></span>
-<span data-ttu-id="69046-103">System.ServiceModel.Security.SecurityBindingSecureOutgoingMessageFailure</span><span class="sxs-lookup"><span data-stu-id="69046-103">System.ServiceModel.Security.SecurityBindingSecureOutgoingMessageFailure</span></span>  
+# <a name="systemservicemodelsecuritysecuritybindingsecureoutgoingmessagefailure"></a><span data-ttu-id="afbd8-102">System.ServiceModel.Security.SecurityBindingSecureOutgoingMessageFailure</span><span class="sxs-lookup"><span data-stu-id="afbd8-102">System.ServiceModel.Security.SecurityBindingSecureOutgoingMessageFailure</span></span>
+<span data-ttu-id="afbd8-103">System.ServiceModel.Security.SecurityBindingSecureOutgoingMessageFailure</span><span class="sxs-lookup"><span data-stu-id="afbd8-103">System.ServiceModel.Security.SecurityBindingSecureOutgoingMessageFailure</span></span>  
   
-## <a name="description"></a><span data-ttu-id="69046-104">Descripción</span><span class="sxs-lookup"><span data-stu-id="69046-104">Description</span></span>  
- <span data-ttu-id="69046-105">El protocolo de seguridad no puede proteger el mensaje saliente.</span><span class="sxs-lookup"><span data-stu-id="69046-105">The security protocol cannot secure the outgoing message.</span></span>  
+## <a name="description"></a><span data-ttu-id="afbd8-104">Descripción</span><span class="sxs-lookup"><span data-stu-id="afbd8-104">Description</span></span>  
+ <span data-ttu-id="afbd8-105">El protocolo de seguridad no puede proteger el mensaje saliente.</span><span class="sxs-lookup"><span data-stu-id="afbd8-105">The security protocol cannot secure the outgoing message.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="69046-106">Vea también</span><span class="sxs-lookup"><span data-stu-id="69046-106">See Also</span></span>  
- [<span data-ttu-id="69046-107">Seguimiento</span><span class="sxs-lookup"><span data-stu-id="69046-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="69046-108">Uso del seguimiento para solucionar problemas de la aplicación</span><span class="sxs-lookup"><span data-stu-id="69046-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="69046-109">Administración y diagnóstico</span><span class="sxs-lookup"><span data-stu-id="69046-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="afbd8-106">Vea también</span><span class="sxs-lookup"><span data-stu-id="afbd8-106">See Also</span></span>  
+ [<span data-ttu-id="afbd8-107">Traza</span><span class="sxs-lookup"><span data-stu-id="afbd8-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="afbd8-108">Uso del seguimiento para solucionar problemas de su aplicación</span><span class="sxs-lookup"><span data-stu-id="afbd8-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="afbd8-109">Administración y diagnóstico</span><span class="sxs-lookup"><span data-stu-id="afbd8-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

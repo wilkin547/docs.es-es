@@ -13,19 +13,20 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4c76bd11ff89349d5e6e3360be86d299c66723d1
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 97f347708a66db9a3d1d90dae8414a83b54bd75f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelservicechannellifetime"></a><span data-ttu-id="7eee8-102">System.ServiceModel.ServiceChannelLifetime</span><span class="sxs-lookup"><span data-stu-id="7eee8-102">System.ServiceModel.ServiceChannelLifetime</span></span>
-<span data-ttu-id="7eee8-103">System.ServiceModel.ServiceChannelLifetime</span><span class="sxs-lookup"><span data-stu-id="7eee8-103">System.ServiceModel.ServiceChannelLifetime</span></span>  
+# <a name="systemservicemodelservicechannellifetime"></a><span data-ttu-id="9d2c0-102">System.ServiceModel.ServiceChannelLifetime</span><span class="sxs-lookup"><span data-stu-id="9d2c0-102">System.ServiceModel.ServiceChannelLifetime</span></span>
+<span data-ttu-id="9d2c0-103">System.ServiceModel.ServiceChannelLifetime</span><span class="sxs-lookup"><span data-stu-id="9d2c0-103">System.ServiceModel.ServiceChannelLifetime</span></span>  
   
-## <a name="description"></a><span data-ttu-id="7eee8-104">Descripción</span><span class="sxs-lookup"><span data-stu-id="7eee8-104">Description</span></span>  
- <span data-ttu-id="7eee8-105">Información sobre el canal de servicio.</span><span class="sxs-lookup"><span data-stu-id="7eee8-105">Information about the service channel.</span></span>  
+## <a name="description"></a><span data-ttu-id="9d2c0-104">Descripción</span><span class="sxs-lookup"><span data-stu-id="9d2c0-104">Description</span></span>  
+ <span data-ttu-id="9d2c0-105">Información sobre el canal de servicio.</span><span class="sxs-lookup"><span data-stu-id="9d2c0-105">Information about the service channel.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="7eee8-106">Vea también</span><span class="sxs-lookup"><span data-stu-id="7eee8-106">See Also</span></span>  
- [<span data-ttu-id="7eee8-107">Seguimiento</span><span class="sxs-lookup"><span data-stu-id="7eee8-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="7eee8-108">Uso del seguimiento para solucionar problemas de la aplicación</span><span class="sxs-lookup"><span data-stu-id="7eee8-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="7eee8-109">Administración y diagnóstico</span><span class="sxs-lookup"><span data-stu-id="7eee8-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="9d2c0-106">Vea también</span><span class="sxs-lookup"><span data-stu-id="9d2c0-106">See Also</span></span>  
+ [<span data-ttu-id="9d2c0-107">Traza</span><span class="sxs-lookup"><span data-stu-id="9d2c0-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="9d2c0-108">Uso del seguimiento para solucionar problemas de su aplicación</span><span class="sxs-lookup"><span data-stu-id="9d2c0-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="9d2c0-109">Administración y diagnóstico</span><span class="sxs-lookup"><span data-stu-id="9d2c0-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

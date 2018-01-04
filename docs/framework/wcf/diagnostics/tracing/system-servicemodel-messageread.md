@@ -13,19 +13,20 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e61dffd6ad3823aa74be3f1e104ba5408de02192
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: ea5a52ef89230fd9d06540b1cc63013bd73021ed
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelmessageread"></a><span data-ttu-id="53f74-102">System.ServiceModel.MessageRead</span><span class="sxs-lookup"><span data-stu-id="53f74-102">System.ServiceModel.MessageRead</span></span>
-<span data-ttu-id="53f74-103">System.ServiceModel.MessageRead</span><span class="sxs-lookup"><span data-stu-id="53f74-103">System.ServiceModel.MessageRead</span></span>  
+# <a name="systemservicemodelmessageread"></a><span data-ttu-id="14247-102">System.ServiceModel.MessageRead</span><span class="sxs-lookup"><span data-stu-id="14247-102">System.ServiceModel.MessageRead</span></span>
+<span data-ttu-id="14247-103">System.ServiceModel.MessageRead</span><span class="sxs-lookup"><span data-stu-id="14247-103">System.ServiceModel.MessageRead</span></span>  
   
-## <a name="description"></a><span data-ttu-id="53f74-104">Descripción</span><span class="sxs-lookup"><span data-stu-id="53f74-104">Description</span></span>  
- <span data-ttu-id="53f74-105">Se leyó un mensaje.</span><span class="sxs-lookup"><span data-stu-id="53f74-105">A message was read.</span></span>  
+## <a name="description"></a><span data-ttu-id="14247-104">Descripción</span><span class="sxs-lookup"><span data-stu-id="14247-104">Description</span></span>  
+ <span data-ttu-id="14247-105">Se leyó un mensaje.</span><span class="sxs-lookup"><span data-stu-id="14247-105">A message was read.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="53f74-106">Vea también</span><span class="sxs-lookup"><span data-stu-id="53f74-106">See Also</span></span>  
- [<span data-ttu-id="53f74-107">Seguimiento</span><span class="sxs-lookup"><span data-stu-id="53f74-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="53f74-108">Uso del seguimiento para solucionar problemas de la aplicación</span><span class="sxs-lookup"><span data-stu-id="53f74-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="53f74-109">Administración y diagnóstico</span><span class="sxs-lookup"><span data-stu-id="53f74-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="14247-106">Vea también</span><span class="sxs-lookup"><span data-stu-id="14247-106">See Also</span></span>  
+ [<span data-ttu-id="14247-107">Traza</span><span class="sxs-lookup"><span data-stu-id="14247-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="14247-108">Uso del seguimiento para solucionar problemas de su aplicación</span><span class="sxs-lookup"><span data-stu-id="14247-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="14247-109">Administración y diagnóstico</span><span class="sxs-lookup"><span data-stu-id="14247-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

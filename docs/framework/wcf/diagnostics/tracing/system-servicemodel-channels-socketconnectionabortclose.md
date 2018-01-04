@@ -13,19 +13,20 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6f8d9c0180440417868e4dc4817f739ecf4cc2e1
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 113253e49ce6d993e9b543f30f4d6a4a5887587d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelchannelssocketconnectionabortclose"></a><span data-ttu-id="8a28b-102">System.ServiceModel.Channels.SocketConnectionAbortClose</span><span class="sxs-lookup"><span data-stu-id="8a28b-102">System.ServiceModel.Channels.SocketConnectionAbortClose</span></span>
-<span data-ttu-id="8a28b-103">System.ServiceModel.Channels.SocketConnectionAbortClose</span><span class="sxs-lookup"><span data-stu-id="8a28b-103">System.ServiceModel.Channels.SocketConnectionAbortClose</span></span>  
+# <a name="systemservicemodelchannelssocketconnectionabortclose"></a><span data-ttu-id="b8ca8-102">System.ServiceModel.Channels.SocketConnectionAbortClose</span><span class="sxs-lookup"><span data-stu-id="b8ca8-102">System.ServiceModel.Channels.SocketConnectionAbortClose</span></span>
+<span data-ttu-id="b8ca8-103">System.ServiceModel.Channels.SocketConnectionAbortClose</span><span class="sxs-lookup"><span data-stu-id="b8ca8-103">System.ServiceModel.Channels.SocketConnectionAbortClose</span></span>  
   
-## <a name="description"></a><span data-ttu-id="8a28b-104">Descripción</span><span class="sxs-lookup"><span data-stu-id="8a28b-104">Description</span></span>  
- <span data-ttu-id="8a28b-105">SocketConnection se anuló bajo Cerrar.</span><span class="sxs-lookup"><span data-stu-id="8a28b-105">SocketConnection aborted under Close.</span></span>  
+## <a name="description"></a><span data-ttu-id="b8ca8-104">Descripción</span><span class="sxs-lookup"><span data-stu-id="b8ca8-104">Description</span></span>  
+ <span data-ttu-id="b8ca8-105">SocketConnection se anuló bajo Cerrar.</span><span class="sxs-lookup"><span data-stu-id="b8ca8-105">SocketConnection aborted under Close.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="8a28b-106">Vea también</span><span class="sxs-lookup"><span data-stu-id="8a28b-106">See Also</span></span>  
- [<span data-ttu-id="8a28b-107">Seguimiento</span><span class="sxs-lookup"><span data-stu-id="8a28b-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="8a28b-108">Uso del seguimiento para solucionar problemas de la aplicación</span><span class="sxs-lookup"><span data-stu-id="8a28b-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="8a28b-109">Administración y diagnóstico</span><span class="sxs-lookup"><span data-stu-id="8a28b-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="b8ca8-106">Vea también</span><span class="sxs-lookup"><span data-stu-id="b8ca8-106">See Also</span></span>  
+ [<span data-ttu-id="b8ca8-107">Traza</span><span class="sxs-lookup"><span data-stu-id="b8ca8-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="b8ca8-108">Uso del seguimiento para solucionar problemas de su aplicación</span><span class="sxs-lookup"><span data-stu-id="b8ca8-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="b8ca8-109">Administración y diagnóstico</span><span class="sxs-lookup"><span data-stu-id="b8ca8-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

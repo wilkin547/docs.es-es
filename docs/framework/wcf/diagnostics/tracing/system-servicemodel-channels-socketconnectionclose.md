@@ -13,19 +13,20 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 81853ef38456d29a996f6d675f0af1a58cd9b041
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 39f283d913083eb2648c377c8e2d9120339df870
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelchannelssocketconnectionclose"></a><span data-ttu-id="18f44-102">System.ServiceModel.Channels.SocketConnectionClose</span><span class="sxs-lookup"><span data-stu-id="18f44-102">System.ServiceModel.Channels.SocketConnectionClose</span></span>
-<span data-ttu-id="18f44-103">System.ServiceModel.Channels.SocketConnectionClose</span><span class="sxs-lookup"><span data-stu-id="18f44-103">System.ServiceModel.Channels.SocketConnectionClose</span></span>  
+# <a name="systemservicemodelchannelssocketconnectionclose"></a><span data-ttu-id="57f78-102">System.ServiceModel.Channels.SocketConnectionClose</span><span class="sxs-lookup"><span data-stu-id="57f78-102">System.ServiceModel.Channels.SocketConnectionClose</span></span>
+<span data-ttu-id="57f78-103">System.ServiceModel.Channels.SocketConnectionClose</span><span class="sxs-lookup"><span data-stu-id="57f78-103">System.ServiceModel.Channels.SocketConnectionClose</span></span>  
   
-## <a name="description"></a><span data-ttu-id="18f44-104">Descripción</span><span class="sxs-lookup"><span data-stu-id="18f44-104">Description</span></span>  
- <span data-ttu-id="18f44-105">SocketConnection se cierra.</span><span class="sxs-lookup"><span data-stu-id="18f44-105">SocketConnection close.</span></span>  
+## <a name="description"></a><span data-ttu-id="57f78-104">Descripción</span><span class="sxs-lookup"><span data-stu-id="57f78-104">Description</span></span>  
+ <span data-ttu-id="57f78-105">SocketConnection se cierra.</span><span class="sxs-lookup"><span data-stu-id="57f78-105">SocketConnection close.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="18f44-106">Vea también</span><span class="sxs-lookup"><span data-stu-id="18f44-106">See Also</span></span>  
- [<span data-ttu-id="18f44-107">Seguimiento</span><span class="sxs-lookup"><span data-stu-id="18f44-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="18f44-108">Uso del seguimiento para solucionar problemas de la aplicación</span><span class="sxs-lookup"><span data-stu-id="18f44-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="18f44-109">Administración y diagnóstico</span><span class="sxs-lookup"><span data-stu-id="18f44-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="57f78-106">Vea también</span><span class="sxs-lookup"><span data-stu-id="57f78-106">See Also</span></span>  
+ [<span data-ttu-id="57f78-107">Traza</span><span class="sxs-lookup"><span data-stu-id="57f78-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="57f78-108">Uso del seguimiento para solucionar problemas de su aplicación</span><span class="sxs-lookup"><span data-stu-id="57f78-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="57f78-109">Administración y diagnóstico</span><span class="sxs-lookup"><span data-stu-id="57f78-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

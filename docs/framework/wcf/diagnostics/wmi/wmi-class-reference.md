@@ -13,163 +13,164 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7a74f1d7e70b8664df5022d6f9f42cf04b88f930
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0e221c8197b9713dd5f4e35114ada3c63f4978ef
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="wmi-class-reference"></a><span data-ttu-id="58803-102">Referencia de clases WMI</span><span class="sxs-lookup"><span data-stu-id="58803-102">WMI Class Reference</span></span>
-<span data-ttu-id="58803-103">En esta sección se detallan todas las clases WMI expuestas por el proveedor de WMI [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)].</span><span class="sxs-lookup"><span data-stu-id="58803-103">This section lists all the WMI classes exposed by the [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] WMI provider.</span></span>  
+# <a name="wmi-class-reference"></a><span data-ttu-id="503bf-102">Referencia de clases WMI</span><span class="sxs-lookup"><span data-stu-id="503bf-102">WMI Class Reference</span></span>
+<span data-ttu-id="503bf-103">En esta sección se detallan todas las clases WMI expuestas por el proveedor de WMI [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)].</span><span class="sxs-lookup"><span data-stu-id="503bf-103">This section lists all the WMI classes exposed by the [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] WMI provider.</span></span>  
   
-## <a name="accessing-wmi-instances"></a><span data-ttu-id="58803-104">Tener acceso a las instancias de WMI</span><span class="sxs-lookup"><span data-stu-id="58803-104">Accessing WMI Instances</span></span>  
- <span data-ttu-id="58803-105">No se puede crear directamente una instancia de todas las clases enumeradas en la Referencia de objeto WMI, excepto para Service, AppDomain, Contrat, ServiceAppDomain, ServiceToEndpointAssociation y Endpoint.</span><span class="sxs-lookup"><span data-stu-id="58803-105">All the classes listed in the WMI Object Reference cannot be directly instantiated, except for Service, AppDomain, Contract, ServiceAppDomain, ServiceToEndpointAssociation and Endpoint.</span></span> <span data-ttu-id="58803-106">Para tener acceso a otras instancias, puede tener acceso a las propiedades de las clases de nivel superior mencionadas anteriormente.</span><span class="sxs-lookup"><span data-stu-id="58803-106">To access other instances, you can access the properties of the previously mentioned top level classes.</span></span> <span data-ttu-id="58803-107">Por ejemplo, puede obtener acceso a la instancia TransportBindingElement desde la instancia Endpoint -> Binding -> BindingElements.</span><span class="sxs-lookup"><span data-stu-id="58803-107">For example, you can access the TransportBindingElement instance from the Endpoint instance -> Binding -> BindingElements.</span></span>  
+## <a name="accessing-wmi-instances"></a><span data-ttu-id="503bf-104">Tener acceso a las instancias de WMI</span><span class="sxs-lookup"><span data-stu-id="503bf-104">Accessing WMI Instances</span></span>  
+ <span data-ttu-id="503bf-105">No se puede crear directamente una instancia de todas las clases enumeradas en la Referencia de objeto WMI, excepto para Service, AppDomain, Contrat, ServiceAppDomain, ServiceToEndpointAssociation y Endpoint.</span><span class="sxs-lookup"><span data-stu-id="503bf-105">All the classes listed in the WMI Object Reference cannot be directly instantiated, except for Service, AppDomain, Contract, ServiceAppDomain, ServiceToEndpointAssociation and Endpoint.</span></span> <span data-ttu-id="503bf-106">Para tener acceso a otras instancias, puede tener acceso a las propiedades de las clases de nivel superior mencionadas anteriormente.</span><span class="sxs-lookup"><span data-stu-id="503bf-106">To access other instances, you can access the properties of the previously mentioned top level classes.</span></span> <span data-ttu-id="503bf-107">Por ejemplo, puede obtener acceso a la instancia TransportBindingElement desde la instancia Endpoint -> Binding -> BindingElements.</span><span class="sxs-lookup"><span data-stu-id="503bf-107">For example, you can access the TransportBindingElement instance from the Endpoint instance -> Binding -> BindingElements.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="58803-108">En esta sección</span><span class="sxs-lookup"><span data-stu-id="58803-108">In This Section</span></span>  
- [<span data-ttu-id="58803-109">ActivityTransfer</span><span class="sxs-lookup"><span data-stu-id="58803-109">ActivityTransfer</span></span>](../../../../../docs/framework/wcf/diagnostics/wmi/activitytransfer.md)  
+## <a name="in-this-section"></a><span data-ttu-id="503bf-108">En esta sección</span><span class="sxs-lookup"><span data-stu-id="503bf-108">In This Section</span></span>  
+ [<span data-ttu-id="503bf-109">ActivityTransfer</span><span class="sxs-lookup"><span data-stu-id="503bf-109">ActivityTransfer</span></span>](../../../../../docs/framework/wcf/diagnostics/wmi/activitytransfer.md)  
   
- [<span data-ttu-id="58803-110">AppDomainInfo</span><span class="sxs-lookup"><span data-stu-id="58803-110">AppDomainInfo</span></span>](../../../../../docs/framework/wcf/diagnostics/wmi/appdomaininfo.md)  
+ [<span data-ttu-id="503bf-110">AppDomainInfo</span><span class="sxs-lookup"><span data-stu-id="503bf-110">AppDomainInfo</span></span>](../../../../../docs/framework/wcf/diagnostics/wmi/appdomaininfo.md)  
   
- [<span data-ttu-id="58803-111">AspNetCompatibilityRequirementsAttribute</span><span class="sxs-lookup"><span data-stu-id="58803-111">AspNetCompatibilityRequirementsAttribute</span></span>](../../../../../docs/framework/wcf/diagnostics/wmi/aspnetcompatibilityrequirementsattribute.md)  
+ [<span data-ttu-id="503bf-111">AspNetCompatibilityRequirementsAttribute</span><span class="sxs-lookup"><span data-stu-id="503bf-111">AspNetCompatibilityRequirementsAttribute</span></span>](../../../../../docs/framework/wcf/diagnostics/wmi/aspnetcompatibilityrequirementsattribute.md)  
   
- [<span data-ttu-id="58803-112">AsymmetricSecurityBindingElement</span><span class="sxs-lookup"><span data-stu-id="58803-112">AsymmetricSecurityBindingElement</span></span>](../../../../../docs/framework/wcf/diagnostics/wmi/asymmetricsecuritybindingelement.md)  
+ [<span data-ttu-id="503bf-112">AsymmetricSecurityBindingElement</span><span class="sxs-lookup"><span data-stu-id="503bf-112">AsymmetricSecurityBindingElement</span></span>](../../../../../docs/framework/wcf/diagnostics/wmi/asymmetricsecuritybindingelement.md)  
   
- <span data-ttu-id="58803-113">"Clase behavior"</span><span class="sxs-lookup"><span data-stu-id="58803-113">"Behavior class"</span></span>  
+ <span data-ttu-id="503bf-113">"Clase behavior"</span><span class="sxs-lookup"><span data-stu-id="503bf-113">"Behavior class"</span></span>  
   
- [<span data-ttu-id="58803-114">BinaryMessageEncodingBindingElement</span><span class="sxs-lookup"><span data-stu-id="58803-114">BinaryMessageEncodingBindingElement</span></span>](../../../../../docs/framework/wcf/diagnostics/wmi/binarymessageencodingbindingelement.md)  
+ [<span data-ttu-id="503bf-114">BinaryMessageEncodingBindingElement</span><span class="sxs-lookup"><span data-stu-id="503bf-114">BinaryMessageEncodingBindingElement</span></span>](../../../../../docs/framework/wcf/diagnostics/wmi/binarymessageencodingbindingelement.md)  
   
- [<span data-ttu-id="58803-115">Enlace</span><span class="sxs-lookup"><span data-stu-id="58803-115">Binding</span></span>](../../../../../docs/framework/wcf/diagnostics/wmi/binding.md)  
+ [<span data-ttu-id="503bf-115">Enlaces</span><span class="sxs-lookup"><span data-stu-id="503bf-115">Binding</span></span>](../../../../../docs/framework/wcf/diagnostics/wmi/binding.md)  
   
- [<span data-ttu-id="58803-116">BindingElement</span><span class="sxs-lookup"><span data-stu-id="58803-116">BindingElement</span></span>](../../../../../docs/framework/wcf/diagnostics/wmi/bindingelement.md)  
+ [<span data-ttu-id="503bf-116">BindingElement</span><span class="sxs-lookup"><span data-stu-id="503bf-116">BindingElement</span></span>](../../../../../docs/framework/wcf/diagnostics/wmi/bindingelement.md)  
   
- [<span data-ttu-id="58803-117">CallbackBehavior</span><span class="sxs-lookup"><span data-stu-id="58803-117">CallbackBehavior</span></span>](../../../../../docs/framework/wcf/diagnostics/wmi/callbackbehavior.md)  
+ [<span data-ttu-id="503bf-117">CallbackBehavior</span><span class="sxs-lookup"><span data-stu-id="503bf-117">CallbackBehavior</span></span>](../../../../../docs/framework/wcf/diagnostics/wmi/callbackbehavior.md)  
   
- [<span data-ttu-id="58803-118">Clase de canal</span><span class="sxs-lookup"><span data-stu-id="58803-118">Channel class</span></span>](../../../../../docs/framework/wcf/diagnostics/wmi/channel-class.md)  
+ [<span data-ttu-id="503bf-118">Clase de canal</span><span class="sxs-lookup"><span data-stu-id="503bf-118">Channel class</span></span>](../../../../../docs/framework/wcf/diagnostics/wmi/channel-class.md)  
   
- [<span data-ttu-id="58803-119">ChannelPoolSettings</span><span class="sxs-lookup"><span data-stu-id="58803-119">ChannelPoolSettings</span></span>](../../../../../docs/framework/wcf/diagnostics/wmi/channelpoolsettings.md)  
+ [<span data-ttu-id="503bf-119">ChannelPoolSettings</span><span class="sxs-lookup"><span data-stu-id="503bf-119">ChannelPoolSettings</span></span>](../../../../../docs/framework/wcf/diagnostics/wmi/channelpoolsettings.md)  
   
- [<span data-ttu-id="58803-120">ClientCredentials</span><span class="sxs-lookup"><span data-stu-id="58803-120">ClientCredentials</span></span>](../../../../../docs/framework/wcf/diagnostics/wmi/clientcredentials.md)  
+ [<span data-ttu-id="503bf-120">ClientCredentials</span><span class="sxs-lookup"><span data-stu-id="503bf-120">ClientCredentials</span></span>](../../../../../docs/framework/wcf/diagnostics/wmi/clientcredentials.md)  
   
- [<span data-ttu-id="58803-121">ClientViaBehavior</span><span class="sxs-lookup"><span data-stu-id="58803-121">ClientViaBehavior</span></span>](../../../../../docs/framework/wcf/diagnostics/wmi/clientviabehavior.md)  
+ [<span data-ttu-id="503bf-121">ClientViaBehavior</span><span class="sxs-lookup"><span data-stu-id="503bf-121">ClientViaBehavior</span></span>](../../../../../docs/framework/wcf/diagnostics/wmi/clientviabehavior.md)  
   
- [<span data-ttu-id="58803-122">CompositeDuplexBindingElement</span><span class="sxs-lookup"><span data-stu-id="58803-122">CompositeDuplexBindingElement</span></span>](../../../../../docs/framework/wcf/diagnostics/wmi/compositeduplexbindingelement.md)  
+ [<span data-ttu-id="503bf-122">CompositeDuplexBindingElement</span><span class="sxs-lookup"><span data-stu-id="503bf-122">CompositeDuplexBindingElement</span></span>](../../../../../docs/framework/wcf/diagnostics/wmi/compositeduplexbindingelement.md)  
   
- [<span data-ttu-id="58803-123">ConnectionOrientedTransportBindingElement</span><span class="sxs-lookup"><span data-stu-id="58803-123">ConnectionOrientedTransportBindingElement</span></span>](../../../../../docs/framework/wcf/diagnostics/wmi/connectionorientedtransportbindingelement.md)  
+ [<span data-ttu-id="503bf-123">ConnectionOrientedTransportBindingElement</span><span class="sxs-lookup"><span data-stu-id="503bf-123">ConnectionOrientedTransportBindingElement</span></span>](../../../../../docs/framework/wcf/diagnostics/wmi/connectionorientedtransportbindingelement.md)  
   
- [<span data-ttu-id="58803-124">Contrato</span><span class="sxs-lookup"><span data-stu-id="58803-124">Contract</span></span>](../../../../../docs/framework/wcf/diagnostics/wmi/contract.md)  
+ [<span data-ttu-id="503bf-124">Contrato</span><span class="sxs-lookup"><span data-stu-id="503bf-124">Contract</span></span>](../../../../../docs/framework/wcf/diagnostics/wmi/contract.md)  
   
- [<span data-ttu-id="58803-125">CustomBindingElement</span><span class="sxs-lookup"><span data-stu-id="58803-125">CustomBindingElement</span></span>](../../../../../docs/framework/wcf/diagnostics/wmi/custombindingelement.md)  
+ [<span data-ttu-id="503bf-125">CustomBindingElement</span><span class="sxs-lookup"><span data-stu-id="503bf-125">CustomBindingElement</span></span>](../../../../../docs/framework/wcf/diagnostics/wmi/custombindingelement.md)  
   
- [<span data-ttu-id="58803-126">DeliveryRequirementsAttribute</span><span class="sxs-lookup"><span data-stu-id="58803-126">DeliveryRequirementsAttribute</span></span>](../../../../../docs/framework/wcf/diagnostics/wmi/deliveryrequirementsattribute.md)  
+ [<span data-ttu-id="503bf-126">DeliveryRequirementsAttribute</span><span class="sxs-lookup"><span data-stu-id="503bf-126">DeliveryRequirementsAttribute</span></span>](../../../../../docs/framework/wcf/diagnostics/wmi/deliveryrequirementsattribute.md)  
   
- [<span data-ttu-id="58803-127">Punto de conexión</span><span class="sxs-lookup"><span data-stu-id="58803-127">Endpoint</span></span>](../../../../../docs/framework/wcf/diagnostics/wmi/endpoint.md)  
+ [<span data-ttu-id="503bf-127">Punto de conexión</span><span class="sxs-lookup"><span data-stu-id="503bf-127">Endpoint</span></span>](../../../../../docs/framework/wcf/diagnostics/wmi/endpoint.md)  
   
- [<span data-ttu-id="58803-128">HttpsTransportBindingElement</span><span class="sxs-lookup"><span data-stu-id="58803-128">HttpsTransportBindingElement</span></span>](../../../../../docs/framework/wcf/diagnostics/wmi/httpstransportbindingelement.md)  
+ [<span data-ttu-id="503bf-128">HttpsTransportBindingElement</span><span class="sxs-lookup"><span data-stu-id="503bf-128">HttpsTransportBindingElement</span></span>](../../../../../docs/framework/wcf/diagnostics/wmi/httpstransportbindingelement.md)  
   
- [<span data-ttu-id="58803-129">HttpTransportBindingElement</span><span class="sxs-lookup"><span data-stu-id="58803-129">HttpTransportBindingElement</span></span>](../../../../../docs/framework/wcf/diagnostics/wmi/httptransportbindingelement.md)  
+ [<span data-ttu-id="503bf-129">HttpTransportBindingElement</span><span class="sxs-lookup"><span data-stu-id="503bf-129">HttpTransportBindingElement</span></span>](../../../../../docs/framework/wcf/diagnostics/wmi/httptransportbindingelement.md)  
   
- [<span data-ttu-id="58803-130">LocalServiceSecuritySettings</span><span class="sxs-lookup"><span data-stu-id="58803-130">LocalServiceSecuritySettings</span></span>](../../../../../docs/framework/wcf/diagnostics/wmi/localservicesecuritysettings.md)  
+ [<span data-ttu-id="503bf-130">LocalServiceSecuritySettings</span><span class="sxs-lookup"><span data-stu-id="503bf-130">LocalServiceSecuritySettings</span></span>](../../../../../docs/framework/wcf/diagnostics/wmi/localservicesecuritysettings.md)  
   
- [<span data-ttu-id="58803-131">MatchAllEndpointBehavior</span><span class="sxs-lookup"><span data-stu-id="58803-131">MatchAllEndpointBehavior</span></span>](../../../../../docs/framework/wcf/diagnostics/wmi/matchallendpointbehavior.md)  
+ [<span data-ttu-id="503bf-131">MatchAllEndpointBehavior</span><span class="sxs-lookup"><span data-stu-id="503bf-131">MatchAllEndpointBehavior</span></span>](../../../../../docs/framework/wcf/diagnostics/wmi/matchallendpointbehavior.md)  
   
- [<span data-ttu-id="58803-132">MessageEncodingBindingElement</span><span class="sxs-lookup"><span data-stu-id="58803-132">MessageEncodingBindingElement</span></span>](../../../../../docs/framework/wcf/diagnostics/wmi/messageencodingbindingelement.md)  
+ [<span data-ttu-id="503bf-132">MessageEncodingBindingElement</span><span class="sxs-lookup"><span data-stu-id="503bf-132">MessageEncodingBindingElement</span></span>](../../../../../docs/framework/wcf/diagnostics/wmi/messageencodingbindingelement.md)  
   
- [<span data-ttu-id="58803-133">Tracelistenerargument</span><span class="sxs-lookup"><span data-stu-id="58803-133">MsmqBindingElementBase</span></span>](../../../../../docs/framework/wcf/diagnostics/wmi/msmqbindingelementbase.md)  
+ [<span data-ttu-id="503bf-133">MsmqBindingElementBase</span><span class="sxs-lookup"><span data-stu-id="503bf-133">MsmqBindingElementBase</span></span>](../../../../../docs/framework/wcf/diagnostics/wmi/msmqbindingelementbase.md)  
   
- [<span data-ttu-id="58803-134">MsmqIntegrationBindingElement</span><span class="sxs-lookup"><span data-stu-id="58803-134">MsmqIntegrationBindingElement</span></span>](../../../../../docs/framework/wcf/diagnostics/wmi/msmqintegrationbindingelement.md)  
+ [<span data-ttu-id="503bf-134">MsmqIntegrationBindingElement</span><span class="sxs-lookup"><span data-stu-id="503bf-134">MsmqIntegrationBindingElement</span></span>](../../../../../docs/framework/wcf/diagnostics/wmi/msmqintegrationbindingelement.md)  
   
- [<span data-ttu-id="58803-135">MsmqTransportBindingElement</span><span class="sxs-lookup"><span data-stu-id="58803-135">MsmqTransportBindingElement</span></span>](../../../../../docs/framework/wcf/diagnostics/wmi/msmqtransportbindingelement.md)  
+ [<span data-ttu-id="503bf-135">MsmqTransportBindingElement</span><span class="sxs-lookup"><span data-stu-id="503bf-135">MsmqTransportBindingElement</span></span>](../../../../../docs/framework/wcf/diagnostics/wmi/msmqtransportbindingelement.md)  
   
- [<span data-ttu-id="58803-136">MtomMessageEncodingBindingElement</span><span class="sxs-lookup"><span data-stu-id="58803-136">MtomMessageEncodingBindingElement</span></span>](../../../../../docs/framework/wcf/diagnostics/wmi/mtommessageencodingbindingelement.md)  
+ [<span data-ttu-id="503bf-136">MtomMessageEncodingBindingElement</span><span class="sxs-lookup"><span data-stu-id="503bf-136">MtomMessageEncodingBindingElement</span></span>](../../../../../docs/framework/wcf/diagnostics/wmi/mtommessageencodingbindingelement.md)  
   
- [<span data-ttu-id="58803-137">MustUnderstandBehavior</span><span class="sxs-lookup"><span data-stu-id="58803-137">MustUnderstandBehavior</span></span>](../../../../../docs/framework/wcf/diagnostics/wmi/mustunderstandbehavior.md)  
+ [<span data-ttu-id="503bf-137">MustUnderstandBehavior</span><span class="sxs-lookup"><span data-stu-id="503bf-137">MustUnderstandBehavior</span></span>](../../../../../docs/framework/wcf/diagnostics/wmi/mustunderstandbehavior.md)  
   
- [<span data-ttu-id="58803-138">NamedPipeConnectionPoolSettings</span><span class="sxs-lookup"><span data-stu-id="58803-138">NamedPipeConnectionPoolSettings</span></span>](../../../../../docs/framework/wcf/diagnostics/wmi/namedpipeconnectionpoolsettings.md)  
+ [<span data-ttu-id="503bf-138">NamedPipeConnectionPoolSettings</span><span class="sxs-lookup"><span data-stu-id="503bf-138">NamedPipeConnectionPoolSettings</span></span>](../../../../../docs/framework/wcf/diagnostics/wmi/namedpipeconnectionpoolsettings.md)  
   
- [<span data-ttu-id="58803-139">NamedPipeTransportBindingElement</span><span class="sxs-lookup"><span data-stu-id="58803-139">NamedPipeTransportBindingElement</span></span>](../../../../../docs/framework/wcf/diagnostics/wmi/namedpipetransportbindingelement.md)  
+ [<span data-ttu-id="503bf-139">NamedPipeTransportBindingElement</span><span class="sxs-lookup"><span data-stu-id="503bf-139">NamedPipeTransportBindingElement</span></span>](../../../../../docs/framework/wcf/diagnostics/wmi/namedpipetransportbindingelement.md)  
   
- [<span data-ttu-id="58803-140">OneWayBindingElement</span><span class="sxs-lookup"><span data-stu-id="58803-140">OneWayBindingElement</span></span>](../../../../../docs/framework/wcf/diagnostics/wmi/onewaybindingelement.md)  
+ [<span data-ttu-id="503bf-140">OneWayBindingElement</span><span class="sxs-lookup"><span data-stu-id="503bf-140">OneWayBindingElement</span></span>](../../../../../docs/framework/wcf/diagnostics/wmi/onewaybindingelement.md)  
   
- <span data-ttu-id="58803-141">"Operation (clase)"</span><span class="sxs-lookup"><span data-stu-id="58803-141">"Operation class"</span></span>  
+ <span data-ttu-id="503bf-141">"Operation (clase)"</span><span class="sxs-lookup"><span data-stu-id="503bf-141">"Operation class"</span></span>  
   
- [<span data-ttu-id="58803-142">OperationBehaviorAttribute</span><span class="sxs-lookup"><span data-stu-id="58803-142">OperationBehaviorAttribute</span></span>](../../../../../docs/framework/wcf/diagnostics/wmi/operationbehaviorattribute.md)  
+ [<span data-ttu-id="503bf-142">OperationBehaviorAttribute</span><span class="sxs-lookup"><span data-stu-id="503bf-142">OperationBehaviorAttribute</span></span>](../../../../../docs/framework/wcf/diagnostics/wmi/operationbehaviorattribute.md)  
   
- [<span data-ttu-id="58803-143">PeerCustomResolverBindingElement</span><span class="sxs-lookup"><span data-stu-id="58803-143">PeerCustomResolverBindingElement</span></span>](../../../../../docs/framework/wcf/diagnostics/wmi/peercustomresolverbindingelement.md)  
+ [<span data-ttu-id="503bf-143">PeerCustomResolverBindingElement</span><span class="sxs-lookup"><span data-stu-id="503bf-143">PeerCustomResolverBindingElement</span></span>](../../../../../docs/framework/wcf/diagnostics/wmi/peercustomresolverbindingelement.md)  
   
- [<span data-ttu-id="58803-144">PeerResolverBindingElement</span><span class="sxs-lookup"><span data-stu-id="58803-144">PeerResolverBindingElement</span></span>](../../../../../docs/framework/wcf/diagnostics/wmi/peerresolverbindingelement.md)  
+ [<span data-ttu-id="503bf-144">PeerResolverBindingElement</span><span class="sxs-lookup"><span data-stu-id="503bf-144">PeerResolverBindingElement</span></span>](../../../../../docs/framework/wcf/diagnostics/wmi/peerresolverbindingelement.md)  
   
- [<span data-ttu-id="58803-145">PeerSecuritySettings</span><span class="sxs-lookup"><span data-stu-id="58803-145">PeerSecuritySettings</span></span>](../../../../../docs/framework/wcf/diagnostics/wmi/peersecuritysettings.md)  
+ [<span data-ttu-id="503bf-145">PeerSecuritySettings</span><span class="sxs-lookup"><span data-stu-id="503bf-145">PeerSecuritySettings</span></span>](../../../../../docs/framework/wcf/diagnostics/wmi/peersecuritysettings.md)  
   
- [<span data-ttu-id="58803-146">PeerTransportBindingElement</span><span class="sxs-lookup"><span data-stu-id="58803-146">PeerTransportBindingElement</span></span>](../../../../../docs/framework/wcf/diagnostics/wmi/peertransportbindingelement.md)  
+ [<span data-ttu-id="503bf-146">PeerTransportBindingElement</span><span class="sxs-lookup"><span data-stu-id="503bf-146">PeerTransportBindingElement</span></span>](../../../../../docs/framework/wcf/diagnostics/wmi/peertransportbindingelement.md)  
   
- [<span data-ttu-id="58803-147">PeerTransportSecuritySettings</span><span class="sxs-lookup"><span data-stu-id="58803-147">PeerTransportSecuritySettings</span></span>](../../../../../docs/framework/wcf/diagnostics/wmi/peertransportsecuritysettings.md)  
+ [<span data-ttu-id="503bf-147">PeerTransportSecuritySettings</span><span class="sxs-lookup"><span data-stu-id="503bf-147">PeerTransportSecuritySettings</span></span>](../../../../../docs/framework/wcf/diagnostics/wmi/peertransportsecuritysettings.md)  
   
- [<span data-ttu-id="58803-148">PnrpPeerResolverBindingElement</span><span class="sxs-lookup"><span data-stu-id="58803-148">PnrpPeerResolverBindingElement</span></span>](../../../../../docs/framework/wcf/diagnostics/wmi/pnrppeerresolverbindingelement.md)  
+ [<span data-ttu-id="503bf-148">PnrpPeerResolverBindingElement</span><span class="sxs-lookup"><span data-stu-id="503bf-148">PnrpPeerResolverBindingElement</span></span>](../../../../../docs/framework/wcf/diagnostics/wmi/pnrppeerresolverbindingelement.md)  
   
- [<span data-ttu-id="58803-149">PrivacyNoticeBindingElement</span><span class="sxs-lookup"><span data-stu-id="58803-149">PrivacyNoticeBindingElement</span></span>](../../../../../docs/framework/wcf/diagnostics/wmi/privacynoticebindingelement.md)  
+ [<span data-ttu-id="503bf-149">PrivacyNoticeBindingElement</span><span class="sxs-lookup"><span data-stu-id="503bf-149">PrivacyNoticeBindingElement</span></span>](../../../../../docs/framework/wcf/diagnostics/wmi/privacynoticebindingelement.md)  
   
- [<span data-ttu-id="58803-150">ReliableSessionBindingElement</span><span class="sxs-lookup"><span data-stu-id="58803-150">ReliableSessionBindingElement</span></span>](../../../../../docs/framework/wcf/diagnostics/wmi/reliablesessionbindingelement.md)  
+ [<span data-ttu-id="503bf-150">ReliableSessionBindingElement</span><span class="sxs-lookup"><span data-stu-id="503bf-150">ReliableSessionBindingElement</span></span>](../../../../../docs/framework/wcf/diagnostics/wmi/reliablesessionbindingelement.md)  
   
- [<span data-ttu-id="58803-151">SecurityBindingElement</span><span class="sxs-lookup"><span data-stu-id="58803-151">SecurityBindingElement</span></span>](../../../../../docs/framework/wcf/diagnostics/wmi/securitybindingelement.md)  
+ [<span data-ttu-id="503bf-151">SecurityBindingElement</span><span class="sxs-lookup"><span data-stu-id="503bf-151">SecurityBindingElement</span></span>](../../../../../docs/framework/wcf/diagnostics/wmi/securitybindingelement.md)  
   
- [<span data-ttu-id="58803-152">Servicio</span><span class="sxs-lookup"><span data-stu-id="58803-152">Service</span></span>](../../../../../docs/framework/wcf/diagnostics/wmi/service.md)  
+ [<span data-ttu-id="503bf-152">Servicio</span><span class="sxs-lookup"><span data-stu-id="503bf-152">Service</span></span>](../../../../../docs/framework/wcf/diagnostics/wmi/service.md)  
   
- [<span data-ttu-id="58803-153">ServiceAppDomain</span><span class="sxs-lookup"><span data-stu-id="58803-153">ServiceAppDomain</span></span>](../../../../../docs/framework/wcf/diagnostics/wmi/serviceappdomain.md)  
+ [<span data-ttu-id="503bf-153">ServiceAppDomain</span><span class="sxs-lookup"><span data-stu-id="503bf-153">ServiceAppDomain</span></span>](../../../../../docs/framework/wcf/diagnostics/wmi/serviceappdomain.md)  
   
- [<span data-ttu-id="58803-154">ServiceAuthorizationBehavior</span><span class="sxs-lookup"><span data-stu-id="58803-154">ServiceAuthorizationBehavior</span></span>](../../../../../docs/framework/wcf/diagnostics/wmi/serviceauthorizationbehavior.md)  
+ [<span data-ttu-id="503bf-154">ServiceAuthorizationBehavior</span><span class="sxs-lookup"><span data-stu-id="503bf-154">ServiceAuthorizationBehavior</span></span>](../../../../../docs/framework/wcf/diagnostics/wmi/serviceauthorizationbehavior.md)  
   
- [<span data-ttu-id="58803-155">ServiceBehaviorAttribute</span><span class="sxs-lookup"><span data-stu-id="58803-155">ServiceBehaviorAttribute</span></span>](../../../../../docs/framework/wcf/diagnostics/wmi/servicebehaviorattribute.md)  
+ [<span data-ttu-id="503bf-155">ServiceBehaviorAttribute</span><span class="sxs-lookup"><span data-stu-id="503bf-155">ServiceBehaviorAttribute</span></span>](../../../../../docs/framework/wcf/diagnostics/wmi/servicebehaviorattribute.md)  
   
- [<span data-ttu-id="58803-156">ServiceCredentials</span><span class="sxs-lookup"><span data-stu-id="58803-156">ServiceCredentials</span></span>](../../../../../docs/framework/wcf/diagnostics/wmi/servicecredentials.md)  
+ [<span data-ttu-id="503bf-156">ServiceCredentials</span><span class="sxs-lookup"><span data-stu-id="503bf-156">ServiceCredentials</span></span>](../../../../../docs/framework/wcf/diagnostics/wmi/servicecredentials.md)  
   
- [<span data-ttu-id="58803-157">ServiceDebugBehavior</span><span class="sxs-lookup"><span data-stu-id="58803-157">ServiceDebugBehavior</span></span>](../../../../../docs/framework/wcf/diagnostics/wmi/servicedebugbehavior.md)  
+ [<span data-ttu-id="503bf-157">ServiceDebugBehavior</span><span class="sxs-lookup"><span data-stu-id="503bf-157">ServiceDebugBehavior</span></span>](../../../../../docs/framework/wcf/diagnostics/wmi/servicedebugbehavior.md)  
   
- [<span data-ttu-id="58803-158">ServiceMetadataBehavior</span><span class="sxs-lookup"><span data-stu-id="58803-158">ServiceMetadataBehavior</span></span>](../../../../../docs/framework/wcf/diagnostics/wmi/servicemetadatabehavior.md)  
+ [<span data-ttu-id="503bf-158">ServiceMetadataBehavior</span><span class="sxs-lookup"><span data-stu-id="503bf-158">ServiceMetadataBehavior</span></span>](../../../../../docs/framework/wcf/diagnostics/wmi/servicemetadatabehavior.md)  
   
- [<span data-ttu-id="58803-159">ServiceSecurityAuditBehavior</span><span class="sxs-lookup"><span data-stu-id="58803-159">ServiceSecurityAuditBehavior</span></span>](../../../../../docs/framework/wcf/diagnostics/wmi/servicesecurityauditbehavior.md)  
+ [<span data-ttu-id="503bf-159">ServiceSecurityAuditBehavior</span><span class="sxs-lookup"><span data-stu-id="503bf-159">ServiceSecurityAuditBehavior</span></span>](../../../../../docs/framework/wcf/diagnostics/wmi/servicesecurityauditbehavior.md)  
   
- [<span data-ttu-id="58803-160">ServiceThrottlingBehavior</span><span class="sxs-lookup"><span data-stu-id="58803-160">ServiceThrottlingBehavior</span></span>](../../../../../docs/framework/wcf/diagnostics/wmi/servicethrottlingbehavior.md)  
+ [<span data-ttu-id="503bf-160">ServiceThrottlingBehavior</span><span class="sxs-lookup"><span data-stu-id="503bf-160">ServiceThrottlingBehavior</span></span>](../../../../../docs/framework/wcf/diagnostics/wmi/servicethrottlingbehavior.md)  
   
- [<span data-ttu-id="58803-161">ServiceTimeoutsBehavior</span><span class="sxs-lookup"><span data-stu-id="58803-161">ServiceTimeoutsBehavior</span></span>](../../../../../docs/framework/wcf/diagnostics/wmi/servicetimeoutsbehavior.md)  
+ [<span data-ttu-id="503bf-161">ServiceTimeoutsBehavior</span><span class="sxs-lookup"><span data-stu-id="503bf-161">ServiceTimeoutsBehavior</span></span>](../../../../../docs/framework/wcf/diagnostics/wmi/servicetimeoutsbehavior.md)  
   
- [<span data-ttu-id="58803-162">ServiceToEndpointAssociation</span><span class="sxs-lookup"><span data-stu-id="58803-162">ServiceToEndpointAssociation</span></span>](../../../../../docs/framework/wcf/diagnostics/wmi/servicetoendpointassociation.md)  
+ [<span data-ttu-id="503bf-162">ServiceToEndpointAssociation</span><span class="sxs-lookup"><span data-stu-id="503bf-162">ServiceToEndpointAssociation</span></span>](../../../../../docs/framework/wcf/diagnostics/wmi/servicetoendpointassociation.md)  
   
- [<span data-ttu-id="58803-163">SslStreamSecurityBindingElement</span><span class="sxs-lookup"><span data-stu-id="58803-163">SslStreamSecurityBindingElement</span></span>](../../../../../docs/framework/wcf/diagnostics/wmi/sslstreamsecuritybindingelement.md)  
+ [<span data-ttu-id="503bf-163">SslStreamSecurityBindingElement</span><span class="sxs-lookup"><span data-stu-id="503bf-163">SslStreamSecurityBindingElement</span></span>](../../../../../docs/framework/wcf/diagnostics/wmi/sslstreamsecuritybindingelement.md)  
   
- [<span data-ttu-id="58803-164">SymmetricSecurityBindingElement</span><span class="sxs-lookup"><span data-stu-id="58803-164">SymmetricSecurityBindingElement</span></span>](../../../../../docs/framework/wcf/diagnostics/wmi/symmetricsecuritybindingelement.md)  
+ [<span data-ttu-id="503bf-164">SymmetricSecurityBindingElement</span><span class="sxs-lookup"><span data-stu-id="503bf-164">SymmetricSecurityBindingElement</span></span>](../../../../../docs/framework/wcf/diagnostics/wmi/symmetricsecuritybindingelement.md)  
   
- [<span data-ttu-id="58803-165">SynchronousReceiveBehavior</span><span class="sxs-lookup"><span data-stu-id="58803-165">SynchronousReceiveBehavior</span></span>](../../../../../docs/framework/wcf/diagnostics/wmi/synchronousreceivebehavior.md)  
+ [<span data-ttu-id="503bf-165">SynchronousReceiveBehavior</span><span class="sxs-lookup"><span data-stu-id="503bf-165">SynchronousReceiveBehavior</span></span>](../../../../../docs/framework/wcf/diagnostics/wmi/synchronousreceivebehavior.md)  
   
- [<span data-ttu-id="58803-166">TcpConnectionPoolSettings</span><span class="sxs-lookup"><span data-stu-id="58803-166">TcpConnectionPoolSettings</span></span>](../../../../../docs/framework/wcf/diagnostics/wmi/tcpconnectionpoolsettings.md)  
+ [<span data-ttu-id="503bf-166">TcpConnectionPoolSettings</span><span class="sxs-lookup"><span data-stu-id="503bf-166">TcpConnectionPoolSettings</span></span>](../../../../../docs/framework/wcf/diagnostics/wmi/tcpconnectionpoolsettings.md)  
   
- [<span data-ttu-id="58803-167">TcpTransportBindingElement</span><span class="sxs-lookup"><span data-stu-id="58803-167">TcpTransportBindingElement</span></span>](../../../../../docs/framework/wcf/diagnostics/wmi/tcptransportbindingelement.md)  
+ [<span data-ttu-id="503bf-167">TcpTransportBindingElement</span><span class="sxs-lookup"><span data-stu-id="503bf-167">TcpTransportBindingElement</span></span>](../../../../../docs/framework/wcf/diagnostics/wmi/tcptransportbindingelement.md)  
   
- [<span data-ttu-id="58803-168">TextMessageEncodingBindingElement</span><span class="sxs-lookup"><span data-stu-id="58803-168">TextMessageEncodingBindingElement</span></span>](../../../../../docs/framework/wcf/diagnostics/wmi/textmessageencodingbindingelement.md)  
+ [<span data-ttu-id="503bf-168">TextMessageEncodingBindingElement</span><span class="sxs-lookup"><span data-stu-id="503bf-168">TextMessageEncodingBindingElement</span></span>](../../../../../docs/framework/wcf/diagnostics/wmi/textmessageencodingbindingelement.md)  
   
- [<span data-ttu-id="58803-169">TraceListener</span><span class="sxs-lookup"><span data-stu-id="58803-169">TraceListener</span></span>](../../../../../docs/framework/wcf/diagnostics/wmi/tracelistener.md)  
+ [<span data-ttu-id="503bf-169">TraceListener</span><span class="sxs-lookup"><span data-stu-id="503bf-169">TraceListener</span></span>](../../../../../docs/framework/wcf/diagnostics/wmi/tracelistener.md)  
   
- [<span data-ttu-id="58803-170">TraceListenerArgument</span><span class="sxs-lookup"><span data-stu-id="58803-170">TraceListenerArgument</span></span>](../../../../../docs/framework/wcf/diagnostics/wmi/tracelistenerargument.md)  
+ [<span data-ttu-id="503bf-170">TraceListenerArgument</span><span class="sxs-lookup"><span data-stu-id="503bf-170">TraceListenerArgument</span></span>](../../../../../docs/framework/wcf/diagnostics/wmi/tracelistenerargument.md)  
   
- [<span data-ttu-id="58803-171">TransactedBatchingBehavior</span><span class="sxs-lookup"><span data-stu-id="58803-171">TransactedBatchingBehavior</span></span>](../../../../../docs/framework/wcf/diagnostics/wmi/transactedbatchingbehavior.md)  
+ [<span data-ttu-id="503bf-171">TransactedBatchingBehavior</span><span class="sxs-lookup"><span data-stu-id="503bf-171">TransactedBatchingBehavior</span></span>](../../../../../docs/framework/wcf/diagnostics/wmi/transactedbatchingbehavior.md)  
   
- [<span data-ttu-id="58803-172">TransactionFlowAttribute</span><span class="sxs-lookup"><span data-stu-id="58803-172">TransactionFlowAttribute</span></span>](../../../../../docs/framework/wcf/diagnostics/wmi/transactionflowattribute.md)  
+ [<span data-ttu-id="503bf-172">TransactionFlowAttribute</span><span class="sxs-lookup"><span data-stu-id="503bf-172">TransactionFlowAttribute</span></span>](../../../../../docs/framework/wcf/diagnostics/wmi/transactionflowattribute.md)  
   
- [<span data-ttu-id="58803-173">TransactionFlowBindingElement</span><span class="sxs-lookup"><span data-stu-id="58803-173">TransactionFlowBindingElement</span></span>](../../../../../docs/framework/wcf/diagnostics/wmi/transactionflowbindingelement.md)  
+ [<span data-ttu-id="503bf-173">TransactionFlowBindingElement</span><span class="sxs-lookup"><span data-stu-id="503bf-173">TransactionFlowBindingElement</span></span>](../../../../../docs/framework/wcf/diagnostics/wmi/transactionflowbindingelement.md)  
   
- [<span data-ttu-id="58803-174">TransportBindingElement</span><span class="sxs-lookup"><span data-stu-id="58803-174">TransportBindingElement</span></span>](../../../../../docs/framework/wcf/diagnostics/wmi/transportbindingelement.md)  
+ [<span data-ttu-id="503bf-174">TransportBindingElement</span><span class="sxs-lookup"><span data-stu-id="503bf-174">TransportBindingElement</span></span>](../../../../../docs/framework/wcf/diagnostics/wmi/transportbindingelement.md)  
   
- [<span data-ttu-id="58803-175">TransportSecurityBindingElement</span><span class="sxs-lookup"><span data-stu-id="58803-175">TransportSecurityBindingElement</span></span>](../../../../../docs/framework/wcf/diagnostics/wmi/transportsecuritybindingelement.md)  
+ [<span data-ttu-id="503bf-175">TransportSecurityBindingElement</span><span class="sxs-lookup"><span data-stu-id="503bf-175">TransportSecurityBindingElement</span></span>](../../../../../docs/framework/wcf/diagnostics/wmi/transportsecuritybindingelement.md)  
   
- [<span data-ttu-id="58803-176">UseManagedPresentationBindingElement</span><span class="sxs-lookup"><span data-stu-id="58803-176">UseManagedPresentationBindingElement</span></span>](../../../../../docs/framework/wcf/diagnostics/wmi/usemanagedpresentationbindingelement.md)  
+ [<span data-ttu-id="503bf-176">UseManagedPresentationBindingElement</span><span class="sxs-lookup"><span data-stu-id="503bf-176">UseManagedPresentationBindingElement</span></span>](../../../../../docs/framework/wcf/diagnostics/wmi/usemanagedpresentationbindingelement.md)  
   
- [<span data-ttu-id="58803-177">WindowsStreamSecurityBindingElement</span><span class="sxs-lookup"><span data-stu-id="58803-177">WindowsStreamSecurityBindingElement</span></span>](../../../../../docs/framework/wcf/diagnostics/wmi/windowsstreamsecuritybindingelement.md)  
+ [<span data-ttu-id="503bf-177">WindowsStreamSecurityBindingElement</span><span class="sxs-lookup"><span data-stu-id="503bf-177">WindowsStreamSecurityBindingElement</span></span>](../../../../../docs/framework/wcf/diagnostics/wmi/windowsstreamsecuritybindingelement.md)  
   
- [<span data-ttu-id="58803-178">WSAT_TraceEvent</span><span class="sxs-lookup"><span data-stu-id="58803-178">WSAT_TraceEvent</span></span>](../../../../../docs/framework/wcf/diagnostics/wmi/wsat-traceevent.md)  
+ [<span data-ttu-id="503bf-178">WSAT_TraceEvent</span><span class="sxs-lookup"><span data-stu-id="503bf-178">WSAT_TraceEvent</span></span>](../../../../../docs/framework/wcf/diagnostics/wmi/wsat-traceevent.md)  
   
- [<span data-ttu-id="58803-179">WSAT_TraceProvider</span><span class="sxs-lookup"><span data-stu-id="58803-179">WSAT_TraceProvider</span></span>](../../../../../docs/framework/wcf/diagnostics/wmi/wsat-traceprovider.md)  
+ [<span data-ttu-id="503bf-179">WSAT_TraceProvider</span><span class="sxs-lookup"><span data-stu-id="503bf-179">WSAT_TraceProvider</span></span>](../../../../../docs/framework/wcf/diagnostics/wmi/wsat-traceprovider.md)  
   
- [<span data-ttu-id="58803-180">WSAT_TraceRecord</span><span class="sxs-lookup"><span data-stu-id="58803-180">WSAT_TraceRecord</span></span>](../../../../../docs/framework/wcf/diagnostics/wmi/wsat-tracerecord.md)  
+ [<span data-ttu-id="503bf-180">WSAT_TraceRecord</span><span class="sxs-lookup"><span data-stu-id="503bf-180">WSAT_TraceRecord</span></span>](../../../../../docs/framework/wcf/diagnostics/wmi/wsat-tracerecord.md)  
   
- [<span data-ttu-id="58803-181">XmlDictionaryReaderQuotas</span><span class="sxs-lookup"><span data-stu-id="58803-181">XmlDictionaryReaderQuotas</span></span>](../../../../../docs/framework/wcf/diagnostics/wmi/xmldictionaryreaderquotas.md)  
+ [<span data-ttu-id="503bf-181">XmlDictionaryReaderQuotas</span><span class="sxs-lookup"><span data-stu-id="503bf-181">XmlDictionaryReaderQuotas</span></span>](../../../../../docs/framework/wcf/diagnostics/wmi/xmldictionaryreaderquotas.md)  
   
- [<span data-ttu-id="58803-182">XmlSerializerOperationBehavior</span><span class="sxs-lookup"><span data-stu-id="58803-182">XmlSerializerOperationBehavior</span></span>](../../../../../docs/framework/wcf/diagnostics/wmi/xmlserializeroperationbehavior.md)
+ [<span data-ttu-id="503bf-182">XmlSerializerOperationBehavior</span><span class="sxs-lookup"><span data-stu-id="503bf-182">XmlSerializerOperationBehavior</span></span>](../../../../../docs/framework/wcf/diagnostics/wmi/xmlserializeroperationbehavior.md)
