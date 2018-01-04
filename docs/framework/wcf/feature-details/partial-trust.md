@@ -13,11 +13,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 893b8bb58c9d78d6880f95f2490c55c7d9e27483
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: ac76f092d5583519220d2d1b7a8d6d1bbb665632
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="partial-trust"></a>Confianza parcial
 Al iniciar con [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)], los llamadores de confianza parcial pueden tener acceso a los tipos y métodos públicos implementados en <xref:System.ServiceModel>, <xref:System.Runtime.Serialization>y <xref:System.ServiceModel.Web>. En esta sección se describen los escenarios que admiten el uso de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] dentro de una aplicación de confianza parcial, así como el subconjunto limitado de funcionalidad de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] disponible para las aplicaciones que se ejecutan con permisos de seguridad de acceso del código (CAS) reducidos.  
@@ -26,7 +27,7 @@ Al iniciar con [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)]
  [Escenarios de implementación admitidos](../../../../docs/framework/wcf/feature-details/supported-deployment-scenarios.md)  
  Describe los escenarios de confianza parcial principales para ejecutar [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
   
- [Compatibilidad de la característica de confianza parcial](../../../../docs/framework/wcf/feature-details/partial-trust-feature-compatibility.md)  
+ [Compatibilidad de característica de confianza parcial](../../../../docs/framework/wcf/feature-details/partial-trust-feature-compatibility.md)  
  Describe las características de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] que no se pueden utilizar con confianza parcial.  
   
  [Procedimientos recomendados de confianza parcial](../../../../docs/framework/wcf/feature-details/partial-trust-best-practices.md)  

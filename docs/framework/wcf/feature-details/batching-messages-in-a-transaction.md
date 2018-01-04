@@ -14,11 +14,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d9effe9b44a8e6f786103162930852de80ab4f8d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0587624dd3b9bc12c6e421343ad2cdc1da6b970f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="batching-messages-in-a-transaction"></a>Mensajes por lotes en una transacción
 Las aplicaciones en cola utilizan las transacciones para garantizar la exactitud y la entrega fiable de mensajes. Las transacciones, sin embargo, son operaciones caras y pueden reducir dramáticamente el rendimiento de los mensajes. Una manera de mejorar el rendimiento de los mensajes consiste en hacer que una aplicación lea y procese varios mensajes dentro de una transacción única. La balanza está entre el rendimiento y la recuperación: a medida que el número de mensajes de un lote aumenta, lo hace la cantidad de trabajo de recuperación requerida si se deshacen las transacciones. Es importante tener en cuenta la diferencia entre los mensajes por lotes en una transacción y en sesiones. A *sesión* es una agrupación de mensajes relacionados que son procesados por una única aplicación y se confirman como una sola unidad. Las sesiones se utilizan generalmente cuando se debe procesar conjuntamente un grupo de mensajes relacionados. Un ejemplo de esto es el sitio web de una tienda en línea. *Lotes* se utilizan para procesar varios, no relacionados con mensajes de la manera que aumenta el rendimiento de mensajes. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]las sesiones, consulte [agrupar los mensajes en cola en una sesión de](../../../../docs/framework/wcf/feature-details/grouping-queued-messages-in-a-session.md). Los mensajes de un lote también se procesan mediante una aplicación única y se confirman como una sola unidad, pero no puede haber ninguna relación entre los mensajes del lote. Los mensajes por lotes en una transacción son una optimización que no cambia cómo se ejecuta la aplicación.  
@@ -54,8 +55,8 @@ Las aplicaciones en cola utilizan las transacciones para garantizar la exactitud
   
  *Limitación del servicio* es un comportamiento de servicio que se utiliza para indicar el número máximo de llamadas simultáneas que pueden realizarse en el servicio. Cuando se utiliza con procesamiento por lotes, esto se interpreta como cuántos lotes simultáneos se pueden ejecutar. Si no se establece la limitación de peticiones del servicio, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] establece el número máximo de llamadas simultáneas en 16. De este modo, si se agregara el comportamiento de procesamiento por lotes de forma predeterminada, podrían estar activos un máximo de 16 lotes al mismo tiempo. Es mejor ajustar la limitación de peticiones del servicio y el procesamiento por lotes en función de su capacidad. Por ejemplo, si la cola tiene 100 mensajes y se desea un lote de 20, tener el número máximo de llamadas simultáneas establecido en 16 no sería útil porque, dependiendo del rendimiento, 16 transacciones podrían estar activas, parecido a no tener el procesamiento por lotes activado. Por consiguiente, al afinar para mejorar el rendimiento, no tenga el procesamiento por lotes simultáneo o tenga el procesamiento por lotes simultáneo con el tamaño correcto de limitación de peticiones del servicio.  
   
-## <a name="batching-and-multiple-endpoints"></a>Procesamiento por lotes y varios extremos  
- Un extremo está compuesto por una dirección y un contrato. Puede haber varios extremos que comparten el mismo enlace. Es posible que dos extremos compartan el mismo enlace y escuchen al Identificador uniforme de recursos (URI) o dirección de la cola. Si dos extremos están leyendo desde la misma cola, y se agrega el comportamiento del procesamiento por lotes con transacciones a ambos extremos, podría surgir un conflicto en los tamaños de lotes especificados. Esto se resuelve implementando el procesamiento por lotes utilizando el tamaño de lote mínimo especificado entre los dos comportamientos de procesamiento por lotes con transacciones. En este escenario, si uno de los extremos no especifica el procesamiento por lotes con transacciones, ambos extremos no usarán el procesamiento por lotes.  
+## <a name="batching-and-multiple-endpoints"></a>Procesamiento por lotes y varios puntos de conexión  
+ Un extremo está compuesto por una dirección y un contrato. Puede haber varios puntos de conexión que comparten el mismo enlace. Es posible que dos extremos compartan el mismo enlace y escuchen al Identificador uniforme de recursos (URI) o dirección de la cola. Si dos puntos de conexión están leyendo desde la misma cola, y se agrega el comportamiento del procesamiento por lotes con transacciones a ambos puntos de conexión, podría surgir un conflicto en los tamaños de lotes especificados. Esto se resuelve implementando el procesamiento por lotes utilizando el tamaño de lote mínimo especificado entre los dos comportamientos de procesamiento por lotes con transacciones. En este escenario, si uno de los extremos no especifica el procesamiento por lotes con transacciones, ambos extremos no usarán el procesamiento por lotes.  
   
 ## <a name="example"></a>Ejemplo  
  El siguiente ejemplo muestra cómo especificar el `TransactedBatchingBehavior` en un archivo de configuración.  
@@ -93,4 +94,4 @@ using (ServiceHost serviceHost = new ServiceHost(typeof(OrderProcessorService)))
   
 ## <a name="see-also"></a>Vea también  
  [Información general de colas](../../../../docs/framework/wcf/feature-details/queues-overview.md)  
- [Las colas en WCF](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)
+ [Colas en WCF](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)

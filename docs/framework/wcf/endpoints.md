@@ -14,11 +14,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a1771f5c69442ea4e95925339c28204663f78eb2
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0725c4f4275853cce958072a57d7f6ca4059e8cf
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-communication-foundation-endpoints"></a>puntos de conexión en Windows Communication Foundation
 Toda la comunicación con un [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] servicio se produce a través de la *extremos* del servicio. Los extremos proporcionan a los clientes acceso a la funcionalidad que un servicio [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] ofrece.  
@@ -46,10 +47,10 @@ Toda la comunicación con un [!INCLUDE[indigo1](../../../includes/indigo1-md.md)
  [Especificación de una dirección de punto de conexión](../../../docs/framework/wcf/specifying-an-endpoint-address.md)  
  Describe cómo se produce la comunicación con un servicio [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] a través de los extremos.  
   
- [Cómo: crear un extremo de servicio en configuración](../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)  
+ [Creación de un punto de conexión de servicio en configuración](../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)  
  Muestra cómo crear un punto de conexión de servicio en configuración.  
   
- [Cómo: crear un extremo de servicio en el código](../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-code.md)  
+ [Creación de un punto de conexión de servicio en código](../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-code.md)  
  Muestra cómo crear un punto de conexión de servicio en código.  
   
  [Publicación de puntos de conexión de metadatos](../../../docs/framework/wcf/publishing-metadata-endpoints.md)  

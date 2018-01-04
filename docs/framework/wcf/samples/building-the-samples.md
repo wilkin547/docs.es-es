@@ -13,11 +13,12 @@ caps.latest.revision: "33"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 26a47e6ea0d93d81275d7b3b87c88d0d3ab595df
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: d5de916aa5825625f29efe316571ad5085afb431
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="building-the-windows-communication-foundation-samples"></a>Compilación de los ejemplos de Windows Communication Foundation
 El [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ejemplos pueden crearse mediante Visual Studio 2010 o con el **msbuild** comando desde la línea de comandos. Ambos procedimientos se describen en este tema.  
@@ -48,8 +49,8 @@ El [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ejemplos pueden crear
 ## <a name="setup-batch-files-and-scripts"></a>Archivos de instalación por lotes y scripts  
  Los archivos por lotes Setup.exe y Cleanup.exe y los scripts deberían ejecutarse desde un símbolo del sistema de Visual Studio. Hay varios archivos de limpieza e instalación que realizan tareas que requieren privilegios administrativos y deberían iniciarse con privilegios de administrador.  
   
-## <a name="important-security-information-about-metadata-endpoints"></a>Información de seguridad importante sobre los extremos de metadatos  
- Para evitar la divulgación involuntaria de metadatos de servicio con información confidencial potencial, la configuración predeterminada para los servicios [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] deshabilita la publicación de metadatos. Este comportamiento es seguro de forma predeterminada, pero también quiere decir que no puede usar una herramienta de importación de metadatos (como Svcutil.exe) Para compilar el código de cliente necesario para llamar al servicio a menos que el comportamiento de publicación de metadatos del servicio se habilite de manera explícita en la configuración. Para que los experimentos con los ejemplos sean más sencillos, casi todos los ejemplos exponen un extremo de publicación de metadatos no seguro. Tales puntos de conexión pueden estar disponibles para los consumidores anónimos no autenticados y se debe tener cuidado antes de implementar tales puntos de conexión para garantizar que la revelación pública de un metadato del servicio sea la adecuada. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]la publicación de metadatos, consulte la [comportamiento de publicación de metadatos](../../../../docs/framework/wcf/samples/metadata-publishing-behavior.md) ejemplo. Consulte la [personalizado extremo de metadatos seguros](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md) ejemplo para obtener un ejemplo de protección de un extremo de metadatos.  
+## <a name="important-security-information-about-metadata-endpoints"></a>Información de seguridad importante sobre los puntos de conexión de metadatos  
+ Para evitar la divulgación involuntaria de metadatos de servicio con información confidencial potencial, la configuración predeterminada para los servicios [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] deshabilita la publicación de metadatos. Este comportamiento es seguro de forma predeterminada, pero también quiere decir que no puede usar una herramienta de importación de metadatos (como Svcutil.exe) Para compilar el código de cliente necesario para llamar al servicio a menos que el comportamiento de publicación de metadatos del servicio se habilite de manera explícita en la configuración. Para que los experimentos con los ejemplos sean más sencillos, casi todos los ejemplos exponen un punto de conexión de publicación de metadatos no seguro. Tales puntos de conexión pueden estar disponibles para los consumidores anónimos no autenticados y se debe tener cuidado antes de implementar tales puntos de conexión para garantizar que la revelación pública de un metadato del servicio sea la adecuada. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]la publicación de metadatos, consulte la [comportamiento de publicación de metadatos](../../../../docs/framework/wcf/samples/metadata-publishing-behavior.md) ejemplo. Consulte la [personalizado extremo de metadatos seguros](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md) ejemplo para obtener un ejemplo de protección de un extremo de metadatos.  
   
 ## <a name="exception-handling"></a>Control de excepciones  
  En general, estos ejemplos no incluyen el control de excepciones para mantener el código centrado en el asunto del ejemplo. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]control de excepciones, consulte la [espera excepciones](../../../../docs/framework/wcf/samples/expected-exceptions.md) ejemplo.  
@@ -91,5 +92,5 @@ El [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ejemplos pueden crear
     >  Para omitir la generación de la configuración de cliente de agregar el **/noConfig** opción.  
   
 ## <a name="see-also"></a>Vea también  
- [Ejecutar los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md)  
+ [Ejecución de los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md)  
  [Herramienta de utilidad de metadatos de ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)

@@ -14,11 +14,12 @@ caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 669c6be6756d79b30266c9fda0909fedc71aeae3
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 8f30ad7819a570f0149868502261f986f4dd8c0b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="differences-in-queuing-features-in-windows-vista-windows-server-2003-and-windows-xp"></a>Diferencias en las características de cola en Windows Vista, Windows Server 2003 y Windows XP
 Este tema resume las diferencias en la característica de colas [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] entre [!INCLUDE[wv](../../../../includes/wv-md.md)], [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] y [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
@@ -45,5 +46,5 @@ Este tema resume las diferencias en la característica de colas [!INCLUDE[indigo
  MSMQ en [!INCLUDE[wv](../../../../includes/wv-md.md)] admite lecturas transaccionales remotas. Esto permite que una aplicación que lea de una cola se hospede en un equipo diferente de aquel en el que se hospeda la cola. Así se garantiza la posibilidad de que un conjunto de servicios lea en una cola central, lo que aumenta el rendimiento total del sistema. También se garantiza que, si se produce un error al leer y procesar el mensaje, la transacción se revierte y el mensaje permanece en la cola para su posterior procesamiento.  
   
 ## <a name="see-also"></a>Vea también  
- [Uso de colas de mensajes no enviados para administrar los errores de transferencia de mensajes](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md)  
+ [Utilización de las colas de mensajes no enviados para administrar los errores en la transferencia de mensajes](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md)  
  [Control de mensajes dudosos](../../../../docs/framework/wcf/feature-details/poison-message-handling.md)

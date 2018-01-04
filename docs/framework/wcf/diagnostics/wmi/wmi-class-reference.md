@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7a74f1d7e70b8664df5022d6f9f42cf04b88f930
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0e221c8197b9713dd5f4e35114ada3c63f4978ef
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wmi-class-reference"></a>Referencia de clases WMI
 En esta sección se detallan todas las clases WMI expuestas por el proveedor de WMI [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)].  
@@ -38,7 +39,7 @@ En esta sección se detallan todas las clases WMI expuestas por el proveedor de 
   
  [BinaryMessageEncodingBindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/binarymessageencodingbindingelement.md)  
   
- [Enlace](../../../../../docs/framework/wcf/diagnostics/wmi/binding.md)  
+ [Enlaces](../../../../../docs/framework/wcf/diagnostics/wmi/binding.md)  
   
  [BindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/bindingelement.md)  
   
@@ -74,7 +75,7 @@ En esta sección se detallan todas las clases WMI expuestas por el proveedor de 
   
  [MessageEncodingBindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/messageencodingbindingelement.md)  
   
- [Tracelistenerargument](../../../../../docs/framework/wcf/diagnostics/wmi/msmqbindingelementbase.md)  
+ [MsmqBindingElementBase](../../../../../docs/framework/wcf/diagnostics/wmi/msmqbindingelementbase.md)  
   
  [MsmqIntegrationBindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/msmqintegrationbindingelement.md)  
   

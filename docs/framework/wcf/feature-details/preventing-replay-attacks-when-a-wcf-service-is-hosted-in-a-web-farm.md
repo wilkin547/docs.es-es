@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 383a93bee7a63bef966f4252ace13105d96ae505
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: ba1a511442fead369fca7ca1e04a26dfacdde53b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="preventing-replay-attacks-when-a-wcf-service-is-hosted-in-a-web-farm"></a>Prevenir ataques por repetición cuando un servicio WCF está hospedado en una granja web
 Cuando se usa seguridad de mensajes, WCF impide los ataques por repetición creando un NONCE a partir del mensaje entrante y comprobando la `InMemoryNonceCache` interna para ver si el NONCE generado está presente. Si lo está, el mensaje se descarta como respuesta. Cuando un servicio de WCF se hospeda en una granja de servidores web, como `InMemoryNonceCache` no se comparte entre los nodos de la granja de servidores web, el servicio es vulnerable a ataques mediante repetición.  Para mitigar este escenario WCF 4.5 proporciona un punto de extensibilidad que le permite implementar su propia memoria caché compartida de NONCE derivando una clase de la clase abstracta <xref:System.ServiceModel.Security.NonceCache>.  
@@ -26,5 +27,5 @@ Cuando se usa seguridad de mensajes, WCF impide los ataques por repetición crea
  Para implementar su propia caché compartida de NONCE, derive una clase de <xref:System.ServiceModel.Security.NonceCache> y reemplace los métodos <xref:System.ServiceModel.Security.NonceCache.CheckNonce%2A> y <xref:System.ServiceModel.Security.NonceCache.TryAddNonce%2A>. <xref:System.ServiceModel.Security.NonceCache.CheckNonce%2A> comprobará para ver si el NONCE especificado existe en la memoria caché. <xref:System.ServiceModel.Security.NonceCache.TryAddNonce%2A> intentará agregar un NONCE a la memoria caché. Una vez implementada la clase, puede enlazarla creando una instancia y asignándola a <xref:System.ServiceModel.Channels.LocalClientSecuritySettings.NonceCache%2A> para la detección de reproducción del lado cliente y a <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.NonceCache%2A> para la detección de reproducción del lado servidor. No hay compatibilidad con la configuración lista para usar para esta característica.  
   
 ## <a name="see-also"></a>Vea también  
- [Seguridad de mensajes](../../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)  
+ [Seguridad de los mensajes](../../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)  
  [SymmetricSecurityBindingElement](../../../../docs/framework/wcf/diagnostics/wmi/symmetricsecuritybindingelement.md)

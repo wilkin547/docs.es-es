@@ -20,11 +20,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cc4d6e3bb20cbe005ad7ce21ed37fe57c5d3466b
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 3fbd3b640e90ecf0ff5857bd33465e8c60135eac
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-configure-a-port-with-an-ssl-certificate"></a>Cómo: Configurar un puerto con un certificado SSL
 Cuando crea un [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] autohospedado con la clase <xref:System.ServiceModel.WSHttpBinding> que utiliza la seguridad de transporte, también debe configurar un puerto con un certificado X.509. Si no está creando un servicio autohospedado, puede hospedar su servicio en Servicios de Internet Information Server (IIS). [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Seguridad de transporte HTTP](../../../../docs/framework/wcf/feature-details/http-transport-security.md).  

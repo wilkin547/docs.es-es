@@ -16,11 +16,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7ed4bf8e86e727505d48e85bb55a88452217c76b
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: b4bd1dce4128e6f25294525f10226d98f732cd4e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-configure-wcf-service-to-interoperate-with-aspnet-web-service-clients"></a>Cómo: Configurar servicios WCF para interoperar con clientes de servicios web ASP.NET
 Para configurar un extremo de servicio de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] para que sea interoperable con clientes de servicios web [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)], utilice el tipo <xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType> como el tipo de enlace de su extremo de servicio.  
@@ -57,10 +58,10 @@ Para configurar un extremo de servicio de [!INCLUDE[indigo1](../../../../include
  [!code-xml[C_HowTo-WCFServiceAndASMXClient#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto-wcfserviceandasmxclient/common/app.config#1)]     
   
 ## <a name="see-also"></a>Vea también  
- [Cómo: crear un extremo de servicio en el código](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-code.md)  
- [Cómo: publicar los metadatos para un servicio mediante código](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md)  
+ [Creación de un punto de conexión de servicio en código](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-code.md)  
+ [Publicación de metadatos para un servicio mediante código](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md)  
  [Cómo especificar un enlace de servicio en la configuración](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md)  
- [Cómo: crear un extremo de servicio en configuración](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)  
- [Cómo: publicar los metadatos para un servicio mediante un archivo de configuración](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)  
+ [Creación de un punto de conexión de servicio en configuración](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)  
+ [Publicación de metadatos para un servicio mediante un archivo de configuración](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)  
  [Seguridad de transporte](../../../../docs/framework/wcf/feature-details/transport-security.md)  
- [Uso de los metadatos](../../../../docs/framework/wcf/feature-details/using-metadata.md)
+ [Utilización de los metadatos](../../../../docs/framework/wcf/feature-details/using-metadata.md)

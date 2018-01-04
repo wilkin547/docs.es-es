@@ -17,11 +17,12 @@ caps.latest.revision: "19"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 441b3a72d5b0a9e63d6093bc130335801503489e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ad5e459e7dc070b9412de860048c840f677421f4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="best-practices-for-security-in-wcf"></a>Procedimientos recomendados acerca de seguridad en WCF
 Las siguientes secciones enumeran los procedimientos recomendados que hay que tener en cuenta a la hora de crear aplicaciones seguras mediante [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]seguridad, consulte [consideraciones de seguridad](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md), [consideraciones de seguridad para datos](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md), y [consideraciones de seguridad con metadatos](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md).  
@@ -44,7 +45,7 @@ Las siguientes secciones enumeran los procedimientos recomendados que hay que te
  Para obtener información general de NTLM ataques de reenvío, vaya a [http://msdn.microsoft.com/msdnmag/issues/06/09/SecureByDesign/default.aspx](http://go.microsoft.com/fwlink/?LinkId=109571).  
   
 ## <a name="always-revert-after-impersonation"></a>Siempre revierta tras la suplantación  
- Al utilizar API que permiten la suplantación de un cliente, asegúrese de revertir a la identidad original. Por ejemplo, al utilizar la <xref:System.Security.Principal.WindowsIdentity> y <xref:System.Security.Principal.WindowsImpersonationContext>, utilice la instrucción `using` de C# o [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)]`Using`, como se muestra en el siguiente código. La clase <xref:System.Security.Principal.WindowsImpersonationContext> implementa la interfaz <xref:System.IDisposable> y, por consiguiente, Common Language Runtime (CLR) revierte automáticamente a la identidad original una vez que el código deja el bloque `using`.  
+ Al utilizar API que permiten la suplantación de un cliente, asegúrese de revertir a la identidad original. Por ejemplo, al utilizar el <xref:System.Security.Principal.WindowsIdentity> y <xref:System.Security.Principal.WindowsImpersonationContext>, usar C# `using` instrucción o [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] `Using` instrucción, como se muestra en el código siguiente. La clase <xref:System.Security.Principal.WindowsImpersonationContext> implementa la interfaz <xref:System.IDisposable> y, por consiguiente, Common Language Runtime (CLR) revierte automáticamente a la identidad original una vez que el código deja el bloque `using`.  
   
  [!code-csharp[c_SecurityBestPractices#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securitybestpractices/cs/source.cs#1)]
  [!code-vb[c_SecurityBestPractices#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securitybestpractices/vb/source.vb#1)]  
@@ -59,7 +60,7 @@ Las siguientes secciones enumeran los procedimientos recomendados que hay que te
  Para evitar la modificación de los metadatos publicados de un servicio, proteja el punto de conexión de intercambio de metadatos mediante seguridad de mensajes o de transporte. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Extremos de metadatos de publicación](../../../../docs/framework/wcf/publishing-metadata-endpoints.md) y [Cómo: publicar los metadatos para un servicio mediante código](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md).  
   
 ## <a name="ensure-use-of-local-issuer"></a>Asegure el uso de un emisor local  
- Si se especifica una dirección y un enlace del emisor para un enlace determinado, el emisor local no se utiliza para los extremos que utilizan ese enlace. Los clientes que esperan utilizar siempre el emisor local deberían asegurarse de que no utilizan dicho enlace o de que modifican el enlace de manera que la dirección del emisor sea null.  
+ Si se especifica una dirección y un enlace del emisor para un enlace determinado, el emisor local no se utiliza para los puntos de conexión que utilizan ese enlace. Los clientes que esperan utilizar siempre el emisor local deberían asegurarse de que no utilizan dicho enlace o de que modifican el enlace de manera que la dirección del emisor sea null.  
   
 ## <a name="saml-token-size-quotas"></a>Cuotas de tamaño de tokens de SAML  
  Cuando los tokens de Security Assertions Markup Language (SAML) se serializan en mensajes, cuando los emite un servicio de tokens de seguridad (STS) o cuando son presentados por clientes a servicios como parte de la autenticación, la cuota de tamaño máximo del mensaje debe ser suficientemente grande para alojar el token SAML y las otras partes del mensaje. En casos normales, las cuotas de tamaño del mensaje predeterminadas son suficientes. Sin embargo, en los casos en los que un token de SAML sea grande porque contiene cientos de notificaciones, se deberían incrementar las cuotas para alojar al token serializado. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]las cuotas, consulte [consideraciones de seguridad para datos](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md).  
@@ -69,5 +70,5 @@ Las siguientes secciones enumeran los procedimientos recomendados que hay que te
   
 ## <a name="see-also"></a>Vea también  
  [Consideraciones de seguridad](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)  
- [Consideraciones de seguridad de datos](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md)  
+ [Consideraciones de seguridad para datos](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md)  
  [Consideraciones de seguridad con metadatos](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)

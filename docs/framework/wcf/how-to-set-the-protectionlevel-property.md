@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6105b1b367f9f8cab1f2ba3a38b148038478c780
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: a9b90df85259dfe48f071ca2b4b8404cfe8e673e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-set-the-protectionlevel-property"></a>Cómo: Establecer la propiedad ProtectionLevel
 Puede establecer el nivel de protección aplicando un atributo adecuado y estableciendo la propiedad. Puede establecer la protección en el nivel del servicio para que afecte a todas las partes de cada mensaje o puede establecer la protección en los niveles cada vez más individuales, desde los métodos a las partes del mensaje. [!INCLUDE[crabout](../../../includes/crabout-md.md)]el `ProtectionLevel` propiedad, vea [nivel de protección descripción](../../../docs/framework/wcf/understanding-protection-level.md).  

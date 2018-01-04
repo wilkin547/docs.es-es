@@ -13,11 +13,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: dc6b3a056aaa7aa6cb0a57c72b9591393ca0aff2
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 920f2f85333f23d1b07b6a8ddf2a05279ee477ce
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-implement-a-client-application-that-uses-the-discovery-proxy-to-find-a-service"></a>Cómo: Implementar una aplicación cliente que utiliza el proxy de detección para buscar un servicio
 Este tema es el tercero de tres temas y describe cómo implementar un proxy de detección. En el tema anterior, [Cómo: implementar un servicio reconocible que se registra con el Proxy de detección](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md), que implementa un [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] servicio que se registra con el proxy de detección. En este tema, creará un cliente de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] que usará el proxy de detección para encontrar el servicio de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
@@ -37,7 +38,7 @@ Este tema es el tercero de tres temas y describe cómo implementar un proxy de d
     > [!NOTE]
     >  Este archivo se suele generar mediante una herramienta como Svcutil.exe. Dicha herramienta se proporciona en este tema para simplificar la tarea.  
   
-4.  Abra el archivo Program.cs y agregue el siguiente método. Este método toma una dirección del extremo y lo utiliza para inicializar el cliente del servicio (proxy).  
+4.  Abra el archivo Program.cs y agregue el siguiente método. Este método toma una dirección del punto de conexión y lo utiliza para inicializar el cliente del servicio (proxy).  
   
     ```  
     static void InvokeCalculatorService(EndpointAddress endpointAddress)  
@@ -292,6 +293,6 @@ namespace Microsoft.Samples.Discovery
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Información general sobre la detección WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)  
- [Cómo: implementar un Proxy de detección](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)  
- [Cómo: implementar un servicio reconocible que se registra con el Proxy de detección](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)
+ [Información general de Detección de WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)  
+ [Implementación de un proxy de detección](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)  
+ [Implementación de un servicio reconocible que se registra con el proxy de detección](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)

@@ -17,11 +17,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1ec4dc2d7f066d79b2cf54c3d474b47e769b626c
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: ee138c52c8cdd63137bf3c468ebbdd064d60d443
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-use-a-custom-user-name-and-password-validator"></a>Cómo utilizar un nombre de usuario personalizado y un validador de contraseñas
 De forma predeterminada, cuando un nombre de usuario y la contraseña se utilizan para la autenticación, [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] utiliza Windows para validar el nombre de usuario y la contraseña. Sin embargo, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] permite esquemas de autenticación de nombre y contraseña de usuario personalizada, también conocido como *validadores*. Para incorporar un nombre de usuario personalizado y un validador de contraseña, cree una clase que derive de <xref:System.IdentityModel.Selectors.UserNamePasswordValidator> y, a continuación, configúrela.  
@@ -128,5 +129,5 @@ De forma predeterminada, cuando un nombre de usuario y la contraseña se utiliza
   
 ## <a name="see-also"></a>Vea también  
  <xref:System.IdentityModel.Selectors.UserNamePasswordValidator>  
- [Cómo: usar el proveedor de pertenencia ASP.NET](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-membership-provider.md)  
+ [Uso del proveedor de pertenencia de ASP.NET](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-membership-provider.md)  
  [Autenticación](../../../../docs/framework/wcf/feature-details/authentication-in-wcf.md)

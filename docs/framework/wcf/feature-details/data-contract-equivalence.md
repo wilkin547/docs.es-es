@@ -17,11 +17,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7367cabecc18f32860e0a391ce5cf48d54503dc6
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 4059fa401d082f4408080cf5fd13f1331314a2d9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="data-contract-equivalence"></a>Equivalencia del contrato de datos
 Para que un cliente envíe correctamente datos de un cierto tipo a un servicio, o para que un servicio envíe correctamente datos a un cliente, el tipo enviado no tiene que existir necesariamente en el extremo receptor. El único requisito es que los contratos de datos de ambos tipos sean equivalentes. (A veces, una equivalencia estricta no es necesaria, como se describe en [versiones de contratos de datos](../../../../docs/framework/wcf/feature-details/data-contract-versioning.md).)  
@@ -72,6 +73,6 @@ Para que un cliente envíe correctamente datos de un cierto tipo a un servicio, 
 ## <a name="see-also"></a>Vea también  
  <xref:System.Runtime.Serialization.DataContractAttribute>  
  <xref:System.Runtime.Serialization.DataMemberAttribute>  
- [Orden del miembro de datos](../../../../docs/framework/wcf/feature-details/data-member-order.md)  
- [Los tipos conocidos de contrato de datos](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)  
- [Nombres de contrato de datos](../../../../docs/framework/wcf/feature-details/data-contract-names.md)
+ [Orden de los miembros de datos](../../../../docs/framework/wcf/feature-details/data-member-order.md)  
+ [Tipos conocidos de contratos de datos](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)  
+ [Nombres de contratos de datos](../../../../docs/framework/wcf/feature-details/data-contract-names.md)

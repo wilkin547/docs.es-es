@@ -13,14 +13,15 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0ef5406831e1bfaa9c1c4f959363bc8b26cd3820
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 8f19b228eadcf8dabfaba2fc31f4f49f1b4d149b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="context-exchange-protocol"></a>Protocolo de intercambio de contexto
-En esta sección se describe el protocolo de intercambio de contexto introducido en el lanzamiento de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] de [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)]. Este protocolo permite al canal de cliente que acepte un contexto proporcionado por un servicio y que lo aplique a todas las solicitudes posteriores a ese servicio enviado sobre la misma instancia del canal de cliente. La implementación del protocolo de intercambio de contexto puede utilizar uno de los dos mecanismos siguientes para propagar el contexto entre el servidor y el cliente: cookies de HTTP o un encabezado SOAP.  
+Esta sección describe el protocolo de intercambio de contexto introducido en [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] de la versión. Este protocolo permite al canal de cliente que acepte un contexto proporcionado por un servicio y que lo aplique a todas las solicitudes posteriores a ese servicio enviado sobre la misma instancia del canal de cliente. La implementación del protocolo de intercambio de contexto puede utilizar uno de los dos mecanismos siguientes para propagar el contexto entre el servidor y el cliente: cookies de HTTP o un encabezado SOAP.  
   
  El protocolo de intercambio de contexto se implementa en una capa de canal personalizada. El canal comunica el contexto a y desde el nivel de aplicación utilizando una propiedad <xref:System.ServiceModel.Channels.ContextMessageProperty>. Para la transmisión entre extremos, el valor del contexto se serializa como un encabezado SOAP en la capa de canal o convertido a o desde las propiedades de mensaje que representan una solicitud y respuesta HTTP. En el último caso, se espera que una de las capas del canal subyacentes convierta las propiedades de mensajes de solicitud y respuesta HTTP a y desde cookies HTTP, respectivamente. La opción del mecanismo utilizado para intercambiar el contexto se realiza mediante la propiedad <xref:System.ServiceModel.Channels.ContextExchangeMechanism> en el <xref:System.ServiceModel.Channels.ContextBindingElement>. Los valores válidos son `HttpCookie` o `SoapHeader`.  
   
@@ -61,7 +62,7 @@ En esta sección se describe el protocolo de intercambio de contexto introducido
   
  El valor del contexto debe protegerse contra modificaciones mientras esté en tránsito por la misma razón que se protegen los encabezados WS-Addressing; el encabezado se utiliza para determinar a dónde enviar la solicitud en el servicio. El encabezado `wsc:Context` se exige por consiguiente que esté firmado digitalmente o firmado y cifrado en el nivel de transporte o SOAP cuando el enlace ofrece la capacidad de protección de mensajes. Cuando se utilizan cookies HTTP para propagar contexto, deben protegerse utilizando la seguridad de transporte.  
   
- Los extremos de servicio que requieren compatibilidad con respecto al protocolo de intercambio de contexto pueden hacerlo explícito en la directiva publicada. Se han introducido dos nuevas aserciones de directivas para representar el requisito de que el cliente admita el protocolo de intercambio de contexto en el nivel de SOAP o de que habilite la compatibilidad con cookies HTTP. La generación de estas aserciones en la directiva en el servicio está controlada por el valor de la propiedad <xref:System.ServiceModel.Channels.ContextBindingElement.ContextExchangeMechanism%2A>, como se muestra a continuación:  
+ Los puntos de conexión de servicio que requieren compatibilidad con respecto al protocolo de intercambio de contexto pueden hacerlo explícito en la directiva publicada. Se han introducido dos nuevas aserciones de directivas para representar el requisito de que el cliente admita el protocolo de intercambio de contexto en el nivel de SOAP o de que habilite la compatibilidad con cookies HTTP. La generación de estas aserciones en la directiva en el servicio está controlada por el valor de la propiedad <xref:System.ServiceModel.Channels.ContextBindingElement.ContextExchangeMechanism%2A>, como se muestra a continuación:  
   
 -   Para <xref:System.ServiceModel.Channels.ContextExchangeMechanism.ContextSoapHeader>, se genera la siguiente aserción:  
   
@@ -78,4 +79,4 @@ En esta sección se describe el protocolo de intercambio de contexto introducido
     ```  
   
 ## <a name="see-also"></a>Vea también  
- [Guía de interoperabilidad de protocolos de servicios Web](../../../../docs/framework/wcf/feature-details/web-services-protocols-interoperability-guide.md)
+ [Guía de interoperabilidad de los protocolos de servicios web](../../../../docs/framework/wcf/feature-details/web-services-protocols-interoperability-guide.md)

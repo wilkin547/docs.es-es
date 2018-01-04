@@ -16,11 +16,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8f9cff53b598d4e477488bcb5b5e87be62e78bb9
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 1fba00b6b8aed8e27d5f16612bb77191f6674abe
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-service-that-requires-sessions"></a>Cómo crear un servicio que requiere sesiones
 Las sesiones crean un estado compartido entre dos o más puntos de conexión que habilita características útiles como las devoluciones de llamada, la seguridad de saltos múltiples y asociaciones entre clientes e instancias de servicio. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]las sesiones de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] las aplicaciones, vea [mediante sesiones](../../../../docs/framework/wcf/using-sessions.md).  
@@ -37,7 +38,7 @@ Las sesiones crean un estado compartido entre dos o más puntos de conexión que
   
     -   <xref:System.ServiceModel.SessionMode.NotAllowed?displayProperty=nameWithType> si este contrato no se debe ejecutar dentro de una sesión.  
   
-3.  Configure su extremo de servicio para que use un enlace que admita sesiones. El siguiente ejemplo de configuración muestra el uso de <xref:System.ServiceModel.WSDualHttpBinding?displayProperty=nameWithType>, que admite una sesión WS`-`ReliableMessaging.  
+3.  Configure su punto de conexión de servicio para que use un enlace que admita sesiones. El siguiente ejemplo de configuración muestra el uso de <xref:System.ServiceModel.WSDualHttpBinding?displayProperty=nameWithType>, que admite una sesión WS`-`ReliableMessaging.  
   
      [!code-xml[SCA.Session#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/sca.session/cs/hostapplication.exe.config#2)]   
   

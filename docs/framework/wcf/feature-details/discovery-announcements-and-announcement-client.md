@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a6da9c2e251a6592bb0af039d552d02e7e4fd3fd
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 67eab6a5b35e29fe3df09ab286090433d25e8ca3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="discovery-announcements-and-announcement-client"></a>Anuncios de detección y cliente de anuncio
 La característica de detección de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] permite a los componentes anunciar su disponibilidad. Si se configura para ello, un servicio envía anuncios de hola y de adiós. Clientes u otros componentes pueden realizar escuchas de dichos mensajes de anuncio y actuar de forma correspondiente. Esto proporciona un método alternativo para que los clientes sean consciente de los servicios. La funcionalidad de anuncios tiene varios usos. Por ejemplo, si los servicios acceden y dejan una red con frecuencia, los anuncios pueden ser una mejor alternativa que la búsqueda de servicios. Con este enfoque, el tráfico de red se reduce y el cliente puede obtener información sobre la presencia o salida del servicio en cuanto se reciban los anuncios.  

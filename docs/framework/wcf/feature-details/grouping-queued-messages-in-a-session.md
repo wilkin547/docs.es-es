@@ -17,11 +17,12 @@ caps.latest.revision: "30"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0b5817ded29836bcc6c998aaf293a7b2fd99170c
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: aba045456d61b5ad687f1030dca3c26b083cdb58
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="grouping-queued-messages-in-a-session"></a>Agrupación de los mensajes en cola de una sesión
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] proporciona una sesión que le permite agrupar un conjunto de mensajes relacionados para que una única aplicación receptora los procese. Los mensajes que forman parte de una sesión deben formar parte de la misma transacción. Dado que todos los mensajes forman parte de la misma transacción, si se producir un error al procesar un mensaje, se deshace la sesión completa. Las sesiones tienen comportamientos similares con respecto a las colas de mensajes no enviados y a las colas de mensajes dudosos. El conjunto de propiedades Time to Live (TTL) establecido en un enlace de cola configurado para las sesiones se aplica a la sesión como un conjunto. Si solo se envían algunos de los mensajes en la sesión antes de que el TTL expire, la sesión completa se coloca en la cola de mensajes no enviados. De manera similar, cuando se produce un error al enviar, en una sesión, los mensajes a una aplicación desde la cola de la aplicación, la sesión completa se coloca en la cola de mensajes dudosos (si está disponible).  
@@ -95,5 +96,5 @@ ms.lasthandoff: 12/02/2017
   
   
 ## <a name="see-also"></a>Vea también  
- [Las sesiones y colas](../../../../docs/framework/wcf/samples/sessions-and-queues.md)  
+ [Sesiones y colas](../../../../docs/framework/wcf/samples/sessions-and-queues.md)  
  [Información general de colas](../../../../docs/framework/wcf/feature-details/queues-overview.md)

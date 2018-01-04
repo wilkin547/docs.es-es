@@ -13,11 +13,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9371729dcac22b0611f8ea3ec29cc59daf5d67b8
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: ceb5cbedf30c8ec53bc815f9cd52f7bcb8a6e327
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="durable-duplex-correlation"></a>Correlación dúplex duradera
 La correlación dúplex duradera, también conocida como correlación de devolución de llamada, es útil cuando un servicio de flujo de trabajo tiene un requisito para enviar una devolución de llamada al autor de la llamada inicial. A diferencia del dúplex de WCF, la devolución de llamada puede producirse en cualquier momento en el futuro y no está vinculada a un mismo canal o a la duración del canal; el único requisito es que el autor de la llamada tenga un extremo activo que realice escuchas para el mensaje de devolución de llamada. Esto permite a dos servicios de flujo de trabajo comunicarse en una conversación de ejecución prolongada. En este tema, se proporciona información general sobre la correlación dúplex duradera.  

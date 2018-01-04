@@ -16,11 +16,12 @@ caps.latest.revision: "15"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 429136ab3e01f3f53f662db02bbac6096be48d11
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: dfda34c6bf165ebcecfd6d9a3710e785586d6cb1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="message-security-with-a-user-name-client"></a>Seguridad de los mensajes con un cliente de nombres de usuario
 La ilustración siguiente muestra un servicio y cliente de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] protegidos mediante seguridad del nivel de mensaje. La autenticación del servicio se realiza mediante un certificado X.509. El cliente se autentica utilizando un nombre de usuario y contraseña.  
@@ -138,6 +139,6 @@ La ilustración siguiente muestra un servicio y cliente de [!INCLUDE[indigo1](..
 ## <a name="see-also"></a>Vea también  
  [Información general sobre seguridad](../../../../docs/framework/wcf/feature-details/security-overview.md)  
  [Nombre de usuario de seguridad de mensaje](../../../../docs/framework/wcf/samples/message-security-user-name.md)  
- [Autenticación e identidad de servicio](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
+ [Identidad del servicio y autenticación](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
  [\<identidad >](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)  
  [Modelo de seguridad de Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

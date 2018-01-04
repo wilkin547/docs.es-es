@@ -16,11 +16,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 901b75e1683a830d32428685a33afb63ace29a8f
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 214e0de13ba362bf4f101a665e943a424c56363c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-configure-a-wcf-client-to-interoperate-with-wse30-services"></a>Cómo: Configurar un cliente WCF para interoperar con los servicios WSE3.0
 Los clientes de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] son compatibles en el nivel de conexión con Web Services Enhancements 3.0 para servicios de Microsoft .NET (WSE) cuando [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] se configura para utilizar la versión de agosto de 2004 de la especificación WS-Addressing.  

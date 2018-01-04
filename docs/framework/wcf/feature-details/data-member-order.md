@@ -17,11 +17,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d8a838b2dd2367bed3fb3ffa3248e67c23f7917d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 41eb191a08aba0f84a677087a3771b6d8e90efcd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="data-member-order"></a>Orden de los miembros de datos
 En algunas aplicaciones, es útil conocer el orden en el que se envían los datos de los distintos miembros de datos o en el que se espera recibir (como el orden en el que los datos aparecen en el XML serializado). A veces puede ser necesario cambiar este orden. En este tema se explican las reglas de la clasificación.  
@@ -73,5 +74,5 @@ En algunas aplicaciones, es útil conocer el orden en el que se envían los dato
   
 ## <a name="see-also"></a>Vea también  
  <xref:System.Runtime.Serialization.DataContractAttribute>  
- [Equivalencia del contrato de datos](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)  
- [Usar contratos de datos](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)
+ [Equivalencia de contratos de datos](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)  
+ [Utilización de contratos de datos](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)

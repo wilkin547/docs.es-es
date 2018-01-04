@@ -17,11 +17,12 @@ caps.latest.revision: "47"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 649fc2572e809238977ca3deb5740ada2dd5dc14
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 182e82eec107c170a793d0d48bcfe5493c04d618
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="getting-started-tutorial"></a>Tutorial de introducción
 Los temas contenidos en esta sección están pensados para ofrecerle una visión rápida a la programación en [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]. Están diseñados para ser completados en el orden en que aparecen en la lista incluida al final de este tema. Este tutorial constituye una introducción a los pasos necesarios para crear aplicaciones de cliente y servicio de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. Un servicio expone uno o más puntos de conexión, donde cada uno de ellos expone una o más operaciones de servicio. El *extremo* especifica una dirección donde se puede encontrar el servicio, un enlace que contiene la información que describe cómo un cliente debe comunicar con el servicio y un contrato que define la funcionalidad de un servicio proporciona el servicio a sus clientes.  

@@ -14,11 +14,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3b929765580f392b5fbd825a9c14bdc6f53c1e96
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 988216447e47345b6d863de6e46d0de9a025f068
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="hosting-in-internet-information-services"></a>Hospedaje en Internet Information Services
 Una opción para hospedar servicios de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] se encuentra dentro de una aplicación de Internet Information Services (IIS). Este modelo de hospedaje es similar al modelo utilizado por [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] y los servicios Web ASP.NET (ASMX).  
@@ -67,7 +68,7 @@ Una opción para hospedar servicios de [!INCLUDE[indigo1](../../../../includes/i
   
 ## <a name="see-also"></a>Vea también  
  [Extensión del hospedaje mediante ServiceHostFactory](../../../../docs/framework/wcf/extending/extending-hosting-using-servicehostfactory.md)  
- [Implementar un servicio WCF hospedado en servicios de Internet Information](../../../../docs/framework/wcf/feature-details/deploying-an-internet-information-services-hosted-wcf-service.md)  
+ [Implementación de un servicio WFC hospedado en Internet Information Services](../../../../docs/framework/wcf/feature-details/deploying-an-internet-information-services-hosted-wcf-service.md)  
  [Servicios WCF y ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)  
  [Procedimientos recomendados de hospedaje de Internet Information Services](../../../../docs/framework/wcf/feature-details/internet-information-services-hosting-best-practices.md)  
  [Configuración de Internet Information Services 7.0 para Windows Communication Foundation](../../../../docs/framework/wcf/feature-details/configuring-iis-for-wcf.md)  

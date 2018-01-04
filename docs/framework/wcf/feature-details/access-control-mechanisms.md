@@ -16,11 +16,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5cb3afec00fea5432329bd30fc993ac0cafd8b10
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 1d856af12269416b3303e617338165771ae4f2b8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="access-control-mechanisms"></a>Mecanismos de control de acceso
 Puede controlar el acceso de varias maneras con [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. Este tema aborda brevemente los diversos mecanismos y proporciona sugerencias sobre cuándo utilizar cada uno; está destinado a ayudarle a seleccionar el mecanismo correcto a utilizar. Las tecnologías de acceso están listadas por orden de complejidad. La más simple es <xref:System.Security.Permissions.PrincipalPermissionAttribute>; la más compleja es el modelo de identidad.  
@@ -35,7 +36,7 @@ Puede controlar el acceso de varias maneras con [!INCLUDE[indigo1](../../../../i
  [!INCLUDE[crabout](../../../../includes/crabout-md.md)]mediante el atributo, vea [Cómo: restringir el acceso con la clase PrincipalPermissionAttribute](../../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]identidad, vea [autenticación e identidad de servicio](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
   
 ## <a name="aspnet-membership-provider"></a>Proveedor de pertenencia a ASP.NET  
- Una característica de [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] es el proveedor de pertenencia. Aunque el proveedor de pertenencia no es técnicamente un mecanismo de control de acceso, permite controlar el acceso al servicio limitando el conjunto de posibles identidades que pueden tener acceso al extremo del servicio. La característica de pertenencia incluye una base de datos que se puede rellenar con combinaciones de nombre de usuario/contraseña que permitan a los usuarios de un sitio Web establecer cuentas en el sitio. Para tener acceso a un servicio que utiliza el proveedor de pertenencia, un usuario debe registrarse en con su nombre de usuario y contraseña.  
+ Una característica de [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] es el proveedor de pertenencia. Aunque el proveedor de pertenencia no es técnicamente un mecanismo de control de acceso, permite controlar el acceso al servicio limitando el conjunto de posibles identidades que pueden tener acceso al punto de conexión del servicio. La característica de pertenencia incluye una base de datos que se puede rellenar con combinaciones de nombre de usuario/contraseña que permitan a los usuarios de un sitio Web establecer cuentas en el sitio. Para tener acceso a un servicio que utiliza el proveedor de pertenencia, un usuario debe registrarse en con su nombre de usuario y contraseña.  
   
 > [!NOTE]
 >  Primero debe rellenar la base de datos utilizando la característica [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] antes de que un servicio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] pueda utilizarla para los propósitos de la autorización.  
@@ -70,7 +71,7 @@ Puede controlar el acceso de varias maneras con [!INCLUDE[indigo1](../../../../i
 ## <a name="see-also"></a>Vea también  
  <xref:System.Security.Permissions.PrincipalPermissionAttribute>  
  [Cómo restringir el acceso con la clase PrincipalPermissionAttribute Class](../../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md)  
- [Cómo: utilizar el proveedor de funciones de ASP.NET con un servicio](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md)  
- [Cómo: utilizar el proveedor de funciones de administrador de autorización de ASP.NET con un servicio](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-authorization-manager-role-provider-with-a-service.md)  
+ [Uso del proveedor de funciones ASP.NET con un servicio](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md)  
+ [Uso del proveedor de funciones del administrador de autorización de ASP.NET con un servicio](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-authorization-manager-role-provider-with-a-service.md)  
  [Administración de notificaciones y autorización con el modelo de identidad](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)  
  [Delegación y suplantación](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)

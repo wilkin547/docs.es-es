@@ -17,11 +17,12 @@ caps.latest.revision: "14"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: b0a29b59b6b2f7b8dd3a430b2395b18c1e4f83fd
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 34be2fbc5b8148d7bfdeb5e5d07e5b73ac89a97e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="certificate-validation-differences-between-https-ssl-over-tcp-and-soap-security"></a>Diferencias en la validación de certificados entre HTTPS, SSL a través de TCP, y seguridad SOAP
 Puede utilizar los certificados en [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] con seguridad de la capa del mensaje (SOAP) además de la seguridad de la capa de transporte (TLS) a través de HTTP (HTTPS) o TCP. En este tema se describen las diferencias en la manera como se validan tales certificados.  
@@ -58,4 +59,4 @@ Puede utilizar los certificados en [!INCLUDE[indigo1](../../../../includes/indig
   
 ## <a name="see-also"></a>Vea también  
  <xref:System.Net.Security.RemoteCertificateValidationCallback>  
- [Trabajar con certificados](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+ [Trabajo con certificados](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)

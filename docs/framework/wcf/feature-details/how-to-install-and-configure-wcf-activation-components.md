@@ -14,11 +14,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ee57276efda7edcc464c300e2f1d100b6a7c9109
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 78c63fe58872097058292a8b100b376959a2a0b2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-install-and-configure-wcf-activation-components"></a>Cómo instalar y configurar los componentes de activación de WFC
 En este tema se describen los pasos necesarios para configurar Windows Process Activation Service (también conocido como WAS) en [!INCLUDE[wv](../../../../includes/wv-md.md)] para hospedar servicios de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] que no se comunican sobre protocolos de red HTTP. Las siguientes secciones describen los pasos para realizar esta configuración:  
@@ -110,7 +111,7 @@ En este tema se describen los pasos necesarios para configurar Windows Process A
     >  Este comando es una sola línea de texto.  
   
 ## <a name="see-also"></a>Vea también  
- [Activación de TCP](../../../../docs/framework/wcf/samples/tcp-activation.md)  
- [Activación de MSMQ](../../../../docs/framework/wcf/samples/msmq-activation.md)  
- [Activación de canalización con nombre](../../../../docs/framework/wcf/samples/namedpipe-activation.md)  
+ [Activación TCP](../../../../docs/framework/wcf/samples/tcp-activation.md)  
+ [Activación MSMQ](../../../../docs/framework/wcf/samples/msmq-activation.md)  
+ [Activación NamedPipe](../../../../docs/framework/wcf/samples/namedpipe-activation.md)  
  [Características de hospedaje de Windows Server App Fabric](http://go.microsoft.com/fwlink/?LinkId=201276)

@@ -13,11 +13,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3e6543f1faec5d3298c9a2b825b3a016eb5e7d09
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: c74f95fba492b677d3b1702d090c7a055bc5f1ff
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="hosting-in-a-managed-application"></a>Hospedaje en una aplicación administrada
 Los servicios de[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] se pueden hospedar en cualquier aplicación de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] . Los servicios autohospedados constituyen la opción de hospedaje más flexible porque es la que requiere una menor infraestructura para su implementación. Sin embargo, también es la opción de hospedaje menos robusta, porque las aplicaciones administradas no proporcionan las características de administración y hospedaje avanzadas de otras opciones de hospedaje de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], como Internet Information Services (IIS) y servicios de Windows.  

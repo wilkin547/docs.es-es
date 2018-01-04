@@ -16,11 +16,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 684d9bcf2e4787457a6ef3251e0202e1559561b5
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 14b045ef55ac0b6d76bb06e711b4134d54b3d61f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-export-metadata-from-service-endpoints"></a>Cómo: Exportar metadatos desde puntos de conexión de servicio
 En este tema se explica cómo exportar los metadatos desde los puntos de conexión de servicio.  
@@ -66,6 +67,6 @@ En este tema se explica cómo exportar los metadatos desde los puntos de conexi�
  Al compilar Program.cs, haga referencia a System.ServiceModel.dll.  
   
 ## <a name="see-also"></a>Vea también  
- [Introducción a la arquitectura de metadatos](../../../../docs/framework/wcf/feature-details/metadata-architecture-overview.md)  
- [Uso de los metadatos](../../../../docs/framework/wcf/feature-details/using-metadata.md)  
- [Los puntos de conexión: Direcciones, enlaces y contratos](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)
+ [Información general de la arquitectura de metadatos](../../../../docs/framework/wcf/feature-details/metadata-architecture-overview.md)  
+ [Utilización de los metadatos](../../../../docs/framework/wcf/feature-details/using-metadata.md)  
+ [Puntos de conexión: direcciones, enlaces y contratos](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)

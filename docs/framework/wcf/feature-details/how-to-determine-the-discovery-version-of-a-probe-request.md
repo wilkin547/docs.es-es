@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 383d96e661ca7872108b40f69be86ef4e1ca63b5
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0f51f48d6eefcc0f8ae5129526477d6e2a5b2385
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-todetermine-the-discovery-version-of-a-probe-request"></a>Cómo: determinar la versión de detección de una solicitud de sondeo
 Un proxy de detección puede exponer varios puntos de conexión de detección mediante distintas versiones de detección. Cuando llega una solicitud de sondeo multidifusión UDP al proxy, este debe responder con un mensaje de supresión de multidifusión. Para ello, se debe conocer la versión de detección de la solicitud.  
@@ -34,5 +35,5 @@ Un proxy de detección puede exponer varios puntos de conexión de detección me
   
 ## <a name="see-also"></a>Vea también  
  <xref:System.ServiceModel.Discovery.Configuration.AnnouncementEndpointElement.DiscoveryVersion%2A>  
- [Implementar a un Proxy de detección](../../../../docs/framework/wcf/feature-details/implementing-a-discovery-proxy.md)  
- [Ejemplo de Proxy de detección](../../../../docs/framework/wcf/samples/discovery-proxy-sample.md)
+ [Implementación de un proxy de detección](../../../../docs/framework/wcf/feature-details/implementing-a-discovery-proxy.md)  
+ [Ejemplo de proxy de detección](../../../../docs/framework/wcf/samples/discovery-proxy-sample.md)

@@ -13,11 +13,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b57139fdf2a07f2d37bc337a041704eee174328e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 24456bbbefe305a3e9620e5396c8d300163e00d4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-workflow-service-with-messaging-activities"></a>Cómo: Crear un servicio de flujo de trabajo con actividades de mensajería
 En este tema, se describe cómo crear un servicio de flujo de trabajo simple mediante actividades de mensajería. Este tema se centra en los sistemas de creación de un servicio de flujo de trabajo compuesto solo por actividades de mensajería. En un servicio real, el flujo de trabajo contiene muchas otras actividades. El servicio implementa una operación denominada Eco, que toma una cadena y la devuelve al autor de la llamada. Este tema es el primero en una serie de dos temas. El siguiente tema [Cómo: obtener acceso a un servicio desde un flujo de trabajo de aplicación](../../../../docs/framework/wcf/feature-details/how-to-access-a-service-from-a-workflow-application.md) describe cómo crear una aplicación de flujo de trabajo que puede llamar al servicio creado en este tema.  
@@ -101,5 +102,5 @@ En este tema, se describe cómo crear un servicio de flujo de trabajo simple med
   
 ## <a name="see-also"></a>Vea también  
  [Servicios de flujo de trabajo](../../../../docs/framework/wcf/feature-details/workflow-services.md)  
- [Hospedar información general de servicios de flujo de trabajo](../../../../docs/framework/wcf/feature-details/hosting-workflow-services-overview.md)  
- [Las actividades de mensajería](../../../../docs/framework/wcf/feature-details/messaging-activities.md)
+ [Hospedaje de información general de servicios de flujo de trabajo](../../../../docs/framework/wcf/feature-details/hosting-workflow-services-overview.md)  
+ [Actividades de mensajería](../../../../docs/framework/wcf/feature-details/messaging-activities.md)

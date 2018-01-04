@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c7d6aa8d695dd6fc79b23e6cbb69bf523ef680f1
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 33f093beb022804bbdbccf1177404e128d198dd1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="data-member-default-values"></a>Valores predeterminados de los miembros de datos
 En el [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], tipos tienen un concepto de *valores predeterminados*. Por ejemplo, para cualquier tipo de referencia el valor predeterminado es `null`, y para un tipo entero es cero. En ocasiones es deseable omitir un miembro de datos de los datos serializados cuando está establecido en su valor predeterminado. Dado que el miembro tiene un valor predeterminado, no es necesario serializar un valor real; esto es una ventaja en cuanto al rendimiento.  

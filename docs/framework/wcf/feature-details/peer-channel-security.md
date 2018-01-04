@@ -13,11 +13,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: edb53e6cd234a059ebd3e7ddff9aaa258ae6027b
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 8d9b63e4cb056cf72f2e7b4796883f3fc2873a49
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="peer-channel-security"></a>Seguridad del canal del mismo nivel
 El canal del mismo nivel admite varios tipos de aplicaciones distribuidas que dependen de la mensajería entre varias entidades. Algunos ejemplos incluyen la distribución del contenido a escala de Internet, donde una fuente de confianza distribuye contenido (como multimedia o actualizaciones de software), un grupo de amigos intercambian música y fotos, o un equipo de compañeros de trabajo editan conjuntamente un documento. Cada uno de estos escenarios requiere un modelo de seguridad único. El modelo de seguridad del canal del mismo nivel está diseñado para resolver estos escenarios y proporciona un modelo de seguridad robusto para las necesidades respectivas de los diferentes modelos de identidad, autenticación y autorización.  
@@ -44,6 +45,6 @@ El canal del mismo nivel admite varios tipos de aplicaciones distribuidas que de
  El canal del mismo nivel no requiere un modelo de identidad concreto siempre y cuando la aplicación elija uno de los tipos de token admitidos. Las aplicaciones poseen completamente el ciclo de vida de estas identidades y decisiones de autenticación.  
   
 ## <a name="see-also"></a>Vea también  
- [Proteger las aplicaciones de canal del mismo nivel](../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md)  
+ [Protección de las aplicaciones de canal del mismo nivel](../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md)  
  [Conceptos del canal del mismo nivel](../../../../docs/framework/wcf/feature-details/peer-channel-concepts.md)  
  [Creación de una aplicación de canal del mismo nivel](../../../../docs/framework/wcf/feature-details/building-a-peer-channel-application.md)

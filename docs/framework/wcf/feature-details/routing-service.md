@@ -13,11 +13,12 @@ caps.latest.revision: "13"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: a4f58c5124e229f1692dabbb0abded0e21a346f7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a7214a14b11ae1f91906c8d2140bc82836988390
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="routing-service"></a>Servicio de enrutamiento
 El Servicio de enrutamiento es un intermediario SOAP genérico que actúa como un enrutador de mensajes. La funcionalidad principal del servicio de enrutamiento es la capacidad de enrutar mensajes según su contenido, lo que permite reenviar un mensaje a un extremo de cliente en función de un valor dentro del propio mensaje, en el encabezado o el cuerpo del mensaje.  
@@ -99,7 +100,7 @@ El Servicio de enrutamiento es un intermediario SOAP genérico que actúa como u
   
  [!INCLUDE[crabout](../../../../includes/crabout-md.md)]control de errores, vea [Introducción enrutamiento](../../../../docs/framework/wcf/feature-details/routing-introduction.md).  
   
-## <a name="backup-endpoints"></a>Extremos de reserva  
+## <a name="backup-endpoints"></a>puntos de conexión de reserva  
  Además de los extremos de cliente de destino asociados a cada definición de filtro en la tabla de filtros, también puede crear una lista de extremos de reserva a los que se enrutará el mensaje en caso de que se produzca un error de la transmisión. Si se produce un error y se define una lista de reserva para la entrada del filtro, el servicio de enrutamiento intentará enviar el mensaje al primer extremo definido en la lista. Si este intento de transmisión no se realiza correctamente, el servicio probará el punto de conexión siguiente, y continuará con este proceso hasta que el intento de transmisión sea correcto, devuelva un error no relacionado con la transmisión o todos los puntos de conexión de la lista de reserva hayan devuelto un error de la transmisión.  
   
  [!INCLUDE[crabout](../../../../includes/crabout-md.md)]copia de seguridad de los puntos de conexión, consulte [enrutamiento Introducción](../../../../docs/framework/wcf/feature-details/routing-introduction.md) y [filtros de mensajes](../../../../docs/framework/wcf/feature-details/message-filters.md).  
@@ -117,5 +118,5 @@ El Servicio de enrutamiento es un intermediario SOAP genérico que actúa como u
   
 ## <a name="see-also"></a>Vea también  
  [Introducción al enrutamiento](../../../../docs/framework/wcf/feature-details/routing-introduction.md)  
- [Enrutar contratos](../../../../docs/framework/wcf/feature-details/routing-contracts.md)  
+ [Enrutamiento de contratos](../../../../docs/framework/wcf/feature-details/routing-contracts.md)  
  [Filtros de mensajes](../../../../docs/framework/wcf/feature-details/message-filters.md)

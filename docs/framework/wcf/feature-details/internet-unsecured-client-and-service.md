@@ -16,11 +16,12 @@ caps.latest.revision: "17"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: cd7cc9da457424dede6f62ecefca8cee0d94fb88
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b202c4d67b48a9559afe035dc6b7bc95f6cc7779
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="internet-unsecured-client-and-service"></a>Cliente y servicio de Internet no protegidos
 La ilustración siguiente muestra un ejemplo de un cliente y servicio público, no seguro [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
@@ -120,6 +121,6 @@ La ilustración siguiente muestra un ejemplo de un cliente y servicio público, 
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Escenarios comunes de seguridad](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md)  
+ [Escenarios de seguridad comunes](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md)  
  [Información general sobre seguridad](../../../../docs/framework/wcf/feature-details/security-overview.md)  
  [Modelo de seguridad de Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
