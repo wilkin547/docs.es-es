@@ -13,11 +13,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 32c452042ffee0a09143042900d24b7429234bec
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 65bbc7d8b6b4cb74be12e9460b173e73e1873765
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="udp-activation"></a>Activación UDP
 En este ejemplo se basa en el [transporte: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) ejemplo. Extiende la [transporte: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) ejemplo para admitir la activación de procesos mediante Windows Process Activation Service (WAS).  
@@ -63,7 +64,7 @@ En este ejemplo se basa en el [transporte: UDP](../../../../docs/framework/wcf/s
 ```  
   
 ### <a name="protocol-listener"></a>Agente de escucha de protocolo  
- El agente de escucha del protocolo UDP es un módulo dentro del activador de protocolo que realiza escuchas en un extremo de UDP en nombre de la aplicación virtual. Se implementa en la clase `UdpSocketListener`. El extremo se representa como `IPEndpoint` para lo que el número de puerto se extrae del enlace del protocolo para el sitio.  
+ El agente de escucha del protocolo UDP es un módulo dentro del activador de protocolo que realiza escuchas en un punto de conexión de UDP en nombre de la aplicación virtual. Se implementa en la clase `UdpSocketListener`. El extremo se representa como `IPEndpoint` para lo que el número de puerto se extrae del enlace del protocolo para el sitio.  
   
 ### <a name="control-service"></a>Servicio de control  
  En este ejemplo, utilizamos [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] para comunicarse entre el activador y el proceso de trabajo de WAS. El servicio que reside en el activador se denomina "servicio de control".  

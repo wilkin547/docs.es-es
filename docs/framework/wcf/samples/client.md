@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: def4536fb40820372bf473d1752bb73d525db2e4
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 11a02fc857fa3c03b11b549013550e557933820e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="client"></a>Cliente
 Esta sección contiene ejemplos que muestran las aplicaciones cliente de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
@@ -35,10 +36,10 @@ Esta sección contiene ejemplos que muestran las aplicaciones cliente de [!INCLU
  [Excepciones esperadas](../../../../docs/framework/wcf/samples/expected-exceptions.md)  
  Muestra cómo detectar las excepciones esperadas al utilizar un cliente especificado.  
   
- [Recuperar metadatos](../../../../docs/framework/wcf/samples/retrieve-metadata.md)  
+ [Recuperación de metadatos](../../../../docs/framework/wcf/samples/retrieve-metadata.md)  
  Muestra cómo implementar un cliente que dinámicamente recupere los metadatos de un servicio para elegir un punto de conexión con el que comunicar.  
   
- [Evitar problemas con la instrucción Using](../../../../docs/framework/wcf/samples/avoiding-problems-with-the-using-statement.md)  
+ [Evitar problemas mediante una declaración de instrucción](../../../../docs/framework/wcf/samples/avoiding-problems-with-the-using-statement.md)  
  Muestra cómo no debería utilizar la instrucción de C# "using" para limpiar automáticamente los recursos al emplear un cliente especificado.  
   
  [Cliente con tipo](../../../../docs/framework/wcf/samples/typed-client.md)  

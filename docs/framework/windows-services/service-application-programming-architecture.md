@@ -25,11 +25,12 @@ caps.latest.revision: "15"
 author: ghogen
 ms.author: ghogen
 manager: douge
-ms.openlocfilehash: e9c16f2e603a3ce9bbc59be4e01aa492239d2c63
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 2d44ee323040346437261b51fddb707a30d1de6c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="service-application-programming-architecture"></a>Arquitectura de programación de aplicaciones de servicio
 Las aplicaciones de servicio de Windows se basan en una clase que hereda de la <xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType> clase. Reemplace los métodos de esta clase y definir la funcionalidad de ellos determinar cómo se comporta el servicio.  
@@ -76,5 +77,5 @@ Las aplicaciones de servicio de Windows se basan en una clase que hereda de la <
  También puede utilizar un componente denominado el <xref:System.ServiceProcess.ServiceController> comunicarse y controlar el comportamiento de un servicio existente.  
   
 ## <a name="see-also"></a>Vea también  
- [Introducción a las aplicaciones de servicio de Windows](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  
- [Cómo: crear servicios de Windows](../../../docs/framework/windows-services/how-to-create-windows-services.md)
+ [Introducción a las aplicaciones de servicios de Windows](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  
+ [Creación de servicios de Windows](../../../docs/framework/windows-services/how-to-create-windows-services.md)

@@ -12,11 +12,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1e820815a7047d91065db5308cc289f063191511
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: db9f09236764697aff4e57ace593827193c6e07d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-custom-instance-store"></a>Cómo: Crear un almacén de instancias personalizado
 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] contiene <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>, un almacén de instancias que usa SQL Server para conservar datos del flujo de trabajo. Si la aplicación necesita conservar los datos del flujo de trabajo en otro medio, como una base de datos diferente o un sistema de archivos, puede implementar un almacén de instancias personalizado. Un almacén de instancias personalizado se crea extendiendo la clase <xref:System.Runtime.DurableInstancing.InstanceStore> abstracta e implementando los métodos necesarios para la implementación. Para una implementación completa de un almacén de instancias personalizado, consulte el [proceso de compra corporativa](../../../docs/framework/windows-workflow-foundation/samples/corporate-purchase-process.md) ejemplo.  

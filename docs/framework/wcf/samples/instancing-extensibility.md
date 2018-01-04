@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8d34b58b3320778dba9cdc638e86e39f0c26057b
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: aa453d2efe028e96283c9506ed371c6dd0c30e35
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="instancing-extensibility"></a>Extensibilidad de creación de instancias
 Esta sección contiene ejemplos que muestran la creación personalizada de instancias.  
@@ -26,7 +27,7 @@ Esta sección contiene ejemplos que muestran la creación personalizada de insta
  [Contexto de instancia duradera](../../../../docs/framework/wcf/samples/durable-instance-context.md)  
  Muestra cómo personalizar el tiempo de ejecución de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] para habilitar los contextos de la instancia duraderos.  
   
- [Duración personalizados](../../../../docs/framework/wcf/samples/custom-lifetime.md)  
+ [Vigencia personalizada](../../../../docs/framework/wcf/samples/custom-lifetime.md)  
  Muestra cómo escribir una extensión de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] para proporcionar servicios de duración personalizados para las instancias de servicio de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] compartidas.  
   
  [Creación de instancias de inicialización](../../../../docs/framework/wcf/samples/instancing-initialization.md)  

@@ -13,14 +13,15 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cbcef9ebe1b4876e429da97b3e217dd32286e4d6
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: cf8e7b37b6430be1eed9bc037bfa06aeb825b866
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="hierarchical-configuration-model"></a>Modelo de configuración jerárquica
-En este ejemplo se muestra cómo implementar una jerarquía de archivos de configuración para los servicios. También muestra cómo se heredan los enlaces, los comportamientos de servicio y los comportamientos de extremo de los niveles superiores de la jerarquía.  
+En este ejemplo se muestra cómo implementar una jerarquía de archivos de configuración para los servicios. También muestra cómo se heredan los enlaces, los comportamientos de servicio y los comportamientos de punto de conexión de los niveles superiores de la jerarquía.  
   
 ## <a name="sample-details"></a>Detalles del ejemplo  
  Una de las características desarrolladas para [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] en [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] es la mejora del modelo de configuración jerárquico. Un ejemplo de modelo de configuración jerárquico sería el definido por Machine.config -> Rootweb.config -> Web.config. En [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)], los enlaces y comportamientos que se definen en los niveles superiores en la jerarquía de configuración se agrega a sus servicios sin una configuración explícita. En este ejemplo se muestra cómo es posible simplificar la configuración de servicio basándose en los elementos de configuración definidos en el nivel de equipo o aplicación.  

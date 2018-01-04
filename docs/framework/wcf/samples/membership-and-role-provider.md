@@ -13,11 +13,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 34d89d937092f0feed9c103f05bf5db55c4a80e9
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 1b57fbd3788d6fd040f8781325202dd86790d385
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="membership-and-role-provider"></a>Proveedor de pertenencia y roles
 El ejemplo de proveedor de pertenencia y función muestra el modo en que un servicio puede utilizar los proveedores de pertenencia y función de [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] para autenticar y autorizar a los clientes.  
@@ -79,7 +80,7 @@ El ejemplo de proveedor de pertenencia y función muestra el modo en que un serv
 </system.web>  
 ```  
   
- El servicio expone un extremo único para comunicarse con el servicio, que se define utilizando el archivo de configuración Web.config. El extremo está compuesto por una dirección, un enlace y un contrato. El enlace se configura con un `wsHttpBinding` estándar, que usa la autenticación de Windows de forma predeterminada. Este ejemplo establece el `wsHttpBinding` estándar para utilizar la autenticación mediante el nombre de usuario. El comportamiento especifica que se va a usar el certificado de servidor para la autenticación del servicio. El certificado de servidor debe contener el mismo valor para la `SubjectName` como el `findValue` de atributo en el [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) elemento de configuración. Además, el comportamiento especifica que el proveedor de pertenencia de [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] realiza la autenticación de los pares nombre de usuario y contraseña, y que el proveedor de función de [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] realiza la asignación de funciones mediante la especificación de los nombres definidos para los dos proveedores.  
+ El servicio expone un extremo único para comunicarse con el servicio, que se define utilizando el archivo de configuración Web.config. El punto de conexión está compuesto por una dirección, un enlace y un contrato. El enlace se configura con un `wsHttpBinding` estándar, que usa la autenticación de Windows de forma predeterminada. Este ejemplo establece el `wsHttpBinding` estándar para utilizar la autenticación mediante el nombre de usuario. El comportamiento especifica que se va a usar el certificado de servidor para la autenticación del servicio. El certificado de servidor debe contener el mismo valor para la `SubjectName` como el `findValue` de atributo en el [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) elemento de configuración. Además, el comportamiento especifica que el proveedor de pertenencia de [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] realiza la autenticación de los pares nombre de usuario y contraseña, y que el proveedor de función de [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] realiza la asignación de funciones mediante la especificación de los nombres definidos para los dos proveedores.  
   
 ```xml  
 <system.serviceModel>  
@@ -166,7 +167,7 @@ El ejemplo de proveedor de pertenencia y función muestra el modo en que un serv
   
 7.  Copie el archivo Service.cer del directorio de servicio al directorio del cliente en el equipo cliente.  
   
-8.  En el archivo Client.exe.config del equipo cliente, cambie el valor de la dirección del extremo para que coincida con la nueva dirección de su servicio.  
+8.  En el archivo Client.exe.config del equipo cliente, cambie el valor de la dirección del punto de conexión para que coincida con la nueva dirección de su servicio.  
   
 9. En el cliente, abra un símbolo del sistema de Visual Studio con privilegios de administrador y ejecute ImportServiceCert.bat. Así se importa el certificado del servicio del archivo Service.cer en el almacén CurrentUser - TrustedPeople.  
   

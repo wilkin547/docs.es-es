@@ -13,11 +13,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0ff5fbf570c826f5c430109d9f79b3d5f39382f6
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: a751245f0a933fda649d5919bab86abf2969dbf6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="streaming-message-transfer"></a>Transferencia de mensajes por secuencias
 Los transportes de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] admiten dos modos para transferir los mensajes:  
@@ -35,7 +36,7 @@ Los transportes de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] admit
   
  Los enlaces <xref:System.ServiceModel.BasicHttpBinding>, <xref:System.ServiceModel.NetTcpBinding>, y <xref:System.ServiceModel.NetNamedPipeBinding> exponen la propiedad <xref:System.ServiceModel.TransferMode>. Para otros transportes, debe crear un enlace personalizado para establecer el modo de transferencia.  
   
- La decisión de utilizar transferencias almacenadas en búfer o transmitidas es una decisión local del extremo. En los transportes HTTP, el modo de transferencia no se propaga a través de una conexión o a los servidores y otros intermediarios. Establecer el modo de transferencia no se refleja en la descripción de la interfaz de servicio. Después de generar una clase de cliente para un servicio, debe modificar el archivo de configuración de los servicios pensados para ser utilizados con transferencias por secuencias para establecer el modo. En los transportes con canalizaciones con nombre y TCP, el modo de transferencia se propaga como una aserción de directiva.  
+ La decisión de utilizar transferencias almacenadas en búfer o transmitidas es una decisión local del punto de conexión. En los transportes HTTP, el modo de transferencia no se propaga a través de una conexión o a los servidores y otros intermediarios. Establecer el modo de transferencia no se refleja en la descripción de la interfaz de servicio. Después de generar una clase de cliente para un servicio, debe modificar el archivo de configuración de los servicios pensados para ser utilizados con transferencias por secuencias para establecer el modo. En los transportes con canalizaciones con nombre y TCP, el modo de transferencia se propaga como una aserción de directiva.  
   
  Para obtener ejemplos de código, vea [Cómo: habilitar la transmisión por secuencias](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md).  
   
@@ -57,4 +58,4 @@ Los transportes de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] admit
  Si se cambia el modo de transferencia de almacenado en búfer a por secuencias, también se cambia la forma del canal nativo de transportes de canalización con nombre y TCP. Para transferencias almacenadas en búfer, la forma del canal nativo es <xref:System.ServiceModel.Channels.IDuplexSessionChannel>. Para las transferencias por secuencias, los canales nativos son <xref:System.ServiceModel.Channels.IRequestChannel> y <xref:System.ServiceModel.Channels.IReplyChannel>. Al cambiar el modo de transferencia en una aplicación existente que utiliza estos transportes directamente (es decir, no a través de un contrato de servicios), requiere el cambio de la forma del canal esperada para los generadores de canales y agentes de escucha.  
   
 ## <a name="see-also"></a>Vea también  
- [Cómo: habilitar la transmisión por secuencias](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md)
+ [Habilitar el streaming](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md)

@@ -16,11 +16,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5587300edf739eedb99084735eda81538ab61ef7
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: cae680c8958c86dc57a2aff3c2d567e1fdac981d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="working-with-nats-and-firewalls"></a>Trabajar con NAT y firewalls
 Frecuentemente, el cliente y servidor de una conexión de red no tienen una ruta de acceso directa y abierta para la comunicación. Los paquetes se filtran, enrutan, analizan y transforman tanto en los equipos de extremo como en equipos intermedios de la red. Las traducciones de direcciones de red (NATs) y los firewalls son ejemplos comunes de aplicaciones intermedias que pueden participar en la comunicación de redes.  
@@ -35,7 +36,7 @@ Frecuentemente, el cliente y servidor de una conexión de red no tienen una ruta
  Algunas NAT admiten la configuración de reglas de reenvío para permitir a los equipos externos que se conecten a un equipo interno determinado. Las instrucciones para configurar las reglas de reenvío varían entre NAT diferentes y no se recomienda para la mayoría de las aplicaciones el pedir a los usuarios finales que cambien su configuración NAT. Muchos usuarios finales no pueden o no quieren cambiar su configuración de NAT para una aplicación determinada.  
   
 ## <a name="how-firewalls-affect-communication"></a>Cómo afectan los firewalls a la comunicación  
- A *firewall* es un dispositivo de hardware o software que se aplica las reglas para el tráfico que pasa para decidir si desea permitir o negar el paso. Puede configurar los firewalls para examinar secuencias de tráfico entrantes o salientes. El firewall proporciona un límite de seguridad para la red en el borde de la red o en el host del extremo. Los usuarios de empresas han mantenido tradicionalmente sus servidores tras un firewall para evitar ataques malintencionados. Desde la introducción del firewall personal en [!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)], el número de usuarios domésticos tras un firewall también ha aumentado en gran medida. Esto hace probable que uno o ambos extremos de una conexión tengan un firewall que examine los paquetes.  
+ A *firewall* es un dispositivo de hardware o software que se aplica las reglas para el tráfico que pasa para decidir si desea permitir o negar el paso. Puede configurar los firewalls para examinar secuencias de tráfico entrantes o salientes. El firewall proporciona un límite de seguridad para la red en el borde de la red o en el host del punto de conexión. Los usuarios de empresas han mantenido tradicionalmente sus servidores tras un firewall para evitar ataques malintencionados. Desde la introducción del firewall personal en [!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)], el número de usuarios domésticos tras un firewall también ha aumentado en gran medida. Esto hace probable que uno o ambos extremos de una conexión tengan un firewall que examine los paquetes.  
   
  Los firewalls varían en gran medida en cuanto a su complejidad y capacidad para examinar los paquetes. Los firewalls simples aplican reglas basadas en las direcciones de origen y destino y los puertos en los paquetes. Los firewalls inteligentes también pueden examinar el contenido de paquetes para tomar decisiones. Estos firewalls vienen en muchas configuraciones diferentes y se utilizan a menudo para aplicaciones especializadas.  
   
@@ -47,9 +48,9 @@ Frecuentemente, el cliente y servidor de una conexión de red no tienen una ruta
 ## <a name="choosing-a-transport-and-message-exchange-pattern"></a>Elección de un patrón de intercambio de mensajes y transporte  
  La selección de un transporte y MEP es un proceso de tres pasos:  
   
-1.  Analice la direccionabilidad de los equipos de extremo. Los servidores de empresas tienen normalmente direccionabilidad directa, mientras que los usuarios finales tienen normalmente la direccionabilidad bloqueada mediante NAT. Si ambos extremos están detrás de una NAT, como en escenarios punto a punto entre usuarios finales, podría necesitar una tecnología como Teredo para proporcionar direccionabilidad.  
+1.  Analice la direccionabilidad de los equipos de extremo. Los servidores de empresas tienen normalmente direccionabilidad directa, mientras que los usuarios finales tienen normalmente la direccionabilidad bloqueada mediante NAT. Si ambos puntos de conexión están detrás de una NAT, como en escenarios punto a punto entre usuarios finales, podría necesitar una tecnología como Teredo para proporcionar direccionabilidad.  
   
-2.  Analice el protocolo y las restricciones de puertos de los equipos de extremos. Los servidores de empresa están generalmente detrás de firewalls fuertes que bloquean muchos puertos. Sin embargo, el puerto 80 se abre con frecuencia para permitir el tráfico HTTP, y el puerto 443 se abre para permitir el tráfico HTTPS. Es menos probable que los usuarios finales tengan restricciones de puertos, pero puede que estén detrás de un firewall que solo permita conexiones de salida. Algunos firewalls permiten la administración mediante aplicaciones en el extremo para abrir conexiones de manera selectiva.  
+2.  Analice el protocolo y las restricciones de puertos de los equipos de extremos. Los servidores de empresa están generalmente detrás de firewalls fuertes que bloquean muchos puertos. Sin embargo, el puerto 80 se abre con frecuencia para permitir el tráfico HTTP, y el puerto 443 se abre para permitir el tráfico HTTPS. Es menos probable que los usuarios finales tengan restricciones de puertos, pero puede que estén detrás de un firewall que solo permita conexiones de salida. Algunos firewalls permiten la administración mediante aplicaciones en el punto de conexión para abrir conexiones de manera selectiva.  
   
 3.  Calcule los transportes y MEP que permiten la direccionabilidad y las restricciones de puertos de la red.  
   
@@ -59,7 +60,7 @@ Frecuentemente, el cliente y servidor de una conexión de red no tienen una ruta
   
 -   Permita establecer canales secundarios a través de la conexión originaria. Utilizar canales secundarios, como en TCP dúplex, abre menos conexiones, lo que aumenta la oportunidad de realizar correctamente una conexión.  
   
--   Emplee un servicio alcanzable para registrar extremos o la retransmisión de tráfico. El uso de un servicio de conexión alcanzable globalmente, como un servidor Teredo, aumenta en gran medida la probabilidad de realizar correctamente una conexión cuando la topología de red es restrictiva o desconocida.  
+-   Emplee un servicio alcanzable para registrar puntos de conexión o la retransmisión de tráfico. El uso de un servicio de conexión alcanzable globalmente, como un servidor Teredo, aumenta en gran medida la probabilidad de realizar correctamente una conexión cuando la topología de red es restrictiva o desconocida.  
   
  Las siguientes tablas examinan los transportes MEP unidireccionales, de solicitud-respuesta y dúplex; los transportes estándar TCP y TCP con Teredo; así como los transportes HTTP estándar y duales en [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
   

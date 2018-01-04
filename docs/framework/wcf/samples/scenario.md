@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 08c722ad9256f16ead8947e793e64cef9763c512
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 94ff7c693824e721b17c79b921f4380dba7d04e4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="scenario"></a>Escenario
 Esta sección contiene ejemplos que muestran escenarios de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
@@ -26,7 +27,7 @@ Esta sección contiene ejemplos que muestran escenarios de [!INCLUDE[indigo1](..
  [Escenarios de enlace de datos](../../../../docs/framework/wcf/samples/data-binding-scenarios.md)  
  Muestra escenarios de enlace de datos de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
   
- [Ejemplo de seguridad de detección](../../../../docs/framework/wcf/samples/discovery-security-sample.md)  
+ [Ejemplo de seguridad de la detección](../../../../docs/framework/wcf/samples/discovery-security-sample.md)  
  Muestra cómo implementar canales personalizados que calculan y comprueban las firmas de mensaje utilizando el formato de firma compacto (descrito en la sección 8.2 de la especificación de detección WS).  
   
  [Ejemplo de federación](../../../../docs/framework/wcf/samples/federation-sample.md)  
@@ -38,5 +39,5 @@ Esta sección contiene ejemplos que muestran escenarios de [!INCLUDE[indigo1](..
  [Servicio de fachada confiable](../../../../docs/framework/wcf/samples/trusted-facade-service.md)  
  Muestra cómo hacer fluir la información de identidad del llamador desde un servicio a otro utilizando la infraestructura de seguridad de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
   
- [Patrones de diseño: Basado en la lista de publicación y suscripción](../../../../docs/framework/wcf/samples/design-patterns-list-based-publish-subscribe.md)  
+ [Patrones de diseño: suscripción-publicación basada en la lista](../../../../docs/framework/wcf/samples/design-patterns-list-based-publish-subscribe.md)  
  Muestra el patrón suscripción-publicación basada en la lista implementado como un programa de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].

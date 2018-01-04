@@ -17,11 +17,12 @@ caps.latest.revision: "28"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 509da8b697f38ea75d9509a8243f3e9e09cc661b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 2b8e84fe75f812cdcb97dcc24a0edad2d238515b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="securing-services"></a>Seguridad de servicios
 La seguridad de un servicio [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] se basa en dos requisitos primarios: la seguridad de la transferencia y la autorización. (Un tercer requisito, la auditoría de eventos de seguridad, se describe en [auditoría](../../../docs/framework/wcf/feature-details/auditing-security-events.md).) Resumiendo, la seguridad de la transferencia incluye la autenticación (comprobar la identidad del servicio y del cliente), la confidencialidad (cifrado de mensajes) y la integridad (firma digital para detectar la modificación). La autorización es el control del acceso a los recursos, por ejemplo, permitiendo la lectura de un archivo solo a usuarios privilegiados. Con las características de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], se implementan fácilmente los dos requisitos primarios.  
@@ -113,7 +114,7 @@ La seguridad de un servicio [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]
  <xref:System.ServiceModel.Description.ServiceCredentials>  
  <xref:System.ServiceModel.ServiceContractAttribute>  
  <xref:System.ServiceModel.OperationContractAttribute>  
- [Autenticación e identidad de servicio](../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
+ [Identidad del servicio y autenticación](../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
  [Descripción de los niveles de protección](../../../docs/framework/wcf/understanding-protection-level.md)  
  [Delegación y suplantación](../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)  
  [Diseño de contratos de servicio](../../../docs/framework/wcf/designing-service-contracts.md)  

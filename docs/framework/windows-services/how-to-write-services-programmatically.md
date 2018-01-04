@@ -19,11 +19,12 @@ caps.latest.revision: "21"
 author: ghogen
 ms.author: ghogen
 manager: douge
-ms.openlocfilehash: 1721417b8d1fc799e6af5d09762ee852d9fbfb03
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: cdb9c7bba564b71bfba86076218e48610cf73076
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-write-services-programmatically"></a>Cómo: Crear servicios mediante programación
 Si decide no usar la plantilla de proyecto de servicio de Windows, puede escribir sus propios servicios mediante el establecimiento de la herencia y otros elementos de la infraestructura. Cuando se crea un servicio mediante programación, debe realizar varios pasos que la plantilla en caso contrario, se controlan por usted:  
@@ -80,8 +81,8 @@ Si decide no usar la plantilla de proyecto de servicio de Windows, puede escribi
 10. Instale el servicio. Para obtener más información, consulta [How to: Install and Uninstall Services](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Introducción a las aplicaciones de servicio de Windows](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  
- [Cómo: crear servicios de Windows](../../../docs/framework/windows-services/how-to-create-windows-services.md)  
- [Cómo: agregar instaladores a la aplicación de servicio](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)  
- [Cómo: registrar información sobre servicios](../../../docs/framework/windows-services/how-to-log-information-about-services.md)  
- [Tutorial: Crear una aplicación de servicio de Windows en el Diseñador de componentes](../../../docs/framework/windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md)
+ [Introducción a las aplicaciones de servicios de Windows](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  
+ [Creación de servicios de Windows](../../../docs/framework/windows-services/how-to-create-windows-services.md)  
+ [Adición de instaladores a una aplicación de servicio](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)  
+ [Registro de información sobre servicios](../../../docs/framework/windows-services/how-to-log-information-about-services.md)  
+ [Tutorial: Creación de una aplicación de servicios de Windows en el Diseñador de componentes](../../../docs/framework/windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md)

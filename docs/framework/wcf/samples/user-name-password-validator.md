@@ -13,11 +13,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4409e0d603bf667ee041725dbe02b3e2f3a82e73
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 51f5c91ae63f7c483aab08affe53d6d4b6ceaa01
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="user-name-password-validator"></a>Validador de contraseña de nombre de usuario
 Este ejemplo muestra cómo implementar un validador UserNamePassword personalizado. Esto es útil en casos donde ninguno de los modos de validación UserNamePassword integrados es apropiado para los requisitos de la aplicación; por ejemplo, cuando los pares nombre de usuario/contraseña se almacenan en un almacén externo, como una base de datos. Este ejemplo muestra un servicio que tiene un validador personalizado que comprueba dos pares de nombre de usuario y contraseña determinados. El cliente usa un par de nombre de usuario y contraseña para autenticar en el servicio.  
@@ -42,7 +43,7 @@ Este ejemplo muestra cómo implementar un validador UserNamePassword personaliza
   
 -   El servidor se autentica utilizando el certificado X.509 del servidor.  
   
- El servicio expone un extremo único para comunicarse con el servicio, definido usando el archivo de configuración App.config. El punto de conexión está compuesto por una dirección, un enlace y un contrato. El enlace se configura con un estándar `wsHttpBinding` que tiene como valor predeterminado para usar la autenticación de nombre de usuario de WS-Securityand. El comportamiento del servicio especifica el modo `Custom` para validar los pares de nombre de usuario y contraseña del cliente con el tipo de la clase de validador. El comportamiento también especifica el certificado de servidor mediante el elemento `serviceCertificate`. El certificado de servidor debe contener el mismo valor para la `SubjectName` como el `findValue` en el [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md).  
+ El servicio expone un punto de conexión único para comunicarse con el servicio, definido usando el archivo de configuración App.config. El punto de conexión está compuesto por una dirección, un enlace y un contrato. El enlace se configura con un estándar `wsHttpBinding` que tiene como valor predeterminado para usar la autenticación de nombre de usuario de WS-Securityand. El comportamiento del servicio especifica el modo `Custom` para validar los pares de nombre de usuario y contraseña del cliente con el tipo de la clase de validador. El comportamiento también especifica el certificado de servidor mediante el elemento `serviceCertificate`. El certificado de servidor debe contener el mismo valor para la `SubjectName` como el `findValue` en el [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md).  
   
 ```xml  
 <system.serviceModel>  

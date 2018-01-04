@@ -16,26 +16,27 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 09bbbaad055447103a1153f1888dcae4a511cbeb
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: ac43b2185048287d0edd4cb20561a936bce2f58b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="authorization-in-wcf"></a>Autorización en WCF
 La autorización es el proceso para controlar el acceso y los derechos a los recursos, como servicios o archivos. Los temas en esta presentación de la sección le muestran cómo realizar esta tarea básica en [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] en una gran variedad de maneras.  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Mecanismos de Control de acceso](../../../../docs/framework/wcf/feature-details/access-control-mechanisms.md)  
+ [Mecanismos de control de acceso](../../../../docs/framework/wcf/feature-details/access-control-mechanisms.md)  
  Proporciona un esquema breve de los mecanismos de la autorización en [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]y los usos sugeridos.  
   
  [Cómo restringir el acceso con la clase PrincipalPermissionAttribute Class](../../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md)  
  Muestra el proceso de restringir el acceso a un servicio con <xref:System.Security.Permissions.PrincipalPermissionAttribute>.  
   
- [Cómo: utilizar el proveedor de funciones de ASP.NET con un servicio](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md)  
+ [Uso del proveedor de funciones ASP.NET con un servicio](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md)  
  Abarca la configuración de un servicio para permitirle utilizar la característica de proveedor de funciones de [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)].  
   
- [Cómo: utilizar el proveedor de funciones de administrador de autorización de ASP.NET con un servicio](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-authorization-manager-role-provider-with-a-service.md)  
+ [Uso del proveedor de funciones del administrador de autorización de ASP.NET con un servicio](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-authorization-manager-role-provider-with-a-service.md)  
  [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] puede usar el Administrador de autorización para administrar la autorización para un sitio web. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] puede aprovechar igualmente la combinación de [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]/Administrador de autorización para la autorización de clientes.  
   
  [Administración de notificaciones y autorización con el modelo de identidad](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)  

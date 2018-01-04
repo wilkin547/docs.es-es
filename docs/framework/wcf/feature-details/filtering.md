@@ -13,11 +13,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4a5b2c78ef7e675a656caf00e9d0ba0c9eb0630b
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 6f67a7f6ac423bd66d9d25b834edc9cf55a5d6a8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="filtering"></a>Filtrado
 El sistema de filtrado de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] puede utilizar los filtros declarativos para igualar mensajes y tomar decisiones operacionales. Puede utilizar filtros para determinar qué hacer con un mensaje examinando parte del mensaje. Un proceso de cola, por ejemplo, puede utilizar una consulta de XPath 1.0 para comprobar el elemento de prioridad de un encabezado conocido para determinar si poner un mensaje al principio de la cola.  
@@ -43,14 +44,14 @@ El sistema de filtrado de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)
 ### <a name="action-filters"></a>Filtros de acción  
  El <xref:System.ServiceModel.Dispatcher.ActionMessageFilter> contiene una lista de cadenas de acción. Si cualquiera de las acciones en lista de filtros coincide con el encabezado Action en el mensaje o búfer del mensaje, el método `Match` devuelve `true`. Si la lista está vacía, el filtro se considera como un filtro que coincide con todo y cualquier mensaje o búfer del mensaje coincide y `Match` devuelve `true`. Si ninguna de las acciones de lista de filtros coincide con el encabezado Action en el mensaje o búfer del mensaje, el método `Match` devuelve `false`. Si no hay ninguna acción en el mensaje y la lista de filtros no está vacía, `Match` devuelve `false`.  
   
-### <a name="endpoint-address-filters"></a>Filtros de dirección de extremo  
+### <a name="endpoint-address-filters"></a>Filtros de dirección de punto de conexión  
  El <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter> filtra los mensajes y búferes de mensajes basándose en una dirección de extremo, tal y como se representa en su colección de encabezados. Para que un mensaje pase un filtro de este tipo, se deben cumplir las condiciones siguientes:  
   
 -   El Identificador uniforme de recursos (URI) de la dirección del filtro debe ser la misma que la del mensaje del encabezado To.  
   
 -   Cada parámetro de extremo en la dirección del filtro (colección`address.Headers`) debe encontrar un encabezado en el mensaje para realizar la asignación. Los encabezados adicionales en el mensaje o búfer del mensaje son aceptables para que la coincidencia siga siendo `true`.  
   
-### <a name="prefix-endpoint-address-filters"></a>Filtros de direcciones de extremos de prefijos  
+### <a name="prefix-endpoint-address-filters"></a>Filtros de direcciones de puntos de conexión de prefijos  
   
 1.  Las funciones <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter> como el filtro <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter>, solo que la coincidencia puede estar en un prefijo del URI del mensaje. Por ejemplo, un filtro que especifica que la dirección http://www.adatum.com coincide con mensajes enviados a http://www.adatum.com/userA.  
   
@@ -81,7 +82,7 @@ El sistema de filtrado de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)
  Esta tabla tiene varios métodos `Match` especializados que funcionan sobre un <xref:System.Xml.XPath.XPathNavigator> y un <xref:System.ServiceModel.Dispatcher.SeekableXPathNavigator>. Un <xref:System.ServiceModel.Dispatcher.SeekableXPathNavigator> extiende la clase <xref:System.Xml.XPath.XPathNavigator> agregando una propiedad <xref:System.ServiceModel.Dispatcher.SeekableXPathNavigator.CurrentPosition%2A>. Esta propiedad permite guardar las posiciones del documento XML y cargarlas rápidamente sin tener que clonar el explorador, una asignación de gran consumo de memoria que <xref:System.Xml.XPath.XPathNavigator> requiere para este tipo de operación. El motor de XPath de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] debe grabar con frecuencia la posición del cursor mientras ejecuta las consultas en documentos XML, de modo que el <xref:System.ServiceModel.Dispatcher.SeekableXPathNavigator> proporciona una optimización importante para el procesamiento de mensajes.  
   
 ## <a name="customer-scenarios"></a>Escenarios de cliente  
- Puede utilizar el filtrado siempre que desee enviar un mensaje a módulos de procesamiento diferentes en función de los datos contenidos en el mensaje. Dos escenarios típicos enrutan un mensaje en función de su código de acción y demultiplexan una secuencia de mensajes en función de la dirección del extremo de los mensajes.  
+ Puede utilizar el filtrado siempre que desee enviar un mensaje a módulos de procesamiento diferentes en función de los datos contenidos en el mensaje. Dos escenarios típicos enrutan un mensaje en función de su código de acción y demultiplexan una secuencia de mensajes en función de la dirección del punto de conexión de los mensajes.  
   
 ### <a name="routing"></a>Enrutamiento  
  El agente de escuchas de un extremo realiza escuchas para los mensajes que tienen un o más códigos de acción en el encabezado SOAP del mensaje. Esto se implementa mediante la creación de un <xref:System.ServiceModel.Dispatcher.ActionMessageFilter> pasando una matriz que contenga los códigos de acción a su constructor. Utiliza ese filtro para registrarse con el `ListenerFactory`, de modo que solo los mensajes cuya acción coincida con uno de aquéllos en el filtro lleguen a ese extremo concreto.  
@@ -94,4 +95,4 @@ El sistema de filtrado de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)
 -   El resto de los parámetros de extremo en la `EndpointAddress` tal y como se especifica en el <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter>.  
   
 ## <a name="see-also"></a>Vea también  
- [Transferencia de datos y serialización](../../../../docs/framework/wcf/feature-details/data-transfer-and-serialization.md)
+ [Transferencia y serialización de datos](../../../../docs/framework/wcf/feature-details/data-transfer-and-serialization.md)

@@ -25,11 +25,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 573a27343a15ef12ad955295c3beb3fef9130023
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 7b8fc8774e1f861db989b05678235ea34e38318c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-border-around-a-windows-forms-control-using-padding"></a>Cómo: Crear un borde alrededor de un control de formularios Windows Forms con relleno
 En el ejemplo de código siguiente se muestra cómo crear un borde o contorno de un <xref:System.Windows.Forms.RichTextBox> control. En el ejemplo se establece el valor de un <xref:System.Windows.Forms.Panel> del control <xref:System.Windows.Forms.Padding> propiedad a 5 y se establece la <xref:System.Windows.Forms.Control.Dock%2A> propiedad de un elemento secundario <xref:System.Windows.Forms.RichTextBox> el control a <xref:System.Windows.Forms.DockStyle.Fill>. El <xref:System.Windows.Forms.Control.BackColor%2A> de la <xref:System.Windows.Forms.Panel> control se establece en <xref:System.Drawing.Color.Blue%2A>, que crea un borde azul alrededor de la <xref:System.Windows.Forms.RichTextBox> control.  

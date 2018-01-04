@@ -16,11 +16,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 00c5b310fbda189cfffe74767c9d77ac86481afe
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 01030ed226a5cdc384db56933325d7c4eeade989
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-the-wcf-syndication-object-model-maps-to-atom-and-rss"></a>Asignación del modelo de objetos de distribución de WCF a Atom y RSS
 Al desarrollar un servicio de distribución de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], se crean fuentes y elementos mediante las siguientes clases:  
@@ -408,8 +409,8 @@ Al desarrollar un servicio de distribución de [!INCLUDE[indigo1](../../../../in
  `</content>`  
   
 ## <a name="see-also"></a>Vea también  
- [Información general de la distribución de WCF](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md)  
- [Arquitectura de distribución](../../../../docs/framework/wcf/feature-details/architecture-of-syndication.md)  
- [Cómo: crear una fuente RSS básica](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-rss-feed.md)  
- [Cómo: crear una fuente átomo básica](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-atom-feed.md)  
- [Cómo: exponer una fuente como Atom y RSS](../../../../docs/framework/wcf/feature-details/how-to-expose-a-feed-as-both-atom-and-rss.md)
+ [Información general de redifusión en WCF](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md)  
+ [Arquitectura de redifusión](../../../../docs/framework/wcf/feature-details/architecture-of-syndication.md)  
+ [Creación de una fuente RSS básica](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-rss-feed.md)  
+ [Creación de una fuente básica de Atom](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-atom-feed.md)  
+ [Exposición de una fuente como Atom y RSS](../../../../docs/framework/wcf/feature-details/how-to-expose-a-feed-as-both-atom-and-rss.md)

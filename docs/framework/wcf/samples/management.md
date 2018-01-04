@@ -13,17 +13,18 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 06fb93e30467ce890be11826329f678e1d720b39
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 1fa1fb42ba09b1c4e855e3c05e80418d7e278614
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="management"></a>Administración
 Esta sección contiene ejemplos que muestran la administración de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Servicios WCF y seguimiento de eventos para Windows](../../../../docs/framework/wcf/samples/wcf-services-and-event-tracing-for-windows.md)  
+ [Servicios WCF y Seguimiento de eventos para Windows](../../../../docs/framework/wcf/samples/wcf-services-and-event-tracing-for-windows.md)  
  Muestra cómo utilizar la traza analítica en [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] para emitir eventos en Seguimiento de eventos para Windows (ETW).  
   
  [Traza analítica de WCF](../../../../docs/framework/wcf/samples/wcf-analytic-tracing.md)  
@@ -32,7 +33,7 @@ Esta sección contiene ejemplos que muestran la administración de [!INCLUDE[ind
  [Seguimiento circular](../../../../docs/framework/wcf/samples/circular-tracing.md)  
  Muestra la implementación de un agente de escucha de traza del búfer circular.  
   
- [Traza de ETW](../../../../docs/framework/wcf/samples/etw-tracing.md)  
+ [Seguimiento ETW](../../../../docs/framework/wcf/samples/etw-tracing.md)  
  Muestra cómo implementar la traza de un extremo a otro (E2E) utilizando Seguimiento de eventos para Windows (ETW).  
   
  [Extensión del seguimiento](../../../../docs/framework/wcf/samples/extending-tracing.md)  

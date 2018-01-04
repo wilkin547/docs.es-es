@@ -17,11 +17,12 @@ caps.latest.revision: "60"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a5ff6af234fabf278c84a3487b9f65217d84f6e4
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 2f97ad418f3d5ed197e8c35edf9e897eb393ef18
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="getting-started-sample"></a>Ejemplo de introducción
 El ejemplo de la Introducción muestra cómo implementar un servicio típico y un cliente típico utilizando [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. Este ejemplo es la base para obtener todos los otros ejemplos tecnológicos básicos.  
@@ -47,7 +48,7 @@ El ejemplo de la Introducción muestra cómo implementar un servicio típico y u
 > [!NOTE]
 >  Si prefiere empezar a trabajar con un ejemplo que hospeda el servicio en una aplicación de consola en lugar de IIS, consulte la [autohospedaje](../../../../docs/framework/wcf/samples/self-host.md) ejemplo.  
   
- El servicio y cliente especifican los detalles de acceso en valores de archivo de configuración, los cuales proporciona la flexibilidad en el momento de la implementación. Esto incluye una definición de extremo que especifica una dirección, un enlace y un contrato. El enlace especifica el transporte y los detalles de seguridad sobre cómo se tiene acceso al servicio.  
+ El servicio y cliente especifican los detalles de acceso en valores de archivo de configuración, los cuales proporciona la flexibilidad en el momento de la implementación. Esto incluye una definición de punto de conexión que especifica una dirección, un enlace y un contrato. El enlace especifica el transporte y los detalles de seguridad sobre cómo se tiene acceso al servicio.  
   
  El servicio configura un comportamiento de tiempo de ejecución para publicar sus metadatos.  
   
@@ -131,7 +132,7 @@ public class CalculatorService : ICalculator
 }  
 ```  
   
- El servicio expone un extremo para comunicarse con el servicio, que se define utilizando un archivo de configuración (Web.config), como se muestra en la configuración de ejemplo siguiente.  
+ El servicio expone un punto de conexión para comunicarse con el servicio, que se define utilizando un archivo de configuración (Web.config), como se muestra en la configuración de ejemplo siguiente.  
   
 ```xaml  
 <services>  
@@ -148,7 +149,7 @@ public class CalculatorService : ICalculator
 </services>  
 ```  
   
- El servicio expone el extremo en la dirección base proporcionada por el host IIS o WAS. El enlace se configura con un <xref:System.ServiceModel.WSHttpBinding>estándar, que proporciona comunicación del HTTP y protocolos estándar del servicio Web para direccionar y seguridad. El contrato es el `ICalculator` implementado por el servicio.  
+ El servicio expone el punto de conexión en la dirección base proporcionada por el host IIS o WAS. El enlace se configura con un <xref:System.ServiceModel.WSHttpBinding>estándar, que proporciona comunicación del HTTP y protocolos estándar del servicio Web para direccionar y seguridad. El contrato es el `ICalculator` implementado por el servicio.  
   
  Tal y como se ha configurado, un cliente puede tener acceso al servicio en http://localhost/servicemodelsamples/service.svc en el mismo equipo. Para que los clientes en equipos remotos tengan acceso al servicio, se debe especificar un nombre de dominio completo en lugar del host local.  
   
@@ -194,7 +195,7 @@ svcutil.exe /n:"http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Sam
   
  `Svcutil.exe /n:"http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Samples" http://localhost/servicemodelsamples/service.svc/mex /l:vb /out:generatedClient.vb`  
   
- Al utilizar el cliente generado, el cliente puede tener acceso a un punto de conexión de servicio determinado configurando la dirección adecuada y el enlace. Como el servicio, el cliente utiliza un archivo de configuración (App.config) para especificar el extremo con el que desea comunicarse. La configuración del extremo del cliente está compuesta por una dirección absoluta para el extremo del servicio, el enlace y el contrato, tal y como se muestra en el siguiente ejemplo.  
+ Al utilizar el cliente generado, el cliente puede tener acceso a un punto de conexión de servicio determinado configurando la dirección adecuada y el enlace. Como el servicio, el cliente utiliza un archivo de configuración (App.config) para especificar el punto de conexión con el que desea comunicarse. La configuración del extremo del cliente está compuesta por una dirección absoluta para el extremo del servicio, el enlace y el contrato, tal y como se muestra en el siguiente ejemplo.  
   
 ```xaml  
 <client>  

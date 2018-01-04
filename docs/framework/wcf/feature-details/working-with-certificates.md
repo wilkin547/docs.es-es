@@ -17,11 +17,12 @@ caps.latest.revision: "26"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 63f9d22c571a007653fc794dc7638c8221a676aa
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 80bc22599a2c7b3478912453b3f90a563aec9c57
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="working-with-certificates"></a>Trabajar con certificados
 Para programar la seguridad de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], los certificados digitales de X.509 se utilizan normalmente para autenticar clientes y servidores, cifrar y firmar mensajes digitalmente. En este tema se explican brevemente las características de los certificados digitales de X.509 y cómo utilizarlos en [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] e incluye vínculos a los temas que explican estos conceptos en mayor profundidad o que muestran cómo llevar a cabo tareas comunes mediante [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] y los certificados.  
@@ -74,7 +75,7 @@ Para programar la seguridad de [!INCLUDE[indigo1](../../../../includes/indigo1-m
 ### <a name="disabling-chain-trust"></a>Deshabilitación de la confianza de cadena  
  Al crear un nuevo servicio, puede que esté utilizando un certificado que no ha emitido un certificado raíz de confianza, o puede que el propio certificado emisor no esté en el almacén Entidades de certificación raíz de confianza. Solo con fines de desarrollo, puede deshabilitar temporalmente el mecanismo que comprueba la cadena de confianza de un certificado. Para hacerlo, establezca la propiedad `CertificateValidationMode` en `PeerTrust` o `PeerOrChainTrust`. Ambos modos especifican que el certificado puede autoemitirse (confianza de mismo nivel) o formar parte de una cadena de confianza. Puede establecer la propiedad en cualquiera de las clases siguientes.  
   
-|Clase|Propiedad|  
+|Clase|Property|  
 |-----------|--------------|  
 |<xref:System.ServiceModel.Security.X509ClientCertificateAuthentication>|<xref:System.ServiceModel.Security.X509ClientCertificateAuthentication.CertificateValidationMode%2A?displayProperty=nameWithType>|  
 |<xref:System.ServiceModel.Security.X509PeerCertificateAuthentication>|<xref:System.ServiceModel.Security.X509PeerCertificateAuthentication.CertificateValidationMode%2A?displayProperty=nameWithType>|  

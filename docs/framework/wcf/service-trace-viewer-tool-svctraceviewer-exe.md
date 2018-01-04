@@ -13,11 +13,12 @@ caps.latest.revision: "55"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7832060a29ceb2dc58feac9ce2fc97f58caf70f0
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 9c739db4db5afad8fc379a5da4764cb9ab6804fe
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="service-trace-viewer-tool-svctraceviewerexe"></a>Herramienta del visor de seguimiento de servicio (SvcTraceViewer.exe)
 La herramienta del visor de seguimiento de servicio [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] le ayuda a analizar seguimientos del diagnóstico generados por [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. El visor de seguimiento de servicio proporciona una manera fácil de combinar, ver y filtrar los mensajes del registro para que así pueda diagnosticar, reparar y comprobar los problemas del servicio [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].  
@@ -461,5 +462,5 @@ La herramienta del visor de seguimiento de servicio [!INCLUDE[indigo1](../../../
   
 ## <a name="see-also"></a>Vea también  
  [Uso del visor de seguimiento de servicios para ver seguimientos asociados y para la solución de problemas](../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)  
- [Configuración del seguimiento](../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)  
+ [Configuración de la traza](../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)  
  [Seguimiento de la actividad y propagación para la correlación de seguimiento To-End](http://msdn.microsoft.com/en-us/2c11a905-64f8-47b5-bae5-a74fc666137e)

@@ -13,11 +13,12 @@ caps.latest.revision: "12"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 906d45ccba7185e82aed82626a13034f2e97422d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 57b40493d0e9bcbbaaf1366c74ff116343f6ee96
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-impersonation-with-transport-security"></a>Utilización de la suplantación con la seguridad de transporte
 *Suplantación* es la capacidad de una aplicación de servidor para asumir la identidad del cliente. Es común que los servicios utilicen la suplantación al validar el acceso a los recursos. La aplicación de servidor se ejecuta utilizando una cuenta de servicio, pero cuando el servidor acepta una conexión de cliente, suplanta al cliente para que se realicen comprobaciones de acceso utilizando las credenciales del cliente. La seguridad de transporte es un mecanismo para pasar credenciales y proteger la comunicación mediante esas credenciales. Este tema describe el uso de la seguridad de transporte en [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] con la característica de suplantación. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]suplantación con seguridad de mensajes, vea [delegación y suplantación](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
@@ -31,7 +32,7 @@ ms.lasthandoff: 11/21/2017
 |Anónimo|La aplicación de servidor puede realizar comprobaciones de acceso frente a las credenciales de cliente, pero no recibe ninguna información sobre la identidad del cliente. Este nivel de suplantación solo es significativo para la comunicación en equipo, como, por ejemplo, en canalizaciones con nombre. Al utilizar `Anonymous` con una conexión remota, se promueve el nivel de suplantación a identificar.|  
 |Identificar|La aplicación de servidor conoce la identidad del cliente y puede realizar validación de acceso frente a las credenciales del cliente, pero no puede suplantar al cliente. Identificar es el nivel de suplantación predeterminado utilizado con credenciales SSPI en [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], a menos que el proveedor de tokens proporcione un nivel de suplantación diferente.|  
 |Suplantar|La aplicación de servidor puede obtener acceso a recursos en el equipo del servidor como el cliente además de realizar las comprobaciones de acceso. La aplicación de servidor no puede tener acceso a los recursos en los equipos remotos utilizando la identidad del cliente porque el token suplantado no tiene credenciales de red.|  
-|Delegate|Además de tener las mismas funciones que `Impersonate`, el nivel de suplantación de Delegar también permite a la aplicación de servidor obtener acceso a los recursos en los equipos remotos utilizando la identidad del cliente y pasar la identidad a otras aplicaciones.<br /><br /> **Importante** la cuenta de dominio de servidor debe marcarse como de confianza para delegación en el controlador de dominio para utilizar estas características adicionales. Este nivel de suplantación no se puede utilizar con cuentas de dominio de cliente marcadas como sensibles.|  
+|delegado|Además de tener las mismas funciones que `Impersonate`, el nivel de suplantación de Delegar también permite a la aplicación de servidor obtener acceso a los recursos en los equipos remotos utilizando la identidad del cliente y pasar la identidad a otras aplicaciones.<br /><br /> **Importante** la cuenta de dominio de servidor debe marcarse como de confianza para delegación en el controlador de dominio para utilizar estas características adicionales. Este nivel de suplantación no se puede utilizar con cuentas de dominio de cliente marcadas como sensibles.|  
   
  Los niveles más utilizados con seguridad de transporte son `Identify` y `Impersonate`. Los niveles `None` y `Anonymous` no se recomiendan para el uso general y muchos transportes no permiten el uso de esos niveles con autenticación. El nivel `Delegate` es una característica eficaz que se debe utilizar con cuidado. Solo se debe proporcionar el permiso de delegación de credenciales a las aplicaciones de servidor de confianza.  
   
@@ -68,4 +69,4 @@ ms.lasthandoff: 11/21/2017
  [Delegación y suplantación](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)  
  [Autorización](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)  
  [Cómo suplantar a un cliente en un servicio](../../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md)  
- [Descripción de la autenticación HTTP](../../../../docs/framework/wcf/feature-details/understanding-http-authentication.md)
+ [Introducción a la autenticación HTTP](../../../../docs/framework/wcf/feature-details/understanding-http-authentication.md)

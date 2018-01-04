@@ -12,11 +12,12 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 94eb9f401786ef05beaa51077ff4ddc170595752
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: f6974c7bb281aa6685725b65edd06bb40a907559
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="absolute-delay"></a>Retraso absoluto
 El escenario principal de este ejemplo es el retraso hasta un valor de <xref:System.DateTime> especificado utilizando temporizadores duraderos en una aplicación de flujo de trabajo. Esto es diferente a utilizar la actividad <xref:System.Activities.Statements.Delay> integrada, ya que en este caso solo se permitirá el retraso para un valor de <xref:System.TimeSpan> (o número de minutos/segundos) determinado.  

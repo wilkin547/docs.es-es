@@ -18,11 +18,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ccea982c45ab22a4b2ab81bc80c16dd472144bbe
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e62fc49a8a08c79138df080246b99b6fe891162e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="trackbar-control-overview-windows-forms"></a>Información general del control TrackBar (formularios Windows Forms)
 Los formularios Windows Forms <xref:System.Windows.Forms.TrackBar> control (a veces denominado control "deslizante") se utiliza para navegar por una gran cantidad de información o para ajustar visualmente una configuración numérica. El <xref:System.Windows.Forms.TrackBar> control tiene dos partes: el control de posición, también conocido como control deslizante y las marcas de graduación. El cuadro de desplazamiento es la parte que se puede ajustar. Su posición corresponde a la <xref:System.Windows.Forms.TrackBar.Value%2A> propiedad. Las marcas de graduación son indicadores visuales que se llevan a intervalos regulares. La barra de seguimiento se mueve en incrementos que se especifiquen y puede alinearse horizontal o verticalmente. Por ejemplo, puede usar la barra de seguimiento para controlar la velocidad de velocidad o el mouse de parpadeo de cursor para un sistema.  

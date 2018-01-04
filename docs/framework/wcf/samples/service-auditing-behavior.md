@@ -13,11 +13,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f84bff892a35288a75738d9cfa326ffc4119b433
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 140793e41be012a777dbfa4bf66528612ab33da7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="service-auditing-behavior"></a>Comportamiento de auditoría de servicio
 Este ejemplo muestra cómo utilizar <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior> para habilitar la auditoría de eventos de seguridad durante las operaciones de servicio. En este ejemplo se basa en el [Introducción](../../../../docs/framework/wcf/samples/getting-started-sample.md). El servicio y el cliente se ha configurado mediante el [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md). El `mode` atributo de la [ \<seguridad >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) se ha establecido en `Message` y `clientCredentialType` se ha establecido en `Windows`. En este ejemplo, el cliente es una aplicación de consola (.exe) y los Servicios de Internet Information Server (IIS) hospedan el servicio.  
@@ -50,7 +51,7 @@ Este ejemplo muestra cómo utilizar <xref:System.ServiceModel.Description.Servic
   
  Los eventos de auditoría de autenticación de mensajes incluyen si el mensaje se manipuló, si el mensaje ha expirado y si el cliente se puede autenticar en el servicio. Proporcionan información sobre si la autenticación fue correcta o no, así como la identidad del cliente, y el extremo al que se envió el mensaje, junto con la acción asociada al mensaje.  
   
- Los eventos de auditoría de autorización de servicio incluyen la decisión de la autorización realizada por un administrador de autorización del servicio. Proporcionan información sobre si la autorización tuvo éxito o no, así como la identidad del cliente, el extremo al que se envió el mensaje, la acción asociada al mensaje, el identificador del contexto de autorización que generó el mensaje entrante y el tipo del administrador de autorización que tomó la decisión sobre el acceso.  
+ Los eventos de auditoría de autorización de servicio incluyen la decisión de la autorización realizada por un administrador de autorización del servicio. Proporcionan información sobre si la autorización tuvo éxito o no, así como la identidad del cliente, el punto de conexión al que se envió el mensaje, la acción asociada al mensaje, el identificador del contexto de autorización que generó el mensaje entrante y el tipo del administrador de autorización que tomó la decisión sobre el acceso.  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Configurar, compilar y ejecutar el ejemplo  
   
@@ -62,4 +63,4 @@ Este ejemplo muestra cómo utilizar <xref:System.ServiceModel.Description.Servic
   
 ## <a name="see-also"></a>Vea también  
  [Auditoría](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)  
- [Cómo: auditar eventos de seguridad](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)
+ [Auditoría de eventos de seguridad](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)

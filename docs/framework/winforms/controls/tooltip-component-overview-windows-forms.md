@@ -17,11 +17,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ff2364b5c7223c265571257920a7c7e794b4921b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: fce1cb5750197e52461b4883f1238325fa10fc5e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="tooltip-component-overview-windows-forms"></a>Información general sobre el componente ToolTip (formularios Windows Forms)
 El componente <xref:System.Windows.Forms.ToolTip> de Windows Forms muestra texto cuando el usuario apunta a otros controles. Un componente Tooltip se puede asociar con cualquier control. Un ejemplo del uso de este componente: para ahorrar espacio en un formulario, puede mostrar un pequeño icono en un botón y utilizar un componente ToolTip para explicar la función del botón.  

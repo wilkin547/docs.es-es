@@ -14,11 +14,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 08ebb19cb7fab8221ac1eb534777afffa0bad328
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: aac52f3c542f88adbca40c6cbbdddc734e12903b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="servicemodel-transaction-attributes"></a>Atributos de transacción de ServiceModel
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] proporciona las propiedades en tres atributos estándar <xref:System.ServiceModel> que permiten configurar el comportamiento de las transacciones de un servicio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]:  
@@ -41,7 +42,7 @@ ms.lasthandoff: 12/02/2017
   
 -   <xref:System.ServiceModel.ServiceBehaviorAttribute.ReleaseServiceInstanceOnTransactionComplete%2A> especifica si se libera la instancia del servicio subyacente cuando se completa una transacción. El valor predeterminado de esta propiedad es `true`. El siguiente mensaje entrante hace que se cree una nueva instancia subyacente, descartando cualquiera estado por transacción que la instancia anterior pudiese haber retenido. Liberar una instancia de servicio es una acción interna que realiza el servicio y no tiene ningún impacto en ninguna conexión ni sesiones existentes que los clientes puedan haber establecido. Esta funcionalidad es equivalente a la característica de activación just-in-time que proporciona COM+. Si la propiedad es `true`, <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A> debe ser igual a <xref:System.ServiceModel.ConcurrencyMode.Single>. De lo contrario, el servicio produce una excepción de validación de configuración no válida durante el inicio.  
   
--   <xref:System.ServiceModel.ServiceBehaviorAttribute.TransactionIsolationLevel%2A> especifica el nivel de aislamiento que se utilizará para las transacciones dentro del servicio; esta propiedad toma uno de los valores <xref:System.Transactions.IsolationLevel>. Si la propiedad de nivel de aislamiento local no es <xref:System.Transactions.IsolationLevel.Unspecified>, el nivel de aislamiento de una transacción entrante debe coincidir con el valor de esta propiedad local. De lo contrario, se rechaza la transacción entrante y se devuelve un error al cliente. Si <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A> es `true`, y no se fluye ninguna transacción, esta propiedad determina el valor <xref:System.Transactions.IsolationLevel> que se utilizará para la transacción creada localmente. Si se establece <xref:System.Transactions.IsolationLevel> como <xref:System.Transactions.IsolationLevel.Unspecified>, se usa <xref:System.Transactions.IsolationLevel><xref:System.Transactions.IsolationLevel.Serializable>.  
+-   <xref:System.ServiceModel.ServiceBehaviorAttribute.TransactionIsolationLevel%2A> especifica el nivel de aislamiento que se utilizará para las transacciones dentro del servicio; esta propiedad toma uno de los valores <xref:System.Transactions.IsolationLevel>. Si la propiedad de nivel de aislamiento local no es <xref:System.Transactions.IsolationLevel.Unspecified>, el nivel de aislamiento de una transacción entrante debe coincidir con el valor de esta propiedad local. De lo contrario, se rechaza la transacción entrante y se devuelve un error al cliente. Si <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A> es `true`, y no se fluye ninguna transacción, esta propiedad determina el valor <xref:System.Transactions.IsolationLevel> que se utilizará para la transacción creada localmente. Si <xref:System.Transactions.IsolationLevel> está establecido en <xref:System.Transactions.IsolationLevel.Unspecified>, <xref:System.Transactions.IsolationLevel> <xref:System.Transactions.IsolationLevel.Serializable> se utiliza.  
   
 -   <xref:System.ServiceModel.ServiceBehaviorAttribute.TransactionTimeout%2A> especifica el período de tiempo dentro del que una nueva transacción creada en el servicio debe completarse. Si se alcanza este período de tiempo y no se ha completado la transacción, se anulará. <xref:System.TimeSpan> se utiliza como tiempo de espera <xref:System.Transactions.TransactionScope> para cualquier operación que tenga <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A> destablecida como `true` y para la que se creó una nueva transacción. El tiempo de espera es la duración máxima permitida desde la creación de la transacción hasta la finalización de la fase 1 en el protocolo de confirmación de dos fases. El valor de tiempo de espera utilizado es siempre el valor inferior entre la propiedad <xref:System.ServiceModel.ServiceBehaviorAttribute.TransactionTimeout%2A> y el valor de configuración `transactionTimeout`.  
   

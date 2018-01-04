@@ -12,11 +12,12 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: acd8d5925e1aea82f53d222daf9ccc8063ae7841
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 24655f8e230cf2286dc451ab8a26f1a4ccf445a8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="custom-activities"></a>Actividades personalizadas
 Esta sección contiene ejemplos que muestran cómo crear actividades personalizadas en [!INCLUDE[wf](../../../../includes/wf-md.md)].  
@@ -25,7 +26,7 @@ Esta sección contiene ejemplos que muestran cómo crear actividades personaliza
  [Código en el cuerpo](../../../../docs/framework/windows-workflow-foundation/samples/code-bodied.md)  
  Contiene ejemplos de actividades personalizadas creadas mediante declaración en código.  
   
- [Compuesto](../../../../docs/framework/windows-workflow-foundation/samples/composite.md)  
+ [Composición](../../../../docs/framework/windows-workflow-foundation/samples/composite.md)  
  Contiene ejemplos de actividades personalizadas creadas a partir de otras actividades.  
   
  [Diseñadores de actividad personalizados](../../../../docs/framework/windows-workflow-foundation/samples/custom-activity-designers.md)  

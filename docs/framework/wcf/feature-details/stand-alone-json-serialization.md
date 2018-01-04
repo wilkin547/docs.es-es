@@ -13,11 +13,12 @@ caps.latest.revision: "32"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0c75a7cedac9d06c9f8da36dc131521053450a37
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 8583ac00f1216e68f95c3d41d8c896b555d0aa8d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="stand-alone-json-serialization"></a>Serialización independiente de JSON
 JSON (JavaScript Object Notation) es un formato de datos diseñado específicamente para usarse por código JavaScript que se ejecute en páginas web dentro del explorador. Es el formato de datos predeterminado usado por servicios de AJAX de ASP.NET creados en [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
@@ -33,12 +34,12 @@ JSON (JavaScript Object Notation) es un formato de datos diseñado específicame
   
 |Tipos .NET|JSON/JavaScript|Notas|  
 |----------------|----------------------|-----------|  
-|Todos los tipos numéricos, por ejemplo <xref:System.Int32>, <xref:System.Decimal> o <xref:System.Double>|Número|Los valores especiales como `Double.NaN`, `Double.PositiveInfinity` y `Double.NegativeInfinity` no son compatibles y dan como resultado una JSON no válida.|  
-|<xref:System.Enum>|Número|Vea "Enumeraciones y JSON" más adelante en este tema.|  
+|Todos los tipos numéricos, por ejemplo <xref:System.Int32>, <xref:System.Decimal> o <xref:System.Double>|número|Los valores especiales como `Double.NaN`, `Double.PositiveInfinity` y `Double.NegativeInfinity` no son compatibles y dan como resultado una JSON no válida.|  
+|<xref:System.Enum>|número|Vea "Enumeraciones y JSON" más adelante en este tema.|  
 |<xref:System.Boolean>|Booleano|--|  
-|<xref:System.String>, <xref:System.Char>|Cadena|--|  
+|<xref:System.String>, <xref:System.Char>|String|--|  
 |<xref:System.TimeSpan>, <xref:System.Guid>, <xref:System.Uri>|String|El formato de estos tipos en JSON es el mismo que en XML (básicamente, TimeSpan en el formato de duración de ISO 8601, GUID en el formato "12345678-ABCD-ABCD-ABCD-1234567890AB" y URI en su forma de cadena natural, como "http://www.example.com"). Para obtener información precisa, consulte [referencia de esquema de contrato de datos](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md).|  
-|<xref:System.Xml.XmlQualifiedName>|Cadena|El formato es "nombre:espaciodenombres" (cualquier cosa antes de los primeros dos puntos es el nombre). Puede que falte el nombre o el espacio de nombres. Si no hay ningún espacio de nombres, también se pueden omitir los dos puntos.|  
+|<xref:System.Xml.XmlQualifiedName>|String|El formato es "nombre:espaciodenombres" (cualquier cosa antes de los primeros dos puntos es el nombre). Puede que falte el nombre o el espacio de nombres. Si no hay ningún espacio de nombres, también se pueden omitir los dos puntos.|  
 |<xref:System.Array>de tipo<xref:System.Byte>|Matriz de números|Cada número representa el valor de un byte.|  
 |<xref:System.DateTime>|DateTime (fecha y hora) o cadena|Vea Fechas/horas y JSON más adelante en este tema.|  
 |<xref:System.DateTimeOffset>|Tipo complejo|Vea Fechas/horas y JSON más adelante en este tema.|  
@@ -125,7 +126,7 @@ JSON (JavaScript Object Notation) es un formato de datos diseñado específicame
 http://example.com/myservice.svc/MyOperation?number=7&p={"name":"John","age":42}  
 ```  
   
- Si está utilizando un control Script Manager de AJAX de ASP.NET y proxy para llamar al servicio, el proxy genera automáticamente esta dirección URL y no se ve. JSON no se puede utilizar en direcciones URL ni en extremos AJAX de no ASP.NET.  
+ Si está utilizando un control Script Manager de AJAX de ASP.NET y proxy para llamar al servicio, el proxy genera automáticamente esta dirección URL y no se ve. JSON no se puede utilizar en direcciones URL ni en puntos de conexión AJAX de no ASP.NET.  
   
 ## <a name="advanced-information"></a>Información avanzada  
   
@@ -271,4 +272,4 @@ http://example.com/myservice.svc/MyOperation?number=7&p={"name":"John","age":42}
  El serializador XML codifica nombres de claves que no son nombres XML válidos. Por ejemplo, un miembro de datos con el nombre "123" tendría un nombre codificado como "_x0031\__x0032\__x0033\_" porque "123" es un nombre de elemento XML no válido (empieza con un dígito). Se puede producir una situación similar con algunos juegos de caracteres internacionales no válidos en nombres de XML. Para obtener una explicación de este efecto de XML en el procesamiento de JSON, consulte [asignación entre JSON y XML](../../../../docs/framework/wcf/feature-details/mapping-between-json-and-xml.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Compatibilidad con JSON y otros datos de formatos de transferencia](../../../../docs/framework/wcf/feature-details/support-for-json-and-other-data-transfer-formats.md)
+ [Compatibilidad con JSON y otros formatos de transferencia de datos](../../../../docs/framework/wcf/feature-details/support-for-json-and-other-data-transfer-formats.md)

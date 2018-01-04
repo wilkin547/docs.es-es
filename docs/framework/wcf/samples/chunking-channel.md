@@ -13,11 +13,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2fe0ad62a55c6536b0054aa23ac556b896b02be4
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: d55b0085552f0baf826380340aaf9f1117ab3307
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="chunking-channel"></a>Canal de fragmentación
 Al enviar mensajes grandes mediante [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], es a menudo deseable limitar la cantidad de memoria utilizada para almacenar en búfer esos mensajes. Una posible solución es transmitir en secuencias el cuerpo del mensaje (suponiendo que la mayor parte de los datos se encuentra en el cuerpo). Sin embargo, algunos protocolos requieren almacenado en búfer del mensaje completo. La mensajería de confianza y la seguridad son dos ejemplos de lo anterior. Otra posible solución es dividir el mensaje grande en mensajes menores llamados fragmentos, enviar uno por uno esos fragmentos y reconstituir el mensaje entero en el lado receptor. La propia aplicación podría hacer esta fragmentación y desfragmentación, o podría utilizar un canal personalizado para hacerlo. El canal de fragmentación muestra cómo un protocolo personalizado o un canal en capas se pueden utilizar para la fragmentación y desfragmentación de mensajes arbitrariamente grandes.  
@@ -215,7 +216,7 @@ as the ChunkingStart message.
   
  ![Canal de fragmentación](../../../../docs/framework/wcf/samples/media/chunkingchannel1.gif "ChunkingChannel1")  
   
- En el lado receptor, `ChunkingChannel` extrae mensajes del canal interno y los ofrece a un `XmlDictionaryReader` personalizado denominado `ChunkingReader`, que reconstituye el mensaje original a partir de los fragmentos de entrada. `ChunkingChannel` ajusta este `ChunkingReader` en una implementación de `Message``ChunkingMessage` personalizada y devuelve este mensaje al nivel anterior. Esta combinación de `ChunkingReader` y `ChunkingMessage` nos permite al anular la fragmentación del cuerpo del mensaje original mientras la lee el nivel anterior en lugar de tener que almacenar en búfer todo el cuerpo del mensaje original. `ChunkingReader` tiene una cola donde almacena en búfer fragmentos de entrada hasta un número máximo configurable de fragmentos almacenados en búfer. Cuando se alcanza este límite máximo, el lector espera que la capa superior recoja los mensajes de la cola (es decir, simplemente leyendo el cuerpo del mensaje original) o hasta que se alcance el tiempo de espera máximo de recepción.  
+ En el lado receptor, `ChunkingChannel` extrae mensajes del canal interno y los ofrece a un `XmlDictionaryReader` personalizado denominado `ChunkingReader`, que reconstituye el mensaje original a partir de los fragmentos de entrada. `ChunkingChannel` ajusta este `ChunkingReader` en una implementación de `Message` `ChunkingMessage` personalizada y devuelve este mensaje al nivel anterior. Esta combinación de `ChunkingReader` y `ChunkingMessage` nos permite al anular la fragmentación del cuerpo del mensaje original mientras la lee el nivel anterior en lugar de tener que almacenar en búfer todo el cuerpo del mensaje original. `ChunkingReader` tiene una cola donde almacena en búfer fragmentos de entrada hasta un número máximo configurable de fragmentos almacenados en búfer. Cuando se alcanza este límite máximo, el lector espera que la capa superior recoja los mensajes de la cola (es decir, simplemente leyendo el cuerpo del mensaje original) o hasta que se alcance el tiempo de espera máximo de recepción.  
   
  ![Canal de fragmentación](../../../../docs/framework/wcf/samples/media/chunkingchannel2.gif "ChunkingChannel2")  
   

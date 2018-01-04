@@ -13,25 +13,26 @@ caps.latest.revision: "3"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 7104aa2fee49a21dab7fcc8392a9d4bb291203fe
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: c6a3f95f2ecea342072de010a6cee51069f755fa
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-service-data-partitioning"></a>Cómo: Particionar datos de servicio
 Este tema describe los pasos básicos necesarios para realizar particiones de los mensajes en múltiples instancias de un mismo servicio de destino. La partición de datos de servicio se suele utilizar cuando hay que ajustar un servicio para proporcionar una mayor calidad del servicio, o cuando hay que administrar solicitudes de diversos clientes de una manera determinada. Por ejemplo, los mensajes de gran importancia o los clientes "Gold" pueden deben procesarse en una prioridad más alta que los mensajes de un cliente estándar.  
   
- En este ejemplo, los mensajes se enrutan a una de las dos instancias del servicio de regularCalc. Ambas instancias del servicio son idénticas; sin embargo, el servicio representado por el extremo de calculator1 procesa mensajes recibidos de los clientes importantes, y el extremo de calculator2 procesa los mensajes de otros clientes.  
+ En este ejemplo, los mensajes se enrutan a una de las dos instancias del servicio de regularCalc. Ambas instancias del servicio son idénticas; sin embargo, el servicio representado por el punto de conexión de calculator1 procesa mensajes recibidos de los clientes importantes, y el punto de conexión de calculator2 procesa los mensajes de otros clientes.  
   
  El mensaje enviado del cliente no tiene ningún dato único que se pueda usar para identificar a qué instancia de servicio debería enrutarse el mensaje. Para permitir que cada cliente enrute datos a un destino concreto, implementaremos dos extremos de servicio que se usarán para recibir mensajes.  
   
 > [!NOTE]
->  Aunque este ejemplo utiliza extremos concretos para crear una partición de los datos, esto también se puede lograr mediante la información incluida en el propio mensaje, como el encabezado o la información del cuerpo del mensaje.  
+>  Aunque este ejemplo utiliza puntos de conexión concretos para crear una partición de los datos, esto también se puede lograr mediante la información incluida en el propio mensaje, como el encabezado o la información del cuerpo del mensaje.  
   
 ### <a name="implement-service-data-partitioning"></a>Implementación de partición de datos de servicio  
   
-1.  Cree la configuración de servicio de enrutamiento básica especificando los extremos de servicio expuestos por el servicio. En el siguiente ejemplo, se definen dos extremos que se utilizarán para recibir mensajes. También se definen los extremos del cliente, que se utilizan para enviar mensajes a las instancias de servicio de regularCalc.  
+1.  Cree la configuración de servicio de enrutamiento básica especificando los puntos de conexión de servicio expuestos por el servicio. En el siguiente ejemplo, se definen dos puntos de conexión que se utilizarán para recibir mensajes. También se definen los puntos de conexión del cliente, que se utilizan para enviar mensajes a las instancias de servicio de regularCalc.  
   
     ```xml  
     <services>  
@@ -81,7 +82,7 @@ Este tema describe los pasos básicos necesarios para realizar particiones de lo
     </filters>  
     ```  
   
-3.  Defina la tabla de filtro, que asocia cada filtro a un extremo del cliente. En este ejemplo, el mensaje se enrutará según el extremo concreto en el que se recibió. Como el mensaje solo puede coincidir con uno de los dos posibles filtros, no hay necesidad de utilizar la prioridad del filtro para controlar el orden en el que se evalúan los filtros.  
+3.  Defina la tabla de filtro, que asocia cada filtro a un punto de conexión del cliente. En este ejemplo, el mensaje se enrutará según el punto de conexión concreto en el que se recibió. Como el mensaje solo puede coincidir con uno de los dos posibles filtros, no hay necesidad de utilizar la prioridad del filtro para controlar el orden en el que se evalúan los filtros.  
   
      El procedimiento siguiente define la tabla de filtros y agrega los filtros definidos anteriormente.  
   

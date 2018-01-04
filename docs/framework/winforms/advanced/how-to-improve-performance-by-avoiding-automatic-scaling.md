@@ -21,11 +21,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0130e0745dfca20da5dc723bb7cc84748bb0b148
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1f49fc4b1e59879b9ecc67295610187fa2e5e80d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-improve-performance-by-avoiding-automatic-scaling"></a>Cómo: Mejorar el rendimiento evitando el ajuste de tamaño automático
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]puede escalar automáticamente una imagen como dibujarlo, por lo que reduciría el rendimiento. O bien, puede controlar la escala de la imagen pasando las dimensiones del rectángulo de destino para la <xref:System.Drawing.Graphics.DrawImage%2A> método.  

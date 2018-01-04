@@ -13,17 +13,18 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8f001f4f8fac2e0366aa705d1998fe33d6dc4438
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 89fb080a890ee866ab16882065bd35495fadfddb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="basic-binding"></a>Enlace básico
 Esta sección contiene ejemplos básicos que muestran cómo utilizar el atributo de enlace de un elemento de punto de conexión.  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Ejemplo de seguridad de mensajes](../../../../docs/framework/wcf/samples/message-security-sample.md)  
+ [Ejemplo de seguridad de mensaje](../../../../docs/framework/wcf/samples/message-security-sample.md)  
  Muestra cómo implementar una aplicación que utiliza la seguridad de los mensajes y `basicHttpBinding`.  
   
  [BasicBinding con seguridad de transporte](../../../../docs/framework/wcf/samples/basicbinding-with-transport-security.md)  

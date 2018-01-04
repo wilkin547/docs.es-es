@@ -17,11 +17,12 @@ caps.latest.revision: "39"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d1cc61b1b777de7149b8f12c0b2f6030b305a73c
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 4bfc4342435580796423056889b1c3bd22153740
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="web-services-protocols-supported-by-system-provided-interoperability-bindings"></a>Protocolos de servicios Web compatibles con los enlaces de interoperabilidad proporcionados por el sistema
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] se crea para interoperar con los servicios Web que admiten un conjunto de especificaciones conocidas como especificaciones de servicios Web. Para simplificar la configuración de servicio para los procedimientos recomendados de interoperabilidad, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] introduce tres enlaces proporcionados por el sistema interoperables: <xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType>, <xref:System.ServiceModel.WSHttpBinding?displayProperty=nameWithType>y <xref:System.ServiceModel.WSDualHttpBinding?displayProperty=nameWithType>. Para la interoperabilidad con estándares OASIS (Organization for the Advanced of Structures Information Standards, organización para el avance de estándares de información estructurada), [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] incluye un enlace proporcionado por el sistema interoperable: <xref:System.ServiceModel.WS2007HttpBinding?displayProperty=nameWithType>. Para publicación de metadatos, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] incluye dos enlaces proporcionados por el sistema interoperables: [ \<mexHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpbinding.md) y [ \<mexHttpsBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpsbinding.md). En este tema se enumeran las especificaciones que admiten los enlaces interoperables proporcionados por el sistema.  

@@ -14,11 +14,12 @@ caps.latest.revision: "60"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ea5cd7f8510836b17a20b523dc2455611cdb2382
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: c5f8df31e31c9617fe7bcd92789671d220382a82
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="system-provided-bindings"></a>Enlaces proporcionados por el sistema
 Los enlaces especifican el mecanismo de comunicación que se ha de utilizar al hablar con un punto de conexión e indican cómo conectarse a un punto de conexión. Un enlace contiene los siguientes elementos:  
@@ -64,8 +65,8 @@ Los enlaces especifican el mecanismo de comunicación que se ha de utilizar al h
   
 |Enlaces|Interoperabilidad|Seguridad (valor predeterminado)|Sesión<br /><br /> (Predeterminado)|Transacciones|Dúplex|Codificación (valor predeterminado)|Streaming<br /><br /> (Predeterminado)|  
 |-------------|----------------------|--------------------------|-----------------------------|------------------|------------|--------------------------|-------------------------------|  
-|<xref:System.ServiceModel.BasicHttpBinding>|Basic Profile 1.1|(Ninguno), transporte, mensaje, mixto|(Ninguno)|(Ninguno)|no disponible|Texto, (MTOM)|Sí<br /><br /> (almacenado en búfer)|  
-|<xref:System.ServiceModel.WSHttpBinding>|WS|Transporte, (mensaje), mixto|(Ninguno), sesión confiable, sesión de seguridad|(Ninguno), Sí|no disponible|(Texto), MTOM|No|  
+|<xref:System.ServiceModel.BasicHttpBinding>|Basic Profile 1.1|(Ninguno), transporte, mensaje, mixto|(Ninguno)|(Ninguno)|N/D|Texto, (MTOM)|Sí<br /><br /> (almacenado en búfer)|  
+|<xref:System.ServiceModel.WSHttpBinding>|WS|Transporte, (mensaje), mixto|(Ninguno), sesión confiable, sesión de seguridad|(Ninguno), Sí|N/D|(Texto), MTOM|No|  
 |<xref:System.ServiceModel.WSDualHttpBinding>|WS|(Mensaje), ninguno|(Sesión confiable), sesión de seguridad|(Ninguno), Sí|Sí|(Texto), MTOM|No|  
 |<xref:System.ServiceModel.WSFederationHttpBinding>|WS-Federation|(Mensaje), mixto, ninguno|(Ninguno), sesión confiable, sesión de seguridad|(Ninguno), Sí|No|(Texto), MTOM|No|  
 |<xref:System.ServiceModel.NetHttpBinding>|.NET|(Ninguno), Transporte, Mensaje, TransportWithMessageCredential, TransportCredentialOnly|Vea la nota siguiente|Ninguna|Vea la nota siguiente|(Binary), Text,MTOM|Sí (almacenado en búfer)|  
@@ -74,11 +75,11 @@ Los enlaces especifican el mecanismo de comunicación que se ha de utilizar al h
 |<xref:System.ServiceModel.NetNamedPipeBinding>|.NET|(Transporte), ninguno|Ninguno, (transporte)|(Ninguno), Sí|Sí|Binary|Sí<br /><br /> (almacenado en búfer)|  
 |<xref:System.ServiceModel.NetMsmqBinding>|.NET|Mensaje, (Transporte), Ninguno|(Ninguno), transporte|Ninguno, (Sí)|No|Binary|No|  
 |<xref:System.ServiceModel.NetPeerTcpBinding>|Del mismo nivel|(Transporte)|(Ninguno)|(Ninguno)|Sí||No|  
-|<xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>|MSMQ|(Transporte)|(Ninguno)|Ninguno, (Sí)|no disponible|no disponible|No|  
-|<xref:System.ServiceModel.BasicHttpContextBinding>|Basic Profile 1.1|(Ninguno), transporte, mensaje, mixto|(Ninguno)|(Ninguno)|no disponible|Texto, (MTOM)|Sí<br /><br /> (almacenado en búfer)|  
+|<xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>|MSMQ|(Transporte)|(Ninguno)|Ninguno, (Sí)|N/D|N/D|No|  
+|<xref:System.ServiceModel.BasicHttpContextBinding>|Basic Profile 1.1|(Ninguno), transporte, mensaje, mixto|(Ninguno)|(Ninguno)|N/D|Texto, (MTOM)|Sí<br /><br /> (almacenado en búfer)|  
 |<xref:System.ServiceModel.NetTcpContextBinding>|.NET|(Transporte), mensaje, ninguno, mixto|(Transporte), sesión confiable, sesión de seguridad|(Ninguno), Sí|Sí|Binary|Sí<br /><br /> (almacenado en búfer)|  
-|<xref:System.ServiceModel.WSHttpContextBinding>|WS|Transporte, (mensaje), mixto|(Ninguno), sesión confiable, sesión de seguridad|(Ninguno), Sí|no disponible|Texto, (MTOM)|No|  
-|<xref:System.ServiceModel.UdpBinding>|.NET **Nota:** se puede lograr interoperabilidad implementando la especificación estándar de SOAP-sobre-UDP que este enlace implementa.|(Ninguno)|(Ninguno)|(Ninguno)|no disponible|(Texto)|No|  
+|<xref:System.ServiceModel.WSHttpContextBinding>|WS|Transporte, (mensaje), mixto|(Ninguno), sesión confiable, sesión de seguridad|(Ninguno), Sí|N/D|Texto, (MTOM)|No|  
+|<xref:System.ServiceModel.UdpBinding>|.NET **Nota:** se puede lograr interoperabilidad implementando la especificación estándar de SOAP-sobre-UDP que este enlace implementa.|(Ninguno)|(Ninguno)|(Ninguno)|N/D|(Texto)|No|  
   
 > [!IMPORTANT]
 >  <xref:System.ServiceModel.NetHttpBinding> es un enlace diseñado para consumir servicios HTTP o WebSocket y usa la codificación binaria de forma predeterminada. <xref:System.ServiceModel.NetHttpBinding> detectará si se usa con un contrato de solicitud-respuesta o dúplex y cambiará su comportamiento para que coincida; usará HTTP para los contratos de solicitud-respuesta y WebSockets para los dúplex. Este comportamiento puede invalidarse mediante el <!--zz <xref:System.ServiceModel.NetHttpBinding.WebSocketTransportUsage%2A>--> `System.ServiceModel.NetHttpBinding.WebSocketTransportUsage` valor de enlace: permitida: este es el valor predeterminado y se comporta como se describió anteriormente. NotAllowed - Esto impide que se use WebSockets. Intenta usar un contrato dúplex con este valor se producirá una excepción. Requerido: obliga a utilizar incluso para los contratos de solicitud-respuesta WebSockets. NetHttpBinding admite sesiones confiables en modo de HTTP y el modo WebSocket. En el modo WebSocket, el transporte proporciona las sesiones.  

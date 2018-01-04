@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c1dd0cfd8062274d4e2ad9ce75ae41ed69e703d4
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 0dbebd020d4512b90215dae781f359a3a633c609
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="errorprovider-component-windows-forms"></a>ErrorProvider (Componente, Formularios Windows Forms)
 Los formularios de Windows `ErrorProvider` componente se utiliza para mostrar al usuario de forma no intrusiva que algo no funciona correctamente. Normalmente se utiliza junto con la validación proporcionados por el usuario en un formulario o mostrar los errores dentro de un conjunto de datos.  

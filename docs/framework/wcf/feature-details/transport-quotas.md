@@ -14,11 +14,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4de910e2e66bc480abefe228bd183fe95270fb69
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 5e9d7fbf42f2ed9b8f68b1faf2e2425050b62eaa
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="transport-quotas"></a>Cuotas de transporte
 Las cuotas de transporte son un mecanismo de directivas para decidir cuándo una conexión está utilizando recursos excesivos. Una cuota es un límite que evita una vez el uso de recursos adicionales una vez que se supera el valor de cuota. Las cuotas de transporte evitan los ataques de denegación de servicio (DoS) malintencionados o involuntarios.  
@@ -39,7 +40,7 @@ Las cuotas de transporte son un mecanismo de directivas para decidir cuándo una
   
  Cada valor de cuota tiene un tipo, valor mínimo y valor predeterminado. Su tipo limita el valor máximo de una cuota. Debido a las limitaciones de los equipos, no siempre es posible establecer una cuota en su valor máximo.  
   
-|Nombre|Tipo|Mín.<br /><br /> value|Predeterminado<br /><br /> value|Descripción|  
+|nombre|Tipo|Mín.<br /><br /> value|Default<br /><br /> value|Descripción|  
 |----------|----------|--------------------|-----------------------|-----------------|  
 |`ChannelInitializationTimeout`|TimeSpan|1 tic|5 seg.|Tiempo máximo a esperar para que una conexión envíe el preámbulo durante la lectura inicial. Estos datos se reciben antes de que se produzca la autenticación. Este valor es generalmente mucho más pequeño que el valor de cuota de `ReceiveTimeout`.|  
 |`CloseTimeout`|TimeSpan|0|1 min|El tiempo máximo que se ha de esperar para que una conexión se cierre antes de que el transporte produzca una excepción.|  
@@ -49,7 +50,7 @@ Las cuotas de transporte son un mecanismo de directivas para decidir cuándo una
 |`ListenBacklog`|Integer|1|10|Número máximo de conexiones que el agente de escucha puede tener sin atender antes de que se denieguen las conexiones adicionales a ese punto de conexión.|  
 |`MaxBufferPoolSize`|Long|0|512 KB|Memoria máxima, en bytes, que el transporte dedica a agrupar los búferes de mensajes reutilizables. Cuando el grupo no puede proporcionar un búfer de mensaje, se asigna un nuevo búfer para el uso temporal.<br /><br /> Las instalaciones que crean muchos generadores de canales o agentes de escucha pueden asignar grandes cantidades de memoria para grupos de búferes. Reducir este tamaño de búfer puede reducir en gran mediad el uso de memoria en este escenario.|  
 |`MaxBufferSize`|Integer|1|64 KB|Tamaño máximo, en bytes, de un búfer utilizado para la secuenciación de datos. Si no se establece esta cuota de transporte, o el transporte no está utilizando la transmisión por secuencias, el valor de cuota es igual que el valor de cuota `MaxReceivedMessageSize` o <xref:System.Int32.MaxValue>, lo que sea más pequeño.|  
-|`MaxOutboundConnectionsPerEndpoint`|Integer|1|10|Número máximo de conexiones salientes que pueden asociarse a un extremo determinado.<br /><br /> Este ajuste solo se aplica a las conexiones agrupadas.|  
+|`MaxOutboundConnectionsPerEndpoint`|Integer|1|10|Número máximo de conexiones salientes que pueden asociarse a un punto de conexión determinado.<br /><br /> Este ajuste solo se aplica a las conexiones agrupadas.|  
 |`MaxOutputDelay`|TimeSpan|0|200 ms|Tiempo máximo que se debe esperar después de una operación de envío para procesar por lotes los mensajes adicionales en una única operación. Se envían los mensajes antes si el búfer del transporte subyacente se llena. Mediante el envío de mensajes adicionales, no se restablece el período del retraso.|  
 |`MaxPendingAccepts`|Integer|1|1|Número máximo de aceptaciones para los canales que el agente de escucha puede tener en espera.<br /><br /> Hay un intervalo de tiempo entre la completación de la aceptación y el inicio de una nueva aceptación. El aumento de este tamaño de colección puede evitar que se quiten clientes que conecten durante este intervalo.|  
 |`MaxPendingConnections`|Integer|1|10|Número máximo de conexiones que el agente de escucha puede tener en espera para que la aplicación las acepte. Cuando se supera este valor de cuota, se pierden las nuevas conexiones entrantes en lugar de esperar a ser aceptadas.<br /><br /> Características de conexión como la seguridad de mensaje pueden hacer que un cliente abra más de una conexión. Los administradores de servicio deberían tener en cuenta estas conexiones adicionales al establecer este valor de cuota.|  
@@ -68,7 +69,7 @@ Las cuotas de transporte son un mecanismo de directivas para decidir cuándo una
 ### <a name="controlling-transport-quotas-from-the-binding-element"></a>Control de las cuotas de transporte a partir del elemento de enlace  
  Establecer las cuotas de transporte a través del elemento de enlace proporciona la máxima flexibilidad para controlar el comportamiento del transporte. Los tiempos de espera predeterminados para operaciones de cierre, apertura, recepción y envío se toman del enlace cuando se crea un canal.  
   
-|Nombre|HTTP|TCP/IP|Canalización con nombre|  
+|nombre|HTTP|TCP/IP|Canalización con nombre|  
 |----------|----------|-------------|----------------|  
 |`ChannelInitializationTimeout`||X|X|  
 |`CloseTimeout`||||  
@@ -90,7 +91,7 @@ Las cuotas de transporte son un mecanismo de directivas para decidir cuándo una
 ### <a name="controlling-transport-quotas-from-the-binding"></a>Control de las cuotas de transporte a partir del enlace  
  Establecer las cuotas de transporte a través del enlace ofrece un conjunto simplificado de cuotas de entre las que elegir al mismo tiempo que se proporciona acceso a los valores de cuota más comunes.  
   
-|Nombre|HTTP|TCP/IP|Canalización con nombre|  
+|nombre|HTTP|TCP/IP|Canalización con nombre|  
 |----------|----------|-------------|----------------|  
 |`ChannelInitializationTimeout`||||  
 |`CloseTimeout`|X|X|X|  

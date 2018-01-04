@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 544e505dd182d331179d9a6d3da4815b849fdd95
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: e616f989416fcee77caa9b9a5d87cfa6812eab32
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="transaction-protocols-version-10"></a>Protocolos de transacción versión 1.0
 La versión 1 de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] implementa la versión 1.0 de los protocolos WS-Atomic Transaction y WS-Coordination. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]versión 1.1, vea [protocolos de transacción](../../../../docs/framework/wcf/feature-details/transaction-protocols.md).  
@@ -73,7 +74,7 @@ La versión 1 de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] impleme
 |wsa|http://www.w3.org/2004/08/Addressing|  
 |wscoor|http://schemas.xmlsoap.org/ws/2004/10/wscoor|  
 |wsat|http://schemas.xmlsoap.org/ws/2004/10/wsat|  
-|t|http://schemas.xmlsoap.org/ws/2005/02/trust|  
+|m|http://schemas.xmlsoap.org/ws/2005/02/trust|  
 |o|http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd|  
 |xsd|http://www.w3.org/2001/XMLSchema|  
   
@@ -111,7 +112,7 @@ La versión 1 de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] impleme
   
  B1221: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usa el enlace HTTPS dúplex (se describe en [protocolos de mensajería](../../../../docs/framework/wcf/feature-details/messaging-protocols.md)) para los mensajes de activación. Los mensajes de solicitud y respuesta se ponen en correlación mediante WS-Addressing 2004/08.  
   
- La especificación de transacciones WS-Atomic, sección 8, describe detalles adicionales sobre la correlación y los patrones de intercambio de mensajes.  
+ La especificación de transacción WS-Atomic, sección 8, describe detalles adicionales sobre la correlación y los patrones de intercambio de mensajes.  
   
 -   R1222: tras recibir `CreateCoordinationContext`, el coordinador debe emitir un `SecurityContextToken` con `STx`secreto asociado. Este token se devuelve dentro de un encabezado `t:IssuedTokens` que sigue la especificación de WS-Trust.  
   

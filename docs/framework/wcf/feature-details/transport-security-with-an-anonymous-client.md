@@ -16,11 +16,12 @@ caps.latest.revision: "14"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: a4d4180a0a60e062ab6d8872b153d5bc8b416708
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 97a3c9c618fc7d6c96deba0b72e25ef36c5785e4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="transport-security-with-an-anonymous-client"></a>Seguridad del transporte con clientes anónimos
 Este escenario de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] utiliza la seguridad del transporte (HTTPS) para garantizar la confidencialidad y la integridad. El servidor debe autenticarse con un certificado de Capa de sockets seguros (SSL) y los clientes deben confiar en el certificado del servidor. Ningún mecanismo autentica el cliente y es, por lo tanto, anónimo.  
@@ -55,7 +56,7 @@ Este escenario de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] utiliz
  [!code-vb[c_SecurityScenarios#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#5)]  
   
 ### <a name="configuration"></a>Configuración  
- El código siguiente configura el mismo extremo mediante la configuración. Ningún mecanismo autentica el cliente y es, por lo tanto, anónimo.  
+ El código siguiente configura el mismo punto de conexión mediante la configuración. Ningún mecanismo autentica el cliente y es, por lo tanto, anónimo.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -127,5 +128,5 @@ Este escenario de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] utiliz
 ## <a name="see-also"></a>Vea también  
  [Información general sobre seguridad](../../../../docs/framework/wcf/feature-details/security-overview.md)  
  [Seguridad de transporte WS](../../../../docs/framework/wcf/samples/ws-transport-security.md)  
- [Información general sobre la seguridad de transporte](../../../../docs/framework/wcf/feature-details/transport-security-overview.md)  
+ [Información general de la seguridad del transporte](../../../../docs/framework/wcf/feature-details/transport-security-overview.md)  
  [Modelo de seguridad de Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

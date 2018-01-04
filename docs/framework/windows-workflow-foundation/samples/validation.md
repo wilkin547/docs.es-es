@@ -12,17 +12,18 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: caff98a6cd0ace0f34cf1c2b839bb6291a77da1d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: d8f0f6d30fe03117cddbc4faea63b36955854ba5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="validation"></a>Validación
 Esta sección contiene ejemplos que muestran la validación de actividad.  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Validar actividades externas](../../../../docs/framework/windows-workflow-foundation/samples/external-activity-validation.md)  
+ [Validación de actividades externas](../../../../docs/framework/windows-workflow-foundation/samples/external-activity-validation.md)  
  Este ejemplo muestra cómo agregar la lógica de validación a una actividad integrada cuyo autor no es usted.  
   
  [Validación básica](../../../../docs/framework/windows-workflow-foundation/samples/basic-validation.md)  
@@ -31,5 +32,5 @@ Esta sección contiene ejemplos que muestran la validación de actividad.
  [OverloadGroups](../../../../docs/framework/windows-workflow-foundation/samples/overloadgroups.md)  
  Muestra una actividad, `CreateLocation`, que tiene argumentos necesarios y opcionales y permite al usuario elegir entre dos conjuntos diferentes de argumentos cuál proporcionará.  
   
- [Validar relaciones de actividad](../../../../docs/framework/windows-workflow-foundation/samples/activity-relationships-validation.md)  
+ [Validación de relaciones de actividad](../../../../docs/framework/windows-workflow-foundation/samples/activity-relationships-validation.md)  
  Muestra cómo validar las relaciones entre las actividades.

@@ -13,17 +13,18 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 184c4a5c31969ee060f72d937ab02af733340ca4
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: aa762df1dbfe92102f8cd719613099b23986ed0c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="discovery-with-scopes-sample"></a>Ejemplo de detección con ámbitos
-Este ejemplo muestra cómo utilizar los ámbitos para clasificar los extremos detectables además de cómo utilizar <xref:System.ServiceModel.Discovery.DiscoveryClient> para realizar una búsqueda asincrónica de los extremos. En el servicio, este ejemplo muestra cómo personalizar la detección de cada extremo agregando un comportamiento de detección de extremo y utilizándolo para agregar un ámbito al extremo así como controlando la detectabilidad del extremo. En el cliente, el ejemplo revisa el modo en que los clientes pueden crear un <xref:System.ServiceModel.Discovery.DiscoveryClient> y ajustar los parámetros de búsqueda para incluir ámbitos agregándolos a <xref:System.ServiceModel.Discovery.FindCriteria>. Este ejemplo también muestra el modo en que los clientes pueden restringir las respuestas agregando un criterio de terminación.  
+Este ejemplo muestra cómo utilizar los ámbitos para clasificar los extremos detectables además de cómo utilizar <xref:System.ServiceModel.Discovery.DiscoveryClient> para realizar una búsqueda asincrónica de los extremos. En el servicio, este ejemplo muestra cómo personalizar la detección de cada punto de conexión agregando un comportamiento de detección de punto de conexión y utilizándolo para agregar un ámbito al punto de conexión así como controlando la detectabilidad del punto de conexión. En el cliente, el ejemplo revisa el modo en que los clientes pueden crear un <xref:System.ServiceModel.Discovery.DiscoveryClient> y ajustar los parámetros de búsqueda para incluir ámbitos agregándolos a <xref:System.ServiceModel.Discovery.FindCriteria>. Este ejemplo también muestra el modo en que los clientes pueden restringir las respuestas agregando un criterio de terminación.  
   
 ## <a name="service-features"></a>Características de servicio  
- Este proyecto muestra dos extremos de servicio que se agregan a un <xref:System.ServiceModel.ServiceHost>. Cada extremo tiene un <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> asociado. Este comportamiento se utiliza para agregar los ámbitos del URI para ambos extremos. Los ámbitos se utilizan para distinguir cada uno de estos extremos para que los clientes puedan ajustar la búsqueda. Para el segundo extremo, la detectabilidad puede deshabilitarse estableciendo la propiedad <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior.Enabled%2A> en `false`. De este modo se asegura de que los metadatos de detección asociados a este extremo no se envían como parte de ningún mensaje de detección.  
+ Este proyecto muestra dos extremos de servicio que se agregan a un <xref:System.ServiceModel.ServiceHost>. Cada extremo tiene un <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> asociado. Este comportamiento se utiliza para agregar los ámbitos del URI para ambos puntos de conexión. Los ámbitos se utilizan para distinguir cada uno de estos puntos de conexión para que los clientes puedan ajustar la búsqueda. Para el segundo extremo, la detectabilidad puede deshabilitarse estableciendo la propiedad <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior.Enabled%2A> en `false`. De este modo se asegura de que los metadatos de detección asociados a este punto de conexión no se envían como parte de ningún mensaje de detección.  
   
 ## <a name="client-features"></a>Características de cliente  
  El método `FindCalculatorServiceAddress()` muestra cómo utilizar <xref:System.ServiceModel.Discovery.DiscoveryClient> y pasarlo en un <xref:System.ServiceModel.Discovery.FindCriteria> con dos restricciones. Un ámbito se agrega a los criterios y la propiedad <xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A> se establece en 1. El ámbito limita los resultados solo a los servicios que publican el mismo ámbito. Al establecer <xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A> en 1, se limitan las respuestas que el <xref:System.ServiceModel.Discovery.DiscoveryClient> espera a un extremo, como máximo. La llamada a <xref:System.ServiceModel.Discovery.DiscoveryClient.Find%2A> es una operación sincrónica que bloquea el subproceso hasta que se alcance un tiempo de espera o se encuentre un extremo.  

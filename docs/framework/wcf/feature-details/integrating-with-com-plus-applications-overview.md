@@ -16,11 +16,12 @@ caps.latest.revision: "29"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 04de29891bcf5d8cdbac32ffc85d64a4003e3184
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0fbed530a1b968bb049ee20262eb2b8fa9ba13c2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="integrating-with-com-applications-overview"></a>Integración en la información general de las aplicaciones COM+
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] proporciona un entorno rico para crear aplicaciones distribuidas. Si ya está utilizando lógica de aplicación basada en componentes hospedada en COM+, puede utilizar [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] para extender su lógica existente en lugar de tener que rescribirla. Un escenario común es cuando se quiere exponer una lógica de negocio de Enterprise Services o COM+ mediante servicios web.  
@@ -112,4 +113,4 @@ ms.lasthandoff: 12/02/2017
  Las características de reciclaje de proceso de COM+ no se pueden utilizar en aplicaciones integradas. Si la aplicación se configura para utilizar reciclaje de proceso y los componentes se ejecutan en un proceso hospedado por COM+, el servicio no se inicia. Este requisito no incluye servicios del modo en proceso de hospedaje en web porque no se aplica la configuración de reciclaje de proceso.  
   
 ## <a name="see-also"></a>Vea también  
- [Integración con la introducción a las aplicaciones COM](../../../../docs/framework/wcf/feature-details/integrating-with-com-applications-overview.md)
+ [Integración en la información general de las aplicaciones COM+](../../../../docs/framework/wcf/feature-details/integrating-with-com-applications-overview.md)

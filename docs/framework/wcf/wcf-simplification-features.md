@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 533176b3859c820d3549e5162dcbe5d80e5fcee9
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 211a52288010adabb712618cee40dbdd9d8b5262
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wcf-simplification-features"></a>Características de simplificación de WCF
 En este tema se describen las características nuevas que simplifican la escritura de aplicaciones WCF.  
@@ -98,12 +99,12 @@ En este tema se describen las características nuevas que simplifican la escritu
 ## <a name="new-transport-default-values"></a>Nuevos valores de transporte predeterminados  
  En la tabla siguiente se describen los valores que han cambiado y dónde encontrar información adicional.  
   
-|Propiedad|Activado|Nuevo valor predeterminado|Obtener más información|  
+|Property|Activado|Nuevo valor predeterminado|Más información|  
 |--------------|--------|-----------------|----------------------|  
 |channelInitializationTimeout|<xref:System.ServiceModel.NetTcpBinding>|30 segundos|Esta propiedad determina cuánto tiempo puede tardar una conexión TCP en autenticarse a sí misma mediante el protocolo de tramas .NET. Un cliente debe enviar algunos datos iniciales antes de que el servidor tenga información suficiente para realizar la autenticación. Este tiempo de expiración se ha hecho intencionadamente más breve que ReceiveTimeout (10 min) para que los clientes no autenticados y malintencionados no conserven las conexiones con el servidor durante mucho tiempo. El valor predeterminado es 30 segundos. [!INCLUDE[crdefault](../../../includes/crabout-md.md)] <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.ChannelInitializationTimeout%2A>|  
 |listenBacklog|<xref:System.ServiceModel.NetTcpBinding>|16 * número de procesadores|Esta propiedad del nivel de socket describe el número de solicitudes "pendientes de aceptación" que se van a poner en cola. Si la cola de trabajos pendientes de escucha se llena, las nuevas solicitudes de socket se rechazarán. [!INCLUDE[crdefault](../../../includes/crabout-md.md)] <xref:System.ServiceModel.NetTcpBinding.ListenBacklog%2A>|  
 |maxPendingAccepts|ConnectionOrientedTransportBindingElement<br /><br /> SMSvcHost.exe|2 * número de procesadores para transporte<br /><br /> 4 \* número de procesadores para SMSvcHost.exe|Esta propiedad limita el número de canales que el servidor pueda tener en espera en un agente de escucha. Cuando MaxPendingAccepts es demasiado bajo, hay un pequeño intervalo de tiempo en el que todos los canales en espera han iniciado conexiones de mantenimiento, pero sin que ningún canal nuevo haya empezado a escuchar. Una conexión puede llegar durante este intervalo y producirá un error porque no hay nada en espera en el servidor. Esta propiedad se puede configurar si se establece la propiedad <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.MaxPendingConnections%2A> en un número mayor. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)]<xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.MaxPendingAccepts%2A> y [configurar el servicio de uso compartido de puertos Net.TCP](http://msdn.microsoft.com/en-us/b6dd81fa-68b7-4e1b-868e-88e5901b7ea0)|  
-|maxPendingConnections|ConnectionOrientedTransportBindingElement|12 * número de procesadores|Esta propiedad controla cuántas conexiones ha aceptado un transporte pero no las ha seleccionado el distribuidor de ServiceModel. Para establecer este valor, use `MaxConnections` en el enlace o `maxOutboundConnectionsPerEndpoint` en el elemento de enlace. [!INCLUDE[crdefault](../../../includes/crabout-md.md)]<xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.MaxPendingConnections%2A>|  
+|maxPendingConnections|ConnectionOrientedTransportBindingElement|12 * número de procesadores|Esta propiedad controla cuántas conexiones ha aceptado un transporte pero no las ha seleccionado el distribuidor de ServiceModel. Para establecer este valor, use `MaxConnections` en el enlace o `maxOutboundConnectionsPerEndpoint` en el elemento de enlace. [!INCLUDE[crdefault](../../../includes/crabout-md.md)] <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.MaxPendingConnections%2A>|  
 |receiveTimeout|SMSvcHost.exe|30 segundos|Esta propiedad especifica el tiempo de expiración para la lectura de datos de trama de TCP y para la conexión mediante el envío desde las conexiones subyacentes. Existe para limitar el tiempo que el servicio SMSvcHost.exe se mantiene ocupado para leer los datos de preámbulo de una conexión entrante. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Configurar el servicio de uso compartido de puertos Net.TCP](http://msdn.microsoft.com/en-us/b6dd81fa-68b7-4e1b-868e-88e5901b7ea0).|  
   
 > [!NOTE]
@@ -134,6 +135,6 @@ En este tema se describen las características nuevas que simplifican la escritu
   
 ## <a name="basichttpbinding-improvements"></a>Mejoras de BasicHttpBinding  
   
-1.  Permite a un único extremo de WCF responder a distintos modos de autenticación.  
+1.  Permite a un único punto de conexión de WCF responder a distintos modos de autenticación.  
   
 2.  Permite que la configuración de seguridad de un servicio WCF esté controlada por IIS

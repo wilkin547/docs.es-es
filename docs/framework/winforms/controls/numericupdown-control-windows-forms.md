@@ -20,11 +20,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0c674fec227e765213edfe2f2827543024cceac7
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 0d57bccb12bfa9b0b193967a5a2ce3830dd6ef7f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="numericupdown-control-windows-forms"></a>NumericUpDown (Control, formularios Windows Forms)
 El control `NumericUpDown` de Windows Forms es similar a una combinación de un cuadro de texto y un par de flechas en los que el usuario puede hacer clic para ajustar un valor. El control muestra y establece un valor numérico único de una lista de opciones. El usuario puede aumentar y disminuir el número. Para ello, puede hacer clic en los botones arriba y abajo, presionar las teclas FLECHA ARRIBA y ABAJO o escribir un número. Al presionar la tecla FLECHA ARRIBA, se desplaza el valor hacia el máximo; al presionar la tecla FLECHA ABAJO, se desplaza el valor hacia el mínimo. Un ejemplo donde este tipo de control puede ser útil es un control de volumen en un reproductor de música. Los controles numéricos de flechas se usan en algunas aplicaciones del panel de control de Windows.  

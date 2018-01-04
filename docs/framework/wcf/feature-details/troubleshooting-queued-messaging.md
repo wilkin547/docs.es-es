@@ -13,11 +13,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a23dd402cdc12cd20ce7273a96df056aeda71ceb
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: a35de5ea587ad77a13105442f0c47344638b611c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="troubleshooting-queued-messaging"></a>Solución de problemas de la mensajería en cola
 Esta sección contiene preguntas comunes y solución de problemas para utilizar las colas en [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
@@ -96,7 +97,7 @@ Esta sección contiene preguntas comunes y solución de problemas para utilizar 
   
  **P: ¿** mi servicio inicia Svchost.Open con un mensaje "que Listenerfactory no puede cumplir requisitos de endpointlistener el". ¿Por qué?  
   
- Un archivo . Compruebe su contrato de servicios. Puede que haya olvidado colocar "IsOneWay =`true`" en todas las operaciones de servicio. Las colas solo admiten las operaciones de servicio unidireccionales.  
+ R. Compruebe su contrato de servicios. Puede que haya olvidado colocar "IsOneWay =`true`" en todas las operaciones de servicio. Las colas solo admiten las operaciones de servicio unidireccionales.  
   
  **P: ¿** hay mensajes en la cola, pero se invoca ninguna operación de servicio. ¿Cuál es el problema?  
   

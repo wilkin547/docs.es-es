@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 4c4bd28c1a59d422c4ec0c65e133d253cabf16c4
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: a4da80d264b05f9c7a1461a7298e521623a97f31
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-service-versioning"></a>Cómo: Control de versiones del servicio
 Este tema describe los pasos básicos necesarios para crear una configuración de enrutamiento que enrute mensajes a las diferentes versiones del mismo servicio. En este ejemplo, los mensajes se enrutan a dos versiones diferentes de un servicio de la calculadora, `roundingCalc` (v1) y `regularCalc` (v2). Ambas implementaciones admiten las mismas operaciones; sin embargo, el servicio más antiguo, `roundingCalc`, redondea todos los cálculos al valor entero más cercano antes de devolverlos. Una aplicación cliente debe poder indicar cuándo se debe usar el servicio `regularCalc` más reciente.  
@@ -37,7 +38,7 @@ Este tema describe los pasos básicos necesarios para crear una configuración d
   
  Como ambas implementaciones del servicio administran las mismas operaciones y son prácticamente idénticas exceptuando los datos que devuelven, los datos base incluidos en mensajes enviados de las aplicaciones cliente no son lo suficientemente exclusivos como para permitirle determinar cómo enrutar la solicitud. Por ejemplo, no se pueden utilizar los filtros de acción porque las acciones predeterminadas para ambos servicios son las mismas.  
   
- Esto se puede resolver de varias maneras: exponiendo un extremo concreto en el enrutador para cada versión del servicio o agregando un elemento de encabezado personalizado al mensaje para indicar la versión del servicio.  Cada uno de estos sistemas le permite enrutar los mensajes entrantes de forma única a una versión concreta del servicio. Sin embargo, el empleo de contenidos de mensaje únicos es el método preferido para diferenciar entre las solicitudes de versiones del servicio diferentes.  
+ Esto se puede resolver de varias maneras: exponiendo un punto de conexión concreto en el enrutador para cada versión del servicio o agregando un elemento de encabezado personalizado al mensaje para indicar la versión del servicio.  Cada uno de estos sistemas le permite enrutar los mensajes entrantes de forma única a una versión concreta del servicio. Sin embargo, el empleo de contenidos de mensaje únicos es el método preferido para diferenciar entre las solicitudes de versiones del servicio diferentes.  
   
  En este ejemplo, la aplicación cliente agrega el encabezado personalizado 'CalcVer' al mensaje de solicitud. Este encabezado contendrá un valor que indica la versión del servicio al que se debería enrutar el mensaje. Un valor de '1' indica que el servicio roundingCalc debe procesar el mensaje, mientras que un valor de '2' indica el servicio de regularCalc. Esto permite que la aplicación cliente controle directamente que versión del servicio procesará el mensaje.  Como el encabezado personalizado es un valor contenido dentro del mensaje, puede utilizar un extremo para recibir mensajes destinados a ambas versiones del servicio. Se puede utilizar el siguiente código en la aplicación cliente para agregar este encabezado personalizado al mensaje:  
   

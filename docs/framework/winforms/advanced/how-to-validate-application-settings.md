@@ -20,11 +20,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 309429c2481bad3a8dff4708d9e2ea8a03057a4e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e12620a5079efaba4faa9101253a3a586965b7e5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-validate-application-settings"></a>Cómo: Validar la configuración de la aplicación
 En este tema se muestra cómo validar la configuración de la aplicación antes de conservarla.  
@@ -33,7 +34,7 @@ En este tema se muestra cómo validar la configuración de la aplicación antes 
   
  El evento que use depende de cuándo es necesario validar la configuración, como se describe en la siguiente tabla.  
   
-|Evento|Repetición y uso|  
+|evento|Repetición y uso|  
 |-----------|------------------------|  
 |<xref:System.Configuration.ApplicationSettingsBase.SettingsLoaded>|Se produce después de la carga inicial de un grupo de propiedades de configuración.<br /><br /> Use este evento para validar los valores iniciales de todo el grupo de propiedades antes de que se utilicen dentro de la aplicación.|  
 |<xref:System.Configuration.ApplicationSettingsBase.SettingChanging>|Se produce antes de cambiarse el valor de una sola propiedad de configuración.<br /><br /> Use este evento para validar una sola propiedad antes de que se cambie. Puede proporcionar comentarios inmediatos a los usuarios relacionados con sus acciones y opciones.|  

@@ -13,11 +13,12 @@ caps.latest.revision: "35"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 4e8e8ff9a99c362fb5e2a6f5ef1161f48df86ceb
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 86a10a4117a5bbeb48e9d1d15b1ce8da9d7c7751
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="security-validation"></a>Validación de seguridad
 Este ejemplo muestra cómo utilizar un comportamiento personalizado para validar los servicios en un equipo a fin de asegurarse de que cumplen criterios específicos. En este ejemplo, el comportamiento personalizado valida estos servicios analizando cada punto de conexión en el servicio y comprobando si contienen elementos de enlace seguros. En este ejemplo se basa en el [Introducción](../../../../docs/framework/wcf/samples/getting-started-sample.md).  
@@ -26,7 +27,7 @@ Este ejemplo muestra cómo utilizar un comportamiento personalizado para validar
 >  El procedimiento de instalación y las instrucciones de compilación de este ejemplo se encuentran al final de este tema.  
   
 ## <a name="endpoint-validation-custom-behavior"></a>Comportamiento personalizado de validación del extremo  
- Al agregar código de usuario al método `Validate` contenido en la interfaz <xref:System.ServiceModel.Description.IServiceBehavior>, se puede dar el comportamiento personalizado a un servicio o extremo para realizar las acciones definidas por el usuario. El código siguiente se utiliza para recorrer a través de cada extremo contenido en un servicio, que busca en las colecciones de enlaces los enlaces seguros.  
+ Al agregar código de usuario al método `Validate` contenido en la interfaz <xref:System.ServiceModel.Description.IServiceBehavior>, se puede dar el comportamiento personalizado a un servicio o extremo para realizar las acciones definidas por el usuario. El código siguiente se utiliza para recorrer a través de cada punto de conexión contenido en un servicio, que busca en las colecciones de enlaces los enlaces seguros.  
   
 ```  
 public void Validate(ServiceDescription serviceDescription,   
@@ -87,7 +88,7 @@ public void Validate(ServiceDescription serviceDescription,
 > [!NOTE]
 >  Al agregar el comportamiento a todos los servicios, la sugerencia es realizar una copia de seguridad del archivo Machine.config antes de realizar cualquier modificación.  
   
- Ahora ejecute el cliente proporcionado en el directorio client\bin de este ejemplo. Se ha producido una excepción con el mensaje siguiente: "No se pudo activar el servicio solicitado, 'http://localhost/servicemodelsamples/service.svc'". Se espera este mensaje porque el comportamiento que valida el extremo considera inseguro al extremo y evita que se inicie el servicio. El comportamiento también produce una excepción interna que describe qué extremo es inseguro y escribe un mensaje en el visor de eventos en el origen "System.ServiceModel 4.0.0.0" y la categoría "WebHost". También es posible activar el seguimiento en el servicio en este ejemplo. Esto le permite al usuario ver las excepciones iniciadas por el comportamiento que valida el extremo abriendo los seguimientos de servicio resultantes mediante la herramienta Service Trace Viewer.  
+ Ahora ejecute el cliente proporcionado en el directorio client\bin de este ejemplo. Se ha producido una excepción con el mensaje siguiente: "No se pudo activar el servicio solicitado, 'http://localhost/servicemodelsamples/service.svc'". Se espera este mensaje porque el comportamiento que valida el extremo considera inseguro al extremo y evita que se inicie el servicio. El comportamiento también produce una excepción interna que describe qué punto de conexión es inseguro y escribe un mensaje en el visor de eventos en el origen "System.ServiceModel 4.0.0.0" y la categoría "WebHost". También es posible activar el seguimiento en el servicio en este ejemplo. Esto le permite al usuario ver las excepciones iniciadas por el comportamiento que valida el extremo abriendo los seguimientos de servicio resultantes mediante la herramienta Service Trace Viewer.  
   
 #### <a name="to-view-failed-endpoint-validation-exception-messages-in-the-event-viewer"></a>Para ver los mensajes de excepción de validación del punto de conexión en el visor de eventos  
   

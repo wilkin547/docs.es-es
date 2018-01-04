@@ -17,11 +17,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ceb77b12fc8c946eea03d865509db20d72a1900a
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 1ae6fb9a0aa6552459b2847243047244d0806db2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="groupbox-control-overview-windows-forms"></a>Información general sobre el control GroupBox (formularios Windows Forms)
 Formularios Windows Forms <xref:System.Windows.Forms.GroupBox> controles se utilizan para proporcionar un agrupamiento identificable para otros controles. Normalmente, los cuadros de grupo se utilizan para subdividir un formulario por funciones. Por ejemplo, podría tener un formulario de pedido que especifica las opciones de envío de correo directo, como el servicio de transporte urgente que se va a usar. La agrupación de todas las opciones en un cuadro de grupo ofrece al usuario una pista visual lógica y en tiempo de diseño todos los controles se pueden mover fácilmente: al mover el único <xref:System.Windows.Forms.GroupBox> controlar, todos los controles que contiene se desplazan también.  

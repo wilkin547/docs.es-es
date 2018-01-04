@@ -13,11 +13,12 @@ caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4f4c89e6382b5edd0ca295fde8f498fe97bdb64d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 4df9060f173647767a3a070a451e0f2d3e02cf0d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="asmx-client-with-a-wcf-service"></a>Cliente ASMX con un servicio WCF
 Este ejemplo muestra cómo crear un servicio mediante [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] y después se tiene acceso al servicio desde un cliente que no sea de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], como un cliente ASMX.  
@@ -46,7 +47,7 @@ public interface ICalculator
   
  <xref:System.Runtime.Serialization.DataContractSerializer> y <xref:System.Xml.Serialization.XmlSerializer> asignan los tipos CLR a una representación XML. <xref:System.Runtime.Serialization.DataContractSerializer> interpreta algunas representaciones XML de manera diferente a XmlSerializer. Los generadores que no sean de proxy [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], como Wsdl.exe, generan una interfaz más utilizable cuando se utiliza XmlSerializer. El <xref:System.ServiceModel.XmlSerializerFormatAttribute> se aplica a la `ICalculator` interfaz, para asegurarse de que se usa XmlSerializer para asignar los tipos CLR a XML. La implementación del servicio calcula y devuelve el resultado adecuado.  
   
- El servicio expone un extremo único para comunicarse con el servicio, que se define utilizando el archivo de configuración (Web.config). El extremo está compuesto por una dirección, un enlace y un contrato. El servicio expone el extremo en la dirección base proporcionada por el host de Internet Information Services (IIS). El atributo `binding` está definido en basicHttpBinding, que proporciona las comunicaciones HTTP usando SOAP 1.1, que es conforme a WS-I BasicProfile 1.1, tal y como se muestra en la configuración del ejemplo siguiente.  
+ El servicio expone un punto de conexión único para comunicarse con el servicio, que se define utilizando el archivo de configuración (Web.config). El extremo está compuesto por una dirección, un enlace y un contrato. El servicio expone el extremo en la dirección base proporcionada por el host de Internet Information Services (IIS). El atributo `binding` está definido en basicHttpBinding, que proporciona las comunicaciones HTTP usando SOAP 1.1, que es conforme a WS-I BasicProfile 1.1, tal y como se muestra en la configuración del ejemplo siguiente.  
   
 ```xml  
 <services>  

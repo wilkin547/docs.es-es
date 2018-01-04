@@ -12,11 +12,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d5312012a74f5e11b02c0191dc00fa23fb25a73a
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 1e8520e34cf9bd9d31e9b877849e7c9611d6d989
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="control-flow-activities-in-wf"></a>Actividades de flujo de control en WF
 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] proporciona varias actividades para controlar el flujo de ejecución dentro de un flujo de trabajo. Algunas de estas actividades (como `Switch` y `If`) implementan estructuras de control de flujo similares a las que se encuentran en los entornos de programación, como [!INCLUDE[csprcs](../../../includes/csprcs-md.md)], mientras que otras modelan nuevas estructuras de programación (como `Pick`.)  

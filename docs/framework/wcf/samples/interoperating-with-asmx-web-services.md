@@ -13,11 +13,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1b852e579918dfd43589d31b607b19713e54e8be
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: ce0f548f345e3711edfd547b2e6879fafdbd0ad4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="interoperating-with-asmx-web-services"></a>Interoperabilidad con servicios web ASMX
 Este ejemplo muestra cómo integrar una aplicación cliente [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] con un Servicio Web de ASMX existente.  
@@ -64,7 +65,7 @@ public class CalculatorService : System.Web.Services.WebService
 svcutil.exe /n:http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Samples http://localhost/servicemodelsamples/service.svc?wsdl /out:generatedClient.cs  
 ```  
   
- Utilizando el cliente generado, puede tener acceso a un extremo de servicio configurando la dirección adecuada y el enlace apropiado. Como el servicio, el cliente utiliza un archivo de configuración (App.config) para especificar el extremo con el que se comunica. La configuración de extremo de cliente está compuesta de un nombre de configuración, una dirección absoluta para el extremo de servicio, el enlace y el contrato, tal y como se muestra en la siguiente configuración de muestra.  
+ Utilizando el cliente generado, puede tener acceso a un extremo de servicio configurando la dirección adecuada y el enlace apropiado. Como el servicio, el cliente utiliza un archivo de configuración (App.config) para especificar el extremo con el que se comunica. La configuración de punto de conexión de cliente está compuesta de un nombre de configuración, una dirección absoluta para el punto de conexión de servicio, el enlace y el contrato, tal y como se muestra en la siguiente configuración de muestra.  
   
 ```xml  
 <client>  

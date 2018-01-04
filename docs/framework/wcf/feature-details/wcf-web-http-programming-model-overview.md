@@ -13,11 +13,12 @@ caps.latest.revision: "45"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: eb32d1c9c0c0922dae27b2933259df9470cceeba
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 70d1b76108c9eab0280e6499ab2b4d0c70def853
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wcf-web-http-programming-model-overview"></a>Información general del modelo de programación web HTTP de WCF
 El modelo de programación WEB HTTP de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] proporciona los elementos de marco de trabajo básicos que son necesarios para compilar servicios WEB HTTP con [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Los servicios WEB HTTP de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] están diseñados para que la gama más amplia de clientes posible tenga acceso a ellos, incluidos los exploradores web, y tienen los requisitos únicos siguientes:  
@@ -30,7 +31,7 @@ El modelo de programación WEB HTTP de [!INCLUDE[indigo1](../../../../includes/i
   
  El modelo de programación WEB HTTP de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] extiende el alcance de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] para abarcar escenarios de tipo web que incluyen los servicios WEB HTTP, AJAX y JSON, así como las fuentes de distribución (ATOM/RSS). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Servicios de AJAX y JSON, consulte [integración de AJAX y compatibilidad de JSON](../../../../docs/framework/wcf/feature-details/ajax-integration-and-json-support.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Distribución, consulte [información general de la distribución de WCF](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md).  
   
- No existen restricciones adicionales en los tipos de datos que puedan devolverse desde un servicio WEB HTTP. Cualquier tipo serializable se puede devolver a partir de una operación de servicio WEB HTTP de WCF. Puesto que estas operaciones de servicio WEB HTTP las puede invocar un explorador web existe un límite en los tipos de datos que se pueden especificar en una dirección URL. Para obtener más información sobre los tipos admitidos de forma predeterminada, consulte el **parámetros de cadena de consulta de UriTemplate y las direcciones URL** sección más adelante. El comportamiento predeterminado se puede cambiar proporcionando su propia implementación de la clase T:System.ServiceModel.Dispatcher.QueryStringConverter que especifica cómo convertir los parámetros especificados de una dirección URL en el tipo de parámetro real. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<xref:System.ServiceModel.Dispatcher.QueryStringConverter>  
+ No existen restricciones adicionales en los tipos de datos que puedan devolverse desde un servicio WEB HTTP. Cualquier tipo serializable se puede devolver a partir de una operación de servicio WEB HTTP de WCF. Puesto que estas operaciones de servicio WEB HTTP las puede invocar un explorador web existe un límite en los tipos de datos que se pueden especificar en una dirección URL. Para obtener más información sobre los tipos admitidos de forma predeterminada, consulte el **parámetros de cadena de consulta de UriTemplate y las direcciones URL** sección más adelante. El comportamiento predeterminado se puede cambiar proporcionando su propia implementación de la clase T:System.ServiceModel.Dispatcher.QueryStringConverter que especifica cómo convertir los parámetros especificados de una dirección URL en el tipo de parámetro real. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] <xref:System.ServiceModel.Dispatcher.QueryStringConverter>  
   
 > [!CAUTION]
 >  Los servicios escritos mediante el modelo de programación WEB HTTP de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] no usan mensajes SOAP. Por este motivo, no se podrán usar las características de seguridad proporcionadas por [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Sin embargo, puede usar la seguridad basada en el transporte hospedando el servicio con HTTPS. [!INCLUDE[crabout](../../../../includes/crabout-md.md)][!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] seguridad, consulte [información general sobre seguridad](../../../../docs/framework/wcf/feature-details/security-overview.md)  
@@ -154,6 +155,6 @@ interface ICustomer
  Al llamar a los servicios WEB HTTP de WCF mediante un objeto <xref:System.ServiceModel.Channels.ChannelFactoryBase%601> para crear un canal, <xref:System.ServiceModel.Description.WebHttpBehavior> usa la clase <xref:System.ServiceModel.EndpointAddress> establecida en el archivo de configuración, aunque se pase una <xref:System.ServiceModel.EndpointAddress> diferente al <xref:System.ServiceModel.Channels.ChannelFactoryBase%601>.  
   
 ## <a name="see-also"></a>Vea también  
- [Distribución de WCF](../../../../docs/framework/wcf/feature-details/wcf-syndication.md)  
- [Modelo de objetos de programación Web HTTP de WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)  
- [Modelo de programación Web HTTP de WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
+ [Redifusión en WCF](../../../../docs/framework/wcf/feature-details/wcf-syndication.md)  
+ [Modelo de objetos de programación web HTTP de WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)  
+ [Modelo de programación de web HTTP de WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)

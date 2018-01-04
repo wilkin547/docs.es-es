@@ -20,11 +20,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4f53dd2fdaa622e022f49c153b6dbc83030ae791
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1afe397a92ac6e79e84757baa0c41f6e0c54b7f2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-apply-the-propertynamechanged-pattern"></a>Cómo: Aplicar el modelo PropertyNameChanged
 En el ejemplo de código siguiente se muestra cómo aplicar el *PropertyName*modelo Changed a un control personalizado. Este patrón se aplican al implementar controles personalizados que se usan con el motor de enlace de datos de formularios Windows Forms.  

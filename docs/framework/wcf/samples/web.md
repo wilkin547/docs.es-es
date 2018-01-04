@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 541ddbcdaefc14c3b9915186761a7842959cd91e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 867d80ed54f4ee64f87938ac9af89e3e3b198d8c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="web"></a>Web
 Esta sección contiene ejemplos hospedados en web.  
@@ -38,10 +39,10 @@ Esta sección contiene ejemplos hospedados en web.
  [AspNetRouteIntegration](../../../../docs/framework/wcf/samples/aspnetrouteintegration.md)  
  Muestra cómo hospedar un servicio HTTP web de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] mediante rutas de ASP.NET.  
   
- [Get y PUT condicionales](../../../../docs/framework/wcf/samples/conditional-get-and-put.md)  
+ [Get y Put condicionales](../../../../docs/framework/wcf/samples/conditional-get-and-put.md)  
  Muestra cómo utilizar las nuevas API de recuperación y actualización condicionales para el modelo de programación HTTP web de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
   
- [Extremos SOAP y HTTP](../../../../docs/framework/wcf/samples/soap-and-http-endpoints.md)  
+ [Puntos de conexión SOAP y HTTP](../../../../docs/framework/wcf/samples/soap-and-http-endpoints.md)  
  Muestra cómo implementar un servicio basado en RPC y exponerlo en el formato SOAP y el formato de "Plain Old XML" (POX) mediante el [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] modelo de programación Web HTTP.  
   
  [Integración de almacenamiento en caché de ASP.NET](../../../../docs/framework/wcf/samples/aspnet-caching-integration.md)  
@@ -50,8 +51,8 @@ Esta sección contiene ejemplos hospedados en web.
  [UriTemplate](../../../../docs/framework/wcf/samples/uritemplate-sample.md)  
  Muestra los conceptos clave relacionados con <xref:System.UriTemplate>.  
   
- [Tabla de UriTemplate](../../../../docs/framework/wcf/samples/uritemplate-table-sample.md)  
+ [Tabla UriTemplate](../../../../docs/framework/wcf/samples/uritemplate-table-sample.md)  
  Muestra el modo en que la clase <xref:System.UriTemplateTable> proporciona una estructura de tabla asociativa similar a un diccionario para trabajar con un conjunto de instancias de <xref:System.UriTemplate>.  
   
- [Distribuidor de tabla de UriTemplate](../../../../docs/framework/wcf/samples/uritemplate-table-dispatcher-sample.md)  
+ [Distribuidor de tabla UriTemplate](../../../../docs/framework/wcf/samples/uritemplate-table-dispatcher-sample.md)  
  Muestra un motor de distribución básico creado con <xref:System.UriTemplateTable>, un escenario de uso común para la clase <xref:System.UriTemplateTable>.

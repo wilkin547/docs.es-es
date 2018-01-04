@@ -17,11 +17,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3621b05f1faae671d93106f50dfef1311959e48e
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: c1c11ca487003e57a499b3ff46178350e6aad404
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="resizing-columns-and-rows-in-the-windows-forms-datagridview-control"></a>Cambiar el tamaño de columnas y filas en el control DataGridView de formularios Windows Forms
 El `DataGridView` control proporciona numerosas opciones para personalizar el comportamiento de ajuste de tamaño de sus columnas y filas. Por lo general, `DataGridView` celdas no cambian de tamaño en función de su contenido. En su lugar, recorta cualquier valor para mostrar que es mayor que la celda. Si el contenido se puede mostrar como una cadena, la celda muestra en una información sobre herramientas.  

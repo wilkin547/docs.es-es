@@ -13,11 +13,12 @@ caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: bb79f01a058a5ff5ea51390939c02f4b613101c7
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: a9bb0b2acd2aa51765a50b735f218bd92ef11531
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="configuration-sample"></a>Ejemplo de configuración
 En este ejemplo se muestra el uso de un archivo de configuración para hacer que un servicio se pueda detectar.  
@@ -43,11 +44,11 @@ En este ejemplo se muestra el uso de un archivo de configuración para hacer que
   
  Para habilitar la detección, se deben realizar algunas modificaciones en el archivo de configuración de la aplicación para el servicio:  
   
--   Un extremo de detección se debe agregar al elemento `<service>`. Se trata de un extremo <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> estándar. Este es un extremo del sistema que el tiempo de ejecución asocia al servicio de detección. El servicio de descarga realiza escuchas de los mensajes en este extremo.  
+-   Un extremo de detección se debe agregar al elemento `<service>`. Se trata de un extremo <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> estándar. Este es un extremo del sistema que el tiempo de ejecución asocia al servicio de detección. El servicio de descarga realiza escuchas de los mensajes en este punto de conexión.  
   
--   Se agrega un comportamiento `<serviceDiscovery>` a la sección `<serviceBehaviors>`. Esto permite detectar el servicio en tiempo de ejecución runtime y utiliza el extremo de la detección mencionado previamente para realizar escuchas de `Probe` de detección y mensajes `Resolve`. Con estas dos incorporaciones, el servicio se puede detectar en el extremo de detección especificado.  
+-   Se agrega un comportamiento `<serviceDiscovery>` a la sección `<serviceBehaviors>`. Esto permite detectar el servicio en tiempo de ejecución runtime y utiliza el extremo de la detección mencionado previamente para realizar escuchas de `Probe` de detección y mensajes `Resolve`. Con estas dos incorporaciones, el servicio se puede detectar en el punto de conexión de detección especificado.  
   
- El siguiente fragmento de código muestra un servicio con un extremo de la aplicación y un extremo de detección definidos:  
+ El siguiente fragmento de código muestra un servicio con un punto de conexión de la aplicación y un punto de conexión de detección definidos:  
   
 ```xml
 <services>  
@@ -73,7 +74,7 @@ En este ejemplo se muestra el uso de un archivo de configuración para hacer que
           </serviceDiscovery>  
 ```  
   
- Al agregar un extremo de anuncio al comportamiento del servicio de detección, se crea un cliente de anuncio predeterminado para el servicio. Esto garantiza que el servicio enviará un anuncio en línea y sin conexión cuando el servicio se abra y se cierre respectivamente.  
+ Al agregar un punto de conexión de anuncio al comportamiento del servicio de detección, se crea un cliente de anuncio predeterminado para el servicio. Esto garantiza que el servicio enviará un anuncio en línea y sin conexión cuando el servicio se abra y se cierre respectivamente.  
   
  Este archivo de configuración supera esos pasos sencillos al modificar comportamientos adicionales. Es posible controlar la información relacionada con la detección utilizando extremos concretos. Es decir, un usuario puede controlar si se puede detectar un extremo y también puede marcar ese extremo con metadatos XML personalizados y la propiedad <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior.Scopes%2A>. Para ello, el usuario debe agregar una propiedad `behaviorConfiguration` al extremo de la aplicación. En este caso, la siguiente propiedad se agrega al extremo de la aplicación.  
   

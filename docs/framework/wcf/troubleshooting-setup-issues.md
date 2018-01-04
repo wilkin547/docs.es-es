@@ -13,11 +13,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 13f6bd17e1295ea72f25710d7ae5e2803c94aad1
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 284805f8ca1fb9778dc6bccd9807fa86dc7e2d77
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="troubleshooting-setup-issues"></a>Solución de problemas de instalación
 En este tema se describe cómo solucionar problemas de la instalación de [!INCLUDE[indigo1](../../../includes/indigo1-md.md)].  
@@ -77,7 +78,7 @@ En este tema se describe cómo solucionar problemas de la instalación de [!INCL
  Para solucionar este problema, use la [herramienta de registro de servicio de flujo de trabajo (WFServicesReg.exe)](../../../docs/framework/wcf/workflow-service-registration-tool-wfservicesreg-exe.md) con la `/c` conmutador para configurar correctamente las asignaciones de secuencias de comandos IIS en el equipo. [Herramienta de registro de servicio de flujo de trabajo (WFServicesReg.exe)](../../../docs/framework/wcf/workflow-service-registration-tool-wfservicesreg-exe.md) puede encontrarse en %windir%\Microsoft.NET\framework\v3.5\ o %windir%\Microsoft.NET\framework64\v3.5\  
   
 ## <a name="could-not-load-type-systemservicemodelactivationhttpmodule-from-assembly-systemservicemodel-version-3000-cultureneutral-publickeytokenb77a5c561934e089"></a>No se puede cargar el tipo ‘System.ServiceModel.Activation.HttpModule’ del ensamblado ‘System.ServiceModel, Version 3.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089’  
- Este error se produce si se instala [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] y, a continuación, se habilita la activación HTTP de [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)][!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. Para resolver el problema ejecute la siguiente línea de comandos desde el símbolo del sistema de [!INCLUDE[vs2010](../../../includes/vs2010-md.md)]:  
+ Este error se produce si [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] está instalado y, a continuación, [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] activación HTTP está habilitada. Para resolver el problema ejecute la siguiente línea de comandos desde el símbolo del sistema de [!INCLUDE[vs2010](../../../includes/vs2010-md.md)]:  
   
 ```Output  
 aspnet_regiis.exe -i -enable  

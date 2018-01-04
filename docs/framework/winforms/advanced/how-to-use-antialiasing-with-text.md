@@ -22,11 +22,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: bb5a57f8bcbdc1edad78dcd48ad495a187bbb44a
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: edd31ec5b9d94ac1791fb0f2a73522fdf4178627
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-use-antialiasing-with-text"></a>Cómo: Utilizar la función de suavizado de contorno con texto
 *Suavizado de contorno* se refiere al suavizado de los bordes irregulares de gráficos y texto para mejorar su apariencia y legibilidad dibujados. Con los recursos administrados [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] clases, puede representar texto con suavizado de contorno de alta calidad, así como texto de menor calidad. Normalmente, una representación de calidad superior tarda más tiempo de procesamiento que una calidad inferior. Para establecer el nivel de calidad de texto, establezca la <xref:System.Drawing.Graphics.TextRenderingHint%2A> propiedad de un <xref:System.Drawing.Graphics> a uno de los elementos de la <xref:System.Drawing.Text.TextRenderingHint> (enumeración)  

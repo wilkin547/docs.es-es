@@ -16,11 +16,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1c6ae9c4159f8f9eafd73608e4fc3f4a646c1eaa
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 3fa5c240adaaf6512cfbd6b7bd0796bd0983a530
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="basic-formatting-and-styling-in-the-windows-forms-datagridview-control"></a>Estilo y formato básicos del control DataGridView en formularios Windows Forms
 El `DataGridView` control facilita el proceso definir la apariencia básica de celdas y el formato de presentación de valores de celda. Puede definir la apariencia y el formato estilos para celdas individuales, para las celdas de columnas y filas concretas o para todas las celdas del control estableciendo las propiedades de la `DataGridViewCellStyle` objetos obtiene acceso a través de diversos `DataGridView` propiedades del control. Además, puede modificar estos estilos dinámicamente en función de factores como el valor de celda controlando el `CellFormatting` eventos.  

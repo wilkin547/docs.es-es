@@ -19,11 +19,12 @@ caps.latest.revision: "40"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9cd9e5c4f978eb6e8492d9bd6c90a32f87cfbce9
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 6319a9793698e12a984c875670d71b2cbb0b00ba
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="delegation-and-impersonation-with-wcf"></a>Delegación y suplantación con WCF
 La*suplantación* es una técnica habitual que utilizan los servicios para restringir el acceso de los clientes a los recursos de un dominio de servicio. Los recursos de dominio de servicio pueden ser recursos de equipo, como archivos locales (suplantación), o un recurso en otro equipo, como un recurso compartido de archivos (delegación). Para obtener una aplicación de ejemplo, consulte [Impersonating the Client](../../../../docs/framework/wcf/samples/impersonating-the-client.md). Para obtener un ejemplo sobre el uso de la suplantación, consulte [How to: Impersonate a Client on a Service](../../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md).  
@@ -102,10 +103,10 @@ La*suplantación* es una técnica habitual que utilizan los servicios para restr
   
 |`ImpersonationOption`|`ImpersonateCallerForAllServiceOperations`|Comportamiento|  
 |---------------------------|------------------------------------------------|--------------|  
-|Obligatorio|no disponible|[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] suplanta al autor de la llamada|  
-|Permitido|false|[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] no suplanta al autor de la llamada|  
+|Obligatorio|N/D|[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] suplanta al autor de la llamada|  
+|Permitido|False|[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] no suplanta al autor de la llamada|  
 |Permitido|true|[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] suplanta al autor de la llamada|  
-|NotAllowed|false|[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] no suplanta al autor de la llamada|  
+|NotAllowed|False|[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] no suplanta al autor de la llamada|  
 |NotAllowed|true|No permitido. (Se produce una excepción <xref:System.InvalidOperationException> .)|  
   
 ## <a name="impersonation-level-obtained-from-windows-credentials-and-cached-token-impersonation"></a>Nivel de suplantación obtenido de las credenciales de Windows y la suplantación de tokens almacenados en caché  
@@ -123,31 +124,31 @@ La*suplantación* es una técnica habitual que utilizan los servicios para restr
   
 |Valor de`AllowedImpersonationLevel` |El servicio tiene `SeImpersonatePrivilege`|El servicio y el cliente tienen capacidad de delegación|`ImpersonationLevel`|  
 |---------------------------------------|------------------------------------------|--------------------------------------------------|---------------------------------------|  
-|Anónimo|Sí|no disponible|suplantación|  
-|Anónimo|No|no disponible|Identificación|  
-|Identificación|no disponible|no disponible|Identificación|  
-|suplantación|Sí|no disponible|suplantación|  
-|suplantación|No|no disponible|Identificación|  
+|Anónimo|Sí|N/D|Suplantación|  
+|Anónimo|No|N/D|Identificación|  
+|Identificación|N/D|N/D|Identificación|  
+|Suplantación|Sí|N/D|Suplantación|  
+|Suplantación|No|N/D|Identificación|  
 |Delegación|Sí|Sí|Delegación|  
 |Delegación|Sí|No|suplantación|  
-|Delegación|No|no disponible|Identificación|  
+|Delegación|No|N/D|Identificación|  
   
 ## <a name="impersonation-level-obtained-from-user-name-credentials-and-cached-token-impersonation"></a>Nivel de suplantación obtenido a partir de las credenciales de nombre de usuario y suplantación de token almacenado en caché  
  Al pasar su nombre de usuario y contraseña al servicio, un cliente permite que [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] inicie sesión como ese usuario, lo que es equivalente a establecer la propiedad `AllowedImpersonationLevel` en <xref:System.Security.Principal.TokenImpersonationLevel.Delegation>. (`AllowedImpersonationLevel` está disponible en las clases <xref:System.ServiceModel.Security.WindowsClientCredential> y <xref:System.ServiceModel.Security.HttpDigestClientCredential>.) La tabla siguiente proporciona el nivel de suplantación obtenido cuando el servicio recibe las credenciales del nombre de usuario.  
   
 |`AllowedImpersonationLevel`|El servicio tiene `SeImpersonatePrivilege`|El servicio y el cliente tienen capacidad de delegación|`ImpersonationLevel`|  
 |---------------------------------|------------------------------------------|--------------------------------------------------|---------------------------------------|  
-|no disponible|Sí|Sí|Delegación|  
-|no disponible|Sí|No|suplantación|  
-|no disponible|No|no disponible|Identificación|  
+|N/D|Sí|Sí|Delegación|  
+|N/D|Sí|No|Suplantación|  
+|N/D|No|N/D|Identificación|  
   
 ## <a name="impersonation-level-obtained-from-s4u-based-impersonation"></a>Nivel de suplantación obtenido de la suplantación basada en S4U  
   
-|El servicio tiene `SeTcbPrivilege`|El servicio tiene `SeImpersonatePrivilege`|El servicio y el cliente tienen capacidad de delegación|`ImpersonationLevel`|  
+|El servicio tiene `SeTcbPrivilege`|El servicio tiene `SeImpersonatePrivilege`|El servicio y el cliente tienen capacidad de delegación|`ImpersonationLevel` de token almacenado en memoria caché|  
 |----------------------------------|------------------------------------------|--------------------------------------------------|---------------------------------------|  
-|Sí|Sí|no disponible|suplantación|  
-|Sí|No|no disponible|Identificación|  
-|No|no disponible|no disponible|Identificación|  
+|Sí|Sí|N/D|Suplantación|  
+|Sí|No|N/D|Identificación|  
+|No|N/D|N/D|Identificación|  
   
 ## <a name="mapping-a-client-certificate-to-a-windows-account"></a>Asignación de un certificado de cliente a una cuenta de Windows  
  Un cliente se puede autenticar en un servicio mediante un certificado y hacer que el servicio asigne el cliente a una cuenta existente a través de Active Directory. En el XML siguiente, se muestra cómo configurar el servicio para asignar el certificado.  
@@ -229,7 +230,7 @@ sh.Credentials.ClientCertificate.Authentication.MapClientCertificateToWindowsAcc
  <xref:System.ServiceModel.Security.WindowsClientCredential>  
  <xref:System.ServiceModel.ChannelFactory%601>  
  <xref:System.Security.Principal.TokenImpersonationLevel.Identification>  
- [Usar la suplantación con seguridad de transporte](../../../../docs/framework/wcf/feature-details/using-impersonation-with-transport-security.md)  
- [Suplanta al cliente](../../../../docs/framework/wcf/samples/impersonating-the-client.md)  
+ [Utilización de la suplantación con la seguridad de transporte](../../../../docs/framework/wcf/feature-details/using-impersonation-with-transport-security.md)  
+ [Suplantación del cliente](../../../../docs/framework/wcf/samples/impersonating-the-client.md)  
  [Cómo suplantar a un cliente en un servicio](../../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md)  
  [Herramienta de utilidad de metadatos de ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)

@@ -16,11 +16,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2cf83f7c9af667a9efed59ff7a1f86ace6d8821d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: a73fa30f1ebae805abd6f3e7e397d005d5b7130d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="serialization-and-deserialization"></a>Serialización y deserialización
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] incluye un nuevo motor de serialización, el <xref:System.Runtime.Serialization.DataContractSerializer>. <xref:System.Runtime.Serialization.DataContractSerializer> traduce entre objetos [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] y XML, en ambas direcciones. En este tema se explica cómo funciona el serializador.  
@@ -213,7 +214,7 @@ ms.lasthandoff: 12/02/2017
 >  El uso de la serialización paso a paso puede producir un XML de esquema no válido.  
   
 ## <a name="deserialization"></a>Deserialización  
- La siguiente información se aplica a cualquier clase que herede del <xref:System.Runtime.Serialization.XmlObjectSerializer>,incluido las clases <xref:System.Runtime.Serialization.DataContractSerializer> y <xref:System.Runtime.Serialization.NetDataContractSerializer> .  
+ La siguiente información se aplica a cualquier clase que herede del <xref:System.Runtime.Serialization.XmlObjectSerializer>,incluido las clases <xref:System.Runtime.Serialization.DataContractSerializer> y <xref:System.Runtime.Serialization.NetDataContractSerializer>.  
   
  La manera más básica de deserializar un objeto consiste en llamar a una de las sobrecargas del método <xref:System.Runtime.Serialization.XmlObjectSerializer.ReadObject%2A> . Hay tres sobrecargas, que permiten leer con un <xref:System.Xml.XmlDictionaryReader>, un `XmlReader`o una `Stream`. Observe que la sobrecarga `Stream` crea un <xref:System.Xml.XmlDictionaryReader> textual que no está protegido por ninguna cuota, por lo que solo debería utilizarse para leer datos de confianza.  
   

@@ -13,16 +13,17 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6343a67f7fc333b863aee4fc5ab31edd15efabe1
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 13784a3a5062705abba1b3bbb33a04e66bd22072
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="transaction-protocols"></a>Protocolos de transacciones
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] implementa los protocolos WS-AtomicTransaction y WS-Coordination.  
   
-|Especificación/documento|Versión|Link|  
+|Especificación/documento|Versión|Vínculo|  
 |-----------------------------|-------------|----------|  
 |WS-Coordination|1.0<br /><br /> 1.1|[http://go.Microsoft.com/fwlink/?LinkId=96104](http://go.microsoft.com/fwlink/?LinkId=96104)<br /><br /> [http://go.Microsoft.com/fwlink/?LinkId=96079](http://go.microsoft.com/fwlink/?LinkId=96079)|  
 |Transacción WS-Atomic|1.0<br /><br /> 1.1|[http://go.Microsoft.com/fwlink/?LinkId=96080](http://go.microsoft.com/fwlink/?LinkId=96080)<br /><br /> http://go.microsoft.com/fwlink/?LinkId=96081|  

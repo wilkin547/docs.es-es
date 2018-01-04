@@ -13,11 +13,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6b41e47ae4067ac52cc747d675ec5231f25b1352
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 32d7df95c6acbe34a677cbd2951fd912466d015f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="understanding-http-authentication"></a>Introducción a la autenticación HTTP
 La autenticación es el proceso de identificar si un cliente es elegible para tener acceso a un recurso. El protocolo HTTP soporta la autenticación como un medio de negociar el acceso a un recurso seguro.  
@@ -46,6 +47,6 @@ La autenticación es el proceso de identificar si un cliente es elegible para te
 -   Un servidor no debería presentar (en los encabezados de la autenticación de WWW) ningún esquema que no esté preparado para aceptar o que no proteja adecuadamente el recurso protegido. Los clientes son libres de elegir entre cualquiera de los esquemas de autenticación que el servidor presenta. Algunos clientes tienen como valor predeterminado un esquema de autenticación débil o el primer esquema de autenticación en la lista del servidor.  
   
 ## <a name="see-also"></a>Vea también  
- [Información general sobre la seguridad de transporte](../../../../docs/framework/wcf/feature-details/transport-security-overview.md)  
- [Usar la suplantación con seguridad de transporte](../../../../docs/framework/wcf/feature-details/using-impersonation-with-transport-security.md)  
+ [Información general de la seguridad del transporte](../../../../docs/framework/wcf/feature-details/transport-security-overview.md)  
+ [Utilización de la suplantación con la seguridad de transporte](../../../../docs/framework/wcf/feature-details/using-impersonation-with-transport-security.md)  
  [Delegación y suplantación](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)

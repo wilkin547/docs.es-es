@@ -13,11 +13,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8ee7376f87fd0e4ce15d192dd53f872e84187acc
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0b7812023fbe2159daba205727e20e1b69b84686
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="metadata-formats"></a>Formatos de metadatos
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] admite los formatos de metadatos que se encuentran en la siguiente tabla.  
@@ -34,5 +35,5 @@ ms.lasthandoff: 12/02/2017
 |Enlace de direccionamiento de WS para WSDL|[Web Services Addressing 1.0 - enlace WSDL](http://go.microsoft.com/fwlink/?LinkId=94869)<br /><br /> [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] implementa WS-Addressing Binding para que WSDL adjunte información del direccionamiento en WSDL.|  
   
 ## <a name="see-also"></a>Vea también  
- [Protocolos admitidos por los enlaces de interoperabilidad proporcionados por el sistema de servicios Web](../../../../docs/framework/wcf/feature-details/web-services-protocols-supported-by-system-provided-interoperability-bindings.md)  
- [WSDL y directiva](../../../../docs/framework/wcf/feature-details/wsdl-and-policy.md)
+ [Protocolos de servicios web compatibles con los enlaces de interoperabilidad proporcionados por el sistema](../../../../docs/framework/wcf/feature-details/web-services-protocols-supported-by-system-provided-interoperability-bindings.md)  
+ [WSDL y directivas](../../../../docs/framework/wcf/feature-details/wsdl-and-policy.md)

@@ -18,11 +18,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6d87d1968b2a605a45f9cb0a918e6345679aa9c2
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 514f4e4835a047c8c340c0026aa5b59f6f3f7822
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="datetimepicker-control-windows-forms"></a>DateTimePicker (Control, formularios Windows Forms)
 Los formularios Windows Forms `DateTimePicker` control permite al usuario seleccionar un único elemento de una lista de fechas u horas. Cuando se utiliza para representar una fecha, aparece en dos partes: una lista desplegable con una fecha representada como texto y una cuadrícula que aparece al hacer clic en la flecha abajo junto a la lista.  

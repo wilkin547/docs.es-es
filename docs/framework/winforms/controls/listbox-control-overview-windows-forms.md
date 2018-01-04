@@ -17,11 +17,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6e73d76a2d9b31a87bf5a693b5ffa387d7ab5cef
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f0eadf9db9a952fdabe77100cb31501be1970e74
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="listbox-control-overview-windows-forms"></a>Información general sobre ListBox (Control, formularios Windows Forms)
 Un formulario Windows Forms <xref:System.Windows.Forms.ListBox> control muestra una lista desde el que el usuario puede seleccionar uno o varios elementos. Si el número total de elementos supera el número que se pueden mostrar, automáticamente se agrega una barra de desplazamiento a la <xref:System.Windows.Forms.ListBox> control. Cuando el <xref:System.Windows.Forms.ListBox.MultiColumn%2A> propiedad está establecida en `true`, el cuadro de lista muestra elementos en varias columnas y aparece una barra de desplazamiento horizontal. Cuando el <xref:System.Windows.Forms.ListBox.MultiColumn%2A> propiedad está establecida en `false`, el cuadro de lista muestra elementos en una sola columna y aparece una barra de desplazamiento vertical. Cuando <xref:System.Windows.Forms.ListBox.ScrollAlwaysVisible%2A> se establece en `true`, aparece la barra de desplazamiento, independientemente del número de elementos. El <xref:System.Windows.Forms.ListBox.SelectionMode%2A> propiedad determina cuántos elementos de la lista pueden seleccionarse a la vez.  

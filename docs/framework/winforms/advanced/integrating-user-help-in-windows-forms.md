@@ -20,11 +20,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b7ec4d32c5f025cb3e48b1403387273268d83fb8
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 9563ce0ca95a728cc1a9aaa219fbc9fea2cd7153
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="integrating-user-help-in-windows-forms"></a>Integrar la Ayuda de usuario en formularios Windows Forms
 Un aspecto fundamental, pero a menudo se pasa por alto, de la creación de aplicaciones basadas en Windows es el sistema de ayuda, puesto que éste es donde los usuarios activan para obtener ayuda en momentos de confusión. Formularios Windows Forms admiten dos tipos diferentes de la Ayuda, cada proporcionado por el [HelpProvider (componente)](../../../../docs/framework/winforms/controls/helpprovider-component-windows-forms.md). El primero implica indicar al usuario a un archivo de Ayuda de HTML o HTML Help 1. *x* o formato mayor. El segundo puede mostrar breve "¿Qué es esto"-escriba Help en controles individuales; Esto es especialmente útil en los cuadros de diálogo. Ambos tipos de ayuda pueden usarse en el mismo formulario.  

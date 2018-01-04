@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d68f1b6ecfb55a917dde97b395b4455930565409
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: edfd0670d951a07526454bc380cee91c66e4e7a5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="services"></a>Servicios
 Esta sección contiene ejemplos que muestran los servicios de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
@@ -26,7 +27,7 @@ Esta sección contiene ejemplos que muestran los servicios de [!INCLUDE[indigo1]
  [Hospedar aplicaciones de WPF](../../../../docs/framework/wcf/feature-details/hosting.md)  
  Muestra los servicios de hospedamiento de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
   
- [Interoperabilidad de servicios](../../../../docs/framework/wcf/samples/service-interoperability.md)  
+ [Interoperabilidad del servicio](../../../../docs/framework/wcf/samples/service-interoperability.md)  
  Muestra la interacción entre [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] y otras tecnologías de servicios.  
   
  [Comportamientos](../../../../docs/framework/wcf/samples/behaviors.md)  
@@ -35,10 +36,10 @@ Esta sección contiene ejemplos que muestran los servicios de [!INCLUDE[indigo1]
  [Seguridad del servicio](../../../../docs/framework/wcf/samples/service-security.md)  
  Muestra la seguridad de servicio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
   
- [Configuración simplificada para los servicios WCF](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)  
+ [Configuración simplificada de los servicios WCF](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)  
  Muestra cómo implementar y configurar un cliente y un servicio típicos con [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
   
- [Uso de extremos estándar](../../../../docs/framework/wcf/samples/usage-of-standard-endpoints.md)  
+ [Uso de puntos de conexión estándar](../../../../docs/framework/wcf/samples/usage-of-standard-endpoints.md)  
  Muestra cómo utilizar los puntos de conexión estándar en archivos de configuración de servicio.  
   
  [Modelo de configuración jerárquica](../../../../docs/framework/wcf/samples/hierarchical-configuration-model.md)  

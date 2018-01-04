@@ -16,11 +16,12 @@ caps.latest.revision: "23"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 8e35634f60ff68a07c199cf6f3893e741b631a08
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 71325089f2c72f6f01b2179bd150d21a98b3a8e2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="transport-security-overview"></a>Información general de la seguridad del transporte
 Los mecanismos de seguridad del transporte en [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] dependen del enlace y el transporte que se estén usando. Por ejemplo, al utilizar la clase <xref:System.ServiceModel.WSHttpBinding>, el transporte es HTTP y el mecanismo principal para garantizar el transporte es Capa de sockets seguros (SSL) sobre HTTP, normalmente denominado HTTPS. En este tema se tratan los mecanismos de seguridad en el transporte principales utilizados en los enlaces proporcionados por el sistema [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
@@ -131,4 +132,4 @@ Los mecanismos de seguridad del transporte en [!INCLUDE[indigo1](../../../../inc
  Para obtener una explicación completa del transporte de seguridad con Message Queue Server (anteriormente denominado MSMQ), consulte [proteger mensajes utilizando seguridad de transporte](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Programar la seguridad WCF](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)
+ [Programación de la seguridad de WCF](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)

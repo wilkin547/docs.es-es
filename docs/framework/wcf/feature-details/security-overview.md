@@ -16,11 +16,12 @@ caps.latest.revision: "37"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 74a2e5c15b25dc9958b74ddeb0abf9adcad10bc0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c4c6ecbfc3407e3ebc321e92cd9e78dc2d80a3a6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="security-overview"></a>Información general sobre seguridad
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] es una plataforma de programación distribuida basada en mensajes SOAP, y la seguridad de los mensajes entre los clientes y los servicios es esencial para proteger los datos. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] proporciona una plataforma versátil e interoperable para intercambiar mensajes seguros en función de la infraestructura de seguridad existente y los estándares reconocidos de seguridad para los mensajes SOAP.  
@@ -110,14 +111,14 @@ ms.lasthandoff: 11/21/2017
 ## <a name="see-also"></a>Vea también  
  <xref:System.Security.Permissions.PrincipalPermissionAttribute>  
  [Seguridad de servicios](../../../../docs/framework/wcf/securing-services.md)  
- [Escenarios comunes de seguridad](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md)  
+ [Escenarios de seguridad comunes](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md)  
  [Enlaces y seguridad](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)  
  [Protección de servicios y clientes](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  [Autenticación](../../../../docs/framework/wcf/feature-details/authentication-in-wcf.md)  
  [Autorización](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)  
- [Federación y Tokens emitidos](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)  
+ [Federación y tokens emitidos](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)  
  [Auditoría](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)  
- [Guía de seguridad y procedimientos recomendados](../../../../docs/framework/wcf/feature-details/security-guidance-and-best-practices.md)  
+ [Orientación de seguridad y procedimientos recomendados](../../../../docs/framework/wcf/feature-details/security-guidance-and-best-practices.md)  
  [Configuración de servicios mediante archivos de configuración](../../../../docs/framework/wcf/configuring-services-using-configuration-files.md)  
  [Enlaces proporcionados por el sistema](../../../../docs/framework/wcf/system-provided-bindings.md)  
  [Información general sobre la creación de puntos finales](../../../../docs/framework/wcf/endpoint-creation-overview.md)  

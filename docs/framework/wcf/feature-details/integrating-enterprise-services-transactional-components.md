@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a236a34dd20661d62d59a3712a1800ff1f9a11ad
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: b6ce82d100341fec4415cf9fdb7159706b2accc4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="integrating-enterprise-services-transactional-components"></a>Integración de los componentes transaccionales de Enterprise Services
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]Proporciona un mecanismo automático para la integración con Enterprise Services (vea [integración con aplicaciones COM +](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)). Sin embargo, puede querer flexibilidad para desarrollar servicios que utilicen internamente componentes transaccionales hospedados en Enterprise Services. Dado que la [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] característica de transacciones se basa en el <xref:System.Transactions> infraestructura, el proceso de integración de Enterprise Services con [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] es idéntico de la especificación de interoperabilidad entre <xref:System.Transactions> y Enterprise Servicios, como se describe en [interoperabilidad con servicios empresariales y las transacciones COM +](http://go.microsoft.com/fwlink/?LinkId=94949).  
@@ -103,5 +104,5 @@ static void Main()
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Integración con aplicaciones COM +](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)  
- [Integración con las aplicaciones COM](../../../../docs/framework/wcf/feature-details/integrating-with-com-applications.md)
+ [Integración en aplicaciones COM+](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)  
+ [Integración en aplicaciones COM](../../../../docs/framework/wcf/feature-details/integrating-with-com-applications.md)

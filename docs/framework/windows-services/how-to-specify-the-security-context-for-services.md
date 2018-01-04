@@ -21,11 +21,12 @@ caps.latest.revision: "10"
 author: ghogen
 ms.author: ghogen
 manager: douge
-ms.openlocfilehash: 50a9c6ff7f02cda4475aa5390181fa5d410af161
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 9ce65358f6d63414dbe6798d3cc2464ee2741980
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-specify-the-security-context-for-services"></a>Cómo: Especificar el contexto de seguridad de los servicios
 De forma predeterminada, los servicios se ejecutan en un contexto de seguridad diferente que el usuario ha iniciado la sesión. Se ejecutan en el contexto de la cuenta de sistema de forma predeterminada, los servicios denominado `LocalSystem`, lo que les permitirá diferentes privilegios de acceso a recursos del sistema que el usuario. Puede cambiar este comportamiento para especificar una cuenta de usuario diferente bajo el que debe ejecutarse el servicio.  
@@ -54,6 +55,6 @@ De forma predeterminada, los servicios se ejecutan en un contexto de seguridad d
 3.  En el **propiedades** ventana, establezca el <xref:System.ServiceProcess.ServiceProcessInstaller.Account%2A> en el valor adecuado.  
   
 ## <a name="see-also"></a>Vea también  
- [Introducción a las aplicaciones de servicio de Windows](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  
- [Cómo: agregar instaladores a la aplicación de servicio](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)  
- [Cómo: crear servicios de Windows](../../../docs/framework/windows-services/how-to-create-windows-services.md)
+ [Introducción a las aplicaciones de servicios de Windows](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  
+ [Adición de instaladores a una aplicación de servicio](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)  
+ [Creación de servicios de Windows](../../../docs/framework/windows-services/how-to-create-windows-services.md)

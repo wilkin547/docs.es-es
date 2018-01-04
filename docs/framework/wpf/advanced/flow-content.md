@@ -17,11 +17,12 @@ caps.latest.revision: "70"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4ad42bc9d6a2b925ab6724acb61e345ca2ba4223
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 918afb4ada6d47824cfa5184e4071ba4dbac06f2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="flow-content"></a>Contenido dinámico
 Elementos de contenido dinámico proporcionan los bloques de creación para crear el contenido del flujo apropiado para su hospedaje en una <xref:System.Windows.Documents.FlowDocument>.  
@@ -30,7 +31,7 @@ Elementos de contenido dinámico proporcionan los bloques de creación para crea
  [Información general sobre documentos dinámicos](../../../../docs/framework/wpf/advanced/flow-document-overview.md)  
  [Información general sobre el modelo de contenido de TextElement](../../../../docs/framework/wpf/advanced/textelement-content-model-overview.md)  
  [Información general sobre tablas](../../../../docs/framework/wpf/advanced/table-overview.md)  
- [Temas de procedimientos](../../../../docs/framework/wpf/advanced/flow-content-elements-how-to-topics.md)  
+ [Temas "Cómo..."](../../../../docs/framework/wpf/advanced/flow-content-elements-how-to-topics.md)  
   
 ## <a name="reference"></a>Referencia  
  <xref:System.Windows.Documents.FlowDocument>  

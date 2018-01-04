@@ -23,11 +23,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 97c31998885926e9a7372bcf3182d1c95f0b79d0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d795df8e8b514345632491fd6afdd618c2f18ec2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-add-application-icons-to-the-taskbar-with-the-windows-forms-notifyicon-component"></a>Cómo: Agregar iconos de aplicación a la barra de tareas con el componente NotifyIcon de formularios Windows Forms
 Los formularios de Windows <xref:System.Windows.Forms.NotifyIcon> componente muestra un único icono en el área de notificación de estado de la barra de tareas. Para mostrar múltiples iconos en el área de estado, debe tener varios <xref:System.Windows.Forms.NotifyIcon> componentes en el formulario. Para establecer el icono que se muestra para un control, utilice la <xref:System.Windows.Forms.NotifyIcon.Icon%2A> propiedad. También puede escribir código en el <xref:System.Windows.Forms.NotifyIcon.DoubleClick> controlador de eventos para que algo se produce cuando el usuario hace doble clic en el icono. Por ejemplo, podría realizar un cuadro de diálogo aparece para que el usuario configurar el proceso en segundo plano representado por el icono.  

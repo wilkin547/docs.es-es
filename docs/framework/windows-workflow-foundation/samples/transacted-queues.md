@@ -12,11 +12,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 11d1d0d3481fb575abd01894db631e24c50b6d56
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: fa475ac31287cebe173df255380b1f34d9af2567
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="transacted-queues"></a>Colas de transacción
 En este ejemplo se muestra cómo integrar colas y transacciones en [!INCLUDE[wf](../../../../includes/wf-md.md)] para crear servicios escalables y fiables. A <!--zz <xref:System.Activities.TransactionScope>--> `System.Activities.TransactionScope` se utiliza en el flujo de trabajo de cliente para enviar mensajes a una cola en una transacción mediante el <xref:System.ServiceModel.NetMsmqBinding>. <xref:System.ServiceModel.Activities.TransactedReceiveScope> se utiliza en el servidor para recibir mensajes de la cola y actualizar el estado del flujo de trabajo en la misma transacción.  

@@ -12,11 +12,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c538ead434a7e5abe85f0d28ac7bf7edae98cbb8
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 9a01be08367fac1f7713f5db4953f67b0d32e073
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="consuming-odata-feeds-from-a-workflow"></a>Usar fuentes de OData en un flujo de trabajo
 Servicios de datos de WCF es un componente de [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] que le habilita para crear servicios que usan Open Data Protocol (OData) para exponer y usar datos en Internet o una intranet mediante la semántica de  transferencia de estado representacional (REST, Representational State Transfer). OData expone los datos como recursos direccionables a través de identificadores uniformes de recursos (URI). Cualquier aplicación puede interactuar con un servicio de datos basado en OData si puede enviar una solicitud HTTP y procesar la fuente de OData que devuelve un servicio de datos. Además, Servicios de datos de WCF incluye bibliotecas de cliente que proporcionan una experiencia de programación más enriquecida cuando se usan fuentes OData desde aplicaciones [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] . En este tema se proporciona una información general del uso de una fuente de OData en un flujo de trabajo con y sin utilizar las bibliotecas de clientes.  
@@ -98,7 +99,7 @@ Servicios de datos de WCF es un componente de [!INCLUDE[dnprdnshort](../../../in
 **Ana Trujillo Emparedados y helados, Contacto: Ana Trujillo**   
 **Antonio Moreno Taquería, Contacto: Antonio Moreno**   
 **Around the Horn, Contacto: Thomas Hardy**   
-**Berglunds snabbköp, Contacto: Christina Berglund**   
+**Berglunds snabbköp, contacto: Christina Berglund**   
 **...**    
 ## <a name="consuming-an-odata-feed-without-using-the-client-libraries"></a>Usar una fuente de OData sin usar las bibliotecas de cliente  
  OData expone los datos como recursos direccionables a través de identificadores uniformes de recursos (URI). Al utilizar las bibliotecas de clientes, se crean estos URI para usted, pero no tiene que utilizar las bibliotecas de clientes. Si se desea, se puede tener acceso directo a los servicios OData sin utilizar las bibliotecas de clientes. Cuando no se usan las bibliotecas de clientes, la ubicación del servicio y los datos deseados son especificados por el URI y los resultados se devuelven en respuesta a la solicitud HTTP. Entonces, estos datos sin procesar se pueden procesar o manipular del modo deseado. Una manera de recuperar los resultados de una consulta de OData es utilizando la clase <xref:System.Net.WebClient> . En este ejemplo, se recupera el nombre de contacto para el cliente representado por la clave ALFKI.  

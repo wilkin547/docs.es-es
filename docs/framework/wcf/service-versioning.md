@@ -13,11 +13,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 679a6a30e72e18547a04007c58c82d5f121893d0
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 791e201907f72f9d590f6d835fd6ec1bfc25633f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="service-versioning"></a>Control de versiones del servicio
 Después de la implementación inicial y de haber transcurrido potencialmente varias horas durante su duración, los servicios (y los extremos que exponen) pueden necesitar ser cambiados debido a diversas razones, como cambios en las necesidades comerciales, requisitos de tecnología de la información o para resolver otros problemas. Cada cambio produce una nueva versión del servicio. En este tema se explica cómo considerar el control de versiones en [!INCLUDE[indigo1](../../../includes/indigo1-md.md)].  
@@ -27,7 +28,7 @@ Después de la implementación inicial y de haber transcurrido potencialmente va
   
 -   Cambios del contrato: por ejemplo, se podría agregar una operación o se podría agregar o cambiar un elemento de datos en un mensaje.  
   
--   Cambios de la dirección: por ejemplo, se mueve un servicio a una ubicación diferente donde los extremos tienen nuevas direcciones.  
+-   Cambios de la dirección: por ejemplo, se mueve un servicio a una ubicación diferente donde los puntos de conexión tienen nuevas direcciones.  
   
 -   Cambios del enlace: por ejemplo, un mecanismo de seguridad cambia o lo hace su configuración.  
   
@@ -121,7 +122,7 @@ Después de la implementación inicial y de haber transcurrido potencialmente va
  Cambiar el parámetro o los tipos de valor devuelto generalmente comportan un cambio con interrupción a menos que el nuevo tipo implemente el mismo contrato de datos implementado por el tipo anterior. Para realizar este cambio, agregue una nueva operación al contrato de servicios o defina un nuevo contrato de servicios.  
   
 ### <a name="removing-operations"></a>Quitar operaciones  
- Quitar las operaciones también es un cambio con interrupción. Para realizar este cambio, defina un nuevo contrato de servicios y expóngalo en un nuevo extremo.  
+ Quitar las operaciones también es un cambio con interrupción. Para realizar este cambio, defina un nuevo contrato de servicios y expóngalo en un nuevo punto de conexión.  
   
 ### <a name="fault-contracts"></a>Contrato de error  
  El atributo <xref:System.ServiceModel.FaultContractAttribute> permite que a un programador del contrato de servicios especifique la información sobre los errores que pueden devolver las operaciones del contrato.  
@@ -129,10 +130,10 @@ Después de la implementación inicial y de haber transcurrido potencialmente va
  La lista de errores descrita en el contrato de un servicio no se considera exhaustiva. En cualquier momento, una operación puede devolver errores que no se describen en su contrato. Cambiar, por consiguiente, el conjunto de errores descrito en el contrato no se considerado como con interrupción. Por ejemplo, agregar un nuevo error al contrato utilizando <xref:System.ServiceModel.FaultContractAttribute> o quitando un error existente del contrato.  
   
 ### <a name="service-contract-libraries"></a>Bibliotecas de contratos de servicios  
- Las organizaciones pueden tener bibliotecas de contratos donde un contrato se publica en un repositorio central y los implementadores de servicio y repositorio implementan los contratos desde ese repositorio. En este caso, al publicar un contrato de servicios en el repositorio, no tiene ningún control sobre quién crea servicios que lo implementan. Por tanto, no puede modificar el contrato de servicio una vez publicado, por lo que se presenta inmutable de manera efectiva. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] admite la herencia del contrato, que se puede usar para crear un nuevo contrato que amplía los contratos existentes. Para utilizar esta característica, defina una nueva interfaz del contrato de servicios que se hereda de la interfaz del contrato de servicios anterior y, a continuación, agregue los métodos a la nueva interfaz. Cambia, a continuación, el servicio que implementa el contrato anterior para implementar el nuevo contrato y cambiar la definición de extremo de "versionOld" para utilizar el nuevo contrato. Para los clientes de "versionOld", el extremo continuará apareciendo como si se expusiera el contrato de "versionOld"; para los clientes de "versionNew", el extremo aparecerá para exponer el contrato de "versionNew."  
+ Las organizaciones pueden tener bibliotecas de contratos donde un contrato se publica en un repositorio central y los implementadores de servicio y repositorio implementan los contratos desde ese repositorio. En este caso, al publicar un contrato de servicios en el repositorio, no tiene ningún control sobre quién crea servicios que lo implementan. Por tanto, no puede modificar el contrato de servicio una vez publicado, por lo que se presenta inmutable de manera efectiva. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] admite la herencia del contrato, que se puede usar para crear un nuevo contrato que amplía los contratos existentes. Para utilizar esta característica, defina una nueva interfaz del contrato de servicios que se hereda de la interfaz del contrato de servicios anterior y, a continuación, agregue los métodos a la nueva interfaz. Cambia, a continuación, el servicio que implementa el contrato anterior para implementar el nuevo contrato y cambiar la definición de punto de conexión de "versionOld" para utilizar el nuevo contrato. Para los clientes de "versionOld", el punto de conexión continuará apareciendo como si se expusiera el contrato de "versionOld"; para los clientes de "versionNew", el punto de conexión aparecerá para exponer el contrato de "versionNew."  
   
 ## <a name="address-and-binding-versioning"></a>Dirección y enlace de las versiones  
- Los cambios de la dirección del extremo y enlace son cambios con interrupción a menos que los clientes sean capaces de detectar dinámicamente la nueva dirección del extremo o enlace. Un mecanismo para implementar esta función consiste en utilizar un registro de la Descripción e integración de la detección universal (UDDI) y el patrón de invocación UDDI donde un cliente intenta comunicar con un extremo y, en cuando se produce un error, consulta los metadatos del extremo actual en un registro de UDDI conocido. El cliente utiliza a continuación la dirección y el enlace desde estos metadatos para comunicarse con el extremo. Si esta comunicación se realiza con éxito, el cliente almacena en caché la dirección e información de enlace para su uso en el futuro.  
+ Los cambios de la dirección del extremo y enlace son cambios con interrupción a menos que los clientes sean capaces de detectar dinámicamente la nueva dirección del extremo o enlace. Un mecanismo para implementar esta función consiste en utilizar un registro de la Descripción e integración de la detección universal (UDDI) y el patrón de invocación UDDI donde un cliente intenta comunicar con un extremo y, en cuando se produce un error, consulta los metadatos del extremo actual en un registro de UDDI conocido. El cliente utiliza a continuación la dirección y el enlace desde estos metadatos para comunicarse con el punto de conexión. Si esta comunicación se realiza con éxito, el cliente almacena en caché la dirección e información de enlace para su uso en el futuro.  
   
 ## <a name="routing-service-and-versioning"></a>Servicio de enrutamiento y control de versiones  
  Si los cambios realizados en un servicio son cambios importantes y es necesario crear dos o más versiones diferentes de un servicio que se ejecuta simultáneamente, puede utilizar el servicio de enrutamiento de WCF para enrutar los mensajes a la instancia del servicio adecuada. El Servicio de enrutamiento de WCF usa enrutamiento basado en el contenido; es decir, usa información contenida en el mensaje para determinar dónde enrutarlo. [!INCLUDE[crabout](../../../includes/crabout-md.md)]los, consulte el servicio de enrutamiento de WCF [servicio de enrutamiento](../../../docs/framework/wcf/feature-details/routing-service.md). Para obtener un ejemplo de cómo usar el servicio de enrutamiento de WCF para las versiones de servicio, consulte [How To: control de versiones del servicio](../../../docs/framework/wcf/feature-details/how-to-service-versioning.md).  
@@ -196,5 +197,5 @@ public class PurchaseOrderV2 : IPurchaseOrderV1, IPurchaseOrderV2
  <xref:System.Runtime.Serialization.ExtensionDataObject>  
  <xref:System.Runtime.Serialization.IExtensibleDataObject.ExtensionData%2A>  
  <xref:System.Xml.Serialization.XmlSerializer>  
- [Equivalencia del contrato de datos](../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)  
- [Devoluciones de llamada de serialización tolerante a versiones](../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md)
+ [Equivalencia de contratos de datos](../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)  
+ [Devoluciones de llamadas en la serialización tolerante a versiones](../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md)

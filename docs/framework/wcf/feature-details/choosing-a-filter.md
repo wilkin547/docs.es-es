@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 973a70fdb655ab069d6ecdafd0e017324720e57a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e81af51be3e281faa94bcea17ff75b41341abb33
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="choosing-a-filter"></a>Elegir un filtro
 Al configurar el servicio de enrutamiento, es importante seleccionar filtros de mensajes adecuados y configurarlos para poder obtener coincidencias exactas con los mensajes que recibe. Si los filtros que selecciona son demasiado anchos en sus coincidencias o se configuran incorrectamente, los mensajes se enrutan de forma incorrecta. Si los filtros son demasiado restrictivos, puede que no tenga ninguna ruta válida disponible para algunos de sus mensajes.  
@@ -113,12 +114,12 @@ MyCustomMsgFilter custom1=new MyCustomMsgFilter("Custom Data");
 EndpointNameMessageFilter name1 = new EndpointNameMessageFilter("SvcEndpoint");  
 ```  
   
- Este filtro es útil cuando el servicio de enrutamiento expone más de un punto de conexión de servicio con nombre. Por ejemplo, puede exponer dos extremos que utiliza el servicio de enrutamiento para recibir mensajes; uno lo emplean clientes prioritarios que requieren un procesamiento en tiempo real de sus mensajes, mientras que el otro extremo recibe mensajes que no están sujetos a una limitación temporal.  
+ Este filtro es útil cuando el servicio de enrutamiento expone más de un punto de conexión de servicio con nombre. Por ejemplo, puede exponer dos puntos de conexión que utiliza el servicio de enrutamiento para recibir mensajes; uno lo emplean clientes prioritarios que requieren un procesamiento en tiempo real de sus mensajes, mientras que el otro punto de conexión recibe mensajes que no están sujetos a una limitación temporal.  
   
- Aunque a menudo pueda usar una dirección completa coincidente para determinar en qué extremo se ha recibido un mensaje, el uso del nombre de extremo definido es un método abreviado recomendable que suele originar menos errores, sobre todo al configurar un servicio de enrutamiento mediante un archivo de configuración (donde los nombres de extremos son un atributo necesario).  
+ Aunque a menudo pueda usar una dirección completa coincidente para determinar en qué punto de conexión se ha recibido un mensaje, el uso del nombre de punto de conexión definido es un método abreviado recomendable que suele originar menos errores, sobre todo al configurar un servicio de enrutamiento mediante un archivo de configuración (donde los nombres de puntos de conexión son un atributo necesario).  
   
 ### <a name="matchall"></a>MatchAll  
- El filtro MatchAll coincide con cualquier mensaje recibido. Es útil si siempre debe enrutar todos los mensajes recibidos a un extremo concreto, como un servicio del registro que almacena una copia de todos los mensajes recibidos. En el siguiente ejemplo, se define un `FilterElement` que utiliza el filtro MatchAll.  
+ El filtro MatchAll coincide con cualquier mensaje recibido. Es útil si siempre debe enrutar todos los mensajes recibidos a un punto de conexión concreto, como un servicio del registro que almacena una copia de todos los mensajes recibidos. En el siguiente ejemplo, se define un `FilterElement` que utiliza el filtro MatchAll.  
   
 ```xml  
 <filter name="matchAll1" filterType="MatchAll" />  
@@ -147,4 +148,4 @@ XPathMessageFilter xpath1=new XPathMessageFilter("//ns:element");
   
 ## <a name="see-also"></a>Vea también  
  [Filtros de mensajes](../../../../docs/framework/wcf/feature-details/message-filters.md)  
- [Cómo: Usar filtros](../../../../docs/framework/wcf/feature-details/how-to-use-filters.md)
+ [Uso de los filtros](../../../../docs/framework/wcf/feature-details/how-to-use-filters.md)

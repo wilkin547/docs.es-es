@@ -18,11 +18,12 @@ caps.latest.revision: "40"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0f2ef91986cb5ad31560c4a7f418218a168f1b2f
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: ce66f98f064ec5c9460dd1909f8eb7bc44c26f76
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="servicemodel-metadata-utility-tool-svcutilexe"></a>Herramienta de utilidad de metadatos de ServiceModel (Svcutil.exe)
 La herramienta de utilidad de metadatos de ServiceModel se utiliza para generar el código de modelo de servicio a partir de los documentos de metadatos y los documentos de metadatos a partir del código de modelo de servicio.  
@@ -35,11 +36,11 @@ La herramienta de utilidad de metadatos de ServiceModel se utiliza para generar 
   
 |Tarea|Tema|  
 |----------|-----------|  
-|Genera código a partir de servicios en ejecución o de documentos de metadatos estáticos.|[Generar a un cliente de WCF de metadatos de servicio](../../../docs/framework/wcf/feature-details/generating-a-wcf-client-from-service-metadata.md)|  
-|Exporta documentos de metadatos a partir del código compilado.|[Cómo: utilizar Svcutil.exe para exportar metadatos desde el código de servicio compilado](../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-export-metadata-from-compiled-service-code.md)|  
-|Valida el código de servicio compilado.|[Cómo: utilizar Svcutil.exe para validar código de servicio compilado](../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-validate-compiled-service-code.md)|  
-|Descarga los documentos de metadatos de los servicios en ejecución.|[Cómo: utilizar Svcutil.exe para descargar documentos de metadatos](../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-download-metadata-documents.md)|  
-|Genera el código de serialización.|[Cómo: mejorar el inicio del tiempo de aplicaciones cliente de WCF mediante XmlSerializer](../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)|  
+|Genera código a partir de servicios en ejecución o de documentos de metadatos estáticos.|[Generación de un cliente WCF a partir de los metadatos de servicio](../../../docs/framework/wcf/feature-details/generating-a-wcf-client-from-service-metadata.md)|  
+|Exporta documentos de metadatos a partir del código compilado.|[Uso de Svcutil.exe para exportar metadatos desde el código de servicio compilado](../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-export-metadata-from-compiled-service-code.md)|  
+|Valida el código de servicio compilado.|[Uso de Svcutil.exe para validar el código del servicio compilado](../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-validate-compiled-service-code.md)|  
+|Descarga los documentos de metadatos de los servicios en ejecución.|[Uso de Svcutil.exe para descargar los documentos de metadatos](../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-download-metadata-documents.md)|  
+|Genera el código de serialización.|[Mejora del tiempo de inicio de las aplicaciones cliente WCF mediante XmlSerializer](../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)|  
   
 > [!CAUTION]
 >  Svcutil sobrescribirá los archivos existentes en un disco si los nombres proporcionados como parámetros son idénticos. Esto puede incluir archivos de código, archivos de configuración o archivos de metadatos. Para evitar esto al generar archivos de código y configuración, utilice el modificador `/mergeConfig`.  
@@ -82,7 +83,7 @@ La herramienta de utilidad de metadatos de ServiceModel se utiliza para generar 
   
 |Argumento|Descripción|  
 |--------------|-----------------|  
-|`epr`|La ruta de acceso a un archivo XML que contiene un WS-Addressing EndpointReference para un extremo de servicio compatible con WS-Metadata Exchange. Para obtener más información, vea la sección Descarga de metadatos.|  
+|`epr`|La ruta de acceso a un archivo XML que contiene un WS-Addressing EndpointReference para un punto de conexión de servicio compatible con WS-Metadata Exchange. Para obtener más información, vea la sección Descarga de metadatos.|  
 |`metadataDocumentPath`|La ruta de acceso a un documento de metadatos (wsdl o xsd) que contiene el contrato para importar a código (.wsdl, .xsd, .wspolicy o .wsmex).<br /><br /> Svcutil sigue importaciones e inclusiones al especificar una dirección URL remota para los metadatos. Sin embargo, si desea procesar los archivos de metadatos en el sistema de archivos local, debe especificar todos los archivos en este argumento. De esta manera, puede usar Svcutil en un entorno de compilación donde no puede tener dependencias de red. Puede usar caracteres comodín (*.xsd, \*.wsdl) para este argumento.|  
 |`url`|La dirección URL a un punto de conexión de servicio que proporciona metadatos o a un documento de metadatos hospedado en línea. Para obtener más información sobre cómo se recuperan estos documentos, vea la sección Descarga de metadatos.|  
   
@@ -165,8 +166,8 @@ La herramienta de utilidad de metadatos de ServiceModel se utiliza para generar 
   
 |Argumento|Descripción|  
 |--------------|-----------------|  
-|`url`|La dirección URL a un extremo de servicio que proporciona metadatos o a un documento de metadatos hospedado en línea.|  
-|`epr`|La ruta de acceso a un archivo XML que contiene un WS-Addressing EndpointReference para un extremo de servicio compatible con WS-Metadata Exchange.|  
+|`url`|La dirección URL a un punto de conexión de servicio que proporciona metadatos o a un documento de metadatos hospedado en línea.|  
+|`epr`|La ruta de acceso a un archivo XML que contiene un WS-Addressing EndpointReference para un punto de conexión de servicio compatible con WS-Metadata Exchange.|  
   
 ### <a name="xmlserializer-type-generation"></a>Generación de tipo XmlSerializer  
  Los servicios y las aplicaciones cliente que utilizan tipos de datos que son serializables utilizando <xref:System.Xml.Serialization.XmlSerializer> generan y compilan el código de la serialización para esos tipos de datos en el tiempo de ejecución, lo que se puede traducir en un rendimiento de inicio lento.  

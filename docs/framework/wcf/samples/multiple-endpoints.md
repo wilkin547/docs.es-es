@@ -14,14 +14,15 @@ caps.latest.revision: "31"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6595184219ac87ef1d490308bcd927f57fa0a3ba
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 87846ca624b557f39bcb61d467a270779f399f6d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="multiple-endpoints"></a>Varios puntos de conexión
-El ejemplo de los puntos de conexión varios muestra cómo configurar varios puntos de conexión en un servicio y cómo comunicar con cada punto de conexión de un cliente. En este ejemplo se basa en el [Introducción](../../../../docs/framework/wcf/samples/getting-started-sample.md). La configuración de servicio se ha modificado para definir dos extremos que admiten el contrato `ICalculator`, pero cada uno en una dirección diferente utilizando un enlace diferente. La configuración y el código del cliente se han modificado para comunicarse con ambos de los extremos del servicio.  
+El ejemplo de los puntos de conexión varios muestra cómo configurar varios puntos de conexión en un servicio y cómo comunicar con cada punto de conexión de un cliente. En este ejemplo se basa en el [Introducción](../../../../docs/framework/wcf/samples/getting-started-sample.md). La configuración de servicio se ha modificado para definir dos extremos que admiten el contrato `ICalculator`, pero cada uno en una dirección diferente utilizando un enlace diferente. La configuración y el código del cliente se han modificado para comunicarse con ambos de los puntos de conexión del servicio.  
   
 > [!NOTE]
 >  El procedimiento de instalación y las instrucciones de compilación de este ejemplo se encuentran al final de este tema.  
@@ -46,7 +47,7 @@ El ejemplo de los puntos de conexión varios muestra cómo configurar varios pun
 </service>  
 ```  
   
- Ambos extremos también se configuran en el cliente. Estos extremos son los nombres determinados para que el llamador pueda pasar el nombre de extremo deseado al constructor del cliente.  
+ Ambos puntos de conexión también se configuran en el cliente. Estos extremos son los nombres determinados para que el llamador pueda pasar el nombre de extremo deseado al constructor del cliente.  
   
 ```xml  
 <client>  
@@ -94,7 +95,7 @@ static void Main()
 }  
 ```  
   
- Al ejecutar el cliente, se muestran interacciones con ambos extremos.  
+ Al ejecutar el cliente, se muestran interacciones con ambos puntos de conexión.  
   
 ```  
 Communicate with basic endpoint.  

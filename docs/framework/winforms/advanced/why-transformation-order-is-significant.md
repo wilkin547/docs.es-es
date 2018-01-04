@@ -17,11 +17,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8b170c9247b2415c724c1306a4c21d067c823b4c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: cd3363a1afb8658ed3bb27359259cb752464507d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="why-transformation-order-is-significant"></a>Importancia del orden de transformación
 Una sola <xref:System.Drawing.Drawing2D.Matrix> objeto puede almacenar una transformación o una secuencia de transformaciones. Se llama a este último una transformación compuesta. La matriz de una transformación compuesta se obtiene multiplicando las matrices de las transformaciones individuales.  

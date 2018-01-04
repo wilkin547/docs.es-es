@@ -17,11 +17,12 @@ caps.latest.revision: "46"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 14020e62e936ae6a9acad25c6c24d937feb150af
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: db19b5188c98d157b98d65422ee38d4ed59f733a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-message-contracts"></a>Usar contratos de mensaje
 Normalmente al compilar aplicaciones [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], los programadores prestan mucha atención a los problemas de serialización y estructuras de datos y no se preocupan de la estructura de los mensajes en los que se transportan los datos. Para estas aplicaciones, la creación de contratos de datos para los parámetros o valores devueltos es fácil. ([!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Especificar en contratos de servicio de transferencia de datos](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md).)  
@@ -457,5 +458,5 @@ public class OperationDetails
  Si desea recibir el objeto del mensaje como propiedad `Result` y que los valores devueltos sean propiedades de ese objeto, utilice la opción de comando `/messageContract`. Esto genera una firma que devuelve el mensaje de respuesta como la propiedad `Result` del objeto <xref:System.EventArgs>. Todos los valores de devolución internos se convierten, pues, en propiedades del objeto de mensaje de respuesta.  
   
 ## <a name="see-also"></a>Vea también  
- [Usar contratos de datos](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
+ [Utilización de contratos de datos](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
  [Diseño e implementación de servicios](../../../../docs/framework/wcf/designing-and-implementing-services.md)

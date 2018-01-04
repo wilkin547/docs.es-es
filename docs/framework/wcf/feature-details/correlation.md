@@ -13,11 +13,12 @@ caps.latest.revision: "26"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: fc1608cc4e746af56e7d89237f0c1f5e6cc3bc7e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0a0be008eae45ca5bbe6ca77383bde433931b72e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="correlation"></a>Correlación
 Cuando las aplicaciones de servicio de flujo de trabajo se comunican con otros servicios, es importante que los mensajes entre ellos se envíen a la instancia de flujo de trabajo adecuada. La correlación proporciona el mecanismo para ello. Los temas de esta sección proporcionan información general sobre la correlación y sobre cómo utilizarla en diversos casos de servicio de flujo de trabajo.  
@@ -32,10 +33,10 @@ Cuando las aplicaciones de servicio de flujo de trabajo se comunican con otros s
  [Dúplex duradero](../../../../docs/framework/wcf/feature-details/durable-duplex-correlation.md)  
  Describe la correlación dúplex duradera.  
   
- [En función del contenido](../../../../docs/framework/wcf/feature-details/content-based-correlation.md)  
+ [Basado en contenidos](../../../../docs/framework/wcf/feature-details/content-based-correlation.md)  
  Describe una correlación basada en contenido.  
   
- [Solicitud y respuesta](../../../../docs/framework/wcf/feature-details/request-reply-correlation.md)  
+ [Solicitud-respuesta](../../../../docs/framework/wcf/feature-details/request-reply-correlation.md)  
  Describe una correlación entre solicitud y respuesta.  
   
  [Solución de problemas de correlación](../../../../docs/framework/wcf/feature-details/troubleshooting-correlation.md)  
@@ -46,5 +47,5 @@ Cuando las aplicaciones de servicio de flujo de trabajo se comunican con otros s
  <xref:System.ServiceModel.Activities.Send>  
  <xref:System.ServiceModel.Activities.Receive>  
  <xref:System.ServiceModel.CorrelationQuery>  
- [Correlación basada en contenido](../../../../docs/framework/windows-workflow-foundation/samples/content-based-correlation.md)  
+ [Correlación basada en contenidos](../../../../docs/framework/windows-workflow-foundation/samples/content-based-correlation.md)  
  [Calculadora correlacionada](../../../../docs/framework/windows-workflow-foundation/samples/correlated-calculator.md)

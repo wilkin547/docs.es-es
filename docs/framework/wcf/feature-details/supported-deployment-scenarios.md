@@ -13,11 +13,12 @@ caps.latest.revision: "20"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5886b327f1ea6d2866b9fc76bb29031ee870934e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 3e6039567e4fad7fe4c014665dd3ae0c3082a9d0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="supported-deployment-scenarios"></a>Escenarios de implementación admitidos
 El subconjunto de características de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] admitido para su uso en aplicaciones de confianza parcial está diseñado para cumplir los requisitos de algunos, aunque no todos, escenarios de uso de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. En el servidor, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] cumple los requisitos de proveedores de hospedaje compartido de escala de Internet que ejecutan aplicaciones de terceros en el conjunto de permisos de Nivel de confianza medio [!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)] por razones de seguridad. En el cliente, la compatibilidad de confianza parcial de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] está diseñada para cumplir los requisitos de tecnologías de implementación como [ClickOnce Deployment](http://go.microsoft.com/fwlink/?LinkId=83712) o la tecnología de aplicación de explorador XAML de [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)], que permiten una implementación perfecta y segura de aplicaciones de escritorio de los sitios que no son de confianza.  

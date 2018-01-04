@@ -16,11 +16,12 @@ caps.latest.revision: "35"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 362578e6e8066c0490e692d0cd9d637b05bb1fa0
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: fd36f012f614e08be131efb3791fd997d3668531
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="what39s-new-in-windows-communication-foundation-45"></a>¿Qué &#39; s nuevos en Windows Communication Foundation 4.5
 En este tema, se describen las características nuevas de [!INCLUDE[indigo1](../../../includes/indigo1-md.md)].  
@@ -72,13 +73,13 @@ En este tema, se describen las características nuevas de [!INCLUDE[indigo1](../
 ## <a name="new-transport-default-values"></a>Nuevos valores de transporte predeterminados  
  En la tabla siguiente se describen los valores que han cambiado y dónde encontrar información adicional.  
   
-|Propiedad|Activado|Nuevo valor predeterminado|Para obtener más información, vea|  
+|Property|Activado|Nuevo valor predeterminado|Para obtener más información, vea|  
 |--------------|--------|-----------------|------------------------------|  
 |channelInitializationTimeout|<xref:System.ServiceModel.NetTcpBinding>|30 segundos|<xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.ChannelInitializationTimeout%2A>|  
 |listenBacklog|<xref:System.ServiceModel.NetTcpBinding>|12 * número de procesadores|<xref:System.ServiceModel.NetTcpBinding.ListenBacklog%2A>|  
 |maxPendingAccepts|ConnectionOrientedTransportBindingElement<br /><br /> SMSvcHost.exe|2 * número de procesadores para transporte<br /><br /> 4 \* número de procesadores para SMSvcHost.exe|<xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.MaxPendingAccepts%2A>[Configurar el servicio de uso compartido de puertos Net.TCP](http://msdn.microsoft.com/en-us/b6dd81fa-68b7-4e1b-868e-88e5901b7ea0)|  
 |maxPendingConnections|ConnectionOrientedTransportBindingElement|12 * número de procesadores|<xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.MaxPendingConnections%2A>|  
-|receiveTimeout|SMSvcHost.exe|30 segundos|[Configurar el servicio de uso compartido de puertos Net.TCP](http://msdn.microsoft.com/en-us/b6dd81fa-68b7-4e1b-868e-88e5901b7ea0)|  
+|receiveTimeout|SMSvcHost.exe|30 segundos|[Configuración del servicio de uso compartido de puertos Net.TCP](http://msdn.microsoft.com/en-us/b6dd81fa-68b7-4e1b-868e-88e5901b7ea0)|  
   
 ## <a name="xml-editor-tooltips"></a>Información sobre herramientas del editor XML  
  Para ayudar a los desarrolladores de servicios WCF nuevos y existentes a configurar sus servicios, el Editor XML de Visual Studio proporciona ahora información sobre herramientas para cada elemento de configuración que forma parte del archivo de configuración del servicio y sus propiedades.  
@@ -106,7 +107,7 @@ En este tema, se describen las características nuevas de [!INCLUDE[indigo1](../
  Se ha agregado compatibilidad para un transporte UDP que permite a los desarrolladores escribir servicios que usan "desencadenar y omitir" de mensajería. Un cliente envía un mensaje a un servicio y no espera ninguna respuesta de él.  
   
 ## <a name="multiple-authentication-support"></a>Compatibilidad con autenticación múltiple  
- Se ha agregado compatibilidad para admitir varios modos de autenticación, como compatibles con IIS, en un solo extremo de WCF cuando se usa el transporte HTTP y la seguridad de transporte. IIS permite habilitar varios modos de autenticación en un directorio virtual; esta característica permite que un solo extremo WCF admita los distintos modos de autenticación habilitados para el directorio virtual donde se hospeda el servicio WCF.  
+ Se ha agregado compatibilidad para admitir varios modos de autenticación, como compatibles con IIS, en un solo punto de conexión de WCF cuando se usa el transporte HTTP y la seguridad de transporte. IIS permite habilitar varios modos de autenticación en un directorio virtual; esta característica permite que un solo punto de conexión WCF admita los distintos modos de autenticación habilitados para el directorio virtual donde se hospeda el servicio WCF.  
   
 ## <a name="idn-support"></a>Compatibilidad con IDN  
  Se ha agregado compatibilidad para permitir servicios WCF con nombres de dominio internacionalizados. Para obtener más información, consulte [WCF y nombres de dominio internacionalizados](../../../docs/framework/wcf/feature-details/wcf-and-internationalized-domain-names.md).  
@@ -124,7 +125,7 @@ En este tema, se describen las características nuevas de [!INCLUDE[indigo1](../
  En un proyecto de WCF, los tipos de datos definidos en XML (como los expuestos en un servicio) se pueden pegar directamente en una página de códigos. El tipo XML se pegará como un tipo de CLR. Vea [generar clases de tipos de datos desde XML](../../../docs/framework/wcf/generating-data-type-classes-from-xml.md) para obtener más detalles.  
   
 ## <a name="webservicehost-and-default-endpoints"></a>WebServiceHost y los puntos de conexión predeterminados  
- En Visual Studio 2010, WebServiceHost creaba automáticamente un extremo predeterminado sin importar si se había especificado explícitamente un extremo o no. En Visual Studio 2012, WebServiceHost solo creará un extremo predeterminado si no se agrega ningún extremo explícitamente. Si el cliente espera el extremo predeterminado, se puede agregar explícitamente un extremo y dirigir el cliente a él. Como alternativa, puede pedirle a WCF que vuelva al comportamiento anterior; para ello, agregue la siguiente configuración al archivo de configuración de aplicaciones  
+ En Visual Studio 2010, WebServiceHost creaba automáticamente un punto de conexión predeterminado sin importar si se había especificado explícitamente un punto de conexión o no. En Visual Studio 2012, WebServiceHost solo creará un extremo predeterminado si no se agrega ningún extremo explícitamente. Si el cliente espera el extremo predeterminado, se puede agregar explícitamente un extremo y dirigir el cliente a él. Como alternativa, puede pedirle a WCF que vuelva al comportamiento anterior; para ello, agregue la siguiente configuración al archivo de configuración de aplicaciones  
   
 ```xml  
 <appSettings>  

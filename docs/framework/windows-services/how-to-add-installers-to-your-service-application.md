@@ -21,11 +21,12 @@ caps.latest.revision: "14"
 author: ghogen
 ms.author: ghogen
 manager: douge
-ms.openlocfilehash: 8137e41f92335849916dfc9e9ce72afeb186e73c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0dcb666f317ab285ae0156d2df16947f71665aee
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-add-installers-to-your-service-application"></a>Cómo: Agregar instaladores a una aplicación de servicio
 Visual Studio incluye componentes de instalación que pueden instalar recursos asociados con las aplicaciones de servicio. Componentes de instalación registran un servicio individual en el sistema al que se va a instalar y que el Administrador de Control de servicios sepan que existe el servicio. Cuando se trabaja con una aplicación de servicio, puede seleccionar un vínculo en la ventana Propiedades para agregar automáticamente los instaladores adecuados al proyecto.  
@@ -38,7 +39,7 @@ Visual Studio incluye componentes de instalación que pueden instalar recursos a
  No es necesario hacer ninguna codificación especial dentro de los instaladores para hacer que los servicios se instale correctamente. Sin embargo, en ocasiones, necesite modificar el contenido de los instaladores si necesita agregar funcionalidad especial al proceso de instalación.  
   
 > [!NOTE]
->  Los cuadros de diálogo y comandos de menú que se ven pueden diferir de los descritos en la Ayuda, en función de los valores de configuración o de edición activos. Para cambiar la configuración, elija la opción **Importar y exportar configuraciones** del menú **Herramientas** . Para obtener más información, vea [Personalizar la configuración de desarrollo en Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Los cuadros de diálogo y comandos de menú que se ven pueden diferir de los descritos en la Ayuda, en función de los valores de configuración o de edición activos. Para cambiar la configuración, elija la opción **Importar y exportar configuraciones** del menú **Herramientas** . Para obtener más información, consulte [Personalizar la configuración de desarrollo en Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
 ### <a name="to-add-installers-to-your-service-application"></a>Para agregar a instaladores a la aplicación de servicio  
   
@@ -70,7 +71,7 @@ Visual Studio incluye componentes de instalación que pueden instalar recursos a
     >  Para cada servicio adicional en el proyecto, debe agregar otro <xref:System.ServiceProcess.ServiceInstaller> componente para el proyecto `ProjectInstaller` clase. El <xref:System.ServiceProcess.ServiceProcessInstaller> el componente se agregó en el paso tres funciona con todos los instaladores de servicio individuales en el proyecto.  
   
 ## <a name="see-also"></a>Vea también  
- [Introducción a las aplicaciones de servicio de Windows](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  
- [Cómo: instalar y desinstalar servicios](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)  
- [Cómo: iniciar servicios](../../../docs/framework/windows-services/how-to-start-services.md)  
- [Cómo: especificar el contexto de seguridad para los servicios](../../../docs/framework/windows-services/how-to-specify-the-security-context-for-services.md)
+ [Introducción a las aplicaciones de servicios de Windows](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  
+ [Instalación y desinstalación de servicios](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)  
+ [Inicio de servicios](../../../docs/framework/windows-services/how-to-start-services.md)  
+ [Definición del contexto de seguridad de los servicios](../../../docs/framework/windows-services/how-to-specify-the-security-context-for-services.md)

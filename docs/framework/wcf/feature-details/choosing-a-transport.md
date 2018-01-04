@@ -14,11 +14,12 @@ caps.latest.revision: "25"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 620e039dd9a53a7c09eedd3d1a4892c5c43ffd2b
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: d41e9d2416ddbbd4c729b8c2a23754d19f0630d3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="choosing-a-transport"></a>Elección del transporte
 En este tema se analizan los criterios para elegir entre los tres transportes principales que se incluyen en [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]: HTTP, TCP y canalizaciones con nombre. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] también incluye un transporte de cola de mensajes (también conocido como MSMQ), pero este documento no trata la puesta en cola de mensajes.  
@@ -27,7 +28,7 @@ En este tema se analizan los criterios para elegir entre los tres transportes pr
   
  En [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], especifique cómo transferir datos a través de una red entre los extremos utilizando un *enlace*, que se compone de una secuencia de *elementos de enlace*. Un elemento de enlace del transporte, que forma parte del enlace, representa un transporte. Un enlace incluye los elementos de enlace de protocolo opcionales, como seguridad, un elemento de enlace de codificador de mensaje necesario y un elemento de enlace de transporte necesario. Un transporte envía o recibe el formulario serializado de un mensaje a otra aplicación o desde otra aplicación.  
   
- Si se debe conectar a un cliente existente o servidor, puede que no tenga elección a la hora de utilizar un transporte determinado. Sin embargo, se puede acceder a los servicios [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] a través de varios extremos, cada uno con un transporte diferente. Cuando un transporte único no cubre el público previsto para su servicio, considere exponer el servicio sobre varios extremos. De este modo, las aplicaciones cliente pueden utilizar el extremo que más les convenga.  
+ Si se debe conectar a un cliente existente o servidor, puede que no tenga elección a la hora de utilizar un transporte determinado. Sin embargo, se puede acceder a los servicios [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] a través de varios extremos, cada uno con un transporte diferente. Cuando un transporte único no cubre el público previsto para su servicio, considere exponer el servicio sobre varios extremos. De este modo, las aplicaciones cliente pueden utilizar el punto de conexión que más les convenga.  
   
  Después de elegir un transporte, debe seleccionar un enlace que lo utilice. Puede elegir un enlace proporcionado por el sistema (consulte [enlaces proporcionados](../../../../docs/framework/wcf/system-provided-bindings.md)), o bien puede crear su propio enlace personalizado (vea [enlaces personalizados](../../../../docs/framework/wcf/extending/custom-bindings.md)). Además, puede crear sus propios enlaces. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Crear enlaces definidos por el usuario](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md).  
   
@@ -81,4 +82,4 @@ En este tema se analizan los criterios para elegir entre los tres transportes pr
  <xref:System.ServiceModel.Channels.NamedPipeTransportBindingElement>  
  [Enlaces](../../../../docs/framework/wcf/feature-details/bindings.md)  
  [Enlaces proporcionados por el sistema](../../../../docs/framework/wcf/system-provided-bindings.md)  
- [Crear enlaces definidos por el usuario](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md)
+ [Creación de enlaces definidos por el usuario](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md)

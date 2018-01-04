@@ -13,11 +13,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 11d5b00113f9b44d1d77d00dd541bc602afcb405
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: a0a59788544a32b78e75ac25e787dcbae478451e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-programmatically-add-discoverability-to-a-wcf-service-and-client"></a>Cómo: Agregar detectabilidad mediante programación a un cliente y un servicio de WCF
 En este tema, se explica cómo hacer un que un servicio de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] sea reconocible. Se basa en el [autohospedaje](http://go.microsoft.com/fwlink/?LinkId=145523) ejemplo.  
@@ -351,5 +352,5 @@ namespace DiscoveryClientApp
 ```  
 
 ## <a name="see-also"></a>Vea también  
- [Información general sobre la detección WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)  
- [Modelo de objetos de detección WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery-object-model.md)
+ [Información general de Detección de WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)  
+ [Modelo de objetos de detección de WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery-object-model.md)

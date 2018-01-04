@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 17fe1a073a2c8fe6b800ce353b23ca43059d3454
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: f9b1d2f957c54d1e91d7d14cd35c328d4a6666e4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ajax"></a>AJAX
 En esta sección se incluyen ejemplos que muestran la funcionalidad XML y JavaScript asincrónico.  
@@ -35,10 +36,10 @@ En esta sección se incluyen ejemplos que muestran la funcionalidad XML y JavaSc
  [Servicio AJAX mediante HTTP POST](../../../../docs/framework/wcf/samples/ajax-service-using-http-post.md)  
  Muestra cómo utilizar [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] para crear un servicio XML (AJAX) y JavaScript asincrónico [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] que utiliza HTTP POST.  
   
- [Servicio de AJAX sin configuración](../../../../docs/framework/wcf/samples/ajax-service-without-configuration.md)  
+ [Servicio AJAX sin configuración](../../../../docs/framework/wcf/samples/ajax-service-without-configuration.md)  
  Muestra cómo utilizar [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] para crear un servicio XML (AJAX) y JavaScript asincrónico ASP.NET básico.  
   
- [Servicio AJAX con tipos complejos](../../../../docs/framework/wcf/samples/ajax-service-using-complex-types-sample.md)  
+ [Servicio AJAX mediante el uso de tipos complejos](../../../../docs/framework/wcf/samples/ajax-service-using-complex-types-sample.md)  
  Muestra cómo utilizar [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] para crear un servicio XML (AJAX) y JavaScript asincrónico ASP.NET que crea instancias de tipos complejos.  
   
  [Servicio AJAX con JSON y XML](../../../../docs/framework/wcf/samples/ajax-service-with-json-and-xml-sample.md)  

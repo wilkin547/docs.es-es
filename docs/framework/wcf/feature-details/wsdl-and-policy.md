@@ -13,11 +13,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f502d24f98c9229d064be3de0e0edc081664dd03
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: dd52e36199fc2412abb003d530dd5614cda8049b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wsdl-and-policy"></a>WSDL y directivas
 En este tema se explica [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] WSDL 1.1, WS-Policy y detalles de implementación de WS-PolicyAttachment, así como las aserciones adicionales de WS-Policy y las extensiones de WSDL 1.1 introducidas por [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
@@ -83,6 +84,6 @@ En este tema se explica [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 
 |mssp:RequireClientCertificate|Anidadas|Este elemento opcional especifica un requisito para un certificado de cliente que se proporcionará como parte del protocolo TLSNEGO. Si esta aserción está presente, se debe proporcionar un certificado de cliente. Si esta aserción no está presente, no se debe proporcionar un certificado de cliente. Esta aserción no se debe utilizar fuera de mssp:SslContextToken.|  
   
 ## <a name="see-also"></a>Vea también  
- [Publicación de WSDL personalizado](../../../../docs/framework/wcf/samples/custom-wsdl-publication.md)  
- [Cómo: exportar el WSDL personalizado](../../../../docs/framework/wcf/extending/how-to-export-custom-wsdl.md)  
- [Cómo: importar WSDL personalizado](../../../../docs/framework/wcf/extending/how-to-import-custom-wsdl.md)
+ [Publicación de WSDL personalizada](../../../../docs/framework/wcf/samples/custom-wsdl-publication.md)  
+ [Exportación del WSDL personalizado](../../../../docs/framework/wcf/extending/how-to-export-custom-wsdl.md)  
+ [Importación de WSDL personalizado](../../../../docs/framework/wcf/extending/how-to-import-custom-wsdl.md)

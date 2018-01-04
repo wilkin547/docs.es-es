@@ -16,11 +16,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3e8a05b6f37f7686f18a6200e009aabe7eed5537
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 04b86579f45c5a357f8759bf36ae41f7a5c6e98b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-new-setting-at-design-time"></a>Cómo: Crear un nuevo valor de configuración en tiempo de diseño
 Puede crear una nueva configuración en tiempo de diseño mediante el Diseñador de configuración. El Diseñador de configuración es una interfaz de estilo de cuadrícula que le permite crear una nueva configuración y especificar propiedades para ver esas configuraciones. Debe especificar el nombre, valor, tipo y ámbito de la nueva configuración. Una vez que se crea una configuración, es accesible en el código.  

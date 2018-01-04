@@ -15,11 +15,12 @@ caps.latest.revision: "57"
 author: ghogen
 ms.author: ghogen
 manager: douge
-ms.openlocfilehash: fb868aa38381294333538afcd99c030162d2f235
-ms.sourcegitcommit: 6f49c973f62855ffd6c4a322903e7dd50c5c1b50
+ms.workload: dotnet
+ms.openlocfilehash: 42fc5f27f1c78e243ff1d3a705c61a20ff459937
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-creating-a-windows-service-application-in-the-component-designer"></a>Tutorial: Crear una aplicación de servicios de Windows en el Diseñador de componentes
 En este artículo se demuestra cómo crear una sencilla aplicación de servicio de Windows en Visual Studio que escribe mensajes en un registro de eventos. A continuación se incluyen los pasos básicos que se realizan para crear y usar el servicio:  
@@ -489,6 +490,6 @@ Este código modifica la clave del Registro **ImagePath** , que suele contener l
   
 ## <a name="see-also"></a>Vea también  
  [Aplicaciones de servicios de Windows](../../../docs/framework/windows-services/index.md)  
- [Introducción a las aplicaciones de servicio de Windows](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  
- [Cómo: depurar aplicaciones de servicio de Windows](../../../docs/framework/windows-services/how-to-debug-windows-service-applications.md)  
+ [Introducción a las aplicaciones de servicios de Windows](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  
+ [Depuración de aplicaciones de servicios de Windows](../../../docs/framework/windows-services/how-to-debug-windows-service-applications.md)  
  [Servicios (Windows)](http://msdn.microsoft.com/library/windows/desktop/ms685141.aspx)

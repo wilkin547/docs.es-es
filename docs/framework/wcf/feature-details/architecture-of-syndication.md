@@ -13,11 +13,12 @@ caps.latest.revision: "25"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ef8a2f43138eba1189f9e56419b9f95a5a9a043f
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 22df793bd5873d6f69c3a2e86e96d4a1cefcff0d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="architecture-of-syndication"></a>Arquitectura de distribución
 La API de distribución está diseñada para proporcionar un modelo de programación neutral en cuanto al formato que permita escribir contenido distribuido en la conexión en una variedad de formatos. El modelo de datos abstracto está compuesto por las siguientes clases:  
@@ -88,6 +89,6 @@ La API de distribución está diseñada para proporcionar un modelo de programac
 -   Una característica clave de los protocolos de distribución es la extensibilidad. Atom 1.0 y RSS 2.0 le permiten agregar atributos y elementos a las fuentes de distribución que no están definidas en las especificaciones. El modelo de programación de distribución de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] proporciona dos maneras de trabajar con atributos y extensiones personalizados: la derivación de una nueva clase y el acceso escrito de forma imprecisa. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Extensibilidad de sindicación](../../../../docs/framework/wcf/feature-details/syndication-extensibility.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Información general de la distribución de WCF](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md)  
- [¿Cómo se asigna el modelo de objetos de distribución de WCF a Atom y RSS](../../../../docs/framework/wcf/feature-details/how-the-wcf-syndication-object-model-maps-to-atom-and-rss.md)  
- [Modelo de programación Web HTTP de WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
+ [Información general de redifusión en WCF](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md)  
+ [Asignación del modelo de objetos de distribución de WCF a Atom y RSS](../../../../docs/framework/wcf/feature-details/how-the-wcf-syndication-object-model-maps-to-atom-and-rss.md)  
+ [Modelo de programación de web HTTP de WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)

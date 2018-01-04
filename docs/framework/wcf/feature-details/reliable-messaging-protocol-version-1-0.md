@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5657b48a648603f24e89c0eebd1285ed9a505e54
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: a32c16067446459817e9943c2d729a67373a0333
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="reliable-messaging-protocol-version-10"></a>Protocolo de mensajería de confianza versión 1.0
 Este tema cubre los detalles de implementación de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] para el protocolo de febrero de 2005 WS-ReliableMessaging (versión 1.0) necesario para la interoperación mediante el transporte HTTP. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sigue la especificación WS-ReliableMessaging con las restricciones y clarificaciones explicadas en este tema. Tenga en cuenta que la versión 1.0 del protocolo WS-ReliableMessaging se implementa a partir de [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)].  
@@ -47,7 +48,7 @@ Este tema cubre los detalles de implementación de [!INCLUDE[indigo1](../../../.
   
 -   B1101: el iniciador de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] no genera el elemento Expires opcional en el mensaje `CreateSequence` o, en los casos en los que el mensaje `CreateSequence` contiene un elemento `Offer`, el elemento opcional `Expires` en el elemento `Offer`.  
   
--   B1102: al tener acceso al mensaje `CreateSequence`, el [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] de `Responder` envía y recibe ambos elementos `Expires` si existen, pero no usa sus valores.  
+-   B1102: Al tener acceso a la `CreateSequence` mensaje, el [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] `Responder` envía y recibe ambos `Expires` elementos si existe, pero no usa sus valores.  
   
  WS-Reliable Messaging incluye el mecanismo `Offer` para establecer las dos secuencias correlacionadas inversas que forman una sesión.  
   
@@ -284,7 +285,7 @@ Este tema cubre los detalles de implementación de [!INCLUDE[indigo1](../../../.
   
 -   B3001: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] adjunta la aserción `wsrm:RMAssertion` de WS-Policy Assertion a elementos `wsdl:binding`. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] admite datos adjuntos para los elementos `wsdl:binding` y `wsdl:port`.  
   
--   B3002: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] admite las siguientes propiedades opcionales de aserción de WS-Reliable Messaging y proporciona control sobre ellas en el [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] de `ReliableMessagingBindingElement`:  
+-   B3002: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] es compatible con las siguientes propiedades opcionales de aserción de WS-Reliable Messaging y proporciona control sobre ellas en el [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] `ReliableMessagingBindingElement`:  
   
     -   `wsrm:InactivityTimeout`  
   

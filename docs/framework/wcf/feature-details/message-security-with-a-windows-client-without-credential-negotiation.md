@@ -16,11 +16,12 @@ caps.latest.revision: "18"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 943e3f32334bbf5746d3730f34371793bbd2754c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f069ff100a2fba1f6bace1d9a81ed69314261eae
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="message-security-with-a-windows-client-without-credential-negotiation"></a>Seguridad de los mensajes con un cliente de Windows sin negociación de credenciales
 El escenario siguiente muestra un cliente y un servicio [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] protegidos por el protocolo Kerberos.  
@@ -158,5 +159,5 @@ El escenario siguiente muestra un cliente y un servicio [!INCLUDE[indigo1](../..
   
 ## <a name="see-also"></a>Vea también  
  [Información general sobre seguridad](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- [Autenticación e identidad de servicio](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
+ [Identidad del servicio y autenticación](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
  [Modelo de seguridad de Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

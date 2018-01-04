@@ -13,14 +13,15 @@ caps.latest.revision: "19"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 78fbde5f83d4a24594e06b787756c7ab3762d75a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: cad98ab0df372b19efcf102cce3f80e3f7b0632f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="custom-secure-metadata-endpoint"></a>punto de conexión personalizado de metadatos seguros
-Este ejemplo muestra cómo implementar un servicio con un punto de conexión seguro de metadatos que utiliza uno de los enlaces de intercambio de metadatos no y cómo configurar [la herramienta de utilidad de metadatos de ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) o los clientes para capturar el metadatos de un punto de conexión de metadatos. Hay dos enlaces proporcionados por el sistema disponibles para exponer puntos de conexión de metadatos: mexHttpBinding y mexHttpsBinding. mexHttpBinding se usa para exponer un extremo de metadatos sobre HTTP de una manera no segura. mexHttpsBinding se usa para exponer un extremo de metadatos sobre HTTPS de una manera no segura. En este ejemplo se muestra cómo exponer un extremo de metadatos seguro mediante el objeto <xref:System.ServiceModel.WSHttpBinding>. Desearía hacer esto cuando desee cambiar la configuración de seguridad en el enlace, pero no desee usar HTTPS. Si utiliza mexHttpsBinding, su extremo de metadatos será seguro, pero no hay ninguna manera de modificar la configuración del enlace.  
+Este ejemplo muestra cómo implementar un servicio con un punto de conexión seguro de metadatos que utiliza uno de los enlaces de intercambio de metadatos no y cómo configurar [la herramienta de utilidad de metadatos de ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) o los clientes para capturar el metadatos de un punto de conexión de metadatos. Hay dos enlaces proporcionados por el sistema disponibles para exponer puntos de conexión de metadatos: mexHttpBinding y mexHttpsBinding. mexHttpBinding se usa para exponer un punto de conexión de metadatos sobre HTTP de una manera no segura. mexHttpsBinding se usa para exponer un punto de conexión de metadatos sobre HTTPS de una manera no segura. En este ejemplo se muestra cómo exponer un extremo de metadatos seguro mediante el objeto <xref:System.ServiceModel.WSHttpBinding>. Desearía hacer esto cuando desee cambiar la configuración de seguridad en el enlace, pero no desee usar HTTPS. Si utiliza mexHttpsBinding, su extremo de metadatos será seguro, pero no hay ninguna manera de modificar la configuración del enlace.  
   
 > [!NOTE]
 >  El procedimiento de instalación y las instrucciones de compilación de este ejemplo se encuentran al final de este tema.  
@@ -75,7 +76,7 @@ svcutil http://localhost/servicemodelsamples/service.svc/mex
   
  y funciona. Pero en este ejemplo, el servidor utiliza un extremo no predeterminado para hospedar los metadatos. Así que deben indicar a Svcutil.exe que utilice el enlace correcto. Esto se puede hacer utilizando un archivo Svcutil.exe.config.  
   
- El archivo Svcutil.exe.config se parece un archivo de configuración de cliente normal. Los únicos aspectos raros son el nombre de extremo del cliente y su contrato:  
+ El archivo Svcutil.exe.config se parece un archivo de configuración de cliente normal. Los únicos aspectos raros son el nombre de punto de conexión del cliente y su contrato:  
   
 ```xml  
 <endpoint name="http"  

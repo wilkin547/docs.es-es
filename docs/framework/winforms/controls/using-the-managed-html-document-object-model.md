@@ -14,11 +14,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ff1004248e709b4b4913b90eb81f0726ab390c54
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 876cee67f917291214d6ea8b9abf7d2975c1fd25
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-the-managed-html-document-object-model"></a>Utilizar el Modelo de objetos de documento HTML administrado
 El modelo de objetos de documento (DOM) HTML administrado proporciona un contenedor en función de la [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] para las clases HTML expuestas por Internet Explorer. Use estas clases para manipular páginas HTML hospedadas en el <xref:System.Windows.Forms.WebBrowser> control, o para crear nuevas páginas desde el principio.  

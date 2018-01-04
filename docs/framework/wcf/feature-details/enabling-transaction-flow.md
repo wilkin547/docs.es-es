@@ -14,17 +14,18 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4b5d0b90ed28928e734089265cb8c58839b6d0cd
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 814df9ff4fb11b0aa59270ac251b5dbd9ed7fe96
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="enabling-transaction-flow"></a>Habilitar el flujo de transacciones
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] proporciona opciones muy flexibles para controlar el flujo de la transacción. La configuración del flujo de transacción de un servicio se puede expresar utilizando una combinación de atributos y configuración.  
   
 ## <a name="transaction-flow-settings"></a>Configuración del flujo de transacción  
- La configuración del flujo de transacción se genera para un extremo de servicio como resultado de la intersección de los tres valores siguientes:  
+ La configuración del flujo de transacción se genera para un punto de conexión de servicio como resultado de la intersección de los tres valores siguientes:  
   
 -   El atributo <xref:System.ServiceModel.TransactionFlowAttribute> especificado para cada método en el contrato de servicios.  
   
@@ -44,10 +45,10 @@ ms.lasthandoff: 12/02/2017
 |---------------------------------|--------------------------------------|----------------------------------------------|------------------------------|  
 |Obligatorio|true|WS-AT|La transacción debe fluir en el formato WS-AT interoperable.|  
 |Obligatorio|true|OleTransactions|La transacción debe fluir en el [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] formato OleTransactions.|  
-|Obligatorio|false|No es aplicable|No es aplicable porque se trata de una configuración no válida.|  
+|Obligatorio|False|No es aplicable|No es aplicable porque se trata de una configuración no válida.|  
 |Permitido|true|WS-AT|La transacción puede fluir en el formato WS-AT interoperable.|  
 |Permitido|true|OleTransactions|La transacción puede fluir en el [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] formato OleTransactions.|  
-|Permitido|false|Cualquier valor|No fluye una transacción.|  
+|Permitido|False|Cualquier valor|No fluye una transacción.|  
 |NotAllowed|Cualquier valor|Cualquier valor|No fluye una transacción.|  
   
  La tabla siguiente resume el resultado del procesamiento de mensajes.  
@@ -62,12 +63,12 @@ ms.lasthandoff: 12/02/2017
 |Sin transacción|Permitido|N/D|Proceso|  
 |Sin transacción|NotAllowed|N/D|Proceso|  
   
- Mientras cada método en un contrato puede tener requisitos de flujo de transacción diferentes, el valor del protocolo del flujo de transacción se sitúa en el nivel del enlace. Esto significa que todos los métodos que comparten el mismo extremo (y por consiguiente el mismo enlace) también comparten la misma directiva permitiendo o requiriendo el flujo de transacción, así como el mismo protocolo de transacción si es aplicable.  
+ Mientras cada método en un contrato puede tener requisitos de flujo de transacción diferentes, el valor del protocolo del flujo de transacción se sitúa en el nivel del enlace. Esto significa que todos los métodos que comparten el mismo punto de conexión (y por consiguiente el mismo enlace) también comparten la misma directiva permitiendo o requiriendo el flujo de transacción, así como el mismo protocolo de transacción si es aplicable.  
   
 ## <a name="enabling-transaction-flow-at-the-method-level"></a>Habilitar el flujo de transacción en el nivel de método  
  Los requisitos de flujo de transacción no son siempre los mismos para todos los métodos en un contrato de servicios. Por consiguiente, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] también proporciona un mecanismo basado en atributos para permitir expresar las preferencias de flujo de transacción de cada método. <xref:System.ServiceModel.TransactionFlowAttribute> que especifica el nivel en el que una operación del servicio acepta un encabezado de transacción logra esto. Debería marcar sus métodos de contrato de servicios con este atributo si desea habilitar el flujo de la transacción. Este atributo toma uno de los valores de la enumeración <xref:System.ServiceModel.TransactionFlowOption>, en la que el valor predeterminado es <xref:System.ServiceModel.TransactionFlowOption.NotAllowed>. Si se especifica cualquier valor excepto <xref:System.ServiceModel.TransactionFlowOption.NotAllowed>, el método no debe ser unidireccional. Un programador puede utilizar este atributo para especificar requisitos de flujo de transacción del nivel de método o restricciones en tiempo de diseño.  
   
-## <a name="enabling-transaction-flow-at-the-endpoint-level"></a>Habilitar el flujo de transacción en el nivel del extremo  
+## <a name="enabling-transaction-flow-at-the-endpoint-level"></a>Habilitar el flujo de transacción en el nivel del punto de conexión  
  Además del valor del flujo de la transacción en el nivel del método <xref:System.ServiceModel.TransactionFlowAttribute> proporciona, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] proporciona un valor para todos los extremos para que el flujo de la transacción permita a los administradores controlar el flujo de la transacción en un nivel más alto.  
   
  <xref:System.ServiceModel.Channels.TransactionFlowBindingElement>, que le permite habilitar o deshabilitar el flujo de la transacción entrante en el valor de enlace de un extremo logra, así como especificar el formato del protocolo de transacción para las transacciones entrantes.  

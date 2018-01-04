@@ -13,11 +13,12 @@ caps.latest.revision: "41"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5d4a460adfb8076f5d2c0fe273511e6de80be4ec
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 540469571f06f9c2ab38f9754a40aae5a3c3b267
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="custom-demux"></a>Demux personalizado
 Este ejemplo muestra cómo se pueden asignar los encabezados del mensaje MSMQ para diferentes operaciones de servicio para que [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] servicios que utilizan <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> no están limitados a utilizar una operación de servicio como se muestra en el [Message Queue Server Windows Communication Foundation](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md) y [Windows Communication Foundation a Message Queue Server](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md) ejemplos.  
@@ -204,5 +205,5 @@ Purchase Order 28fc457a-1a56-4fe0-9dde-156965c21ed6 is canceled
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\MSMQIntegration\CustomDemux`  
   
 ## <a name="see-also"></a>Vea también  
- [Las colas en WCF](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)  
+ [Colas en WCF](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)  
  [Message Queue Server](http://go.microsoft.com/fwlink/?LinkId=95143)

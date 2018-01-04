@@ -14,11 +14,12 @@ caps.latest.revision: "38"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0d9d2fb363aa753edc6d2d4002a948fbb35b75ad
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0330c386730c6b0436196bb5b85162bc4621c214
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-use-a-windows-communication-foundation-client"></a>Cómo usar un cliente de Windows Communication Foundation
 Es la última de las seis tareas necesarias para crear una aplicación básica de [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]. Para obtener información general de las seis de las tareas, consulte la [Tutorial de introducción](../../../docs/framework/wcf/getting-started-tutorial.md) tema.  
@@ -152,7 +153,7 @@ Add(100,15.99) = 115.99Subtract(145,76.54) = 68.46Multiply(9,81.25) = 731.25Divi
  [Cómo crear un cliente](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)  
  [Tutorial de introducción](../../../docs/framework/wcf/getting-started-tutorial.md)  
  [Programación básica de WCF](../../../docs/framework/wcf/basic-wcf-programming.md)  
- [Cómo: crear un contrato dúplex](../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)  
- [Cómo: obtener acceso a servicios con un contrato dúplex](../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)  
+ [Creación de un contrato dúplex](../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)  
+ [Acceso a los servicios con un contrato dúplex](../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)  
  [Introducción](../../../docs/framework/wcf/samples/getting-started-sample.md)  
- [Autohospedaje](../../../docs/framework/wcf/samples/self-host.md)
+ [Probar internamente](../../../docs/framework/wcf/samples/self-host.md)

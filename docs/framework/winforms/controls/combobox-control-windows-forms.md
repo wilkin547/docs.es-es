@@ -21,11 +21,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 52863e8551f798a2a4c50c3856bdb4673dd9fd4f
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: c0d8ee3a2c51cf05f0669573170c5e15d4e9346e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="combobox-control-windows-forms"></a>ComboBox (Control, formularios Windows Forms)
 Los formularios Windows Forms `ComboBox` control se utiliza para mostrar datos en un cuadro combinado desplegable. De forma predeterminada, el `ComboBox` control aparece en dos partes: la parte superior es un cuadro de texto que permite al usuario escribir un elemento de lista. La segunda parte es un cuadro de lista que muestra una lista de elementos desde el que el usuario puede seleccionar uno.  

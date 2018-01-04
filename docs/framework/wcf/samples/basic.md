@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8f1f0be7d3080e7e33100c4718d7f8db25a4f87b
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 25743d5a3ab222f8fb4fde84b72021c233ec73f9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="basic"></a>Básico
 En esta sección se incluyen secciones de ejemplos que muestran la funcionalidad de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]básica.  
@@ -29,7 +30,7 @@ En esta sección se incluyen secciones de ejemplos que muestran la funcionalidad
  [AJAX](../../../../docs/framework/wcf/samples/ajax.md)  
  Muestra cómo utilizar JavaScript Asincrónico y XML.  
   
- [Enlace](../../../../docs/framework/wcf/samples/binding.md)  
+ [Enlaces](../../../../docs/framework/wcf/samples/binding.md)  
  Muestra cómo utilizar el atributo de enlace de un elemento de punto de conexión.  
   
  [Cliente](../../../../docs/framework/wcf/samples/client.md)  
@@ -41,7 +42,7 @@ En esta sección se incluyen secciones de ejemplos que muestran la funcionalidad
  [Detección](../../../../docs/framework/wcf/samples/discovery-samples.md)  
  Muestra la detección de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
   
- [Administración de](../../../../docs/framework/wcf/samples/management.md)  
+ [Administración](../../../../docs/framework/wcf/samples/management.md)  
  Muestra la administración de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
   
  [Servicios de enrutamiento](../../../../docs/framework/wcf/samples/routing-services.md)  
@@ -50,10 +51,10 @@ En esta sección se incluyen secciones de ejemplos que muestran la funcionalidad
  [Seguridad](../../../../docs/framework/wcf/samples/security-in-wcf.md)  
  Muestra la seguridad de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
   
- [Servicios de](../../../../docs/framework/wcf/samples/services.md)  
+ [Servicios](../../../../docs/framework/wcf/samples/services.md)  
  Muestra los servicios de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
   
- [Distribución](../../../../docs/framework/wcf/samples/syndication.md)  
+ [Redifusión](../../../../docs/framework/wcf/samples/syndication.md)  
  Muestra la sindicación de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
   
  [Web](../../../../docs/framework/wcf/samples/web.md)  

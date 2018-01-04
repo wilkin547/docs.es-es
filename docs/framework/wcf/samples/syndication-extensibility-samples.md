@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b356fd413ab61990b685d3104b9f1bc00dfbd71c
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 938c358f6de717ceaf05b4e6c887904a9996f2ed
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="syndication-extensibility-samples"></a>Ejemplos de extensibilidad de sindicación
 Esta sección contiene ejemplos que muestran la distribución personalizada de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
@@ -26,8 +27,8 @@ Esta sección contiene ejemplos que muestran la distribución personalizada de [
  [Extensiones fuertemente tipadas](../../../../docs/framework/wcf/samples/strongly-typed-extensions-sample.md)  
  Muestra cómo implementar un elemento de extensión definido en el RFC de extensiones del subprocesamiento de Atom propuesto.  
   
- [Formateador de suministro (JSON)](../../../../docs/framework/wcf/samples/feed-formatter-json.md)  
+ [Formateador de fuentes (JSON)](../../../../docs/framework/wcf/samples/feed-formatter-json.md)  
  Muestra cómo serializar una instancia de una clase <xref:System.ServiceModel.Syndication.SyndicationFeed> en el formato de la Notación de objeto JavaScript (JSON) utilizando un <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> personalizado y <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>.  
   
- [Fuentes de distribución de transmisión por secuencias](../../../../docs/framework/wcf/samples/streaming-feeds-sample.md)  
+ [Fuentes de streaming](../../../../docs/framework/wcf/samples/streaming-feeds-sample.md)  
  Muestra cómo administrar las fuentes de distribución que contienen grandes cantidades de elementos.

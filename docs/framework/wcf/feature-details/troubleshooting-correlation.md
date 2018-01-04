@@ -13,11 +13,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5ea348811a1b2dbd19254f6979a5165c821aa31e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 76b6178d3190165e711f46af60a6541a82ad0bd7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="troubleshooting-correlation"></a>Solución de problemas de correlación
 La correlación se utiliza para relacionar los mensajes del servicio de flujo de trabajo entre sí y con la instancia de flujo de trabajo correcta, pero si no está configurada correctamente, los mensajes no se recibirán y las aplicaciones no funcionarán de forma adecuada. Este tema proporciona información general de varios métodos para solucionar problemas de la correlación y también enumera algunos problemas comunes que se pueden producir cuando se usa.  
@@ -200,7 +201,7 @@ MessageQuerySet = new MessageQuerySet
 }  
 ```  
   
- Si se configura incorrectamente una consulta XPath de modo que no se recuperen los datos de correlación, se devuelve un error con el mensaje siguiente: "Una consulta de correlación produjo un conjunto de resultados vacío. Asegúrese de que las consultas de correlación del extremo están configuradas correctamente.". Un modo rápido de solucionar esto es reemplazar la consulta XPath con un valor literal según se describe en la sección anterior. Este problema puede producirse si utiliza el generador de consultas de XPath en el **agregar inicializadores de correlación** o **definición de CorrelatesOn** cuadros de diálogo y el servicio de flujo de trabajo usa contratos de mensaje. En el ejemplo siguiente, se define una clase de contrato de mensaje.  
+ Si se configura incorrectamente una consulta XPath de modo que no se recuperen los datos de correlación, se devuelve un error con el mensaje siguiente: "Una consulta de correlación produjo un conjunto de resultados vacío. Asegúrese de que las consultas de correlación del punto de conexión están configuradas correctamente.". Un modo rápido de solucionar esto es reemplazar la consulta XPath con un valor literal según se describe en la sección anterior. Este problema puede producirse si utiliza el generador de consultas de XPath en el **agregar inicializadores de correlación** o **definición de CorrelatesOn** cuadros de diálogo y el servicio de flujo de trabajo usa contratos de mensaje. En el ejemplo siguiente, se define una clase de contrato de mensaje.  
   
 ```csharp  
 [MessageContract]  

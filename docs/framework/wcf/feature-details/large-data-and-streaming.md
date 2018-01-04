@@ -13,11 +13,12 @@ caps.latest.revision: "27"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 23daee4b8e7cd1fcf7ec7f085fb40d788aa5e556
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 187927a9e75348454f5832c2a34bf780e48e4358
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="large-data-and-streaming"></a>Datos de gran tamaño y secuencias
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] es una infraestructura de comunicaciones basada en XML. Dado que los datos XML se codifican normalmente en el formato de texto estándar definido en el [especificación XML 1.0](http://go.microsoft.com/fwlink/?LinkId=94838)conectados los arquitectos y desarrolladores de sistemas normalmente están preocupados por la superficie de conexión (o el tamaño) de los mensajes enviados a través de la red y basadas en texto con codificación de XML puede causar problemas especiales para la transferencia eficaz de datos binarios.  
@@ -83,7 +84,7 @@ ms.lasthandoff: 12/02/2017
   
  La codificación de mensajes de texto es normalmente la mejor opción para cualquier ruta de comunicación que requiere interoperabilidad, mientras que la codificación de mensajes binaria es la mejor opción para cualquier otra ruta de comunicación. La codificación de mensajes binarios produce normalmente tamaños de mensaje menores comparados con el texto para un mensaje único e, incluso, tamaños de mensaje progresivamente menores durante la duración de una sesión de comunicación. A diferencia de la codificación de texto, la codificación binaria no tiene que utilizar control especial para los datos binarios, como cuando se utiliza Base64, pero representa los bytes como bytes.  
   
- Si su solución no requiere interoperabilidad, pero todavía quiere utilizar el transporte HTTP, puede crear <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement> en un enlace personalizado que utiliza la clase <xref:System.ServiceModel.Channels.HttpTransportBindingElement> para el transporte. Si varios clientes en su servicio requieren interoperabilidad, se recomienda que exponga extremos paralelos que tengan el transporte adecuado y las opciones de codificación para los respectivos clientes habilitadas.  
+ Si su solución no requiere interoperabilidad, pero todavía quiere utilizar el transporte HTTP, puede crear <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement> en un enlace personalizado que utiliza la clase <xref:System.ServiceModel.Channels.HttpTransportBindingElement> para el transporte. Si varios clientes en su servicio requieren interoperabilidad, se recomienda que exponga puntos de conexión paralelos que tengan el transporte adecuado y las opciones de codificación para los respectivos clientes habilitadas.  
   
 ### <a name="enabling-mtom"></a>Habilitar MTOM  
  Cuando la interoperabilidad es un requisito y se deben enviar datos binarios de gran tamaño, a continuación, la codificación de mensajes MTOM es la estrategia alternativa de codificación que puede habilitar en los <xref:System.ServiceModel.BasicHttpBinding> estándar o enlaces <xref:System.ServiceModel.WSHttpBinding> estableciendo la propiedad `MessageEncoding` respectiva a <xref:System.ServiceModel.WSMessageEncoding.Mtom> o creando <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement> en <xref:System.ServiceModel.Channels.CustomBinding>. Ejemplo de código siguiente, extraído de la [codificación MTOM](../../../../docs/framework/wcf/samples/mtom-encoding.md) ejemplo muestra cómo habilitar MTOM en configuración.  
@@ -192,7 +193,7 @@ class MyData
   
  Cuando cree instancias de su enlace en el código, debe establecer la propiedad `TransferMode` respectiva del enlace (o el elemento de enlace del transporte si está creando un enlace personalizado) en uno de los valores previamente mencionados.  
   
- Puede activar transmisiones por secuencias para las solicitudes y respuestas o para ambas direcciones independientemente en cualquier lado de las partes en comunicación sin afectar a la funcionalidad. Sin embargo, siempre debería suponer que el tamaño de datos transferido es tan significativo que habilitar la transmisión por secuencias se justifica en ambos extremos de un enlace de comunicación. Para la comunicación multiplataforma donde uno de los extremos no se implementa con [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], la capacidad de utilizar la transmisión por secuencias depende de las funciones de transmisión de la plataforma. Otra excepción poco frecuente podría ser un escenario conducido por consumo de memoria donde un cliente o servicio debe minimizar su espacio de trabajo y permitir solo los tamaños de búfer pequeños.  
+ Puede activar transmisiones por secuencias para las solicitudes y respuestas o para ambas direcciones independientemente en cualquier lado de las partes en comunicación sin afectar a la funcionalidad. Sin embargo, siempre debería suponer que el tamaño de datos transferido es tan significativo que habilitar la transmisión por secuencias se justifica en ambos puntos de conexión de un enlace de comunicación. Para la comunicación multiplataforma donde uno de los extremos no se implementa con [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], la capacidad de utilizar la transmisión por secuencias depende de las funciones de transmisión de la plataforma. Otra excepción poco frecuente podría ser un escenario conducido por consumo de memoria donde un cliente o servicio debe minimizar su espacio de trabajo y permitir solo los tamaños de búfer pequeños.  
   
 ### <a name="enabling-asynchronous-streaming"></a>Habilitar la transmisión de datos asincrónica  
  Para habilitar el streaming asincrónico, agregue el comportamiento de extremo <xref:System.ServiceModel.Description.DispatcherSynchronizationBehavior> al host de servicio y establezca la propiedad <xref:System.ServiceModel.Description.DispatcherSynchronizationBehavior.AsynchronousSendEnabled%2A> en `true`. También hemos agregado la capacidad de transmisión de datos asincrónica verdadera en el lado de envío. Esto mejora la escalabilidad del servicio en escenarios donde transmite por secuencias mensajes para varios clientes, algunos de los cuales son lentos en la lectura; posiblemente debido a la congestión de red o que no leen en absoluto. En estos escenarios ahora no bloqueamos subprocesos individuales en el servicio por cliente. Esto garantiza que el servicio pueda procesar muchos más clientes, mejorando así la escalabilidad del servicio.  
@@ -249,4 +250,4 @@ public class UploadStreamMessage
 >  La decisión de utilizar transferencias almacenadas en búfer o transmitidas es una decisión local del punto de conexión. Para los transportes HTTP, el modo de transferencia no se propaga a través de una conexión o a los servidores proxy y otros intermediarios. Establecer el modo de transferencia no se refleja en la descripción de la interfaz de servicio. Después de generar un cliente [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] a un servicio, debe editar el archivo de configuración de los servicios pensados para ser utilizado con transferencias transmitidas para establecer el modo. En los transportes con canalizaciones con nombre y TCP, el modo de transferencia se propaga como una aserción de directiva.  
   
 ## <a name="see-also"></a>Vea también  
- [Cómo: habilitar la transmisión por secuencias](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md)
+ [Habilitar el streaming](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md)

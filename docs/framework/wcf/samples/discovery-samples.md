@@ -13,11 +13,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b759580a93f6b0ab0e3d84295b7ab8a0c48a7bb7
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: a29ceb6dd90645bc34c440117bafcd8afd774422
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="discovery-samples"></a>Detección (ejemplos)
 Esta sección contiene ejemplos relacionados con la característica de detección.  
@@ -38,10 +39,10 @@ Esta sección contiene ejemplos relacionados con la característica de detecció
  [Ejemplo de elemento de enlace de detección](../../../../docs/framework/wcf/samples/discovery-binding-element-sample.md)  
  Muestra cómo agregar un elemento de enlace de detección en un enlace personalizado. Esto permite a los clientes detectar un servicio cuando un canal está abierto.  
   
- [Ejemplo de Proxy de detección](../../../../docs/framework/wcf/samples/discovery-proxy-sample.md)  
+ [Ejemplo de proxy de detección](../../../../docs/framework/wcf/samples/discovery-proxy-sample.md)  
  En este ejemplo se muestra cómo crear una implementación de un proxy de detección para almacenar información acerca de los servicios existentes y el modo en que los clientes pueden consultar la información en ese proxy.  
   
- [Detectar un servicio con el ejemplo de modo de Uri de escucha único](../../../../docs/framework/wcf/samples/discover-a-service-with-unique-listen-uri-mode-sample.md)  
+ [Ejemplo de detección de un servicio con un modo de URI de escucha único](../../../../docs/framework/wcf/samples/discover-a-service-with-unique-listen-uri-mode-sample.md)  
  Muestra cómo detectar un servicio que tenga la propiedad <xref:System.ServiceModel.Channels.BindingContext.ListenUriMode%2A> establecida en <xref:System.ServiceModel.Description.ListenUriMode.Unique>.  
   
  [Detección con ámbitos](../../../../docs/framework/wcf/samples/discovery-with-scopes-sample.md)  

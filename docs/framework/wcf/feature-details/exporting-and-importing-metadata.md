@@ -14,11 +14,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 91b03e29c2841434d4222f59ae62028bf2431a84
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: a2785f74d9a07b267d836a9f6e6749d259a1ab21
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="exporting-and-importing-metadata"></a>Exportación e importación de metadatos
 En [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], la exportación de metadatos es el proceso de describir extremos de servicio y proyectarlos en una representación paralela y estandarizada que pueden usar los clientes para entender cómo utilizar el servicio. Importar los metadatos de servicio es el proceso de generar instancias de <xref:System.ServiceModel.Description.ServiceEndpoint> o partes de los metadatos de servicio.  
@@ -36,7 +37,7 @@ En [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], la exportación de m
 ### <a name="importing-wsdl-documents"></a>Importación de documentos WSDL  
  Para importar los metadatos del servicio en [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], utilice una implementación de la clase abstracta <xref:System.ServiceModel.Description.MetadataImporter>. El tipo <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType> es la implementación de la clase abstracta <xref:System.ServiceModel.Description.MetadataImporter> incluida en [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. El tipo <xref:System.ServiceModel.Description.WsdlImporter> importa metadatos de WSDL con directivas adjuntas empaquetadas en un objeto <xref:System.ServiceModel.Description.MetadataSet>.  
   
- El tipo <xref:System.ServiceModel.Description.WsdlImporter> le da control sobre cómo importar los metadatos. Puede importar todos los extremos, todos los enlaces o todos los contratos. Puede importar todos los extremos asociados a un servicio específico de WSDL, enlace o tipo de puerto. También puede importar el extremo de un puerto WSDL concreto, el enlace para un enlace de WSDL concreto o el contrato para un tipo de puerto de WSDL concreto.  
+ El tipo <xref:System.ServiceModel.Description.WsdlImporter> le da control sobre cómo importar los metadatos. Puede importar todos los puntos de conexión, todos los enlaces o todos los contratos. Puede importar todos los puntos de conexión asociados a un servicio específico de WSDL, enlace o tipo de puerto. También puede importar el extremo de un puerto WSDL concreto, el enlace para un enlace de WSDL concreto o el contrato para un tipo de puerto de WSDL concreto.  
   
  <xref:System.ServiceModel.Description.WsdlImporter> también expone una propiedad <xref:System.ServiceModel.Description.MetadataImporter.KnownContracts%2A> que le permite especificar un conjunto de contratos que no necesita ser importado. <xref:System.ServiceModel.Description.WsdlImporter> utiliza los contratos en la propiedad <xref:System.ServiceModel.Description.MetadataImporter.KnownContracts%2A> en lugar de importar un contrato con el mismo nombre completo de los metadatos.  
   
@@ -57,16 +58,16 @@ En [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], la exportación de m
  El tipo vuelve a producir <xref:System.ServiceModel.Description.WsdlExporter> cualquier excepción detectada durante el proceso de exportación. Estas excepciones no se capturan como errores en la propiedad `Errors`. Cuando <xref:System.ServiceModel.Description.WsdlExporter> produce una excepción, está en un estado de error y no se puede reutilizar. <xref:System.ServiceModel.Description.WsdlExporter> agrega advertencias a su propiedad `Errors` cuando no se puede exportar una operación porque utiliza acciones de carácter comodín y cuando se encuentran nombres de enlace duplicados.  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Cómo: importar metadatos a los extremos de servicio](../../../../docs/framework/wcf/feature-details/how-to-import-metadata-into-service-endpoints.md)  
+ [Importación de metadatos en puntos de conexión de servicio](../../../../docs/framework/wcf/feature-details/how-to-import-metadata-into-service-endpoints.md)  
  Describe cómo importar los metadatos descargados en objetos de descripción.  
   
- [Cómo: exportar metadatos desde extremos de servicio](../../../../docs/framework/wcf/feature-details/how-to-export-metadata-from-service-endpoints.md)  
+ [Exportación de metadatos desde puntos de conexión de servicio](../../../../docs/framework/wcf/feature-details/how-to-export-metadata-from-service-endpoints.md)  
  Describe cómo exportar objetos de descripción en metadatos.  
   
  [ServiceDescription y referencias WSDL](../../../../docs/framework/wcf/feature-details/servicedescription-and-wsdl-reference.md)  
  Describe la asignación entre los objetos de descripción y WSDL.  
   
- [Cómo: utilizar Svcutil.exe para exportar metadatos desde el código de servicio compilado](../../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-export-metadata-from-compiled-service-code.md)  
+ [Uso de Svcutil.exe para exportar metadatos desde el código de servicio compilado](../../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-export-metadata-from-compiled-service-code.md)  
  Describe el uso de Svcutil.exe para exportar metadatos para los servicios, contratos y tipos de datos en ensamblados compilados.  
   
  [Referencia de esquema de contrato de datos](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)  
@@ -78,5 +79,5 @@ En [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], la exportación de m
  <xref:System.ServiceModel.Description.WsdlImporter>  
   
 ## <a name="see-also"></a>Vea también  
- [Exportación de metadatos personalizados para una extensión de WCF](../../../../docs/framework/wcf/extending/exporting-custom-metadata-for-a-wcf-extension.md)  
- [Importar metadatos personalizados para una extensión de WCF](../../../../docs/framework/wcf/extending/importing-custom-metadata-for-a-wcf-extension.md)
+ [Exportación de metadatos personalizados para una extensión WCF](../../../../docs/framework/wcf/extending/exporting-custom-metadata-for-a-wcf-extension.md)  
+ [Importación de metadatos personalizados para una extensión WCF](../../../../docs/framework/wcf/extending/importing-custom-metadata-for-a-wcf-extension.md)

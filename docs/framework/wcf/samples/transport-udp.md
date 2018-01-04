@@ -13,11 +13,12 @@ caps.latest.revision: "48"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: fc30a755278251ac9e06f2ddd56e2c369b950af4
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 1933d216f991b78e21a56ec67826dce0b4a7b24a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="transport-udp"></a>Transporte: UDP
 El ejemplo de transporte UDP muestra cómo implementar unidifusión y multidifusión de UDP como un transporte de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] personalizado. El ejemplo describe el procedimiento recomendado para crear un transporte personalizado en [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], utilizando el marco del canal y los siguientes procedimientos recomendados de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Los pasos para crear un transporte personalizado son los siguientes:  
@@ -44,7 +45,7 @@ El ejemplo de transporte UDP muestra cómo implementar unidifusión y multidifus
   
 -   Datagrama (IInputChannel/IOutputChannel)  
   
-     Al utilizar un MEP de datagrama, un cliente envía un mensaje mediante un intercambio de tipo desencadenar y omitir. Un intercambio de este tipo es uno que exige una confirmación fuera de banda de entrega correcta. El mensaje se podría perderse por el camino y no llegar nunca al servicio. Si la operación de envío se completa correctamente en la parte del cliente, no garantiza que el extremo remoto haya recibido el mensaje. El datagrama es un bloque de creación fundamental para la mensajería, ya que puede crear sus propios protocolos encima de él, incluidos protocolos confiables y seguros. Los canales de datagrama del cliente implementan la interfaz <xref:System.ServiceModel.Channels.IOutputChannel> y los del servicio, la interfaz <xref:System.ServiceModel.Channels.IInputChannel>.  
+     Al utilizar un MEP de datagrama, un cliente envía un mensaje mediante un intercambio de tipo desencadenar y omitir. Un intercambio de este tipo es uno que exige una confirmación fuera de banda de entrega correcta. El mensaje se podría perderse por el camino y no llegar nunca al servicio. Si la operación de envío se completa correctamente en la parte del cliente, no garantiza que el punto de conexión remoto haya recibido el mensaje. El datagrama es un bloque de creación fundamental para la mensajería, ya que puede crear sus propios protocolos encima de él, incluidos protocolos confiables y seguros. Los canales de datagrama del cliente implementan la interfaz <xref:System.ServiceModel.Channels.IOutputChannel> y los del servicio, la interfaz <xref:System.ServiceModel.Channels.IInputChannel>.  
   
 -   Solicitud-respuesta (IRequestChannel/IReplyChannel)  
   
@@ -211,7 +212,7 @@ if (transportBindingElement is UdpTransportBindingElement)
 ```  
   
 ### <a name="adding-policy-support"></a>Agregación de compatibilidad de directiva  
- El elemento de enlace personalizado puede exportar aserciones de directiva en el enlace de WSDL para que un extremo de servicio exprese las funciones de ese elemento de enlace.  
+ El elemento de enlace personalizado puede exportar aserciones de directiva en el enlace de WSDL para que un punto de conexión de servicio exprese las funciones de ese elemento de enlace.  
   
 #### <a name="policy-export"></a>Exportación de directivas  
  El `UdpTransportBindingElement` escriba implementa `IPolicyExportExtension` para agregar compatibilidad para exportar una directiva. Como resultado, `System.ServiceModel.MetadataExporter` incluye `UdpTransportBindingElement` en la generación de directiva para cualquier enlace que la incluya.  
@@ -404,7 +405,7 @@ protected override void OnApplyConfiguration(string configurationName)
 ```  
   
 ## <a name="the-udp-test-service-and-client"></a>Servicio de pruebas y cliente UDP  
- El código de prueba para usar este transporte de ejemplo está disponible en los directorios UdpTestService y UdpTestClient. El código de servicio está compuesto de dos pruebas: una configura los enlaces y extremos desde el código y la otra lo hace a través de la configuración. Ambas pruebas utilizan dos puntos de conexión. Un punto de conexión utiliza la `SampleUdpProfileBinding` con [ \<reliableSession >](http://msdn.microsoft.com/en-us/9c93818a-7dfa-43d5-b3a1-1aafccf3a00b) establecido en `true`. El otro extremo utiliza un enlace personalizado con `UdpTransportBindingElement`. Esto equivale a usar `SampleUdpProfileBinding` con [ \<reliableSession >](http://msdn.microsoft.com/en-us/9c93818a-7dfa-43d5-b3a1-1aafccf3a00b) establecido en `false`. Ambas pruebas crean un servicio, agregan un punto de conexión para cada enlace, abren el servicio y, a continuación, esperan a que el usuario presione ENTRAR antes de cerrar el servicio.  
+ El código de prueba para usar este transporte de ejemplo está disponible en los directorios UdpTestService y UdpTestClient. El código de servicio está compuesto de dos pruebas: una configura los enlaces y puntos de conexión desde el código y la otra lo hace a través de la configuración. Ambas pruebas utilizan dos puntos de conexión. Un punto de conexión utiliza la `SampleUdpProfileBinding` con [ \<reliableSession >](http://msdn.microsoft.com/en-us/9c93818a-7dfa-43d5-b3a1-1aafccf3a00b) establecido en `true`. El otro extremo utiliza un enlace personalizado con `UdpTransportBindingElement`. Esto equivale a usar `SampleUdpProfileBinding` con [ \<reliableSession >](http://msdn.microsoft.com/en-us/9c93818a-7dfa-43d5-b3a1-1aafccf3a00b) establecido en `false`. Ambas pruebas crean un servicio, agregan un punto de conexión para cada enlace, abren el servicio y, a continuación, esperan a que el usuario presione ENTRAR antes de cerrar el servicio.  
   
  Al iniciar la aplicación de prueba del servicio, debería ver el resultado siguiente.  
   
@@ -414,7 +415,7 @@ Service is started from code...
 Press <ENTER> to terminate the service and start service from config...  
 ```  
   
- Puede ejecutar a continuación la aplicación cliente de prueba con los extremos publicados. La aplicación de prueba del cliente crea un cliente para cada extremo y envía cinco mensajes a cada extremo. El resultado siguiente se encuentra en el cliente.  
+ Puede ejecutar a continuación la aplicación cliente de prueba con los extremos publicados. La aplicación de prueba del cliente crea un cliente para cada punto de conexión y envía cinco mensajes a cada punto de conexión. El resultado siguiente se encuentra en el cliente.  
   
 ```console
 Testing Udp From Imported Files Generated By SvcUtil.  
@@ -443,7 +444,7 @@ Hello, world!
    adding 4 + 8  
 ```  
   
- Para ejecutar la aplicación cliente en los extremos publicados utilizando la configuración, presione ENTRAR en el servicio y después ejecute de nuevo el cliente de prueba. Debería ver el siguiente resultado en el servicio.  
+ Para ejecutar la aplicación cliente en los puntos de conexión publicados utilizando la configuración, presione ENTRAR en el servicio y después ejecute de nuevo el cliente de prueba. Debería ver el siguiente resultado en el servicio.  
   
 ```console
 Testing Udp From Config.  

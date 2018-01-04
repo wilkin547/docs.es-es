@@ -13,11 +13,12 @@ caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cc809b75a965107594f7b2aa8a78d412bf284d8e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 84a7d3385d89d4308e6a75d303a567fb4d7b22d3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="bridging-and-error-handling"></a>Tratamiento de errores y puentes
 Este ejemplo muestra el modo en que se usa el servicio de enrutamiento de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] para puentear la comunicación entre un cliente y un servicio que utilizan enlaces diferentes. Este ejemplo también muestra cómo utilizar un servicio de seguridad de reserva para escenarios de conmutación por error. El servicio de enrutamiento es un componente de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] que permite incluir fácilmente un enrutador basado en contenido en una aplicación. En este ejemplo se adapta el ejemplo de la calculadora de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] estándar para comunicarse utilizando el servicio de enrutamiento.  
@@ -36,12 +37,12 @@ Este ejemplo muestra el modo en que se usa el servicio de enrutamiento de [!INCL
   
 -   El cliente de calculadora se configura para utilizar BasicHttpBinding mientras que el servicio de calculadora se configura para utilizar NetTcpBinding. El servicio de enrutamiento debe convertir automáticamente los mensajes antes de enviarlos al servicio de calculadora y también convierte las respuestas para que el cliente de la calculadora pueda tener acceso a ellos.  
   
--   El servicio de enrutamiento conoce dos servicios de calculadora: el principal y el de reserva. El servicio de enrutamiento intenta comunicarse primero con el extremo de servicio de calculadora principal. Si se produce un error en este intento debido a que el extremo se desactiva, el servicio de enrutamiento intenta comunicarse con el extremo del servicio de calculadora de reserva.  
+-   El servicio de enrutamiento conoce dos servicios de calculadora: el principal y el de reserva. El servicio de enrutamiento intenta comunicarse primero con el extremo de servicio de calculadora principal. Si se produce un error en este intento debido a que el punto de conexión se desactiva, el servicio de enrutamiento intenta comunicarse con el punto de conexión del servicio de calculadora de reserva.  
   
  Por tanto, los mensajes enviados desde el cliente son recibidos por el enrutador y se vuelven a enrutar al servicio de calculadora real. Si el extremo de servicio de calculadora se desactiva, el servicio de enrutamiento enruta el mensaje al extremo de servicio de calculadora de reserva. Los mensajes del servicio de calculadora de reserva se devuelven al enrutador del servicio, que a su vez los pasa al cliente de la calculadora.  
   
 > [!NOTE]
->  Una lista de reserva puede tener definido más de un extremo. En este caso, si el extremo de servicio de seguridad se desactiva, el servicio de enrutamiento intenta conectarse al extremo de reserva siguiente en la lista hasta que se produce una conexión correcta.  
+>  Una lista de reserva puede tener definido más de un extremo. En este caso, si el punto de conexión de servicio de seguridad se desactiva, el servicio de enrutamiento intenta conectarse al punto de conexión de reserva siguiente en la lista hasta que se produce una conexión correcta.  
   
 #### <a name="to-use-this-sample"></a>Para utilizar este ejemplo  
   
@@ -77,7 +78,7 @@ Este ejemplo muestra el modo en que se usa el servicio de enrutamiento de [!INCL
  En este ejemplo se muestra el enrutador del servicio que actúa como puente de protocolo y un controlador de errores. En este escenario, no se produce el enrutamiento basado en contenido; el servicio de enrutamiento actúa como un nodo de proxy transparente configurado para pasar los mensajes a un conjunto preconfigurado de extremos de destino directamente. El servicio de enrutamiento también sigue pasos adicionales para tratar de forma transparente los errores que ocurren al intentar enviar a los extremos con los que está configurado para comunicarse. Al actuar como puente de protocolo, el servicio de enrutamiento permite al usuario definir un protocolo para la comunicación externa y otra para la interna.  
   
 ### <a name="real-world-scenario"></a>Escenario real  
- Contoso desea proporcionar un extremo de servicio interoperable, al tiempo que optimiza el rendimiento internamente. Por tanto, expone sus servicios a los demás a través de un extremo utilizando BasicHttpBinding, mientras que, internamente, usa el servicio de enrutamiento para puentear esa conexión al extremo mediante NetTcpBinding, que su servicio usa. Además, Contoso desea que su oferta de servicios tolere las interrupciones temporales en cualquiera de sus servicios de producción y, por lo tanto, proporcionar varios puntos de conexión virtuales detrás del servicio de enrutador utilizando las funciones de tratamiento de errores para conmutar por error automáticamente a los puntos de conexión de reserva cuando sea necesario.  
+ Contoso desea proporcionar un punto de conexión de servicio interoperable, al tiempo que optimiza el rendimiento internamente. Por tanto, expone sus servicios a los demás a través de un punto de conexión utilizando BasicHttpBinding, mientras que, internamente, usa el servicio de enrutamiento para puentear esa conexión al punto de conexión mediante NetTcpBinding, que su servicio usa. Además, Contoso desea que su oferta de servicios tolere las interrupciones temporales en cualquiera de sus servicios de producción y, por lo tanto, proporcionar varios puntos de conexión virtuales detrás del servicio de enrutador utilizando las funciones de tratamiento de errores para conmutar por error automáticamente a los puntos de conexión de reserva cuando sea necesario.  
   
 ## <a name="see-also"></a>Vea también  
  [Ejemplos de persistencia y el hospedaje de AppFabric](http://go.microsoft.com/fwlink/?LinkId=193961)

@@ -18,18 +18,19 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: da180f888031aace892efc770184be53e9341047
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b98ba10e1c865417b9e844c4d5c31334f763e1b4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="developing-a-composite-windows-forms-control"></a>Desarrollar un control de formularios Windows Forms compuesto
 Puede desarrollar un control de Windows Forms compuesto mediante la combinación de otros controles de Windows Forms. Controles compuestos que derivan de <xref:System.Web.UI.UserControl> se denominan controles de usuario. La clase base, <xref:System.Windows.Forms.UserControl>, proporciona el enrutamiento de teclado de los controles secundarios, lo que asegura que puedan recibir el foco. Para obtener un ejemplo de un control de usuario, consulte la <xref:System.Windows.Forms.UserControl> en [Cómo: aplicar atributos en controles de Windows Forms](../../../../docs/framework/winforms/controls/how-to-apply-attributes-in-windows-forms-controls.md).  
   
  El Diseñador de Windows Forms de [!INCLUDE[vsprvsext](../../../../includes/vsprvsext-md.md)] proporciona una buena compatibilidad en tiempo de diseño para la creación de controles de usuario.   
   
--   [Cómo: Mostrar un control en el cuadro de diálogo Elegir elementos de cuadro de herramientas](http://msdn.microsoft.com/library/9yxtkx75\(v=vs.110\))  
+-   [Cómo: Mostrar un control en el cuadro de diálogo Seleccionar elementos del cuadro de herramientas](http://msdn.microsoft.com/library/9yxtkx75\(v=vs.110\))  
   
 -   [Tutorial: Serializar colecciones de tipos estándar con DesignerSerializationVisibilityAttribute](http://msdn.microsoft.com/library/ms171731\(v=vs.110\))  
   
@@ -61,7 +62,7 @@ Puede desarrollar un control de Windows Forms compuesto mediante la combinación
   
 -   [Cómo: Crear un control de Windows Forms que aproveche las características de tiempo de diseño](http://msdn.microsoft.com/library/307hck25\(v=vs.110\))  
   
--   [Cómo: Crear un control de Windows Forms que aproveche las características de tiempo de diseño](http://msdn.microsoft.com/library/307hck25\(v=vs.120\))  
+-   [Cómo: Crear un control de Windows Forms que aproveche las características en tiempo de diseño](http://msdn.microsoft.com/library/307hck25\(v=vs.120\))  
   
 ## <a name="see-also"></a>Vea también  
  [Aplicar atributos en controles de Windows Forms](../../../../docs/framework/winforms/controls/how-to-apply-attributes-in-windows-forms-controls.md)  

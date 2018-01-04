@@ -21,11 +21,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0b2e06298d0ead9a2dd9fa554af0c42df5d61d56
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 56c8558f34c895567c3eebfbb5a89612c4b56224
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-display-images-in-cells-of-the-windows-forms-datagridview-control"></a>Cómo: Mostrar imágenes en celdas del control DataGridView de formularios Windows Forms
 Una imagen o gráfico es uno de los valores que se pueden mostrar en una fila de datos. Con frecuencia, estos gráficos adoptan la forma de fotografía de un empleado o un logotipo de empresa.  
@@ -43,7 +44,7 @@ Una imagen o gráfico es uno de los valores que se pueden mostrar en una fila de
 ## <a name="compiling-the-code"></a>Compilar el código  
  Para este ejemplo se necesita:  
   
--   Un control <xref:System.Windows.Forms.DataGridView> llamado `dataGridView1`.  
+-   Control <xref:System.Windows.Forms.DataGridView> denominado `dataGridView1`.  
   
 -   Un recurso de icono incrustado denominado `tree.ico`.  
   

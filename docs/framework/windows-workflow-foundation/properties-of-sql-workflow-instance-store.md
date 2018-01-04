@@ -12,11 +12,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5d4b890b80880638fae62c1ae79f8d2f436ef309
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 368e6a4514eafdf4d3c5b38c5e31ff21e56f67e6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="properties-of-sql-workflow-instance-store"></a>Propiedades del almacén de instancias de flujo de trabajo de SQL
 Los temas de esta sección proporcionan información sobre las propiedades del almacén de instancias del flujo de trabajo de SQL.  

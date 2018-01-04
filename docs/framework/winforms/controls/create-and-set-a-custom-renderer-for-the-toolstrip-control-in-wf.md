@@ -21,11 +21,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f63ff0a7336ae80ce5652cf3e4c6c7dd409882a4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ad328af3aed9a319fe80d829b9556e867533e601
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-and-set-a-custom-renderer-for-the-toolstrip-control-in-windows-forms"></a>Cómo: Crear y establecer un representador personalizado para el control ToolStrip de formularios Windows Forms
 <xref:System.Windows.Forms.ToolStrip>controles ofrecen una compatibilidad fácil para los temas y estilos. Puede lograr completamente personalizada apariencia y el comportamiento (apariencia y funcionamiento) estableciendo el <xref:System.Windows.Forms.ToolStrip.Renderer%2A?displayProperty=nameWithType> propiedad o <xref:System.Windows.Forms.ToolStripManager.Renderer%2A?displayProperty=nameWithType> propiedad a un representador personalizado.  

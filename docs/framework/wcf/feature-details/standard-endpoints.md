@@ -13,20 +13,21 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 869861ce1e2ba4456c8e8fbd06f9ff590fb3576a
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: de5f1c858b9018071489354441cab197bf5db6e2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="standard-endpoints"></a>puntos de conexión estándar
-Los puntos de conexión se definen mediante la especificación de una dirección, un enlace y un contrato. Otros parámetros que se pueden establecer en un extremo incluyen la configuración del comportamiento, los encabezados y los URI de escucha.  Para ciertos tipos de extremos, estos valores no cambian. Por ejemplo, los extremos de intercambio de metadatos siempre utilizan el contrato <xref:System.ServiceModel.Description.IMetadataExchange>. Otros extremos, como <xref:System.ServiceModel.Description.WebHttpEndpoint>, siempre requieren un comportamiento de extremo especificado. La utilidad de un extremo se puede mejorar teniendo extremos con valores predeterminado para las propiedades de extremo utilizadas normalmente. Los extremos estándar permiten a un desarrollador definir un extremo que tenga los valores predeterminados o en el que una o más propiedades del extremo no cambien.  Estos extremos le permiten utilizar un extremo de este tipo sin tener que especificar información de tipo estático. Los extremos estándar se pueden usar para extremos de la aplicación y de la infraestructura.  
+Los puntos de conexión se definen mediante la especificación de una dirección, un enlace y un contrato. Otros parámetros que se pueden establecer en un punto de conexión incluyen la configuración del comportamiento, los encabezados y los URI de escucha.  Para ciertos tipos de extremos, estos valores no cambian. Por ejemplo, los extremos de intercambio de metadatos siempre utilizan el contrato <xref:System.ServiceModel.Description.IMetadataExchange>. Otros extremos, como <xref:System.ServiceModel.Description.WebHttpEndpoint>, siempre requieren un comportamiento de extremo especificado. La utilidad de un punto de conexión se puede mejorar teniendo puntos de conexión con valores predeterminado para las propiedades de punto de conexión utilizadas normalmente. Los puntos de conexión estándar permiten a un desarrollador definir un punto de conexión que tenga los valores predeterminados o en el que una o más propiedades del punto de conexión no cambien.  Estos puntos de conexión le permiten utilizar un punto de conexión de este tipo sin tener que especificar información de tipo estático. Los extremos estándar se pueden usar para extremos de la aplicación y de la infraestructura.  
   
 ## <a name="infrastructure-endpoints"></a>Extremos de infraestructura  
- Un servicio puede exponer extremos con algunas de las propiedades no implementadas de forma explícita por el autor del servicio. Por ejemplo, el extremo del intercambio de metadatos expone el contrato <xref:System.ServiceModel.Description.IMetadataExchange> pero, como autor del servicio, no implementa esa interfaz, pues la implementa WCF. Estos extremos de infraestructura tienen valores predeterminados para una o más propiedades de extremo, algunos de los cuales pueden ser inalterables. La propiedad <xref:System.ServiceModel.Description.ServiceEndpoint.Contract%2A> del extremo del intercambio de metadatos debe ser <xref:System.ServiceModel.Description.IMetadataExchange>, mientras que el desarrollador puede proporcionar otras propiedades, como el enlace. Los extremos de la infraestructura se identifican estableciendo la propiedad <xref:System.ServiceModel.Description.ServiceEndpoint.IsSystemEndpoint%2A> en `true`.  
+ Un servicio puede exponer extremos con algunas de las propiedades no implementadas de forma explícita por el autor del servicio. Por ejemplo, el extremo del intercambio de metadatos expone el contrato <xref:System.ServiceModel.Description.IMetadataExchange> pero, como autor del servicio, no implementa esa interfaz, pues la implementa WCF. Estos puntos de conexión de infraestructura tienen valores predeterminados para una o más propiedades de punto de conexión, algunos de los cuales pueden ser inalterables. La propiedad <xref:System.ServiceModel.Description.ServiceEndpoint.Contract%2A> del extremo del intercambio de metadatos debe ser <xref:System.ServiceModel.Description.IMetadataExchange>, mientras que el desarrollador puede proporcionar otras propiedades, como el enlace. Los extremos de la infraestructura se identifican estableciendo la propiedad <xref:System.ServiceModel.Description.ServiceEndpoint.IsSystemEndpoint%2A> en `true`.  
   
 ## <a name="application-endpoints"></a>Extremos de la aplicación  
- Los desarrolladores de la aplicación pueden definir sus propios extremos estándar que especifican los valores predeterminados para la dirección, el enlace o el contrato. Defina un extremo estándar derivando una clase de <xref:System.ServiceModel.Description.ServiceEndpoint> y estableciendo las propiedades de extremo adecuadas. Puede proporcionar valores predeterminados a propiedades que se pueden cambiar. Otras propiedades tendrán valores estáticos que no podrán cambiar. En el siguiente ejemplo, se muestra cómo implementar un extremo estándar.  
+ Los desarrolladores de la aplicación pueden definir sus propios extremos estándar que especifican los valores predeterminados para la dirección, el enlace o el contrato. Defina un extremo estándar derivando una clase de <xref:System.ServiceModel.Description.ServiceEndpoint> y estableciendo las propiedades de extremo adecuadas. Puede proporcionar valores predeterminados a propiedades que se pueden cambiar. Otras propiedades tendrán valores estáticos que no podrán cambiar. En el siguiente ejemplo, se muestra cómo implementar un punto de conexión estándar.  
   
 ```csharp
 public class CustomEndpoint : ServiceEndpoint
@@ -133,8 +134,8 @@ En el siguiente ejemplo, se muestra cómo registrar un extremo estándar en la s
                 Version=1.0.0.0, Culture=neutral, PublicKeyToken=ffffffffffffffff"/>  
 ```  
   
-## <a name="configuring-a-standard-endpoint"></a>Configurar un extremo estándar  
- Los extremos estándar se pueden agregar en código o en configuración.  Para agregar un extremo estándar en código, basta con crear instancias del tipo de extremo estándar adecuado y agregarlo al host del servicio, tal y como se muestra en el siguiente ejemplo:  
+## <a name="configuring-a-standard-endpoint"></a>Configurar un punto de conexión estándar  
+ Los extremos estándar se pueden agregar en código o en configuración.  Para agregar un punto de conexión estándar en código, basta con crear instancias del tipo de punto de conexión estándar adecuado y agregarlo al host del servicio, tal y como se muestra en el siguiente ejemplo:  
   
 ```csharp  
 serviceHost.AddServiceEndpoint(new CustomEndpoint());  
@@ -157,7 +158,7 @@ serviceHost.AddServiceEndpoint(new CustomEndpoint());
   
  El tipo de punto de conexión estándar se especifica utilizando el atributo de clase en el <`endpoint`> elemento. El extremo se configura en el <`standardEndpoints`> elemento. En el ejemplo anterior, se agrega y se configura un extremo de <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>. El <`udpDiscoveryEndpoint`> elemento contiene un <`standardEndpoint`> que establece el <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint.MulticastAddress%2A> propiedad de la <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>.  
   
-## <a name="standard-endpoints-shipped-with-the-net-framework"></a>Extremos estándar distribuidos con .NET Framework  
+## <a name="standard-endpoints-shipped-with-the-net-framework"></a>puntos de conexión estándar distribuidos con .NET Framework  
  En la siguiente tabla, se muestra una lista de los extremos estándar distribuidos con [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)].  
   
  `Mex Endpoint`  

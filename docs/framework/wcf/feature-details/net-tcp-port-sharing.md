@@ -16,11 +16,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c54ce56cccffa350479d0dd4dcec130ddd004764
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 013c9e963ca75cc612d869a55b33d69aebbcad33
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="nettcp-port-sharing"></a>Uso compartido de puertos Net.TCP
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] proporciona un nuevo protocolo de red basado en TCP (net.tcp://) para la comunicación de alto rendimiento. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] también presenta un nuevo componente del sistema, el servicio de uso compartido de puertos Net.TCP que permite compartir puertos de net.tcp en varios procesos de usuario.  
@@ -59,7 +60,7 @@ ms.lasthandoff: 12/02/2017
  Aunque el servicio de uso compartido de puertos Net.TCP proporciona una capa de procesamiento entre las aplicaciones y la red, las aplicaciones que utilizan el uso compartido de puertos todavía deberían seguir estando protegidas como si estuvieran realizando escuchas directamente en la red. En concreto, las aplicaciones que utilizan el uso compartido de puertos deberían evaluar los privilegios de procesos bajo los que se ejecutan. Considere ejecutar su aplicación utilizando la cuenta de servicio de red integrada, que se ejecuta con el conjunto mínimo de privilegios de procesos requeridos para la comunicación por red.  
   
 ## <a name="see-also"></a>Vea también  
- [Configurar el servicio de uso compartido de puertos Net.TCP](../../../../docs/framework/wcf/feature-details/configuring-the-net-tcp-port-sharing-service.md)  
+ [Configuración del servicio de uso compartido de puertos Net.TCP](../../../../docs/framework/wcf/feature-details/configuring-the-net-tcp-port-sharing-service.md)  
  [Hospedar aplicaciones de WPF](../../../../docs/framework/wcf/feature-details/hosting.md)  
- [Cómo: configurar un servicio WCF para utilizar puertos compartidos](../../../../docs/framework/wcf/feature-details/how-to-configure-a-wcf-service-to-use-port-sharing.md)  
- [Cómo: habilitar el servicio de uso compartido de puertos Net.TCP](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md)
+ [Configuración de un servicio WCF para habilitar el uso compartido de puertos](../../../../docs/framework/wcf/feature-details/how-to-configure-a-wcf-service-to-use-port-sharing.md)  
+ [Habilitar el servicio de uso compartido de puertos Net.TCP](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md)

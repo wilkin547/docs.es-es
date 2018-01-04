@@ -12,11 +12,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d877c147a19635782b652d96031644b3be42448a
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: ac05054d56c424ab3f4d1fdfd9c3590aac8b00bb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wait-for-input-activity"></a>Actividad Wait For Input
 Este ejemplo muestra cómo crear marcadores con nombre en un flujo de trabajo. [!INCLUDE[wf](../../../../includes/wf-md.md)] no proporciona una actividad para la creación declarativa de marcadores. Por consiguiente, si desea crear un marcador en su flujo de trabajo, deberá escribir una actividad personalizada que lo cree. La actividad `WaitForInput` definida en este ejemplo proporciona esta funcionalidad, para que los usuarios puedan crear los marcadores mediante declaración dentro de un flujo de trabajo.  
@@ -38,7 +39,7 @@ Este ejemplo muestra cómo crear marcadores con nombre en un flujo de trabajo. [
   
  La actividad tiene tres atributos aplicados para enlazar un diseñador, agregando la característica de argumento genérico que se puede actualizar y estableciendo el tipo genérico predeterminado como cadena. La actividad también tiene los argumentos enumerados en la siguiente tabla.  
   
-|**Nombre**|**ype**|**Descripción**|  
+|**Name**|**Type**|**Descripción**|  
 |-|-|-|  
 |
           TResult|El argumento genérico (TResult)|El tipo del marcador. Este es el tipo de datos que se va a pasar al marcador cuando se reanude.|  

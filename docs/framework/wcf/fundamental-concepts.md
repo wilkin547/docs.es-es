@@ -18,11 +18,12 @@ caps.latest.revision: "39"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e44ded58e7c48fae281030b5757d0d891d5600e6
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0c05aa44a46b934a78af38c33ee34dd03f69e56d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="fundamental-windows-communication-foundation-concepts"></a>Conceptos básicos de Windows Communication Foundation
 En este documento se proporciona una vista de alto nivel de la arquitectura de [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]. Pretende explicar los conceptos clave y cómo encajan entre ellos. Para obtener un tutorial sobre la creación de la versión más sencilla de un [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] servicio y el cliente, vea [Tutorial de introducción](../../../docs/framework/wcf/getting-started-tutorial.md). Para obtener información sobre [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] de programación, vea [programación básica de WCF](../../../docs/framework/wcf/basic-wcf-programming.md).  
@@ -62,15 +63,15 @@ En este documento se proporciona una vista de alto nivel de la arquitectura de [
  Unidad autónoma de datos que puede constar de varias partes, incluyendo un cuerpo y encabezados.  
   
  servicio  
- Construcción que expone uno o más extremos, y en la que cada extremo expone una o más operaciones de servicio.  
+ Construcción que expone uno o más puntos de conexión, y en la que cada punto de conexión expone una o más operaciones de servicio.  
   
- extremo  
+ punto de conexión  
  Construcción en la que se envían o reciben mensajes (o ambos). Está compuesto por una ubicación (una dirección) que define a dónde se pueden enviar mensajes, una especificación del mecanismo de comunicación (un enlace) que describe cómo se deberían enviar los mensajes y una definición de un conjunto de mensajes que se pueden enviar o recibir (o ambos) en esa ubicación (un contrato de servicio) que describe qué mensajes se pueden enviar.  
   
  Un servicio de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] se expone al mundo como una colección de extremos.  
   
- extremo de la aplicación  
- Un extremo expuesto por la aplicación y que corresponde a un contrato de servicios implementado por la aplicación.  
+ punto de conexión de la aplicación  
+ Un punto de conexión expuesto por la aplicación y que corresponde a un contrato de servicios implementado por la aplicación.  
   
  extremo de infraestructura  
  Un extremo que expone la infraestructura para facilitar la funcionalidad necesaria o proporcionada por el servicio que no se relaciona con un contrato de servicios. Por ejemplo, un servicio podría tener un extremo de la infraestructura que proporciona información de metadatos.  
@@ -78,7 +79,7 @@ En este documento se proporciona una vista de alto nivel de la arquitectura de [
  address  
  Especifica la ubicación donde se reciben los mensajes. Se especifica como un identificador uniforme de recursos (URI). La parte del esquema URI nombra el mecanismo de transporte que se ha de utilizar para alcanzar la dirección, por ejemplo HTTP y TCP. La parte jerárquica del URI contiene una ubicación única cuyo formato depende del mecanismo de transporte.  
   
- La dirección del extremo le permite crear direcciones únicas de extremos para cada extremo de un servicio o, bajo ciertas condiciones, compartir una dirección en los extremos. El siguiente ejemplo muestra una dirección que utiliza el protocolo HTTPS con un puerto no predeterminado:  
+ La dirección del punto de conexión le permite crear direcciones únicas de puntos de conexión para cada punto de conexión de un servicio o, bajo ciertas condiciones, compartir una dirección en los puntos de conexión. El siguiente ejemplo muestra una dirección que utiliza el protocolo HTTPS con un puerto no predeterminado:  
   
 ```  
 HTTPS://cohowinery:8005/ServiceModelSamples/CalculatorService  
@@ -91,7 +92,7 @@ HTTPS://cohowinery:8005/ServiceModelSamples/CalculatorService
  Representa una parte determinada del enlace, por ejemplo un transporte, una codificación, una implementación de un protocolo del nivel de infraestructura (como WS-ReliableMessaging), o cualquier otro componente de la pila de comunicaciones.  
   
  comportamientos  
- Componente que controla varios aspectos del tiempo de ejecución de un servicio, un extremo, una operación determinada o un cliente. Los comportamientos están agrupados en función del ámbito: los comportamientos comunes afectan globalmente a todos los extremos, los comportamientos de servicios sólo afectan a los aspectos relacionados con servicios, los comportamientos de extremos sólo afectan a las propiedades relacionadas con los extremos y los comportamientos de operaciones afectan a las operaciones determinadas. Por ejemplo, un comportamiento del servicio está limitando que especifica cómo un servicio reacciona cuando un exceso de mensajes amenaza agobiar sus funciones del control. Un comportamiento de extremos, por otro lado, solo controla los aspectos relacionados con los extremos, como, por ejemplo, cómo y dónde encontrar una credencial de seguridad.  
+ Componente que controla varios aspectos del tiempo de ejecución de un servicio, un punto de conexión, una operación determinada o un cliente. Los comportamientos están agrupados en función del ámbito: los comportamientos comunes afectan globalmente a todos los puntos de conexión, los comportamientos de servicios sólo afectan a los aspectos relacionados con servicios, los comportamientos de puntos de conexión sólo afectan a las propiedades relacionadas con los puntos de conexión y los comportamientos de operaciones afectan a las operaciones determinadas. Por ejemplo, un comportamiento del servicio está limitando que especifica cómo un servicio reacciona cuando un exceso de mensajes amenaza agobiar sus funciones del control. Un comportamiento de extremos, por otro lado, solo controla los aspectos relacionados con los extremos, como, por ejemplo, cómo y dónde encontrar una credencial de seguridad.  
   
  enlaces proporcionados por el sistema  
  [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] incluye varios enlaces proporcionados por el sistema. Éstas son colecciones de elementos de enlace optimizados para escenarios concretos. Por ejemplo, el <xref:System.ServiceModel.WSHttpBinding> está diseñado para la interoperabilidad con servicios que implementan varias especificaciones WS - *. Estos enlaces predefinidos ahorran tiempo al presentar sólo las opciones que se pueden aplicar correctamente al escenario en cuestión. Si un enlace predefinido no cumple sus requisitos, puede crear su propio enlace personalizado.  
@@ -130,7 +131,7 @@ HTTPS://cohowinery:8005/ServiceModelSamples/CalculatorService
  Un servicio tiene un modelo de creación de instancias. Hay tres modelos de creación de instancias: "único" en el que un objeto CLR único repara todos los clientes; "por llamada", en el que un nuevo objeto CLR se crea para administrar cada llamada de cliente; y "por sesión", en el que se crea un conjunto de objetos CLR, uno para cada sesión individual. Para elegir un modelo de creación de instancias se han de tener en cuenta los requisitos de aplicación y el patrón de uso esperado del servicio.  
   
  aplicación cliente  
- Programa que intercambia mensajes con uno o varios extremos. La aplicación de cliente comienza creando una instancia de un cliente de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] y llamando métodos del cliente de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. Es importante tener en cuenta que una única aplicación pueda ser cliente y servicio.  
+ Programa que intercambia mensajes con uno o varios puntos de conexión. La aplicación de cliente comienza creando una instancia de un cliente de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] y llamando métodos del cliente de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. Es importante tener en cuenta que una única aplicación pueda ser cliente y servicio.  
   
  canal  
  Implementación concreta de un elemento de enlace. El enlace representa la configuración, y el canal es la implementación asociada a esa configuración. Por consiguiente, hay un canal asociado a cada elemento de enlace. Los canales se apilan uno sobre otro para crear la implementación concreta del enlace: la pila de canales.  

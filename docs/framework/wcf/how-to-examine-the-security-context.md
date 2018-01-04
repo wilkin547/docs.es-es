@@ -20,11 +20,12 @@ caps.latest.revision: "13"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 72bc3dfcc91cb0fe5b393c9735c83b6331d5e0dd
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4d6852a3162b3a8666c711d455e72517a91c4477
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-examine-the-security-context"></a>Cómo: Examinar el contexto de seguridad
 Al programar servicios [!INCLUDE[indigo1](../../../includes/indigo1-md.md)], el contexto de seguridad de servicio le permite determinar los detalles sobre las demandas y credenciales del cliente y utilizadas para autenticarse con el servicio. Esto se hace utilizando las propiedades de la clase <xref:System.ServiceModel.ServiceSecurityContext>.  
@@ -66,4 +67,4 @@ Al programar servicios [!INCLUDE[indigo1](../../../includes/indigo1-md.md)], el 
   
 ## <a name="see-also"></a>Vea también  
  [Seguridad de servicios](../../../docs/framework/wcf/securing-services.md)  
- [Autenticación e identidad de servicio](../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
+ [Identidad del servicio y autenticación](../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)

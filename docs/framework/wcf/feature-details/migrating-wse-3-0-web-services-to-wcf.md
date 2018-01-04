@@ -13,11 +13,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c97279b553a615feda1dd3a195ad033744d82983
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: a7e7187eb6ed444ba2c28aa301ce4b3b16129030
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="migrating-wse-30-web-services-to-wcf"></a>Migración de los servicios web WSE 3.0 a WCF
 Entre las ventajas de migrar los servicios web WSE 3.0 a [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] se incluyen un mejor rendimiento y la compatibilidad con transportes adicionales, escenarios de seguridad adicionales y especificaciones WS - *. Un servicio web que se migra desde WSE 3.0 a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] puede experimentar una mejora de rendimiento de entre un 200% y un 400%. Para obtener más información acerca de los transportes admitidos por [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], consulte [elegir un transporte](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md). Para obtener una lista de los escenarios compatibles con [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], consulte [escenarios comunes de seguridad](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md). Para obtener una lista de las especificaciones que son compatibles con [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], consulte [Guía de interoperabilidad de protocolos de servicios Web](../../../../docs/framework/wcf/feature-details/web-services-protocols-interoperability-guide.md).  
@@ -135,5 +136,5 @@ Entre las ventajas de migrar los servicios web WSE 3.0 a [!INCLUDE[indigo1](../.
 ## <a name="see-also"></a>Vea también  
  [Ciclo de vida de programación básica](../../../../docs/framework/wcf/basic-programming-lifecycle.md)  
  [Enlaces personalizados](../../../../docs/framework/wcf/extending/custom-bindings.md)  
- [Cómo: crear un enlace personalizado mediante SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)  
- [Cómo: crear un SecurityBindingElement para un modo de autenticación especificado](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)
+ [Creación de un enlace personalizado mediante SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)  
+ [Creación de un SecurityBindingElement para un modo de autenticación especificado](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)

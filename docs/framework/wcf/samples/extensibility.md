@@ -13,17 +13,18 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 28e6de46098a8309a17e0c264411f865fb9b1de2
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: d1d8ea4987d918da79dcf1f69b842f19901e63a5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="extensibility"></a>Extensibilidad
 Esta sección contiene ejemplos que tratan de la extensibilidad personalizada y otras características de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Extensibilidad de canales](../../../../docs/framework/wcf/samples/channels-extensibility.md)  
+ [Extensibilidad de los canales](../../../../docs/framework/wcf/samples/channels-extensibility.md)  
  Muestra los canales personalizados.  
   
  [Extensibilidad de la detección](../../../../docs/framework/wcf/samples/discovery-extensibility.md)  
@@ -35,28 +36,28 @@ Esta sección contiene ejemplos que tratan de la extensibilidad personalizada y 
  [Extensibilidad de la interoperabilidad](../../../../docs/framework/wcf/samples/interop-extensibility.md)  
  Muestra la interoperabilidad personalizada.  
   
- [Extensibilidad del codificador de mensaje](../../../../docs/framework/wcf/samples/message-encoder-extensibility.md)  
+ [Extensibilidad del codificador de mensajes](../../../../docs/framework/wcf/samples/message-encoder-extensibility.md)  
  Muestra la codificación de mensajes personalizada.  
   
  [Extensibilidad de metadatos](../../../../docs/framework/wcf/samples/metadata-extensibility.md)  
  Muestra los metadatos personalizados.  
   
- [Extensibilidad de seguridad](../../../../docs/framework/wcf/samples/security-extensibility.md)  
+ [Extensibilidad de la seguridad](../../../../docs/framework/wcf/samples/security-extensibility.md)  
  Muestra la seguridad personalizada.  
   
- [Ejemplos de extensibilidad de distribución](../../../../docs/framework/wcf/samples/syndication-extensibility-samples.md)  
+ [Ejemplos de extensibilidad de redifusión](../../../../docs/framework/wcf/samples/syndication-extensibility-samples.md)  
  Muestra la distribución personalizada.  
   
  [Extensibilidad de transporte](../../../../docs/framework/wcf/samples/transport-extensibility.md)  
  Muestra los transportes personalizados.  
   
- [Extensibilidad Web](../../../../docs/framework/wcf/samples/web-extensibility.md)  
+ [Extensibilidad web](../../../../docs/framework/wcf/samples/web-extensibility.md)  
  Muestra la funcionalidad web personalizada.  
   
- [Formateador de operación y Selector de operación](../../../../docs/framework/wcf/samples/operation-formatter-and-operation-selector.md)  
+ [Formateador de operación y selector de operación](../../../../docs/framework/wcf/samples/operation-formatter-and-operation-selector.md)  
  Muestra el modo en que los puntos de extensibilidad pueden utilizar formatos de datos de mensaje personalizados.  
   
- [Filtro de mensajes personalizado](../../../../docs/framework/wcf/samples/custom-message-filter.md)  
+ [Filtro de mensaje personalizado](../../../../docs/framework/wcf/samples/custom-message-filter.md)  
  Muestra cómo reemplazar los filtros de mensajes que [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] utiliza para enviar mensajes a los extremos.  
   
  [Host de servicio personalizado](../../../../docs/framework/wcf/samples/custom-service-host.md)  
@@ -65,7 +66,7 @@ Esta sección contiene ejemplos que tratan de la extensibilidad personalizada y 
  [Suplente de DataContract](../../../../docs/framework/wcf/samples/datacontract-surrogate.md)  
  Muestra cómo se pueden personalizar procesos como la serialización, la deserialización, la exportación e importación del esquema mediante una clase suplente de contrato de datos.  
   
- [Extender el Control sobre el control e informes de errores](../../../../docs/framework/wcf/samples/extending-control-over-error-handling-and-reporting.md)  
+ [Extensión del control sobre el control y los informes de errores](../../../../docs/framework/wcf/samples/extending-control-over-error-handling-and-reporting.md)  
  Muestra cómo extender el control sobre el control e informe de errores en un servicio de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] mediante la interfaz <xref:System.ServiceModel.Dispatcher.IErrorHandler>.  
   
  [Inspectores de mensaje](../../../../docs/framework/wcf/samples/message-inspectors.md)  

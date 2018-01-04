@@ -17,11 +17,12 @@ caps.latest.revision: "27"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: da7cb5e30cd4c8c5bf59c45b5e38d766990275b7
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 56744318e6ea29350fd02d1cb35e49e566894a23
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="data-contract-names"></a>Nombres de contratos de datos
 A veces un cliente y un servicio no comparten los mismos tipos. Todavía pueden pasar datos entre sí porque los contratos de datos son equivalentes en ambos lados. [Equivalencia del contrato de datos](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md) se basa en el contrato de datos y nombres de miembro de datos, y, por tanto, se proporciona un mecanismo para asignar los tipos y miembros a esos nombres. En este tema se explican las reglas para nombrar contratos de datos, así como el comportamiento predeterminado de la infraestructura de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] al crear los nombres.  
@@ -84,7 +85,7 @@ A veces un cliente y un servicio no comparten los mismos tipos. Todavía pueden 
  <xref:System.Runtime.Serialization.DataContractAttribute>  
  <xref:System.Runtime.Serialization.DataMemberAttribute>  
  <xref:System.Runtime.Serialization.ContractNamespaceAttribute>  
- [Usar contratos de datos](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
- [Equivalencia del contrato de datos](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)  
- [Nombres de contrato de datos](../../../../docs/framework/wcf/feature-details/data-contract-names.md)  
+ [Utilización de contratos de datos](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
+ [Equivalencia de contratos de datos](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)  
+ [Nombres de contratos de datos](../../../../docs/framework/wcf/feature-details/data-contract-names.md)  
  [Versiones de contratos de datos](../../../../docs/framework/wcf/feature-details/data-contract-versioning.md)

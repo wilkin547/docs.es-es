@@ -13,11 +13,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e5894a8b5d4d0873a231927498a8d1e2c4e18afd
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 676451ac3dce4ff9d328bf4c46809444e0e7cb7c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="workflow-control-endpoint"></a>punto de conexión de control de flujo de trabajo
 El extremo de control de flujo de trabajo permite a los desarrolladores llamar a las operaciones de control para controlar de forma remota instancias de flujo de trabajo hospedadas mediante <xref:System.ServiceModel.Activities.WorkflowServiceHost>. Esta característica se puede utilizar para realizar operaciones de control mediante programación como la suspensión, la reanudación y la finalización.  
@@ -30,7 +31,7 @@ El extremo de control de flujo de trabajo permite a los desarrolladores llamar a
   
  Las instancias de flujo de trabajo pueden presentar uno de los estados siguientes:  
   
- Activa  
+ Activo  
  El estado de una instancia de flujo de trabajo antes de alcanzar el estado completado y cuando no se encuentra en estado suspendido. Cuando se encuentra en este estado, la instancia de flujo de trabajo se ejecuta y procesa los mensajes de aplicación.  
   
  Suspendido  
@@ -46,7 +47,7 @@ El extremo de control de flujo de trabajo permite a los desarrolladores llamar a
 |-----------------------|-----------------|  
 |Abort|Detiene de forma obligatoria la ejecución de la instancia de flujo de trabajo.|  
 |Cancelar|Realiza una transición de una instancia de flujo de trabajo del estado activo o suspendido al estado completado.|  
-|Ejecutar|Ofrece a una instancia de flujo de trabajo la oportunidad de ejecutarse.|  
+|Run|Ofrece a una instancia de flujo de trabajo la oportunidad de ejecutarse.|  
 |Suspender|Realiza una transición de una instancia de flujo de trabajo del estado activo al estado suspendido.|  
 |Terminar|Realiza una transición de una instancia de flujo de trabajo del estado activo o suspendido al estado completado.|  
 |Unsuspend|Realiza una transición de una instancia de flujo de trabajo del estado suspendido al estado activo.|  

@@ -12,11 +12,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 726ce98f3fe11bbc3cd13d90cdae335c0741efe6
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: be200882b59af3604a88c33ad1b3a99687ded860
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="formatting-messages-in-workflow-services"></a>Dar formato a mensajes en servicios de flujo de trabajo
 En este ejemplo se muestra cómo se pueden utilizar diferentes tipos de usuario en actividades de mensajería (servicios de WF). El servicio del ejemplo es un servicio de aprobación de gastos simple y expone tres operaciones. `ApproveExpense` toma un tipo de contrato de datos y muestra cómo usar tipos conocidos. La operación devuelve `true` o `false` según la cantidad de gastos. `ApprovePO`toma un tipo XmlSerializer y devuelve `true` o `false` en función de la cantidad de gastos.`ApprovedVendor` toma un tipo de contrato de mensaje y devuelve `true` o `false` si el proveedor está en la lista de proveedores autorizados o si la solicitud procede del departamento de finanzas (el departamento de finanzas puede usar cualquier proveedor).  

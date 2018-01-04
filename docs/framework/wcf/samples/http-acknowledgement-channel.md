@@ -13,11 +13,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9081b47284b63315d950ef791389312df32815f8
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: d07a17c5ed4302657671e0247e44ac0ef6e75518
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="http-acknowledgement-channel"></a>Canal de confirmación de HTTP
 El canal de confirmación HTTP es un ejemplo de canal en niveles que cambia el patrón de mensajería unidireccional, permitiendo que un servicio confirme o rechace los mensajes entrantes en lugar de enviar una confirmación de recibo automáticamente. Además, permite al servicio retrasar la confirmación hasta que pueda tener la garantía de que el mensaje se procesará.  

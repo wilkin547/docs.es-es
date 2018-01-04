@@ -20,11 +20,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e1d6a790f8a43f4ea2f9d3ad2cdb282186554da6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 18d54da2c24d592b6fb6b53be10824c85682f9db
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-autogenerate-columns-in-a-data-bound-windows-forms-datagridview-control"></a>Cómo: Generar columnas automáticamente en un control DataGridView de formularios Windows Forms enlazado a datos
 En el ejemplo de código siguiente se muestra cómo mostrar las columnas de un origen de datos enlazados en un <xref:System.Windows.Forms.DataGridView> control. Cuando el <xref:System.Windows.Forms.DataGridView.AutoGenerateColumns%2A> es el valor de la propiedad `true` (valor predeterminado), un <xref:System.Windows.Forms.DataGridViewColumn> se crea para cada columna de la tabla de origen de datos.  
@@ -38,7 +39,7 @@ En el ejemplo de código siguiente se muestra cómo mostrar las columnas de un o
 ## <a name="compiling-the-code"></a>Compilar el código  
  Para este ejemplo se necesita:  
   
--   Un control <xref:System.Windows.Forms.DataGridView> llamado `customersDataGridView`.  
+-   Control <xref:System.Windows.Forms.DataGridView> denominado `customersDataGridView`.  
   
 -   A <xref:System.Data.DataSet> objeto denominado `customersDataSet` que tiene una tabla denominada `Customers`.  
   

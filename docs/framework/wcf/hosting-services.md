@@ -14,11 +14,12 @@ caps.latest.revision: "31"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c4cafff46d31ed9a5737dbb74acecab96b1f1a1e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: b23dac1db5252d3ce2bd60e4f8525dd89d9127b0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="hosting-services"></a>Servicios de hospedaje
 Para activarse, se debe hospedar un servicio dentro de un entorno de tiempo en ejecución que lo crea y controla su contexto y duración. Los servicios[!INCLUDE[indigo1](../../../includes/indigo1-md.md)] están diseñados para ejecutarse en cualquier proceso de Windows que admite código administrado.  
@@ -76,5 +77,5 @@ Para activarse, se debe hospedar un servicio dentro de un entorno de tiempo en e
  [Implementación de contratos de servicio](../../../docs/framework/wcf/implementing-service-contracts.md)  
  [Cómo: hospedar un servicio WCF en IIS](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md)  
  [Cómo: hospedar un servicio WCF en WAS](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md)  
- [Cómo: hospedar un servicio WCF en un servicio de Windows administrado](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-a-managed-windows-service.md)  
+ [Hospedaje de un servicio WCF en un servicio administrado de Windows](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-a-managed-windows-service.md)  
  [Cómo hospedar un servicio WCF en una aplicación administrada](../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md)

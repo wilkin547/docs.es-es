@@ -16,11 +16,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f9544b6af74608bd1b29db3250e887999ae3187f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 310fcad07ce7cf541312ff83e41d7e5fc2643898
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-application-settings-and-user-settings"></a>Utilizar valores de configuración de aplicación y de usuario
 A partir de .NET Framework 2.0, puede crear y obtener acceso a los valores que se conservan entre sesiones de ejecución de la aplicación. Estos valores se denominan *configuración*. Configuración puede representar las preferencias del usuario o información valiosa de la aplicación debe usar. Por ejemplo, podría crear una serie de valores que almacenan las preferencias del usuario para la combinación de colores de una aplicación. O bien, puede almacenar la cadena de conexión que especifica una base de datos que usa su aplicación. La configuración permite que conservar la información que es fundamental para la aplicación fuera del código así como crear perfiles que almacenen las preferencias de usuarios individuales.  

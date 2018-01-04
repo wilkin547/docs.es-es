@@ -16,11 +16,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f3629778ded2b690f8169223101d89cb551e1449
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: db8f79fcdc1398b891933f5fef9f07410e5de11e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="side-by-side-versioning-in-workflowservicehost"></a>Control de versiones en paralelo en WorkflowServiceHost
 El control de versiones en paralelo en <xref:System.ServiceModel.Activities.WorkflowServiceHost> presentado en [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] ofrece la capacidad de hospedar varias versiones de un servicio de flujo de trabajo en un único extremo. La funcionalidad en paralelo proporcionada permite configurar un servicio de flujo de trabajo para crear nuevas instancias del servicio de flujo de trabajo usando la nueva definición de flujo de trabajo, mientras que las instancias en ejecución se completan usando la definición existente. Este tema proporciona información general sobre la ejecución en paralelo del servicio de flujo de trabajo mediante <xref:System.ServiceModel.Activities.WorkflowServiceHost>.  
@@ -41,7 +42,7 @@ El control de versiones en paralelo en <xref:System.ServiceModel.Activities.Work
   
 -   No debe tener ninguna actividad <xref:System.ServiceModel.Activities.Receive> o <xref:System.ServiceModel.Activities.SendReply> en su <xref:System.ServiceModel.Activities.WorkflowService.Body%2A> que no esté en la versión principal y deben coincidir con el contrato de operación.  
   
--   Tenga una <xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A> única. Una única definición de flujo de trabajo puede tener una `null`<xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A>.  
+-   Tenga una <xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A> única. Una y solo una definición de flujo de trabajo puede tener un `null` <xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A>.  
   
  Se permiten algunos cambios. Los elementos siguientes pueden ser diferentes en las versiones:  
   

@@ -13,11 +13,12 @@ caps.latest.revision: "23"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 988c41bb691d27e819710bbc2cd48bc1c844e7c5
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 357b57bb39ca31b48d21cb83209a72d0b3d12a62
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="advanced-filters"></a>Filtros avanzados
 En este ejemplo se muestra un servicio de enrutamiento de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. El servicio de enrutamiento es un componente de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] que permite incluir fácilmente un enrutador basado en contenido en una aplicación. En este ejemplo se adapta el ejemplo de la calculadora de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] estándar para comunicarse utilizando el servicio de enrutamiento. En este ejemplo se muestra cómo definir la lógica de enrutamiento basado en contenido a través del uso de filtros de mensajes y tablas de filtro de mensajes.  
@@ -53,7 +54,7 @@ namespaceManager.AddNamespace("custom", "http://my.custom.namespace/");
 XPathMessageFilter xpathFilter = new XPathMessageFilter("/s12:Envelope/s12:Header/custom:RoundingCalculator = 1", namespaceManager);  
 ```  
   
- El segundo filtro es un <xref:System.ServiceModel.Dispatcher.EndpointNameMessageFilter>, que coincide con cualquier mensaje que se recibiera en `calculatorEndpoint`. El nombre de extremo se define cuando se crea un objeto de extremo de servicio.  
+ El segundo filtro es un <xref:System.ServiceModel.Dispatcher.EndpointNameMessageFilter>, que coincide con cualquier mensaje que se recibiera en `calculatorEndpoint`. El nombre de punto de conexión se define cuando se crea un objeto de punto de conexión de servicio.  
   
 ```  
 EndpointNameMessageFilter endpointNameFilter = new EndpointNameMessageFilter("calculatorEndpoint");  
@@ -78,11 +79,11 @@ RoundRobinMessageFilter roundRobinFilter2 = new RoundRobinMessageFilter("group1"
 > [!NOTE]
 >  Aunque este ejemplo muestra cómo utilizar las prioridades del filtro de mensajes, en general es más adecuado diseñar y configurar los filtros de modo que no requieran la asignación de prioridades para funcionar correctamente.  
   
- El primer filtro que se va a agregar es el filtro de XPath y su prioridad se establece en 2. Este es el primer filtro de mensajes que se ejecuta. Si encuentra el encabezado personalizado, independientemente de cuáles serían los resultados de los demás filtros, el mensaje se enruta al extremo de la calculadora de redondeo.  
+ El primer filtro que se va a agregar es el filtro de XPath y su prioridad se establece en 2. Este es el primer filtro de mensajes que se ejecuta. Si encuentra el encabezado personalizado, independientemente de cuáles serían los resultados de los demás filtros, el mensaje se enruta al punto de conexión de la calculadora de redondeo.  
   
  En la prioridad 1, se agregan dos filtros. De nuevo, solo se ejecutan si el filtro de XPath en la prioridad 2 no coincide con el mensaje. Estos dos filtros muestran dos maneras diferentes de determinar dónde se dirigió el mensaje cuando se presentó. Dado que los dos filtran comprueban eficazmente si el mensaje llegó a uno de los dos extremos, se pueden ejecutar en el mismo nivel de prioridad porque ambos no devuelven `true` al mismo tiempo.  
   
- Finalmente, en la prioridad 0 (la más baja) se ejecutan los filtros de mensajes RoundRobin. Dado que los filtros se configuran con el mismo nombre de grupo, solo uno de ellos coincide a la vez. Dado que se han enrutado todos los mensajes con el encabezado personalizado y todos los dirigidos a extremos virtualizados concretos, solo los mensajes administrados por los filtros de mensajes RoundRobin son los que se dirigieron al extremo del enrutador predeterminado sin el encabezado personalizado. Dado que estos mensajes activan un mensaje para cada llamada, la mitad de las operaciones va al extremo de calculadora normal y la otra mitad va al extremo de calculadora de redondeo.  
+ Finalmente, en la prioridad 0 (la más baja) se ejecutan los filtros de mensajes RoundRobin. Dado que los filtros se configuran con el mismo nombre de grupo, solo uno de ellos coincide a la vez. Dado que se han enrutado todos los mensajes con el encabezado personalizado y todos los dirigidos a extremos virtualizados concretos, solo los mensajes administrados por los filtros de mensajes RoundRobin son los que se dirigieron al extremo del enrutador predeterminado sin el encabezado personalizado. Dado que estos mensajes activan un mensaje para cada llamada, la mitad de las operaciones va al punto de conexión de calculadora normal y la otra mitad va al punto de conexión de calculadora de redondeo.  
   
 #### <a name="to-use-this-sample"></a>Para utilizar este ejemplo  
   
@@ -104,9 +105,9 @@ RoundRobinMessageFilter roundRobinFilter2 = new RoundRobinMessageFilter("group1"
   
         4.  RoutingService (./RoutingService/bin/RoutingService.exe)  
   
-4.  En la ventana de la consola del cliente de la calculadora, presione ENTRAR para iniciar el cliente. El cliente devuelve una lista de los extremos de destino entre los que elegir.  
+4.  En la ventana de la consola del cliente de la calculadora, presione ENTRAR para iniciar el cliente. El cliente devuelve una lista de los puntos de conexión de destino entre los que elegir.  
   
-5.  Elija un extremo de destino escribiendo su letra correspondiente y presione ENTRAR.  
+5.  Elija un punto de conexión de destino escribiendo su letra correspondiente y presione ENTRAR.  
   
 6.  Después, el cliente le pregunta si desea agregar un encabezado personalizado. Presione S para indicar Sí o N para indicar No; a continuación, presione ENTRAR.  
   

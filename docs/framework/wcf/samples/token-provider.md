@@ -13,11 +13,12 @@ caps.latest.revision: "22"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 87965b8802dd770d6977154ab805889838e9c5e4
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 975014007ed57cc7e4b1035972923f61753c6d4e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="token-provider"></a>Proveedor de tokens
 Este ejemplo muestra cómo implementar un proveedor de tokens personalizado. Se usa un proveedor de tokens en [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] para proporcionar las credenciales a la infraestructura de seguridad. En general, el proveedor de tokens examina el destino y emite las credenciales adecuadas de manera que la infraestructura de seguridad pueda proteger el mensaje. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] incluye el Proveedor de tokens del administrador de credenciales predeterminado. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] también se distribuye con un proveedor de tokens de [!INCLUDE[infocard](../../../../includes/infocard-md.md)]. Los proveedores de tokens personalizados son útiles en los casos siguientes:  
@@ -42,7 +43,7 @@ Este ejemplo muestra cómo implementar un proveedor de tokens personalizado. Se 
   
  Este ejemplo también muestra cómo la identidad del llamador es accesible después del proceso de autenticación del token personalizado.  
   
- El servicio expone un extremo único para comunicarse con el servicio, definido mediante el archivo de configuración App.config. El extremo está compuesto por una dirección, un enlace y un contrato. El enlace se configura con un `wsHttpBinding` estándar, que usa la seguridad de mensaje de forma predeterminada. Este ejemplo establece el `wsHttpBinding` estándar para utilizar la autenticación mediante el nombre de usuario del cliente. El servicio también configura el certificado del servicio utilizando el comportamiento serviceCredentials. El comportamiento serviceCredentials le permite configurar un certificado de servicio. Un cliente utiliza un certificado de servicio para autenticar el servicio y proporcionar protección al mensaje. La configuración siguiente hace referencia al certificado del host local instalado durante la configuración del ejemplo tal y como se describe en las siguientes instrucciones de configuración.  
+ El servicio expone un punto de conexión único para comunicarse con el servicio, definido mediante el archivo de configuración App.config. El punto de conexión está compuesto por una dirección, un enlace y un contrato. El enlace se configura con un `wsHttpBinding` estándar, que usa la seguridad de mensaje de forma predeterminada. Este ejemplo establece el `wsHttpBinding` estándar para utilizar la autenticación mediante el nombre de usuario del cliente. El servicio también configura el certificado del servicio utilizando el comportamiento serviceCredentials. El comportamiento serviceCredentials le permite configurar un certificado de servicio. Un cliente utiliza un certificado de servicio para autenticar el servicio y proporcionar protección al mensaje. La configuración siguiente hace referencia al certificado del host local instalado durante la configuración del ejemplo tal y como se describe en las siguientes instrucciones de configuración.  
   
 ```xml  
 <system.serviceModel>  
@@ -92,7 +93,7 @@ Este ejemplo muestra cómo implementar un proveedor de tokens personalizado. Se 
   </system.serviceModel>  
 ```  
   
- La configuración de extremo de cliente está compuesta por un nombre de configuración, una dirección absoluta para el extremo de servicio, el enlace y el contrato. El enlace del cliente se configura con el adecuado `Mode` y `clientCredentialType`del mensaje.  
+ La configuración de punto de conexión de cliente está compuesta por un nombre de configuración, una dirección absoluta para el punto de conexión de servicio, el enlace y el contrato. El enlace del cliente se configura con el adecuado `Mode` y `clientCredentialType`del mensaje.  
   
 ```xml  
 <system.serviceModel>  

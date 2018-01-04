@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: bcda7f9edc741e8f0c9c56214119255ca2777d77
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 541770db6b9cc624fd08ab4db275bc63fa5deca9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="channels-extensibility"></a>Extensibilidad de los canales
 Esta sección contiene ejemplos que muestran los canales personalizados.  
@@ -35,11 +36,11 @@ Esta sección contiene ejemplos que muestran los canales personalizados.
  [Canal de fragmentación](../../../../docs/framework/wcf/samples/chunking-channel.md)  
  Muestra cómo limitar la cantidad de memoria que se usa para almacenar en búfer los mensajes grandes enviados con [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
   
- [Canal de confirmación HTTP](../../../../docs/framework/wcf/samples/http-acknowledgement-channel.md)  
+ [Canal de confirmación de HTTP](../../../../docs/framework/wcf/samples/http-acknowledgement-channel.md)  
  Muestra un canal en niveles que cambia el patrón de mensajería unidireccional.  
   
  [HttpCookieSession](../../../../docs/framework/wcf/samples/httpcookiesession.md)  
  Muestra cómo crear un canal de protocolo personalizado para usar cookies de HTTP para la administración de sesiones.  
   
- [Interceptor de mensajes personalizado](../../../../docs/framework/wcf/samples/custom-message-interceptor.md)  
+ [Interceptador de mensajes personalizados](../../../../docs/framework/wcf/samples/custom-message-interceptor.md)  
  Muestra cómo implementar un elemento de enlace personalizado que crea generadores de canales y agentes de escucha de canales para interceptar todos los mensajes entrantes y salientes en un punto concreto en la pila de tiempo de ejecución.

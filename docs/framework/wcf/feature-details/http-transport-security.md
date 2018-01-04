@@ -13,11 +13,12 @@ caps.latest.revision: "14"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 414ae499b777be5536e64a86fa0c60f9cd2da25a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f81a95546d593cd5a0acb6a89edf2f6c763f07df
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="http-transport-security"></a>Seguridad de transporte HTTP
 Al utilizar HTTP como transporte, una implementación de Capa de sockets seguros (SSL) proporciona la seguridad. SSL se utiliza mucho en Internet para autenticar un servicio a un cliente y proporcionar la confidencialidad (cifrado) al canal. En este tema se explica cómo funciona SSL y cómo se implementa en [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
@@ -64,4 +65,4 @@ Al utilizar HTTP como transporte, una implementación de Capa de sockets seguros
   
 ## <a name="see-also"></a>Vea también  
  [Seguridad de transporte](../../../../docs/framework/wcf/feature-details/transport-security.md)  
- [Seguridad de mensajes](../../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)
+ [Seguridad de los mensajes](../../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)

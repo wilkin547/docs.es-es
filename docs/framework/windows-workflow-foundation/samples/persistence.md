@@ -12,17 +12,18 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 47fb1a20df4217177d1742f46df16ebae0a84424
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 3b326c56ce96b9b0f2d2089976b530d530d9a55b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="persistence"></a>Persistencia
 Esta sección contiene ejemplos que muestran cómo conservar los flujos de trabajo en un medio duradero en [!INCLUDE[wf](../../../../includes/wf-md.md)].  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Conservar una aplicación de flujo de trabajo](../../../../docs/framework/windows-workflow-foundation/samples/persisting-a-workflow-application.md)  
+ [Persistencia de una aplicación de flujo de trabajo](../../../../docs/framework/windows-workflow-foundation/samples/persisting-a-workflow-application.md)  
  Muestra cómo ejecutar un objeto <xref:System.Activities.WorkflowApplication>, cómo descargarlo cuando pasa a estado inactivo, y cómo recargarlo después para continuar su ejecución.  
   
  [Configuración integrada](../../../../docs/framework/windows-workflow-foundation/samples/built-in-configuration.md)  

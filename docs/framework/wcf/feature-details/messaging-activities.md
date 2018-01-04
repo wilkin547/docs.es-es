@@ -13,11 +13,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c08d57f36d733312793ab9de1699b83a1e22ce31
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 8ba5d49f357fe1cf56a45f733e91c1dbc2208736
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="messaging-activities"></a>Actividades de mensajería
 Las actividades de mensajería permiten a los flujos de trabajo enviar y recibir mensajes de WCF. Al agregar actividades de mensajería a un flujo de trabajo, puede modelar cualquier patrón de intercambio de mensajes (MEP) arbitrariamente complejo.  
@@ -115,4 +116,4 @@ Request = rcv
   
 ## <a name="see-also"></a>Vea también  
  [Cómo enviar y recibir errores en los servicios de flujo de trabajo](http://go.microsoft.com/fwlink/?LinkId=189151)  
- [Crear un servicio de flujo de trabajo de ejecución prolongada](../../../../docs/framework/wcf/feature-details/creating-a-long-running-workflow-service.md)
+ [Creación de un servicio de flujo de trabajo de larga ejecución](../../../../docs/framework/wcf/feature-details/creating-a-long-running-workflow-service.md)

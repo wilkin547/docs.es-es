@@ -17,11 +17,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 91994fc31e4b0f30d575cd43ad44e66dcdb0a7f0
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0e77cf5cc271e86c02e8355dde6f721fe7751416
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="configuring-system-provided-bindings"></a>Configuración de enlaces proporcionados por el sistema
 Los enlaces especifican el mecanismo de comunicación que se ha de utilizar al hablar con un punto de conexión e indican cómo conectarse a un punto de conexión. Los enlaces están compuestos de elementos que definen cómo se disponen en capa los canales de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] para proporcionar las características de comunicación necesarias. Un enlace contiene tres tipos de elementos:  
@@ -30,7 +31,7 @@ Los enlaces especifican el mecanismo de comunicación que se ha de utilizar al h
   
 -   Elementos de enlace de canal de transporte, que determinan el protocolo de transporte subyacente que se ha de usar al enviar mensajes al extremo, por ejemplo, TCP o HTTP.  
   
--   Elementos de enlace de codificación de mensajes, que determinan la codificación de la conexión que se ha de utilizar para los mensajes que se envían al extremo, como, por ejemplo, texto/XML, binaria o Mecanismo de optimización de transmisión de mensajes (MTOM).  
+-   Elementos de enlace de codificación de mensajes, que determinan la codificación de la conexión que se ha de utilizar para los mensajes que se envían al punto de conexión, como, por ejemplo, texto/XML, binaria o Mecanismo de optimización de transmisión de mensajes (MTOM).  
   
  En este tema se presentan todos los enlaces de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] proporcionados por el sistema. Si ninguno de ellos cumple los requisitos exactos de su aplicación, puede crear un enlace mediante la clase <xref:System.ServiceModel.Channels.CustomBinding>. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]cómo crear enlaces personalizados, consulte [enlaces personalizados](../../../../docs/framework/wcf/extending/custom-bindings.md).  
   
@@ -43,7 +44,7 @@ Los enlaces especifican el mecanismo de comunicación que se ha de utilizar al h
 ## <a name="system-provided-bindings"></a>Enlaces proporcionados por el sistema  
  Los siguientes enlaces se distribuyen con [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
   
-|Enlace|Elemento de configuración |Descripción|  
+|Enlaces|Elemento de configuración |Descripción|  
 |-------------|---------------------------|-----------------|  
 |<xref:System.ServiceModel.BasicHttpBinding>|[\<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)|Un enlace que es útil para la comunicación con servicios web conformes con WS-Basic Profile, como, por ejemplo, servicios basados en servicios web de ASP.NET (ASMX). Este enlace utiliza HTTP como el transporte, y texto/XML como la codificación de mensajes predeterminada.|  
 |<xref:System.ServiceModel.WSHttpBinding>|[\<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)|Un enlace seguro e interoperable, adecuado para contratos de servicio que no son dúplex.|  
@@ -63,17 +64,17 @@ Los enlaces especifican el mecanismo de comunicación que se ha de utilizar al h
   
 |Enlaces|Interoperabilidad|Modo de Seguridad (valor predeterminado)|Sesión<br /><br /> (Predeterminado)|Transacciones|Dúplex|  
 |-------------|----------------------|----------------------------------|-----------------------------|------------------|------------|  
-|<xref:System.ServiceModel.BasicHttpBinding>|Basic Profile 1.1|(Ninguno), transporte, mensaje, mixto|Ninguno, (ninguno)|(Ninguno)|no disponible|  
-|<xref:System.ServiceModel.WSHttpBinding>|WS|Ninguno, transporte, (mensaje), mixto|(Ninguno), transporte, sesión confiable|(Ninguno), Sí|no disponible|  
-|<xref:System.ServiceModel.WS2007HttpBinding>|WS-Security, WS-Trust, WS-SecureConversation, WS-SecurityPolicy|Ninguno, transporte, (mensaje), mixto|(Ninguno), transporte, sesión confiable|(Ninguno), Sí|no disponible|  
+|<xref:System.ServiceModel.BasicHttpBinding>|Basic Profile 1.1|(Ninguno), transporte, mensaje, mixto|Ninguno, (ninguno)|(Ninguno)|N/D|  
+|<xref:System.ServiceModel.WSHttpBinding>|WS|Ninguno, transporte, (mensaje), mixto|(Ninguno), transporte, sesión confiable|(Ninguno), Sí|N/D|  
+|<xref:System.ServiceModel.WS2007HttpBinding>|WS-Security, WS-Trust, WS-SecureConversation, WS-SecurityPolicy|Ninguno, transporte, (mensaje), mixto|(Ninguno), transporte, sesión confiable|(Ninguno), Sí|N/D|  
 |<xref:System.ServiceModel.WSDualHttpBinding>|WS|Ninguno, (mensaje)|(Sesión confiable)|(Ninguno), Sí|Sí|  
 |<xref:System.ServiceModel.WSFederationHttpBinding>|WS-Federation|Ninguno, (mensaje), mixto|(Ninguno), sesión confiable|(Ninguno), Sí|No|  
 |<xref:System.ServiceModel.WS2007FederationHttpBinding>|WS-Federation|Ninguno, (mensaje), mixto|(Ninguno), sesión confiable|(Ninguno), Sí|No|  
-|<xref:System.ServiceModel.NetTcpBinding>|.NET|Ninguno, (transporte), mensaje<br /><br /> Mixed|Sesión confiable, (transporte)|(Ninguno), Sí|Sí|  
+|<xref:System.ServiceModel.NetTcpBinding>|.NET|Ninguno, (transporte), mensaje<br /><br /> Mixto|Sesión confiable, (transporte)|(Ninguno), Sí|Sí|  
 |<xref:System.ServiceModel.NetNamedPipeBinding>|.NET|Ninguno,<br /><br /> (Transporte)|Ninguno, (transporte)|(Ninguno), Sí|Sí|  
 |<xref:System.ServiceModel.NetMsmqBinding>|.NET|Ninguno, mensaje, (transporte), ambos|(Ninguno)|(Ninguno), Sí|No|  
 |<xref:System.ServiceModel.NetPeerTcpBinding>|Del mismo nivel|Ninguno, mensaje, (transporte), mixto|(Ninguno)|(Ninguno)|Sí|  
-|<xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>|MSMQ|Ninguno, (transporte)|(Ninguno)|(Ninguno), Sí|no disponible|  
+|<xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>|MSMQ|Ninguno, (transporte)|(Ninguno)|(Ninguno), Sí|N/D|  
   
  La siguiente tabla explica las características que se encuentran en la tabla anterior.  
   

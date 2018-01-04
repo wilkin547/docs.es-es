@@ -13,11 +13,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 743e8cdf1a10efb7b99d6c6dcfcff611df6fbf4e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: cb8ba8145d371a8773d860e88f073bcc5b732f1c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="choosing-a-message-encoder"></a>Elección de un codificador de mensajes
 En este tema se analizan los criterios para elegir entre los codificadores de mensajes que se incluyen en [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]: binario, de texto y mecanismo de optimización de transmisión de mensajes (MTOM).  
@@ -26,7 +27,7 @@ En este tema se analizan los criterios para elegir entre los codificadores de me
   
  El elemento de enlace de codificación de mensajes se sienta bajo los elementos de enlace protocolares opcionales y sobre el elemento de enlace de transporte necesario. En el lado de salida, un codificador de mensajes serializa los <xref:System.ServiceModel.Channels.Message> de salida y los pasa al transporte. En el lado de entrada, un codificador de mensajes recibe la forma serializada de un <xref:System.ServiceModel.Channels.Message> desde el transporte y lo pasa a la capa de protocolo más alta, si estuviese presente, o a la aplicación, si no lo estuviese.  
   
- Al conectar a un cliente o servidor preexistente, puede que no tenga una opción sobre el uso de una codificación de mensajes determinada, puesto que necesita codificar sus mensajes de la manera que el otro lado espera. Sin embargo, si está escribiendo un servicio de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], puede exponer su servicio a través de varios extremos, donde cada uno utilizan una codificación de mensajes diferente. Esto permite a los clientes elegir la mejor codificación para hablar con su servicio sobre el extremo que es mejor para ellos, así como dar la flexibilidad a sus clientes para que elijan la codificación que más les convenga. La utilización de múltiples extremos también le permite combinar las ventajas de diferentes codificaciones de mensaje con otros elementos de enlace.  
+ Al conectar a un cliente o servidor preexistente, puede que no tenga una opción sobre el uso de una codificación de mensajes determinada, puesto que necesita codificar sus mensajes de la manera que el otro lado espera. Sin embargo, si está escribiendo un servicio de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], puede exponer su servicio a través de varios extremos, donde cada uno utilizan una codificación de mensajes diferente. Esto permite a los clientes elegir la mejor codificación para hablar con su servicio sobre el punto de conexión que es mejor para ellos, así como dar la flexibilidad a sus clientes para que elijan la codificación que más les convenga. La utilización de múltiples extremos también le permite combinar las ventajas de diferentes codificaciones de mensaje con otros elementos de enlace.  
   
 ## <a name="system-provided-encoders"></a>Codificadores proporcionados por el sistema  
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] incluye tres codificadores de mensajes, que representan las tres clases siguientes:  

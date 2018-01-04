@@ -19,11 +19,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e12f39a63a4f81e6deec4512a4e18ad2bda7e5e0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a7600ae42194b3333c404d217c2605a226df99e7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="power-management-in-windows-forms"></a>Administración de energía en formularios Windows Forms
 Las aplicaciones de formularios Windows Forms pueden aprovechar las ventajas de las características de administración de energía en el sistema operativo Windows. Las aplicaciones pueden supervisar el estado de energía de un equipo y realizar una acción cuando se produce un cambio de estado. Por ejemplo, si la aplicación se ejecuta en un equipo portátil, puede deshabilitar determinadas características de la aplicación cuando la carga de la batería del equipo se encuentra en un nivel determinado.  

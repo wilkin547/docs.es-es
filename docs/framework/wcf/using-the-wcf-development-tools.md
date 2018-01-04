@@ -13,21 +13,22 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9532363adafd492ca35e10e6d20c788ddf5b1d17
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 7d253f38fab21496dd305cc67e7b6e84846579f3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-the-wcf-development-tools"></a>Utilización de las herramientas de desarrollo de WCF
-En esta sección se describen las herramientas de desarrollo [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)][!INCLUDE[indigo1](../../../includes/indigo1-md.md)] que pueden ayudarle a desarrollar su servicio [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].  
+Esta sección se describe la [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] herramientas de desarrollo que pueden ayudarle a desarrollar su [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]servicio.  
   
- Puede utilizar las plantillas [!INCLUDE[indigo2](../../../includes/indigo2-md.md)][!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] como base para generar rápidamente su propio servicio y, a continuación, utilizar el host automático de servicio [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] y el cliente de prueba [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] para depurar y probar el servicio. Todas estas herramientas proporcionan una depuración y un ciclo de prueba rápido y estable, y descartan la necesidad de adaptarse a un modelo de hospedaje en una fase temprana.  
+ Puede usar el [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] plantillas como base para generar rápidamente su propio servicio y, a continuación, usar [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Host automático del servicio y [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] para depurar y probar el servicio de cliente de prueba. Todas estas herramientas proporcionan una depuración y un ciclo de prueba rápido y estable, y descartan la necesidad de adaptarse a un modelo de hospedaje en una fase temprana.  
   
 ## <a name="the-wcf-developer-tools"></a>Herramientas de desarrollador de WCF  
  [Plantillas de Visual Studio para WCF](../../../docs/framework/wcf/wcf-vs-templates.md)  
   
- Puede utilizar las plantillas predefinidas de proyecto y elemento [!INCLUDE[indigo2](../../../includes/indigo2-md.md)][!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] en [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] para generar rápidamente los servicios [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] y las aplicaciones que los rodean.  
+ Puede usar predefinido [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] plantillas de proyecto y elemento de [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] para generar rápidamente [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] servicios y aplicaciones que lo rodea.  
   
  [Host de servicio WCF (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)  
   

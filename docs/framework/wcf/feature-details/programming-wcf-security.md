@@ -17,11 +17,12 @@ caps.latest.revision: "25"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 5f61eb200c141f95b24fec1a424ce7b92d8559cc
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4b296d9bf9b52dfc8e782f6e324be1de8c76d349
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="programming-wcf-security"></a>Programación de la seguridad de WCF
 Este tema describe las tareas de programación fundamentales utilizadas para crear una aplicación de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] segura. Este tema trata únicamente la autenticación, confidencialidad e integridad, conocido colectivamente como *transferir seguridad*. Este tema no cubre la autorización (el control de acceso a recursos o servicios;) Para obtener información sobre la autorización, consulte [autorización](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md).  
@@ -112,4 +113,4 @@ Este tema describe las tareas de programación fundamentales utilizadas para cre
   
 ## <a name="see-also"></a>Vea también  
  [Programación básica de WCF](../../../../docs/framework/wcf/basic-wcf-programming.md)  
- [Escenarios comunes de seguridad](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md)
+ [Escenarios de seguridad comunes](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md)

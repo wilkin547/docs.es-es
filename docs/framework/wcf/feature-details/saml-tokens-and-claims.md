@@ -21,11 +21,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4e1d797b7c86f57f4f9cf4d604e264d3534a79bf
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: a2b35ba4da503663a2bb92597ed193c408e7c99b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="saml-tokens-and-claims"></a>Tokens y notificaciones SAML
 Lenguaje de marcado de aserciones de seguridad (SAML) *tokens* son representaciones XML de notificaciones. De forma predeterminada, los tokens SAML [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] usos en escenarios de seguridad federada son *tokens emitidos*.  
@@ -57,9 +58,9 @@ Lenguaje de marcado de aserciones de seguridad (SAML) *tokens* son representacio
  <xref:System.IdentityModel.Policy.IAuthorizationPolicy>  
  <xref:System.IdentityModel.Claims.ClaimSet>  
  [Federación](../../../../docs/framework/wcf/feature-details/federation.md)  
- [Cómo: crear un cliente federado](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)  
- [Cómo: configurar las credenciales en un servicio de federación](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)  
+ [Creación de un cliente federado](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)  
+ [Configuración de las credenciales en un servicio de federación](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)  
  [Administración de notificaciones y autorización con el modelo de identidad](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)  
- [Tokens y notificaciones](../../../../docs/framework/wcf/feature-details/claims-and-tokens.md)  
- [Creación de notificaciones y los valores de recurso](../../../../docs/framework/wcf/feature-details/claim-creation-and-resource-values.md)  
- [Cómo: crear una demanda personalizada](../../../../docs/framework/wcf/extending/how-to-create-a-custom-claim.md)
+ [Notificaciones y tokens](../../../../docs/framework/wcf/feature-details/claims-and-tokens.md)  
+ [Creación de notificaciones y valores de recursos](../../../../docs/framework/wcf/feature-details/claim-creation-and-resource-values.md)  
+ [Creación de una notificación personalizada](../../../../docs/framework/wcf/extending/how-to-create-a-custom-claim.md)

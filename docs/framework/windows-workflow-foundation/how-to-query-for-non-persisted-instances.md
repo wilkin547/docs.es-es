@@ -12,11 +12,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b1957db5af18a571e209c62332e95d844fa866f4
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: bde3ab1049edf6cb52a221225321f1e505a2491b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-query-for-non-persisted-instances"></a>Cómo: Consultar instancias no guardadas
 Cuando se crea una nueva instancia de un servicio y este tiene el comportamiento del almacén de instancias de flujo de trabajo de SQL definido, el host del servicio crea una entrada inicial para esa instancia en el almacén de instancias. Como consecuencia, cuando la instancia de servicio se guarda por primera vez, el comportamiento del almacén de instancias de flujo de trabajo de SQL almacena el estado de la instancia actual junto con los datos adicionales que se requieren para la activación, recuperación y control.  

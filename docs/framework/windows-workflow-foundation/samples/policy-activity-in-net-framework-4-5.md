@@ -12,11 +12,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 68c81b81ac8070cff539b52c75e1cd7ffb3e54b5
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 66968503d2f481647d999854358a246b4d963475
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="policy-activity-in-net-framework-45"></a>Actividad Policy en .NET Framework 4.5
 La actividad Policy4 permite utilizar objetos [!INCLUDE[wf2](../../../../includes/wf2-md.md)] de [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] en <xref:System.Workflow.Activities.Rules.RuleSet>(WF 3.5) directamente en [!INCLUDE[wf2](../../../../includes/wf2-md.md)] en [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] (WF 4.5) utilizando el motor de reglas que se distribuye con WF 3.5. Utilizando esta actividad, puede crear y ejecutar un objeto <xref:System.Workflow.Activities.Rules.RuleSet> de WF 3.5. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] el motor de reglas de WF 3.5 que se incluye como parte de Windows Workflow Foundation, lea el apartado Introducción al motor de reglas de Windows Workflow Foundation. Para obtener más información sobre cómo migrar las reglas de WF en [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)], lea [Guía de migración](../../../../docs/framework/windows-workflow-foundation/migration-guidance.md).  

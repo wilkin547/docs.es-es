@@ -13,11 +13,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 90713d1779566448547265d6487c113abdc84e00
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 25db6b46758e11c194952fbca03286891a5914d9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-implement-a-discovery-proxy"></a>Cómo: Implementar un proxy de detección
 En este tema se explica cómo implementar un proxy de detección. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]la característica de detección de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], consulte [información general sobre la detección de WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md). Puede implementarse un proxy de detección creando una clase que extienda la clase abstracta <xref:System.ServiceModel.Discovery.DiscoveryProxy>. Hay otras clases de compatibiildad definidas y usadas en este ejemplo. `OnResolveAsyncResult`, `OnFindAsyncResult` y `AsyncResult`. Estas clases implementan la interfaz <xref:System.IAsyncResult>. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<xref:System.IAsyncResult> vea [interfaz System.IAsyncResult](xref:System.IAsyncResult).
@@ -329,7 +330,7 @@ En este tema se explica cómo implementar un proxy de detección. [!INCLUDE[crab
     }  
     ```  
   
- Los métodos OnBegin.. / OnEnd.. métodos proporcionan la lógica para las operaciones de detección subsiguientes. Por ejemplo, los métodos <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginFind%2A> y <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndFind%2A> implementan la lógica de búsqueda para el proxy de detección. Cuando el proxy de detección recibe un mensaje de sondeo, estos métodos se ejecutan para devolver una respuesta al cliente. Puede modificar la lógica de búsqueda como desee; por ejemplo, puede incorporar una coincidencia de ámbito personalizada mediante algoritmos o un análisis de metadatos XML específico de la aplicación como parte de la operación de búsqueda.  
+ Los métodos OnBegin. / OnEnd. métodos proporcionan la lógica para las operaciones de detección subsiguientes. Por ejemplo, los métodos <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginFind%2A> y <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndFind%2A> implementan la lógica de búsqueda para el proxy de detección. Cuando el proxy de detección recibe un mensaje de sondeo, estos métodos se ejecutan para devolver una respuesta al cliente. Puede modificar la lógica de búsqueda como desee; por ejemplo, puede incorporar una coincidencia de ámbito personalizada mediante algoritmos o un análisis de metadatos XML específico de la aplicación como parte de la operación de búsqueda.  
   
 ### <a name="to-implement-the-asyncresult-class"></a>Para implementar la clase AsyncResult  
   
@@ -988,7 +989,7 @@ namespace Microsoft.Samples.Discovery
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Información general sobre la detección WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)  
- [Cómo: implementar un servicio reconocible que se registra con el Proxy de detección](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)  
- [Cómo: implementar una aplicación de cliente que utiliza el Proxy de detección para buscar un servicio](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)  
- [Cómo: probar el Proxy de detección](../../../../docs/framework/wcf/feature-details/how-to-test-the-discovery-proxy.md)
+ [Información general de Detección de WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)  
+ [Implementación de un servicio reconocible que se registra con el proxy de detección](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)  
+ [Implementación de una aplicación cliente que utiliza el proxy de detección para buscar un servicio](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)  
+ [Prueba del proxy de detección](../../../../docs/framework/wcf/feature-details/how-to-test-the-discovery-proxy.md)

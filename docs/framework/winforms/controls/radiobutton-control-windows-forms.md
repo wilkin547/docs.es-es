@@ -19,11 +19,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3b763217527a2306bfe648e3b327124408cea62f
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 206a2632221f2521992a43e72abc152923dd85a4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="radiobutton-control-windows-forms"></a>RadioButton (Control, formularios Windows Forms)
 Formularios Windows Forms `RadioButton` controles presentan un conjunto de dos o más opciones mutuamente excluyentes para el usuario. Aunque puede parecer que los botones de radio y casillas de verificación funcionan de forma similar, hay una diferencia importante: cuando un usuario selecciona un botón de opción, los otros botones de radio en el mismo grupo no se puede seleccionar también.  

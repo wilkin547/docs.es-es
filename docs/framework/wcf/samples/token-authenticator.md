@@ -13,11 +13,12 @@ caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7404087117ec45e09495897905094690c01fbaa8
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: d635a1d5122319e228feb4d8a362b7609129c9de
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="token-authenticator"></a>Autenticador de tokens
 Este ejemplo muestra cómo implementar un autenticador de tokens personalizado. Un autenticador de tokens en [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] se utiliza para validar el token utilizado con el mensaje, comprobar que concuerda con sí mismo, y autenticar la identidad asociada al token.  
@@ -40,7 +41,7 @@ Este ejemplo muestra cómo implementar un autenticador de tokens personalizado. 
   
  Este ejemplo también muestra cómo la identidad del llamador es accesible desde [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] después del proceso de autenticación del token personalizado.  
   
- El servicio expone un extremo único para comunicarse con el servicio, definido mediante el archivo de configuración App.config. El extremo está compuesto por una dirección, un enlace y un contrato. El enlace se configura con un `wsHttpBinding`estándar, con el conjunto de modo de seguridad en mensaje - el modo predeterminado de `wsHttpBinding`. Este ejemplo establece el `wsHttpBinding` estándar para utilizar la autenticación mediante el nombre de usuario del cliente. El servicio también configura el certificado del servicio utilizando comportamiento`serviceCredentials`. El comportamiento `securityCredentials` le permite especificar un certificado del servicio. Un cliente utiliza un certificado de servicio para autenticar el servicio y proporcionar protección al mensaje. La configuración siguiente hace referencia al certificado del host local instalado durante la configuración del ejemplo tal y como se describe en las siguientes instrucciones de configuración.  
+ El servicio expone un punto de conexión único para comunicarse con el servicio, definido mediante el archivo de configuración App.config. El punto de conexión está compuesto por una dirección, un enlace y un contrato. El enlace se configura con un `wsHttpBinding`estándar, con el conjunto de modo de seguridad en mensaje - el modo predeterminado de `wsHttpBinding`. Este ejemplo establece el `wsHttpBinding` estándar para utilizar la autenticación mediante el nombre de usuario del cliente. El servicio también configura el certificado del servicio utilizando comportamiento`serviceCredentials`. El comportamiento `securityCredentials` le permite especificar un certificado del servicio. Un cliente utiliza un certificado de servicio para autenticar el servicio y proporcionar protección al mensaje. La configuración siguiente hace referencia al certificado del host local instalado durante la configuración del ejemplo tal y como se describe en las siguientes instrucciones de configuración.  
   
 ```xml  
 <system.serviceModel>  
@@ -91,7 +92,7 @@ Este ejemplo muestra cómo implementar un autenticador de tokens personalizado. 
   </system.serviceModel>  
 ```  
   
- La configuración de extremo de cliente está compuesta por un nombre de configuración, una dirección absoluta para el extremo de servicio, el enlace y el contrato. El enlace del cliente se configura con el `Mode` adecuado y `clientCredentialType`.  
+ La configuración de punto de conexión de cliente está compuesta por un nombre de configuración, una dirección absoluta para el punto de conexión de servicio, el enlace y el contrato. El enlace del cliente se configura con el `Mode` adecuado y `clientCredentialType`.  
   
 ```xml  
 <system.serviceModel>  
@@ -367,7 +368,7 @@ static void DisplayIdentityInformation()
   
 7.  Copie los archivos de programa del cliente de la carpeta \client\bin\, bajo la carpeta específica del lenguaje, al equipo cliente.  
   
-8.  En el archivo Client.exe.config del equipo cliente, cambie el valor de la dirección del extremo para que coincida con la nueva dirección de su servicio.  
+8.  En el archivo Client.exe.config del equipo cliente, cambie el valor de la dirección del punto de conexión para que coincida con la nueva dirección de su servicio.  
   
 9. En el equipo cliente, inicie Client.exe desde un símbolo del sistema.  
   

@@ -16,11 +16,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 15de43cc83e92b781e44da703353bec98dbc2c6a
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 8c701b608071ebd9e8c29881000db8dcd2634f56
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="best-practices-for-queued-communication"></a>Procedimientos recomendados para la comunicación en cola
 En este tema se proporcionan procedimientos recomendados para la comunicación en cola en [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. Las secciones siguientes discuten los procedimientos recomendados desde una perspectiva del escenario.  
@@ -56,7 +57,7 @@ En este tema se proporcionan procedimientos recomendados para la comunicación e
  [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Control de mensajes dudosos](../../../../docs/framework/wcf/feature-details/poison-message-handling.md).  
   
 ## <a name="achieving-high-throughput"></a>Obtener un alto rendimiento  
- Para lograr un alto rendimiento en un solo extremo, utilice lo siguiente:  
+ Para lograr un alto rendimiento en un solo punto de conexión, utilice lo siguiente:  
   
 -   Procesamiento por lotes con transacciones El procesamiento por lotes con transacciones garantiza que muchos mensajes se puedan leer en una transacción única. Esto optimiza las confirmaciones de transacciones, aumentando el rendimiento total. El costo del procesamiento por lotes es que si se produce un error en un mensaje único dentro de un lote, se deshace el lote completo y se deben procesar los mensajes de uno en uno hasta que sea seguro de nuevo el procesamiento por lotes. En la mayoría de los casos, los mensajes dudosos son raros, así que el procesamiento por lotes es la forma preferida de aumentar el rendimiento del sistema, particularmente cuando se tienen otros administradores de recursos que participan en la transacción. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Mensajes en una transacción por lotes](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md).  
   
@@ -66,7 +67,7 @@ En este tema se proporcionan procedimientos recomendados para la comunicación e
   
  Al utilizar el procesamiento por lotes, sea consciente que la simultaneidad y la limitación de peticiones se traducen en los lotes simultáneos.  
   
- Para lograr un rendimiento y disponibilidad más altos, use un conjunto de servicios de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] que lean desde la cola. Esto requiere que todos estos servicios expongan el mismo contrato en el mismo extremo. El enfoque del conjunto funciona mejor para las aplicaciones que tienen tasas altas de producción de mensajes porque permite a varios servicios que lean desde la misma cola.  
+ Para lograr un rendimiento y disponibilidad más altos, use un conjunto de servicios de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] que lean desde la cola. Esto requiere que todos estos servicios expongan el mismo contrato en el mismo punto de conexión. El enfoque del conjunto funciona mejor para las aplicaciones que tienen tasas altas de producción de mensajes porque permite a varios servicios que lean desde la misma cola.  
   
  Al utilizar los conjuntos, sea consciente de que MSMQ 3.0 no admite las lecturas con transacciones remotas. MSMQ 4.0 admite las lecturas con transacciones remotas.  
   
@@ -92,14 +93,14 @@ En este tema se proporcionan procedimientos recomendados para la comunicación e
 -   Con la serialización XML, puede especificar el tipo conocido mediante la `KnownTypes` del atributo en el [ \<comportamiento >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md) elemento que, a continuación, se utiliza para determinar cómo deserializar el mensaje XML.  
   
 ## <a name="see-also"></a>Vea también  
- [Las colas en WCF](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)  
- [Cómo: intercambiar mensajes con extremos de WCF en cola](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)  
- [Cómo: intercambiar mensajes con extremos de WCF y aplicaciones de Message Queuing](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)  
- [Agrupar los mensajes en cola en una sesión](../../../../docs/framework/wcf/feature-details/grouping-queued-messages-in-a-session.md)  
- [Los mensajes en una transacción por lotes](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md)  
- [Uso de colas de mensajes no enviados para administrar los errores de transferencia de mensajes](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md)  
+ [Colas en WCF](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)  
+ [Intercambio de mensajes en cola con puntos de conexión de WCF](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)  
+ [Intercambio de mensajes con puntos de conexión de WCF y aplicaciones de Message Queue Server](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)  
+ [Agrupación de los mensajes en cola de una sesión](../../../../docs/framework/wcf/feature-details/grouping-queued-messages-in-a-session.md)  
+ [Mensajes por lotes en una transacción](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md)  
+ [Utilización de las colas de mensajes no enviados para administrar los errores en la transferencia de mensajes](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md)  
  [Control de mensajes dudosos](../../../../docs/framework/wcf/feature-details/poison-message-handling.md)  
- [Diferencias en las características de puesta en cola en Windows Vista, Windows Server 2003 y Windows XP](../../../../docs/framework/wcf/feature-details/diff-in-queue-in-vista-server-2003-windows-xp.md)  
- [Proteger mensajes mediante la seguridad de transporte](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md)  
- [Proteger mensajes mediante la seguridad del mensaje](../../../../docs/framework/wcf/feature-details/securing-messages-using-message-security.md)  
- [Solución de problemas de mensajería en cola](../../../../docs/framework/wcf/feature-details/troubleshooting-queued-messaging.md)
+ [Diferencias en las características de cola en Windows Vista, Windows Server 2003 y Windows XP](../../../../docs/framework/wcf/feature-details/diff-in-queue-in-vista-server-2003-windows-xp.md)  
+ [Protección de mensajes utilizando la seguridad de transporte](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md)  
+ [Protección de mensajes mediante la seguridad de mensajes](../../../../docs/framework/wcf/feature-details/securing-messages-using-message-security.md)  
+ [Solución de problemas de la mensajería en cola](../../../../docs/framework/wcf/feature-details/troubleshooting-queued-messaging.md)

@@ -17,14 +17,15 @@ caps.latest.revision: "32"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 19ff205fd1e76a5d2ee787522cc5d94916b0c11c
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: b741e421a8773e1a4b2d2ab7da5e119073e861ed
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="service-identity-and-authentication"></a>Identidad del servicio y autenticación
-Un servicio *identidad de extremo*es un valor generado desde el servicio de lenguaje de descripción de servicios Web (WSDL). Este valor, propagado a cualquier cliente, se utiliza para autenticar el servicio. Después de que el cliente inicie una comunicación con un extremo y el servicio se autentique a sí mismo ante el cliente, el cliente compara el valor de identidad del extremo con el valor real devuelto por el proceso de autenticación del extremo. Si coinciden, se asegura al cliente que se ha puesto en contacto con el punto de conexión de servicio esperado. Esto funciona como una protección contra *"phishing"* evitando que un cliente sea redirigido a un punto de conexión hospedado por un servicio malintencionado.  
+Un servicio *identidad de extremo*es un valor generado desde el servicio de lenguaje de descripción de servicios Web (WSDL). Este valor, propagado a cualquier cliente, se utiliza para autenticar el servicio. Después de que el cliente inicie una comunicación con un punto de conexión y el servicio se autentique a sí mismo ante el cliente, el cliente compara el valor de identidad del punto de conexión con el valor real devuelto por el proceso de autenticación del punto de conexión. Si coinciden, se asegura al cliente que se ha puesto en contacto con el punto de conexión de servicio esperado. Esto funciona como una protección contra *"phishing"* evitando que un cliente sea redirigido a un punto de conexión hospedado por un servicio malintencionado.  
   
  Para una aplicación de ejemplo que muestra el valor de identidad, vea [ejemplo de identidad de servicio](../../../../docs/framework/wcf/samples/service-identity-sample.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]los extremos y direcciones de punto de conexión, vea [direcciones](../../../../docs/framework/wcf/feature-details/endpoint-addresses.md).  
   
@@ -77,7 +78,7 @@ Un servicio *identidad de extremo*es un valor generado desde el servicio de leng
  [!code-vb[C_Identity#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_identity/vb/source.vb#5)]  
   
 ## <a name="specifying-identity-at-the-client"></a>Especificación de la identidad en el cliente  
- En tiempo de diseño, un desarrollador cliente normalmente usa la [la herramienta de utilidad de metadatos de ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) para generar la configuración de cliente. El archivo de configuración generado (pensado para que lo utilice el cliente) contiene la identidad del servidor. Por ejemplo, el código siguiente se genera a partir de un servicio que especifica una identidad de DNS, tal y como se muestra en el ejemplo anterior. Observe que el valor de identidad de extremo del cliente coincide con el del servicio. En este caso, cuando el cliente recibe las credenciales de Windows (Kerberos) para el servicio, espera que el valor sea `contoso.com`.  
+ En tiempo de diseño, un desarrollador cliente normalmente usa la [la herramienta de utilidad de metadatos de ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) para generar la configuración de cliente. El archivo de configuración generado (pensado para que lo utilice el cliente) contiene la identidad del servidor. Por ejemplo, el código siguiente se genera a partir de un servicio que especifica una identidad de DNS, tal y como se muestra en el ejemplo anterior. Observe que el valor de identidad de punto de conexión del cliente coincide con el del servicio. En este caso, cuando el cliente recibe las credenciales de Windows (Kerberos) para el servicio, espera que el valor sea `contoso.com`.  
   
   
   
@@ -111,10 +112,10 @@ Un servicio *identidad de extremo*es un valor generado desde el servicio de leng
   
 -   UPN. UPN de la cuenta de servicio. El UPN aparece en el formulario `username` @ `domain`. Por ejemplo, cuando el servicio se ejecuta en una cuenta de usuario, puede ser `username@contoso.com`.  
   
- Especificar la identidad mediante programación es opcional (utilizando la propiedad <xref:System.ServiceModel.EndpointAddress.Identity%2A>). Si no se especifica ninguna identidad, y el tipo de credencial de cliente es Windows, el valor predeterminado es SPN con el valor establecido en la parte del nombre del host de la dirección del extremo de servicio prefijada con el literal "host/". Si no se especifica ninguna identidad y el tipo de credencial de cliente es un certificado, el valor predeterminado es `Certificate`. Esto se aplica a la seguridad de nivel de mensaje y transporte.  
+ Especificar la identidad mediante programación es opcional (utilizando la propiedad <xref:System.ServiceModel.EndpointAddress.Identity%2A>). Si no se especifica ninguna identidad, y el tipo de credencial de cliente es Windows, el valor predeterminado es SPN con el valor establecido en la parte del nombre del host de la dirección del punto de conexión de servicio prefijada con el literal "host/". Si no se especifica ninguna identidad y el tipo de credencial de cliente es un certificado, el valor predeterminado es `Certificate`. Esto se aplica a la seguridad de nivel de mensaje y transporte.  
   
 ## <a name="identity-and-custom-bindings"></a>Identidad y enlaces personalizados  
- Dado que la identidad de un servicio depende del tipo de enlace utilizado, asegúrese de que se expone una identidad adecuada al crear un enlace personalizado. Por ejemplo, en el siguiente ejemplo de código, la identidad expuesta no es compatible con el tipo de seguridad, porque la identidad del enlace de arranque de conversación segura no coincide con la identidad del enlace en el extremo. El enlace de conversación segura establece la identidad DNS, mientras que <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement> establece la identidad UPN o SPN.  
+ Dado que la identidad de un servicio depende del tipo de enlace utilizado, asegúrese de que se expone una identidad adecuada al crear un enlace personalizado. Por ejemplo, en el siguiente ejemplo de código, la identidad expuesta no es compatible con el tipo de seguridad, porque la identidad del enlace de arranque de conversación segura no coincide con la identidad del enlace en el punto de conexión. El enlace de conversación segura establece la identidad DNS, mientras que <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement> establece la identidad UPN o SPN.  
   
  [!code-csharp[C_Identity#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_identity/cs/source.cs#8)]
  [!code-vb[C_Identity#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_identity/vb/source.vb#8)]  
@@ -122,11 +123,11 @@ Un servicio *identidad de extremo*es un valor generado desde el servicio de leng
  [!INCLUDE[crabout](../../../../includes/crabout-md.md)]la pila de elementos correctamente para un enlace personalizado de enlace, consulte [crear enlaces](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]crear un enlace personalizado con el <xref:System.ServiceModel.Channels.SecurityBindingElement>, consulte [Cómo: crear un SecurityBindingElement para un modo de autenticación especificado](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Cómo: crear un enlace personalizado mediante SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)  
- [Cómo: crear un SecurityBindingElement para un modo de autenticación especificado](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)  
- [Cómo: crear un comprobador de identidad de cliente personalizada](../../../../docs/framework/wcf/extending/how-to-create-a-custom-client-identity-verifier.md)  
- [Al seleccionar un tipo de credencial](../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)  
- [Trabajar con certificados](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
+ [Creación de un enlace personalizado mediante SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)  
+ [Creación de un SecurityBindingElement para un modo de autenticación especificado](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)  
+ [Creación de un comprobador de identidad de cliente personalizado](../../../../docs/framework/wcf/extending/how-to-create-a-custom-client-identity-verifier.md)  
+ [Selección de tipos de credenciales](../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)  
+ [Trabajo con certificados](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
  [Herramienta de utilidad de metadatos de ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)  
- [Crear enlaces definidos por el usuario](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md)  
- [Cómo: recuperar la huella digital de un certificado](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)
+ [Creación de enlaces definidos por el usuario](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md)  
+ [Recuperación de la huella digital de un certificado](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)

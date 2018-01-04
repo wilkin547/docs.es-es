@@ -13,11 +13,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 56b6252188854374b9e0eddd7aca53daba6f6086
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 094c962e2576653fc8c9de4c0dece912fcaa07f1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="correlation-overview"></a>Información general de correlación
 Correlación es el mecanismo para relacionar mensajes de servicio de flujo de trabajo entre sí o con el estado de instancia de aplicación, como una respuesta con una solicitud inicial o un identificador de orden determinado con el estado persistente de un flujo de trabajo de procesamiento del orden. En este tema, se proporciona información general sobre la correlación. Los otros temas de esta sección proporcionan información adicional para cada tipo de correlación.  
@@ -36,7 +37,7 @@ Correlación es el mecanismo para relacionar mensajes de servicio de flujo de tr
  La correlación basada en contenidos usa cierta información en el mensaje para asociarlo a una instancia determinada. Al contrario que la correlación basada en protocolos, la correlación basada en contenidos requiere que el autor de la aplicación establezca explícitamente dónde se pueden encontrar estos datos en cada mensaje relacionado. Las actividades que usan correlación basada en contenidos especifican estos datos de mensaje utilizando <xref:System.ServiceModel.MessageQuerySet>. La correlación basada en contenidos es útil al comunicarse con servicios que no usan uno de los enlaces de contexto, como <xref:System.ServiceModel.BasicHttpContextBinding>. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]correlación basada en contenido, consulte [basada en contenido](../../../../docs/framework/wcf/feature-details/content-based-correlation.md). Ejemplo de código, vea la [correlación basada en contenido](../../../../docs/framework/windows-workflow-foundation/samples/content-based-correlation.md) y [correlacionado calculadora](../../../../docs/framework/windows-workflow-foundation/samples/correlated-calculator.md) ejemplos.  
   
 ## <a name="see-also"></a>Vea también  
- [Correlación basada en contenido](../../../../docs/framework/windows-workflow-foundation/samples/content-based-correlation.md)  
+ [Correlación basada en contenidos](../../../../docs/framework/windows-workflow-foundation/samples/content-based-correlation.md)  
  [Calculadora correlacionada](../../../../docs/framework/windows-workflow-foundation/samples/correlated-calculator.md)  
  [Dúplex duradero &#91; Ejemplos de WF &#93;](../../../../docs/framework/windows-workflow-foundation/samples/durable-duplex.md)  
  [NetContextExchangeCorrelation](http://msdn.microsoft.com/en-us/93c74a1a-b9e2-46c6-95c0-c9b0e9472caf)

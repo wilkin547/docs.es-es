@@ -14,11 +14,12 @@ caps.latest.revision: "7"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 7ae79ad13b360a61e1d9b10f94dff5a37aae1d89
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 3ef101a9a5f78e1b85ac7cb983b4766088b83317
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="routing-scenarios"></a>Escenarios de enrutamiento
 Aunque el servicio de enrutamiento es muy personalizable, puede ser un desafío para diseñar una lógica de enrutamiento eficaz al crear una nueva configuración desde el principio.  Sin embargo, hay varios escenarios comunes que sigue la mayoría de las configuraciones del servicio de enrutamiento. Aunque puede que estos escenarios no se apliquen directamente a su configuración concreta, el hecho de saber cómo se puede configurar el servicio de enrutamiento para administrar estos escenarios le ayudará a entender el servicio de enrutamiento.  
@@ -77,13 +78,13 @@ Aunque el servicio de enrutamiento es muy personalizable, puede ser un desafío 
  Para los pasos utilizados para configurar el control de errores, vea [How To: control de errores](../../../../docs/framework/wcf/feature-details/how-to-error-handling.md). Para obtener un ejemplo de la implementación del control de errores, consulte el [el protocolo de puente y el control de errores](../../../../docs/framework/wcf/samples/bridging-and-error-handling.md) y [avanzada de tratamiento de errores](../../../../docs/framework/wcf/samples/advanced-error-handling.md) ejemplos.  
   
 ### <a name="in-this-section"></a>En esta sección  
- [Cómo: Servicio de control de versiones](../../../../docs/framework/wcf/feature-details/how-to-service-versioning.md)  
+ [Control de versiones del servicio](../../../../docs/framework/wcf/feature-details/how-to-service-versioning.md)  
   
- [Cómo: Particionar datos de servicio](../../../../docs/framework/wcf/feature-details/how-to-service-data-partitioning.md)  
+ [Partición de datos de servicio](../../../../docs/framework/wcf/feature-details/how-to-service-data-partitioning.md)  
   
- [Cómo: Actualizar de dinámicos](../../../../docs/framework/wcf/feature-details/how-to-dynamic-update.md)  
+ [Actualización dinámica](../../../../docs/framework/wcf/feature-details/how-to-dynamic-update.md)  
   
- [Cómo: Control de errores](../../../../docs/framework/wcf/feature-details/how-to-error-handling.md)  
+ [Control de errores](../../../../docs/framework/wcf/feature-details/how-to-error-handling.md)  
   
 ## <a name="see-also"></a>Vea también  
  [Introducción al enrutamiento](../../../../docs/framework/wcf/feature-details/routing-introduction.md)

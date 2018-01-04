@@ -13,11 +13,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 191baa2df4a6a5a4fe8139e8b7ad36bd1c60b40d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: b4d81583a8dfc2c48fb9b7533f071495b562615e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="limiting-message-distribution"></a>Limitación de la distribución de mensajes
 El canal del mismo nivel es, por diseño, una malla de difusión. Su modelo de distribución básico implica la distribución de cada mensaje enviado por cualquier miembro de una malla a todos los demás miembros de esa malla. Esto es ideal en situaciones en las que cada mensaje generado por un miembro es relevante y útil para todos los demás miembros (por ejemplo, en un salón de chat). Sin embargo, muchas aplicaciones tienen una necesidad ocasional de limitar la distribución de mensajes. Por ejemplo, si un nuevo miembro se une a una malla y desea recuperar el último mensaje enviado a través de la malla, esta solicitud no necesita ser distribuida a cada miembro. La solicitud podría limitarse a los vecinos próximos o podrían filtrarse los mensajes generados localmente. Los mensajes también se pueden enviar a un nodo individual de la malla. En este tema se analiza el uso del número de saltos, de un filtro de propagación de mensajes, de un filtro local o de una conexión directa para controlar la forma en que los mensajes se reenvían a lo largo de la malla, y se proporcionan instrucciones de carácter general para elegir un enfoque.  

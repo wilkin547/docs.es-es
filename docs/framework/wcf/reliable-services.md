@@ -19,11 +19,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f8bc4e68e705691db0c6fcd0e8be0447af73ec42
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 408801e28fec71f133c2dddd3f30b2509ab5896c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="reliable-services"></a>Servicios de confianza
 Las colas y las sesiones de confianza son las características de [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] que implementan la mensajería de confianza. En este tema se explican las características de mensajería confiable de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].  
@@ -55,5 +56,5 @@ Las colas y las sesiones de confianza son las características de [!INCLUDE[indi
  La separación, acoplada con las transferencias de mensaje de confianza entre colas, permite que las aplicaciones que están acopladas se comuniquen de forma fiable. A diferencia de las sesiones de confianza, el origen y el destino no tienen que ejecutarse a la vez. Esto habilita escenarios de forma implícita allí donde se usan las colas como un mecanismo de nivelación de carga cuando la tasa de origen de la producción de mensajes y la tasa de destino de consumo de mensajes no coinciden. [!INCLUDE[crabout](../../../includes/crabout-md.md)]las colas, consulte [colas en WCF](../../../docs/framework/wcf/feature-details/queues-in-wcf.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Información general de las sesiones confiables](../../../docs/framework/wcf/feature-details/reliable-sessions-overview.md)  
- [Las colas en WCF](../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)
+ [Información general de sesiones de confianza](../../../docs/framework/wcf/feature-details/reliable-sessions-overview.md)  
+ [Colas en WCF](../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)

@@ -13,11 +13,12 @@ caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d1364aa4284bcc858a9164f78e14daecc1a3ad54
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 3c50bbc54d56d3fdc7a848af0e77cfbb2c15c9bb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="queuing-in-wcf"></a>Las colas en WCF
 Esta sección describe cómo utilizar la comunicación en cola en [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
@@ -115,9 +116,9 @@ Esta sección describe cómo utilizar la comunicación en cola en [!INCLUDE[indi
 ### <a name="sample-code"></a>Código de ejemplo  
  Si desea obtener instrucciones paso a paso sobre cómo escribir servicios WCF que usen MSMQ, vea los temas siguientes:  
   
--   [Cómo: intercambiar mensajes con extremos de WCF y aplicaciones de Message Queuing](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)  
+-   [Intercambio de mensajes con puntos de conexión de WCF y aplicaciones de Message Queue Server](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)  
   
--   [Cómo: intercambiar mensajes con extremos de WCF en cola](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)  
+-   [Intercambio de mensajes en cola con puntos de conexión de WCF](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)  
   
  Si desea obtener un ejemplo de código completo que muestre el uso de MSMQ en WCF, vea los temas siguientes:  
   
@@ -125,9 +126,9 @@ Esta sección describe cómo utilizar la comunicación en cola en [!INCLUDE[indi
   
 -   [Comunicación en cola volátil](../../../../docs/framework/wcf/samples/volatile-queued-communication.md)  
   
--   [Colas de mensajes no enviados](../../../../docs/framework/wcf/samples/dead-letter-queues.md)  
+-   [Colas de mensajes fallidos](../../../../docs/framework/wcf/samples/dead-letter-queues.md)  
   
--   [Las sesiones y colas](../../../../docs/framework/wcf/samples/sessions-and-queues.md)  
+-   [Sesiones y colas](../../../../docs/framework/wcf/samples/sessions-and-queues.md)  
   
 -   [Comunicación bidireccional](../../../../docs/framework/wcf/samples/two-way-communication.md)  
   
@@ -135,8 +136,8 @@ Esta sección describe cómo utilizar la comunicación en cola en [!INCLUDE[indi
   
 -   [SRMP](../../../../docs/framework/wcf/samples/srmp.md)  
   
--   [Seguridad de mensajes mediante Message Queue Server](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)  
+-   [Seguridad de mensajes mediante Message Queuing](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)  
   
 ## <a name="see-also"></a>Vea también  
- [Extremos de servicio y direccionamiento de la cola](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md)  
- [Alojamiento Web de una aplicación en cola](../../../../docs/framework/wcf/feature-details/web-hosting-a-queued-application.md)
+ [Puntos de conexión de servicio y direccionamiento de la cola](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md)  
+ [Alojamiento web de una aplicación en cola](../../../../docs/framework/wcf/feature-details/web-hosting-a-queued-application.md)

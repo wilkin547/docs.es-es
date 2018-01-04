@@ -14,11 +14,12 @@ caps.latest.revision: "37"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: adba148a6e61437ba4e4089efb7a77efe3a785a0
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: f8beb306321c5cf334951d54dd8da80892005c90
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="basic-data-contract"></a>Contrato de datos básico
 Este ejemplo muestra cómo implementar un contrato de datos. Los contratos de datos le permiten pasar los datos estructurados hacia y desde los servicios. En este ejemplo se basa en el [Introducción](../../../../docs/framework/wcf/samples/getting-started-sample.md) pero utiliza números complejos en lugar de los tipos numéricos básicos.  

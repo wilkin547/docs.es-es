@@ -13,11 +13,12 @@ caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5c238d4c923b00a6c3387caa9bdafd69b126753c
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 37dea97db8816f68f0331580cfa21daed7f69914
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wcf-analytic-tracing"></a>Traza analítica de WCF
 Este ejemplo muestra cómo agregar sus propios eventos de seguimiento en el flujo de seguimientos analíticos que [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] escribe en ETW en [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]. Los seguimientos analíticos pretenden facilitar la visibilidad en los servicios sin que el rendimiento se vea penalizado. En este ejemplo se muestra cómo utilizar las API <xref:System.Diagnostics.Eventing?displayProperty=nameWithType> para escribir eventos que se integran con los servicios de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
@@ -45,7 +46,7 @@ Este ejemplo muestra cómo agregar sus propios eventos de seguimiento en el fluj
 ## <a name="custom-event-details"></a>Detalles de eventos personalizados  
  El manifiesto del proveedor de eventos de ETW de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] define tres eventos que están diseñados para ser emitidos por los autores de servicios de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] desde dentro del código del servicio. La siguiente tabla muestra un desglose de los tres eventos:  
   
-|Evento|Descripción|Id. de evento|  
+|evento|Descripción|Id. de evento|  
 |-----------|-----------------|--------------|  
 |UserDefinedInformationEventOccurred|Emita este evento cuando ocurra algo en un servicio que no constituya un problema. Por ejemplo, podría emitir un evento después de realizar una llamada a una base de datos correctamente.|301|  
 |UserDefinedWarningOccurred|Emita este evento cuando se produzca un problema que pueda provocar un error en el futuro. Por ejemplo, puede emitir un evento de advertencia cuando se produce un error en una llamada a una base de datos pero se pudo recuperar retirándose a un almacén de datos redundante.|302|  

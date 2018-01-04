@@ -20,11 +20,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7bb3247f531a0dac83657e118fb53ebaf708ec9a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 603b76c999933f177a9e48ddb819562b8e4dd8f8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="vector-graphics-overview"></a>Información general acerca de gráficos vectoriales
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]dibuja líneas, rectángulos y otras formas en un sistema de coordenadas. Puede elegir entre una variedad de sistemas de coordenadas, pero el sistema de coordenadas predeterminado tiene el origen en la esquina superior izquierda con el eje x apuntando hacia la derecha y el eje y apuntando hacia abajo. La unidad de medida en el sistema de coordenadas predeterminado es el píxel.  

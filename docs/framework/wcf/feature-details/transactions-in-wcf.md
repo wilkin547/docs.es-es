@@ -16,23 +16,24 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ccf6243657e0a1fe9222a03ef113261339a18298
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 84b2a869b8a10a45c195cb64e95b82492e2d18c3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="transactions-in-wcf"></a>Transacciones en WCF
 La característica de transacciones de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] permite a varios componentes participar simultáneamente en una operación de datos. Los temas de esta sección examinan en detalle esta característica.  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Información general de las transacciones de Windows Communication Foundation](../../../../docs/framework/wcf/feature-details/transactions-overview.md)  
+ [Información general sobre las transacciones de Windows Communication Foundation](../../../../docs/framework/wcf/feature-details/transactions-overview.md)  
  Información general de la característica de transacciones proporcionada por [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
   
  [Modelos de transacción](../../../../docs/framework/wcf/feature-details/transaction-models.md)  
  Compara varios modelos de programación de transacciones proporcionados por Microsoft.  
   
- [Uso de WS-AtomicTransaction](../../../../docs/framework/wcf/feature-details/using-ws-atomictransaction.md)  
+ [Utilización de WS-AtomicTransaction](../../../../docs/framework/wcf/feature-details/using-ws-atomictransaction.md)  
  Describe WS-AtomicTransaction (WS-AT), un protocolo de propagación de transacción interoperable que se implementa en [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
   
  [Compatibilidad transaccional en System.ServiceModel](../../../../docs/framework/wcf/feature-details/transactional-support-in-system-servicemodel.md)  
@@ -44,4 +45,4 @@ La característica de transacciones de [!INCLUDE[indigo1](../../../../includes/i
  [Programación básica de WCF](../../../../docs/framework/wcf/basic-wcf-programming.md)  
   
 ## <a name="see-also"></a>Vea también  
- [Información general de las sesiones confiables](../../../../docs/framework/wcf/feature-details/reliable-sessions-overview.md)
+ [Información general de sesiones de confianza](../../../../docs/framework/wcf/feature-details/reliable-sessions-overview.md)

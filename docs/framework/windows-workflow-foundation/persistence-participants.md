@@ -12,11 +12,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: bc2a6da9a43e29091c4ff9d086e9259594a01718
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 5b85acf2e3c4d885988e92948481182b7cf8c32c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="persistence-participants"></a>Participantes de persistencia
 Un participante de persistencia puede tomar parte en una operación de persistencia (guardar o cargar) desencadenada por un host de la aplicación. El [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] se distribuye con dos clases abstractas, **PersistenceParticipant** y **PersistenceIOParticipant**, que puede usar para crear un participante de persistencia. Un participante de persistencia se deriva de una de estas clases, implementa los métodos de interés y, a continuación, agrega una instancia de la clase a la colección <xref:System.ServiceModel.Activities.WorkflowServiceHost.WorkflowExtensions%2A> del objeto <xref:System.ServiceModel.Activities.WorkflowServiceHost>. El host de la aplicación puede buscar estas extensiones de flujo de trabajo cuando se conserve una instancia de flujo de trabajo e invocar los métodos apropiados en los participantes de persistencia en los momentos adecuados.  

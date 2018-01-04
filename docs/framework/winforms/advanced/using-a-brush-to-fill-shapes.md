@@ -17,11 +17,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 057bc7bbfb9c1653fd4857ccc43fb6fc324e4c92
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 15c68f2772357da0828bae367a80f1324b89a5bf
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-a-brush-to-fill-shapes"></a>Utilizar un pincel para rellenar formas
 A [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] <xref:System.Drawing.Brush> objeto se usa para rellenar el interior de una forma cerrada. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]define varios estilos de relleno: color sólido, patrón de trama, textura de imagen y degradado de color.  

@@ -13,11 +13,12 @@ caps.latest.revision: "24"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cde8966e89a22b19109688d5da0ff5b45eee55ef
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: bc2e179109a8015a16684c20e3a1ef46b781b8f0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="service-identity-sample"></a>Ejemplo de identidad de servicio
 Este ejemplo de identidad de servicio muestra cómo establecer la identidad para un servicio. En el momento del diseño, un cliente puede recuperar la identidad mediante los metadatos del servicio y, en el tiempo de ejecución, el cliente puede autenticar la identidad del servicio. El concepto de identidad del servicio es permitir a un cliente autenticar un servicio antes de llamar a cualquiera de sus operaciones, protegiendo por lo tanto al cliente de llamadas no autenticadas. En una conexión segura, el servicio autentica también las credenciales de un cliente antes de permitirle acceso, pero éste no es el objetivo de este ejemplo. Vea los ejemplos en [cliente](../../../../docs/framework/wcf/samples/client.md) que muestran la autenticación del servidor.  
@@ -27,7 +28,7 @@ Este ejemplo de identidad de servicio muestra cómo establecer la identidad para
   
  Este ejemplo ilustra las siguientes características:  
   
--   Cómo establecer los tipos diferentes de identidad en extremos diferentes para un servicio. Cada tipo de identidad tiene funciones diferentes. El tipo de identidad para utilizar depende del tipo de credenciales de seguridad utilizado en el enlace del extremo.  
+-   Cómo establecer los tipos diferentes de identidad en extremos diferentes para un servicio. Cada tipo de identidad tiene funciones diferentes. El tipo de identidad para utilizar depende del tipo de credenciales de seguridad utilizado en el enlace del punto de conexión.  
   
 -   La identidad se puede establecer mediante declaración en configuración o de forma imperativa en el código. Normalmente para el cliente y el servicio debería utilizar la configuración para establecer la identidad.  
   
@@ -48,7 +49,7 @@ EndpointAddress epa = new EndpointAddress(dnsrelativeAddress,EndpointIdentity.Cr
 ep.Address = epa;  
 ```  
   
- La identidad también se puede especificar en la configuración en el archivo App.config. El ejemplo siguiente muestra cómo establecer la identidad de UPN (Nombre principal del usuario) para un extremo de servicio.  
+ La identidad también se puede especificar en la configuración en el archivo App.config. El ejemplo siguiente muestra cómo establecer la identidad de UPN (Nombre principal del usuario) para un punto de conexión de servicio.  
   
 ```xml  
 <endpoint address="upnidentity"  
@@ -154,7 +155,7 @@ class CustomIdentityVerifier : IdentityVerifier
   
 7.  Copie el archivo Service.cer del directorio de servicio al directorio del cliente en el equipo cliente.  
   
-8.  En el archivo Client.exe.config del equipo cliente, cambie el valor de la dirección del extremo para que coincida con la nueva dirección de su servicio. Hay varias instancias que deben cambiarse.  
+8.  En el archivo Client.exe.config del equipo cliente, cambie el valor de la dirección del punto de conexión para que coincida con la nueva dirección de su servicio. Hay varias instancias que deben cambiarse.  
   
 9. En el cliente, ejecute ImportServiceCert.bat en un símbolo del sistema de Visual Studio abierto con privilegios de administrador. Así se importa el certificado del servicio del archivo Service.cer en el almacén CurrentUser - TrustedPeople.  
   

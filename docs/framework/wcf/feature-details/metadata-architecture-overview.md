@@ -14,11 +14,12 @@ caps.latest.revision: "24"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cc42aa130ce5da05739af43d287441d1644d55c3
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: a8890cc05ec6b0b889dafcb787e216b50a681876
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="metadata-architecture-overview"></a>Información general de la arquitectura de metadatos
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] proporciona una infraestructura enriquecida para exportar, publicar, recuperar e importar metadatos de servicio. Los servicios de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usan metadatos para describir cómo interactuar con los extremos del servicio de forma que las herramientas, como Svcutil.exe, puedan generar automáticamente código de cliente para tener acceso al servicio.  
@@ -49,11 +50,11 @@ ms.lasthandoff: 12/02/2017
  Para exportar metadatos WSDL personalizados o extensiones WSDL para los comportamientos del extremo, comportamientos del contrato o elementos de enlace en un extremo de servicio, puede implementar la interfaz <xref:System.ServiceModel.Description.IWsdlExportExtension>. <xref:System.ServiceModel.Description.WsdlExporter> examina una instancia de <xref:System.ServiceModel.Description.ServiceEndpoint> en búsqueda de elementos de enlace, comportamientos de operaciones, comportamientos de contratos y comportamientos de extremos que implementan la interfaz <xref:System.ServiceModel.Description.IWsdlExportExtension> al generar el documento WSDL.  
   
 ## <a name="publishing-service-metadata"></a>Publicación de metadatos de servicios  
- Los servicios de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] publican metadatos mediante la exposición de uno o más extremos de metadatos. La publicación de metadatos de servicios pone a disposición metadatos de servicios mediante protocolos normalizados, como MEX y solicitudes HTTP/GET. Los extremos de metadatos son similares a otros extremos de servicio en cuanto que tienen una dirección, un enlace y un contrato. Puede agregar extremos de metadatos a un host de servicio mediante configuración o código.  
+ Los servicios de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] publican metadatos mediante la exposición de uno o más extremos de metadatos. La publicación de metadatos de servicios pone a disposición metadatos de servicios mediante protocolos normalizados, como MEX y solicitudes HTTP/GET. Los extremos de metadatos son similares a otros extremos de servicio en cuanto que tienen una dirección, un enlace y un contrato. Puede agregar puntos de conexión de metadatos a un host de servicio mediante configuración o código.  
   
  Para publicar extremos de metadatos para un servicio de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], debe agregar primero una instancia del comportamiento del servicio <xref:System.ServiceModel.Description.ServiceMetadataBehavior> al servicio. Al agregar una instancia de <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType> a su servicio, aumenta su servicio con la capacidad de publicar los metadatos mediante la exposición de uno o más extremos de metadatos. Una vez que agregue el comportamiento del servicio <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType>, puede exponer extremos de metadatos que admitan el protocolo MEX o que respondan a solicitudes HTTP/GET.  
   
- Para agregar extremos de metadatos que utilizan el protocolo MEX, agregue extremos de servicio al host de servicio que utilicen el contrato de servicio denominado IMetadataExchange.[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] define la <xref:System.ServiceModel.Description.IMetadataExchange> interfaz que tiene este nombre de contrato de servicio. Los extremos de WS-MetadataExchange o los extremos MEX, pueden utilizar uno de los cuatro enlaces predeterminados que los métodos de generador estáticos exponen en la clase <xref:System.ServiceModel.Description.MetadataExchangeBindings> para coincidir con los enlaces predeterminados utilizados por herramientas de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], como Svcutil.exe. También puede configurar extremos de metadatos MEX mediante un enlace personalizado.  
+ Para agregar extremos de metadatos que utilizan el protocolo MEX, agregue extremos de servicio al host de servicio que utilicen el contrato de servicio denominado IMetadataExchange.[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] define la <xref:System.ServiceModel.Description.IMetadataExchange> interfaz que tiene este nombre de contrato de servicio. Los extremos de WS-MetadataExchange o los extremos MEX, pueden utilizar uno de los cuatro enlaces predeterminados que los métodos de generador estáticos exponen en la clase <xref:System.ServiceModel.Description.MetadataExchangeBindings> para coincidir con los enlaces predeterminados utilizados por herramientas de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], como Svcutil.exe. También puede configurar puntos de conexión de metadatos MEX mediante un enlace personalizado.  
   
  <xref:System.ServiceModel.Description.ServiceMetadataBehavior> usa un <xref:System.ServiceModel.Description.WsdlExporter?displayProperty=nameWithType> para exportar metadatos para todos los extremos de servicio al servicio. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]exportación de metadatos de un servicio, consulte [exportar e importar metadatos](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md).  
   
@@ -94,7 +95,7 @@ ms.lasthandoff: 12/02/2017
  Puede agregar compatibilidad para la importación de extensiones WSDL implementando la interfaz <xref:System.ServiceModel.Description.IWsdlImportExtension> y agregando, a continuación, su implementación a la propiedad <xref:System.ServiceModel.Description.WsdlImporter.WsdlImportExtensions%2A> de su instancia <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType>. El <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType> también puede cargar implementaciones de la interfaz <xref:System.ServiceModel.Description.IWsdlImportExtension?displayProperty=nameWithType> registrada en el archivo de configuración de la aplicación cliente.  
   
 ## <a name="dynamic-bindings"></a>Enlaces dinámicos  
- Puede actualizar dinámicamente el enlace que utiliza para crear un canal en un extremo de servicio en caso de que el enlace del extremo cambie o usted desee crear un canal en un extremo que utiliza el mismo contrato pero que tiene un enlace diferente. Puede utilizar la clase estática <xref:System.ServiceModel.Description.MetadataResolver> para recuperar e importar metadatos en tiempo de ejecución para extremos de servicio que implementan un contrato concreto. A continuación, puede utilizar los objetos <xref:System.ServiceModel.Description.ServiceEndpoint?displayProperty=nameWithType> importados para crear un cliente o generador de canales en el extremo deseado.  
+ Puede actualizar dinámicamente el enlace que utiliza para crear un canal en un punto de conexión de servicio en caso de que el enlace del punto de conexión cambie o usted desee crear un canal en un punto de conexión que utiliza el mismo contrato pero que tiene un enlace diferente. Puede utilizar la clase estática <xref:System.ServiceModel.Description.MetadataResolver> para recuperar e importar metadatos en tiempo de ejecución para extremos de servicio que implementan un contrato concreto. A continuación, puede utilizar los objetos <xref:System.ServiceModel.Description.ServiceEndpoint?displayProperty=nameWithType> importados para crear un cliente o generador de canales en el extremo deseado.  
   
 ## <a name="see-also"></a>Vea también  
  <xref:System.ServiceModel.Description>  
@@ -102,6 +103,6 @@ ms.lasthandoff: 12/02/2017
  [Exportación e importación de metadatos](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md)  
  [Publicación de metadatos](../../../../docs/framework/wcf/feature-details/publishing-metadata.md)  
  [Recuperación de metadatos](../../../../docs/framework/wcf/feature-details/retrieving-metadata.md)  
- [Uso de los metadatos](../../../../docs/framework/wcf/feature-details/using-metadata.md)  
+ [Utilización de los metadatos](../../../../docs/framework/wcf/feature-details/using-metadata.md)  
  [Consideraciones de seguridad con metadatos](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)  
- [Extender el sistema de metadatos](../../../../docs/framework/wcf/extending/extending-the-metadata-system.md)
+ [Extensión del sistema de metadatos](../../../../docs/framework/wcf/extending/extending-the-metadata-system.md)

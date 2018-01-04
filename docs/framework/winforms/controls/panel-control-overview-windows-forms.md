@@ -17,11 +17,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 62adba598f59b4662bfb4c51b868bad1aa2e53b2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a8855c88a0ec60cd0d44d73046e44c9614347d90
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="panel-control-overview-windows-forms"></a>Información general del control Panel (formularios Windows Forms)
 Formularios Windows Forms <xref:System.Windows.Forms.Panel> controles se utilizan para proporcionar un agrupamiento identificable para otros controles. Por lo general, utilice los paneles para subdividir un formulario por funciones. Por ejemplo, podría tener un formulario de pedido que especifica las opciones de envío de correo directo, como el servicio de transporte urgente que se va a usar. Agrupar todas las opciones en un panel proporciona al usuario una pista visual lógica. En tiempo de diseño todos los controles se pueden mover fácilmente: al mover el <xref:System.Windows.Forms.Panel> controlar, todos los controles que contiene se desplazan también. Pueden tener acceso a los controles agrupados en un panel a través de su <xref:System.Windows.Forms.Control.Controls%2A> propiedad. Esta propiedad devuelve una colección de <xref:System.Windows.Forms.Control> instancias, por lo que normalmente deberá convertir un control recuperan de esta manera a su tipo específico.  

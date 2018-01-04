@@ -13,11 +13,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d601a2dfb0daab4e54d6caac6940b4826cee0b01
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 7ed4f31e004ddeb69a29568b3892ab7379715457
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="message-inspectors"></a>Inspectores de mensaje
 Este ejemplo muestra cómo implementar y configurar los inspectores de mensaje de cliente y servicio.  
@@ -377,7 +378,7 @@ public bool ValidateRequest
 ```  
   
 ## <a name="adding-message-inspectors-imperatively"></a>Agregar imperiosamente inspectores de mensaje  
- Excepto a través de atributos (lo cual no se contempla en este ejemplo por la razón citada previamente) y configuración, los comportamientos se pueden agregar con cierta facilidad a un tiempo de ejecución de cliente y de servicio utilizando el código imperativo. En este ejemplo, esto se hace en la aplicación cliente para probar el inspector de mensaje de cliente. La clase `GenericClient` se deriva de <xref:System.ServiceModel.ClientBase%601>, que expone la configuración del extremo al código de usuario. Antes de que se abra el cliente implícitamente se puede cambiar la configuración del extremo, por ejemplo agregando comportamientos, como se muestra en el código siguiente. Agregar el comportamiento al servicio es principalmente el equivalente a la técnica de cliente mostrada aquí y se debe realizar antes de que el host del servicio se abra.  
+ Excepto a través de atributos (lo cual no se contempla en este ejemplo por la razón citada previamente) y configuración, los comportamientos se pueden agregar con cierta facilidad a un tiempo de ejecución de cliente y de servicio utilizando el código imperativo. En este ejemplo, esto se hace en la aplicación cliente para probar el inspector de mensaje de cliente. La clase `GenericClient` se deriva de <xref:System.ServiceModel.ClientBase%601>, que expone la configuración del extremo al código de usuario. Antes de que se abra el cliente implícitamente se puede cambiar la configuración del punto de conexión, por ejemplo agregando comportamientos, como se muestra en el código siguiente. Agregar el comportamiento al servicio es principalmente el equivalente a la técnica de cliente mostrada aquí y se debe realizar antes de que el host del servicio se abra.  
   
 ```  
 try  

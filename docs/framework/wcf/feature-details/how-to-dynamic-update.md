@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 70f9bb374405496c62650ee3fb715f059e91cd7c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 748286b4f6fa22b23423ff5c176c76d11fbe742d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-dynamic-update"></a>Cómo: Actualización dinámica
 Este tema describe los pasos básicos necesarios para crear y actualizar dinámicamente la configuración de enrutamiento. En este ejemplo, la configuración de enrutamiento inicial se obtiene del archivo de configuración y enruta todos los mensajes al servicio de calculadora de regularCalc; sin embargo, se actualiza posteriormente mediante programación para cambiar el extremo de destino del servicio de roundingCalc.  
@@ -32,7 +33,7 @@ Este tema describe los pasos básicos necesarios para crear y actualizar dinámi
   
 ### <a name="implement-initial-configuration"></a>Implementación de la configuración inicial  
   
-1.  Cree la configuración de servicio de enrutamiento básica especificando los extremos de servicio expuestos por el servicio. En el siguiente ejemplo, se define un extremo de servicio único que se utilizará para recibir mensajes. También se define un extremo de cliente que se usará para enviar mensajes a regularCalc.  
+1.  Cree la configuración de servicio de enrutamiento básica especificando los extremos de servicio expuestos por el servicio. En el siguiente ejemplo, se define un punto de conexión de servicio único que se utilizará para recibir mensajes. También se define un extremo de cliente que se usará para enviar mensajes a regularCalc.  
   
     ```xml  
     <services>  
@@ -59,7 +60,7 @@ Este tema describe los pasos básicos necesarios para crear y actualizar dinámi
     </client>  
     ```  
   
-2.  Defina el filtro usado para enrutar mensajes a los extremos del destino. En este ejemplo, se usa el filtro de MatchAll para enrutar todos los mensajes a regularCalcEndpoint definido previamente. En el siguiente ejemplo, se define el filtro y la tabla de filtros.  
+2.  Defina el filtro usado para enrutar mensajes a los puntos de conexión del destino. En este ejemplo, se usa el filtro de MatchAll para enrutar todos los mensajes a regularCalcEndpoint definido previamente. En el siguiente ejemplo, se define el filtro y la tabla de filtros.  
   
     ```xml  
     <filters>  
@@ -127,7 +128,7 @@ Este tema describe los pasos básicos necesarios para crear y actualizar dinámi
     }  
     ```  
   
-3.  Para actualizar la configuración de enrutamiento dinámicamente, debe crearse una nueva configuración de enrutamiento. Esto debe contener todos los extremos, filtros y tablas de filtros necesarios para la nueva configuración de enrutamiento, ya que reemplazará por completo la configuración de enrutamiento existente. Para usar la nueva configuración de enrutamiento, debe invocar <xref:System.ServiceModel.Routing.RoutingExtension.ApplyConfiguration%2A> y pasar la nueva configuración.  
+3.  Para actualizar la configuración de enrutamiento dinámicamente, debe crearse una nueva configuración de enrutamiento. Esto debe contener todos los puntos de conexión, filtros y tablas de filtros necesarios para la nueva configuración de enrutamiento, ya que reemplazará por completo la configuración de enrutamiento existente. Para usar la nueva configuración de enrutamiento, debe invocar <xref:System.ServiceModel.Routing.RoutingExtension.ApplyConfiguration%2A> y pasar la nueva configuración.  
   
      Agregue el siguiente código al bucle while definido previamente para permitir que el servicio se reconfigure en función de los datos proporcionados por el usuario.  
   

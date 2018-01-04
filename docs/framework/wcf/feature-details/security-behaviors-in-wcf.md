@@ -13,11 +13,12 @@ caps.latest.revision: "23"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: f338eff156646a2df063da84eead274a34a39159
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 19d67d99ddf6bab69aa1e5f993917142a4378105
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="security-behaviors-in-wcf"></a>Comportamientos de seguridad en WCF
 En [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], los comportamientos modifican el comportamiento de tiempo de ejecución en el nivel de servicio o en el nivel de extremo. ([!INCLUDE[crabout](../../../../includes/crabout-md.md)] comportamientos en general, vea [especificar el comportamiento de tiempo de ejecución de servicio](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md).) *Comportamientos de seguridad* permiten el control sobre las credenciales, la autenticación, autorización y registros de auditoría. Puede utilizar comportamientos mediante programación o a través de configuración. Este tema se centra en la configuración de los siguientes comportamientos relacionados con las funciones de seguridad:  
@@ -92,7 +93,7 @@ En [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], los comportamientos 
   
 -   Especifique el conjunto de identificadores URI válidos, agregando los URI a esta colección. Para ello, inserte un [ \<Agregar >](../../../../docs/framework/configure-apps/file-schema/wcf/add-of-allowedaudienceuris.md) para cada URI  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator>.  
+ [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator>.  
   
  [!INCLUDE[crabout](../../../../includes/crabout-md.md)]con este elemento de configuración, consulte [Cómo: configurar las credenciales en un servicio de federación](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md).  
   

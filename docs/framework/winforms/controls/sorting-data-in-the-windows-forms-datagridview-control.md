@@ -17,11 +17,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b4027f3ae604f2a3ff4996855fa6dd34d4de8ea2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a2327c6d9696bc5fb54943eb8bbce9d4795a378b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sorting-data-in-the-windows-forms-datagridview-control"></a>Ordenar datos en el control DataGridView de formularios Windows Forms
 De forma predeterminada, los usuarios pueden ordenar los datos en un `DataGridView` control haciendo clic en el encabezado de una columna del cuadro de texto. Puede modificar el `SortMode` propiedad de columnas concretas para permitir que los usuarios ordenen por otros tipos de columna cuando tiene sentido hacerlo. También puede ordenar los datos mediante programación por cualquier columna o por varias columnas.  

@@ -13,11 +13,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f5662089990ee2775d8e2399e2d5e7770bbf4364
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: fc92bd92f688ae2b12889779083142e6ddd481d9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="durable-issued-token-provider"></a>Proveedor de token emitido duradero
 Este ejemplo muestra cómo implementar un proveedor personalizado de tokens emitidos por el cliente.  
@@ -117,7 +118,7 @@ Este ejemplo muestra cómo implementar un proveedor personalizado de tokens emit
   
  El elemento `issuedTokenAuthentication` dentro del elemento `serviceCredentials` permite al servicio especificar las restricciones en los tokens y permite a los clientes presentarse durante la autenticación. Esta configuración especifica que el servicio acepta los tokens firmados por un certificado cuyo nombre de asunto sea CN=STS.  
   
- El Servicio de token de seguridad expone un solo extremo con el wsHttpBinding estándar. El Servicio de token de seguridad responde a las solicitudes de tokens de los clientes y, siempre que el cliente se autentique utilizando una cuenta de Windows, emite un token que contiene el nombre de usuario del cliente como una notificación en el token emitido. Como parte de la creación del token, el servicio de token de seguridad firma el token usando la clave privada asociada con el certificado de CN=STS. Además, crea una clave simétrica y la cifra utilizando la clave pública asociada con el certificado de CN=localhost. Para devolver el token al cliente, el servicio de token de seguridad devuelve también la clave simétrica. El cliente presenta el token emitido al servicio de la calculadora y demuestra que conoce la clave simétrica firmando el mensaje con esa clave.  
+ El Servicio de token de seguridad expone un solo punto de conexión con el wsHttpBinding estándar. El Servicio de token de seguridad responde a las solicitudes de tokens de los clientes y, siempre que el cliente se autentique utilizando una cuenta de Windows, emite un token que contiene el nombre de usuario del cliente como una notificación en el token emitido. Como parte de la creación del token, el servicio de token de seguridad firma el token usando la clave privada asociada con el certificado de CN=STS. Además, crea una clave simétrica y la cifra utilizando la clave pública asociada con el certificado de CN=localhost. Para devolver el token al cliente, el servicio de token de seguridad devuelve también la clave simétrica. El cliente presenta el token emitido al servicio de la calculadora y demuestra que conoce la clave simétrica firmando el mensaje con esa clave.  
   
 ## <a name="custom-client-credentials-and-token-provider"></a>Credenciales de cliente personalizadas y proveedor de tokens  
  Los pasos siguientes muestran cómo desarrollar un proveedor de tokens personalizado que almacena en caché los tokens emitidos y cómo integrarlo con el marco de seguridad de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  

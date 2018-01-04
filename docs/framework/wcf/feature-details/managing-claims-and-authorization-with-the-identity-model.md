@@ -19,11 +19,12 @@ caps.latest.revision: "20"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b69c17b9fcb14bbd70b60c32965fb1163c22e765
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: db0a304a908e906b635672eed1a84f0277284ad7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="managing-claims-and-authorization-with-the-identity-model"></a>Administración de notificaciones y autorización con el modelo de identidad
 La autorización es el proceso de determinar qué entidades tienen permiso para cambiar, ver o tener acceso a un recurso informático. Por ejemplo, en una empresa, solo se puede permitir a los administradores el acceso a los archivos de sus empleados. [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] admite dos mecanismos para realizar el procesamiento de la autorización. El primer mecanismo le permite controlar la autorización utilizando construcciones de Common Language Runtime (CLR). El segundo es un modelo basado en notificaciones conocido como el *modelo de identidad*. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usa el modelo de identidad para crear notificaciones mensajes entrantes; las clases del modelo de identidad se pueden extender para admitir nuevos tipos de notificación para esquemas personalizados de autorización. En este tema se presenta información general de los conceptos de programación principales de la característica Modelo de identidad, así como una lista de las clases más importantes que la característica utiliza.  
@@ -135,7 +136,7 @@ La autorización es el proceso de determinar qué entidades tienen permiso para 
  ![Administración de notificaciones y autorización](../../../../docs/framework/wcf/feature-details/media/xsi-recap.gif "xsi_recap")  
   
 ## <a name="wcf-and-identity-model"></a>WCF y el modelo de identidad  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] utiliza la infraestructura del modelo de identidad como la base para realizar la autorización. En [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior> clase le permite especificar *autorización* directivas como parte de un servicio. Dichas directivas de autorización se conocen como *directivas de autorización externas*, y pueden realizar procesamiento de reclamaciones basado en directiva local o mediante interacción con un servicio remoto. El Administrador de autorización, representado por la <xref:System.ServiceModel.ServiceAuthorizationManager> clase, evalúa las directivas de autorización externas junto con directivas de autorización que reconocen los distintos tipos (tokens) de credencial y rellena lo que se denomina un * contexto de autorización* con las notificaciones adecuadas para un mensaje entrante. El contexto de autorización está representando por la clase <xref:System.IdentityModel.Policy.AuthorizationContext>.  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] utiliza la infraestructura del modelo de identidad como la base para realizar la autorización. En [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior> clase le permite especificar *autorización* directivas como parte de un servicio. Dichas directivas de autorización se conocen como *directivas de autorización externas*, y pueden realizar procesamiento de reclamaciones basado en directiva local o mediante interacción con un servicio remoto. El Administrador de autorización, representado por la <xref:System.ServiceModel.ServiceAuthorizationManager> clase, evalúa las directivas de autorización externas junto con directivas de autorización que reconocen los distintos tipos (tokens) de credencial y rellena lo que se denomina un  *contexto de autorización* con las notificaciones adecuadas para un mensaje entrante. El contexto de autorización está representando por la clase <xref:System.IdentityModel.Policy.AuthorizationContext>.  
   
 ## <a name="identity-model-programming"></a>Programación del modelo de identidad  
  La tabla siguiente describe el modelo de objetos utilizado para programar las extensiones del modelo de identidad. Estas clases existen todas en los espacios de nombre <xref:System.IdentityModel.Policy> o <xref:System.IdentityModel.Claims>.  
@@ -180,12 +181,12 @@ La autorización es el proceso de determinar qué entidades tienen permiso para 
  <xref:System.IdentityModel.Policy>  
  <xref:System.IdentityModel.Tokens>  
  <xref:System.IdentityModel.Selectors>  
- [Tokens y notificaciones](../../../../docs/framework/wcf/feature-details/claims-and-tokens.md)  
- [Notificaciones y denegar el acceso a los recursos](../../../../docs/framework/wcf/feature-details/claims-and-denying-access-to-resources.md)  
- [Creación de notificaciones y los valores de recurso](../../../../docs/framework/wcf/feature-details/claim-creation-and-resource-values.md)  
- [Cómo: crear una demanda personalizada](../../../../docs/framework/wcf/extending/how-to-create-a-custom-claim.md)  
- [Cómo: comparar las notificaciones](../../../../docs/framework/wcf/extending/how-to-compare-claims.md)  
- [Cómo: crear una directiva de autorización personalizada](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-policy.md)  
- [Cómo: crear un administrador de autorización personalizado para un servicio](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)  
+ [Notificaciones y tokens](../../../../docs/framework/wcf/feature-details/claims-and-tokens.md)  
+ [Notificaciones y denegación de acceso a los recursos](../../../../docs/framework/wcf/feature-details/claims-and-denying-access-to-resources.md)  
+ [Creación de notificaciones y valores de recursos](../../../../docs/framework/wcf/feature-details/claim-creation-and-resource-values.md)  
+ [Creación de una notificación personalizada](../../../../docs/framework/wcf/extending/how-to-create-a-custom-claim.md)  
+ [Comparación de notificaciones](../../../../docs/framework/wcf/extending/how-to-compare-claims.md)  
+ [Creación de una directiva de autorización personalizada](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-policy.md)  
+ [Creación de un administrador de autorización personalizado para un servicio](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)  
  [Información general sobre seguridad](../../../../docs/framework/wcf/feature-details/security-overview.md)  
  [Autorización](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)

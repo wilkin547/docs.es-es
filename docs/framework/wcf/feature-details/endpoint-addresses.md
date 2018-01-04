@@ -17,14 +17,15 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3231e5b043dd0e65c09f25eed56341e660bf1f87
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 94610842cd801a54bba0266a4f658d8a4bb60dcd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="endpoint-addresses"></a>Direcciones de punto de conexión
-Cada punto de conexión tiene una dirección asociada a él, que se utiliza para ubicar e identificar el punto de conexión. Esta dirección está compuesta principalmente de un Identificador uniforme de recursos (URI), que especifica la ubicación del extremo. La dirección del extremo se representa en el modelo de programación de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] mediante la clase <xref:System.ServiceModel.EndpointAddress>, que contiene una propiedad <xref:System.ServiceModel.EndpointAddress.Identity%2A> opcional que permite la autenticación del extremo por parte otros extremos que intercambian mensajes con él, y un conjunto de propiedades <xref:System.ServiceModel.EndpointAddress.Headers%2A> opcionales, que definen cualquier otro encabezado SOAP requerido para alcanzar el servicio. Los encabezados opcionales proporcionan información de direccionamiento adicional y más detallada para identificar o interactuar con el extremo de servicio. La dirección de un extremo se representa en la conexión como una referencia de extremo (EPR) WS-Addressing.  
+Cada punto de conexión tiene una dirección asociada a él, que se utiliza para ubicar e identificar el punto de conexión. Esta dirección está compuesta principalmente de un Identificador uniforme de recursos (URI), que especifica la ubicación del punto de conexión. La dirección del extremo se representa en el modelo de programación de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] mediante la clase <xref:System.ServiceModel.EndpointAddress>, que contiene una propiedad <xref:System.ServiceModel.EndpointAddress.Identity%2A> opcional que permite la autenticación del extremo por parte otros extremos que intercambian mensajes con él, y un conjunto de propiedades <xref:System.ServiceModel.EndpointAddress.Headers%2A> opcionales, que definen cualquier otro encabezado SOAP requerido para alcanzar el servicio. Los encabezados opcionales proporcionan información de direccionamiento adicional y más detallada para identificar o interactuar con el extremo de servicio. La dirección de un punto de conexión se representa en la conexión como una referencia de punto de conexión (EPR) WS-Addressing.  
   
 ## <a name="uri-structure-of-an-address"></a>Estructura URI de una Dirección  
  El URI de la dirección de la mayoría de transportes tiene cuatro partes. Por ejemplo, las cuatro partes del URI http://www.fabrikam.com:322/mathservice.svc/secureEndpoint se puede dividir en los siguientes elementos:  
@@ -38,7 +39,7 @@ Cada punto de conexión tiene una dirección asociada a él, que se utiliza para
 -   Ruta de acceso: /mathservice.svc/secureEndpoint  
   
 ## <a name="defining-an-address-for-a-service"></a>Definición de una dirección para un Servicio  
- La dirección de extremo de un servicio puede especificarse de manera imperativa mediante código o de manera declarativa mediante configuración. Normalmente, no resulta muy práctico definir los extremos en el código ya que los enlaces y las direcciones de un servicio implementado son, por lo general, diferentes de los utilizados durante el desarrollo del servicio. Generalmente, es más práctico definir extremos de servicio mediante la configuración en lugar del código. Mantener la información del enlace y el direccionamiento fuera del código permite cambiar los extremos sin tener que recompilar ni implementar la aplicación.  
+ La dirección de extremo de un servicio puede especificarse de manera imperativa mediante código o de manera declarativa mediante configuración. Normalmente, no resulta muy práctico definir los puntos de conexión en el código ya que los enlaces y las direcciones de un servicio implementado son, por lo general, diferentes de los utilizados durante el desarrollo del servicio. Generalmente, es más práctico definir puntos de conexión de servicio mediante la configuración en lugar del código. Mantener la información del enlace y el direccionamiento fuera del código permite cambiar los extremos sin tener que recompilar ni implementar la aplicación.  
   
 ### <a name="defining-an-address-in-configuration"></a>Definición de una dirección mediante configuración  
  Para definir un punto de conexión en un archivo de configuración, utilice la [ \<extremo >](../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-element.md) elemento. Para obtener más información y un ejemplo, vea [al especificar una dirección de punto de conexión](../../../../docs/framework/wcf/specifying-an-endpoint-address.md).  
@@ -112,7 +113,7 @@ Cada punto de conexión tiene una dirección asociada a él, que se utiliza para
   
 -   Para especificar la dirección del agente de escuchas de servicio, la ubicación en la que el extremo realiza escuchas de mensajes,  
   
--   Para especificar el filtro de dirección de SOAP, la dirección que espera un extremo como un encabezado SOAP.  
+-   Para especificar el filtro de dirección de SOAP, la dirección que espera un punto de conexión como un encabezado SOAP.  
   
  Se pueden especificar los valores de cada uno de estos propósitos por separado, permitiendo varias extensiones de direccionamiento que cubren escenarios útiles:  
   
@@ -123,7 +124,7 @@ Cada punto de conexión tiene una dirección asociada a él, que se utiliza para
  La dirección de transporte especificada por `via` es la ubicación a la que se debería enviar inicialmente un mensaje de camino a alguna otra dirección remota especificada por el parámetro `to` donde se encuentra el servicio. En la mayoría de los escenarios de Internet, el URI `via` es igual que la propiedad <xref:System.ServiceModel.EndpointAddress.Uri%2A> de la dirección final `to` del servicio. Estas dos direcciones solo se pueden distinguir cuando es necesario el enrutamiento manual.  
   
 ### <a name="addressing-headers"></a>Encabezados de direccionamiento  
- Uno o más encabezados SOAP pueden direccionar un extremo además de su URI básico. Un conjunto de escenarios donde esto es útil es un conjunto de escenarios intermediarios de SOAP donde un extremo requiere que los clientes de ese extremo incluyan encabezados SOAP destinados a intermediarios.  
+ Uno o más encabezados SOAP pueden direccionar un extremo además de su URI básico. Un conjunto de escenarios donde esto es útil es un conjunto de escenarios intermediarios de SOAP donde un punto de conexión requiere que los clientes de ese punto de conexión incluyan encabezados SOAP destinados a intermediarios.  
   
  Puede definir encabezados de dirección personalizados de dos maneras: mediante código o mediante configuración:  
   
@@ -134,7 +135,7 @@ Cada punto de conexión tiene una dirección asociada a él, que se utiliza para
  Generalmente, la configuración es preferible al código, puesto que permite cambiar los encabezados después de la implementación.  
   
 ### <a name="custom-listening-addresses"></a>Direcciones de escuchas personalizadas  
- Puede establecer la dirección de escuchas en un valor diferente que el URI del extremo. Esto es útil en escenarios intermediarios donde la dirección SOAP que se va a exponer es la de un intermediario de SOAP público, mientras que la dirección donde el extremo realmente realiza escuchas es una dirección de la red privada.  
+ Puede establecer la dirección de escuchas en un valor diferente que el URI del punto de conexión. Esto es útil en escenarios intermediarios donde la dirección SOAP que se va a exponer es la de un intermediario de SOAP público, mientras que la dirección donde el extremo realmente realiza escuchas es una dirección de la red privada.  
   
  Puede especificar una dirección de escuchas personalizada mediante código o configuración:  
   
@@ -149,4 +150,4 @@ Cada punto de conexión tiene una dirección asociada a él, que se utiliza para
   
 ## <a name="see-also"></a>Vea también  
  [Especificación de una dirección de punto de conexión](../../../../docs/framework/wcf/specifying-an-endpoint-address.md)  
- [Autenticación e identidad de servicio](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
+ [Identidad del servicio y autenticación](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)

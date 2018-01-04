@@ -12,11 +12,12 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9f130fb875074e45144e8ff7bb4cc48e353f0428
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 087b6aaf524ac2bf301d40b13ed8f3d7987d1956
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="rules-samples"></a>Ejemplos de reglas
 Esta sección contiene ejemplos que muestran cómo utilizar el motor de reglas de flujo de trabajo en [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)].  
@@ -34,5 +35,5 @@ Esta sección contiene ejemplos que muestran cómo utilizar el motor de reglas d
  [Grupo de actividad condicionado](../../../../docs/framework/windows-workflow-foundation/samples/conditioned-activity-group.md)  
  Muestra una aplicación de reservas de viajes.  
   
- [Procesar pedidos con directiva](../../../../docs/framework/windows-workflow-foundation/samples/order-processing-with-policy.md)  
+ [Procesamiento de pedidos con directiva](../../../../docs/framework/windows-workflow-foundation/samples/order-processing-with-policy.md)  
  Muestra algunas de las características clave de [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] introducidas en [!INCLUDE[wf](../../../../includes/wf-md.md)].

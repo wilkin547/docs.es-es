@@ -13,11 +13,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 515f91baf48f68ba0c1cb32e00152bf025fe7323
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 4b6e24c72002c7eef0e03af18f43992cc93b1d5c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="discovery-proxy-sample"></a>Ejemplo de proxy de detección
 En este ejemplo se muestra cómo crear una implementación de un proxy de detección para almacenar información acerca de los servicios existentes y el modo en que los clientes pueden consultar información en ese proxy. Este ejemplo consta de tres proyectos:  
@@ -48,16 +49,16 @@ En este ejemplo se muestra cómo crear una implementación de un proxy de detecc
  El archivo está dividido en dos regiones, Métodos de caché de proxy e Implementación de proxy de detección. La región Métodos de caché de proxy contiene los métodos utilizados para actualizar <xref:System.Collections.Generic.Dictionary%602>, realizar consultas a <xref:System.Collections.Generic.Dictionary%602> e imprimir datos de los usuarios. La región Implementación de proxy de detección contiene los métodos invalidados requeridos para la funcionalidad de Anuncio y sondeo. Definen las acciones realizadas por un proxy tras recibir un anuncio en línea, un anuncio sin conexión o un mensaje de sondeo.  
   
 ## <a name="service"></a>Servicio  
- En el archivo Program.cs en el proyecto de servicio, se utiliza el mismo URI para su extremo de anuncio y para el proxy de detección. Esto se debe a que el servicio utiliza el extremo para enviar los anuncios, mientras que el proxy lo utiliza para recibirlos. El servicio utiliza el <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> y le agrega un extremo de anuncio.  
+ En el archivo Program.cs en el proyecto de servicio, se utiliza el mismo URI para su punto de conexión de anuncio y para el proxy de detección. Esto se debe a que el servicio utiliza el extremo para enviar los anuncios, mientras que el proxy lo utiliza para recibirlos. El servicio utiliza el <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> y le agrega un extremo de anuncio.  
   
 ## <a name="client"></a>Cliente  
- El proyecto Cliente utiliza el mismo URI para su extremo de sondeo que el proxy. Esto se debe a que los sondeos en este escenario también se difunden específicamente al extremo disponible en el proxy. El cliente se conecta a esta dirección conocida y, a continuación, consulta el servicio. Una vez ha encontrado el servicio, se conecta a él.  
+ El proyecto Cliente utiliza el mismo URI para su punto de conexión de sondeo que el proxy. Esto se debe a que los sondeos en este escenario también se difunden específicamente al extremo disponible en el proxy. El cliente se conecta a esta dirección conocida y, a continuación, consulta el servicio. Una vez ha encontrado el servicio, se conecta a él.  
   
 #### <a name="to-use-this-sample"></a>Para utilizar este ejemplo  
   
 1.  Cargue la solución de proyecto en [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] y compile el proyecto.  
   
-2.  Primero, ejecute la aplicación de proxy de detección, generada en [directorio base de la solución]\DiscoveryProxy\bin\debug. El proxy de detección se debe ejecutar primero porque los extremos de anuncio de TCP deben estar activos para que el servicio envíe sus anuncios.  
+2.  Primero, ejecute la aplicación de proxy de detección, generada en [directorio base de la solución]\DiscoveryProxy\bin\debug. El proxy de detección se debe ejecutar primero porque los puntos de conexión de anuncio de TCP deben estar activos para que el servicio envíe sus anuncios.  
   
 3.  En segundo lugar, ejecute la aplicación de servicio generada en [directorio base de la solución] \Service\bin\debug. Al iniciarse, el servicio envía un anuncio al extremo de anuncio del proxy de detección y se registra en la memoria caché del proxy.  
   

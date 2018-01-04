@@ -13,11 +13,12 @@ caps.latest.revision: "25"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2c8cf38e65bbc917720b1a1c5b604d81ca536c14
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 751fe96caa2be63e925b3107fa2c198b523bef72
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="aspnet-compatibility"></a>Compatibilidad de ASP.NET
 Este ejemplo muestra cómo habilitar el modo de compatibilidad [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] en [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. Los servicios que se ejecutan en modo de compatibilidad [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] participan totalmente en el conductor de aplicación [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] y pueden utilizar características [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] como archivo/autorización de URL, estado de sesión y la clase <xref:System.Web.HttpContext>. La clase <xref:System.Web.HttpContext> permite el acceso a las cookies, sesiones y otras características [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]. Este modo requiere que los enlaces utilicen el transporte HTTP y el propio servicio se debe hospedar en IIS.  

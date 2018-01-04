@@ -17,11 +17,12 @@ caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: fbf351f0d71893457419d3b8b0e2cfb9c96ad0b0
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 2aa8adc0ce197c3776b8314009fcaa061bed884d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wcf-feature-details"></a>Detalles de las características de WCF
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] permite un amplio control sobre las funciones de mensajería de una aplicación. Los temas de esta sección incluyen detalles sobre las características disponibles. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]básicos de programación, consulte [programación básica de WCF](../../../../docs/framework/wcf/basic-wcf-programming.md).  
@@ -30,19 +31,19 @@ ms.lasthandoff: 12/02/2017
  [Servicios de flujo de trabajo](../../../../docs/framework/wcf/feature-details/workflow-services.md)  
  Describe cómo crear y configurar servicios de flujo de trabajo.  
   
- [Los puntos de conexión: Direcciones, enlaces y contratos](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)  
+ [Puntos de conexión: direcciones, enlaces y contratos](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)  
  Describe cómo controlar varios aspectos del servicio.  
   
- [Transferencia de datos y serialización](../../../../docs/framework/wcf/feature-details/data-transfer-and-serialization.md)  
+ [Transferencia y serialización de datos](../../../../docs/framework/wcf/feature-details/data-transfer-and-serialization.md)  
  Describe cómo la serialización de datos se puede personalizar para la interoperación o la compatibilidad futura.  
   
- [Las sesiones, creación de instancias y simultaneidad](../../../../docs/framework/wcf/feature-details/sessions-instancing-and-concurrency.md)  
+ [Sesiones, creación de instancias y simultaneidad](../../../../docs/framework/wcf/feature-details/sessions-instancing-and-concurrency.md)  
  Describe los modos de sesión y creación de instancias de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] y cómo seleccionar el modo correcto para su aplicación.  
   
  [Transportes](../../../../docs/framework/wcf/feature-details/transports.md)  
  Describe cómo configurar el nivel de transporte, el nivel más bajo de la pila del canal.  
   
- [Las colas y sesiones confiables](../../../../docs/framework/wcf/feature-details/queues-and-reliable-sessions.md)  
+ [Colas y sesiones de confianza](../../../../docs/framework/wcf/feature-details/queues-and-reliable-sessions.md)  
  Describe las colas que almacenan mensajes de una aplicación emisora en nombre de una aplicación receptora y, a continuación, reenvían estos mensajes a la aplicación receptora.  
   
  [Transacciones](../../../../docs/framework/wcf/feature-details/transactions-in-wcf.md)  
@@ -51,7 +52,7 @@ ms.lasthandoff: 12/02/2017
  [Seguridad](../../../../docs/framework/wcf/feature-details/security.md)  
  Describe cómo la seguridad [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] le ayuda a crear aplicaciones que tienen confidencialidad e integridad. La autenticación y autorización también están disponibles, como lo están las características de auditoría.  
   
- [Redes de punto a punto](../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)  
+ [Conexión de redes punto a punto](../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)  
  Detalla cómo crear servicios del mismo nivel y clientes.  
   
  [Metadatos](../../../../docs/framework/wcf/feature-details/metadata.md)  
@@ -66,10 +67,10 @@ ms.lasthandoff: 12/02/2017
  [Interoperabilidad e integración](../../../../docs/framework/wcf/feature-details/interoperability-and-integration.md)  
  Describe cómo utilizar [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] para extender su lógica existente en lugar de tener que rescribirla si tiene una inversión sustancial en lógica de aplicación basada en componentes alojada en COM+.  
   
- [Modelo de programación Web HTTP de WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)  
+ [Modelo de programación de web HTTP de WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)  
  Describe el modelo de programación web [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] que permite a los programadores exponer las operaciones del servicio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] a extremos no SOAP.  
   
- [Distribución de WCF](../../../../docs/framework/wcf/feature-details/wcf-syndication.md)  
+ [Redifusión en WCF](../../../../docs/framework/wcf/feature-details/wcf-syndication.md)  
  Describe el soporte para exponer con facilidad los alimentadores de sindicación de un servicio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
   
  [Integración de AJAX y compatibilidad de JSON](../../../../docs/framework/wcf/feature-details/ajax-integration-and-json-support.md)  

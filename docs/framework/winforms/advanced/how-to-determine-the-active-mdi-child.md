@@ -22,11 +22,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 473cf67f01db8735eb3b32a7549296f827e66ef6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c026df631c2ac033594ea86887bb8440a6aa240a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-determine-the-active-mdi-child"></a>Cómo: Determinar el formulario secundario MDI activo
 En algunas ocasiones, deseará proporcionar un comando que funciona en el control que tiene el foco en el formulario secundario actualmente activo. Por ejemplo, suponga que desea copiar el texto seleccionado en el cuadro de texto del formulario secundario en el Portapapeles. Debe crear un procedimiento que copie el texto seleccionado en el Portapapeles usando el <xref:System.Windows.Forms.Control.Click> evento del elemento de menú Copiar en el menú de edición estándar.  

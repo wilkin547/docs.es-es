@@ -13,11 +13,12 @@ caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cb9fc13d7facf3bdc3f9da43297a47fd1cf4af65
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 28bf67b3840cb37c918198dd0910db9d592a6823
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wcf-discovery-overview"></a>Información general de Detección de WCF
 Las API de detección proporcionan un modelo de programación unificado para la detección y la publicación dinámica de servicios Web mediante el protocolo WS-Discovery. Estas API permiten a los servicios publicarse y a los clientes encontrar los servicios publicados. Una vez que un servicio es reconocible, tiene la capacidad de enviar mensajes de anuncio, así como realizar escuchas y responder a solicitudes de detección. Los servicios reconocibles pueden enviar mensajes de Hola para anunciar su llegada a la red, así como mensajes de Adiós para anunciar su salida de la red. Para encontrar un servicio, los clientes envían a una solicitud `Probe` que contiene criterios específicos, como tipos de contratos de servicios, palabras clave y ámbito de red. Los servicios reciben la solicitud `Probe` y determinan si coinciden con los criterios. Si un servicio coincide, responde devolviendo un mensaje `ProbeMatch` al cliente con la información necesaria para ponerse en contacto con el servicio. Los clientes también pueden enviar solicitudes `Resolve` para buscar servicios que pueden haber cambiado la dirección de extremo. Los servicios coincidentes responden a las solicitudes `Resolve` devolviendo un mensaje `ResolveMatch` al cliente.  
@@ -29,7 +30,7 @@ Las API de detección proporcionan un modelo de programación unificado para la 
   
 -   El proxy puede enviar un mensaje de anuncio durante el inicio.  
   
--   Los clientes y los servicios se pueden escribir para buscar un extremo conocido concreto.  
+-   Los clientes y los servicios se pueden escribir para buscar un punto de conexión conocido concreto.  
   
  En modo ad hoc, no hay ningún servidor centralizado. Todos los mensajes de detección, como anuncios de servicio y solicitudes de clientes, se envían en modo de multidifusión. De forma predeterminada, .NET Framework contiene soporte para la detección ad hoc en el protocolo UDP. Por ejemplo, si un servicio se configura para enviar un anuncio de Hola durante el inicio, lo manda en una dirección de multidifusión conocida mediante el protocolo UDP. Los clientes tienen que realizar escuchas activas de estos anuncios y procesarlos de forma correspondiente. Cuando un cliente envía un mensaje `Probe` para un servicio, se envía a través de la red mediante un protocolo de multidifusión. Cada servicio que recibe la solicitud determina si ésta coincide con los criterios del mensaje `Probe` y responde directamente al cliente con un mensaje `ProbeMatch` si el servicio coincide con los criterios especificados en el mensaje `Probe`.  
   

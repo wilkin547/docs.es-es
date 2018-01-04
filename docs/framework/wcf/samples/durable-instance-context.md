@@ -13,11 +13,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5d4a1dfb2f517496cab1dcc2a57be3082c7c6f1a
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: e4f1f3f9e840ba422e327792ec2b0554fad45902
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="durable-instance-context"></a>Contexto de instancia duradera
 Este ejemplo muestra cómo personalizar [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] en tiempo de ejecución para habilitar los contextos de instancia duraderos. Utiliza SQL Server 2005 como su memoria auxiliar (SQL Server 2005 Express en este caso). Sin embargo, también proporciona una manera de tener acceso a los mecanismos de almacenamiento personalizados.  
@@ -57,9 +58,9 @@ class DurableInstanceContextChannelBase
 }  
 ```  
   
- Estos dos métodos utilizan implementaciones `IContextManager` para escribir y leer el id. de contexto a o del mensaje. (`IContextManager` es una interfaz personalizada utilizada para definir el contrato para todos los administradores del contexto). El canal puede incluir o el id. de contexto en un encabezado SOAP personalizado o en un encabezado cookie HTTP. Cada implementación de administrador de contexto hereda de la clase `ContextManagerBase` que contiene la funcionalidad común para todos los administradores del contexto. El método `GetContextId` en esta clase se utiliza para originar el id. de contexto del cliente. Cuando se origina un id. de contexto por primera vez, este método lo guarda en un archivo de texto cuyo nombre se construye a partir de la dirección remota del extremo (los caracteres del nombre de archivo no válidos en los URI típicos se reemplazan con caracteres @).  
+ Estos dos métodos utilizan implementaciones `IContextManager` para escribir y leer el id. de contexto a o del mensaje. (`IContextManager` es una interfaz personalizada utilizada para definir el contrato para todos los administradores del contexto). El canal puede incluir o el id. de contexto en un encabezado SOAP personalizado o en un encabezado cookie HTTP. Cada implementación de administrador de contexto hereda de la clase `ContextManagerBase` que contiene la funcionalidad común para todos los administradores del contexto. El método `GetContextId` en esta clase se utiliza para originar el id. de contexto del cliente. Cuando se origina un id. de contexto por primera vez, este método lo guarda en un archivo de texto cuyo nombre se construye a partir de la dirección remota del punto de conexión (los caracteres del nombre de archivo no válidos en los URI típicos se reemplazan con caracteres @).  
   
- Después, cuando el id. de contexto se requiere para el mismo extremo remoto, comprueba si existe un archivo adecuado. Si es así, lee el id. de contexto y lo devuelve. De lo contrario devuelve un id. de contexto recientemente generado y lo guarda en un archivo. Con la configuración predeterminada, estos archivos se colocan en un directorio llamado ContextStore, que reside en el directorio temp del usuario actual. No obstante, esta ubicación es configurable utilizando el elemento de enlace.  
+ Después, cuando el id. de contexto se requiere para el mismo punto de conexión remoto, comprueba si existe un archivo adecuado. Si es así, lee el id. de contexto y lo devuelve. De lo contrario devuelve un id. de contexto recientemente generado y lo guarda en un archivo. Con la configuración predeterminada, estos archivos se colocan en un directorio llamado ContextStore, que reside en el directorio temp del usuario actual. No obstante, esta ubicación es configurable utilizando el elemento de enlace.  
   
  El mecanismo utilizado para transportar el id. de contexto es configurable. Se pudría escribir en el encabezado cookie HTTP o en un encabezado SOAP personalizado. El enfoque del encabezado SOAP personalizado permite utilizar este protocolo con protocolos que no son HTTP (por ejemplo, TCP o canalizaciones con nombre). Hay dos clases, a saber `MessageHeaderContextManager` y `HttpCookieContextManager`, que implementan estas dos opciones.  
   

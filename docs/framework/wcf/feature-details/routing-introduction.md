@@ -13,11 +13,12 @@ caps.latest.revision: "11"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: f0205f4bc468d4a38a50fd2be36d05583ad87906
-ms.sourcegitcommit: 9bee08539b1886c9d57fa3d5bd8a58dfdd7cad94
+ms.workload: dotnet
+ms.openlocfilehash: e0fe14f096ae0914235ea1d23b874f0aea906d9d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="routing-introduction"></a>Introducción al enrutamiento
 El servicio de enrutamiento proporciona un intermediario de SOAP conectable genérico que es capaz de enrutar mensajes en función de su contenido. Con el servicio de enrutamiento, puede crear una lógica de enrutamiento compleja que le permita implementar escenarios como la agregación de servicios, el control de versiones del servicio, el enrutamiento de prioridad y el enrutamiento de multidifusión. El servicio de enrutamiento también proporciona un control de errores, que le permite preparar listas de extremos de reserva a los que se envían los mensajes si se produce un error al realizar un envío al extremo de destino principal.  
@@ -413,5 +414,5 @@ using (ServiceHost serviceHost =
   
 ## <a name="see-also"></a>Vea también  
  [Filtros de mensajes](../../../../docs/framework/wcf/feature-details/message-filters.md)  
- [Enrutar contratos](../../../../docs/framework/wcf/feature-details/routing-contracts.md)  
- [Cuando se elige un filtro](../../../../docs/framework/wcf/feature-details/choosing-a-filter.md)
+ [Enrutamiento de contratos](../../../../docs/framework/wcf/feature-details/routing-contracts.md)  
+ [Elección de un filtro](../../../../docs/framework/wcf/feature-details/choosing-a-filter.md)

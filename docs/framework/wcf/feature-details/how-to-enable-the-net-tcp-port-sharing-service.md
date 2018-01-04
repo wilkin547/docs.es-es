@@ -16,11 +16,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1a64c72a8f69abc220a311c2a204074ea83d0f58
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: b9f1c57f067fa7c8bece3acaf0d51303b31d13bf
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-enable-the-nettcp-port-sharing-service"></a>Cómo habilitar el servicio de uso compartido de puertos Net.TCP
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] utiliza un servicio de Windows llamado Servicio de uso compartido de puertos de Net.TCP para facilitar el uso compartido de puertos TCP por varios procesos. Este servicio se instala como parte de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], pero el servicio no está habilitado de forma predeterminada como precaución de seguridad, por lo que debe habilitarse manualmente antes de su primer uso. En este tema se describe cómo configurar el Servicio de uso compartido de puertos Net.TCP mediante el complemento de Microsoft Management Console (MMC).  
@@ -45,4 +46,4 @@ ms.lasthandoff: 12/02/2017
   
 ## <a name="see-also"></a>Vea también  
  [Uso compartido de puertos Net.TCP](../../../../docs/framework/wcf/feature-details/net-tcp-port-sharing.md)  
- [Configurar el servicio de uso compartido de puertos Net.TCP](../../../../docs/framework/wcf/feature-details/configuring-the-net-tcp-port-sharing-service.md)
+ [Configuración del servicio de uso compartido de puertos Net.TCP](../../../../docs/framework/wcf/feature-details/configuring-the-net-tcp-port-sharing-service.md)

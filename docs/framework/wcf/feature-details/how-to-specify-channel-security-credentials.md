@@ -13,11 +13,12 @@ caps.latest.revision: "18"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 2a1b2ba0ab49ebf470c0245f0827f82e1fe20ce8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e2aedb06ec694f6c7dfb12b70ab919ae23eed17e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-specify-channel-security-credentials"></a>Cómo especificar las credenciales de seguridad de los canales
 El moniker de servicio [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] permite a las aplicaciones COM llamar a los servicios [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. La mayoría de los servicios [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] exigen al cliente que especifique las credenciales para la autenticación y autorización. Al llamar a un servicio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] desde un cliente [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], pueden especificarse estas credenciales en código administrado o en un archivo de configuración de la aplicación. Al llamar a un servicio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] desde una aplicación COM, puede utilizarse la interfaz <xref:System.ServiceModel.ComIntegration.IChannelCredentials> para especificar las credenciales. Este tema describe varias maneras de especificar credenciales mediante la interfaz <xref:System.ServiceModel.ComIntegration.IChannelCredentials>.  
@@ -149,7 +150,7 @@ El moniker de servicio [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] p
   
 ## <a name="see-also"></a>Vea también  
  [Federación](../../../../docs/framework/wcf/feature-details/federation.md)  
- [Cómo: configurar las credenciales en un servicio de federación](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)  
- [Cómo: crear un cliente federado](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)  
- [Seguridad de mensajes](../../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)  
+ [Configuración de las credenciales en un servicio de federación](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)  
+ [Creación de un cliente federado](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)  
+ [Seguridad de los mensajes](../../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)  
  [Enlaces y seguridad](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)

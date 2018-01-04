@@ -13,11 +13,12 @@ caps.latest.revision: "31"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5345816295b9de54426aef3da697b99b4f0ce10e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0bc034028f8dacbac638c27e6fb8f48603cdcf2c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="instancing-initialization"></a>Creación de instancias de inicialización
 Este ejemplo amplía la [Pooling](../../../../docs/framework/wcf/samples/pooling.md) ejemplo mediante la definición de una interfaz, `IObjectControl`, que personaliza la inicialización de un objeto mediante la activación y desactivación de él. El cliente invoca métodos que devuelven el objeto al grupo y que no devuelven el objeto al grupo.  
@@ -148,13 +149,13 @@ if (activeObjectsCount == 0)
   
 -   Comportamientos del servicio: permiten la personalización del tiempo de ejecución completo del servicio.  
   
--   Comportamientos del extremo: permiten la personalización de un extremo de servicio determinado, incluido EndpointDispatcher.  
+-   Comportamientos del punto de conexión: permiten la personalización de un punto de conexión de servicio determinado, incluido EndpointDispatcher.  
   
 -   Comportamientos del contrato: permiten la personalización de las clases <xref:System.ServiceModel.Dispatcher.ClientRuntime> o <xref:System.ServiceModel.Dispatcher.DispatchRuntime> en el cliente o el servicio respectivamente.  
   
 -   Comportamientos de la operación: permiten la personalización de las clases <xref:System.ServiceModel.Dispatcher.ClientOperation> o <xref:System.ServiceModel.Dispatcher.DispatchOperation> en el cliente o el servicio respectivamente.  
   
- Con el objetivo de una extensión de agrupación de objetos, se puede crear un comportamiento de extremo o de servicio. En este ejemplo, utilizamos un comportamiento de servicio, que aplica la capacidad de agrupación de objetos a cada extremo del servicio. Los comportamientos de servicio se crean implementando la interfaz <xref:System.ServiceModel.Description.IServiceBehavior>. Hay varias maneras de hacer que ServiceModel sea consciente de los comportamientos personalizados:  
+ Con el objetivo de una extensión de agrupación de objetos, se puede crear un comportamiento de punto de conexión o de servicio. En este ejemplo, utilizamos un comportamiento de servicio, que aplica la capacidad de agrupación de objetos a cada extremo del servicio. Los comportamientos de servicio se crean implementando la interfaz <xref:System.ServiceModel.Description.IServiceBehavior>. Hay varias maneras de hacer que ServiceModel sea consciente de los comportamientos personalizados:  
   
 -   Utilizar un atributo personalizado.  
   
