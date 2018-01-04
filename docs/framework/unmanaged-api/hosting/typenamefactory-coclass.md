@@ -19,16 +19,17 @@ caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: c02445a7a46bd9367b84edcf5ef5f012be5232e5
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 1ab7b6cc6360103c43430516490199cc278d2dfe
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="typenamefactory-coclass"></a><span data-ttu-id="198b8-102">TypeNameFactory (Coclase)</span><span class="sxs-lookup"><span data-stu-id="198b8-102">TypeNameFactory Coclass</span></span>
-<span data-ttu-id="198b8-103">Proporciona una interfaz para administrar la anulación de la construcción de un nombre de tipo.</span><span class="sxs-lookup"><span data-stu-id="198b8-103">Provides an interface for managing the deconstruction of a type name.</span></span>  
+# <a name="typenamefactory-coclass"></a><span data-ttu-id="d33a0-102">TypeNameFactory (Coclase)</span><span class="sxs-lookup"><span data-stu-id="d33a0-102">TypeNameFactory Coclass</span></span>
+<span data-ttu-id="d33a0-103">Proporciona una interfaz para administrar la anulación de la construcción de un nombre de tipo.</span><span class="sxs-lookup"><span data-stu-id="d33a0-103">Provides an interface for managing the deconstruction of a type name.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="198b8-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="198b8-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d33a0-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="d33a0-104">Syntax</span></span>  
   
 ```  
 coclass TypeNameFactory {  
@@ -36,20 +37,20 @@ coclass TypeNameFactory {
 };  
 ```  
   
-## <a name="interfaces"></a><span data-ttu-id="198b8-105">Interfaces</span><span class="sxs-lookup"><span data-stu-id="198b8-105">Interfaces</span></span>  
+## <a name="interfaces"></a><span data-ttu-id="d33a0-105">Interfaces</span><span class="sxs-lookup"><span data-stu-id="d33a0-105">Interfaces</span></span>  
   
-|<span data-ttu-id="198b8-106">Interfaz</span><span class="sxs-lookup"><span data-stu-id="198b8-106">Interface</span></span>|<span data-ttu-id="198b8-107">Descripción</span><span class="sxs-lookup"><span data-stu-id="198b8-107">Description</span></span>|  
+|<span data-ttu-id="d33a0-106">Interfaz</span><span class="sxs-lookup"><span data-stu-id="d33a0-106">Interface</span></span>|<span data-ttu-id="d33a0-107">Descripción</span><span class="sxs-lookup"><span data-stu-id="d33a0-107">Description</span></span>|  
 |---------------|-----------------|  
-|[<span data-ttu-id="198b8-108">ITypeNameFactory (interfaz)</span><span class="sxs-lookup"><span data-stu-id="198b8-108">ITypeNameFactory Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/itypenamefactory-interface.md)|<span data-ttu-id="198b8-109">Esta interfaz es compatible con la infraestructura de .NET Framework y no está diseñada para utilizarse directamente desde el código.</span><span class="sxs-lookup"><span data-stu-id="198b8-109">This interface supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>|  
+|[<span data-ttu-id="d33a0-108">ITypeNameFactory (interfaz)</span><span class="sxs-lookup"><span data-stu-id="d33a0-108">ITypeNameFactory Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/itypenamefactory-interface.md)|<span data-ttu-id="d33a0-109">Esta interfaz es compatible con la infraestructura de .NET Framework y no está diseñada para utilizarse directamente desde el código.</span><span class="sxs-lookup"><span data-stu-id="d33a0-109">This interface supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="198b8-110">Requisitos</span><span class="sxs-lookup"><span data-stu-id="198b8-110">Requirements</span></span>  
- <span data-ttu-id="198b8-111">**Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="198b8-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d33a0-110">Requisitos</span><span class="sxs-lookup"><span data-stu-id="d33a0-110">Requirements</span></span>  
+ <span data-ttu-id="d33a0-111">**Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d33a0-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="198b8-112">**Encabezado:** MSCorEE.idl</span><span class="sxs-lookup"><span data-stu-id="198b8-112">**Header:** MSCorEE.idl</span></span>  
+ <span data-ttu-id="d33a0-112">**Encabezado:** MSCorEE.idl</span><span class="sxs-lookup"><span data-stu-id="d33a0-112">**Header:** MSCorEE.idl</span></span>  
   
- <span data-ttu-id="198b8-113">**Biblioteca:** incluye como recurso en MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="198b8-113">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="d33a0-113">**Biblioteca:** incluye como recurso en MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="d33a0-113">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="198b8-114">**Versiones de .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="198b8-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="d33a0-114">**Versiones de .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d33a0-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="198b8-115">Vea también</span><span class="sxs-lookup"><span data-stu-id="198b8-115">See Also</span></span>  
- [<span data-ttu-id="198b8-116">Coclases para el hospedaje</span><span class="sxs-lookup"><span data-stu-id="198b8-116">Hosting Coclasses</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-coclasses.md)
+## <a name="see-also"></a><span data-ttu-id="d33a0-115">Vea también</span><span class="sxs-lookup"><span data-stu-id="d33a0-115">See Also</span></span>  
+ [<span data-ttu-id="d33a0-116">Coclases para el hospedaje</span><span class="sxs-lookup"><span data-stu-id="d33a0-116">Hosting Coclasses</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-coclasses.md)

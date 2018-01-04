@@ -21,16 +21,17 @@ caps.latest.revision: "9"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 641ce6c4587f9f23743a3c1b5a1aeb6fb77edde7
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 25f6fc01d418693f62092d338cf93b1762bcfc8d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="isymunmanagedscopegetnamespaces-method"></a><span data-ttu-id="d6bec-102">ISymUnmanagedScope::GetNamespaces (Método)</span><span class="sxs-lookup"><span data-stu-id="d6bec-102">ISymUnmanagedScope::GetNamespaces Method</span></span>
-<span data-ttu-id="d6bec-103">Obtiene los espacios de nombres que se utilizan dentro de este ámbito.</span><span class="sxs-lookup"><span data-stu-id="d6bec-103">Gets the namespaces that are being used within this scope.</span></span>  
+# <a name="isymunmanagedscopegetnamespaces-method"></a><span data-ttu-id="df893-102">ISymUnmanagedScope::GetNamespaces (Método)</span><span class="sxs-lookup"><span data-stu-id="df893-102">ISymUnmanagedScope::GetNamespaces Method</span></span>
+<span data-ttu-id="df893-103">Obtiene los espacios de nombres que se utilizan dentro de este ámbito.</span><span class="sxs-lookup"><span data-stu-id="df893-103">Gets the namespaces that are being used within this scope.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d6bec-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="d6bec-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="df893-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="df893-104">Syntax</span></span>  
   
 ```  
 HRESULT GetNamespaces(  
@@ -41,21 +42,21 @@ HRESULT GetNamespaces(
         ISymUnmanagedNamespace* namespaces[]);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="d6bec-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="d6bec-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="df893-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="df893-105">Parameters</span></span>  
  `cNameSpaces`  
- <span data-ttu-id="d6bec-106">[in] Tamaño de la matriz `namespaces`.</span><span class="sxs-lookup"><span data-stu-id="d6bec-106">[in] The size of the `namespaces` array.</span></span>  
+ <span data-ttu-id="df893-106">[in] Tamaño de la matriz `namespaces`.</span><span class="sxs-lookup"><span data-stu-id="df893-106">[in] The size of the `namespaces` array.</span></span>  
   
  `pcNameSpaces`  
- <span data-ttu-id="d6bec-107">[out] Un puntero a un `ULONG32` que recibe el tamaño del búfer necesario para contener los espacios de nombres.</span><span class="sxs-lookup"><span data-stu-id="d6bec-107">[out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the namespaces.</span></span>  
+ <span data-ttu-id="df893-107">[out] Un puntero a un `ULONG32` que recibe el tamaño del búfer necesario para contener los espacios de nombres.</span><span class="sxs-lookup"><span data-stu-id="df893-107">[out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the namespaces.</span></span>  
   
  `namespaces`  
- <span data-ttu-id="d6bec-108">[out] Matriz que recibe los espacios de nombres.</span><span class="sxs-lookup"><span data-stu-id="d6bec-108">[out] The array that receives the namespaces.</span></span>  
+ <span data-ttu-id="df893-108">[out] Matriz que recibe los espacios de nombres.</span><span class="sxs-lookup"><span data-stu-id="df893-108">[out] The array that receives the namespaces.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="d6bec-109">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="d6bec-109">Return Value</span></span>  
- <span data-ttu-id="d6bec-110">S_OK si el método tiene éxito; en caso contrario, E_FAIL u otro código de error.</span><span class="sxs-lookup"><span data-stu-id="d6bec-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="df893-109">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="df893-109">Return Value</span></span>  
+ <span data-ttu-id="df893-110">S_OK si el método tiene éxito; en caso contrario, E_FAIL u otro código de error.</span><span class="sxs-lookup"><span data-stu-id="df893-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="d6bec-111">Requisitos</span><span class="sxs-lookup"><span data-stu-id="d6bec-111">Requirements</span></span>  
- <span data-ttu-id="d6bec-112">**Encabezado:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="d6bec-112">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="df893-111">Requisitos</span><span class="sxs-lookup"><span data-stu-id="df893-111">Requirements</span></span>  
+ <span data-ttu-id="df893-112">**Encabezado:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="df893-112">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d6bec-113">Vea también</span><span class="sxs-lookup"><span data-stu-id="d6bec-113">See Also</span></span>  
- [<span data-ttu-id="d6bec-114">ISymUnmanagedScope (interfaz)</span><span class="sxs-lookup"><span data-stu-id="d6bec-114">ISymUnmanagedScope Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md)
+## <a name="see-also"></a><span data-ttu-id="df893-113">Vea también</span><span class="sxs-lookup"><span data-stu-id="df893-113">See Also</span></span>  
+ [<span data-ttu-id="df893-114">ISymUnmanagedScope (interfaz)</span><span class="sxs-lookup"><span data-stu-id="df893-114">ISymUnmanagedScope Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md)

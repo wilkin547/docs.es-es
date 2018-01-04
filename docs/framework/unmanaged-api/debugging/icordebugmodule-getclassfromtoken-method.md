@@ -21,16 +21,17 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: bd483eebc66b1274c0d28c46b3ccb1b1272f74b1
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: ef8ef4c1f2fb8a7b8aa94b99f3821a91abe0b91d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="icordebugmodulegetclassfromtoken-method"></a><span data-ttu-id="a8afa-102">ICorDebugModule::GetClassFromToken (Método)</span><span class="sxs-lookup"><span data-stu-id="a8afa-102">ICorDebugModule::GetClassFromToken Method</span></span>
-<span data-ttu-id="a8afa-103">Obtiene la clase especificada por el token de metadatos.</span><span class="sxs-lookup"><span data-stu-id="a8afa-103">Gets the class specified by the metadata token.</span></span>  
+# <a name="icordebugmodulegetclassfromtoken-method"></a><span data-ttu-id="b59b2-102">ICorDebugModule::GetClassFromToken (Método)</span><span class="sxs-lookup"><span data-stu-id="b59b2-102">ICorDebugModule::GetClassFromToken Method</span></span>
+<span data-ttu-id="b59b2-103">Obtiene la clase especificada por el token de metadatos.</span><span class="sxs-lookup"><span data-stu-id="b59b2-103">Gets the class specified by the metadata token.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a8afa-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="a8afa-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b59b2-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="b59b2-104">Syntax</span></span>  
   
 ```  
 HRESULT GetClassFromToken(  
@@ -39,18 +40,18 @@ HRESULT GetClassFromToken(
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="a8afa-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="a8afa-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="b59b2-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="b59b2-105">Parameters</span></span>  
  `typedef`  
- <span data-ttu-id="a8afa-106">[in] Un `mdTypeDef` símbolo (token) de metadatos que hace referencia a los metadatos de una clase.</span><span class="sxs-lookup"><span data-stu-id="a8afa-106">[in] An `mdTypeDef` metadata token that references the metadata of a class.</span></span>  
+ <span data-ttu-id="b59b2-106">[in] Un `mdTypeDef` símbolo (token) de metadatos que hace referencia a los metadatos de una clase.</span><span class="sxs-lookup"><span data-stu-id="b59b2-106">[in] An `mdTypeDef` metadata token that references the metadata of a class.</span></span>  
   
  `ppClass`  
- <span data-ttu-id="a8afa-107">[out] Un puntero a la dirección de un objeto ICorDebugClass que representa la clase.</span><span class="sxs-lookup"><span data-stu-id="a8afa-107">[out] A pointer to the address of an ICorDebugClass object that represents the class.</span></span>  
+ <span data-ttu-id="b59b2-107">[out] Un puntero a la dirección de un objeto ICorDebugClass que representa la clase.</span><span class="sxs-lookup"><span data-stu-id="b59b2-107">[out] A pointer to the address of an ICorDebugClass object that represents the class.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="a8afa-108">Requisitos</span><span class="sxs-lookup"><span data-stu-id="a8afa-108">Requirements</span></span>  
- <span data-ttu-id="a8afa-109">**Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a8afa-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b59b2-108">Requisitos</span><span class="sxs-lookup"><span data-stu-id="b59b2-108">Requirements</span></span>  
+ <span data-ttu-id="b59b2-109">**Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b59b2-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="a8afa-110">**Encabezado:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="a8afa-110">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="b59b2-110">**Encabezado:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="b59b2-110">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="a8afa-111">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="a8afa-111">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="b59b2-111">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="b59b2-111">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="a8afa-112">**Versiones de .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a8afa-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="b59b2-112">**Versiones de .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b59b2-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

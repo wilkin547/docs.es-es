@@ -21,16 +21,17 @@ caps.latest.revision: "9"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 9693b21c2b3819096ec4aeb0a275fccf76307de0
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 0e4f653ab7b2a1341af8917c6932ea8bdfd64d83
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="isymunmanageddocumentwritersetchecksum-method"></a><span data-ttu-id="be909-102">ISymUnmanagedDocumentWriter::SetCheckSum (Método)</span><span class="sxs-lookup"><span data-stu-id="be909-102">ISymUnmanagedDocumentWriter::SetCheckSum Method</span></span>
-<span data-ttu-id="be909-103">Establece la información de suma de comprobación.</span><span class="sxs-lookup"><span data-stu-id="be909-103">Sets checksum information.</span></span>  
+# <a name="isymunmanageddocumentwritersetchecksum-method"></a><span data-ttu-id="69650-102">ISymUnmanagedDocumentWriter::SetCheckSum (Método)</span><span class="sxs-lookup"><span data-stu-id="69650-102">ISymUnmanagedDocumentWriter::SetCheckSum Method</span></span>
+<span data-ttu-id="69650-103">Establece la información de suma de comprobación.</span><span class="sxs-lookup"><span data-stu-id="69650-103">Sets checksum information.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="be909-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="be909-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="69650-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="69650-104">Syntax</span></span>  
   
 ```  
 HRESULT SetCheckSum(  
@@ -39,21 +40,21 @@ HRESULT SetCheckSum(
     [in, size_is(checkSumSize)]  BYTE checkSum[]);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="be909-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="be909-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="69650-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="69650-105">Parameters</span></span>  
  `algorithmId`  
- <span data-ttu-id="be909-106">[in] El GUID que representa el identificador del algoritmo.</span><span class="sxs-lookup"><span data-stu-id="be909-106">[in] The GUID that represents the algorithm identifier.</span></span>  
+ <span data-ttu-id="69650-106">[in] El GUID que representa el identificador del algoritmo.</span><span class="sxs-lookup"><span data-stu-id="69650-106">[in] The GUID that represents the algorithm identifier.</span></span>  
   
  `checkSumSize`  
- <span data-ttu-id="be909-107">[in] A `ULONG32` que indica el tamaño, en bytes, de la `checkSum` búfer.</span><span class="sxs-lookup"><span data-stu-id="be909-107">[in] A `ULONG32` that indicates the size, in bytes, of the `checkSum` buffer.</span></span>  
+ <span data-ttu-id="69650-107">[in] A `ULONG32` que indica el tamaño, en bytes, de la `checkSum` búfer.</span><span class="sxs-lookup"><span data-stu-id="69650-107">[in] A `ULONG32` that indicates the size, in bytes, of the `checkSum` buffer.</span></span>  
   
  `checkSum`  
- <span data-ttu-id="be909-108">[in] El búfer que almacena la información de suma de comprobación.</span><span class="sxs-lookup"><span data-stu-id="be909-108">[in] The buffer that stores the checksum information.</span></span>  
+ <span data-ttu-id="69650-108">[in] El búfer que almacena la información de suma de comprobación.</span><span class="sxs-lookup"><span data-stu-id="69650-108">[in] The buffer that stores the checksum information.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="be909-109">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="be909-109">Return Value</span></span>  
- <span data-ttu-id="be909-110">S_OK si el método tiene éxito; en caso contrario, E_FAIL u otro código de error.</span><span class="sxs-lookup"><span data-stu-id="be909-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="69650-109">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="69650-109">Return Value</span></span>  
+ <span data-ttu-id="69650-110">S_OK si el método tiene éxito; en caso contrario, E_FAIL u otro código de error.</span><span class="sxs-lookup"><span data-stu-id="69650-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="be909-111">Requisitos</span><span class="sxs-lookup"><span data-stu-id="be909-111">Requirements</span></span>  
- <span data-ttu-id="be909-112">**Encabezado:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="be909-112">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="69650-111">Requisitos</span><span class="sxs-lookup"><span data-stu-id="69650-111">Requirements</span></span>  
+ <span data-ttu-id="69650-112">**Encabezado:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="69650-112">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="be909-113">Vea también</span><span class="sxs-lookup"><span data-stu-id="be909-113">See Also</span></span>  
- [<span data-ttu-id="be909-114">ISymUnmanagedDocumentWriter (interfaz)</span><span class="sxs-lookup"><span data-stu-id="be909-114">ISymUnmanagedDocumentWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocumentwriter-interface.md)
+## <a name="see-also"></a><span data-ttu-id="69650-113">Vea también</span><span class="sxs-lookup"><span data-stu-id="69650-113">See Also</span></span>  
+ [<span data-ttu-id="69650-114">ISymUnmanagedDocumentWriter (interfaz)</span><span class="sxs-lookup"><span data-stu-id="69650-114">ISymUnmanagedDocumentWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocumentwriter-interface.md)

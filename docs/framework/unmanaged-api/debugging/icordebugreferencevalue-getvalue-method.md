@@ -21,16 +21,17 @@ caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: bb11810c14f383b74c565b3bd30602c22b026e62
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 6d7be70ec41b2044b4af10e102218ce487e4a5e1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="icordebugreferencevaluegetvalue-method"></a><span data-ttu-id="43116-102">ICorDebugReferenceValue::GetValue (Método)</span><span class="sxs-lookup"><span data-stu-id="43116-102">ICorDebugReferenceValue::GetValue Method</span></span>
-<span data-ttu-id="43116-103">Obtiene la dirección de memoria actual del objeto de referencia.</span><span class="sxs-lookup"><span data-stu-id="43116-103">Gets the current memory address of the referenced object.</span></span>  
+# <a name="icordebugreferencevaluegetvalue-method"></a><span data-ttu-id="82b82-102">ICorDebugReferenceValue::GetValue (Método)</span><span class="sxs-lookup"><span data-stu-id="82b82-102">ICorDebugReferenceValue::GetValue Method</span></span>
+<span data-ttu-id="82b82-103">Obtiene la dirección de memoria actual del objeto de referencia.</span><span class="sxs-lookup"><span data-stu-id="82b82-103">Gets the current memory address of the referenced object.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="43116-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="43116-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="82b82-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="82b82-104">Syntax</span></span>  
   
 ```  
 HRESULT GetValue (  
@@ -38,15 +39,15 @@ HRESULT GetValue (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="43116-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="43116-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="82b82-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="82b82-105">Parameters</span></span>  
  `pValue`  
- <span data-ttu-id="43116-106">[out] Un puntero a un `CORDB_ADDRESS` valor que especifica la dirección del objeto al que apunta este objeto ICorDebugReferenceValue.</span><span class="sxs-lookup"><span data-stu-id="43116-106">[out] A pointer to a `CORDB_ADDRESS` value that specifies the address of the object to which this ICorDebugReferenceValue object points.</span></span>  
+ <span data-ttu-id="82b82-106">[out] Un puntero a un `CORDB_ADDRESS` valor que especifica la dirección del objeto al que apunta este objeto ICorDebugReferenceValue.</span><span class="sxs-lookup"><span data-stu-id="82b82-106">[out] A pointer to a `CORDB_ADDRESS` value that specifies the address of the object to which this ICorDebugReferenceValue object points.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="43116-107">Requisitos</span><span class="sxs-lookup"><span data-stu-id="43116-107">Requirements</span></span>  
- <span data-ttu-id="43116-108">**Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="43116-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="82b82-107">Requisitos</span><span class="sxs-lookup"><span data-stu-id="82b82-107">Requirements</span></span>  
+ <span data-ttu-id="82b82-108">**Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="82b82-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="43116-109">**Encabezado:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="43116-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="82b82-109">**Encabezado:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="82b82-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="43116-110">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="43116-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="82b82-110">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="82b82-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="43116-111">**Versiones de .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="43116-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="82b82-111">**Versiones de .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="82b82-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

@@ -21,16 +21,17 @@ caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: e46216f9e64d76188d60dbfcfc8e5113f2409b07
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 5b8b3437d8c07cd57a4791995890cab1b06aafc6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="iclrstrongnamestrongnametokenfromassemblyex-method"></a><span data-ttu-id="df594-102">ICLRStrongName::StrongNameTokenFromAssemblyEx (Método)</span><span class="sxs-lookup"><span data-stu-id="df594-102">ICLRStrongName::StrongNameTokenFromAssemblyEx Method</span></span>
-<span data-ttu-id="df594-103">Crea un token de nombre seguro del archivo de ensamblado especificado y devuelve la clave pública que representa el token.</span><span class="sxs-lookup"><span data-stu-id="df594-103">Creates a strong name token from the specified assembly file, and returns the public key that the token represents.</span></span>  
+# <a name="iclrstrongnamestrongnametokenfromassemblyex-method"></a><span data-ttu-id="1336b-102">ICLRStrongName::StrongNameTokenFromAssemblyEx (Método)</span><span class="sxs-lookup"><span data-stu-id="1336b-102">ICLRStrongName::StrongNameTokenFromAssemblyEx Method</span></span>
+<span data-ttu-id="1336b-103">Crea un token de nombre seguro del archivo de ensamblado especificado y devuelve la clave pública que representa el token.</span><span class="sxs-lookup"><span data-stu-id="1336b-103">Creates a strong name token from the specified assembly file, and returns the public key that the token represents.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="df594-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="df594-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="1336b-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="1336b-104">Syntax</span></span>  
   
 ```  
 HRESULT StrongNameTokenFromAssemblyEx (  
@@ -42,39 +43,39 @@ HRESULT StrongNameTokenFromAssemblyEx (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="df594-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="df594-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="1336b-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="1336b-105">Parameters</span></span>  
  `wszFilePath`  
- <span data-ttu-id="df594-106">[in] La ruta de acceso al archivo ejecutable portable (PE) para el ensamblado.</span><span class="sxs-lookup"><span data-stu-id="df594-106">[in] The path to the portable executable (PE) file for the assembly.</span></span>  
+ <span data-ttu-id="1336b-106">[in] La ruta de acceso al archivo ejecutable portable (PE) para el ensamblado.</span><span class="sxs-lookup"><span data-stu-id="1336b-106">[in] The path to the portable executable (PE) file for the assembly.</span></span>  
   
  `ppbStrongNameToken`  
- <span data-ttu-id="df594-107">[out] El token de nombre seguro devuelto.</span><span class="sxs-lookup"><span data-stu-id="df594-107">[out] The returned strong name token.</span></span>  
+ <span data-ttu-id="1336b-107">[out] El token de nombre seguro devuelto.</span><span class="sxs-lookup"><span data-stu-id="1336b-107">[out] The returned strong name token.</span></span>  
   
  `pcbStrongNameToken`  
- <span data-ttu-id="df594-108">[out] El tamaño, en bytes, del token de nombre seguro.</span><span class="sxs-lookup"><span data-stu-id="df594-108">[out] The size, in bytes, of the strong name token.</span></span>  
+ <span data-ttu-id="1336b-108">[out] El tamaño, en bytes, del token de nombre seguro.</span><span class="sxs-lookup"><span data-stu-id="1336b-108">[out] The size, in bytes, of the strong name token.</span></span>  
   
  `ppbPublicKeyBlob`  
- <span data-ttu-id="df594-109">[out] La clave pública devuelta.</span><span class="sxs-lookup"><span data-stu-id="df594-109">[out] The returned public key.</span></span>  
+ <span data-ttu-id="1336b-109">[out] La clave pública devuelta.</span><span class="sxs-lookup"><span data-stu-id="1336b-109">[out] The returned public key.</span></span>  
   
  `pcbPublicKeyBlob`  
- <span data-ttu-id="df594-110">[out] El tamaño, en bytes, de la clave pública.</span><span class="sxs-lookup"><span data-stu-id="df594-110">[out] The size, in bytes, of the public key.</span></span>  
+ <span data-ttu-id="1336b-110">[out] El tamaño, en bytes, de la clave pública.</span><span class="sxs-lookup"><span data-stu-id="1336b-110">[out] The size, in bytes, of the public key.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="df594-111">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="df594-111">Return Value</span></span>  
- <span data-ttu-id="df594-112">`S_OK`Si el método se completó correctamente; en caso contrario, un valor HRESULT que indica un error (vea [valores HRESULT comunes](http://go.microsoft.com/fwlink/?LinkId=213878) para obtener una lista).</span><span class="sxs-lookup"><span data-stu-id="df594-112">`S_OK` if the method completed successfully; otherwise, an HRESULT value that indicates failure (see [Common HRESULT Values](http://go.microsoft.com/fwlink/?LinkId=213878) for a list).</span></span>  
+## <a name="return-value"></a><span data-ttu-id="1336b-111">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="1336b-111">Return Value</span></span>  
+ <span data-ttu-id="1336b-112">`S_OK`Si el método se completó correctamente; en caso contrario, un valor HRESULT que indica un error (vea [valores HRESULT comunes](http://go.microsoft.com/fwlink/?LinkId=213878) para obtener una lista).</span><span class="sxs-lookup"><span data-stu-id="1336b-112">`S_OK` if the method completed successfully; otherwise, an HRESULT value that indicates failure (see [Common HRESULT Values](http://go.microsoft.com/fwlink/?LinkId=213878) for a list).</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="df594-113">Comentarios</span><span class="sxs-lookup"><span data-stu-id="df594-113">Remarks</span></span>  
- <span data-ttu-id="df594-114">Un token de nombre seguro es la forma abreviada de una clave pública.</span><span class="sxs-lookup"><span data-stu-id="df594-114">A strong name token is the shortened form of a public key.</span></span> <span data-ttu-id="df594-115">El token es un hash de 64 bits que se crea a partir de la clave pública utilizada para firmar el ensamblado.</span><span class="sxs-lookup"><span data-stu-id="df594-115">The token is a 64-bit hash that is created from the public key used to sign the assembly.</span></span> <span data-ttu-id="df594-116">El token forma parte del nombre seguro del ensamblado y se puede leer desde los metadatos del ensamblado.</span><span class="sxs-lookup"><span data-stu-id="df594-116">The token is a part of the strong name for the assembly, and can be read from the assembly metadata.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="1336b-113">Comentarios</span><span class="sxs-lookup"><span data-stu-id="1336b-113">Remarks</span></span>  
+ <span data-ttu-id="1336b-114">Un token de nombre seguro es la forma abreviada de una clave pública.</span><span class="sxs-lookup"><span data-stu-id="1336b-114">A strong name token is the shortened form of a public key.</span></span> <span data-ttu-id="1336b-115">El token es un hash de 64 bits que se crea a partir de la clave pública utilizada para firmar el ensamblado.</span><span class="sxs-lookup"><span data-stu-id="1336b-115">The token is a 64-bit hash that is created from the public key used to sign the assembly.</span></span> <span data-ttu-id="1336b-116">El token forma parte del nombre seguro del ensamblado y se puede leer desde los metadatos del ensamblado.</span><span class="sxs-lookup"><span data-stu-id="1336b-116">The token is a part of the strong name for the assembly, and can be read from the assembly metadata.</span></span>  
   
- <span data-ttu-id="df594-117">Después de recuperar la clave y se crea el token, debe llamar a la [ICLRStrongName:: StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md) método para liberar la memoria asignada.</span><span class="sxs-lookup"><span data-stu-id="df594-117">After the key is retrieved and the token is created, you should call the [ICLRStrongName::StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md) method to release the allocated memory.</span></span>  
+ <span data-ttu-id="1336b-117">Después de recuperar la clave y se crea el token, debe llamar a la [ICLRStrongName:: StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md) método para liberar la memoria asignada.</span><span class="sxs-lookup"><span data-stu-id="1336b-117">After the key is retrieved and the token is created, you should call the [ICLRStrongName::StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md) method to release the allocated memory.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="df594-118">Requisitos</span><span class="sxs-lookup"><span data-stu-id="df594-118">Requirements</span></span>  
- <span data-ttu-id="df594-119">**Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="df594-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="1336b-118">Requisitos</span><span class="sxs-lookup"><span data-stu-id="1336b-118">Requirements</span></span>  
+ <span data-ttu-id="1336b-119">**Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="1336b-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="df594-120">**Encabezado:** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="df594-120">**Header:** MetaHost.h</span></span>  
+ <span data-ttu-id="1336b-120">**Encabezado:** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="1336b-120">**Header:** MetaHost.h</span></span>  
   
- <span data-ttu-id="df594-121">**Biblioteca:** incluye como recurso en MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="df594-121">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="1336b-121">**Biblioteca:** incluye como recurso en MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="1336b-121">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="df594-122">**Versiones de .NET framework:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="df594-122">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="1336b-122">**Versiones de .NET framework:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1336b-122">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="df594-123">Vea también</span><span class="sxs-lookup"><span data-stu-id="df594-123">See Also</span></span>  
- [<span data-ttu-id="df594-124">StrongNameTokenFromAssembly (método)</span><span class="sxs-lookup"><span data-stu-id="df594-124">StrongNameTokenFromAssembly Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnametokenfromassembly-method.md)  
- [<span data-ttu-id="df594-125">ICLRStrongName (interfaz)</span><span class="sxs-lookup"><span data-stu-id="df594-125">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+## <a name="see-also"></a><span data-ttu-id="1336b-123">Vea también</span><span class="sxs-lookup"><span data-stu-id="1336b-123">See Also</span></span>  
+ [<span data-ttu-id="1336b-124">StrongNameTokenFromAssembly (método)</span><span class="sxs-lookup"><span data-stu-id="1336b-124">StrongNameTokenFromAssembly Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnametokenfromassembly-method.md)  
+ [<span data-ttu-id="1336b-125">ICLRStrongName (interfaz)</span><span class="sxs-lookup"><span data-stu-id="1336b-125">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)

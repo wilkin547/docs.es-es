@@ -21,16 +21,17 @@ caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 0b4e26be7e50f7746caeb793bef6d6dbcfed7eef
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 0c230c8ca6da69b45d05b3319220eacfa6c1f212
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="icordebugfunctiongetcurrentversionnumber-method"></a><span data-ttu-id="9a6c4-102">ICorDebugFunction::GetCurrentVersionNumber (Método)</span><span class="sxs-lookup"><span data-stu-id="9a6c4-102">ICorDebugFunction::GetCurrentVersionNumber Method</span></span>
-<span data-ttu-id="9a6c4-103">Obtiene el número de versión de la edición más reciente realizada en la función representada por este objeto ICorDebugFunction.</span><span class="sxs-lookup"><span data-stu-id="9a6c4-103">Gets the version number of the latest edit made to the function represented by this ICorDebugFunction object.</span></span>  
+# <a name="icordebugfunctiongetcurrentversionnumber-method"></a><span data-ttu-id="ed315-102">ICorDebugFunction::GetCurrentVersionNumber (Método)</span><span class="sxs-lookup"><span data-stu-id="ed315-102">ICorDebugFunction::GetCurrentVersionNumber Method</span></span>
+<span data-ttu-id="ed315-103">Obtiene el número de versión de la edición más reciente realizada en la función representada por este objeto ICorDebugFunction.</span><span class="sxs-lookup"><span data-stu-id="ed315-103">Gets the version number of the latest edit made to the function represented by this ICorDebugFunction object.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9a6c4-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="9a6c4-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ed315-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="ed315-104">Syntax</span></span>  
   
 ```  
 HRESULT GetCurrentVersionNumber (  
@@ -38,18 +39,18 @@ HRESULT GetCurrentVersionNumber (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="9a6c4-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="9a6c4-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="ed315-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="ed315-105">Parameters</span></span>  
  `pnCurrentVersion`  
- <span data-ttu-id="9a6c4-106">[out] Un puntero a un valor entero que es el número de versión de la edición más reciente realizada en esta función.</span><span class="sxs-lookup"><span data-stu-id="9a6c4-106">[out] A pointer to an integer value that is the version number of the latest edit made to this function.</span></span>  
+ <span data-ttu-id="ed315-106">[out] Un puntero a un valor entero que es el número de versión de la edición más reciente realizada en esta función.</span><span class="sxs-lookup"><span data-stu-id="ed315-106">[out] A pointer to an integer value that is the version number of the latest edit made to this function.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="9a6c4-107">Comentarios</span><span class="sxs-lookup"><span data-stu-id="9a6c4-107">Remarks</span></span>  
- <span data-ttu-id="9a6c4-108">El número de versión de la edición más reciente realizada en esta función puede ser mayor que el número de versión de la propia función.</span><span class="sxs-lookup"><span data-stu-id="9a6c4-108">The version number of the latest edit made to this function may be greater than the version number of the function itself.</span></span> <span data-ttu-id="9a6c4-109">Utilice la [ICorDebugFunction2:: GetVersionNumber](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction2-getversionnumber-method.md) método o la [ICorDebugCode:: GetVersionNumber](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-getversionnumber-method.md) método para recuperar el número de versión de la función.</span><span class="sxs-lookup"><span data-stu-id="9a6c4-109">Use either the [ICorDebugFunction2::GetVersionNumber](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction2-getversionnumber-method.md) method or the [ICorDebugCode::GetVersionNumber](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-getversionnumber-method.md) method to retrieve the version number of the function.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="ed315-107">Comentarios</span><span class="sxs-lookup"><span data-stu-id="ed315-107">Remarks</span></span>  
+ <span data-ttu-id="ed315-108">El número de versión de la edición más reciente realizada en esta función puede ser mayor que el número de versión de la propia función.</span><span class="sxs-lookup"><span data-stu-id="ed315-108">The version number of the latest edit made to this function may be greater than the version number of the function itself.</span></span> <span data-ttu-id="ed315-109">Utilice la [ICorDebugFunction2:: GetVersionNumber](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction2-getversionnumber-method.md) método o la [ICorDebugCode:: GetVersionNumber](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-getversionnumber-method.md) método para recuperar el número de versión de la función.</span><span class="sxs-lookup"><span data-stu-id="ed315-109">Use either the [ICorDebugFunction2::GetVersionNumber](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction2-getversionnumber-method.md) method or the [ICorDebugCode::GetVersionNumber](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-getversionnumber-method.md) method to retrieve the version number of the function.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="9a6c4-110">Requisitos</span><span class="sxs-lookup"><span data-stu-id="9a6c4-110">Requirements</span></span>  
- <span data-ttu-id="9a6c4-111">**Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="9a6c4-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ed315-110">Requisitos</span><span class="sxs-lookup"><span data-stu-id="ed315-110">Requirements</span></span>  
+ <span data-ttu-id="ed315-111">**Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ed315-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="9a6c4-112">**Encabezado:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="9a6c4-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="ed315-112">**Encabezado:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="ed315-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="9a6c4-113">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="9a6c4-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="ed315-113">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="ed315-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="9a6c4-114">**Versiones de .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9a6c4-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="ed315-114">**Versiones de .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ed315-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

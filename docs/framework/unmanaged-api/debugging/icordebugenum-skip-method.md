@@ -21,16 +21,17 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: d109d8e28f94edc3eeceeb22d2d0639d010b532e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 0c2e0065b8dd16e32ed624dd073276e7885c1a52
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="icordebugenumskip-method"></a><span data-ttu-id="f3045-102">ICorDebugEnum::Skip (Método)</span><span class="sxs-lookup"><span data-stu-id="f3045-102">ICorDebugEnum::Skip Method</span></span>
-<span data-ttu-id="f3045-103">Mueve el cursor hacia delante en la enumeración el número especificado de elementos.</span><span class="sxs-lookup"><span data-stu-id="f3045-103">Moves the cursor forward in the enumeration by the specified number of items.</span></span>  
+# <a name="icordebugenumskip-method"></a><span data-ttu-id="a9ef6-102">ICorDebugEnum::Skip (Método)</span><span class="sxs-lookup"><span data-stu-id="a9ef6-102">ICorDebugEnum::Skip Method</span></span>
+<span data-ttu-id="a9ef6-103">Mueve el cursor hacia delante en la enumeración el número especificado de elementos.</span><span class="sxs-lookup"><span data-stu-id="a9ef6-103">Moves the cursor forward in the enumeration by the specified number of items.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f3045-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="f3045-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a9ef6-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="a9ef6-104">Syntax</span></span>  
   
 ```  
 HRESULT Skip (  
@@ -38,18 +39,18 @@ HRESULT Skip (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="f3045-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="f3045-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="a9ef6-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="a9ef6-105">Parameters</span></span>  
  `celt`  
- <span data-ttu-id="f3045-106">[in] El número de elementos por el que se va a mover el cursor hacia delante.</span><span class="sxs-lookup"><span data-stu-id="f3045-106">[in] The number of items by which to move the cursor forward.</span></span>  
+ <span data-ttu-id="a9ef6-106">[in] El número de elementos por el que se va a mover el cursor hacia delante.</span><span class="sxs-lookup"><span data-stu-id="a9ef6-106">[in] The number of items by which to move the cursor forward.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="f3045-107">Requisitos</span><span class="sxs-lookup"><span data-stu-id="f3045-107">Requirements</span></span>  
- <span data-ttu-id="f3045-108">**Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f3045-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a9ef6-107">Requisitos</span><span class="sxs-lookup"><span data-stu-id="a9ef6-107">Requirements</span></span>  
+ <span data-ttu-id="a9ef6-108">**Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a9ef6-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="f3045-109">**Encabezado:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="f3045-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="a9ef6-109">**Encabezado:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="a9ef6-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="f3045-110">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f3045-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="a9ef6-110">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="a9ef6-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="f3045-111">**Versiones de .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f3045-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="a9ef6-111">**Versiones de .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a9ef6-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f3045-112">Vea también</span><span class="sxs-lookup"><span data-stu-id="f3045-112">See Also</span></span>  
- [<span data-ttu-id="f3045-113">ICorDebugEnum Interfaz1</span><span class="sxs-lookup"><span data-stu-id="f3045-113">ICorDebugEnum Interface1</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-interface1.md)
+## <a name="see-also"></a><span data-ttu-id="a9ef6-112">Vea también</span><span class="sxs-lookup"><span data-stu-id="a9ef6-112">See Also</span></span>  
+ [<span data-ttu-id="a9ef6-113">ICorDebugEnum (interfaz1)</span><span class="sxs-lookup"><span data-stu-id="a9ef6-113">ICorDebugEnum Interface1</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-interface1.md)

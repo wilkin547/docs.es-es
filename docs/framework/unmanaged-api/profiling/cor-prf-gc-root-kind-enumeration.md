@@ -19,16 +19,17 @@ caps.latest.revision: "9"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: d60b851dc16fca825526562585fbfcec76f9d20a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 537b39384d04e7a0080a22c6894cc2f6965b0bbc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="corprfgcrootkind-enumeration"></a><span data-ttu-id="b95ea-102">COR_PRF_GC_ROOT_KIND (Enumeración)</span><span class="sxs-lookup"><span data-stu-id="b95ea-102">COR_PRF_GC_ROOT_KIND Enumeration</span></span>
-<span data-ttu-id="b95ea-103">Indica el tipo de raíz de la colección de elementos no utilizados que se expone mediante el [ICorProfilerCallback2:: Rootreferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-rootreferences2-method.md) devolución de llamada.</span><span class="sxs-lookup"><span data-stu-id="b95ea-103">Indicates the kind of garbage collection root that is exposed by the [ICorProfilerCallback2::RootReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-rootreferences2-method.md) callback.</span></span>  
+# <a name="corprfgcrootkind-enumeration"></a><span data-ttu-id="5155c-102">COR_PRF_GC_ROOT_KIND (Enumeración)</span><span class="sxs-lookup"><span data-stu-id="5155c-102">COR_PRF_GC_ROOT_KIND Enumeration</span></span>
+<span data-ttu-id="5155c-103">Indica el tipo de raíz de la colección de elementos no utilizados que se expone mediante el [ICorProfilerCallback2:: Rootreferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-rootreferences2-method.md) devolución de llamada.</span><span class="sxs-lookup"><span data-stu-id="5155c-103">Indicates the kind of garbage collection root that is exposed by the [ICorProfilerCallback2::RootReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-rootreferences2-method.md) callback.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b95ea-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="b95ea-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5155c-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="5155c-104">Syntax</span></span>  
   
 ```  
 typedef enum {  
@@ -39,23 +40,23 @@ typedef enum {
 } COR_PRF_GC_ROOT_KIND;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="b95ea-105">Miembros</span><span class="sxs-lookup"><span data-stu-id="b95ea-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="5155c-105">Miembros</span><span class="sxs-lookup"><span data-stu-id="5155c-105">Members</span></span>  
   
-|<span data-ttu-id="b95ea-106">Miembro</span><span class="sxs-lookup"><span data-stu-id="b95ea-106">Member</span></span>|<span data-ttu-id="b95ea-107">Descripción</span><span class="sxs-lookup"><span data-stu-id="b95ea-107">Description</span></span>|  
+|<span data-ttu-id="5155c-106">Miembro</span><span class="sxs-lookup"><span data-stu-id="5155c-106">Member</span></span>|<span data-ttu-id="5155c-107">Descripción</span><span class="sxs-lookup"><span data-stu-id="5155c-107">Description</span></span>|  
 |------------|-----------------|  
-|`COR_PRF_GC_ROOT_STACK`|<span data-ttu-id="b95ea-108">La raíz es una variable en la pila.</span><span class="sxs-lookup"><span data-stu-id="b95ea-108">The root is a variable on the stack.</span></span>|  
-|`COR_PRF_GC_ROOT_FINALIZER`|<span data-ttu-id="b95ea-109">La raíz es una entrada en la cola del finalizador.</span><span class="sxs-lookup"><span data-stu-id="b95ea-109">The root is an entry in the finalizer queue.</span></span>|  
-|`COR_PRF_GC_ROOT_HANDLE`|<span data-ttu-id="b95ea-110">La raíz es un identificador de la colección de elementos no utilizados.</span><span class="sxs-lookup"><span data-stu-id="b95ea-110">The root is a garbage collection handle.</span></span>|  
-|`COR_PRF_GC_ROOT_OTHER`|<span data-ttu-id="b95ea-111">El tipo de raíz no está especificado.</span><span class="sxs-lookup"><span data-stu-id="b95ea-111">The kind of root is unspecified.</span></span>|  
+|`COR_PRF_GC_ROOT_STACK`|<span data-ttu-id="5155c-108">La raíz es una variable en la pila.</span><span class="sxs-lookup"><span data-stu-id="5155c-108">The root is a variable on the stack.</span></span>|  
+|`COR_PRF_GC_ROOT_FINALIZER`|<span data-ttu-id="5155c-109">La raíz es una entrada en la cola del finalizador.</span><span class="sxs-lookup"><span data-stu-id="5155c-109">The root is an entry in the finalizer queue.</span></span>|  
+|`COR_PRF_GC_ROOT_HANDLE`|<span data-ttu-id="5155c-110">La raíz es un identificador de la colección de elementos no utilizados.</span><span class="sxs-lookup"><span data-stu-id="5155c-110">The root is a garbage collection handle.</span></span>|  
+|`COR_PRF_GC_ROOT_OTHER`|<span data-ttu-id="5155c-111">El tipo de raíz no está especificado.</span><span class="sxs-lookup"><span data-stu-id="5155c-111">The kind of root is unspecified.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="b95ea-112">Requisitos</span><span class="sxs-lookup"><span data-stu-id="b95ea-112">Requirements</span></span>  
- <span data-ttu-id="b95ea-113">**Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b95ea-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="5155c-112">Requisitos</span><span class="sxs-lookup"><span data-stu-id="5155c-112">Requirements</span></span>  
+ <span data-ttu-id="5155c-113">**Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="5155c-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="b95ea-114">**Encabezado:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="b95ea-114">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="5155c-114">**Encabezado:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="5155c-114">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="b95ea-115">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="b95ea-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="5155c-115">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="5155c-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="b95ea-116">**Versiones de .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b95ea-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="5155c-116">**Versiones de .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5155c-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b95ea-117">Vea también</span><span class="sxs-lookup"><span data-stu-id="b95ea-117">See Also</span></span>  
- [<span data-ttu-id="b95ea-118">Enumeraciones de generación de perfiles</span><span class="sxs-lookup"><span data-stu-id="b95ea-118">Profiling Enumerations</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
+## <a name="see-also"></a><span data-ttu-id="5155c-117">Vea también</span><span class="sxs-lookup"><span data-stu-id="5155c-117">See Also</span></span>  
+ [<span data-ttu-id="5155c-118">Enumeraciones para generación de perfiles</span><span class="sxs-lookup"><span data-stu-id="5155c-118">Profiling Enumerations</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)

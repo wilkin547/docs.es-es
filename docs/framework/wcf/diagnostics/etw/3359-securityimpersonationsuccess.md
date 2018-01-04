@@ -13,26 +13,27 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: df1a6e263528192ed1b5732b0da3962971e7e492
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 5818d6d80e02bf0567a928973c2f18f417b4ab22
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="3359---securityimpersonationsuccess"></a><span data-ttu-id="4bb29-102">3359 - SecurityImpersonationSuccess</span><span class="sxs-lookup"><span data-stu-id="4bb29-102">3359 - SecurityImpersonationSuccess</span></span>
-## <a name="properties"></a><span data-ttu-id="4bb29-103">Propiedades</span><span class="sxs-lookup"><span data-stu-id="4bb29-103">Properties</span></span>  
+# <a name="3359---securityimpersonationsuccess"></a><span data-ttu-id="f376b-102">3359 - SecurityImpersonationSuccess</span><span class="sxs-lookup"><span data-stu-id="f376b-102">3359 - SecurityImpersonationSuccess</span></span>
+## <a name="properties"></a><span data-ttu-id="f376b-103">Propiedades</span><span class="sxs-lookup"><span data-stu-id="f376b-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="4bb29-104">Id.</span><span class="sxs-lookup"><span data-stu-id="4bb29-104">ID</span></span>|<span data-ttu-id="4bb29-105">3359</span><span class="sxs-lookup"><span data-stu-id="4bb29-105">3359</span></span>|  
-|<span data-ttu-id="4bb29-106">Palabras clave</span><span class="sxs-lookup"><span data-stu-id="4bb29-106">Keywords</span></span>|<span data-ttu-id="4bb29-107">Seguridad</span><span class="sxs-lookup"><span data-stu-id="4bb29-107">Security</span></span>|  
-|<span data-ttu-id="4bb29-108">Nivel</span><span class="sxs-lookup"><span data-stu-id="4bb29-108">Level</span></span>|<span data-ttu-id="4bb29-109">Detallado</span><span class="sxs-lookup"><span data-stu-id="4bb29-109">Verbose</span></span>|  
-|<span data-ttu-id="4bb29-110">Canal</span><span class="sxs-lookup"><span data-stu-id="4bb29-110">Channel</span></span>|<span data-ttu-id="4bb29-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="4bb29-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
+|<span data-ttu-id="f376b-104">Id.</span><span class="sxs-lookup"><span data-stu-id="f376b-104">ID</span></span>|<span data-ttu-id="f376b-105">3359</span><span class="sxs-lookup"><span data-stu-id="f376b-105">3359</span></span>|  
+|<span data-ttu-id="f376b-106">Palabras clave</span><span class="sxs-lookup"><span data-stu-id="f376b-106">Keywords</span></span>|<span data-ttu-id="f376b-107">Seguridad</span><span class="sxs-lookup"><span data-stu-id="f376b-107">Security</span></span>|  
+|<span data-ttu-id="f376b-108">Nivel</span><span class="sxs-lookup"><span data-stu-id="f376b-108">Level</span></span>|<span data-ttu-id="f376b-109">Detallado</span><span class="sxs-lookup"><span data-stu-id="f376b-109">Verbose</span></span>|  
+|<span data-ttu-id="f376b-110">Canal</span><span class="sxs-lookup"><span data-stu-id="f376b-110">Channel</span></span>|<span data-ttu-id="f376b-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="f376b-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="4bb29-112">Descripción</span><span class="sxs-lookup"><span data-stu-id="4bb29-112">Description</span></span>  
- <span data-ttu-id="4bb29-113">Este evento se genera cuando la suplantación de seguridad se produce correctamente.</span><span class="sxs-lookup"><span data-stu-id="4bb29-113">This event is emitted when the security impersonation has succeeded.</span></span>  
+## <a name="description"></a><span data-ttu-id="f376b-112">Descripción</span><span class="sxs-lookup"><span data-stu-id="f376b-112">Description</span></span>  
+ <span data-ttu-id="f376b-113">Este evento se genera cuando la suplantación de seguridad se produce correctamente.</span><span class="sxs-lookup"><span data-stu-id="f376b-113">This event is emitted when the security impersonation has succeeded.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="4bb29-114">Mensaje</span><span class="sxs-lookup"><span data-stu-id="4bb29-114">Message</span></span>  
- <span data-ttu-id="4bb29-115">La suplantación de seguridad se realizó correctamente.</span><span class="sxs-lookup"><span data-stu-id="4bb29-115">Security impersonation succeeded.</span></span>  
+## <a name="message"></a><span data-ttu-id="f376b-114">Mensaje</span><span class="sxs-lookup"><span data-stu-id="f376b-114">Message</span></span>  
+ <span data-ttu-id="f376b-115">La suplantación de seguridad se realizó correctamente.</span><span class="sxs-lookup"><span data-stu-id="f376b-115">Security impersonation succeeded.</span></span>  
   
-## <a name="details"></a><span data-ttu-id="4bb29-116">Detalles</span><span class="sxs-lookup"><span data-stu-id="4bb29-116">Details</span></span>
+## <a name="details"></a><span data-ttu-id="f376b-116">Detalles</span><span class="sxs-lookup"><span data-stu-id="f376b-116">Details</span></span>

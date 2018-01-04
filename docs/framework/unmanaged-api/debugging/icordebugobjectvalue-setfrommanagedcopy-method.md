@@ -21,16 +21,17 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: a6449cba84e4e9de224632f89d2bf5182f42ce8b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: e1b0a9789dc0b5082bee33835cd5eaf40d87005d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="icordebugobjectvaluesetfrommanagedcopy-method"></a><span data-ttu-id="a90a3-102">ICorDebugObjectValue::SetFromManagedCopy (Método)</span><span class="sxs-lookup"><span data-stu-id="a90a3-102">ICorDebugObjectValue::SetFromManagedCopy Method</span></span>
-<span data-ttu-id="a90a3-103">`SetFromManagedCopy` está obsoleto.</span><span class="sxs-lookup"><span data-stu-id="a90a3-103">`SetFromManagedCopy` is obsolete.</span></span> <span data-ttu-id="a90a3-104">No llame a este método.</span><span class="sxs-lookup"><span data-stu-id="a90a3-104">Do not call this method.</span></span>  
+# <a name="icordebugobjectvaluesetfrommanagedcopy-method"></a><span data-ttu-id="cca12-102">ICorDebugObjectValue::SetFromManagedCopy (Método)</span><span class="sxs-lookup"><span data-stu-id="cca12-102">ICorDebugObjectValue::SetFromManagedCopy Method</span></span>
+<span data-ttu-id="cca12-103">`SetFromManagedCopy` está obsoleto.</span><span class="sxs-lookup"><span data-stu-id="cca12-103">`SetFromManagedCopy` is obsolete.</span></span> <span data-ttu-id="cca12-104">No llame a este método.</span><span class="sxs-lookup"><span data-stu-id="cca12-104">Do not call this method.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a90a3-105">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="a90a3-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="cca12-105">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="cca12-105">Syntax</span></span>  
   
 ```  
 HRESULT SetFromManagedCopy (  
@@ -38,9 +39,9 @@ HRESULT SetFromManagedCopy (
 );  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="a90a3-106">Requisitos</span><span class="sxs-lookup"><span data-stu-id="a90a3-106">Requirements</span></span>  
- <span data-ttu-id="a90a3-107">**Encabezado:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="a90a3-107">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="cca12-106">Requisitos</span><span class="sxs-lookup"><span data-stu-id="cca12-106">Requirements</span></span>  
+ <span data-ttu-id="cca12-107">**Encabezado:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="cca12-107">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a90a3-108">Vea también</span><span class="sxs-lookup"><span data-stu-id="a90a3-108">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="cca12-108">Vea también</span><span class="sxs-lookup"><span data-stu-id="cca12-108">See Also</span></span>  
     
  

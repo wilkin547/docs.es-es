@@ -13,26 +13,27 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: da643d1d35f48b907676df9ba223ec2ee6fb0658
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 5d031447a424aa3576bfab20bc17b1756d85b965
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="505---createservicehoststart"></a><span data-ttu-id="99821-102">505 - CreateServiceHostStart</span><span class="sxs-lookup"><span data-stu-id="99821-102">505 - CreateServiceHostStart</span></span>
-## <a name="properties"></a><span data-ttu-id="99821-103">Propiedades</span><span class="sxs-lookup"><span data-stu-id="99821-103">Properties</span></span>  
+# <a name="505---createservicehoststart"></a><span data-ttu-id="398c9-102">505 - CreateServiceHostStart</span><span class="sxs-lookup"><span data-stu-id="398c9-102">505 - CreateServiceHostStart</span></span>
+## <a name="properties"></a><span data-ttu-id="398c9-103">Propiedades</span><span class="sxs-lookup"><span data-stu-id="398c9-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="99821-104">Id.</span><span class="sxs-lookup"><span data-stu-id="99821-104">ID</span></span>|<span data-ttu-id="99821-105">505</span><span class="sxs-lookup"><span data-stu-id="99821-105">505</span></span>|  
-|<span data-ttu-id="99821-106">Palabras clave</span><span class="sxs-lookup"><span data-stu-id="99821-106">Keywords</span></span>|<span data-ttu-id="99821-107">WebHost</span><span class="sxs-lookup"><span data-stu-id="99821-107">WebHost</span></span>|  
-|<span data-ttu-id="99821-108">Nivel</span><span class="sxs-lookup"><span data-stu-id="99821-108">Level</span></span>|<span data-ttu-id="99821-109">Información</span><span class="sxs-lookup"><span data-stu-id="99821-109">Information</span></span>|  
-|<span data-ttu-id="99821-110">Canal</span><span class="sxs-lookup"><span data-stu-id="99821-110">Channel</span></span>|<span data-ttu-id="99821-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="99821-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
+|<span data-ttu-id="398c9-104">Id.</span><span class="sxs-lookup"><span data-stu-id="398c9-104">ID</span></span>|<span data-ttu-id="398c9-105">505</span><span class="sxs-lookup"><span data-stu-id="398c9-105">505</span></span>|  
+|<span data-ttu-id="398c9-106">Palabras clave</span><span class="sxs-lookup"><span data-stu-id="398c9-106">Keywords</span></span>|<span data-ttu-id="398c9-107">WebHost</span><span class="sxs-lookup"><span data-stu-id="398c9-107">WebHost</span></span>|  
+|<span data-ttu-id="398c9-108">Nivel</span><span class="sxs-lookup"><span data-stu-id="398c9-108">Level</span></span>|<span data-ttu-id="398c9-109">Información</span><span class="sxs-lookup"><span data-stu-id="398c9-109">Information</span></span>|  
+|<span data-ttu-id="398c9-110">Canal</span><span class="sxs-lookup"><span data-stu-id="398c9-110">Channel</span></span>|<span data-ttu-id="398c9-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="398c9-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="99821-112">Descripción</span><span class="sxs-lookup"><span data-stu-id="99821-112">Description</span></span>  
- <span data-ttu-id="99821-113">Se genera este evento cuando CreateServiceHost se inicia.</span><span class="sxs-lookup"><span data-stu-id="99821-113">This event is emitted when CreateServiceHost begins.</span></span>  
+## <a name="description"></a><span data-ttu-id="398c9-112">Descripción</span><span class="sxs-lookup"><span data-stu-id="398c9-112">Description</span></span>  
+ <span data-ttu-id="398c9-113">Se genera este evento cuando CreateServiceHost se inicia.</span><span class="sxs-lookup"><span data-stu-id="398c9-113">This event is emitted when CreateServiceHost begins.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="99821-114">Mensaje</span><span class="sxs-lookup"><span data-stu-id="99821-114">Message</span></span>  
- <span data-ttu-id="99821-115">Comenzar CreateServiceHost.</span><span class="sxs-lookup"><span data-stu-id="99821-115">Begin CreateServiceHost.</span></span>  
+## <a name="message"></a><span data-ttu-id="398c9-114">Mensaje</span><span class="sxs-lookup"><span data-stu-id="398c9-114">Message</span></span>  
+ <span data-ttu-id="398c9-115">Comenzar CreateServiceHost.</span><span class="sxs-lookup"><span data-stu-id="398c9-115">Begin CreateServiceHost.</span></span>  
   
-## <a name="details"></a><span data-ttu-id="99821-116">Detalles</span><span class="sxs-lookup"><span data-stu-id="99821-116">Details</span></span>
+## <a name="details"></a><span data-ttu-id="398c9-116">Detalles</span><span class="sxs-lookup"><span data-stu-id="398c9-116">Details</span></span>

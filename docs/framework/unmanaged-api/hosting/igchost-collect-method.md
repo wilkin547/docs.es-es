@@ -21,16 +21,17 @@ caps.latest.revision: "6"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: d97a988db48cc9bfdf8cf1e260c28e0169eb73f9
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: a0ffe759c6c6049baa11dcc00d4cdee8415156f9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="igchostcollect-method"></a><span data-ttu-id="2e669-102">IGCHost::Collect (Método)</span><span class="sxs-lookup"><span data-stu-id="2e669-102">IGCHost::Collect Method</span></span>
-<span data-ttu-id="2e669-103">Fuerza una recolección que se produzca la generación determinada, con independencia del estado de la colección de elementos no utilizados actual.</span><span class="sxs-lookup"><span data-stu-id="2e669-103">Forces a collection to occur for the given generation, regardless of the state of the current garbage collection.</span></span>  
+# <a name="igchostcollect-method"></a><span data-ttu-id="8db25-102">IGCHost::Collect (Método)</span><span class="sxs-lookup"><span data-stu-id="8db25-102">IGCHost::Collect Method</span></span>
+<span data-ttu-id="8db25-103">Fuerza una recolección que se produzca la generación determinada, con independencia del estado de la colección de elementos no utilizados actual.</span><span class="sxs-lookup"><span data-stu-id="8db25-103">Forces a collection to occur for the given generation, regardless of the state of the current garbage collection.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="2e669-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="2e669-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="8db25-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="8db25-104">Syntax</span></span>  
   
 ```  
 HRESULT Collect (  
@@ -38,18 +39,18 @@ HRESULT Collect (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="2e669-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="2e669-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="8db25-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="8db25-105">Parameters</span></span>  
  `Generation`  
- <span data-ttu-id="2e669-106">[in] La generación en la que se va a realizar la recolección de elementos.</span><span class="sxs-lookup"><span data-stu-id="2e669-106">[in] The generation on which to perform the garbage collection.</span></span> <span data-ttu-id="2e669-107">Un valor de -1 indica que todas las generaciones se someterán a una colección de elementos no utilizados.</span><span class="sxs-lookup"><span data-stu-id="2e669-107">A value of -1 indicates that all generations will undergo a garbage collection.</span></span>  
+ <span data-ttu-id="8db25-106">[in] La generación en la que se va a realizar la recolección de elementos.</span><span class="sxs-lookup"><span data-stu-id="8db25-106">[in] The generation on which to perform the garbage collection.</span></span> <span data-ttu-id="8db25-107">Un valor de -1 indica que todas las generaciones se someterán a una colección de elementos no utilizados.</span><span class="sxs-lookup"><span data-stu-id="8db25-107">A value of -1 indicates that all generations will undergo a garbage collection.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="2e669-108">Requisitos</span><span class="sxs-lookup"><span data-stu-id="2e669-108">Requirements</span></span>  
- <span data-ttu-id="2e669-109">**Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="2e669-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="8db25-108">Requisitos</span><span class="sxs-lookup"><span data-stu-id="8db25-108">Requirements</span></span>  
+ <span data-ttu-id="8db25-109">**Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="8db25-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="2e669-110">**Encabezado:** GCHost.idl, GCHost.h</span><span class="sxs-lookup"><span data-stu-id="2e669-110">**Header:** GCHost.idl, GCHost.h</span></span>  
+ <span data-ttu-id="8db25-110">**Encabezado:** GCHost.idl, GCHost.h</span><span class="sxs-lookup"><span data-stu-id="8db25-110">**Header:** GCHost.idl, GCHost.h</span></span>  
   
- <span data-ttu-id="2e669-111">**Biblioteca:** incluye como recurso en MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="2e669-111">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="8db25-111">**Biblioteca:** incluye como recurso en MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="8db25-111">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="2e669-112">**Versiones de .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2e669-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="8db25-112">**Versiones de .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8db25-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="2e669-113">Vea también</span><span class="sxs-lookup"><span data-stu-id="2e669-113">See Also</span></span>  
- [<span data-ttu-id="2e669-114">IGCHost (interfaz)</span><span class="sxs-lookup"><span data-stu-id="2e669-114">IGCHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/igchost-interface.md)
+## <a name="see-also"></a><span data-ttu-id="8db25-113">Vea también</span><span class="sxs-lookup"><span data-stu-id="8db25-113">See Also</span></span>  
+ [<span data-ttu-id="8db25-114">IGCHost (interfaz)</span><span class="sxs-lookup"><span data-stu-id="8db25-114">IGCHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/igchost-interface.md)

@@ -19,16 +19,17 @@ caps.latest.revision: "6"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: bc1f3a46ac7da58fb2c209f833173a1bc6b32ea4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 79e2a35a455407715a05e826d31c5d5ab05a02ad
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="ienumdefinitionidentity-interface"></a><span data-ttu-id="b55a4-102">IEnumDefinitionIdentity (Interfaz)</span><span class="sxs-lookup"><span data-stu-id="b55a4-102">IEnumDefinitionIdentity Interface</span></span>
-<span data-ttu-id="b55a4-103">Actúa como el enumerador para una colección de `IDefinitionIdentity` objetos.</span><span class="sxs-lookup"><span data-stu-id="b55a4-103">Serves as the enumerator for a collection of `IDefinitionIdentity` objects.</span></span>  
+# <a name="ienumdefinitionidentity-interface"></a><span data-ttu-id="93bc6-102">IEnumDefinitionIdentity (Interfaz)</span><span class="sxs-lookup"><span data-stu-id="93bc6-102">IEnumDefinitionIdentity Interface</span></span>
+<span data-ttu-id="93bc6-103">Actúa como el enumerador para una colección de `IDefinitionIdentity` objetos.</span><span class="sxs-lookup"><span data-stu-id="93bc6-103">Serves as the enumerator for a collection of `IDefinitionIdentity` objects.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b55a4-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="b55a4-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="93bc6-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="93bc6-104">Syntax</span></span>  
   
 ```  
 IEnumDefinitionIdentity : IUnknown {  
@@ -53,22 +54,22 @@ IEnumDefinitionIdentity : IUnknown {
 };  
 ```  
   
-## <a name="methods"></a><span data-ttu-id="b55a4-105">Métodos</span><span class="sxs-lookup"><span data-stu-id="b55a4-105">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="93bc6-105">Métodos</span><span class="sxs-lookup"><span data-stu-id="93bc6-105">Methods</span></span>  
   
-|<span data-ttu-id="b55a4-106">Método</span><span class="sxs-lookup"><span data-stu-id="b55a4-106">Method</span></span>|<span data-ttu-id="b55a4-107">Descripción</span><span class="sxs-lookup"><span data-stu-id="b55a4-107">Description</span></span>|  
+|<span data-ttu-id="93bc6-106">Método</span><span class="sxs-lookup"><span data-stu-id="93bc6-106">Method</span></span>|<span data-ttu-id="93bc6-107">Descripción</span><span class="sxs-lookup"><span data-stu-id="93bc6-107">Description</span></span>|  
 |------------|-----------------|  
-|`IEnumDefinitionIdentity::Clone`|<span data-ttu-id="b55a4-108">Obtiene un puntero de interfaz a una nueva `IEnumDefinitionIdentity` objeto que contiene los mismos miembros que esto `IEnumDefinitionIdentity`.</span><span class="sxs-lookup"><span data-stu-id="b55a4-108">Gets an interface pointer to a new `IEnumDefinitionIdentity` object that contains the same members as this `IEnumDefinitionIdentity`.</span></span>|  
-|`IEnumDefinitionIdentity::Next`|<span data-ttu-id="b55a4-109">Obtiene el número especificado de `IDefinitionIdentity` módulos, comenzando en la posición actual.</span><span class="sxs-lookup"><span data-stu-id="b55a4-109">Gets the specified number of `IDefinitionIdentity` objects, starting at the current position.</span></span>|  
-|`IEnumDefinitionIdentity::Reset`|<span data-ttu-id="b55a4-110">Mueve el puntero de instrucción al principio de este `IEnumDefinitionIdentity`.</span><span class="sxs-lookup"><span data-stu-id="b55a4-110">Moves the instruction pointer to the beginning of this `IEnumDefinitionIdentity`.</span></span>|  
-|`IEnumDefinitionIdentity::Skip`|<span data-ttu-id="b55a4-111">Mueve el puntero de instrucción hacia delante el número especificado de elementos, empezando en la posición actual.</span><span class="sxs-lookup"><span data-stu-id="b55a4-111">Moves the instruction pointer forward by the specified number of elements, starting at the current position.</span></span>|  
+|`IEnumDefinitionIdentity::Clone`|<span data-ttu-id="93bc6-108">Obtiene un puntero de interfaz a una nueva `IEnumDefinitionIdentity` objeto que contiene los mismos miembros que esto `IEnumDefinitionIdentity`.</span><span class="sxs-lookup"><span data-stu-id="93bc6-108">Gets an interface pointer to a new `IEnumDefinitionIdentity` object that contains the same members as this `IEnumDefinitionIdentity`.</span></span>|  
+|`IEnumDefinitionIdentity::Next`|<span data-ttu-id="93bc6-109">Obtiene el número especificado de `IDefinitionIdentity` módulos, comenzando en la posición actual.</span><span class="sxs-lookup"><span data-stu-id="93bc6-109">Gets the specified number of `IDefinitionIdentity` objects, starting at the current position.</span></span>|  
+|`IEnumDefinitionIdentity::Reset`|<span data-ttu-id="93bc6-110">Mueve el puntero de instrucción al principio de este `IEnumDefinitionIdentity`.</span><span class="sxs-lookup"><span data-stu-id="93bc6-110">Moves the instruction pointer to the beginning of this `IEnumDefinitionIdentity`.</span></span>|  
+|`IEnumDefinitionIdentity::Skip`|<span data-ttu-id="93bc6-111">Mueve el puntero de instrucción hacia delante el número especificado de elementos, empezando en la posición actual.</span><span class="sxs-lookup"><span data-stu-id="93bc6-111">Moves the instruction pointer forward by the specified number of elements, starting at the current position.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="b55a4-112">Requisitos</span><span class="sxs-lookup"><span data-stu-id="b55a4-112">Requirements</span></span>  
- <span data-ttu-id="b55a4-113">**Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b55a4-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="93bc6-112">Requisitos</span><span class="sxs-lookup"><span data-stu-id="93bc6-112">Requirements</span></span>  
+ <span data-ttu-id="93bc6-113">**Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="93bc6-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="b55a4-114">**Encabezado:** Isolation.h</span><span class="sxs-lookup"><span data-stu-id="b55a4-114">**Header:** Isolation.h</span></span>  
+ <span data-ttu-id="93bc6-114">**Encabezado:** Isolation.h</span><span class="sxs-lookup"><span data-stu-id="93bc6-114">**Header:** Isolation.h</span></span>  
   
- <span data-ttu-id="b55a4-115">**Versiones de .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b55a4-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="93bc6-115">**Versiones de .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="93bc6-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b55a4-116">Vea también</span><span class="sxs-lookup"><span data-stu-id="b55a4-116">See Also</span></span>  
- [<span data-ttu-id="b55a4-117">Interfaces de Fusion</span><span class="sxs-lookup"><span data-stu-id="b55a4-117">Fusion Interfaces</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)  
- [<span data-ttu-id="b55a4-118">IDefinitionIdentity (interfaz)</span><span class="sxs-lookup"><span data-stu-id="b55a4-118">IDefinitionIdentity Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/idefinitionidentity-interface.md)
+## <a name="see-also"></a><span data-ttu-id="93bc6-116">Vea también</span><span class="sxs-lookup"><span data-stu-id="93bc6-116">See Also</span></span>  
+ [<span data-ttu-id="93bc6-117">Interfaces de Fusion</span><span class="sxs-lookup"><span data-stu-id="93bc6-117">Fusion Interfaces</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)  
+ [<span data-ttu-id="93bc6-118">IDefinitionIdentity (interfaz)</span><span class="sxs-lookup"><span data-stu-id="93bc6-118">IDefinitionIdentity Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/idefinitionidentity-interface.md)

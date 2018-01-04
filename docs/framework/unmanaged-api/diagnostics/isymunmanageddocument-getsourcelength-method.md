@@ -21,28 +21,29 @@ caps.latest.revision: "7"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: b4bf318303b1d787df100051a5c2d3fdd0ac5918
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 61d9bd99a08f428993f38fb5b6889c9659607782
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="isymunmanageddocumentgetsourcelength-method"></a><span data-ttu-id="50c77-102">ISymUnmanagedDocument::GetSourceLength (Método)</span><span class="sxs-lookup"><span data-stu-id="50c77-102">ISymUnmanagedDocument::GetSourceLength Method</span></span>
-<span data-ttu-id="50c77-103">Obtiene la longitud, en bytes, del código fuente incrustado.</span><span class="sxs-lookup"><span data-stu-id="50c77-103">Gets the length, in bytes, of the embedded source.</span></span>  
+# <a name="isymunmanageddocumentgetsourcelength-method"></a><span data-ttu-id="aef34-102">ISymUnmanagedDocument::GetSourceLength (Método)</span><span class="sxs-lookup"><span data-stu-id="aef34-102">ISymUnmanagedDocument::GetSourceLength Method</span></span>
+<span data-ttu-id="aef34-103">Obtiene la longitud, en bytes, del código fuente incrustado.</span><span class="sxs-lookup"><span data-stu-id="aef34-103">Gets the length, in bytes, of the embedded source.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="50c77-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="50c77-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="aef34-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="aef34-104">Syntax</span></span>  
   
 ```  
 HRESULT GetSourceLength(  
     [out, retval]  ULONG32*  pRetVal);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="50c77-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="50c77-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="aef34-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="aef34-105">Parameters</span></span>  
  `pRetVal`  
- <span data-ttu-id="50c77-106">[out] Un puntero a una variable que indica la longitud, en bytes, del código fuente incrustado.</span><span class="sxs-lookup"><span data-stu-id="50c77-106">[out] A pointer to a variable that indicates the length, in bytes, of the embedded source.</span></span>  
+ <span data-ttu-id="aef34-106">[out] Un puntero a una variable que indica la longitud, en bytes, del código fuente incrustado.</span><span class="sxs-lookup"><span data-stu-id="aef34-106">[out] A pointer to a variable that indicates the length, in bytes, of the embedded source.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="50c77-107">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="50c77-107">Return Value</span></span>  
- <span data-ttu-id="50c77-108">S_OK si el método tiene éxito.</span><span class="sxs-lookup"><span data-stu-id="50c77-108">S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="aef34-107">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="aef34-107">Return Value</span></span>  
+ <span data-ttu-id="aef34-108">S_OK si el método tiene éxito.</span><span class="sxs-lookup"><span data-stu-id="aef34-108">S_OK if the method succeeds.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="50c77-109">Vea también</span><span class="sxs-lookup"><span data-stu-id="50c77-109">See Also</span></span>  
- [<span data-ttu-id="50c77-110">ISymUnmanagedDocument (interfaz)</span><span class="sxs-lookup"><span data-stu-id="50c77-110">ISymUnmanagedDocument Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)
+## <a name="see-also"></a><span data-ttu-id="aef34-109">Vea también</span><span class="sxs-lookup"><span data-stu-id="aef34-109">See Also</span></span>  
+ [<span data-ttu-id="aef34-110">ISymUnmanagedDocument (interfaz)</span><span class="sxs-lookup"><span data-stu-id="aef34-110">ISymUnmanagedDocument Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)

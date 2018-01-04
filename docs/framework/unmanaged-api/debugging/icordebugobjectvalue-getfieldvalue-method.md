@@ -21,16 +21,17 @@ caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 33c3f368d9b78b899f54c989427ea1f660346487
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 9fcf53610cf96ef1ab62b4768521e8a2fb7ee6c4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="icordebugobjectvaluegetfieldvalue-method"></a><span data-ttu-id="cb5d6-102">ICorDebugObjectValue::GetFieldValue (Método)</span><span class="sxs-lookup"><span data-stu-id="cb5d6-102">ICorDebugObjectValue::GetFieldValue Method</span></span>
-<span data-ttu-id="cb5d6-103">Obtiene el valor del campo especificado de la clase especificada para este valor de objeto.</span><span class="sxs-lookup"><span data-stu-id="cb5d6-103">Gets the value of the specified field of the specified class for this object value.</span></span>  
+# <a name="icordebugobjectvaluegetfieldvalue-method"></a><span data-ttu-id="ab7da-102">ICorDebugObjectValue::GetFieldValue (Método)</span><span class="sxs-lookup"><span data-stu-id="ab7da-102">ICorDebugObjectValue::GetFieldValue Method</span></span>
+<span data-ttu-id="ab7da-103">Obtiene el valor del campo especificado de la clase especificada para este valor de objeto.</span><span class="sxs-lookup"><span data-stu-id="ab7da-103">Gets the value of the specified field of the specified class for this object value.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="cb5d6-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="cb5d6-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ab7da-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="ab7da-104">Syntax</span></span>  
   
 ```  
 HRESULT GetFieldValue (  
@@ -40,30 +41,30 @@ HRESULT GetFieldValue (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="cb5d6-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="cb5d6-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="ab7da-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="ab7da-105">Parameters</span></span>  
  `pClass`  
- <span data-ttu-id="cb5d6-106">[in] Un puntero a un objeto de "ICorDebugClass" que representa la clase para la que se va a obtener el valor del campo.</span><span class="sxs-lookup"><span data-stu-id="cb5d6-106">[in] A pointer to an "ICorDebugClass" object that represents the class for which to get the field value.</span></span>  
+ <span data-ttu-id="ab7da-106">[in] Un puntero a un objeto de "ICorDebugClass" que representa la clase para la que se va a obtener el valor del campo.</span><span class="sxs-lookup"><span data-stu-id="ab7da-106">[in] A pointer to an "ICorDebugClass" object that represents the class for which to get the field value.</span></span>  
   
  `fieldDef`  
- <span data-ttu-id="cb5d6-107">[in] Un `mdFieldDef` símbolo (token) que hace referencia a los metadatos que describen el campo.</span><span class="sxs-lookup"><span data-stu-id="cb5d6-107">[in] An `mdFieldDef` token that references the metadata describing the field.</span></span>  
+ <span data-ttu-id="ab7da-107">[in] Un `mdFieldDef` símbolo (token) que hace referencia a los metadatos que describen el campo.</span><span class="sxs-lookup"><span data-stu-id="ab7da-107">[in] An `mdFieldDef` token that references the metadata describing the field.</span></span>  
   
  `ppValue`  
- <span data-ttu-id="cb5d6-108">[out] Un puntero a un objeto de "ICorDebugValue" que representa el valor del campo especificado.</span><span class="sxs-lookup"><span data-stu-id="cb5d6-108">[out] A pointer to an "ICorDebugValue" object that represents the value of the specified field.</span></span>  
+ <span data-ttu-id="ab7da-108">[out] Un puntero a un objeto de "ICorDebugValue" que representa el valor del campo especificado.</span><span class="sxs-lookup"><span data-stu-id="ab7da-108">[out] A pointer to an "ICorDebugValue" object that represents the value of the specified field.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="cb5d6-109">Comentarios</span><span class="sxs-lookup"><span data-stu-id="cb5d6-109">Remarks</span></span>  
- <span data-ttu-id="cb5d6-110">La clase, especificada en el `pClass` parámetro, debe estar en la jerarquía de clase del valor de objeto, y el campo debe ser un campo de esa clase.</span><span class="sxs-lookup"><span data-stu-id="cb5d6-110">The class, specified in the `pClass` parameter, must be in the hierarchy of the object value's class, and the field must be a field of that class.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="ab7da-109">Comentarios</span><span class="sxs-lookup"><span data-stu-id="ab7da-109">Remarks</span></span>  
+ <span data-ttu-id="ab7da-110">La clase, especificada en el `pClass` parámetro, debe estar en la jerarquía de clase del valor de objeto, y el campo debe ser un campo de esa clase.</span><span class="sxs-lookup"><span data-stu-id="ab7da-110">The class, specified in the `pClass` parameter, must be in the hierarchy of the object value's class, and the field must be a field of that class.</span></span>  
   
- <span data-ttu-id="cb5d6-111">El `GetFieldValue` método todavía tendrá éxito para objetos genéricos y clases genéricas.</span><span class="sxs-lookup"><span data-stu-id="cb5d6-111">The `GetFieldValue` method will still succeed for generic objects and generic classes.</span></span> <span data-ttu-id="cb5d6-112">Por ejemplo, si MyDictionary\<V > hereda de Dictionary\<string, V >, y el valor del objeto es de tipo MyDictionary\<int32 >, pasando el `ICorDebugClass` objeto de diccionario\<K, V > le Obtenga correctamente un campo del diccionario\<string, int32 >.</span><span class="sxs-lookup"><span data-stu-id="cb5d6-112">For example, if MyDictionary\<V> inherits from Dictionary\<string,V>, and the object value is of type MyDictionary\<int32>, passing the `ICorDebugClass` object for Dictionary\<K,V> will successfully get a field of Dictionary\<string,int32>.</span></span>  
+ <span data-ttu-id="ab7da-111">El `GetFieldValue` método todavía tendrá éxito para objetos genéricos y clases genéricas.</span><span class="sxs-lookup"><span data-stu-id="ab7da-111">The `GetFieldValue` method will still succeed for generic objects and generic classes.</span></span> <span data-ttu-id="ab7da-112">Por ejemplo, si MyDictionary\<V > hereda de Dictionary\<string, V >, y el valor del objeto es de tipo MyDictionary\<int32 >, pasando el `ICorDebugClass` objeto de diccionario\<K, V > le Obtenga correctamente un campo del diccionario\<string, int32 >.</span><span class="sxs-lookup"><span data-stu-id="ab7da-112">For example, if MyDictionary\<V> inherits from Dictionary\<string,V>, and the object value is of type MyDictionary\<int32>, passing the `ICorDebugClass` object for Dictionary\<K,V> will successfully get a field of Dictionary\<string,int32>.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="cb5d6-113">Requisitos</span><span class="sxs-lookup"><span data-stu-id="cb5d6-113">Requirements</span></span>  
- <span data-ttu-id="cb5d6-114">**Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="cb5d6-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ab7da-113">Requisitos</span><span class="sxs-lookup"><span data-stu-id="ab7da-113">Requirements</span></span>  
+ <span data-ttu-id="ab7da-114">**Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ab7da-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="cb5d6-115">**Encabezado:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="cb5d6-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="ab7da-115">**Encabezado:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="ab7da-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="cb5d6-116">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="cb5d6-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="ab7da-116">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="ab7da-116">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="cb5d6-117">**Versiones de .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="cb5d6-117">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="ab7da-117">**Versiones de .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ab7da-117">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="cb5d6-118">Vea también</span><span class="sxs-lookup"><span data-stu-id="cb5d6-118">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="ab7da-118">Vea también</span><span class="sxs-lookup"><span data-stu-id="ab7da-118">See Also</span></span>  
     
  

@@ -13,26 +13,27 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f947047e328498f9b81d69d9116bc7c85e946bc0
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: b7cd6b1c486b6ec4242011a9a9f941069c388f0a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="1409---inactivitytimeout"></a><span data-ttu-id="9c206-102">1409 - InactivityTimeout</span><span class="sxs-lookup"><span data-stu-id="9c206-102">1409 - InactivityTimeout</span></span>
-## <a name="properties"></a><span data-ttu-id="9c206-103">Propiedades</span><span class="sxs-lookup"><span data-stu-id="9c206-103">Properties</span></span>  
+# <a name="1409---inactivitytimeout"></a><span data-ttu-id="6ab60-102">1409 - InactivityTimeout</span><span class="sxs-lookup"><span data-stu-id="6ab60-102">1409 - InactivityTimeout</span></span>
+## <a name="properties"></a><span data-ttu-id="6ab60-103">Propiedades</span><span class="sxs-lookup"><span data-stu-id="6ab60-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="9c206-104">Id.</span><span class="sxs-lookup"><span data-stu-id="9c206-104">ID</span></span>|<span data-ttu-id="9c206-105">1409</span><span class="sxs-lookup"><span data-stu-id="9c206-105">1409</span></span>|  
-|<span data-ttu-id="9c206-106">Palabras clave</span><span class="sxs-lookup"><span data-stu-id="9c206-106">Keywords</span></span>|<span data-ttu-id="9c206-107">ServiceModel</span><span class="sxs-lookup"><span data-stu-id="9c206-107">ServiceModel</span></span>|  
-|<span data-ttu-id="9c206-108">Nivel</span><span class="sxs-lookup"><span data-stu-id="9c206-108">Level</span></span>|<span data-ttu-id="9c206-109">Información</span><span class="sxs-lookup"><span data-stu-id="9c206-109">Information</span></span>|  
-|<span data-ttu-id="9c206-110">Canal</span><span class="sxs-lookup"><span data-stu-id="9c206-110">Channel</span></span>|<span data-ttu-id="9c206-111">Microsoft-Windows-Application Server-Applications/Analytic</span><span class="sxs-lookup"><span data-stu-id="9c206-111">Microsoft-Windows-Application Server-Applications/Analytic</span></span>|  
+|<span data-ttu-id="6ab60-104">Id.</span><span class="sxs-lookup"><span data-stu-id="6ab60-104">ID</span></span>|<span data-ttu-id="6ab60-105">1409</span><span class="sxs-lookup"><span data-stu-id="6ab60-105">1409</span></span>|  
+|<span data-ttu-id="6ab60-106">Palabras clave</span><span class="sxs-lookup"><span data-stu-id="6ab60-106">Keywords</span></span>|<span data-ttu-id="6ab60-107">ServiceModel</span><span class="sxs-lookup"><span data-stu-id="6ab60-107">ServiceModel</span></span>|  
+|<span data-ttu-id="6ab60-108">Nivel</span><span class="sxs-lookup"><span data-stu-id="6ab60-108">Level</span></span>|<span data-ttu-id="6ab60-109">Información</span><span class="sxs-lookup"><span data-stu-id="6ab60-109">Information</span></span>|  
+|<span data-ttu-id="6ab60-110">Canal</span><span class="sxs-lookup"><span data-stu-id="6ab60-110">Channel</span></span>|<span data-ttu-id="6ab60-111">Microsoft-Windows-Application Server-Applications/Analytic</span><span class="sxs-lookup"><span data-stu-id="6ab60-111">Microsoft-Windows-Application Server-Applications/Analytic</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="9c206-112">Descripción</span><span class="sxs-lookup"><span data-stu-id="9c206-112">Description</span></span>  
- <span data-ttu-id="9c206-113">Este evento se genera en tiempo de espera de inactividad.</span><span class="sxs-lookup"><span data-stu-id="9c206-113">This event is emitted on inactivity timeout.</span></span>  
+## <a name="description"></a><span data-ttu-id="6ab60-112">Descripción</span><span class="sxs-lookup"><span data-stu-id="6ab60-112">Description</span></span>  
+ <span data-ttu-id="6ab60-113">Este evento se genera en tiempo de espera de inactividad.</span><span class="sxs-lookup"><span data-stu-id="6ab60-113">This event is emitted on inactivity timeout.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="9c206-114">Mensaje</span><span class="sxs-lookup"><span data-stu-id="9c206-114">Message</span></span>  
- <span data-ttu-id="9c206-115">1 %</span><span class="sxs-lookup"><span data-stu-id="9c206-115">1%</span></span>  
+## <a name="message"></a><span data-ttu-id="6ab60-114">Mensaje</span><span class="sxs-lookup"><span data-stu-id="6ab60-114">Message</span></span>  
+ <span data-ttu-id="6ab60-115">1 %</span><span class="sxs-lookup"><span data-stu-id="6ab60-115">1%</span></span>  
   
-## <a name="details"></a><span data-ttu-id="9c206-116">Detalles</span><span class="sxs-lookup"><span data-stu-id="9c206-116">Details</span></span>
+## <a name="details"></a><span data-ttu-id="6ab60-116">Detalles</span><span class="sxs-lookup"><span data-stu-id="6ab60-116">Details</span></span>

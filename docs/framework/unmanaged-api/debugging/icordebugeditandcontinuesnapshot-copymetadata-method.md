@@ -21,14 +21,15 @@ caps.latest.revision: "4"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 913eafa5e1ec7eb8180c873091cefd299a07f016
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 0e8ef7cd8e4662e9fbe95a04b8c850c0a624dfb6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="icordebugeditandcontinuesnapshotcopymetadata-method"></a><span data-ttu-id="7109e-102">ICorDebugEditAndContinueSnapshot::CopyMetaData (Método)</span><span class="sxs-lookup"><span data-stu-id="7109e-102">ICorDebugEditAndContinueSnapshot::CopyMetaData Method</span></span>
-<span data-ttu-id="7109e-103">`CopyMetaData` está obsoleto.</span><span class="sxs-lookup"><span data-stu-id="7109e-103">`CopyMetaData` is obsolete.</span></span> <span data-ttu-id="7109e-104">No llame a este método.</span><span class="sxs-lookup"><span data-stu-id="7109e-104">Do not call this method.</span></span>  
+# <a name="icordebugeditandcontinuesnapshotcopymetadata-method"></a><span data-ttu-id="42964-102">ICorDebugEditAndContinueSnapshot::CopyMetaData (Método)</span><span class="sxs-lookup"><span data-stu-id="42964-102">ICorDebugEditAndContinueSnapshot::CopyMetaData Method</span></span>
+<span data-ttu-id="42964-103">`CopyMetaData` está obsoleto.</span><span class="sxs-lookup"><span data-stu-id="42964-103">`CopyMetaData` is obsolete.</span></span> <span data-ttu-id="42964-104">No llame a este método.</span><span class="sxs-lookup"><span data-stu-id="42964-104">Do not call this method.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="7109e-105">Vea también</span><span class="sxs-lookup"><span data-stu-id="7109e-105">See Also</span></span>  
- [<span data-ttu-id="7109e-106">Interfaces de depuración</span><span class="sxs-lookup"><span data-stu-id="7109e-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="42964-105">Vea también</span><span class="sxs-lookup"><span data-stu-id="42964-105">See Also</span></span>  
+ [<span data-ttu-id="42964-106">Interfaces de depuración</span><span class="sxs-lookup"><span data-stu-id="42964-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

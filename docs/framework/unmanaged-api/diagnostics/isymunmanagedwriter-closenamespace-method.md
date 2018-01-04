@@ -21,27 +21,28 @@ caps.latest.revision: "7"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 8423e21fbc868e4b6891279d19b2be7c1faef583
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 364c2a851371ea147a61a49826efe702140c5b2f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="isymunmanagedwriterclosenamespace-method"></a><span data-ttu-id="9abdd-102">ISymUnmanagedWriter::CloseNamespace (Método)</span><span class="sxs-lookup"><span data-stu-id="9abdd-102">ISymUnmanagedWriter::CloseNamespace Method</span></span>
-<span data-ttu-id="9abdd-103">Se cierra la última abre espacio de nombres.</span><span class="sxs-lookup"><span data-stu-id="9abdd-103">Closes the most recently opened namespace.</span></span>  
+# <a name="isymunmanagedwriterclosenamespace-method"></a><span data-ttu-id="c02df-102">ISymUnmanagedWriter::CloseNamespace (Método)</span><span class="sxs-lookup"><span data-stu-id="c02df-102">ISymUnmanagedWriter::CloseNamespace Method</span></span>
+<span data-ttu-id="c02df-103">Se cierra la última abre espacio de nombres.</span><span class="sxs-lookup"><span data-stu-id="c02df-103">Closes the most recently opened namespace.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9abdd-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="9abdd-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c02df-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="c02df-104">Syntax</span></span>  
   
 ```  
 HRESULT CloseNamespace();  
 ```  
   
-## <a name="return-value"></a><span data-ttu-id="9abdd-105">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="9abdd-105">Return Value</span></span>  
- <span data-ttu-id="9abdd-106">S_OK si el método tiene éxito; en caso contrario, E_FAIL u otro código de error.</span><span class="sxs-lookup"><span data-stu-id="9abdd-106">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="c02df-105">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="c02df-105">Return Value</span></span>  
+ <span data-ttu-id="c02df-106">S_OK si el método tiene éxito; en caso contrario, E_FAIL u otro código de error.</span><span class="sxs-lookup"><span data-stu-id="c02df-106">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="9abdd-107">Requisitos</span><span class="sxs-lookup"><span data-stu-id="9abdd-107">Requirements</span></span>  
- <span data-ttu-id="9abdd-108">**Encabezado:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="9abdd-108">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c02df-107">Requisitos</span><span class="sxs-lookup"><span data-stu-id="c02df-107">Requirements</span></span>  
+ <span data-ttu-id="c02df-108">**Encabezado:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="c02df-108">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9abdd-109">Vea también</span><span class="sxs-lookup"><span data-stu-id="9abdd-109">See Also</span></span>  
- [<span data-ttu-id="9abdd-110">ISymUnmanagedWriter (interfaz)</span><span class="sxs-lookup"><span data-stu-id="9abdd-110">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)  
- [<span data-ttu-id="9abdd-111">OpenNamespace (método)</span><span class="sxs-lookup"><span data-stu-id="9abdd-111">OpenNamespace Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-opennamespace-method.md)
+## <a name="see-also"></a><span data-ttu-id="c02df-109">Vea también</span><span class="sxs-lookup"><span data-stu-id="c02df-109">See Also</span></span>  
+ [<span data-ttu-id="c02df-110">ISymUnmanagedWriter (interfaz)</span><span class="sxs-lookup"><span data-stu-id="c02df-110">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)  
+ [<span data-ttu-id="c02df-111">OpenNamespace (método)</span><span class="sxs-lookup"><span data-stu-id="c02df-111">OpenNamespace Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-opennamespace-method.md)

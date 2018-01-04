@@ -19,16 +19,17 @@ caps.latest.revision: "8"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 5cdaba8b1186d1720ff8b64f50a8effc4691fe8c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 7a1ad2aa505ba77f136a28b2cfa9f1fa357c37ab
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="cormanifestresourceflags-enumeration"></a><span data-ttu-id="58e95-102">CorManifestResourceFlags (Enumeración)</span><span class="sxs-lookup"><span data-stu-id="58e95-102">CorManifestResourceFlags Enumeration</span></span>
-<span data-ttu-id="58e95-103">Indica la visibilidad de los recursos codificados en un manifiesto del ensamblado.</span><span class="sxs-lookup"><span data-stu-id="58e95-103">Indicates the visibility of resources encoded in an assembly manifest.</span></span>  
+# <a name="cormanifestresourceflags-enumeration"></a><span data-ttu-id="fa6e1-102">CorManifestResourceFlags (Enumeración)</span><span class="sxs-lookup"><span data-stu-id="fa6e1-102">CorManifestResourceFlags Enumeration</span></span>
+<span data-ttu-id="fa6e1-103">Indica la visibilidad de los recursos codificados en un manifiesto del ensamblado.</span><span class="sxs-lookup"><span data-stu-id="fa6e1-103">Indicates the visibility of resources encoded in an assembly manifest.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="58e95-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="58e95-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="fa6e1-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="fa6e1-104">Syntax</span></span>  
   
 ```  
 typedef enum CorManifestResourceFlags {  
@@ -40,20 +41,20 @@ typedef enum CorManifestResourceFlags {
 } CorManifestResourceFlags;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="58e95-105">Miembros</span><span class="sxs-lookup"><span data-stu-id="58e95-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="fa6e1-105">Miembros</span><span class="sxs-lookup"><span data-stu-id="fa6e1-105">Members</span></span>  
   
-|<span data-ttu-id="58e95-106">Miembro</span><span class="sxs-lookup"><span data-stu-id="58e95-106">Member</span></span>|<span data-ttu-id="58e95-107">Descripción</span><span class="sxs-lookup"><span data-stu-id="58e95-107">Description</span></span>|  
+|<span data-ttu-id="fa6e1-106">Miembro</span><span class="sxs-lookup"><span data-stu-id="fa6e1-106">Member</span></span>|<span data-ttu-id="fa6e1-107">Descripción</span><span class="sxs-lookup"><span data-stu-id="fa6e1-107">Description</span></span>|  
 |------------|-----------------|  
-|`mrVisibilityMask`|<span data-ttu-id="58e95-108">Reservado.</span><span class="sxs-lookup"><span data-stu-id="58e95-108">Reserved.</span></span>|  
-|`mrPublic`|<span data-ttu-id="58e95-109">Los recursos son públicos.</span><span class="sxs-lookup"><span data-stu-id="58e95-109">The resources are public.</span></span>|  
-|`mrPrivate`|<span data-ttu-id="58e95-110">Los recursos son privados.</span><span class="sxs-lookup"><span data-stu-id="58e95-110">The resources are private.</span></span>|  
+|`mrVisibilityMask`|<span data-ttu-id="fa6e1-108">Reservado.</span><span class="sxs-lookup"><span data-stu-id="fa6e1-108">Reserved.</span></span>|  
+|`mrPublic`|<span data-ttu-id="fa6e1-109">Los recursos son públicos.</span><span class="sxs-lookup"><span data-stu-id="fa6e1-109">The resources are public.</span></span>|  
+|`mrPrivate`|<span data-ttu-id="fa6e1-110">Los recursos son privados.</span><span class="sxs-lookup"><span data-stu-id="fa6e1-110">The resources are private.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="58e95-111">Requisitos</span><span class="sxs-lookup"><span data-stu-id="58e95-111">Requirements</span></span>  
- <span data-ttu-id="58e95-112">**Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="58e95-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="fa6e1-111">Requisitos</span><span class="sxs-lookup"><span data-stu-id="fa6e1-111">Requirements</span></span>  
+ <span data-ttu-id="fa6e1-112">**Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="fa6e1-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="58e95-113">**Encabezado:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="58e95-113">**Header:** CorHdr.h</span></span>  
+ <span data-ttu-id="fa6e1-113">**Encabezado:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="fa6e1-113">**Header:** CorHdr.h</span></span>  
   
- <span data-ttu-id="58e95-114">**Versiones de .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="58e95-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="fa6e1-114">**Versiones de .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="fa6e1-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="58e95-115">Vea también</span><span class="sxs-lookup"><span data-stu-id="58e95-115">See Also</span></span>  
- [<span data-ttu-id="58e95-116">Enumeraciones para metadatos</span><span class="sxs-lookup"><span data-stu-id="58e95-116">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a><span data-ttu-id="fa6e1-115">Vea también</span><span class="sxs-lookup"><span data-stu-id="fa6e1-115">See Also</span></span>  
+ [<span data-ttu-id="fa6e1-116">Enumeraciones para metadatos</span><span class="sxs-lookup"><span data-stu-id="fa6e1-116">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

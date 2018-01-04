@@ -19,16 +19,17 @@ caps.latest.revision: "10"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 1c17abfc501b0d44981d2ed6cf7d69d60d9948b6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 6be442dd74f6a71494e140b76357be1bc9e1b747
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="cornativetype-enumeration"></a><span data-ttu-id="ceadb-102">CorNativeType (Enumeración)</span><span class="sxs-lookup"><span data-stu-id="ceadb-102">CorNativeType Enumeration</span></span>
-<span data-ttu-id="ceadb-103">Contiene valores que describen los tipos nativos no administrados.</span><span class="sxs-lookup"><span data-stu-id="ceadb-103">Contains values that describe native unmanaged types.</span></span>  
+# <a name="cornativetype-enumeration"></a><span data-ttu-id="877d0-102">CorNativeType (Enumeración)</span><span class="sxs-lookup"><span data-stu-id="877d0-102">CorNativeType Enumeration</span></span>
+<span data-ttu-id="877d0-103">Contiene valores que describen los tipos nativos no administrados.</span><span class="sxs-lookup"><span data-stu-id="877d0-103">Contains values that describe native unmanaged types.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ceadb-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="ceadb-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="877d0-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="877d0-104">Syntax</span></span>  
   
 ```  
 typedef enum CorNativeType {  
@@ -89,65 +90,65 @@ typedef enum CorNativeType {
 } CorNativeType;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="ceadb-105">Miembros</span><span class="sxs-lookup"><span data-stu-id="ceadb-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="877d0-105">Miembros</span><span class="sxs-lookup"><span data-stu-id="877d0-105">Members</span></span>  
   
-|<span data-ttu-id="ceadb-106">Miembro</span><span class="sxs-lookup"><span data-stu-id="ceadb-106">Member</span></span>|<span data-ttu-id="ceadb-107">Descripción</span><span class="sxs-lookup"><span data-stu-id="ceadb-107">Description</span></span>|  
+|<span data-ttu-id="877d0-106">Miembro</span><span class="sxs-lookup"><span data-stu-id="877d0-106">Member</span></span>|<span data-ttu-id="877d0-107">Descripción</span><span class="sxs-lookup"><span data-stu-id="877d0-107">Description</span></span>|  
 |------------|-----------------|  
-|`NATIVE_TYPE_END`|<span data-ttu-id="ceadb-108">Obsoleto.</span><span class="sxs-lookup"><span data-stu-id="ceadb-108">Obsolete.</span></span>|  
-|`NATIVE_TYPE_VOID`|<span data-ttu-id="ceadb-109">Obsoleto.</span><span class="sxs-lookup"><span data-stu-id="ceadb-109">Obsolete.</span></span>|  
-|`NATIVE_TYPE_BOOLEAN`|<span data-ttu-id="ceadb-110">Un valor booleano de 4 bytes, donde TRUE es distinto de cero y FALSE es cero.</span><span class="sxs-lookup"><span data-stu-id="ceadb-110">A 4-byte Boolean value, where TRUE is non-zero and FALSE is zero.</span></span>|  
-|`NATIVE_TYPE_I1`|<span data-ttu-id="ceadb-111">Un valor entero de 8 bits con signo.</span><span class="sxs-lookup"><span data-stu-id="ceadb-111">A signed 8-bit integer value.</span></span>|  
-|`NATIVE_TYPE_U1`|<span data-ttu-id="ceadb-112">Un valor entero de 8 bits sin signo.</span><span class="sxs-lookup"><span data-stu-id="ceadb-112">An unsigned 8-bit integer value.</span></span>|  
-|`NATIVE_TYPE_I2`|<span data-ttu-id="ceadb-113">Un valor entero de 16 bits con signo.</span><span class="sxs-lookup"><span data-stu-id="ceadb-113">A signed 16-bit integer value.</span></span>|  
-|`NATIVE_TYPE_U2`|<span data-ttu-id="ceadb-114">Un valor entero de 16 bits sin signo.</span><span class="sxs-lookup"><span data-stu-id="ceadb-114">An unsigned 16-bit integer value.</span></span>|  
-|`NATIVE_TYPE_I4`|<span data-ttu-id="ceadb-115">Valor entero de 32 bits con signo.</span><span class="sxs-lookup"><span data-stu-id="ceadb-115">A signed 32-bit integer value.</span></span>|  
-|`NATIVE_TYPE_U4`|<span data-ttu-id="ceadb-116">Valor entero de 32 bits sin signo.</span><span class="sxs-lookup"><span data-stu-id="ceadb-116">An unsigned 32-bit integer value.</span></span>|  
-|`NATIVE_TYPE_I8`|<span data-ttu-id="ceadb-117">Un valor entero de 64 bits con signo.</span><span class="sxs-lookup"><span data-stu-id="ceadb-117">A signed 64-bit integer value.</span></span>|  
-|`NATIVE_TYPE_U8`|<span data-ttu-id="ceadb-118">Un valor entero de 64 bits sin signo.</span><span class="sxs-lookup"><span data-stu-id="ceadb-118">An unsigned 64-bit integer value.</span></span>|  
-|`NATIVE_TYPE_R4`|<span data-ttu-id="ceadb-119">Un valor numérico punto flotante de 4 bytes.</span><span class="sxs-lookup"><span data-stu-id="ceadb-119">A 4-byte floating-point numeric value.</span></span>|  
-|`NATIVE_TYPE_R8`|<span data-ttu-id="ceadb-120">Un valor numérico punto flotante de 8 bytes.</span><span class="sxs-lookup"><span data-stu-id="ceadb-120">An 8-byte floating-point numeric value.</span></span>|  
-|`NATIVE_TYPE_SYSCHAR`|<span data-ttu-id="ceadb-121">Obsoleto.</span><span class="sxs-lookup"><span data-stu-id="ceadb-121">Obsolete.</span></span>|  
-|`NATIVE_TYPE_VARIANT`|<span data-ttu-id="ceadb-122">Obsoleto.</span><span class="sxs-lookup"><span data-stu-id="ceadb-122">Obsolete.</span></span>|  
-|`NATIVE_TYPE_CURRENCY`|<span data-ttu-id="ceadb-123">Un tipo COM numérico que corresponde a los recursos administrados <xref:System.Decimal> tipo.</span><span class="sxs-lookup"><span data-stu-id="ceadb-123">A numeric COM type that corresponds to the managed <xref:System.Decimal> type.</span></span>|  
-|`NATIVE_TYPE_PTR`|<span data-ttu-id="ceadb-124">Obsoleto.</span><span class="sxs-lookup"><span data-stu-id="ceadb-124">Obsolete.</span></span>|  
-|`NATIVE_TYPE_DECIMAL`|<span data-ttu-id="ceadb-125">Obsoleto.</span><span class="sxs-lookup"><span data-stu-id="ceadb-125">Obsolete.</span></span>|  
-|`NATIVE_TYPE_DATE`|<span data-ttu-id="ceadb-126">Obsoleto.</span><span class="sxs-lookup"><span data-stu-id="ceadb-126">Obsolete.</span></span>|  
-|`NATIVE_TYPE_BSTR`|<span data-ttu-id="ceadb-127">Interoperabilidad COM.</span><span class="sxs-lookup"><span data-stu-id="ceadb-127">COM Interop.</span></span>|  
-|`NATIVE_TYPE_LPSTR`|<span data-ttu-id="ceadb-128">Un valor de cadena LPSTR.</span><span class="sxs-lookup"><span data-stu-id="ceadb-128">An LPSTR string value.</span></span>|  
-|`NATIVE_TYPE_LPWSTR`|<span data-ttu-id="ceadb-129">Un valor de cadena LPWSTR.</span><span class="sxs-lookup"><span data-stu-id="ceadb-129">An LPWSTR string value.</span></span>|  
-|`NATIVE_TYPE_LPTSTR`|<span data-ttu-id="ceadb-130">Un valor de cadena LPTSTR.</span><span class="sxs-lookup"><span data-stu-id="ceadb-130">An LPTSTR string value.</span></span>|  
-|`NATIVE_TYPE_FIXEDSYSSTRING`|<span data-ttu-id="ceadb-131">Un valor de cadena fijo definido por el sistema.</span><span class="sxs-lookup"><span data-stu-id="ceadb-131">A fixed, system-defined string value.</span></span>|  
-|`NATIVE_TYPE_OBJECTREF`|<span data-ttu-id="ceadb-132">Obsoleto.</span><span class="sxs-lookup"><span data-stu-id="ceadb-132">Obsolete.</span></span>|  
-|`NATIVE_TYPE_IUNKNOWN`|<span data-ttu-id="ceadb-133">Interoperabilidad COM.</span><span class="sxs-lookup"><span data-stu-id="ceadb-133">COM Interop.</span></span>|  
-|`NATIVE_TYPE_IDISPATCH`|<span data-ttu-id="ceadb-134">Interoperabilidad COM.</span><span class="sxs-lookup"><span data-stu-id="ceadb-134">COM Interop.</span></span>|  
-|`NATIVE_TYPE_STRUCT`|<span data-ttu-id="ceadb-135">Un valor de la estructura nativa.</span><span class="sxs-lookup"><span data-stu-id="ceadb-135">A native structure value.</span></span>|  
-|`NATIVE_TYPE_INTF`|<span data-ttu-id="ceadb-136">Interoperabilidad COM.</span><span class="sxs-lookup"><span data-stu-id="ceadb-136">COM Interop.</span></span>|  
-|`NATIVE_TYPE_SAFEARRAY`|<span data-ttu-id="ceadb-137">Interoperabilidad COM.</span><span class="sxs-lookup"><span data-stu-id="ceadb-137">COM Interop.</span></span>|  
-|`NATIVE_TYPE_FIXEDARRAY`|<span data-ttu-id="ceadb-138">Un valor de matriz de longitud fija.</span><span class="sxs-lookup"><span data-stu-id="ceadb-138">A fixed-length array value.</span></span>|  
-|`NATIVE_TYPE_INT`|<span data-ttu-id="ceadb-139">Un valor entero de 16 bits con signo nativo.</span><span class="sxs-lookup"><span data-stu-id="ceadb-139">A native 16-bit signed integer value.</span></span>|  
-|`NATIVE_TYPE_UINT`|<span data-ttu-id="ceadb-140">Un valor entero sin signo de 16 bits nativo.</span><span class="sxs-lookup"><span data-stu-id="ceadb-140">A native 16-bit unsigned integer value.</span></span>|  
-|`NATIVE_TYPE_NESTEDSTRUCT`|<span data-ttu-id="ceadb-141">Obsoleto.</span><span class="sxs-lookup"><span data-stu-id="ceadb-141">Obsolete.</span></span><br /><br /> <span data-ttu-id="ceadb-142">Utilice NATIVE_TYPE_STRUCT.</span><span class="sxs-lookup"><span data-stu-id="ceadb-142">Use NATIVE_TYPE_STRUCT.</span></span>|  
-|`NATIVE_TYPE_BYVALSTR`|<span data-ttu-id="ceadb-143">Interoperabilidad COM.</span><span class="sxs-lookup"><span data-stu-id="ceadb-143">COM Interop.</span></span>|  
-|`NATIVE_TYPE_ANSIBSTR`|<span data-ttu-id="ceadb-144">Interoperabilidad COM.</span><span class="sxs-lookup"><span data-stu-id="ceadb-144">COM Interop.</span></span>|  
-|`NATIVE_TYPE_TBSTR`|<span data-ttu-id="ceadb-145">Interoperabilidad COM.</span><span class="sxs-lookup"><span data-stu-id="ceadb-145">COM Interop.</span></span><br /><br /> <span data-ttu-id="ceadb-146">Seleccione BSTR o ANSIBSTR, dependiendo de la plataforma.</span><span class="sxs-lookup"><span data-stu-id="ceadb-146">Select BSTR or ANSIBSTR depending on the platform.</span></span>|  
-|`NATIVE_TYPE_VARIANTBOOL`|<span data-ttu-id="ceadb-147">Valor booleano de 2 bytes donde TRUE es -1 y FALSE es cero.</span><span class="sxs-lookup"><span data-stu-id="ceadb-147">A 2-byte Boolean value, where TRUE is -1 and FALSE is zero.</span></span>|  
-|`NATIVE_TYPE_FUNC`|<span data-ttu-id="ceadb-148">Puntero de función.</span><span class="sxs-lookup"><span data-stu-id="ceadb-148">A function pointer.</span></span>|  
-|`NATIVE_TYPE_ASANY`|<span data-ttu-id="ceadb-149">Una referencia a cualquier tipo nativo.</span><span class="sxs-lookup"><span data-stu-id="ceadb-149">A reference to any native type.</span></span>|  
-|`NATIVE_TYPE_ARRAY`|<span data-ttu-id="ceadb-150">Una referencia a una matriz con los miembros de un tipo no especificado.</span><span class="sxs-lookup"><span data-stu-id="ceadb-150">A reference to an array with members of an unspecified type.</span></span>|  
-|`NATIVE_TYPE_LPSTRUCT`|<span data-ttu-id="ceadb-151">Un puntero de entero de 32 bits a una estructura.</span><span class="sxs-lookup"><span data-stu-id="ceadb-151">A 32-bit integer pointer to a structure.</span></span>|  
-|`NATIVE_TYPE_CUSTOMMARSHALER`|<span data-ttu-id="ceadb-152">Un tipo nativo del contador de referencias personalizado.</span><span class="sxs-lookup"><span data-stu-id="ceadb-152">A custom marshaler native type.</span></span><br /><br /> <span data-ttu-id="ceadb-153">Esto debe ir seguida de una cadena con el formato siguiente: "el contador de referencias de tipo nativo/0Nombre de nombre escriba nombre/0Cookie opcional/0" o "{nativo escriba GUID} / 0Nombre contador de referencias de tipo nombre/0Cookie opcional/0"</span><span class="sxs-lookup"><span data-stu-id="ceadb-153">This must be followed by a string of the following format: "Native type name/0Custom marshaler type name/0Optional cookie/0" or "{Native type GUID}/0Custom marshaler type name/0Optional cookie/0"</span></span>|  
-|`NATIVE_TYPE_ERROR`|<span data-ttu-id="ceadb-154">Interoperabilidad COM.</span><span class="sxs-lookup"><span data-stu-id="ceadb-154">COM Interop.</span></span><br /><br /> <span data-ttu-id="ceadb-155">Con ELEMENT_TYPE_I4 este tipo se asigna a VT_HRESULT.</span><span class="sxs-lookup"><span data-stu-id="ceadb-155">With ELEMENT_TYPE_I4 this type maps to VT_HRESULT.</span></span>|  
-|`NATIVE_TYPE_IINSPECTABLE`|<span data-ttu-id="ceadb-156">Nativo `IInspectable` tipo.</span><span class="sxs-lookup"><span data-stu-id="ceadb-156">A native `IInspectable` type.</span></span>|  
-|`NATIVE_TYPE_HSTRING`|<span data-ttu-id="ceadb-157">Nativo `HString`.</span><span class="sxs-lookup"><span data-stu-id="ceadb-157">A native `HString`.</span></span>|  
-|`NATIVE_TYPE_MAX`|<span data-ttu-id="ceadb-158">Un valor no válido.</span><span class="sxs-lookup"><span data-stu-id="ceadb-158">An invalid value.</span></span>|  
+|`NATIVE_TYPE_END`|<span data-ttu-id="877d0-108">Obsoleto.</span><span class="sxs-lookup"><span data-stu-id="877d0-108">Obsolete.</span></span>|  
+|`NATIVE_TYPE_VOID`|<span data-ttu-id="877d0-109">Obsoleto.</span><span class="sxs-lookup"><span data-stu-id="877d0-109">Obsolete.</span></span>|  
+|`NATIVE_TYPE_BOOLEAN`|<span data-ttu-id="877d0-110">Un valor booleano de 4 bytes, donde TRUE es distinto de cero y FALSE es cero.</span><span class="sxs-lookup"><span data-stu-id="877d0-110">A 4-byte Boolean value, where TRUE is non-zero and FALSE is zero.</span></span>|  
+|`NATIVE_TYPE_I1`|<span data-ttu-id="877d0-111">Un valor entero de 8 bits con signo.</span><span class="sxs-lookup"><span data-stu-id="877d0-111">A signed 8-bit integer value.</span></span>|  
+|`NATIVE_TYPE_U1`|<span data-ttu-id="877d0-112">Un valor entero de 8 bits sin signo.</span><span class="sxs-lookup"><span data-stu-id="877d0-112">An unsigned 8-bit integer value.</span></span>|  
+|`NATIVE_TYPE_I2`|<span data-ttu-id="877d0-113">Un valor entero de 16 bits con signo.</span><span class="sxs-lookup"><span data-stu-id="877d0-113">A signed 16-bit integer value.</span></span>|  
+|`NATIVE_TYPE_U2`|<span data-ttu-id="877d0-114">Un valor entero de 16 bits sin signo.</span><span class="sxs-lookup"><span data-stu-id="877d0-114">An unsigned 16-bit integer value.</span></span>|  
+|`NATIVE_TYPE_I4`|<span data-ttu-id="877d0-115">Valor entero de 32 bits con signo.</span><span class="sxs-lookup"><span data-stu-id="877d0-115">A signed 32-bit integer value.</span></span>|  
+|`NATIVE_TYPE_U4`|<span data-ttu-id="877d0-116">Valor entero de 32 bits sin signo.</span><span class="sxs-lookup"><span data-stu-id="877d0-116">An unsigned 32-bit integer value.</span></span>|  
+|`NATIVE_TYPE_I8`|<span data-ttu-id="877d0-117">Un valor entero de 64 bits con signo.</span><span class="sxs-lookup"><span data-stu-id="877d0-117">A signed 64-bit integer value.</span></span>|  
+|`NATIVE_TYPE_U8`|<span data-ttu-id="877d0-118">Un valor entero de 64 bits sin signo.</span><span class="sxs-lookup"><span data-stu-id="877d0-118">An unsigned 64-bit integer value.</span></span>|  
+|`NATIVE_TYPE_R4`|<span data-ttu-id="877d0-119">Un valor numérico punto flotante de 4 bytes.</span><span class="sxs-lookup"><span data-stu-id="877d0-119">A 4-byte floating-point numeric value.</span></span>|  
+|`NATIVE_TYPE_R8`|<span data-ttu-id="877d0-120">Un valor numérico punto flotante de 8 bytes.</span><span class="sxs-lookup"><span data-stu-id="877d0-120">An 8-byte floating-point numeric value.</span></span>|  
+|`NATIVE_TYPE_SYSCHAR`|<span data-ttu-id="877d0-121">Obsoleto.</span><span class="sxs-lookup"><span data-stu-id="877d0-121">Obsolete.</span></span>|  
+|`NATIVE_TYPE_VARIANT`|<span data-ttu-id="877d0-122">Obsoleto.</span><span class="sxs-lookup"><span data-stu-id="877d0-122">Obsolete.</span></span>|  
+|`NATIVE_TYPE_CURRENCY`|<span data-ttu-id="877d0-123">Un tipo COM numérico que corresponde a los recursos administrados <xref:System.Decimal> tipo.</span><span class="sxs-lookup"><span data-stu-id="877d0-123">A numeric COM type that corresponds to the managed <xref:System.Decimal> type.</span></span>|  
+|`NATIVE_TYPE_PTR`|<span data-ttu-id="877d0-124">Obsoleto.</span><span class="sxs-lookup"><span data-stu-id="877d0-124">Obsolete.</span></span>|  
+|`NATIVE_TYPE_DECIMAL`|<span data-ttu-id="877d0-125">Obsoleto.</span><span class="sxs-lookup"><span data-stu-id="877d0-125">Obsolete.</span></span>|  
+|`NATIVE_TYPE_DATE`|<span data-ttu-id="877d0-126">Obsoleto.</span><span class="sxs-lookup"><span data-stu-id="877d0-126">Obsolete.</span></span>|  
+|`NATIVE_TYPE_BSTR`|<span data-ttu-id="877d0-127">Interoperabilidad COM.</span><span class="sxs-lookup"><span data-stu-id="877d0-127">COM Interop.</span></span>|  
+|`NATIVE_TYPE_LPSTR`|<span data-ttu-id="877d0-128">Un valor de cadena LPSTR.</span><span class="sxs-lookup"><span data-stu-id="877d0-128">An LPSTR string value.</span></span>|  
+|`NATIVE_TYPE_LPWSTR`|<span data-ttu-id="877d0-129">Un valor de cadena LPWSTR.</span><span class="sxs-lookup"><span data-stu-id="877d0-129">An LPWSTR string value.</span></span>|  
+|`NATIVE_TYPE_LPTSTR`|<span data-ttu-id="877d0-130">Un valor de cadena LPTSTR.</span><span class="sxs-lookup"><span data-stu-id="877d0-130">An LPTSTR string value.</span></span>|  
+|`NATIVE_TYPE_FIXEDSYSSTRING`|<span data-ttu-id="877d0-131">Un valor de cadena fijo definido por el sistema.</span><span class="sxs-lookup"><span data-stu-id="877d0-131">A fixed, system-defined string value.</span></span>|  
+|`NATIVE_TYPE_OBJECTREF`|<span data-ttu-id="877d0-132">Obsoleto.</span><span class="sxs-lookup"><span data-stu-id="877d0-132">Obsolete.</span></span>|  
+|`NATIVE_TYPE_IUNKNOWN`|<span data-ttu-id="877d0-133">Interoperabilidad COM.</span><span class="sxs-lookup"><span data-stu-id="877d0-133">COM Interop.</span></span>|  
+|`NATIVE_TYPE_IDISPATCH`|<span data-ttu-id="877d0-134">Interoperabilidad COM.</span><span class="sxs-lookup"><span data-stu-id="877d0-134">COM Interop.</span></span>|  
+|`NATIVE_TYPE_STRUCT`|<span data-ttu-id="877d0-135">Un valor de la estructura nativa.</span><span class="sxs-lookup"><span data-stu-id="877d0-135">A native structure value.</span></span>|  
+|`NATIVE_TYPE_INTF`|<span data-ttu-id="877d0-136">Interoperabilidad COM.</span><span class="sxs-lookup"><span data-stu-id="877d0-136">COM Interop.</span></span>|  
+|`NATIVE_TYPE_SAFEARRAY`|<span data-ttu-id="877d0-137">Interoperabilidad COM.</span><span class="sxs-lookup"><span data-stu-id="877d0-137">COM Interop.</span></span>|  
+|`NATIVE_TYPE_FIXEDARRAY`|<span data-ttu-id="877d0-138">Un valor de matriz de longitud fija.</span><span class="sxs-lookup"><span data-stu-id="877d0-138">A fixed-length array value.</span></span>|  
+|`NATIVE_TYPE_INT`|<span data-ttu-id="877d0-139">Un valor entero de 16 bits con signo nativo.</span><span class="sxs-lookup"><span data-stu-id="877d0-139">A native 16-bit signed integer value.</span></span>|  
+|`NATIVE_TYPE_UINT`|<span data-ttu-id="877d0-140">Un valor entero sin signo de 16 bits nativo.</span><span class="sxs-lookup"><span data-stu-id="877d0-140">A native 16-bit unsigned integer value.</span></span>|  
+|`NATIVE_TYPE_NESTEDSTRUCT`|<span data-ttu-id="877d0-141">Obsoleto.</span><span class="sxs-lookup"><span data-stu-id="877d0-141">Obsolete.</span></span><br /><br /> <span data-ttu-id="877d0-142">Utilice NATIVE_TYPE_STRUCT.</span><span class="sxs-lookup"><span data-stu-id="877d0-142">Use NATIVE_TYPE_STRUCT.</span></span>|  
+|`NATIVE_TYPE_BYVALSTR`|<span data-ttu-id="877d0-143">Interoperabilidad COM.</span><span class="sxs-lookup"><span data-stu-id="877d0-143">COM Interop.</span></span>|  
+|`NATIVE_TYPE_ANSIBSTR`|<span data-ttu-id="877d0-144">Interoperabilidad COM.</span><span class="sxs-lookup"><span data-stu-id="877d0-144">COM Interop.</span></span>|  
+|`NATIVE_TYPE_TBSTR`|<span data-ttu-id="877d0-145">Interoperabilidad COM.</span><span class="sxs-lookup"><span data-stu-id="877d0-145">COM Interop.</span></span><br /><br /> <span data-ttu-id="877d0-146">Seleccione BSTR o ANSIBSTR, dependiendo de la plataforma.</span><span class="sxs-lookup"><span data-stu-id="877d0-146">Select BSTR or ANSIBSTR depending on the platform.</span></span>|  
+|`NATIVE_TYPE_VARIANTBOOL`|<span data-ttu-id="877d0-147">Valor booleano de 2 bytes donde TRUE es -1 y FALSE es cero.</span><span class="sxs-lookup"><span data-stu-id="877d0-147">A 2-byte Boolean value, where TRUE is -1 and FALSE is zero.</span></span>|  
+|`NATIVE_TYPE_FUNC`|<span data-ttu-id="877d0-148">Puntero de función.</span><span class="sxs-lookup"><span data-stu-id="877d0-148">A function pointer.</span></span>|  
+|`NATIVE_TYPE_ASANY`|<span data-ttu-id="877d0-149">Una referencia a cualquier tipo nativo.</span><span class="sxs-lookup"><span data-stu-id="877d0-149">A reference to any native type.</span></span>|  
+|`NATIVE_TYPE_ARRAY`|<span data-ttu-id="877d0-150">Una referencia a una matriz con los miembros de un tipo no especificado.</span><span class="sxs-lookup"><span data-stu-id="877d0-150">A reference to an array with members of an unspecified type.</span></span>|  
+|`NATIVE_TYPE_LPSTRUCT`|<span data-ttu-id="877d0-151">Un puntero de entero de 32 bits a una estructura.</span><span class="sxs-lookup"><span data-stu-id="877d0-151">A 32-bit integer pointer to a structure.</span></span>|  
+|`NATIVE_TYPE_CUSTOMMARSHALER`|<span data-ttu-id="877d0-152">Un tipo nativo del contador de referencias personalizado.</span><span class="sxs-lookup"><span data-stu-id="877d0-152">A custom marshaler native type.</span></span><br /><br /> <span data-ttu-id="877d0-153">Esto debe ir seguida de una cadena con el formato siguiente: "el contador de referencias de tipo nativo/0Nombre de nombre escriba nombre/0Cookie opcional/0" o "{nativo escriba GUID} / 0Nombre contador de referencias de tipo nombre/0Cookie opcional/0"</span><span class="sxs-lookup"><span data-stu-id="877d0-153">This must be followed by a string of the following format: "Native type name/0Custom marshaler type name/0Optional cookie/0" or "{Native type GUID}/0Custom marshaler type name/0Optional cookie/0"</span></span>|  
+|`NATIVE_TYPE_ERROR`|<span data-ttu-id="877d0-154">Interoperabilidad COM.</span><span class="sxs-lookup"><span data-stu-id="877d0-154">COM Interop.</span></span><br /><br /> <span data-ttu-id="877d0-155">Con ELEMENT_TYPE_I4 este tipo se asigna a VT_HRESULT.</span><span class="sxs-lookup"><span data-stu-id="877d0-155">With ELEMENT_TYPE_I4 this type maps to VT_HRESULT.</span></span>|  
+|`NATIVE_TYPE_IINSPECTABLE`|<span data-ttu-id="877d0-156">Nativo `IInspectable` tipo.</span><span class="sxs-lookup"><span data-stu-id="877d0-156">A native `IInspectable` type.</span></span>|  
+|`NATIVE_TYPE_HSTRING`|<span data-ttu-id="877d0-157">Nativo `HString`.</span><span class="sxs-lookup"><span data-stu-id="877d0-157">A native `HString`.</span></span>|  
+|`NATIVE_TYPE_MAX`|<span data-ttu-id="877d0-158">Un valor no válido.</span><span class="sxs-lookup"><span data-stu-id="877d0-158">An invalid value.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="ceadb-159">Requisitos</span><span class="sxs-lookup"><span data-stu-id="ceadb-159">Requirements</span></span>  
- <span data-ttu-id="ceadb-160">**Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ceadb-160">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="877d0-159">Requisitos</span><span class="sxs-lookup"><span data-stu-id="877d0-159">Requirements</span></span>  
+ <span data-ttu-id="877d0-160">**Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="877d0-160">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="ceadb-161">**Encabezado:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="ceadb-161">**Header:** CorHdr.h</span></span>  
+ <span data-ttu-id="877d0-161">**Encabezado:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="877d0-161">**Header:** CorHdr.h</span></span>  
   
- <span data-ttu-id="ceadb-162">**Versiones de .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ceadb-162">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="877d0-162">**Versiones de .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="877d0-162">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ceadb-163">Vea también</span><span class="sxs-lookup"><span data-stu-id="ceadb-163">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="877d0-163">Vea también</span><span class="sxs-lookup"><span data-stu-id="877d0-163">See Also</span></span>  
  <xref:System.Runtime.InteropServices.UnmanagedType>  
- [<span data-ttu-id="ceadb-164">Enumeraciones para metadatos</span><span class="sxs-lookup"><span data-stu-id="ceadb-164">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+ [<span data-ttu-id="877d0-164">Enumeraciones para metadatos</span><span class="sxs-lookup"><span data-stu-id="877d0-164">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
