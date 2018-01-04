@@ -13,19 +13,20 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 826a83e60f73b414fbeb37335d74597e57bee1cc
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: e922b749792b541083b991340731796be1772c61
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelcomintegrationcomintegrationservicehostcreatedservicecontract"></a><span data-ttu-id="1b0de-102">System.ServiceModel.ComIntegration.ComIntegrationServiceHostCreatedServiceContract</span><span class="sxs-lookup"><span data-stu-id="1b0de-102">System.ServiceModel.ComIntegration.ComIntegrationServiceHostCreatedServiceContract</span></span>
-<span data-ttu-id="1b0de-103">System.ServiceModel.ComIntegration.ComIntegrationServiceHostCreatedServiceContract</span><span class="sxs-lookup"><span data-stu-id="1b0de-103">System.ServiceModel.ComIntegration.ComIntegrationServiceHostCreatedServiceContract</span></span>  
+# <a name="systemservicemodelcomintegrationcomintegrationservicehostcreatedservicecontract"></a><span data-ttu-id="6b8da-102">System.ServiceModel.ComIntegration.ComIntegrationServiceHostCreatedServiceContract</span><span class="sxs-lookup"><span data-stu-id="6b8da-102">System.ServiceModel.ComIntegration.ComIntegrationServiceHostCreatedServiceContract</span></span>
+<span data-ttu-id="6b8da-103">System.ServiceModel.ComIntegration.ComIntegrationServiceHostCreatedServiceContract</span><span class="sxs-lookup"><span data-stu-id="6b8da-103">System.ServiceModel.ComIntegration.ComIntegrationServiceHostCreatedServiceContract</span></span>  
   
-## <a name="description"></a><span data-ttu-id="1b0de-104">Descripción</span><span class="sxs-lookup"><span data-stu-id="1b0de-104">Description</span></span>  
- <span data-ttu-id="1b0de-105">ComPlus: contrato de servicios creado.</span><span class="sxs-lookup"><span data-stu-id="1b0de-105">ComPlus: Created service contract.</span></span>  
+## <a name="description"></a><span data-ttu-id="6b8da-104">Descripción</span><span class="sxs-lookup"><span data-stu-id="6b8da-104">Description</span></span>  
+ <span data-ttu-id="6b8da-105">ComPlus: contrato de servicios creado.</span><span class="sxs-lookup"><span data-stu-id="6b8da-105">ComPlus: Created service contract.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1b0de-106">Vea también</span><span class="sxs-lookup"><span data-stu-id="1b0de-106">See Also</span></span>  
- [<span data-ttu-id="1b0de-107">Seguimiento</span><span class="sxs-lookup"><span data-stu-id="1b0de-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="1b0de-108">Uso del seguimiento para solucionar problemas de la aplicación</span><span class="sxs-lookup"><span data-stu-id="1b0de-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="1b0de-109">Administración y diagnóstico</span><span class="sxs-lookup"><span data-stu-id="1b0de-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="6b8da-106">Vea también</span><span class="sxs-lookup"><span data-stu-id="6b8da-106">See Also</span></span>  
+ [<span data-ttu-id="6b8da-107">Traza</span><span class="sxs-lookup"><span data-stu-id="6b8da-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="6b8da-108">Uso del seguimiento para solucionar problemas de su aplicación</span><span class="sxs-lookup"><span data-stu-id="6b8da-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="6b8da-109">Administración y diagnóstico</span><span class="sxs-lookup"><span data-stu-id="6b8da-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

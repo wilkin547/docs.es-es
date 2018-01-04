@@ -13,26 +13,27 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 41568f3c5f9bb33ac49eab32d5c58ba37df3aa80
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: b16c5d2dbf73e4042e84a2b747c4de16c858d228
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="3391---httpmessagereceivefailed"></a><span data-ttu-id="0f4c2-102">3391 - HttpMessageReceiveFailed</span><span class="sxs-lookup"><span data-stu-id="0f4c2-102">3391 - HttpMessageReceiveFailed</span></span>
-## <a name="properties"></a><span data-ttu-id="0f4c2-103">Propiedades</span><span class="sxs-lookup"><span data-stu-id="0f4c2-103">Properties</span></span>  
+# <a name="3391---httpmessagereceivefailed"></a><span data-ttu-id="ba0f3-102">3391 - HttpMessageReceiveFailed</span><span class="sxs-lookup"><span data-stu-id="ba0f3-102">3391 - HttpMessageReceiveFailed</span></span>
+## <a name="properties"></a><span data-ttu-id="ba0f3-103">Propiedades</span><span class="sxs-lookup"><span data-stu-id="ba0f3-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="0f4c2-104">Id.</span><span class="sxs-lookup"><span data-stu-id="0f4c2-104">ID</span></span>|<span data-ttu-id="0f4c2-105">3391</span><span class="sxs-lookup"><span data-stu-id="0f4c2-105">3391</span></span>|  
-|<span data-ttu-id="0f4c2-106">Palabras clave</span><span class="sxs-lookup"><span data-stu-id="0f4c2-106">Keywords</span></span>|<span data-ttu-id="0f4c2-107">HTTP</span><span class="sxs-lookup"><span data-stu-id="0f4c2-107">HTTP</span></span>|  
-|<span data-ttu-id="0f4c2-108">Nivel</span><span class="sxs-lookup"><span data-stu-id="0f4c2-108">Level</span></span>|<span data-ttu-id="0f4c2-109">Advertencia</span><span class="sxs-lookup"><span data-stu-id="0f4c2-109">Warning</span></span>|  
-|<span data-ttu-id="0f4c2-110">Canal</span><span class="sxs-lookup"><span data-stu-id="0f4c2-110">Channel</span></span>|<span data-ttu-id="0f4c2-111">Microsoft-Windows-Application Server-Applications/Analytic</span><span class="sxs-lookup"><span data-stu-id="0f4c2-111">Microsoft-Windows-Application Server-Applications/Analytic</span></span>|  
+|<span data-ttu-id="ba0f3-104">Id.</span><span class="sxs-lookup"><span data-stu-id="ba0f3-104">ID</span></span>|<span data-ttu-id="ba0f3-105">3391</span><span class="sxs-lookup"><span data-stu-id="ba0f3-105">3391</span></span>|  
+|<span data-ttu-id="ba0f3-106">Palabras clave</span><span class="sxs-lookup"><span data-stu-id="ba0f3-106">Keywords</span></span>|<span data-ttu-id="ba0f3-107">HTTP</span><span class="sxs-lookup"><span data-stu-id="ba0f3-107">HTTP</span></span>|  
+|<span data-ttu-id="ba0f3-108">Nivel</span><span class="sxs-lookup"><span data-stu-id="ba0f3-108">Level</span></span>|<span data-ttu-id="ba0f3-109">Advertencia</span><span class="sxs-lookup"><span data-stu-id="ba0f3-109">Warning</span></span>|  
+|<span data-ttu-id="ba0f3-110">Canal</span><span class="sxs-lookup"><span data-stu-id="ba0f3-110">Channel</span></span>|<span data-ttu-id="ba0f3-111">Microsoft-Windows-Application Server-Applications/Analytic</span><span class="sxs-lookup"><span data-stu-id="ba0f3-111">Microsoft-Windows-Application Server-Applications/Analytic</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="0f4c2-112">Descripción</span><span class="sxs-lookup"><span data-stu-id="0f4c2-112">Description</span></span>  
- <span data-ttu-id="0f4c2-113">Este evento se genera cuando la recepción de mensajes Http produce un error.</span><span class="sxs-lookup"><span data-stu-id="0f4c2-113">This event is emitted when the Http message receive has failed.</span></span>  
+## <a name="description"></a><span data-ttu-id="ba0f3-112">Descripción</span><span class="sxs-lookup"><span data-stu-id="ba0f3-112">Description</span></span>  
+ <span data-ttu-id="ba0f3-113">Este evento se genera cuando la recepción de mensajes Http produce un error.</span><span class="sxs-lookup"><span data-stu-id="ba0f3-113">This event is emitted when the Http message receive has failed.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="0f4c2-114">Mensaje</span><span class="sxs-lookup"><span data-stu-id="0f4c2-114">Message</span></span>  
- <span data-ttu-id="0f4c2-115">Error en la recepción del mensaje HTTP.</span><span class="sxs-lookup"><span data-stu-id="0f4c2-115">Http Message receive failed.</span></span>  
+## <a name="message"></a><span data-ttu-id="ba0f3-114">Mensaje</span><span class="sxs-lookup"><span data-stu-id="ba0f3-114">Message</span></span>  
+ <span data-ttu-id="ba0f3-115">Error en la recepción del mensaje HTTP.</span><span class="sxs-lookup"><span data-stu-id="ba0f3-115">Http Message receive failed.</span></span>  
   
-## <a name="details"></a><span data-ttu-id="0f4c2-116">Detalles</span><span class="sxs-lookup"><span data-stu-id="0f4c2-116">Details</span></span>
+## <a name="details"></a><span data-ttu-id="ba0f3-116">Detalles</span><span class="sxs-lookup"><span data-stu-id="ba0f3-116">Details</span></span>

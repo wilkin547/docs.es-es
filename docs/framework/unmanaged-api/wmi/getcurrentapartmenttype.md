@@ -14,18 +14,19 @@ topic_type: Reference
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: b250913b55ba59261a666760cc15466b6f9d096e
-ms.sourcegitcommit: a53799f81351ad9afb3007cd68846ce6aeeb10cb
+ms.workload: dotnet
+ms.openlocfilehash: a42c6c3c778dbdefd4b83621e65b81741b940ebe
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="getcurrentapartmenttype-function"></a><span data-ttu-id="fd639-103">GetCurrentApartmentType (función)</span><span class="sxs-lookup"><span data-stu-id="fd639-103">GetCurrentApartmentType function</span></span>
-<span data-ttu-id="fd639-104">Recupera el tipo de contenedor en el que se está ejecutando el llamador.</span><span class="sxs-lookup"><span data-stu-id="fd639-104">Retrieves the type of apartment in which the caller is executing.</span></span>   
+# <a name="getcurrentapartmenttype-function"></a><span data-ttu-id="f09e7-103">GetCurrentApartmentType (función)</span><span class="sxs-lookup"><span data-stu-id="f09e7-103">GetCurrentApartmentType function</span></span>
+<span data-ttu-id="f09e7-104">Recupera el tipo de contenedor en el que se está ejecutando el llamador.</span><span class="sxs-lookup"><span data-stu-id="f09e7-104">Retrieves the type of apartment in which the caller is executing.</span></span>   
   
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
-## <a name="syntax"></a><span data-ttu-id="fd639-105">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="fd639-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f09e7-105">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="f09e7-105">Syntax</span></span>  
   
 ```  
 HRESULT GetCurrentApartmentType (
@@ -35,35 +36,35 @@ HRESULT GetCurrentApartmentType (
 ); 
 ```  
 
-## <a name="parameters"></a><span data-ttu-id="fd639-106">Parámetros</span><span class="sxs-lookup"><span data-stu-id="fd639-106">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="f09e7-106">Parámetros</span><span class="sxs-lookup"><span data-stu-id="f09e7-106">Parameters</span></span>
 
 `vFunc`  
-<span data-ttu-id="fd639-107">[in] Este parámetro no se utiliza.</span><span class="sxs-lookup"><span data-stu-id="fd639-107">[in] This parameter is unused.</span></span>
+<span data-ttu-id="f09e7-107">[in] Este parámetro no se utiliza.</span><span class="sxs-lookup"><span data-stu-id="f09e7-107">[in] This parameter is unused.</span></span>
 
 `ptr`  
-<span data-ttu-id="fd639-108">[in] Un puntero a un [IComThreadingInfo](https://msdn.microsoft.com/library/windows/desktop/ms694502(v=vs.85).aspx) instancia.</span><span class="sxs-lookup"><span data-stu-id="fd639-108">[in] A pointer to an [IComThreadingInfo](https://msdn.microsoft.com/library/windows/desktop/ms694502(v=vs.85).aspx) instance.</span></span>
+<span data-ttu-id="f09e7-108">[in] Un puntero a un [IComThreadingInfo](https://msdn.microsoft.com/library/windows/desktop/ms694502(v=vs.85).aspx) instancia.</span><span class="sxs-lookup"><span data-stu-id="f09e7-108">[in] A pointer to an [IComThreadingInfo](https://msdn.microsoft.com/library/windows/desktop/ms694502(v=vs.85).aspx) instance.</span></span>
 
 `aptType`  
-<span data-ttu-id="fd639-109">[out] Un puntero a un [APTTYPE](https://msdn.microsoft.com/library/windows/desktop/ms693793(v=vs.85).aspx) valor de enumeración que indica el apartamento del llamador.</span><span class="sxs-lookup"><span data-stu-id="fd639-109">[out] A pointer to an [APTTYPE](https://msdn.microsoft.com/library/windows/desktop/ms693793(v=vs.85).aspx) enumeration value that indicates the caller's apartment.</span></span>
+<span data-ttu-id="f09e7-109">[out] Un puntero a un [APTTYPE](https://msdn.microsoft.com/library/windows/desktop/ms693793(v=vs.85).aspx) valor de enumeración que indica el apartamento del llamador.</span><span class="sxs-lookup"><span data-stu-id="f09e7-109">[out] A pointer to an [APTTYPE](https://msdn.microsoft.com/library/windows/desktop/ms693793(v=vs.85).aspx) enumeration value that indicates the caller's apartment.</span></span>
 
-## <a name="return-value"></a><span data-ttu-id="fd639-110">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="fd639-110">Return value</span></span>
+## <a name="return-value"></a><span data-ttu-id="f09e7-110">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="f09e7-110">Return value</span></span>
 
 
-|<span data-ttu-id="fd639-111">Constante</span><span class="sxs-lookup"><span data-stu-id="fd639-111">Constant</span></span>  |<span data-ttu-id="fd639-112">Valor</span><span class="sxs-lookup"><span data-stu-id="fd639-112">Value</span></span>  |<span data-ttu-id="fd639-113">Descripción</span><span class="sxs-lookup"><span data-stu-id="fd639-113">Description</span></span>  |
+|<span data-ttu-id="f09e7-111">Constante</span><span class="sxs-lookup"><span data-stu-id="f09e7-111">Constant</span></span>  |<span data-ttu-id="f09e7-112">Valor</span><span class="sxs-lookup"><span data-stu-id="f09e7-112">Value</span></span>  |<span data-ttu-id="f09e7-113">Descripción</span><span class="sxs-lookup"><span data-stu-id="f09e7-113">Description</span></span>  |
 |---------|---------|---------|
-| `S_OK` | <span data-ttu-id="fd639-114">0</span><span class="sxs-lookup"><span data-stu-id="fd639-114">0</span></span> | <span data-ttu-id="fd639-115">La función que se completó correctamente.</span><span class="sxs-lookup"><span data-stu-id="fd639-115">The function completed successfully.</span></span> |
-| `E_FAIL` | <span data-ttu-id="fd639-116">0x80000008</span><span class="sxs-lookup"><span data-stu-id="fd639-116">0x80000008</span></span> | <span data-ttu-id="fd639-117">El llamador no se está ejecutando en un contenedor.</span><span class="sxs-lookup"><span data-stu-id="fd639-117">The caller is not executing in an apartment.</span></span> |
+| `S_OK` | <span data-ttu-id="f09e7-114">0</span><span class="sxs-lookup"><span data-stu-id="f09e7-114">0</span></span> | <span data-ttu-id="f09e7-115">La función que se completó correctamente.</span><span class="sxs-lookup"><span data-stu-id="f09e7-115">The function completed successfully.</span></span> |
+| `E_FAIL` | <span data-ttu-id="f09e7-116">0x80000008</span><span class="sxs-lookup"><span data-stu-id="f09e7-116">0x80000008</span></span> | <span data-ttu-id="f09e7-117">El llamador no se está ejecutando en un contenedor.</span><span class="sxs-lookup"><span data-stu-id="f09e7-117">The caller is not executing in an apartment.</span></span> |
   
-## <a name="remarks"></a><span data-ttu-id="fd639-118">Comentarios</span><span class="sxs-lookup"><span data-stu-id="fd639-118">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="f09e7-118">Comentarios</span><span class="sxs-lookup"><span data-stu-id="f09e7-118">Remarks</span></span>
 
-<span data-ttu-id="fd639-119">Esta función contiene una llamada a la [IComThreadingInfo::GetCurrentApartmentType](https://msdn.microsoft.com/library/windows/desktop/ms683752(v=vs.85).aspx) método.</span><span class="sxs-lookup"><span data-stu-id="fd639-119">This function wraps a call to the [IComThreadingInfo::GetCurrentApartmentType](https://msdn.microsoft.com/library/windows/desktop/ms683752(v=vs.85).aspx) method.</span></span>
+<span data-ttu-id="f09e7-119">Esta función contiene una llamada a la [IComThreadingInfo::GetCurrentApartmentType](https://msdn.microsoft.com/library/windows/desktop/ms683752(v=vs.85).aspx) método.</span><span class="sxs-lookup"><span data-stu-id="f09e7-119">This function wraps a call to the [IComThreadingInfo::GetCurrentApartmentType](https://msdn.microsoft.com/library/windows/desktop/ms683752(v=vs.85).aspx) method.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="fd639-120">Requisitos</span><span class="sxs-lookup"><span data-stu-id="fd639-120">Requirements</span></span>  
- <span data-ttu-id="fd639-121">**Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="fd639-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f09e7-120">Requisitos</span><span class="sxs-lookup"><span data-stu-id="f09e7-120">Requirements</span></span>  
+ <span data-ttu-id="f09e7-121">**Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f09e7-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="fd639-122">**Encabezado:** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="fd639-122">**Header:** WMINet_Utils.idl</span></span>  
+ <span data-ttu-id="f09e7-122">**Encabezado:** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="f09e7-122">**Header:** WMINet_Utils.idl</span></span>  
   
- <span data-ttu-id="fd639-123">**Versiones de .NET framework:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="fd639-123">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
+ <span data-ttu-id="f09e7-123">**Versiones de .NET framework:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="f09e7-123">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="fd639-124">Vea también</span><span class="sxs-lookup"><span data-stu-id="fd639-124">See also</span></span>  
-[<span data-ttu-id="fd639-125">WMI y contadores de rendimiento (referencia de API no administrada)</span><span class="sxs-lookup"><span data-stu-id="fd639-125">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)
+## <a name="see-also"></a><span data-ttu-id="f09e7-124">Vea también</span><span class="sxs-lookup"><span data-stu-id="f09e7-124">See also</span></span>  
+[<span data-ttu-id="f09e7-125">WMI y contadores de rendimiento (referencia de API no administrada)</span><span class="sxs-lookup"><span data-stu-id="f09e7-125">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)

@@ -13,31 +13,32 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c222efc0a23c6239dd2b03ff31c5279b2eda04cc
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 7238806a9f1a1726cf55c6b485ea52f62ca8f4f0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="451---messageloginfo"></a><span data-ttu-id="aa47d-102">451 - MessageLogInfo</span><span class="sxs-lookup"><span data-stu-id="aa47d-102">451 - MessageLogInfo</span></span>
-## <a name="properties"></a><span data-ttu-id="aa47d-103">Propiedades</span><span class="sxs-lookup"><span data-stu-id="aa47d-103">Properties</span></span>  
+# <a name="451---messageloginfo"></a><span data-ttu-id="4d39f-102">451 - MessageLogInfo</span><span class="sxs-lookup"><span data-stu-id="4d39f-102">451 - MessageLogInfo</span></span>
+## <a name="properties"></a><span data-ttu-id="4d39f-103">Propiedades</span><span class="sxs-lookup"><span data-stu-id="4d39f-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="aa47d-104">Id.</span><span class="sxs-lookup"><span data-stu-id="aa47d-104">ID</span></span>|<span data-ttu-id="aa47d-105">451</span><span class="sxs-lookup"><span data-stu-id="aa47d-105">451</span></span>|  
-|<span data-ttu-id="aa47d-106">Palabras clave</span><span class="sxs-lookup"><span data-stu-id="aa47d-106">Keywords</span></span>|<span data-ttu-id="aa47d-107">Solución de problemas, WCFMessageLogging</span><span class="sxs-lookup"><span data-stu-id="aa47d-107">Troubleshooting, WCFMessageLogging</span></span>|  
-|<span data-ttu-id="aa47d-108">Nivel</span><span class="sxs-lookup"><span data-stu-id="aa47d-108">Level</span></span>|<span data-ttu-id="aa47d-109">Información</span><span class="sxs-lookup"><span data-stu-id="aa47d-109">Information</span></span>|  
-|<span data-ttu-id="aa47d-110">Canal</span><span class="sxs-lookup"><span data-stu-id="aa47d-110">Channel</span></span>|<span data-ttu-id="aa47d-111">Microsoft-Windows-Application Server-Applications/Analytic</span><span class="sxs-lookup"><span data-stu-id="aa47d-111">Microsoft-Windows-Application Server-Applications/Analytic</span></span>|  
+|<span data-ttu-id="4d39f-104">Id.</span><span class="sxs-lookup"><span data-stu-id="4d39f-104">ID</span></span>|<span data-ttu-id="4d39f-105">451</span><span class="sxs-lookup"><span data-stu-id="4d39f-105">451</span></span>|  
+|<span data-ttu-id="4d39f-106">Palabras clave</span><span class="sxs-lookup"><span data-stu-id="4d39f-106">Keywords</span></span>|<span data-ttu-id="4d39f-107">Solución de problemas, WCFMessageLogging</span><span class="sxs-lookup"><span data-stu-id="4d39f-107">Troubleshooting, WCFMessageLogging</span></span>|  
+|<span data-ttu-id="4d39f-108">Nivel</span><span class="sxs-lookup"><span data-stu-id="4d39f-108">Level</span></span>|<span data-ttu-id="4d39f-109">Información</span><span class="sxs-lookup"><span data-stu-id="4d39f-109">Information</span></span>|  
+|<span data-ttu-id="4d39f-110">Canal</span><span class="sxs-lookup"><span data-stu-id="4d39f-110">Channel</span></span>|<span data-ttu-id="4d39f-111">Microsoft-Windows-Application Server-Applications/Analytic</span><span class="sxs-lookup"><span data-stu-id="4d39f-111">Microsoft-Windows-Application Server-Applications/Analytic</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="aa47d-112">Descripción</span><span class="sxs-lookup"><span data-stu-id="aa47d-112">Description</span></span>  
- <span data-ttu-id="aa47d-113">Se emite este evento cuando se envía la información del registro de mensajes.</span><span class="sxs-lookup"><span data-stu-id="aa47d-113">This event is emitted when the message log information is sent.</span></span>  
+## <a name="description"></a><span data-ttu-id="4d39f-112">Descripción</span><span class="sxs-lookup"><span data-stu-id="4d39f-112">Description</span></span>  
+ <span data-ttu-id="4d39f-113">Se emite este evento cuando se envía la información del registro de mensajes.</span><span class="sxs-lookup"><span data-stu-id="4d39f-113">This event is emitted when the message log information is sent.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="aa47d-114">Mensaje</span><span class="sxs-lookup"><span data-stu-id="aa47d-114">Message</span></span>  
- <span data-ttu-id="aa47d-115">%1</span><span class="sxs-lookup"><span data-stu-id="aa47d-115">%1</span></span>  
+## <a name="message"></a><span data-ttu-id="4d39f-114">Mensaje</span><span class="sxs-lookup"><span data-stu-id="4d39f-114">Message</span></span>  
+ <span data-ttu-id="4d39f-115">%1</span><span class="sxs-lookup"><span data-stu-id="4d39f-115">%1</span></span>  
   
-## <a name="details"></a><span data-ttu-id="aa47d-116">Detalles</span><span class="sxs-lookup"><span data-stu-id="aa47d-116">Details</span></span>  
+## <a name="details"></a><span data-ttu-id="4d39f-116">Detalles</span><span class="sxs-lookup"><span data-stu-id="4d39f-116">Details</span></span>  
   
-|<span data-ttu-id="aa47d-117">Nombre del elemento de datos</span><span class="sxs-lookup"><span data-stu-id="aa47d-117">Data Item Name</span></span>|<span data-ttu-id="aa47d-118">Tipo del elemento de datos</span><span class="sxs-lookup"><span data-stu-id="aa47d-118">Data Item Type</span></span>|<span data-ttu-id="aa47d-119">Descripción</span><span class="sxs-lookup"><span data-stu-id="aa47d-119">Description</span></span>|  
+|<span data-ttu-id="4d39f-117">Nombre del elemento de datos</span><span class="sxs-lookup"><span data-stu-id="4d39f-117">Data Item Name</span></span>|<span data-ttu-id="4d39f-118">Tipo del elemento de datos</span><span class="sxs-lookup"><span data-stu-id="4d39f-118">Data Item Type</span></span>|<span data-ttu-id="4d39f-119">Descripción</span><span class="sxs-lookup"><span data-stu-id="4d39f-119">Description</span></span>|  
 |--------------------|--------------------|-----------------|  
-|<span data-ttu-id="aa47d-120">data1</span><span class="sxs-lookup"><span data-stu-id="aa47d-120">data1</span></span>|`xs:string`||  
-|<span data-ttu-id="aa47d-121">AppDomain</span><span class="sxs-lookup"><span data-stu-id="aa47d-121">AppDomain</span></span>|`xs:string`|<span data-ttu-id="aa47d-122">La cadena devuelta por AppDomain.CurrentDomain.FriendlyName.</span><span class="sxs-lookup"><span data-stu-id="aa47d-122">The string returned by AppDomain.CurrentDomain.FriendlyName.</span></span>|
+|<span data-ttu-id="4d39f-120">data1</span><span class="sxs-lookup"><span data-stu-id="4d39f-120">data1</span></span>|`xs:string`||  
+|<span data-ttu-id="4d39f-121">AppDomain</span><span class="sxs-lookup"><span data-stu-id="4d39f-121">AppDomain</span></span>|`xs:string`|<span data-ttu-id="4d39f-122">La cadena devuelta por AppDomain.CurrentDomain.FriendlyName.</span><span class="sxs-lookup"><span data-stu-id="4d39f-122">The string returned by AppDomain.CurrentDomain.FriendlyName.</span></span>|

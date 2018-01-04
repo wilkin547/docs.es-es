@@ -13,16 +13,17 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 184673cdeb45721a76801c59ddd9fb684b7df9a8
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: d6d6c3ed6fd24044f669f93c7ecb74e727fb6e4f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="queue-dropped-messages"></a><span data-ttu-id="0fb43-102">Mensajes en cola quitados</span><span class="sxs-lookup"><span data-stu-id="0fb43-102">Queue Dropped Messages</span></span>
-<span data-ttu-id="0fb43-103">Nombre de contador: Mensajes en cola quitados.</span><span class="sxs-lookup"><span data-stu-id="0fb43-103">Counter Name: Queued Messages Dropped.</span></span>  
+# <a name="queue-dropped-messages"></a><span data-ttu-id="c4e74-102">Mensajes en cola quitados</span><span class="sxs-lookup"><span data-stu-id="c4e74-102">Queue Dropped Messages</span></span>
+<span data-ttu-id="c4e74-103">Nombre de contador: Mensajes en cola quitados.</span><span class="sxs-lookup"><span data-stu-id="c4e74-103">Counter Name: Queued Messages Dropped.</span></span>  
   
-## <a name="description"></a><span data-ttu-id="0fb43-104">Descripción</span><span class="sxs-lookup"><span data-stu-id="0fb43-104">Description</span></span>  
- <span data-ttu-id="0fb43-105">Número de mensajes quitados por el transporte en cola en este servicio.</span><span class="sxs-lookup"><span data-stu-id="0fb43-105">Number of messages that are dropped by the queued transport at this service.</span></span>  
+## <a name="description"></a><span data-ttu-id="c4e74-104">Descripción</span><span class="sxs-lookup"><span data-stu-id="c4e74-104">Description</span></span>  
+ <span data-ttu-id="c4e74-105">Número de mensajes quitados por el transporte en cola en este servicio.</span><span class="sxs-lookup"><span data-stu-id="c4e74-105">Number of messages that are dropped by the queued transport at this service.</span></span>  
   
- <span data-ttu-id="0fb43-106">Vea [de mensajes dudosos](http://go.microsoft.com/fwlink/?LinkId=96233) para obtener más información sobre cuándo se quitan los mensajes.</span><span class="sxs-lookup"><span data-stu-id="0fb43-106">See [Poison-Message Handling](http://go.microsoft.com/fwlink/?LinkId=96233) for more information on when messages are dropped.</span></span>
+ <span data-ttu-id="c4e74-106">Vea [de mensajes dudosos](http://go.microsoft.com/fwlink/?LinkId=96233) para obtener más información sobre cuándo se quitan los mensajes.</span><span class="sxs-lookup"><span data-stu-id="c4e74-106">See [Poison-Message Handling](http://go.microsoft.com/fwlink/?LinkId=96233) for more information on when messages are dropped.</span></span>

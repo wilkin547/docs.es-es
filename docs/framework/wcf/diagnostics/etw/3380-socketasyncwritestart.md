@@ -13,26 +13,27 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ba01fa3fb7daf9f73f3c8316d268207002633e84
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 02e8b9a19d4333a421fc38721a15856211243a4a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="3380---socketasyncwritestart"></a><span data-ttu-id="07298-102">3380 - SocketAsyncWriteStart</span><span class="sxs-lookup"><span data-stu-id="07298-102">3380 - SocketAsyncWriteStart</span></span>
-## <a name="properties"></a><span data-ttu-id="07298-103">Propiedades</span><span class="sxs-lookup"><span data-stu-id="07298-103">Properties</span></span>  
+# <a name="3380---socketasyncwritestart"></a><span data-ttu-id="e0408-102">3380 - SocketAsyncWriteStart</span><span class="sxs-lookup"><span data-stu-id="e0408-102">3380 - SocketAsyncWriteStart</span></span>
+## <a name="properties"></a><span data-ttu-id="e0408-103">Propiedades</span><span class="sxs-lookup"><span data-stu-id="e0408-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="07298-104">Id.</span><span class="sxs-lookup"><span data-stu-id="07298-104">ID</span></span>|<span data-ttu-id="07298-105">3380</span><span class="sxs-lookup"><span data-stu-id="07298-105">3380</span></span>|  
-|<span data-ttu-id="07298-106">Palabras clave</span><span class="sxs-lookup"><span data-stu-id="07298-106">Keywords</span></span>|<span data-ttu-id="07298-107">TCP</span><span class="sxs-lookup"><span data-stu-id="07298-107">TCP</span></span>|  
-|<span data-ttu-id="07298-108">Nivel</span><span class="sxs-lookup"><span data-stu-id="07298-108">Level</span></span>|<span data-ttu-id="07298-109">Detallado</span><span class="sxs-lookup"><span data-stu-id="07298-109">Verbose</span></span>|  
-|<span data-ttu-id="07298-110">Canal</span><span class="sxs-lookup"><span data-stu-id="07298-110">Channel</span></span>|<span data-ttu-id="07298-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="07298-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
+|<span data-ttu-id="e0408-104">Id.</span><span class="sxs-lookup"><span data-stu-id="e0408-104">ID</span></span>|<span data-ttu-id="e0408-105">3380</span><span class="sxs-lookup"><span data-stu-id="e0408-105">3380</span></span>|  
+|<span data-ttu-id="e0408-106">Palabras clave</span><span class="sxs-lookup"><span data-stu-id="e0408-106">Keywords</span></span>|<span data-ttu-id="e0408-107">TCP</span><span class="sxs-lookup"><span data-stu-id="e0408-107">TCP</span></span>|  
+|<span data-ttu-id="e0408-108">Nivel</span><span class="sxs-lookup"><span data-stu-id="e0408-108">Level</span></span>|<span data-ttu-id="e0408-109">Detallado</span><span class="sxs-lookup"><span data-stu-id="e0408-109">Verbose</span></span>|  
+|<span data-ttu-id="e0408-110">Canal</span><span class="sxs-lookup"><span data-stu-id="e0408-110">Channel</span></span>|<span data-ttu-id="e0408-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="e0408-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="07298-112">Descripción</span><span class="sxs-lookup"><span data-stu-id="07298-112">Description</span></span>  
- <span data-ttu-id="07298-113">Este evento se genera con el inicio de SocketAsyncWrite.</span><span class="sxs-lookup"><span data-stu-id="07298-113">This event is emitted with the SocketAsyncWrite start.</span></span>  
+## <a name="description"></a><span data-ttu-id="e0408-112">Descripción</span><span class="sxs-lookup"><span data-stu-id="e0408-112">Description</span></span>  
+ <span data-ttu-id="e0408-113">Este evento se genera con el inicio de SocketAsyncWrite.</span><span class="sxs-lookup"><span data-stu-id="e0408-113">This event is emitted with the SocketAsyncWrite start.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="07298-114">Mensaje</span><span class="sxs-lookup"><span data-stu-id="07298-114">Message</span></span>  
- <span data-ttu-id="07298-115">SocketId:%1 escribiendo '%2' bytes en '%3'.</span><span class="sxs-lookup"><span data-stu-id="07298-115">SocketId:%1 writing '%2' bytes to '%3'.</span></span>  
+## <a name="message"></a><span data-ttu-id="e0408-114">Mensaje</span><span class="sxs-lookup"><span data-stu-id="e0408-114">Message</span></span>  
+ <span data-ttu-id="e0408-115">SocketId:%1 escribiendo '%2' bytes en '%3'.</span><span class="sxs-lookup"><span data-stu-id="e0408-115">SocketId:%1 writing '%2' bytes to '%3'.</span></span>  
   
-## <a name="details"></a><span data-ttu-id="07298-116">Detalles</span><span class="sxs-lookup"><span data-stu-id="07298-116">Details</span></span>
+## <a name="details"></a><span data-ttu-id="e0408-116">Detalles</span><span class="sxs-lookup"><span data-stu-id="e0408-116">Details</span></span>

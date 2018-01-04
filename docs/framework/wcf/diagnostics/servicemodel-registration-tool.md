@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8bdd5a394ef757dc85b874c28fed457ddd3d5aac
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: d8cbb42e4840a6c89a410879bb8a1ce1c53d4ca4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="servicemodel-registration-tool"></a><span data-ttu-id="51f8d-102">Herramienta de registro ServiceModel</span><span class="sxs-lookup"><span data-stu-id="51f8d-102">ServiceModel Registration Tool</span></span>
-<span data-ttu-id="51f8d-103">La Herramienta de registro ServiceModel es una herramienta de línea de comandos que le permite administrar el registro de ServiceModel en un único equipo.</span><span class="sxs-lookup"><span data-stu-id="51f8d-103">The ServiceModel Registration Tool is command-line tool that allow you to manage the registration of ServiceModel on a single machine.</span></span> <span data-ttu-id="51f8d-104">Para obtener más información acerca de esta herramienta, consulte [herramienta de registro de ServiceModel (ServiceModelReg.exe)](../../../../docs/framework/wcf/servicemodelreg-exe.md).</span><span class="sxs-lookup"><span data-stu-id="51f8d-104">For more information on this tool, see [ServiceModel Registration Tool (ServiceModelReg.exe)](../../../../docs/framework/wcf/servicemodelreg-exe.md).</span></span>
+# <a name="servicemodel-registration-tool"></a><span data-ttu-id="89b2d-102">Herramienta de registro ServiceModel</span><span class="sxs-lookup"><span data-stu-id="89b2d-102">ServiceModel Registration Tool</span></span>
+<span data-ttu-id="89b2d-103">La Herramienta de registro ServiceModel es una herramienta de línea de comandos que le permite administrar el registro de ServiceModel en un único equipo.</span><span class="sxs-lookup"><span data-stu-id="89b2d-103">The ServiceModel Registration Tool is command-line tool that allow you to manage the registration of ServiceModel on a single machine.</span></span> <span data-ttu-id="89b2d-104">Para obtener más información acerca de esta herramienta, consulte [herramienta de registro de ServiceModel (ServiceModelReg.exe)](../../../../docs/framework/wcf/servicemodelreg-exe.md).</span><span class="sxs-lookup"><span data-stu-id="89b2d-104">For more information on this tool, see [ServiceModel Registration Tool (ServiceModelReg.exe)](../../../../docs/framework/wcf/servicemodelreg-exe.md).</span></span>

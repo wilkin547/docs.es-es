@@ -13,17 +13,18 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ef5e6f83a6c8e5a7d62e33bd77fc11abee935262
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 6b529c86c15f54f4511edc5e03201874db1886b8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="service-calls-failed"></a><span data-ttu-id="80149-102">Servicio: Errores de llamadas</span><span class="sxs-lookup"><span data-stu-id="80149-102">Service: Calls Failed</span></span>
-<span data-ttu-id="80149-103">Nombre de contador: Errores de llamadas</span><span class="sxs-lookup"><span data-stu-id="80149-103">Counter Name: Calls Failed.</span></span>  
+# <a name="service-calls-failed"></a><span data-ttu-id="d61f7-102">Servicio: Errores de llamadas</span><span class="sxs-lookup"><span data-stu-id="d61f7-102">Service: Calls Failed</span></span>
+<span data-ttu-id="d61f7-103">Nombre de contador: Errores de llamadas</span><span class="sxs-lookup"><span data-stu-id="d61f7-103">Counter Name: Calls Failed.</span></span>  
   
-## <a name="description"></a><span data-ttu-id="80149-104">Descripción</span><span class="sxs-lookup"><span data-stu-id="80149-104">Description</span></span>  
- <span data-ttu-id="80149-105">Número de llamadas con excepciones no atendidas en este servicio.</span><span class="sxs-lookup"><span data-stu-id="80149-105">Number of calls with unhandled exceptions in this service.</span></span> <span data-ttu-id="80149-106">El contador se incrementa siempre que se produce una excepción no controlada en este servicio.</span><span class="sxs-lookup"><span data-stu-id="80149-106">This counter is incremented everytime there is an unhandled exception in this service.</span></span>  
+## <a name="description"></a><span data-ttu-id="d61f7-104">Descripción</span><span class="sxs-lookup"><span data-stu-id="d61f7-104">Description</span></span>  
+ <span data-ttu-id="d61f7-105">Número de llamadas con excepciones no atendidas en este servicio.</span><span class="sxs-lookup"><span data-stu-id="d61f7-105">Number of calls with unhandled exceptions in this service.</span></span> <span data-ttu-id="d61f7-106">El contador se incrementa siempre que se produce una excepción no controlada en este servicio.</span><span class="sxs-lookup"><span data-stu-id="d61f7-106">This counter is incremented everytime there is an unhandled exception in this service.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="80149-107">Vea también</span><span class="sxs-lookup"><span data-stu-id="80149-107">See Also</span></span>  
- [<span data-ttu-id="80149-108">Especificación y gestión de errores en contratos y servicios</span><span class="sxs-lookup"><span data-stu-id="80149-108">Specifying and Handling Faults in Contracts and Services</span></span>](../../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)
+## <a name="see-also"></a><span data-ttu-id="d61f7-107">Vea también</span><span class="sxs-lookup"><span data-stu-id="d61f7-107">See Also</span></span>  
+ [<span data-ttu-id="d61f7-108">Especificación y gestión de errores en contratos y servicios</span><span class="sxs-lookup"><span data-stu-id="d61f7-108">Specifying and Handling Faults in Contracts and Services</span></span>](../../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)

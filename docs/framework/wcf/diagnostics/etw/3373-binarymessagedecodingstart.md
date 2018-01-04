@@ -13,26 +13,27 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 17021b7a872422ce3b8873787bdca4946377a671
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: b86814831cede815b985dc02754de6908b8c4ef0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="3373---binarymessagedecodingstart"></a><span data-ttu-id="6045d-102">3373 - BinaryMessageDecodingStart</span><span class="sxs-lookup"><span data-stu-id="6045d-102">3373 - BinaryMessageDecodingStart</span></span>
-## <a name="properties"></a><span data-ttu-id="6045d-103">Propiedades</span><span class="sxs-lookup"><span data-stu-id="6045d-103">Properties</span></span>  
+# <a name="3373---binarymessagedecodingstart"></a><span data-ttu-id="b8982-102">3373 - BinaryMessageDecodingStart</span><span class="sxs-lookup"><span data-stu-id="b8982-102">3373 - BinaryMessageDecodingStart</span></span>
+## <a name="properties"></a><span data-ttu-id="b8982-103">Propiedades</span><span class="sxs-lookup"><span data-stu-id="b8982-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="6045d-104">Id.</span><span class="sxs-lookup"><span data-stu-id="6045d-104">ID</span></span>|<span data-ttu-id="6045d-105">3373</span><span class="sxs-lookup"><span data-stu-id="6045d-105">3373</span></span>|  
-|<span data-ttu-id="6045d-106">Palabras clave</span><span class="sxs-lookup"><span data-stu-id="6045d-106">Keywords</span></span>|<span data-ttu-id="6045d-107">Canal</span><span class="sxs-lookup"><span data-stu-id="6045d-107">Channel</span></span>|  
-|<span data-ttu-id="6045d-108">Nivel</span><span class="sxs-lookup"><span data-stu-id="6045d-108">Level</span></span>|<span data-ttu-id="6045d-109">Detallado</span><span class="sxs-lookup"><span data-stu-id="6045d-109">Verbose</span></span>|  
-|<span data-ttu-id="6045d-110">Canal</span><span class="sxs-lookup"><span data-stu-id="6045d-110">Channel</span></span>|<span data-ttu-id="6045d-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="6045d-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
+|<span data-ttu-id="b8982-104">Id.</span><span class="sxs-lookup"><span data-stu-id="b8982-104">ID</span></span>|<span data-ttu-id="b8982-105">3373</span><span class="sxs-lookup"><span data-stu-id="b8982-105">3373</span></span>|  
+|<span data-ttu-id="b8982-106">Palabras clave</span><span class="sxs-lookup"><span data-stu-id="b8982-106">Keywords</span></span>|<span data-ttu-id="b8982-107">Canal</span><span class="sxs-lookup"><span data-stu-id="b8982-107">Channel</span></span>|  
+|<span data-ttu-id="b8982-108">Nivel</span><span class="sxs-lookup"><span data-stu-id="b8982-108">Level</span></span>|<span data-ttu-id="b8982-109">Detallado</span><span class="sxs-lookup"><span data-stu-id="b8982-109">Verbose</span></span>|  
+|<span data-ttu-id="b8982-110">Canal</span><span class="sxs-lookup"><span data-stu-id="b8982-110">Channel</span></span>|<span data-ttu-id="b8982-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="b8982-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="6045d-112">Descripción</span><span class="sxs-lookup"><span data-stu-id="6045d-112">Description</span></span>  
- <span data-ttu-id="6045d-113">Este evento se genera cuando BinaryMessageEncoder empezó a descodificar el mensaje.</span><span class="sxs-lookup"><span data-stu-id="6045d-113">This event is emitted when the BinaryMessageEncoder started decoding the message.</span></span>  
+## <a name="description"></a><span data-ttu-id="b8982-112">Descripción</span><span class="sxs-lookup"><span data-stu-id="b8982-112">Description</span></span>  
+ <span data-ttu-id="b8982-113">Este evento se genera cuando BinaryMessageEncoder empezó a descodificar el mensaje.</span><span class="sxs-lookup"><span data-stu-id="b8982-113">This event is emitted when the BinaryMessageEncoder started decoding the message.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="6045d-114">Mensaje</span><span class="sxs-lookup"><span data-stu-id="6045d-114">Message</span></span>  
- <span data-ttu-id="6045d-115">BinaryMessageEncoder inició la descodificación del mensaje.</span><span class="sxs-lookup"><span data-stu-id="6045d-115">BinaryMessageEncoder started decoding the message.</span></span>  
+## <a name="message"></a><span data-ttu-id="b8982-114">Mensaje</span><span class="sxs-lookup"><span data-stu-id="b8982-114">Message</span></span>  
+ <span data-ttu-id="b8982-115">BinaryMessageEncoder inició la descodificación del mensaje.</span><span class="sxs-lookup"><span data-stu-id="b8982-115">BinaryMessageEncoder started decoding the message.</span></span>  
   
-## <a name="details"></a><span data-ttu-id="6045d-116">Detalles</span><span class="sxs-lookup"><span data-stu-id="6045d-116">Details</span></span>
+## <a name="details"></a><span data-ttu-id="b8982-116">Detalles</span><span class="sxs-lookup"><span data-stu-id="b8982-116">Details</span></span>

@@ -13,19 +13,20 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ad1c962f97fbfdbe9e60d303f57015229a44afbe
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 6f750971eb606500c544995072de07f60a7895b8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemruntimeserializationxsdimportannotationfailed"></a><span data-ttu-id="4021a-102">System.Runtime.Serialization.XsdImportAnnotationFailed</span><span class="sxs-lookup"><span data-stu-id="4021a-102">System.Runtime.Serialization.XsdImportAnnotationFailed</span></span>
-<span data-ttu-id="4021a-103">System.Runtime.Serialization.XsdImportAnnotationFailed</span><span class="sxs-lookup"><span data-stu-id="4021a-103">System.Runtime.Serialization.XsdImportAnnotationFailed</span></span>  
+# <a name="systemruntimeserializationxsdimportannotationfailed"></a><span data-ttu-id="4591c-102">System.Runtime.Serialization.XsdImportAnnotationFailed</span><span class="sxs-lookup"><span data-stu-id="4591c-102">System.Runtime.Serialization.XsdImportAnnotationFailed</span></span>
+<span data-ttu-id="4591c-103">System.Runtime.Serialization.XsdImportAnnotationFailed</span><span class="sxs-lookup"><span data-stu-id="4591c-103">System.Runtime.Serialization.XsdImportAnnotationFailed</span></span>  
   
-## <a name="description"></a><span data-ttu-id="4021a-104">Descripción</span><span class="sxs-lookup"><span data-stu-id="4021a-104">Description</span></span>  
- <span data-ttu-id="4021a-105">Error al importar una anotación durante la importación de XSD.</span><span class="sxs-lookup"><span data-stu-id="4021a-105">Failed to import an annotation during XSD import.</span></span>  
+## <a name="description"></a><span data-ttu-id="4591c-104">Descripción</span><span class="sxs-lookup"><span data-stu-id="4591c-104">Description</span></span>  
+ <span data-ttu-id="4591c-105">Error al importar una anotación durante la importación de XSD.</span><span class="sxs-lookup"><span data-stu-id="4591c-105">Failed to import an annotation during XSD import.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4021a-106">Vea también</span><span class="sxs-lookup"><span data-stu-id="4021a-106">See Also</span></span>  
- [<span data-ttu-id="4021a-107">Seguimiento</span><span class="sxs-lookup"><span data-stu-id="4021a-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="4021a-108">Uso del seguimiento para solucionar problemas de la aplicación</span><span class="sxs-lookup"><span data-stu-id="4021a-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="4021a-109">Administración y diagnóstico</span><span class="sxs-lookup"><span data-stu-id="4021a-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="4591c-106">Vea también</span><span class="sxs-lookup"><span data-stu-id="4591c-106">See Also</span></span>  
+ [<span data-ttu-id="4591c-107">Traza</span><span class="sxs-lookup"><span data-stu-id="4591c-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="4591c-108">Uso del seguimiento para solucionar problemas de su aplicación</span><span class="sxs-lookup"><span data-stu-id="4591c-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="4591c-109">Administración y diagnóstico</span><span class="sxs-lookup"><span data-stu-id="4591c-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

@@ -13,26 +13,27 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 344ce3e6f457348876b469384c63987c8794d4f6
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 3ec8bc7e732a74a43adaeca78bf855f4402d3ba4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="4034---routingtablelookupstop"></a><span data-ttu-id="cb245-102">4034 - RoutingTableLookupStop</span><span class="sxs-lookup"><span data-stu-id="cb245-102">4034 - RoutingTableLookupStop</span></span>
-## <a name="properties"></a><span data-ttu-id="cb245-103">Propiedades</span><span class="sxs-lookup"><span data-stu-id="cb245-103">Properties</span></span>  
+# <a name="4034---routingtablelookupstop"></a><span data-ttu-id="9d3f0-102">4034 - RoutingTableLookupStop</span><span class="sxs-lookup"><span data-stu-id="9d3f0-102">4034 - RoutingTableLookupStop</span></span>
+## <a name="properties"></a><span data-ttu-id="9d3f0-103">Propiedades</span><span class="sxs-lookup"><span data-stu-id="9d3f0-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="cb245-104">Id.</span><span class="sxs-lookup"><span data-stu-id="cb245-104">ID</span></span>|<span data-ttu-id="cb245-105">4034</span><span class="sxs-lookup"><span data-stu-id="cb245-105">4034</span></span>|  
-|<span data-ttu-id="cb245-106">Palabras clave</span><span class="sxs-lookup"><span data-stu-id="cb245-106">Keywords</span></span>|<span data-ttu-id="cb245-107">ActivationServices</span><span class="sxs-lookup"><span data-stu-id="cb245-107">ActivationServices</span></span>|  
-|<span data-ttu-id="cb245-108">Nivel</span><span class="sxs-lookup"><span data-stu-id="cb245-108">Level</span></span>|<span data-ttu-id="cb245-109">Detallado</span><span class="sxs-lookup"><span data-stu-id="cb245-109">Verbose</span></span>|  
-|<span data-ttu-id="cb245-110">Canal</span><span class="sxs-lookup"><span data-stu-id="cb245-110">Channel</span></span>|<span data-ttu-id="cb245-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="cb245-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
+|<span data-ttu-id="9d3f0-104">Id.</span><span class="sxs-lookup"><span data-stu-id="9d3f0-104">ID</span></span>|<span data-ttu-id="9d3f0-105">4034</span><span class="sxs-lookup"><span data-stu-id="9d3f0-105">4034</span></span>|  
+|<span data-ttu-id="9d3f0-106">Palabras clave</span><span class="sxs-lookup"><span data-stu-id="9d3f0-106">Keywords</span></span>|<span data-ttu-id="9d3f0-107">ActivationServices</span><span class="sxs-lookup"><span data-stu-id="9d3f0-107">ActivationServices</span></span>|  
+|<span data-ttu-id="9d3f0-108">Nivel</span><span class="sxs-lookup"><span data-stu-id="9d3f0-108">Level</span></span>|<span data-ttu-id="9d3f0-109">Detallado</span><span class="sxs-lookup"><span data-stu-id="9d3f0-109">Verbose</span></span>|  
+|<span data-ttu-id="9d3f0-110">Canal</span><span class="sxs-lookup"><span data-stu-id="9d3f0-110">Channel</span></span>|<span data-ttu-id="9d3f0-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="9d3f0-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="cb245-112">Descripción</span><span class="sxs-lookup"><span data-stu-id="cb245-112">Description</span></span>  
- <span data-ttu-id="cb245-113">Se genera este evento cuando la consulta de la tabla de enrutamiento se ha detenido.</span><span class="sxs-lookup"><span data-stu-id="cb245-113">This event is emitted when the routing table lookup has stopped.</span></span>  
+## <a name="description"></a><span data-ttu-id="9d3f0-112">Descripción</span><span class="sxs-lookup"><span data-stu-id="9d3f0-112">Description</span></span>  
+ <span data-ttu-id="9d3f0-113">Se genera este evento cuando la consulta de la tabla de enrutamiento se ha detenido.</span><span class="sxs-lookup"><span data-stu-id="9d3f0-113">This event is emitted when the routing table lookup has stopped.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="cb245-114">Mensaje</span><span class="sxs-lookup"><span data-stu-id="cb245-114">Message</span></span>  
- <span data-ttu-id="cb245-115">Se completó la búsqueda de la tabla de enrutamiento.</span><span class="sxs-lookup"><span data-stu-id="cb245-115">Routing table lookup completed.</span></span>  
+## <a name="message"></a><span data-ttu-id="9d3f0-114">Mensaje</span><span class="sxs-lookup"><span data-stu-id="9d3f0-114">Message</span></span>  
+ <span data-ttu-id="9d3f0-115">Se completó la búsqueda de la tabla de enrutamiento.</span><span class="sxs-lookup"><span data-stu-id="9d3f0-115">Routing table lookup completed.</span></span>  
   
-## <a name="details"></a><span data-ttu-id="cb245-116">Detalles</span><span class="sxs-lookup"><span data-stu-id="cb245-116">Details</span></span>
+## <a name="details"></a><span data-ttu-id="9d3f0-116">Detalles</span><span class="sxs-lookup"><span data-stu-id="9d3f0-116">Details</span></span>

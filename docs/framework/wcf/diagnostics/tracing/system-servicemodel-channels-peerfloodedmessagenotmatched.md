@@ -13,19 +13,20 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7ff3524a0b3ccc6f892f50a93874cfff5d0e1b67
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 6a2e98e210ac1f472b3b6ffebb37de68a47a3f68
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelchannelspeerfloodedmessagenotmatched"></a><span data-ttu-id="37d4c-102">System.ServiceModel.Channels.PeerFloodedMessageNotMatched</span><span class="sxs-lookup"><span data-stu-id="37d4c-102">System.ServiceModel.Channels.PeerFloodedMessageNotMatched</span></span>
-<span data-ttu-id="37d4c-103">Un PeerNode recibió un mensaje que no coincidía con ningún canal local.</span><span class="sxs-lookup"><span data-stu-id="37d4c-103">A PeerNode received a message that did not match any local channels.</span></span>  
+# <a name="systemservicemodelchannelspeerfloodedmessagenotmatched"></a><span data-ttu-id="bcae9-102">System.ServiceModel.Channels.PeerFloodedMessageNotMatched</span><span class="sxs-lookup"><span data-stu-id="bcae9-102">System.ServiceModel.Channels.PeerFloodedMessageNotMatched</span></span>
+<span data-ttu-id="bcae9-103">Un PeerNode recibió un mensaje que no coincidía con ningún canal local.</span><span class="sxs-lookup"><span data-stu-id="bcae9-103">A PeerNode received a message that did not match any local channels.</span></span>  
   
-## <a name="description"></a><span data-ttu-id="37d4c-104">Descripción</span><span class="sxs-lookup"><span data-stu-id="37d4c-104">Description</span></span>  
- <span data-ttu-id="37d4c-105">Este seguimiento se produce durante el procesamiento de un mensaje entrante de inundación.</span><span class="sxs-lookup"><span data-stu-id="37d4c-105">This trace occurs during the processing of an incoming flood message.</span></span>  
+## <a name="description"></a><span data-ttu-id="bcae9-104">Descripción</span><span class="sxs-lookup"><span data-stu-id="bcae9-104">Description</span></span>  
+ <span data-ttu-id="bcae9-105">Este seguimiento se produce durante el procesamiento de un mensaje entrante de inundación.</span><span class="sxs-lookup"><span data-stu-id="bcae9-105">This trace occurs during the processing of an incoming flood message.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="37d4c-106">Vea también</span><span class="sxs-lookup"><span data-stu-id="37d4c-106">See Also</span></span>  
- [<span data-ttu-id="37d4c-107">Seguimiento</span><span class="sxs-lookup"><span data-stu-id="37d4c-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="37d4c-108">Uso del seguimiento para solucionar problemas de la aplicación</span><span class="sxs-lookup"><span data-stu-id="37d4c-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="37d4c-109">Administración y diagnóstico</span><span class="sxs-lookup"><span data-stu-id="37d4c-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="bcae9-106">Vea también</span><span class="sxs-lookup"><span data-stu-id="bcae9-106">See Also</span></span>  
+ [<span data-ttu-id="bcae9-107">Traza</span><span class="sxs-lookup"><span data-stu-id="bcae9-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="bcae9-108">Uso del seguimiento para solucionar problemas de su aplicación</span><span class="sxs-lookup"><span data-stu-id="bcae9-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="bcae9-109">Administración y diagnóstico</span><span class="sxs-lookup"><span data-stu-id="bcae9-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

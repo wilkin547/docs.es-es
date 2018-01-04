@@ -13,19 +13,20 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 62e5fbce9c92210ea36d76723d81c1a77dd6f42d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 6d859fdaa15ec4498a7d9bee058f11b881596325
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelactivationservicestop"></a><span data-ttu-id="85443-102">System.ServiceModel.Activation.ServiceStop</span><span class="sxs-lookup"><span data-stu-id="85443-102">System.ServiceModel.Activation.ServiceStop</span></span>
-<span data-ttu-id="85443-103">System.ServiceModel.Activation.ServiceStop</span><span class="sxs-lookup"><span data-stu-id="85443-103">System.ServiceModel.Activation.ServiceStop</span></span>  
+# <a name="systemservicemodelactivationservicestop"></a><span data-ttu-id="d8359-102">System.ServiceModel.Activation.ServiceStop</span><span class="sxs-lookup"><span data-stu-id="d8359-102">System.ServiceModel.Activation.ServiceStop</span></span>
+<span data-ttu-id="d8359-103">System.ServiceModel.Activation.ServiceStop</span><span class="sxs-lookup"><span data-stu-id="d8359-103">System.ServiceModel.Activation.ServiceStop</span></span>  
   
-## <a name="description"></a><span data-ttu-id="85443-104">Descripción</span><span class="sxs-lookup"><span data-stu-id="85443-104">Description</span></span>  
- <span data-ttu-id="85443-105">Se recibió una solicitud para detener el servicio.</span><span class="sxs-lookup"><span data-stu-id="85443-105">A request to stop the service was received.</span></span>  
+## <a name="description"></a><span data-ttu-id="d8359-104">Descripción</span><span class="sxs-lookup"><span data-stu-id="d8359-104">Description</span></span>  
+ <span data-ttu-id="d8359-105">Se recibió una solicitud para detener el servicio.</span><span class="sxs-lookup"><span data-stu-id="d8359-105">A request to stop the service was received.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="85443-106">Vea también</span><span class="sxs-lookup"><span data-stu-id="85443-106">See Also</span></span>  
- [<span data-ttu-id="85443-107">Seguimiento</span><span class="sxs-lookup"><span data-stu-id="85443-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="85443-108">Uso del seguimiento para solucionar problemas de la aplicación</span><span class="sxs-lookup"><span data-stu-id="85443-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="85443-109">Administración y diagnóstico</span><span class="sxs-lookup"><span data-stu-id="85443-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="d8359-106">Vea también</span><span class="sxs-lookup"><span data-stu-id="d8359-106">See Also</span></span>  
+ [<span data-ttu-id="d8359-107">Traza</span><span class="sxs-lookup"><span data-stu-id="d8359-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="d8359-108">Uso del seguimiento para solucionar problemas de su aplicación</span><span class="sxs-lookup"><span data-stu-id="d8359-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="d8359-109">Administración y diagnóstico</span><span class="sxs-lookup"><span data-stu-id="d8359-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

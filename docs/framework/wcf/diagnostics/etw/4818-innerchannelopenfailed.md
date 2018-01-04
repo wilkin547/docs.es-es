@@ -13,26 +13,27 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d53810b5365e93b7107bc94a378754e7cd045daa
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0d7fffa953663c6c4f197bd8218b69c8cebdfd81
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="4818---innerchannelopenfailed"></a><span data-ttu-id="9aba3-102">4818 - InnerChannelOpenFailed</span><span class="sxs-lookup"><span data-stu-id="9aba3-102">4818 - InnerChannelOpenFailed</span></span>
-## <a name="properties"></a><span data-ttu-id="9aba3-103">Propiedades</span><span class="sxs-lookup"><span data-stu-id="9aba3-103">Properties</span></span>  
+# <a name="4818---innerchannelopenfailed"></a><span data-ttu-id="c0247-102">4818 - InnerChannelOpenFailed</span><span class="sxs-lookup"><span data-stu-id="c0247-102">4818 - InnerChannelOpenFailed</span></span>
+## <a name="properties"></a><span data-ttu-id="c0247-103">Propiedades</span><span class="sxs-lookup"><span data-stu-id="c0247-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="9aba3-104">Id.</span><span class="sxs-lookup"><span data-stu-id="9aba3-104">ID</span></span>|<span data-ttu-id="9aba3-105">4818</span><span class="sxs-lookup"><span data-stu-id="9aba3-105">4818</span></span>|  
-|<span data-ttu-id="9aba3-106">Palabras clave</span><span class="sxs-lookup"><span data-stu-id="9aba3-106">Keywords</span></span>|<span data-ttu-id="9aba3-107">Descubrimiento</span><span class="sxs-lookup"><span data-stu-id="9aba3-107">Discovery</span></span>|  
-|<span data-ttu-id="9aba3-108">Nivel</span><span class="sxs-lookup"><span data-stu-id="9aba3-108">Level</span></span>|<span data-ttu-id="9aba3-109">Advertencia</span><span class="sxs-lookup"><span data-stu-id="9aba3-109">Warning</span></span>|  
-|<span data-ttu-id="9aba3-110">Canal</span><span class="sxs-lookup"><span data-stu-id="9aba3-110">Channel</span></span>|<span data-ttu-id="9aba3-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="9aba3-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
+|<span data-ttu-id="c0247-104">Id.</span><span class="sxs-lookup"><span data-stu-id="c0247-104">ID</span></span>|<span data-ttu-id="c0247-105">4818</span><span class="sxs-lookup"><span data-stu-id="c0247-105">4818</span></span>|  
+|<span data-ttu-id="c0247-106">Palabras clave</span><span class="sxs-lookup"><span data-stu-id="c0247-106">Keywords</span></span>|<span data-ttu-id="c0247-107">Descubrimiento</span><span class="sxs-lookup"><span data-stu-id="c0247-107">Discovery</span></span>|  
+|<span data-ttu-id="c0247-108">Nivel</span><span class="sxs-lookup"><span data-stu-id="c0247-108">Level</span></span>|<span data-ttu-id="c0247-109">Advertencia</span><span class="sxs-lookup"><span data-stu-id="c0247-109">Warning</span></span>|  
+|<span data-ttu-id="c0247-110">Canal</span><span class="sxs-lookup"><span data-stu-id="c0247-110">Channel</span></span>|<span data-ttu-id="c0247-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="c0247-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="9aba3-112">Descripción</span><span class="sxs-lookup"><span data-stu-id="9aba3-112">Description</span></span>  
- <span data-ttu-id="9aba3-113">El evento se genera cuando DiscoveryClientChannel no pudo abrir el canal con un extremo detectado.</span><span class="sxs-lookup"><span data-stu-id="9aba3-113">This event is emitted when the DiscoveryClientChannel failed to open the channel with a discovered endpoint.</span></span> <span data-ttu-id="9aba3-114">DiscoveryClientChannel ahora intentará usar el siguiente extremo detectable disponible.</span><span class="sxs-lookup"><span data-stu-id="9aba3-114">The DiscoveryClientChannel will now attempt to use the next available discovered endpoint.</span></span>  
+## <a name="description"></a><span data-ttu-id="c0247-112">Descripción</span><span class="sxs-lookup"><span data-stu-id="c0247-112">Description</span></span>  
+ <span data-ttu-id="c0247-113">El evento se genera cuando DiscoveryClientChannel no pudo abrir el canal con un extremo detectado.</span><span class="sxs-lookup"><span data-stu-id="c0247-113">This event is emitted when the DiscoveryClientChannel failed to open the channel with a discovered endpoint.</span></span> <span data-ttu-id="c0247-114">DiscoveryClientChannel ahora intentará usar el siguiente extremo detectable disponible.</span><span class="sxs-lookup"><span data-stu-id="c0247-114">The DiscoveryClientChannel will now attempt to use the next available discovered endpoint.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="9aba3-115">Mensaje</span><span class="sxs-lookup"><span data-stu-id="9aba3-115">Message</span></span>  
- <span data-ttu-id="9aba3-116">DiscoveryClientChannel no pudo abrir el canal con un extremo detectado con EndpointAddress='%1' y Via='%2'</span><span class="sxs-lookup"><span data-stu-id="9aba3-116">The DiscoveryClientChannel failed to open the channel with a discovered endpoint with EndpointAddress='%1' and Via='%2'.</span></span> <span data-ttu-id="9aba3-117">DiscoveryClientChannel ahora intentará usar el siguiente extremo detectable disponible.</span><span class="sxs-lookup"><span data-stu-id="9aba3-117">The DiscoveryClientChannel will now attempt to use the next available discovered endpoint.</span></span>  
+## <a name="message"></a><span data-ttu-id="c0247-115">Mensaje</span><span class="sxs-lookup"><span data-stu-id="c0247-115">Message</span></span>  
+ <span data-ttu-id="c0247-116">DiscoveryClientChannel no pudo abrir el canal con un extremo detectado con EndpointAddress='%1' y Via='%2'</span><span class="sxs-lookup"><span data-stu-id="c0247-116">The DiscoveryClientChannel failed to open the channel with a discovered endpoint with EndpointAddress='%1' and Via='%2'.</span></span> <span data-ttu-id="c0247-117">DiscoveryClientChannel ahora intentará usar el siguiente extremo detectable disponible.</span><span class="sxs-lookup"><span data-stu-id="c0247-117">The DiscoveryClientChannel will now attempt to use the next available discovered endpoint.</span></span>  
   
-## <a name="details"></a><span data-ttu-id="9aba3-118">Detalles</span><span class="sxs-lookup"><span data-stu-id="9aba3-118">Details</span></span>
+## <a name="details"></a><span data-ttu-id="c0247-118">Detalles</span><span class="sxs-lookup"><span data-stu-id="c0247-118">Details</span></span>

@@ -13,18 +13,19 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8708e7f030e0c10028938abcdccb54903a7fca52
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 96a17d99329248dff4a29f3c68649c67622c45d8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="transacted-operations-committed-per-second"></a><span data-ttu-id="b492a-102">Operaciones de transacción confirmadas por segundo</span><span class="sxs-lookup"><span data-stu-id="b492a-102">Transacted Operations Committed Per Second</span></span>
-<span data-ttu-id="b492a-103">Nombre del contador: Operaciones de transacción confirmadas por segundo.</span><span class="sxs-lookup"><span data-stu-id="b492a-103">Counter Name: Transacted Operations Committed Per Second.</span></span>  
+# <a name="transacted-operations-committed-per-second"></a><span data-ttu-id="e95cc-102">Operaciones de transacción confirmadas por segundo</span><span class="sxs-lookup"><span data-stu-id="e95cc-102">Transacted Operations Committed Per Second</span></span>
+<span data-ttu-id="e95cc-103">Nombre del contador: Operaciones de transacción confirmadas por segundo.</span><span class="sxs-lookup"><span data-stu-id="e95cc-103">Counter Name: Transacted Operations Committed Per Second.</span></span>  
   
-## <a name="description"></a><span data-ttu-id="b492a-104">Descripción</span><span class="sxs-lookup"><span data-stu-id="b492a-104">Description</span></span>  
- <span data-ttu-id="b492a-105">Número de operaciones transaccionales confirmadas en este servicio cada segundo.</span><span class="sxs-lookup"><span data-stu-id="b492a-105">Number of transactional operations that have been committed in this service in a second.</span></span>  
+## <a name="description"></a><span data-ttu-id="e95cc-104">Descripción</span><span class="sxs-lookup"><span data-stu-id="e95cc-104">Description</span></span>  
+ <span data-ttu-id="e95cc-105">Número de operaciones transaccionales confirmadas en este servicio cada segundo.</span><span class="sxs-lookup"><span data-stu-id="e95cc-105">Number of transactional operations that have been committed in this service in a second.</span></span>  
   
- <span data-ttu-id="b492a-106">Este contador es de tipo de contador de rendimiento [PERF_COUNTER_COUNTER](http://go.microsoft.com/fwlink/?LinkID=94649), cuyo valor se calcula con la siguiente fórmula.</span><span class="sxs-lookup"><span data-stu-id="b492a-106">This counter is of performance counter type [PERF_COUNTER_COUNTER](http://go.microsoft.com/fwlink/?LinkID=94649), whose value is calculated using the following formula.</span></span>  
+ <span data-ttu-id="e95cc-106">Este contador es de tipo de contador de rendimiento [PERF_COUNTER_COUNTER](http://go.microsoft.com/fwlink/?LinkID=94649), cuyo valor se calcula con la siguiente fórmula.</span><span class="sxs-lookup"><span data-stu-id="e95cc-106">This counter is of performance counter type [PERF_COUNTER_COUNTER](http://go.microsoft.com/fwlink/?LinkID=94649), whose value is calculated using the following formula.</span></span>  
   
- <span data-ttu-id="b492a-107">(N 1 - N 0 ) / ( (D 1 -D 0 ) / F)</span><span class="sxs-lookup"><span data-stu-id="b492a-107">(N 1 - N 0 ) / ( (D 1 -D 0 ) / F)</span></span>
+ <span data-ttu-id="e95cc-107">(N 1 - N 0 ) / ( (D 1 -D 0 ) / F)</span><span class="sxs-lookup"><span data-stu-id="e95cc-107">(N 1 - N 0 ) / ( (D 1 -D 0 ) / F)</span></span>

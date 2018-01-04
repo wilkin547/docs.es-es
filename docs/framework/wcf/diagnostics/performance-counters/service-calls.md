@@ -13,14 +13,15 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d6ed6f7975ba16aa90dd892f06b9b0c73b8ead37
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 3459db437c5dbeba55cd18629c180a4da819403f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="service-calls"></a><span data-ttu-id="f6ce0-102">Servicio: Llamadas</span><span class="sxs-lookup"><span data-stu-id="f6ce0-102">Service: Calls</span></span>
-<span data-ttu-id="f6ce0-103">Nombre de contador: Llamadas.</span><span class="sxs-lookup"><span data-stu-id="f6ce0-103">Counter Name: Calls.</span></span>  
+# <a name="service-calls"></a><span data-ttu-id="c723d-102">Servicio: Llamadas</span><span class="sxs-lookup"><span data-stu-id="c723d-102">Service: Calls</span></span>
+<span data-ttu-id="c723d-103">Nombre de contador: Llamadas.</span><span class="sxs-lookup"><span data-stu-id="c723d-103">Counter Name: Calls.</span></span>  
   
-## <a name="description"></a><span data-ttu-id="f6ce0-104">Descripción</span><span class="sxs-lookup"><span data-stu-id="f6ce0-104">Description</span></span>  
- <span data-ttu-id="f6ce0-105">Número de llamadas a este servicio.</span><span class="sxs-lookup"><span data-stu-id="f6ce0-105">Number of calls to this service.</span></span>
+## <a name="description"></a><span data-ttu-id="c723d-104">Descripción</span><span class="sxs-lookup"><span data-stu-id="c723d-104">Description</span></span>  
+ <span data-ttu-id="c723d-105">Número de llamadas a este servicio.</span><span class="sxs-lookup"><span data-stu-id="c723d-105">Number of calls to this service.</span></span>

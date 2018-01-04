@@ -13,19 +13,20 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ab2f613d7c8c65e496c770a6fe84fd668cce4eb5
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0c146a745b4f896129fc7d0c79f8da928b6353cc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelchannelsconnectionabandoned"></a><span data-ttu-id="57d7d-102">System.ServiceModel.Channels.ConnectionAbandoned</span><span class="sxs-lookup"><span data-stu-id="57d7d-102">System.ServiceModel.Channels.ConnectionAbandoned</span></span>
-<span data-ttu-id="57d7d-103">System.ServiceModel.Channels.ConnectionAbandoned</span><span class="sxs-lookup"><span data-stu-id="57d7d-103">System.ServiceModel.Channels.ConnectionAbandoned</span></span>  
+# <a name="systemservicemodelchannelsconnectionabandoned"></a><span data-ttu-id="9c54b-102">System.ServiceModel.Channels.ConnectionAbandoned</span><span class="sxs-lookup"><span data-stu-id="9c54b-102">System.ServiceModel.Channels.ConnectionAbandoned</span></span>
+<span data-ttu-id="9c54b-103">System.ServiceModel.Channels.ConnectionAbandoned</span><span class="sxs-lookup"><span data-stu-id="9c54b-103">System.ServiceModel.Channels.ConnectionAbandoned</span></span>  
   
-## <a name="description"></a><span data-ttu-id="57d7d-104">Descripción</span><span class="sxs-lookup"><span data-stu-id="57d7d-104">Description</span></span>  
- <span data-ttu-id="57d7d-105">Se ha abandonado la conexión.</span><span class="sxs-lookup"><span data-stu-id="57d7d-105">The connection has been abandoned.</span></span>  
+## <a name="description"></a><span data-ttu-id="9c54b-104">Descripción</span><span class="sxs-lookup"><span data-stu-id="9c54b-104">Description</span></span>  
+ <span data-ttu-id="9c54b-105">Se ha abandonado la conexión.</span><span class="sxs-lookup"><span data-stu-id="9c54b-105">The connection has been abandoned.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="57d7d-106">Vea también</span><span class="sxs-lookup"><span data-stu-id="57d7d-106">See Also</span></span>  
- [<span data-ttu-id="57d7d-107">Seguimiento</span><span class="sxs-lookup"><span data-stu-id="57d7d-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="57d7d-108">Uso del seguimiento para solucionar problemas de la aplicación</span><span class="sxs-lookup"><span data-stu-id="57d7d-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="57d7d-109">Administración y diagnóstico</span><span class="sxs-lookup"><span data-stu-id="57d7d-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="9c54b-106">Vea también</span><span class="sxs-lookup"><span data-stu-id="9c54b-106">See Also</span></span>  
+ [<span data-ttu-id="9c54b-107">Traza</span><span class="sxs-lookup"><span data-stu-id="9c54b-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="9c54b-108">Uso del seguimiento para solucionar problemas de su aplicación</span><span class="sxs-lookup"><span data-stu-id="9c54b-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="9c54b-109">Administración y diagnóstico</span><span class="sxs-lookup"><span data-stu-id="9c54b-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

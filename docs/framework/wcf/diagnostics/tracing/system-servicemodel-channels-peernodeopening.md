@@ -13,19 +13,20 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5db3563f626d4344df03cfe1598a923607424c06
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: e29b37e1cc50d06154df81911bd71900989b9b40
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelchannelspeernodeopening"></a><span data-ttu-id="66979-102">System.ServiceModel.Channels.PeerNodeOpening</span><span class="sxs-lookup"><span data-stu-id="66979-102">System.ServiceModel.Channels.PeerNodeOpening</span></span>
-<span data-ttu-id="66979-103">PeerNode ha empezado a inicializarse.</span><span class="sxs-lookup"><span data-stu-id="66979-103">The PeerNode has begun initializing.</span></span>  
+# <a name="systemservicemodelchannelspeernodeopening"></a><span data-ttu-id="eb5fa-102">System.ServiceModel.Channels.PeerNodeOpening</span><span class="sxs-lookup"><span data-stu-id="eb5fa-102">System.ServiceModel.Channels.PeerNodeOpening</span></span>
+<span data-ttu-id="eb5fa-103">PeerNode ha empezado a inicializarse.</span><span class="sxs-lookup"><span data-stu-id="eb5fa-103">The PeerNode has begun initializing.</span></span>  
   
-## <a name="description"></a><span data-ttu-id="66979-104">Descripción</span><span class="sxs-lookup"><span data-stu-id="66979-104">Description</span></span>  
- <span data-ttu-id="66979-105">Este seguimiento se produce al principio de la ejecución del código de inicialización de PeerNode (Abrir).</span><span class="sxs-lookup"><span data-stu-id="66979-105">This trace occurs at the beginning of running the PeerNode initialization (Open) code.</span></span>  
+## <a name="description"></a><span data-ttu-id="eb5fa-104">Descripción</span><span class="sxs-lookup"><span data-stu-id="eb5fa-104">Description</span></span>  
+ <span data-ttu-id="eb5fa-105">Este seguimiento se produce al principio de la ejecución del código de inicialización de PeerNode (Abrir).</span><span class="sxs-lookup"><span data-stu-id="eb5fa-105">This trace occurs at the beginning of running the PeerNode initialization (Open) code.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="66979-106">Vea también</span><span class="sxs-lookup"><span data-stu-id="66979-106">See Also</span></span>  
- [<span data-ttu-id="66979-107">Seguimiento</span><span class="sxs-lookup"><span data-stu-id="66979-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="66979-108">Uso del seguimiento para solucionar problemas de la aplicación</span><span class="sxs-lookup"><span data-stu-id="66979-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="66979-109">Administración y diagnóstico</span><span class="sxs-lookup"><span data-stu-id="66979-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="eb5fa-106">Vea también</span><span class="sxs-lookup"><span data-stu-id="eb5fa-106">See Also</span></span>  
+ [<span data-ttu-id="eb5fa-107">Traza</span><span class="sxs-lookup"><span data-stu-id="eb5fa-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="eb5fa-108">Uso del seguimiento para solucionar problemas de su aplicación</span><span class="sxs-lookup"><span data-stu-id="eb5fa-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="eb5fa-109">Administración y diagnóstico</span><span class="sxs-lookup"><span data-stu-id="eb5fa-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

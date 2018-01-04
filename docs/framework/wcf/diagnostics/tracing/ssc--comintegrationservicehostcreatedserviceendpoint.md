@@ -13,19 +13,20 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0e8769966ab82b5702166eb9d6b43187cd25979a
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 9e0c9d8e5f58296b9913eb06177cbd60963e2269
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelcomintegrationcomintegrationservicehostcreatedserviceendpoint"></a><span data-ttu-id="5f1e9-102">System.ServiceModel.ComIntegration.ComIntegrationServiceHostCreatedServiceEndpoint</span><span class="sxs-lookup"><span data-stu-id="5f1e9-102">System.ServiceModel.ComIntegration.ComIntegrationServiceHostCreatedServiceEndpoint</span></span>
-<span data-ttu-id="5f1e9-103">System.ServiceModel.ComIntegration.ComIntegrationServiceHostCreatedServiceEndpoint</span><span class="sxs-lookup"><span data-stu-id="5f1e9-103">System.ServiceModel.ComIntegration.ComIntegrationServiceHostCreatedServiceEndpoint</span></span>  
+# <a name="systemservicemodelcomintegrationcomintegrationservicehostcreatedserviceendpoint"></a><span data-ttu-id="a9938-102">System.ServiceModel.ComIntegration.ComIntegrationServiceHostCreatedServiceEndpoint</span><span class="sxs-lookup"><span data-stu-id="a9938-102">System.ServiceModel.ComIntegration.ComIntegrationServiceHostCreatedServiceEndpoint</span></span>
+<span data-ttu-id="a9938-103">System.ServiceModel.ComIntegration.ComIntegrationServiceHostCreatedServiceEndpoint</span><span class="sxs-lookup"><span data-stu-id="a9938-103">System.ServiceModel.ComIntegration.ComIntegrationServiceHostCreatedServiceEndpoint</span></span>  
   
-## <a name="description"></a><span data-ttu-id="5f1e9-104">Descripción</span><span class="sxs-lookup"><span data-stu-id="5f1e9-104">Description</span></span>  
- <span data-ttu-id="5f1e9-105">ComPlus: punto de conexión de servicio creado.</span><span class="sxs-lookup"><span data-stu-id="5f1e9-105">ComPlus: Created service endpoint.</span></span>  
+## <a name="description"></a><span data-ttu-id="a9938-104">Descripción</span><span class="sxs-lookup"><span data-stu-id="a9938-104">Description</span></span>  
+ <span data-ttu-id="a9938-105">ComPlus: punto de conexión de servicio creado.</span><span class="sxs-lookup"><span data-stu-id="a9938-105">ComPlus: Created service endpoint.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5f1e9-106">Vea también</span><span class="sxs-lookup"><span data-stu-id="5f1e9-106">See Also</span></span>  
- [<span data-ttu-id="5f1e9-107">Seguimiento</span><span class="sxs-lookup"><span data-stu-id="5f1e9-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="5f1e9-108">Uso del seguimiento para solucionar problemas de la aplicación</span><span class="sxs-lookup"><span data-stu-id="5f1e9-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="5f1e9-109">Administración y diagnóstico</span><span class="sxs-lookup"><span data-stu-id="5f1e9-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="a9938-106">Vea también</span><span class="sxs-lookup"><span data-stu-id="a9938-106">See Also</span></span>  
+ [<span data-ttu-id="a9938-107">Traza</span><span class="sxs-lookup"><span data-stu-id="a9938-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="a9938-108">Uso del seguimiento para solucionar problemas de su aplicación</span><span class="sxs-lookup"><span data-stu-id="a9938-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="a9938-109">Administración y diagnóstico</span><span class="sxs-lookup"><span data-stu-id="a9938-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
