@@ -13,15 +13,16 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: eb878b40a2ffd9fffd30705f504fef7dbca45400
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 1c32eac180a5aae599d084f3fcc4c44055f80428
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="waiting-for-input-in-a-workflow"></a><span data-ttu-id="c11dd-102">Esperar entrada en un flujo de trabajo</span><span class="sxs-lookup"><span data-stu-id="c11dd-102">Waiting for Input in a Workflow</span></span>
-<span data-ttu-id="c11dd-103">Los temas en esta sección tratan cómo usar marcadores y actividades de mensajería.</span><span class="sxs-lookup"><span data-stu-id="c11dd-103">The topics in this section discuss how to use bookmarks and messaging activities.</span></span>  
+# <a name="waiting-for-input-in-a-workflow"></a><span data-ttu-id="a09a9-102">Esperar entrada en un flujo de trabajo</span><span class="sxs-lookup"><span data-stu-id="a09a9-102">Waiting for Input in a Workflow</span></span>
+<span data-ttu-id="a09a9-103">Los temas en esta sección tratan cómo usar marcadores y actividades de mensajería.</span><span class="sxs-lookup"><span data-stu-id="a09a9-103">The topics in this section discuss how to use bookmarks and messaging activities.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="c11dd-104">En esta sección</span><span class="sxs-lookup"><span data-stu-id="c11dd-104">In This Section</span></span>  
- [<span data-ttu-id="c11dd-105">Marcadores</span><span class="sxs-lookup"><span data-stu-id="c11dd-105">Bookmarks</span></span>](../../../docs/framework/windows-workflow-foundation/bookmarks.md)  
- <span data-ttu-id="c11dd-106">Describe cómo usar marcadores.</span><span class="sxs-lookup"><span data-stu-id="c11dd-106">Describes how to use bookmarks.</span></span>
+## <a name="in-this-section"></a><span data-ttu-id="a09a9-104">En esta sección</span><span class="sxs-lookup"><span data-stu-id="a09a9-104">In This Section</span></span>  
+ [<span data-ttu-id="a09a9-105">Marcadores</span><span class="sxs-lookup"><span data-stu-id="a09a9-105">Bookmarks</span></span>](../../../docs/framework/windows-workflow-foundation/bookmarks.md)  
+ <span data-ttu-id="a09a9-106">Describe cómo usar marcadores.</span><span class="sxs-lookup"><span data-stu-id="a09a9-106">Describes how to use bookmarks.</span></span>

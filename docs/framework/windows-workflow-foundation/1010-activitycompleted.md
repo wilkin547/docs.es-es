@@ -12,34 +12,35 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d26aa2c30defd2eb794d013155e05ccd496eebe6
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 4d11bbe013c6f3370064dd8cd9f4f03a0234d6f8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="1010---activitycompleted"></a><span data-ttu-id="ea0a4-102">1010 - ActivityCompleted</span><span class="sxs-lookup"><span data-stu-id="ea0a4-102">1010 - ActivityCompleted</span></span>
-## <a name="properties"></a><span data-ttu-id="ea0a4-103">Propiedades</span><span class="sxs-lookup"><span data-stu-id="ea0a4-103">Properties</span></span>  
+# <a name="1010---activitycompleted"></a><span data-ttu-id="eb55d-102">1010 - ActivityCompleted</span><span class="sxs-lookup"><span data-stu-id="eb55d-102">1010 - ActivityCompleted</span></span>
+## <a name="properties"></a><span data-ttu-id="eb55d-103">Propiedades</span><span class="sxs-lookup"><span data-stu-id="eb55d-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="ea0a4-104">Id.</span><span class="sxs-lookup"><span data-stu-id="ea0a4-104">ID</span></span>|<span data-ttu-id="ea0a4-105">1010</span><span class="sxs-lookup"><span data-stu-id="ea0a4-105">1010</span></span>|  
-|<span data-ttu-id="ea0a4-106">Palabras clave</span><span class="sxs-lookup"><span data-stu-id="ea0a4-106">Keywords</span></span>|<span data-ttu-id="ea0a4-107">WFRuntime</span><span class="sxs-lookup"><span data-stu-id="ea0a4-107">WFRuntime</span></span>|  
-|<span data-ttu-id="ea0a4-108">Nivel</span><span class="sxs-lookup"><span data-stu-id="ea0a4-108">Level</span></span>|<span data-ttu-id="ea0a4-109">Información</span><span class="sxs-lookup"><span data-stu-id="ea0a4-109">Information</span></span>|  
-|<span data-ttu-id="ea0a4-110">Canal</span><span class="sxs-lookup"><span data-stu-id="ea0a4-110">Channel</span></span>|<span data-ttu-id="ea0a4-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="ea0a4-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
+|<span data-ttu-id="eb55d-104">Id.</span><span class="sxs-lookup"><span data-stu-id="eb55d-104">ID</span></span>|<span data-ttu-id="eb55d-105">1010</span><span class="sxs-lookup"><span data-stu-id="eb55d-105">1010</span></span>|  
+|<span data-ttu-id="eb55d-106">Palabras clave</span><span class="sxs-lookup"><span data-stu-id="eb55d-106">Keywords</span></span>|<span data-ttu-id="eb55d-107">WFRuntime</span><span class="sxs-lookup"><span data-stu-id="eb55d-107">WFRuntime</span></span>|  
+|<span data-ttu-id="eb55d-108">Nivel</span><span class="sxs-lookup"><span data-stu-id="eb55d-108">Level</span></span>|<span data-ttu-id="eb55d-109">Información</span><span class="sxs-lookup"><span data-stu-id="eb55d-109">Information</span></span>|  
+|<span data-ttu-id="eb55d-110">Canal</span><span class="sxs-lookup"><span data-stu-id="eb55d-110">Channel</span></span>|<span data-ttu-id="eb55d-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="eb55d-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="ea0a4-112">Descripción</span><span class="sxs-lookup"><span data-stu-id="ea0a4-112">Description</span></span>  
- <span data-ttu-id="ea0a4-113">Indica que una actividad ha completado su ejecución.</span><span class="sxs-lookup"><span data-stu-id="ea0a4-113">Indicates an activity has completed execution.</span></span>  
+## <a name="description"></a><span data-ttu-id="eb55d-112">Descripción</span><span class="sxs-lookup"><span data-stu-id="eb55d-112">Description</span></span>  
+ <span data-ttu-id="eb55d-113">Indica que una actividad ha completado su ejecución.</span><span class="sxs-lookup"><span data-stu-id="eb55d-113">Indicates an activity has completed execution.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="ea0a4-114">Mensaje</span><span class="sxs-lookup"><span data-stu-id="ea0a4-114">Message</span></span>  
- <span data-ttu-id="ea0a4-115">Actividad “%1", DisplayName: “%2 ", InstanceId: “%3 " se ha completado en el estado “%4".</span><span class="sxs-lookup"><span data-stu-id="ea0a4-115">Activity '%1', DisplayName: '%2', InstanceId: '%3' has completed in the '%4' state.</span></span>  
+## <a name="message"></a><span data-ttu-id="eb55d-114">Mensaje</span><span class="sxs-lookup"><span data-stu-id="eb55d-114">Message</span></span>  
+ <span data-ttu-id="eb55d-115">Actividad “%1", DisplayName: “%2 ", InstanceId: “%3 " se ha completado en el estado “%4".</span><span class="sxs-lookup"><span data-stu-id="eb55d-115">Activity '%1', DisplayName: '%2', InstanceId: '%3' has completed in the '%4' state.</span></span>  
   
-## <a name="details"></a><span data-ttu-id="ea0a4-116">Detalles</span><span class="sxs-lookup"><span data-stu-id="ea0a4-116">Details</span></span>  
+## <a name="details"></a><span data-ttu-id="eb55d-116">Detalles</span><span class="sxs-lookup"><span data-stu-id="eb55d-116">Details</span></span>  
   
-|<span data-ttu-id="ea0a4-117">Nombre del elemento de datos</span><span class="sxs-lookup"><span data-stu-id="ea0a4-117">Data Item Name</span></span>|<span data-ttu-id="ea0a4-118">Tipo del elemento de datos</span><span class="sxs-lookup"><span data-stu-id="ea0a4-118">Data Item Type</span></span>|<span data-ttu-id="ea0a4-119">Descripción</span><span class="sxs-lookup"><span data-stu-id="ea0a4-119">Description</span></span>|  
+|<span data-ttu-id="eb55d-117">Nombre del elemento de datos</span><span class="sxs-lookup"><span data-stu-id="eb55d-117">Data Item Name</span></span>|<span data-ttu-id="eb55d-118">Tipo del elemento de datos</span><span class="sxs-lookup"><span data-stu-id="eb55d-118">Data Item Type</span></span>|<span data-ttu-id="eb55d-119">Descripción</span><span class="sxs-lookup"><span data-stu-id="eb55d-119">Description</span></span>|  
 |--------------------|--------------------|-----------------|  
-|<span data-ttu-id="ea0a4-120">Actividad</span><span class="sxs-lookup"><span data-stu-id="ea0a4-120">Activity</span></span>|<span data-ttu-id="ea0a4-121">xs:string</span><span class="sxs-lookup"><span data-stu-id="ea0a4-121">xs:string</span></span>|<span data-ttu-id="ea0a4-122">El nombre de tipo de la actividad.</span><span class="sxs-lookup"><span data-stu-id="ea0a4-122">The type name of the activity.</span></span>|  
-|<span data-ttu-id="ea0a4-123">DisplayName</span><span class="sxs-lookup"><span data-stu-id="ea0a4-123">DisplayName</span></span>|<span data-ttu-id="ea0a4-124">xs:string</span><span class="sxs-lookup"><span data-stu-id="ea0a4-124">xs:string</span></span>|<span data-ttu-id="ea0a4-125">El nombre para mostrar de la actividad.</span><span class="sxs-lookup"><span data-stu-id="ea0a4-125">The display name of the activity.</span></span>|  
-|<span data-ttu-id="ea0a4-126">InstanceId</span><span class="sxs-lookup"><span data-stu-id="ea0a4-126">InstanceId</span></span>|<span data-ttu-id="ea0a4-127">xs:string</span><span class="sxs-lookup"><span data-stu-id="ea0a4-127">xs:string</span></span>|<span data-ttu-id="ea0a4-128">La identificación de instancia de la actividad.</span><span class="sxs-lookup"><span data-stu-id="ea0a4-128">The instance id of the activity.</span></span>|  
-|<span data-ttu-id="ea0a4-129">Estado</span><span class="sxs-lookup"><span data-stu-id="ea0a4-129">State</span></span>|<span data-ttu-id="ea0a4-130">xs:string</span><span class="sxs-lookup"><span data-stu-id="ea0a4-130">xs:string</span></span>|<span data-ttu-id="ea0a4-131">Estado de la actividad.</span><span class="sxs-lookup"><span data-stu-id="ea0a4-131">The state of the activity.</span></span>|  
-|<span data-ttu-id="ea0a4-132">AppDomain</span><span class="sxs-lookup"><span data-stu-id="ea0a4-132">AppDomain</span></span>|<span data-ttu-id="ea0a4-133">xs:string</span><span class="sxs-lookup"><span data-stu-id="ea0a4-133">xs:string</span></span>|<span data-ttu-id="ea0a4-134">La cadena devuelta por AppDomain.CurrentDomain.FriendlyName.</span><span class="sxs-lookup"><span data-stu-id="ea0a4-134">The string returned by AppDomain.CurrentDomain.FriendlyName.</span></span>|
+|<span data-ttu-id="eb55d-120">Actividad</span><span class="sxs-lookup"><span data-stu-id="eb55d-120">Activity</span></span>|<span data-ttu-id="eb55d-121">xs:string</span><span class="sxs-lookup"><span data-stu-id="eb55d-121">xs:string</span></span>|<span data-ttu-id="eb55d-122">El nombre de tipo de la actividad.</span><span class="sxs-lookup"><span data-stu-id="eb55d-122">The type name of the activity.</span></span>|  
+|<span data-ttu-id="eb55d-123">DisplayName</span><span class="sxs-lookup"><span data-stu-id="eb55d-123">DisplayName</span></span>|<span data-ttu-id="eb55d-124">xs:string</span><span class="sxs-lookup"><span data-stu-id="eb55d-124">xs:string</span></span>|<span data-ttu-id="eb55d-125">El nombre para mostrar de la actividad.</span><span class="sxs-lookup"><span data-stu-id="eb55d-125">The display name of the activity.</span></span>|  
+|<span data-ttu-id="eb55d-126">InstanceId</span><span class="sxs-lookup"><span data-stu-id="eb55d-126">InstanceId</span></span>|<span data-ttu-id="eb55d-127">xs:string</span><span class="sxs-lookup"><span data-stu-id="eb55d-127">xs:string</span></span>|<span data-ttu-id="eb55d-128">La identificación de instancia de la actividad.</span><span class="sxs-lookup"><span data-stu-id="eb55d-128">The instance id of the activity.</span></span>|  
+|<span data-ttu-id="eb55d-129">Estado</span><span class="sxs-lookup"><span data-stu-id="eb55d-129">State</span></span>|<span data-ttu-id="eb55d-130">xs:string</span><span class="sxs-lookup"><span data-stu-id="eb55d-130">xs:string</span></span>|<span data-ttu-id="eb55d-131">Estado de la actividad.</span><span class="sxs-lookup"><span data-stu-id="eb55d-131">The state of the activity.</span></span>|  
+|<span data-ttu-id="eb55d-132">AppDomain</span><span class="sxs-lookup"><span data-stu-id="eb55d-132">AppDomain</span></span>|<span data-ttu-id="eb55d-133">xs:string</span><span class="sxs-lookup"><span data-stu-id="eb55d-133">xs:string</span></span>|<span data-ttu-id="eb55d-134">La cadena devuelta por AppDomain.CurrentDomain.FriendlyName.</span><span class="sxs-lookup"><span data-stu-id="eb55d-134">The string returned by AppDomain.CurrentDomain.FriendlyName.</span></span>|

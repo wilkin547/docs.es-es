@@ -19,26 +19,27 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 668d1b2184c2ae3e089c9996854eef9c28b5a5f4
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: f4e1beb6311604de5d0c59a29de2d1b6c50c2993
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="maskedtextbox-control-windows-forms"></a><span data-ttu-id="0df1f-102">MaskedTextBox (Control, formularios Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="0df1f-102">MaskedTextBox Control (Windows Forms)</span></span>
-<span data-ttu-id="0df1f-103">Este tema contiene vínculos a otros usuarios sobre el `MaskedTextBox` control.</span><span class="sxs-lookup"><span data-stu-id="0df1f-103">This topic links to others about the `MaskedTextBox` control.</span></span>  
+# <a name="maskedtextbox-control-windows-forms"></a><span data-ttu-id="23cd9-102">MaskedTextBox (Control, formularios Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="23cd9-102">MaskedTextBox Control (Windows Forms)</span></span>
+<span data-ttu-id="23cd9-103">Este tema contiene vínculos a otros usuarios sobre el `MaskedTextBox` control.</span><span class="sxs-lookup"><span data-stu-id="23cd9-103">This topic links to others about the `MaskedTextBox` control.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="0df1f-104">En esta sección</span><span class="sxs-lookup"><span data-stu-id="0df1f-104">In This Section</span></span>  
- [<span data-ttu-id="0df1f-105">Tutorial: Trabajar con el control MaskedTextBox</span><span class="sxs-lookup"><span data-stu-id="0df1f-105">Walkthrough: Working with the MaskedTextBox Control</span></span>](../../../../docs/framework/winforms/controls/walkthrough-working-with-the-maskedtextbox-control.md)  
- <span data-ttu-id="0df1f-106">Muestra las características claves de la `MaskedTextBox` control.</span><span class="sxs-lookup"><span data-stu-id="0df1f-106">Demonstrates the key features of the `MaskedTextBox` control.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="23cd9-104">En esta sección</span><span class="sxs-lookup"><span data-stu-id="23cd9-104">In This Section</span></span>  
+ [<span data-ttu-id="23cd9-105">Tutorial: Trabajar con el control MaskedTextBox</span><span class="sxs-lookup"><span data-stu-id="23cd9-105">Walkthrough: Working with the MaskedTextBox Control</span></span>](../../../../docs/framework/winforms/controls/walkthrough-working-with-the-maskedtextbox-control.md)  
+ <span data-ttu-id="23cd9-106">Muestra las características claves de la `MaskedTextBox` control.</span><span class="sxs-lookup"><span data-stu-id="23cd9-106">Demonstrates the key features of the `MaskedTextBox` control.</span></span>  
   
- [<span data-ttu-id="0df1f-107">Enlazar datos al control MaskedTextBox</span><span class="sxs-lookup"><span data-stu-id="0df1f-107">How to: Bind Data to the MaskedTextBox Control</span></span>](../../../../docs/framework/winforms/controls/how-to-bind-data-to-the-maskedtextbox-control.md)  
- <span data-ttu-id="0df1f-108">Muestra cómo cambiar el formato de los datos cuando los datos en la base de datos no coincide con el formato esperado por la definición de máscara.</span><span class="sxs-lookup"><span data-stu-id="0df1f-108">Demonstrates how to reformat the data when data in the database does not match the format expected by your mask definition.</span></span>  
+ [<span data-ttu-id="23cd9-107">Enlazar datos al control MaskedTextBox</span><span class="sxs-lookup"><span data-stu-id="23cd9-107">How to: Bind Data to the MaskedTextBox Control</span></span>](../../../../docs/framework/winforms/controls/how-to-bind-data-to-the-maskedtextbox-control.md)  
+ <span data-ttu-id="23cd9-108">Muestra cómo cambiar el formato de los datos cuando los datos en la base de datos no coincide con el formato esperado por la definición de máscara.</span><span class="sxs-lookup"><span data-stu-id="23cd9-108">Demonstrates how to reformat the data when data in the database does not match the format expected by your mask definition.</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="0df1f-109">Referencia</span><span class="sxs-lookup"><span data-stu-id="0df1f-109">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="23cd9-109">Referencia</span><span class="sxs-lookup"><span data-stu-id="23cd9-109">Reference</span></span>  
  <xref:System.Windows.Forms.MaskedTextBox>  
- <span data-ttu-id="0df1f-110">La clase primaria para la implementación del control de cuadro de texto enmascarado.</span><span class="sxs-lookup"><span data-stu-id="0df1f-110">The primary class for the implementation of the masked text box control.</span></span>  
+ <span data-ttu-id="23cd9-110">La clase primaria para la implementación del control de cuadro de texto enmascarado.</span><span class="sxs-lookup"><span data-stu-id="23cd9-110">The primary class for the implementation of the masked text box control.</span></span>  
   
-## <a name="related-sections"></a><span data-ttu-id="0df1f-111">Secciones relacionadas</span><span class="sxs-lookup"><span data-stu-id="0df1f-111">Related Sections</span></span>  
- [<span data-ttu-id="0df1f-112">Controles que se usan en Windows Forms</span><span class="sxs-lookup"><span data-stu-id="0df1f-112">Controls to Use on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
- <span data-ttu-id="0df1f-113">Proporciona una lista completa de controles de Windows Forms, con vínculos a información sobre su uso.</span><span class="sxs-lookup"><span data-stu-id="0df1f-113">Provides a complete list of Windows Forms controls, with links to information on their use.</span></span>
+## <a name="related-sections"></a><span data-ttu-id="23cd9-111">Secciones relacionadas</span><span class="sxs-lookup"><span data-stu-id="23cd9-111">Related Sections</span></span>  
+ [<span data-ttu-id="23cd9-112">Controles que se usan en Windows Forms</span><span class="sxs-lookup"><span data-stu-id="23cd9-112">Controls to Use on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ <span data-ttu-id="23cd9-113">Proporciona una lista completa de controles de Windows Forms, con vínculos a información sobre su uso.</span><span class="sxs-lookup"><span data-stu-id="23cd9-113">Provides a complete list of Windows Forms controls, with links to information on their use.</span></span>

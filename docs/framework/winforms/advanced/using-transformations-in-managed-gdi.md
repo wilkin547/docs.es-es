@@ -16,22 +16,23 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b25e6b3b09c4e39b53bab182ac70bb135f5f130c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 07f10050d669e0de741e8aa1361a078928eebef5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="using-transformations-in-managed-gdi"></a><span data-ttu-id="3fe9d-102">Usar transformaciones en la interfaz GDI+ administrada</span><span class="sxs-lookup"><span data-stu-id="3fe9d-102">Using Transformations in Managed GDI+</span></span>
-<span data-ttu-id="3fe9d-103">Transformaciones afines incluyen la rotación, escala, reflejar, distorsionar y traducir.</span><span class="sxs-lookup"><span data-stu-id="3fe9d-103">Affine transformations include rotating, scaling, reflecting, shearing, and translating.</span></span> <span data-ttu-id="3fe9d-104">En [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], la <xref:System.Drawing.Drawing2D.Matrix> clase proporciona la base para realizar transformaciones afines en dibujos vectoriales, imágenes y texto.</span><span class="sxs-lookup"><span data-stu-id="3fe9d-104">In [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], the <xref:System.Drawing.Drawing2D.Matrix> class provides the foundation for performing affine transformations on vector drawings, images, and text.</span></span>  
+# <a name="using-transformations-in-managed-gdi"></a><span data-ttu-id="cd108-102">Usar transformaciones en la interfaz GDI+ administrada</span><span class="sxs-lookup"><span data-stu-id="cd108-102">Using Transformations in Managed GDI+</span></span>
+<span data-ttu-id="cd108-103">Transformaciones afines incluyen la rotación, escala, reflejar, distorsionar y traducir.</span><span class="sxs-lookup"><span data-stu-id="cd108-103">Affine transformations include rotating, scaling, reflecting, shearing, and translating.</span></span> <span data-ttu-id="cd108-104">En [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], la <xref:System.Drawing.Drawing2D.Matrix> clase proporciona la base para realizar transformaciones afines en dibujos vectoriales, imágenes y texto.</span><span class="sxs-lookup"><span data-stu-id="cd108-104">In [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], the <xref:System.Drawing.Drawing2D.Matrix> class provides the foundation for performing affine transformations on vector drawings, images, and text.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="3fe9d-105">En esta sección</span><span class="sxs-lookup"><span data-stu-id="3fe9d-105">In This Section</span></span>  
- [<span data-ttu-id="3fe9d-106">Utilizar la transformación de coordenadas universales</span><span class="sxs-lookup"><span data-stu-id="3fe9d-106">Using the World Transformation</span></span>](../../../../docs/framework/winforms/advanced/using-the-world-transformation.md)  
- <span data-ttu-id="3fe9d-107">Describe cómo escalar y girar gráficos mediante una matriz de transformación universal.</span><span class="sxs-lookup"><span data-stu-id="3fe9d-107">Describes how to scale and rotate graphics using a world transformation matrix.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="cd108-105">En esta sección</span><span class="sxs-lookup"><span data-stu-id="cd108-105">In This Section</span></span>  
+ [<span data-ttu-id="cd108-106">Utilizar la transformación de coordenadas universales</span><span class="sxs-lookup"><span data-stu-id="cd108-106">Using the World Transformation</span></span>](../../../../docs/framework/winforms/advanced/using-the-world-transformation.md)  
+ <span data-ttu-id="cd108-107">Describe cómo escalar y girar gráficos mediante una matriz de transformación universal.</span><span class="sxs-lookup"><span data-stu-id="cd108-107">Describes how to scale and rotate graphics using a world transformation matrix.</span></span>  
   
- [<span data-ttu-id="3fe9d-108">Importancia del orden de transformación</span><span class="sxs-lookup"><span data-stu-id="3fe9d-108">Why Transformation Order Is Significant</span></span>](../../../../docs/framework/winforms/advanced/why-transformation-order-is-significant.md)  
- <span data-ttu-id="3fe9d-109">Se muestra por qué es importante el orden de las operaciones de transformación.</span><span class="sxs-lookup"><span data-stu-id="3fe9d-109">Demonstrates why the order of transform operations is important.</span></span>  
+ [<span data-ttu-id="cd108-108">Importancia del orden de transformación</span><span class="sxs-lookup"><span data-stu-id="cd108-108">Why Transformation Order Is Significant</span></span>](../../../../docs/framework/winforms/advanced/why-transformation-order-is-significant.md)  
+ <span data-ttu-id="cd108-109">Se muestra por qué es importante el orden de las operaciones de transformación.</span><span class="sxs-lookup"><span data-stu-id="cd108-109">Demonstrates why the order of transform operations is important.</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="3fe9d-110">Referencia</span><span class="sxs-lookup"><span data-stu-id="3fe9d-110">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="cd108-110">Referencia</span><span class="sxs-lookup"><span data-stu-id="cd108-110">Reference</span></span>  
  <xref:System.Drawing.Drawing2D.Matrix>  
- <span data-ttu-id="3fe9d-111">Describe esta clase y contiene vínculos a todos sus miembros.</span><span class="sxs-lookup"><span data-stu-id="3fe9d-111">Describes this class and contains links to all of its members.</span></span>
+ <span data-ttu-id="cd108-111">Describe esta clase y contiene vínculos a todos sus miembros.</span><span class="sxs-lookup"><span data-stu-id="cd108-111">Describes this class and contains links to all of its members.</span></span>

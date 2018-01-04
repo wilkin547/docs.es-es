@@ -19,29 +19,30 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 542dd132ece543b6a53a9e6d867b49fce4d15a58
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 2ee2669c41f4ee558d9457cee7df0ae8425cf065
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="how-to-convert-a-bmp-image-to-a-png-image"></a><span data-ttu-id="98d9e-102">Cómo: Convertir una imagen BMP en una imagen PNG</span><span class="sxs-lookup"><span data-stu-id="98d9e-102">How to: Convert a BMP image to a PNG image</span></span>
-<span data-ttu-id="98d9e-103">A menudo, deseará convertir de un formato a otro.</span><span class="sxs-lookup"><span data-stu-id="98d9e-103">Oftentimes, you will want to convert from one image file format to another.</span></span> <span data-ttu-id="98d9e-104">Puede hacer esta conversión fácilmente llamando al método <xref:System.Drawing.Image.Save%2A> de la clase <xref:System.Drawing.Image> y especificando <xref:System.Drawing.Imaging.ImageFormat> para el formato de archivo de imagen deseado.</span><span class="sxs-lookup"><span data-stu-id="98d9e-104">You can do this conversion easily by calling the <xref:System.Drawing.Image.Save%2A> method of the <xref:System.Drawing.Image> class and specifying the <xref:System.Drawing.Imaging.ImageFormat> for the desired image file format.</span></span>  
+# <a name="how-to-convert-a-bmp-image-to-a-png-image"></a><span data-ttu-id="9a9d7-102">Cómo: Convertir una imagen BMP en una imagen PNG</span><span class="sxs-lookup"><span data-stu-id="9a9d7-102">How to: Convert a BMP image to a PNG image</span></span>
+<span data-ttu-id="9a9d7-103">A menudo, deseará convertir de un formato a otro.</span><span class="sxs-lookup"><span data-stu-id="9a9d7-103">Oftentimes, you will want to convert from one image file format to another.</span></span> <span data-ttu-id="9a9d7-104">Puede hacer esta conversión fácilmente llamando al método <xref:System.Drawing.Image.Save%2A> de la clase <xref:System.Drawing.Image> y especificando <xref:System.Drawing.Imaging.ImageFormat> para el formato de archivo de imagen deseado.</span><span class="sxs-lookup"><span data-stu-id="9a9d7-104">You can do this conversion easily by calling the <xref:System.Drawing.Image.Save%2A> method of the <xref:System.Drawing.Image> class and specifying the <xref:System.Drawing.Imaging.ImageFormat> for the desired image file format.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="98d9e-105">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="98d9e-105">Example</span></span>  
- <span data-ttu-id="98d9e-106">En el ejemplo siguiente, se carga una imagen BMP de un tipo y se guarda la imagen en formato PNG.</span><span class="sxs-lookup"><span data-stu-id="98d9e-106">The following example loads a BMP image from a type, and saves the image in the PNG format.</span></span>  
+## <a name="example"></a><span data-ttu-id="9a9d7-105">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="9a9d7-105">Example</span></span>  
+ <span data-ttu-id="9a9d7-106">En el ejemplo siguiente, se carga una imagen BMP de un tipo y se guarda la imagen en formato PNG.</span><span class="sxs-lookup"><span data-stu-id="9a9d7-106">The following example loads a BMP image from a type, and saves the image in the PNG format.</span></span>  
   
  [!code-csharp[UsingImageEncodersDecoders#4](../../../../samples/snippets/csharp/VS_Snippets_Winforms/UsingImageEncodersDecoders/CS/Form1.cs#4)]
  [!code-vb[UsingImageEncodersDecoders#4](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/UsingImageEncodersDecoders/VB/Form1.vb#4)]  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="98d9e-107">Compilar el código</span><span class="sxs-lookup"><span data-stu-id="98d9e-107">Compiling the Code</span></span>  
- <span data-ttu-id="98d9e-108">Para este ejemplo se necesita:</span><span class="sxs-lookup"><span data-stu-id="98d9e-108">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="9a9d7-107">Compilar el código</span><span class="sxs-lookup"><span data-stu-id="9a9d7-107">Compiling the Code</span></span>  
+ <span data-ttu-id="9a9d7-108">Para este ejemplo se necesita:</span><span class="sxs-lookup"><span data-stu-id="9a9d7-108">This example requires:</span></span>  
   
--   <span data-ttu-id="98d9e-109">Una aplicación de Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="98d9e-109">A Windows Forms application.</span></span>  
+-   <span data-ttu-id="9a9d7-109">Una aplicación de Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="9a9d7-109">A Windows Forms application.</span></span>  
   
--   <span data-ttu-id="98d9e-110">Una referencia al espacio de nombres `System.Drawing.Imaging`.</span><span class="sxs-lookup"><span data-stu-id="98d9e-110">A reference to the `System.Drawing.Imaging` namespace.</span></span>  
+-   <span data-ttu-id="9a9d7-110">Una referencia al espacio de nombres `System.Drawing.Imaging`.</span><span class="sxs-lookup"><span data-stu-id="9a9d7-110">A reference to the `System.Drawing.Imaging` namespace.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="98d9e-111">Vea también</span><span class="sxs-lookup"><span data-stu-id="98d9e-111">See Also</span></span>  
- [<span data-ttu-id="98d9e-112">Enumerar los codificadores instalados</span><span class="sxs-lookup"><span data-stu-id="98d9e-112">How to: List Installed Encoders</span></span>](../../../../docs/framework/winforms/advanced/how-to-list-installed-encoders.md)  
- [<span data-ttu-id="98d9e-113">Usar codificadores y descodificadores de imagen en la interfaz GDI+ administrada</span><span class="sxs-lookup"><span data-stu-id="98d9e-113">Using Image Encoders and Decoders in Managed GDI+</span></span>](../../../../docs/framework/winforms/advanced/using-image-encoders-and-decoders-in-managed-gdi.md)  
- [<span data-ttu-id="98d9e-114">Tipos de mapas de bits</span><span class="sxs-lookup"><span data-stu-id="98d9e-114">Types of Bitmaps</span></span>](../../../../docs/framework/winforms/advanced/types-of-bitmaps.md)
+## <a name="see-also"></a><span data-ttu-id="9a9d7-111">Vea también</span><span class="sxs-lookup"><span data-stu-id="9a9d7-111">See Also</span></span>  
+ [<span data-ttu-id="9a9d7-112">Enumerar los codificadores instalados</span><span class="sxs-lookup"><span data-stu-id="9a9d7-112">How to: List Installed Encoders</span></span>](../../../../docs/framework/winforms/advanced/how-to-list-installed-encoders.md)  
+ [<span data-ttu-id="9a9d7-113">Usar codificadores y descodificadores de imagen en la interfaz GDI+ administrada</span><span class="sxs-lookup"><span data-stu-id="9a9d7-113">Using Image Encoders and Decoders in Managed GDI+</span></span>](../../../../docs/framework/winforms/advanced/using-image-encoders-and-decoders-in-managed-gdi.md)  
+ [<span data-ttu-id="9a9d7-114">Tipos de mapas de bits</span><span class="sxs-lookup"><span data-stu-id="9a9d7-114">Types of Bitmaps</span></span>](../../../../docs/framework/winforms/advanced/types-of-bitmaps.md)

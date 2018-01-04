@@ -17,22 +17,23 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5f4583a0381af6f0f85f9c2e2aea1d122f5174ba
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 38a2e331d9530c42be6b9047b11ea235ae81d58d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="how-to-enable-the-tab-key-to-move-out-of-a-toolstrip-control"></a><span data-ttu-id="52f96-102">Cómo: Habilitar la tecla TAB para salir de un control ToolStrip</span><span class="sxs-lookup"><span data-stu-id="52f96-102">How to: Enable the TAB Key to Move Out of a ToolStrip Control</span></span>
-<span data-ttu-id="52f96-103">Utilice el procedimiento siguiente para permitir al usuario que presione la tecla TAB para desplazarse de un <xref:System.Windows.Forms.ToolStrip> al siguiente control en el orden de tabulación.</span><span class="sxs-lookup"><span data-stu-id="52f96-103">Use the following procedure to enable the user to press the TAB key to move out of a <xref:System.Windows.Forms.ToolStrip> to the next control in the tab order.</span></span>  
+# <a name="how-to-enable-the-tab-key-to-move-out-of-a-toolstrip-control"></a><span data-ttu-id="bcd47-102">Cómo: Habilitar la tecla TAB para salir de un control ToolStrip</span><span class="sxs-lookup"><span data-stu-id="bcd47-102">How to: Enable the TAB Key to Move Out of a ToolStrip Control</span></span>
+<span data-ttu-id="bcd47-103">Utilice el procedimiento siguiente para permitir al usuario que presione la tecla TAB para desplazarse de un <xref:System.Windows.Forms.ToolStrip> al siguiente control en el orden de tabulación.</span><span class="sxs-lookup"><span data-stu-id="bcd47-103">Use the following procedure to enable the user to press the TAB key to move out of a <xref:System.Windows.Forms.ToolStrip> to the next control in the tab order.</span></span>  
   
- <span data-ttu-id="52f96-104">El <xref:System.Windows.Forms.ToolStrip> acepta la primera que presiona la tecla TAB y la selección de elementos de teclas de flecha dentro de la <xref:System.Windows.Forms.ToolStrip>.</span><span class="sxs-lookup"><span data-stu-id="52f96-104">The <xref:System.Windows.Forms.ToolStrip> accepts the first press of the TAB key, and the arrow keys select items within the <xref:System.Windows.Forms.ToolStrip>.</span></span> <span data-ttu-id="52f96-105">Cuando el usuario presiona la tecla TAB una segunda vez, lleva al usuario al siguiente control en el orden de tabulación.</span><span class="sxs-lookup"><span data-stu-id="52f96-105">When the user presses the TAB key a second time, it takes the user to the next control in the tab order.</span></span>  
+ <span data-ttu-id="bcd47-104">El <xref:System.Windows.Forms.ToolStrip> acepta la primera que presiona la tecla TAB y la selección de elementos de teclas de flecha dentro de la <xref:System.Windows.Forms.ToolStrip>.</span><span class="sxs-lookup"><span data-stu-id="bcd47-104">The <xref:System.Windows.Forms.ToolStrip> accepts the first press of the TAB key, and the arrow keys select items within the <xref:System.Windows.Forms.ToolStrip>.</span></span> <span data-ttu-id="bcd47-105">Cuando el usuario presiona la tecla TAB una segunda vez, lleva al usuario al siguiente control en el orden de tabulación.</span><span class="sxs-lookup"><span data-stu-id="bcd47-105">When the user presses the TAB key a second time, it takes the user to the next control in the tab order.</span></span>  
   
-### <a name="to-enable-the-user-to-press-the-tab-key-to-move-out-of-a-toolstrip-to-the-next-control"></a><span data-ttu-id="52f96-106">Para permitir al usuario que presione la tecla TAB para salir de un control ToolStrip al control siguiente</span><span class="sxs-lookup"><span data-stu-id="52f96-106">To enable the user to press the TAB key to move out of a ToolStrip to the next control</span></span>  
+### <a name="to-enable-the-user-to-press-the-tab-key-to-move-out-of-a-toolstrip-to-the-next-control"></a><span data-ttu-id="bcd47-106">Para permitir al usuario que presione la tecla TAB para salir de un control ToolStrip al control siguiente</span><span class="sxs-lookup"><span data-stu-id="bcd47-106">To enable the user to press the TAB key to move out of a ToolStrip to the next control</span></span>  
   
--   <span data-ttu-id="52f96-107">Establecer el <xref:System.Windows.Forms.ToolStrip.TabStop%2A> propiedad de la <xref:System.Windows.Forms.ToolStrip> a `true`.</span><span class="sxs-lookup"><span data-stu-id="52f96-107">Set the <xref:System.Windows.Forms.ToolStrip.TabStop%2A> property of the <xref:System.Windows.Forms.ToolStrip> to `true`.</span></span>  
+-   <span data-ttu-id="bcd47-107">Establecer el <xref:System.Windows.Forms.ToolStrip.TabStop%2A> propiedad de la <xref:System.Windows.Forms.ToolStrip> a `true`.</span><span class="sxs-lookup"><span data-stu-id="bcd47-107">Set the <xref:System.Windows.Forms.ToolStrip.TabStop%2A> property of the <xref:System.Windows.Forms.ToolStrip> to `true`.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="52f96-108">Vea también</span><span class="sxs-lookup"><span data-stu-id="52f96-108">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="bcd47-108">Vea también</span><span class="sxs-lookup"><span data-stu-id="bcd47-108">See Also</span></span>  
  <xref:System.Windows.Forms.ToolStrip>  
  <xref:System.Windows.Forms.ToolStrip.TabStop%2A>  
- [<span data-ttu-id="52f96-109">Información sobre el control ToolStrip</span><span class="sxs-lookup"><span data-stu-id="52f96-109">ToolStrip Control Overview</span></span>](../../../../docs/framework/winforms/controls/toolstrip-control-overview-windows-forms.md)
+ [<span data-ttu-id="bcd47-109">Información sobre el control ToolStrip</span><span class="sxs-lookup"><span data-stu-id="bcd47-109">ToolStrip Control Overview</span></span>](../../../../docs/framework/winforms/controls/toolstrip-control-overview-windows-forms.md)

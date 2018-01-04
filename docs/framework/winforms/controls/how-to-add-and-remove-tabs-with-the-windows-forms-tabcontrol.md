@@ -23,18 +23,19 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7df8b785b2c05acbbec9c17e12e462d755d0cd3b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 7691730f4f65d5d89f9f66f8fc1c8c6449702ae9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol"></a><span data-ttu-id="836ee-102">Cómo: Agregar y quitar fichas con el control TabControl de formularios Windows Forms</span><span class="sxs-lookup"><span data-stu-id="836ee-102">How to: Add and Remove Tabs with the Windows Forms TabControl</span></span>
-<span data-ttu-id="836ee-103">De forma predeterminada, un <xref:System.Windows.Forms.TabControl> control contiene dos <xref:System.Windows.Forms.TabPage> controles.</span><span class="sxs-lookup"><span data-stu-id="836ee-103">By default, a <xref:System.Windows.Forms.TabControl> control contains two <xref:System.Windows.Forms.TabPage> controls.</span></span> <span data-ttu-id="836ee-104">Puede tener acceso a estas fichas a través de la <xref:System.Windows.Forms.TabControl.TabPages%2A> propiedad.</span><span class="sxs-lookup"><span data-stu-id="836ee-104">You can access these tabs through the <xref:System.Windows.Forms.TabControl.TabPages%2A> property.</span></span>  
+# <a name="how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol"></a><span data-ttu-id="d3c85-102">Cómo: Agregar y quitar fichas con el control TabControl de formularios Windows Forms</span><span class="sxs-lookup"><span data-stu-id="d3c85-102">How to: Add and Remove Tabs with the Windows Forms TabControl</span></span>
+<span data-ttu-id="d3c85-103">De forma predeterminada, un <xref:System.Windows.Forms.TabControl> control contiene dos <xref:System.Windows.Forms.TabPage> controles.</span><span class="sxs-lookup"><span data-stu-id="d3c85-103">By default, a <xref:System.Windows.Forms.TabControl> control contains two <xref:System.Windows.Forms.TabPage> controls.</span></span> <span data-ttu-id="d3c85-104">Puede tener acceso a estas fichas a través de la <xref:System.Windows.Forms.TabControl.TabPages%2A> propiedad.</span><span class="sxs-lookup"><span data-stu-id="d3c85-104">You can access these tabs through the <xref:System.Windows.Forms.TabControl.TabPages%2A> property.</span></span>  
   
-### <a name="to-add-a-tab-programmatically"></a><span data-ttu-id="836ee-105">Para agregar una ficha mediante programación</span><span class="sxs-lookup"><span data-stu-id="836ee-105">To add a tab programmatically</span></span>  
+### <a name="to-add-a-tab-programmatically"></a><span data-ttu-id="d3c85-105">Para agregar una ficha mediante programación</span><span class="sxs-lookup"><span data-stu-id="d3c85-105">To add a tab programmatically</span></span>  
   
--   <span data-ttu-id="836ee-106">Use la <xref:System.Windows.Forms.TabControl.TabPageCollection.Add%2A> método de la <xref:System.Windows.Forms.TabControl.TabPages%2A> propiedad.</span><span class="sxs-lookup"><span data-stu-id="836ee-106">Use the <xref:System.Windows.Forms.TabControl.TabPageCollection.Add%2A> method of the <xref:System.Windows.Forms.TabControl.TabPages%2A> property.</span></span>  
+-   <span data-ttu-id="d3c85-106">Use la <xref:System.Windows.Forms.TabControl.TabPageCollection.Add%2A> método de la <xref:System.Windows.Forms.TabControl.TabPages%2A> propiedad.</span><span class="sxs-lookup"><span data-stu-id="d3c85-106">Use the <xref:System.Windows.Forms.TabControl.TabPageCollection.Add%2A> method of the <xref:System.Windows.Forms.TabControl.TabPages%2A> property.</span></span>  
   
     ```vb  
     Dim myTabPage As New TabPage()  
@@ -55,13 +56,13 @@ ms.lasthandoff: 11/21/2017
     tabControl1->TabPages->Add(myTabPage);  
     ```  
   
-### <a name="to-remove-a-tab-programmatically"></a><span data-ttu-id="836ee-107">Para quitar una ficha mediante programación</span><span class="sxs-lookup"><span data-stu-id="836ee-107">To remove a tab programmatically</span></span>  
+### <a name="to-remove-a-tab-programmatically"></a><span data-ttu-id="d3c85-107">Para quitar una ficha mediante programación</span><span class="sxs-lookup"><span data-stu-id="d3c85-107">To remove a tab programmatically</span></span>  
   
--   <span data-ttu-id="836ee-108">Para quitar las fichas seleccionadas, use el <xref:System.Windows.Forms.TabControl.TabPageCollection.Remove%2A> método de la <xref:System.Windows.Forms.TabControl.TabPages%2A> propiedad.</span><span class="sxs-lookup"><span data-stu-id="836ee-108">To remove selected tabs, use the <xref:System.Windows.Forms.TabControl.TabPageCollection.Remove%2A> method of the <xref:System.Windows.Forms.TabControl.TabPages%2A> property.</span></span>  
+-   <span data-ttu-id="d3c85-108">Para quitar las fichas seleccionadas, use el <xref:System.Windows.Forms.TabControl.TabPageCollection.Remove%2A> método de la <xref:System.Windows.Forms.TabControl.TabPages%2A> propiedad.</span><span class="sxs-lookup"><span data-stu-id="d3c85-108">To remove selected tabs, use the <xref:System.Windows.Forms.TabControl.TabPageCollection.Remove%2A> method of the <xref:System.Windows.Forms.TabControl.TabPages%2A> property.</span></span>  
   
-     <span data-ttu-id="836ee-109">O bien</span><span class="sxs-lookup"><span data-stu-id="836ee-109">-or-</span></span>  
+     <span data-ttu-id="d3c85-109">O bien</span><span class="sxs-lookup"><span data-stu-id="d3c85-109">-or-</span></span>  
   
--   <span data-ttu-id="836ee-110">Para quitar todas las fichas, utilice la <xref:System.Windows.Forms.TabControl.TabPageCollection.Clear%2A> método de la <xref:System.Windows.Forms.TabControl.TabPages%2A> propiedad.</span><span class="sxs-lookup"><span data-stu-id="836ee-110">To remove all tabs, use the <xref:System.Windows.Forms.TabControl.TabPageCollection.Clear%2A> method of the <xref:System.Windows.Forms.TabControl.TabPages%2A> property.</span></span>  
+-   <span data-ttu-id="d3c85-110">Para quitar todas las fichas, utilice la <xref:System.Windows.Forms.TabControl.TabPageCollection.Clear%2A> método de la <xref:System.Windows.Forms.TabControl.TabPages%2A> propiedad.</span><span class="sxs-lookup"><span data-stu-id="d3c85-110">To remove all tabs, use the <xref:System.Windows.Forms.TabControl.TabPageCollection.Clear%2A> method of the <xref:System.Windows.Forms.TabControl.TabPages%2A> property.</span></span>  
   
     ```vb  
     ' Removes the selected tab:  
@@ -84,8 +85,8 @@ ms.lasthandoff: 11/21/2017
     tabControl1->TabPages->Clear();  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="836ee-111">Vea también</span><span class="sxs-lookup"><span data-stu-id="836ee-111">See Also</span></span>  
- [<span data-ttu-id="836ee-112">Información general del control TabControl</span><span class="sxs-lookup"><span data-stu-id="836ee-112">TabControl Control Overview</span></span>](../../../../docs/framework/winforms/controls/tabcontrol-control-overview-windows-forms.md)  
- [<span data-ttu-id="836ee-113">Agregar un control a una página de fichas</span><span class="sxs-lookup"><span data-stu-id="836ee-113">How to: Add a Control to a Tab Page</span></span>](../../../../docs/framework/winforms/controls/how-to-add-a-control-to-a-tab-page.md)  
- [<span data-ttu-id="836ee-114">Deshabilitar páginas de ficha</span><span class="sxs-lookup"><span data-stu-id="836ee-114">How to: Disable Tab Pages</span></span>](../../../../docs/framework/winforms/controls/how-to-disable-tab-pages.md)  
- [<span data-ttu-id="836ee-115">Cambiar la apariencia del control TabControl de Windows Forms</span><span class="sxs-lookup"><span data-stu-id="836ee-115">How to: Change the Appearance of the Windows Forms TabControl</span></span>](../../../../docs/framework/winforms/controls/how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)
+## <a name="see-also"></a><span data-ttu-id="d3c85-111">Vea también</span><span class="sxs-lookup"><span data-stu-id="d3c85-111">See Also</span></span>  
+ [<span data-ttu-id="d3c85-112">Información general del control TabControl</span><span class="sxs-lookup"><span data-stu-id="d3c85-112">TabControl Control Overview</span></span>](../../../../docs/framework/winforms/controls/tabcontrol-control-overview-windows-forms.md)  
+ [<span data-ttu-id="d3c85-113">Agregar un control a una página de fichas</span><span class="sxs-lookup"><span data-stu-id="d3c85-113">How to: Add a Control to a Tab Page</span></span>](../../../../docs/framework/winforms/controls/how-to-add-a-control-to-a-tab-page.md)  
+ [<span data-ttu-id="d3c85-114">Deshabilitar páginas de ficha</span><span class="sxs-lookup"><span data-stu-id="d3c85-114">How to: Disable Tab Pages</span></span>](../../../../docs/framework/winforms/controls/how-to-disable-tab-pages.md)  
+ [<span data-ttu-id="d3c85-115">Cambiar la apariencia del control TabControl de Windows Forms</span><span class="sxs-lookup"><span data-stu-id="d3c85-115">How to: Change the Appearance of the Windows Forms TabControl</span></span>](../../../../docs/framework/winforms/controls/how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)

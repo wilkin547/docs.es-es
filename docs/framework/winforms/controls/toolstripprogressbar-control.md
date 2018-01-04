@@ -18,25 +18,26 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1bb7a1e74f1687a1549ab0780e2e2e773382f193
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 13dcd324772393e3746a6ea5c5cadca02d9a1bab
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="toolstripprogressbar-control"></a><span data-ttu-id="bf884-102">ToolStripProgressBar (Control)</span><span class="sxs-lookup"><span data-stu-id="bf884-102">ToolStripProgressBar Control</span></span>
-<span data-ttu-id="bf884-103">El <xref:System.Windows.Forms.ToolStripProgressBar> combina <xref:System.Windows.Forms.ToolStrip> representar y compartir el espacio de características con su funcionalidad de seguimiento de procesos típico.</span><span class="sxs-lookup"><span data-stu-id="bf884-103">The <xref:System.Windows.Forms.ToolStripProgressBar> combines <xref:System.Windows.Forms.ToolStrip> rendering and rafting features with its typical process-tracking functionality.</span></span>  
+# <a name="toolstripprogressbar-control"></a><span data-ttu-id="efafc-102">ToolStripProgressBar (Control)</span><span class="sxs-lookup"><span data-stu-id="efafc-102">ToolStripProgressBar Control</span></span>
+<span data-ttu-id="efafc-103">El <xref:System.Windows.Forms.ToolStripProgressBar> combina <xref:System.Windows.Forms.ToolStrip> representar y compartir el espacio de características con su funcionalidad de seguimiento de procesos típico.</span><span class="sxs-lookup"><span data-stu-id="efafc-103">The <xref:System.Windows.Forms.ToolStripProgressBar> combines <xref:System.Windows.Forms.ToolStrip> rendering and rafting features with its typical process-tracking functionality.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="bf884-104">En esta sección</span><span class="sxs-lookup"><span data-stu-id="bf884-104">In This Section</span></span>  
- [<span data-ttu-id="bf884-105">Información general sobre ToolStripProgressBar (control)</span><span class="sxs-lookup"><span data-stu-id="bf884-105">ToolStripProgressBar Control Overview</span></span>](../../../../docs/framework/winforms/controls/toolstripprogressbar-control-overview.md)  
- <span data-ttu-id="bf884-106">Proporciona temas que describen el propósito y los conceptos principales del control <xref:System.Windows.Forms.ToolStripProgressBar> de Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="bf884-106">Provides topics that describe the purpose and main concepts of the Windows Forms <xref:System.Windows.Forms.ToolStripProgressBar> control.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="efafc-104">En esta sección</span><span class="sxs-lookup"><span data-stu-id="efafc-104">In This Section</span></span>  
+ [<span data-ttu-id="efafc-105">Información general sobre ToolStripProgressBar (control)</span><span class="sxs-lookup"><span data-stu-id="efafc-105">ToolStripProgressBar Control Overview</span></span>](../../../../docs/framework/winforms/controls/toolstripprogressbar-control-overview.md)  
+ <span data-ttu-id="efafc-106">Proporciona temas que describen el propósito y los conceptos principales del control <xref:System.Windows.Forms.ToolStripProgressBar> de Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="efafc-106">Provides topics that describe the purpose and main concepts of the Windows Forms <xref:System.Windows.Forms.ToolStripProgressBar> control.</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="bf884-107">Referencia</span><span class="sxs-lookup"><span data-stu-id="bf884-107">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="efafc-107">Referencia</span><span class="sxs-lookup"><span data-stu-id="efafc-107">Reference</span></span>  
  <xref:System.Windows.Forms.ToolStripPanel>  
- <span data-ttu-id="bf884-108">Proporciona documentación de referencia para el control <xref:System.Windows.Forms.ToolStripPanel>.</span><span class="sxs-lookup"><span data-stu-id="bf884-108">Provides reference documentation for the <xref:System.Windows.Forms.ToolStripPanel> control.</span></span>  
+ <span data-ttu-id="efafc-108">Proporciona documentación de referencia para el control <xref:System.Windows.Forms.ToolStripPanel>.</span><span class="sxs-lookup"><span data-stu-id="efafc-108">Provides reference documentation for the <xref:System.Windows.Forms.ToolStripPanel> control.</span></span>  
   
  <xref:System.Windows.Forms.ToolStripProgressBar>  
- <span data-ttu-id="bf884-109">Proporciona documentación de referencia para el control <xref:System.Windows.Forms.ToolStripProgressBar>.</span><span class="sxs-lookup"><span data-stu-id="bf884-109">Provides reference documentation for the <xref:System.Windows.Forms.ToolStripProgressBar> control.</span></span>  
+ <span data-ttu-id="efafc-109">Proporciona documentación de referencia para el control <xref:System.Windows.Forms.ToolStripProgressBar>.</span><span class="sxs-lookup"><span data-stu-id="efafc-109">Provides reference documentation for the <xref:System.Windows.Forms.ToolStripProgressBar> control.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="bf884-110">Vea también</span><span class="sxs-lookup"><span data-stu-id="bf884-110">See Also</span></span>  
- [<span data-ttu-id="bf884-111">Controles que se utilizan en formularios Windows Forms</span><span class="sxs-lookup"><span data-stu-id="bf884-111">Controls to Use on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="efafc-110">Vea también</span><span class="sxs-lookup"><span data-stu-id="efafc-110">See Also</span></span>  
+ [<span data-ttu-id="efafc-111">Controles que se utilizan en formularios Windows Forms</span><span class="sxs-lookup"><span data-stu-id="efafc-111">Controls to Use on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)

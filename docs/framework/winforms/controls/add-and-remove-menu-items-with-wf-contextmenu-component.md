@@ -27,25 +27,26 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cf0e579d5cf377169eeb4d394c4127d53fd54540
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b2f3ca6f97049e0519243915856702654b924243
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="how-to-add-and-remove-menu-items-with-the-windows-forms-contextmenu-component"></a><span data-ttu-id="cde10-102">Cómo: Agregar y quitar elementos de menú con el componente ContextMenu de formularios Windows Forms</span><span class="sxs-lookup"><span data-stu-id="cde10-102">How to: Add and Remove Menu Items with the Windows Forms ContextMenu Component</span></span>
-<span data-ttu-id="cde10-103">Explica cómo agregar y quitar elementos de menú contextual en formularios Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="cde10-103">Explains how to add and remove shortcut menu items in Windows Forms.</span></span>  
+# <a name="how-to-add-and-remove-menu-items-with-the-windows-forms-contextmenu-component"></a><span data-ttu-id="6b631-102">Cómo: Agregar y quitar elementos de menú con el componente ContextMenu de formularios Windows Forms</span><span class="sxs-lookup"><span data-stu-id="6b631-102">How to: Add and Remove Menu Items with the Windows Forms ContextMenu Component</span></span>
+<span data-ttu-id="6b631-103">Explica cómo agregar y quitar elementos de menú contextual en formularios Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="6b631-103">Explains how to add and remove shortcut menu items in Windows Forms.</span></span>  
   
- <span data-ttu-id="cde10-104">Los formularios de Windows <xref:System.Windows.Forms.ContextMenu> componente proporciona un menú de comandos usados frecuentemente que son relevantes para el objeto seleccionado.</span><span class="sxs-lookup"><span data-stu-id="cde10-104">The Windows Forms <xref:System.Windows.Forms.ContextMenu> component provides a menu of frequently used commands that are relevant to the selected object.</span></span> <span data-ttu-id="cde10-105">Puede agregar elementos al menú contextual agregando <xref:System.Windows.Forms.MenuItem> objetos a la <xref:System.Windows.Forms.Menu.MenuItems%2A> colección.</span><span class="sxs-lookup"><span data-stu-id="cde10-105">You can add items to the shortcut menu by adding <xref:System.Windows.Forms.MenuItem> objects to the <xref:System.Windows.Forms.Menu.MenuItems%2A> collection.</span></span>  
+ <span data-ttu-id="6b631-104">Los formularios de Windows <xref:System.Windows.Forms.ContextMenu> componente proporciona un menú de comandos usados frecuentemente que son relevantes para el objeto seleccionado.</span><span class="sxs-lookup"><span data-stu-id="6b631-104">The Windows Forms <xref:System.Windows.Forms.ContextMenu> component provides a menu of frequently used commands that are relevant to the selected object.</span></span> <span data-ttu-id="6b631-105">Puede agregar elementos al menú contextual agregando <xref:System.Windows.Forms.MenuItem> objetos a la <xref:System.Windows.Forms.Menu.MenuItems%2A> colección.</span><span class="sxs-lookup"><span data-stu-id="6b631-105">You can add items to the shortcut menu by adding <xref:System.Windows.Forms.MenuItem> objects to the <xref:System.Windows.Forms.Menu.MenuItems%2A> collection.</span></span>  
   
- <span data-ttu-id="cde10-106">Se pueden quitar los elementos de un menú contextual de forma permanente; Sin embargo, en tiempo de ejecución puede ser más adecuado ocultar o deshabilitar los elementos en su lugar.</span><span class="sxs-lookup"><span data-stu-id="cde10-106">You can remove items from a shortcut menu permanently; however, at run time it may be more appropriate to hide or disable the items instead.</span></span>  
+ <span data-ttu-id="6b631-106">Se pueden quitar los elementos de un menú contextual de forma permanente; Sin embargo, en tiempo de ejecución puede ser más adecuado ocultar o deshabilitar los elementos en su lugar.</span><span class="sxs-lookup"><span data-stu-id="6b631-106">You can remove items from a shortcut menu permanently; however, at run time it may be more appropriate to hide or disable the items instead.</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="cde10-107">Aunque <xref:System.Windows.Forms.MenuStrip> y <xref:System.Windows.Forms.ContextMenuStrip> reemplazar y agregar funcionalidad a la <xref:System.Windows.Forms.MainMenu> y <xref:System.Windows.Forms.ContextMenu> controles de versiones anteriores, <xref:System.Windows.Forms.MainMenu> y <xref:System.Windows.Forms.ContextMenu> se conservan por compatibilidad con versiones anteriores y uso futuro, si elige.</span><span class="sxs-lookup"><span data-stu-id="cde10-107">Although <xref:System.Windows.Forms.MenuStrip> and <xref:System.Windows.Forms.ContextMenuStrip> replace and add functionality to the <xref:System.Windows.Forms.MainMenu> and <xref:System.Windows.Forms.ContextMenu> controls of previous versions, <xref:System.Windows.Forms.MainMenu> and <xref:System.Windows.Forms.ContextMenu> are retained for both backward compatibility and future use if you choose.</span></span>  
+>  <span data-ttu-id="6b631-107">Aunque <xref:System.Windows.Forms.MenuStrip> y <xref:System.Windows.Forms.ContextMenuStrip> reemplazar y agregar funcionalidad a la <xref:System.Windows.Forms.MainMenu> y <xref:System.Windows.Forms.ContextMenu> controles de versiones anteriores, <xref:System.Windows.Forms.MainMenu> y <xref:System.Windows.Forms.ContextMenu> se conservan por compatibilidad con versiones anteriores y uso futuro, si elige.</span><span class="sxs-lookup"><span data-stu-id="6b631-107">Although <xref:System.Windows.Forms.MenuStrip> and <xref:System.Windows.Forms.ContextMenuStrip> replace and add functionality to the <xref:System.Windows.Forms.MainMenu> and <xref:System.Windows.Forms.ContextMenu> controls of previous versions, <xref:System.Windows.Forms.MainMenu> and <xref:System.Windows.Forms.ContextMenu> are retained for both backward compatibility and future use if you choose.</span></span>  
   
-### <a name="to-remove-items-from-a-shortcut-menu"></a><span data-ttu-id="cde10-108">Para quitar elementos de un menú contextual</span><span class="sxs-lookup"><span data-stu-id="cde10-108">To remove items from a shortcut menu</span></span>  
+### <a name="to-remove-items-from-a-shortcut-menu"></a><span data-ttu-id="6b631-108">Para quitar elementos de un menú contextual</span><span class="sxs-lookup"><span data-stu-id="6b631-108">To remove items from a shortcut menu</span></span>  
   
-1.  <span data-ttu-id="cde10-109">Use la <xref:System.Windows.Forms.Menu.MenuItemCollection.Remove%2A> o <xref:System.Windows.Forms.Menu.MenuItemCollection.RemoveAt%2A> método de la <xref:System.Windows.Forms.Menu.MenuItems%2A> colección de la <xref:System.Windows.Forms.ContextMenu> componente para quitar un elemento de menú determinado.</span><span class="sxs-lookup"><span data-stu-id="cde10-109">Use the <xref:System.Windows.Forms.Menu.MenuItemCollection.Remove%2A> or <xref:System.Windows.Forms.Menu.MenuItemCollection.RemoveAt%2A> method of the <xref:System.Windows.Forms.Menu.MenuItems%2A> collection of the <xref:System.Windows.Forms.ContextMenu> component to remove a particular menu item.</span></span>  
+1.  <span data-ttu-id="6b631-109">Use la <xref:System.Windows.Forms.Menu.MenuItemCollection.Remove%2A> o <xref:System.Windows.Forms.Menu.MenuItemCollection.RemoveAt%2A> método de la <xref:System.Windows.Forms.Menu.MenuItems%2A> colección de la <xref:System.Windows.Forms.ContextMenu> componente para quitar un elemento de menú determinado.</span><span class="sxs-lookup"><span data-stu-id="6b631-109">Use the <xref:System.Windows.Forms.Menu.MenuItemCollection.Remove%2A> or <xref:System.Windows.Forms.Menu.MenuItemCollection.RemoveAt%2A> method of the <xref:System.Windows.Forms.Menu.MenuItems%2A> collection of the <xref:System.Windows.Forms.ContextMenu> component to remove a particular menu item.</span></span>  
   
     ```vb  
     ' Removes the first item in the shortcut menu.  
@@ -68,9 +69,9 @@ ms.lasthandoff: 11/21/2017
     contextMenu1->MenuItems->Remove(mnuItemNew);  
     ```  
   
-     <span data-ttu-id="cde10-110">O bien</span><span class="sxs-lookup"><span data-stu-id="cde10-110">-or-</span></span>  
+     <span data-ttu-id="6b631-110">O bien</span><span class="sxs-lookup"><span data-stu-id="6b631-110">-or-</span></span>  
   
-2.  <span data-ttu-id="cde10-111">Use la `Clear` método de la `MenuItems` colección de la <xref:System.Windows.Forms.ContextMenu> componente para quitar todos los elementos del menú.</span><span class="sxs-lookup"><span data-stu-id="cde10-111">Use the `Clear` method of the `MenuItems` collection of the <xref:System.Windows.Forms.ContextMenu> component to remove all items from the menu.</span></span>  
+2.  <span data-ttu-id="6b631-111">Use la `Clear` método de la `MenuItems` colección de la <xref:System.Windows.Forms.ContextMenu> componente para quitar todos los elementos del menú.</span><span class="sxs-lookup"><span data-stu-id="6b631-111">Use the `Clear` method of the `MenuItems` collection of the <xref:System.Windows.Forms.ContextMenu> component to remove all items from the menu.</span></span>  
   
     ```vb  
     ContextMenu1.MenuItems.Clear()  
@@ -84,7 +85,7 @@ ms.lasthandoff: 11/21/2017
     contextMenu1->MenuItems->Clear();  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="cde10-112">Vea también</span><span class="sxs-lookup"><span data-stu-id="cde10-112">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="6b631-112">Vea también</span><span class="sxs-lookup"><span data-stu-id="6b631-112">See Also</span></span>  
  <xref:System.Windows.Forms.ContextMenu>  
- [<span data-ttu-id="cde10-113">ContextMenu (componente)</span><span class="sxs-lookup"><span data-stu-id="cde10-113">ContextMenu Component</span></span>](../../../../docs/framework/winforms/controls/contextmenu-component-windows-forms.md)  
- [<span data-ttu-id="cde10-114">Información general sobre ContextMenu</span><span class="sxs-lookup"><span data-stu-id="cde10-114">ContextMenu Component Overview</span></span>](../../../../docs/framework/winforms/controls/contextmenu-component-overview-windows-forms.md)
+ [<span data-ttu-id="6b631-113">ContextMenu (componente)</span><span class="sxs-lookup"><span data-stu-id="6b631-113">ContextMenu Component</span></span>](../../../../docs/framework/winforms/controls/contextmenu-component-windows-forms.md)  
+ [<span data-ttu-id="6b631-114">Información general sobre ContextMenu</span><span class="sxs-lookup"><span data-stu-id="6b631-114">ContextMenu Component Overview</span></span>](../../../../docs/framework/winforms/controls/contextmenu-component-overview-windows-forms.md)
