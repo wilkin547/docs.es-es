@@ -18,24 +18,25 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 39d50fc23be4a5cdf4df90cd6fa96466acc738aa
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: aa93b757f0af38bc6b08d87ac5485e2bf0f45a1c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="how-to-trigger-media-playback-with-a-user-event"></a><span data-ttu-id="941e7-102">Cómo: Desencadenar la reproducción de medios con un evento de usuario</span><span class="sxs-lookup"><span data-stu-id="941e7-102">How to: Trigger Media Playback with a User Event</span></span>
-<span data-ttu-id="941e7-103">En este ejemplo se muestra cómo sincronizar la reproducción de medios con un evento.</span><span class="sxs-lookup"><span data-stu-id="941e7-103">This example shows how to synchronize media playback with an event.</span></span>  
+# <a name="how-to-trigger-media-playback-with-a-user-event"></a><span data-ttu-id="15992-102">Cómo: Desencadenar la reproducción de medios con un evento de usuario</span><span class="sxs-lookup"><span data-stu-id="15992-102">How to: Trigger Media Playback with a User Event</span></span>
+<span data-ttu-id="15992-103">En este ejemplo se muestra cómo sincronizar la reproducción de medios con un evento.</span><span class="sxs-lookup"><span data-stu-id="15992-103">This example shows how to synchronize media playback with an event.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="941e7-104">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="941e7-104">Example</span></span>  
- <span data-ttu-id="941e7-105">En el ejemplo siguiente se usa el <xref:System.Windows.Controls.MediaElement> control y la <xref:System.Windows.Media.MediaTimeline> clase para reproducir un sonido que se produce cuando el usuario hace clic en un <xref:System.Windows.Controls.Button>.</span><span class="sxs-lookup"><span data-stu-id="941e7-105">The following example uses the <xref:System.Windows.Controls.MediaElement> control and the <xref:System.Windows.Media.MediaTimeline> class to play a sound that occurs when the user clicks a <xref:System.Windows.Controls.Button>.</span></span>  
+## <a name="example"></a><span data-ttu-id="15992-104">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="15992-104">Example</span></span>  
+ <span data-ttu-id="15992-105">En el ejemplo siguiente se usa el <xref:System.Windows.Controls.MediaElement> control y la <xref:System.Windows.Media.MediaTimeline> clase para reproducir un sonido que se produce cuando el usuario hace clic en un <xref:System.Windows.Controls.Button>.</span><span class="sxs-lookup"><span data-stu-id="15992-105">The following example uses the <xref:System.Windows.Controls.MediaElement> control and the <xref:System.Windows.Media.MediaTimeline> class to play a sound that occurs when the user clicks a <xref:System.Windows.Controls.Button>.</span></span>  
   
  [!code-xaml[MediaGallery_snippet#SoundFromUserEventExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/MediaGallery_snippet/CSharp/SoundFromUserEventExample.xaml#soundfromusereventexamplewholepage)]  
   
-## <a name="see-also"></a><span data-ttu-id="941e7-106">Vea también</span><span class="sxs-lookup"><span data-stu-id="941e7-106">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="15992-106">Vea también</span><span class="sxs-lookup"><span data-stu-id="15992-106">See Also</span></span>  
  <xref:System.Windows.Controls.MediaElement>  
  <xref:System.Windows.Media.MediaTimeline>  
  <xref:System.Windows.EventTrigger.RoutedEvent%2A>  
  <xref:System.Windows.Media.Animation.Storyboard>  
- [<span data-ttu-id="941e7-107">Temas de procedimientos</span><span class="sxs-lookup"><span data-stu-id="941e7-107">How-to Topics</span></span>](../../../../docs/framework/wpf/graphics-multimedia/audio-and-video-how-to-topics.md)  
- [<span data-ttu-id="941e7-108">Gráficos y multimedia</span><span class="sxs-lookup"><span data-stu-id="941e7-108">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+ [<span data-ttu-id="15992-107">Temas "Cómo..."</span><span class="sxs-lookup"><span data-stu-id="15992-107">How-to Topics</span></span>](../../../../docs/framework/wpf/graphics-multimedia/audio-and-video-how-to-topics.md)  
+ [<span data-ttu-id="15992-108">Gráficos y multimedia</span><span class="sxs-lookup"><span data-stu-id="15992-108">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)

@@ -17,28 +17,29 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 273c03fcedbd5e5b2f6a38cb718788d5f8d8fda3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 16d7ba089730a58106448d8a6889b362042532e2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="how-to-animate-material-properties-in-a-3-d-scene"></a><span data-ttu-id="3d66f-102">Cómo: Animar propiedades de material en una escena 3D</span><span class="sxs-lookup"><span data-stu-id="3d66f-102">How to: Animate Material Properties in a 3-D Scene</span></span>
-<span data-ttu-id="3d66f-103">Este ejemplo muestra cómo animar la <xref:System.Windows.Media.Brush.Opacity%2A> propiedad de la <xref:System.Windows.Media.Media3D.Material> aplicado a un [!INCLUDE[TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)] modelo.</span><span class="sxs-lookup"><span data-stu-id="3d66f-103">This example shows how to animate the <xref:System.Windows.Media.Brush.Opacity%2A> property of the <xref:System.Windows.Media.Media3D.Material> applied to a [!INCLUDE[TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)] model.</span></span>  
+# <a name="how-to-animate-material-properties-in-a-3-d-scene"></a><span data-ttu-id="28b21-102">Cómo: Animar propiedades de material en una escena 3D</span><span class="sxs-lookup"><span data-stu-id="28b21-102">How to: Animate Material Properties in a 3-D Scene</span></span>
+<span data-ttu-id="28b21-103">Este ejemplo muestra cómo animar la <xref:System.Windows.Media.Brush.Opacity%2A> propiedad de la <xref:System.Windows.Media.Media3D.Material> aplicado a un [!INCLUDE[TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)] modelo.</span><span class="sxs-lookup"><span data-stu-id="28b21-103">This example shows how to animate the <xref:System.Windows.Media.Brush.Opacity%2A> property of the <xref:System.Windows.Media.Media3D.Material> applied to a [!INCLUDE[TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)] model.</span></span>  
   
- <span data-ttu-id="3d66f-104">En el ejemplo de código siguiente se define la <xref:System.Windows.Media.LinearGradientBrush> usa como el <xref:System.Windows.Media.Media3D.Material> aplicado al objeto 3D.</span><span class="sxs-lookup"><span data-stu-id="3d66f-104">The following code example defines the <xref:System.Windows.Media.LinearGradientBrush> used as the <xref:System.Windows.Media.Media3D.Material> applied to the 3D object.</span></span>  
+ <span data-ttu-id="28b21-104">En el ejemplo de código siguiente se define la <xref:System.Windows.Media.LinearGradientBrush> usa como el <xref:System.Windows.Media.Media3D.Material> aplicado al objeto 3D.</span><span class="sxs-lookup"><span data-stu-id="28b21-104">The following code example defines the <xref:System.Windows.Media.LinearGradientBrush> used as the <xref:System.Windows.Media.Media3D.Material> applied to the 3D object.</span></span>  
   
  [!code-xaml[Animation3DGallery_snip#AnimateMaterialExampleInline1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Animation3DGallery_snip/CS/AnimateMaterialExample.xaml#animatematerialexampleinline1)]  
   
- <span data-ttu-id="3d66f-105">El <xref:System.Windows.Media.Brush.Opacity%2A> propiedad de este <xref:System.Windows.Media.LinearGradientBrush> se anima mediante el ejemplo de código siguiente.</span><span class="sxs-lookup"><span data-stu-id="3d66f-105">The <xref:System.Windows.Media.Brush.Opacity%2A> property of this <xref:System.Windows.Media.LinearGradientBrush> is animated using the code example below.</span></span>  
+ <span data-ttu-id="28b21-105">El <xref:System.Windows.Media.Brush.Opacity%2A> propiedad de este <xref:System.Windows.Media.LinearGradientBrush> se anima mediante el ejemplo de código siguiente.</span><span class="sxs-lookup"><span data-stu-id="28b21-105">The <xref:System.Windows.Media.Brush.Opacity%2A> property of this <xref:System.Windows.Media.LinearGradientBrush> is animated using the code example below.</span></span>  
   
  [!code-xaml[Animation3DGallery_snip#AnimateMaterialExampleInline2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Animation3DGallery_snip/CS/AnimateMaterialExample.xaml#animatematerialexampleinline2)]  
   
-## <a name="example"></a><span data-ttu-id="3d66f-106">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="3d66f-106">Example</span></span>  
- <span data-ttu-id="3d66f-107">El código siguiente muestra el ejemplo completo.</span><span class="sxs-lookup"><span data-stu-id="3d66f-107">The following code shows the entire sample.</span></span>  
+## <a name="example"></a><span data-ttu-id="28b21-106">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="28b21-106">Example</span></span>  
+ <span data-ttu-id="28b21-107">El código siguiente muestra el ejemplo completo.</span><span class="sxs-lookup"><span data-stu-id="28b21-107">The following code shows the entire sample.</span></span>  
   
  [!code-xaml[Animation3DGallery_snip#AnimateMaterialExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Animation3DGallery_snip/CS/AnimateMaterialExample.xaml#animatematerialexamplewholepage)]  
   
-## <a name="see-also"></a><span data-ttu-id="3d66f-108">Vea también</span><span class="sxs-lookup"><span data-stu-id="3d66f-108">See Also</span></span>  
- [<span data-ttu-id="3d66f-109">Crear una escena 3D</span><span class="sxs-lookup"><span data-stu-id="3d66f-109">Create a 3-D Scene</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-3-d-scene.md)  
- [<span data-ttu-id="3d66f-110">Información general sobre gráficos 3D</span><span class="sxs-lookup"><span data-stu-id="3d66f-110">3-D Graphics Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/3-d-graphics-overview.md)
+## <a name="see-also"></a><span data-ttu-id="28b21-108">Vea también</span><span class="sxs-lookup"><span data-stu-id="28b21-108">See Also</span></span>  
+ [<span data-ttu-id="28b21-109">Crear una escena 3D</span><span class="sxs-lookup"><span data-stu-id="28b21-109">Create a 3-D Scene</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-3-d-scene.md)  
+ [<span data-ttu-id="28b21-110">Información general sobre gráficos 3D</span><span class="sxs-lookup"><span data-stu-id="28b21-110">3-D Graphics Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/3-d-graphics-overview.md)

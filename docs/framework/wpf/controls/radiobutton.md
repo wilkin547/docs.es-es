@@ -17,21 +17,22 @@ caps.latest.revision: "66"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: edf71bf9c7415867e714848dfef038ff16f537bc
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 8b71a7de3a759809bc75e30f0dbb08c24d9d9f40
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="radiobutton"></a><span data-ttu-id="083a0-102">RadioButton</span><span class="sxs-lookup"><span data-stu-id="083a0-102">RadioButton</span></span>
-<span data-ttu-id="083a0-103"><xref:System.Windows.Controls.RadioButton>controles suelen agruparse para ofrecer a los usuarios una sola opción entre varias opciones; se puede seleccionar solo un botón a la vez.</span><span class="sxs-lookup"><span data-stu-id="083a0-103"><xref:System.Windows.Controls.RadioButton> controls are usually grouped together to offer users a single choice among several options; only one button at a time can be selected.</span></span>  
+# <a name="radiobutton"></a><span data-ttu-id="615d3-102">RadioButton</span><span class="sxs-lookup"><span data-stu-id="615d3-102">RadioButton</span></span>
+<span data-ttu-id="615d3-103"><xref:System.Windows.Controls.RadioButton>controles suelen agruparse para ofrecer a los usuarios una sola opción entre varias opciones; se puede seleccionar solo un botón a la vez.</span><span class="sxs-lookup"><span data-stu-id="615d3-103"><xref:System.Windows.Controls.RadioButton> controls are usually grouped together to offer users a single choice among several options; only one button at a time can be selected.</span></span>  
   
- <span data-ttu-id="083a0-104">En la siguiente ilustración muestra un ejemplo de un <xref:System.Windows.Controls.RadioButton> control.</span><span class="sxs-lookup"><span data-stu-id="083a0-104">The following illustration shows an example of a <xref:System.Windows.Controls.RadioButton> control.</span></span>  
+ <span data-ttu-id="615d3-104">En la siguiente ilustración muestra un ejemplo de un <xref:System.Windows.Controls.RadioButton> control.</span><span class="sxs-lookup"><span data-stu-id="615d3-104">The following illustration shows an example of a <xref:System.Windows.Controls.RadioButton> control.</span></span>  
   
- <span data-ttu-id="083a0-105">![Estados de botones de radio](../../../../docs/framework/wpf/controls/media/ss-ctl-radiobuttons.gif "SS_CTL_radiobuttons")</span><span class="sxs-lookup"><span data-stu-id="083a0-105">![Radio button states](../../../../docs/framework/wpf/controls/media/ss-ctl-radiobuttons.gif "SS_CTL_radiobuttons")</span></span>  
-<span data-ttu-id="083a0-106">Control RadioButton típico</span><span class="sxs-lookup"><span data-stu-id="083a0-106">Typical RadioButton</span></span>  
+ <span data-ttu-id="615d3-105">![Estados de botones de radio](../../../../docs/framework/wpf/controls/media/ss-ctl-radiobuttons.gif "SS_CTL_radiobuttons")</span><span class="sxs-lookup"><span data-stu-id="615d3-105">![Radio button states](../../../../docs/framework/wpf/controls/media/ss-ctl-radiobuttons.gif "SS_CTL_radiobuttons")</span></span>  
+<span data-ttu-id="615d3-106">Control RadioButton típico</span><span class="sxs-lookup"><span data-stu-id="615d3-106">Typical RadioButton</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="083a0-107">Referencia</span><span class="sxs-lookup"><span data-stu-id="083a0-107">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="615d3-107">Referencia</span><span class="sxs-lookup"><span data-stu-id="615d3-107">Reference</span></span>  
  <xref:System.Windows.Controls.Primitives.ToggleButton>  
   
-## <a name="related-sections"></a><span data-ttu-id="083a0-108">Secciones relacionadas</span><span class="sxs-lookup"><span data-stu-id="083a0-108">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="615d3-108">Secciones relacionadas</span><span class="sxs-lookup"><span data-stu-id="615d3-108">Related Sections</span></span>

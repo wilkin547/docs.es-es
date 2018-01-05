@@ -17,25 +17,26 @@ caps.latest.revision: "64"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2065c5f18afebc67b1bf0f3d3c8f27426e9c9736
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 5098278bacc1e1cf6319bd610d1fd39d41c8d20d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="listbox"></a><span data-ttu-id="ddc09-102">ListBox</span><span class="sxs-lookup"><span data-stu-id="ddc09-102">ListBox</span></span>
-<span data-ttu-id="ddc09-103">Un <xref:System.Windows.Controls.ListBox> control proporciona a los usuarios con una lista de elementos seleccionables.</span><span class="sxs-lookup"><span data-stu-id="ddc09-103">A <xref:System.Windows.Controls.ListBox> control provides users with a list of selectable items.</span></span>  
+# <a name="listbox"></a><span data-ttu-id="e0cf1-102">ListBox</span><span class="sxs-lookup"><span data-stu-id="e0cf1-102">ListBox</span></span>
+<span data-ttu-id="e0cf1-103">Un <xref:System.Windows.Controls.ListBox> control proporciona a los usuarios con una lista de elementos seleccionables.</span><span class="sxs-lookup"><span data-stu-id="e0cf1-103">A <xref:System.Windows.Controls.ListBox> control provides users with a list of selectable items.</span></span>  
   
- <span data-ttu-id="ddc09-104">La ilustración siguiente muestra un típico <xref:System.Windows.Controls.ListBox>.</span><span class="sxs-lookup"><span data-stu-id="ddc09-104">The following figure illustrates a typical <xref:System.Windows.Controls.ListBox>.</span></span>  
+ <span data-ttu-id="e0cf1-104">La ilustración siguiente muestra un típico <xref:System.Windows.Controls.ListBox>.</span><span class="sxs-lookup"><span data-stu-id="e0cf1-104">The following figure illustrates a typical <xref:System.Windows.Controls.ListBox>.</span></span>  
   
- <span data-ttu-id="ddc09-105">![Captura de pantalla del cuadro de lista](../../../../docs/framework/wpf/controls/media/ss-ctl-listbox.gif "SS_CTL_listbox")</span><span class="sxs-lookup"><span data-stu-id="ddc09-105">![ListBox screen shot](../../../../docs/framework/wpf/controls/media/ss-ctl-listbox.gif "SS_CTL_listbox")</span></span>  
-<span data-ttu-id="ddc09-106">ListBox típico</span><span class="sxs-lookup"><span data-stu-id="ddc09-106">Typical ListBox</span></span>  
+ <span data-ttu-id="e0cf1-105">![Captura de pantalla del cuadro de lista](../../../../docs/framework/wpf/controls/media/ss-ctl-listbox.gif "SS_CTL_listbox")</span><span class="sxs-lookup"><span data-stu-id="e0cf1-105">![ListBox screen shot](../../../../docs/framework/wpf/controls/media/ss-ctl-listbox.gif "SS_CTL_listbox")</span></span>  
+<span data-ttu-id="e0cf1-106">ListBox típico</span><span class="sxs-lookup"><span data-stu-id="e0cf1-106">Typical ListBox</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="ddc09-107">En esta sección</span><span class="sxs-lookup"><span data-stu-id="ddc09-107">In This Section</span></span>  
- [<span data-ttu-id="ddc09-108">Temas de procedimientos</span><span class="sxs-lookup"><span data-stu-id="ddc09-108">How-to Topics</span></span>](../../../../docs/framework/wpf/controls/listbox-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="e0cf1-107">En esta sección</span><span class="sxs-lookup"><span data-stu-id="e0cf1-107">In This Section</span></span>  
+ [<span data-ttu-id="e0cf1-108">Temas "Cómo..."</span><span class="sxs-lookup"><span data-stu-id="e0cf1-108">How-to Topics</span></span>](../../../../docs/framework/wpf/controls/listbox-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="ddc09-109">Referencia</span><span class="sxs-lookup"><span data-stu-id="ddc09-109">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="e0cf1-109">Referencia</span><span class="sxs-lookup"><span data-stu-id="e0cf1-109">Reference</span></span>  
  <xref:System.Windows.Controls.ListBox>  
   <xref:System.Windows.Controls.ListBoxItem>  
   
-## <a name="related-sections"></a><span data-ttu-id="ddc09-110">Secciones relacionadas</span><span class="sxs-lookup"><span data-stu-id="ddc09-110">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="e0cf1-110">Secciones relacionadas</span><span class="sxs-lookup"><span data-stu-id="e0cf1-110">Related Sections</span></span>

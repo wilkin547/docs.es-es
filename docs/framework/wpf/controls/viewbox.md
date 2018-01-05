@@ -19,22 +19,23 @@ caps.latest.revision: "61"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 50bd9723b6f31f23c409e37eb5f28f1849929af9
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 20b32eab7255f64ab16580d6c66adfcc8bb38036
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="viewbox"></a><span data-ttu-id="d52b0-102">Viewbox</span><span class="sxs-lookup"><span data-stu-id="d52b0-102">Viewbox</span></span>
-<span data-ttu-id="d52b0-103">El <xref:System.Windows.Controls.Viewbox> control se utiliza para ajustar o escalar un elemento secundario.</span><span class="sxs-lookup"><span data-stu-id="d52b0-103">The <xref:System.Windows.Controls.Viewbox> control is used to stretch or scale a child element.</span></span>  
+# <a name="viewbox"></a><span data-ttu-id="dd237-102">Viewbox</span><span class="sxs-lookup"><span data-stu-id="dd237-102">Viewbox</span></span>
+<span data-ttu-id="dd237-103">El <xref:System.Windows.Controls.Viewbox> control se utiliza para ajustar o escalar un elemento secundario.</span><span class="sxs-lookup"><span data-stu-id="dd237-103">The <xref:System.Windows.Controls.Viewbox> control is used to stretch or scale a child element.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="d52b0-104">En esta sección</span><span class="sxs-lookup"><span data-stu-id="d52b0-104">In This Section</span></span>  
- [<span data-ttu-id="d52b0-105">Aplicar propiedades de expansión al contenido de un Viewbox</span><span class="sxs-lookup"><span data-stu-id="d52b0-105">Apply Stretch Properties to the Contents of a Viewbox</span></span>](../../../../docs/framework/wpf/controls/how-to-apply-stretch-properties-to-the-contents-of-a-viewbox.md)  
+## <a name="in-this-section"></a><span data-ttu-id="dd237-104">En esta sección</span><span class="sxs-lookup"><span data-stu-id="dd237-104">In This Section</span></span>  
+ [<span data-ttu-id="dd237-105">Aplicar propiedades de expansión al contenido de un Viewbox</span><span class="sxs-lookup"><span data-stu-id="dd237-105">Apply Stretch Properties to the Contents of a Viewbox</span></span>](../../../../docs/framework/wpf/controls/how-to-apply-stretch-properties-to-the-contents-of-a-viewbox.md)  
   
-## <a name="reference"></a><span data-ttu-id="d52b0-106">Referencia</span><span class="sxs-lookup"><span data-stu-id="d52b0-106">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="dd237-106">Referencia</span><span class="sxs-lookup"><span data-stu-id="dd237-106">Reference</span></span>  
  <xref:System.Windows.Controls.Viewbox>  
   
  <xref:System.Windows.Controls.Image>  
   
-## <a name="see-also"></a><span data-ttu-id="d52b0-107">Vea también</span><span class="sxs-lookup"><span data-stu-id="d52b0-107">See Also</span></span>  
- <span data-ttu-id="d52b0-108">[WPF Controls Gallery Sample](http://go.microsoft.com/fwlink/?LinkID=160053) (Ejemplo de galería de controles de WPF)</span><span class="sxs-lookup"><span data-stu-id="d52b0-108">[WPF Controls Gallery Sample](http://go.microsoft.com/fwlink/?LinkID=160053)</span></span>
+## <a name="see-also"></a><span data-ttu-id="dd237-107">Vea también</span><span class="sxs-lookup"><span data-stu-id="dd237-107">See Also</span></span>  
+ <span data-ttu-id="dd237-108">[WPF Controls Gallery Sample](http://go.microsoft.com/fwlink/?LinkID=160053) (Ejemplo de galería de controles de WPF)</span><span class="sxs-lookup"><span data-stu-id="dd237-108">[WPF Controls Gallery Sample](http://go.microsoft.com/fwlink/?LinkID=160053)</span></span>

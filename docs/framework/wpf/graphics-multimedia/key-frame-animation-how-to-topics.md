@@ -17,36 +17,37 @@ caps.latest.revision: "55"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7da9803b6182ed21c25b0bb3a54cecd246587da7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 5d42c65207cd6bec7f6af6936589cb86745028e6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="key-frame-animation-how-to-topics"></a><span data-ttu-id="9ddb1-102">Temas "Cómo..." de animaciones de fotogramas clave</span><span class="sxs-lookup"><span data-stu-id="9ddb1-102">Key-Frame Animation How-to Topics</span></span>
-<span data-ttu-id="9ddb1-103">Los temas de esta sección muestran cómo usar animaciones de fotogramas clave para animar más de dos valores de propiedad y controlar la interpolación.</span><span class="sxs-lookup"><span data-stu-id="9ddb1-103">The topics in this section demonstrate how to use key frame animations to animate more than two property values and control interpolation.</span></span>  
+# <a name="key-frame-animation-how-to-topics"></a><span data-ttu-id="564b9-102">Temas "Cómo..." de animaciones de fotogramas clave</span><span class="sxs-lookup"><span data-stu-id="564b9-102">Key-Frame Animation How-to Topics</span></span>
+<span data-ttu-id="564b9-103">Los temas de esta sección muestran cómo usar animaciones de fotogramas clave para animar más de dos valores de propiedad y controlar la interpolación.</span><span class="sxs-lookup"><span data-stu-id="564b9-103">The topics in this section demonstrate how to use key frame animations to animate more than two property values and control interpolation.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="9ddb1-104">En esta sección</span><span class="sxs-lookup"><span data-stu-id="9ddb1-104">In This Section</span></span>  
- [<span data-ttu-id="9ddb1-105">Animar un objeto mediante fotogramas clave</span><span class="sxs-lookup"><span data-stu-id="9ddb1-105">Animate an Object by Using Key Frames</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-an-object-by-using-key-frames.md)  
- [<span data-ttu-id="9ddb1-106">Animar un objeto Boolean mediante fotogramas clave</span><span class="sxs-lookup"><span data-stu-id="9ddb1-106">Animate a Boolean by Using Key Frames</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-boolean-by-using-key-frames.md)  
- [<span data-ttu-id="9ddb1-107">Animar un objeto Double mediante fotogramas clave</span><span class="sxs-lookup"><span data-stu-id="9ddb1-107">Animate a Double by Using Key Frames</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-double-by-using-key-frames.md)  
- [<span data-ttu-id="9ddb1-108">Animar un objeto Matrix mediante fotogramas clave</span><span class="sxs-lookup"><span data-stu-id="9ddb1-108">Animate a Matrix by Using Key Frames</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-matrix-by-using-key-frames.md)  
- [<span data-ttu-id="9ddb1-109">Animar un punto mediante fotogramas clave</span><span class="sxs-lookup"><span data-stu-id="9ddb1-109">Animate a Point by Using Key Frames</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-point-by-using-key-frames.md)  
- [<span data-ttu-id="9ddb1-110">Animar la geometría de un rectángulo mediante fotogramas clave</span><span class="sxs-lookup"><span data-stu-id="9ddb1-110">Animate a Rectangle Geometry by Using Key Frames</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-rectangle-geometry-by-using-key-frames.md)  
- [<span data-ttu-id="9ddb1-111">Animar un objeto String mediante fotogramas clave</span><span class="sxs-lookup"><span data-stu-id="9ddb1-111">Animate a String by Using Key Frames</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-string-by-using-key-frames.md)  
- [<span data-ttu-id="9ddb1-112">Animar un color mediante fotogramas clave</span><span class="sxs-lookup"><span data-stu-id="9ddb1-112">Animate Color by Using Key Frames</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-color-by-using-key-frames.md)  
- [<span data-ttu-id="9ddb1-113">Animar los cambios de tamaño mediante fotogramas clave</span><span class="sxs-lookup"><span data-stu-id="9ddb1-113">Animate Size Changes by Using Key Frames</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-size-changes-by-using-key-frames.md)  
- [<span data-ttu-id="9ddb1-114">Animar el grosor de un borde mediante fotogramas clave</span><span class="sxs-lookup"><span data-stu-id="9ddb1-114">Animate the Thickness of a Border by Using Key Frames</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-the-thickness-of-a-border-by-using-key-frames.md)  
- [<span data-ttu-id="9ddb1-115">Controlar la temporización de animaciones de fotogramas clave</span><span class="sxs-lookup"><span data-stu-id="9ddb1-115">Control Key-Frame Animation Timing</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-key-frame-animation-timing.md)  
+## <a name="in-this-section"></a><span data-ttu-id="564b9-104">En esta sección</span><span class="sxs-lookup"><span data-stu-id="564b9-104">In This Section</span></span>  
+ [<span data-ttu-id="564b9-105">Animar un objeto mediante fotogramas clave</span><span class="sxs-lookup"><span data-stu-id="564b9-105">Animate an Object by Using Key Frames</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-an-object-by-using-key-frames.md)  
+ [<span data-ttu-id="564b9-106">Animar un objeto Boolean mediante fotogramas clave</span><span class="sxs-lookup"><span data-stu-id="564b9-106">Animate a Boolean by Using Key Frames</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-boolean-by-using-key-frames.md)  
+ [<span data-ttu-id="564b9-107">Animar un objeto Double mediante fotogramas clave</span><span class="sxs-lookup"><span data-stu-id="564b9-107">Animate a Double by Using Key Frames</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-double-by-using-key-frames.md)  
+ [<span data-ttu-id="564b9-108">Animar un objeto Matrix mediante fotogramas clave</span><span class="sxs-lookup"><span data-stu-id="564b9-108">Animate a Matrix by Using Key Frames</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-matrix-by-using-key-frames.md)  
+ [<span data-ttu-id="564b9-109">Animar un punto mediante fotogramas clave</span><span class="sxs-lookup"><span data-stu-id="564b9-109">Animate a Point by Using Key Frames</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-point-by-using-key-frames.md)  
+ [<span data-ttu-id="564b9-110">Animar la geometría de un rectángulo mediante fotogramas clave</span><span class="sxs-lookup"><span data-stu-id="564b9-110">Animate a Rectangle Geometry by Using Key Frames</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-rectangle-geometry-by-using-key-frames.md)  
+ [<span data-ttu-id="564b9-111">Animar un objeto String mediante fotogramas clave</span><span class="sxs-lookup"><span data-stu-id="564b9-111">Animate a String by Using Key Frames</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-string-by-using-key-frames.md)  
+ [<span data-ttu-id="564b9-112">Animar un color mediante fotogramas clave</span><span class="sxs-lookup"><span data-stu-id="564b9-112">Animate Color by Using Key Frames</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-color-by-using-key-frames.md)  
+ [<span data-ttu-id="564b9-113">Animar los cambios de tamaño mediante fotogramas clave</span><span class="sxs-lookup"><span data-stu-id="564b9-113">Animate Size Changes by Using Key Frames</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-size-changes-by-using-key-frames.md)  
+ [<span data-ttu-id="564b9-114">Animar el grosor de un borde mediante fotogramas clave</span><span class="sxs-lookup"><span data-stu-id="564b9-114">Animate the Thickness of a Border by Using Key Frames</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-the-thickness-of-a-border-by-using-key-frames.md)  
+ [<span data-ttu-id="564b9-115">Controlar la temporización de animaciones de fotogramas clave</span><span class="sxs-lookup"><span data-stu-id="564b9-115">Control Key-Frame Animation Timing</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-key-frame-animation-timing.md)  
   
-## <a name="reference"></a><span data-ttu-id="9ddb1-116">Referencia</span><span class="sxs-lookup"><span data-stu-id="9ddb1-116">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="564b9-116">Referencia</span><span class="sxs-lookup"><span data-stu-id="564b9-116">Reference</span></span>  
  <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>  
   
  <xref:System.Windows.Media.Animation.Storyboard>  
   
  <xref:System.Windows.Media.Animation.KeyTime>  
   
-## <a name="see-also"></a><span data-ttu-id="9ddb1-117">Vea también</span><span class="sxs-lookup"><span data-stu-id="9ddb1-117">See Also</span></span>  
- [<span data-ttu-id="9ddb1-118">Gráficos y multimedia</span><span class="sxs-lookup"><span data-stu-id="9ddb1-118">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
- [<span data-ttu-id="9ddb1-119">Información general sobre animaciones</span><span class="sxs-lookup"><span data-stu-id="9ddb1-119">Animation Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [<span data-ttu-id="9ddb1-120">Información general sobre animaciones de fotogramas clave</span><span class="sxs-lookup"><span data-stu-id="9ddb1-120">Key-Frame Animations Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)
+## <a name="see-also"></a><span data-ttu-id="564b9-117">Vea también</span><span class="sxs-lookup"><span data-stu-id="564b9-117">See Also</span></span>  
+ [<span data-ttu-id="564b9-118">Gráficos y multimedia</span><span class="sxs-lookup"><span data-stu-id="564b9-118">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
+ [<span data-ttu-id="564b9-119">Información general sobre animaciones</span><span class="sxs-lookup"><span data-stu-id="564b9-119">Animation Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
+ [<span data-ttu-id="564b9-120">Información general sobre animaciones de fotogramas clave</span><span class="sxs-lookup"><span data-stu-id="564b9-120">Key-Frame Animations Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)

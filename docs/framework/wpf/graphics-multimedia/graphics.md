@@ -17,27 +17,28 @@ caps.latest.revision: "73"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9a86833f2b773f1724393de091bc65a5cbb75c9b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 157e7bf7ed481afc0b797a05721a4d7973b8790b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="graphics"></a><span data-ttu-id="0f2c0-102">Gráficos</span><span class="sxs-lookup"><span data-stu-id="0f2c0-102">Graphics</span></span>
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]<span data-ttu-id="0f2c0-103">ofrece compatibilidad integrada para multimedia, gráficos vectoriales, animación y creación de contenido, lo que facilita a los desarrolladores crear interfaces de usuario y contenido interesantes.</span><span class="sxs-lookup"><span data-stu-id="0f2c0-103"> offers integrated support for multimedia, vector graphics, animation, and content composition, making it easy for developers to build interesting user interfaces and content.</span></span>  
+# <a name="graphics"></a><span data-ttu-id="ad332-102">Gráficos</span><span class="sxs-lookup"><span data-stu-id="ad332-102">Graphics</span></span>
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]<span data-ttu-id="ad332-103">ofrece compatibilidad integrada para multimedia, gráficos vectoriales, animación y creación de contenido, lo que facilita a los desarrolladores crear interfaces de usuario y contenido interesantes.</span><span class="sxs-lookup"><span data-stu-id="ad332-103"> offers integrated support for multimedia, vector graphics, animation, and content composition, making it easy for developers to build interesting user interfaces and content.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="0f2c0-104">En esta sección</span><span class="sxs-lookup"><span data-stu-id="0f2c0-104">In This Section</span></span>  
- [<span data-ttu-id="0f2c0-105">Efectos de imagen</span><span class="sxs-lookup"><span data-stu-id="0f2c0-105">Bitmap Effects</span></span>](../../../../docs/framework/wpf/graphics-multimedia/bitmap-effects.md)  
- [<span data-ttu-id="0f2c0-106">Pinceles</span><span class="sxs-lookup"><span data-stu-id="0f2c0-106">Brushes</span></span>](../../../../docs/framework/wpf/graphics-multimedia/brushes.md)  
- [<span data-ttu-id="0f2c0-107">Dibujos</span><span class="sxs-lookup"><span data-stu-id="0f2c0-107">Drawings</span></span>](../../../../docs/framework/wpf/graphics-multimedia/drawings.md)  
- [<span data-ttu-id="0f2c0-108">Geometrías</span><span class="sxs-lookup"><span data-stu-id="0f2c0-108">Geometries</span></span>](../../../../docs/framework/wpf/graphics-multimedia/geometries.md)  
- [<span data-ttu-id="0f2c0-109">Imágenes</span><span class="sxs-lookup"><span data-stu-id="0f2c0-109">Images</span></span>](../../../../docs/framework/wpf/graphics-multimedia/images.md)  
- [<span data-ttu-id="0f2c0-110">Formas</span><span class="sxs-lookup"><span data-stu-id="0f2c0-110">Shapes</span></span>](../../../../docs/framework/wpf/graphics-multimedia/shapes.md)  
- [<span data-ttu-id="0f2c0-111">Transformaciones</span><span class="sxs-lookup"><span data-stu-id="0f2c0-111">Transformations</span></span>](../../../../docs/framework/wpf/graphics-multimedia/transformations.md)  
- [<span data-ttu-id="0f2c0-112">Configuración del Registro en la representación de gráficos</span><span class="sxs-lookup"><span data-stu-id="0f2c0-112">Graphics Rendering Registry Settings</span></span>](../../../../docs/framework/wpf/graphics-multimedia/graphics-rendering-registry-settings.md)  
- [<span data-ttu-id="0f2c0-113">Temas de procedimientos</span><span class="sxs-lookup"><span data-stu-id="0f2c0-113">How-to Topics</span></span>](../../../../docs/framework/wpf/graphics-multimedia/graphics-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="ad332-104">En esta sección</span><span class="sxs-lookup"><span data-stu-id="ad332-104">In This Section</span></span>  
+ [<span data-ttu-id="ad332-105">Efectos de imagen</span><span class="sxs-lookup"><span data-stu-id="ad332-105">Bitmap Effects</span></span>](../../../../docs/framework/wpf/graphics-multimedia/bitmap-effects.md)  
+ [<span data-ttu-id="ad332-106">Pinceles</span><span class="sxs-lookup"><span data-stu-id="ad332-106">Brushes</span></span>](../../../../docs/framework/wpf/graphics-multimedia/brushes.md)  
+ [<span data-ttu-id="ad332-107">Dibujos</span><span class="sxs-lookup"><span data-stu-id="ad332-107">Drawings</span></span>](../../../../docs/framework/wpf/graphics-multimedia/drawings.md)  
+ [<span data-ttu-id="ad332-108">Geometrías</span><span class="sxs-lookup"><span data-stu-id="ad332-108">Geometries</span></span>](../../../../docs/framework/wpf/graphics-multimedia/geometries.md)  
+ [<span data-ttu-id="ad332-109">Imágenes</span><span class="sxs-lookup"><span data-stu-id="ad332-109">Images</span></span>](../../../../docs/framework/wpf/graphics-multimedia/images.md)  
+ [<span data-ttu-id="ad332-110">Formas</span><span class="sxs-lookup"><span data-stu-id="ad332-110">Shapes</span></span>](../../../../docs/framework/wpf/graphics-multimedia/shapes.md)  
+ [<span data-ttu-id="ad332-111">Transformaciones</span><span class="sxs-lookup"><span data-stu-id="ad332-111">Transformations</span></span>](../../../../docs/framework/wpf/graphics-multimedia/transformations.md)  
+ [<span data-ttu-id="ad332-112">Configuración del Registro en la representación de gráficos</span><span class="sxs-lookup"><span data-stu-id="ad332-112">Graphics Rendering Registry Settings</span></span>](../../../../docs/framework/wpf/graphics-multimedia/graphics-rendering-registry-settings.md)  
+ [<span data-ttu-id="ad332-113">Temas "Cómo..."</span><span class="sxs-lookup"><span data-stu-id="ad332-113">How-to Topics</span></span>](../../../../docs/framework/wpf/graphics-multimedia/graphics-how-to-topics.md)  
   
-## <a name="see-also"></a><span data-ttu-id="0f2c0-114">Vea también</span><span class="sxs-lookup"><span data-stu-id="0f2c0-114">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="ad332-114">Vea también</span><span class="sxs-lookup"><span data-stu-id="ad332-114">See Also</span></span>  
  <xref:System.Windows.Shapes.Shape>  
  <xref:System.Windows.Media.Transform>  
  <xref:System.Windows.Media.Imaging.BitmapImage>  
@@ -45,6 +46,6 @@ ms.lasthandoff: 11/21/2017
  <xref:System.Windows.Media.Drawing>  
  <xref:System.Windows.Media.Brush>  
  <xref:System.Windows.Media.Effects.BitmapEffect>  
- [<span data-ttu-id="0f2c0-115">Imágenes y gráficos 2D</span><span class="sxs-lookup"><span data-stu-id="0f2c0-115">2D Graphics and Imaging</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)  
- [<span data-ttu-id="0f2c0-116">Gráficos y multimedia</span><span class="sxs-lookup"><span data-stu-id="0f2c0-116">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
- [<span data-ttu-id="0f2c0-117">Información general sobre la representación de gráficos en WPF</span><span class="sxs-lookup"><span data-stu-id="0f2c0-117">WPF Graphics Rendering Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
+ [<span data-ttu-id="ad332-115">Imágenes y gráficos 2D</span><span class="sxs-lookup"><span data-stu-id="ad332-115">2D Graphics and Imaging</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)  
+ [<span data-ttu-id="ad332-116">Gráficos y multimedia</span><span class="sxs-lookup"><span data-stu-id="ad332-116">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
+ [<span data-ttu-id="ad332-117">Información general sobre la representación de gráficos en WPF</span><span class="sxs-lookup"><span data-stu-id="ad332-117">WPF Graphics Rendering Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)

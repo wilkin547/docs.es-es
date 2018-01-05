@@ -20,14 +20,15 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d2c3443855f32b89c3f6cb34647a47cf50a34cee
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 5f2dd78fdb12ed975f5463c4e3320d113e9a69dc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="how-to-transform-points-and-vectors"></a><span data-ttu-id="63aff-102">Cómo: Transformar puntos y vectores</span><span class="sxs-lookup"><span data-stu-id="63aff-102">How to: Transform Points and Vectors</span></span>
-<span data-ttu-id="63aff-103">Este ejemplo muestra cómo utilizar un <xref:System.Windows.Media.Matrix> transformar <xref:System.Windows.Point> y <xref:System.Windows.Vector> objetos.</span><span class="sxs-lookup"><span data-stu-id="63aff-103">This example shows how to use a <xref:System.Windows.Media.Matrix> to transform <xref:System.Windows.Point> and <xref:System.Windows.Vector> objects.</span></span>  
+# <a name="how-to-transform-points-and-vectors"></a><span data-ttu-id="3ac8a-102">Cómo: Transformar puntos y vectores</span><span class="sxs-lookup"><span data-stu-id="3ac8a-102">How to: Transform Points and Vectors</span></span>
+<span data-ttu-id="3ac8a-103">Este ejemplo muestra cómo utilizar un <xref:System.Windows.Media.Matrix> transformar <xref:System.Windows.Point> y <xref:System.Windows.Vector> objetos.</span><span class="sxs-lookup"><span data-stu-id="3ac8a-103">This example shows how to use a <xref:System.Windows.Media.Matrix> to transform <xref:System.Windows.Point> and <xref:System.Windows.Vector> objects.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="63aff-104">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="63aff-104">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="3ac8a-104">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="3ac8a-104">Example</span></span>  
  [!code-csharp[MatrixExamples_snip#MatrixTransformExamples_csharp](../../../../samples/snippets/csharp/VS_Snippets_Wpf/MatrixExamples_snip/CSharp/MatrixExample.cs#matrixtransformexamples_csharp)]
