@@ -14,11 +14,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 410b885daac00cd6da949b285721c206facb7079
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e2aa6e67fc45aa02421433a295fdbf5657e4e551
+ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="whats-new-in-the-net-framework"></a>Novedades de .NET Framework
 <a name="introduction"></a> En este artículo se resumen las nuevas características y mejoras en las siguientes versiones de .NET Framework:  
@@ -30,7 +30,7 @@ ms.lasthandoff: 12/22/2017
 [.NET 2015 y .NET Framework 4.6](#v46)   
 [.NET Framework 4.5.2](#v452)   
 [.NET Framework 4.5.1](#v451)   
-[.NET Framework 4.5](#core)   
+[.NET Framework 4.5](#v45)   
 
 Este artículo no proporciona información completa sobre cada una de las características nuevas y puede estar sujeto a cambios. Para obtener información general sobre .NET Framework, vea [Introducción](../../../docs/framework/get-started/index.md). Para conocer las plataformas compatibles, vea [Requisitos de sistema](~/docs/framework/get-started/system-requirements.md). Para obtener vínculos de descarga e instrucciones de instalación, vea [Instalar](../../../docs/framework/install/guide-for-developers.md).
 
@@ -1243,7 +1243,7 @@ Para obtener más información sobre la estructura <xref:System.TimeZoneInfo> y 
 
  [Volver al principio](#introduction)
 
-<a name="core"></a> 
+<a name="v45"></a> 
 ## <a name="whats-new-in-the-net-framework-45"></a>Novedades de .NET Framework 4.5
 
 ### <a name="core-new-features-and-improvements"></a>Principales características nuevas y mejoras

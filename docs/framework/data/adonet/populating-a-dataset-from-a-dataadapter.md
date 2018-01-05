@@ -16,11 +16,12 @@ caps.latest.revision: "6"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 3648340050e5ee3a761efcbedd89f649ff8d9c91
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 6df0b6a06240a5f59c888ddcfb2b34764fd888fa
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="populating-a-dataset-from-a-dataadapter"></a>Rellenar un conjunto de datos desde un objeto DataAdapter
 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] de <xref:System.Data.DataSet> es una representación residente en memoria de datos que proporciona un modelo de programación relacional coherente e independiente del origen de datos. `DataSet` representa un conjunto completo de datos que incluye tablas, restricciones y relaciones entre las tablas. Dado que `DataSet` es independiente del origen de datos, `DataSet` puede incluir datos locales de la aplicación y datos de otros muchos orígenes. La interacción con los orígenes de datos existentes se controla mediante el `DataAdapter`.  
@@ -133,7 +134,7 @@ foreach (DataRow pRow in customerOrders.Tables["Customers"].Rows)
  [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 2.0 incorporó la compatibilidad mejorada del elemento <xref:System.Data.SqlTypes> de `DataSet`. Para obtener más información, consulta [SqlTypes and the DataSet](../../../../docs/framework/data/adonet/sql/sqltypes-and-the-dataset.md).  
   
 ## <a name="ole-db-chapters"></a>Capítulos de OLE DB  
- Se pueden usar conjuntos jerárquicos de filas, o capítulos (tipo `DBTYPE_HCHAPTER`de OLE DB y tipo `adChapter`de ADO), para rellenar el contenido de `DataSet`. Cuando <xref:System.Data.OleDb.OleDbDataAdapter> encuentra una columna que tiene un capítulo durante una operación `Fill` , se crea un objeto `DataTable` para dicha columna y la tabla se rellena con las columnas y filas del capítulo. Para asignar un nombre a la tabla creada para la columna con capítulo se usa tanto el nombre de la tabla primaria como el de la columna con capítulo. El formato del nombre es "*nombreDeTablaPrimariaNombreDeColumnaConCapítulo*". Si ya existe una tabla en `DataSet` que tenga el nombre de la columna con capítulo, la tabla actual se rellena con los datos del capítulo. Si ninguna de las columnas de la tabla existente coincide con una de las columnas del capítulo, se agrega una nueva columna a la tabla.  
+ Se pueden usar conjuntos jerárquicos de filas, o capítulos (tipo `DBTYPE_HCHAPTER` de OLE DB y tipo `adChapter` de ADO), para rellenar el contenido de `DataSet`. Cuando <xref:System.Data.OleDb.OleDbDataAdapter> encuentra una columna que tiene un capítulo durante una operación `Fill` , se crea un objeto `DataTable` para dicha columna y la tabla se rellena con las columnas y filas del capítulo. Para asignar un nombre a la tabla creada para la columna con capítulo se usa tanto el nombre de la tabla primaria como el de la columna con capítulo. El formato del nombre es "*nombreDeTablaPrimariaNombreDeColumnaConCapítulo*". Si ya existe una tabla en `DataSet` que tenga el nombre de la columna con capítulo, la tabla actual se rellena con los datos del capítulo. Si ninguna de las columnas de la tabla existente coincide con una de las columnas del capítulo, se agrega una nueva columna a la tabla.  
   
  Antes de que las tablas de `DataSet` se rellenen con los datos de las columnas con capítulos, se crea una relación entre las tablas primaria y secundaria del conjunto jerárquico de filas; para ello, se agrega una columna de tipo entero a las tablas primaria y secundaria, se establece el valor de incremento automático para la columna de la tabla primaria y se crea un objeto `DataRelation` usando las columnas agregadas de ambas tablas. Para asignar un nombre a la relación se utilizan los nombres de la tabla primaria y de la columna con capítulo. El formato es "*nombreDeTablaPrimariaNombreDeColumnaConCapítulo*".  
   
@@ -194,6 +195,6 @@ adapter.Fill(customers, "Customers");
 ## <a name="see-also"></a>Vea también  
  [Objetos DataAdapter y DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
  [Asignaciones de tipos de datos en ADO.NET](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)  
- [Modificar datos con un DbDataAdapter](../../../../docs/framework/data/adonet/modifying-data-with-a-dbdataadapter.md)  
+ [Modificación de datos con un objeto DbDataAdapter](../../../../docs/framework/data/adonet/modifying-data-with-a-dbdataadapter.md)  
  [Conjuntos de resultados activos múltiples (MARS)](../../../../docs/framework/data/adonet/sql/multiple-active-result-sets-mars.md)  
  [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](http://go.microsoft.com/fwlink/?LinkId=217917)

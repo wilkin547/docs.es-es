@@ -13,11 +13,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: fef5fc58adeac99bcd2cac0fda8a72dde2797001
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 600a1bd57015c6a64a51bf99f3ded35a375e62fe
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="messaging-protocols"></a>Protocolos de mensajería
 La pila del canal [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] emplea codificación y canales de transporte para transformar la representación interna de mensajes en su formato de conexión y enviarla utilizando un transporte determinado. El transporte más común utilizado para la interoperabilidad de servicios Web es HTTP y las codificaciones más comunes utilizadas por los servicios Web son las basadas en XML, SOAP 1.1, SOAP 1.2 y el Mecanismo de optimización de transmisión de mensajes (MTOM).  
@@ -128,7 +129,7 @@ dp|http://schemas.microsoft.com/net/2006/06/duplex|
 ### <a name="endpoint-references"></a>Referencias de extremo  
  Todas las versiones de WS-Addressing que implementa [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usan referencias de extremo para describir los extremos.  
   
-#### <a name="endpoint-references-and-ws-addressing-versions"></a>Referencias de extremo y WS-Addressing  
+#### <a name="endpoint-references-and-ws-addressing-versions"></a>Referencias de punto de conexión y WS-Addressing  
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] implementa varios protocolos de infraestructura que usan ws-Addressing y en particular el elemento `EndpointReference` y la clase `W3C.WsAddressing.EndpointReferenceType` (por ejemplo, WS-ReliableMessaging, WS-SecureConversation y WS-Trust). [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] admite el uso de cualquier versión de WS-Addressing con otros protocolos de infraestructura. Los extremos de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] admiten una versión de WS-Addressing por extremo.  
   
  Para R3111, el espacio de nombres para el elemento `EndpointReference` o el tipo utilizado en mensajes intercambiados con un extremo [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] debe coincidir con la versión de WS-Addressing implementada por este extremo.  
@@ -136,7 +137,7 @@ dp|http://schemas.microsoft.com/net/2006/06/duplex|
  Por ejemplo, si un extremo [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] implementa WS-ReliableMessaging, el encabezado `AcksTo` devuelto por este tipo de extremo dentro de `CreateSequenceResponse` utiliza la versión de WS-Addressing que el elemento `EncodingBinding` especifica para este extremo.  
   
 #### <a name="endpoint-references-and-metadata"></a>Referencias de extremo y metadatos  
- Varios escenarios requieren comunicar metadatos o una referencia a los metadatos para un extremo determinado.  
+ Varios escenarios requieren comunicar metadatos o una referencia a los metadatos para un punto de conexión determinado.  
   
  B3121: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] emplea mecanismos descritos en la especificación de WS-MetadataExchange (MEX), sección 6, para incluir metadatos para referencias de extremos por valor o referencia.  
   
@@ -187,7 +188,7 @@ dp|http://schemas.microsoft.com/net/2006/06/duplex|
 #### <a name="one-way-message"></a>Mensaje unidireccional  
  Cuando un extremo [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] se configura para admitir mensajes con una `Action` determinada para seguir un patrón unidireccional, el extremo [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sigue los siguientes comportamientos y requisitos. A menos que se especifique lo contrario, los comportamientos y reglas se aplican a ambas versiones de WS-Addressing admitidas en [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]:  
   
--   R3311: el solicitante debe incluir `wsa:To`, `wsa:Action` y los encabezados para todos los parámetros de referencia especificados por la referencia del extremo. Cuando se utiliza WS-Addressing 2004/08 y la referencia de extremo especifica las [propiedades de referencia], los encabezados correspondientes también deben agregarse al mensaje.  
+-   R3311: el solicitante debe incluir `wsa:To`, `wsa:Action` y los encabezados para todos los parámetros de referencia especificados por la referencia del extremo. Cuando se utiliza WS-Addressing 2004/08 y la referencia de punto de conexión especifica las [propiedades de referencia], los encabezados correspondientes también deben agregarse al mensaje.  
   
 -   B3312: el solicitante puede incluir `MessageID`, `ReplyTo`y los encabezados `FaultTo`. La infraestructura del receptor los omitirá y se pasarán a la aplicación.  
   
@@ -255,7 +256,7 @@ dp|http://schemas.microsoft.com/net/2006/06/duplex|
   
  El elemento `wsaw10:UsingAddressing` se toma prestado de [WSDL de WS-Addressing] y se utiliza en el contexto de WS-Addressing cumpliendo con esa especificación, sección 3.1.2.  
   
- El uso de direccionamiento no modifica la semántica de WSDL 1.1, SOAP 1.1 y enlaces HTTP SOAP 1.2. Por ejemplo, si una respuesta se espera para una solicitud que se envía a un extremo que usa direccionamiento y enlace HTTP de SOAP 1.x de WSDL, la respuesta se debe enviar utilizando la respuesta HTTP.  
+ El uso de direccionamiento no modifica la semántica de WSDL 1.1, SOAP 1.1 y enlaces HTTP SOAP 1.2. Por ejemplo, si una respuesta se espera para una solicitud que se envía a un punto de conexión que usa direccionamiento y enlace HTTP de SOAP 1.x de WSDL, la respuesta se debe enviar utilizando la respuesta HTTP.  
   
  Para las respuestas enviadas a través de la respuesta http, la aserción de WS-AM es:  
   
@@ -293,7 +294,7 @@ dp|http://schemas.microsoft.com/net/2006/06/duplex|
   </wsam:Addressing>  
 ```  
   
- El uso de la siguiente aserción que tiene un asunto de extremo de directiva [WS-PA] en los extremos que usan enlaces HTTP de SOAP 1.1x de WDSL 1.1 requiere dos conexiones HTTP inversas independientes que se utilizarán para los mensajes que fluyen del solicitante al respondedor y del respondedor al solicitante, respectivamente.  
+ El uso de la siguiente aserción que tiene un asunto de punto de conexión de directiva [WS-PA] en los puntos de conexión que usan enlaces HTTP de SOAP 1.1x de WDSL 1.1 requiere dos conexiones HTTP inversas independientes que se utilizarán para los mensajes que fluyen del solicitante al respondedor y del respondedor al solicitante, respectivamente.  
   
 ```xml  
 <cdp:CompositeDuplex/>  
@@ -320,7 +321,7 @@ dp|http://schemas.microsoft.com/net/2006/06/duplex|
   
  B3521: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] utiliza el atributo `wsaw10:Action` en elementos `wsdl:portType/wsdl:operation/[wsdl:input | wsdl:output | wsdl:fault]` tal y como se define en WS-ADDR10-WSDL para determinar el URI `Action` para los mensajes correspondientes independientemente de la versión de WS-Addressing utilizada por el extremo.  
   
-#### <a name="use-endpoint-reference-inside-wsdl-port"></a>Uso de la referencia de extremo dentro del puerto WSDL  
+#### <a name="use-endpoint-reference-inside-wsdl-port"></a>Uso de la referencia de punto de conexión dentro del puerto WSDL  
  La sección 4.1 de WS-ADDR10-WSDL extiende el elemento `wsdl:port` para incluir el elemento secundario `<wsa10:EndpointReference…/>` para describir el extremo en términos de WS-Addressing. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] expande esta utilidad en WS-Addressing 2004/08, permitiendo que `<wsa:EndpointReference…/>` aparezca como un elemento secundario de `wsdl:port`.  
   
 -   R3531: si un extremo tiene una directiva alternativa adjunta con una aserción de directiva `<wsaw10:UsingAddressing/>`, el elemento`wsdl:port` correspondiente puede contener un elemento secundario`<wsa10:EndpointReference …/>`.  
@@ -407,7 +408,7 @@ Content-Length: 0
   
  La siguiente secuencia de pasos describe el proceso de codificación específico del MTOM:  
   
-1.  Asegúrese de que la envoltura de SOAP que se va a codificar no contiene ningún elemento de información de elemento con un `[namespace name]` "http://www.w3.org/2004/08/xop/include" y un `[local name]` `Include`.  
+1.  Asegúrese de que la envoltura de SOAP que se va a codificar no contiene ningún elemento de información de elemento con un `[namespace name]` "http://www.w3.org/2004/08/xop/include" y un `[local name]``Include`.  
   
 2.  Cree un paquete MIME vacío.  
   
@@ -563,7 +564,7 @@ mail-address   =     id-left "@" id-right
   
 -   R41410: los parámetros `type` y `charset` deben estar presentes en el encabezado de tipo de contenido de la parte del conjunto de información de SOAP 1.x.  
   
-#### <a name="wcf-endpoint-support-for-mtom"></a>Compatibilidad de extremo WCF para MTOM.  
+#### <a name="wcf-endpoint-support-for-mtom"></a>Compatibilidad de punto de conexión WCF para MTOM.  
  El propósito de MTOM es codificar un mensaje SOAP para optimizar los datos codificados en base64. A continuación se muestra una lista de restricciones:  
   
 -   R4151: se puede optimizar cualquier elemento de información de elemento que contenga datos codificados en base64.  
@@ -579,7 +580,7 @@ mail-address   =     id-left "@" id-right
 <wsoma:OptimizedMimeSerialization ... />  
 ```  
   
--   R4211: la aserción de directiva anterior tiene un asunto de directiva de extremo y especifica que todos los mensajes enviados a y recibidos desde el extremo se deben optimizar utilizando MTOM.  
+-   R4211: la aserción de directiva anterior tiene un asunto de directiva de punto de conexión y especifica que todos los mensajes enviados a y recibidos desde el punto de conexión se deben optimizar utilizando MTOM.  
   
 -   B4212: cuando se configura para utilizar la optimización de MTOM, un extremo [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] agrega una aserción de directiva MTOM a la directiva adjunta al `wsdl:binding` correspondiente.  
   

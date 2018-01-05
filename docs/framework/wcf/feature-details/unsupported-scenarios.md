@@ -13,11 +13,12 @@ caps.latest.revision: "43"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3bb2646a500db299f164dce34fb062a509f90047
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 96ae88fd29391bf173da33398dfb41b3a06441ba
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="unsupported-scenarios"></a>Escenarios no admitidos
 Por varias razones, [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] no admite algunos escenarios de seguridad concretos. Por ejemplo, [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Home Edition no implementa los protocolos de autenticación SSPI o Kerberos y, por consiguiente, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] no permite ejecutar un servicio con autenticación de Windows en esa plataforma. Se admiten otros mecanismos de autenticación, como el uso de nombre de usuario/contraseña y la autenticación HTTP/HTTPS integrada al ejecutar [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] en Windows XP Home Edition.  
@@ -101,7 +102,7 @@ Por varias razones, [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] no a
 ## <a name="wsdl-retrieval-failures-with-federated-trust"></a>Errores de recuperación de WSDL con confianza federada  
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] requiere exactamente un documento WSDL para cada nodo en la cadena de confianza federada. Tenga el cuidado de no establecer un bucle al especificar los extremos. Una manera en la que se pueden producir bucles es cuando se utiliza una descarga WSDL de cadenas de confianza federadas con dos o más vínculos en el mismo documento WSDL. Un escenario común donde se puede dar este problema es un servicio federado en el que el servidor de token de seguridad y el servicio se encuentran en el mismo ServiceHost.  
   
- Un ejemplo de esta situación sería un servicio con las tres direcciones de extremo siguientes:  
+ Un ejemplo de esta situación sería un servicio con las tres direcciones de punto de conexión siguientes:  
   
 -   http://localhost/CalculatorService/service (el servicio)  
   
@@ -124,4 +125,4 @@ Por varias razones, [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] no a
  [Elevación de privilegios](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)  
  [Denegación de servicio](../../../../docs/framework/wcf/feature-details/denial-of-service.md)  
  [Manipulación](../../../../docs/framework/wcf/feature-details/tampering.md)  
- [Ataques de reproducción](../../../../docs/framework/wcf/feature-details/replay-attacks.md)
+ [Ataques por repetición](../../../../docs/framework/wcf/feature-details/replay-attacks.md)
