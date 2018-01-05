@@ -21,11 +21,14 @@ caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: d1566d2b67e1dda5b0b221a2c10affb6bdaea888
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 2f4a6debc25a51e3a0a83e70fc8c8f8fc55c62f5
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="struct-design"></a>Diseño de structs
 El tipo de valor de uso general más a menudo se conoce como un struct, la palabra clave de C#. Esta sección proporciona instrucciones para el diseño de la estructura general.  
@@ -57,4 +60,4 @@ El tipo de valor de uso general más a menudo se conoce como un struct, la palab
 ## <a name="see-also"></a>Vea también  
  [Instrucciones de diseño de tipos](../../../docs/standard/design-guidelines/type.md)  
  [Instrucciones de diseño de .NET Framework](../../../docs/standard/design-guidelines/index.md)  
- [Elegir entre clases y estructuras](../../../docs/standard/design-guidelines/choosing-between-class-and-struct.md)
+ [Elección entre clase y estructura](../../../docs/standard/design-guidelines/choosing-between-class-and-struct.md)

@@ -19,11 +19,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 86d1ababcb7a00496b59005b5e90f875511fefc4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ebb74e1db2e63269f70a13ef8520ab1383ecae08
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-get-the-default-view-of-a-data-collection"></a>Cómo: Obtener la vista predeterminada de una recolección de datos
 Las vistas permiten la misma colección de datos a verse de varias maneras, dependiendo de ordenación, filtrado o criterio de agrupación. Cada colección tiene una vista predeterminada compartida, que se usa como origen de enlace real cuando un enlace especifica una colección como origen. En este ejemplo se muestra cómo obtener la vista predeterminada de una colección.  
@@ -44,4 +45,4 @@ Las vistas permiten la misma colección de datos a verse de varias maneras, depe
   
 ## <a name="see-also"></a>Vea también  
  [Ordenar y agrupar datos mediante una vista en XAML](../../../../docs/framework/wpf/data/how-to-sort-and-group-data-using-a-view-in-xaml.md)  
- [Temas de procedimientos](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+ [Temas "Cómo..."](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)

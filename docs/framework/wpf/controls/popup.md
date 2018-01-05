@@ -19,11 +19,12 @@ caps.latest.revision: "66"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f4fecc763f1bc6e701869a2b3f46d44f80cc28ee
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 14a1848a27443e7fc5ae7a9ced754cf6d691ae19
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="popup"></a>Popup
 El <xref:System.Windows.Controls.Primitives.Popup> control muestra el contenido en una ventana independiente que flota sobre la ventana de la aplicación actual.  
@@ -35,7 +36,7 @@ El <xref:System.Windows.Controls.Primitives.Popup> control muestra el contenido 
 ## <a name="in-this-section"></a>En esta sección  
  [Información general sobre el control Popup](../../../../docs/framework/wpf/controls/popup-overview.md)  
  [Posición de un control Popup](../../../../docs/framework/wpf/controls/popup-placement-behavior.md)  
- [Temas de procedimientos](../../../../docs/framework/wpf/controls/popup-how-to-topics.md)  
+ [Temas "Cómo..."](../../../../docs/framework/wpf/controls/popup-how-to-topics.md)  
   
 ## <a name="reference"></a>Referencia  
  <xref:System.Windows.Controls.Primitives.Popup>  

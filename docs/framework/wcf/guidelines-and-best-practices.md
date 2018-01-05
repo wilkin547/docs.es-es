@@ -19,11 +19,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 12599c0bdf249271e8cd28e5a7591c130b1fd920
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 978cb7dcfd132ea253fcb5f13174e14c7341f11a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="guidelines-and-best-practices"></a>Instrucciones y procedimientos recomendados
 Esta sección contiene temas que proporcionan instrucciones para crear aplicaciones de [!INCLUDE[indigo1](../../../includes/indigo1-md.md)].  
@@ -33,7 +34,7 @@ Esta sección contiene temas que proporcionan instrucciones para crear aplicacio
  Explica cómo y cuándo crear contratos de datos que no interrumpen al crearse las versiones futuras.  
   
  [Control de versiones del servicio](../../../docs/framework/wcf/service-versioning.md)  
- Explica cómo considerar el control de versiones en [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. Después de la implementación, los servicios (y los extremos que exponen) podrían necesitar cambios, por ejemplo, para satisfacer los cambiantes requisitos comerciales o de TI, o para corregir los problemas. Cada cambio produce una nueva versión del servicio.  
+ Explica cómo considerar el control de versiones en [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. Después de la implementación, los servicios (y los puntos de conexión que exponen) podrían necesitar cambios, por ejemplo, para satisfacer los cambiantes requisitos comerciales o de TI, o para corregir los problemas. Cada cambio produce una nueva versión del servicio.  
   
  [Equilibrio de carga](../../../docs/framework/wcf/load-balancing.md)  
  Hace una lista de las instrucciones para el equilibrio de carga con una batería de servidores web.  

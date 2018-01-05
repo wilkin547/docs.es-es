@@ -19,11 +19,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ad0f7cacc8256e060bb12611bd1818b694e1e6dc
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 996d6d5f531a866d4fc80acc3848cdf264901032
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="gridview-column-header-styles-and-templates-overview"></a>Información general sobre plantillas y estilos de encabezado de columna en modo GridView
 Esta información general describe el orden de prioridad para las propiedades que se usan para personalizar un encabezado de columna en la <xref:System.Windows.Controls.GridView> modo de vista de un <xref:System.Windows.Controls.ListView> control.  
@@ -46,6 +47,6 @@ Esta información general describe el orden de prioridad para las propiedades qu
  <sup>1</sup>para **propiedades de la plantilla de encabezado**, si establece la plantilla y propiedades de selector de plantilla, la propiedad de plantilla tiene prioridad. Por ejemplo, si establece tanto la <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> y <xref:System.Windows.Controls.ContentControl.ContentTemplateSelector%2A> propiedades, la <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> propiedad tiene prioridad.  
   
 ## <a name="see-also"></a>Vea también  
- [Temas de procedimientos](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)  
+ [Temas "Cómo..."](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)  
  [Información general sobre ListView](../../../../docs/framework/wpf/controls/listview-overview.md)  
  [Información general sobre GridView](../../../../docs/framework/wpf/controls/gridview-overview.md)

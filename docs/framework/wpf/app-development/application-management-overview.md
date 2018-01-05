@@ -17,11 +17,12 @@ caps.latest.revision: "56"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 09129f2dc2bac2bb17ebacd6d6db020288b6f616
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 9651b55741a607b1c99a813c0011db380dfd38f6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="application-management-overview"></a>Información general sobre la administración de aplicaciones
 Todas las aplicaciones suelen compartir un conjunto común de funciones que se aplica a la implementación y la administración de la aplicación. Este tema proporciona información general de la funcionalidad de la <xref:System.Windows.Application> clase para crear y administrar aplicaciones.  
@@ -60,7 +61,7 @@ Todas las aplicaciones suelen compartir un conjunto común de funciones que se a
 |Obtener y establecer propiedades en el ámbito de aplicación|Utilice la propiedad <xref:System.Windows.Application.Properties%2A?displayProperty=nameWithType>.|  
 |Obtener y guardar el estado de una aplicación|Vea [conservar y restaurar propiedades de ámbito de la aplicación a través de sesiones de la aplicación](../../../../docs/framework/wpf/app-development/persist-and-restore-application-scope-properties.md).|  
 |Administrar archivos de datos que no son de código, incluidos los archivos de recursos, los archivos de contenido y los archivos de sitio de origen.|Vea [recursos de la aplicación de WPF, contenido y archivos de datos](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md).|  
-|Administrar ventanas en las aplicaciones independientes|Vea [Introducción a WPF Windows](../../../../docs/framework/wpf/app-development/wpf-windows-overview.md).|  
+|Administrar ventanas en las aplicaciones independientes|Vea [WPF Windows Overview](../../../../docs/framework/wpf/app-development/wpf-windows-overview.md) (Introducción a Windows Presentation Foundation).|  
 |Realizar un seguimiento y administrar la navegación|Vea [información general de navegación](../../../../docs/framework/wpf/app-development/navigation-overview.md).|  
   
 <a name="The_Application_Definition"></a>   

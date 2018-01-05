@@ -24,18 +24,19 @@ caps.latest.revision: "52"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3dabd2d7b067f923e371102ed2c78a3edb08f829
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 34fcb4d029b027cb88bd5b434954a6348396e926
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="shapes"></a>Formas
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]proporciona compatibilidad para dibujar formas básicas mediante la <xref:System.Windows.Shapes.Shape> clase. Objetos de forma que se derivan de <xref:System.Windows.FrameworkElement> y por lo tanto, participar en el sistema de diseño y se pueden dibujar simplemente mediante [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].  
   
 ## <a name="in-this-section"></a>En esta sección  
  [Información general sobre formas y dibujo básico en WPF](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)  
- [Temas de procedimientos](../../../../docs/framework/wpf/graphics-multimedia/shapes-how-to-topics.md)  
+ [Temas "Cómo..."](../../../../docs/framework/wpf/graphics-multimedia/shapes-how-to-topics.md)  
   
 ## <a name="see-also"></a>Vea también  
  <xref:System.Windows.Shapes.Shape>  

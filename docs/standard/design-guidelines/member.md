@@ -18,11 +18,14 @@ caps.latest.revision: "14"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 5df4ad5f6c947d8b3bf62c3bf7eb8426419e5f3f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: ae69b77098c7f2e1de83eedd40cf0f0da9473326
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="member-design-guidelines"></a>Instrucciones de diseño de miembros
 Métodos, propiedades, eventos, constructores y campos se conocen colectivamente como miembros. Los miembros en última instancia son el medio por el que la funcionalidad de framework se expone a los usuarios finales de un marco de trabajo.  
@@ -36,10 +39,10 @@ Métodos, propiedades, eventos, constructores y campos se conocen colectivamente
  [Diseño de propiedades](../../../docs/standard/design-guidelines/property.md)  
  [Diseño de constructores](../../../docs/standard/design-guidelines/constructor.md)  
  [Diseño de eventos](../../../docs/standard/design-guidelines/event.md)  
- [Diseño de campo](../../../docs/standard/design-guidelines/field.md)  
+ [Diseño de campos](../../../docs/standard/design-guidelines/field.md)  
  [Métodos de extensión](../../../docs/standard/design-guidelines/extension-methods.md)  
  [Sobrecargas de operador](../../../docs/standard/design-guidelines/operator-overloads.md)  
- [Diseño de parámetro](../../../docs/standard/design-guidelines/parameter-design.md)  
+ [Diseño de parámetros](../../../docs/standard/design-guidelines/parameter-design.md)  
  *Partes © 2005, 2009 Microsoft Corporation. Reservados todos los derechos.*  
   
  *Volver a imprimir en el permiso de educación de Pearson, Inc. de [directrices de diseño de marco de trabajo: convenciones, expresiones y patrones para las bibliotecas .NET de reutilizable, 2ª edición](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina y Brad Abrams, publicado el 22 de octubre de 2008 por Addison-Wesley Professional como parte de la serie de desarrollo de Microsoft Windows.*  

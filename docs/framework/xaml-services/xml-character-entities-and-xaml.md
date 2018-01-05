@@ -31,11 +31,12 @@ caps.latest.revision: "23"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 5973c67b26e07bba69383cc625ff34493d825a41
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 6b325c931579606f6d1d90eb821766a4110acfd5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="xml-character-entities-and-xaml"></a>Entidades de caracteres XML y XAML
 XAML usa entidades de caracteres definidas en XML para los caracteres especiales. En este tema se describen algunas entidades de caracteres específicas y consideraciones generales para otros conceptos XML en XAML.  
@@ -56,11 +57,11 @@ XAML usa entidades de caracteres definidas en XML para los caracteres especiales
   
 |Carácter|Entity|Notas|  
 |---------------|------------|-----------|  
-|& (símbolo de Y comercial)|&amp;|Debe usarse tanto para los valores de atributo como para el contenido de un elemento.|  
-|> (carácter mayor que)|&gt;|Debe usarse para un valor de atributo, pero > es aceptable como contenido de un elemento siempre que esté precedido de <.|  
-|< (carácter menos que)|&lt;|Se debe usar para un valor de atributo, pero \< es aceptable como contenido de un elemento siempre que > no siga.|  
-|" (comillas dobles rectas)|&quot;|Debe usarse para un valor de atributo, pero las comillas dobles rectas (") son aceptables como contenido de un elemento. Tenga en cuenta que los valores de atributo se pueden incluir entre comillas simples rectas (') o entre comillas dobles rectas ("); el carácter que aparece primero define el carácter que cierra el valor del atributo, mientras que el otro tipo de comillas se puede usar como valor literal dentro del valor.|  
-|' (comilla simple recta)|&apos;|Debe usarse para un valor de atributo, pero una comilla simple recta (') es aceptable como contenido de un elemento. Tenga en cuenta que los valores de atributo se pueden incluir entre comillas simples rectas (') o entre comillas dobles rectas ("); el carácter que aparece primero define el carácter que cierra el valor del atributo, mientras que el otro tipo de comillas se puede usar como valor literal dentro del valor.|  
+|& (símbolo de Y comercial)|\&amp;|Debe usarse tanto para los valores de atributo como para el contenido de un elemento.|  
+|> (carácter mayor que)|\&gt;|Debe usarse para un valor de atributo, pero > es aceptable como contenido de un elemento siempre que esté precedido de <.|  
+|< (carácter menos que)|\&lt;|Se debe usar para un valor de atributo, pero \< es aceptable como contenido de un elemento siempre que > no siga.|  
+|" (comillas dobles rectas)|\&quot;|Debe usarse para un valor de atributo, pero las comillas dobles rectas (") son aceptables como contenido de un elemento. Tenga en cuenta que los valores de atributo se pueden incluir entre comillas simples rectas (') o entre comillas dobles rectas ("); el carácter que aparece primero define el carácter que cierra el valor del atributo, mientras que el otro tipo de comillas se puede usar como valor literal dentro del valor.|  
+|' (comilla simple recta)|\&apos;|Debe usarse para un valor de atributo, pero una comilla simple recta (') es aceptable como contenido de un elemento. Tenga en cuenta que los valores de atributo se pueden incluir entre comillas simples rectas (') o entre comillas dobles rectas ("); el carácter que aparece primero define el carácter que cierra el valor del atributo, mientras que el otro tipo de comillas se puede usar como valor literal dentro del valor.|  
 |(asignaciones de caracteres numéricos)|&#*[entero]* ; o & #x*[hex]*;|XAML admite las asignaciones de caracteres numéricos en la codificación que está activa.|  
 |(espacio de no separación)|&\#160; (suponiendo la codificación UTF-8)|Para los elementos de documentos dinámicos o los elementos que aceptan texto como <xref:System.Windows.Controls.TextBox> de WPF, los espacios de no separación no se normalizan fuera del marcado, ni siquiera en `xml:space="default"`. (Para obtener más información, consulte [procesamiento de espacios en blanco en XAML](../../../docs/framework/xaml-services/whitespace-processing-in-xaml.md).)|  
   

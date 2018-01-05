@@ -17,11 +17,12 @@ caps.latest.revision: "29"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8c4f4179087679ff891c705cf16693fc69c808d8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 38f0f6ac030af08039438b7e766c3f0f5bed7534
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="key-frame-animations-overview"></a>Información general sobre animaciones de fotogramas clave
 Este tema es una introducción a las animaciones de fotogramas clave. Las animaciones de fotogramas clave le permiten realizar animaciones con más de dos valores de destino y controlan el método de interpolación de una animación.  
@@ -132,7 +133,7 @@ Este tema es una introducción a las animaciones de fotogramas clave. Las animac
 ### <a name="linear-interpolation"></a>Interpolación lineal  
  Con la interpolación lineal, la animación avanza a una velocidad constante de la duración del segmento. Por ejemplo, si un segmento de fotogramas clave transiciona desde 0 a 10 durante 5 segundos, la animación generará los valores siguientes en los momentos especificados:  
   
-|Hora|Valor de salida|  
+|Tiempo|Valor de salida|  
 |----------|------------------|  
 |0|0|  
 |1|2|  

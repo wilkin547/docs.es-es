@@ -16,11 +16,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f47f56e28064c852e5d8f721bdb3a0f73172c12a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 6bdb140d90de02fa817c55a05f40e57fcd0d636c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="planning-for-application-performance"></a>Planear para mejorar el rendimiento de aplicaciones
 El éxito de alcanzar los objetivos de rendimiento depende del grado de desarrollo de la estrategia de rendimiento. Planificación es la primera fase de desarrollo de cualquier producto. Este tema describen algunas reglas muy simples para desarrollar una estrategia de un buen rendimiento.  
@@ -49,6 +50,6 @@ El éxito de alcanzar los objetivos de rendimiento depende del grado de desarrol
  [Imágenes y gráficos 2D](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)  
  [Comportamiento de objetos](../../../../docs/framework/wpf/advanced/optimizing-performance-object-behavior.md)  
  [Recursos de la aplicación](../../../../docs/framework/wpf/advanced/optimizing-performance-application-resources.md)  
- [Text](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)  
+ [Texto](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)  
  [Enlace de datos](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)  
  [Otras recomendaciones de rendimiento](../../../../docs/framework/wpf/advanced/optimizing-performance-other-recommendations.md)

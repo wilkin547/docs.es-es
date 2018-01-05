@@ -18,18 +18,21 @@ caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 30ee456632070f778d51d7fb40475a795a0f620b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 471746242e7abe491148201103741fd00f4338cb
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="design-guidelines-for-exceptions"></a>Instrucciones de diseño de excepciones
 Control de excepciones tiene muchas ventajas comparado con informe de errores basada en valores de retorno. Diseño de buena framework ayuda al desarrollador de aplicaciones tenga en cuenta las ventajas de las excepciones. En esta sección se describe las ventajas de las excepciones y se presenta las directrices para usar de forma eficaz.  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Generación de excepciones](../../../docs/standard/design-guidelines/exception-throwing.md)  
- [Uso de tipos de excepción estándar](../../../docs/standard/design-guidelines/using-standard-exception-types.md)  
+ [Inicio de excepción](../../../docs/standard/design-guidelines/exception-throwing.md)  
+ [Uso de tipos de excepciones estándar](../../../docs/standard/design-guidelines/using-standard-exception-types.md)  
  [Excepciones y rendimiento](../../../docs/standard/design-guidelines/exceptions-and-performance.md)  
  *Partes © 2005, 2009 Microsoft Corporation. Reservados todos los derechos.*  
   

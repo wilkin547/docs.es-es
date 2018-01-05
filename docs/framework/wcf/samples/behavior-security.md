@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 9182c95b9770cac94b2a747e277fcd0cc02b387f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: a125aa0968abbd69580cab46f3231a6536eff9c5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="behavior-security"></a>Seguridad de comportamiento
 En esta sección se incluyen ejemplos que muestran cómo configurar la seguridad para los comportamientos del servicio.  
@@ -29,8 +30,8 @@ En esta sección se incluyen ejemplos que muestran cómo configurar la seguridad
  [Proveedor de pertenencia y roles](../../../../docs/framework/wcf/samples/membership-and-role-provider.md)  
  Este ejemplo muestra el modo en que un servicio puede utilizar los proveedores de pertenencia y roles de [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] para autenticar y autorizar a los clientes.  
   
- [Autorizar el acceso a las operaciones de servicio](../../../../docs/framework/wcf/samples/authorizing-access-to-service-operations.md)  
+ [Autorización de acceso a operaciones de servicio](../../../../docs/framework/wcf/samples/authorizing-access-to-service-operations.md)  
  Este ejemplo muestra cómo utilizar el [ \<serviceAuthorization >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceauthorization-element.md) para habilitar el uso de la <xref:System.Security.Permissions.PrincipalPermissionAttribute> atributo para autorizar el acceso a las operaciones de servicio.  
   
- [Suplanta al cliente](../../../../docs/framework/wcf/samples/impersonating-the-client.md)  
+ [Suplantación del cliente](../../../../docs/framework/wcf/samples/impersonating-the-client.md)  
  Este ejemplo muestra cómo suplantar la aplicación del autor de la llamada en el servicio para que el servicio pueda tener acceso a los recursos del sistema en nombre del autor de la llamada.

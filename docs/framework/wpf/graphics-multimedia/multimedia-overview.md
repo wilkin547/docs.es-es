@@ -16,11 +16,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7097f5bd58573315681c61d0380e58638a4c4fb1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 65553e18fc66825c9c0a991aba600b4b90d0d4c0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="multimedia-overview"></a>Información general sobre multimedia
 Las características multimedia de [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] le permiten integrar audio y vídeo en las aplicaciones para mejorar la experiencia del usuario. En este tema se presentan las características multimedia de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -125,4 +126,4 @@ Las características multimedia de [!INCLUDE[TLA#tla_winclient](../../../../incl
 ## <a name="see-also"></a>Vea también  
  <xref:System.Windows.Media.DrawingGroup>  
  [Diseño](../../../../docs/framework/wpf/advanced/layout.md)  
- [Temas de procedimientos](../../../../docs/framework/wpf/graphics-multimedia/audio-and-video-how-to-topics.md)
+ [Temas "Cómo..."](../../../../docs/framework/wpf/graphics-multimedia/audio-and-video-how-to-topics.md)

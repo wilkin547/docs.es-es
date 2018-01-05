@@ -17,11 +17,12 @@ caps.latest.revision: "49"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: c0af5a5d96f20b2ba5118909a3f0c5ba405bdb11
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: f35bd56bdc69f8c57a7e46984778051b57b7a06a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="security-considerations-in-wcf"></a>Consideraciones de seguridad en WCF
 Los temas en esta sección enumeran varios elementos relacionados con la seguridad a considerar al diseñar una aplicación de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
@@ -39,10 +40,10 @@ Los temas en esta sección enumeran varios elementos relacionados con la segurid
  [Manipulación](../../../../docs/framework/wcf/feature-details/tampering.md)  
  Discute la modificación de mensajes o de la entrega de mensajes y cómo mitigarlo.  
   
- [Ataques de reproducción](../../../../docs/framework/wcf/feature-details/replay-attacks.md)  
+ [Ataques por repetición](../../../../docs/framework/wcf/feature-details/replay-attacks.md)  
  Discute lo que pasa cuando un atacante copia una secuencia de mensajes entre dos usuarios y vuelve a reproducir la secuencia para uno o más de los usuarios, y cómo mitigar esto.  
   
- [Consideraciones de seguridad para las sesiones seguras](../../../../docs/framework/wcf/feature-details/security-considerations-for-secure-sessions.md)  
+ [Consideraciones de seguridad para sesiones seguras](../../../../docs/framework/wcf/feature-details/security-considerations-for-secure-sessions.md)  
  Discute los siguientes elementos que afectan a la seguridad al implementar sesiones seguras.  
   
  [Escenarios no admitidos](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)  
@@ -58,7 +59,7 @@ Los temas en esta sección enumeran varios elementos relacionados con la segurid
  <xref:System.ServiceModel>  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
- [Guía de seguridad y procedimientos recomendados](../../../../docs/framework/wcf/feature-details/security-guidance-and-best-practices.md)  
+ [Orientación de seguridad y procedimientos recomendados](../../../../docs/framework/wcf/feature-details/security-guidance-and-best-practices.md)  
   
 ## <a name="see-also"></a>Vea también  
  [Seguridad](../../../../docs/framework/wcf/feature-details/security.md)

@@ -16,11 +16,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9c4c67033711575e0e13785fd448114a6042d8e8
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: c24b5beae2a10720ee4d89b9d2d60306978d2628
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wpf-walkthroughs"></a>Tutoriales de WPF
 Los tutoriales proporcionan instrucciones paso a paso para escenarios comunes. Esto hace que sean un buen punto de partida para conocer el producto o una característica en particular.  
@@ -29,7 +30,7 @@ Los tutoriales proporcionan instrucciones paso a paso para escenarios comunes. E
   
 ## <a name="wpf-designer-walkthroughs"></a>Tutoriales de WPF Designer  
   
-|Título|Descripción|  
+|Title|Descripción|  
 |-----------|-----------------|  
 |[Tutorial: Compilar una aplicación de WPF sencilla con WPF Designer](http://msdn.microsoft.com/en-us/2d412231-dbdf-4e69-b060-4f2b246c2027)|Muestra cómo crear una aplicación de WPF sencilla con la [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)].|  
 |[Tutorial: Crear un diseño dinámico](http://msdn.microsoft.com/en-us/483aafbb-b29d-435a-b956-8e4f67cd4a0f)|Muestra cómo crear un diseño dinámico mediante el uso de un <xref:System.Windows.Controls.Grid> panel de control.|  
@@ -39,7 +40,7 @@ Los tutoriales proporcionan instrucciones paso a paso para escenarios comunes. E
   
 ## <a name="wpf-walkthroughs"></a>Tutoriales de WPF  
   
-|Título|Descripción|  
+|Title|Descripción|  
 |-----------|-----------------|  
 |[Tutorial: Mi primera aplicación de escritorio WPF](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)|Muestra cómo crear una aplicación de WPF utilizando muchas de las características comunes de WPF, incluidos los controles, diseño y el enlace de datos.|  
 |[Crear un botón mediante el uso de XAML](../../../../docs/framework/wpf/controls/walkthrough-create-a-button-by-using-xaml.md)|Muestra cómo crear un botón animado.|  
@@ -48,7 +49,7 @@ Los tutoriales proporcionan instrucciones paso a paso para escenarios comunes. E
   
 ## <a name="migration-and-interoperability-in-wpf"></a>Migración e interoperabilidad en WPF  
   
-|Título|Descripción|  
+|Title|Descripción|  
 |-----------|-----------------|  
 |[Tutorial: Hospedar un control de Windows Forms en WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md)|Muestra cómo hospedar un formulario Windows Forms <xref:System.Windows.Forms.MaskedTextBox?displayProperty=nameWithType> control en una aplicación WPF.|  
 |[Tutorial: Hospedar un control compuesto de formularios Windows Forms en WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)|Muestra cómo hospedar un [!INCLUDE[TLA2#tla_winforms](../../../../includes/tla2sharptla-winforms-md.md)] control compuesto de entrada de datos en un [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplicación.|  
@@ -58,6 +59,6 @@ Los tutoriales proporcionan instrucciones paso a paso para escenarios comunes. E
   
 ## <a name="related-sections"></a>Secciones relacionadas  
   
-|Título|Descripción|  
+|Title|Descripción|  
 |-----------|-----------------|  
 |[Tutoriales de Visual Studio](http://msdn.microsoft.com/en-us/f5399a1f-2d3d-42fb-b989-134ccda2159f)|Proporciona una lista relacionada de tutoriales para todas las áreas de la programación en Visual Studio.|

@@ -19,11 +19,14 @@ caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 89782b00799bfaac97780b0ffdee62c89fdfbe49
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 0387d820cc660bdf6cbafb9d76bbf0184c111881
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="naming-resources"></a>Asignar nombres a recursos
 Porque los recursos localizables se pueden hacer referencia a través de ciertos objetos como si fueran propiedades, las instrucciones de nomenclatura para los recursos son similares a las directrices de propiedad.  
@@ -50,4 +53,4 @@ Porque los recursos localizables se pueden hacer referencia a través de ciertos
   
 ## <a name="see-also"></a>Vea también  
  [Instrucciones de diseño de .NET Framework](../../../docs/standard/design-guidelines/index.md)  
- [Las directrices de nomenclatura](../../../docs/standard/design-guidelines/naming-guidelines.md)
+ [Instrucciones de nomenclatura](../../../docs/standard/design-guidelines/naming-guidelines.md)

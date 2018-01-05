@@ -18,11 +18,12 @@ caps.latest.revision: "45"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f9ea154bc7c7a20bcdd57e1f271a4010f50646de
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 385bcb8678b11e1cb8f84ae509b1f1b6777665d7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="optimizing-wpf-application-performance"></a>Optimizar WPF: Rendimiento de aplicaciones
 Esta sección sirve como referencia para [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] los desarrolladores de aplicaciones que están buscando maneras de mejorar el rendimiento de sus aplicaciones. Si es un desarrollador que está familiarizado con la [!INCLUDE[TLA#tla_avalonwinfx](../../../../includes/tlasharptla-avalonwinfx-md.md)] y [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], primero debe familiarizarse con ambas plataformas. En esta sección se da por supuesto conocimientos prácticos de ambos y se escribe para los programadores que ya sabe lo suficiente como para ponerse en marcha sus aplicaciones.  
@@ -43,7 +44,7 @@ Esta sección sirve como referencia para [!INCLUDE[TLA#tla_winclient](../../../.
   
  [Recursos de la aplicación](../../../../docs/framework/wpf/advanced/optimizing-performance-application-resources.md)  
   
- [Text](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)  
+ [Texto](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)  
   
  [Enlace de datos](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)  
   

@@ -17,11 +17,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0ab9baca1103adf8de96204bdb1b3353a5456b94
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ae10153f31b79a220b84cae7a6525eca0ce0bd9c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-specify-a-custom-popup-position"></a>Cómo: Especificar una posición emergente personalizada
 Este ejemplo muestra cómo especificar una posición personalizada para un <xref:System.Windows.Controls.Primitives.Popup> controlar cuándo el <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> propiedad está establecida en <xref:System.Windows.Controls.Primitives.PlacementMode.Custom>.  
@@ -44,4 +45,4 @@ Este ejemplo muestra cómo especificar una posición personalizada para un <xref
 ## <a name="see-also"></a>Vea también  
  <xref:System.Windows.Controls.Primitives.Popup>  
  [Información general sobre el control Popup](../../../../docs/framework/wpf/controls/popup-overview.md)  
- [Temas de procedimientos](../../../../docs/framework/wpf/controls/popup-how-to-topics.md)
+ [Temas "Cómo..."](../../../../docs/framework/wpf/controls/popup-how-to-topics.md)

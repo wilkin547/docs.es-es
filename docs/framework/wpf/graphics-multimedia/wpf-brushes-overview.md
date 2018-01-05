@@ -17,11 +17,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: de5bcaeffb77f52b80c229cf0402c2c090e40d81
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ec7e566e6f56c215bbaeafdfb5c5e97cc0add0bf
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wpf-brushes-overview"></a>Información general sobre pinceles de WPF
 Todos los elementos visibles en la pantalla está visible porque lo ha pintado un pincel. Por ejemplo, un pincel se utiliza para describir el fondo de un botón, el primer plano del texto y el relleno de una forma. Este tema presentan los conceptos de pintar con [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] pinceles y proporciona ejemplos. Los pinceles permiten pintar objetos [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] con cualquier cosa, desde colores simples y sólidos hasta conjuntos complejos de patrones e imágenes.  
@@ -178,5 +179,5 @@ Rectángulo pintado mediante VisualBrush
  [Ejemplo de pinceles](http://go.microsoft.com/fwlink/?LinkID=159973)  
  [Ejemplo de ImageBrush](http://go.microsoft.com/fwlink/?LinkID=160005)  
  [Ejemplo de VisualBrush](http://go.microsoft.com/fwlink/?LinkID=160049)  
- [Temas de procedimientos](../../../../docs/framework/wpf/graphics-multimedia/brushes-how-to-topics.md)  
+ [Temas "Cómo..."](../../../../docs/framework/wpf/graphics-multimedia/brushes-how-to-topics.md)  
  [Otras recomendaciones de rendimiento](../../../../docs/framework/wpf/advanced/optimizing-performance-other-recommendations.md)

@@ -20,11 +20,12 @@ caps.latest.revision: "25"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: acdbcac957f8dc682e0038600afa90ccdfd0fe14
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: abdc98a6fbf48a30f2f5702e7c2d78396381de6c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="drawing-objects-overview"></a>Información general sobre objetos Drawing
 Este tema se presentan <xref:System.Windows.Media.Drawing> objetos y se describe cómo utilizarlos para dibujar con eficacia formas, mapas de bits, texto y multimedia. Usar <xref:System.Windows.Media.Drawing> objetos al crear imágenes prediseñadas, pintar con un <xref:System.Windows.Media.DrawingBrush>, o use <xref:System.Windows.Media.Visual> objetos.  
@@ -188,7 +189,7 @@ Orden de las operaciones de DrawingGroup
   
  En la tabla siguiente se describe las propiedades que puede utilizar para manipular un <xref:System.Windows.Media.DrawingGroup> contenido del objeto.  
   
-|Propiedad|Descripción|Ilustración|  
+|Property|Descripción|Ilustración|  
 |--------------|-----------------|------------------|  
 |<xref:System.Windows.Media.DrawingGroup.OpacityMask%2A>|Modifica la opacidad de las partes seleccionadas de la <xref:System.Windows.Media.DrawingGroup> contenido. Para obtener un ejemplo, vea [How to: Control the Opacity of a Drawing](http://msdn.microsoft.com/en-us/68580652-7d32-4d27-93cc-a5148cf4d5ee) (Cómo: Controlar la opacidad de un dibujo).|![DrawingGroup con una máscara de opacidad](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-opmask.png "graphicsmm_opmask")|  
 |<xref:System.Windows.Media.DrawingGroup.Opacity%2A>|Cambia de manera uniforme la opacidad de la <xref:System.Windows.Media.DrawingGroup> contenido. Utilice esta propiedad para realizar un <xref:System.Windows.Media.Drawing> transparente o parcialmente transparente. Para obtener un ejemplo, vea [How to: Apply an Opacity Mask to a Drawing](http://msdn.microsoft.com/en-us/d77b420b-9be2-479c-a45e-82f4da30eb9f) (Cómo: Aplicar una máscara de opacidad a un dibujo).|![DrawingGroups con diferentes valores de opacidad](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-opacity.png "graphicsmm_opacity")|  
@@ -252,4 +253,4 @@ Uso de GeometryDrawing con un objeto DrawingBrush
  [Información general sobre formas y dibujo básico en WPF](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)  
  [Información general sobre la representación de gráficos en WPF](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)  
  [Información general sobre objetos Freezable](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)  
- [Temas de procedimientos](../../../../docs/framework/wpf/graphics-multimedia/drawings-how-to-topics.md)
+ [Temas "Cómo..."](../../../../docs/framework/wpf/graphics-multimedia/drawings-how-to-topics.md)

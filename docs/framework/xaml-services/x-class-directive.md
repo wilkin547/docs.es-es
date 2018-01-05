@@ -21,11 +21,12 @@ caps.latest.revision: "27"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 1828ef3614cc1f3a81d8aeff62c15ed5accfe380
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b894a56caa3644bae140e7ec37cf5b55ab093a59
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="xclass-directive"></a>x:Class (Directiva)
 Configura la compilación de marcado XAML para unir clases parciales entre el marcado y código subyacente. La clase parcial de código se define en un archivo de código independiente en un [!INCLUDE[TLA#tla_cls](../../../includes/tlasharptla-cls-md.md)] lenguaje, mientras que la clase parcial de marcado normalmente se crea mediante generación de código durante la compilación de XAML.  
@@ -43,7 +44,7 @@ Configura la compilación de marcado XAML para unir clases parciales entre el ma
 |||  
 |-|-|  
 |`namespace`|Opcional. Especifica un [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)] espacio de nombres que contiene la clase parcial identificada por `classname`. Si `namespace` se especifica un punto (.) separa `namespace` y `classname`. Vea la sección Comentarios.|  
-|`classname`|Obligatorio. Especifica el [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)] nombre de la clase parcial que conecta el XAML cargado y el código subyacente de ese código XAML.|  
+|`classname`|Requerido. Especifica el [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)] nombre de la clase parcial que conecta el XAML cargado y el código subyacente de ese código XAML.|  
   
 ## <a name="dependencies"></a>Dependencias  
  `x:Class`solo puede especificarse en el elemento raíz de una producción de XAML. `x:Class`no es válido en cualquier objeto que tiene un elemento primario en la producción de XAML. Para obtener más información, consulte [ \[MS-XAML\] sección 4.3.1.6](http://go.microsoft.com/fwlink/?LinkId=114525).  

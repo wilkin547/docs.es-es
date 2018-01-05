@@ -17,13 +17,13 @@
 ### [Microservicios de .NET: Arquitectura para aplicaciones .NET en contenedor](standard/microservices-architecture/)
 ## [Selección entre .NET Core y .NET Framework para aplicaciones de servidor](standard/choosing-core-framework-server.md)
 ## [¿Qué es el "código administrado"?](standard/managed-code.md)
-### [Administración automática de la memoria](standard/automatic-memory-management.md) 
+### [Administración automática de la memoria](standard/automatic-memory-management.md)
 ## [Common Language Runtime (CLR)](standard/clr.md)
 ## [Independencia de lenguaje](standard/language-independence.md)
 ### [Independencia del lenguaje y componentes independientes del lenguaje](standard/language-independence-and-language-independent-components.md)
 ## [Bibliotecas de Framework](standard/framework-libraries.md)
-### [Información general de la biblioteca de clases](standard/class-library-overview.md)  
-### [Tipos base](standard/base-types/)  
+### [Información general de la biblioteca de clases](standard/class-library-overview.md)
+### [Tipos base](standard/base-types/)
 ## [Bibliotecas de clases de .NET](standard/class-libraries.md)
 ## [Portability Analyzer](standard/portability-analyzer.md)
 ## [Control y generación de excepciones](standard/exceptions/)
@@ -101,10 +101,15 @@
 ### [Creación de imágenes de Docker para aplicaciones de .NET Core](core/docker/building-net-docker-images.md)
 ### [Visual Studio Tools para Docker](/aspnet/core/publishing/visual-studio-tools-for-docker)
 ## [Pruebas unitarias](core/testing/index.md)
-### [Pruebas unitarias con pruebas de dotnet y xUnit](core/testing/unit-testing-with-dotnet-test.md)
-### [Pruebas unitarias con pruebas de dotnet y MSTest](core/testing/unit-testing-with-mstest.md)
-### [Pruebas unitarias de F# con pruebas de dotnet y xUnit](core/testing/unit-testing-fsharp-with-dotnet-test.md)
-### [Pruebas unitarias de F# con pruebas de dotnet y MSTest](core/testing/unit-testing-fsharp-with-mstest.md)
+### [Pruebas unitarias de C# con xUnit](core/testing/unit-testing-with-dotnet-test.md)
+### [Pruebas unitarias de C# con NUnit](core/testing/unit-testing-with-nunit.md)
+### [Pruebas unitarias de C# con MSTest](core/testing/unit-testing-with-mstest.md)
+### [Pruebas unitarias de F# con xUnit](core/testing/unit-testing-fsharp-with-dotnet-test.md)
+### [Pruebas unitarias de F# con NUnit](core/testing/unit-testing-fsharp-with-nunit.md)
+### [Pruebas unitarias de F# con MSTest](core/testing/unit-testing-fsharp-with-mstest.md)
+### [Pruebas unitarias de VB con xUnit](core/testing/unit-testing-visual-basic-with-dotnet-test.md)
+### [Pruebas unitarias de VB con NUnit](core/testing/unit-testing-visual-basic-with-nunit.md)
+### [Pruebas unitarias de VB con MSTest](core/testing/unit-testing-visual-basic-with-mstest.md)
 ### [Ejecución de pruebas unitarias selectivas](core/testing/selective-unit-tests.md)
 ### [Salida publicada de prueba unitaria](core/testing/unit-testing-published-output.md)
 ### [Proyectos de .NET Core de Live Unit Testing con Visual Studio](/visualstudio/test/live-unit-testing-start)
@@ -204,7 +209,7 @@
 ## [Paseo por C#](csharp/tour-of-csharp/)
 <!-- The "What's New" section is short, and one level
     deep, so leave it in the main TOC -->
-## [Novedades de C#](csharp/whats-new/index.md) 
+## [Novedades de C#](csharp/whats-new/index.md)
 ### [Novedades de C# 7.2](csharp/whats-new/csharp-7-2.md)
 ### [Novedades de C# 7.1](csharp/whats-new/csharp-7-1.md)
 ### [Novedades de C# 7](csharp/whats-new/csharp-7.md)
@@ -212,19 +217,16 @@
 ### [Historial de versiones de C#](csharp/whats-new/csharp-version-history.md)
 ### [Relaciones entre el lenguaje y el marco](csharp/whats-new/relationships-between-language-and-library.md)
 <!-- End What's New -->
-<!--## [🔧 C# Interactive](csharp/interactive/)-->
-<!-- Do this section later, once master redirects are in place -->
 ## Conceptos de C#
 ### [Sistema de tipos de C#](csharp/programming-guide/types/index.md)
 ### [Espacios de nombres](csharp/programming-guide/namespaces/index.md)
 ### [Tipos básicos](csharp/basic-types.md)
 ### [Clases](csharp/classes.md)
-### [Estructuras](csharp/structs.md)
+### [Structs](csharp/structs.md)
 ### [Tuplas](csharp/tuples.md)
 ### [Deconstrucción de tuplas y otros tipos](csharp/deconstruct.md)
 ### [Interfaces](csharp/programming-guide/interfaces/index.md)
-<!--### [🔧 Methods and Lambda Expressions](csharp/methods-lambda-expressions.md)-->
-### [Métodos](csharp/methods.md)
+#### [Métodos](csharp/methods.md)
 #### [Expresiones lambda](csharp/lambda-expressions.md)
 ### [Propiedades](csharp/properties.md)
 ### [Indizadores](csharp/indexers.md)
@@ -242,7 +244,6 @@
 #### [Distinción de delegados y eventos](csharp/distinguish-delegates-events.md)
 ### [Language-Integrated Query (LINQ)](csharp/linq/)
 ### [Programación asincrónica](csharp/async.md)
-<!--### [🔧 Parallel programming](csharp/parallel.md)-->
 ### [Coincidencia de patrones](csharp/pattern-matching.md)
 ### [Semántica de referencia con tipos de valor](csharp/reference-semantics-with-value-types.md)
 ### [Árboles de expresión](csharp/expression-trees.md)
@@ -254,11 +255,10 @@
 #### [Traducción de expresiones](csharp/expression-trees-translating.md)
 #### [Resumen](csharp/expression-trees-summary.md)
 ### [Interoperabilidad nativa](csharp/programming-guide/interop/index.md)
-<!--### [🔧 Reflection & code generation](csharp/reflection.md)-->
 ### [Documentación del código](csharp/codedoc.md)
 ### [Control de versiones](csharp/versioning.md)
 <!-- End of C# Concepts section -->
-<!--## [🔧 Using the .NET Compiler Platform](csharp/roslyn/index.md)-->
+## [SDK de la plataforma del compilador de .NET (API de Roslyn)](csharp/roslyn-sdk/)
 ## [Guía de programación de C#](csharp/programming-guide/)
 ## [Referencia del lenguaje](csharp/language-reference/)
 ## [Tutoriales](csharp/walkthroughs.md)

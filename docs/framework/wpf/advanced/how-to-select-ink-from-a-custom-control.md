@@ -20,11 +20,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: dd9693209cc35ecd3c0473133b7c21639a239ff5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 972ece6964d1f3cc42c6221c3b18336e3353bc18
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-select-ink-from-a-custom-control"></a>Cómo: Seleccionar entradas manuscritas desde un control personalizado
 Mediante la adición de un <xref:System.Windows.Ink.IncrementalLassoHitTester> para el control personalizado, puede habilitar el control para que un usuario puede seleccionar una entrada manuscrita con una herramienta de lazo, similar a la forma en que el <xref:System.Windows.Controls.InkCanvas> selecciona entradas de lápiz con un lazo.  

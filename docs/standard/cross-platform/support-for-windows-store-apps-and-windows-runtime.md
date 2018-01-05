@@ -19,11 +19,14 @@ caps.latest.revision: "20"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: a8ee68c53173f0919a9200ed5ac82fed3e27affc
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 6dccf9d70772c4eaa8818388ad662b1f93804431
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="net-framework-support-for-windows-store-apps-and-windows-runtime"></a>Compatibilidad de .NET Framework con las aplicaciones de la Tienda Windows y Windows Runtime
 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] admite varios escenarios de desarrollo de software con [!INCLUDE[wrt](../../../includes/wrt-md.md)]. Estos escenarios se clasifican en tres categorías:  
@@ -96,7 +99,7 @@ ms.lasthandoff: 10/18/2017
 ### <a name="primitive-types"></a>Tipos primitivos  
  Para habilitar el uso natural de [!INCLUDE[wrt](../../../includes/wrt-md.md)] en el código administrado, en el código aparecen los tipos primitivos de .NET Framework en lugar de los tipos primitivos de [!INCLUDE[wrt](../../../includes/wrt-md.md)]. En .NET Framework, los tipos primitivos como la estructura `Int32` tienen muchas propiedades y métodos útiles, como el método `Int32.TryParse`. Por el contrario, los tipos primitivos y las estructuras de [!INCLUDE[wrt](../../../includes/wrt-md.md)] solo tienen campos. Cuando se usan primitivas en el código administrado, aparecen como si fueran tipos de .NET Framework, y se pueden usar las propiedades y métodos de los tipos de .NET Framework como se haría normalmente. La lista siguiente contiene un resumen:  
   
--   Para las primitivas de [!INCLUDE[wrt](../../../includes/wrt-md.md)] `Int32`, `Int64`, `Single`, `Double`, `Boolean`, `String` (una colección inmutable de caracteres Unicode), `Enum`, `UInt32`, `UInt64` y `Guid`, use el tipo del mismo nombre en el espacio de nombres `System`.  
+-   Para los tipos primitivos de [!INCLUDE[wrt](../../../includes/wrt-md.md)] `Int32`, `Int64`, `Single`, `Double`, `Boolean`, `String` (una colección inmutable de caracteres Unicode), `Enum`, `UInt32`, `UInt64` y `Guid`, utilice el tipo del mismo nombre en el espacio de nombres `System`.  
   
 -   Para `UInt8`, use `System.Byte`.  
   
@@ -158,4 +161,4 @@ ms.lasthandoff: 10/18/2017
 |[Desarrollar aplicaciones de la tienda de Windows (VB / C# / C++ y XAML)](http://go.microsoft.com/fwlink/p/?LinkId=238311)|Proporciona recursos clave para ayudarle a empezar a desarrollar aplicaciones de la [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] mediante C# o Visual Basic, e incluye numerosos tutoriales rápidos, directrices y procedimientos recomendados. (En el Centro de desarrollo de Windows).|  
 |[Crear componentes de tiempo de ejecución de Windows en C# y Visual Basic](http://go.microsoft.com/fwlink/p/?LinkId=238313)|Describe cómo crear un componente de [!INCLUDE[wrt](../../../includes/wrt-md.md)] mediante .NET Framework, explica cómo usarlo como parte de una aplicación de la [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] creada para Windows mediante JavaScript y describe cómo depurar la combinación con Visual Studio. (En el Centro de desarrollo de Windows).|  
 |[Referencia de Windows en tiempo de ejecución](http://go.microsoft.com/fwlink/?LinkId=238319)|Documentación de referencia para [!INCLUDE[wrt](../../../includes/wrt-md.md)]. (En el Centro de desarrollo de Windows).|  
-|[Pasar un identificador URI a Windows Runtime](../../../docs/standard/cross-platform/passing-a-uri-to-the-windows-runtime.md)|Describe un problema que puede surgir cuando se pasa un URI desde el código administrado a [!INCLUDE[wrt](../../../includes/wrt-md.md)] y cómo evitarlo.|
+|[Transferencia de un URI a Windows Runtime](../../../docs/standard/cross-platform/passing-a-uri-to-the-windows-runtime.md)|Describe un problema que puede surgir cuando se pasa un URI desde el código administrado a [!INCLUDE[wrt](../../../includes/wrt-md.md)] y cómo evitarlo.|

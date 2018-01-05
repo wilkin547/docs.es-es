@@ -22,11 +22,12 @@ caps.latest.revision: "23"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2cec4326c8ae93507ee94c0b9573e679c8584a77
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 82f176a5c4d0f3e371993c9b2273bb045fe6df1f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wpf-community-feedback"></a>Comentarios de la comunidad de WPF
 [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] ofrece una amplia gama de recursos de comunidad que le ayudarán a conocer, analizar y proporcionar comentarios sobre [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)], incluidos los blogs de los miembros del equipo de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] y líderes de la comunidad, los foros y el centro de comentarios del producto de [!INCLUDE[TLA2#tla_ms](../../../../includes/tla2sharptla-ms-md.md)]. Cada recurso de comunidad proporciona un conjunto diferente de ventajas. Estas ventajas se describen aquí, así como un conjunto de procedimientos recomendados para asegurarse la mejor respuesta de la comunidad en general y de [!INCLUDE[TLA2#tla_ms](../../../../includes/tla2sharptla-ms-md.md)] en particular.  

@@ -17,11 +17,14 @@ caps.latest.revision: "14"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: a812207fb58e6c87c263966081060d02f8038963
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 38c344e4f4ede58fcb39dd638f6aa8e896e63da0
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="framework-design-guidelines"></a>Instrucciones de diseño de .NET Framework
 Esta sección proporciona instrucciones de diseño de las bibliotecas que extensión e interactúan con .NET Framework. El objetivo es ayudar a los diseñadores de bibliotecas a garantizar la coherencia de la API y facilidad de uso al proporcionar un modelo de programación unificado que es independiente del lenguaje de programación utilizado para el desarrollo. Se recomienda seguir estas directrices de diseño al desarrollar clases y componentes que extienden .NET Framework. Diseño de biblioteca incoherente afecta negativamente afecta a la productividad del desarrollador y desaconseja adopción.  
@@ -31,7 +34,7 @@ Esta sección proporciona instrucciones de diseño de las bibliotecas que extens
  Estas instrucciones se ha extraído de la libreta de *directrices de diseño de marco de trabajo: convenciones, expresiones y patrones para las bibliotecas .NET de reutilizable, 2ª edición*, Krzysztof Cwalina y Brad Abrams.  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Las directrices de nomenclatura](../../../docs/standard/design-guidelines/naming-guidelines.md)  
+ [Instrucciones de nomenclatura](../../../docs/standard/design-guidelines/naming-guidelines.md)  
  Proporciona instrucciones para asignar nombres a los ensamblados, espacios de nombres, tipos y miembros en bibliotecas de clases.  
   
  [Instrucciones de diseño de tipos](../../../docs/standard/design-guidelines/type.md)  
@@ -40,10 +43,10 @@ Esta sección proporciona instrucciones de diseño de las bibliotecas que extens
  [Instrucciones de diseño de miembros](../../../docs/standard/design-guidelines/member.md)  
  Proporciona directrices para diseñar y utilizar propiedades, métodos, constructores, campos, eventos, operadores y parámetros.  
   
- [Diseñar para la extensibilidad](../../../docs/standard/design-guidelines/designing-for-extensibility.md)  
+ [Diseño de extensibilidad](../../../docs/standard/design-guidelines/designing-for-extensibility.md)  
  Describe los mecanismos de extensibilidad, como crear subclases de una, con eventos, los miembros virtuales y las devoluciones de llamada y explica cómo elegir los mecanismos que mejor cumplen los requisitos del marco de trabajo.  
   
- [Instrucciones de diseño para excepciones](../../../docs/standard/design-guidelines/exceptions.md)  
+ [Instrucciones de diseño de excepciones](../../../docs/standard/design-guidelines/exceptions.md)  
  Describe las instrucciones de diseño para diseñar, producir y detectar excepciones.  
   
  [Instrucciones de uso](../../../docs/standard/design-guidelines/usage-guidelines.md)  

@@ -18,11 +18,12 @@ caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8f2b04dfa51f578ba80e2b766f455719afbb86b5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 9cd8f9b14f114060ebec8e336c1212d61fa19c83
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="path-markup-syntax"></a>Sintaxis de marcado de trazados
 Las rutas de acceso se tratan en [formas y dibujo básico en WPF Overview](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md) y [información general sobre geometría](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md), sin embargo, este tema describe en detalle el idioma de mínima eficaz y complejo que puede utilizar para especificar la ruta de acceso geometrías de forma más sólida usando [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].  
@@ -79,7 +80,7 @@ Las rutas de acceso se tratan en [formas y dibujo básico en WPF Overview](../..
   
 |Sintaxis|  
 |------------|  
-|`M` *startPoint*<br /><br /> o bien<br /><br /> `m` *startPoint*|  
+|`M` *startPoint*<br /><br /> O bien<br /><br /> `m` *startPoint*|  
   
 |Término|Descripción|  
 |----------|-----------------|  
@@ -98,7 +99,7 @@ Las rutas de acceso se tratan en [formas y dibujo básico en WPF Overview](../..
   
 |Sintaxis|  
 |------------|  
-|`L` *endPoint*<br /><br /> o bien<br /><br /> `l` *endPoint*|  
+|`L` *endPoint*<br /><br /> O bien<br /><br /> `l` *endPoint*|  
   
 |Término|Descripción|  
 |----------|-----------------|  
@@ -112,7 +113,7 @@ En mayúscula `L` indica que `endPoint` es un valor absoluto; una minúscula `l`
   
 |Sintaxis|  
 |------------|  
-|`H`  *x*<br /><br /> o bien<br /><br /> `h`  *x*|  
+|`H`  *x*<br /><br /> O bien<br /><br /> `h`  *x*|  
   
 |Término|Descripción|  
 |----------|-----------------|  
@@ -139,7 +140,7 @@ En mayúscula `V` indica que `y` es un valor absoluto; una minúscula `v` indica
   
 |Sintaxis|  
 |------------|  
-|`C` `controlPoint`1`controlPoint`2`endPoint`<br /><br /> o bien<br /><br /> `c` `controlPoint`1`controlPoint`2`endPoint`|  
+|`C` `controlPoint`1`controlPoint`2`endPoint`<br /><br /> O bien<br /><br /> `c` `controlPoint`1`controlPoint`2`endPoint`|  
   
 |Término|Descripción|  
 |----------|-----------------|  
@@ -152,7 +153,7 @@ En mayúscula `V` indica que `y` es un valor absoluto; una minúscula `v` indica
   
 |Sintaxis|  
 |------------|  
-|`Q` `controlPoint` `endPoint`<br /><br /> o bien<br /><br /> `q` `controlPoint` `endPoint`|  
+|`Q` `controlPoint` `endPoint`<br /><br /> O bien<br /><br /> `q` `controlPoint` `endPoint`|  
   
 |Término|Descripción|  
 |----------|-----------------|  
@@ -164,7 +165,7 @@ En mayúscula `V` indica que `y` es un valor absoluto; una minúscula `v` indica
   
 |Sintaxis|  
 |------------|  
-|`S` `controlPoint`2`endPoint`<br /><br /> o bien<br /><br /> `s` `controlPoint`2`endPoint`|  
+|`S` `controlPoint`2`endPoint`<br /><br /> O bien<br /><br /> `s` `controlPoint`2`endPoint`|  
   
 |Término|Descripción|  
 |----------|-----------------|  
@@ -176,7 +177,7 @@ En mayúscula `V` indica que `y` es un valor absoluto; una minúscula `v` indica
   
 |Sintaxis|  
 |------------|  
-|`T` `controlPoint` `endPoint`<br /><br /> o bien<br /><br /> `t` `controlPoint` `endPoint`|  
+|`T` `controlPoint` `endPoint`<br /><br /> O bien<br /><br /> `t` `controlPoint` `endPoint`|  
   
 |Término|Descripción|  
 |----------|-----------------|  
@@ -188,7 +189,7 @@ En mayúscula `V` indica que `y` es un valor absoluto; una minúscula `v` indica
   
 |Sintaxis|  
 |------------|  
-|`A` `size` `rotationAngle` `isLargeArcFlag` `sweepDirectionFlag` `endPoint`<br /><br /> o bien<br /><br /> `a` `size` `rotationAngle` `isLargeArcFlag` `sweepDirectionFlag` `endPoint`|  
+|`A` `size` `rotationAngle` `isLargeArcFlag` `sweepDirectionFlag` `endPoint`<br /><br /> O bien<br /><br /> `a` `size` `rotationAngle` `isLargeArcFlag` `sweepDirectionFlag` `endPoint`|  
   
 |Término|Descripción|  
 |----------|-----------------|  
@@ -204,7 +205,7 @@ En mayúscula `V` indica que `y` es un valor absoluto; una minúscula `v` indica
   
 |Sintaxis|  
 |------------|  
-|`Z`<br /><br /> o bien<br /><br /> `z`|  
+|`Z`<br /><br /> O bien<br /><br /> `z`|  
 
 <a name="pointsyntax"></a>   
 ## <a name="point-syntax"></a>Sintaxis de punto  
@@ -212,7 +213,7 @@ En mayúscula `V` indica que `y` es un valor absoluto; una minúscula `v` indica
   
 |Sintaxis|  
 |------------|  
-|`x` `,` `y`<br /><br /> o bien<br /><br /> `x` `y`|  
+|`x` `,` `y`<br /><br /> O bien<br /><br /> `x` `y`|  
   
 |Término|Descripción|  
 |----------|-----------------|  
@@ -241,4 +242,4 @@ En mayúscula `V` indica que `y` es un valor absoluto; una minúscula `v` indica
  <xref:System.Windows.Media.PathFigureCollection>  
  [Información general sobre formas y dibujo básico en WPF](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)  
  [Información general sobre geometría](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)  
- [Temas de procedimientos](../../../../docs/framework/wpf/graphics-multimedia/geometries-how-to-topics.md)
+ [Temas "Cómo..."](../../../../docs/framework/wpf/graphics-multimedia/geometries-how-to-topics.md)

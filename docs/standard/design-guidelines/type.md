@@ -18,11 +18,14 @@ caps.latest.revision: "13"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 2b24a934285f88386daa764c5b28bd82cf5d39a9
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 6b02abef0180b6de82e26837863849cce35c994f
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="type-design-guidelines"></a>Instrucciones de diseño de tipos
 Desde la perspectiva CLR, hay solo dos categorías de tipos: tipos de referencia y tipos de valor, pero con el fin de obtener una explicación sobre el diseño de marco de trabajo, se dividen los tipos en grupos lógicos más, cada uno con sus propias reglas de diseño específicas.  
@@ -42,12 +45,12 @@ Desde la perspectiva CLR, hay solo dos categorías de tipos: tipos de referencia
  **✓ HACER** Asegúrese de que cada tipo es un conjunto bien definido de miembros relacionados, no sólo un conjunto aleatorio de funcionalidad no relacionado.  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Elegir entre clases y estructuras](../../../docs/standard/design-guidelines/choosing-between-class-and-struct.md)  
+ [Elección entre clase y estructura](../../../docs/standard/design-guidelines/choosing-between-class-and-struct.md)  
  [Diseño de clases abstractas](../../../docs/standard/design-guidelines/abstract-class.md)  
  [Diseño de clases estáticas](../../../docs/standard/design-guidelines/static-class.md)  
- [Diseño de la interfaz](../../../docs/standard/design-guidelines/interface.md)  
- [Diseño de struct](../../../docs/standard/design-guidelines/struct.md)  
- [Diseño de enum](../../../docs/standard/design-guidelines/enum.md)  
+ [Diseño de interfaces](../../../docs/standard/design-guidelines/interface.md)  
+ [Diseño de estructuras](../../../docs/standard/design-guidelines/struct.md)  
+ [Diseño de enumeraciones](../../../docs/standard/design-guidelines/enum.md)  
  [Tipos anidados](../../../docs/standard/design-guidelines/nested-types.md)  
  *Partes © 2005, 2009 Microsoft Corporation. Reservados todos los derechos.*  
   

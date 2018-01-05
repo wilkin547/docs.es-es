@@ -19,11 +19,14 @@ caps.latest.revision: "16"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: e1bddb7bb3559e6f39b7884b92f64bee8fbb3510
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: b36f230c9a5f8653f3e252d26fe6464bb9cac4bb
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="capitalization-conventions"></a>Normas referentes al uso de minúsculas y mayúsculas
 Las directrices descritas en este capítulo disponer un método sencillo para el uso de mayúsculas, cuando se aplica de forma coherente, asegúrese de identificadores para los tipos, miembros y parámetros fáciles de leer.  
@@ -62,8 +65,8 @@ Las directrices descritas en este capítulo disponer un método sencillo para el
 |Tipo|Pascal|`public class StreamReader { ... }`|  
 |Interfaz|Pascal|`public interface IEnumerable { ... }`|  
 |Método|Pascal|`public class Object {` <br />  `public virtual string ToString();` <br /> `}`|  
-|Propiedad|Pascal|`public class String {` <br />  `public int Length { get; }` <br /> `}`|  
-|Evento|Pascal|`public class Process {` <br />  `public event EventHandler Exited;` <br /> `}`|  
+|Property|Pascal|`public class String {` <br />  `public int Length { get; }` <br /> `}`|  
+|evento|Pascal|`public class Process {` <br />  `public event EventHandler Exited;` <br /> `}`|  
 |Campo|Pascal|`public class MessageQueue {` <br />  `public static readonly TimeSpan` <br /> `InfiniteTimeout;` <br /> `}` <br /> `public struct UInt32 {` <br />  `public const Min = 0;` <br /> `}`|  
 |Valor de enumeración|Pascal|`public enum FileMode {` <br />  `Append,` <br />  `...` <br /> `}`|  
 |Parámetro|Camel|`public class Convert {` <br />  `public static int ToInt32(string value);` <br /> `}`|  
@@ -114,4 +117,4 @@ Las directrices descritas en este capítulo disponer un método sencillo para el
   
 ## <a name="see-also"></a>Vea también  
  [Instrucciones de diseño de .NET Framework](../../../docs/standard/design-guidelines/index.md)  
- [Las directrices de nomenclatura](../../../docs/standard/design-guidelines/naming-guidelines.md)
+ [Instrucciones de nomenclatura](../../../docs/standard/design-guidelines/naming-guidelines.md)

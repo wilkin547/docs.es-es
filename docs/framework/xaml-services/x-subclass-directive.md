@@ -21,11 +21,12 @@ caps.latest.revision: "20"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 5c6e91fcecb60dee2577ea62c2313f8b2c7eecbf
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1d620b59208b9dc852abee3dd2e4d6c58b223d70
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="xsubclass-directive"></a>x:Subclass (Directiva)
 Modifica el comportamiento de compilación de marcado XAML cuando `x:Class` también se proporciona. En lugar de crear una clase parcial que se basa en `x:Class`, proporcionado `x:Class` se crea como una clase intermedia, y, a continuación, se espera que la clase derivada proporcionada basarse en `x:Class`.  
@@ -43,9 +44,9 @@ Modifica el comportamiento de compilación de marcado XAML cuando `x:Class` tamb
 |||  
 |-|-|  
 |`namespace`|Opcional. Especifica un espacio de nombres CLR que contiene `classname`. Si `namespace` se especifica un punto (.) separa `namespace` y `classname`.|  
-|`classname`|Obligatorio. Especifica el nombre de la clase parcial que conecta el XAML cargado y el código subyacente de ese XAML CLR. Vea la sección Comentarios.|  
+|`classname`|Requerido. Especifica el nombre de la clase parcial que conecta el XAML cargado y el código subyacente de ese XAML CLR. Vea la sección Comentarios.|  
 |`subclassNamespace`|Opcional. Puede ser diferente de `namespace` si cada espacio de nombres puede resolver el otro. Especifica un espacio de nombres CLR que contiene `subclassName`. Si `subclassName` se especifica un punto (.) separa `subclassNamespace` y `subclassName`.|  
-|`subclassName`|Obligatorio. Especifica el nombre de la subclase CLR.|  
+|`subclassName`|Requerido. Especifica el nombre de la subclase CLR.|  
   
 ## <a name="dependencies"></a>Dependencias  
  [x: Class Directive](../../../docs/framework/xaml-services/x-class-directive.md) también se debe proporcionar en el mismo objeto, y ese objeto debe ser el elemento raíz de la producción de XAML.  

@@ -17,11 +17,14 @@ caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: b1aa0eaccc26e1bd7cc6b78953dc0a782b2f952e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 2c1fc02b64a494220070a1cfed928b616e4970c0
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="exception-throwing"></a>Generación de excepciones
 Generación de excepciones directrices descritas en esta sección requieren una buena definición del significado del error de ejecución. Se produce un error de ejecución cada vez que un miembro no puede hacer lo que estaba diseñado para hacer (lo que el nombre de miembro implica). Por ejemplo, si la `OpenFile` método no puede devolver un identificador de archivo abierto al llamador, se consideraría un error de ejecución.  
@@ -74,4 +77,4 @@ Generación de excepciones directrices descritas en esta sección requieren una 
   
 ## <a name="see-also"></a>Vea también  
  [Instrucciones de diseño de .NET Framework](../../../docs/standard/design-guidelines/index.md)  
- [Instrucciones de diseño para excepciones](../../../docs/standard/design-guidelines/exceptions.md)
+ [Instrucciones de diseño de excepciones](../../../docs/standard/design-guidelines/exceptions.md)

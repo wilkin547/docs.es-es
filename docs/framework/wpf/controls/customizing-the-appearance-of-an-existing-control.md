@@ -23,11 +23,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c5455007e407bf4320355aebfd043bfc056d6d56
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 0019b739c794cbffa62b49749371c2a19f752267
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="customizing-the-appearance-of-an-existing-control-by-creating-a-controltemplate"></a>Personalizar la apariencia de un control existente creando una clase ControlTemplate
 <a name="introduction"></a>A <xref:System.Windows.Controls.ControlTemplate> especifica la estructura visual y el comportamiento visual de un control. Puede personalizar la apariencia de un control dando a TI un nuevo <xref:System.Windows.Controls.ControlTemplate>. Cuando se crea un <xref:System.Windows.Controls.ControlTemplate>, reemplace la apariencia de un control existente sin cambiar su funcionalidad. Por ejemplo, puede que los botones de la aplicación redondeado en lugar de la forma de cuadrado de forma predeterminada, pero el botón seguirá generando el <xref:System.Windows.Controls.Primitives.ButtonBase.Click> eventos.  
@@ -102,7 +103,7 @@ Un control CheckBox que usa una plantilla de control personalizado
   
  En la tabla siguiente se enumera las propiedades visuales heredadas por un control desde el <xref:System.Windows.Controls.Control> clase. También se indica si la plantilla de control predeterminado de un control usa el valor de propiedad heredado o si debe estar enlazado a plantilla.  
   
-|Propiedad|Método de uso|  
+|Property|Método de uso|  
 |--------------|------------------|  
 |<xref:System.Windows.Controls.Control.Background%2A>|Enlace a plantilla|  
 |<xref:System.Windows.Controls.Control.BorderThickness%2A>|Enlace a plantilla|  

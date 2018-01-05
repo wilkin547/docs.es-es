@@ -14,11 +14,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 26df55c9658721eb907db5837ac467a5899e84eb
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 45053762a4782544531a09c92531b26f99663016
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="maximize-wpf-3d-performance"></a>Maximizar el rendimiento de representación 3D en WPF
 Cuando use el [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] para crear controles 3D e incluir escenas 3D en las aplicaciones, es importante tener en cuenta la optimización del rendimiento. En este tema se proporciona una lista de clases 3D y propiedades que tienen implicaciones de rendimiento para la aplicación, junto con recomendaciones para optimizar el rendimiento cuando se usan.  
@@ -27,7 +28,7 @@ Cuando use el [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winc
   
 ## <a name="performance-impact-high"></a>Impacto en el rendimiento: alta  
   
-|Propiedad|Recomendación|  
+|Property|Recomendación|  
 |-|-|  
 |<xref:System.Windows.Media.Brush>|Velocidad de pincel (de mayor a menor):<br /><br /> <xref:System.Windows.Media.SolidColorBrush><br /><br /> <xref:System.Windows.Media.LinearGradientBrush><br /><br /> <xref:System.Windows.Media.ImageBrush><br /><br /> <xref:System.Windows.Media.DrawingBrush>(en caché)<br /><br /> <xref:System.Windows.Media.VisualBrush>(en caché)<br /><br /> <xref:System.Windows.Media.RadialGradientBrush><br /><br /> <xref:System.Windows.Media.DrawingBrush>(sin almacenar en caché)<br /><br /> <xref:System.Windows.Media.VisualBrush>(sin almacenar en caché)|  
 |<xref:System.Windows.UIElement.ClipToBoundsProperty>|Establecer `Viewport3D.ClipToBounds` en false siempre que no es necesario tener [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] explícitamente recortar el contenido de un <xref:System.Windows.Controls.Viewport3D> al rectángulo de Viewport3D. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]recorte de AntiAlias puede ser muy lento, y `ClipToBounds` está habilitado (lento) de forma predeterminada en <xref:System.Windows.Controls.Viewport3D>.|  
@@ -41,7 +42,7 @@ Cuando use el [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winc
   
 ## <a name="performance-impact-medium"></a>Impacto en el rendimiento: medio  
   
-|Propiedad|Recomendación|  
+|Property|Recomendación|  
 |-|-|  
 |<xref:System.Windows.Media.Media3D.MeshGeometry3D>|Cuando una malla se define como triángulos colindantes con vértices compartidos y esos vértices tienen la misma posición, normal y coordenadas de textura, defina cada vértice compartido una sola vez y, a continuación, defina los triángulos por un índice con <xref:System.Windows.Media.Media3D.MeshGeometry3D.TriangleIndices%2A>.|  
 |<xref:System.Windows.Media.ImageBrush>|Intente reducir el tamaño de las texturas cuando tenga un control explícito sobre el tamaño (cuando se usa un <xref:System.Windows.Media.Imaging.RenderTargetBitmap> o un <xref:System.Windows.Media.ImageBrush>).  Tenga en cuenta que las texturas de resolución inferior puede disminuir la calidad visual, por lo que intenta encontrar el equilibrio adecuado entre la calidad y el rendimiento.|  
@@ -59,7 +60,7 @@ Cuando use el [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winc
   
 ## <a name="performance-impact-low"></a>Impacto en el rendimiento: baja  
   
-|Propiedad|Recomendación|  
+|Property|Recomendación|  
 |-|-|  
 |<xref:System.Windows.Media.Media3D.Transform3DGroup>|Cuando no necesite animación o enlace de datos, en lugar de usar un grupo de transformaciones que contiene varias transformaciones, utilice una sola <xref:System.Windows.Media.Media3D.MatrixTransform3D>, si se establece en el producto de todas las transformaciones que en caso contrario, podría existir de forma independiente en el grupo de transformación.|  
 |<xref:System.Windows.Media.Media3D.Light>|Minimizar el número de luces de la escena. Demasiadas luces en una escena forzará [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] se retrocede a la representación de software.  Los límites son aproximadamente 110 <xref:System.Windows.Media.Media3D.DirectionalLight> objetos, 70 <xref:System.Windows.Media.Media3D.PointLight> objetos o 40 <xref:System.Windows.Media.Media3D.SpotLight> objetos.|  

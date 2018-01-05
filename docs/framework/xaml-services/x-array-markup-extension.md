@@ -19,11 +19,12 @@ caps.latest.revision: "20"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 2cefdee5ca2d1b0a6c79325365aa101d767b6926
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: bc2304ba68956b705904c72e29a17bdac4536c79
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="xarray-markup-extension"></a>x:Array (Extensión de marcado)
 Proporciona compatibilidad general para las matrices de objetos en XAML a través de una extensión de marcado. Esto se corresponde con el `x:ArrayExtension` tipo XAML en [MS-XAML].  

@@ -16,11 +16,12 @@ caps.latest.revision: "7"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 59d0b835a0de3e84e2cb6e77ed368511bfe21b19
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: b58719f36cd911497c5cd892610330688221e7ef
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="xaml-security-considerations"></a>Consideraciones de seguridad sobre XAML
 En este tema describe las prácticas recomendadas para la seguridad en las aplicaciones cuando se usa XAML y API de servicios XAML de .NET Framework.  
@@ -46,7 +47,7 @@ En este tema describe las prácticas recomendadas para la seguridad en las aplic
   
 -   Utilice un nombre completo del ensamblado con nombre seguro en cualquier asignación de espacio de nombres XAML realizada por el XAML de su aplicación.  
   
--   Restringir la asignación del ensamblado a un conjunto fijo de ensamblados de referencia, mediante la creación de un determinado <xref:System.Xaml.XamlSchemaContext> para el código XAML los lectores XAML y los escritores de objetos. Consulta <xref:System.Xaml.XamlSchemaContext.%23ctor%28System.Collections.Generic.IEnumerable%7BSystem.Reflection.Assembly%7D%29>.  
+-   Restringir la asignación del ensamblado a un conjunto fijo de ensamblados de referencia, mediante la creación de un determinado <xref:System.Xaml.XamlSchemaContext> para el código XAML los lectores XAML y los escritores de objetos. Vea <xref:System.Xaml.XamlSchemaContext.%23ctor%28System.Collections.Generic.IEnumerable%7BSystem.Reflection.Assembly%7D%29>.  
   
 ## <a name="xaml-type-mapping-and-type-system-access"></a>Asignación de tipos XAML y acceso al sistema de tipo  
  XAML es compatible con su propio sistema de tipos, que en muchos aspectos del mismo nivel para el modo en que CLR implementa el sistema de tipos CLR básico. Sin embargo, para ciertos aspectos del conocimiento de tipos donde tome decisiones de confianza sobre un tipo en función de su información de tipo, debe respetar la información de tipo en lo tipos de respaldo de CLR. Esto es porque algunas de las funciones de informes específicas del sistema de tipos XAML se quedan abiertas como métodos virtuales y por lo tanto, no son totalmente bajo el control de las implementaciones de servicios XAML de .NET Framework originales. Estos puntos de extensibilidad existen porque el sistema de tipos XAML es extensible, para que coincida con la extensibilidad del propio XAML y sus posibles estrategias de asignación de tipos alternativas frente a la implementación de respaldada por CLR predeterminada y el contexto de esquema XAML predeterminado. Para obtener más información, consulte las notas específicas en algunas de las propiedades de <xref:System.Xaml.XamlType> y <xref:System.Xaml.XamlMember>.  

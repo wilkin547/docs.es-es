@@ -16,11 +16,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 1156608e9e1aa63a2404d5394c0c4211eea60693
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a30adbc060ead6eb1805f85bd563021ba7530c36
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="standard-query-operator-translation"></a>Traslación del operador de consulta estándar
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] convierte los operadores de consulta estándar en comandos SQL. El procesador de consultas de la base de datos determina la semántica de ejecución de la conversión a SQL.  
@@ -237,8 +238,8 @@ ORDER BY [t0].[CustomerID]
   
 ## <a name="see-also"></a>Vea también  
  [Referencia](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)  
- [Devolver u omitir elementos de una secuencia](../../../../../../docs/framework/data/adonet/sql/linq/return-or-skip-elements-in-a-sequence.md)  
- [Concatenar dos secuencias](../../../../../../docs/framework/data/adonet/sql/linq/concatenate-two-sequences.md)  
- [Devuelve la diferencia de conjuntos entre dos secuencias](../../../../../../docs/framework/data/adonet/sql/linq/return-the-set-difference-between-two-sequences.md)  
- [Devolver la intersección de conjuntos de dos secuencias](../../../../../../docs/framework/data/adonet/sql/linq/return-the-set-intersection-of-two-sequences.md)  
- [Devolver la unión de conjuntos de dos secuencias](../../../../../../docs/framework/data/adonet/sql/linq/return-the-set-union-of-two-sequences.md)
+ [Devolución u omisión de elementos de una secuencia](../../../../../../docs/framework/data/adonet/sql/linq/return-or-skip-elements-in-a-sequence.md)  
+ [Concatenación de dos secuencias](../../../../../../docs/framework/data/adonet/sql/linq/concatenate-two-sequences.md)  
+ [Devolución de la diferencia de conjuntos entre dos secuencias](../../../../../../docs/framework/data/adonet/sql/linq/return-the-set-difference-between-two-sequences.md)  
+ [Devolución de la intersección de conjuntos de dos secuencias](../../../../../../docs/framework/data/adonet/sql/linq/return-the-set-intersection-of-two-sequences.md)  
+ [Devolución de la unión de conjuntos de dos secuencias](../../../../../../docs/framework/data/adonet/sql/linq/return-the-set-union-of-two-sequences.md)

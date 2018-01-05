@@ -18,17 +18,18 @@ caps.latest.revision: "68"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e50c6abac6e949245c89b8f25a093ba72a3eb530
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: a473b9972cd300dc45212e47292b73c3ca2c2221
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="stackpanel"></a>StackPanel
 El <xref:System.Windows.Controls.StackPanel> elemento se utiliza para apilar los elementos secundarios horizontal o verticalmente.  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Temas de procedimientos](../../../../docs/framework/wpf/controls/stackpanel-how-to-topics.md)  
+ [Temas "Cómo..."](../../../../docs/framework/wpf/controls/stackpanel-how-to-topics.md)  
   
 ## <a name="reference"></a>Referencia  
  <xref:System.Windows.Controls.Panel>  

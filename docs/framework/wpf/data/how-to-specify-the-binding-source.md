@@ -20,11 +20,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 05f77e8939b9b81a9e3861df6a44bc3585a0a504
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 23a4c180eb62dd152f1ed24c01b8103ccf1ec562
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-specify-the-binding-source"></a>Cómo: Especificar el origen de enlace
 En el enlace de datos, el objeto de origen de enlace hace referencia al objeto de que se obtienen los datos. Este tema describe las distintas maneras de especificar el origen de enlace.  
@@ -47,7 +48,7 @@ En el enlace de datos, el objeto de origen de enlace hace referencia al objeto d
   
  Como alternativa, si desea especificar el origen en los enlaces individuales explícitamente, tiene las siguientes opciones. Estas tienen prioridad sobre el contexto de datos heredado.  
   
-|Propiedad|Descripción|  
+|Property|Descripción|  
 |--------------|-----------------|  
 |<xref:System.Windows.Data.Binding.Source%2A>|Utilice esta propiedad para establecer el origen en una instancia de un objeto. Si no necesita la funcionalidad de establecer un ámbito en el que varias propiedades hereden el mismo contexto de datos, puede usar el <xref:System.Windows.Data.Binding.Source%2A> propiedad en lugar de la `DataContext` propiedad. Para obtener más información, consulta <xref:System.Windows.Data.Binding.Source%2A>.|  
 |<xref:System.Windows.Data.Binding.RelativeSource%2A>|Esto es útil cuando desea especificar el origen con respecto a donde está el destino del enlace. Entre los escenarios frecuentes en los que puede utilizar esta propiedad se encuentran las situaciones en las que desee enlazar una propiedad del elemento con otra propiedad del mismo elemento o situaciones en las que esté definiendo un enlace en un estilo o una plantilla. Para obtener más información, consulta <xref:System.Windows.Data.Binding.RelativeSource%2A>.|  
@@ -59,4 +60,4 @@ En el enlace de datos, el objeto de origen de enlace hace referencia al objeto d
  [Herencia de valores de propiedad](../../../../docs/framework/wpf/advanced/property-value-inheritance.md)  
  [Información general sobre el enlace de datos](../../../../docs/framework/wpf/data/data-binding-overview.md)  
  [Información general sobre declaraciones de enlaces](../../../../docs/framework/wpf/data/binding-declarations-overview.md)  
- [Temas de procedimientos](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+ [Temas "Cómo..."](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)

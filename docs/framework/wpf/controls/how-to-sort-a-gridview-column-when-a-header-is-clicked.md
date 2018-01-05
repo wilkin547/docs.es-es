@@ -21,11 +21,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a6f05f9f1fef335bc0bae578220d458ade9bfe06
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f24be0ce97071905ce53610e5b44db8f92f24e0e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-sort-a-gridview-column-when-a-header-is-clicked"></a>Cómo: Ordenar una columna de GridView cuando se hace clic en un encabezado
 Este ejemplo muestra cómo crear un <xref:System.Windows.Controls.ListView> control que implementa un <xref:System.Windows.Controls.GridView> Ver modo y ordena los datos de contenido cuando un usuario hace clic en un encabezado de columna.  
@@ -233,4 +234,4 @@ Private Sub Sort(ByVal sortBy As String, ByVal direction As ListSortDirection)
  <xref:System.Windows.Controls.GridView>  
  [Información general sobre ListView](../../../../docs/framework/wpf/controls/listview-overview.md)  
  [Información general sobre GridView](../../../../docs/framework/wpf/controls/gridview-overview.md)  
- [Temas de procedimientos](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)
+ [Temas "Cómo..."](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)

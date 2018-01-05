@@ -17,11 +17,12 @@ caps.latest.revision: "33"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: bf50346cc179a5aae860a7651d28e104bac3c2ce
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 6e5f6b3d0a185754bc0d8d8ee726ca13443ccdc1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="treeview-overview"></a>Introducción a TreeView
 El <xref:System.Windows.Controls.TreeView> control proporciona una manera de mostrar información en una estructura jerárquica con nodos contraíbles. Este tema se presentan los <xref:System.Windows.Controls.TreeView> y <xref:System.Windows.Controls.TreeViewItem> controla y proporciona ejemplos sencillos de su uso.  
@@ -86,5 +87,5 @@ El <xref:System.Windows.Controls.TreeView> control proporciona una manera de mos
 ## <a name="see-also"></a>Vea también  
  <xref:System.Windows.Controls.TreeView>  
  <xref:System.Windows.Controls.TreeViewItem>  
- [Temas de procedimientos](../../../../docs/framework/wpf/controls/treeview-how-to-topics.md)  
+ [Temas "Cómo..."](../../../../docs/framework/wpf/controls/treeview-how-to-topics.md)  
  [WPF Content Model](../../../../docs/framework/wpf/controls/wpf-content-model.md) (Modelo de contenido de WPF)

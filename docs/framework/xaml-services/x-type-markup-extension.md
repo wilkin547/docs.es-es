@@ -25,11 +25,12 @@ caps.latest.revision: "27"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: ed0372349a08687fd83b0fc989cc4cb88c29d96c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a4d645d5c953c0ff33435a5648024ace099455e2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="xtype-markup-extension"></a>x:Type (Extensión de marcado)
 Proporciona el CLR <xref:System.Type> objeto que es el tipo subyacente para un tipo XAML especificado.  
@@ -51,7 +52,7 @@ Proporciona el CLR <xref:System.Type> objeto que es el tipo subyacente para un t
 |||  
 |-|-|  
 |`prefix`|Opcional. Prefijo que se asigna un espacio de nombres XAML no predeterminado. Especificar un prefijo con frecuencia no es necesario. Vea la sección Comentarios.|  
-|`typeNameValue`|Obligatorio. Un nombre de tipo que se puede resolver en nombres XAML predeterminado actual; o especificado asigna prefijo si `prefix` se proporciona.|  
+|`typeNameValue`|Requerido. Un nombre de tipo que se puede resolver en nombres XAML predeterminado actual; o especificado asigna prefijo si `prefix` se proporciona.|  
   
 ## <a name="remarks"></a>Comentarios  
  El `x:Type` extensión de marcado tiene una función similar a la `typeof()` operador en [!INCLUDE[TLA#tla_cshrp](../../../includes/tlasharptla-cshrp-md.md)] o `GetType` operador en [!INCLUDE[TLA#tla_visualb](../../../includes/tlasharptla-visualb-md.md)].  

@@ -18,11 +18,12 @@ caps.latest.revision: "64"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d93b60a4172f7acebb5c9ec533efdff9a61d959c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: cb882dbdc8b394fe416b0e173129c745977566db
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="treeview"></a>TreeView
 El <xref:System.Windows.Controls.TreeView> control muestra información en una estructura jerárquica con nodos contraíbles.  
@@ -33,7 +34,7 @@ El <xref:System.Windows.Controls.TreeView> control muestra información en una e
   
 ## <a name="in-this-section"></a>En esta sección  
  [Introducción a TreeView](../../../../docs/framework/wpf/controls/treeview-overview.md)  
- [Temas de procedimientos](../../../../docs/framework/wpf/controls/treeview-how-to-topics.md)  
+ [Temas "Cómo..."](../../../../docs/framework/wpf/controls/treeview-how-to-topics.md)  
   
 ## <a name="reference"></a>Referencia  
  <xref:System.Windows.Controls.TreeView>  

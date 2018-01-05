@@ -20,11 +20,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b3c8afacfafbe14794bf17a4e9a4df7c175a3668
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e648b5a4a45c3583d496ac0ea6036d268d6d33a6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-group-sort-and-filter-data-in-the-datagrid-control"></a>Cómo: Agrupar, ordenar y filtrar datos en el control DataGrid
 A menudo resulta útil ver los datos en un <xref:System.Windows.Controls.DataGrid> de maneras diferentes, agrupar, ordenar y filtrar los datos. Para agrupar, ordenar y filtrar los datos en un <xref:System.Windows.Controls.DataGrid>, enlazarlo a un <xref:System.Windows.Data.CollectionView> que es compatible con estas funciones. A continuación, puede trabajar con los datos en el <xref:System.Windows.Data.CollectionView> sin que afecte a los datos de origen subyacentes. Los cambios en la vista de colección se reflejan en el <xref:System.Windows.Controls.DataGrid> interfaz de usuario (UI).  

@@ -17,11 +17,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a61844f917539f5d5e7c99299c8a33f4aa18450f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 108b532e3aea27571c8a3b1290d931e2b0769be9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-simple-binding"></a>Cómo: Crear un enlace sencillo
 En este ejemplo se muestra cómo crear un sencillo <xref:System.Windows.Data.Binding>.  
@@ -43,4 +44,4 @@ En este ejemplo se muestra cómo crear un sencillo <xref:System.Windows.Data.Bin
   
 ## <a name="see-also"></a>Vea también  
  [Información general sobre el enlace de datos](../../../../docs/framework/wpf/data/data-binding-overview.md)  
- [Temas de procedimientos](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+ [Temas "Cómo..."](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)

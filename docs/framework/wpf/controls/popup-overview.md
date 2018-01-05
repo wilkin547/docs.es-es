@@ -16,11 +16,12 @@ caps.latest.revision: "34"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 96ee7b227d4e2ea5dfcb0b8870d77d03abf08db8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0cb20895b5af35fec7274ca4c747740390104355
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="popup-overview"></a>Información general sobre el control Popup
 El <xref:System.Windows.Controls.Primitives.Popup> control proporciona una manera de mostrar el contenido en una ventana independiente que flota sobre la ventana de la aplicación actual en relación con una coordenada de pantalla o elemento designada. Este tema se presentan los <xref:System.Windows.Controls.Primitives.Popup> controlar y proporciona información sobre su uso.  
@@ -106,5 +107,5 @@ El <xref:System.Windows.Controls.Primitives.Popup> control proporciona una maner
  <xref:System.Windows.Controls.Primitives.CustomPopupPlacementCallback>  
  <xref:System.Windows.Controls.ToolTip>  
  <xref:System.Windows.Controls.ToolTipService>  
- [Temas de procedimientos](../../../../docs/framework/wpf/controls/popup-how-to-topics.md)  
- [Temas de procedimientos](../../../../docs/framework/wpf/controls/tooltip-how-to-topics.md)
+ [Temas "Cómo..."](../../../../docs/framework/wpf/controls/popup-how-to-topics.md)  
+ [Temas "Cómo..."](../../../../docs/framework/wpf/controls/tooltip-how-to-topics.md)
