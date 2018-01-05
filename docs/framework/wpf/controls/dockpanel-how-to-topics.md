@@ -17,21 +17,22 @@ caps.latest.revision: "63"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 11ea55c807bdf939d2cca6fb90591f814361ce96
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: a1236755a3df5074387652049847e979653eefcd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="dockpanel-how-to-topics"></a><span data-ttu-id="79ada-102">Temas "Cómo..." del elemento DockPanel</span><span class="sxs-lookup"><span data-stu-id="79ada-102">DockPanel How-to Topics</span></span>
-<span data-ttu-id="79ada-103">Los temas de esta sección describen cómo utilizar el <xref:System.Windows.Controls.DockPanel> elemento que se va a colocar los elementos secundarios en el borde de un contenedor de diseño.</span><span class="sxs-lookup"><span data-stu-id="79ada-103">The topics in this section describe how to use the <xref:System.Windows.Controls.DockPanel> element to position child elements along the edge of a layout container.</span></span>  
+# <a name="dockpanel-how-to-topics"></a><span data-ttu-id="3af76-102">Temas "Cómo..." del elemento DockPanel</span><span class="sxs-lookup"><span data-stu-id="3af76-102">DockPanel How-to Topics</span></span>
+<span data-ttu-id="3af76-103">Los temas de esta sección describen cómo utilizar el <xref:System.Windows.Controls.DockPanel> elemento que se va a colocar los elementos secundarios en el borde de un contenedor de diseño.</span><span class="sxs-lookup"><span data-stu-id="3af76-103">The topics in this section describe how to use the <xref:System.Windows.Controls.DockPanel> element to position child elements along the edge of a layout container.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="79ada-104">En esta sección</span><span class="sxs-lookup"><span data-stu-id="79ada-104">In This Section</span></span>  
- [<span data-ttu-id="79ada-105">Obtener o establecer un valor de acoplamiento</span><span class="sxs-lookup"><span data-stu-id="79ada-105">Get or Set a Dock Value</span></span>](../../../../docs/framework/wpf/controls/how-to-get-or-set-a-dock-value.md)  
- [<span data-ttu-id="79ada-106">Crear un DockPanel</span><span class="sxs-lookup"><span data-stu-id="79ada-106">Create a DockPanel</span></span>](../../../../docs/framework/wpf/controls/how-to-create-a-dockpanel.md)  
- [<span data-ttu-id="79ada-107">Crear una partición del espacio mediante el elemento DockPanel</span><span class="sxs-lookup"><span data-stu-id="79ada-107">Partition Space by Using the DockPanel Element</span></span>](../../../../docs/framework/wpf/controls/how-to-partition-space-by-using-the-dockpanel-element.md)  
+## <a name="in-this-section"></a><span data-ttu-id="3af76-104">En esta sección</span><span class="sxs-lookup"><span data-stu-id="3af76-104">In This Section</span></span>  
+ [<span data-ttu-id="3af76-105">Obtener o establecer un valor de acoplamiento</span><span class="sxs-lookup"><span data-stu-id="3af76-105">Get or Set a Dock Value</span></span>](../../../../docs/framework/wpf/controls/how-to-get-or-set-a-dock-value.md)  
+ [<span data-ttu-id="3af76-106">Crear un DockPanel</span><span class="sxs-lookup"><span data-stu-id="3af76-106">Create a DockPanel</span></span>](../../../../docs/framework/wpf/controls/how-to-create-a-dockpanel.md)  
+ [<span data-ttu-id="3af76-107">Crear una partición del espacio mediante el elemento DockPanel</span><span class="sxs-lookup"><span data-stu-id="3af76-107">Partition Space by Using the DockPanel Element</span></span>](../../../../docs/framework/wpf/controls/how-to-partition-space-by-using-the-dockpanel-element.md)  
   
-## <a name="reference"></a><span data-ttu-id="79ada-108">Referencia</span><span class="sxs-lookup"><span data-stu-id="79ada-108">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="3af76-108">Referencia</span><span class="sxs-lookup"><span data-stu-id="3af76-108">Reference</span></span>  
  <xref:System.Windows.Controls.Panel>  
   
  <xref:System.Windows.Controls.Canvas>  
@@ -46,9 +47,9 @@ ms.lasthandoff: 10/22/2017
   
  <xref:System.Windows.Controls.WrapPanel>  
   
-## <a name="related-sections"></a><span data-ttu-id="79ada-109">Secciones relacionadas</span><span class="sxs-lookup"><span data-stu-id="79ada-109">Related Sections</span></span>  
- [<span data-ttu-id="79ada-110">Diseño</span><span class="sxs-lookup"><span data-stu-id="79ada-110">Layout</span></span>](../../../../docs/framework/wpf/advanced/layout.md)  
+## <a name="related-sections"></a><span data-ttu-id="3af76-109">Secciones relacionadas</span><span class="sxs-lookup"><span data-stu-id="3af76-109">Related Sections</span></span>  
+ [<span data-ttu-id="3af76-110">Diseño</span><span class="sxs-lookup"><span data-stu-id="3af76-110">Layout</span></span>](../../../../docs/framework/wpf/advanced/layout.md)  
   
- [<span data-ttu-id="79ada-111">Tutorial: Mi primera aplicación de escritorio WPF</span><span class="sxs-lookup"><span data-stu-id="79ada-111">Walkthrough: My first WPF desktop application</span></span>](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
+ [<span data-ttu-id="3af76-111">Tutorial: Mi primera aplicación de escritorio WPF</span><span class="sxs-lookup"><span data-stu-id="3af76-111">Walkthrough: My first WPF desktop application</span></span>](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
   
- [<span data-ttu-id="79ada-112">Información general sobre ScrollViewer</span><span class="sxs-lookup"><span data-stu-id="79ada-112">ScrollViewer Overview</span></span>](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)
+ [<span data-ttu-id="3af76-112">Información general sobre ScrollViewer</span><span class="sxs-lookup"><span data-stu-id="3af76-112">ScrollViewer Overview</span></span>](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)

@@ -15,23 +15,24 @@ caps.latest.revision: "82"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: bc23483ee1c2b59de8c43c2a2582225d1b2c864c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b652805c921b4c1643e2c1ffcca8a361aa65541c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="fonts-wpf"></a><span data-ttu-id="d459f-102">Fuentes (WPF)</span><span class="sxs-lookup"><span data-stu-id="d459f-102">Fonts (WPF)</span></span>
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]<span data-ttu-id="d459f-103">incluye compatibilidad para la presentación de texto con [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] fuentes.</span><span class="sxs-lookup"><span data-stu-id="d459f-103"> includes support for rich presentation of text using [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] fonts.</span></span> <span data-ttu-id="d459f-104">Un paquete de muestra de [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] fuentes se incluye con la [!INCLUDE[TLA2#tla_lhsdk](../../../../includes/tla2sharptla-lhsdk-md.md)].</span><span class="sxs-lookup"><span data-stu-id="d459f-104">A sample pack of [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] fonts is included with the [!INCLUDE[TLA2#tla_lhsdk](../../../../includes/tla2sharptla-lhsdk-md.md)].</span></span>  
+# <a name="fonts-wpf"></a><span data-ttu-id="f49e3-102">Fuentes (WPF)</span><span class="sxs-lookup"><span data-stu-id="f49e3-102">Fonts (WPF)</span></span>
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]<span data-ttu-id="f49e3-103">incluye compatibilidad para la presentación de texto con [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] fuentes.</span><span class="sxs-lookup"><span data-stu-id="f49e3-103"> includes support for rich presentation of text using [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] fonts.</span></span> <span data-ttu-id="f49e3-104">Un paquete de muestra de [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] fuentes se incluye con la [!INCLUDE[TLA2#tla_lhsdk](../../../../includes/tla2sharptla-lhsdk-md.md)].</span><span class="sxs-lookup"><span data-stu-id="f49e3-104">A sample pack of [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] fonts is included with the [!INCLUDE[TLA2#tla_lhsdk](../../../../includes/tla2sharptla-lhsdk-md.md)].</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="d459f-105">En esta sección</span><span class="sxs-lookup"><span data-stu-id="d459f-105">In This Section</span></span>  
- [<span data-ttu-id="d459f-106">Características de las fuentes OpenType</span><span class="sxs-lookup"><span data-stu-id="d459f-106">OpenType Font Features</span></span>](../../../../docs/framework/wpf/advanced/opentype-font-features.md)  
- [<span data-ttu-id="d459f-107">Empaquetar fuentes con aplicaciones</span><span class="sxs-lookup"><span data-stu-id="d459f-107">Packaging Fonts with Applications</span></span>](../../../../docs/framework/wpf/advanced/packaging-fonts-with-applications.md)  
- [<span data-ttu-id="d459f-108">Paquete de fuentes OpenType de ejemplo</span><span class="sxs-lookup"><span data-stu-id="d459f-108">Sample OpenType Font Pack</span></span>](../../../../docs/framework/wpf/advanced/sample-opentype-font-pack.md)  
- [<span data-ttu-id="d459f-109">Temas de procedimientos</span><span class="sxs-lookup"><span data-stu-id="d459f-109">How-to Topics</span></span>](../../../../docs/framework/wpf/advanced/fonts-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="f49e3-105">En esta sección</span><span class="sxs-lookup"><span data-stu-id="f49e3-105">In This Section</span></span>  
+ [<span data-ttu-id="f49e3-106">Características de las fuentes OpenType</span><span class="sxs-lookup"><span data-stu-id="f49e3-106">OpenType Font Features</span></span>](../../../../docs/framework/wpf/advanced/opentype-font-features.md)  
+ [<span data-ttu-id="f49e3-107">Empaquetar fuentes con aplicaciones</span><span class="sxs-lookup"><span data-stu-id="f49e3-107">Packaging Fonts with Applications</span></span>](../../../../docs/framework/wpf/advanced/packaging-fonts-with-applications.md)  
+ [<span data-ttu-id="f49e3-108">Paquete de fuentes OpenType de ejemplo</span><span class="sxs-lookup"><span data-stu-id="f49e3-108">Sample OpenType Font Pack</span></span>](../../../../docs/framework/wpf/advanced/sample-opentype-font-pack.md)  
+ [<span data-ttu-id="f49e3-109">Temas "Cómo..."</span><span class="sxs-lookup"><span data-stu-id="f49e3-109">How-to Topics</span></span>](../../../../docs/framework/wpf/advanced/fonts-how-to-topics.md)  
   
-## <a name="see-also"></a><span data-ttu-id="d459f-110">Vea también</span><span class="sxs-lookup"><span data-stu-id="d459f-110">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="f49e3-110">Vea también</span><span class="sxs-lookup"><span data-stu-id="f49e3-110">See Also</span></span>  
  <xref:System.Windows.FontStyle>  
  <xref:System.Windows.SystemFonts>  
- [<span data-ttu-id="d459f-111">Documentos en WPF</span><span class="sxs-lookup"><span data-stu-id="d459f-111">Documents in WPF</span></span>](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
- [<span data-ttu-id="d459f-112">Tipografía en WPF</span><span class="sxs-lookup"><span data-stu-id="d459f-112">Typography in WPF</span></span>](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)
+ [<span data-ttu-id="f49e3-111">Documentos en WPF</span><span class="sxs-lookup"><span data-stu-id="f49e3-111">Documents in WPF</span></span>](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
+ [<span data-ttu-id="f49e3-112">Tipografía en WPF</span><span class="sxs-lookup"><span data-stu-id="f49e3-112">Typography in WPF</span></span>](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)

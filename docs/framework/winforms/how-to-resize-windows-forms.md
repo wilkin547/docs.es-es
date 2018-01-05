@@ -20,20 +20,21 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e38339eceef97c4d6f64dffdea9ac04c598b70a3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: cc2e9f81094d16030dbe4595a8132569edab782a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="how-to-resize-windows-forms"></a><span data-ttu-id="e73c8-102">Cómo: Cambiar el tamaño de los formularios Windows Forms</span><span class="sxs-lookup"><span data-stu-id="e73c8-102">How to: Resize Windows Forms</span></span>
-<span data-ttu-id="e73c8-103">Puede especificar el tamaño de su Windows Form de varias maneras.</span><span class="sxs-lookup"><span data-stu-id="e73c8-103">You can specify the size of your Windows Form in several ways.</span></span> <span data-ttu-id="e73c8-104">Puede cambiar el alto y el ancho del formulario mediante programación estableciendo un nuevo valor para la propiedad <xref:System.Windows.Forms.Form.Size%2A>, o ajustar las propiedades <xref:System.Windows.Forms.Control.Height%2A> o <xref:System.Windows.Forms.Control.Width%2A> individualmente.</span><span class="sxs-lookup"><span data-stu-id="e73c8-104">You can change both the height and the width of the form programmatically by setting a new value for the <xref:System.Windows.Forms.Form.Size%2A> property, or adjust the <xref:System.Windows.Forms.Control.Height%2A> or <xref:System.Windows.Forms.Control.Width%2A> properties individually.</span></span> <span data-ttu-id="e73c8-105">Si usa [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], puede cambiar el tamaño mediante el Diseñador de Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="e73c8-105">If you are using [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], you can change the size using the Windows Forms Designer.</span></span> <span data-ttu-id="e73c8-106">Consulte también [Cómo: cambiar el tamaño de Windows Forms mediante el diseñador](http://msdn.microsoft.com/library/37k2zkwx\(v=vs.110\)).</span><span class="sxs-lookup"><span data-stu-id="e73c8-106">Also see [How to: Resize Windows Forms Using the Designer](http://msdn.microsoft.com/library/37k2zkwx\(v=vs.110\)).</span></span>  
+# <a name="how-to-resize-windows-forms"></a><span data-ttu-id="9183f-102">Cómo: Cambiar el tamaño de los formularios Windows Forms</span><span class="sxs-lookup"><span data-stu-id="9183f-102">How to: Resize Windows Forms</span></span>
+<span data-ttu-id="9183f-103">Puede especificar el tamaño de su Windows Form de varias maneras.</span><span class="sxs-lookup"><span data-stu-id="9183f-103">You can specify the size of your Windows Form in several ways.</span></span> <span data-ttu-id="9183f-104">Puede cambiar el alto y el ancho del formulario mediante programación estableciendo un nuevo valor para la propiedad <xref:System.Windows.Forms.Form.Size%2A>, o ajustar las propiedades <xref:System.Windows.Forms.Control.Height%2A> o <xref:System.Windows.Forms.Control.Width%2A> individualmente.</span><span class="sxs-lookup"><span data-stu-id="9183f-104">You can change both the height and the width of the form programmatically by setting a new value for the <xref:System.Windows.Forms.Form.Size%2A> property, or adjust the <xref:System.Windows.Forms.Control.Height%2A> or <xref:System.Windows.Forms.Control.Width%2A> properties individually.</span></span> <span data-ttu-id="9183f-105">Si usa [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], puede cambiar el tamaño mediante el Diseñador de Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="9183f-105">If you are using [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], you can change the size using the Windows Forms Designer.</span></span> <span data-ttu-id="9183f-106">Consulte también [Cómo: cambiar el tamaño de Windows Forms mediante el diseñador](http://msdn.microsoft.com/library/37k2zkwx\(v=vs.110\)).</span><span class="sxs-lookup"><span data-stu-id="9183f-106">Also see [How to: Resize Windows Forms Using the Designer](http://msdn.microsoft.com/library/37k2zkwx\(v=vs.110\)).</span></span>  
   
-### <a name="to-resize-a-form-programmatically"></a><span data-ttu-id="e73c8-107">Para cambiar el tamaño de un formulario mediante programación</span><span class="sxs-lookup"><span data-stu-id="e73c8-107">To resize a form programmatically</span></span>  
+### <a name="to-resize-a-form-programmatically"></a><span data-ttu-id="9183f-107">Para cambiar el tamaño de un formulario mediante programación</span><span class="sxs-lookup"><span data-stu-id="9183f-107">To resize a form programmatically</span></span>  
   
--   <span data-ttu-id="e73c8-108">Para definir el tamaño de un formulario en tiempo de ejecución, establezca la propiedad <xref:System.Windows.Forms.Form.Size%2A> del formulario.</span><span class="sxs-lookup"><span data-stu-id="e73c8-108">Define the size of a form at run time by setting the <xref:System.Windows.Forms.Form.Size%2A> property of the form.</span></span>  
+-   <span data-ttu-id="9183f-108">Para definir el tamaño de un formulario en tiempo de ejecución, establezca la propiedad <xref:System.Windows.Forms.Form.Size%2A> del formulario.</span><span class="sxs-lookup"><span data-stu-id="9183f-108">Define the size of a form at run time by setting the <xref:System.Windows.Forms.Form.Size%2A> property of the form.</span></span>  
   
-     <span data-ttu-id="e73c8-109">En el ejemplo de código siguiente se muestra el tamaño del formulario establecido en 100 x 100 píxeles.</span><span class="sxs-lookup"><span data-stu-id="e73c8-109">The following code example shows the form size set to 100 × 100 pixels.</span></span>  
+     <span data-ttu-id="9183f-109">En el ejemplo de código siguiente se muestra el tamaño del formulario establecido en 100 x 100 píxeles.</span><span class="sxs-lookup"><span data-stu-id="9183f-109">The following code example shows the form size set to 100 × 100 pixels.</span></span>  
   
     ```vb  
     Form1.Size = New System.Drawing.Size(100, 100)  
@@ -47,11 +48,11 @@ ms.lasthandoff: 11/21/2017
     Form1->Size = System::Drawing::Size(100, 100);  
     ```  
   
-### <a name="to-change-form-width-and-height-programmatically"></a><span data-ttu-id="e73c8-110">Para cambiar el alto y ancho del formulario mediante programación</span><span class="sxs-lookup"><span data-stu-id="e73c8-110">To change form width and height programmatically</span></span>  
+### <a name="to-change-form-width-and-height-programmatically"></a><span data-ttu-id="9183f-110">Para cambiar el alto y ancho del formulario mediante programación</span><span class="sxs-lookup"><span data-stu-id="9183f-110">To change form width and height programmatically</span></span>  
   
--   <span data-ttu-id="e73c8-111">Después de definir <xref:System.Windows.Forms.Form.Size%2A>, cambie el alto o el ancho del formulario usando las propiedades <xref:System.Windows.Forms.Control.Width%2A> o <xref:System.Windows.Forms.Control.Height%2A>.</span><span class="sxs-lookup"><span data-stu-id="e73c8-111">After the <xref:System.Windows.Forms.Form.Size%2A> is defined, change either the form height or width by using the <xref:System.Windows.Forms.Control.Width%2A> or <xref:System.Windows.Forms.Control.Height%2A> properties.</span></span>  
+-   <span data-ttu-id="9183f-111">Después de definir <xref:System.Windows.Forms.Form.Size%2A>, cambie el alto o el ancho del formulario usando las propiedades <xref:System.Windows.Forms.Control.Width%2A> o <xref:System.Windows.Forms.Control.Height%2A>.</span><span class="sxs-lookup"><span data-stu-id="9183f-111">After the <xref:System.Windows.Forms.Form.Size%2A> is defined, change either the form height or width by using the <xref:System.Windows.Forms.Control.Width%2A> or <xref:System.Windows.Forms.Control.Height%2A> properties.</span></span>  
   
-     <span data-ttu-id="e73c8-112">En el ejemplo de código siguiente se muestra el ancho del formulario establecido en 300 píxeles desde el borde izquierdo del formulario, mientras que el alto permanece constante.</span><span class="sxs-lookup"><span data-stu-id="e73c8-112">The following code example shows the width of the form set to 300 pixels from the left edge of the form, whereas the height stays constant.</span></span>  
+     <span data-ttu-id="9183f-112">En el ejemplo de código siguiente se muestra el ancho del formulario establecido en 300 píxeles desde el borde izquierdo del formulario, mientras que el alto permanece constante.</span><span class="sxs-lookup"><span data-stu-id="9183f-112">The following code example shows the width of the form set to 300 pixels from the left edge of the form, whereas the height stays constant.</span></span>  
   
     ```vb  
     Form1.Width = 300  
@@ -65,11 +66,11 @@ ms.lasthandoff: 11/21/2017
     Form1->Width = 300;  
     ```  
   
-     <span data-ttu-id="e73c8-113">O bien</span><span class="sxs-lookup"><span data-stu-id="e73c8-113">-or-</span></span>  
+     <span data-ttu-id="9183f-113">O bien</span><span class="sxs-lookup"><span data-stu-id="9183f-113">-or-</span></span>  
   
-     <span data-ttu-id="e73c8-114">Cambie <xref:System.Drawing.Size.Width%2A> o <xref:System.Drawing.Size.Height%2A> estableciendo la propiedad <xref:System.Windows.Forms.Form.Size%2A>.</span><span class="sxs-lookup"><span data-stu-id="e73c8-114">Change <xref:System.Drawing.Size.Width%2A> or <xref:System.Drawing.Size.Height%2A> by setting the <xref:System.Windows.Forms.Form.Size%2A> property.</span></span>  
+     <span data-ttu-id="9183f-114">Cambie <xref:System.Drawing.Size.Width%2A> o <xref:System.Drawing.Size.Height%2A> estableciendo la propiedad <xref:System.Windows.Forms.Form.Size%2A>.</span><span class="sxs-lookup"><span data-stu-id="9183f-114">Change <xref:System.Drawing.Size.Width%2A> or <xref:System.Drawing.Size.Height%2A> by setting the <xref:System.Windows.Forms.Form.Size%2A> property.</span></span>  
   
-     <span data-ttu-id="e73c8-115">Sin embargo, tal y como se muestra en el ejemplo de código siguiente, este enfoque es más complejo que simplemente establecer las propiedades <xref:System.Windows.Forms.Control.Width%2A> o <xref:System.Windows.Forms.Control.Height%2A>.</span><span class="sxs-lookup"><span data-stu-id="e73c8-115">However, as the following code example shows, this approach is more cumbersome than just setting <xref:System.Windows.Forms.Control.Width%2A> or <xref:System.Windows.Forms.Control.Height%2A> properties.</span></span>  
+     <span data-ttu-id="9183f-115">Sin embargo, tal y como se muestra en el ejemplo de código siguiente, este enfoque es más complejo que simplemente establecer las propiedades <xref:System.Windows.Forms.Control.Width%2A> o <xref:System.Windows.Forms.Control.Height%2A>.</span><span class="sxs-lookup"><span data-stu-id="9183f-115">However, as the following code example shows, this approach is more cumbersome than just setting <xref:System.Windows.Forms.Control.Width%2A> or <xref:System.Windows.Forms.Control.Height%2A> properties.</span></span>  
   
     ```vb  
     Form1.Size = New Size(300, Form1.Size.Height)  
@@ -83,11 +84,11 @@ ms.lasthandoff: 11/21/2017
     Form1->Size = System::Drawing::Size(300, Form1->Size.Height);  
     ```  
   
-### <a name="to-change-form-size-by-increments-programmatically"></a><span data-ttu-id="e73c8-116">Para cambiar el tamaño del formulario por incrementos mediante programación</span><span class="sxs-lookup"><span data-stu-id="e73c8-116">To change form size by increments programmatically</span></span>  
+### <a name="to-change-form-size-by-increments-programmatically"></a><span data-ttu-id="9183f-116">Para cambiar el tamaño del formulario por incrementos mediante programación</span><span class="sxs-lookup"><span data-stu-id="9183f-116">To change form size by increments programmatically</span></span>  
   
--   <span data-ttu-id="e73c8-117">Para incrementar el tamaño del formulario, establezca las propiedades <xref:System.Drawing.Size.Width%2A> y <xref:System.Drawing.Size.Height%2A>.</span><span class="sxs-lookup"><span data-stu-id="e73c8-117">To increment the size of the form, set the <xref:System.Drawing.Size.Width%2A> and <xref:System.Drawing.Size.Height%2A> properties.</span></span>  
+-   <span data-ttu-id="9183f-117">Para incrementar el tamaño del formulario, establezca las propiedades <xref:System.Drawing.Size.Width%2A> y <xref:System.Drawing.Size.Height%2A>.</span><span class="sxs-lookup"><span data-stu-id="9183f-117">To increment the size of the form, set the <xref:System.Drawing.Size.Width%2A> and <xref:System.Drawing.Size.Height%2A> properties.</span></span>  
   
-     <span data-ttu-id="e73c8-118">En el ejemplo de código siguiente se muestra el ancho del formulario establecido en 200 píxeles más que la configuración actual.</span><span class="sxs-lookup"><span data-stu-id="e73c8-118">The following code example shows the width of the form set to 200 pixels wider than the current setting.</span></span>  
+     <span data-ttu-id="9183f-118">En el ejemplo de código siguiente se muestra el ancho del formulario establecido en 200 píxeles más que la configuración actual.</span><span class="sxs-lookup"><span data-stu-id="9183f-118">The following code example shows the width of the form set to 200 pixels wider than the current setting.</span></span>  
   
     ```vb  
     Form1.Width += 200  
@@ -102,7 +103,7 @@ ms.lasthandoff: 11/21/2017
     ```  
   
     > [!CAUTION]
-    >  <span data-ttu-id="e73c8-119">Use siempre la propiedad <xref:System.Drawing.Size.Height%2A> o <xref:System.Drawing.Size.Width%2A> para cambiar una dimensión de un formulario, a menos que quiera establecer las dimensiones de alto y ancho al mismo tiempo estableciendo la propiedad <xref:System.Windows.Forms.Form.Size%2A> en una nueva estructura <xref:System.Drawing.Size>.</span><span class="sxs-lookup"><span data-stu-id="e73c8-119">Always use the <xref:System.Drawing.Size.Height%2A> or <xref:System.Drawing.Size.Width%2A> property to change a dimension of a form, unless you are setting both height and width dimensions at the same time by setting the <xref:System.Windows.Forms.Form.Size%2A> property to a new <xref:System.Drawing.Size> structure.</span></span> <span data-ttu-id="e73c8-120">La propiedad <xref:System.Windows.Forms.Form.Size%2A> devuelve una estructura <xref:System.Drawing.Size>, que es un tipo de valor.</span><span class="sxs-lookup"><span data-stu-id="e73c8-120">The <xref:System.Windows.Forms.Form.Size%2A> property returns a <xref:System.Drawing.Size> structure, which is a value type.</span></span> <span data-ttu-id="e73c8-121">No se puede asignar un nuevo valor a la propiedad de un tipo de valor.</span><span class="sxs-lookup"><span data-stu-id="e73c8-121">You cannot assign a new value to the property of a value type.</span></span> <span data-ttu-id="e73c8-122">Por lo tanto, el ejemplo de código siguiente no se compilará.</span><span class="sxs-lookup"><span data-stu-id="e73c8-122">Therefore, the following code example will not compile.</span></span>  
+    >  <span data-ttu-id="9183f-119">Use siempre la propiedad <xref:System.Drawing.Size.Height%2A> o <xref:System.Drawing.Size.Width%2A> para cambiar una dimensión de un formulario, a menos que quiera establecer las dimensiones de alto y ancho al mismo tiempo estableciendo la propiedad <xref:System.Windows.Forms.Form.Size%2A> en una nueva estructura <xref:System.Drawing.Size>.</span><span class="sxs-lookup"><span data-stu-id="9183f-119">Always use the <xref:System.Drawing.Size.Height%2A> or <xref:System.Drawing.Size.Width%2A> property to change a dimension of a form, unless you are setting both height and width dimensions at the same time by setting the <xref:System.Windows.Forms.Form.Size%2A> property to a new <xref:System.Drawing.Size> structure.</span></span> <span data-ttu-id="9183f-120">La propiedad <xref:System.Windows.Forms.Form.Size%2A> devuelve una estructura <xref:System.Drawing.Size>, que es un tipo de valor.</span><span class="sxs-lookup"><span data-stu-id="9183f-120">The <xref:System.Windows.Forms.Form.Size%2A> property returns a <xref:System.Drawing.Size> structure, which is a value type.</span></span> <span data-ttu-id="9183f-121">No se puede asignar un nuevo valor a la propiedad de un tipo de valor.</span><span class="sxs-lookup"><span data-stu-id="9183f-121">You cannot assign a new value to the property of a value type.</span></span> <span data-ttu-id="9183f-122">Por lo tanto, el ejemplo de código siguiente no se compilará.</span><span class="sxs-lookup"><span data-stu-id="9183f-122">Therefore, the following code example will not compile.</span></span>  
   
     ```vb  
     ' NOTE: CODE WILL NOT COMPILE  
@@ -122,6 +123,6 @@ ms.lasthandoff: 11/21/2017
     f->Size->X += 100;  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="e73c8-123">Vea también</span><span class="sxs-lookup"><span data-stu-id="e73c8-123">See Also</span></span>  
- [<span data-ttu-id="e73c8-124">Introducción a los formularios Windows Forms</span><span class="sxs-lookup"><span data-stu-id="e73c8-124">Getting Started with Windows Forms</span></span>](../../../docs/framework/winforms/getting-started-with-windows-forms.md)  
- [<span data-ttu-id="e73c8-125">Mejorar las aplicaciones de Windows Forms</span><span class="sxs-lookup"><span data-stu-id="e73c8-125">Enhancing Windows Forms Applications</span></span>](../../../docs/framework/winforms/advanced/index.md)
+## <a name="see-also"></a><span data-ttu-id="9183f-123">Vea también</span><span class="sxs-lookup"><span data-stu-id="9183f-123">See Also</span></span>  
+ [<span data-ttu-id="9183f-124">Introducción a los formularios Windows Forms</span><span class="sxs-lookup"><span data-stu-id="9183f-124">Getting Started with Windows Forms</span></span>](../../../docs/framework/winforms/getting-started-with-windows-forms.md)  
+ [<span data-ttu-id="9183f-125">Mejorar las aplicaciones de Windows Forms</span><span class="sxs-lookup"><span data-stu-id="9183f-125">Enhancing Windows Forms Applications</span></span>](../../../docs/framework/winforms/advanced/index.md)

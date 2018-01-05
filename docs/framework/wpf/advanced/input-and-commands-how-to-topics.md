@@ -17,29 +17,30 @@ caps.latest.revision: "76"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1dbec8435c82e795d48544a366eeced2419f6d8c
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 301532e640273073a884d62d24363557b4ce1e04
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="input-and-commands-how-to-topics"></a><span data-ttu-id="55b59-102">Temas "Cómo..." sobre acciones del usuario y comandos</span><span class="sxs-lookup"><span data-stu-id="55b59-102">Input and Commands How-to Topics</span></span>
-<span data-ttu-id="55b59-103">Los temas de esta sección describen cómo utilizar la infraestructura de entrada y comandos en [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)].</span><span class="sxs-lookup"><span data-stu-id="55b59-103">The topics in this section describe how to use the input and commanding infrastructure in [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)].</span></span>  
+# <a name="input-and-commands-how-to-topics"></a><span data-ttu-id="f709e-102">Temas "Cómo..." sobre acciones del usuario y comandos</span><span class="sxs-lookup"><span data-stu-id="f709e-102">Input and Commands How-to Topics</span></span>
+<span data-ttu-id="f709e-103">Los temas de esta sección describen cómo utilizar la infraestructura de entrada y comandos en [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)].</span><span class="sxs-lookup"><span data-stu-id="f709e-103">The topics in this section describe how to use the input and commanding infrastructure in [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)].</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="55b59-104">En esta sección</span><span class="sxs-lookup"><span data-stu-id="55b59-104">In This Section</span></span>  
- [<span data-ttu-id="55b59-105">Habilitar un comando</span><span class="sxs-lookup"><span data-stu-id="55b59-105">Enable a Command</span></span>](../../../../docs/framework/wpf/advanced/how-to-enable-a-command.md)  
- [<span data-ttu-id="55b59-106">Cambiar el tipo de cursor</span><span class="sxs-lookup"><span data-stu-id="55b59-106">Change the Cursor Type</span></span>](../../../../docs/framework/wpf/advanced/how-to-change-the-cursor-type.md)  
- [<span data-ttu-id="55b59-107">Cambiar el color de un elemento mediante eventos de foco</span><span class="sxs-lookup"><span data-stu-id="55b59-107">Change the Color of an Element Using Focus Events</span></span>](../../../../docs/framework/wpf/advanced/how-to-change-the-color-of-an-element-using-focus-events.md)  
- [<span data-ttu-id="55b59-108">Aplicar un FocusVisualStyle a un control</span><span class="sxs-lookup"><span data-stu-id="55b59-108">Apply a FocusVisualStyle to a Control</span></span>](../../../../docs/framework/wpf/advanced/how-to-apply-a-focusvisualstyle-to-a-control.md)  
- [<span data-ttu-id="55b59-109">Detectar cuándo se presiona la tecla ENTRAR</span><span class="sxs-lookup"><span data-stu-id="55b59-109">Detect When the Enter Key is Pressed</span></span>](../../../../docs/framework/wpf/advanced/how-to-detect-when-the-enter-key-pressed.md)  
- [<span data-ttu-id="55b59-110">Crear un efecto de activación mediante eventos</span><span class="sxs-lookup"><span data-stu-id="55b59-110">Create a Rollover Effect Using Events</span></span>](../../../../docs/framework/wpf/advanced/how-to-create-a-rollover-effect-using-events.md)  
- [<span data-ttu-id="55b59-111">Crear un objeto que siga el puntero del mouse</span><span class="sxs-lookup"><span data-stu-id="55b59-111">Make an Object Follow the Mouse Pointer</span></span>](../../../../docs/framework/wpf/advanced/how-to-make-an-object-follow-the-mouse-pointer.md)  
- [<span data-ttu-id="55b59-112">Crear un comando RoutedCommand</span><span class="sxs-lookup"><span data-stu-id="55b59-112">Create a RoutedCommand</span></span>](../../../../docs/framework/wpf/advanced/how-to-create-a-routedcommand.md)  
- [<span data-ttu-id="55b59-113">Implement ICommandSource (ejemplo)</span><span class="sxs-lookup"><span data-stu-id="55b59-113">Implement ICommandSource</span></span>](../../../../docs/framework/wpf/advanced/how-to-implement-icommandsource.md)  
- [<span data-ttu-id="55b59-114">Enlazar un comando a un control sin la compatibilidad de comandos</span><span class="sxs-lookup"><span data-stu-id="55b59-114">Hook Up a Command to a Control with No Command Support</span></span>](../../../../docs/framework/wpf/advanced/how-to-hook-up-a-command-to-a-control-with-no-command-support.md)  
- [<span data-ttu-id="55b59-115">Enlazar un comando a un control con la compatibilidad de comandos</span><span class="sxs-lookup"><span data-stu-id="55b59-115">Hook Up a Command to a Control with Command Support</span></span>](../../../../docs/framework/wpf/advanced/how-to-hook-up-a-command-to-a-control-with-command-support.md)  
+## <a name="in-this-section"></a><span data-ttu-id="f709e-104">En esta sección</span><span class="sxs-lookup"><span data-stu-id="f709e-104">In This Section</span></span>  
+ [<span data-ttu-id="f709e-105">Habilitar un comando</span><span class="sxs-lookup"><span data-stu-id="f709e-105">Enable a Command</span></span>](../../../../docs/framework/wpf/advanced/how-to-enable-a-command.md)  
+ [<span data-ttu-id="f709e-106">Cambiar el tipo de cursor</span><span class="sxs-lookup"><span data-stu-id="f709e-106">Change the Cursor Type</span></span>](../../../../docs/framework/wpf/advanced/how-to-change-the-cursor-type.md)  
+ [<span data-ttu-id="f709e-107">Cambiar el color de un elemento mediante eventos de foco</span><span class="sxs-lookup"><span data-stu-id="f709e-107">Change the Color of an Element Using Focus Events</span></span>](../../../../docs/framework/wpf/advanced/how-to-change-the-color-of-an-element-using-focus-events.md)  
+ [<span data-ttu-id="f709e-108">Aplicar un FocusVisualStyle a un control</span><span class="sxs-lookup"><span data-stu-id="f709e-108">Apply a FocusVisualStyle to a Control</span></span>](../../../../docs/framework/wpf/advanced/how-to-apply-a-focusvisualstyle-to-a-control.md)  
+ [<span data-ttu-id="f709e-109">Detectar cuándo se presiona la tecla ENTRAR</span><span class="sxs-lookup"><span data-stu-id="f709e-109">Detect When the Enter Key is Pressed</span></span>](../../../../docs/framework/wpf/advanced/how-to-detect-when-the-enter-key-pressed.md)  
+ [<span data-ttu-id="f709e-110">Crear un efecto de activación mediante eventos</span><span class="sxs-lookup"><span data-stu-id="f709e-110">Create a Rollover Effect Using Events</span></span>](../../../../docs/framework/wpf/advanced/how-to-create-a-rollover-effect-using-events.md)  
+ [<span data-ttu-id="f709e-111">Crear un objeto que siga el puntero del mouse</span><span class="sxs-lookup"><span data-stu-id="f709e-111">Make an Object Follow the Mouse Pointer</span></span>](../../../../docs/framework/wpf/advanced/how-to-make-an-object-follow-the-mouse-pointer.md)  
+ [<span data-ttu-id="f709e-112">Crear un comando RoutedCommand</span><span class="sxs-lookup"><span data-stu-id="f709e-112">Create a RoutedCommand</span></span>](../../../../docs/framework/wpf/advanced/how-to-create-a-routedcommand.md)  
+ [<span data-ttu-id="f709e-113">Implement ICommandSource (ejemplo)</span><span class="sxs-lookup"><span data-stu-id="f709e-113">Implement ICommandSource</span></span>](../../../../docs/framework/wpf/advanced/how-to-implement-icommandsource.md)  
+ [<span data-ttu-id="f709e-114">Enlazar un comando a un control sin la compatibilidad de comandos</span><span class="sxs-lookup"><span data-stu-id="f709e-114">Hook Up a Command to a Control with No Command Support</span></span>](../../../../docs/framework/wpf/advanced/how-to-hook-up-a-command-to-a-control-with-no-command-support.md)  
+ [<span data-ttu-id="f709e-115">Enlazar un comando a un control con la compatibilidad de comandos</span><span class="sxs-lookup"><span data-stu-id="f709e-115">Hook Up a Command to a Control with Command Support</span></span>](../../../../docs/framework/wpf/advanced/how-to-hook-up-a-command-to-a-control-with-command-support.md)  
   
-## <a name="reference"></a><span data-ttu-id="55b59-116">Referencia</span><span class="sxs-lookup"><span data-stu-id="55b59-116">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="f709e-116">Referencia</span><span class="sxs-lookup"><span data-stu-id="f709e-116">Reference</span></span>  
  <xref:System.Windows.UIElement>  
   
  <xref:System.Windows.FrameworkElement>  
@@ -54,4 +55,4 @@ ms.lasthandoff: 10/22/2017
   
  <xref:System.Windows.Input.FocusManager>  
   
-## <a name="related-sections"></a><span data-ttu-id="55b59-117">Secciones relacionadas</span><span class="sxs-lookup"><span data-stu-id="55b59-117">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="f709e-117">Secciones relacionadas</span><span class="sxs-lookup"><span data-stu-id="f709e-117">Related Sections</span></span>

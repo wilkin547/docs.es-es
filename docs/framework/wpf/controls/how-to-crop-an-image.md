@@ -19,35 +19,36 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6de7914a1226381da763b3348d1794453fe93b02
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 084e3dc7fad2bcb3b7ab787302f55c824ff3739d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="how-to-crop-an-image"></a><span data-ttu-id="50f45-102">Cómo: Recortar una imagen</span><span class="sxs-lookup"><span data-stu-id="50f45-102">How to: Crop an Image</span></span>
-<span data-ttu-id="50f45-103">Este ejemplo muestra cómo recortar una imagen mediante <xref:System.Windows.Media.Imaging.CroppedBitmap>.</span><span class="sxs-lookup"><span data-stu-id="50f45-103">This example shows how to crop an image using <xref:System.Windows.Media.Imaging.CroppedBitmap>.</span></span>  
+# <a name="how-to-crop-an-image"></a><span data-ttu-id="2dc6f-102">Cómo: Recortar una imagen</span><span class="sxs-lookup"><span data-stu-id="2dc6f-102">How to: Crop an Image</span></span>
+<span data-ttu-id="2dc6f-103">Este ejemplo muestra cómo recortar una imagen mediante <xref:System.Windows.Media.Imaging.CroppedBitmap>.</span><span class="sxs-lookup"><span data-stu-id="2dc6f-103">This example shows how to crop an image using <xref:System.Windows.Media.Imaging.CroppedBitmap>.</span></span>  
   
- <span data-ttu-id="50f45-104"><xref:System.Windows.Media.Imaging.CroppedBitmap>se utiliza principalmente al codificar una versión recortada de una imagen para guardarla en un archivo.</span><span class="sxs-lookup"><span data-stu-id="50f45-104"><xref:System.Windows.Media.Imaging.CroppedBitmap> is primarily used when encoding a cropped version of an image to save out to a file.</span></span> <span data-ttu-id="50f45-105">Para recortar una imagen para fines de presentación, vea la [crear una región de recorte](http://msdn.microsoft.com/en-us/56e4bed6-78d7-4292-b917-d72d0b3e4376) tema.</span><span class="sxs-lookup"><span data-stu-id="50f45-105">To crop an image for display purposes see the [Create a Clip Region](http://msdn.microsoft.com/en-us/56e4bed6-78d7-4292-b917-d72d0b3e4376) topic.</span></span>  
+ <span data-ttu-id="2dc6f-104"><xref:System.Windows.Media.Imaging.CroppedBitmap>se utiliza principalmente al codificar una versión recortada de una imagen para guardarla en un archivo.</span><span class="sxs-lookup"><span data-stu-id="2dc6f-104"><xref:System.Windows.Media.Imaging.CroppedBitmap> is primarily used when encoding a cropped version of an image to save out to a file.</span></span> <span data-ttu-id="2dc6f-105">Para recortar una imagen para fines de presentación, vea la [crear una región de recorte](http://msdn.microsoft.com/en-us/56e4bed6-78d7-4292-b917-d72d0b3e4376) tema.</span><span class="sxs-lookup"><span data-stu-id="2dc6f-105">To crop an image for display purposes see the [Create a Clip Region](http://msdn.microsoft.com/en-us/56e4bed6-78d7-4292-b917-d72d0b3e4376) topic.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="50f45-106">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="50f45-106">Example</span></span>  
- <span data-ttu-id="50f45-107">El siguiente [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] define los recursos utilizados en los ejemplos siguientes.</span><span class="sxs-lookup"><span data-stu-id="50f45-107">The following [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] defines resources used within the samples below.</span></span>  
+## <a name="example"></a><span data-ttu-id="2dc6f-106">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="2dc6f-106">Example</span></span>  
+ <span data-ttu-id="2dc6f-107">El siguiente [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] define los recursos utilizados en los ejemplos siguientes.</span><span class="sxs-lookup"><span data-stu-id="2dc6f-107">The following [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] defines resources used within the samples below.</span></span>  
   
  [!code-xaml[imageelementexample#CroppedXAML1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ImageElementExample/CSharp/CroppedImageExample.xaml#croppedxaml1)]  
   
- <span data-ttu-id="50f45-108">En el ejemplo siguiente se crea una imagen mediante una <xref:System.Windows.Media.Imaging.CroppedBitmap> como su origen.</span><span class="sxs-lookup"><span data-stu-id="50f45-108">The following example creates an image using a <xref:System.Windows.Media.Imaging.CroppedBitmap> as its source.</span></span>  
+ <span data-ttu-id="2dc6f-108">En el ejemplo siguiente se crea una imagen mediante una <xref:System.Windows.Media.Imaging.CroppedBitmap> como su origen.</span><span class="sxs-lookup"><span data-stu-id="2dc6f-108">The following example creates an image using a <xref:System.Windows.Media.Imaging.CroppedBitmap> as its source.</span></span>  
   
  [!code-xaml[imageelementexample#CroppedXAML2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ImageElementExample/CSharp/CroppedImageExample.xaml#croppedxaml2)]  
   
  [!code-csharp[imageelementexample#CroppedCSharp1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ImageElementExample/CSharp/CroppedImageExample.xaml.cs#croppedcsharp1)]
  [!code-vb[imageelementexample#CroppedCSharp1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ImageElementExample/VB/CroppedImageExample.xaml.vb#croppedcsharp1)]  
   
- <span data-ttu-id="50f45-109">El <xref:System.Windows.Media.Imaging.CroppedBitmap> también puede utilizarse como origen de otro <xref:System.Windows.Media.Imaging.CroppedBitmap>, el encadenamiento de recorte.</span><span class="sxs-lookup"><span data-stu-id="50f45-109">The <xref:System.Windows.Media.Imaging.CroppedBitmap> can also be used as the source of another <xref:System.Windows.Media.Imaging.CroppedBitmap>, chaining the cropping.</span></span> <span data-ttu-id="50f45-110">Tenga en cuenta que el <xref:System.Windows.Media.Imaging.CroppedBitmap.SourceRect%2A> utiliza valores que están en relación con el origen que se recorta el mapa de bits y no la imagen inicial.</span><span class="sxs-lookup"><span data-stu-id="50f45-110">Note that the <xref:System.Windows.Media.Imaging.CroppedBitmap.SourceRect%2A> uses values that are relative to the source cropped bitmap and not the initial image.</span></span>  
+ <span data-ttu-id="2dc6f-109">El <xref:System.Windows.Media.Imaging.CroppedBitmap> también puede utilizarse como origen de otro <xref:System.Windows.Media.Imaging.CroppedBitmap>, el encadenamiento de recorte.</span><span class="sxs-lookup"><span data-stu-id="2dc6f-109">The <xref:System.Windows.Media.Imaging.CroppedBitmap> can also be used as the source of another <xref:System.Windows.Media.Imaging.CroppedBitmap>, chaining the cropping.</span></span> <span data-ttu-id="2dc6f-110">Tenga en cuenta que el <xref:System.Windows.Media.Imaging.CroppedBitmap.SourceRect%2A> utiliza valores que están en relación con el origen que se recorta el mapa de bits y no la imagen inicial.</span><span class="sxs-lookup"><span data-stu-id="2dc6f-110">Note that the <xref:System.Windows.Media.Imaging.CroppedBitmap.SourceRect%2A> uses values that are relative to the source cropped bitmap and not the initial image.</span></span>  
   
  [!code-xaml[imageelementexample#CroppedXAML3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ImageElementExample/CSharp/CroppedImageExample.xaml#croppedxaml3)]  
   
  [!code-csharp[imageelementexample#CroppedCSharp2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ImageElementExample/CSharp/CroppedImageExample.xaml.cs#croppedcsharp2)]
  [!code-vb[imageelementexample#CroppedCSharp2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ImageElementExample/VB/CroppedImageExample.xaml.vb#croppedcsharp2)]  
   
-## <a name="see-also"></a><span data-ttu-id="50f45-111">Vea también</span><span class="sxs-lookup"><span data-stu-id="50f45-111">See Also</span></span>  
- [<span data-ttu-id="50f45-112">Crear una región de recorte</span><span class="sxs-lookup"><span data-stu-id="50f45-112">Create a Clip Region</span></span>](http://msdn.microsoft.com/en-us/56e4bed6-78d7-4292-b917-d72d0b3e4376)
+## <a name="see-also"></a><span data-ttu-id="2dc6f-111">Vea también</span><span class="sxs-lookup"><span data-stu-id="2dc6f-111">See Also</span></span>  
+ [<span data-ttu-id="2dc6f-112">Crear una región de recorte</span><span class="sxs-lookup"><span data-stu-id="2dc6f-112">Create a Clip Region</span></span>](http://msdn.microsoft.com/en-us/56e4bed6-78d7-4292-b917-d72d0b3e4376)

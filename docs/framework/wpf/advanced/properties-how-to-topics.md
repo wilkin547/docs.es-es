@@ -18,20 +18,21 @@ caps.latest.revision: "75"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: fa929e36128086466f9b5843b617bb2363fd7672
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 2831055ea0c99aa029b8f5ce8f15460304ec3c44
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="properties-how-to-topics"></a><span data-ttu-id="9d14b-102">Temas "Cómo..." sobre propiedades</span><span class="sxs-lookup"><span data-stu-id="9d14b-102">Properties How-to Topics</span></span>
-## <a name="in-this-section"></a><span data-ttu-id="9d14b-103">En esta sección</span><span class="sxs-lookup"><span data-stu-id="9d14b-103">In This Section</span></span>  
- [<span data-ttu-id="9d14b-104">Implementar una propiedad de dependencia</span><span class="sxs-lookup"><span data-stu-id="9d14b-104">Implement a Dependency Property</span></span>](../../../../docs/framework/wpf/advanced/how-to-implement-a-dependency-property.md)  
- [<span data-ttu-id="9d14b-105">Agregar un tipo de propietario para una propiedad de dependencia</span><span class="sxs-lookup"><span data-stu-id="9d14b-105">Add an Owner Type for a Dependency Property</span></span>](../../../../docs/framework/wpf/advanced/how-to-add-an-owner-type-for-a-dependency-property.md)  
- [<span data-ttu-id="9d14b-106">Registrar una propiedad asociada</span><span class="sxs-lookup"><span data-stu-id="9d14b-106">Register an Attached Property</span></span>](../../../../docs/framework/wpf/advanced/how-to-register-an-attached-property.md)  
- [<span data-ttu-id="9d14b-107">Invalidar metadatos en una propiedad de dependencia</span><span class="sxs-lookup"><span data-stu-id="9d14b-107">Override Metadata for a Dependency Property</span></span>](../../../../docs/framework/wpf/advanced/how-to-override-metadata-for-a-dependency-property.md)  
+# <a name="properties-how-to-topics"></a><span data-ttu-id="13f5d-102">Temas "Cómo..." sobre propiedades</span><span class="sxs-lookup"><span data-stu-id="13f5d-102">Properties How-to Topics</span></span>
+## <a name="in-this-section"></a><span data-ttu-id="13f5d-103">En esta sección</span><span class="sxs-lookup"><span data-stu-id="13f5d-103">In This Section</span></span>  
+ [<span data-ttu-id="13f5d-104">Implementar una propiedad de dependencia</span><span class="sxs-lookup"><span data-stu-id="13f5d-104">Implement a Dependency Property</span></span>](../../../../docs/framework/wpf/advanced/how-to-implement-a-dependency-property.md)  
+ [<span data-ttu-id="13f5d-105">Agregar un tipo de propietario para una propiedad de dependencia</span><span class="sxs-lookup"><span data-stu-id="13f5d-105">Add an Owner Type for a Dependency Property</span></span>](../../../../docs/framework/wpf/advanced/how-to-add-an-owner-type-for-a-dependency-property.md)  
+ [<span data-ttu-id="13f5d-106">Registrar una propiedad asociada</span><span class="sxs-lookup"><span data-stu-id="13f5d-106">Register an Attached Property</span></span>](../../../../docs/framework/wpf/advanced/how-to-register-an-attached-property.md)  
+ [<span data-ttu-id="13f5d-107">Invalidar metadatos en una propiedad de dependencia</span><span class="sxs-lookup"><span data-stu-id="13f5d-107">Override Metadata for a Dependency Property</span></span>](../../../../docs/framework/wpf/advanced/how-to-override-metadata-for-a-dependency-property.md)  
   
-## <a name="reference"></a><span data-ttu-id="9d14b-108">Referencia</span><span class="sxs-lookup"><span data-stu-id="9d14b-108">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="13f5d-108">Referencia</span><span class="sxs-lookup"><span data-stu-id="13f5d-108">Reference</span></span>  
  <xref:System.Windows.DependencyProperty>  
   
  <xref:System.Windows.PropertyMetadata>  
@@ -40,5 +41,5 @@ ms.lasthandoff: 10/22/2017
   
  <xref:System.Windows.DependencyObject>  
   
-## <a name="related-sections"></a><span data-ttu-id="9d14b-109">Secciones relacionadas</span><span class="sxs-lookup"><span data-stu-id="9d14b-109">Related Sections</span></span>  
- [<span data-ttu-id="9d14b-110">Propiedades</span><span class="sxs-lookup"><span data-stu-id="9d14b-110">Properties</span></span>](../../../../docs/framework/wpf/advanced/properties-wpf.md)
+## <a name="related-sections"></a><span data-ttu-id="13f5d-109">Secciones relacionadas</span><span class="sxs-lookup"><span data-stu-id="13f5d-109">Related Sections</span></span>  
+ [<span data-ttu-id="13f5d-110">Propiedades</span><span class="sxs-lookup"><span data-stu-id="13f5d-110">Properties</span></span>](../../../../docs/framework/wpf/advanced/properties-wpf.md)

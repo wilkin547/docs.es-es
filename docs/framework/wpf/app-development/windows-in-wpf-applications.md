@@ -17,27 +17,28 @@ caps.latest.revision: "67"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3046e88e26e16172a9c7e6c50123145ce7664f28
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 0616507752c3053b71b2f050997eacfea22240a1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="windows-in-wpf-applications"></a><span data-ttu-id="c1456-102">Windows en aplicaciones para WPF</span><span class="sxs-lookup"><span data-stu-id="c1456-102">Windows in WPF Applications</span></span>
-<span data-ttu-id="c1456-103">Los usuarios interactúan con las aplicaciones a través de windows.</span><span class="sxs-lookup"><span data-stu-id="c1456-103">Users interact with applications through windows.</span></span> <span data-ttu-id="c1456-104">El objetivo fundamental de una ventana es hospedar y mostrar el contenido.</span><span class="sxs-lookup"><span data-stu-id="c1456-104">The fundamental purpose of a window is to host and display content.</span></span> <span data-ttu-id="c1456-105">El tipo de contenido que una ventana hospeda depende del tipo de datos que una aplicación funciona a través de, que puede incluir multimedia, páginas de lenguaje de marcado de aplicaciones Extensible (XAML), páginas Web, documentos, tablas de base de datos y registros e información del sistema.</span><span class="sxs-lookup"><span data-stu-id="c1456-105">The type of content that a window hosts depends on the type of data that an application operates over, which can include media, Extensible Application Markup Language (XAML) pages, Web pages, documents, database tables and records, and system information.</span></span>  
+# <a name="windows-in-wpf-applications"></a><span data-ttu-id="0607e-102">Windows en aplicaciones para WPF</span><span class="sxs-lookup"><span data-stu-id="0607e-102">Windows in WPF Applications</span></span>
+<span data-ttu-id="0607e-103">Los usuarios interactúan con las aplicaciones a través de windows.</span><span class="sxs-lookup"><span data-stu-id="0607e-103">Users interact with applications through windows.</span></span> <span data-ttu-id="0607e-104">El objetivo fundamental de una ventana es hospedar y mostrar el contenido.</span><span class="sxs-lookup"><span data-stu-id="0607e-104">The fundamental purpose of a window is to host and display content.</span></span> <span data-ttu-id="0607e-105">El tipo de contenido que una ventana hospeda depende del tipo de datos que una aplicación funciona a través de, que puede incluir multimedia, páginas de lenguaje de marcado de aplicaciones Extensible (XAML), páginas Web, documentos, tablas de base de datos y registros e información del sistema.</span><span class="sxs-lookup"><span data-stu-id="0607e-105">The type of content that a window hosts depends on the type of data that an application operates over, which can include media, Extensible Application Markup Language (XAML) pages, Web pages, documents, database tables and records, and system information.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="c1456-106">En esta sección</span><span class="sxs-lookup"><span data-stu-id="c1456-106">In This Section</span></span>  
- [<span data-ttu-id="c1456-107">Información general sobre ventanas de WPF</span><span class="sxs-lookup"><span data-stu-id="c1456-107">WPF Windows Overview</span></span>](../../../../docs/framework/wpf/app-development/wpf-windows-overview.md)  
- [<span data-ttu-id="c1456-108">Información general sobre cuadros de diálogo</span><span class="sxs-lookup"><span data-stu-id="c1456-108">Dialog Boxes Overview</span></span>](../../../../docs/framework/wpf/app-development/dialog-boxes-overview.md)  
- [<span data-ttu-id="c1456-109">Temas de procedimientos</span><span class="sxs-lookup"><span data-stu-id="c1456-109">How-to Topics</span></span>](../../../../docs/framework/wpf/app-development/window-management-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="0607e-106">En esta sección</span><span class="sxs-lookup"><span data-stu-id="0607e-106">In This Section</span></span>  
+ [<span data-ttu-id="0607e-107">Información general sobre ventanas de WPF</span><span class="sxs-lookup"><span data-stu-id="0607e-107">WPF Windows Overview</span></span>](../../../../docs/framework/wpf/app-development/wpf-windows-overview.md)  
+ [<span data-ttu-id="0607e-108">Información general sobre cuadros de diálogo</span><span class="sxs-lookup"><span data-stu-id="0607e-108">Dialog Boxes Overview</span></span>](../../../../docs/framework/wpf/app-development/dialog-boxes-overview.md)  
+ [<span data-ttu-id="0607e-109">Temas "Cómo..."</span><span class="sxs-lookup"><span data-stu-id="0607e-109">How-to Topics</span></span>](../../../../docs/framework/wpf/app-development/window-management-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="c1456-110">Referencia</span><span class="sxs-lookup"><span data-stu-id="c1456-110">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="0607e-110">Referencia</span><span class="sxs-lookup"><span data-stu-id="0607e-110">Reference</span></span>  
  <xref:System.Windows.Window>  
   
  <xref:System.Windows.Navigation.NavigationWindow>  
   
-## <a name="related-sections"></a><span data-ttu-id="c1456-111">Secciones relacionadas</span><span class="sxs-lookup"><span data-stu-id="c1456-111">Related Sections</span></span>  
- [<span data-ttu-id="c1456-112">Información general sobre la administración de aplicaciones</span><span class="sxs-lookup"><span data-stu-id="c1456-112">Application Management Overview</span></span>](../../../../docs/framework/wpf/app-development/application-management-overview.md)  
-  [<span data-ttu-id="c1456-113">Información general sobre navegación</span><span class="sxs-lookup"><span data-stu-id="c1456-113">Navigation Overview</span></span>](../../../../docs/framework/wpf/app-development/navigation-overview.md)  
-  [<span data-ttu-id="c1456-114">Hospedar aplicaciones de WPF</span><span class="sxs-lookup"><span data-stu-id="c1456-114">Hosting</span></span>](../../../../docs/framework/wpf/app-development/hosting-wpf-applications.md)  
-  [<span data-ttu-id="c1456-115">Compilar e implementar aplicaciones WPF</span><span class="sxs-lookup"><span data-stu-id="c1456-115">Build and Deploy</span></span>](../../../../docs/framework/wpf/app-development/building-and-deploying-wpf-applications.md)
+## <a name="related-sections"></a><span data-ttu-id="0607e-111">Secciones relacionadas</span><span class="sxs-lookup"><span data-stu-id="0607e-111">Related Sections</span></span>  
+ [<span data-ttu-id="0607e-112">Información general sobre la administración de aplicaciones</span><span class="sxs-lookup"><span data-stu-id="0607e-112">Application Management Overview</span></span>](../../../../docs/framework/wpf/app-development/application-management-overview.md)  
+  [<span data-ttu-id="0607e-113">Información general sobre navegación</span><span class="sxs-lookup"><span data-stu-id="0607e-113">Navigation Overview</span></span>](../../../../docs/framework/wpf/app-development/navigation-overview.md)  
+  [<span data-ttu-id="0607e-114">Hospedar aplicaciones de WPF</span><span class="sxs-lookup"><span data-stu-id="0607e-114">Hosting</span></span>](../../../../docs/framework/wpf/app-development/hosting-wpf-applications.md)  
+  [<span data-ttu-id="0607e-115">Compilar e implementar aplicaciones WPF</span><span class="sxs-lookup"><span data-stu-id="0607e-115">Build and Deploy</span></span>](../../../../docs/framework/wpf/app-development/building-and-deploying-wpf-applications.md)

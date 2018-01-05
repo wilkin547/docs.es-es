@@ -17,20 +17,21 @@ caps.latest.revision: "40"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1013b7567fbd80d8d1ee55ac81e00c7b29635bac
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: c790ec775740bf53e3c68a1c8834df9e13339c38
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="digital-ink-how-to-topics"></a><span data-ttu-id="dfd75-102">Temas "Cómo..." sobre entradas manuscritas digitales</span><span class="sxs-lookup"><span data-stu-id="dfd75-102">Digital Ink How-to Topics</span></span>
-## <a name="in-this-section"></a><span data-ttu-id="dfd75-103">En esta sección</span><span class="sxs-lookup"><span data-stu-id="dfd75-103">In This Section</span></span>  
- [<span data-ttu-id="dfd75-104">Seleccionar entradas manuscritas desde un control personalizado</span><span class="sxs-lookup"><span data-stu-id="dfd75-104">Select Ink from a Custom Control</span></span>](../../../../docs/framework/wpf/advanced/how-to-select-ink-from-a-custom-control.md)  
-  [<span data-ttu-id="dfd75-105">Agregar datos personalizados a datos de entrada manuscrita</span><span class="sxs-lookup"><span data-stu-id="dfd75-105">Add Custom Data to Ink Data</span></span>](../../../../docs/framework/wpf/advanced/how-to-add-custom-data-to-ink-data.md)  
-  [<span data-ttu-id="dfd75-106">Borrar la entrada manuscrita en un control personalizado</span><span class="sxs-lookup"><span data-stu-id="dfd75-106">Erase Ink on a Custom Control</span></span>](../../../../docs/framework/wpf/advanced/how-to-erase-ink-on-a-custom-control.md)  
-  [<span data-ttu-id="dfd75-107">Reconocer gestos en aplicaciones</span><span class="sxs-lookup"><span data-stu-id="dfd75-107">Recognize Application Gestures</span></span>](../../../../docs/framework/wpf/advanced/how-to-recognize-application-gestures.md)  
-  [<span data-ttu-id="dfd75-108">Arrastrar y colocar la entrada manuscrita</span><span class="sxs-lookup"><span data-stu-id="dfd75-108">Drag and Drop Ink</span></span>](../../../../docs/framework/wpf/advanced/how-to-drag-and-drop-ink.md)  
-  [<span data-ttu-id="dfd75-109">Enlazar datos a InkCanvas</span><span class="sxs-lookup"><span data-stu-id="dfd75-109">Data Bind to an InkCanvas</span></span>](../../../../docs/framework/wpf/advanced/how-to-data-bind-to-an-inkcanvas.md)  
-  [<span data-ttu-id="dfd75-110">Analizar entradas manuscritas con sugerencias de análisis</span><span class="sxs-lookup"><span data-stu-id="dfd75-110">Analyze Ink with Analysis Hints</span></span>](../../../../docs/framework/wpf/advanced/how-to-analyze-ink-with-analysis-hints.md)  
-  [<span data-ttu-id="dfd75-111">Girar entradas manuscritas</span><span class="sxs-lookup"><span data-stu-id="dfd75-111">Rotate Ink</span></span>](../../../../docs/framework/wpf/advanced/how-to-rotate-ink.md)  
-  [<span data-ttu-id="dfd75-112">Deshabilitar RealTimeStylus para las aplicaciones de WPF</span><span class="sxs-lookup"><span data-stu-id="dfd75-112">Disable the RealTimeStylus for WPF Applications</span></span>](../../../../docs/framework/wpf/advanced/disable-the-realtimestylus-for-wpf-applications.md)
+# <a name="digital-ink-how-to-topics"></a><span data-ttu-id="90653-102">Temas "Cómo..." sobre entradas manuscritas digitales</span><span class="sxs-lookup"><span data-stu-id="90653-102">Digital Ink How-to Topics</span></span>
+## <a name="in-this-section"></a><span data-ttu-id="90653-103">En esta sección</span><span class="sxs-lookup"><span data-stu-id="90653-103">In This Section</span></span>  
+ [<span data-ttu-id="90653-104">Seleccionar entradas manuscritas desde un control personalizado</span><span class="sxs-lookup"><span data-stu-id="90653-104">Select Ink from a Custom Control</span></span>](../../../../docs/framework/wpf/advanced/how-to-select-ink-from-a-custom-control.md)  
+  [<span data-ttu-id="90653-105">Agregar datos personalizados a datos de entrada manuscrita</span><span class="sxs-lookup"><span data-stu-id="90653-105">Add Custom Data to Ink Data</span></span>](../../../../docs/framework/wpf/advanced/how-to-add-custom-data-to-ink-data.md)  
+  [<span data-ttu-id="90653-106">Borrar la entrada manuscrita en un control personalizado</span><span class="sxs-lookup"><span data-stu-id="90653-106">Erase Ink on a Custom Control</span></span>](../../../../docs/framework/wpf/advanced/how-to-erase-ink-on-a-custom-control.md)  
+  [<span data-ttu-id="90653-107">Reconocer gestos en aplicaciones</span><span class="sxs-lookup"><span data-stu-id="90653-107">Recognize Application Gestures</span></span>](../../../../docs/framework/wpf/advanced/how-to-recognize-application-gestures.md)  
+  [<span data-ttu-id="90653-108">Arrastrar y colocar la entrada manuscrita</span><span class="sxs-lookup"><span data-stu-id="90653-108">Drag and Drop Ink</span></span>](../../../../docs/framework/wpf/advanced/how-to-drag-and-drop-ink.md)  
+  [<span data-ttu-id="90653-109">Enlazar datos a InkCanvas</span><span class="sxs-lookup"><span data-stu-id="90653-109">Data Bind to an InkCanvas</span></span>](../../../../docs/framework/wpf/advanced/how-to-data-bind-to-an-inkcanvas.md)  
+  [<span data-ttu-id="90653-110">Analizar entradas manuscritas con sugerencias de análisis</span><span class="sxs-lookup"><span data-stu-id="90653-110">Analyze Ink with Analysis Hints</span></span>](../../../../docs/framework/wpf/advanced/how-to-analyze-ink-with-analysis-hints.md)  
+  [<span data-ttu-id="90653-111">Girar entradas manuscritas</span><span class="sxs-lookup"><span data-stu-id="90653-111">Rotate Ink</span></span>](../../../../docs/framework/wpf/advanced/how-to-rotate-ink.md)  
+  [<span data-ttu-id="90653-112">Deshabilitar RealTimeStylus para las aplicaciones de WPF</span><span class="sxs-lookup"><span data-stu-id="90653-112">Disable the RealTimeStylus for WPF Applications</span></span>](../../../../docs/framework/wpf/advanced/disable-the-realtimestylus-for-wpf-applications.md)

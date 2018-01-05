@@ -20,26 +20,27 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9f8e009d00960f40abcd3c3913a15fa51f1be4f6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: af45d504eb4e7d45808f787925a90c8e0ed19476
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="how-to-clear-bindings"></a><span data-ttu-id="95de1-102">Cómo: Borrar enlaces</span><span class="sxs-lookup"><span data-stu-id="95de1-102">How to: Clear Bindings</span></span>
-<span data-ttu-id="95de1-103">En este ejemplo se muestra cómo borrar los enlaces de un objeto.</span><span class="sxs-lookup"><span data-stu-id="95de1-103">This example shows how to clear bindings from an object.</span></span>  
+# <a name="how-to-clear-bindings"></a><span data-ttu-id="9abd8-102">Cómo: Borrar enlaces</span><span class="sxs-lookup"><span data-stu-id="9abd8-102">How to: Clear Bindings</span></span>
+<span data-ttu-id="9abd8-103">En este ejemplo se muestra cómo borrar los enlaces de un objeto.</span><span class="sxs-lookup"><span data-stu-id="9abd8-103">This example shows how to clear bindings from an object.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="95de1-104">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="95de1-104">Example</span></span>  
- <span data-ttu-id="95de1-105">Para borrar un enlace de una propiedad individual en un objeto, llame a <xref:System.Windows.Data.BindingOperations.ClearBinding%2A> tal como se muestra en el ejemplo siguiente.</span><span class="sxs-lookup"><span data-stu-id="95de1-105">To clear a binding from an individual property on an object, call <xref:System.Windows.Data.BindingOperations.ClearBinding%2A> as shown in the following example.</span></span> <span data-ttu-id="95de1-106">En el ejemplo siguiente se quita el enlace de la <xref:System.Windows.Controls.TextBlock.TextProperty> de *mytext*, un <xref:System.Windows.Controls.TextBlock> objeto.</span><span class="sxs-lookup"><span data-stu-id="95de1-106">The following example removes the binding from the <xref:System.Windows.Controls.TextBlock.TextProperty> of *mytext*, a <xref:System.Windows.Controls.TextBlock> object.</span></span>  
+## <a name="example"></a><span data-ttu-id="9abd8-104">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="9abd8-104">Example</span></span>  
+ <span data-ttu-id="9abd8-105">Para borrar un enlace de una propiedad individual en un objeto, llame a <xref:System.Windows.Data.BindingOperations.ClearBinding%2A> tal como se muestra en el ejemplo siguiente.</span><span class="sxs-lookup"><span data-stu-id="9abd8-105">To clear a binding from an individual property on an object, call <xref:System.Windows.Data.BindingOperations.ClearBinding%2A> as shown in the following example.</span></span> <span data-ttu-id="9abd8-106">En el ejemplo siguiente se quita el enlace de la <xref:System.Windows.Controls.TextBlock.TextProperty> de *mytext*, un <xref:System.Windows.Controls.TextBlock> objeto.</span><span class="sxs-lookup"><span data-stu-id="9abd8-106">The following example removes the binding from the <xref:System.Windows.Controls.TextBlock.TextProperty> of *mytext*, a <xref:System.Windows.Controls.TextBlock> object.</span></span>  
   
  [!code-csharp[CodeOnlyBinding#ClearBinding](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CodeOnlyBinding/CSharp/binding.cs#clearbinding)]
  [!code-vb[CodeOnlyBinding#ClearBinding](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CodeOnlyBinding/VisualBasic/App.vb#clearbinding)]  
   
- <span data-ttu-id="95de1-107">Al borrar el enlace, se quita el enlace para que el valor de la propiedad de dependencia cambie al que tendría sin el enlace.</span><span class="sxs-lookup"><span data-stu-id="95de1-107">Clearing the binding removes the binding so that the value of the dependency property is changed to whatever it would have been without the binding.</span></span> <span data-ttu-id="95de1-108">Este valor puede ser un valor predeterminado, un valor heredado o un valor de un enlace de la plantilla de datos.</span><span class="sxs-lookup"><span data-stu-id="95de1-108">This value could be a default value, an inherited value, or a value from a data template binding.</span></span>  
+ <span data-ttu-id="9abd8-107">Al borrar el enlace, se quita el enlace para que el valor de la propiedad de dependencia cambie al que tendría sin el enlace.</span><span class="sxs-lookup"><span data-stu-id="9abd8-107">Clearing the binding removes the binding so that the value of the dependency property is changed to whatever it would have been without the binding.</span></span> <span data-ttu-id="9abd8-108">Este valor puede ser un valor predeterminado, un valor heredado o un valor de un enlace de la plantilla de datos.</span><span class="sxs-lookup"><span data-stu-id="9abd8-108">This value could be a default value, an inherited value, or a value from a data template binding.</span></span>  
   
- <span data-ttu-id="95de1-109">Para borrar los enlaces de todas las posibles propiedades de un objeto, utilice <xref:System.Windows.Data.BindingOperations.ClearAllBindings%2A>.</span><span class="sxs-lookup"><span data-stu-id="95de1-109">To clear bindings from all possible properties on an object, use <xref:System.Windows.Data.BindingOperations.ClearAllBindings%2A>.</span></span>  
+ <span data-ttu-id="9abd8-109">Para borrar los enlaces de todas las posibles propiedades de un objeto, utilice <xref:System.Windows.Data.BindingOperations.ClearAllBindings%2A>.</span><span class="sxs-lookup"><span data-stu-id="9abd8-109">To clear bindings from all possible properties on an object, use <xref:System.Windows.Data.BindingOperations.ClearAllBindings%2A>.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="95de1-110">Vea también</span><span class="sxs-lookup"><span data-stu-id="95de1-110">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="9abd8-110">Vea también</span><span class="sxs-lookup"><span data-stu-id="9abd8-110">See Also</span></span>  
  <xref:System.Windows.Data.BindingOperations>  
- [<span data-ttu-id="95de1-111">Información general sobre el enlace de datos</span><span class="sxs-lookup"><span data-stu-id="95de1-111">Data Binding Overview</span></span>](../../../../docs/framework/wpf/data/data-binding-overview.md)  
- [<span data-ttu-id="95de1-112">Temas de procedimientos</span><span class="sxs-lookup"><span data-stu-id="95de1-112">How-to Topics</span></span>](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+ [<span data-ttu-id="9abd8-111">Información general sobre el enlace de datos</span><span class="sxs-lookup"><span data-stu-id="9abd8-111">Data Binding Overview</span></span>](../../../../docs/framework/wpf/data/data-binding-overview.md)  
+ [<span data-ttu-id="9abd8-112">Temas "Cómo..."</span><span class="sxs-lookup"><span data-stu-id="9abd8-112">How-to Topics</span></span>](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)

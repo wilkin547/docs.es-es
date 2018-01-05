@@ -17,23 +17,24 @@ caps.latest.revision: "65"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 69f11a6c42aaf1ddc0d19cc54580cb44501b9307
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 31dd8d636a64b54c914d48b4faee95f82de680fc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="richtextbox-how-to-topics"></a><span data-ttu-id="b6b2e-102">Temas "Cómo..." del control RichTextBox</span><span class="sxs-lookup"><span data-stu-id="b6b2e-102">RichTextBox How-to Topics</span></span>
-<span data-ttu-id="b6b2e-103">Esta sección proporciona ejemplos que muestran cómo realizar tareas comunes mediante el <xref:System.Windows.Controls.RichTextBox> control.</span><span class="sxs-lookup"><span data-stu-id="b6b2e-103">This section provides examples that demonstrate how to accomplish common tasks using the <xref:System.Windows.Controls.RichTextBox> control.</span></span>  
+# <a name="richtextbox-how-to-topics"></a><span data-ttu-id="5bcc8-102">Temas "Cómo..." del control RichTextBox</span><span class="sxs-lookup"><span data-stu-id="5bcc8-102">RichTextBox How-to Topics</span></span>
+<span data-ttu-id="5bcc8-103">Esta sección proporciona ejemplos que muestran cómo realizar tareas comunes mediante el <xref:System.Windows.Controls.RichTextBox> control.</span><span class="sxs-lookup"><span data-stu-id="5bcc8-103">This section provides examples that demonstrate how to accomplish common tasks using the <xref:System.Windows.Controls.RichTextBox> control.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="b6b2e-104">En esta sección</span><span class="sxs-lookup"><span data-stu-id="b6b2e-104">In This Section</span></span>  
- [<span data-ttu-id="b6b2e-105">Extraer el contenido de texto de un control RichTextBox</span><span class="sxs-lookup"><span data-stu-id="b6b2e-105">Extract the Text Content from a RichTextBox</span></span>](../../../../docs/framework/wpf/controls/how-to-extract-the-text-content-from-a-richtextbox.md)  
- [<span data-ttu-id="b6b2e-106">Cambiar mediante programación la selección en un control RichTextBox</span><span class="sxs-lookup"><span data-stu-id="b6b2e-106">Change Selection in a RichTextBox Programmatically</span></span>](../../../../docs/framework/wpf/controls/change-selection-in-a-richtextbox-programmatically.md)  
- [<span data-ttu-id="b6b2e-107">Guardar, cargar e imprimir contenido de un control RichTextBox</span><span class="sxs-lookup"><span data-stu-id="b6b2e-107">Save, Load, and Print RichTextBox Content</span></span>](../../../../docs/framework/wpf/controls/how-to-save-load-and-print-richtextbox-content.md)  
- [<span data-ttu-id="b6b2e-108">Colocar un menú contextual personalizado en un control RichTextBox</span><span class="sxs-lookup"><span data-stu-id="b6b2e-108">Position a Custom Context Menu in a RichTextBox</span></span>](../../../../docs/framework/wpf/controls/how-to-position-a-custom-context-menu-in-a-richtextbox.md)  
- [<span data-ttu-id="b6b2e-109">Cómo: reemplazar el Host de contenido predeterminado para un control RichTextBox</span><span class="sxs-lookup"><span data-stu-id="b6b2e-109">How to: Replace the Default Content Host for a RichTextBox</span></span>](http://msdn.microsoft.com/en-us/dec1b2ce-9ca5-4bb2-bf54-f8a80a3c8beb)  
+## <a name="in-this-section"></a><span data-ttu-id="5bcc8-104">En esta sección</span><span class="sxs-lookup"><span data-stu-id="5bcc8-104">In This Section</span></span>  
+ [<span data-ttu-id="5bcc8-105">Extraer el contenido de texto de un control RichTextBox</span><span class="sxs-lookup"><span data-stu-id="5bcc8-105">Extract the Text Content from a RichTextBox</span></span>](../../../../docs/framework/wpf/controls/how-to-extract-the-text-content-from-a-richtextbox.md)  
+ [<span data-ttu-id="5bcc8-106">Cambiar mediante programación la selección en un control RichTextBox</span><span class="sxs-lookup"><span data-stu-id="5bcc8-106">Change Selection in a RichTextBox Programmatically</span></span>](../../../../docs/framework/wpf/controls/change-selection-in-a-richtextbox-programmatically.md)  
+ [<span data-ttu-id="5bcc8-107">Guardar, cargar e imprimir contenido de un control RichTextBox</span><span class="sxs-lookup"><span data-stu-id="5bcc8-107">Save, Load, and Print RichTextBox Content</span></span>](../../../../docs/framework/wpf/controls/how-to-save-load-and-print-richtextbox-content.md)  
+ [<span data-ttu-id="5bcc8-108">Colocar un menú contextual personalizado en un control RichTextBox</span><span class="sxs-lookup"><span data-stu-id="5bcc8-108">Position a Custom Context Menu in a RichTextBox</span></span>](../../../../docs/framework/wpf/controls/how-to-position-a-custom-context-menu-in-a-richtextbox.md)  
+ [<span data-ttu-id="5bcc8-109">Cómo: reemplazar el Host de contenido predeterminado para un control RichTextBox</span><span class="sxs-lookup"><span data-stu-id="5bcc8-109">How to: Replace the Default Content Host for a RichTextBox</span></span>](http://msdn.microsoft.com/en-us/dec1b2ce-9ca5-4bb2-bf54-f8a80a3c8beb)  
   
-## <a name="see-also"></a><span data-ttu-id="b6b2e-110">Vea también</span><span class="sxs-lookup"><span data-stu-id="b6b2e-110">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="5bcc8-110">Vea también</span><span class="sxs-lookup"><span data-stu-id="5bcc8-110">See Also</span></span>  
  <xref:System.Windows.Controls.TextBox>  
- [<span data-ttu-id="b6b2e-111">Documentos en WPF</span><span class="sxs-lookup"><span data-stu-id="b6b2e-111">Documents in WPF</span></span>](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
- [<span data-ttu-id="b6b2e-112">Información general sobre documentos dinámicos</span><span class="sxs-lookup"><span data-stu-id="b6b2e-112">Flow Document Overview</span></span>](../../../../docs/framework/wpf/advanced/flow-document-overview.md)
+ [<span data-ttu-id="5bcc8-111">Documentos en WPF</span><span class="sxs-lookup"><span data-stu-id="5bcc8-111">Documents in WPF</span></span>](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
+ [<span data-ttu-id="5bcc8-112">Información general sobre documentos dinámicos</span><span class="sxs-lookup"><span data-stu-id="5bcc8-112">Flow Document Overview</span></span>](../../../../docs/framework/wpf/advanced/flow-document-overview.md)

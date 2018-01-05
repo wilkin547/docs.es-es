@@ -20,25 +20,26 @@ caps.latest.revision: "64"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 809b3b22a276be985802c22ac2f71642f478dcb4
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 96c65c1f2a68c9af9275e071beda3b38b8e94f59
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="expander"></a><span data-ttu-id="db0e6-102">Expander</span><span class="sxs-lookup"><span data-stu-id="db0e6-102">Expander</span></span>
-<span data-ttu-id="db0e6-103">Un <xref:System.Windows.Controls.Expander> permite a un usuario ver un encabezado y expanda ese encabezado para ver más detalles o contraer una sección hasta un encabezado.</span><span class="sxs-lookup"><span data-stu-id="db0e6-103">An <xref:System.Windows.Controls.Expander> allows a user to view a header and expand that header to see further details, or to collapse a section up to a header.</span></span>  
+# <a name="expander"></a><span data-ttu-id="52ffe-102">Expander</span><span class="sxs-lookup"><span data-stu-id="52ffe-102">Expander</span></span>
+<span data-ttu-id="52ffe-103">Un <xref:System.Windows.Controls.Expander> permite a un usuario ver un encabezado y expanda ese encabezado para ver más detalles o contraer una sección hasta un encabezado.</span><span class="sxs-lookup"><span data-stu-id="52ffe-103">An <xref:System.Windows.Controls.Expander> allows a user to view a header and expand that header to see further details, or to collapse a section up to a header.</span></span>  
   
- <span data-ttu-id="db0e6-104">La ilustración siguiente proporciona un ejemplo de este control en su posición expandida.</span><span class="sxs-lookup"><span data-stu-id="db0e6-104">The following illustration provides an example of this control in its expanded position.</span></span>  
+ <span data-ttu-id="52ffe-104">La ilustración siguiente proporciona un ejemplo de este control en su posición expandida.</span><span class="sxs-lookup"><span data-stu-id="52ffe-104">The following illustration provides an example of this control in its expanded position.</span></span>  
   
- <span data-ttu-id="db0e6-105">![Ejemplo de Expander](../../../../docs/framework/wpf/controls/media/expanderexample.JPG "ExpanderExample")</span><span class="sxs-lookup"><span data-stu-id="db0e6-105">![Expander example](../../../../docs/framework/wpf/controls/media/expanderexample.JPG "ExpanderExample")</span></span>  
-<span data-ttu-id="db0e6-106">Expander (control)</span><span class="sxs-lookup"><span data-stu-id="db0e6-106">Expander control</span></span>  
+ <span data-ttu-id="52ffe-105">![Ejemplo de Expander](../../../../docs/framework/wpf/controls/media/expanderexample.JPG "ExpanderExample")</span><span class="sxs-lookup"><span data-stu-id="52ffe-105">![Expander example](../../../../docs/framework/wpf/controls/media/expanderexample.JPG "ExpanderExample")</span></span>  
+<span data-ttu-id="52ffe-106">Expander (control)</span><span class="sxs-lookup"><span data-stu-id="52ffe-106">Expander control</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="db0e6-107">En esta sección</span><span class="sxs-lookup"><span data-stu-id="db0e6-107">In This Section</span></span>  
- [<span data-ttu-id="db0e6-108">Información general sobre el control Expander</span><span class="sxs-lookup"><span data-stu-id="db0e6-108">Expander Overview</span></span>](../../../../docs/framework/wpf/controls/expander-overview.md)  
- [<span data-ttu-id="db0e6-109">Temas de procedimientos</span><span class="sxs-lookup"><span data-stu-id="db0e6-109">How-to Topics</span></span>](../../../../docs/framework/wpf/controls/expander-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="52ffe-107">En esta sección</span><span class="sxs-lookup"><span data-stu-id="52ffe-107">In This Section</span></span>  
+ [<span data-ttu-id="52ffe-108">Información general sobre el control Expander</span><span class="sxs-lookup"><span data-stu-id="52ffe-108">Expander Overview</span></span>](../../../../docs/framework/wpf/controls/expander-overview.md)  
+ [<span data-ttu-id="52ffe-109">Temas "Cómo..."</span><span class="sxs-lookup"><span data-stu-id="52ffe-109">How-to Topics</span></span>](../../../../docs/framework/wpf/controls/expander-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="db0e6-110">Referencia</span><span class="sxs-lookup"><span data-stu-id="db0e6-110">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="52ffe-110">Referencia</span><span class="sxs-lookup"><span data-stu-id="52ffe-110">Reference</span></span>  
  <xref:System.Windows.Controls.Expander>  
   
-## <a name="related-sections"></a><span data-ttu-id="db0e6-111">Secciones relacionadas</span><span class="sxs-lookup"><span data-stu-id="db0e6-111">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="52ffe-111">Secciones relacionadas</span><span class="sxs-lookup"><span data-stu-id="52ffe-111">Related Sections</span></span>

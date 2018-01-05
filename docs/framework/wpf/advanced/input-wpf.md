@@ -17,25 +17,26 @@ caps.latest.revision: "72"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 46e54e05d30e14ad89454a627a7436fbd3cbedbe
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 1a39badbd6e7ddfc445d674a719ba9fe82f554d6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="input-wpf"></a><span data-ttu-id="8ddc1-102">Entrada (WPF)</span><span class="sxs-lookup"><span data-stu-id="8ddc1-102">Input (WPF)</span></span>
-[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]<span data-ttu-id="8ddc1-103">incluye compatibilidad con varios tipos de entrada.</span><span class="sxs-lookup"><span data-stu-id="8ddc1-103"> includes support for several types of input.</span></span> <span data-ttu-id="8ddc1-104">Esta entrada incluye texto, táctil, mouse, comandos, foco, entrada táctil, arrastrar y colocar y entrada de lápiz digital.</span><span class="sxs-lookup"><span data-stu-id="8ddc1-104">This input includes text, touch, mouse, commands, focus, touch, drag-and-drop, and digital ink.</span></span> <span data-ttu-id="8ddc1-105">Esta sección describe temas relacionados con la entrada en WPF.</span><span class="sxs-lookup"><span data-stu-id="8ddc1-105">This section describes topics related to input in WPF.</span></span>  
+# <a name="input-wpf"></a><span data-ttu-id="2c11b-102">Entrada (WPF)</span><span class="sxs-lookup"><span data-stu-id="2c11b-102">Input (WPF)</span></span>
+[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]<span data-ttu-id="2c11b-103">incluye compatibilidad con varios tipos de entrada.</span><span class="sxs-lookup"><span data-stu-id="2c11b-103"> includes support for several types of input.</span></span> <span data-ttu-id="2c11b-104">Esta entrada incluye texto, táctil, mouse, comandos, foco, entrada táctil, arrastrar y colocar y entrada de lápiz digital.</span><span class="sxs-lookup"><span data-stu-id="2c11b-104">This input includes text, touch, mouse, commands, focus, touch, drag-and-drop, and digital ink.</span></span> <span data-ttu-id="2c11b-105">Esta sección describe temas relacionados con la entrada en WPF.</span><span class="sxs-lookup"><span data-stu-id="2c11b-105">This section describes topics related to input in WPF.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="8ddc1-106">En esta sección</span><span class="sxs-lookup"><span data-stu-id="8ddc1-106">In This Section</span></span>  
- [<span data-ttu-id="8ddc1-107">Información general sobre acciones del usuario</span><span class="sxs-lookup"><span data-stu-id="8ddc1-107">Input Overview</span></span>](../../../../docs/framework/wpf/advanced/input-overview.md)  
- [<span data-ttu-id="8ddc1-108">Información general sobre comandos</span><span class="sxs-lookup"><span data-stu-id="8ddc1-108">Commanding Overview</span></span>](../../../../docs/framework/wpf/advanced/commanding-overview.md)  
- [<span data-ttu-id="8ddc1-109">Información general sobre el foco</span><span class="sxs-lookup"><span data-stu-id="8ddc1-109">Focus Overview</span></span>](../../../../docs/framework/wpf/advanced/focus-overview.md)  
- [<span data-ttu-id="8ddc1-110">Aplicar estilo a los controles al recibir el foco y FocusVisualStyle</span><span class="sxs-lookup"><span data-stu-id="8ddc1-110">Styling for Focus in Controls, and FocusVisualStyle</span></span>](../../../../docs/framework/wpf/advanced/styling-for-focus-in-controls-and-focusvisualstyle.md)  
- [<span data-ttu-id="8ddc1-111">Tutorial: Crear su primera aplicación táctil</span><span class="sxs-lookup"><span data-stu-id="8ddc1-111">Walkthrough: Creating Your First Touch Application</span></span>](../../../../docs/framework/wpf/advanced/walkthrough-creating-your-first-touch-application.md)  
- [<span data-ttu-id="8ddc1-112">Temas de procedimientos</span><span class="sxs-lookup"><span data-stu-id="8ddc1-112">How-to Topics</span></span>](../../../../docs/framework/wpf/advanced/input-and-commands-how-to-topics.md)  
- [<span data-ttu-id="8ddc1-113">Entrada de lápiz digital</span><span class="sxs-lookup"><span data-stu-id="8ddc1-113">Digital Ink</span></span>](../../../../docs/framework/wpf/advanced/digital-ink.md)  
+## <a name="in-this-section"></a><span data-ttu-id="2c11b-106">En esta sección</span><span class="sxs-lookup"><span data-stu-id="2c11b-106">In This Section</span></span>  
+ [<span data-ttu-id="2c11b-107">Información general sobre acciones del usuario</span><span class="sxs-lookup"><span data-stu-id="2c11b-107">Input Overview</span></span>](../../../../docs/framework/wpf/advanced/input-overview.md)  
+ [<span data-ttu-id="2c11b-108">Información general sobre comandos</span><span class="sxs-lookup"><span data-stu-id="2c11b-108">Commanding Overview</span></span>](../../../../docs/framework/wpf/advanced/commanding-overview.md)  
+ [<span data-ttu-id="2c11b-109">Información general sobre el foco</span><span class="sxs-lookup"><span data-stu-id="2c11b-109">Focus Overview</span></span>](../../../../docs/framework/wpf/advanced/focus-overview.md)  
+ [<span data-ttu-id="2c11b-110">Aplicar estilo a los controles al recibir el foco y FocusVisualStyle</span><span class="sxs-lookup"><span data-stu-id="2c11b-110">Styling for Focus in Controls, and FocusVisualStyle</span></span>](../../../../docs/framework/wpf/advanced/styling-for-focus-in-controls-and-focusvisualstyle.md)  
+ [<span data-ttu-id="2c11b-111">Tutorial: Crear su primera aplicación táctil</span><span class="sxs-lookup"><span data-stu-id="2c11b-111">Walkthrough: Creating Your First Touch Application</span></span>](../../../../docs/framework/wpf/advanced/walkthrough-creating-your-first-touch-application.md)  
+ [<span data-ttu-id="2c11b-112">Temas "Cómo..."</span><span class="sxs-lookup"><span data-stu-id="2c11b-112">How-to Topics</span></span>](../../../../docs/framework/wpf/advanced/input-and-commands-how-to-topics.md)  
+ [<span data-ttu-id="2c11b-113">Entrada de lápiz digital</span><span class="sxs-lookup"><span data-stu-id="2c11b-113">Digital Ink</span></span>](../../../../docs/framework/wpf/advanced/digital-ink.md)  
   
-## <a name="reference"></a><span data-ttu-id="8ddc1-114">Referencia</span><span class="sxs-lookup"><span data-stu-id="8ddc1-114">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="2c11b-114">Referencia</span><span class="sxs-lookup"><span data-stu-id="2c11b-114">Reference</span></span>  
  <xref:System.Windows.UIElement>  
   
  <xref:System.Windows.FrameworkElement>  
@@ -50,6 +51,6 @@ ms.lasthandoff: 10/22/2017
   
  <xref:System.Windows.Input.FocusManager>  
   
-## <a name="related-sections"></a><span data-ttu-id="8ddc1-115">Secciones relacionadas</span><span class="sxs-lookup"><span data-stu-id="8ddc1-115">Related Sections</span></span>  
- [<span data-ttu-id="8ddc1-116">Controles</span><span class="sxs-lookup"><span data-stu-id="8ddc1-116">Controls</span></span>](../../../../docs/framework/wpf/controls/index.md)  
-  [<span data-ttu-id="8ddc1-117">Eventos</span><span class="sxs-lookup"><span data-stu-id="8ddc1-117">Events</span></span>](../../../../docs/framework/wpf/advanced/events-wpf.md)
+## <a name="related-sections"></a><span data-ttu-id="2c11b-115">Secciones relacionadas</span><span class="sxs-lookup"><span data-stu-id="2c11b-115">Related Sections</span></span>  
+ [<span data-ttu-id="2c11b-116">Controles</span><span class="sxs-lookup"><span data-stu-id="2c11b-116">Controls</span></span>](../../../../docs/framework/wpf/controls/index.md)  
+  [<span data-ttu-id="2c11b-117">Eventos</span><span class="sxs-lookup"><span data-stu-id="2c11b-117">Events</span></span>](../../../../docs/framework/wpf/advanced/events-wpf.md)

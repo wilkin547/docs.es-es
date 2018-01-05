@@ -17,23 +17,24 @@ caps.latest.revision: "70"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3a2a32d198b0c06764ae648c943f168ece7668af
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 33347f85f5e9d1f3e19a6631e51b19d5612cf5d5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="groupbox"></a><span data-ttu-id="e4475-102">GroupBox</span><span class="sxs-lookup"><span data-stu-id="e4475-102">GroupBox</span></span>
-<span data-ttu-id="e4475-103">El <xref:System.Windows.Controls.GroupBox> control es un <xref:System.Windows.Controls.HeaderedContentControl> que proporciona un contenedor titulado para [!INCLUDE[TLA#tla_gui](../../../../includes/tlasharptla-gui-md.md)] contenido.</span><span class="sxs-lookup"><span data-stu-id="e4475-103">The <xref:System.Windows.Controls.GroupBox> control is a <xref:System.Windows.Controls.HeaderedContentControl> that provides a titled container for [!INCLUDE[TLA#tla_gui](../../../../includes/tlasharptla-gui-md.md)] content.</span></span>  
+# <a name="groupbox"></a><span data-ttu-id="d610b-102">GroupBox</span><span class="sxs-lookup"><span data-stu-id="d610b-102">GroupBox</span></span>
+<span data-ttu-id="d610b-103">El <xref:System.Windows.Controls.GroupBox> control es un <xref:System.Windows.Controls.HeaderedContentControl> que proporciona un contenedor titulado para [!INCLUDE[TLA#tla_gui](../../../../includes/tlasharptla-gui-md.md)] contenido.</span><span class="sxs-lookup"><span data-stu-id="d610b-103">The <xref:System.Windows.Controls.GroupBox> control is a <xref:System.Windows.Controls.HeaderedContentControl> that provides a titled container for [!INCLUDE[TLA#tla_gui](../../../../includes/tlasharptla-gui-md.md)] content.</span></span>  
   
- <span data-ttu-id="e4475-104">La siguiente ilustración muestra un <xref:System.Windows.Controls.GroupBox> que contiene un <xref:System.Windows.Controls.TabControl> y un <xref:System.Windows.Controls.Button> que se incluyen en un <xref:System.Windows.Controls.StackPanel>.</span><span class="sxs-lookup"><span data-stu-id="e4475-104">The following illustration shows a <xref:System.Windows.Controls.GroupBox> that contains a <xref:System.Windows.Controls.TabControl> and a <xref:System.Windows.Controls.Button> that are enclosed in a <xref:System.Windows.Controls.StackPanel>.</span></span>  
+ <span data-ttu-id="d610b-104">La siguiente ilustración muestra un <xref:System.Windows.Controls.GroupBox> que contiene un <xref:System.Windows.Controls.TabControl> y un <xref:System.Windows.Controls.Button> que se incluyen en un <xref:System.Windows.Controls.StackPanel>.</span><span class="sxs-lookup"><span data-stu-id="d610b-104">The following illustration shows a <xref:System.Windows.Controls.GroupBox> that contains a <xref:System.Windows.Controls.TabControl> and a <xref:System.Windows.Controls.Button> that are enclosed in a <xref:System.Windows.Controls.StackPanel>.</span></span>  
   
- <span data-ttu-id="e4475-105">![GroupBoxImage](../../../../docs/framework/wpf/controls/media/groupboximage.JPG "GroupBoxImage")</span><span class="sxs-lookup"><span data-stu-id="e4475-105">![GroupBoxImage](../../../../docs/framework/wpf/controls/media/groupboximage.JPG "GroupBoxImage")</span></span>  
+ <span data-ttu-id="d610b-105">![GroupBoxImage](../../../../docs/framework/wpf/controls/media/groupboximage.JPG "GroupBoxImage")</span><span class="sxs-lookup"><span data-stu-id="d610b-105">![GroupBoxImage](../../../../docs/framework/wpf/controls/media/groupboximage.JPG "GroupBoxImage")</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="e4475-106">En esta sección</span><span class="sxs-lookup"><span data-stu-id="e4475-106">In This Section</span></span>  
- [<span data-ttu-id="e4475-107">Definir una plantilla de un control GroupBox</span><span class="sxs-lookup"><span data-stu-id="e4475-107">Define a GroupBox Template</span></span>](../../../../docs/framework/wpf/controls/how-to-define-a-groupbox-template.md)  
+## <a name="in-this-section"></a><span data-ttu-id="d610b-106">En esta sección</span><span class="sxs-lookup"><span data-stu-id="d610b-106">In This Section</span></span>  
+ [<span data-ttu-id="d610b-107">Definir una plantilla de un control GroupBox</span><span class="sxs-lookup"><span data-stu-id="d610b-107">Define a GroupBox Template</span></span>](../../../../docs/framework/wpf/controls/how-to-define-a-groupbox-template.md)  
   
-## <a name="reference"></a><span data-ttu-id="e4475-108">Referencia</span><span class="sxs-lookup"><span data-stu-id="e4475-108">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="d610b-108">Referencia</span><span class="sxs-lookup"><span data-stu-id="d610b-108">Reference</span></span>  
  <xref:System.Windows.Controls.GroupBox>  
   
-## <a name="related-sections"></a><span data-ttu-id="e4475-109">Secciones relacionadas</span><span class="sxs-lookup"><span data-stu-id="e4475-109">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="d610b-109">Secciones relacionadas</span><span class="sxs-lookup"><span data-stu-id="d610b-109">Related Sections</span></span>
