@@ -23,14 +23,15 @@ caps.latest.revision: "36"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 290682542a0accaf38408127f7358625abca14af
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 76a836e2699617803b78f76f90b27452bd0cdd0f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wpf-add-ins-overview"></a>Información general sobre los complementos de WPF
-<a name="Introduction"></a>[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] incluye un modelo de complementos que los desarrolladores pueden usar para crear aplicaciones que admiten la extensibilidad de los complementos. Dicho modelo permite la creación de complementos que se integran con las aplicaciones y amplían su funcionalidad. En algunos escenarios, las aplicaciones también necesitan mostrar [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] que proporcionan los complementos. En este tema se muestra la forma en que [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aumenta el modelo del complemento de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] para habilitar estos escenarios, la arquitectura subyacente, sus ventajas y sus limitaciones.  
+<a name="Introduction"></a>El[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] incluye un modelo de complementos que los desarrolladores pueden usar para crear aplicaciones que admiten la extensibilidad de los complementos. Dicho modelo permite la creación de complementos que se integran con las aplicaciones y amplían su funcionalidad. En algunos escenarios, las aplicaciones también necesitan mostrar [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] que proporcionan los complementos. En este tema se muestra la forma en que [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aumenta el modelo del complemento de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] para habilitar estos escenarios, la arquitectura subyacente, sus ventajas y sus limitaciones.  
   
 
   
@@ -146,7 +147,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="add-in-is-a-user-interface"></a>El complemento es una interfaz de usuario  
  Cuando un complemento es una [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], se requiere lo siguiente:  
   
-1.  La aplicación host, el complemento y la canalización deben crearse, como se describe en el documento [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)][Complementos y extensibilidad](../../../../docs/framework/add-ins/index.md).  
+1.  La aplicación host, el complemento y la canalización deben crearse, como se describe en el documento [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] [Complementos y extensibilidad](../../../../docs/framework/add-ins/index.md).  
   
 2.  Debe implementar la interfaz de contrato para el complemento <xref:System.AddIn.Contract.INativeHandleContract>.  
   
@@ -221,7 +222,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="wpf-add-in-architecture"></a>Arquitectura de complemento WPF  
  En el nivel superior, como hemos visto, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] permite [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] complementos para implementar [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] (que se derivan directa o indirectamente de <xref:System.Windows.FrameworkElement>) con <xref:System.AddIn.Contract.INativeHandleContract>, <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> y <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A>. El resultado es que la aplicación host se devuelve un <xref:System.Windows.FrameworkElement> que se muestra de [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] en la aplicación host.  
   
- En el caso de escenarios de complementos de [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] simples, este es todo el detalle que necesita el desarrollador. En el caso de escenarios más complejos, especialmente los que intenten usar servicios de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] adicionales , como el diseño, los recursos y enlace de datos, se requiere un conocimiento más detallado de la forma en que [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] amplía el modelo de complemento de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] con [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] la compatibilidad con interfaz de usuario para conocer sus ventajas y limitaciones.  
+ En el caso de escenarios de complementos de [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] simples, este es todo el detalle que necesita el desarrollador. Para escenarios más complejos, especialmente las que intente utilizar adicionales [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] servicios, como el diseño, los recursos y enlace de datos, más un conocimiento detallan de cómo [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] amplía la [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] modelo con [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] soporte técnico debe conocer sus ventajas y limitaciones.  
   
  Fundamentalmente, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] no pasa una [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] interfaz de usuario desde un complemento a una aplicación host; en su lugar, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] pasa el identificador de ventana de Win32 para la interfaz [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] de usuario mediante la interoperabilidad de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]. Por lo tanto, cuando una [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] de un complemento se pasa a una aplicación host, ocurre lo siguiente:  
   
@@ -260,17 +261,17 @@ ms.lasthandoff: 11/21/2017
 ## <a name="wpf-add-in-limitations"></a>Limitaciones del complemento de WPF  
  Más allá de las ventajas que [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] agrega a los comportamientos predeterminados proporcionados por <xref:System.Windows.Interop.HwndSource>, <xref:System.Windows.Interop.HwndHost>e identificadores de ventana, también existen limitaciones en el complemento [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] que se muestran en las aplicaciones de host:  
   
--   Las [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] del complemento que se muestran desde una aplicación host no respetan el comportamiento de recorte de la aplicación host.  
+-   Complemento [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] muestra desde un host de aplicación no respeta comportamiento de recorte de la aplicación host.  
   
 -   El concepto de *espacio aéreo* en los escenarios de interoperabilidad también se aplica a los complementos (consulte [Información general sobre áreas de la tecnología](../../../../docs/framework/wpf/advanced/technology-regions-overview.md)).  
   
--   Los servicios de la [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] de una aplicación host, como la herencia de los recursos, el enlace de datos y los comandos, no están disponibles en las [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] del complemento. Para proporcionar estos servicios al complemento, es preciso actualizar la canalización.  
+-   Una aplicación host [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] servicios, como la herencia de los recursos, el enlace de datos y comandos, no están disponibles automáticamente para el complemento [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)]. Para proporcionar estos servicios al complemento, es preciso actualizar la canalización.  
   
 -   Una interfaz de usuario del complemento no se puede girar, escalar, sesgar ni verse afectada de ninguna otra forma por una transformación (consulte [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]Información general sobre [transformaciones](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)).  
   
 -   Contenido dentro de complemento [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] que se representa mediante el dibujo de las operaciones de la <xref:System.Drawing> espacio de nombres puede incluir combinación alfa. Sin embargo, tanto la interfaz de usuario del complemento como la de aplicación host [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] que la contiene deben ser 100 % opacas; es decir, la `Opacity` propiedad [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] de ambas se debe establecer en 1.  
   
--   Si el <xref:System.Windows.Window.AllowsTransparency%2A> propiedad de una ventana en la aplicación host que contiene un complemento de [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] se establece en `true`, el complemento es invisible. Esto sucede aunque la interfaz de usuario del complemento [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] es 100 % opaca (es decir, la propiedad `Opacity` tiene un valor de 1).  
+-   Si el <xref:System.Windows.Window.AllowsTransparency%2A> propiedad de una ventana en la aplicación host que contiene un complemento de [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] se establece en `true`, el complemento es invisible. Esto es cierto incluso si el complemento [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] es 100% opaca (es decir, el `Opacity` propiedad tiene un valor de 1).  
   
 -   Una interfaz de usuario del complemento [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] aparece encima de los restantes elementos de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] en la misma ventana de nivel superior.  
   
@@ -282,9 +283,9 @@ ms.lasthandoff: 11/21/2017
   
 -   Cuando el foco cambia entre los controles de una [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] del complemento, la aplicación host no recibe ni genera los eventos `GotFocus` y `LostFocus`.  
   
--   La parte de una aplicación host que contiene una interfaz de usuario del complemento [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] aparece en blanco cuando se imprime.  
+-   La parte de una aplicación host que contiene un complemento de [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] aparecerá en blanco cuando se imprima.  
   
--   Todos los distribuidores (vea <xref:System.Windows.Threading.Dispatcher>) creados por el complemento de [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] debe cerrarse manualmente antes de que el complemento de propietario se descargan si continúa la ejecución de la aplicación host. El contrato puede implementar métodos que permiten a la aplicación host señalar el complemento antes de que se descargue, lo que permite a la [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] del complemento apagar sus distribuidores.  
+-   Todos los distribuidores (vea <xref:System.Windows.Threading.Dispatcher>) creados por el complemento de [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] debe cerrarse manualmente antes de que el complemento de propietario se descargan si continúa la ejecución de la aplicación host. El contrato puede implementar métodos que permiten la aplicación de host señalar el complemento antes de que el complemento se descarga, lo que permite que el complemento [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] para cerrar sus distribuidores.  
   
 -   Si un complemento de [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] es un <xref:System.Windows.Controls.InkCanvas> o contiene un <xref:System.Windows.Controls.InkCanvas>, no se puede descargar el complemento.  
   
@@ -298,4 +299,4 @@ ms.lasthandoff: 11/21/2017
  [Dominios de aplicación](../../../../docs/framework/app-domains/application-domains.md)  
  [Información general sobre comunicación remota de .NET framework](http://msdn.microsoft.com/en-us/eccb1d31-0a22-417a-97fd-f4f1f3aa4462)  
  [Realizar objetos utilizables de forma remota](http://msdn.microsoft.com/en-us/01197253-3f13-43b7-894d-9683e431192a)  
- [Temas de procedimientos](../../../../docs/framework/wpf/app-development/how-to-topics.md)
+ [Temas "Cómo..."](../../../../docs/framework/wpf/app-development/how-to-topics.md)
