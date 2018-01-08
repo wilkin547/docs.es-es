@@ -18,11 +18,12 @@ caps.latest.revision: "20"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 21da853d442a86eb42d04ff4f32d9f2798e14477
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b2762080c66c3c9451e7c7c3d4621d8cb9d4846e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="regasmexe-assembly-registration-tool"></a>Regasm.exe (Herramienta de registro de ensamblados)
 La herramienta de registro de ensamblados lee los metadatos de un ensamblado y agrega las entradas necesarias al Registro, lo que permite a los clientes COM crear clases de .NET Framework de forma transparente. Una vez registrada una clase, cualquier cliente COM puede usarla como si se tratase de una clase COM. La clase se registra una sola vez, cuando se instala el ensamblado. Las instancias de las clases del ensamblado no se pueden crear a partir de COM si no están registradas.  
@@ -39,11 +40,11 @@ regasm assemblyFile [options]
   
 #### <a name="parameters"></a>Parámetros  
   
-|Parámetro|Descripción|  
+|Parámetro|Description|  
 |---------------|-----------------|  
 |*assemblyFile*|El ensamblado que se va a registrar con COM.|  
   
-|Opción|Descripción|  
+|Opción|Description|  
 |------------|-----------------|  
 |**/codebase**|Crea una entrada de código base en el Registro. La entrada de código base especifica la ruta de acceso de archivo de un ensamblado que no está instalado en la caché global de ensamblados. No debe especificar esta opción si posteriormente va a instalar el ensamblado que va a registrar en la caché global de ensamblados. El argumento *assemblyFile* especificado con la opción **/codebase** debe ser un [ensamblado con nombre seguro](../../../docs/framework/app-domains/strong-named-assemblies.md).|  
 |**/registered**|Especifica que esta herramienta solo hará referencia a las bibliotecas de tipos que ya se hayan registrado.|  

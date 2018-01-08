@@ -24,11 +24,12 @@ caps.latest.revision: "40"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 611df94890200f442e8e2b0f5d1442eb44f25c70
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: edda4e415f8ce0246ce6aa1a4d39f5bb6cec7728
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="installutilexe-installer-tool"></a>Installutil.exe (Herramienta Installer)
 La herramienta de instalación es una utilidad de la línea de comandos que le permite instalar y desinstalar recursos de servidor mediante la ejecución de los componentes del instalador en ensamblados específicos. Esta herramienta funciona junto con clases del espacio de nombres <xref:System.Configuration.Install>.  
@@ -45,14 +46,14 @@ installutil [/u[ninstall]] [options] assembly [[options] assembly] ...
   
 #### <a name="parameters"></a>Parámetros  
   
-|Argumento|Descripción|  
+|Argumento|Description|  
 |--------------|-----------------|  
 |`assembly`|Nombre de archivo del ensamblado en el que se ejecutan los componentes del instalador. Omita este parámetro si desea especificar el nombre seguro del ensamblado mediante la opción `/AssemblyName`.|  
   
 <a name="options"></a>   
 ## <a name="options"></a>Opciones  
   
-|Opción|Descripción|  
+|Opción|Description|  
 |------------|-----------------|  
 |`/h[elp]`<br /><br /> O bien<br /><br /> `/?`|Muestra las opciones y la sintaxis de los comandos para la herramienta.|  
 |`/help` *assembly*<br /><br /> O bien<br /><br /> `/?` *assembly*|Muestra opciones adicionales reconocidas por instaladores individuales dentro del ensamblado especificado, junto con la sintaxis y las opciones de los comandos de InstallUtil.exe. Esta opción agrega el texto devuelto por la propiedad <xref:System.Configuration.Install.Installer.HelpText%2A?displayProperty=nameWithType> de cada componente del instalador al texto de ayuda de InstallUtil.exe.|  

@@ -17,11 +17,12 @@ caps.latest.revision: "5"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: a0b03f2b5c0c656b8800d1b2ceff9b774a5c65d5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d8679e930b1f12119211a6463289fb37a18692d6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="net-framework-initialization-errors-managing-the-user-experience"></a>Errores de inicialización de .NET Framework: Administrar la experiencia del usuario
 El sistema de activación de Common Language Runtime (CLR) determina qué versión del CLR se utilizará para ejecutar código de aplicaciones administradas. El sistema de activación no siempre encuentra una versión de CLR para cargar. Esta situación normalmente se produce cuando una aplicación requiere una versión de CLR que está desusada o no está instalada en un equipo determinado. Si no se encuentra la versión solicitada, el sistema de activación de CLR devuelve un código de error HRESULT desde la función o interfaz a la que se llamó, y muestra al usuario que ejecuta la aplicación un mensaje de error. Este artículo facilita una lista de códigos HRESULT y explica cómo se puede impedir que aparezca el mensaje de error.  
@@ -74,7 +75,7 @@ Típico mensaje de error para errores de inicialización
 ## <a name="ui-policy-for-clr-provided-hosts"></a>Directiva de la interfaz de usuario para hosts proporcionados por CLR  
  CLR incluye un conjunto de hosts para diversos escenarios, y todos ellos muestran un mensaje de error cuando tienen problemas al cargar la versión necesaria del runtime. En la tabla siguiente se proporciona una lista de hosts y de sus directivas de mensajes de error.  
   
-|Host de CLR|Descripción|Directiva de mensajes de error|¿Puede deshabilitarse el mensaje de error?|  
+|Host de CLR|Description|Directiva de mensajes de error|¿Puede deshabilitarse el mensaje de error?|  
 |--------------|-----------------|--------------------------|------------------------------------|  
 |Host EXE administrado|Inicia archivos EXE administrados.|Se muestra en caso de que falte una versión de .NET Framework|No|  
 |Host COM administrado|Carga los componentes COM administrados en un proceso.|Se muestra en caso de que falte una versión de .NET Framework|Sí, estableciendo la marca SEM_FAILCRITICALERRORS|  

@@ -10,15 +10,16 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: b64e7e6f-ffb4-4fc8-b43b-5731c89479c2
-ms.openlocfilehash: 2f15f37016fe824d76b501e4793e0b28bbdbe167
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnetcore
+ms.openlocfilehash: bc38ca7b9f00c6c252ff4963c42519a64c456b43
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="dotnet-install-scripts-reference"></a>referencia de scripts de dotnet-install
 
-## <a name="name"></a>Name
+## <a name="name"></a>nombre
 
 `dotnet-install.ps1` | `dotnet-install.sh`: script usado para instalar las herramientas de la CLI de .NET Core y el entorno de tiempo de ejecución compartido.
 
@@ -32,7 +33,7 @@ macOS y Linux:
 
 `dotnet-install.sh [--channel] [--version] [--install-dir] [--architecture] [--shared-runtime] [--dry-run] [--no-path] [--azure-feed] [--verbose] [--help]`
 
-## <a name="description"></a>Descripción
+## <a name="description"></a>Description
 
 Los scripts `dotnet-install` se usan para realizar una instalación sin derechos administrativos del SDK de .NET Core, que incluye las herramientas de la CLI de .NET Core y el entorno de tiempo de ejecución compartido.
 
@@ -96,7 +97,7 @@ Si se establece, el prefijo/installdir no se exportan a la ruta de acceso para l
 
 `-AzureFeed`
 
-Especifica la dirección URL de la fuente de Azure al instalador. No se recomienda cambiar este valor. De manera predeterminada, es `https://dotnetcli.azureedge.net/dotnet`.
+Especifica la dirección URL de la fuente de Azure al instalador. No se recomienda cambiar este valor. El valor predeterminado es `https://dotnetcli.azureedge.net/dotnet`.
 
 `-ProxyAddress`
 

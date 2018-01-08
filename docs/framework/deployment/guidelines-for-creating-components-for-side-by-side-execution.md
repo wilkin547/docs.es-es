@@ -16,11 +16,12 @@ caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 054744612ec54861f675005a27a309e00024b242
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0c914b566727d882939c23a982fad5db12985de5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="guidelines-for-creating-components-for-side-by-side-execution"></a>Instrucciones para crear componentes para la ejecución en paralelo
 Siga estas instrucciones generales para crear aplicaciones administradas o componentes diseñados para la ejecución en paralelo:  

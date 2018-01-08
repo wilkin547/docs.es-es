@@ -20,11 +20,12 @@ caps.latest.revision: "33"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 9ce101a1770329ab54ec8be86ec537a77f0fc112
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: f42726b24abe78b151e4174da37b7c7bfff4c8d4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ildasmexe-il-disassembler"></a>Ildasm.exe (Desensamblador de IL)
 
@@ -44,7 +45,7 @@ ildasm [options] [PEfilename] [options]
 
 Las siguientes opciones se pueden usar con archivos *.exe*, *.dll*, *.obj*, *.lib* y *.winmd*.
 
-| Opción | Descripción |
+| Opción | Description |
 | ------ | ----------- |
 |**/out=** `filename`|Crea un archivo de salida con el `filename` especificado, en lugar de mostrar los resultados en una interfaz gráfica de usuario.|
 |**/rtf**|Genera la salida en formato de texto enriquecido. Esta opción no es válida si se usa junto con la opción **/text**.|
@@ -54,7 +55,7 @@ Las siguientes opciones se pueden usar con archivos *.exe*, *.dll*, *.obj*, *.li
 
 Las siguientes opciones adicionales se pueden usar con archivos *.exe*, *.dll* y *.winmd*.
 
-| Opción | Descripción |
+| Opción | Description |
 | ------ | ----------- |
 |**/bytes**|Muestra bytes reales, en formato hexadecimal, como comentarios de instrucciones.|
 |**/caverbal**|Genera objetos binarios de atributos personalizados en formato verbal. El valor predeterminado es el formato binario.|
@@ -71,7 +72,7 @@ Las siguientes opciones adicionales se pueden usar con archivos *.exe*, *.dll* y
 
 Las opciones siguientes se pueden usar con archivos *.exe*, *.dll* y *.winmd* para mostrar la salida únicamente en la consola o en un archivo.
 
-| Opción | Descripción |
+| Opción | Description |
 | ------ | ----------- |
 |**/all**|Especifica una combinación de las opciones **/header**, **/bytes**, **/stats**, **/classlist** y **/tokens**.|
 |**/classlist**|Incluye una lista de las clases definidas en el módulo.|
@@ -86,13 +87,13 @@ Las opciones siguientes se pueden usar con archivos *.exe*, *.dll* y *.winmd* pa
 
 Las opciones siguientes se pueden usar con archivos *.exe*, *.dll*, *.obj*, *.lib* y *.winmd* para mostrar la salida únicamente en la consola o en un archivo.
 
-| Opción | Descripción |
+| Opción | Description |
 | ------ | ----------- |
 |**/metadata**[=`specifier`]|Muestra metadatos, donde `specifier` es:<br /><br /> **MDHEADER**: muestra la información y los tamaños del encabezado de metadatos.<br /><br /> **HEX**: muestra información tanto en hexadecimal como en palabras.<br /><br /> **CSV**: muestra el número de registros y los tamaños de los montones.<br /><br /> **UNREX**: muestra externos sin resolver.<br /><br /> **SCHEMA**: muestra información del esquema y del encabezado de metadatos.<br /><br /> **RAW**: muestra las tablas de metadatos sin formato.<br /><br /> **HEAPS**: muestra los montones sin formato.<br /><br /> **VALIDATE**: valida la coherencia de los metadatos.<br /><br /> Puede especificar **/metadata** varias veces con valores diferentes para `specifier`.|
 
 Las siguientes opciones se pueden usar con archivos *.lib* para mostrar la salida únicamente en la consola o en un archivo.
 
-| Opción | Descripción |
+| Opción | Description |
 | ------ | ----------- |
 |**/objectfile**=`filename`|Muestra los metadatos de un único archivo objeto en la biblioteca especificada.|
 

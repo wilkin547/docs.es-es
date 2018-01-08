@@ -20,11 +20,12 @@ caps.latest.revision: "43"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c54f304117c86066e18bfb40f3b3640819647ac0
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: c14c01c670eccbc7f13210d3c0bb7df7bec07679
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sqlmetalexe-code-generation-tool"></a>SqlMetal.exe (Herramienta de generación de código)
 La herramienta de la línea de comandos SqlMetal genera el código y las asignaciones del componente [!INCLUDE[vbtecdlinq](../../../includes/vbtecdlinq-md.md)] de [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Si aplica las opciones que se incluyen posteriormente en este tema, puede indicarle a SqlMetal que realice algunas acciones diferentes, entre las que se incluyen las siguientes:  
@@ -53,7 +54,7 @@ sqlmetal [options] [<input file>]
   
  **Opciones de conexión**  
   
-|Opción|Descripción|  
+|Opción|Description|  
 |------------|-----------------|  
 |**/server:** *\<nombre>*|Especifica el nombre del servidor de bases de datos.|  
 |**/database:** *\<nombre>*|Especifica el catálogo de base de datos del servidor.|  
@@ -64,7 +65,7 @@ sqlmetal [options] [<input file>]
   
  **Opciones de extracción**  
   
-|Opción|Descripción|  
+|Opción|Description|  
 |------------|-----------------|  
 |**/views**|Extrae las vistas de base de datos.|  
 |**/functions**|Extrae las funciones de base de datos.|  
@@ -72,7 +73,7 @@ sqlmetal [options] [<input file>]
   
  **Opciones de salida**  
   
-|Opción|Descripción|  
+|Opción|Description|  
 |------------|-----------------|  
 |**/dbml** *[:file]*|Envía el resultado como .dbml. No se puede usar con la opción **/map** .|  
 |**/code** *[:file]*|Envía el resultado como código fuente. No se puede usar con la opción **/dbml** .|  
@@ -80,7 +81,7 @@ sqlmetal [options] [<input file>]
   
  **Varios**  
   
-|Opción|Descripción|  
+|Opción|Description|  
 |------------|-----------------|  
 |**/language:** *\<lenguaje>*|Especifica el lenguaje del código fuente.<br /><br /> *\<Lenguaje>* válido: vb, csharp.<br /><br /> Valor predeterminado: se deriva de la extensión del nombre del archivo de código.|  
 |**/namespace:** *\<nombre>*|Especifica el espacio de nombres del código generado. Valor predeterminado: sin espacio de nombres.|  
@@ -91,7 +92,7 @@ sqlmetal [options] [<input file>]
   
  **Archivo de entrada**  
   
-|Opción|Descripción|  
+|Opción|Description|  
 |------------|-----------------|  
 |**\<archivo de entrada>**|Especifica un archivo .mdf de SQL Server Express, un archivo .sdf de [!INCLUDE[ssEW](../../../includes/ssew-md.md)] o un archivo intermedio .dbml.|  
   
@@ -143,6 +144,6 @@ sqlmetal [options] [<input file>]
 >  Si usa la opción **/pluralize** con la base de datos de ejemplo Northwind, tenga en cuenta el comportamiento siguiente. Cuando SqlMetal genera nombres de tipos de fila para las tablas, los nombres de la tabla están en singular. Cuando crea las propiedades <xref:System.Data.Linq.DataContext> para las tablas, los nombres de la tabla están en plural. Casualmente, las tablas de la base de datos de ejemplo Northwind ya están en plural. Por tanto, no podrá ver este componente en funcionamiento. Aunque es una práctica común asignar nombres a las tablas de bases de datos en singular, también es habitual que .NET asigne nombres en plural a las colecciones.  
   
 ## <a name="see-also"></a>Vea también  
- [Cómo: Generar el modelo de objetos en Visual Basic o C#](../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)  
+ [Generación del modelo de objetos en Visual Basic o C#](../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)  
  [Generación de código en LINQ to SQL](../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)  
  [Asignación externa](../../../docs/framework/data/adonet/sql/linq/external-mapping.md)

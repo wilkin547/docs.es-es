@@ -12,11 +12,12 @@ ms.assetid: 094d043e-33c4-40ba-a503-e0b20b55f4cf
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 08716b0988e8c76144d8e0a3871c7c91f7419306
-ms.sourcegitcommit: 4a96a0fe9f87de70291245d71b76c7d1b15127ae
+ms.workload: dotnet
+ms.openlocfilehash: f4a67df0729a85149984f0a72be668cdcee30216
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/17/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="net-framework-deployment-guide-for-developers"></a>Guía de implementación de .NET Framework para desarrolladores
 En este tema se proporciona información a los desarrolladores que quieren instalar cualquier versión de NET Framework a partir de .NET Framework 4.5 en [!INCLUDE[net_current](../../../includes/net-current-version.md)] con sus aplicaciones.
@@ -316,7 +317,7 @@ NDP451-KB2858728-x86-x64-AllOS-JPN.exe/q /norestart /ChainingPackage <ProductNam
 #### <a name="return-codes"></a>Códigos de retorno
  En la tabla siguiente se muestra una lista de los códigos de retorno más comunes del instalador redistribuible de .NET Framework. Los códigos devueltos son los mismos para todas las versiones del instalador. Para obtener vínculos a la información detallada, vea la sección siguiente.
 
-|Código devuelto|Descripción|
+|Código devuelto|Description|
 |-----------------|-----------------|
 |0|La instalación se completó correctamente.|
 |1602|El usuario canceló la instalación.|
@@ -352,7 +353,7 @@ NDP451-KB2858728-x86-x64-AllOS-JPN.exe/q /norestart /ChainingPackage <ProductNam
 ### <a name="command-line-options"></a>Opciones de la línea de comandos
  En la tabla siguiente se muestran las opciones que se pueden incluir cuando se encadenan paquetes redistribuibles de [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] al programa de instalación de una aplicación.
 
-|Opción|Descripción|
+|Opción|Description|
 |------------|-----------------|
 |**/CEIPConsent**|Sobrescribe el comportamiento predeterminado y envía comentarios anónimos a Microsoft para mejorar las experiencias de implementación futuras. Se puede utilizar esta opción solamente si el programa de instalación solicita el consentimiento y si el usuario concede el permiso para enviar comentarios anónimos a Microsoft.|
 |**/chainingpackage** `packageName`|Especifica el nombre del archivo ejecutable que realiza el encadenamiento. Esta información se envía a Microsoft como comentarios anónimos para ayudar a mejorar las experiencias de implementación futuras.<br /><br /> Si el nombre del paquete incluye espacios, use comillas dobles como delimitadores; por ejemplo: **/chainingpackage "Lucerne Publishing"**. Para obtener un ejemplo de un paquete de encadenamiento, vea [Obtener información de progreso de un paquete de instalación](http://go.microsoft.com/fwlink/?LinkId=181926) en MSDN Library.|

@@ -26,11 +26,12 @@ caps.latest.revision: "16"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 99d8da622b23a98b8a48ad6fcdb82c270d24ed22
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 2c6ace8f34999a6d98fc6784dd21ce88baf2af42
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="reflection-and-generic-types"></a>Reflexión y tipos genéricos
 <a name="top"></a> Desde el punto de vista de la reflexión, la diferencia entre un tipo genérico y un tipo normal es que un tipo genérico tiene asociado un conjunto de parámetros de tipo (si es una definición de tipo genérico) o argumentos de tipo (si es un tipo construido). Un método genérico difiere de un método normal de la misma manera.  
@@ -48,7 +49,7 @@ ms.lasthandoff: 10/18/2017
   
  Para ver un ejemplo de código que muestra los métodos aquí descritos, vea [How to: Examine and Instantiate Generic Types with Reflection](../../../docs/framework/reflection-and-codedom/how-to-examine-and-instantiate-generic-types-with-reflection.md) (Cómo: Examinar y crear instancias de tipos genéricos mediante la reflexión).  
   
- El siguiente análisis supone que está familiarizado con la terminología de los genéricos, como la diferencia entre los parámetros y argumentos de tipo y los tipos construidos abiertos o cerrados. Para obtener más información, consulte [Genéricos](../../../docs/standard/generics/index.md).  
+ El siguiente análisis supone que está familiarizado con la terminología de los genéricos, como la diferencia entre los parámetros y argumentos de tipo y los tipos construidos abiertos o cerrados. Para más información, vea [Genéricos](../../../docs/standard/generics/index.md).  
   
  Esta información general consta de las siguientes secciones:  
   
@@ -155,7 +156,7 @@ generic<typename V, typename W> ref class D : B<int, V> {};
 <a name="related_topics"></a>   
 ## <a name="related-topics"></a>Temas relacionados  
   
-|Título|Descripción|  
+|Title|Description|  
 |-----------|-----------------|  
 |[Cómo: Examinar y crear instancias de tipos genéricos mediante la reflexión](../../../docs/framework/reflection-and-codedom/how-to-examine-and-instantiate-generic-types-with-reflection.md)|Muestra cómo usar las propiedades y los métodos de <xref:System.Type> y <xref:System.Reflection.MethodInfo> para examinar los tipos genéricos.|  
 |[Genéricos](../../../docs/standard/generics/index.md)|Describe la característica de genéricos y cómo se admite en .NET Framework.|  

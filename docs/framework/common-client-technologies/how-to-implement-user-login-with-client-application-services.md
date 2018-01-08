@@ -20,16 +20,17 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 909fbaa4e7dc1d384b5085d71cec346bde44cf14
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 2bf073b6db0a69cfda0c69ae34df0396f5dea35c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-implement-user-login-with-client-application-services"></a>Cómo: Implementar el inicio de sesión de usuarios con servicios de aplicaciones cliente
 Puede usar servicios de aplicaciones cliente para validar usuarios a través de un servicio de perfiles de [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] existente. Para información sobre cómo configurar el servicio de perfiles de [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)], vea [Usar la autenticación de formularios con Microsoft Ajax](http://msdn.microsoft.com/library/c50f7dc5-323c-4c63-b4f3-96edfc1e815e).  
   
- Los procedimientos siguientes describen cómo validar usuarios a través del servicio de autenticación cuando la aplicación está configurada para usar uno de los proveedores de servicios de autenticación de cliente. Para obtener más información, consulta [How to: Configure Client Application Services](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md).  
+ Los procedimientos siguientes describen cómo validar usuarios a través del servicio de autenticación cuando la aplicación está configurada para usar uno de los proveedores de servicios de autenticación de cliente. Para obtener más información, consulte [Cómo: Configurar servicios de aplicaciones cliente](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md).  
   
  Normalmente realizará toda la validación a través del método `static` <xref:System.Web.Security.Membership.ValidateUser%2A?displayProperty=nameWithType>. Este método administra la interacción con el servicio de autenticación a través del proveedor de autenticación configurado. Para más información, consulte [Información general sobre los servicios de aplicaciones cliente](../../../docs/framework/common-client-technologies/client-application-services-overview.md).  
   

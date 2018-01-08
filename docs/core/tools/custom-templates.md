@@ -9,11 +9,12 @@ ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
-ms.openlocfilehash: c68e382450a763fd0521b7defdd79d8433e1acde
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnetcore
+ms.openlocfilehash: f2b712f1b8b7800f2f02c9529114e92f77e32286
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="custom-templates-for-dotnet-new"></a>Plantillas personalizadas para dotnet new
 
@@ -47,14 +48,14 @@ Los archivos y las carpetas que se almacenan en la plantilla no se limitan a tip
 
 El archivo *template.json* se coloca en una carpeta *.template.config* en el directorio raíz de la plantilla. El archivo proporciona información de configuración al motor de plantillas. La configuración mínima necesita los miembros que se muestran en la tabla siguiente, que es suficiente para crear una plantilla funcional.
 
-| Miembro            | Tipo          | Descripción |
+| Miembro            | Tipo          | Description |
 | ----------------- | ------------- | ----------- |
 | `$schema`         | Identificador URI           | El esquema JSON para el archivo *template.json*. Los editores que admiten los esquemas JSON habilitan las características de edición JSON cuando se especifica el esquema. Por ejemplo, [Visual Studio Code](https://code.visualstudio.com/) necesita este miembro para habilitar IntelliSense. Use un valor de `http://json.schemastore.org/template`. |
-| `author`          | string        | El autor de la plantilla. |
+| `author`          | cadena        | El autor de la plantilla. |
 | `classifications` | array(string) | Cero o más características de la plantilla que un usuario puede usar para buscar la plantilla al buscarla. Las clasificaciones también aparecen en la columna *Etiquetas* cuando aparece en una lista de plantillas que se han generado mediante el comando <code>dotnet new -l&#124;--list</code>. |
-| `identity`        | string        | Un nombre único para esta plantilla. |
-| `name`            | string        | El nombre de la plantilla que los usuarios deben ver. |
-| `shortName`       | string        | Una abreviatura predeterminada para seleccionar la plantilla que se aplica a entornos donde el usuario especifica el nombre de la plantilla; no se selecciona mediante una GUI. Por ejemplo, un nombre abreviado es útil al usar plantillas desde un símbolo del sistema con comandos de la CLI. |
+| `identity`        | cadena        | Un nombre único para esta plantilla. |
+| `name`            | cadena        | El nombre de la plantilla que los usuarios deben ver. |
+| `shortName`       | cadena        | Una abreviatura predeterminada para seleccionar la plantilla que se aplica a entornos donde el usuario especifica el nombre de la plantilla; no se selecciona mediante una GUI. Por ejemplo, un nombre abreviado es útil al usar plantillas desde un símbolo del sistema con comandos de la CLI. |
 
 #### <a name="example"></a>Ejemplo:
 
@@ -85,13 +86,13 @@ Actualmente, una plantilla personalizada se empaqueta en Windows con [nuget.exe]
 
 El contenido de la carpeta del proyecto, junto con su archivo *.template.config/template.json*, se colocan en una carpeta denominada *content*. Junto a la carpeta *content*, agregue un [archivo *nuspec*](/nuget/create-packages/creating-a-package), que es un archivo de manifiesto XML que describe el contenido de un paquete y controla el proceso de crear el paquete NuGet. Dentro de un elemento **\<packageTypes>** en el archivo *nuspec*, incluya un elemento **\<packageType>** con un valor de atributo `name` de `Template`. Tanto la carpeta *content* como el archivo *nuspec* deben estar en el mismo directorio. En la tabla se muestran los elementos de archivo *nuspec* mínimos necesarios para generar una plantilla como un paquete NuGet.
 
-| Elemento            | Tipo   | Descripción |
+| Elemento            | Tipo   | Description |
 | ------------------ | ------ | ----------- |
-| **\<authors>**     | string | Una lista separada por comas de los autores de los paquetes, que coinciden con los nombres de perfil de nuget.org. Estos se muestran en la galería de NuGet, en nuget.org, y se usan para hacer referencias cruzadas a paquetes de los mismos autores. |
-| **\<description>** | string | Una descripción larga del paquete para su visualización en la interfaz de usuario. |
-| **\<id>**          | string | El identificador del paquete que no distingue entre mayúsculas y minúsculas, que debe ser único en nuget.org o en la galería en la que se mantendrá el paquete. Los id. no pueden contener espacios ni caracteres no válidos para una URL y normalmente seguirán las reglas de espacios de nombres de .NET. Vea [Choosing a unique package identifier and setting the version number](/nuget/create-packages/creating-a-package#choosing-a-unique-package-identifier-and-setting-the-version-number) (Elección de un identificador de paquete único y establecimiento del número de versión) para obtener instrucciones. |
-| **\<packageType>** | string | Coloque este elemento dentro de un elemento **\<packageTypes>** entre los elementos **\<metadata>**. Establezca el atributo `name` del elemento **\<packageType>** en `Template`. |
-| **\<version>**     | string | La versión del paquete, siguiendo el patrón de mayor.menor.revisión. Los números de versión pueden incluir un sufijo de versión preliminar, como se describe en el tema [Versiones preliminares](/nuget/create-packages/prerelease-packages#semantic-versioning). |
+| **\<authors>**     | cadena | Una lista separada por comas de los autores de los paquetes, que coinciden con los nombres de perfil de nuget.org. Estos se muestran en la galería de NuGet, en nuget.org, y se usan para hacer referencias cruzadas a paquetes de los mismos autores. |
+| **\<description>** | cadena | Una descripción larga del paquete para su visualización en la interfaz de usuario. |
+| **\<id>**          | cadena | El identificador del paquete que no distingue entre mayúsculas y minúsculas, que debe ser único en nuget.org o en la galería en la que se mantendrá el paquete. Los id. no pueden contener espacios ni caracteres no válidos para una URL y normalmente seguirán las reglas de espacios de nombres de .NET. Vea [Choosing a unique package identifier and setting the version number](/nuget/create-packages/creating-a-package#choosing-a-unique-package-identifier-and-setting-the-version-number) (Elección de un identificador de paquete único y establecimiento del número de versión) para obtener instrucciones. |
+| **\<packageType>** | cadena | Coloque este elemento dentro de un elemento **\<packageTypes>** entre los elementos **\<metadata>**. Establezca el atributo `name` del elemento **\<packageType>** en `Template`. |
+| **\<version>**     | cadena | La versión del paquete, siguiendo el patrón de mayor.menor.revisión. Los números de versión pueden incluir un sufijo de versión preliminar, como se describe en el tema [Versiones preliminares](/nuget/create-packages/prerelease-packages#semantic-versioning). |
 
 Consulte [.nuspec reference](/nuget/schema/nuspec) (Referencia de .nuspec) para ver el esquema de archivo de *nuspec* completo. Un archivo *nuspec* de ejemplo para una plantilla aparece en el tutorial [Creación de una plantilla personalizada para dotnet new](~/docs/core/tutorials/create-custom-template.md).
 

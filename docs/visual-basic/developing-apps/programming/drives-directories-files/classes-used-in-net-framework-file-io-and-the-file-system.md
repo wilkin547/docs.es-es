@@ -12,21 +12,21 @@ ms.assetid: 4a5ca924-eea8-4a95-a5f0-6ac10de276a3
 caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 772d3e59dbc84f77dc6f94e7cc60a89c7888551a
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: 08fd340e895376b43f95a767992ef0d3c0c819c6
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="classes-used-in-net-framework-file-io-and-the-file-system-visual-basic"></a>Clases utilizadas en el sistema de archivos y la E/S de archivos en .NET Framework (Visual Basic)
 En las tablas siguientes se incluyen las clases usadas más comúnmente para las operaciones de E/S de archivos en .NET Framework, clasificadas en clases de E/S de archivos, clases usadas para crear secuencias y clases usadas para leer y escribir en secuencias.  
   
- Para entrar en la documentación de [!INCLUDE[dnprdnlong](~/includes/dnprdnlong-md.md)] y consultar una lista más completa, vea [Información general de la biblioteca de clases](../../../../../docs/standard/class-library-overview.md).  
+ Para entrar en la documentación de [!INCLUDE[dnprdnlong](~/includes/dnprdnlong-md.md)] y consultar una lista más completa, vea [Información general de la biblioteca de clases](../../../../standard/class-library-overview.md).  
   
 ## <a name="basic-io-classes-for-files-drives-and-directories"></a>Clases básicas de E/S para archivos, unidades y directorios  
  En la tabla siguiente se muestran y describen las clases principales usadas para las operaciones de E/S de archivos.  
   
-|Clase|Descripción|  
+|Clase|Description|  
 |-----------|-----------------|  
 |<xref:System.IO.Directory?displayProperty=nameWithType>|Proporciona métodos estáticos para crear, mover y enumerar en directorios y subdirectorios.|  
 |<xref:System.IO.DirectoryInfo?displayProperty=nameWithType>|Proporciona métodos de instancia para crear, mover y enumerar en directorios y subdirectorios.|  
@@ -43,7 +43,7 @@ En las tablas siguientes se incluyen las clases usadas más comúnmente para las
 ## <a name="classes-used-to-create-streams"></a>Clases usadas para crear secuencias  
  En la tabla siguiente se muestran y describen las clases principales usadas para crear secuencias.  
   
-|Clase|Descripción|  
+|Clase|Description|  
 |-----------|-----------------|  
 |<xref:System.IO.BufferedStream?displayProperty=nameWithType>|Agrega una capa de almacenamiento en búfer para las operaciones de lectura y escritura en otra secuencia.|  
 |<xref:System.IO.FileStream?displayProperty=nameWithType>|Admite el acceso aleatorio a archivos a través de su método <xref:System.IO.FileStream.Seek%2A>. <xref:System.IO.FileStream> abre los archivos sincrónicamente de manera predeterminada, pero también admite operaciones asincrónicas.|  
@@ -64,7 +64,7 @@ En las tablas siguientes se incluyen las clases usadas más comúnmente para las
 |<xref:System.IO.StringWriter?displayProperty=nameWithType>|Escribe caracteres en `String`. El resultado puede ser una secuencia en cualquier codificación o `String`.|  
   
 ## <a name="see-also"></a>Vea también  
- [Crear secuencias](../../../../../docs/standard/io/composing-streams.md)  
- [E/S de archivos y secuencias](https://msdn.microsoft.com/library/k3352a4t)  
- [Asynchronous File I/O](https://msdn.microsoft.com/library/kztecsys) (E/S de archivos asincrónica)  
+ [Crear secuencias](../../../../standard/io/composing-streams.md)  
+ [E/S de archivos y secuencias](../../../../standard/io/index.md)  
+ [Asynchronous File I/O](../../../../standard/io/asynchronous-file-i-o.md) (E/S de archivos asincrónica)  
  [Fundamentos del sistema de archivos y la E/S de archivos en .NET Framework (Visual Basic)](../../../../visual-basic/developing-apps/programming/drives-directories-files/basics-of-net-framework-file-io-and-the-file-system.md)

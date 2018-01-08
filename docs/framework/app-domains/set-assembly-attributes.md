@@ -21,11 +21,12 @@ caps.latest.revision: "13"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 0683ee1e79d9e5fd9bef7af3b6b85dd5a58c3845
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f95d8c5f78dfa9ec388cfa63b81857ffe580abf3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="setting-assembly-attributes"></a>Configurar atributos de ensamblados
 Los atributos de ensamblado son valores que proporcionan información sobre un ensamblado. Los atributos se dividen en los siguientes conjuntos de información:  
@@ -43,7 +44,7 @@ Los atributos de ensamblado son valores que proporcionan información sobre un e
   
  En la tabla siguiente se describen los atributos de versión y de referencia cultural.  
   
-|Atributo de identidad del ensamblado|Descripción|  
+|Atributo de identidad del ensamblado|Description|  
 |---------------------------------|-----------------|  
 |<xref:System.Reflection.AssemblyCultureAttribute>|Campo enumerado que indica la referencia cultural que admite el ensamblado. Un ensamblado también puede especificar independencia de la referencia cultural, lo que indica que contiene los recursos para la referencia cultural predeterminada. **Nota:** El tiempo de ejecución trata cualquier ensamblado que no tenga el atributo de referencia cultural establecido en NULL como un ensamblado satélite. Estos ensamblados están sujetos a las reglas de enlace de ensamblados satélite. Para más información, consulte [Cómo ubica ensamblados el tiempo de ejecución](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md).|  
 |<xref:System.Reflection.AssemblyFlagsAttribute>|Valor que establece atributos de ensamblado, como por ejemplo, si se puede ejecutar el ensamblado en paralelo.|  
@@ -58,7 +59,7 @@ Los atributos de ensamblado son valores que proporcionan información sobre un e
 ## <a name="informational-attributes"></a>Atributos informativos  
  Puede utilizar atributos informativos para proporcionar información adicional de la compañía o de producto para un ensamblado. En la tabla siguiente se describen los atributos informativos que se pueden aplicar a un ensamblado.  
   
-|Atributo informativo|Descripción|  
+|Atributo informativo|Description|  
 |-----------------------------|-----------------|  
 |<xref:System.Reflection.AssemblyCompanyAttribute>|Valor de cadena que especifica un nombre de compañía.|  
 |<xref:System.Reflection.AssemblyCopyrightAttribute>|Valor de cadena que especifica información de copyright.|  
@@ -72,7 +73,7 @@ Los atributos de ensamblado son valores que proporcionan información sobre un e
 ## <a name="assembly-manifest-attributes"></a>Atributos de manifiesto del ensamblado  
  Puede utilizar atributos de manifiesto del ensamblado para proporcionar información en el manifiesto del ensamblado, incluidos el título, la descripción, el alias predeterminado y la configuración. En la tabla siguiente se describen los atributos de manifiesto del ensamblado.  
   
-|Atributo de manifiesto del ensamblado|Descripción|  
+|Atributo de manifiesto del ensamblado|Description|  
 |---------------------------------|-----------------|  
 |<xref:System.Reflection.AssemblyConfigurationAttribute>|Valor de cadena que indica la configuración del ensamblado, como Retail o Debug. El tiempo de ejecución no utiliza este valor.|  
 |<xref:System.Reflection.AssemblyDefaultAliasAttribute>|Valor de cadena que especifica un alias predeterminado que utilizarán los ensamblados de referencia. Este valor proporciona un nombre descriptivo cuando el nombre del ensamblado no es descriptivo por sí solo (por ejemplo, un valor GUID). Este valor también puede utilizarse como una forma abreviada del nombre completo del ensamblado.|  
@@ -82,7 +83,7 @@ Los atributos de ensamblado son valores que proporcionan información sobre un e
 ## <a name="strong-name-attributes"></a>Atributos de nombre seguro  
  Puede utilizar atributos de nombre seguro para establecer un nombre seguro para un ensamblado. En la tabla siguiente se describen los atributos de nombre seguro.  
   
-|Atributos de nombre seguro|Descripción|  
+|Atributos de nombre seguro|Description|  
 |----------------------------|-----------------|  
 |<xref:System.Reflection.AssemblyDelaySignAttribute>|Valor booleano que indica que se está usando la firma retardada.|  
 |<xref:System.Reflection.AssemblyKeyFileAttribute>|Valor de cadena que indica el nombre del archivo que contiene la clave pública (si se usa la firma retardada) o las claves públicas y privadas que se pasan como un parámetro al constructor de este atributo. Tenga en cuenta que el nombre de archivo es relativo a la ruta de acceso del archivo de salida (.exe o .dll), no a la ruta de acceso del archivo de origen.|  

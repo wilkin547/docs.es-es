@@ -19,11 +19,12 @@ caps.latest.revision: "35"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 6bee059891cb2e0d572d97823ec6b1f8b29a4238
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a76d85fa19fc7869ff4298867286592583e86a12
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="tlbexpexe-type-library-exporter"></a>Tlbexp.exe (Exportador de la biblioteca de tipos)
 El Exportador de la biblioteca de tipos genera una biblioteca que describe los tipos definidos en un ensamblado de Common Language Runtime.  
@@ -40,11 +41,11 @@ tlbexp assemblyName [options]
   
 #### <a name="parameters"></a>Parámetros  
   
-|Argumento|Descripción|  
+|Argumento|Description|  
 |--------------|-----------------|  
 |*assemblyName*|Ensamblado para el que se exporta una biblioteca de tipos.|  
   
-|Opción|Descripción|  
+|Opción|Description|  
 |------------|-----------------|  
 |**/asmpath:** *directorio*|Especifica la ubicación en la que buscar los ensamblados. Si utiliza esta opción, debe especificar de forma explícita las ubicaciones en las que desea buscar los ensamblados a los que se hace referencia, incluido el directorio actual.<br /><br /> Cuando se usa la opción **asmpath**, el Exportador de la biblioteca de tipos no busca ensamblados en la caché global de ensamblados (GAC).|  
 |**/help**|Muestra las opciones y la sintaxis de los comandos para la herramienta.|  

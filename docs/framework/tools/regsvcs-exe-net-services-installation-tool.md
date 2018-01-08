@@ -20,11 +20,12 @@ caps.latest.revision: "21"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: ddd937ec891f5e00410b74fffd152e23431652f2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: dd7f50d591232feda0259ecefdb5b9e39514ccb2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="regsvcsexe-net-services-installation-tool"></a>Regsvcs.exe (Herramienta de instalación de servicios de .NET)
 La herramienta Instalación de servicios de .NET realiza las siguientes acciones:  
@@ -49,11 +50,11 @@ La herramienta Instalación de servicios de .NET realiza las siguientes acciones
   
 #### <a name="parameters"></a>Parámetros  
   
-|Argumento|Descripción|  
+|Argumento|Description|  
 |--------------|-----------------|  
 |*assemblyFile.dll*|Archivo de ensamblado de origen con el que se va a trabajar. El ensamblado debe estar firmado con un nombre seguro. Para obtener más información, vea [Signing an Assembly with a Strong Name](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md) (Firmar un ensamblado con un nombre seguro).|  
   
-|Opción|Descripción|  
+|Opción|Description|  
 |------------|-----------------|  
 |**/appdir:** *path*|Especifica el directorio raíz de la aplicación.|  
 |**/appname:** *applicationName*|Especifica el nombre de la aplicación COM+ que se busca o se crea.|  

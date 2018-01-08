@@ -21,11 +21,12 @@ caps.latest.revision: "23"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 8009f832434d6bbad2ad7bee9cbfd62c81d623c7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: efdb5055197611baf56fdc25fe7c0700c1a06dfd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="winresexe-windows-forms-resource-editor"></a>Winres.exe (Editor de recursos de Windows Forms)
 El Editor de recursos de Windows Forms, Winres.exe, es una herramienta de diseño visual que ayuda a los expertos en localización a traducir los recursos de la interfaz de usuario (IU) de Windows Forms que usan los formularios. Los archivos .resx o .resources que se utilizan como entrada en Winres.exe se pueden crear mediante un entorno de diseño visual como Microsoft Visual Studio. Para obtener información sobre cómo implementar recursos en aplicaciones .NET Framework, vea [Resources in Desktop Apps](../../../docs/framework/resources/index.md) (Recursos de aplicaciones de escritorio).  
@@ -43,11 +44,11 @@ winres /?
   
 ## <a name="remarks"></a>Comentarios  
   
-|Argumento|Descripción|  
+|Argumento|Description|  
 |--------------|-----------------|  
 |`resourceFile`|Archivo de recursos que se va a adaptar. Este archivo debe ser un archivo .resx o .resources de Windows Forms generado por el diseñador de Visual Studio. Winres.exe no puede abrir archivos .resx o .resources genéricos.|  
   
-|Opción|Descripción|  
+|Opción|Description|  
 |------------|-----------------|  
 |**/?**|Muestra las opciones y la sintaxis de los comandos para la herramienta.|  
   

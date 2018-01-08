@@ -17,11 +17,12 @@ caps.latest.revision: "17"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: ca3e9dbe5578623ccc67898c6f08213c31ad8e23
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 111c697d4d62cd52cd7913039e3c17e8a25ab50d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="corflagsexe-corflags-conversion-tool"></a>CorFlags.exe (Herramienta de conversión de CorFlags)
 La herramienta de conversión CorFlags permite configurar la sección de CorFlags del encabezado de una imagen ejecutable portátil.  
@@ -38,11 +39,11 @@ CorFlags.exe assembly [options]
   
 #### <a name="parameters"></a>Parámetros  
   
-|Parámetro requerido|Descripción|  
+|Parámetro requerido|Description|  
 |------------------------|-----------------|  
 |`assembly`|El nombre del ensamblado para el que se va a configurar CorFlags.|  
   
-|Opción|Descripción|  
+|Opción|Description|  
 |------------|-----------------|  
 |**/32BIT[REQ]+**|Establece la marca 32BITREQUIRED.|  
 |**/32BIT[REQ]-**|Borra la marca 32BITREQUIRED.|  

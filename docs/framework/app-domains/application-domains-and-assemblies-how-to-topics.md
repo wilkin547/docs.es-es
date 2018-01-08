@@ -16,11 +16,12 @@ caps.latest.revision: "6"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 396c3ac263f20608d69949c7ad5d9d5b1dffb555
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: c70e2f1fec079e12605cbf3b72c60c0830723948
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="application-domains-and-assemblies-how-to-topics"></a>Temas "Cómo..." sobre dominios de aplicación y ensamblados
 Las siguientes secciones contienen vínculos a todos los temas de procedimientos que se encuentran en la documentación conceptual para programación con dominios de aplicación y ensamblados.  
@@ -45,13 +46,13 @@ Las siguientes secciones contienen vínculos a todos los temas de procedimientos
   
 -   [Compilar un ensamblado de varios archivos](../../../docs/framework/app-domains/how-to-build-a-multifile-assembly.md)  
   
--   [How to: Create a Public-Private Key Pair](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md) (Cómo: Crear un par de claves pública y privada)  
+-   [Cómo: Crear un par de claves pública y privada](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)  
   
 -   [Cómo: Firmar un ensamblado con un nombre seguro](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)  
   
 -   [How to: Reference a Strong-Named Assembly](../../../docs/framework/app-domains/how-to-reference-a-strong-named-assembly.md) (Cómo: Hacer referencia a un ensamblado con nombre seguro)  
   
--   [How to: Disable the Strong-Name Bypass Feature](../../../docs/framework/app-domains/how-to-disable-the-strong-name-bypass-feature.md) (Cómo: Deshabilitar la característica de omisión de nombres seguros).  
+-   [Cómo: Deshabilitar la característica de omisión de nombres seguros](../../../docs/framework/app-domains/how-to-disable-the-strong-name-bypass-feature.md).  
   
 -   [Instalar un ensamblado en la memoria caché global de ensamblados](../../../docs/framework/app-domains/how-to-install-an-assembly-into-the-gac.md)  
   

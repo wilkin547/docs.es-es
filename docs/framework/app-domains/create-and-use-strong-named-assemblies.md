@@ -19,11 +19,12 @@ caps.latest.revision: "17"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 39fbd38549a791a761c633dca90dbdeeeefce10b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: f3a087f296a742bc9f0f5672d9bf0cb73c836121
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="creating-and-using-strong-named-assemblies"></a>Crear y utilizar ensamblados con nombre seguro
 <a name="top"></a> Un nombre seguro se compone de la identidad del ensamblado, es decir, de su nombre de texto simple, número de versión e información sobre referencia cultural (si se proporciona), más una clave pública y una firma digital. Se genera a partir de un archivo de ensamblado mediante la clave privada correspondiente. (El archivo de ensamblado contiene el manifiesto del ensamblado, que a su vez contiene los nombres y códigos hash de todos los archivos que forman el ensamblado).  
@@ -80,13 +81,13 @@ ms.lasthandoff: 10/18/2017
 <a name="related_topics"></a>   
 ## <a name="related-topics"></a>Temas relacionados  
   
-|Título|Descripción|  
+|Title|Description|  
 |-----------|-----------------|  
 |[How to: Create a Public-Private Key Pair](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md) (Cómo: Crear un par de claves pública y privada)|Describe cómo crear un par de claves criptográficas para firmar un ensamblado.|  
 |[Cómo: Firmar un ensamblado con un nombre seguro](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)|Describe cómo crear un ensamblado con nombre seguro.|  
 |[Nombres seguros mejorados](../../../docs/framework/app-domains/enhanced-strong-naming.md)|Describe las mejoras en nombres seguros en [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].|  
-|[How to: Reference a Strong-Named Assembly](../../../docs/framework/app-domains/how-to-reference-a-strong-named-assembly.md) (Cómo: Hacer referencia a un ensamblado con nombre seguro)|Describe cómo hacer referencia a tipos o recursos en un ensamblado con nombre seguro en tiempo de compilación o tiempo de ejecución.|  
-|[How to: Disable the Strong-Name Bypass Feature](../../../docs/framework/app-domains/how-to-disable-the-strong-name-bypass-feature.md) (Cómo: Deshabilitar la característica de omisión de nombres seguros).|Describe cómo deshabilitar la característica que omite la validación de firmas de nombre seguro. Esta característica puede deshabilitarse para todas las aplicaciones o para aplicaciones específicas.|  
+|[Cómo: Hacer referencia a un ensamblado con nombre seguro](../../../docs/framework/app-domains/how-to-reference-a-strong-named-assembly.md)|Describe cómo hacer referencia a tipos o recursos en un ensamblado con nombre seguro en tiempo de compilación o tiempo de ejecución.|  
+|[Cómo: Deshabilitar la característica de omisión de nombres seguros](../../../docs/framework/app-domains/how-to-disable-the-strong-name-bypass-feature.md).|Describe cómo deshabilitar la característica que omite la validación de firmas de nombre seguro. Esta característica puede deshabilitarse para todas las aplicaciones o para aplicaciones específicas.|  
 |[Creación de ensamblados](../../../docs/framework/app-domains/create-assemblies.md)|Proporciona información general sobre los ensamblados de archivos individuales y múltiples archivos.|  
 |[Cómo retrasar la firma de un ensamblado en Visual Studio](/visualstudio/ide/managing-assembly-and-manifest-signing#how-to-sign-an-assembly-in-visual-studio)|Explica cómo firmar un ensamblado con un nombre seguro después de haber creado el ensamblado.|  
 |[Sn.exe (Herramienta de nombre seguro)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)|Describe la herramienta incluida en .NET Framework que ayuda a crear ensamblados con nombres seguros. Esta herramienta proporciona opciones para la administración de claves, así como para la generación y comprobación de firmas.|  

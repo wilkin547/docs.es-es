@@ -19,11 +19,12 @@ caps.latest.revision: "13"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 61f0fc0a157e80499bbc4da4d99bcd6ed15ddefd
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ebde5bd48b02c20f7d607ebcda2b18ed0830c569
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="aximpexe-windows-forms-activex-control-importer"></a>Aximp.exe (Importador de controles ActiveX de Windows Forms)
 El Importador de controles ActiveX convierte definiciones de tipos de una biblioteca de tipos COM para un control ActiveX en un control de Windows Forms.  
@@ -44,11 +45,11 @@ aximp [options]{file.dll | file.ocx}
   
 ## <a name="remarks"></a>Comentarios  
   
-|Argumento|Descripción|  
+|Argumento|Description|  
 |--------------|-----------------|  
 |*file*|Nombre del archivo de código fuente que contiene el control ActiveX que se va a convertir. Este argumento debe tener la extensión .ocx o .dll.|  
   
-|Opción|Descripción|  
+|Opción|Description|  
 |------------|-----------------|  
 |`/delaysign`|Especifica que Aximp.exe debe firmar el control resultante mediante la opción de firma retardada. Debe especificar esta opción con la opción `/keycontainer:`, `/keyfile:` o `/publickey:`. Para obtener más información sobre el proceso de firma retardada, vea [Retrasar la firma de un ensamblado](../../../docs/framework/app-domains/delay-sign-assembly.md).|  
 |`/help`|Muestra las opciones y la sintaxis de los comandos para la herramienta.|  

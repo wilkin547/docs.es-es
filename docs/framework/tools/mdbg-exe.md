@@ -16,11 +16,12 @@ caps.latest.revision: "27"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 04a96cfe492add5c0216528dc07efc5f40912412
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a4c4e06a5969aa6f7555a191f9950ddf64879e98
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="mdbgexe-net-framework-command-line-debugger"></a>MDbg.exe (depurador de línea de comandos .NET Framework)
 El Depurador de la línea de comandos de .NET Framework ayuda a los proveedores de herramientas y a los programadores de aplicaciones a encontrar y a corregir los errores que pueden producirse en programas orientados al Common Language Runtime de .NET Framework. Esta herramienta utiliza el runtime de la API de depuración para proporcionar servicios de depuración. Puede utilizar MDbg.exe para depurar solo código administrado; no se admite la depuración de código no administrado.  
@@ -42,7 +43,7 @@ MDbg [ProgramName[arguments]] [options]
   
  Los comandos de MDbg.exe distinguen mayúsculas de minúsculas.  
   
-|Comando|Descripción|  
+|Comando|Description|  
 |-------------|-----------------|  
 |**ap**[**rocess**] [*number*]|Cambia a otro proceso depurado o imprime los procesos disponibles. Los números no son identificadores de proceso reales (PID), sino una lista indizada por 0.|  
 |**a**[**ttach**] [*pid*]|Asocia a un proceso o imprime los procesos disponibles.|  

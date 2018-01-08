@@ -14,11 +14,11 @@ ms.assetid: b04a2f76-992a-4585-ab41-8bbbdbd554a1
 caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: e71e70734de24dab62f7fbad4359e3040d1cba51
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.openlocfilehash: e50a1e1e849052dbc5da62f434539fab478bd26d
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="accessing-the-computer39s-ports-visual-basic"></a>Acceso a los puertos del equipo (Visual Basic)
 El objeto `My.Computer.Ports` proporciona una propiedad y un método para tener acceso a los puertos serie del equipo.  
@@ -43,7 +43,7 @@ El objeto `My.Computer.Ports` proporciona una propiedad y un método para tener 
  <xref:Microsoft.VisualBasic.Devices.Ports>  
  Describe el objeto `My.Computer.Ports` y sus miembros.  
   
- <xref:Microsoft.VisualBasic.Devices.Ports.SerialPortNames%2A>  
+ <xref:Microsoft.VisualBasic.Devices.Ports.SerialPortNames>  
  Describe la propiedad `SerialPortNames`, que obtiene una colección de los nombres de los puertos serie en el equipo.  
   
  <xref:Microsoft.VisualBasic.Devices.Ports.OpenSerialPort%2A>  

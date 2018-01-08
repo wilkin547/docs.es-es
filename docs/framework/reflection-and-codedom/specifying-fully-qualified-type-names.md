@@ -26,11 +26,12 @@ caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 6759e7b62f4083f6d53663385398baf098f2676f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e19aebbeee7fd65e27704af49185a1b8d48b9639
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="specifying-fully-qualified-type-names"></a>Especificar nombres de tipo completos
 Debe especificar nombres de tipo para tener entradas válidas en varias operaciones de reflexión. Un nombre de tipo completo consiste en una especificación de nombre de ensamblado, una especificación de espacio de nombres y un nombre de tipo. Las especificaciones de nombre de tipo las usan métodos como <xref:System.Type.GetType%2A?displayProperty=nameWithType>, <xref:System.Reflection.Module.GetType%2A?displayProperty=nameWithType>, <xref:System.Reflection.Emit.ModuleBuilder.GetType%2A?displayProperty=nameWithType> y <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType>.  
@@ -46,7 +47,7 @@ Debe especificar nombres de tipo para tener entradas válidas en varias operacio
 |PointerTypeSpec                :=   SimpleTypeSpec '*'|  
 |ArrayTypeSpec                  :=   SimpleTypeSpec '[ReflectionDimension]'<br /><br /> &#124;     SimpleTypeSpec '[ReflectionEmitDimension]'|  
 |ReflectionDimension           :=   '*'<br /><br /> &#124;     ReflectionDimension ',' ReflectionDimension<br /><br /> &#124;     NOTOKEN|  
-|ReflectionEmitDimension    :=   '*'<br /><br /> &#124;     Number '..' Número<br /><br /> &#124;     Number '…'<br /><br /> &#124;     ReflectionDimension ',' ReflectionDimension<br /><br /> &#124;     NOTOKEN|  
+|ReflectionEmitDimension    :=   '*'<br /><br /> &#124;     Number '..' número<br /><br /> &#124;     Number '…'<br /><br /> &#124;     ReflectionDimension ',' ReflectionDimension<br /><br /> &#124;     NOTOKEN|  
 |Number                            :=   [0-9]+|  
 |TypeName                         :=   NamespaceTypeName<br /><br /> &#124;     NamespaceTypeName ',' AssemblyNameSpec|  
 |NamespaceTypeName        :=   NestedTypeName<br /><br /> &#124;     NamespaceSpec '.' NestedTypeName|  
@@ -83,7 +84,7 @@ Debe especificar nombres de tipo para tener entradas válidas en varias operacio
 ## <a name="specifying-assembly-names"></a>Especificar nombres de ensamblado  
  La información mínima necesaria en una especificación de nombre de ensamblado es el nombre textual (IDENTIFIER) del ensamblado. Puede seguir el IDENTIFIER mediante una lista separada por comas de pares de propiedad-valor, como se describe en la tabla siguiente. La nomenclatura de IDENTIFIER debe seguir las reglas de la nomenclatura de archivos. IDENTIFIER no distingue mayúsculas de minúsculas.  
   
-|Nombre de la propiedad|Descripción|Valores permitidos|  
+|Nombre de la propiedad|Description|Valores permitidos|  
 |-------------------|-----------------|----------------------|  
 |**Versión**|Número de versión del ensamblado|*Major.Minor.Build.Revision*, donde *Major*, *Minor*, *Build* y *Revision* son números enteros entre 0 y 65535, ambos incluidos.|  
 |**PublicKey**|Clave pública completa|Valor de cadena de la clave pública completa en formato hexadecimal. Especifique una referencia nula (**Nothing** en Visual Basic) para indicar explícitamente un ensamblado privado.|  

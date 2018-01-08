@@ -25,11 +25,12 @@ caps.latest.revision: "15"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 121dfd91d797aa03860abd4404ffe20113e70f85
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 835483d740b60f98c3170a590edbfbfbe970d783
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-emitting-code-in-partial-trust-scenarios"></a>Tutorial: Emitir código en escenarios que no son de plena confianza
 La emisión de reflexión usa el mismo conjunto de API con confianza completa o parcial, pero algunas características requieren permisos especiales en entornos de confianza parcial. Además, la emisión de reflexión tiene una característica, los métodos dinámicos hospedados de forma anónima, diseñada para su uso en entornos de confianza parcial y por ensamblados transparentes en seguridad.  
@@ -192,7 +193,7 @@ La emisión de reflexión usa el mismo conjunto de API con confianza completa o 
 <a name="Example"></a>   
 ## <a name="example"></a>Ejemplo  
   
-### <a name="description"></a>Descripción  
+### <a name="description"></a>Description  
  En el ejemplo de código siguiente se muestra cómo se utiliza el marcador <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess> para permitir que los métodos dinámicos hospedados de forma anónima omitan las comprobaciones de visibilidad JIT, pero sólo cuando el miembro de destino tiene un nivel de confianza igual o menor que el ensamblado que emite el código.  
   
  El ejemplo define una clase `Worker` cuyas referencias se pueden calcular en los límites del dominio de aplicación. La clase tiene dos sobrecargas de método `AccessPrivateMethod` que emiten y ejecutan métodos dinámicos. La primera sobrecarga emite un método dinámico que llama al método privado `PrivateMethod` de la clase `Worker` y puede emitir el método dinámico con o sin comprobaciones de visibilidad JIT. La segunda sobrecarga emite un método dinámico que tiene acceso a una propiedad `internal` (propiedad `Friend` en Visual Basic) de la clase <xref:System.String>.  

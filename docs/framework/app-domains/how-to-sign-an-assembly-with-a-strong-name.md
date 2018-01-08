@@ -22,11 +22,12 @@ caps.latest.revision: "23"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: babd0f6a9b1babf02677d6c6c41c664e0a6541b4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 6fe5fbb5299c8e9c130538f99fe13081f8f26a55
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-sign-an-assembly-with-a-strong-name"></a>Cómo: Firmar un ensamblado con un nombre seguro
 Existen varias formas de firmar un ensamblado con un nombre seguro:  
@@ -47,7 +48,7 @@ Existen varias formas de firmar un ensamblado con un nombre seguro:
   
 2.  Elija la pestaña **Firma** .  
   
-3.  Active la casilla **Firmar el ensamblado**.  
+3.  Active la casilla **Firmar el ensamblado** .  
   
 4.  En la casilla **Elija un archivo de clave de nombre seguro**, elija **\<Examinar...>** y, a continuación, navegue hasta el archivo de claves. Para crear un nuevo archivo de claves, elija **\<Nuevo...>** y escriba su nombre en el cuadro de diálogo **Crear clave de nombre seguro**.  
   
@@ -107,7 +108,7 @@ al /out:MyAssembly.dll MyModule.netmodule /keyfile:sgKey.snk
   
 ## <a name="see-also"></a>Vea también  
  [Crear y utilizar ensamblados con nombre seguro](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)  
- [How to: Create a Public-Private Key Pair](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md) (Cómo: Crear un par de claves pública y privada)  
+ [Cómo: Crear un par de claves pública y privada](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)  
  [Al.exe (Assembly Linker)](../../../docs/framework/tools/al-exe-assembly-linker.md)  
  [Retrasar la firma de un ensamblado](../../../docs/framework/app-domains/delay-sign-assembly.md)  
  [Administrar la firma de ensamblados y manifiestos](/visualstudio/ide/managing-assembly-and-manifest-signing)  

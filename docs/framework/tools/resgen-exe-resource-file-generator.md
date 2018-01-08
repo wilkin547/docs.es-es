@@ -26,11 +26,12 @@ caps.latest.revision: "46"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: c9ece6deab2fa414861bdb7c76a2093464156395
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ca54817183b5e659b62ef04b1693698bd689370b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="resgenexe-resource-file-generator"></a>Resgen.exe (Generador de archivos de recursos)
 El Generador de archivos de recursos (Resgen.exe) convierte archivos de texto (.txt o .restext) y archivos recursos basados en XML (.resx) en archivos binarios de Common Language Runtime (.resources) que se pueden incrustar en un archivo ejecutable binario o en un ensamblado satélite. (Vea [Creating Resource Files](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md) (Crear archivos de recursos)).  
@@ -79,7 +80,7 @@ resgen filename.extension [outputDirectory]
   
 #### <a name="parameters"></a>Parámetros  
   
-|Parámetro o modificador|Descripción|  
+|Parámetro o modificador|Description|  
 |-------------------------|-----------------|  
 |`/define:` *symbol1*[, *symbol2*,...]|A partir de [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], se admite la compilación condicional en archivos de recursos basados en texto (.txt o .restext). Si *symbol* corresponde a un símbolo incluido en el archivo de texto de entrada de una construcción `#ifdef`, el recurso de cadena asociado se incluye en el archivo .resources. Si el archivo de texto de entrada incluye una instrucción `#if !` con un símbolo que no se ha definido mediante el modificador `/define`, el recurso de cadena asociado se incluye en el archivo de recursos.<br /><br /> `/define` se omite si se usa con archivos de que no son de texto. Lo símbolos distinguen entre mayúsculas y minúsculas.<br /><br /> Para obtener más información sobre esta opción, vea [Compilar recursos de manera condicional](#Conditional) más adelante en este tema.|  
 |`useSourcePath`|Especifica que el directorio actual del archivo de entrada se usará para resolver las rutas de acceso relativas.|  

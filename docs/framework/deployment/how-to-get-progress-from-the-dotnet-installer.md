@@ -17,11 +17,12 @@ caps.latest.revision: "30"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: ea2e878ca4894612dda77075d04c924c3db8e293
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c11d1c3469100b8bd0eb530a59bb3a01b152f3f1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-get-progress-from-the-net-framework-45-installer"></a>Cómo: Obtener el progreso del instalador de .NET Framework 4.5
 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] es un runtime redistribuible. Si desarrolla aplicaciones para esta versión de .NET Framework, puede incluir (encadenar) el programa de instalación de [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] como un requisito previo para la instalación de su aplicación. Para presentar al usuario una experiencia de instalación personalizada o unificada, tal vez desee iniciar silenciosamente el proceso de instalación de [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] y realizar su seguimiento mientras se muestra el progreso de la instalación de la aplicación. Para habilitar el seguimiento silencioso, el programa de instalación de [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] (que se puede observar) define un protocolo mediante el uso de un segmento de E/S (MMIO) asignado a la memoria para comunicarse con el programa de instalación (el proceso observador o encadenador). Este protocolo proporciona al encadenador una manera de obtener información de progreso, conseguir resultados detallados, responder a mensajes y cancelar el programa de instalación de [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].  

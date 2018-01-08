@@ -23,11 +23,12 @@ caps.latest.revision: "18"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 7a41a6bf29ec9310d88778b55aa0c27672ba0568
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 668edf8cacc4d675592c776b0a24923f447d8810
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="application-domains"></a>Dominios de aplicación
 Normalmente, los sistemas operativos y los entornos de Common Language Runtime proporcionan algún tipo de aislamiento entre las aplicaciones. Por ejemplo, Windows utiliza procesos para aislar las aplicaciones. Este aislamiento es necesario para garantizar que el código que se ejecuta en una aplicación no afecta negativamente a otras aplicaciones no relacionadas.  
@@ -122,7 +123,7 @@ Normalmente, los sistemas operativos y los entornos de Common Language Runtime p
   
  La <xref:System.AppDomain> es la interfaz de programación para los dominios de aplicación. Esta clase incluye métodos para crear y descargar dominios, crear instancias de tipos en dominios y registrar diversas notificaciones, como por ejemplo cuando una aplicación descarga un dominio. En la tabla siguiente, se presentan los métodos <xref:System.AppDomain> más usados.  
   
-|Método de AppDomain|Descripción|  
+|Método de AppDomain|Description|  
 |----------------------|-----------------|  
 |<xref:System.AppDomain.CreateDomain%2A>|Crea un nuevo dominio de aplicación. Se recomienda utilizar una sobrecarga de este método que especifique un objeto <xref:System.AppDomainSetup>. Ésta es la forma recomendada para establecer las propiedades de un nuevo dominio, como la base de la aplicación o el directorio raíz para la aplicación; la ubicación del archivo de configuración para el dominio; y la ruta de búsqueda que va a utilizar Common Language Runtime para cargar ensamblados en el dominio.|  
 |<xref:System.AppDomain.ExecuteAssembly%2A> y <xref:System.AppDomain.ExecuteAssemblyByName%2A>|Ejecuta un ensamblado en el dominio de aplicación. Éste es un método de instancia, por lo que se puede utilizar para ejecutar el código en otro dominio de aplicación al que se haga referencia.|  

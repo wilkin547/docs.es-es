@@ -16,11 +16,12 @@ caps.latest.revision: "3"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: af9bacb4ba64fb4e51b6e05b3636226274c28703
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: ecf0a4544b5417a548c7cc212e26c98bd1891c00
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="deploying-net-framework-applications"></a>Implementar aplicaciones de .NET Framework
 Esta sección de la documentación de .NET Framework proporciona información esencial para implementar aplicaciones de .NET Framework, incluidas las directrices para cargar ensamblados, resolver referencias de ensamblados y mejorar el rendimiento de la aplicación mediante la generación de imágenes nativas.  
