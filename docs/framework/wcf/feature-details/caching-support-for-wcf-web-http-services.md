@@ -14,11 +14,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 6fe9bf8508c7281341121f4ab96e9ab8380639f3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 723f485ab45cbe127bfd337c2d428d38d5f27232
+ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="caching-support-for-wcf-web-http-services"></a>Soporte de almacenamiento en memoria caché para servicios web HTTP de WCF
 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]le permite usar el mecanismo de almacenamiento en caché declarativo ya disponible en ASP.NET en los servicios Web HTTP de WCF. Esto le permite almacenar en memoria caché las respuestas de las operaciones de servicio Web HTTP de WCF. Cuando un usuario envía un protocolo HTTP GET al servicio que está configurado para almacenarlo en memoria caché, ASP.NET devuelve la respuesta almacenada en memoria caché y no se llama al método de servicio. Cuando la memoria caché expira, la próxima vez que un usuario envía un protocolo HTTP GET, se llama al método de servicio y la respuesta se vuelve a almacenar en memoria caché. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]ASP.NET almacenamiento en caché, vea [información general sobre el almacenamiento en caché de ASP.NET](http://go.microsoft.com/fwlink/?LinkId=152534)  
@@ -29,7 +29,8 @@ ms.lasthandoff: 12/22/2017
  [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)] introduce un nuevo atributo llamado <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute> que le permite especificar un nombre de perfil de memoria caché. Este atributo se aplica a una operación del servicio. El siguiente ejemplo aplica <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> a un servicio para habilitar la compatibilidad de ASP.NET y configura la operación `GetCustomer` para almacenar en memoria caché. El <!--zz<xref:System.ServiceModel.Activation.AspNetCacheProfileAttribute>--> `System.ServiceModel.Activation.AspNetCacheProfileAttribute` atributo especifica un perfil de caché que contiene la configuración de caché que se utilizará.  
   
 ```csharp
-[ServiceContract] AspNetCompatibilityRequirements(RequirementsMode=AspNetCompatibilityRequirementsMode.Allowed)]
+[ServiceContract] 
+[AspNetCompatibilityRequirements(RequirementsMode=AspNetCompatibilityRequirementsMode.Allowed)]
 public class Service
 {
     [WebGet(UriTemplate = "{id}")]

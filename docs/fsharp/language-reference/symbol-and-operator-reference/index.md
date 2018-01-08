@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: ab453800-d4d0-4a11-9d55-2b358d56af27
-ms.openlocfilehash: d1000e991a6c07693f2e639ee8f0a386d53a2aae
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: cb21ef7385cb679f9d445f8ee419db3d727fa057
+ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="symbol-and-operator-reference"></a>Referencia de símbolos y operadores
 
@@ -92,7 +92,7 @@ En la siguiente tabla se describen los símbolos utilizados en el lenguaje F#, s
 |`>?`|[Operadores que aceptan valores NULL](nullable-operators.md)|<ul><li>Calcula la operación “mayor que” cuando el lado derecho es un tipo que acepta valores NULL.<br /></li><ul/>|
 |`>>`|[Funciones](../functions/index.md)|<ul><li>Compone dos funciones (operador de composición hacia delante).<br /></li><ul/>|
 |`>>>`|[Operadores bit a bit](bitwise-operators.md)|<ul><li>Desplaza hacia la derecha los bits de la cantidad del lado izquierdo, y lo hace en el número de posiciones especificado en el lado derecho.<br /></li><ul/>|
-|`>=`|[Operadores aritméticos](arithmetic-operators.md)|<ul><li>Devuelve `true` si el lado derecho es mayor o igual que el lado izquierdo; de lo contrario, devuelve `false`.<br /></li><ul/>|
+|`>=`|[Operadores aritméticos](arithmetic-operators.md)|<ul><li>Devuelve `true` si el lado izquierdo es mayor o igual que el lado derecho; de lo contrario, devuelve `false`.<br /></li><ul/>|
 |`>=?`|[Operadores que aceptan valores NULL](nullable-operators.md)|<ul><li>Calcula la operación “mayor o igual que” cuando el lado derecho es un tipo que acepta valores NULL.<br /></li><ul/>|
 |`?`|[Parámetros y argumentos](../parameters-and-arguments.md)|<ul><li>Especifica un argumento opcional.<br /></li><li>Se usa como operador para método dinámico y llamadas de propiedad. Debe proporcionar su propia implementación.<br /></li><ul/>|
 |`? ... <- ...`|No hay más información disponible.|<ul><li>Se usa como operador para establecer propiedades dinámicas. Debe proporcionar su propia implementación.<br /></li><ul/>|

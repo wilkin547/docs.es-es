@@ -14,11 +14,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: deb02217b5d2a79cdf90d511658657f642ca1fc9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 994ccb677d1376eff5b889a0a4ddfe072557bdea
+ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="how-to-serialize-and-deserialize-json-data"></a>Cómo serializar y deserializar datos JSON
 JSON (notación de objetos JavaScript) es un formato de codificación de datos eficaz que permite intercambios rápidos de cantidades pequeñas de datos entre los exploradores de cliente y servicios web con AJAX (JavaScript asincrónico y XML) habilitado.  
@@ -36,23 +36,23 @@ JSON (notación de objetos JavaScript) es un formato de codificación de datos e
   
 1.  Defina el contrato de datos para `Person` adjuntando <xref:System.Runtime.Serialization.DataContractAttribute> a la clase y el atributo <xref:System.Runtime.Serialization.DataMemberAttribute> a los miembros que desee serializar. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]contratos de datos, vea [diseñar contratos de servicio](../../../../docs/framework/wcf/designing-service-contracts.md).  
   
-    ```  
+    ```csharp  
     [DataContract]  
-        internal class Person  
-        {  
-            [DataMember]  
-            internal string name;  
+    internal class Person  
+    {  
+        [DataMember]  
+        internal string name;  
   
-            [DataMember]  
-            internal int age;  
-        }  
+        [DataMember]  
+        internal int age;  
+    }  
     ```  
   
 ### <a name="to-serialize-an-instance-of-type-person-to-json"></a>Para serializar una instancia de tipo Persona a JSON  
   
 1.  Cree una instancia del tipo `Person`.  
   
-    ```  
+    ```csharp  
     Person p = new Person();  
     p.name = "John";  
     p.age = 42;  
@@ -60,20 +60,20 @@ JSON (notación de objetos JavaScript) es un formato de codificación de datos e
   
 2.  Serialice el objeto `Person` a una secuencia de memoria utilizando el <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>.  
   
-    ```  
+    ```csharp  
     MemoryStream stream1 = new MemoryStream();  
     DataContractJsonSerializer ser = new DataContractJsonSerializer(typeof(Person));  
     ```  
   
 3.  Utilice el método <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer.WriteObject%2A> para escribir datos JSON en la secuencia.  
   
-    ```  
+    ```csharp  
     ser.WriteObject(stream1, p);  
     ```  
   
 4.  Muestre la salida JSON.  
   
-    ```  
+    ```csharp  
     stream1.Position = 0;  
     StreamReader sr = new StreamReader(stream1);  
     Console.Write("JSON form of Person object: ");  
@@ -84,23 +84,20 @@ JSON (notación de objetos JavaScript) es un formato de codificación de datos e
   
 1.  Deserialice los datos codificados con JSON en una nueva instancia de `Person` utilizando el método <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer.ReadObject%2A> de <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>:  
   
-    ```  
+    ```csharp  
     stream1.Position = 0;  
     Person p2 = (Person)ser.ReadObject(stream1);  
     ```  
   
 2.  Muestre los resultados.  
   
-    ```  
-    Console.Write("Deserialized back, got name=");  
-    Console.Write(p2.name);  
-    Console.Write(", age=");  
-    Console.WriteLine(p2.age);  
+    ```csharp  
+    Console.WriteLine($"Deserialized back, got name={p2.name}, age={p2.age}");  
     ```  
   
 ## <a name="example"></a>Ejemplo  
   
-```  
+```csharp  
 // Create a User object and serialize it to a JSON stream.  
 public static string WriteFromObject()  
 {  
@@ -116,7 +113,6 @@ public static string WriteFromObject()
     byte[] json = ms.ToArray();  
     ms.Close();  
     return Encoding.UTF8.GetString(json, 0, json.Length);  
-  
 }  
   
 // Deserialize a JSON stream to a User object.  
@@ -134,13 +130,14 @@ public static User ReadToObject(string json)
 > [!NOTE]
 >  El serializador de JSON inicia una excepción de serialización para los contratos de datos que tienen varios miembros con el mismo nombre, tal y como se muestra en el siguiente código de ejemplo.  
   
-```  
+```csharp  
 [DataContract]  
 public class TestDuplicateDataBase  
 {  
     [DataMember]  
     public int field1 = 123;  
-}  
+}
+
 [DataContract]  
 public class TestDuplicateDataDerived : TestDuplicateDataBase  
 {  

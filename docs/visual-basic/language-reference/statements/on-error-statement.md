@@ -29,16 +29,16 @@ ms.assetid: ff947930-fb84-40cf-bd66-1ea219561d5c
 caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: e1039359145902bffe3f91aa654a43790d16b887
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 96baa5d91d0a600b84ed832fb1e3b1ed71a9d89d
+ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="on-error-statement-visual-basic"></a>Instrucción On Error (Visual Basic)
 Habilita una rutina de control de errores y especifica la ubicación de la rutina dentro de un procedimiento; También puede utilizarse para desactivar una rutina de control de errores.  
   
- Sin un `On Error` instrucción, cualquier error de tiempo de ejecución que se produce es irrecuperable: se muestra un mensaje de error y la ejecución se detiene.  
+ Sin control de errores, cualquier error de tiempo de ejecución que se produce es irrecuperable: se muestra un mensaje de error y la ejecución se detiene.  
   
  Siempre que sea posible, se recomienda utilizar el control en el código, en lugar de utilizar el control estructurado de excepciones estructurado de excepciones y el `On Error` instrucción. Para obtener más información, vea [Try...Catch...Finally Statement](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md) (Try...Catch...Finally [Instrucción, Visual Basic]).  
   

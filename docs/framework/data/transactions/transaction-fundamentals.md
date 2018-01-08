@@ -13,11 +13,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: b7fd2b0ce2a8f5ab77fd654863a1e68baad6a41e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fa26531b1d2573b4bef49ec93f4205716227e25b
+ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="transaction-fundamentals"></a>Principios de la transacción
 Las transacciones enlazan varias tareas. Por ejemplo, imagine que una aplicación realiza dos tareas. Primero, crea una nueva tabla en una base de datos. Luego, llama un objeto especializado para recoger, dar formato e insertar los datos en la nueva tabla. Estas dos tareas están relacionadas e incluso son interdependientes, de tal manera que se desea evitar crear una nueva tabla a menos que pueda llenarse de datos. La ejecución de ambas tareas dentro del ámbito de una única transacción refuerzan la conexión entre ellas. En caso de error en la segunda tarea, la primera vuelve al punto anterior a la creación de la nueva tabla.  
@@ -30,7 +30,7 @@ Las transacciones enlazan varias tareas. Por ejemplo, imagine que una aplicació
   
  Al desarrollar una aplicación transaccional utilizando las clases proporcionadas por <xref:System.Transactions>, no necesita preocuparse por qué tipo de transacciones necesita o el administrador de transacciones implicado. La infraestructura <xref:System.Transactions> administra automáticamente éstos para usted.  
   
- Cuando crea una transacción, puede especificar el nivel de aislamiento que se aplica a la transacción. El nivel de aislamiento, definido por la clase <xref:System.Transactions.IsolationLevel>, determina qué nivel de otras transacciones de acceso tendrán los datos afectados por su transacción.  
+ Cuando crea una transacción, puede especificar el nivel de aislamiento que se aplica a la transacción. El nivel de aislamiento, definido por el <xref:System.Transactions.IsolationLevel> enum, determinan el nivel de acceso que otras transacciones habrá a los datos afectados por la transacción.  
   
  Se pueden crear transacciones utilizando ADO.NET, <xref:System.EnterpriseServices>, o el modelo de programación transaccional proporcionado por el <xref:System.Transactions> espacio de nombres. El [características proporcionadas por System.Transactions](../../../../docs/framework/data/transactions/features-provided-by-system-transactions.md) tema describe las características que puede usar para escribir una aplicación transaccional utilizando la <xref:System.Transactions> espacio de nombres.  
   
