@@ -1,5 +1,5 @@
 ---
-title: Empaquetar URI en WPF
+title: Pack URI en WPF
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -27,7 +27,7 @@ ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 12/22/2017
 ---
-# <a name="pack-uris-in-wpf"></a>Empaquetar URI en WPF
+# <a name="pack-uris-in-wpf"></a>Pack URI en WPF
 En [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)], [!INCLUDE[TLA#tla_uri#plural](../../../../includes/tlasharptla-urisharpplural-md.md)] se usan para identificar y cargar archivos de muchas maneras, incluido lo siguiente:  
   
 -   Especificar el [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] para mostrar cuando una aplicación inicia por primera vez.  
