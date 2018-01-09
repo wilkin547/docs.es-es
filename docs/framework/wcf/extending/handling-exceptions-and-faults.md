@@ -13,14 +13,15 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3a69acb9b640c17e6641efc6c30798e3856ef6e9
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: ae8d16db6fefccf01692088e29676f6bfeace0e3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="handling-exceptions-and-faults"></a>Administración de excepciones y errores
-Las excepciones se utilizan para comunicar localmente los errores dentro del servicio o la implementación del cliente. Los errores, por otro lado, se utilizan para comunicar los errores en los límites del servicio, como del servidor al cliente o viceversa. Además de los errores, los canales de transporte utilizan a menudo mecanismos específicos del transporte para comunicar los errores del nivel de transporte. Por ejemplo, el transporte HTTP utiliza códigos de estado como 404 para comunicar una dirección URL del extremo no existente (no hay ningún extremo para devolver un error). Este documento se compone de tres secciones que proporcionan una guía a los autores del canal personalizado. La primera sección proporciona una guía sobre cuándo y cómo definir y producir las excepciones. La segunda sección proporciona una guía sobre la generación y utilización de errores. La tercera sección explica cómo proporcionar información de seguimiento para ayudar al usuario de su canal personalizado a solucionar problemas de las aplicaciones en ejecución.  
+Las excepciones se utilizan para comunicar localmente los errores dentro del servicio o la implementación del cliente. Los errores, por otro lado, se utilizan para comunicar los errores en los límites del servicio, como del servidor al cliente o viceversa. Además de los errores, los canales de transporte utilizan a menudo mecanismos específicos del transporte para comunicar los errores del nivel de transporte. Por ejemplo, el transporte HTTP utiliza códigos de estado como 404 para comunicar una dirección URL del punto de conexión no existente (no hay ningún punto de conexión para devolver un error). Este documento se compone de tres secciones que proporcionan una guía a los autores del canal personalizado. La primera sección proporciona una guía sobre cuándo y cómo definir y producir las excepciones. La segunda sección proporciona una guía sobre la generación y utilización de errores. La tercera sección explica cómo proporcionar información de seguimiento para ayudar al usuario de su canal personalizado a solucionar problemas de las aplicaciones en ejecución.  
   
 ## <a name="exceptions"></a>Excepciones  
  Hay dos cosas que deben tenerse presente al producir una excepción: primero tiene que ser de un tipo que permite a los usuarios escribir código correcto que pueda reaccionar apropiadamente a la excepción. Segundo, tiene que proporcionar suficiente información para que el usuario entienda qué salió mal, el impacto del error, y cómo corregirlo. Las secciones siguientes proporcionan una guía sobre los tipos de excepción y mensajes para los canales [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. También hay una guía general sobre las excepciones en .NET en el documento Instrucciones de diseño para excepciones.  
@@ -56,7 +57,7 @@ Las excepciones se utilizan para comunicar localmente los errores dentro del ser
  ![Control de excepciones y errores](../../../../docs/framework/wcf/extending/media/wcfc-soap1-1andsoap1-2faultcomparisonc.gif "wcfc_SOAP1-1AndSOAP1-2FaultComparisonc")  
 Error de SOAP 1.2 (izquierda) y error de SOAP 1.1 (derecha). Tenga en cuenta que en SOAP 1.1 solo el elemento Fault está calificado con el espacio de nombres.  
   
- SOAP define un mensaje de error como un mensaje que contiene solo un elemento de error (un elemento cuyo nombre es `<env:Fault>`) como un elemento secundario de`<env:Body>`. El contenido del elemento de error difiere ligeramente entre SOAP 1.1 y SOAP 1.2 como se muestra en la figura 1. Sin embargo, la clase <xref:System.ServiceModel.Channels.MessageFault?displayProperty=nameWithType> normaliza estas diferencias en un modelo de objetos:  
+ SOAP define un mensaje de error como un mensaje que contiene solo un elemento de error (un elemento cuyo nombre es `<env:Fault>`) como un elemento secundario de `<env:Body>`. El contenido del elemento de error difiere ligeramente entre SOAP 1.1 y SOAP 1.2 como se muestra en la figura 1. Sin embargo, la clase <xref:System.ServiceModel.Channels.MessageFault?displayProperty=nameWithType> normaliza estas diferencias en un modelo de objetos:  
   
 ```  
 public abstract class MessageFault  

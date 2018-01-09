@@ -20,11 +20,12 @@ caps.latest.revision: "22"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 595999bfa7d3472fc31274a0c9652af5416d2da5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 84fa0e6b20f3d2b75d3182f64ddc9c70ef661f10
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-set-the-security-mode"></a>Cómo: Establecer el modo de seguridad
 La seguridad de [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] tiene tres modos de seguridad comunes que se encuentran en la mayoría de los enlaces predefinidos: transporte, mensaje y “transporte con credencial del mensaje”. Dos modos adicionales son específicos para dos enlaces: el modo “solo credencial de transporte” encontrado en el <xref:System.ServiceModel.BasicHttpBinding>y el modo “Ambos” encontrado en el <xref:System.ServiceModel.NetMsmqBinding>. Sin embargo, este tema se concentra en los tres modos de seguridad comunes: <xref:System.ServiceModel.SecurityMode.Transport>, <xref:System.ServiceModel.SecurityMode.Message>y <xref:System.ServiceModel.SecurityMode.TransportWithMessageCredential>.  
@@ -124,10 +125,10 @@ La seguridad de [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] tiene tres 
  [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Cómo: utilizar seguridad de transporte y credenciales de mensaje](../../../docs/framework/wcf/feature-details/how-to-use-transport-security-and-message-credentials.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Cómo: configurar un puerto con un certificado SSL](../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)  
- [Cómo: utilizar seguridad de transporte y credenciales de mensaje](../../../docs/framework/wcf/feature-details/how-to-use-transport-security-and-message-credentials.md)  
+ [Configuración de un puerto con un certificado SSL](../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)  
+ [Uso de la seguridad de transporte y las credenciales de mensajes](../../../docs/framework/wcf/feature-details/how-to-use-transport-security-and-message-credentials.md)  
  [Seguridad de transporte](../../../docs/framework/wcf/feature-details/transport-security.md)  
- [Seguridad de mensajes](../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)  
+ [Seguridad de los mensajes](../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)  
  [Información general sobre seguridad](../../../docs/framework/wcf/feature-details/security-overview.md)  
  [Enlaces proporcionados por el sistema](../../../docs/framework/wcf/system-provided-bindings.md)  
  [\<seguridad >](../../../docs/framework/configure-apps/file-schema/wcf/security-of-wshttpbinding.md)  

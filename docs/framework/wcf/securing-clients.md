@@ -14,11 +14,12 @@ caps.latest.revision: "22"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: d41d2f8419644d5ddcb15f49bbe895b0a3f1f2d4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a30f42c88e2478341737b99ad239d37c87a1063e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="securing-clients"></a>Protección de clientes
 En [!INCLUDE[indigo1](../../../includes/indigo1-md.md)], el servicio dicta los requisitos de seguridad para los clientes. Es decir, el servicio especifica qué modo de seguridad utilizar, y si el cliente debe proporcionar una credencial o no. El proceso de protección de un cliente, por consiguiente, es simple: utilice los metadatos obtenidos del servicio (si se publica) y cree un cliente. Los metadatos especifican cómo configurar el cliente. Si el servicio requiere que el cliente suministre una credencial, debe obtener una credencial que se ajuste al requisito. Este tema explica el proceso con más detalle. [!INCLUDE[crabout](../../../includes/crabout-md.md)]creación de un servicio seguro, consulte [proteger Services](../../../docs/framework/wcf/securing-services.md).  
@@ -49,7 +50,7 @@ En [!INCLUDE[indigo1](../../../includes/indigo1-md.md)], el servicio dicta los r
 ### <a name="determining-the-client-credential-type"></a>Determinación del tipo de credencial de cliente  
  Si tiene la configuración de la herramienta Svcutil.exe genera de archivo, examine la [ \<enlaces >](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) sección para determinar qué tipo de credencial de cliente es necesaria. Dentro de la sección hay elementos de enlace que especifican los requisitos de seguridad. Específicamente, examine la \<seguridad > elemento de cada enlace. Ese elemento incluye el atributo `mode`, que puede establecer en uno de tres valores posibles (`Message`, `Transport`o `TransportWithMessageCredential`). El valor del atributo determina el modo y el modo determina cuál de los elementos secundarios es significativo.  
   
- El `<security>` elemento puede contener una `<transport>` o `<message>` elemento, o ambos. El elemento significativo es el que coincide con el modo de seguridad. Por ejemplo, el siguiente código especifica que el modo de seguridad es `"Message"`, y que el tipo de credencial de cliente para el elemento `<message>` es `"Certificate"`. En este caso se puede ignorar el elemento `<transport>`. Sin embargo, el elemento `<message>` especifica que se debe proporcionar un certificado X.509.  
+ El `<security>` elemento puede contener una `<transport>` o `<message>` elemento, o ambos. El elemento significativo es el que coincide con el modo de seguridad. Por ejemplo, el código siguiente especifica que el modo de seguridad es `"Message"`y el cliente de credencial de tipo para el `<message>` elemento es `"Certificate"`. En este caso se puede ignorar el elemento `<transport>`. Sin embargo, el elemento `<message>` especifica que se debe proporcionar un certificado X.509.  
   
 ```xml  
 <wsHttpBinding>  
@@ -90,7 +91,7 @@ En [!INCLUDE[indigo1](../../../includes/indigo1-md.md)], el servicio dicta los r
 |Propiedad ClientCredential|Descripción|Notas|  
 |-------------------------------|-----------------|-----------|  
 |<xref:System.ServiceModel.Description.ClientCredentials.ClientCertificate%2A>|Devuelve una <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential>.|Representa un certificado X.509 proporcionado por el cliente para autenticarse en el servicio.|  
-|<xref:System.ServiceModel.Description.ClientCredentials.HttpDigest%2A>|Devuelve una <xref:System.ServiceModel.Security.HttpDigestClientCredential>.|Representa una credencial de sintaxis de HTTP. La credencial es un hash del nombre de usuario y contraseña.|  
+|<xref:System.ServiceModel.Description.ClientCredentials.HttpDigest%2A>|Devuelve una <xref:System.ServiceModel.Security.HttpDigestClientCredential>.|Representa una credencial de resumen de HTTP. La credencial es un hash del nombre de usuario y contraseña.|  
 |<xref:System.ServiceModel.Description.ClientCredentials.IssuedToken%2A>|Devuelve una <xref:System.ServiceModel.Security.IssuedTokenClientCredential>.|Representa un token de seguridad personalizado emitido por un servicio de tokens de seguridad, utilizado normalmente en escenarios de federación.|  
 |<xref:System.ServiceModel.Description.ClientCredentials.Peer%2A>|Devuelve una <xref:System.ServiceModel.Security.PeerCredential>|Representa una credencial del mismo nivel para la participación en una malla del mismo nivel en un dominio de Windows.|  
 |<xref:System.ServiceModel.Description.ClientCredentials.ServiceCertificate%2A>|Devuelve una <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential>.|Representa un certificado X.509 proporcionado por el servicio en una negociación fuera de banda.|  

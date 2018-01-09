@@ -19,11 +19,12 @@ caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 87d29a53bc33ecd114e3315475984cbf04ce17c8
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 7fda534d591ae5142fb732607c7e248ef3cc71bc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-federated-client"></a>Cómo crear un cliente federado
 En [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], creando un cliente para un *servicio federado* consta de tres pasos principales:  
@@ -157,7 +158,7 @@ En [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], creando un cliente p
  [!code-vb[c_FederatedClient#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_federatedclient/vb/source.vb#2)]  
   
 ## <a name="net-framework-security"></a>Seguridad de .NET Framework  
- Para evitar la posible divulgación de la información, los clientes que están ejecutando la herramienta Svcutil.exe para procesar los metadatos desde puntos de conexión federados deberían asegurarse de que las direcciones del servicio de tokens de seguridad resultantes son las esperadas. Esto es especialmente importante cuando un servicio de tokens de seguridad expone varios extremos, porque la herramienta Svcutil.exe genera el archivo de configuración resultante para utilizar el primero de esos extremos, que no puede ser el que el cliente debería estar utilizando.  
+ Para evitar la posible divulgación de la información, los clientes que están ejecutando la herramienta Svcutil.exe para procesar los metadatos desde puntos de conexión federados deberían asegurarse de que las direcciones del servicio de tokens de seguridad resultantes son las esperadas. Esto es especialmente importante cuando un servicio de tokens de seguridad expone varios puntos de conexión, porque la herramienta Svcutil.exe genera el archivo de configuración resultante para utilizar el primero de esos puntos de conexión, que no puede ser el que el cliente debería estar utilizando.  
   
 ## <a name="localissuer-required"></a>LocalIssuer requerido  
  Si se espera que los clientes utilicen siempre un emisor local, tenga en cuenta lo siguiente: la salida predeterminada de Svcutil.exe hace que no se utilice el emisor local si el servicio de tokens de seguridad de segundo a último en la cadena especifica una dirección de emisor o una dirección de metadatos de emisor.  
@@ -165,16 +166,16 @@ En [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], creando un cliente p
  [!INCLUDE[crabout](../../../../includes/crabout-md.md)]establecer el <xref:System.ServiceModel.Security.IssuedTokenClientCredential.LocalIssuerAddress%2A>, <xref:System.ServiceModel.Security.IssuedTokenClientCredential.LocalIssuerBinding%2A>, y <xref:System.ServiceModel.Security.IssuedTokenClientCredential.LocalIssuerChannelBehaviors%2A> propiedades de la <xref:System.ServiceModel.Security.IssuedTokenClientCredential> de clases, consulte [Cómo: configurar un emisor Local](../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md).  
   
 ## <a name="scoped-certificates"></a>Certificados con ámbito  
- Si los certificados del servicio se deben especificar para comunicarse con cualquiera de los servicios de tokens de seguridad, normalmente debido a que no se utiliza la negociación de certificados, se pueden especificar mediante la propiedad <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.ScopedCertificates%2A> de la clase <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential>. El método <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.SetDefaultCertificate%2A> toma un <xref:System.Uri> y un <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> como parámetros. Se utiliza el certificado especificado al comunicarse con extremos en el URI especificado. De manera alternativa, puede utilizar el método <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.SetScopedCertificate%2A> para agregar un certificado a la colección devuelta por la propiedad <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.ScopedCertificates%2A>.  
+ Si los certificados del servicio se deben especificar para comunicarse con cualquiera de los servicios de tokens de seguridad, normalmente debido a que no se utiliza la negociación de certificados, se pueden especificar mediante la propiedad <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.ScopedCertificates%2A> de la clase <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential>. El método <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.SetDefaultCertificate%2A> toma un <xref:System.Uri> y un <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> como parámetros. Se utiliza el certificado especificado al comunicarse con puntos de conexión en el URI especificado. De manera alternativa, puede utilizar el método <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.SetScopedCertificate%2A> para agregar un certificado a la colección devuelta por la propiedad <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.ScopedCertificates%2A>.  
   
 > [!NOTE]
 >  La idea del cliente con respecto a los certificados que tienen su ámbito restringido a un URI determinado solo se aplica en aplicaciones que están realizando llamadas salientes a servicios que exponen los puntos de conexión en esos URI. No se aplica a los certificados que se utilizan para firmar los tokens emitidos, como los configurados en el servidor en la colección devuelta por la <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.KnownCertificates%2A> de la <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> clase. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Cómo: configurar las credenciales en un servicio de federación](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Ejemplo de federación](../../../../docs/framework/wcf/samples/federation-sample.md)  
- [Cómo: deshabilitar sesiones seguras en un WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)  
- [Cómo: crear un WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)  
- [Cómo: configurar las credenciales en un servicio de federación](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)  
- [Cómo: configurar un emisor Local](../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)  
+ [Deshabilitar sesiones seguras en WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)  
+ [Creación de un WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)  
+ [Configuración de las credenciales en un servicio de federación](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)  
+ [Configuración de un emisor local](../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)  
  [Consideraciones de seguridad con metadatos](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)  
- [Cómo: proteger los extremos de metadatos](../../../../docs/framework/wcf/feature-details/how-to-secure-metadata-endpoints.md)
+ [Protección de los puntos de conexión de metadatos](../../../../docs/framework/wcf/feature-details/how-to-secure-metadata-endpoints.md)

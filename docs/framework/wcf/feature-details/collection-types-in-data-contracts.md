@@ -20,11 +20,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e22763f78d8a40ced4350a93a1f1833e19aac17f
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: e74bd7d90d5653890fd5cf48e76c81d0227c6172
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="collection-types-in-data-contracts"></a>Tipos de colección en contratos de datos
 Una *colección* es una lista de elementos de un determinado tipo. En [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], tales listas se pueden representar utilizando matrices o una variedad de otros tipos (Lista genérica, <xref:System.ComponentModel.BindingList%601>genérica, <xref:System.Collections.Specialized.StringCollection>o <xref:System.Collections.ArrayList>). Por ejemplo, una colección puede albergar una lista de direcciones para un determinado cliente. Estas colecciones se denominan *colecciones de lista*, con independencia de cual sea su tipo real.  
@@ -236,7 +237,7 @@ Una *colección* es una lista de elementos de un determinado tipo. En [!INCLUDE[
   
  De forma predeterminada, no se generan tipos para las colecciones no personalizadas en el código importado. Los miembros de datos de tipos de colección de listas se importan como matrices, y los miembros de datos de tipos de colección de diccionarios se importan como diccionario genérico.  
   
- Sin embargo, para las colecciones personalizadas, se generan tipos separados, marcados con el atributo <xref:System.Runtime.Serialization.CollectionDataContractAttribute>. (Un tipo de colección personalizado en el esquema es tipo que no utiliza el espacio de nombres, el nombre, el nombre de elemento de repetición o los nombres de elementos clave/valor predeterminados.) Estos tipos son tipos vacíos que derivan de <xref:System.Collections.Generic.List%601> genérica para tipos de lista y diccionario genérico para tipos de diccionario.  
+ Sin embargo, para las colecciones personalizadas, se generan tipos separados, marcados con el atributo <xref:System.Runtime.Serialization.CollectionDataContractAttribute> . (Un tipo de colección personalizado en el esquema es tipo que no utiliza el espacio de nombres, el nombre, el nombre de elemento de repetición o los nombres de elementos clave/valor predeterminados.) Estos tipos son tipos vacíos que derivan de <xref:System.Collections.Generic.List%601> genérica para tipos de lista y diccionario genérico para tipos de diccionario.  
   
  Por ejemplo, puede tener los tipos siguientes en el servidor.  
   
@@ -331,12 +332,12 @@ svcutil.exe MyService.wsdl MyServiceSchema.xsd /r:C:\full_path_to_system_dll\Sys
   
 |El tipo de colección implementa|Los métodos llamados durante la serialización|Métodos llamados durante la deserialización|  
 |--------------------------------|-----------------------------------------|-------------------------------------------|  
-|<xref:System.Collections.Generic.IDictionary%602>|`get_Keys`, `get_Values`|Agregar genérico|  
+|<xref:System.Collections.Generic.IDictionary%602> genérico|`get_Keys`, `get_Values`|Agregar genérico|  
 |<xref:System.Collections.IDictionary>|`get_Keys`, `get_Values`|`Add`|  
-|<xref:System.Collections.Generic.IList%601>|Indizador <xref:System.Collections.Generic.IList%601> genérico|Agregar genérico|  
-|<xref:System.Collections.Generic.ICollection%601>|Enumerador|Agregar genérico|  
+|<xref:System.Collections.Generic.IList%601> genérico|Indizador <xref:System.Collections.Generic.IList%601> genérico|Agregar genérico|  
+|<xref:System.Collections.Generic.ICollection%601> genérico|Enumerador|Agregar genérico|  
 |<xref:System.Collections.IList>|<xref:System.Collections.IList> Indizador|`Add`|  
-|<xref:System.Collections.Generic.IEnumerable%601>|`GetEnumerator`|Un método no estático llamado `Add` que toma un parámetro del tipo adecuado (el tipo del parámetro genérico o uno de sus tipos base). Este tipo de método debe existir para que el serializador pueda tratar un tipo de colección como una colección durante serialización y deserialización.|  
+|<xref:System.Collections.Generic.IEnumerable%601> genérico|`GetEnumerator`|Un método no estático llamado `Add` que toma un parámetro del tipo adecuado (el tipo del parámetro genérico o uno de sus tipos base). Este tipo de método debe existir para que el serializador pueda tratar un tipo de colección como una colección durante serialización y deserialización.|  
 |<xref:System.Collections.IEnumerable> (y por consiguiente <xref:System.Collections.ICollection>, que deriva de él)|`GetEnumerator`|Un método no estático llamado `Add` que toma un parámetro de tipo `Object`. Este tipo de método debe existir para que el serializador pueda tratar un tipo de colección como una colección durante serialización y deserialización.|  
   
  En la tabla anterior se muestran las interfaces de colección en orden descendente de prioridad. Por ejemplo, esto significa que si un tipo implementa tanto <xref:System.Collections.IList> como <xref:System.Collections.Generic.IEnumerable%601>genérica, la colección se serializa y deserializa según las reglas <xref:System.Collections.IList> :  
