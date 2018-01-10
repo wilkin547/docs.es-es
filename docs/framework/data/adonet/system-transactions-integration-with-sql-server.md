@@ -17,18 +17,18 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: dotnet
-ms.openlocfilehash: 7765779187156866c20374b60a4b541d36ac9a5b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3b56d61593aed1a0cdce2fd45d902d9f4ac00cda
+ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="systemtransactions-integration-with-sql-server"></a>Integración de System.Transactions con SQL Server
 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] versión 2.0 incorporó un nuevo marco de trabajo de transacciones al que se puede obtener acceso a través del espacio de nombres <xref:System.Transactions> . Este marco de trabajo expone las transacciones de tal forma que se integra completamente en [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], incluyendo [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)].  
   
  Además de las mejoras de programación, <xref:System.Transactions> y [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] pueden funcionar juntos para coordinar las optimizaciones al trabajar con transacciones. Una transacción promovible es una transacción ligera (local) que, en caso necesario, se puede promover automáticamente a una transacción completamente distribuida.  
   
- A partir de [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 2.0, <xref:System.Data.SqlClient> admite las transacciones promocionadas al trabajar con [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]. Las transacciones promovibles no invocan la sobrecarga adicional de las transacciones distribuidas a menos que sea necesario. son automáticas, es decir, no necesitan que intervenga el programador.  
+ A partir de [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 2.0, <xref:System.Data.SqlClient> admite las transacciones promocionadas al trabajar con [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]. Las transacciones promovibles no invocan la sobrecarga adicional de las transacciones distribuidas a menos que sea necesario. Las transacciones promocionadas son automáticas y no requieren intervención del programador.  
   
  Las transacciones promocionadas solo están disponibles cuando se utiliza el proveedor de datos de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] para SQL Server (`SqlClient`) con [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)].  
   
