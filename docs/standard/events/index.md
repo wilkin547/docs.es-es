@@ -23,11 +23,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 80f95099644552aed34553385544f21d07b29114
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 49355c4271efc37a40c025c0f8275ec42e13723e
+ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="handling-and-raising-events"></a>Controlar y provocar eventos
 Los eventos de .NET Framework se basan en un modelo de delegado. El modelo de delegado sigue el patrón de diseño del observador, que permite que un suscriptor se registre con un proveedor y reciba notificaciones de dicho proveedor. El emisor de un evento inserta una notificación de que se ha producido un evento, y un receptor de eventos recibe la notificación y define una respuesta a la misma. En este artículo se describen los componentes principales del modelo de delegado, cómo consumir eventos en las aplicaciones y cómo implementar eventos en el código.  
@@ -102,6 +102,6 @@ Los eventos de .NET Framework se basan en un modelo de delegado. El modelo de de
  <xref:System.EventHandler%601>  
  <xref:System.EventArgs>  
  <xref:System.Delegate>  
- [Introducción a eventos y eventos enrutados (aplicaciones de la Tienda Windows)](http://go.microsoft.com/fwlink/?LinkId=261485)  
+ [Introducción a eventos y eventos enrutados (aplicaciones de UWP)](/windows/uwp/xaml-platform/events-and-routed-events-overview)  
  [Eventos (Visual Basic)](../../visual-basic/programming-guide/language-features/events/index.md)  
  [Eventos (Guía de programación de C#)](../../csharp/programming-guide/events/index.md)

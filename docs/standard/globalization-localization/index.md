@@ -24,11 +24,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 7e176ebf6660e1c517e5ef7a505c259666bb30a0
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 63f0e001280773c55f18f0604ca93986acbb9674
+ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="globalizing-and-localizing-net-framework-applications"></a>Globalizar y localizar aplicaciones de .NET Framework
 El desarrollo de una [aplicación de uso internacional](http://msdn.microsoft.com/goglobal/bb978433.aspx), incluida una aplicación que se pueda localizar en uno o varios idiomas, implica tres pasos: globalización, revisión de localizabilidad y localización.  
@@ -50,7 +50,7 @@ El desarrollo de una [aplicación de uso internacional](http://msdn.microsoft.co
   
  .NET Framework proporciona una extensa compatibilidad para desarrollar aplicaciones de uso internacional y localizadas. En concreto, muchos miembros de tipo de la biblioteca de clases de .NET Framework contribuyen a la globalización mediante la devolución de valores que reflejan las convenciones de la referencia cultural del usuario actual o de una referencia cultural especificada. Además, .NET Framework admite los ensamblados satélite, que facilitan el proceso de localizar una aplicación.  
   
- Para información adicional, consulte el [Centro de desarrolladores Go Global](http://go.microsoft.com/fwlink/?LinkId=235015).  
+ Para obtener más información, consulte [Globalization documentation](/globalization/) (Documentación de globalización).  
   
 ## <a name="in-this-section"></a>En esta sección  
  [Globalización](../../../docs/standard/globalization-localization/globalization.md)  
