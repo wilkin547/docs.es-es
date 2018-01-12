@@ -22,11 +22,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 6dccf9d70772c4eaa8818388ad662b1f93804431
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: f11daa93aa4e1cbddd0fa0e9f065295f42c820d5
+ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="net-framework-support-for-windows-store-apps-and-windows-runtime"></a>Compatibilidad de .NET Framework con las aplicaciones de la Tienda Windows y Windows Runtime
 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] admite varios escenarios de desarrollo de software con [!INCLUDE[wrt](../../../includes/wrt-md.md)]. Estos escenarios se clasifican en tres categorías:  
@@ -160,5 +160,5 @@ ms.lasthandoff: 12/23/2017
 |[Guía básica sobre las aplicaciones de la tienda de Windows con C# o Visual Basic](http://go.microsoft.com/fwlink/p/?LinkId=242212)|Proporciona recursos clave para ayudarle a empezar a desarrollar aplicaciones de la [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] mediante C# o Visual Basic, e incluye numerosos tutoriales rápidos, directrices y procedimientos recomendados. (En el Centro de desarrollo de Windows).|  
 |[Desarrollar aplicaciones de la tienda de Windows (VB / C# / C++ y XAML)](http://go.microsoft.com/fwlink/p/?LinkId=238311)|Proporciona recursos clave para ayudarle a empezar a desarrollar aplicaciones de la [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] mediante C# o Visual Basic, e incluye numerosos tutoriales rápidos, directrices y procedimientos recomendados. (En el Centro de desarrollo de Windows).|  
 |[Crear componentes de tiempo de ejecución de Windows en C# y Visual Basic](http://go.microsoft.com/fwlink/p/?LinkId=238313)|Describe cómo crear un componente de [!INCLUDE[wrt](../../../includes/wrt-md.md)] mediante .NET Framework, explica cómo usarlo como parte de una aplicación de la [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] creada para Windows mediante JavaScript y describe cómo depurar la combinación con Visual Studio. (En el Centro de desarrollo de Windows).|  
-|[Referencia de Windows en tiempo de ejecución](http://go.microsoft.com/fwlink/?LinkId=238319)|Documentación de referencia para [!INCLUDE[wrt](../../../includes/wrt-md.md)]. (En el Centro de desarrollo de Windows).|  
+|[Referencia de Windows en tiempo de ejecución](/uwp/api/)|Documentación de referencia para [!INCLUDE[wrt](../../../includes/wrt-md.md)]. (En el Centro de desarrollo de Windows).|  
 |[Transferencia de un URI a Windows Runtime](../../../docs/standard/cross-platform/passing-a-uri-to-the-windows-runtime.md)|Describe un problema que puede surgir cuando se pasa un URI desde el código administrado a [!INCLUDE[wrt](../../../includes/wrt-md.md)] y cómo evitarlo.|
