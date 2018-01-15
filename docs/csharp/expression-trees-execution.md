@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 109e0ac5-2a9c-48b4-ac68-9b6219cdbccf
-ms.openlocfilehash: 4ca87c8410a04e9198e9dd6c379760e7b6596585
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: db481c18a79f55b079ec2558b884ce288e2a9933
+ms.sourcegitcommit: 6a9030eb5bd0f00e1d144f81958adb195cfb1f6f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="executing-expression-trees"></a>Ejecución de árboles de expresión
 
@@ -28,7 +28,7 @@ El tipo de expresión `Expression<TDelegate>` es el único ejemplo concreto en l
 
 En la mayoría de los casos, esto crea una asignación simple entre una expresión y su delegado correspondiente. Por ejemplo, un árbol de expresión que se representa por `Expression<Func<int>>` se convertiría a un delegado del tipo `Func<int>`. Para una expresión lambda con cualquier tipo de valor devuelto y lista de argumentos, existe un tipo de delegado que es el tipo de destino para el código ejecutable representado por esa expresión lambda.
 
-El tipo `LamdbaExpression` contiene los miembros `Compile` y `CompileToMethod` que se usarían para convertir un árbol de expresión en código ejecutable. El método `Compile` crea un delegado. El método `ConmpileToMethod` actualiza un objeto `MethodBuilder` con el lenguaje intermedio que representa la salida compilada del árbol de expresión. Tenga en cuenta que `CompileToMethod` solo está disponible en el marco de trabajo de escritorio completo, no en el marco de trabajo de .NET Core.
+El tipo `LamdbaExpression` contiene los miembros `Compile` y `CompileToMethod` que se usarían para convertir un árbol de expresión en código ejecutable. El método `Compile` crea un delegado. El método `CompileToMethod` actualiza un objeto `MethodBuilder` con el lenguaje intermedio que representa la salida compilada del árbol de expresión. Tenga en cuenta que `CompileToMethod` solo está disponible en el marco de trabajo de escritorio completo, no en el marco de trabajo de .NET Core.
 
 Como opción, también puede proporcionar un `DebugInfoGenerator` para que reciba la información de depuración de símbolos para el objeto de delegado generado. Esto le permite convertir el árbol de expresión en un objeto de delegado y disponer de información de depuración completa sobre el delegado generado.
 
