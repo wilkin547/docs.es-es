@@ -19,11 +19,12 @@ caps.latest.revision: "47"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: fba53a19810a91a2e679616e73ea8c5fc8d38da1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 124c9321623fd6fe9c5414fc1eed2e41be1e75f3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-using-client-application-services"></a>Tutorial: Usar servicios de aplicaciones cliente
 En este tema se describe cómo crear una aplicación de Windows que usa los servicios de aplicaciones cliente para autenticar usuarios y recuperar la configuración y los roles de usuario.  
@@ -374,7 +375,7 @@ En este tema se describe cómo crear una aplicación de Windows que usa los serv
   
 3.  En la ventana **Propiedades** , establezca las propiedades siguientes del botón.  
   
-  	|Propiedad|Valor|  
+  	|Property|Valor|  
   	|--------------|-----------|  
   	|**(Nombre)**|managerOnlyButton|  
   	|**Texto**|&Manager task|  
@@ -394,7 +395,7 @@ En este tema se describe cómo crear una aplicación de Windows que usa los serv
      Si el usuario tiene el rol de administrador, el método `DisplayButtonForManagerRole` establece la propiedad <xref:System.Windows.Forms.Control.Visible%2A> de `managerOnlyButton` en `true`. Este método también muestra un mensaje de error si se produce una <xref:System.Net.WebException> , lo que indica que el servicio de roles no está disponible.  
   
     > [!NOTE]
-    >  El método <xref:System.Web.ClientServices.ClientRolePrincipal.IsInRole%2A> siempre devolverá `false` si el inicio de sesión de usuario expiró. Esto no sucederá si la aplicación llama al método <xref:System.Security.Principal.IPrincipal.IsInRole%2A> poco después de la autenticación, como se muestra en el código de ejemplo de este tutorial. Si la aplicación debe recuperar los roles de usuario en otras ocasiones, conviene agregar código para volver a validar a los usuarios cuyo inicio de sesión haya expirado. Si todos los usuarios válidos están asignados a roles, puede determinar si el inicio de sesión expiró llamando al método <xref:System.Web.ClientServices.Providers.ClientRoleProvider.GetRolesForUser%2A?displayProperty=nameWithType> . Si no se devuelve ningún rol, el inicio de sesión expiró. Para obtener un ejemplo de esta funcionalidad, consulte el método <xref:System.Web.ClientServices.Providers.ClientRoleProvider.GetRolesForUser%2A> . Esta funcionalidad solo es necesaria si seleccionó **Exigir que los usuarios vuelvan a iniciar sesión cuando expire la cookie del servidor** en la configuración de la aplicación. Para obtener más información, consulta [How to: Configure Client Application Services](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md).  
+    >  El método <xref:System.Web.ClientServices.ClientRolePrincipal.IsInRole%2A> siempre devolverá `false` si el inicio de sesión de usuario expiró. Esto no sucederá si la aplicación llama al método <xref:System.Security.Principal.IPrincipal.IsInRole%2A> poco después de la autenticación, como se muestra en el código de ejemplo de este tutorial. Si la aplicación debe recuperar los roles de usuario en otras ocasiones, conviene agregar código para volver a validar a los usuarios cuyo inicio de sesión haya expirado. Si todos los usuarios válidos están asignados a roles, puede determinar si el inicio de sesión expiró llamando al método <xref:System.Web.ClientServices.Providers.ClientRoleProvider.GetRolesForUser%2A?displayProperty=nameWithType> . Si no se devuelve ningún rol, el inicio de sesión expiró. Para obtener un ejemplo de esta funcionalidad, consulte el método <xref:System.Web.ClientServices.Providers.ClientRoleProvider.GetRolesForUser%2A> . Esta funcionalidad solo es necesaria si seleccionó **Exigir que los usuarios vuelvan a iniciar sesión cuando expire la cookie del servidor** en la configuración de la aplicación. Para obtener más información, consulte [Cómo: Configurar servicios de aplicaciones cliente](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md).  
   
      [!code-csharp[ClientApplicationServices#030](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Form1.cs#030)]
      [!code-vb[ClientApplicationServices#030](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Form1.vb#030)]  
@@ -456,7 +457,7 @@ En este tema se describe cómo crear una aplicación de Windows que usa los serv
   
      El controlador de eventos <xref:System.Windows.Forms.Form.FormClosing> llama al método `SaveSettings` , que la funcionalidad de cierre de sesión que agregará en la sección siguiente también usa. El método `SaveSettings` confirma primero que el usuario no cerró sesión. Esto lo hace comprobando la propiedad <xref:System.Security.Principal.IIdentity.AuthenticationType%2A> del objeto <xref:System.Security.Principal.IIdentity> devuelto por la entidad de seguridad actual. La entidad de seguridad actual se recupera mediante la propiedad `static` <xref:System.Threading.Thread.CurrentPrincipal%2A> . Si el usuario se autenticó para los servicios de aplicaciones cliente, el tipo de autenticación será "ClientForms". El método `SaveSettings` no puede comprobar la propiedad <xref:System.Security.Principal.IIdentity.IsAuthenticated%2A?displayProperty=nameWithType> porque el usuario podría tener una identidad de Windows válida después de cerrar la sesión.  
   
-     Si el usuario no cerró la sesión, el método `SaveSettings` llama al método <xref:System.Configuration.ApplicationSettingsBase.Save%2A> de la clase `Settings` generada anteriormente en este procedimiento. Este método puede producir una <xref:System.Net.WebException> si la cookie de autenticación expiró. Esto sucede únicamente si seleccionó **Exigir que los usuarios vuelvan a iniciar sesión cuando expire la cookie del servidor** en la configuración de la aplicación. Para obtener más información, consulta [How to: Configure Client Application Services](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md). El método `SaveSettings` controla la expiración de la cookie llamando a <xref:System.Web.Security.Membership.ValidateUser%2A> para mostrar el cuadro de diálogo de inicio de sesión. Si el usuario inicia sesión correctamente, el método `SaveSettings` intenta guardar la configuración de nuevo llamándose a sí mismo.  
+     Si el usuario no cerró la sesión, el método `SaveSettings` llama al método <xref:System.Configuration.ApplicationSettingsBase.Save%2A> de la clase `Settings` generada anteriormente en este procedimiento. Este método puede producir una <xref:System.Net.WebException> si la cookie de autenticación expiró. Esto sucede únicamente si seleccionó **Exigir que los usuarios vuelvan a iniciar sesión cuando expire la cookie del servidor** en la configuración de la aplicación. Para obtener más información, consulte [Cómo: Configurar servicios de aplicaciones cliente](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md). El método `SaveSettings` controla la expiración de la cookie llamando a <xref:System.Web.Security.Membership.ValidateUser%2A> para mostrar el cuadro de diálogo de inicio de sesión. Si el usuario inicia sesión correctamente, el método `SaveSettings` intenta guardar la configuración de nuevo llamándose a sí mismo.  
   
      Al igual que en el código anterior, el método `SaveSettings` muestra un mensaje de error si el servicio remoto no está disponible. Si el proveedor de configuración no puede acceder al servicio remoto, la configuración sigue guardándose en la memoria caché local y se vuelve a cargar cuando se reinicia la aplicación.  
   
@@ -548,6 +549,6 @@ En este tema se describe cómo crear una aplicación de Windows que usa los serv
  [Servicios de aplicación cliente](../../../docs/framework/common-client-technologies/client-application-services.md)  
  [Información general sobre los servicios de aplicaciones cliente](../../../docs/framework/common-client-technologies/client-application-services-overview.md)  
  [Cómo: Configurar servicios de aplicaciones cliente](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md)  
- [Herramienta de administración de sitios Web ASP.NET](http://msdn.microsoft.com/library/100ddd8b-7d11-4df9-91ef-0bbbe92e5aec)  
+ [Herramienta de administración de sitios web de ASP.NET](http://msdn.microsoft.com/library/100ddd8b-7d11-4df9-91ef-0bbbe92e5aec)  
  [Crear y configurar la base de datos de servicios de la aplicación para SQL Server](http://msdn.microsoft.com/library/ab894e83-7e2f-4af8-a116-b1bff8f815b2)  
  [Tutorial: Usar servicios de aplicación ASP.NET](http://msdn.microsoft.com/library/f3f394f0-20d6-4361-aa8f-4b21bf4933eb)

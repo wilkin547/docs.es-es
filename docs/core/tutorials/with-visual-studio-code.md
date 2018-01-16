@@ -1,5 +1,5 @@
 ---
-title: "Empezar a trabajar con código C# y Visual Studio - Guía de C#"
+title: "Introducción a C# y Visual Studio Code: Guía de C#"
 description: "Obtenga información sobre cómo crear y depurar su primera aplicación .NET Core en C# mediante Visual Studio Code."
 keywords: "C#, Introducción, Adquisición, Instalación, Visual Studio Code, Multiplataforma"
 author: kendrahavens
@@ -10,11 +10,12 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 76c23597-4cf9-467e-8a47-0c3703ce37e7
-ms.openlocfilehash: 3a9de689946507e4b6d89f684461d65049b3375a
-ms.sourcegitcommit: a53799f81351ad9afb3007cd68846ce6aeeb10cb
+ms.workload: dotnetcore
+ms.openlocfilehash: 95052da1688ec1026f11ff679dda6aad50a340fa
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="get-started-with-c-and-visual-studio-code"></a>Introducción a C# y Visual Studio Code
 
@@ -34,20 +35,20 @@ Se va a empezar con un programa "Hola mundo" sencillo basado en .NET Core:
 
     * Abra Visual Studio Code.
     * Haga clic en el icono del explorador en el menú de la izquierda y después haga clic en **Abrir carpeta**.
-    * Seleccione **archivo** > **Abrir carpeta** en el menú principal para abrir la carpeta que desea que el proyecto de C# y haga clic en **seleccionar la carpeta**. En nuestro ejemplo, estamos creando una carpeta para nuestro proyecto denominado *HelloWorld*.
+    * Seleccione **Archivo** > **Abrir carpeta** en el menú principal para abrir la carpeta en la que quiere que esté el proyecto de C# y haga clic en **Seleccionar carpeta**. En el ejemplo se va a crear una carpeta para el proyecto denominada *HelloWorld*.
 
       ![VSCodeOpenFolder](media/with-visual-studio-code/vscodeopenfolder.png)
 
 2. Inicializar un proyecto de C#:
-    * Para abrir el Terminal integrada desde código de Visual Studio, seleccione **vista** > **Terminal integrado** en el menú principal.
+    * Abra el terminal integrado de Visual Studio Code al seleccionar **Ver** > **Terminal integrado** en el menú principal.
     * En la ventana de terminal, escriba `dotnet new console`.
-    * Este comando crea un `Program.cs` archivo con un programa simple "Hola mundo" ya escrito, junto con un archivo de proyecto de C# con el nombre en la carpeta `HelloWorld.csproj`.
+    * Este comando crea un archivo `Program.cs` en la carpeta con un programa "Hello World" sencillo ya escrito, junto con un archivo de proyecto de C# denominado `HelloWorld.csproj`.
 
       ![El nuevo comando de dotnet](media/with-visual-studio-code/dotnetnew.png)
 
 3. Resolver los recursos de compilación:
 
-    * Para **.NET Core 1.x**, tipo `dotnet restore`. Al ejecutar `dotnet restore`, se concede acceso a los paquetes de .NET Core necesarios para compilar el proyecto.
+    * En **.NET Core 1.x**, escriba `dotnet restore`. Al ejecutar `dotnet restore`, se concede acceso a los paquetes de .NET Core necesarios para compilar el proyecto.
 
       ![El comando de restauración de dotnet](media/with-visual-studio-code/dotnetrestore.png)
 
@@ -63,11 +64,11 @@ También puede ver un breve tutorial de vídeo para obtener ayuda del programa d
 
 ## <a name="debug"></a>Depuración
 
-1. Haga clic en el archivo *Program.cs* para abrirlo. La primera vez que abra un archivo de C# en Visual Studio Code, [OmniSharp](http://www.omnisharp.net/) se carga en el editor.
+1. Haga clic en el archivo *Program.cs* para abrirlo. La primera vez que se abre un archivo de C# en Visual Studio Code, se carga [OmniSharp](http://www.omnisharp.net/) en el editor.
 
     ![Abrir el archivo Program.cs](media/with-visual-studio-code/opencs.png)
 
-2. Código de Visual Studio debe solicitarle que agregue los activos que faltan para compilar y depurar la aplicación. Seleccione **Sí**. 
+2. Visual Studio Code debe pedirle que agregue los recursos que faltan para compilar y depurar la aplicación. Seleccione **Sí**. 
 
     ![Solicitud de los recursos que faltan](media/with-visual-studio-code/missing-assets.png)
 
@@ -79,12 +80,12 @@ También puede ver un breve tutorial de vídeo para obtener ayuda del programa d
 
     ![Selección de .NET Core](media/with-visual-studio-code/selectcore.png)
 
-5. Agregar un punto de interrupción al proyecto haciendo clic en el **editor margen**, que es el espacio de la izquierda de los números de línea en el editor, junto a la línea 9.
+5. Agregue un punto de interrupción al proyecto; para ello, haga clic en el **margen del editor**, que es el espacio a la izquierda de los números de línea del editor, junto a la línea 9.
 
     ![Establecer un punto de interrupción](media/with-visual-studio-code/setbreakpoint.png)
 
-6. Para iniciar la depuración, seleccione <kbd>F5</kbd> o en la flecha verde. El depurador detiene la ejecución del programa cuando alcanza el punto de interrupción establecido en el paso anterior.
-    * Durante la depuración, puede ver las variables locales en el panel superior izquierdo o utilizar la consola de depuración.
+6. Para comenzar a depurar, seleccione <kbd>F5</kbd> o la flecha verde. El depurador detiene la ejecución del programa cuando alcanza el punto de interrupción establecido en el paso anterior.
+    * Mientras depura, puede ver las variables locales en el panel superior izquierdo o usar la consola de depuración.
 
     ![Ejecutar y depurar](media/with-visual-studio-code/rundebug.png)
 

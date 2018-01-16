@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 0db12548-82cb-4903-ac88-13103d70aa77
-ms.openlocfilehash: ec86c558b9aa9c6269fcf9890978f61a934c081f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: e9707d3b67a80fface2c26c589780c60c2e293f7
+ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="working-with-linq"></a>Trabajar con LINQ
 
@@ -329,6 +329,6 @@ Realice la compilación y vuelva a ejecutarla. La salida está un poco más limp
 
 ## <a name="conclusion"></a>Conclusión
 
-En este ejemplo se exponen algunos de los métodos utilizados en LINQ, como la forma de crear métodos propios que pueden usarse con facilidad con código habilitado para LINQ. También se presentan las diferencias entre la evaluación diligente y diferida, y el efecto que puede tener la decisión en el rendimiento.
+En este ejemplo se han mostrado algunos de los métodos usados en LINQ, como la forma de crear métodos propios que pueden usarse con facilidad con código habilitado para LINQ. También se presentan las diferencias entre la evaluación diligente y diferida, y el efecto que puede tener la decisión en el rendimiento.
 
-Ha obtenido un poco de información sobre una técnica de magia. Los magos usan el orden aleatorio de faro porque así pueden controlar dónde está cada carta dentro de la baraja. En algunos trucos, el mago pide a un miembro de la audiencia que coloque una carta en la parte superior de la baraja, y la mezcla en orden aleatorio durante algunos minutos, pero puede controlar dónde se encuentra la carta en cuestión. En otras ilusiones, es necesario organizar la baraja de una forma determinada. Un mago debe organizar la baraja antes de realizar el truco. Después, mezclará la baraja en orden aleatorio 5 veces usando un orden aleatorio interno. En el escenario, el mago puede mostrar qué aspecto tiene una baraja aleatoria, ordenarla aleatoriamente 3 veces más y organizar la baraja exactamente como lo desea.
+Ha obtenido un poco de información sobre una técnica de magia. Los magos usan la mezcla faro porque les permite controlar dónde está cada carta en la baraja. En algunos trucos, el mago pide a un miembro de la audiencia que coloque una carta en la parte superior de la baraja, y la mezcla en orden aleatorio durante algunos minutos, pero puede controlar dónde se encuentra la carta en cuestión. En otras ilusiones, es necesario organizar la baraja de una forma determinada. Un mago debe organizar la baraja antes de realizar el truco. Después, mezclará la baraja en orden aleatorio 5 veces usando un orden aleatorio interno. En el escenario, el mago puede mostrar qué aspecto tiene una baraja aleatoria, ordenarla aleatoriamente 3 veces más y organizar la baraja exactamente como lo desea.

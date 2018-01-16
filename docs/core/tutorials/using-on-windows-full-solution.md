@@ -9,11 +9,12 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: ba7e082c-a7c8-431e-a342-f67734b660f6
-ms.openlocfilehash: 694201c1a2a2c373f62b0e0d8e3c1d8aa7e6e881
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnetcore
+ms.openlocfilehash: e922a2c91fab5c513f5c560920d37d77da2d6f84
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="building-a-complete-net-core-solution-on-windows-using-visual-studio-2017"></a>Creación de una solución completa de .NET Core en Windows con Visual Studio 2017
 
@@ -27,7 +28,7 @@ Siga las instrucciones de [nuestra página de requisitos previos](../windows-pre
 
 ### <a name="writing-the-library"></a>Escritura de la biblioteca
 
-1. En Visual Studio, elija **Archivo**, **Nuevo**, **Proyecto**. En el **nuevo proyecto** cuadro de diálogo, expanda el **Visual C#** nodo y elija la **.NET estándar** nodo y, a continuación, elija **(.NET estándar)debibliotecadeclases**. 
+1. En Visual Studio, elige **Archivo**, **Nuevo**, **Proyecto**. En el cuadro de diálogo **Nuevo proyecto**, expanda el nodo **Visual C#**, elija el nodo **.NET Standard** y luego elija **Biblioteca de clases (.NET Standard)**. 
 
 2. Llame "Library" al proyecto y "Golden" a la solución. Deje desactivada la casilla **Crear directorio para la solución**. Haga clic en **Aceptar**.
 

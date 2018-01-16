@@ -9,11 +9,11 @@ ms.assetid: ee6a4156-73f7-4e9b-8e01-c74c4798b65c
 caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 453d341961207dd851136aa47a52759b0841424d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 17c9b7440d60c38ba30d230f8412c3ca1a21830a
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="creating-and-using-components-in-visual-basic"></a>Crear y utilizar componentes en Visual Basic
 Un *componente* es una clase que implementa la interfaz <xref:System.ComponentModel.IComponent?displayProperty=nameWithType> o que deriva directa o indirectamente de una clase que implementa <xref:System.ComponentModel.IComponent>. Un componente de [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] es un objeto que se puede reutilizar, puede interactuar con otros objetos y proporciona control sobre recursos externos y sobre la compatibilidad en tiempo de diseño.  
@@ -32,8 +32,6 @@ Un *componente* es una clase que implementa la interfaz <xref:System.ComponentMo
 -   Si el componente se tiene que calcular por valor, se debe derivar de <xref:System.ComponentModel.MarshalByValueComponent>.  
   
 -   Si el componente no se puede derivar de una de las implementaciones base debido a la herencia única, implemente <xref:System.ComponentModel.IComponent>.  
-  
- Para obtener más información sobre la compatibilidad en tiempo de diseño, vea [Atributos en tiempo de diseño para componentes](http://msdn.microsoft.com/library/12050fe3-9327-4509-9e21-4ee2494b95c3) y [Ampliar compatibilidad en tiempo de diseño](http://msdn.microsoft.com/library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2).  
   
 ## <a name="component-classes"></a>Clases de componentes  
  El espacio de nombres <xref:System.ComponentModel> proporciona clases que se usan para implementar el comportamiento de los componentes y controles en tiempo de diseño y en tiempo de ejecución. Este espacio de nombres incluye las clases bases y las interfaces para implementar atributos y convertidores de tipos, enlazarlos con orígenes de datos y generar licencias para los componentes.  
@@ -65,22 +63,9 @@ Un *componente* es una clase que implementa la interfaz <xref:System.ComponentMo
 -   <xref:System.ComponentModel.PropertyDescriptor>. Proporciona información sobre una propiedad.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
- [Clase frente a componente y frente a control](http://msdn.microsoft.com/library/db8b842e-44d9-40cc-a0f8-70fd189632c3)  
- Define *componente* y *control* y describe las diferencias existentes entre estos y las clases.  
-  
- [Creación de componentes](http://msdn.microsoft.com/library/4a5a5e49-0378-4a31-83bc-24da0f1a727d)  
- Guía de introducción a los componentes.  
-  
- [Tutoriales sobre la creación de componentes](http://msdn.microsoft.com/library/c414cca9-2489-4208-8b38-954586d91c13)  
- Vínculos a temas que proporcionan instrucciones paso a paso para la programación de componentes.  
-  
- [Clases de componentes](http://msdn.microsoft.com/library/ce2e5647-e673-4c2b-8125-ffebbd9d71bc)  
- Se describe lo que convierte una clase en un componente, maneras de exponer la funcionalidad de los componentes, controlar el acceso a componentes y controlar cómo se crean instancias de los componentes.  
-  
  [Solución de problemas relacionados con la creación de controles y componentes](../../framework/winforms/controls/troubleshooting-control-and-component-authoring.md)  
  Se explica cómo solucionar problemas comunes.  
   
 ## <a name="see-also"></a>Vea también  
- [Cómo: obtener acceso a la compatibilidad en tiempo de diseño en formularios Windows Forms](http://msdn.microsoft.com/library/a84f8579-1f47-41b9-ba37-69030b0aff09)  
- [Cómo: Extender la apariencia y el comportamiento de los controles en modo de diseño](http://msdn.microsoft.com/library/68f85054-2253-47f5-a4f2-3f1ac8c9f27b)  
- [Cómo: Llevar a cabo una inicialización personalizada de controles en modo de diseño](http://msdn.microsoft.com/library/914eaa03-092f-4556-9160-b8a2a40641d9)
+ [Cómo: Obtener acceso a las funciones en tiempo de diseño de formularios Windows Forms](../../framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)  
+ 

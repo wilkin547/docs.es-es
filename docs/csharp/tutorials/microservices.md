@@ -10,15 +10,13 @@ ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.devlang: csharp
 ms.assetid: 87e93838-a363-4813-b859-7356023d98ed
-ms.openlocfilehash: 6cdc4eb0d0fea93b5210532210ad0c928e35a7a5
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: d399cdce81350356b71e21d879a4f5b5079f98d8
+ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="microservices-hosted-in-docker"></a>Microservicios alojados en Docker
-
-## <a name="introduction"></a>Introducción
 
 En este tutorial se describen las tareas necesarias para compilar e implementar un microservicio de ASP.NET Core en un contenedor de Docker. Durante el transcurso de este tutorial, aprenderá a:
 
@@ -113,7 +111,7 @@ El nodo "marcos" especifica las versiones y configuraciones de .NET Framework qu
 
 La aplicación se implementa en Startup.cs. Este archivo contiene la clase de inicio.
 
-Los dos métodos se llaman en la infraestructura de ASP.NET Core para configurar y ejecutar la aplicación. El método `ConfigureServices` describe los servicios que son necesarios para esta aplicación. Va a crear un microservicio de Lean, así que no es necesario configurar ninguna dependencia. El método `Configure` configura los controladores para las solicitudes HTTP entrantes. La plantilla genera un controlador sencillo que responde a cualquier solicitud con el texto "¡Hola a todos!".
+La infraestructura de ASP.NET Core llama a los dos métodos para configurar y ejecutar la aplicación. El método `ConfigureServices` describe los servicios que son necesarios para esta aplicación. Va a crear un microservicio de Lean, así que no es necesario configurar ninguna dependencia. El método `Configure` configura los controladores para las solicitudes HTTP entrantes. La plantilla genera un controlador sencillo que responde a cualquier solicitud con el texto "¡Hola a todos!".
 
 ## <a name="build-a-microservice"></a>Creación de un microservicio
 
@@ -227,7 +225,7 @@ Un ***contenedor de Docker*** representa una instancia en ejecución de una imag
 
 Por analogía, puede considerar la *imagen de Docker* como una *clase*y el *contenedor de Docker* como un objeto o una instancia de esa clase.  
 
-El Dockerfile creado por la plantilla de ASP.NET servirá para nuestros propósitos. Repasemos su contenido.
+El Dockerfile creado por la plantilla de ASP.NET sirve para nuestros propósitos. Repasemos su contenido.
 
 La primera línea especifica la imagen de origen:
 
@@ -259,7 +257,7 @@ RUN dotnet publish -c Release -o out
 
 [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
-El archivo de proyecto se copia del directorio actual a la máquina virtual de Docker y se restauran todos los paquetes. El uso de la CLI de dotnet significa que la imagen de Docker debe incluir el SDK de .NET Core. Luego, se copia el resto de la aplicación y el comando de publicación de dotnet compila y empaqueta la aplicación.
+El archivo de proyecto se copia desde el directorio actual en la máquina virtual de Docker y se restauran todos los paquetes. El uso de la CLI de dotnet significa que la imagen de Docker debe incluir el SDK de .NET Core. Luego, se copia el resto de la aplicación y el comando de publicación de dotnet compila y empaqueta la aplicación.
 
 La última línea del archivo ejecuta la aplicación:
 
@@ -279,7 +277,7 @@ obj/*
 out/*
 ```
 
-Compilará la imagen mediante el comando de compilación de Docker. Ejecute el siguiente comando desde el directorio que contiene el código.
+Compile la imagen mediante el comando `docker build`. Ejecute el siguiente comando desde el directorio que contiene el código.
 
 ```console
 docker build -t weather-microservice .
@@ -320,7 +318,7 @@ docker attach --sig-proxy=false hello-docker
 El argumento `--sig-proxy=false` significa que los comandos `Ctrl-C` no se envían al proceso del contenedor, sino que detienen el comando `docker attach`. El argumento final es el nombre asignado al contenedor en el comando `docker run`. 
 
 > [!NOTE]
-> También puede usar el id. de contenedor asignado a Docker para hacer referencia a cualquier contenedor. Si no especifica un nombre para su contenedor en `docker run`, debe usar el id. de contenedor.
+> También puede usar el Id. de contenedor asignado a Docker para hacer referencia a cualquier contenedor. Si no especifica un nombre para su contenedor en `docker run`, debe usar el id. de contenedor.
 
 Abra un explorador y vaya a su servicio. Verá los mensajes de diagnóstico en las ventanas de comandos desde el contenedor en ejecución conectado.
 
@@ -346,8 +344,8 @@ docker rmi weather-microservice
 
 ## <a name="conclusion"></a>Conclusión 
 
-En este tutorial, ha creado un microservicio de ASP.NET Core y ha agregado unas cuantas características sencillas.
+En este tutorial, ha compilado un microservicio de ASP.NET Core y ha agregado unas cuantas características sencillas.
 
-Ha compilado una imagen de un contenedor de Docker para ese servicio y ha ejecutado ese contenedor en su máquina. Ha conectado una ventana de terminal al servicio y ha visto los mensajes de diagnóstico de su servicio.
+Ha compilado una imagen de un contenedor de Docker para ese servicio y ha ejecutado ese contenedor en el equipo. Ha conectado una ventana de terminal al servicio y ha visto los mensajes de diagnóstico de su servicio.
 
 Por el camino, ha visto varias características del lenguaje C# en acción.

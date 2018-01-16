@@ -17,11 +17,12 @@ helpviewer_keywords:
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 91b0cc4614834f2ad8f7b54d9364d484ca9a6990
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: c724620c987b2ee871dc282bca0dd3da1a5031bf
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="emitting-dynamic-methods-and-assemblies"></a>Emitir métodos y ensamblados dinámicos
 En esta sección se describe un conjunto de tipos administrados del espacio de nombres <xref:System.Reflection.Emit> que permite a un compilador o una herramienta emitir metadatos y el Lenguaje Intermedio de Microsoft (MSIL) en tiempo de ejecución y, opcionalmente, generar un archivo portable ejecutable (PE) en el disco. Los motores de scripts y los compiladores son los principales usuarios de este espacio de nombres. En esta sección, la funcionalidad proporcionada por el espacio de nombres <xref:System.Reflection.Emit> se conoce como emisión de la reflexión.  
@@ -46,20 +47,20 @@ En esta sección se describe un conjunto de tipos administrados del espacio de n
   
 ## <a name="in-this-section"></a>En esta sección
   
-[Problemas de seguridad en la reflexión de la emisión](../../../docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md)  
+[Problemas de seguridad de la emisión de la reflexión](../../../docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md)  
 Describe los problemas de seguridad relacionados con la creación de ensamblados dinámicos mediante emisión de la reflexión.  
 
-[Cómo: definir y ejecutar métodos dinámicos](how-to-define-and-execute-dynamic-methods.md)   
+[Cómo: Definir y ejecutar métodos dinámicos](how-to-define-and-execute-dynamic-methods.md)   
 Muestra cómo ejecutar un método dinámico simple y un método dinámico enlazado a una instancia de una clase.
 
-[Cómo: definir un tipo genérico con reflection emit](how-to-define-a-generic-type-with-reflection-emit.md)   
-Muestra cómo crear un tipo genérico simple con dos parámetros de tipo, cómo aplicar la clase, interfaz y restricciones especiales a los parámetros de tipo y cómo crear a memers que usa los parámetros de tipo de la clase como tipos de parámetro y tipos de valor devuelto.
+[Cómo: Definir un tipo genérico con emisión de reflexión](how-to-define-a-generic-type-with-reflection-emit.md)   
+Muestra cómo crear un tipo genérico simple con dos parámetros de tipo, cómo aplicar restricciones de clase, interfaz y especiales a los parámetros de tipo y cómo crear miembros que usen los parámetros de tipo de la clase como tipos de parámetro y tipos de valor devuelto.
 
-[Cómo: definir un método genérico con reflection emit](how-to-define-a-generic-method-with-reflection-emit.md)   
+[Cómo: Definir un método genérico con emisión de reflexión](how-to-define-a-generic-method-with-reflection-emit.md)   
 Muestra cómo crear, emitir e invocar un método genérico simple.
 
-[Ensamblados recopilables para la generación de tipo dinámico](collectible-assemblies.md)   
-Presenta a los ensamblados recopilables, que son ensamblados dinámicos que se pueden descargar sin descargar el dominio de aplicación en el que se crearon.
+[Ensamblados recopilables para la generación dinámica de tipos](collectible-assemblies.md)   
+Presenta los ensamblados recopilables, que son ensamblados dinámicos que se pueden descargar sin descargar el dominio de aplicación en el que se crearon.
   
 ## <a name="reference"></a>Referencia  
  <xref:System.Reflection.Emit.OpCodes>  
@@ -79,4 +80,4 @@ Presenta a los ensamblados recopilables, que son ensamblados dinámicos que se p
  Explica cómo explorar metadatos y código administrado.  
   
  [Ensamblados en Common Language Runtime](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
- Proporciona información general de los ensamblados de implementaciones de. NET.
+ Proporciona información general sobre los ensamblados de las implementaciones de. NET.

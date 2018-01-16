@@ -13,11 +13,12 @@ ms.assetid: 2f25e522-456a-48c3-8a53-e5f39275649f
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 166d61339d2b74f378b50ade4b78fd41e9692f76
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 45bb0174bd4c757b6e51621f36b25eb5f4354c94
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="version-compatibility-in-the-net-framework"></a>Compatibilidad de versiones en .NET Framework
 La compatibilidad con versiones anteriores significa que una aplicación desarrollada en una versión determinada de una plataforma se ejecutará en las versiones posteriores de esa plataforma. .NET Framework intenta maximizar la compatibilidad con versiones anteriores. El código fuente escrito para una versión de .NET Framework debe compilarse en versiones posteriores de .NET Framework y los binarios que se ejecutan en una versión de .NET Framework deberán comportarse del mismo modo en versiones posteriores de .NET Framework.  
@@ -45,21 +46,21 @@ La compatibilidad con versiones anteriores significa que una aplicación desarro
  Debido a esta restricción, las garantías de compatibilidad son especialmente importantes en los componentes. A partir de .NET Framework 4, puede especificar el grado en el que se espera que un componente siga siendo compatible entre diversas versiones aplicando el atributo <xref:System.Runtime.Versioning.ComponentGuaranteesAttribute?displayProperty=nameWithType> a dicho componente. Las herramientas pueden usar este atributo para detectar posibles infracciones de la garantía de compatibilidad en futuras versiones de un componente.  
   
 ## <a name="backward-compatibility-and-the-net-framework-45"></a>Compatibilidad con versiones anteriores de .NET Framework 4.5  
- El .NET Framework 4.5 y versiones posteriores son compatibles con aplicaciones que se compilaron con versiones anteriores de .NET Framework. En otras palabras, las aplicaciones y los componentes creados con versiones anteriores se funcionen sin modificaciones en el .NET Framework 4.5 y versiones posteriores. Sin embargo, de forma predeterminada, aplicaciones se ejecutan en la versión de common language runtime para el que se desarrollaron, por lo que puede que tenga que proporcionar un archivo de configuración para habilitar la aplicación para que se ejecute en .NET Framework 4.5 o versiones posteriores. Para más información, consulte la sección [Compatibilidad de versiones de las aplicaciones](#Apps), anteriormente en este artículo.  
+ .NET Framework 4.5 y versiones posteriores son compatibles con las aplicaciones creadas con versiones anteriores de .NET Framework. Es decir, las aplicaciones y los componentes creados con versiones anteriores funcionarán sin necesidad de modificación en .NET Framework 4.5 y versiones posteriores. Pero, de forma predeterminada, las aplicaciones se ejecutan en la versión de Common Language Runtime para la que se han desarrollado, por lo que puede tener que proporcionar un archivo de configuración para permitir que la aplicación se ejecute en .NET Framework 4.5 o versiones posteriores. Para más información, consulte la sección [Compatibilidad de versiones de las aplicaciones](#Apps), anteriormente en este artículo.  
   
  En la práctica, esta compatibilidad puede verse interrumpida por cambios en apariencia intrascendentes realizados en .NET Framework y cambios en las técnicas de programación. Por ejemplo, las mejoras de rendimiento realizadas en .NET Framework 4.5 pueden provocar una condición de carrera que no se daba en versiones anteriores. De igual forma, si se usa una ruta de acceso codificada de forma rígida en los ensamblados .NET Framework, se realiza una comparación de igualdad con una determinada versión de .NET Framework y se obtiene el valor de un campo privado usando la reflexión, no habrá compatibilidad con versiones anteriores. Además, cada una de las versiones de .NET Framework contiene revisiones de errores y cambios relacionados con la seguridad que pueden afectar a la compatibilidad de algunas aplicaciones y componentes.  
   
- Si su aplicación o componente no funciona como se esperaba en .NET Framework 4.5 (incluidas las versiones secundarias, la [!INCLUDE[net_v451](../../../includes/net-v451-md.md)], 4.5.2, 4.6, 4.6.1, 4.6.2, 4.7 o 4.7.1, utilice las listas de comprobación siguientes:  
+ Si la aplicación o el componente no funciona como se esperaba en .NET Framework 4.5 (o en sus versiones secundarias, [!INCLUDE[net_v451](../../../includes/net-v451-md.md)], 4.5.2, 4.6, 4.6.1, 4.6.2, 4.7 o 4.7.1), use las listas de comprobación siguientes:  
   
--  Si la aplicación se desarrolló para ejecutarse en cualquier versión de .NET Framework a partir de .NET Framework 4.0, consulte [compatibilidad de aplicaciones en .NET Framework](application-compatibility.md) para generar listas de cambios entre la versión de .NET Framework de destino y la versión en que se ejecuta la aplicación.  
+-  Si la aplicación se ha desarrollado para ejecutarse en cualquier versión de .NET Framework a partir de .NET Framework 4.0, vea [Compatibilidad de aplicaciones en .NET Framework](application-compatibility.md) para generar listas de cambios entre la versión de .NET Framework de destino y la versión en la que se ejecuta la aplicación.  
 
-- Si tiene una aplicación de .NET Framework 3.5, consulte también [problemas de migración de .NET Framework 4](../../../docs/framework/migration-guide/net-framework-4-migration-issues.md).
+- Si tiene una aplicación de .NET Framework 3.5, vea también [Problemas de migración de .NET Framework 4](../../../docs/framework/migration-guide/net-framework-4-migration-issues.md).
 
-- Si tiene una aplicación de .NET Framework 2.0, consulte también [cambios en .NET Framework 3.5 SP1](http://go.microsoft.com/fwlink/?LinkId=186989).
+- Si tiene una aplicación de .NET Framework 2.0, vea también [Cambios en .NET Framework 3.5 SP1](http://go.microsoft.com/fwlink/?LinkId=186989).
 
-- Si tiene una aplicación de .NET Framework 1.1, consulte también [cambios en .NET Framework 2.0](http://go.microsoft.com/fwlink/?LinkID=125263).  
+- Si tiene una aplicación de .NET Framework 1.1, vea también [Cambios en .NET Framework 2.0](http://go.microsoft.com/fwlink/?LinkID=125263).  
   
--   Si está recompilando código fuente existente para que se ejecute en .NET Framework 4.5 o punto de versiones, o si está desarrollando una nueva versión de una aplicación o componente que tenga como destino el [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] o sus versiones secundarias de una comprobación de base de código de origen existente [ ¿Qué es obsoleto en la biblioteca de clases](../../../docs/framework/whats-new/whats-obsolete.md) para tipos y miembros obsoletos y aplique las soluciones descritas. (El código compilado previamente seguirá ejecutándose con los tipos y miembros que se han marcado como obsoletos).  
+-   Si va a volver a compilar código fuente existente para ejecutarlo en .NET Framework 4.5 o en sus versiones secundarias, o si va a desarrollar una nueva versión de una aplicación o un componente para [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] o sus versiones secundarias a partir de una base de código fuente existente, vea [Lo obsoleto en la biblioteca de clases .NET Framework](../../../docs/framework/whats-new/whats-obsolete.md) para conocer los miembros y tipos obsoletos, y aplique las soluciones indicadas. (El código compilado previamente seguirá ejecutándose con los tipos y miembros que se han marcado como obsoletos).  
   
 -   Si considera que un cambio de [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] dañó la aplicación, consulte [Esquema de la configuración de Common Language Runtime](../../../docs/framework/configure-apps/file-schema/runtime/index.md) para determinar si puede usar una configuración en tiempo de ejecución en el archivo de configuración de la aplicación para restaurar el comportamiento anterior.  
   

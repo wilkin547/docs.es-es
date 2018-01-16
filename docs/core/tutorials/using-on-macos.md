@@ -9,11 +9,12 @@ ms.topic: get-started-article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 8ad82148-dac8-4b31-9128-b0e9610f4d9b
-ms.openlocfilehash: b172e5fc4fcf9dd5c1e6f268f3c046e77592ebd3
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnetcore
+ms.openlocfilehash: 5a8f1fca7623763d43b977d0cc44396de249c62e
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="getting-started-with-net-core-on-macos"></a>Introducción a .NET Core en macOS
 
@@ -80,7 +81,7 @@ Esto agrega `Newtonsoft.Json` y sus dependencias al proyecto de biblioteca. De m
 </ItemGroup>
 ```
 
-Ejecutar [ `dotnet restore` ](../tools/dotnet-restore.md), ([Véase la nota](#dotnet-restore-note)) que restaura las dependencias y crea un *obj* carpeta dentro de *biblioteca* con tres archivos en ella, incluido un *project.assets.json* archivo:
+Ejecute [`dotnet restore`](../tools/dotnet-restore.md) ([vea la nota](#dotnet-restore-note)), lo que restaura las dependencias y crea una carpeta *obj* dentro de *library* con tres archivos, incluido un archivo *project.assets.json*:
 
 ```console
 dotnet restore
@@ -194,7 +195,7 @@ Cree la dependencia en la biblioteca ejecutando el comando `dotnet add reference
 dotnet add app/app.csproj reference library/library.csproj
 ```
 
-Ejecutar `dotnet restore` ([Véase la nota](#dotnet-restore-note)) para restaurar las dependencias de los tres proyectos en la solución. Abra *Program.cs* y reemplace el contenido del método `Main` por la siguiente línea:
+Ejecute `dotnet restore` ([vea la nota](#dotnet-restore-note)) para restaurar las dependencias de los tres proyectos en la solución. Abra *Program.cs* y reemplace el contenido del método `Main` por la siguiente línea:
 
 ```csharp
 WriteLine($"The answer is {new Thing().Get(19, 23)}");

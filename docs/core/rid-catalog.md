@@ -6,11 +6,12 @@ ms.author: mairaw
 ms.date: 09/07/2017
 ms.topic: article
 ms.prod: .net-core
-ms.openlocfilehash: 067f9cfc283a14b7ea59a7454b7f593ce6eb5806
-ms.sourcegitcommit: 62d3e3e74c1b7ffa927590012c0b9f87de1b0848
+ms.workload: dotnetcore
+ms.openlocfilehash: 180aac7635746f9ede146c3e561deb9bba9a61ab
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="net-core-rid-catalog"></a>Catálogo de identificadores de entorno de ejecución (RID) de .NET Core
 
@@ -111,7 +112,7 @@ En la lista siguiente se muestran los RID más comunes que se usan en cada SO. N
   - `win10-arm`
   - `win10-arm64`
 
-Vea [requisitos previos para .NET Core en Windows](windows-prerequisites.md) para obtener más información.
+Vea [Requisitos previos para .NET Core en Windows](windows-prerequisites.md) para más información.
 
 ## <a name="linux-rids"></a>RID de Linux
 
@@ -165,19 +166,19 @@ Vea [requisitos previos para .NET Core en Windows](windows-prerequisites.md) par
   - `linuxmint.18-x64`
   - `linuxmint.18.1-x64` (.NET Core 2.0 o versiones posteriores)
 
-Vea [requisitos previos para .NET Core en Linux](linux-prerequisites.md) para obtener más información.
+Vea [Requisitos previos para .NET Core en Linux](linux-prerequisites.md) para más información.
 
-## <a name="macos-rids"></a>macOS RID
+## <a name="macos-rids"></a>RID de macOS
 
-RID macOS use la marca de "OSX" anterior.
+Los RID de macOS usan la personalización de marca antigua "OSX".
 
-- `osx-x64`(.NET core 2.0 o versiones posteriores, la versión mínima es `osx.10.12-x64`)
+- `osx-x64` (.NET Core 2.0 o versiones posteriores, la versión mínima es `osx.10.12-x64`)
 - `osx.10.10-x64`
 - `osx.10.11-x64`
 - `osx.10.12-x64` (.NET Core 1.1 o versiones posteriores)
 - `osx.10.13-x64`
 
-Vea [requisitos previos para .NET Core en macOS](macos-prerequisites.md) para obtener más información.
+Vea [Requisitos previos para .NET Core en macOS](macos-prerequisites.md) para más información.
 
 ## <a name="android-rids-net-core-20-or-later-versions"></a>RID de Android (.NET Core 2.0 o versiones posteriores)
 

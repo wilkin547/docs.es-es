@@ -19,11 +19,12 @@ caps.latest.revision: "31"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: b6c95613cdc7ac656e8beafcf9a685e51eddf5a6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 49d2154b1af4350c3145f2cb9be30505e0967a4e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="mpgoexe-managed-profile-guided-optimization-tool"></a>Mpgo.exe (Herramienta de optimización guiada por perfiles administrados)
 La herramienta de optimización guiada por perfiles administrados (Mpgo.exe) es una herramienta de línea de comandos que usa escenarios de usuario final comunes para optimizar los ensamblados de imagen nativa creados por el [Generador de imágenes nativas (Ngen.exe)](../../../docs/framework/tools/ngen-exe-native-image-generator.md). Esta herramienta permite ejecutar escenarios de aprendizaje que generan datos de perfil. El [Generador de imágenes nativas (Ngen.exe)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) usa estos datos para optimizar los ensamblados de aplicación de imagen nativa generados. Un escenario de aprendizaje es una ejecución de prueba de un uso previsto de la aplicación. Mpgo.exe está disponible en Visual Studio Ultimate 2012 y versiones posteriores. A partir de [!INCLUDE[vs_dev12](../../../includes/vs-dev12-md.md)], también puede usar Mpgo.exe para optimizar las aplicaciones de la [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)].  
@@ -54,7 +55,7 @@ mpgo –Scenario <packageName> -AppID <appId> -Timeout <seconds>
 > [!NOTE]
 >  Puede usar `–Scenario` o `–Import` como comando requerido, pero no ambos. Si especifica la opción `–Reset`, no se usa ninguno de los parámetros requeridos.  
   
-|Parámetro requerido|Descripción|  
+|Parámetro requerido|Description|  
 |------------------------|-----------------|  
 |`-Scenario` \<*command*><br /><br /> -O bien-<br /><br /> `-Scenario` \<*packageName*><br /><br /> O bien<br /><br /> `-Import` \<*directory*>|Para las aplicaciones de escritorio, use `–Scenario` para especificar el comando que ejecutará la aplicación que desea optimizar, incluidos los argumentos de la línea de comandos. Ponga tres conjuntos de comillas dobles alrededor de *command* si especifica una ruta de acceso que contiene espacios, por ejemplo: `mpgo.exe -scenario """C:\My App\myapp.exe""" -assemblylist """C:\My App\myapp.exe""" -outdir "C:\optimized files"`. No use un único juego de comillas dobles; no funcionará correctamente si *command* contiene espacios.<br /><br /> O bien<br /><br /> Para las aplicaciones de la [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)], use `–Scenario` para especificar el paquete para el que desea generar información de perfil. Si especifica el nombre para mostrar del paquete o su nombre de familia en lugar del nombre completo, Mpgo.exe seleccionará el paquete cuyo nombre coincide con el nombre proporcionado, si solo hay uno. Si hay varios paquetes que tienen el nombre especificado, Mpgo.exe le pedirá que elija uno.<br /><br /> -O bien-<br /><br /> Use `-Import` para especificar que desea usar los datos de optimización de ensamblados optimizados previamente para optimizar los ensamblados de `-AssemblyList`. *directory* especifica el directorio que contiene los archivos optimizados previamente. Los ensamblados especificados en `–AssemblyList` o `–AssemblyListFile` son las nuevas versiones de los ensamblados que se optimizarán usando los datos de los archivos importados. Usar los datos de optimización de una versión anterior de los ensamblados permite optimizar las versiones más recientes sin necesidad de volver a ejecutar el escenario.  Sin embargo, si los ensamblados importados y de destino incluyen código significativamente diferente, los datos de optimización resultarán ineficaces. Los nombres de ensamblados especificados en `–AssemblyList` o en `–AssemblyListFile` deben existir en el directorio especificado en `–Import`*directory*. Ponga tres conjuntos de comillas dobles alrededor de *directory* si especifica una ruta de acceso que contiene espacios.<br /><br /> Debe especificar `–Scenario` o `–Import`, pero no ambos parámetros.|  
 |`-OutDir` \<*directory*>|El directorio en el que se colocarán los ensamblados optimizados. Si un ensamblado ya existe en la carpeta del directorio de salida, se crea una nueva copia y se anexa un número de índice al nombre del ensamblado; por ejemplo: *assemblyname*-1.exe. Ponga comillas dobles alrededor de *directory* si especifica una ruta que contiene espacios.|  
@@ -62,7 +63,7 @@ mpgo –Scenario <packageName> -AppID <appId> -Timeout <seconds>
 |`-AppID` \<*appId*>|El identificador de la aplicación del paquete especificado. Si usa el carácter comodín (\*), Mpgo.exe intentará enumerar los AppID del paquete y recurrirá a \<*package_family_name*>!App si se produce un error. Si especifica una cadena que lleva como prefijo un signo de exclamación (!), Mpgo.exe concatenará el nombre de familia del paquete con el argumento proporcionado.|  
 |`-Timeout` \<*seconds*>|La cantidad de tiempo del que dispone la aplicación de la [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] para ejecutarse antes de que se cierre.|  
   
-|Parámetro opcional|Descripción|  
+|Parámetro opcional|Description|  
 |------------------------|-----------------|  
 |`-64bit`|Instrumenta los ensamblados para los sistemas de 64 bits.  Debe especificar este parámetro para los ensamblados de 64 bits, incluso si el ensamblado se declara como de 64 bits.|  
 |`-ExeConfig` \<*filename*>|Especifica el archivo de configuración que el escenario usa para proporcionar la información de versión y del cargador.|  
@@ -136,5 +137,5 @@ mpgo.exe -import "C:\Optimized" -assemblylist "C:\MyApp\MyTax.dll" "C:\MyApp\MyT
 ## <a name="see-also"></a>Vea también  
  [Ngen.exe (Generador de imágenes nativas)](../../../docs/framework/tools/ngen-exe-native-image-generator.md)  
  [Símbolos del sistema](../../../docs/framework/tools/developer-command-prompt-for-vs.md)  
- [Mejorar el rendimiento de inicio de las aplicaciones de escritorio](http://go.microsoft.com/fwlink/p/?LinkId=248943)  
+ [Improving Launch Performance for your Desktop Applications (Mejorar el rendimiento de inicio de las aplicaciones de escritorio)](http://go.microsoft.com/fwlink/p/?LinkId=248943)  
  [Información general de las mejoras de rendimiento en .NET 4.5](http://go.microsoft.com/fwlink/p/?LinkId=249131)

@@ -13,11 +13,11 @@ ms.assetid: c290ff5e-47f4-4a85-9bb3-9c2525b0be04
 caps.latest.revision: "46"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: d03e12ae60b9a0145dcb58765ae00f756f84ca56
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 5d35a91805f6189f60803056c541ce8344c024f0
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="platform-c-compiler-options"></a>/platform (Opciones del compilador de C#)
 Especifica qué versión de Common Language Runtime (CLR) puede ejecutar el ensamblado.  
@@ -40,11 +40,11 @@ Especifica qué versión de Common Language Runtime (CLR) puede ejecutar el ensa
   
 -   **ARM** compila el ensamblado de forma que pueda ejecutarse en un equipo que tenga un procesador Advanced RISC Machine (ARM).  
   
--   **x64** compila el ensamblado de forma que Common Language Runtime de 64 bits pueda ejecutarlo en equipos compatibles con el conjunto de instrucciones AMD64 o EM64T.  
+-   **x64** compila el ensamblado de forma que el CLR de 64 bits pueda ejecutarlo en equipos compatibles con el conjunto de instrucciones AMD64 o EM64T.  
   
--   **x86** compila el ensamblado de forma que Common Language Runtime de 32 bits compatible con x86 pueda ejecutarlo.  
+-   **x86** compila el ensamblado de forma que el CLR de 32 bits compatible con x86 pueda ejecutarlo.  
   
--   **Itanium** compila el ensamblado de forma que Common Language Runtime de 64 bits pueda ejecutarlo en equipos con un procesador Itanium.  
+-   **Itanium** compila el ensamblado de forma que el CLR de 64 bits pueda ejecutarlo en un equipo con un procesador Itanium.  
   
  En un sistema operativo de Windows de 64 bits:  
   

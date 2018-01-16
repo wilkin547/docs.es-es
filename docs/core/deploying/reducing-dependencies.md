@@ -9,11 +9,12 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 916251e3-87f9-4eee-81ec-94076215e6fa
-ms.openlocfilehash: e09b6f9124ec7614ab2e847d686435d74b00b336
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnetcore
+ms.openlocfilehash: 858fc77d9652bfa59ed0bb3159260f40c76156a4
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="reducing-package-dependencies-with-projectjson"></a>Reducción de dependencias de paquete con project.json
 
@@ -30,7 +31,7 @@ Sin embargo, hay muchas posibilidades de que la biblioteca no use cada uno de lo
 Actualmente, no hay ningún comando de `dotnet` oficial que recorte las referencias de paquete.  En lugar de eso, deberá hacerlo de manera manual.  El proceso general tiene el aspecto siguiente:
 
 1. Haga referencia a `NETStandard.Library` versión `1.6.0` en una sección `dependencies` del `project.json`.
-2. Restaurar los paquetes con `dotnet restore` ([Véase la nota](#dotnet-restore-note)) desde la línea de comandos.
+2. Restaure paquetes con `dotnet restore` ([vea la nota](#dotnet-restore-note)) desde la línea de comandos.
 3. Revise el archivo `project.lock.json` y encuentre la sección `NETSTandard.Library`.  Se encuentra cerca del comienzo del archivo.
 4. Copie todos los paquetes que aparecen en `dependencies`.
 5. Quite la referencia a `.NETStandard.Library` y reemplácela por los paquetes copiados.
@@ -60,7 +61,7 @@ Para recortar esta biblioteca, comience con el archivo `project.json` y agregue 
 }
 ```
 
-A continuación, restaure los paquetes con `dotnet restore` ([Véase la nota](#dotnet-restore-note)), inspeccionar la `project.lock.json` de archivos y encontrar todos los paquetes que se restaurarán para `NETSTandard.Library`.
+Luego, restaure los paquetes con `dotnet restore` ([vea la nota](#dotnet-restore-note)), revise el archivo `project.lock.json` y encuentre todos los paquetes restaurados para `NETSTandard.Library`.
 
 Aquí puede ver el aspecto que tiene la sección correspondiente del archivo `project.lock.json` cuando se tiene como destino `netstandard1.0`:
 

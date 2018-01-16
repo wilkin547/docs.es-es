@@ -29,11 +29,12 @@ caps.latest.revision: "57"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: af79c4309dfd048562b2ee14a71c6da791040397
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b13da21709bb85ddf376f84df4fe2c7ae9f1a513
+ms.sourcegitcommit: bf8a3ba647252010bdce86dd914ac6c61b5ba89d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/06/2018
 ---
 # <a name="ngenexe-native-image-generator"></a>Ngen.exe (Generador de imágenes nativas)
 El Generador de imágenes nativas (Ngen.exe) es una herramienta que mejora el rendimiento de las aplicaciones administradas. Ngen.exe crea imágenes nativas, que son archivos que contienen código máquina compilado específicamente para un procesador, e instala estas imágenes en la memoria caché de imágenes nativas del equipo local. El runtime puede usar imágenes nativas de la memoria caché en lugar de usar el compilador Just-In-Time (JIT) para compilar el ensamblado original.  
@@ -58,7 +59,7 @@ El Generador de imágenes nativas (Ngen.exe) es una herramienta que mejora el re
   
  En Windows 8, consulte [Tarea de imagen nativa](http://msdn.microsoft.com/en-us/9b1f7590-4e0d-4737-90ef-eaf696932afb).  
   
- Para información adicional sobre el uso de Ngen.exe y el servicio de imágenes nativas, consulte [Servicio de imágenes nativas](http://msdn.microsoft.com/en-us/b15e0e32-59cb-4ae4-967c-6c9527781309).  
+ Para más información sobre el uso de Ngen.exe y el servicio de imágenes nativas, vea [Servicio de imágenes nativas][Native Image Service].  
   
 > [!NOTE]
 >  Puede encontrar información sobre la sintaxis de Ngen.exe para las versiones 1.0 y 1.1 de .NET Framework en [Sintaxis heredada del generador de imágenes nativas (Ngen.exe)](http://msdn.microsoft.com/en-us/5a69fc7a-103f-4afc-8ab4-606adcb46324).  
@@ -80,7 +81,7 @@ ngen /? | /help
 ## <a name="actions"></a>Acciones  
  En la tabla siguiente se muestra la sintaxis de cada acción (`action`). Para ver descripciones de los distintos elementos de una `action`, consulte las tablas [Argumentos](#ArgumentTable), [Niveles de prioridad](#PriorityTable), [Escenarios](#ScenarioTable) y [Configuración](#ConfigTable). En la tabla [Opciones](#OptionTable) se describe el parámetro `options` y los modificadores de ayuda.  
   
-|Acción|Descripción|  
+|Acción|Description|  
 |------------|-----------------|  
 |`install` [`assemblyName` &#124; `assemblyPath`] [`scenarios`] [`config`] [`/queue`[`:`{`1`&#124;`2`&#124;`3`}]]|Genera imágenes nativas para un ensamblado y sus dependencias e instala las imágenes en la memoria caché de imágenes nativas.<br /><br /> Si se especifica `/queue`, la acción se pone en la cola del servicio de imágenes nativas. La prioridad predeterminada es 3. Consulte la tabla [Niveles de prioridad](#PriorityTable).|  
 |`uninstall` [`assemblyName` &#124; `assemblyPath`] [`scenarios`] [`config`]|Elimina las imágenes nativas de un ensamblado y sus dependencias de la memoria caché de imágenes nativas.<br /><br /> Para desinstalar una imagen y sus dependencias, use los mismos argumentos de la línea de comandos que usó para instalar la imagen. **Nota:** A partir de [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], ya no se admite la acción `uninstall` *.|  
@@ -92,7 +93,7 @@ ngen /? | /help
 <a name="ArgumentTable"></a>   
 ## <a name="arguments"></a>Argumentos  
   
-|Argumento|Descripción|  
+|Argumento|Description|  
 |--------------|-----------------|  
 |`assemblyName`|El nombre para mostrar completo del ensamblado. Por ejemplo: `"myAssembly, Version=2.0.0.0, Culture=neutral, PublicKeyToken=0038abc9deabfle5"`. **Nota:** Puede proporcionar un nombre de ensamblado parcial, como `myAssembly`, para las acciones `display` y `uninstall`. <br /><br /> Solo se puede especificar un ensamblado por cada línea de comandos de Ngen.exe.|  
 |`assemblyPath`|La ruta de acceso explícita del ensamblado. Se puede especificar una ruta de acceso completa o relativa.<br /><br /> Si se especifica un nombre de archivo sin una ruta de acceso, el ensamblado deberá estar ubicado en el directorio actual.<br /><br /> Solo se puede especificar un ensamblado por cada línea de comandos de Ngen.exe.|  
@@ -100,16 +101,16 @@ ngen /? | /help
 <a name="PriorityTable"></a>   
 ## <a name="priority-levels"></a>Niveles de prioridad  
   
-|Prioridad|Descripción|  
+|Prioridad|Description|  
 |--------------|-----------------|  
 |`1`|Las imágenes nativas se generan e instalan de forma inmediata, sin esperar al tiempo de inactividad.|  
 |`2`|Las imágenes nativas se generan e instalan sin esperar al tiempo de inactividad, pero después de que se hayan completado todas las acciones de prioridad 1 (y sus dependencias).|  
-|`3`|Las imágenes nativas se instalan cuando el servicio de imágenes nativas detecta que el equipo se encuentra inactivo. Consulte [Servicio de imágenes nativas](http://msdn.microsoft.com/en-us/b15e0e32-59cb-4ae4-967c-6c9527781309).|  
+|`3`|Las imágenes nativas se instalan cuando el servicio de imágenes nativas detecta que el equipo se encuentra inactivo. Vea [Servicio de imágenes nativas][Native Image Service].|  
   
 <a name="ScenarioTable"></a>   
 ## <a name="scenarios"></a>Escenarios  
   
-|Escenario|Descripción|  
+|Escenario|Description|  
 |--------------|-----------------|  
 |`/Debug`|Genera imágenes nativas que pueden usarse con un depurador.|  
 |`/Profile`|Genera imágenes nativas que pueden usarse con un generador de perfiles.|  
@@ -118,7 +119,7 @@ ngen /? | /help
 <a name="ConfigTable"></a>   
 ## <a name="config"></a>Configuración  
   
-|Configuración|Descripción|  
+|Configuración|Description|  
 |-------------------|-----------------|  
 |`/ExeConfig:` `exePath`|Usa la configuración del ensamblado ejecutable especificado.<br /><br /> Ngen.exe tiene que tomar las mismas decisiones que el cargador al enlazarse a las dependencias. Cuando se carga un componente compartido en tiempo de ejecución usando el método <xref:System.Reflection.Assembly.Load%2A>, el archivo de configuración de la aplicación determina las dependencias que se cargan para el componente compartido como, por ejemplo, la versión que se carga de una dependencia. El modificador `/ExeConfig` proporciona a Ngen.exe orientación sobre las dependencias que se cargarán en tiempo de ejecución.|  
 |`/AppBase:` `directoryPath`|Al buscar dependencias, usa el directorio especificado como base de la aplicación.|  
@@ -126,7 +127,7 @@ ngen /? | /help
 <a name="OptionTable"></a>   
 ## <a name="options"></a>Opciones  
   
-|Opción|Descripción|  
+|Opción|Description|  
 |------------|-----------------|  
 |`/nologo`|Suprime la presentación de la pancarta de inicio de Microsoft.|  
 |`/silent`|Suprime la presentación de mensajes de operaciones correctas.|  
@@ -321,7 +322,7 @@ using namespace System::Runtime::CompilerServices;
   
 <a name="Deferred"></a>   
 ## <a name="deferred-processing"></a>Procesamiento diferido  
- La generación de imágenes nativas para una aplicación de gran tamaño puede llevar bastante tiempo. Del mismo modo, los cambios realizados en un componente compartido o en la configuración del equipo pueden requerir la actualización de muchas imágenes nativas. Las acciones `install` y `update` disponen de una opción `/queue` que pone en cola la operación para su ejecución diferida por parte del servicio de imágenes nativas. Además, Ngen.exe dispone de las acciones `queue` y `executeQueuedItems`, que proporcionan algo de control sobre el servicio. Para más información, consulte [Servicio de imágenes nativas](http://msdn.microsoft.com/en-us/b15e0e32-59cb-4ae4-967c-6c9527781309).  
+ La generación de imágenes nativas para una aplicación de gran tamaño puede llevar bastante tiempo. Del mismo modo, los cambios realizados en un componente compartido o en la configuración del equipo pueden requerir la actualización de muchas imágenes nativas. Las acciones `install` y `update` disponen de una opción `/queue` que pone en cola la operación para su ejecución diferida por parte del servicio de imágenes nativas. Además, Ngen.exe dispone de las acciones `queue` y `executeQueuedItems`, que proporcionan algo de control sobre el servicio. Para más información, vea [Servicio de imágenes nativas][Native Image Service].  
   
 <a name="JITCompilation"></a>   
 ## <a name="native-images-and-jit-compilation"></a>Imágenes nativas y compilación JIT  
@@ -383,7 +384,7 @@ using namespace System::Runtime::CompilerServices;
 ### <a name="opting-out-of-native-image-generation"></a>Exclusión de la generación de imágenes nativas  
  En algunos casos, NGen.exe puede tener problemas para generar una imagen nativa para un método específico, o bien es posible que prefiera que el método se compile en JIT en lugar de compilarlo en una imagen nativa. En este caso, puede usar el atributo `System.Runtime.BypassNGenAttribute` para evitar que NGen.exe genere una imagen nativa para un método concreto. El atributo se debe aplicar individualmente a cada método cuyo código no desea que se incluya en la imagen nativa. NGen.exe reconoce el atributo y no genera código en la imagen nativa para el método correspondiente.  
   
- Sin embargo, tenga en cuenta que `BypassNGenAttribute` no está definido como tipo en la biblioteca de clases .NET Framework. Para usar el atributo en el código, primero debe definirlo de la manera siguiente:  
+ Pero tenga en cuenta que `BypassNGenAttribute` no está definido como tipo en la biblioteca de clases .NET Framework. Para usar el atributo en el código, primero debe definirlo de la manera siguiente:  
   
  [!code-csharp[System.Runtime.BypassNGenAttribute#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/System.Runtime.BypassNGenAttribute/cs/Optout1.cs#1)]
  [!code-vb[System.Runtime.BypassNGenAttribute#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/System.Runtime.BypassNGenAttribute/vb/Optout1.vb#1)]  
@@ -478,7 +479,7 @@ ngen display "myAssembly, version=1.0.0.0"
 ngen update  
 ```  
   
- Actualizar todas las imágenes puede ser un proceso largo. La opción `/queue` pone en cola las actualizaciones para que las ejecute el servicio de imágenes nativas. Para más información sobre la opción `/queue` y las prioridades de instalación, consulte [Servicio de imágenes nativas](http://msdn.microsoft.com/en-us/b15e0e32-59cb-4ae4-967c-6c9527781309).  
+ Actualizar todas las imágenes puede ser un proceso largo. La opción `/queue` pone en cola las actualizaciones para que las ejecute el servicio de imágenes nativas. Para más información sobre la opción `/queue` y las prioridades de instalación, vea [Servicio de imágenes nativas][Native Image Service].  
   
 ```  
 ngen update /queue  
@@ -519,7 +520,7 @@ ngen uninstall "ClientApp, Version=1.0.0.0, Culture=neutral,
   
  Al igual que ocurre con la acción `install`, cuando se suministra una extensión, es necesario ejecutar Ngen.exe desde el directorio que contiene el ensamblado o especificar una ruta de acceso completa.  
   
- Para ver ejemplos relacionados con el servicio de imágenes nativas, consulte [Servicio de imágenes nativas](http://msdn.microsoft.com/en-us/b15e0e32-59cb-4ae4-967c-6c9527781309).  
+ Para obtener ejemplos relacionados con el servicio de imágenes nativas, vea [Servicio de imágenes nativas][Native Image Service].  
   
 ## <a name="native-image-task"></a>Tarea de imagen nativa  
  La tarea de imagen nativa es una tarea de Windows que genera y mantiene imágenes nativas. La tarea de imagen nativa genera y recupera automáticamente imágenes nativas para los escenarios admitidos. (Consulte [Crear imágenes nativas](http://msdn.microsoft.com/en-us/2bc8b678-dd8d-4742-ad82-319e9bf52418)). También permite que los instaladores usen [Ngen.exe (Generador de imágenes nativas)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) para aplazar la creación y la actualización de las imágenes nativas.  
@@ -531,7 +532,7 @@ ngen uninstall "ClientApp, Version=1.0.0.0, Culture=neutral,
 |NET Framework NGEN v4.0.30319|Sí|Sí|  
 |NET Framework NGEN v4.0.30319 64|No|Sí|  
   
- La tarea de imagen nativa está disponible en .NET Framework 4.5 y las versiones posteriores, con Windows 8 o posterior. En las versiones anteriores de Windows, .NET Framework usa el [Servicio de imágenes nativas](http://msdn.microsoft.com/en-us/b15e0e32-59cb-4ae4-967c-6c9527781309).  
+ La tarea de imagen nativa está disponible en .NET Framework 4.5 y las versiones posteriores, con Windows 8 o posterior. En las versiones anteriores de Windows, .NET Framework usa el [Servicio de imágenes nativas][Native Image Service].  
   
 ### <a name="task-lifetime"></a>Duración de la tarea  
  En general, el Programador de tareas de Windows inicia la tarea de imagen nativa cada noche, cuando el equipo está inactivo. La tarea busca los trabajos aplazados puestos en cola por los instaladores de aplicaciones, las solicitudes aplazadas de actualización de imágenes nativas y las creaciones automáticas de imágenes. La tarea completa los elementos de trabajo pendientes y, después, se apaga. Si el equipo deja de estar inactivo mientras se ejecuta la tarea, esta se detendrá.  
@@ -593,9 +594,9 @@ ngen executeQueuedItems
  En la versión 2.0 de .NET Framework, la única interacción con el servicio de imágenes nativas es a través de la herramienta de línea de comandos Ngen.exe. Utilice la herramienta de línea de comandos en los scripts de instalación para poner en cola las acciones del servicio de imágenes nativas e interactuar con el servicio.  
   
 ## <a name="see-also"></a>Vea también  
- [Servicio de imágenes nativas](http://msdn.microsoft.com/en-us/b15e0e32-59cb-4ae4-967c-6c9527781309)  
- [Tarea de imagen nativa](http://msdn.microsoft.com/en-us/9b1f7590-4e0d-4737-90ef-eaf696932afb)  
  [Herramientas](../../../docs/framework/tools/index.md)  
  [Proceso de ejecución administrada](../../../docs/standard/managed-execution-process.md)  
  [Cómo el motor en tiempo de ejecución ubica ensamblados](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
  [Símbolos del sistema](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+
+[Native Image Service]: #native-image-service

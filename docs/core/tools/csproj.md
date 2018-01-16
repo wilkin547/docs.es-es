@@ -9,11 +9,12 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: bdc29497-64f2-4d11-a21b-4097e0bdf5c9
-ms.openlocfilehash: 288012e5f1f48ed60a388790ca42371496df92c3
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnetcore
+ms.openlocfilehash: 329a74cf083819896aafd7fc7993fa0e8ac8f8c2
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>Adiciones al formato csproj para .NET Core
 
@@ -37,11 +38,11 @@ Se hace una referencia implícita a los metapaquetes basándose en los marcos de
 ### <a name="recommendations"></a>Recomendaciones
 Como se hace referencia implícitamente a los metapaquetes `Microsoft.NETCore.App` o `NetStandard.Library`, estos son los procedimientos recomendados:
 
-* Cuando el destino es .NET Core o el estándar. NET, nunca tienen una referencia explícita a la `Microsoft.NETCore.App` o `NetStandard.Library` metapackages a través de un `<PackageReference>` elemento en el archivo de proyecto.
-* Si necesita una versión específica del tiempo de ejecución cuando el destino es .NET Core, debe usar el `<RuntimeFrameworkVersion>` propiedad del proyecto (por ejemplo, `1.0.4`) en lugar de hacer referencia a la metapackage.
+* Si el destino es .NET Core o .NET Standard, nunca incluya una referencia explícita a los metapaquetes `Microsoft.NETCore.App` o `NetStandard.Library` mediante un elemento `<PackageReference>` en el archivo de proyecto.
+* Si necesita una versión concreta del runtime cuando el destino es .NET Core, debe usar la propiedad `<RuntimeFrameworkVersion>` del proyecto (por ejemplo, `1.0.4`) en lugar de hacer referencia al metapaquete.
     * Esto puede ocurrir si está usando [implementaciones autocontenidas](../deploying/index.md#self-contained-deployments-scd) y necesita una versión de revisión específica del tiempo de ejecución de LTS 1.0.0, por ejemplo.
-* Si necesita una versión específica de la `NetStandard.Library` metapackage cuando el destino es .NET estándar, puede usar el `<NetStandardImplicitPackageVersion>` propiedad y establezca la versión necesita.
-* No agregar o actualizar las referencias a cualquiera explícitamente la `Microsoft.NETCore.App` o `NetStandard.Library` metapackage en proyectos de .NET Framework. Si cualquier versión de `NetStandard.Library` es necesaria cuando se utiliza un paquete de NuGet basada en .NET estándar, NuGet automáticamente instala esa versión.
+* Si necesita una versión concreta del metapaquete `NetStandard.Library` cuando el destino es .NET Standard, puede usar la propiedad `<NetStandardImplicitPackageVersion>` y establecer la versión necesaria.
+* No agregue referencias a los metapaquetes `Microsoft.NETCore.App` y `NetStandard.Library` ni las actualice explícitamente en proyectos de .NET Framework. Si se necesita alguna versión de `NetStandard.Library` al usar un paquete NuGet basado en .NET Standard, NuGet instala automáticamente esa versión.
 
 ## <a name="default-compilation-includes-in-net-core-projects"></a>Inclusiones de compilación predeterminadas en proyectos .NET Core
 Con el cambio al formato *csproj* en las últimas versiones del SDK, hemos trasladado las inclusiones y exclusiones predeterminadas para los elementos de compilación y los recursos incrustados a los archivos de propiedades del SDK. Esto implica que ya no tiene que especificar dichos elementos en el archivo del proyecto. 
@@ -71,9 +72,9 @@ Al establecer esta propiedad en `false`, se invalidará la inclusión implícita
 
 Este cambio no modifica los mecanismos principales de otras inclusiones. En cambio, si quiere especificar, por ejemplo, que algunos archivos se publiquen con la aplicación, puede seguir usando los mecanismos con los que está familiarizado en *csproj* (por ejemplo, el elemento `<Content>`).
 
-`<EnableDefaultCompileItems>`sólo se deshabilita `Compile` globs pero no afecta a otros globs, al igual que la parte implícita `None` glob, que también se aplica a \*.cs elementos. Debido a eso, **el Explorador de soluciones** continuará mostrar \*.cs elementos como parte del proyecto, incluido como `None` elementos. De forma similar, puede usar `<EnableDefaultNoneItems>` para deshabilitar la parte implícita `None` glob.
+`<EnableDefaultCompileItems>` solo deshabilita globs `Compile`, pero no afecta a otros globs, como el glob `None` implícito, que también se aplica a elementos \*.cs. Por eso, el **Explorador de soluciones** sigue mostrando elementos \*.cs como parte del proyecto, incluso como elementos `None`. Del mismo modo, puede usar `<EnableDefaultNoneItems>` para deshabilitar el glob `None` implícito.
 
-Para deshabilitar **globs implícita todos los**, puede establecer la `<EnableDefaultItems>` propiedad `false` como en el ejemplo siguiente:
+Para deshabilitar **todos los globs implícitos**, puede establecer la propiedad `<EnableDefaultItems>` en `false` como en el ejemplo siguiente:
 ```xml
 <PropertyGroup>
     <EnableDefaultItems>false</EnableDefaultItems>
@@ -205,7 +206,7 @@ Una descripción larga del paquete para su visualización en la interfaz de usua
 Detalles de copyright del paquete.
 
 ### <a name="packagerequirelicenseacceptance"></a>PackageRequireLicenseAcceptance
-Un valor booleano que especifica si el cliente debe pedir al consumidor que acepte la licencia del paquete antes de instalarlo. De manera predeterminada, es `false`.
+Un valor booleano que especifica si el cliente debe pedir al consumidor que acepte la licencia del paquete antes de instalarlo. El valor predeterminado es `false`.
 
 ### <a name="packagelicenseurl"></a>PackageLicenseUrl
 Una dirección URL a la licencia que se aplica al paquete.
@@ -250,7 +251,7 @@ Especifica la versión mínima del cliente de NuGet que puede instalar este paqu
 Este valor booleano especifica si se deben empaquetar los ensamblados de salida de la compilación en el archivo *.nupkg* o no.
 
 ### <a name="includecontentinpack"></a>IncludeContentInPack
-Este valor booleano especifica si los elementos del tipo `Content` se incluirán automáticamente en el paquete resultante. De manera predeterminada, es `true`. 
+Este valor booleano especifica si los elementos del tipo `Content` se incluirán automáticamente en el paquete resultante. El valor predeterminado es `true`. 
 
 ### <a name="buildoutputtargetfolder"></a>BuildOutputTargetFolder
 Especifica la carpeta en la que se colocarán los ensamblados de salida. Los ensamblados de salida (y otros archivos de salida) se copian en sus respectivas carpetas de marco.

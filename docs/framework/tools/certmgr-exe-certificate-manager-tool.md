@@ -24,11 +24,12 @@ caps.latest.revision: "27"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 9612603642a38083aba30c1c6dc931031d1d04e8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1c303a9d91d12305bd8be4e111aaa8d6ac13eb77
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="certmgrexe-certificate-manager-tool"></a>Certmgr.exe (Herramienta de administración de certificados)
 El administrador de certificados (Certmgr.exe) es una herramienta que administra certificados, listas de certificados de confianza (CTL) y listas de revocación de certificados (CRL).  
@@ -54,12 +55,12 @@ El administrador de certificados (Certmgr.exe) es una herramienta que administra
   
 #### <a name="parameters"></a>Parámetros  
   
-|Argumento|Descripción|  
+|Argumento|Description|  
 |--------------|-----------------|  
 |*sourceStorename*|El almacén de certificados que contiene los certificados, las CTL o las CRL existentes que se van a agregar, eliminar, guardar o mostrar. Puede ser un archivo de almacén o un almacén del sistema.|  
 |*destinationStorename*|El archivo o el almacén de certificados de salida.|  
   
-|Opción|Descripción|  
+|Opción|Description|  
 |------------|-----------------|  
 |**/add**|Agrega certificados, listas CTL y listas CRL a un almacén de certificados.|  
 |**/all**|Agrega todas las entradas cuando se usa con la opción **/add**. Elimina todas las entradas cuando se usa con la opción **/delete**. Muestra todas las entradas cuando se usa sin la opción **/add** o **/del**. La opción **/all** no se puede usar con la opción **/put**.|  
@@ -67,7 +68,7 @@ El administrador de certificados (Certmgr.exe) es una herramienta que administra
 |**/CRL**|Agrega listas CRL cuando se usa con **/add**. Elimina listas CRL cuando se usa con **/del**. Guarda listas CRL cuando se usa con **/put**. Muestra listas CRL cuando se usa sin la opción **/add**, **/del** o **/put**.|  
 |**/CTL**|Agrega listas CTL cuando se usa con **/add**. Elimina listas CTL cuando se usa con **/del**. Guarda listas CTL cuando se usa con **/put**. Muestra listas CTL cuando se usa sin la opción **/add**, **/del** o **/put**.|  
 |**/del**|Elimina certificados, listas CTL y listas CRL de un almacén de certificados.|  
-|**/e** *encodingType*|Especifica el tipo de codificación de los certificados. De manera predeterminada, es `X509_ASN_ENCODING`.|  
+|**/e** *encodingType*|Especifica el tipo de codificación de los certificados. El valor predeterminado es `X509_ASN_ENCODING`.|  
 |**/f** *dwFlags*|Especifica la marca usada para la apertura del almacén. Se trata del parámetro *dwFlags* que se pasa a **CertOpenStore**. El valor predeterminado es CERT_SYSTEM_STORE_CURRENT_USER. Esta opción solo se tiene en cuenta si se usa la opción **/y**.|  
 |**/h**[**elp**]|Muestra las opciones y la sintaxis de los comandos para la herramienta.|  
 |**/n** *nam*|Especifica el nombre común del certificado que se va a agregar, eliminar o guardar. Esta opción solo se puede usar con certificados; no se puede usar con listas CTL ni listas CRL.|  
@@ -147,5 +148,5 @@ certmgr /put /c /s my newFile
   
 ## <a name="see-also"></a>Vea también  
  [Herramientas](../../../docs/framework/tools/index.md)  
- [Makecert.exe (herramienta de creación de certificados)](http://msdn.microsoft.com/library/b0343f8e-9c41-4852-a85c-f8a0c408cf0d)  
+ [Makecert.exe (Herramienta de creación de certificados)](http://msdn.microsoft.com/library/b0343f8e-9c41-4852-a85c-f8a0c408cf0d)  
  [Símbolos del sistema](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

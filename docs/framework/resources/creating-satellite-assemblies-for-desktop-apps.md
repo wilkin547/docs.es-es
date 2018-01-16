@@ -34,11 +34,12 @@ caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 11d455f16c5ee3ce78c26c7642831900e527b960
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0d360dc5b95c1cdb8de54bcbd723d0056c81c9c2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="creating-satellite-assemblies-for-desktop-apps"></a>Crear ensamblados satélite para aplicaciones de escritorio
 Los archivos de recursos desempeñan un papel fundamental en las aplicaciones localizadas. Permiten que una aplicación muestre cadenas, imágenes y otros datos en el idioma y la referencia cultural del usuario, y que proporcione datos alternativos si los recursos para el idioma o la referencia cultural del usuario no están disponibles. .NET Framework usa un modelo de concentrador y radio para buscar y recuperar recursos localizados. El concentrador es el ensamblado principal que contiene el código ejecutable no localizable y los recursos de una referencia cultural única, denominada referencia cultural neutra o predeterminada. La referencia cultural predeterminada es la referencia cultural de reserva de la aplicación y se usa si no hay recursos localizados disponibles. El atributo <xref:System.Resources.NeutralResourcesLanguageAttribute> se usa para designar la referencia cultural predeterminada de la aplicación. Cada radio se conecta a un ensamblado satélite que contiene los recursos de una única referencia cultural localizada, pero no contiene código. Debido a que los ensamblados satélite no forman parte del ensamblado principal, los recursos correspondientes a una referencia cultural específica se pueden actualizar o reemplazar fácilmente sin reemplazar el ensamblado principal de la aplicación.  
@@ -82,7 +83,7 @@ al /target:lib /embed:strings.de.resources /culture:de /out:Example.resources.dl
   
  En la tabla siguiente se describen detalladamente las opciones de Al.exe usadas en estos comandos.  
   
-|Opción|Descripción|  
+|Opción|Description|  
 |------------|-----------------|  
 |**/target:**lib|Especifica que el ensamblado satélite se compila en un archivo de biblioteca (.dll). Dado que un ensamblado satélite no contiene código ejecutable y no es el ensamblado principal de la aplicación, debe guardar los ensamblados satélite como archivos DLL.|  
 |**/embed:**strings.de.resources|Especifica el nombre del archivo de recursos que se va a insertar cuando Al.exe compile el ensamblado. Puede insertar varios archivos .resources en un ensamblado satélite, pero si sigue el modelo de concentrador y radio, debe compilar un ensamblado satélite para cada referencia cultural. Aun así, puede crear archivos .resources independientes para cadenas y objetos.|  
@@ -108,7 +109,7 @@ al /target:lib /embed:strings.de.resources /culture:de /out:Example.resources.dl
   
     -   Para admitir la referencia cultural fr-FR o francés (Francia), cree un archivo de recursos denominado Greeting.fr-FR.resx o Greeting.fr-FR.txt y almacene en él una sola cadena denominada `HelloString` cuyo valor sea "Salut tout le monde!".  
   
-    -   Para admitir la referencia cultural ru-RU o ruso (Rusia), cree un archivo de recursos denominado Greeting.ru-RU.resx o Greeting.ru-RU.txt y almacene en él una sola cadena denominada `HelloString` cuyo valor sea "Всем привет!".  
+    -   Para admitir la referencia cultural ru-RU o ruso (Rusia), cree un archivo de recursos denominado Greeting.ru-RU.resx o Greeting.ru-RU.txt, y almacene en él una sola cadena denominada `HelloString` cuyo valor sea "Всем привет!".  
   
 4.  Use [Resgen.exe](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) para compilar cada texto o archivo de recursos XML en un archivo .resources binario. La salida es un conjunto de archivos que tienen el mismo nombre de archivo raíz, como los archivos .resx o .txt, pero con una extensión .resources. Si crea el ejemplo con Visual Studio, el proceso de compilación se realiza automáticamente. Si no está usando Visual Studio, ejecute los comandos siguientes para compilar los archivos .resx en archivos .resources:  
   
@@ -237,7 +238,7 @@ gacutil /i:StringLibrary.resources.dll
   
     -   Para admitir la referencia cultural "fr-FR" o francés (Francia), cree un archivo de recursos denominado Strings.fr-FR.resx o Strings.fr-FR.txt y almacene en él una sola cadena denominada `Greeting` cuyo valor sea "Bonjour!".  
   
-    -   Para admitir la referencia cultural "ru-RU" o ruso (Rusia), cree un archivo de recursos denominado Strings.ru-RU.resx o Strings.ru-RU.txt y almacene en él una sola cadena denominada `Greeting` cuyo valor sea "Привет!".  
+    -   Para admitir la referencia cultural "ru-RU" o ruso (Rusia), cree un archivo de recursos denominado Strings.ru-RU.resx o Strings.ru-RU.txt, y almacene en él una sola cadena denominada `Greeting` cuyo valor sea "Привет!".  
   
 6.  Use [Resgen.exe](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) para compilar cada texto o archivo de recursos XML en un archivo .resources binario. La salida es un conjunto de archivos que tienen el mismo nombre de archivo raíz, como los archivos .resx o .txt, pero con una extensión .resources. Si crea el ejemplo con Visual Studio, el proceso de compilación se realiza automáticamente. Si no está usando Visual Studio, ejecute el comando siguiente para compilar los archivos .resx en archivos .resources:  
   
@@ -250,7 +251,7 @@ gacutil /i:StringLibrary.resources.dll
 7.  Compile el siguiente código fuente para StringLibrary.vb o StringLibrary.cs junto con los recursos para la referencia cultural predeterminada en un ensamblado de biblioteca con firma retrasada denominado StringLibrary.dll:  
   
     > [!IMPORTANT]
-    >  Si está utilizando la línea de comandos en lugar de Visual Studio para crear el ejemplo, debe modificar la llamada a la <xref:System.Resources.ResourceManager> constructor de clase para `ResourceManager rm = new ResourceManager("Strings",` `typeof(Example).Assembly);`.  
+    >  Si usa la línea de comandos en lugar de Visual Studio para crear el ejemplo, debe modificar la llamada al constructor de clase <xref:System.Resources.ResourceManager> de la siguiente manera: `ResourceManager rm = new ResourceManager("Strings",` `typeof(Example).Assembly);`.  
   
      [!code-csharp[Conceptual.Resources.Satellites#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.satellites/cs/stringlibrary.cs#1)]
      [!code-vb[Conceptual.Resources.Satellites#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.satellites/vb/stringlibrary.vb#1)]  

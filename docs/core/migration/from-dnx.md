@@ -9,11 +9,12 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: c0d70120-78c8-4d26-bb3c-801f42fc2366
-ms.openlocfilehash: 1e2ab018fc690b31b59a04bf8c0c0990225c293b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnetcore
+ms.openlocfilehash: dba38de28dc15147e5bcc5bf4cede9f4dd5fca62
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="migrating-from-dnx-to-net-core-cli-projectjson"></a>Migración de DNX a CLI de .NET Core (project.json)
 
@@ -53,14 +54,14 @@ Si usó DNX, usaba algunos comandos provenientes de uno de sus tres componentes 
 La tabla siguiente muestra la asignación entre los comandos de DNX/DNU y sus contrapartes de la CLI.
 
 
-| Comando de DNX                       | Comando de la CLI       | Descripción                                                                                                       |
+| Comando de DNX                       | Comando de la CLI       | Description                                                                                                       |
 |--------------------------------   |----------------   |-----------------------------------------------------------------------------------------------------------------  |
 | dnx run                           | dotnet run        | Ejecute el código desde el origen.                                                                                             |
 | dnu build                         | dotnet build      | Compile un archivo binario de IL del código.                                                                                  |
 | dnu pack                          | dotnet pack       | Cree un paquete NuGet del código.                                                                          |
 | dnx \[comando] (por ejemplo, "dnx web")   | no disponible\*             | Si se usa DNX, ejecute un comando según lo definido en project.json.                                                       |
 | dnu install                       | no disponible\*             | Si se usa DNX, instale un paquete como dependencia.                                                              |
-| dnu restore                       | dotnet restore    | Restaure las dependencias especificadas en project.json. ([Véase la nota](#dotnet-restore-note))                                                               |
+| dnu restore                       | dotnet restore    | Restaure las dependencias especificadas en project.json. ([vea la nota](#dotnet-restore-note))                                                               |
 | dnu publish                       | dotnet publish    | Publique la aplicación para su implementación en una de tres formas (portátil, portátil con nativo e independiente).    |
 | dnu wrap                          | no disponible\*             | Si se usa DNX, encapsule un archivo project.json en csproj.                                                                      |
 | dnu commands                      | no disponible\*             | Si se usa DNX, administre los comandos instalados globalmente.                                                             |
@@ -76,7 +77,7 @@ DNU incluía un concepto llamado "comandos globales". En esencia, se trataba de 
 La CLI no admite este concepto. Sin embargo, sí admite el concepto de agregar comandos por proyecto que se pueden invocar con la conocida sintaxis `dotnet <command>`.
 
 ### <a name="installing-dependencies"></a>Instalación de dependencias
-A partir de la versión v1, las herramientas de la CLI de .NET Core no tienen un comando `install` para instalar dependencias. Para instalar un paquete de NuGet, deberá agregarlo como una dependencia de la `project.json` de archivos y, a continuación, ejecute `dotnet restore` ([Véase la nota](#dotnet-restore-note)). 
+A partir de la versión v1, las herramientas de la CLI de .NET Core no tienen un comando `install` para instalar dependencias. Para instalar un paquete desde NuGet, necesita agregarlo como una dependencia al archivo `project.json` y, luego, ejecutar `dotnet restore` ([vea la nota](#dotnet-restore-note)). 
 
 ### <a name="running-your-code"></a>Ejecución del código
 Existen dos formas principales de ejecutar el código. Una es desde el origen, con `dotnet run`. A diferencia de `dnx run`, no hará ninguna compilación en memoria. En realidad, invocará a `dotnet build` para compilar el código y, luego, ejecutar el archivo binario compilado. 
@@ -129,7 +130,7 @@ Si usa otros destinos `dnx`, como `dnx451`, también deberá cambiarlos. `dnx451
 
 El archivo `project.json` está casi listo. Debe revisar la lista de dependencias y actualizarlas a sus versiones más recientes, especialmente si usa las dependencias de ASP.NET Core. Si usará los paquetes independientes para las API de BCL, puede usar el paquete del entorno de ejecución tal como se explica en el documento sobre los [tipos de portabilidad de aplicaciones](../deploying/index.md). 
 
-Cuando esté listo, puede intentar restaurar con `dotnet restore` ([Véase la nota](#dotnet-restore-note)). En función de la versión de las dependencias, puede encontrar errores si NuGet no puede resolver las dependencias de una de las plataformas de destino anteriormente mencionadas. Este es un problema "en un momento específico"; a medida que pase el tiempo, cada vez más paquetes incluirán compatibilidad con estos marcos de trabajo. Por ahora, si se enfrenta con este problema, puede usar la instrucción `imports` dentro del nodo `framework` para especificar a NuGet que puede restaurar los paquetes que tienen como destino el marco de trabajo que se encuentra dentro de la instrucción de "importaciones". Los errores de restauración que recibe en este caso deben proporcionar información suficiente que le permita distinguir los marcos de trabajo que debe importar. Si está un poco confundido o es nuevo en esto, en palabras generales, bastaría con especificar `dnxcore50` y `portable-net45+win8` en la instrucción `imports`. El fragmento de código JSON siguiente muestra cómo se verá:
+Cuando esté listo, puede intentar la restauración con `dotnet restore` ([vea la nota](#dotnet-restore-note)). En función de la versión de las dependencias, puede encontrar errores si NuGet no puede resolver las dependencias de una de las plataformas de destino anteriormente mencionadas. Este es un problema "en un momento específico"; a medida que pase el tiempo, cada vez más paquetes incluirán compatibilidad con estos marcos de trabajo. Por ahora, si se enfrenta con este problema, puede usar la instrucción `imports` dentro del nodo `framework` para especificar a NuGet que puede restaurar los paquetes que tienen como destino el marco de trabajo que se encuentra dentro de la instrucción de "importaciones". Los errores de restauración que recibe en este caso deben proporcionar información suficiente que le permita distinguir los marcos de trabajo que debe importar. Si está un poco confundido o es nuevo en esto, en palabras generales, bastaría con especificar `dnxcore50` y `portable-net45+win8` en la instrucción `imports`. El fragmento de código JSON siguiente muestra cómo se verá:
 
 ```json
     "frameworks": {

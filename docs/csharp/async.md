@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: b878c34c-a78f-419e-a594-a2b44fa521a4
-ms.openlocfilehash: dc9b45e21f15ad92304685a1aff6760f3406cee2
-ms.sourcegitcommit: 43c656811dd38a66a6672084c65d10c0cbbf2015
+ms.openlocfilehash: 35038b3dae80958071a9615f7f131fca73513077
+ms.sourcegitcommit: d095094e942eedf09530ea5636fbaf9029853027
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2017
+ms.lasthandoff: 12/19/2017
 ---
 # <a name="asynchronous-programming"></a>Programación asincrónica
 
@@ -167,13 +167,13 @@ private async void SeeTheDotNets_Click(object sender, RoutedEventArgs e)
     DotNetCountLabel.Text = $"Number of .NETs on dotnetfoundation.org: {count}";
 
     NetworkProgressBar.IsEnabled = false;
-    NetworkProgressBar.Visbility = Visibility.Collapsed;
+    NetworkProgressBar.Visibility = Visibility.Collapsed;
 }
 ```
 
 ### <a name="waiting-for-multiple-tasks-to-complete"></a>Esperar a que se completen varias tareas
 
-Es posible que se vea en una situación en la que necesite recuperar varios fragmentos de datos al mismo tiempo.  El `Task` API contiene dos métodos, `Task.WhenAll` y `Task.WhenAny` que le permiten escribir código asincrónico que lleva a cabo una espera antibloqueo en varios trabajos en segundo plano.
+Es posible que se vea en una situación en la que necesite recuperar varios fragmentos de datos al mismo tiempo.  La API `Task` contiene dos métodos, `Task.WhenAll` y `Task.WhenAny`, que permiten escribir código asincrónico que realiza una espera sin bloqueo en varios trabajos en segundo plano.
 
 En este ejemplo se muestra cómo podría captar datos `User` de un conjunto de elementos `userId`.
 

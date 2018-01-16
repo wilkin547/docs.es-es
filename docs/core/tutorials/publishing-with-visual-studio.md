@@ -10,11 +10,12 @@ ms.prod: .net-core
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: a19545d3-24af-4a32-9778-cfb5ae938287
-ms.openlocfilehash: a3e5bda5c99144c9ab5bbaf5e2f5566261af4813
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnetcore
+ms.openlocfilehash: 40479d85f9b31fcc80e3d12537126941878a09a4
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="publish-your-hello-world-application-with-visual-studio-2017"></a>Publicación de la aplicación Hola a todos con Visual Studio 2017
 
@@ -39,19 +40,19 @@ Para publicar y ejecutar la aplicación:
 
       * *HelloWorld.deps.json*
 
-         Archivo de dependencias de tiempo de ejecución de la aplicación. Define los componentes principales de .NET y las bibliotecas (incluida la biblioteca de vínculos dinámicos que contiene la aplicación) necesitan para ejecutar la aplicación. Para obtener más información, consulte [archivos de configuración en tiempo de ejecución](https://github.com/dotnet/cli/blob/85ca206d84633d658d7363894c4ea9d59e515c1a/Documentation/specs/runtime-configuration-file.md).
+         Archivo de dependencias en tiempo de ejecución de la aplicación. Define los componentes y las bibliotecas de .NET Core (incluida la biblioteca de vínculos dinámicos que contiene la aplicación) necesarios para ejecutar la aplicación. Para más información, vea [Runtime Configuration Files (Archivos de configuración en tiempo de ejecución)](https://github.com/dotnet/cli/blob/85ca206d84633d658d7363894c4ea9d59e515c1a/Documentation/specs/runtime-configuration-file.md).
  
       * *HelloWorld.dll*
 
-         El archivo que contiene la aplicación. Es una biblioteca de vínculos dinámicos que se pueden ejecutar mediante la especificación de la `dotnet HelloWorld.dll` comando en una ventana de consola. 
+         Archivo que contiene la aplicación. Es una biblioteca de vínculos dinámicos que se puede ejecutar mediante la especificación del comando `dotnet HelloWorld.dll` en una ventana de consola. 
 
       * *HelloWorld.pdb* (opcional para la implementación)
 
-         Un archivo que contiene los símbolos de depuración. No necesita implementar este archivo junto con su aplicación, aunque se debe guardar en caso de que necesite depurar la versión publicada de la aplicación.
+         Archivo que contiene los símbolos de depuración. No necesita implementar este archivo junto con su aplicación, aunque se debe guardar en caso de que necesite depurar la versión publicada de la aplicación.
 
       * *HelloWorld.runtimeconfig.json*
 
-         Archivo de configuración de la aplicación en tiempo de ejecución. Identifica la versión de .NET Core que la aplicación se ha compilado. Para obtener más información, consulte [archivos de configuración en tiempo de ejecución](https://github.com/dotnet/cli/blob/85ca206d84633d658d7363894c4ea9d59e515c1a/Documentation/specs/runtime-configuration-file.md).  
+         Archivo de configuración en tiempo de ejecución de la aplicación. Identifica la versión de .NET Core en la que se ha compilado la aplicación para ejecutarse. Para más información, vea [Runtime Configuration Files (Archivos de configuración en tiempo de ejecución)](https://github.com/dotnet/cli/blob/85ca206d84633d658d7363894c4ea9d59e515c1a/Documentation/specs/runtime-configuration-file.md).  
 
    ![Ventana de la consola que muestra los archivos publicados](media/publishing-with-visual-studio/publishedfiles.png)
 

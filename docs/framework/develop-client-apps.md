@@ -24,11 +24,12 @@ caps.latest.revision: "24"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: daf09f94b4c0854365274773f8c426cc07e8c6dd
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1f90cbac0e7f78d8965a75df281c0db6b213d9e4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="developing-client-applications-with-the-net-framework"></a>Desarrollar aplicaciones cliente con .NET Framework
 Existen varias maneras de desarrollar aplicaciones basadas en Windows con .NET Framework que se ejecuten localmente en los equipos o dispositivos de los usuarios. Esta sección contiene temas que describen cómo crear aplicaciones basadas en Windows mediante Windows Presentation Foundation (WPF) o Windows Forms. Sin embargo, también se pueden crear aplicaciones web con .NET Framework y aplicaciones cliente para equipos o dispositivos y ponerlas a disposición de los usuarios a través de la Tienda Windows y la Tienda de Windows Phone.  
@@ -60,7 +61,7 @@ Existen varias maneras de desarrollar aplicaciones basadas en Windows con .NET F
  Describe las maneras en que se pueden desarrollar aplicaciones web mediante ASP.NET.  
   
 ## <a name="see-also"></a>Vea también  
- [Biblioteca de clases Portable](../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md)  
+ [Biblioteca de clases portable](../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md)  
  [Información general](../../docs/framework/get-started/overview.md)  
  [Guía de desarrollo](../../docs/framework/development-guide.md)  
  [Cómo: crear una aplicación de escritorio de Windows](http://msdn.microsoft.com/library/47021403-eaca-4c34-946a-a26c42a64148)  

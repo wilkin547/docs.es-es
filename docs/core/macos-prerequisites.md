@@ -9,11 +9,12 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: c33b1241-ab66-4583-9eba-52cf51146f5a
-ms.openlocfilehash: 16f3cfd482bddfff1b9ad56e7ffe58ae2aed4980
-ms.sourcegitcommit: 62d3e3e74c1b7ffa927590012c0b9f87de1b0848
+ms.workload: dotnetcore
+ms.openlocfilehash: 5aac7566f532312c890bad07c901929ae826ece3
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="prerequisites-for-net-core-on-macos"></a>Requisitos previos para .NET Core en macOS
 
@@ -23,7 +24,7 @@ En este artículo se muestran las versiones de macOS admitidas y las dependencia
 
 # <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
-.NET core 2.x es compatible en las siguientes versiones de Mac OS:
+.NET Core 2.x es compatible con las siguientes versiones de macOS:
 
 * macOS 10.12 "Sierra" y versiones posteriores
 
@@ -31,7 +32,7 @@ Vea [.NET Core 2.x Supported OS Versions](https://github.com/dotnet/core/blob/ma
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
-Núcleo de .NET 1.x se admite en las siguientes versiones de Mac OS:
+.NET Core 1.x es compatible con las siguientes versiones de macOS:
 
 * macOS 10.12 "Sierra"
 * macOS 10.11 "El Capitan"
@@ -64,13 +65,13 @@ Descargue e instale el SDK de .NET Core desde el portal de [descargas de .NET](h
 
 ---
 
-## <a name="increase-the-maximum-open-file-limit"></a>Aumentar el límite máximo de archivos abiertos
+## <a name="increase-the-maximum-open-file-limit"></a>Aumentar el límite de archivos abiertos como máximo
 
-El límite de archivos abiertos de forma predeterminada en macOS puede no ser suficiente para algunas cargas de trabajo de .NET Core, como restaurar proyectos o ejecutar pruebas unitarias.
+El límite predeterminado de archivos abiertos en macOS puede no ser suficiente para algunas cargas de trabajo de .NET Core, como la restauración de proyectos o la ejecución de pruebas unitarias.
 
-Puede aumentar este límite, siga estos pasos:
+Puede aumentar este límite si sigue estos pasos:
 
-1. Con un editor de texto, cree un nuevo archivo _/Library/LaunchDaemons/limit.maxfiles.plist_y guarde el archivo con este contenido:
+1. Con un editor de texto, cree un nuevo archivo _/Library/LaunchDaemons/limit.maxfiles.plist_ y guárdelo con este contenido:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -96,7 +97,7 @@ Puede aumentar este límite, siga estos pasos:
 </plist>
 ```
 
-2. En una ventana de terminal, ejecute el siguiente comando:
+2. En una ventana de terminal, ejecute el comando siguiente:
 
 ```console
 echo 'ulimit -n 2048' | sudo tee -a /etc/profile
