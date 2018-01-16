@@ -9,11 +9,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 44ee6a3d2dd800f91b5066ea578f4b37852ff295
-ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
+ms.openlocfilehash: 55d6050d7573b9088b361fb571b96425533bda1f
+ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="introduction-to-classes"></a>Introducción a las clases
 
@@ -40,7 +40,7 @@ namespace classes
 
 En este inicio rápido, se van a crear tipos nuevos que representan una cuenta bancaria. Normalmente los desarrolladores definen cada clase en un archivo de texto diferente. De esta forma, la tarea de administración resulta más sencilla a medida que aumenta el tamaño del programa.  Cree un archivo denominado **CuentaBancaria.cs** en el directorio **clases**. 
 
-Este archivo contendrá la definición de un ***cuenta bancaria***. La programación orientada a objetos organiza el código mediante la creación de tipos en forma de ***clases***. Estas clases contienen el código que representa una entidad específica. La clase `BankAccount` representa una cuenta bancaria. El código implementa operaciones específicas a través de métodos y propiedades. En este inicio rápido, la cuenta bancaria admite el siguiente comportamiento:
+Este archivo contendrá la definición de una ***cuenta bancaria***. La programación orientada a objetos organiza el código mediante la creación de tipos en forma de ***clases***. Estas clases contienen el código que representa una entidad específica. La clase `BankAccount` representa una cuenta bancaria. El código implementa operaciones específicas a través de métodos y propiedades. En este inicio rápido, la cuenta bancaria admite el siguiente comportamiento:
 
 1. Tiene un número de diez dígitos que identifica la cuenta bancaria de forma única.
 1. Tiene una cadena que almacena el nombre o los nombres de los propietarios.
