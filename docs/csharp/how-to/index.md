@@ -7,11 +7,11 @@ ms.date: 12/20/2017
 ms.topic: article
 ms.prod: .net
 ms.devlang: devlang-csharp
-ms.openlocfilehash: 04c780980ef0665b40a0c3a698193fc9fa738424
-ms.sourcegitcommit: bf8a3ba647252010bdce86dd914ac6c61b5ba89d
+ms.openlocfilehash: cfe7115717fcca834d87b7bcdc64ddd1df8ef843
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/06/2018
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="how-to-c"></a>Procedimientos (C#)
 
@@ -57,7 +57,7 @@ Las cadenas son el tipo de datos básico que se usa para mostrar o manipular tex
 - [Compare cadenas](../programming-guide/strings/how-to-compare-strings.md).
 - [Modifique el contenido de una cadena](../programming-guide/strings/how-to-modify-string-contents.md).
 - [Determine si una cadena representa un número](../programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md).
-- [Use <xref:System.String.Split%2A> para separar cadenas](../programming-guide/strings/how-to-parse-strings-using-string-split.md).
+- [Use `String.Split` para separar cadenas](parse-strings-using-split.md).
 - [Combine varias cadenas en una](../programming-guide/strings/how-to-concatenate-multiple-strings.md).
 - [Busque texto en una cadena](../programming-guide/strings/how-to-search-strings-using-string-methods.md).
 - [Busque cadenas mediante expresiones regulares](../programming-guide/strings/how-to-search-strings-using-regular-expressions.md).
