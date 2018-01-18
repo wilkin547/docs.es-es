@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 7f3ffa5f-f819-4730-bcdb-09b23de3b6d0
 caps.latest.revision: "4"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 2573ff7ff4a03d5ec8a56ef311a3c065d040ccf9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 17fc714acd85b065dbbfa6812d3b55970d5523a2
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="supported-and-unsupported-linq-methods-linq-to-entities"></a>Métodos de LINQ compatibles y no compatibles (LINQ to Entities)
 En esta sección se proporciona información sobre los operadores de consulta estándar de Language-Integrated Query (LINQ) que se admiten o no en las consultas de [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)]. Muchos de los operadores de consulta estándar de LINQ tienen una versión sobrecargada que acepta un argumento entero. El argumento entero corresponde a un índice de base cero de la secuencia que se opera, un <xref:System.Collections.Generic.IEqualityComparer%601>, o <xref:System.Collections.Generic.IComparer%601>. A menos que se especifique lo contrario, estas versiones sobrecargadas de los operadores de consulta estándar de LINQ no se admiten y, si intenta utilizarlos, se iniciará una excepción.  

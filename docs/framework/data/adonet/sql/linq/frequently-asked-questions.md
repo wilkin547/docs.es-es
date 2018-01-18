@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: 252ed666-0679-4eea-b71b-2f14117ef443
 caps.latest.revision: "3"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: df3af6ae9fcd0c4539998357b3ab87b11dd13494
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e09dd7cb3fc979a9be0165705247cc5a63a6b328
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="frequently-asked-questions"></a>Preguntas más frecuentes
 Las siguientes secciones dan respuesta a algunos problemas comunes que podría encontrar al implementar [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)].  
@@ -113,12 +113,12 @@ Las siguientes secciones dan respuesta a algunos problemas comunes que podría e
 ## <a name="serialization-errors"></a>Errores de serialización  
  P. Cuando intento serializar, obtengo el siguiente error: "el tipo... 'System.Data.Linq.ChangeTracker+StandardChangeTracker' no está marcado como serializable."  
   
- R. La generación de código en [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] admite serialización <xref:System.Runtime.Serialization.DataContractSerializer>. No admite <xref:System.Xml.Serialization.XmlSerializer> o <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>. Para obtener más información, vea [Serialización](../../../../../../docs/framework/data/adonet/sql/linq/serialization.md).  
+ Un archivo . La generación de código en [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] admite serialización <xref:System.Runtime.Serialization.DataContractSerializer>. No admite <xref:System.Xml.Serialization.XmlSerializer> o <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>. Para obtener más información, vea [Serialización](../../../../../../docs/framework/data/adonet/sql/linq/serialization.md).  
   
 ## <a name="multiple-dbml-files"></a>Múltiples archivos DBML  
  P. Cuando tengo varios archivos DBML que comparten algunas tablas, obtengo un error del compilador.  
   
- R. Establecer el **contexto Namespace** y **entidad Namespace** propiedades desde el [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] en un valor distinto para cada archivo DBML. Este enfoque elimina la colisión entre nombres o espacios de nombres.  
+ Un archivo . Establecer el **contexto Namespace** y **entidad Namespace** propiedades desde el [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] en un valor distinto para cada archivo DBML. Este enfoque elimina la colisión entre nombres o espacios de nombres.  
   
 ## <a name="avoiding-explicit-setting-of-database-generated-values-on-insert-or-update"></a>Evitar el establecimiento explícito de valores generados por la base de datos al insertar o actualizar  
  P. Tengo una tabla de base de datos con una columna `DateCreated` que tiene como valor predeterminado `Getdate()` de SQL. Cuando intento insertar un nuevo registro utilizando [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], el valor queda establecido en `NULL`. Lo que esperaba es que tomara el valor predeterminado de la base de datos.  

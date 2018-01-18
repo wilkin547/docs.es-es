@@ -10,20 +10,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 82b641bb-6001-4512-bf1a-2830acdd92ab
 caps.latest.revision: "6"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: b117b8b75cd4b90f3689fa535b0afbac0ca00fdc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b9d566f99802ea80ae73132579bb3068b1ff3b28
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="adonet-datasets"></a>Objetos DataSet de ADO.NET
 El objeto <xref:System.Data.DataSet> es esencial para la compatibilidad con escenarios de datos distribuidos desconectados con [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]. El **conjunto de datos** es una representación residente en memoria de datos que proporciona un modelo de programación relacional coherente independientemente del origen de datos. Se puede utilizar con muchos y distintos orígenes de datos, con datos XML o para administrar datos locales de la aplicación. El **conjunto de datos** representa un conjunto completo de datos, incluidas tablas relacionadas, restricciones y relaciones entre las tablas. La siguiente ilustración muestra la **conjunto de datos** modelo de objetos.  
   
- ![Gráfico de ADO.Net](../../../../docs/framework/data/adonet/media/ado-1-bpuedev11.png "ado_1_bpuedev11")  
+ ![ADO.Net graphic](../../../../docs/framework/data/adonet/media/ado-1-bpuedev11.png "ado_1_bpuedev11")  
 Modelo de objetos DataSet  
   
  Los métodos y objetos de un **conjunto de datos** son coherentes con los del modelo de base de datos relacional.  

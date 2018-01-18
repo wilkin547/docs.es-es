@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 1bb126a5-ceec-4649-a4bc-8aa19e801046
 caps.latest.revision: "3"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: b8c31f4e8b1463c184c9a8ff1cf64808783f030d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 45cfed80decc2336c5a2bacf24fd075c2b81c531
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="odbc-schema-collections"></a>Colecciones de esquemas de ODBC
 En esta sección se describe la compatibilidad de las colecciones de esquemas con los controladores ODBC de Microsoft SQL Server, Oracle y Microsoft Jet.  
@@ -341,7 +341,7 @@ En esta sección se describe la compatibilidad de las colecciones de esquemas co
 |SQL_DATETIME_SUB|Int16|  
 |CHAR_OCTET_LENGTH|Int32|  
 |ORDINAL_POSITION|Int32|  
-|IS_NULLABLE|String|  
+|IS_NULLABLE|Cadena|  
   
 ## <a name="see-also"></a>Vea también  
  [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](http://go.microsoft.com/fwlink/?LinkId=217917)

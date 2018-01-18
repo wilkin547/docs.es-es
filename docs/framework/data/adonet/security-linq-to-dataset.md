@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 6116b2b8-75f4-4d8b-aea6-c13e55cda50b
 caps.latest.revision: "2"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 2f67ad1947d421a5221a34ad8392242e4d18039f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 305ff1232b21def3c8e7dcb1bec529f81c4e701a
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="security-linq-to-dataset"></a>Seguridad (LINQ to DataSet)
 En este tema se tratan temas de seguridad en [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)].  
@@ -31,7 +31,7 @@ En este tema se tratan temas de seguridad en [!INCLUDE[linq_dataset](../../../..
 ## <a name="external-input"></a>Entrada externa  
  A menudo, las aplicaciones obtienen entradas externas (de un usuario o de otro agente externo) y realizan acciones basadas en dicha entrada.  En el caso de [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)], la aplicación podría crear una consulta de una manera determinada, en función de la entrada externa o utilice dicha entrada en la consulta. Las consultas de [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] aceptan parámetros siempre que se aceptan literales. Los desarrolladores de aplicaciones deben utilizar consultas parametrizadas en lugar de insertar literales en la consulta procedentes de un agente externo.  
   
- Cualquier entrada derivada directa o indirectamente del usuario o de un agente externo puede inyectar contenido que aproveche la sintaxis del lenguaje de destino para realizar acciones no autorizadas. Esto se conoce como ataque de inyección de SQL porque en el patrón de ataque el idioma de destino es Transact-SQL. La entrada de usuario inyectada directamente en la consulta se utiliza para colocar una tabla de base de datos, provocar un ataque de denegación de servicio o cambiar la naturaleza de la operación que se está realizando. Aunque en [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] se admite la composición de consultas, se lleva a cabo a través de la API del modelo de objetos. [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]las consultas no se construyen mediante el uso de manipulación de cadenas o la concatenación, tal y como están en Transact-SQL y no son susceptibles de sufrir ataques de inyección de SQL en el sentido tradicional.  
+ Cualquier entrada derivada directa o indirectamente del usuario o de un agente externo puede inyectar contenido que aproveche la sintaxis del lenguaje de destino para realizar acciones no autorizadas. Esto se conoce como ataque de inyección de SQL porque en el patrón de ataque el idioma de destino es Transact-SQL. La entrada de usuario inyectada directamente en la consulta se utiliza para quitar una tabla de base de datos, provocar un ataque de denegación de servicio o cambiar la naturaleza de la operación que se está realizando. Aunque en [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] se admite la composición de consultas, se lleva a cabo a través de la API del modelo de objetos. [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]las consultas no se construyen mediante el uso de manipulación de cadenas o la concatenación, tal y como están en Transact-SQL y no son susceptibles de sufrir ataques de inyección de SQL en el sentido tradicional.  
   
 ## <a name="see-also"></a>Vea también  
  [Guía de programación](../../../../docs/framework/data/adonet/programming-guide-linq-to-dataset.md)

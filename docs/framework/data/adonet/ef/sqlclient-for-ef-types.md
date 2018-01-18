@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: f2a95ead-c845-4e97-9fb3-04b444f7ed81
 caps.latest.revision: "9"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: b04a7199fefc5df93d5e3472163d16c66e9279c1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 50898395dcba9e33544cae63208b352c7a6fb6f4
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="sqlclient-for-entity-frameworktypes"></a>SqlClient para tipos de Entity Framework
 El archivo del manifiesto del proveedor correspondiente al Proveedor de datos .NET Framework para SQL Server (SqlClient) incluye la lista de tipos primitivos del proveedor, las facetas de cada tipo, las asignaciones entre los tipos primitivos de los modelos conceptual y de almacenamiento, y las reglas de conversión y de promoción entre los tipos primitivos de los modelos conceptual y de almacenamiento.  
@@ -40,7 +40,7 @@ El archivo del manifiesto del proveedor correspondiente al Proveedor de datos .N
 |`money`|N/D|`Edm.Decimal`|Precisión:<br /><br /> -Valor predeterminado: 19<br /><br /> -Constante: True<br /><br /> Escala:<br /><br /> -Valor predeterminado: 4<br /><br /> -Constante: True|  
 |`binary`|N/D|`Edm.Binary`|MaxLength:<br /><br /> -Mínimo: 1<br /><br /> -Máximo: 8000<br /><br /> -Valor predeterminado: 8000<br /><br /> -Constante: False<br /><br /> FixedLength:<br /><br /> -Valor predeterminado: True<br /><br /> -Constante: True|  
 |`varbinary`|N/D|`Edm.Binary`|MaxLength:<br /><br /> -Mínimo: 1<br /><br /> -Máximo: 8000<br /><br /> -Valor predeterminado: 8000<br /><br /> -Constante: False<br /><br /> FixedLength:<br /><br /> -Valor predeterminado: False<br /><br /> -Constante: True|  
-|`varbinary(max)`<br /><br /> Nota: Este tipo no se admite en [!INCLUDE[ssVersion2000](../../../../../includes/ssversion2000-md.md)].|N/D|`Edm.Binary`|MaxLength:<br /><br /> -Valor predeterminado: 214748364780<br /><br /> -Constante: True<br /><br /> FixedLength:<br /><br /> -Valor predeterminado: False<br /><br /> -Constante: True|  
+|`varbinary(max)`<br /><br /> Nota: Este tipo no se admite en [!INCLUDE[ssVersion2000](../../../../../includes/ssversion2000-md.md)].|N/D|`Edm.Binary`|MaxLength:<br /><br /> - Default: 214748364780<br /><br /> -Constante: True<br /><br /> FixedLength:<br /><br /> -Valor predeterminado: False<br /><br /> -Constante: True|  
 |`image`|N/D|`Edm.Binary`|MaxLength:<br /><br /> -Valor predeterminado: 2147483647<br /><br /> -Constante: True<br /><br /> FixedLength:<br /><br /> -Valor predeterminado: False<br /><br /> -Constante: True|  
 |`timestamp`|N/D|`Edm.Binary`|MaxLength:<br /><br /> -Valor predeterminado: 8<br /><br /> -Constante: True<br /><br /> FixedLength:<br /><br /> -Valor predeterminado: True<br /><br /> -Constante: True|  
 |`rowversion`|N/D|`Edm.Binary`|MaxLength:<br /><br /> -Valor predeterminado: 8<br /><br /> -Constante: True<br /><br /> FixedLength:<br /><br /> -Valor predeterminado: True<br /><br /> -Constante: True|  

@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: cbec8b02-a1e8-4ae8-a83b-bb5190413ac5
 caps.latest.revision: "2"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 99aa438c64fdb8f2d14207e6afb06afa8e5f014a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: bb7562c2f6fab7ce496fd87ecdd891531589abfa
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="data-binding"></a>Enlace de datos
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]admite el enlace a controles comunes, como los controles de cuadrícula. En concreto, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] define los patrones básicos para enlazar a una cuadrícula de datos y controlar el enlace de detalles principales, tanto para la presentación y actualizar.  

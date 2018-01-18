@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 56da90bf-21d3-4d1a-8bb8-de908866b78d
 caps.latest.revision: "4"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 5276697ebdc065965d970afc4ac2ef6be61c8f20
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3700e4010176abed05677043469476fe34cd564c
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="map-unique-xml-schema-xsd-constraints-to-dataset-constraints"></a>Asignar restricciones UNIQUE de un esquema XML (XSD) a restricciones de conjuntos de datos
 En un esquema (XSD) de lenguaje de definición de esquemas XML, el **único** elemento especifica la restricción de unicidad en un elemento o atributo. En el proceso de traducción de un esquema XML a un esquema relacional, la restricción única especificada para un elemento o un atributo del esquema XML se asigna a una restricción única de la <xref:System.Data.DataTable> en el <xref:System.Data.DataSet> correspondiente que se genera.  
@@ -27,8 +27,8 @@ En un esquema (XSD) de lenguaje de definición de esquemas XML, el **único** el
   
 |Nombre del atributo|Descripción|  
 |--------------------|-----------------|  
-|**msdata: ConstraintName**|Si se especifica este atributo, su valor se utiliza como nombre de la restricción. En caso contrario, el **nombre** atributo proporciona el valor del nombre de restricción.|  
-|**msdata: PrimaryKey**|Si `PrimaryKey="true"` está presente en el **único** elemento, se crea una restricción unique con la **IsPrimaryKey** propiedad establecida en **true**.|  
+|**msdata:ConstraintName**|Si se especifica este atributo, su valor se utiliza como nombre de la restricción. En caso contrario, el **nombre** atributo proporciona el valor del nombre de restricción.|  
+|**msdata:PrimaryKey**|Si `PrimaryKey="true"` está presente en el **único** elemento, se crea una restricción unique con la **IsPrimaryKey** propiedad establecida en **true**.|  
   
  En el ejemplo siguiente se muestra un esquema XML que usa el **único** elemento para especificar una restricción de unicidad.  
   

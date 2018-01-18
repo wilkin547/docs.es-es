@@ -9,15 +9,15 @@ dev_langs:
 - vb
 ms.assetid: c119657a-9ce6-4940-91e4-ac1d5f0d9584
 caps.latest.revision: "7"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 61de1bf5f3e5eb16718f2af7fa29325dc94770d1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ea26b4297f587a449b8484947257081e0d11906c
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="adonet-code-examples"></a>Ejemplos de código ADO.NET
 Los listados de código de este tema muestran cómo recuperar datos de una base de datos utilizando las tecnologías ADO.NET siguientes:
@@ -28,7 +28,7 @@ Los listados de código de este tema muestran cómo recuperar datos de una base 
 
   - [OleDb](#oledb) (`System.Data.OleDb`)
 
-  - [ODBC](#odbc) (`System.Data.Odbc`)
+  - [Odbc](#odbc) (`System.Data.Odbc`)
 
   - [OracleClient](#oracleclient) (`System.Data.OracleClient`)
 

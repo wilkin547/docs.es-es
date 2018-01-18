@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: f743fbc7-faff-45e5-af1e-61577d87f0cc
 caps.latest.revision: "2"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: d959d28f50cef7820702ae535dcc3307e59cf080
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 01b31debeb71180f4b1c86e6c9e0dfb1251bf807
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="query-expression-examples-linq-to-dataset"></a>Ejemplos de expresiones de consultas (LINQ to DataSet)
 Esta sección proporciona ejemplos de programación de [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] en la sintaxis de expresión de consultas que usan los operadores de consulta estándar. El <xref:System.Data.DataSet> usa en estos ejemplos se rellena mediante la `FillDataSet` método, que se especifica en [cargar datos en un conjunto de datos](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md). Para obtener más información, consulte [información general sobre operadores de consulta estándar](http://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2).  

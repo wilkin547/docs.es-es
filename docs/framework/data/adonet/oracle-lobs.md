@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 272e8e1e-a31f-475a-8c2a-ae8e1286bdab
 caps.latest.revision: "3"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 6aa72d4c3ac27b3be6704943819596ad628e4f7f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0586a3cb658acb0732add3e78f68344d887646fc
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="oracle-lobs"></a>Objetos LOB de Oracle
 El proveedor de datos de .NET Framework para Oracle incluye la <xref:System.Data.OracleClient.OracleLob> (clase), que se utiliza para trabajar con Oracle **LOB** tipos de datos.  
@@ -27,8 +27,8 @@ El proveedor de datos de .NET Framework para Oracle incluye la <xref:System.Data
   
 |Tipo de datos|Descripción|  
 |---------------|-----------------|  
-|**BLOB**|Oracle **BLOB** tipo de datos que contiene datos binarios con un tamaño máximo de 4 gigabytes. Se asigna a un **matriz** de tipo **bytes**.|  
-|**CLOB**|Oracle **CLOB** tipo de datos que contiene datos de caracteres, según el carácter predeterminado establecido en el servidor, con un tamaño máximo de 4 gigabytes. Se asigna a **cadena**.|  
+|**Blob**|Oracle **BLOB** tipo de datos que contiene datos binarios con un tamaño máximo de 4 gigabytes. Se asigna a un **matriz** de tipo **bytes**.|  
+|**Clob**|Oracle **CLOB** tipo de datos que contiene datos de caracteres, según el carácter predeterminado establecido en el servidor, con un tamaño máximo de 4 gigabytes. Se asigna a **cadena**.|  
 |**NClob**|Oracle **NCLOB** tipo de datos que contiene datos de caracteres, según el carácter nacional establecido en el servidor con un tamaño máximo de 4 gigabytes. Se asigna a **cadena**.|  
   
  Un **OracleLob** difiere de un <xref:System.Data.OracleClient.OracleBFile> en que los datos se almacenan en el servidor en lugar de en un archivo físico en el sistema operativo. También puede ser un objeto de lectura y escritura, a diferencia de un **OracleBFile**, que siempre es de solo lectura.  

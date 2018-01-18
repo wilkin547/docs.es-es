@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: a55aaa12-34ab-41cd-9dec-fd255b29258c
 caps.latest.revision: "5"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: a42c8d24a2817fb0a4118927722e7ac1887517a6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c086ad08e4170d0033ae32bd730b239d5541d541
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="granting-row-level-permissions-in-sql-server"></a>Conceder permisos de nivel de fila en SQL Server
 En algunos casos, existe un requisito para controlar el acceso a los datos a un nivel más detallado que el que se deriva simplemente de conceder, revocar o denegar permisos. Por ejemplo, una aplicación de bases de datos de hospital puede requerir que se restrinja el acceso a los médicos individuales solo a la información relacionada con sus pacientes. Requisitos similares se producen en muchos ámbitos, como en aplicaciones financieras, legales, gubernamentales y militares. Para ayudar a resolver estos escenarios, SQL Server 2016 ofrece una característica de [seguridad por filas](https://msdn.microsoft.com/library/dn765131.aspx) que simplifica y centraliza la lógica de acceso por filas en una directiva de seguridad. Para las versiones anteriores de SQL Server, se puede lograr una funcionalidad similar con vistas para aplicar el filtrado por filas.  

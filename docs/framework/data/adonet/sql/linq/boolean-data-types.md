@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 57f7376b-4b11-4b35-98a9-780382053ceb
 caps.latest.revision: "2"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: ee6109e497c0fda59169b394287db9abd4b3d76a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a3a11b4dfde2afcf738f125a1fd7324ceff74669
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="boolean-data-types"></a>Tipos de datos booleanos
 Los operadores booleanos funcionan tal como cabía esperar en Common Language Runtime (CLR), con la salvedad de que no hay equivalencia para el comportamiento de cortocircuito. Por ejemplo, el operador `AndAlso` de Visual Basic se comporta como el operador `And`. El operador `&&` de C# se comporta como el operador `&`.  
@@ -29,8 +29,8 @@ Los operadores booleanos funcionan tal como cabía esperar en Common Language Ru
 |------------------|---------|  
 |[And (operador)](~/docs/visual-basic/language-reference/operators/and-operator.md)|[Operador &](~/docs/csharp/language-reference/operators/and-operator.md)|  
 |[AndAlso (operador)](~/docs/visual-basic/language-reference/operators/andalso-operator.md)|[Operador &&](~/docs/csharp/language-reference/operators/conditional-and-operator.md)|  
-|[OR (operador)](~/docs/visual-basic/language-reference/operators/or-operator.md)|[&#124; Operador](~/docs/csharp/language-reference/operators/or-operator.md)|  
-|[OrElse (operador)](~/docs/visual-basic/language-reference/operators/orelse-operator.md)|[&#124; &#124; Operador](~/docs/csharp/language-reference/operators/conditional-or-operator.md)|  
+|[OR (operador)](~/docs/visual-basic/language-reference/operators/or-operator.md)|[&#124; Operator](~/docs/csharp/language-reference/operators/or-operator.md)|  
+|[OrElse (operador)](~/docs/visual-basic/language-reference/operators/orelse-operator.md)|[&#124;&#124; Operator](~/docs/csharp/language-reference/operators/conditional-or-operator.md)|  
 |[XOR (operador)](~/docs/visual-basic/language-reference/operators/xor-operator.md)|[Operador ^](~/docs/csharp/language-reference/operators/xor-operator.md)|  
 |[NOT (operador)](~/docs/visual-basic/language-reference/operators/not-operator.md)|[Operador !](~/docs/csharp/language-reference/operators/logical-negation-operator.md)|  
   

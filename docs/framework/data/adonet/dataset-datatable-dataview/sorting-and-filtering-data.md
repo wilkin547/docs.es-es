@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: fdd9c753-39df-48cd-9822-2781afe76200
 caps.latest.revision: "4"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: f514095e551967928d610451cfcaa9a829c0989f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2411307623c714ae521d00dcffca05d3569a656e
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="sorting-and-filtering-data"></a>Ordenar y filtrar datos
 La <xref:System.Data.DataView> proporciona varias formas de ordenación y filtrado de datos en una <xref:System.Data.DataTable>:  
@@ -41,13 +41,13 @@ La <xref:System.Data.DataView> proporciona varias formas de ordenación y filtra
     |Opciones de DataViewRowState|Descripción|  
     |------------------------------|-----------------|  
     |**CurrentRows**|El **actual** versión de fila de todas las **Unchanged**, **Added**, y **Modified** filas. Este es el valor predeterminado.|  
-    |**Agregado**|El **actual** versión de fila de todas las **Added** filas.|  
-    |**Eliminar**|El **Original** versión de fila de todas las **Deleted** filas.|  
+    |**Added**|El **actual** versión de fila de todas las **Added** filas.|  
+    |**Deleted**|El **Original** versión de fila de todas las **Deleted** filas.|  
     |**ModifiedCurrent**|El **actual** versión de fila de todas las **Modified** filas.|  
     |**ModifiedOriginal**|El **Original** versión de fila de todas las **Modified** filas.|  
     |**Ninguno**|Ninguna fila.|  
     |**OriginalRows**|El **Original** versión de fila de todas las **Unchanged**, **Modified**, y **Deleted** filas.|  
-    |**Sin cambios**|El **actual** versión de fila de todas las **Unchanged** filas.|  
+    |**Unchanged**|El **actual** versión de fila de todas las **Unchanged** filas.|  
   
  Para obtener más información sobre los Estados de fila y versiones de fila, vea [Estados de fila y versiones de fila](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md).  
   

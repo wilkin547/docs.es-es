@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 22664196-f270-4ebc-a169-70e16a83dfa1
 caps.latest.revision: "4"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 249cb8419d4f032c37a922c9aa640f02f6efbd56
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6b999e6b1d6d73f107b7e1f4cb0d7e14c099a1f6
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="map-key-xml-schema-xsd-constraints-to-dataset-constraints"></a>Asignar restricciones KEY de un esquema XML (XSD) a restricciones de conjuntos de datos
 En un esquema, puede especificar una restricción de clave en un elemento o atributo mediante la **clave** elemento. El elemento o el atributo para el que se especifica una restricción de clave debe tener valores únicos en cualquier instancia del esquema y no puede tener valores nulos.  
@@ -29,8 +29,8 @@ En un esquema, puede especificar una restricción de clave en un elemento o atri
   
 |Nombre del atributo|Descripción|  
 |--------------------|-----------------|  
-|**msdata: ConstraintName**|Si se especifica este atributo, su valor se utiliza como nombre de la restricción. En caso contrario, el **nombre** atributo proporciona el valor del nombre de restricción.|  
-|**msdata: PrimaryKey**|Si `PrimaryKey="true"` está presente, el **IsPrimaryKey** propiedad de restricción se establece en **true**, lo que una clave principal. El **AllowDBNull** propiedad de columna se establece en **false**, porque las claves principales no pueden tener valores nulos.|  
+|**msdata:ConstraintName**|Si se especifica este atributo, su valor se utiliza como nombre de la restricción. En caso contrario, el **nombre** atributo proporciona el valor del nombre de restricción.|  
+|**msdata:PrimaryKey**|Si `PrimaryKey="true"` está presente, el **IsPrimaryKey** propiedad de restricción se establece en **true**, lo que una clave principal. El **AllowDBNull** propiedad de columna se establece en **false**, porque las claves principales no pueden tener valores nulos.|  
   
  Convertir un esquema en el que se especifica una restricción de clave, el proceso de asignación crea una restricción unique en la tabla con el **AllowDBNull** propiedad column establecida en **false** para cada columna de la restricción. El **IsPrimaryKey** propiedad de la restricción única también se establece en **false** a menos que haya especificado `msdata:PrimaryKey="true"` en el **clave** elemento. Esto es idéntico a una restricción única del esquema donde `PrimaryKey="true"`.  
   

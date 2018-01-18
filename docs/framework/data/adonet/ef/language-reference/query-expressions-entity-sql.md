@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: c36f327b-e230-48d4-bbd5-78dc6478c447
 caps.latest.revision: "2"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 8ad130797be55b33b319ca4e85de09ec3e00a554
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 46777cbe47e7d97fd3baaa1353787f33cff9f0aa
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="query-expressions-entity-sql"></a>Expresiones de consulta (Entity SQL)
 Una expresión de consulta combina muchos operadores de consulta diferentes en una sintaxis única. [!INCLUDE[esql](../../../../../../includes/esql-md.md)]proporciona varios tipos de expresiones, incluidos los siguientes: [literales](../../../../../../docs/framework/data/adonet/ef/language-reference/literals-entity-sql.md), [parámetros](../../../../../../docs/framework/data/adonet/ef/language-reference/parameters-entity-sql.md), [variables](../../../../../../docs/framework/data/adonet/ef/language-reference/variables-entity-sql.md), operadores, [funciones](../../../../../../docs/framework/data/adonet/ef/language-reference/functions-entity-sql.md), operadores de conjuntos y así sucesivamente. Para obtener más información, consulte [Entity SQL Reference](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md).  

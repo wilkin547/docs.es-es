@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: dc20a8fb-03f6-4b68-9c2b-7f7299e3070b
 caps.latest.revision: "3"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 00b5d9ddd248c8a6bd54c77bd930eb56a4fa6057
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0295ff475367b0867ff0a5b0dd85f7a686e343bc
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="linq-to-dataset-overview"></a>Información general de LINQ to DataSet
 <xref:System.Data.DataSet> es uno de los componentes más ampliamente utilizados de [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]. Es un elemento fundamental del modelo de programación desconectado en el que se basa [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] y permite almacenar explícitamente en caché datos de diferentes orígenes de datos. Para el nivel de presentación, <xref:System.Data.DataSet> está estrechamente integrado en los controles de GUI para el enlace de datos. Para el nivel medio, proporciona una caché que conserva la forma relacional de los datos e incluye servicios de exploración de jerarquías y consultas rápidos y sencillos. Una técnica común que se usa para reducir el número de solicitudes en una base de datos es usar el <xref:System.Data.DataSet> para almacenar en caché en el nivel intermedio. Por ejemplo, considere un orientadas a datos [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] aplicación Web. A menudo una parte importante de los datos de aplicación no cambia frecuentemente y es común entre sesiones o usuarios. Estos datos se pueden conservar en memoria o en un servidor web, lo que reduce el número de solicitudes en la base de datos y acelera las interacciones del usuario. Otro aspecto útil de los <xref:System.Data.DataSet> es que permite a una aplicación lleve subconjuntos de datos de origen de datos de uno o más en el espacio de la aplicación. La aplicación puede manipular los datos en memoria mientras retiene su forma relacional.  

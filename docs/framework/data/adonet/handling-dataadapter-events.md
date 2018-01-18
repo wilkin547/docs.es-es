@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: 11515b25-ee49-4b1d-9294-a142147c1ec5
 caps.latest.revision: "3"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: cc482e2508dedde88e40390b4e4ce3edcab8189d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 71524de2edbedb24cacc6727654aac5be0a48bb7
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="handling-dataadapter-events"></a>Controlar eventos de DataAdapter
 <xref:System.Data.Common.DataAdapter> de ADO.NET expone tres eventos que se pueden utilizar para responder a los cambios efectuados en los datos en el origen. En la siguiente tabla se muestran los eventos de `DataAdapter`.  

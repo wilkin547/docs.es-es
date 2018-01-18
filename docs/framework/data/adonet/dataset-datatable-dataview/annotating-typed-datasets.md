@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: f82aaa62-321e-4c8a-b51b-9d1114700170
 caps.latest.revision: "6"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 4528393d3d9491d9c1f12a867eb093e75d028f3d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cc09f3f9b43b70b7f9b302d7a9d75428b5a0e6c7
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="annotating-typed-datasets"></a>Comentar conjuntos de datos con tipo
 Las anotaciones permiten modificar los nombres de los elementos del <xref:System.Data.DataSet> con información de tipos sin modificar el esquema subyacente. Modificación de los nombres de los elementos del esquema subyacente haría que el tipo **conjunto de datos** para hacer referencia a objetos que no existen en el origen de datos, así como perder una referencia a los objetos que existen en el origen de datos.  
@@ -57,7 +57,7 @@ Las anotaciones permiten modificar los nombres de los elementos del <xref:System
 |Anotación|Descripción|  
 |----------------|-----------------|  
 |**typedName**|Nombre del objeto.|  
-|**Customers**|Nombre de una colección de objetos.|  
+|**typedPlural**|Nombre de una colección de objetos.|  
 |**typedParent**|Nombre del objeto cuando se hace referencia al mismo en una relación primaria.|  
 |**typedChildren**|Nombre del método para devolver objetos de una relación secundaria.|  
 |**nullValue**|El valor si el valor subyacente es **DBNull**. Consulte la tabla siguiente para **nullValue** anotaciones. El valor predeterminado es **_throw**.|  
@@ -79,7 +79,7 @@ Las anotaciones permiten modificar los nombres de los elementos del <xref:System
 |**DataTable** métodos|NewTableNameRow<br /><br /> AddTableNameRow<br /><br /> DeleteTableNameRow|typedName|  
 |**DataRowCollection**|TableName|typedPlural|  
 |**DataRow**|TableNameRow|typedName|  
-|**Objeto DataColumn**|DataTable.ColumnNameColumn<br /><br /> DataRow.ColumnName|typedName|  
+|**DataColumn**|DataTable.ColumnNameColumn<br /><br /> DataRow.ColumnName|typedName|  
 |**Property**|PropertyName|typedName|  
 |**Secundario** descriptor de acceso|GetChildTableNameRows|typedChildren|  
 |**Elemento primario** descriptor de acceso|TableNameRow|typedParent|  

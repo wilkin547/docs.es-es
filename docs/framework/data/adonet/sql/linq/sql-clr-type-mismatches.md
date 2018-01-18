@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: 0a90c33f-7ed7-4501-ad5f-6224c5da8e9b
 caps.latest.revision: "2"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 20031092f5109fef1bf7167eccab949e2e7c5b39
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6a027bd898409708dd6800908a6736f5853058df
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="sql-clr-type-mismatches"></a>Desajustes de tipos entre SQL y CLR
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] automatiza gran parte de la conversión entre el modelo de objetos y SQL Server. No obstante, algunas situaciones impiden la exactitud de la conversión. Estas discordancias clave entre los tipos de Common Language Runtime (CLR) y los de base de datos de SQL Server se resumen en las siguientes secciones. Puede encontrar más detalles acerca de las asignaciones de tipo específico y la traducción de la función en [asignación de tipo de CLR de SQL](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md) y [tipos de datos y funciones](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md).  
@@ -42,9 +42,9 @@ Select DateOfBirth From Customer Where CustomerId = @id
   
     -   **Números enteros sin signo**. Estos tipos suelen asignarse a sus equivalentes con signo de mayor tamaño para evitar el desbordamiento. Los literales se pueden convertir a un tipo numérico con signo del mismo tamaño o de un tamaño inferior, según su valor.  
   
-    -   **Booleano**. Estos tipos pueden asignarse a un valor numérico en bits o mayor, o a una cadena. Un literal se puede asignar a una expresión que se evalúe en el mismo valor (por ejemplo, `1=1` en SQL para `True` en CLS).  
+    -   **Boolean**. Estos tipos pueden asignarse a un valor numérico en bits o mayor, o a una cadena. Un literal se puede asignar a una expresión que se evalúe en el mismo valor (por ejemplo, `1=1` en SQL para `True` en CLS).  
   
-    -   **Intervalo de tiempo**. Este tipo representa la diferencia entre dos valores `DateTime` y no se corresponde con `timestamp` en SQL Server. El elemento <xref:System.TimeSpan?displayProperty=nameWithType> de CLR también se puede asignar al tipo de elemento `TIME` de SQL Server en algunos casos. La única finalidad del tipo de elemento `TIME` de SQL Server era representar valores positivos menores que 24 horas. El ámbito del elemento <xref:System.TimeSpan> de CLR es mucho más amplio.  
+    -   **TimeSpan**. Este tipo representa la diferencia entre dos valores `DateTime` y no se corresponde con `timestamp` en SQL Server. El elemento <xref:System.TimeSpan?displayProperty=nameWithType> de CLR también se puede asignar al tipo de elemento `TIME` de SQL Server en algunos casos. La única finalidad del tipo de elemento `TIME` de SQL Server era representar valores positivos menores que 24 horas. El ámbito del elemento <xref:System.TimeSpan> de CLR es mucho más amplio.  
   
     > [!NOTE]
     >  Específicas de SQL Server [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] tipos de <xref:System.Data.SqlTypes> no se incluyen en esta comparación.  
@@ -53,9 +53,9 @@ Select DateOfBirth From Customer Where CustomerId = @id
   
     -   **Tipos de caracteres de longitud fija**. Transact-SQL distingue entre las categorías Unicode y no Unicode y tiene tres tipos distintos en cada categoría: una longitud fija `nchar` / `char`, longitud variable `nvarchar` / `varchar`, y mayor tamaño `ntext` / `text`. Los tipos de caracteres de longitud fija podrían asignarse al tipo de elemento <xref:System.Char?displayProperty=nameWithType> de CLR para recuperar los caracteres, pero realmente no se corresponden con el mismo tipo en conversiones y comportamiento.  
   
-    -   **Bits**. Aunque el dominio `bit` tiene el mismo número de valores que `Nullable<Boolean>`, ambos son tipos diferentes. `Bit`toma los valores `1` y `0` en lugar de `true` / `false`y no se puede usar como equivalente de expresiones booleanas.  
+    -   **Bit**. Aunque el dominio `bit` tiene el mismo número de valores que `Nullable<Boolean>`, ambos son tipos diferentes. `Bit`toma los valores `1` y `0` en lugar de `true` / `false`y no se puede usar como equivalente de expresiones booleanas.  
   
-    -   **Marca de tiempo**. A diferencia del tipo de elemento <xref:System.TimeSpan?displayProperty=nameWithType> de CLR, el tipo de elemento `TIMESTAMP` de SQL Server representa un número de 8 bits generado por la base de datos que es único para cada actualización y no se basa en la diferencia entre los valores de <xref:System.DateTime>.  
+    -   **Timestamp**. A diferencia del tipo de elemento <xref:System.TimeSpan?displayProperty=nameWithType> de CLR, el tipo de elemento `TIMESTAMP` de SQL Server representa un número de 8 bits generado por la base de datos que es único para cada actualización y no se basa en la diferencia entre los valores de <xref:System.DateTime>.  
   
     -   **Money** y **SmallMoney**. Estos tipos pueden asignarse a <xref:System.Decimal>, pero básicamente son tipos diferentes y son tratados como tales en las conversiones y por las funciones basadas en servidor.  
   

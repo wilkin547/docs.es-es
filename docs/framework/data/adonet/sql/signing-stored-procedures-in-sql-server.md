@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: eeed752c-0084-48e5-9dca-381353007a0d
 caps.latest.revision: "6"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: b3d90579e28fde40d461bdb511d797e5d7f6f179
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a3f1ed66ed7caf2272ca27097dc9a838bec7d0ae
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="signing-stored-procedures-in-sql-server"></a>Firmar procedimientos almacenados en SQL Server
 Puede firmar un procedimiento almacenado con un certificado o una clave asimétrica. Esto está diseñado para los casos en los que no se pueden heredar permisos mediante encadenamiento de propiedad o cuando la cadena de propiedad está rota, como en SQL dinámico. Entonces, se crea un usuario asignado al certificado, el cual concede permisos de usuario en los objetos a los que el procedimiento almacenado necesita tener acceso.  

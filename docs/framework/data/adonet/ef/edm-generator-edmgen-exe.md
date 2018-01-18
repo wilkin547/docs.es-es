@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: fe8297a1-1fc3-48ce-8eeb-f70f63f857aa
 caps.latest.revision: "6"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: ee356fc3e7d6e1279e0cba8014d6d285620add3b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: aea41a58697acaad0b089f8e35b9f870e8bf841d
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="edm-generator-edmgenexe"></a>Generador de EDM (EdmGen.exe)
 EdmGen.exe es una herramienta de línea de comandos utilizada para trabajar con archivos de modelo y asignación de [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Puede utilizar la herramienta EdmGen.exe para lo siguiente:  
@@ -54,26 +54,26 @@ EdmGen /mode:choice [options]
   
 |Opción|Descripción|  
 |------------|-----------------|  
-|`/p[roject]:`\<cadena >|Especifica el nombre del proyecto que se usará. El nombre del proyecto se utiliza como valor predeterminado para la configuración del espacio de nombres, el nombre de los archivos de modelo y asignación, el nombre del archivo de origen del objeto y el nombre del archivo de código fuente de la generación de las vistas. El nombre del contenedor de entidades se establece en \<proyecto > contexto.|  
-|`/prov[ider]:`\<cadena >|Nombre del proveedor de datos de [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] que se va a utilizar para generar el archivo del modelo de almacenamiento (.ssdl). El proveedor predeterminado es el [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] Data Provider for SQL Server (<xref:System.Data.SqlClient?displayProperty=nameWithType>).|  
+|`/p[roject]:`\<string>|Especifica el nombre del proyecto que se usará. El nombre del proyecto se utiliza como valor predeterminado para la configuración del espacio de nombres, el nombre de los archivos de modelo y asignación, el nombre del archivo de origen del objeto y el nombre del archivo de código fuente de la generación de las vistas. El nombre del contenedor de entidades se establece en \<proyecto > contexto.|  
+|`/prov[ider]:`\<string>|Nombre del proveedor de datos de [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] que se va a utilizar para generar el archivo del modelo de almacenamiento (.ssdl). El proveedor predeterminado es el [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] Data Provider for SQL Server (<xref:System.Data.SqlClient?displayProperty=nameWithType>).|  
 |`/c[onnectionstring]:`\<cadena de conexión >|Especifica la cadena que se utiliza para conectarse al origen de datos.|  
-|`/incsdl:`\<archivo >|Especifica el archivo .csdl o un directorio donde se encuentran los archivos .csdl. Se puede especificar este argumento varias veces para poder especificar varios directorios o archivos .csdl. Especificar varios directorios puede ser útil para generar las clases (`/mode:EntityClassGeneration`) o las vistas (`/mode:ViewGeneration`) cuando el modelo conceptual se divide en varios archivos. Esto también puede ser útil si se desea validar varios modelos (`/mode:ValidateArtifacts`).|  
-|`/refcsdl:`\<archivo >|Especifica el archivo .csdl adicional o los archivos que se usan para resolver las referencias en el archivo .csdl de origen. (El archivo .csdl de origen es el archivo que determina la opción `/incsdl`). El archivo `/refcsdl` contiene los tipos de los que el archivo .csdl de origen depende. Este argumento se puede especificar varias veces.|  
-|`/inmsl:`\<archivo >|Especifica el archivo .msl o un directorio donde se encuentran los archivos .msl. Este argumento se puede especificar varias veces para poder especificar varios directorios o archivos .msl. Especificar varios directorios puede ser útil para generar las vistas (`/mode:ViewGeneration`) cuando el modelo conceptual se divide en varios archivos. Esto también puede ser útil si se desea validar varios modelos (`/mode:ValidateArtifacts`).|  
-|`/inssdl:`\<archivo >|Especifica el archivo .ssdl o un directorio donde se encuentra. Se puede especificar este argumento varias veces para poder especificar varios directorios o archivos .ssdl. Esto puede ser útil si se desea validar varios modelos `(/mode:ValidateArtifacts)`.|  
-|`/outcsdl:`\<archivo >|Especifica el nombre del archivo .csdl que se creará.|  
-|`/outmsl:`\<archivo >|Especifica el nombre del archivo .msl que se creará.|  
-|`/outssdl:`\<archivo >|Especifica el nombre del archivo .ssdl que se creará.|  
-|`/outobjectlayer:`\<archivo >|Especifica el nombre del archivo de código fuente que contiene los objetos generados a partir del archivo .csdl.|  
-|`/outviews:`\<archivo >|Especifica el nombre del archivo de código fuente que contiene las vistas que se generaron.|  
-|`/language:`[VB &#124; CSharp]|Especifica el lenguaje de los archivos de código fuente generados. El lenguaje predeterminado es C#.|  
-|`/namespace:`\<cadena >|Especifica el espacio de nombres del modelo que se va a utilizar. El espacio de nombres se establece en el archivo .csdl al ejecutar `/mode:FullGeneration` o `/mode:FromSSDLGeneration`. El espacio de nombres no se usa al ejecutar `/mode:EntityClassGeneration`.|  
-|`/entitycontainer:`\<cadena >|Especifica el nombre que se va a aplicar al elemento `<EntityContainer>` en los archivos de modelo y asignación generados.|  
+|`/incsdl:`\<file>|Especifica el archivo .csdl o un directorio donde se encuentran los archivos .csdl. Se puede especificar este argumento varias veces para poder especificar varios directorios o archivos .csdl. Especificar varios directorios puede ser útil para generar las clases (`/mode:EntityClassGeneration`) o las vistas (`/mode:ViewGeneration`) cuando el modelo conceptual se divide en varios archivos. Esto también puede ser útil si se desea validar varios modelos (`/mode:ValidateArtifacts`).|  
+|`/refcsdl:`\<file>|Especifica el archivo .csdl adicional o los archivos que se usan para resolver las referencias en el archivo .csdl de origen. (El archivo .csdl de origen es el archivo que determina la opción `/incsdl`). El archivo `/refcsdl` contiene los tipos de los que el archivo .csdl de origen depende. Este argumento se puede especificar varias veces.|  
+|`/inmsl:`\<file>|Especifica el archivo .msl o un directorio donde se encuentran los archivos .msl. Este argumento se puede especificar varias veces para poder especificar varios directorios o archivos .msl. Especificar varios directorios puede ser útil para generar las vistas (`/mode:ViewGeneration`) cuando el modelo conceptual se divide en varios archivos. Esto también puede ser útil si se desea validar varios modelos (`/mode:ValidateArtifacts`).|  
+|`/inssdl:`\<file>|Especifica el archivo .ssdl o un directorio donde se encuentra. Se puede especificar este argumento varias veces para poder especificar varios directorios o archivos .ssdl. Esto puede ser útil si se desea validar varios modelos `(/mode:ValidateArtifacts)`.|  
+|`/outcsdl:`\<file>|Especifica el nombre del archivo .csdl que se creará.|  
+|`/outmsl:`\<file>|Especifica el nombre del archivo .msl que se creará.|  
+|`/outssdl:`\<file>|Especifica el nombre del archivo .ssdl que se creará.|  
+|`/outobjectlayer:`\<file>|Especifica el nombre del archivo de código fuente que contiene los objetos generados a partir del archivo .csdl.|  
+|`/outviews:`\<file>|Especifica el nombre del archivo de código fuente que contiene las vistas que se generaron.|  
+|`/language:`[VB&#124;CSharp]|Especifica el lenguaje de los archivos de código fuente generados. El lenguaje predeterminado es C#.|  
+|`/namespace:`\<string>|Especifica el espacio de nombres del modelo que se va a utilizar. El espacio de nombres se establece en el archivo .csdl al ejecutar `/mode:FullGeneration` o `/mode:FromSSDLGeneration`. El espacio de nombres no se usa al ejecutar `/mode:EntityClassGeneration`.|  
+|`/entitycontainer:`\<string>|Especifica el nombre que se va a aplicar al elemento `<EntityContainer>` en los archivos de modelo y asignación generados.|  
 |`/pl[uralize]`|Aplica las reglas del idioma inglés para singulares y plurales a los nombres de `Entity`, `EntitySet` y `NavigationProperty` en el modelo conceptual. Esta opción realizará las siguientes acciones:<br /><br /> -Asegúrese todos `EntityType` nombres singulares.<br />-Asegúrese todos `EntitySet` nombres en plurales.<br />-Para cada `NavigationProperty` que devuelva a lo sumo una entidad, poner el nombre singular.<br />-Para cada `NavigationProperty` que devuelva más de una entidad, poner el nombre en plural.|  
 |`/SupressForeignKeyProperties or /nofk`|Evita que las columnas de clave externa se expongan como propiedades escalares en tipos de entidad en el modelo conceptual.|  
 |`/help` o `?`|Muestra las opciones y la sintaxis de los comandos para la herramienta.|  
 |`/nologo`|Evita que se muestre el mensaje de copyright.|  
-|`/targetversion:`\<cadena >|La versión de .NET Framework que se usará para compilar el código generado. Las versiones admitidas son 4 y 4.5. El valor predeterminado es 4.|  
+|`/targetversion:` \<string>|La versión de .NET Framework que se usará para compilar el código generado. Las versiones admitidas son 4 y 4.5. El valor predeterminado es 4.|  
   
 ## <a name="in-this-section"></a>En esta sección  
  [Uso de EdmGen.exe para generar los archivos de asignación y de modelo](../../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md)  

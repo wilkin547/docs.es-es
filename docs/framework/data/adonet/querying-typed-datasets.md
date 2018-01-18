@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: ad712fa1-2baf-462a-b163-574cce6d376a
 caps.latest.revision: "2"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: c232ca2888c957bea33d06c84a62b00fdc7fd80c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fff678a54416e72f4be8c3fdfdcacec5a7d90af7
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="querying-typed-datasets"></a>Consultar objetos DataSet con tipo
 Si el esquema de <xref:System.Data.DataSet> se conoce en tiempo de diseño de la aplicación, se recomienda usar un <xref:System.Data.DataSet> con tipo al utilizar [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]. Un tipo <xref:System.Data.DataSet> es una clase que deriva de un <xref:System.Data.DataSet>. Como tal, hereda todos los métodos, eventos y propiedades de un <xref:System.Data.DataSet>. Además, un tipo <xref:System.Data.DataSet> proporciona métodos fuertemente tipados, eventos y propiedades. Esto significa que se puede tener acceso a tablas y columnas por su nombre, en lugar de utilizar métodos de una colección. Esto hace que las consultas sean más sencillas y más legibles. Para obtener más información, consulte [conjuntos de datos con tipo](../../../../docs/framework/data/adonet/dataset-datatable-dataview/typed-datasets.md).  
