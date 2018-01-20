@@ -1,5 +1,5 @@
 ---
-title: '&lt;supportedRuntime&gt; elemento'
+title: '&lt;supportedRuntime&gt; Element'
 ms.date: 10/17/2017
 ms.prod: .net-framework
 ms.technology: dotnet-clr
@@ -16,35 +16,35 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.workload: dotnet
-ms.openlocfilehash: 77886cef1a8dbd320223526b86f86fa9cee6a9f4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4b0967790f2bbf8fa9a889c56fa9c5168f7523bd
+ms.sourcegitcommit: 8bde7a3432f30fc771079744955c75c58c4eb393
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/20/2018
 ---
-# <a name="ltsupportedruntimegt-element"></a>&lt;supportedRuntime&gt; elemento
+# <a name="ltsupportedruntimegt-element"></a>&lt;supportedRuntime&gt; Element
+
 Especifica qué versiones de Common Language Runtime admite la aplicación. Todas las aplicaciones compiladas con la versión 1.1 o posterior de .NET Framework deberían usar este elemento.  
   
 [\<configuration>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)  
-
-[\<startup>](../../../../../docs/framework/configure-apps/file-schema/startup/startup-element.md)  
+&nbsp;&nbsp;[\<startup>](../../../../../docs/framework/configure-apps/file-schema/startup/startup-element.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;**\<supportedRuntime>**  
   
-**\<supportedRuntime>**  
-  
-## <a name="syntax"></a>Sintaxis  
+## <a name="syntax"></a>Sintaxis
   
 ```xml  
 <supportedRuntime version="runtime version" sku="sku id"/>  
 ```  
   
-## <a name="attributes"></a>Atributos  
+## <a name="attributes"></a>Atributos
   
 |Atributo|Descripción|  
 |---------------|-----------------|  
 |**version**|Atributo opcional.<br /><br /> Un valor de cadena que especifica la versión de Common Language Runtime (CLR) que es compatible con esta aplicación. Para obtener los valores válidos de la `version` de atributo, vea la [valores de "runtime version"](#version) sección. **Nota:** a través de la versión 3.5 de .NET Framework, el "*en tiempo de ejecución versión*" valor toma la forma *principal*. *secundaria*. *generar*. A partir de [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], solo se requieren los números de versión principal y secundaria "(es decir, "v4.0" en lugar de "v4.0.30319"). Se recomienda la cadena más corta.|  
-|**SKU**|Atributo opcional.<br /><br /> Valor de cadena que especifica la referencia de almacén (SKU), que a su vez especifica qué versión de .NET Framework es compatible con esta aplicación.<br /><br /> A partir de .NET Framework 4.0, el uso de la `sku` se recomienda el atributo.  Cuando está presente, indica la versión de .NET Framework que la aplicación tiene como destino.<br /><br /> Para los valores válidos del atributo de sku, consulte el [valores "sku id"](#sku) sección.|  
+|**sku**|Atributo opcional.<br /><br /> Valor de cadena que especifica la referencia de almacén (SKU), que a su vez especifica qué versión de .NET Framework es compatible con esta aplicación.<br /><br /> A partir de .NET Framework 4.0, el uso de la `sku` se recomienda el atributo.  Cuando está presente, indica la versión de .NET Framework que la aplicación tiene como destino.<br /><br /> Para los valores válidos del atributo de sku, consulte el [valores "sku id"](#sku) sección.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Comentarios
+
 Si el  **\<supportedRuntime >** elemento no está presente en el archivo de configuración de aplicación, se usará la versión del runtime que se utilizan para compilar la aplicación.  
 
 El  **\<supportedRuntime >** todas las aplicaciones compiladas con la versión 1.1 o posterior del tiempo de ejecución deberían usar el elemento. Las aplicaciones compiladas para admitir solo la versión 1.0 del tiempo de ejecución deben usar la [ \<requiredRuntime >](../../../../../docs/framework/configure-apps/file-schema/startup/requiredruntime-element.md) elemento.  
@@ -72,9 +72,9 @@ El `runtime` atributo especifica la versión de Common Language Runtime (CLR) qu
 |3.5|"v2.0.50727"|  
 |4.0-4.7.1|"v4.0"|  
 
-  
 <a name="sku"></a>   
-## <a name="sku-id-values"></a>Valores de "sku id"  
+## <a name="sku-id-values"></a>Valores de "sku id"
+
 El `sku` atributo utiliza un moniker de la plataforma de destino (TFM) para indicar la versión de .NET Framework que tiene como destino de la aplicación y necesita para ejecutarse. En la tabla siguiente se enumera los valores válidos que son compatibles con el `sku` atributo, a partir de .NET Framework 4.
   
 |Versión de .NET Framework|Atributo `sku`|  
@@ -92,9 +92,9 @@ El `sku` atributo utiliza un moniker de la plataforma de destino (TFM) para indi
 |4.5.2|".NETFramework,Version=v4.5.2"|  
 |4.6|".NETFramework,Version=v4.6"|  
 |4.6.1|".NETFramework,Version=v4.6.1"|  
-|4.6.2|". NETFramework, Version = v4.6.2 "|  
-|4.7|". NETFramework, Version = v4.7 "|
-|4.7.1|". NETFramework, Version = 4.7.1"|
+|4.6.2|".NETFramework,Version=v4.6.2"|  
+|4.7|".NETFramework,Version=v4.7"|
+|4.7.1|".NETFramework,Version=v4.7.1"|
 
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se muestra cómo especificar la versión del runtime compatible en un archivo de configuración. El archivo de configuración indica que la aplicación tiene como destino el 4.7 de .NET Framework.  
@@ -107,10 +107,12 @@ El `sku` atributo utiliza un moniker de la plataforma de destino (TFM) para indi
 </configuration>  
 ```  
   
-## <a name="configuration-file"></a>Archivo de configuración  
- Este elemento se puede utilizar en el archivo de configuración de la aplicación.  
-  
-## <a name="see-also"></a>Vea también  
+## <a name="configuration-file"></a>Archivo de configuración
+
+Este elemento se puede utilizar en el archivo de configuración de la aplicación.
+
+## <a name="see-also"></a>Vea también
+
  [Esquema de la configuración de inicio](../../../../../docs/framework/configure-apps/file-schema/startup/index.md)  
  [Esquema de los archivos de configuración](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [Ejecución en paralelo en proceso](../../../../../docs/framework/deployment/in-process-side-by-side-execution.md)
+ [Ejecución en paralelo en proceso](../../../../../docs/framework/deployment/in-process-side-by-side-execution.md)  
