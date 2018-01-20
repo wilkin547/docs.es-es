@@ -22,17 +22,17 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.workload: dotnet
-ms.openlocfilehash: 2ef50301a5188193cc13cd0e657f53593ef0d93e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 547c08e324066b872abb8df8b8b780ab3e4644a7
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="ltcompilergt-element"></a>&lt;compilador&gt; elemento
 Especifica los atributos de configuración del compilador para un proveedor de lenguaje.  
   
  \<Elemento de configuración >  
-\<System.CodeDom (elemento) >  
+\<system.codedom Element>  
 \<Elemento compilers >  
 \<compilador > elemento  
   
@@ -72,8 +72,8 @@ Especifica los atributos de configuración del compilador para un proveedor de l
 |Elemento|Descripción|  
 |-------------|-----------------|  
 |[Elemento \<configuration>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|Elemento raíz de cada archivo de configuración usado por las aplicaciones de Common Language Runtime y .NET Framework.|  
-|[\<System.CodeDom > elemento](../../../../../docs/framework/configure-apps/file-schema/compiler/system-codedom-element.md)|Especifica los valores de configuración del compilador para los proveedores de lenguaje disponibles.|  
-|[\<los compiladores > elemento](../../../../../docs/framework/configure-apps/file-schema/compiler/compilers-element.md)|Contenedor para los elementos de configuración de compilador; contiene cero o más `<compiler>` elementos.|  
+|[\<system.codedom> Element](../../../../../docs/framework/configure-apps/file-schema/compiler/system-codedom-element.md)|Especifica los valores de configuración del compilador para los proveedores de lenguaje disponibles.|  
+|[\<compilers> Element](../../../../../docs/framework/configure-apps/file-schema/compiler/compilers-element.md)|Contenedor para los elementos de configuración de compilador; contiene cero o más `<compiler>` elementos.|  
   
 ## <a name="remarks"></a>Comentarios  
  Cada `<compiler>` elemento especifica los atributos de configuración de compilador para un proveedor de lenguaje específico. Extiende el proveedor de la <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType> clase para un idioma específico; el `<compiler>` elemento define la configuración de generador de código para el proveedor de lenguaje y compilador.  
@@ -110,6 +110,6 @@ Especifica los atributos de configuración del compilador para un proveedor de l
  <xref:System.CodeDom.Compiler.CompilerInfo>  
  <xref:System.CodeDom.Compiler.CodeDomProvider>  
  [Esquema de los archivos de configuración](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [\<los compiladores > elemento](../../../../../docs/framework/configure-apps/file-schema/compiler/compilers-element.md)  
+ [\<compilers> Element](../../../../../docs/framework/configure-apps/file-schema/compiler/compilers-element.md)  
  [Especificar nombres de tipo completos](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md)  
- [Elemento Compiler aplicado a compilers para compilation (ASP.NET Settings Schema)](http://msdn.microsoft.com/en-us/f7d6b078-5d42-4134-b3f7-62e1aba1df1e)
+ [Elemento Compiler aplicado a compilers para compilation (ASP.NET Settings Schema)](http://msdn.microsoft.com/library/f7d6b078-5d42-4134-b3f7-62e1aba1df1e)

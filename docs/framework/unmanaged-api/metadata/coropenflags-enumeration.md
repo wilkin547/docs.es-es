@@ -20,11 +20,11 @@ author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 39645de71913baeaa39524e1cae081de9cac3442
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4447f648277576169c9004d1880283728639c8f3
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="coropenflags-enumeration"></a>CorOpenFlags (Enumeración)
 Contiene valores de marca que controlan el comportamiento de los metadatos al abrir archivos de manifiesto.  
@@ -62,7 +62,7 @@ typedef enum CorOpenFlags
 |`ofCacheImage`|Obsoleto. Esta marca se omite.|  
 |`ofManifestMetadata`|Obsoleto. Esta marca se omite.|  
 |`ofReadOnly`|Indica que el archivo se debe abrir para lectura y que una llamada a `QueryInterface` para un [IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md) no se puede realizar.|  
-|`ofTakeOwnership`|Indica que se asignó la memoria mediante una llamada a [CoTaskMemAlloc](http://msdn.microsoft.com/en-us/c4cb588d-9482-4f90-a92e-75b604540d5c) y se liberarán los metadatos.|  
+|`ofTakeOwnership`|Indica que se asignó la memoria mediante una llamada a [CoTaskMemAlloc](http://msdn.microsoft.com/library/c4cb588d-9482-4f90-a92e-75b604540d5c) y se liberarán los metadatos.|  
 |`ofNoTypeLib`|Obsoleto. Esta marca se omite.|  
 |`ofNoTransform`|Indica que se deben deshabilitar las transformaciones automáticas de archivos .winmd. En otras palabras, se debe deshabilitar la proyección de un tipo de Windows Runtime en un tipo de .NET Framework. Para obtener más información, consulte [debajo de la directiva the Hood con .NET y el tiempo de ejecución de Windows](http://msdn.microsoft.com/magazine/jj651569.aspx).|  
 |`ofReserved1`|Reservado para uso interno.|  
@@ -72,7 +72,7 @@ typedef enum CorOpenFlags
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** CorHdr.h  
+ **Header:** CorHdr.h  
   
  **Versiones de .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

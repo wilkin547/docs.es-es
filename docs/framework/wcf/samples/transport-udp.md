@@ -14,11 +14,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 1933d216f991b78e21a56ec67826dce0b4a7b24a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b7bb9f60340915f27c451d05bfbc28e1670c9d83
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="transport-udp"></a>Transporte: UDP
 El ejemplo de transporte UDP muestra cómo implementar unidifusión y multidifusión de UDP como un transporte de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] personalizado. El ejemplo describe el procedimiento recomendado para crear un transporte personalizado en [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], utilizando el marco del canal y los siguientes procedimientos recomendados de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Los pasos para crear un transporte personalizado son los siguientes:  
@@ -405,7 +405,7 @@ protected override void OnApplyConfiguration(string configurationName)
 ```  
   
 ## <a name="the-udp-test-service-and-client"></a>Servicio de pruebas y cliente UDP  
- El código de prueba para usar este transporte de ejemplo está disponible en los directorios UdpTestService y UdpTestClient. El código de servicio está compuesto de dos pruebas: una configura los enlaces y puntos de conexión desde el código y la otra lo hace a través de la configuración. Ambas pruebas utilizan dos puntos de conexión. Un punto de conexión utiliza la `SampleUdpProfileBinding` con [ \<reliableSession >](http://msdn.microsoft.com/en-us/9c93818a-7dfa-43d5-b3a1-1aafccf3a00b) establecido en `true`. El otro extremo utiliza un enlace personalizado con `UdpTransportBindingElement`. Esto equivale a usar `SampleUdpProfileBinding` con [ \<reliableSession >](http://msdn.microsoft.com/en-us/9c93818a-7dfa-43d5-b3a1-1aafccf3a00b) establecido en `false`. Ambas pruebas crean un servicio, agregan un punto de conexión para cada enlace, abren el servicio y, a continuación, esperan a que el usuario presione ENTRAR antes de cerrar el servicio.  
+ El código de prueba para usar este transporte de ejemplo está disponible en los directorios UdpTestService y UdpTestClient. El código de servicio está compuesto de dos pruebas: una configura los enlaces y puntos de conexión desde el código y la otra lo hace a través de la configuración. Ambas pruebas utilizan dos puntos de conexión. Un punto de conexión utiliza la `SampleUdpProfileBinding` con [ \<reliableSession >](http://msdn.microsoft.com/library/9c93818a-7dfa-43d5-b3a1-1aafccf3a00b) establecido en `true`. El otro extremo utiliza un enlace personalizado con `UdpTransportBindingElement`. Esto equivale a usar `SampleUdpProfileBinding` con [ \<reliableSession >](http://msdn.microsoft.com/library/9c93818a-7dfa-43d5-b3a1-1aafccf3a00b) establecido en `false`. Ambas pruebas crean un servicio, agregan un punto de conexión para cada enlace, abren el servicio y, a continuación, esperan a que el usuario presione ENTRAR antes de cerrar el servicio.  
   
  Al iniciar la aplicación de prueba del servicio, debería ver el resultado siguiente.  
   

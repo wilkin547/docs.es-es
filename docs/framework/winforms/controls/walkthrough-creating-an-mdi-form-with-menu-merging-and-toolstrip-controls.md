@@ -26,11 +26,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: b170c3e3311dbbfb070a66107bd4f22407647bae
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3e0538151c19eb47f8a51330b7f2c06818d1e73f
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="walkthrough-creating-an-mdi-form-with-menu-merging-and-toolstrip-controls"></a>Tutorial: Crear un formulario MDI con combinación de menús y controles ToolStrip
 El espacio de nombres <xref:System.Windows.Forms?displayProperty=nameWithType> es compatible con aplicaciones de interfaces de múltiples documentos (MDI) y el control <xref:System.Windows.Forms.MenuStrip> admite la combinación de menús. Los formularios MDI también pueden ser compatibles con los controles <xref:System.Windows.Forms.ToolStrip>.  
@@ -52,7 +52,7 @@ El espacio de nombres <xref:System.Windows.Forms?displayProperty=nameWithType> e
  Para copiar el código de este tema como una sola lista, vea [Cómo: crear un formulario MDI con combinación de menús y controles ToolStrip](../../../../docs/framework/winforms/controls/how-to-create-an-mdi-form-with-menu-merging-and-toolstrip-controls.md).  
   
 > [!NOTE]
->  Los cuadros de diálogo y comandos de menú que se ven pueden diferir de los descritos en la Ayuda, en función de los valores de configuración o de edición activos. Para cambiar la configuración, elija la opción **Importar y exportar configuraciones** del menú **Herramientas** . Para obtener más información, consulte [Personalizar la configuración de desarrollo en Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Los cuadros de diálogo y comandos de menú que se ven pueden diferir de los descritos en la Ayuda, en función de los valores de configuración o de edición activos. Para cambiar la configuración, elija la opción **Importar y exportar configuraciones** del menú **Herramientas** . Para obtener más información, vea [Personalizar la configuración de desarrollo en Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
 ## <a name="prerequisites"></a>Requisitos previos  
  Para poder completar este tutorial, necesitará:  
@@ -66,7 +66,7 @@ El espacio de nombres <xref:System.Windows.Forms?displayProperty=nameWithType> e
   
 1.  Cree un proyecto de aplicación de Windows denominado **MDI**.  
   
-     Para obtener más información, consulta [How to: Create a Windows Application Project](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa).  
+     Para más información, consulte [Cómo: Crear un proyecto de aplicación para Windows](http://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa).  
   
 2.  En el Diseñador de Windows Forms, seleccione el formulario.  
   
@@ -120,7 +120,7 @@ El espacio de nombres <xref:System.Windows.Forms?displayProperty=nameWithType> e
   
 1.  Agregue un nuevo formulario denominado `ChildForm` al proyecto.  
   
-     Para obtener más información, consulte [Cómo: agregar Windows Forms a un proyecto](http://msdn.microsoft.com/en-us/3d7bb25f-fd90-47cf-9378-fa0d764686c1).  
+     Para obtener más información, consulte [Cómo: agregar Windows Forms a un proyecto](http://msdn.microsoft.com/library/3d7bb25f-fd90-47cf-9378-fa0d764686c1).  
   
 2.  Desde el **cuadro de herramientas**, arrastre un <xref:System.Windows.Forms.MenuStrip> control en el formulario secundario.  
   
@@ -128,7 +128,7 @@ El espacio de nombres <xref:System.Windows.Forms?displayProperty=nameWithType> e
   
 4.  En el **Editor de la colección de elementos** diálogo cuadro, agregue un nuevo <xref:System.Windows.Forms.ToolStripMenuItem> denominado **ChildMenuItem** al menú secundario.  
   
-     Para obtener más información, consulte [Editor de colección de elementos ToolStrip](http://msdn.microsoft.com/en-us/e681f3ab-94ba-4b2b-ac64-1dfad46caa25).  
+     Para obtener más información, consulte [Editor de colección de elementos ToolStrip](http://msdn.microsoft.com/library/e681f3ab-94ba-4b2b-ac64-1dfad46caa25).  
   
 ## <a name="testing-the-form"></a>Comprobar el formulario  
   

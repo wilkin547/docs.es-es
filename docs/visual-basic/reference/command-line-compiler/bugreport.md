@@ -14,11 +14,11 @@ ms.assetid: e4325406-8dbd-4b48-b311-9ee0799e48bb
 caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 7090142f940ae42f554fc0ba16bcc80d8537e38a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 0c36cdcaf8d2db0b08e262d6ba8ff2bb774fb233
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="bugreport"></a>/bugreport
 Crea un archivo que puede utilizar cuando se archiva un informe de errores.  
@@ -33,7 +33,7 @@ Crea un archivo que puede utilizar cuando se archiva un informe de errores.
   
 |Término|Definición|  
 |---|---|  
-|`file`|Obligatorio. El nombre del archivo que contendrá el informe de errores. Ponga el nombre de archivo entre comillas ("") si el nombre contiene un espacio.|  
+|`file`|Requerido. El nombre del archivo que contendrá el informe de errores. Ponga el nombre de archivo entre comillas ("") si el nombre contiene un espacio.|  
   
 ## <a name="remarks"></a>Comentarios  
  La siguiente información se agrega a `file`:  
@@ -72,4 +72,4 @@ vbc /bugreport:problem.txt t2.vb
  [/Debug (Visual Basic)](../../../visual-basic/reference/command-line-compiler/debug.md)  
  [/errorreport](../../../visual-basic/reference/command-line-compiler/errorreport.md)  
  [Líneas de comandos de compilación de ejemplo](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)  
- [Elemento de trustLevel para securityPolicy (ASP.NET Settings Schema)](http://msdn.microsoft.com/en-us/729ab04c-03da-4ee5-86b1-be9d08a09369)
+ [Elemento de trustLevel para securityPolicy (ASP.NET Settings Schema)](http://msdn.microsoft.com/library/729ab04c-03da-4ee5-86b1-be9d08a09369)

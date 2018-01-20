@@ -21,11 +21,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 0d060e0b511f17a68edb013ae7241e1accbc7dcf
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7317bade85641d7d055facabcf7103b945609583
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="scrollviewer-overview"></a>Información general sobre ScrollViewer
 El contenido en una interfaz de usuario suele ser mayor que el área de presentación de la pantalla del equipo. El <xref:System.Windows.Controls.ScrollViewer> control proporciona una manera cómoda de habilitar el desplazamiento de contenido en [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aplicaciones. Este tema se presentan los <xref:System.Windows.Controls.ScrollViewer> elemento y se proporcionan varios ejemplos de uso.  
@@ -75,7 +75,7 @@ El contenido en una interfaz de usuario suele ser mayor que el área de presenta
  <xref:System.Windows.Controls.ScrollViewer>  
  <xref:System.Windows.Controls.Primitives.ScrollBar>  
  <xref:System.Windows.Controls.Primitives.IScrollInfo>  
- [Crear un visor de desplazamiento](http://msdn.microsoft.com/en-us/c8e46af7-b417-441b-aa30-791cbdbd43ef)  
+ [Crear un visor de desplazamiento](http://msdn.microsoft.com/library/c8e46af7-b417-441b-aa30-791cbdbd43ef)  
  [Documentos en WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
  [ScrollBar Styles and Templates](../../../../docs/framework/wpf/controls/scrollbar-styles-and-templates.md) (Estilos y plantillas de ScrollBar)  
  [Controles](../../../../docs/framework/wpf/advanced/optimizing-performance-controls.md)

@@ -21,11 +21,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: efb6db7758319d2d3c6b403e12fe0edabe7c5ff0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 614b5cc4843dbb886fa9cb02c56b28452e9fae8a
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="storyboards-overview"></a>Información general sobre objetos Storyboard
 Este tema muestra cómo usar <xref:System.Windows.Media.Animation.Storyboard> objetos para organizar y aplicar animaciones. Describe cómo manipular interactivamente <xref:System.Windows.Media.Animation.Storyboard> objetos y se describe la sintaxis de establecimiento indirecto de propiedades.  
@@ -74,7 +74,7 @@ Este tema muestra cómo usar <xref:System.Windows.Media.Animation.Storyboard> ob
 |--------------------------------|-------------------|-----------|----------------------|-------------------|-------------|  
 |<xref:System.Windows.Media.Animation.BeginStoryboard>y un<xref:System.Windows.EventTrigger>|Sí|Sí|Sí|Sí|[Animar una propiedad utilizando un guión gráfico](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-a-storyboard.md)|  
 |<xref:System.Windows.Media.Animation.BeginStoryboard>y una propiedad<xref:System.Windows.Trigger>|No|Sí|Sí|Sí|[Activar una animación al cambiar el valor de una propiedad](../../../../docs/framework/wpf/graphics-multimedia/how-to-trigger-an-animation-when-a-property-value-changes.md)|  
-|<xref:System.Windows.Media.Animation.BeginStoryboard>y un<xref:System.Windows.DataTrigger>|No|Sí|Sí|Sí|[Cómo: Activar una animación cuando se cambian datos](http://msdn.microsoft.com/en-us/a736bb3a-2ae5-479a-a33a-75a27055d863)|  
+|<xref:System.Windows.Media.Animation.BeginStoryboard>y un<xref:System.Windows.DataTrigger>|No|Sí|Sí|Sí|[Cómo: Activar una animación cuando se cambian datos](http://msdn.microsoft.com/library/a736bb3a-2ae5-479a-a33a-75a27055d863)|  
 |Método <xref:System.Windows.Media.Animation.Storyboard.Begin%2A>|Sí|No|No|No|[Animar una propiedad utilizando un guión gráfico](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-a-storyboard.md)|  
   
  En el ejemplo siguiente se usa un <xref:System.Windows.Media.Animation.Storyboard> para animar la <xref:System.Windows.FrameworkElement.Width%2A> de un <xref:System.Windows.Shapes.Rectangle> elemento y el <xref:System.Windows.Media.SolidColorBrush.Color%2A> de un <xref:System.Windows.Media.SolidColorBrush> usado para pintar que <xref:System.Windows.Shapes.Rectangle>.  

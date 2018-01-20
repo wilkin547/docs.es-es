@@ -14,11 +14,11 @@ author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
 ms.workload: dotnet
-ms.openlocfilehash: cad98ab0df372b19efcf102cce3f80e3f7b0632f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b4ec6efa2a2b0993f7088e4424de86b3d3ad6c8b
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="custom-secure-metadata-endpoint"></a>punto de conexión personalizado de metadatos seguros
 Este ejemplo muestra cómo implementar un servicio con un punto de conexión seguro de metadatos que utiliza uno de los enlaces de intercambio de metadatos no y cómo configurar [la herramienta de utilidad de metadatos de ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) o los clientes para capturar el metadatos de un punto de conexión de metadatos. Hay dos enlaces proporcionados por el sistema disponibles para exponer puntos de conexión de metadatos: mexHttpBinding y mexHttpsBinding. mexHttpBinding se usa para exponer un punto de conexión de metadatos sobre HTTP de una manera no segura. mexHttpsBinding se usa para exponer un punto de conexión de metadatos sobre HTTPS de una manera no segura. En este ejemplo se muestra cómo exponer un extremo de metadatos seguro mediante el objeto <xref:System.ServiceModel.WSHttpBinding>. Desearía hacer esto cuando desee cambiar la configuración de seguridad en el enlace, pero no desee usar HTTPS. Si utiliza mexHttpsBinding, su extremo de metadatos será seguro, pero no hay ninguna manera de modificar la configuración del enlace.  
@@ -153,7 +153,7 @@ ChannelFactory<ICalculator> cf = new    ChannelFactory<ICalculator>(endpoint.Bin
   
 2.  Ejecutar la aplicación cliente desde \MetadataResolverClient\bin o \SvcutilClient\bin. La actividad del cliente se muestra en la aplicación de consola del cliente.  
   
-3.  Si el cliente y el servicio no se pueden comunicar, vea [Troubleshooting Tips](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b).  
+3.  Si el cliente y el servicio no se pueden comunicar, consulte [sugerencias de solución de problemas de](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
   
 4.  Quite los certificados ejecutando Cleanup.bat cuando haya finalizado con el ejemplo. Otros ejemplos de seguridad usan los mismos certificados.  
   
@@ -179,7 +179,7 @@ ChannelFactory<ICalculator> cf = new    ChannelFactory<ICalculator>(endpoint.Bin
   
 10. En el equipo cliente, ejecute MetadataResolverClient o SvcutilClient desde VS.  
   
-    1.  Si el cliente y el servicio no se pueden comunicar, vea [Troubleshooting Tips](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b).  
+    1.  Si el cliente y el servicio no se pueden comunicar, consulte [sugerencias de solución de problemas de](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
   
 #### <a name="to-clean-up-after-the-sample"></a>Para realizar una limpieza después de ejecutar el ejemplo  
   

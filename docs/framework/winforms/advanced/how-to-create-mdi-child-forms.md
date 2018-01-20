@@ -21,11 +21,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 2bbbe8dbbfa6b2aebd3834314f0f56b7c7643c21
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d0ee60e9b25ed4238ccdd738cd59a69876f6b55d
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-create-mdi-child-forms"></a>Cómo: Crear formularios MDI secundarios
 Formularios MDI secundarios son un elemento esencial de [aplicaciones de interfaz de múltiples documentos (MDI)](../../../../docs/framework/winforms/advanced/multiple-document-interface-mdi-applications.md), ya que estos formularios son el centro de interacción del usuario.  
@@ -33,7 +33,7 @@ Formularios MDI secundarios son un elemento esencial de [aplicaciones de interfa
  En el siguiente procedimiento, va a crear formulario MDI secundario que muestra un control <xref:System.Windows.Forms.RichTextBox>, similar a la mayoría de las aplicaciones de procesamiento de texto. Sustituir el control <xref:System.Windows.Forms> por otros controles, como el control <xref:System.Windows.Forms.DataGridView>, o por una mezcla de controles permite crear ventanas secundarias MDI (y, por extensión, aplicaciones MDI) con diversas posibilidades.  
   
 > [!NOTE]
->  Los cuadros de diálogo y comandos de menú que se ven pueden diferir de los descritos en la Ayuda, en función de los valores de configuración o de edición activos. Para cambiar la configuración, elija la opción **Importar y exportar configuraciones** del menú **Herramientas** . Para obtener más información, consulte [Personalizar la configuración de desarrollo en Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Los cuadros de diálogo y comandos de menú que se ven pueden diferir de los descritos en la Ayuda, en función de los valores de configuración o de edición activos. Para cambiar la configuración, elija la opción **Importar y exportar configuraciones** del menú **Herramientas** . Para obtener más información, vea [Personalizar la configuración de desarrollo en Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
 ### <a name="to-create-mdi-child-forms"></a>Para crear formularios secundarios MDI  
   

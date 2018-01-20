@@ -18,11 +18,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 27068808dcf45a2a210258d45faa894524bd883f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9636585fe9671b8822a6510d405eef5e6f23527e
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel"></a>Tutorial: Organizar controles en formularios Windows Forms mediante TableLayoutPanel
 Algunas aplicaciones requieren un formulario con un diseño que se organice de manera adecuada y automática a medida que el formulario o el contenido cambien de tamaño. Si necesita un diseño dinámico y no desea controlar los eventos <xref:System.Windows.Forms.Control.Layout> de forma explícita en el código, considere la posibilidad de usar un panel de diseño.  
@@ -33,7 +33,7 @@ Algunas aplicaciones requieren un formulario con un diseño que se organice de m
   
  El <xref:System.Windows.Forms.TableLayoutPanel> organiza su contenido en una cuadrícula, proporcionando una funcionalidad similar en el código HTML \<tabla > elemento. El <xref:System.Windows.Forms.TableLayoutPanel> control le permite colocar los controles en un diseño de cuadrícula sin necesidad de especificar con precisión la posición de cada control individual. Las celdas se organizan en filas y columnas, y pueden tener distintos tamaños. Pueden combinar celdas en filas y columnas. Las celdas pueden contener cualquier elemento puede contener y se comportan de la mayoría de los demás aspectos como contenedores de un formulario.  
   
- El <xref:System.Windows.Forms.TableLayoutPanel> control también proporciona una funcionalidad de cambio de tamaño proporcional en tiempo de ejecución, por lo que su diseño puede cambiar fácilmente cuando se cambia el tamaño del formulario. Esto hace que el <xref:System.Windows.Forms.TableLayoutPanel> control idónea para propósitos tales como formularios de entrada de datos y aplicaciones localizadas. Para obtener más información, consulte [Tutorial: crear un formulario de Windows puede cambiar el tamaño de entrada de datos](http://msdn.microsoft.com/en-us/e193b4fc-912a-4917-b036-b76c7a6f58ab) y [Tutorial: crear un formulario de Windows Localizable](http://msdn.microsoft.com/en-us/c5240b6e-aaca-4286-9bae-778a416edb9c).  
+ El <xref:System.Windows.Forms.TableLayoutPanel> control también proporciona una funcionalidad de cambio de tamaño proporcional en tiempo de ejecución, por lo que su diseño puede cambiar fácilmente cuando se cambia el tamaño del formulario. Esto hace que el <xref:System.Windows.Forms.TableLayoutPanel> control idónea para propósitos tales como formularios de entrada de datos y aplicaciones localizadas. Para obtener más información, consulte [Tutorial: crear un formulario de Windows puede cambiar el tamaño de entrada de datos](http://msdn.microsoft.com/library/e193b4fc-912a-4917-b036-b76c7a6f58ab) y [Tutorial: crear un formulario de Windows Localizable](http://msdn.microsoft.com/library/c5240b6e-aaca-4286-9bae-778a416edb9c).  
   
  En general, no debe usar un <xref:System.Windows.Forms.TableLayoutPanel> control como un contenedor para todo el diseño. Use <xref:System.Windows.Forms.TableLayoutPanel> controles para proporcionar capacidades de cambio de tamaño proporcionales a las partes del diseño.  
   
@@ -58,14 +58,14 @@ Algunas aplicaciones requieren un formulario con un diseño que se organice de m
  Cuando termine, comprenderá el rol de estas importantes características de diseño.  
   
 > [!NOTE]
->  Los cuadros de diálogo y comandos de menú que se ven pueden diferir de los descritos en la Ayuda, en función de los valores de configuración o de edición activos. Para cambiar la configuración, elija la opción **Importar y exportar configuraciones** del menú **Herramientas** . Para obtener más información, consulte [Personalizar la configuración de desarrollo en Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Los cuadros de diálogo y comandos de menú que se ven pueden diferir de los descritos en la Ayuda, en función de los valores de configuración o de edición activos. Para cambiar la configuración, elija la opción **Importar y exportar configuraciones** del menú **Herramientas** . Para obtener más información, vea [Personalizar la configuración de desarrollo en Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
 ## <a name="creating-the-project"></a>Crear el proyecto  
  El primer paso es crear el proyecto y configurar el formulario.  
   
 #### <a name="to-create-the-project"></a>Para crear el proyecto  
   
-1.  Cree un proyecto de aplicación de Windows denominado "TableLayoutPanelExample". Para obtener más información, consulte [Cómo: crear un proyecto de aplicación de Windows](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa) .  
+1.  Cree un proyecto de aplicación de Windows denominado "TableLayoutPanelExample". Para obtener más información, consulte [Cómo: crear un proyecto de aplicación de Windows](http://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa) .  
   
 2.  Seleccione el formulario en el **Windows** **Diseñador de formularios**.  
   
@@ -195,8 +195,8 @@ Algunas aplicaciones requieren un formulario con un diseño que se organice de m
  [Tutorial: Organizar controles en Windows Forms mediante FlowLayoutPanel](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)  
  [Tutorial: Organizar controles en formularios Windows Forms mediante líneas de ajuste](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)  
  [Microsoft Windows User Experience, Official Guidelines for User Interface Developers and diseñadores. Redmond, WA: Microsoft Press, 1999. (USBN: 0-7356-0566-1)](http://www.microsoft.com/mspress/southpacific/books/book11588.htm)  
- [Tutorial: Crear Windows Forms de entrada de datos de tamaño variable](http://msdn.microsoft.com/en-us/e193b4fc-912a-4917-b036-b76c7a6f58ab)  
- [Tutorial: Crear un formulario Localizable Windows Forms](http://msdn.microsoft.com/en-us/c5240b6e-aaca-4286-9bae-778a416edb9c)  
+ [Tutorial: Crear Windows Forms de entrada de datos de tamaño variable](http://msdn.microsoft.com/library/e193b4fc-912a-4917-b036-b76c7a6f58ab)  
+ [Tutorial: Crear un formulario Localizable Windows Forms](http://msdn.microsoft.com/library/c5240b6e-aaca-4286-9bae-778a416edb9c)  
  [Procedimientos recomendados para el control TableLayoutPanel](../../../../docs/framework/winforms/controls/best-practices-for-the-tablelayoutpanel-control.md)  
  [Información general sobre la propiedad AutoSize](../../../../docs/framework/winforms/controls/autosize-property-overview.md)  
  [Procedimiento para acoplar controles en formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-dock-controls-on-windows-forms.md)  

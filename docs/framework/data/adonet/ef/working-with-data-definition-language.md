@@ -17,11 +17,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 8b363105f0dd6978d4e59678fb7cd1b3f1d721df
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: dc2642df7cfe0f0a4b56537d0b2ebeae34304145
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="working-with-data-definition-language"></a>Trabajar con lenguaje de definición de datos
 A partir de la [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] versión 4, el [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] es compatible con el lenguaje de definición de datos (DDL). Esto le permite crear o eliminar una instancia de la base de datos basada en la cadena de conexión y los metadatos del modelo de almacenamiento (SSDL).  
@@ -51,11 +51,11 @@ A partir de la [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)
   
 2.  Agregue un modelo existente a la aplicación.  
   
-    1.  Agregar un modelo vacío denominado `SchoolModel`. Para crear un modelo vacío, consulte el [Cómo: crear un nuevo archivo de .edmx](http://msdn.microsoft.com/en-us/beb8189e-e51c-4051-839c-9902c224abf2) tema.  
+    1.  Agregar un modelo vacío denominado `SchoolModel`. Para crear un modelo vacío, consulte el [Cómo: crear un nuevo archivo de .edmx](http://msdn.microsoft.com/library/beb8189e-e51c-4051-839c-9902c224abf2) tema.  
   
      El archivo SchoolModel.edmx se añade al proyecto.  
   
-    1.  Copie el almacenamiento de información conceptual y asignación de contenido para el modelo School desde el [modelo School](http://msdn.microsoft.com/en-us/859a9587-81ea-4a45-9bc0-f8d330e1adac) tema.  
+    1.  Copie el almacenamiento de información conceptual y asignación de contenido para el modelo School desde el [modelo School](http://msdn.microsoft.com/library/859a9587-81ea-4a45-9bc0-f8d330e1adac) tema.  
   
     2.  Abra el archivo SchoolModel.edmx y pegue el contenido dentro de las etiquetas `edmx:Runtime`.  
   

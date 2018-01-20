@@ -18,11 +18,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 73c34f8edfa735e361bf294f08cefd285be3e898
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 363d81ff0e4262ce0c8252ada3625bb9a157f5a1
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="trees-in-wpf"></a>Árboles en WPF
 En muchas tecnologías, los elementos y componentes se organizan en una estructura de árbol en la que los desarrolladores manipulan directamente los nodos de objeto en el árbol para modificar la representación o el comportamiento de una aplicación. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] también usa varias metáforas de la estructura de árbol para definir las relaciones entre los elementos de programa. En su mayor parte, los desarrolladores de WPF pueden crear una aplicación en código o definir partes de la aplicación en código XAML mientras piensan conceptualmente en la metáfora de árbol de objetos, pero estarán llamando a una API concreta o usando un marcado concreto para llamarla, en lugar de usar una API de manipulación de árbol de objetos general como se usaría en DOM XML. WPF expone dos clases auxiliares que proporcionan una vista de metáfora de árbol, <xref:System.Windows.LogicalTreeHelper> y <xref:System.Windows.Media.VisualTreeHelper>. Los términos árbol visual y árbol lógico también se usan en la documentación de WPF porque estos mismos árboles son útiles para entender el comportamiento de ciertas características clave de WPF. Define lo que representan el árbol visual y el árbol lógico de este tema, se describe cómo se relacionan estos árboles con un concepto de árbol de objetos general y presenta <xref:System.Windows.LogicalTreeHelper> y <xref:System.Windows.Media.VisualTreeHelper>s.  
@@ -40,7 +40,7 @@ En muchas tecnologías, los elementos y componentes se organizan en una estructu
   
 <a name="logical_tree"></a>   
 ## <a name="the-logical-tree"></a>El árbol lógico  
- En [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], el contenido se agrega a los elementos de la interfaz de usuario estableciendo propiedades de los objetos que respaldan esos elementos. Por ejemplo, se agregan elementos a un <xref:System.Windows.Controls.ListBox> control mediante la manipulación de su <xref:System.Windows.Controls.ItemsControl.Items%2A> propiedad. Al hacerlo, está colocando elementos en el <xref:System.Windows.Controls.ItemCollection> que es el <xref:System.Windows.Controls.ItemsControl.Items%2A> valor de propiedad. De forma similar, para agregar objetos a un <xref:System.Windows.Controls.DockPanel>, manipular su <xref:System.Windows.Controls.Panel.Children%2A> valor de propiedad. En este caso, va a agregar objetos a la <xref:System.Windows.Controls.UIElementCollection>. Para obtener un ejemplo de código, vea [Add an Element Dynamically](http://msdn.microsoft.com/en-us/d00f258a-7973-4de7-bc54-a3fc1f638419) (Agregar dinámicamente un elemento).  
+ En [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], el contenido se agrega a los elementos de la interfaz de usuario estableciendo propiedades de los objetos que respaldan esos elementos. Por ejemplo, se agregan elementos a un <xref:System.Windows.Controls.ListBox> control mediante la manipulación de su <xref:System.Windows.Controls.ItemsControl.Items%2A> propiedad. Al hacerlo, está colocando elementos en el <xref:System.Windows.Controls.ItemCollection> que es el <xref:System.Windows.Controls.ItemsControl.Items%2A> valor de propiedad. De forma similar, para agregar objetos a un <xref:System.Windows.Controls.DockPanel>, manipular su <xref:System.Windows.Controls.Panel.Children%2A> valor de propiedad. En este caso, va a agregar objetos a la <xref:System.Windows.Controls.UIElementCollection>. Para obtener un ejemplo de código, vea [Add an Element Dynamically](http://msdn.microsoft.com/library/d00f258a-7973-4de7-bc54-a3fc1f638419) (Agregar dinámicamente un elemento).  
   
  En [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], al colocar los elementos de lista en un <xref:System.Windows.Controls.ListBox> o controles u otros elementos de interfaz de usuario en un <xref:System.Windows.Controls.DockPanel>, utiliza también el <xref:System.Windows.Controls.ItemsControl.Items%2A> y <xref:System.Windows.Controls.Panel.Children%2A> propiedades, explícita o implícitamente, como en el ejemplo siguiente.  
   

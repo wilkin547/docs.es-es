@@ -18,14 +18,14 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 08cb39215ea1d9aff1cd7ecc125bd731f14a4d7f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6b60d4ee7908a5ed9dcb3393132ba7d0bd0a6cb5
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="walkthrough-automatically-populating-the-toolbox-with-custom-components"></a>Tutorial: Rellenar automáticamente el cuadro de herramientas con componentes personalizados
-Si los componentes están definidos en un proyecto de la solución actualmente abierta, estas aparecerán automáticamente en el **cuadro de herramientas**, sin ninguna acción necesaria por parte del usuario. Puede rellenar manualmente el **cuadro de herramientas** con componentes personalizados mediante el uso de la [elegir Toolbox Items Dialog Box (Visual Studio)](http://msdn.microsoft.com/en-us/bd07835f-18a8-433e-bccc-7141f65263bb), pero la **cuadro de herramientas** tiene en cuenta de elementos de la solución generar resultados con todas las características siguientes:  
+Si los componentes están definidos en un proyecto de la solución actualmente abierta, estas aparecerán automáticamente en el **cuadro de herramientas**, sin ninguna acción necesaria por parte del usuario. Puede rellenar manualmente el **cuadro de herramientas** con componentes personalizados mediante el uso de la [elegir Toolbox Items Dialog Box (Visual Studio)](http://msdn.microsoft.com/library/bd07835f-18a8-433e-bccc-7141f65263bb), pero la **cuadro de herramientas** tiene en cuenta de elementos de la solución generar resultados con todas las características siguientes:  
   
 -   Implementa <xref:System.ComponentModel.IComponent>;  
   
@@ -49,7 +49,7 @@ Si los componentes están definidos en un proyecto de la solución actualmente a
  Cuando haya terminado, verá que el **cuadro de herramientas** se rellena con un componente que ha creado.  
   
 > [!NOTE]
->  Los cuadros de diálogo y comandos de menú que se ven pueden diferir de los descritos en la Ayuda, en función de los valores de configuración o de edición activos. Para cambiar la configuración, elija la opción **Importar y exportar configuraciones** del menú **Herramientas** . Para obtener más información, consulte [Personalizar la configuración de desarrollo en Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Los cuadros de diálogo y comandos de menú que se ven pueden diferir de los descritos en la Ayuda, en función de los valores de configuración o de edición activos. Para cambiar la configuración, elija la opción **Importar y exportar configuraciones** del menú **Herramientas** . Para obtener más información, vea [Personalizar la configuración de desarrollo en Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
 ## <a name="creating-the-project"></a>Crear el proyecto  
  El primer paso es crear el proyecto y configurar el formulario.  
@@ -58,11 +58,11 @@ Si los componentes están definidos en un proyecto de la solución actualmente a
   
 1.  Cree un proyecto de aplicación basada en Windows llamado `ToolboxExample`.  
   
-     Para obtener más información, consulta [How to: Create a Windows Application Project](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa).  
+     Para más información, consulte [Cómo: Crear un proyecto de aplicación para Windows](http://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa).  
   
 2.  Agregue un nuevo componente al proyecto. Llámelo `DemoComponent`.  
   
-     Para obtener más información, consulte [NIB: Cómo: agregar nuevos elementos de proyecto](http://msdn.microsoft.com/en-us/63d3e16b-de6e-4bb5-a0e3-ecec762201ce).  
+     Para obtener más información, consulte [NIB: Cómo: agregar nuevos elementos de proyecto](http://msdn.microsoft.com/library/63d3e16b-de6e-4bb5-a0e3-ecec762201ce).  
   
 3.  Compile el proyecto.  
   
@@ -93,7 +93,7 @@ Si los componentes están definidos en un proyecto de la solución actualmente a
   
 1.  Descargue el proyecto de la solución.  
   
-     Para obtener más información acerca de cómo descargar los proyectos, vea [NIB: Cómo: descargar y volver a cargar proyectos](http://msdn.microsoft.com/en-us/abc0155b-8fcb-4ffc-95b6-698518a7100b). Si se pide que guarde, elija **Sí**.  
+     Para obtener más información acerca de cómo descargar los proyectos, vea [NIB: Cómo: descargar y volver a cargar proyectos](http://msdn.microsoft.com/library/abc0155b-8fcb-4ffc-95b6-698518a7100b). Si se pide que guarde, elija **Sí**.  
   
 2.  Agregue un nuevo **aplicación de Windows** proyecto a la solución. Abra el formulario en el **diseñador**.  
   
@@ -107,7 +107,7 @@ Si los componentes están definidos en un proyecto de la solución actualmente a
  En este tutorial se muestra que la **cuadro de herramientas** tiene en cuenta los componentes de un proyecto, pero la **cuadro de herramientas** es también tiene en cuenta los controles. Experimentar con sus propios controles personalizados agregando y quitando proyectos de control de la solución.  
   
 ## <a name="see-also"></a>Vea también  
- [General, Diseñador de Windows Forms, cuadro de diálogo Opciones](http://msdn.microsoft.com/en-us/8dd170af-72f0-4212-b04b-034ceee92834)  
- [Cómo: Manipular las fichas del cuadro de herramientas](http://msdn.microsoft.com/en-us/21285050-cadd-455a-b1f5-a2289a89c4db)  
- [Elegir elementos del cuadro de herramientas (Cuadro de diálogo): Visual Studio](http://msdn.microsoft.com/en-us/bd07835f-18a8-433e-bccc-7141f65263bb)  
+ [General, Diseñador de Windows Forms, cuadro de diálogo Opciones](http://msdn.microsoft.com/library/8dd170af-72f0-4212-b04b-034ceee92834)  
+ [Cómo: Manipular las fichas del cuadro de herramientas](http://msdn.microsoft.com/library/21285050-cadd-455a-b1f5-a2289a89c4db)  
+ [Elegir elementos del cuadro de herramientas (Cuadro de diálogo): Visual Studio](http://msdn.microsoft.com/library/bd07835f-18a8-433e-bccc-7141f65263bb)  
  [Insertar controles en Windows Forms](../../../../docs/framework/winforms/controls/putting-controls-on-windows-forms.md)

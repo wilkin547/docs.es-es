@@ -17,11 +17,11 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.workload: dotnet
-ms.openlocfilehash: 1bd25dd0444c428e000371abe494e62b258eaa63
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d2593df04b93db17f9ca61a98b21aaec1d534d46
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="assembly-binding-redirection-security-permission"></a>Permiso de seguridad para la redirección de enlaces de ensamblados
 Para realizar una redirección de enlaces de ensamblado de forma explícita en un archivo de configuración, se precisa permiso de seguridad. Esto se aplica a la redirección de los ensamblados de .NET Framework y de los ensamblados de otros proveedores. El permiso se otorga estableciendo la <xref:System.Security.Permissions.SecurityPermissionFlag> marca en el <xref:System.Security.Permissions.SecurityPermission>. Los ensamblados administrados no tienen permisos de forma predeterminada.  
@@ -36,12 +36,12 @@ Para realizar una redirección de enlaces de ensamblado de forma explícita en u
 |----------|-----------------------------------|  
 |Zona de confianza (equipo local)|**ON**|  
 |Zona de intranet|**ON**|  
-|Zona de Internet|**DESACTIVAR**|  
-|Zonas de confianza|**DESACTIVAR**|  
+|Zona de Internet|**OFF**|  
+|Zonas de confianza|**OFF**|  
   
  Un administrador puede cambiar esta configuración de seguridad para admitir o rechazar escenarios específicos en un equipo determinado. No hay ninguna herramienta para cambiar la **BindingRedirects** marca predeterminado; un administrador debe editar manualmente el archivo Security.config en el equipo del usuario.  
   
 ## <a name="see-also"></a>Vea también  
- [Archivos de directiva de publicador y ejecución en paralelo](http://msdn.microsoft.com/en-us/97a042be-4d72-40c3-91c0-76fd36bdf133)  
+ [Archivos de directiva de publicador y ejecución en paralelo](http://msdn.microsoft.com/library/97a042be-4d72-40c3-91c0-76fd36bdf133)  
  [Cómo: Habilitar y deshabilitar redireccionamiento de enlaces automático](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)  
  [Ejecución en paralelo](../../../docs/framework/deployment/side-by-side-execution.md)

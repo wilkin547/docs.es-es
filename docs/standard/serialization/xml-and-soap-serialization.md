@@ -22,11 +22,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 006727e70c58834a4e628f584a28302a62363844
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 1ac5e83d6daf9654c541dcd8a748717be3ed05d0
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="xml-and-soap-serialization"></a>Serialización de SOAP y XML
 La serialización XML convierte (serializa) las propiedades y campos públicos de un objeto o los parámetros y valores devueltos de los métodos en una secuencia XML que se ajusta a un documento específico del lenguaje de definición de esquemas XML (XSD). La serialización XML produce clases fuertemente tipadas cuyas propiedades y campos se convierten en un formato en serie (en este caso, a XML) para almacenaje y transporte.  
@@ -93,10 +93,10 @@ La serialización XML convierte (serializa) las propiedades y campos públicos d
  Agrega tipos que usa la clase <xref:System.Xml.Serialization.XmlSchemaImporter>.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
- [Tecnologías de desarrollo avanzadas](http://msdn.microsoft.com/en-us/c4a7e341-f0c6-4df4-a74f-223387ac6e4e)  
+ [Tecnologías de desarrollo avanzadas](http://msdn.microsoft.com/library/c4a7e341-f0c6-4df4-a74f-223387ac6e4e)  
  Proporciona vínculos para más información sobre tareas y técnicas de desarrollo sofisticadas de .NET Framework.  
   
- [Servicios Web XML creados con ASP.NET y clientes de servicio Web XML](http://msdn.microsoft.com/en-us/1e64af78-d705-4384-b08d-591a45f4379c)  
+ [Servicios Web XML creados con ASP.NET y clientes de servicio Web XML](http://msdn.microsoft.com/library/1e64af78-d705-4384-b08d-591a45f4379c)  
  Proporciona los temas que describen y explican cómo programar los servicios Web XML utilizando ASP.NET.  
   
 ## <a name="see-also"></a>Vea también  

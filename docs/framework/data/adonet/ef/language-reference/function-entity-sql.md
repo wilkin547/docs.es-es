@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 957c31d3262e5c97d576d444748bd1979aee0ce0
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 308a1c72706b0896ac45c39ff1c6b746861debb1
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="function-entity-sql"></a>FUNCTION (Entity SQL)
 Define una función en el ámbito de un comando de consulta de Entity SQL.  
@@ -72,7 +72,7 @@ FUNCTION function-name
   
  `A()`  
   
- Para obtener más información, consulte [Cómo: Llamar a una función definida por el usuario](http://msdn.microsoft.com/en-us/ad131b86-8b4e-4747-8605-d4fc64fb9d02).  
+ Para obtener más información, consulte [Cómo: llamar a una función definida por el usuario](http://msdn.microsoft.com/library/ad131b86-8b4e-4747-8605-d4fc64fb9d02).  
   
  Las funciones también se pueden declarar en el modelo. Las funciones declaradas en el modelo se ejecutan de la misma manera que las funciones declaradas inline en el comando. Para obtener más información, consulte [User-Defined Functions](../../../../../../docs/framework/data/adonet/ef/language-reference/user-defined-functions-entity-sql.md).  
   

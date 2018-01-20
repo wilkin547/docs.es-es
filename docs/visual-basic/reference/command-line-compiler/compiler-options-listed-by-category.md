@@ -11,11 +11,11 @@ ms.assetid: fbe36f7a-7cfa-4f77-a8d4-2be5958568e3
 caps.latest.revision: "24"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: f554893858b9475b3d94a669a094206be6a5c3fa
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e4ba86f15e51fdceb09c7e005e2af4fa0f9f592f
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="visual-basic-compiler-options-listed-by-category"></a>Opciones del compilador de Visual Basic, por categoría
 El compilador de línea de comandos [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] se ofrece como alternativa a la compilación de programas desde el entorno de desarrollo integrado (IDE) de [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]. La siguiente es una lista de las opciones de línea de comandos del compilador [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] clasificadas por categoría funcional.  
@@ -75,7 +75,7 @@ El compilador de línea de comandos [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 
   
 ## <a name="help"></a>Ayuda  
   
-|Opción|Finalidad|  
+|Opción|Propósito|  
 |---|---|  
 |[/?](../../../visual-basic/reference/command-line-compiler/help.md)|Muestra las opciones del compilador. Este comando equivale a especificar la opción `/help`. No se produce ninguna compilación.|  
 |[/help](../../../visual-basic/reference/command-line-compiler/help.md)|Muestra las opciones del compilador. Este comando equivale a especificar la opción `/?`. No se produce ninguna compilación.|  
@@ -129,6 +129,6 @@ El compilador de línea de comandos [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 
   
 ## <a name="see-also"></a>Vea también  
  [Opciones del compilador de Visual Basic, por orden alfabético](../../../visual-basic/reference/command-line-compiler/compiler-options-listed-alphabetically.md)  
- [Introducción al Diseñador de proyectos](http://msdn.microsoft.com/en-us/898dd854-c98d-430c-ba1b-a913ce3c73d7)  
+ [Introducción al Diseñador de proyectos](http://msdn.microsoft.com/library/898dd854-c98d-430c-ba1b-a913ce3c73d7)  
  [Opciones del compilador de C#, por orden alfabético](../../../csharp/language-reference/compiler-options/listed-alphabetically.md)  
  [Opciones del compilador de C#, por categoría](../../../csharp/language-reference/compiler-options/listed-by-category.md)

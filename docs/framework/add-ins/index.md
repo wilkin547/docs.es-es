@@ -24,11 +24,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 7e4d336992be216178b1237c9f43bffb3de61fba
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 030b84245a5cec09dac3133b04235c65f7bb2d80
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="add-ins-and-extensibility"></a>Complementos y extensibilidad
 <a name="top"></a> Los complementos ofrecen características o servicios extendidos para una aplicación host. El [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] proporciona un modelo de programación que los desarrolladores pueden usar para desarrollar complementos y activarlos en la aplicación host. Para ello, el modelo construye una canalización de comunicación entre el host y el complemento. El modelo se implementa con los tipos de los espacios de nombres <xref:System.AddIn>, <xref:System.AddIn.Hosting>, <xref:System.AddIn.Pipeline>y <xref:System.AddIn.Contract> .  
@@ -81,7 +81,7 @@ Canalización de complementos
 ### <a name="discovery-and-activation"></a>Detección y activación  
  Puede activar un complemento con un token de una colección que representa a los complementos encontrados en un almacén de información. Los complementos se encuentran buscando el tipo que define la vista del host del complemento. También puede buscar un complemento específico por el tipo que define al complemento. El almacén de información se compone de dos archivos caché: el almacén de canalizaciones y el almacén de complementos.  
   
- Para ver información sobre cómo actualizar y volver a generar el almacén de información, consulte [Detección de complementos](http://msdn.microsoft.com/en-us/5d268dde-11df-4c4d-a022-f58d88bbc421). Para obtener información sobre la activación de complementos, consulte [Activación de complementos](http://msdn.microsoft.com/en-us/bedcbcdf-5964-4215-b5f3-3299798b2b3f) y [Cómo activar complementos con diferente seguridad y aislamiento](http://msdn.microsoft.com/en-us/7afe7ec8-5158-4350-9119-5df0ecab8aa5).  
+ Para obtener información sobre cómo actualizar y volver a generar el almacén de información, consulte [Add-in Discovery](http://msdn.microsoft.com/library/5d268dde-11df-4c4d-a022-f58d88bbc421). Para obtener información sobre la activación de complementos, consulte [activación de complementos](http://msdn.microsoft.com/library/bedcbcdf-5964-4215-b5f3-3299798b2b3f) y [Cómo: activar complementos con seguridad y aislamiento diferentes](http://msdn.microsoft.com/library/7afe7ec8-5158-4350-9119-5df0ecab8aa5).  
   
 ### <a name="isolation-levels-and-external-processes"></a>Niveles de aislamiento y procesos externos  
  El modelo de complementos admite varios niveles de aislamiento entre un complemento y su host o entre diferentes complementos. Empezando por el menos aislado, los niveles son los siguientes:  
@@ -96,10 +96,10 @@ Canalización de complementos
   
 -   Cada complemento se carga exclusivamente en su propio dominio de aplicación en un proceso externo. Este es el escenario más aislado.  
   
- Para obtener más información sobre el uso de procesos externos, consulte [Cómo activar complementos con diferente seguridad y aislamiento](http://msdn.microsoft.com/en-us/7afe7ec8-5158-4350-9119-5df0ecab8aa5).  
+ Para obtener más información sobre el uso de procesos externos, vea [Cómo: activar complementos con seguridad y aislamiento diferentes](http://msdn.microsoft.com/library/7afe7ec8-5158-4350-9119-5df0ecab8aa5).  
   
 ### <a name="lifetime-management"></a>Administración de la duración  
- Dado que el modelo de complementos abarca los límites de proceso y el dominio de aplicación, la recolección de elementos no utilizados, por sí sola, no es suficiente para liberar y recuperar objetos. El modelo de complementos proporciona un mecanismo de administración del ciclo de vida que utiliza recuentos de referencias y tokens y no suele requerir programación adicional. Para más información, consulte [Administración de la duración](http://msdn.microsoft.com/en-us/57a9c87e-394c-4fef-89f2-aa4223a2aeb5).  
+ Dado que el modelo de complementos abarca los límites de proceso y el dominio de aplicación, la recolección de elementos no utilizados, por sí sola, no es suficiente para liberar y recuperar objetos. El modelo de complementos proporciona un mecanismo de administración del ciclo de vida que utiliza recuentos de referencias y tokens y no suele requerir programación adicional. Para obtener más información, consulte [administración de la duración](http://msdn.microsoft.com/library/57a9c87e-394c-4fef-89f2-aa4223a2aeb5).  
   
  [Volver al principio](#top)  
   
@@ -115,7 +115,7 @@ Canalización de complementos
 |Título|Descripción|  
 |-----------|-----------------|  
 |[Pipeline Development](../../../docs/framework/add-ins/pipeline-development.md)|Describe la canalización de comunicación de los segmentos de la aplicación host al complemento. Proporciona ejemplos de código en los temas del tutorial que describen cómo construir la canalización y cómo implementar segmentos en la canalización de [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)].|  
-|[Dominios de aplicación y ensamblados](http://msdn.microsoft.com/en-us/433b04ae-4ba8-4849-9dbd-79194f240346)|Describe la relación entre los dominios de aplicación, que proporcionan un límite de aislamiento para la seguridad, la confiabilidad y el control de versiones, además de los ensamblados.|  
+|[Dominios de aplicación y ensamblados](http://msdn.microsoft.com/library/433b04ae-4ba8-4849-9dbd-79194f240346)|Describe la relación entre los dominios de aplicación, que proporcionan un límite de aislamiento para la seguridad, la confiabilidad y el control de versiones, además de los ensamblados.|  
   
  [Volver al principio](#top)  
   

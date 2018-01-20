@@ -14,11 +14,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 4e3d86153d4192e04e55fb9e99ef588b45511560
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 823edadf7d387d1a509edbdf839ac6eeece5d41f
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="wcf-service-publishing"></a>Publicación de servicio WCF
 La publicación de servicios de [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] ayuda a pasar del entorno de desarrollo preliminar que proporciona el host de servicio de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] y el cliente de prueba de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] a la implementación real de la aplicación en un entorno producción con fines de prueba. Antes de confirmar un plan de implementación final, puede usar la publicación de servicios de [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] para comprobar que el servicio de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] funciona correctamente y está listo para su publicación. También puede decidir implementar las bibliotecas de servicios de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] en varias ubicaciones de destino para comprobarlas.  
@@ -30,7 +30,7 @@ La publicación de servicios de [!INCLUDE[indigo1](../../../includes/indigo1-md.
   
 -   Biblioteca de servicio de distribución.  
   
- Puede encontrar estas plantillas de servicio seleccionando **archivo** -> **nuevo proyecto** -> **Visual Basic** o **Visual C#**  ->  **WCF**. Para otras plantillas WCF en esta ubicación (incluidos la aplicación de servicio de flujo de trabajo de WCF y aplicación de servicio WCF) puede publicar con [la publicación de aplicaciones web con un solo clic](https://msdn.microsoft.com/en-us/library/dd465337\(v=vs.110\).aspx).  
+ Puede encontrar estas plantillas de servicio seleccionando **archivo** -> **nuevo proyecto** -> **Visual Basic** o **Visual C#**  ->  **WCF**. Para otras plantillas WCF en esta ubicación (incluidos la aplicación de servicio de flujo de trabajo de WCF y aplicación de servicio WCF) puede publicar con [la publicación de aplicaciones web con un solo clic](https://msdn.microsoft.com/library/dd465337\(v=vs.110\).aspx).  
   
  El servicio se puede publicar en las ubicaciones de destino siguientes.  
   

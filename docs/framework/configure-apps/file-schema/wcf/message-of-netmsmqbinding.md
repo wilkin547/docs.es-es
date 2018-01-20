@@ -14,19 +14,19 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: cdef94f5ee570d7ce93544950a5a290d3eb534f9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8a7fdb8c6df84a76450aabaa983275f563d342fa
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="ltmessagegt-of-ltnetmsmqbindinggt"></a>Elemento &lt;message&gt; de &lt;netMsmqBinding&gt;
 Define la configuración de seguridad del mensaje SOAP en este enlace `netMsmqBinding`.  
   
- \<sistema. ServiceModel >  
+ \<system.ServiceModel>  
 \<enlaces >  
-\<netMsmqBinding >  
-\<enlace >  
+\<netMsmqBinding>  
+\<binding>  
 \<seguridad >  
 \<mensaje >  
   
@@ -60,7 +60,7 @@ Define la configuración de seguridad del mensaje SOAP en este enlace `netMsmqBi
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<seguridad >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-netmsmqbinding.md)|Define la configuración de seguridad de un enlace.|  
+|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-netmsmqbinding.md)|Define la configuración de seguridad de un enlace.|  
   
 ## <a name="see-also"></a>Vea también  
  <xref:System.ServiceModel.Configuration.MessageSecurityOverMsmqElement>  
@@ -71,5 +71,5 @@ Define la configuración de seguridad del mensaje SOAP en este enlace `netMsmqBi
  [Protección de servicios y clientes](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  [Enlaces](../../../../../docs/framework/wcf/bindings.md)  
  [Configuración de enlaces proporcionados por el sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Utilización de enlaces para configurar los clientes y servicios de Windows Communication Foundation](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
- [\<enlace >](../../../../../docs/framework/misc/binding.md)
+ [Utilización de enlaces para configurar los clientes y servicios de Windows Communication Foundation](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [\<binding>](../../../../../docs/framework/misc/binding.md)

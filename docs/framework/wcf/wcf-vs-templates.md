@@ -14,11 +14,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 75723b03468c2e7aeda765f2dabfc30e394c8c88
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2bb195af180ab9d840f91fe82f9f643119663374
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="wcf-visual-studio-templates"></a>Plantillas de Visual Studio para WCF
 Las plantillas para [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] de [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] son plantillas de proyecto y de elemento predefinidas que pueden utilizarse en [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] para generar rápidamente servicios [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] y las aplicaciones relacionadas.  
@@ -70,7 +70,7 @@ Las plantillas para [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] de [!IN
  Si el proyecto existente es un proyecto web, también se crea un archivo de host de servicio (service1.svc).  
   
 ### <a name="wcf-wf-service-project-and-item-template"></a>Plantilla de proyectos y elementos WF del servicio WCF.  
- Estas plantillas crean servicios [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] que hospedan un servicio de flujo de trabajo, que es un flujo de trabajo al que se puede obtener acceso como a un servicio web. Existen plantillas independientes para XAML o modelos de programación imperativos. Con las plantillas, puede crear un flujo de trabajo de equipo secuencial o de estado. Para obtener más información sobre estos tipos de flujo de trabajo, consulte [tutoriales de Windows Workflow Foundation](http://msdn.microsoft.com/en-us/e9705654-bd96-4b56-8d98-f1f118112d97). [!INCLUDE[crabout](../../../includes/crabout-md.md)]crear proyectos de flujo de trabajo, consulte [crear proyectos de flujo de trabajo heredado](/visualstudio/workflow-designer/creating-legacy-workflow-projects).  
+ Estas plantillas crean servicios [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] que hospedan un servicio de flujo de trabajo, que es un flujo de trabajo al que se puede obtener acceso como a un servicio web. Existen plantillas independientes para XAML o modelos de programación imperativos. Con las plantillas, puede crear un flujo de trabajo de equipo secuencial o de estado. Para obtener más información sobre estos tipos de flujo de trabajo, consulte [tutoriales de Windows Workflow Foundation](http://msdn.microsoft.com/library/e9705654-bd96-4b56-8d98-f1f118112d97). [!INCLUDE[crabout](../../../includes/crabout-md.md)]crear proyectos de flujo de trabajo, consulte [crear proyectos de flujo de trabajo heredado](/visualstudio/workflow-designer/creating-legacy-workflow-projects).  
   
  El diseñador [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] es más sensible si se utilizan flujos de trabajo de tipo XOML en lugar de los flujos basados en código. El flujo de trabajo de XOML es el tipo de flujo predeterminado que se crea.  
   

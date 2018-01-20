@@ -21,11 +21,11 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.workload: dotnet
-ms.openlocfilehash: 4ee4200a67ef9d9d123be3bc32b02ac61512d23b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0944f2798c45a039149baaa6e46ce2b56eb5c5df
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-locate-assemblies-by-using-devpath"></a>Cómo: Buscar ensamblados mediante DEVPATH
 Los desarrolladores conviene asegurarse de que un ensamblado compartido que están generando funciona correctamente con varias aplicaciones. En lugar de poner constantemente el ensamblado en la caché global de ensamblados durante el ciclo de desarrollo, el programador puede crear una variable de entorno DEVPATH que señala al directorio de salida de compilación para el ensamblado.  
@@ -55,4 +55,4 @@ Los desarrolladores conviene asegurarse de que un ensamblado compartido que est�
 >  Use esta opción solo en tiempo de desarrollo. El tiempo de ejecución no comprueba las versiones de ensamblados con nombre seguro que se encuentran en la variable DEVPATH. Simplemente utiliza el primer ensamblado que encuentre.  
   
 ## <a name="see-also"></a>Vea también  
- [Configurar aplicaciones de .NET Framework](http://msdn.microsoft.com/en-us/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)
+ [Configurar aplicaciones de .NET Framework](http://msdn.microsoft.com/library/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)

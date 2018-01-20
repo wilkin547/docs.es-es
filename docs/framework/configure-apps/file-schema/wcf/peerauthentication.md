@@ -14,20 +14,20 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: b1de8b8ceaf56931dfd3f09e5cc21ac939c49b4a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a900a1f3fc2e07cffe04833cc3c7d3ccd063e24a
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="ltpeerauthenticationgt"></a>&lt;peerAuthentication&gt;
 Especifica los valores de autenticación para un certificado del mismo nivel usado por el remitente del mensaje.  
   
- \<sistema. ServiceModel >  
-\<comportamientos >  
-\<serviceBehaviors >  
-\<comportamiento >  
-\<serviceCredentials >  
+ \<system.ServiceModel>  
+\<behaviors>  
+\<serviceBehaviors>  
+\<behavior>  
+\<serviceCredentials>  
 \<punto >  
 \<peerAuthentication >  
   
@@ -61,7 +61,7 @@ Especifica los valores de autenticación para un certificado del mismo nivel usa
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<punto >](../../../../../docs/framework/configure-apps/file-schema/wcf/peer-of-servicecredentials.md)|Especifica las credenciales actuales de un nodo del mismo nivel.|  
+|[\<peer>](../../../../../docs/framework/configure-apps/file-schema/wcf/peer-of-servicecredentials.md)|Especifica las credenciales actuales de un nodo del mismo nivel.|  
   
 ## <a name="remarks"></a>Comentarios  
  El elemento `<authentication>` corresponde a la clase <xref:System.ServiceModel.Security.X509PeerCertificateAuthentication>. Este elemento especifica un validador, que se invoca durante la autenticación entre vecinos en la malla. Cuando un nuevo par intenta establecer una conexión de vecino, pasa su propia credencial al par que responde. El validador del contestador se invoca para comprobar la credencial de la parte remota. Cuando una conexión del mismo nivel se establece en la malla, se autentican ambos pares mutuamente, lo que significa que se invocan los validadores en ambos extremos.  
@@ -74,6 +74,6 @@ Especifica los valores de autenticación para un certificado del mismo nivel usa
  <xref:System.ServiceModel.Configuration.X509PeerCertificateAuthenticationElement>  
  [Trabajo con certificados](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
  [Conexión de redes punto a punto](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)  
- [Autenticación de mensajes del canal del mismo nivel](http://msdn.microsoft.com/en-us/80e73386-514e-4c30-9e4a-b9ca8c173a95)  
- [Canal del mismo nivel de autenticación personalizada](http://msdn.microsoft.com/en-us/4aa8a82e-41a8-48e2-8621-7e1cbabdca7c)  
+ [Autenticación de mensajes del canal del mismo nivel](http://msdn.microsoft.com/library/80e73386-514e-4c30-9e4a-b9ca8c173a95)  
+ [Canal del mismo nivel de autenticación personalizada](http://msdn.microsoft.com/library/4aa8a82e-41a8-48e2-8621-7e1cbabdca7c)  
  [Protección de las aplicaciones de canal del mismo nivel](../../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md)

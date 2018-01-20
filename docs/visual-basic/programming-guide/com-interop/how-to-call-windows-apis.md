@@ -16,11 +16,11 @@ ms.assetid: 27d75f0a-54ab-4ee1-b91d-43513a19b12d
 caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: a219e031cdd36c713db8dcee6cc1da3849c9cf93
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 772db789fba4552a4645d2c6a242ba01944652ee
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-call-windows-apis-visual-basic"></a>Cómo: Llamar a las API de Windows (Visual Basic)
 En este ejemplo se define y se llama a la `MessageBox` función en user32.dll y, a continuación, se le pasa una cadena.  
@@ -43,9 +43,9 @@ En este ejemplo se define y se llama a la `MessageBox` función en user32.dll y,
 -   Tipo contenedor que se ha creado anteriormente mediante `CreateType`. (<xref:System.InvalidOperationException>)  
   
 ## <a name="see-also"></a>Vea también  
- [Invocación de un vistazo más cerca de la plataforma](http://msdn.microsoft.com/en-us/ba9dd55b-2eaa-45cd-8afd-75cb8d64d243)  
+ [Invocación de un vistazo más cerca de la plataforma](http://msdn.microsoft.com/library/ba9dd55b-2eaa-45cd-8afd-75cb8d64d243)  
  [Ejemplos de invocación de plataforma](../../../framework/interop/platform-invoke-examples.md)  
  [Consumir funciones DLL no administradas](../../../framework/interop/consuming-unmanaged-dll-functions.md)  
- [Definir un método con Reflection Emit](http://msdn.microsoft.com/en-us/84fd3bf6-628f-41aa-83d9-b990cf926e81)  
+ [Definir un método con Reflection Emit](http://msdn.microsoft.com/library/84fd3bf6-628f-41aa-83d9-b990cf926e81)  
  [Tutorial: Llamar a las API de Windows](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)  
  [Interoperabilidad COM](../../../visual-basic/programming-guide/com-interop/index.md)

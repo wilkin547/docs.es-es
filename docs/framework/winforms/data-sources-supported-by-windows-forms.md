@@ -27,11 +27,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 2d2c1c021759c7032257e95eb2cad202a461dc05
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5a0a4c2bca136377b9c6812008189dae009e195f
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="data-sources-supported-by-windows-forms"></a>Orígenes de datos compatibles con formularios Windows Forms
 Tradicionalmente, el enlace de datos se ha utilizado en las aplicaciones para aprovechar las ventajas de los datos almacenados en bases de datos. Con el enlace de datos de formularios Windows Forms, se pueden tener acceso a datos de bases de datos, así como datos de otras estructuras, como matrices y colecciones, siempre y cuando se cumplen ciertos requisitos mínimos.  
@@ -48,7 +48,7 @@ Tradicionalmente, el enlace de datos se ha utilizado en las aplicaciones para ap
  Formularios Windows Forms admiten propiedades de control de enlace de datos a las propiedades públicas en la instancia de un objeto mediante el <xref:System.Windows.Forms.Binding> tipo. Formularios Windows Forms también admite controles de lista en función de enlace, como un <xref:System.Windows.Forms.ListControl> a un objeto de instancia cuando una <xref:System.Windows.Forms.BindingSource> se utiliza.  
   
  matriz o colección  
- Para que actúe como un origen de datos, debe implementar una lista el <xref:System.Collections.IList> interfaz; un ejemplo sería una matriz que es una instancia de la <xref:System.Array> clase. Para obtener más información sobre matrices, vea [Cómo: crear una matriz de objetos (Visual Basic)](http://msdn.microsoft.com/en-us/6b64e069-0387-400c-9081-3bdc581020c3).  
+ Para que actúe como un origen de datos, debe implementar una lista el <xref:System.Collections.IList> interfaz; un ejemplo sería una matriz que es una instancia de la <xref:System.Array> clase. Para obtener más información sobre matrices, vea [Cómo: crear una matriz de objetos (Visual Basic)](http://msdn.microsoft.com/library/6b64e069-0387-400c-9081-3bdc581020c3).  
   
  En general, debe usar <xref:System.ComponentModel.BindingList%601> al crear listas de objetos para el enlace de datos. <xref:System.ComponentModel.BindingList%601>es una versión genérica de la <xref:System.ComponentModel.IBindingList> interfaz. El <xref:System.ComponentModel.IBindingList> interfaz extiende el <xref:System.Collections.IList> interfaz agregando propiedades, métodos y eventos necesarios para el enlace de datos bidireccional.  
   

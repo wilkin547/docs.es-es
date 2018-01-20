@@ -23,11 +23,11 @@ ms.assetid: c2c0e712-8dc2-43b9-b4c6-345fbb02e7ce
 caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: a3663ca5d3e0e2c94530d4a19ebff0022f495f3d
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 78e6789e7def5deeb8394e3aefecfdc187ec6ef6
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-call-a-windows-function-that-takes-unsigned-types-visual-basic"></a>Cómo: Llamar a una función de Windows que adopta tipos sin signo (Visual Basic)
 Si va a consumir una clase, módulo o estructura que contiene los miembros de tipos enteros sin signo, puede tener acceso a estos miembros con [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
@@ -83,7 +83,7 @@ Si va a consumir una clase, módulo o estructura que contiene los miembros de ti
     >  Realizar una llamada a código no administrado, como la interfaz de programación de aplicaciones (API) de Windows expone su código a posibles riesgos de seguridad.  
   
     > [!IMPORTANT]
-    >  Llamar a la API de Windows requiere el permiso de código no administrado, lo que podría afectar a su ejecución en situaciones de confianza parcial. Para obtener más información, consulte <xref:System.Security.Permissions.SecurityPermission> y [permisos de acceso del código](http://msdn.microsoft.com/en-us/e5ae402f-6dda-4732-bbe8-77296630f675).  
+    >  Llamar a la API de Windows requiere el permiso de código no administrado, lo que podría afectar a su ejecución en situaciones de confianza parcial. Para obtener más información, consulte <xref:System.Security.Permissions.SecurityPermission> y [permisos de acceso del código](http://msdn.microsoft.com/library/e5ae402f-6dda-4732-bbe8-77296630f675).  
   
 ## <a name="see-also"></a>Vea también  
  [Tipos de datos](../../../visual-basic/language-reference/data-types/data-type-summary.md)  

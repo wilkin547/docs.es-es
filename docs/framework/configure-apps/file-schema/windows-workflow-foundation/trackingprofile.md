@@ -13,18 +13,18 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 4ecdef6b27c53cceda1fd167812ceb451df152fb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6acc4e5b71d94b712ae27e540df073828285b0aa
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="lttrackingprofilegt"></a>&lt;trackingProfile&gt;
 Representa una sección de configuración para crear una suscripción a registros de seguimiento en un participante de seguimiento del flujo de trabajo. Los perfiles de seguimiento contienen consultas de seguimiento que permiten a un participante de seguimiento suscribirse a los eventos del flujo de trabajo que se emiten cuando el estado de una instancia de flujo de trabajo cambia en el tiempo de ejecución. Las consultas definidas dentro de la sección de perfil de seguimiento definen los tipos de eventos que devuelve la suscripción.  
   
  Para obtener más información del seguimiento de flujo de trabajo y su configuración, consulte [seguimiento y traza del flujo de trabajo](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md) y [perfiles de seguimiento](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md).  
   
-\<system.serviceModel >  
+\<system.serviceModel>  
 \<seguimiento >  
 \<trackingProfile >  
   
@@ -99,7 +99,7 @@ Representa una sección de configuración para crear una suscripción a registro
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<los participantes >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/participants.md)|Un elemento de configuración que contiene todas las consultas para un flujo de trabajo concreto identificado por el **un hipervínculo "http://msdn.microsoft.com/en-us/library/ System.ServiceModel.Activities.Tracking.Configuration.profileworkflowelement.activitydefinitionid (VS.100) .aspx "ctivityDefinitionId** propiedad.|  
+|[\<participants>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/participants.md)|Un elemento de configuración que contiene todas las consultas para un flujo de trabajo concreto identificado por el **un hipervínculo "http://msdn.Microsoft.com/library/spa System.ServiceModel.Activities.Tracking.Configuration.profileworkflowelement.activitydefinitionid (VS.100) .aspx "ctivityDefinitionId** propiedad.|  
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
@@ -110,7 +110,7 @@ Representa una sección de configuración para crear una suscripción a registro
 ## <a name="remarks"></a>Comentarios  
  Los perfiles de seguimiento contienen consultas de seguimiento que permiten a un participante de seguimiento suscribirse a los eventos del flujo de trabajo que se emiten cuando el estado de una instancia de flujo de trabajo cambia en el tiempo de ejecución. Dependiendo de sus requisitos de supervisión, puede escribir un perfil muy general que se suscribe a un conjunto pequeño de cambios de estado de alto nivel en un flujo de trabajo. A la inversa, puede crear un perfil específico cuyos eventos resultantes estén lo suficientemente enriquecidos para reconstruir un flujo de ejecución detallado posteriormente.  
   
- Los perfiles de seguimiento se estructuran como suscripciones declarativas para los registros de seguimiento que le permiten consultar el tiempo de ejecución de flujo de trabajo para registros de seguimiento específicos. Hay algunos tipos de consultas que le permiten que suscribirse a distintas clases de objetos de TrackingRecord HYPERLINK "http://msdn.microsoft.com/en-us/library/system.activities.tracking.trackingrecord (VS.100).aspx". Para obtener una lista completa de las consultas, vea [ \<participantes >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/participants.md) y [perfiles de seguimiento](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)...  
+ Los perfiles de seguimiento se estructuran como suscripciones declarativas para los registros de seguimiento que le permiten consultar el tiempo de ejecución de flujo de trabajo para registros de seguimiento específicos. Hay algunos tipos de consultas que le permiten que suscribirse a distintas clases de objetos de TrackingRecord HYPERLINK "http://msdn.microsoft.com/library/system.activities.tracking.trackingrecord (VS.100).aspx". Para obtener una lista completa de las consultas, vea [ \<participantes >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/participants.md) y [perfiles de seguimiento](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)...  
   
  En el ejemplo siguiente se muestra un perfil de seguimiento en un archivo de configuración que permite a un participante de seguimiento para suscribirse a la `Started` y `Completed` eventos de flujo de trabajo.  
   

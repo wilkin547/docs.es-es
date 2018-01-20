@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 4e7de05028b4d3fe7b402b276925b24c901b4c0e
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: ed299dd91b16815cbbb50cd51602bb0161ec6939
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="clr-user-defined-types"></a>Tipos CLR definidos por el usuario
 Microsoft SQL Server proporciona compatibilidad con tipos definidos por el usuario (UDT) implementados con Common Language Runtime (CLR) de Microsoft .NET Framework. CLR se integra en SQL Server y este mecanismo permite ampliar el sistema de tipos de la base de datos. Los tipos definidos por el usuario proporcionan al usuario extensibilidad del sistema de tipos de datos de SQL Server, así como la capacidad para definir tipos estructurados complejos.  
@@ -36,5 +36,5 @@ Microsoft SQL Server proporciona compatibilidad con tipos definidos por el usuar
 1.  [Tipos CLR definidos por el usuario](http://go.microsoft.com/fwlink/?LinkId=98366)  
   
 ## <a name="see-also"></a>Vea también  
- [Crear objetos de SQL Server 2005 en código administrado](http://msdn.microsoft.com/en-us/5358a825-e19b-49aa-8214-674ce5fed1da)  
+ [Crear objetos de SQL Server 2005 en código administrado](http://msdn.microsoft.com/library/5358a825-e19b-49aa-8214-674ce5fed1da)  
  [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](http://go.microsoft.com/fwlink/?LinkId=217917)

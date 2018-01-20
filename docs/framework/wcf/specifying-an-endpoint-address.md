@@ -18,11 +18,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 21b15fb2b3f3d204ebd5b59f5a93f8e53a89ff71
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 403ff897de4dc9ee95a854d9658bdee344755d59
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="specifying-an-endpoint-address"></a>Especificación de una dirección de punto de conexión
 Toda comunicación con un servicio de [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] se produce a través de sus extremos. Cada <xref:System.ServiceModel.Description.ServiceEndpoint> contiene un <xref:System.ServiceModel.Description.ServiceEndpoint.Address%2A>, un <xref:System.ServiceModel.Description.ServiceEndpoint.Binding%2A>y un <xref:System.ServiceModel.Description.ServiceEndpoint.Contract%2A>. El contrato especifica qué operaciones están disponibles. El enlace especifica cómo comunicarse con el servicio y la dirección especifica dónde encontrar el servicio. Cada punto de conexión debe tener una dirección única. La clase <xref:System.ServiceModel.EndpointAddress> representa la dirección de extremo, que contiene un Identificador uniforme de recursos (URI) que representa la dirección del servicio, una <xref:System.ServiceModel.EndpointAddress.Identity%2A>, que representa la identidad de seguridad del servicio, y una colección de <xref:System.ServiceModel.EndpointAddress.Headers%2A>opcional. Los encabezados opcionales proporcionan información más detallada de direccionamiento para identificar o interactuar con el punto de conexión. Por ejemplo, los encabezados pueden indicar cómo procesar un mensaje entrante, dónde debería enviar el extremo un mensaje de respuesta o qué instancia de un servicio se va a usar para procesar un mensaje entrante de un usuario determinado cuando hay varias instancias disponibles.  
@@ -49,7 +49,7 @@ Toda comunicación con un servicio de [!INCLUDE[indigo1](../../../includes/indig
  Al hospedarse con IIS, no administra por sí mismo las instancias <xref:System.ServiceModel.ServiceHost>. La dirección base siempre es la dirección especificada en el archivo .svc para el servicio al hospedarse en IIS. De modo que siempre debe utilizar direcciones de extremo relativas para los extremos de servicio hospedados en IIS. Proporcionar una dirección de punto de conexión completa puede conducir a errores en la implementación del servicio. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Implementar un servicio WCF hospedado en servicios de Internet Information](../../../docs/framework/wcf/feature-details/deploying-an-internet-information-services-hosted-wcf-service.md).  
   
 ## <a name="defining-endpoint-addresses-in-configuration"></a>Definición de direcciones de puntos de conexión mediante configuración  
- Para definir un punto de conexión en un archivo de configuración, utilice la [ \<extremo >](http://msdn.microsoft.com/en-us/13aa23b7-2f08-4add-8dbf-a99f8127c017) elemento.  
+ Para definir un punto de conexión en un archivo de configuración, utilice la [ \<extremo >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) elemento.  
   
  [!code-xml[S_UEHelloWorld#5](../../../samples/snippets/common/VS_Snippets_CFX/s_uehelloworld/common/serviceapp2.config#5)]  
   

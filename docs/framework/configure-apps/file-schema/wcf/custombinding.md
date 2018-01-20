@@ -14,18 +14,18 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 1659e6352fa195bae56b764c80a08dee56b4c9e5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e5a95d677588beaa41e94f12550ba8647202ffe3
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="ltcustombindinggt"></a>&lt;customBinding&gt;
 Proporciona el control completo sobre la pila de la mensajería para el usuario.  
   
- \<system.serviceModel >  
+ \<system.serviceModel>  
 \<enlaces >  
-\<customBinding >  
+\<customBinding>  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -202,13 +202,13 @@ Proporciona el control completo sobre la pila de la mensajería para el usuario.
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<compositeDuplex >](../../../../../docs/framework/configure-apps/file-schema/wcf/compositeduplex.md)|Especifica la mensajería bidireccional para el enlace personalizado. Se usa con los transportes que no permiten comunicaciones dúplex de manera nativa, como, por ejemplo, HTTP. TCP, en cambio, permite comunicaciones dúplex de manera nativa y no requiere el uso de este elemento de enlace para que el servicio devuelva los mensajes a un cliente.<br /><br /> El cliente debe exponer una dirección para que el servicio haga contacto y establezca una conexión. El atributo `ClientBaseAddress` proporciona esta dirección del cliente.<br /><br /> Este elemento es del tipo <xref:System.ServiceModel.Configuration.CompositeDuplexElement>.|  
-|[\<pnrpPeerResolver >](../../../../../docs/framework/configure-apps/file-schema/wcf/pnrppeerresolver.md)|Especifica una resolución de nombre de mismo nivel de protocolo de resolución de nombres de mismo nivel (PNRP). Este elemento es del tipo <xref:System.ServiceModel.Configuration.PnrpPeerResolverElement>.|  
-|[\<reliableSession >](../../../../../docs/framework/configure-apps/file-schema/wcf/reliablesession.md)|Especifica el valor para la mensajería de confianza de WS. Cuando este elemento se agrega a un enlace personalizado, el canal resultante puede admitir las convicciones de la entrega exactamente una vez. Este elemento es del tipo <xref:System.ServiceModel.Configuration.ReliableSessionElement>.|  
-|[\<seguridad >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)|Especifica las opciones de seguridad del enlace personalizado. Este elemento es del tipo <xref:System.ServiceModel.Configuration.SecurityElement>.|  
-|[\<sslStreamSecurity >](../../../../../docs/framework/configure-apps/file-schema/wcf/sslstreamsecurity.md)|Especifica la configuración de seguridad para un enlace de secuencia SSL. Este elemento es del tipo <xref:System.ServiceModel.Configuration.SslStreamSecurityElement>.|  
-|[\<transactionFlow >](../../../../../docs/framework/configure-apps/file-schema/wcf/transactionflow.md)|Especifica que el enlace soporta el flujo de transacción, y el protocolo que va a ser utilizado por el atributo `transactionProtocol`. Este elemento es del tipo <xref:System.ServiceModel.Configuration.TransactionFlowElement>.|  
-|[\<inicial de windowsStreamSecurity >](../../../../../docs/framework/configure-apps/file-schema/wcf/windowsstreamsecurity.md)|Especifica las opciones de seguridad de transmisión del enlace personalizado. Este elemento es del tipo <xref:System.ServiceModel.Configuration.WindowsStreamSecurityElement>.|  
+|[\<compositeDuplex>](../../../../../docs/framework/configure-apps/file-schema/wcf/compositeduplex.md)|Especifica la mensajería bidireccional para el enlace personalizado. Se usa con los transportes que no permiten comunicaciones dúplex de manera nativa, como, por ejemplo, HTTP. TCP, en cambio, permite comunicaciones dúplex de manera nativa y no requiere el uso de este elemento de enlace para que el servicio devuelva los mensajes a un cliente.<br /><br /> El cliente debe exponer una dirección para que el servicio haga contacto y establezca una conexión. El atributo `ClientBaseAddress` proporciona esta dirección del cliente.<br /><br /> Este elemento es del tipo <xref:System.ServiceModel.Configuration.CompositeDuplexElement>.|  
+|[\<pnrpPeerResolver>](../../../../../docs/framework/configure-apps/file-schema/wcf/pnrppeerresolver.md)|Especifica una resolución de nombre de mismo nivel de protocolo de resolución de nombres de mismo nivel (PNRP). Este elemento es del tipo <xref:System.ServiceModel.Configuration.PnrpPeerResolverElement>.|  
+|[\<reliableSession>](../../../../../docs/framework/configure-apps/file-schema/wcf/reliablesession.md)|Especifica el valor para la mensajería de confianza de WS. Cuando este elemento se agrega a un enlace personalizado, el canal resultante puede admitir las convicciones de la entrega exactamente una vez. Este elemento es del tipo <xref:System.ServiceModel.Configuration.ReliableSessionElement>.|  
+|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)|Especifica las opciones de seguridad del enlace personalizado. Este elemento es del tipo <xref:System.ServiceModel.Configuration.SecurityElement>.|  
+|[\<sslStreamSecurity>](../../../../../docs/framework/configure-apps/file-schema/wcf/sslstreamsecurity.md)|Especifica la configuración de seguridad para un enlace de secuencia SSL. Este elemento es del tipo <xref:System.ServiceModel.Configuration.SslStreamSecurityElement>.|  
+|[\<transactionFlow>](../../../../../docs/framework/configure-apps/file-schema/wcf/transactionflow.md)|Especifica que el enlace soporta el flujo de transacción, y el protocolo que va a ser utilizado por el atributo `transactionProtocol`. Este elemento es del tipo <xref:System.ServiceModel.Configuration.TransactionFlowElement>.|  
+|[\<windowsStreamSecurity>](../../../../../docs/framework/configure-apps/file-schema/wcf/windowsstreamsecurity.md)|Especifica las opciones de seguridad de transmisión del enlace personalizado. Este elemento es del tipo <xref:System.ServiceModel.Configuration.WindowsStreamSecurityElement>.|  
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
@@ -310,11 +310,11 @@ Proporciona el control completo sobre la pila de la mensajería para el usuario.
  <xref:System.ServiceModel.Channels.BindingElement>  
  <xref:System.ServiceModel.Configuration.BindingsSection>  
  <xref:System.ServiceModel.Channels.CustomBinding>  
- [\<enlace >](../../../../../docs/framework/misc/binding.md)  
+ [\<binding>](../../../../../docs/framework/misc/binding.md)  
  [Enlaces](../../../../../docs/framework/wcf/bindings.md)  
  [Extensión de enlaces](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
  [Enlaces personalizados](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
  [Elemento customBinding](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)  
  [Enlaces](../../../../../docs/framework/wcf/bindings.md)  
  [Configuración de enlaces proporcionados por el sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Utilización de enlaces para configurar los clientes y servicios de Windows Communication Foundation](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)
+ [Utilización de enlaces para configurar los clientes y servicios de Windows Communication Foundation](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)

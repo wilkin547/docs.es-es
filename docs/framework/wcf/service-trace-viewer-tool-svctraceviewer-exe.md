@@ -14,11 +14,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 9c739db4db5afad8fc379a5da4764cb9ab6804fe
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7526f5cda302618b2f240e5ae1c126e60b9ab5e6
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="service-trace-viewer-tool-svctraceviewerexe"></a>Herramienta del visor de seguimiento de servicio (SvcTraceViewer.exe)
 La herramienta del visor de seguimiento de servicio [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] le ayuda a analizar seguimientos del diagnóstico generados por [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. El visor de seguimiento de servicio proporciona una manera fácil de combinar, ver y filtrar los mensajes del registro para que así pueda diagnosticar, reparar y comprobar los problemas del servicio [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].  
@@ -421,8 +421,8 @@ La herramienta del visor de seguimiento de servicio [!INCLUDE[indigo1](../../../
 |![Detener traza de actividad](../../../docs/framework/wcf/media/a0493e95-653e-4af8-84a4-4d09a400bc31.gif "a0493e95-653e-4af8-84a4-4d09a400bc31")|Detener traza de actividad: una traza que marca el fin de una actividad. . Contiene el nombre de la actividad. Como diseñador o programador de aplicaciones, debe definir una traza de detención por identificador de actividad por origen de traza. Ningún seguimiento de un origen de traza determinado aparece después del fin de actividad emitido por ese origen de traza, excepto si la granularidad de tiempo del seguimiento no es lo bastante pequeña. Cuando eso pasa, se pueden intercalar dos seguimientos con la misma hora, incluyendo uno de fin, al mostrarlos. Si el id. de actividad se propaga por los orígenes de traza para la correlación de seguimiento, puede ver varios finales para el mismo id. de actividad (uno por origen de traza). Se emite la traza de detención si ActivityTracing está habilitado para el origen de traza.|  
 |![Seguimiento de suspensión de actividad](../../../docs/framework/wcf/media/6f7f4191-df2b-4592-8998-8379769e2d32.gif "6f7f4191-df2b-4592-8998-8379769e2d32")|Seguimiento de suspensión de actividad: un seguimiento que marca la hora que se pausa una actividad. No se emite ningún rastro en una actividad suspendida hasta que se reanuda la actividad. Una actividad suspendida denota que no se está efectuando ningún procesamiento en esa actividad en el área del origen de traza. Los seguimientos de suspensión/reanudación son útiles para perfilar. Se emite el seguimiento de suspensión si ActivityTracing está habilitado para el origen de traza.|  
 |![Reanudar la actividad de seguimiento](../../../docs/framework/wcf/media/1060d9d2-c9c8-4e0a-9988-cdc2f7030f17.gif "1060d9d2-c9c8-4e0a-9988-cdc2f7030f17")|Seguimiento de reanudación de actividad: un seguimiento que marca la hora a la que se reanuda una actividad una vez suspendida. Se pueden volver a emitir seguimientos en esa actividad. Los seguimientos de suspensión/reanudación son útiles para perfilar. Se emite el seguimiento de reanudación si ActivityTracing está habilitado para el origen de traza.|  
-|![Transferir](../../../docs/framework/wcf/media/b2d9850e-f362-4ae5-bb8d-9f6f3ca036a5.gif "b2d9850e-f362-4ae5-bb8d-9f6f3ca036a5")|Transferencia: un seguimiento que se emite cuando el flujo de control lógico se transfiere de una actividad a otra. La actividad en la que se origina la transferencia puede continuar realizando el trabajo en paralelo a la actividad a la que va la transferencia. Se emite la traza de transferencia si ActivityTracing está habilitado para el origen de traza.|  
-|![Transferir desde](../../../docs/framework/wcf/media/1df215cb-b344-4f36-a20d-195999bda741.gif "1df215cb-b344-4f36-a20d-195999bda741")|Transferir de: un seguimiento que define una transferencia desde otra actividad a la actividad actual.|  
+|![Transfer](../../../docs/framework/wcf/media/b2d9850e-f362-4ae5-bb8d-9f6f3ca036a5.gif "b2d9850e-f362-4ae5-bb8d-9f6f3ca036a5")|Transferencia: un seguimiento que se emite cuando el flujo de control lógico se transfiere de una actividad a otra. La actividad en la que se origina la transferencia puede continuar realizando el trabajo en paralelo a la actividad a la que va la transferencia. Se emite la traza de transferencia si ActivityTracing está habilitado para el origen de traza.|  
+|![Transfer From](../../../docs/framework/wcf/media/1df215cb-b344-4f36-a20d-195999bda741.gif "1df215cb-b344-4f36-a20d-195999bda741")|Transferir de: un seguimiento que define una transferencia desde otra actividad a la actividad actual.|  
 |![Transferir a](../../../docs/framework/wcf/media/74255b6e-7c47-46ef-8e53-870c76b04c3f.gif "74255b6e-7c47-46ef-8e53-870c76b04c3f")|Transferir a: un seguimiento que define una transferencia de flujo de control lógico desde la actividad actual a otra actividad.|  
   
 ### <a name="wcf-traces"></a>Seguimiento WCF  
@@ -437,7 +437,7 @@ La herramienta del visor de seguimiento de servicio [!INCLUDE[indigo1](../../../
   
 |Iconos|Descripción|  
 |----------|-----------------|  
-|![Actividad](../../../docs/framework/wcf/media/wcfc-defaultactivityc.gif "wcfc_defaultActivityc")|Actividad: indica que la actividad actual es una actividad genérica.|  
+|![Activity](../../../docs/framework/wcf/media/wcfc-defaultactivityc.gif "wcfc_defaultActivityc")|Actividad: indica que la actividad actual es una actividad genérica.|  
 |![Actividad raíz](../../../docs/framework/wcf/media/5dc8e0eb-1c32-4076-8c66-594935beaee9.gif "5dc8e0eb-1c32-4076-8c66-594935beaee9")|Actividad raíz: indica la actividad raíz de un proceso.|  
   
 ### <a name="wcf-activities"></a>Actividades WCF  
@@ -463,4 +463,4 @@ La herramienta del visor de seguimiento de servicio [!INCLUDE[indigo1](../../../
 ## <a name="see-also"></a>Vea también  
  [Uso del visor de seguimiento de servicios para ver seguimientos asociados y para la solución de problemas](../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)  
  [Configuración de la traza](../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)  
- [Seguimiento de la actividad y propagación para la correlación de seguimiento To-End](http://msdn.microsoft.com/en-us/2c11a905-64f8-47b5-bae5-a74fc666137e)
+ [Seguimiento de la actividad y propagación para la correlación de seguimiento To-End](http://msdn.microsoft.com/library/2c11a905-64f8-47b5-bae5-a74fc666137e)

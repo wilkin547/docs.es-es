@@ -19,11 +19,11 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.workload: dotnet
-ms.openlocfilehash: 182882d33772054c7ac4208ca9571fa8018c2a07
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4ccd490f6d31ad1d20128497e5115147eddb3df4
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-create-a-publisher-policy"></a>Cómo: Crear una directiva de publicador
 Los proveedores de ensamblados pueden indicar que las aplicaciones deben usar una versión más reciente de un ensamblado mediante la inclusión de un archivo de directiva de publicador con el ensamblado actualizado. El archivo de directiva de publicador especifica la redirección de ensamblado y la configuración del código base y usa el mismo formato que un archivo de configuración de aplicación. El archivo de directiva de edición se compila en un ensamblado y se coloca en la caché global de ensamblados.  
@@ -64,7 +64,7 @@ Los proveedores de ensamblados pueden indicar que las aplicaciones deben usar un
   
 1.  Escriba el siguiente comando en el símbolo del sistema:  
   
-     **al/Link:** *directivas* **/out:** *publisherPolicyAssemblyFile* **/keyfile:**  *keyPairFile* **/Platform:** *processorArchitecture*  
+     **al /link:** *publisherPolicyFile* **/out:** *publisherPolicyAssemblyFile* **/keyfile:** *keyPairFile* **/platform:** *processorArchitecture*  
   
      En este comando:  
   
@@ -72,7 +72,7 @@ Los proveedores de ensamblados pueden indicar que las aplicaciones deben usar un
   
     -   El *publisherPolicyAssemblyFile* argumento es el nombre del ensamblado de directiva de publicador que da como resultado de este comando. El nombre de archivo de ensamblado debe seguir el formato:  
   
-         **Directiva.** *número principal* **.** *número secundario* **.** *nombre de ensamblado principal* **.dll**  
+         **Directiva.** *majorNumber* **.** *número secundario* **.** *nombre de ensamblado principal* **.dll**  
   
     -   El *keyPairFile* argumento es el nombre del archivo que contiene el par de claves. Debe firmar el ensamblado y el ensamblado de directivas del publicador con el mismo par de claves.  
   
@@ -100,7 +100,7 @@ Los proveedores de ensamblados pueden indicar que las aplicaciones deben usar un
   
 1.  Escriba el siguiente comando en el símbolo del sistema:  
   
-     **gacutil /i***publisherPolicyAssemblyFile*   
+     **gacutil /i**  *publisherPolicyAssemblyFile*  
   
      El comando siguiente agrega `policy.1.0.myAssembly.dll` a la caché global de ensamblados.  
   
@@ -115,7 +115,7 @@ Los proveedores de ensamblados pueden indicar que las aplicaciones deben usar un
  [Programar con ensamblados](../../../docs/framework/app-domains/programming-with-assemblies.md)  
  [Cómo el motor en tiempo de ejecución ubica ensamblados](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
  [Configurar aplicaciones](../../../docs/framework/configure-apps/index.md)  
- [Configurar aplicaciones de .NET Framework](http://msdn.microsoft.com/en-us/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)  
+ [Configurar aplicaciones de .NET Framework](http://msdn.microsoft.com/library/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)  
  [Esquema de la configuración de Common Language Runtime](../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
  [Esquema de los archivos de configuración](../../../docs/framework/configure-apps/file-schema/index.md)  
  [Redirigir versiones de ensamblado](../../../docs/framework/configure-apps/redirect-assembly-versions.md)

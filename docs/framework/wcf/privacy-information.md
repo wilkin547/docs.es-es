@@ -18,11 +18,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: f66f773551f45f9e4c5978ef09bbe4061a3326bd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2d0172b91393e4e9e373a247c33be938a3160e14
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="windows-communication-foundation-privacy-information"></a>Información de privacidad de Windows Communication Foundation
 Microsoft se compromete a proteger la privacidad de usuarios finales. Al compilar una aplicación usando [!INCLUDE[indigo1](../../../includes/indigo1-md.md)], versión 3.0, su aplicación puede afectar a la privacidad de sus usuarios finales. Por ejemplo, su aplicación puede recoger explícitamente información de contacto del usuario o puede solicitar o enviar información a través de Internet a su sitio web. Si incrusta la tecnología de Microsoft en su aplicación, esa tecnología puede tener su propio comportamiento que podría afectar a la privacidad. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] no envía ninguna información a Microsoft de su aplicación a menos que usted o el usuario final elija enviarla.  
@@ -144,7 +144,7 @@ Microsoft se compromete a proteger la privacidad de usuarios finales. Al compila
   
  wst:Entropy  
   
- \-Para xmlns:wsse = "http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd" y xmlns:wsse = "http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd"  
+ \- For xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd" and xmlns:wsse="http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd"  
   
  wsse:Password  
   
@@ -152,7 +152,7 @@ Microsoft se compromete a proteger la privacidad de usuarios finales. Al compila
   
  Datos personales posibles que se quitan:  
   
- \-Para xmlns:wsse = "http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd" y xmlns:wsse = "http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd"  
+ \- For xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd" and xmlns:wsse="http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd"  
   
  wsse:Username  
   
@@ -174,13 +174,13 @@ Microsoft se compromete a proteger la privacidad de usuarios finales. Al compila
   
  >  
   
- \<Las condiciones NotBefore = "[fecha y hora]" NotOnOrAfter = "[fecha y hora]" >  
+ \<Conditions NotBefore="[dateTime]" NotOnOrAfter="[dateTime]">  
   
- \<AudienceRestrictionCondition >  
+ \<AudienceRestrictionCondition>  
   
- \<Audiencia > [uri]\</Audience > +  
+ \<Audience>[uri]\</Audience>+  
   
- \</ AudienceRestrictionCondition > *  
+ \</AudienceRestrictionCondition>*  
   
  \<DoNotCacheCondition / > *  
   
@@ -192,23 +192,23 @@ Microsoft se compromete a proteger la privacidad de usuarios finales. Al compila
   
  \<¿/ Condiciones >?  
   
- \<Consejos >  
+ \<Advice>  
   
- \<AssertionIDReference > [ID]\</AssertionIDReference > *  
+ \<AssertionIDReference>[ID]\</AssertionIDReference>*  
   
- \<Aserción > [aserción]\</Assertion > *  
+ \<Assertion>[assertion]\</Assertion>*  
   
  [any]*  
   
- \<¿/ Notificación de >?  
+ \</Advice>?  
   
  <\!--Tipos base abstractos  
   
  \<Instrucción / > *  
   
- \<SubjectStatement >  
+ \<SubjectStatement>  
   
- \<Asunto >  
+ \<Subject>  
   
  `<NameIdentifier`  
   
@@ -224,17 +224,17 @@ Microsoft se compromete a proteger la privacidad de usuarios finales. Al compila
   
  \<SubjectConfirmation >  
   
- \<ConfirmationMethod > [anyUri]\</ConfirmationMethod > +  
+ \<ConfirmationMethod>[anyUri]\</ConfirmationMethod>+  
   
- \<¿SubjectConfirmationData > [any]\</SubjectConfirmationData >?  
+ \<SubjectConfirmationData>[any]\</SubjectConfirmationData>?  
   
- \<DS:KeyInfo >... ¿\</ds:KeyInfo >?  
+ \<ds:KeyInfo>...\</ds:KeyInfo>?  
   
  \<¿/ SubjectConfirmation >?  
   
  \</ Asunto >  
   
- \</ SubjectStatement > *  
+ \</SubjectStatement>*  
   
  -->  
   
@@ -268,7 +268,7 @@ Microsoft se compromete a proteger la privacidad de usuarios finales. Al compila
   
  \</ AuthenticationStatement > *  
   
- \<AttributeStatement >  
+ \<AttributeStatement>  
   
  [Subject]  
   
@@ -282,15 +282,15 @@ Microsoft se compromete a proteger la privacidad de usuarios finales. Al compila
   
  `<AttributeValue>[any]</AttributeValue>+`  
   
- \</ Atributo > +  
+ \</Attribute>+  
   
- \</ AttributeStatement > *  
+ \</AttributeStatement>*  
   
  \<AuthorizationDecisionStatement  
   
  Resource =" [uri]"  
   
- Decisión = "[Permitir &#124; Deny &#124; indeterminado]"  
+ Decision="[Permit&#124;Deny&#124;Indeterminate]"  
   
  >  
   
@@ -298,15 +298,15 @@ Microsoft se compromete a proteger la privacidad de usuarios finales. Al compila
   
  \<Acción Namespace = "[uri]" > [cadena] \< /Action > +  
   
- \<Evidencia >  
+ \<Evidence>  
   
- \<AssertionIDReference > [ID]\</AssertionIDReference > +  
+ \<AssertionIDReference>[ID]\</AssertionIDReference>+  
   
- \<Aserción > [aserción]\</Assertion > +  
+ \<Assertion>[assertion]\</Assertion>+  
   
- \<¿/ Evidencia >?  
+ \</Evidence>?  
   
- \</ AuthorizationDecisionStatement > *  
+ \</AuthorizationDecisionStatement>*  
   
  \</ Aserción >  
   
@@ -413,5 +413,5 @@ Microsoft se compromete a proteger la privacidad de usuarios finales. Al compila
  El Lenguaje de descripción de servicios Web (WSDL) contiene una definición del puerto. Cada puerto tiene una dirección del extremo y un enlace que representa los servicios utilizados por la aplicación. Exponer WSDL se puede desactivar utilizando la configuración. No se retiene información en el equipo.  
   
 ## <a name="see-also"></a>Vea también  
- [Windows Communication Foundation](http://msdn.microsoft.com/en-us/fd327ade-0260-4c40-adbe-b74645ba3277)  
+ [Windows Communication Foundation](http://msdn.microsoft.com/library/fd327ade-0260-4c40-adbe-b74645ba3277)  
  [Seguridad](../../../docs/framework/wcf/feature-details/security.md)

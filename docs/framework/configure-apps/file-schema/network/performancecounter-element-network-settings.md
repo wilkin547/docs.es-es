@@ -20,19 +20,19 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.workload: dotnet
-ms.openlocfilehash: 669811b20fd9980b6876683ec7eff4c235a676ef
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c50bf9e882ade86e70db217a75fef2a893c45572
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="ltperformancecountergt-element-network-settings"></a>&lt;performanceCounter&gt; Element (Network Settings)
 Habilita o deshabilita los contadores de rendimiento de red.  
   
  \<configuration>  
-\<System.NET >  
+\<system.net>  
 \<Configuración >  
-\<performanceCounters >  
+\<performanceCounters>  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -58,12 +58,12 @@ Habilita o deshabilita los contadores de rendimiento de red.
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[Configuración](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|Configura opciones de red básicas para el espacio de nombres <xref:System.Net>.|  
+|[settings](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|Configura opciones de red básicas para el espacio de nombres <xref:System.Net>.|  
   
 ## <a name="remarks"></a>Comentarios  
  Este elemento se puede usar en el archivo de configuración de la aplicación o en el archivo de configuración del equipo (Machine.config).  
   
- Los contadores de rendimiento de red deben estar habilitados en el archivo de configuración que se usará. Todos los contadores de rendimiento red se habilitan o deshabilitan con un solo valor en el archivo de configuración. Los contadores de rendimiento de red individuales no pueden habilitarse ni deshabilitarse. Para obtener más información sobre los contadores de rendimiento de red específico, consulte [contadores de rendimiento de red](http://msdn.microsoft.com/en-us/d1860235-f643-46ae-846c-ff0ed8b0e3cd).  
+ Los contadores de rendimiento de red deben estar habilitados en el archivo de configuración que se usará. Todos los contadores de rendimiento red se habilitan o deshabilitan con un solo valor en el archivo de configuración. Los contadores de rendimiento de red individuales no pueden habilitarse ni deshabilitarse. Para obtener más información sobre los contadores de rendimiento de red específico, consulte [contadores de rendimiento de red](http://msdn.microsoft.com/library/d1860235-f643-46ae-846c-ff0ed8b0e3cd).  
   
  El valor predeterminado es ese se deshabilitan los contadores de rendimiento de red.  
   
@@ -88,4 +88,4 @@ Habilita o deshabilita los contadores de rendimiento de red.
  <xref:System.Net.Configuration.PerformanceCountersElement?displayProperty=nameWithType>  
  <xref:System.Net.Configuration.PerformanceCountersElement.Enabled%2A?displayProperty=nameWithType>  
  [Esquema de la configuración de red](../../../../../docs/framework/configure-apps/file-schema/network/index.md)  
- [Contadores de rendimiento de red](http://msdn.microsoft.com/en-us/d1860235-f643-46ae-846c-ff0ed8b0e3cd)
+ [Contadores de rendimiento de red](http://msdn.microsoft.com/library/d1860235-f643-46ae-846c-ff0ed8b0e3cd)

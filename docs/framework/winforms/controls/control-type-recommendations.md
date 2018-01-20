@@ -19,11 +19,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 638a439a663925be6eea230984310f7b86b81030
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a126d3b21ddd4bd31e168726c3538de21fb7d956
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="control-type-recommendations"></a>Recomendaciones sobre tipos de controles
 .NET Framework ofrece la posibilidad de desarrollar e implementar nuevos controles. Además de los controles de usuario conocidos, verá que ahora puede escribir controles personalizados que realizan su propia representación y que incluso pueden ampliar la funcionalidad de los controles existentes mediante herencia. Decidir qué tipo de control va a crear puede resultar confuso. En esta sección se indican las diferencias entre los distintos tipos de controles de los que puede heredar, y ofrece consideraciones sobre el tipo que deberá elegir para su proyecto.  
@@ -60,7 +60,7 @@ ms.lasthandoff: 12/22/2017
   
 -   [Tutorial: Serializar colecciones de tipos estándar con DesignerSerializationVisibilityAttribute](http://msdn.microsoft.com/library/ms171731\(v=vs.110\))  
   
--   [Tutorial: Heredar de un control de Windows Forms con Visual C#](http://msdn.microsoft.com/en-us/library/5h0k2e6x\(v=vs.110\))  
+-   [Tutorial: Heredar de un control de Windows Forms con Visual C#](http://msdn.microsoft.com/library/5h0k2e6x\(v=vs.110\))  
   
 -   [Cómo: Proporcionar un mapa de bits del cuadro de herramientas para un control](http://msdn.microsoft.com/library/4wk1wc0a\(v=vs.110\))  
   
@@ -82,7 +82,7 @@ ms.lasthandoff: 12/22/2017
   
 -   [Tutorial: Crear un control compuesto con Visual Basic](http://msdn.microsoft.com/library/c316f119\(v=vs.110\))  
   
--   [Tutorial: Crear un control compuesto con Visual C#](http://msdn.microsoft.com/en-us/library/a6h7e207\(v=vs.110\))  
+-   [Tutorial: Crear un control compuesto con Visual C#](http://msdn.microsoft.com/library/a6h7e207\(v=vs.110\))  
   
 -   [Tutorial: Heredar de un control de Windows Forms con Visual Basic](http://msdn.microsoft.com/library/w2a8y03d\(v=vs.110\))  
   

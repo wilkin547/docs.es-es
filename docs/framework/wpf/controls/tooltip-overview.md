@@ -20,11 +20,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: a3dee3d94063a94869869a9d94ab3cc2bc0a26fb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7c945d23def3bbf6284e7e0db95d391066256df6
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="tooltip-overview"></a>Información general de información sobre herramientas
 Una información sobre herramientas es una pequeña ventana emergente que aparece cuando un usuario pausa el puntero del mouse sobre un elemento, por ejemplo, como en un <xref:System.Windows.Controls.Button>. En este tema se presenta la información sobre herramientas y se explica cómo crear y personalizar el contenido de la información sobre herramientas.  
@@ -78,7 +78,7 @@ Una información sobre herramientas es una pequeña ventana emergente que aparec
 ## <a name="using-the-time-interval-properties-of-tooltipservice"></a>Uso de las propiedades de intervalo de tiempo de ToolTipService  
  El <xref:System.Windows.Controls.ToolTipService> clase proporciona las siguientes propiedades para establecer información sobre herramientas muestran horas: <xref:System.Windows.Controls.ToolTipService.InitialShowDelay%2A>, <xref:System.Windows.Controls.ToolTipService.BetweenShowDelay%2A>, y <xref:System.Windows.Controls.ToolTipService.ShowDuration%2A>.  
   
- Use la <xref:System.Windows.Controls.ToolTipService.InitialShowDelay%2A> y <xref:System.Windows.Controls.ToolTipService.ShowDuration%2A> propiedades para especificar un retraso, por lo general breve, antes un <xref:System.Windows.Controls.ToolTip> aparece y también para especificar cuánto tiempo un <xref:System.Windows.Controls.ToolTip> permanece visible. Para obtener más información, consulte [How to: Delay the Display of a ToolTip](http://msdn.microsoft.com/en-us/618e05ef-f2bf-4a53-a0f4-aacb49918bd7) (Cómo: Retrasar la visualización de una información sobre herramientas).  
+ Use la <xref:System.Windows.Controls.ToolTipService.InitialShowDelay%2A> y <xref:System.Windows.Controls.ToolTipService.ShowDuration%2A> propiedades para especificar un retraso, por lo general breve, antes un <xref:System.Windows.Controls.ToolTip> aparece y también para especificar cuánto tiempo un <xref:System.Windows.Controls.ToolTip> permanece visible. Para obtener más información, consulte [How to: Delay the Display of a ToolTip](http://msdn.microsoft.com/library/618e05ef-f2bf-4a53-a0f4-aacb49918bd7) (Cómo: Retrasar la visualización de una información sobre herramientas).  
   
  El <xref:System.Windows.Controls.ToolTipService.BetweenShowDelay%2A> propiedad determina si aparece información sobre herramientas para controles diferentes sin retraso inicial cuando se mueve el puntero del mouse rápidamente entre ellos. Para obtener más información sobre la <xref:System.Windows.Controls.ToolTipService.BetweenShowDelay%2A> propiedad, vea [usar la propiedad BetweenShowDelay](../../../../docs/framework/wpf/controls/how-to-use-the-betweenshowdelay-property.md).  
   

@@ -26,11 +26,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 4fceebbd3da7a0643e744d80a55cb1c953eba3bb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 210f8ff8840f579d352cc579f80f38488b998c5a
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="animation-tips-and-tricks"></a>Sugerencias y trucos para animaciones
 Cuando se trabaja con animaciones en [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], hay una serie de sugerencias y trucos que pueden realizar las animaciones tienen un mejor rendimiento y evitar muchas frustraciones.  
@@ -116,7 +116,7 @@ Cuando se trabaja con animaciones en [!INCLUDE[TLA2#tla_wpf](../../../../include
   
  Hay diferentes maneras de quitar una animación. Pueden emplear las técnicas siguientes para quitar las animaciones que pertenecen a un <xref:System.Windows.Media.Animation.Storyboard>.  
   
--   Para quitar un <xref:System.Windows.Media.Animation.Storyboard> empezó con un desencadenador de eventos, vea [Cómo: quitar un guión gráfico](http://msdn.microsoft.com/en-us/7fe39531-de2f-46a0-a69f-b783d04235ee).  
+-   Para quitar un <xref:System.Windows.Media.Animation.Storyboard> empezó con un desencadenador de eventos, vea [Cómo: quitar un guión gráfico](http://msdn.microsoft.com/library/7fe39531-de2f-46a0-a69f-b783d04235ee).  
   
 -   Usar código para quitar un <xref:System.Windows.Media.Animation.Storyboard>, consulte el <xref:System.Windows.Media.Animation.Storyboard.Remove%2A> método.  
   

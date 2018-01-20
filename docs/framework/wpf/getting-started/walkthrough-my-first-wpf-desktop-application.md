@@ -20,11 +20,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 3667d507f4c35174c1e888c9781b5f74ffd496a0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 16ed99181f8462e805638b5d3881464b16f21177
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="walkthrough-my-first-wpf-desktop-application"></a>Tutorial: Mi primera aplicación de escritorio WPF
 Este tutorial proporciona una introducción al desarrollo de un [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] aplicación que incluye los elementos que son comunes a la mayoría [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplicaciones: [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] marcado, código subyacente, definiciones de aplicación, controles, diseño, enlace de datos y estilos. 
@@ -56,7 +56,7 @@ Para obtener más información acerca de cómo instalar la versión más recient
 ## <a name="creating-the-application-project"></a>Crear el proyecto de aplicación  
  En esta sección, va a crear la infraestructura de la aplicación, que incluye una definición de aplicación, dos páginas y una imagen. 
   
-1. Cree un proyecto de aplicación de WPF en Visual Basic o Visual C# denominado `ExpenseIt`. Para obtener más información, vea [Cómo: Crear un nuevo proyecto de aplicación de WPF](http://msdn.microsoft.com/en-us/1f6aea7a-33e1-4d3f-8555-1daa42e95d82). 
+1. Cree un proyecto de aplicación de WPF en Visual Basic o Visual C# denominado `ExpenseIt`. Para obtener más información, vea [Cómo: Crear un nuevo proyecto de aplicación de WPF](http://msdn.microsoft.com/library/1f6aea7a-33e1-4d3f-8555-1daa42e95d82). 
   
     > [!NOTE]
     >  Este tutorial se utiliza el <xref:System.Windows.Controls.DataGrid> control que está disponible en .NET Framework 4. Estar seguro de que su proyecto tiene como destino .NET Framework 4 o posterior. Para obtener más información, consulte[Cómo: elegir como destino una versión de .NET Framework](/visualstudio/ide/how-to-target-a-version-of-the-dotnet-framework). 
@@ -115,7 +115,7 @@ Para obtener más información acerca de cómo instalar la versión más recient
 ## <a name="adding-files-to-the-application"></a>Agregar archivos a la aplicación  
  En esta sección, va a agregar dos páginas y una imagen a la aplicación. 
   
-1. Agregar una nueva página (WPF) al proyecto denominado `ExpenseItHome.xaml`. Para obtener más información, consulte [Cómo: agregar nuevos elementos a un proyecto de WPF](http://msdn.microsoft.com/en-us/17e6b238-fc32-4385-98ef-2f66ca09d9ad). 
+1. Agregar una nueva página (WPF) al proyecto denominado `ExpenseItHome.xaml`. Para obtener más información, consulte [Cómo: agregar nuevos elementos a un proyecto de WPF](http://msdn.microsoft.com/library/17e6b238-fc32-4385-98ef-2f66ca09d9ad). 
   
      Esta página es la primera que se muestra cuando se inicia la aplicación. Mostrará una lista de personas entre las que un usuario puede seleccionar una para mostrar el informe de gastos. 
   
@@ -171,7 +171,7 @@ Para obtener más información acerca de cómo instalar la versión más recient
     [!code-csharp[ExpenseIt#5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt/ExpenseReportPage.xaml.cs#5)]
     [!code-vb[ExpenseIt#5](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ExpenseIt/VB/ExpenseIt1_A/ExpenseReportPage.xaml.vb#5)]  
   
-10. Agregue una imagen denominada watermark.png al proyecto. Puede crear su propia imagen o copiar el archivo del código de ejemplo. Para obtener más información, consulte [NIB: Cómo: agregar elementos existentes a un proyecto](http://msdn.microsoft.com/en-us/15f4cfb7-78ab-457f-9f14-099a25a6a2d3). 
+10. Agregue una imagen denominada watermark.png al proyecto. Puede crear su propia imagen o copiar el archivo del código de ejemplo. Para obtener más información, consulte [NIB: Cómo: agregar elementos existentes a un proyecto](http://msdn.microsoft.com/library/15f4cfb7-78ab-457f-9f14-099a25a6a2d3). 
 
 ## <a name="building-and-running-the-application"></a>Compilar y ejecutar la aplicación  
  En esta sección, va a compilar y ejecutar la aplicación. 
@@ -280,7 +280,7 @@ Para obtener más información acerca de cómo instalar la versión más recient
   
 1. Abra ExpenseItHome.xaml. 
   
-2. Agregar un <xref:System.Windows.Controls.Primitives.ButtonBase.Click> controlador de eventos para el <xref:System.Windows.Controls.Button> elemento. Para obtener más información, consulte [Cómo: crear un controlador de eventos Simple](http://msdn.microsoft.com/en-us/b1456e07-9dec-4354-99cf-18666b64f480). 
+2. Agregar un <xref:System.Windows.Controls.Primitives.ButtonBase.Click> controlador de eventos para el <xref:System.Windows.Controls.Button> elemento. Para obtener más información, consulte [Cómo: crear un controlador de eventos Simple](http://msdn.microsoft.com/library/b1456e07-9dec-4354-99cf-18666b64f480). 
   
     [!code-xaml[ExpenseIt#15](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt6/ExpenseItHome.xaml#15)]  
   

@@ -22,11 +22,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: c894d431aa31e32b4a8cb7ff02d39d5aa5e95381
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0f4f410f0f6c209dbc43642a15ae85a788390f4a
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="wpf-xaml-browser-applications-overview"></a>Información general sobre las aplicaciones de explorador XAML de WPF
 <a name="introduction"></a>
@@ -46,7 +46,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="creating_a_new_xaml_browser_application_xbap"></a>   
 ## <a name="creating-a-new-xaml-browser-application-xbap"></a>Creación de una aplicación de explorador XAML (XBAP)  
- La manera más sencilla de crear un proyecto de XBAP es con [!INCLUDE[vs_dev10_ext](../../../../includes/vs-dev10-ext-md.md)]. Al crear un proyecto, seleccione **Aplicación de explorador WPF** en la lista de plantillas. Para más información, consulte [Cómo: Crear un nuevo proyecto de aplicación de explorador de WPF](http://msdn.microsoft.com/en-us/72ef4d90-e163-42a1-8df0-ea7ccfd1901f).  
+ La manera más sencilla de crear un proyecto de XBAP es con [!INCLUDE[vs_dev10_ext](../../../../includes/vs-dev10-ext-md.md)]. Al crear un proyecto, seleccione **Aplicación de explorador WPF** en la lista de plantillas. Para más información, consulte [Cómo: Crear un nuevo proyecto de aplicación de explorador de WPF](http://msdn.microsoft.com/library/72ef4d90-e163-42a1-8df0-ea7ccfd1901f).  
   
  Cuando se ejecuta el proyecto de XBAP, se abre en una ventana del explorador en lugar de en una independiente. Cuando se depura la aplicación XBAP desde [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)], la aplicación se ejecuta con permisos de zona de Internet y, por tanto, genera excepciones de seguridad si se superan esos permisos. Para más información, consulte [Seguridad](../../../../docs/framework/wpf/security-wpf.md) y [Seguridad de confianza parcial de WPF](../../../../docs/framework/wpf/wpf-partial-trust-security.md).  
   

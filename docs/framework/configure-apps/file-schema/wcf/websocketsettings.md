@@ -14,18 +14,18 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 7ee0f555fc1e3412032e0a7dda3a747bbfef6f4d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 01bc858aeeff750baa3f54e813dea5c9779143f8
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="ltwebsocketsettingsgt"></a>&lt;webSocketSettings&gt;
 Un elemento de configuración usado para especificar valores de WebSockets.  
   
-\<sistema. ServiceModel >  
+\<system.ServiceModel>  
 \<enlaces >  
-\<netHttpBinding >  
+\<netHttpBinding>  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -75,7 +75,7 @@ Un elemento de configuración usado para especificar valores de WebSockets.
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|\<netHttpBinding >|Especifica el NetHttpBinding|  
+|\<netHttpBinding>|Especifica el NetHttpBinding|  
   
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se muestra cómo utilizar el \<webSocketSettings > elemento.  
@@ -103,5 +103,5 @@ Un elemento de configuración usado para especificar valores de WebSockets.
  <xref:System.ServiceModel.Configuration.BasicHttpBindingElement>  
  [Enlaces](../../../../../docs/framework/wcf/bindings.md)  
  [Configuración de enlaces proporcionados por el sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Utilización de enlaces para configurar los clientes y servicios de Windows Communication Foundation](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
- [\<enlace >](../../../../../docs/framework/misc/binding.md)
+ [Utilización de enlaces para configurar los clientes y servicios de Windows Communication Foundation](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [\<binding>](../../../../../docs/framework/misc/binding.md)

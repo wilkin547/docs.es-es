@@ -1,5 +1,5 @@
 ---
-title: "&lt;resolución&gt;"
+title: '&lt;resolver&gt;'
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -14,19 +14,19 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: fc6e919600fbea15937a61eaa65299b3a372caaf
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: db95b6f9a988c133a6b4afd55849fc6fb650c24c
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="ltresolvergt"></a>&lt;resolución&gt;
+# <a name="ltresolvergt"></a>&lt;resolver&gt;
 Especifica una resolución del mismo nivel que se utiliza para resolver un id. de malla del mismo nivel como un conjunto de direcciones del nodo del mismo nivel que representa varios nodos que participan en la malla.  
   
- \<sistema. ServiceModel >  
+ \<system.ServiceModel>  
 \<enlaces >  
-\<netPeerBinding >  
-\<enlace >  
+\<netPeerBinding>  
+\<binding>  
 \<resolución >  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -51,13 +51,13 @@ Especifica una resolución del mismo nivel que se utiliza para resolver un id. d
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<encabezados >](../../../../../docs/framework/configure-apps/file-schema/wcf/headers.md)|Especifica la configuración concreta para un servicio de resolución del mismo nivel personalizado.|  
+|[\<headers>](../../../../../docs/framework/configure-apps/file-schema/wcf/headers.md)|Especifica la configuración concreta para un servicio de resolución del mismo nivel personalizado.|  
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<enlace >](../../../../../docs/framework/misc/binding.md)|Define todas las funcionalidades de enlace de la [ \<netPeerTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/netpeertcpbinding.md).|  
+|[\<binding>](../../../../../docs/framework/misc/binding.md)|Define todas las funcionalidades de enlace de la [ \<netPeerTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/netpeertcpbinding.md).|  
   
 ## <a name="remarks"></a>Comentarios  
  Una resolución de nombres del mismo nivel es un servicio de descubrimiento utilizado por los canales del mismo nivel para buscar nodos del mismo nivel que participen en una malla del mismo nivel. También se utiliza para "registrar" un nodo con una malla del mismo nivel, el mecanismo por el que se conoce el nodo del mismo nivel y está disponible en la malla del mismo nivel. Para obtener más información sobre resoluciones del mismo nivel, consulte [resoluciones del mismo nivel](../../../../../docs/framework/wcf/feature-details/peer-resolvers.md).  
@@ -69,4 +69,4 @@ Especifica una resolución del mismo nivel que se utiliza para resolver un id. d
  <xref:System.ServiceModel.Configuration.NetPeerTcpBindingElement.Resolver%2A>  
  <xref:System.ServiceModel.Configuration.PeerResolverElement>  
  [Resoluciones del mismo nivel](../../../../../docs/framework/wcf/feature-details/peer-resolvers.md)  
- [Agregar a un solucionador personalizado a una aplicación de PeerChannel](http://msdn.microsoft.com/en-us/12aa3787-2962-439c-ad27-46523c8b0419)
+ [Agregar a un solucionador personalizado a una aplicación de PeerChannel](http://msdn.microsoft.com/library/12aa3787-2962-439c-ad27-46523c8b0419)

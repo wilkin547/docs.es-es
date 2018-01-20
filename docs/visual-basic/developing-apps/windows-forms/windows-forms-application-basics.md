@@ -12,11 +12,11 @@ ms.assetid: 0b919d30-7fd6-42db-85c8-543d15312441
 caps.latest.revision: "20"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 42ed9866f168c06e8641ace712da58e953951676
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 7872d3c7b19ec9cd7059cccf41e5fab50d85123b
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="windows-forms-application-basics-visual-basic"></a>Conceptos básicos de las aplicaciones de Windows Forms (Visual Basic)
 Una parte importante de [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] es la capacidad para crear aplicaciones de Windows Forms que se ejecutan localmente en equipos de los usuarios. Puede usar Visual Studio para crear la interfaz de usuario y la aplicación con formularios Windows Forms. Una aplicación de formularios Windows Forms se basa en las clases de la <xref:System.Windows.Forms> espacio de nombres.  
@@ -52,7 +52,7 @@ Una parte importante de [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] es la capaci
   
 |En|Vea|  
 |--------|---------|  
-|Cree una nueva aplicación de Windows Forms con[!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]|[Tutorial: Crear un formulario Windows Forms sencillo](http://msdn.microsoft.com/en-us/2d9daec0-0543-41d0-acb1-964f685bddbb)|  
+|Cree una nueva aplicación de Windows Forms con[!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]|[Tutorial: Crear un formulario Windows Forms sencillo](http://msdn.microsoft.com/library/2d9daec0-0543-41d0-acb1-964f685bddbb)|  
 |Usar controles en formularios|[Cómo: Agregar controles a Windows Forms](../../../framework/winforms/controls/how-to-add-controls-to-windows-forms.md)|   
 |Crear gráficos con<xref:System.Drawing>|[Introducción a la programación de gráficos](../../../framework/winforms/advanced/getting-started-with-graphics-programming.md)|  
 |Crear controles personalizados|[cómo: Heredar de la clase UserControl](../../../framework/winforms/controls/how-to-inherit-from-the-usercontrol-class.md)|  

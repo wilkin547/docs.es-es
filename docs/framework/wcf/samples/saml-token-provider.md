@@ -14,11 +14,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 7afdbcde68a811dd8fb2be84c1ae298496992c9f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d5c1fdb3801762f20dd99c0f2d9e6835eb98d0d1
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="saml-token-provider"></a>Proveedor de tokens SAML
 Este ejemplo muestra cómo implementar un proveedor de tokens de SAML de cliente personalizado. Se usa un proveedor de tokens en [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] para proporcionar las credenciales a la infraestructura de seguridad. En general, el proveedor de tokens examina el destino y emite las credenciales adecuadas de manera que la infraestructura de seguridad pueda proteger el mensaje. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] incluye el Proveedor de tokens del administrador de credenciales predeterminado. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] también se distribuye con un proveedor de tokens de [!INCLUDE[infocard](../../../../includes/infocard-md.md)]. Los proveedores de tokens personalizados son útiles en los casos siguientes:  
@@ -382,7 +382,7 @@ Este ejemplo muestra cómo implementar un proveedor de tokens de SAML de cliente
   
 3.  Inicie Client.exe desde \client\bin. La actividad del cliente se muestra en la aplicación de consola del cliente.  
   
-4.  Si el cliente y el servicio no se pueden comunicar, vea [Troubleshooting Tips](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b).  
+4.  Si el cliente y el servicio no se pueden comunicar, consulte [sugerencias de solución de problemas de](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
   
 #### <a name="to-run-the-sample-across-computers"></a>Para ejecutar el ejemplo en varios equipos  
   
@@ -404,7 +404,7 @@ Este ejemplo muestra cómo implementar un proveedor de tokens de SAML de cliente
   
 9. En el equipo cliente, inicie `Client.exe` desde una ventana de símbolo del sistema.  
   
-10. Si el cliente y el servicio no se pueden comunicar, vea [Troubleshooting Tips](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b).  
+10. Si el cliente y el servicio no se pueden comunicar, consulte [sugerencias de solución de problemas de](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
   
 #### <a name="to-clean-up-after-the-sample"></a>Para realizar una limpieza después de ejecutar el ejemplo  
   

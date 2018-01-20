@@ -37,11 +37,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 1f95193e4ac90df0d0abe5a46ade08d799bdf6b2
-ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
+ms.openlocfilehash: 653ffbf9597be9c82300b2be69ed6a7f9412769d
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="cryptographic-services"></a>servicios criptográficos
 <a name="top"></a> Las redes públicas como Internet no proporcionan un medio de comunicación segura entre entidades. La comunicación en esas redes es susceptible de que terceras personas, sin autorización, tengan acceso a ella o la modifiquen. La criptografía ayuda a proteger los datos para que no puedan ser vistos, proporciona mecanismos para la detección de datos modificados y facilita un medio de comunicación seguro en canales que, de otra forma, no serían seguros. Por ejemplo, los datos pueden cifrarse con un algoritmo criptográfico y transmitirse en un estado cifrado a una tercera persona, que posteriormente los descifrará. Si un tercero intercepta los datos cifrados, le resultará difícil descifrarlos.  
@@ -206,7 +206,7 @@ ms.lasthandoff: 01/09/2018
   
 -   Alicia enviaría a Roberto el mensaje de texto simple y el mensaje al que aplicó el algoritmo hash (firma digital). Roberto recibiría el mensaje y le aplicaría el algoritmo hash. A continuación, compararía su valor hash con el valor hash que recibió de Alicia. Si los dos valores hash son idénticos, el mensaje no se ha modificado. Si los valores no son idénticos, el mensaje se modificó después de que Alicia lo escribiera.  
   
-     Desgraciadamente, este método no determina la autenticidad del remitente. Cualquiera puede suplantar a Alicia y enviar un mensaje a Roberto. Pueden utilizar el mismo algoritmo hash para firmar su mensaje, y todo lo que Roberto podría determinar es que el mensaje coincide con su firma. Esta es una forma de ataque de tipo "Man in the middle". Consulte [NIB: ejemplo de comunicación segura de Cryptography Next Generation (CNG)](http://msdn.microsoft.com/en-us/8048e94e-054a-417b-87c6-4f5e26710e6e) para obtener más información.  
+     Desgraciadamente, este método no determina la autenticidad del remitente. Cualquiera puede suplantar a Alicia y enviar un mensaje a Roberto. Pueden utilizar el mismo algoritmo hash para firmar su mensaje, y todo lo que Roberto podría determinar es que el mensaje coincide con su firma. Esta es una forma de ataque de tipo "Man in the middle". Vea [NIB: ejemplo de comunicación segura de Cryptography Next Generation (CNG)](http://msdn.microsoft.com/library/8048e94e-054a-417b-87c6-4f5e26710e6e) para obtener más información.  
   
 -   Alicia envía el mensaje de texto simple a Roberto a través de un canal público que no es seguro. Envía a Roberto el mensaje al que aplicó el algoritmo hash a través de un canal privado seguro. Roberto recibe el mensaje de texto simple, le aplica un algoritmo hash y compara el valor hash con el valor hash que se intercambió de forma privada. Si los valores hash coinciden, Roberto sabe dos cosas:  
   

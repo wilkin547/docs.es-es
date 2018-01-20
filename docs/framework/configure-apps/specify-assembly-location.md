@@ -18,11 +18,11 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.workload: dotnet
-ms.openlocfilehash: 5f79ed7af91f2e54edbc2174da2afa1b3cb56557
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4cfe8752ce3a562e1e4b576c63b56ff56255ff62
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="specifying-an-assembly39s-location"></a>Especificar un ensamblado &#39; s ubicación
 Hay dos maneras de especificar la ubicación de un ensamblado:  
@@ -31,7 +31,7 @@ Hay dos maneras de especificar la ubicación de un ensamblado:
   
 -   Mediante el [ \<probing >](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md) elemento.  
   
- También puede usar el [herramienta de configuración de .NET Framework (Mscorcfg.msc)](http://msdn.microsoft.com/en-us/a7106c52-68da-490e-b129-971b2c743764) para especificar ubicaciones de ensamblados o ubicaciones de common language runtime buscar ensamblados.  
+ También puede usar el [herramienta de configuración de .NET Framework (Mscorcfg.msc)](http://msdn.microsoft.com/library/a7106c52-68da-490e-b129-971b2c743764) para especificar ubicaciones de ensamblados o ubicaciones de common language runtime buscar ensamblados.  
   
 ## <a name="using-the-codebase-element"></a>Mediante el \<codeBase > elemento  
  Puede usar el  **\<codeBase >** elemento solo en máquina configuración o Editor de archivos de directivas que también redirigen la versión del ensamblado. Cuando el tiempo de ejecución determina qué versión del ensamblado, se aplica el valor del código base del archivo que determina la versión. Si no se indica ningún código base, el tiempo de ejecución sondea el ensamblado de la forma habitual. Para obtener más información, consulte [cómo el tiempo de ejecución ubica ensamblados](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md).  
@@ -80,4 +80,4 @@ Hay dos maneras de especificar la ubicación de un ensamblado:
  [Ensamblados en Common Language Runtime](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
  [Programar con ensamblados](../../../docs/framework/app-domains/programming-with-assemblies.md)  
  [Cómo el motor en tiempo de ejecución ubica ensamblados](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
- [Configurar aplicaciones de .NET Framework](http://msdn.microsoft.com/en-us/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)
+ [Configurar aplicaciones de .NET Framework](http://msdn.microsoft.com/library/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)

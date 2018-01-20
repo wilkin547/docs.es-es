@@ -27,11 +27,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: db68fba51cd7ef9bad9ba6f7c4ba8d05a31c4371
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7cca363be57e5c5022c70c62d876f62cebc6e9c0
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-make-thread-safe-calls-to-windows-forms-controls"></a>Cómo: Realizar llamadas seguras para subprocesos en controles de formularios Windows Forms
 Si utiliza multithreading para mejorar el rendimiento de las aplicaciones de Windows Forms, asegúrese de que realiza llamadas a los controles de una manera segura para subprocesos.  
@@ -415,7 +415,7 @@ private:
  El siguiente ejemplo de código es una aplicación de Windows Forms completa que consta de un formulario con tres botones y un cuadro de texto. El primer botón muestra el acceso no seguro entre subprocesos, el segundo botón muestra el acceso seguro mediante el uso de <xref:System.Windows.Forms.Control.Invoke%2A>y el tercer botón muestra el acceso seguro mediante el uso de <xref:System.ComponentModel.BackgroundWorker>.  
   
 > [!NOTE]
->  Para obtener instrucciones sobre cómo ejecutar el ejemplo, consulte [How to: Compile and Run a Complete Windows Forms Code Example Using Visual Studio](http://msdn.microsoft.com/en-us/cc447f7e-4c3b-4397-9d05-aeba3ca49416). Este ejemplo requiere referencias a los ensamblados System.Drawing y System.Windows.Forms.  
+>  Para obtener instrucciones acerca de cómo ejecutar el ejemplo, consulte [Cómo: Compilar y ejecutar un ejemplo de código completo de Windows Forms en Visual Studio](http://msdn.microsoft.com/library/cc447f7e-4c3b-4397-9d05-aeba3ca49416). Este ejemplo requiere referencias a los ensamblados System.Drawing y System.Windows.Forms.  
   
 ```csharp  
 using System;  

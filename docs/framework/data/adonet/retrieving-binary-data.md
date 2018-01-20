@@ -17,11 +17,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: b32002b8bb9b1eaf7a72a8fac306ecdd5f2e5931
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: f91f23906a6d52a66a3cf972fe5636926dba4112
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="retrieving-binary-data"></a>Recuperar datos binarios
 De forma predeterminada, el **DataReader** carga los datos entrantes como una fila tan pronto como hay una fila completa de datos. Sin embargo, los objetos binarios grandes (BLOB) se deben tratar de otra forma, ya que pueden llegar a contener grandes cantidades de datos (del orden de gigabytes) que no pueden almacenarse en una sola fila. El **Command.ExecuteReader** método tiene una sobrecarga que vaya a realizar una <xref:System.Data.CommandBehavior> argumento para modificar el comportamiento predeterminado de la **DataReader**. Puede pasar <xref:System.Data.CommandBehavior.SequentialAccess> a la **ExecuteReader** método para modificar el comportamiento predeterminado de la **DataReader** para que en lugar de cargar filas de datos, los vaya cargando secuencialmente a medida que se recibe. Este sistema es idóneo para cargar BLOB y otras estructuras de datos grandes. Tenga en cuenta que este comportamiento puede depender del origen de datos. Por ejemplo, si se devuelve un BLOB desde Microsoft Access, el BLOB completo se cargará en memoria, en lugar de hacerlo secuencialmente a medida que se recibe.  
@@ -165,6 +165,6 @@ connection.Close();
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Trabajar con DataReaders](http://msdn.microsoft.com/en-us/126a966a-d08d-4d22-a19f-f432908b2b54)  
+ [Trabajar con DataReaders](http://msdn.microsoft.com/library/126a966a-d08d-4d22-a19f-f432908b2b54)  
  [Datos binarios y datos de valores grandes de SQL Server](../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)  
  [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](http://go.microsoft.com/fwlink/?LinkId=217917)

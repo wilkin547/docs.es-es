@@ -12,11 +12,11 @@ ms.assetid: ef3dc73d-13fb-4c5f-a686-6b84148bbffe
 caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 45dfc4dd4ab42c3ce8edd7e41b7b0401bb0db672
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 1c2f80eb8a0fbc655143ca02ead5f6f46f102918
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="handling-reentrancy-in-async-apps-visual-basic"></a>Controlar la reentrada en aplicaciones asincrónicas (Visual Basic)
 Cuando se incluye código asincrónico en una aplicación, hay que tener en cuenta (y posiblemente evitar) la reentrada, que significa volver a especificar una operación asincrónica antes de que finalice. Si no se identifican ni controlan las posibilidades de reentrada, pueden producirse resultados inesperados.  
@@ -36,7 +36,7 @@ Cuando se incluye código asincrónico en una aplicación, hay que tener en cuen
 -   [Revisión y ejecución de la aplicación de ejemplo](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
   
 > [!NOTE]
->  Para ejecutar el ejemplo, debe tener instalado en el equipo Visual Studio 2012 o posterior, y .NET Framework 4.5 o posterior.  
+>  Para ejecutar el ejemplo, debe tener instalado en el equipo Visual Studio 2012 o posterior y .NET Framework 4.5 o posterior.  
   
 ##  <a name="BKMK_RecognizingReentrancy"></a> Reconocer la reentrada  
  En el ejemplo de este tema, los usuarios hacen clic en un botón **Start** (Iniciar) para iniciar una aplicación asincrónica que descarga una serie de sitios web y calcula el número total de bytes que se descargan. Una versión sincrónica del ejemplo respondería de la misma forma independientemente de cuántas veces un usuario elija el botón porque, tras la primera vez, el subproceso de UI omite esos eventos hasta que finaliza la ejecución de la aplicación. Sin embargo, en una aplicación asincrónica, el subproceso de UI continúa respondiendo y podría volver a introducir la operación asincrónica antes de que finalice.  
@@ -67,7 +67,7 @@ TOTAL bytes returned:  890591
 1. msdn.microsoft.com/library/hh191443.aspx                83732  
 2. msdn.microsoft.com/library/aa578028.aspx               205273  
 6. msdn.microsoft.com/library/ms404677.aspx               197325  
-3. msdn.microsoft.com/en-us/library/jj155761.aspx                29019  
+3. msdn.microsoft.com/library/jj155761.aspx                29019  
 7. msdn.microsoft.com                                            42972  
 4. msdn.microsoft.com/library/hh290140.aspx               117152  
 8. msdn.microsoft.com/library/ff730837.aspx               146159  

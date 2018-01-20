@@ -14,21 +14,21 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 57496371032fd8f07f69bf71cc5c266d977bf57d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0b73a3810376cf05e8b47e29d3997d6a935c9646
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="lttransportgt-of-ltwshttpbindinggt"></a>Elemento &lt;transport&gt; de &lt;wsHttpBinding&gt;
 Define la configuración de autenticación del transporte HTTP.  
   
- \<system.serviceModel >  
+ \<system.serviceModel>  
 \<enlaces >  
-\<wsHttpBinding >  
-\<enlace >  
+\<wsHttpBinding>  
+\<binding>  
 \<seguridad >  
-\<transporte >  
+\<transport>  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -93,7 +93,7 @@ Define la configuración de autenticación del transporte HTTP.
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<seguridad >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wshttpbinding.md)|Representa las funciones de seguridad de la [ \<wsHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md).|  
+|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wshttpbinding.md)|Representa las funciones de seguridad de la [ \<wsHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md).|  
   
 ## <a name="see-also"></a>Vea también  
  <xref:System.ServiceModel.HttpTransportSecurity>  
@@ -103,5 +103,5 @@ Define la configuración de autenticación del transporte HTTP.
  [Protección de servicios y clientes](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  [Enlaces](../../../../../docs/framework/wcf/bindings.md)  
  [Configuración de enlaces proporcionados por el sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Utilización de enlaces para configurar los clientes y servicios de Windows Communication Foundation](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
- [\<enlace >](../../../../../docs/framework/misc/binding.md)
+ [Utilización de enlaces para configurar los clientes y servicios de Windows Communication Foundation](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [\<binding>](../../../../../docs/framework/misc/binding.md)

@@ -22,11 +22,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: fc3e7d545a502c040e7e3ee5140d385b60e82d5c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f965bc46c62742c0e2ffb0a7f8ae2e09eca5dc1c
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="streaming-provider-wcf-data-services"></a>Proveedores de transmisión por secuencias (WCF Data Services)
 Un servicio de datos puede exponer datos binarios de objetos grandes. Estos datos binarios pueden representar secuencias de vídeo y audio, imágenes, archivos de documento u otros tipos de medios binarios. Cuando una entidad del modelo de datos incluye una o más propiedades binarias, el servicio de datos devuelve estos datos binarios codificados en base 64 en la entrada de la fuente de respuesta. Dado que carga y serialización de datos binarios grandes de esta manera pueden afectar al rendimiento, la [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] define un mecanismo para recuperar datos binarios independientemente de la entidad a la que pertenece. Para ello, se separan los datos binarios de la entidad en uno o varios flujos de datos.  
@@ -100,7 +100,7 @@ Un servicio de datos puede exponer datos binarios de objetos grandes. Estos dato
   
  Para obtener más información, consulte [de transmisión por secuencias de transferencia de mensajes](../../../../docs/framework/wcf/feature-details/streaming-message-transfer.md) y [las cuotas de transporte](../../../../docs/framework/wcf/feature-details/transport-quotas.md).  
   
- De forma predeterminada, Internet Information Services (IIS) también limita el tamaño de las respuestas a 4 MB. Para habilitar el servicio de datos recibir transmisiones por secuencias mayores que 4MB cuando se ejecuta en IIS, también debe establecer el `maxRequestLength` atributo de la [httpRuntime Element (ASP.NET Settings Schema)](http://msdn.microsoft.com/en-us/e9b81350-8aaf-47cc-9843-5f7d0c59f369) en la `<system.web />` sección de configuración, como se muestra en el ejemplo siguiente:  
+ De forma predeterminada, Internet Information Services (IIS) también limita el tamaño de las respuestas a 4 MB. Para habilitar el servicio de datos recibir transmisiones por secuencias mayores que 4MB cuando se ejecuta en IIS, también debe establecer el `maxRequestLength` atributo de la [httpRuntime Element (ASP.NET Settings Schema)](http://msdn.microsoft.com/library/e9b81350-8aaf-47cc-9843-5f7d0c59f369) en la `<system.web />` sección de configuración, como se muestra en el ejemplo siguiente:  
   
   
   
@@ -130,7 +130,7 @@ Un servicio de datos puede exponer datos binarios de objetos grandes. Estos dato
   
 -   Cuando implemente los métodos <xref:System.Data.Services.Providers.IDataServiceStreamProvider.DeleteStream%2A>, <xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetReadStream%2A> o <xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetWriteStream%2A>, debe utilizar el objeto eTag y los valores Content-Type y que se proporcionan como parámetros de método. No establezca el objeto eTag ni los encabezados Content-Type en la implementación del proveedor <xref:System.Data.Services.Providers.IDataServiceStreamProvider>.  
   
--   De forma predeterminada, el cliente envía secuencias binarias grandes mediante codificación de transferencia HTTP fragmentada. Dado que el [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] servidor de desarrollo no admite este tipo de codificación, no puede usar este servidor Web para hospedar un servicio de datos de transmisión por secuencias que deba Aceptar secuencias binarias grandes. Para obtener más información sobre [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] servidor de desarrollo, consulte [servidores Web en Visual Studio para proyectos Web ASP.NET](http://msdn.microsoft.com/en-us/31d4f588-df59-4b7e-b9ea-e1f2dd204328).  
+-   De forma predeterminada, el cliente envía secuencias binarias grandes mediante codificación de transferencia HTTP fragmentada. Dado que el [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] servidor de desarrollo no admite este tipo de codificación, no puede usar este servidor Web para hospedar un servicio de datos de transmisión por secuencias que deba Aceptar secuencias binarias grandes. Para obtener más información sobre [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] servidor de desarrollo, consulte [servidores Web en Visual Studio para proyectos Web ASP.NET](http://msdn.microsoft.com/library/31d4f588-df59-4b7e-b9ea-e1f2dd204328).  
   
 <a name="versioning"></a>   
 ## <a name="versioning-requirements"></a>Requisitos de control de versiones  

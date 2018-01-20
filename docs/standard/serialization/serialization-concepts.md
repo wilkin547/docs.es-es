@@ -11,11 +11,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 76946ed1b714ba0bd01c79bb772524c84cf8b2ca
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 84bb6b4d80d59a09a1daa808cbfed60c2464ec19
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="serialization-concepts"></a>Conceptos de serialización
 ¿Por qué desearía utilizar la serialización? Las dos razones más importantes son conservar así el estado de un objeto a los medios de almacenamiento, de manera que una copia exacta se puede recrear en una copia intermedia posterior y para enviar por valor el objeto de un dominio de aplicación a otro. Por ejemplo, la serialización se utiliza para guardar el estado de sesión en ASP.NET y copiar los objetos en el Portapapeles en Windows Forms. La comunicación remota se utiliza también para pasar por valor los objetos de un dominio de aplicación a otro.
@@ -38,7 +38,7 @@ Cuando un objeto deriva de `MarshalByRefObject`, se pasa una referencia al objet
  [Serialización binaria](../../../docs/standard/serialization/binary-serialization.md)  
  Describe el mecanismo de la serialización binaria que está incluido con Common Language Runtime.  
   
- [Objetos remotos](http://msdn.microsoft.com/en-us/515686e6-0a8d-42f7-8188-73abede57c58)  
+ [Objetos remotos](http://msdn.microsoft.com/library/515686e6-0a8d-42f7-8188-73abede57c58)  
  Describe los diversos métodos de comunicaciones disponibles en .NET Framework para las comunicaciones remotas.  
   
  [Serialización SOAP y XML](../../../docs/standard/serialization/xml-and-soap-serialization.md)  

@@ -17,11 +17,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 9776e900015dad8bce8c16991b8ce0aeb6067812
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 52ef9cce9ee28c6329f688bb9ac751f0f9016657
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="ltsupportportabilitygt-element"></a>&lt;supportPortability&gt; elemento
 Especifica que una aplicación puede hacer referencia al mismo ensamblado en dos implementaciones diferentes de .NET Framework, deshabilitando el comportamiento predeterminado que trata los ensamblados como equivalentes para los propósitos de portabilidad de aplicación.  
@@ -89,4 +89,4 @@ Especifica que una aplicación puede hacer referencia al mismo ensamblado en dos
   
 ## <a name="see-also"></a>Vea también  
  [/appconfig (opciones del compilador de C#)](http://msdn.microsoft.com/library/ee523958.aspx)  
- [Introducción de unificación de ensamblados de .NET framework](http://msdn.microsoft.com/en-us/8d8cc65e-031d-463b-bde3-2c6dc2e3bc48)
+ [Introducción de unificación de ensamblados de .NET framework](http://msdn.microsoft.com/library/8d8cc65e-031d-463b-bde3-2c6dc2e3bc48)

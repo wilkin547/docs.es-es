@@ -14,22 +14,22 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 496542ca476d9af309a34b4b05a1c3c023c06124
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 734deddc2924814b081ce80b8504fb77e78c095c
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="ltmessagesenderauthenticationgt"></a>&lt;messageSenderAuthentication&gt;
 Especifica los valores de autenticación para el certificado del mismo nivel utilizado por el remitente del mensaje.  
   
- \<sistema. ServiceModel >  
-\<comportamientos >  
-\<serviceBehaviors >  
-\<comportamiento >  
-\<serviceCredentials >  
+ \<system.ServiceModel>  
+\<behaviors>  
+\<serviceBehaviors>  
+\<behavior>  
+\<serviceCredentials>  
 \<punto >  
-\<messageSenderAuthentication >  
+\<messageSenderAuthentication>  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -61,7 +61,7 @@ Especifica los valores de autenticación para el certificado del mismo nivel uti
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<punto >](../../../../../docs/framework/configure-apps/file-schema/wcf/peer-of-servicecredentials.md)|Especifica las credenciales actuales de un nodo del mismo nivel.|  
+|[\<peer>](../../../../../docs/framework/configure-apps/file-schema/wcf/peer-of-servicecredentials.md)|Especifica las credenciales actuales de un nodo del mismo nivel.|  
   
 ## <a name="remarks"></a>Comentarios  
  Se debe configurar este elemento si se elige la autenticación de mensajes. Para los canales de salida, cada mensaje se firma utilizando el certificado proporcionado por [ \<certificado >](../../../../../docs/framework/configure-apps/file-schema/wcf/certificate-element.md). Todos los mensajes, antes de ser entregados a la aplicación, se comprueban con la credencial de mensaje utilizando el validador especificado por el atributo `customCertificateValidatorType` de este elemento. El validador puede aceptar o rechazar la credencial.  
@@ -73,6 +73,6 @@ Especifica los valores de autenticación para el certificado del mismo nivel uti
  <xref:System.ServiceModel.Configuration.PeerCredentialElement.MessageSenderAuthentication%2A>  
  [Trabajo con certificados](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
  [Conexión de redes punto a punto](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)  
- [Autenticación de mensajes del canal del mismo nivel](http://msdn.microsoft.com/en-us/80e73386-514e-4c30-9e4a-b9ca8c173a95)  
- [Canal del mismo nivel de autenticación personalizada](http://msdn.microsoft.com/en-us/4aa8a82e-41a8-48e2-8621-7e1cbabdca7c)  
+ [Autenticación de mensajes del canal del mismo nivel](http://msdn.microsoft.com/library/80e73386-514e-4c30-9e4a-b9ca8c173a95)  
+ [Canal del mismo nivel de autenticación personalizada](http://msdn.microsoft.com/library/4aa8a82e-41a8-48e2-8621-7e1cbabdca7c)  
  [Protección de las aplicaciones de canal del mismo nivel](../../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md)

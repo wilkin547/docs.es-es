@@ -17,11 +17,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: caee828d2379aaa2d6c6c80359d16c89b9b4aa42
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9958af954675784e9cbdec4c26605fb83ffa0005
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="controls-to-use-on-windows-forms"></a>Controles que se utilizan en formularios Windows Forms
 A continuación, se muestra una lista de controles y componentes por orden alfabético que se puede utilizar en formularios Windows Forms. Además de los controles de formularios Windows Forms cubiertos en esta sección, puede añadir ActiveX y controles personalizados a formularios Windows Forms. Si no encuentra aquí el control que necesita, también puede crear el suyo propio. Para obtener más información, consulte [Desarrollar controles de formularios Windows Forms en tiempo de diseño](../../../../docs/framework/winforms/controls/developing-windows-forms-controls-at-design-time.md). Para obtener más información sobre cómo elegir el control que necesita, consulte [Controles de formularios Windows Forms por función](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md).  
@@ -239,7 +239,7 @@ A continuación, se muestra una lista de controles y componentes por orden alfab
  [Desarrollar controles de formularios Windows Forms en tiempo de diseño](../../../../docs/framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)  
  Proporciona vínculos a temas detallados, recomendaciones del tipo de control que crear y otra información acerca de cómo crear su propio control.  
   
- [Comparación de los controles y objetos programables de distintos lenguajes y bibliotecas](http://msdn.microsoft.com/en-us/021f2a1b-8247-4348-a5ad-e1d9ab23004b)  
+ [Comparación de los controles y objetos programables de distintos lenguajes y bibliotecas](http://msdn.microsoft.com/library/021f2a1b-8247-4348-a5ad-e1d9ab23004b)  
  Proporciona una tabla que asigna controles de Visual Basic 6.0 al control correspondiente en [!INCLUDE[vbprvblong](../../../../includes/vbprvblong-md.md)]. Tenga en cuenta que los controles ahora son clases en [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)].  
   
  [Procedimiento para agregar controles ActiveX a formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-activex-controls-to-windows-forms.md)  

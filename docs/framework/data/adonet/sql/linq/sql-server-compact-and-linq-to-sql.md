@@ -14,14 +14,14 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 9409c17065b0421ec32a61352f9c0b975095ab44
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 24f620319cd469538cf4454be7caffececdf9213
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="sql-server-compact-and-linq-to-sql"></a>SQL Server Compact y LINQ to SQL
-SQL Server Compact es la base de datos predeterminado instalado con Visual Studio. Para obtener más información, consulte [PAVE sobre uso de SQL Server Compact (Visual Studio)](http://msdn.microsoft.com/en-us/13320dd1-94e5-4077-bf76-8df253695ccc).  
+SQL Server Compact es la base de datos predeterminado instalado con Visual Studio. Para obtener más información, consulte [PAVE sobre uso de SQL Server Compact (Visual Studio)](http://msdn.microsoft.com/library/13320dd1-94e5-4077-bf76-8df253695ccc).  
   
  En este tema se describe las diferencias claves en uso, configuración, conjuntos de características y ámbito de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] admite.  
   

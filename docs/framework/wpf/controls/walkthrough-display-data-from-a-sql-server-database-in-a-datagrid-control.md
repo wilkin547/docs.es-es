@@ -20,11 +20,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 3c8ed596706c8d656842191262c25301db595ee3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0397206a05ef47a7fc9b130fbd13fa19a0d766fa
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="walkthrough-display-data-from-a-sql-server-database-in-a-datagrid-control"></a>Tutorial: Mostrar los datos de una base de datos de SQL Server en un control DataGrid
 En este tutorial, recuperar datos de una base de datos de SQL Server y mostrar dichos datos en un <xref:System.Windows.Controls.DataGrid> control. Usar ADO.NET Entity Framework para crear las clases de entidad que representan los datos y usar LINQ para escribir una consulta que recupera los datos especificados de una clase de entidad.  
@@ -88,7 +88,7 @@ En este tutorial, recuperar datos de una base de datos de SQL Server y mostrar d
   
 4.  Seleccione el control <xref:System.Windows.Window>.  
   
-5.  Con la ventana Propiedades o el editor XAML, cree un controlador de eventos para el <xref:System.Windows.Window> denominado `Window_Loaded` para el <xref:System.Windows.FrameworkElement.Loaded> eventos. Para obtener más información, consulte [Cómo: crear un controlador de eventos Simple](http://msdn.microsoft.com/en-us/b1456e07-9dec-4354-99cf-18666b64f480).  
+5.  Con la ventana Propiedades o el editor XAML, cree un controlador de eventos para el <xref:System.Windows.Window> denominado `Window_Loaded` para el <xref:System.Windows.FrameworkElement.Loaded> eventos. Para obtener más información, consulte [Cómo: crear un controlador de eventos Simple](http://msdn.microsoft.com/library/b1456e07-9dec-4354-99cf-18666b64f480).  
   
      A continuación muestra el código XAML de MainWindow.xaml.  
   

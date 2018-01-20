@@ -15,11 +15,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: e9d5ed7a1bb55803cd1df8c6c6c740e8facb306e
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 0c29e6778cc0749620a7e38d51303356c2e99436
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="web-services-generics-serialization-technology-sample"></a>Ejemplo de Web Services Generics Serialization Technology
 [Descargar ejemplo](http://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Xml%20Serialization/GenericsSerialization.zip.exe)  
@@ -73,11 +73,11 @@ ms.lasthandoff: 12/23/2017
 2.  Escriba **http://localhost/[directorio virtual]/Service.asmx**, donde [directorio virtual] representa el directorio virtual que creó cuando generó el ejemplo.  
   
 ## <a name="remarks"></a>Comentarios  
- En el ejemplo se muestra una página ASP.NET predeterminada que contiene los vínculos a la definición del servicio Web. Puede personalizar la presentación además de modificar el código fuente del servicio Web. Para obtener más información, vea [Building XML Web Service Clients](http://msdn.microsoft.com/en-us/c606f3cb-4111-45b4-ae42-9300420fa16c) (Crear clientes de servicios Web XML).  
+ En el ejemplo se muestra una página ASP.NET predeterminada que contiene los vínculos a la definición del servicio Web. Puede personalizar la presentación además de modificar el código fuente del servicio Web. Para obtener más información, vea [Building XML Web Service Clients](http://msdn.microsoft.com/library/c606f3cb-4111-45b4-ae42-9300420fa16c) (Crear clientes de servicios Web XML).  
   
 ## <a name="see-also"></a>Vea también  
  <xref:System.Collections.Generic>  
  <xref:System.Web.Services>  
  <xref:System.Xml.Serialization>  
  [Serialización](../../../docs/standard/serialization/index.md)  
- [Servicios Web XML creados con ASP.NET y clientes de servicio Web XML](http://msdn.microsoft.com/en-us/1e64af78-d705-4384-b08d-591a45f4379c)
+ [Servicios Web XML creados con ASP.NET y clientes de servicio Web XML](http://msdn.microsoft.com/library/1e64af78-d705-4384-b08d-591a45f4379c)

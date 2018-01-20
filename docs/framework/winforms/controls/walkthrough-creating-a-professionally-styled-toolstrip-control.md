@@ -22,11 +22,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: f3d47f285643f0b989db9419392eed736d0efbea
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ab9adb72a174da25298b6ea104b002914de0cc40
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="walkthrough-creating-a-professionally-styled-toolstrip-control"></a>Tutorial: Crear un control ToolStrip de estilo profesional
 Puede permitir que la aplicación <xref:System.Windows.Forms.ToolStrip> controla un aspecto y comportamiento profesional escribiendo su propia clase derivada de la <xref:System.Windows.Forms.ToolStripProfessionalRenderer> tipo.  
@@ -44,7 +44,7 @@ Puede permitir que la aplicación <xref:System.Windows.Forms.ToolStrip> controla
  Para copiar el código de este tema como una sola lista, vea [Cómo: crear un profesional ToolStrip Control de estilo](../../../../docs/framework/winforms/controls/how-to-create-a-professionally-styled-toolstrip-control.md).  
   
 > [!NOTE]
->  Los cuadros de diálogo y comandos de menú que se ven pueden diferir de los descritos en la Ayuda, en función de los valores de configuración o de edición activos. Para cambiar la configuración, elija la opción **Importar y exportar configuraciones** del menú **Herramientas** . Para obtener más información, consulte [Personalizar la configuración de desarrollo en Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Los cuadros de diálogo y comandos de menú que se ven pueden diferir de los descritos en la Ayuda, en función de los valores de configuración o de edición activos. Para cambiar la configuración, elija la opción **Importar y exportar configuraciones** del menú **Herramientas** . Para obtener más información, vea [Personalizar la configuración de desarrollo en Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
 ## <a name="prerequisites"></a>Requisitos previos  
  Para poder completar este tutorial, necesitará:  
@@ -60,7 +60,7 @@ Puede permitir que la aplicación <xref:System.Windows.Forms.ToolStrip> controla
   
 2.  En **el Explorador de soluciones**, elimine el control predeterminado del proyecto eliminando el archivo de código fuente denominado "UserControl1.cs" o "UserControl1.vb", dependiendo del lenguaje elegido.  
   
-     Para obtener más información, consulte [NIB: Cómo: quitar, eliminar y excluir elementos](http://msdn.microsoft.com/en-us/6dffdc86-29c8-4eff-bcd8-e3a0dd9e9a73).  
+     Para obtener más información, consulte [NIB: Cómo: quitar, eliminar y excluir elementos](http://msdn.microsoft.com/library/6dffdc86-29c8-4eff-bcd8-e3a0dd9e9a73).  
   
 3.  Agregue un nuevo <xref:System.Windows.Forms.UserControl> elemento a la **StackViewLibrary** proyecto. Asigne al archivo de origen nuevo un nombre de base de `StackView`.  
   
@@ -99,7 +99,7 @@ Puede permitir que la aplicación <xref:System.Windows.Forms.ToolStrip> controla
     |ImageTransparentColor|`238, 238, 238`|  
     |Margin|`0, 0, 0, 0`|  
     |Relleno|`3, 3, 3, 3`|  
-    |Texto|**Correo electrónico**|  
+    |Texto|**Mail**|  
     |TextAlign|<xref:System.Drawing.ContentAlignment.MiddleLeft>|  
   
 5.  Repita el paso 7 para tres más <xref:System.Windows.Forms.ToolStripButton> controles.  
@@ -132,7 +132,7 @@ Puede permitir que la aplicación <xref:System.Windows.Forms.ToolStrip> controla
   
 8.  Cambiar el nombre de la `mailStackButton_Click` controlador de eventos para `stackButton_Click`.  
   
-     Para obtener más información, consulte [Cómo: cambiar el nombre de un identificador (Visual Basic)](http://msdn.microsoft.com/en-us/e5a5edf8-3dba-4119-81f4-fc2aba180e0c).  
+     Para obtener más información, consulte [Cómo: cambiar el nombre de un identificador (Visual Basic)](http://msdn.microsoft.com/library/e5a5edf8-3dba-4119-81f4-fc2aba180e0c).  
   
 9. Inserte el siguiente código en el `stackButton_Click` controlador de eventos.  
   
@@ -146,7 +146,7 @@ Puede permitir que la aplicación <xref:System.Windows.Forms.ToolStrip> controla
 12. Repita los pasos 10 y 11 para el `contactsStackButton` y `tasksStackButton` controles.  
   
 ## <a name="defining-icons"></a>Definición de iconos  
- Cada `StackView` botón tiene un icono asociado. Para mayor comodidad, cada icono se representa como una cadena codificada en Base64, que se deserializa antes un <xref:System.Drawing.Bitmap> creada a partir de él. En un entorno de producción, almacenar datos de mapa de bits como un recurso y sus iconos aparecen en el Diseñador de Windows Forms. Para obtener más información, consulte [Cómo: agregar imágenes de fondo a formularios Windows Forms](http://msdn.microsoft.com/en-us/7a509ba2-055c-4ae6-b88a-54625c6d9aff).  
+ Cada `StackView` botón tiene un icono asociado. Para mayor comodidad, cada icono se representa como una cadena codificada en Base64, que se deserializa antes un <xref:System.Drawing.Bitmap> creada a partir de él. En un entorno de producción, almacenar datos de mapa de bits como un recurso y sus iconos aparecen en el Diseñador de Windows Forms. Para obtener más información, consulte [Cómo: agregar imágenes de fondo a formularios Windows Forms](http://msdn.microsoft.com/library/7a509ba2-055c-4ae6-b88a-54625c6d9aff).  
   
 #### <a name="to-define-icons"></a>Para definir los iconos  
   

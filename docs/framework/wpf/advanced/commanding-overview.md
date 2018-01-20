@@ -25,11 +25,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 1af7d9dba986c3775dc3625d1e7a874f6b26c97d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3eb7d05cdf5f6a80a0a247a5f429052cc9a8368b
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="commanding-overview"></a>Información general sobre comandos
 <a name="introduction"></a> Los comandos constituyen un mecanismo de entrada de [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], que permite el control de entrada en un nivel más semántico que la entrada del dispositivo. Algunos ejemplos de comandos son las operaciones **Copiar**, **Cortar** y **Pegar** presentes en numerosas aplicaciones.  
@@ -202,5 +202,5 @@ ms.lasthandoff: 12/22/2017
  [Información general sobre acciones del usuario](../../../../docs/framework/wpf/advanced/input-overview.md)  
  [Información general sobre eventos enrutados](../../../../docs/framework/wpf/advanced/routed-events-overview.md)  
  [Implement ICommandSource (ejemplo)](../../../../docs/framework/wpf/advanced/how-to-implement-icommandsource.md)  
- [Cómo: Agregar un comando a un elemento de menú](http://msdn.microsoft.com/en-us/013d68a0-5373-4a68-bd91-5de574307370)  
+ [Cómo: Agregar un comando a un elemento de menú](http://msdn.microsoft.com/library/013d68a0-5373-4a68-bd91-5de574307370)  
  [Crear un objeto RoutedCommand de muestra personalizado](http://go.microsoft.com/fwlink/?LinkID=159980)

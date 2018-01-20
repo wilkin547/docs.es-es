@@ -15,11 +15,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 0e2f268dc2ab1e2aebe2f51d733a59bd093329d5
-ms.sourcegitcommit: bf8a3ba647252010bdce86dd914ac6c61b5ba89d
+ms.openlocfilehash: 10914281632a6651b3872485b795d9a636dc6bd0
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/06/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="xml-serializer-generator-tool-sgenexe"></a>Herramienta Generador de serializador XML (Sgen.exe)
 El Generador de serializador XML crea un ensamblado de serialización XML para los tipos de un ensamblado especificado a fin de mejorar el rendimiento en el inicio de <xref:System.Xml.Serialization.XmlSerializer> cuando serializa o deserializa objetos de los tipos especificados.  
@@ -69,5 +69,5 @@ sgen Data.dll
   
 ## <a name="see-also"></a>Vea también  
  [Herramientas](../../../docs/framework/tools/index.md)  
- [Introducción a servicios Web XML](http://msdn.microsoft.com/en-us/9db0c7b8-bca6-462b-9be5-f5f9a7f05a4d)  
+ [Introducción a servicios Web XML](http://msdn.microsoft.com/library/9db0c7b8-bca6-462b-9be5-f5f9a7f05a4d)  
  [Símbolos del sistema](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

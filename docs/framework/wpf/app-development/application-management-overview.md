@@ -18,11 +18,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 9651b55741a607b1c99a813c0011db380dfd38f6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a881793c50a4ce506e752774e70e0904e30525c1
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="application-management-overview"></a>Información general sobre la administración de aplicaciones
 Todas las aplicaciones suelen compartir un conjunto común de funciones que se aplica a la implementación y la administración de la aplicación. Este tema proporciona información general de la funcionalidad de la <xref:System.Windows.Application> clase para crear y administrar aplicaciones.  
@@ -381,5 +381,5 @@ Todas las aplicaciones suelen compartir un conjunto común de funciones que se a
  [Información general sobre navegación](../../../../docs/framework/wpf/app-development/navigation-overview.md)  
  [Archivos de recursos, contenido y datos de aplicaciones de WPF](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md)  
  [Identificadores URI de paquete en WPF](../../../../docs/framework/wpf/app-development/pack-uris-in-wpf.md)  
- [Modelo de aplicación: Temas "Cómo..."](http://msdn.microsoft.com/en-us/76771b09-3688-4d1c-8818-9b3f4cf39a30)  
+ [Modelo de aplicación: Temas "Cómo..."](http://msdn.microsoft.com/library/76771b09-3688-4d1c-8818-9b3f4cf39a30)  
  [Desarrollo de aplicaciones](../../../../docs/framework/wpf/app-development/index.md)

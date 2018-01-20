@@ -23,11 +23,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 060f411dfc7c3153fdf0e0d6e19781f0d60b141b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0267020f7e7a52e92b05a0bda0ee397e5c3393fc
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="walkthrough-serializing-collections-of-standard-types-with-the-designerserializationvisibilityattribute"></a>Tutorial: Serializar colecciones de tipos estándar con DesignerSerializationVisibilityAttribute
 Los controles personalizados a veces expondrá una colección como una propiedad. Este tutorial muestra cómo utilizar la <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute> clase para controlar cómo se serializa una colección en tiempo de diseño. Aplicar el <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute.Content> valor para la propiedad de colección se asegura de que se van a serializar la propiedad.  
@@ -35,7 +35,7 @@ Los controles personalizados a veces expondrá una colección como una propiedad
  Para copiar el código de este tema como una sola lista, vea [Cómo: serializar colecciones de tipos estándar con DesignerSerializationVisibilityAttribute](http://msdn.microsoft.com/library/7829fcdd-8205-405f-8231-a1282a9835c9).  
   
 > [!NOTE]
->  Los cuadros de diálogo y comandos de menú que se ven pueden diferir de los descritos en la Ayuda, en función de los valores de configuración o de edición activos. Para cambiar la configuración, elija la opción **Importar y exportar configuraciones** del menú **Herramientas** . Para obtener más información, consulte [Personalizar la configuración de desarrollo en Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Los cuadros de diálogo y comandos de menú que se ven pueden diferir de los descritos en la Ayuda, en función de los valores de configuración o de edición activos. Para cambiar la configuración, elija la opción **Importar y exportar configuraciones** del menú **Herramientas** . Para obtener más información, vea [Personalizar la configuración de desarrollo en Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
 ## <a name="prerequisites"></a>Requisitos previos  
  Para poder completar este tutorial, necesitará:  
@@ -47,9 +47,9 @@ Los controles personalizados a veces expondrá una colección como una propiedad
   
 #### <a name="to-create-a-control-with-a-serializable-collection"></a>Para crear un control con una colección serializable  
   
-1.  Cree un proyecto de biblioteca de controles de Windows denominado `SerializationDemoControlLib`. Para obtener más información, consulte [plantilla de biblioteca de controles de Windows](http://msdn.microsoft.com/en-us/722f4e2d-1310-4ed5-8f33-593337ab66b4).  
+1.  Cree un proyecto de biblioteca de controles de Windows denominado `SerializationDemoControlLib`. Para obtener más información, consulte [plantilla de biblioteca de controles de Windows](http://msdn.microsoft.com/library/722f4e2d-1310-4ed5-8f33-593337ab66b4).  
   
-2.  Cambiar el nombre de `UserControl1` a `SerializationDemoControl`. Para obtener más información, consulte [Cómo: cambiar el nombre de los identificadores](http://msdn.microsoft.com/en-us/2430f732-2b70-4516-8cf6-a7bb71cc9724).  
+2.  Cambiar el nombre de `UserControl1` a `SerializationDemoControl`. Para obtener más información, consulte [Cómo: cambiar el nombre de los identificadores](http://msdn.microsoft.com/library/2430f732-2b70-4516-8cf6-a7bb71cc9724).  
   
 3.  En el **propiedades** ventana, establezca el valor de la <xref:System.Windows.Forms.Padding.All%2A?displayProperty=nameWithType> propiedad `10`.  
   
@@ -60,8 +60,8 @@ Los controles personalizados a veces expondrá una colección como una propiedad
     |Property|Cambiar a|  
     |--------------|---------------|  
     |**Multiline**|`true`|  
-    |**Acoplar**|<xref:System.Windows.Forms.DockStyle.Fill>|  
-    |**Barras de desplazamiento**|<xref:System.Windows.Forms.ScrollBars.Vertical>|  
+    |**Dock**|<xref:System.Windows.Forms.DockStyle.Fill>|  
+    |**ScrollBars**|<xref:System.Windows.Forms.ScrollBars.Vertical>|  
     |**ReadOnly**|`true`|  
   
 6.  En el **Editor de código**, declare un campo de matriz de cadena denominado `stringsValue` en `SerializationDemoControl`.  

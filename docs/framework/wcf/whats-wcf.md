@@ -18,11 +18,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: f5301bf3a2fed35dbdd0046e01eb2acb9083a290
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5ae43f65c104376ea1e7cfc036a57c728c90ac12
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="what-is-windows-communication-foundation"></a>¿Qué es Windows Communication Foundation?
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] es un marco de trabajo para la creación de aplicaciones orientadas a servicios. Con [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], es posible enviar datos como mensajes asincrónicos de un extremo de servicio a otro. Un extremo de servicio puede formar parte de un servicio disponible continuamente hospedado por IIS, o puede ser un servicio hospedado en una aplicación. Un extremo puede ser un cliente de un servicio que solicita datos de un extremo de servicio. Los mensajes pueden ser tan simples como un carácter o una palabra que se envía como XML, o tan complejos como una secuencia de datos binarios. A continuación se indican unos cuantos escenarios de ejemplo:  
@@ -111,4 +111,4 @@ ms.lasthandoff: 12/22/2017
  [Tutorial de introducción](../../../docs/framework/wcf/getting-started-tutorial.md)  
  [Guía de la documentación](../../../docs/framework/wcf/guide-to-the-documentation.md)  
  [Programación básica de WCF](../../../docs/framework/wcf/basic-wcf-programming.md)  
- [Ejemplos de Windows Communication Foundation](http://msdn.microsoft.com/en-us/8ec9d192-5d81-4f64-bfd3-90c5e5858c91)
+ [Ejemplos de Windows Communication Foundation](http://msdn.microsoft.com/library/8ec9d192-5d81-4f64-bfd3-90c5e5858c91)

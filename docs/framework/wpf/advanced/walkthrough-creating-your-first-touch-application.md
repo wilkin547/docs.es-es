@@ -22,11 +22,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 502fb9ae0c488f5f3e438a3ae0a7087538183f1b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 08f4004329d15b527a889cd7b437a7f18278fc79
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="walkthrough-creating-your-first-touch-application"></a>Tutorial: Crear su primera aplicación táctil
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]permite que las aplicaciones responder a la entrada táctil. Por ejemplo, puede interactuar con una aplicación mediante el uso de uno o más dedos en un dispositivo táctil, como una pantalla táctil que este tutorial crea una aplicación que permite al usuario mover, cambiar el tamaño o girar un solo objeto usando el toque.  
@@ -46,7 +46,7 @@ ms.lasthandoff: 12/22/2017
   
 #### <a name="to-create-the-application"></a>Para crear la aplicación  
   
-1.  Cree un proyecto de aplicación de WPF en Visual Basic o Visual C# denominado `BasicManipulation`. Para obtener más información, vea [Cómo: Crear un nuevo proyecto de aplicación de WPF](http://msdn.microsoft.com/en-us/1f6aea7a-33e1-4d3f-8555-1daa42e95d82).  
+1.  Cree un proyecto de aplicación de WPF en Visual Basic o Visual C# denominado `BasicManipulation`. Para obtener más información, vea [Cómo: Crear un nuevo proyecto de aplicación de WPF](http://msdn.microsoft.com/library/1f6aea7a-33e1-4d3f-8555-1daa42e95d82).  
   
 2.  Reemplace el contenido de MainWindow.xaml por el código XAML siguiente.  
   

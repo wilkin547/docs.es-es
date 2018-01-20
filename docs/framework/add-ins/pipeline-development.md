@@ -21,11 +21,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 0ad577145c26b9c43e8b7fb3b61f27f374ff9298
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 33646bbd7b0043cb5fc036b9b11aa4cf37cd537f
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="pipeline-development"></a>Desarrollo de canalizaciones
 La canalización de complementos es la ruta de acceso de los segmentos de canalización que la aplicación host y su complemento deben utilizar para comunicarse entre sí.  
@@ -41,14 +41,14 @@ Canalización de complementos
   
  Si carga el host y el complemento en dominios de aplicación independientes, tiene un límite de aislamiento que separa el ámbito de la aplicación host del ámbito del complemento. El contrato es el único ensamblado que se carga en el host y los dominios de aplicación del complemento. El host y el complemento de cada solo hacer referencia a la vista de los métodos de contrato. Por lo tanto, se separan mediante una capa de abstracción del contrato.  
   
- Para desarrollar segmentos de canalización, debe crear una estructura de directorios que se va a contener. Para obtener más información sobre los requisitos de desarrollo y directrices de ámbito, consulte [requisitos del desarrollo de canalizaciones](http://msdn.microsoft.com/en-us/ef9fa986-e80b-43e1-868b-247f4c1d9da5).  
+ Para desarrollar segmentos de canalización, debe crear una estructura de directorios que se va a contener. Para obtener más información sobre los requisitos de desarrollo y directrices de ámbito, consulte [requisitos del desarrollo de canalizaciones](http://msdn.microsoft.com/library/ef9fa986-e80b-43e1-868b-247f4c1d9da5).  
   
  En la siguiente ilustración se muestra los tipos que conforman los segmentos de canalización. Los nombres de los tipos que se muestra en la ilustración son arbitrarios, pero todos los tipos excepto el host y el host de vista de los atributos de complemento requieren para que puedan ser detectados por los métodos que crear un almacén de información.  
   
  ![Agregar &#45; en el modelo con atributos requeridos en tipos. ] (../../../docs/framework/add-ins/media/addin-model.png "AddIn_Model")  
 Canalización de complementos con tipos  
   
- La tabla siguiente describen los segmentos de canalización para activar un complemento. Para obtener más información acerca de estos segmentos, vea [contratos, vistas y adaptadores](http://msdn.microsoft.com/en-us/a6460173-9507-4b87-8c07-d4ee245d715c).  
+ La tabla siguiente describen los segmentos de canalización para activar un complemento. Para obtener más información acerca de estos segmentos, vea [contratos, vistas y adaptadores](http://msdn.microsoft.com/library/a6460173-9507-4b87-8c07-d4ee245d715c).  
   
 |Segmento de la canalización|Descripción|  
 |----------------------|-----------------|  
@@ -89,14 +89,14 @@ Ruta de acceso de activación desde el complemento al host
   
      Describe un complemento de calculadora que realiza la suma, resta, multiplicación y división cálculos para el host.  
   
--   [Tutorial: Habilitar la compatibilidad con versiones anteriores como los cambios de Host](http://msdn.microsoft.com/en-us/6fa15bb5-8f04-407d-bd7d-675dc043c848)  
+-   [Tutorial: Habilitar la compatibilidad con versiones anteriores como los cambios de Host](http://msdn.microsoft.com/library/6fa15bb5-8f04-407d-bd7d-675dc043c848)  
   
      Describe un complemento de calculadora con capacidades de cálculo mejoradas y cómo mantener la compatibilidad con el primer complemento de calculadora.  
   
--   [Tutorial: Pasar colecciones entre Hosts y complementos](http://msdn.microsoft.com/en-us/b532c604-548e-4fab-b11c-377257dd0ee5)  
+-   [Tutorial: Pasar colecciones entre Hosts y complementos](http://msdn.microsoft.com/library/b532c604-548e-4fab-b11c-377257dd0ee5)  
   
      Describe cómo pasar colecciones de datos a través de la canalización utilizando un escenario de almacén de libros.  
   
 ## <a name="see-also"></a>Vea también  
- [Escenarios de canalización del complemento](http://msdn.microsoft.com/en-us/feb70e0b-8734-494c-aeaf-b567f014043e)  
+ [Escenarios de canalización del complemento](http://msdn.microsoft.com/library/feb70e0b-8734-494c-aeaf-b567f014043e)  
  [Complementos y extensibilidad](../../../docs/framework/add-ins/index.md)

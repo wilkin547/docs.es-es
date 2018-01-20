@@ -23,11 +23,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: ac4b6fc2ae36d848306178f281cceeeb0654ec03
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5cee99346d19c632739bcc6540c43f1a35217a2f
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="walkthrough-creating-an-extensible-application"></a>Tutorial: Crear una aplicación extensible
 Este tutorial describe cómo crear una canalización para un complemento que realiza funciones de calculadora sencillo. No se muestra un escenario real; en su lugar, muestra la funcionalidad básica de una canalización y cómo un complemento puede proporcionar servicios para un host.  
@@ -52,11 +52,11 @@ Este tutorial describe cómo crear una canalización para un complemento que rea
   
 -   Ejecutar la aplicación host.  
   
- Esta canalización sólo pasa tipos serializables (<xref:System.Double> y <xref:System.String>), entre el host y el complemento. Para obtener un ejemplo que muestra cómo pasar colecciones de tipos de datos complejos, vea [Tutorial: pasar colecciones entre Hosts y complementos](http://msdn.microsoft.com/en-us/b532c604-548e-4fab-b11c-377257dd0ee5).  
+ Esta canalización sólo pasa tipos serializables (<xref:System.Double> y <xref:System.String>), entre el host y el complemento. Para obtener un ejemplo que muestra cómo pasar colecciones de tipos de datos complejos, vea [Tutorial: pasar colecciones entre Hosts y complementos](http://msdn.microsoft.com/library/b532c604-548e-4fab-b11c-377257dd0ee5).  
   
  El contrato de esta canalización define un modelo de objetos de cuatro operaciones aritméticas: agregar, restar, multiplicar y dividir. El host proporciona el complemento con una ecuación para calcular, por ejemplo, 2 + 2, y el complemento devuelve el resultado al host.  
   
- Versión 2 del complemento de calculadora proporciona otras posibilidades de cálculo y muestra el control de versiones. Se describe en [Tutorial: habilitar la compatibilidad con versiones anteriores como los cambios de Host](http://msdn.microsoft.com/en-us/6fa15bb5-8f04-407d-bd7d-675dc043c848).  
+ Versión 2 del complemento de calculadora proporciona otras posibilidades de cálculo y muestra el control de versiones. Se describe en [Tutorial: habilitar la compatibilidad con versiones anteriores como los cambios de Host](http://msdn.microsoft.com/library/6fa15bb5-8f04-407d-bd7d-675dc043c848).  
   
 ## <a name="prerequisites"></a>Requisitos previos  
  Necesitas lo siguiente para poder llevar a cabo este tutorial:  
@@ -73,7 +73,7 @@ Este tutorial describe cómo crear una canalización para un complemento que rea
 2.  Llame a la solución `CalculatorV1`.  
   
 ## <a name="creating-the-pipeline-directory-structure"></a>Crear la estructura de directorios de canalización  
- El modelo de complementos requiere que los ensamblados de segmento de canalización se coloquen en una estructura de directorio especificado. Para obtener más información acerca de la estructura de canalización, consulte [requisitos del desarrollo de canalizaciones](http://msdn.microsoft.com/en-us/ef9fa986-e80b-43e1-868b-247f4c1d9da5).  
+ El modelo de complementos requiere que los ensamblados de segmento de canalización se coloquen en una estructura de directorio especificado. Para obtener más información acerca de la estructura de canalización, consulte [requisitos del desarrollo de canalizaciones](http://msdn.microsoft.com/library/ef9fa986-e80b-43e1-868b-247f4c1d9da5).  
   
 #### <a name="to-create-the-pipeline-directory-structure"></a>Para crear la estructura de directorios de canalización  
   
@@ -92,10 +92,10 @@ Este tutorial describe cómo crear una canalización para un complemento que rea
       HostSideAdapters  
     ```  
   
-     No es necesario poner la estructura de carpetas de la canalización en la carpeta de la aplicación; se hace aquí solo por conveniencia. En el paso correspondiente, el tutorial, explica cómo cambiar el código si la estructura de carpetas de la canalización está en una ubicación diferente. Vea la explicación de los requisitos de directorio de canalización en [requisitos del desarrollo de canalizaciones](http://msdn.microsoft.com/en-us/ef9fa986-e80b-43e1-868b-247f4c1d9da5).  
+     No es necesario poner la estructura de carpetas de la canalización en la carpeta de la aplicación; se hace aquí solo por conveniencia. En el paso correspondiente, el tutorial, explica cómo cambiar el código si la estructura de carpetas de la canalización está en una ubicación diferente. Vea la explicación de los requisitos de directorio de canalización en [requisitos del desarrollo de canalizaciones](http://msdn.microsoft.com/library/ef9fa986-e80b-43e1-868b-247f4c1d9da5).  
   
     > [!NOTE]
-    >  El `CalcV2` carpeta no se utiliza en este tutorial; es un marcador de posición para [Tutorial: habilitar la compatibilidad con versiones anteriores como los cambios de Host](http://msdn.microsoft.com/en-us/6fa15bb5-8f04-407d-bd7d-675dc043c848).  
+    >  El `CalcV2` carpeta no se utiliza en este tutorial; es un marcador de posición para [Tutorial: habilitar la compatibilidad con versiones anteriores como los cambios de Host](http://msdn.microsoft.com/library/6fa15bb5-8f04-407d-bd7d-675dc043c848).  
   
 ## <a name="creating-the-contract-and-views"></a>Crear el contrato y vistas  
  El segmento de contrato de esta canalización define la `ICalc1Contract` interfaz que define cuatro métodos: `add`, `subtract`, `multiply`, y `divide`.  
@@ -204,7 +204,7 @@ Este tutorial describe cómo crear una canalización para un complemento que rea
   
  Esta canalización, el complemento proporciona un servicio para el host y el flujo de tipos desde el complemento en el host. Dado que ningún tipo fluye desde el host para el complemento, es necesario que incluir un adaptador de vista a contrato.  
   
- Para implementar la administración de la duración, use un <xref:System.AddIn.Pipeline.ContractHandle> objeto que se va a asociar un token de duración al contrato. Debe mantener una referencia a este identificador en orden para que funcione la administración de vigencia. Después de que se aplica el token, es necesaria ninguna programación adicional porque el sistema del complemento puede desechar los objetos cuando ya no se usan y que estén disponibles para la recolección. Para más información, consulte [Administración de la duración](http://msdn.microsoft.com/en-us/57a9c87e-394c-4fef-89f2-aa4223a2aeb5).  
+ Para implementar la administración de la duración, use un <xref:System.AddIn.Pipeline.ContractHandle> objeto que se va a asociar un token de duración al contrato. Debe mantener una referencia a este identificador en orden para que funcione la administración de vigencia. Después de que se aplica el token, es necesaria ninguna programación adicional porque el sistema del complemento puede desechar los objetos cuando ya no se usan y que estén disponibles para la recolección. Para obtener más información, consulte [administración de la duración](http://msdn.microsoft.com/library/57a9c87e-394c-4fef-89f2-aa4223a2aeb5).  
   
 #### <a name="to-create-the-host-side-adapter"></a>Para crear el adaptador del lado del host  
   
@@ -339,7 +339,7 @@ Este tutorial describe cómo crear una canalización para un complemento que rea
     |Calc1HVA|MyApp|  
   
     > [!NOTE]
-    >  Si ha decidido poner la estructura de carpetas de la canalización en una ubicación distinta de la carpeta de la aplicación, debe modificar las rutas de acceso que se muestra en la tabla en consecuencia. Vea la explicación de los requisitos de directorio de canalización en [requisitos del desarrollo de canalizaciones](http://msdn.microsoft.com/en-us/ef9fa986-e80b-43e1-868b-247f4c1d9da5).  
+    >  Si ha decidido poner la estructura de carpetas de la canalización en una ubicación distinta de la carpeta de la aplicación, debe modificar las rutas de acceso que se muestra en la tabla en consecuencia. Vea la explicación de los requisitos de directorio de canalización en [requisitos del desarrollo de canalizaciones](http://msdn.microsoft.com/library/ef9fa986-e80b-43e1-868b-247f4c1d9da5).  
   
 2.  Compile la solución de Visual Studio.  
   
@@ -348,7 +348,7 @@ Este tutorial describe cómo crear una canalización para un complemento que rea
     > [!NOTE]
     >  Si no ha cambiado **Copy Local** a **False** para el `Calc1AddInView` proyecto referencia en el `AddInCalcV1` proyecto, problemas de contexto de cargador impedirá que el complemento se encuentra.  
   
-     Para obtener información acerca de la implementación a la canalización, consulte [requisitos del desarrollo de canalizaciones](http://msdn.microsoft.com/en-us/ef9fa986-e80b-43e1-868b-247f4c1d9da5).  
+     Para obtener información acerca de la implementación a la canalización, consulte [requisitos del desarrollo de canalizaciones](http://msdn.microsoft.com/library/ef9fa986-e80b-43e1-868b-247f4c1d9da5).  
   
 ## <a name="running-the-host-application"></a>Ejecutar la aplicación de Host  
  Ahora está listo para ejecutar el host e interactuar con el complemento.  
@@ -364,8 +364,8 @@ Este tutorial describe cómo crear una canalización para un complemento que rea
 4.  Tipo de **salir** y presione la **ENTRAR** tecla para cerrar la aplicación.  
   
 ## <a name="see-also"></a>Vea también  
- [Tutorial: Habilitar la compatibilidad con versiones anteriores como los cambios de Host](http://msdn.microsoft.com/en-us/6fa15bb5-8f04-407d-bd7d-675dc043c848)  
- [Tutorial: Pasar colecciones entre Hosts y complementos](http://msdn.microsoft.com/en-us/b532c604-548e-4fab-b11c-377257dd0ee5)  
- [Requisitos del desarrollo de canalizaciones](http://msdn.microsoft.com/en-us/ef9fa986-e80b-43e1-868b-247f4c1d9da5)  
- [Contratos, vistas y adaptadores](http://msdn.microsoft.com/en-us/a6460173-9507-4b87-8c07-d4ee245d715c)  
+ [Tutorial: Habilitar la compatibilidad con versiones anteriores como los cambios de Host](http://msdn.microsoft.com/library/6fa15bb5-8f04-407d-bd7d-675dc043c848)  
+ [Tutorial: Pasar colecciones entre Hosts y complementos](http://msdn.microsoft.com/library/b532c604-548e-4fab-b11c-377257dd0ee5)  
+ [Requisitos del desarrollo de canalizaciones](http://msdn.microsoft.com/library/ef9fa986-e80b-43e1-868b-247f4c1d9da5)  
+ [Contratos, vistas y adaptadores](http://msdn.microsoft.com/library/a6460173-9507-4b87-8c07-d4ee245d715c)  
  [Desarrollo de canalizaciones](../../../docs/framework/add-ins/pipeline-development.md)

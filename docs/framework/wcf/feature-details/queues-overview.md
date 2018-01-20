@@ -15,11 +15,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: f1d3f7ed4ebde0f607b3c86cf9879d219af85b20
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: eb5d0f51fbbb6c8bad9bfbbfd9977368fdbd0666
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="queues-overview"></a>Información general de colas
 En esta sección se presentan los conceptos generales y básicos detrás de la comunicación puesta en la cola. Las secciones subsiguientes no entran en detalles sobre cómo se manifiestan en [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] los conceptos de la puesta en cola descritos aquí.  
@@ -91,6 +91,6 @@ En esta sección se presentan los conceptos generales y básicos detrás de la c
  [Comunicación en cola volátil](../../../../docs/framework/wcf/samples/volatile-queued-communication.md)  
  [Windows Communication Foundation a Message Queuing](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md)  
  [Instalación de Message Queuing (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md)  
- [Ejemplos de enlace de integración de puesta en cola de mensajes](http://msdn.microsoft.com/en-us/997d11cb-f2c5-4ba0-9209-92843d4d0e1a)  
+ [Ejemplos de enlace de integración de puesta en cola de mensajes](http://msdn.microsoft.com/library/997d11cb-f2c5-4ba0-9209-92843d4d0e1a)  
  [Message Queuing a Windows Communication Foundation](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md)  
  [Seguridad de mensajes mediante Message Queuing](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)
