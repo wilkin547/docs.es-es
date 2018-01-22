@@ -18,28 +18,28 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: c30c8e0399229cd58d09295e24258eb3e2275818
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 26e506936bcc5097689f11f7693d1d35858dff0a
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="build-and-deploy-how-to-topics"></a><span data-ttu-id="ec005-102">Temas "Cómo..." de compilar e implementar</span><span class="sxs-lookup"><span data-stu-id="ec005-102">Build and Deploy How-to Topics</span></span>
-<span data-ttu-id="ec005-103">Los temas siguientes muestran cómo crear archivos de proyecto para los distintos [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] tipos de aplicaciones.</span><span class="sxs-lookup"><span data-stu-id="ec005-103">The following topics show how to create project files for the various [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] application types.</span></span>  
+# <a name="build-and-deploy-how-to-topics"></a><span data-ttu-id="d47c8-102">Temas "Cómo..." de compilar e implementar</span><span class="sxs-lookup"><span data-stu-id="d47c8-102">Build and Deploy How-to Topics</span></span>
+<span data-ttu-id="d47c8-103">Los temas siguientes muestran cómo crear archivos de proyecto para los distintos [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] tipos de aplicaciones.</span><span class="sxs-lookup"><span data-stu-id="d47c8-103">The following topics show how to create project files for the various [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] application types.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="ec005-104">En esta sección</span><span class="sxs-lookup"><span data-stu-id="ec005-104">In This Section</span></span>  
- [<span data-ttu-id="ec005-105">Configurar IIS 5.0 e IIS 6.0 para implementar aplicaciones de WPF</span><span class="sxs-lookup"><span data-stu-id="ec005-105">Configure IIS 5.0 and IIS 6.0 to Deploy WPF Applications</span></span>](../../../../docs/framework/wpf/app-development/how-to-configure-iis-5-0-and-iis-6-0-to-deploy-wpf-applications.md)  
- [<span data-ttu-id="ec005-106">Configurar Visual Studio para depurar una aplicación de explorador XAML y llamar a un servicio web</span><span class="sxs-lookup"><span data-stu-id="ec005-106">Configure Visual Studio to Debug a XAML Browser Application to Call a Web Service</span></span>](../../../../docs/framework/wpf/app-development/configure-vs-to-debug-a-xaml-browser-to-call-a-web-service.md)  
- [<span data-ttu-id="ec005-107">Determinar la versión actualmente instalada de WPF</span><span class="sxs-lookup"><span data-stu-id="ec005-107">Determine the Installed Version of WPF</span></span>](../../../../docs/framework/wpf/app-development/how-to-determine-the-installed-version-of-wpf.md)  
- [<span data-ttu-id="ec005-108">Detectar si .NET Framework 3.0 está instalado</span><span class="sxs-lookup"><span data-stu-id="ec005-108">Detect Whether the .NET Framework 3.0 Is Installed</span></span>](../../../../docs/framework/wpf/app-development/how-to-detect-whether-the-net-framework-3-0-is-installed.md)  
- [<span data-ttu-id="ec005-109">Detectar si .NET Framework 3.5 está instalado</span><span class="sxs-lookup"><span data-stu-id="ec005-109">Detect Whether the .NET Framework 3.5 Is Installed</span></span>](../../../../docs/framework/wpf/app-development/how-to-detect-whether-the-net-framework-3-5-is-installed.md)  
- [<span data-ttu-id="ec005-110">Detectar si está instalado el complemento WPF para Firefox</span><span class="sxs-lookup"><span data-stu-id="ec005-110">Detect Whether the WPF Plug-In for Firefox Is Installed</span></span>](../../../../docs/framework/wpf/app-development/how-to-detect-whether-the-wpf-plug-in-for-firefox-is-installed.md)  
+## <a name="in-this-section"></a><span data-ttu-id="d47c8-104">En esta sección</span><span class="sxs-lookup"><span data-stu-id="d47c8-104">In This Section</span></span>  
+ [<span data-ttu-id="d47c8-105">Configurar IIS 5.0 e IIS 6.0 para implementar aplicaciones de WPF</span><span class="sxs-lookup"><span data-stu-id="d47c8-105">Configure IIS 5.0 and IIS 6.0 to Deploy WPF Applications</span></span>](../../../../docs/framework/wpf/app-development/how-to-configure-iis-5-0-and-iis-6-0-to-deploy-wpf-applications.md)  
+ [<span data-ttu-id="d47c8-106">Configurar Visual Studio para depurar una aplicación de explorador XAML y llamar a un servicio web</span><span class="sxs-lookup"><span data-stu-id="d47c8-106">Configure Visual Studio to Debug a XAML Browser Application to Call a Web Service</span></span>](../../../../docs/framework/wpf/app-development/configure-vs-to-debug-a-xaml-browser-to-call-a-web-service.md)  
+ [<span data-ttu-id="d47c8-107">Determinar la versión actualmente instalada de WPF</span><span class="sxs-lookup"><span data-stu-id="d47c8-107">Determine the Installed Version of WPF</span></span>](../../../../docs/framework/wpf/app-development/how-to-determine-the-installed-version-of-wpf.md)  
+ [<span data-ttu-id="d47c8-108">Detectar si .NET Framework 3.0 está instalado</span><span class="sxs-lookup"><span data-stu-id="d47c8-108">Detect Whether the .NET Framework 3.0 Is Installed</span></span>](../../../../docs/framework/wpf/app-development/how-to-detect-whether-the-net-framework-3-0-is-installed.md)  
+ [<span data-ttu-id="d47c8-109">Detectar si .NET Framework 3.5 está instalado</span><span class="sxs-lookup"><span data-stu-id="d47c8-109">Detect Whether the .NET Framework 3.5 Is Installed</span></span>](../../../../docs/framework/wpf/app-development/how-to-detect-whether-the-net-framework-3-5-is-installed.md)  
+ [<span data-ttu-id="d47c8-110">Detectar si está instalado el complemento WPF para Firefox</span><span class="sxs-lookup"><span data-stu-id="d47c8-110">Detect Whether the WPF Plug-In for Firefox Is Installed</span></span>](../../../../docs/framework/wpf/app-development/how-to-detect-whether-the-wpf-plug-in-for-firefox-is-installed.md)  
   
-## <a name="related-sections"></a><span data-ttu-id="ec005-111">Secciones relacionadas</span><span class="sxs-lookup"><span data-stu-id="ec005-111">Related Sections</span></span>  
- [<span data-ttu-id="ec005-112">Compilar una aplicación de WPF</span><span class="sxs-lookup"><span data-stu-id="ec005-112">Building a WPF Application</span></span>](../../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md)  
+## <a name="related-sections"></a><span data-ttu-id="d47c8-111">Secciones relacionadas</span><span class="sxs-lookup"><span data-stu-id="d47c8-111">Related Sections</span></span>  
+ [<span data-ttu-id="d47c8-112">Compilar una aplicación de WPF</span><span class="sxs-lookup"><span data-stu-id="d47c8-112">Building a WPF Application</span></span>](../../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md)  
   
- [<span data-ttu-id="ec005-113">Implementar una aplicación WPF</span><span class="sxs-lookup"><span data-stu-id="ec005-113">Deploying a WPF Application</span></span>](../../../../docs/framework/wpf/app-development/deploying-a-wpf-application-wpf.md)  
+ [<span data-ttu-id="d47c8-113">Implementar una aplicación WPF</span><span class="sxs-lookup"><span data-stu-id="d47c8-113">Deploying a WPF Application</span></span>](../../../../docs/framework/wpf/app-development/deploying-a-wpf-application-wpf.md)  
   
- [<span data-ttu-id="ec005-114">Cómo: crear un nuevo proyecto de aplicación de WPF</span><span class="sxs-lookup"><span data-stu-id="ec005-114">How to: Create a New WPF Application Project</span></span>](http://msdn.microsoft.com/en-us/1f6aea7a-33e1-4d3f-8555-1daa42e95d82)  
+ [<span data-ttu-id="d47c8-114">Cómo: crear un nuevo proyecto de aplicación de WPF</span><span class="sxs-lookup"><span data-stu-id="d47c8-114">How to: Create a New WPF Application Project</span></span>](http://msdn.microsoft.com/library/1f6aea7a-33e1-4d3f-8555-1daa42e95d82)  
   
- [<span data-ttu-id="ec005-115">Cómo: crear un nuevo proyecto de aplicación de explorador WPF</span><span class="sxs-lookup"><span data-stu-id="ec005-115">How to: Create a New WPF Browser Application Project</span></span>](http://msdn.microsoft.com/en-us/72ef4d90-e163-42a1-8df0-ea7ccfd1901f)
+ [<span data-ttu-id="d47c8-115">Cómo: crear un nuevo proyecto de aplicación de explorador WPF</span><span class="sxs-lookup"><span data-stu-id="d47c8-115">How to: Create a New WPF Browser Application Project</span></span>](http://msdn.microsoft.com/library/72ef4d90-e163-42a1-8df0-ea7ccfd1901f)

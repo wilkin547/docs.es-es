@@ -21,16 +21,16 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: b668610f50c32373790130def17928b8b3b3d8b2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 72d1cedbfc1a1ec6c3588a7b0be9cf657d7369fd
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="resolvetypelib-method"></a><span data-ttu-id="f097f-102">ResolveTypeLib (Método)</span><span class="sxs-lookup"><span data-stu-id="f097f-102">ResolveTypeLib Method</span></span>
-<span data-ttu-id="f097f-103">Resuelve el nombre sencillo de una biblioteca de tipos mediante la devolución de su ruta de acceso completa.</span><span class="sxs-lookup"><span data-stu-id="f097f-103">Resolves the simple name of a type library by returning its fully qualified path.</span></span>  
+# <a name="resolvetypelib-method"></a><span data-ttu-id="ab0df-102">ResolveTypeLib (Método)</span><span class="sxs-lookup"><span data-stu-id="ab0df-102">ResolveTypeLib Method</span></span>
+<span data-ttu-id="ab0df-103">Resuelve el nombre sencillo de una biblioteca de tipos mediante la devolución de su ruta de acceso completa.</span><span class="sxs-lookup"><span data-stu-id="ab0df-103">Resolves the simple name of a type library by returning its fully qualified path.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f097f-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="f097f-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ab0df-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="ab0df-104">Syntax</span></span>  
   
 ```  
 HRESULT ResolveTypeLib(  
@@ -43,42 +43,42 @@ HRESULT ResolveTypeLib(
     [out] BSTR     *pbstrResolvedTlbName);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="f097f-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="f097f-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="ab0df-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="ab0df-105">Parameters</span></span>  
  `bstrSimpleName`  
- <span data-ttu-id="f097f-106">[in] A [BSTR](http://msdn.microsoft.com/en-us/1b2d7d2c-47af-4389-a6b6-b01b7e915228) que contiene el nombre sencillo de la biblioteca de tipos.</span><span class="sxs-lookup"><span data-stu-id="f097f-106">[in] A [BSTR](http://msdn.microsoft.com/en-us/1b2d7d2c-47af-4389-a6b6-b01b7e915228) that contains the simple name of the type library.</span></span>  
+ <span data-ttu-id="ab0df-106">[in] A [BSTR](http://msdn.microsoft.com/library/1b2d7d2c-47af-4389-a6b6-b01b7e915228) que contiene el nombre sencillo de la biblioteca de tipos.</span><span class="sxs-lookup"><span data-stu-id="ab0df-106">[in] A [BSTR](http://msdn.microsoft.com/library/1b2d7d2c-47af-4389-a6b6-b01b7e915228) that contains the simple name of the type library.</span></span>  
   
  `tlbid`  
- <span data-ttu-id="f097f-107">[in] El GUID asignado a la biblioteca de tipos en el registro.</span><span class="sxs-lookup"><span data-stu-id="f097f-107">[in] The GUID assigned to the type library in the registry.</span></span>  
+ <span data-ttu-id="ab0df-107">[in] El GUID asignado a la biblioteca de tipos en el registro.</span><span class="sxs-lookup"><span data-stu-id="ab0df-107">[in] The GUID assigned to the type library in the registry.</span></span>  
   
  `lcid`  
- <span data-ttu-id="f097f-108">[in] Identificador de localización de la biblioteca de tipos.</span><span class="sxs-lookup"><span data-stu-id="f097f-108">[in] The localization ID of the type library.</span></span>  
+ <span data-ttu-id="ab0df-108">[in] Identificador de localización de la biblioteca de tipos.</span><span class="sxs-lookup"><span data-stu-id="ab0df-108">[in] The localization ID of the type library.</span></span>  
   
  `wMajorVersion`  
- <span data-ttu-id="f097f-109">[in] El número de versión principal de la biblioteca de tipos.</span><span class="sxs-lookup"><span data-stu-id="f097f-109">[in] The major version number of the type library.</span></span> <span data-ttu-id="f097f-110">Por ejemplo, para la versión *x.y*, el número de versión principal es *x*.</span><span class="sxs-lookup"><span data-stu-id="f097f-110">For example, for version *x.y*, the major version number is *x*.</span></span>  
+ <span data-ttu-id="ab0df-109">[in] El número de versión principal de la biblioteca de tipos.</span><span class="sxs-lookup"><span data-stu-id="ab0df-109">[in] The major version number of the type library.</span></span> <span data-ttu-id="ab0df-110">Por ejemplo, para la versión *x.y*, el número de versión principal es *x*.</span><span class="sxs-lookup"><span data-stu-id="ab0df-110">For example, for version *x.y*, the major version number is *x*.</span></span>  
   
  `wMinorVersion`  
- <span data-ttu-id="f097f-111">[in] El número de versión secundaria de la biblioteca de tipos.</span><span class="sxs-lookup"><span data-stu-id="f097f-111">[in] The minor version number of the type library.</span></span> <span data-ttu-id="f097f-112">Por ejemplo, para la versión *x.y*, el número de versión secundaria es *y*.</span><span class="sxs-lookup"><span data-stu-id="f097f-112">For example, for version *x.y*, the minor version number is *y*.</span></span>  
+ <span data-ttu-id="ab0df-111">[in] El número de versión secundaria de la biblioteca de tipos.</span><span class="sxs-lookup"><span data-stu-id="ab0df-111">[in] The minor version number of the type library.</span></span> <span data-ttu-id="ab0df-112">Por ejemplo, para la versión *x.y*, el número de versión secundaria es *y*.</span><span class="sxs-lookup"><span data-stu-id="ab0df-112">For example, for version *x.y*, the minor version number is *y*.</span></span>  
   
  `syskind`  
- <span data-ttu-id="f097f-113">[in] A [SYSKIND](http://msdn.microsoft.com/en-us/662048b2-59a8-48ca-9e4f-2f9a5306faa1) marca que identifica el entorno operativo.</span><span class="sxs-lookup"><span data-stu-id="f097f-113">[in] A [SYSKIND](http://msdn.microsoft.com/en-us/662048b2-59a8-48ca-9e4f-2f9a5306faa1) flag that identifies the operating environment.</span></span> <span data-ttu-id="f097f-114">Los valores habituales son SYS_WIN32 y SYS_WIN64.</span><span class="sxs-lookup"><span data-stu-id="f097f-114">Common values are SYS_WIN32 and SYS_WIN64.</span></span>  
+ <span data-ttu-id="ab0df-113">[in] A [SYSKIND](http://msdn.microsoft.com/library/662048b2-59a8-48ca-9e4f-2f9a5306faa1) marca que identifica el entorno operativo.</span><span class="sxs-lookup"><span data-stu-id="ab0df-113">[in] A [SYSKIND](http://msdn.microsoft.com/library/662048b2-59a8-48ca-9e4f-2f9a5306faa1) flag that identifies the operating environment.</span></span> <span data-ttu-id="ab0df-114">Los valores habituales son SYS_WIN32 y SYS_WIN64.</span><span class="sxs-lookup"><span data-stu-id="ab0df-114">Common values are SYS_WIN32 and SYS_WIN64.</span></span>  
   
  `pbstrResolvedTlbName`  
- <span data-ttu-id="f097f-115">[out] Un puntero a un [BSTR](http://msdn.microsoft.com/en-us/1b2d7d2c-47af-4389-a6b6-b01b7e915228) que contiene la ruta de acceso completa de la biblioteca de tipos con nombre en el `bstrSimpleName` parámetro.</span><span class="sxs-lookup"><span data-stu-id="f097f-115">[out] A pointer to a [BSTR](http://msdn.microsoft.com/en-us/1b2d7d2c-47af-4389-a6b6-b01b7e915228) that contains the full path of the type library named in the `bstrSimpleName` parameter.</span></span>  
+ <span data-ttu-id="ab0df-115">[out] Un puntero a un [BSTR](http://msdn.microsoft.com/library/1b2d7d2c-47af-4389-a6b6-b01b7e915228) que contiene la ruta de acceso completa de la biblioteca de tipos con nombre en el `bstrSimpleName` parámetro.</span><span class="sxs-lookup"><span data-stu-id="ab0df-115">[out] A pointer to a [BSTR](http://msdn.microsoft.com/library/1b2d7d2c-47af-4389-a6b6-b01b7e915228) that contains the full path of the type library named in the `bstrSimpleName` parameter.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="f097f-116">Comentarios</span><span class="sxs-lookup"><span data-stu-id="f097f-116">Remarks</span></span>  
- <span data-ttu-id="f097f-117">El `ResolveTypeLib` llama al método el [LoadTypeLibWithResolver (función)](../../../../docs/framework/unmanaged-api/tlbexp/loadtypelibwithresolver-function.md) durante [Tlbexp.exe (exportador de la biblioteca de tipos)](../../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md) de procesamiento.</span><span class="sxs-lookup"><span data-stu-id="f097f-117">The `ResolveTypeLib` method is called by the [LoadTypeLibWithResolver function](../../../../docs/framework/unmanaged-api/tlbexp/loadtypelibwithresolver-function.md) during [Tlbexp.exe (Type Library Exporter)](../../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md) processing.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="ab0df-116">Comentarios</span><span class="sxs-lookup"><span data-stu-id="ab0df-116">Remarks</span></span>  
+ <span data-ttu-id="ab0df-117">El `ResolveTypeLib` llama al método el [LoadTypeLibWithResolver (función)](../../../../docs/framework/unmanaged-api/tlbexp/loadtypelibwithresolver-function.md) durante [Tlbexp.exe (exportador de la biblioteca de tipos)](../../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md) de procesamiento.</span><span class="sxs-lookup"><span data-stu-id="ab0df-117">The `ResolveTypeLib` method is called by the [LoadTypeLibWithResolver function](../../../../docs/framework/unmanaged-api/tlbexp/loadtypelibwithresolver-function.md) during [Tlbexp.exe (Type Library Exporter)](../../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md) processing.</span></span>  
   
- <span data-ttu-id="f097f-118">Las implementaciones personalizadas de esta interfaz deben devolver un [BSTR](http://msdn.microsoft.com/en-us/1b2d7d2c-47af-4389-a6b6-b01b7e915228) que contiene la ruta de acceso completa de la biblioteca de tipos con nombre en el `bstrSimpleName` parámetro.</span><span class="sxs-lookup"><span data-stu-id="f097f-118">Custom implementations of this interface must return a [BSTR](http://msdn.microsoft.com/en-us/1b2d7d2c-47af-4389-a6b6-b01b7e915228) that contains the full path of the type library named in the `bstrSimpleName` parameter.</span></span>  
+ <span data-ttu-id="ab0df-118">Las implementaciones personalizadas de esta interfaz deben devolver un [BSTR](http://msdn.microsoft.com/library/1b2d7d2c-47af-4389-a6b6-b01b7e915228) que contiene la ruta de acceso completa de la biblioteca de tipos con nombre en el `bstrSimpleName` parámetro.</span><span class="sxs-lookup"><span data-stu-id="ab0df-118">Custom implementations of this interface must return a [BSTR](http://msdn.microsoft.com/library/1b2d7d2c-47af-4389-a6b6-b01b7e915228) that contains the full path of the type library named in the `bstrSimpleName` parameter.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="f097f-119">Requisitos</span><span class="sxs-lookup"><span data-stu-id="f097f-119">Requirements</span></span>  
- <span data-ttu-id="f097f-120">**Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f097f-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ab0df-119">Requisitos</span><span class="sxs-lookup"><span data-stu-id="ab0df-119">Requirements</span></span>  
+ <span data-ttu-id="ab0df-120">**Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ab0df-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="f097f-121">**Encabezado:** TlbRef.idl, TlbRef.h</span><span class="sxs-lookup"><span data-stu-id="f097f-121">**Header:** TlbRef.idl, TlbRef.h</span></span>  
+ <span data-ttu-id="ab0df-121">**Encabezado:** TlbRef.idl, TlbRef.h</span><span class="sxs-lookup"><span data-stu-id="ab0df-121">**Header:** TlbRef.idl, TlbRef.h</span></span>  
   
- <span data-ttu-id="f097f-122">**Biblioteca:** TlbRef.lib</span><span class="sxs-lookup"><span data-stu-id="f097f-122">**Library:** TlbRef.lib</span></span>  
+ <span data-ttu-id="ab0df-122">**Biblioteca:** TlbRef.lib</span><span class="sxs-lookup"><span data-stu-id="ab0df-122">**Library:** TlbRef.lib</span></span>  
   
- <span data-ttu-id="f097f-123">**Versiones de .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f097f-123">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="ab0df-123">**Versiones de .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ab0df-123">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f097f-124">Vea también</span><span class="sxs-lookup"><span data-stu-id="f097f-124">See Also</span></span>  
- [<span data-ttu-id="f097f-125">Funciones auxiliares Tlbexp</span><span class="sxs-lookup"><span data-stu-id="f097f-125">Tlbexp Helper Functions</span></span>](../../../../docs/framework/unmanaged-api/tlbexp/index.md)  
- [<span data-ttu-id="f097f-126">LoadTypeLibEx de la</span><span class="sxs-lookup"><span data-stu-id="f097f-126">LoadTypeLibEx</span></span>](http://msdn.microsoft.com/en-us/56a7f9e1-810b-4a42-aa4d-691f4304f5ef)
+## <a name="see-also"></a><span data-ttu-id="ab0df-124">Vea también</span><span class="sxs-lookup"><span data-stu-id="ab0df-124">See Also</span></span>  
+ [<span data-ttu-id="ab0df-125">Funciones auxiliares Tlbexp</span><span class="sxs-lookup"><span data-stu-id="ab0df-125">Tlbexp Helper Functions</span></span>](../../../../docs/framework/unmanaged-api/tlbexp/index.md)  
+ [<span data-ttu-id="ab0df-126">LoadTypeLibEx</span><span class="sxs-lookup"><span data-stu-id="ab0df-126">LoadTypeLibEx</span></span>](http://msdn.microsoft.com/library/56a7f9e1-810b-4a42-aa4d-691f4304f5ef)
