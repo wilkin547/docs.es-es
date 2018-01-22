@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 4443609c9494ca93cbc5934dd62fedf434599962
-ms.sourcegitcommit: 9bee08539b1886c9d57fa3d5bd8a58dfdd7cad94
+ms.openlocfilehash: 7847d21e3529de1a84ef17486710d10256003ce9
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="c-quick-starts"></a>Inicios rápidos de C# #
 
@@ -39,6 +39,12 @@ En esta guía de inicio rápido se asume que ha completado el tutorial [Hola mun
 En la guía de inicio rápido [Bifurcaciones y bucles](branches-and-loops.yml) se explican los datos básicos sobre la selección de diferentes rutas de acceso de la ejecución del código en función de los valores almacenados en variables. Aprenderá los datos básicos del flujo de control, es decir, cómo los programas toman decisiones y eligen distintas acciones. Este inicio rápido también está disponible [para ejecutarse localmente en su equipo](branches-and-loops-local.md).
 
 En esta lección para principiantes se supone que ha completado las lecciones [Hola mundo](hello-world.yml) y [Números en C#](numbers-in-csharp.yml).
+
+## <a name="interpolated-stringsinterpolated-stringsyml"></a>[Cadenas interpoladas](interpolated-strings.yml)
+
+El inicio rápido [cadenas interpoladas](interpolated-strings.yml) muestra cómo insertar una expresión en una cadena más larga. Obtendrá información sobre cómo definir una expresión de interpolación, cómo crear una cadena de resultado de una cadena interpolada que tiene una o varias expresiones de interpolación y cómo controlar el formato, el ancho de columna y la alineación de expresiones incluidas en la cadena de resultados. 
+
+En esta lección para principiantes se supone que ha completado las lecciones [Hola mundo](hello-world.yml), [Números en C#](numbers-in-csharp.yml) y [Bifurcaciones y bucles](branches-and-loops.yml).
 
 ## <a name="list-collectionlist-collectionyml"></a>[Colección de listas](list-collection.yml)
 
