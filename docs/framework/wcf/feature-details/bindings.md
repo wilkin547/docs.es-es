@@ -18,14 +18,14 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 977bc032d62856673994e07a71b77d3b668ce7af
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 494869985f14dc9562b8d98a7d68cd9639cca97b
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="windows-communcation-foundation-bindings"></a>Enlaces de Windows Communication Foundation
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] separa cómo se escribe el software para una aplicación de cómo se comunica con otro software. Los enlaces se usan para especificar el transporte, codificación y detalles protocolares requeridos para que los clientes y servicios se comuniquen entre sí. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usa enlaces para generar la representación subyacente de conexión del extremo, por lo que la mayoría de los detalles de enlace se deben acordar entre las partes que están en comunicación. La manera más sencilla de lograrlo es que los clientes de un servicio usen el mismo enlace que emplea el punto de conexión para el servicio. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Cómo hacer esto, consulte [utilizando enlaces para configurar los servicios de Windows Communication Foundation y los clientes](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb).  
+[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] separa cómo se escribe el software para una aplicación de cómo se comunica con otro software. Los enlaces se usan para especificar el transporte, codificación y detalles protocolares requeridos para que los clientes y servicios se comuniquen entre sí. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usa enlaces para generar la representación subyacente de conexión del extremo, por lo que la mayoría de los detalles de enlace se deben acordar entre las partes que están en comunicación. La manera más sencilla de lograrlo es que los clientes de un servicio usen el mismo enlace que emplea el punto de conexión para el servicio. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Cómo hacer esto, consulte [utilizando enlaces para configurar los servicios de Windows Communication Foundation y los clientes](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb).  
   
  Un enlace se compone de una colección de elementos de enlace. Cada elemento describe algún aspecto de cómo el extremo se comunica con los clientes. Un enlace debe incluir por lo menos un elemento de enlace del transporte, por lo menos un elemento de enlace de la codificación de mensajes (que el elemento de enlace del transporte puede proporcionar de forma predeterminada), y cualquier número de otros elementos de enlace de protocolo. El proceso que compila un tiempo de ejecución a partir de esta descripción permite a cada elemento de enlace contribuir en el código a ese tiempo de ejecución.  
   
@@ -37,7 +37,7 @@ ms.lasthandoff: 12/22/2017
  [Configuración de enlaces proporcionados por el sistema](../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
  Describe cómo utilizar y modificar los enlaces que [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] proporciona para admitir los escenarios comunes.  
   
- [Utilización de enlaces para configurar los clientes y servicios de Windows Communication Foundation](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [Utilización de enlaces para configurar los clientes y servicios de Windows Communication Foundation](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
  Describe cómo definir los enlaces [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] para los servicios y clientes de forma imperativa en código y de forma declarativa utilizando la configuración.  
   
  [Enlaces personalizados](../../../../docs/framework/wcf/extending/custom-bindings.md)  

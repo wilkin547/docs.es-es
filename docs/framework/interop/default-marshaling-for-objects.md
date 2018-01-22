@@ -20,11 +20,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 157b5648af4ef429a73fe71a924e15ad3973f7f5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b49575bb7f16b942a56a48e9ad3f5a44edfb373a
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="default-marshaling-for-objects"></a>Serialización predeterminada para objetos
 Los parámetros y campos de tipo <xref:System.Object?displayProperty=nameWithType> pueden exponerse a código no administrado como uno de los siguientes tipos:  
@@ -342,5 +342,5 @@ Variantes pasadas por valor y por referencia
 ## <a name="see-also"></a>Vea también  
  [Comportamiento predeterminado del cálculo de referencias](../../../docs/framework/interop/default-marshaling-behavior.md)  
  [Tipos que pueden o que no pueden transferirse en bloque de bits](../../../docs/framework/interop/blittable-and-non-blittable-types.md)  
- [Atributos direccionales](http://msdn.microsoft.com/en-us/241ac5b5-928e-4969-8f58-1dbc048f9ea2)  
+ [Atributos direccionales](http://msdn.microsoft.com/library/241ac5b5-928e-4969-8f58-1dbc048f9ea2)  
  [Copiar y fijar](../../../docs/framework/interop/copying-and-pinning.md)

@@ -15,11 +15,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 377a67edb37ada5c9e1b022d50a4718b5740afd8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f23918031c6cc8cd6509d7b7c079b8df050bbb08
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-configure-a-basic-windows-communication-foundation-client"></a>Configuración de un cliente básico de Windows Communication Foundation
 Es la quinta de las seis tareas necesarias para crear una aplicación básica de [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]. Para obtener información general de las seis de las tareas, consulte la [Tutorial de introducción](../../../docs/framework/wcf/getting-started-tutorial.md) tema.  
@@ -28,7 +28,7 @@ Es la quinta de las seis tareas necesarias para crear una aplicación básica de
   
 ### <a name="to-configure-a-windows-communication-foundation-client"></a>Configuración de un cliente de Windows Communication Foundation  
   
-1.  Abra el archivo de configuración generado (App.config) del proyecto GettingStartedClient. El siguiente ejemplo es una vista del archivo de configuración generado. En el [ \<system.serviceModel >](../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) sección, busque la [ \<extremo >](http://msdn.microsoft.com/en-us/13aa23b7-2f08-4add-8dbf-a99f8127c017) elemento.  
+1.  Abra el archivo de configuración generado (App.config) del proyecto GettingStartedClient. El siguiente ejemplo es una vista del archivo de configuración generado. En el [ \<system.serviceModel >](../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) sección, busque la [ \<extremo >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) elemento.  
   
     ```xml  
     <?xml version="1.0" encoding="utf-8" ?>  

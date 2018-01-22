@@ -14,11 +14,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: e946066a352fb29c593a7d84fd6e728c226a3175
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 79c26ca9e167455dfbd664ea96e574c130cdc3d2
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="peer-resolvers"></a>Resoluciones del mismo nivel
 Para conectar a una malla, un nodo del mismo nivel necesita las direcciones IP de otros nodos. Las direcciones IP se obtienen al establecer contacto con un servicio de resolución, que toma el identificador de la malla y devuelve una lista de direcciones que corresponden a los nodos registrados con ese identificador de malla concreto. La resolución mantiene una lista de direcciones registradas, que crea mediante el registro de cada nodo de la malla en el servicio.  
@@ -43,7 +43,7 @@ Para conectar a una malla, un nodo del mismo nivel necesita las direcciones IP d
 > [!NOTE]
 >  Al utilizar redes locales e improvisadas con una resolución personalizada, se aconseja que las aplicaciones que usen o admitan redes locales e improvisadas incluyan una lógica que seleccione una dirección única de vínculo local que se use a la hora de la conexión. Esto evita cualquier confusión potencial producida por equipos con varias direcciones de vínculo local. De acuerdo con esto, el canal del mismo nivel solo admite el uso de una única dirección de vínculo local en un momento determinado. Puede especificar esta dirección con la propiedad `ListenIpAddress` en el <xref:System.ServiceModel.NetPeerTcpBinding>.  
   
- Para ver una demostración de cómo implementar un solucionador personalizado, consulte [personalizada del mismo nivel resolución del canal del mismo nivel](http://msdn.microsoft.com/en-us/5b75a2bb-7ff1-4a14-abe7-3debf0537d23).  
+ Para ver una demostración de cómo implementar un solucionador personalizado, consulte [personalizada del mismo nivel resolución del canal del mismo nivel](http://msdn.microsoft.com/library/5b75a2bb-7ff1-4a14-abe7-3debf0537d23).  
   
 ## <a name="in-this-section"></a>En esta sección  
  [Dentro de CustomPeerResolverService: registros de cliente](../../../../docs/framework/wcf/feature-details/inside-the-custompeerresolverservice-client-registrations.md)  

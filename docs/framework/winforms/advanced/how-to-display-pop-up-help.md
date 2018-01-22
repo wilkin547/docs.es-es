@@ -23,11 +23,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 4d139c283d002ac76005f22385d83190144c5082
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3ec4401bb3465f72e4ef732e7554dc64603d700c
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-display-pop-up-help"></a>Cómo: Mostrar ayuda emergente
 Una manera de mostrar la Ayuda en Windows Forms es a través de la **ayuda** situado en el lado derecho de la barra de título, accesible a través de la <xref:System.Windows.Forms.Form.HelpButton%2A> propiedad. Este tipo de visualización de la Ayuda está indicado para cuadros de diálogo. Los cuadros de diálogo que se muestran de forma modal (con el método <xref:System.Windows.Forms.Form.ShowDialog%2A>) tienen problemas para abrir los sistemas de Ayuda externos porque los cuadros de diálogo modales deben cerrarse antes de poder pasar el foco a otra ventana. Además, para usar el **ayuda** botón requiere que no hay ningún **minimizar** botón o **maximizar** botón se muestra en la barra de título. Esto es una convención estándar del cuadro de diálogo, mientras que los formularios normalmente tienen **minimizar** y **maximizar** botones.  
@@ -35,7 +35,7 @@ Una manera de mostrar la Ayuda en Windows Forms es a través de la **ayuda** sit
  Tenga en cuenta que también puede usar el componente <xref:System.Windows.Forms.HelpProvider> para vincular controles a archivos en un sistema de Ayuda, aunque haya implementado ayuda emergente. Para obtener más información, consulte [proporcionar ayuda en una aplicación de Windows](../../../../docs/framework/winforms/advanced/how-to-provide-help-in-a-windows-application.md).  
   
 > [!NOTE]
->  Los cuadros de diálogo y comandos de menú que se ven pueden diferir de los descritos en la Ayuda, en función de los valores de configuración o de edición activos. Para cambiar la configuración, elija la opción **Importar y exportar configuraciones** del menú **Herramientas** . Para obtener más información, consulte [Personalizar la configuración de desarrollo en Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Los cuadros de diálogo y comandos de menú que se ven pueden diferir de los descritos en la Ayuda, en función de los valores de configuración o de edición activos. Para cambiar la configuración, elija la opción **Importar y exportar configuraciones** del menú **Herramientas** . Para obtener más información, vea [Personalizar la configuración de desarrollo en Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
 ### <a name="to-display-pop-up-help"></a>Para mostrar Ayuda emergente  
   

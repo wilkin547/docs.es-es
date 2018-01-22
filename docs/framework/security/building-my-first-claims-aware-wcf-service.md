@@ -14,11 +14,11 @@ author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
 ms.workload: dotnet
-ms.openlocfilehash: af39c3c5788db95eaee248ca8454534022cab659
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 791c86b8f833c6b1a8acb6da3b03cfccdafca0e5
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="building-my-first-claims-aware-wcf-service"></a>Compilación del primer servicio WCF para notificaciones
 ## <a name="applies-to"></a>Se aplica a  
@@ -48,7 +48,7 @@ ms.lasthandoff: 12/22/2017
   
  AD FS 2.0 forma parte de Windows Server R2 y se puede usar como STS para escenarios locales. El control de acceso de Active Directory de Azure (también conocido como Servicio de control de acceso o ACS) es un servicio en la nube que se ofrece como parte de Microsoft Azure. Con fines de pruebas o educativos, también pueden usarse otros STS para compilar las aplicaciones compatibles con notificaciones. Por ejemplo, puede usar el STS de desarrollo local que forma parte de la [Herramienta de identidad y acceso para Visual Studio](http://go.microsoft.com/fwlink/?LinkID=245849) (http://go.microsoft.com/fwlink/?LinkID=245849), disponible en línea de forma gratuita.  
   
- Para compilar el primer servicio WCF para notificaciones mediante WIF, vea [How To: Build Claims-Aware WCF Service Using WIF (Cómo: Compilar un servicio WCF para notificaciones mediante WIF)](http://msdn.microsoft.com/en-us/431e6415-62ed-4a9f-af03-f14d2b4dfe6d).  
+ Para compilar el primer servicio WCF para notificaciones mediante WIF, vea [How To: Build Claims-Aware WCF Service Using WIF (Cómo: Compilar un servicio WCF para notificaciones mediante WIF)](http://msdn.microsoft.com/library/431e6415-62ed-4a9f-af03-f14d2b4dfe6d).  
   
 ## <a name="see-also"></a>Vea también  
  [Introducción a WIF](../../../docs/framework/security/getting-started-with-wif.md)

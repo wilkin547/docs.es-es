@@ -14,11 +14,11 @@ author: BillWagner
 ms.author: wiwagn
 manager: wpickett
 ms.workload: wiwagn
-ms.openlocfilehash: ac4052773044e44f546894a54dc21728dbd6634a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a33e065d9daa886c27cde31c8f16f9b9eaa45938
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="writing-large-responsive-net-framework-apps"></a>Escribir aplicaciones grandes de .NET Framework que respondan
 En este artículo se ofrecen varias sugerencias para mejorar el rendimiento de las aplicaciones .NET Framework de gran tamaño o de aquellas aplicaciones que procesan una gran cantidad de datos, como archivos o bases de datos. Estas sugerencias proceden de reescribir los compiladores de C# y Visual Basic en código administrado; además, el artículo incluye varios ejemplos reales del compilador de C#.  
@@ -47,7 +47,7 @@ En este artículo se ofrecen varias sugerencias para mejorar el rendimiento de l
  Establezca objetivos de rendimiento para los escenarios o las experiencias de cliente claves de la aplicación y escriba pruebas para medir el rendimiento.   Investigue los errores de las pruebas mediante el método científico: use perfiles como guía, cree hipótesis sobre el origen del problema y pruebe esas hipótesis con un experimento o cambio de código.  Establezca una línea base de medidas de rendimiento a lo largo del tiempo con pruebas periódicas para así aislar los cambios que causan regresiones en el rendimiento.  Si enfoca de manera rigurosa el trabajo de rendimiento, evitará perder el tiempo con actualizaciones de código que no necesita.  
   
 ### <a name="fact-3-good-tools-make-all-the-difference"></a>Hecho 3: Las herramientas de calidad marcan la diferencia  
- Unas herramientas de calidad permiten profundizar rápidamente en los problemas de rendimiento más importantes (CPU, memoria o disco) y sirven para localizar el código que provoca esos cuellos de botella.  Microsoft distribuye diversas herramientas de rendimiento, como el [generador de perfiles de Visual Studio](/visualstudio/profiling/beginners-guide-to-performance-profiling), la [herramienta de análisis de Windows Phone](http://msdn.microsoft.com/en-us/e67e3199-ea43-4d14-ab7e-f7f19266253f) y [PerfView](http://www.microsoft.com/download/details.aspx?id=28567).  
+ Unas herramientas de calidad permiten profundizar rápidamente en los problemas de rendimiento más importantes (CPU, memoria o disco) y sirven para localizar el código que provoca esos cuellos de botella.  Microsoft distribuye diversas herramientas de rendimiento, como el [generador de perfiles de Visual Studio](/visualstudio/profiling/beginners-guide-to-performance-profiling), la [herramienta de análisis de Windows Phone](http://msdn.microsoft.com/library/e67e3199-ea43-4d14-ab7e-f7f19266253f) y [PerfView](http://www.microsoft.com/download/details.aspx?id=28567).  
   
  PerfView es una herramienta gratuita muy potente que sirve para centrarse en los problemas con raíces profundas como, por ejemplo, E/S de disco, eventos de GC y memoria.  Puede capturar eventos de [Seguimiento de eventos para Windows](../../../docs/framework/wcf/samples/etw-tracing.md) (ETW) relacionados con el rendimiento y ver fácilmente información por aplicación, por proceso, por pila y por subproceso.  PerfView muestra la cantidad y el tipo de memoria que asigna la aplicación, así como las funciones o pilas de llamadas que contribuyen en determinada medida a las asignaciones de memoria. Para más información, vea los completos artículos de ayuda, las demostraciones y los vídeos que se incluyen con la herramienta (como los [tutoriales de PerfView](http://channel9.msdn.com/Series/PerfView-Tutorial) de Channel 9).  
   

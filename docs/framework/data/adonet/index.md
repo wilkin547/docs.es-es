@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: cecb38e13a9539dcf92f1dcc7eecbd35c493a3f9
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: cebd146505cd714a77c30cffe8fd3440c2d9f3cb
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="adonet"></a>ADO.NET
 ADO.NET es un conjunto de clases que exponen servicios de acceso a datos para programadores de .NET Framework. ADO.NET ofrece abundancia de componentes para la creación de aplicaciones de uso compartido de datos distribuidas. Constituye una parte integral de .NET Framework y proporciona acceso a datos relacionales, XML y de aplicaciones. ADO.NET satisface diversas necesidades de desarrollo, como la creación de clientes de base de datos front-end y objetos empresariales de nivel medio que utilizan aplicaciones, herramientas, lenguajes o exploradores de Internet.  
@@ -55,7 +55,7 @@ ADO.NET es un conjunto de clases que exponen servicios de acceso a datos para pr
  Describe características y comportamientos específicos del proveedor de datos .NET Framework para Oracle.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
- [PAVE Seguridad del código nativo y del código de .NET Framework](http://msdn.microsoft.com/en-us/bd61be84-c143-409a-a75a-44253724f784)  
+ [PAVE Seguridad del código nativo y del código de .NET Framework](http://msdn.microsoft.com/library/bd61be84-c143-409a-a75a-44253724f784)  
  Proporciona vínculos a temas sobre la seguridad para Visual Basic, .NET Framework y criptografía.  
   
  [LINQ (Language Integrated Query)](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)  

@@ -17,14 +17,14 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 276dd3cc84c15c66adeab30f86583e6d9eec4144
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3ba82242d0d3d42d4a2e3774186f2a282e279938
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-implement-an-asynchronous-service-operation"></a>Cómo: Implementar una operación de servicios asincrónica
-En aplicaciones de [!INCLUDE[indigo1](../../../includes/indigo1-md.md)], se puede implementar una operación de servicio de forma asincrónica o sincrónica sin dictar al cliente cómo llamarla. Por ejemplo, las operaciones de servicio asincrónicas pueden realizar llamadas sincrónicamente y a las operaciones de servicio sincrónicas se las puede llamar de manera asincrónica. Para obtener un ejemplo que muestra cómo llamar a una operación de forma asincrónica en una aplicación cliente, consulte [Cómo: llamar a las operaciones de servicio de forma asincrónica](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md). [!INCLUDE[crabout](../../../includes/crabout-md.md)]operaciones sincrónicas y asincrónicas, vea [diseñar contratos de servicio](../../../docs/framework/wcf/designing-service-contracts.md) y [sincrónica y operaciones asincrónicas](../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md). En este tema se describe la estructura básica de una operación de servicio asincrónica, el código no está completo. Para obtener un ejemplo completo de servicio y el cliente consulte [asincrónico](http://msdn.microsoft.com/en-us/833db946-f511-4f64-a26f-2759a11217c7).  
+En aplicaciones de [!INCLUDE[indigo1](../../../includes/indigo1-md.md)], se puede implementar una operación de servicio de forma asincrónica o sincrónica sin dictar al cliente cómo llamarla. Por ejemplo, las operaciones de servicio asincrónicas pueden realizar llamadas sincrónicamente y a las operaciones de servicio sincrónicas se las puede llamar de manera asincrónica. Para obtener un ejemplo que muestra cómo llamar a una operación de forma asincrónica en una aplicación cliente, consulte [Cómo: llamar a las operaciones de servicio de forma asincrónica](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md). [!INCLUDE[crabout](../../../includes/crabout-md.md)]operaciones sincrónicas y asincrónicas, vea [diseñar contratos de servicio](../../../docs/framework/wcf/designing-service-contracts.md) y [sincrónica y operaciones asincrónicas](../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md). En este tema se describe la estructura básica de una operación de servicio asincrónica, el código no está completo. Para obtener un ejemplo completo de servicio y el cliente consulte [asincrónico](http://msdn.microsoft.com/library/833db946-f511-4f64-a26f-2759a11217c7).  
   
 ### <a name="implement-a-service-operation-asynchronously"></a>Implementación de una operación de servicio de manera asincrónica  
   

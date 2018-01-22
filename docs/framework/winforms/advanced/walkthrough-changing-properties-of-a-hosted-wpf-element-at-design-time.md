@@ -19,11 +19,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 027fb2efaff5cfdd4d6962798a85923631fa4e9b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 46b80ee0c74da7371ac8f7a16d3430b5b753059d
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="walkthrough-changing-properties-of-a-hosted-wpf-element-at-design-time"></a>Tutorial: Cambiar propiedades de un elemento WPF hospedado en tiempo de diseño
 Este tutorial muestra cómo cambiar los valores de propiedad de un control de Windows Presentation Foundation (WPF) hospedado en un Windows Form.  
@@ -39,7 +39,7 @@ Este tutorial muestra cómo cambiar los valores de propiedad de un control de Wi
 -   Use el Diseñador de WPF de Visual Studio para cambiar los valores de propiedad.  
   
 > [!NOTE]
->  Los cuadros de diálogo y comandos de menú que se ven pueden diferir de los descritos en la Ayuda, en función de los valores de configuración o de edición activos. Para cambiar la configuración, elija la opción **Importar y exportar configuraciones** del menú **Herramientas** . Para obtener más información, consulte [Personalizar la configuración de desarrollo en Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Los cuadros de diálogo y comandos de menú que se ven pueden diferir de los descritos en la Ayuda, en función de los valores de configuración o de edición activos. Para cambiar la configuración, elija la opción **Importar y exportar configuraciones** del menú **Herramientas** . Para obtener más información, vea [Personalizar la configuración de desarrollo en Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
 ## <a name="prerequisites"></a>Requisitos previos  
  Necesita los componentes siguientes para completar este tutorial:  
@@ -98,4 +98,4 @@ Este tutorial muestra cómo cambiar los valores de propiedad de un control de Wi
  [Tutorial: Organizar controles en formularios Windows Forms mediante líneas de ajuste](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)  
  [Migración e interoperabilidad](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)  
  [Utilizar controles WPF](../../../../docs/framework/winforms/advanced/using-wpf-controls.md)  
- [WPF Designer](http://msdn.microsoft.com/en-us/c6c65214-8411-4e16-b254-163ed4099c26)
+ [WPF Designer](http://msdn.microsoft.com/library/c6c65214-8411-4e16-b254-163ed4099c26)

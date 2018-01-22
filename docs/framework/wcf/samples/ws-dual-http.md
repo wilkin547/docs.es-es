@@ -14,11 +14,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 57fea95db5bf1536b41b282bedab55a9deef8e8c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a7720194f68f941d4c59dc279ae2b86a98ed6a58
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="ws-dual-http"></a>WS Http dual
 El ejemplo Http dual muestra cómo configurar el enlace `WSDualHttpBinding`. Este ejemplo está compuesto de un programa de consola de cliente (.exe) y una biblioteca de servicios (.dll) hospedados por Internet Information Services (IIS). El servicio implementa un contrato dúplex. La interfaz `ICalculatorDuplex`, que expone las operaciones matemáticas (sumar, restar, multiplicar y dividir), define el contrato. En este ejemplo, la interfaz `ICalculatorDuplex` permite al cliente realizar las operaciones matemáticas, calculando un resultado en ejecución sobre la sesión. Independientemente, el servicio devuelve los resultados en la interfaz `ICalculatorDuplexCallback`. Un contrato dúplex requiere una sesión, porque se debe establecer un contexto para poner en correlación el conjunto de mensajes que se envían entre el cliente y el servicio. El enlace `WSDualHttpBinding` admite la comunicación dúplex.  
@@ -98,7 +98,7 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
 4.  Para ejecutar el ejemplo en una configuración de equipo único o de varios, siga las instrucciones de [ejecutando los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
     > [!IMPORTANT]
-    >  Cuando se ejecuta el cliente en una configuración de varios equipos, no olvide reemplazar localhost tanto en el `address` atributo de la [extremo](http://msdn.microsoft.com/en-us/13aa23b7-2f08-4add-8dbf-a99f8127c017) elemento y el `clientBaseAddress` atributo de la [ \< enlace >](../../../../docs/framework/misc/binding.md) elemento de la [ \<wsDualHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md) elemento con el nombre de la máquina adecuado, tal como se muestra:  
+    >  Cuando se ejecuta el cliente en una configuración de varios equipos, no olvide reemplazar localhost tanto en el `address` atributo de la [extremo](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) elemento y el `clientBaseAddress` atributo de la [ \< enlace >](../../../../docs/framework/misc/binding.md) elemento de la [ \<wsDualHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md) elemento con el nombre de la máquina adecuado, tal como se muestra:  
   
     ```xml  
     <client>  

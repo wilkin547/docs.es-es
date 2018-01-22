@@ -17,11 +17,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: dd76921059222c9c5b8958ce8e1761a3f04cb037
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9647ce04528df390620dba67619a538d96aa7068
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="printing-how-to-topics"></a>Temas "Cómo..." de impresión
 Los temas de esta sección muestran cómo usar la impresión y características de administración de sistema de impresión incluyen con [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] , así como el nuevo [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] ruta de acceso de impresión.  
@@ -42,7 +42,7 @@ Los temas de esta sección muestran cómo usar la impresión y características 
  [Enumerar un subconjunto de colas de impresión](../../../../docs/framework/wpf/advanced/how-to-enumerate-a-subset-of-print-queues.md)  
  Instrucciones para generar una lista de impresoras que tienen ciertas características.  
   
- [NOTINBUILD: Cómo: Extender el esquema de impresión y crear nuevas clases de sistema de impresión](http://msdn.microsoft.com/en-us/a3600218-1ea5-478a-9853-6560464f2885)  
+ [NOTINBUILD: Cómo: Extender el esquema de impresión y crear nuevas clases de sistema de impresión](http://msdn.microsoft.com/library/a3600218-1ea5-478a-9853-6560464f2885)  
  Descripción detallada del código administrado cómo los programadores pueden extender el esquema de impresión a dispositivos de impresión de Especialidad o impresoras con características nuevas o infrecuentes.  
   
  [Obtener propiedades de un objeto de sistema de impresión sin reflexión](../../../../docs/framework/wpf/advanced/how-to-get-print-system-object-properties-without-reflection.md)  

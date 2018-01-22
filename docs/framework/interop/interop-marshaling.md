@@ -18,11 +18,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 5bfd5ca9d42c654882c77efafed82aec7e4f0c9b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 17638390a07f752a7101209e5635752bc0511d1d
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="interop-marshaling"></a>Serialización de interoperabilidad
 <a name="top"></a> La serialización de interoperabilidad rige cómo se pasan los datos en argumentos de método y valores devueltos entre la memoria administrada y la no administrada durante las llamadas. La serialización de interoperabilidad es una actividad en tiempo de ejecución realizada por el servicio de serialización de Common Language Runtime.  
@@ -105,7 +105,7 @@ Llamada entre apartamentos entre un cliente .NET y un objeto COM
     > [!NOTE]
     >  Una vez que se establece el subproceso de un cliente C# en STA, las llamadas a componentes COM de MTA requerirán la serialización entre apartamentos.  
   
- Para obtener instrucciones sobre cómo seleccionar explícitamente un modelo de contenedor, vea [Subprocesamiento administrado y no administrado](http://msdn.microsoft.com/en-us/db425c20-4b2f-4433-bf96-76071c7881e5).  
+ Para obtener instrucciones sobre cómo seleccionar explícitamente un modelo de contenedor, vea [Subprocesamiento administrado y no administrado](http://msdn.microsoft.com/library/db425c20-4b2f-4433-bf96-76071c7881e5).  
   
  [Volver al principio](#top)  
   
@@ -145,7 +145,7 @@ Paso de referencia entre límites de hosts y procesos
  ![SOAP o TcpChannel](../../../docs/framework/interop/media/interopremotesoap.gif "interopremotesoap")  
 Llamadas remotas a través de firewalls que usan SOAP o la clase TcpChannel  
   
- Algunas llamadas no administradas pueden canalizarse mediante SOAP, como las llamadas entre [componentes con servicio](http://msdn.microsoft.com/en-us/f109ee24-81ad-4d99-9892-51ac6f34978c) y COM.  
+ Algunas llamadas no administradas pueden canalizarse mediante SOAP, como las llamadas entre [componentes con servicio](http://msdn.microsoft.com/library/f109ee24-81ad-4d99-9892-51ac6f34978c) y COM.  
   
  [Volver al principio](#top)  
   
@@ -159,10 +159,10 @@ Llamadas remotas a través de firewalls que usan SOAP o la clase TcpChannel
 |[Serialización de datos con la interoperabilidad COM](../../../docs/framework/interop/marshaling-data-with-com-interop.md)|Describe cómo se personalizan los contenedores COM para alterar el comportamiento de la serialización.|  
 |[Cómo: Migrar código administrado DCOM a WCF](../../../docs/framework/interop/how-to-migrate-managed-code-dcom-to-wcf.md)|Describe cómo se migra de DCOM a WCF.|  
 |[Asignar resultados HRESULT y excepciones](../../../docs/framework/interop/how-to-map-hresults-and-exceptions.md)|Describe cómo se asignan excepciones personalizadas a valores HRESULT y proporciona la asignación completa de cada HRESULT a su clase de excepción comparable en .NET Framework.|  
-|[Interoperar mediante tipos genéricos](http://msdn.microsoft.com/en-us/26b88e03-085b-4b53-94ba-a5a9c709ce58)|Describe qué acciones se admiten al usar tipos genéricos para la interoperabilidad COM.|  
+|[Interoperar mediante tipos genéricos](http://msdn.microsoft.com/library/26b88e03-085b-4b53-94ba-a5a9c709ce58)|Describe qué acciones se admiten al usar tipos genéricos para la interoperabilidad COM.|  
 |[Interoperating with Unmanaged Code](../../../docs/framework/interop/index.md) (Interoperar con código no administrado)|Describe los servicios de interoperabilidad proporcionados por Common Language Runtime.|  
-|[Interoperabilidad COM avanzada](http://msdn.microsoft.com/en-us/3ada36e5-2390-4d70-b490-6ad8de92f2fb)|Proporciona vínculos a más información sobre la incorporación de componentes COM en una aplicación de .NET Framework.|  
-|[Consideraciones de diseño para interoperaciones](http://msdn.microsoft.com/en-us/b59637f6-fe35-40d6-ae72-901e7a707689)|Proporciona sugerencias para escribir componentes COM integrados.|  
+|[Interoperabilidad COM avanzada](http://msdn.microsoft.com/library/3ada36e5-2390-4d70-b490-6ad8de92f2fb)|Proporciona vínculos a más información sobre la incorporación de componentes COM en una aplicación de .NET Framework.|  
+|[Consideraciones de diseño para interoperaciones](http://msdn.microsoft.com/library/b59637f6-fe35-40d6-ae72-901e7a707689)|Proporciona sugerencias para escribir componentes COM integrados.|  
   
  [Volver al principio](#top)  
   

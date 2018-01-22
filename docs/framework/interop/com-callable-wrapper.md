@@ -24,11 +24,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: e8c39d3c84fe24f86692c289860f22381a3cf5a3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 65d09b33982f62b965d6907902ded98f87d9a97e
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="com-callable-wrapper"></a>Contenedor CCW
 Cuando un cliente COM llama a un objeto .NET, Common Language Runtime crea el objeto administrado y un contenedor CCW (COM callable wrapper) para el objeto. Como no pueden hacer referencia a los objetos .NET directamente, los clientes COM usan el CCW como un proxy del objeto administrado.  
@@ -190,6 +190,6 @@ public class LoanApp : IAnother {
  [Contenedor CCW (COM callable wrapper)](../../../docs/framework/interop/com-callable-wrapper.md)  
  [Contenedores COM](../../../docs/framework/interop/com-wrappers.md)  
  [Exponer componentes de .NET Framework en COM](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)  
- [Simular Interfaces COM](http://msdn.microsoft.com/en-us/ad2ab959-e2be-411b-aaff-275c3fba606c)  
+ [Simular Interfaces COM](http://msdn.microsoft.com/library/ad2ab959-e2be-411b-aaff-275c3fba606c)  
  [Habilitar tipos de .NET para la interoperación](../../../docs/framework/interop/qualifying-net-types-for-interoperation.md)  
  [Contenedor al que se puede llamar en tiempo de ejecución](../../../docs/framework/interop/runtime-callable-wrapper.md)

@@ -18,11 +18,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 471d76450b2a14620773cbeb8982da43f130ac59
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f1526a6e54078ea3dc0500c39a8fc2feda44d901
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-create-master-details-lists-with-the-windows-forms-datagrid-control-using-the-designer"></a>Cómo: Crear listas Principal-Detalle con el control DataGrid de Windows Forms mediante el Diseñador
 > [!NOTE]
@@ -30,14 +30,14 @@ ms.lasthandoff: 12/22/2017
   
  Si su <xref:System.Data.DataSet> contiene una serie de tablas relacionadas, puede utilizar dos <xref:System.Windows.Forms.DataGrid> controles para mostrar los datos en un formato principal-detalle. Una <xref:System.Windows.Forms.DataGrid> está designado como la cuadrícula principal, y el segundo está designado como la cuadrícula de detalles. Cuando se selecciona una entrada en la lista maestra, todas las entradas secundarias relacionadas aparecen en la lista de detalles. Por ejemplo, si su <xref:System.Data.DataSet> contiene una tabla Customers y una tabla relacionada Orders, se especificaría la tabla Customers como cuadrícula principal y la tabla Orders como cuadrícula de detalles. Cuando se selecciona un cliente en la cuadrícula principal, se mostraría todos los pedidos asociados a ese cliente en la tabla Orders en la cuadrícula de detalles.  
   
- El procedimiento siguiente requiere un **aplicación de Windows** proyecto. Para obtener información acerca de cómo configurar un proyecto de este tipo, consulte [Cómo: crear un proyecto de aplicación de Windows](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa).  
+ El procedimiento siguiente requiere un **aplicación de Windows** proyecto. Para obtener información acerca de cómo configurar un proyecto de este tipo, consulte [Cómo: crear un proyecto de aplicación de Windows](http://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa).  
   
 > [!NOTE]
->  Los cuadros de diálogo y comandos de menú que se ven pueden diferir de los descritos en la Ayuda, en función de los valores de configuración o de edición activos. Para cambiar la configuración, elija la opción **Importar y exportar configuraciones** del menú **Herramientas** . Para obtener más información, consulte [Personalizar la configuración de desarrollo en Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Los cuadros de diálogo y comandos de menú que se ven pueden diferir de los descritos en la Ayuda, en función de los valores de configuración o de edición activos. Para cambiar la configuración, elija la opción **Importar y exportar configuraciones** del menú **Herramientas** . Para obtener más información, vea [Personalizar la configuración de desarrollo en Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
 ### <a name="to-create-a-master-details-list-in-the-designer"></a>Para crear una lista principal-detalle en el diseñador  
   
-1.  Agregar dos <xref:System.Windows.Forms.DataGrid> controles al formulario. Para obtener más información, consulte [Cómo: agregar controles a formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md). En [!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)], <xref:System.Windows.Forms.DataGrid> control no está en el **cuadro de herramientas** de forma predeterminada. Para obtener más información, consulte [Cómo: agregar elementos al cuadro de herramientas](http://msdn.microsoft.com/en-us/458e119e-17fe-450b-b889-e31c128bd7e0).  
+1.  Agregar dos <xref:System.Windows.Forms.DataGrid> controles al formulario. Para obtener más información, consulte [Cómo: agregar controles a formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md). En [!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)], <xref:System.Windows.Forms.DataGrid> control no está en el **cuadro de herramientas** de forma predeterminada. Para obtener más información, consulte [Cómo: agregar elementos al cuadro de herramientas](http://msdn.microsoft.com/library/458e119e-17fe-450b-b889-e31c128bd7e0).  
   
     > [!NOTE]
     >  Los pasos siguientes no son aplicables a [!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)], que usa el **orígenes de datos** ventana para el enlace de datos en tiempo de diseño. Para obtener más información, consulte [enlazar controles a datos en Visual Studio](/visualstudio/data-tools/bind-controls-to-data-in-visual-studio) y [Cómo: mostrar datos relacionados en una aplicación de Windows Forms](http://msdn.microsoft.com/library/60b1f1ec-6257-42ab-83f0-06d54ed364fd).  

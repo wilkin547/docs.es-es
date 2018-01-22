@@ -14,11 +14,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 37125ed8211578e221b24e6aed1fc57b2fc0f518
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 517aa3c098596848a645eb19139f8545495a7d9f
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="clients"></a>Clientes
 Los temas de esta sección tratan sobre la arquitectura del cliente, cómo tener acceso a un servicio [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], cómo configurar un cliente [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] y algunas cuestiones importantes sobre seguridad de los clientes [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
@@ -37,4 +37,4 @@ Los temas de esta sección tratan sobre la arquitectura del cliente, cómo tener
  Describe algunas cuestiones de seguridad de los clientes [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
   
 ## <a name="see-also"></a>Vea también  
- [Ejemplos de cliente](http://msdn.microsoft.com/en-us/849fc452-8718-4d4e-ba57-905eed943f63)
+ [Ejemplos de cliente](http://msdn.microsoft.com/library/849fc452-8718-4d4e-ba57-905eed943f63)

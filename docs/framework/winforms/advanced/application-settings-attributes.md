@@ -18,11 +18,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 4255356d4e50f3e8be28024f29701e0e9c010473
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b2ed0a0393f505d0126508e574b1cd9abe138866
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="application-settings-attributes"></a>Atributos de configuración de la aplicación
 La arquitectura de configuración de la aplicación proporciona muchos de los atributos que se pueden aplicar a la clase de contenedor de configuración de aplicaciones o a sus propiedades individuales. Estos atributos se examinan en tiempo de ejecución por la infraestructura de configuración de aplicación, a menudo específicamente el proveedor de configuración para ajustar su funcionamiento a las necesidades definidas del contenedor personalizado.  
@@ -52,4 +52,4 @@ La arquitectura de configuración de la aplicación proporciona muchos de los at
  <xref:System.Configuration.ApplicationSettingsBase>  
  <xref:System.Configuration.SettingsProvider>  
  [Arquitectura de configuración de la aplicación](../../../../docs/framework/winforms/advanced/application-settings-architecture.md)  
- [Cómo: Crear la configuración de la aplicación](http://msdn.microsoft.com/en-us/53b3af80-1c02-4e35-99c6-787663148945)
+ [Cómo: Crear la configuración de la aplicación](http://msdn.microsoft.com/library/53b3af80-1c02-4e35-99c6-787663148945)

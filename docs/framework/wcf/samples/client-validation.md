@@ -14,11 +14,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: f187e6fb64fd3bbf08b3d0b92917ffc640b02186
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: bd9c698962bbca04ac05473265d95fc00517b039
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="client-validation"></a>Validación de cliente
 Los servicios publican frecuentemente los metadatos para habilitar la generación automática y la configuración de tipos de proxy de cliente. Cuando no se confía en el servicio, las aplicaciones cliente deberían comprobar y validar que los metadatos cumplen con la directiva de la aplicación cliente con respecto a la seguridad, transacciones, el tipo de contrato de servicios etc. El siguiente ejemplo muestra cómo escribir un comportamiento de extremo de cliente que valide el extremo de servicio para asegurarse de que el extremo de servicio puede utilizarse con seguridad.  
@@ -39,7 +39,7 @@ Los servicios publican frecuentemente los metadatos para habilitar la generació
   
 3.  Ejecute la aplicación cliente desde \client\ Debug. La actividad del cliente se muestra en la aplicación de consola del cliente.  
   
-4.  Si el cliente y el servicio no se pueden comunicar, vea [Troubleshooting Tips](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b).  
+4.  Si el cliente y el servicio no se pueden comunicar, consulte [sugerencias de solución de problemas de](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
   
 5.  Quite los certificados ejecutando Cleanup.bat cuando haya finalizado con el ejemplo. Otros ejemplos de seguridad usan los mismos certificados.  
   
@@ -65,7 +65,7 @@ Los servicios publican frecuentemente los metadatos para habilitar la generació
   
 10. En el equipo cliente, ejecute client.exe.  
   
-    1.  Si el cliente y el servicio no se pueden comunicar, vea [Troubleshooting Tips](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b).  
+    1.  Si el cliente y el servicio no se pueden comunicar, consulte [sugerencias de solución de problemas de](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
   
 ### <a name="to-clean-up-after-the-sample"></a>Para realizar una limpieza después de ejecutar el ejemplo  
   

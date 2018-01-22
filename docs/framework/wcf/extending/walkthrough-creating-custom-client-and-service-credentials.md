@@ -17,11 +17,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 3a56a3fa5ed8d470216e9c96b53e1ea21762bd2a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 99ee624ef6198ed67141d3d92e63fb9ba815c4fd
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="walkthrough-creating-custom-client-and-service-credentials"></a>Tutorial: Crear credenciales de cliente y servicio personalizadas
 En este tema se muestra cómo implementar credenciales de cliente y servicio personalizadas y cómo utilizar las credenciales personalizadas desde el código de la aplicación.  
@@ -35,7 +35,7 @@ En este tema se muestra cómo implementar credenciales de cliente y servicio per
   
  Las clases <xref:System.ServiceModel.Description.ClientCredentials> y <xref:System.ServiceModel.Description.ServiceCredentials> heredan de la clase <xref:System.ServiceModel.Security.SecurityCredentialsManager> abstracta que define el contrato para la devolución del <xref:System.IdentityModel.Selectors.SecurityTokenManager>.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]las clases de credenciales y cómo encajan en la [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] arquitectura de seguridad, consulte [arquitectura de seguridad](http://msdn.microsoft.com/en-us/16593476-d36a-408d-808c-ae6fd483e28f).  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)]las clases de credenciales y cómo encajan en la [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] arquitectura de seguridad, consulte [arquitectura de seguridad](http://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f).  
   
  Las implementaciones predeterminadas proporcionadas en [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] admiten los tipos de credenciales proporcionados por el sistema y crean un administrador de tokens de seguridad que es capaz de administrar esos tipos de credenciales.  
   

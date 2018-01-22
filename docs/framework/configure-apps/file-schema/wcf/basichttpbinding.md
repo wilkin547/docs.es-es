@@ -15,18 +15,18 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 44bc7a3ef40b08d7cee4e515e6628aef9987c0c8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 80494dd0050c7a3a873e6885a8001a55171ffc8e
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="ltbasichttpbindinggt"></a>&lt;basicHttpBinding&gt;
 Representa un enlace que un servicio [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] puede utilizar para configurar y exponer extremos que pueden comunicarse con servicios Web basados en ASMX y clientes y otros servicios que cumplan con el WS-I Basic Profile 1.1.  
   
- \<sistema. ServiceModel >  
+ \<system.ServiceModel>  
 \<enlaces >  
-\<basicHttpBinding >  
+\<basicHttpBinding>  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -96,14 +96,14 @@ Representa un enlace que un servicio [!INCLUDE[indigo1](../../../../../includes/
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<seguridad >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-basichttpbinding.md)|Define la configuración de seguridad del enlace. Este elemento es del tipo <xref:System.ServiceModel.Configuration.BasicHttpSecurityElement>.|  
-|[\<readerQuotas >](http://msdn.microsoft.com/library/3e5e42ff-cef8-478f-bf14-034449239bfd)|Define las restricciones en la complejidad de los mensajes SOAP que pueden ser procesados por los puntos de conexión configurados con este enlace. Este elemento es del tipo <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.|  
+|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-basichttpbinding.md)|Define la configuración de seguridad del enlace. Este elemento es del tipo <xref:System.ServiceModel.Configuration.BasicHttpSecurityElement>.|  
+|[\<readerQuotas>](http://msdn.microsoft.com/library/3e5e42ff-cef8-478f-bf14-034449239bfd)|Define las restricciones en la complejidad de los mensajes SOAP que pueden ser procesados por los puntos de conexión configurados con este enlace. Este elemento es del tipo <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.|  
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<enlaces >](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Este elemento contiene una colección de enlaces estándar y personalizados.|  
+|[\<bindings>](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Este elemento contiene una colección de enlaces estándar y personalizados.|  
   
 ## <a name="remarks"></a>Comentarios  
  BasicHttpBinding usa HTTP como transporte para enviar mensajes SOAP 1.1. Un servicio puede utilizar este enlace para exponer extremos que cumplen con WS-I BP 1.1, como los que utilizan los clientes ASMX. De igual forma, un cliente puede utilizar BasicHttpBinding para comunicarse con servicios que exponen puntos de conexión que cumplen con WS-I BP 1.1, como el Servicio Web de ASMX o servicios configurados con BasicHttpBinding.  
@@ -194,5 +194,5 @@ Representa un enlace que un servicio [!INCLUDE[indigo1](../../../../../includes/
  <xref:System.ServiceModel.Configuration.BasicHttpBindingElement>  
  [Enlaces](../../../../../docs/framework/wcf/bindings.md)  
  [Configuración de enlaces proporcionados por el sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Utilización de enlaces para configurar los clientes y servicios de Windows Communication Foundation](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
- [\<enlace >](../../../../../docs/framework/misc/binding.md)
+ [Utilización de enlaces para configurar los clientes y servicios de Windows Communication Foundation](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [\<binding>](../../../../../docs/framework/misc/binding.md)

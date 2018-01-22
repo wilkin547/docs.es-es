@@ -18,11 +18,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 61c4f26c9880d8a7f6a8fb356bafcc0d312509dc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d6bef68c8ba433e902cfd50e59a3b343e3af08cd
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="creating-ws-i-basic-profile-11-interoperable-services"></a>Creación de servicios interoperables de WS-I Basic Profile 1.1
 Para configurar un extremo del servicio [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] para ser interoperable con clientes de servicios Web [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]:  
@@ -39,7 +39,7 @@ Para configurar un extremo del servicio [!INCLUDE[indigo2](../../../includes/ind
   
 -   La seguridad de mensaje que controla el valor <xref:System.ServiceModel.BasicHttpBinding.Security%2A?displayProperty=nameWithType> proporciona compatibilidad con WS-Security conforme a WS-I Basic Security Profile 1.0. Deje esta propiedad en su valor predeterminado, que es <xref:System.ServiceModel.SecurityMode.Transport?displayProperty=nameWithType>, para no usar WS-Security.  
   
- Para que los metadatos una [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] servicio disponible para [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)], use las herramientas de generación de cliente de servicio Web: [Web Services Description Language Tool (Wsdl.exe)](http://msdn.microsoft.com/en-us/b9210348-8bc2-4367-8c91-d1a04b403e88), [(Web Services Discovery Tool Disco.exe)](http://msdn.microsoft.com/en-us/acd88078-c581-42bc-94ca-6633e2851979)y el `Add Web Reference` característica de [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]; también debe habilitar la publicación de metadatos. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Publicar extremos de metadatos](../../../docs/framework/wcf/publishing-metadata-endpoints.md).  
+ Para que los metadatos una [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] servicio disponible para [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)], use las herramientas de generación de cliente de servicio Web: [Web Services Description Language Tool (Wsdl.exe)](http://msdn.microsoft.com/library/b9210348-8bc2-4367-8c91-d1a04b403e88), [(Web Services Discovery Tool Disco.exe)](http://msdn.microsoft.com/library/acd88078-c581-42bc-94ca-6633e2851979)y el `Add Web Reference` característica de [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]; también debe habilitar la publicación de metadatos. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Publicar extremos de metadatos](../../../docs/framework/wcf/publishing-metadata-endpoints.md).  
   
 ## <a name="example"></a>Ejemplo  
   

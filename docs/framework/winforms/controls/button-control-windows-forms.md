@@ -17,11 +17,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 085ef918b2828dc754f5b91e0ad61262ce7d8c60
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e4f9720f26458f3dd9cb2411d123fa830b20f3fd
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="button-control-windows-forms"></a>Button (Control, formularios Windows Forms)
 El control `Button` de Windows Forms permite al usuario hacer clic en él para llevar a cabo una acción. El control `Button` puede mostrar texto e imágenes. Al hacer clic en el botón, parece como si se hubiera presionado y soltado.  
@@ -52,4 +52,4 @@ El control `Button` de Windows Forms permite al usuario hacer clic en él para l
  [Controles que se usan en Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
  Proporciona una lista completa de controles de Windows Forms, con vínculos a información sobre su uso.  
   
- Consulte también [proporcionados por el usuario a los cuadros de diálogo](http://msdn.microsoft.com/en-us/63ad8645-6842-45e8-b215-73f778e29a55) y [Cómo: cerrar cuadros de diálogo y conservar proporcionados por el usuario](http://msdn.microsoft.com/en-us/9e118fad-3bf4-4f70-a3de-a0cda2b0229d).
+ Consulte también [proporcionados por el usuario a los cuadros de diálogo](http://msdn.microsoft.com/library/63ad8645-6842-45e8-b215-73f778e29a55) y [Cómo: cerrar cuadros de diálogo y conservar proporcionados por el usuario](http://msdn.microsoft.com/library/9e118fad-3bf4-4f70-a3de-a0cda2b0229d).

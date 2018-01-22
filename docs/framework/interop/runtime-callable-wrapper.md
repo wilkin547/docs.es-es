@@ -20,11 +20,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 722a317a01d79f56496810b8727ce041705c8f78
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8fed5ff57a4674f9b7723b1b850e972316fa94fb
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="runtime-callable-wrapper"></a>Contenedor al que se puede llamar en tiempo de ejecución
 Common Language Runtime expone objetos COM mediante un proxy denominado el contenedor RCW (Runtime Callable Wrapper). Aunque el contenedor RCW aparece como un objeto corriente para los clientes .NET, su función principal es calcular referencias de llamadas entre un cliente .NET y un objeto COM.  
@@ -67,7 +67,7 @@ Interfaces COM y el contenedor RCW
   
 ## <a name="see-also"></a>Vea también  
  [Contenedores COM](../../../docs/framework/interop/com-wrappers.md)  
- [Serialización de Interfaces seleccionadas](http://msdn.microsoft.com/en-us/fdb97fd0-f694-4832-bf15-a4e7cf413840)  
+ [Serialización de Interfaces seleccionadas](http://msdn.microsoft.com/library/fdb97fd0-f694-4832-bf15-a4e7cf413840)  
  [Contenedor CCW (COM callable wrapper)](../../../docs/framework/interop/com-callable-wrapper.md)  
- [Resumen de la conversión de bibliotecas de tipos en ensamblados](http://msdn.microsoft.com/en-us/bf3f90c5-4770-4ab8-895c-3ba1055cc958)  
+ [Resumen de la conversión de bibliotecas de tipos en ensamblados](http://msdn.microsoft.com/library/bf3f90c5-4770-4ab8-895c-3ba1055cc958)  
  [Importar una biblioteca de tipos como un ensamblado](../../../docs/framework/interop/importing-a-type-library-as-an-assembly.md)

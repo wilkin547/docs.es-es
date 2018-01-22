@@ -20,11 +20,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 9ca3e3eef1aa9e7414d3c279de5943585703bf9f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1dec3c71c0c93ce580925744fe55f05cd2e5f383
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-load-a-picture-using-the-designer-windows-forms"></a>Cómo: Cargar una imagen mediante el Diseñador (formularios Windows Forms)
 Con los formularios Windows Forms <xref:System.Windows.Forms.PictureBox> (control), puede cargar y mostrar una imagen en un formulario en tiempo de diseño estableciendo la <xref:System.Windows.Forms.PictureBox.Image%2A> propiedad en una imagen válida. En la tabla siguiente muestra los tipos de archivo aceptables.  
@@ -38,7 +38,7 @@ Con los formularios Windows Forms <xref:System.Windows.Forms.PictureBox> (contro
 |JPEG|.jpg|  
   
 > [!NOTE]
->  Los cuadros de diálogo y comandos de menú que se ven pueden diferir de los descritos en la Ayuda, en función de los valores de configuración o de edición activos. Para cambiar la configuración, elija la opción **Importar y exportar configuraciones** del menú **Herramientas** . Para obtener más información, consulte [Personalizar la configuración de desarrollo en Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Los cuadros de diálogo y comandos de menú que se ven pueden diferir de los descritos en la Ayuda, en función de los valores de configuración o de edición activos. Para cambiar la configuración, elija la opción **Importar y exportar configuraciones** del menú **Herramientas** . Para obtener más información, vea [Personalizar la configuración de desarrollo en Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
 ### <a name="to-display-a-picture-at-design-time"></a>Para mostrar una imagen en tiempo de diseño  
   

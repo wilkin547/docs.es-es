@@ -14,11 +14,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: b54982439f621ea504c91c264dde002751ec9185
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9f5d9b334aae1607f4fb46e0b41155b50eb95a46
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="design-patterns-list-based-publish-subscribe"></a>Patrones de diseño: suscripción-publicación basada en la lista
 Este ejemplo muestra el patrón suscripción-publicación basada en la lista implementado como un programa [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
@@ -135,7 +135,7 @@ public class PriceChangeEventArgs : EventArgs
   
 3.  Ejecute Datasource.exe desde \datasource\bin\\, desde la carpeta específica del lenguaje. La actividad del origen de los datos se muestra en la ventana de la consola. Cuando el origen de datos envía la información al servicio, se debería pasar a cada cliente.  
   
-4.  Si el cliente, el origen de datos y los programas de servicio no se pueden comunicar, consulte [sugerencias de solución de problemas de](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b).  
+4.  Si el cliente, el origen de datos y los programas de servicio no se pueden comunicar, consulte [sugerencias de solución de problemas de](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
   
 ### <a name="to-run-the-sample-across-machines"></a>Para ejecutar el ejemplo en los equipos  
   

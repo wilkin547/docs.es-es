@@ -14,11 +14,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 0df22d32d1ccb1cf6f64a7b44c73293cefb2a2fe
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 58116f11fc482792cb84023bd3e1c23fe9e94a55
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="custom-binding-imperative"></a>Imperativo en enlace personalizado
 El ejemplo muestra cómo escribir código imperativo para definir y utilizar los enlaces personalizados sin utilizar un archivo de configuración o un cliente generado por [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. Este ejemplo combina las características proporcionadas por el transporte HTTP y el canal de sesión confiable para crear un enlace basado en HTTP confiable. En este ejemplo se basa en el [Introducción](../../../../docs/framework/wcf/samples/getting-started-sample.md) que implementa un servicio de calculadora.  
@@ -92,4 +92,4 @@ Press <ENTER> to terminate client.
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Binding\Custom\Imperative`  
   
 ## <a name="see-also"></a>Vea también  
- [Enlace personalizado](http://msdn.microsoft.com/en-us/657e8143-beb0-472d-9cfe-ed1a19c2ab08)
+ [Enlace personalizado](http://msdn.microsoft.com/library/657e8143-beb0-472d-9cfe-ed1a19c2ab08)

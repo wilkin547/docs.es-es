@@ -20,11 +20,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: a18afd8ba06b5bcc70ca5a6febc10be8050891b0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2a2fc73ee5e9f9e0a2f8351f8d38311801ebfb34
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="creating-event-handlers-in-windows-forms"></a>Crear controladores de eventos en formularios Windows Forms
 Un controlador de eventos es un procedimiento en el código que determina qué acciones se realizan cuando se produce un evento, por ejemplo, cuando el usuario hace clic en un botón o una cola de mensajes recibe un mensaje. Cuando se genera un evento, se ejecutan los controladores de evento que reciben el evento. Los eventos se pueden asignar a varios controladores y los métodos que controlan eventos determinados se pueden cambiar dinámicamente. También puede usar el Diseñador de Windows Forms para crear controladores de evento.  
@@ -45,7 +45,7 @@ Un controlador de eventos es un procedimiento en el código que determina qué a
  [Orden de eventos en Windows Forms](../../../docs/framework/winforms/order-of-events-in-windows-forms.md)  
  Describe el orden con el que se generan los eventos en los controles de Windows Forms.  
   
- [Cómo: Crear controladores de eventos mediante el Diseñador](http://msdn.microsoft.com/en-us/8461e9b8-14e8-406f-936e-3726732b23d2)  
+ [Cómo: Crear controladores de eventos mediante el Diseñador](http://msdn.microsoft.com/library/8461e9b8-14e8-406f-936e-3726732b23d2)  
  Describe cómo usar el Diseñador de Windows Forms para crear controladores de evento.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  

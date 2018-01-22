@@ -14,18 +14,18 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 4c87a833c33fa41f949471207c21bb437fcc0436
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 20de5215033d0f315de36c995b4976891a124752
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="ltnethttpbindinggt"></a>&lt;netHttpBinding&gt;
 Representa un enlace que un servicio de [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] puede usar para configurar y exponer extremos que pueden comunicarse sobre HTTP. Cuando se usa con un contrato dúplex, se usará WebSockets; si no, se usará HTTP.  
   
- \<sistema. ServiceModel >  
+ \<system.ServiceModel>  
 \<enlaces >  
-\<netHttpBinding >  
+\<netHttpBinding>  
   
 ## <a name="syntax"></a>Sintaxis  
 
@@ -97,14 +97,14 @@ Representa un enlace que un servicio de [!INCLUDE[indigo1](../../../../../includ
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<seguridad >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-basichttpbinding.md)|Define la configuración de seguridad del enlace. Este elemento es del tipo `NetHttpSecurityElement`.|  
-|[\<readerQuotas >](http://msdn.microsoft.com/library/3e5e42ff-cef8-478f-bf14-034449239bfd)|Define las restricciones en la complejidad de los mensajes SOAP que pueden ser procesados por los puntos de conexión configurados con este enlace. Este elemento es del tipo <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.|  
+|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-basichttpbinding.md)|Define la configuración de seguridad del enlace. Este elemento es del tipo `NetHttpSecurityElement`.|  
+|[\<readerQuotas>](http://msdn.microsoft.com/library/3e5e42ff-cef8-478f-bf14-034449239bfd)|Define las restricciones en la complejidad de los mensajes SOAP que pueden ser procesados por los puntos de conexión configurados con este enlace. Este elemento es del tipo <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.|  
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<enlaces >](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Este elemento contiene una colección de enlaces estándar y personalizados.|  
+|[\<bindings>](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Este elemento contiene una colección de enlaces estándar y personalizados.|  
   
 ## <a name="remarks"></a>Comentarios  
  NetHttpBinding usa HTTP como transporte para enviar mensajes. Cuando se usa con un contrato dúplex, se usará WebSockets.  Cuando se usa con un contrato de solicitud-respuesta, NetHttpBinding se comportará como un BasicHttpBinding con un codificador binario.  
@@ -195,5 +195,5 @@ Representa un enlace que un servicio de [!INCLUDE[indigo1](../../../../../includ
  <xref:System.ServiceModel.Configuration.BasicHttpBindingElement>  
  [Enlaces](../../../../../docs/framework/wcf/bindings.md)  
  [Configuración de enlaces proporcionados por el sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Utilización de enlaces para configurar los clientes y servicios de Windows Communication Foundation](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
- [\<enlace >](../../../../../docs/framework/misc/binding.md)
+ [Utilización de enlaces para configurar los clientes y servicios de Windows Communication Foundation](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [\<binding>](../../../../../docs/framework/misc/binding.md)

@@ -35,11 +35,11 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.workload: dotnet
-ms.openlocfilehash: 32607c853506ae7339057893c10fd9931e5823be
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cb98b4d7bbc70fd54e8928c741aa444a6b832046
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="configuring-apps-by-using-configuration-files"></a>Configurar aplicaciones con archivos de configuración
 .NET Framework, a través de archivos de configuración, proporciona a los programadores y administradores control y flexibilidad sobre la manera en que se ejecutan las aplicaciones. Los archivos de configuración son archivos XML que se pueden cambiar según sea necesario. Un administrador puede controlar a qué recursos protegidos puede tener acceso una aplicación, qué versiones de ensamblados utilizará la aplicación y dónde se ubican las aplicaciones y los objetos remotos. Los programadores pueden colocar valores en archivos de configuración, con lo que no es necesario volver a compilar una aplicación cada vez que cambia un valor. En esta sección se describe lo que se puede configurar y por qué es útil configurar una aplicación.  
@@ -62,7 +62,7 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 ## <a name="machine-configuration-files"></a>Archivos de configuración del equipo  
- El archivo de configuración del equipo, Machine.config, contiene valores que afectan a todo un equipo. Este archivo se encuentra en el directorio %*ruta de instalación en tiempo de ejecución*%\Config. Machine.config contiene valores de configuración para el enlace de ensamblados en todo el equipo, [canales de comunicación remota](http://msdn.microsoft.com/en-us/6e9b60e0-9bc0-47b4-a8ef-3b78585f9a18) integrados y ASP.NET.  
+ El archivo de configuración del equipo, Machine.config, contiene valores que afectan a todo un equipo. Este archivo se encuentra en el directorio %*ruta de instalación en tiempo de ejecución*%\Config. Machine.config contiene valores de configuración para el enlace de ensamblados en todo el equipo, [canales de comunicación remota](http://msdn.microsoft.com/library/6e9b60e0-9bc0-47b4-a8ef-3b78585f9a18) integrados y ASP.NET.  
   
  El sistema de configuración busca primero el [elemento **\<appSettings>**](~/docs/framework/configure-apps/file-schema/appsettings/index.md) en el archivo de configuración del equipo y en otras secciones de configuración que pueda definir un desarrollador. Después, busca en el archivo de configuración de la aplicación. Para que el archivo de configuración del equipo sea siempre manejable, es mejor ubicar estos valores en el archivo de configuración de la aplicación. Sin embargo, si se ubican los valores en el archivo de configuración del equipo, el sistema puede ser más fácil de mantener. Por ejemplo, si se tiene un componente de terceros que utilizan las aplicaciones de cliente y servidor, es más fácil poner los valores de ese componente en un lugar. En este caso, el archivo de configuración del equipo es el lugar adecuado para los valores, para no tener los mismos valores en dos archivos.  
   
@@ -86,7 +86,7 @@ ms.lasthandoff: 12/22/2017
   
 -   Aplicación hospedada en ASP.NET.  
   
-     Para obtener más información sobre los archivos de configuración de ASP.NET, vea [Opciones de configuración de ASP.NET](http://msdn.microsoft.com/en-us/116608f3-c03d-4413-9fc7-978703e18b0f).  
+     Para obtener más información sobre los archivos de configuración de ASP.NET, vea [Opciones de configuración de ASP.NET](http://msdn.microsoft.com/library/116608f3-c03d-4413-9fc7-978703e18b0f).  
   
 -   Aplicación hospedada en Internet Explorer.  
   
@@ -133,9 +133,9 @@ ms.lasthandoff: 12/22/2017
  [Esquema de los archivos de configuración](../../../docs/framework/configure-apps/file-schema/index.md)  
  [Especificar la ubicación de un ensamblado](../../../docs/framework/configure-apps/specify-assembly-location.md)  
  [Redirigir versiones de ensamblado](../../../docs/framework/configure-apps/redirect-assembly-versions.md)  
- [Registrar objetos remotos mediante archivos de configuración](http://msdn.microsoft.com/en-us/bc503ee1-c811-4f82-9525-470343326adc)  
+ [Registrar objetos remotos mediante archivos de configuración](http://msdn.microsoft.com/library/bc503ee1-c811-4f82-9525-470343326adc)  
  [Administración de sitios Web ASP.NET](http://msdn.microsoft.com/library/1298034b-5f7d-464d-abd1-ad9e6b3eeb7e)  
- [NIB: Administración de directivas de seguridad](http://msdn.microsoft.com/en-us/d754e05d-29dc-4d3a-a2c2-95eaaf1b82b9)  
+ [NIB: Administración de directivas de seguridad](http://msdn.microsoft.com/library/d754e05d-29dc-4d3a-a2c2-95eaaf1b82b9)  
  [Caspol.exe (Herramienta de la directiva de seguridad de acceso del código)](../../../docs/framework/tools/caspol-exe-code-access-security-policy-tool.md)  
  [Ensamblados en Common Language Runtime](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
- [Objetos remotos](http://msdn.microsoft.com/en-us/515686e6-0a8d-42f7-8188-73abede57c58)
+ [Objetos remotos](http://msdn.microsoft.com/library/515686e6-0a8d-42f7-8188-73abede57c58)

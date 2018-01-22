@@ -18,17 +18,17 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: a013eac5b3306339c82abaa62f97e4aad7d8ed76
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 35be6df4f31c30c738aebdba95daf0e3b38c651b
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="audio-and-video-how-to-topics"></a>Temas "Cómo..." de audio y vídeo
 Los temas siguientes muestran cómo usar el <xref:System.Windows.Controls.MediaElement> para integrar el contenido de audio y vídeo en sus aplicaciones.  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Cómo: agregar dinámicamente un elemento](http://msdn.microsoft.com/en-us/d00f258a-7973-4de7-bc54-a3fc1f638419)  
+ [Cómo: agregar dinámicamente un elemento](http://msdn.microsoft.com/library/d00f258a-7973-4de7-bc54-a3fc1f638419)  
  [Controlar un MediaElement (Reproducir, Pausar, Detener, Volumen y Velocidad)](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-a-mediaelement-play-pause-stop-volume-and-speed.md)  
  [Controlar un control MediaElement mediante un guión gráfico](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-a-mediaelement-by-using-a-storyboard.md)  
  [Desencadenar la reproducción de medios con un evento de usuario](../../../../docs/framework/wpf/graphics-multimedia/how-to-trigger-media-playback-with-a-user-event.md)  

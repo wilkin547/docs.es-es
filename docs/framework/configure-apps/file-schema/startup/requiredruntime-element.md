@@ -21,18 +21,18 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.workload: dotnet
-ms.openlocfilehash: 12be2350cb123407b2f71d1f5f07e836ccddb9c9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2e864eec2ddf51d5cc88110654f6c23f146938d5
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="ltrequiredruntimegt-element"></a>&lt;requiredRuntime&gt; elemento
 Especifica que la aplicación solo admite la versión 1.0 de Common Language Runtime. Este elemento está en desuso y ya no debe usarse. El [ `supportedRuntime` ](supportedruntime-element.md) deberían usar el elemento en su lugar.
   
  \<configuration>  
 \<Inicio >  
-\<requiredRuntime >  
+\<requiredRuntime>  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -94,4 +94,4 @@ safemode="true|false"/>
 ## <a name="see-also"></a>Vea también  
  [Esquema de la configuración de inicio](../../../../../docs/framework/configure-apps/file-schema/startup/index.md)  
  [Esquema de los archivos de configuración](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [\<PaveOver> Especificar la versión en tiempo de ejecución que se va a usar](http://msdn.microsoft.com/en-us/c376208d-980d-42b4-865b-fbe0d9cc97c2)
+ [\<PaveOver> Especificar la versión en tiempo de ejecución que se va a usar](http://msdn.microsoft.com/library/c376208d-980d-42b4-865b-fbe0d9cc97c2)

@@ -14,19 +14,19 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 5048bc2980d7eb51efc1707cfc143f3a81ddf81d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 88f9a766c85ec0fd6cb3379be239db33dc6ebb20
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="ltmessagegt-of-ltws2007httpbindinggt"></a>&lt;message&gt; de &lt;ws2007HttpBinding&gt;
 Define la configuración de seguridad de nivel de mensaje de la [ \<ws2007HttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/ws2007httpbinding.md) elemento.  
   
- \<sistema. ServiceModel >  
+ \<system.ServiceModel>  
 \<enlaces >  
-\<ws2007HttpBinding >  
-\<enlace >  
+\<ws2007HttpBinding>  
+\<binding>  
 \<seguridad >  
 \<mensaje >  
   
@@ -100,7 +100,7 @@ Define la configuración de seguridad de nivel de mensaje de la [ \<ws2007HttpBi
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<seguridad >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-ws2007httpbinding.md)|Define la configuración de seguridad para un [ \<ws2007HttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/ws2007httpbinding.md).|  
+|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-ws2007httpbinding.md)|Define la configuración de seguridad para un [ \<ws2007HttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/ws2007httpbinding.md).|  
   
 ## <a name="see-also"></a>Vea también  
  <xref:System.ServiceModel.NonDualMessageSecurityOverHttp>  
@@ -110,5 +110,5 @@ Define la configuración de seguridad de nivel de mensaje de la [ \<ws2007HttpBi
  [Protección de servicios y clientes](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  [Enlaces](../../../../../docs/framework/wcf/bindings.md)  
  [Configuración de enlaces proporcionados por el sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Utilización de enlaces para configurar los clientes y servicios de Windows Communication Foundation](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
- [\<enlace >](../../../../../docs/framework/misc/binding.md)
+ [Utilización de enlaces para configurar los clientes y servicios de Windows Communication Foundation](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [\<binding>](../../../../../docs/framework/misc/binding.md)

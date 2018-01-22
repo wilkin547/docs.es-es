@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 1946f2b4a2cef8946eb05f995150fafada954d09
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 29f1f4f22a48aed1020b8e7ea42fe5ffd5b9f566
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="composing-nested-entity-sql-queries"></a>Crear consultas anidadas de Entity SQL
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] es un lenguaje funcional enriquecido. El bloque de creación de [!INCLUDE[esql](../../../../../../includes/esql-md.md)] es una expresión. A diferencia del SQL convencional, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] no se limita a un conjunto de resultados tabular: [!INCLUDE[esql](../../../../../../includes/esql-md.md)] permite crear expresiones complejas que pueden tener literales, parámetros o expresiones anidadas. Un valor de la expresión se puede parametrizar o formado por alguna otra expresión.  
@@ -57,7 +57,7 @@ UNION ALL
 FROM … );  
 ```  
   
- En el ejemplo siguiente se muestra cómo anidar apropiadamente las expresiones en [!INCLUDE[esql](../../../../../../includes/esql-md.md)]: [Cómo: ordenar la unión de dos consultas](http://msdn.microsoft.com/en-us/853c583a-eaba-4400-830d-be974e735313).  
+ En el ejemplo siguiente se muestra cómo anidar apropiadamente las expresiones en [!INCLUDE[esql](../../../../../../includes/esql-md.md)]: [Cómo: ordenar la unión de dos consultas](http://msdn.microsoft.com/library/853c583a-eaba-4400-830d-be974e735313).  
   
 ## <a name="nested-queries-in-projection"></a>Consultas anidadas en proyección  
  Las consultas anidadas en la cláusula del proyecto se podrían traducir en consultas de producto cartesiano en el servidor. Esto puede hacer que la tabla TempDB aumente, lo que puede afectar adversamente al rendimiento del servidor en algunos servidores de servicios backend, incluido SLQ Server.  

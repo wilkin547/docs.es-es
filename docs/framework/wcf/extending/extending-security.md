@@ -15,17 +15,17 @@ author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
 ms.workload: dotnet
-ms.openlocfilehash: ecbbaac0023ca528967abe2cb60c3d790772fb2e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cdd9b91ba7ff9b1e431f7d9107e72df084ba8af3
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="extending-security"></a>Extensión de la seguridad
 Para alojar nuevos tipos de notificación y tokens personalizados, puede extender la infraestructura de seguridad de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. Los temas de esta sección le muestran cómo hacerlo.  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Arquitectura de seguridad](http://msdn.microsoft.com/en-us/16593476-d36a-408d-808c-ae6fd483e28f)  
+ [Arquitectura de seguridad](http://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)  
  Describe la arquitectura del sistema de seguridad [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
   
  [Credencial personalizada y validación de la credencial](../../../../docs/framework/wcf/extending/custom-credential-and-credential-validation.md)  

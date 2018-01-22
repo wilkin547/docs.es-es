@@ -17,11 +17,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: c98ecc987f4710d344f6eab07563a14cbf4d9962
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 36abf79ec34b2fff8a3bfa46f2f62e5a787bbfe8
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="wcf-data-services-overview"></a>Información general sobre Data Services de WCF
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]permite la creación y el consumo de servicios de datos para la Web o en una intranet mediante el [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]permite exponer los datos como recursos direccionables mediante URI. Esto permite tener acceso a los datos y modificarlos usando la semántica de Representational State Transfer (REST), específicamente los verbos HTTP estándar GET, PUT, POST y DELETE. En este tema se proporciona información general sobre los modelos y los procedimientos definidos por [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)], así como las funciones proporcionadas por [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] para aprovechar las ventajas de [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] en las aplicaciones basadas en .NET Framework.  
@@ -70,6 +70,6 @@ ms.lasthandoff: 12/22/2017
  [Servicios de datos de WCF 4.5](../../../../docs/framework/data/wcf/index.md)  
  [Introducción](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md)  
  [Definir Servicios de datos de WCF](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)  
- [Obtener acceso a un servicio de datos (WCF Data Services)](http://msdn.microsoft.com/en-us/1e54a2b9-2ec6-4002-b8f8-c1d8df37c350)  
+ [Obtener acceso a un servicio de datos (WCF Data Services)](http://msdn.microsoft.com/library/1e54a2b9-2ec6-4002-b8f8-c1d8df37c350)  
  [Biblioteca cliente de Servicios de datos de WCF](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)  
  [Transferencia de estado representacional (REST)](http://go.microsoft.com/fwlink/?LinkId=113919)

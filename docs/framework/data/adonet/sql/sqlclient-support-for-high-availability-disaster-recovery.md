@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: d2a444440af9dfaa2b084a55db9348fa48df7b54
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 4f6ede253f52682cfe5a698cf4fb02841dc4c1e0
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="sqlclient-support-for-high-availability-disaster-recovery"></a>Compatibilidad de SqlClient para alta disponibilidad y recuperación ante desastres
 Este tema explica la compatibilidad de SqlClient (agregado en [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)]) para grupos de disponibilidad AlwaysOn de alta disponibilidad y recuperación ante desastres.  La característica de los grupos de disponibilidad AlwaysOn se agregó a [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 2012. Para obtener más información acerca de los grupos de disponibilidad AlwaysOn, vea los Libros en pantalla de [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)].  
@@ -41,6 +41,9 @@ Este tema explica la compatibilidad de SqlClient (agregado en [!INCLUDE[net_v45]
 1.  <xref:System.Data.SqlClient.SqlConnectionStringBuilder.ApplicationIntent%2A>  
   
 2.  <xref:System.Data.SqlClient.SqlConnectionStringBuilder.MultiSubnetFailover%2A>  
+
+> [!NOTE]
+>  Establecer `MultiSubnetFailover` a `true` no es necesario con [!INCLUDE[net_v461](../../../../../includes/net-v461-md.md)]) o versiones posteriores.
   
 ## <a name="connecting-with-multisubnetfailover"></a>Conectar con MultiSubnetFailover  
  Especifique siempre `MultiSubnetFailover=True` al conectarse a un agente de escucha de grupo de disponibilidad de [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 2012 o a una instancia de clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 2012. `MultiSubnetFailover` permite una conmutación por error más rápida para todos los grupos de disponibilidad y/o instancias de clúster de conmutación por error en [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 2012 y reducirá significativamente el tiempo de conmutación por error para las topologías AlwaysOn de una subred y de múltiples subredes. Durante una conmutación por error de múltiples subredes, el cliente intentará conexiones en paralelo. Durante una conmutación por error de subred, se reintentará agresivamente la conexión TCP.  

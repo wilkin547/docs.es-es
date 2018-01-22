@@ -18,11 +18,11 @@ author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 86dd0c4349dce8dd9e50fdd44c38a08ec39d90bd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e05af51010e92586a9f1de423f6304ea8db78168
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="making-an-image-easier-to-debug"></a>Facilitar la depuración de una imagen
 Al compilar código no administrado, puede configurar una imagen ejecutable para depurarla si establece algunos modificadores IDE u opciones de línea de comandos. Por ejemplo, puede usar la opción de línea de comandos /**Zi** en Visual C++ para solicitarle que emita archivos de símbolo de depuración (con la extensión de archivo .pdb). De forma similar, la opción de línea de comandos /**Od** indica al compilador que deshabilite la optimización. El código resultante se ejecuta con mayor lentitud, pero es más fácil de depurar, en caso de que fuera necesario.  
@@ -67,4 +67,4 @@ AllowOptimize=0
 ## <a name="see-also"></a>Vea también  
  [Depurar, trazar y generar perfiles](../../../docs/framework/debug-trace-profile/index.md)  
  [Habilitar la depuración de adjuntos JIT](../../../docs/framework/debug-trace-profile/enabling-jit-attach-debugging.md)  
- [Habilitar la generación de perfiles](http://msdn.microsoft.com/en-us/3b669676-f0e0-4ebf-8674-68986dd2020d)
+ [Habilitar la generación de perfiles](http://msdn.microsoft.com/library/3b669676-f0e0-4ebf-8674-68986dd2020d)

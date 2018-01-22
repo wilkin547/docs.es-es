@@ -21,17 +21,17 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: ece6a5d2123bb118f11940081e3c1d939815a8ce
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 04dbcfb0fa16ceb4d6778ef611e926894d7840e9
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-use-an-application-scope-resource-dictionary"></a>Cómo: Usar un diccionario de recursos en el ámbito de aplicación
 En este ejemplo se muestra cómo definir y usar un diccionario de recursos personalizado de ámbito de la aplicación.  
   
 ## <a name="example"></a>Ejemplo  
- <xref:System.Windows.Application>expone un almacén de ámbito de la aplicación para los recursos compartidos: <xref:System.Windows.Application.Resources%2A>. De forma predeterminada, el <xref:System.Windows.Application.Resources%2A> propiedad se inicializa con una instancia de la <xref:System.Windows.ResourceDictionary> tipo. Utilice esta instancia al obtener y establecer las propiedades de ámbito de la aplicación mediante <xref:System.Windows.Application.Resources%2A>. Para obtener más información, consulte [Cómo: obtener y establecer un recurso de ámbito de la aplicación](http://msdn.microsoft.com/en-us/39e0420c-c9fc-47dc-8956-fdd95b214095).
+ <xref:System.Windows.Application>expone un almacén de ámbito de la aplicación para los recursos compartidos: <xref:System.Windows.Application.Resources%2A>. De forma predeterminada, el <xref:System.Windows.Application.Resources%2A> propiedad se inicializa con una instancia de la <xref:System.Windows.ResourceDictionary> tipo. Utilice esta instancia al obtener y establecer las propiedades de ámbito de la aplicación mediante <xref:System.Windows.Application.Resources%2A>. Para obtener más información, consulte [Cómo: obtener y establecer un recurso de ámbito de la aplicación](http://msdn.microsoft.com/library/39e0420c-c9fc-47dc-8956-fdd95b214095).
   
  Si tiene varios recursos que se haya establecido en <xref:System.Windows.Application.Resources%2A>, en su lugar, puede usar un diccionario de recursos personalizado para almacenar esos recursos y establecer <xref:System.Windows.Application.Resources%2A> con él en su lugar. A continuación muestra cómo declarar un diccionario de recursos personalizado mediante XAML.
   

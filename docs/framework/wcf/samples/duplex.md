@@ -15,11 +15,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 0baf0a188ccb67f50a57ea0a56bb16dc40c53bbc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 14aae02b36798b90633981cb1d68d10a0cbf29fc
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="duplex"></a>Dúplex
 El ejemplo Dúplex muestra cómo definir e implementar un contrato dúplex. La comunicación dúplex se produce cuando un cliente establece una sesión con un servicio y da al servicio un canal en el que el servicio puede devolver los mensajes al cliente. En este ejemplo se basa en el [Introducción](../../../../docs/framework/wcf/samples/getting-started-sample.md). Un contrato dúplex se define como un par de interfaces, una interfaz principal del cliente al servicio y una interfaz de devolución de llamada del servicio al cliente. En este ejemplo, la interfaz `ICalculatorDuplex` permite al cliente realizar las operaciones matemáticas, calculando el resultado sobre una sesión. El servicio devuelve los resultados en la interfaz `ICalculatorDuplexCallback`. Un contrato dúplex requiere una sesión, porque se debe establecer un contexto para poner en correlación el conjunto de mensajes que se envían entre el cliente y el servicio.  
@@ -178,7 +178,7 @@ client.Close();
 3.  Para ejecutar el ejemplo en una configuración de equipo único o de varios, siga las instrucciones de [ejecutando los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
     > [!IMPORTANT]
-    >  Cuando se ejecuta el cliente en una configuración de varios equipos, asegúrese de reemplazar "localhost" en ambos el `address` atributo de la [extremo](http://msdn.microsoft.com/en-us/13aa23b7-2f08-4add-8dbf-a99f8127c017) elemento y el `clientBaseAddress` atributo de la [ \< enlace >](../../../../docs/framework/misc/binding.md) elemento de la [ \<wsDualHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md) elemento con el nombre de la máquina adecuado, tal como se muestra a continuación:  
+    >  Cuando se ejecuta el cliente en una configuración de varios equipos, asegúrese de reemplazar "localhost" en ambos el `address` atributo de la [extremo](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) elemento y el `clientBaseAddress` atributo de la [ \< enlace >](../../../../docs/framework/misc/binding.md) elemento de la [ \<wsDualHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md) elemento con el nombre de la máquina adecuado, tal como se muestra a continuación:  
   
     ```xml  
     <client>  

@@ -14,19 +14,19 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: b6c1519873ba4127b1619e0dd8387a0e2d40ddae
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 17a0043188c36a31dc4ee35e8f5889240b9b7407
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="ltmessagegt-of-ltnethttpbindinggt"></a>&lt;message&gt; de &lt;netHttpBinding&gt;
 Define la configuración de seguridad de nivel de mensaje de la [ \<basicHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md).  
   
- \<sistema. ServiceModel >  
+ \<system.ServiceModel>  
 \<enlaces >  
-\<netHttpBinding >  
-\<enlace >  
+\<netHttpBinding>  
+\<binding>  
 \<seguridad >  
 \<mensaje >  
   
@@ -140,5 +140,5 @@ Define la configuración de seguridad de nivel de mensaje de la [ \<basicHttpBin
  [Protección de servicios y clientes](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  [Enlaces](../../../../../docs/framework/wcf/bindings.md)  
  [Configuración de enlaces proporcionados por el sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Utilización de enlaces para configurar los clientes y servicios de Windows Communication Foundation](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
- [\<enlace >](../../../../../docs/framework/misc/binding.md)
+ [Utilización de enlaces para configurar los clientes y servicios de Windows Communication Foundation](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [\<binding>](../../../../../docs/framework/misc/binding.md)

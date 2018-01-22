@@ -19,11 +19,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 1473fa07b57dcd19ea192db6cdb0a395f119b159
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 39466115e3835361c76361d3cfc04f76161e7dd5
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="registering-assemblies-with-com"></a>Registrar ensamblados con COM
 Puede ejecutar una herramienta de línea de comandos denominada [Registro de ensamblados (Regasm.exe)](../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md) para registrar un ensamblado o anular su registro para su uso con COM. Regasm.exe agrega información sobre la clase al Registro del sistema, de modo que los clientes COM puedan usar la clase .NET Framework de forma transparente. La clase <xref:System.Runtime.InteropServices.RegistrationServices> proporciona la funcionalidad equivalente.  
@@ -55,5 +55,5 @@ Puede ejecutar una herramienta de línea de comandos denominada [Registro de ens
 ## <a name="see-also"></a>Vea también  
  [Exponer componentes de .NET Framework en COM](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)  
  [Cómo: Hacer referencia a tipos de .NET desde COM](../../../docs/framework/interop/how-to-reference-net-types-from-com.md)  
- [Llamar a un objeto de .NET](http://msdn.microsoft.com/en-us/40c9626c-aea6-4bad-b8f0-c1de462efd33)  
- [Implementar una aplicación para obtener acceso a COM](http://msdn.microsoft.com/en-us/fb63564c-c1b9-4655-a094-a235625882ce)
+ [Llamar a un objeto de .NET](http://msdn.microsoft.com/library/40c9626c-aea6-4bad-b8f0-c1de462efd33)  
+ [Implementar una aplicación para obtener acceso a COM](http://msdn.microsoft.com/library/fb63564c-c1b9-4655-a094-a235625882ce)

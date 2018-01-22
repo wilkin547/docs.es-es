@@ -19,11 +19,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 5014bcc0696a8650bed1d00d1224c892660c041e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 11739d35d3a6d845feb1f6d9544f6ea347a9942d
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="copying-and-pinning"></a>Copiar y fijar
 Al serializar datos, el serializador de interoperabilidad puede copiar o anclar los datos que se van a serializar. Copiar los datos coloca una copia de datos desde una ubicación de memoria en otra. En la siguiente ilustración se muestran las diferencias entre copiar un tipo de valor y copiar un tipo pasado por referencia de memoria administrada a memoria no administrada.  
@@ -88,6 +88,6 @@ Tipos de referencia pasados por valor y por referencia
   
 ## <a name="see-also"></a>Vea también  
  [Comportamiento predeterminado del cálculo de referencias](../../../docs/framework/interop/default-marshaling-behavior.md)  
- [Administración de memoria con el serializador de interoperabilidad](http://msdn.microsoft.com/en-us/417206ce-ee3e-4619-9529-0c0b686c7bee)  
- [Atributos direccionales](http://msdn.microsoft.com/en-us/241ac5b5-928e-4969-8f58-1dbc048f9ea2)  
+ [Administración de memoria con el serializador de interoperabilidad](http://msdn.microsoft.com/library/417206ce-ee3e-4619-9529-0c0b686c7bee)  
+ [Atributos direccionales](http://msdn.microsoft.com/library/241ac5b5-928e-4969-8f58-1dbc048f9ea2)  
  [Serialización de interoperabilidad](../../../docs/framework/interop/interop-marshaling.md)

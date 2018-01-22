@@ -14,11 +14,11 @@ author: wadepickett
 ms.author: wpickett
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 3d70368f7514b64d67a186b328b1f19d231fe0c1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1c026c57129672eb25bb244a4fc928b827398e08
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="routing-contracts"></a>Enrutar contratos
 Los contratos de enrutamiento definen los patrones de mensaje que puede procesar el servicio de enrutamiento.  Todos los contratos son sin tipos y permiten al servicio recibir un mensaje sin conocimiento de la acción o del esquema del mensaje. Esto permite al servicio de enrutamiento enrutar mensajes genéricamente sin configuración adicional para las características de los mensajes subyacentes que se enrutan.  
@@ -38,5 +38,5 @@ Los contratos de enrutamiento definen los patrones de mensaje que puede procesar
 |<xref:System.ServiceModel.Routing.IDuplexSessionRouter>|SessionMode=SessionMode.Required<br /><br /> CallbackContract=typeof(ISimplexSession)<br /><br /> AsyncPattern = true<br /><br /> IsOneWay = true<br /><br /> TransactionFlow(TransactionFlowOption.Allowed)|IDuplexSessionChannel -> IDuplexSessionChannel|  
   
 ## <a name="see-also"></a>Vea también  
- [Servicio de enrutamiento](http://msdn.microsoft.com/en-us/5ac8718c-bcef-456f-bfd5-1e60a30d6eaa)  
+ [Servicio de enrutamiento](http://msdn.microsoft.com/library/5ac8718c-bcef-456f-bfd5-1e60a30d6eaa)  
  [Introducción al enrutamiento](../../../../docs/framework/wcf/feature-details/routing-introduction.md)

@@ -14,11 +14,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 7ffc74fdbec204b798ee93a8ee2c91db992a83cb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: bab723e4e52db9936e635f1348dff86d75de274d
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="one-time-setup-procedure-for-the-windows-communication-foundation-samples"></a>Procedimiento de instalación única para los ejemplos de Windows Communication Foundation
 La mayoría de los ejemplos de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] se hospedan en Internet Information Services (IIS) y se ejecutan desde un directorio virtual común. Este procedimiento de instalación única crea una carpeta en el disco; También agrega un directorio virtual en IIS denominado **ServiceModelSamples**.  
@@ -36,7 +36,7 @@ La mayoría de los ejemplos de [!INCLUDE[indigo1](../../../../includes/indigo1-m
   
 3.  Si [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] no está instalado, y el sistema operativo no es Windows Server 2008 SP2 o posterior, instale [251798 revisión](http://go.microsoft.com/fwlink/?LinkId=184693).  
   
-4.  Ejecute los siguientes comandos. Para obtener más información acerca de por qué se deben ejecutar estos comandos, consulte [error del servicio hospedado IIS](http://msdn.microsoft.com/en-us/ee5499fc-1b10-4cda-a9b1-13dba70f05f8).  
+4.  Ejecute los siguientes comandos. Para obtener más información acerca de por qué se deben ejecutar estos comandos, consulte [error del servicio hospedado IIS](http://msdn.microsoft.com/library/ee5499fc-1b10-4cda-a9b1-13dba70f05f8).  
   
     > [!WARNING]
     >  Si se reinstala IIS, los siguientes comandos deberán ejecutarse de nuevo.  

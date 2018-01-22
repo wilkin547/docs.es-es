@@ -27,11 +27,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 7fd38f6246d44bd24753d9c86a5b0b08819d3db7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4dfdc102a5aeb2e3eaccde28a8ce57a1878141e4
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="walkthrough-debugging-custom-windows-forms-controls-at-design-time"></a>Tutorial: Depurar controles personalizados de formularios Windows Forms en tiempo de diseño
 Cuando se crea un control personalizado, a menudo encontrará es necesario para depurar su comportamiento en tiempo de diseño. Esto es especialmente cierto si va a crear un diseñador personalizado para el control personalizado. Para obtener más información, consulte [Tutorial: crear un Windows Forms Control que toma ventaja de tiempo de diseño características de Visual Studio](../../../../docs/framework/winforms/controls/creating-a-wf-control-design-time-features.md).  
@@ -55,14 +55,14 @@ Cuando se crea un control personalizado, a menudo encontrará es necesario para 
  Cuando haya terminado, tendrá un conocimiento de las tareas necesarias para depurar el comportamiento en tiempo de diseño de un control personalizado.  
   
 > [!NOTE]
->  Los cuadros de diálogo y comandos de menú que se ven pueden diferir de los descritos en la Ayuda, en función de los valores de configuración o de edición activos. Para cambiar la configuración, elija la opción **Importar y exportar configuraciones** del menú **Herramientas** . Para obtener más información, consulte [Personalizar la configuración de desarrollo en Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Los cuadros de diálogo y comandos de menú que se ven pueden diferir de los descritos en la Ayuda, en función de los valores de configuración o de edición activos. Para cambiar la configuración, elija la opción **Importar y exportar configuraciones** del menú **Herramientas** . Para obtener más información, vea [Personalizar la configuración de desarrollo en Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
 ## <a name="creating-the-project"></a>Crear el proyecto  
  El primer paso es crear el proyecto de aplicación. Este proyecto se utilizará para compilar la aplicación que hospeda el control personalizado.  
   
 #### <a name="to-create-the-project"></a>Para crear el proyecto  
   
--   Cree un proyecto de aplicación de Windows denominado "DebuggingExample". Para ver detalles, consulte [Cómo: Crear un nuevo proyecto de aplicación de Windows](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa).  
+-   Cree un proyecto de aplicación de Windows denominado "DebuggingExample". Para ver detalles, consulte [Cómo: Crear un nuevo proyecto de aplicación de Windows](http://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa).  
   
 ## <a name="creating-a-control-library-project"></a>Crear un proyecto de biblioteca de controles  
  El siguiente paso es crear el proyecto de biblioteca de controles y configurar el control personalizado.  
@@ -71,9 +71,9 @@ Cuando se crea un control personalizado, a menudo encontrará es necesario para 
   
 1.  Agregar un **biblioteca de controles de Windows** proyecto a la solución.  
   
-2.  Agregue un nuevo **UserControl** elemento al proyecto DebugControlLibrary. Para obtener más información, consulte [NIB: Cómo: agregar nuevos elementos de proyecto](http://msdn.microsoft.com/en-us/63d3e16b-de6e-4bb5-a0e3-ecec762201ce). Asigne al archivo de origen nuevo un nombre de base de "DebugControl".  
+2.  Agregue un nuevo **UserControl** elemento al proyecto DebugControlLibrary. Para obtener más información, consulte [NIB: Cómo: agregar nuevos elementos de proyecto](http://msdn.microsoft.com/library/63d3e16b-de6e-4bb5-a0e3-ecec762201ce). Asigne al archivo de origen nuevo un nombre de base de "DebugControl".  
   
-3.  Mediante el **el Explorador de soluciones**, elimine el control predeterminado del proyecto eliminando el archivo de código con un nombre de base de "`UserControl1`". Para obtener más información, consulte [NIB: Cómo: quitar, eliminar y excluir elementos](http://msdn.microsoft.com/en-us/6dffdc86-29c8-4eff-bcd8-e3a0dd9e9a73).  
+3.  Mediante el **el Explorador de soluciones**, elimine el control predeterminado del proyecto eliminando el archivo de código con un nombre de base de "`UserControl1`". Para obtener más información, consulte [NIB: Cómo: quitar, eliminar y excluir elementos](http://msdn.microsoft.com/library/6dffdc86-29c8-4eff-bcd8-e3a0dd9e9a73).  
   
 4.  Compile la solución.  
   
@@ -186,4 +186,4 @@ Cuando se crea un control personalizado, a menudo encontrará es necesario para 
 ## <a name="see-also"></a>Vea también  
  [Tutorial: Crear un control de Windows Forms que aproveche las características en tiempo de diseño de Visual Studio](../../../../docs/framework/winforms/controls/creating-a-wf-control-design-time-features.md)  
  [Cómo: obtener acceso a servicios en tiempo de diseño](http://msdn.microsoft.com/library/c186c4b6-076c-438d-9ed3-f13da29c8c1f)  
- [Cómo: obtener acceso a la compatibilidad en tiempo de diseño en formularios Windows Forms](http://msdn.microsoft.com/library/a84f8579-1f47-41b9-ba37-69030b0aff09)
+ [Cómo: Obtener acceso a las funciones en tiempo de diseño de formularios Windows Forms](http://msdn.microsoft.com/library/a84f8579-1f47-41b9-ba37-69030b0aff09)

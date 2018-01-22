@@ -15,11 +15,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 6ba7ca9941dc148444a4c605fecc8aaf150e8601
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f53ee18345347f506a404a22bf5bfea6af037463
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="getdemultiplexedstub-function"></a>GetDemultiplexedStub (función)
 Crea un receptor de reenviador de objeto para ayudar a un cliente recibir las llamadas asincrónicas de administración de Windows.
@@ -39,7 +39,7 @@ HRESULT GetDemultiplexedStub (
 ## <a name="parameters"></a>Parámetros
 
 `pObject`  
-[in] Un puntero a la implementación de en proceso del cliente de [IWbemObjectSink](https://msdn.microsoft.com/en-us/library/aa391787(v=vs.85).aspx).
+[in] Un puntero a la implementación de en proceso del cliente de [IWbemObjectSink](https://msdn.microsoft.com/library/aa391787(v=vs.85).aspx).
 
 `isLocal`  
 [in] Una marca que indica si el evento es local (`true`); en caso contrario, `false`.
@@ -56,7 +56,7 @@ Si se produce un error en la función, el valor devuelto es un código de error 
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** WMINet_Utils.idl  
+ **Header:** WMINet_Utils.idl  
   
  **Versiones de .NET framework:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   

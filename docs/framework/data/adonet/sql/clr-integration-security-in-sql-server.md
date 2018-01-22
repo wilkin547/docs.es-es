@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: d4364e35bbce3261c8f6e6c45002d5a603007b85
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 37437d827fc0ff6583178f33f4cceaa86f5175dd
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="clr-integration-security-in-sql-server"></a>Seguridad de integración de CLR en SQL Server
 Microsoft SQL Server proporciona la integración del componente Common Language Runtime (CLR) de .NET Framework. La integración de CLR permite escribir procedimientos almacenados, desencadenadores, tipos definidos por el usuario, funciones definidas por el usuario, agregados definidos por el usuario y funciones con valores de tabla de secuencias, mediante el uso de cualquier lenguaje de .NET Framework, como Microsoft Visual Basic .NET o Microsoft Visual C#.  
@@ -30,7 +30,7 @@ Microsoft SQL Server proporciona la integración del componente Common Language 
   
 |Recurso|Descripción|  
 |--------------|-----------------|  
-|[Seguridad de acceso del código](http://msdn.microsoft.com/en-us/23a20143-241d-4fe5-9d9f-3933fd594c03)|Contiene temas que describen CAS en .NET Framework.|  
+|[Seguridad de acceso del código](http://msdn.microsoft.com/library/23a20143-241d-4fe5-9d9f-3933fd594c03)|Contiene temas que describen CAS en .NET Framework.|  
 |[Seguridad de la integración de CLR](http://go.microsoft.com/fwlink/?LinkId=59998)|Describe el modelo de seguridad para el código administrado que se ejecuta en SQL Server.|  
   
 ## <a name="see-also"></a>Vea también  

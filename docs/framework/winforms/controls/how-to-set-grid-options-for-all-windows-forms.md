@@ -20,17 +20,17 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 19868e282409180383fb6bef232082bee6b71f99
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f4b77f77490ce3229cd2f05f2a8824f2c4784bcd
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-set-grid-options-for-all-windows-forms"></a>Cómo: Establecer opciones de cuadrícula para todos los formularios Windows Forms
 Como que esté acostumbrado a trabajar el [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] entorno de desarrollo, puede establecer preferencias para todos los formularios y proyectos con los que trabaje en el Diseñador de Windows Forms.  
   
 > [!NOTE]
->  Los cuadros de diálogo y comandos de menú que se ven pueden diferir de los descritos en la Ayuda, en función de los valores de configuración o de edición activos. Para cambiar la configuración, elija la opción **Importar y exportar configuraciones** del menú **Herramientas** . Para obtener más información, consulte [Personalizar la configuración de desarrollo en Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Los cuadros de diálogo y comandos de menú que se ven pueden diferir de los descritos en la Ayuda, en función de los valores de configuración o de edición activos. Para cambiar la configuración, elija la opción **Importar y exportar configuraciones** del menú **Herramientas** . Para obtener más información, vea [Personalizar la configuración de desarrollo en Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
 ### <a name="to-set-global-windows-forms-options"></a>Para establecer opciones globales de formularios Windows Forms  
   
@@ -42,7 +42,7 @@ Como que esté acostumbrado a trabajar el [!INCLUDE[vsprvs](../../../../includes
   
 ## <a name="see-also"></a>Vea también  
  [Tutorial: Organizar controles en formularios Windows Forms mediante líneas de ajuste](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)  
- [General, Diseñador de Windows Forms, cuadro de diálogo Opciones](http://msdn.microsoft.com/en-us/8dd170af-72f0-4212-b04b-034ceee92834)  
+ [General, Diseñador de Windows Forms, cuadro de diálogo Opciones](http://msdn.microsoft.com/library/8dd170af-72f0-4212-b04b-034ceee92834)  
  [Controles de formularios Windows Forms](../../../../docs/framework/winforms/controls/index.md)  
  [Cómo: Agregar controles a Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)  
  [Organizar controles en formularios Windows Forms](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)  

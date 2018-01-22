@@ -18,23 +18,23 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 1ffb1a826bb37bddeefae9862e34f59096826685
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8f8e38dc9560e2e5a35c709572333d0f84f38cda
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="label"></a>Etiqueta
 <xref:System.Windows.Controls.Label>controles suelen proporcionan información en el [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)].  Históricamente, un <xref:System.Windows.Controls.Label> sólo contenía texto, sin embargo, dado el <xref:System.Windows.Controls.Label> que se distribuye con [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] es un <xref:System.Windows.Controls.ContentControl>, puede contener cualquier texto o un <xref:System.Windows.UIElement>.  
   
  Un <xref:System.Windows.Controls.Label> proporciona compatibilidad funcional y visual para las claves de acceso. Con frecuencia se utiliza para habilitar el acceso rápido mediante teclado a los controles como un <xref:System.Windows.Controls.TextBox>. Para asignar un <xref:System.Windows.Controls.Label> a una <xref:System.Windows.Controls.Control>, establezca el <xref:System.Windows.Controls.Label.Target%2A?displayProperty=nameWithType> propiedad al control que debe obtener el foco cuando el usuario presiona la tecla de acceso.  
   
- La siguiente imagen muestra un <xref:System.Windows.Controls.Label> "Temas" que tenga como destino un <xref:System.Windows.Controls.ComboBox>.  Cuando el usuario presiona, el <xref:System.Windows.Controls.ComboBox> recibe el foco.  Para obtener más información, consulte [Cómo: establecer la propiedad de destino de una etiqueta](http://msdn.microsoft.com/en-us/b24c6977-ebcb-4855-a9bb-3fd4435af8f8).  
+ La siguiente imagen muestra un <xref:System.Windows.Controls.Label> "Temas" que tenga como destino un <xref:System.Windows.Controls.ComboBox>.  Cuando el usuario presiona, el <xref:System.Windows.Controls.ComboBox> recibe el foco.  Para obtener más información, consulte [Cómo: establecer la propiedad de destino de una etiqueta](http://msdn.microsoft.com/library/b24c6977-ebcb-4855-a9bb-3fd4435af8f8).  
   
  ![Propiedades de pantalla se muestra con la etiqueta mediante el uso de](../../../../docs/framework/wpf/controls/media/labeledby.JPG "LabeledBy")  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Cómo: Establecer la propiedad Target de un control Label](http://msdn.microsoft.com/en-us/b24c6977-ebcb-4855-a9bb-3fd4435af8f8)  
+ [Cómo: Establecer la propiedad Target de un control Label](http://msdn.microsoft.com/library/b24c6977-ebcb-4855-a9bb-3fd4435af8f8)  
   
 ## <a name="reference"></a>Referencia  
  <xref:System.Windows.Controls.Label>

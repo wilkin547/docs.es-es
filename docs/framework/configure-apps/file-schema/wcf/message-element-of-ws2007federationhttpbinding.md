@@ -14,19 +14,19 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 97c0ad9c64046e9c93ce8690016f71d0950fb2d5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f1c30ba2995a0f8768292dd71733d3e6f4c3799f
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="ltmessagegt-element-of-ltws2007federationhttpbindinggt"></a>Elemento &lt;message&gt; de &lt;ws2007FederationHttpBinding&gt;
 Define los valores para la seguridad de nivel de mensaje para la [ \<ws2007FederationHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/ws2007federationhttpbinding.md) elemento.  
   
- \<sistema. ServiceModel >  
+ \<system.ServiceModel>  
 \<enlaces >  
-\<ws2007FederationHttpBinding >  
-\<enlace >  
+\<ws2007FederationHttpBinding>  
+\<binding>  
 \<seguridad >  
 \<mensaje >  
   
@@ -99,7 +99,7 @@ Define los valores para la seguridad de nivel de mensaje para la [ \<ws2007Feder
 |Atributo|Descripción|  
 |---------------|-----------------|  
 |`algorithmSuite`|Opcional. Establece el cifrado de mensajes, la firma y los algoritmos del ajuste de clave. La clase <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> determina los algoritmos y los tamaños de clave. Estos algoritmos se asignan a los indicados en la especificación Lenguaje de directiva de seguridad (WS-SecurityPolicy).<br /><br /> En la siguiente tabla se enumeran los posibles valores. El valor predeterminado es Basic256.|  
-|`issuedKeyType`|Especifica el tipo de clave que se va a emitir. Los valores válidos son los siguientes:<br /><br /> -SymmetricKey<br />-PublicKey<br />-BearerKey<br /><br /> El valor predeterminado es SymmetricKey. Este atributo es del tipo <xref:System.IdentityModel.Tokens.SecurityKeyType>.|  
+|`issuedKeyType`|Especifica el tipo de clave que se va a emitir. Los valores válidos son los siguientes:<br /><br /> -SymmetricKey<br />-   PublicKey<br />-BearerKey<br /><br /> El valor predeterminado es SymmetricKey. Este atributo es del tipo <xref:System.IdentityModel.Tokens.SecurityKeyType>.|  
 |`issuedTokenType`|Un URI que especifica el tipo de token que se va a emitir. De manera predeterminada, es `null`.|  
 |`negotiateServiceCredential`|Un valor que especifica si la credencial del servicio se debería intercambiar como parte de negociación o estar disponible fuera de la banda. El valor predeterminado es `true`, que significa que se negocia la credencial del servicio.|  
   
@@ -128,16 +128,16 @@ Define los valores para la seguridad de nivel de mensaje para la [ \<ws2007Feder
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<claimTypeRequirements >](../../../../../docs/framework/configure-apps/file-schema/wcf/claimtyperequirements-element.md)|Especifica una colección de tipos de demanda para este enlace. Cada elemento es del tipo <xref:System.ServiceModel.Configuration.ClaimTypeElement>.|  
-|[\<emisor >](../../../../../docs/framework/configure-apps/file-schema/wcf/issuer.md)|Especifica un punto de conexión que emite un token de seguridad. Este elemento es del tipo <xref:System.ServiceModel.Configuration.IssuedTokenParametersEndpointAddressElement>.|  
-|[\<issuerMetadata >](../../../../../docs/framework/configure-apps/file-schema/wcf/issuermetadata.md)|Especifica la dirección del punto de conexión del emisor.|  
-|[\<tokenRequestParameters >](../../../../../docs/framework/configure-apps/file-schema/wcf/tokenrequestparameters.md)|Una colección de parámetros de solicitud de token. Cada parámetro es un elemento XML.|  
+|[\<claimTypeRequirements>](../../../../../docs/framework/configure-apps/file-schema/wcf/claimtyperequirements-element.md)|Especifica una colección de tipos de demanda para este enlace. Cada elemento es del tipo <xref:System.ServiceModel.Configuration.ClaimTypeElement>.|  
+|[\<issuer>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuer.md)|Especifica un punto de conexión que emite un token de seguridad. Este elemento es del tipo <xref:System.ServiceModel.Configuration.IssuedTokenParametersEndpointAddressElement>.|  
+|[\<issuerMetadata>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuermetadata.md)|Especifica la dirección del punto de conexión del emisor.|  
+|[\<tokenRequestParameters>](../../../../../docs/framework/configure-apps/file-schema/wcf/tokenrequestparameters.md)|Una colección de parámetros de solicitud de token. Cada parámetro es un elemento XML.|  
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<seguridad >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-element-of-ws2007federationhttpbinding.md)|Define la configuración de seguridad de un enlace.|  
+|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-element-of-ws2007federationhttpbinding.md)|Define la configuración de seguridad de un enlace.|  
   
 ## <a name="see-also"></a>Vea también  
  <xref:System.ServiceModel.FederatedMessageSecurityOverHttp>  
@@ -146,5 +146,5 @@ Define los valores para la seguridad de nivel de mensaje para la [ \<ws2007Feder
  `System.ServiceModel.Configuration.FederatedMessageSecurityElement`[Protección de servicios y clientes](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  [Enlaces](../../../../../docs/framework/wcf/bindings.md)  
  [Configuración de enlaces proporcionados por el sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Utilización de enlaces para configurar los clientes y servicios de Windows Communication Foundation](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
- [\<enlace >](../../../../../docs/framework/misc/binding.md)
+ [Utilización de enlaces para configurar los clientes y servicios de Windows Communication Foundation](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [\<binding>](../../../../../docs/framework/misc/binding.md)

@@ -20,11 +20,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: e34a0b267e9a1dc7cf545ae981211cabf220e0d5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1102243eaf43eeb87b16bb654568ef15a821214c
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="marshaling-different-types-of-arrays"></a>Serialización de tipos diferentes de matrices
 Una matriz es un tipo de referencia en código administrado que contiene uno o varios elementos del mismo tipo. Aunque las matrices son tipos de referencia, se pasan como parámetros In a funciones no administradas. Este comportamiento no se corresponde con la manera en que se pasan las matrices administradas a los objetos administrados, que es como parámetros In/Out. Para obtener más información, consulte [Copiar y fijar](../../../docs/framework/interop/copying-and-pinning.md).  
@@ -95,7 +95,7 @@ Una matriz es un tipo de referencia en código administrado que contiene uno o v
     int TestArrayOfStructs2 (MYPERSON* pPersonArray, int size);  
     ```  
   
- [PinvokeLib.dll](http://msdn.microsoft.com/en-us/5d1438d7-9946-489d-8ede-6c694a08f614) es una biblioteca personalizada no administrada que contiene implementaciones de las funciones enumeradas anteriormente y dos variables de estructura: **MYSTRSTRUCT** y **MYSTRSTRUCT2**. Estas estructuras contienen los siguientes elementos:  
+ [PinvokeLib.dll](http://msdn.microsoft.com/library/5d1438d7-9946-489d-8ede-6c694a08f614) es una biblioteca personalizada no administrada que contiene implementaciones para las funciones enumeradas anteriormente y dos variables de estructura, **MyStrStruct** y **MYPERSON**. Estas estructuras contienen los siguientes elementos:  
   
 ```  
 typedef struct _MYPOINT  
@@ -124,6 +124,6 @@ typedef struct _MYPERSON
  [!code-vb[Conceptual.Interop.Marshaling#32](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.interop.marshaling/vb/arrays.vb#32)]  
   
 ## <a name="see-also"></a>Vea también  
- [Serialización de matrices de tipos](http://msdn.microsoft.com/en-us/049b1c1b-228f-4445-88ec-91bc7fd4b1e8)  
- [Tipos de datos de invocación de plataforma](http://msdn.microsoft.com/en-us/16014d9f-d6bd-481e-83f0-df11377c550f)  
+ [Serialización de matrices de tipos](http://msdn.microsoft.com/library/049b1c1b-228f-4445-88ec-91bc7fd4b1e8)  
+ [Tipos de datos de invocación de plataforma](http://msdn.microsoft.com/library/16014d9f-d6bd-481e-83f0-df11377c550f)  
  [Crear prototipos en código administrado](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)

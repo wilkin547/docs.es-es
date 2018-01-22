@@ -14,17 +14,17 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: aad62d8532fff09157d53f8307fb2b9dcd506cd1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ba3948ef52e6ce527b0bdba77652949e43d05eb2
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-exchange-messages-within-a-reliable-session"></a>Intercambio de mensajes dentro de una sesión confiable
 
 En este tema se describen los pasos necesarios para habilitar una sesión confiable utilizando uno de los enlaces proporcionados por el sistema que admiten este tipo de sesión, pero no de forma predeterminada. Habilitar una sesión confiable de manera imperativa mediante código o mediante declaración en el archivo de configuración. Este procedimiento utiliza los archivos de configuración de cliente y el servicio que se va a habilitar la sesión confiable como estipular que los mensajes lleguen en el mismo orden en que se enviaron.
 
-La parte clave de este procedimiento es que el elemento de configuración de extremo contenga un `bindingConfiguration` atributo que hace referencia a una configuración de enlace denominada `Binding1`. El [  **\<enlace >** ](../../../../docs/framework/misc/binding.md) elemento de configuración hace referencia a este nombre para habilitar sesiones confiables estableciendo la `enabled` atributo de la [  **\<reliableSession >** ](http://msdn.microsoft.com/en-us/9c93818a-7dfa-43d5-b3a1-1aafccf3a00b) elemento `true`. Especifica las garantías de entrega ordenada de la sesión confiable estableciendo el atributo `ordered` en `true`.
+La parte clave de este procedimiento es que el elemento de configuración de extremo contenga un `bindingConfiguration` atributo que hace referencia a una configuración de enlace denominada `Binding1`. El [  **\<enlace >** ](../../../../docs/framework/misc/binding.md) elemento de configuración hace referencia a este nombre para habilitar sesiones confiables estableciendo la `enabled` atributo de la [  **\<reliableSession >** ](http://msdn.microsoft.com/library/9c93818a-7dfa-43d5-b3a1-1aafccf3a00b) elemento `true`. Especifica las garantías de entrega ordenada de la sesión confiable estableciendo el atributo `ordered` en `true`.
 
 Para la copia de origen de este ejemplo, vea [sesión confiable WS](../../../../docs/framework/wcf/samples/ws-reliable-session.md).
 

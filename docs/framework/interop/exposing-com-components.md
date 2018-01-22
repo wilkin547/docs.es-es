@@ -18,14 +18,14 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 9361de4726b1dc58238db5ca7b5605f2cc75485d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d7cbef9247b82268b8006d640b967ffd03ae6717
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="exposing-com-components-to-the-net-framework"></a>Exponer componentes COM en .NET Framework
-En esta sección se resume el proceso necesario para exponer un componente COM existente a código administrado. Para obtener más detalles sobre cómo escribir servidores COM que se integren estrechamente con .NET Framework, vea [Consideraciones de diseño para interoperaciones](http://msdn.microsoft.com/en-us/b59637f6-fe35-40d6-ae72-901e7a707689).  
+En esta sección se resume el proceso necesario para exponer un componente COM existente a código administrado. Para obtener más detalles sobre cómo escribir servidores COM que se integren estrechamente con .NET Framework, vea [Consideraciones de diseño para interoperaciones](http://msdn.microsoft.com/library/b59637f6-fe35-40d6-ae72-901e7a707689).  
   
  Los componentes COM existentes son recursos valiosos en código administrado como aplicaciones empresariales de nivel medio o funcionalidad aislada. Un componente ideal tiene un ensamblado de interoperabilidad primario y se ajusta totalmente a los estándares de programación impuestos por COM.  
   
@@ -35,7 +35,7 @@ En esta sección se resume el proceso necesario para exponer un componente COM e
   
      Common Language Runtime requiere metadatos para todos los tipos, incluidos los tipos COM. Hay varias maneras de obtener un ensamblado que contiene tipos COM importados como metadatos.  
   
-2.  [Cree tipos COM en código administrado](http://msdn.microsoft.com/en-us/1a95a8ca-c8b8-4464-90b0-5ee1a1135b66).  
+2.  [Cree tipos COM en código administrado](http://msdn.microsoft.com/library/1a95a8ca-c8b8-4464-90b0-5ee1a1135b66).  
   
      Puede inspeccionar los tipos COM, activar instancias e invocar métodos en el objeto COM de la misma manera que lo hace para cualquier tipo administrado.  
   
@@ -49,7 +49,7 @@ En esta sección se resume el proceso necesario para exponer un componente COM e
   
 ## <a name="see-also"></a>Vea también  
  [Interoperating with Unmanaged Code](../../../docs/framework/interop/index.md) (Interoperar con código no administrado)  
- [Consideraciones de diseño para interoperaciones](http://msdn.microsoft.com/en-us/b59637f6-fe35-40d6-ae72-901e7a707689)  
+ [Consideraciones de diseño para interoperaciones](http://msdn.microsoft.com/library/b59637f6-fe35-40d6-ae72-901e7a707689)  
  [Ejemplo de interoperabilidad COM: cliente .NET y servidor COM](../../../docs/framework/interop/com-interop-sample-net-client-and-com-server.md)  
  [Independencia del lenguaje y componentes independientes del lenguaje](../../../docs/standard/language-independence-and-language-independent-components.md)  
  [Gacutil.exe (Herramienta Caché global de ensamblados)](../../../docs/framework/tools/gacutil-exe-gac-tool.md)

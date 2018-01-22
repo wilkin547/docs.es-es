@@ -20,11 +20,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 20d192aed423aa6cda2ead2c214ddf4374028699
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e7dea9834b654be0b86155e18524053efa4b778b
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-change-the-cryptographic-provider-for-an-x509-certificate39s-private-key"></a>Cómo: cambiar el proveedor de servicios criptográfico para un certificado X.509 &#39; s de clave privada
 En este tema se muestra cómo cambiar el proveedor criptográfico utilizado para proporcionar una clave privada de un certificado X.509 y cómo integrar el proveedor en el marco de seguridad [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. Para obtener más información sobre el uso de certificados, consulte [trabajar con certificados](../../../../docs/framework/wcf/feature-details/working-with-certificates.md).  
@@ -98,4 +98,4 @@ En este tema se muestra cómo cambiar el proveedor criptográfico utilizado para
  [Creación de un autenticador de tokens de seguridad personalizado](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)  
  [Creación de un proveedor de tokens de seguridad personalizado](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)  
  [Creación de un token personalizado](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md)  
- [Arquitectura de seguridad](http://msdn.microsoft.com/en-us/16593476-d36a-408d-808c-ae6fd483e28f)
+ [Arquitectura de seguridad](http://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)

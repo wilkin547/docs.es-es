@@ -20,11 +20,11 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.workload: dotnet
-ms.openlocfilehash: 8abf7868312883e264848b0de1aa803ce3be5839
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 26475a543950b4f7161243d72252cc1982adf93f
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="redirecting-assembly-versions"></a>Redirigir versiones de ensamblado
 Puede redirigir referencias de enlace en tiempo de compilación a los ensamblados de .NET Framework, ensamblados de terceros o ensamblados de su propia aplicación. Puede redirigir la aplicación para que use una versión diferente de un ensamblado de varias maneras: mediante la directiva de edición, a través de un archivo de configuración de la aplicación o mediante el archivo de configuración de la máquina. En este artículo se describe cómo funciona el enlace de ensamblado en .NET Framework y cómo se puede configurar.  
@@ -164,13 +164,13 @@ Puede redirigir referencias de enlace en tiempo de compilación a los ensamblado
   
 ## <a name="see-also"></a>Vea también  
  [Cómo: Habilitar y deshabilitar redireccionamiento de enlaces automático](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)  
- [\<bindingRedirect > elemento](../../../docs/framework/configure-apps/file-schema/runtime/bindingredirect-element.md)  
+ [\<bindingRedirect> Element](../../../docs/framework/configure-apps/file-schema/runtime/bindingredirect-element.md)  
  [Permiso de seguridad para la redirección de enlaces de ensamblados](../../../docs/framework/configure-apps/assembly-binding-redirection-security-permission.md)  
  [Ensamblados en Common Language Runtime](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
  [Programar con ensamblados](../../../docs/framework/app-domains/programming-with-assemblies.md)  
  [Cómo el motor en tiempo de ejecución ubica ensamblados](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
  [Configurar aplicaciones](../../../docs/framework/configure-apps/index.md)  
- [Configurar aplicaciones de .NET Framework](http://msdn.microsoft.com/en-us/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)  
+ [Configurar aplicaciones de .NET Framework](http://msdn.microsoft.com/library/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)  
  [Esquema de la configuración de Common Language Runtime](../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
  [Esquema de los archivos de configuración](../../../docs/framework/configure-apps/file-schema/index.md)  
  [Cómo: Crear una directiva de publicador](../../../docs/framework/configure-apps/how-to-create-a-publisher-policy.md)

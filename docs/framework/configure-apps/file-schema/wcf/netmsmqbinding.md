@@ -14,18 +14,18 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 9f0c8f0d2f9ed2471fab2eda17c7d9f9be5b77c8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e8f18988568d9b634b3ae5ec92d746c08ff00e77
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="ltnetmsmqbindinggt"></a>&lt;netMsmqBinding&gt;
 Define un enlace en cola adecuado para la comunicación del equipo de cruce.  
   
- \<sistema. ServiceModel >  
+ \<system.ServiceModel>  
 \<enlaces >  
-\<netMsmqBinding >  
+\<netMsmqBinding>  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -98,14 +98,14 @@ Define un enlace en cola adecuado para la comunicación del equipo de cruce.
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<readerQuotas >](http://msdn.microsoft.com/library/3e5e42ff-cef8-478f-bf14-034449239bfd)|Define las restricciones en la complejidad de los mensajes SOAP que pueden ser procesados por los puntos de conexión configurados con este enlace. Este elemento es del tipo <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.|  
-|[\<seguridad >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-netmsmqbinding.md)|Define la configuración de seguridad del enlace. Este elemento es del tipo <xref:System.ServiceModel.Configuration.NetMsmqSecurityElement>.|  
+|[\<readerQuotas>](http://msdn.microsoft.com/library/3e5e42ff-cef8-478f-bf14-034449239bfd)|Define las restricciones en la complejidad de los mensajes SOAP que pueden ser procesados por los puntos de conexión configurados con este enlace. Este elemento es del tipo <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.|  
+|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-netmsmqbinding.md)|Define la configuración de seguridad del enlace. Este elemento es del tipo <xref:System.ServiceModel.Configuration.NetMsmqSecurityElement>.|  
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<enlaces >](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Este elemento contiene una colección de enlaces estándar y personalizados.|  
+|[\<bindings>](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Este elemento contiene una colección de enlaces estándar y personalizados.|  
   
 ## <a name="remarks"></a>Comentarios  
  El enlace `netMsmqBinding` proporciona compatibilidad para poner en cola aprovechando Microsoft Message Queuing (MSMQ) como transporte y proporcionando compatibilidad para aplicaciones acopladas flexiblemente, aislamiento de errores, equilibrio de carga y operaciones desconectadas. Para obtener una descripción de estas características, consulte [colas en WCF](../../../../../docs/framework/wcf/feature-details/queues-in-wcf.md).  
@@ -147,8 +147,8 @@ Define un enlace en cola adecuado para la comunicación del equipo de cruce.
 ## <a name="see-also"></a>Vea también  
  <xref:System.ServiceModel.NetMsmqBinding>  
  <xref:System.ServiceModel.Configuration.NetMsmqBindingElement>  
- [\<enlace >](../../../../../docs/framework/misc/binding.md)  
+ [\<binding>](../../../../../docs/framework/misc/binding.md)  
  [Enlaces](../../../../../docs/framework/wcf/bindings.md)  
  [Configuración de enlaces proporcionados por el sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Utilización de enlaces para configurar los clientes y servicios de Windows Communication Foundation](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [Utilización de enlaces para configurar los clientes y servicios de Windows Communication Foundation](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
  [Colas en WCF](../../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)

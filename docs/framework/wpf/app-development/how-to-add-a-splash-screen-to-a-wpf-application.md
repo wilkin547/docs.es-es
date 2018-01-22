@@ -19,11 +19,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 1ed9669479a3854c843716a1aeb37f7701ea7d7b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 121cbc1c07ea8f6458df81d861aea3f8e1f91086
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-add-a-splash-screen-to-a-wpf-application"></a>Cómo: Agregar una pantalla de presentación a una aplicación WPF
 Este tema muestra cómo agregar una ventana de inicio, o *pantalla de presentación*, a una aplicación de Windows Presentation Foundation (WPF).  
@@ -32,7 +32,7 @@ Este tema muestra cómo agregar una ventana de inicio, o *pantalla de presentaci
   
 1.  Cree o busque una imagen que se va a utilizar para la pantalla de presentación. Puede utilizar cualquier formato de imagen que sea compatible con Windows Imaging Component (WIC). Por ejemplo, puede usar el formato BMP, GIF, JPEG, PNG o TIFF.  
   
-2.  Agregue el archivo de imagen al proyecto de aplicación de WPF. Para obtener más información, consulte [NIB: Cómo: agregar elementos existentes a un proyecto](http://msdn.microsoft.com/en-us/15f4cfb7-78ab-457f-9f14-099a25a6a2d3).  
+2.  Agregue el archivo de imagen al proyecto de aplicación de WPF. Para obtener más información, consulte [NIB: Cómo: agregar elementos existentes a un proyecto](http://msdn.microsoft.com/library/15f4cfb7-78ab-457f-9f14-099a25a6a2d3).  
   
 3.  En el Explorador de soluciones, seleccione la imagen.  
   
@@ -61,4 +61,4 @@ Este tema muestra cómo agregar una ventana de inicio, o *pantalla de presentaci
   
 ## <a name="see-also"></a>Vea también  
  <xref:System.Windows.SplashScreen>  
- [NIB: Cómo: agregar elementos existentes a un proyecto](http://msdn.microsoft.com/en-us/15f4cfb7-78ab-457f-9f14-099a25a6a2d3)
+ [NIB: Cómo: agregar elementos existentes a un proyecto](http://msdn.microsoft.com/library/15f4cfb7-78ab-457f-9f14-099a25a6a2d3)

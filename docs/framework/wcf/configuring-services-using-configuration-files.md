@@ -15,11 +15,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 11229a5677341db05223116c932f13b1f567e712
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 93dc8119e76f5c9cbff5c91a7e5d0cde3b0072f2
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="configuring-services-using-configuration-files"></a>Configuración de servicios mediante archivos de configuración
 Configurar un servicio de [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] con un archivo de configuración le da la flexibilidad de proporcionar datos de extremo y comportamiento del servicio en el punto de implementación en lugar de hacerlo en la fase de diseño. En este tema se describen las principales técnicas disponibles.  
@@ -79,7 +79,7 @@ Configurar un servicio de [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] c
 ### <a name="the-services-element"></a>El \<services > elemento  
  El elemento `services` contiene las especificaciones para todos los servicios que la aplicación hospeda. A partir del modelo de configuración simplificado de [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], esta sección es opcional.  
   
- [\<Servicios >](../../../docs/framework/configure-apps/file-schema/wcf/services.md)  
+ [\<services>](../../../docs/framework/configure-apps/file-schema/wcf/services.md)  
   
 ### <a name="the-service-element"></a>El \<servicio > elemento  
  Cada elemento service tiene estos atributos:  
@@ -88,7 +88,7 @@ Configurar un servicio de [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] c
   
 -   `behaviorConfiguration`. Especifica el nombre de uno de los elementos `behavior` encontrados en el elemento `behaviors` . El comportamiento especificado rige las acciones como si el servicio permitiese la suplantación. Si su valor es el nombre vacío o no se proporciona ningún atributo `behaviorConfiguration` , se agrega al servicio el conjunto predeterminado de comportamientos de servicio.  
   
--   [\<servicio >](../../../docs/framework/configure-apps/file-schema/wcf/service.md)  
+-   [\<service>](../../../docs/framework/configure-apps/file-schema/wcf/service.md)  
   
 ### <a name="the-endpoint-element"></a>El \<extremo > elemento  
  Cada extremo requiere una dirección, un enlace y un contrato, que están representados por los atributos siguientes:  
@@ -101,29 +101,29 @@ Configurar un servicio de [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] c
   
 -   `contract`. Especifica la interfaz que define el contrato. Ésta es la interfaz implementada en el tipo de Common Language Runtime (CLR) especificado por el atributo `name` del elemento `service` .  
   
--   [\<punto de conexión > referencia del elemento](http://msdn.microsoft.com/en-us/13aa23b7-2f08-4add-8dbf-a99f8127c017)  
+-   [\<punto de conexión > referencia del elemento](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017)  
   
 ### <a name="the-bindings-element"></a>El \<enlaces > elemento  
  El elemento `bindings` contiene las especificaciones para todos los enlaces que puede utilizar cualquier extremo definido en cualquier servicio.  
   
- [\<enlaces >](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)  
+ [\<bindings>](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)  
   
 ### <a name="the-binding-element"></a>El \<enlace > elemento  
  El elemento `binding` contenidos en el elemento `bindings` pueden ser uno de los enlaces proporcionados por el sistema (consulte [System-Provided Bindings](../../../docs/framework/wcf/system-provided-bindings.md)) o un enlace personalizado (consulte [Custom Bindings](../../../docs/framework/wcf/extending/custom-bindings.md)). El elemento `binding` tiene un atributo `name` que pone en correlación el enlace con el extremo especificado en el atributo `bindingConfiguration` del elemento `endpoint` . Si no se especifica ningún nombre, dicho enlace corresponde al enlace predeterminado de ese tipo de enlace.  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)] configuración de servicios y clientes, consulte [Configuring Windows Communication Foundation Applications](http://msdn.microsoft.com/en-us/13cb368e-88d4-4c61-8eed-2af0361c6d7a).  
+ [!INCLUDE[crabout](../../../includes/crabout-md.md)]configurar los servicios y clientes, consulte [configuración de Windows Communication Foundation Applications](http://msdn.microsoft.com/library/13cb368e-88d4-4c61-8eed-2af0361c6d7a).  
   
- [\<enlace >](../../../docs/framework/misc/binding.md)  
+ [\<binding>](../../../docs/framework/misc/binding.md)  
   
 ### <a name="the-behaviors-element"></a>El \<comportamientos > elemento  
  Éste es un elemento contenedor para los elementos `behavior` que definen los comportamientos de un servicio.  
   
- [\<comportamientos >](../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)  
+ [\<behaviors>](../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)  
   
 ### <a name="the-behavior-element"></a>La \<comportamiento > elemento  
  Cada elemento `behavior` lo identifica un atributo `name` y proporciona un comportamiento proporcionado por el sistema como <`throttling`> o bien, un comportamiento personalizado. Si no se especifica ningún nombre, dicho elemento de comportamiento corresponde al servicio predeterminado o al comportamiento de extremo.  
   
- [\<comportamiento >](../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md)  
+ [\<behavior>](../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md)  
   
 ## <a name="how-to-use-binding-and-behavior-configurations"></a>Uso de las configuraciones de comportamientos y enlaces  
  [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hace fácil compartir las configuraciones entre extremos utilizando un sistema de referencia en la configuración. En lugar de asignar directamente los valores de configuración a un extremo, los valores de configuración relacionados con el enlace se agrupan en elementos `bindingConfiguration` de la sección `<binding>` . Una configuración de enlace es un grupo con nombre de valores en un enlace. Entonces, los extremos pueden hacer referencia a `bindingConfiguration` por nombre.  
@@ -274,6 +274,6 @@ Configurar un servicio de [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] c
   
 ## <a name="see-also"></a>Vea también  
  [Configuración simplificada](../../../docs/framework/wcf/simplified-configuration.md)  
- [Configurar aplicaciones de Windows Communication Foundation](http://msdn.microsoft.com/en-us/13cb368e-88d4-4c61-8eed-2af0361c6d7a)  
- [\<servicio >](../../../docs/framework/configure-apps/file-schema/wcf/service.md)  
- [\<enlace >](../../../docs/framework/misc/binding.md)
+ [Configurar aplicaciones de Windows Communication Foundation](http://msdn.microsoft.com/library/13cb368e-88d4-4c61-8eed-2af0361c6d7a)  
+ [\<service>](../../../docs/framework/configure-apps/file-schema/wcf/service.md)  
+ [\<binding>](../../../docs/framework/misc/binding.md)

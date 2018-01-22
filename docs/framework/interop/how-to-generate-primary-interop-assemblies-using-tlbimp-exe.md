@@ -18,11 +18,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: d459ac318f2c4a3911830d08e26b31ae5366e896
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4dfbf3c2282e60ec45cb136f52fb115a8d769678
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-generate-primary-interop-assemblies-using-tlbimpexe"></a>Cómo: Generar ensamblados de interoperabilidad primarios mediante Tlbimp.exe
 Hay dos maneras de generar un ensamblado de interoperabilidad primario:  
@@ -55,7 +55,7 @@ Hay dos maneras de generar un ensamblado de interoperabilidad primario:
   
  Si un ensamblado de interoperabilidad primario dependiente tiene un número de versión distinto del de la biblioteca de tipos original, no se reconoce cuando se instala en el directorio actual. Debe registrar el ensamblado de interoperabilidad primario dependiente en el Registro de Windows o usar la opción **/reference** para asegurarse de que Tlbimp.exe encuentre el archivo DLL dependiente.  
   
- También puede encapsular varias versiones de una biblioteca de tipos. Para obtener instrucciones, vea [Cómo: Incluir varias versiones de bibliotecas de tipos](http://msdn.microsoft.com/en-us/79eefe04-a770-4bc3-8ea2-e90ddb8ec31f).  
+ También puede encapsular varias versiones de una biblioteca de tipos. Para obtener instrucciones, vea [Cómo: Incluir varias versiones de bibliotecas de tipos](http://msdn.microsoft.com/library/79eefe04-a770-4bc3-8ea2-e90ddb8ec31f).  
   
 ## <a name="example"></a>Ejemplo  
  En el siguiente ejemplo se importa la biblioteca de tipos COM `LibUtil.tlb` y se firma el ensamblado `LibUtil.dll` con un nombre seguro usando el archivo de clave `CompanyA.snk`. Si se omite un nombre de espacio de nombres específico, este ejemplo genera el espacio de nombres predeterminado `LibUtil`.  

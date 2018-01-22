@@ -18,11 +18,11 @@ author: tdykstra
 ms.author: tdykstra
 manager: wpickett
 ms.workload: tdykstra
-ms.openlocfilehash: d72099543292a89f930135689358b37f87aac44f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9429a1a1eeef82c7587ef573f6413e45a4e97a91
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="caching-in-net-framework-applications"></a>Almacenamiento en caché en aplicaciones .NET Framework
 El almacenamiento en caché permite almacenar datos en memoria para un acceso rápido. Cuando se vuelve a acceder a los datos, las aplicaciones pueden obtenerlos de la memoria caché en lugar de recuperarlos de la fuente original. Esto puede mejorar el rendimiento y la escalabilidad. Además, el almacenamiento en caché permite que los datos estén disponibles cuando el origen de datos no está disponible temporalmente.  
@@ -64,7 +64,7 @@ El almacenamiento en caché permite almacenar datos en memoria para un acceso r�
 >  Al desarrollar nuevas aplicaciones, se recomienda usar la clase <xref:System.Runtime.Caching.MemoryCache>. La API proporcionada en el espacio de nombres <xref:System.Runtime.Caching> es como la API que se proporciona en el espacio de nombres <xref:System.Web.Caching.Cache>. Por lo tanto, la API le resultará familiar si ha usado el almacenamiento en caché de versiones anteriores de ASP.NET. Para obtener un ejemplo de uso del almacenamiento en caché en aplicaciones ASP.NET, vea [Tutorial: Almacenar en caché datos de la aplicación en ASP.NET](http://msdn.microsoft.com/library/942236f6-0138-4aaf-af71-a5ea451a1e23).  
   
 ### <a name="output-caching"></a>Almacenamiento en caché de resultados  
- Para almacenar en caché de forma manual datos de aplicación, puede usar la clase <xref:System.Runtime.Caching.MemoryCache> de ASP.NET. ASP.NET también admite el almacenamiento en caché de resultados, lo que almacena el resultado generado de páginas, controles y respuestas HTTP en memoria. Puede configurar el almacenamiento en caché de resultados de forma declarativa en una página web de ASP.NET o mediante los valores del archivo Web.config. Para más información, vea [Elemento outputCache para el almacenamiento en caché (Esquema de configuración de ASP.NET)](http://msdn.microsoft.com/en-us/47cd2b47-316f-4dfd-bbf8-539be3066fee).  
+ Para almacenar en caché de forma manual datos de aplicación, puede usar la clase <xref:System.Runtime.Caching.MemoryCache> de ASP.NET. ASP.NET también admite el almacenamiento en caché de resultados, lo que almacena el resultado generado de páginas, controles y respuestas HTTP en memoria. Puede configurar el almacenamiento en caché de resultados de forma declarativa en una página web de ASP.NET o mediante los valores del archivo Web.config. Para más información, vea [Elemento outputCache para el almacenamiento en caché (Esquema de configuración de ASP.NET)](http://msdn.microsoft.com/library/47cd2b47-316f-4dfd-bbf8-539be3066fee).  
   
  ASP.NET permite extender el almacenamiento en caché de resultados mediante la creación de proveedores de caché de salida personalizados. Con proveedores personalizados, puede almacenar contenido de la caché con otros dispositivos de almacenamiento, como discos, almacenamiento en la nube y motores de caché distribuida. Para crear un proveedor de caché de salida personalizado, cree una clase que derive de la clase <xref:System.Web.Caching.OutputCacheProvider> y configure la aplicación de modo que use el proveedor de caché de salida personalizado.  
   

@@ -14,18 +14,18 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: c83c1883d00db1da8f0e7945d9cda5f2eb3f56a0
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: d582383d59928d72c15aabba37b50ed878b67ca5
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="connection-strings"></a>Cadenas de conexión
 Una cadena de conexión contiene información de inicialización que se transfiere como un parámetro desde un proveedor de datos a un origen de datos. La sintaxis depende del proveedor de datos y la cadena de conexión se analiza mientras se intenta abrir una conexión. Las cadenas de conexión que usa Entity Framework contienen la información que se emplea para conectar con el proveedor de datos ADO.NET subyacente que Entity Framework admite. También contienen información sobre los archivos del modelo y de asignación necesarios.  
   
  El proveedor de EntityClient utiliza la cadena de conexión al obtener acceso a los metadatos del modelo y de asignación y al conectar con el origen de datos. Se puede obtener acceso a la cadena de conexión o establecerse a través de la propiedad <xref:System.Data.EntityClient.EntityConnection.ConnectionString%2A> de <xref:System.Data.EntityClient.EntityConnection>. La clase <xref:System.Data.EntityClient.EntityConnectionStringBuilder> se puede utilizar para construir mediante programación los parámetros de la cadena de conexión o tener acceso a ellos. Para obtener más información, consulte [Cómo: crear una cadena de conexión EntityConnection](../../../../../docs/framework/data/adonet/ef/how-to-build-an-entityconnection-connection-string.md).  
   
- El [herramientas de Entity Data Model](http://msdn.microsoft.com/en-us/91076853-0881-421b-837a-f582f36be527) generar una cadena de conexión que se almacena en el archivo de configuración de la aplicación. <xref:System.Data.Objects.ObjectContext> recupera esta información de conexión automáticamente al crear consultas de objetos. Se puede tener acceso al elemento  <xref:System.Data.EntityClient.EntityConnection> que usa una instancia de <xref:System.Data.Objects.ObjectContext> desde la propiedad <xref:System.Data.Objects.ObjectContext.Connection%2A>. Para obtener más información, consulte [administrar conexiones y transacciones](http://msdn.microsoft.com/en-us/b6659d2a-9a45-4e98-acaa-d7a8029e5b99).  
+ El [herramientas de Entity Data Model](http://msdn.microsoft.com/library/91076853-0881-421b-837a-f582f36be527) generar una cadena de conexión que se almacena en el archivo de configuración de la aplicación. <xref:System.Data.Objects.ObjectContext> recupera esta información de conexión automáticamente al crear consultas de objetos. Se puede tener acceso al elemento  <xref:System.Data.EntityClient.EntityConnection> que usa una instancia de <xref:System.Data.Objects.ObjectContext> desde la propiedad <xref:System.Data.Objects.ObjectContext.Connection%2A>. Para obtener más información, consulte [administrar conexiones y transacciones](http://msdn.microsoft.com/library/b6659d2a-9a45-4e98-acaa-d7a8029e5b99).  
   
 ## <a name="connection-string-parameters"></a>Parámetros de la cadena de conexión  
  El formato de una cadena de conexión es una lista de pares de parámetros de clave y valor delimitados por punto y coma:  
@@ -41,7 +41,7 @@ Una cadena de conexión contiene información de inicialización que se transfie
 |`Metadata`|Se requiere si no se especifica la palabra clave `Name`. Una lista delimitada por barras verticales de los directorios, archivos y localizadores de recursos en que se ha de buscar información de asignación y metadatos. A continuación se muestra un ejemplo:<br /><br /> `Metadata=`<br /><br /> `c:\model &#124; c:\model\sql\mapping.msl;`<br /><br /> Los espacios en blanco a cada lado del separador de barra vertical se pasan por alto.<br /><br /> Esta palabra clave y la palabra clave `Name` se excluyen mutuamente.|  
 |`Name`|La aplicación puede especificar, si se desea, el nombre de conexión en un archivo de configuración de la aplicación que proporcione los valores de cadena de conexión con pares palabra clave-valor necesarios. En este caso, no es posible suministrarlos directamente en la cadena de conexión. La palabra clave `Name` no se permite en un archivo de configuración.<br /><br /> Cuando la palabra clave `Name` no se incluye en la cadena de conexión, se requiere un valor no vacío para la palabra clave Provider.<br /><br /> Esta palabra clave y todas las demás palabras clave de cadena de conexión se excluyen mutuamente.|  
   
- El siguiente es un ejemplo de una cadena de conexión para el [modelo AdventureWorks Sales](http://msdn.microsoft.com/en-us/f16cd988-673f-4376-b034-129ca93c7832) almacenado en el archivo de configuración de aplicación:  
+ El siguiente es un ejemplo de una cadena de conexión para el [modelo AdventureWorks Sales](http://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832) almacenado en el archivo de configuración de aplicación:  
   
   
   
@@ -121,5 +121,5 @@ Metadata=.\
 ## <a name="see-also"></a>Vea también  
  [Trabajo con proveedores de datos](../../../../../docs/framework/data/adonet/ef/working-with-data-providers.md)  
  [Consideraciones de implementación](../../../../../docs/framework/data/adonet/ef/deployment-considerations.md)  
- [Administrar conexiones y transacciones](http://msdn.microsoft.com/en-us/b6659d2a-9a45-4e98-acaa-d7a8029e5b99)  
+ [Administrar conexiones y transacciones](http://msdn.microsoft.com/library/b6659d2a-9a45-4e98-acaa-d7a8029e5b99)  
  [Cadenas de conexión](../../../../../docs/framework/data/adonet/connection-strings.md)

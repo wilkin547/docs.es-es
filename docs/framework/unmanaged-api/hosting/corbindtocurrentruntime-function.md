@@ -22,16 +22,16 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 9568d9420c686d5a906fb7f90570fe6a1d12046d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0fed8829f8f14833724d1770273ff905d6f5eabf
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="corbindtocurrentruntime-function"></a>CorBindToCurrentRuntime (Función)
 Carga common language runtime (CLR) en un proceso usando la información de versión almacenada en un archivo XML. El formato del archivo XML se modela después del archivo de configuración de aplicación estándar. Para más información sobre los archivos de configuración, vea [Configuration File Schema](../../../../docs/framework/configure-apps/file-schema/index.md) (Esquema de archivos de configuración).  
   
- Esta función está desusada en [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]. Vea [cargar Common Language Runtime en un proceso](http://msdn.microsoft.com/en-us/1e2d6dc1-6aab-43e2-bbc0-aae40756d24f).  
+ Esta función está desusada en [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]. Vea [cargar Common Language Runtime en un proceso](http://msdn.microsoft.com/library/1e2d6dc1-6aab-43e2-bbc0-aae40756d24f).  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -66,7 +66,7 @@ HRESULT CorBindToCurrentRuntime (
   
  **Encabezado:** MSCorEE.h  
   
- **Biblioteca:** MSCorEE.dll  
+ **Library:** MSCorEE.dll  
   
  **Versiones de .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

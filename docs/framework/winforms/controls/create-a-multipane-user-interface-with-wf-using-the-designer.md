@@ -18,11 +18,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 6cfd9f258aa7c43f4c98e475c40af7fe7d9c286b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1752691b3cc6809f1a5da54a01e81de2d4037d19
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-create-a-multipane-user-interface-with-windows-forms-using-the-designer"></a>Cómo: Crear una interfaz de usuario de varios paneles con formularios Windows Forms mediante el Diseñador
 En el siguiente procedimiento, creará una interfaz de usuario de varios paneles que es similar al utilizado en Microsoft Outlook, con un **carpeta** lista, un **mensajes** panel y un **devistaprevia** panel. Esta disposición se consigue principalmente mediante el acoplamiento de controles con el formulario.  
@@ -34,11 +34,11 @@ En el siguiente procedimiento, creará una interfaz de usuario de varios paneles
  Para crear esta interfaz de usuario, coloque todos los controles dentro de un <xref:System.Windows.Forms.SplitContainer> control, que contiene un <xref:System.Windows.Forms.TreeView> control en el panel izquierdo. El panel derecho de la <xref:System.Windows.Forms.SplitContainer> control contiene un segundo <xref:System.Windows.Forms.SplitContainer> controlar con un <xref:System.Windows.Forms.ListView> control anterior un <xref:System.Windows.Forms.RichTextBox> control. Estos <xref:System.Windows.Forms.SplitContainer> controles permiten el cambio de tamaño independientemente de los demás controles en el formulario. Puede adaptar las técnicas de este procedimiento para interfaces de usuario personalizadas de elaborar de su elección.  
   
 > [!NOTE]
->  Los cuadros de diálogo y comandos de menú que se ven pueden diferir de los descritos en la Ayuda, en función de los valores de configuración o de edición activos. Para cambiar la configuración, elija la opción **Importar y exportar configuraciones** del menú **Herramientas** . Para obtener más información, consulte [Personalizar la configuración de desarrollo en Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Los cuadros de diálogo y comandos de menú que se ven pueden diferir de los descritos en la Ayuda, en función de los valores de configuración o de edición activos. Para cambiar la configuración, elija la opción **Importar y exportar configuraciones** del menú **Herramientas** . Para obtener más información, vea [Personalizar la configuración de desarrollo en Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
 ### <a name="to-create-an-outlook-style-user-interface-at-design-time"></a>Para crear una interfaz de usuario de estilo Outlook en tiempo de diseño  
   
-1.  Crear un nuevo proyecto de aplicación de Windows. Para ver detalles, consulte [Cómo: Crear un nuevo proyecto de aplicación de Windows](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa).  
+1.  Crear un nuevo proyecto de aplicación de Windows. Para ver detalles, consulte [Cómo: Crear un nuevo proyecto de aplicación de Windows](http://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa).  
   
 2.  Arrastre un <xref:System.Windows.Forms.SplitContainer> controlar desde la **cuadro de herramientas** al formulario. En el **propiedades** ventana, establezca el <xref:System.Windows.Forms.SplitContainer.Dock%2A> propiedad <xref:System.Windows.Forms.DockStyle.Fill>.  
   

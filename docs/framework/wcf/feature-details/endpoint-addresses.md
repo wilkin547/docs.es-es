@@ -18,11 +18,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 94610842cd801a54bba0266a4f658d8a4bb60dcd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 58e6d383856d57e95a1ea5bd2658af2ec0b22ed5
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="endpoint-addresses"></a>Direcciones de punto de conexión
 Cada punto de conexión tiene una dirección asociada a él, que se utiliza para ubicar e identificar el punto de conexión. Esta dirección está compuesta principalmente de un Identificador uniforme de recursos (URI), que especifica la ubicación del punto de conexión. La dirección del extremo se representa en el modelo de programación de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] mediante la clase <xref:System.ServiceModel.EndpointAddress>, que contiene una propiedad <xref:System.ServiceModel.EndpointAddress.Identity%2A> opcional que permite la autenticación del extremo por parte otros extremos que intercambian mensajes con él, y un conjunto de propiedades <xref:System.ServiceModel.EndpointAddress.Headers%2A> opcionales, que definen cualquier otro encabezado SOAP requerido para alcanzar el servicio. Los encabezados opcionales proporcionan información de direccionamiento adicional y más detallada para identificar o interactuar con el extremo de servicio. La dirección de un punto de conexión se representa en la conexión como una referencia de punto de conexión (EPR) WS-Addressing.  
@@ -130,7 +130,7 @@ Cada punto de conexión tiene una dirección asociada a él, que se utiliza para
   
 -   Mediante código, los encabezados de dirección personalizados se crean usando la clase <xref:System.ServiceModel.Channels.AddressHeader> y, a continuación, se utilizan en la construcción de una clase <xref:System.ServiceModel.EndpointAddress>.  
   
--   En configuración, personalizado [ \<encabezados >](../../../../docs/framework/configure-apps/file-schema/wcf/headers.md) se especifican como elementos secundarios de la [ \<extremo >](http://msdn.microsoft.com/en-us/13aa23b7-2f08-4add-8dbf-a99f8127c017) elemento.  
+-   En configuración, personalizado [ \<encabezados >](../../../../docs/framework/configure-apps/file-schema/wcf/headers.md) se especifican como elementos secundarios de la [ \<extremo >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) elemento.  
   
  Generalmente, la configuración es preferible al código, puesto que permite cambiar los encabezados después de la implementación.  
   
@@ -141,7 +141,7 @@ Cada punto de conexión tiene una dirección asociada a él, que se utiliza para
   
 -   Mediante código, especifique una dirección de escuchas personalizada agregando una clase <xref:System.ServiceModel.Description.ClientViaBehavior> a la colección de comportamientos del extremo.  
   
--   En configuración, especifique una dirección de escucha personalizada con el `ListenUri` atributo del servicio [ \<extremo >](http://msdn.microsoft.com/en-us/13aa23b7-2f08-4add-8dbf-a99f8127c017) elemento.  
+-   En configuración, especifique una dirección de escucha personalizada con el `ListenUri` atributo del servicio [ \<extremo >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) elemento.  
   
 ### <a name="custom-soap-address-filter"></a>Filtro de direcciones SOAP personalizado  
  <xref:System.ServiceModel.EndpointAddress.Uri%2A> se utiliza junto con cualquier propiedad <xref:System.ServiceModel.EndpointAddress.Headers%2A> para definir el filtro de direcciones SOAP de un extremo (<xref:System.ServiceModel.Dispatcher.EndpointDispatcher.AddressFilter%2A>). De forma predeterminada, este filtro comprueba que un mensaje entrante tenga un encabezado de mensaje `To` que coincida con el URI del extremo y que todos los encabezados de extremo necesarios se encuentren en el mensaje.  

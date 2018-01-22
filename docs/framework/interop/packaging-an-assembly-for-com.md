@@ -28,11 +28,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 72b9237a8abeee936070799c5087abc6b45ff3b5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 79c0d8ff3d6f66ad3abf23cd371f86bb74edf78e
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="packaging-an-assembly-for-com"></a>Empaquetar un ensamblado para COM
 Los programadores de COM pueden beneficiarse de la siguiente información sobre los tipos administrados que piensan incluir en su aplicación:  
@@ -47,7 +47,7 @@ Los programadores de COM pueden beneficiarse de la siguiente información sobre 
   
      Las clases administradas que implementan la interfaz de clase (una interfaz de COM generada por la interoperabilidad) están sujetas a restricciones de control de versiones.  
   
-     Para obtener instrucciones sobre el uso de la interfaz de clase, vea [Presentar la interfaz de clase](http://msdn.microsoft.com/en-us/733c0dd2-12e5-46e6-8de1-39d5b25df024).  
+     Para obtener instrucciones sobre el uso de la interfaz de clase, vea [Presentar la interfaz de clase](http://msdn.microsoft.com/library/733c0dd2-12e5-46e6-8de1-39d5b25df024).  
   
 -   Instrucciones de implementación  
   
@@ -69,7 +69,7 @@ Los programadores de COM pueden beneficiarse de la siguiente información sobre 
   
      Independientemente del mecanismo que elija, en la biblioteca de tipos generada solo se incluyen los tipos públicos definidos en el ensamblado que se proporciona.  
   
-     Puede empaquetar una biblioteca de tipos como un archivo independiente o insertarlo como archivo de recursos de Win32 en una aplicación basada en .NET. Microsoft Visual Basic 6.0 realiza esta tarea automáticamente; pero al usar [!INCLUDE[vbprvbext](../../../includes/vbprvbext-md.md)], debe insertar la biblioteca de tipos manualmente. Para obtener instrucciones, vea [Cómo: Insertar bibliotecas de tipos como recursos de Win32 en aplicaciones basadas en .NET](http://msdn.microsoft.com/en-us/c97b4b8c-2ab7-4ac7-8fc8-0ba5c5d59c44).  
+     Puede empaquetar una biblioteca de tipos como un archivo independiente o insertarlo como archivo de recursos de Win32 en una aplicación basada en .NET. Microsoft Visual Basic 6.0 realiza esta tarea automáticamente; pero al usar [!INCLUDE[vbprvbext](../../../includes/vbprvbext-md.md)], debe insertar la biblioteca de tipos manualmente. Para obtener instrucciones, vea [Cómo: Insertar bibliotecas de tipos como recursos de Win32 en aplicaciones basadas en .NET](http://msdn.microsoft.com/library/c97b4b8c-2ab7-4ac7-8fc8-0ba5c5d59c44).  
   
 <a name="cpconpackagingassemblyforcomanchor1"></a>   
 ## <a name="type-library-exporter"></a>Exportador de la biblioteca de tipos  
@@ -94,8 +94,8 @@ Los programadores de COM pueden beneficiarse de la siguiente información sobre 
  <xref:System.Runtime.InteropServices.ITypeLibConverter>  
  [Exponer componentes de .NET Framework en COM](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)  
  [Habilitar tipos de .NET para la interoperación](../../../docs/framework/interop/qualifying-net-types-for-interoperation.md)  
- [Introducción a la interfaz de clase](http://msdn.microsoft.com/en-us/733c0dd2-12e5-46e6-8de1-39d5b25df024)  
+ [Introducción a la interfaz de clase](http://msdn.microsoft.com/library/733c0dd2-12e5-46e6-8de1-39d5b25df024)  
  [Consideraciones de seguridad sobre ensamblados](../../../docs/framework/app-domains/assembly-security-considerations.md)  
  [Tlbexp.exe (Exportador de la biblioteca de tipos)](../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md)  
  [Registrar ensamblados con COM](../../../docs/framework/interop/registering-assemblies-with-com.md)  
- [Cómo: Insertar bibliotecas de tipos como recursos de Win32 en aplicaciones](http://msdn.microsoft.com/en-us/c97b4b8c-2ab7-4ac7-8fc8-0ba5c5d59c44)
+ [Cómo: Insertar bibliotecas de tipos como recursos de Win32 en aplicaciones](http://msdn.microsoft.com/library/c97b4b8c-2ab7-4ac7-8fc8-0ba5c5d59c44)

@@ -17,18 +17,18 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: d769eca17a45449505e1df96e1cbde584e42d65e
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 81b9f8099f98915ec0b0f83dbe0f90e506cb2a79
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-call-model-defined-functions-as-object-methods"></a>Cómo: Llamar a funciones definidas por el modelo como métodos de objeto
 En este tema se describe cómo llamar a una función definida por el modelo como un método en un objeto <xref:System.Data.Objects.ObjectContext> o como un método estático en una clase personalizada. A *función definida por el modelo* es una función que se define en el modelo conceptual. Los procedimientos de este tema describen cómo llamar directamente a estas funciones en lugar de hacerlo desde consultas LINQ to Entities. Para obtener información sobre cómo llamar a funciones definidas por el modelo en LINQ a consultas de entidades, vea [Cómo: Call Model-Defined funciones en consultas](../../../../../../docs/framework/data/adonet/ef/language-reference/how-to-call-model-defined-functions-in-queries.md).  
   
  Tanto si se llama a una función definida por el modelo como un método <xref:System.Data.Objects.ObjectContext> o como un método estático en una clase personalizada, primero se deberá asignar el método a dicha función con un atributo <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute>. Sin embargo, si se define un método en la clase <xref:System.Data.Objects.ObjectContext>, se debe usar la propiedad <xref:System.Data.Objects.ObjectContext.QueryProvider%2A> para exponer el proveedor LINQ, mientras que si se define un método estático en una clase personalizada, se debe usar la propiedad <xref:System.Linq.IQueryable.Provider%2A> para exponer dicho proveedor. Para obtener más información, vea los ejemplos que aparecen a continuación de los procedimientos siguientes.  
   
- Los procedimientos siguientes proporcionan esquemas generales para llamar a una función definida por el modelo como un método en un objeto <xref:System.Data.Objects.ObjectContext> y como un método estático en una clase personalizada. Los ejemplos que los siguen proporcionan más detalles sobre los pasos de los procedimientos. Los procedimientos dan por hecho que se ha definido una función en el modelo conceptual. Para obtener más información, consulte [Cómo: definir funciones personalizadas en el modelo Conceptual](http://msdn.microsoft.com/en-us/0dad7b8b-58f6-4271-b238-f34810d68e5f).  
+ Los procedimientos siguientes proporcionan esquemas generales para llamar a una función definida por el modelo como un método en un objeto <xref:System.Data.Objects.ObjectContext> y como un método estático en una clase personalizada. Los ejemplos que los siguen proporcionan más detalles sobre los pasos de los procedimientos. Los procedimientos dan por hecho que se ha definido una función en el modelo conceptual. Para obtener más información, consulte [Cómo: definir funciones personalizadas en el modelo Conceptual](http://msdn.microsoft.com/library/0dad7b8b-58f6-4271-b238-f34810d68e5f).  
   
 ### <a name="to-call-a-model-defined-function-as-a-method-on-an-objectcontext-object"></a>Para llamar a una función definida por el modelo como un método en un objeto ObjectContext  
   
@@ -57,9 +57,9 @@ En este tema se describe cómo llamar a una función definida por el modelo como
 ## <a name="example"></a>Ejemplo  
  **Llamar a una función definida por el modelo como un método en un objeto ObjectContext**  
   
- En el siguiente ejemplo se muestra cómo llamar a una función definida por el modelo como un método en un objeto <xref:System.Data.Objects.ObjectContext>. El ejemplo se utiliza la [modelo AdventureWorks Sales](http://msdn.microsoft.com/en-us/f16cd988-673f-4376-b034-129ca93c7832).  
+ En el siguiente ejemplo se muestra cómo llamar a una función definida por el modelo como un método en un objeto <xref:System.Data.Objects.ObjectContext>. El ejemplo se utiliza la [modelo AdventureWorks Sales](http://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832).  
   
- Observe la función de modelo conceptual siguiente que devuelve los ingresos obtenidos para un producto determinado. (Para obtener información acerca de cómo agregar la función en el modelo conceptual, consulte [Cómo: definir funciones personalizadas en el modelo Conceptual](http://msdn.microsoft.com/en-us/0dad7b8b-58f6-4271-b238-f34810d68e5f).)  
+ Observe la función de modelo conceptual siguiente que devuelve los ingresos obtenidos para un producto determinado. (Para obtener información acerca de cómo agregar la función en el modelo conceptual, consulte [Cómo: definir funciones personalizadas en el modelo Conceptual](http://msdn.microsoft.com/library/0dad7b8b-58f6-4271-b238-f34810d68e5f).)  
   
  [!code-xml[DP L2E Methods on ObjectContext#4](../../../../../../samples/snippets/xml/VS_Snippets_Data/dp l2e methods on objectcontext/xml/adventureworks.edmx#4)]  
 
@@ -95,12 +95,12 @@ En este tema se describe cómo llamar a una función definida por el modelo como
 ## <a name="example"></a>Ejemplo  
  **Llamar a una función definida por el modelo como un método estático en una clase personalizada**  
   
- En el ejemplo siguiente se muestra cómo llamar a una función definida por el modelo como un método estático en una clase personalizada. El ejemplo se utiliza la [modelo AdventureWorks Sales](http://msdn.microsoft.com/en-us/f16cd988-673f-4376-b034-129ca93c7832).  
+ En el ejemplo siguiente se muestra cómo llamar a una función definida por el modelo como un método estático en una clase personalizada. El ejemplo se utiliza la [modelo AdventureWorks Sales](http://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832).  
   
 > [!NOTE]
 >  Cuando se llama a una función definida por el modelo como un método estático en una clase personalizada, la función debe aceptar una colección y devolver una agregación de valores de la colección.  
   
- Considere la función de modelo conceptual siguiente que devuelve los ingresos de los productos para una colección SalesOrderDetail. (Para obtener información acerca de cómo agregar la función en el modelo conceptual, consulte [Cómo: definir funciones personalizadas en el modelo Conceptual](http://msdn.microsoft.com/en-us/0dad7b8b-58f6-4271-b238-f34810d68e5f).).  
+ Considere la función de modelo conceptual siguiente que devuelve los ingresos de los productos para una colección SalesOrderDetail. (Para obtener información acerca de cómo agregar la función en el modelo conceptual, consulte [Cómo: definir funciones personalizadas en el modelo Conceptual](http://msdn.microsoft.com/library/0dad7b8b-58f6-4271-b238-f34810d68e5f).).  
   
  [!code-xml[DP L2E Methods on ObjectContext#1](../../../../../../samples/snippets/xml/VS_Snippets_Data/dp l2e methods on objectcontext/xml/adventureworks.edmx#1)]
   
@@ -117,6 +117,6 @@ En este tema se describe cómo llamar a una función definida por el modelo como
  [!code-vb[DP L2E Methods on ObjectContext#6](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/dp l2e methods on objectcontext/vb/module1.vb#6)]  
   
 ## <a name="see-also"></a>Vea también  
- [información general de archivo .edmx](http://msdn.microsoft.com/en-us/f4c8e7ce-1db6-417e-9759-15f8b55155d4)  
+ [información general de archivo .edmx](http://msdn.microsoft.com/library/f4c8e7ce-1db6-417e-9759-15f8b55155d4)  
  [Consultas en LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)  
  [Llamada a funciones en consultas de LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/calling-functions-in-linq-to-entities-queries.md)

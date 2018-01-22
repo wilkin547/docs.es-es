@@ -17,11 +17,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: ec484bc544f2889d6f37055cb9863b4806ec20c8
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: a78654f5c8de480b1eb38fbf25fbc923a30a0d25
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="net-framework-data-providers"></a>Proveedores de datos .NET Framework
 Los proveedores de datos [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] sirven para conectarse a una base de datos, ejecutar comandos y recuperar resultados. Esos resultados se procesan directamente, se colocan en un <xref:System.Data.DataSet> con el fin de que el usuario pueda verlos cuando los necesite, se combinan con datos de varios orígenes o se utilizan de forma remota entre niveles. Los proveedores de datos [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] son ligeros, de manera que crean un nivel mínimo entre el origen de datos y el código, con lo que aumenta el rendimiento sin sacrificar funcionalidad.  
@@ -166,7 +166,7 @@ using System.Data.OracleClient;
 |[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]"Proveedor de datos para Oracle|Recomendado para aplicaciones de un único nivel y de nivel medio que utilizan orígenes de datos de Oracle.|  
   
 ## <a name="entityclient-provider"></a>Proveedor para EntityClient  
- El proveedor EntityClient se usa para obtener acceso a datos basándose en un Entity Data Model (EDM). A diferencia de otros proveedores de datos .NET Framework, no interactúa directamente con ningún origen de datos. En su lugar, usa Entity SQL para comunicarse con el proveedor de datos subyacente. Para obtener más información, consulta [EntityClient and Entity SQL](http://msdn.microsoft.com/en-us/49202ab9-ac98-4b4b-a05c-140e422bf527).  
+ El proveedor EntityClient se usa para obtener acceso a datos basándose en un Entity Data Model (EDM). A diferencia de otros proveedores de datos .NET Framework, no interactúa directamente con ningún origen de datos. En su lugar, usa Entity SQL para comunicarse con el proveedor de datos subyacente. Para obtener más información, consulte [EntityClient y Entity SQL](http://msdn.microsoft.com/library/49202ab9-ac98-4b4b-a05c-140e422bf527).  
   
 ## <a name="see-also"></a>Vea también  
  [Información general sobre ADO.NET](../../../../docs/framework/data/adonet/ado-net-overview.md)  

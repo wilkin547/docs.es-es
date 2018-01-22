@@ -14,11 +14,11 @@ author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
 ms.workload: dotnet
-ms.openlocfilehash: a26356346ca3dfea858f286dd32cb08b0e3b3591
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: efad1940def2c27d57bb1e9da28e51362de5b237
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="message-security-sample"></a>Ejemplo de seguridad de mensaje
 Este ejemplo muestra cómo implementar una aplicación que utiliza `basicHttpBinding` y seguridad de mensaje. En este ejemplo se basa en el [Introducción](../../../../docs/framework/wcf/samples/getting-started-sample.md) que implementa un servicio de calculadora.  
@@ -137,7 +137,7 @@ Press <ENTER> to terminate client.
   
 3.  Ejecute la aplicación cliente desde \client\bin. La actividad del cliente se muestra en la aplicación de consola del cliente.  
   
-4.  Si el cliente y el servicio no se pueden comunicar, vea [Troubleshooting Tips](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b).  
+4.  Si el cliente y el servicio no se pueden comunicar, consulte [sugerencias de solución de problemas de](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
   
 5.  Quite los certificados ejecutando Cleanup.bat cuando haya finalizado con el ejemplo. Otros ejemplos de seguridad usan los mismos certificados.  
   
@@ -171,7 +171,7 @@ Press <ENTER> to terminate client.
   
 14. En el equipo cliente, inicie Client.exe desde la ventana de símbolo del sistema.  
   
-    1.  Si el cliente y el servicio no se pueden comunicar, vea [Troubleshooting Tips](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b).  
+    1.  Si el cliente y el servicio no se pueden comunicar, consulte [sugerencias de solución de problemas de](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
   
 ### <a name="to-clean-up-after-the-sample"></a>Para realizar una limpieza después de ejecutar el ejemplo  
   

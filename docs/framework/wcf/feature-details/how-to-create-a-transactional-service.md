@@ -14,11 +14,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: fd0812125c63a5a89cf8a87f0ca72cf9a9f168d9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4a61c1c4aeba63baee3c5e2ba5110710ed9f45f2
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-create-a-transactional-service"></a>Cómo: Crear un servicio transaccional
 Este ejemplo muestra varios aspectos sobre la creación de un servicio transaccional y el uso de una transacción iniciada por el cliente para coordinar las operaciones de servicio.  
@@ -76,7 +76,7 @@ Este ejemplo muestra varios aspectos sobre la creación de un servicio transacci
     }  
     ```  
   
-3.  Configure los enlaces en el archivo de configuración, especificando que debería fluir el contexto de la transacción, y los protocolos que se van a utilizar para ello. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Configuración de transacción de ServiceModel](../../../../docs/framework/wcf/feature-details/servicemodel-transaction-configuration.md). Concretamente, se especifica el tipo de enlace en el atributo `binding` del elemento del extremo. El [ \<extremo >](http://msdn.microsoft.com/en-us/13aa23b7-2f08-4add-8dbf-a99f8127c017) elemento contiene un `bindingConfiguration` atributo que hace referencia a una configuración de enlace denominada `transactionalOleTransactionsTcpBinding`, tal y como se muestra en el siguiente ejemplo de configuración.  
+3.  Configure los enlaces en el archivo de configuración, especificando que debería fluir el contexto de la transacción, y los protocolos que se van a utilizar para ello. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Configuración de transacción de ServiceModel](../../../../docs/framework/wcf/feature-details/servicemodel-transaction-configuration.md). Concretamente, se especifica el tipo de enlace en el atributo `binding` del elemento del extremo. El [ \<extremo >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) elemento contiene un `bindingConfiguration` atributo que hace referencia a una configuración de enlace denominada `transactionalOleTransactionsTcpBinding`, tal y como se muestra en el siguiente ejemplo de configuración.  
   
     ```xml  
     <service name="CalculatorService">  

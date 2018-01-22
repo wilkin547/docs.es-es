@@ -18,11 +18,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 182e82eec107c170a793d0d48bcfe5493c04d618
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 74a322730c5e9fc205097da310a8db1fd7c50f82
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="getting-started-tutorial"></a>Tutorial de introducción
 Los temas contenidos en esta sección están pensados para ofrecerle una visión rápida a la programación en [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]. Están diseñados para ser completados en el orden en que aparecen en la lista incluida al final de este tema. Este tutorial constituye una introducción a los pasos necesarios para crear aplicaciones de cliente y servicio de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. Un servicio expone uno o más puntos de conexión, donde cada uno de ellos expone una o más operaciones de servicio. El *extremo* especifica una dirección donde se puede encontrar el servicio, un enlace que contiene la información que describe cómo un cliente debe comunicar con el servicio y un contrato que define la funcionalidad de un servicio proporciona el servicio a sus clientes.  
@@ -36,7 +36,7 @@ Los temas contenidos en esta sección están pensados para ofrecerle una visión
 > [!NOTE]
 >  Si está ejecutando [!INCLUDE[wv](../../../includes/wv-md.md)] o versiones posteriores del sistema operativo Windows, debe iniciar [!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)] , vaya al menú Inicio y haga clic en Visual Studio 2011 y seleccione **ejecutar como administrador**. Iniciar Visual Studio 2011 siempre como un administrador puede crear un acceso directo, haga clic en el acceso directo, seleccione Propiedades, seleccione la **compatibilidad** ficha y compruebe el **ejecutar este programa como administrador** casilla de verificación. Al iniciar Visual Studio 2011 con este acceso directo, siempre se ejecutará con derechos de administrador.  
   
- Para las aplicaciones de ejemplo que se pueden descargar en el disco duro y ejecutaron, vea los temas de [ejemplos de Windows Communication Foundation](http://msdn.microsoft.com/en-us/8ec9d192-5d81-4f64-bfd3-90c5e5858c91). De este tema, en concreto, consulte el [Introducción](../../../docs/framework/wcf/samples/getting-started-sample.md).  
+ Para las aplicaciones de ejemplo que se pueden descargar en el disco duro y ejecutaron, vea los temas de [ejemplos de Windows Communication Foundation](http://msdn.microsoft.com/library/8ec9d192-5d81-4f64-bfd3-90c5e5858c91). De este tema, en concreto, consulte el [Introducción](../../../docs/framework/wcf/samples/getting-started-sample.md).  
   
  Para obtener información más detallada acerca de cómo crear servicios y clientes, consulte [programación básica de WCF](../../../docs/framework/wcf/basic-wcf-programming.md).  
   
@@ -65,7 +65,7 @@ Los temas contenidos en esta sección están pensados para ofrecerle una visión
  <xref:System.ServiceModel.OperationContractAttribute>  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
- [Ejemplos de Windows Communication Foundation](http://msdn.microsoft.com/en-us/8ec9d192-5d81-4f64-bfd3-90c5e5858c91)  
+ [Ejemplos de Windows Communication Foundation](http://msdn.microsoft.com/library/8ec9d192-5d81-4f64-bfd3-90c5e5858c91)  
   
  [Ciclo de vida de programación básica](../../../docs/framework/wcf/basic-programming-lifecycle.md)  
   

@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 1d4161d1fd0f78dcd59c650b08bb336a48d381c6
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: ffd77bb1875b2de47602a6bd766463b0a274fadc
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="protecting-connection-information"></a>Proteger la información de conexión
 La protección del acceso al origen de datos es uno de los objetivos más importantes a la hora de proteger una aplicación. Las cadenas de conexión presentan una posible vulnerabilidad si no se protegen. El almacenamiento de la información de conexión en texto sin formato o en la memoria ponen en riesgo el sistema completo. Cadenas de conexión incrustadas en el código fuente se pueden leer utilizando el [Ildasm.exe (Desensamblador de IL)](../../../../docs/framework/tools/ildasm-exe-il-disassembler.md) para ver el lenguaje intermedio de Microsoft (MSIL) en un ensamblado compilado.  
@@ -48,10 +48,10 @@ La protección del acceso al origen de datos es uno de los objetivos más import
  El valor predeterminado de `Persist Security Info` es false, y se recomienda mantener este valor predeterminado en todas las cadenas de conexión. Si `Persist Security Info` se establece en `true` o `yes`, permitirá obtener información confidencial de seguridad de la conexión, incluidos el identificador del usuario y la contraseña, una vez que esté abierta. Si `Persist Security Info` se establece en `false` o `no`, la información de seguridad se descarta tras usarla para abrir la conexión. Esto permite garantizar que los orígenes que no sean de confianza no tengan acceso a la información confidencial de seguridad.  
   
 ## <a name="encrypt-configuration-files"></a>Cifrar archivos de configuración  
- Las cadenas de conexión también se pueden almacenar en archivos de configuración, lo que elimina la necesidad de incrustarlas en el código de la aplicación. Los archivos de configuración son archivos XML estándar para los que .NET Framework ha definido un conjunto común de elementos. Las cadenas de conexión en archivos de configuración se almacenan normalmente en el ** \<connectionStrings >** elemento en el **app.config** para una aplicación de Windows, o la ** Web.config** archivo para una aplicación ASP.NET. Para obtener más información sobre los conceptos básicos de almacenar, recuperar y cifrar cadenas de conexión de archivos de configuración, consulte [las cadenas de conexión y archivos de configuración](../../../../docs/framework/data/adonet/connection-strings-and-configuration-files.md).  
+ Las cadenas de conexión también se pueden almacenar en archivos de configuración, lo que elimina la necesidad de incrustarlas en el código de la aplicación. Los archivos de configuración son archivos XML estándar para los que .NET Framework ha definido un conjunto común de elementos. Las cadenas de conexión en archivos de configuración se almacenan normalmente en el  **\<connectionStrings >** elemento en el **app.config** para una aplicación de Windows, o la  **Web.config** archivo para una aplicación ASP.NET. Para obtener más información sobre los conceptos básicos de almacenar, recuperar y cifrar cadenas de conexión de archivos de configuración, consulte [las cadenas de conexión y archivos de configuración](../../../../docs/framework/data/adonet/connection-strings-and-configuration-files.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Proteger aplicaciones de ADO.NET](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
  [Cifrar la información de configuración mediante una configuración protegida](http://msdn.microsoft.com/library/51cdfe5b-9d82-458c-94ff-c551c4f38ed1)  
- [PAVE Seguridad del código nativo y del código de .NET Framework](http://msdn.microsoft.com/en-us/bd61be84-c143-409a-a75a-44253724f784)  
+ [PAVE Seguridad del código nativo y del código de .NET Framework](http://msdn.microsoft.com/library/bd61be84-c143-409a-a75a-44253724f784)  
  [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](http://go.microsoft.com/fwlink/?LinkId=217917)

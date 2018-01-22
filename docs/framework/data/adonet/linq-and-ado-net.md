@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: d55185153e3d03ddb2b1726ed25566d6b5f396ae
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: b020b3df627fcb220f4227d76fdf8eb3d60e80e4
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="linq-and-adonet"></a>LINQ y ADO.NET
 Actualmente, muchos programadores empresariales deben usar dos (o más) lenguajes de programación: un lenguaje de alto nivel para las capas de presentación y lógica empresarial (como [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] o [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)]) y un lenguaje de consulta para interactuar con la base de datos (como [!INCLUDE[tsql](../../../../includes/tsql-md.md)]). Esto requiere que el programador tenga conocimientos de varios idiomas para ser efectivo y también causa discrepancias de idiomas en el entorno de desarrollo. Por ejemplo, una aplicación que utiliza API de acceso a datos para ejecutar una consulta en una base de datos especifica la consulta como un literal de cadena usando comillas. Esta cadena de consulta es ilegible y no se comprueba si contiene errores, tales como una sintaxis no válida o si existen las columnas o las filas a las que hace referencia. No hay ninguna comprobación de tipo de los parámetros de consulta y tampoco hay compatibilidad con `IntelliSense`.  
@@ -33,7 +33,7 @@ Actualmente, muchos programadores empresariales deben usar dos (o más) lenguaje
   
  ![Información general ADO.NET LINQ to](../../../../docs/framework/data/adonet/media/dpue-linqtoadonetoverview-bpuedev11.gif "DPUE_LinqToAdoNetOverview_bpuedev11")  
   
- Para obtener información general sobre las características del lenguaje LINQ, vea [Introducción a LINQ](http://msdn.microsoft.com/library/24dddf19-12a0-4707-a4bc-eba4fa7f219e). Para obtener información sobre cómo usar LINQ en sus aplicaciones, consulte el [no en la compilación: Guía de programación de LINQ General](http://msdn.microsoft.com/en-us/609c7a6b-cbdd-429d-99f3-78d13d3bc049), que contiene información detallada sobre cómo utilizar las tecnologías LINQ.  
+ Para obtener información general sobre las características del lenguaje LINQ, vea [Introducción a LINQ](http://msdn.microsoft.com/library/24dddf19-12a0-4707-a4bc-eba4fa7f219e). Para obtener información sobre cómo usar LINQ en sus aplicaciones, consulte el [no en la compilación: Guía de programación de LINQ General](http://msdn.microsoft.com/library/609c7a6b-cbdd-429d-99f3-78d13d3bc049), que contiene información detallada sobre cómo utilizar las tecnologías LINQ.  
   
  En las siguientes secciones se proporciona más información acerca de [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)], [!INCLUDE[vbtecdlinq](../../../../includes/vbtecdlinq-md.md)] y [!INCLUDE[linq_entities](../../../../includes/linq-entities-md.md)].  
   

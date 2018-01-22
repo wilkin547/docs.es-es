@@ -15,11 +15,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 1eab181ec63da5f0494ce5c4acabe6c6f868be15
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4ea4e34049ef54cd6d161e381bf92818b5f3531c
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="netnamedpipebinding"></a>NetNamedPipeBinding
 El ejemplo muestra el enlace `netNamedPipeBinding`, que proporciona la comunicación entre procesos del mismo equipo. Las canalizaciones con nombre no funcionan entre equipos. En este ejemplo se basa en el [Introducción](../../../../docs/framework/wcf/samples/getting-started-sample.md) servicio de calculadora.  
@@ -29,7 +29,7 @@ El ejemplo muestra el enlace `netNamedPipeBinding`, que proporciona la comunicac
 > [!NOTE]
 >  El procedimiento de instalación y las instrucciones de compilación de este ejemplo se encuentran al final de este tema.  
   
- El enlace se especifica en los archivos de configuración para el cliente y servicio. El tipo de enlace se especifica en el `binding` atributo de la[\<extremo >](http://msdn.microsoft.com/en-us/13aa23b7-2f08-4add-8dbf-a99f8127c017) elemento tal como se muestra en el siguiente ejemplo de configuración:  
+ El enlace se especifica en los archivos de configuración para el cliente y servicio. El tipo de enlace se especifica en el `binding` atributo de la[\<extremo >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) elemento tal como se muestra en el siguiente ejemplo de configuración:  
   
 ```xml  
 <endpoint address="net.pipe://localhost/ServiceModelSamples/service"  

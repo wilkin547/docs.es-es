@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: e478f145511266a919b1bc948e3218b60f3de993
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 85096406ae8996713d4861c805d75af42d8c1813
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="provider-manifest-specification"></a>Especificación del manifiesto del proveedor
 En esta sección se explica cómo puede un proveedor de almacén de datos admitir los tipos y funciones del almacén de datos.  
@@ -102,7 +102,7 @@ public DbProviderManifest GetProviderManifest(string manifestToken);
 ```  
   
 #### <a name="using-a-provider-manifest-token"></a>Usar un token de manifiesto del proveedor  
- En el caso del escenario sin conexión, el token se toma de la representación SSDL. El SSDL le permite especificar un ProviderManifestToken (vea [elemento de esquema de almacenamiento (SSDL)](http://msdn.microsoft.com/en-us/fec75ae4-7f16-4421-9265-9dac61509222) para obtener más información). Por ejemplo, si no se puede abrir una conexión, SSDL tiene un token de manifiesto del proveedor que especifica información sobre el manifiesto.  
+ En el caso del escenario sin conexión, el token se toma de la representación SSDL. El SSDL le permite especificar un ProviderManifestToken (vea [elemento de esquema de almacenamiento (SSDL)](http://msdn.microsoft.com/library/fec75ae4-7f16-4421-9265-9dac61509222) para obtener más información). Por ejemplo, si no se puede abrir una conexión, SSDL tiene un token de manifiesto del proveedor que especifica información sobre el manifiesto.  
   
 ```  
 public DbProviderManifest GetProviderManifest(string manifestToken);  

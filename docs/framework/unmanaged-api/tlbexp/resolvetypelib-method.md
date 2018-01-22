@@ -21,11 +21,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: b668610f50c32373790130def17928b8b3b3d8b2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 72d1cedbfc1a1ec6c3588a7b0be9cf657d7369fd
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="resolvetypelib-method"></a>ResolveTypeLib (Método)
 Resuelve el nombre sencillo de una biblioteca de tipos mediante la devolución de su ruta de acceso completa.  
@@ -45,7 +45,7 @@ HRESULT ResolveTypeLib(
   
 #### <a name="parameters"></a>Parámetros  
  `bstrSimpleName`  
- [in] A [BSTR](http://msdn.microsoft.com/en-us/1b2d7d2c-47af-4389-a6b6-b01b7e915228) que contiene el nombre sencillo de la biblioteca de tipos.  
+ [in] A [BSTR](http://msdn.microsoft.com/library/1b2d7d2c-47af-4389-a6b6-b01b7e915228) que contiene el nombre sencillo de la biblioteca de tipos.  
   
  `tlbid`  
  [in] El GUID asignado a la biblioteca de tipos en el registro.  
@@ -60,15 +60,15 @@ HRESULT ResolveTypeLib(
  [in] El número de versión secundaria de la biblioteca de tipos. Por ejemplo, para la versión *x.y*, el número de versión secundaria es *y*.  
   
  `syskind`  
- [in] A [SYSKIND](http://msdn.microsoft.com/en-us/662048b2-59a8-48ca-9e4f-2f9a5306faa1) marca que identifica el entorno operativo. Los valores habituales son SYS_WIN32 y SYS_WIN64.  
+ [in] A [SYSKIND](http://msdn.microsoft.com/library/662048b2-59a8-48ca-9e4f-2f9a5306faa1) marca que identifica el entorno operativo. Los valores habituales son SYS_WIN32 y SYS_WIN64.  
   
  `pbstrResolvedTlbName`  
- [out] Un puntero a un [BSTR](http://msdn.microsoft.com/en-us/1b2d7d2c-47af-4389-a6b6-b01b7e915228) que contiene la ruta de acceso completa de la biblioteca de tipos con nombre en el `bstrSimpleName` parámetro.  
+ [out] Un puntero a un [BSTR](http://msdn.microsoft.com/library/1b2d7d2c-47af-4389-a6b6-b01b7e915228) que contiene la ruta de acceso completa de la biblioteca de tipos con nombre en el `bstrSimpleName` parámetro.  
   
 ## <a name="remarks"></a>Comentarios  
  El `ResolveTypeLib` llama al método el [LoadTypeLibWithResolver (función)](../../../../docs/framework/unmanaged-api/tlbexp/loadtypelibwithresolver-function.md) durante [Tlbexp.exe (exportador de la biblioteca de tipos)](../../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md) de procesamiento.  
   
- Las implementaciones personalizadas de esta interfaz deben devolver un [BSTR](http://msdn.microsoft.com/en-us/1b2d7d2c-47af-4389-a6b6-b01b7e915228) que contiene la ruta de acceso completa de la biblioteca de tipos con nombre en el `bstrSimpleName` parámetro.  
+ Las implementaciones personalizadas de esta interfaz deben devolver un [BSTR](http://msdn.microsoft.com/library/1b2d7d2c-47af-4389-a6b6-b01b7e915228) que contiene la ruta de acceso completa de la biblioteca de tipos con nombre en el `bstrSimpleName` parámetro.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
@@ -81,4 +81,4 @@ HRESULT ResolveTypeLib(
   
 ## <a name="see-also"></a>Vea también  
  [Funciones auxiliares Tlbexp](../../../../docs/framework/unmanaged-api/tlbexp/index.md)  
- [LoadTypeLibEx de la](http://msdn.microsoft.com/en-us/56a7f9e1-810b-4a42-aa4d-691f4304f5ef)
+ [LoadTypeLibEx](http://msdn.microsoft.com/library/56a7f9e1-810b-4a42-aa4d-691f4304f5ef)

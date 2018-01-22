@@ -18,11 +18,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: a7a29b7224a3f4b692fdfb3afaf58d9744bafcc1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e2fb4e8bf710e55be0a817a4154dfbce114db191
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="walkthrough-performing-common-tasks-using-smart-tags-on-windows-forms-controls"></a>Tutorial: Realizar tareas comunes utilizando etiquetas inteligentes en controles de formularios Windows Forms
 Medida que genera los formularios y controles para la aplicación de formularios Windows Forms, hay muchas tareas que se realiza con frecuencia. Estas son algunas de las tareas realizadas normalmente que encontrará:  
@@ -48,14 +48,14 @@ Medida que genera los formularios y controles para la aplicación de formularios
  Cuando termine, comprenderá el rol de estas importantes características de diseño.  
   
 > [!NOTE]
->  Los cuadros de diálogo y comandos de menú que se ven pueden diferir de los descritos en la Ayuda, en función de los valores de configuración o de edición activos. Para cambiar la configuración, elija la opción **Importar y exportar configuraciones** del menú **Herramientas** . Para obtener más información, consulte [Personalizar la configuración de desarrollo en Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Los cuadros de diálogo y comandos de menú que se ven pueden diferir de los descritos en la Ayuda, en función de los valores de configuración o de edición activos. Para cambiar la configuración, elija la opción **Importar y exportar configuraciones** del menú **Herramientas** . Para obtener más información, vea [Personalizar la configuración de desarrollo en Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
 ## <a name="creating-the-project"></a>Crear el proyecto  
  El primer paso es crear el proyecto y configurar el formulario.  
   
 #### <a name="to-create-the-project"></a>Para crear el proyecto  
   
-1.  Cree un proyecto de aplicación basada en Windows llamado "SmartTagsExample". Para ver detalles, consulte [Cómo: Crear un nuevo proyecto de aplicación de Windows](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa).  
+1.  Cree un proyecto de aplicación basada en Windows llamado "SmartTagsExample". Para ver detalles, consulte [Cómo: Crear un nuevo proyecto de aplicación de Windows](http://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa).  
   
 2.  Seleccione el formulario en el **Diseñador de Windows Forms**.  
   

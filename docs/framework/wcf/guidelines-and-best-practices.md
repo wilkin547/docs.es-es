@@ -20,11 +20,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 978cb7dcfd132ea253fcb5f13174e14c7341f11a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6dc6ad423010cf881c62e2c22570c080cad6a1e0
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="guidelines-and-best-practices"></a>Instrucciones y procedimientos recomendados
 Esta sección contiene temas que proporcionan instrucciones para crear aplicaciones de [!INCLUDE[indigo1](../../../includes/indigo1-md.md)].  
@@ -57,6 +57,6 @@ Esta sección contiene temas que proporcionan instrucciones para crear aplicacio
   
 ## <a name="see-also"></a>Vea también  
  [¿Qué es Windows Communication Foundation?](../../../docs/framework/wcf/whats-wcf.md)  
- [Ejemplos de Windows Communication Foundation](http://msdn.microsoft.com/en-us/8ec9d192-5d81-4f64-bfd3-90c5e5858c91)  
+ [Ejemplos de Windows Communication Foundation](http://msdn.microsoft.com/library/8ec9d192-5d81-4f64-bfd3-90c5e5858c91)  
  [Información conceptual](../../../docs/framework/wcf/conceptual-overview.md)  
  [Creación de clientes](../../../docs/framework/wcf/building-clients.md)

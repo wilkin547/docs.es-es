@@ -21,11 +21,11 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.workload: dotnet
-ms.openlocfilehash: 4a502cb309bce3a1a2fb55c9e5477b7a6a395960
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4299775cd23162839ab9846adc7d2c64cc18a404
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="ltstartupgt-element"></a>&lt;Inicio&gt; elemento
 Especifica la información de inicio de common language runtime.  
@@ -78,7 +78,7 @@ Especifica la información de inicio de common language runtime.
  Este atributo es útil si la aplicación usa rutas de acceso de activación heredada, como la [CorBindToRuntimeEx (función)](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md), y desea que dichas rutas de acceso para activar la versión 4 de CLR en lugar de una versión anterior, o si la aplicación generados con el [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] pero tiene una dependencia en un ensamblado de modo mixto compilado con una versión anterior de .NET Framework. En esos escenarios, establezca el atributo en `true`.  
   
 > [!NOTE]
->  Establecer el atributo como `true` impide la carga en el mismo proceso, deshabilitando la característica de en paralelo en proceso CLR versión 1.1 o CLR versión 2.0 (vea [ejecución en paralelo para la interoperabilidad COM](http://msdn.microsoft.com/en-us/4302318c-3586-49bf-8620-b9a39cdf4a32)).  
+>  Establecer el atributo como `true` impide la carga en el mismo proceso, deshabilitando la característica de en paralelo en proceso CLR versión 1.1 o CLR versión 2.0 (vea [ejecución en paralelo para la interoperabilidad COM](http://msdn.microsoft.com/library/4302318c-3586-49bf-8620-b9a39cdf4a32)).  
   
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se muestra cómo especificar la versión en tiempo de ejecución en un archivo de configuración.  
@@ -102,6 +102,6 @@ Especifica la información de inicio de common language runtime.
 ## <a name="see-also"></a>Vea también  
  [Esquema de la configuración de inicio](../../../../../docs/framework/configure-apps/file-schema/startup/index.md)  
  [Esquema de los archivos de configuración](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [\<PaveOver> Especificar la versión en tiempo de ejecución que se va a usar](http://msdn.microsoft.com/en-us/c376208d-980d-42b4-865b-fbe0d9cc97c2)  
- [Ejecución en paralelo para la interoperabilidad COM](http://msdn.microsoft.com/en-us/4302318c-3586-49bf-8620-b9a39cdf4a32)  
+ [\<PaveOver> Especificar la versión en tiempo de ejecución que se va a usar](http://msdn.microsoft.com/library/c376208d-980d-42b4-865b-fbe0d9cc97c2)  
+ [Ejecución en paralelo para la interoperabilidad COM](http://msdn.microsoft.com/library/4302318c-3586-49bf-8620-b9a39cdf4a32)  
  [Ejecución en paralelo en proceso](../../../../../docs/framework/deployment/in-process-side-by-side-execution.md)

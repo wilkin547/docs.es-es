@@ -18,11 +18,11 @@ author: Xansky
 ms.author: mhopkins
 manager: markl
 ms.workload: dotnet
-ms.openlocfilehash: 610b2d44fca43f2745b7b423a5cdb73c5a7d74d1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: dbf3e125d911a407be3b07d0ce93d5c17bd8a0b7
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="ui-automation-textpattern-overview"></a>Información general sobre el modelo de texto de UI Automation
 > [!NOTE]
@@ -33,7 +33,7 @@ ms.lasthandoff: 12/22/2017
  Exponer el contenido textual de un control se logra mediante el uso del patrón de control <xref:System.Windows.Automation.TextPattern> , que representa el contenido de un contenedor de texto como una secuencia de texto. A su vez, <xref:System.Windows.Automation.TextPattern> requiere el soporte de la clase <xref:System.Windows.Automation.Text.TextPatternRange> para exponer atributos de formato y estilo. <xref:System.Windows.Automation.Text.TextPatternRange> da soporte a <xref:System.Windows.Automation.TextPattern> mediante la representación de intervalos de texto contiguos, múltiples o no contiguos en un contenedor de texto con una colección de extremos <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.Start> y <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End> . <xref:System.Windows.Automation.Text.TextPatternRange> admite la funcionalidad como selección, comparación, recuperación y exploración transversal.  
   
 > [!NOTE]
->  Las clase <xref:System.Windows.Automation.TextPattern> no proporcionan un medio para insertar o modificar texto. Sin embargo, en función del control, esto se puede lograr mediante la [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] <xref:System.Windows.Automation.ValuePattern> o a través del teclado directas. Vea [TextPattern Insert Text Sample](http://msdn.microsoft.com/en-us/67353f93-7ee2-42f2-ab76-5c078cf6ca16) para obtener un ejemplo.  
+>  Las clase <xref:System.Windows.Automation.TextPattern> no proporcionan un medio para insertar o modificar texto. Sin embargo, en función del control, esto se puede lograr mediante la [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] <xref:System.Windows.Automation.ValuePattern> o a través del teclado directas. Consulte la [TextPattern Insert Text Sample](http://msdn.microsoft.com/library/67353f93-7ee2-42f2-ab76-5c078cf6ca16) para obtener un ejemplo.  
   
  La funcionalidad descrita en este artículo es vital para los proveedores de tecnología de asistencia y sus usuarios finales. Las tecnologías de asistencia pueden usar [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] para recopilar información de formato de texto para el usuario y proporcionar navegación y selección de texto mediante programación por <xref:System.Windows.Automation.Text.TextUnit> (carácter, palabra, línea o párrafo).  
   

@@ -18,11 +18,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 0717e3b7f4dc72c2e5a75149b88f1f1d1285dad1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0969a9e88dee4a8d7e298ff4510211f49e8a6e35
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="combobox"></a>ComboBox
 El <xref:System.Windows.Controls.ComboBox> control presenta a los usuarios con una lista de opciones. La lista se muestran y oculta como el control se expande y se contrae. En su estado predeterminado, la lista está contraída, mostrar sólo una opción. El usuario hace clic en un botón para ver una lista completa de opciones.  
@@ -33,7 +33,7 @@ El <xref:System.Windows.Controls.ComboBox> control presenta a los usuarios con u
 Contraído y expandido  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Cómo: obtener un elemento ComboBoxItem](http://msdn.microsoft.com/en-us/8a0d2622-64b6-41fc-bf80-9669a1eacb53)  
+ [Cómo: obtener un elemento ComboBoxItem](http://msdn.microsoft.com/library/8a0d2622-64b6-41fc-bf80-9669a1eacb53)  
   
 ## <a name="reference"></a>Referencia  
  <xref:System.Windows.Controls.ComboBox>

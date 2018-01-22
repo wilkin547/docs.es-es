@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: a24b8fe5d0da4b3fa3a13db15bd91be83f102dcf
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 79b9b1270f99720dec6b6369706f8a2f601d249e
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="linq-to-sql-n-tier-with-web-services"></a>N niveles de LINQ to SQL con servicios Web
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]está diseñado especialmente para su uso en el nivel intermedio en una capa de acceso a datos de correspondencia imprecisa (DAL) como un servicio Web. Si el nivel de presentación es una página web ASP.NET, el control de servidor web <xref:System.Web.UI.WebControls.LinqDataSource> se utiliza para controlar la transferencia de datos entre la interfaz de usuario y [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] en el de nivel intermedio. Si el nivel de presentación no es una página ASP.NET, entonces el nivel intermedio y el nivel de presentación deben realizar un trabajo adicional para administrar la serialización y deserialización de datos.  
@@ -49,4 +49,4 @@ ms.lasthandoff: 01/17/2018
   
 ## <a name="see-also"></a>Vea también  
  [Aplicaciones de n niveles y remotas con LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/n-tier-and-remote-applications-with-linq-to-sql.md)  
- [NIB: Información general sobre el Control de servidor Web LinqDataSource](http://msdn.microsoft.com/en-us/104cfc3f-7385-47d3-8a51-830dfa791136)
+ [NIB: Información general sobre el Control de servidor Web LinqDataSource](http://msdn.microsoft.com/library/104cfc3f-7385-47d3-8a51-830dfa791136)

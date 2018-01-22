@@ -29,11 +29,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 9a85da0d1714c263b446c88b7c18e934817aea94
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d1006f59f9841a10066c83a8f0800d3a7c17500a
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="creating-prototypes-in-managed-code"></a>Crear prototipos en código administrado
 En este tema se describe cómo acceder a funciones no administradas y presenta varios campos de atributo que anotan la definición de método en el código administrado. Para obtener ejemplos que muestran cómo construir declaraciones basadas en .NET para usarse con la invocación de plataforma, vea [Serialización de datos con invocación de plataforma](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md).  
@@ -235,7 +235,7 @@ interface IDemandStubsItf
  [Especificar un punto de entrada](../../../docs/framework/interop/specifying-an-entry-point.md)  
  [Especificar un juego de caracteres](../../../docs/framework/interop/specifying-a-character-set.md)  
  [Ejemplos de invocación de plataforma](../../../docs/framework/interop/platform-invoke-examples.md)  
- [Consideraciones de seguridad de invocación de plataforma](http://msdn.microsoft.com/en-us/bbcc67f7-50b5-4917-88ed-cb15470409fb)  
+ [Consideraciones de seguridad de invocación de plataforma](http://msdn.microsoft.com/library/bbcc67f7-50b5-4917-88ed-cb15470409fb)  
  [Identificar funciones en archivos DLL](../../../docs/framework/interop/identifying-functions-in-dlls.md)  
  [Creación de una clase para contener funciones de archivos DLL](../../../docs/framework/interop/creating-a-class-to-hold-dll-functions.md)  
  [Llamar a una función DLL](../../../docs/framework/interop/calling-a-dll-function.md)

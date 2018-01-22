@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 56852fece0ca1f2dbb70b1bb29c09205b97faf56
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: c49ecfec032a20090e8eca1c94efe9e1f35cce7d
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="learning-by-walkthroughs"></a>Aprender con tutoriales
 El [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] documentación proporciona varios tutoriales. En este tema se resuelven algunos de los problemas generales que plantean los tutoriales y se proporcionan vínculos a varios tutoriales de iniciación a través de los cuales conocerá [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
@@ -50,7 +50,7 @@ El [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] documenta
   
 -   [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]tutoriales normalmente requieren la base de datos de ejemplo Northwind. Para obtener más información, consulte [descargar bases de datos de ejemplo](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md).  
   
--   Los cuadros de diálogo y comandos de menú que se ven en los tutoriales pueden diferir de los descritos en la Ayuda, en función de los valores de configuración o de edición de [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] activos. Para cambiar la configuración, haga clic en **Importar y exportar configuraciones** en el menú **Herramientas** . Para obtener más información, consulte [Personalizar la configuración de desarrollo en Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+-   Los cuadros de diálogo y comandos de menú que se ven en los tutoriales pueden diferir de los descritos en la Ayuda, en función de los valores de configuración o de edición de [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] activos. Para cambiar la configuración, haga clic en **Importar y exportar configuraciones** en el menú **Herramientas** . Para obtener más información, vea [Personalizar la configuración de desarrollo en Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
 -   Para los tutoriales que se ocupan de escenarios de varios niveles, debe disponer de un servidor en un equipo distinto del equipo de desarrollo, y debe tener los permisos de acceso adecuados para el servidor.  
   

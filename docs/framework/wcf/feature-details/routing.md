@@ -18,11 +18,11 @@ author: wadepickett
 ms.author: wpickett
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 335780b600535c066bc822cc5dd6c77233618bb6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 638c768e4abd199aa52bc85582305ffaf405fe87
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="routing"></a>Enrutamiento
 Los temas de esta sección explican el servicio de enrutamiento. El servicio de enrutamiento es un intermediario de SOAP configurable genérico que permite configurar el enrutamiento basado en contenido, preparar puentes protocolares, administrar errores de comunicaciones, así como actualizar dinámicamente la lógica de enrutamiento durante el tiempo de ejecución.  
@@ -31,7 +31,7 @@ Los temas de esta sección explican el servicio de enrutamiento. El servicio de 
  [Servicio de enrutamiento](../../../../docs/framework/wcf/feature-details/routing-service.md)  
  Proporciona una introducción a las características del servicio de enrutamiento.  
   
- [Servicio de enrutamiento](http://msdn.microsoft.com/en-us/5ac8718c-bcef-456f-bfd5-1e60a30d6eaa)  
+ [Servicio de enrutamiento](http://msdn.microsoft.com/library/5ac8718c-bcef-456f-bfd5-1e60a30d6eaa)  
  Describe las características del servicio de enrutamiento.  
   
  [Introducción al enrutamiento](../../../../docs/framework/wcf/feature-details/routing-introduction.md)  

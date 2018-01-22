@@ -21,11 +21,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: f4cd38d8e026b3cf4bb0bf224f81be9bdab23e06
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0e66caf800fd49b4822ee22326b8a5cf712d99bb
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="default-marshaling-behavior"></a>Comportamiento de serialización predeterminado
 La serialización de interoperabilidad funciona con reglas que dictan cómo se comportan los datos asociados con parámetros de método cuando pasan entre memoria administrada y no administrada. Estas reglas integradas controlan las actividades de serialización como transformaciones de tipos de datos, si un destinatario puede cambiar los datos que recibe y devolver esos cambios al llamador, y en qué circunstancias el serializador proporciona optimizaciones de rendimiento.  
@@ -33,7 +33,7 @@ La serialización de interoperabilidad funciona con reglas que dictan cómo se c
  En esta sección se identifican las características predeterminadas de comportamiento del servicio de serialización de interoperabilidad, y se muestra información detallada sobre la serialización de matrices, tipos booleanos, tipos de caracteres, delegados, clases, objetos, cadenas y estructuras.  
   
 > [!NOTE]
->  No se admite la serialización de tipos genéricos. Para más información, vea [Interoperar mediante tipos genéricos](http://msdn.microsoft.com/en-us/26b88e03-085b-4b53-94ba-a5a9c709ce58).  
+>  No se admite la serialización de tipos genéricos. Para más información, vea [Interoperar mediante tipos genéricos](http://msdn.microsoft.com/library/26b88e03-085b-4b53-94ba-a5a9c709ce58).  
   
 ## <a name="memory-management-with-the-interop-marshaler"></a>Administración de memoria con el serializador de interoperabilidad  
  El serializador de interoperabiliad siempre intenta liberar memoria asignada por código no administrado. Este comportamiento cumple con las reglas de administración de memoria COM, pero difiere de las reglas que rigen C++ nativo.  
@@ -50,10 +50,10 @@ BSTR MethodOne (BSTR b) {
   
  Sin embargo, si define el método como un prototipo de invocación de plataforma, reemplaza cada tipo **BSTR** por un tipo <xref:System.String> y llama a `MethodOne`, Common Language Runtime intenta liberar `b` dos veces. Puede cambiar el comportamiento de serialización mediante tipos <xref:System.IntPtr> en lugar de tipos **String**.  
   
- El tiempo de ejecución usa siempre el método **CoTaskMemFree** para liberar memoria. Si la memoria con la que está trabajando no se asignó con el método **CoTaskMemAlloc**, debe usar un **IntPtr** y liberar la memoria manualmente mediante el método adecuado. De forma similar, puede evitar la liberación automática de la memoria en situaciones donde nunca se debería liberar, como al usar la función **GetCommandLine** de Kernel32.dll, que devuelve un puntero a la memoria del kernel. Para obtener más información sobre cómo liberar memoria manualmente, vea el [ejemplo sobre búferes](http://msdn.microsoft.com/en-us/e30d36e8-d7c4-4936-916a-8fdbe4d9ffd5).  
+ El tiempo de ejecución usa siempre el método **CoTaskMemFree** para liberar memoria. Si la memoria con la que está trabajando no se asignó con el método **CoTaskMemAlloc**, debe usar un **IntPtr** y liberar la memoria manualmente mediante el método adecuado. De forma similar, puede evitar la liberación automática de la memoria en situaciones donde nunca se debería liberar, como al usar la función **GetCommandLine** de Kernel32.dll, que devuelve un puntero a la memoria del kernel. Para obtener más información sobre cómo liberar memoria manualmente, vea el [ejemplo sobre búferes](http://msdn.microsoft.com/library/e30d36e8-d7c4-4936-916a-8fdbe4d9ffd5).  
   
 ## <a name="default-marshaling-for-classes"></a>Serialización predeterminada para clases  
- Las clases solo se pueden serializar con la interoperabilidad COM y siempre se serializan como interfaces. En algunos casos, la interfaz usada para serializar la clase se conoce como interfaz de clase. Para obtener información sobre cómo reemplazar la interfaz de clase por una interfaz de su elección, vea [Presentar la interfaz de clase](http://msdn.microsoft.com/en-us/733c0dd2-12e5-46e6-8de1-39d5b25df024).  
+ Las clases solo se pueden serializar con la interoperabilidad COM y siempre se serializan como interfaces. En algunos casos, la interfaz usada para serializar la clase se conoce como interfaz de clase. Para obtener información sobre cómo reemplazar la interfaz de clase por una interfaz de su elección, vea [Presentar la interfaz de clase](http://msdn.microsoft.com/library/733c0dd2-12e5-46e6-8de1-39d5b25df024).  
   
 ### <a name="passing-classes-to-com"></a>Pasar clases a COM  
  Cuando una clase administrada se pasa a COM, el serializador de interoperabilidad automáticamente encapsula la clase con un proxy COM y pasa la interfaz de clase generada por el proxy a la llamada de método COM. El proxy delega entonces todas las llamadas en la interfaz de clase al objeto administrado. El proxy también expone otras interfaces que no están implementadas explícitamente por la clase. El proxy implementa automáticamente interfaces como **IUnknown** e **IDispatch** en nombre de la clase.  

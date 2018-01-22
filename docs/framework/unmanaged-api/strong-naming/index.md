@@ -18,11 +18,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 2127cdb1178da37bcfe77a0e1a02ccd34be2d800
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ce89e27089ea2f0c918d0fe37c4eea141698f9be
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="strong-naming-unmanaged-api-reference"></a>Nombres seguros (Referencia de la API no administrada)
 La API de nombres seguros permite a un cliente administrar la firma de ensamblados con nombre seguro.  
@@ -30,7 +30,7 @@ La API de nombres seguros permite a un cliente administrar la firma de ensamblad
  Al firmar un ensamblado con un nombre seguro, se agrega un cifrado mediante clave pública al archivo que contiene el manifiesto del ensamblado. Firmar con nombres seguros ayuda a comprobar la exclusividad del nombre, impide la simulación de nombres y no proporciona una identidad única a los llamadores cuando se resuelve una referencia. Sin embargo, ningún nivel de confianza está asociado con un nombre seguro.  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Las funciones estáticas globales de nombres seguros](http://msdn.microsoft.com/en-us/efa715df-e8cc-48f2-9ec4-26586f0dc8d0)  
+ [Las funciones estáticas globales de nombres seguros](http://msdn.microsoft.com/library/efa715df-e8cc-48f2-9ec4-26586f0dc8d0)  
  Describe las funciones estáticas globales no administradas que utiliza la API de nombres seguros.  
   
 > [!NOTE]
@@ -114,7 +114,7 @@ La API de nombres seguros permite a un cliente administrar la firma de ensamblad
  [StrongNameTokenFromPublicKey (Función)](../../../../docs/framework/unmanaged-api/strong-naming/strongnametokenfrompublickey-function.md)  
  Obtiene un token que representa una clave pública. En desuso a partir de la [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)].  
   
- [Estructura de nombres seguros](http://msdn.microsoft.com/en-us/4b041a2f-fd12-4b91-aacd-bc3b34a5124d)  
+ [Estructura de nombres seguros](http://msdn.microsoft.com/library/4b041a2f-fd12-4b91-aacd-bc3b34a5124d)  
  Describe la estructura no administrada que utiliza la API de asignación de nombres seguros para administrar la firma de ensamblados con nombre seguro...  
   
  [PublicKeyBlob (estructura)](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md)  

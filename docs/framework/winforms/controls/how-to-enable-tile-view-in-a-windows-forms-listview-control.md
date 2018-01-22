@@ -23,11 +23,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 582c4bbd79419bfaae10b3c21961bbd7ba2a7950
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ad4680490e95da91e72b3b8d6d5f65eec2d115f8
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-enable-tile-view-in-a-windows-forms-listview-control"></a>Cómo: Habilitar la vista en mosaico en un control ListView de formularios Windows Forms
 Con la característica de vista de mosaico del control <xref:System.Windows.Forms.ListView>, puede proporcionar equilibrio visual entre la información gráfica y de texto. La información de texto que se muestra para un elemento en la vista de mosaico es igual que la información de columna definida para la vista de detalles. La vista de mosaico funciona en combinación con las características de marca de inserción o agrupación del control <xref:System.Windows.Forms.ListView>.  
@@ -75,4 +75,4 @@ Texto e iconos de la vista de mosaico
  <xref:System.Windows.Forms.ListView.TileSize%2A>  
  [ListView (Control)](../../../../docs/framework/winforms/controls/listview-control-windows-forms.md)  
  [Información general del control ListView](../../../../docs/framework/winforms/controls/listview-control-overview-windows-forms.md)  
- [Características de Windows XP y controles de Windows Forms](http://msdn.microsoft.com/en-us/bc7fab94-fce9-4bf1-a8ad-a5837c91c3c0)
+ [Características de Windows XP y controles de Windows Forms](http://msdn.microsoft.com/library/bc7fab94-fce9-4bf1-a8ad-a5837c91c3c0)

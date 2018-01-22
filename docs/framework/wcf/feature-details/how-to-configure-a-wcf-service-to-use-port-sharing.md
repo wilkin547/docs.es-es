@@ -17,11 +17,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 6c120582fe97c76995f0153be66d2e406c6f2d97
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c0086e145ca2aab325764467742a4ff2e6e3c0b5
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-configure-a-windows-communication-foundation-service-to-use-port-sharing"></a>Cómo: Configurar un servicio de Windows Communication Foundation para utilizar puertos compartidos
 La manera más fácil de utilizar la compartición de puertos de net.tcp:// en su aplicación de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] es exponer un servicio mediante <xref:System.ServiceModel.NetTcpBinding>.  
@@ -72,5 +72,5 @@ La manera más fácil de utilizar la compartición de puertos de net.tcp:// en s
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Uso compartido de puertos Net.TCP](http://msdn.microsoft.com/en-us/f13692ee-a179-4439-ae72-50db9534eded)  
+ [Uso compartido de puertos Net.TCP](http://msdn.microsoft.com/library/f13692ee-a179-4439-ae72-50db9534eded)  
  [Habilitar el servicio de uso compartido de puertos Net.TCP](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md)

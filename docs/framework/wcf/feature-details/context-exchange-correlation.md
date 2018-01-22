@@ -14,11 +14,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 0ab311974b1fe8cbc2707ee0818806d6264a1573
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ee22feab20e2c96f3e708a277f9048f739213520
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="context-exchange-correlation"></a>Correlación de intercambio de contexto
 Correlación de contexto se basa en el mecanismo de intercambio de contexto que se describe en el [especificación del protocolo de intercambio de contexto de .NET](http://go.microsoft.com/fwlink/?LinkId=166059). La correlación del contexto utiliza una cookie o un encabezado de contexto conocidos para relacionar los mensajes con la instancia correcta. Para utilizar la correlación del contexto, debe usarse un enlace basado en contexto como <xref:System.ServiceModel.BasicHttpContextBinding>, <xref:System.ServiceModel.WSHttpContextBinding> o <xref:System.ServiceModel.NetTcpContextBinding> en el extremo de <xref:System.ServiceModel.Activities.WorkflowServiceHost>. En este tema, se explica cómo utilizar la correlación del contexto con actividades de mensajería en un servicio del flujo de trabajo.  
@@ -109,6 +109,6 @@ Send request2 = new Send
 };  
 ```  
   
- Tenga en cuenta que, en estos ejemplos, la correlación del contexto se ha configurado explícitamente. Si el flujo de trabajo del cliente no se hospeda también en <xref:System.ServiceModel.Activities.WorkflowServiceHost>, se debe configurar la correlación explícitamente, a menos que las actividades se incluyan en una actividad <xref:System.ServiceModel.Activities.CorrelationScope>. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]correlación de contexto, vea la [NetContextExchangeCorrelation](http://msdn.microsoft.com/en-us/93c74a1a-b9e2-46c6-95c0-c9b0e9472caf) ejemplo.  
+ Tenga en cuenta que, en estos ejemplos, la correlación del contexto se ha configurado explícitamente. Si el flujo de trabajo del cliente no se hospeda también en <xref:System.ServiceModel.Activities.WorkflowServiceHost>, se debe configurar la correlación explícitamente, a menos que las actividades se incluyan en una actividad <xref:System.ServiceModel.Activities.CorrelationScope>. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]correlación de contexto, vea la [NetContextExchangeCorrelation](http://msdn.microsoft.com/library/93c74a1a-b9e2-46c6-95c0-c9b0e9472caf) ejemplo.  
   
  Si el cliente que está realizando las llamadas al servicio del flujo de trabajo no es un flujo de trabajo, seguirá pudiendo realizar las llamadas repetidas, siempre y cuando pase explícitamente el contexto devuelto de la primera llamada al servicio del flujo de trabajo. Los servidores proxy generados mediante la adición de una referencia del servicio en [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] almacenan y pasan este contexto de forma predeterminada.

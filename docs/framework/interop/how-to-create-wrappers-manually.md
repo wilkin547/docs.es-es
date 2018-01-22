@@ -15,11 +15,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: c6826a9b214e7507c63752a8a990116b88dda09d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5451599a5421149a7dc99ced6a42bb8220af247a
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-create-wrappers-manually"></a>Cómo: Crear contenedores manualmente
 Si decide declarar manualmente los tipos COM en código fuente administrado, lo mejor es empezar con un archivo o una biblioteca de tipos existente del Lenguaje de definición de interfaz (IDL). Cuando no tiene el archivo IDL o no puede generar un archivo de biblioteca de tipos, puede simular los tipos COM si crea declaraciones administradas y exporta el ensamblado resultante a una biblioteca de tipos.  
@@ -36,11 +36,11 @@ Si decide declarar manualmente los tipos COM en código fuente administrado, lo 
   
 1.  Suponiendo que tiene un archivo IDL o un archivo de biblioteca de tipos, decida qué clases e interfaces desea incluir en el RCW personalizado. Puede excluir cualquier tipo que no piense utilizar directa o indirectamente en su aplicación.  
   
-2.  Cree un archivo código fuente en un lenguaje conforme a CLS y declare los tipos. Vea [Resumen de la conversión de bibliotecas de tipos en ensamblados](http://msdn.microsoft.com/en-us/bf3f90c5-4770-4ab8-895c-3ba1055cc958) para obtener una descripción completa del proceso de conversión de importación. Cuando se crea un RCW personalizado, se realiza manualmente la conversión de tipos proporcionada por el [Importador de la biblioteca de tipos (Tlbimp.exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md). El ejemplo de la siguiente sección muestra los tipos de un IDL o un archivo de biblioteca de tipos y sus tipos correspondientes en código de C#.  
+2.  Cree un archivo código fuente en un lenguaje conforme a CLS y declare los tipos. Vea [Resumen de la conversión de bibliotecas de tipos en ensamblados](http://msdn.microsoft.com/library/bf3f90c5-4770-4ab8-895c-3ba1055cc958) para obtener una descripción completa del proceso de conversión de importación. Cuando se crea un RCW personalizado, se realiza manualmente la conversión de tipos proporcionada por el [Importador de la biblioteca de tipos (Tlbimp.exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md). El ejemplo de la siguiente sección muestra los tipos de un IDL o un archivo de biblioteca de tipos y sus tipos correspondientes en código de C#.  
   
 3.  Una vez completadas las declaraciones, compile el archivo de la misma forma que compila cualquier otro código fuente administrado.  
   
-4.  Como ocurre con los tipos importados con Tlbimp.exe, algunos requieren información adicional, que puede agregar directamente al código. Para obtener más detalles, vea [Cómo: Editar ensamblados de interoperabilidad](http://msdn.microsoft.com/en-us/16aacb20-2269-42bf-a812-b6a7df17e277).  
+4.  Como ocurre con los tipos importados con Tlbimp.exe, algunos requieren información adicional, que puede agregar directamente al código. Para obtener más detalles, vea [Cómo: Editar ensamblados de interoperabilidad](http://msdn.microsoft.com/library/16aacb20-2269-42bf-a812-b6a7df17e277).  
   
 ## <a name="example"></a>Ejemplo  
  En el siguiente código se muestra un ejemplo de la interfaz `ISATest` y la clase `SATest` en IDL, y los tipos correspondientes en código fuente de C#.  
@@ -108,9 +108,9 @@ namespace SAServer
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Personalización de contenedores RCW](http://msdn.microsoft.com/en-us/4652beaf-77d0-4f37-9687-ca193288c0be)  
- [Tipos de datos COM](http://msdn.microsoft.com/en-us/f93ae35d-a416-4218-8700-c8218cc90061)  
- [Cómo: Editar ensamblados de interoperabilidad](http://msdn.microsoft.com/en-us/16aacb20-2269-42bf-a812-b6a7df17e277)  
- [Resumen de la conversión de bibliotecas de tipos en ensamblados](http://msdn.microsoft.com/en-us/bf3f90c5-4770-4ab8-895c-3ba1055cc958)  
+ [Personalización de contenedores RCW](http://msdn.microsoft.com/library/4652beaf-77d0-4f37-9687-ca193288c0be)  
+ [Tipos de datos COM](http://msdn.microsoft.com/library/f93ae35d-a416-4218-8700-c8218cc90061)  
+ [Cómo: Editar ensamblados de interoperabilidad](http://msdn.microsoft.com/library/16aacb20-2269-42bf-a812-b6a7df17e277)  
+ [Resumen de la conversión de bibliotecas de tipos en ensamblados](http://msdn.microsoft.com/library/bf3f90c5-4770-4ab8-895c-3ba1055cc958)  
  [TlbImp.exe (Importador de la biblioteca de tipos)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)  
  [Tlbexp.exe (Exportador de la biblioteca de tipos)](../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md)

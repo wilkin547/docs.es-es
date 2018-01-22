@@ -20,11 +20,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: cb66908c28a54d4dc24cb77bd82c59862a7fd789
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 91df17448a57f7495dc95fb2b4ab1fa63dd8a27f
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="default-marshaling-for-arrays"></a>Serialización predeterminada para matrices
 En una aplicación que consta únicamente de código administrado, Common Language Runtime pasa los tipos de matriz como parámetros In/Out. En cambio, el serializador de interoperabilidad pasa una matriz como parámetros In de forma predeterminada.  
@@ -100,7 +100,7 @@ void New3([MarshalAs(UnmanagedType.SafeArray, SafeArraySubType=VT_BSTR)]
    ref String[] ar);  
 ```  
   
- Las matrices multidimensionales, o matrices seguras con límite distinto de cero, se pueden serializar en código administrado si la firma del método generada por Tlbimp.exe se modifica para indicar un tipo de elemento de **ELEMENT_TYPE_ARRAY** en lugar de **ELEMENT_ TYPE_SZARRAY**. Como alternativa, se puede usar el modificador **/sysarray** con Tlbimp.exe para importar todas las matrices como objetos <xref:System.Array?displayProperty=nameWithType>. En casos en los que se sabe que la matriz que se pasa es multidimensional, se puede editar el código de lenguaje intermedio (MSIL) de Microsoft generado mediante Tlbimp.exe y después volver a compilarlo. Para más información sobre cómo modificar código MSIL, vea [Personalización de contenedores RCW](http://msdn.microsoft.com/en-us/4652beaf-77d0-4f37-9687-ca193288c0be).  
+ Las matrices multidimensionales, o matrices seguras con límite distinto de cero, se pueden serializar en código administrado si la firma del método generada por Tlbimp.exe se modifica para indicar un tipo de elemento de **ELEMENT_TYPE_ARRAY** en lugar de **ELEMENT_ TYPE_SZARRAY**. Como alternativa, se puede usar el modificador **/sysarray** con Tlbimp.exe para importar todas las matrices como objetos <xref:System.Array?displayProperty=nameWithType>. En casos en los que se sabe que la matriz que se pasa es multidimensional, se puede editar el código de lenguaje intermedio (MSIL) de Microsoft generado mediante Tlbimp.exe y después volver a compilarlo. Para más información sobre cómo modificar código MSIL, vea [Personalización de contenedores RCW](http://msdn.microsoft.com/library/4652beaf-77d0-4f37-9687-ca193288c0be).  
   
 ### <a name="c-style-arrays"></a>Matrices de estilo C  
  Cuando se importa una matriz de estilo C desde una biblioteca de tipos a un ensamblado. NET, la matriz se convierte en **ELEMENT_TYPE_SZARRAY**.  
@@ -164,7 +164,7 @@ void New2(ref double ar);
 void New3(ref String ar);   
 ```  
   
- Puede proporcionar al serializador el tamaño de la matriz si modifica el código de lenguaje intermedio de Microsoft (MSIL) generado mediante Tlbimp.exe y después lo vuelve a compilar. Para más información sobre cómo modificar código MSIL, vea [Personalización de contenedores RCW](http://msdn.microsoft.com/en-us/4652beaf-77d0-4f37-9687-ca193288c0be). Para indicar el número de elementos de la matriz, aplique el tipo <xref:System.Runtime.InteropServices.MarshalAsAttribute> al parámetro de matriz de la definición de método administrado de una de las maneras siguientes:  
+ Puede proporcionar al serializador el tamaño de la matriz si modifica el código de lenguaje intermedio de Microsoft (MSIL) generado mediante Tlbimp.exe y después lo vuelve a compilar. Para más información sobre cómo modificar código MSIL, vea [Personalización de contenedores RCW](http://msdn.microsoft.com/library/4652beaf-77d0-4f37-9687-ca193288c0be). Para indicar el número de elementos de la matriz, aplique el tipo <xref:System.Runtime.InteropServices.MarshalAsAttribute> al parámetro de matriz de la definición de método administrado de una de las maneras siguientes:  
   
 -   Identifique otro parámetro que contenga el número de elementos de la matriz. Los parámetros se identifican por posición, empezando con el primer parámetro como el número 0.     
   
@@ -384,5 +384,5 @@ public struct MyStruct {
 ## <a name="see-also"></a>Vea también  
  [Comportamiento predeterminado del cálculo de referencias](../../../docs/framework/interop/default-marshaling-behavior.md)  
  [Tipos que pueden o que no pueden transferirse en bloque de bits](../../../docs/framework/interop/blittable-and-non-blittable-types.md)  
- [Atributos direccionales](http://msdn.microsoft.com/en-us/241ac5b5-928e-4969-8f58-1dbc048f9ea2)  
+ [Atributos direccionales](http://msdn.microsoft.com/library/241ac5b5-928e-4969-8f58-1dbc048f9ea2)  
  [Copiar y fijar](../../../docs/framework/interop/copying-and-pinning.md)

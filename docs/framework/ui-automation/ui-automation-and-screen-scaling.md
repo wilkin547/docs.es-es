@@ -22,11 +22,11 @@ author: Xansky
 ms.author: mhopkins
 manager: markl
 ms.workload: dotnet
-ms.openlocfilehash: 5198de558d24770c8fdd4bfc10ce4a9199eeff47
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: bb33d3175cf9e43797125b47c811042771e45782
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="ui-automation-and-screen-scaling"></a>UI Automation y ajuste de escala de la pantalla
 > [!NOTE]
@@ -74,7 +74,7 @@ ms.lasthandoff: 12/22/2017
      [!code-csharp[Highlighter#101](../../../samples/snippets/csharp/VS_Snippets_Wpf/Highlighter/CSharp/NativeMethods.cs#101)]
      [!code-vb[Highlighter#101](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/Highlighter/VisualBasic/NativeMethods.vb#101)]  
   
-     Esta función hace que todo el proceso sea para [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)], lo que significa que todas las ventanas que pertenecen al proceso sean sin escala. En [Highlighter Sample](http://msdn.microsoft.com/en-us/19ba4577-753e-4efd-92cc-c02ee67c1b69), por ejemplo, las cuatro ventanas que componen el rectángulo resaltado se encuentran en las coordenadas físicas obtenidas de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], y no en las coordenadas lógicas. Si el ejemplo no era para [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)], el resaltado se dibujaría en las coordenadas lógicas del escritorio, lo que daría lugar a una ubicación incorrecta en un entorno que no sea de 96 [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)] .  
+     Esta función hace que todo el proceso sea para [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)], lo que significa que todas las ventanas que pertenecen al proceso sean sin escala. En el [ejemplo de marcador de resaltado](http://msdn.microsoft.com/library/19ba4577-753e-4efd-92cc-c02ee67c1b69), por ejemplo, las cuatro ventanas que componen el rectángulo resaltado se encuentran en las coordenadas físicas obtenidas de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], no las coordenadas lógicas. Si el ejemplo no era para [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)], el resaltado se dibujaría en las coordenadas lógicas del escritorio, lo que daría lugar a una ubicación incorrecta en un entorno que no sea de 96 [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)] .  
   
 2.  Para obtener coordenadas de cursor, llame a la función [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] `GetPhysicalCursorPos`. En el ejemplo siguiente se muestra cómo declarar y usar esta función.  
   
@@ -87,4 +87,4 @@ ms.lasthandoff: 12/22/2017
  Si la aplicación realiza una comunicación directa entre procesos con aplicaciones que no son para [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)], puede que tenga que convertir entre las coordenadas lógicas y físicas mediante las funciones [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] `PhysicalToLogicalPoint` y `LogicalToPhysicalPoint`.  
   
 ## <a name="see-also"></a>Vea también  
- [Highlighter Sample](http://msdn.microsoft.com/en-us/19ba4577-753e-4efd-92cc-c02ee67c1b69)
+ [Ejemplo de marcador de resaltado](http://msdn.microsoft.com/library/19ba4577-753e-4efd-92cc-c02ee67c1b69)

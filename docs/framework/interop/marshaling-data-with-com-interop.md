@@ -15,11 +15,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: a2af80ddb558959171c255a61fae460729306e0e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 649936abfe149371445c77802bda2e72f558a41d
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="marshaling-data-with-com-interop"></a>serialización de datos con la interoperabilidad COM
 La interoperabilidad COM proporciona compatibilidad para usar objetos COM desde código administrado y para exponer objetos administrados en COM. La compatibilidad con el cálculo de referencias de datos desde y hacia COM es exhaustiva y el comportamiento del cálculo de referencias casi siempre es correcto.  
@@ -40,23 +40,23 @@ Describe cómo crear manualmente un contenedor COM en código fuente administrad
  Describe cómo migrar código DCOM administrado a WCF para la solución más segura.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
- [Tipos de datos COM](https://msdn.microsoft.com/en-us/library/sak564ww(v=vs.100).aspx)  
+ [Tipos de datos COM](https://msdn.microsoft.com/library/sak564ww(v=vs.100).aspx)  
  Proporciona los tipos de datos administrados y no administrados correspondientes.  
   
- [Personalización de contenedores CCW](https://msdn.microsoft.com/en-us/library/3bwc828w(v=vs.100).aspx)  
+ [Personalización de contenedores CCW](https://msdn.microsoft.com/library/3bwc828w(v=vs.100).aspx)  
  Describe cómo calcular explícitamente las referencias de tipos de datos mediante el <xref:System.Runtime.InteropServices.MarshalAsAttribute> atributos en tiempo de diseño.  
   
- [Personalización de contenedores RCW](https://msdn.microsoft.com/en-us/library/e753eftz(v=vs.100).aspx)  
+ [Personalización de contenedores RCW](https://msdn.microsoft.com/library/e753eftz(v=vs.100).aspx)  
  Describe cómo ajustar el comportamiento de serialización de tipos en un ensamblado de interoperabilidad y cómo definir tipos COM manualmente.  
   
- [Interoperabilidad COM avanzada](https://msdn.microsoft.com/en-us/library/bd9cdfyx(v=vs.100).aspx)  
+ [Interoperabilidad COM avanzada](https://msdn.microsoft.com/library/bd9cdfyx(v=vs.100).aspx)  
  Proporciona vínculos a más información sobre la incorporación de componentes COM en una aplicación de .NET Framework.  
   
- [Resumen de la conversión de ensamblados en bibliotecas de tipos](https://msdn.microsoft.com/en-us/library/xk1120c3(v=vs.100).aspx)  
+ [Resumen de la conversión de ensamblados en bibliotecas de tipos](https://msdn.microsoft.com/library/xk1120c3(v=vs.100).aspx)  
  Describe el proceso de conversión de la exportación de ensamblado a biblioteca de tipos.  
   
- [Resumen de la conversión de bibliotecas de tipos en ensamblados](https://msdn.microsoft.com/en-us/library/k83zzh38(v=vs.100).aspx)  
+ [Resumen de la conversión de bibliotecas de tipos en ensamblados](https://msdn.microsoft.com/library/k83zzh38(v=vs.100).aspx)  
  Describe el proceso de conversión de la importación de biblioteca de tipos a ensamblado.  
   
- [Interoperar mediante tipos genéricos](https://msdn.microsoft.com/en-us/library/ms229590(v=vs.100).aspx)  
+ [Interoperar mediante tipos genéricos](https://msdn.microsoft.com/library/ms229590(v=vs.100).aspx)  
  Describe qué acciones se admiten al usar tipos genéricos para la interoperabilidad COM.

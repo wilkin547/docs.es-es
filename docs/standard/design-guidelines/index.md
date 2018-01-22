@@ -20,11 +20,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 38c344e4f4ede58fcb39dd638f6aa8e896e63da0
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: c48b3cbaae4155a894ba77263505b2ca85238427
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="framework-design-guidelines"></a>Instrucciones de diseño de .NET Framework
 Esta sección proporciona instrucciones de diseño de las bibliotecas que extensión e interactúan con .NET Framework. El objetivo es ayudar a los diseñadores de bibliotecas a garantizar la coherencia de la API y facilidad de uso al proporcionar un modelo de programación unificado que es independiente del lenguaje de programación utilizado para el desarrollo. Se recomienda seguir estas directrices de diseño al desarrollar clases y componentes que extienden .NET Framework. Diseño de biblioteca incoherente afecta negativamente afecta a la productividad del desarrollador y desaconseja adopción.  
@@ -55,11 +55,11 @@ Esta sección proporciona instrucciones de diseño de las bibliotecas que extens
  [Patrones de diseño comunes](../../../docs/standard/design-guidelines/common-design-patterns.md)  
  Proporciona directrices para elegir e implementar propiedades de dependencia y el patrón de dispose.  
   
- *Partes © 2005, 2009 Microsoft Corporation. Reservados todos los derechos.*  
+ *Portions © 2005, 2009 Microsoft Corporation. Reservados todos los derechos.*  
   
  *Volver a imprimir en el permiso de educación de Pearson, Inc. de [directrices de diseño de marco de trabajo: convenciones, expresiones y patrones para las bibliotecas .NET de reutilizable, 2ª edición](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina y Brad Abrams, publicado el 22 de octubre de 2008 por Addison-Wesley Professional como parte de la serie de desarrollo de Microsoft Windows.*  
   
 ## <a name="see-also"></a>Vea también  
  [Información general](../../../docs/framework/get-started/overview.md)  
- [Guía básica de .NET Framework](http://msdn.microsoft.com/en-us/0b46b7c6-9163-4f99-8e58-0d1ee7da8c67)  
+ [Guía básica de .NET Framework](http://msdn.microsoft.com/library/0b46b7c6-9163-4f99-8e58-0d1ee7da8c67)  
  [Guía de desarrollo](../../../docs/framework/development-guide.md)

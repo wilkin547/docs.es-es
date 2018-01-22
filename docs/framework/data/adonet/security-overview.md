@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 70f8b00ca0f57d4d6bf9fc49ab12443f0a8c9b83
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: c952a79b70314ff9de195da322efd78d54176201
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="security-overview"></a>Información general sobre seguridad
 La protección de una aplicación es un proceso continuo. Es prácticamente imposible que se llegue a un momento en el que un programador pueda garantizar que una aplicación es invulnerable ante todo tipo de ataques, ya que no es posible predecir los tipos de ataques que surgirán en un futuro con las nuevas tecnologías. Al contrario, el hecho de que nadie haya detectado (o publicado) aún brechas de seguridad en un sistema, no quiere decir que éstas no existan o no puedan existir en un futuro. Por lo tanto, es necesario planificar la seguridad durante la fase de diseño del proyecto, así como la forma en que se mantendrá la seguridad durante el ciclo de vida de la aplicación.  
@@ -78,7 +78,7 @@ La protección de una aplicación es un proceso continuo. Es prácticamente impo
 |Recurso|Descripción|  
 |--------------|-----------------|  
 |[Seguridad de acceso del código y ADO.NET](../../../../docs/framework/data/adonet/code-access-security.md)|Describe las interacciones entre la seguridad de acceso del código, la seguridad basada en funciones y los entornos de confianza parcial desde la perspectiva de una aplicación ADO.NET.|  
-|[Seguridad de acceso del código](http://msdn.microsoft.com/en-us/23a20143-241d-4fe5-9d9f-3933fd594c03)|Contiene vínculos a temas adicionales que describen CAS en .NET Framework.|  
+|[Seguridad de acceso del código](http://msdn.microsoft.com/library/23a20143-241d-4fe5-9d9f-3933fd594c03)|Contiene vínculos a temas adicionales que describen CAS en .NET Framework.|  
   
 ## <a name="database-security"></a>Seguridad de la base de datos  
  El principio de privilegios mínimos también se aplica al origen de los datos. A continuación se citan algunas instrucciones generales para la seguridad de base de datos:  
@@ -100,7 +100,7 @@ La protección de una aplicación es un proceso continuo. Es prácticamente impo
 |Recurso|Descripción|  
 |--------------|-----------------|  
 |[Seguridad de SQL Server](../../../../docs/framework/data/adonet/sql/sql-server-security.md)|Proporciona una introducción general a la seguridad de SQL Server con escenarios de aplicación que orientan en la creación de aplicaciones ADO.NET seguras dirigidas a SQL Server.|  
-|[Recomendaciones para las estrategias de acceso a datos](http://msdn.microsoft.com/en-us/72411f32-d12a-4de8-b961-e54fca7faaf5)|Proporciona recomendaciones para obtener acceso a datos y realizar operaciones de base de datos.|  
+|[Recomendaciones para las estrategias de acceso a datos](http://msdn.microsoft.com/library/72411f32-d12a-4de8-b961-e54fca7faaf5)|Proporciona recomendaciones para obtener acceso a datos y realizar operaciones de base de datos.|  
   
 ## <a name="security-policy-and-administration"></a>Directiva de seguridad y administración  
  La administración inadecuada de la directiva de seguridad de acceso del código (CAS) puede crear puntos débiles en la seguridad. Cuando se utiliza una aplicación, deben seguirse las técnicas de supervisión de seguridad y deben evaluarse los riesgos a medida que surgen nuevas amenazas.  
@@ -109,11 +109,11 @@ La protección de una aplicación es un proceso continuo. Es prácticamente impo
   
 |Recurso|Descripción|  
 |--------------|-----------------|  
-|[NIB: Administración de directivas de seguridad](http://msdn.microsoft.com/en-us/d754e05d-29dc-4d3a-a2c2-95eaaf1b82b9)|Proporciona información sobre la creación y administración de la directiva de seguridad.|  
-|[NIB: Prácticas recomendadas de directiva de seguridad](http://msdn.microsoft.com/en-us/d49bc4d5-efb7-4caa-a2fe-e4d3cec63c05)|Proporciona vínculos a temas que describen cómo administrar la directiva de seguridad.|  
+|[NIB: Administración de directivas de seguridad](http://msdn.microsoft.com/library/d754e05d-29dc-4d3a-a2c2-95eaaf1b82b9)|Proporciona información sobre la creación y administración de la directiva de seguridad.|  
+|[NIB: Prácticas recomendadas de directiva de seguridad](http://msdn.microsoft.com/library/d49bc4d5-efb7-4caa-a2fe-e4d3cec63c05)|Proporciona vínculos a temas que describen cómo administrar la directiva de seguridad.|  
   
 ## <a name="see-also"></a>Vea también  
  [Proteger aplicaciones de ADO.NET](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
- [PAVE Seguridad del código nativo y del código de .NET Framework](http://msdn.microsoft.com/en-us/bd61be84-c143-409a-a75a-44253724f784)  
+ [PAVE Seguridad del código nativo y del código de .NET Framework](http://msdn.microsoft.com/library/bd61be84-c143-409a-a75a-44253724f784)  
  [Seguridad de SQL Server](../../../../docs/framework/data/adonet/sql/sql-server-security.md)  
  [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](http://go.microsoft.com/fwlink/?LinkId=217917)

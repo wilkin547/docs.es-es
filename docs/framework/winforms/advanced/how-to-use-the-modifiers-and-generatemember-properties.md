@@ -27,17 +27,17 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: f524bab55527bf9d3c744cb6f50d1df1fc9a2302
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f11595daac74ceb76c5d017af015d5523506bdf3
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-use-the-modifiers-and-generatemember-properties"></a>Cómo: Utilizar las propiedades Modifiers y GenerateMember
 Cuando se coloca un componente en un formulario Windows Forms, el entorno de diseño proporciona dos propiedades: `GenerateMember` y `Modifiers`. El `GenerateMember` propiedad especifica si el Diseñador de Windows Forms genera una variable miembro para un componente. El `Modifiers` propiedad es el modificador de acceso que se asigna a la variable miembro. Si el valor de la `GenerateMember` propiedad es `false`, el valor de la `Modifiers` propiedad no tiene ningún efecto.  
   
 > [!NOTE]
->  Los cuadros de diálogo y comandos de menú que se ven pueden diferir de los descritos en la Ayuda, en función de los valores de configuración o de edición activos. Para cambiar la configuración, elija la opción **Importar y exportar configuraciones** del menú **Herramientas** . Para obtener más información, consulte [Personalizar la configuración de desarrollo en Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Los cuadros de diálogo y comandos de menú que se ven pueden diferir de los descritos en la Ayuda, en función de los valores de configuración o de edición activos. Para cambiar la configuración, elija la opción **Importar y exportar configuraciones** del menú **Herramientas** . Para obtener más información, vea [Personalizar la configuración de desarrollo en Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
 ### <a name="to-specify-whether-a-component-is-a-member-of-the-form"></a>Para especificar si un componente es un miembro del formulario  
   

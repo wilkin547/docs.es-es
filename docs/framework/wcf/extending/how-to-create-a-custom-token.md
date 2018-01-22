@@ -22,11 +22,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 3b423158cc3c38e92897d0dc5e48c22cf28396ae
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0aeed7e1beac1a290aebec46a356952ddf994ed7
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-create-a-custom-token"></a>Cómo: Crear un token personalizado
 Este tema muestra cómo crear un token de seguridad personalizado mediante la clase <xref:System.IdentityModel.Tokens.SecurityToken> y cómo integrarlo en un autenticador y en un proveedor de token de seguridad personalizado. Para obtener un ejemplo de código completo, vea el [personalizado Token](../../../../docs/framework/wcf/samples/custom-token.md) ejemplo.  
@@ -41,7 +41,7 @@ Este tema muestra cómo crear un token de seguridad personalizado mediante la cl
   
  Vea el espacio de nombres <xref:System.IdentityModel.Tokens> para obtener más clases que representen tokens de seguridad.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]las credenciales, el Administrador de tokens de seguridad y las clases de proveedor y el autenticador, vea [arquitectura de seguridad](http://msdn.microsoft.com/en-us/16593476-d36a-408d-808c-ae6fd483e28f).  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)]las credenciales, el Administrador de tokens de seguridad y las clases de proveedor y el autenticador, vea [arquitectura de seguridad](http://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f).  
   
 ## <a name="procedures"></a>Procedimientos  
  Es necesario proporcionar a una aplicación cliente una manera de especificar información de la tarjeta de crédito para la infraestructura de seguridad. Una clase de credenciales de cliente personalizada pone esta información a disposición de la aplicación. El primer paso es crear una clase para que represente la información de la tarjeta de crédito para las credenciales de cliente personalizadas.  
@@ -176,4 +176,4 @@ Este tema muestra cómo crear un token de seguridad personalizado mediante la cl
  [Tutorial: Creación de credenciales de cliente y servicio personalizadas](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)  
  [Creación de un autenticador de tokens de seguridad personalizado](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)  
  [Creación de un proveedor de tokens de seguridad personalizado](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)  
- [Arquitectura de seguridad](http://msdn.microsoft.com/en-us/16593476-d36a-408d-808c-ae6fd483e28f)
+ [Arquitectura de seguridad](http://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)

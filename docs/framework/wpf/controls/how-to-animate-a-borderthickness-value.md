@@ -20,11 +20,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: a3d115d34b2c48a23b99eab6b096def223a586e4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 511f8ddfdeb010fa368924dab7f76d28cdf25ccb
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-animate-a-borderthickness-value"></a>Cómo: Animar el valor del grosor de un borde
 Este ejemplo muestra cómo animar los cambios en el grosor de un borde utilizando la <xref:System.Windows.Media.Animation.ThicknessAnimation> clase.  
@@ -42,6 +42,6 @@ Este ejemplo muestra cómo animar los cambios en el grosor de un borde utilizand
  <xref:System.Windows.Controls.Border.BorderThickness%2A>  
  <xref:System.Windows.Controls.Border>  
  [Información general sobre animaciones](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [Animación y temporización](http://msdn.microsoft.com/en-us/7d83765b-d5ae-41b1-b423-80206e1124aa)  
+ [Animación y temporización](http://msdn.microsoft.com/library/7d83765b-d5ae-41b1-b423-80206e1124aa)  
  [Temas "Cómo..."](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-how-to-topics.md)  
  [Animar el grosor de un borde mediante fotogramas clave](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-the-thickness-of-a-border-by-using-key-frames.md)

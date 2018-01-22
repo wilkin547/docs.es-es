@@ -17,11 +17,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 9362aa6ea02f5878d2419ee7cbaab349cae27038
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e90b11800685707460171e5e2d250ef757979c44
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-create-a-data-service-using-an-adonet-entity-framework-data-source-wcf-data-services"></a>Cómo: Crear un servicio de datos utilizando un origen de datos de ADO.NET Entity Framework (Data Services de WCF)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] expone los datos de entidad como servicio de datos. Estos datos de entidad proporciona la [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] cuando el origen de datos es una base de datos relacional. En este tema se muestra cómo crear un modelo de datos basado en [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] en una aplicación web de [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] que está basada en una base de datos existente y cómo usar este modelo de datos para crear un nuevo servicio de datos.  
@@ -55,7 +55,7 @@ ms.lasthandoff: 12/22/2017
   
 9. Haga clic en **finalizar** para completar el asistente.  
   
-     Con esto se crea un modelo de datos predeterminado basado en una base de datos específica. [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] permite personalizar el modelo de datos. Para obtener más información, consulte [Tareas](http://msdn.microsoft.com/en-us/7166f1f1-4de8-4bd4-86b5-5e20a2ebaccb).  
+     Con esto se crea un modelo de datos predeterminado basado en una base de datos específica. [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] permite personalizar el modelo de datos. Para obtener más información, consulte [Tareas](http://msdn.microsoft.com/library/7166f1f1-4de8-4bd4-86b5-5e20a2ebaccb).  
   
 ### <a name="to-create-the-data-service-by-using-the-new-data-model"></a>Para crear el servicio de datos usando el nuevo modelo de datos  
   

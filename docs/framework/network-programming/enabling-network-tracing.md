@@ -22,11 +22,11 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.workload: dotnet
-ms.openlocfilehash: c4957e3ec6891dbee207c7aac5fcf1564ecd0af5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8f6a23ce156941291fe499b6402061639569815c
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="enabling-network-tracing"></a>Habilitación del seguimiento de red
 El seguimiento de red proporciona acceso a información sobre las invocaciones de métodos y el tráfico de red generado por una aplicación administrada. Para habilitar el seguimiento de red en la aplicación tiene que realizar las tareas siguientes:  
@@ -58,4 +58,4 @@ El seguimiento de red proporciona acceso a información sobre las invocaciones d
 ## <a name="see-also"></a>Vea también  
  [Interpretación del seguimiento de red](../../../docs/framework/network-programming/interpreting-network-tracing.md)  
  [Network Tracing in the .NET Framework (Seguimiento de red en .NET Framework)](../../../docs/framework/network-programming/network-tracing.md)  
- [Introducción a la instrumentación y el seguimiento](http://msdn.microsoft.com/en-us/e924e57c-33cf-4b0e-9e7f-a45d13e38f2c)
+ [Introducción a la instrumentación y el seguimiento](http://msdn.microsoft.com/library/e924e57c-33cf-4b0e-9e7f-a45d13e38f2c)

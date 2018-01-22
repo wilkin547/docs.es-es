@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 17fc714acd85b065dbbfa6812d3b55970d5523a2
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 58fa10c62819979bfad15e4cae49118d25ed8670
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="supported-and-unsupported-linq-methods-linq-to-entities"></a>Métodos de LINQ compatibles y no compatibles (LINQ to Entities)
 En esta sección se proporciona información sobre los operadores de consulta estándar de Language-Integrated Query (LINQ) que se admiten o no en las consultas de [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)]. Muchos de los operadores de consulta estándar de LINQ tienen una versión sobrecargada que acepta un argumento entero. El argumento entero corresponde a un índice de base cero de la secuencia que se opera, un <xref:System.Collections.Generic.IEqualityComparer%601>, o <xref:System.Collections.Generic.IComparer%601>. A menos que se especifique lo contrario, estas versiones sobrecargadas de los operadores de consulta estándar de LINQ no se admiten y, si intenta utilizarlos, se iniciará una excepción.  
@@ -156,7 +156,7 @@ En esta sección se proporciona información sobre los operadores de consulta es
 |<xref:System.Linq.Queryable.Sum%2A>|No compatibles|`Function Sum(Of TSource) ( _ source As IQueryable(Of TSource), _ selector As Expression(Of Func(Of TSource, Nullable(Of Decimal))) _ ) As Nullable(Of Decimal)`|`Nullable<decimal> Sum<TSource>( this IQueryable<TSource> source, Expression<Func<TSource, Nullable<decimal>>> selector )`|  
   
 ## <a name="type-methods"></a>Métodos de tipos  
- [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] admite los operadores de consulta estándar LINQ que se ocupan de la conversión y prueba de tipos de CLR. LINQ to Entities admite solo los tipos de CLR que se asignan a los tipos del modelo conceptual. Para obtener una lista de tipos de modelo conceptual, consulte [tipos de modelo Conceptual (CSDL)](http://msdn.microsoft.com/en-us/987b995f-e429-4569-9559-b4146744def4). La tabla siguiente enumera los métodos de tipos admitidos y no admitidos.  
+ [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] admite los operadores de consulta estándar LINQ que se ocupan de la conversión y prueba de tipos de CLR. LINQ to Entities admite solo los tipos de CLR que se asignan a los tipos del modelo conceptual. Para obtener una lista de tipos de modelo conceptual, consulte [tipos de modelo Conceptual (CSDL)](http://msdn.microsoft.com/library/987b995f-e429-4569-9559-b4146744def4). La tabla siguiente enumera los métodos de tipos admitidos y no admitidos.  
   
 |Método|Compatibilidad|Firma de funciones de Visual Basic|Firma de métodos de C#|  
 |------------|-------------|-------------------------------------|--------------------------|  

@@ -18,11 +18,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 27e9391b72ccb65e50ce3154cf7a1c97d796ebd7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cfeacc0d4fb736c523538896246b0f406f995fa7
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="data-and-modeling-in-the-net-framework"></a>Datos y modelado en .NET Framework
 En esta sección se proporciona información sobre cómo tener acceso a los datos utilizando ADO.NET, Language Integrated Query (LINQ), Data Services de WCF y XML.  
@@ -31,7 +31,7 @@ En esta sección se proporciona información sobre cómo tener acceso a los dato
  [ADO.NET](../../../docs/framework/data/adonet/index.md)  
  Describe la arquitectura de ADO.NET y la forma de utilizar las clases de ADO.NET para administrar datos de aplicaciones e interactuar con orígenes de datos, por ejemplo orígenes de datos de OLE DB, Microsoft SQL Server y XML.  
   
- [LINQ Portal](http://msdn.microsoft.com/en-us/6eb15c76-4ee6-4146-981e-b3429a945e6f)  
+ [LINQ Portal](http://msdn.microsoft.com/library/6eb15c76-4ee6-4146-981e-b3429a945e6f)  
  Proporciona vínculos a la documentación pertinente para Language Integrated Query (LINQ).  
   
  [Procesar transacciones](../../../docs/framework/data/transactions/index.md)  
@@ -43,7 +43,7 @@ En esta sección se proporciona información sobre cómo tener acceso a los dato
  [Documentos y datos XML](../../../docs/standard/data/xml/index.md)  
  Proporciona información general sobre un conjunto completo e integrado de clases que funcionan con documentos XML y datos en .NET Framework.  
   
- [Referencia de los estándares XML](http://msdn.microsoft.com/en-us/79c78508-c9d0-423a-a00f-672e855de401)  
+ [Referencia de los estándares XML](http://msdn.microsoft.com/library/79c78508-c9d0-423a-a00f-672e855de401)  
  Proporciona información de referencia sobre los estándares XML admitidos por Microsoft.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  

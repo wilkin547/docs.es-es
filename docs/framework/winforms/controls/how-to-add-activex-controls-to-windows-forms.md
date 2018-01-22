@@ -18,11 +18,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: e9328400917208dde9f81b493fbf26c6080dc9c7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 940dd21fc48c23ce623280aab2c487db5810057c
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-add-activex-controls-to-windows-forms"></a>Cómo: Agregar controles ActiveX a formularios Windows Forms
 Aunque el Diseñador de Windows Forms está optimizado para hospedar controles de formularios Windows Forms, también puede colocar controles ActiveX en formularios Windows Forms.  
@@ -30,10 +30,10 @@ Aunque el Diseñador de Windows Forms está optimizado para hospedar controles d
 > [!CAUTION]
 >  Existen limitaciones de rendimiento de Windows Forms cuando se agregan controles ActiveX a ellos.  
   
- Antes de agregar controles ActiveX a un formulario, debe agregarlos al cuadro de herramientas. Para obtener más información, consulte [componentes COM, cuadro de diálogo Personalizar cuadro de herramientas](http://msdn.microsoft.com/en-us/171333f3-f207-4e02-bbdc-17862556212c).  
+ Antes de agregar controles ActiveX a un formulario, debe agregarlos al cuadro de herramientas. Para obtener más información, consulte [componentes COM, cuadro de diálogo Personalizar cuadro de herramientas](http://msdn.microsoft.com/library/171333f3-f207-4e02-bbdc-17862556212c).  
   
 > [!NOTE]
->  Los cuadros de diálogo y comandos de menú que se ven pueden diferir de los descritos en la Ayuda, en función de los valores de configuración o de edición activos. Para cambiar la configuración, haga clic en **Importar y exportar configuraciones** en el menú **Herramientas** . Para obtener más información, consulte [Personalizar la configuración de desarrollo en Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Los cuadros de diálogo y comandos de menú que se ven pueden diferir de los descritos en la Ayuda, en función de los valores de configuración o de edición activos. Para cambiar la configuración, haga clic en **Importar y exportar configuraciones** en el menú **Herramientas** . Para obtener más información, vea [Personalizar la configuración de desarrollo en Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
 ### <a name="to-add-an-activex-control-to-your-windows-form"></a>Para agregar un control ActiveX a su formulario Windows Forms  
   
@@ -46,7 +46,7 @@ Aunque el Diseñador de Windows Forms está optimizado para hospedar controles d
   
 ## <a name="see-also"></a>Vea también  
  [Controles de formularios Windows Forms](../../../../docs/framework/winforms/controls/index.md)  
- [Comparación de los controles y objetos programables de distintos lenguajes y bibliotecas](http://msdn.microsoft.com/en-us/021f2a1b-8247-4348-a5ad-e1d9ab23004b)  
+ [Comparación de los controles y objetos programables de distintos lenguajes y bibliotecas](http://msdn.microsoft.com/library/021f2a1b-8247-4348-a5ad-e1d9ab23004b)  
  [Cómo: Agregar controles a Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)  
  [Organizar controles en formularios Windows Forms](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)  
  [Asignar etiquetas a controles individuales de formularios Windows Forms y proporcionar accesos directos a los mismos](../../../../docs/framework/winforms/controls/labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)  
