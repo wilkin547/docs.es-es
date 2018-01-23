@@ -15,11 +15,11 @@ author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
 ms.workload: dotnet
-ms.openlocfilehash: a30f42c88e2478341737b99ad239d37c87a1063e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 611272f9d0369a89d401315e9b6379d2e8cd27c0
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="securing-clients"></a>Protección de clientes
 En [!INCLUDE[indigo1](../../../includes/indigo1-md.md)], el servicio dicta los requisitos de seguridad para los clientes. Es decir, el servicio especifica qué modo de seguridad utilizar, y si el cliente debe proporcionar una credencial o no. El proceso de protección de un cliente, por consiguiente, es simple: utilice los metadatos obtenidos del servicio (si se publica) y cree un cliente. Los metadatos especifican cómo configurar el cliente. Si el servicio requiere que el cliente suministre una credencial, debe obtener una credencial que se ajuste al requisito. Este tema explica el proceso con más detalle. [!INCLUDE[crabout](../../../includes/crabout-md.md)]creación de un servicio seguro, consulte [proteger Services](../../../docs/framework/wcf/securing-services.md).  
@@ -50,7 +50,7 @@ En [!INCLUDE[indigo1](../../../includes/indigo1-md.md)], el servicio dicta los r
 ### <a name="determining-the-client-credential-type"></a>Determinación del tipo de credencial de cliente  
  Si tiene la configuración de la herramienta Svcutil.exe genera de archivo, examine la [ \<enlaces >](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) sección para determinar qué tipo de credencial de cliente es necesaria. Dentro de la sección hay elementos de enlace que especifican los requisitos de seguridad. Específicamente, examine la \<seguridad > elemento de cada enlace. Ese elemento incluye el atributo `mode`, que puede establecer en uno de tres valores posibles (`Message`, `Transport`o `TransportWithMessageCredential`). El valor del atributo determina el modo y el modo determina cuál de los elementos secundarios es significativo.  
   
- El `<security>` elemento puede contener una `<transport>` o `<message>` elemento, o ambos. El elemento significativo es el que coincide con el modo de seguridad. Por ejemplo, el código siguiente especifica que el modo de seguridad es `"Message"`y el cliente de credencial de tipo para el `<message>` elemento es `"Certificate"`. En este caso se puede ignorar el elemento `<transport>`. Sin embargo, el elemento `<message>` especifica que se debe proporcionar un certificado X.509.  
+ El `<security>` elemento puede contener una `<transport>` o `<message>` elemento, o ambos. El elemento significativo es el que coincide con el modo de seguridad. Por ejemplo, el siguiente código especifica que el modo de seguridad es `"Message"`, y que el tipo de credencial de cliente para el elemento `<message>`"Certificate" es`"Certificate"`. En este caso se puede ignorar el elemento `<transport>`. Sin embargo, el elemento `<message>` especifica que se debe proporcionar un certificado X.509.  
   
 ```xml  
 <wsHttpBinding>  
@@ -117,7 +117,7 @@ En [!INCLUDE[indigo1](../../../includes/indigo1-md.md)], el servicio dicta los r
 </configuration>  
 ```  
   
- Para establecer la credencial del cliente en la configuración, agregue un [ \<endpointBehaviors >](../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md) elemento al archivo de configuración. Además, el elemento de comportamiento agregado debe estar vinculado al extremo del servicio mediante la `behaviorConfiguration` atributo de la [ \<extremo >](http://msdn.microsoft.com/en-us/13aa23b7-2f08-4add-8dbf-a99f8127c017) elemento tal como se muestra en el ejemplo siguiente. El valor del atributo `behaviorConfiguration` debe coincidir con el valor del atributo `name` del comportamiento.  
+ Para establecer la credencial del cliente en la configuración, agregue un [ \<endpointBehaviors >](../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md) elemento al archivo de configuración. Además, el elemento de comportamiento agregado debe estar vinculado al extremo del servicio mediante la `behaviorConfiguration` atributo de la [ \<extremo >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) elemento tal como se muestra en el ejemplo siguiente. El valor del atributo `behaviorConfiguration` debe coincidir con el valor del atributo `name` del comportamiento.  
   
  `<configuration>`  
   
@@ -168,7 +168,7 @@ En [!INCLUDE[indigo1](../../../includes/indigo1-md.md)], el servicio dicta los r
  <xref:System.ServiceModel.Description.ClientCredentials>  
  <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A>  
  <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetUrl%2A>  
- [\<enlaces >](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)  
+ [\<bindings>](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)  
  [Herramienta del editor de configuración (SvcConfigEditor.exe)](../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md)  
  [Seguridad de servicios](../../../docs/framework/wcf/securing-services.md)  
  [Acceso a los servicios mediante un cliente WCF](../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md)  
