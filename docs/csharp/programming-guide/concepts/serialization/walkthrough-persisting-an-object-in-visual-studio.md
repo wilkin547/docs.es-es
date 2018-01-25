@@ -11,11 +11,11 @@ ms.assetid: a544ce46-ee25-49da-afd4-457a3d59bf63
 caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: efdf4694c1a1b6df2e9531a2bb4c813b536a330e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 7b1a3fc377875ee25baa0718a25b5ac509822154
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="walkthrough-persisting-an-object-in-visual-studio-c"></a>Tutorial: Conservar un objeto en Visual Studio (C#)
 Aunque puede establecer las propiedades de un objeto en los valores predeterminados en el tiempo de diseño, cualquier valor que se establezca en tiempo de ejecución se pierde cuando se destruye el objeto. Puede usar la serialización para conservar los datos de un objeto entre instancias, lo que le permite almacenar valores y recuperarlos la próxima vez que se cree una instancia del objeto.  
@@ -29,7 +29,7 @@ Aunque puede establecer las propiedades de un objeto en los valores predetermina
 >  En este ejemplo se almacenan datos en un archivo de formato binario. Estos formatos no deben usarse para datos confidenciales, como contraseñas o información de tarjetas de crédito.  
   
 > [!NOTE]
->  Los cuadros de diálogo y comandos de menú que se ven pueden diferir de los descritos en la Ayuda, en función de los valores de configuración o de edición activos. Para cambiar la configuración, haga clic en **Importar y exportar configuraciones** en el menú **Herramientas** . Para obtener más información, vea [Personalizar la configuración de desarrollo en Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Los cuadros de diálogo y comandos de menú que se ven pueden diferir de los descritos en la Ayuda, en función de los valores de configuración o de edición activos. Para cambiar la configuración, haga clic en **Importar y exportar configuraciones** en el menú **Herramientas** . Para obtener más información, vea [Personalizar la configuración de desarrollo en Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
 ## <a name="creating-the-loan-object"></a>Crear el objeto Loan  
  El primer paso consiste en crear una clase `Loan` y una aplicación de prueba que use la clase.  

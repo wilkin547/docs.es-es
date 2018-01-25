@@ -13,31 +13,31 @@ ms.assetid: b5a0619c-8caa-46a5-a743-1cf68408ad7a
 caps.latest.revision: "11"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: e155c64689f34c89443c7ff0a3dee38d6c190fcc
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: b13af4e665a2bf5a75472bc8f4a501e90c59281a
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="targetwinexe-c-compiler-options"></a>/target:winexe (Opciones del compilador de C#)
-La opción **/target:winexe** hace que el compilador cree un programa de Windows ejecutable (EXE).  
+# <a name="-targetwinexe-c-compiler-options"></a>-target:winexe (Opciones del compilador de C#)
+La opción **-target:winexe** hace que el compilador cree un programa de Windows ejecutable (EXE).  
   
 ## <a name="syntax"></a>Sintaxis  
   
 ```console  
-/target:winexe  
+-target:winexe  
 ```  
   
 ## <a name="remarks"></a>Comentarios  
  El archivo ejecutable se creará con la extensión .exe. Un programa de Windows es aquel que ofrece una interfaz de usuario de la biblioteca de .NET Framework o con las API Win32.  
   
- Use [/target:exe](../../../csharp/language-reference/compiler-options/target-exe-compiler-option.md) para crear una aplicación de consola.  
+ Use [-target:exe](../../../csharp/language-reference/compiler-options/target-exe-compiler-option.md) para crear una aplicación de consola.  
   
- A menos que se especifique con la opción [/out](../../../csharp/language-reference/compiler-options/out-compiler-option.md), el archivo de salida toma el nombre del archivo de entrada que contiene el método [Main](../../../csharp/programming-guide/main-and-command-args/index.md).  
+ A menos que se especifique de otro modo con la opción [-out](../../../csharp/language-reference/compiler-options/out-compiler-option.md), el nombre del archivo de salida toma el nombre del archivo de entrada que contiene el método [Main](../../../csharp/programming-guide/main-and-command-args/index.md).  
   
- Cuando se especifica en la línea de comandos, se usan todos los archivos hasta la siguiente opción **/out** o [/target](../../../csharp/language-reference/compiler-options/target-compiler-option.md) para crear el programa de Windows.  
+ Cuando se especifica en la línea de comandos, se usan todos los archivos hasta la siguiente opción **-out** o [-target](../../../csharp/language-reference/compiler-options/target-compiler-option.md) para crear el programa de Windows.  
   
- Solo se necesita un método **Main** en los archivos de código fuente que se compilan en un archivo .exe. La opción [/main](../../../csharp/language-reference/compiler-options/main-compiler-option.md) permite especificar la clase que contiene el método **Main**, en aquellos casos en los que el código tenga más de una clase con un método **Main**.  
+ Solo se necesita un método **Main** en los archivos de código fuente que se compilan en un archivo .exe. La opción [-main](../../../csharp/language-reference/compiler-options/main-compiler-option.md) permite especificar la clase que contiene el método **Main**, en aquellos casos en los que el código tenga más de una clase con un método **Main**.  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del compilador en el entorno de desarrollo de Visual Studio  
   
@@ -53,9 +53,9 @@ La opción **/target:winexe** hace que el compilador cree un programa de Windows
  Compile `in.cs` en un programa de Windows:  
   
 ```console  
-csc /target:winexe in.cs  
+csc -target:winexe in.cs  
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [/target (opciones del compilador de C#)](../../../csharp/language-reference/compiler-options/target-compiler-option.md)  
+ [-target (Opciones del compilador de C#)](../../../csharp/language-reference/compiler-options/target-compiler-option.md)  
  [Opciones del compilador de C#](../../../csharp/language-reference/compiler-options/index.md)

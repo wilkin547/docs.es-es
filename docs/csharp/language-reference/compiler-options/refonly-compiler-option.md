@@ -8,22 +8,23 @@ f1_keywords: /refonly
 helpviewer_keywords:
 - /refonly compiler option [C#]
 - -refonly compiler option [C#]
+- refonly compiler option [C#]
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: c4c745416bda56f5f1b1b4ab8267274d972a990d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 25b0f6e024e194dff641fd5069755d0ea112a50b
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="refonly-c-compiler-options"></a>/refonly (Opciones del compilador de C#)
+# <a name="-refonly-c-compiler-options"></a>-refonly (Opciones del compilador de C#)
 
-El **/refonly** opción indica que un ensamblado de referencia deben mostrarse en lugar de un ensamblado de implementación, como el resultado principal. El parámetro `/refonly` deshabilita de forma automática la generación de archivos PDB, ya que los ensamblados de referencia no pueden ejecutarse.
+La opción **-refonly** indica que un ensamblado de referencia debe mostrarse en lugar de un ensamblado de implementación, como el resultado principal. El parámetro `-refonly` deshabilita de forma automática la generación de archivos PDB, ya que los ensamblados de referencia no pueden ejecutarse.
 
 ## <a name="syntax"></a>Sintaxis
 
 ```console
-/refonly
+-refonly
 ```
 
 ## <a name="remarks"></a>Comentarios
@@ -40,7 +41,7 @@ Los ensamblados de referencia también quitan los metadatos (miembros privados) 
 - Se conservan todos los métodos virtuales. Se mantienen las implementaciones explícitas de interfaces. Se conservan los eventos y propiedades que se han implementado explícitamente, ya que sus descriptores de acceso son virtuales (y por lo tanto se conservan).
 - Se conservan todos los campos de un struct. (Es un candidato para el refinamiento posterior de C#-7.1)
 
-Las opciones `/refonly` y [`/refout`](refout-compiler-option.md) son mutuamente excluyentes.
+Las opciones `-refonly` y [`-refout`](refout-compiler-option.md) son mutuamente excluyentes.
 
 ## <a name="see-also"></a>Vea también
  [Opciones del compilador de C#](../../../csharp/language-reference/compiler-options/index.md)  

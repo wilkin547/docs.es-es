@@ -15,11 +15,11 @@ ms.assetid: 568df58a-d292-4b55-93ba-601578722878
 caps.latest.revision: "52"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 8729677b0c7bee60f0ebeb07439b1c0e71508aa8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 1361a7f115e2bae4b2d1f6271fa9020706581691
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="casting-and-type-conversions-c-programming-guide"></a>Conversiones de tipos (Guía de programación de C#)
 Dado que C# tiene tipos estáticos en tiempo de compilación, después de declarar una variable, no se puede volver a declarar ni usar para almacenar valores de otro tipo a menos que ese tipo sea convertible al tipo de la variable. Por ejemplo, no hay ninguna conversión de un entero a una cadena arbitraria. Por tanto, después de declarar `i` como un entero, no se le puede asignar la cadena "Hello", como se muestra en el código siguiente.  
@@ -96,5 +96,5 @@ Giraffe g2 = (Giraffe) a;
  [implicit](../../../csharp/language-reference/keywords/implicit.md)  
  [Operadores de conversión](../../../csharp/programming-guide/statements-expressions-operators/conversion-operators.md)  
  [Conversión de tipos generalizada](http://msdn.microsoft.com/library/49253ae6-7657-4810-82ab-1176a6feeada)  
- [Conversión de tipos exportada](http://msdn.microsoft.com/en-us/1dfe55f4-07a2-4b61-aabf-a8cf65783a6b)  
+ [Conversión de tipos exportados](http://msdn.microsoft.com/library/1dfe55f4-07a2-4b61-aabf-a8cf65783a6b)  
  [Cómo: Convertir una cadena en un número](../../../csharp/programming-guide/types/how-to-convert-a-string-to-a-number.md)

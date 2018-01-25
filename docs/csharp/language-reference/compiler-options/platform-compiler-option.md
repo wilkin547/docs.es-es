@@ -13,19 +13,19 @@ ms.assetid: c290ff5e-47f4-4a85-9bb3-9c2525b0be04
 caps.latest.revision: "46"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 5d35a91805f6189f60803056c541ce8344c024f0
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 6a7a505f955f1faf73198b3670754dbb492ff638
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="platform-c-compiler-options"></a>/platform (Opciones del compilador de C#)
+# <a name="-platform-c-compiler-options"></a>-platform (Opciones del compilador de C#)
 Especifica qué versión de Common Language Runtime (CLR) puede ejecutar el ensamblado.  
   
 ## <a name="syntax"></a>Sintaxis  
   
 ```console  
-/platform:string  
+-platform:string  
 ```  
   
 #### <a name="parameters"></a>Parámetros  
@@ -48,13 +48,13 @@ Especifica qué versión de Common Language Runtime (CLR) puede ejecutar el ensa
   
  En un sistema operativo de Windows de 64 bits:  
   
--   Los ensamblados compilados con **/platform:x86** se ejecutarán en el CLR de 32 bits que se ejecuta en WOW64.  
+-   Los ensamblados compilados con **-platform:x86** se ejecutarán en el CLR de 32 bits que se ejecuta en WOW64.  
   
--   Un archivo DLL compilado con **/platform:anycpu** se ejecuta en el mismo CLR que el proceso en el que se ha cargado.  
+-   Un archivo DLL compilado con **-platform:anycpu** se ejecuta en el mismo CLR que el proceso en el que se ha cargado.  
   
--   Los archivos ejecutables que se compilan con **/platform:anycpu** se ejecutan en el CLR de 64 bits.  
+-   Los archivos ejecutables que se compilan con **-platform:anycpu** se ejecutan en el CLR de 64 bits.  
   
--   Los archivos ejecutables compilados con **/platform:anycpu32bitpreferred** se ejecutan en el CLR de 32 bits.  
+-   Los archivos ejecutables compilados con **-platform:anycpu32bitpreferred** se ejecutan en el CLR de 32 bits.  
   
  La configuración **anycpu32bitpreferred** es válida solo para archivos ejecutables (.exe) y requiere .NET Framework 4.5.  
   
@@ -68,15 +68,15 @@ Especifica qué versión de Common Language Runtime (CLR) puede ejecutar el ensa
   
 3.  Modifique la propiedad **Destino de la plataforma** y, para los proyectos que tienen como destino .NET Framework 4.5, active o desactive la casilla **Preferencia de 32 bits**.  
   
- Tenga en cuenta que **/platform** no está disponible en el entorno de desarrollo de Visual C# Express.  
+ Tenga en cuenta que **-platform** no está disponible en el entorno de desarrollo de Visual C# Express.  
   
  Para obtener información sobre cómo establecer esta opción del compilador mediante programación, vea <xref:VSLangProj80.CSharpProjectConfigurationProperties3.PlatformTarget%2A>.  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente, se muestra cómo usar la opción **/platform** para especificar que la aplicación se debe ejecutar en el CLR de 64 bits en un sistema operativo Windows de 64 bits.  
+ En el ejemplo siguiente, se muestra cómo usar la opción **-platform** para especificar que la aplicación se debe ejecutar en el CLR de 64 bits en un sistema operativo Windows de 64 bits.  
   
 ```console  
-csc /platform:anycpu filename.cs  
+csc -platform:anycpu filename.cs  
 ```  
   
 ## <a name="see-also"></a>Vea también  

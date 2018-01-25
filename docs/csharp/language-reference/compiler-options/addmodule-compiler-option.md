@@ -13,19 +13,19 @@ ms.assetid: ed604546-0dc2-4bd4-9a3e-610a8d973e58
 caps.latest.revision: "13"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 2652102682de9dff24c66180dde36f33b4b6bbfc
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: db440b58862e372e443c9c51961b0c3cc2dd211e
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="addmodule-c-compiler-options"></a>/addmodule (Opciones del compilador de C#)
+# <a name="-addmodule-c-compiler-options"></a>-addmodule (Opciones del compilador de C#)
 Esta opción agrega un módulo que se ha creado con el modificador target:module para la compilación actual.  
   
 ## <a name="syntax"></a>Sintaxis  
   
 ```console  
-/addmodule:file[;file2]  
+-addmodule:file[;file2]  
 ```  
   
 ## <a name="arguments"></a>Argumentos  
@@ -33,11 +33,11 @@ Esta opción agrega un módulo que se ha creado con el modificador target:module
  Un archivo de salida que contiene metadatos. El archivo no puede contener un manifiesto de ensamblado. Para importar más de un archivo, hay que separar los nombres de archivo con una coma o un punto y coma.  
   
 ## <a name="remarks"></a>Comentarios  
- Todos los módulos agregados mediante **/addmodule** deben encontrarse en el mismo directorio que el archivo de salida en tiempo de ejecución. Es decir, puede especificar un módulo de cualquier directorio en el momento de la compilación, pero el módulo debe encontrarse en el directorio de la aplicación en tiempo de ejecución. Si dicho módulo no se encuentra en el directorio de la aplicación en tiempo de ejecución, obtendrá <xref:System.TypeLoadException>.  
+ Todos los módulos agregados mediante **-addmodule** deben encontrarse en el mismo directorio que el archivo de salida en tiempo de ejecución. Es decir, puede especificar un módulo de cualquier directorio en el momento de la compilación, pero el módulo debe encontrarse en el directorio de la aplicación en tiempo de ejecución. Si dicho módulo no se encuentra en el directorio de la aplicación en tiempo de ejecución, obtendrá <xref:System.TypeLoadException>.  
   
- `file` no puede contener ningún ensamblado. Por ejemplo, si el archivo de salida se ha credo con [/target:module](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md), se pueden importar sus metadatos con **/addmodule**.  
+ `file` no puede contener ningún ensamblado. Por ejemplo, si el archivo de salida se ha creado con [-target:module](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md), se pueden importar sus metadatos con **-addmodule**.  
   
- Si se ha creado el archivo de salida con una opción **/target** diferente de **/target:module**, no se podrán importar sus metadatos con **/addmodule**, pero sí con [/reference](../../../csharp/language-reference/compiler-options/reference-compiler-option.md).  
+ Si se ha creado el archivo de salida con una opción **-target** diferente de **-target:module**, no se podrán importar sus metadatos con **-addmodule**, pero sí con [-reference](../../../csharp/language-reference/compiler-options/reference-compiler-option.md).  
   
  Esta opción del compilador no está disponible en Visual Studio; en un proyecto no se puede hacer referencia a un módulo. Además, esta opción del compilador no se puede modificar mediante programación.  
   
@@ -45,7 +45,7 @@ Esta opción agrega un módulo que se ha creado con el modificador target:module
  Compile el archivo de código fuente `input.cs` y agregue metadatos de `metad1.netmodule` y `metad2.netmodule` para generar `out.exe`:  
   
 ```console  
-csc /addmodule:metad1.netmodule;metad2.netmodule /out:out.exe input.cs  
+csc -addmodule:metad1.netmodule;metad2.netmodule -out:out.exe input.cs  
 ```  
   
 ## <a name="see-also"></a>Vea también  

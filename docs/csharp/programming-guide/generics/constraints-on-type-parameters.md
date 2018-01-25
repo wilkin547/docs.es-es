@@ -13,23 +13,23 @@ ms.assetid: 141b003e-1ddb-4e1c-bcb2-e1c3870e6a51
 caps.latest.revision: "41"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: f5382b0050b81ed3bb1a075a042bdc4034a3975d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 6f7c80acdb3815af4b5d545297894778029a9104
+ms.sourcegitcommit: 8bde7a3432f30fc771079744955c75c58c4eb393
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/20/2018
 ---
 # <a name="constraints-on-type-parameters-c-programming-guide"></a>Restricciones de tipos de parámetros (Guía de programación de C#)
 Cuando define una clase genérica, puede aplicar restricciones a las clases de tipos que el código cliente puede usar para los argumentos de tipo cuando se crea una instancia de la clase. Si el código de cliente intenta crear una instancia de su clase mediante un tipo que no se permite por una restricción, el resultado es un error en tiempo de compilación. Estas limitaciones se denominan restricciones. Las restricciones se especifican con la palabra clave contextual `where`. En la tabla siguiente se muestran los seis tipos de restricciones:  
   
-|Restricción|Descripción|  
+|Restricción|Description|  
 |----------------|-----------------|  
-|where T: struct|El argumento de tipo debe ser un tipo de valor. Cualquier tipo de valor excepto <xref:System.Nullable> puede especificarse. Para obtener más información, vea [Usar tipos que aceptan valores NULL](../../../csharp/programming-guide/nullable-types/using-nullable-types.md).|  
-|where T : class|El argumento de tipo debe ser un tipo de referencia; esto se aplica también a cualquier tipo de clase, interfaz, delegado o matriz.|  
-|where T : new()|El argumento de tipo debe tener un constructor sin parámetros público. Cuando se usa conjuntamente con otras restricciones, la restricción `new()` debe especificarse en último lugar.|  
-|where T : \<nombre de la clase base>|El argumento de tipo debe ser o derivarse de la clase base especificada.|  
-|where T : \<nombre de la interfaz>|El argumento de tipo debe ser o implementar la interfaz especificada. Pueden especificarse varias restricciones de interfaz. La interfaz de restricciones también puede ser genérica.|  
-|where T : U|El argumento de tipo proporcionado por T debe ser o derivarse del argumento proporcionado para U.|  
+|`where T: struct`|El argumento de tipo debe ser un tipo de valor. Cualquier tipo de valor excepto <xref:System.Nullable> puede especificarse. Para obtener más información, vea [Usar tipos que aceptan valores NULL](../../../csharp/programming-guide/nullable-types/using-nullable-types.md).|  
+|`where T : class`|El argumento de tipo debe ser un tipo de referencia; esto se aplica también a cualquier tipo de clase, interfaz, delegado o matriz.|  
+|`where T : new()`|El argumento de tipo debe tener un constructor sin parámetros público. Cuando se usa conjuntamente con otras restricciones, la restricción `new()` debe especificarse en último lugar.|  
+|`where T : `*\<nombre de clase base>*|El argumento de tipo debe ser o derivarse de la clase base especificada.|  
+|`where T : `*\<nombre de interfaz>*|El argumento de tipo debe ser o implementar la interfaz especificada. Pueden especificarse varias restricciones de interfaz. La interfaz de restricciones también puede ser genérica.|  
+|`where T : U`|El argumento de tipo proporcionado por T debe ser o derivarse del argumento proporcionado para U.|  
   
 ## <a name="why-use-constraints"></a>Por qué usar restricciones  
  Si quiere examinar un elemento de una lista genérica para determinar si es válido o para compararlo con otro elemento, el compilador debe tener alguna garantía de que el operador o el método que tiene que llamar se admitirá mediante cualquier argumento de tipo que pueda especificar el código cliente. Esta garantía se obtiene aplicando una o más restricciones a su definición de clase genérica. Por ejemplo, la restricción de clase base indica al compilador que solo los objetos de este tipo o derivados de este tipo se usarán como argumentos de tipo. Una vez que el compilador tenga esta garantía, puede permitir que los métodos de ese tipo se llamen en la clase genérica. Las restricciones se aplican con la palabra clave contextual `where`. En el ejemplo de código siguiente se muestran las funciones que podemos agregar a la clase `GenericList<T>` (en [Introducción a los genéricos](../../../csharp/programming-guide/generics/introduction-to-generics.md)) aplicando una restricción de clase base.  

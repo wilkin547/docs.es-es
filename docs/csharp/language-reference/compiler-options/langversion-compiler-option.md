@@ -13,19 +13,19 @@ ms.assetid: 3fb00b05-a0ff-4782-b313-13a4c0f62d94
 caps.latest.revision: "33"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 7d3d59f63102ccf3c1d54e4028635c8daad56164
-ms.sourcegitcommit: 401c4427a3ec0d1263543033b3084039278509dc
+ms.openlocfilehash: 11aab223ee70ff69d8c3470e747738bfe44540ea
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/06/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="langversion-c-compiler-options"></a>/langversion (Opciones del compilador de C#)
+# <a name="-langversion-c-compiler-options"></a>-langversion (Opciones del compilador de C#)
 Hace que el compilador acepte solo la sintaxis que se incluye en la especificación elegida del lenguaje C#.  
   
 ## <a name="syntax"></a>Sintaxis  
   
 ```console  
-/langversion:option  
+-langversion:option  
 ```  
   
 ## <a name="arguments"></a>Argumentos  
@@ -52,13 +52,13 @@ Hace que el compilador acepte solo la sintaxis que se incluye en la especificaci
 
   
 ## <a name="remarks"></a>Comentarios  
- Los metadatos a los que hace referencia la aplicación de C# no están sujetos a la opción del compilador **/langversion**.  
+ Los metadatos a los que hace referencia la aplicación de C# no están sujetos a la opción del compilador **-langversion**.  
   
- Dado que cada versión del compilador de C# contiene las extensiones para la especificación del lenguaje, **/langversion** no ofrece la funcionalidad equivalente de una versión anterior del compilador.  
+ Dado que cada versión del compilador de C# contiene las extensiones para la especificación del lenguaje, **-langversion** no ofrece las funciones equivalentes de una versión anterior del compilador.  
  
  Además, aunque las actualizaciones de versión de C# generalmente coinciden con las versiones de .NET Framework principales, la sintaxis y las características nuevas no están necesariamente asociadas a esa versión de marco específica. Aunque las nuevas características necesitarán definitivamente una nueva actualización del compilador que también se publicará junto con la revisión de C#, cada característica específica tiene su propia API mínima de .NET o requisitos de Common Language Runtime que pueden permitir que se ejecute en marcos de versiones anteriores al incluir paquetes de NuGet u otras bibliotecas.
   
- Independientemente de la configuración de **/langversion** que use, usará la versión actual de Common Language Runtime para crear el archivo .exe o .dll. Una excepción son los ensamblados de confianza y [/moduleassemblyname (Opción del compilador de C#)](../../../csharp/language-reference/compiler-options/moduleassemblyname-compiler-option.md), que funcionan en **/langversion:ISO-1**.  
+ Independientemente de la configuración de **-langversion** que use, usará la versión actual de Common Language Runtime para crear el archivo .exe o .dll. Una excepción son los ensamblados de confianza y [-moduleassemblyname (Opción del compilador de C#)](../../../csharp/language-reference/compiler-options/moduleassemblyname-compiler-option.md), que funcionan en **-langversion:ISO-1**.  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del compilador en el entorno de desarrollo de Visual Studio  
   

@@ -19,11 +19,11 @@ ms.assetid: 839c960c-c2dc-4d05-af4d-ca5428e54008
 caps.latest.revision: "43"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: e6fceb569a79b5988171f06ae6c09d86b5fc667d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e4c57efa4027af5dd6b0476eb65845a39fc0b691
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="named-and-optional-arguments-c-programming-guide"></a>Argumentos opcionales y con nombre (Guía de programación de C#)
 [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] introduce argumentos opcionales y con nombre. Los *argumentos con nombre* permiten especificar un argumento para un parámetro concreto asociando el argumento al nombre del parámetro y no a la posición del parámetro en la lista de parámetros. Los *argumentos opcionales* permiten omitir argumentos para algunos parámetros. Ambas técnicas se pueden usar con métodos, indexadores, constructores y delegados.  
@@ -33,7 +33,7 @@ ms.lasthandoff: 11/21/2017
  Los parámetros opcionales y con nombre, cuando se usan conjuntamente, solo permiten especificar argumentos para algunos parámetros de una lista de parámetros opcionales. Esta funcionalidad facilita enormemente las llamadas a interfaces COM, como las API de automatización de Microsoft Office.  
   
 ## <a name="named-arguments"></a>Argumentos con nombre  
- Los argumentos con nombre le liberan de la necesidad de recordar o buscar el orden de los parámetros de la lista de parámetros de los métodos llamados. El parámetro de cada argumento se puede especificar por nombre de parámetro. Por ejemplo, una función que imprime los detalles del pedido (como por ejemplo, nombre de vendedor, el nombre de producto & número de orden) puede llamar de manera estándar mediante el envío de argumentos por posición, en el orden definido por la función.
+ Los argumentos con nombre le liberan de la necesidad de recordar o buscar el orden de los parámetros de la lista de parámetros de los métodos llamados. El parámetro de cada argumento se puede especificar por nombre de parámetro. Por ejemplo, se puede llamar de la manera habitual a una función que imprime los detalles de un pedido (como por ejemplo, el nombre de vendedor, el nombre de producto y el número del pedido) mediante el envío de argumentos por posición, en el orden definido por la función.
   
  `PrintOrderDetails("Gift Shop", 31, "Red Mug");`
   
@@ -43,19 +43,19 @@ ms.lasthandoff: 11/21/2017
   
  `PrintOrderDetails(productName: "Red Mug", sellerName: "Gift Shop", orderNum: 31);`
   
- Los argumentos con nombre también mejoran la legibilidad del código al identificar lo que cada argumento representa. En el método de ejemplo siguiente, el `sellerName` no puede ser null o espacio en blanco. Como ambos `sellerName` y `productName` son tipos de cadenas, en lugar de enviar argumentos por posición, tiene sentido usar argumentos con nombre para eliminar la ambigüedad de los dos y reducir la confusión para cualquiera que lea el código.
+ Los argumentos con nombre también mejoran la legibilidad del código al identificar lo que cada argumento representa. En el método de ejemplo siguiente, `sellerName` no puede ser nulo ni un espacio en blanco. Como `sellerName` y `productName` son tipos de cadena, en lugar de enviar argumentos por posición, tiene sentido usar argumentos con nombre para eliminar la ambigüedad entre ambos y evitar confusiones para aquellos que lean el código.
   
- Argumentos con nombre, cuando se usa con argumentos posicionales, son válidas tanto en cuanto 
+ Los argumentos con nombre, cuando se usan con argumentos posicionales, son válidos siempre que 
 
-- no va seguidos de los argumentos posicionales, o
+- no vayan seguidos de ningún argumento posicional o,
 
  `PrintOrderDetails("Gift Shop", 31, productName: "Red Mug");`
 
-- _a partir de C# 7.2_, se utilizan en la posición correcta. En el ejemplo siguiente, el parámetro `orderNum` está en la posición correcta pero no se denomine explícitamente.
+- _a partir de C# 7.2_, se usen en la posición correcta. En este ejemplo, el parámetro `orderNum` está en la posición correcta pero no se le asigna un nombre de manera explícita.
 
  `PrintOrderDetails(sellerName: "Gift Shop", 31, productName: "Red Mug");`
   
- Sin embargo, no son válidos si va seguidos de argumentos posicionales argumentos con nombre fuera de servicio.
+ Sin embargo, los argumentos con nombre que no están en el orden correcto no son válidos si van seguidos de argumentos posicionales.
 
  ```csharp
  // This generates CS1738: Named argument specifications must appear after all fixed arguments have been specified.
@@ -63,7 +63,7 @@ ms.lasthandoff: 11/21/2017
  ```
   
 ## <a name="example"></a>Ejemplo  
- El código siguiente implementa los ejemplos de esta sección junto con algunos adicionales.  
+ Con este código se implementan los ejemplos de esta sección junto con otros adicionales.  
   
  [!code-csharp[csProgGuideNamedAndOptional#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/named-and-optional-arguments_1.cs)]  
   
@@ -106,7 +106,7 @@ Parámetros opcionales en ExampleMethod
 ## <a name="com-interfaces"></a>Interfaces COM  
  Los argumentos opcionales y con nombre, además de compatibilidad con objetos dinámicos y otros avances, mejoran considerablemente la interoperabilidad con las API de COM, como las API de automatización de Office.  
   
- Por ejemplo, el método [AutoFormat](http://go.microsoft.com/fwlink/?LinkId=148201) de la interfaz [Range](http://go.microsoft.com/fwlink/?LinkId=148196) de Microsoft Office Excel tiene siete parámetros, todos ellos opcionales. Estos parámetros se muestran en la siguiente ilustración.  
+ Por ejemplo, el método [AutoFormat](https://msdn.microsoft.com/library/microsoft.office.interop.excel.range.autoformat(v=office.15).aspx) de la interfaz [Range](https://msdn.microsoft.com/library/microsoft.office.interop.excel.range(v=office.15).aspx) de Microsoft Office Excel tiene siete parámetros, todos ellos opcionales. Estos parámetros se muestran en la siguiente ilustración.  
   
  ![Información rápida de IntelliSense para el método AutoFormat.](../../../csharp/programming-guide/classes-and-structs/media/autoformat_parameters.png "AutoFormat_Parameters")  
 Parámetros de AutoFormat  

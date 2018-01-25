@@ -12,11 +12,11 @@ ms.assetid: dda4fa9f-a02c-400f-8b6a-d58834e13d7f
 caps.latest.revision: "9"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: d4dc8c81a9afd60add4c2a62be6804a0f6446124
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: fbb95e0619857f38260ae74366ba4bb860779530
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="-c-compiler-options"></a>@ (Opciones del compilador de C#)
 La opción @ le permite especificar un archivo que contiene opciones del compilador y archivos de código fuente para compilar.  
@@ -46,7 +46,7 @@ La opción @ le permite especificar un archivo que contiene opciones del compila
   
  El compilador procesa las opciones de comando a medida que se encuentran. Por tanto, los argumentos de línea de comandos pueden reemplazar las opciones enumeradas anteriormente en archivos de respuesta. Por el contrario, las opciones en un archivo de respuesta reemplazarán las opciones enumeradas anteriormente en la línea de comandos o en otros archivos de respuesta.  
   
- C# proporciona el archivo csc.rsp, que se encuentra en el mismo directorio que el archivo csc.exe. Vea [/noconfig](../../../csharp/language-reference/compiler-options/noconfig-compiler-option.md) para obtener más información sobre csc.rsp.  
+ C# proporciona el archivo csc.rsp, que se encuentra en el mismo directorio que el archivo csc.exe. Vea [-noconfig](../../../csharp/language-reference/compiler-options/noconfig-compiler-option.md) para saber más sobre csc.rsp.  
   
  No se puede establecer esta opción del compilador en el entorno de desarrollo de Visual Studio, ni se puede cambiar mediante programación.  
   
@@ -55,7 +55,7 @@ La opción @ le permite especificar un archivo que contiene opciones del compila
   
 ```console  
 # build the first output file  
-/target:exe /out:MyExe.exe source1.cs source2.cs  
+-target:exe -out:MyExe.exe source1.cs source2.cs  
 ```  
   
 ## <a name="see-also"></a>Vea también  

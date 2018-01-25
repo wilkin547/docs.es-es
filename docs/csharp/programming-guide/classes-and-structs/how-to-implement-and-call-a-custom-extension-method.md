@@ -9,14 +9,14 @@ ms.assetid: 7dab2a56-cf8e-4a47-a444-fe610a02772a
 caps.latest.revision: "15"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 7de999c53f02fcc2bde4a8ccf504ba2b1d032638
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: a277412c69d26f20721381d9cfa839c7f082f2f2
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-implement-and-call-a-custom-extension-method-c-programming-guide"></a>Cómo: Implementar e invocar un método de extensión personalizado (Guía de programación de C#)
-En este tema se muestra cómo implementar sus propios métodos de extensión para cualquier tipo de la [biblioteca de clases .NET Framework](http://go.microsoft.com/fwlink/?LinkID=217856) o para cualquier otro tipo .NET que desee extender. El código de cliente puede usar los métodos de extensión agregando una referencia a la DLL que los contiene y agregando una directiva [using](../../../csharp/language-reference/keywords/using-directive.md) que especifique el espacio de nombres en el que se definen los métodos de extensión.  
+En este tema se muestra cómo implementar sus propios métodos de extensión para cualquier tipo de .NET. El código de cliente puede usar los métodos de extensión agregando una referencia a la DLL que los contiene y agregando una directiva [using](../../../csharp/language-reference/keywords/using-directive.md) que especifique el espacio de nombres en el que se definen los métodos de extensión.  
   
 ## <a name="to-define-and-call-the-extension-method"></a>Para definir y llamar al método de extensión  
   

@@ -19,11 +19,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: de9d94c9b4dfbdccb4ea5b3a7281715460d076a9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ffe4670ef07b0a9b541bf2099958aa943bba2f68
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="overview-of-the-net-framework"></a>Información general acerca de .NET Framework
 
@@ -96,7 +96,7 @@ Como en cualquier biblioteca de clases orientada a objetos, los tipos de .NET Fr
 
 - Aplicaciones orientadas a servicios mediante Windows Communication Foundation (WCF). Vea [Aplicaciones orientadas a servicios con WCF](../../../docs/framework/wcf/index.md).
 
-- Aplicaciones habilitadas para el flujo de trabajo mediante Windows Workflow Foundation (WF). Vea [Crear flujos de trabajo en .NET Framework](http://msdn.microsoft.com/en-us/cbf3880f-dc7b-466d-b808-1109b1223f4a).
+- Aplicaciones habilitadas para el flujo de trabajo mediante Windows Workflow Foundation (WF). Vea [Crear flujos de trabajo en .NET Framework](http://msdn.microsoft.com/library/cbf3880f-dc7b-466d-b808-1109b1223f4a).
 
 Las clases de Windows Forms son un conjunto completo de tipos reutilizables que simplifican enormemente el desarrollo de GUI para Windows. Si escribe una aplicación de formularios Web Forms de ASP.NET, puede usar las clases de formularios Web Forms.
 
@@ -106,5 +106,5 @@ Las clases de Windows Forms son un conjunto completo de tipos reutilizables que 
 [Guía de instalación](../../../docs/framework/install/index.md)   
 [Guía de desarrollo](../../../docs/framework/development-guide.md)   
 [Herramientas](../../../docs/framework/tools/index.md)   
-[Ejemplos de .NET Framework](http://msdn.microsoft.com/en-us/177055f8-4a1f-43e7-aee6-995c196079b1)   
+[Ejemplos de .NET Framework](http://msdn.microsoft.com/library/177055f8-4a1f-43e7-aee6-995c196079b1)   
 [Biblioteca de clases .NET Framework](http://go.microsoft.com/fwlink/?LinkID=227195)

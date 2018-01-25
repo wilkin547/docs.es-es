@@ -22,11 +22,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 9a9774a9811d5c53d44d66fba452098367846bf6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2e6b98d03988c5eb747fb3a4c766c98f477a3b5a
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="tlbimpexe-type-library-importer"></a>TlbImp.exe (Importador de la biblioteca de tipos)
 El Importador de la biblioteca de tipos convierte las definiciones de tipos encontradas en una biblioteca de tipos COM en las definiciones equivalentes en un ensamblado de Common Language Runtime. El resultado de Tlbimp.exe es un archivo binario (un ensamblado) que contiene los metadatos en tiempo de ejecución para los tipos definidos en la biblioteca de tipos original. Este archivo se puede examinar con herramientas como [Ildasm.exe](../../../docs/framework/tools/ildasm-exe-il-disassembler.md).  
@@ -61,7 +61,7 @@ tlbimp tlbFile [options]
 |**/noclassmembers**|Evita que Tlbimp.exe agregue miembros a las clases. Esto evita una posible excepción <xref:System.TypeLoadException>.|  
 |**/nologo**|Suprime la presentación de la portada de inicio de Microsoft.|  
 |**/out:** *nombreArchivo*|Especifica el nombre del archivo de salida, el ensamblado y el espacio de nombres en el que se escriben las definiciones de los metadatos. La opción **/out** no afecta al espacio de nombres del ensamblado si la biblioteca de tipos especifica el atributo personalizado de lenguaje de definición de interfaz (IDL) que controla explícitamente el espacio de nombres del ensamblado. Si no se especifica esta opción, Tlbimp.exe escribe los metadatos en un archivo con el mismo nombre que la biblioteca de tipos real definida en el archivo de entrada y le asigna una extensión .dll. Si el archivo de salida tiene el mismo nombre que el archivo de entrada, la herramienta genera un error para evitar que se sobrescriba la biblioteca de tipos.|  
-|**/primary**|Genera un ensamblado de interoperabilidad primario para la biblioteca de tipos especificada. La información se agrega al ensamblado indicando que se ha generado con el editor de la biblioteca de tipos. Al especificar un ensamblado de interoperabilidad primario, es posible diferenciar el ensamblado de un editor de otros ensamblados creados desde la biblioteca de tipos mediante Tlbimp.exe. Solo debería utilizar la opción **/primary** si es el editor de la biblioteca de tipos que va a importar con Tlbimp.exe. Tenga en cuenta que debe firmar un ensamblado de interoperabilidad primario con un [nombre seguro](../../../docs/framework/app-domains/strong-named-assemblies.md). Para obtener más información, vea [Ensamblados de interoperabilidad primarios](http://msdn.microsoft.com/en-us/b977a8be-59a0-40a0-a806-b11ffba5c080).|  
+|**/primary**|Genera un ensamblado de interoperabilidad primario para la biblioteca de tipos especificada. La información se agrega al ensamblado indicando que se ha generado con el editor de la biblioteca de tipos. Al especificar un ensamblado de interoperabilidad primario, es posible diferenciar el ensamblado de un editor de otros ensamblados creados desde la biblioteca de tipos mediante Tlbimp.exe. Solo debería utilizar la opción **/primary** si es el editor de la biblioteca de tipos que va a importar con Tlbimp.exe. Tenga en cuenta que debe firmar un ensamblado de interoperabilidad primario con un [nombre seguro](../../../docs/framework/app-domains/strong-named-assemblies.md). Para obtener más información, vea [Ensamblados de interoperabilidad primarios](http://msdn.microsoft.com/library/b977a8be-59a0-40a0-a806-b11ffba5c080).|  
 |**/product:** `productinformation`|Agrega información del producto al ensamblado de salida. Esta información se puede ver en el cuadro de diálogo **Propiedades del archivo** del ensamblado.|  
 |**/productversion:** `productversioninformation`|Agrega información de la versión al ensamblado de salida. No hay restricciones de formato. Esta información se puede ver en el cuadro de diálogo **Propiedades del archivo** del ensamblado.|  
 |**/publickey:** *nombreArchivo*|Especifica el archivo que contiene la clave pública que se va a utilizar para firmar el ensamblado resultante. Si se especifica las opciones **/keyfile:** o **/keycontainer:** en lugar de **/publickey:**, Tlbimp.exe genera la clave pública a partir del par de claves pública y privada suministrado por **/keyfile:** o **/keycontainer:**. La opción **/publickey:** admite los escenarios de clave de prueba y de firma retardada. El archivo tiene el formato generado por Sn.exe. Para obtener más información, vea la opción **-p** de Sn.exe en la [herramienta Nombre seguro (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md).|  
@@ -138,9 +138,9 @@ void SomeMethod(out bool x);
  [Herramientas](../../../docs/framework/tools/index.md)  
  [Tlbexp.exe (Exportador de la biblioteca de tipos)](../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md)  
  [Importar una biblioteca de tipos como un ensamblado](../../../docs/framework/interop/importing-a-type-library-as-an-assembly.md)  
- [Resumen de la conversión de bibliotecas de tipos en ensamblados](http://msdn.microsoft.com/en-us/bf3f90c5-4770-4ab8-895c-3ba1055cc958)  
+ [Resumen de la conversión de bibliotecas de tipos en ensamblados](http://msdn.microsoft.com/library/bf3f90c5-4770-4ab8-895c-3ba1055cc958)  
  [Ildasm.exe (Desensamblador de IL)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md)  
  [Sn.exe (Herramienta de nombre seguro)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)  
  [Ensamblados con nombre seguro](../../../docs/framework/app-domains/strong-named-assemblies.md)  
- [Atributos para importar bibliotecas de tipos en ensamblados de interoperabilidad](http://msdn.microsoft.com/en-us/81e587b8-393f-43e1-9add-c4b05e65cbfd)  
+ [Atributos para importar bibliotecas de tipos en ensamblados de interoperabilidad](http://msdn.microsoft.com/library/81e587b8-393f-43e1-9add-c4b05e65cbfd)  
  [Símbolos del sistema](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

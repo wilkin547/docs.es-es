@@ -12,18 +12,18 @@ ms.assetid: 175ce3ff-9bbf-4e64-8421-faeb81a0bb51
 caps.latest.revision: "35"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 34a80e4bf129c6104d50a8a0877271136c0c4198
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: 4c94e6cd2894959d64fe463c85b4460893f2bf96
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="extension-methods-c-programming-guide"></a>Métodos de extensión (Guía de programación de C#)
 Los métodos de extensión permiten "agregar" métodos a los tipos existentes sin crear un nuevo tipo derivado, recompilar o modificar de otra manera el tipo original. Los métodos de extensión son una clase especial de método estático, pero se les llama como si fueran métodos de instancia en el tipo extendido. En el caso del código de cliente escrito en C#, F# y Visual Basic, no existe ninguna diferencia aparente entre llamar a un método de extensión y llamar a los métodos realmente definidos en un tipo.  
   
  Los métodos de extensión más comunes son los operadores de consulta [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] estándar, que agregan funciones de consulta a los tipos <xref:System.Collections.IEnumerable?displayProperty=nameWithType> y <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> existentes. Para usar los operadores de consulta estándar, inclúyalos primero en el ámbito con una directiva `using System.Linq`. A partir de ese momento, cualquier tipo que implemente <xref:System.Collections.Generic.IEnumerable%601> parecerá tener métodos de instancia como <xref:System.Linq.Enumerable.GroupBy%2A>, <xref:System.Linq.Enumerable.OrderBy%2A>, <xref:System.Linq.Enumerable.Average%2A>, etc. Puede ver estos métodos adicionales en la finalización de instrucciones de IntelliSense al escribir "punto" después de una instancia de un tipo <xref:System.Collections.Generic.IEnumerable%601>, como <xref:System.Collections.Generic.List%601> o <xref:System.Array>.  
   
- En el ejemplo siguiente se muestra cómo llamar al método `OrderBy` de operador de consulta estándar en una matriz de enteros. La expresión entre paréntesis es una expresión lambda. Muchos operadores de consulta estándar toman expresiones lambda como parámetros, pero no es un requisito para los métodos de extensión. Para obtener más información, vea [Lambda Expressions](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md) (Expresiones lambda).  
+ En el ejemplo siguiente se muestra cómo llamar al método `OrderBy` de operador de consulta estándar en una matriz de enteros. La expresión entre paréntesis es una expresión lambda. Muchos operadores de consulta estándar toman expresiones lambda como parámetros, pero no es un requisito para los métodos de extensión. Para obtener más información, vea [Expresiones lambda](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md).  
   
  [!code-csharp[csProgGuideExtensionMethods#3](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/extension-methods_1.cs)]  
   
@@ -91,7 +91,7 @@ using System.Linq;
  [Ejemplos de programación en paralelo (incluyen numerosos métodos de extensión de ejemplo)](http://code.msdn.microsoft.com/Samples-for-Parallel-b4b76364)  
  [Expresiones lambda](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)  
  [Información general sobre operadores de consulta estándar](http://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)  
- [Conversion rules for Instance parameters and their impact](http://go.microsoft.com/fwlink/?LinkId=112385) (Reglas de conversión para los parámetros de instancia y su impacto)  
- [Extension methods Interoperability between languages](http://go.microsoft.com/fwlink/?LinkId=112386) (Interoperabilidad de los métodos de extensión entre lenguajes)  
- [Extension methods and Curried Delegates](http://go.microsoft.com/fwlink/?LinkId=112387) (Métodos de extensión y delegados currificados)  
- [Extension method Binding and Error reporting](http://go.microsoft.com/fwlink/?LinkId=112388) (Enlazar métodos de extensión y notificación de errores)
+ [Conversion rules for Instance parameters and their impact](https://blogs.msdn.microsoft.com/sreekarc/2007/10/11/conversion-rules-for-instance-parameters-and-their-impact) (Reglas de conversión para los parámetros de instancia y su impacto)  
+ [Extension methods Interoperability between languages](https://blogs.msdn.microsoft.com/sreekarc/2007/10/11/extension-methods-interoperability-between-languages) (Interoperabilidad de los métodos de extensión entre lenguajes)  
+ [Extension methods and Curried Delegates](https://blogs.msdn.microsoft.com/sreekarc/2007/05/01/extension-methods-and-curried-delegates) (Métodos de extensión y delegados currificados)  
+ [Extension method Binding and Error reporting](https://blogs.msdn.microsoft.com/sreekarc/2007/04/26/extension-method-binding-and-error-reporting) (Enlazar métodos de extensión y notificación de errores)

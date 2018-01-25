@@ -13,29 +13,29 @@ ms.assetid: 04680ec3-08d6-4e2e-a274-38310e10e33c
 caps.latest.revision: "15"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 28c2cdc26d32d98e617a0c4b8cd282d2fbc87f4d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 0127f8982d4b8c487a7e243025052e3eb9a5ff75
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="warnaserror-c-compiler-options"></a>/warnaserror (Opciones del compilador de C#)
-La opción **/warnaserror+** trata todas las advertencias como errores  
+# <a name="-warnaserror-c-compiler-options"></a>-warnaserror (Opciones del compilador de C#)
+La opción **-warnaserror+** trata todas las advertencias como errores  
   
 ## <a name="syntax"></a>Sintaxis  
   
 ```console  
-/warnaserror[<U>+</U> | -][:warning-list]  
+-warnaserror[<U>+</U> | -][:warning-list]  
 ```  
   
 ## <a name="remarks"></a>Comentarios  
  Cualquier mensaje que se notificaría de manera normal como una advertencia se notifica en su lugar como un error, y el proceso de compilación se detiene (no se compila ningún archivo de salida).  
   
- De manera predeterminada, **/warnaserror-** está en vigor, lo que provoca que las advertencias no impidan la generación de un archivo de salida. **/warnaserror**, que es igual que **/warnaserror+**, hace que las advertencias se traten como errores.  
+ De manera predeterminada, **-warnaserror-** está en vigor, lo que provoca que las advertencias no impidan la generación de un archivo de salida. **-warnaserror**, que es igual que **-warnaserror+**, hace que las advertencias se traten como errores.  
   
  Opcionalmente, si solo quiere que algunas advertencias específicas se traten como errores, puede especificar una lista separada por comas de números de advertencia que se tratarán como errores.  
   
- Use [/warn](../../../csharp/language-reference/compiler-options/warn-compiler-option.md) para especificar el nivel de advertencias que quiere que muestre el compilador. Use [/nowarn](../../../csharp/language-reference/compiler-options/nowarn-compiler-option.md) para deshabilitar determinadas advertencias.  
+ Use [-warn](../../../csharp/language-reference/compiler-options/warn-compiler-option.md) para especificar el nivel de advertencias que quiere que muestre el compilador. Use [-nowarn](../../../csharp/language-reference/compiler-options/nowarn-compiler-option.md) para deshabilitar determinadas advertencias.  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del compilador en el entorno de desarrollo de Visual Studio  
   
@@ -51,8 +51,8 @@ La opción **/warnaserror+** trata todas las advertencias como errores
  Compile `in.cs` y haga que el compilador no muestre ninguna advertencia:  
   
 ```console  
-csc /warnaserror in.cs  
-csc /warnaserror:642,649,652 in.cs  
+csc -warnaserror in.cs  
+csc -warnaserror:642,649,652 in.cs  
 ```  
   
 ## <a name="see-also"></a>Vea también  

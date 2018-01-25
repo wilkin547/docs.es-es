@@ -12,11 +12,11 @@ ms.assetid: 9cdf97e6-331d-492b-85e1-3ec3171484e9
 caps.latest.revision: "20"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 91286b3c6b9a7239bcd5d5bac0ef08bfd7fa8345
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: de83f48fc644d8b232d9ef9e1698272f20a27d65
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="-operator-c-reference"></a>Operador += (Referencia de C#)
 El operador de asignación y suma.  
@@ -38,7 +38,7 @@ x = x + y
   
  El operador `+=` no se puede sobrecargar directamente, pero los tipos definidos por el usuario pueden sobrecargar el [operador +](../../../csharp/language-reference/operators/addition-operator.md) (vea [operator](../../../csharp/language-reference/keywords/operator.md)).  
   
- El operador `+=` también se usa para especificar un método al que se llamará en respuesta a un evento; dichos métodos se denominan controladores de eventos. El uso del operador `+=` en este contexto se conoce como *suscripción a un evento*. Para obtener más información, vea [How to: Subscribe to and Unsubscribe from Events](../../../csharp/programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md) (Cómo: Suscribir y cancelar la suscripción a eventos [Guía de programación de C#]). y [Delegados](../../../csharp/programming-guide/delegates/index.md).  
+ El operador `+=` también se usa para especificar un método al que se llamará en respuesta a un evento; dichos métodos se denominan controladores de eventos. El uso del operador `+=` en este contexto se conoce como *suscripción a un evento*. Para más información, vea [Cómo: Suscribir y cancelar la suscripción a eventos (Guía de programación de C#)](../../../csharp/programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md) y [Delegados](../../../csharp/programming-guide/delegates/index.md).  
   
 ## <a name="example"></a>Ejemplo  
  [!code-csharp[csRefOperators#35](../../../csharp/language-reference/operators/codesnippet/CSharp/addition-assignment-operator_1.cs)]  

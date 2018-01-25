@@ -16,11 +16,11 @@ ms.assetid: 1c726124-781d-4976-9baa-ed46814ff3fe
 caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 81eba9a71d90c79f72ccadfa65431754dfb0164e
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: a756be7f61c812269d5ee08d99ccf6785ddcc7df
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-write-text-to-files-in-the-my-documents-directory-in-visual-basic"></a>Cómo: Escribir texto en archivos del directorio Mis documentos en Visual Basic
 El objeto `My.Computer.FileSystem.SpecialDirectories` le permite tener acceso a los directorios especiales, como el directorio **MyDocuments**.  
@@ -49,7 +49,7 @@ El objeto `My.Computer.FileSystem.SpecialDirectories` le permite tener acceso a 
 ## <a name="net-framework-security"></a>Seguridad de .NET Framework  
  Si realiza una ejecución en un contexto de confianza parcial, el código podría desencadenar una excepción por falta de privilegios. Para obtener más información, vea [Code Access Security Basics](../../../../framework/misc/code-access-security-basics.md) (Aspectos básicos de seguridad de acceso del código).  
   
- En este ejemplo se crea un nuevo archivo. Si una aplicación necesita crear un archivo, precisará permisos de creación para la carpeta correspondiente. Los permisos se establecen usando listas de control de acceso. Si el archivo ya existe, la aplicación solo necesitará permiso de escritura, un privilegio menor. Siempre que sea posible, resulta más seguro crear el archivo durante la implementación y conceder solo privilegios de lectura en un solo archivo, en lugar de privilegios de creación para una carpeta. También es más seguro escribir datos en carpetas de usuario en lugar de en la carpeta raíz o en la carpeta **Archivos de programa**. Para obtener más información, vea [Información general sobre la tecnología ACL](http://msdn.microsoft.com/en-us/06fbf66d-6f02-4378-b863-b2f12e349045).  
+ En este ejemplo se crea un nuevo archivo. Si una aplicación necesita crear un archivo, precisará permisos de creación para la carpeta correspondiente. Los permisos se establecen usando listas de control de acceso. Si el archivo ya existe, la aplicación solo necesitará permiso de escritura, un privilegio menor. Siempre que sea posible, resulta más seguro crear el archivo durante la implementación y conceder solo privilegios de lectura en un solo archivo, en lugar de privilegios de creación para una carpeta. También es más seguro escribir datos en carpetas de usuario en lugar de en la carpeta raíz o en la carpeta **Archivos de programa**. Para obtener más información, vea [Información general sobre la tecnología ACL](http://msdn.microsoft.com/library/06fbf66d-6f02-4378-b863-b2f12e349045).  
   
 ## <a name="see-also"></a>Vea también  
  <xref:System.IO.Path.Combine%2A?displayProperty=nameWithType>  

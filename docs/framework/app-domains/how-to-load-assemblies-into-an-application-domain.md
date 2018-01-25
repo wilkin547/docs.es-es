@@ -21,11 +21,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 545ac4d3a14f083dc4513f12b018cda5c7833b21
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 55c166b4d996eb96b284ea8c78fd2df98431187f
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-load-assemblies-into-an-application-domain"></a>Cómo: Cargar ensamblados en un dominio de aplicación
 Existen numerosas formas de cargar un ensamblado en un dominio de aplicación. El método recomendado consiste en usar el método <xref:System.Reflection.Assembly.Load%2A> `static` (`Shared` en Visual Basic) de la clase <xref:System.Reflection.Assembly?displayProperty=nameWithType>. A continuación se indican otras formas de cargar los ensamblados:  
@@ -46,7 +46,7 @@ Existen numerosas formas de cargar un ensamblado en un dominio de aplicación. E
 > [!NOTE]
 >  A partir de la versión 2.0 de .NET Framework, el tiempo de ejecución no cargará ningún ensamblado compilado con una versión de .NET Framework que tenga un número de versión superior al tiempo de ejecución cargado actualmente. Esto se aplica a la combinación de los componentes principal y secundario del número de versión.  
   
- Puede especificar cómo se comparte entre los dominios de aplicación el código compilado Just-In-Time (JIT) de los ensamblados cargados. Para obtener más información, consulte [Dominios de aplicación y ensamblados](http://msdn.microsoft.com/en-us/433b04ae-4ba8-4849-9dbd-79194f240346).  
+ Puede especificar cómo se comparte entre los dominios de aplicación el código compilado Just-In-Time (JIT) de los ensamblados cargados. Para obtener más información, consulte [Dominios de aplicación y ensamblados](http://msdn.microsoft.com/library/433b04ae-4ba8-4849-9dbd-79194f240346).  
   
 ## <a name="example"></a>Ejemplo  
  El siguiente código carga un ensamblado llamado "example.exe" o "example.dll" en el dominio de aplicación actual, obtiene del ensamblado un tipo llamado `Example`, obtiene un método sin parámetros llamado `MethodA` para dicho tipo y lo ejecuta. Para obtener una descripción completa sobre cómo obtener información de un ensamblado cargado, consulte [Dynamically Loading and Using Types](../../../docs/framework/reflection-and-codedom/dynamically-loading-and-using-types.md) (Cargar y usar tipos dinámicamente).  
@@ -57,8 +57,8 @@ Existen numerosas formas de cargar un ensamblado en un dominio de aplicación. E
   
 ## <a name="see-also"></a>Vea también  
  <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A>  
- [Programar con dominios de aplicación](http://msdn.microsoft.com/en-us/bd36055b-56bd-43eb-b4d8-820c37172131)  
+ [Programar con dominios de aplicación](http://msdn.microsoft.com/library/bd36055b-56bd-43eb-b4d8-820c37172131)  
  [Reflexión](../../../docs/framework/reflection-and-codedom/reflection.md)  
  [Utilizar dominios de aplicación](../../../docs/framework/app-domains/use.md)  
  [Cargar ensamblados en el contexto de solo reflexión](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)  
- [Dominios de aplicación y ensamblados](http://msdn.microsoft.com/en-us/433b04ae-4ba8-4849-9dbd-79194f240346)
+ [Dominios de aplicación y ensamblados](http://msdn.microsoft.com/library/433b04ae-4ba8-4849-9dbd-79194f240346)

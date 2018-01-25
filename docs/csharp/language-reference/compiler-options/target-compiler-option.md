@@ -14,14 +14,14 @@ ms.assetid: a18bbd8e-bbf7-49e7-992c-717d0eb1f76f
 caps.latest.revision: "22"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 4666f0305fc2de35c1fa594ccef3dd3a64c0f67c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 44dd99ef834f98a1a918c659d3057f8f6f91805a
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="target-c-compiler-options"></a>/target (Opciones del compilador de C#)
-La opción del compilador **/target** se puede especificar en uno de cuatro formatos:  
+# <a name="-target-c-compiler-options"></a>-target (Opciones del compilador de C#)
+La opción del compilador **-target** se puede especificar en uno de estos cuatro formatos:  
   
  [/target:appcontainerexe](../../../csharp/language-reference/compiler-options/target-appcontainerexe-compiler-option.md)  
  Para crear un archivo .exe para aplicaciones de [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)].  
@@ -41,15 +41,15 @@ La opción del compilador **/target** se puede especificar en uno de cuatro form
  [/target:winmdobj](../../../csharp/language-reference/compiler-options/target-winmdobj-compiler-option.md)  
  Para crear un archivo .winmdobj intermedio.  
   
- A menos que se especifique **/target:module**, **/target** hace que se coloque un manifiesto de ensamblado de .NET Framework en un archivo de salida. Para más información, vea [Ensamblados en Common Language Runtime](../../../framework/app-domains/assemblies-in-the-common-language-runtime.md) y [Atributos comunes](../../programming-guide/concepts/attributes/common-attributes.md).  
+ A menos que se especifique **-target:module**, **-target** hace que se coloque un manifiesto de ensamblado de .NET Framework en un archivo de salida. Para más información, vea [Ensamblados en Common Language Runtime](../../../framework/app-domains/assemblies-in-the-common-language-runtime.md) y [Atributos comunes](../../programming-guide/concepts/attributes/common-attributes.md).  
   
  El manifiesto de ensamblado se coloca en el primer archivo de salida .exe de la compilación o en el primer archivo DLL si no hay ningún archivo de salida .exe. Por ejemplo, en la siguiente línea de comandos, el manifiesto se colocará en `1.exe`:  
   
 ```console  
-csc /out:1.exe t1.cs /out:2.netmodule t2.cs  
+csc -out:1.exe t1.cs -out:2.netmodule t2.cs  
 ```  
   
- El compilador crea solo un manifiesto de ensamblado por compilación. La información sobre todos los archivos de una compilación se coloca en el manifiesto de ensamblado. Todos los archivos de salida, excepto los creados con **/target:module**, pueden contener un manifiesto de ensamblado. Cuando se generan varios archivos de salida en la línea de comandos, solo se puede crear un manifiesto de ensamblado que debe ir en el primer archivo de salida especificado en la línea de comandos. Independientemente de cuál sea el primer archivo de salida (**/target:exe**, **/target:winexe**, **/target:library** o **/target:module**), los demás archivos de salida generados en la misma compilación deben ser módulos (**/target:module**).  
+ El compilador crea solo un manifiesto de ensamblado por compilación. La información sobre todos los archivos de una compilación se coloca en el manifiesto de ensamblado. Todos los archivos de salida, excepto los creados con **-target:module**, pueden contener un manifiesto de ensamblado. Cuando se generan varios archivos de salida en la línea de comandos, solo se puede crear un manifiesto de ensamblado que debe ir en el primer archivo de salida especificado en la línea de comandos. Independientemente de cuál sea el primer archivo de salida (**-target:exe**, **-target:winexe**, **-target:library** o **-target:module**), los demás archivos de salida generados en la misma compilación deben ser módulos (**-target:module**).  
   
  Si crea un ensamblado, puede indicar que todo o parte del código es conforme a CLS mediante el atributo <xref:System.CLSCompliantAttribute>.  
   
@@ -69,4 +69,4 @@ public class TestClass
 ## <a name="see-also"></a>Vea también  
  [Opciones del compilador de C#](../../../csharp/language-reference/compiler-options/index.md)  
  [Administrar propiedades de soluciones y proyectos](/visualstudio/ide/managing-project-and-solution-properties)  
- [/subsystemversion (Opciones del compilador de C#)](../../../csharp/language-reference/compiler-options/subsystemversion-compiler-option.md)
+ [-subsystemversion (Opciones del compilador de C#)](../../../csharp/language-reference/compiler-options/subsystemversion-compiler-option.md)

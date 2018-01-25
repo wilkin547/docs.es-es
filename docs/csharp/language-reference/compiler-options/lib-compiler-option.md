@@ -13,19 +13,19 @@ ms.assetid: b0efcc88-e8aa-4df4-a00b-8bdef70b7673
 caps.latest.revision: "16"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 476bc43987b5ac8fa222b767b068a9ca14537bc2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 58203570119676e0737b0142b7a7a5fbf23f1ae2
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="lib-c-compiler-options"></a>/lib (Opciones del compilador de C#)
-La opción **/lib** especifica la ubicación de los ensamblados a los que se hace referencia mediante la opción [/reference (Opciones del compilador de C#)](../../../csharp/language-reference/compiler-options/reference-compiler-option.md).  
+# <a name="-lib-c-compiler-options"></a>-lib (Opciones del compilador de C#)
+La opción **-lib** especifica la ubicación de los ensamblados a los que se hace referencia mediante la opción [/reference (Opciones del compilador de C#)](../../../csharp/language-reference/compiler-options/reference-compiler-option.md).  
   
 ## <a name="syntax"></a>Sintaxis  
   
 ```console  
-/lib:dir1[,dir2]  
+-lib:dir1[,dir2]  
 ```  
   
 ## <a name="arguments"></a>Argumentos  
@@ -42,15 +42,15 @@ La opción **/lib** especifica la ubicación de los ensamblados a los que se hac
   
 2.  El directorio del sistema de Common Language Runtime.  
   
-3.  Directorios especificados por **/lib**.  
+3.  Directorios especificados por **-lib**.  
   
 4.  Directorios especificados por la variable de entorno LIB.  
   
- Use **/reference** para especificar una referencia a un ensamblado.  
+ Use **-reference** para especificar una referencia a un ensamblado.  
   
- La opción **/lib** es sumatoria; si se especifica más de una vez se anexa a valores ya existentes.  
+ La opción **-lib** es sumatoria; si se especifica más de una vez, se anexa a valores ya existentes.  
   
- Una alternativa al uso de **/lib** consiste en copiar en el directorio de trabajo los ensamblados requeridos; esto permitirá pasar el nombre del ensamblado a **/reference**. Después, se pueden eliminar los ensamblados del directorio de trabajo. Dado que en el manifiesto del ensamblado no se especifica la ruta al ensamblado dependiente, la aplicación puede iniciarse en el equipo de destino y desde allí buscará y usará el ensamblado en la caché global de ensamblados.  
+ Una alternativa al uso de **-lib** consiste en copiar los ensamblados necesarios en el directorio de trabajo; esto permitirá pasar el nombre del ensamblado a **-reference**. Después, se pueden eliminar los ensamblados del directorio de trabajo. Dado que en el manifiesto del ensamblado no se especifica la ruta al ensamblado dependiente, la aplicación puede iniciarse en el equipo de destino y desde allí buscará y usará el ensamblado en la caché global de ensamblados.  
   
  El hecho de que el compilador puede hacer referencia al ensamblado no implica que Common Language Runtime pueda buscar y cargar el ensamblado en tiempo de ejecución. Vea [Cómo el motor en tiempo de ejecución ubica ensamblados](../../../framework/deployment/how-the-runtime-locates-assemblies.md) para obtener los detalles sobre cómo busca el motor en tiempo de ejecución los ensamblados a los que se hace referencia.  
   
@@ -68,7 +68,7 @@ La opción **/lib** especifica la ubicación de los ensamblados a los que se hac
  Compile t2.cs para crear un archivo .exe. El compilador buscará referencias a ensamblados en el directorio de trabajo y en el directorio raíz de la unidad C.  
   
 ```console  
-csc /lib:c:\ /reference:t2.dll t2.cs  
+csc -lib:c:\ -reference:t2.dll t2.cs  
 ```  
   
 ## <a name="see-also"></a>Vea también  

@@ -11,20 +11,20 @@ helpviewer_keywords:
 - -refout compiler option [C#]
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: dc78165fc8f273948111c174ae0bf0af6591a8ab
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: fbae6f461304c37ba2ef10da16b5d520377bb225
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="refout-c-compiler-options"></a>/refout (Opciones del compilador de C#)
+# <a name="-refout-c-compiler-options"></a>-refout (Opciones del compilador de C#)
 
-La opción **/refout** especifica una ruta de archivo donde el ensamblado de referencia debe mostrarse. Esto se traduce en `metadataPeStream` en la API de emisión.
+La opción **-refout** especifica una ruta de archivo donde el ensamblado de referencia debe mostrarse. Esto se traduce en `metadataPeStream` en la API de emisión.
 
 ## <a name="syntax"></a>Sintaxis
 
 ```console
-/refout:filepath
+-refout:filepath
 ```
 
 ## <a name="arguments"></a>Argumentos
@@ -45,7 +45,7 @@ Los ensamblados de referencia también quitan los metadatos (miembros privados) 
 - Se conservan todos los métodos virtuales. Se mantienen las implementaciones explícitas de interfaces. Se conservan los eventos y propiedades que se han implementado explícitamente, ya que sus descriptores de acceso son virtuales (y por lo tanto se conservan).
 - Se conservan todos los campos de un struct. (Es un candidato para el refinamiento posterior de C#-7.1)
 
-Las opciones `/refout` y [`/refonly`](refonly-compiler-option.md) son mutuamente excluyentes.
+Las opciones `-refout` y [`-refonly`](refonly-compiler-option.md) son mutuamente excluyentes.
 
 ## <a name="see-also"></a>Vea también
  [Opciones del compilador de C#](../../../csharp/language-reference/compiler-options/index.md)  

@@ -14,11 +14,11 @@ ms.assetid: 6493182a-b0b6-4539-a719-518a168cb730
 caps.latest.revision: "39"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: c17dcce921f3a6ff1a9c547c5ff5d34c3dbbf28d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 1b6511394e69edd344c4f4a1bbc9da549a1a2a17
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="hello-world----your-first-program-c-programming-guide"></a>Hello World, su primer programa (Guía de programación de C#)
 En el siguiente procedimiento se crea una versión de C# del programa tradicional "Hello World!" . El programa muestra la cadena `Hello World!`.  
@@ -135,7 +135,7 @@ En el siguiente procedimiento se crea una versión de C# del programa tradiciona
  [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
  [Dentro de un programa de C#](../../../csharp/programming-guide/inside-a-program/index.md)  
  [Cadenas](../../../csharp/programming-guide/strings/index.md)  
- [\<paveover>Aplicaciones de ejemplo de C#](http://msdn.microsoft.com/en-us/9a9d7aaa-51d3-4224-b564-95409b0f3e15)  
+ [\<paveover>Aplicaciones de ejemplo de C#](http://msdn.microsoft.com/library/9a9d7aaa-51d3-4224-b564-95409b0f3e15)  
  [Referencia de C#](../../../csharp/language-reference/index.md)  
  [Main() y argumentos de la línea de comandos](../../../csharp/programming-guide/main-and-command-args/index.md)  
  [Introducción a Visual C# y Visual Basic](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)

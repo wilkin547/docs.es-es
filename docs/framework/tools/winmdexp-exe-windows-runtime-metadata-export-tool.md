@@ -17,11 +17,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 91edc97794f66edd3a3db7892d57ef5f0c8265c7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 723f724663cb7f08814327a04193f96db7f02ed0
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="winmdexpexe-windows-runtime-metadata-export-tool"></a>Winmdexp.exe (Herramienta de exportación de metadatos de Windows Runtime)
 La Herramienta de exportación de metadatos de [!INCLUDE[wrt](../../../includes/wrt-md.md)] (Winmdexp.exe) transforma un módulo de .NET Framework en un archivo que contiene los metadatos de [!INCLUDE[wrt](../../../includes/wrt-md.md)]. Aunque los ensamblados de .NET Framework y los archivos de metadatos de [!INCLUDE[wrt](../../../includes/wrt-md.md)] utilizan el mismo formato físico, existen diferencias en el contenido de las tablas de metadatos, lo que significa que los ensamblados de .NET Framework no se pueden utilizar de forma automática como componentes de [!INCLUDE[wrt](../../../includes/wrt-md.md)]. El proceso de convertir un módulo de .NET Framework en un componente de [!INCLUDE[wrt](../../../includes/wrt-md.md)] se denomina *exportación*. En [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] y [!INCLUDE[net_v451](../../../includes/net-v451-md.md)], el archivo de metadatos de Windows resultante (.winmd) contiene metadatos y la implementación.  
@@ -63,4 +63,4 @@ winmdexp [options] winmdmodule
  [Compatibilidad de .NET Framework con las aplicaciones de la Tienda Windows y Windows Runtime](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)  
  [Crear componentes de Windows en tiempo de ejecución en C# y Visual Basic](http://go.microsoft.com/fwlink/p/?LinkID=238313)  
  [Mensajes de error de Winmdexp.exe](../../../docs/framework/tools/winmdexp-exe-error-messages.md)  
- [Herramientas de compilación, implementación y configuración (.NET Framework)](http://msdn.microsoft.com/en-us/b8c921be-6012-4181-b8d4-ab15813fc9a7)
+ [Herramientas de compilación, implementación y configuración (.NET Framework)](http://msdn.microsoft.com/library/b8c921be-6012-4181-b8d4-ab15813fc9a7)

@@ -13,19 +13,19 @@ ms.assetid: e9d0f96a-5b75-45d6-9765-92538dd5f823
 caps.latest.revision: "8"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 108244d7de49c2ff4df1ac7202e77958743b32df
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 7528283765c2b6f4a9d5e84015526a95938a6281
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="pdb-c-compiler-options"></a>/pdb (Opciones del compilador de C#)
-La opción del compilador **/pdb** especifica el nombre y la ubicación del archivo de símbolos de depuración.  
+# <a name="-pdb-c-compiler-options"></a>-pdb (Opciones del compilador de C#)
+La opción del compilador **-pdb** especifica el nombre y la ubicación del archivo de símbolos de depuración.  
   
 ## <a name="syntax"></a>Sintaxis  
   
 ```console  
-/pdb:filename  
+-pdb:filename  
 ```  
   
 ## <a name="arguments"></a>Argumentos  
@@ -33,9 +33,9 @@ La opción del compilador **/pdb** especifica el nombre y la ubicación del arch
  El nombre y la ubicación del archivo de símbolos de depuración.  
   
 ## <a name="remarks"></a>Comentarios  
- Al especificar [/debug (Opciones del compilador de C#)](../../../csharp/language-reference/compiler-options/debug-compiler-option.md), el compilador creará un archivo .pdb en el mismo directorio en que el compilador creará el archivo de salida (.exe o .dll) con un nombre de archivo que es el mismo que el nombre del archivo de salida.  
+ Al especificar [-debug (Opciones del compilador de C#)](../../../csharp/language-reference/compiler-options/debug-compiler-option.md), el compilador creará un archivo .pdb en el mismo directorio en que el compilador creará el archivo de salida (.exe o .dll) con un nombre de archivo que es el mismo que el nombre del archivo de salida.  
   
- **/pdb** le permite especificar un nombre de archivo y una ubicación distintos del valor predeterminado para el archivo .pdb.  
+ **-pdb** le permite especificar un nombre de archivo y una ubicación distintos del valor predeterminado para el archivo .pdb.  
   
  No se puede establecer esta opción del compilador en el entorno de desarrollo de Visual Studio, ni se puede cambiar mediante programación.  
   
@@ -43,7 +43,7 @@ La opción del compilador **/pdb** especifica el nombre y la ubicación del arch
  Compile `t.cs` y cree un archivo .pdb denominado tt.pdb:  
   
 ```console  
-csc /debug /pdb:tt t.cs  
+csc -debug -pdb:tt t.cs  
 ```  
   
 ## <a name="see-also"></a>Vea también  

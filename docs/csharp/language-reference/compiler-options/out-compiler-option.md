@@ -13,19 +13,19 @@ ms.assetid: 70d91d01-7bd2-4aea-ba8b-4e9807e9caa5
 caps.latest.revision: "15"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 332e369b6fe2de79c9063daa9e6d5c0e83f0bcc8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 8ca85293086f8747cc4aaff02e7d9b5628b1e88a
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="out-c-compiler-options"></a>/out (Opciones del compilador de C#)
-La opción **/out** especifica el nombre del archivo de salida.  
+# <a name="-out-c-compiler-options"></a>-out (Opciones del compilador de C#)
+La opción **-out** especifica el nombre del archivo de salida.  
   
 ## <a name="syntax"></a>Sintaxis  
   
 ```console  
-/out:filename  
+-out:filename  
 ```  
   
 ## <a name="arguments"></a>Argumentos  
@@ -33,7 +33,7 @@ La opción **/out** especifica el nombre del archivo de salida.
  El nombre del archivo de salida creado por el compilador.  
   
 ## <a name="remarks"></a>Comentarios  
- En la línea de comandos, es posible especificar varios archivos de salida de una compilación. El compilador espera encontrar al menos un archivo de código fuente después de la opción **/out**. Posteriormente, todos los archivos de código fuente se compilarán en el archivo de salida especificado por la opción **/out**.  
+ En la línea de comandos, es posible especificar varios archivos de salida de una compilación. El compilador espera encontrar al menos un archivo de código fuente después de la opción **-out**. Posteriormente, todos los archivos de código fuente se compilarán en el archivo de salida especificado por la opción **-out**.  
   
  Hay que especificar el nombre completo y la extensión del archivo que se quiere crear.  
   
@@ -45,11 +45,11 @@ La opción **/out** especifica el nombre del archivo de salida.
   
  Un archivo de código fuente usado para compilar un archivo de salida no puede usarse para compilar otro archivo de este tipo en la misma compilación.  
   
- Cuando se producen varios archivos de salida en una compilación de línea de comandos, recuerde que solo uno de los archivos de salida puede ser un ensamblado y que solo el primero que haya especificado (ya sea implícita o explícitamente con **/out**) puede ser el ensamblado.  
+ Cuando se producen varios archivos de salida en una compilación de línea de comandos, recuerde que solo uno de los archivos de salida puede ser un ensamblado y que solo el primero que haya especificado (ya sea implícita o explícitamente con **-out**) puede ser el ensamblado.  
   
  Todos los módulos que se produzcan como parte de una compilación se convierten en archivos asociados a cualquier ensamblado que también se haya producido en la compilación. Use [ildasm.exe](../../../framework/tools/ildasm-exe-il-disassembler.md) para ver el manifiesto del ensamblado y los archivos asociados.  
   
- Es obligatorio usar la opción /out del compilador para que un archivo exe sea el destino de un ensamblado de confianza. Para obtener más información, vea [Ensamblados de confianza](../../programming-guide/concepts/assemblies-gac/friend-assemblies.md).  
+ Es obligatorio usar la opción -out del compilador para que un archivo exe sea el destino de un ensamblado de confianza. Para obtener más información, vea [Ensamblados de confianza](../../programming-guide/concepts/assemblies-gac/friend-assemblies.md).  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del compilador en el entorno de desarrollo de Visual Studio  
   
@@ -65,7 +65,7 @@ La opción **/out** especifica el nombre del archivo de salida.
  Compile `t.cs` y cree el archivo de salida `t.exe`, así como compile `t2.cs` y cree el archivo de salida del módulo `mymodule.netmodule`:  
   
 ```console  
-csc t.cs /out:mymodule.netmodule /target:module t2.cs  
+csc t.cs -out:mymodule.netmodule -target:module t2.cs  
 ```  
   
 ## <a name="see-also"></a>Vea también  

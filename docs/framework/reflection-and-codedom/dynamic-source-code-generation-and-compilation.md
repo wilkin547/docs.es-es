@@ -22,11 +22,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: a74d25372b83c848621a44f6ea32a455a0f18ccf
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 535a60aa1a174319a4db3403a64c3998784bbb58
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="dynamic-source-code-generation-and-compilation"></a>Generación y compilación dinámicas de código fuente
 .NET Framework incluye un mecanismo denominado Code Document Object Model (CodeDOM) que permite que los desarrolladores de programas que emiten código de origen generen código fuente en varios lenguajes de programación en tiempo de ejecución, en función de un único modelo que representa el código que se va a representar.  
@@ -60,5 +60,5 @@ ms.lasthandoff: 12/22/2017
  Define las interfaces para generar y compilar código en tiempo de ejecución.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
- [Referencia rápida de CodeDOM](http://msdn.microsoft.com/en-us/c77b8bfd-0a32-4e36-b59a-4f687f32c524)  
+ [Referencia rápida de CodeDOM](http://msdn.microsoft.com/library/c77b8bfd-0a32-4e36-b59a-4f687f32c524)  
  Proporciona una forma rápida para que los desarrolladores busquen los elementos CodeDOM que representan elementos de código fuente.

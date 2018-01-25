@@ -13,36 +13,36 @@ ms.assetid: e2b48c07-01bc-45cc-a52c-92e9085eb969
 caps.latest.revision: "19"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 4705fc6fc3e3fa41f46b8617aa23ab507afa0cd1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: be1b6379080b2af799990c43e5339a9a548eb067
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="debug-c-compiler-options"></a>/debug (Opciones del compilador de C#)
-La opción **/debug** da lugar a que el compilador genere información de depuración y la incluya en el archivo o los archivos de salida.  
+# <a name="-debug-c-compiler-options"></a>-debug (Opciones del compilador de C#)
+La opción **-debug** da lugar a que el compilador genere información de depuración y la incluya en el archivo o los archivos de salida.  
   
 ## <a name="syntax"></a>Sintaxis  
   
 ```console  
-/debug[+ | -]  
-/debug:{full | pdbonly}  
+-debug[+ | -]  
+-debug:{full | pdbonly}  
 ```  
   
 ## <a name="arguments"></a>Argumentos  
  `+` &#124; `-`  
- Si se especifica `+`, o simplemente **/debug**, el compilador genera información de depuración y la incluye en una base de datos de programa (archivo .pdb). Si se especifica `-`, que es la opción predeterminada si no especifica **/debug**, no se crea información de depuración.  
+ Si se especifica `+`, o simplemente **-debug**, el compilador genera información de depuración y la incluye en una base de datos de programa (archivo .pdb). Si se especifica `-`, que es la opción predeterminada si no se especifica **-debug**, no se crea información de depuración.  
   
  `full` &#124; `pdbonly`  
- Especifica el tipo de información de depuración generado por el compilador. El argumento full, que es la opción predeterminada si no especifica **/debug:pdbonly**, permite asociar un depurador al programa que se ejecuta. Al especificar la opción pdbonly, se permite depurar el código fuente cuando se inicia el programa en el depurador, pero solo muestra el ensamblador cuando el programa que se ejecuta está asociado al depurador.  
+ Especifica el tipo de información de depuración generado por el compilador. El argumento full, que es la opción predeterminada si no se especifica **-debug:pdbonly**, permite asociar un depurador al programa que se ejecuta. Al especificar la opción pdbonly, se permite depurar el código fuente cuando se inicia el programa en el depurador, pero solo muestra el ensamblador cuando el programa que se ejecuta está asociado al depurador.  
   
 ## <a name="remarks"></a>Comentarios  
- Use esta opción para crear versiones de depuración. Si no se especifica **/debug**, **/debug+** o **/debug:full**, no podrá depurar el archivo de salida del programa.  
+ Use esta opción para crear versiones de depuración. Si no se especifica **-debug**, **-debug+** o **-debug:full**, no podrá depurar el archivo de salida del programa.  
   
- Si usa **/debug:full**, sea consciente de que se producirá algún impacto en la velocidad y el tamaño del código optimizado JIT y un pequeño impacto en la calidad del código con **/debug:full**. Recomendamos **/debug:pdbonly** o ningún PDB para generar el código de la versión de lanzamiento.  
+ Si usa **-debug:full**, sea consciente de que se producirá algún impacto en la velocidad y el tamaño del código optimizado JIT y un pequeño impacto en la calidad del código con **-debug:full**. Recomendamos **-debug:pdbonly** o ningún PDB para generar el código de la versión de lanzamiento.  
   
 > [!NOTE]
->  Una diferencia entre **/debug:pdbonly** y **/debug:full** es que con **/debug:full** el compilador emite <xref:System.Diagnostics.DebuggableAttribute>, que se usa para indicar al compilador JIT que la información de depuración está disponible. Por consiguiente, aparecerá un error si el código contiene <xref:System.Diagnostics.DebuggableAttribute> establecido en false si usa **/debug:full**.  
+>  Una diferencia entre **-debug:pdbonly** y **-debug:full** es que con **-debug:full** el compilador emite <xref:System.Diagnostics.DebuggableAttribute>, que se usa para indicar al compilador JIT que la información de depuración está disponible. Por consiguiente, aparecerá un error si el código contiene <xref:System.Diagnostics.DebuggableAttribute> establecido en false cuando se usa **-debug:full**.  
   
  Para obtener más información sobre cómo configurar el rendimiento de depuración de una aplicación, vea [Facilitar la depuración de una imagen](../../../framework/debug-trace-profile/making-an-image-easier-to-debug.md).  
   
@@ -64,7 +64,7 @@ La opción **/debug** da lugar a que el compilador genere información de depura
  Incluir información de depuración en el archivo de salida `app.pdb`:  
   
 ```console  
-csc /debug /pdb:app.pdb test.cs  
+csc -debug -pdb:app.pdb test.cs  
 ```  
   
 ## <a name="see-also"></a>Vea también  

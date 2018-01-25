@@ -11,11 +11,11 @@ ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: fcc3ed2e-9265-4d50-b59e-dc2e5c190b34
 ms.workload: dotnetcore
-ms.openlocfilehash: f5815e1ad2a36a8ef3279f6ff83465dba9ec5d50
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: cf65dc80f135badcb1580726a12a9ae9d94ae3d7
+ms.sourcegitcommit: 8bde7a3432f30fc771079744955c75c58c4eb393
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/20/2018
 ---
 # <a name="dotnet-new"></a>dotnet new
 
@@ -58,43 +58,43 @@ La plantilla de la que se va a crear una instancia cuando se invoca el comando. 
 
 El comando contiene una lista predeterminada de plantillas. Use `dotnet new -l` para obtener una lista de las plantillas disponibles. En la siguiente tabla se muestran las plantillas que vienen preinstaladas con el SDK de .NET Core 2.0. El lenguaje predeterminado de la plantilla se muestra entre corchetes.
 
-|Descripción de plantilla                          | Nombre de plantilla  | Lenguajes     |
-|----------------------------------------------|----------------|---------------|
-| Aplicación de consola                          | consola        | [C#], F#, VB  |
-| Biblioteca de clases                                | classlib       | [C#], F#, VB  |
-| Proyecto de prueba unitaria                            | mstest         | [C#], F#, VB  |
-| Proyecto de prueba xUnit                           | xunit          | [C#], F#, VB  |
-| Vacío de ASP.NET Core                           | web            | [C#], F#      |
-| Aplicación web de ASP.NET Core (Model-View-Controller) | mvc            | [C#], F#      |
-| Aplicación web de ASP.NET Core                         | razor          | [C#]          |
-| ASP.NET Core con Angular                    | angular        | [C#]          |
-| ASP.NET Core con React.js                   | react          | [C#]          |
-| ASP.NET Core con React.js y Redux         | reactredux     | [C#]          |
-| API web de ASP.NET Core                         | webapi         | [C#], F#      |
-| archivo global.json                             | globaljson     |               |
-| Configuración de NuGet                                 | nugetconfig    |               |
-| Configuración de la Web                                   | webconfig      |               |
-| Archivo de solución                                | sln            |               |
-| Página de Razor                                   | página           |               |
-| MVC/ViewImports                              | viewimports    |               |
-| MVC ViewStart                                | viewstart      |               |
+|Descripción de plantilla                          | Nombre de plantilla | Lenguajes     |
+|----------------------------------------------|---------------|---------------|
+| Aplicación de consola                          | `console`     | [C#], F#, VB  |
+| Biblioteca de clases                                | `classlib`    | [C#], F#, VB  |
+| Proyecto de prueba unitaria                            | `mstest`      | [C#], F#, VB  |
+| Proyecto de prueba xUnit                           | `xunit`       | [C#], F#, VB  |
+| Vacío de ASP.NET Core                           | `web`         | [C#], F#      |
+| Aplicación web de ASP.NET Core (Model-View-Controller) | `mvc`         | [C#], F#      |
+| Aplicación web de ASP.NET Core                         | `razor`       | [C#]          |
+| ASP.NET Core con Angular                    | `angular`     | [C#]          |
+| ASP.NET Core con React.js                   | `react`       | [C#]          |
+| ASP.NET Core con React.js y Redux         | `reactredux`  | [C#]          |
+| API web de ASP.NET Core                         | `webapi`      | [C#], F#      |
+| archivo global.json                             | `globaljson`  |               |
+| Configuración de NuGet                                 | `nugetconfig` |               |
+| Configuración de la Web                                   | `webconfig`   |               |
+| Archivo de solución                                | `sln`         |               |
+| Página de Razor                                   | `page`        |               |
+| MVC/ViewImports                              | `viewimports` |               |
+| MVC ViewStart                                | `viewstart`   |               |
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
 El comando contiene una lista predeterminada de plantillas. Use `dotnet new -all` para obtener una lista de las plantillas disponibles. En la siguiente tabla se muestran las plantillas que vienen preinstaladas con el SDK de .NET Core 1.x. El lenguaje predeterminado de la plantilla se muestra entre corchetes.
 
-|Descripción de plantilla  | Nombre de plantilla  | Lenguajes |
-|----------------------|----------------|-----------|
-| Aplicación de consola  | consola        | [C#], F#  |
-| Biblioteca de clases        | classlib       | [C#], F#  |
-| Proyecto de prueba unitaria    | mstest         | [C#], F#  |
-| Proyecto de prueba xUnit   | xunit          | [C#], F#  |
-| Vacío de ASP.NET Core   | web            | [C#]      |
-| Aplicación web de ASP.NET Core | mvc            | [C#], F#  |
-| API web de ASP.NET Core | webapi         | [C#]      |
-| Configuración de NuGet         | nugetconfig    |           |
-| Configuración de la Web           | webconfig      |           |
-| Archivo de solución        | sln            |           |
+|Descripción de plantilla  | Nombre de plantilla | Lenguajes |
+|----------------------|---------------|-----------|
+| Aplicación de consola  | `console`     | [C#], F#  |
+| Biblioteca de clases        | `classlib`    | [C#], F#  |
+| Proyecto de prueba unitaria    | `mstest`      | [C#], F#  |
+| Proyecto de prueba xUnit   | `xunit`       | [C#], F#  |
+| Vacío de ASP.NET Core   | `web`         | [C#]      |
+| Aplicación web de ASP.NET Core | `mvc`         | [C#], F#  |
+| API web de ASP.NET Core | `webapi`      | [C#]      |
+| Configuración de NuGet         | `nugetconfig` |           |
+| Configuración de la Web           | `webconfig`   |           |
+| Archivo de solución        | `sln`         |           |
 
 ---
 

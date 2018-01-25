@@ -33,14 +33,14 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: df2f376da61f49bd00ea39783bc62015b31ba402
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9b131b8b66315ffbb769eab059142f729cfaf2a2
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="reflection-in-the-net-framework"></a>Reflexión en .NET Framework
-Las clases del espacio de nombres <xref:System.Reflection>, junto con <xref:System.Type?displayProperty=nameWithType>, permiten obtener información sobre los [ensamblados](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md) cargados y los tipos definidos dentro de ellos, como [clases](http://msdn.microsoft.com/en-us/ad7d3561-271e-4546-82fc-e00b059f27a9), [interfaces](http://msdn.microsoft.com/en-us/fd9d5975-5363-4bc9-b883-609f887895e5) y [tipos de valor](http://msdn.microsoft.com/en-us/c9c567f8-8ab1-4d88-834d-00f7d92418de). También puede usar la reflexión para crear instancias de tipos en tiempo de ejecución, para llamarlas y para acceder a ellas. Para consultar temas sobre aspectos específicos de la reflexión, vea los [Temas relacionados](#related_topics) al final de esta introducción.  
+Las clases del espacio de nombres <xref:System.Reflection>, junto con <xref:System.Type?displayProperty=nameWithType>, permiten obtener información sobre los [ensamblados](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md) cargados y los tipos definidos dentro de ellos, como [clases](http://msdn.microsoft.com/library/ad7d3561-271e-4546-82fc-e00b059f27a9), [interfaces](http://msdn.microsoft.com/library/fd9d5975-5363-4bc9-b883-609f887895e5) y [tipos de valor](http://msdn.microsoft.com/library/c9c567f8-8ab1-4d88-834d-00f7d92418de). También puede usar la reflexión para crear instancias de tipos en tiempo de ejecución, para llamarlas y para acceder a ellas. Para consultar temas sobre aspectos específicos de la reflexión, vea los [Temas relacionados](#related_topics) al final de esta introducción.  
   
  El cargador de [Common Language Runtime](../../../docs/standard/clr.md) administra [dominios de aplicación](../../../docs/framework/app-domains/application-domains.md), que constituyen los límites definidos alrededor de los objetos que tienen el mismo ámbito de aplicación. Esta administración incluye la carga de cada ensamblado en el dominio de aplicación apropiado y el control del diseño de memoria de la jerarquía de tipos de cada ensamblado.  
   

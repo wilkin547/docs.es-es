@@ -12,11 +12,11 @@ ms.assetid: b0797770-c1f3-4b4d-9441-b9122602a6bb
 caps.latest.revision: "24"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 785c23294abdbfa0684560a38fbd0279200a7d02
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: bd26583c42302d8ce9ba4dd22119713548111236
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="abstract-c-reference"></a>abstract (Referencia de C#)
 El modificador `abstract` indica que lo que se modifica carece de implementación o tiene una implementación incompleta. El modificador abstract puede usarse con clases, métodos, propiedades, indexadores y eventos. Use el modificador `abstract` en una declaración de clase para indicar que una clase solo está diseñada como clase base de otras clases. Los miembros marcados como abstractos o incluidos en una clase abstracta, deben implementarse con clases que deriven de la clase abstracta.  
@@ -46,7 +46,7 @@ El modificador `abstract` indica que lo que se modifica carece de implementació
   
 -   Dado que una declaración de método abstracto no proporciona una implementación real, no hay ningún cuerpo de método; la declaración de método finaliza simplemente con un punto y coma y no hay llaves ({ }) después de la firma. Por ejemplo:  
   
-    ```  
+    ```csharp  
     public abstract void MyMethod();  
     ```  
   
@@ -75,11 +75,11 @@ El modificador `abstract` indica que lo que se modifica carece de implementació
   
  En el ejemplo anterior, si intenta crear una instancia de la clase abstracta mediante una instrucción como esta:  
   
-```  
+```csharp
 BaseClass bc = new BaseClass();   // Error  
 ```  
   
- obtendrá un error que indica que el compilador no puede crear una instancia de la clase abstracta "BaseClass".  
+Se mostrará un mensaje de error en el que se indica que el compilador no puede crear una instancia de la clase abstracta "BaseClass".  
   
 ## <a name="c-language-specification"></a>Especificación del lenguaje C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  

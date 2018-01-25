@@ -12,16 +12,16 @@ ms.assetid: 65b8a222-bcd8-454c-845f-84adff5a356f
 caps.latest.revision: "34"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: a453699591397224435fba1e602c305f18e84a11
-ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
+ms.openlocfilehash: fc3c0f6910238ba20582280426b4a40e68b95dd8
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-use-named-and-optional-arguments-in-office-programming-c-programming-guide"></a>Cómo: Usar argumentos opcionales y con nombre en la programación de Office (Guía de programación de C#)
 Los argumentos con nombre y los argumentos opcionales, introducidos en [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)], mejoran la comodidad, la flexibilidad y la legibilidad en la programación de C#. Además, estas características facilitan enormemente el acceso a interfaces COM, como las API de automatización de Microsoft Office.  
   
- En el ejemplo siguiente, el método [ConvertToTable](http://go.microsoft.com/fwlink/?LinkId=145378) tiene dieciséis parámetros que representan las características de una tabla, como el número de columnas y filas, el formato, los bordes, las fuentes y los colores. Los dieciséis parámetros son opcionales, ya que la mayoría de las veces no interesa especificar valores concretos para todos ellos. Pero si no hay argumentos opcionales y con nombre, es necesario proporcionar un valor o un valor de marcador de posición para cada parámetro. Con los argumentos opcionales y con nombre, puede especificar valores solamente para los parámetros necesarios para el proyecto.  
+ En el ejemplo siguiente, el método [ConvertToTable](https://msdn.microsoft.com/library/bb216993.aspx) tiene dieciséis parámetros que representan las características de una tabla, como el número de columnas y filas, el formato, los bordes, las fuentes y los colores. Los dieciséis parámetros son opcionales, ya que la mayoría de las veces no interesa especificar valores concretos para todos ellos. Pero si no hay argumentos opcionales y con nombre, es necesario proporcionar un valor o un valor de marcador de posición para cada parámetro. Con los argumentos opcionales y con nombre, puede especificar valores solamente para los parámetros necesarios para el proyecto.  
   
  Debe tener Microsoft Office Word instalado en el equipo para completar estos procedimientos.  
   
@@ -63,7 +63,7 @@ Los argumentos con nombre y los argumentos opcionales, introducidos en [!INCLUDE
   
 ### <a name="to-display-text-in-a-word-document"></a>Para mostrar texto en un documento de Word  
   
-1.  En la clase `Program` en Program.cs, agregue el método siguiente para crear una aplicación de Word y un documento de Word. El método [Add](http://go.microsoft.com/fwlink/?LinkId=145381) tiene cuatro parámetros opcionales. En este ejemplo se usan los valores predeterminados. Por lo tanto, no se necesitan argumentos en la instrucción de llamada.  
+1.  En la clase `Program` en Program.cs, agregue el método siguiente para crear una aplicación de Word y un documento de Word. El método [Add](https://msdn.microsoft.com/library/microsoft.office.interop.word.documents.add.aspx) tiene cuatro parámetros opcionales. En este ejemplo se usan los valores predeterminados. Por lo tanto, no se necesitan argumentos en la instrucción de llamada.  
   
      [!code-csharp[csProgGuideNamedAndOptional#6](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-use-named-and-optional-arguments-in-office-programming_2.cs)]  
   
@@ -102,7 +102,7 @@ Parámetros de ConvertToTable
   
      [!code-csharp[csProgGuideNamedAndOptional#10](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-use-named-and-optional-arguments-in-office-programming_7.cs)]  
   
-2.  Para especificar un formato predefinido para la tabla, reemplace la última línea de `DisplayInWord` por la instrucción siguiente y escriba CTRL+F5. El formato puede ser cualquiera de las constantes [WdTableFormat](http://go.microsoft.com/fwlink/?LinkId=145382).  
+2.  Para especificar un formato predefinido para la tabla, reemplace la última línea de `DisplayInWord` por la instrucción siguiente y escriba CTRL+F5. El formato puede ser cualquiera de las constantes [WdTableFormat](https://msdn.microsoft.com/library/microsoft.office.interop.word.wdtableformat.aspx).  
   
      [!code-csharp[csProgGuideNamedAndOptional#11](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-use-named-and-optional-arguments-in-office-programming_8.cs)]  
   

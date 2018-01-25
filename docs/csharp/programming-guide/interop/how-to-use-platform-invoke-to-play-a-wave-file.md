@@ -13,11 +13,11 @@ ms.assetid: f7f62f53-e026-4c40-b221-3a26adb0c2c5
 caps.latest.revision: "30"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: d037e17ef48ebfdd5cfd860efbacf195e7b6a76d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 2aacad0e8004e60471a59ebef695ddae5f7a2a7d
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-use-platform-invoke-to-play-a-wave-file-c-programming-guide"></a>Cómo: Utilizar la invocación de plataforma para reproducir un archivo de sonido (Guía de programación de C#)
 En el siguiente ejemplo de código de C# se muestra cómo se usan los servicios de invocación de plataforma para reproducir un archivo de sonido en el sistema operativo Windows.  
@@ -52,5 +52,5 @@ En el siguiente ejemplo de código de C# se muestra cómo se usan los servicios 
  [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
  [Información general sobre interoperabilidad](../../../csharp/programming-guide/interop/interoperability-overview.md)  
  [Información general sobre interoperabilidad](../../../csharp/programming-guide/interop/interoperability-overview.md)  
- [Invocación de un vistazo más cerca de la plataforma](http://msdn.microsoft.com/en-us/ba9dd55b-2eaa-45cd-8afd-75cb8d64d243)  
+ [Aproximación a la invocación de plataforma](http://msdn.microsoft.com/library/ba9dd55b-2eaa-45cd-8afd-75cb8d64d243)  
  [Serialización de datos con invocación de plataforma](../../../framework/interop/marshaling-data-with-platform-invoke.md)

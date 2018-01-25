@@ -14,11 +14,11 @@ ms.assetid: 235614b5-1371-4dbd-9abd-b406a8b0298b
 caps.latest.revision: "49"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: cf2517dd5989d36341b840ffcb476cbeb14baf54
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: b1e7366d8d82ca99a8d779dda1e194dcc8c2ab6e
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="static-classes-and-static-class-members-c-programming-guide"></a>Clases estáticas y sus miembros (Guía de programación de C#)
 Una clase [estática](../../../csharp/language-reference/keywords/static.md) es básicamente lo mismo que una clase no estática, con la diferencia de que no se pueden crear instancias de una clase estática. En otras palabras, no puede usar la palabra clave [new](../../../csharp/language-reference/keywords/new.md) para crear una variable del tipo de clase. Dado que no hay ninguna variable de instancia, para tener acceso a los miembros de una clase estática, debe usar el nombre de la clase. Por ejemplo, si tiene una clase estática denominada `UtilityClass` que tiene un método público denominado `MethodA`, llame al método tal como se muestra en el ejemplo siguiente:  
@@ -44,7 +44,7 @@ Console.WriteLine(Math.Round(Math.Abs(dub)));
  Como sucede con todos los tipos de clase, Common Language Runtime (CLR) de [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] carga la información de tipo para una clase estática cuando se carga el programa que hace referencia a la clase. El programa no puede especificar exactamente cuándo se carga la clase, pero existe la garantía de que se cargará, de que sus campos se inicializarán y de que se llamará a su constructor estático antes de que se haga referencia a la clase por primera vez en el programa. Solo se llama una vez a un constructor estático, y una clase estática permanece en memoria durante la vigencia del dominio de aplicación en el que reside el programa.  
   
 > [!NOTE]
->  Para crear una clase no estática que solo permita la creación de una instancia de sí misma, vea [Implementing Singleton in C#](http://go.microsoft.com/fwlink/?LinkID=100567) (Implementar un singleton en C#).  
+>  Para crear una clase no estática que solo permita la creación de una instancia de sí misma, vea [Implementing Singleton in C#](https://msdn.microsoft.com/library/ms998558.aspx) (Implementar un singleton en C#).  
   
  La siguiente lista contiene las características principales de una clase estática:  
   

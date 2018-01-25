@@ -4,16 +4,16 @@ description: "En este inicio rápido acerca de bifurcaciones y bucles, escribir�
 author: billwagner
 ms.author: wiwagn
 ms.date: 10/31/2017
-ms.topic: article
+ms.topic: get-started-article
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 7954475616b122f8bb96ad00d05b476b3beeb52c
-ms.sourcegitcommit: 9bee08539b1886c9d57fa3d5bd8a58dfdd7cad94
+ms.openlocfilehash: 609c8625b19025a20c1da1e767870eafbab4c4a0
+ms.sourcegitcommit: 8bde7a3432f30fc771079744955c75c58c4eb393
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 01/20/2018
 ---
 # <a name="branches-and-loops"></a>Bifurcaciones y bucles
 
@@ -254,7 +254,7 @@ Pruébelo usted mismo. Después, revise cómo lo ha hecho. Debe obtener 63 como 
 
 Ha completado la guía de inicio rápido sobre "ramas y bucles".
 
-Puede continuar con la guía de inicio rápido [Matrices y colecciones](arrays-and-collections.md) en su propio entorno de desarrollo.
+Puede seguir haciendo el inicio rápido [Cadenas interpoladas](interpolated-strings-local.md) en su propio entorno de desarrollo.
 
 Puede obtener más información sobre estos conceptos en los temas siguientes:
 

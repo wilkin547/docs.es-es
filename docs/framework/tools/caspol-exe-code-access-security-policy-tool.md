@@ -27,11 +27,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 0054e77138218e83693c13727866e8e6841170f9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6ab363e833ecde86a17d9adea3fcd26351725868
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="caspolexe-code-access-security-policy-tool"></a>Caspol.exe (Herramienta de la directiva de seguridad de acceso del código)
 La herramienta de la directiva de seguridad de acceso del código (CAS), o herramienta Caspol.exe, permite a los usuarios y administradores modificar las directivas de seguridad correspondientes a los niveles de equipo, usuario y empresa.  
@@ -114,7 +114,7 @@ caspol [options]
 ## <a name="remarks"></a>Comentarios  
  La directiva de seguridad se expresa mediante tres niveles: equipo, usuario y empresa. El conjunto de permisos que recibe un ensamblado viene determinado por la intersección de los conjuntos de permisos permitidos por estos tres niveles de directiva. Cada nivel está representado por una estructura jerárquica de grupos de código. Cada grupo de código tiene una condición de pertenencia que determina qué código es miembro de ese grupo. Asimismo, cada grupo de código tiene asociado un conjunto de permisos con nombre. Este conjunto de permisos especifica los permisos que el runtime permite que tenga el código que satisface la condición de pertenencia. Una jerarquía de grupos de código, junto con sus conjuntos de permisos con nombre asociados, define y conserva cada nivel de directiva de seguridad. Puede usar las opciones **–user**, **-customuser**, **–machine** y **-enterprise** para establecer el nivel de la directiva de seguridad.  
   
- Para más información sobre la directiva de seguridad y el modo en que el runtime determina qué permisos se conceden al código, consulte [Administración de directivas de seguridad](http://msdn.microsoft.com/en-us/d754e05d-29dc-4d3a-a2c2-95eaaf1b82b9).  
+ Para más información sobre la directiva de seguridad y el modo en que el runtime determina qué permisos se conceden al código, consulte [Administración de directivas de seguridad](http://msdn.microsoft.com/library/d754e05d-29dc-4d3a-a2c2-95eaaf1b82b9).  
   
 ## <a name="referencing-code-groups-and-permission-sets"></a>Hacer referencia a grupos de código y conjuntos de permisos  
  Para facilitar las referencias a grupos de código en una jerarquía, la opción **-list** muestra una lista de grupos de código con sangría junto con sus etiquetas numéricas (1, 1.1, 1.1.1, etc.). Las demás operaciones de línea de comandos cuyo destino son los grupos de código también usan etiquetas numéricas para hacer referencia a grupos de código específicos.  

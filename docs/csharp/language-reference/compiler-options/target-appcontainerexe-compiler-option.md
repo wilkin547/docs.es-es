@@ -8,27 +8,27 @@ ms.assetid: e7e62229-23ea-4e53-bef5-380d951bf95f
 caps.latest.revision: "13"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 9ab407f14483bbb5abaf3dc23b0cf204091b74ec
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e49047ee5a639189331b89f3c5e16f6a1f1d4cd5
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="targetappcontainerexe-c-compiler-options"></a>/target:appcontainerexe (Opciones del compilador de C#)
-Si usa la opción del compilador **/target:appcontainerexe**, este crea un archivo ejecutable de Windows (.exe) que se debe ejecutar en un contenedor de la aplicación. Esta opción equivale a [/target: winexe](../../../csharp/language-reference/compiler-options/target-winexe-compiler-option.md), pero está diseñada para las aplicaciones de la [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)].  
+# <a name="-targetappcontainerexe-c-compiler-options"></a>-target:appcontainerexe (Opciones del compilador de C#)
+Si usa la opción del compilador **-target:appcontainerexe**, este crea un archivo ejecutable de Windows (.exe) que se debe ejecutar en un contenedor de la aplicación. Esta opción equivale a [-target: winexe](../../../csharp/language-reference/compiler-options/target-winexe-compiler-option.md), pero está diseñada para las aplicaciones de la [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)].  
   
 ## <a name="syntax"></a>Sintaxis  
   
 ```console  
-/target:appcontainerexe  
+-target:appcontainerexe  
 ```  
   
 ## <a name="remarks"></a>Comentarios  
  Para exigir que la aplicación se ejecute en un contenedor de la aplicación, esta opción establece un bit en el archivo [portable ejecutable](http://go.microsoft.com/fwlink/p/?LinkId=236960) (PE). Cuando se establece ese bit, se produce un error si el método CreateProcess intenta iniciar el archivo ejecutable fuera de un contenedor de la aplicación.  
   
- A menos que use la opción [/out](../../../csharp/language-reference/compiler-options/out-compiler-option.md), el archivo de salida toma el nombre del archivo de entrada que contiene el método [Main](../../../csharp/programming-guide/main-and-command-args/index.md).  
+ A menos que use la opción [-out](../../../csharp/language-reference/compiler-options/out-compiler-option.md), el archivo de salida toma el nombre del archivo de entrada que contiene el método [Main](../../../csharp/programming-guide/main-and-command-args/index.md).  
   
- Cuando se especifica esta opción en un símbolo del sistema, todos los archivos hasta la siguiente opción **/out** o **/target** se usan para crear el archivo ejecutable.  
+ Cuando se especifica esta opción en un símbolo del sistema, todos los archivos hasta la siguiente opción **-out** o **-target** se usan para crear el archivo ejecutable.  
   
 ### <a name="to-set-this-compiler-option-in-the-ide"></a>Para establecer esta opción del compilador en el IDE  
   
@@ -44,10 +44,10 @@ Si usa la opción del compilador **/target:appcontainerexe**, este crea un archi
  El comando siguiente compila `filename.cs` en un archivo ejecutable de Windows que solo se puede ejecutar en un contenedor de la aplicación.  
   
 ```console  
-csc /target:appcontainerexe filename.cs  
+csc -target:appcontainerexe filename.cs  
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [/target (opciones del compilador de C#)](../../../csharp/language-reference/compiler-options/target-compiler-option.md)  
- [/ target: winexe (opciones del compilador de C#)](../../../csharp/language-reference/compiler-options/target-winexe-compiler-option.md)  
+ [-target (Opciones del compilador de C#)](../../../csharp/language-reference/compiler-options/target-compiler-option.md)  
+ [-target:winexe (Opciones del compilador de C#)](../../../csharp/language-reference/compiler-options/target-winexe-compiler-option.md)  
  [Opciones del compilador de C#](../../../csharp/language-reference/compiler-options/index.md)

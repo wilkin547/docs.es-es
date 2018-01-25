@@ -15,11 +15,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: d28f55ddd550e95d9859258d89b4910cf320e3cd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: bac21a0c9535326becfe94610db33869da89c471
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-configure-client-application-services"></a>Cómo: Configurar servicios de aplicaciones cliente
 En este tema se describe cómo utilizar el **Diseñador de proyectos** de [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] para habilitar y configurar servicios de aplicaciones cliente. Los servicios de aplicaciones cliente se pueden usar para validar a los usuarios y recuperar configuraciones y roles de usuario de un servicio de aplicaciones [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] existente. Después de la configuración, se puede acceder a los servicios habilitados en el código de la aplicación, tal como se describe en [Información general sobre los servicios de aplicaciones cliente](../../../docs/framework/common-client-technologies/client-application-services-overview.md). Para más información sobre los servicios de la aplicación de [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)], consulte [Información general sobre los servicios de aplicación ASP.NET](http://msdn.microsoft.com/library/1162e529-0d70-44b2-b3ab-83e60c695013).  
@@ -75,7 +75,7 @@ En este tema se describe cómo utilizar el **Diseñador de proyectos** de [!INCL
   
 2.  Active o desactive **Guardar hash de contraseña para permitir el inicio de sesión sin conexión**. Cuando se selecciona esta opción, un formulario cifrado de la contraseña del usuario se almacenará en caché localmente. Esto es útil si implementa el modo sin conexión de la aplicación. Con esta opción seleccionada, puede validar a los usuarios incluso cuando la propiedad <xref:System.Web.ClientServices.ConnectivityStatus.IsOffline%2A> se haya establecido en `true`.  
   
-3.  Active o desactive **Exigir que los usuarios vuelvan a iniciar sesión cuando expire la cookie del servidor**. La cookie de autenticación se configura en el servicio remoto e indica cuánto tiempo permanecerá activo el inicio de sesión de un usuario. Para más información sobre cómo configurar la cookie, consulte el atributo `timeout` en [Elemento forms para autenticación (esquema de configuración de ASP.NET)](http://msdn.microsoft.com/en-us/8163b8b5-ea6c-46c8-b5a9-c4c3de31c0b3).  
+3.  Active o desactive **Exigir que los usuarios vuelvan a iniciar sesión cuando expire la cookie del servidor**. La cookie de autenticación se configura en el servicio remoto e indica cuánto tiempo permanecerá activo el inicio de sesión de un usuario. Para más información sobre cómo configurar la cookie, consulte el atributo `timeout` en [Elemento forms para autenticación (esquema de configuración de ASP.NET)](http://msdn.microsoft.com/library/8163b8b5-ea6c-46c8-b5a9-c4c3de31c0b3).  
   
      Si selecciona esta opción y se intenta acceder a los roles remotos o a los servicios de configuración web después de que la cookie de autenticación haya expirado, se producirá una <xref:System.Net.WebException>. Puede controlar esta excepción y mostrar un cuadro de diálogo de inicio de sesión para volver a validar a los usuarios. Para obtener un ejemplo de este comportamiento, vea [Tutorial: Usar servicios de aplicaciones cliente](../../../docs/framework/common-client-technologies/walkthrough-using-client-application-services.md). Esta opción es útil en aplicaciones implementadas en ubicaciones públicas, ya que garantiza que los usuarios que dejan la aplicación en ejecución después de usarla no permanecen autenticados indefinidamente.  
   

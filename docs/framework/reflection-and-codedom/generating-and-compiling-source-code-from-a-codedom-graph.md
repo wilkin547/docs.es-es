@@ -38,11 +38,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 56e2effec282900101fc0cbe489c76b523184ab2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b99dacb5a30cd7b12a5a5dd96bf9fe25b32ab984
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="generating-and-compiling-source-code-from-a-codedom-graph"></a>Generar y compilar código fuente a partir de un gráfico CodeDOM
 El espacio de nombres <xref:System.CodeDom.Compiler> proporciona interfaces para generar código fuente a partir de gráficos de objetos CodeDOM y para administrar la compilación con compiladores compatibles. Un proveedor de código puede generar código fuente en un lenguaje de programación determinado según un gráfico CodeDOM. Una clase que deriva de <xref:System.CodeDom.Compiler.CodeDomProvider> normalmente puede proporcionar métodos para generar y compilar código para el lenguaje admitido por el proveedor.  
@@ -106,4 +106,4 @@ El espacio de nombres <xref:System.CodeDom.Compiler> proporciona interfaces para
  <xref:System.CodeDom>  
  <xref:System.CodeDom.Compiler>  
  [Generación y compilación dinámicas de código fuente](../../../docs/framework/reflection-and-codedom/dynamic-source-code-generation-and-compilation.md)  
- [Referencia rápida de CodeDOM](http://msdn.microsoft.com/en-us/c77b8bfd-0a32-4e36-b59a-4f687f32c524)
+ [Referencia rápida de CodeDOM](http://msdn.microsoft.com/library/c77b8bfd-0a32-4e36-b59a-4f687f32c524)

@@ -13,19 +13,19 @@ ms.assetid: 75942989-b69a-4308-90a0-840c73d2c478
 caps.latest.revision: "15"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 1e17622256ca6a0344797ba16e007ba6feb8f873
-ms.sourcegitcommit: 401c4427a3ec0d1263543033b3084039278509dc
+ms.openlocfilehash: c1181ef98ac5f335c9737771eda2b3bd9227cc9f
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/06/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="codepage-c-compiler-options"></a>/codepage (Opciones del compilador de C#)
+# <a name="-codepage-c-compiler-options"></a>-codepage (Opciones del compilador de C#)
 Esta opción especifica qué página de códigos se va a usar durante la compilación si la página necesaria no es la página de códigos predeterminada actual del sistema.  
   
 ## <a name="syntax"></a>Sintaxis  
   
 ```console  
-/codepage:id  
+-codepage:id  
 ```  
   
 ## <a name="arguments"></a>Argumentos  
@@ -33,9 +33,9 @@ Esta opción especifica qué página de códigos se va a usar durante la compila
  El id. de la página de códigos que se va a usar para todos los archivos de código fuente de la compilación.  
   
 ## <a name="remarks"></a>Comentarios  
- Si compila uno o más archivos de código fuente que no se han creado para usar la página de códigos predeterminada en su equipo, puede usar la opción **/codepage** para especificar qué página de códigos debe usarse. **/codepage** se aplica a todos los archivos de código fuente de su compilación.  
+ Si compila uno o más archivos de código fuente que no se han creado para usar la página de códigos predeterminada en su equipo, puede usar la opción **-codepage** para especificar qué página de códigos debe usarse. **-codepage** se aplica a todos los archivos de código fuente de su compilación.  
   
- Si los archivos de código fuente se han creado con la misma página de códigos que está en vigor en su equipo o si los archivos de código fuente se han creado con UNICODE o UTF-8, no necesita usar **/codepage**.  
+ Si los archivos de código fuente se han creado con la misma página de códigos que está en vigor en su equipo o si los archivos de código fuente se han creado con UNICODE o UTF-8, no necesita usar **-codepage**.  
   
  Vea [GetCPInfo](https://msdn.microsoft.com/library/dd318078(VS.85).aspx) para obtener información sobre cómo buscar las páginas de códigos que se admiten en su sistema.  
   

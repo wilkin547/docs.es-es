@@ -8,22 +8,22 @@ ms.assetid: a99fce81-9d92-4813-9874-bee777041445
 caps.latest.revision: "19"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: bfb398c960d3aa1aa8c9c6638e1bd8fe5dba4a98
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 3a6fee8f140a0c2e81f9904d5ceea7e290d48275
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="subsystemversion-c-compiler-options"></a>/subsystemversion (Opciones del compilador de C#)
+# <a name="-subsystemversion-c-compiler-options"></a>-subsystemversion (Opciones del compilador de C#)
 Especifica la versión mínima del subsistema en la que se puede ejecutar el archivo ejecutable generado, lo que determina las versiones de Windows en las que se puede ejecutar el archivo ejecutable. Normalmente, esta opción garantiza que el archivo ejecutable pueda aprovechar las características de seguridad concretas que no están disponibles en versiones anteriores de Windows.  
   
 > [!NOTE]
->  Para especificar el subsistema en sí mismo, use la opción del compilador [/target](../../../csharp/language-reference/compiler-options/target-compiler-option.md).  
+>  Para especificar el subsistema en sí mismo, use la opción del compilador [-target](../../../csharp/language-reference/compiler-options/target-compiler-option.md).  
   
 ## <a name="syntax"></a>Sintaxis  
   
 ```console  
-/subsystemversion:major.minor  
+-subsystemversion:major.minor  
 ```  
   
 #### <a name="parameters"></a>Parámetros  
@@ -46,7 +46,7 @@ Especifica la versión mínima del subsistema en la que se puede ejecutar el arc
 |[!INCLUDE[win8](~/includes/win8-md.md)]|6.02|  
   
 ## <a name="default-values"></a>Valores predeterminados  
- El valor predeterminado de la opción del compilador **/subsystemversion** depende de las condiciones de la siguiente lista:  
+ El valor predeterminado de la opción del compilador **-subsystemversion** depende de las condiciones de esta lista:  
   
 -   El valor predeterminado es 6.02 si se establece cualquier opción del compilador en la siguiente lista:  
   
@@ -54,14 +54,14 @@ Especifica la versión mínima del subsistema en la que se puede ejecutar el arc
   
     -   [/target:winmdobj](../../../csharp/language-reference/compiler-options/target-winmdobj-compiler-option.md)  
   
-    -   [/platform:arm](../../../csharp/language-reference/compiler-options/platform-compiler-option.md)  
+    -   [-platform:arm](../../../csharp/language-reference/compiler-options/platform-compiler-option.md)  
   
 -   El valor predeterminado es 6.00 si usa MSBuild, tiene como destino [!INCLUDE[net_v45](~/includes/net-v45-md.md)] y no ha configurado ninguna de las opciones del compilador que se han especificado anteriormente en esta lista.  
   
 -   El valor predeterminado es 4.00 si no se cumple ninguna de las condiciones anteriores.  
   
 ## <a name="setting-this-option"></a>Establecer esta opción  
- Para establecer la opción del compilador **/subsystemversion** en Visual Studio, debe abrir el archivo .csproj y especificar un valor para la propiedad `SubsystemVersion` en el XML de MSBuild. No se puede establecer esta opción en el IDE de Visual Studio. Para obtener más información, consulte la sección "Valores predeterminados" que aparece más arriba en este tema o [Propiedades comunes de proyectos de MSBuild](/visualstudio/msbuild/common-msbuild-project-properties).  
+ Para establecer la opción del compilador **-subsystemversion** en Visual Studio, debe abrir el archivo .csproj y especificar un valor para la propiedad `SubsystemVersion` en el XML de MSBuild. No se puede establecer esta opción en el IDE de Visual Studio. Para obtener más información, consulte la sección "Valores predeterminados" que aparece más arriba en este tema o [Propiedades comunes de proyectos de MSBuild](/visualstudio/msbuild/common-msbuild-project-properties).  
   
 ## <a name="see-also"></a>Vea también  
  [Opciones del compilador de C#](../../../csharp/language-reference/compiler-options/index.md)

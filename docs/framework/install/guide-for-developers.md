@@ -15,11 +15,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: cad3f3d813d6882b83a7e9db7ce212fba66e44ea
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4be70c047566416b40da3fd34d1e8b8f479af7c5
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="install-the-net-framework-for-developers"></a>Instalación de .NET Framework para desarrolladores
 
@@ -74,8 +74,6 @@ El paquete de desarrollador de .NET Framework 4.5.1 o 4.5.2, el paquete de compa
 - [Paquete de desarrollador de Microsoft .NET Framework 4.7.1](http://go.microsoft.com/fwlink/?LinkId=852105)
 
 - [Paquete de desarrollador de Microsoft .NET Framework 4.7](http://go.microsoft.com/fwlink/?LinkId=825319)
-
-- [Paquete de desarrollador de Microsoft .NET Framework 4.6.2](http://go.microsoft.com/fwlink/?LinkId=780617)  
   
 - [Paquete de desarrollador de Microsoft .NET Framework 4.6.2](http://go.microsoft.com/fwlink/?LinkId=780617)  
   

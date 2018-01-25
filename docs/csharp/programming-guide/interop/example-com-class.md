@@ -11,14 +11,14 @@ ms.assetid: 6504dea9-ad1c-4993-a794-830fec5270af
 caps.latest.revision: "17"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: ad14b414c037d38da55ce0ec82685b790cc46d2f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 01b0a5b857171a1354a7dd6b518a7e151073ca32
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="example-com-class-c-programming-guide"></a>Clases COM de ejemplo (Guía de programación de C#)
-El siguiente es un ejemplo de una clase que se expondría como un objeto COM. Una vez insertado este código de ejemplo en un archivo .cs y agregado al proyecto, establezca la propiedad **Registrar para interoperabilidad COM** en **True**. Para obtener más información, vea [NIB: Cómo: Registrar un componente para interoperabilidad COM](http://msdn.microsoft.com/en-us/4de7d474-56e8-4027-994d-d47ca4725c5e).  
+El siguiente es un ejemplo de una clase que se expondría como un objeto COM. Una vez insertado este código de ejemplo en un archivo .cs y agregado al proyecto, establezca la propiedad **Registrar para interoperabilidad COM** en **True**. Para obtener más información, vea [NIB: Cómo: Registrar un componente para interoperabilidad COM](http://msdn.microsoft.com/library/4de7d474-56e8-4027-994d-d47ca4725c5e).  
   
  Exponer objetos de Visual C# para COM requiere declarar una interfaz de clase, una interfaz de eventos si es necesario y la propia clase. Los miembros de clase deben seguir estas reglas para que sean visibles en COM:  
   

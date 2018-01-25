@@ -14,19 +14,19 @@ ms.assetid: 426afb36-a8fb-469d-9c45-a35d9512557c
 caps.latest.revision: "12"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: a473c02dba1b69a34d601b4d49e02cc202eeb158
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 2585e494cc87978b47fe2de5a05b6d2e031c8929
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="nologo-c-compiler-options"></a>/nologo (Opciones del compilador de C#)
-La opción **/nologo** suprime la presentación del banner de inicio de sesión cuando se inicia el compilador y muestra mensajes informativos durante la compilación.  
+# <a name="-nologo-c-compiler-options"></a>-nologo (Opciones del compilador de C#)
+La opción **-nologo** suprime la presentación del banner de inicio de sesión cuando se inicia el compilador y muestra mensajes informativos durante la compilación.  
   
 ## <a name="syntax"></a>Sintaxis  
   
 ```console  
-/nologo  
+-nologo  
 ```  
   
 ## <a name="remarks"></a>Comentarios  

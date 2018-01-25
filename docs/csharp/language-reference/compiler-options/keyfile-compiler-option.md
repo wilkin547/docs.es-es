@@ -13,19 +13,19 @@ ms.assetid: 0815f9de-ace4-4e98-b4c6-13c55dea40c2
 caps.latest.revision: "15"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: d120b325f433108cd1b01dd1c25d2a0e55da401b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: fc80c1f6614cdfc8e2f56855d0a0315977316f4c
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="keyfile-c-compiler-options"></a>/keyfile (Opciones del compilador de C#)
+# <a name="-keyfile-c-compiler-options"></a>-keyfile (Opciones del compilador de C#)
 Especifica el nombre de archivo que contiene la clave criptográfica.  
   
 ## <a name="syntax"></a>Sintaxis  
   
 ```console  
-/keyfile:file  
+-keyfile:file  
 ```  
   
 ## <a name="arguments"></a>Argumentos  
@@ -37,11 +37,11 @@ Especifica el nombre de archivo que contiene la clave criptográfica.
 ## <a name="remarks"></a>Comentarios  
  Cuando se usa esta opción, el compilador inserta la clave pública del archivo especificado en el manifiesto del ensamblado y, después, firma el último ensamblado con la clave privada. Para generar un archivo de clave, escriba sn -k `file` en la línea de comandos.  
   
- Si se compila con la opción **/target:module**, el nombre del archivo de claves se mantiene en el módulo y se incorpora en el ensamblado que se crea al compilar un ensamblado con la opción [/addmodule](../../../csharp/language-reference/compiler-options/addmodule-compiler-option.md).  
+ Si se compila con la opción **-target:module**, el nombre del archivo de claves se mantiene en el módulo y se incorpora en el ensamblado que se crea al compilar un ensamblado con la opción [-addmodule](../../../csharp/language-reference/compiler-options/addmodule-compiler-option.md).  
   
- También puede pasar la información de cifrado al compilador con [/keycontainer](../../../csharp/language-reference/compiler-options/keycontainer-compiler-option.md). Use [/delaysign](../../../csharp/language-reference/compiler-options/delaysign-compiler-option.md) para firmar el ensamblado de forma parcial.  
+ También puede pasar la información de cifrado al compilador con [-keycontainer](../../../csharp/language-reference/compiler-options/keycontainer-compiler-option.md). Use [-delaysign](../../../csharp/language-reference/compiler-options/delaysign-compiler-option.md) para firmar el ensamblado de forma parcial.  
   
- Si se especifica tanto /keyfile como /keycontainer (ya sea mediante una opción de línea de comandos o mediante un atributo personalizado) en la misma compilación, el compilador probará primero el contenedor de claves. Si lo consigue, el ensamblado se firma con la información del contenedor de claves. Si el compilador no encuentra el contenedor de claves, probará el archivo especificado con /keyfile. Si lo consigue, el ensamblado se firma con la información del archivo de clave y la información de la clave se instalará en el contenedor de claves (similar a sn -i) de modo que, en la próxima compilación, el contenedor de claves será válido.  
+ Si se especifica tanto -keyfile como -keycontainer (ya sea mediante una opción de línea de comandos o mediante un atributo personalizado) en la misma compilación, el compilador probará primero el contenedor de claves. Si lo consigue, el ensamblado se firma con la información del contenedor de claves. Si el compilador no encuentra el contenedor de claves, probará el archivo especificado con -keyfile. Si lo consigue, el ensamblado se firma con la información del archivo de clave y la información de la clave se instalará en el contenedor de claves (similar a sn -i) de modo que, en la próxima compilación, el contenedor de claves será válido.  
   
  Tenga en cuenta que un archivo de clave puede contener solo la clave pública.  
   
