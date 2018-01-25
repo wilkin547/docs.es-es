@@ -17,49 +17,49 @@ ms.assetid: 6dd5b6f2-cd1d-4593-a9f4-1c2ed9404ca0
 caps.latest.revision: "15"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: d74a338336d5878cb8d6f212076bb9f1eb7ef768
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 2cf6919ee2d4f0a4031e18d46b9e5ebaf816b120
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="optimize-c-compiler-options"></a><span data-ttu-id="41711-102">/optimize (Opciones del compilador de C#)</span><span class="sxs-lookup"><span data-stu-id="41711-102">/optimize (C# Compiler Options)</span></span>
-<span data-ttu-id="41711-103">La opción **/optimize** habilita o deshabilita las optimizaciones realizadas por el compilador para que el archivo de salida sea menor, más rápido y más eficaz.</span><span class="sxs-lookup"><span data-stu-id="41711-103">The **/optimize** option enables or disables optimizations performed by the compiler to make your output file smaller, faster, and more efficient.</span></span>  
+# <a name="-optimize-c-compiler-options"></a><span data-ttu-id="7d5d5-102">-optimize (Opciones del compilador de C#)</span><span class="sxs-lookup"><span data-stu-id="7d5d5-102">-optimize (C# Compiler Options)</span></span>
+<span data-ttu-id="7d5d5-103">La opción **-optimize** habilita o deshabilita las optimizaciones realizadas por el compilador para que el archivo de salida sea menor, más rápido y más eficaz.</span><span class="sxs-lookup"><span data-stu-id="7d5d5-103">The **-optimize** option enables or disables optimizations performed by the compiler to make your output file smaller, faster, and more efficient.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="41711-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="41711-104">Syntax</span></span>  
-  
-```console  
-/optimize[+ | -]  
-```  
-  
-## <a name="remarks"></a><span data-ttu-id="41711-105">Comentarios</span><span class="sxs-lookup"><span data-stu-id="41711-105">Remarks</span></span>  
- <span data-ttu-id="41711-106">**/optimize** también indica a Common Language Runtime que optimice el código en tiempo de ejecución.</span><span class="sxs-lookup"><span data-stu-id="41711-106">**/optimize** also tells the common language runtime to optimize code at runtime.</span></span>  
-  
- <span data-ttu-id="41711-107">De forma predeterminada, las optimizaciones están deshabilitadas.</span><span class="sxs-lookup"><span data-stu-id="41711-107">By default, optimizations are disabled.</span></span> <span data-ttu-id="41711-108">Especifique **/optimize+** para habilitar las optimizaciones.</span><span class="sxs-lookup"><span data-stu-id="41711-108">Specify **/optimize+** to enable optimizations.</span></span>  
-  
- <span data-ttu-id="41711-109">Al compilar un módulo para que lo use un ensamblado, utilice la misma configuración de **/optimize** que la del ensamblado.</span><span class="sxs-lookup"><span data-stu-id="41711-109">When building a module to be used by an assembly, use the same **/optimize** settings as those of the assembly.</span></span>  
-  
- <span data-ttu-id="41711-110">**/o** es la forma abreviada de **/optimize**.</span><span class="sxs-lookup"><span data-stu-id="41711-110">**/o** is the short form of **/optimize**.</span></span>  
-  
- <span data-ttu-id="41711-111">Es posible combinar las opciones **/optimize** y [/debug](../../../csharp/language-reference/compiler-options/debug-compiler-option.md).</span><span class="sxs-lookup"><span data-stu-id="41711-111">It is possible to combine the **/optimize** and [/debug](../../../csharp/language-reference/compiler-options/debug-compiler-option.md) options.</span></span>  
-  
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a><span data-ttu-id="41711-112">Para establecer esta opción del compilador en el entorno de desarrollo de Visual Studio</span><span class="sxs-lookup"><span data-stu-id="41711-112">To set this compiler option in the Visual Studio development environment</span></span>  
-  
-1.  <span data-ttu-id="41711-113">Abra la página **Propiedades** del proyecto.</span><span class="sxs-lookup"><span data-stu-id="41711-113">Open the project's **Properties** page.</span></span>  
-  
-2.  <span data-ttu-id="41711-114">Haga clic en la página de propiedades de **Compilar**.</span><span class="sxs-lookup"><span data-stu-id="41711-114">Click the **Build** property page.</span></span>  
-  
-3.  <span data-ttu-id="41711-115">Modifique la propiedad **Optimizar código**.</span><span class="sxs-lookup"><span data-stu-id="41711-115">Modify the **Optimize Code** property.</span></span>  
-  
- <span data-ttu-id="41711-116">Para obtener información sobre cómo establecer esta opción del compilador mediante programación, vea <xref:VSLangProj80.CSharpProjectConfigurationProperties3.Optimize%2A>.</span><span class="sxs-lookup"><span data-stu-id="41711-116">For information on how to set this compiler option programmatically, see <xref:VSLangProj80.CSharpProjectConfigurationProperties3.Optimize%2A>.</span></span>  
-  
-## <a name="example"></a><span data-ttu-id="41711-117">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="41711-117">Example</span></span>  
- <span data-ttu-id="41711-118">Compile `t2.cs` y habilite las optimizaciones del compilador:</span><span class="sxs-lookup"><span data-stu-id="41711-118">Compile `t2.cs` and enable compiler optimizations:</span></span>  
+## <a name="syntax"></a><span data-ttu-id="7d5d5-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="7d5d5-104">Syntax</span></span>  
   
 ```console  
-csc t2.cs /optimize  
+-optimize[+ | -]  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="41711-119">Vea también</span><span class="sxs-lookup"><span data-stu-id="41711-119">See Also</span></span>  
- [<span data-ttu-id="41711-120">Opciones del compilador de C#</span><span class="sxs-lookup"><span data-stu-id="41711-120">C# Compiler Options</span></span>](../../../csharp/language-reference/compiler-options/index.md)  
- [<span data-ttu-id="41711-121">Administrar propiedades de soluciones y proyectos</span><span class="sxs-lookup"><span data-stu-id="41711-121">Managing Project and Solution Properties</span></span>](/visualstudio/ide/managing-project-and-solution-properties)
+## <a name="remarks"></a><span data-ttu-id="7d5d5-105">Comentarios</span><span class="sxs-lookup"><span data-stu-id="7d5d5-105">Remarks</span></span>  
+ <span data-ttu-id="7d5d5-106">**-optimize** también indica a Common Language Runtime que optimice el código en tiempo de ejecución.</span><span class="sxs-lookup"><span data-stu-id="7d5d5-106">**-optimize** also tells the common language runtime to optimize code at runtime.</span></span>  
+  
+ <span data-ttu-id="7d5d5-107">De forma predeterminada, las optimizaciones están deshabilitadas.</span><span class="sxs-lookup"><span data-stu-id="7d5d5-107">By default, optimizations are disabled.</span></span> <span data-ttu-id="7d5d5-108">Especifique **-optimize+** para habilitar las optimizaciones.</span><span class="sxs-lookup"><span data-stu-id="7d5d5-108">Specify **-optimize+** to enable optimizations.</span></span>  
+  
+ <span data-ttu-id="7d5d5-109">Al compilar un módulo para que lo use un ensamblado, use la misma configuración de **-optimize** que la del ensamblado.</span><span class="sxs-lookup"><span data-stu-id="7d5d5-109">When building a module to be used by an assembly, use the same **-optimize** settings as those of the assembly.</span></span>  
+  
+ <span data-ttu-id="7d5d5-110">**-o** es la forma abreviada de **-optimize**.</span><span class="sxs-lookup"><span data-stu-id="7d5d5-110">**-o** is the short form of **-optimize**.</span></span>  
+  
+ <span data-ttu-id="7d5d5-111">Es posible combinar las opciones **-optimize** y [-debug](../../../csharp/language-reference/compiler-options/debug-compiler-option.md).</span><span class="sxs-lookup"><span data-stu-id="7d5d5-111">It is possible to combine the **-optimize** and [-debug](../../../csharp/language-reference/compiler-options/debug-compiler-option.md) options.</span></span>  
+  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a><span data-ttu-id="7d5d5-112">Para establecer esta opción del compilador en el entorno de desarrollo de Visual Studio</span><span class="sxs-lookup"><span data-stu-id="7d5d5-112">To set this compiler option in the Visual Studio development environment</span></span>  
+  
+1.  <span data-ttu-id="7d5d5-113">Abra la página **Propiedades** del proyecto.</span><span class="sxs-lookup"><span data-stu-id="7d5d5-113">Open the project's **Properties** page.</span></span>  
+  
+2.  <span data-ttu-id="7d5d5-114">Haga clic en la página de propiedades de **Compilar**.</span><span class="sxs-lookup"><span data-stu-id="7d5d5-114">Click the **Build** property page.</span></span>  
+  
+3.  <span data-ttu-id="7d5d5-115">Modifique la propiedad **Optimizar código**.</span><span class="sxs-lookup"><span data-stu-id="7d5d5-115">Modify the **Optimize Code** property.</span></span>  
+  
+ <span data-ttu-id="7d5d5-116">Para obtener información sobre cómo establecer esta opción del compilador mediante programación, vea <xref:VSLangProj80.CSharpProjectConfigurationProperties3.Optimize%2A>.</span><span class="sxs-lookup"><span data-stu-id="7d5d5-116">For information on how to set this compiler option programmatically, see <xref:VSLangProj80.CSharpProjectConfigurationProperties3.Optimize%2A>.</span></span>  
+  
+## <a name="example"></a><span data-ttu-id="7d5d5-117">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="7d5d5-117">Example</span></span>  
+ <span data-ttu-id="7d5d5-118">Compile `t2.cs` y habilite las optimizaciones del compilador:</span><span class="sxs-lookup"><span data-stu-id="7d5d5-118">Compile `t2.cs` and enable compiler optimizations:</span></span>  
+  
+```console  
+csc t2.cs -optimize  
+```  
+  
+## <a name="see-also"></a><span data-ttu-id="7d5d5-119">Vea también</span><span class="sxs-lookup"><span data-stu-id="7d5d5-119">See Also</span></span>  
+ [<span data-ttu-id="7d5d5-120">Opciones del compilador de C#</span><span class="sxs-lookup"><span data-stu-id="7d5d5-120">C# Compiler Options</span></span>](../../../csharp/language-reference/compiler-options/index.md)  
+ [<span data-ttu-id="7d5d5-121">Administrar propiedades de soluciones y proyectos</span><span class="sxs-lookup"><span data-stu-id="7d5d5-121">Managing Project and Solution Properties</span></span>](/visualstudio/ide/managing-project-and-solution-properties)

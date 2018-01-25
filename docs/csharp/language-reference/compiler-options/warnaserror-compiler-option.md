@@ -13,48 +13,48 @@ ms.assetid: 04680ec3-08d6-4e2e-a274-38310e10e33c
 caps.latest.revision: "15"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 28c2cdc26d32d98e617a0c4b8cd282d2fbc87f4d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 0127f8982d4b8c487a7e243025052e3eb9a5ff75
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="warnaserror-c-compiler-options"></a><span data-ttu-id="c609b-102">/warnaserror (Opciones del compilador de C#)</span><span class="sxs-lookup"><span data-stu-id="c609b-102">/warnaserror (C# Compiler Options)</span></span>
-<span data-ttu-id="c609b-103">La opción **/warnaserror+** trata todas las advertencias como errores</span><span class="sxs-lookup"><span data-stu-id="c609b-103">The **/warnaserror+** option treats all warnings as errors</span></span>  
+# <a name="-warnaserror-c-compiler-options"></a><span data-ttu-id="fc2f3-102">-warnaserror (Opciones del compilador de C#)</span><span class="sxs-lookup"><span data-stu-id="fc2f3-102">-warnaserror (C# Compiler Options)</span></span>
+<span data-ttu-id="fc2f3-103">La opción **-warnaserror+** trata todas las advertencias como errores</span><span class="sxs-lookup"><span data-stu-id="fc2f3-103">The **-warnaserror+** option treats all warnings as errors</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c609b-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="c609b-104">Syntax</span></span>  
-  
-```console  
-/warnaserror[<U>+</U> | -][:warning-list]  
-```  
-  
-## <a name="remarks"></a><span data-ttu-id="c609b-105">Comentarios</span><span class="sxs-lookup"><span data-stu-id="c609b-105">Remarks</span></span>  
- <span data-ttu-id="c609b-106">Cualquier mensaje que se notificaría de manera normal como una advertencia se notifica en su lugar como un error, y el proceso de compilación se detiene (no se compila ningún archivo de salida).</span><span class="sxs-lookup"><span data-stu-id="c609b-106">Any messages that would ordinarily be reported as warnings are instead reported as errors, and the build process is halted (no output files are built).</span></span>  
-  
- <span data-ttu-id="c609b-107">De manera predeterminada, **/warnaserror-** está en vigor, lo que provoca que las advertencias no impidan la generación de un archivo de salida.</span><span class="sxs-lookup"><span data-stu-id="c609b-107">By default, **/warnaserror-** is in effect, which causes warnings to not prevent the generation of an output file.</span></span> <span data-ttu-id="c609b-108">**/warnaserror**, que es igual que **/warnaserror+**, hace que las advertencias se traten como errores.</span><span class="sxs-lookup"><span data-stu-id="c609b-108">**/warnaserror**, which is the same as **/warnaserror+**, causes warnings to be treated as errors.</span></span>  
-  
- <span data-ttu-id="c609b-109">Opcionalmente, si solo quiere que algunas advertencias específicas se traten como errores, puede especificar una lista separada por comas de números de advertencia que se tratarán como errores.</span><span class="sxs-lookup"><span data-stu-id="c609b-109">Optionally, if you want only a few specific warnings to be treated as errors, you may specify a comma-separated list of warning numbers to treat as errors.</span></span>  
-  
- <span data-ttu-id="c609b-110">Use [/warn](../../../csharp/language-reference/compiler-options/warn-compiler-option.md) para especificar el nivel de advertencias que quiere que muestre el compilador.</span><span class="sxs-lookup"><span data-stu-id="c609b-110">Use [/warn](../../../csharp/language-reference/compiler-options/warn-compiler-option.md) to specify the level of warnings that you want the compiler to display.</span></span> <span data-ttu-id="c609b-111">Use [/nowarn](../../../csharp/language-reference/compiler-options/nowarn-compiler-option.md) para deshabilitar determinadas advertencias.</span><span class="sxs-lookup"><span data-stu-id="c609b-111">Use [/nowarn](../../../csharp/language-reference/compiler-options/nowarn-compiler-option.md) to disable certain warnings.</span></span>  
-  
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a><span data-ttu-id="c609b-112">Para establecer esta opción del compilador en el entorno de desarrollo de Visual Studio</span><span class="sxs-lookup"><span data-stu-id="c609b-112">To set this compiler option in the Visual Studio development environment</span></span>  
-  
-1.  <span data-ttu-id="c609b-113">Abra la página **Propiedades** del proyecto.</span><span class="sxs-lookup"><span data-stu-id="c609b-113">Open the project's **Properties** page.</span></span>  
-  
-2.  <span data-ttu-id="c609b-114">Haga clic en la página de propiedades de **Compilar**.</span><span class="sxs-lookup"><span data-stu-id="c609b-114">Click the **Build** property page.</span></span>  
-  
-3.  <span data-ttu-id="c609b-115">Modifique la propiedad **Tratar advertencias como errores**.</span><span class="sxs-lookup"><span data-stu-id="c609b-115">Modify the **Treat Warnings As Errors** property.</span></span>  
-  
-     <span data-ttu-id="c609b-116">Para establecer esta opción del compilador mediante programación, vea <xref:VSLangProj80.CSharpProjectConfigurationProperties3.TreatWarningsAsErrors%2A>.</span><span class="sxs-lookup"><span data-stu-id="c609b-116">To set this compiler option programmatically, see <xref:VSLangProj80.CSharpProjectConfigurationProperties3.TreatWarningsAsErrors%2A>.</span></span>  
-  
-## <a name="example"></a><span data-ttu-id="c609b-117">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="c609b-117">Example</span></span>  
- <span data-ttu-id="c609b-118">Compile `in.cs` y haga que el compilador no muestre ninguna advertencia:</span><span class="sxs-lookup"><span data-stu-id="c609b-118">Compile `in.cs` and have the compiler display no warnings:</span></span>  
+## <a name="syntax"></a><span data-ttu-id="fc2f3-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="fc2f3-104">Syntax</span></span>  
   
 ```console  
-csc /warnaserror in.cs  
-csc /warnaserror:642,649,652 in.cs  
+-warnaserror[<U>+</U> | -][:warning-list]  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="c609b-119">Vea también</span><span class="sxs-lookup"><span data-stu-id="c609b-119">See Also</span></span>  
- [<span data-ttu-id="c609b-120">Opciones del compilador de C#</span><span class="sxs-lookup"><span data-stu-id="c609b-120">C# Compiler Options</span></span>](../../../csharp/language-reference/compiler-options/index.md)  
- [<span data-ttu-id="c609b-121">Administrar propiedades de soluciones y proyectos</span><span class="sxs-lookup"><span data-stu-id="c609b-121">Managing Project and Solution Properties</span></span>](/visualstudio/ide/managing-project-and-solution-properties)
+## <a name="remarks"></a><span data-ttu-id="fc2f3-105">Comentarios</span><span class="sxs-lookup"><span data-stu-id="fc2f3-105">Remarks</span></span>  
+ <span data-ttu-id="fc2f3-106">Cualquier mensaje que se notificaría de manera normal como una advertencia se notifica en su lugar como un error, y el proceso de compilación se detiene (no se compila ningún archivo de salida).</span><span class="sxs-lookup"><span data-stu-id="fc2f3-106">Any messages that would ordinarily be reported as warnings are instead reported as errors, and the build process is halted (no output files are built).</span></span>  
+  
+ <span data-ttu-id="fc2f3-107">De manera predeterminada, **-warnaserror-** está en vigor, lo que provoca que las advertencias no impidan la generación de un archivo de salida.</span><span class="sxs-lookup"><span data-stu-id="fc2f3-107">By default, **-warnaserror-** is in effect, which causes warnings to not prevent the generation of an output file.</span></span> <span data-ttu-id="fc2f3-108">**-warnaserror**, que es igual que **-warnaserror+**, hace que las advertencias se traten como errores.</span><span class="sxs-lookup"><span data-stu-id="fc2f3-108">**-warnaserror**, which is the same as **-warnaserror+**, causes warnings to be treated as errors.</span></span>  
+  
+ <span data-ttu-id="fc2f3-109">Opcionalmente, si solo quiere que algunas advertencias específicas se traten como errores, puede especificar una lista separada por comas de números de advertencia que se tratarán como errores.</span><span class="sxs-lookup"><span data-stu-id="fc2f3-109">Optionally, if you want only a few specific warnings to be treated as errors, you may specify a comma-separated list of warning numbers to treat as errors.</span></span>  
+  
+ <span data-ttu-id="fc2f3-110">Use [-warn](../../../csharp/language-reference/compiler-options/warn-compiler-option.md) para especificar el nivel de advertencias que quiere que muestre el compilador.</span><span class="sxs-lookup"><span data-stu-id="fc2f3-110">Use [-warn](../../../csharp/language-reference/compiler-options/warn-compiler-option.md) to specify the level of warnings that you want the compiler to display.</span></span> <span data-ttu-id="fc2f3-111">Use [-nowarn](../../../csharp/language-reference/compiler-options/nowarn-compiler-option.md) para deshabilitar determinadas advertencias.</span><span class="sxs-lookup"><span data-stu-id="fc2f3-111">Use [-nowarn](../../../csharp/language-reference/compiler-options/nowarn-compiler-option.md) to disable certain warnings.</span></span>  
+  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a><span data-ttu-id="fc2f3-112">Para establecer esta opción del compilador en el entorno de desarrollo de Visual Studio</span><span class="sxs-lookup"><span data-stu-id="fc2f3-112">To set this compiler option in the Visual Studio development environment</span></span>  
+  
+1.  <span data-ttu-id="fc2f3-113">Abra la página **Propiedades** del proyecto.</span><span class="sxs-lookup"><span data-stu-id="fc2f3-113">Open the project's **Properties** page.</span></span>  
+  
+2.  <span data-ttu-id="fc2f3-114">Haga clic en la página de propiedades de **Compilar**.</span><span class="sxs-lookup"><span data-stu-id="fc2f3-114">Click the **Build** property page.</span></span>  
+  
+3.  <span data-ttu-id="fc2f3-115">Modifique la propiedad **Tratar advertencias como errores**.</span><span class="sxs-lookup"><span data-stu-id="fc2f3-115">Modify the **Treat Warnings As Errors** property.</span></span>  
+  
+     <span data-ttu-id="fc2f3-116">Para establecer esta opción del compilador mediante programación, vea <xref:VSLangProj80.CSharpProjectConfigurationProperties3.TreatWarningsAsErrors%2A>.</span><span class="sxs-lookup"><span data-stu-id="fc2f3-116">To set this compiler option programmatically, see <xref:VSLangProj80.CSharpProjectConfigurationProperties3.TreatWarningsAsErrors%2A>.</span></span>  
+  
+## <a name="example"></a><span data-ttu-id="fc2f3-117">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="fc2f3-117">Example</span></span>  
+ <span data-ttu-id="fc2f3-118">Compile `in.cs` y haga que el compilador no muestre ninguna advertencia:</span><span class="sxs-lookup"><span data-stu-id="fc2f3-118">Compile `in.cs` and have the compiler display no warnings:</span></span>  
+  
+```console  
+csc -warnaserror in.cs  
+csc -warnaserror:642,649,652 in.cs  
+```  
+  
+## <a name="see-also"></a><span data-ttu-id="fc2f3-119">Vea también</span><span class="sxs-lookup"><span data-stu-id="fc2f3-119">See Also</span></span>  
+ [<span data-ttu-id="fc2f3-120">Opciones del compilador de C#</span><span class="sxs-lookup"><span data-stu-id="fc2f3-120">C# Compiler Options</span></span>](../../../csharp/language-reference/compiler-options/index.md)  
+ [<span data-ttu-id="fc2f3-121">Administrar propiedades de soluciones y proyectos</span><span class="sxs-lookup"><span data-stu-id="fc2f3-121">Managing Project and Solution Properties</span></span>](/visualstudio/ide/managing-project-and-solution-properties)
