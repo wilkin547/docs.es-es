@@ -24,11 +24,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 76a836e2699617803b78f76f90b27452bd0cdd0f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ffd45957b41cdfd8488aedd865aa70ef5b2634b2
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="wpf-add-ins-overview"></a>Información general sobre los complementos de WPF
 <a name="Introduction"></a>El[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] incluye un modelo de complementos que los desarrolladores pueden usar para crear aplicaciones que admiten la extensibilidad de los complementos. Dicho modelo permite la creación de complementos que se integran con las aplicaciones y amplían su funcionalidad. En algunos escenarios, las aplicaciones también necesitan mostrar [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] que proporcionan los complementos. En este tema se muestra la forma en que [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aumenta el modelo del complemento de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] para habilitar estos escenarios, la arquitectura subyacente, sus ventajas y sus limitaciones.  
@@ -111,7 +111,7 @@ ms.lasthandoff: 12/22/2017
 -   Tiene la <xref:System.SerializableAttribute> atributo aplicado.  
   
 > [!NOTE]
->  Para más información acerca de la creación de objetos de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] remotos, consulte [Hacer que los objetos sean remotos](http://msdn.microsoft.com/en-us/01197253-3f13-43b7-894d-9683e431192a).  
+>  Para más información acerca de la creación de objetos de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] remotos, consulte [Hacer que los objetos sean remotos](http://msdn.microsoft.com/library/01197253-3f13-43b7-894d-9683e431192a).  
   
  Los tipo de interfaz de usuario de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] no se pueden usar de forma remota. Para solucionar el problema, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] amplía el modelo de complemento de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] para habilitar la interfaz de usuario de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] creada por los complementos que se muestran desde las aplicaciones host. Se admiten por [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] por dos tipos: el <xref:System.AddIn.Contract.INativeHandleContract> interfaz y dos métodos estáticos que implementa el <xref:System.AddIn.Pipeline.FrameworkElementAdapters> clase: <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A> y <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>. A un nivel alto, estos tipos y métodos se utilizan como se indica a continuación:  
   
@@ -147,7 +147,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="add-in-is-a-user-interface"></a>El complemento es una interfaz de usuario  
  Cuando un complemento es una [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], se requiere lo siguiente:  
   
-1.  La aplicación host, el complemento y la canalización deben crearse, como se describe en el documento [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] [Complementos y extensibilidad](../../../../docs/framework/add-ins/index.md).  
+1.  La aplicación host, el complemento y la canalización deben crearse, como se describe en el documento [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)][Complementos y extensibilidad](../../../../docs/framework/add-ins/index.md).  
   
 2.  Debe implementar la interfaz de contrato para el complemento <xref:System.AddIn.Contract.INativeHandleContract>.  
   
@@ -297,6 +297,6 @@ ms.lasthandoff: 12/22/2017
  <xref:System.LoaderOptimizationAttribute>  
  [Complementos y extensibilidad](../../../../docs/framework/add-ins/index.md)  
  [Dominios de aplicación](../../../../docs/framework/app-domains/application-domains.md)  
- [Información general sobre comunicación remota de .NET framework](http://msdn.microsoft.com/en-us/eccb1d31-0a22-417a-97fd-f4f1f3aa4462)  
- [Realizar objetos utilizables de forma remota](http://msdn.microsoft.com/en-us/01197253-3f13-43b7-894d-9683e431192a)  
+ [Información general sobre comunicación remota de .NET framework](http://msdn.microsoft.com/library/eccb1d31-0a22-417a-97fd-f4f1f3aa4462)  
+ [Realizar objetos utilizables de forma remota](http://msdn.microsoft.com/library/01197253-3f13-43b7-894d-9683e431192a)  
  [Temas "Cómo..."](../../../../docs/framework/wpf/app-development/how-to-topics.md)
