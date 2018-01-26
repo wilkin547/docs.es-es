@@ -35,11 +35,11 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.workload: dotnet
-ms.openlocfilehash: cb98b4d7bbc70fd54e8928c741aa444a6b832046
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 74b5bce3191b2d40e5b37d64b3d1eee24395ce4c
+ms.sourcegitcommit: c3ebb11a66e85a465c9ba2c42592222630b7ff9e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="configuring-apps-by-using-configuration-files"></a>Configurar aplicaciones con archivos de configuración
 .NET Framework, a través de archivos de configuración, proporciona a los programadores y administradores control y flexibilidad sobre la manera en que se ejecutan las aplicaciones. Los archivos de configuración son archivos XML que se pueden cambiar según sea necesario. Un administrador puede controlar a qué recursos protegidos puede tener acceso una aplicación, qué versiones de ensamblados utilizará la aplicación y dónde se ubican las aplicaciones y los objetos remotos. Los programadores pueden colocar valores en archivos de configuración, con lo que no es necesario volver a compilar una aplicación cada vez que cambia un valor. En esta sección se describe lo que se puede configurar y por qué es útil configurar una aplicación.  
@@ -50,7 +50,7 @@ ms.lasthandoff: 01/19/2018
  En este tema se describe la sintaxis de los archivos de configuración y se proporciona información sobre los tres tipos de archivos de configuración: de equipo, de aplicación y de seguridad.  
   
 ## <a name="configuration-file-format"></a>Formato de archivos de configuración  
- Los archivos de configuración contienen elementos, que son estructuras de datos lógicas que establecen la información de configuración. En un archivo de configuración se usan etiquetas para marcar el comienzo y el final de un elemento. Por ejemplo, el elemento `<runtime>` consta de `<runtime>`*elementos secundarios*`</runtime>`. Un elemento vacío se escribiría como `<runtime/>` o `<runtime>``</runtime>`.  
+ Los archivos de configuración contienen elementos, que son estructuras de datos lógicas que establecen la información de configuración. En un archivo de configuración se usan etiquetas para marcar el comienzo y el final de un elemento. Por ejemplo, el elemento `<runtime>` consta de `<runtime>`*elementos secundarios*`</runtime>`. Un elemento vacío se escribiría como `<runtime/>` o `<runtime></runtime>`.  
   
  Como ocurre con todos los archivos XML, la sintaxis de los archivos de configuración distingue mayúsculas de minúsculas.  
   
