@@ -1,27 +1,29 @@
 ---
 title: Desarrollo de aplicaciones
 ms.custom: 
-ms.date: 03/30/2017
+ms.date: 01/26/2018
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-wpf
+ms.technology:
+- dotnet-wpf
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - WPF [WPF], about application development
 - application development [WPF], about
 ms.assetid: 2996ce5e-81e9-49ae-881b-952db3dd1b7e
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 67a49e1b27c227623d01dba17b7b0a1aea7c1290
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 1d2a79a05f18fecf4e008aa6a95d359c719e854b
+ms.sourcegitcommit: f28752eab00d2bd97e971542c0f49ce63cfbc239
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="application-development"></a>Desarrollo de aplicaciones
 <a name="introduction"></a>
@@ -140,5 +142,5 @@ ms.lasthandoff: 12/22/2017
 |[Información general sobre navegación](../../../../docs/framework/wpf/app-development/navigation-overview.md)|Proporciona información general sobre la administración de la navegación entre las páginas de la aplicación.|  
 |[Hospedar aplicaciones de WPF](../../../../docs/framework/wpf/app-development/hosting-wpf-applications.md)|Proporciona información general acerca de [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)].|  
 |[Compilar e implementar aplicaciones WPF](../../../../docs/framework/wpf/app-development/building-and-deploying-wpf-applications.md)|Describe cómo compilar e implementar la aplicación de WPF.|  
-|[Introducción a WPF en Visual Studio 2015](../../../../docs/framework/wpf/getting-started/introduction-to-wpf-in-vs.md)|Describe las características principales de WPF.|  
+|[Introducción a WPF en Visual Studio](../../../../docs/framework/wpf/getting-started/introduction-to-wpf-in-vs.md)|Describe las características principales de WPF.|  
 |[Tutorial: Mi primera aplicación de escritorio WPF](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)|Un tutorial que muestra cómo crear una aplicación de WPF mediante la navegación por páginas, diseño, controles, imágenes, estilos y enlaces.|
