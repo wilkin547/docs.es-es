@@ -8,19 +8,20 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 947a9ae6-379c-43a3-9cd5-87f573a5739f
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8a6d0338b7c460d7053af9264527a6cd6d263673
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 6086ca0ccb31603874feda6df1384b9346adb49d
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="sendmail-custom-activity"></a>Actividad personalizada SendMail
-En este ejemplo se muestra cómo crear una actividad personalizada que deriva de <xref:System.Activities.AsyncCodeActivity> para enviar correo utilizando SMTP para el uso dentro de una aplicación de flujo de trabajo. La actividad personalizada utiliza las capacidades de <xref:System.Net.Mail.SmtpClient> para enviar el correo electrónico de forma asincrónica y enviar el correo con autenticación. También proporciona algunas características de usuario final como el modo de prueba, reemplazo del token, plantillas de archivo y ruta de acceso para dejar la prueba.  
+En este ejemplo se muestra cómo crear una actividad personalizada que deriva de <xref:System.Activities.AsyncCodeActivity> para enviar correo utilizando SMTP para el uso dentro de una aplicación de flujo de trabajo. La actividad personalizada utiliza las capacidades de <xref:System.Net.Mail.SmtpClient> para enviar correo electrónico de forma asincrónica y para enviar correo electrónico con la autenticación. También proporciona algunas características de usuario final como el modo de prueba, reemplazo del token, plantillas de archivo y ruta de colocación para dejar la prueba.  
   
  En la siguiente tabla se detallan los argumentos de la actividad `SendMail`.  
   
@@ -31,17 +32,17 @@ En este ejemplo se muestra cómo crear una actividad personalizada que deriva de
 |EnableSsl|bool|Especifica si el objeto <xref:System.Net.Mail.SmtpClient> utiliza SSL (Secure Sockets Layer) para cifrar la conexión.|  
 |UserName|String|Nombre de usuario para preparar las credenciales para autenticar la propiedad <xref:System.Net.Mail.SmtpClient.Credentials%2A> del remitente.|  
 |Contraseña|String|Contraseña para preparar las credenciales para autenticar la propiedad <xref:System.Net.Mail.SmtpClient.Credentials%2A> del remitente.|  
-|Contenido|<xref:System.Activities.InArgument%601>\<cadena >|Asunto del mensaje.|  
-|Cuerpo|<xref:System.Activities.InArgument%601>\<cadena >|Cuerpo del mensaje.|  
-|Datos adjuntos|<xref:System.Activities.InArgument%601>\<cadena >|Colección de datos adjuntos que se utiliza para almacenar los datos adjuntos a este mensaje de correo electrónico.|  
-|De|<xref:System.Net.Mail.MailAddress>|Dirección del remitente de este mensaje de correo electrónico.|  
-|En|<xref:System.Activities.InArgument%601>\<<xref:System.Net.Mail.MailAddressCollection>>|Colección de direcciones que contiene los destinatarios de este mensaje de correo electrónico.|  
-|CC|<xref:System.Activities.InArgument%601>\<<xref:System.Net.Mail.MailAddressCollection>>|Colección de direcciones que contiene los destinatarios para recibir copia (CC) de este mensaje de correo electrónico.|  
-|BCC|<xref:System.Activities.InArgument%601>\<<xref:System.Net.Mail.MailAddressCollection>>|Colección de direcciones que contiene los destinatarios ocultos de copia (CCO) de este mensaje de correo electrónico.|  
+|Contenido|<xref:System.Activities.InArgument%601>\<string>|Asunto del mensaje.|  
+|Cuerpo|<xref:System.Activities.InArgument%601>\<string>|Cuerpo del mensaje.|  
+|Datos adjuntos|<xref:System.Activities.InArgument%601>\<string>|Colección de datos adjuntos que se utiliza para almacenar los datos adjuntados a este mensaje de correo electrónico.|  
+|De|<xref:System.Net.Mail.MailAddress>|De dirección para este mensaje de correo electrónico.|  
+|En|<xref:System.Activities.InArgument%601>\<<xref:System.Net.Mail.MailAddressCollection>>|Colección de direcciones que contiene a los destinatarios de este mensaje de correo electrónico.|  
+|CC|<xref:System.Activities.InArgument%601>\<<xref:System.Net.Mail.MailAddressCollection>>|Colección de direcciones que contiene a los destinatarios de copia (CC) para este mensaje de correo electrónico.|  
+|BCC|<xref:System.Activities.InArgument%601>\<<xref:System.Net.Mail.MailAddressCollection>>|Colección de direcciones que contiene a los destinatarios de copia carbón oculta (BCC) para este mensaje de correo electrónico.|  
 |tokens|<xref:System.Activities.InArgument%601>< IDictionary\<cadena, cadena >>|Tokens para reemplazar en el cuerpo. Esta característica les permite a los usuarios especificar algunos valores del cuerpo que pueden ser reemplazados después por los tokens que proporcionó utilizando esta propiedad.|  
 |BodyTemplateFilePath|String|Ruta de acceso de una plantilla para el cuerpo. La actividad `SendMail` copia el contenido de este archivo en su propiedad de cuerpo.<br /><br /> La plantilla puede contener tokens que son reemplazados por el contenido de la propiedad de tokens.|  
-|TestMailTo|<xref:System.Net.Mail.MailAddress>|Cuando se establece esta propiedad, todos los correos electrónicos se envían a la dirección especificada en él.<br /><br /> Se pretende que esta propiedad sea utilizada al probar los flujos de trabajo. Por ejemplo, cuando desea asegurarse de que todos los correo electrónicos se envíen sin enviarlos a los destinatarios reales.|  
-|TestDropPath|String|Cuando se establece esta propiedad, todos los correos electrónicos se guardan también en el archivo especificado.<br /><br /> Se pretende que esta propiedad sea utilizada cuando prueba o depura flujos de trabajo, para asegurarse de que el formato y contenido de los mensajes de correo electrónico salientes son adecuados.|  
+|TestMailTo|<xref:System.Net.Mail.MailAddress>|Cuando se establece esta propiedad, todos los correos electrónicos se envían a la dirección especificada en él.<br /><br /> Se pretende que esta propiedad sea utilizada al probar los flujos de trabajo. Por ejemplo, si desea asegurarse de que todos los correos electrónicos se envían sin enviarlos a los destinatarios reales.|  
+|TestDropPath|String|Cuando se establece esta propiedad, todos los correos electrónicos se guardan también en el archivo especificado.<br /><br /> Esta propiedad está pensada para usarse cuando se está probando o depurar flujos de trabajo, para asegurarse de que el formato y el contenido de los correos electrónicos de salida sea la adecuada.|  
   
 ## <a name="solution-contents"></a>Contenido de la solución  
  La solución contiene dos proyectos.  
@@ -115,7 +116,7 @@ new SendMail
 ## <a name="set-up-instructions"></a>Instrucciones de instalación  
  En este ejemplo se requiere acceso a un servidor SMTP.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]configuración de un servidor SMTP, consulte los vínculos siguientes.  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] configuración de un servidor SMTP, consulte los vínculos siguientes.  
   
 -   [Microsoft Technet](http://go.microsoft.com/fwlink/?LinkId=166060)  
   
@@ -133,9 +134,9 @@ new SendMail
   
 2.  Asegúrese de que tiene acceso a un servidor SMTP válido. Vea las instrucciones de configuración.  
   
-3.  Configure el programa con su dirección de servidor y las direcciones de correo electrónico From y To.  
+3.  Configure el programa con su dirección de servidor y de y a direcciones de correo electrónico.  
   
-     Para ejecutar este ejemplo correctamente, puede necesitar configurar el valor de las direcciones de correo electrónico From y To, y la dirección del servidor SMTP, en Program.cs y en Sequence.xaml. Necesitará cambiar la dirección en ambas ubicaciones, dado que el programa envía el correo de dos maneras diferentes  
+     Para ejecutar este ejemplo correctamente, debe configurar el valor de desde y hacia las direcciones de correo electrónico y la dirección del servidor SMTP en el archivo Program.cs y en Sequence.xaml. Necesitará cambiar la dirección en ambas ubicaciones, dado que el programa envía el correo de dos maneras diferentes  
   
 4.  Para compilar la solución, presione Ctrl+MAYÚS+B.  
   

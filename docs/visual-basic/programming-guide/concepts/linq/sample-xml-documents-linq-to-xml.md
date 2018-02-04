@@ -5,24 +5,25 @@ ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a734cc4e-d95d-4631-91a2-81618c8ad894
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: db9837d5dbe09b3045d88dc68e429877b39559f2
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 0442869576e9f9e7f4fe52cecd8b911fa70c9352
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="sample-xml-documents-linq-to-xml"></a>Documentos XML de ejemplo (LINQ to XML)
 Los archivos del siguiente ejemplo se usan en los ejemplos de código y en los fragmentos de código de la documentación de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
   
 > [!NOTE]
->  Las compañías, organizaciones, productos, nombres de dominio, direcciones de correo electrónico, logotipos, personas, lugares y eventos que se citan a modo de ejemplo son ficticios. No se pretende establecer ni se debe inferir ninguna asociación con ninguna empresa, organización, producto, nombre de dominio, dirección de correo electrónico, logotipo, persona, lugar ni evento real.  
+>  Las empresas, las organizaciones, los productos, los nombres de dominio, las direcciones de correo electrónico, los logotipos, los usuarios, las ubicaciones y los eventos que se citan a modo de ejemplo son ficticios. No se pretende indicar, ni debe deducirse, ninguna asociación con compañías, organizaciones, productos, dominios, direcciones de correo electrónico, logotipos, personas, lugares o hechos reales.  
   
 ## <a name="in-this-section"></a>En esta sección  
   

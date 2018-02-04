@@ -5,20 +5,22 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 68032f69-149e-4613-bae4-18314d4fd294
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 34bfaeb563bd4979bf29a5e45a60730eb38700b5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 23e2599920c0ef0ea35569ec9b0b16b0f8735f1a
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="ltuserprincipalnamegt"></a>&lt;userPrincipalName&gt;
 Especifica el Nombre principal de usuario (UPN) de un servicio que va a autenticar el cliente.  
@@ -26,7 +28,7 @@ Especifica el Nombre principal de usuario (UPN) de un servicio que va a autentic
  Para obtener más información acerca de cómo establecer el UPN, consulte [autenticación e identidad de servicio](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
   
 \<identidad >  
-\<userPrincipalName >  
+\<userPrincipalName>  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -50,7 +52,7 @@ Especifica el Nombre principal de usuario (UPN) de un servicio que va a autentic
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<identidad >](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|Especifica la identidad del servicio que va a autenticar el cliente.|  
+|[\<identity>](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|Especifica la identidad del servicio que va a autenticar el cliente.|  
   
 ## <a name="remarks"></a>Comentarios  
  Un cliente [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] seguro que se conecta a un extremo con esta identidad utiliza UPN al realizar la autenticación de SSPI con el extremo.  
@@ -70,4 +72,4 @@ Especifica el Nombre principal de usuario (UPN) de un servicio que va a autentic
  <xref:System.ServiceModel.EndpointAddress.Identity%2A>  
  <xref:System.ServiceModel.UpnEndpointIdentity>  
  [Identidad del servicio y autenticación](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
- [\<identidad >](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)
+ [\<identity>](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)

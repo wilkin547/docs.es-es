@@ -5,7 +5,8 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -15,25 +16,26 @@ helpviewer_keywords:
 - specifiedPickupDirectory element
 - <specifiedPickupDirectory> element
 ms.assetid: 0121f49d-bff2-4bc6-af06-f1628dcd61f1
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 0df8cb46943862e3de66faa5551f550cb232f212
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: e68ce8cac4048ee2df89d0241cc50242e20391a2
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="ltspecifiedpickupdirectorygt-element-network-settings"></a>&lt;specifiedPickupDirectory&gt; Element (Network Settings)
 Configura el directorio local de un servidor SMTP (Protocolo simple de transferencia de correo).  
   
  \<configuration>  
-\<System.NET >  
+\<system.net>  
 \<mailSettings >  
-\<SMTP >  
-\<specifiedPickupDirectory >  
+\<smtp>  
+\<specifiedPickupDirectory>  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -50,7 +52,7 @@ Configura el directorio local de un servidor SMTP (Protocolo simple de transfere
   
 |Atributo|Descripción|  
 |---------------|-----------------|  
-|`pickupDirectoryLocation`|El directorio donde las aplicaciones guardan el correo electrónico para ser procesado posteriormente por el servidor SMTP.|  
+|`pickupDirectoryLocation`|El directorio donde las aplicaciones guardan correo electrónico para su posterior procesamiento por el servidor SMTP.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
  Ninguno.  

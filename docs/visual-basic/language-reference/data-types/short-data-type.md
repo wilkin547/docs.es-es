@@ -1,13 +1,15 @@
 ---
 title: Short (Tipo de datos, Visual Basic)
-ms.date: 04/20/2017
+ms.date: 01/31/2018
 ms.prod: .net
 ms.suite: 
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 author: rpetrusha
 ms.author: ronpet
-f1_keywords: vb.Short
+f1_keywords:
+- vb.Short
 helpviewer_keywords:
 - numbers [Visual Basic], whole
 - whole numbers
@@ -21,11 +23,11 @@ helpviewer_keywords:
 - Short data type
 - literal type characters [Visual Basic], S
 ms.assetid: 65fcbcf3-a841-400e-885e-301497729a8b
-ms.openlocfilehash: fef948debed69cf9fb7b0e6bb65eb0ddbe497a92
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 10c9869d4fb84cd013b22bc791bd31fad745f3d3
+ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="short-data-type-visual-basic"></a>Tipo de datos short (Visual Basic)
 Contiene enteros con signo 16 bits (2 bytes) que intervalo entre -32.768 y 32.767.  
@@ -50,10 +52,18 @@ A partir de Visual Basic de 2017, también puede utilizar el carácter de subray
 
 [!code-vb[Short](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#ShortS)]
 
+A partir de Visual Basic 15,5, también puede utilizar el carácter de subrayado (`_`) como separador inicial entre el prefijo y los dígitos hexadecimales, octales o binarios. Por ejemplo:
+
+```vb
+Dim number As Short = &H_3264
+```
+
+[!INCLUDE [supporting-underscores](../../../../includes/vb-separator-langversion.md)]
+
 También pueden incluir literales numéricos el `S` [escriba carácter](../../programming-guide\language-features\data-types/type-characters.md) para denotar el `Short` tipo de datos, como se muestra en el ejemplo siguiente.
 
 ```vb
-Dim number = &H0326S
+Dim number = &H_3264S
 ```
 
 ## <a name="programming-tips"></a>Sugerencias de programación

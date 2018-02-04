@@ -5,7 +5,8 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,21 +23,22 @@ helpviewer_keywords:
 - user authentication, code access security
 - code access security
 ms.assetid: 859af632-c80d-4736-8d6f-1e01b09ce127
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a28f8994c8cffdad69272322575df37c437b8b6c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 04a46e30256b3b6df3de51346924cbb5fa057837
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="code-access-security"></a>Seguridad de acceso del código
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
- Los equipos conectados de hoy en día suelen estar expuestos a código procedente de varios orígenes, posiblemente desconocidos. El código puede adjuntarse por correo electrónico, incluirse en documentos o descargarse a través de Internet. Por desgracia, muchos usuarios de equipos han experimentado personalmente las consecuencias del código móvil malintencionado, como virus y gusanos, que pueden dañar o destruir datos y costar tiempo y dinero.  
+ Los equipos conectados de hoy en día suelen estar expuestos a código procedente de varios orígenes, posiblemente desconocidos. Código puede adjunta al correo electrónico, incluirse en documentos o descargarse a través de Internet. Por desgracia, muchos usuarios de equipos han experimentado personalmente las consecuencias del código móvil malintencionado, como virus y gusanos, que pueden dañar o destruir datos y costar tiempo y dinero.  
   
  Los mecanismos de seguridad más comunes conceden derechos a los usuarios según sus credenciales de inicio de sesión (normalmente, una contraseña) y limitan los recursos (a menudo, directorios y archivos) a los que puede acceder el usuario. Sin embargo, este enfoque no soluciona algunos problemas: los usuarios obtienen el código de muchos orígenes, algunos de los cuales pueden ser confiables. Además, el código puede contener errores o vulnerabilidades que permitan que lo explote el código malintencionado y el usuario, a veces, no sabe cómo actuará el código. En consecuencia, los equipos pueden resultar dañados y se pueden perder datos privados si un usuario precavido y de confianza ejecuta software malintencionado o que contenga errores. La mayoría de los mecanismos de seguridad de los sistemas operativos requiere que cada fragmento de código sea de plena confianza para ejecutarse, con la excepción, quizás, de los scripts de una página web. Por lo tanto, sigue siendo necesario un mecanismo de seguridad de amplia aplicación que permita que el código que se origina en un equipo se ejecute con protección en otro sistema, aunque no haya ninguna relación de confianza entre los sistemas.  
   
@@ -77,7 +79,7 @@ Recorrido de la pila de seguridad
 |-----------|-----------------|  
 |[Code Access Security Basics](../../../docs/framework/misc/code-access-security-basics.md) (Conceptos básicos sobre la seguridad de acceso del código)|Describe la seguridad de acceso del código y sus usos más comunes.|  
 |[Código transparente en seguridad, nivel 2](../../../docs/framework/misc/security-transparent-code-level-2.md)|Describe el modelo de transparencia de seguridad de [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)].|  
-|[Utilizar bibliotecas de código de confianza parcial](../../../docs/framework/misc/using-libraries-from-partially-trusted-code.md)|Describe cómo habilitar bibliotecas para usarlas con código no administrado y cómo usar las bibliotecas desde el código no administrado.|  
+|[Utilizar bibliotecas de código que no es de plena confianza](../../../docs/framework/misc/using-libraries-from-partially-trusted-code.md)|Describe cómo habilitar bibliotecas para usarlas con código no administrado y cómo usar las bibliotecas desde el código no administrado.|  
 |[Conceptos clave de seguridad](../../../docs/standard/security/key-security-concepts.md)|Proporciona información general sobre muchos de los términos y conceptos clave que se usan en el sistema de seguridad de .NET Framework.|  
 |[Seguridad basada en roles](../../../docs/standard/security/role-based-security.md)|Describe cómo incorporar la seguridad basada en roles.|  
 |[Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)|Describe cómo incorporar la criptografía en las aplicaciones.|

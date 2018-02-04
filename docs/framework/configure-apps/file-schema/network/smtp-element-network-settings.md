@@ -5,7 +5,8 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -15,24 +16,25 @@ helpviewer_keywords:
 - <smtp> element
 - smtp element
 ms.assetid: 220b0329-e384-4e0c-86b4-0945ad17efd9
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 598fe3dc2a49187e923cd689f863d0a3327e735f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: f5b2a3b7eec17fbdd12181c29f610d2b2ad32bd4
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="ltsmtpgt-element-network-settings"></a>&lt;SMTP&gt; elemento (configuración de red)
-Configura el formato de entrega, el método de entrega y la dirección de remitente para el envío de correos electrónicos.  
+Configura el formato de entrega, el método de entrega y de dirección para el envío de mensajes de correo electrónico.  
   
  \<configuration>  
-\<System.NET >  
+\<system.net>  
 \<mailSettings >  
-\<SMTP >  
+\<smtp>  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -53,9 +55,9 @@ Configura el formato de entrega, el método de entrega y la dirección de remite
   
 |Atributo|Descripción|  
 |---------------|-----------------|  
-|`deliveryFormat`|Especifica el formato de entrega para los mensajes de correo electrónico salientes. Los valores aceptables son SevenBit e International.|  
-|`deliveryMethod`|Especifica el método de entrega para los mensajes de correo electrónico. Los valores aceptables son network, pickupDirectoryFromIis y specifiedPickupDirectory.|  
-|`from`|Especifica la dirección de remitente para los mensajes de correo electrónico salientes.|  
+|`deliveryFormat`|Especifica el formato de entrega de correos electrónicos de salida. Los valores aceptables son SevenBit e International.|  
+|`deliveryMethod`|Especifica el método de entrega de mensajes de correo electrónico. Los valores aceptables son network, pickupDirectoryFromIis y specifiedPickupDirectory.|  
+|`from`|Especifica el de la dirección de correo electrónico saliente.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
   

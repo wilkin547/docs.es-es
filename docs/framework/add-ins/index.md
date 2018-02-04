@@ -5,7 +5,8 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,16 +20,17 @@ helpviewer_keywords:
 - .NET Framework, extensibility
 - versioning [.NET Framework], add-ins
 ms.assetid: 8dd45b02-7218-40f9-857d-40d7b98b850b
-caps.latest.revision: "42"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 030b84245a5cec09dac3133b04235c65f7bb2d80
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 4d288d321063512f91ad94b417bb1a6bf38c9ef9
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="add-ins-and-extensibility"></a>Complementos y extensibilidad
 <a name="top"></a> Los complementos ofrecen características o servicios extendidos para una aplicación host. El [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] proporciona un modelo de programación que los desarrolladores pueden usar para desarrollar complementos y activarlos en la aplicación host. Para ello, el modelo construye una canalización de comunicación entre el host y el complemento. El modelo se implementa con los tipos de los espacios de nombres <xref:System.AddIn>, <xref:System.AddIn.Hosting>, <xref:System.AddIn.Pipeline>y <xref:System.AddIn.Contract> .  
@@ -105,7 +107,7 @@ Canalización de complementos
   
 <a name="distinguishing_between_addins_and_hosts"></a>   
 ## <a name="distinguishing-between-add-ins-and-hosts"></a>Distinción entre complementos y hosts  
- La diferencia entre un complemento y un host consiste, simplemente, en que el host es el que activa el complemento. El host puede ser el mayor de los dos, por ejemplo, una aplicación de procesamiento de texto y sus correctores ortográficos. El host también puede ser el menor de los dos, por ejemplo, un cliente de mensajería instantánea con un reproductor multimedia insertado. El modelo de complementos admite complementos en escenarios de cliente y de servidor. Algunos ejemplos de complementos de servidor son los complementos que proporcionan detección de virus, filtros de correo no deseado y protección de IP a los servidores de correo. Algunos ejemplos de complementos de cliente incluyen los complementos de referencia para procesadores de textos, las características especializadas para programas de gráficos y juegos y la detección de virus para clientes de correo electrónico local.  
+ La diferencia entre un complemento y un host consiste, simplemente, en que el host es el que activa el complemento. El host puede ser el mayor de los dos, por ejemplo, una aplicación de procesamiento de texto y sus correctores ortográficos. El host también puede ser el menor de los dos, por ejemplo, un cliente de mensajería instantánea con un reproductor multimedia insertado. El modelo de complementos admite complementos en escenarios de cliente y de servidor. Algunos ejemplos de complementos de servidor son los complementos que proporcionan detección de virus, filtros de correo no deseado y protección de IP a los servidores de correo. Ejemplos de complementos de cliente incluyen los complementos de referencia para procesadores de textos, las características especializadas para programas de gráficos y juegos y detección de virus para clientes de correo electrónico local.  
   
  [Volver al principio](#top)  
   

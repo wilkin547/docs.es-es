@@ -8,16 +8,17 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b483139a-39bb-4560-8003-8969a8fc2cd1
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f6974c7bb281aa6685725b65edd06bb40a907559
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 60e3b65851dba68b4d01d6e4195b5faf99b583de
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="absolute-delay"></a>Retraso absoluto
 El escenario principal de este ejemplo es el retraso hasta un valor de <xref:System.DateTime> especificado utilizando temporizadores duraderos en una aplicación de flujo de trabajo. Esto es diferente a utilizar la actividad <xref:System.Activities.Statements.Delay> integrada, ya que en este caso solo se permitirá el retraso para un valor de <xref:System.TimeSpan> (o número de minutos/segundos) determinado.  
@@ -49,7 +50,7 @@ El escenario principal de este ejemplo es el retraso hasta un valor de <xref:Sys
   
  En este ejemplo también se muestra cómo activar la persistencia para un elemento <xref:System.Activities.WorkflowApplication>. En este ejemplo concreto, utilizaremos temporizadores duraderos en los que los datos de flujo de trabajo se descargarán en la base de datos de persistencia durante el tiempo de inactividad mientras se espera que el temporizador expire. Esta implementación también se puede utilizar para otras acciones de persistencia. En este ejemplo, se muestra cómo configurar la cadena de conexión de persistencia con SQL Server y cómo crear el almacén de instancias para conservar los datos de las instancias de flujo de trabajo. Se proporciona lógica sobre cómo reanudar el flujo de trabajo una vez producido un evento que hace que la instancia de flujo de trabajo se pueda ejecutar.  
   
- Según vaya realizando los pasos de este ejemplo, verá el tiempo en que el retraso integrado comienza y se completa, lo que a su vez producirá el envío de un mensaje de correo electrónico. A partir de ese momento, la actividad AbsoluteDelay se detendrá hasta un valor de <xref:System.DateTime> especificado (o 0 segundos si el valor de <xref:System.DateTime> ha expirado), produciéndose a su vez el envío de un mensaje de correo electrónico tras la expiración. De este modo, se mostrarán los dos casos de uso diferentes de la funcionalidad de la actividad <xref:System.Activities.Statements.Delay> integrada frente al uso de una actividad AbsoluteDelay.  
+ Paso a paso a través de este ejemplo, verá el tiempo en el que el retraso integrado comienza y completa, que a su vez producirá que se envíe un mensaje de correo electrónico. A partir de ese momento, la actividad AbsoluteDelay se detendrá hasta un valor de <xref:System.DateTime> especificado (o 0 segundos si el valor de <xref:System.DateTime> ha expirado), produciéndose a su vez el envío de un mensaje de correo electrónico tras la expiración. De este modo, se mostrarán los dos casos de uso diferentes de la funcionalidad de la actividad <xref:System.Activities.Statements.Delay> integrada frente al uso de una actividad AbsoluteDelay.  
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Configurar, compilar y ejecutar el ejemplo  
   

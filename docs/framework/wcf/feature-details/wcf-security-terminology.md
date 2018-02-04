@@ -5,7 +5,8 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -13,21 +14,22 @@ helpviewer_keywords:
 - security glossary [WCF]
 - security terms [WCF]
 ms.assetid: 68dde024-8e51-40ba-804f-ec52d85e9ca9
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: d63871f45fc8e209eb562fec7b208b10f67414b1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 352615238d95cf02788cf88ef412a11ffd2faf37
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="wcf-security-terminology"></a>Terminología de seguridad en WCF
 Alguna de la terminología utilizada al hablar sobre seguridad puede ser poco familiar. Este tema proporciona breves explicaciones sobre algunos términos de seguridad, pero no está diseñado para proporcionar una documentación completa sobre cada elemento.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]los términos usados en [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] documentación, vea [conceptos fundamentales de Windows Communication Foundation](../../../../docs/framework/wcf/fundamental-concepts.md).  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] los términos usados en [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] documentación, vea [conceptos fundamentales de Windows Communication Foundation](../../../../docs/framework/wcf/fundamental-concepts.md).  
   
  lista de control de acceso (ACL)  
  Lista de protecciones de seguridad que se aplica a un objeto. (Un objeto puede ser un archivo, un proceso, un evento, o cualquier elemento que tenga un descriptor de seguridad.) Una entrada en ACL es una entrada de control de acceso (ACE). Hay dos tipos de ACL: discrecional y de sistema.  

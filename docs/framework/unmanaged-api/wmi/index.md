@@ -5,15 +5,16 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.date: 11/06/2017
-ms.topic: article-type-from-white-list
+ms.topic: reference
 ms.prod: .net-framework
 ms.devlang: cpp
-ms.workload: dotnet
-ms.openlocfilehash: 466ba410f7d6c13eb5f1949bf3aa32c3951a8ba7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: c7959d6b6b7bafd728db5a579ff1376e686c5b74
+ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="windows-management-instrumentation-wmi-and-performance-counters-unmanaged-api-reference"></a>Instrumental de administración de Windows (WMI) y los contadores de rendimiento (referencia de API no administrada)
 
@@ -44,7 +45,7 @@ La API incluye las siguientes funciones:
 | [FormatFromRawValue (función)](formatfromrawvalue.md) | Convierte un valor de datos de rendimiento sin procesar en el formato especificado, o dos valores de datos de rendimiento sin procesar si la conversión de formato se basa en el tiempo. | 
 | [Get (función)](get.md) | Recupera un valor de propiedad especificado, si existe. |
 | [GetCurrentApartmentType (función)](getcurrentapartmenttype.md) | Recupera el tipo de contenedor en el que se está ejecutando el llamador. |
-| [GetDemultiplexedStub (función)](getdemultiplexedstub.md) | Crea un receptor de reenviador de objeto para ayudar a un cliente recibir las llamadas asincrónicas de administración de Windows. |
+| [GetDemultiplexedStub function](getdemultiplexedstub.md) | Crea un receptor de reenviador de objeto para ayudar a un cliente recibir las llamadas asincrónicas de administración de Windows. |
 | [GetErrorInfo (función)](geterrorinfo.md) | Recupera información de error de la llamada de función anterior. | 
 | [GetMethod (función)](getmethod.md) | Recupera información sobre el método especificado. | 
 | [GetMethodOrigin (función)](getmethodorigin.md) | Determina la clase en la que se declara un método. |
@@ -63,11 +64,11 @@ La API incluye las siguientes funciones:
 | [PutClassWmi (función)](putclasswmi.md) | Crea una nueva clase o actualiza uno existente. |
 | [PutInstanceWmi (función)](putinstancewmi.md) | Crea o actualiza una instancia de una clase existente. La instancia se escribe en el repositorio de WMI. |
 | [PutMethod (función)](putmethod.md) | Crea un método. |
-| [QualifierSet_BeginEnumeration (función)](qualifierset-beginenumeration.md) | Restablece el enumerador de los calificadores de un objeto al principio de la enumeración. |
-| [QualifierSet_Delete (función)](qualifierset-delete.md) | Elimina un calificador especificado por su nombre.  |
-| [QualifierSet_EndEnumeration (función)](qualifierset-endenumeration.md) | Finaliza la enumeración iniciada con una llamada a la `QualifierSet_BeginEnumeration` (función). |
-| [QualifierSet_Get (función)](qualifierset-get.md) | Obtiene el calificador con nombre especificado.  |
-| [QualifierSet_GetNames (función)](qualifierset-getnames.md) | Recupera los nombres de todos los calificadores o de calificadores especificados que están disponibles en el objeto actual o la propiedad. |
+| [QualifierSet_BeginEnumeration function](qualifierset-beginenumeration.md) | Restablece el enumerador de los calificadores de un objeto al principio de la enumeración. |
+| [QualifierSet_Delete function](qualifierset-delete.md) | Elimina un calificador especificado por su nombre.  |
+| [QualifierSet_EndEnumeration function](qualifierset-endenumeration.md) | Finaliza la enumeración iniciada con una llamada a la `QualifierSet_BeginEnumeration` (función). |
+| [QualifierSet_Get function](qualifierset-get.md) | Obtiene el calificador con nombre especificado.  |
+| [QualifierSet_GetNames function](qualifierset-getnames.md) | Recupera los nombres de todos los calificadores o de calificadores especificados que están disponibles en el objeto actual o la propiedad. |
 | [QualifierSet_Next (función)](qualifierset-next.md) | Recupera el siguiente calificador en una enumeración que se inició con una llamada a la [QualifierSet_BeginEnumeration](qualifierset-beginenumeration.md) (función). |
 | [QualifierSet_Put (función)](qualifierset-put.md) | Escribe el valor y calificador con nombre. |
 | [ResetSecurity (función)](resetsecurity.md) | Asigna el token de suplantación proporcionado para el subproceso actual. |

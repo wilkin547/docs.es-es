@@ -5,23 +5,25 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4a96a9af-d980-43be-bf91-341a23401431
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: c205aec714d06b5d2aaf2806867fe51ef508385e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: f675f75d6dfd51b5259748316864048562ee0452
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="claims-based-identity-model"></a>Modelo de identidad basado en notificaciones
-Al compilar aplicaciones para notificaciones, la identidad del usuario se representa en la aplicación como un conjunto de notificaciones. Una notificación podría ser el nombre del usuario y otra, una dirección de correo electrónico. La idea es que se configure un sistema de identidad externo para proporcionar a la aplicación la información que necesita sobre el usuario con cada solicitud realizada, junto con la garantía criptográfica de que los datos de identidad recibidos proceden de una fuente de confianza.  
+Al compilar aplicaciones para notificaciones, la identidad del usuario se representa en la aplicación como un conjunto de notificaciones. Una notificación podría ser el nombre del usuario, otra puede ser una dirección de correo electrónico. La idea es que se configure un sistema de identidad externo para proporcionar a la aplicación la información que necesita sobre el usuario con cada solicitud realizada, junto con la garantía criptográfica de que los datos de identidad recibidos proceden de una fuente de confianza.  
   
  Con este modelo, el inicio de sesión único es mucho más fácil de lograr y la aplicación ya no es responsable de las siguientes acciones:  
   
@@ -49,7 +51,7 @@ Al compilar aplicaciones para notificaciones, la identidad del usuario se repres
  En las descripciones del modelo de programación de Windows Identity Foundation (WIF), se usa el término "identidad" para representar un conjunto de atributos que describen a un usuario o a alguna otra entidad de un sistema que se quiere proteger.  
   
 ### <a name="claim"></a>Notificación  
- Podemos considerar que una notificación es un fragmento de información de identidad, como el nombre, la dirección de correo electrónico, la edad o la pertenencia al rol de ventas. Cuantas más notificaciones reciba la aplicación, más información se tendrá del usuario. Puede que se pregunte por qué se les denomina "notificaciones" en lugar de "atributos", que es el término que se usa habitualmente para describir directorios de empresa. El motivo está relacionado con el método de entrega. En este modelo, la aplicación no busca atributos de usuario en un directorio. En su lugar, el usuario envía notificaciones a la aplicación que, a su vez, las examina. Cada notificación la realiza un emisor y se confía en la notificación en la misma medida en que se confía en el emisor. Por ejemplo, se confía más en una notificación realizada por el controlador de dominio de su empresa que en otra realizada por el propio usuario. WIF representa las notificaciones con un tipo <xref:System.Security.Claims.Claim>, que tiene una propiedad <xref:System.Security.Claims.Claim.Issuer%2A> que permite averiguar quién emitió la notificación.  
+ Piense en una notificación como un fragmento de información de identidad como nombre, dirección de correo electrónico, edad, la pertenencia al rol de ventas. Cuantas más notificaciones reciba la aplicación, más información se tendrá del usuario. Puede que se pregunte por qué se les denomina "notificaciones" en lugar de "atributos", que es el término que se usa habitualmente para describir directorios de empresa. El motivo está relacionado con el método de entrega. En este modelo, la aplicación no busca atributos de usuario en un directorio. En su lugar, el usuario envía notificaciones a la aplicación que, a su vez, las examina. Cada notificación la realiza un emisor y se confía en la notificación en la misma medida en que se confía en el emisor. Por ejemplo, se confía más en una notificación realizada por el controlador de dominio de su empresa que en otra realizada por el propio usuario. WIF representa las notificaciones con un tipo <xref:System.Security.Claims.Claim>, que tiene una propiedad <xref:System.Security.Claims.Claim.Issuer%2A> que permite averiguar quién emitió la notificación.  
   
 ### <a name="security-token"></a>Token de seguridad  
  El usuario envía un conjunto de notificaciones a la aplicación junto con una solicitud. En un servicio Web, estas notificaciones se incluyen en el encabezado de seguridad de la envoltura SOAP. En una aplicación web basada en el explorador, las notificaciones llegan a través de HTTP POST desde el explorador del usuario y pueden almacenarse en caché posteriormente en una cookie para sesiones futuras. Independientemente de cómo lleguen las notificaciones, estas deben serializarse y para ello se usan los tokens de seguridad. Un token de seguridad es un conjunto serializado de notificaciones firmadas digitalmente por la autoridad emisora. La signatura es importante: garantiza que el usuario no se limitó a realizar una serie de notificaciones y enviarlas. En situaciones de escasa seguridad donde la criptografía no es necesaria o no se desea aplicarla, pueden usarse tokens sin firma, pero ese escenario no se describe en este tema.  
