@@ -8,11 +8,11 @@ ms.topic: conceptual
 ms.prod: .net
 ms.devlang: devlang-csharp
 ms.custom: mvc
-ms.openlocfilehash: fa3b7af871380d4f18ebe7ef4f5bc5963cc247c4
-ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
+ms.openlocfilehash: 09d07e6257ad7d32d75328a8c1850888b4d0b937
+ms.sourcegitcommit: 099aa20d9b6450d1b7452d782a55771a6ad8ff35
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 02/05/2018
 ---
 # <a name="work-with-syntax"></a>Trabajar con sintaxis
 
@@ -89,7 +89,7 @@ El nodo de la instrucción dentro del bloque tiene un intervalo indicado por las
 
 ## <a name="kinds"></a>Tipos
 
-Cada nodo, token o curiosidad tiene una propiedad <xref:Microsoft.CodeAnalysis.SyntaxNode.RawKind?displayProperty=nameWithType>, de tipo <xref:System.Int32?displayProperty=fullName>, que identifica el elemento de sintaxis exacto representado. Este valor se puede convertir en una enumeración específica del lenguaje; cada lenguaje, C# o VB, tiene una sola enumeración `SyntaxKind` (<xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind?displayProperty=fullName> y <xref:Microsoft.CodeAnalysis.VisualBasic.SyntaxKind?displayProperty=fullName>, respectivamente) que enumera todos los posibles nodos, tokens y curiosidades de la gramática. Esta conversión se puede realizar automáticamente al acceder a los métodos de extensión <xref:Microsoft.CodeAnalysis.CSharp.CSharpExtensions.Kind*?displayProperty=nameWithType> o <xref:Microsoft.CodeAnalysis.VisualBasic.VisualBasicExtensions.Kind*?displayProperty=nameWithType>.
+Cada nodo, token o curiosidad tiene una propiedad <xref:Microsoft.CodeAnalysis.SyntaxNode.RawKind?displayProperty=nameWithType>, de tipo <xref:System.Int32?displayProperty=nameWithType>, que identifica el elemento de sintaxis exacto representado. Este valor se puede convertir en una enumeración específica del lenguaje; cada lenguaje, C# o VB, tiene una sola enumeración `SyntaxKind` (<xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind?displayProperty=nameWithType> y <xref:Microsoft.CodeAnalysis.VisualBasic.SyntaxKind?displayProperty=nameWithType>, respectivamente) que enumera todos los posibles nodos, tokens y curiosidades de la gramática. Esta conversión se puede realizar automáticamente al acceder a los métodos de extensión <xref:Microsoft.CodeAnalysis.CSharp.CSharpExtensions.Kind*?displayProperty=nameWithType> o <xref:Microsoft.CodeAnalysis.VisualBasic.VisualBasicExtensions.Kind*?displayProperty=nameWithType>.
 
 La propiedad <xref:Microsoft.CodeAnalysis.SyntaxToken.RawKind> permite anular fácilmente la ambigüedad de los tipos de nodos de sintaxis que comparten la misma clase de nodos. En el caso de los tokens y las curiosidades, esta propiedad es la única manera de distinguir un tipo de elemento de otro. 
 
