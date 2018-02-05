@@ -1,13 +1,13 @@
 ---
 layout: HubPage
-hide_bc: True
+hide_bc: 
 title: "Documentación de .NET"
 description: "Obtenga información sobre cómo usar .NET para crear una variedad de aplicaciones en cualquier plataforma mediante C#, Visual Basic y F#. Examine referencias de API, código de ejemplo, tutoriales y mucho más."
-ms.openlocfilehash: 6817628e110d59b3d5b7c8e52fa2d5cc7cac4cd7
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.openlocfilehash: 623f281c3f348c6e3c52f28b263ac06e0e864870
+ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 02/01/2018
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -168,7 +168,7 @@ ms.lasthandoff: 12/02/2017
                                             </div>
                                             <div class="cardText">
                                                 <h3><a href="/dotnet/csharp">Guía de C#</a></h3>
-                                                <p><a href="/dotnet/csharp/quick-starts">Inicios rápidos</a></p>
+                                                <p><a href="/dotnet/csharp/quick-starts">Guías de inicio rápido</a></p>
                                                 <p><a href="/dotnet/csharp/getting-started">Primeros pasos</a></p>
                                                 <p><a href="/dotnet/csharp/tour-of-csharp">Paseo por C#</a></p>
                                                 <p><a href="/dotnet/csharp/language-reference">Referencia del lenguaje C#</a></p>
