@@ -9,15 +9,18 @@ ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a897a599-ffd1-43f9-8807-e58c8a7194cd
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 44ce1337e347020926fe2dee29d70fe226ad087a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: b11fc10128807dfbd0082bbc1884068c5cde7d32
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="xml-schema-object-model-som"></a>Modelo de objetos de esquema XML (SOM)
 Un esquema XML es una herramienta potente y compleja que sirve para crear y validar estructuras en documentos conforme a XML. De forma similar al modelado de datos en una base de datos relacional, un esquema proporciona una forma de definir la estructura de los documentos XML al especificar los elementos que se pueden utilizar en los documentos, así como la estructura y los tipos que deben seguir estos elementos con el fin de ser válidos en ese esquema específico.  
@@ -25,16 +28,16 @@ Un esquema XML es una herramienta potente y compleja que sirve para crear y vali
  El Modelo de objetos de esquema (SOM) incluye un conjunto de clases en el espacio de nombres <xref:System.Xml.Schema?displayProperty=nameWithType> que le permiten leer un esquema desde un archivo o crear un esquema en memoria mediante programación. Luego, el esquema se puede atravesar, editar, compilar, validar o escribir en un archivo.  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Información general sobre el modelo de objetos esquema XML](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)  
+ [Información general sobre el Modelo de objetos de esquema XML](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)  
  Describe el Modelo de objetos de esquema (SOM) y las características y clases que incluye.  
   
- [Leer y escribir esquemas XML](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)  
+ [Lectura y escritura de esquemas XML](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)  
  Describe cómo leer y escribir esquemas XML desde archivos u otros orígenes.  
   
- [Compilar esquemas XML](../../../../docs/standard/data/xml/building-xml-schemas.md)  
+ [Compilación de esquemas XML](../../../../docs/standard/data/xml/building-xml-schemas.md)  
  Describe cómo utilizar las clases del espacio de nombres <xref:System.Xml.Schema?displayProperty=nameWithType> para compilar esquemas XML en memoria.  
   
- [Cómo atravesar esquemas XML](../../../../docs/standard/data/xml/traversing-xml-schemas.md)  
+ [Recorrido de esquemas XML](../../../../docs/standard/data/xml/traversing-xml-schemas.md)  
  Describe cómo atravesar un esquema XML para obtener acceso a los elementos, atributos y tipos que están almacenados en el SOM.  
   
  [Edición de esquemas XML](../../../../docs/standard/data/xml/editing-xml-schemas.md)  

@@ -12,15 +12,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8e4450dc-56b3-472b-b467-32f5694f83ad
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 34fe3d74adc94930710cf7ee55013b471a2bd43c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 836702a3200a21c6a9830bdcd1f74a78129b5a6c
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="select-nodes-using-xpath-navigation"></a>Selección de nodos con la navegación XPath
 El Modelo de objetos del documento (DOM) XML contiene métodos que le permiten utilizar la navegación del lenguaje de ruta XML (XPath) para consultar información en el DOM. Puede utilizar XPath para buscar un solo nodo específico o para buscar todos los nodos que cumplen algunos criterios.  
@@ -115,7 +118,7 @@ foreach (XmlNode book in nodeList)
 doc.Save(Console.Out);  
 ```  
   
- Los ejemplos anteriores comienzan la consulta XPath en el elemento de documento. Al establecer el punto de inicio de la consulta XPath, se establece el nodo de contexto, que es el punto de inicio de la consulta XPath. Si no desea comenzar en el elemento de documento, sino en el primer elemento secundario del elemento de documento, puede codificar la instrucción SELECT como se indica a continuación:  
+ Los ejemplos anteriores comienzan la consulta XPath en el elemento de documento. Al establecer el punto de inicio de la consulta XPath, se establece el nodo de contexto, que es el punto de inicio de la consulta XPath. Si no desea comenzar en el elemento de documento, sino en el primer elemento secundario del elemento de documento, puede programar la instrucción SELECT como se indica a continuación:  
   
 ```vb  
 doc.DocumentElement.FirstChild.SelectNodes(. . . )  
@@ -170,4 +173,4 @@ this doc.DocumentElement.FirstChild.SelectNodes(. . .);
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Modelo de objetos de documento (DOM) de XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+ [Document Object Model (DOM) para XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

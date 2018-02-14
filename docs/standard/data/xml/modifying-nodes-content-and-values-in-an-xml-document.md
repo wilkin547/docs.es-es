@@ -9,15 +9,18 @@ ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 761773e0-db72-4986-b9f5-a522213d8397
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 00b923edb95852d9434db1b393df68fd9d0c8a1a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 72039faef3bcde4db830d110938266c63689219e
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="modifying-nodes-content-and-values-in-an-xml-document"></a>Modificación de nodos, contenido y valores en un documento XML
 Existen muchas formas de modificar los nodos y el contenido de un documento. Puede realizar lo siguiente:  
@@ -54,4 +57,4 @@ Existen muchas formas de modificar los nodos y el contenido de un documento. Pue
  Es válido agregar o quitar un nodo secundario de solo lectura de un nodo que se puede editar. Sin embargo, cualquier intento de modificar ese nodo de solo lectura inicia una <xref:System.InvalidOperationException>. Pongamos como ejemplo la modificación de los nodos secundarios de un nodo <xref:System.Xml.XmlEntityReference>. Los nodos secundarios son de solo lectura y no se pueden modificar. Cualquier intento de modificarlos inicia una <xref:System.InvalidOperationException>.  
   
 ## <a name="see-also"></a>Vea también  
- [Modelo de objetos de documento (DOM) de XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+ [Document Object Model (DOM) para XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

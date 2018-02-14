@@ -21,15 +21,18 @@ helpviewer_keywords:
 - PE files, metadata
 - components [.NET Framework], metadata
 ms.assetid: 3dd13c5d-a508-455b-8dce-0a852882a5a7
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 8fcb5ea90cc16d62fee5b8e95b03bfe53c3a6793
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: ac08dcf305e8cc0c1a3be3b8300ed9981e7d84d4
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="metadata-and-self-describing-components"></a>Metadatos y componentes autodescriptivos
 Hasta ahora, un componente de software (.exe o .dll) escrito en un lenguaje no podía usar fácilmente un componente de software escrito en otro lenguaje. COM supuso un paso adelante en la resolución de este problema. .NET Framework hace la interoperación entre componentes todavía más fácil, permitiendo que los compiladores emitan información de declaración adicional en todos los módulos y ensamblados. Esta información, denominada metadatos, contribuye a que los componentes interactúen sin problemas.  
@@ -67,7 +70,7 @@ Hasta ahora, un componente de software (.exe o .dll) escrito en un lenguaje no p
   
 -   Interoperabilidad de lenguajes y diseño más sencillo, basado en el componente.  
   
-     Los metadatos proporcionan toda la información necesaria sobre el código compilado para derivar clases de archivos PE escritos en otro lenguaje. Se puede crear una instancia de cualquier clase escrita en cualquier lenguaje administrado (cualquier lenguaje dirigido a Common Language Runtime) sin tener que preocuparse por el cálculo de referencias explícito ni por usar código de interoperabilidad personalizado.  
+     Los metadatos proporcionan toda la información necesaria sobre el código compilado para derivar clases de archivos PE escritos en otro lenguaje. Se puede crear una instancia de cualquier clase escrita en cualquier lenguaje administrado (cualquier lenguaje dirigido a Common Language Runtime) sin tener que preocuparse por la serialización de referencias explícito ni por usar código de interoperabilidad personalizado.  
   
 -   Atributos.  
   
@@ -161,11 +164,11 @@ IL_000d:  call int32 ConsoleApplication.MyApp::Add(int32,int32) /* 06000003 */
   
  En la siguiente tabla, se muestra parte de la tabla **MethodDef** a la que hace referencia el token de los metadatos que describe el método `Add`. Aunque existen otras tablas de metadatos en el ensamblado y tienen sus propios valores únicos, sólo se trata esta tabla.  
   
-|Fila|Dirección relativa virtual (RVA)|ImplFlags|Marcas|Nombre<br /><br /> (señala el montón de cadenas).|Firma (señala el montón de objetos binarios)|  
+|Fila|Dirección relativa virtual (RVA)|ImplFlags|Marcas|nombre<br /><br /> (señala el montón de cadenas).|Firma (señala el montón de objetos binarios)|  
 |---------|--------------------------------------|---------------|-----------|-----------------------------------------|----------------------------------------|  
-|1|0x00002050|IL<br /><br /> Administrado|Público<br /><br /> ReuseSlot<br /><br /> SpecialName<br /><br /> RTSpecialName<br /><br /> .ctor|.ctor (constructor)||  
-|2|0x00002058|IL<br /><br /> Administrado|Público<br /><br /> Estático<br /><br /> ReuseSlot|Main|Cadena|  
-|3|0x0000208c|IL<br /><br /> Administrado|Público<br /><br /> Estático<br /><br /> ReuseSlot|Agregar|int, int, int|  
+|1|0x00002050|IL<br /><br /> Administrado|Public<br /><br /> ReuseSlot<br /><br /> SpecialName<br /><br /> RTSpecialName<br /><br /> .ctor|.ctor (constructor)||  
+|2|0x00002058|IL<br /><br /> Administrado|Public<br /><br /> Estático<br /><br /> ReuseSlot|Método Main|String|  
+|3|0x0000208c|IL<br /><br /> Administrado|Public<br /><br /> Estático<br /><br /> ReuseSlot|Add|int, int, int|  
   
  Cada columna de la tabla contiene información importante sobre el código. La columna **RVA** permite que el motor en tiempo de ejecución calcule la dirección de memoria de inicio del MSIL que define este método. Las columnas **ImplFlags** y **Flags** contienen máscaras de bits que describen el método (por ejemplo, si el método es público o privado). La columna **Nombre** indexa el nombre del método del montón de cadenas. La columna **Firma** indexa la definición de la firma del método del montón de blobs.  
   
@@ -175,6 +178,6 @@ IL_000d:  call int32 ConsoleApplication.MyApp::Add(int32,int32) /* 06000003 */
   
 ## <a name="related-topics"></a>Temas relacionados  
   
-|Título|Descripción|  
+|Title|Description|  
 |-----------|-----------------|  
 |[Atributos](../../docs/standard/attributes/index.md)|Describe cómo aplicar atributos, escribir atributos personalizados y recuperar información almacenada en atributos.|

@@ -1,5 +1,5 @@
 ---
-title: "Estándar .NET"
+title: .NET Standard
 description: "Obtenga información sobre .NET Standard, sus versiones y las implementaciones de .NET que lo admiten."
 keywords: .NET Standard, PCL, .NET
 author: mairaw
@@ -10,13 +10,16 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: c044882c-af15-45f2-96d1-534557a5ee9b
-ms.openlocfilehash: ccb44b94f1b3ce2fb369de368454679b25ed351f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 9c0d375f160b886b104daeb68b88c25264e3e78f
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
-# <a name="net-standard"></a>Estándar .NET
+# <a name="net-standard"></a>.NET Standard
 
 [.NET Standard](https://github.com/dotnet/standard) es una especificación formal de las API de .NET que se prevé que estén disponibles en todas las implementaciones de .NET. La finalidad de .NET Standard es establecer una mayor uniformidad en el ecosistema de .NET. [ECMA 335](https://github.com/dotnet/coreclr/blob/master/Documentation/project-docs/dotnet-standards.md) sigue estableciendo uniformidad en el comportamiento de las implementaciones de .NET, pero no hay ninguna especificación parecida para las bibliotecas de clases base (BCL) de .NET para implementaciones de la biblioteca de .NET. 
 
@@ -80,7 +83,7 @@ La especificación de .NET Standard es un conjunto estandarizado de API. La espe
 
 ### <a name="official-artifacts"></a>Artefactos oficiales
 
-La especificación oficial es un conjunto de archivos .cs que definen las API que forman parte del estándar. El [directorio ref](https://github.com/dotnet/standard/tree/master/netstandard/ref) en el [repositorio dotnet/standard](https://github.com/dotnet/corefx/tree/master/src) define las API de .NET Standard.
+La especificación oficial es un conjunto de archivos .cs que definen las API que forman parte del estándar. El [directorio ref](https://github.com/dotnet/standard/tree/master/netstandard/ref) en el [repositorio dotnet/standard](https://github.com/dotnet/standard) define las API de .NET Standard.
 
 El metapaquete [NETStandard.Library](https://www.nuget.org/packages/NETStandard.Library) ([código fuente](https://github.com/dotnet/standard/blob/master/netstandard/pkg/NETStandard.Library.dependencies.props)) describe el conjunto de bibliotecas que definen (en parte) una o varias versiones de .NET Standard.
 
@@ -98,7 +101,7 @@ Se proporcionan artefactos derivados para permitir una lectura más cómoda y ha
 
 El principal vehículo de distribución de los ensamblados de referencia de .NET Standard son los [paquetes NuGet](../core/packages.md). Las implementaciones se entregarán de diversas formas, adecuadas para cada implementación de .NET.
 
-Los paquetes NuGet tienen como destino uno o varios [marcos](frameworks.md). Los paquetes de .NET Standard tienen como destino el marco de trabajo ".NET Standard". Puede establecer como destino el marco de .NET Standard mediante el [TFM compacto](frameworks.md) `netstandard` (por ejemplo, `netstandard1.4`). Las bibliotecas diseñadas para ejecutarse en varios tiempos de ejecución deben tener como destino este marco. 
+Los paquetes NuGet tienen como destino uno o varios [marcos](frameworks.md). Los paquetes de .NET Standard tienen como destino el marco de trabajo ".NET Standard". Puede establecer como destino el marco de .NET Standard mediante el [TFM compacto](frameworks.md) `netstandard` (por ejemplo, `netstandard1.4`). Las bibliotecas diseñadas para ejecutarse en varios entornos de ejecución deben tener como destino este marco de trabajo. 
 
 El metapaquete `NETStandard.Library` hace referencia al conjunto completo de paquetes NuGet que definen .NET Standard.  La manera más común de establecer como destino `netstandard` consiste en hacer referencia a este metapaquete. Describe y proporciona acceso a las aproximadamente 40 bibliotecas de .NET y las API asociadas que definen .NET Standard. Puede hacer referencia a paquetes adicionales que tienen como destino `netstandard` para obtener acceso a otras API. 
 
@@ -129,7 +132,7 @@ Las PCL basadas en perfiles empaquetadas como `netstandard` son más fáciles de
 
 Puede ver el conjunto de perfiles de PCL que son compatibles con .NET Standard: 
 
-| Perfil de PCL | Estándar .NET | Plataformas de PCL
+| Perfil de PCL | .NET Standard | Plataformas de PCL
 |:-----------:|:-------------:|------------------------------------------------------------------------------
 | Profile7    | 1.1           | .NET Framework 4.5, Windows 8
 | Profile31   | 1.0           | Windows 8.1, Windows Phone Silverlight 8.1

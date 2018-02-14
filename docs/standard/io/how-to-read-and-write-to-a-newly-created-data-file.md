@@ -19,15 +19,18 @@ helpviewer_keywords:
 - I/O [.NET Framework], writing data
 - BinaryWriter class, examples
 ms.assetid: e209d949-31e8-44ea-8e38-87f9093f3093
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: b547f2c85495a497e5fc384f9a2ea44de7bf861c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 04ded71a23ba4cabab0a22e0d66c1084a726d8c8
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-read-and-write-to-a-newly-created-data-file"></a>Cómo: Leer y escribir en un archivo de datos recién creado
 Las clases <xref:System.IO.BinaryWriter> y <xref:System.IO.BinaryReader?displayProperty=nameWithType> se usan para escribir y leer datos, en lugar de cadenas de caracteres. En el ejemplo de código siguiente se muestra cómo se escriben y se leen datos de una nueva secuencia de archivos vacía denominada `Test.data`. Después de crear el archivo de datos en el directorio actual, se crean los objetos <xref:System.IO.BinaryWriter> y <xref:System.IO.BinaryReader> asociados, y se usa el objeto <xref:System.IO.BinaryWriter> para escribir los enteros de 0 a 10 en `Test.data`, que deja el puntero de archivo al final del archivo. Después de volver a establecer el puntero de archivo en el origen, el objeto <xref:System.IO.BinaryReader> lee el contenido especificado.  

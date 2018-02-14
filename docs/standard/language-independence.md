@@ -13,11 +13,14 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 2dbed1bc-86f5-43cd-9a57-adbb1c5efba4
-ms.openlocfilehash: ed48191ee397bb5f892a7afba6dfbfa2d06e1045
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 0a7a37b1c8eed81866035dc6fb55db89391f25aa
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="language-independence-and-language-independent-components"></a>Independencia del lenguaje y componentes independientes del lenguaje
 
@@ -170,11 +173,11 @@ Constructores | [Constructores](#constructors) | No debe llamarse a los construc
 Enumeraciones | [Enumeraciones](#enumerations) | El tipo subyacente de una enumeración debe ser un tipo de entero integrado en CLS, el nombre del campo debe ser “value__” y dicho campo debe marcarse como `RTSpecialName`. |  7
 Enumeraciones | [Enumeraciones](#enumerations) | Hay dos tipos distintos de enumeraciones, que se indican mediante la presencia o ausencia del atributo personalizado [System.FlagsAttribute](xref:System.FlagsAttribute) (consulte la biblioteca del apartado IV). Uno representa valores enteros con nombre; el otro representa los marcadores de bit con nombre que se pueden combinar para generar un valor sin nombre. El valor de `enum` no se limita a los valores especificados. |  8
 Enumeraciones | [Enumeraciones](#enumerations) | Los campos estáticos literales de una enumeración deben contener el tipo de la propia enumeración. |  9
-eventos | [Eventos](#events) | Los métodos que implementen un evento se marcarán como `SpecialName` en los metadatos. |29
-eventos | [Eventos](#events) | La accesibilidad de un evento y sus descriptores de acceso será idéntica. |30
-eventos | [Eventos](#events) | Los métodos `add` y `remove` de un evento deben estar presentes o ausentes a la vez. |31
-eventos | [Eventos](#events) | Los métodos `add` y `remove` de un evento deben tomar un parámetro cuyo tipo defina el tipo del evento, y ese tipo debe derivarse de [System.Delegate](xref:System.Delegate). |32
-eventos | [Eventos](#events) | Los eventos deben adherirse a un patrón de asignación de nombres concreto. En las comparaciones de nombres correspondientes se omitirá el atributo SpecialName mencionado en la regla 29 de CLS y se seguirán las reglas del identificador.  |33
+Eventos | [Eventos](#events) | Los métodos que implementen un evento se marcarán como `SpecialName` en los metadatos. |29
+Eventos | [Eventos](#events) | La accesibilidad de un evento y sus descriptores de acceso será idéntica. |30
+Eventos | [Eventos](#events) | Los métodos `add` y `remove` de un evento deben estar presentes o ausentes a la vez. |31
+Eventos | [Eventos](#events) | Los métodos `add` y `remove` de un evento deben tomar un parámetro cuyo tipo defina el tipo del evento, y ese tipo debe derivarse de [System.Delegate](xref:System.Delegate). |32
+Eventos | [Eventos](#events) | Los eventos deben adherirse a un patrón de asignación de nombres concreto. En las comparaciones de nombres correspondientes se omitirá el atributo SpecialName mencionado en la regla 29 de CLS y se seguirán las reglas del identificador.  |33
 Excepciones | [Excepciones](#exceptions) | Los objetos que se inicien deberán ser de tipo [System.Exception](xref:System.Exception) o de un tipo que herede de él. No obstante, los métodos conformes a CLS no necesitan bloquear la propagación de otros tipos de excepciones. | 40
 General | [Reglas de conformidad con CLS](#cls-compliance-rules) | Las reglas de CLS solo se aplican a las partes de los tipos que son accesibles o visibles desde fuera del ensamblado de definición. | 1
 General | [Reglas de conformidad con CLS](#cls-compliance-rules) | Los miembros de tipos no conformes con CLS no deben marcarse como conformes con CLS. | 2
@@ -321,7 +324,7 @@ Todos los tipos que aparecen en las signaturas de miembros, incluidos los tipos 
 El [sistema de tipos común](common-type-system.md) de .NET incluye varios tipos integrados que se admiten directamente en Common Language Runtime y que se codifican de forma especial en los metadatos de un ensamblado. De estos tipos intrínsecos, los tipos enumerados en la tabla siguiente son conformes a CLS. 
 
 
-Tipo conforme a CLS | Descripción
+Tipo conforme a CLS | Description
 ------------------ | -----------
 [Byte](xref:System.Byte) | Entero de 8 bits sin signo 
 [Int16](xref:System.Int16) | Entero de 16 bits con signo 
@@ -338,7 +341,7 @@ Tipo conforme a CLS | Descripción
 Los tipos intrínsecos enumerados en la tabla siguiente no son conformes a CLS.
 
 
-Tipo no conforme | Descripción | Alternativa conforme a CLS
+Tipo no conforme | Description | Alternativa conforme a CLS
 ------------------ | ----------- | -------------------------
 [SByte](xref:System.SByte) | Tipo de datos enteros de 8 bits con signo | [Int16](xref:System.Int16)
 [UInt16](xref:System.UInt16) | Entero de 16 bits sin signo | [Int32](xref:System.Int32)
@@ -2593,7 +2596,7 @@ El constructor o las propiedades de un atributo conforme a CLS pueden exponer so
 
 * [String](xref:System.String)
 
-* [ype](xref:System.Type)
+* [Type](xref:System.Type)
 
 * Cualquier tipo de enumeración cuyo tipo subyacente sea `Byte`, `Int16`, `Int32` o `Int64`. 
 

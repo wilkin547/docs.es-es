@@ -10,11 +10,14 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: c00939e1-59e3-4e61-8fe9-08ad6b3f1295
-ms.openlocfilehash: 1478b5dc5844cef0abfea44eba88a12801d32bd4
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: eb9bc30c31ab02df7c04c885f59cadfcc1f00253
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="linq-language-integrated-query"></a>LINQ (Language Integrated Query)
 
@@ -80,7 +83,7 @@ public static IEnumerable<XElement> FindAllElementsWithAttribute(XElement docume
 
 Escribir código para recorrer manualmente el documento XML para realizar esta tarea sería bastante más complicado.
 
-Interactuar con XML no es lo único que puede hacer con los proveedores LINQ. [LINQ to SQL](https://msdn.microsoft.com/library/bb386976.aspx) es un asignador relacional de objetos (ORM) bastante básico para una base de datos del servidor MSSQL. La biblioteca [JSON.NET](http://www.newtonsoft.com/json/help/html/LINQtoJSON.htm) proporciona una forma eficiente de recorrer documentos JSON mediante LINQ. Además, si no hay una biblioteca que haga lo que necesita, también puede [escribir su propio proveedor LINQ](https://msdn.microsoft.com/library/Bb546158.aspx).
+Interactuar con XML no es lo único que puede hacer con los proveedores LINQ. [LINQ to SQL](../../docs/framework/data/adonet/sql/linq/index.md) es un asignador relacional de objetos (ORM) bastante básico para una base de datos del servidor MSSQL. La biblioteca [JSON.NET](http://www.newtonsoft.com/json/help/html/LINQtoJSON.htm) proporciona una forma eficiente de recorrer documentos JSON mediante LINQ. Además, si no hay una biblioteca que haga lo que necesita, también puede [escribir su propio proveedor LINQ](https://msdn.microsoft.com/library/Bb546158.aspx).
 
 ## <a name="why-use-the-query-syntax"></a>¿Por qué usar la sintaxis de consulta?
 
@@ -254,7 +257,7 @@ En forma de diagrama:
 
 ![Diagrama de PLINQ](./media/using-linq/plinq-diagram.png)
 
-Las tareas paralelizables vinculadas a la CPU que se pueden expresar fácilmente con LINQ (es decir, que son funciones puras y no tienen efectos secundarios) son un candidato excelente para PLINQ. Para tareas que _sí_ tienen efectos secundarios, considere el uso de [Task Parallel Library](https://msdn.microsoft.com/library/dd460717.aspx).
+Las tareas paralelizables vinculadas a la CPU que se pueden expresar fácilmente con LINQ (es decir, que son funciones puras y no tienen efectos secundarios) son un candidato excelente para PLINQ. Para tareas que _sí_ tienen efectos secundarios, considere el uso de [Task Parallel Library](./parallel-programming/task-parallel-library-tpl.md).
 
 ## <a name="further-resources"></a>Recursos adicionales:
 

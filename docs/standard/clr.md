@@ -21,11 +21,14 @@ ms.assetid: 059a624e-f7db-4134-ba9f-08b676050482
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: dc103d1fc853cd98f899e75d08dbfaf4dd9230d0
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 4aa9a6d37a52d5f15643e9179060450a2d7a34c4
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="common-language-runtime-clr"></a>Common Language Runtime (CLR)
 .NET Framework proporciona un entorno en tiempo de ejecución denominado Common Language Runtime, que ejecuta el código y proporciona servicios que facilitan el proceso de desarrollo.  
@@ -33,7 +36,7 @@ ms.lasthandoff: 10/18/2017
  Los compiladores y las herramientas exponen la funcionalidad de Common Language Runtime y permiten escribir código con las ventajas que proporciona este entorno de ejecución administrado. El código desarrollado con un compilador de lenguaje orientado al tiempo de ejecución se denomina código administrado. Este código se beneficia de características como: la integración entre lenguajes, el control de excepciones entre lenguajes, la seguridad mejorada, la compatibilidad con la implementación y las versiones, un modelo simplificado de interacción y servicios de generación de perfiles y depuración.  
   
 > [!NOTE]
->  Los compiladores y las herramientas pueden generar resultados que Common Language Runtime puede consumir porque el sistema de tipos, el formato de metadatos y el entorno en tiempo de ejecución (el sistema de ejecución virtual) están todos definidos según un estándar público, la especificación Common Language Infrastructure de ECMA. Para obtener más información, consulte [ECMA C# and Common Language Infrastructure Specifications](http://go.microsoft.com/fwlink/?LinkId=99212) (Especificaciones de ECMA C# y Common Language Infrastructure).  
+>  Los compiladores y las herramientas pueden generar resultados que Common Language Runtime puede consumir porque el sistema de tipos, el formato de metadatos y el entorno en tiempo de ejecución (el sistema de ejecución virtual) están todos definidos según un estándar público, la especificación Common Language Infrastructure de ECMA. Para obtener más información, consulte [ECMA C# and Common Language Infrastructure Specifications](https://www.visualstudio.com/license-terms/ecma-c-common-language-infrastructure-standards/) (Especificaciones de ECMA C# y Common Language Infrastructure).  
   
  Para permitir al motor en tiempo de ejecución proporcionar servicios al código administrado, los compiladores de lenguajes deben emitir metadatos que describen los tipos, los miembros y las referencias del código. Los metadatos se almacenan con el código; cada archivo ejecutable portable (PE) de Common Language Runtime cargable contiene metadatos. El motor en tiempo de ejecución utiliza los metadatos para localizar y cargar clases, colocar instancias en memoria, resolver invocaciones a métodos, generar código nativo, exigir mecanismos de seguridad y establecer los límites del contexto en tiempo de ejecución.  
   
@@ -76,15 +79,15 @@ ms.lasthandoff: 10/18/2017
 |4|4|  
 |4.5 (incluidas 4.5.1 y 4.5.2)|4|  
 |4.6 (incluidas 4.6.1 y 4.6.2)|4|
-|4.7 (incluidos 4.7.1)|4|  
+|4.7 (incluida 4.7.1)|4|  
   
 ## <a name="related-topics"></a>Temas relacionados  
   
-|Título|Descripción|  
+|Title|Description|  
 |-----------|-----------------|  
 |[Proceso de ejecución administrada](../../docs/standard/managed-execution-process.md)|Describe los pasos requeridos para aprovechar al máximo las ventajas de Common Language Runtime.|  
 |[Administración automática de la memoria](../../docs/standard/automatic-memory-management.md)|Describe cómo asigna y libera memoria el recolector de elementos no utilizados.|  
-|[Información general acerca de .NET Framework](http://msdn.microsoft.com/en-us/ea38ac1e-92af-4d1b-8db1-e8a5ea10ed85)|Describe conceptos clave de .NET Framework como Common Type System (CTS), interoperabilidad entre lenguajes, ejecución administrada, dominios de aplicación y ensamblados.|  
+|[Información general acerca de .NET Framework](http://msdn.microsoft.com/library/ea38ac1e-92af-4d1b-8db1-e8a5ea10ed85)|Describe conceptos clave de .NET Framework como Common Type System (CTS), interoperabilidad entre lenguajes, ejecución administrada, dominios de aplicación y ensamblados.|  
 |[Sistema de tipos comunes](../../docs/standard/base-types/common-type-system.md)|Describe cómo declarar, usar y administrar tipos en el motor en tiempo de ejecución para permitir la integración entre lenguajes.|  
   
 ## <a name="see-also"></a>Vea también  

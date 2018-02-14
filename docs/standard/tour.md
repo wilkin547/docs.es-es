@@ -10,11 +10,14 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.openlocfilehash: 809f0eaddf298b0d6a57e217c2bcf5450675c3e9
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 9dca33f01c119c185717efa0666146191503f577
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="tour-of-net"></a>Paseo por .NET
 
@@ -124,7 +127,7 @@ Para obtener más información y ver algunos ejemplos, consulte el tema [LINQ (L
 
 Cada sistema operativo incluye una interfaz de programación de aplicaciones (API) que proporciona servicios del sistema. .NET proporciona varias maneras de llamar a esas API.
 
-La manera principal de crear interoperabilidad nativa es a través de la "invocación de plataforma" o P/Invoke para abreviar, que se admite en las plataformas Linux y Windows. Una manera de crear interoperabilidad nativa exclusiva de Windows se conoce como "Interoperabilidad COM", que se usa para trabajar con [componentes COM](https://msdn.microsoft.com/library/bwa2bx93.aspx) en código administrado. Se basa en la infraestructura de P/Invoke, pero funciona de forma ligeramente diferente.
+La manera principal de crear interoperabilidad nativa es a través de la "invocación de plataforma" o P/Invoke para abreviar, que se admite en las plataformas Linux y Windows. Una manera de crear interoperabilidad nativa exclusiva de Windows se conoce como "Interoperabilidad COM", que se usa para trabajar con [componentes COM](/cpp/atl/introduction-to-com) en código administrado. Se basa en la infraestructura de P/Invoke, pero funciona de forma ligeramente diferente.
 
 La mayoría de la compatibilidad de interoperabilidad de Mono (y, por tanto, de Xamarin) para Java y Objective-C se compila de forma similar, es decir, usan los mismos principios.
 

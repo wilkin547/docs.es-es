@@ -20,15 +20,18 @@ helpviewer_keywords:
 - constructs, alternation
 - .NET Framework regular expressions, alternation constructs
 ms.assetid: 071e22e9-fbb0-4ecf-add1-8d2424f9f2d1
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 6ad632130b6f111ff863648b8b1a3b2835c27660
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 8e565d029096b88d304b9cfc241807084873e735
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="alternation-constructs-in-regular-expressions"></a>Construcciones de alternancia en expresiones regulares
 <a name="top"></a> Las construcciones de alternancia modifican una expresión regular para habilitar la coincidencia condicional o “either/or”. .NET admite tres construcciones de alternancia:  
@@ -50,7 +53,7 @@ ms.lasthandoff: 10/18/2017
   
  La expresión regular que usa el carácter `|` , `\bgr(a|e)y\b`, se interpreta como se muestra en la tabla siguiente.  
   
-|Modelo|Descripción|  
+|Modelo|Description|  
 |-------------|-----------------|  
 |`\b`|Empieza en un límite de palabras.|  
 |`gr`|Coincide con los caracteres "gr".|  
@@ -64,7 +67,7 @@ ms.lasthandoff: 10/18/2017
   
  La expresión regular `\b(\d{2}-\d{7}|\d{3}-\d{2}-\d{4})\b` se interpreta como se muestra en la tabla siguiente.  
   
-|Modelo|Descripción|  
+|Modelo|Description|  
 |-------------|-----------------|  
 |`\b`|Empieza en un límite de palabras.|  
 |<code>(\d{2}-\d{7}&#124;\d{3}-\d{2}-\d{4})</code>|Coincide con cualquiera de las siguientes opciones: dos dígitos decimales seguidos de un guión seguido de siete dígitos decimales; o tres dígitos decimales, un guión, dos dígitos decimales, otro guión y cuatro dígitos decimales.|  
@@ -94,7 +97,7 @@ ms.lasthandoff: 10/18/2017
   
  El patrón de la expresión regular `\b(?(\d{2}-)\d{2}-\d{7}|\d{3}-\d{2}-\d{4})\b` se interpreta como se muestra en la tabla siguiente.  
   
-|Modelo|Descripción|  
+|Modelo|Description|  
 |-------------|-----------------|  
 |`\b`|Empieza en un límite de palabras.|  
 |`(?(\d{2}-)`|Determina si los tres caracteres siguientes están compuestos de dos dígitos seguidos de un guión.|  
@@ -125,7 +128,7 @@ ms.lasthandoff: 10/18/2017
   
  El patrón de la expresión regular `\b(?<n2>\d{2}-)*(?(n2)\d{7}|\d{3}-\d{2}-\d{4})\b` se interpreta como se muestra en la tabla siguiente.  
   
-|Modelo|Descripción|  
+|Modelo|Description|  
 |-------------|-----------------|  
 |`\b`|Empieza en un límite de palabras.|  
 |`(?<n2>\d{2}-)*`|Coincide con cero o con dos dígitos seguidos por un guión. Este grupo de captura se denomina `n2`.|  

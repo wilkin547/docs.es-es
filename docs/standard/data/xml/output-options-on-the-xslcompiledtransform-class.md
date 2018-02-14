@@ -9,15 +9,18 @@ ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 91ce8cba-386c-411e-bb38-0891a0393c0a
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 61f59c1be3376fb76c91994996840b915cd662ae
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 84171c92a56a9970b5ffc16ce8f30c85d61cc678
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="output-options-on-the-xslcompiledtransform-class"></a>Opciones de salida en la clase XslCompiledTransform
 En este tema se describen las opciones de salida XSLT disponibles. Puede especificar opciones de salida en la hoja de estilos o en el método <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A>.  

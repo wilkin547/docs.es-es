@@ -41,15 +41,18 @@ helpviewer_keywords:
 - integer value type
 - base types, class library
 ms.assetid: 7e4c5921-955d-4b06-8709-101873acf157
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 05af1b2a881cabb418adcaaee44a819ae323e62a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 607ef0020e15581c6ccca8f232eaea6be547f63b
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="net-framework-class-library-overview"></a>Información general de la biblioteca de clases de .NET Framework
 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] incluye clases, interfaces y tipos de valor que agilizan y optimizan el proceso de desarrollo y proporcionan acceso a las funciones del sistema. Para facilitar la interoperabilidad entre lenguajes, la mayoría de los tipos de .NET Framework son conformes a CLS y, por tanto, se pueden utilizar en todos los lenguajes de programación cuyo compilador satisfaga los requisitos de CLS.  
@@ -88,7 +91,7 @@ ms.lasthandoff: 11/21/2017
   
  En la tabla siguiente se muestra una lista de los tipos base que proporciona [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], se describe brevemente cada tipo y se indica el tipo correspondiente de Visual Basic, C#, C++ y JScript.  
   
-|Categoría|Nombre de la clase|Descripción|Tipo de datos en Visual Basic|Tipo de datos en C#|Tipo de datos de C++|Tipo de datos en JScript|  
+|Categoría|Nombre de la clase|Description|Tipo de datos en Visual Basic|Tipo de datos en C#|Tipo de datos de C++|Tipo de datos en JScript|  
 |--------------|----------------|-----------------|----------------------------|-------------------|---------------------|-----------------------|  
 |Integer|<xref:System.Byte>|Entero de 8 bits sin signo.|**Byte**|**byte**|**unsigned char**|**Byte**|  
 ||<xref:System.SByte>|Entero de 8 bits con signo.<br /><br /> No es conforme a CLS.|**SByte**|**sbyte**|**char**<br /><br /> O bien<br /><br /> **signed** **char**|**SByte**|  

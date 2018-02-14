@@ -7,17 +7,20 @@ ms.date: 08/23/2017
 ms.topic: article
 ms.prod: .net
 ms.technology: dotnet-standard
-ms.openlocfilehash: ce3368f4c34a8e4b20a7deb2a6c6e4d163927cd4
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 08eeb08debdc2e71a85dbc18053bf1aac779069a
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="net-architectural-components"></a>Componentes de la arquitectura .NET
 
 Una aplicación de .NET se desarrolla y se ejecuta en una o varias *implementaciones de .NET*.  Las implementaciones de .NET incluyen .NET Framework, .NET Core y Mono. Hay una especificación de API común a todas las implementaciones de .NET que se denomina .NET Standard. En este artículo, se ofrece una breve introducción a cada uno de estos conceptos.
 
-## <a name="net-standard"></a>Estándar .NET
+## <a name="net-standard"></a>.NET Standard
 
 .NET Standard es un conjunto de API que se implementan mediante la biblioteca de clases base de una implementación de .NET. Más formalmente, es una especificación de API de .NET que constituyen un conjunto uniforme de contratos contra los que se compila el código. Estos contratos se implementan en cada implementación de .NET. Esto permite la portabilidad entre diferentes implementaciones de .NET, de forma que el código se puede ejecutar en cualquier parte.
 
