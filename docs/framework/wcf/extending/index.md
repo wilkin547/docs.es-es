@@ -5,7 +5,8 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -13,19 +14,20 @@ helpviewer_keywords:
 - extensibility [WCF]
 - Windows Communication Foundation, extensibility
 ms.assetid: c145e2f6-f402-41f5-8b5a-eee03978737b
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 2c84f25dfd5d3066f9c5d0b62bc0b28bc98c283d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: 08684dd61444c2f072b89b926370f750e456fca1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="extending-wcf"></a>Extensión de WCF
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] le permite modificar y extender los componentes en tiempo de ejecución para controlar y extender precisamente las aplicaciones basadas en servicio. Los temas de esta sección hacen profundizan en la arquitectura de la extensibilidad. Para obtener más información acerca de la programación básica, consulte [programación básica de WCF](../../../../docs/framework/wcf/basic-wcf-programming.md).  
+[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] permite modificar y extender los componentes de tiempo de ejecución para controlar con precisión y extender las aplicaciones basadas en servicios. Los temas de esta sección hacen profundizan en la arquitectura de la extensibilidad. Para obtener más información acerca de la programación básica, consulte [programación básica de WCF](../../../../docs/framework/wcf/basic-wcf-programming.md).  
   
 ## <a name="in-this-section"></a>En esta sección  
  [Extensión de ServiceHost y la capa de modelos de servicios](../../../../docs/framework/wcf/extending/extending-servicehost-and-the-service-model-layer.md)  

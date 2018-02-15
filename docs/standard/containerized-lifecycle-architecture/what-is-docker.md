@@ -1,15 +1,18 @@
 ---
 title: "¿Qué es Docker?"
-description: "Ciclo de vida de aplicación de Docker en contenedores con herramientas y plataforma de Microsoft"
+description: Ciclo de vida de aplicaciones de Docker en contenedor con la plataforma y las herramientas de Microsoft
 keywords: Docker, microservicios, ASP.NET, contenedor
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/21/2017
-ms.openlocfilehash: 7b429f84f7714454d49be1cfa4f450d99fc47f66
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
-ms.translationtype: HT
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: c75b2fa87e5aad93693c76c3bbd135044b36525f
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="what-is-docker"></a>¿Qué es Docker?
 
@@ -25,13 +28,13 @@ Los desarrolladores pueden utilizar los entornos de desarrollo en Windows, Linux
 
 Para hospedar contenedores en entornos de desarrollo y proporcionan herramientas adicionales para los programadores, se distribuye Docker [Docker Community Edition (CE)](https://www.docker.com/community-edition) para Windows o Mac OS. Estos productos instalan la máquina virtual es necesaria (el host de Docker) para alojar los contenedores. Docker también pone a disposición [Docker Enterprise Edition (EE)](https://www.docker.com/enterprise-edition), que está diseñado para el desarrollo empresarial y es utilizado por los equipos de TI que crean, distribuir y ejecutar aplicaciones cruciales para la empresa de gran tamaño en producción.
 
-Para ejecutar [contenedores de Windows](https://msdn.microsoft.com/en-us/virtualization/windowscontainers/about/about_overview), hay dos tipos de tiempos de ejecución:
+Para ejecutar [contenedores de Windows](https://msdn.microsoft.com/virtualization/windowscontainers/about/about_overview), hay dos tipos de tiempos de ejecución:
 
 -   **Contenedor de Windows Server** este tiempo de ejecución proporciona aislamiento de aplicaciones mediante tecnología de aislamiento de proceso y espacio de nombres. Un contenedor de Windows Server comparte el kernel con el host de contenedor y todos los contenedores que se ejecutan en el host.
 
 -   **Contenedor de Hyper-V** esta opción se expande el aislamiento que ofrecen los contenedores de Windows Server mediante la ejecución de cada contenedor en una máquina virtual altamente optimizada. En esta configuración, no se comparte el kernel del host del contenedor con los contenedores de Hyper-V, lo que proporciona un mejor aislamiento.
 
-Las imágenes de estos contenedores se crean de la misma manera y funcionan del mismo. La diferencia radica en cómo se crea el contenedor de la imagen, la ejecución de un contenedor de Hyper-V requiere un parámetro adicional. Para obtener más información, consulte [contenedores de Hyper-V](https://msdn.microsoft.com/en-us/virtualization/windowscontainers/about/about_overview).
+Las imágenes de estos contenedores se crean de la misma manera y funcionan del mismo. La diferencia radica en cómo se crea el contenedor de la imagen, la ejecución de un contenedor de Hyper-V requiere un parámetro adicional. Para obtener más información, consulte [contenedores de Hyper-V](https://msdn.microsoft.com/virtualization/windowscontainers/about/about_overview).
 
 ## <a name="comparing-docker-containers-with-vms"></a>Comparar contenedores de Docker con máquinas virtuales
 
@@ -53,4 +56,4 @@ Figura 1-3: comparación de máquinas virtuales tradicionales en contenedores Do
 
 
 >[!div class="step-by-step"]
-[Anterior] (index.md) [siguiente] (docker-terminology.md)
+[Previous] (index.md) [Next] (docker-terminology.md)

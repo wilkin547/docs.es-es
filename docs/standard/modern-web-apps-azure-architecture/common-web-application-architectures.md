@@ -6,11 +6,14 @@ ms.author: wiwagn
 ms.date: 10/06/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
-ms.openlocfilehash: b6236cfab290211f930d6a1987075abeade4fd6d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
-ms.translationtype: HT
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: dc5580d38ac29a5e923a4b7d84f9d7e077d5cdb2
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 #<a name="common-web-application-architectures"></a>Arquitecturas de aplicación Web comunes
 
@@ -216,14 +219,14 @@ Aunque monolíticas aplicaciones pueden beneficiarse de Docker, interrumpa la ap
 
 > ### <a name="references--common-web-architectures"></a>Referencias: arquitecturas de Web comunes
 > - **La arquitectura de limpieza**  
-> <https://8thlight.com/blog/Uncle-Bob/2012/08/13/the-Clean-Architecture.HTML>
+> <https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html>
 > - **La arquitectura de cebolla**  
-> <http://jeffreypalermo.com/blog/the-Onion-Architecture-Part-1/>
+> <http://jeffreypalermo.com/blog/the-onion-architecture-part-1/>
 > - **El modelo de repositorio**  
-> <http://deviq.com/Repository-Pattern/>
+> <http://deviq.com/repository-pattern/>
 > - **Limpiar solución de arquitectura de ejemplo**  
 > <https://github.com/ardalis/cleanarchitecture>
 > - **Diseñar libros electrónicos Microservicios** <http://aka.ms/MicroservicesEbook>
 
 >[!div class="step-by-step"]
-[Anterior] (arquitectura principles.md) [siguiente] (común-client-lado-web-technologies.md)
+[Previous] (architectural-principles.md) [Next] (common-client-side-web-technologies.md)

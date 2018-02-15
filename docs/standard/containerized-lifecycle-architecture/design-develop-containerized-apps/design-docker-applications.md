@@ -1,15 +1,18 @@
 ---
 title: "Diseñar aplicaciones de Docker"
-description: "Ciclo de vida de aplicación de Docker en contenedores con herramientas y plataforma de Microsoft"
+description: Ciclo de vida de aplicaciones de Docker en contenedor con la plataforma y las herramientas de Microsoft
 keywords: Docker, microservicios, ASP.NET, contenedor
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/21/2017
-ms.openlocfilehash: db8376abf95aab51fad23f4b351cb772351117ac
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
-ms.translationtype: HT
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: aeddd3a4b7ebd3c917fba46e048fbab5a77dda19
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="design-docker-applications"></a>Diseñar aplicaciones de Docker
 
@@ -19,4 +22,4 @@ Sin embargo, antes de entrar en el ciclo de vida de aplicación y DevOps, es imp
 
 
 >[!div class="step-by-step"]
-[Anterior] (index.md) [siguiente] (comunes contenedor-diseño principles.md)
+[Previous] (index.md) [Next] (common-container-design-principles.md)

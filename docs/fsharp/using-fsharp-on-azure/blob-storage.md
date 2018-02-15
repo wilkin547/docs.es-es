@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: c5b74a4f-dcd1-4849-930c-904b6c8a04e1
-ms.openlocfilehash: 92e26aff605d3bed89e388dd3616a2a9a3a96081
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 9011bdceabd1b5e0541ecb94f3e812871688025b
+ms.sourcegitcommit: e2bf8e6bc365bd9a0e86fe81eeae7d14f85f48c1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="get-started-with-azure-blob-storage-using-f"></a>Introducción al almacenamiento de blobs de Azure con F # #
 
@@ -111,10 +111,10 @@ Por ejemplo, considere el siguiente conjunto de blobs en bloques en un contenedo
 *photo1.jpg*
 *2015/architecture/description.txt*
 *2015/architecture/photo3.jpg*
-*2015 / arquitectura/photo4.jpg*
+*2015/architecture/photo4.jpg*
 *2016/architecture/photo5.jpg*
-*2016/architecture/photo6.jpg* 
- *2016/architecture/description.txt*
+*2016/architecture/photo6.jpg*
+*2016/architecture/description.txt*
 *2016/photo7.jpg*
 
 Cuando se llama a `ListBlobs` en un contenedor (como en el ejemplo anterior), se devuelve una lista jerárquica. Si contiene dos `CloudBlobDirectory` y `CloudBlockBlob` objetos, que representan los directorios y los blobs del contenedor de respectivamente, a continuación, la salida resultante es similar al siguiente:
@@ -242,12 +242,13 @@ Ahora que conoce los conceptos básicos de almacenamiento de blobs, siga estos v
 
 ### <a name="blob-storage-reference"></a>Referencia de almacenamiento de blobs
 
-- [Biblioteca de cliente de almacenamiento para la referencia de .NET](http://go.microsoft.com/fwlink/?LinkID=390731&clcid=0x409)
-- [Referencia de la API de REST](http://msdn.microsoft.com/library/azure/dd179355)
+- [API de almacenamiento de Azure para .NET](/dotnet/api/overview/azure/storage)
+- [Referencia de API de REST de servicios de almacenamiento de Azure](/rest/api/storageservices/Azure-Storage-Services-REST-API-Reference)
 
 ### <a name="related-guides"></a>Guías relacionadas
 
 - [Introducción a almacenamiento de blobs de Azure en C#](https://azure.microsoft.com/documentation/samples/storage-blob-dotnet-getting-started/)
-- [Transferencia de datos con la utilidad de línea de comandos de AzCopy](/azure/storage/storage-use-azcopy)
-- [Configurar cadenas de conexión](http://msdn.microsoft.com/library/azure/ee758697.aspx)
+- [Transferencia de datos con la utilidad de línea de comandos de AzCopy en Windows](/azure/storage/common/storage-use-azcopy)
+- [Transferencia de datos con la utilidad de línea de comandos de AzCopy en Linux](/azure/storage/common/storage-use-azcopy-linux)
+- [Configurar cadenas de conexión de almacenamiento de Azure](/azure/storage/common/storage-configure-connection-string)
 - [Blog del equipo de almacenamiento de Azure](http://blogs.msdn.com/b/windowsazurestorage/)

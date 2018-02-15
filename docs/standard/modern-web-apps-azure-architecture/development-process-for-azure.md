@@ -6,11 +6,14 @@ ms.author: wiwagn
 ms.date: 10/08/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
-ms.openlocfilehash: e676c1225f7d11381808040cf101e897e0726ad4
-ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
-ms.translationtype: HT
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 576a717cbdcb8cf465e8cb7b4898df1df7447aa7
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="development-process-for-azure"></a>Proceso de desarrollo de Azure
 
@@ -27,7 +30,7 @@ ms.lasthandoff: 10/21/2017
 
 Si prefiere un IDE eficaz y completa o en un editor ligero y ágil, Microsoft le puede ayudar al desarrollar aplicaciones de ASP.NET Core.
 
-**2017 de Visual Studio.** Si usas *2017 de Visual Studio* aplicaciones se pueden generar ASP.NET Core siempre y cuando tenga el *.NET Core el desarrollo multiplataforma* instalada de la carga de trabajo. Figura 10-1 muestra la carga de trabajo necesaria en el cuadro de diálogo del programa de instalación de Visual Studio de 2017.
+**Visual Studio 2017.** Si usas *2017 de Visual Studio* aplicaciones se pueden generar ASP.NET Core siempre y cuando tenga el *.NET Core el desarrollo multiplataforma* instalada de la carga de trabajo. Figura 10-1 muestra la carga de trabajo necesaria en el cuadro de diálogo del programa de instalación de Visual Studio de 2017.
 
 ![](./media/image10-1.png)
 
@@ -110,8 +113,8 @@ Mientras se ejecuta la aplicación Web, puede supervisar el estado de la aplicac
 ## <a name="references"></a>Referencias
 
 **Compilar e implementar la aplicación de ASP.NET Core en Azure**  
-<https://www.VisualStudio.com/docs/Build/Apps/ASPNET/aspnetcore-to-Azure>
+<https://www.visualstudio.com/docs/build/apps/aspnet/aspnetcore-to-azure>
 
 
 >[!div class="step-by-step"]
-[Anterior] (test-asp-net-core-mvc-apps.md) [siguiente] (azure-hosting-recommendations-for-asp-net-web-apps.md)
+[Previous] (test-asp-net-core-mvc-apps.md) [Next] (azure-hosting-recommendations-for-asp-net-web-apps.md)

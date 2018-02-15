@@ -5,7 +5,8 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -13,19 +14,20 @@ helpviewer_keywords:
 - technology overview [WCF]
 - WCF [WCF], technology overview
 ms.assetid: 40e1009d-ef15-450b-9848-62eabe5e5738
-caps.latest.revision: "51"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5ae43f65c104376ea1e7cfc036a57c728c90ac12
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 7aecddc617afcaf197aa212e8eea7e1342c029fa
+ms.sourcegitcommit: 08684dd61444c2f072b89b926370f750e456fca1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="what-is-windows-communication-foundation"></a>¿Qué es Windows Communication Foundation?
-[!INCLUDE[indigo1](../../../includes/indigo1-md.md)] es un marco de trabajo para la creación de aplicaciones orientadas a servicios. Con [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], es posible enviar datos como mensajes asincrónicos de un extremo de servicio a otro. Un extremo de servicio puede formar parte de un servicio disponible continuamente hospedado por IIS, o puede ser un servicio hospedado en una aplicación. Un extremo puede ser un cliente de un servicio que solicita datos de un extremo de servicio. Los mensajes pueden ser tan simples como un carácter o una palabra que se envía como XML, o tan complejos como una secuencia de datos binarios. A continuación se indican unos cuantos escenarios de ejemplo:  
+[!INCLUDE[indigo1](../../../includes/indigo1-md.md)] es un marco para generar aplicaciones orientadas a servicios. Con [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], es posible enviar datos como mensajes asincrónicos de un extremo de servicio a otro. Un extremo de servicio puede formar parte de un servicio disponible continuamente hospedado por IIS, o puede ser un servicio hospedado en una aplicación. Un extremo puede ser un cliente de un servicio que solicita datos de un extremo de servicio. Los mensajes pueden ser tan simples como un carácter o una palabra que se envía como XML, o tan complejos como una secuencia de datos binarios. A continuación se indican unos cuantos escenarios de ejemplo:  
   
 -   Un servicio seguro para procesar transacciones comerciales.  
   
@@ -42,7 +44,7 @@ ms.lasthandoff: 01/19/2018
  Si bien era posible crear tales aplicaciones antes de que existiera [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], con [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] el desarrollo de extremos resulta más sencillo que nunca. En resumen, [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] se ha diseñado para ofrecer un enfoque manejable para la creación de servicios web y clientes de servicios web.  
   
 ## <a name="features-of-wcf"></a>Características de WCF  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] incluye el siguiente conjunto de características: [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [WCF Feature Details](../../../docs/framework/wcf/feature-details/index.md).  
+ [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] incluye el siguiente conjunto de características. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [WCF Feature Details](../../../docs/framework/wcf/feature-details/index.md).  
   
 -   **Orientación a servicios**  
   
@@ -50,7 +52,7 @@ ms.lasthandoff: 01/19/2018
   
 -   **Interoperabilidad**  
   
-     [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] implementa los estándares del sector modernos para la interoperabilidad de servicios web. [!INCLUDE[crabout](../../../includes/crabout-md.md)] los estándares admitidos, consulte [Interoperability and Integration](../../../docs/framework/wcf/feature-details/interoperability-and-integration.md).  
+     [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] implementa los estándares del sector modernos para la interoperabilidad de servicios Web. [!INCLUDE[crabout](../../../includes/crabout-md.md)] los estándares admitidos, consulte [Interoperability and Integration](../../../docs/framework/wcf/feature-details/interoperability-and-integration.md).  
   
 -   **Varios patrones de mensajes**  
   
@@ -58,7 +60,7 @@ ms.lasthandoff: 01/19/2018
   
 -   **Metadatos de servicios**  
   
-     [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] admite la publicación de metadatos de servicios utilizando los formatos especificados en los estándares de la industria, como WSDL, Esquemas XML y WS-Policy. Estos metadatos pueden utilizarse para generar y configurar automáticamente clientes para el acceso a los servicios de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] . Los metadatos se pueden publicar sobre HTTP y HTTPS, o utilizando el estándar Intercambio de metadatos de servicios web. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Metadata](../../../docs/framework/wcf/feature-details/metadata.md).  
+     [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] admite la publicación de metadatos del servicio utilizando los formatos especificados en los estándares del sector, como WSDL, esquemas XML y WS-Policy. Estos metadatos pueden utilizarse para generar y configurar automáticamente clientes para el acceso a los servicios de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] . Los metadatos se pueden publicar sobre HTTP y HTTPS, o utilizando el estándar Intercambio de metadatos de servicios web. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Metadata](../../../docs/framework/wcf/feature-details/metadata.md).  
   
 -   **Contratos de datos**  
   
@@ -70,11 +72,11 @@ ms.lasthandoff: 01/19/2018
   
 -   **Varios transportes y codificaciones**  
   
-     Los mensajes pueden enviarse con cualquiera de los protocolos y codificaciones integrados. La combinación más frecuente de protocolo y codificación consiste en enviar mensajes SOAP codificados de texto utilizando el Protocolo de transferencia de hipertexto (HTTP) usado en World Wide Web. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] también le permite enviar mensajes sobre TCP, canalizaciones con nombre o MSMQ. Estos mensajes pueden codificarse como texto o utilizando un formato binario optimizado.  Los datos binarios pueden enviarse de manera eficaz utilizando el estándar MTOM. Si ninguno de los transportes o codificaciones proporcionados satisface sus necesidades, puede crear uno personalizado. [!INCLUDE[crabout](../../../includes/crabout-md.md)]transportes y codificaciones admitidos por [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] vea [transportes](../../../docs/framework/wcf/feature-details/transports.md).  
+     Los mensajes pueden enviarse con cualquiera de los protocolos y codificaciones integrados. La combinación más frecuente de protocolo y codificación consiste en enviar mensajes SOAP codificados de texto utilizando el Protocolo de transferencia de hipertexto (HTTP) usado en World Wide Web. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] también le permite enviar mensajes sobre TCP, canalizaciones con nombre o MSMQ. Estos mensajes pueden codificarse como texto o utilizando un formato binario optimizado.  Los datos binarios pueden enviarse de manera eficaz utilizando el estándar MTOM. Si ninguno de los transportes o codificaciones proporcionados satisface sus necesidades, puede crear uno personalizado. [!INCLUDE[crabout](../../../includes/crabout-md.md)] transportes y codificaciones admitidos por [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] vea [transportes](../../../docs/framework/wcf/feature-details/transports.md).  
   
 -   **Mensajes confiables y en cola**  
   
-     [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] admite intercambio de mensajes confiable usando sesiones confiables implementadas sobre mensajería WS-Reliable y mediante MSMQ. [!INCLUDE[crabout](../../../includes/crabout-md.md)] la compatibilidad con mensajería confiable y en cola en [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] , consulte [Queues and Reliable Sessions](../../../docs/framework/wcf/feature-details/queues-and-reliable-sessions.md).  
+     [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] admite el intercambio de mensajes confiable usando sesiones confiables implementadas sobre mensajería WS-Reliable y mediante MSMQ. [!INCLUDE[crabout](../../../includes/crabout-md.md)] la compatibilidad con mensajería confiable y en cola en [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] , consulte [Queues and Reliable Sessions](../../../docs/framework/wcf/feature-details/queues-and-reliable-sessions.md).  
   
 -   **Mensajes duraderos**  
   
@@ -90,7 +92,7 @@ ms.lasthandoff: 01/19/2018
   
 -   **Extensibilidad**  
   
-     La arquitectura de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] tiene varios puntos de extensibilidad. Si se necesita una función adicional, existen una serie de puntos de entrada que le permiten personalizar el comportamiento de un servicio. [!INCLUDE[crabout](../../../includes/crabout-md.md)] los puntos de extensibilidad disponibles, consulte [Extending WCF](../../../docs/framework/wcf/extending/extending-wcf.md).  
+     La arquitectura de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] tiene varios puntos de extensibilidad. Si se necesita una función adicional, existen una serie de puntos de entrada que le permiten personalizar el comportamiento de un servicio. [!INCLUDE[crabout](../../../includes/crabout-md.md)] puntos de extensibilidad disponibles, consulte [extensión de WCF](../../../docs/framework/wcf/extending/index.md).  
   
 ## <a name="wcf-integration-with-other-microsoft-technologies"></a>Integración de WCF con otras tecnologías de Microsoft  
  [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] es una plataforma flexible. Debido a esta flexibilidad extrema, [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] también se usa en varios otros productos Microsoft. Si comprende los fundamentos de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], tendrá una ventaja inmediata si también utiliza cualquiera de estos productos.  

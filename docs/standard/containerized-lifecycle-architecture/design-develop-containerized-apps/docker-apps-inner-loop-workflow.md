@@ -1,15 +1,18 @@
 ---
 title: Flujo de trabajo de desarrollo de bucle interno para las aplicaciones de Docker
-description: "Ciclo de vida de aplicación de Docker en contenedores con herramientas y plataforma de Microsoft"
+description: Ciclo de vida de aplicaciones de Docker en contenedor con la plataforma y las herramientas de Microsoft
 keywords: Docker, microservicios, ASP.NET, contenedor
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 30c10b2407ab643e04eb44c00ddf4a89d369a025
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 5c3b58ef434e1fd7b713102f2642250d8335d859
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="inner-loop-development-workflow-for-docker-apps"></a>Flujo de trabajo de desarrollo de bucle interno para las aplicaciones de Docker
 
@@ -259,4 +262,4 @@ También puede depurar contenedores .NET Core en Docker cuando se utiliza Visual
 
 
 >[!div class="step-by-step"]
-[Anterior] (docker-aplicaciones-desarrollo-environment.md) [siguiente] (visual-studio-herramientas-de-docker.md)
+[Previous] (docker-apps-development-environment.md) [Next] (visual-studio-tools-for-docker.md)

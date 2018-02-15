@@ -6,16 +6,19 @@ ms.author: wiwagn
 ms.date: 10/06/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
-ms.openlocfilehash: 20524c8aa0e64fd40a1a4a6811063557f74074d2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
-ms.translationtype: HT
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: bdb215d64253fb7d22ae2c5648030336850006b5
+ms.sourcegitcommit: f28752eab00d2bd97e971542c0f49ce63cfbc239
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/29/2018
 ---
-#<a name="architectural-principles"></a>Principios de la arquitectura
+# <a name="architectural-principles"></a>Principios de la arquitectura
 
 > "Si generadores generan edificios los programadores de la manera de escribir programas, a continuación, el primer pájaro carpintero suministrada a lo largo de destruiría civilización."  
-> _\-Gerald Weinberg_
+> _\- Gerald Weinberg_
 
 ## <a name="summary"></a>Resumen
 
@@ -103,19 +106,19 @@ El requisito de que las clases tengan cualquiera de las características o compo
 Como mínimo, deben procurar aplicaciones web individuales como su propio contexto enlazado, con su propio almacén de persistencia para su modelo de negocios, en lugar de una base de datos de uso compartido con otras aplicaciones. Se produce la comunicación entre contextos enlazados a través de interfaces de programación, en lugar de a través de una base de datos compartido, que permite la lógica de negocios y eventos pueda colocar en respuesta a los cambios que tienen lugar. Limitado contextos mapa estrechamente a microservicios, que también lo ideal es que se implementan como sus propios contextos enlazados individuales.
 
 > ### <a name="references--modern-web-applications"></a>Referencias: aplicaciones Web modernas
-> - **Separación de intereses**  
-> <http://deviq.com/Separation-of-Concerns/>
-> - **Encapsulación** <http://deviq.com/encapsulation/>
+> - Separación de intereses  
+> <http://deviq.com/separation-of-concerns/>
+> - **Encapsulation** <http://deviq.com/encapsulation/>
 > - **Principio de la inversión de dependencia**  
-> <http://deviq.com/Dependency-inversion-Principle/>
+> <http://deviq.com/dependency-inversion-principle/>
 > - **Principio de dependencias explícitas**  
-> <http://deviq.com/Explicit-Dependencies-Principle/>
+> <http://deviq.com/explicit-dependencies-principle/>
 > - **No repita usted mismo**  
-> <http://deviq.com/Don-t-Repeat-Yourself/>
-> - **Omisión de persistencia**  
-> <http://deviq.com/Persistence-ignorance/>
+> <http://deviq.com/don-t-repeat-yourself/>
+> - Omisión de persistencia  
+> <http://deviq.com/persistence-ignorance/>
 > - **Contexto enlazado**  
-> <https://martinfowler.com/bliki/BoundedContext.HTML>
+> <https://martinfowler.com/bliki/BoundedContext.html>
 
 > [!div class="step-by-step"]
-[Anterior] (choose-between-traditional-web-and-single-page-apps.md) [siguiente] (común-web-aplicaciones-architectures.md)
+[Previous] (choose-between-traditional-web-and-single-page-apps.md) [Next] (common-web-application-architectures.md)

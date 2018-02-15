@@ -2,22 +2,24 @@
 title: Windows Communication Foundation
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.topic: article
 helpviewer_keywords:
 - Windows Communication Foundation [WCF]
 - WCF [WCF]
 ms.assetid: 149348a6-bf82-4ccc-9604-fa7cc88c0749
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6b21dc040cc464495c06e8c824354563307622ba
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 0e7ef1702718d24580694a3d0d4c72e41dc314b4
+ms.sourcegitcommit: 08684dd61444c2f072b89b926370f750e456fca1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="developing-service-oriented-applications-with-wcf"></a>Desarrollar aplicaciones orientadas a servicios mediante WCF
 Esta sección de la documentación proporciona información sobre Windows Communication Foundation (WCF), que es un modelo de programación unificado para compilar aplicaciones orientadas a servicios. Permite a los desarrolladores compilar soluciones de transacción seguras y confiables que se integran en diferentes plataformas y que interactúan con las inversiones existentes.
@@ -44,7 +46,7 @@ Esta sección de la documentación proporciona información sobre Windows Commun
  [Detalles de las características de WCF](../../../docs/framework/wcf/feature-details/index.md)  
  Muestra temas que le permitirán elegir qué característica o características de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] necesita emplear.  
   
- [Extensión de WCF](../../../docs/framework/wcf/extending/extending-wcf.md)  
+ [Extensión de WCF](../../../docs/framework/wcf/extending/index.md)  
  Describe cómo modificar y extender los componentes del tiempo de ejecución de WCF  
   
  [Instrucciones y procedimientos recomendados](../../../docs/framework/wcf/guidelines-and-best-practices.md)  
@@ -75,7 +77,7 @@ Esta sección de la documentación proporciona información sobre Windows Commun
  Ejemplos que proporcionan instrucciones sobre distintos aspectos de Windows Communication Foundation  
   
  [Glosario de Windows Communication Foundation](../../../docs/framework/wcf/glossary.md)  
- Muestra una lista de términos específicos de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].  
+ Muestra una lista de términos específicos [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]  
   
  [Referencia general](../../../docs/framework/wcf/general-reference.md)  
  La sección describe los elementos que se usan para configurar clientes y servicios de Windows Communication Foundation.  

@@ -1,15 +1,18 @@
 ---
 title: Aplicaciones SOA
-description: "Ciclo de vida de aplicación de Docker en contenedores con herramientas y plataforma de Microsoft"
+description: Ciclo de vida de aplicaciones de Docker en contenedor con la plataforma y las herramientas de Microsoft
 keywords: Docker, microservicios, ASP.NET, contenedor
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 92a69ccd18759be3b319395d8609d65bb6d3e1b6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
-ms.translationtype: HT
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 81d2b60303e051568b664ec20225d835a09187c0
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="soa-applications"></a>Aplicaciones SOA
 
@@ -21,4 +24,4 @@ Al final del día, las soluciones de agrupación en clústeres de contenedor son
 
 
 >[!div class="step-by-step"]
-[Anterior] (state-and-data-in-docker-applications.md) [siguiente] (orquestar-alta-escalabilidad-availability.md)
+[Previous] (state-and-data-in-docker-applications.md) [Next] (orchestrate-high-scalability-availability.md)

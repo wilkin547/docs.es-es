@@ -1,15 +1,18 @@
 ---
 title: Con Visual Studio Tools para Docker (Visual Studio en Windows)
-description: "Ciclo de vida de aplicación de Docker en contenedores con herramientas y plataforma de Microsoft"
+description: Ciclo de vida de aplicaciones de Docker en contenedor con la plataforma y las herramientas de Microsoft
 keywords: Docker, microservicios, ASP.NET, contenedor
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: d7a24633f5857bc5b72ebab42020627c645f4302
-ms.sourcegitcommit: 6f49c973f62855ffd6c4a322903e7dd50c5c1b50
-ms.translationtype: HT
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 717675170f19f18fb48c4cea3ddd15bcd9648d71
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="using-visual-studio-tools-for-docker-visual-studio-on-windows"></a>Con Visual Studio Tools para Docker (Visual Studio en Windows)
 
@@ -35,7 +38,7 @@ Visual Studio Tools para Docker proporciona una manera coherente para desarrolla
 
 Si usa un único contenedor, lo primero que necesita para empezar es desactivar la compatibilidad con Docker en el proyecto de .NET Core. Para ello, haga clic en el archivo de proyecto, como se muestra en la figura 4-25.
 
-![https://I1.visualstudiogallery.msdn.s-msft.com/0f5b2caa-ea00-41c8-b8a2-058c7da0b3e4/Image/File/205468/1/Add-docker-support.png](./media/image31.png)
+![https://i1.visualstudiogallery.msdn.s-msft.com/0f5b2caa-ea00-41c8-b8a2-058c7da0b3e4/image/file/205468/1/add-docker-support.png](./media/image31.png)
 
 Figura 4-25: activar la compatibilidad de Docker para el proyecto de Visual Studio
 
@@ -71,4 +74,4 @@ Implementar un contenedor ASP.NET en un host de Docker remoto: [https://docs.mic
 
 
 >[!div class="step-by-step"]
-[Anterior] (docker-aplicaciones-interna-bucle-workflow.md) [siguiente] (set-up-windows-containers-with-powershell.md)
+[Previous] (docker-apps-inner-loop-workflow.md) [Next] (set-up-windows-containers-with-powershell.md)

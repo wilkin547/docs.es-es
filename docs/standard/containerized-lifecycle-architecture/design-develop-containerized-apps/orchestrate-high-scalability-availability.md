@@ -1,15 +1,18 @@
 ---
 title: Orquestar microservicios y multicontainer aplicaciones de alta escalabilidad y disponibilidad
-description: "Ciclo de vida de aplicación de Docker en contenedores con herramientas y plataforma de Microsoft"
+description: Ciclo de vida de aplicaciones de Docker en contenedor con la plataforma y las herramientas de Microsoft
 keywords: Docker, microservicios, ASP.NET, contenedor
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/19/2017
-ms.openlocfilehash: ea492de1c4709eb7bafe65fcf288482da9855240
-ms.sourcegitcommit: 6f49c973f62855ffd6c4a322903e7dd50c5c1b50
-ms.translationtype: HT
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 4345fe8f36ecc32a7dd8e72fce5338bff308ffdf
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="orchestrating-microservices-and-multicontainer-applications-for-high-scalability-and-availability"></a>Orquestar microservicios y multicontainer aplicaciones de alta escalabilidad y disponibilidad
 
@@ -39,10 +42,10 @@ Tabla 4-1: plataformas de Software para el contenedor de agrupación en clúster
 
 | Plataforma | Descripción |
 |---|---|
-| Conjunto de docker<br/> ![http://rancher.com/wp-content/Themes/rancher-2016/Assets/images/swarm.png?v=2016-07-10-am](./media/image7.png) | Conjunto de docker ofrece la capacidad en el clúster y programar los contenedores de Docker. Mediante el uso conjunto, puede convertir un grupo de hosts de Docker en un único host virtual de Docker. Los clientes pueden hacer solicitudes de API para el conjunto de la misma manera que lo hacen a los hosts, lo que significa que conjunto facilita las aplicaciones escalar a varios hosts. <br /><br /> Conjunto de docker es un producto de la empresa Docker. <br /><br /> Docker v1.12 o posterior puede ejecutar modo Swarm nativo e integradas. |
-| Mesosphere DC/OS<br/>![https://mesosphere.com/wp-content/uploads/2016/04/logo-horizontal-Styled.png](./media/image8.png) |  Mesosphere Enterprise DC/OS (según Apache Mesos) es una plataforma de para entornos de producción para ejecutar contenedores y las aplicaciones distribuidas. <br /><br /> Controlador de dominio/OS funciona mediante la abstracción de una colección de los recursos disponibles en el clúster y poner dichos recursos a disposición de los componentes creados sobre él. Maratón normalmente se utiliza como un programador integrado con un controlador de dominio o sistema operativo. |
-| Google Kubernetes<br />![https://PBS.twimg.com/Media/BT\_pEfqCAAAiVyz.png](./media/image9.png) | Kubernetes es un producto de código abierto que proporciona la funcionalidad que varía entre la infraestructura de clúster y el contenedor de programación a las capacidades de organización. Con él, puede automatizar la implementación, ajuste de escala y las operaciones de contenedores de aplicaciones a través de clústeres de hosts. <br /><br /> Kubernetes proporciona una infraestructura centrada en el contenedor que agrupa los contenedores de la aplicación en unidades lógicas para facilitar la administración y detección. |
-| Azure Service Fabric.<br />![https://Azure.Microsoft.com/svghandler/Service-fabric?Width=600&Height=315](./media/image10.png) | [Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-overview) es una plataforma de microservicios de Microsoft para crear aplicaciones. Es un [orchestrator](https://docs.microsoft.com/azure/service-fabric/service-fabric-cluster-resource-manager-introduction) de servicios y crea clústeres de máquinas. De forma predeterminada, Service Fabric implementa y activa los servicios como procesos, pero Service Fabric puede implementar servicios en las imágenes de contenedor de Docker. Más importante, puede mezclar servicios en procesos con los servicios de los contenedores en la misma aplicación. <br /><br /> A partir de mayo de 2017, la característica de Service Fabric que admita servicios de implementación como contenedores de Docker está en estado de vista previa. <br /><br /> Puede desarrollar servicios de Service Fabric en muchos sentidos, del uso de la [modelos de programación de Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-choose-framework) hasta la implementación [invitado ejecutables](https://docs.microsoft.com/azure/service-fabric/service-fabric-deploy-existing-app) , así como contenedores. Service Fabric admite modelos de aplicación preceptiva como [servicios con estado](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-services-introduction) y [Reliable Actors](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-actors-introduction).
+| Conjunto de docker<br/> ![http://rancher.com/wp-content/themes/rancher-2016/assets/images/swarm.png?v=2016-07-10-am](./media/image7.png) | Conjunto de docker ofrece la capacidad en el clúster y programar los contenedores de Docker. Mediante el uso conjunto, puede convertir un grupo de hosts de Docker en un único host virtual de Docker. Los clientes pueden hacer solicitudes de API para el conjunto de la misma manera que lo hacen a los hosts, lo que significa que conjunto facilita las aplicaciones escalar a varios hosts. <br /><br /> Conjunto de docker es un producto de la empresa Docker. <br /><br /> Docker v1.12 o posterior puede ejecutar modo Swarm nativo e integradas. |
+| Mesosphere DC/OS<br/>![https://mesosphere.com/wp-content/uploads/2016/04/logo-horizontal-styled.png](./media/image8.png) |  Mesosphere Enterprise DC/OS (según Apache Mesos) es una plataforma de para entornos de producción para ejecutar contenedores y las aplicaciones distribuidas. <br /><br /> Controlador de dominio/OS funciona mediante la abstracción de una colección de los recursos disponibles en el clúster y poner dichos recursos a disposición de los componentes creados sobre él. Maratón normalmente se utiliza como un programador integrado con un controlador de dominio o sistema operativo. |
+| Google Kubernetes<br />![https://pbs.twimg.com/media/Bt\_pEfqCAAAiVyz.png](./media/image9.png) | Kubernetes es un producto de código abierto que proporciona la funcionalidad que varía entre la infraestructura de clúster y el contenedor de programación a las capacidades de organización. Con él, puede automatizar la implementación, ajuste de escala y las operaciones de contenedores de aplicaciones a través de clústeres de hosts. <br /><br /> Kubernetes proporciona una infraestructura centrada en el contenedor que agrupa los contenedores de la aplicación en unidades lógicas para facilitar la administración y detección. |
+| Azure Service Fabric.<br />![https://azure.microsoft.com/svghandler/service-fabric?width=600&height=315](./media/image10.png) | [Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-overview) es una plataforma de microservicios de Microsoft para crear aplicaciones. Es un [orchestrator](https://docs.microsoft.com/azure/service-fabric/service-fabric-cluster-resource-manager-introduction) de servicios y crea clústeres de máquinas. De forma predeterminada, Service Fabric implementa y activa los servicios como procesos, pero Service Fabric puede implementar servicios en las imágenes de contenedor de Docker. Más importante, puede mezclar servicios en procesos con los servicios de los contenedores en la misma aplicación. <br /><br /> A partir de mayo de 2017, la característica de Service Fabric que admita servicios de implementación como contenedores de Docker está en estado de vista previa. <br /><br /> Puede desarrollar servicios de Service Fabric en muchos sentidos, del uso de la [modelos de programación de Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-choose-framework) hasta la implementación [invitado ejecutables](https://docs.microsoft.com/azure/service-fabric/service-fabric-deploy-existing-app) , así como contenedores. Service Fabric admite modelos de aplicación preceptiva como [servicios con estado](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-services-introduction) y [Reliable Actors](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-actors-introduction).
 
 ## <a name="using-container-based-orchestrators-in-azure"></a>Uso de orchestrators basada en el contenedor de Azure
 
@@ -89,19 +92,19 @@ Servicio de contenedor está actualmente disponible para un estándar, D, DS, G 
 A continuación se indican las ubicaciones donde puede encontrar información adicional:
 
 -   Introducción al contenedor de Docker hospedar soluciones con el servicio de contenedor:  
-    https://docs.Microsoft.com/Azure/Container-Service/kubernetes/Container-Service-Intro-kubernetes>
+    https://docs.microsoft.com/azure/container-service/kubernetes/container-service-intro-kubernetes>
 
 -   Información general del conjunto de docker:  
-    <https://docs.docker.com/swarm/Overview/>
+    <https://docs.docker.com/swarm/overview/>
 
 -   Información general del modo de conjunto:  
-    <https://docs.docker.com/Engine/swarm/>
+    <https://docs.docker.com/engine/swarm/>
 
 -   Información general de DC/OS mesosphere:    
-    <https://docs.mesosphere.com/1.7/Overview/>
+    <https://docs.mesosphere.com/1.7/overview/>
 
 -   Kubernetes (el sitio oficial):  
-    <http://kubernetes.IO/>
+    <http://kubernetes.io/>
 
 ## <a name="using-service-fabric"></a>Uso de Service Fabric.
 
@@ -181,4 +184,4 @@ Tenga en cuenta que los contenedores de Docker son sin estado. Si desea implemen
 
 
 >[!div class="step-by-step"]
-[Anterior] (soa-applications.md) [siguiente] (docker-aplicaciones-desarrollo-environment.md)
+[Previous] (soa-applications.md) [Next] (docker-apps-development-environment.md)

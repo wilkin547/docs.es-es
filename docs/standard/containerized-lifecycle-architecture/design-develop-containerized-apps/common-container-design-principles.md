@@ -1,15 +1,18 @@
 ---
 title: "Principios de diseño comunes de contenedor"
-description: "Ciclo de vida de aplicación de Docker en contenedores con herramientas y plataforma de Microsoft"
+description: Ciclo de vida de aplicaciones de Docker en contenedor con la plataforma y las herramientas de Microsoft
 keywords: Docker, microservicios, ASP.NET, contenedor
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: d7186ae3b768384fe5c6b269578de8db5ef6064c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
-ms.translationtype: HT
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: a9cd569a931824c4fab060b99265ea9e3ca75129
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="common-container-design-principles"></a>Principios de diseño comunes de contenedor
 
@@ -23,4 +26,4 @@ Es posible un escenario en el que desea que varios procesos en ejecución en un 
 
 
 >[!div class="step-by-step"]
-[Anterior] (diseño-docker-applications.md) [siguiente] (monolítico-applications.md)
+[Previous] (design-docker-applications.md) [Next] (monolithic-applications.md)

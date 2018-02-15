@@ -4,11 +4,14 @@ description: Arquitectura de Microservicios de .NET para aplicaciones .NET en co
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
-ms.openlocfilehash: 87aa05895857a425f11820a564f2a249c77f98e2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
-ms.translationtype: HT
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: f9a30605313c06542fabf9689f700ed726445f57
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="deploy-existing-net-apps-as-windows-containers"></a>Implementar aplicaciones de .NET existentes como contenedores de Windows
 
@@ -92,17 +95,17 @@ En escenarios de migración para las aplicaciones existentes o heredadas que se 
 
 Cuando se agrega el nombre de imagen en el archivo Dockerfile, puede seleccionar el sistema operativo y la versión mediante el uso de una etiqueta, como en los ejemplos siguientes para las imágenes de contenedor de Windows basadas en .NET Framework:
 
-> | **Etiqueta** | **Sistema y la versión** |
+> | **Tag** | **Sistema y la versión** |
 > |---|---|
-> | **Microsoft/dotnet-framework:4.x-windowsservercore** | .NET framework 4.x en Windows Server Core |
-> | **Microsoft/aspnet:4.x-windowsservercore** | .NET framework 4.x con personalización adicional de ASP.NET, en Windows Server Core |
+> | **microsoft/dotnet-framework:4.x-windowsservercore** | .NET framework 4.x en Windows Server Core |
+> | **microsoft/aspnet:4.x-windowsservercore** | .NET framework 4.x con personalización adicional de ASP.NET, en Windows Server Core |
 
 Para .NET Core (multiplataforma para Linux y Windows), las etiquetas sería similar al siguiente:
 
-> | **Etiqueta** | **Sistema y la versión**
+> | **Tag** | **Sistema y la versión**
 > |---|---|
-> | **Microsoft/dotnet:2.0.0-Runtime** | .NET core 2.0 solo en tiempo de ejecución en Linux |
-> | **Microsoft/dotnet:2.0.0-Runtime-nanoserver** | .NET core 2.0 solo en tiempo de ejecución en Windows Nano Server |
+> | **microsoft/dotnet:2.0.0-runtime** | .NET core 2.0 solo en tiempo de ejecución en Linux |
+> | **microsoft/dotnet:2.0.0-runtime-nanoserver** | .NET core 2.0 solo en tiempo de ejecución en Windows Nano Server |
 
 ### <a name="multi-arch-images"></a>Arch varias imágenes
 
@@ -124,15 +127,15 @@ La ejecución de un contenedor en Windows con o sin aislamiento de Hyper-V es un
 
 -   **Documentación de contenedores de Windows**
 
-    [https://docs.Microsoft.com/Virtualization/windowscontainers/](https://docs.microsoft.com/virtualization/windowscontainers/)
+    [https://docs.microsoft.com/virtualization/windowscontainers/](https://docs.microsoft.com/virtualization/windowscontainers/)
 
 -   **Conceptos básicos de contenedores de Windows**
 
-    [https://docs.Microsoft.com/Virtualization/windowscontainers/About/](https://docs.microsoft.com/virtualization/windowscontainers/about/)
+    [https://docs.microsoft.com/virtualization/windowscontainers/about/](https://docs.microsoft.com/virtualization/windowscontainers/about/)
 
 -   **Infografía: Microsoft y los contenedores**
 
-    [https://info.Microsoft.com/RS/157-GQE-382/images/Container%20infographic%201.4.17.PDF](https://info.microsoft.com/rs/157-GQE-382/images/Container%20infographic%201.4.17.pdf)
+    [https://info.microsoft.com/rs/157-GQE-382/images/Container%20infographic%201.4.17.pdf](https://info.microsoft.com/rs/157-GQE-382/images/Container%20infographic%201.4.17.pdf)
 
 >[!div class="step-by-step"]
 [Anterior](how-to-deploy-existing-net-apps-to-azure-app-service.md)

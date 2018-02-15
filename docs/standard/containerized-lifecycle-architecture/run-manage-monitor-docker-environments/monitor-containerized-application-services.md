@@ -1,15 +1,18 @@
 ---
 title: Supervisar los servicios de aplicaciones en contenedores
-description: "Ciclo de vida de aplicación de Docker en contenedores con herramientas y plataforma de Microsoft"
+description: Ciclo de vida de aplicaciones de Docker en contenedor con la plataforma y las herramientas de Microsoft
 keywords: Docker, microservicios, ASP.NET, contenedor
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 3e4a78eb47d0e6712919c89b6f52ec8e4248fb23
-ms.sourcegitcommit: 6f49c973f62855ffd6c4a322903e7dd50c5c1b50
-ms.translationtype: HT
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 58bf96dfa06a78892563698200e6f4df5f371346
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="monitor-containerized-application-services"></a>Supervisar los servicios de aplicaciones en contenedores
 
@@ -45,10 +48,10 @@ Para crear un recurso de Application Insights, siga las instrucciones que aparec
 [https://hub.docker.com/r/Microsoft/applicationinsights/](https://hub.docker.com/r/microsoft/applicationinsights/) y <https://github.com/Microsoft/ApplicationInsights-Docker>
 
 -   **Configure información de aplicación de ASP.NET:**  
-[https://docs.Microsoft.com/Azure/Application-Insights/App-Insights-ASP-NET](https://docs.microsoft.com/azure/application-insights/app-insights-asp-net)
+[https://docs.microsoft.com/azure/application-insights/app-insights-asp-net](https://docs.microsoft.com/azure/application-insights/app-insights-asp-net)
 
 -   **Application Insights para páginas web:**  
-<https://docs.Microsoft.com/Azure/Application-Insights/App-Insights-JavaScript>
+<https://docs.microsoft.com/azure/application-insights/app-insights-javascript>
 
 ## <a name="microsoft-operations-management-suite"></a>Microsoft Operations Management Suite
 
@@ -56,7 +59,7 @@ Para crear un recurso de Application Insights, siga las instrucciones que aparec
 
 ### <a name="operations-management-suitehttpmicrosoftcomoms-container-solution-for-docker"></a>[Operations Management Suite](http://microsoft.com/oms) soluciones de contenedor de Docker
 
-Además de ofrecer servicios valiosos por sí mismo, la solución de contenedor de Operations Management Suite puede administrar y supervisar los hosts de Docker y contenedores mostrando información acerca de que los contenedores y los hosts de contenedor, que se están ejecutando contenedores o con error y los registros de demonio y contenedor de Docker enviados a *stdout* y *stderr*. También muestra las métricas de rendimiento como CPU, memoria, red y almacenamiento para el contenedor y los hosts para ayudarle a solucionar problemas y buscar contenedores de vecino.
+Además de ofrecer servicios valiosos por sí mismo, la solución de contenedor de Operations Management Suite puede administrar y supervisar los hosts de Docker y contenedores mostrando información acerca de que los contenedores y los hosts de contenedor, que se están ejecutando contenedores o con error y los registros de demonio y contenedor de Docker enviados a *stdout* y *stderr*. También muestra las métricas de rendimiento, como la CPU, la memoria, la red y el almacenamiento del contenedor y los hosts, para ayudar a solucionar problemas y detectar contenedores próximos ruidosos.
 
 ![](./media/image2.png)
 
@@ -88,13 +91,13 @@ Con la solución de contenedor de Operations Management Suite, puede hacer lo si
 
 Puede ver información sobre el rendimiento mediante la ejecución de consultas como tipo = Perf, tal como se muestra en la figura 6-3.
 
-![DockerPerfMetricsView](./media/image3.png){width = "5.78625 en" height = "3,25 en"}
+![DockerPerfMetricsView](./media/image3.png){width="5.78625in" height="3.25in"}
 
 Figura 6-3: las métricas de rendimiento de hosts de Docker que se muestra por Operations Management Suite
 
 Guardar las consultas también es una característica estándar en Operations Management Suite y puede ayudarle a mantener las consultas que haya encontrado útil y detecta las tendencias en el sistema.
 
-**Obtener más información** para buscar información sobre cómo instalar y configurar el Docker soluciones de contenedor en [Operations Management Suite](http://microsoft.com/oms), vaya a <https://docs.microsoft.com/azure/ registro de análisis/registro-análisis-contenedores>.
+**Obtener más información** para buscar información sobre cómo instalar y configurar el Docker soluciones de contenedor en [Operations Management Suite](http://microsoft.com/oms), vaya a <https://docs.microsoft.com/azure/log-analytics /log-Analytics-Containers>.
 
 >[!div class="step-by-step"]
-[Anterior] (administrar-producción-docker-environments.md) [siguiente] (.. /Key-takeaways/index.MD)
+[Previous] (manage-production-docker-environments.md) [Next] (../key-takeaways/index.md)

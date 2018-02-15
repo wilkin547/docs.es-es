@@ -15,18 +15,18 @@ helpviewer_keywords:
 - customizing Dispose method name
 - Finalize method
 ms.assetid: 31a6c13b-d6a2-492b-9a9f-e5238c983bcb
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 86fef5b18ac2c1c1b1dfee385b726484191fe714
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: e0c2e74afea8a0cb5a0e187f05511eabe0527b90
+ms.sourcegitcommit: 08684dd61444c2f072b89b926370f750e456fca1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="dispose-pattern"></a>Patrón de Dispose
 Todos los programas adquieren uno o más recursos del sistema, como la memoria, los identificadores del sistema o las conexiones de base de datos, en el transcurso de su ejecución. Los desarrolladores tienen que tenga cuidado al usar estos recursos del sistema, porque debe liberarse después de adquirir y usar.  
@@ -35,7 +35,7 @@ Todos los programas adquieren uno o más recursos del sistema, como la memoria, 
   
  Desafortunadamente, la memoria administrada es solo uno de muchos tipos de recursos del sistema. Aún así, los recursos distintos de la memoria administrada deben liberar explícitamente y se conocen como recursos no administrados. El catálogo global concreto no se diseñó para administrar estos recursos no administrados, lo que significa que la responsabilidad de administrar los recursos no administrados que se encuentra en manos de los desarrolladores.  
   
- El CLR proporciona ayuda en liberar recursos no administrados. <xref:System.Object?displayProperty=nameWithType>declara un método virtual <xref:System.Object.Finalize%2A> (también denominado el finalizador) que es llamado por el catálogo global antes de la memoria del objeto sea reclamada por el catálogo global y se puede invalidar para liberar recursos no administrados. Los tipos que invalidan el finalizador se conocen como tipos susceptibles de finalización.  
+ El CLR proporciona ayuda en liberar recursos no administrados. <xref:System.Object?displayProperty=nameWithType> declara un método virtual <xref:System.Object.Finalize%2A> (también denominado el finalizador) que es llamado por el catálogo global antes de la memoria del objeto sea reclamada por el catálogo global y se puede invalidar para liberar recursos no administrados. Los tipos que invalidan el finalizador se conocen como tipos susceptibles de finalización.  
   
  Aunque los finalizadores son eficaces en algunos escenarios de limpieza, tienen dos desventajas importantes:  
   
@@ -95,7 +95,7 @@ public class DisposableResourceHolder : IDisposable {
   
  Además, esta sección se aplica a las clases con una base de que ya no implementan el patrón Dispose. Si se hereda de una clase que ya implementa el patrón, invalide el `Dispose(bool)` método para proporcionar lógica de limpieza de recursos adicionales.  
   
- **✓ HACER** declarar un void virtual protegido `Dispose(bool disposing)` relacionado de método para centralizar toda la lógica para liberar recursos no administrados.  
+ **✓ HACER** declarar un `protected virtual void Dispose(bool disposing)` relacionado de método para centralizar toda la lógica para liberar recursos no administrados.  
   
  Todos los recursos deben limpiarse en este método. Se llama al método desde el finalizador de ambos y `IDisposable.Dispose` método. El parámetro será false si se va a invocar desde dentro de un finalizador. Se debe usar para asegurarse de que cualquier código que se ejecuta durante la finalización no se tiene acceso a otros objetos susceptibles de finalización. Detalles de la implementación de los finalizadores se describen en la sección siguiente.  
   
@@ -138,7 +138,7 @@ public class DisposableResourceHolder : IDisposable {
   
  **X DO NOT** declarar las sobrecargas de la `Dispose` otro método que `Dispose()` y `Dispose(bool)`.  
   
- `Dispose`debe considerarse una palabra reservada para ayudar a codificar este patrón y evitar la confusión entre los implementadores y los usuarios, los compiladores. Algunos lenguajes pueden optar por implementar automáticamente este patrón de determinados tipos.  
+ `Dispose` debe considerarse una palabra reservada para ayudar a codificar este patrón y evitar la confusión entre los implementadores y los usuarios, los compiladores. Algunos lenguajes pueden optar por implementar automáticamente este patrón de determinados tipos.  
   
  **✓ HACER** permitir la `Dispose(bool)` método al que llamar más de una vez. El método puede optar por no hacer nada después de la primera llamada.  
   
@@ -285,7 +285,7 @@ public class ComplexResourceHolder : IDisposable {
   
  **✓ Considere la posibilidad de** crear y usar un objeto susceptibles de finalización crítico (un tipo con una jerarquía de tipos que contiene <xref:System.Runtime.ConstrainedExecution.CriticalFinalizerObject>) para situaciones en que un finalizador absolutamente debe ejecutar incluso frente a la fuerza del dominio de aplicación forzada y subprocesos se anula.  
   
- *Partes © 2005, 2009 Microsoft Corporation. Reservados todos los derechos.*  
+ *Portions © 2005, 2009 Microsoft Corporation. Reservados todos los derechos.*  
   
  *Volver a imprimir en el permiso de educación de Pearson, Inc. de [directrices de diseño de marco de trabajo: convenciones, expresiones y patrones para las bibliotecas .NET de reutilizable, 2ª edición](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina y Brad Abrams, publicado el 22 de octubre de 2008 por Addison-Wesley Professional como parte de la serie de desarrollo de Microsoft Windows.*  
   

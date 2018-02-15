@@ -1,15 +1,18 @@
 ---
 title: "Aplicaciones monolíticas"
-description: "Ciclo de vida de aplicación de Docker en contenedores con herramientas y plataforma de Microsoft"
+description: Ciclo de vida de aplicaciones de Docker en contenedor con la plataforma y las herramientas de Microsoft
 keywords: Docker, microservicios, ASP.NET, contenedor
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: b4b61198129c584909d1345b64dc52feeee7b58e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
-ms.translationtype: HT
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 95561aaa8ffccb8eae3fe276192c6648c0819685
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="monolithic-applications"></a>Aplicaciones monolíticas
 
@@ -71,4 +74,4 @@ Figura 4-4 también muestra que el flujo de publicación inserta una imagen a tr
 
 
 >[!div class="step-by-step"]
-[Anterior] (común-contenedor-diseño-principles.md) [siguiente] (state-and-data-in-docker-applications.md)
+[Previous] (common-container-design-principles.md) [Next] (state-and-data-in-docker-applications.md)

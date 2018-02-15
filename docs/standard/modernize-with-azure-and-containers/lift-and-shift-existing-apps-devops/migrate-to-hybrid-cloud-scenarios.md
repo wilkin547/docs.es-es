@@ -4,11 +4,14 @@ description: "Arquitectura de Microservicios de .NET para aplicaciones .NET en c
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/2/2017
-ms.openlocfilehash: 7394d0fd208e131b4e683298f6ca31a9eddade28
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
-ms.translationtype: HT
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 61b22e48afd543ac077ebb4fe1b7be200f9ec859
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="migrate-to-hybrid-cloud-scenarios"></a>Migrar a escenarios de nube híbrida
 
@@ -48,23 +51,23 @@ Kit de desarrollo de pila de Microsoft Azure es una implementación de un único
 
 -   **Nube híbrida de Azure**
 
-    [https://www.Microsoft.com/cloud-Platform/Hybrid-cloud](https://www.microsoft.com/cloud-platform/hybrid-cloud)
+    [https://www.microsoft.com/cloud-platform/hybrid-cloud](https://www.microsoft.com/cloud-platform/hybrid-cloud)
 
--   **Pila de Azure**
+-   **Azure Stack**
 
-    [https://Azure.Microsoft.com/Overview/Azure-Stack/](https://azure.microsoft.com/overview/azure-stack/)
+    [https://azure.microsoft.com/overview/azure-stack/](https://azure.microsoft.com/overview/azure-stack/)
 
 -   **Cuentas de servicio de Active Directory para los contenedores de Windows**
 
-    [https://docs.Microsoft.com/Virtualization/windowscontainers/Manage-Containers/Manage-ServiceAccounts](https://docs.microsoft.com/virtualization/windowscontainers/manage-containers/manage-serviceaccounts)
+    [https://docs.microsoft.com/virtualization/windowscontainers/manage-containers/manage-serviceaccounts](https://docs.microsoft.com/virtualization/windowscontainers/manage-containers/manage-serviceaccounts)
 
 -   **Crear un contenedor con compatibilidad con Active Directory**
 
-    [https://blogs.msdn.Microsoft.com/containerstuff/2017/01/30/Create-a-Container-with-Active-Directory-support/](https://blogs.msdn.microsoft.com/containerstuff/2017/01/30/create-a-container-with-active-directory-support/)
+    [https://blogs.msdn.microsoft.com/containerstuff/2017/01/30/create-a-container-with-active-directory-support/](https://blogs.msdn.microsoft.com/containerstuff/2017/01/30/create-a-container-with-active-directory-support/)
 
 -   **Licencias de beneficio híbrida de Azure**
 
-    [https://Azure.Microsoft.com/Pricing/Hybrid-use-Benefit/](https://azure.microsoft.com/pricing/hybrid-use-benefit/)
+    [https://azure.microsoft.com/pricing/hybrid-use-benefit/](https://azure.microsoft.com/pricing/hybrid-use-benefit/)
 
 >[!div class="step-by-step"]
 [Anterior](modernize-your-apps-lifecycle-with-ci-cd-pipelines-and-devops-tools-in-the-cloud.md)

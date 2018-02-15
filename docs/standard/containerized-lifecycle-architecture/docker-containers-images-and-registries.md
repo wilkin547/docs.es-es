@@ -1,15 +1,18 @@
 ---
 title: "Registros, imágenes y contenedores de docker"
-description: "Ciclo de vida de aplicación de Docker en contenedores con herramientas y plataforma de Microsoft"
+description: Ciclo de vida de aplicaciones de Docker en contenedor con la plataforma y las herramientas de Microsoft
 keywords: Docker, microservicios, ASP.NET, contenedor
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: b115b25d8ae335aafbe41bac0d694170be7e3c49
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
-ms.translationtype: HT
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 0cccead8833c63f19b359f830f555e7ff31daa1a
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="docker-containers-images-and-registries"></a>Registros, imágenes y contenedores de docker
 
@@ -34,4 +37,4 @@ Registros de imagen privada, hospedado en local o en la nube, se recomienda en l
 -   Desea tener una latencia de red mínimas entre las imágenes y el entorno de implementación elegido. Por ejemplo, si el entorno de producción es Azure, probablemente desee almacenar las imágenes en el registro de contenedor de Azure para que la latencia de red será mínima. De forma similar, si el entorno de producción es local, puede tener un local Docker registro de confianza disponibles dentro de la misma red local.
 
 >[!div class="step-by-step"]
-[Anterior] (docker-terminology.md) [siguiente] (Docker-aplicaciones-ciclo de vida/index.md)
+[Previous] (docker-terminology.md) [Next] (Docker-application-lifecycle/index.md)

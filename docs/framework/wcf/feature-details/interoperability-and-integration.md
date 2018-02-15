@@ -5,27 +5,29 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0d925119-01a1-45c2-9ea0-23061323ad33
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 58bb7f0b5d6e43f4e157bda2f7dff5ad7c57a6c3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: fcd6f8454f77cfd2fbd80ed0f77ce1549025a4d6
+ms.sourcegitcommit: 08684dd61444c2f072b89b926370f750e456fca1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="interoperability-and-integration"></a>Interoperabilidad e integración
 En esta sección se cubre la interoperabilidad y la integración con [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
   
 ## <a name="in-this-section"></a>En esta sección  
  [Guía de interoperabilidad de los protocolos de servicios web](../../../../docs/framework/wcf/feature-details/web-services-protocols-interoperability-guide.md)  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] se crea para interoperar con los servicios web que admiten un conjunto de especificaciones conocido como las "especificaciones de los servicios web". En este tema se enumeran las especificaciones compatibles y los enlaces que las admiten.  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] se crea para interoperar con los servicios Web que admiten un conjunto de especificaciones conocidas como las especificaciones de servicios Web. En este tema se enumeran las especificaciones compatibles y los enlaces que las admiten.  
   
  [Integración en aplicaciones COM+](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)  
  Se trata cómo pueden exponerse las aplicaciones COM+ como servicios de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
@@ -61,4 +63,4 @@ En esta sección se cubre la interoperabilidad y la integración con [!INCLUDE[i
  <xref:System.ServiceModel>  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
- [Extensión de WCF](../../../../docs/framework/wcf/extending/extending-wcf.md)
+ [Extensión de WCF](../../../../docs/framework/wcf/extending/index.md)

@@ -6,16 +6,19 @@ ms.author: wiwagn
 ms.date: 10/06/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
-ms.openlocfilehash: 9ff9380b318457a842dec4e41b9b74dcddcda3d3
-ms.sourcegitcommit: 882e02b086d7cb9c75f748494cf7a8d3377c5874
-ms.translationtype: HT
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: ecef23870ac547f4b4066628da71f8af98c91b27
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="characteristics-of-modern-web-applications"></a>Características de aplicaciones Web modernas
 
 > "… las características de un diseño adecuado, conlleva económica. Este enfoque es arduo, pero continúa lleve a cabo correctamente."  
-> _\-Dennis Ritchie_
+> _\- Dennis Ritchie_
 
 ## <a name="summary"></a>Resumen
 
@@ -41,7 +44,7 @@ ASP.NET Core está optimizado para la nube (nube pública, en la nube privada, c
 
 ## <a name="cross-platform"></a>Multiplataforma
 
-ASP.NET Core multiplataforma y se pueden ejecutar en Linux y Mac OS, así como de Windows. Esto abrirá muchas opciones nuevas para el desarrollo y la implementación de aplicaciones compiladas con ASP.NET Core. Contenedores de docker, que normalmente se ejecutan Linux hoy en día, pueden hospedar aplicaciones ASP.NET Core, lo que les permite sacar partido de las ventajas de [contenedores y microservicios](../microservices-architecture).
+ASP.NET Core multiplataforma y se pueden ejecutar en Linux y Mac OS, así como de Windows. Esto abrirá muchas opciones nuevas para el desarrollo y la implementación de aplicaciones compiladas con ASP.NET Core. Contenedores de docker, que normalmente se ejecutan Linux hoy en día, pueden hospedar aplicaciones ASP.NET Core, lo que les permite sacar partido de las ventajas de [contenedores y microservicios](../microservices-architecture/index.md).
 
 ## <a name="modular-and-loosely-coupled"></a>Acoplamiento flexible y modular
 
@@ -71,11 +74,11 @@ Además de núcleo de ASP.NET, ASP.NET tradicional 4.x sigue siendo una platafor
 
 > ### <a name="references--modern-web-applications"></a>Referencias: aplicaciones Web modernas
 > - **Introducción a ASP.NET Core**  
-> <https://docs.Microsoft.com/ASPNET/Core/>
+> <https://docs.microsoft.com/aspnet/core/>
 > - **Seis clave ventajas de ASP.NET Core que facilitan diferentes y mejor**  
-> <https://blog.trigent.com/Six-Key-Benefits-of-ASP-NET-Core-1-0-which-MAKE-IT-Different-Better/>
+> <https://blog.trigent.com/six-key-benefits-of-asp-net-core-1-0-which-make-it-different-better/>
 > - **Pruebas de ASP.NET Core**  
-> <https://docs.Microsoft.com/ASPNET/Core/Testing/>
+> <https://docs.microsoft.com/aspnet/core/testing/>
 
 >[!div class="step-by-step"]
-[Anterior] (index.md) [siguiente] (choose-between-traditional-web-and-single-page-apps.md)
+[Previous] (index.md) [Next] (choose-between-traditional-web-and-single-page-apps.md)

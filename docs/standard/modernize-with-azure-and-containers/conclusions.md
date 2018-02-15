@@ -4,17 +4,20 @@ description: Modernizar las aplicaciones .NET existentes con contenedores de Win
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
-ms.openlocfilehash: 0bcc330a5970ab923b48d8790c4de93171283d94
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
-ms.translationtype: HT
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 6e2f776b71fda9074605f072335a6e95366d2a97
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="conclusions"></a>Conclusiones
 
 -   Soluciones basadas en el contenedor en última instancia proporcionan ventajas de ahorro de costos. Los contenedores son una solución de problemas de implementación ya que eliminar la fricción causada por una falta de dependencias en entornos de producción. Mediante la eliminación de esos problemas, mejora significativamente las operaciones de desarrollo y pruebas, DevOps y producción.
 
--   Un contenedor de Docker se está convirtiendo en la unidad de implementación para cualquier aplicación basada en el servidor o el servicio estándar.
+-   Un contenedor de Docker se está convirtiendo en la unidad de implementación estándar para cualquier aplicación o servicio basados en servidor.
 
 -   Para entornos de producción, debe usar Organizador (por ejemplo, Service Fabric o Kubernetes) para las aplicaciones basadas en los contenedores de Windows escalable de host.
 

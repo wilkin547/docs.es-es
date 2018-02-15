@@ -1,15 +1,18 @@
 ---
 title: "Pasos del flujo de trabajo de DevOps de bucle externo para una aplicación de Docker"
-description: "Ciclo de vida de aplicación de Docker en contenedores con herramientas y plataforma de Microsoft"
+description: Ciclo de vida de aplicaciones de Docker en contenedor con la plataforma y las herramientas de Microsoft
 keywords: Docker, microservicios, ASP.NET, contenedor
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 070d174cde9e80f542865f5617b1c702a07a8018
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
-ms.translationtype: HT
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: fe51fc4b5026d17f0f9b93e7fd0dedde93ef4a3c
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="steps-in-the-outer-loop-devops-workflow-for-a-docker-application"></a>Pasos del flujo de trabajo de DevOps de bucle externo para una aplicación de Docker
 
@@ -234,4 +237,4 @@ En este tema también se trata en el capítulo siguiente como parte de las tarea
 Solo cuando la supervisión y diagnóstico está al 100% en el dominio Kerberos de DevOps son los procesos de supervisión y análisis realizadas por el equipo de desarrollo en entornos de pruebas o beta. Esto se realiza mediante la realización de pruebas de carga o simplemente mediante la supervisión de la versión beta o entornos de preguntas y respuestas, donde los evaluadores de beta están tratando de las nuevas versiones.
 
 >[!div class="step-by-step"]
-[Anterior] (index.md) [siguiente] (.. /Run-Manage-Monitor-docker-Environments/index.MD)
+[Previous] (index.md) [Next] (../run-manage-monitor-docker-environments/index.md)

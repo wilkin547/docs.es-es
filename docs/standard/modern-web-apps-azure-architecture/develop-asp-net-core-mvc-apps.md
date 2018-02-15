@@ -6,11 +6,14 @@ ms.author: wiwagn
 ms.date: 10/07/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
-ms.openlocfilehash: 54e7ed6fff9ac709e411d0ac1e345c63fd753201
-ms.sourcegitcommit: 43c656811dd38a66a6672084c65d10c0cbbf2015
-ms.translationtype: HT
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: c10bf66dd37f0d99c038db7f95999d84986152fa
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>Desarrollar aplicaciones MVC de ASP.NET Core
 
@@ -71,10 +74,10 @@ Para las API web, ASP.NET Core MVC admite [ *negociación de contenido*](https:/
 > ### <a name="references--mapping-requests-to-responses"></a>Referencias: asignar solicitudes a respuestas
 > - **El enrutamiento a las acciones de controlador**
 > <https://docs.microsoft.com/aspnet/core/mvc/controllers/routing>
-> - **Enlace de modelo** https://docs.microsoft.com/aspnet/core/mvc/models/model-binding
-> - **Validación de modelos**
+> - **Model Binding** https://docs.microsoft.com/aspnet/core/mvc/models/model-binding
+> - **Model Validation**
 > <https://docs.microsoft.com/aspnet/core/mvc/models/validation>
-> - **Filtros** https://docs.microsoft.com/aspnet/core/mvc/controllers/filters
+> - **Filters** https://docs.microsoft.com/aspnet/core/mvc/controllers/filters
 
 ## <a name="working-with-dependencies"></a>Trabajar con dependencias
 
@@ -204,11 +207,11 @@ services.AddMvc(o => o.Conventions.Add(new FeatureConvention()));
 
 Núcleo de ASP.NET MVC también usa una convención localizar vistas. Puede reemplazarlo con una convención personalizada para que las vistas se ubicará en las carpetas de característica (mediante el nombre de la característica proporcionado por el FeatureConvention, anteriormente). Puede obtener más información sobre este enfoque y descargar un ejemplo funcional desde el artículo de MSDN, [segmentos de la característica de MVC de ASP.NET Core](https://msdn.microsoft.com/magazine/mt763233.aspx).
 
-### <a name="cross-cutting-concerns"></a>Problemas de corte del cruce
+### <a name="cross-cutting-concerns"></a>Cuestiones transversales
 
 Medida que desarrolle aplicaciones, resulta cada vez más importante separe preocupaciones transversales para eliminar la duplicación y mantener su coherencia. Algunos ejemplos de preocupaciones transversales en aplicaciones de ASP.NET Core son autenticación, las reglas de validación del modelo, el almacenamiento en caché de salida y control de errores, aunque hay muchas otras. Núcleo de ASP.NET MVC [filtros](https://docs.microsoft.com/aspnet/core/mvc/controllers/filters) permite ejecutar código antes o después de algunos pasos de la canalización de procesamiento de la solicitud. Por ejemplo, un filtro puede ejecutarse antes y después enlace del modelo, antes y después de una acción, o antes y después de resultado de la acción. También puede utilizar un filtro de autorización para controlar el acceso al resto de la canalización. Las figuras 7-2 se muestra cómo solicitar flujos de ejecución a través de filtros, si ha configurado.
 
-![La solicitud se procesa a través de los filtros de autorización, filtros de recursos, enlace de modelos, filtros de acción, ejecución de acciones y conversión del resultado de acción, los filtros de excepción, filtros de resultados y ejecución de resultado. A la salida, solo se procesa la solicitud por filtros de resultados y los filtros de recursos antes de convertirse en una respuesta que se envía al cliente.](./media/image7-2.png)
+![La solicitud se procesa a través de las fases Filtros de autorización, Filtros de recursos, Enlace de modelos, Filtros de acciones, Ejecución de acciones/Conversión del resultado de acción, Filtros de excepción, Filtros de resultados y Ejecución del resultado. Como resultado, la solicitud solo se procesa por las fases Filtros de resultados y Filtros de recursos antes de convertirse en una respuesta para enviarla al cliente.](./media/image7-2.png)
 
 Ejecución de la solicitud de la figura 7-2 a través de los filtros y la canalización de solicitud.
 
@@ -279,13 +282,13 @@ Puede leer más sobre la implementación de filtros y descargar un ejemplo funci
 
 > ### <a name="references--structuring-applications"></a>Referencias: estructura de aplicaciones
 > - **Áreas**  
-> <https://docs.Microsoft.com/ASPNET/Core/MVC/Controllers/Areas>
+> <https://docs.microsoft.com/aspnet/core/mvc/controllers/areas>
 > - **MSDN: sectores de características principales de ASP.NET MVC**
 >  <https://msdn.microsoft.com/magazine/mt763233.aspx>
 > - **Filtros**  
-> <https://docs.Microsoft.com/ASPNET/Core/MVC/Controllers/Filters>
+> <https://docs.microsoft.com/aspnet/core/mvc/controllers/filters>
 > - **MSDN: filtros MVC de ASP.NET Core mundo Real**  
-> <https://msdn.Microsoft.com/magazine/mt767699.aspx>
+> <https://msdn.microsoft.com/magazine/mt767699.aspx>
 
 ## <a name="security"></a>Seguridad
 
@@ -385,15 +388,15 @@ Las API de web mayoría deben implementar un sistema de autenticación basado en
 
 > ### <a name="references--security"></a>Referencias: seguridad
 > - **Información general de documentos de seguridad**  
-> https://docs.Microsoft.com/ASPNET/Core/Security/
+> https://docs.microsoft.com/aspnet/core/security/
 > - **Exigir SSL en una aplicación ASP.NET básica**  
-> <https://docs.Microsoft.com/ASPNET/Core/Security/enforcing-SSL>
+> <https://docs.microsoft.com/aspnet/core/security/enforcing-ssl>
 > - **Introducción a Identity**  
-> <https://docs.Microsoft.com/ASPNET/Core/Security/Authentication/Identity>
+> <https://docs.microsoft.com/aspnet/core/security/authentication/identity>
 > - **Introducción a la autorización**  
-> <https://docs.Microsoft.com/ASPNET/Core/Security/Authorization/Introduction>
+> <https://docs.microsoft.com/aspnet/core/security/authorization/introduction>
 > - **Autenticación y autorización para las aplicaciones de API de servicio de aplicaciones de Azure**  
-> <https://docs.Microsoft.com/Azure/App-Service-API/App-Service-API-Authentication>
+> <https://docs.microsoft.com/azure/app-service-api/app-service-api-authentication>
 
 ## <a name="client-communication"></a>Comunicación de cliente
 
@@ -452,9 +455,9 @@ Considere la posibilidad de experimentan maneras en que las aplicaciones comunic
 
 > ### <a name="references--client-communication"></a>Referencias: la comunicación del cliente
 > - **Núcleo de ASP.NET SignalR**  
-> <https://github.com/ASPNET/SignalR>
+> <https://github.com/aspnet/SignalR>
 > - **Administrador de WebSocket**  
-> https://github.com/Radu-matei/websocket-Manager
+> https://github.com/radu-matei/websocket-manager
 
 ## <a name="domain-driven-design--should-you-apply-it"></a>¿Diseño – controlada por el dominio debe aplicarla?
 
@@ -502,7 +505,7 @@ Un enfoque híbrido sería usar solo DDD para las áreas más complejas o transa
 
 > ### <a name="references--domain-driven-design"></a>Referencias: diseño basado en dominio
 > - **DDD en términos sencillos (StackOverflow respuesta)**  
-> <https://StackOverflow.com/Questions/1222392/CAN-someone-EXPLAIN-Domain-Driven-Design-ddd-in-Plain-English-Please/1222488#1222488>
+> <https://stackoverflow.com/questions/1222392/can-someone-explain-domain-driven-design-ddd-in-plain-english-please/1222488#1222488>
 
 ## <a name="deployment"></a>Implementación
 
@@ -544,13 +547,13 @@ Si está hospedando la aplicación en Azure, puede usar la puerta de enlace de a
 
 > ### <a name="references--deployment"></a>Referencias: implementación
 > - **Información general de implementación y hospedaje**  
-> <https://docs.Microsoft.com/ASPNET/Core/Publishing/>
+> <https://docs.microsoft.com/aspnet/core/publishing/>
 > - **Cuándo utilizar Kestrel con un proxy inverso**  
-> <https://docs.Microsoft.com/ASPNET/Core/Fundamentals/Servers/kestrel#When-to-Use-kestrel-with-a-Reverse-proxy>
+> <https://docs.microsoft.com/aspnet/core/fundamentals/servers/kestrel#when-to-use-kestrel-with-a-reverse-proxy>
 > - **Host de aplicaciones de ASP.NET Core en Docker**  
-> <https://docs.Microsoft.com/ASPNET/Core/Publishing/docker>
+> <https://docs.microsoft.com/aspnet/core/publishing/docker>
 > - **Introducción a la puerta de enlace de aplicación de Azure**  
-> <https://docs.Microsoft.com/Azure/Application-Gateway/Application-Gateway-Introduction>
+> <https://docs.microsoft.com/azure/application-gateway/application-gateway-introduction>
 
 >[!div class="step-by-step"]
-[Anterior] (común-client-lado-web-technologies.md) [siguiente] (work-with-data-in-asp-net-core-apps.md)
+[Previous] (common-client-side-web-technologies.md) [Next] (work-with-data-in-asp-net-core-apps.md)

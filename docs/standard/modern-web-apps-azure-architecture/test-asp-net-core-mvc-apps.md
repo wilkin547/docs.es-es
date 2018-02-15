@@ -6,11 +6,14 @@ ms.author: wiwagn
 ms.date: 10/08/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
-ms.openlocfilehash: 4611ffa8334e124946e849306d3281b695830eb1
-ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
-ms.translationtype: HT
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: d23d0accc33fb8335dff602d6e1d6c8689972906
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="test-aspnet-core-mvc-apps"></a>Probar aplicaciones MVC de ASP.NET Core
 
@@ -112,7 +115,7 @@ Debe asignar el nombre de las pruebas de forma coherente, con un nombre que indi
 
 Una variación de este enfoque finaliza cada nombre de clase de prueba con "Debería" y modifica ligeramente el tiempo:
 
--   CatalogControllerGetImage**debe**. **Llame a**ImageServiceWithId
+-   CatalogControllerGetImage**Should**.**Call**ImageServiceWithId
 
 -   CatalogControllerGetImage**debe**. **Registro**WarningGivenImageMissingException
 
@@ -277,4 +280,4 @@ public class CatalogControllerGetImage : BaseWebTest
 Esta prueba funcional ejercita la pila completa de la aplicación de MVC de ASP.NET Core, incluidos todos los middleware, filtros, enlazadores, etc., que pueden estar en su lugar. Comprueba que un dada ruta ("/ catálogo/pic/1") devuelve la matriz de bytes esperado para un archivo en una ubicación conocida. Sin configurar un servidor web reales y así evita gran parte de la fragilidad que servidor para realizar pruebas puede experimentar (por ejemplo, problemas con la configuración de firewall) usando una web real. Pruebas funcionales que se ejecutan en TestServer son normalmente más lentas que la integración y pruebas unitarias, pero son mucho más rápidas que las pruebas que ejecutan a través de la red para un servidor de prueba web.
 
 >[!div class="step-by-step"]
-[Anterior] (work-with-data-in-asp-net-core-apps.md) [siguiente] (desarrollo-proceso-de-azure.md)
+[Previous] (work-with-data-in-asp-net-core-apps.md) [Next] (development-process-for-azure.md)

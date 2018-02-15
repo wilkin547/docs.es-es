@@ -1,15 +1,18 @@
 ---
 title: "Contenedores como base para la colaboración de DevOps"
-description: "Ciclo de vida de aplicación de Docker en contenedores con herramientas y plataforma de Microsoft"
+description: Ciclo de vida de aplicaciones de Docker en contenedor con la plataforma y las herramientas de Microsoft
 keywords: Docker, microservicios, ASP.NET, contenedor
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 24aad577fca0fd540d66f9e037b58f53583d8fbb
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
-ms.translationtype: HT
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 832beea490bb8221c7aa4202316cbebee84ef32e
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="containers-as-the-foundation-for-devops-collaboration"></a>Contenedores como base para la colaboración de DevOps
 
@@ -68,4 +71,4 @@ Estas son algunas de las ventajas más importantes que proporciona un flujo de t
 -   Plug and play bien con muchos de sus inversiones existentes de DevOps, incluidas las inversiones en código abierto
 
 >[!div class="step-by-step"]
-[Anterior] (index.md) [siguiente] (.. /Microsoft-Platform-Tools-containerized-Apps/index.MD)
+[Previous] (index.md) [Next] (../Microsoft-platform-tools-containerized-apps/index.md)

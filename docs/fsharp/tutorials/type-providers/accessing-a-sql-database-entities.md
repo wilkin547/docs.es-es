@@ -10,13 +10,13 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: dc82a932-5401-4d19-9fb3-92c50d8db514
-ms.openlocfilehash: 770d405921758eeb7e8d7ea98b95c29c99631475
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: e0e78e06fa1129ba5eeb73bc36c14343c93d6927
+ms.sourcegitcommit: e2bf8e6bc365bd9a0e86fe81eeae7d14f85f48c1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 02/13/2018
 ---
-# <a name="walkthrough-accessing-a-sql-database-by-using-type-providers-and-entities"></a>Tutorial: Obtener acceso a una base de datos SQL mediante proveedores de tipo y entidades
+# <a name="walkthrough-accessing-a-sql-database-by-using-type-providers-and-entities"></a>Tutorial: Obtener acceso a una base de datos SQL mediante proveedores de tipos y entidades
 
 > [!NOTE]
 Esta guía se escribió para F # 3.0 y se actualizará.  Vea [FSharp.Data](http://fsharp.github.io/FSharp.Data/) para obtener información sobre los proveedores de tipos multiplataforma actualizados.
@@ -66,7 +66,7 @@ Se puede crear la base de datos School en cualquier servidor que ejecute SQL Ser
 3. Abra el menú contextual para el nuevo nodo de conexión y, a continuación, elija **nueva consulta**.
 <br />
 
-4. Abra [crear la base de datos de ejemplo School](http://go.microsoft.com/fwlink/?LinkID=237278) en el sitio Web de Microsoft y, a continuación, copiar y pegar el script de base de datos que crea la base de datos de estudiante en la ventana del editor.
+4. Abra [crear la base de datos de ejemplo School](https://msdn.microsoft.com/library/bb399731(v=vs.100).aspx) en el sitio Web de Microsoft y, a continuación, copiar y pegar el script de base de datos que crea la base de datos School en la ventana del editor.
 <br />
 
 
@@ -113,8 +113,8 @@ open Microsoft.FSharp.Data.TypeProviders
 7. Resalte cada bloque de código al agregarlo y presione las teclas Alt + Intro para ejecutarlo en F# interactivo.
 <br />
 
-## <a name="configure-the-type-provider-and-connect-to-the-entity-data-model"></a>Configurar el proveedor de tipo y conectarse al Entity Data Model
-En este paso, se configura un proveedor de tipo con una conexión de datos y se obtiene un contexto de datos que permite trabajar con los datos.
+## <a name="configure-the-type-provider-and-connect-to-the-entity-data-model"></a>Configurar el proveedor de tipos y conectarse al Entity Data Model
+En este paso, se configura un proveedor de tipos con una conexión de datos y se obtiene un contexto de datos que permite trabajar con los datos.
 
 
 #### <a name="to-configure-the-type-provider-and-connect-to-the-entity-data-model"></a>Para configurar el proveedor de tipo y conectarse al Entity Data Model
@@ -240,14 +240,9 @@ Explore otras opciones de consulta revisando los operadores de consulta disponib
 
 
 ## <a name="see-also"></a>Vea también
-[Proveedores de tipos](index.md)
-
-[Proveedor de tipos SqlEntityConnection](https://msdn.microsoft.com/visualfsharpdocs/conceptual/sqlentityconnection-type-provider-%5bfsharp%5d)
-
-[Tutorial: Generar tipos de F # en un archivo de esquema EDMX](generating-fsharp-types-from-edmx.md)
-
-[ADO.NET Entity Framework](https://msdn.microsoft.com/library/bb399572)
-
-[información general de archivo .edmx](https://msdn.microsoft.com/library/f4c8e7ce-1db6-417e-9759-15f8b55155d4)
-
-[Generador de EDM &#40; EdmGen.exe &#41;](https://msdn.microsoft.com/library/bb387165)
+[Proveedores de tipos](index.md)  
+[Proveedor de tipos SqlEntityConnection](https://msdn.microsoft.com/visualfsharpdocs/conceptual/sqlentityconnection-type-provider-%5bfsharp%5d)  
+[Tutorial: Generar tipos de F # en un archivo de esquema EDMX](generating-fsharp-types-from-edmx.md)  
+[ADO.NET Entity Framework](https://msdn.microsoft.com/library/bb399572)  
+[información general de archivo .edmx](https://msdn.microsoft.com/library/f4c8e7ce-1db6-417e-9759-15f8b55155d4)  
+[Generador de EDM &#40; EdmGen.exe &#41;](https://msdn.microsoft.com/library/bb387165)  

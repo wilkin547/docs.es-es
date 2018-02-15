@@ -1,15 +1,18 @@
 ---
 title: Estado y los datos en aplicaciones de Docker
-description: "Ciclo de vida de aplicación de Docker en contenedores con herramientas y plataforma de Microsoft"
+description: Ciclo de vida de aplicaciones de Docker en contenedor con la plataforma y las herramientas de Microsoft
 keywords: Docker, microservicios, ASP.NET, contenedor
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 61cd88ca8dd7e51759111d6a9357c008458ee41a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
-ms.translationtype: HT
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: d4b75faffd76a85f9ca1c779ed58bfa37625cff3
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="state-and-data-in-docker-applications"></a>Estado y los datos en aplicaciones de Docker
 
@@ -51,4 +54,4 @@ Orígenes de datos remotos y las memorias caché como base de datos SQL, documen
 
 
 >[!div class="step-by-step"]
-[Anterior] (monolítico applications.md) [siguiente] (soa-applications.md)
+[Previous] (monolithic-applications.md) [Next] (soa-applications.md)

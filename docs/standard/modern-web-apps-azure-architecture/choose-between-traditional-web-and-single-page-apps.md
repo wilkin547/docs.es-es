@@ -6,16 +6,19 @@ ms.author: wiwagn
 ms.date: 10/06/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
-ms.openlocfilehash: 5bae77fc4e0df9d0bc7fecfad25adfcee2419084
-ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
-ms.translationtype: HT
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: eb830ede1b644700a80f0e9fac2f3608deb88276
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="choose-between-traditional-web-apps-and-single-page-apps-spas"></a>Elija entre las aplicaciones Web tradicionales y las aplicaciones de página única (SPAs)
 
 > "La ley del Atwood: cualquier aplicación que puede escribirse en JavaScript, se escribirá finalmente en JavaScript."  
-> _\-Juan Atwood_
+> _\- Jeff Atwood_
 
 ## <a name="summary"></a>Resumen
 
@@ -75,7 +78,7 @@ Escribir SPAs, es necesario estar familiarizado con JavaScript o TypeScript y t�
 > - **AngularJS**  
 > <https://angularjs.org/>
 > - **Comparación de 4 marcos de JavaScript populares**  
-> <https://www.developereconomics.com/Feature-Comparison-of-4-popular-js-MV-Frameworks>
+> <https://www.developereconomics.com/feature-comparison-of-4-popular-js-mv-frameworks>
 
 **La aplicación ya debe exponer una API para otros clientes (internos o públicos)**
 
@@ -85,12 +88,12 @@ Si ya admite una API web para su uso por otros clientes, puede requerir menos tr
 
 La siguiente tabla resume algunos de los factores básicos a tener en cuenta al elegir entre una aplicación web tradicional y un SPA.
 
-  | **Factor de** | **Aplicación Web tradicional** | **Aplicación de una sola página** |
+  | **Factor** | **Aplicación Web tradicional** | **Aplicación de una sola página** |
   |---|---|---|
-  | Familiaridad de equipo necesarias con JavaScript o TypeScript | **Mínimo** | **Obligatorio** |
-  | Compatibilidad con exploradores sin secuencias de comandos | **Compatible** | **No se admite** |
-  | Comportamiento de la aplicación de cliente mínima | **Adecuadas** | **Excesivos** |
-  | Requisitos de la interfaz de usuario amplias y complejas | **Limitado** | **Adecuadas** |
+  | Familiaridad de equipo necesarias con JavaScript o TypeScript | **Minimal** | Obligatorio |
+  | Compatibilidad con exploradores sin secuencias de comandos | **Compatible** | No se admite |
+  | Comportamiento de la aplicación de cliente mínima | **Well-Suited** | **Excesivos** |
+  | Requisitos de la interfaz de usuario amplias y complejas | **Limited** | **Well-Suited** |
 
 >[!div class="step-by-step"]
-[Anterior] (moderno-web-aplicaciones-characteristics.md) [siguiente](architectural-principles.md)
+[Previous] (modern-web-applications-characteristics.md) [Next](architectural-principles.md)

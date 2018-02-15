@@ -6,11 +6,14 @@ ms.author: wiwagn
 ms.date: 10/07/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
-ms.openlocfilehash: bcb8f7bbfa83db9c86cd1278a89750b9f02061d9
-ms.sourcegitcommit: 6f49c973f62855ffd6c4a322903e7dd50c5c1b50
-ms.translationtype: HT
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 648e0a4cdd388cf4a322f0fc049d5dcfca53d54b
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="working-with-data-in-aspnet-core-apps"></a>Trabajar con datos en aplicaciones ASP.NET Core
 
@@ -199,11 +202,11 @@ Es el primer DbContext el \_catalogContext y el segundo DbContext está dentro d
 
 > ### <a name="references--entity-framework-core"></a>Referencias: Entity Framework Core
 > - **Documentos EF básicos**  
-> <https://docs.Microsoft.com/EF/>
+> <https://docs.microsoft.com/ef/>
 > - **EF principal: Datos relacionados**  
-> <https://docs.Microsoft.com/EF/Core/Querying/Related-Data>
+> <https://docs.microsoft.com/ef/core/querying/related-data>
 > - **Evite las entidades de la carga diferida de las aplicaciones de ASPNET**  
-> <http://ardalis.com/AVOID-Lazy-Loading-Entities-in-ASP-NET-Applications>
+> <http://ardalis.com/avoid-lazy-loading-entities-in-asp-net-applications>
 
 ## <a name="ef-core-or-micro-orm"></a>¿Núcleo EF o micro-ORM?
 
@@ -283,7 +286,7 @@ El lenguaje de consulta de documentos es una interfaz sencilla pero eficaz para 
 **Referencias a documentos**
 
 -   Introduction\ de documentos
-    <https://docs.Microsoft.com/Azure/documentdb/documentdb-Introduction>
+    <https://docs.microsoft.com/azure/documentdb/documentdb-introduction>
 
 ## <a name="other-persistence-options"></a>Otras opciones de persistencia
 
@@ -300,7 +303,7 @@ Además relacionales y NoSQL opciones de almacenamiento, aplicaciones de ASP.NET
 **Referencias: almacenamiento de Azure**
 
 -   Introduction\ de almacenamiento de Azure
-    <https://docs.Microsoft.com/Azure/Storage/Storage-Introduction>
+    <https://docs.microsoft.com/azure/storage/storage-introduction>
 
 ## <a name="caching"></a>Almacenamiento en memoria caché
 
@@ -438,4 +441,4 @@ _cache.Get<CancellationTokenSource>("cts").Cancel();
 ```
 
 >[!div class="step-by-step"]
-[Anterior] (develop-asp-net-core-mvc-apps.md) [siguiente] (test-asp-net-core-mvc-apps.md)
+[Previous] (develop-asp-net-core-mvc-apps.md) [Next] (test-asp-net-core-mvc-apps.md)

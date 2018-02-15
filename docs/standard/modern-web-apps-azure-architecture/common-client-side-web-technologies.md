@@ -6,11 +6,14 @@ ms.author: wiwagn
 ms.date: 10/07/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
-ms.openlocfilehash: 1084aee3d81a5df6ac99d6ec0e2ef647b4173c24
-ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
-ms.translationtype: HT
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: e8e156552fd4aa733594c01845fb7ed1643b4aef
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="common-client-side-web-technologies"></a>Tecnologías comunes de Web de lado cliente
 
@@ -67,7 +70,7 @@ Por ejemplo, imagine que si el valor de un cuadro de texto superior a 10, un ele
 
 ### <a name="jquery-vs-a-spa-framework"></a>jQuery vs un marco de trabajo de SPA
 
-| **Factor de** | **jQuery** | **Angular**|
+| **Factor** | **jQuery** | **angular**|
 |--------------------------|------------|-------------|
 | Abstrae el DOM | **Sí** | **Sí** |
 | Compatibilidad con AJAX | **Sí** | **Sí** |
@@ -145,27 +148,27 @@ Marcos de JavaScript siguen evolucionando con una velocidad de vértigo. Utilice
 
 > ### <a name="references--client-web-technologies"></a>Referencias: tecnologías Web de cliente
 > - **HTML y CSS**  
-> <https://www.w3.org/Standards/webdesign/htmlcss>
-> - **SASS vs. MENOS**  
-> <https://www.keycdn.com/blog/SASS-VS-less/>
+> <https://www.w3.org/standards/webdesign/htmlcss>
+> - **SASS vs. LESS**  
+> <https://www.keycdn.com/blog/sass-vs-less/>
 > - **Aplicar un estilo a aplicaciones de ASP.NET Core con menos y Sass, fuente Maravilla**  
-> <https://docs.Microsoft.com/ASPNET/Core/Client-Side/less-SASS-FA>
+> <https://docs.microsoft.com/aspnet/core/client-side/less-sass-fa>
 > - **Desarrollo de cliente en ASP.NET Core**  
-> <https://docs.Microsoft.com/ASPNET/Core/Client-Side/>
+> <https://docs.microsoft.com/aspnet/core/client-side/>
 > - **jQuery**  
-> <https://jQuery.com/>
+> <https://jquery.com/>
 > - **jQuery vs AngularJS**  
-> <https://www.airpair.com/angularjs/Posts/jQuery-angularjs-Comparison-Migration-Walkthrough>
-> - **Angular**  
-> <https://angular.IO/>
-> - **Reaccionar**  
-> <https://Facebook.github.IO/React/>
+> <https://www.airpair.com/angularjs/posts/jquery-angularjs-comparison-migration-walkthrough>
+> - **angular**  
+> <https://angular.io/>
+> - reaccionar  
+> <https://facebook.github.io/react/>
 > - **Reaccionar Slingshot**  
-> <https://github.com/coryhouse/React-Slingshot>
+> <https://github.com/coryhouse/react-slingshot>
 > - **Reaccionar frente a Angular comparación 2**  
-> <https://www.codementor.IO/codementorteam/React-VS-angular-2-Comparison-Beginners-Guide-lvz5710ha>
+> <https://www.codementor.io/codementorteam/react-vs-angular-2-comparison-beginners-guide-lvz5710ha>
 > - **5 mejores marcos de JavaScript de 2017**  
-> <https://hackernoon.com/5-Best-JavaScript-Frameworks-in-2017-7a63b3870282>
+> <https://hackernoon.com/5-best-javascript-frameworks-in-2017-7a63b3870282>
 
 >[!div class="step-by-step"]
-[Anterior] (común-web-aplicaciones-architectures.md) [siguiente] (develop-asp-net-core-mvc-apps.md)
+[Previous] (common-web-application-architectures.md) [Next] (develop-asp-net-core-mvc-apps.md)

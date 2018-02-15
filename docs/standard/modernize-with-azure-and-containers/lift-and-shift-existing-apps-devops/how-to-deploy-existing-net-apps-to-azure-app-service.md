@@ -4,11 +4,14 @@ description: "Arquitectura de Microservicios de .NET para aplicaciones .NET en c
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
-ms.openlocfilehash: c83703c6f3dede0f92263e0d46bf48525c3eefaf
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
-ms.translationtype: HT
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 84bffe7aad6bbffb40519c9146d8156159d55850
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-deploy-existing-net-apps-to-azure-app-service"></a>Cómo implementar aplicaciones de .NET existentes al servicio de aplicaciones de Azure 
 
@@ -22,7 +25,7 @@ Puede usar [Azure aplicación servicio Migration Assistant](https://www.migratet
 
 Azure aplicación servicio Migration Assistant admite la migración de IIS que se ejecuta en Windows Server a la nube. Servicio de aplicaciones es compatible con Windows Server 2003 y versiones posteriores.
 
-> ![https://www.migratetoazure.NET/images/ImageCanvas.png](./media/image5.png)
+> ![https://www.migratetoazure.net/Images/ImageCanvas.png](./media/image5.png)
 >
 > **Figura 4-5.** Usar el Asistente de migración de servicio de aplicaciones de Azure
 
@@ -36,7 +39,7 @@ La herramienta de migración de servicio de aplicaciones puede analizar los siti
 
 -   **Asistente de migración de servicio de aplicaciones de Azure**
 
-    [https://www.migratetoazure.NET/](https://www.migratetoazure.net/)
+    [https://www.migratetoazure.net/](https://www.migratetoazure.net/)
 
 >[!div class="step-by-step"]
 [Anterior](what-about-cloud-optimized-applications.md)
