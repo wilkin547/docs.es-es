@@ -3,22 +3,25 @@ title: "Novedades de .NET Framework"
 ms.custom: updateeachrelease
 ms.date: 05/02/2017
 ms.prod: .net-framework
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.topic: article
 dev_langs:
 - csharp
 - vb
-helpviewer_keywords: what's new [.NET Framework]
+helpviewer_keywords:
+- what's new [.NET Framework]
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e2aa6e67fc45aa02421433a295fdbf5657e4e551
-ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
+ms.workload:
+- dotnet
+ms.openlocfilehash: 86f1884749b5fdf93254985ab3e163dca0562648
+ms.sourcegitcommit: be1fb5d9447ad459bef22b91a91c72e3e0b2d916
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="whats-new-in-the-net-framework"></a>Novedades de .NET Framework
 <a name="introduction"></a> En este artículo se resumen las nuevas características y mejoras en las siguientes versiones de .NET Framework:  
@@ -80,15 +83,15 @@ Para crear un generador de configuración personalizado, derive el generador de 
 
 **Detección de características en tiempo de ejecución**
 
-La clase <xref:System.Runtime.CompilerServices.RuntimeFeature?displayProperty=fullName> proporciona un mecanismo para determinar si se admite una característica predefinida en una determinada implementación de .NET en tiempo de compilación o en tiempo de ejecución. En tiempo de compilación, un compilador puede comprobar si existe un campo especificado para determinar si se admite la característica; si es así, puede emitir código que aprovecha las ventajas de la característica. En tiempo de ejecución, una aplicación puede llamar al método <xref:System.Runtime.CompilerServices.RuntimeFeature.IsSupported%2A?displayProperty=nameWithType> antes de emitir el código en tiempo de ejecución. Para obtener más información, vea [Add helper method to describe features supported by the runtime](https://github.com/dotnet/corefx/issues/17116) (Adición de un método auxiliar para describir características admitidas en tiempo de ejecución).
+La clase <xref:System.Runtime.CompilerServices.RuntimeFeature?displayProperty=nameWithType> proporciona un mecanismo para determinar si se admite una característica predefinida en una determinada implementación de .NET en tiempo de compilación o en tiempo de ejecución. En tiempo de compilación, un compilador puede comprobar si existe un campo especificado para determinar si se admite la característica; si es así, puede emitir código que aprovecha las ventajas de la característica. En tiempo de ejecución, una aplicación puede llamar al método <xref:System.Runtime.CompilerServices.RuntimeFeature.IsSupported%2A?displayProperty=nameWithType> antes de emitir el código en tiempo de ejecución. Para obtener más información, vea [Add helper method to describe features supported by the runtime](https://github.com/dotnet/corefx/issues/17116) (Adición de un método auxiliar para describir características admitidas en tiempo de ejecución).
 
 **Los tipos value tuple son serializables**
 
-A partir de .NET Framework 4.7.1, <xref:System.ValueTuple?displayProperty=fullName> y sus tipos genéricos asociados se marcan como [serializables](xref:System.SerializableAttribute), lo que permite la serialización binaria. Esto facilita la migración de tipos tuple, como <xref:System.Tuple%603> y <xref:System.Tuple%604>, a tipos value tuple. Para más información, vea "Compiler -- ValueTuple is Serializable" (Compilador: ValueTuple serializable) en la entrada de blog [.NET Framework 4.7.1 Runtime and Compiler Features](https://blogs.msdn.microsoft.com/dotnet/2017/09/28/net-framework-4-7-1-runtime-and-compiler-features) (Características del compilador y del tiempo de ejecución de .NET Framework 4.7.1).
+A partir de .NET Framework 4.7.1, <xref:System.ValueTuple?displayProperty=nameWithType> y sus tipos genéricos asociados se marcan como [serializables](xref:System.SerializableAttribute), lo que permite la serialización binaria. Esto facilita la migración de tipos tuple, como <xref:System.Tuple%603> y <xref:System.Tuple%604>, a tipos value tuple. Para más información, vea "Compiler -- ValueTuple is Serializable" (Compilador: ValueTuple serializable) en la entrada de blog [.NET Framework 4.7.1 Runtime and Compiler Features](https://blogs.msdn.microsoft.com/dotnet/2017/09/28/net-framework-4-7-1-runtime-and-compiler-features) (Características del compilador y del tiempo de ejecución de .NET Framework 4.7.1).
 
 **Compatibilidad con referencias de solo lectura**
 
-.NET Framework 4.7.1 agrega <xref:System.Runtime.CompilerServices.IsReadOnlyAttribute?displayProperty=fullName>. Los compiladores de lenguaje utilizan este atributo para marcar los miembros que tienen parámetros o tipos de valor devuelto con referencias de solo lectura. Para más información, vea "Compiler -- Support for ReadOnlyReferences" (Compilador: compatibilidad con referencias de solo lectura) en la entrada de blog [.NET Framework 4.7.1 Runtime and Compiler Features](https://blogs.msdn.microsoft.com/dotnet/2017/09/28/net-framework-4-7-1-runtime-and-compiler-features) (Características del compilador y del tiempo de ejecución de NET Framework 4.7.1). Para obtener información sobre los valores devueltos de referencia, vea [Ref return values and ref locals (C# Guide)](~/docs/csharp/programming-guide/classes-and-structs/ref-returns.md) [Valores devueltos y variables locales de tipo ref (Guía de C#)] y [Ref return values (Visual Basic)](../../visual-basic/programming-guide/language-features/procedures/ref-return-values.md) [Valores devueltos tipo ref (Visual Basic)].
+.NET Framework 4.7.1 agrega <xref:System.Runtime.CompilerServices.IsReadOnlyAttribute?displayProperty=nameWithType>. Los compiladores de lenguaje utilizan este atributo para marcar los miembros que tienen parámetros o tipos de valor devuelto con referencias de solo lectura. Para más información, vea "Compiler -- Support for ReadOnlyReferences" (Compilador: compatibilidad con referencias de solo lectura) en la entrada de blog [.NET Framework 4.7.1 Runtime and Compiler Features](https://blogs.msdn.microsoft.com/dotnet/2017/09/28/net-framework-4-7-1-runtime-and-compiler-features) (Características del compilador y del tiempo de ejecución de NET Framework 4.7.1). Para obtener información sobre los valores devueltos de referencia, vea [Ref return values and ref locals (C# Guide)](~/docs/csharp/programming-guide/classes-and-structs/ref-returns.md) [Valores devueltos y variables locales de tipo ref (Guía de C#)] y [Ref return values (Visual Basic)](../../visual-basic/programming-guide/language-features/procedures/ref-return-values.md) [Valores devueltos tipo ref (Visual Basic)].
 
 <a name="clr" />
 #### <a name="common-language-runtime-clr"></a>Common Language Runtime (CLR)
@@ -97,12 +100,6 @@ A partir de .NET Framework 4.7.1, <xref:System.ValueTuple?displayProperty=fullNa
 
 Los cambios en la recolección de elementos no utilizados en .NET Framework 4.7.1 mejoran el rendimiento general, sobre todo para las asignaciones del montón de objetos grandes. En .NET Framework 4.7.1, se usan bloqueos independientes para las asignaciones de montón de objetos pequeños y de montón de objetos grandes, lo que permite que se realicen las asignaciones de montón de objetos grandes cuando la operación de GC en segundo plano (BGC) rastrea el montón de objetos pequeños. Como resultado, las aplicaciones que realizan un número elevado de asignaciones de montón de objetos grandes deben observar una reducción de la contención del bloqueo de asignación y un rendimiento mejorado. Para más información, vea la sección "Runtime - GC Performance Improvements" (Tiempo de ejecución: mejoras de rendimiento de GC) en la entrada de blog [.NET Framework 4.7.1 Runtime and Compiler Features](https://blogs.msdn.microsoft.com/dotnet/2017/09/28/net-framework-4-7-1-runtime-and-compiler-features/) (Características del compilador y del tiempo de ejecución de NET Framework 4.7.1). 
 
-**Compatibilidad con archivos PDB portátiles**
-
-A partir de .NET Framework 4.7.1 se admiten los archivos PDB portátiles. Mientras que los archivos PDB estándar solo son compatibles con Windows, los archivos PDB portátiles se pueden crear y leer en todas las plataformas. En la mayoría de los casos, el formato de archivo es transparente en una aplicación que se ejecuta en una implementación de .NET particular. Una excepción es una aplicación que emite un ensamblado en tiempo de ejecución de forma dinámica; en este caso, la capacidad de emitir un archivo PDB portátil puede ofrecer una mejora de rendimiento y reducir el consumo de memoria de la aplicación. 
-
-Puede determinar en tiempo de ejecución si los archivos PDB portátiles son compatibles en la implementación de .NET actual al pasar la cadena "PortablePdb" al método <xref:System.Runtime.CompilerServices.RuntimeFeature.IsSupported(System.String)?displayProperty=nameWithType> antes de emitir el ensamblado.  
- 
 <a name="net471"/>
 #### <a name="networking"></a>Redes
 
@@ -1446,7 +1443,7 @@ Para obtener más información sobre la estructura <xref:System.TimeZoneInfo> y 
 
 <a name="tailored"></a> 
 ### [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]
- Las aplicaciones de la [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] están diseñadas para factores de forma específicos y aprovechan la eficacia del sistema operativo Windows. Un subconjunto de [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] o 4.5.1 está disponible para compilar aplicaciones de la [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] para Windows mediante C# o Visual Basic. Este subconjunto se denomina [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] y se explica en una [introducción](http://go.microsoft.com/fwlink/?LinkId=228491) del Centro de desarrollo de Windows.
+ [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] Las aplicaciones de la están diseñadas para factores de forma específicos y aprovechan la eficacia del sistema operativo Windows. Un subconjunto de [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] o 4.5.1 está disponible para compilar aplicaciones de la [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] para Windows mediante C# o Visual Basic. Este subconjunto se denomina [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] y se explica en una [introducción](http://go.microsoft.com/fwlink/?LinkId=228491) del Centro de desarrollo de Windows.
 
 <a name="portable"></a> 
 ### <a name="portable-class-libraries"></a>Bibliotecas de clases portables
