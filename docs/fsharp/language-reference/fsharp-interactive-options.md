@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: f9f3e39b-ce6c-41ff-991f-0625f46441ae
-ms.openlocfilehash: 0fc369993b3ee4c8a9139e4a365330197fe66946
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: f0a8893abca0435307907aa9c169646bf3dec2d5
+ms.sourcegitcommit: adcf9bdafeaa6bc243af7bf70b45f3df954f256a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="f-interactive-options"></a>Opciones de F# Interactive
 
@@ -42,9 +42,11 @@ Si aparecen listas de argumentos de la opción de F # Interactive, elementos de 
 |**--**|Se utiliza para indicar a F # Interactive que debe tratar los argumentos restantes como argumentos de línea de comandos para el programa en F # o el script que puede tener acceso en el código mediante el uso de la lista **fsi.CommandLineArgs**.|
 |**--checked**[**+**&#124;**-**]|Igual que el **fsc.exe** opción del compilador. Para obtener más información, consulte [Opciones del compilador](compiler-options.md).|
 |**--codepage:&lt;int&gt;**|Igual que el **fsc.exe** opción del compilador. Para obtener más información, consulte [Opciones del compilador](compiler-options.md).|
+|**--consolecolors**[**+**&#124;**-**]|Salidas de advertencia y mensajes de error de color.|
 |**--crossoptimize**[**+**&#124;**-**]|Habilitar o deshabilitar las optimizaciones entre módulos.|
-|**--debug**[**+**&#124;**-**]<br /><br />**--debug:**[**full**&#124;**pdbonly**]<br /><br />**-g**[**+**&#124;**-**]<br /><br />**-g:**[**full**&#124;**pdbonly**]|Igual que el **fsc.exe** opción del compilador. Para obtener más información, consulte [Opciones del compilador](compiler-options.md).|
+|**--debug**[**+**&#124;**-**]<br /><br />**--debug:**[**full**&#124;**pdbonly**&#124;**portable**&#124;**embedded**]<br /><br />**-g**[**+**&#124;**-**]<br /><br />**-g:**[**full**&#124;**pdbonly**&#124;**portable**&#124;**embedded**]|Igual que el **fsc.exe** opción del compilador. Para obtener más información, consulte [Opciones del compilador](compiler-options.md).|
 |**--define:&lt;string&gt;**|Igual que el **fsc.exe** opción del compilador. Para obtener más información, consulte [Opciones del compilador](compiler-options.md).|
+|**--deterministic**[**+**&#124;**-**]|Genera un ensamblado determinista (incluidos los GUID de la versión de módulo y marca de tiempo).|
 |**--exec**|Indica a F # interactive se cierre después de cargar los archivos o ejecutar el archivo de script proporcionado en la línea de comandos.|
 |**--fullpaths**|Igual que el **fsc.exe** opción del compilador. Para obtener más información, consulte [Opciones del compilador](compiler-options.md).|
 |**--gui**[**+**&#124;**-**]|Habilita o deshabilita el bucle de eventos de Windows Forms. El valor predeterminado está habilitado.|
@@ -61,7 +63,10 @@ Si aparecen listas de argumentos de la opción de F # Interactive, elementos de 
 |**--quotations-debug**|Especifica que se debería emitir la información de depuración adicional para las expresiones que se derivan de literales de expresión de código delimitada de F # y reflejan las definiciones. La información de depuración se agrega a los atributos personalizados de un nodo de árbol de expresión de F #. Vea [expresiones de código delimitadas](code-quotations.md) y [Expr.CustomAttributes](https://msdn.microsoft.com/library/eb89943f-5f5b-474e-b125-030ca412edb3).|
 |**--readline**[**+**&#124;**-**]|Habilitar o deshabilitar la finalización con tabulación en modo interactivo.|
 |**--reference:&lt;filename&gt;**<br /><br />**-r:&lt;filename&gt;**|Igual que el **fsc.exe** opción del compilador. Para obtener más información, consulte [Opciones del compilador](compiler-options.md).|
+|**--shadowcopyreferences**[**+**&#124;**-**]|Evita que se está bloqueado por el proceso de F # Interactive de referencias.|
+|**--simpleresolution**|Resuelve las referencias de ensamblado con las reglas basadas en el directorio en lugar de la resolución de MSBuild.|
 |**--tailcalls**[**+**&#124;**-**]|Habilitar o deshabilitar el uso de la instrucción de IL final, lo que hace que el marco de pila para reutilizarse en funciones recursivas de cola. Esta opción está habilitada de forma predeterminada.|
+|**--targetprofile:&lt;cadena&gt;**|Especifica el perfil de este ensamblado de .NET framework de destino. Los valores válidos son mscorlib, netcore o netstandard.  El valor predeterminado es mscorlib.|
 |**--utilizar:&lt;nombre de archivo&gt;**|Indica al intérprete que utilice el archivo especificado en el inicio como entrada inicial.|
 |**--utf8output**|Igual que la opción del compilador fsc.exe. Para obtener más información, consulte [Opciones del compilador](compiler-options.md).|
 |**--Advertir:&lt;nivel de advertencia&gt;**|Igual que el **fsc.exe** opción del compilador. Para obtener más información, consulte [Opciones del compilador](compiler-options.md).|
