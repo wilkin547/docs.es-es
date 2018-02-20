@@ -10,7 +10,7 @@
 ### [Ensamblados y ejecución simultánea](assemblies-and-side-by-side-execution.md)
 ## [Dominios de aplicación](application-domains.md)
 ## [Temas "Cómo..." sobre dominios de aplicación y ensamblados](application-domains-and-assemblies-how-to-topics.md)
-## [Utilizar dominios de aplicación](application-domains.md)
+## [Utilizar dominios de aplicación](use.md)
 ### [Crear un dominio de aplicación](how-to-create-an-application-domain.md)
 ### [Descargar un dominio de aplicación](how-to-unload-an-application-domain.md)
 ### [Configurar un dominio de aplicación](how-to-configure-an-application-domain.md)
@@ -35,7 +35,7 @@
 #### [Cómo: Firmar un ensamblado con un nombre seguro](how-to-sign-an-assembly-with-a-strong-name.md)
 #### [Nombres seguros mejorados](enhanced-strong-naming.md)
 #### [Cómo: Hacer referencia a un ensamblado con nombre seguro](how-to-reference-a-strong-named-assembly.md)
-#### [Cómo: Deshabilitar la característica de omisión de nombres seguros](how-to-disable-the-strong-name-bypass-feature.md).
+#### [How to: Disable the Strong-Name Bypass Feature](how-to-disable-the-strong-name-bypass-feature.md) (Cómo: Deshabilitar la característica de omisión de nombres seguros).
 ### [Retrasar la firma de un ensamblado](delay-sign-assembly.md)
 ### [Trabajar con ensamblados y la memoria caché global de ensamblados](working-with-assemblies-and-the-gac.md)
 #### [Instalar un ensamblado en la memoria caché global de ensamblados](how-to-install-an-assembly-into-the-gac.md)

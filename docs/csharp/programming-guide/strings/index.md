@@ -2,20 +2,21 @@
 title: "Cadenas (Guía de programación de C#)"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - C# language, strings
 - strings [C#]
 ms.assetid: 21580405-cb25-4541-89d5-037846a38b07
-caps.latest.revision: "41"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 45dd48a53d3fae58596d9328ef8daba566b2ded1
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: 24a030bb43d49615a7487ce10ad2347fdfd8a290
+ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="strings-c-programming-guide"></a>Cadenas (Guía de programación de C#)
 Una cadena es un objeto de tipo <xref:System.String> cuyo valor es texto. Internamente, el texto se almacena como una colección secuencial de solo lectura de objetos <xref:System.Char>. No hay ningún carácter que finaliza en null al final de una cadena de C#; por lo tanto, la cadena de C# puede contener cualquier número de caracteres nulos insertados ('\0'). La propiedad <xref:System.String.Length%2A> de una cadena representa el número de objetos `Char` que contiene, no el número de caracteres Unicode. Para obtener acceso a los puntos de código Unicode individuales de una cadena, use el objeto <xref:System.Globalization.StringInfo>.  
@@ -120,12 +121,12 @@ string s = String.Empty;
   
 ## <a name="related-topics"></a>Temas relacionados  
   
-|Tema|Descripción|  
+|Tema|Description|  
 |-----------|-----------------|  
 |[Cómo: Modificar el contenido de cadenas](../../../csharp/programming-guide/strings/how-to-modify-string-contents.md)|Proporciona un ejemplo de código que muestra cómo modificar el contenido de cadenas.|  
 |[Cómo: Concatenar varias cadenas](../../../csharp/programming-guide/strings/how-to-concatenate-multiple-strings.md)|Muestra cómo utilizar el operador `+` y la clase `Stringbuilder` para unir cadenas en tiempo de compilación y de ejecución.|  
 |[Cómo: Comparar cadenas](../../../csharp/programming-guide/strings/how-to-compare-strings.md)|Muestra cómo realizar comparaciones ordinales de las cadenas.|  
-|[Cómo: Analizar cadenas mediante String.Split](../../../csharp/programming-guide/strings/how-to-parse-strings-using-string-split.md)|Contiene un ejemplo de código que muestra cómo utilizar el método `String.Split` para analizar cadenas.|  
+|[Cómo: Analizar cadenas mediante String.Split](../../how-to/parse-strings-using-split.md)|Contiene un ejemplo de código que muestra cómo utilizar el método `String.Split` para analizar cadenas.|  
 |[Cómo: Buscar cadenas mediante los métodos String](../../../csharp/programming-guide/strings/how-to-search-strings-using-string-methods.md)|Explica cómo utilizar métodos específicos para buscar cadenas.|  
 |[Cómo: Buscar cadenas mediante expresiones regulares](../../../csharp/programming-guide/strings/how-to-search-strings-using-regular-expressions.md)|Explica cómo utilizar expresiones regulares para buscar cadenas.|  
 |[Cómo: Determinar si una cadena representa un valor numérico](../../../csharp/programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)|Muestra cómo analizar de forma segura una cadena para ver si tiene un valor numérico válido.|  
