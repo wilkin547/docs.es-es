@@ -1,73 +1,99 @@
 ---
-title: '#<a name="if-c-reference"></a>if (Referencia de C#)'
-ms.date: 07/20/2015
+title: '#Directiva de preprocesador if (Referencia de C#)'
+ms.date: 02/13/2017
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
-f1_keywords: '#if'
-helpviewer_keywords: '#if directive [C#]'
+f1_keywords:
+- '#if'
+helpviewer_keywords:
+- '#if directive [C#]'
 ms.assetid: 48cabbff-ca82-491f-a56a-eeccd528c7c2
-caps.latest.revision: "17"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: e4e3b79f64f5190d48d7248726ecdf031ad685e6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 710452d6fddea239cb2e65901fd5ce56d6be699f
+ms.sourcegitcommit: 08684dd61444c2f072b89b926370f750e456fca1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="if-c-reference"></a>#if (Referencia de C#)
-Cuando el compilador de C# encuentra una directiva `#if`, seguida finalmente por una directiva [#endif](../../../csharp/language-reference/preprocessor-directives/preprocessor-endif.md), compilará el código entre las directivas solo si se ha definido el símbolo especificado.  A diferencia de C y C++, no puede asignar un valor numérico a un símbolo; la instrucción #if en C# es booleana y solo comprueba si el símbolo se ha definido o no. Por ejemplo,  
-  
+
+Cuando el compilador de C# encuentra una directiva `#if`, seguida finalmente por una directiva [#endif](preprocessor-endif.md), compila el código entre las directivas solo si se ha definido el símbolo especificado. A diferencia de C y C++, no se puede asignar un valor numérico a un símbolo. La instrucción #if en C# es booleana y solo comprueba si el símbolo se ha definido o no. Por ejemplo:
+
 ```csharp
-#define DEBUG  
-// ...  
-#if DEBUG  
-    Console.WriteLine("Debug version");  
-#endif  
-```  
-  
- Puede usar los operadores [==](../../../csharp/language-reference/operators/equality-comparison-operator.md) (igualdad), [!=](../../../csharp/language-reference/operators/not-equal-operator.md) (desigualdad) solo para comprobar los valores [true](../../../csharp/language-reference/keywords/true.md) o [false](../../../csharp/language-reference/keywords/false.md) . True significa que el símbolo está definido. La instrucción `#if DEBUG` tiene el mismo significado que `#if (DEBUG == true)`. Puede usar los operadores [&&](../../../csharp/language-reference/operators/conditional-and-operator.md) (y), [&#124;&#124;](../../../csharp/language-reference/operators/conditional-or-operator.md) (o) y [!](../../../csharp/language-reference/operators/logical-negation-operator.md) (no) para evaluar si se han definido varios símbolos. Es posible agrupar símbolos y operadores mediante paréntesis.  
-  
-## <a name="remarks"></a>Comentarios  
- `#if`, junto con las directivas [#else](../../../csharp/language-reference/preprocessor-directives/preprocessor-else.md), [#elif](../../../csharp/language-reference/preprocessor-directives/preprocessor-elif.md), [#endif](../../../csharp/language-reference/preprocessor-directives/preprocessor-endif.md), [#define](../../../csharp/language-reference/preprocessor-directives/preprocessor-define.md) y [#undef](../../../csharp/language-reference/preprocessor-directives/preprocessor-undef.md), permite incluir o excluir código basado en la existencia de uno o varios símbolos. Esto puede resultar útil al compilar código para una compilación de depuración o al compilar para una configuración específica.  
-  
- Una directiva condicional que empieza con una directiva `#if` debe terminar de forma explícita con una directiva `#endif`.  
-  
- `#define` permite definir un símbolo, de tal forma que, si se usa como la expresión pasada a la directiva `#if`, la expresión se evaluará el valor `true`.  
-  
- También puede definir un símbolo con la opción [/define](../../../csharp/language-reference/compiler-options/define-compiler-option.md) del compilador. La definición de un símbolo se puede anular mediante [#undef](../../../csharp/language-reference/preprocessor-directives/preprocessor-undef.md).  
-  
- Un símbolo definido mediante `/define` o `#define` no debe entrar en conflicto con una variable del mismo nombre. Es decir, no se debería pasar un nombre de variable a una directiva de preprocesador ni evaluar solo un símbolo mediante una directiva de preprocesador.  
-  
- El ámbito de un símbolo creado con `#define` es el archivo en que se ha definido.  
-  
-## <a name="example"></a>Ejemplo  
-  
+#if DEBUG
+    Console.WriteLine("Debug version");
+#endif
+```
+
+Puede usar los operadores [==](../operators/equality-comparison-operator.md) (igualdad) y [!=](../operators/not-equal-operator.md) (desigualdad) solo para comprobar los valores [true](../keywords/true.md) o [false](../keywords/false.md). True significa que el símbolo está definido. La instrucción `#if DEBUG` tiene el mismo significado que `#if (DEBUG == true)`. Puede usar los operadores [&&](../operators/conditional-and-operator.md) (y), [&#124;&#124;](../operators/conditional-or-operator.md) (o) y [!](../operators/logical-negation-operator.md) (no) para evaluar si se han definido varios símbolos. Es posible agrupar símbolos y operadores mediante paréntesis.
+
+## <a name="remarks"></a>Comentarios
+
+`#if`, junto con las directivas [#else](preprocessor-else.md), [#elif](preprocessor-elif.md), [#endif](preprocessor-endif.md), [#define](preprocessor-define.md) y [#undef](preprocessor-undef.md), permite incluir o excluir código basado en la existencia de uno o varios símbolos. Esto puede resultar útil al compilar código para una compilación de depuración o al compilar para una configuración específica.
+
+Una directiva condicional que empieza con una directiva `#if` debe terminar de forma explícita con una directiva `#endif`.
+
+`#define` permite definir un símbolo. Si luego se usa el símbolo como la expresión pasada a la directiva `#if`, la expresión se evalúa como `true`.
+
+También puede definir un símbolo con la opción [/define](../compiler-options/define-compiler-option.md) del compilador. La definición de un símbolo se puede anular mediante [#undef](preprocessor-undef.md).
+
+Un símbolo definido con `/define` o `#define` no debe entrar en conflicto con una variable del mismo nombre. Es decir, un nombre de variable no debe pasarse a una directiva de preprocesador y un símbolo solo puede ser evaluado por una directiva de preprocesador.
+
+El ámbito de un símbolo creado con `#define` es el archivo en que se ha definido.
+
+El sistema de compilación también tiene en cuenta los símbolos de preprocesador predefinidos que representan distintos [marcos de destino](../../../standard/frameworks.md). Resultan útiles al crear aplicaciones que pueden tener como destino más de una versión o implementación de .NET.
+
+[!INCLUDE [Preprocessor symbols](~/includes/preprocessor-symbols.md)]
+
+Otros símbolos predefinidos incluyen las constantes DEBUG y TRACE. Puede invalidar los valores establecidos para el proyecto con `#define`. Por ejemplo, el símbolo DEBUG se establece automáticamente según las propiedades de configuración de compilación (modo de "depuración" o de "versión").
+
+## <a name="examples"></a>Ejemplos
+
+En el ejemplo siguiente se muestra cómo definir un símbolo MYTEST en un archivo y luego probar los valores de los símbolos MYTEST y DEBUG. El resultado de este ejemplo depende de si ha compilado el proyecto en modo de configuración de depuración o de versión.
+
 ```csharp
-// preprocessor_if.cs  
-#define DEBUG
-#define MYTEST  
-using System;  
-public class MyClass   
-{  
-    static void Main()   
-    {  
-#if (DEBUG && !MYTEST)  
-        Console.WriteLine("DEBUG is defined");  
-#elif (!DEBUG && MYTEST)  
-        Console.WriteLine("MYTEST is defined");  
-#elif (DEBUG && MYTEST)  
+#define MYTEST
+using System;
+public class MyClass
+{
+    static void Main()
+    {
+#if (DEBUG && !MYTEST)
+        Console.WriteLine("DEBUG is defined");
+#elif (!DEBUG && MYTEST)
+        Console.WriteLine("MYTEST is defined");
+#elif (DEBUG && MYTEST)
         Console.WriteLine("DEBUG and MYTEST are defined");  
-#else  
-        Console.WriteLine("DEBUG and MYTEST are not defined");  
-#endif  
-    }  
-}  
-```  
-  
- **Se definen DEBUG y MYTEST**  
-## <a name="see-also"></a>Vea también  
- [Referencia de C#](../../../csharp/language-reference/index.md)  
- [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
- [Directivas de preprocesador de C#](../../../csharp/language-reference/preprocessor-directives/index.md)
+#else
+        Console.WriteLine("DEBUG and MYTEST are not defined");
+#endif
+    }
+}
+```
+
+En el ejemplo siguiente se muestra cómo probar distintos marcos de destino para que se puedan usar las API más recientes cuando sea posible:
+
+```csharp
+public class MyClass
+{
+    static void Main()
+    {
+#if NET40
+        WebClient _client = new WebClient();
+#else
+        HttpClient _client = new HttpClient();
+#endif
+    }
+    //...
+}
+```
+
+## <a name="see-also"></a>Vea también
+
+[Referencia de C#](../../../csharp/language-reference/index.md)  
+[Guía de programación de C#](../../../csharp/programming-guide/index.md)  
+[Directivas de preprocesador de C#](index.md)  
+[Compilación condicional con Trace y Debug](../../../framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md).
