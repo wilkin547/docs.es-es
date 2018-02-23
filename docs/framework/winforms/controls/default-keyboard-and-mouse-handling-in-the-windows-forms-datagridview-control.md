@@ -1,12 +1,9 @@
 ---
-title: "Control predeterminado de teclado y mouse (ratón) en el control DataGridView de formularios Windows Forms"
-ms.custom: 
-ms.date: 03/30/2017
+title: "Predeterminado de teclado y mouse (ratón) en el control DataGridView de formularios Windows Forms"
+ms.date: 02/13/2018
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.technology:
+- dotnet-winforms
 ms.topic: article
 helpviewer_keywords:
 - data grids [Windows Forms], mouse handling
@@ -17,18 +14,19 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], mouse handling
 - navigation keys [Windows Forms], DataGridView control
 ms.assetid: 4519b928-bfc8-4e8b-bb9c-b1e76a0ca552
-caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 627784f3d68ddf03f1f6c94975405dded3163c06
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 29e8afaefd35951288a4d8f5e5df2e3b5fbc4356
+ms.sourcegitcommit: 973a12d1e6962cd9a9c263fbfaad040ec8267fe9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/22/2018
 ---
-# <a name="default-keyboard-and-mouse-handling-in-the-windows-forms-datagridview-control"></a>Control predeterminado de teclado y mouse (ratón) en el control DataGridView de formularios Windows Forms
+# <a name="default-keyboard-and-mouse-handling-in-the-windows-forms-datagridview-control"></a>Predeterminado de teclado y mouse (ratón) en el control DataGridView de formularios Windows Forms
+
 Las tablas siguientes describen cómo pueden interactuar los usuarios con el <xref:System.Windows.Forms.DataGridView> control a través de un teclado y un mouse.  
   
 > [!NOTE]
@@ -52,11 +50,12 @@ Las tablas siguientes describen cómo pueden interactuar los usuarios con el <xr
 |MAYÚS+TAB|Si el <xref:System.Windows.Forms.DataGridView.StandardTab%2A> es el valor de la propiedad `false`, mueve el foco a la celda anterior de la fila actual. Si el foco está en la primera celda de la fila, mueve el foco a la última celda de la fila anterior. Si el foco está en la primera celda del control, desplaza el foco al control anterior en el orden de tabulación del contenedor primario.<br /><br /> Si el <xref:System.Windows.Forms.DataGridView.StandardTab%2A> es el valor de la propiedad `true`, mueve el foco al control anterior en el orden de tabulación del contenedor primario.|  
 |CTRL+TAB|Si el <xref:System.Windows.Forms.DataGridView.StandardTab%2A> es el valor de la propiedad `false`, mueve el foco al siguiente control en el orden de tabulación del contenedor primario.<br /><br /> Si el <xref:System.Windows.Forms.DataGridView.StandardTab%2A> es el valor de la propiedad `true`, mueve el foco a la siguiente celda en la fila actual. Si el foco está en la última celda de la fila, mueve el foco a la primera celda de la fila siguiente. Si el foco está en la última celda en el control, mueve el foco al siguiente control en el orden de tabulación del contenedor primario.|  
 |CTRL+MAYÚS+TAB|Si el <xref:System.Windows.Forms.DataGridView.StandardTab%2A> es el valor de la propiedad `false`, mueve el foco al control anterior en el orden de tabulación del contenedor primario.<br /><br /> Si el <xref:System.Windows.Forms.DataGridView.StandardTab%2A> es el valor de la propiedad `true`, mueve el foco a la celda anterior de la fila actual. Si el foco está en la primera celda de la fila, mueve el foco a la última celda de la fila anterior. Si el foco está en la primera celda del control, desplaza el foco al control anterior en el orden de tabulación del contenedor primario.|  
-|CTRL + FLECHA|Mueve el foco a la última celda en la dirección de la flecha.|  
+|CTRL+ARROW|Mueve el foco a la última celda en la dirección de la flecha.|  
 |CTRL + INICIO|Mueve el foco a la primera celda del control.|  
 |CTRL + FIN|Mueve el foco a la última celda en el control.|  
 |CTRL+AV PÁG ARRIBA/ABAJO|Igual que AV PÁG o AV PÁG.|  
-|F2|Pone la celda actual en modo de edición de celda si el <xref:System.Windows.Forms.DataGridView.EditMode%2A> es el valor de la propiedad <xref:System.Windows.Forms.DataGridViewEditMode.EditOnF2> o <xref:System.Windows.Forms.DataGridViewEditMode.EditOnKeystrokeOrF2>.|  
+|F2|Pone la celda actual en modo de edición de celda si el <xref:System.Windows.Forms.DataGridView.EditMode%2A> es el valor de la propiedad <xref:System.Windows.Forms.DataGridViewEditMode.EditOnF2> o <xref:System.Windows.Forms.DataGridViewEditMode.EditOnKeystrokeOrF2>.|
+|F3|Ordena la columna actual si la <xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A?displayProperty=nameWithType> es el valor de la propiedad <xref:System.Windows.Forms.DataGridViewColumnSortMode.Automatic>. Es el mismo que al hacer clic en el encabezado de columna actual. Disponible desde .NET Framework 4.7.2. Para habilitar esta característica, las aplicaciones deben tener como destino .NET Framework 4.7.2 o versiones posteriores u opte explícitamente por el uso de conmutadores AppContext las mejoras de accesibilidad.|  
 |F4|Si la celda actual es un <xref:System.Windows.Forms.DataGridViewComboBoxCell>, coloca la celda en modo de edición y se muestra la lista desplegable.|  
 |ALT+FLECHA ARRIBA/ABAJO|Si la celda actual es un <xref:System.Windows.Forms.DataGridViewComboBoxCell>, coloca la celda en modo de edición y se muestra la lista desplegable.|  
 |Barra espaciadora|Si la celda actual es un <xref:System.Windows.Forms.DataGridViewButtonCell>, <xref:System.Windows.Forms.DataGridViewLinkCell>, o <xref:System.Windows.Forms.DataGridViewCheckBoxCell>, genera el <xref:System.Windows.Forms.DataGridView.CellClick> y <xref:System.Windows.Forms.DataGridView.CellContentClick> eventos. Si la celda actual es un <xref:System.Windows.Forms.DataGridViewButtonCell>, también presiona el botón. Si la celda actual es un <xref:System.Windows.Forms.DataGridViewCheckBoxCell>, también cambia el estado de activación.|  
@@ -67,7 +66,8 @@ Las tablas siguientes describen cómo pueden interactuar los usuarios con el <xr
 |CTRL+ENTRAR|Confirma los cambios en la celda actual sin mover el foco. También confirma los cambios realizados en la fila actual si el control se enlaza a un origen de datos que admite el modo de edición o virtual se ha implementado con nivel de fila ámbito de confirmación.|  
 |CTRL+0|Escribe un <xref:System.DBNull.Value?displayProperty=nameWithType> el valor en la celda actual si se puede editar la celda. De forma predeterminada, la presentación de valor para un <xref:System.DBNull> valor de la celda es el valor de la <xref:System.Windows.Forms.DataGridViewCellStyle.NullValue%2A> propiedad de la <xref:System.Windows.Forms.DataGridViewCellStyle> en vigor para la celda actual.|  
   
-### <a name="selection-keys"></a>Teclas de selección  
+### <a name="selection-keys"></a>Teclas de selección
+
  Si el <xref:System.Windows.Forms.DataGridView.MultiSelect%2A> propiedad está establecida en `false` y <xref:System.Windows.Forms.DataGridView.SelectionMode%2A> propiedad está establecida en <xref:System.Windows.Forms.DataGridViewSelectionMode.CellSelect>, la celda actual utilizando las teclas de desplazamiento si se cambia la selección a la nueva celda. La tecla MAYÚS, CTRL y ALT (teclas) no afectan a este comportamiento.  
   
  Si el <xref:System.Windows.Forms.DataGridView.SelectionMode%2A> está establecido en <xref:System.Windows.Forms.DataGridViewSelectionMode.RowHeaderSelect> o <xref:System.Windows.Forms.DataGridViewSelectionMode.ColumnHeaderSelect>, ocurre lo mismo pero con las siguientes adiciones.  
@@ -83,9 +83,9 @@ Las tablas siguientes describen cómo pueden interactuar los usuarios con el <xr
   
  Si <xref:System.Windows.Forms.DataGridView.MultiSelect%2A> está establecido en `true` y <xref:System.Windows.Forms.DataGridView.SelectionMode%2A> está establecido en <xref:System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect> o <xref:System.Windows.Forms.DataGridViewSelectionMode.FullColumnSelect>, el comportamiento de la celda del delimitador y la celda actual es el mismo, pero solo filas o columnas completas estén seleccionadas o anular la selección.  
   
-## <a name="default-mouse-handling"></a>Control predeterminado del Mouse  
+## <a name="default-mouse-handling"></a>Control predeterminado del mouse
   
-### <a name="basic-mouse-handling"></a>Control básico del Mouse  
+### <a name="basic-mouse-handling"></a>Control básico del mouse
   
 > [!NOTE]
 >  Haga clic en una celda con el botón primario del mouse siempre cambia la celda actual. Haga clic en una celda con el botón secundario del mouse, se abre un menú contextual, cuando está disponible.  
@@ -97,7 +97,8 @@ Las tablas siguientes describen cómo pueden interactuar los usuarios con el <xr
 |Haga clic en botón primario del mouse|Genera el <xref:System.Windows.Forms.DataGridView.CellClick?displayProperty=nameWithType> y <xref:System.Windows.Forms.DataGridView.CellMouseClick?displayProperty=nameWithType> eventos|  
 |Presionar el botón primario del mouse y arrastre en una celda de encabezado de columna|Si el <xref:System.Windows.Forms.DataGridView.AllowUserToOrderColumns%2A?displayProperty=nameWithType> propiedad es `true`, mueve la columna para que se pueda colocar en una nueva posición.|  
   
-### <a name="mouse-selection"></a>Selección del mouse  
+### <a name="mouse-selection"></a>Selección del mouse
+
  Ningún comportamiento de la selección está asociado con el botón central del mouse o la rueda del mouse.  
   
  Si el <xref:System.Windows.Forms.DataGridView.MultiSelect%2A> propiedad está establecida en `false` y <xref:System.Windows.Forms.DataGridView.SelectionMode%2A> propiedad está establecida en <xref:System.Windows.Forms.DataGridViewSelectionMode.CellSelect>, ocurre lo siguiente.  
@@ -121,6 +122,7 @@ Las tablas siguientes describen cómo pueden interactuar los usuarios con el <xr
   
  Si <xref:System.Windows.Forms.DataGridView.MultiSelect%2A> está establecido en `true` y <xref:System.Windows.Forms.DataGridView.SelectionMode%2A> está establecido en <xref:System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect> o <xref:System.Windows.Forms.DataGridViewSelectionMode.FullColumnSelect>, haga clic en una celda mientras se presiona la tecla MAYÚS o CTRL se comporta del mismo modo, excepto que solo completa las filas y columnas se ven afectadas.  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Windows.Forms.DataGridView>  
+## <a name="see-also"></a>Vea también
+
+<xref:System.Windows.Forms.DataGridView>  
  [DataGridView (control)](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)
