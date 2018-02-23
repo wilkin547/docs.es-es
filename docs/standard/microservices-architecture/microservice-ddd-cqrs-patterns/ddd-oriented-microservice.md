@@ -1,112 +1,115 @@
 ---
-title: "Diseñar un microservicio orientados a DDD"
-description: "Arquitectura de Microservicios de .NET para aplicaciones .NET en contenedores | Diseñar un microservicio orientados a DDD"
+title: "Diseño de un microservicio orientado a un DDD"
+description: "Arquitectura de microservicios de .NET para aplicaciones .NET en contenedor | Diseño de un microservicio orientado a un DDD"
 keywords: Docker, microservicios, ASP.NET, contenedor
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
+ms.date: 11/06/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: df45441089fd59d5e0e52b4bcec409adcc11fb71
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 38b65bc6752dd8b6ed4083c0bc5a5eccabcffbcc
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
-# <a name="designing-a-ddd-oriented-microservice"></a>Diseñar un microservicio orientados a DDD
+# <a name="designing-a-ddd-oriented-microservice"></a>Diseño de un microservicio orientado a un DDD
 
-Diseño basado en dominio (DDD) encarga modelado basado en la realidad de negocio que sea relevante para los casos de uso. En el contexto de la creación de aplicaciones, DDD habla sobre los problemas como dominios. Describe áreas con problemas independientes como limitado contextos (cada contexto limitado se correlaciona con un microservicio) y resalta un lenguaje común de hablar acerca de estos problemas. También sugiere muchos conceptos técnicos y los patrones, similares a las entidades de dominio con modelos enriquecidos (no [modelo de dominio anemic](https://martinfowler.com/bliki/AnemicDomainModel.html)), valor objetos, agregados y raíz agregada (o entidad raíz), las reglas para admitir la implementación interna. Esta sección presenta el diseño e implementación de esos patrones internos.
+El diseño guiado por el dominio (DDD) propone un modelado basado en la realidad de negocio con relación a sus casos de uso. En el contexto de la creación de aplicaciones, DDD hace referencia a los problemas como dominios. Describe áreas con problemas independientes como contextos delimitados (cada contexto delimitado está correlacionado con un microservicio) y resalta un lenguaje común para hablar de dichos problemas. También sugiere muchos patrones y conceptos técnicos, como entidades de dominio con reglas de modelos enriquecidos (no [modelos de dominio anémico](https://martinfowler.com/bliki/AnemicDomainModel.html)), objetos de valor, agregados y raíz agregada (o entidad raíz) para admitir la implementación interna. En esta sección se explica el diseño y la implementación de estos patrones internos.
 
-A veces dichas DDD técnicas reglas y patrones se perciban como obstáculos que tienen una pronunciada curva de aprendizaje para implementar métodos DDD. Pero lo importante es no los patrones a sí mismos, pero el código de la organización para que se alinee a los problemas empresariales y con los mismos términos de negocio (lenguaje ubicuo). Además, deben aplicarse DDD enfoques solo si está implementando microservicios complejos con reglas de negocios importantes. Responsabilidades más sencillas, como un servicio CRUD, se pueden administrar con los enfoques más sencillos.
+A veces, estos patrones y reglas técnicas de DDD se perciben como obstáculos con una curva de aprendizaje pronunciada a la hora de implementar opciones de DDD. Pero lo importante no son los patrones en sí, sino organizar el código para que esté en línea con los problemas del negocio y utilizar los mismos términos empresariales (lenguaje ubicuo). Además, las opciones de DDD solo deben aplicarse en el caso de implementar microservicios complejos con reglas de negocio importantes. Las responsabilidades más sencillas, como el servicio CRUD, se pueden administrar con enfoques más sencillos.
 
-Dónde debe dibujar los límites de la tarea es la clave cuando diseñe y definir un microservicio. Patrones DDD le ayudan a comprender la complejidad del dominio. Para el modelo de dominio en cada contexto limitado, identificar y definir las entidades, los objetos de valor y los agregados que modelan el dominio. Crear y perfeccionar un modelo de dominio que se encuentra dentro de un límite que define el contexto. Y eso es muy explícita en forma de un microservicio. Los componentes dentro de esos límites acabar siendo su microservicios, aunque en algunos casos una continuidad del negocio o microservicios de negocios pueden estar compuesto de varios servicios físicos. DDD es acerca de los límites y por lo tanto, son microservicios.
+La clave está en dónde situar los límites al diseñar y definir un microservicio. Los patrones de DDD le ayudan a comprender la complejidad del dominio. En el modelo de dominio de cada contexto delimitado, debe identificar y definir las entidades, los objetos de valor y los agregados que modelan el dominio. Debe crear y perfeccionar un modelo de dominio que se encuentre dentro de un límite definido por su contexto. Y esto se hace claramente patente en la forma de un microservicio. Los componentes situados dentro de esos límites acaban siendo sus microservicios, aunque, en algunos casos, los contextos delimitados o los microservicios pueden estar compuestos de varios servicios físicos. El DDD afecta a los límites y, por lo tanto, a los microservicios.
 
-## <a name="keep-the-microservice-context-boundaries-relatively-small"></a>Mantener los límites del contexto la microservicio relativamente pequeño
+## <a name="keep-the-microservice-context-boundaries-relatively-small"></a>Mantener los límites de contexto del microservicio relativamente estrechos
 
-Determinar dónde colocar los límites entre contextos limitado equilibra dos objetivos de la competencia. En primer lugar, desea crear inicialmente la microservicios más pequeño posible, aunque no debe ser el controlador principal; debe crear un límite alrededor, lo que necesita cohesión. En segundo lugar, desea evitar las comunicaciones locuaces entre microservicios. Estos objetivos pueden contradecir entre sí. Se debe equilibrar por descomponer el sistema en tantos microservicios pequeños que lo haría con hasta que vea los límites de comunicación creciendo rápidamente con cada intento adicional para separar un nuevo contexto limitado. Cohesión es clave dentro de un único contexto enlazado.
+Determinar dónde colocar los límites entre contextos delimitados equilibra dos objetivos contrapuestos. En primer lugar, le interesa crear los microservicios más pequeños posibles, aunque su principal objetivo no debe ser este, sino el de crear un límite alrededor de elementos que deban estar cohesionados. En segundo lugar, le interesa evitar comunicaciones locuaces entre microservicios. Estos objetivos pueden ser contrapuestos. Para encontrar el equilibrio entre ellos, debe descomponer el sistema en tantos microservicios pequeños como pueda hasta que los límites de la comunicación crezcan rápidamente con cada intento adicional de separar un nuevo contexto delimitado. La cohesión es clave en un único contexto delimitado.
 
-Es similar a la [olor a código inapropiado intimidad](https://sourcemaking.com/refactoring/smells/inappropriate-intimacy) al implementar las clases. Si necesitan dos microservicios mucho colaborar entre sí, probablemente deben ser el mismo microservicio.
+Se parece a una [inadecuada intuición de código de cercanía](https://sourcemaking.com/refactoring/smells/inappropriate-intimacy) al implementar las clases. Si dos microservicios necesitan colaborar mucho entre sí, probablemente sean el mismo microservicio.
 
-Otra manera de enfocar todo esto es autonomía. Si un microservicio debe depende de otro servicio para una solicitud de servicio directamente, no es realmente autónomo.
+Otra manera de enfocarlo es observando la autonomía. Si un microservicio debe depender de otro servicio para satisfacer directamente una solicitud, no es realmente autónomo.
 
-## <a name="layers-in-ddd-microservices"></a>Capas en DDD microservicios
+## <a name="layers-in-ddd-microservices"></a>Niveles en microservicios de DDD
 
-La mayoría de las aplicaciones de enterprise con significativos para el negocio y complejidad técnica se definen mediante varias capas. Las capas son un artefacto de lógico y no están relacionadas con la implementación del servicio. Existen para ayudar a los desarrolladores administrar la complejidad del código. Diferentes niveles (por ejemplo, el nivel de modelo de dominio frente a la capa de presentación, etc.) podrían tener diferentes tipos, que exige las traducciones entre dichos tipos.
+La mayoría de aplicaciones de empresa con una significativa complejidad empresarial y técnica se definen a partir de múltiples niveles. Los niveles son un elemento lógico y no están relacionados con la implementación del servicio, sino que sirven para ayudar a los desarrolladores a administrar la complejidad del código. Los diferentes niveles (por ejemplo, el nivel de modelo de dominio frente al nivel de presentación, etc.) pueden ser de diferentes tipos, lo que exige su traducción.
 
-Por ejemplo, una entidad se pudo cargar desde la base de datos. A continuación, parte de esa información o una agregación de información que incluye datos adicionales de otras entidades, puede enviarse a la interfaz de usuario a través de una API de REST de Web de cliente. El punto aquí es que la entidad de dominio está dentro de la capa del modelo de dominio y no se debería propagar a otras áreas que no pertenece a, al igual que en el nivel de presentación.
+Por ejemplo, una entidad se puede cargar desde la base de datos. Puede ser que se envíe parte de esa información, o un agregado de información que incluya datos adicionales de otras entidades, a la interfaz de usuario del cliente a través de una API web de REST. La cuestión es que la entidad de dominio se debe situar dentro del nivel de modelo de dominio y no puede propagarse a otras áreas a las que no pertenece, como al nivel de presentación.
 
-Además, debe tener entidades siempre válido (vea la [diseñar validaciones en el nivel de modelo de dominio](#designing-validations-in-the-domain-model-layer) sección) controla las raíces de agregado (entidades raíz). Por lo tanto, las entidades no se deberían enlazar a las vistas de cliente, porque en el nivel de interfaz de usuario algunos datos podrían no se pueden validar. Para esto es el modelo de vista. El modelo de vista es un modelo de datos exclusivamente para las necesidades de la capa de presentación. Las entidades de dominio no pertenecen directamente en el modelo de vista. En su lugar, es necesario traducir entre entidades ViewModels y el dominio y viceversa.
+Además, debe tener entidades siempre válidas (consulte la sección [Diseño de validaciones en el nivel de modelo de dominio](#designing-validations-in-the-domain-model-layer)) y controladas por raíces agregadas (entidades raíz). Por lo tanto, las entidades no pueden estar enlazadas a vistas de cliente, porque puede ser que algunos datos no estén validados en el nivel de la interfaz de usuario. Para esto sirve el modelo ViewModel. El modelo ViewModel es un modelo de datos exclusivo para las necesidades del nivel de presentación. Las entidades de dominio no pertenecen directamente al modelo ViewModel. En cambio, debe traducir entre ViewModels y entidades de dominio, y viceversa.
 
-Cuando abordar complejidad, es importante tener un modelo de dominio que controla las raíces agregadas (entraremos en esto con más detalle más adelante) que se aseguran de que todas las invariantes y reglas relacionadas con ese grupo de entidades (agregados) se realizan a través de una única entrada punto o puerta de la raíz agregada.
+Al hablar de complejidad, es importante tener un modelo de dominio controlado por raíces agregadas que garanticen que todas las invariantes y reglas relacionadas con ese grupo de entidades (agregadas) se realicen a través de un punto de entrada o puerta únicos: la raíz agregada.
 
-Figura 9-5 se muestra cómo se implementa un diseño en capas en la aplicación eShopOnContainers.
+En la Figura 9-5 se muestra cómo se implementa un diseño por niveles en la aplicación eShopOnContainers.
 
 ![](./media/image6.png)
 
-**Figura 9-5**. Capas DDD en la ordenación microservicio en eShopOnContainers
+**Figura 9-5**. Niveles de DDD en el microservicio de ordenación en eShopOnContainers
 
-Desea diseñar el sistema para que cada nivel se comunica sólo con determinadas otras capas. Puede que sea más fácil aplicar si las capas se implementan como bibliotecas de clases diferentes, porque puede identificar claramente qué dependencias estén establecidas entre las bibliotecas. Por ejemplo, el nivel de modelo de dominio no debe tomar una dependencia en cualquier otra capa (las clases del modelo de dominio deben ser objetos CLR antiguos sin formato o [POCO](https://en.wikipedia.org/wiki/Plain_Old_CLR_Object), clases). Como se muestra en la figura 9-6, la **Ordering.Domain** biblioteca de capa tiene dependencias sólo en las bibliotecas de .NET Core pero no en cualquier otra biblioteca personalizada (biblioteca de datos, biblioteca de persistencia, etcetera).
+Le recomendamos que diseñe el sistema de modo que cada nivel se comunique solamente con otros niveles determinados. Esto puede ser más fácil de aplicar si los niveles se implementan como bibliotecas de clase distintas, porque puede identificar claramente qué dependencias se establecen entre bibliotecas. Por ejemplo, el nivel de modelo de dominio no debe depender de ningún otro nivel (las clases del modelo de dominio deben ser clases de objetos CLR estándar o [POCO](https://en.wikipedia.org/wiki/Plain_Old_CLR_Object)). Como se muestra en la Figura 9-6, la biblioteca de nivel **Ordering.Domain** solo tiene dependencias en las bibliotecas .NET Core o en los paquetes NuGet, pero no en otras bibliotecas personalizadas, como la biblioteca de datos o de persistencia.
 
 ![](./media/image7.PNG)
 
-**Figura 9-6**. Capas que se implementa como bibliotecas permiten un mejor control de las dependencias existentes entre capas
+**Figura 9-6**. Los niveles implementados como bibliotecas permiten controlar mejor las dependencias entre niveles
 
 ### <a name="the-domain-model-layer"></a>El nivel de modelo de dominio
 
-Libro excelente de Eric Evans [dominio controlado por diseño](http://domainlanguage.com/ddd/) dice lo siguiente acerca de la capa del modelo de dominio y el nivel de aplicación.
+En el fantástico libro de Eric Evans, [Domain Driven Design](http://domainlanguage.com/ddd/) (Diseño guiado por el dominio), se explica lo siguiente sobre el nivel de modelo de dominio y el nivel de aplicación.
 
-**Nivel de modelo de dominio**: responsables para representar conceptos del negocio, información sobre la situación de negocio y reglas de negocios. Estado que refleja la situación empresarial se controla y usado aquí, aunque se delegan los detalles técnicos de almacenarla en la infraestructura. Este nivel es el núcleo de software empresarial.
+**Nivel de modelo de dominio**: responsable de representar conceptos del negocio, información sobre la situación del negocio y reglas de negocios. El estado que refleja la situación empresarial está controlado y se usa aquí, aunque los detalles técnicos de su almacenaje se delegan a la infraestructura. Este nivel es el núcleo del software empresarial.
 
-El nivel de modelo de dominio es donde se expresa el negocio. Al implementar un nivel de modelo de dominio de microservicio en. NET, que se acumulan se codifica como una biblioteca de clases con las entidades de dominio que capturan datos más comportamiento (métodos con una lógica).
+En el nivel de modelo de dominio es donde se expresa el negocio. Al implementar un nivel de modelo de dominio de microservicio en. NET, este nivel se codifica como una biblioteca de clases con las entidades de dominio que capturan datos y comportamiento (métodos con lógica).
 
-Después de la [omisión de persistencia](http://deviq.com/persistence-ignorance/) y [omisión de infraestructura](https://ayende.com/blog/3137/infrastructure-ignorance) principios, este nivel deben omitir completamente los detalles de persistencia de datos. El nivel de infraestructura se deberían realizar estas tareas de persistencia. Por lo tanto, este nivel no debe tener dependencias directas en la infraestructura, lo que significa que una regla de importante es que las clases de entidad del modelo de dominio deben ser [POCO](https://en.wikipedia.org/wiki/Plain_Old_CLR_Object)s.
+Siguiendo los principios de [omisión de persistencia](http://deviq.com/persistence-ignorance/) y [omisión de infraestructura](https://ayende.com/blog/3137/infrastructure-ignorance), este nivel debe omitir completamente los detalles de persistencia de datos. Las tareas de persistencia deben estar realizadas por el nivel de infraestructura. Por lo tanto, este nivel no debe tener dependencias directas en la infraestructura, lo que significa que una regla de importante es que las clases de entidad del modelo de dominio deben ser [POCO](https://en.wikipedia.org/wiki/Plain_Old_CLR_Object).
 
-Las entidades de dominio no deben tener ninguna dependencia directa (por ejemplo, se deriva de una clase base) con cualquier marco de trabajo de la infraestructura de acceso de datos como Entity Framework o NHibernate. Lo ideal es que, las entidades de dominio no deben derivarse de o implementar cualquier tipo definido en cualquier marco de infraestructura.
+Las entidades de dominio no deben depender directamente (como derivarse de una clase base) de ningún marco de infraestructura de acceso a los datos, como Entity Framework o NHibernate. Lo ideal es que las entidades de dominio no se deriven de ningún tipo definido en ningún marco de infraestructura ni lo implementen.
 
-Marcos de trabajo ORM más modernos como Entity Framework Core permiten este enfoque, de forma que las clases de modelo de dominio no se acoplan a la infraestructura. Sin embargo, con entidades POCO no siempre es posible cuando se usan ciertas bases de datos NoSQL y marcos de trabajo, como actores y colecciones confiable en Azure Service Fabric.
+Los marcos ORM más modernos, como Entity Framework Core, permiten este enfoque, de forma que las clases de modelo de dominio no se acoplan a la infraestructura. Pero no siempre se puede disponer de entidades POCO al usar marcos y bases de datos NoSQL determinados, como actores y colecciones de confianza en Azure Service Fabric.
 
-Aunque es importante seguir el principio de omisión de persistencia para el modelo de dominio, no debe ignorar problemas de persistencia. Todavía es muy importante comprender el modelo de datos físicos y cómo se asigna a un modelo de objetos de entidad. En caso contrario, puede crear diseños imposibles.
+Pero cuando es importante seguir el principio de omisión de persistencia en el modelo de dominio, no debe ignorar los problemas de persistencia. Sigue siendo muy importante comprender el modelo de datos físicos y cómo se asigna a un modelo de objetos entidad. En caso contrario, puede crear diseños imposibles.
 
-Además, esto no significa que puede tomar un modelo diseñado para una base de datos relacional y directamente moverla a un NoSQL o bases de datos orientado en el documento. En algunos modelos de entidad, es posible que ajuste el modelo, pero normalmente no. Todavía hay restricciones que debe cumplir el modelo de entidad, basada en la tecnología de almacenamiento y la tecnología ORM.
+Además, esto no significa que pueda tomar un modelo diseñado para una base de datos relacional y moverla directamente a un NoSQL o a una base de datos orientada a un documento. En algunos modelos de entidad, es posible que el modelo encaje, pero normalmente no lo hace. Sigue habiendo restricciones que el modelo de entidad debe cumplir, basándose en la tecnología de almacenamiento y en la tecnología ORM.
 
 ### <a name="the-application-layer"></a>El nivel de aplicación
 
-Mover el nivel de aplicación, que le podemos citar nuevo libro de Eric Evans [dominio controlado por diseño](http://domainlanguage.com/ddd/):
+Si pasamos al nivel de aplicación, podemos citar de nuevo el libro de Eric Evans [Domain Driven Design](http://domainlanguage.com/ddd/) (Diseño guiado por el dominio):
 
-**Capa de aplicación:** define los trabajos que el software se supone que debe para hacer y dirige los objetos de dominio expresivo para resolver problemas. Las tareas de que este nivel es responsable son significativas para la empresa o es necesario para la interacción con las capas de aplicación de otros sistemas. Esta capa se mantiene fina. No contiene reglas de negocios o conocimiento, pero solo las tareas de coordenadas y los delegados funcionan para colaboraciones de objetos del dominio en el siguiente nivel hacia abajo. No tiene estado que refleja la situación empresarial, pero puede tener el estado que refleja el progreso de una tarea para el usuario o el programa.
+**Nivel de aplicación**: define los trabajos que se supone que el software debe hacer y dirige los objetos de dominio expresivo para que resuelvan problemas. Las tareas que son responsabilidad de este nivel son significativas para la empresa o necesarias para la interacción con los niveles de aplicación de otros sistemas. Este nivel debe mantenerse estrecho. No contiene reglas de negocios ni conocimientos, sino que solo coordina tareas y delega trabajo a colaboraciones de objetos de dominio en el siguiente nivel. No tiene ningún estado que refleje la situación empresarial, pero puede tener un estado que refleje el progreso de una tarea para el usuario o el programa.
 
-Capa de aplicación de microservicio en .NET normalmente se codifica como un proyecto de ASP.NET Core Web API. El proyecto implementa la interacción de microservicio y acceso a redes remotas, la API Web externo que se usan desde las aplicaciones de interfaz de usuario o cliente. Incluye las consultas si utilizando un CQRS enfocar comandos aceptados por el microservicio e incluso la comunicación orientada a eventos entre microservicios (eventos de integración). La API de Web de ASP.NET Core que representa el nivel de aplicación no puede contener reglas de negocios o conocimiento del dominio (especialmente reglas de dominio para las transacciones o actualizaciones); debería pertenecer la biblioteca de clases del modelo de dominio. La coordenada solo de aplicación capa debe tareas y no debe contener o definir cualquier estado de dominio (modelo de dominio). Delega la ejecución de reglas de negocios para las clases de modelo de dominio por sí mismos (agregadas raíces y entidades de dominio), que finalmente actualizará los datos dentro de las entidades de dominio.
+Normalmente, el nivel de aplicación de microservicios en .NET se codifica como un proyecto de ASP.NET Core Web API. El proyecto implementa la interacción del microservicio, el acceso a redes remotas y la API web externa utilizada desde aplicaciones cliente o de interfaz de usuario. Incluye consultas si se utiliza un enfoque de CQRS, comandos aceptados por el microservicio e incluso comunicación guiada por eventos entre microservicios (eventos de integración). La ASP.NET Core Web API que representa el nivel de aplicación no puede contener reglas de negocios ni conocimientos del dominio (especialmente reglas de dominio para transacciones o actualizaciones); estos deben pertenecer a la biblioteca de clases del modelo de dominio. El nivel de aplicación solo debe coordinar tareas y no puede contener ni definir ningún estado de dominio (modelo de dominio). Delega la ejecución de reglas de negocios a las mismas clases de modelo de dominio (raíces agregadas y entidades de dominio) que, en última instancia, actualizarán los datos en esas entidades de dominio.
 
-Básicamente, la lógica de aplicación es donde se implementan todos los casos de uso que dependen de un determinado front-end. Por ejemplo, la implementación relacionados con un servicio de API Web.
+Básicamente, la lógica de la aplicación es el lugar en el que se implementan todos los casos de uso que dependen de un front-end determinado. Por ejemplo, la implementación relacionada con un servicio de API web.
 
-El objetivo es que la lógica del dominio en el nivel de modelo de dominio, sus invariables, el modelo de datos y reglas de negocios relacionadas debe ser totalmente independiente de las capas de presentación y aplicación. Más de todo, el nivel de modelo de dominio no debe dependen directamente en cualquier marco de infraestructura.
+El objetivo es que la lógica del dominio en el nivel de modelo de dominio, sus invariables, el modelo de datos y las reglas de negocios relacionadas sean totalmente independientes de los niveles de presentación y aplicación. Sobre todo, el nivel de modelo de dominio no puede depender directamente de ningún marco de infraestructura.
 
 ### <a name="the-infrastructure-layer"></a>El nivel de infraestructura
 
-El nivel de infraestructura es cómo se guardan los datos que inicialmente se mantienen en las entidades de dominio (en memoria) en las bases de datos o en otro almacén persistente. Un ejemplo sería usar código de Entity Framework Core para implementar las clases de patrón de repositorio que usan un DBContext para conservar los datos en una base de datos relacional.
+El nivel de infraestructura es la forma en que los datos que inicialmente se conservan en las entidades de dominio (en la memoria) se guardan en bases de datos o en otro almacén permanente. Un ejemplo sería usar código de Entity Framework Core para implementar las clases del patrón de repositorio que usan DBContext para conservar los datos en una base de datos relacional.
 
-Con arreglo a la mencionada anteriormente [omisión de persistencia](http://deviq.com/persistence-ignorance/) y [infraestructura omisión](https://ayende.com/blog/3137/infrastructure-ignorance) principios, el nivel de infraestructura no deben "contaminar" el nivel de modelo de dominio. Debe mantener al independiente de clases de entidad de modelo de dominio de la infraestructura que se utiliza para conservar datos (EF o cualquier otro marco de trabajo) tomando no dependencias en marcos de trabajo. La biblioteca de clases de nivel de modelo de dominio debe tener solo el código de dominio, simplemente [POCO](https://en.wikipedia.org/wiki/Plain_Old_CLR_Object) entidad las clases que implementan la esencia del software y completamente desacoplada de tecnologías de infraestructura.
+De conformidad con los principios [Omisión de persistencia](http://deviq.com/persistence-ignorance/) y [Omisión de infraestructura](https://ayende.com/blog/3137/infrastructure-ignorance) mencionados anteriormente, el nivel de infraestructura no puede "contaminar" el nivel de modelo de dominio. No puede depender demasiado de los marcos para mantener las clases de entidad de modelo de dominio apartadas de la infraestructura que utiliza para conservar datos (EF o cualquier otro marco). La biblioteca de clases de nivel de modelo de dominio solo debe tener el código de dominio, solo clases de entidad [POCO](https://en.wikipedia.org/wiki/Plain_Old_CLR_Object) que implementen la esencia del software y debe estar completamente desacoplada de tecnologías de infraestructura.
 
-Por lo tanto, los proyectos o bibliotecas de clases y las capas deben en última instancia depender de la capa de modelo de dominio (biblioteca), y no al revés, tal como se muestra en la figura 9-7.
+Así, los proyectos y bibliotecas de clases o niveles dependerán, en última instancia, del nivel de modelo de dominio (biblioteca) y no al revés, tal como se muestra en la Figura 9-7.
 
 ![](./media/image8.png)
 
-**Figura 9-7**. Dependencias existentes entre capas DDD
+**Figura 9-7**. Dependencias existentes entre niveles en DDD
 
-Este diseño de la capa debe ser independiente para cada microservicio. Como se indicó anteriormente, puede implementar la microservicios más complejo microservicios tras patrones DDD, mientras más sencillo de implementación controlada por datos (CRUD simple en una sola capa) de una forma más sencilla.
+Este diseño de nivel debe ser independiente para cada microservicio. Como se indicó anteriormente, puede implementar microservicios más complejos siguiendo patrones DDD, al mismo tiempo que puede implementar microservicios guiados por datos más simples (un único CRUD en un solo nivel) de una forma más sencilla.
 
 #### <a name="additional-resources"></a>Recursos adicionales
 
--   **DevIQ. Principio de omisión de persistencia**
+-   **DevIQ. Persistence Ignorance principle** (Principio de omisión de persistencia)
     [*http://deviq.com/persistence-ignorance/*](http://deviq.com/persistence-ignorance/)
 
--   **Oren Eini. Omisión de infraestructura**
+-   **Oren Eini. Infrastructure Ignorance** (Omisión de infraestructura)
     [*https://ayende.com/blog/3137/infrastructure-ignorance*](https://ayende.com/blog/3137/infrastructure-ignorance)
 
--   **Ángulo López. Capas de arquitectura de diseño basado en dominio**
+-   **Angel Lopez. Layered Architecture In Domain-Driven Design** (Arquitectura por niveles en el diseño guiado por el dominio)
     [*https://ajlopez.wordpress.com/2008/09/12/layered-architecture-in-domain-driven-design/*](https://ajlopez.wordpress.com/2008/09/12/layered-architecture-in-domain-driven-design/)
 
 
 >[!div class="step-by-step"]
-[Anterior] (cqrs-microservicio-reads.md) [siguiente] (microservicio-dominio-model.md)
+[Anterior] (cqrs-microservice-reads.md) [Siguiente] (microservice-domain-model.md)

@@ -1,6 +1,6 @@
 ---
 title: Aplicar los patrones CQRS y DDD simplificados en un microservicio
-description: Arquitectura de Microservicios de .NET para aplicaciones .NET en contenedores | Aplicar los patrones CQRS y DDD simplificados en un microservicio
+description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedores | Aplicar los patrones CQRS y DDD simplificados en un microservicio
 keywords: Docker, microservicios, ASP.NET, contenedor
 author: CESARDELATORRE
 ms.author: wiwagn
@@ -8,36 +8,39 @@ ms.date: 05/26/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: 99fd7ce32039742e23f8e01aa4c33cddd7a9f698
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 5369ff73a0614170b220177f1e5d388483ca19f8
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="applying-simplified-cqrs-and-ddd-patterns-in-a-microservice"></a>Aplicar los patrones CQRS y DDD simplificados en un microservicio
 
-CQRS es un modelo de arquitectura que separa los modelos para leer y escribir datos. El término relacionado [comando consulta separación (CQS)](https://martinfowler.com/bliki/CommandQuerySeparation.html) se definió originalmente por Bertrand Meyer en su libro *la construcción de Software orientadas a objetos*. La idea básica es que puede dividir las operaciones del sistema en dos categorías claramente separados:
+CQRS es un patrón de arquitectura que separa los modelos para leer y escribir datos. Bertrand Meyer definió originalmente el término relacionado [Separación de consultas y comandos (CQS)](https://martinfowler.com/bliki/CommandQuerySeparation.html) en su libro *Construcción de software orientada a objetos*. La idea básica es que puede dividir las operaciones de un sistema en dos categorías claramente separadas:
 
--   Consultas. Estas devuelven un resultado y no cambian el estado del sistema, y tienen la posibilidad de los efectos secundarios.
+-   Consultas. Devuelven un resultado sin cambiar el estado del sistema y no tienen efectos secundarios.
 
--   Comandos. Éstas cambian el estado de un sistema.
+-   Comandos. Cambian el estado de un sistema.
 
-CQS es un concepto simple: se trata de métodos dentro del mismo objeto que se va a consultas o comandos. Cada método devuelve el estado o estado, pero no ambos transforma. Incluso un objeto de patrón de repositorio único puede cumplir CQS. CQS puede considerarse un principio fundamental para CQRS.
+CQS es un concepto simple: se trata de métodos dentro del mismo objeto, que son consultas o comandos. Cada método devuelve o transforma el estado, pero no ambas cosas. Incluso un único objeto de patrón de repositorio puede cumplir con CQS. CQS puede considerarse un principio fundamental para CQRS.
 
-[Comando y la segregación de responsabilidad de consulta (CQRS)](https://martinfowler.com/bliki/CQRS.html) se introdujo por Greg Young y promocionan fuertemente Udi Dahan y otros. Se basa en el principio CQS, aunque es más detallado. Se puede considerar un modelo basado en eventos y comandos plus opcionalmente en mensajes asincrónicos. En muchos casos, CQRS está relacionado con los escenarios más avanzados, como tener otra base de datos físico para lecturas (consultas) que para operaciones de escritura (actualizaciones). Además, podría implementar un sistema CQRS más evolved [eventos de origen (ES)](http://codebetter.com/gregyoung/2010/02/20/why-use-event-sourcing/) para la base de datos de las actualizaciones, lo que se podrían solo almacenar eventos en el modelo de dominio en lugar de almacenar los datos de estado actual. Sin embargo, esto no es el enfoque usado en esta guía; Estamos utilizando el enfoque más sencillo CQRS, que consta de simplemente separar las consultas de los comandos.
+Greg Young introdujo el concepto [Segregación de responsabilidad de consultas y comandos (CQRS)](https://martinfowler.com/bliki/CQRS.html), que también lo promocionaron mucho Udi Dahan y otros. Se basa en el principio CQS, aunque es más detallado. Se puede considerar un patrón basado en comandos y eventos y, opcionalmente, en mensajes asincrónicos. En muchos casos, CQRS está relacionado con escenarios más avanzados, como tener una base de datos física para operaciones de lectura (consultas) distinta que para operaciones de escritura (actualizaciones). Además, un sistema CQRS más evolucionado podría implementar [Event-Sourcing (ES)](http://codebetter.com/gregyoung/2010/02/20/why-use-event-sourcing/) para la base de datos de las actualizaciones, de modo que solo almacenaría eventos en el modelo del dominio en lugar de almacenar los datos de estado actual. Sin embargo, este no es el enfoque usado en esta guía; estamos usando el enfoque CQRS más sencillo, que consiste simplemente en separar las consultas de los comandos.
 
-El aspecto de separación de CQRS se logra mediante la agrupación de las operaciones de consulta en una capa y comandos de otra capa. Cada capa tiene su propio modelo de datos (tenga en cuenta que decimos modelo, no necesariamente a una base de datos diferente) y se basa en su propia combinación de patrones y las tecnologías. Lo que es más importante, las dos capas pueden ser dentro del mismo nivel o microservicio, como en el ejemplo (ordenación microservicio) utilizado para esta guía. O bien, podría implementarse en diferentes microservicios o procesos para poder optimizados y escalar horizontalmente por separado sin que afecte a entre sí.
+La separación que CQRS persigue se consigue mediante la agrupación de las operaciones de consulta en una capa y de los comandos en otra. Cada capa tiene su propio modelo de datos (tenga en cuenta que decimos modelo, no necesariamente una base de datos diferente) y se basa en su propia combinación de patrones y tecnologías. Lo más importante es que las dos capas pueden estar dentro del mismo nivel o microservicio, como en el ejemplo (microservicio de pedidos) usado para esta guía. O pueden implementarse en diferentes microservicios o procesos para que se puedan optimizar y escalar horizontalmente por separado sin que una afecte a la otra.
 
-CQRS significa tener dos objetos para una operación de lectura/escritura que en otros contextos hay uno. Hay razones para tener una base de datos sin normalizar las lecturas, que puede obtener información acerca de en la literatura CQRS más avanzada. Pero no estamos utilizando ese método en este sentido, cuyo objetivo es tener más flexibilidad en las consultas en lugar de limitar las consultas con las restricciones de los patrones de DDD similares agregados.
+CQRS significa tener dos objetos para una operación de lectura/escritura cuando en otros contextos solo hay uno. Hay razones para tener una base de datos para las operaciones de lectura sin normalizar, de la cual puede obtener información en la bibliografía sobre CQRS más avanzada. Pero aquí no vamos a usar ese enfoque, ya que el objetivo es tener más flexibilidad en las consultas en lugar de limitar las consultas con las restricciones de patrones de DDD como los agregados.
 
-Un ejemplo de este tipo de servicio es la ordenación microservicio desde la aplicación de referencia de eShopOnContainers. Este servicio implementa un microservicio basado en un enfoque simplificado de CQRS. Utiliza un único origen de datos o base de datos, pero dos modelos lógicos más patrones DDD para el dominio transaccional, tal como se muestra en la figura 9-2.
+Un ejemplo de este tipo de servicio es el microservicio de pedidos de la aplicación de referencia de eShopOnContainers. Este servicio implementa un microservicio basado en un enfoque simplificado de CQRS. Usa un solo origen de datos o base de datos, pero dos modelos lógicos, además de patrones de DDD para el dominio transaccional, tal como se muestra en la figura 9-2.
 
 ![](./media/image2.png)
 
-**Figura 9-2**. Microservicio simplificada basada en DDD y CQRS
+**Figura 9-2**. Microservicio con CQRS simplificado y basado en DDD
 
-La capa de aplicación puede ser la propia API Web. El aspecto de diseño importante aquí es que divide el microservicio las consultas y ViewModels (modelos de datos creados especialmente para las aplicaciones cliente) de los comandos, modelo de dominio y las transacciones tras el patrón CQRS. Este enfoque mantiene las consultas independiente de las restricciones y las restricciones procedentes de los patrones DDD que solo tienen sentido para las transacciones y las actualizaciones, como se explica en secciones posteriores.
+El nivel de aplicación puede ser la propia API web. Aquí, el aspecto de diseño importante es que el microservicio, siguiendo el patrón de CQRS, ha dividido las consultas y los ViewModels (modelos de datos creados especialmente para las aplicaciones cliente) de los comandos, del modelo del dominio y de las transacciones. Este enfoque mantiene las consultas independientes de las restricciones procedentes de los patrones DDD que solo tienen sentido para las transacciones y las actualizaciones, como se explica en secciones posteriores.
 
 
 >[!div class="step-by-step"]
-[Anterior] (index.md) [siguiente] (eshoponcontainers-cqrs-ddd-microservice.md)
+[Previous] (index.md) [Next] (eshoponcontainers-cqrs-ddd-microservice.md)

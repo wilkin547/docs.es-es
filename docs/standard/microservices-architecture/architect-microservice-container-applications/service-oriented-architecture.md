@@ -1,6 +1,6 @@
 ---
 title: Arquitectura orientada a servicios
-description: Arquitectura de Microservicios de .NET para aplicaciones .NET en contenedores | Arquitectura orientada a servicios
+description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedor | Arquitectura orientada a servicios
 keywords: Docker, microservicios, ASP.NET, contenedor
 author: CESARDELATORRE
 ms.author: wiwagn
@@ -8,26 +8,29 @@ ms.date: 05/26/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: 970ff86c77100077d4c7710c0a697d1745d35819
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 6a5f0f53f4208c9944adea33fe1aa3f35fed81ab
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="service-oriented-architecture"></a>Arquitectura orientada a servicios 
 
-Arquitectura orientada a servicios (SOA) era un término sobreutilizado y objetivo cosas diferentes a distintas personas. Pero como denominador común, SOA significa estructurar la aplicación por descomponer en varios servicios (normalmente como servicios HTTP) que se pueden clasificar como tipos diferentes, como subsistemas o niveles.
+La arquitectura orientada a servicios (SOA) era un término sobreutilizado que significaba cosas diferentes para cada persona. Pero, como denominador común, SOA significa que se estructura una aplicación descomponiéndola en varios servicios (normalmente como servicios HTTP) que se pueden clasificar en tipos diferentes, como subsistemas o niveles.
 
-Dichos servicios ahora se pueden implementar como contenedores de Docker, que resuelve los problemas de implementación, puesto que todas las dependencias se incluyen en la imagen del contenedor. Sin embargo, cuando necesite ampliar aplicaciones SOA, es posible que tenga la escalabilidad y desafíos de disponibilidad si va a implementar en función de los hosts de Docker únicos. Esto es donde Docker software de clústeres u organizador le ayudará a, como se explica en secciones posteriores donde se describen los enfoques de implementación para microservicios.
+Estos servicios ahora se pueden implementar como contenedores de Docker, con lo que se resuelven los problemas de implementación, puesto que todas las dependencias se incluyen en la imagen de contenedor. Pero cuando se necesita escalar verticalmente aplicaciones SOA, es posible que tenga problemas de escalabilidad y disponibilidad si va a efectuar la implementación en función de hosts de Docker únicos. Aquí es donde le ayudará el software de agrupación en clústeres de Docker, o un orquestador, como se explica en secciones posteriores, donde se describen los enfoques de implementación para microservicios.
 
-Contenedores de docker son útiles (pero no son necesarios) para las arquitecturas orientadas a servicios tradicionales y las arquitecturas de microservicios más avanzadas.
+Los contenedores de Docker son útiles (pero no obligatorios) para las arquitecturas orientadas a servicios tradicionales y las arquitecturas de microservicios más avanzadas.
 
-Microservicios se derivan de SOA, pero es diferente de la arquitectura de microservicios SOA. Características como el big corredores de bolsa centrales, orchestrators centrales en el nivel de organización y el [Bus de servicio de empresa (ESB)](https://en.wikipedia.org/wiki/Enterprise_service_bus) son típicos de SOA. Pero en la mayoría de los casos, estos son antipatrones en la Comunidad de microservicio. De hecho, algunas personas argumentan que "la arquitectura de microservicio es SOA bien."
+Los microservicios se derivan de SOA, pero SOA no es lo mismo que la arquitectura de microservicios. Características como los grandes agentes centrales, los orquestadores centrales en el nivel de organización y el [Bus de servicio empresarial (ESB)](https://en.wikipedia.org/wiki/Enterprise_service_bus) son habituales en SOA. Pero en la mayoría de los casos son antipatrones en la comunidad de microservicios. De hecho, hay quien argumenta que "la arquitectura de microservicios es SOA bien hecho".
 
-Esta guía se centra en microservicios, dado que un enfoque SOA es menos descriptiva de los requisitos y las técnicas que se utilizan en una arquitectura de microservicio. Si sabe cómo crear una aplicación basada en microservicio, sabrá cómo crear una aplicación orientada a servicios más sencilla.
+Esta guía se centra en los microservicios, puesto que los enfoques SOA son menos prescriptivos que los requisitos y técnicas empleados en una arquitectura de microservicios. Si sabe cómo crear una aplicación basada en microservicios, también sabrá cómo crear una aplicación orientada a servicios más sencilla.
 
 
 
 
 >[!div class="step-by-step"]
-[Anterior] (docker-aplicaciones-estado-data.md) [siguiente] (microservicios architecture.md)
+[Anterior] (docker-application-state-data.md) [Siguiente] (microservices-architecture.md)

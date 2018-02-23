@@ -1,54 +1,57 @@
 ---
-title: "Diseñar la capa de aplicación de microservicio y API de Web"
-description: "Arquitectura de Microservicios de .NET para aplicaciones .NET en contenedores | Diseñar la capa de aplicación de microservicio y API de Web"
+title: "Diseñar el nivel de aplicación de microservicios y la API web"
+description: "Arquitectura de microservicios de .NET para aplicaciones .NET en contenedor | Diseñar el nivel de aplicación de microservicios y la API web"
 keywords: Docker, microservicios, ASP.NET, contenedor
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
+ms.date: 12/12/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: 7509b470a30005dd48fa88eefa91f7ed241e4e09
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: c166e0286d0769e24a6361037eb6c4694fb821ae
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
-# <a name="designing-the-microservice-application-layer-and-web-api"></a>Diseñar la capa de aplicación de microservicio y API de Web
+# <a name="designing-the-microservice-application-layer-and-web-api"></a>Diseñar el nivel de aplicación de microservicios y la API web
 
-## <a name="using-solid-principles-and-dependency-injection"></a>Uso de principios sólidos e inyección de dependencia
+## <a name="using-solid-principles-and-dependency-injection"></a>Uso de principios SOLID e inserción de dependencias
 
-Principios sólidos son técnicas críticas que se usará en las aplicaciones modernas y críticas, como el desarrollo de un microservicio con patrones DDD. SÓLIDO es un acrónimo que grupos cinco los principios fundamentales:
+Los principios SOLID son técnicas fundamentales para utilizar en cualquier aplicación moderna y crítica, como para el desarrollo de un microservicio con patrones DDD. En inglés, SOLID representa un acrónimo que agrupa cinco principios fundamentales:
 
 -   Principio de responsabilidad única
 
--   Principio abierto/cerrado
+-   Principio de abierto y cerrado
 
--   Sustitución de Liskov
+-   Principio de sustitución de Liskov
 
 -   Principio de segregación de inversión
 
--   Principio de la inversión de dependencia
+-   Principio de inversión de dependencias
 
-SÓLIDO es más acerca de cómo diseñar la aplicación o capas de microservicio interno y separar las dependencias entre ellos. No está relacionado con el dominio, pero diseño técnico de la aplicación. La entidad de seguridad final, el principio de la inversión de dependencia (DI), le permite desacoplar el nivel de infraestructura del resto de las capas, lo que permite una mejor implementación desacoplada de las capas DDD.
+SOLID hace referencia a la forma de diseñar los niveles internos de una aplicación o de un microservicio, así como a separar las dependencias entre ellas. No está relacionado con el dominio, sino con el diseño técnico de la aplicación. El principio final, el de inversión de dependencias, le permite desacoplar el nivel de infraestructura del resto de niveles, lo que permite una mejor implementación desacoplada de los niveles de DDD.
 
-DI es una manera de implementar el principio de inversión de dependencia. Es una técnica para lograr el acoplamiento flexible entre los objetos y sus dependencias. En lugar de crear directamente instancias de colaboradores, o mediante las referencias estáticas, los objetos que necesita una clase para realizar sus acciones se proporcionan a (o "inyectar") la clase. A menudo, las clases declarará sus dependencias a través de su constructor, lo que les permite seguir el principio de dependencias explícitas. DI normalmente está basada en determinados contenedores de inversión de Control (IoC). ASP.NET Core proporciona un contenedor de IoC sencillo integrado, pero también puede usar el contenedor de IoC favoritos, como Autofac o Ninject.
+La inversión de dependencias es una forma de implementar el principio de inversión de dependencias. Es una técnica para lograr el acoplamiento flexible entre los objetos y sus dependencias. En lugar de crear directamente instancias de colaboradores o de usar referencias estáticas, los objetos que una clase necesita para llevar a cabo sus acciones se proporcionan (o se "insertan") a dicha clase. A menudo, las clases declaran sus dependencias a través de su constructor, lo que les permite seguir el principio de dependencias explícitas. Normalmente la inversión de dependencias está basada en determinados contenedores de Inversión de control (IoC). ASP.NET Core proporciona un sencillo contenedor de IoC integrado. Aun así, usted puede usar el contenedor de IoC que prefiera, como Autofac o Ninject.
 
-Siguiendo los principios sólidos, las clases tenderán naturalmente sea pequeño, correctamente factorizada y probados fácilmente. Pero, ¿cómo puede saber si hay demasiadas dependencias que se va a se insertan en las clases? Si usas DI a través del constructor, resultará fácil detectar que con solo mirar el número de parámetros para el constructor. Si hay demasiadas dependencias, esto suele ser un inicio de sesión (una [código olor](http://deviq.com/code-smells/)) que está intentando hacer demasiado la clase y, probablemente se infringe el principio de responsabilidad única.
+Siguiendo los principios SOLID, las clases tenderán naturalmente a ser pequeñas, a estar factorizadas correctamente y a poder probarse fácilmente. Pero, ¿cómo puede saber si se van a insertar demasiadas dependencias en sus clases? Si usa la inversión de dependencias a través del constructor, le resultará fácil saberlo con solo mirar el número de parámetros de su constructor. Si hay demasiadas dependencias, esto suele ser una señal (una [intuición de código](http://deviq.com/code-smells/)) de que su clase está intentando hacer demasiado y de que probablemente esté infringiendo el principio de responsabilidad única.
 
-Tardaría otra guía para cubrir sólido en detalle. Por lo tanto, esta guía requiere tener solo un conocimiento mínimo de estos temas.
+Necesitaríamos otra guía para tratar SOLID con detalle. Para esta guía solo necesita tener unos conocimientos mínimos de estos temas.
 
 #### <a name="additional-resources"></a>Recursos adicionales
 
--   **SÓLIDO: Principios de programación orientada a objetos fundamentales**
+-   **SOLID: Fundamental OOP Principles** (SOLID: principios fundamentales de OOP)
     [*http://deviq.com/solid/*](http://deviq.com/solid/%20)
 
--   **Inversión de contenedores de controles y el modelo de inserción de dependencias**
+-   **Inversion of Control Containers and the Dependency Injection pattern** (Inversión del patrón de contenedores de control y de inserción de dependencias)
     [*https://martinfowler.com/articles/injection.html*](https://martinfowler.com/articles/injection.html)
 
--   **Steve Smith. Es una novedad adherencia**
+-   **Steve Smith. New is Glue** (La novedad es el pegamento)
     [*http://ardalis.com/new-is-glue*](http://ardalis.com/new-is-glue)
 
 
 >[!div class="step-by-step"]
-[Anterior] (nosql-base de datos de persistencia-infrastructure.md) [siguiente] (microservice-application-layer-implementation-web-api.md)
+[Anterior] (nosql-database-persistence-infrastructure.md) [Siguiente] (microservice-application-layer-implementation-web-api.md)

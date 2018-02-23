@@ -1,65 +1,68 @@
 ---
-title: Estado y los datos en aplicaciones de Docker
-description: Arquitectura de Microservicios de .NET para aplicaciones .NET en contenedores | Estado y los datos en aplicaciones de Docker
-keywords: Docker, Microservicios, ASP.NET, contenedor, SQL, CosmosDB, Docker
+title: Estado y datos en aplicaciones de Docker
+description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedor | Estado y datos en aplicaciones de Docker
+keywords: Docker, microservicios, ASP.NET, contenedor, SQL, CosmosDB, Docker
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/18/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: 36d0fb9f27ef56b36c380e2fc972c79cff77003e
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: ef11d89c39ee02d52dab29f949d1ac6be981d87f
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/23/2017
 ---
-# <a name="state-and-data-in-docker-applications"></a>Estado y los datos en aplicaciones de Docker
+# <a name="state-and-data-in-docker-applications"></a>Estado y datos en aplicaciones de Docker
 
-En la mayoría de los casos, se puede considerar un contenedor como una instancia de un proceso. Un proceso no mantiene el estado persistente. Aunque puede escribir un contenedor para su almacenamiento local, suponiendo que una instancia será indefinidamente alrededor sería como suponiendo que una sola ubicación en memoria será duradera. Imágenes del contenedor, como procesos, deben suponer tener varias instancias o que finalmente se terminará; Si administra que se encuentra con un orquestador del contenedor, se debe suponer que se podría obtener mover desde un nodo o la máquina virtual a otro.
+En la mayoría de los casos, un contenedor se puede considerar como una instancia de un proceso. Un proceso no mantiene un estado persistente. Si bien un contenedor puede escribir en su almacenamiento local, suponer que una instancia permanecerá indefinidamente sería como suponer que una sola ubicación en memoria será duradera. Debe suponerse que las imágenes del contenedor, como los procesos, tienen varias instancias o que finalmente desaparecerán; si se administran con un orquestador de contenedores, se debe suponer que podrían desplazarse de un nodo o máquina virtual a otro.
 
-Docker ofrece una característica denominada la *superposición de sistema de archivos*. Esto implementa una tarea de copia en escritura que almacena información actualizada en el sistema de archivos de la raíz del contenedor. Esta información es además la imagen original en el que se basa el contenedor. Si se elimina el contenedor del sistema, estos cambios se perderán. Por lo tanto, si es posible guardar el estado de un contenedor dentro de su almacenamiento local, diseñar un sistema de resolver este problema entrarían en conflicto con la idea de diseño de contenedor, cuyo valor predeterminado es sin estado.
+Docker ofrece una característica denominada el *sistema de archivos de superposición*. Esto implementa una tarea de copia en escritura que almacena información actualizada en el sistema de archivos raíz del contenedor. Esa información se combina con la imagen original en la que se basa el contenedor. Si se elimina el contenedor del sistema, estos cambios se pierden. Por tanto, si bien es posible guardar el estado de un contenedor dentro de su almacenamiento local, diseñar un sistema sobre esta base entraría en conflicto con la idea del diseño del contenedor, que de manera predeterminada es sin estado.
 
 Las soluciones siguientes se usan para administrar datos persistentes en aplicaciones de Docker:
 
--   [Volúmenes de datos](https://docs.docker.com/engine/tutorials/dockervolumes/) que montar en el host.
+-   [Volúmenes de datos](https://docs.docker.com/engine/tutorials/dockervolumes/) que se montan en el host.
 
--   [Contenedores de volúmenes de datos](https://docs.docker.com/engine/tutorials/dockervolumes/#creating-and-mounting-a-data-volume-container) que proporcionan almacenamiento compartido entre todos los contenedores mediante un contenedor externo.
+-   [Contenedores de volúmenes de datos](https://docs.docker.com/engine/tutorials/dockervolumes/#creating-and-mounting-a-data-volume-container) que proporcionan almacenamiento compartido entre los contenedores mediante un contenedor externo.
 
--   [Complementos de volumen](https://docs.docker.com/engine/tutorials/dockervolumes/) que montar los volúmenes a los servicios remotos, proporcionar persistencia a largo plazo.
+-   [Complementos de volumen](https://docs.docker.com/engine/tutorials/dockervolumes/) que montan volúmenes en los servicios remotos y proporcionan persistencia a largo plazo.
 
--   [Almacenamiento de Azure](https://docs.microsoft.com/azure/storage/), que proporciona almacenamiento geográfica distribuible, proporcionar una buena solución de persistencia a largo plazo para los contenedores.
+-   [Azure Storage](https://docs.microsoft.com/azure/storage/), que proporciona almacenamiento con distribución geográfica y representa una buena solución de persistencia a largo plazo para los contenedores.
 
--   Bases de datos relacionales remotos como [base de datos de SQL Azure](https://azure.microsoft.com/services/sql-database/) o bases de datos NoSQL, como [base de datos de Azure Cosmos](https://docs.microsoft.com/azure/cosmos-db/introduction), o almacenar en caché servicios como [Redis](https://redis.io/).
+-   Bases de datos relacionales remotas como [Azure SQL Database](https://azure.microsoft.com/services/sql-database/), bases de datos NoSQL como [Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/introduction) o servicios de caché como [Redis](https://redis.io/).
 
-A continuación proporciona más información sobre estas opciones.
+Los puntos siguientes proporcionan más información sobre estas opciones.
 
-**Volúmenes de datos** directorios asignado desde el sistema operativo del host en los directorios en contenedores. Cuando el código en el contenedor tiene acceso al directorio, que acceso es realmente un directorio en el sistema operativo del host. Este directorio no está asociado a la duración del contenedor y el directorio puede tener acceso desde el código que se ejecuta directamente en el sistema operativo del host o por otro contenedor que asigna el mismo directorio de host a sí mismo. Por lo tanto, los volúmenes de datos están diseñados para conservar los datos independientemente de la vida del contenedor. Si elimina un contenedor o una imagen desde el host Docker, los datos se conserva en el volumen de datos no se elimina. Pueden tener acceso a los datos en un volumen desde el sistema operativo de host también.
+Los **volúmenes de datos** son directorios asignados desde el sistema operativo del host a directorios en contenedores. Cuando el código en el contenedor tiene acceso al directorio, ese acceso es realmente a un directorio en el sistema operativo del host. Este directorio no está asociado a la duración del contenedor y se puede acceder a él con el código que se ejecuta directamente en el sistema operativo del host o mediante otro contenedor que asigna el mismo directorio del host a sí mismo. Por tanto, los volúmenes de datos están diseñados para conservar los datos independientemente de la vida del contenedor. Si elimina un contenedor o una imagen del host de Docker, los datos que se conservan en el volumen de datos no se eliminan. También se puede acceder a los datos de un volumen desde el sistema operativo del host.
 
-**Contenedores de volúmenes de datos** son una evolución de los volúmenes de datos normal. Un contenedor de volúmenes de datos es un contenedor simple que tiene uno o más volúmenes de datos dentro de él. El contenedor de volúmenes de datos proporciona acceso a los contenedores desde un punto de montaje central. Este método de acceso a datos es conveniente porque resume la ubicación de los datos originales. Aparte de eso, su comportamiento es similar de un volumen de datos normal, por lo que los datos se guardan en este contenedor dedicado independientemente del ciclo de vida de los contenedores de la aplicación.
+Los **contenedores de volúmenes de datos** son una evolución de los volúmenes de datos normales. Un contenedor de volúmenes de datos es un contenedor simple que contiene uno o más volúmenes de datos. El contenedor de volúmenes de datos proporciona acceso a los contenedores desde un punto de montaje central. Este método de acceso a datos es conveniente porque resume la ubicación de los datos originales. Aparte de eso, su comportamiento es similar al de un volumen de datos normal, por lo que los datos se guardan en este contenedor dedicado independientemente del ciclo de vida de los contenedores de la aplicación.
 
-Tal como se muestra en la figura 4-5, volúmenes de Docker normales pueden almacenarse fuera de los propios contenedores, pero dentro de los límites físicos del servidor de host o máquina virtual. Sin embargo, contenedores de Docker no pueden tener acceso a un volumen de servidor de un host o máquina virtual a otro. En otras palabras, con estos volúmenes, no es posible administrar los datos que se comparten entre contenedores que se ejecutan en diferentes hosts de Docker
+Tal como se muestra en la figura 4-5, los volúmenes de Docker normales pueden almacenarse fuera de los propios contenedores, pero dentro de los límites físicos del servidor de host o de la máquina virtual. Sin embargo, los contenedores de Docker no pueden tener acceso a un volumen desde un servidor de host o máquina virtual a otro. En otras palabras, con estos volúmenes, no es posible administrar los datos que se comparten entre contenedores que se ejecutan en diferentes hosts de Docker
 
 ![](./media/image5.png)
 
-**Figura 4-5**. Volúmenes de datos y orígenes de datos externos para aplicaciones basadas en el contenedor
+**Figura 4-5**. Volúmenes de datos y orígenes de datos externos para aplicaciones basadas en contenedor
 
-Además, cuando un orchestrator administra contenedores de Docker, contenedores podrían "mover" entre los hosts, dependiendo de las optimizaciones realizadas por el clúster. Por lo tanto, no se recomienda utilizar volúmenes de datos para los datos empresariales. Pero son un buen mecanismo para trabajar con archivos de seguimiento, archivos temporales, o similar no afectará a coherencia de los datos empresariales.
+Además, cuando un orquestador administra los contenedores de Docker, estos podrían "moverse" entre hosts, según las optimizaciones que el clúster realice. Por tanto, no se recomienda usar volúmenes de datos para los datos empresariales. Pero son un buen mecanismo para trabajar con archivos de seguimiento, archivos temporales o similares que no afectarán a la coherencia de los datos empresariales.
 
-**Complementos de volumen** como [Flocker](https://clusterhq.com/flocker/) proporcionan acceso a datos a través de todos los hosts en un clúster. Aunque no todos los complementos de volumen se crean por igual, volumen complementos normalmente proporcionar externalizado almacenamiento confiable persistente de contenedores inmutable.
+Los **complementos de volumen** como [Flocker](https://clusterhq.com/flocker/) proporcionan acceso a datos a través de todos los hosts de un clúster. Aunque no todos los complementos de volumen se crean por igual, normalmente proporcionan almacenamiento confiable persistente externalizado a partir de contenedores inmutables.
 
-**Orígenes de datos remotos y caché** herramientas como base de datos de SQL Azure, base de datos de Azure Cosmos o una caché remota como Redis pueden utilizarse en contenedores aplicaciones del mismo modo que se utilizan cuando se desarrolla sin contenedores. Se trata de una manera comprobada para almacenar datos de aplicaciones de negocios.
+Las herramientas de **orígenes de datos remotos y caché** como Azure SQL Database, Azure Cosmos DB o una caché remota como Redis pueden usarse en aplicaciones en contenedores del mismo modo que se usan al desarrollar sin contenedores. Se trata de una manera comprobada para almacenar datos de aplicaciones empresariales.
 
-**Almacenamiento de Azure.** Datos económicos normalmente deberá colocarse en recursos externos o las bases de datos, como el almacenamiento de Azure. Almacenamiento de Azure, en concreto, proporciona los siguientes servicios en la nube:
+**Azure Storage.** Normalmente, los datos empresariales deben colocarse en recursos o bases de datos externos, como Azure Storage. Azure Storage, en concreto, proporciona los siguientes servicios en la nube:
 
--   Almacenamiento de blobs almacena datos de objetos no estructurados. Un blob puede ser cualquier tipo de datos de texto o binarios, como documentos o medios de archivos (imágenes, audio y vídeo). Almacenamiento de blobs también se conoce como almacenamiento de objetos.
+-   El almacenamiento de blobs almacena datos de objetos no estructurados. Un blob puede ser cualquier tipo de texto o datos binarios, como documentos o archivos multimedia (archivos de imagen, audio y vídeo). El almacenamiento de blobs también se conoce como "almacenamiento de objetos".
 
--   Almacenamiento de archivos ofrece almacenamiento compartido para aplicaciones heredadas mediante el protocolo SMB estándar. Máquinas virtuales de Azure y servicios en la nube pueden compartir datos de archivos a través de los componentes de la aplicación a través de recursos compartidos montados. Aplicaciones locales pueden tener acceso a datos de archivos en un recurso compartido a través de la API de REST de servicio de archivo.
+-   El almacenamiento de archivos ofrece almacenamiento compartido para aplicaciones heredadas mediante el protocolo SMB estándar. Las máquinas virtuales de Azure y los servicios en la nube pueden compartir datos de archivos en los componentes de la aplicación a través de recursos compartidos montados. Las aplicaciones locales pueden tener acceso a datos de archivos en un recurso compartido a través de la API de REST de servicio de archivos.
 
--   Almacenamiento de tabla almacena conjuntos de datos estructurados. Almacenamiento de tabla es un almacén de datos del atributo de clave NoSQL, lo que permite el desarrollo rápido y un acceso rápido a grandes cantidades de datos.
+-   El almacenamiento de tabla almacena conjuntos de datos estructurados. El almacenamiento de tabla es un almacén de datos del atributo de clave NoSQL, lo que permite desarrollar y acceder rápidamente a grandes cantidades de datos.
 
-**Bases de datos relacionales y bases de datos NoSQL.** Existen muchas opciones para bases de datos externas, desde bases de datos relacionales como bases de datos NoSQL, PostgreSQL, Oracle o SQL Server como base de datos de Azure Cosmos, MongoDB, etcetera. Estas bases de datos no se van a explicarse como parte de esta guía puesto que están en un asunto completamente diferente.
+**Bases de datos relacionales y bases de datos NoSQL.** Existen muchas opciones de bases de datos externas, desde las bases de datos relacionales como SQL Server, PostgreSQL u Oracle, o las bases de datos NoSQL como Azure Cosmos DB, MongoDB, etc. En esta guía no se explicarán estas bases de datos puesto que eso se hace en un tema completamente diferente.
 
 
 >[!div class="step-by-step"]
-[Anterior] (incluya-monolítico-applications.md) [siguiente] (service-oriented-architecture.md)
+[Previous] (containerize-monolithic-applications.md) [Next] (service-oriented-architecture.md)

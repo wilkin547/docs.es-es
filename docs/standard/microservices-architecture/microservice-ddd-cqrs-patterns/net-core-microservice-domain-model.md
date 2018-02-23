@@ -1,85 +1,97 @@
 ---
 title: Implementar un modelo de dominio de microservicio con .NET Core
-description: Arquitectura de Microservicios de .NET para aplicaciones .NET en contenedores | Implementar un modelo de dominio de microservicio con .NET Core
+description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedor | Implementar un modelo de dominio de microservicio con .NET Core
 keywords: Docker, microservicios, ASP.NET, contenedor
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
+ms.date: 11/09/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: 26c480a82ad7bb806734decebdfbe5b4a07998e6
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 07a79f3d52db400d1539fb4172166cccf8905fb8
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="implementing-a-microservice-domain-model-with-net-core"></a>Implementar un modelo de dominio de microservicio con .NET Core 
 
-En la sección anterior, se explican los principios de diseño fundamentales y patrones de diseño de un modelo de dominio. Ahora es el momento para explorar maneras posibles para implementar el modelo de dominio mediante .NET Core (sin formato C\# código) y EF Core. Tenga en cuenta que el modelo de dominio podría estar compuesto simplemente por el código. Esto tendrá solo los requisitos principales de EF de modelo, sino dependencias no reales en EF. No debe tener dependencias o referencias a EF Core o cualquier otro ORM en el modelo de dominio.
+En la sección anterior se han explicado los principios y patrones de diseño fundamentales para diseñar un modelo de dominio. Ahora es el momento de analizar las posibles formas de implementar el modelo de dominio mediante .NET Core (código C\# sin formato) y EF Core. Tenga en cuenta que el modelo de dominio se compone simplemente del código. Tiene solo los requisitos del modelo de EF Core, pero no las dependencias reales en EF. En el modelo de dominio no debe haber dependencias fuertes ni referencias a EF Core ni ningún otro ORM.
 
-## <a name="domain-model-structure-in-a-custom-net-standard-library"></a>Estructura del modelo de dominio en una biblioteca de .NET estándar personalizada
+## <a name="domain-model-structure-in-a-custom-net-standard-library"></a>Estructura del modelo de dominio en una biblioteca personalizada de .NET Standard
 
-La organización de carpetas usada para la aplicación de referencia de eShopOnContainers muestra el modelo DDD para la aplicación. Es posible que una organización de carpetas diferente con mayor claridad comunica las opciones de diseño elegidas para la aplicación. Como puede ver en la figura 9-10, en el modelo de dominio ordenación hay dos agregados, el agregado de orden y el agregado de comprador. Cada agregado es un grupo de entidades de dominio y objetos de valor, aunque podría tener un agregado compuesto por una única entidad del dominio (la raíz agregada o entidad raíz) también.
+La organización de carpetas usada para la aplicación de referencia eShopOnContainers muestra el modelo DDD para la aplicación. Es posible que descubra que otra organización de carpetas comunica con mayor claridad las opciones de diseño elegidas para la aplicación. Como puede ver en la figura 9-10, en el modelo de dominio Ordering hay dos agregados, el agregado Order y el agregado Buyer. Cada agregado es un grupo de entidades de dominio y objetos de valor, aunque también podría tener un agregado compuesto por una sola entidad de dominio (la raíz de agregado o entidad raíz).
 
 ![](./media/image11.png)
 
-**Figura 9-10**. Estructura del modelo de dominio para la ordenación microservicio en eShopOnContainers
+**Figura 9-10**. Estructura del modelo de dominio del microservicio Ordering de eShopOnContainers
 
-Además, el nivel de modelo de dominio incluye los contratos de repositorio (interfaces) que son los requisitos de infraestructura de su modelo de dominio. En otras palabras, estas interfaces expresan qué repositorios debe implementar el nivel de infraestructura y cómo. Es fundamental que la implementación de los repositorios de colocarse fuera de la capa de modelo de dominio, en la biblioteca de capa de infraestructura, por lo que el nivel de modelo de dominio no "contaminado" API o las clases de tecnologías de infraestructura, como Entity Framework.
+Además, la capa de modelo de dominio incluye los contratos de repositorio (interfaces) que son los requisitos de infraestructura del modelo de dominio. Es decir, estas interfaces expresan qué repositorios debe implementar la capa de infraestructura y cómo. Es fundamental que la implementación de los repositorios se coloque fuera de la capa de modelo de dominio, en la biblioteca de capas de infraestructura, para que la capa de modelo de dominio no quede "contaminada" por API o clases de tecnologías de infraestructura, como Entity Framework.
 
-También puede ver un [SeedWork](https://martinfowler.com/bliki/Seedwork.html) objetos de carpeta que contiene las clases base personalizadas que puede usar como base para el valor de entidades de dominio y, por lo que no tiene código redundante en la clase de objeto de cada dominio.
+También puede ver una carpeta [SeedWork](https://martinfowler.com/bliki/Seedwork.html) que contiene clases base personalizadas que se pueden usar como base para las entidades de dominio y los objetos de valor, para no tener código redundante en la clase de objeto de cada dominio.
 
-## <a name="structuring-aggregates-in-a-custom-net-standard-library"></a>Estructurar los agregados en una biblioteca de .NET estándar personalizado
+## <a name="structuring-aggregates-in-a-custom-net-standard-library"></a>Estructuración de los agregados en una biblioteca personalizada de .NET Standard
 
-Un agregado hace referencia a un clúster de objetos de dominio que se agrupan para que coincida con la coherencia transaccional. Esos objetos pueden ser instancias de entidades (uno de los cuales es la raíz agregada o entidad raíz) además de los objetos de un valor adicional.
+Un agregado hace referencia a un clúster de objetos de dominio agrupados para aproximarse a la coherencia transaccional. Esos objetos pueden ser instancias de entidades (una de las cuales es la raíz de agregado o entidad raíz) más los objetos de valor adicionales.
 
-Coherencia transaccional significa que un agregado está garantizado que sea coherente y al día al final de una acción empresarial. Por ejemplo, el agregado de orden de la eShopOnContainers orden microservicio modelo de dominio se compone tal como se muestra en la figura 9-11.
+La coherencia transaccional significa que se garantiza la coherencia y actualización de un agregado al final de una acción empresarial. Por ejemplo, la composición del agregado Order del modelo de dominio del microservicio Ordering de eShopOnContainers es la que se muestra en la figura 9-11.
 
 ![](./media/image12.png)
 
-**Figura 9-11**. El orden de agregado en la solución de Visual Studio
+**Figura 9-11**. Agregado Order en la solución de Visual Studio
 
-Si abre cualquiera de los archivos en una carpeta de agregado, puede ver cómo se marca como una clase base personalizada o una interfaz, como objeto de entidad o un valor, tal como se implementa en el [Seedwork](https://github.com/dotnet-architecture/eShopOnContainers/tree/master/src/Services/Ordering/Ordering.Domain/SeedWork) carpeta.
+Si abre cualquiera de los archivos de una carpeta de agregado, puede ver que está marcado como clase base personalizada o interfaz, como entidad u objeto de valor, tal como se ha implementado en la carpeta [Seedwork](https://github.com/dotnet-architecture/eShopOnContainers/tree/master/src/Services/Ordering/Ordering.Domain/SeedWork).
 
-## <a name="implementing-domain-entities-as-poco-classes"></a>Implementar las entidades de dominio como las clases
+## <a name="implementing-domain-entities-as-poco-classes"></a>Implementación de entidades de dominio como clases POCO
 
-Implementar un modelo de dominio en .NET mediante la creación de las clases que implementan las entidades de dominio. En el ejemplo siguiente, la clase Order se define como una entidad y también como una raíz agregada. Dado que la clase Order se deriva de la clase base de la entidad, puede reutilizar el código comunes relacionadas con entidades. Tenga en cuenta que estas clases base e interfaces se definen por el usuario en el proyecto de modelo de dominio, por lo que es el código, no el código de infraestructura desde un ORM como EF.
+En .NET, los modelos de dominio se implementan mediante la creación de clases POCO que implementan las entidades de dominio. En el ejemplo siguiente, la clase Order se define como una entidad y también como una raíz de agregado. Dado que la clase Order deriva de la clase base Entity, puede reutilizar código común relacionado con entidades. Tenga en cuenta que estas clases base e interfaces las define el usuario en el proyecto de modelo de dominio, por lo que es el código, no el código de infraestructura de un ORM, como EF.
 
 ```csharp
-// COMPATIBLE WITH ENTITY FRAMEWORK CORE 1.0
+// COMPATIBLE WITH ENTITY FRAMEWORK CORE 2.0
 // Entity is a custom base class with the ID
 public class Order : Entity, IAggregateRoot
 {
-    public int BuyerId { get; private set; }
-    public DateTime OrderDate { get; private set; }
-    public int StatusId { get; private set; }
-    public ICollection<OrderItem> OrderItems { get; private set; }
-    public Address ShippingAddress { get; private set; }
-    public int PaymentId { get; private set; }
-    protected Order() { } //Design constraint needed only by EF Core
-    public Order(int buyerId, int paymentId)
+    private DateTime _orderDate;
+    public Address Address { get; private set; }
+    private int? _buyerId;
+
+    public OrderStatus OrderStatus { get; private set; }
+    private int _orderStatusId;
+
+    private string _description;
+    private int? _paymentMethodId;
+
+    private readonly List<OrderItem> _orderItems;
+    public IReadOnlyCollection<OrderItem> OrderItems => _orderItems;
+  
+    public Order(string userId, Address address, int cardTypeId, string cardNumber, string cardSecurityNumber,
+            string cardHolderName, DateTime cardExpiration, int? buyerId = null, int? paymentMethodId = null)
     {
-        BuyerId = buyerId;
-        PaymentId = paymentId;
-        StatusId = OrderStatus.InProcess.Id;
-        OrderDate = DateTime.UtcNow;
-        OrderItems = new List<OrderItem>();
+        _orderItems = new List<OrderItem>();
+        _buyerId = buyerId;
+        _paymentMethodId = paymentMethodId;
+        _orderStatusId = OrderStatus.Submitted.Id;
+        _orderDate = DateTime.UtcNow;
+        Address = address;
+
+        // ...Additional code ...
     }
 
-    public void AddOrderItem(productName,
-        pictureUrl,
-        unitPrice,
-        discount,
-        units)
+    public void AddOrderItem(int productId, string productName, 
+                            decimal unitPrice, decimal discount, 
+                            string pictureUrl, int units = 1)
     {
         //...
         // Domain rules/logic for adding the OrderItem to the order
         // ...
-        OrderItem item = new OrderItem(this.Id, ProductId, productName,
-            pictureUrl, unitPrice, discount, units);
+
+        var orderItem = new OrderItem(productId, productName, unitPrice, discount, pictureUrl, units);
+        
+        _orderItems.Add(orderItem);
   
-        OrderItems.Add(item);
     }
     // ...
     // Additional methods with domain rules/logic related to the Order aggregate
@@ -87,15 +99,21 @@ public class Order : Entity, IAggregateRoot
 }
 ```
 
-Es importante tener en cuenta que se trata de una entidad de dominio que se implementa como una clase POCO. No tiene ninguna dependencia directa en Entity Framework Core o cualquier otro marco de trabajo de infraestructura. Esta implementación es como debería ser, simplemente C\# código que implementa un modelo de dominio.
+Es importante tener en cuenta que se trata de una entidad de dominio implementada como clase POCO. No tiene ninguna dependencia directa con Entity Framework Core ni ningún otro marco de trabajo de infraestructura. Esta implementación es como debería ser en DDD, simplemente código C\# que implementa un modelo de dominio.
 
-Además, la clase se decora con una interfaz denominada IAggregateRoot. Esa interfaz es una interfaz vacía, que se denomina a veces un *interfaz de marcador*, que se utiliza para indicar que esta clase de entidad también es una raíz agregada.
+Además, la clase se decora con una interfaz denominada IAggregateRoot. Esa interfaz es una interfaz vacía, que a veces se denomina *interfaz de marcador*, que se usa simplemente para indicar que esta clase de entidad también es una raíz de agregado.
 
-Una interfaz de marcador a veces se considera como un antipatrón; Sin embargo, también es una manera limpia para marcar una clase, sobre todo cuando podría ir evolucionando esa interfaz. Un atributo podría ser la otra opción para el marcador, pero es más rápido, vea la clase base (entidad) junto a la interfaz IAggregate en lugar de colocar un marcador de atributo de agregado por encima de la clase. Es un metter de preferencias, en cualquier caso.
+Una interfaz de marcador a veces se considera un anti-patrón; pero también es una manera eficaz de marcar una clase, sobre todo cuando esa interfaz podría estar evolucionando. Un atributo podría ser la otra opción para el marcador, pero es más rápido ver la clase base (Entity) junto a la interfaz IAggregate en lugar de colocar un marcador de atributo Aggregate sobre la clase. En cualquier caso, es una cuestión de preferencias.
 
-Tener un medio de raíz agregada que relacionados con la mayoría del código para mejorar la coherencia y reglas de negocios de entidades del agregado deben implementarse como métodos en la clase raíz agregada (por ejemplo, AddOrderItem al agregar un objeto OrderItem al agregado) . No debe crear o actualizar los objetos de OrderItems independientemente o directamente; la clase AggregateRoot debe mantener control y la coherencia de cualquier operación de actualización con sus entidades secundarias.
+Tener una raíz de agregado significa que la mayoría del código relacionado con la coherencia y las reglas de negocio de las entidades del agregado deben implementarse como métodos en la clase raíz de agregado Order (por ejemplo, AddOrderItem al agregar un objeto OrderItem al agregado). No debe crear ni actualizar objetos OrderItems de forma independiente ni directa; la clase AggregateRoot debe mantener el control y la coherencia de cualquier operación de actualización en sus entidades secundarias.
 
-Por ejemplo, debería *no* realice las siguientes acciones de cualquier clase de capa de aplicación o el método de controlador de comando:
+## <a name="encapsulating-data-in-the-domain-entities"></a>Encapsulación de datos en entidades de dominio
+
+Un problema habitual de los modelos de entidad es que exponen propiedades de navegación de colecciones como tipos de lista públicamente accesibles. Esto permite que cualquier desarrollador colaborador manipule el contenido de estos tipos de colecciones, con lo que se pueden omitir importantes reglas de negocio relacionadas con la colección, lo que podría dejar el objeto en un estado no válido. La solución es conceder acceso de solo lectura a las colecciones relacionadas y proporcionar explícitamente métodos que definan formas para que los clientes las manipulen.
+
+En el código anterior, observe que muchos atributos son de solo lectura o privados y que solo pueden ser actualizados por los métodos de clase, por lo que cualquier actualización tiene en cuenta las invariables de dominio de negocio de cuenta y la lógica especificada en los métodos de clase.
+
+Por ejemplo, tras los patrones DDD, *no* debería hacer lo siguiente desde ningún método de controlador de comando ni clase de capa de aplicación:
 
 ```csharp
 // WRONG ACCORDING TO DDD PATTERNS – CODE AT THE APPLICATION LAYER OR
@@ -110,17 +128,17 @@ myOrder.OrderItems.Add(myNewOrderItem);
 //...
 ```
 
-En este caso, el método Add es puramente una operación para agregar datos, con acceso directo a la colección OrderItems. Por lo tanto, la mayoría de la lógica del dominio, reglas o validaciones relacionadas con que la operación con las entidades secundarias se distribuirán a través de la capa de aplicación (controladores de comandos y controladores de API Web).
+En este caso, el método Add es puramente una operación para agregar datos, con acceso directo a la colección OrderItems. Por lo tanto, la mayoría de la lógica, las reglas o las validaciones del dominio relacionadas con esa operación con las entidades secundarias se distribuirá a la capa de aplicación (controladores de comandos y controladores de Web API).
 
-Si dejan alrededor de la raíz agregada, la raíz agregada no puede garantizar sus invariables, su validez o su coherencia. Finalmente tendrá spaghetti código o script transaccional.
+Si omite la raíz de agregado, esta no puede garantizar sus invariables, su validez ni su coherencia. Al final tendrá código espagueti o código de script transaccional.
 
-Para seguir patrones DDD, las entidades no deben tener establecedores públicos en cualquier propiedad de entidad. Cambios en una entidad deben determinarse mediante métodos explícitos con lenguaje ubicuo explícitas acerca del cambio que se están realizando en la entidad.
+Para seguir los patrones DDD, las entidades no deben tener establecedores públicos en ninguna propiedad de entidad. Los cambios en una entidad deben realizarse mediante métodos explícitos con lenguaje ubicuo explícito sobre el cambio que están realizando en la entidad.
 
-Además, las colecciones dentro de la entidad (por ejemplo, los artículos del pedido) deben ser propiedades de solo lectura (el método AsReadOnly explicará más adelante). Debe ser capaz de actualizar solo desde dentro de los métodos de la clase raíz agregada o los métodos de la entidad secundaria.
+Además, las colecciones de la entidad (por ejemplo, OrderItems) deben ser propiedades de solo lectura (el método AsReadOnly explicado más adelante). Debe ser capaz de actualizarla solo desde los métodos de la clase raíz de agregado o los métodos de entidad secundaria.
 
-Como puede ver en el código de la raíz agregado de orden, todos los establecedores deben ser privados o al menos de solo lectura externamente, por lo que cualquier operación con los datos de la entidad o sus entidades secundarias tiene que realizarse a través de métodos en la clase de entidad. Esto mantiene la coherencia de una manera controlada y orientada a objetos en lugar de implementar el código de la secuencia de comandos transaccional.
+Como puede ver en el código de la raíz de agregado Order, todos los establecedores deben ser privados o al menos de solo lectura externamente para que cualquier operación en los datos de la entidad o sus entidades secundarias tenga que realizarse mediante métodos en la clase de entidad. Esto mantiene la coherencia de una manera controlada y orientada a objetos en lugar de implementar código de script transaccional.
 
-El fragmento de código siguiente muestra la manera adecuada de la tarea de agregar un objeto OrderItem para el agregado de orden de código.
+El fragmento de código siguiente muestra la manera adecuada de programar la tarea de agregar un objeto OrderItem al agregado Order.
 
 ```csharp
 // RIGHT ACCORDING TO DDD--CODE AT THE APPLICATION LAYER OR COMMAND HANDLERS
@@ -134,104 +152,38 @@ myOrder.AddOrderItem(productId, productName, pictureUrl, unitPrice, discount, un
 //...
 ```
 
-En este fragmento de código, la mayoría de las validaciones o la lógica relacionada con la creación de un objeto OrderItem será bajo el control de la raíz agregado de orden, en el método AddOrderItem, especialmente las validaciones y lógica relacionados con otros elementos en conjunto. Por ejemplo, podría obtener el mismo elemento de producto como el resultado de varias llamadas a AddOrderItem. En ese método, puede examinar los elementos de producto y consolidar los mismos elementos de producto en un único objeto OrderItem con varias unidades. Además, si hay cantidades de descuento distinto, pero el identificador de producto es el mismo, es probable que se aplicará el mayor descuento. Este principio se aplica a cualquier otra lógica de dominio para el objeto OrderItem.
+En este fragmento de código, la mayoría de las validaciones o la lógica relacionadas con la creación de un objeto OrderItem están bajo el control de la raíz de agregado Order, en el método AddOrderItem, especialmente las validaciones y la lógica relacionadas con otros elementos del agregado. Por ejemplo, podría obtener el mismo artículo como resultado de varias llamadas a AddOrderItem. En ese método, puede examinar los artículos y consolidar los mismos en un único objeto OrderItem con varias unidades. Además, si hay importes de descuento distintos pero el identificador de producto es el mismo, se aplicaría el mayor descuento. Este principio se aplica a cualquier otra lógica de dominio del objeto OrderItem.
 
-Además, la nueva operación OrderItem(params) también se controlan y realizada por el método AddOrderItem desde la raíz agregado de orden. Por lo tanto, la mayoría de la lógica o validaciones relacionadas con que operación (especialmente todo lo que afecta a la coherencia entre otras entidades secundarias) estarán en un único lugar dentro de la raíz agregado. Es el objetivo final del patrón raíz agregada.
+Además, la nueva operación OrderItem(params) también es controlada y realizada por el método AddOrderItem de la raíz de agregado Order. Por lo tanto, la mayoría de la lógica o las validaciones relacionadas con esa operación (especialmente todo lo que afecta a la coherencia entre otras entidades secundarias) estará en una única ubicación dentro de la raíz de agregado. Ese es el fin último del patrón de raíz de agregado.
 
-Cuando se usa Entity Framework 1.1, se puede expresar mejor una entidad DDD porque una de las nuevas características de Entity Framework Core 1.1 es que permite [asignar a campos](https://docs.microsoft.com/ef/core/modeling/backing-field) además de propiedades. Esto es útil cuando se protegen las colecciones de las entidades secundarias u objetos de valor. Con esta mejora, puede usar los campos privados simples en lugar de propiedades y puede implementar las actualizaciones en la colección de campos en los métodos públicos y proporcionar acceso de solo lectura a través del método AsReadOnly.
+Cuando use Entity Framework Core 1.1 o posterior, una entidad DDD se puede expresar mejor porque permite [asignar a campos](https://docs.microsoft.com/ef/core/modeling/backing-field) además de a propiedades. Esto resulta útil al proteger colecciones de entidades secundarias u objetos de valor. Con esta mejora, puede usar campos privados simples en lugar de propiedades y puede implementar cualquier actualización de la colección de campos en los métodos públicos y proporcionar acceso de solo lectura mediante el método AsReadOnly.
 
-En el DDD que desea actualizar la entidad sólo a través de métodos en la entidad (o el constructor) con el fin de controlar cualquier invariable y la coherencia de los datos, por lo que propiedades se definen únicamente con un descriptor de acceso get. Las propiedades se basan en campos privados. Los miembros privados sólo puede tener acceso desde dentro de la clase. Sin embargo, excepción de allí uno: Core EF necesita establecer estos campos también.
+En DDD se prefiere actualizar la entidad únicamente mediante métodos de la entidad (o el constructor) para controlar cualquier invariable y la coherencia de los datos, para que las propiedades solo se definan con un descriptor de acceso get. Las propiedades se basan en campos privados. A los miembros privados solo se puede acceder desde la clase. Pero hay una excepción: EF Core también necesita establecer estos campos.
 
-```csharp
-// ENTITY FRAMEWORK CORE 1.1 OR LATER
-// Entity is a custom base class with the ID
-public class Order : Entity, IAggregateRoot
-{
-    // DDD Patterns comment
-    // Using private fields, allowed since EF Core 1.1, is a much better
-    // encapsulation aligned with DDD aggregates and domain entities (instead of
-    // properties and property collections)
-    private bool _someOrderInternalState;
-    private DateTime _orderDate;
-    public Address Address { get; private set; }
-    public Buyer Buyer { get; private set; }
-    private int _buyerId;
-    public OrderStatus OrderStatus { get; private set; }
-    private int _orderStatusId;
 
-    // DDD patterns comment
-    // Using a private collection field is better for DDD aggregate encapsulation.
-    // OrderItem objects cannot be added from outside the aggregate root
-    // directly to the collection, but only through the
-    // OrderAggrergateRoot.AddOrderItem method, which includes behavior.
-    private readonly List<OrderItem> _orderItems;
-    public IEnumerable<OrderItem> OrderItems => _orderItems.AsReadOnly();
-    // Using List<>.AsReadOnly()
-    // This will create a read-only wrapper around the private list so it is
-    // protected against external updates. It's much cheaper than .ToList(),
-    // because it will not have to copy all items in a new collection.
-    // (Just one heap alloc for the wrapper instance)
-    // https://msdn.microsoft.com/en-us/library/e78dcd75(v=vs.110).aspx
-    public PaymentMethod PaymentMethod { get; private set; }
-    private int _paymentMethodId;
+### <a name="mapping-properties-with-only-get-accessors-to-the-fields-in-the-database-table"></a>Asignación de propiedades con solo los descriptores de acceso get a los campos de la tabla de base de datos
 
-    protected Order() { }
+La asignación de propiedades a columnas de la tabla de base de datos no es responsabilidad del dominio, sino que forma parte de la capa de infraestructura y persistencia. Se menciona aquí simplemente para que sea consciente de las nuevas capacidades de EF Core 1.1 o posterior relacionadas con la forma de modelar entidades. En la sección de infraestructura y persistencia se explican más detalles sobre este tema.
 
-    public Order(int buyerId, int paymentMethodId, Address address)
-    {
-        _orderItems = new List<OrderItem>();
-        _buyerId = buyerId;
-        _paymentMethodId = paymentMethodId;
-        _orderStatusId = OrderStatus.InProcess.Id;
-        _orderDate = DateTime.UtcNow;
-        Address = address;
-    }
-
-    // DDD patterns comment
-    // The Order aggregate root method AddOrderitem() should be the only way
-    // to add items to the Order object, so that any behavior (discounts, etc.)
-    // and validations are controlled by the aggregate root in order to
-    // maintain consistency within the whole aggregate.
-    public void AddOrderItem(int productId, string productName, decimal unitPrice,
-        decimal discount, string pictureUrl, int units = 1)
-    {
-        // ...
-        // Domain rules/logic here for adding OrderItem objects to the order
-        // ...
-        OrderItem item = new OrderItem(this.Id, productId, productName,
-            pictureUrl, unitPrice, discount, units);
-        OrderItems.Add(item);
-    }
-
-    // ...
-    // Additional methods with domain rules/logic related to the Order aggregate
-    // ...
-}
-```
-
-### <a name="mapping-properties-with-only-get-accessors-to-the-fields-in-the-database-table"></a>Obtención de propiedades de asignación con solo los descriptores de acceso a los campos en la tabla de base de datos
-
-Asignar propiedades a las columnas de tabla de base de datos no es responsabilidad de un dominio, pero como parte de la capa de infraestructura y persistencia. Mencionamos esta aquí solo por lo que es consciente de las nuevas capacidades de 1.1 EF relacionados con cómo puede modelar las entidades. Obtener más detalles sobre este tema se explican en la sección infraestructura y persistencia.
-
-Cuando usas EF 1.0, dentro de DbContext debe asignar las propiedades que se definen únicamente con captadores a los campos en la tabla de base de datos reales. Esto se realiza con el método HasField de la clase PropertyBuilder.
+Cuando se usa EF Core 1.0, en DbContext es necesario asignar las propiedades definidas únicamente con captadores a los campos reales de la tabla de base de datos. Esto se hace con el método HasField de la clase PropertyBuilder.
 
 ### <a name="mapping-fields-without-properties"></a>Asignación de campos sin propiedades
 
-Con la nueva característica de EF Core 1.1 para asignar columnas a campos, también es posible no utilizar propiedades. En su lugar, solo puede asignar columnas de una tabla a campos. Un caso de uso común para esto es campos privados de un estado interno que no es necesario tener acceso desde fuera de la entidad.
+La característica de EF Core 1.1 o posterior para asignar columnas a campos también permite no usar propiedades. En su lugar, puede simplemente asignar columnas de una tabla a campos. Un caso de uso común de esto son los campos privados de un estado interno al que no es necesario acceder desde fuera de la entidad.
 
-Por ejemplo, en el ejemplo de código anterior, el \_someOrderInternalState campo no tiene ninguna propiedad relacionada de un establecedor o captador. Ese campo también se calculan dentro de la lógica de negocios de la orden y se usa uno de los métodos de la orden, pero debe conservarse en la base de datos. Por lo tanto, en EF 1.1 es una manera de asignar un campo sin una propiedad relacionada a una columna de la base de datos. Esto también se explica en la [nivel de infraestructura](#the-infrastructure-layer) sección de esta guía.
+Por ejemplo, en el ejemplo de código OrderAggregate anterior, hay varios campos privados, como el campo `_paymentMethodId`, sin ninguna propiedad relacionada para un establecedor ni un captador. Ese campo también podría calcularse en la lógica de negocios de Order y usarse desde los métodos de Order, pero debe conservarse además en la base de datos. Así, en EF Core (a partir de la versión 1.1) hay una forma de asignar un campo sin ninguna propiedad relacionada a una columna de la base de datos. Esto también se explica en la sección [Capa de infraestructura](#the-infrastructure-layer) de esta guía.
 
 ### <a name="additional-resources"></a>Recursos adicionales
 
--   **Vaughn Vernon. Modelado agregados con DDD y Entity Framework.** Tenga en cuenta que esto es *no* Entity Framework Core.
+-   **Vaughn Vernon. Modeling Aggregates with DDD and Entity Framework (Modelado de agregados con DDD y Entity Framework).** Tenga en cuenta que esto *no* es Entity Framework Core.
     [*https://vaughnvernon.co/?p=879*](https://vaughnvernon.co/?p=879)
 
--   **Julia Lerman. Codificación de diseño basado en dominio: sugerencias para desarrolladores centradas en datos**
+-   **Julie Lerman. Programación para un diseño guiado por el dominio: sugerencias para los desarrolladores enfocados en datos**
     [*https://msdn.microsoft.com/en-us/magazine/dn342868.aspx*](https://msdn.microsoft.com/en-us/magazine/dn342868.aspx)
 
--   **UDI Dahan. Cómo crear totalmente encapsula modelos de dominio**
+-   **Udi Dahan. How to create fully encapsulated Domain Models (Cómo crear modelos de dominio totalmente encapsulados)**
     [*http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/*](http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/)
 
 
 >[!div class="step-by-step"]
-[Anterior] (microservicio-dominio-model.md) [siguiente] (seedwork-domain-model-base-classes-interfaces.md)
+[Previous] (microservice-domain-model.md) [Next] (seedwork-domain-model-base-classes-interfaces.md)

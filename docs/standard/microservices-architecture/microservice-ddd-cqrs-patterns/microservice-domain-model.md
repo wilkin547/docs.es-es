@@ -1,123 +1,126 @@
 ---
-title: "Diseñar un modelo de dominio de microservicio"
-description: "Arquitectura de Microservicios de .NET para aplicaciones .NET en contenedores | Diseñar un modelo de dominio de microservicio"
+title: "Diseño de un modelo de dominio de microservicio"
+description: "Arquitectura de microservicios de .NET para aplicaciones .NET en contenedores | Diseño de un modelo de dominio de microservicio"
 keywords: Docker, microservicios, ASP.NET, contenedor
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
+ms.date: 11/09/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: 455a2c5a39fb9b765b557610ab108f8c75882dbd
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 752c4cceada2bf0649facbfd46c36c26dc666d29
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="designing-a-microservice-domain-model"></a>Diseñar un modelo de dominio de microservicio
+# <a name="designing-a-microservice-domain-model"></a>Diseño de un modelo de dominio de microservicio
 
-*Definir un modelo de dominio enriquecido para cada microservicio de negocios o contexto limitado*
+*Definición de un modelo de dominio enriquecido para cada microservicio de negocios o contexto delimitado*
 
-El objetivo es crear un modelo de dominio coherente único para cada microservicio de negocios o contexto limitado (BC). Tenga en cuenta, sin embargo, que una continuidad del negocio o business microservicio a veces podría estar compuesto por varios servicios físicos que comparten un modelo de dominio único. El modelo de dominio debe capturar las reglas, comportamiento, lenguaje de negocios y las restricciones del único contexto limitado o microservicio de negocios que representa.
+El objetivo es crear un modelo de dominio coherente único para cada microservicio de negocio o contexto delimitado (BC). Pero tenga en cuenta que en ocasiones un BC o microservicio de negocio puede estar compuesto por varios servicios físicos que comparten un único modelo de dominio. El modelo de dominio debe capturar las reglas, el comportamiento, el lenguaje de negocios y las restricciones del contexto delimitado o microservicio de negocio que representa.
 
 ## <a name="the-domain-entity-pattern"></a>El modelo de entidad del dominio
 
-Las entidades representan objetos del dominio y se definen principalmente por su identidad, la continuidad y la persistencia con el tiempo y no solo por los atributos que se componen de ellos. Tal y como se indica Eric Evans, "un objeto definido principalmente por su identidad se denomina una entidad." Las entidades son muy importantes en el modelo de dominio, ya que son la base para un modelo. Por lo tanto, debe identificar y diseñarlos cuidadosamente.
+Las entidades representan objetos del dominio y se definen principalmente por su identidad, continuidad y persistencia en el tiempo y no solo por los atributos que las componen. Como afirma Eric Evans, "un objeto definido principalmente por su identidad se denomina entidad". Las entidades son muy importantes en el modelo de dominio, ya que son la base para un modelo. Por tanto, debe identificarlas y diseñarlas cuidadosamente.
 
-*Identidad de una entidad puede cruzar varios microservicios o contextos limitado.*
+*La identidad de una entidad puede abarcar varios microservicios o contextos delimitados.*
 
-La misma identidad (aunque no es la misma entidad) se pueden modelar en varios contextos limitado o microservicios. Sin embargo, que no implica que la misma entidad, con los mismos atributos y lógica se implementa en varios contextos limitado. En su lugar, las entidades en cada contexto limitado limitan sus atributos y comportamientos a los requeridos en el dominio de ese contexto limitado.
+La misma identidad (aunque no la misma entidad) se puede modelar en varios contextos delimitados o microservicios. Pero eso no implica que la misma entidad, con los mismos atributos y lógica, se implemente en varios contextos delimitados. En su lugar, las entidades de cada contexto delimitado limitan sus atributos y comportamientos a los requeridos en el dominio de ese contexto delimitado.
 
-Por ejemplo, la entidad de comprador podría tener la mayoría de los atributos de una persona que están definidos en la entidad de usuario en el perfil o la identidad microservicio, incluida la identidad. Pero la entidad de comprador en la ordenación microservicio podría tener menos de los atributos, porque solo determinados datos comprador está relacionado con el proceso de pedido. El contexto de cada microservicio o contexto limitado afecta a su modelo de dominio.
+Por ejemplo, es posible que la entidad de comprador tenga la mayoría de los atributos de una persona que estén definidos en la entidad de usuario en el microservicio de perfiles o identidades, incluida la identidad. Pero la entidad de comprador en el microservicio de pedidos podría tener menos atributos, porque solo determinados datos del comprador están relacionados con el proceso de pedido. El contexto de cada microservicio o contexto delimitado afecta a su modelo de dominio.
 
-*Las entidades de dominio deben implementar el comportamiento además de implementar los atributos de datos*
+*Las entidades de dominio deben implementar el comportamiento además de los atributos de datos*
 
-Una entidad de dominio en DDD debe implementar la lógica del dominio o el comportamiento relacionado con los datos de entidad (es decir, el objeto al que obtuvo acceso memoria). Por ejemplo, como parte de una clase de entidad order deben tener lógica de negocios y las operaciones que se implementan como métodos para realizar tareas como agregar un elemento de pedido, la validación de datos y el cálculo total. Métodos de la entidad ocupan de las reglas de la entidad en lugar de tener esas reglas se propagan a través de la capa de aplicación e invariables.
+Una entidad de dominio en DDD debe implementar la lógica del dominio o el comportamiento relacionado con los datos de entidad (el objeto al que se obtiene acceso en memoria). Por ejemplo, como parte de una clase de entidad de pedido debería implementar la lógica de negocios y las operaciones como métodos para tareas como agregar un elemento de pedido, la validación de datos y el cálculo total. Los métodos de la entidad se encargan de las invariables y las reglas de la entidad en lugar de tener esas reglas distribuidas por el nivel de aplicación.
 
-Figura 9-8 muestra una entidad del dominio que implementa no solo los atributos de datos, pero las operaciones o métodos con lógica de dominio relacionadas.
+En la figura 9-8 se muestra una entidad de dominio que implementa no solo los atributos de datos, sino también las operaciones o los métodos con lógica de dominio relacionada.
 
 ![](./media/image9.png)
 
-**Figura 9-8**. Ejemplo de un diseño de la entidad de dominio implementar datos más comportamiento
+**Figura 9-8**. Ejemplo de un diseño de entidad de dominio en el que se implementan datos y comportamiento
 
-Por supuesto, a veces puede tener entidades que implementar ninguna lógica como parte de la clase de entidad. Esto puede ocurrir en las entidades secundarias dentro de un agregado si la entidad secundaria no tiene ninguna lógica especial porque la mayor parte de la lógica se define en la raíz agregada. Si tiene un microservicio complejo que tiene mucha lógica implementada en las clases de servicio en lugar de en las entidades de dominio, podría encontrarse en el modelo de dominio anemic, que se explica en la sección siguiente.
+Evidentemente, en ocasiones puede tener entidades que no implementen ninguna lógica como parte de la clase de entidad. Esto puede ocurrir en entidades secundarias dentro de un agregado si la entidad secundaria no tiene ninguna lógica especial porque la mayor parte de la lógica se define en la raíz agregada. Si tiene un microservicio complejo con gran cantidad de lógica implementada en las clases de servicio en lugar de en las entidades de dominio, podría encontrarse en el modelo de dominio anémico que se explica en la sección siguiente.
 
-### <a name="rich-domain-model-versus-anemic-domain-model"></a>Modelo de dominio enriquecido frente al modelo de dominio anemic
+### <a name="rich-domain-model-versus-anemic-domain-model"></a>Diferencias entre el modelo de dominio y el modelo de dominio anémico
 
-En su entrada [AnemicDomainModel](https://martinfowler.com/bliki/AnemicDomainModel.html), Martin Fowler describe un modelo de dominio anemic de esta manera:
+En su publicación [AnemicDomainModel](https://martinfowler.com/bliki/AnemicDomainModel.html), Martin Fowler describe un modelo de dominio anémico de esta manera:
 
-El síntoma de un modelo de dominio Anemic básico es que a primera vista parece lo real. Hay objetos, muchos denominado después de los nombres en el espacio de dominio y estos objetos están conectados con las relaciones enriquecidas y la estructura que tienen los modelos de dominio es true. La instrucción catch lleguen al mirar el comportamiento y tenga en cuenta que hay casi cualquier comportamiento que en estos objetos, hacerlos poco más de bolsas de captadores y establecedores.
+El síntoma básico de un modelo de dominio anémico es que a primera vista parece real. Hay objetos, muchos denominados en función de los nombres del espacio de dominio, que están conectados con las relaciones enriquecidas y la estructura de los modelos de dominio reales. Lo interesante aparece cuando se examina el comportamiento y se descubre que apenas hay comportamiento en estos objetos, lo que los convierte en poco más que conjuntos de captadores y establecedores.
 
-Por supuesto, cuando se usa un modelo de dominio anemic, se utilizará los modelos de datos de un conjunto de objetos de servicio (con nombre tradicionalmente la *capa empresarial*) que captura toda la lógica de negocios o de dominio. La capa de negocio se encuentra en la parte superior del modelo de datos y utiliza el modelo de datos al igual que los datos.
+Por supuesto, cuando se usa un modelo de dominio anémico, esos modelos de datos se usan desde un conjunto de objetos de servicio (denominado tradicionalmente *capa de negocio*) que captura toda la lógica de negocios o de dominio. La capa de negocio se encuentra en la parte superior del modelo de datos y usa el modelo de datos al igual que los datos.
 
-El modelo de dominio anemic es simplemente un diseño de estilo de procedimientos. Objetos entidad anemic no son objetos reales, ya que carecen de comportamiento (métodos). Solo contienen propiedades de datos y, por tanto, no es diseño orientado a objetos. Al colocar todo el comportamiento de alejar en objetos de servicio (la capa de negocio) básicamente terminará con [código spaghetti](https://en.wikipedia.org/wiki/Spaghetti_code) o [secuencias de comandos de transacción](https://martinfowler.com/eaaCatalog/transactionScript.html), y, por tanto, se pierde las ventajas que un modelo de dominio proporciona.
+El modelo de dominio anémico es simplemente un diseño de estilo de procedimientos. Los objetos de entidad anémicos no son objetos reales, ya que carecen de comportamiento (métodos). Solo contienen propiedades de datos y, por tanto, no se trata de un diseño orientado a objetos. Al colocar todo el comportamiento en objetos de servicio (la capa de negocio), básicamente se crea [código espagueti](https://en.wikipedia.org/wiki/Spaghetti_code) o [scripts de transacción](https://martinfowler.com/eaaCatalog/transactionScript.html), y, por tanto, se pierden las ventajas que proporciona un modelo de dominio.
 
-Sin tener en cuenta, si su microservicio o contexto limitado es muy sencilla (un servicio CRUD), el modelo de dominio anemic en forma de objetos entidad con propiedades de datos simplemente podría bastar y puede que no sea la pena implementar modelos más complejos de DDD. En ese caso, será simplemente un modelo de persistencia, como ha creado deliberadamente una entidad con datos de solo para fines CRUD.
+Pero si el microservicio o contexto delimitado es muy sencillo (un servicio CRUD), es posible que sea suficiente con el modelo de dominio anémico en forma de objetos de entidad con solo propiedades de datos y que no merezca la pena implementar modelos DDD más complejos. En ese caso, será simplemente un modelo de persistencia, porque se ha creado deliberadamente una entidad solo con datos para fines CRUD.
 
-Para eso están microservicios arquitecturas son perfectas para varias arquitecturas según cada contexto limitado. Por ejemplo, en eShopOnContainers, la ordenación microservicio implementa patrones DDD, pero la microservicio de catálogo, que es un servicio CRUD simple, no lo hace.
+Por ese motivo las arquitecturas de microservicios son perfectas para un enfoque de múltiples arquitecturas según cada contexto delimitado. Por ejemplo, en eShopOnContainers, el microservicio de pedidos implementa patrones DDD, pero el microservicio de catálogo, que es un servicio CRUD simple, no lo hace.
 
-Algunas personas, supongamos que el modelo de dominio anemic es un antipatrón. Realmente depende de lo que va a implementar. Si el microservicio que se va a crear es bastante sencillo (por ejemplo, un servicio CRUD), según el modelo de dominio anemic no es un antipatrón. Sin embargo, si necesita para abordar la complejidad del dominio de microservicio que tiene muchos cambiantes de reglas de negocios, el modelo de dominio anemic sería un antipatrón para ese microservicio o contexto limitado. En ese caso, se diseña como datos completos de un modelo con entidades que contiene los datos más comportamiento así como implementar otros patrones que DDD (agregados, objetos de valor, etc.) puede tener enormes ventajas para el éxito a largo plazo de este tipo un microservicio.
+Hay usuarios que afirman que el modelo de dominio anémico es un antipatrón. En realidad, depende de lo que se vaya a implementar. Si el microservicio que se va a crear es bastante sencillo (por ejemplo, un servicio CRUD), seguir el modelo de dominio anémico no es un antipatrón. Pero si es necesario abordar la complejidad del dominio de un microservicio que tiene muchas reglas de negocio cambiantes, es posible que el modelo de dominio anémico sea un antipatrón para ese microservicio o contexto delimitado. En ese caso, es posible que diseñarlo como un modelo enriquecido con entidades que contienen datos y comportamiento además de implementar otros patrones DDD (agregados, objetos de valor, etc.) tenga enormes ventajas para el éxito a largo plazo de este tipo de microservicio.
 
 #### <a name="additional-resources"></a>Recursos adicionales
 
--   **DevIQ. Entidad del dominio**
+-   **DevIQ. Domain Entity (Entidad de dominio)**
     [*http://deviq.com/entity/*](http://deviq.com/entity/)
 
--   **Martin Fowler. El modelo de dominio**
+-   **Martin Fowler. The Domain Model (El modelo de dominio)**
     [*https://martinfowler.com/eaaCatalog/domainModel.html*](https://martinfowler.com/eaaCatalog/domainModel.html)
 
--   **Martin Fowler. El modelo de dominio Anemic**
+-   **Martin Fowler. The Anemic Domain Model (El modelo de dominio anémico)**
 
-    <https://martinfowler.com/bliki/AnemicDomainModel.HTML>
+    <https://martinfowler.com/bliki/AnemicDomainModel.html>
 
 ### <a name="the-value-object-pattern"></a>El patrón de objeto de valor
 
-Tal y como se ha detectado Eric Evans, "muchos objetos no tienen identidad conceptual. Estos objetos describen ciertas características de una cosa."
+Como ha mencionado Eric Evans, "Muchos objetos no tienen identidad conceptual. Estos objetos describen ciertas características de una cosa".
 
-Una entidad requiere una identidad, pero hay muchos objetos en un sistema que no lo hace, al igual que el modelo de objeto de valor. Un objeto de valor es un objeto con ninguna identidad conceptual que describe un aspecto de dominio. Se trata de objetos que crea una instancia para representar elementos de diseño que solo le interesan temporalmente. Le preocupa la *qué* , no son *que* son. Ejemplos incluyen números y cadenas, pero también pueden ser un nivel más alto conceptos como grupos de atributos.
+Una entidad requiere una identidad, pero en un sistema hay muchos objetos que no lo hacen, como el patrón de objeto de valor. Un objeto de valor es un objeto sin identidad conceptual que describe un aspecto de dominio. Se trata de objetos de los que se crea una instancia para representar elementos de diseño que solo interesan temporalmente. Interesa lo *que* son, no *quiénes* son. Los números y las cadenas son algunos ejemplos, pero también pueden ser conceptos de nivel superior como grupos de atributos.
 
-Algo que es una entidad en un microservicio podría no ser una entidad en otra microservicio, porque en el segundo caso, el contexto limitado podría tener un significado diferente. Por ejemplo, una dirección en una aplicación de comercio electrónico podría no tener una identidad en absoluto, ya que solo puede representar un grupo de atributos de perfil del cliente para una persona o empresa. En este caso, la dirección debe clasificarse como un objeto de valor. Sin embargo, en una aplicación para una empresa de la utilidad de energía eléctrica, la dirección del cliente podría ser importante para el dominio de negocio. Por lo tanto, la dirección debe tener una identidad para que el sistema de facturación puede estar relacionado directamente con la dirección. En ese caso, una dirección debe clasificarse como una entidad de dominio.
+Es posible que algo que sea una entidad en un microservicio no lo sea en otro, porque en el segundo caso, es posible que el contexto delimitado tenga un significado diferente. Por ejemplo, una dirección en una aplicación de comercio electrónico podría no tener ninguna identidad, ya que es posible que solo represente un grupo de atributos del perfil de cliente para una persona o empresa. En este caso, la dirección se debería clasificar como un objeto de valor. Pero en una aplicación para una empresa de energía eléctrica, la dirección del cliente podría ser importante para el dominio de negocio. Por tanto, la dirección debe tener una identidad para poder vincular el sistema de facturación directamente con la dirección. En ese caso, una dirección debería clasificarse como una entidad de dominio.
 
-Una persona con un nombre y apellido normalmente es una entidad debido a una persona que tiene identidad, incluso si el nombre y apellido coincidan con otro conjunto de valores, por ejemplo, si esos nombres también hace referencia a una persona diferente.
+Una persona con un nombre y apellido normalmente es una entidad debido a que una persona tiene identidad, incluso si el nombre y apellido coinciden con otro conjunto de valores, por ejemplo si también hacen referencia a otra persona.
 
-Objetos de valor son difíciles de administrar en bases de datos relacionales y ORM como EF, mientras que en el documento orientado a las bases de datos sean más fáciles de implementar y utilizar.
+Los objetos de valor son difíciles de administrar en bases de datos relacionales y ORM como EF, mientras que en las bases de datos orientadas a documentos son más fáciles de implementar y usar.
 
 #### <a name="additional-resources"></a>Recursos adicionales
 
--   **Martin Fowler. Patrón de objeto de valor**
+-   **Martin Fowler. Value Object pattern (Patrón de objeto de valor)**
     [*https://martinfowler.com/bliki/ValueObject.html*](https://martinfowler.com/bliki/ValueObject.html)
 
--   **Valor de objeto**
+-   **Value Object (Objeto de valor)**
     [*http://deviq.com/value-object/*](http://deviq.com/value-object/)
 
--   **Valor de objetos en el desarrollo controlado por pruebas**
-    [*https://leanpub.com/tdd-ebook/read\#leanpub-auto-objetos de valor*](https://leanpub.com/tdd-ebook/read#leanpub-auto-value-objects)
+-   **Value Objects in Test-Driven Development (Objetos de valor en el desarrollo controlado por pruebas)**
+    [*https://leanpub.com/tdd-ebook/read\#leanpub-auto-value-objects*](https://leanpub.com/tdd-ebook/read#leanpub-auto-value-objects)
 
--   **Eric Evans. Diseño basado en dominio: Realiza para complejidad en el centro de Software.** (Libro; incluye una explicación de los objetos de valor) [ *https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/*](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
+-   **Eric Evans. Domain-Driven Design: Tackling Complexity in the Heart of Software (Diseño controlado por dominios: abordar la complejidad en el corazón del software).** (Libro; incluye una explicación de los objetos de valor) [*https://www.amazon.es/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/*](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
 
 ### <a name="the-aggregate-pattern"></a>El patrón de agregado
 
-Un modelo de dominio contiene grupos de entidades de datos diferentes y procesos que pueden controlar un área importante de funcionalidad, como el cumplimiento de pedido o inventario. Una unidad DDD más específica es la agregación, que describe un clúster o un grupo de entidades y comportamientos que se pueden tratar como una unidad coherente.
+Un modelo de dominio contiene grupos de entidades de datos diferentes y procesos que pueden controlar un área importante de funcionalidad, como el cumplimiento de pedidos o el inventario. Una unidad de DDD más específica es el agregado, que describe un clúster o grupo de entidades y comportamientos que se pueden tratar como una unidad coherente.
 
-Normalmente definen un agregado basado en las transacciones que necesite. Un ejemplo clásico es un pedido que también contiene una lista de elementos de pedido. Normalmente, un elemento de pedido será una entidad. Pero será una entidad secundaria dentro de la agregación de orden, que también contendrá la entidad pedido como su entidad raíz, denominada normalmente una raíz agregada.
+Normalmente, un agregado se define según las transacciones que se necesitan. Un ejemplo clásico es un pedido que también contiene una lista de elementos de pedido. Normalmente, un elemento de pedido será una entidad. Pero será una entidad secundaria dentro del agregado de pedido, que también contendrá la entidad de pedido como su entidad raíz, denominada normalmente raíz agregada.
 
-Puede ser difícil identificar agregados. Un agregado es un grupo de objetos que deben ser coherentes entre sí, pero simplemente no se puede seleccionar un grupo de objetos y etiquetarlas un agregado. Debe empezar por un concepto de dominio y pensar en las entidades que se usan en las transacciones más comunes relacionados con dicho concepto. Las entidades que deben ser transaccionalmente coherente son lo que constituye un agregado. Pensar acerca de las operaciones de transacción es probablemente la mejor manera de identificar agregados.
+La identificación de agregados puede ser difícil. Un agregado es un grupo de objetos que deben ser coherentes entre sí, pero no se puede seleccionar simplemente un grupo de objetos y etiquetarlos como agregado. Debe empezar por un concepto de dominio y pensar en las entidades que se usan en las transacciones más comunes relacionadas con ese concepto. Esas entidades que deben ser transaccionalmente coherentes son las que constituyen un agregado. La mejor manera de identificar agregados probablemente sea pensar en las operaciones de transacción.
 
-### <a name="the-aggregate-root-or-root-entity-pattern"></a>El modelo raíz agregada o entidad raíz
+### <a name="the-aggregate-root-or-root-entity-pattern"></a>El modelo de raíz agregada o entidad raíz
 
-Un agregado se compone de al menos una entidad: la raíz de agregado, también se denomina entidad raíz o ientity principal. Además, puede tener varios objetos de valor, con todas las entidades y objetos trabajan juntos para implementar las transacciones y el comportamiento necesario y las entidades secundarias.
+Un agregado se compone de al menos una entidad: la raíz agregada, que también se denomina entidad raíz o entidad principal. Además, puede tener varios objetos de valor y entidades secundarias, con todas las entidades y objetos trabajando de forma conjunta para implementar las transacciones y el comportamiento necesarios.
 
-El propósito de una raíz agregada es asegurar la coherencia del agregado; debe ser el único punto de entrada para las actualizaciones al agregado a través de métodos o las operaciones de clase raíz en conjunto. Debe realizar cambios en las entidades dentro del agregado sólo a través de la raíz agregado. Es guardián de coherencia del agregado, teniendo en cuenta todas las invariantes y tendrá que cumplir en el agregado de reglas de coherencia. Si cambia un objeto de entidad o un valor de secundario por separado, la raíz agregada no puede garantizar que el agregado está en un estado válido. Sería como una tabla con una sección flexible. Coherencia de mantenimiento es el propósito principal de la raíz agregado.
+El propósito de una raíz agregada es asegurar la coherencia del agregado; debe ser el único punto de entrada para las actualizaciones del agregado a través de métodos u operaciones en la clase de raíz agregada. Los cambios en las entidades dentro del agregado solo se deben realizar a través de la raíz agregada. Se encarga de proteger la coherencia del agregado, teniendo en cuenta todas las invariables y reglas de coherencia que es posible que tenga que cumplir en el agregado. Si cambia una entidad secundaria o un objeto de valor por separado, la raíz agregada no podrá garantizar que el agregado esté en un estado válido. Sería como una mesa con una pata coja. El propósito principal de la raíz agregada es mantener la coherencia.
 
-En la figura 9-9, puede ver los agregados de ejemplo como comprador agregado, que contiene una sola entidad (la raíz agregada comprador). El agregado de pedido contiene varias entidades y un objeto de valor.
+En la figura 9-9 se pueden ver agregados de ejemplo como el de comprador, que contiene una sola entidad (la raíz agregada Comprador). El agregado de pedido contiene varias entidades y un objeto de valor.
 
 ![](./media/image10.png)
 
-**Figura 9-9**. Ejemplo de agregados con varias o únicas entidades
+**Figura 9-9**. Ejemplo de agregados con una o varias entidades
 
-Tenga en cuenta que el agregado de comprador podría tener entidades secundarias adicionales, dependiendo de su dominio, como ocurre en la ordenación microservicio en la aplicación de referencia de eShopOnContainers. Figura 9-9 solo ilustra un caso en el que el comprador tiene una sola entidad, como un ejemplo de una función de agregado que contiene solo una raíz agregada.
+Observe que el agregado Comprador podría tener entidades secundarias adicionales, según su dominio, como ocurre en el microservicio de pedidos de la aplicación de referencia eShopOnContainers. En la figura 9-9 solo se ilustra un caso en el que el comprador tiene una única entidad, como un ejemplo de agregado que solo contiene una raíz agregada.
 
-Con el fin de mantener la separación de agregados y mantener límites claros entre ellos, es una buena práctica en un modelo de dominio DDD para no permitir la navegación directa entre agregados y solo con el campo de clave externa (FK), tal y como se implementa en el [ Orden de modelo de dominio de microservicio](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/AggregatesModel/OrderAggregate/Order.cs) en eShopOnContainers. La entidad Order solo tiene un campo de clave externa para el comprador, pero no una propiedad de navegación de EF principales, tal como se muestra en el código siguiente:
+Con el fin de mantener la separación de agregados y límites claros entre ellos, un procedimiento recomendado en un modelo de dominio de DDD consiste en no permitir la navegación directa entre agregados y tener solo el campo de clave externa (FK), como se implementa en el [modelo de dominio de microservicio Ordering](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/AggregatesModel/OrderAggregate/Order.cs) en eShopOnContainers. La entidad Order solo tiene un campo de clave externa para el comprador, pero no una propiedad de navegación de EF Core, como se muestra en el código siguiente:
 
 ```csharp
 public class Order : Entity, IAggregateRoot
@@ -126,31 +129,34 @@ public class Order : Entity, IAggregateRoot
     public Address Address { get; private set; }
     private int? _buyerId; //FK pointing to a different aggregate root
     public OrderStatus OrderStatus { get; private set; }
+    private readonly List<OrderItem> _orderItems;
+    public IReadOnlyCollection<OrderItem> OrderItems => _orderItems;
+    // ... Additional code
 }
 ```
 
-Identificar y trabajar con agregados requieren investigación y experiencia. Para obtener más información, vea la siguiente lista de recursos adicionales.
+Para identificar y trabajar con agregados se requiere investigación y experiencia. Para obtener más información, vea la lista siguiente de recursos adicionales.
 
 #### <a name="additional-resources"></a>Recursos adicionales
 
--   **Vaughn Vernon. Diseño de agregado efectivo - parte I: un único agregado de modelado**
-    [*https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD\_Comunidad\_REDACCIÓN\_ AGREGADOS\_parte\_pdf de 1.*](https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_1.pdf)
+-   **Vaughn Vernon. Effective Aggregate Design - Part I: Modeling a Single Aggregate (Diseño eficaz de agregados - Parte I: modelado de un único agregado)**
+    [*https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD\_COMMUNITY\_ESSAY\_AGGREGATES\_PART\_1.pdf*](https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_1.pdf)
 
--   **Vaughn Vernon. Diseño de agregado efectivo - parte II: Agregados hacer que funcionan conjuntamente**
-    *<https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_2.pdf>*
+-   **Vaughn Vernon. Effective Aggregate Design - Part II: Making Aggregates Work Together (Diseño eficaz de agregados - Parte II: hacer que los agregados funcionen de forma conjunta)**
+    *<https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_2.pdf> *
 
--   **Vaughn Vernon. Diseño de agregado efectivo - parte III: Obtener una perspectiva mediante la detección de**
-    *<https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_3.pdf>*
+-   **Vaughn Vernon. Effective Aggregate Design - Part III: Gaining Insight Through Discovery (Diseño eficaz de agregados - Parte III: obtención de información mediante la detección)**
+    *<https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_3.pdf> *
 
--   **Sergey Grybniak. Patrones de diseño tácticas de DDD**
+-   **Sergey Grybniak. DDD Tactical Design Patterns (Patrones de diseño tácticos de DDD)**
     [*https://www.codeproject.com/Articles/1164363/Domain-Driven-Design-Tactical-Design-Patterns-Part*](https://www.codeproject.com/Articles/1164363/Domain-Driven-Design-Tactical-Design-Patterns-Part)
 
--   **Chris Richardson. Desarrollar Microservicios transaccional con agregados**
+-   **Chris Richardson. Developing Transactional Microservices Using Aggregates (Desarrollo de microservicios transaccionales con agregados)**
     [*https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-1-richardson*](https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-1-richardson)
 
--   **DevIQ. El patrón agregado**
+-   **DevIQ. The Aggregate pattern (El patrón de agregado)**
     [*http://deviq.com/aggregate-pattern/*](http://deviq.com/aggregate-pattern/)
 
 
 >[!div class="step-by-step"]
-[Anterior] (ddd-orientada a servicios-microservice.md) [siguiente] (net-core-microservicio-dominio-model.md)
+[Anterior] (ddd-oriented-microservice.md) [Siguiente] (net-core-microservice-domain-model.md)

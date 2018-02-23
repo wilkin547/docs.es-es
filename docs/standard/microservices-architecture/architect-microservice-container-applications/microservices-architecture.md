@@ -1,6 +1,6 @@
 ---
 title: Arquitectura de microservicios
-description: Arquitectura de Microservicios de .NET para aplicaciones .NET en contenedores | Arquitectura de Microservicios
+description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedor | Arquitectura de microservicios
 keywords: Docker, microservicios, ASP.NET, contenedor
 author: CESARDELATORRE
 ms.author: wiwagn
@@ -8,62 +8,65 @@ ms.date: 05/26/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: 5ede1f0ad19270ca6b7556ff1bb7e4cf8ccf7cbe
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 453f8a22157eee9601f2586d49d872d90634bb61
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="microservices-architecture"></a>Arquitectura de microservicios
 
-Como su nombre indica, una arquitectura de microservicios es un enfoque para la generación de una aplicación de servidor como un conjunto de servicios pequeños. Cada servicio se ejecuta en su propio proceso y se comunica con otros procesos mediante protocolos como HTTP/HTTPS, WebSockets, o [AMQP](https://en.wikipedia.org/wiki/Advanced_Message_Queuing_Protocol). Cada microservicio implementa un dominio específico de end-to-end o una capacidad de negocio dentro de un determinado límite de contexto, y cada una se debe desarrollar de forma autónoma y se podrá implementar de forma independiente. Por último, cada microservicio debe poseer su modelo de datos de dominio relacionadas y la lógica del dominio (soberanía y administración de datos descentralizado) en función de las tecnologías de almacenamiento de datos diferentes (SQL, NoSQL) y lenguajes de programación diferentes.
+Como su nombre indica, una arquitectura de microservicios es un enfoque para la generación de una aplicación de servidor como un conjunto de servicios pequeños. Cada servicio se ejecuta en su propio proceso y se comunica con otros procesos mediante protocolos como HTTP/HTTPS, WebSockets o [AMQP](https://en.wikipedia.org/wiki/Advanced_Message_Queuing_Protocol). Cada microservicio implementa un dominio de un extremo a otro específico o una capacidad empresarial dentro de un determinado límite de contexto, y cada uno se debe desarrollar de forma autónoma e implementar de forma independiente. Por último, cada microservicio debe poseer su modelo de datos de dominio relacionado y su lógica del dominio (soberanía y administración de datos descentralizada) sobre la base de diferentes tecnologías de almacenamiento de datos (SQL, NoSQL) y lenguajes de programación.
 
-¿Qué tamaño debe ser un microservicio? Al desarrollar un microservicio, tamaño no debe ser importante. En su lugar, el punto importante que debe crear débilmente acoplados servicios por lo que tendrá la autonomía de desarrollo, implementación y escala, para cada servicio. Por supuesto, al identificar y diseñar microservicios, debe intentar que sean lo más pequeña posible siempre y cuando no tenga demasiadas dependencias directas con otros microservicios. Más importante que el tamaño de la microservicio es su independencia de otros servicios y la cohesión interna debe tener.
+¿Qué tamaño debe tener un microservicio? Al desarrollar un microservicio, el tamaño no debe ser lo más importante. En su lugar, el punto importante debe ser crear libremente servicios acoplados para que tenga autonomía de desarrollo, implementación y escala, para cada servicio. Por supuesto, al identificar y diseñar microservicios, debe intentar que sean lo más pequeños posible, siempre y cuando no tenga demasiadas dependencias directas con otros microservicios. Más importante que el tamaño del microservicio es la cohesión interna que debe tener y su independencia respecto a otros servicios.
 
-¿Por qué una arquitectura de microservicios? En resumen, proporciona agilidad a largo plazo. Microservicios habilita un mejor mantenimiento en sistemas altamente escalable, grandes y complejos, por lo que le permite crear aplicaciones basadas en muchos servicios pueden implementables de forma independiente que presentan los ciclos de vida granular y autónomos.
+¿Por qué se debe tener una arquitectura de microservicios? En resumen, proporciona agilidad a largo plazo. Con los microservicios puede crear aplicaciones basadas en muchos servicios que se pueden implementar de forma independiente y que tienen ciclos de vida granulares y autónomos, lo que permite un mejor mantenimiento en sistemas complejos, grandes y altamente escalables.
 
-Como ventaja adicional, microservicios pueden escalar horizontalmente de forma independiente. En lugar de tener una sola aplicación monolítica que se debe escalar como una unidad, en su lugar, puede escalar horizontalmente microservicios específico. De este modo, puede escalar sólo el área funcional que necesita más procesamiento alimentación eléctrica o red de ancho de banda para admitir la demanda, en lugar de otras áreas de la aplicación que no es necesario escalar el escalado. Esto significa ahorros de costo porque necesita menos hardware.
+Como ventaja adicional, los microservicios se pueden escalar horizontalmente de forma independiente. En lugar de disponer de una sola aplicación monolítica que debe escalar horizontalmente como una unidad, puede escalar horizontalmente microservicios concretos. De esa forma, puede escalar solo el área funcional que necesita más potencia de procesamiento o ancho de banda para admitir la demanda, en lugar de escalar horizontalmente otras partes de la aplicación que no hace falta escalar. Así, puede ahorrar en costes porque necesita menos hardware.
 
 ![](./media/image6.png)
 
-**Figura 4-6**. Implementación monolítico frente al enfoque microservicios
+**Figura 4-6**. Implementación monolítica frente al enfoque de los microservicios
 
-Tal y como se muestra en la figura 4-6, el enfoque de microservicios permite modificaciones ágiles y rápido iteración de cada microservicio, ya que puede cambiar áreas específicas y pequeñas de aplicaciones complejas, grandes y escalables.
+Tal y como se muestra en la figura 4-6, el enfoque de los microservicios permite modificaciones ágiles e iteraciones rápidas de cada microservicio, ya que puede cambiar áreas específicas y pequeñas de aplicaciones complejas, grandes y escalables.
 
-Diseñar la arquitectura de integración continua de las aplicaciones específicas basadas en microservicios habilita y prácticas de la entrega continua. También acelera la entrega de nuevas funciones en la aplicación. Composición específica de las aplicaciones también le permite ejecutar y probar microservicios en aislamiento y les evolucionar de forma autónoma manteniendo contratos claros entre ellos. Siempre y cuando no cambie las interfaces o contratos, puede cambiar la implementación interna de cualquier microservicio o agregar nuevas funciones sin que ello interrumpa otros microservicios.
+Diseñar la arquitectura de aplicaciones específicas basadas en microservicios habilita una integración continua y prácticas de entrega continua. También acelera la entrega de nuevas funciones en la aplicación. La composición específica de las aplicaciones también le permite ejecutar y probar los microservicios de manera aislada y hacerlos evolucionar de forma autónoma a la vez que mantiene contratos claros entre ellos. Siempre y cuando no cambie las interfaces o los contratos, puede cambiar la implementación interna de cualquier microservicio o agregar nuevas funciones sin que ello interrumpa otros microservicios.
 
-Éstos son aspectos importantes para habilitar el éxito de pasar a producción con un sistema basado en microservicios:
+Después se indican aspectos importantes para habilitar el éxito de pasar a producción con un sistema basado en microservicios:
 
--   Comprobaciones de estado y la supervisión de los servicios y la infraestructura.
+-   Supervisión y comprobaciones de estado de los servicios y la infraestructura.
 
--   Infraestructura escalable para los servicios (es decir, en la nube y orchestrators).
+-   Infraestructura escalable para los servicios (es decir, la nube y orquestadores).
 
--   Diseño de seguridad e implementación en varios niveles: autenticación, autorización, administración de secretos, una comunicación segura, etcetera.
+-   Diseño de seguridad e implementación en varios niveles: autenticación, autorización, administración de secretos, comunicación segura, etc.
 
--   Entrega rápido de aplicaciones, normalmente con los distintos equipos que centrarse en microservicios diferentes.
+-   Entrega rápida de aplicaciones, en que normalmente distintos equipos que centran en microservicios diferentes.
 
--   Infraestructura y las prácticas de DevOps y CI/CD.
+-   Infraestructura y prácticas de DevOps y CI/CD.
 
-De estos, sólo las tres primeras cubiertas o introducidas en esta guía. Los dos últimos puntos, que están relacionadas con el ciclo de vida de aplicación, se tratan en adicionales [en contenedores Docker Application Lifecycle con Microsoft Platform y herramientas](https://aka.ms/dockerlifecycleebook) libros electrónicos.
+En esta guía solo se cubren o introducen los tres primeros aspectos. Los dos últimos puntos, que están relacionados con el ciclo de vida de la aplicación, se tratan en el libro electrónico adicional [Ciclo de vida de aplicaciones de Docker en contenedor con la plataforma y las herramientas de Microsoft](https://aka.ms/dockerlifecycleebook).
 
 ## <a name="additional-resources"></a>Recursos adicionales
 
--   **Mark Russinovich. Microservicios: Una revolución de aplicación con la tecnología de la nube**
+-   **Mark Russinovich. Microservices: An application revolution powered by the cloud (Microservicios: una revolución de las aplicaciones con la tecnología de la nube)**
     [*https://azure.microsoft.com/blog/microservices-an-application-revolution-powered-by-the-cloud/*](https://azure.microsoft.com/blog/microservices-an-application-revolution-powered-by-the-cloud/)
 
--   **Martin Fowler. Microservicios**
+-   **Martin Fowler. Microservices (Microservicios)**
     [*http://www.martinfowler.com/articles/microservices.html*](http://www.martinfowler.com/articles/microservices.html)
 
--   **Martin Fowler. Requisitos previos de Microservicio**
+-   **Martin Fowler. Microservice Prerequisites (Requisitos previos de los microservicios)**
     [*http://martinfowler.com/bliki/MicroservicePrerequisites.html*](http://martinfowler.com/bliki/MicroservicePrerequisites.html)
 
--   **Jimmy Nilsson. Fragmentar Cloud Computing**
+-   **Jimmy Nilsson. Chunk Cloud Computing (Informática en la nube por fragmentos)**
     [*https://www.infoq.com/articles/CCC-Jimmy-Nilsson*](https://www.infoq.com/articles/CCC-Jimmy-Nilsson)
 
--   **Cesar de la Torre. En contenedores Docker ciclo de vida de aplicación con Microsoft Platform y herramientas** (libro electrónico descargable) [ *https://aka.ms/dockerlifecycleebook*](https://aka.ms/dockerlifecycleebook)
+-   **Cesar de la Torre. Containerized Docker Application Lifecycle with Microsoft Platform and Tools (Ciclo de vida de aplicaciones de Docker en contenedor con la plataforma y las herramientas de Microsoft)** (libro electrónico descargable) [*https://aka.ms/dockerlifecycleebook*](https://aka.ms/dockerlifecycleebook)
 
 
 
 
 >[!div class="step-by-step"]
-[Anterior] (service-oriented-architecture.md) [siguiente] (datos-soberanía-por-microservice.md)
+[Previous] (service-oriented-architecture.md) [Next] (data-sovereignty-per-microservice.md)

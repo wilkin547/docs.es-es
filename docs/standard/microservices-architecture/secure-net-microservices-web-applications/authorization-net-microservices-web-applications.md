@@ -1,6 +1,6 @@
 ---
-title: "Acerca de la autorización en .NET microservicios y las aplicaciones web"
-description: "Arquitectura de Microservicios de .NET para aplicaciones .NET en contenedores | Acerca de la autorización en .NET microservicios y las aplicaciones web"
+title: "Acerca de la autorización en microservicios y aplicaciones web de .NET"
+description: "Arquitectura de microservicios de .NET para aplicaciones .NET en contenedor | Acerca de la autorización en microservicios y aplicaciones web de .NET"
 keywords: Docker, microservicios, ASP.NET, contenedor
 author: mjrousos
 ms.author: wiwagn
@@ -8,17 +8,20 @@ ms.date: 05/26/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: 51adda4f5bdb28154f17b9a988ee2d887bf1d461
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 6cd7be9bc8216aecf85f99a76e859b411a8735b0
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
-# <a name="about-authorization-in-net-microservices-and-web-applications"></a>Acerca de la autorización en .NET microservicios y las aplicaciones web
+# <a name="about-authorization-in-net-microservices-and-web-applications"></a>Acerca de la autorización en microservicios y aplicaciones web de .NET
 
-Después de la autenticación, las API Web de ASP.NET Core necesario autorizar el acceso. Este proceso permite que las API de un servicio disponible para algunos usuarios autenticados, pero no a todos. [Autorización](https://docs.microsoft.com/aspnet/core/security/authorization/introduction) puede lleva a cabo según los roles de usuario o según una directiva personalizada, lo que puede incluir inspeccionando notificaciones u otra heurística.
+Después de la autenticación, las API web de ASP.NET Core deben autorizar el acceso. Este proceso permite que un servicio haga que las API estén disponibles para algunos usuarios autenticados, pero no para todos. La [autorización](https://docs.microsoft.com/aspnet/core/security/authorization/introduction) se puede llevar a cabo según los roles de los usuarios o según una directiva personalizada, que podría incluir la inspección de notificaciones u otro tipo de heurística.
 
-Restringir el acceso a una ruta principal de ASP.NET MVC es tan fácil como aplicar un atributo de autorizar al método de acción (o clase del controlador si las acciones de todos los del controlador requieren autorización), como se muestra en el ejemplo siguiente:
+Restringir el acceso a una ruta de ASP.NET Core MVC es tan fácil como aplicar un atributo Authorize al método de acción (o a la clase de controlador si todas las acciones del controlador requieren autorización), como se muestra en el ejemplo siguiente:
 
 ```csharp
 public class AccountController : Controller
@@ -34,13 +37,13 @@ public class AccountController : Controller
 }
 ```
 
-De forma predeterminada, se agrega un atributo Authorize sin parámetros limitará el acceso a los usuarios autenticados para esa acción o controlador. Para restringir aún más una API para que esté disponible sólo usuarios específicos, se puede expandir el atributo para especificar los roles necesarios o directivas que los usuarios deben cumplir.
+De forma predeterminada, agregar un atributo Authorize sin parámetros limitará el acceso a los usuarios autenticados para ese controlador o esa acción. Para restringir aún más una API para que esté disponible solo para usuarios específicos, el atributo se puede expandir para especificar los roles o las directivas necesarios que los usuarios deben cumplir.
 
 ## <a name="implementing-role-based-authorization"></a>Implementar la autorización basada en roles
 
-Identidad de ASP.NET Core tiene un concepto de roles integrado. Además de los usuarios, ASP.NET Core Identity almacena información sobre los distintos roles utilizados por la aplicación y realiza un seguimiento de los usuarios que están asignados a los roles. Estas asignaciones se pueden cambiar mediante programación con el tipo de RoleManager (que actualiza los roles en el almacenamiento persistente) y el tipo de UserManager (que puede asignar o quitar la asignación de usuarios de roles).
+ASP.NET Core Identity tiene un concepto de roles integrado. Además de los usuarios, ASP.NET Core Identity almacena información sobre los distintos roles que la aplicación usa y realiza un seguimiento de los usuarios que están asignados a cada rol. Estas asignaciones se pueden cambiar mediante programación con el tipo RoleManager (que actualiza los roles en el almacenamiento persistente) y el tipo UserManager (que puede asignar usuarios a los roles o quitarles la asignación).
 
-Si está realizando la autenticación con tokens de portador JWT, el middleware de autenticación de portador JWT de núcleo de ASP.NET rellenará los roles de usuario basados en notificaciones de rol que se encuentra en el token. Para limitar el acceso a una acción de MVC o el controlador para usuarios con roles específicos, puede incluir un parámetro de Roles en el encabezado de autorización, tal como se muestra en el ejemplo siguiente:
+Si está realizando la autenticación con tokens de portador JWT, el middleware de autenticación de portador JWT de ASP.NET Core rellenará los roles de un usuario según las notificaciones de rol que se encuentren en el token. Para limitar el acceso a una acción o un controlador de MVC a usuarios con roles específicos, puede incluir un parámetro Roles en el encabezado Authorize, tal como se muestra en el ejemplo siguiente:
 
 ```csharp
 [Authorize(Roles = "Administrator, PowerUser")]
@@ -57,9 +60,9 @@ public class ControlPanelController : Controller
 }
 ```
 
-En este ejemplo, solo los usuarios de los roles de administrador o PowerUser pueden tener acceso a las API en el controlador ControlPanel (por ejemplo, para ejecutar la acción SetTime). La API de cierre se restringe aún más para permitir el acceso únicamente a los usuarios de la función de administrador.
+En este ejemplo, solo los usuarios de los roles Administrator o PowerUser pueden tener acceso a las API del controlador ControlPanel (por ejemplo, para ejecutar la acción SetTime). La API ShutDown se restringe aún más para permitir el acceso únicamente a los usuarios con el rol Administrator.
 
-Para requerir que un usuario pertenecer a varios roles, utilice varios atributos de autorizar, tal como se muestra en el ejemplo siguiente:
+Para pedir a un usuario que tenga varios roles, se usan varios atributos Authorize, como se muestra en este ejemplo:
 
 ```csharp
 [Authorize(Roles = "Administrator, PowerUser")]
@@ -72,17 +75,17 @@ public ActionResult API1 ()
 
 En este ejemplo, para llamar a API1, un usuario debe:
 
--   En el administrador *o* PowerUser rol, *y*
+-   Tener el rol Administrator *o* PowerUser *y*
 
--   Estar en el rol RemoteEmployee, *y*
+-   Tener el rol RemoteEmployee *y*
 
 -   Satisfacer a un controlador personalizado para la autorización de CustomPolicy.
 
-## <a name="implementing-policy-based-authorization"></a>Implementar la autorización basada en directivas
+## <a name="implementing-policy-based-authorization"></a>Implementación de la autorización basada en directivas
 
-También se pueden escribir reglas de autorización personalizada con [directivas de autorización](https://docs.asp.net/en/latest/security/authorization/policies.html). En esta sección se proporciona información general. Más detalle está disponible en online [taller de autorización de ASP.NET](https://github.com/blowdart/AspNetAuthorizationWorkshop).
+También se pueden escribir reglas de autorización personalizada con [directivas de autorización](https://docs.asp.net/en/latest/security/authorization/policies.html). En esta sección se proporciona información general. En el [Taller de autorización de ASP.NET](https://github.com/blowdart/AspNetAuthorizationWorkshop) en línea encontrará más información.
 
-Directivas de autorización personalizadas se registran en el método Startup.ConfigureServices mediante el servicio. Método AddAuthorization. Este método toma a un delegado que configura un argumento AuthorizationOptions.
+Las directivas de autorización personalizadas se registran en el método Startup.ConfigureServices mediante el método service.AddAuthorization. Este método toma a un delegado que configura un argumento AuthorizationOptions.
 
 ```csharp
 services.AddAuthorization(options =>
@@ -96,23 +99,23 @@ services.AddAuthorization(options =>
 });
 ```
 
-Como se muestra en el ejemplo, las directivas pueden asociarse con distintos tipos de requisitos. Después de que se registran las directivas, se pueden aplicar a una acción o controlador pasando el nombre de la directiva como el argumento de la directiva del atributo Authorize (por ejemplo, \[Authorize(Policy="EmployeesOnly")\]) pueden tener directivas varios requisitos, no solo uno (como se muestra en estos ejemplos).
+Como se muestra en el ejemplo, las directivas pueden asociarse con distintos tipos de requisitos. Una vez registradas las directivas, se pueden aplicar a una acción o a un controlador pasando el nombre de la directiva como el argumento de la directiva del atributo Authorize (por ejemplo, \[Authorize[Policy="EmployeesOnly"]\]). Las directivas pueden tener varios requisitos, no solo uno (como se muestra en estos ejemplos).
 
-En el ejemplo anterior, la primera llamada AddPolicy es simplemente una manera alternativa de la autorización por rol. Si \[Authorize(Policy="AdministratorsOnly")\] se aplica a una API, solo los usuarios del rol de administrador podrán tener acceso a él.
+En el ejemplo anterior, la primera llamada AddPolicy es simplemente una manera alternativa de autorizar por rol. Si \[Authorize(Policy="AdministratorsOnly")\] se aplica a una API, solo los usuarios del rol Administrator podrán tener acceso a ella.
 
-La segunda llamada AddPolicy muestra una manera sencilla de requieren que una notificación concreta debe estar presente para el usuario. El método RequireClaim también opcionalmente toma los valores esperados para la notificación. Si se especifican valores, el requisito se cumple sólo si el usuario tiene tanto una notificación del tipo correcto como uno de los valores especificados. Si usas el middleware de autenticación de portador JWT, todas las propiedades JWT estarán disponibles como notificaciones de usuario.
+La segunda llamada AddPolicy muestra una manera sencilla de pedir que una notificación concreta esté presente para el usuario. El método RequireClaim también toma opcionalmente valores esperados para la notificación. Si se especifican valores, el requisito se cumple solo si el usuario tiene tanto una notificación del tipo correcto como uno de los valores especificados. Si usa el middleware de autenticación de portador JWT, todas las propiedades JWT estarán disponibles como notificaciones de usuario.
 
-La directiva más interesante que se muestra a continuación es en el tercer método AddPolicy, ya que usa un requisito de autorización personalizada. Mediante el uso de los requisitos de autorización personalizada, puede tener un gran control sobre cómo se realiza la autorización. Para que funcione, debe implementar estos tipos:
+La directiva más interesante que se muestra aquí es en el tercer método AddPolicy, ya que usa un requisito de autorización personalizada. Mediante el uso de los requisitos de autorización personalizada, puede tener un gran control sobre cómo se realiza la autorización. Para que funcione, debe implementar estos tipos:
 
--   Un tipo que deriva de IAuthorizationRequirement y que contiene campos que especifiquen los detalles del requisito de requisitos. En el ejemplo, se trata de un campo de antigüedad para el tipo de MinimumAgeRequirement de ejemplo.
+-   Un tipo Requirements que deriva de IAuthorizationRequirement y que contiene campos en que se especifican los detalles del requisito. En el ejemplo, se trata de un campo de edad para el tipo MinimumAgeRequirement de ejemplo.
 
--   Un controlador que implementa AuthorizationHandler&lt;T&gt;, donde T es el tipo de IAuthorizationRequirement que puede satisfacer el controlador. El controlador debe implementar el método HandleRequirementAsync, que comprueba si un contexto especificado que contiene información sobre el usuario satisface el requisito.
+-   Un controlador que implementa AuthorizationHandler&lt;T&gt;, donde T es el tipo de IAuthorizationRequirement que el controlador puede satisfacer. El controlador debe implementar el método HandleRequirementAsync, que comprueba si un contexto especificado que contiene información sobre el usuario satisface el requisito.
 
-Si el usuario cumple los requisitos, una llamada al contexto. Correctamente will indican que el usuario está autorizado. Si hay varias maneras de que un usuario podría satisfacer un requisito de autorización, es pueden crear varios controladores.
+Si el usuario cumple el requisito, una llamada a context.Succeed indicará que el usuario está autorizado. Si hay varias maneras de que un usuario pueda satisfacer un requisito de autorización, se pueden crear varios controladores.
 
-Además de registrar los requisitos de directiva personalizada con llamadas AddPolicy, también tenga que registrar controladores de requisito personalizado mediante la inserción de dependencias (services. AddTransient&lt;IAuthorizationHandler, MinimumAgeHandler&gt;()).
+Además de registrar los requisitos de directiva personalizada con llamadas AddPolicy, también debe registrar los controladores de requisito personalizado mediante la inserción de dependencias (services. AddTransient&lt;IAuthorizationHandler, MinimumAgeHandler&gt;()).
 
-Un ejemplo de un requisito de autorización personalizada y un controlador para la comprobación de edad de un usuario (según una notificación DateOfBirth) está disponible en el núcleo de ASP.NET [documentación de autorización](https://docs.asp.net/en/latest/security/authorization/policies.html).
+Un ejemplo de un requisito de autorización personalizada y un controlador para comprobar la edad de un usuario (según una notificación DateOfBirth) está disponible en la [documentación de autorización](https://docs.asp.net/en/latest/security/authorization/policies.html) de ASP.NET Core.
 
 ## <a name="additional-resources"></a>Recursos adicionales
 
@@ -122,14 +125,14 @@ Un ejemplo de un requisito de autorización personalizada y un controlador para 
 -   **Autorización de ASP.NET Core**
     [*https://docs.microsoft.com/aspnet/core/security/authorization/introduction*](https://docs.microsoft.com/aspnet/core/security/authorization/introduction)
 
--   **Autorización basada en funciones**
+-   **Autorización basada en roles**
     [*https://docs.microsoft.com/aspnet/core/security/authorization/roles*](https://docs.microsoft.com/aspnet/core/security/authorization/roles)
 
--   **Autorización personalizada basada en directivas**
+-   **Autorización basada en directivas personalizadas**
     [*https://docs.microsoft.com/aspnet/core/security/authorization/policies*](https://docs.microsoft.com/aspnet/core/security/authorization/policies)
 
 
 
 
 >[!div class="step-by-step"]
-[Anterior] (index.md) [siguiente] (desarrollador de aplicaciones-secretos storage.md)
+[Previous] (index.md) [Next] (developer-app-secrets-storage.md)

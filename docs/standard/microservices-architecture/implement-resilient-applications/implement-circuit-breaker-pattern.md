@@ -1,36 +1,39 @@
 ---
-title: "Implementar el patrón de disyuntor"
-description: "Arquitectura de Microservicios de .NET para aplicaciones .NET en contenedores | Implementar el patrón de disyuntor"
+title: "Implementación del patrón de interruptor"
+description: "Arquitectura de microservicios de .NET para aplicaciones .NET en contenedor | Implementación del patrón de interruptor"
 keywords: Docker, microservicios, ASP.NET, contenedor
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
+ms.date: 11/12/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: 2a629e25a7565aaba156f68cf06d9a24b6c2b8b0
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 5d7db6899068f84f9165022cfbf17767a75e7db9
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
-# <a name="implementing-the-circuit-breaker-pattern"></a>Implementar el patrón de disyuntor
+# <a name="implementing-the-circuit-breaker-pattern"></a>Implementación del patrón de interruptor
 
-Tal y como se indicó anteriormente, debe controlar los errores que pueden tardar una cantidad variable de tiempo de recuperación, como podría ocurrir al intentar conectarse a un recurso o servicio remoto. Control de este tipo de error puede mejorar la estabilidad y la resistencia de una aplicación.
+Tal y como se indicó anteriormente, debe controlar los errores que pueden comportar un tiempo variable de recuperación, como puede suceder al intentar conectarse a un recurso o servicio remoto. Controlar este tipo de error puede mejorar la estabilidad y la resistencia de una aplicación.
 
-En un entorno distribuido, llamadas a servicios y recursos remotos pueden producir errores debido a errores transitorios, como conexiones de red lentas y tiempos de espera, o si se va recursos lenta o no están disponibles temporalmente. Estos errores suelen corrigen por sí mismos después de unos minutos y una aplicación de nube sólidas debe estar preparada para controlarlos mediante el uso de una estrategia como en el patrón de reintento.
+En un entorno distribuido, las llamadas a servicios y recursos remotos pueden producir errores causados por errores transitorios, como tiempos de espera y conexiones de red lentas, o si los recursos van lentos o no están disponibles temporalmente. Estos errores suelen corregirse solos pasados unos minutos y hay que tener una aplicación sólida en la nube preparada para controlarlos mediante el uso de una estrategia como el patrón de reintento.
 
-Sin embargo, también puede haber situaciones donde los errores son debido a eventos imprevistos que pueden tardar mucho más tiempo en corregir. Estos errores pueden abarcar gravedad de una pérdida parcial de conectividad para el error completo de un servicio. En estas situaciones, podría ser sentido para una aplicación para continuamente volver a intentar una operación que no es probable que lleve a cabo correctamente. En su lugar, se debe codificar la aplicación para que acepte que ha fallado la operación y controlar los errores en consecuencia.
+Pero también puede haber situaciones en que los errores se deban a eventos imprevistos que pueden tardar mucho más tiempo en corregirse. La gravedad de estos errores puede ir desde una pérdida parcial de conectividad hasta el fallo total del servicio. En estas situaciones, no tiene sentido que una aplicación reintente continuamente una operación que es probable que no se lleve a cabo correctamente. Lo que debe hacer la aplicación es codificarse para aceptar que la operación ha fallado y controlar el error en consecuencia.
 
-El patrón de disyuntor tiene un propósito diferente que el patrón de reintento. El patrón de reintento permite a una aplicación volver a intentar una operación de la expectativa de que finalmente se realizará correctamente la operación. El patrón de disyuntor impide que una aplicación realiza una operación que es probable que un error. Una aplicación puede combinar estos dos modelos mediante el patrón de reintento para invocar una operación a través de un disyuntor. Sin embargo, la lógica de reintento debe ser sensible a las excepciones devueltas por el disyuntor, y deben abandonar reintentos si el disyuntor indica que un error no es transitorio.
+El patrón de interruptor tiene una finalidad distinta a la del patrón de reintento. El patrón de reintento permite que una aplicación reintente una operación con la expectativa de que finalmente se realice correctamente. El patrón de interruptor impide que una aplicación realice una operación que es probable que falle. Una aplicación puede combinar estos dos patrones utilizando el patrón de reintento para invocar una operación mediante un interruptor. Pero la lógica de reintento debe ser sensible a las excepciones devueltas por el interruptor y debe dejar de intentar llevar a cabo la operación si el interruptor indica que un error no es transitorio.
 
-## <a name="implementing-a-circuit-breaker-pattern-with-polly"></a>Implementar un patrón de disyuntor con Polly
+## <a name="implementing-a-circuit-breaker-pattern-with-polly"></a>Implementación de un patrón de interruptor con Polly
 
-Como al implementar reintentos, el enfoque recomendado para los disyuntores consiste en aprovechar las ventajas de eficacia comprobadas de bibliotecas de .NET como Polly.
+Al implementar los reintentos, en el caso de los interruptores se recomienda aprovechar bibliotecas .NET de eficacia probada, como Polly.
 
-La aplicación eShopOnContainers utiliza la directiva de disyuntor de Polly al implementar los reintentos HTTP. De hecho, la aplicación aplica a las dos directivas a la clase de utilidad ResilientHttpClient. Siempre que se use un objeto de tipo ResilientHttpClient para las solicitudes HTTP (desde eShopOnContainers), que va a aplicar esas directivas de ambos, pero puede agregar directivas adicionales, demasiado.
+La aplicación eShopOnContainers utiliza la directiva de interruptor de Polly al implementar los reintentos de HTTP. De hecho, la aplicación aplica las dos directivas a la clase de utilidad ResilientHttpClient. Siempre que use un objeto del tipo ResilientHttpClient para las solicitudes HTTP (desde eShopOnContainers), va a aplicar esas dos directivas, aunque también puede agregar directivas adicionales.
 
-El único que se agrega a continuación al código utilizado para los reintentos de llamada HTTP es el código que agrega la directiva de disyuntor a la lista de directivas que se va a usar, tal como se muestra al final del código siguiente:
+En este caso, lo único que se agrega al código utilizado para los reintentos de llamada HTTP es el código en el que debe agregar la directiva de interruptor a la lista de directivas que se van a utilizar, como se muestra al final del código siguiente:
 
 ```csharp
 public ResilientHttpClient CreateResilientHttpClient()
@@ -75,15 +78,15 @@ private Policy[] CreatePolicies()
 }
 ```
 
-El código agrega una directiva para el contenedor de HTTP. Que la directiva define un disyuntor que se abre cuando el código detecta el número especificado de excepciones consecutivos (excepciones en una fila), como pasa en el parámetro exceptionsAllowedBeforeBreaking (5 en este caso). Una vez abierto el circuito, las solicitudes HTTP no funcionan, pero se produce una excepción.
+El código agrega una directiva al contenedor de HTTP. Esa directiva define un interruptor que se abre cuando el código detecta el número especificado de excepciones consecutivas (excepciones seguidas), como sucede en el parámetro exceptionsAllowedBeforeBreaking (5 en este caso). Una vez abierto el circuito, las solicitudes HTTP no funcionan, pero se produce una excepción.
 
-Los disyuntores también debe utilizarse para redirigir las solicitudes a una infraestructura de reserva si es posible que tenga problemas en un recurso concreto que se implementa en un entorno diferente de la aplicación cliente o servicio que realiza la llamada HTTP. De este modo, si se produce una interrupción en el centro de datos que afecta solo la microservicios de back-end, pero no las aplicaciones de cliente, las aplicaciones cliente pueden redirigir a los servicios de reserva. Polly está planeando una directiva nueva para automatizar esta tarea, [directiva de conmutación por error](https://github.com/App-vNext/Polly/wiki/Polly-Roadmap#failover-policy) escenario.
+Los interruptores también deben utilizarse para redirigir las solicitudes a una infraestructura de reserva siempre que tenga problemas en un recurso concreto que se implemente en un entorno distinto al de la aplicación o del servicio del cliente que realiza la llamada HTTP. De este modo, si se produce una interrupción en el centro de datos que afecta solo a los microservicios de back-end, pero no a las aplicaciones cliente, estas aplicaciones pueden redirigir a los servicios de reserva. Polly está creando una directiva nueva para automatizar este escenario de [directiva de conmutación por error](https://github.com/App-vNext/Polly/wiki/Polly-Roadmap#failover-policy).
 
-Por supuesto, todas esas características están en los casos donde está administrando la conmutación por error desde dentro del código. NET, en lugar de tener que administran automáticamente para Azure, con transparencia de ubicación.
+Todas estas características sirven para los casos en que administre la conmutación por error desde el código .NET, y no cuando Azure los administra automáticamente por usted, con la transparencia de ubicación.
 
 ## <a name="using-the-resilienthttpclient-utility-class-from-eshoponcontainers"></a>Uso de la clase de utilidad ResilientHttpClient desde eShopOnContainers
 
-Utilice la clase de utilidad ResilientHttpClient de forma similar a cómo utilizar la clase .NET HttpClient. En el ejemplo siguiente de la aplicación web MVC de eShopOnContainers (la clase de agente OrderingService utilizada por OrderController), el objeto ResilientHttpClient se aplica a través del parámetro httpClient del constructor. A continuación, el objeto se usa para realizar solicitudes HTTP.
+La clase de utilidad ResilientHttpClient se utiliza de forma similar a cómo se utiliza la clase .NET HttpClient. En el ejemplo siguiente de la aplicación web MVC de eShopOnContainers (la clase de agente OrderingService utilizada por OrderController), el objeto ResilientHttpClient se aplica mediante el parámetro httpClient del constructor. A continuación, el objeto se usa para realizar solicitudes HTTP.
 
 ```csharp
 public class OrderingService : IOrderingService
@@ -134,90 +137,92 @@ public class OrderingService : IOrderingService
 }
 ```
 
-Cada vez que la \_se utiliza el objeto de miembro apiClient, usa internamente la clase contenedora con Polly policiesؙ: la directiva de reintentos, la directiva de disyuntor y cualquier otra directiva que desea aplicar de la colección de directivas de Polly.
+Cada vez que se utiliza el objeto de miembro \_apiClient, se usa internamente la clase contenedora con las directivas de Polly: la directiva de reintentos, la directiva de interruptor y cualquier otra directiva de Polly que quiera aplicar.
 
-## <a name="testing-retries-in-eshoponcontainers"></a>Probar los reintentos en eShopOnContainers
+## <a name="testing-retries-in-eshoponcontainers"></a>Pruebas de los reintentos en eShopOnContainers
 
-Cada vez que inicia la solución eShopOnContainers en un host Docker, debe iniciar varios contenedores. Algunos de los contenedores son más lentos iniciar e inicializar, al igual que el contenedor de SQL Server. Esto es especialmente cierto en la primera vez que implemente la aplicación eShopOnContainers en Docker, porque es necesario configurar las imágenes y la base de datos. El hecho de que algunos contenedores de inician con una velocidad superior otros pueden provocar el resto de los servicios inicialmente iniciar excepciones de HTTP, incluso si configura las dependencias entre los contenedores en la redacción docker nivel, como se explica en las secciones anteriores. Los docker-crear dependencias entre los contenedores son simplemente en el nivel de proceso. Se puede iniciar el proceso de punto de entrada del contenedor, pero SQL Server podrían no estar preparado para las consultas. El resultado puede ser una cascada de errores y la aplicación puede obtener una excepción al intentar utilizar dicho contenedor determinado.
+Cada vez que inicie la solución eShopOnContainers en un host Docker, debe iniciar varios contenedores. Algunos de los contenedores tardan más en iniciarse e inicializarse, como el contenedor de SQL Server. Esto sucede especialmente la primera vez que implementa la aplicación eShopOnContainers en Docker, porque las imágenes y la base de datos se tienen que configurar. El hecho de que algunos contenedores se inicien más lentamente que otros puede provocar que el resto de servicios lancen inicialmente excepciones HTTP, aunque configure las dependencias entre contenedores en el nivel de Docker Compose, como se ha explicado en las secciones anteriores. Las dependencias de Docker Compose entre contenedores solo se dan en el nivel de proceso. El proceso de punto de entrada del contenedor se puede iniciar, pero podría ser que SQL Server no estuviera listo para las consultas. El resultado puede ser una cascada de errores y la aplicación puede obtener una excepción al intentar utilizar dicho contenedor.
 
-También puede ver este tipo de error en el inicio cuando la aplicación se implementa en la nube. En ese caso, orchestrators podría ser mover contenedores de un nodo o la máquina virtual a otra (que es, a partir de las nuevas instancias) cuando el número de contenedores de equilibrio en todos los nodos del clúster.
+Este tipo de error también puede darse en el inicio, cuando la aplicación se está implementando en la nube. En ese caso, podría ser que los orquestadores movieran los contenedores de un nodo o máquina virtual a otro (iniciando así nuevas instancias) al repartir equitativamente los contenedores entre los nodos de clúster.
 
-La manera eShopOnContainers soluciona este problema es mediante el patrón de reintento que se mostrados anteriormente. También es ¿por qué, al comienzo de la solución, podría obtener seguimientos del registro o advertencias similar al siguiente:
+La forma que tiene eShopOnContainers de solucionar este problema es utilizar el patrón de reintento que hemos mostrado anteriormente. Este es también el motivo por el cual, al iniciar la solución, puede ser que reciba seguimientos del registro o advertencias como las siguientes:
 
-> "**Reintento 1 implementa con RetryPolicy de Polly**, debido a que: System.Net.Http.HttpRequestException: se produjo un error al enviar la solicitud. ---&gt;System.Net.Http.CurlException: No se pudo conectar al servidor\\n en System.Net.Http.CurlHandler.ThrowIfCURLEError (error CURLcode)\\n en \[... \].
+> "**Reintento 1 implementado con RetryPolicy de Polly**, en que: System.Net.Http.HttpRequestException: error al enviar la solicitud. ---&gt; System.Net.Http.CurlException: no se pudo conectar al servidor\\n en System.Net.Http.CurlHandler.ThrowIfCURLEError(CURLcode error)\\n en \[...\].
 
-## <a name="testing-the-circuit-breaker-in-eshoponcontainers"></a>Probar el disyuntor en eShopOnContainers
+## <a name="testing-the-circuit-breaker-in-eshoponcontainers"></a>Prueba del interruptor en eShopOnContainers
 
-Hay varias maneras de poder abrir el circuito y probarlo con eShopOnContainers.
+Hay varias formas de abrir el circuito y probarlo con eShopOnContainers.
 
-Una opción consiste en reducir el número permitido de reintentos en 1 en la directiva de disyuntor y volver a implementar la solución completa en Docker. Con un reintento único, hay una gran probabilidad de que una solicitud HTTP se producirá un error durante la implementación, el disyuntor se abrirá y se produce un error.
+Una opción es reducir el número permitido de reintentos a 1 en la directiva del interruptor y volver a implementar la solución completa en Docker. Con un solo reintento, hay una gran probabilidad de que una solicitud HTTP falle durante la implementación, el interruptor se abra y se produzca un error.
 
-Otra opción es usar middleware personalizado que se implementa en la ordenación microservicio. Cuando se habilita este middleware, detecta todas las solicitudes HTTP y devuelve el código de estado 500. Puede habilitar el middleware realizando una solicitud GET al error del URI, similar al siguiente:
+Otra opción consiste en usar un middleware personalizado que se implemente en el microservicio `Basket`. Al habilitar este middleware, detecta todas las solicitudes HTTP y devuelve el código de estado 500. Para habilitar el middleware, envíe una solicitud GET al URI que falla, de forma similar a esta:
 
--   GET/error
+-   GET /failing
 
-Esta solicitud devuelve el estado actual del middleware de. Si está habilitado el software intermedio, la solicitud devuelve el código de estado 500. Si se deshabilita el software intermedio, no hay ninguna respuesta.
+Esta solicitud devuelve el estado actual del middleware. Si el middleware está habilitado, la solicitud devuelve el código de estado 500. Si el middleware está deshabilitado, no se emite ninguna respuesta.
 
--   GET/errores? habilitar
+-   GET /failing?enable
 
 Esta solicitud habilita el middleware.
 
--   GET/errores? deshabilitar
+-   GET /failing?disable
 
 Esta solicitud deshabilita el middleware.
 
-Por ejemplo, una vez que se ejecuta la aplicación, puede habilitar el middleware realizando una solicitud usando el siguiente URI en cualquier explorador. Tenga en cuenta que la ordenación microservicio utiliza el puerto 5102.
+Por ejemplo, cuando la aplicación se está ejecutando, puede habilitar el middleware realizando una solicitud con el siguiente URI en cualquier explorador. Tenga en cuenta que el microservicio de ordenación utiliza el puerto 5103.
 
-http://localhost:5102 / errores? habilitar
+http://localhost:5103/failing?enable
 
-A continuación, puede comprobar el estado usando el URI [http://localhost:5102 / errores](http://localhost:5100/failing), tal y como se muestra en la figura 10-4.
+A continuación, puede comprobar el estado usando el URI [http://localhost:5103/failing](http://localhost:5103/failing), como se muestra en la Figura 10-4.
 
 ![](./media/image4.png)
 
-**Figura 10-4**. Simular un error con middleware ASP.NET
+**Figura 10-4**. Comprobación del estado del middleware ASP.NET "Error": en este caso, deshabilitado 
 
-En este momento, la ordenación responde de microservicio con código de estado 500 cada vez que se llama a invocarlo.
+En este punto, el microservicio de la cesta responde con el código de estado 500 siempre que su llamada lo invoque.
 
-Una vez que se está ejecutando el software intermedio, puede intentar realizar un pedido de la aplicación web MVC. Debido al error de las solicitudes, se abrirá el circuito.
+Cuando se esté ejecutando el middleware, puede intentar realizar un pedido desde la aplicación web MVC. Como el error falla, el circuito se abre.
 
-En el ejemplo siguiente, puede ver que la aplicación web MVC tiene una instrucción catch bloquear en la lógica para realizar un pedido. Si el código detecta una excepción de circuito abierto, muestra al usuario un mensaje descriptivo que les indica que esperar.
+En el ejemplo siguiente, la aplicación web MVC presenta un bloque catch en la lógica para realizar un pedido. Si el código detecta una excepción de circuito abierto, muestra un mensaje descriptivo al usuario en que se le indica que espere.
 
 ```csharp
-[HttpPost]
-public async Task<IActionResult> Create(Order model, string action)
+public class CartController : Controller
 {
-    try
+    //…
+    public async Task<IActionResult> Index()
     {
-        if (ModelState.IsValid)
+        try
         {
-            var user = _appUserParser.Parse(HttpContext.User);
-            await _orderSvc.CreateOrder(model);
-            //Redirect to historic list.
-            return RedirectToAction("Index");
+            //… Other code
         }
-    }
-    catch(BrokenCircuitException ex)
+        catch (BrokenCircuitException)
+        {
+            // Catches error when Basket.api is in circuit-opened mode                 
+            HandleBrokenCircuitException();
+        }
+        return View();
+    }       
+
+    private void HandleBrokenCircuitException()
     {
-        ModelState.AddModelError("Error",
-            "It was not possible to create a new order, please try later on");
+        TempData["BasketInoperativeMsg"] = "Basket Service is inoperative, please try later on. (Business message due to Circuit-Breaker)";
     }
-    return View(model);
 }
 ```
 
-Este es un resumen. La directiva de reintentos prueba varias veces para que la solicitud HTTP y obtiene errores HTTP. Cuando el número de intentos alcanza el número máximo establecido para la directiva de disyuntor (en este caso, 5), la aplicación produce una BrokenCircuitException. El resultado es un mensaje descriptivo, como se muestra en la figura 10-5.
+Aquí tiene un resumen. La directiva de reintentos intenta realizar la solicitud HTTP varias veces y obtiene errores HTTP. Cuando el número de intentos alcanza el número máximo establecido para la directiva del interruptor (en este caso, 5), la aplicación emite la excepción BrokenCircuitException. El resultado es un mensaje descriptivo, como el que se muestra en la Figura 10-5.
 
 ![](./media/image5.png)
 
-**Figura 5-10**. Disyuntor devolviendo un error en la interfaz de usuario
+**Figura 10-5**. Interruptor que devuelve un error en la interfaz de usuario
 
-Puede implementar una lógica diferente para cuando se abra el circuito. O bien puede intentar una solicitud HTTP con un microservicio de back-end diferente si hay un centro de datos de reserva o el sistema back-end redundante.
+Puede implementar una lógica que indique cuándo se debe abrir el circuito. También puede probar una solicitud HTTP en un microservicio de back-end distinto si se dispone de un centro de datos de reserva o un sistema back-end redundante.
 
-Por último, otra posibilidad de que el CircuitBreakerPolicy es usar aíslan (lo que obliga a abrir y mantiene abierto el circuito) y restablecimiento (que se cierra nuevo). Puede utilizarse para crear un punto de conexión HTTP de utilidad que invoca a aislar y restablecimiento directamente en la directiva. Este tipo de extremo HTTP también podría usarse, protegida adecuadamente, en el entorno de producción para aislar temporalmente un sistema de nivel inferior, como cuando desee actualizarlo. O bien, podría viaje el circuito manualmente para proteger un sistema de nivel inferior que sospecha que se produzca un error.
+Por último, otra posibilidad de CircuitBreakerPolicy es utilizar Aislar (que fuerza y mantiene la apertura del circuito) y Restablecer (que lo cierra de nuevo). Estas características se pueden utilizar para crear un punto de conexión HTTP de utilidad que invoque Aislar y Restablecer directamente en la directiva. Este tipo de punto de conexión HTTP, protegido adecuadamente, también se puede usar en el entorno de producción para aislar temporalmente un sistema de nivel inferior, como cuando quiere actualizarlo. También puede activar el circuito manualmente para proteger un sistema de nivel inferior que le parezca que está fallando.
 
 ## <a name="adding-a-jitter-strategy-to-the-retry-policy"></a>Agregar una estrategia de vibración a la directiva de reintentos
 
-Una directiva de reintentos regular puede afectar a su sistema en los casos de escalabilidad y alta simultaneidad y en elevada contención. Para superar los picos de reintentos similar procedentes de muchos clientes en caso de interrupciones parciales, una buena solución es agregar una estrategia de vibración a la directiva de algoritmo de reintento. Esto puede mejorar el rendimiento general del sistema to-end mediante la adición de aleatoriedad al retroceso exponencial. Esto se extiende los picos cuando surgen problemas. Cuando usas Polly, código para implementar la vibración podría ser similar al ejemplo siguiente:
+Una directiva de reintentos normal puede afectar a su sistema en casos de escalabilidad y simultaneidad altas y de gran contención. Para gestionar los picos de reintentos similares procedentes de diferentes clientes en caso de interrupciones parciales, una buena solución es agregar una estrategia de vibración a la directiva o algoritmo de reintento. Esto puede mejorar el rendimiento general del sistema de un extremo a otro añadiendo aleatoriedad al retroceso exponencial. De esta forma, cuando surgen problemas, los picos se reparten. Al utilizar Polly, el código para implementar la vibración puede parecerse a este ejemplo:
 
 ```csharp
 Random jitterer = new Random();
@@ -230,18 +235,18 @@ Policy.Handle<HttpResponseException>() // etc
 
 ## <a name="additional-resources"></a>Recursos adicionales
 
--   **Vuelva a intentar patrón**
+-   **Patrón de reintento**
     [*https://docs.microsoft.com/azure/architecture/patterns/retry*](https://docs.microsoft.com/azure/architecture/patterns/retry)
 
--   **Resistencia de conexión** (Entity Framework Core) [ *https://docs.microsoft.com/ef/core/miscellaneous/connection-resiliency*](https://docs.microsoft.com/ef/core/miscellaneous/connection-resiliency)
+-   **Resistencia de conexión** (núcleo del marco de entidad) [*https://docs.microsoft.com/ef/core/miscellaneous/connection-resiliency*](https://docs.microsoft.com/ef/core/miscellaneous/connection-resiliency)
 
--   **Polly** (resistencia de .NET y la biblioteca de control de errores transitorios) [ *https://github.com/App-vNext/Polly*](https://github.com/App-vNext/Polly)
+-   **Polly** (biblioteca de control de errores transitorios y resistencia .NET) [ *https://github.com/App-vNext/Polly*](https://github.com/App-vNext/Polly)
 
--   **Patrón de disyuntor**
+-   **Patrón de interruptor**
     [*https://docs.microsoft.com/azure/architecture/patterns/circuit-breaker*](https://docs.microsoft.com/azure/architecture/patterns/circuit-breaker)
 
--   **Marc Saavedra. Vibración: Hacer cosas mejor con aleatoriedad** https://brooker.co.za/blog/2015/03/21/backoff.html
+-   **Marc Brooker. Jitter: Making Things Better With Randomness** (Vibración: hacer mejor las cosas gracias a la aleatoriedad) https://brooker.co.za/blog/2015/03/21/backoff.html
 
 
 >[!div class="step-by-step"]
-[Anterior] (implement-http-call-retries-exponential-backoff-polly.md) [siguiente] (aplicación-monitor-health.md)
+[Anterior] (implement-http-call-retries-exponential-backoff-polly.md) [Siguiente] (monitor-app-health.md)

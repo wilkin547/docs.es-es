@@ -1,6 +1,6 @@
 ---
 title: "Implementación de reintentos de llamada HTTP con retroceso exponencial con Polly"
-description: "Arquitectura de Microservicios de .NET para aplicaciones .NET en contenedores | Implementación de reintentos de llamada HTTP con retroceso exponencial con Polly"
+description: "Arquitectura de microservicios de .NET para aplicaciones .NET en contenedores | Implementación de reintentos de llamada HTTP con retroceso exponencial con Polly"
 keywords: Docker, microservicios, ASP.NET, contenedor
 author: CESARDELATORRE
 ms.author: wiwagn
@@ -8,19 +8,22 @@ ms.date: 05/26/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: 1ed48142546403ea710f4c132e038521232c20ed
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 122f617874188d3bffe689d6b3cf7d7249c59c3b
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="implementing-http-call-retries-with-exponential-backoff-with-polly"></a>Implementación de reintentos de llamada HTTP con retroceso exponencial con Polly
 
-El enfoque recomendado para los reintentos con retroceso exponencial consiste en aprovechar las ventajas de las bibliotecas de .NET más avanzadas como el código abierto [Polly](https://github.com/App-vNext/Polly) biblioteca.
+El enfoque recomendado para los reintentos con retroceso exponencial consiste en aprovechar las ventajas de las bibliotecas de .NET más avanzadas como la biblioteca de código abierto [Polly](https://github.com/App-vNext/Polly).
 
-Polly es una biblioteca de .NET que proporciona capacidades de control de errores transitorios y resistencia. Puede implementar esas capacidades fácilmente mediante la aplicación de directivas de Polly como reintento, disyuntor, aislamiento de cierre, tiempo de espera y de respaldo. Polly tiene como destino .NET 4.x y el estándar de .NET versión 1.0 (que es compatible con .NET Core).
+Polly es una biblioteca de .NET que proporciona capacidades de resistencia y control de errores transitorios. Puede implementar esas capacidades fácilmente mediante la aplicación de directivas de Polly como reintento, disyuntor, aislamiento de cierre, tiempo de espera y respaldo. Polly tiene como destino .NET 4.x y .NET Standard versión 1.0 (que es compatible con .NET Core).
 
-La directiva de reintentos en Polly es el enfoque usado en eShopOnContainers al implementar los reintentos HTTP. Puede implementar una interfaz, por lo que puede insertar funcionalidad HttpClient estándar o una versión resistente de HttpClient mediante Polly, dependiendo de la configuración de directiva de reintento que desea usar.
+La directiva de reintentos en Polly es el enfoque usado en eShopOnContainers al implementar los reintentos HTTP. Puede implementar una interfaz, por lo que puede insertar la función HttpClient estándar o una versión resistente de HttpClient mediante Polly, según la configuración de la directiva de reintento que quiera usar.
 
 En el ejemplo siguiente se muestra la interfaz implementada en eShopOnContainers.
 
@@ -41,7 +44,7 @@ public interface IHttpClient
 }
 ```
 
-Puede usar la implementación estándar si no desea usar un mecanismo resistente a errores, como cuando se está desarrollando o probando enfoques más sencillos. El código siguiente muestra el estándar HttpClient permitir las solicitudes de implementación con tokens de autenticación como un caso opcional.
+Puede usar la implementación estándar si no quiere usar un mecanismo resistente, como cuando desarrolla o prueba enfoques más sencillos. El código siguiente muestra la implementación de HttpClient estándar en que se permiten las solicitudes con tokens de autenticación como un caso opcional.
 
 ```csharp
 public class StandardHttpClient : IHttpClient
@@ -76,7 +79,7 @@ public class StandardHttpClient : IHttpClient
         // Rest of the code and other Http methods ...
 ```
 
-La implementación interesante es codificar la clase de otro, de forma similar, pero usa Polly para implementar los mecanismos resistentes que desea usar, en el ejemplo siguiente, vuelve a intentar con retroceso exponencial.
+La implementación interesante es codificar otra clase similar, pero usar Polly para implementar los mecanismos resistentes que quiere usar (en el ejemplo siguiente, reintentos con retroceso exponencial).
 
 ```csharp
 public class ResilientHttpClient : IHttpClient
@@ -118,11 +121,11 @@ public class ResilientHttpClient : IHttpClient
 }
 ```
 
-Con Polly, se define una directiva de reintentos con el número de reintentos, la configuración de retroceso exponencial y las acciones necesarias cuando se produce una excepción de HTTP, como registrar el error. En este caso, la directiva está configurada, de forma que intentará el número de veces especificado al registrar los tipos en el contenedor de IoC. Debido a la configuración de retroceso exponencial, siempre que el código detecta una excepción HttpRequest, volver a intentar la solicitud Http después de esperar un período de tiempo que aumenta exponencialmente dependiendo de cómo se configuró la directiva.
+Con Polly, define una directiva de reintentos con el número de reintentos, la configuración de retroceso exponencial y las acciones necesarias cuando se produce una excepción de HTTP, como registrar el error. En este caso, la directiva está configurada, de forma que intentará el número de veces especificado al registrar los tipos en el contenedor de IoC. Debido a la configuración de retroceso exponencial, siempre que el código detecta una excepción HttpRequest, vuelve a intentar la solicitud Http después de esperar un período de tiempo que aumenta exponencialmente según cómo se haya configurado la directiva.
 
-El método en importancia es HttpInvoker, que es lo que hace que las solicitudes HTTP a través de esta clase de utilidad. Que método internamente ejecuta la solicitud HTTP con \_policyWrapper.ExecuteAsync, que tiene en cuenta la directiva de reintentos.
+El método importante es HttpInvoker, que es lo que emite las solicitudes HTTP a través de esta clase de utilidad. Ese método ejecuta internamente la solicitud HTTP con \_policyWrapper.ExecuteAsync, que tiene en cuenta la directiva de reintentos.
 
-En eShopOnContainers especificar directivas de Polly al registrar los tipos en el contenedor de IoC, como se muestra en el siguiente código de la [aplicación web MVC en el startup.cs](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Web/WebMVC/Startup.cs) clase.
+En eShopOnContainers puede especificar directivas de Polly al registrar los tipos en el contenedor de IoC, como se muestra en el siguiente código de la clase [aplicación web MVC en startup.cs](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Web/WebMVC/Startup.cs).
 
 ```csharp
 // Startup.cs class
@@ -141,9 +144,9 @@ else
 }
 ```
 
-Tenga en cuenta que los objetos IHttpClient se crean instancias como singleton en lugar de como transitorio para que las conexiones TCP se usen de forma eficaz por el servicio y [un problema con sockets](https://aspnetmonsters.com/2016/08/2016-08-27-httpclientwrong/) no se producirá.
+Tenga en cuenta que las instancias de los objetos IHttpClient se crean como singleton en lugar de como transitorias, de modo que el servicio usará las conexiones TCP de forma eficaz y no se producirá [ningún problema con los sockets](https://aspnetmonsters.com/2016/08/2016-08-27-httpclientwrong/).
 
-Pero es importante sobre la resistencia es aplicar la directiva de Polly WaitAndRetryAsync en ResilientHttpClientFactory en el método CreateResilientHttpClient, tal como se muestra en el código siguiente:
+Pero lo importante sobre la resistencia es que aplica la directiva de Polly WaitAndRetryAsync en ResilientHttpClientFactory en el método CreateResilientHttpClient, tal como se muestra en el código siguiente:
 
 ```csharp
 public ResilientHttpClient CreateResilientHttpClient()
@@ -174,4 +177,4 @@ private Policy[] CreatePolicies()
 
 
 >[!div class="step-by-step"]
-[Anterior] (implement-custom-http-call-retries-exponential-backoff.md) [siguiente] (implemente circuito-separador pattern.md)
+[Previous] (implement-custom-http-call-retries-exponential-backoff.md) [Next] (implement-circuit-breaker-pattern.md)

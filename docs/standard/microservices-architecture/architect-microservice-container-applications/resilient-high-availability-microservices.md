@@ -1,6 +1,6 @@
 ---
-title: Resistencia y la alta disponibilidad en microservicios
-description: Arquitectura de Microservicios de .NET para aplicaciones .NET en contenedores | Resistencia y la alta disponibilidad en microservicios
+title: Resistencia y alta disponibilidad en microservicios
+description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedores | Resistencia y alta disponibilidad en microservicios
 keywords: Docker, microservicios, ASP.NET, contenedor
 author: CESARDELATORRE
 ms.author: wiwagn
@@ -8,77 +8,80 @@ ms.date: 05/26/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: 149e28ac7bd7383e4e960ed8a226943e2b9bdaa1
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: bbad2f0843e05f05e90e2e83c7c35cd4f06ed5e0
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/23/2017
 ---
-# <a name="resiliency-and-high-availability-in-microservices"></a>Resistencia y la alta disponibilidad en microservicios
+# <a name="resiliency-and-high-availability-in-microservices"></a>Resistencia y alta disponibilidad en microservicios
 
-Tratar errores inesperados es uno de los problemas más difíciles de resolver, especialmente en un sistema distribuido. Gran parte del código que los desarrolladores escribir implica el control de excepciones, y también es donde se dedica más tiempo en las pruebas. El problema es más complejo que escribir código para controlar los errores. ¿Qué ocurre cuando se produce un error en el equipo donde se ejecuta el microservicio? No solo es necesario detectar este error de microservicio (un problema de disco duro en su propio), pero también necesita algo que reinicie su microservicio.
+Tratar errores inesperados es uno de los problemas más difíciles de resolver, especialmente en un sistema distribuido. Gran parte del código que los desarrolladores escriben implica controlar las excepciones, y aquí también es donde se dedica más tiempo a las pruebas. El problema es más complejo que escribir código para controlar los errores. ¿Qué ocurre cuando se produce un error en la máquina en que se ejecuta el microservicio? No solo es necesario detectar este error de microservicio (un gran problema de por sí), sino también contar con algo que reinicie su microservicio.
 
-Un microservicio necesita sea resistente a errores y para que pueda reiniciar a menudo en otro equipo para la disponibilidad. Esta resistencia también consiste en tomar el estado en que se guardó en nombre de microservicio, donde el microservicio puede recuperar este estado de, y si el microservicio puede reiniciar correctamente. En otras palabras, debe haber resistencia en la capacidad de proceso (el proceso puede reiniciar en cualquier momento), así como la resistencia en el estado o los datos (sin pérdida de datos y los datos permanecen coherente).
+Un microservicio debe ser resistente a errores y poder reiniciarse a menudo en otra máquina a efectos de disponibilidad. Esta resistencia también se refiere al estado que se guardó en nombre del microservicio, en los casos en que el estado se puede recuperar a partir del microservicio, y al hecho de si el microservicio puede reiniciarse correctamente. En otras palabras, debe haber resistencia en la capacidad de proceso (el proceso puede reiniciarse en cualquier momento), así como en el estado o los datos (sin pérdida de datos y que se mantenga la consistencia de los datos).
 
-Los problemas de resistencia se agrava durante otros escenarios, como cuando se producen errores durante la actualización de la aplicación. El microservicio, trabajar con el sistema de implementación, debe determinar si puede continuar avanzar a la versión más reciente o en su lugar, revertir a una versión anterior para mantener un estado coherente. Preguntas como si están disponibles para mantener al día móvil suficientes máquinas y cómo recuperar versiones anteriores de la microservicio deben tenerse en cuenta. Esto requiere el microservicio para emitir información de estado para que la aplicación global y orchestrator pueden tomar estas decisiones.
+Los problemas de resistencia se agravan durante otros escenarios, como cuando se producen errores durante la actualización de una aplicación. El microservicio, trabajando con el sistema de implementación, debe determinar si puede avanzar a la versión más reciente o, en su lugar, revertir a una versión anterior para mantener un estado consistente. Deben tenerse en cuenta cuestiones como si están disponibles suficientes máquinas para seguir avanzando y cómo recuperar versiones anteriores del microservicio. Esto requiere que el microservicio emita información de mantenimiento para que la aplicación en conjunto y el orquestador puedan tomar estas decisiones.
 
-Además, está relacionado con resistencia a los sistemas basados en nube cómo debe comportarse. Como se mencionó, un sistema basado en la nube debe adoptar errores y debe intentar recuperarse automáticamente de ellas. Por ejemplo, en caso de errores de red o un contenedor, las aplicaciones de cliente o los servicios de cliente deben tener una estrategia para volver a intentar el envío de mensajes o volver a intentar las solicitudes, ya que en muchos casos, los errores en la nube son parciales. El [implementar las aplicaciones resistentes](#implementing_resilient_apps) sección de esta guía explica cómo controlar errores parciales. Describe técnicas como reintentos con retroceso exponencial o el patrón de disyuntor en .NET Core usando las bibliotecas como [Polly](https://github.com/App-vNext/Polly), que ofrece una gran variedad de directivas para controlar este asunto.
+Además, la resistencia está relacionada con cómo deben comportarse los sistemas basados en la nube. Como se ha mencionado, un sistema basado en la nube debe estar preparado para los errores e intentar recuperarse automáticamente de ellos. Por ejemplo, en caso de errores de red o de contenedor, las aplicaciones de cliente o los servicios de cliente deben disponer de una estrategia para volver a intentar enviar mensajes o solicitudes, ya que en muchos casos, los errores en la nube son parciales. En la sección [Implementar aplicaciones resistentes](#implementing_resilient_apps) de esta guía se explica cómo controlar errores parciales. Se describen técnicas como los reintentos con retroceso exponencial o el patrón de interruptor en .NET Core en que se usan bibliotecas como [Polly](https://github.com/App-vNext/Polly), que ofrece una gran variedad de directivas para controlar este asunto.
 
 ## <a name="health-management-and-diagnostics-in-microservices"></a>Administración del estado y diagnóstico en microservicios
 
-Puede parecer obvio y a menudo se pasa por alto, pero un microservicio debe notificar su estado y diagnóstico. En caso contrario, no hay una ligera introducción desde una perspectiva de operaciones. Correlacionar eventos de diagnóstico en un conjunto de servicios independientes y trabaja con máquina reloj inclinaciones dar sentido el orden de eventos son un desafío. En la misma manera que interactúan con un microservicio sobre acordado protocolos y formatos de datos, hay una necesidad de estandarización de inicio de sesión de estado y eventos de diagnóstico que en última instancia terminan en un almacén de eventos para consultar y ver. En un enfoque microservicios, es la clave que los distintos equipos que están de acuerdo en un formato de registro único. Debe haber un enfoque coherente para ver los eventos de diagnóstico en la aplicación.
+Puede parecer obvio, y a menudo se pasa por alto, pero un microservicio debe notificar su estado y diagnóstico. En caso contrario, hay poca información desde una perspectiva operativa. Correlacionar eventos de diagnóstico en un conjunto de servicios independientes y tratar los desajustes en el reloj de la máquina para dar sentido al orden de los eventos suponen un reto. De la misma manera que interactúa con un microservicio según protocolos y formatos de datos acordados, hay una necesidad de estandarizar cómo registrar los eventos de estado y diagnóstico que, en última instancia, terminan en un almacén de eventos para que se consulten y se vean. En un enfoque de microservicios, es fundamental que distintos equipos se pongan de acuerdo en un formato de registro único. Debe haber un enfoque coherente para ver los eventos de diagnóstico en la aplicación.
 
-### <a name="health-checks"></a>Comprobaciones de mantenimiento
+### <a name="health-checks"></a>Comprobaciones de estado
 
-El estado es diferente de diagnóstico. Estado trata el microservicio informan de su estado actual para que tome las medidas oportunas. Un buen ejemplo funciona con los mecanismos de actualización e implementación para mantener la disponibilidad. Aunque un servicio actualmente podría ser incorrecto debido a un bloqueo de proceso o reinicio del equipo, puede que el servicio seguirá siendo operativo. Es lo último que necesita poder establecer un rendimiento peor mediante la realización de una actualización. El mejor método consiste en realizar una investigación en primer lugar o deje tiempo para el microservicio a recuperar. Eventos de estado de un microservicio nos ayudarán a tomar decisiones informadas y, en efecto, ayudan a crear servicios de reparación automática.
+El estado es diferente del diagnóstico. El estado trata de cuando el microservicio informa sobre su estado actual para que se tomen las medidas oportunas. Un buen ejemplo es trabajar con los mecanismos de actualización e implementación para mantener la disponibilidad. Aunque un servicio podría actualmente estar en mal estado debido a un bloqueo de proceso o un reinicio de la máquina, puede que el servicio siga siendo operativo. Lo último que debe hacer es realizar una actualización que empeore esta situación. El mejor método consiste en realizar una investigación en primer lugar o dar tiempo a que el microservicio se recupere. Los eventos de estado de un microservicio nos ayudan a tomar decisiones informadas y, en efecto, ayudan a crear servicios de reparación automática.
 
-En la implementación de comprobaciones de mantenimiento en la sección de servicios principales de ASP.NET de esta guía se explica cómo usar una nueva biblioteca de comprobaciones de estado de ASP.NET en su microservicios para que puede informar sobre su estado a un servicio de supervisión y tome las medidas oportunas.
+En la sección Implementación de comprobaciones de estado en servicios de ASP.NET Core de esta guía se explica cómo usar una nueva biblioteca de ASP.NET HealthChecks en sus microservicios para que puedan informar sobre su estado a un servicio de supervisión para que se tomen las medidas oportunas.
 
-### <a name="using-diagnostics-and-logs-event-streams"></a>Al utilizar secuencias de eventos de diagnósticos y registros
+### <a name="using-diagnostics-and-logs-event-streams"></a>Utilización de secuencias de eventos de diagnóstico y registro
 
-Registros ofrecen información sobre cómo se ejecuta una aplicación o servicio, como excepciones, advertencias y mensajes informativos simples. Normalmente, cada registro está en un formato de texto con una línea por evento, aunque excepciones también suelen mostrar el seguimiento de pila en varias líneas.
+Los registros ofrecen información sobre cómo se ejecuta una aplicación o un servicio, incluidos las excepciones, las advertencias y los mensajes informativos simples. Normalmente, cada registro se presenta en un formato de texto con una línea por evento, aunque las excepciones también suelen mostrar el seguimiento de la pila en varias líneas.
 
-En las aplicaciones monolíticas basada en servidor, puede simplemente escribir registros en un archivo en disco (un archivo de registro) y, a continuación, analizarla con cualquier herramienta. Puesto que la ejecución de la aplicación se limita a un servidor fijo o máquina virtual, por lo general no es demasiado compleja para analizar el flujo de eventos. Sin embargo, en una aplicación distribuida que se ejecutan varios servicios a través de varios nodos en un clúster de orchestrator, poder correlacionar eventos distribuidos es un desafío.
+En las aplicaciones monolíticas basadas en servidor, puede simplemente escribir registros en un archivo en disco (un archivo de registro) y, a continuación, analizarlo con cualquier herramienta. Puesto que la ejecución de la aplicación se limita a un servidor o una máquina virtual fijos, por lo general no es demasiado complejo analizar el flujo de eventos. Sin embargo, en una aplicación distribuida en que se ejecutan varios servicios a través de muchos nodos en un clúster de orquestador, poder correlacionar los eventos distribuidos supone un reto.
 
-Una aplicación basada en microservicio debería no intenta almacenar el flujo de salida de eventos o archivos de registro por sí solo e intentar ni siquiera administrar el enrutamiento de los eventos a una ubicación central. Debe ser transparente, lo que significa que cada proceso solo debe escribir su flujo de eventos en una salida estándar que debajo se recopilarán por la infraestructura de entorno de ejecución donde se está ejecutando. Un ejemplo de estos enrutadores de flujo de eventos es [Microsoft.Diagnostic.EventFlow](https://github.com/Azure/diagnostics-eventflow), que recopila secuencias de eventos de varios orígenes y lo publica para sistemas de salida. Estos pueden incluir simple salida estándar para un entorno de desarrollo o sistemas de la nube, como [Application Insights](https://azure.microsoft.com/services/application-insights/), [OMS](https://github.com/Azure/diagnostics-eventflow#oms-operations-management-suite) (para las aplicaciones locales), y [dediagnósticosdeAzure](https://docs.microsoft.com/azure/monitoring-and-diagnostics/azure-diagnostics). También hay plataformas de análisis de registros de otros fabricantes buena y herramientas que pueden buscar, alerta, informes, y registros de monitor, incluso en tiempo real, como [Splunk](http://www.splunk.com/goto/Splunk_Log_Management?ac=ga_usa_log_analysis_phrase_Mar17&_kk=logs%20analysis&gclid=CNzkzIrex9MCFYGHfgodW5YOtA).
+Una aplicación basada en microservicio no debe intentar almacenar la secuencia de salida de eventos o archivos de registro por sí misma y ni siquiera intentar administrar el enrutamiento de los eventos a una ubicación central. Debe ser transparente, lo que significa que cada proceso solo debe escribir su secuencia de eventos en una salida estándar que la infraestructura de entorno de ejecución donde se está ejecutando recopilará por debajo. Un ejemplo de estos enrutadores de secuencia de eventos es [Microsoft.Diagnostic.EventFlow](https://github.com/Azure/diagnostics-eventflow), que recopila secuencias de eventos de varios orígenes y las publica en sistemas de salida. Estos pueden incluir salidas estándar simples para un entorno de desarrollo o sistemas en la nube, como [Application Insights](https://azure.microsoft.com/services/application-insights/), [OMS](https://github.com/Azure/diagnostics-eventflow#oms-operations-management-suite) (para aplicaciones locales) y [Azure Diagnostics](https://docs.microsoft.com/azure/monitoring-and-diagnostics/azure-diagnostics). También hay buenas plataformas y herramientas de análisis de registros de otros fabricantes que pueden buscar, alertar, informar y supervisar registros, incluso en tiempo real, como [Splunk](http://www.splunk.com/goto/Splunk_Log_Management?ac=ga_usa_log_analysis_phrase_Mar17&_kk=logs%20analysis&gclid=CNzkzIrex9MCFYGHfgodW5YOtA).
 
-### <a name="orchestrators-managing-health-and-diagnostics-information"></a>Orchestrators administración de la información de estado y diagnóstico
+### <a name="orchestrators-managing-health-and-diagnostics-information"></a>Cómo los orquestadores administran la información sobre el estado y el diagnóstico
 
-Cuando se crea una aplicación basada en microservicio, necesita ocuparse de complejidad. Por supuesto, es fácil de tratar con un único microservicio pero docenas o cientos de tipos y miles de instancias de microservicios es un problema complejo. Casi no genere la arquitectura de microservicio, también necesita alta disponibilidad, capacidad de direccionamiento, resistencia, estado y diagnóstico si pretende crear un sistema estable y coherente.
+Crear una aplicación basada en microservicio implica enfrentarse a cierto grado de complejidad. Por supuesto, un único microservicio es fácil de tratar, pero docenas o cientos de tipos y miles de instancias de microservicios es un problema complejo. No solo se trata de crear la arquitectura del microservicio; también necesita alta disponibilidad, capacidad de direccionamiento, resistencia, estado y diagnóstico si pretende disponer de un sistema estable y cohesivo.
 
 ![](./media/image22.png)
 
-**Figura 4-22**. Una plataforma de Microservicio es fundamental para la administración del estado de la aplicación
+**Figura 4-22**. Una plataforma de microservicio es fundamental para la administración del estado de una aplicación
 
-Los problemas complejos que se muestra en la figura 4-22 son muy difíciles de resolver por sí mismo. Los equipos de desarrollo deben centrarse en solucionar problemas de negocios y crear aplicaciones personalizadas con los enfoques basados en microservicio. No debe centrarse en la solución de problemas de infraestructura compleja; Si es así, el costo de cualquier aplicación basada en microservicio sería muy gran. Por lo tanto, hay plataformas orientada a servicios de microservicio, denominadas orchestrators o clústeres de microservicio, que tratan de solucionar los problemas de disco duros de compilar y ejecutar un servicio y usar de forma eficaz los recursos de infraestructura. Esto reduce las complejidades de la creación de aplicaciones que utilizan un enfoque de microservicios.
+Es muy difícil que pueda resolver por sí mismo los problemas complejos que se muestran en la figura 4-22. Los equipos de desarrollo deben centrarse en solucionar problemas empresariales y crear aplicaciones personalizadas con enfoques basados en microservicio. No deben centrarse en solucionar problemas de infraestructura complejos; si fuera así, el coste de cualquier aplicación basada en microservicio sería enorme. Por tanto, hay plataformas orientadas a microservicios, denominadas orquestadores o clústeres de microservicio, que tratan de solucionar los problemas complejos de crear y ejecutar un servicio y usar de forma eficaz los recursos de infraestructura. Esto reduce las complejidades de crear aplicaciones que usan un enfoque de microservicios.
 
-Orchestrators diferentes podrían parecer similar, pero los diagnósticos y las comprobaciones de mantenimiento que ofrece cada uno de ellos difieren en las características y el estado de madurez, a veces, según la plataforma de sistema operativo, como se explica en la sección siguiente.
+Distintos orquestadores podrían parecer similares, pero las comprobaciones de diagnóstico y estado que ofrece cada uno de ellos difieren en las características y el estado de madurez, y a veces dependen de la plataforma del sistema operativo, como se explica en la sección siguiente.
 
 ## <a name="additional-resources"></a>Recursos adicionales
 
--   **El Factor de doce una aplicación. XI. Registros: Tratar los registros como secuencias de eventos**
+-   **La aplicación Twelve-Factor. XI. Registros: Tratar los registros como secuencias de eventos**
     [*https://12factor.net/logs*](https://12factor.net/logs)
 
--   **Biblioteca de EventFlow de diagnóstico de Microsoft.** Repositorio de GitHub.
+-   **Biblioteca EventFlow de diagnóstico de Microsoft.** Repositorio de GitHub.
 
-    [*https://github.com/Azure/Diagnostics-eventflow*](https://github.com/Azure/diagnostics-eventflow)
+    [*https://github.com/Azure/diagnostics-eventflow*](https://github.com/Azure/diagnostics-eventflow)
 
--   **¿Qué es diagnósticos de Azure**
+-   **Qué es Azure Diagnostics**
     [*https://docs.microsoft.com/azure/azure-diagnostics*](https://docs.microsoft.com/azure/azure-diagnostics)
 
--   **Conectar los equipos de Windows para el servicio de análisis de registros de Azure**
+-   **Conectar los equipos de Windows al servicio Log Analytics de Azure**
     [*https://docs.microsoft.com/azure/log-analytics/log-analytics-windows-agents*](https://docs.microsoft.com/azure/log-analytics/log-analytics-windows-agents)
 
--   **Registro de lo que significa: El bloque de aplicaciones de la semántica de registro mediante**
+-   **Registrar lo que se pretende: Utilizar el bloque de aplicación de registro semántico**
     [*https://msdn.microsoft.com/library/dn440729 (v=pandp.60).aspx*](https://msdn.microsoft.com/library/dn440729(v=pandp.60).aspx)
 
 -   **Splunk.** Sitio oficial.
     [*http://www.splunk.com*](http://www.splunk.com)
 
--   **EventSource (clase)**. API de eventos de seguimiento para Windows (ETW) [ *https://docs.microsoft.com/dotnet/api/system.diagnostics.tracing.eventsource*](https://docs.microsoft.com/dotnet/api/system.diagnostics.tracing.eventsource)
+-   **Clase EventSource**. API de seguimiento de eventos para Windows (ETW) [*https://docs.microsoft.com/dotnet/api/system.diagnostics.tracing.eventsource*](https://docs.microsoft.com/dotnet/api/system.diagnostics.tracing.eventsource)
 
 
 
 
 >[!div class="step-by-step"]
-[Anterior] (microservice-based-composite-ui-shape-layout.md) [siguiente] (scalable-available-multi-container-microservice-applications.md)
+[Previous] (microservice-based-composite-ui-shape-layout.md) [Next] (scalable-available-multi-container-microservice-applications.md)

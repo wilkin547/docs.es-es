@@ -1,42 +1,47 @@
 ---
-title: "Implementación de la comunicación basada en eventos entre microservicios (eventos de integración)"
-description: "Arquitectura de Microservicios de .NET para aplicaciones .NET en contenedores | Implementación de la comunicación basada en eventos entre microservicios (eventos de integración)"
+title: "Implementación de comunicación basada en eventos entre microservicios (eventos de integración)"
+description: "Arquitectura de microservicios de .NET para aplicaciones .NET en contenedor | Implementación de comunicación basada en eventos entre microservicios (eventos de integración)"
 keywords: Docker, microservicios, ASP.NET, contenedor
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
+ms.date: 12/11/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: e438607ab3549d63b89bef6af64c6723a4cac950
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 50ab0be6b92304eee4bc46643c867ee2827fc805
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="implementing-event-based-communication-between-microservices-integration-events"></a>Implementación de la comunicación basada en eventos entre microservicios (eventos de integración)
+# <a name="implementing-event-based-communication-between-microservices-integration-events"></a>Implementación de comunicación basada en eventos entre microservicios (eventos de integración)
 
-Como se describió anteriormente, si utiliza comunicación basado en eventos, un microservicio publica un evento cuando ocurra algo importantes, como cuando actualiza una entidad de negocio. Otros microservicios suscriben a esos eventos. Cuando un microservicio recibe un evento, pueden actualizar sus propio entidades de negocio, lo que podrían dar lugar a más eventos que se está publicados. Este sistema de publicación/suscripción normalmente se realiza mediante una implementación de un bus de eventos. El bus de eventos pueden diseñarse como una interfaz con la API de necesario para suscribir y cancelar la suscripción a eventos y para publicar los eventos. También puede tener uno o más implementaciones basadas en cualquier comunicación entre procesos o mensajería, como una cola de mensajes o un bus de servicio que admite la comunicación asincrónica y un modelo de publicación/suscripción.
+Como se describió anteriormente, si utiliza una comunicación basada en eventos, un microservicio publica un evento cuando sucede algo importante, como cuando actualiza una entidad de negocio. Otros microservicios se suscriben a esos eventos. Cuando un microservicio recibe un evento, puede actualizar sus propias entidades de negocio, lo que puede comportar que se publiquen más eventos. Este sistema de publicación/suscripción normalmente se realiza mediante una implementación de un bus de eventos. El bus de eventos puede diseñarse como una interfaz con la API necesaria para suscribirse a eventos, cancelar las suscripciones y publicar eventos. También puede tener una o más implementaciones basadas en cualquier comunicación de mensajería o entre procesos, como una cola de mensajes o un bus de servicio que admita la comunicación asincrónica y un modelo de publicación/suscripción.
 
-Puede usar eventos para implementar las transacciones de negocio que abarcan varios servicios, lo cual proporciona coherencia definitiva entre dichos servicios. Una transacción coherente consta de una serie de acciones distribuidas. En cada acción, el microservicio actualiza una entidad de negocio y publica un evento que desencadena la acción siguiente.
+Puede usar eventos para implementar transacciones de negocio que abarquen varios servicios, lo cual proporciona una eventual coherencia entre dichos servicios. Una eventual transacción coherente consta de una serie de acciones distribuidas. En cada acción, el microservicio actualiza una entidad de negocio y publica un evento que desencadena la siguiente acción.
 
 ![](./media/image19.PNG)
 
-**Figura 8-18**. Comunicación orientada a eventos en función de un bus de eventos
+**Figura 8-18**. Comunicación orientada a eventos basada en un bus de eventos
 
-Esta sección describe cómo puede implementar este tipo de comunicación con .NET mediante el uso de una interfaz de bus de eventos genéricos, como se muestra en la figura 8-18. Hay varias implementaciones posibles, cada uno con una tecnología distinta o infraestructura como RabbitMQ, Bus de servicio de Azure, u otros código abierto de terceros o bus de servicio comercial.
+En esta sección se describe cómo puede implementar este tipo de comunicación con .NET utilizando un bus de eventos genéricos, como se muestra en la Figura 8-18. Hay varias implementaciones posibles, cada una de las cuales con una tecnología o infraestructura distinta, como RabbitMQ, Azure Service Bus u otros códigos abiertos de terceros o buses de servicio comercial.
 
-## <a name="using-message-brokers-and-services-buses-for-production-systems"></a>Uso de buses de agentes y servicios de mensaje para sistemas de producción
+## <a name="using-message-brokers-and-services-buses-for-production-systems"></a>Uso de buses de agentes y servicios de mensajería para sistemas de producción
 
-Como se indicó en la sección de arquitectura, dispone de varias tecnologías de mensajería para implementar el bus de eventos abstractos. Pero estas tecnologías se encuentran en distintos niveles. Por ejemplo, RabbitMQ, un transporte de broker de mensajería, está en un nivel inferior a productos comerciales como Service Bus de Azure, NServiceBus, MassTransit o Brighter. La mayoría de estos productos puede trabajar en la parte superior RabbitMQ o Service Bus de Azure. La selección de producto depende de cuántas características y la escalabilidad de cuánto out-of-the-box necesita para la aplicación.
+Como se indicó en la sección de arquitectura, puede escoger entre diferentes tecnologías de mensajería para implementar el bus de eventos abstractos. Pero estas tecnologías se encuentran en distintos niveles. Por ejemplo, RabbitMQ, un transporte de agentes de mensajería, está en un nivel inferior al de productos comerciales como Azure Service Bus, NServiceBus, MassTransit o Brighter. La mayoría de estos productos puede trabajar encima de RabbitMQ o Azure Service Bus. La selección que haga del producto depende de la cantidad de características y de la escalabilidad de serie que necesite para la aplicación.
 
-Para implementar solo una evento bus prueba de concepto para su entorno de desarrollo, como en el ejemplo eShopOnContainers, una implementación sencilla en la parte superior RabbitMQ que se ejecuta como un contenedor puede ser suficiente. Pero para una importancia decisiva y sistemas de producción que necesitan alta escalabilidad, es recomendable evaluar y usar Azure Service Fabric. Si necesita abstracciones de alto nivel y características más enriquecidas como [sagas](https://docs.particular.net/nservicebus/sagas/) para los procesos de larga duración que hacen buses más fácil y otros servicios comerciales y de código abierto como NServiceBus, MassTransit, de desarrollo distribuidos y Son brillantes que vale la pena evaluar. Por supuesto, siempre puede crear sus propias características de bus de servicio sobre tecnologías de nivel inferior como RabbitMQ y Docker, pero el trabajo necesario para inventar la rueda podría ser demasiado costoso para una aplicación de empresa personalizados.
+Para implementar solo una prueba de concepto de bus de eventos para su entorno de desarrollo, como en el ejemplo de eShopOnContainers, una implementación sencilla encima de RabbitMQ ejecutándose como contenedor podría ser suficiente. Pero para sistemas importantes y de producción que necesiten alta escalabilidad, se recomienda evaluar y usar Azure Service Bus.
 
-Para reiterar: el abstracciones de bus de eventos de ejemplo y la implementación expuesta en el ejemplo eShopOnContainers están diseñados para usarse solo como una prueba de concepto. Una vez que haya decidido que desea conseguir una comunicación asincrónica y orientada a eventos, como se explica en la sección actual, debe elegir el producto de bus de servicio que mejor se adapte a sus necesidades.
+Si necesita abstracciones de alto nivel y características más potentes, como [Sagas](https://docs.particular.net/nservicebus/sagas/), para procesos de larga duración que faciliten el desarrollo distribuido, vale la pena tener en cuenta otros buses de servicio comerciales y de código abierto, como NServiceBus, MassTransit y Brighter. En este caso, las abstracciones y la API que se van a utilizar suelen ser las proporcionadas directamente por los buses de servicio de alto nivel, en vez de las propias abstracciones (como las [abstracciones de bus de eventos sencillos proporcionadas en eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/BuildingBlocks/EventBus/EventBus/Abstractions/IEventBus.cs)). Con este propósito, puede analizar [eShopOnContainers bifurcado con NServiceBus](http://go.particular.net/eShopOnContainers) (ejemplo derivado adicional implementado por Particular Software).
+
+Obviamente, siempre puede crear sus propias características de bus de servicio sobre tecnologías de nivel inferior, como RabbitMQ y Docker, pero el trabajo necesario para "volver a inventar la rueda" puede ser demasiado costoso para una aplicación de empresa personalizada.
 
 ## <a name="integration-events"></a>Eventos de integración
 
-Eventos de integración se utilizan para poner el estado del dominio sincronizada en varios microservicios o sistemas externos. Esto se realiza mediante la publicación de eventos de integración de fuera de la microservicio. Cuando se publica un evento en varios microservicios de receptor (para tantos microservicios tal y como está suscrito al evento de integración), el controlador de eventos apropiado en cada receptor microservicio controla el evento.
+Los eventos de integración se utilizan para sincronizar el estado de dominio en varios microservicios o sistemas externos. Esto se realiza mediante la publicación de eventos de integración fuera del microservicio. Cuando se publica un evento en varios microservicios de receptor (en tantos microservicios como estén suscritos al evento de integración), el controlador de eventos correspondiente en cada microservicio de receptor controla el evento.
 
 Un evento de integración es básicamente una clase de almacenamiento de datos, como en el ejemplo siguiente:
 
@@ -57,70 +62,77 @@ public class ProductPriceChangedIntegrationEvent : IntegrationEvent
 }
 ```
 
-La clase de eventos de integración puede ser simple; Por ejemplo, es posible que contengan un GUID para su identificador.
+Los eventos de integración pueden definirse en el nivel de aplicación de cada microservicio, por lo que se separan de otros microservicios de una forma comparable a cómo se define ViewModels en el servidor y en el cliente. Lo que no se recomienda es compartir una biblioteca de eventos de integración común entre varios microservicios. De hacerlo, podría estar acoplando esos microservicios a una biblioteca de datos de definición de eventos únicos. Esto no le interesa por el mismo motivo que no le interesa compartir un modelo de dominio común entre varios microservicios: los microservicios deben ser completamente autónomos.
 
-Los eventos de integración pueden definirse en el nivel de aplicación de cada microservicio, por lo que se separan de otras microservicios, de forma comparable a cómo ViewModels se definen en el servidor y el cliente. Lo que se recomienda no comparte una biblioteca de eventos de integración comunes entre varios microservicios; hacer se puede acoplar esos microservicios con una biblioteca de datos de la definición de evento único. ¿Desea hacerlo por la misma razón que no desea compartir un modelo de dominio comunes entre varios microservicios: microservicios deben ser completamente autónomo.
-
-Hay solo unos tipos de bibliotecas que deben compartir a través de microservicios. Una es que las bibliotecas que son bloques de aplicación final, al igual que el [API de cliente de Bus de eventos](https://github.com/dotnet-architecture/eShopOnContainers/tree/master/src/BuildingBlocks/EventBus), como en eShopOnContainers. Other es bibliotecas que constituyen las herramientas que pudieron compartirse como componentes de NuGet, al igual que los serializadores JSON.
+Solo hay unos cuantos tipos de bibliotecas que debería compartir entre microservicios. Por un lado, las bibliotecas que son bloques de aplicaciones finales, como la [API de cliente de bus de eventos](https://github.com/dotnet-architecture/eShopOnContainers/tree/master/src/BuildingBlocks/EventBus), como en eShopOnContainers. Por otro lado, las bibliotecas que constituyen herramientas que también se podrían compartir como componentes de NuGet, igual que los serializadores JSON.
 
 ## <a name="the-event-bus"></a>El bus de eventos
 
-Un bus de eventos permite publicar/suscribir-estilo de comunicación entre microservicios sin necesidad de los componentes que desea explícitamente tenga entre sí, tal como se muestra en la figura 8-19.
+Un bus de eventos permite una comunicación de estilo de suscripción/publicación entre microservicios, sin requerir que los componentes se reconozcan entre sí, como se muestra en la Figura 8-19.
 
 ![](./media/image20.png)
 
-**Figura 8-19**. Aspectos básicos con un bus de eventos de publicación/suscripción
+**Figura 8-19**. Aspectos básicos de publicación/suscripción con un bus de eventos
 
-El bus de eventos está relacionado con el patrón de observador y la publicación-suscribirse patrón.
+El bus de eventos está relacionado con el patrón de observador y con el patrón de publicación/suscripción.
 
-### <a name="observer-pattern"></a>Modelo de observador
+### <a name="observer-pattern"></a>Patrón de observador
 
-En el [modelo observador](https://en.wikipedia.org/wiki/Observer_pattern), su objeto primario (conocido como el objeto Observable) notifica a otros objetos interesados (conocidos como observadores) con la información pertinente (eventos).
+En el [patrón de observador](https://en.wikipedia.org/wiki/Observer_pattern), su objeto principal (conocido como "Observable") proporciona información pertinente (eventos) a otros objetos interesados (conocidos como "Observadores").
 
-### <a name="publish-subscribe-pubsub-pattern"></a>Patrón de publicación y suscripción (Pub/Sub) 
+### <a name="publish-subscribe-pubsub-pattern"></a>Patrón de publicación/suscripción (Pub/Sus) 
 
-El propósito de la [patrón Pub/Sub](https://msdn.microsoft.com/en-us/library/ff649664.aspx) es el mismo que el modelo de observador: desea notificar a otros servicios cuando determinados eventos tienen lugar. Pero hay una diferencia importante semántica entre los patrones de observador y Pub/Sub. En el patrón de Pub/Sub, el foco está en los mensajes de difusión. En cambio, en el patrón de observador, el Observable no sabe que los eventos se van a, simplemente que hayan out. En otras palabras, el Observable (el publicador) no saber quiénes son los observadores (los suscriptores).
+El propósito del [patrón Pub/Sus](https://msdn.microsoft.com/library/ff649664.aspx) es el mismo que el del modelo de observador: informar a otros servicios de la realización de determinados eventos. Pero hay una diferencia importante entre los patrones Observador y Pub/Sus. En el patrón de observador, la difusión se realiza directamente desde el objeto observable a los observadores, por lo que "se reconocen" entre sí. Pero cuando se usa un patrón Pub/Sus, hay un tercer componente, denominado "agente", "mensaje de agente" o "bus de eventos", que tanto el publicador como el suscriptor conocen. Por lo tanto, al utilizar el patrón Pub/Sus, el publicador y los suscriptores se desvinculan precisamente gracias al bus de eventos o al mensaje de agente mencionados.
 
-### <a name="the-middleman-or-event-bus"></a>El bus de intermediario o evento 
+### <a name="the-middleman-or-event-bus"></a>El intermediario o bus de eventos 
 
-¿Cómo se consigue anonimato entre el publicador y suscriptor? Una manera fácil es permitir que un intermediario ocuparse de toda la comunicación. Un bus de eventos es uno de estos intermediarios.
+¿Cómo se consigue el anonimato entre el publicador y el suscriptor? Una forma sencilla de hacerlo es permitir que un intermediario se ocupe de toda la comunicación. Un bus de eventos es un intermediario de este tipo.
 
-Un bus de eventos normalmente se compone de dos partes:
+Normalmente, los buses de eventos están compuestos de dos partes:
 
--   La abstracción o la interfaz.
+-   La abstracción o interfaz.
 
 -   Una o varias implementaciones.
 
-En la figura 8-19 puede ver cómo hacerlo, desde un punto de vista de aplicación, el bus de eventos es nada más que un canal de Pub/Sub. Puede modificar la forma de implementar este tipo de comunicación asincrónica. Puede tener varias implementaciones para que se pueden intercambiar entre ellas, dependiendo de los requisitos de entorno (por ejemplo, producción frente a los entornos de desarrollo).
+En la Figura 8-19 puede ver cómo, desde el punto de vista de la aplicación, el bus de eventos no es más que un canal de Pub/Sus. La forma de implementar este tipo de comunicación asincrónica puede variar. Puede tener varias implementaciones para intercambiarlas dependiendo de los requisitos del entorno (por ejemplo, entornos de producción frente a entornos de desarrollo).
 
-En la figura 8-20 puede ver una abstracción de un bus de eventos con varias implementaciones basadas en la infraestructura de mensajería tecnologías como RabbitMQ, Service Bus de Azure u otros bus de servicio como NServiceBus, MassTransit, etcetera.
+En la Figura 8-20 puede ver una abstracción de un bus de eventos con varias implementaciones basadas en tecnologías de mensajería de infraestructura, como RabbitMQ, Azure Service Bus u otro agente de eventos o de mensajería. 
 
 ![](./media/image21.png)
 
-**Figura 8 - 20.** Varias implementaciones de un bus de eventos
+**Figura 8- 20.** Varias implementaciones de un bus de eventos
 
-Sin embargo, como se indica anteriormente, con abstracciones (la interfaz de bus de eventos) es posible únicamente si necesita características de bus de eventos básico admitidas por sus abstracciones. Si necesita características más completos del bus de servicio, probablemente debe usar la API proporcionada por el bus de servicio preferido en lugar de sus propio abstracciones.
+Pero, como se ha mencionado anteriormente, usar sus propias abstracciones (la interfaz del bus de eventos) solo es una buena opción si necesita características de bus de eventos compatibles con sus abstracciones. Si necesita características más completas del bus de servicio, probablemente tendrá que usar la API y las abstracciones proporcionadas por el bus de servicio comercial que prefiera, en vez de usar sus propias abstracciones. 
 
-### <a name="defining-an-event-bus-interface"></a>Define una interfaz de bus de eventos
+### <a name="defining-an-event-bus-interface"></a>Definición de una interfaz de bus de eventos
 
-Comencemos con algún código de implementación para la interfaz de bus de eventos e implementaciones posibles para fines de exploración. La interfaz debe ser sencillo, como se muestra en la siguiente interfaz y no genéricos.
+Comencemos con código de implementación para la interfaz de bus de eventos y las posibles implementaciones para fines de exploración. La interfaz debe ser sencilla y genérica, como la interfaz siguiente.
 
 ```csharp
 public interface IEventBus
 {
     void Publish(IntegrationEvent @event);
-    void Subscribe<T>(IIntegrationEventHandler<T> handler)
-        where T: IntegrationEvent;
 
-    void Unsubscribe<T>(IIntegrationEventHandler<T> handler)
+    void Subscribe<T, TH>()
+        where T : IntegrationEvent
+        where TH : IIntegrationEventHandler<T>;
+
+    void SubscribeDynamic<TH>(string eventName)
+        where TH : IDynamicIntegrationEventHandler;
+
+    void UnsubscribeDynamic<TH>(string eventName)
+        where TH : IDynamicIntegrationEventHandler;
+
+    void Unsubscribe<T, TH>()
+        where TH : IIntegrationEventHandler<T>
         where T : IntegrationEvent;
 }
 ```
 
-El método de publicación es sencillo. El bus de eventos difunden el evento de integración pasado a cualquier microservicio suscrito a ese evento. Este método se usa por la microservicio que está publicando el evento.
+El método `Publish` es sencillo. El bus de eventos difunde el evento de integración que ha recibido a cualquier microservicio, o incluso a una aplicación externa, que se haya suscrito a ese evento. El microservicio que está publicando el evento utiliza este método.
 
-El método Subscribe se usa por la microservicios que van a recibir eventos. Este método tiene dos partes. El primero es el evento de integración para suscribirse a (IntegrationEvent). La segunda parte es el controlador de eventos de integración (o el método de devolución de llamada) que se llame a (IIntegrationEventHandler&lt;T&gt;) cuando el microservicio recibe ese mensaje de evento de integración.
+Los microservicios que quieren recibir eventos utilizan los métodos `Subscribe` (puede tener varias implementaciones dependiendo de los argumentos). Este método tiene dos argumentos. El primero es el evento de integración para suscribirse a (`IntegrationEvent`). El segundo es el controlador del evento de integración (o el método de devolución de llamada), denominado `IIntegrationEventHandler<T>`, que se ejecuta cuando el microservicio receptor recibe ese mensaje de evento de integración.
 
 
 >[!div class="step-by-step"]
-[Anterior] (base de datos-server-container.md) [siguiente] (rabbitmq-event-bus-development-test-environment.md)
+[Anterior] (database-server-container.md) [Siguiente] (rabbitmq-event-bus-development-test-environment.md)

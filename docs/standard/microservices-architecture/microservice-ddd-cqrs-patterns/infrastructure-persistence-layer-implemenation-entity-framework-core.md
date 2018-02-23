@@ -1,56 +1,59 @@
 ---
-title: "Implementación de la capa de persistencia de infraestructura con Entity Framework Core"
-description: "Arquitectura de Microservicios de .NET para aplicaciones .NET en contenedores | Implementación de la capa de persistencia de infraestructura con Entity Framework Core"
+title: "Implementación del nivel de persistencia de la infraestructura con Entity Framework Core"
+description: "Arquitectura de microservicios de .NET para aplicaciones .NET en contenedor | Implementación del nivel de persistencia de la infraestructura con Entity Framework Core"
 keywords: Docker, microservicios, ASP.NET, contenedor
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
+ms.date: 12/12/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: 508d60d73eb7c0f0cc2cc909613cc4f8712b4aba
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 67f89b4ee42d896497f462b80d41afff6b347e05
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
-# <a name="implementing-the-infrastructure-persistence-layer-with-entity-framework-core"></a>Implementación de la capa de persistencia de infraestructura con Entity Framework Core
+# <a name="implementing-the-infrastructure-persistence-layer-with-entity-framework-core"></a>Implementación del nivel de persistencia de la infraestructura con Entity Framework Core
 
-Cuando se utiliza bases de datos relacionales, como SQL Server, Oracle o PostgreSQL, una solución recomendada es implementar la capa de persistencia basada en Entity Framework (EF). EF es compatible con LINQ y proporciona objetos fuertemente tipados para el modelo, así como la persistencia simplificada en la base de datos.
+Al utilizar bases de datos relacionales, como SQL Server, Oracle o PostgreSQL, se recomienda implementar el nivel de persistencia basado en Entity Framework (EF). EF es compatible con LINQ y proporciona objetos fuertemente tipados para el modelo, así como una persistencia simplificada en la base de datos.
 
-Entity Framework tiene una larga historia como parte de .NET Framework. Cuando se usa .NET Core, también debe usar Entity Framework Core, que se ejecuta en Windows o Linux de la misma manera que .NET Core. EF Core es una nueva escritura completa de Entity Framework, que se implementa con una superficie mucho menor y mejoras importantes en el rendimiento.
+Entity Framework hace mucho tiempo que forma parte de .NET Framework. Al utilizar .NET Core, también debe usar Entity Framework Core, que se ejecuta en Windows o Linux de la misma manera que .NET Core. EF Core es una reescritura completa de Entity Framework, que se implementa con una superficie mucho menor y con mejoras importantes en el rendimiento.
 
 ## <a name="introduction-to-entity-framework-core"></a>Introducción a Entity Framework Core
 
-Núcleo de Entity Framework (EF) es una ligera, extensible, y tecnología de acceso de versión entre plataformas de los datos de Entity Framework populares. Se introdujo con .NET Core en mid 2016.
+Entity Framework (EF) Core es una versión ligera, extensible y multiplataforma de la popular tecnología de acceso a datos Entity Framework. Se introdujo con .NET Core a mediados de 2016.
 
-Puesto que una introducción a EF Core ya está disponible en la documentación de Microsoft, en este caso simplemente proporcionamos vínculos a esa información.
+Puesto que en la documentación de Microsoft ya hay una introducción a EF Core, aquí nos limitaremos a proporcionar vínculos a dicha información.
 
 #### <a name="additional-resources"></a>Recursos adicionales
 
--   **Entity Framework Core**
+-   **Descripción general de Entity Framework Core**
     [*https://docs.microsoft.com/ef/core/*](https://docs.microsoft.com/ef/core/)
 
--   **Introducción a Entity Framework Core con Visual Studio y ASP.NET Core**
+-   **Introducción a ASP.NET Core MVC y Entity Framework Core con Visual Studio**
     [*https://docs.microsoft.com/aspnet/core/data/ef-mvc/*](https://docs.microsoft.com/aspnet/core/data/ef-mvc/)
 
--   **Clase DbContext**
+-   **DbContext Class**
     [*https://docs.microsoft.com/ef/core/api/microsoft.entityframeworkcore.dbcontext*](https://docs.microsoft.com/ef/core/api/microsoft.entityframeworkcore.dbcontext)
 
--   **Comparar EF Core & EF6.x**
+-   **Comparar EF Core y EF6**
     [*https://docs.microsoft.com/ef/efcore-and-ef6/index*](https://docs.microsoft.com/ef/efcore-and-ef6/index)
 
 ## <a name="infrastructure-in-entity-framework-core-from-a-ddd-perspective"></a>Infraestructura en Entity Framework Core desde una perspectiva DDD
 
-Desde un punto de vista DDD, una capacidad importante de EF es la capacidad para utilizar las entidades de dominio, también se conoce en terminología EF como POCO *código basado en entidades*. Si usa las entidades de dominio, las clases de modelo de dominio están que ignoran la persistencia, siguiendo el [omisión de persistencia](http://deviq.com/persistence-ignorance/) y [omisión de infraestructura](https://ayende.com/blog/3137/infrastructure-ignorance) principios.
+Desde un punto de vista DDD, una capacidad importante de EF es la de utilizar las entidades de dominio POCO, también conocidas en terminología de EF como *entidades Code First* de POCO. Si usa las entidades de dominio POCO, las clases de modelo de dominio ignoran la persistencia, siguiendo los principios de [omisión de persistencia](http://deviq.com/persistence-ignorance/) y [omisión de infraestructura](https://ayende.com/blog/3137/infrastructure-ignorance).
 
-Por patrones DDD, debe encapsular el comportamiento de dominio y las reglas dentro de la clase de entidad, por lo que puede controlar las invariantes, validaciones y reglas al tener acceso a cualquier colección. Por lo tanto, no es una buena práctica en DDD para permitir el acceso público a colecciones de secundarios entidades u objetos de valor. En su lugar, desea exponer los métodos que controlan cómo y cuándo se pueden actualizar los campos y las colecciones de propiedades, y qué comportamiento y las acciones se realizarán cuando esto ocurre.
+Según los patrones DDD, debe encapsular las reglas y el comportamiento de dominio dentro de la misma clase de entidad, por lo que puede controlar las invariantes, las validaciones y las reglas al acceder a cualquier colección. Por lo tanto, en DDD no se recomienda permitir el acceso público a colecciones de entidades secundarias u objetos de valor. En cambio, es interesante exponer métodos que controlen cómo y cuándo se pueden actualizar los campos y las colecciones de propiedades, y qué comportamiento y qué acciones se producirán cuando esto ocurra.
 
-En EF Core 1.1, para satisfacer los requisitos de DDD puede tener campos sin formato en las entidades en lugar de propiedades con establecedores públicas y privadas. Si no desea que un campo de entidad sea accesible desde el exterior, solo puede crear el campo en lugar de una propiedad o atributo. No hay ninguna necesidad de usar establecedores privados si prefiere este método de limpieza.
+Desde la versión 1.1 de EF Core, para satisfacer estos requisitos de DDD, puede tener campos sin formato en las entidades en lugar de propiedades públicas. Si no quiere que se pueda acceder a un campo de entidad desde el exterior, solo puede crear un campo o un atributo en vez de una propiedad. También puede utilizar establecedores de propiedades privadas.
 
-De forma similar, ahora puede tener acceso a las colecciones de solo lectura mediante el uso de una propiedad pública de tipo IEnumerable&lt;T&gt;, que está respaldado por un miembro de campo privado en la colección (como una lista&lt;&gt;) en el entidad que se basa en EF para la persistencia. Las versiones anteriores de Entity Framework requerían propiedades de colección para admitir ICollection&lt;T&gt;, lo que significaba que cualquier desarrollador que usa la clase de entidad primaria puede agregar o quitar elementos de sus colecciones de propiedades. Esa posibilidad sería con respecto a los modelos recomendados en DDD.
+De forma parecida, ahora puede tener acceso de solo lectura a las colecciones usando una propiedad pública del tipo `IReadOnlyCollection<T>`, que está respaldada por un miembro de campo privado para la colección (como `List<T>`) en la entidad que se basa en EF para la persistencia. En las versiones anteriores de Entity Framework, se requerían propiedades de colección para admitir `ICollection<T>`, lo que significaba que cualquier desarrollador que usara la clase de entidad primaria podía agregar o quitar elementos a través de sus colecciones de propiedades. Esa posibilidad iría en contra de los patrones recomendados en DDD.
 
-Puede usar una colección privada al exponer un objeto IEnumerable de sólo lectura, como se muestra en el ejemplo de código siguiente:
+Puede usar una colección privada al mismo tiempo que expone un objeto `IReadOnlyCollection<T>` de solo lectura, como se muestra en el ejemplo de código siguiente:
 
 ```csharp
 public class Order : Entity
@@ -58,9 +61,9 @@ public class Order : Entity
     // Using private fields, allowed since EF Core 1.1
     private DateTime _orderDate;
     // Other fields ...
-    private readonly List<OrderItem> _orderItems;
 
-    public IEnumerable<OrderItem> OrderItems => _orderItems.AsReadOnly();
+    private readonly List<OrderItem> _orderItems; 
+    public IReadOnlyCollection<OrderItem> OrderItems => _orderItems;
 
     protected Order() { }
 
@@ -70,44 +73,56 @@ public class Order : Entity
     }
 
     public void AddOrderItem(int productId, string productName,
-        decimal unitPrice, decimal discount,
-        string pictureUrl, int units = 1)
+                             decimal unitPrice, decimal discount,
+                             string pictureUrl, int units = 1)
     {
         // Validation logic...
-        var orderItem = new OrderItem(productId, productName, unitPrice, discount,
-            pictureUrl, units);
+
+        var orderItem = new OrderItem(productId, productName, 
+                                      unitPrice, discount,
+                                      pictureUrl, units);
         _orderItems.Add(orderItem);
     }
 }
 ```
 
-Tenga en cuenta que solo puede acceder a la propiedad OrderItems como de solo lectura con lista&lt;&gt;. AsReadOnly(). Este método crea un contenedor de solo lectura alrededor de la lista privada para que esté protegido frente a las actualizaciones externas. Resulta mucho más económico que el uso del método ToList porque no tiene que copiar todos los elementos de una colección nueva; en su lugar, realiza una sola operación de asignación del montón para la instancia del contenedor.
+Tenga en cuenta que solo se puede obtener acceso de solo lectura a la propiedad `OrderItems`, mediante `IReadOnlyCollection<OrderItem>`. Este tipo es de solo lectura, por lo que está protegido frente a las actualizaciones externas normales. 
 
-Núcleo EF proporciona una manera de asignar el modelo de dominio a la base de datos físico sin que contaminen el modelo de dominio. Es POCO .NET código puro, dado que la acción de asignación se implementa en la capa de persistencia. En dicha acción de asignación, debe configurar la asignación de campos en base de datos. En el siguiente ejemplo de un método OnModelCreating, el código resaltado indica EF Core para tener acceso a la propiedad OrderItems a través de su campo.
+EF Core proporciona una manera de asignar el modelo de dominio a la base de datos física sin que "contamine" el modelo de dominio. Se trata de código POCO puro de .NET, puesto que la acción de asignación se implementa en el nivel de persistencia. En esa acción de asignación, debe configurar la asignación de campos a base de datos. En el siguiente ejemplo de método OnModelCreating, el código resaltado indica a EF Core que acceda a la propiedad OrderItems a través de su campo.
 
 ```csharp
+// At OrderingContext.cs from eShopOnContainers
 protected override void OnModelCreating(ModelBuilder modelBuilder)
 {
-    // ...
-    modelBuilder.Entity<Order>(ConfigureOrder);
-    // Other entities ...
+   // ...
+   modelBuilder.ApplyConfiguration(new OrderEntityTypeConfiguration());
+   // Other entities’ configuration ...
 }
 
-void ConfigureOrder(EntityTypeBuilder<Order> orderConfiguration)
+// At OrderEntityTypeConfiguration.cs from eShopOnContainers
+class OrderEntityTypeConfiguration : IEntityTypeConfiguration<Order>
 {
-    // Other configuration ...
-    var navigation = orderConfiguration.Metadata.
-    FindNavigation(nameof(Order.OrderItems));
-    navigation.SetPropertyAccessMode(PropertyAccessMode.Field);
-    // Other configuration ...
+    public void Configure(EntityTypeBuilder<Order> orderConfiguration)
+    {
+        orderConfiguration.ToTable("orders", OrderingContext.DEFAULT_SCHEMA);
+        // Other configuration
+
+        var navigation = 
+              orderConfiguration.Metadata.FindNavigation(nameof(Order.OrderItems));
+
+        //EF access the OrderItem collection property through its backing field
+        navigation.SetPropertyAccessMode(PropertyAccessMode.Field);
+
+        // Other configuration
+    }
 }
 ```
 
-Cuando usas campos en lugar de propiedades, se conserva la entidad OrderItem como si tuviera una lista&lt;OrderItem&gt; propiedad. Sin embargo, que expone un único descriptor de acceso (el método AddOrderItem) para agregar nuevos elementos en el orden. Como resultado, comportamiento y los datos están unidos entre sí y serán coherentes a lo largo de cualquier código de aplicación que utiliza el modelo de dominio.
+Al usar campos en lugar de propiedades, se conserva la entidad OrderItem como si tuviera una propiedad List&lt;OrderItem&gt;. Pero expone un descriptor de acceso único, el método `AddOrderItem`, para agregar nuevos elementos a la orden. Como resultado, el comportamiento y los datos permanecen unidos y son coherentes a lo largo de cualquier código de aplicación que utilice el modelo de dominio.
 
 ## <a name="implementing-custom-repositories-with-entity-framework-core"></a>Implementación de los repositorios personalizados con Entity Framework Core
 
-En el nivel de implementación, un repositorio es simplemente una clase con el código de persistencia de datos coordinada por una unidad de trabajo (DBContext en EF Core) al realizar actualizaciones, como se muestra en la siguiente clase:
+En el nivel de implementación, un repositorio no es más que una clase con código de persistencia de datos coordinada por una unidad de trabajo (DBContext en EF Core) al realizar actualizaciones, como se muestra en la clase siguiente:
 
 ```csharp
 // using statements...
@@ -116,7 +131,6 @@ namespace Microsoft.eShopOnContainers.Services.Ordering.Infrastructure.Repositor
     public class BuyerRepository : IBuyerRepository
     {
         private readonly OrderingContext _context;
-
         public IUnitOfWork UnitOfWork
         {
             get
@@ -124,70 +138,67 @@ namespace Microsoft.eShopOnContainers.Services.Ordering.Infrastructure.Repositor
                 return _context;
             }
         }
-    }
 
-    public BuyerRepository(OrderingContext context)
-    {
-        if (context == null)
+        public BuyerRepository(OrderingContext context)
         {
-            throw new ArgumentNullException(
-                nameof(context));
+            _context = context ?? throw new ArgumentNullException(nameof(context));
         }
-        _context = context;
-    }
 
-    public Buyer Add(Buyer buyer)
-    {
-        return _context.Buyers.Add(buyer).Entity;
-    }
+        public Buyer Add(Buyer buyer)
+        {
+            return _context.Buyers.Add(buyer).Entity; 
+        }
 
-    public async Task<Buyer> FindAsync(string BuyerIdentityGuid)
-    {
-        var buyer = await _context.Buyers.Include(b => b.Payments)
-            .Where(b => b.FullName == BuyerIdentityGuid)
-            .SingleOrDefaultAsync();
-        return buyer;
+        public async Task<Buyer> FindAsync(string BuyerIdentityGuid)
+        {
+            var buyer = await _context.Buyers
+                .Include(b => b.Payments)
+                .Where(b => b.FullName == BuyerIdentityGuid)
+                .SingleOrDefaultAsync();
+
+            return buyer;
+        }
     }
 }
 ```
 
-Tenga en cuenta que la interfaz IBuyerRepository proviene de la capa del modelo de dominio. Sin embargo, la implementación del repositorio se realiza en la persistencia y el nivel de infraestructura.
+Tenga en cuenta que la interfaz IBuyerRepository proviene del nivel de modelo de dominio como un contrato. Pero la implementación del repositorio se realiza en el nivel de persistencia e infraestructura.
 
-DbContext EF procede a través del constructor a través de la inserción de dependencias. Estos se comparten entre varios repositorios dentro del mismo ámbito de solicitud HTTP, gracias a su duración predeterminada (ServiceLifetime.Scoped) en el contenedor de IoC (que puede también establecerse explícitamente con los servicios. AddDbContext&lt;&gt;).
+DbContext de EF pasa mediante el constructor a través de la inserción de dependencias. Se comparte entre varios repositorios dentro del mismo ámbito de solicitud HTTP gracias a su duración predeterminada (ServiceLifetime.Scoped) en el contenedor de IoC (que también puede establecerse explícitamente con services.AddDbContext&lt;&gt;).
 
-### <a name="methods-to-implement-in-a-repository-updates-or-transactions-versus-queries"></a>Métodos que se implementan en un repositorio (actualizaciones o transacciones frente a las consultas)
+### <a name="methods-to-implement-in-a-repository-updates-or-transactions-versus-queries"></a>Métodos que se pueden implementar en un repositorio (actualizaciones o transacciones frente a consultas)
 
-Dentro de cada clase de repositorio, debe colocar los métodos de persistencia que actualizan el estado de entidades que contiene su agregado relacionados. Recuerde que hay una relación uno a uno entre un agregado y su repositorio relacionado. Tenga en cuenta que un objeto de entidad raíz agregada podría tienen las entidades secundarias dentro de su gráfico EF incrustados. Por ejemplo, un comprador podría tener varios métodos de pago como las entidades secundarias relacionadas.
+Dentro de cada clase de repositorio, debe colocar los métodos de persistencia que actualizan el estado de las entidades de forma que queden contenidos por su agregado relacionado. Recuerde que hay una relación de uno a uno entre un agregado y su repositorio relacionado. Tenga en cuenta que un objeto entidad de raíz agregada podría tener entidades secundarias incrustadas en su gráfico de EF. Por ejemplo, un comprador puede tener varias formas de pago como entidades secundarias relacionadas.
 
-Puesto que el enfoque para la ordenación microservicio en eShopOnContainers también se basa en CQS/CQRS, la mayoría de las consultas no se implementa en repositorios personalizados. Los desarrolladores tienen la libertad para crear las consultas y combinaciones que necesitan para la capa de presentación sin las restricciones impuestas por agregados, los repositorios personalizados por agregado y DDD en general. La mayoría de los repositorios personalizados sugeridos por esta guía tiene varias actualizaciones o métodos transaccionales, pero solo los métodos de consulta necesario para que se actualicen los datos. Por ejemplo, el repositorio BuyerRepository implementa un método aplica findasync a, porque la aplicación necesita saber si existe un comprador determinado antes de crear un nuevo comprador relacionada con el orden.
+Como el enfoque para el microservicio de ordenación en eShopOnContainers también se basa en CQS/CQRS, la mayoría de consultas no se implementa en repositorios personalizados. Los desarrolladores pueden crear libremente las consultas y combinaciones que necesiten para el nivel de presentación sin las restricciones impuestas por agregados, repositorios personalizados por agregado y DDD en general. La mayoría de repositorios personalizados sugeridos por esta guía tiene varios métodos de actualización o transacción, pero solo se actualizan los métodos de consulta necesarios para obtener los datos. Por ejemplo, el repositorio BuyerRepository implementa un método FindAsync, porque la aplicación necesita saber si existe un comprador determinado antes de crear un nuevo comprador relacionado con el pedido.
 
-Sin embargo, se implementan los métodos de consulta real para obtener los datos que se envían a las aplicaciones de cliente o de capa de presentación, como se ha mencionado, en las consultas CQRS basadas en consultas flexibles mediante Dapper.
+Pero los métodos de consulta reales para obtener los datos que se van a enviar al nivel de presentación o a las aplicaciones cliente se implementan, como se ha mencionado, en las consultas CQRS basadas en consultas flexibles mediante Dapper.
 
 ### <a name="using-a-custom-repository-versus-using-ef-dbcontext-directly"></a>Uso de un repositorio personalizado frente al uso de DbContext EF directamente
 
-La clase DbContext de Entity Framework se basa en los patrones de unidad de trabajo y del repositorio y puede utilizarse directamente desde el código, como desde un controlador de MVC de ASP.NET Core. Que es la forma puede crear el código más simple, como se muestra en el microservicio de catálogo CRUD en eShopOnContainers. En casos donde desea que el código más simple posible, puede utilizar directamente la clase DbContext, igual que muchos desarrolladores.
+La clase DbContext de Entity Framework se basa en los patrones de unidad de trabajo y repositorio, y puede utilizarse directamente desde el código, así como desde un controlador MVC de ASP.NET Core. Esta es la forma de crear el código más sencillo, como en el microservicio de catálogo CRUD en eShopOnContainers. En los casos en los que quiera disponer del código más sencillo posible, puede utilizar directamente la clase DbContext, igual que muchos desarrolladores.
 
-Sin embargo, implementar repositorios personalizados ofrece varias ventajas al implementar aplicaciones o microservicios más complejos. Los patrones de unidad de trabajo y del repositorio están diseñados para encapsular la capa de persistencia de infraestructura, por lo que se separa de la aplicación y los niveles de modelo de dominio. Implementar estos patrones puede facilitar el uso de repositorios ficticios simular el acceso a la base de datos.
+Pero implementar repositorios personalizados ofrece varias ventajas al implementar aplicaciones o microservicios más complejos. Los patrones de unidad de trabajo y repositorio están diseñados para encapsular el nivel de persistencia de infraestructura de tal modo que se separe de los niveles de aplicación y de modelo de dominio. Implementar estos patrones puede facilitar el uso de repositorios ficticios que simulen el acceso a la base de datos.
 
-En la figura 9-18 puede ver las diferencias entre usar no repositorios (directamente mediante DbContext EF) frente al uso de repositorios que resulten más fácil simular los repositorios.
+En la Figura 9-18 puede ver las diferencias entre no usar repositorios (directamente mediante DbContext de EF) y usar repositorios que faciliten la simulación de los repositorios.
 
 ![](./media/image19.png)
 
-**Figura 9-18**. Uso de repositorios personalizados frente a un DbContext sin formato
+**Figura 9-18**. Uso de repositorios personalizados frente a DbContext sin formato
 
-Hay varias alternativas de simulación. Puede simular repositorios solo o puede simular una unidad de trabajo completa. Solo los repositorios de simulación normalmente es suficiente, y la complejidad para abstraer y simular una unidad de trabajo normalmente no es necesario.
+Hay varias alternativas al plantear una simulación. Puede limitarse a simular repositorios o puede simular una unidad de trabajo completa. Normalmente es suficiente con simular repositorios y no suele ser necesario pasar por la complejidad de tener que abstraer y simular una unidad de trabajo.
 
-Más adelante, cuando nos centramos en el nivel de aplicación, verá cómo funciona la inyección de dependencia en el núcleo de ASP.NET y cómo se implementa cuando el uso de repositorios.
+Más adelante, cuando nos centremos en el nivel de aplicación, verá cómo funciona la inserción de dependencias en ASP.NET Core y cómo se implementa al utilizar repositorios.
 
-En resumen, los repositorios personalizados le permiten probar más fácilmente el código con pruebas unitarias que no se ven afectadas por el estado de la capa de datos. Si ejecuta pruebas que también tienen acceso a la base de datos real a través de Entity Framework, no son pruebas unitarias pero las pruebas de integración, que son mucho más lentas.
+En resumen, los repositorios personalizados le permiten probar el código más fácilmente con pruebas unitarias que no se ven afectadas por el estado de la capa de datos. Si ejecuta pruebas que también tienen acceso a la base de datos real a través de Entity Framework, no se trata de pruebas unitarias sino de pruebas de integración, que son mucho más lentas.
 
-Si estaba usando DbContext directamente, la única opción que tendría sería ejecutar pruebas unitarias mediante el uso de un servidor en la memoria de SQL Server con datos predecible para las pruebas unitarias. No sería capaz de controlar objetos ficticios y datos falsos de la misma manera en el nivel de repositorio. Por supuesto, siempre puede probar los controladores MVC.
+Si estaba usando DbContext directamente, la única opción que tiene es ejecutar pruebas unitarias mediante el uso de SQL Server en la memoria con datos predecibles para pruebas unitarias. No podrá controlar objetos simulados ni datos falsos de la misma manera en el nivel de repositorio. Por supuesto, siempre puede probar los controladores MVC.
 
-## <a name="ef-dbcontext-and-iunitofwork-instance-lifetime-in-your-ioc-container"></a>Duración de la instancia de DbContext EF y IUnitOfWork en el contenedor de IoC
+## <a name="ef-dbcontext-and-iunitofwork-instance-lifetime-in-your-ioc-container"></a>Duración de DbContext de EF y de la instancia IUnitOfWork en el contenedor de IoC
 
-El objeto de DbContext (expuesto como un objeto IUnitOfWork) deba compartirse entre varias bases de datos dentro del mismo ámbito de la solicitud HTTP. Por ejemplo, esto es cierto cuando la operación que se está ejecutando debe tratar con varios agregados o simplemente porque está usando varias instancias de repositorio. También es importante mencionar que la interfaz de IUnitOfWork forma parte del dominio, no un tipo EF.
+El objeto DbContext (expuesto como un objeto IUnitOfWork) puede tener que compartirse entre varios repositorios dentro del mismo ámbito de solicitud HTTP. Por ejemplo, esto sucede cuando la operación que se está ejecutando debe tratar con varios agregados o simplemente porque está usando varias instancias de repositorio. También es importante mencionar que la interfaz de IUnitOfWork forma parte del nivel de dominio, no es un tipo de EF Core.
 
-Para ello, la instancia del objeto DbContext debe tener su duración del servicio ServiceLifetime.Scoped. Se trata de la duración predeterminada al registrar un DbContext con los servicios. AddDbContext en el contenedor de IoC desde el método ConfigureServices del archivo Startup.cs en el proyecto de ASP.NET Core Web API. Esto se ilustra en el código siguiente:
+Para ello, hay que establecer la duración del servicio de la instancia del objeto DbContext en ServiceLifetime.Scoped. Se trata de la duración predeterminada al registrar DbContext con services.AddDbContext en el contenedor de IoC desde el método ConfigureServices del archivo Startup.cs en el proyecto de ASP.NET Core Web API. Esto se ilustra en el código siguiente:
 
 ```csharp
 public IServiceProvider ConfigureServices(IServiceCollection services)
@@ -199,24 +210,24 @@ public IServiceProvider ConfigureServices(IServiceCollection services)
     }).AddControllersAsServices();
 
     services.AddEntityFrameworkSqlServer()
-    .AddDbContext<OrderingContext>(options =>
-    {
-        options.UseSqlServer(Configuration["ConnectionString"],
-        sqlop => sqlop.MigrationsAssembly(typeof(Startup).GetTypeInfo().
-        Assembly.GetName().Name));
-    },
-    ServiceLifetime.Scoped // Note that Scoped is the default choice
-    // in AddDbContext. It is shown here only for
-    // pedagogic purposes.
-    );
+      .AddDbContext<OrderingContext>(options =>
+      {
+          options.UseSqlServer(Configuration["ConnectionString"],
+                               sqlOptions => sqlOptions.MigrationsAssembly(typeof(Startup).GetTypeInfo().
+                                                                                    Assembly.GetName().Name));
+      },
+      ServiceLifetime.Scoped // Note that Scoped is the default choice
+                             // in AddDbContext. It is shown here only for
+                             // pedagogic purposes.
+      );
 }
 ```
 
-No se debe configurar el modo de creación de instancias de DbContext como ServiceLifetime.Transient o ServiceLifetime.Singleton.
+El modo de creación de instancias de DbContext no se debe configurar como ServiceLifetime.Transient o ServiceLifetime.Singleton.
 
-## <a name="the-repository-instance-lifetime-in-your-ioc-container"></a>La duración de la instancia de repositorio en el contenedor de IoC
+## <a name="the-repository-instance-lifetime-in-your-ioc-container"></a>Duración de la instancia de repositorio en su contenedor IoC
 
-De forma similar, duración del repositorio normalmente se debe establecer como ámbito (InstancePerLifetimeScope en Autofac). También podría ser transitorio (InstancePerDependency en Autofac), pero el servicio será más eficaz en lo que respecta memoria cuando se usa la duración de ámbito.
+De forma similar, la duración del repositorio normalmente se establece como determinada (InstancePerLifetimeScope en Autofac). También puede ser transitorio (InstancePerDependency en Autofac), pero el servicio será más eficaz en lo que respecta a la memoria si se usa la duración de ámbito.
 
 ```csharp
 // Registering a Repository in Autofac IoC container
@@ -225,158 +236,245 @@ builder.RegisterType<OrderRepository>()
     .InstancePerLifetimeScope();
 ```
 
-Tenga en cuenta que con la duración de singleton para el repositorio podría producir problemas de simultaneidad grave cuando su DbContext está establecida en el ámbito de duración (InstancePerLifetimeScope) (las duraciones predeterminadas para un DBContext).
+Tenga en cuenta que utilizar la duración de singleton para el repositorio puede causar problemas de simultaneidad graves al establecer DbContext en una duración determinada (InstancePerLifetimeScope) (duraciones predeterminadas para DBContext).
 
 #### <a name="additional-resources"></a>Recursos adicionales
 
--   **Implementar el repositorio y una unidad de patrones de trabajo en una aplicación de ASP.NET MVC**
-    [*https://www.asp.net/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/ Implementing-the-Repository-and-Unit-of-Work-Patterns-in-an-ASP-NET-MVC-Application*](https://www.asp.net/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application)
+-   **Implementing the Repository and Unit of Work Patterns in an ASP.NET MVC Application** (Implementación de los patrones de repositorio y unidad de trabajo en una aplicación MVC de ASP.NET) 
+    [*https://www.asp.net/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application*](https://www.asp.net/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application)
 
--   **Jonathan Allen. Estrategias de implementación para el repositorio de patrón con Entity Framework, Dapper y la cadena**
+-   **Jonathan Allen. Implementation Strategies for the Repository Pattern with Entity Framework, Dapper, and Chain** (Estrategias de implementación para el patrón de repositorio de con Entity Framework, Dapper y Chain) 
     [*https://www.infoq.com/articles/repository-implementation-strategies*](https://www.infoq.com/articles/repository-implementation-strategies)
 
--   **Cesar de la Torre. Comparar las duraciones de servicio de contenedor de ASP.NET Core IoC con ámbitos de instancia del contenedor de IoC Autofac**
-    [*https://blogs.msdn.microsoft.com/cesardelatorre/2017/01/26/ Comparing-ASP-NET-Core-IoC-Service-Life-Times-and-autofac-IoC-Instance-scopes/*](https://blogs.msdn.microsoft.com/cesardelatorre/2017/01/26/comparing-asp-net-core-ioc-service-life-times-and-autofac-ioc-instance-scopes/)
+-   **Cesar de la Torre. Comparing ASP.NET Core IoC container service lifetimes with Autofac IoC container instance scopes** (Comparación de las duraciones de servicio del contenedor IoC de ASP-NET Core con ámbitos de instancia de contenedor Autofac IoC) 
+    [*https://blogs.msdn.microsoft.com/cesardelatorre/2017/01/26/comparing-asp-net-core-ioc-service-life-times-and-autofac-ioc-instance-scopes/*](https://blogs.msdn.microsoft.com/cesardelatorre/2017/01/26/comparing-asp-net-core-ioc-service-life-times-and-autofac-ioc-instance-scopes/)
 
 ## <a name="table-mapping"></a>Asignación de tabla
 
-Asignación de tabla identifica los datos de la tabla va a consultar de y se guarda en la base de datos. Previamente se ha visto cómo entidades de dominio (por ejemplo, un dominio de producto o el orden) se pueden usar para generar un esquema de base de datos relacionada. EF fuertemente está diseñado basándose en el concepto de *convenciones*. Dirección a convenciones preguntas como "¿qué el nombre de una tabla puede?" o "¿qué propiedad es la clave principal?" Convenciones normalmente se basan en nombres convencionales, por ejemplo, es habitual para la clave principal que es una propiedad que termina por identificador.
+La asignación de tabla identifica los datos de tabla que se van a consultar en la base de datos y que se guardarán en ella. Anteriormente, vimos cómo las entidades de domino (por ejemplo, un dominio de producto o de pedido) se podían usar para generar un esquema de base de datos relacionado. EF está diseñado basándose en el concepto de *convenciones*. Las convenciones generan preguntas como "¿Cuál será el nombre de la tabla?" o "¿Qué propiedad es la clave principal?". Normalmente las convenciones se basan en nombres convencionales, por ejemplo, es habitual que la clave principal sea una propiedad que termine con el identificador.
 
-Por convención, cada entidad se configurará para asignar a una tabla con el mismo nombre que el DbSet&lt;TEntity&gt; que expone la entidad en el contexto derivada. Si no hay DbSet&lt;TEntity&gt; valor es proporcionado para la entidad determinada, se usa el nombre de clase.
+Por convención, cada entidad se configurará para asignarse a una tabla que tenga el mismo nombre que la propiedad DbSet&lt;TEntity&gt; que expone la entidad en el contexto derivado. Si no se proporciona ningún valor DbSet&lt;TEntity&gt; a la entidad determinada, se utiliza el nombre de clase.
 
-### <a name="data-annotations-versus-fluent-api"></a>Anotaciones de datos frente a la API fluida
+### <a name="data-annotations-versus-fluent-api"></a>Anotaciones de datos frente a API fluida
 
-Hay muchas convenciones EF núcleos adicionales, y la mayoría de ellos se puede cambiar mediante las anotaciones de datos o la API fluida, implementa dentro del método OnModelCreating.
+Hay muchas convenciones de EF Core adicionales, la mayoría de las cuales se puede cambiar mediante anotaciones de datos o la API fluida, que se implementan con el método OnModelCreating.
 
-Las anotaciones de datos deben utilizarse en las clases del modelo de entidad, que es una manera más intrusiva desde un punto de vista DDD. Esto es porque se que contaminen el modelo con las anotaciones de datos relacionadas con la base de datos de la infraestructura. Por otro lado, la API fluida es una manera cómoda de cambiar la mayoría de las convenciones y asignaciones en el nivel de infraestructura de persistencia de datos, por lo que será el modelo de entidad limpia y desacoplada de la infraestructura de persistencia.
+Las anotaciones de datos se utilizan en las mismas clases del modelo de entidad, lo que supone un método más intrusivo desde el punto de vista de DDD. Esto es así porque el modelo se contamina con anotaciones de datos relacionadas con la base de datos de la infraestructura. Por otro lado, la API fluida es una forma práctica de cambiar la mayoría de convenciones y asignaciones en el nivel de infraestructura de la persistencia de datos, por lo que el modelo de entidad estará limpio y desacoplado de la infraestructura de persistencia.
 
 ### <a name="fluent-api-and-the-onmodelcreating-method"></a>API fluida y el método OnModelCreating
 
-Como se mencionó, con el fin de cambiar las convenciones y asignaciones, puede usar el método OnModelCreating en la clase DbContext. En el ejemplo siguiente se muestra cómo hacer esto en la ordenación microservicio en eShopOnContainers.
+Como se ha indicado, puede usar el método OnModelCreating en la clase DbContext con el fin de cambiar las convenciones y las asignaciones. 
+
+El microservicio de ordenación en eShopOnContainers implementa configuraciones y asignaciones explícitas, cuando es necesario, tal y como se muestra en el código siguiente.
 
 ```csharp
+// At OrderingContext.cs from eShopOnContainers
 protected override void OnModelCreating(ModelBuilder modelBuilder)
 {
-    //Other entities
-    modelBuilder.Entity<OrderStatus>(ConfigureOrderStatus);
-    //Other entities
+   // ...
+   modelBuilder.ApplyConfiguration(new OrderEntityTypeConfiguration());
+   // Other entities’ configuration ...
 }
 
-void ConfigureOrder(EntityTypeBuilder<Order> orderConfiguration)
+// At OrderEntityTypeConfiguration.cs from eShopOnContainers
+class OrderEntityTypeConfiguration : IEntityTypeConfiguration<Order>
 {
-    orderConfiguration.ToTable("orders", DEFAULT_SCHEMA);
-    orderConfiguration.HasKey(o => o.Id);
-    orderConfiguration.Property(o => o.Id).ForSqlServerUseSequenceHiLo("orderseq", DEFAULT_SCHEMA);
-    orderConfiguration.Property<DateTime>("OrderDate").IsRequired();
-    orderConfiguration.Property<string>("Street").IsRequired();
-    orderConfiguration.Property<string>("State").IsRequired();
-    orderConfiguration.Property<string>("City").IsRequired();
-    orderConfiguration.Property<string>("ZipCode").IsRequired();
-    orderConfiguration.Property<string>("Country").IsRequired();
-    orderConfiguration.Property<int>("BuyerId").IsRequired();
-    orderConfiguration.Property<int>("OrderStatusId").IsRequired();
-    orderConfiguration.Property<int>("PaymentMethodId").IsRequired();
+    public void Configure(EntityTypeBuilder<Order> orderConfiguration)
+    {
+            orderConfiguration.ToTable("orders", OrderingContext.DEFAULT_SCHEMA);
 
-    var navigation =
-    orderConfiguration.Metadata.FindNavigation(nameof(Order.OrderItems));
-    // DDD Patterns comment:
-    // Set as Field (new since EF 1.1) to access
-    // the OrderItem collection property as a field
-    navigation.SetPropertyAccessMode(PropertyAccessMode.Field);
+            orderConfiguration.HasKey(o => o.Id);
 
-    orderConfiguration.HasOne(o => o.PaymentMethod)
-        .WithMany()
-        .HasForeignKey("PaymentMethodId")
-        .OnDelete(DeleteBehavior.Restrict);
-        orderConfiguration.HasOne(o => o.Buyer)
-        .WithMany()
-        .HasForeignKey("BuyerId");
-        orderConfiguration.HasOne(o => o.OrderStatus)
-        .WithMany()
-        .HasForeignKey("OrderStatusId");
+            orderConfiguration.Ignore(b => b.DomainEvents);
+
+            orderConfiguration.Property(o => o.Id)
+                .ForSqlServerUseSequenceHiLo("orderseq", OrderingContext.DEFAULT_SCHEMA);
+
+            //Address Value Object persisted as owned entity type supported since EF Core 2.0
+            orderConfiguration.OwnsOne(o => o.Address);
+
+            orderConfiguration.Property<DateTime>("OrderDate").IsRequired();
+            orderConfiguration.Property<int?>("BuyerId").IsRequired(false);
+            orderConfiguration.Property<int>("OrderStatusId").IsRequired();
+            orderConfiguration.Property<int?>("PaymentMethodId").IsRequired(false);
+            orderConfiguration.Property<string>("Description").IsRequired(false);
+
+            var navigation = orderConfiguration.Metadata.FindNavigation(nameof(Order.OrderItems));
+            
+            // DDD Patterns comment:
+            //Set as field (New since EF 1.1) to access the OrderItem collection property through its field
+            navigation.SetPropertyAccessMode(PropertyAccessMode.Field);
+
+            orderConfiguration.HasOne<PaymentMethod>()
+                .WithMany()
+                .HasForeignKey("PaymentMethodId")
+                .IsRequired(false)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            orderConfiguration.HasOne<Buyer>()
+                .WithMany()
+                .IsRequired(false)
+                .HasForeignKey("BuyerId");
+
+            orderConfiguration.HasOne(o => o.OrderStatus)
+                .WithMany()
+                .HasForeignKey("OrderStatusId");
+    }
 }
 ```
 
-Puede establecer todas las asignaciones de la API fluida dentro del método OnModelCreating mismo, pero es aconsejable crear particiones que el código y tiene varios submethods, uno por cada entidad, tal como se muestra en el ejemplo. Para los modelos de grandes tamaño, incluso puede ser aconsejable tener archivos de código fuente independiente (clases estáticas) para configurar los tipos de entidad diferentes.
+Puede establecer todas las asignaciones de la API fluida dentro del mismo método OnModelCreating, pero se aconseja crear particiones en el código y tener varias clases de configuración, una por cada entidad, tal como se muestra en el ejemplo. Especialmente para modelos grandes, es aconsejable tener clases de configuración independientes para configurar diferentes tipos de entidad.
 
-El código en el ejemplo es explícito. Sin embargo, las convenciones de EF Core realizar la mayoría de esto automáticamente, por lo que el código real que tendría que escribir lograr lo mismo sería mucho más pequeño.
+En el código de ejemplo se muestran algunas asignaciones y declaraciones explícitas. Pero las convenciones de EF Core realizan muchas de esas asignaciones automáticamente, por lo que, en su caso, podría necesitar un código más pequeño.
 
-### <a name="the-hilo-algorithm-in-ef-core"></a>El algoritmo de Hi/Lo EF núcleo
 
-Un aspecto interesante de código en el ejemplo anterior es que utiliza la [Hi/Lo algoritmo](https://vladmihalcea.com/2014/06/23/the-hilo-algorithm/) como la estrategia de generación de claves.
+### <a name="the-hilo-algorithm-in-ef-core"></a>Algoritmo Hi/Lo en EF Core
 
-El algoritmo de Hi/Lo es útil cuando necesita claves únicas. Como un resumen, el algoritmo Hi-Lo asigna identificadores únicos a filas de la tabla mientras no función almacena la fila en la base de datos inmediatamente. Esto le permite empezar a usar los identificadores de forma inmediata, como sucede con la base de datos secuencial normal identificadores.
+Un aspecto interesante del código de ejemplo anterior es que utiliza el [algoritmo Hi/Lo](https://vladmihalcea.com/2014/06/23/the-hilo-algorithm/) como estrategia de generación de claves.
 
-El algoritmo de Hi/Lo describe un mecanismo para la generación de identificadores seguros en el lado del cliente en lugar de en la base de datos. *Seguro* en este contexto significa sin conflictos. Este algoritmo es interesante por estos motivos:
+El algoritmo Hi/Lo es útil cuando se necesitan claves únicas. A modo de resumen, el algoritmo Hi-Lo asigna identificadores únicos a filas de la tabla, pero no depende del almacenaje inmediato de la fila en la base de datos. Esto le permite empezar a usar los identificadores de forma inmediata, como sucede con los identificadores de la base de datos secuencial normal.
 
--   No se interrumpe el patrón de la unidad de trabajo.
+El algoritmo Hi/Lo describe un mecanismo para generar identificadores seguros en el lado del cliente, en lugar de hacerlo en la base de datos. *Seguro* en este contexto significa sin conflictos. Este algoritmo es interesante por los siguientes motivos:
 
--   No requerir viajes de ida y los generadores de secuencias de manera hacer en otros DBMS.
+-   No interrumpe el patrón de la unidad de trabajo.
 
--   Genera un identificador legible humano, a diferencia de las técnicas que utilizan identificadores GUID.
+-   No requiere recorridos de ida y vuelta, como sí lo hacen los generadores de secuencias en otros sistemas de administración de bases de datos.
+
+-   Genera un identificador que pueden leer los humanos, a diferencia de las técnicas que utilizan los identificadores GUID.
 
 EF Core es compatible con [HiLo](http://stackoverflow.com/questions/282099/whats-the-hi-lo-algorithm) con el método ForSqlServerUseSequenceHiLo, tal como se muestra en el ejemplo anterior.
 
-### <a name="mapping-fields-instead-of-properties"></a>Asignar campos en lugar de propiedades
+### <a name="mapping-fields-instead-of-properties"></a>Asignación de campos en lugar de propiedades
 
-Con la característica de EF Core 1.1 que asigna las columnas a campos, es posible que no utilizan las propiedades de la clase de entidad y para asignar columnas de una tabla a campos. Un uso común para los sería campos privados para cualquier estado interno que no es necesario tener acceso desde fuera de la entidad.
+Con esta característica, disponible desde la versión 1.1 de EF Core, puede asignar directamente columnas a los campos. Es posible no utilizar propiedades en la clase de entidad y simplemente asignar columnas de una tabla a los campos. Un uso habitual de ello serían los campos privados para cualquier estado interno, al que no sea necesario acceder desde fuera de la entidad. 
 
-EF 1.1 es compatible con un método para asignar un campo sin una propiedad relacionada a una columna de la base de datos. Para hacer esto con campos únicos o también con las colecciones, como una lista&lt; &gt; campo. Este punto se mencionó anteriormente cuando analizamos las clases del modelo de dominio de modelado, pero aquí puede ver cómo se realiza la asignación con la configuración de PropertyAccessMode.Field resaltada en el código anterior.
+Puede hacerlo con campos únicos o también con colecciones, como si se tratara de un campo `List<>`. Este punto se mencionó anteriormente cuando analizamos el modelado de las clases de modelo de dominio, pero aquí puede ver cómo se realiza esta asignación con la configuración `PropertyAccessMode.Field` resaltada en el código anterior.
 
-### <a name="using-shadow-properties-in-value-objects-for-hidden-ids-at-the-infrastructure-level"></a>Usar propiedades de instantáneas en objetos de valor para identificadores ocultos en el nivel de infraestructura
+### <a name="using-shadow-properties-in-ef-core-hidden-at-the-infrastructure-level"></a>Uso de propiedades reemplazadas en EF Core y ocultas en el nivel de infraestructura
 
-Propiedades de sombra de EF Core son propiedades que no existen en el modelo de clase de entidad. Los valores y Estados de estas propiedades se mantienen exclusivamente en el [ChangeTracker](https://docs.microsoft.com/ef/core/api/microsoft.entityframeworkcore.changetracking.changetracker) clase en el nivel de infraestructura.
+Las propiedades reemplazadas en EF Core son propiedades que no existen en su modelo de clase de entidad. Los valores y estados de estas propiedades se mantienen exclusivamente en la clase [ChangeTracker](https://docs.microsoft.com/ef/core/api/microsoft.entityframeworkcore.changetracking.changetracker), en el nivel de infraestructura.
 
-Desde un punto de vista DDD, reemplazar propiedades son una manera cómoda para implementar objetos de valor ocultando el identificador como una clave principal de propiedad de instantáneas. Esto es importante, porque un objeto de valor no debe tener la identidad (al menos, no es necesario el identificador en el nivel de modelo de dominio cuando la forma de objetos de valor). El punto aquí es que, a partir de la versión actual de núcleo de EF, Core EF no tiene una forma de implementar objetos de valor como [tipos complejos](https://msdn.microsoft.com/library/jj680147(v=vs.113).aspx), ya que es posible en EF 6.x. Para eso están actualmente debe implementar un objeto de valor como un conjunto de entidades con un identificador oculto (clave principal) como una propiedad de instantáneas.
 
-Como puede ver en la [objeto de valor de dirección](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/AggregatesModel/OrderAggregate/Address.cs) en eShopOnContainers, en el modelo de dirección no verá un Id.:
+## <a name="implementing-the-specification-pattern"></a>Implementación del patrón de especificación
+
+Como se mencionó anteriormente en la sección de diseño, el patrón de especificación (el nombre completo sería "patrón de especificación de consultas") es un modelo de diseño controlado por dominios diseñado como el lugar donde se puede incluir la definición de una consulta con lógica opcional de ordenación y paginación. El patrón de especificación define una consulta en un objeto. Por ejemplo, para encapsular una consulta paginada que busque algunos productos, se puede crear una especificación PagedProduct que tome los parámetros de entrada necesarios (pageNumber, pageSize, filter, etc.). Después, cualquier método de repositorio (normalmente una sobrecarga de List()) aceptará el parámetro ISpecification y ejecutará la consulta esperada según esa especificación.
+
+Un ejemplo de una interfaz Specification genérica es el siguiente código de [eShopOnWeb](https://github.com/dotnet-architecture/eShopOnWeb). 
 
 ```csharp
-public class Address : ValueObject
+// GENERIC SPECIFICATION INTERFACE
+// https://github.com/dotnet-architecture/eShopOnWeb 
+
+public interface ISpecification<T>
 {
-    public String Street { get; private set; }
-    public String City { get; private set; }
-    public String State { get; private set; }
-    public String Country { get; private set; }
-    public String ZipCode { get; private set; }
-    //Constructor initializing, etc
+    Expression<Func<T, bool>> Criteria { get; }
+    List<Expression<Func<T, object>>> Includes { get; }
+    List<string> IncludeStrings { get; }
 }
 ```
 
-Pero tras los bastidores, es necesario proporcionar un identificador para que EF Core es capaz de almacenar estos datos en las tablas de base de datos. Se establece en el método ConfigureAddress de la [OrderingContext.cs](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Infrastructure/OrderingContext.cs) clase en el nivel de infraestructura, por lo que no contamina el modelo de dominio con código de infraestructura EF.
+La siguiente es la implementación de una clase base de especificación genérica.
 
 ```csharp
-void ConfigureAddress(EntityTypeBuilder<Address> addressConfiguration)
+// GENERIC SPECIFICATION IMPLEMENTATION (BASE CLASS)
+// https://github.com/dotnet-architecture/eShopOnWeb
+ 
+public abstract class BaseSpecification<T> : ISpecification<T>
 {
-    addressConfiguration.ToTable("address", DEFAULT_SCHEMA);
-    // DDD pattern comment:
-    // Implementing the Address ID as a shadow property, because the
-    // address is a value object and an identity is not required for a
-    // value object
-    // EF Core just needs the ID so it can store it in a database table
-    // See: https://docs.microsoft.com/ef/core/modeling/shadow-properties
-    addressConfiguration.Property<int>("Id").IsRequired();
-    addressConfiguration.HasKey("Id");
+    public BaseSpecification(Expression<Func<T, bool>> criteria)
+    {
+        Criteria = criteria;
+    }
+    public Expression<Func<T, bool>> Criteria { get; }
+
+    public List<Expression<Func<T, object>>> Includes { get; } = 
+                                           new List<Expression<Func<T, object>>>();
+
+    public List<string> IncludeStrings { get; } = new List<string>();
+ 
+    protected virtual void AddInclude(Expression<Func<T, object>> includeExpression)
+    {
+        Includes.Add(includeExpression);
+    }
+    
+    // string-based includes allow for including children of children
+    // e.g. Basket.Items.Product
+    protected virtual void AddInclude(string includeString)
+    {
+        IncludeStrings.Add(includeString);
+    }
 }
 ```
+
+La siguiente especificación carga una entidad de cesta única a partir del id. o del id. de comprador al que pertenece la cesta y realiza una [carga diligente](https://docs.microsoft.com/en-us/ef/core/querying/related-data) de la colección de artículos de la cesta.
+
+```csharp
+// SAMPLE QUERY SPECIFICATION IMPLEMENTATION
+
+public class BasketWithItemsSpecification : BaseSpecification<Basket>
+{
+    public BasketWithItemsSpecification(int basketId)
+        : base(b => b.Id == basketId)
+    {
+        AddInclude(b => b.Items);
+    }
+    public BasketWithItemsSpecification(string buyerId)
+        : base(b => b.BuyerId == buyerId)
+    {
+        AddInclude(b => b.Items);
+    }
+}
+```
+
+Por último, puede ver a continuación cómo un repositorio de EF genérico puede usar una especificación de este tipo para filtrar y cargar de forma diligente los datos relacionados con un determinado tipo de entidad T.
+
+```csharp
+// GENERIC EF REPOSITORY WITH SPECIFICATION
+// https://github.com/dotnet-architecture/eShopOnWeb
+
+public IEnumerable<T> List(ISpecification<T> spec)
+{
+    // fetch a Queryable that includes all expression-based includes
+    var queryableResultWithIncludes = spec.Includes
+        .Aggregate(_dbContext.Set<T>().AsQueryable(),
+            (current, include) => current.Include(include));
+ 
+    // modify the IQueryable to include any string-based include statements
+    var secondaryResult = spec.IncludeStrings
+        .Aggregate(queryableResultWithIncludes,
+            (current, include) => current.Include(include));
+ 
+    // return the result of the query using the specification's criteria expression
+    return secondaryResult
+                    .Where(spec.Criteria)
+                    .AsEnumerable();
+}
+```
+Además de encapsular la lógica de filtro, puede especificar la forma de los datos que se van a devolver, incluidas las propiedades que se van a rellenar. 
+
+Aunque no se recomienda devolver IQueryable desde un repositorio, se puede usar perfectamente dentro del repositorio para crear un conjunto de resultados. Puede ver cómo se usa este enfoque en el método List anterior, en que se utilizan expresiones IQueryable intermedias para generar la lista de consultas de inclusión antes de ejecutar la consulta con los criterios de especificación de la última línea.
+
 
 #### <a name="additional-resources"></a>Recursos adicionales
 
 -   **Asignación de tabla**
     [*https://docs.microsoft.com/ef/core/modeling/relational/tables*](https://docs.microsoft.com/ef/core/modeling/relational/tables)
 
--   **Use HiLo para generar claves con Entity Framework Core**
+-   **Use HiLo to generate keys with Entity Framework Core** (Uso de HiLo para generar claves con Entity Framework Core)
     [*http://www.talkingdotnet.com/use-hilo-to-generate-keys-with-entity-framework-core/*](http://www.talkingdotnet.com/use-hilo-to-generate-keys-with-entity-framework-core/)
 
--   **Realizar una copia de los campos**
+-   **Campos de respaldo**
     [*https://docs.microsoft.com/ef/core/modeling/backing-field*](https://docs.microsoft.com/ef/core/modeling/backing-field)
 
--   **Steve Smith. Encapsula las colecciones en Entity Framework Core**
+-   **Steve Smith. Encapsulated Collections in Entity Framework Core** (Colecciones encapsuladas en Entity Framework Core)
     [*http://ardalis.com/encapsulated-collections-in-entity-framework-core*](http://ardalis.com/encapsulated-collections-in-entity-framework-core)
 
--   **Ocultar propiedades**
+-   **Shadow Properties (Propiedades Shadow)**
     [*https://docs.microsoft.com/ef/core/modeling/shadow-properties*](https://docs.microsoft.com/ef/core/modeling/shadow-properties)
 
+-   **The Specification pattern** (El patrón de especificación)
+    [*http://deviq.com/specification-pattern/*](http://deviq.com/specification-pattern/)
+    
 
 >[!div class="step-by-step"]
-[Anterior] (infraestructura-persistencia-layer-design.md) [siguiente] (nosql-base de datos de persistencia-infrastructure.md)
+[Anterior] (infrastructure-persistence-layer-design.md) [Siguiente] (nosql-database-persistence-infrastructure.md)
