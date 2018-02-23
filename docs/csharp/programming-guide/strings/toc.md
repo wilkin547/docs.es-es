@@ -4,4 +4,3 @@
 ## [Cómo: Buscar cadenas mediante los métodos String](how-to-search-strings-using-string-methods.md)
 ## [Cómo: Buscar cadenas mediante expresiones regulares](how-to-search-strings-using-regular-expressions.md)
 ## [Cómo: Determinar si una cadena representa un valor numérico](how-to-determine-whether-a-string-represents-a-numeric-value.md)
-## [Cómo: Convertir una cadena en un valor DateTime](how-to-convert-a-string-to-a-datetime.md)
