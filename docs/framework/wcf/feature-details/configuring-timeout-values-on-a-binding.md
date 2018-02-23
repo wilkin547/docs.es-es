@@ -5,34 +5,36 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b5c825a2-b48f-444a-8659-61751ff11d34
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 164b4e3bff3e327b82c78c403a0e65ec8db744ff
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: ce70b8bca923645ea1e00a55ec4d41903d828a99
+ms.sourcegitcommit: 973a12d1e6962cd9a9c263fbfaad040ec8267fe9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/22/2018
 ---
-# <a name="configuring-timeout-values-on-a-binding"></a><span data-ttu-id="312da-102">Configuración de los valores de tiempo de espera en un enlace</span><span class="sxs-lookup"><span data-stu-id="312da-102">Configuring Timeout Values on a Binding</span></span>
-<span data-ttu-id="312da-103">Hay varias configuraciones de tiempo de espera disponibles en los enlaces de WCF.</span><span class="sxs-lookup"><span data-stu-id="312da-103">There are a number of timeout settings available in WCF bindings.</span></span> <span data-ttu-id="312da-104">Establecer estas configuraciones de tiempo de espera correctamente puede mejorar no solo el rendimiento del servicio sino también desempeñar un papel en la facilidad de uso y la seguridad del servicio.</span><span class="sxs-lookup"><span data-stu-id="312da-104">Setting these timeout settings correctly can improve not only your service’s performance but also play a role in the usability and security of your service.</span></span> <span data-ttu-id="312da-105">Los tiempos de espera siguientes están disponibles en los enlaces de WCF:</span><span class="sxs-lookup"><span data-stu-id="312da-105">The following timeouts are available on WCF bindings:</span></span>  
+# <a name="configuring-timeout-values-on-a-binding"></a><span data-ttu-id="d0434-102">Configuración de los valores de tiempo de espera en un enlace</span><span class="sxs-lookup"><span data-stu-id="d0434-102">Configuring Timeout Values on a Binding</span></span>
+<span data-ttu-id="d0434-103">Hay varias configuraciones de tiempo de espera disponibles en los enlaces de WCF.</span><span class="sxs-lookup"><span data-stu-id="d0434-103">There are a number of timeout settings available in WCF bindings.</span></span> <span data-ttu-id="d0434-104">Establecer estas configuraciones de tiempo de espera correctamente puede mejorar no solo el rendimiento del servicio sino también desempeñar un papel en la facilidad de uso y la seguridad del servicio.</span><span class="sxs-lookup"><span data-stu-id="d0434-104">Setting these timeout settings correctly can improve not only your service’s performance but also play a role in the usability and security of your service.</span></span> <span data-ttu-id="d0434-105">Los tiempos de espera siguientes están disponibles en los enlaces de WCF:</span><span class="sxs-lookup"><span data-stu-id="d0434-105">The following timeouts are available on WCF bindings:</span></span>  
   
-1.  <span data-ttu-id="312da-106">OpenTimeout</span><span class="sxs-lookup"><span data-stu-id="312da-106">OpenTimeout</span></span>  
+1.  <span data-ttu-id="d0434-106">OpenTimeout</span><span class="sxs-lookup"><span data-stu-id="d0434-106">OpenTimeout</span></span>  
   
-2.  <span data-ttu-id="312da-107">CloseTimeout</span><span class="sxs-lookup"><span data-stu-id="312da-107">CloseTimeout</span></span>  
+2.  <span data-ttu-id="d0434-107">CloseTimeout</span><span class="sxs-lookup"><span data-stu-id="d0434-107">CloseTimeout</span></span>  
   
-3.  <span data-ttu-id="312da-108">SendTimeout</span><span class="sxs-lookup"><span data-stu-id="312da-108">SendTimeout</span></span>  
+3.  <span data-ttu-id="d0434-108">SendTimeout</span><span class="sxs-lookup"><span data-stu-id="d0434-108">SendTimeout</span></span>  
   
-4.  <span data-ttu-id="312da-109">ReceiveTimeout</span><span class="sxs-lookup"><span data-stu-id="312da-109">ReceiveTimeout</span></span>  
+4.  <span data-ttu-id="d0434-109">ReceiveTimeout</span><span class="sxs-lookup"><span data-stu-id="d0434-109">ReceiveTimeout</span></span>  
   
-## <a name="wcf-binding-timeouts"></a><span data-ttu-id="312da-110">Tiempos de espera de enlace de WCF</span><span class="sxs-lookup"><span data-stu-id="312da-110">WCF Binding Timeouts</span></span>  
- <span data-ttu-id="312da-111">Cada uno de los valores descritos en este tema se crea en el propio enlace, en código o configuración.</span><span class="sxs-lookup"><span data-stu-id="312da-111">Each of the settings discussed in this topic are made on the binding itself, either in code or configuration.</span></span> <span data-ttu-id="312da-112">El código siguiente muestra cómo establecer mediante programación los tiempos de espera en un enlace de WCF en el contexto de un servicio autohospedado.</span><span class="sxs-lookup"><span data-stu-id="312da-112">The following code shows how to programmatically set timeouts on a WCF binding in the context of a self-hosted service.</span></span>  
+## <a name="wcf-binding-timeouts"></a><span data-ttu-id="d0434-110">Tiempos de espera de enlace de WCF</span><span class="sxs-lookup"><span data-stu-id="d0434-110">WCF Binding Timeouts</span></span>  
+ <span data-ttu-id="d0434-111">Cada uno de los valores descritos en este tema se crea en el propio enlace, en código o configuración.</span><span class="sxs-lookup"><span data-stu-id="d0434-111">Each of the settings discussed in this topic are made on the binding itself, either in code or configuration.</span></span> <span data-ttu-id="d0434-112">El código siguiente muestra cómo establecer mediante programación los tiempos de espera en un enlace de WCF en el contexto de un servicio autohospedado.</span><span class="sxs-lookup"><span data-stu-id="d0434-112">The following code shows how to programmatically set timeouts on a WCF binding in the context of a self-hosted service.</span></span>  
   
 ```csharp  
 public static void Main()
@@ -65,7 +67,7 @@ public static void Main()
 }
 ```  
   
- <span data-ttu-id="312da-113">En el ejemplo siguiente se muestra cómo configurar tiempos de espera en un enlace en un archivo de configuración.</span><span class="sxs-lookup"><span data-stu-id="312da-113">The following example shows how to configure timeouts on a binding in a configuration file.</span></span>  
+ <span data-ttu-id="d0434-113">En el ejemplo siguiente se muestra cómo configurar tiempos de espera en un enlace en un archivo de configuración.</span><span class="sxs-lookup"><span data-stu-id="d0434-113">The following example shows how to configure timeouts on a binding in a configuration file.</span></span>  
   
 ```xml  
 <configuration>
@@ -83,22 +85,22 @@ public static void Main()
 </configuration>
 ```  
   
- <span data-ttu-id="312da-114">Se puede encontrar más información sobre estos valores en la documentación de la clase <xref:System.ServiceModel.Channels.Binding>.</span><span class="sxs-lookup"><span data-stu-id="312da-114">More information about these settings can be found in the documentation for the <xref:System.ServiceModel.Channels.Binding> class.</span></span>  
+ <span data-ttu-id="d0434-114">Se puede encontrar más información sobre estos valores en la documentación de la clase <xref:System.ServiceModel.Channels.Binding>.</span><span class="sxs-lookup"><span data-stu-id="d0434-114">More information about these settings can be found in the documentation for the <xref:System.ServiceModel.Channels.Binding> class.</span></span>  
   
-### <a name="client-side-timeouts"></a><span data-ttu-id="312da-115">Tiempos de espera del lado cliente</span><span class="sxs-lookup"><span data-stu-id="312da-115">Client-side Timeouts</span></span>  
- <span data-ttu-id="312da-116">En el lado cliente:</span><span class="sxs-lookup"><span data-stu-id="312da-116">On the client side:</span></span>  
+### <a name="client-side-timeouts"></a><span data-ttu-id="d0434-115">Tiempos de espera del lado cliente</span><span class="sxs-lookup"><span data-stu-id="d0434-115">Client-side Timeouts</span></span>  
+ <span data-ttu-id="d0434-116">En el lado cliente:</span><span class="sxs-lookup"><span data-stu-id="d0434-116">On the client side:</span></span>  
   
-1.  <span data-ttu-id="312da-117">SendTimeout – se usa para inicializar OperationTimeout, que controla el proceso completo de enviar un mensaje, incluido recibir un mensaje de respuesta para una operación de servicio de solicitud y respuesta.</span><span class="sxs-lookup"><span data-stu-id="312da-117">SendTimeout – used to initialize the OperationTimeout, which governs the whole process of sending a message, including receiving a reply message for a request/reply service operation.</span></span> <span data-ttu-id="312da-118">Este tiempo de espera también se aplica al enviar mensajes de respuesta de un método de contrato de devolución de llamada.</span><span class="sxs-lookup"><span data-stu-id="312da-118">This timeout also applies when sending reply messages from a callback contract method.</span></span>  
+1.  <span data-ttu-id="d0434-117">SendTimeout – se usa para inicializar OperationTimeout, que controla el proceso completo de enviar un mensaje, incluido recibir un mensaje de respuesta para una operación de servicio de solicitud y respuesta.</span><span class="sxs-lookup"><span data-stu-id="d0434-117">SendTimeout – used to initialize the OperationTimeout, which governs the whole process of sending a message, including receiving a reply message for a request/reply service operation.</span></span> <span data-ttu-id="d0434-118">Este tiempo de espera también se aplica al enviar mensajes de respuesta de un método de contrato de devolución de llamada.</span><span class="sxs-lookup"><span data-stu-id="d0434-118">This timeout also applies when sending reply messages from a callback contract method.</span></span>  
   
-2.  <span data-ttu-id="312da-119">OpenTimeout – se usa al abrir canales cuando no se especifica ningún valor de tiempo de espera explícito</span><span class="sxs-lookup"><span data-stu-id="312da-119">OpenTimeout – used when opening channels when no explicit timeout value is specified</span></span>  
+2.  <span data-ttu-id="d0434-119">OpenTimeout – se utiliza al abrir canales cuando se especifica ningún valor de tiempo de espera explícito.</span><span class="sxs-lookup"><span data-stu-id="d0434-119">OpenTimeout – used when opening channels when no explicit timeout value is specified.</span></span>  
   
-3.  <span data-ttu-id="312da-120">CloseTimeout – se usa al cerrar canales cuando no se especifica ningún valor de tiempo de espera explícito</span><span class="sxs-lookup"><span data-stu-id="312da-120">CloseTimeout – used when closing channels when no explicit timeout value is specified</span></span>  
+3.  <span data-ttu-id="d0434-120">CloseTimeout – se usa al cerrar canales cuando se especifica ningún valor de tiempo de espera explícito.</span><span class="sxs-lookup"><span data-stu-id="d0434-120">CloseTimeout – used when closing channels when no explicit timeout value is specified.</span></span>  
   
-4.  <span data-ttu-id="312da-121">ReceiveTimeout – no se usa</span><span class="sxs-lookup"><span data-stu-id="312da-121">ReceiveTimeout – is not used</span></span>  
+4.  <span data-ttu-id="d0434-121">ReceiveTimeout – no se utiliza.</span><span class="sxs-lookup"><span data-stu-id="d0434-121">ReceiveTimeout – is not used.</span></span>  
   
-### <a name="service-side-timeouts"></a><span data-ttu-id="312da-122">Tiempos de espera del servicio</span><span class="sxs-lookup"><span data-stu-id="312da-122">Service-side Timeouts</span></span>  
- <span data-ttu-id="312da-123">En el lado de servicio:</span><span class="sxs-lookup"><span data-stu-id="312da-123">On the service side:</span></span>  
+### <a name="service-side-timeouts"></a><span data-ttu-id="d0434-122">Tiempos de espera del servicio</span><span class="sxs-lookup"><span data-stu-id="d0434-122">Service-side Timeouts</span></span>  
+ <span data-ttu-id="d0434-123">En el lado de servicio:</span><span class="sxs-lookup"><span data-stu-id="d0434-123">On the service side:</span></span>  
   
-1.  <span data-ttu-id="312da-124">SendTimeout, OpentTimeout, CloseTimeout son iguales que en el cliente</span><span class="sxs-lookup"><span data-stu-id="312da-124">SendTimeout, OpentTimeout, CloseTimeout are the same as on the client</span></span>  
+1.  <span data-ttu-id="d0434-124">SendTimeout, OpenTimeout, CloseTimeout son los mismos que en el cliente.</span><span class="sxs-lookup"><span data-stu-id="d0434-124">SendTimeout, OpenTimeout, CloseTimeout are the same as on the client.</span></span>  
   
-2.  <span data-ttu-id="312da-125">ReceiveTimeout – lo usa el nivel de marco de trabajo de servicio para inicializar el tiempo de espera de sesión inactiva que controla cuánto tiempo puede estar inactiva una sesión antes de que se agote el tiempo de espera.</span><span class="sxs-lookup"><span data-stu-id="312da-125">ReceiveTimeout – used by the Service Framework Layer to initialize the session-idle timeout which controls how long a session can be idle before timing out.</span></span>
+2.  <span data-ttu-id="d0434-125">ReceiveTimeout – lo usa el nivel de marco de trabajo de servicio para inicializar el tiempo de espera de sesión inactiva que controla cuánto tiempo puede estar inactiva una sesión antes de que se agote el tiempo de espera.</span><span class="sxs-lookup"><span data-stu-id="d0434-125">ReceiveTimeout – used by the Service Framework Layer to initialize the session-idle timeout which controls how long a session can be idle before timing out.</span></span>
