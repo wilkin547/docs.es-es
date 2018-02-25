@@ -5,7 +5,8 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,16 +15,17 @@ helpviewer_keywords:
 - security-transparent code
 - security-critical code
 ms.assetid: 4d05610a-0da6-4f08-acea-d54c9d6143c0
-caps.latest.revision: "37"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ba7b6bca4618b8de7c1b5ce2ef45b8455ee71c5c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 66d3611117c02b60bcf4b3713cd2b5bd79856add
+ms.sourcegitcommit: 75a180acb5d8a2dbd4a52915ce8e980749fb1d05
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/24/2018
 ---
 # <a name="security-transparent-code-level-2"></a>Código transparente en seguridad, nivel 2
 <a name="top"></a>
@@ -88,7 +90,7 @@ ms.lasthandoff: 12/22/2017
   
 -   `AllowPartiallyTrustedCallers` (solo nivel 2): el valor predeterminado de todo el código es transparente. Sin embargo, los miembros y tipos individuales pueden tener otros atributos.  
   
- La tabla siguiente compara el comportamiento del nivel de ensamblado de nivel 2 y nivel 1.  
+ En la tabla siguiente se compara el comportamiento de nivel de ensamblado de nivel 2 y nivel 1.  
   
 |Assembly (atributo)|Nivel 2|Nivel 1|  
 |------------------------|-------------|-------------|  
