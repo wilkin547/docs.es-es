@@ -4,11 +4,11 @@ hide_bc:
 title: "Documentación de .NET"
 description: "Obtenga información sobre cómo usar .NET para crear una variedad de aplicaciones en cualquier plataforma mediante C#, Visual Basic y F#. Examine referencias de API, código de ejemplo, tutoriales y mucho más."
 ms.custom: updateeachrelease
-ms.openlocfilehash: 9e2ed008752d37d79cabc8c9d341e797a715294c
-ms.sourcegitcommit: be1fb5d9447ad459bef22b91a91c72e3e0b2d916
+ms.openlocfilehash: 65d0a7681c8210ee458112a5486f36ceac7f65e4
+ms.sourcegitcommit: 75a180acb5d8a2dbd4a52915ce8e980749fb1d05
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/24/2018
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -256,9 +256,9 @@ ms.lasthandoff: 02/09/2018
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <a href="/aspnet/core/">
-                                                    <h3>Uso de ASP.NET Core</h3>
-                                                    <p>Aprenda a crear aplicaciones web modernas con ASP.NET Core.</p>
+                                                <a href="/aspnet/core/tutorials/">
+                                                    <h3>Tutoriales de ASP.NET Core</h3>
+                                                    <p>Descubra las múltiples guías paso a paso disponibles para aprender a desarrollar aplicaciones de ASP.NET Core.</p>
                                                 </a>
                                             </div>
                                         </div>
@@ -275,7 +275,7 @@ ms.lasthandoff: 02/09/2018
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <a href="https://www.asp.net/learn">
+                                                <a href="/aspnet/overview">
                                                     <h3>¿Qué es ASP.NET?</h3>
                                                     <p>Obtenga información sobre cómo crear aplicaciones web ASP.NET.</p>
                                                 </a>
@@ -296,7 +296,7 @@ ms.lasthandoff: 02/09/2018
                                             <div class="cardText">
                                                 <a href="/aspnet/core/tutorials/first-mvc-app/start-mvc">
                                                     <h3>ASP.NET Core en Visual Studio</h3>
-                                                    <p>Conozca los aspectos básicos de la creación de una aplicación web de MVC de ASP.NET Core con Visual Studio 2015.</p>
+                                                    <p>Conozca los aspectos básicos de la creación de una aplicación web de MVC de ASP.NET Core con Visual Studio.</p>
                                                 </a>
                                             </div>
                                         </div>
@@ -313,9 +313,9 @@ ms.lasthandoff: 02/09/2018
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <a href="/dotnet/framework/docker/aspnetmvc">
-                                                    <h3>Aplicaciones de ASP.NET en contenedores</h3>
-                                                    <p>Obtenga información sobre cómo implementar aplicaciones ASP.NET con Docker.</p>
+                                                <a href="/aspnet/mvc/overview/deployment/docker-aspnetmvc">
+                                                    <h3>Aplicaciones de ASP.NET MVC en contenedores de Windows</h3>
+                                                    <p>Obtenga información sobre cómo implementar aplicaciones ASP.NET MVC con Docker.</p>
                                                 </a>
                                             </div>
                                         </div>
@@ -332,9 +332,9 @@ ms.lasthandoff: 02/09/2018
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <a href="/aspnet/core/tutorials/your-first-mac-aspnet">
-                                                    <h3>ASP.NET en macOS y Visual Studio Code</h3>
-                                                    <p>Aprenda a configurar, compilar e implementar aplicaciones ASP.NET Core en macOS con Visual Studio Code.</p>
+                                                <a href="/aspnet/core/tutorials/xplat">
+                                                    <h3>Tutoriales multiplataforma de ASP.NET Core</h3>
+                                                    <p>Aprenda a crear aplicaciones web o API web con ASP.NET Core.</p>
                                                 </a>
                                             </div>
                                         </div>
@@ -356,8 +356,8 @@ ms.lasthandoff: 02/09/2018
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <a href="https://azure.microsoft.com/develop/net">
-                                                    <h3>Documentación de Azure .NET</h3>
+                                                <a href="/dotnet/azure/">
+                                                    <h3>Azure para documentación de .NET</h3>
                                                     <p>Obtenga información sobre los servicios de Azure como Web Apps, WebJobs, Cloud Services y Virtual Machines.</p>
                                                 </a>
                                             </div>
@@ -413,7 +413,7 @@ ms.lasthandoff: 02/09/2018
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <a href="https://docs.microsoft.com/azure/storage/">
+                                                <a href="/azure/storage/">
                                                     <h3>Almacenamiento de Azure</h3>
                                                     <p>Obtenga información sobre Azure Storage y cómo crear aplicaciones con blobs, tablas, colas y archivos de Azure.</p>
                                                 </a>
@@ -519,7 +519,7 @@ ms.lasthandoff: 02/09/2018
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <a href="https://msdn.microsoft.com/library/ms754130.aspx">
+                                                <a href="/dotnet/framework/wpf/index">
                                                     <h3>Windows Presentation Foundation (WPF)</h3>
                                                     <p>WPF proporciona a los desarrolladores un modelo basado en XAML para crear aplicaciones de escritorio en Windows.</p>
                                                 </a>
@@ -538,7 +538,7 @@ ms.lasthandoff: 02/09/2018
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <a href="https://msdn.microsoft.com/library/dd30h2yb.aspx">
+                                                <a href="/dotnet/framework/winforms/index">
                                                     <h3>Windows Forms</h3>
                                                     <p>Desarrolle rápidamente aplicaciones de línea de negocio para el escritorio de Windows.</p>
                                                 </a>
