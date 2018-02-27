@@ -12,12 +12,13 @@ ms.devlang: dotnet
 ms.assetid: 03c28597-7e73-46d6-a9c3-f9cb55642739
 manager: wpickett
 ms.custom: mvc
-ms.workload: dotnetcore
-ms.openlocfilehash: 8c6daabb3040998d3376ad022790c16b9629233f
-ms.sourcegitcommit: bf8a3ba647252010bdce86dd914ac6c61b5ba89d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: dabc7c0c4a0afab8edf7d2bab410bb9635821936
+ms.sourcegitcommit: 75a180acb5d8a2dbd4a52915ce8e980749fb1d05
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/06/2018
+ms.lasthandoff: 02/24/2018
 ---
 # <a name="introduction-to-net-and-docker"></a>Introducción a .NET y Docker
 
@@ -37,7 +38,7 @@ La [relación entre los contenedores, las imágenes y los registros de Docker](.
 
 * [Contenedores basados en Windows: desarrollo de aplicaciones modernas con control de nivel empresarial.](https://www.youtube.com/watch?v=Ryx3o0rD5lY&feature=youtu.be)
 * [Información general de Docker](https://docs.docker.com/engine/docker-overview/)
-* [Dockerfile en contenedores de Windows](/virtualization/windowscontainers/manage-docker/manage-windows-dockerfile.md)
+* [Dockerfile en contenedores de Windows](/virtualization/windowscontainers/manage-docker/manage-windows-dockerfile)
 * [Procedimientos recomendados para escribir Dockerfiles](https://docs.docker.com/engine/userguide/eng-image/dockerfile_best-practices/)
 * [Creación de imágenes de Docker para aplicaciones de .NET Core](../docker/building-net-docker-images.md)
 
@@ -183,7 +184,7 @@ El [ejemplo de dotnet-framework:4.6.2](https://github.com/Microsoft/dotnet-frame
 
 * [Imágenes del emulador de Cosmos DB de Microsoft Azure en DockerHub](https://hub.docker.com/r/microsoft/azure-cosmosdb-emulator) 
 
-* [Uso del emulador de Cosmos DB de Azure para desarrollo y pruebas a nivel local](/azure/cosmos-db/local-emulator.md#developing-with-the-emulator)
+* [Uso del emulador de Cosmos DB de Azure para desarrollo y pruebas a nivel local](/azure/cosmos-db/local-emulator#developing-with-the-emulator)
 
 ## <a name="exploring-the-rich-docker-development-ecosystem"></a>Exploración del amplio ecosistema de desarrollo de Docker
 
@@ -192,10 +193,10 @@ Ahora que ha aprendido sobre la plataforma Docker y las diferentes imágenes de 
 * [Using .NET and Docker together](https://blogs.msdn.microsoft.com/dotnet/2017/05/25/using-net-and-docker-together/) (Uso conjunto de .NET y Docker)
 * [Diseñar y desarrollar aplicaciones .NET basadas en varios contenedores y microservicios](../../standard/microservices-architecture/multi-container-microservice-net-applications/index.md)
 * [Visual Studio Code Docker extension](https://code.visualstudio.com/docs/languages/dockerfile) (Extensión de Docker de Visual Studio Code)
-* [Learn how to use Azure Service Fabric](/azure/service-fabric/index.md) (Información acerca de cómo usar Azure Service Fabric)
+* [Learn how to use Azure Service Fabric](/azure/service-fabric/index) (Información acerca de cómo usar Azure Service Fabric)
 * [Service Fabric Getting Started Sample](https://azure.microsoft.com/resources/samples/service-fabric-dotnet-getting-started/) (Ejemplo de introducción a Service Fabric)
-* [Benefits of Windows Containers](/virtualization/windowscontainers/about/index.md#video-overview) (Beneficios de los contenedores de Windows)
-* [Working with Visual Studio Docker Tools](/aspnet/core/publishing/visual-studio-tools-for-docker/index.md) (Trabajo con Visual Studio Docker Tools)
+* [Benefits of Windows Containers](/virtualization/windowscontainers/about/index#video-overview) (Beneficios de los contenedores de Windows)
+* [Working with Visual Studio Docker Tools](/aspnet/core/host-and-deploy/docker/visual-studio-tools-for-docker) (Trabajo con Visual Studio Docker Tools)
 * [Deploying Docker Images from the Azure Container Registry to Azure Container Instances](https://blogs.msdn.microsoft.com/stevelasker/2017/07/28/deploying-docker-images-from-the-azure-container-registry-to-azure-container-instances/) (Implementación de imágenes de Docker desde Azure Container Registry a Azure Container Instances)
 * [Depuración con Visual Studio Code](https://code.visualstudio.com/docs/nodejs/debugging-recipes#_nodejs-typescript-docker-container)
 * [Getting hands on with Visual Studio for Mac, containers, and serverless code in the cloud](https://blogs.msdn.microsoft.com/visualstudio/2017/08/31/hands-on-with-visual-studio-for-mac-containers-serverless-code-in-the-cloud/#comments) (Información práctica sobre Visual Studio para Mac, contenedores y código sin servidor en la nube)
