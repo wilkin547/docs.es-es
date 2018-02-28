@@ -46,11 +46,11 @@ ms.assetid: 6353cb9b-6ee4-4af6-a5a8-88ce39f90cc5
 author: rpetrusha
 ms.author: ronpet
 ms.manager: wpickett
-ms.openlocfilehash: bdb675b9605d03829c95897382daa6d03cf1b041
-ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
+ms.openlocfilehash: 20a9a30689fb62a6956987b06470e76eeb42ebab
+ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="type-characters-visual-basic"></a>Escriba los caracteres (Visual Basic)
 
@@ -88,7 +88,7 @@ El formato de un literal tal como aparece en el código normalmente determina el
 |Formato de texto de literal|Tipo de datos predeterminado|Ejemplo|  
 |-----------------------------|-----------------------|-------------|  
 |Numérico, ninguna parte fraccionaria|`Integer`|`2147483647`|  
-|Numérico, ninguna parte fraccionaria, demasiado grande para`Integer`|`Long`|`2147483648`|  
+|Numérico, ninguna parte fraccionaria, demasiado grande para `Integer`|`Long`|`2147483648`|  
 |Numérico, parte fraccionaria|`Double`|`1.2`|  
 |Entre comillas dobles|`String`|`"A"`|  
 |Delimitado por un signo de número|`Date`|`#5/17/1993 9:32 AM#`|  
@@ -123,7 +123,7 @@ Normalmente, el compilador interpreta un literal entero para estar en el sistema
 |Base numérica|Prefijo|Valores de dígitos válidos|Ejemplo|
 |-----------------|------------|------------------------|-------------|
 |Hexadecimal (base 16)|`&H`|0-9 y A-F|`&HFFFF`|
-|Formato binario (base 2)|`0B`|0-1|`&B01111100`|
+|Formato binario (base 2)|`&B`|0-1|`&B01111100`|
 |Octal (base 8)|`&O`|0-7|`&O77`|
 
 A partir de 2017 de Visual Basic, puede usar el carácter de subrayado (`_`) como separador de grupos para mejorar la legibilidad de un literal entero. En el ejemplo siguiente se usa el `_` carácter que se va a agrupar un literal binario en grupos de 8 bits:
