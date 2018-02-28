@@ -1,23 +1,25 @@
 ---
 title: Novedades de Visual Basic
-ms.date: 04/27/2017
+ms.date: 02/15/2018
 ms.prod: .net
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
-f1_keywords: VB.StartPage.WhatsNew
+f1_keywords:
+- VB.StartPage.WhatsNew
 helpviewer_keywords:
 - new features, Visual Basic
 - what's new [Visual Basic]
 - Visual Basic, what's new
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
-caps.latest.revision: "145"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d26eb23aae6e5baec98e27a246d06af6b78e0802
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 4df9a34e078de9daeff85c894afbbf4d60501f6b
+ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="whats-new-for-visual-basic"></a>Novedades de Visual Basic
 
@@ -25,10 +27,13 @@ En este tema se enumeran los nombres de las características clave de cada versi
   
 ## <a name="current-version"></a>Versión actual
 
-Visual Basic / Visual Studio .NET 2017   
-Para obtener características nuevas, vea [Visual Basic 2017](#visual-basic-2017).
+Visual Basic 15.5   
+Para ver las características nuevas, vea [Visual Basic 15.5](#visual-basic-155)
 
 ## <a name="previous-versions"></a>Versiones anteriores
+
+Visual Basic 15.3   
+Para ver las características nuevas, vea [Visual Basic 15.3](#visual-basic-153)
 
 Visual Basic / Visual Studio .NET 2015   
 Para obtener características nuevas, vea [Visual Basic 14](#visual-basic-14).
@@ -53,6 +58,41 @@ Operadores de desplazamiento de bits, declaración de variable de bucle
 
 Visual Basic / Visual Studio .NET 2002   
 La primera versión de Visual Basic .NET
+
+## <a name="visual-basic-155"></a>Visual Basic 15.5
+
+[Argumentos con nombre no finales](../programming-guide/language-features/procedures/passing-arguments-by-position-and-by-name.md#mixing-arguments-by-position-and-by-name)
+
+En Visual Basic 15.3 y en versiones anteriores, cuando una llamada de método incluía argumentos por posición y por nombre, los argumentos posicionales tenían que preceder a los argumentos con nombre. A partir de Visual Basic 15.5, los argumentos posicionales y los argumentos con nombre pueden aparecer en cualquier orden, siempre y cuando todos los argumentos hasta el último argumento posicional se encuentren en la posición correcta. Esto es muy útil si se usan argumentos con nombre para mejorar la legibilidad del código.
+
+Por ejemplo, la siguiente llamada de método tiene dos argumentos posicionales entre un argumento con nombre. El argumento con nombre deja claro que el valor 19 representa una edad.
+
+```vb
+StudentInfo.Display("Mary", age:=19, #9/21/1998#)
+```
+
+**Separador hexadecimal/binario/octal inicial**
+
+En Visual Basic 2017 se ha agregado compatibilidad con el carácter de subrayado (`_`) como separador de dígitos. A partir de Visual Basic 15.5 puede usar el carácter de subrayado como separador inicial entre el prefijo y los dígitos hexadecimales, binarios u octales. En el ejemplo siguiente se usa un separador de dígitos inicial para definir 3,271,948,384 como número hexadecimal:
+
+```vb
+Dim number As Integer = &H_C305_F860
+``` 
+Para usar el carácter de subrayado como separador inicial, debe agregar el elemento siguiente al archivo del proyecto de Visual Basic (*.vbproj):
+
+```xml
+<PropertyGroup>
+  <LangVersion>15.5</LangVersion>
+</PropertyGroup>
+```
+
+## <a name="visual-basic-153"></a>Visual Basic 15.3
+
+[Inferencia en tuplas con nombre](../programming-guide/language-features/data-types/tuples.md#inferred-tuple-element-names)
+
+Al asignar el valor de elementos de tupla desde variables, Visual Basic infiere el nombre de los elementos de tupla a partir de los nombres de variable correspondientes, por lo que no es necesario asignar un nombre a un elemento de tupla de forma explícita. En el ejemplo siguiente se usa la inferencia para crear una tupla con tres elementos con nombre: `state`, `stateName` y `capital`.
+
+[!code-vb[Inferred tuple names](../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/named-tuples/program.vb#2)]
 
 ## <a name="visual-basic-2017"></a>Visual Basic 2017
 

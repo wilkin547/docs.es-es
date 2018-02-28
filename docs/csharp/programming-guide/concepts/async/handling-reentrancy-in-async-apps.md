@@ -5,34 +5,35 @@ ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 ms.assetid: 47c5075e-c448-45ce-9155-ed4e7e98c677
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 07157057d7ae94d3c6017544ff654ca0ed7b7cf2
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 0f0b6ba1985ab3cbbcc3490ae9b2ffcceb88f873
+ms.sourcegitcommit: cec0525b2121c36198379525e69aa5388266db5b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="handling-reentrancy-in-async-apps-c"></a>Controlar la reentrada en aplicaciones asincrónicas (C#)
 Cuando se incluye código asincrónico en una aplicación, hay que tener en cuenta (y posiblemente evitar) la reentrada, que significa volver a especificar una operación asincrónica antes de que finalice. Si no se identifican ni controlan las posibilidades de reentrada, pueden producirse resultados inesperados.  
   
  **En este tema**  
   
--   [Reconocer la reentrada](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
+-   [Reconocer la reentrada](#BKMK_RecognizingReentrancy)  
   
--   [Controlar la reentrada](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
+-   [Controlar la reentrada](#BKMK_HandlingReentrancy)  
   
-    -   [Deshabilitar el botón de inicio](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
+    -   [Deshabilitar el botón de inicio](#BKMK_DisableTheStartButton)  
   
-    -   [Cancelar y reiniciar la operación](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
+    -   [Cancelar y reiniciar la operación](#BKMK_CancelAndRestart)  
   
-    -   [Ejecutar varias operaciones y poner en cola la salida](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
+    -   [Ejecutar varias operaciones y poner en cola la salida](#BKMK_RunMultipleOperations)  
   
--   [Revisión y ejecución de la aplicación de ejemplo](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
+-   [Revisión y ejecución de la aplicación de ejemplo](#BKMD_SettingUpTheExample)  
   
 > [!NOTE]
 >  Para ejecutar el ejemplo, debe tener instalado en el equipo Visual Studio 2012 o posterior y .NET Framework 4.5 o posterior.  
@@ -92,27 +93,27 @@ TOTAL bytes returned:  890591
 TOTAL bytes returned:  890591  
 ```  
   
- Al final de este tema puede revisar el código que genera este resultado. Si quiere experimentar con el código, descargue la solución en el equipo local y ejecute el proyecto WebsiteDownload o use el código que aparece al final de este tema para crear su propio proyecto. Para obtener más información, vea [Revisión y ejecución de la aplicación de ejemplo](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645).  
+ Al final de este tema puede revisar el código que genera este resultado. Si quiere experimentar con el código, descargue la solución en el equipo local y ejecute el proyecto WebsiteDownload o use el código que aparece al final de este tema para crear su propio proyecto. Para más información e instrucciones, vea [Revisión y ejecución de la aplicación de ejemplo](#BKMD_SettingUpTheExample).  
   
 ##  <a name="BKMK_HandlingReentrancy"></a> Controlar la reentrada  
  La reentrada se puede controlar de varias maneras en función de lo que se desee de la aplicación. Este tema presenta los siguientes ejemplos:  
   
--   [Deshabilitar el botón de inicio](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
+-   [Deshabilitar el botón de inicio](#BKMK_DisableTheStartButton)  
   
      Deshabilite el botón **Start** (Iniciar) mientras se ejecuta la operación de modo que el usuario no pueda interrumpirla.  
   
--   [Cancelar y reiniciar la operación](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
+-   [Cancelar y reiniciar la operación](#BKMK_CancelAndRestart)  
   
      Cancele cualquier operación que se esté ejecutando cuando el usuario haga clic de nuevo en el botón **Start** y, después, deje que continúe la última operación solicitada.  
   
--   [Ejecutar varias operaciones y poner en cola la salida](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
+-   [Ejecutar varias operaciones y poner en cola la salida](#BKMK_RunMultipleOperations)  
   
      Permita que todas las operaciones solicitadas se ejecuten de forma asincrónica, pero coordine la presentación de salida para que los resultados de cada operación aparecen juntos y en orden.  
   
 ###  <a name="BKMK_DisableTheStartButton"></a> Deshabilitar el botón de inicio  
  Puede bloquear el botón **Start** mientras se ejecuta una operación si lo deshabilita en la parte superior del controlador de eventos `StartButton_Click`. A continuación, cuando finalice la operación, puede habilitar de nuevo el botón desde un bloque `finally` de modo que los usuarios puedan volver a ejecutar la aplicación.  
   
- El código siguiente muestra estos cambios marcados con asteriscos. Puede agregar los cambios al código al final de este tema, o puede descargar la aplicación finalizada de [Async Samples: Reentrancy in .NET Desktop Apps](http://go.microsoft.com/fwlink/?LinkId=266571) (Ejemplos asincrónicos: reentrada en aplicaciones de escritorio de .NET). El nombre del proyecto es DisableStartButton.  
+ Para configurar este escenario, haga los cambios siguientes en el código básico que se proporciona en [Revisión y ejecución de la aplicación de ejemplo](#BKMD_SettingUpTheExample). También puede descargar la aplicación finalizada de [Async Samples: Reentrancy in .NET Desktop Apps](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06) (Ejemplos asincrónicos: reentrada en aplicaciones de escritorio de .NET). El nombre del proyecto es DisableStartButton.  
   
 ```csharp  
 private async void StartButton_Click(object sender, RoutedEventArgs e)  
@@ -146,7 +147,7 @@ private async void StartButton_Click(object sender, RoutedEventArgs e)
   
  Para más información sobre la cancelación, vea [Fine-Tuning Your Async Application (C#)](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md) (Ajustar la aplicación asincrónica [C#]).  
   
- Para configurar este escenario, haga los cambios siguientes en el código básico que se proporciona en [Revisión y ejecución de la aplicación de ejemplo](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645). También puede descargar la aplicación finalizada de [Async Samples: Reentrancy in .NET Desktop Apps](http://go.microsoft.com/fwlink/?LinkId=266571) (Ejemplos asincrónicos: reentrada en aplicaciones de escritorio de .NET). El nombre de este proyecto es CancelAndRestart.  
+ Para configurar este escenario, haga los cambios siguientes en el código básico que se proporciona en [Revisión y ejecución de la aplicación de ejemplo](#BKMD_SettingUpTheExample). También puede descargar la aplicación finalizada de [Async Samples: Reentrancy in .NET Desktop Apps](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06) (Ejemplos asincrónicos: reentrada en aplicaciones de escritorio de .NET). El nombre del proyecto es CancelAndRestart.  
   
 1.  Declare una variable de <xref:System.Threading.CancellationTokenSource>, `cts`, que esté en el ámbito de todos los métodos.  
   
@@ -302,12 +303,12 @@ TOTAL bytes returned:  890591
  Para eliminar las listas parciales, quite el comentario de la primera línea de código en `StartButton_Click` para borrar el cuadro de texto cada vez que el usuario reinicie la operación.  
   
 ###  <a name="BKMK_RunMultipleOperations"></a> Ejecutar varias operaciones y poner en cola el resultado  
- Este tercer ejemplo es el más complicado porque la aplicación inicia otra operación asincrónica cada vez que el usuario selecciona el botón **Start** y todas las operaciones se ejecutan hasta completarse. Todas las operaciones solicitadas descargan los sitios web de la lista de forma asincrónica, pero la salida de las operaciones se presenta de manera secuencial. Es decir, la actividad de descarga real se intercala, según se muestra en la salida de [Reconocer la reentrada](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645), pero la lista de resultados de cada grupo se presenta por separado.  
+ Este tercer ejemplo es el más complicado porque la aplicación inicia otra operación asincrónica cada vez que el usuario selecciona el botón **Start** y todas las operaciones se ejecutan hasta completarse. Todas las operaciones solicitadas descargan los sitios web de la lista de forma asincrónica, pero la salida de las operaciones se presenta de manera secuencial. Es decir, la actividad de descarga real se intercala, según se muestra en la salida de [Reconocer la reentrada](#BKMK_RecognizingReentrancy), pero la lista de resultados de cada grupo se presenta por separado.  
   
  Las operaciones comparten una <xref:System.Threading.Tasks.Task> global, `pendingWork`, que actúa de equipo selector para el proceso de visualización.  
-  
- Puede ejecutar este ejemplo pegando los cambios en el código de [Crear la aplicación](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645), o bien puede seguir las instrucciones de [Descargar la aplicación](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645) para descargar el ejemplo y ejecutar el proyecto de QueueResults.  
-  
+
+ Para configurar este escenario, haga los cambios siguientes en el código básico que se proporciona en [Revisión y ejecución de la aplicación de ejemplo](#BKMD_SettingUpTheExample). También puede descargar la aplicación finalizada de [Async Samples: Reentrancy in .NET Desktop Apps](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06) (Ejemplos asincrónicos: reentrada en aplicaciones de escritorio de .NET). El nombre del proyecto es QueueResults.  
+   
  En la salida siguiente se muestra el resultado cuando el usuario selecciona el botón **Start** una sola vez. La etiqueta de letra A indica que el resultado se corresponde a la primera vez que se selecciona el botón **Start**. Los números muestran el orden de las direcciones URL en la lista de destinos de descarga.  
   
 ```  
@@ -489,8 +490,7 @@ private async Task FinishOneGroupAsync(List<string> urls, Task<byte[]>[] content
 }  
 ```  
   
- Puede ejecutar este ejemplo pegando los cambios en el código de [Crear la aplicación](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645), o bien puede seguir las instrucciones de [Descargar la aplicación](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645) para descargar el ejemplo y ejecutar el proyecto de QueueResults.  
-  
+   
 #### <a name="points-of-interest"></a>Puntos de interés  
  Las líneas de información que comienzan con un signo de almohadilla (#) en la salida aclaran cómo funciona este ejemplo.  
   
@@ -551,7 +551,7 @@ private async Task FinishOneGroupAsync(List<string> urls, Task<byte[]>[] content
   
 ###  <a name="BKMK_DownloadingTheApp"></a> Descargar la aplicación  
   
-1.  Descargue el archivo comprimido de [Async Samples: Reentrancy in .NET Desktop Apps](http://go.microsoft.com/fwlink/?LinkId=266571) (Ejemplos asincrónicos: reentrada en aplicaciones de escritorio de .NET).  
+1.  Descargue el archivo comprimido de [Async Samples: Reentrancy in .NET Desktop Apps](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06) (Ejemplos asincrónicos: reentrada en aplicaciones de escritorio de .NET).  
   
 2.  Descomprima el archivo descargado y, a continuación, inicie Visual Studio.  
   
@@ -717,7 +717,7 @@ private async Task FinishOneGroupAsync(List<string> urls, Task<byte[]>[] content
   
 11. Presiones las teclas CTRL+F5 para ejecutar el programa y luego haga clic varias veces en el botón **Start**.  
   
-12. Realice los cambios de [Deshabilitar el botón de inicio](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645), [Cancelar y reiniciar la operación](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645) o [Ejecutar varias operaciones y poner en cola el resultado](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645) para controlar la reentrada.  
+12. Realice los cambios de [Deshabilitar el botón de inicio](#BKMK_DisableTheStartButton), [Cancelar y reiniciar la operación](#BKMK_CancelAndRestart) o [Ejecutar varias operaciones y poner en cola el resultado](#BKMK_RunMultipleOperations) para controlar la reentrada.  
   
 ## <a name="see-also"></a>Vea también  
  [Walkthrough: Accessing the Web by Using async and await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md) (Tutorial: Acceso a web usando Async y Await [C#])  

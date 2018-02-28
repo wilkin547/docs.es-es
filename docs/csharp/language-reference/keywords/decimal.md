@@ -2,21 +2,23 @@
 title: decimal (Referencia de C#)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 f1_keywords:
 - decimal_CSharpKeyword
 - decimal
-helpviewer_keywords: decimal keyword [C#]
+helpviewer_keywords:
+- decimal keyword [C#]
 ms.assetid: b6522132-b5ee-4be3-ad13-3adfdb7de7a1
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 0e03ab24f5d22133e061be3872de00a143bbeca8
-ms.sourcegitcommit: 425524461530f020f9747492b42f8cd72b011ae7
+ms.openlocfilehash: 0da001851c681fe4d698b920d9668b2f6b731e3a
+ms.sourcegitcommit: 973a12d1e6962cd9a9c263fbfaad040ec8267fe9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/25/2017
+ms.lasthandoff: 02/22/2018
 ---
 # <a name="decimal-c-reference"></a>decimal (Referencia de C#)
 La palabra clave `decimal` indica un tipo de datos de 128 bits. Comparado con otros tipos de punto flotante, el tipo `decimal` tiene una mayor precisión y un intervalo más reducido, lo que lo hace adecuado para los cálculos financieros y monetarios. El intervalo aproximado y la precisión para el tipo `decimal` se muestran en la siguiente tabla.  
@@ -25,7 +27,7 @@ La palabra clave `decimal` indica un tipo de datos de 128 bits. Comparado con ot
 |----------|-----------------------|---------------|-------------------------|  
 |`decimal`|(-7,9 x 10<sup>28</sup> a 7,9 x 10<sup>28</sup>) / (10<sup>0</sup> a 10<sup>28</sup>)|28-29 dígitos significativos|<xref:System.Decimal?displayProperty=nameWithType>|  
 
-El valor predeterminado de un `decimal` es m 0.
+El valor predeterminado de un `decimal` es 0m.
   
 ## <a name="literals"></a>Literales  
  Si desea que un literal real numérico se trate como `decimal`, use el sufijo m o M; por ejemplo:  
@@ -64,6 +66,7 @@ myMoney = (decimal)x;
  En el ejemplo siguiente se genera un error del compilador al intentar agregar las variables [double](../../../csharp/language-reference/keywords/double.md) y `decimal`.  
   
 ```csharp  
+decimal dec = 0m;
 double dub = 9;  
 // The following line causes an error that reads "Operator '+' cannot be applied to   
 // operands of type 'double' and 'decimal'"  

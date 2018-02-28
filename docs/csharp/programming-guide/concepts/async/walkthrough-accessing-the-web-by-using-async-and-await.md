@@ -5,17 +5,18 @@ ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: get-started-article
 ms.assetid: c95d8d71-5a98-4bf0-aaf4-45fed2ebbacd
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 85edc87bc8c5183f85618351034c0b043472b530
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 533cb4b342e3de3eb3143b001f5a26e36e4d79b9
+ms.sourcegitcommit: cec0525b2121c36198379525e69aa5388266db5b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="walkthrough-accessing-the-web-by-using-async-and-await-c"></a>Tutorial: Acceso a web usando Async y Await (C#)
 Puede escribir programas asincrónicos de manera más fácil e intuitiva usando las características async/await. Puede escribir código asincrónico parecido al código sincrónico y dejar que el compilador gestione las difíciles funciones de devolución de llamada y continuaciones que normalmente implica el código asincrónico.  
@@ -24,7 +25,7 @@ Puede escribir programas asincrónicos de manera más fácil e intuitiva usando 
   
  Este tutorial comienza con una aplicación sincrónica de Windows Presentation Foundation (WPF) que suma el número de bytes de una lista de sitios web. A continuación, el tutorial convierte la aplicación en una solución asincrónica mediante el uso de las características nuevas.  
   
- Si no quiere compilar las aplicaciones por su cuenta, puede descargar "Async Sample: Accessing the Web Walkthrough (C# and Visual Basic)" (Muestra de Async: obtener acceso al tutorial web [C# y Visual Basic]) de [Muestras de código para desarrollador](http://go.microsoft.com/fwlink/?LinkId=255191).  
+ Si no quiere compilar las aplicaciones por su cuenta, puede descargar [Async Sample: Accessing the Web Walkthrough (C# and Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f) (Muestra de Async: obtener acceso al tutorial web [C# y Visual Basic]).  
   
  En este tutorial, se realizarán las siguientes tareas:  
   
@@ -52,8 +53,8 @@ Puede escribir programas asincrónicos de manera más fácil e intuitiva usando 
   
 -   [Ejemplo](#BKMK_CompleteCodeExamples)  
   
-## <a name="prerequisites"></a>Requisitos previos  
- Debe tener Visual Studio 2012 o posterior instalado en el equipo. Para obtener más información, consulte el [sitio web de Microsoft](http://go.microsoft.com/fwlink/?LinkId=235233).  
+> [!NOTE]
+>  Para ejecutar los ejemplos, debe tener Visual Studio 2012 o posterior, y .NET Framework 4.5 o posterior, instalado en el equipo.  
   
 ###  <a name="CreateWPFApp"></a> Crear una aplicación WPF  
   
@@ -67,7 +68,7 @@ Puede escribir programas asincrónicos de manera más fácil e intuitiva usando 
   
 4.  En el cuadro de texto **Nombre**, escriba `AsyncExampleWPF` y elija el botón **Aceptar**.  
   
-     El nuevo proyecto aparece en el **Explorador de soluciones**.  
+     El proyecto nuevo aparece en el **Explorador de soluciones**.  
   
 ##  <a name="BKMK_DesignWPFMainWin"></a>   
 ###  <a name="MainWindow"></a> Diseñar una ventana MainWindow simple de WPF  
@@ -732,11 +733,11 @@ namespace AsyncExampleWPF
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Ejemplo ASYNC: Obtener acceso al tutorial de Web (C# y Visual Basic)](http://go.microsoft.com/fwlink/?LinkId=255191)  
+ [Async Sample: Accessing the Web Walkthrough (C# and Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f) (Muestra de Async: obtener acceso al tutorial web [C# y Visual Basic])  
  [async](../../../../csharp/language-reference/keywords/async.md)  
  [await](../../../../csharp/language-reference/keywords/await.md)  
  [Programación asincrónica con async y await (C#)](../../../../csharp/programming-guide/concepts/async/index.md)  
  [Async Return Types (C#)](../../../../csharp/programming-guide/concepts/async/async-return-types.md) (Tipos de valor devuelto de async [C#])  
- [Programación asincrónica basada en tareas (TAP)](http://go.microsoft.com/fwlink/?LinkId=204847)  
+ [Task-based Asynchronous Programming (TAP)](https://www.microsoft.com/en-us/download/details.aspx?id=19957) (Programación asincrónica basada en tareas [TAP])  
  [How to: Extend the async Walkthrough by Using Task.WhenAll (C#)](../../../../csharp/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md) (Cómo: Ampliar el tutorial de async usando Task.WhenAll (C#))  
  [How to: Make Multiple Web Requests in Parallel by Using async and await (C#)](../../../../csharp/programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md) (Realización de varias solicitudes web en paralelo con Async y Await [C#])

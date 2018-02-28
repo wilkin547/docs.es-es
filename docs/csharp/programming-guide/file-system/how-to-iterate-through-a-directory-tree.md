@@ -2,20 +2,21 @@
 title: "Cómo: Recorrer en iteración un árbol de directorio (Guía de programación de C#)"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - iterating through folders [C#]
 - file iteration [C#]
 ms.assetid: c4be4a75-6b1b-46a7-9d38-bab353091ed7
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: c4851938aafefd93aa9189aecbb3f5cdd9a09ea0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 7f45bdc4a08922842b079be3ef9d112693ca5d7a
+ms.sourcegitcommit: 75a180acb5d8a2dbd4a52915ce8e980749fb1d05
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/24/2018
 ---
 # <a name="how-to-iterate-through-a-directory-tree-c-programming-guide"></a>Cómo: Recorrer en iteración un árbol de directorio (Guía de programación de C#)
 La frase "recorrer en iteración un árbol de directorios" significa obtener acceso a cada uno de los archivos de todos los subdirectorios anidados bajo una carpeta raíz especificada hasta un nivel de profundidad cualquiera. No es necesario abrir cada archivo. Simplemente puede recuperar el nombre del archivo o subdirectorio como un `string`, o puede recuperar información adicional en el formato de un objeto <xref:System.IO.FileInfo?displayProperty=nameWithType> o <xref:System.IO.DirectoryInfo?displayProperty=nameWithType>.  
@@ -59,9 +60,9 @@ root.GetDirectories("*.*", System.IO.SearchOption.AllDirectories);
  Si debe almacenar el contenido de un árbol de directorios, ya sea en memoria o en el disco, la mejor opción es almacenar solamente la propiedad <xref:System.IO.FileSystemInfo.FullName%2A> (de tipo `string`) para cada archivo. Después, puede usar esta cadena para crear un nuevo objeto <xref:System.IO.FileInfo> o <xref:System.IO.DirectoryInfo>, según sea necesario, o para abrir cualquier archivo que requiera un procesamiento adicional.  
   
 ## <a name="robust-programming"></a>Programación sólida  
- Un código eficaz de iteración de archivos debe tener en cuenta las numerosas dificultades del sistema de archivos. Para obtener más información, vea [NTFS Technical Reference](http://go.microsoft.com/fwlink/?LinkId=79488).  
+ Un código eficaz de iteración de archivos debe tener en cuenta las numerosas dificultades del sistema de archivos. Para más información sobre el sistema de archivos de Windows, vea [NTFS Technical Reference](https://technet.microsoft.com/library/81cc8a8a-bd32-4786-a849-03245d68d8e4) (Referencia técnica de NTFS).  
   
 ## <a name="see-also"></a>Vea también  
  <xref:System.IO>  
- [LINQ y directorios de archivos](http://msdn.microsoft.com/library/5a5d516c-0279-4a84-ac84-b87f54caa808)  
+ [LINQ y directorios de archivos](../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)  
  [Registro y sistema de archivos (Guía de programación de C#)](../../../csharp/programming-guide/file-system/index.md)

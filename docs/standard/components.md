@@ -10,11 +10,11 @@ ms.technology: dotnet-standard
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 08eeb08debdc2e71a85dbc18053bf1aac779069a
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 8a17d4c36d9c1942166b9ad889103a7942f1813d
+ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="net-architectural-components"></a>Componentes de la arquitectura .NET
 
@@ -53,7 +53,7 @@ Para más información sobre .NET Framework, consulte la [Guía de .NET Framewor
 
 ### <a name="mono"></a>Mono
 
-Mono es una implementación de .NET que se usa principalmente cuando se requiere un entorno de ejecución pequeño. Es el entorno de ejecución que activa las aplicaciones de Xamarin en Android, Mac, iOS, tvOS y watchOS, y se centra principalmente en una superficie pequeña.
+Mono es una implementación de .NET que se usa principalmente cuando se requiere un entorno de ejecución pequeño. Es el entorno de ejecución que activa las aplicaciones de Xamarin en Android, Mac, iOS, tvOS y watchOS, y se centra principalmente en una superficie pequeña. Mono también proporciona juegos creados con el motor de Unity.
 
 Admite todas las versiones de .NET Standard publicadas actualmente.
 

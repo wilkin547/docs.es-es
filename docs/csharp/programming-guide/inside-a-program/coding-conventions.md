@@ -2,25 +2,24 @@
 title: "Convenciones de código de C# (Guía de programación de C#)"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - coding conventions, C#
 - Visual C#, coding conventions
 - C# language, coding conventions
 ms.assetid: f4f60de9-d49b-4fb6-bab1-20e19ea24710
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 84ddc2b3cebb6bad95f5076889de11f12624b4de
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 4a8806ddb0a9cc62fe68dc9d558917ee2d532e7f
+ms.sourcegitcommit: 75a180acb5d8a2dbd4a52915ce8e980749fb1d05
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/24/2018
 ---
 # <a name="c-coding-conventions-c-programming-guide"></a>Convenciones de código de C# (Guía de programación de C#)
-La [especificación del lenguaje C#](http://go.microsoft.com/fwlink/?LinkId=199552) no define un estándar de codificación. Sin embargo, Microsoft utiliza las instrucciones de este tema para desarrollar ejemplos y documentación.  
-  
  Las convenciones de codificación tienen los objetivos siguientes:  
   
 -   Crean una apariencia coherente en el código, para que los lectores puedan centrarse en el contenido, no en el diseño.  
@@ -30,6 +29,8 @@ La [especificación del lenguaje C#](http://go.microsoft.com/fwlink/?LinkId=1995
 -   Facilitan la copia, el cambio y el mantenimiento del código.  
   
 -   Muestran los procedimientos recomendados de C#.  
+
+ Microsoft usa las instrucciones de este tema para desarrollar ejemplos y documentación.  
   
 ## <a name="naming-conventions"></a>Convenciones de nomenclatura  
   

@@ -2,17 +2,18 @@
 title: Cadenas interpoladas (C#)
 ms.date: 10/18/2017
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 ms.assetid: 324f267e-1c61-431a-97ed-852c1530742d
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: b8a1fe0be82a0e09d61c66ed463199ff626c9faa
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 0569636bde875d2d0d8921a544273f3214d05188
+ms.sourcegitcommit: cec0525b2121c36198379525e69aa5388266db5b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="interpolated-strings-c-reference"></a>Cadenas interpoladas (Referencia de C#)
 
@@ -23,7 +24,7 @@ Los argumentos de una cadena interpolada son más fáciles de entender que una [
 ```csharp  
 Console.WriteLine($"Name = {name}, hours = {hours:hh}");
 ```  
-contiene dos expresiones de interpolación, '{name}' y '{hora: hh}'. La cadena de formato compuesto equivalente es esta:
+contiene dos expresiones interpoladas, "{name}" y "{hours:hh}". La cadena de formato compuesto equivalente es esta:
 
 ```csharp
 Console.WriteLine("Name = {0}, hours = {1:hh}", name, hours); 
@@ -42,7 +43,7 @@ donde:
 - *format-string* es una cadena de formato adecuada para el tipo de objeto al que se da formato. Por ejemplo, para un valor <xref:System.DateTime>, podría ser una cadena de formato estándar de fecha y hora, como "D" o "d".
 
 > [!IMPORTANT]
-> No puede haber ningún espacio en blanco entre la `$` y `"` que comienza la cadena. Si lo hace, produce un error en tiempo de compilación.
+> No puede haber ningún espacio en blanco entre el carácter `$` y el carácter `"` que inicia la cadena. Si hay alguno, se producirá un error en tiempo de compilación.
 
  Puede utilizar una cadena interpolada en cualquier lugar que pueda utilizar un literal de cadena.  La cadena interpolada se evalúa cada vez que se ejecuta el código con la cadena interpolada. Esto le permite separar la definición y la evaluación de una cadena interpolada.  
   
@@ -52,14 +53,14 @@ Si la cadena interpolada contiene otros caracteres con un significado especial e
 
 [!code-csharp[interpolated-strings4](../../../../samples/snippets/csharp/language-reference/keywords/interpolated-strings4.cs#1)]  
 
-Literalmente interpolan cadenas que se utilizarán el `$` carácter seguido el `@` caracteres. Para obtener más información acerca de las cadenas literales, vea el [cadena](string.md) tema. El código siguiente es una versión modificada del fragmento de código anterior mediante una cadena interpolada textual:
+Las cadenas interpoladas textuales usan el carácter `$` seguido del carácter `@`. Para más información sobre las cadenas textuales, vea el tema [string](string.md). El código siguiente es una versión modificada del fragmento de código anterior en el que se usa una cadena interpolada textual:
 
 [!code-csharp[interpolated-strings4](../../../../samples/snippets/csharp/language-reference/keywords/interpolated-strings5.cs#1)]  
 
-Los cambios de formato son necesarios porque no obedecen las cadenas textuales `\` secuencias de escape.
+Los cambios de formato son necesarios porque las cadenas textuales no obedecen las secuencias de escape `\`.
 
 > [!IMPORTANT]
-> El `$` símbolo (token) debe aparecer antes de la `@` símbolo (token) en una cadena interpolada textual.
+> El token `$` debe aparecer antes del token `@` en una cadena interpolada textual.
 
 
 ## <a name="implicit-conversions"></a>Conversiones implícitas  
@@ -74,11 +75,11 @@ Hay tres conversiones de tipo implícito de una cadena interpolada:
 
 2. Conversión de una cadena interpolada a una variable <xref:System.IFormattable> que permite crear varias cadenas de resultado con contenido específico de la referencia cultural de una sola instancia <xref:System.IFormattable>. Esto resulta útil para incluir elementos como los formatos numéricos y de fecha correctos para cada referencia cultural.  Todas las apariciones de llaves dobles ("{{" y "}}") permanecen como llaves dobles hasta que dé formato a la cadena mediante una llamada implícita o explícita al método <xref:System.Object.ToString>.  Todas las expresiones de interpolación incluidas se convierten en {0}, \{1\} y así sucesivamente.  
 
-   En el ejemplo siguiente se usa la reflexión para mostrar los miembros y los valores de propiedad y campo de una variable <xref:System.IFormattable> que se crea a partir de una cadena interpolada. También pasa el <xref:System.IFormattable> variable a la <xref:System.Console.WriteLine(System.String)?displayProperty=nameWithType> método.
+   En el ejemplo siguiente se usa la reflexión para mostrar los miembros y los valores de propiedad y campo de una variable <xref:System.IFormattable> que se crea a partir de una cadena interpolada. También pasa la variable <xref:System.IFormattable> al método <xref:System.Console.WriteLine(System.String)?displayProperty=nameWithType>.
 
    [!code-csharp[interpolated-strings2](../../../../samples/snippets/csharp/language-reference/keywords/interpolated-strings2.cs#1)]  
 
-   Tenga en cuenta que la cadena interpolada solo se puede inspeccionar mediante reflexión. Si se pasa a una cadena de método de formato como <xref:System.Console.WriteLine(System.String)>, sus elementos de formato se resuelven y devuelve la cadena de resultado. 
+   Tenga en cuenta que la cadena interpolada solo se puede inspeccionar mediante reflexión. Si se pasa a un método de formato de cadena, como <xref:System.Console.WriteLine(System.String)>, sus elementos de formato se resuelven y se devuelve la cadena de resultado. 
 
 3. Conversión de una cadena interpolada a una variable <xref:System.FormattableString> que representa una cadena de formato compuesto. El hecho de inspeccionar la cadena de formato compuesto y la manera en que se presenta como cadena de resultado podría ayudarle a protegerse frente a un ataque por inyección si estuviese compilando una consulta. <xref:System.FormattableString> también incluye sobrecargas <xref:System.FormattableString.ToString> que le permiten generar cadenas de resultado para <xref:System.Globalization.CultureInfo.InvariantCulture> y <xref:System.Globalization.CultureInfo.CurrentCulture>.  Todas las apariciones de llaves dobles ("{{" y "}}") permanecen como llaves dobles hasta que dé formato.  Todas las expresiones de interpolación incluidas se convierten en {0}, \{1\} y así sucesivamente.  
 

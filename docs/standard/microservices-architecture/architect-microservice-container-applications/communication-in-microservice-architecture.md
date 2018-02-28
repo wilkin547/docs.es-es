@@ -11,15 +11,15 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 3920160697c55a81a131a7d8c40b096b064a6f03
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 3c80ce8e3c4ccdc7e53634f54dd998581758ab07
+ms.sourcegitcommit: cec0525b2121c36198379525e69aa5388266db5b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="communication-in-a-microservice-architecture"></a>Comunicación en una arquitectura de microservicio
 
-En una aplicación monolítica que se ejecuta en un único proceso, los componentes se invocan entre sí mediante llamadas de función o método de nivel de lenguaje. Pueden estar estrechamente acoplados si se crean objetos con código (por ejemplo, `new ClassName()`) o se pueden invocar de forma desacoplada si se usa la inserción de dependencias al hacer referencia a abstracciones en lugar de a instancias de objeto concretas. En cualquier caso, los objetos se ejecutan en el mismo proceso. Lo más complicado a la hora de pasar de una aplicación monolítica a una aplicación basada en microservicios es cambiar el mecanismo de comunicación. Una conversión directa de llamadas de método en curso a llamadas RPC a servicios dará lugar a una comunicación extensa y no eficaz con un mal rendimiento en entornos distribuidos. Los desafíos que conlleva diseñar un sistema distribuido correctamente son tan bien conocidos que incluso existe un canon llamado [The fallacies of distributed computing](https://en.wikipedia.org/wiki/Fallacies_of_distributed_computing) (las falacias del cómputo distribuido) que enumera las expectativas que suelen tener los desarrolladores al migrar de diseños monolíticos a distribuidos.
+En una aplicación monolítica que se ejecuta en un único proceso, los componentes se invocan entre sí mediante llamadas de función o método de nivel de lenguaje. Pueden estar estrechamente acoplados si se crean objetos con código (por ejemplo, `new ClassName()`) o se pueden invocar de forma desacoplada si se usa la inserción de dependencias al hacer referencia a abstracciones en lugar de a instancias de objeto concretas. En cualquier caso, los objetos se ejecutan en el mismo proceso. Lo más complicado a la hora de pasar de una aplicación monolítica a una aplicación basada en microservicios es cambiar el mecanismo de comunicación. Una conversión directa de llamadas de método en curso a llamadas RPC a servicios dará lugar a una comunicación extensa y no eficaz con un mal rendimiento en entornos distribuidos. Los desafíos que conlleva diseñar un sistema distribuido correctamente son tan bien conocidos que incluso existe un canon llamado [The fallacies of distributed computing](https://en.wikipedia.org/wiki/Fallacies_of_distributed_computing) (Las falacias del cómputo distribuido) que enumera las expectativas que suelen tener los desarrolladores al migrar de diseños monolíticos a distribuidos.
 
 No existe una única solución, sino varias. Una de ellas implica aislar los microservicios de negocios lo máximo posible. Luego se usa la comunicación asincrónica entre los microservicios internos y se sustituye la comunicación específica típica de la comunicación en proceso entre objetos por la comunicación general. Para ello se agrupan las llamadas y se devuelven los datos que agregan los resultados de varias llamadas internas al cliente.
 
@@ -47,7 +47,7 @@ El segundo eje define si la comunicación tiene un único receptor o varios:
 
 Una aplicación basada en microservicio suele usar una combinación de estos estilos de comunicación. El tipo más común es la comunicación de un único receptor con un protocolo sincrónico como HTTP/HTTPS al invocar a un servicio normal HTTP Web API. Además, los microservicios suelen usar protocolos de mensajería para la comunicación asincrónica entre microservicios.
 
-Resulta útil conocer estos ejes para tener claros los posibles mecanismos de comunicación, aunque no son la preocupación más importante a la hora de compilar microservicios. Al integrar microservicios, no son importantes la naturaleza asincrónica de la ejecución de subprocesos de cliente ni la naturaleza asincrónica del protocolo seleccionado. Lo que *sí* es importante es poder integrar los microservicios de forma asincrónica a la vez que se mantiene su independencia, como se explica en la sección siguiente.
+Resulta útil conocer estos ejes para tener claros los posibles mecanismos de comunicación, aunque no son la preocupación más importante a la hora de compilar microservicios. Al integrar microservicios, no son importantes ni la naturaleza asincrónica de la ejecución de subprocesos de cliente ni la naturaleza asincrónica del protocolo seleccionado. Lo que *sí* es importante es poder integrar los microservicios de forma asincrónica a la vez que se mantiene su independencia, como se explica en la sección siguiente.
 
 ## <a name="asynchronous-microservice-integration-enforces-microservices-autonomy"></a>La integración asincrónica del microservicio obliga a su autonomía
 

@@ -3,19 +3,22 @@ title: Versiones y dependencias de .NET Framework
 ms.custom: updateeachrelease
 ms.date: 10/17/2017
 ms.prod: .net-framework
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.topic: article
-helpviewer_keywords: versions, .NET Framework
+helpviewer_keywords:
+- versions, .NET Framework
 ms.assetid: f75a72de-e2f2-4a7a-9574-3f278684ea90
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5875e5900f925e29fec303d276483947c994da8e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: b6c5699fdcf68e99cd3049cf3150e44d14f4e614
+ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="net-framework-versions-and-dependencies"></a>Versiones y dependencias de .NET Framework
 Cada versión de .NET Framework contiene Common Language Runtime (CLR), las bibliotecas de clases base y otras bibliotecas administradas. En este tema se describen las características principales de cada versión de .NET Framework, se proporciona información sobre las versiones de CLR subyacentes y los entornos de desarrollo asociados, y se identifican las versiones que instala el sistema operativo Windows.  

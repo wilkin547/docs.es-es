@@ -2,23 +2,25 @@
 title: "Ventajas de los genéricos (Guía de programación de C#)"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
-helpviewer_keywords: generics [C#], benefits
+helpviewer_keywords:
+- generics [C#], benefits
 ms.assetid: 80f037cd-9ea7-48be-bfc1-219bfb2d4277
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 9f46a328208b49aa33130a020e1a85b6f7aa7d97
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 2eb4aad3d23e459af738045b37ae3f1e8f33da06
+ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="benefits-of-generics-c-programming-guide"></a>Ventajas de los genéricos (Guía de programación de C#)
 Los genéricos proporcionan la solución a una limitación en versiones anteriores de Common Language Runtime y el lenguaje de C# en el que se obtiene la generalización mediante la conversión de tipos a y desde el tipo base universal <xref:System.Object>. Mediante la creación de una clase genérica, puede crear una colección con seguridad de tipos en tiempo de compilación.  
   
- Las limitaciones de usar clases de colección no genéricas pueden mostrarse al escribir un programa corto que use la clase de colección <xref:System.Collections.ArrayList> desde la biblioteca de clases .NET Framework. <xref:System.Collections.ArrayList> es una clase de colección muy conveniente que puede usarse sin modificaciones para almacenar cualquier tipo de valor o referencia.  
+ Las limitaciones de usar clases de colección no genéricas pueden mostrarse al escribir un programa corto que use la clase de colección <xref:System.Collections.ArrayList> desde la biblioteca de clases .NET. Una instancia de la clase <xref:System.Collections.ArrayList> puede almacenar cualquier tipo de valor o referencia.  
   
  [!code-csharp[csProgGuideGenerics#4](../../../csharp/programming-guide/generics/codesnippet/CSharp/benefits-of-generics_1.cs)]  
   
@@ -32,7 +34,7 @@ Los genéricos proporcionan la solución a una limitación en versiones anterior
   
  En las versiones 1.0 y 1.1 del lenguaje de C#, puede evitar los peligros del código generalizado en las clases de colección de la biblioteca de clases base de .NET Framework solo escribiendo sus propias colecciones específicas de tipo. Por supuesto, como dicha clase no es reutilizable para más de un tipo de datos, se pierden las ventajas de la generalización y tiene que volver a escribir la clase para cada tipo que se almacenará.  
   
- Lo que <xref:System.Collections.ArrayList> y otras clases similares realmente necesitan es una manera de que el código de cliente especifique, en una base por instancia, el tipo de datos determinado que pretenden usar. Eso eliminaría la necesidad de la conversión a `T:System.Object` y también haría posible que el compilador realizara una comprobación de tipos. En otras palabras, <xref:System.Collections.ArrayList> necesita un parámetro de tipo. Eso es exactamente lo que proporcionan los genéricos. En la colección <xref:System.Collections.Generic.List%601> genérica, en el espacio de nombres `N:System.Collections.Generic`, la misma operación de agregar elementos a la colección tiene este aspecto:  
+ Lo que <xref:System.Collections.ArrayList> y otras clases similares realmente necesitan es una manera de que el código de cliente especifique, en una base por instancia, el tipo de datos determinado que pretenden usar. Eso eliminaría la necesidad de la conversión a <xref:System.Object> y también haría posible que el compilador realizara una comprobación de tipos. En otras palabras, <xref:System.Collections.ArrayList> necesita un parámetro de tipo. Eso es exactamente lo que proporcionan los genéricos. En la colección <xref:System.Collections.Generic.List%601> genérica, en el espacio de nombres <xref:System.Collections.Generic>, la misma operación de agregar elementos a la colección tiene este aspecto:  
   
  [!code-csharp[csProgGuideGenerics#6](../../../csharp/programming-guide/generics/codesnippet/CSharp/benefits-of-generics_3.cs)]  
   
@@ -43,4 +45,5 @@ Los genéricos proporcionan la solución a una limitación en versiones anterior
  [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
  [Introducción a los genéricos](../../../csharp/programming-guide/generics/introduction-to-generics.md)  
  [Conversión boxing y conversión unboxing](../../../csharp/programming-guide/types/boxing-and-unboxing.md)  
- [Procedimientos recomendados de colecciones](http://go.microsoft.com/fwlink/?LinkId=112403)
+ [Cuándo utilizar colecciones genéricas](../../../standard/collections/when-to-use-generic-collections.md)  
+ [Instrucciones para colecciones](../../../standard/design-guidelines/guidelines-for-collections.md)   
