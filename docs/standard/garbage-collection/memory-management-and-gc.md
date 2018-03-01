@@ -13,25 +13,28 @@ helpviewer_keywords:
 - memory management [.NET Framework]
 - garbage collection [.NET Framework profiling]
 ms.assetid: fd0462f7-57ad-4858-bf62-958378873602
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: d2b9d0f8d4b09e4f95fe33134e900612c59534fb
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 0a9d1f2a7ad3432667cdb5ed9223cbabf4089597
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
-# <a name="memory-management-and-garbage-collection-in-net"></a><span data-ttu-id="81270-102">Administración de memoria y recolección de elementos en .NET</span><span class="sxs-lookup"><span data-stu-id="81270-102">Memory Management and Garbage Collection in .NET</span></span>
-<span data-ttu-id="81270-103">En esta sección de la documentación proporciona información sobre la administración de memoria de. NET.</span><span class="sxs-lookup"><span data-stu-id="81270-103">This section of the documentation provides information about managing memory in .NET.</span></span>  
+# <a name="memory-management-and-garbage-collection-in-net"></a><span data-ttu-id="ca6e9-102">Administración de memoria y recolección de elementos no utilizados en .NET</span><span class="sxs-lookup"><span data-stu-id="ca6e9-102">Memory Management and Garbage Collection in .NET</span></span>
+<span data-ttu-id="ca6e9-103">Esta sección de la documentación proporciona información acerca de la administración de la memoria en .NET.</span><span class="sxs-lookup"><span data-stu-id="ca6e9-103">This section of the documentation provides information about managing memory in .NET.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="81270-104">En esta sección</span><span class="sxs-lookup"><span data-stu-id="81270-104">In This Section</span></span>  
- [<span data-ttu-id="81270-105">Limpieza de recursos no administrados</span><span class="sxs-lookup"><span data-stu-id="81270-105">Cleaning Up Unmanaged Resources</span></span>](../../../docs/standard/garbage-collection/unmanaged.md)  
- <span data-ttu-id="81270-106">Describe cómo administrar y limpiar correctamente los recursos no administrados.</span><span class="sxs-lookup"><span data-stu-id="81270-106">Describes how to properly manage and clean up unmanaged resources..</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="ca6e9-104">En esta sección</span><span class="sxs-lookup"><span data-stu-id="ca6e9-104">In This Section</span></span>  
+ [<span data-ttu-id="ca6e9-105">Limpieza de recursos no administrados</span><span class="sxs-lookup"><span data-stu-id="ca6e9-105">Cleaning Up Unmanaged Resources</span></span>](../../../docs/standard/garbage-collection/unmanaged.md)  
+ <span data-ttu-id="ca6e9-106">Describe cómo administrar y limpiar correctamente los recursos no administrados.</span><span class="sxs-lookup"><span data-stu-id="ca6e9-106">Describes how to properly manage and clean up unmanaged resources..</span></span>  
   
- [<span data-ttu-id="81270-107">Recolección de elementos no utilizados</span><span class="sxs-lookup"><span data-stu-id="81270-107">Garbage Collection</span></span>](../../../docs/standard/garbage-collection/index.md)  
- <span data-ttu-id="81270-108">Proporciona información sobre el recolector de elementos no utilizados. NET.</span><span class="sxs-lookup"><span data-stu-id="81270-108">Provides information about the .NET garbage collector.</span></span>  
+ [<span data-ttu-id="ca6e9-107">Recolección de elementos no utilizados</span><span class="sxs-lookup"><span data-stu-id="ca6e9-107">Garbage Collection</span></span>](../../../docs/standard/garbage-collection/index.md)  
+ <span data-ttu-id="ca6e9-108">Proporciona información sobre el recolector de elementos no utilizados de .NET.</span><span class="sxs-lookup"><span data-stu-id="ca6e9-108">Provides information about the .NET garbage collector.</span></span>  
   
-## <a name="related-sections"></a><span data-ttu-id="81270-109">Secciones relacionadas</span><span class="sxs-lookup"><span data-stu-id="81270-109">Related Sections</span></span>  
- [<span data-ttu-id="81270-110">Guía de desarrollo</span><span class="sxs-lookup"><span data-stu-id="81270-110">Development Guide</span></span>](../../../docs/framework/development-guide.md)
+## <a name="related-sections"></a><span data-ttu-id="ca6e9-109">Secciones relacionadas</span><span class="sxs-lookup"><span data-stu-id="ca6e9-109">Related Sections</span></span>  
+ [<span data-ttu-id="ca6e9-110">Guía de desarrollo</span><span class="sxs-lookup"><span data-stu-id="ca6e9-110">Development Guide</span></span>](../../../docs/framework/development-guide.md)
