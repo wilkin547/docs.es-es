@@ -5,23 +5,30 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: reference
-api_name: ICorDebugProcess.GetHelperThreadID
-api_location: mscordbi.dll
-api_type: COM
-f1_keywords: ICorDebugProcess::GetHelperThreadID
+api_name:
+- ICorDebugProcess.GetHelperThreadID
+api_location:
+- mscordbi.dll
+api_type:
+- COM
+f1_keywords:
+- ICorDebugProcess::GetHelperThreadID
 helpviewer_keywords:
 - GetHelperThreadID method [.NET Framework debugging]
 - ICorDebugProcess::GetHelperThreadID method [.NET Framework debugging]
 ms.assetid: 84e1e605-37c1-49a5-8e12-35db85654622
-topic_type: apiref
-caps.latest.revision: "11"
+topic_type:
+- apiref
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 03e801cb58b8f5c3f658085fcee4288278e545c5
 ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
@@ -44,7 +51,7 @@ HRESULT GetHelperThreadID (
  <span data-ttu-id="2da68-106">[out] Id. de subproceso auxiliar interno del depurador de subproceso de un puntero para el sistema operativo.</span><span class="sxs-lookup"><span data-stu-id="2da68-106">[out] A pointer to the OS thread ID of the debugger's internal helper thread.</span></span>  
   
 ## <a name="remarks"></a><span data-ttu-id="2da68-107">Comentarios</span><span class="sxs-lookup"><span data-stu-id="2da68-107">Remarks</span></span>  
- <span data-ttu-id="2da68-108">Durante la depuración administrada y no administrada, es responsabilidad del depurador para asegurarse de que el subproceso con el identificador especificado está en ejecución si se produce un punto de interrupción colocado por el depurador.</span><span class="sxs-lookup"><span data-stu-id="2da68-108">During managed and unmanaged debugging, it is the debugger's responsibility to ensure that the thread with the specified ID remains running if it hits a breakpoint placed by the debugger.</span></span> <span data-ttu-id="2da68-109">Un depurador que también desee ocultar este subproceso del usuario.</span><span class="sxs-lookup"><span data-stu-id="2da68-109">A debugger may also wish to hide this thread from the user.</span></span> <span data-ttu-id="2da68-110">Si existe ningún subproceso auxiliar en el proceso, el `GetHelperThreadID` método devuelva cero en *`pThreadID`.</span><span class="sxs-lookup"><span data-stu-id="2da68-110">If no helper thread exists in the process yet, the `GetHelperThreadID` method returns zero in *`pThreadID`.</span></span>  
+ <span data-ttu-id="2da68-108">Durante la depuración administrada y no administrada, es responsabilidad del depurador para asegurarse de que el subproceso con el identificador especificado está en ejecución si se produce un punto de interrupción colocado por el depurador.</span><span class="sxs-lookup"><span data-stu-id="2da68-108">During managed and unmanaged debugging, it is the debugger's responsibility to ensure that the thread with the specified ID remains running if it hits a breakpoint placed by the debugger.</span></span> <span data-ttu-id="2da68-109">Un depurador que también desee ocultar este subproceso del usuario.</span><span class="sxs-lookup"><span data-stu-id="2da68-109">A debugger may also wish to hide this thread from the user.</span></span> <span data-ttu-id="2da68-110">Si existe ningún subproceso auxiliar en el proceso, el `GetHelperThreadID` método devuelva cero en \*`pThreadID`.</span><span class="sxs-lookup"><span data-stu-id="2da68-110">If no helper thread exists in the process yet, the `GetHelperThreadID` method returns zero in \*`pThreadID`.</span></span>  
   
  <span data-ttu-id="2da68-111">No se almacena en caché el identificador de subproceso del subproceso de aplicación auxiliar, ya que puede cambiar con el tiempo.</span><span class="sxs-lookup"><span data-stu-id="2da68-111">You cannot cache the thread ID of the helper thread, because it may change over time.</span></span> <span data-ttu-id="2da68-112">Debe volver a consultar el identificador del subproceso en cada evento de detención.</span><span class="sxs-lookup"><span data-stu-id="2da68-112">You must re-query the thread ID at every stopping event.</span></span>  
   
