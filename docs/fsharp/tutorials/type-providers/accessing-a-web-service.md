@@ -10,16 +10,16 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 63374fa9-8fb8-43ac-bcb9-ef2290d9f851
-ms.openlocfilehash: 06d955033d465cf58af05f483d21175f90d1777a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 2929198172a4e9f908daa64af19208e07859263f
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="walkthrough-accessing-a-web-service-by-using-type-providers"></a>Tutorial: Obtener acceso a un servicio Web mediante proveedores de tipos
 
 > [!NOTE]
-Esta guía se escribió para F # 3.0 y se actualizará.  Vea [FSharp.Data](http://fsharp.github.io/FSharp.Data/) para obtener información sobre los proveedores de tipos multiplataforma actualizados.
+Esta guía se escribió para F # 3.0 y se actualizará.  Vea [FSharp.Data](https://fsharp.github.io/FSharp.Data/) para obtener información sobre los proveedores de tipos multiplataforma actualizados.
 
 > [!NOTE]
 Los vínculos de referencia de API le llevará a MSDN.  La referencia de API de docs.microsoft.com no está completa.
@@ -64,7 +64,7 @@ En el paso, cree un proyecto y agregar las referencias adecuadas para usar un pr
 En este paso, usa el proveedor de tipos WSDL para generar tipos para el servicio web TerraServer.
 
 
-#### <a name="to-configure-the-type-provider-and-generate-types"></a>Para configurar el proveedor de tipo y generar tipos
+#### <a name="to-configure-the-type-provider-and-generate-types"></a>Para configurar el proveedor de tipos y generar tipos
 
 1. Agregue la siguiente línea de código para abrir el espacio de nombres del proveedor de tipo.
 <br />
@@ -80,7 +80,7 @@ open Microsoft.FSharp.Data.TypeProviders
 <br />
 
 ```fsharp
-type TerraService = WsdlService<" HYPERLINK "http://terraserver-usa.com/TerraService2.asmx?WSDL" http://msrmaps.com/TerraService2.asmx?WSDL">
+type TerraService = WsdlService<" HYPERLINK "https://terraserver-usa.com/TerraService2.asmx?WSDL" https://msrmaps.com/TerraService2.asmx?WSDL">
 ```
 
   Si el URI del servicio está mal escrito o si el propio servicio está inactivo o no está funcionando, aparece un subrayado ondulado de color rojo debajo de esta línea de código. Si eliges el código, un mensaje de error describe el problema. Puede obtener la misma información en el **lista de errores** ventana o en la **ventana de salida** después de la compilación.

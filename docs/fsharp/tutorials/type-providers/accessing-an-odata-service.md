@@ -10,16 +10,16 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 0adae84c-b0fa-455f-994b-274ecdc6df30
-ms.openlocfilehash: 28c2e9a405670f4e5f9512e99e0e6c3e3082856c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 750407c36a989cece30c0c0654ff905c8eee3b33
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="walkthrough-accessing-an-odata-service-by-using-type-providers"></a>Tutorial: Obtener acceso a un servicio OData mediante proveedores de tipos
 
 > [!NOTE]
-Esta guía se escribió para F # 3.0 y se actualizará.  Vea [FSharp.Data](http://fsharp.github.io/FSharp.Data/) para obtener información sobre los proveedores de tipos multiplataforma actualizados.
+Esta guía se escribió para F # 3.0 y se actualizará.  Vea [FSharp.Data](https://fsharp.github.io/FSharp.Data/) para obtener información sobre los proveedores de tipos multiplataforma actualizados.
 
 > [!NOTE]
 Los vínculos de referencia de API le llevará a MSDN.  La referencia de API de docs.microsoft.com no está completa.
@@ -45,7 +45,7 @@ Este tutorial muestra las tareas siguientes, que se deben realizar en el orden p
 
 
 ## <a name="configuring-a-client-project-for-an-odata-service"></a>Configurar un proyecto de cliente para un servicio OData
-En este paso configurará un proyecto para que utilice un proveedor de tipo de OData.
+En este paso configurará un proyecto para que utilice un proveedor de tipos de OData.
 
 
 #### <a name="to-configure-a-client-project-for-an-odata-service"></a>Para configurar un proyecto de cliente para un servicio OData
@@ -69,7 +69,7 @@ En este paso creará un proveedor de tipo que proporciona acceso a los tipos y d
 open Microsoft.FSharp.Data.TypeProviders
 
 
-type Northwind = ODataService<"http://services.odata.org/Northwind/Northwind.svc/">
+type Northwind = ODataService<"https://services.odata.org/Northwind/Northwind.svc/">
 
 let db = Northwind.GetDataContext()
 let fullContext = Northwind.ServiceTypes.NorthwindEntities()
@@ -85,7 +85,7 @@ En este paso utilizará las expresiones de consulta de F# para consultar el serv
 
 #### <a name="to-query-an-odata-service"></a>Para consultar un servicio OData
 
-1. Una vez que ha configurado el proveedor de tipo, puede hacer consultas en un servicio OData.
+1. Una vez que ha configurado el proveedor de tipos, puede hacer consultas en un servicio OData.
 <br />  OData solo admite un subconjunto de las operaciones de consulta disponibles. Se admiten las siguientes operaciones y sus palabras clave correspondientes:
 <br />
   - Proyección (`select`)
@@ -242,7 +242,7 @@ db.DataContext.SendingRequest.Add (fun eventArgs -> printfn "Requesting %A" even
 ```
 
 El resultado del código anterior es:
-<br />`requesting http://services.odata.org/Northwind/Northwind.svc/Orders()?$orderby=ShippedDate&amp;$select=OrderID,ShippedDate`
+<br />`requesting https://services.odata.org/Northwind/Northwind.svc/Orders()?$orderby=ShippedDate&amp;$select=OrderID,ShippedDate`
 
 
 ## <a name="see-also"></a>Vea también

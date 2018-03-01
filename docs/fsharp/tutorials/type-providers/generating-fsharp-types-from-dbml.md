@@ -10,16 +10,16 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 6fbb6ccc-248f-4226-95e9-f6f99541dbe4
-ms.openlocfilehash: a919c2acb2b5b8c2ce93124f2f541bd092d15c35
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: 3cd8df9becac0d1a8842eb22e2f772eee6307acf
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="walkthrough-generating-f-types-from-a-dbml-file"></a>Tutorial: Generar tipos en F# a partir de un archivo DBML
 
 > [!NOTE]
-Esta guía se escribió para F # 3.0 y se actualizará.  Vea [FSharp.Data](http://fsharp.github.io/FSharp.Data/) para obtener información sobre los proveedores de tipos multiplataforma actualizados.
+Esta guía se escribió para F # 3.0 y se actualizará.  Vea [FSharp.Data](https://fsharp.github.io/FSharp.Data/) para obtener información sobre los proveedores de tipos multiplataforma actualizados.
 
 > [!NOTE]
 Los vínculos de referencia de API le llevará a MSDN.  La referencia de API de docs.microsoft.com no está completa.
@@ -99,7 +99,7 @@ En este paso, cree un proyecto y agregue las referencias adecuadas para usar el 
 6. (Opcional). Copie el archivo .dbml que creó en el paso anterior y pegue el archivo en la carpeta principal para el proyecto. Esta carpeta contiene los archivos de código y el archivo de proyecto (.fsproj). En la barra de menús, elija **proyecto**, **Agregar elemento existente**y, a continuación, especifique el archivo .dbml para agregarlo al proyecto. Si completa estos pasos, puede omitir el parámetro static ResolutionFolder en el paso siguiente.
 <br />
 
-## <a name="configuring-the-type-provider"></a>Configurar el proveedor de tipo
+## <a name="configuring-the-type-provider"></a>Configurar el proveedor de tipos
 En esta sección, crear un proveedor de tipos y generar tipos a partir del esquema que se describe en el archivo .dbml.
 
 

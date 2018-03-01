@@ -10,21 +10,21 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 81adb2eb-625f-4ad8-aeaa-8f672a6d79a2
-ms.openlocfilehash: 1df0344e8dab2b40d82d1b9c61ccd2f026906243
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: 901457dce358f768b4f4c980703e09f6c744918e
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="walkthrough-generating-f-types-from-an-edmx-schema-file"></a>Tutorial: Generar tipos en F# a partir de un archivo de esquema EDMX
 
 > [!NOTE]
-Esta guía se escribió para F # 3.0 y se actualizará.  Vea [FSharp.Data](http://fsharp.github.io/FSharp.Data/) para obtener información sobre los proveedores de tipos multiplataforma actualizados.
+Esta guía se escribió para F # 3.0 y se actualizará.  Vea [FSharp.Data](https://fsharp.github.io/FSharp.Data/) para obtener información sobre los proveedores de tipos multiplataforma actualizados.
 
 > [!NOTE]
 Los vínculos de referencia de API le llevará a MSDN.  La referencia de API de docs.microsoft.com no está completa.
 
-En este tutorial sobre F# 3.0 se muestra cómo crear tipos para los datos representados por el Entity Data Model (EDM), cuyo esquema se especifica en un archivo .edmx. En el tutorial también se muestra cómo usar el proveedor de tipo EdmxFile. Antes de comenzar, considere si un proveedor de tipo SqlEntityConnection sería una opción más adecuada. El proveedor de tipo SqlEntityConnection funciona mejor en escenarios en los que se tiene una base de datos activa a la que se puede conectar en la fase de desarrollo del proyecto y cuando no es ningún problema especificar la cadena de conexión en tiempo de compilación. Sin embargo, este proveedor de tipo también está limitado por el hecho de que no expone tanta funcionalidad de base de datos como el proveedor EdmxFile. Además, si no se tiene una conexión de base de datos activa para un proyecto de base de datos que usa Entity Data Model, se puede utilizar el archivo .edmx para codificar en la base de datos. Cuando se usa el proveedor de tipo EdmxFile, el compilador de F# ejecuta EdmGen.exe para generar los tipos que proporciona.
+En este tutorial sobre F# 3.0 se muestra cómo crear tipos para los datos representados por el Entity Data Model (EDM), cuyo esquema se especifica en un archivo .edmx. En el tutorial también se muestra cómo usar el proveedor de tipo EdmxFile. Antes de comenzar, considere si un proveedor de tipo SqlEntityConnection sería una opción más adecuada. El proveedor de tipo SqlEntityConnection funciona mejor en escenarios en los que se tiene una base de datos activa a la que se puede conectar en la fase de desarrollo del proyecto y cuando no es ningún problema especificar la cadena de conexión en tiempo de compilación. Sin embargo, este proveedor de tipo también está limitado por el hecho de que no expone tanta funcionalidad de base de datos como el proveedor EdmxFile. Además, si no se tiene una conexión de base de datos activa para un proyecto de base de datos que usa Entity Data Model, se puede utilizar el archivo .edmx para programar en la base de datos. Cuando se usa el proveedor de tipo EdmxFile, el compilador de F# ejecuta EdmGen.exe para generar los tipos que proporciona.
 
 En este tutorial se muestran las tareas siguientes, que se deben realizar en el orden presentado a continuación para finalizarlo correctamente:
 
@@ -60,7 +60,7 @@ Si ya tiene un archivo EDMX, puede omitir este paso.
 <br />
 
 ## <a name="creating-the-project"></a>Crear el proyecto
-En este paso, se creará un proyecto y se agregarán las referencias adecuadas al mismo para usar el proveedor de tipo EDMX.
+En este paso, se creará un proyecto y se agregarán las referencias adecuadas al mismo para usar el proveedor de tipos EDMX.
 
 
 #### <a name="to-create-and-set-up-an-f-project"></a>Para crear y configurar un proyecto de F#
@@ -126,7 +126,7 @@ let getEDMConnection(dbConnectionString) =
 En este paso se creará y configurará el proveedor de tipo con la cadena de conexión EDMX y se generarán los tipos para el esquema que se define en el archivo .edmx.
 
 
-#### <a name="to-configure-the-type-provider-and-generate-types"></a>Para configurar el proveedor de tipo y generar tipos
+#### <a name="to-configure-the-type-provider-and-generate-types"></a>Para configurar el proveedor de tipos y generar tipos
 
 1. Copie el archivo .edmx generado en el primer paso de este tutorial en la carpeta del proyecto.
 <br />
@@ -222,7 +222,7 @@ Solo debe completar este procedimiento si desea aprender a generar un Entity Dat
 1. En la barra de menús, elija **SQL**, **Editor de Transact-SQL**, **nueva consulta** para crear una base de datos. Si se le solicita, especifique el servidor de bases de datos y la instancia.
 <br />
 
-2. Copie y pegue el contenido de la secuencia de comandos de base de datos que crea la base de datos de estudiantes, como se describe en el [documentación de Entity Framework](http://msdn.microsoft.com/data/JJ614587.aspx) en el Centro para desarrolladores de datos.
+2. Copie y pegue el contenido de la secuencia de comandos de base de datos que crea la base de datos de estudiantes, como se describe en el [documentación de Entity Framework](https://msdn.microsoft.com/data/JJ614587.aspx) en el Centro para desarrolladores de datos.
 <br />
 
 3. Ejecute el script SQL eligiendo el botón de barra de herramientas con el símbolo del triángulo o las teclas Ctrl + Q.
@@ -275,7 +275,7 @@ Explorar otras consultas examinando los operadores de consulta disponibles como 
 
 [Tutorial: Acceso a una base de datos SQL mediante proveedores de tipo y entidades](accessing-a-sql-database-entities.md)
 
-[Entity Framework](http://msdn.microsoft.com/data/ef)
+[Entity Framework](https://msdn.microsoft.com/data/ef)
 
 [información general de archivo .edmx](https://msdn.microsoft.com/library/f4c8e7ce-1db6-417e-9759-15f8b55155d4)
 

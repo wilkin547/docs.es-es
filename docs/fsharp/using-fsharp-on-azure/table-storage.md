@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 9e5d6cea-a98c-461e-a5cc-75f1d154eafd
-ms.openlocfilehash: e003f537c6f0f85b3b0ba932655ae2a54c980bc5
-ms.sourcegitcommit: e2bf8e6bc365bd9a0e86fe81eeae7d14f85f48c1
+ms.openlocfilehash: 905374a60261b0c2a863edb956943d41ae80f04d
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="get-started-with-azure-table-storage-using-f"></a>Introducción al almacenamiento de tabla de Azure con F # #
 
@@ -187,7 +187,7 @@ Puede eliminar una tabla de una cuenta de almacenamiento. Una tabla que se ha el
 Ahora que conoce los fundamentos del almacenamiento de tabla, siga estos vínculos para obtener información acerca de las tareas más complejas de almacenamiento:
 
 - [API de almacenamiento de Azure para .NET](/dotnet/api/overview/azure/storage)
-- [Proveedor de tipos de almacenamiento de Azure](http://fsprojects.github.io/AzureStorageTypeProvider/)
-- [Blog del equipo de almacenamiento de Azure](http://blogs.msdn.com/b/windowsazurestorage/)
+- [Proveedor de tipos de almacenamiento de Azure](https://fsprojects.github.io/AzureStorageTypeProvider/)
+- [Blog del equipo de almacenamiento de Azure](https://blogs.msdn.microsoft.com/b/windowsazurestorage/)
 - [Configurar cadenas de conexión de almacenamiento de Azure](/azure/storage/common/storage-configure-connection-string)
 - [Introducción a almacenamiento de tabla de Azure en .NET](https://azure.microsoft.com/documentation/samples/storage-table-dotnet-getting-started/)

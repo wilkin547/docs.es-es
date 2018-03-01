@@ -7,11 +7,11 @@ ms.date: 12/20/2017
 ms.topic: article
 ms.prod: .net
 ms.devlang: devlang-csharp
-ms.openlocfilehash: 918dfeceb0bfd8ee808e5615df014973dedf5cc1
-ms.sourcegitcommit: 973a12d1e6962cd9a9c263fbfaad040ec8267fe9
+ms.openlocfilehash: 26d4dffa6f6680b193788ee6d90dad01fde7cf51
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/22/2018
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="how-to-c"></a>Procedimientos (C#)
 
@@ -59,8 +59,7 @@ Las cadenas son el tipo de datos básico que se usa para mostrar o manipular tex
 - [Determine si una cadena representa un número](../programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md).
 - [Use `String.Split` para separar cadenas](parse-strings-using-split.md).
 - [Combine varias cadenas en una](concatenate-multiple-strings.md).
-- [Busque texto en una cadena](../programming-guide/strings/how-to-search-strings-using-string-methods.md).
-- [Busque cadenas mediante expresiones regulares](../programming-guide/strings/how-to-search-strings-using-regular-expressions.md).
+- [Busque texto en una cadena](search-strings.md).
 
 ## <a name="convert-between-types"></a>Conversión entre tipos
 
