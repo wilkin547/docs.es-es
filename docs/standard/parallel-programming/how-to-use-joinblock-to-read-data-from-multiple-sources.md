@@ -1,12 +1,8 @@
 ---
 title: "Cómo: Usar JoinBlock para leer datos de diferentes orígenes"
-ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,29 +12,30 @@ helpviewer_keywords:
 - TPL dataflow library, joining blocks in
 - dataflow blocks, joining in TPL
 ms.assetid: e9c1ada4-ac57-4704-87cb-2f5117f8151d
-caps.latest.revision: "7"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 41445e4874b94809840ecf9ebda6f27ccc955c9b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: f7d4e552404f99580bceafe7f900db4607201c3d
+ms.sourcegitcommit: 6a9030eb5bd0f00e1d144f81958adb195cfb1f6f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="how-to-use-joinblock-to-read-data-from-multiple-sources"></a>Cómo: Usar JoinBlock para leer datos de diferentes orígenes
-Este documento explica cómo utilizar el <xref:System.Threading.Tasks.Dataflow.JoinBlock%602> clase para realizar una operación cuando los datos están disponibles en varios orígenes. También se muestra cómo utilizar el modo no expansivo para permitir que varios bloques de combinación puedan compartir un origen de datos más eficazmente.  
-  
-> [!TIP]
->  La biblioteca de flujos de datos TPL (espacio de nombres <xref:System.Threading.Tasks.Dataflow?displayProperty=nameWithType>) no se distribuye con [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]. Para instalar el <xref:System.Threading.Tasks.Dataflow> espacio de nombres, abra el proyecto en [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)], elija **administrar paquetes de NuGet** en el menú proyecto y busque en línea el `Microsoft.Tpl.Dataflow` paquete.  
-  
+En este documento se explica cómo utilizar la clase <xref:System.Threading.Tasks.Dataflow.JoinBlock%602> para realizar una operación cuando los datos están disponibles en varios orígenes. También se demuestra cómo usar el modo no expansivo para habilitar varios bloques de combinación para compartir un origen de datos más eficazmente.
+
+[!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]
+
 ## <a name="example"></a>Ejemplo  
- El siguiente ejemplo define tres tipos de recursos, `NetworkResource`, `FileResource`, y `MemoryResource`y realiza las operaciones cuando los recursos estén disponibles. Este ejemplo se necesita una `NetworkResource` y `MemoryResource` par con el fin de realizar la primera operación y un `FileResource` y `MemoryResource` par con el fin de realizar la segunda operación. Para habilitar estas operaciones que se produzca cuando todos los recursos necesarios están disponibles, este ejemplo se utiliza la <xref:System.Threading.Tasks.Dataflow.JoinBlock%602> clase. Cuando un <xref:System.Threading.Tasks.Dataflow.JoinBlock%602> objeto recibe los datos de todos los orígenes, propaga esos datos a su destino, que en este ejemplo es un <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> objeto. Ambos <xref:System.Threading.Tasks.Dataflow.JoinBlock%602> leen objetos de un grupo compartido de `MemoryResource` objetos.  
+ El siguiente ejemplo define tres tipos de recursos, `NetworkResource`, `FileResource` y `MemoryResource`, y realiza las operaciones cuando los recursos están disponibles. Este ejemplo requiere un par `NetworkResource` y `MemoryResource` para realizar la primera operación y un par `FileResource` y `MemoryResource` para realizar la segunda operación. Para permitir que estas operaciones se produzcan cuando todos los recursos necesarios están disponibles, este ejemplo usa la clase <xref:System.Threading.Tasks.Dataflow.JoinBlock%602>. Cuando un objeto <xref:System.Threading.Tasks.Dataflow.JoinBlock%602> recibe datos de todos los orígenes, los propaga en su destino, que en este ejemplo es un objeto <xref:System.Threading.Tasks.Dataflow.ActionBlock%601>. Ambos objetos <xref:System.Threading.Tasks.Dataflow.JoinBlock%602> leen de un grupo compartido de objetos `MemoryResource`.  
   
  [!code-csharp[TPLDataflow_NonGreedyJoin#1](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_nongreedyjoin/cs/nongreedyjoin.cs#1)]
  [!code-vb[TPLDataflow_NonGreedyJoin#1](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_nongreedyjoin/vb/nongreedyjoin.vb#1)]  
   
- Para habilitar el uso eficaz del grupo compartido de `MemoryResource` objetos, este ejemplo se especifica un <xref:System.Threading.Tasks.Dataflow.GroupingDataflowBlockOptions> objeto que tiene el <xref:System.Threading.Tasks.Dataflow.GroupingDataflowBlockOptions.Greedy%2A> propiedad establecida en `False` crear <xref:System.Threading.Tasks.Dataflow.JoinBlock%602> objetos que actúan en modo no expansivo. Un bloque de combinación no expansiva pospone todos los mensajes entrantes hasta que uno esté disponible de cada origen. Si cualquiera de los mensajes pospuestos ya aceptada por otro bloque, el bloque de combinación reinicia el proceso. El modo no expansivo permite bloques de combinación que comparten uno o más bloques de origen progresar mientras esperan los otros bloques de datos. En este ejemplo, si un `MemoryResource` objeto se agrega a la `memoryResources` del grupo, la combinación de primer bloque para recibir su segundo origen de datos puede progresar. Si este ejemplo se fuera a usar el modo expansivo, que es el valor predeterminado, un bloque de combinación pueden tardar la `MemoryResource` objeto y espere a que el segundo recurso esté disponible. Sin embargo, si el otro bloque de combinación tiene su segundo origen de datos disponible, no puede progresar porque la `MemoryResource` objeto ha sido tomado por otro bloque de combinación.  
+ Para habilitar el uso eficaz del grupo compartido de objetos `MemoryResource`, este ejemplo especifica un objeto <xref:System.Threading.Tasks.Dataflow.GroupingDataflowBlockOptions> que tiene la propiedad <xref:System.Threading.Tasks.Dataflow.GroupingDataflowBlockOptions.Greedy%2A> establecida en `False` para crear objetos <xref:System.Threading.Tasks.Dataflow.JoinBlock%602> que actúan de modo no expansivo. Un bloque de combinación no expansivo pospone todos los mensajes entrantes hasta que uno esté disponible de cada origen. Si otro bloque aceptó cualquiera de los mensajes pospuestos, el bloque de combinación reinicia el proceso. El modo no expansivo permite que los bloques de combinación compartan uno o varios bloques de origen para avanzar mientras otros bloques esperan datos. En este ejemplo, si un objeto `MemoryResource` se agrega al grupo `memoryResources`, el primer bloque de combinación que recibe su segundo origen de datos puede progresar. Si en este ejemplo se usara el modo expansivo, que es el predeterminado, un bloque de combinación puede adoptar el objeto `MemoryResource` y esperar a que el segundo recurso esté disponible. Sin embargo, si el otro bloque de combinación tiene su segundo origen de datos disponible, no puede avanzar porque otro bloque de combinación ha adoptado el objeto `MemoryResource`.  
   
 ## <a name="compiling-the-code"></a>Compilar el código  
  Copie el código de ejemplo y péguelo en un proyecto de Visual Studio o en un archivo denominado `DataflowNonGreedyJoin.cs` (`DataflowNonGreedyJoin.vb` para [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]) y, a continuación, ejecute el siguiente comando en una ventana del símbolo del sistema de Visual Studio.  
@@ -52,7 +49,7 @@ Este documento explica cómo utilizar el <xref:System.Threading.Tasks.Dataflow.J
  **vbc.exe /r:System.Threading.Tasks.Dataflow.dll DataflowNonGreedyJoin.vb**  
   
 ## <a name="robust-programming"></a>Programación sólida  
- El uso de las uniones no expansivas también puede ayudar a evitar el interbloqueo en la aplicación. En una aplicación de software, *interbloqueo* se produce cuando dos o más procesos mantienen un recurso y esperan mutuamente a que otro proceso libere algún otro recurso. Considere la posibilidad de una aplicación que define dos <xref:System.Threading.Tasks.Dataflow.JoinBlock%602> objetos. Ambos objetos leen datos de dos bloques de código fuente compartido. En modo expansivo, si se lee un bloque de combinación del primer origen y el segundo bloque de combinación se lee desde el origen de la segundo, la aplicación podría generar un interbloqueo porque ambos bloques de combinación esperan mutuamente a que la otra transacción libere sus recursos. En el modo no expansivo, cada bloque de combinación se elimina las lecturas de sus orígenes sólo cuando todos los datos están disponibles y, por lo tanto, el riesgo de interbloqueo.  
+ El uso de las combinaciones no expansivas también puede ayudar a evitar el interbloqueo en la aplicación. En una aplicación de software, el *interbloqueo* se produce cuando dos o más procesos mantienen un recurso y esperan mutuamente a que el otro proceso libere algún otro recurso. Considere una aplicación que define dos objetos <xref:System.Threading.Tasks.Dataflow.JoinBlock%602>. Ambos objetos leen datos de dos bloques de origen compartidos. En modo expansivo, si un bloque de combinación lee desde el primer origen y el segundo bloque de combinación lee desde el segundo origen, se podría producir un interbloqueo de la aplicación porque los dos bloques de combinación esperan a que el otro libere su recurso. En el modo no expansivo, cada bloque de combinación lee de sus orígenes solo cuando todos los datos están disponibles y, por tanto, se elimina el riesgo del interbloqueo.  
   
 ## <a name="see-also"></a>Vea también  
  [Flujo de datos](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)

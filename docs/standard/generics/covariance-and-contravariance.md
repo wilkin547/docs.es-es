@@ -17,15 +17,18 @@ helpviewer_keywords:
 - covariance and contravariance in generics
 - generic type parameters
 ms.assetid: 2678dc63-c7f9-4590-9ddc-0a4df684d42e
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 1ae8b6da5917950664e1ab780b8db76cb6500e70
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 2abd4c772c02c431ecb73139be7f620fe04d5d82
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="covariance-and-contravariance-in-generics"></a>Covarianza y contravarianza en genéricos
 <a name="top"></a> Covarianza y contravarianza son términos que hacen referencia a la capacidad de usar un tipo menos derivado (menos específico) o más derivado (más específico) que el indicado originalmente. Los parámetros de tipo genérico admiten la covarianza y contravarianza para proporcionar mayor flexibilidad a la hora de asignar y usar tipos genéricos. Cuando se hace referencia a un sistema de tipos, la covarianza, contravarianza e invarianza tienen las siguientes definiciones. En el ejemplo se presupone una clase base denominada `Base` y una clase derivada denominada `Derived`.  
@@ -103,7 +106,7 @@ ms.lasthandoff: 11/21/2017
   
  En el ejemplo siguiente se muestran los parámetros de tipo contravariante. En el ejemplo se define clase abstracta`MustInherit` ( `Shape` en Visual Basic) con una propiedad `Area` . En el ejemplo también se define una clase `ShapeAreaComparer` que implementa `IComparer<Shape>` (`IComparer(Of Shape)` en Visual Basic). La implementación del método <xref:System.Collections.Generic.IComparer%601.Compare%2A?displayProperty=nameWithType> se basa en el valor de la propiedad `Area`, por lo que `ShapeAreaComparer` se puede usar para ordenar los objetos `Shape` por área.  
   
- La clase `Circle` hereda `Shape` e invalida `Area`. En el ejemplo se crea una colección <xref:System.Collections.Generic.SortedSet%601> de objetos `Circle` , usando un constructor que toma `IComparer<Circle>` (`IComparer(Of Circle)` en Visual Basic). Sin embargo, en lugar de pasar `IComparer<Circle>`, en el ejemplo se pasa un objeto `ShapeAreaComparer` , que implementa `IComparer<Shape>`. En el ejemplo se puede pasar un comparador de un tipo menos derivado (`Shape`) cuando el código llama a un comparador de un tipo más derivado (`Circle`), ya que el parámetro de tipo de la interfaz genérica <xref:System.Collections.Generic.IComparer%601> es contravariante.  
+ La clase `Circle` hereda `Shape` e invalida `Area`. En el ejemplo se crea una colección <xref:System.Collections.Generic.SortedSet%601> de objetos `Circle` , usando un constructor que toma `IComparer<Circle>` (`IComparer(Of Circle)` en Visual Basic). Sin embargo, en lugar de pasar `IComparer<Circle>`, en el ejemplo se pasa un objeto `ShapeAreaComparer`, que implementa `IComparer<Shape>`. En el ejemplo se puede pasar un comparador de un tipo menos derivado (`Shape`) cuando el código llama a un comparador de un tipo más derivado (`Circle`), ya que el parámetro de tipo de la interfaz genérica <xref:System.Collections.Generic.IComparer%601> es contravariante.  
   
  Cuando se agrega un nuevo objeto `Circle` a `SortedSet<Circle>`, se llama al método `IComparer<Shape>.Compare` (`IComparer(Of Shape).Compare` en Visual Basic) del objeto `ShapeAreaComparer` cada vez que el nuevo elemento se compara con un elemento existente. El tipo de parámetro del método (`Shape`) es menos derivado que el tipo que se pasa (`Circle`), por lo que la llamada tiene seguridad de tipos. La contravarianza permite a `ShapeAreaComparer` ordenar una colección de cualquier tipo único, así como a una colección mixta de tipos, que derivan de `Shape`.  
   
@@ -114,7 +117,7 @@ ms.lasthandoff: 11/21/2017
   
 <a name="DelegateVariantTypeParameters"></a>   
 ## <a name="generic-delegates-with-variant-type-parameters"></a>Delegados genéricos con parámetros de tipo variante  
- En [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], los delegados genéricos `Func` , como <xref:System.Func%602>, tienen tipos de valor devueltos covariante y tipos de parámetro contravariante. Los delegados genéricos `Action` , como <xref:System.Action%602>, tienen tipos de parámetro contravariante. Esto significa que los delegados se pueden asignar a variables que tengan tipos de parámetro más derivados y (en el caso de los delegados genéricos `Func` ) tipos de valor devuelto menos derivados.  
+ En [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], los delegados genéricos `Func` , como <xref:System.Func%602>, tienen tipos de valor devueltos covariante y tipos de parámetro contravariante. Los delegados genéricos `Action` , como <xref:System.Action%602>, tienen tipos de parámetro contravariante. Esto significa que los delegados se pueden asignar a variables que tengan tipos de parámetro más derivados y (en el caso de los delegados genéricos `Func`) tipos de valor devuelto menos derivados.  
   
 > [!NOTE]
 >  El último parámetro de tipo genérico de los delegados genéricos `Func` especifica el tipo del valor devuelto en la firma de delegado. Es covariante (palabra clave`out` ), mientras que los otros parámetros de tipo genérico son contravariante (palabra clave`in` ).  

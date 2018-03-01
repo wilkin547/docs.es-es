@@ -1,12 +1,8 @@
 ---
 title: 'Tutorial: Usar BatchBlock y BatchedJoinBlock para mejorar la eficacia'
-ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,30 +11,31 @@ helpviewer_keywords:
 - Task Parallel Library, dataflows
 - TPL dataflow library, improving efficiency
 ms.assetid: 5beb4983-80c2-4f60-8c51-a07f9fd94cb3
-caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: bc74b4acc5b29395c05e7c8302caefeb51718282
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 49056607d84b48584660ff62bba13147d6aa43ec
+ms.sourcegitcommit: 6a9030eb5bd0f00e1d144f81958adb195cfb1f6f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="walkthrough-using-batchblock-and-batchedjoinblock-to-improve-efficiency"></a>Tutorial: Usar BatchBlock y BatchedJoinBlock para mejorar la eficacia
-La biblioteca de flujos de datos TPL proporciona las clases <xref:System.Threading.Tasks.Dataflow.BatchBlock%601?displayProperty=nameWithType> y <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602?displayProperty=nameWithType> para poder recibir y almacenar en búfer datos de uno o más orígenes y después propagar esos datos almacenados en búfer como una colección. Este mecanismo por lotes es útil cuando se recopilan datos de uno o más orígenes y después se procesan varios elementos de datos como un lote. Por ejemplo, piense en una aplicación que usa flujo de datos para insertar registros en una base de datos. Esta operación puede ser más eficaz si varios elementos se insertan al mismo tiempo en lugar de insertar de uno en uno de forma secuencial. En este documento se describe cómo utilizar la clase <xref:System.Threading.Tasks.Dataflow.BatchBlock%601> para mejorar la eficacia de las operaciones de inserción de la base de datos. También se describe cómo utilizar la clase <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602> para capturar los resultados y cualquier excepción que se produce cuando el programa lee de una base de datos.  
-  
-> [!TIP]
->  La biblioteca de flujos de datos TPL (espacio de nombres <xref:System.Threading.Tasks.Dataflow?displayProperty=nameWithType>) no se distribuye con [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]. Para instalar el <xref:System.Threading.Tasks.Dataflow> espacio de nombres, abra el proyecto en [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)], elija **administrar paquetes de NuGet** en el menú proyecto y busque en línea el `Microsoft.Tpl.Dataflow` paquete.  
-  
+La biblioteca de flujos de datos TPL proporciona las clases <xref:System.Threading.Tasks.Dataflow.BatchBlock%601?displayProperty=nameWithType> y <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602?displayProperty=nameWithType> para poder recibir y almacenar en búfer datos de uno o más orígenes y después propagar esos datos almacenados en búfer como una colección. Este mecanismo por lotes es útil cuando se recopilan datos de uno o más orígenes y después se procesan varios elementos de datos como un lote. Por ejemplo, piense en una aplicación que usa flujo de datos para insertar registros en una base de datos. Esta operación puede ser más eficaz si varios elementos se insertan al mismo tiempo en lugar de insertar de uno en uno de forma secuencial. En este documento se describe cómo utilizar la clase <xref:System.Threading.Tasks.Dataflow.BatchBlock%601> para mejorar la eficacia de las operaciones de inserción de la base de datos. También se describe cómo utilizar la clase <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602> para capturar los resultados y cualquier excepción que se produce cuando el programa lee de una base de datos.
+
+[!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]
+
 ## <a name="prerequisites"></a>Requisitos previos  
   
-1.  Lea la sección de bloques de combinación en el [flujo de datos](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md) documento antes de empezar este tutorial.  
+1.  Lea la sección sobre bloques de combinación en el documento [Flujo de datos](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md) antes de iniciar este tutorial.  
   
-2.  Asegúrese de que tiene una copia de la base de datos Northwind, Northwind.sdf, disponible en el equipo. Este archivo normalmente se encuentra en la carpeta % Files%\Microsoft SQL Server Compact Edition\v3.5\Samples\\.  
+2.  Asegúrese de que tiene una copia de la base de datos Northwind, Northwind.sdf, disponible en el equipo. Este archivo se encuentra normalmente en la carpeta %Archivos de programa%\Microsoft SQL Server Compact Edition\v3.5\Ejemplos\\.  
   
     > [!IMPORTANT]
-    >  En algunas versiones de Windows, no podrá conectarse a Northwind.sdf si [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] se está ejecutando en modo que no sea de administrador. Para conectarse a Northwind.sdf, inicie [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] o un [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] símbolo del sistema en el **ejecutar como administrador** modo.  
+    >  En algunas versiones de Windows, no podrá conectarse a Northwind.sdf si [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] se está ejecutando en modo que no sea de administrador. Para conectarse a Northwind.sdf, inicie [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] o un símbolo del sistema de [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] en modo **Ejecutar como administrador**.  
   
  Este tutorial contiene las siguientes secciones:  
   
@@ -46,11 +43,11 @@ La biblioteca de flujos de datos TPL proporciona las clases <xref:System.Threadi
   
 -   [Definir la clase Employee](#employeeClass)  
   
--   [Definir las operaciones de base de datos de empleados](#operations)  
+-   [Definir las operaciones de la base de datos de empleados](#operations)  
   
--   [Agregar datos de empleados a la base de datos sin usar almacenamiento en búfer](#nonBuffering)  
+-   [Agregar datos de empleados a la base de datos sin usar el almacenamiento en búfer](#nonBuffering)  
   
--   [Con el almacenamiento en búfer para agregar datos de empleados a la base de datos](#buffering)  
+-   [Usar el almacenamiento en búfer para agregar datos de empleados en la base de datos](#buffering)  
   
 -   [Usar una combinación almacenada en búfer para leer datos de empleados de la base de datos](#bufferedJoin)  
   
@@ -60,7 +57,7 @@ La biblioteca de flujos de datos TPL proporciona las clases <xref:System.Threadi
 ## <a name="creating-the-console-application"></a>Crear la aplicación de consola  
   
 <a name="consoleApp"></a>   
-1.  En [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], cree un Visual C# o Visual Basic **aplicación de consola** proyecto. En este documento, el proyecto se denomina `DataflowBatchDatabase`.  
+1.  En [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], cree un proyecto **Aplicación de consola** de Visual C# o Visual Basic. En este documento, el proyecto se denomina `DataflowBatchDatabase`.  
   
 2.  En el proyecto, agregue una referencia a System.Data.SqlServerCe.dll y una referencia a System.Threading.Tasks.Dataflow.dll.  
   
@@ -108,7 +105,7 @@ La biblioteca de flujos de datos TPL proporciona las clases <xref:System.Threadi
  [!code-csharp[TPLDataflow_BatchDatabase#6](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_batchdatabase/cs/dataflowbatchdatabase.cs#6)]
  [!code-vb[TPLDataflow_BatchDatabase#6](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_batchdatabase/vb/dataflowbatchdatabase.vb#6)]  
   
- Este método es similar a `AddEmployees`, salvo que también utiliza la clase <xref:System.Threading.Tasks.Dataflow.BatchBlock%601> para almacenar en búfer varios objetos `Employee` antes de enviar esos objetos al objeto <xref:System.Threading.Tasks.Dataflow.ActionBlock%601>. Dado que la clase <xref:System.Threading.Tasks.Dataflow.BatchBlock%601> propaga varios elementos como una colección, el objeto <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> se modifica para actuar sobre una matriz de objetos `Employee`. Como en el método `AddEmployees`, `AddEmployeesBatched` llama al método `PostRandomEmployees` para enviar varios objetos `Employee`; sin embargo, `AddEmployeesBatched` envía estos objetos al objeto <xref:System.Threading.Tasks.Dataflow.BatchBlock%601>. El `AddEmployeesBatched` método también espera a todas las a que finalicen operaciones de inserción.  
+ Este método es similar a `AddEmployees`, salvo que también utiliza la clase <xref:System.Threading.Tasks.Dataflow.BatchBlock%601> para almacenar en búfer varios objetos `Employee` antes de enviar esos objetos al objeto <xref:System.Threading.Tasks.Dataflow.ActionBlock%601>. Dado que la clase <xref:System.Threading.Tasks.Dataflow.BatchBlock%601> propaga varios elementos como una colección, el objeto <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> se modifica para actuar sobre una matriz de objetos `Employee`. Como en el método `AddEmployees`, `AddEmployeesBatched` llama al método `PostRandomEmployees` para enviar varios objetos `Employee`; sin embargo, `AddEmployeesBatched` envía estos objetos al objeto <xref:System.Threading.Tasks.Dataflow.BatchBlock%601>. El método `AddEmployeesBatched` también espera a que todas las operaciones de inserción finalicen.  
   
 <a name="bufferedJoin"></a>   
 ## <a name="using-buffered-join-to-read-employee-data-from-the-database"></a>Usar una combinación almacenada en búfer para leer datos de empleados de la base de datos  

@@ -18,15 +18,18 @@ helpviewer_keywords:
 - threading [.NET Framework], thread pool
 - threading [.NET Framework], pooling
 ms.assetid: 2be05b06-a42e-4c9d-a739-96c21d673927
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 38032fccce1a8f6f7cbcb3bbd3d3f9d008a74141
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: e50fd66096d6bd58fb7db692449e7f8654b5ca76
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="the-managed-thread-pool"></a>Grupo de subprocesos administrados
 La clase <xref:System.Threading.ThreadPool> proporciona a la aplicación un grupo de subprocesos de trabajo administrados por el sistema, que le permite concentrarse en las tareas de la aplicación en lugar de en la administración de los subprocesos. Si tiene tareas cortas que requieran procesamiento en segundo plano, el grupo de subprocesos administrados permite aprovechar fácilmente las ventajas de varios subprocesos. Por ejemplo, a partir de [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], puede crear objetos <xref:System.Threading.Tasks.Task> y <xref:System.Threading.Tasks.Task%601>, que realizan tareas asincrónicas en los subprocesos del grupo de subprocesos.  
@@ -52,7 +55,7 @@ La clase <xref:System.Threading.ThreadPool> proporciona a la aplicación un grup
 -   Debe tener una identidad estable asociada al subproceso o dedicar un subproceso a una tarea.  
   
 ## <a name="thread-pool-characteristics"></a>Características del grupo de subprocesos  
- Los subprocesos del grupo de subprocesos son subprocesos en segundo plano. Vea [subprocesos en segundo plano y primer plano](../../../docs/standard/threading/foreground-and-background-threads.md). Cada subproceso utiliza el tamaño de pila predeterminado, se ejecuta con la prioridad predeterminada y está en el contenedor multiproceso.  
+ Los subprocesos del grupo de subprocesos son subprocesos en segundo plano. Consulte [Subprocesos de primer y segundo plano](../../../docs/standard/threading/foreground-and-background-threads.md). Cada subproceso utiliza el tamaño de pila predeterminado, se ejecuta con la prioridad predeterminada y está en el contenedor multiproceso.  
   
  Hay solo un grupo de subprocesos por cada proceso.  
   
@@ -65,7 +68,7 @@ La clase <xref:System.Threading.ThreadPool> proporciona a la aplicación un grup
   
 -   Common Language Runtime o un proceso de host finaliza el subproceso.  
   
- Para obtener más información, consulte [excepciones en subprocesos administrados](../../../docs/standard/threading/exceptions-in-managed-threads.md).  
+ Para más información, consulte [Excepciones en subprocesos administrados](../../../docs/standard/threading/exceptions-in-managed-threads.md).  
   
 > [!NOTE]
 >  En las versiones 1.0 y 1.1 de .NET Framework, Common Language Runtime intercepta silenciosamente las excepciones no controladas en los subprocesos del grupo de subprocesos. Esto puede dañar el estado de la aplicación y puede acabar haciendo que las aplicaciones no respondan, lo cual puede ser muy difícil de depurar.  
@@ -90,10 +93,10 @@ La clase <xref:System.Threading.ThreadPool> proporciona a la aplicación un grup
 >  Puede utilizar el método <xref:System.Threading.ThreadPool.SetMinThreads%2A> para aumentar el número mínimo de subprocesos inactivos. Sin embargo, aumentar innecesariamente estos valores puede causar problemas de rendimiento. Si se inician demasiadas tareas al mismo tiempo, puede que todas ellas parezcan funcionar con lentitud. En la mayoría de los casos, el grupo de subprocesos funciona mejor con su propio algoritmo de asignación de subprocesos.  
   
 ## <a name="skipping-security-checks"></a>Omisión de comprobaciones de seguridad  
- El grupo de subprocesos también proporciona los métodos <xref:System.Threading.ThreadPool.UnsafeQueueUserWorkItem%2A?displayProperty=nameWithType> y <xref:System.Threading.ThreadPool.UnsafeRegisterWaitForSingleObject%2A?displayProperty=nameWithType>. Utilice estos métodos solamente cuando tenga la seguridad de que la pila del llamador es irrelevante para las comprobaciones de seguridad que se realizan durante la ejecución de la tarea en cola. <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A>y <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A> capturan la pila del llamador, que se combina en la pila del subproceso del grupo cuando el subproceso empieza a ejecutar una tarea. Si es necesaria una comprobación de seguridad, debe comprobarse toda la pila. La comprobación proporciona seguridad, pero también supone un coste para el rendimiento.  
+ El grupo de subprocesos también proporciona los métodos <xref:System.Threading.ThreadPool.UnsafeQueueUserWorkItem%2A?displayProperty=nameWithType> y <xref:System.Threading.ThreadPool.UnsafeRegisterWaitForSingleObject%2A?displayProperty=nameWithType>. Utilice estos métodos solamente cuando tenga la seguridad de que la pila del llamador es irrelevante para las comprobaciones de seguridad que se realizan durante la ejecución de la tarea en cola. <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A> y <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A> capturan la pila del llamador, que se combina en la pila del subproceso del grupo de subprocesos cuando el subproceso empieza a ejecutar una tarea. Si es necesaria una comprobación de seguridad, debe comprobarse toda la pila. La comprobación proporciona seguridad, pero también supone un coste para el rendimiento.  
   
 ## <a name="using-the-thread-pool"></a>Uso del grupo de subprocesos  
- A partir del [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], la manera más fácil de usar el grupo de subprocesos es utilizar el [tarea Parallel Library (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md). De forma predeterminada, los tipos de biblioteca de procesamiento paralelo, como <xref:System.Threading.Tasks.Task> y <xref:System.Threading.Tasks.Task%601>, utilizan subprocesos del grupo de subprocesos para ejecutar tareas. También puede utilizar el grupo de subprocesos llamando a <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A?displayProperty=nameWithType> desde código administrado (o `CorQueueUserWorkItem` desde código no administrado) y pasando un delegado <xref:System.Threading.WaitCallback> que represente al método que realiza la tarea. Otra forma de usar el grupo de subprocesos es poner en cola los elementos de trabajo que están relacionados con una operación de espera mediante el método <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A?displayProperty=nameWithType> y pasar un <xref:System.Threading.WaitHandle> que, cuando se señala o cuando se agota el tiempo de espera, llame al método representado por el delegado <xref:System.Threading.WaitOrTimerCallback>. Los subprocesos del grupo de subprocesos se usan para invocar métodos de devolución de llamada.  
+ A partir de [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], la manera más fácil de usar el grupo de subprocesos es utilizar la [Biblioteca TPL](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md). De forma predeterminada, los tipos de biblioteca de procesamiento paralelo, como <xref:System.Threading.Tasks.Task> y <xref:System.Threading.Tasks.Task%601>, utilizan subprocesos del grupo de subprocesos para ejecutar tareas. También puede utilizar el grupo de subprocesos llamando a <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A?displayProperty=nameWithType> desde código administrado (o `CorQueueUserWorkItem` desde código no administrado) y pasando un delegado <xref:System.Threading.WaitCallback> que represente al método que realiza la tarea. Otra forma de usar el grupo de subprocesos es poner en cola los elementos de trabajo que están relacionados con una operación de espera mediante el método <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A?displayProperty=nameWithType> y pasar un <xref:System.Threading.WaitHandle> que, cuando se señala o cuando se agota el tiempo de espera, llame al método representado por el delegado <xref:System.Threading.WaitOrTimerCallback>. Los subprocesos del grupo de subprocesos se usan para invocar métodos de devolución de llamada.  
   
 ## <a name="threadpool-examples"></a>Ejemplos de ThreadPool  
  Los ejemplos de código de esta sección muestran el grupo de subprocesos con la clase <xref:System.Threading.Tasks.Task>, el método <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A?displayProperty=nameWithType> y el método <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A?displayProperty=nameWithType>.  
@@ -108,7 +111,7 @@ La clase <xref:System.Threading.ThreadPool> proporciona a la aplicación un grup
   
 <a name="TaskParallelLibrary"></a>   
 ### <a name="executing-asynchronous-tasks-with-the-task-parallel-library"></a>Ejecutar tareas asincrónicas con la biblioteca TPL  
- En el siguiente ejemplo, se muestra cómo crear y usar un objeto <xref:System.Threading.Tasks.Task> para llamar al método <xref:System.Threading.Tasks.TaskFactory.StartNew%2A?displayProperty=nameWithType>. Para obtener un ejemplo que usa el <xref:System.Threading.Tasks.Task%601> clase para devolver un valor de una tarea asincrónica, vea [Cómo: devolver un valor de una tarea](../../../docs/standard/parallel-programming/how-to-return-a-value-from-a-task.md).  
+ En el siguiente ejemplo, se muestra cómo crear y usar un objeto <xref:System.Threading.Tasks.Task> para llamar al método <xref:System.Threading.Tasks.TaskFactory.StartNew%2A?displayProperty=nameWithType>. Para ver un ejemplo que utiliza la clase <xref:System.Threading.Tasks.Task%601> con el fin de devolver un valor de una tarea asincrónica, consulte [Cómo: Devolver un valor de una tarea](../../../docs/standard/parallel-programming/how-to-return-a-value-from-a-task.md).  
   
  [!code-csharp[System.Threading.Tasks.Task#01](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.threading.tasks.task/cs/startnew.cs#01)]
  [!code-vb[System.Threading.Tasks.Task#01](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.threading.tasks.task/vb/startnew.vb#01)]  
@@ -151,7 +154,7 @@ La clase <xref:System.Threading.ThreadPool> proporciona a la aplicación un grup
  <xref:System.Threading.Tasks.Task%601>  
  [Biblioteca TPL](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)  
  [Biblioteca TPL](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)  
- [How to: Return a Value from a Task](../../../docs/standard/parallel-programming/how-to-return-a-value-from-a-task.md) (Devolver un valor a partir de una tarea)  
+ [Devolver un valor a partir de una tarea](../../../docs/standard/parallel-programming/how-to-return-a-value-from-a-task.md)  
  [Objetos y características de subprocesos](../../../docs/standard/threading/threading-objects-and-features.md)  
  [Subprocesos y subprocesamiento](../../../docs/standard/threading/threads-and-threading.md)  
  [Asynchronous File I/O](../../../docs/standard/io/asynchronous-file-i-o.md) (E/S de archivos asincrónica)  

@@ -12,15 +12,18 @@ helpviewer_keywords:
 - threading [.NET Framework], features
 - managed threading
 ms.assetid: 239b2e8d-581b-4ca3-992b-0e8525b9321c
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 2a73e5c60a661c171e9e46e6307484cf5e0e6b80
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 0cb36c004c46e22256928b3b2432da59fb3e6fa2
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="threading-objects-and-features"></a>Objetos y características de subprocesos
 .NET Framework proporciona varios objetos que le ayudarán a crear y administrar aplicaciones multiproceso. Los subprocesos administrados se representan mediante la clase <xref:System.Threading.Thread>. La clase <xref:System.Threading.ThreadPool> permite crear y administrar fácilmente tareas multiproceso en segundo plano. La clase <xref:System.ComponentModel.BackgroundWorker> hace lo mismo para las tareas que interactúan con la interfaz de usuario. La clase <xref:System.Threading.Timer> ejecuta tareas en segundo plano a intervalos de tiempo definidos.  
@@ -44,7 +47,7 @@ ms.lasthandoff: 10/18/2017
  Describe los identificadores de espera de eventos administrados, que se usan para sincronizar las actividades del subproceso mediante señalización y señales de espera.  
   
  [Mutexes](../../../docs/standard/threading/mutexes.md) (Clases Mutex)  
- Explica cómo utilizar un <xref:System.Threading.Mutex> para sincronizar el acceso a un objeto o para crear sus propios mecanismos de sincronización.  
+ Explica cómo usar una clase <xref:System.Threading.Mutex> para sincronizar el acceso a un objeto o para crear sus propios mecanismos de sincronización.  
   
  [Interlocked Operations](../../../docs/standard/threading/interlocked-operations.md) (Operaciones Interlocked)  
  Explica cómo usar la clase <xref:System.Threading.Interlocked> para aumentar o reducir un valor y almacenarlo en una única operación atómica.  

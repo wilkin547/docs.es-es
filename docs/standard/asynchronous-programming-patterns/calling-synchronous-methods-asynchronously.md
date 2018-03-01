@@ -26,15 +26,18 @@ helpviewer_keywords:
 - waiting for asynchronous calls
 - status information [.NET Framework], asynchronous operations
 ms.assetid: 41972034-92ed-450a-9664-ab93fcc6f1fb
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 965e5928c03ae573eacba98a7596f55b56aaba26
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: e7e6f402d9423a8ae1ee464499f1b794785c2b06
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="calling-synchronous-methods-asynchronously"></a>Llamar a métodos sincrónicos de forma asincrónica
 .NET Framework permite llamar a cualquier método de forma asincrónica. Para ello, es necesario que defina un delegado con la misma firma que el método al que desea llamar. Common Language Runtime definirá automáticamente los métodos `BeginInvoke` y `EndInvoke` para este delegado, con las firmas adecuadas.  
@@ -107,7 +110,7 @@ ms.lasthandoff: 11/21/2017
   
  Notas sobre el ejemplo:  
   
--   El `threadId` parámetro de `TestMethod` es un `out` parámetro ([`<Out>` `ByRef` en Visual Basic), por lo que nunca se usa el valor de entrada `TestMethod`. Una variable ficticia se pasa a la llamada a `BeginInvoke` . Si el parámetro `threadId` fuera un parámetro `ref` (`ByRef` en Visual Basic), la variable tendría que ser un campo de nivel de clase para que pudiera pasarse a los métodos `BeginInvoke` y `EndInvoke`.  
+-   El parámetro `threadId` de `TestMethod` es un parámetro `out` (`<Out>` `ByRef` en Visual Basic), por lo que `TestMethod` nunca usa el valor de entrada. Una variable ficticia se pasa a la llamada a `BeginInvoke` . Si el parámetro `threadId` fuera un parámetro `ref` (`ByRef` en Visual Basic), la variable tendría que ser un campo de nivel de clase para que pudiera pasarse a los métodos `BeginInvoke` y `EndInvoke`.  
   
 -   La información de estado que se pasa a `BeginInvoke` es una cadena de formato, que el método de devolución de llamada utiliza para dar formato a un mensaje de salida. Dado que se pasa como un tipo <xref:System.Object>, la información de estado tiene que convertirse a su tipo apropiado antes de poderse utilizar.  
   

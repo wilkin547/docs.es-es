@@ -12,19 +12,22 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 88373fe2-4a6b-44f9-8a62-8a3e348e3a46
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 167cd81ecbc25ca243e3b4a7a6aa7327679528e0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 2f1367268920e4b72f29b77a7f2e96f09a1dce37
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="xsltransform-class-implements-the-xslt-processor"></a>La clase XslTransform implementa el procesador XSLT
 > [!NOTE]
->  La clase <xref:System.Xml.Xsl.XslTransform> es obsoleta en [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)]. Puede llevar a cabo Extensible Stylesheet Language for Transformations (XSLT) mediante la clase <xref:System.Xml.Xsl.XslCompiledTransform>. Vea [mediante la clase XslCompiledTransform](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) y [Migrating From the XslTransform Class](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md) para obtener más información.  
+>  La clase <xref:System.Xml.Xsl.XslTransform> es obsoleta en [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)]. Puede llevar a cabo Extensible Stylesheet Language for Transformations (XSLT) mediante la clase <xref:System.Xml.Xsl.XslCompiledTransform>. Consulte [Uso de la clase XslCompiledTransform](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) y [Migración desde la clase XslTransform](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md) para obtener más información.  
   
  La clase <xref:System.Xml.Xsl.XslTransform> es un procesador XSLT que implementa la recomendación de las transformaciones XSL (XSLT) versión 1.0. El método <xref:System.Xml.Xsl.XslTransform.Load%2A> localiza y lee hojas de estilos y el método <xref:System.Xml.Xsl.XslTransform.Transform%2A> transforma el documento de origen determinado. Cualquier almacén que implemente la interfaz <xref:System.Xml.XPath.IXPathNavigable> puede utilizarse como documento de origen para la transformación <xref:System.Xml.Xsl.XslTransform>. El [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] implementa actualmente la interfaz <xref:System.Xml.XPath.IXPathNavigable> en <xref:System.Xml.XmlDocument>, <xref:System.Xml.XmlDataDocument>, y <xref:System.Xml.XPath.XPathDocument>, de manera que todos estos pueden utilizarse como documento de origen de entrada para una transformación.  
   
@@ -84,9 +87,9 @@ public void Load(XPathNavigator, XmlResolver, Evidence);
   
  Si no se proporciona ningún identificador URI, la hoja de estilos se convierte en un parámetro de plena confianza. No cargue hojas de estilos desde orígenes que no sean de confianza ni agregue objetos de extensión que no sean de confianza en <xref:System.Xml.Xsl.XsltArgumentList>.  
   
- Para obtener más información sobre los niveles de seguridad y evidencia y cómo afecta a secuencias de comandos, consulte [XSLT Stylesheet Scripting mediante \<msxsl: script >](../../../../docs/standard/data/xml/xslt-stylesheet-scripting-using-msxsl-script.md). Para obtener información sobre los niveles de seguridad y evidencia y cómo afecta a los objetos de extensión, vea [XsltArgumentList para parámetros Stylesheet y objetos de extensión](../../../../docs/standard/data/xml/xsltargumentlist-for-style-sheet-parameters-and-extension-objects.md).  
+ Para obtener más información sobre niveles de seguridad y evidencia y sobre cómo afectan a los scripts, vea [Hojas de estilos XSLT Scripting mediante \<msxsl: script>](../../../../docs/standard/data/xml/xslt-stylesheet-scripting-using-msxsl-script.md). Para obtener información sobre los niveles de seguridad y evidencia y cómo afectan a los objetos de extensión, vea [XsltArgumentList para parámetros Stylesheet y objetos de extensión](../../../../docs/standard/data/xml/xsltargumentlist-for-style-sheet-parameters-and-extension-objects.md).  
   
- Para obtener información sobre los niveles de seguridad y evidencia y cómo afecta a la `document()` función, vea [resolver hojas de estilos XSLT externo y documentos](../../../../docs/standard/data/xml/resolving-external-xslt-style-sheets-and-documents.md).  
+ Para obtener más información sobre niveles de seguridad y evidencia y sobre cómo afectan a la función `document()`, vea [Resolver hojas de estilos XSLT y documentos externos](../../../../docs/standard/data/xml/resolving-external-xslt-style-sheets-and-documents.md).  
   
  Una hoja de estilos se puede suministrar con varios parámetros de entrada. Asimismo puede llamar también a funciones en objetos de extensión. Tanto los parámetros como los objetos de extensión se suministran a la hoja de estilos mediante la clase <xref:System.Xml.Xsl.XsltArgumentList>. Para obtener más información acerca de <xref:System.Xml.Xsl.XsltArgumentList>, vea <xref:System.Xml.Xsl.XsltArgumentList>.  
   
@@ -213,7 +216,7 @@ Root node is book.
 ## <a name="migration-of-xslt-from-net-framework-version-10-to-net-framework-version-11"></a>Migración de XSLT de la versión 1.0 a la versión 1.1 de .NET Framework  
  La tabla siguiente muestra los métodos versión 1.0 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] obsoletos y los nuevos métodos versión 1.1 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] para el método <xref:System.Xml.Xsl.XslTransform.Load%2A>. Los nuevos métodos permiten limitar los permisos de la hoja de estilos especificando la evidencia.  
   
-|Métodos de .NET Framework versión 1.0 Load obsoletos|Métodos Load de reemplazo .NET Framework versión 1.1|  
+|Métodos Load obsoletos de la versión 1.0 de .NET Framework|Métodos Load de reemplazo de la versión 1.1 de .NET Framework|  
 |------------------------------------------------------|---------------------------------------------------------|  
 |Load(entrada XPathNavigator);<br /><br /> Load(entrada XPathNavigator, resolución XmlResolver);|Load(hoja de estilos XPathNavigator, resolución XmlResolver, evidencia Evidence);|  
 |Load(hoja de estilos IXPathNavigable);<br /><br /> Load(hoja de estilos IXPathNavigable, resolución XmlResolver);|Load(hoja de estilos IXPathNavigable, resolución XmlResolver, evidencia Evidence);|  
@@ -221,7 +224,7 @@ Root node is book.
   
  La tabla siguiente muestra los métodos obsoletos y nuevos <xref:System.Xml.Xsl.XslTransform.Transform%2A>. Los nuevos métodos toman un objeto <xref:System.Xml.XmlResolver>.  
   
-|Métodos de .NET Framework versión 1.0 Transform obsoletos|Versión de .NET Framework métodos 1.1 Transform de reemplazo|  
+|Métodos Transform obsoletos de la versión 1.0 de .NET Framework|Métodos Transform de reemplazo de la versión 1.1 de .NET Framework|  
 |-----------------------------------------------------------|--------------------------------------------------------------|  
 |XmlReader Transform(entrada XPathNavigator, argumentos XsltArgumentList)|XmlReader Transform(entrada XPathNavigator, argumentos XsltArgumentList, resolución XmlResolver)|  
 |XmlReader Transform(entrada IXPathNavigable, argumentos XsltArgumentList)|XmlReader Transform(entrada IXPathNavigable, argumentos XsltArgumentList, resolución XmlResolver)|  
@@ -233,13 +236,13 @@ Root node is book.
 |Void Transform(entrada IXPathNavigable, argumentos XsltArgumentList, salida Stream)|Void Transform(entrada IXPathNavigable, argumentos XsltArgumentList, salida Stream, resolución XmlResolver)|  
 |Void Transform(entrada String, salida String);|Void Transform(entrada String, salida String, resolución XmlResolver);|  
   
- La propiedad <xref:System.Xml.Xsl.XslTransform.XmlResolver%2A?displayProperty=nameWithType> es obsoleta en [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] versión 1.1. En su lugar, use la nueva <xref:System.Xml.Xsl.XslTransform.Transform%2A> sobrecargas que toman un <xref:System.Xml.XmlResolver> objeto.  
+ La propiedad <xref:System.Xml.Xsl.XslTransform.XmlResolver%2A?displayProperty=nameWithType> es obsoleta en [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] versión 1.1. En lugar de esta propiedad, utilice las nuevas sobrecargas <xref:System.Xml.Xsl.XslTransform.Transform%2A> que toman un objeto <xref:System.Xml.XmlResolver>.  
   
 ## <a name="see-also"></a>Vea también  
  <xref:System.Xml.Xsl.XslTransform>  
  [Transformaciones XSLT con la clase XslTransform](../../../../docs/standard/data/xml/xslt-transformations-with-the-xsltransform-class.md)  
  [XPathNavigator en transformaciones](../../../../docs/standard/data/xml/xpathnavigator-in-transformations.md)  
  [XPathNodeIterator en transformaciones](../../../../docs/standard/data/xml/xpathnodeiterator-in-transformations.md)  
- [Entrada XPathDocument Input para XslTransform](../../../../docs/standard/data/xml/xpathdocument-input-to-xsltransform.md)  
+ [Entrada XPathDocument en XslTransform](../../../../docs/standard/data/xml/xpathdocument-input-to-xsltransform.md)  
  [Entrada de XmlDataDocument en XslTransform](../../../../docs/standard/data/xml/xmldatadocument-input-to-xsltransform.md)  
  [Entrada de XmlDocument en XslTransform](../../../../docs/standard/data/xml/xmldocument-input-to-xsltransform.md)

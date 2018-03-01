@@ -30,15 +30,18 @@ helpviewer_keywords:
 - Implicit operator
 - data types [.NET Framework], converting
 ms.assetid: ba36154f-064c-47d3-9f05-72f93a7ca96d
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 20b137e5df2fb6ebc62d0a64c1a93b53ded2e191
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 643a1c7d8dd141a8d898af61ba8302f46207321b
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="type-conversion-in-the-net-framework"></a>Conversión de tipos en .NET Framework
 <a name="top"></a> Cada valor tiene un tipo asociado, que define los atributos como la cantidad de espacio asignado al valor, el intervalo de valores posibles que puede tener y los miembros que ofrece. Muchos valores se pueden expresar como más de un tipo. Por ejemplo, el valor 4 se puede expresar como un entero o como un valor de punto flotante. La conversión de tipo crea un valor en un nuevo tipo que es equivalente al valor de un tipo antiguo, pero no conserva necesariamente la identidad (o valor exacto) del objeto original.  
@@ -104,7 +107,7 @@ ms.lasthandoff: 11/21/2017
 |<xref:System.UInt32>|<xref:System.UInt32.MaxValue?displayProperty=nameWithType> es mayor que <xref:System.Int32.MaxValue?displayProperty=nameWithType>.|  
 |<xref:System.UInt64>|<xref:System.UInt64.MaxValue?displayProperty=nameWithType> es mayor que <xref:System.Int32.MaxValue?displayProperty=nameWithType>.|  
   
- Para administrar estas conversiones de restricción, [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] permite que los tipos definan un operador `Explicit`. Los compiladores de lenguajes individuales, a continuación, pueden implementar este operador usando su propia sintaxis o un miembro de la <xref:System.Convert> puede llamar a la clase para realizar la conversión. (Para obtener más información acerca de la clase <xref:System.Convert>, consulte [Clase Convert](#Convert) más adelante en este tema). En el ejemplo siguiente, se muestra el uso de las características de lenguaje para administrar la conversión explícita de estos valores enteros, que potencialmente están fuera del intervalo, a valores de tipo <xref:System.Int32>.  
+ Para administrar estas conversiones de restricción, [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] permite que los tipos definan un operador `Explicit`. A continuación, los compiladores de lenguaje individuales pueden implementar este operador usando su propia sintaxis o se puede llamar a un miembro de la clase <xref:System.Convert> para realizar la conversión. (Para obtener más información acerca de la clase <xref:System.Convert>, consulte [Clase Convert](#Convert) más adelante en este tema). En el ejemplo siguiente, se muestra el uso de las características de lenguaje para administrar la conversión explícita de estos valores enteros, que potencialmente están fuera del intervalo, a valores de tipo <xref:System.Int32>.  
   
  [!code-csharp[Conceptual.Conversion#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.conversion/cs/explicit1.cs#4)]
  [!code-vb[Conceptual.Conversion#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.conversion/vb/explicit1.vb#4)]  
@@ -176,7 +179,7 @@ ms.lasthandoff: 11/21/2017
  [!code-csharp[Conceptual.Conversion#9](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.conversion/cs/convert1.cs#9)]
  [!code-vb[Conceptual.Conversion#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.conversion/vb/convert1.vb#9)]  
   
- Para una tabla que enumera las conversiones compatibles con de restricción y ampliación del <xref:System.Convert> de clases, consulte [tablas de conversión de tipo](../../../docs/standard/base-types/conversion-tables.md).  
+ Para obtener una tabla en la que se muestra una lista de conversiones de restricción y ampliación admitidas por la clase <xref:System.Convert>, vea [Tablas de conversiones de tipos](../../../docs/standard/base-types/conversion-tables.md).  
   
 <a name="ChangeType"></a>   
 ### <a name="custom-conversions-with-the-changetype-method"></a>Conversiones personalizadas con el método ChangeType  

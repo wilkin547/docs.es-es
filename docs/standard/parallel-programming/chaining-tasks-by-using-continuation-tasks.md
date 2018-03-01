@@ -11,17 +11,21 @@ ms.topic: article
 dev_langs:
 - csharp
 - vb
-helpviewer_keywords: tasks, continuations
+helpviewer_keywords:
+- tasks, continuations
 ms.assetid: 0b45e9a2-de28-46ce-8212-1817280ed42d
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 7037e0c91ee6ae83b70d6a26e72b87095456063b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: b8e21c338648d5925c8576f76dae3aae43a9ca0d
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="chaining-tasks-by-using-continuation-tasks"></a>Encadenar tareas mediante tareas de continuación
 En la programación asincrónica, es muy común que una operación asincrónica, al finalizar, invoque una segunda operación y le pase los datos. Tradicionalmente, esto se ha hecho mediante métodos de devolución de llamada. En la biblioteca TPL (Task Parallel Library, biblioteca de procesamiento paralelo basado en tareas), se proporciona la misma funcionalidad mediante *tareas de continuación*. Una tarea de continuación (también conocida simplemente como una continuación) es una tarea asincrónica invocada por otra tarea, conocida como el *antecedente*, cuando esta finaliza.  
@@ -58,7 +62,7 @@ En la programación asincrónica, es muy común que una operación asincrónica,
 ## <a name="creating-a-continuation-for-multiple-antecedents"></a>Crear una continuación para varios antecedentes  
  También puede crear una continuación que se ejecutará cuando se haya completado una tarea o un grupo de tareas. Para ejecutar una continuación cuando se hayan completado todas las tareas antecedentes, llame al método estático <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> (`Shared` en Visual Basic) o al método de instancia <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAll%2A?displayProperty=nameWithType>. Para ejecutar una continuación cuando cualquiera de las tareas antecedentes se haya completado, llame al método estático <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType> (`Shared` en Visual Basic) o al método de instancia <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAny%2A?displayProperty=nameWithType>.  
   
- Tenga en cuenta que las llamadas a la <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> y <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType> sobrecargas no bloquean el subproceso que realiza la llamada.  Sin embargo, se suele llamar a todos menos el <xref:System.Threading.Tasks.Task.WhenAll%28System.Collections.Generic.IEnumerable%7BSystem.Threading.Tasks.Task%7D%29?displayProperty=nameWithType> y <xref:System.Threading.Tasks.Task.WhenAll%28System.Threading.Tasks.Task%5B%5D%29?displayProperty=nameWithType> métodos para recuperar el valor devuelto <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> propiedad, que bloquea el subproceso que realiza la llamada.  
+ Tenga en cuenta que las llamadas a las sobrecargas <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> y <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType> no bloquean el subproceso que realiza la llamada.  Sin embargo, se suele llamar a todos menos a los métodos <xref:System.Threading.Tasks.Task.WhenAll%28System.Collections.Generic.IEnumerable%7BSystem.Threading.Tasks.Task%7D%29?displayProperty=nameWithType> y <xref:System.Threading.Tasks.Task.WhenAll%28System.Threading.Tasks.Task%5B%5D%29?displayProperty=nameWithType> para recuperar la propiedad <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> devuelta, que bloquea el subproceso que realiza la llamada.  
   
  En el ejemplo siguiente se llama al método <xref:System.Threading.Tasks.Task.WhenAll%28System.Collections.Generic.IEnumerable%7BSystem.Threading.Tasks.Task%7D%29?displayProperty=nameWithType> para crear una tarea de continuación que refleje los resultados de sus diez tareas antecedentes. Cada tarea antecedente eleva al cuadrado un valor de índice que varía entre uno y diez. Si los antecedentes se completan correctamente (su propiedad <xref:System.Threading.Tasks.Task.Status%2A?displayProperty=nameWithType> es <xref:System.Threading.Tasks.TaskStatus.RanToCompletion?displayProperty=nameWithType>), la propiedad <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> de la continuación es una matriz de los valores <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> devueltos por cada antecedente. En el ejemplo se suman para calcular el total de los cuadrados de todos los números entre uno y diez.  
   
@@ -119,12 +123,12 @@ En la programación asincrónica, es muy común que una operación asincrónica,
  [!code-csharp[TPL_Continuations#10](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_continuations/cs/detached1.cs#10)]
  [!code-vb[TPL_Continuations#10](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_continuations/vb/detached1.vb#10)]  
   
- El estado final de la tarea antecedente depende del estado final de las tareas secundarias asociadas. El estado de las tareas secundarias desasociadas no afecta al elemento primario. Para más información, consulte [Tareas secundarias asociadas y desasociadas](../../../docs/standard/parallel-programming/attached-and-detached-child-tasks.md).  
+ El estado final de la tarea antecedente depende del estado final de las tareas secundarias asociadas. El estado de las tareas secundarias desasociadas no afecta al elemento primario. Para más información, consulte [Attached and Detached Child Tasks](../../../docs/standard/parallel-programming/attached-and-detached-child-tasks.md) (Tareas secundarias asociadas y desasociadas).  
   
 ## <a name="associating-state-with-continuations"></a>Asociación de estado con continuaciones  
  Un estado arbitrario se puede asociar con una continuación de tarea. El método <xref:System.Threading.Tasks.Task.ContinueWith%2A> proporciona versiones sobrecargadas, y cada una de ellas toma un valor <xref:System.Object> que representa el estado de la continuación. Más adelante se puede tener acceso a este objeto de estado mediante la propiedad <xref:System.Threading.Tasks.Task.AsyncState%2A?displayProperty=nameWithType>. Si no se proporciona un valor, este objeto de estado es `null` .  
   
- El estado de continuación es útil al convertir un código existente que use el [modelo de programación asincrónica (APM)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md) para utilizar la TPL. En el APM, normalmente se proporciona el estado del objeto en el  **comenzar*método*** método y el acceso posterior a ese estado mediante la <xref:System.IAsyncResult.AsyncState%2A?displayProperty=nameWithType> propiedad. Si se usa el método <xref:System.Threading.Tasks.Task.ContinueWith%2A> , se puede conservar este estado al convertir código que usa el APM para usar la TPL.  
+ El estado de continuación es útil al convertir un código existente que use el [modelo de programación asincrónica (APM)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md) para utilizar la TPL. En el APM, normalmente se proporciona el estado del objeto en el método **Begin***Method* y el acceso posterior a ese estado mediante la propiedad <xref:System.IAsyncResult.AsyncState%2A?displayProperty=nameWithType>. Si se usa el método <xref:System.Threading.Tasks.Task.ContinueWith%2A> , se puede conservar este estado al convertir código que usa el APM para usar la TPL.  
   
  El estado de continuación también puede ser útil cuando se trabaja con objetos <xref:System.Threading.Tasks.Task> en el depurador [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] . Por ejemplo, en la ventana **Tareas paralelas** , la columna **Tarea** muestra la representación de cadena del objeto de estado de cada tarea. Para más información sobre la ventana **Tareas paralelas**, consulte el artículo [Usar la ventana Tareas](/visualstudio/debugger/using-the-tasks-window).  
   
@@ -151,7 +155,7 @@ En la programación asincrónica, es muy común que una operación asincrónica,
      [!code-csharp[TPL_Continuations#11](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_continuations/cs/exception2.cs#11)]
      [!code-vb[TPL_Continuations#11](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_continuations/vb/exception2.vb#11)]  
   
-     Para más información, consulte [Control de excepciones](../../../docs/standard/parallel-programming/exception-handling-task-parallel-library.md) y [Cómo: Controlar excepciones iniciadas por tareas](http://msdn.microsoft.com/en-us/d6c47ec8-9de9-4880-beb3-ff19ae51565d).  
+     Para más información, consulte [Control de excepciones](../../../docs/standard/parallel-programming/exception-handling-task-parallel-library.md) y [Cómo: Controlar excepciones iniciadas por tareas](http://msdn.microsoft.com/library/d6c47ec8-9de9-4880-beb3-ff19ae51565d).  
   
 -   Si la continuación es una tarea secundaria asociada que se creó mediante la opción <xref:System.Threading.Tasks.TaskContinuationOptions.AttachedToParent?displayProperty=nameWithType>, sus excepciones serán propagadas por el elemento primario hacia el subproceso de llamada, como sucede con cualquier otro elemento secundario asociado. Para más información, consulte [Attached and Detached Child Tasks](../../../docs/standard/parallel-programming/attached-and-detached-child-tasks.md) (Tareas secundarias asociadas y desasociadas).  
   

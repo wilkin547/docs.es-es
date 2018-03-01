@@ -16,15 +16,18 @@ helpviewer_keywords:
 - garbage collection, workstation garbage collection
 - garbage collection, managed heap
 ms.assetid: 67c5a20d-1be1-4ea7-8a9a-92b0b08658d2
-caps.latest.revision: "51"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: b15ae041cdadb259c59d447b8775844fc96048be
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 9a42c9aeb3295cd90fb6796e36b840daff843aac
+ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="fundamentals-of-garbage-collection"></a>Fundamentos de la recolección de elementos no utilizados
 <a name="top"></a> En el Common Language Runtime (CLR), el recolector de elementos no utilizados actúa como administrador de memoria automático. Proporciona las siguientes ventajas:  
@@ -79,7 +82,7 @@ ms.lasthandoff: 10/18/2017
   
     -   Confirmado. El bloque de memoria se asigna al almacenamiento físico.  
   
--   El espacio de direcciones virtuales puede llegar a fragmentarse. Esto significa que hay bloques libres, también conocidos como marcadores, en el espacio de direcciones. Cuando se solicita una asignación de memoria virtual, el administrador de memoria virtual tiene que encontrar un único bloque libre que sea suficientemente grande para satisfacer esa solicitud de asignación. Incluso si tiene 2 GB de espacio disponible, la asignación que necesita 2 GB será incorrecta a menos que todo ese espacio libre en un único bloque de direcciones.  
+-   El espacio de direcciones virtuales puede llegar a fragmentarse. Esto significa que hay bloques libres, también conocidos como marcadores, en el espacio de direcciones. Cuando se solicita una asignación de memoria virtual, el administrador de memoria virtual tiene que encontrar un único bloque libre que sea suficientemente grande para satisfacer esa solicitud de asignación. Aunque tenga 2 GB de espacio disponible, la asignación que necesita 2 GB será incorrecta a menos que todo ese espacio disponible esté en un único bloque de direcciones.  
   
 -   Puede quedarse sin memoria si no tiene espacio de direcciones virtuales para reservar o espacio físico para confirmar.  
   
@@ -91,7 +94,7 @@ ms.lasthandoff: 10/18/2017
 ## <a name="conditions-for-a-garbage-collection"></a>Condiciones para la recolección de elementos no utilizados  
  La recolección de elementos no utilizados se produce cuando se cumple alguna de las siguientes condiciones:  
   
--   El sistema tiene poca memoria física. Esto detecta cualquier la notificación de memoria insuficiente desde el sistema operativo o de memoria baja indicado por el host.
+-   El sistema tiene poca memoria física. Esto detecta cualquier la notificación memoria insuficiente desde el sistema operativo o de poca memoria indicada por el host.
   
 -   La memoria que utilizan los objetos asignados del montón administrado supera un umbral aceptable. Este umbral se ajusta continuamente a medida que se ejecuta el proceso.  
   
@@ -105,7 +108,7 @@ ms.lasthandoff: 10/18/2017
   
  Hay un montón administrado para cada proceso administrado. Todos los subprocesos del proceso asignan memoria a los objetos del mismo montón.  
   
- Para reservar memoria, el recolector de elementos no utilizados llama a la función [VirtualAlloc](http://go.microsoft.com/fwlink/?LinkId=179047) de Win32 y reserva un segmento de memoria cada vez para las aplicaciones administradas. El recolector de elementos no utilizados también reserva segmentos según sea necesario y vuelve a liberarlos para el sistema operativo (después de borrarlos de todos los objetos) llamando a la función [VirtualFree](http://go.microsoft.com/fwlink/?LinkId=179050) de Win32.  
+ Para reservar memoria, el recolector de elementos no utilizados llama a la función [VirtualAlloc](https://msdn.microsoft.com/library/aa366887.aspx) de Win32 y reserva un segmento de memoria cada vez para las aplicaciones administradas. El recolector de elementos no utilizados también reserva segmentos según sea necesario y vuelve a liberarlos para el sistema operativo (después de borrarlos de todos los objetos) mediante una llamada a la función [VirtualFree](https://msdn.microsoft.com/library/aa366892.aspx) de Win32.  
   
 > [!IMPORTANT]
 >  El tamaño de los segmentos asignados por el recolector de elementos no utilizados es específico de la implementación y está sujeto a cambios en cualquier momento, incluso en las actualizaciones periódicas. La aplicación nunca debe realizar suposiciones sobre el tamaño de un sector determinado ni depender de él, y tampoco debe intentar configurar la cantidad de memoria disponible para las asignaciones de segmentos.  
@@ -189,7 +192,7 @@ ms.lasthandoff: 10/18/2017
   
  En la ilustración siguiente se muestra un subproceso que desencadena una recolección de elementos no utilizados, lo que provoca la suspensión de los demás subprocesos.  
   
- ![Cuando un subproceso activa una colección de elementos no utilizados](../../../docs/standard/garbage-collection/media/gc-triggered.png "GC_Triggered")  
+ ![Cuando un subproceso activa una recolección de elementos no utilizados](../../../docs/standard/garbage-collection/media/gc-triggered.png "GC_Triggered")  
 Subproceso que desencadena una recolección de elementos no utilizados  
   
  [Volver al principio](#top)  
@@ -208,7 +211,7 @@ Subproceso que desencadena una recolección de elementos no utilizados
 ## <a name="workstation-and-server-garbage-collection"></a>Recolección de elementos no utilizados de estación de trabajo y de servidor  
  El recolector de elementos no utilizados se ajusta automáticamente y puede funcionar en gran variedad de escenarios. Puede usar un valor del archivo de configuración para establecer el tipo de recolección de elementos no utilizados en función de las características de la carga de trabajo. El CLR proporciona los tipos siguientes de recolección de elementos no utilizados:  
   
--   Recolección de elementos no utilizados de estación de trabajo, para las estaciones de trabajo cliente y los equipos independientes. Ésta es la configuración predeterminada para la [ \<gcServer > elemento](../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md) en el esquema de configuración en tiempo de ejecución.  
+-   Recolección de elementos no utilizados de estación de trabajo, para las estaciones de trabajo cliente y los equipos independientes. Se trata de la configuración predeterminada para el [elemento \<gcServer>](../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md) del esquema de configuración del tiempo de ejecución.  
   
      La recolección de elementos no utilizados de estación de trabajo puede ser simultánea o no simultánea. La recolección simultánea de elementos no utilizados permite que los subprocesos administrados continúen con sus operaciones durante una recolección de elementos no utilizados.  
   
@@ -218,13 +221,13 @@ Subproceso que desencadena una recolección de elementos no utilizados
   
  En las siguientes ilustraciones se muestran los subprocesos dedicados que realizan la recolección de elementos no utilizados en un servidor.  
   
- ![Subprocesos de recolección de elementos no utilizados de servidor](../../../docs/standard/garbage-collection/media/gc-server.png "GC_Server")  
+ ![Subprocesos de la recolección de elementos no utilizados del servidor](../../../docs/standard/garbage-collection/media/gc-server.png "GC_Server")  
 Recolección de elementos no utilizados del servidor  
   
 ### <a name="configuring-garbage-collection"></a>Configurar la recolección de elementos no utilizados  
- Puede usar el [ \<gcServer > elemento](../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md) del esquema de configuración del runtime para especificar el tipo de recolección de elementos que desea que el CLR debe realizar. Cuando el atributo `enabled` de este elemento está establecido en `false` (el valor predeterminado), el CLR realiza la recolección de elementos no utilizados de estación de trabajo. Cuando se establece el atributo `enabled` en `true`, el CLR realiza la recolección de elementos no utilizados de servidor.  
+ Puede utilizar el [elemento \<gcServer>](../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md) del esquema de configuración del tiempo de ejecución para especificar el tipo de recolección de elementos no utilizados que el CLR debe realizar. Cuando el atributo `enabled` de este elemento está establecido en `false` (el valor predeterminado), el CLR realiza la recolección de elementos no utilizados de estación de trabajo. Cuando se establece el atributo `enabled` en `true`, el CLR realiza la recolección de elementos no utilizados de servidor.  
   
- La recolección simultánea se especifica con el [ \<gcConcurrent > elemento](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) del esquema de configuración en tiempo de ejecución. El valor predeterminado es `enabled`. Esta configuración controla la recolección de elementos no utilizados tanto simultánea como en segundo plano.  
+ La recolección de elementos no utilizados simultánea se especifica con el [elemento \<gcConcurrent>](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) del esquema de configuración del tiempo de ejecución. El valor predeterminado es `enabled`. Esta configuración controla la recolección de elementos no utilizados tanto simultánea como en segundo plano.  
   
  También puede especificar la recolección de elementos no utilizados de servidor con interfaces de hospedaje no administradas. Tenga en cuenta que ASP.NET y SQL Server habilitan automáticamente la recolección de elementos no utilizados de servidor si la aplicación se hospeda dentro de uno de estos entornos.  
   
@@ -235,7 +238,7 @@ Recolección de elementos no utilizados del servidor
   
      Los subprocesos que ejecutan código nativo no se suspenden.  
   
--   Colección de elementos no utilizados de estación de trabajo siempre se utiliza en un equipo que tiene un solo procesador, sin tener en cuenta el [ \<gcServer >](../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md) configuración. Si especifica la recolección de elementos no utilizados de servidor, el CLR usa la recolección de elementos no utilizados de estación de trabajo con la simultaneidad deshabilitada.  
+-   La recolección de elementos no utilizados de estación de trabajo siempre se utiliza en un equipo que tiene un solo procesador, sin tener en cuenta el valor de [\<gcServer>](../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md). Si especifica la recolección de elementos no utilizados de servidor, el CLR usa la recolección de elementos no utilizados de estación de trabajo con la simultaneidad deshabilitada.  
   
  Estas son algunas consideraciones sobre subprocesos y rendimiento para la recolección de elementos no utilizados de servidor:  
   
@@ -259,7 +262,7 @@ Recolección de elementos no utilizados del servidor
   
  La recolección de elementos no utilizados simultánea permite mayor capacidad de respuesta de las aplicaciones interactivas, pues minimiza las pausas en una recolección. Los subprocesos administrados pueden continuar ejecutándose la mayoría del tiempo mientras se ejecuta el subproceso de recolección de elementos no utilizados simultánea. Esto da lugar a pausas más cortas mientras se está produciendo una recolección de elementos no utilizados.  
   
- Para mejorar el rendimiento cuando hay varios procesos en ejecución, deshabilite la recolección de elementos no utilizados simultánea. Puede hacerlo agregando una [ \<gcConcurrent > elemento](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) al archivo de configuración de la aplicación y establezca el valor de su `enabled` atribuir a `"false"`.  
+ Para mejorar el rendimiento cuando hay varios procesos en ejecución, deshabilite la recolección de elementos no utilizados simultánea. Para ello, agregue un [elemento \<gcConcurrent>](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) al archivo de configuración de la aplicación y establezca el valor de su atributo `enabled` en `"false"`.  
   
  La recolección de elementos no utilizados simultánea se realiza en un subproceso dedicado. De forma predeterminada, el CLR ejecuta la recolección de elementos no utilizados de estación de trabajo con la simultaneidad habilitada. Esto se cumple en los equipos de uno o varios procesadores.  
   
@@ -269,7 +272,7 @@ Recolección de elementos no utilizados del servidor
   
  En la siguiente se muestra la recolección de elementos no utilizados simultánea realizada en un subproceso dedicado independiente.  
   
- ![Subprocesos de recolección de elementos no utilizados simultánea](../../../docs/standard/garbage-collection/media/gc-concurrent.png "GC_Concurrent")  
+ ![Subprocesos de recolección simultánea de elementos no utilizados](../../../docs/standard/garbage-collection/media/gc-concurrent.png "GC_Concurrent")  
 Recolección de elementos no utilizados simultánea  
   
  [Volver al principio](#top)  
@@ -289,14 +292,14 @@ Recolección de elementos no utilizados simultánea
   
  En la siguiente ilustración se muestra la recolección de elementos no utilizados en segundo plano realizada en un subproceso dedicado independiente en una estación de trabajo.  
   
- ![Colección de elementos no utilizados de estación de trabajo en segundo plano](../../../docs/standard/garbage-collection/media/backgroundworkstn.png "BackgroundWorkstn")  
+ ![Recolección de elementos no utilizados de estación de trabajo en segundo plano](../../../docs/standard/garbage-collection/media/backgroundworkstn.png "BackgroundWorkstn")  
 Recolección de elementos no utilizados de estación de trabajo en segundo plano  
   
  [Volver al principio](#top)  
   
 <a name="background_server_garbage_collection"></a>   
 ## <a name="background-server-garbage-collection"></a>Recolección de elementos no utilizados de servidor en segundo plano  
- A partir de .NET Framework 4.5, la recolección de elementos no utilizados de servidor en segundo plano es el modo predeterminado. Para elegir este modo, establezca la `enabled` atributo de la [ \<gcServer > elemento](../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md) a `true` en el esquema de configuración en tiempo de ejecución. Este modo funciona de forma similar a la recolección de elementos no utilizados de estación de trabajo en segundo plano, descrita en la sección anterior, pero hay algunas diferencias. La recolección de elementos no utilizados de estación de trabajo en segundo plano usa un subproceso dedicado de recolección de elementos no utilizados en segundo plano, mientras que la recolección de elementos no utilizados de servidor en segundo plano utiliza varios subprocesos, normalmente un subproceso dedicado para cada procesador lógico. A diferencia del subproceso de recolección de elementos no utilizados en segundo plano de la estación de trabajo, no se agota el tiempo de espera de estos subprocesos.  
+ A partir de .NET Framework 4.5, la recolección de elementos no utilizados de servidor en segundo plano es el modo predeterminado. Para elegir este modo, establezca el atributo `enabled` del [elemento \<gcServer>](../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md) en `true` en el esquema de configuración del tiempo de ejecución. Este modo funciona de forma similar a la recolección de elementos no utilizados de estación de trabajo en segundo plano, descrita en la sección anterior, pero hay algunas diferencias. La recolección de elementos no utilizados de estación de trabajo en segundo plano usa un subproceso dedicado de recolección de elementos no utilizados en segundo plano, mientras que la recolección de elementos no utilizados de servidor en segundo plano utiliza varios subprocesos, normalmente un subproceso dedicado para cada procesador lógico. A diferencia del subproceso de recolección de elementos no utilizados en segundo plano de la estación de trabajo, no se agota el tiempo de espera de estos subprocesos.  
   
  En la siguiente ilustración se muestra la recolección de elementos no utilizados en segundo plano realizada en un subproceso dedicado independiente en un servidor.  
   

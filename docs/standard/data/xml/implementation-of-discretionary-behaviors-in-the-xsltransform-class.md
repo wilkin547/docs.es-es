@@ -9,19 +9,22 @@ ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d2758ea1-03f6-47bd-88d2-0fb7ccdb2fab
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 7b6c81a5737b879b7c1356c4b9c2ab68fbbc4688
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 98ad31039b5351a7dc4aa3cf033ae8cd0f896b7b
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="implementation-of-discretionary-behaviors-in-the-xsltransform-class"></a>Implementación de comportamientos discrecionales en la clase XslTransform
 > [!NOTE]
->  La clase <xref:System.Xml.Xsl.XslTransform> es obsoleta en [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)]. Puede llevar a cabo Extensible Stylesheet Language for Transformations (XSLT) mediante la clase <xref:System.Xml.Xsl.XslCompiledTransform>. Vea [mediante la clase XslCompiledTransform](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) y [Migrating From the XslTransform Class](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md) para obtener más información.  
+>  La clase <xref:System.Xml.Xsl.XslTransform> es obsoleta en [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)]. Puede llevar a cabo Extensible Stylesheet Language for Transformations (XSLT) mediante la clase <xref:System.Xml.Xsl.XslCompiledTransform>. Consulte [Uso de la clase XslCompiledTransform](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) y [Migración desde la clase XslTransform](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md) para obtener más información.  
   
  Los comportamientos discrecionales se describen en la recomendación de transformaciones XSL (XSLT) versión 1.0 del W3C (www.w3.org/TR/xslt), en la que el proveedor de implementaciones elige una de las distintas opciones que existen para controlar una situación. Por ejemplo, en la sección 7.3 Crear instrucciones de procesamiento, la recomendación del W3C dice que es un error el hecho de que al crear instancias del contexto de `xsl:processing-instruction` se creen nodos que no sean de texto. En el caso de algunos problemas, W3C indica qué decisión tomar si el procesador decide recuperarse del error. En el caso del problema en particular de la sección 7.3, W3C indica que la implementación puede recuperarse del error pasando por alto los nodos y su contenido.  
   
@@ -40,7 +43,7 @@ ms.lasthandoff: 11/21/2017
 |El atributo de nombre `xsl:processing-instruction` no genera un nombre sin dos puntos (NCName) y un destino de instrucción de procesamiento.|Recuperar|7.3|  
 |Las instancias del contenido de `xsl:processing-instruction` crean nodos que no son de texto.|Recuperar|7.3|  
 |El resultado de la creación de instancias del contenido de `xsl:processing-instruction` contiene la cadena "`?>`".|Recuperar|7.3|  
-|Resultados de instancias del contenido de la `xsl:comment` contiene la cadena "--", o finaliza con "-".|Recuperar|7.4|  
+|El resultado de la creación de instancias del contenido de `xsl:comment` contiene la cadena "--" o finaliza con "-".|Recuperar|7.4|  
 |El resultado de la creación de instancias del contenido de `xsl:comment` crea nodos que no son de texto.|Recuperar|7.4|  
 |La plantilla de un elemento de enlace de variables devuelve un nodo de atributo o un nodo de espacio de nombres.|Recuperar|11.2|  
 |Se produce un error al recuperar el recurso del identificador URI pasado a la función de documento.|Se inicia una excepción|12.1|  
@@ -68,12 +71,12 @@ ms.lasthandoff: 11/21/2017
   
 -   Con respecto a los lenguajes, diferentes procesadores pueden variar su forma de ordenar en un lenguaje determinado que no está especificado en `xsl:sort.`  
   
- En la tabla siguiente se muestra el comportamiento de ordenación implementado por cada tipo de datos en la implementación de .NET Framework de una transformación realizada utilizando <xref:System.Xml.Xsl.XslTransform>.  
+ En la siguiente tabla se muestra el comportamiento de ordenación implementado por cada tipo de datos en la implementación de .NET Framework de una transformación realizada utilizando <xref:System.Xml.Xsl.XslTransform>.  
   
 |Tipo de datos|Comportamiento de ordenación|  
 |---------------|----------------------|  
 |Texto|Los datos se ordenan con el método String.Compare de Common Language Runtime (CLR) y la referencia cultural local. Cuando el tipo de datos es "text", la ordenación en la clase <xref:System.Xml.Xsl.XslTransform> se comporta de forma idéntica a la comparación de cadenas de CLR.|  
-|Número|Los valores numéricos se tratan como números XPath y se ordenan según los detalles descritos en la sección 3.5 de la recomendación de XML Path Language (XPath) Version 1.0 del W3C (www.w3.org/TR/xpath.html#numbers).|  
+|número|Los valores numéricos se tratan como números XPath y se ordenan según los detalles descritos en la sección 3.5 de la recomendación de XML Path Language (XPath) Version 1.0 del W3C (www.w3.org/TR/xpath.html#numbers).|  
   
 ## <a name="optional-features-supported"></a>Características opcionales admitidas  
  En la tabla siguiente se muestran las características opcionales para implementar un procesador XSLT que se implementan en la clase <xref:System.Xml.Xsl.XslTransform>.  
@@ -84,10 +87,10 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>Vea también  
  <xref:System.Xml.Xsl.XslTransform>  
- [Clase XslTransform implementa el procesador XSLT](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)  
+ [La clase XslTransform implementa el procesador XSLT](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)  
  [Transformaciones XSLT con la clase XslTransform](../../../../docs/standard/data/xml/xslt-transformations-with-the-xsltransform-class.md)  
  [XPathNavigator en transformaciones](../../../../docs/standard/data/xml/xpathnavigator-in-transformations.md)  
  [XPathNodeIterator en transformaciones](../../../../docs/standard/data/xml/xpathnodeiterator-in-transformations.md)  
- [Entrada XPathDocument Input para XslTransform](../../../../docs/standard/data/xml/xpathdocument-input-to-xsltransform.md)  
+ [Entrada XPathDocument en XslTransform](../../../../docs/standard/data/xml/xpathdocument-input-to-xsltransform.md)  
  [Entrada de XmlDataDocument en XslTransform](../../../../docs/standard/data/xml/xmldatadocument-input-to-xsltransform.md)  
  [Entrada de XmlDocument en XslTransform](../../../../docs/standard/data/xml/xmldocument-input-to-xsltransform.md)

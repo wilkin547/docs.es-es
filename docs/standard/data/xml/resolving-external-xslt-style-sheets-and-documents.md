@@ -9,15 +9,18 @@ ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 920cfe3b-d525-4bb2-abf6-9431651f9cf9
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: a5e84935f9fff1f993a677d408287cd775269f03
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 85176c45b768d1e8fe9efc408fd644bf33aa8c05
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="resolving-external-xslt-style-sheets-and-documents"></a>Resolver hojas de estilos XSLT y documentos externos
 Hay varios momentos a lo largo de una transformación en los cuales puede que necesite resolver recursos externos:  
@@ -42,9 +45,9 @@ Hay varios momentos a lo largo de una transformación en los cuales puede que ne
 |--------------------------------------|-------------------|  
 |Durante <xref:System.Xml.Xsl.XslTransform.Load%2A> para localizar la hoja de estilos.|Especificar el método <xref:System.Xml.Xsl.XslTransform.Load%2A> sobrecargado que toma como parámetro un <xref:System.Xml.XmlResolver> si la hoja de estilos se encuentra en un recurso que requiere credenciales.|  
 |Durante <xref:System.Xml.Xsl.XslTransform.Load%2A> para resolver `<xsl:include>` o `<xsl:import>`.|Especificar el método <xref:System.Xml.Xsl.XslTransform.Load%2A> sobrecargado que admite, como parámetro, un <xref:System.Xml.XmlResolver>. <xref:System.Xml.XmlResolver> se utiliza para cargar las hojas de estilos a las que hacen referencia las instrucciones `import` o `include`. Si proporciona un valor `null`, los recursos externos no se resuelven.|  
-|Durante una transformación para resolver las funciones `document()`.|Especifique el <xref:System.Xml.XmlResolver> durante la transformación utilizando el <xref:System.Xml.Xsl.XslTransform.Transform%2A> método que toma un <xref:System.Xml.XmlResolver> argumento.|  
+|Durante una transformación para resolver las funciones `document()`.|Especifique <xref:System.Xml.XmlResolver> durante la transformación utilizando el método <xref:System.Xml.Xsl.XslTransform.Transform%2A> que toma un argumento <xref:System.Xml.XmlResolver>.|  
   
- El `document()` función recupera otros recursos XML desde una hoja de estilos, además a los datos XML iniciales proporcionados por la secuencia de entrada. Como esta función permite la inclusión de datos XML que pueden localizarse en cualquier otro lugar, <xref:System.Xml.XmlResolver> con un valor `null` suministrado al método <xref:System.Xml.Xsl.XslTransform.Transform%2A> evita que la función `document()` se ejecute. Si desea utilizar la función `document()`, utilice el método <xref:System.Xml.Xsl.XslTransform.Transform%2A> que toma un <xref:System.Xml.XmlResolver> como parámetro.  
+ La función `document()` recupera otros recursos XML desde una hoja de estilos, además de los datos XML iniciales proporcionados por el flujo de entrada. Como esta función permite la inclusión de datos XML que pueden localizarse en cualquier otro lugar, <xref:System.Xml.XmlResolver> con un valor `null` suministrado al método <xref:System.Xml.Xsl.XslTransform.Transform%2A> evita que la función `document()` se ejecute. Si desea utilizar la función `document()`, utilice el método <xref:System.Xml.Xsl.XslTransform.Transform%2A> que toma un <xref:System.Xml.XmlResolver> como parámetro.  
   
  Para más información sobre el método <xref:System.Xml.Xsl.XslTransform.Load%2A> y su uso de <xref:System.Xml.XmlResolver>, consulte <xref:System.Xml.Xsl.XslTransform.Load%28System.String%2CSystem.Xml.XmlResolver%29?displayProperty=nameWithType>.  
   
@@ -52,14 +55,14 @@ Hay varios momentos a lo largo de una transformación en los cuales puede que ne
   
 ## <a name="see-also"></a>Vea también  
  [Transformaciones XSLT con la clase XslTransform](../../../../docs/standard/data/xml/xslt-transformations-with-the-xsltransform-class.md)  
- [Clase XslTransform implementa el procesador XSLT](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)  
- [Resultados de XslTransform](../../../../docs/standard/data/xml/outputs-from-an-xsltransform.md)  
+ [La clase XslTransform implementa el procesador XSLT](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)  
+ [Salidas de XslTransform](../../../../docs/standard/data/xml/outputs-from-an-xsltransform.md)  
  [Transformaciones XSLT en distintos almacenes](../../../../docs/standard/data/xml/xslt-transformations-over-different-stores.md)  
  [XsltArgumentList para parámetros Stylesheet y objetos de extensión](../../../../docs/standard/data/xml/xsltargumentlist-for-style-sheet-parameters-and-extension-objects.md)  
- [Hojas de estilos XSLT Scripting mediante \<msxsl: script >](../../../../docs/standard/data/xml/xslt-stylesheet-scripting-using-msxsl-script.md)  
+ [Escritura de scripts de hojas de estilos XSLT mediante \<msxsl:script>](../../../../docs/standard/data/xml/xslt-stylesheet-scripting-using-msxsl-script.md)  
  [Compatibilidad con la función msxsl:node-set()](../../../../docs/standard/data/xml/support-for-the-msxsl-node-set-function.md)  
  [XPathNavigator en transformaciones](../../../../docs/standard/data/xml/xpathnavigator-in-transformations.md)  
  [XPathNodeIterator en transformaciones](../../../../docs/standard/data/xml/xpathnodeiterator-in-transformations.md)  
- [Entrada XPathDocument Input para XslTransform](../../../../docs/standard/data/xml/xpathdocument-input-to-xsltransform.md)  
+ [Entrada XPathDocument en XslTransform](../../../../docs/standard/data/xml/xpathdocument-input-to-xsltransform.md)  
  [Entrada de XmlDataDocument en XslTransform](../../../../docs/standard/data/xml/xmldatadocument-input-to-xsltransform.md)  
  [Entrada de XmlDocument en XslTransform](../../../../docs/standard/data/xml/xmldocument-input-to-xsltransform.md)

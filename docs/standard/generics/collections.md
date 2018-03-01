@@ -16,21 +16,24 @@ helpviewer_keywords:
 - generics [.NET Framework], collections
 - generic collections [.NET Framework]
 ms.assetid: 5b646751-6ab7-465c-916c-b1a76aefa9f5
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 94da20072f793e137b0b7545c1a658ed20537a7f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: d7e7d11446c14cffbef1e5cade5f082874187636
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="generic-collections-in-the-net-framework"></a>Colecciones genéricas en .NET Framework
 Este tema proporciona una introducción a las clases de colección genéricas y otros tipos genéricos de .NET Framework.  
   
 ## <a name="generic-collections-in-the-net-framework"></a>Colecciones genéricas en .NET Framework  
- La biblioteca de clases de .NET Framework proporciona varias clases de colección genéricas en los espacios de nombres <xref:System.Collections.Generic> y <xref:System.Collections.ObjectModel>. Para obtener más información sobre estas clases, consulte [tipos colección utilizados normalmente](../../../docs/standard/collections/commonly-used-collection-types.md).  
+ La biblioteca de clases de .NET Framework proporciona varias clases de colección genéricas en los espacios de nombres <xref:System.Collections.Generic> y <xref:System.Collections.ObjectModel>. Para obtener más información sobre estas clases, consulte [Tipos de colección utilizados normalmente](../../../docs/standard/collections/commonly-used-collection-types.md).  
   
 ### <a name="systemcollectionsgeneric"></a>System.Collections.Generic  
  Muchos de los tipos de colección genéricos son análogos directos de tipos no genéricos. <xref:System.Collections.Generic.Dictionary%602> es una versión genérica de <xref:System.Collections.Hashtable>; usa la estructura genérica <xref:System.Collections.Generic.KeyValuePair%602> para la enumeración en lugar de <xref:System.Collections.DictionaryEntry>.  

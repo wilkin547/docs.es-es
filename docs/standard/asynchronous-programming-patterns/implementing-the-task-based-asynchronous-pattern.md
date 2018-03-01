@@ -2,7 +2,8 @@
 title: "Implementar el modelo asincrónico basado en tareas"
 ms.date: 06/14/2017
 ms.prod: .net
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.topic: article
 dev_langs:
 - csharp
@@ -14,23 +15,26 @@ helpviewer_keywords:
 - Task-based Asynchronous Pattern, .NET Framework support for
 - .NET Framework, asynchronous design patterns
 ms.assetid: fab6bd41-91bd-44ad-86f9-d8319988aa78
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 3e61b0c94b1512509008d67017389fa11f938999
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 238f164fec78fe5e6dae9e7880fabc0a386bf399
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="implementing-the-task-based-asynchronous-pattern"></a>Implementar el modelo asincrónico basado en tareas
-Puede implementar el patrón asincrónico basado en tareas (TAP) de tres maneras: mediante los compiladores de C# y Visual Basic en Visual Studio, manualmente o mediante una combinación del compilador y métodos manuales. En las siguientes secciones se describe cada método con detalle. Puede usar el patrón TAP para implementar operaciones asincrónicas enlazadas a cálculos y enlazados a E/s. El [las cargas de trabajo](#workloads) sección describe cada tipo de operación.
+Puede implementar el patrón asincrónico basado en tareas (TAP) de tres maneras: mediante los compiladores de C# y Visual Basic en Visual Studio, manualmente o mediante una combinación del compilador y métodos manuales. En las siguientes secciones se describe cada método con detalle. Puede usar el modelo TAP para implementar operaciones asincrónicas enlazadas a cálculos y enlazadas a E/S. En la sección [Cargas de trabajo](#workloads) se trata cada tipo de operación.
 
-## <a name="generating-tap-methods"></a>Generar métodos de TAP
+## <a name="generating-tap-methods"></a>Generación de métodos TAP
 
-### <a name="using-the-compilers"></a>Mediante los compiladores
-A partir de [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], cualquier método que tiene el atributo con el `async` palabra clave (`Async` en Visual Basic) se considera un método asincrónico y los compiladores de C# y Visual Basic realizan las transformaciones necesarias para implementar la método de forma asincrónica mediante el uso de derivación. Un método asincrónico debe devolver un objeto <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> o <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType>. Por último, el cuerpo de la función debe devolver un `TResult`, y el compilador garantiza que este resultado está disponible a través del objeto de tarea resultante. Del mismo modo, en la tarea de salida se calculan las referencias de cualquier excepción no controlada dentro del cuerpo del método y esto hace que la tarea resultante finalice en el estado <xref:System.Threading.Tasks.TaskStatus.Faulted?displayProperty=nameWithType>. La excepción es cuando un objeto <xref:System.OperationCanceledException> (o un tipo derivado) no está controlado, en cuyo caso la tarea resultante finaliza en el estado <xref:System.Threading.Tasks.TaskStatus.Canceled?displayProperty=nameWithType>.
+### <a name="using-the-compilers"></a>Uso de compiladores
+A partir de [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], cualquier método que tenga la palabra clave `async` (`Async` en Visual Basic) se considera un método asincrónico, y los compiladores de C# y Visual Basic realizan las transformaciones necesarias para implementar el método de forma asincrónica mediante TAP. Un método asincrónico debe devolver un objeto <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> o <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType>. En el último caso, el cuerpo de la función debe devolver `TResult` y el compilador garantiza que este resultado está disponible a través del objeto de la tarea resultante. Del mismo modo, en la tarea de salida se calculan las referencias de cualquier excepción no controlada dentro del cuerpo del método y esto hace que la tarea resultante finalice en el estado <xref:System.Threading.Tasks.TaskStatus.Faulted?displayProperty=nameWithType>. La excepción es cuando un objeto <xref:System.OperationCanceledException> (o un tipo derivado) no está controlado, en cuyo caso la tarea resultante finaliza en el estado <xref:System.Threading.Tasks.TaskStatus.Canceled?displayProperty=nameWithType>.
 
 ### <a name="generating-tap-methods-manually"></a>Generar métodos de TAP manualmente
 Puede implementar el patrón TAP manualmente para tener un mejor control sobre la implementación. El compilador se basa en el área de superficie pública expuesta del espacio de nombres <xref:System.Threading.Tasks?displayProperty=nameWithType> y los tipos auxiliares del espacio de nombres <xref:System.Runtime.CompilerServices?displayProperty=nameWithType>. Para implementar TAP, cree un objeto <xref:System.Threading.Tasks.TaskCompletionSource%601>, realice la operación asincrónica y, cuando se complete, llame al método <xref:System.Threading.Tasks.TaskCompletionSource%601.SetResult%2A>, <xref:System.Threading.Tasks.TaskCompletionSource%601.SetException%2A> o <xref:System.Threading.Tasks.TaskCompletionSource%601.SetCanceled%2A>, o a la versión `Try` de uno de estos métodos. Cuando implementa un método de TAP manualmente, debe completar la tarea resultante cuando la operación asincrónica representada se complete. Por ejemplo:
@@ -47,7 +51,7 @@ Puede implementar el patrón TAP manualmente para tener un mejor control sobre l
  Otro caso donde es útil esa delegación es cuando implementa la optimización de acceso rápido y desea devolver una tarea almacenada en memoria caché.
 
 ## <a name="workloads"></a>Cargas de trabajo
-Puede implementar operaciones asincrónicas enlazadas a cálculos y enlazadas a E/S como métodos de TAP. Sin embargo, cuando los métodos de TAP se exponen públicamente desde una biblioteca, solo se deben suministrar para cargas de trabajo que impliquen operaciones enlazadas a E/S (también pueden implicar cálculos, pero no deben ser estrictamente de cálculo). Si un método está enlazado al proceso, se debe exponer solo como una implementación sincrónica. El código que lo usa, a continuación, puede elegir si ajustar una invocación de ese método sincrónico en una tarea para descargar el trabajo a otro subproceso o para lograr el paralelismo. Y si un método está enlazado a E/S, se debe exponer solo como una implementación asincrónica.
+Puede implementar operaciones asincrónicas enlazadas a cálculos y enlazadas a E/S como métodos de TAP. Sin embargo, cuando los métodos de TAP se exponen públicamente desde una biblioteca, solo se deben suministrar para cargas de trabajo que impliquen operaciones enlazadas a E/S (también pueden implicar cálculos, pero no deben ser estrictamente de cálculo). Si un método está totalmente enlazado a cálculos, se debe exponer solo como una implementación sincrónica. El código que lo usa puede elegir si ajustar una invocación de ese método sincrónico en una tarea para descargar el trabajo en otro subproceso o para lograr el paralelismo. Si un método está enlazado a E/S, se debe exponer solo como una implementación asincrónica.
 
 ### <a name="compute-bound-tasks"></a>Tareas enlazadas a cálculos
 La clase <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> es idónea para representar operaciones de cálculo intensivas. De forma predeterminada, se beneficia de la compatibilidad especial dentro de la clase <xref:System.Threading.ThreadPool> para proporcionar una ejecución eficaz, y también proporciona un buen control sobre cuándo, dónde y cómo se ejecutan los cálculos asincrónicos.
@@ -56,13 +60,13 @@ Puede generar tareas enlazadas a cálculos de las maneras siguientes:
 
 - En .NET Framework 4, use el método <xref:System.Threading.Tasks.TaskFactory.StartNew%2A?displayProperty=nameWithType>, que acepta un delegado (normalmente <xref:System.Action%601> o <xref:System.Func%601>) que se va a ejecutar de forma asincrónica. Si proporciona un delegado de <xref:System.Action%601>, el método devuelve un objeto <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> que representa la ejecución asincrónica de ese delegado. Si proporciona un delegado de <xref:System.Func%601>, el método devuelve un objeto <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType>. Las sobrecargas del método <xref:System.Threading.Tasks.TaskFactory.StartNew%2A> aceptan un token de cancelación (<xref:System.Threading.CancellationToken>), las opciones de creación de la tarea (<xref:System.Threading.Tasks.TaskCreationOptions>) y un programador de tareas (<xref:System.Threading.Tasks.TaskScheduler>), todo lo cual proporciona un control específico sobre la programación y la ejecución de la tarea. Una instancia de generador que tiene como destino el programador de tareas actual está disponible como una propiedad estática (<xref:System.Threading.Tasks.Task.Factory%2A>) de la clase <xref:System.Threading.Tasks.Task>; por ejemplo: `Task.Factory.StartNew(…)`.
 
-- En el [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] y versiones posteriores (incluido .NET Core y estándar. NET), use el método estático <xref:System.Threading.Tasks.Task.Run%2A?displayProperty=nameWithType> método como un acceso directo a <xref:System.Threading.Tasks.TaskFactory.StartNew%2A?displayProperty=nameWithType>. Puede usar <xref:System.Threading.Tasks.Task.Run%2A> para iniciar fácilmente una tarea enlazada a cálculos destinada al grupo de subprocesos. En el [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] y versiones posteriores, este es el mecanismo preferido para iniciar una tarea enlazada a cálculos. Use `StartNew` directamente solo cuando desee un mayor control sobre la tarea.
+- En [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] y versiones posteriores (incluidos .NET Core y .NET Standard), use el método <xref:System.Threading.Tasks.Task.Run%2A?displayProperty=nameWithType> estático como un acceso directo a <xref:System.Threading.Tasks.TaskFactory.StartNew%2A?displayProperty=nameWithType>. Puede usar <xref:System.Threading.Tasks.Task.Run%2A> para iniciar fácilmente una tarea enlazada a cálculos destinada al grupo de subprocesos. En [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] y versiones posteriores, este es el mecanismo preferido para iniciar una tarea enlazada a cálculos. Use `StartNew` directamente solo cuando desee un mayor control sobre la tarea.
 
 - Use los constructores del tipo `Task` o el método `Start` si desea generar y programar la tarea por separado. Los métodos públicos solo deben devolver tareas que ya se han iniciado.
 
 - Use las sobrecargas del método <xref:System.Threading.Tasks.Task.ContinueWith%2A?displayProperty=nameWithType>. Este método crea una nueva tarea que se programa cuando se completa otra tarea. Algunas de las sobrecargas de <xref:System.Threading.Tasks.Task.ContinueWith%2A> aceptan un token de cancelación, opciones de continuación y un programador de tareas para tener un mejor control sobre la programación y la ejecución de la tarea de continuación.
 
-- Use la <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAll%2A?displayProperty=nameWithType> y <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAny%2A?displayProperty=nameWithType> métodos. Estos métodos crean una nueva tarea que se programa cuando se completa una parte o la totalidad del conjunto de tareas proporcionado. Estos métodos también proporcionan sobrecargas para controlar la programación y la ejecución de estas tareas.
+- Use los métodos <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAll%2A?displayProperty=nameWithType> y <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAny%2A?displayProperty=nameWithType>. Estos métodos crean una nueva tarea que se programa cuando se completa una parte o la totalidad del conjunto de tareas proporcionado. Estos métodos también proporcionan sobrecargas para controlar la programación y la ejecución de estas tareas.
 
 En las tareas enlazadas a cálculos, el sistema puede evitar la ejecución de una tarea programada si recibe una solicitud de cancelación antes de que comience la ejecución de la tarea. Por tanto, si proporciona un token de cancelación (objeto <xref:System.Threading.CancellationToken>), puede pasar ese token al código asincrónico que lo supervisa. También puede proporcionar el token a uno de los métodos mencionados previamente, como `StartNew` o `Run`, para que el runtime de `Task` también supervise el token.
 
@@ -79,7 +83,7 @@ Las tareas enlazadas a cálculos finalizan en un estado <xref:System.Threading.T
 
 Si hay otra excepción no controlada en el cuerpo de la tarea, la tarea finaliza en el estado <xref:System.Threading.Tasks.TaskStatus.Faulted> y cualquier intento de esperar en la tarea u obtener acceso a su resultado produce una excepción.
 
-### <a name="io-bound-tasks"></a>Tareas de enlazados a E/s
+### <a name="io-bound-tasks"></a>Tareas enlazadas a E/S
 Para crear una tarea a la que no deba respaldar directamente un subproceso durante toda su ejecución, use el tipo <xref:System.Threading.Tasks.TaskCompletionSource%601>. Este tipo expone una propiedad <xref:System.Threading.Tasks.TaskCompletionSource%601.Task%2A> que devuelve una instancia asociada de <xref:System.Threading.Tasks.Task%601>. El ciclo de vida de esta tarea se controla mediante métodos <xref:System.Threading.Tasks.TaskCompletionSource%601> como <xref:System.Threading.Tasks.TaskCompletionSource%601.SetResult%2A>, <xref:System.Threading.Tasks.TaskCompletionSource%601.SetException%2A>, <xref:System.Threading.Tasks.TaskCompletionSource%601.SetCanceled%2A> y sus variantes de `TrySet`.
 
 Suponga que desea crear una tarea que se completará después de un período de tiempo especificado. Por ejemplo, puede que desee retrasar una actividad en la interfaz de usuario. La clase <xref:System.Threading.Timer?displayProperty=nameWithType> ya proporciona la capacidad de invocar de forma asincrónica un delegado después de un período de tiempo especificado, y <xref:System.Threading.Tasks.TaskCompletionSource%601> le permite colocar un objeto <xref:System.Threading.Tasks.Task%601> delante del temporizador, por ejemplo:
@@ -97,15 +101,15 @@ La clase <xref:System.Threading.Tasks.TaskCompletionSource%601> no tiene ningún
 [!code-csharp[Conceptual.TAP_Patterns#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.tap_patterns/cs/patterns1.cs#6)]
 [!code-vb[Conceptual.TAP_Patterns#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.tap_patterns/vb/patterns1.vb#6)]
 
-### <a name="mixed-compute-bound-and-io-bound-tasks"></a>Tareas enlazadas a cálculos y enlazadas a E/s mixtas
+### <a name="mixed-compute-bound-and-io-bound-tasks"></a>Tareas enlazadas a cálculos y enlazadas a E/S mixtas
 Los métodos asincrónicos no se limitan solo a operaciones enlazadas a cálculos o enlazadas a E/S, sino que pueden representar una combinación de ambas. De hecho, se suelen combinar varias operaciones asincrónicas en operaciones mixtas mayores. Por ejemplo, el método `RenderAsync` de un ejemplo anterior realizaba una operación de cálculo intensiva para presentar una imagen basada en `imageData` de entrada. Este `imageData` podría proceder de un servicio Web al que tiene acceso de forma asincrónica:
 
 [!code-csharp[Conceptual.TAP_Patterns#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.tap_patterns/cs/patterns1.cs#7)]
 [!code-vb[Conceptual.TAP_Patterns#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.tap_patterns/vb/patterns1.vb#7)]
 
-En este ejemplo también se muestra cómo se puede incluir en un subproceso un único token de cancelación mediante varias operaciones asincrónicas. Para obtener más información, vea la sección de uso de cancelación en [utilizar el modelo asincrónico basado en tareas](../../../docs/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md).
+En este ejemplo también se muestra cómo se puede incluir en un subproceso un único token de cancelación mediante varias operaciones asincrónicas. Para más información, vea la sección de uso de la cancelación en [Utilizar el modelo asincrónico basado en tareas](../../../docs/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md).
 
 ## <a name="see-also"></a>Vea también
- [Task-based Asynchronous Pattern (TAP)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md) (Modelo asincrónico basado en tareas [TAP])  
+ [Modelo asincrónico basado en tareas [TAP]](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)  
  [Utilizar el modelo asincrónico basado en tareas](../../../docs/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md)  
  [Interoperabilidad con otros tipos y patrones asincrónicos](../../../docs/standard/asynchronous-programming-patterns/interop-with-other-asynchronous-patterns-and-types.md)  

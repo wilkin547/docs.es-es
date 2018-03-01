@@ -8,30 +8,34 @@ ms.suite:
 ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: tasks, further reading
+helpviewer_keywords:
+- tasks, further reading
 ms.assetid: 98aee307-dde6-4cad-bb58-078497b8064f
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 5a2477458273e5beef6b67069dce7e818906b8b6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 304522aa791e78dda6a67ed4f4e9b6cc33505dff
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="for-further-reading-parallel-programming"></a>Más información (Programación paralela)
 Los siguientes recursos contienen información adicional sobre programación paralela en .NET Framework:  
   
--   El [Parallel Computing Developer Center](http://go.microsoft.com/fwlink/?LinkID=160570) en la Web de MSDN sitio contiene vínculos al contenido más reciente y publicaciones en el foro sobre la programación paralela en .NET Framework y en C++ nativo.  
+-   El [centro para desarrolladores de informática en paralelo](http://go.microsoft.com/fwlink/?LinkID=160570) del sitio web de MSDN contiene vínculos a contenido actualizado y a entradas de foros sobre la programación paralela en .NET Framework y en C++ nativo.  
   
--   El [Parallel Programming with .NET blog](http://go.microsoft.com/fwlink/?LinkID=169627) sitio blog de MSDN contiene muchos artículos detallados sobre la programación paralela en .NET Framework.  
+-   El [blog sobre programación paralela con .NET](http://go.microsoft.com/fwlink/?LinkID=169627) del sitio de blogs de MSDN contiene muchos artículos detallados sobre la programación paralela en .NET Framework.  
   
--   El [blog del visualizador de simultaneidad](http://go.microsoft.com/fwlink/?LinkID=169630) en el blog MSDN sitio cubre la nueva generación de perfiles de herramienta que se incluye en algunas ediciones de [!INCLUDE[vs_dev10_long](../../../includes/vs-dev10-long-md.md)].  
+-   El [blog del visualizador de simultaneidad](http://go.microsoft.com/fwlink/?LinkID=169630) del sitio de blogs de MSDN trata sobre la nueva herramienta de generación de perfiles de rendimiento incluida en algunas ediciones de [!INCLUDE[vs_dev10_long](../../../includes/vs-dev10-long-md.md)].  
   
--   El [foro de las extensiones paralelas](http://go.microsoft.com/fwlink/?LinkID=169628) en MSDN sitio de foros es donde puede plantear y responder a preguntas acerca de la programación en paralelo.  
+-   En el [foro de las extensiones paralelas](http://go.microsoft.com/fwlink/?LinkID=169628) del sitio de foros de MSDN puedo plantear preguntas y dar respuestas sobre la programación paralela.  
   
--   El [ejemplos de extensiones paralelas](http://go.microsoft.com/fwlink/?LinkID=165717) página en el sitio Web de MSDN Code Gallery contiene numerosos ejemplos que muestran las técnicas de programación paralelas intermedias y avanzadas.  
+-   En la página de [ejemplos de extensiones paralelas](http://go.microsoft.com/fwlink/?LinkID=165717) del sitio web de la galería de código de MSDN se incluyen muchos ejemplos que muestran las técnicas de programación paralela intermedias y avanzadas.  
   
 ## <a name="see-also"></a>Vea también  
  [Programación en paralelo](../../../docs/standard/parallel-programming/index.md)  
