@@ -9,20 +9,23 @@ ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 025954b8-7aa8-47c5-a1c1-f81064fb4d65
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 7eeed46782eb6c55af23559035fb8b6bcb14301f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: ff327c1a450e9ce712d496bdca2cd2ebbff6adda
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="node-collections-in-namednodemaps-and-nodelists"></a>Colecciones de nodos en NamedNodeMaps y NodeLists
-Se puede recuperar un conjunto de nodos y colocarlo en una colección ordenada o desordenada. Si se coloca un conjunto de nodos en una colección desordenada, el W3C (World Wide Web Consortium) denomina al conjunto NamedNodeMap; en este tipo de colección puede recuperar los datos por nombre o por índice. Si se coloca un conjunto de nodos en una colección ordenada, el W3C denomina al conjunto NodeList y los datos pueden recuperarse mediante un índice que empieza por cero. El W3C describe ambos conjuntos, NamedNodeMaps y NodeLists. La implementación en Microsoft .NET Framework de NamedNodeMap es el **XmlNamedNodeMap**, y la lista de nodos es implementado por el **XmlNodeList**.  
+Se puede recuperar un conjunto de nodos y colocarlo en una colección ordenada o desordenada. Si se coloca un conjunto de nodos en una colección desordenada, el W3C (World Wide Web Consortium) denomina al conjunto NamedNodeMap; en este tipo de colección puede recuperar los datos por nombre o por índice. Si se coloca un conjunto de nodos en una colección ordenada, el W3C denomina al conjunto NodeList y los datos pueden recuperarse mediante un índice que empieza por cero. El W3C describe ambos conjuntos, NamedNodeMaps y NodeLists. La implementación en Microsoft .NET Framework de NamedNodeMap es **XmlNamedNodeMap** mientras que **XmlNodeList** implementa NodeList.  
   
- Para obtener información acerca de la colección desordenada, vea [recuperación de nodos desordenados por nombre o índice](../../../../docs/standard/data/xml/unordered-node-retrieval-by-name-or-index.md). Para obtener información acerca de la colección ordenada, vea [recuperación de nodos ordenados por índice](../../../../docs/standard/data/xml/ordered-node-retrieval-by-index.md).  
+ Para obtener información sobre la colección desordenada, vea [Recuperación de nodos desordenados por nombre o índice](../../../../docs/standard/data/xml/unordered-node-retrieval-by-name-or-index.md). Para obtener información sobre la colección ordenada, vea [Recuperación de nodos ordenados por índice](../../../../docs/standard/data/xml/ordered-node-retrieval-by-index.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Modelo de objetos de documento (DOM) de XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+ [Document Object Model (DOM) para XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

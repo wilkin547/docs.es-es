@@ -14,15 +14,18 @@ helpviewer_keywords:
 - threading [.NET Framework],exceptions in managed threads
 - managed threading
 ms.assetid: 11294769-2e89-43cb-890e-ad4ad79cfbee
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: ebb5559d300bb3db34fe640e87eb8b9e67931561
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 4f68a7aebdb1625b149287d70fd91c2108a658b9
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="exceptions-in-managed-threads"></a>Excepciones en subprocesos administrados
 A partir de .NET Framework versión 2.0, Common Language Runtime permite que la mayoría de las excepciones no controladas en subprocesos continúen naturalmente. En la mayoría de los casos, esto implica que la excepción no controlada provoque la finalización de la aplicación.  
@@ -32,9 +35,9 @@ A partir de .NET Framework versión 2.0, Common Language Runtime permite que la 
   
  Common Language Runtime ofrece un mecanismo de seguridad para determinadas excepciones no controladas que se usan para controlar el flujo del programa:  
   
--   A <xref:System.Threading.ThreadAbortException> se produce en un subproceso porque <xref:System.Threading.Thread.Abort%2A> se llamó.  
+-   Se genera <xref:System.Threading.ThreadAbortException> en un subproceso, porque se llamó a <xref:System.Threading.Thread.Abort%2A>.  
   
--   Un <xref:System.AppDomainUnloadedException> se produce en un subproceso porque se está descargando el dominio de aplicación en el que se está ejecutando el subproceso.  
+-   Se inicia <xref:System.AppDomainUnloadedException> en un subproceso porque el dominio de aplicación donde se ejecuta el subproceso se está descargando.  
   
 -   Common Language Runtime o un proceso de host finalizan el subproceso iniciando una excepción interna.  
   
@@ -56,7 +59,7 @@ A partir de .NET Framework versión 2.0, Common Language Runtime permite que la 
   
 -   No hay ninguna excepción no controlada en un subproceso de grupo. Cuando una tarea inicia una excepción que no controla, el runtime imprime el seguimiento de la pila de excepciones en la consola y luego devuelve el subproceso al grupo de subprocesos.  
   
--   No hay nada como una excepción no controlada en un subproceso creado con el <xref:System.Threading.Thread.Start%2A> método de la <xref:System.Threading.Thread> clase. Cuando un código que se ejecuta en ese tipo de subproceso inicia una excepción que no controla, el runtime imprime el seguimiento de la pila de excepciones en la consola y luego finaliza correctamente el subproceso.  
+-   Esto no se produce como una excepción no controlada en un subproceso creado con el método <xref:System.Threading.Thread.Start%2A> de la clase <xref:System.Threading.Thread>. Cuando un código que se ejecuta en ese tipo de subproceso inicia una excepción que no controla, el runtime imprime el seguimiento de la pila de excepciones en la consola y luego finaliza correctamente el subproceso.  
   
 -   No hay ninguna excepción no controlada en un subproceso el subproceso del finalizador. Cuando un finalizador inicia una excepción que no controla, el runtime imprime el seguimiento de la pila de excepciones en la consola y luego permite que el subproceso de finalizador reanude la ejecución de finalizadores.  
   
@@ -69,7 +72,7 @@ A partir de .NET Framework versión 2.0, Common Language Runtime permite que la 
   
 -   Reestructurar el código para que el subproceso salga correctamente cuando se reciba una señal.  
   
--   Use la <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> método para anular el subproceso.  
+-   Use el método <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> para anular el subproceso.  
   
 -   Si es preciso detener un subproceso para que la finalización del proceso pueda continuar, convierta el subproceso en un subproceso en segundo plano para que finalice automáticamente al salir del proceso.  
   

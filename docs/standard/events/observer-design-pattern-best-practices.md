@@ -12,21 +12,24 @@ helpviewer_keywords:
 - observer design pattern [.NET Framework], best practices
 - best practices [.NET Framework], observer design pattern
 ms.assetid: c834760f-ddd4-417f-abb7-a059679d5b8c
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 0edba44efcaa46812f535b39364c2f5e4e3a1afe
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: dc42ccd425b52719b2b69525d2bbbe4607a19982
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="observer-design-pattern-best-practices"></a>Procedimientos recomendados para modelos de diseño de observador
 En .NET Framework, el patrón de diseño de observador se implementa como un conjunto de interfaces. La interfaz <xref:System.IObservable%601?displayProperty=nameWithType> representa al proveedor de datos, que también es responsable de proporcionar una implementación <xref:System.IDisposable> que permite a los observadores cancelar la suscripción a las notificaciones. La interfaz <xref:System.IObserver%601?displayProperty=nameWithType> representa al observador. En este tema se describen los procedimientos recomendados que los desarrolladores deben seguir al implementar el patrón de diseño de observador con estas interfaces.  
   
 ## <a name="threading"></a>Subprocesos  
- Normalmente, para implementar el método <xref:System.IObservable%601.Subscribe%2A?displayProperty=nameWithType>, un proveedor agrega un observador determinado a una lista de suscriptores que se representa mediante un objeto de colección; por su parte, para implementar el método <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType>, el proveedor quita un observador determinado de la lista de suscriptores. Un observador puede llamar a estos métodos en cualquier momento. Además, dado que el contrato de proveedor/observador no especifica quién es el responsable de cancelar la suscripción después del método de devolución de llamada <xref:System.IObserver%601.OnCompleted%2A?displayProperty=nameWithType>, el proveedor y el observador pueden intentar quitar el mismo miembro de la lista. Debido a esta posibilidad, ambos métodos <xref:System.IObservable%601.Subscribe%2A> y <xref:System.IDisposable.Dispose%2A> deben ser seguros para subprocesos. Normalmente, esto implica el uso de un [recolección simultánea](../../../docs/standard/parallel-programming/data-structures-for-parallel-programming.md) o un bloqueo. Las implementaciones que no son seguras para subprocesos deben documentar explícitamente que no lo son.  
+ Normalmente, para implementar el método <xref:System.IObservable%601.Subscribe%2A?displayProperty=nameWithType>, un proveedor agrega un observador determinado a una lista de suscriptores que se representa mediante un objeto de colección; por su parte, para implementar el método <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType>, el proveedor quita un observador determinado de la lista de suscriptores. Un observador puede llamar a estos métodos en cualquier momento. Además, dado que el contrato de proveedor/observador no especifica quién es el responsable de cancelar la suscripción después del método de devolución de llamada <xref:System.IObserver%601.OnCompleted%2A?displayProperty=nameWithType>, el proveedor y el observador pueden intentar quitar el mismo miembro de la lista. Debido a esta posibilidad, ambos métodos <xref:System.IObservable%601.Subscribe%2A> y <xref:System.IDisposable.Dispose%2A> deben ser seguros para subprocesos. Normalmente, esto implica el uso de una [colección simultánea](../../../docs/standard/parallel-programming/data-structures-for-parallel-programming.md) o un bloqueo. Las implementaciones que no son seguras para subprocesos deben documentar explícitamente que no lo son.  
   
  Las posibles garantías adicionales deben especificarse en un nivel por encima del contrato de proveedor/observador. Los implementadores deben dejar claro que imponen requisitos adicionales para evitar confusiones al usuario sobre el contrato de observador.  
   

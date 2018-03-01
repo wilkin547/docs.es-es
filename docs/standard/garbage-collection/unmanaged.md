@@ -18,22 +18,25 @@ helpviewer_keywords:
 - unmanaged resource cleanup
 - Finalize method
 ms.assetid: a17b0066-71c2-4ba4-9822-8e19332fc213
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: c94a449edbbe38c4028e27fd946b66a054badf51
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: fea76042bb603889764a9d42b5a7836d704fcd48
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="cleaning-up-unmanaged-resources"></a>Limpiar recursos no administrados
-En la mayoría de los objetos creados por la aplicación, puede utilizar. Recolector de elementos de red para controlar la administración de memoria. No obstante, cuando se crean objetos que incluyen recursos no administrados, debe liberar explícitamente dichos recursos cuando termine de utilizarlos en la aplicación. Los tipos más comunes de recurso no administrado son objetos que contienen recursos del sistema operativo, como archivos, ventanas, conexiones de red o conexiones de bases de datos. Aunque el recolector de elementos no utilizados puede realizar el seguimiento de la duración de un objeto que encapsula un recurso no administrado, no conoce cómo liberar y limpiar el recurso no administrado.  
+En el caso de la mayoría de los objetos creados por la aplicación, puede usar el recolector de elementos no utilizados de .NET para administrar la memoria. No obstante, cuando se crean objetos que incluyen recursos no administrados, debe liberar explícitamente dichos recursos cuando termine de utilizarlos en la aplicación. Los tipos más comunes de recurso no administrado son objetos que contienen recursos del sistema operativo, como archivos, ventanas, conexiones de red o conexiones de bases de datos. Aunque el recolector de elementos no utilizados puede realizar el seguimiento de la duración de un objeto que encapsula un recurso no administrado, no conoce cómo liberar y limpiar el recurso no administrado.  
   
  Si sus tipos utilizan recursos no administrados, debe hacer lo siguiente:  
   
--   Implemente el [patrón de dispose](../../../docs/standard/design-guidelines/dispose-pattern.md). Para esto es necesario proporcionar una implementación <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> a fin de habilitar la liberación de recursos no administrados de forma determinista. Un consumidor de su tipo llama a <xref:System.IDisposable.Dispose%2A> cuando el objeto (y los recursos que utiliza) ya no se necesita. El método <xref:System.IDisposable.Dispose%2A> libera inmediatamente los recursos no administrados.  
+-   Implementar el [patrón Dispose](../../../docs/standard/design-guidelines/dispose-pattern.md). Para esto es necesario proporcionar una implementación <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> a fin de habilitar la liberación de recursos no administrados de forma determinista. Un consumidor de su tipo llama a <xref:System.IDisposable.Dispose%2A> cuando el objeto (y los recursos que utiliza) ya no se necesita. El método <xref:System.IDisposable.Dispose%2A> libera inmediatamente los recursos no administrados.  
   
 -   Planifique la liberación de los recursos no administrados en el caso de que un consumidor de su tipo olvide llamar a <xref:System.IDisposable.Dispose%2A>. Existen dos modos para hacer esto:  
   
@@ -47,7 +50,7 @@ En la mayoría de los objetos creados por la aplicación, puede utilizar. Recole
   
 ## <a name="in-this-section"></a>En esta sección  
  [Implementar un método Dispose](../../../docs/standard/garbage-collection/implementing-dispose.md)  
- Describe cómo implementar el [patrón de dispose](../../../docs/standard/design-guidelines/dispose-pattern.md) para liberar recursos no administrados.  
+ Describe cómo implementar el [patrón de Dispose](../../../docs/standard/design-guidelines/dispose-pattern.md) para liberar recursos no administrados.  
   
  [Uso de objetos que implementan IDisposable](../../../docs/standard/garbage-collection/using-objects.md)  
  Describe cómo los consumidores de un tipo garantizan que se llame a su implementación <xref:System.IDisposable.Dispose%2A>. Se recomienda utilizar la instrucción `using` de C# o la instrucción `Using` Visual Basic para realizar este procedimiento.  

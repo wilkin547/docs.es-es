@@ -16,15 +16,18 @@ helpviewer_keywords:
 - for loop, parallel construction in .NET
 - parallel for loops, how to use
 ms.assetid: 9029ba7f-a9d1-4526-8c84-c88716dba5d4
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: ed621f41e76addde777b974732470fcfbc903563
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 3a70dcb5e3811a18e23aeb2ebf0940d2c52f49a9
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-write-a-simple-parallelfor-loop"></a>Cómo: Escribir un bucle Parallel.For simple
 Este tema contiene dos ejemplos que ilustran el método <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType>. El primer ejemplo usa la sobrecarga del método <xref:System.Threading.Tasks.Parallel.For%28System.Int64%2CSystem.Int64%2CSystem.Action%7BSystem.Int64%7D%29?displayProperty=nameWithType> y el segundo usa la sobrecarga <xref:System.Threading.Tasks.Parallel.For%28System.Int32%2CSystem.Int32%2CSystem.Action%7BSystem.Int32%7D%29?displayProperty=nameWithType>, las dos sobrecargas más simples del método <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType>. Puede usar estas dos sobrecargas del método <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> cuando no sea necesario cancelar el bucle, interrumpir las iteraciones del bucle o mantener cualquier estado local de subproceso.  
@@ -49,7 +52,7 @@ Este tema contiene dos ejemplos que ilustran el método <xref:System.Threading.T
  Al paralelizar código, incluidos los bucles, un objetivo importante consiste en usar los procesadores tanto como sea posible, sin paralelizar en exceso hasta el punto de que la sobrecarga del procesamiento en paralelo niegue cualquier mejora en el rendimiento. En este ejemplo concreto solo se paraleliza el bucle externo, ya que el bucle interno no realiza mucho trabajo. La combinación de una pequeña cantidad de trabajo y efectos no deseados en la caché puede producir una degradación del rendimiento en los bucles paralelos anidados. Por consiguiente, paralelizar el bucle exterior solo es la mejor manera de maximizar las ventajas de simultaneidad en la mayoría de los sistemas.  
   
 ## <a name="the-delegate"></a>Delegado  
- El tercer parámetro de esta sobrecarga de <xref:System.Threading.Tasks.Parallel.For%2A> es un delegado de tipo `Action<int>` en C# o `Action(Of Integer)` en Visual Basic. Un delegado `Action`, tanto si tiene uno, dieciséis o ningún parámetro de tipo, siempre devuelve void. En Visual Basic, el comportamiento de `Action` se define con `Sub`. El ejemplo usa una expresión lambda para crear el delegado, pero puede crear el delegado de otras maneras. Para obtener más información, consulte [expresiones Lambda en PLINQ y TPL](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md).  
+ El tercer parámetro de esta sobrecarga de <xref:System.Threading.Tasks.Parallel.For%2A> es un delegado de tipo `Action<int>` en C# o `Action(Of Integer)` en Visual Basic. Un delegado `Action`, tanto si tiene uno, dieciséis o ningún parámetro de tipo, siempre devuelve void. En Visual Basic, el comportamiento de `Action` se define con `Sub`. El ejemplo usa una expresión lambda para crear el delegado, pero puede crear el delegado de otras maneras. Para obtener más información, consulte [Expresiones lambda en PLINQ y TPL](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md).  
   
 ## <a name="the-iteration-value"></a>Valor de iteración  
  El delegado toma un solo parámetro de entrada cuyo valor es la iteración actual. Este valor de iteración lo suministra el tiempo de ejecución y su valor inicial es el índice del primer elemento del segmento (partición) del origen que se está procesando en el subproceso actual.  

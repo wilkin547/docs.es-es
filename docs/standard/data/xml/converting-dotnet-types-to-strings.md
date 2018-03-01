@@ -9,22 +9,25 @@ ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: dc2e2b65-f623-4dc3-938b-d2a054d6832c
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: c3abe140e62f112a15a1ad1b1b2a79c14364b26d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 6ca134e13593fdacd759b0000e0e159f76ea067f
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="converting-net-framework-types-to-strings"></a>Convertir tipos de .NET Framework en cadenas
-Si desea convertir un tipo de .NET Framework en una cadena, utilice la **ToString** método. El **ToString** método devuelve una representación de cadena del tipo pasado. En la tabla siguiente se enumeran los tipos de .NET Framework que devuelven una cadena en un formato que se asigna a las especificaciones de los esquemas XML (XSD).  
+Si desea convertir un tipo de .NET Framework en una cadena, utilice el método **ToString**. El método **ToString** devuelve una representación de cadena del tipo que se le pasa. En la tabla siguiente se enumeran los tipos de .NET Framework que devuelven una cadena en un formato que se asigna a las especificaciones de los esquemas XML (XSD).  
   
 |Tipo de .NET Framework|Tipo de cadena devuelta|  
 |-------------------------|--------------------------|  
-|Boolean|"true", "false"|  
+|Booleano|"true", "false"|  
 |Single.PositiveInfinity|"INF"|  
 |Single.NegativeInfinity|"-INF"|  
 |Double.PositiveInfinity|"INF"|  
@@ -34,4 +37,4 @@ Si desea convertir un tipo de .NET Framework en una cadena, utilice la **ToStrin
   
 ## <a name="see-also"></a>Vea también  
  [Conversión de tipos de datos XML](../../../../docs/standard/data/xml/conversion-of-xml-data-types.md)  
- [Convertir cadenas en tipos de datos de .NET Framework](../../../../docs/standard/data/xml/converting-strings-to-dotnet-data-types.md)
+ [Conversión de cadenas en tipos de datos de .NET Framework](../../../../docs/standard/data/xml/converting-strings-to-dotnet-data-types.md)

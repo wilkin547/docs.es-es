@@ -20,15 +20,18 @@ helpviewer_keywords:
 - formatting [.NET Framework], time
 - date and time strings
 ms.assetid: bb79761a-ca08-44ee-b142-b06b3e2fc22b
-caps.latest.revision: "92"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: ca51c13a8c25575080c56b8d1ffe5723f34b539e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 55f8f6b544a3ade0ad9423e8253cc44e0fb5fec1
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="standard-date-and-time-format-strings"></a>Cadenas con formato de fecha y hora estándar
 Una cadena de formato de fecha y hora estándar usa un único especificador de formato para definir la representación de texto de un valor de fecha y hora. Cualquier cadena con formato de fecha y hora que contenga más de un carácter, incluido un espacio en blanco, se interpreta como una cadena con formato de fecha y hora personalizado; para obtener más información, consulte [Cadenas con formato de fecha y hora personalizado](../../../docs/standard/base-types/custom-date-and-time-format-strings.md). Una cadena de formato estándar o personalizado se puede usar de dos maneras:  
@@ -44,7 +47,7 @@ Una cadena de formato de fecha y hora estándar usa un único especificador de f
   
 <a name="table"></a>En la tabla siguiente se describen los especificadores de formato de fecha y hora estándar. A menos que se indique lo contrario, un determinado especificador de formato de fecha y hora estándar genera una representación de cadena idéntica independientemente de que se use con un valor <xref:System.DateTime> o <xref:System.DateTimeOffset>. Consulte la sección [Notas](#Notes) para obtener información adicional sobre cómo usar cadenas de formato de fecha y hora estándar.  
   
-|Especificador de formato|Descripción|Ejemplos|  
+|Especificador de formato|Description|Ejemplos|  
 |----------------------|-----------------|--------------|  
 |"d"|Patrón de fecha corta.<br /><br /> Más información: [El especificador de formato de fecha corta ("d")](#ShortDate).|2009-06-15T13:45:30 -> 6/15/2009 (en-US)<br /><br /> 2009-06-15T13:45:30 -> 15/06/2009 (fr-FR)<br /><br /> 2009-06-15T13:45:30 -> 2009/06/15 (ja-JP)|  
 |"D"|Patrón de fecha larga.<br /><br /> Más información: [El especificador de formato de fecha larga ("D")](#LongDate).|2009-06-15T13:45:30 -> Monday, June 15, 2009 (en-US)<br /><br /> 2009-06-15T13:45:30 -> 15 июня 2009 г. (ru-RU)<br /><br /> 2009-06-15T13:45:30 -> Montag, 15. Juni 2009 (de-DE)|  
@@ -58,7 +61,7 @@ Una cadena de formato de fecha y hora estándar usa un único especificador de f
 |"s"|Patrón de fecha y hora que se puede ordenar.<br /><br /> Más información: [El especificador de formato que se puede ordenar ("s")](#Sortable).|2009-06-15T13:45:30 (DateTimeKind.Local) -> 2009-06-15T13:45:30<br /><br /> 2009-06-15T13:45:30 (DateTimeKind.Utc) -> 2009-06-15T13:45:30|  
 |"t"|Patrón de hora corta.<br /><br /> Más información: [El especificador de formato de hora corta ("t")](#ShortTime).|2009-06-15T13:45:30 -> 1:45 PM (en-US)<br /><br /> 2009-06-15T13:45:30 -> 13:45 (hr-HR)<br /><br /> 2009-06-15T13:45:30 -> 01:45 م (ar-EG)|  
 |"T"|Patrón de hora larga.<br /><br /> Más información: [El especificador de formato de hora larga ("T")](#LongTime).|2009-06-15T13:45:30 -> 1:45:30 PM (en-US)<br /><br /> 2009-06-15T13:45:30 -> 13:45:30 (hr-HR)<br /><br /> 2009-06-15T13:45:30 -> 01:45:30 م (ar-EG)|  
-|"u"|Patrón de fecha y hora universal que se puede ordenar.<br /><br /> Más información: [El especificador de formato universal que se puede ordenar ("u")](#UniversalSortable).|Con un <xref:System.DateTime> valor: 2009-06-15T13:45:30 -> 2009-06-15 13:45:30Z<br /><br /> Con un <xref:System.DateTimeOffset> valor: 2009-06-15T13:45:30 -> 2009-06-15 20:45:30Z|  
+|"u"|Patrón de fecha y hora universal que se puede ordenar.<br /><br /> Más información: [El especificador de formato universal que se puede ordenar ("u")](#UniversalSortable).|Con un valor <xref:System.DateTime>: 2009-06-15T13:45:30 -> 2009-06-15 13:45:30Z<br /><br /> Con un valor <xref:System.DateTimeOffset>: 2009-06-15T13:45:30 -> 2009-06-15 20:45:30Z|  
 |"U"|Patrón de fecha y hora completa universal.<br /><br /> Más información: [El especificador de formato completo universal ("U")](#UniversalFull).|2009-06-15T13:45:30 -> Monday, June 15, 2009 8:45:30 PM (en-US)<br /><br /> 2009-06-15T13:45:30 -> den 15 juni 2009 20:45:30 (sv-SE)<br /><br /> 2009-06-15T13:45:30 -> Δευτέρα, 15 Ιουνίου 2009 8:45:30 μμ (el-GR)|  
 |"Y", "y"|Patrón de mes y año.<br /><br /> Más información: [El especificador de formato de mes y año ("Y", "y")](#YearMonth).|2009-06-15T13:45:30 -> June, 2009 (en-US)<br /><br /> 2009-06-15T13:45:30 -> juni 2009 (da-DK)<br /><br /> 2009-06-15T13:45:30 -> Juni 2009 (id-ID)|  
 |Cualquier otro carácter único|Especificador desconocido.|Produce una excepción <xref:System.FormatException> en tiempo de ejecución.|  
@@ -108,7 +111,7 @@ Una cadena de formato de fecha y hora estándar usa un único especificador de f
   
  En la tabla siguiente se enumeran las propiedades del objeto <xref:System.Globalization.DateTimeFormatInfo> que controlan el formato de la cadena devuelta.  
   
-|Propiedad|Descripción|  
+|Property|Description|  
 |--------------|-----------------|  
 |<xref:System.Globalization.DateTimeFormatInfo.ShortDatePattern%2A>|Define el formato global de la cadena de resultado.|  
 |<xref:System.Globalization.DateTimeFormatInfo.DateSeparator%2A>|Define la cadena que separa los componentes de año, mes y día de una fecha.|  
@@ -126,7 +129,7 @@ Una cadena de formato de fecha y hora estándar usa un único especificador de f
   
  En la tabla siguiente se enumeran las propiedades del objeto <xref:System.Globalization.DateTimeFormatInfo> que controlan el formato de la cadena devuelta.  
   
-|Propiedad|Descripción|  
+|Property|Description|  
 |--------------|-----------------|  
 |<xref:System.Globalization.DateTimeFormatInfo.LongDatePattern%2A>|Define el formato global de la cadena de resultado.|  
 |<xref:System.Globalization.DateTimeFormatInfo.DayNames%2A>|Define los nombres de días traducidos que pueden aparecer en la cadena de resultado.|  
@@ -145,7 +148,7 @@ Una cadena de formato de fecha y hora estándar usa un único especificador de f
   
  La información de formato de un objeto <xref:System.Globalization.DateTimeFormatInfo> específico afecta a la cadena de resultado. En la tabla siguiente se enumeran las propiedades del objeto <xref:System.Globalization.DateTimeFormatInfo> que pueden controlar el formato de la cadena devuelta. El especificador de formato personalizado devuelto por las propiedades <xref:System.Globalization.DateTimeFormatInfo.LongDatePattern%2A?displayProperty=nameWithType> y <xref:System.Globalization.DateTimeFormatInfo.ShortTimePattern%2A?displayProperty=nameWithType> de algunas referencias culturales quizás no use todas las propiedades.  
   
-|Propiedad|Descripción|  
+|Property|Description|  
 |--------------|-----------------|  
 |<xref:System.Globalization.DateTimeFormatInfo.LongDatePattern%2A>|Define el formato del componente de fecha de la cadena de resultado.|  
 |<xref:System.Globalization.DateTimeFormatInfo.ShortTimePattern%2A>|Define el formato del componente de hora de la cadena de resultado.|  
@@ -168,7 +171,7 @@ Una cadena de formato de fecha y hora estándar usa un único especificador de f
   
  En la tabla siguiente se enumeran las propiedades del objeto <xref:System.Globalization.DateTimeFormatInfo> que pueden controlar el formato de la cadena devuelta. El especificador de formato personalizado devuelto por la propiedad <xref:System.Globalization.DateTimeFormatInfo.FullDateTimePattern%2A> de algunas referencias culturales quizás no use todas las propiedades.  
   
-|Propiedad|Descripción|  
+|Property|Description|  
 |--------------|-----------------|  
 |<xref:System.Globalization.DateTimeFormatInfo.FullDateTimePattern%2A>|Define el formato global de la cadena de resultado.|  
 |<xref:System.Globalization.DateTimeFormatInfo.DayNames%2A>|Define los nombres de días traducidos que pueden aparecer en la cadena de resultado.|  
@@ -190,7 +193,7 @@ Una cadena de formato de fecha y hora estándar usa un único especificador de f
   
  La información de formato de un objeto <xref:System.Globalization.DateTimeFormatInfo> específico afecta a la cadena de resultado. En la tabla siguiente se enumeran las propiedades del objeto <xref:System.Globalization.DateTimeFormatInfo> que pueden controlar el formato de la cadena devuelta. El especificador de formato personalizado devuelto por las propiedades <xref:System.Globalization.DateTimeFormatInfo.ShortDatePattern%2A?displayProperty=nameWithType> y <xref:System.Globalization.DateTimeFormatInfo.ShortTimePattern%2A?displayProperty=nameWithType> de algunas referencias culturales quizás no use todas las propiedades.  
   
-|Propiedad|Descripción|  
+|Property|Description|  
 |--------------|-----------------|  
 |<xref:System.Globalization.DateTimeFormatInfo.ShortDatePattern%2A>|Define el formato del componente de fecha de la cadena de resultado.|  
 |<xref:System.Globalization.DateTimeFormatInfo.ShortTimePattern%2A>|Define el formato del componente de hora de la cadena de resultado.|  
@@ -212,7 +215,7 @@ Una cadena de formato de fecha y hora estándar usa un único especificador de f
   
  La información de formato de un objeto <xref:System.Globalization.DateTimeFormatInfo> específico afecta a la cadena de resultado. En la tabla siguiente se enumeran las propiedades del objeto <xref:System.Globalization.DateTimeFormatInfo> que pueden controlar el formato de la cadena devuelta. El especificador de formato personalizado devuelto por las propiedades <xref:System.Globalization.DateTimeFormatInfo.ShortDatePattern%2A?displayProperty=nameWithType> y <xref:System.Globalization.DateTimeFormatInfo.LongTimePattern%2A?displayProperty=nameWithType> de algunas referencias culturales quizás no use todas las propiedades.  
   
-|Propiedad|Descripción|  
+|Property|Description|  
 |--------------|-----------------|  
 |<xref:System.Globalization.DateTimeFormatInfo.ShortDatePattern%2A>|Define el formato del componente de fecha de la cadena de resultado.|  
 |<xref:System.Globalization.DateTimeFormatInfo.LongTimePattern%2A>|Define el formato del componente de hora de la cadena de resultado.|  
@@ -234,7 +237,7 @@ Una cadena de formato de fecha y hora estándar usa un único especificador de f
   
  En la tabla siguiente se enumeran las propiedades del objeto <xref:System.Globalization.DateTimeFormatInfo> que controlan el formato de la cadena devuelta.  
   
-|Propiedad|Descripción|  
+|Property|Description|  
 |--------------|-----------------|  
 |<xref:System.Globalization.DateTimeFormatInfo.MonthDayPattern%2A>|Define el formato global de la cadena de resultado.|  
 |<xref:System.Globalization.DateTimeFormatInfo.MonthNames%2A>|Define los nombres de meses traducidos que pueden aparecer en la cadena de resultado.|  
@@ -252,7 +255,7 @@ Una cadena de formato de fecha y hora estándar usa un único especificador de f
   
  El especificador de formato estándar "O" u "o" corresponde a la cadena de formato personalizado "yyyy'-'MM'-'dd'T'HH':'mm':'ss'.'fffffffK" para los valores <xref:System.DateTime> y a "yyyy'-'MM'-'dd'T'HH':'mm':'ss'.'fffffffzzz" para los valores <xref:System.DateTimeOffset>. En esta cadena, los pares de comillas que delimitan los caracteres individuales (como guiones, signos de dos puntos y la letra "T") indican que el carácter individual es un literal que no se puede cambiar. Los apóstrofos no aparecen en la cadena de salida.  
   
- El especificador de formato estándar "O" u "o" (y el "yyyy '-' MM'-'dd ' t' HH': 'mm':'ss '.' cadena de formato personalizado "fffffffK") aprovecha las ventajas de las tres formas ISO 8601 representa la información de zona horaria para conservar la <xref:System.DateTime.Kind%2A> propiedad de <xref:System.DateTime> valores:  
+ El especificador de formato estándar "O" u "o" (y la cadena de formato personalizado "yyyy'-'MM'-'dd'T'HH':'mm':'ss'.'fffffffK") aprovecha los tres modos en que se representa la información de zona horaria en ISO 8601 para conservar la propiedad <xref:System.DateTime.Kind%2A> de valores <xref:System.DateTime>:  
   
 -   El componente de zona horaria de valores de fecha y hora <xref:System.DateTimeKind.Local?displayProperty=nameWithType> es un desfase con respecto a la hora UTC (por ejemplo, +01:00, -07:00). Todos los valores <xref:System.DateTimeOffset> también se representan en este formato.  
   
@@ -282,7 +285,7 @@ Una cadena de formato de fecha y hora estándar usa un único especificador de f
   
  Las siguientes propiedades del objeto <xref:System.Globalization.DateTimeFormatInfo> devuelto por la propiedad <xref:System.Globalization.DateTimeFormatInfo.InvariantInfo%2A?displayProperty=nameWithType> que representa la referencia cultural de todos los idiomas afectan a la cadena de resultado.  
   
-|Propiedad|Descripción|  
+|Property|Description|  
 |--------------|-----------------|  
 |<xref:System.Globalization.DateTimeFormatInfo.RFC1123Pattern%2A>|Define el formato de la cadena de resultado.|  
 |<xref:System.Globalization.DateTimeFormatInfo.AbbreviatedDayNames%2A>|Define los nombres de días abreviados que pueden aparecer en la cadena de resultado.|  
@@ -318,7 +321,7 @@ Una cadena de formato de fecha y hora estándar usa un único especificador de f
   
  La información de formato de un objeto <xref:System.Globalization.DateTimeFormatInfo> específico afecta a la cadena de resultado. En la tabla siguiente se enumeran las propiedades del objeto <xref:System.Globalization.DateTimeFormatInfo> que pueden controlar el formato de la cadena devuelta. El especificador de formato personalizado devuelto por la propiedad <xref:System.Globalization.DateTimeFormatInfo.ShortTimePattern%2A?displayProperty=nameWithType> de algunas referencias culturales quizás no use todas las propiedades.  
   
-|Propiedad|Descripción|  
+|Property|Description|  
 |--------------|-----------------|  
 |<xref:System.Globalization.DateTimeFormatInfo.ShortTimePattern%2A>|Define el formato del componente de hora de la cadena de resultado.|  
 |<xref:System.Globalization.DateTimeFormatInfo.TimeSeparator%2A>|Define la cadena que separa los componentes de hora, minutos y segundos de una hora.|  
@@ -338,7 +341,7 @@ Una cadena de formato de fecha y hora estándar usa un único especificador de f
   
  En la tabla siguiente se enumeran las propiedades del objeto <xref:System.Globalization.DateTimeFormatInfo> que pueden controlar el formato de la cadena devuelta. El especificador de formato personalizado devuelto por la propiedad <xref:System.Globalization.DateTimeFormatInfo.LongTimePattern%2A?displayProperty=nameWithType> de algunas referencias culturales quizás no use todas las propiedades.  
   
-|Propiedad|Descripción|  
+|Property|Description|  
 |--------------|-----------------|  
 |<xref:System.Globalization.DateTimeFormatInfo.LongTimePattern%2A>|Define el formato del componente de hora de la cadena de resultado.|  
 |<xref:System.Globalization.DateTimeFormatInfo.TimeSeparator%2A>|Define la cadena que separa los componentes de hora, minutos y segundos de una hora.|  
@@ -371,7 +374,7 @@ Una cadena de formato de fecha y hora estándar usa un único especificador de f
   
  En la tabla siguiente se enumeran las propiedades del objeto <xref:System.Globalization.DateTimeFormatInfo> que pueden controlar el formato de la cadena devuelta. El especificador de formato personalizado devuelto por la propiedad <xref:System.Globalization.DateTimeFormatInfo.FullDateTimePattern%2A> de algunas referencias culturales quizás no use todas las propiedades.  
   
-|Propiedad|Descripción|  
+|Property|Description|  
 |--------------|-----------------|  
 |<xref:System.Globalization.DateTimeFormatInfo.FullDateTimePattern%2A>|Define el formato global de la cadena de resultado.|  
 |<xref:System.Globalization.DateTimeFormatInfo.DayNames%2A>|Define los nombres de días traducidos que pueden aparecer en la cadena de resultado.|  
@@ -395,7 +398,7 @@ Una cadena de formato de fecha y hora estándar usa un único especificador de f
   
  En la tabla siguiente se enumeran las propiedades del objeto <xref:System.Globalization.DateTimeFormatInfo> que controlan el formato de la cadena devuelta.  
   
-|Propiedad|Descripción|  
+|Property|Description|  
 |--------------|-----------------|  
 |<xref:System.Globalization.DateTimeFormatInfo.YearMonthPattern%2A>|Define el formato global de la cadena de resultado.|  
 |<xref:System.Globalization.DateTimeFormatInfo.MonthNames%2A>|Define los nombres de meses traducidos que pueden aparecer en la cadena de resultado.|  
@@ -413,7 +416,7 @@ Una cadena de formato de fecha y hora estándar usa un único especificador de f
 ### <a name="control-panel-settings"></a>Configuración del Panel de control  
  Los valores de configuración del elemento **Configuración regional y de idioma** del Panel de control influyen en la cadena de resultado generada por una operación de formato. Estas configuraciones se utilizan para inicializar el objeto <xref:System.Globalization.DateTimeFormatInfo> asociado a la referencia cultural del subproceso actual, que proporciona valores que se utilizan para controlar el formato. Los equipos que usan configuraciones diferentes generarán cadenas de resultado distintas.  
   
- Además, si usas el <xref:System.Globalization.CultureInfo.%23ctor%28System.String%29?displayProperty=nameWithType> constructor para crear instancias de un nuevo <xref:System.Globalization.CultureInfo> objeto que representa la misma referencia cultural que la actual referencia cultural del sistema, cualquier personalización establecida por el **Configuración Regional e idioma** elemento en el Panel de Control se aplicará al nuevo <xref:System.Globalization.CultureInfo> objeto. Puede usar el constructor <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> para crear un objeto <xref:System.Globalization.CultureInfo> que no refleje las personalizaciones de un sistema.  
+ Asimismo, si se usa el constructor <xref:System.Globalization.CultureInfo.%23ctor%28System.String%29?displayProperty=nameWithType> para crear instancias de un nuevo objeto <xref:System.Globalization.CultureInfo> que representa la misma referencia cultural que la referencia cultural del sistema actual, cualquier personalización establecida por el elemento **Configuración regional y de idioma** del Panel de control se aplicará al nuevo objeto <xref:System.Globalization.CultureInfo>. Puede usar el constructor <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> para crear un objeto <xref:System.Globalization.CultureInfo> que no refleje las personalizaciones de un sistema.  
   
 ### <a name="datetimeformatinfo-properties"></a>Propiedades de DateTimeFormatInfo  
  El formato se ve influenciado por las propiedades del objeto <xref:System.Globalization.DateTimeFormatInfo> actual, proporcionado implícitamente por la referencia cultural del subproceso actual o explícitamente por el parámetro <xref:System.IFormatProvider> del método que invoca el formato. En el parámetro <xref:System.IFormatProvider>, la aplicación debe especificar un objeto <xref:System.Globalization.CultureInfo>, que representa una referencia cultural, o un objeto <xref:System.Globalization.DateTimeFormatInfo>, que representa las convenciones de formato de fecha y hora de una determinada referencia cultural. Muchos de los especificadores de formato de fecha y hora estándar son alias de patrones de formato definidos en las propiedades del objeto <xref:System.Globalization.DateTimeFormatInfo> actual. La aplicación puede modificar el resultado generado por algunos especificadores de formato de fecha y hora estándar al cambiar los patrones de formato de fecha y hora correspondientes de la propiedad <xref:System.Globalization.DateTimeFormatInfo> apropiada.  

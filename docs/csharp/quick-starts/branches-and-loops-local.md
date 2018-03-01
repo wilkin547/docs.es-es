@@ -1,6 +1,6 @@
 ---
-title: "Guía de inicio rápido; bifurcaciones y bucles; guía sobre C#"
-description: "En este inicio rápido acerca de bifurcaciones y bucles, escribirá código de C# para explorar la sintaxis del lenguaje que admite bifurcaciones y bucles condicionales para ejecutar instrucciones de forma repetida."
+title: "Tutorial de ramas y bucles: guías de inicio rápido para entornos locales de C#"
+description: "En este inicio rápido sobre ramas y bucles, escribirá código de C# para explorar la sintaxis del lenguaje que admite ramas y bucles condicionales para ejecutar instrucciones de forma repetida."
 author: billwagner
 ms.author: wiwagn
 ms.date: 10/31/2017
@@ -9,21 +9,21 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 609c8625b19025a20c1da1e767870eafbab4c4a0
-ms.sourcegitcommit: 8bde7a3432f30fc771079744955c75c58c4eb393
+ms.openlocfilehash: 7d69b2b9bb02e2999bcd785da653bd4a13ed947c
+ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/20/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="branches-and-loops"></a>Bifurcaciones y bucles
 
-Esta guía de inicio rápido le enseña a escribir código que analiza variables y cambia la ruta de acceso de ejecución en función de dichas variables. Escriba código de C# y vea los resultados de la compilación y la ejecución. La guía de inicio rápido contiene una serie de lecciones en las que se analizan las construcciones de bifurcaciones y bucles en C#. En ellas se enseñan los aspectos básicos del lenguaje C#.
+Esta guía de inicio rápido le enseña a escribir código que analiza variables y cambia la ruta de acceso de ejecución en función de dichas variables. Escriba código de C# y vea los resultados de la compilación y la ejecución. La guía de inicio rápido contiene una serie de lecciones en las que se analizan las construcciones de ramas y bucles en C#. En ellas se enseñan los aspectos básicos del lenguaje C#.
 
 En esta guía de inicio rápido se supone que cuenta con una máquina que puede usar para el desarrollo. El tema de .NET [Iniciar en 10 minutos](https://www.microsoft.com/net/core) cuenta con instrucciones para configurar el entorno de desarrollo local en Mac, PC o Linux. En las [guías de inicio rápido de introducción al entorno local](local-environment.md) puede obtener información general sobre los comandos que usará con vínculos que amplían la información.
 
 ## <a name="make-decisions-using-the-if-statement"></a>Toma de decisiones con la instrucción `if`.
 
-Cree un directorio denominado **branches-quickstart**. Conviértalo en el directorio actual y ejecute `dotnet new console -n BranchesAndLoops -o .`. Este comando crea una nueva aplicación de consola de .NET Core en el directorio actual. 
+Cree un directorio denominado **branches-quickstart**. Conviértalo en el directorio actual y ejecute `dotnet new console -n BranchesAndLoops -o .`. Este comando crea una nueva aplicación de consola de .NET Core en el directorio actual.
 
 Abra **Program.cs** en su editor favorito y reemplace la línea `Console.Writeline("Hello World!");` por el código siguiente:
 
@@ -45,12 +45,11 @@ int b = 3;
 Escriba `dotnet run` de nuevo. Como la respuesta es menor que diez, no se imprime nada. La **condición** que está probando es false. No tiene ningún código para ejecutar porque solo ha escrito una de las bifurcaciones posibles para una instrucción `if`: la bifurcación true.
 
 > [!TIP]
-> Cuando explore C# o cualquier otro lenguaje de programación, cometerá errores al escribir código. El compilador buscará dichos errores y los notificará. Fíjese en la salida de error y en el código que generó el error. El error del compilador normalmente puede ayudarle a encontrar el problema. 
+> Cuando explore C# o cualquier otro lenguaje de programación, cometerá errores al escribir código. El compilador buscará dichos errores y los notificará. Fíjese en la salida de error y en el código que generó el error. El error del compilador normalmente puede ayudarle a encontrar el problema.
 
-En este primer ejemplo se muestran la potencia de `if` y los tipos booleanos. Un *booleano* es una variable que puede tener uno de estos dos valores: `true` o `false`. C# define un tipo especial `bool` para las variables booleanas. La instrucción `if` comprueba el valor de `bool`. Cuando el valor es `true`, se ejecuta la instrucción que sigue a `if`. De lo contrario, se omite. 
+En este primer ejemplo se muestran la potencia de `if` y los tipos booleanos. Un *booleano* es una variable que puede tener uno de estos dos valores: `true` o `false`. C# define un tipo especial `bool` para las variables booleanas. La instrucción `if` comprueba el valor de `bool`. Cuando el valor es `true`, se ejecuta la instrucción que sigue a `if`. De lo contrario, se omite.
 
 Este proceso de comprobación de condiciones y ejecución de instrucciones en función de esas condiciones es muy eficaz.
-
 
 ## <a name="make-if-and-else-work-together"></a>Operaciones conjuntas con if y else
 
@@ -227,7 +226,7 @@ for(int index = 0; index < 10; index++)
 } 
 ```
 
-Funciona de la misma forma que los bucles `while` y `do` que ya ha usado. La instrucción `for` consta de tres partes que controlan su funcionamiento. 
+Funciona de la misma forma que los bucles `while` y `do` que ya ha usado. La instrucción `for` consta de tres partes que controlan su funcionamiento.
 
 La primera parte es el **inicializador de for**: `for index = 0;` declara que `index` es la variable de bucle y establece su valor inicial en `0`.
 
@@ -254,11 +253,11 @@ Pruébelo usted mismo. Después, revise cómo lo ha hecho. Debe obtener 63 como 
 
 Ha completado la guía de inicio rápido sobre "ramas y bucles".
 
-Puede seguir haciendo el inicio rápido [Cadenas interpoladas](interpolated-strings-local.md) en su propio entorno de desarrollo.
+Puede continuar con el inicio rápido [Cadenas interpoladas](interpolated-strings-local.md) en su propio entorno de desarrollo.
 
 Puede obtener más información sobre estos conceptos en los temas siguientes:
 
-[Instrucciones If y else](../language-reference/keywords/if-else.md)   
-[Instrucción while](../language-reference/keywords/while.md)   
-[Instrucción do](../language-reference/keywords/do.md)   
-[Instrucción for](../language-reference/keywords/for.md)   
+[Instrucciones If y else](../language-reference/keywords/if-else.md)  
+[Instrucción while](../language-reference/keywords/while.md)  
+[Instrucción do](../language-reference/keywords/do.md)  
+[Instrucción for](../language-reference/keywords/for.md)  

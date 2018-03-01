@@ -16,15 +16,18 @@ helpviewer_keywords:
 - SemaphoreSlim class, about SemaphoreSlim class
 - threading [.NET Framework], Semaphore class
 ms.assetid: 7722a333-b974-47a2-a7c0-f09097fb644e
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 039dee4df1a6d06fa1833eae077817ff5eca3ea3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 3c7d196b54a831c807b7181c1c810c3e78a463a2
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="semaphore-and-semaphoreslim"></a>Semaphore y SemaphoreSlim
 La clase <xref:System.Threading.Semaphore?displayProperty=nameWithType> representa un semáforo local o con nombre (para todo el sistema). Se trata de un contenedor fino alrededor del objeto semáforo de Win32. Los semáforos de Win32 son semáforos de recuento, que se pueden utilizar para controlar el acceso a un grupo de recursos.  
@@ -39,7 +42,7 @@ La clase <xref:System.Threading.Semaphore?displayProperty=nameWithType> represen
 ### <a name="semaphores-and-thread-identity"></a>Los semáforos y la identidad del subproceso  
  Los dos tipos de semáforo no exigen la identidad del subproceso en las llamadas a los métodos <xref:System.Threading.WaitHandle.WaitOne%2A>, <xref:System.Threading.SemaphoreSlim.Wait%2A>, <xref:System.Threading.Semaphore.Release%2A> y <xref:System.Threading.SemaphoreSlim.Release%2A?displayProperty=nameWithType>. Por ejemplo, un escenario de uso común para semáforos implica un subproceso productor y un subproceso consumidor; uno de esos subprocesos siempre incrementa el recuento del semáforo y el otro siempre lo reduce.  
   
- Es responsabilidad del programador garantizar que un subproceso no libere el semáforo demasiadas veces. Por ejemplo, supongamos que un semáforo tiene un recuento máximo de dos y que los subprocesos A y B entran el semáforo. Si un error de programación en el subproceso B hace que llame a `Release` dos veces, ambas llamadas tendrán éxito. El recuento del semáforo está lleno y cuando el subproceso A finalmente llama `Release`, un <xref:System.Threading.SemaphoreFullException> se produce.  
+ Es responsabilidad del programador garantizar que un subproceso no libere el semáforo demasiadas veces. Por ejemplo, supongamos que un semáforo tiene un recuento máximo de dos y que los subprocesos A y B entran el semáforo. Si un error de programación en el subproceso B hace que llame a `Release` dos veces, ambas llamadas tendrán éxito. El recuento del semáforo está lleno y cuando el subproceso A finalmente llama a `Release`, se genera <xref:System.Threading.SemaphoreFullException>.  
   
 ## <a name="named-semaphores"></a>Semáforos con nombre  
  El sistema operativo Windows permite que los semáforos tengan nombres. Un semáforo con nombre abarca todo el sistema. Es decir, una vez creado el semáforo con nombre, es visible para todos los subprocesos de todos los procesos. Por lo tanto, el semáforo con nombre puede utilizarse para sincronizar tanto las actividades de procesos como las de subprocesos.  

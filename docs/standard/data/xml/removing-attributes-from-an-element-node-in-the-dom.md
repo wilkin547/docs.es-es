@@ -9,15 +9,18 @@ ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7ede6f9e-a3ac-49a4-8488-ab8360a44aa4
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: b4ca08d8080c2116ce05634a544c91780869b165
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 967344db880347bde94330912bc5689c57b29921
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="removing-attributes-from-an-element-node-in-the-dom"></a>Cómo quitar atributos de un nodo de elementos en el DOM
 Existen muchas formas de quitar atributos. Una de estas técnicas consiste en quitarlos de la colección de atributos. Para ello, hay que realizar los siguientes pasos:  
@@ -42,9 +45,9 @@ Existen muchas formas de quitar atributos. Una de estas técnicas consiste en qu
   
  Otra alternativa es obtener el elemento, obtener el atributo de la colección de atributos y quitar directamente el nodo de atributos. Para obtener el atributo de la colección de atributos, puede utilizar un nombre, `XmlAttribute attr = attrs["attr_name"];`, un índice `XmlAttribute attr = attrs[0];` o certificar por completo el nombre con el espacio de nombres `XmlAttribute attr = attrs["attr_localName", "attr_namespace"]`.  
   
- Con independencia del método que se utilice para quitar atributos, existen unas limitaciones especiales para quitar atributos que se hayan definido como predeterminados en la definición de tipo de documento (DTD). Los atributos predeterminados no se pueden quitar a menos que se quite el elemento al que pertenecen. Siempre hay atributos predeterminados para los elementos que los tengan declarados. Al quitar un atributo predeterminado de <xref:System.Xml.XmlAttributeCollection> o de <xref:System.Xml.XmlElement>, se inserta un atributo que lo reemplaza en el <xref:System.Xml.XmlAttributeCollection> del elemento, que se inicializa con el valor predeterminado que se ha declarado. Si ha definido un elemento como `<book att1="1" att2="2" att3="3"></book>`, tendrá un elemento `book` con tres atributos predeterminados declarados. La implementación de Document Object Model (DOM) XML garantiza que siempre que esto `book` elemento existe, tiene tres atributos predeterminados de `att1`, `att2`, y `att3`.  
+ Con independencia del método que se utilice para quitar atributos, existen unas limitaciones especiales para quitar atributos que se hayan definido como predeterminados en la definición de tipo de documento (DTD). Los atributos predeterminados no se pueden quitar a menos que se quite el elemento al que pertenecen. Siempre hay atributos predeterminados para los elementos que los tengan declarados. Al quitar un atributo predeterminado de <xref:System.Xml.XmlAttributeCollection> o de <xref:System.Xml.XmlElement>, se inserta un atributo que lo reemplaza en el <xref:System.Xml.XmlAttributeCollection> del elemento, que se inicializa con el valor predeterminado que se ha declarado. Si ha definido un elemento como `<book att1="1" att2="2" att3="3"></book>`, tendrá un elemento `book` con tres atributos predeterminados declarados. La implementación Document Object Model (DOM) XML garantiza que, siempre y cuando exista este elemento `book`, tendrá tres atributos predeterminados de `att1`, `att2` y `att3`.  
   
  Al llamarlo con un <xref:System.Xml.XmlAttribute>, el método <xref:System.Xml.XmlAttributeCollection.RemoveAll%2A> establece el valor del atributo en String.Empty, ya que no puede haber un atributo sin un valor.  
   
 ## <a name="see-also"></a>Vea también  
- [Modelo de objetos de documento (DOM) de XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+ [Document Object Model (DOM) para XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

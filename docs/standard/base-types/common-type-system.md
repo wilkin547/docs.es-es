@@ -21,15 +21,18 @@ helpviewer_keywords:
 - namespaces [.NET Framework], types
 - types, about types
 ms.assetid: 53c57c96-83e1-4ee3-9543-9ac832671a89
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 9f9952cfd6ed2d5bac66d1cd5e3c8eed7506cd5c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 26ee5cffd5e04a8c78cf5913b286fadfaab03c7c
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="common-type-system"></a>Sistema de tipos comunes
 Common Type System define cómo se declaran, usan y administran los tipos en Common Language Runtime. Es también una parte importante de la compatibilidad en tiempo de ejecución con la integración entre lenguajes. El sistema de tipos común realiza las funciones siguientes:  
@@ -78,7 +81,7 @@ Common Type System define cómo se declaran, usan y administran los tipos en Com
   
  En la tabla siguiente se describen algunas de las características que una clase puede tener. Cada lenguaje compatible con el motor en tiempo de ejecución proporciona una forma de indicar que una clase o un miembro de clase tiene una o varias de estas características. En cambio, puede que no estén disponibles todas estas características en los lenguajes de programación orientados a .NET.  
   
-|Característica|Descripción|  
+|Característica|Description|  
 |--------------------|-----------------|  
 |sealed|Especifica que no se puede derivar otra clase de este tipo.|  
 |implementa|Indica que la clase utiliza una o varias interfaces proporcionando implementaciones de miembros de la interfaz.|  
@@ -95,7 +98,7 @@ Common Type System define cómo se declaran, usan y administran los tipos en Com
   
 <a name="Structures"></a>   
 ### <a name="structures"></a>Estructuras  
- Una estructura es un tipo de valor que se deriva implícitamente de <xref:System.ValueType?displayProperty=nameWithType>, que a su vez se deriva de <xref:System.Object?displayProperty=nameWithType>. Una estructura es muy útil para representar valores cuyos requisitos de memoria son reducidos y para pasar valores como parámetros por valor a los métodos que tienen parámetros fuertemente tipados. En. NET, todos los tipos de datos primitivos (<xref:System.Boolean>, <xref:System.Byte>, <xref:System.Char>, <xref:System.DateTime>, <xref:System.Decimal>, <xref:System.Double>, <xref:System.Int16>, <xref:System.Int32>, <xref:System.Int64>, <xref:System.SByte>, <xref:System.Single>, <xref:System.UInt16>, <xref:System.UInt32>, y <xref:System.UInt64>) se definen como estructuras.  
+ Una estructura es un tipo de valor que se deriva implícitamente de <xref:System.ValueType?displayProperty=nameWithType>, que a su vez se deriva de <xref:System.Object?displayProperty=nameWithType>. Una estructura es muy útil para representar valores cuyos requisitos de memoria son reducidos y para pasar valores como parámetros por valor a los métodos que tienen parámetros fuertemente tipados. En .NET, todos los tipos de datos primitivos (<xref:System.Boolean>, <xref:System.Byte>, <xref:System.Char>, <xref:System.DateTime>, <xref:System.Decimal>, <xref:System.Double>, <xref:System.Int16>, <xref:System.Int32>, <xref:System.Int64>, <xref:System.SByte>, <xref:System.Single>, <xref:System.UInt16>, <xref:System.UInt32> y <xref:System.UInt64>) se definen como estructuras.  
   
  Al igual que las clases, las estructuras definen datos (los campos de la estructura) y las operaciones que se pueden realizar con esos datos (los métodos de la estructura). Esto significa que se puede llamar a los métodos en las estructuras, incluso a los métodos virtuales definidos en las clases <xref:System.Object?displayProperty=nameWithType> y <xref:System.ValueType?displayProperty=nameWithType>, y a cualquier método definido en el propio tipo de valor. Es decir, las estructuras pueden tener campos, propiedades y eventos, así como métodos estáticos y no estáticos. Se pueden crear instancias de las estructuras, pasarlas como parámetros, almacenarlas como variables locales o almacenarlas en un campo de otro tipo de valor o tipo de referencia. Las estructuras también pueden implementar interfaces.  
   
@@ -151,7 +154,7 @@ Common Type System define cómo se declaran, usan y administran los tipos en Com
   
  Un parámetro de un delegado es compatible con el parámetro correspondiente de un método si el tipo del parámetro del delegado es más restrictivo que el del método, porque así se garantiza que el argumento que se pase al delegado también se podrá pasar de forma segura al método.  
   
- De forma similar, el tipo de devolución de un delegado es compatible con el tipo de devolución de un método si el del método es más restrictivo que el del delegado, porque así se garantiza que el valor devuelto por el método se puede convertir con seguridad al tipo de devolución del delegado.  
+ De forma similar, el tipo de valor devuelto de un delegado es compatible con el tipo de valor devuelto de un método si el del método es más restrictivo que el del delegado, porque así se garantiza que el tipo de valor devuelto por el método se puede convertir con seguridad al tipo de valor devuelto del delegado.  
   
  Por ejemplo, un delegado que tiene un parámetro de tipo <xref:System.Collections.IEnumerable> y un tipo de valor devuelto <xref:System.Object> puede representar un método que tiene un parámetro de tipo <xref:System.Object> y un valor devuelto de tipo <xref:System.Collections.IEnumerable>. Para obtener más información y un código de ejemplo, vea <xref:System.Delegate.CreateDelegate%28System.Type%2CSystem.Object%2CSystem.Reflection.MethodInfo%29?displayProperty=nameWithType>.  
   
@@ -166,7 +169,7 @@ Common Type System define cómo se declaran, usan y administran los tipos en Com
   
  En muchos casos, como en el de los métodos de devolución de llamada, un delegado solo representa un método y las únicas acciones que se deben llevar a cabo son la creación y la invocación del delegado.  
   
- Para los delegados que representan varios métodos, .NET proporciona métodos de la <xref:System.Delegate> y <xref:System.MulticastDelegate> clases para admitir las operaciones tales como agregar un método a la lista de invocaciones del delegado de delegado (el <xref:System.Delegate.Combine%2A?displayProperty=nameWithType> método), quitar un método (el <xref:System.Delegate.Remove%2A?displayProperty=nameWithType> método) y obtener la lista de invocación (el <xref:System.Delegate.GetInvocationList%2A?displayProperty=nameWithType> método).  
+ Por lo que se refiere a los delegados que representan varios métodos, .NET proporciona métodos de las clases de delegado <xref:System.Delegate> y <xref:System.MulticastDelegate> para operaciones tales como agregar un método a una lista de invocación del delegado (el método <xref:System.Delegate.Combine%2A?displayProperty=nameWithType>), quitar un método (el método <xref:System.Delegate.Remove%2A?displayProperty=nameWithType>) y obtener la lista de invocación (el método <xref:System.Delegate.GetInvocationList%2A?displayProperty=nameWithType>).  
   
 > [!NOTE]
 >  No es preciso usar estos métodos para los delegados de controladores de eventos en C#, C++ ni Visual Basic, ya que estos lenguajes proporcionan sintaxis para agregar y quitar controladores de eventos.  
@@ -197,7 +200,7 @@ Common Type System define cómo se declaran, usan y administran los tipos en Com
 ### <a name="type-accessibility"></a>Accesibilidad a tipos  
  Todos los tipos tienen un modificador que rige su accesibilidad desde otros tipos. En la tabla siguiente se describen las accesibilidades a tipos que admite el motor en tiempo de ejecución.  
   
-|Accesibilidad|Descripción|  
+|Accesibilidad|Description|  
 |-------------------|-----------------|  
 |public|Todos los ensamblados pueden tener acceso al tipo.|  
 |ensamblado|El tipo sólo es accesible desde su ensamblado.|  
@@ -302,7 +305,7 @@ Common Type System define cómo se declaran, usan y administran los tipos en Com
 ## <a name="characteristics-of-type-members"></a>Características de los miembros de tipos  
  Common Type System permite que los miembros de tipos tengan diversas características; sin embargo, no es necesario que los lenguajes admitan todas estas características. En la siguiente tabla se describen las características de los miembros.  
   
-|Característica|Se puede aplicar a|Descripción|  
+|Característica|Se puede aplicar a|Description|  
 |--------------------|------------------|-----------------|  
 |abstract|Métodos, propiedades y eventos|El tipo no proporciona la implementación del método. Los tipos que heredan o implementan métodos abstractos deben proporcionar una implementación para el método. La única excepción es que el tipo derivado sea un tipo abstracto. Todos lo métodos abstractos son virtuales.|  
 |private, family, assembly, family y assembly, family o assembly, o public|Todo|Define la accesibilidad del miembro:<br /><br /> private<br /> Solo es accesible desde el mismo tipo que el miembro o desde un tipo anidado.<br /><br /> family<br /> Accesible desde el mismo tipo que el miembro y desde tipos derivados que heredan de él.<br /><br /> ensamblado<br /> Accesible sólo en el ensamblado en que está definido el tipo.<br /><br /> family y assembly<br /> Accesible sólo desde los tipos que estén calificados para el acceso de familia y ensamblado.<br /><br /> family o assembly<br /> Accesible sólo desde los tipos que califican el acceso de familia o ensamblado.<br /><br /> public<br /> Accesible desde cualquier tipo.|  
@@ -310,7 +313,7 @@ Common Type System define cómo se declaran, usan y administran los tipos en Com
 |initialize-only|Campos|El valor sólo se puede inicializar y no se puede escribir en él después de la inicialización.|  
 |instancia|Campos, métodos, propiedades y eventos|Si un miembro no está marcado como `static` (C# y C++), `Shared` (Visual Basic), `virtual` (C# y C++) u `Overridable` (Visual Basic), es un miembro de instancia (no hay palabra clave de la instancia). En la memoria habrá tantas copias de estos miembros como objetos que los utilicen.|  
 |Literal|Campos|El valor asignado al campo es un valor fijo, conocido en tiempo de compilación, de un tipo de valor integrado. Los campos literales, a veces, se conocen como constantes.|  
-|newslot u override|Todo|Define cómo interactúa el miembro con los miembros heredados que tienen la misma firma:<br /><br /> newslot<br /> Oculta los miembros heredados que tienen la misma firma.<br /><br /> override<br /> Reemplaza la definición de un método virtual heredado.<br /><br /> El valor predeterminado es newslot.|  
+|newslot u override|Todas|Define cómo interactúa el miembro con los miembros heredados que tienen la misma firma:<br /><br /> newslot<br /> Oculta los miembros heredados que tienen la misma firma.<br /><br /> override<br /> Reemplaza la definición de un método virtual heredado.<br /><br /> El valor predeterminado es newslot.|  
 |estático|Campos, métodos, propiedades y eventos|El miembro pertenece al tipo en que está definido, no a una instancia particular del tipo. El miembro existe incluso si no se ha creado ninguna instancia del tipo y lo comparten todas las instancias del tipo.|  
 |virtual|Métodos, propiedades y eventos|Un tipo derivado puede implementar el método, que se puede invocar estática o dinámicamente. Si se usa la invocación dinámica, el tipo de la instancia que hace la llamada en tiempo de ejecución (en lugar del tipo conocido en tiempo de compilación) determina a qué implementación del método se llama. Para invocar un método virtual de manera estática, es posible que haya que convertir la variable en un tipo que use la versión deseada del método.|  
   
@@ -328,6 +331,6 @@ Common Type System define cómo se declaran, usan y administran los tipos en Com
 -   Un tipo derivado puede reemplazar a un método virtual heredado. El método de reemplazo proporciona una nueva definición del método que se invocará según el tipo del valor en tiempo de ejecución y no el tipo de la variable conocido en tiempo de compilación. Un método puede invalidar un método virtual únicamente si el método virtual no está marcado como `final` y el nuevo método es, al menos, tan accesible como el método virtual.  
   
 ## <a name="see-also"></a>Vea también  
- [Biblioteca de clases .NET](http://go.microsoft.com/fwlink/?LinkID=217856)  
+ [Biblioteca de clases de .NET](http://go.microsoft.com/fwlink/?LinkID=217856)  
  [Common Language Runtime](../../../docs/standard/clr.md)  
  [Conversión de tipos en .NET](../../../docs/standard/base-types/type-conversion.md)

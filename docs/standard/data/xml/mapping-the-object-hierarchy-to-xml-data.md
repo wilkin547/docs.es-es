@@ -12,15 +12,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 450e350b-6a68-4634-a2a5-33f4dc33baf0
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 1bf43922fb702988e9057f541833cd58d33c820a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 2191cb15a85e9b16ff0a21084668e80d3c197bfa
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="mapping-the-object-hierarchy-to-xml-data"></a>Asignar la jerarquía de objetos a datos XML
 Cuando un documento XML está en la memoria, la representación conceptual es un árbol. Al programar, hay una jerarquía de objetos para tener acceso a los nodos del árbol. En el ejemplo siguiente se muestra cómo se convierte el contenido XML en nodos.  
@@ -39,12 +42,12 @@ Cuando un documento XML está en la memoria, la representación conceptual es un
   
  La entrada se representa en la memoria como el siguiente árbol de nodos con la propiedad de tipo de nodo asignada:  
   
- ![ejemplo de árbol de nodo](../../../../docs/standard/data/xml/media/simple-xml.gif "Simple_XML")  
+ ![Ejemplo de árbol de nodos](../../../../docs/standard/data/xml/media/simple-xml.gif "Simple_XML")  
 Representación de árbol de nodo de libro y título  
   
- El `book` elemento se convierte en una **XmlElement** (objeto), el siguiente elemento, `title`, también se convierte en una **XmlElement**, mientras que el contenido del elemento se convierte en un **XmlText** objeto. Observar el **XmlElement** métodos y propiedades, los métodos y propiedades son diferentes de los métodos y propiedades disponibles en un **XmlText** objeto. Por tanto, es fundamental saber en qué tipo de nodo se convierte el marcado XML, puesto que determina las acciones que se pueden realizar.  
+ El elemento `book` se convierte en un objeto **XmlElement**, el siguiente elemento, `title`, también se convierte en un objeto **XmlElement**, mientras que el contenido del elemento se convierte en un objeto **XmlText**. Al observar los métodos y las propiedades del objeto **XmlElement**, estos difieren de los disponibles en un objeto **XmlText**. Por tanto, es fundamental saber en qué tipo de nodo se convierte el marcado XML, puesto que determina las acciones que se pueden realizar.  
   
- En el ejemplo siguiente se leen datos XML y se escribe texto diferente, en función del tipo de nodo. Con el siguiente archivo de datos XML como entrada, **items.xml**:  
+ En el ejemplo siguiente se leen datos XML y se escribe texto diferente, en función del tipo de nodo. Se usa el siguiente archivo de datos XML como entrada, **items.xml**:  
   
  **Entrada**  
   
@@ -62,7 +65,7 @@ Representación de árbol de nodo de libro y título
 </Items>  
 ```  
   
- El siguiente ejemplo de código lee la **items.xml** de archivo y muestra información para cada tipo de nodo.  
+ En el ejemplo de código siguiente se lee el archivo **items.xml** y se presenta información para cada tipo de nodo.  
   
 ```vb  
 Imports System  
@@ -195,37 +198,37 @@ public class Sample
   
 |Entrada|Salida|Prueba de tipo de nodo|  
 |-----------|------------|--------------------|  
-|\<? versión xml = "1.0"? >|\<? xml versión ='1.0 '? >|XmlNodeType.XmlDeclaration|  
-|\<!--Este es un documento XML de ejemplo-->|\<!--Este es un documento XML de ejemplo-->|XmlNodeType.Comment|  
-|\<! Elementos de tipo de documento [\<! Número de entidades "123" >] >|\<! Elementos de tipo de documento [\<! Número de entidades "123" >]|XmlNodeType.DocumentType|  
-|\<Elementos >|\<Elementos >|XmlNodeType.Element|  
+|\<?xml version="1.0"?>|\<?xml version='1.0'?>|XmlNodeType.XmlDeclaration|  
+|\<!-- Este es un ejemplo de documento XML -->|\<!--Este es un ejemplo de documento XML -->|XmlNodeType.Comment|  
+|\<!DOCTYPE Items [\<!ENTITY number "123">]>|\<!DOCTYPE Items [\<!ENTITY number "123">]|XmlNodeType.DocumentType|  
+|\<Items>|\<Items>|XmlNodeType.Element|  
 |\<Item>|\<Item>|XmlNodeType.Element|  
-|Prueba con una entidad:&number;|Prueba con una entidad: 123|XmlNodeType.Text|  
-|\</ Item >|\</ Item >|XmlNodeType.EndElement|  
+|Prueba con una entidad: &number;|Prueba con una entidad: 123|XmlNodeType.Text|  
+|\</Item>|\</Item>|XmlNodeType.EndElement|  
 |\<Item>|\<Item>|XmNodeType.Element|  
 |prueba con un elemento secundario|prueba con un elemento secundario|XmlNodeType.Text|  
-|\<más >|\<más >|XmlNodeType.Element|  
+|\<more>|\<more>|XmlNodeType.Element|  
 |stuff|stuff|XmlNodeType.Text|  
-|\</ Item >|\</ Item >|XmlNodeType.EndElement|  
+|\</Item>|\</Item>|XmlNodeType.EndElement|  
 |\<Item>|\<Item>|XmlNodeType.Element|  
 |prueba con una sección CDATA|prueba con una sección CDATA|XmlTest.Text|  
-|<! [CDATA [\<456 >]]\>|<! [CDATA [\<456 >]]\>|XmlTest.CDATA|  
+|<![CDATA[\<456>]]\>|<![CDATA[\<456>]]\>|XmlTest.CDATA|  
 |def|def|XmlNodeType.Text|  
-|\</ Item >|\</ Item >|XmlNodeType.EndElement|  
+|\</Item>|\</Item>|XmlNodeType.EndElement|  
 |\<Item>|\<Item>|XmlNodeType.Element|  
 |Prueba con una entidad de carácter: &\#65;|Prueba con una entidad de carácter: A|XmlNodeType.Text|  
-|\</ Item >|\</ Item >|XmlNodeType.EndElement|  
-|\<!--Catorce caracteres en este elemento.-->|\<----> Catorce caracteres en este elemento.|XmlNodeType.Comment|  
+|\</Item>|\</Item>|XmlNodeType.EndElement|  
+|\<!-- Catorce caracteres en este elemento.-->|\<--Catorce caracteres en este elemento.-->|XmlNodeType.Comment|  
 |\<Item>|\<Item>|XmlNodeType.Element|  
 |1234567890ABCD|1234567890ABCD|XmlNodeType.Text|  
-|\</ Item >|\</ Item >|XmlNodeType.EndElement|  
-|\</ Elementos >|\</ Elementos >|XmlNodeType.EndElement|  
+|\</Item>|\</Item>|XmlNodeType.EndElement|  
+|\</Items>|\</Items>|XmlNodeType.EndElement|  
   
  Debe saber qué tipo de nodo se asigna, puesto que controla qué clase de acciones son válidas y qué clase de propiedades se pueden establecer y recuperar.  
   
- Creación de nodos para espacios en blanco se controla cuando se cargan los datos en DOM mediante el **PreserveWhitespace** marca. Para obtener más información, consulte [espacio en blanco y control de espacios en blanco significativos al cargar DOM](../../../../docs/standard/data/xml/white-space-and-significant-white-space-handling-when-loading-the-dom.md).  
+ La creación de nodos para espacios en blanco se controla al cargar los datos en DOM mediante la marca **PreserveWhitespace**. Para obtener más información, vea [Control de espacios en blanco y de espacios en blanco significativos al cargar DOM](../../../../docs/standard/data/xml/white-space-and-significant-white-space-handling-when-loading-the-dom.md).  
   
- Para agregar nuevos nodos a DOM, vea [insertar nodos en un documento XML](../../../../docs/standard/data/xml/inserting-nodes-into-an-xml-document.md). Para quitar nodos de DOM, vea [cómo quitar nodos, contenido y valores de un documento XML](../../../../docs/standard/data/xml/removing-nodes-content-and-values-from-an-xml-document.md). Para modificar el contenido de nodos en el DOM, vea [modificar nodos, contenido y valores en un documento XML](../../../../docs/standard/data/xml/modifying-nodes-content-and-values-in-an-xml-document.md).  
+ Para agregar nuevos nodos a DOM, vea [Inserción de nodos en un documento XML](../../../../docs/standard/data/xml/inserting-nodes-into-an-xml-document.md). Para quitar nodos de DOM, vea [Cómo quitar nodos, contenido y valores de un documento XML](../../../../docs/standard/data/xml/removing-nodes-content-and-values-from-an-xml-document.md). Para modificar el contenido de nodos en DOM, vea [Modificación de nodos, contenido y valores en un documento XML](../../../../docs/standard/data/xml/modifying-nodes-content-and-values-in-an-xml-document.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Modelo de objetos de documento (DOM) de XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+ [Document Object Model (DOM) para XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

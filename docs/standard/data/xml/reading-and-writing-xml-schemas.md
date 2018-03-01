@@ -13,15 +13,18 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: b5757c4a-ea59-467e-ac62-be2bfe24eb77
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: aaf63acbb58fd86f7fa9a5dc3dce7508d90cfada
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 96f8cf924ffe510e1fea4d21fe86ca860fe8fab0
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="reading-and-writing-xml-schemas"></a>Lectura y escritura de esquemas XML
 La API del Modelo de objetos de esquema (SOM) se puede utilizar para leer y escribir esquemas del lenguaje de definición de esquemas XML (XSD) desde archivos u otros orígenes y compilar esquemas XML en memoria, utilizando las clases del espacio de nombres <xref:System.Xml.Schema?displayProperty=nameWithType> que se asignan a las estructuras definidas en la recomendación de esquemas XML del W3C (World Wide Web Consortium).  
@@ -29,7 +32,7 @@ La API del Modelo de objetos de esquema (SOM) se puede utilizar para leer y escr
 ## <a name="reading-and-writing-xml-schemas"></a>Lectura y escritura de esquemas XML  
  La clase <xref:System.Xml.Schema.XmlSchema> incluye los métodos <xref:System.Xml.Schema.XmlSchema.Read%2A> y <xref:System.Xml.Schema.XmlSchema.Write%2A> para leer y escribir esquemas XML. El método <xref:System.Xml.Schema.XmlSchema.Read%2A> devuelve un objeto <xref:System.Xml.Schema.XmlSchema> que representa el esquema XML y toma un parámetro <xref:System.Xml.Schema.ValidationEventHandler> opcional para controlar los errores y advertencias de validación que se encuentran al leer un esquema XML.  
   
- El método <xref:System.Xml.Schema.XmlSchema.Write%2A> escribe esquemas XML para los objetos <xref:System.IO.Stream>, <xref:System.IO.TextWriter> y <xref:System.Xml.XmlWriter> y puede tomar un objeto <xref:System.Xml.XmlNamespaceManager> opcional como parámetro. Se utiliza un <xref:System.Xml.XmlNamespaceManager> para controlar los espacios de nombres que se encuentran en un esquema XML. Para obtener más información sobre la <xref:System.Xml.XmlNamespaceManager> de clases, consulte [administrar espacios de nombres en un documento XML](../../../../docs/standard/data/xml/managing-namespaces-in-an-xml-document.md).  
+ El método <xref:System.Xml.Schema.XmlSchema.Write%2A> escribe esquemas XML para los objetos <xref:System.IO.Stream>, <xref:System.IO.TextWriter> y <xref:System.Xml.XmlWriter> y puede tomar un objeto <xref:System.Xml.XmlNamespaceManager> opcional como parámetro. Se utiliza un <xref:System.Xml.XmlNamespaceManager> para controlar los espacios de nombres que se encuentran en un esquema XML. Para más información sobre la clase <xref:System.Xml.XmlNamespaceManager>, vea [Administrar espacios de nombres en un documento XML](../../../../docs/standard/data/xml/managing-namespaces-in-an-xml-document.md).  
   
  El siguiente código de ejemplo ilustra la lectura y escritura de esquemas XML desde un archivo y en él. El código de ejemplo toma el archivo `example.xsd`, lo lee en un objeto <xref:System.Xml.Schema.XmlSchema> utilizando el método `static`<xref:System.Xml.Schema.XmlSchema.Read%2A> y, a continuación, escribe el archivo en la consola y en un archivo `new.xsd` nuevo. El código de ejemplo también proporciona un <xref:System.Xml.Schema.ValidationEventHandler> como parámetro al método `static`<xref:System.Xml.Schema.XmlSchema.Read%2A> para controlar cualquier error o advertencia de validación de esquemas que se encuentre al leer el esquema XML. Si no se especifica el <xref:System.Xml.Schema.ValidationEventHandler> (`null`), no se notifica ningún error ni advertencia.  
   
@@ -55,11 +58,11 @@ La API del Modelo de objetos de esquema (SOM) se puede utilizar para leer y escr
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Información general sobre el modelo de objetos esquema XML](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)  
- [Compilar esquemas XML](../../../../docs/standard/data/xml/building-xml-schemas.md)  
- [Cómo atravesar esquemas XML](../../../../docs/standard/data/xml/traversing-xml-schemas.md)  
+ [Información general sobre el Modelo de objetos de esquema XML](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)  
+ [Compilación de esquemas XML](../../../../docs/standard/data/xml/building-xml-schemas.md)  
+ [Recorrido de esquemas XML](../../../../docs/standard/data/xml/traversing-xml-schemas.md)  
  [Edición de esquemas XML](../../../../docs/standard/data/xml/editing-xml-schemas.md)  
  [Inclusión o importación de esquemas XML](../../../../docs/standard/data/xml/including-or-importing-xml-schemas.md)  
  [XmlSchemaSet para compilación de esquemas](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)  
- [Conjunto de información de compilación del esquema posterior](../../../../docs/standard/data/xml/post-schema-compilation-infoset.md)  
+ [Conjunto de información posterior a la compilación de esquemas](../../../../docs/standard/data/xml/post-schema-compilation-infoset.md)  
  [Administrar espacios de nombres en un documento XML](../../../../docs/standard/data/xml/managing-namespaces-in-an-xml-document.md)

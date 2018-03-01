@@ -11,20 +11,24 @@ ms.topic: article
 dev_langs:
 - csharp
 - vb
-helpviewer_keywords: tasks, child tasks
+helpviewer_keywords:
+- tasks, child tasks
 ms.assetid: c95788bf-90a6-4e96-b7bc-58e36a228cc5
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: c1a0c664dffc2986d4d6985fd2b71cd8055bf2c9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 298ccdc4628c840874d10832da29c10d6d496655
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="attached-and-detached-child-tasks"></a>Tareas secundarias asociadas y desasociadas
-A *tarea secundaria* (o *tarea anidada*) es una <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> instancia que se crea en el delegado de usuario de otra tarea, que se conoce como el *tarea primaria*. Una tarea secundaria puede estar desasociada o asociada. A *tarea secundaria desasociada* es una tarea que se ejecuta independientemente de su elemento primario. Un *tarea secundaria asociada* es una tarea anidada que se crea con el <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent?displayProperty=nameWithType> opción cuyo elemento primario no forma explícita o predeterminada impide que se va a adjuntar. Una tarea puede crear cualquier número de tareas secundarias asociadas y desasociadas, con la única limitación de los recursos del sistema.  
+Una *tarea secundaria* o *tarea anidada* es una instancia de <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> que se crea en el delegado de usuario de otra tarea, conocida como *tarea primaria*. Una tarea secundaria puede estar desasociada o asociada. Una *tarea secundaria desasociada* es una tarea que se ejecuta independientemente de su elemento principal. Una *tarea secundaria asociada* es una tarea anidada que se crea con la opción <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent?displayProperty=nameWithType> y cuyo elemento primario no le prohíbe asociarse de forma explícita o predeterminada. Una tarea puede crear cualquier número de tareas secundarias asociadas y desasociadas, con la única limitación de los recursos del sistema.  
   
  En la tabla siguiente se muestran las diferencias básicas entre los dos tipos de tareas secundarias.  
   
@@ -67,7 +71,7 @@ A *tarea secundaria* (o *tarea anidada*) es una <xref:System.Threading.Tasks.Tas
  La cancelación de tareas es cooperativa. Es decir, para que se pueda cancelar, cada tarea secundaria asociada o desasociada debe supervisar el estado del token de cancelación. Si desea cancelar un elemento primario y todos sus elementos secundarios utilizando una solicitud de cancelación, debe pasar el mismo token como argumento a todas las tareas y proporcionar en cada tarea la lógica de respuesta a la solicitud en cada tarea. Para más información, consulte [Task Cancellation](../../../docs/standard/parallel-programming/task-cancellation.md) (Cancelación de tareas) y [How to: Cancel a Task and Its Children](../../../docs/standard/parallel-programming/how-to-cancel-a-task-and-its-children.md) (Cancelar una tarea y sus elementos secundarios).  
   
 ### <a name="when-the-parent-cancels"></a>Cuando la tarea primaria se cancela  
- Si una tarea primaria se cancela antes de que se inicie su tarea secundaria, la tarea secundaria nunca se inicia. Si una tarea primaria se cancela después de que se ha iniciado su tarea secundaria, la tarea secundaria se ejecutará hasta completarse a menos que tenga su propia lógica de cancelación. Para obtener más información, consulta [Task Cancellation](../../../docs/standard/parallel-programming/task-cancellation.md).  
+ Si una tarea primaria se cancela antes de que se inicie su tarea secundaria, la tarea secundaria nunca se inicia. Si una tarea primaria se cancela después de que se ha iniciado su tarea secundaria, la tarea secundaria se ejecutará hasta completarse a menos que tenga su propia lógica de cancelación. Para más información, vea [Task Cancellation](../../../docs/standard/parallel-programming/task-cancellation.md).  
   
 ### <a name="when-a-detached-child-task-cancels"></a>Cuando una tarea secundaria desasociada se cancela  
  Si una tarea secundaria desasociada se cancela usando el mismo token que se pasó a la tarea primaria, y la tarea primaria no espera a la tarea secundaria, no se propagará ninguna excepción puesto que la excepción se trata cono una cancelación de cooperación benigna. Este comportamiento es igual que el de cualquier tarea de nivel superior.  
@@ -82,7 +86,7 @@ A *tarea secundaria* (o *tarea anidada*) es una <xref:System.Threading.Tasks.Tas
   
  Para evitar que una tarea secundaria se adjunte a su tarea primaria, especifique la opción <xref:System.Threading.Tasks.TaskCreationOptions.DenyChildAttach?displayProperty=nameWithType> cuando cree el objeto primario <xref:System.Threading.Tasks.Task> o <xref:System.Threading.Tasks.Task%601>. Cuando una tarea intenta asociarse a su elemento primario y el elemento primario especifica la opción <xref:System.Threading.Tasks.TaskCreationOptions.DenyChildAttach?displayProperty=nameWithType>, la tarea secundaria no podrá asociarse a un elemento primario y se ejecutará como si no se hubiera especificado la opción <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent?displayProperty=nameWithType>.  
   
- Puede que también desee evitar que una tarea secundaria se adjunte a su tarea primaria cuando la tarea secundaria no finaliza a tiempo. Dado que una tarea primaria no finaliza hasta que finalizan todas las tareas secundarias, una tarea secundaria que se ejecute durante mucho tiempo puede provocar que el rendimiento general de la aplicación sea mediocre. Para obtener un ejemplo que muestra cómo mejorar el rendimiento de la aplicación impidiendo que una tarea se asocie a su tarea primaria, consulte [Cómo: evitar que una tarea secundaria se asocie a su elemento primario](../../../docs/standard/parallel-programming/how-to-prevent-a-child-task-from-attaching-to-its-parent.md).  
+ Puede que también desee evitar que una tarea secundaria se adjunte a su tarea primaria cuando la tarea secundaria no finaliza a tiempo. Dado que una tarea primaria no finaliza hasta que finalizan todas las tareas secundarias, una tarea secundaria que se ejecute durante mucho tiempo puede provocar que el rendimiento general de la aplicación sea mediocre. Para obtener un ejemplo que muestra cómo mejorar el rendimiento de la aplicación impidiendo que una tarea se asocie a su tarea primaria, consulte [Cómo: Evitar que una tarea secundaria se asocie a su elemento primario](../../../docs/standard/parallel-programming/how-to-prevent-a-child-task-from-attaching-to-its-parent.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Programación en paralelo](../../../docs/standard/parallel-programming/index.md)  

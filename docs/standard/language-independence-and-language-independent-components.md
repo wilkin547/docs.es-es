@@ -19,15 +19,18 @@ helpviewer_keywords:
 - runtime, language interoperability
 - common language runtime, language interoperability
 ms.assetid: 4f0b77d0-4844-464f-af73-6e06bedeafc6
-caps.latest.revision: "35"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: bc43226a508dfd0286c7667c02bdc2543346be9c
-ms.sourcegitcommit: 9c4b8d457ffb8d134c9d55c6d7682a0f22e2b9a8
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: ec6f7df4cc42b71ab9c61e84b71a81f641a1d0b3
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/20/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="language-independence-and-language-independent-components"></a>Independencia del lenguaje y componentes independientes del lenguaje
 .NET Framework. es independiente del lenguaje. Esto significa que, como desarrollador, puede utilizar uno de los muchos lenguajes que tienen como destino .NET Framework; por ejemplo, C#, C++/CLI, Eiffel, F#, IronPython, IronRuby, PowerBuilder, Visual Basic, Visual COBOL y Windows PowerShell. Puede acceder a los tipos y miembros de las bibliotecas de clases desarrolladas para .NET Framework sin necesidad de conocer el lenguaje en el que se escribieron originalmente y sin necesidad de seguir ninguna de las convenciones del lenguaje original. Si es un desarrollador de componentes, podrá acceder a su componente desde cualquier aplicación de .NET Framework, con independencia del lenguaje.  
@@ -122,11 +125,11 @@ ms.lasthandoff: 10/20/2017
 |Enumeraciones|[Enumeraciones](#enums)|El tipo subyacente de una enumeración debe ser un tipo de entero integrado en CLS, el nombre del campo debe ser “value__” y dicho campo debe marcarse como `RTSpecialName`.|7|  
 |Enumeraciones|[Enumeraciones](#enums)|Hay dos tipos distintos de enumeraciones, que se indican mediante la presencia o ausencia del atributo personalizado <xref:System.FlagsAttribute?displayProperty=nameWithType> (vea la biblioteca del apartado IV). Uno representa valores enteros con nombre; el otro representa los marcadores de bit con nombre que se pueden combinar para generar un valor sin nombre. El valor de `enum` no se limita a los valores especificados.|8|  
 |Enumeraciones|[Enumeraciones](#enums)|Los campos estáticos literales de una enumeración deben contener el tipo de la propia enumeración.|9|  
-|eventos|[Eventos](#events)|Los métodos que implementen un evento se marcarán como `SpecialName` en los metadatos.|29|  
-|eventos|[Eventos](#events)|La accesibilidad de un evento y sus descriptores de acceso será idéntica.|30|  
-|eventos|[Eventos](#events)|Los métodos `add` y `remove` de un evento deben estar presentes o ausentes a la vez.|31|  
-|eventos|[Eventos](#events)|Los métodos `add` y `remove` de un evento deben tomar un parámetro cuyo tipo defina el tipo del evento, y ese tipo debe derivarse de <xref:System.Delegate?displayProperty=nameWithType>.|32|  
-|eventos|[Eventos](#events)|Los eventos deben adherirse a un patrón de asignación de nombres concreto. En las comparaciones de nombres correspondientes, se omitirá el atributo `SpecialName` mencionado en la regla 29 de CLS y se seguirán las reglas del identificador.|33|  
+|Eventos|[Eventos](#events)|Los métodos que implementen un evento se marcarán como `SpecialName` en los metadatos.|29|  
+|Eventos|[Eventos](#events)|La accesibilidad de un evento y sus descriptores de acceso será idéntica.|30|  
+|Eventos|[Eventos](#events)|Los métodos `add` y `remove` de un evento deben estar presentes o ausentes a la vez.|31|  
+|Eventos|[Eventos](#events)|Los métodos `add` y `remove` de un evento deben tomar un parámetro cuyo tipo defina el tipo del evento, y ese tipo debe derivarse de <xref:System.Delegate?displayProperty=nameWithType>.|32|  
+|Eventos|[Eventos](#events)|Los eventos deben adherirse a un patrón de asignación de nombres concreto. En las comparaciones de nombres correspondientes, se omitirá el atributo `SpecialName` mencionado en la regla 29 de CLS y se seguirán las reglas del identificador.|33|  
 |Excepciones|[Excepciones](#exceptions)|Los objetos que se inicien deberán ser de tipo <xref:System.Exception?displayProperty=nameWithType> o de un tipo que herede de él. No obstante, los métodos conformes a CLS no necesitan bloquear la propagación de otros tipos de excepciones.|40|  
 |General|[Conformidad con CLS: reglas](#Rules)|Las reglas de CLS solo se aplican a las partes de los tipos que son accesibles o visibles desde fuera del ensamblado de definición.|1|  
 |General|[Conformidad con CLS: reglas](#Rules)|Los miembros de tipos no conformes con CLS no deben marcarse como conformes con CLS.|2|  
@@ -176,7 +179,7 @@ ms.lasthandoff: 10/20/2017
   
  El [sistema de tipos común](../../docs/standard/base-types/common-type-system.md) de .NET Framework incluye varios tipos integrados que se admiten directamente en Common Language Runtime y que se codifican de forma especial en los metadatos de un ensamblado. De estos tipos intrínsecos, los tipos enumerados en la tabla siguiente son conformes a CLS.  
   
-|Tipo conforme a CLS|Descripción|  
+|Tipo conforme a CLS|Description|  
 |-------------------------|-----------------|  
 |<xref:System.Byte>|Entero de 8 bits sin signo|  
 |<xref:System.Int16>|Entero de 16 bits con signo|  
@@ -192,7 +195,7 @@ ms.lasthandoff: 10/20/2017
   
  Los tipos intrínsecos enumerados en la tabla siguiente no son conformes a CLS.  
   
-|Tipo no conforme|Descripción|Alternativa conforme a CLS|  
+|Tipo no conforme|Description|Alternativa conforme a CLS|  
 |-------------------------|-----------------|--------------------------------|  
 |<xref:System.SByte>|Tipo de datos enteros de 8 bits con signo|<xref:System.Int16>|  
 |<xref:System.TypedReference>|Puntero a un objeto y su tipo en tiempo de ejecución|Ninguna|  
@@ -512,7 +515,7 @@ ms.lasthandoff: 10/20/2017
 -   Para garantizar que la interfaz pública de la biblioteca de componentes expone solo elementos del programa que son conformes a CLS. Si los elementos no son conformes a CLS, los compiladores normalmente emitirán una advertencia.  
   
 > [!WARNING]
->  En algunos casos, los compiladores de lenguaje aplican reglas conformes a CLS independientemente de si se usa el atributo <xref:System.CLSCompliantAttribute> o no. Por ejemplo, la definición de un miembro estático en una interfaz infringe una regla de CLS. A este respecto, si define un `static` (en C#) o `Shared` (en Visual Basic) miembro en una interfaz, tanto los compiladores de C# y Visual Basic muestran el mensaje de error y no se pudo compilar la aplicación.  
+>  En algunos casos, los compiladores de lenguaje aplican reglas conformes a CLS independientemente de si se usa el atributo <xref:System.CLSCompliantAttribute> o no. Por ejemplo, la definición de un miembro estático en una interfaz infringe una regla de CLS. En este sentido, si se define un miembro `static` (en C#) o `Shared` (en Visual Basic) en una interfaz, los compiladores de C# y Visual Basic mostrarán un mensaje de error y no podrán compilar la aplicación.  
   
  El atributo <xref:System.CLSCompliantAttribute> está marcado con un atributo <xref:System.AttributeUsageAttribute> que tiene el valor <xref:System.AttributeTargets.All?displayProperty=nameWithType>. Este valor le permite aplicar el atributo <xref:System.CLSCompliantAttribute> a cualquier elemento de programa, incluidos los ensamblados, módulos, tipos (clases, estructuras, enumeraciones, interfaces, delegados), miembros de tipo (constructores, métodos, propiedades, campos y eventos), parámetros, parámetros genéricos y valores devueltos. Sin embargo, en la práctica, solo debe aplicar el atributo a los ensamblados, tipos y miembros del tipo. De lo contrario, los compiladores omitirán el atributo y seguirán generando advertencias de compilación siempre que encuentren un parámetro no conforme, un parámetro genérico o un valor devuelto en la interfaz pública de la biblioteca.  
   

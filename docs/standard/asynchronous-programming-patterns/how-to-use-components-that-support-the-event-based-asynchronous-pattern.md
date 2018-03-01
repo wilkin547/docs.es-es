@@ -24,30 +24,33 @@ helpviewer_keywords:
 - threading [Windows Forms], asynchronous features
 - AsyncCompletedEventArgs class
 ms.assetid: 35e9549c-1568-4768-ad07-17cc6dff11e1
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 49e03a8d886ccd4ed6e4b2a19692c1874f5928ec
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: c7fe7d0a959a490893fba2b2fc7faceedee03879
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-use-components-that-support-the-event-based-asynchronous-pattern"></a>Cómo: Utilizar componentes que admitan el modelo asincrónico basado en eventos
-Muchos componentes le ofrecen la opción de realizar su trabajo de forma asincrónica. El <xref:System.Media.SoundPlayer> y <xref:System.Windows.Forms.PictureBox> componentes, por ejemplo, habilitar cargar sonidos e imágenes "en segundo plano", mientras que el subproceso principal continúa ejecutándose sin interrupción.  
+Muchos componentes le ofrecen la opción de realizar su trabajo de forma asincrónica. Por ejemplo, los componentes <xref:System.Media.SoundPlayer> y <xref:System.Windows.Forms.PictureBox> permiten cargas sonidos e imágenes "en segundo plano" mientras el subproceso principal continúa ejecutándose sin interrupción.  
   
- Usar métodos asincrónicos en una clase que admita la [Event-based Asynchronous Pattern Overview](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md) puede ser tan simple como asociar un controlador de eventos para el componente *MethodName* `Completed` eventos, tal y como lo haría con cualquier otro evento. Cuando se llama a la *MethodName* `Async` método, la aplicación seguirá ejecutándose sin interrupción hasta que el *MethodName* `Completed` evento se desencadena. En el controlador de eventos, puede examinar el <xref:System.ComponentModel.AsyncCompletedEventArgs> parámetro para determinar si la operación asincrónica se completó correctamente o si se canceló.  
+ Usar métodos asincrónicos en una clase que admite la [Información general sobre el modelo asincrónico basado en eventos](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md) puede ser tan sencillo como adjuntar un controlador de eventos al evento *MethodName***Completed** del componente, como lo haría para otro componente. Cuando se llama al método *MethodName***Async**, la aplicación continuará ejecutándose sin interrupción hasta que se genere el evento *MethodName***Completed**. En el controlador de eventos, puede examinar el parámetro <xref:System.ComponentModel.AsyncCompletedEventArgs> para determinar si la operación asincrónica se completó correctamente o si se canceló.  
   
- Para obtener más información sobre el uso de controladores de eventos, vea [información general sobre controladores de eventos](../../../docs/framework/winforms/event-handlers-overview-windows-forms.md).  
+ Para más información sobre el uso de los controladores de eventos, vea [Información general sobre controladores de eventos](../../../docs/framework/winforms/event-handlers-overview-windows-forms.md).  
   
- El siguiente procedimiento muestra cómo utilizar la capacidad de carga de imagen asincrónica de un <xref:System.Windows.Forms.PictureBox> control.  
+ En el siguiente procedimiento se explica cómo usar la funcionalidad de carga de imágenes asincrónica de un control <xref:System.Windows.Forms.PictureBox>.  
   
-### <a name="to-enable-a-picturebox-control-to-asynchronously-load-an-image"></a>Para activar un control PictureBox cargar una imagen de forma asincrónica  
+### <a name="to-enable-a-picturebox-control-to-asynchronously-load-an-image"></a>Para permitir que un control PictureBox cargue una imagen de manera asincrónica  
   
-1.  Cree una instancia de la <xref:System.Windows.Forms.PictureBox> componente en el formulario.  
+1.  Cree una instancia del componente <xref:System.Windows.Forms.PictureBox> en el formulario.  
   
-2.  Asignar un controlador de eventos para el <xref:System.Windows.Forms.PictureBox.LoadCompleted> eventos.  
+2.  Asigne un controlador de eventos al evento <xref:System.Windows.Forms.PictureBox.LoadCompleted>.  
   
      Compruebe si hay errores que puedan haberse producido durante la descarga asincrónica aquí. También es donde puede comprobar posibles cancelaciones.  
   
@@ -57,7 +60,7 @@ Muchos componentes le ofrecen la opción de realizar su trabajo de forma asincr�
      [!code-csharp[System.Windows.Forms.PictureBox.LoadAsync#5](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.PictureBox.LoadAsync/CS/Form1.cs#5)]
      [!code-vb[System.Windows.Forms.PictureBox.LoadAsync#5](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.PictureBox.LoadAsync/VB/Form1.vb#5)]  
   
-3.  Agregue dos botones, denominados `loadButton` y `cancelLoadButton`, al formulario. Agregar <xref:System.Windows.Forms.Control.Click> controladores de eventos para iniciar y cancelar la descarga.  
+3.  Agregue dos botones, denominados `loadButton` y `cancelLoadButton`, al formulario. Agregue los controladores de eventos <xref:System.Windows.Forms.Control.Click> para iniciar y cancelar la descarga.  
   
      [!code-csharp[System.Windows.Forms.PictureBox.LoadAsync#3](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.PictureBox.LoadAsync/CS/Form1.cs#3)]
      [!code-vb[System.Windows.Forms.PictureBox.LoadAsync#3](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.PictureBox.LoadAsync/VB/Form1.vb#3)]  
@@ -71,5 +74,5 @@ Muchos componentes le ofrecen la opción de realizar su trabajo de forma asincr�
   
 ## <a name="see-also"></a>Vea también  
  [Ejecutar una operación en segundo plano](../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)  
- [Event-based Asynchronous Pattern Overview](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md) (Información general sobre el modelo asincrónico basado en eventos)  
- [NO está en la compilación: Multithreading en Visual Basic](http://msdn.microsoft.com/en-us/c731a50c-09c1-4468-9646-54c86b75d269)
+ [Información general sobre el modelo asincrónico basado en eventos](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)  
+ [NO ESTÁ EN LA COMPILACIÓN: Multithreading en Visual Basic](http://msdn.microsoft.com/library/c731a50c-09c1-4468-9646-54c86b75d269)

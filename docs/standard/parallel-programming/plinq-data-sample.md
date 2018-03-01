@@ -11,25 +11,29 @@ ms.topic: article
 dev_langs:
 - csharp
 - vb
-helpviewer_keywords: PLINQ queries, sample data
+helpviewer_keywords:
+- PLINQ queries, sample data
 ms.assetid: 4fccbb35-eaa5-44e9-a252-a5c3d4bc7604
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: f0e94fec1d1390c68808c06a8ff23f52556c6f74
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 4b1aaa6f3027283ff20088d6122f9b4ec4bb1111
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="plinq-data-sample"></a>Ejemplo de datos de PLINQ
-Este ejemplo contiene datos de ejemplo en formato .csv, junto con métodos que transforman en colecciones en memoria de los clientes, productos, pedidos y detalles del pedido. Desea realizar más pruebas con PLINQ, puede pegar los ejemplos de código de otros temas en el código de este tema e invocarlo desde el `Main` método. También puede usar estos datos con sus propias consultas PLINQ.  
+Este ejemplo contiene datos de ejemplo en formato .csv, junto con métodos que los transforman en colecciones en memoria de clientes, productos, pedidos y detalles de pedidos. Si desea realizar más pruebas con PLINQ, puede pegar los ejemplos de código de otros temas concretos en el código de este tema e invocarlo desde el método `Main`. También puede usar estos datos con sus propias consultas PLINQ.  
   
- Los datos representan un subconjunto de la base de datos Northwind. Cincuenta (50) registros de cliente son campos incluyen, pero no todas. Se incluye un subconjunto de las filas de los pedidos y los datos correspondientes de Order_Detail de cada cliente. Se incluyen todos los productos.  
+ Los datos representan un subconjunto de la base de datos Northwind. Se incluyen cincuenta (50) registros de clientes, pero no todos los campos. Se incluye un subconjunto de filas de los pedidos y los datos correspondientes de los detalles de los pedidos para cada cliente. Se incluyen todos los productos.  
   
 > [!NOTE]
->  El conjunto de datos no es lo suficientemente grande como para demostrar que PLINQ es más rápido que LINQ to Objects para las consultas que contienen solo básica `where` y `select` cláusulas. Para observar aumenta la velocidad de los conjuntos de datos pequeños como este, utilice las consultas que contienen operaciones consumen muchos recursos en todos los elementos del conjunto de datos.  
+>  El conjunto de datos no es lo suficientemente grande para mostrar que PLINQ es más rápido que LINQ to Objects para consultas que contienen solo las cláusulas básicas `where` y `select`. Para observar aumentos de velocidad de conjuntos de datos pequeños como este, use consultas que contengan operaciones caras desde el punto de vista del cálculo en cada elemento del conjunto de datos.  
   
 ### <a name="to-set-up-this-sample"></a>Para configurar este ejemplo  
   
@@ -37,9 +41,9 @@ Este ejemplo contiene datos de ejemplo en formato .csv, junto con métodos que t
   
 2.  Reemplace el contenido de Module1.vb o Program.cs con el código que sigue estos pasos.  
   
-3.  En el menú **Proyecto** , haga clic en **Agregar nuevo elemento**. Seleccione **archivo de texto** y, a continuación, haga clic en **Aceptar**. Copie los datos en este tema y, a continuación, péguelo en el nuevo archivo de texto. En el **archivo** menú, haga clic en **guardar**, asigne al archivo el nombre Plinqdata.csv y, a continuación, guárdelo en la carpeta que contiene los archivos de código fuente.  
+3.  En el menú **Proyecto** , haga clic en **Agregar nuevo elemento**. Seleccione **Archivo de texto** y después haga clic en **Aceptar**. Copie los datos de este tema y, a continuación, péguelos en el nuevo archivo de texto. En el menú **Archivo**, haga clic en **Guardar**, asigne al archivo el nombre Plinqdata.csv y, a continuación, guárdelo en la carpeta que contiene los archivos de código fuente.  
   
-4.  Presione F5 para comprobar que el proyecto se compila y se ejecuta correctamente. El siguiente resultado debe mostrarse en la ventana de consola.  
+4.  Presione F5 para comprobar que el proyecto se compila y ejecuta correctamente. En el resultado siguiente debe mostrarse en la ventana de la consola.  
   
     ```  
     Customer count: 50  

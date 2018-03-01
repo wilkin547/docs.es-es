@@ -8,11 +8,14 @@ ms.topic: article
 ms.custom: updateeachrelease
 ms.prod: .net
 ms.technology: dotnet-standard
-ms.openlocfilehash: 20152a951f11b1b923209b56b31663a9a8a81587
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 838f4f6d78b4544a538e9c4bd6c487bcc731270b
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="target-frameworks"></a>Versiones de .NET Framework de destino
 
@@ -30,9 +33,9 @@ Para plataformas de destino basadas en paquetes (por ejemplo, .NET Standard y .N
 
 En la tabla siguiente, se definen las plataformas de destino más usadas, cómo se hace referencia a ellas y la versión de [.NET Standard](~/docs/standard/net-standard.md) que implementan. Estas versiones de plataformas de destino son las últimas versiones estables. No se muestran las versiones preliminares. Un moniker de la plataforma de destino (TFM) es un formato de token normalizado para especificar la plataforma de destino de una aplicación o biblioteca de .NET. 
 
-| Plataforma de destino      | Última versión | Moniker de la plataforma de destino (TFM) | Implementa <br/> Versión de .NET Standard |
+| Plataforma de destino      | Última versión | Moniker de la plataforma de destino (TFM) | Implementado <br/> Versión de .NET Standard |
 | :-------------------: | :------------: | :----------------------------: | :-------------------------------------: |
-| Estándar .NET         | 2.0            | netstandard2.0                 | N/D                                     |
+| .NET Standard         | 2.0            | netstandard2.0                 | N/D                                     |
 | Aplicación .NET Core | 2.0            | netcoreapp2.0                  | 2.0                                     |
 | .NET Framework        | 4.7.1          | net471                         | 2.0                                     |
 
@@ -42,7 +45,7 @@ Normalmente, un TFM hace referencia a una plataforma de destino. En la tabla sig
 
 | Plataforma de destino           | TFM |
 | -------------------------- | --- |
-| Estándar .NET              | netstandard1.0<br>netstandard1.1<br>netstandard1.2<br>netstandard1.3<br>netstandard1.4<br>netstandard1.5<br>netstandard1.6<br>netstandard2.0 |
+| .NET Standard              | netstandard1.0<br>netstandard1.1<br>netstandard1.2<br>netstandard1.3<br>netstandard1.4<br>netstandard1.5<br>netstandard1.6<br>netstandard2.0 |
 | Núcleo de .NET                  | netcoreapp1.0<br>netcoreapp1.1<br>netcoreapp2.0 |
 | .NET Framework             | net11<br>net20<br>net35<br>net40<br>net403<br>net45<br>net451<br>net452<br>net46<br>net461<br>net462<br>net47<br>net471 |
 | Tienda Windows              | netcore [netcore45]<br>netcore45 [win] [win8]<br>netcore451 [win81] |

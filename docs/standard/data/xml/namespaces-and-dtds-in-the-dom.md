@@ -9,15 +9,18 @@ ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 1e9b55c4-76ad-4f54-8d96-7ce4b4cf1e05
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 87a03883622ba63a8d999907305356905b36bf1c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: cf085cf866ea6034679230115e588024fcd79a11
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="namespaces-and-dtds-in-the-dom"></a>Espacios de nombres y DTD en DOM
 Las definiciones de tipo de documento (DTD) complican la compatibilidad del espacio de nombres. Por ejemplo, el siguiente código XML contiene atributos predeterminados que incluyen signos de dos puntos en su nombre.  
@@ -38,7 +41,7 @@ Las definiciones de tipo de documento (DTD) complican la compatibilidad del espa
   
 -   Cuando el usuario solicita la validación de la DTD, se desactiva la compatibilidad con los espacios de nombres en todo el documento. Esto permite cargar la DTD del W3C y ocasiona un comportamiento predecible.  
   
- Los datos XML de Microsoft .NET Framework implementa la segunda opción para obtener la máxima compatibilidad de W3C.  
+ XML en Microsoft .NET Framework implementa la segunda opción para tener la máxima compatibilidad con el W3C.  
   
 ## <a name="see-also"></a>Vea también  
- [Modelo de objetos de documento (DOM) de XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+ [Document Object Model (DOM) para XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

@@ -14,81 +14,84 @@ helpviewer_keywords:
 - memory use, monitoring
 - application domains, resource monitoring
 ms.assetid: 318bedf8-7f35-4f00-b34a-2b7b8e3fa315
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 62a514f94857044af5020d36a1cfd6ce06741ac7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 648f8b86ecf73a7da5f3f33d71fb8617bacccee1
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="application-domain-resource-monitoring"></a>Supervisión de recursos de dominio de aplicación
-Recursos de dominio de aplicación (ARM) de supervisión permite a los hosts supervisar el uso de CPU y memoria por dominio de aplicación. Esto es útil para los hosts como ASP.NET que utilizan varios dominios de aplicación en un proceso de ejecución prolongada. El host puede descargar el dominio de aplicación de una aplicación que está afectando el rendimiento de todo el proceso, pero solo si puede identificar la aplicación problemática. ARM proporciona información que puede usarse para ayudar a tomar estas decisiones.  
+La supervisión de recursos de dominio de aplicación (ARM) permite a los hosts supervisar el uso de CPU y de memoria por parte del dominio de aplicación. Esto es útil para los hosts como ASP.NET que utilizan varios dominios de aplicación en un proceso de ejecución prolongada. El host puede descargar el dominio de aplicación de una aplicación que afecta negativamente al rendimiento de todo el proceso, pero solo si puede identificar la aplicación problemática. ARM proporciona información que puede usarse para ayudar a tomar estas decisiones.  
   
- Por ejemplo, un servicio de hospedaje podría tener muchas aplicaciones que se ejecutan en un servidor ASP.NET. Si una aplicación en el proceso empieza a consumir demasiada memoria o demasiado tiempo de procesador, el servicio de hospedaje puede usar ARM para identificar el dominio de aplicación que está causando el problema.  
+ Por ejemplo, un servicio de hospedaje podría tener muchas aplicaciones que se ejecutan en un servidor ASP.NET. Si una aplicación del proceso empieza a consumir demasiada memoria o demasiado tiempo de procesador, el servicio de hospedaje puede usar ARM para identificar el dominio de aplicación que causa el problema.  
   
- ARM es lo bastante ligera para utilizarla en aplicaciones activas. Puede tener acceso a la información mediante el uso de seguimiento de eventos para Windows (ETW) o directamente a través de API administradas o nativas.  
+ ARM es lo bastante ligero para utilizarlo en aplicaciones dinámicas. Puede acceder a la información mediante el uso del Seguimiento de eventos para Windows (ETW) o directamente a través de API administradas o nativas.  
   
-## <a name="enabling-resource-monitoring"></a>Habilitar la supervisión de recursos  
- ARM se puede habilitar de cuatro maneras: proporcionando un archivo de configuración cuando se inicia common language runtime (CLR), mediante el uso de no administrado API de hospedaje, mediante código administrado, o escuchando los eventos ETW de ARM.  
+## <a name="enabling-resource-monitoring"></a>Habilitación de la supervisión de recursos  
+ ARM se puede habilitar de cuatro maneras: proporcionando un archivo de configuración cuando se inicia Common Language Runtime (CLR), mediante el uso de API de hospedaje no administradas, mediante código administrado o escuchando los eventos ETW de ARM.  
   
- Tan pronto como se habilita la ARM, comienza a recopilar datos en todos los dominios de aplicación en el proceso. Si un dominio de aplicación se creó antes de habilita la ARM, datos acumulados se inician cuando se habilita la ARM, no cuando se creó el dominio de aplicación. Una vez habilitada, no se puede deshabilitar ARM.  
+ En cuanto se habilita ARM, comienza a recopilar datos en todos los dominios de aplicación del proceso. Si un dominio de aplicación se creó antes de habilitar ARM, los datos acumulativos se inician cuando se habilita ARM, no cuando se creó el dominio de aplicación. Una vez habilitado ARM, no se puede deshabilitar.  
   
--   Puede habilitar la ARM al iniciar el CLR agregando el [ \<appDomainResourceMonitoring >](../../../docs/framework/configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md) elemento en el archivo de configuración y el establecimiento la `enabled` atribuir a `true`. Un valor de `false` (el valor predeterminado) solo significa que no se habilita la ARM durante el inicio; puede activarla posteriormente mediante uno de los otros mecanismos de activación.  
+-   Puede habilitar ARM al iniciar el CLR agregando el elemento [\<appDomainResourceMonitoring>](../../../docs/framework/configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md) al archivo de configuración y estableciendo el atributo `enabled` en `true`. Un valor de `false` (el valor predeterminado) solo significa que no se habilita ARM durante el inicio; puede activarlo posteriormente mediante uno de los otros mecanismos de activación.  
   
--   El host puede habilitar la ARM solicitando la [ICLRAppDomainResourceMonitor](../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-interface.md) interfaz de hospedaje. Una vez que esta interfaz se obtuvo correctamente, se habilita la ARM.  
+-   El host puede habilitar ARM solicitando la interfaz de hospedaje [ICLRAppDomainResourceMonitor](../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-interface.md). Una vez que esta interfaz se obtiene correctamente, se habilita ARM.  
   
--   Código administrado puede habilitar la ARM estableciendo el método estático (`Shared` en Visual Basic) <xref:System.AppDomain.MonitoringIsEnabled%2A?displayProperty=nameWithType> propiedad `true`. En cuanto se establece la propiedad, se habilita la ARM.  
+-   El código administrado puede habilitar ARM estableciendo la propiedad estática <xref:System.AppDomain.MonitoringIsEnabled%2A?displayProperty=nameWithType> (`Shared` en Visual Basic) en `true`. En cuanto se establece la propiedad, se habilita ARM.  
   
--   Puede habilitar la ARM después del inicio escuchando los eventos ETW. ARM se habilita y comienza a generar eventos para todos los dominios de aplicación cuando se habilita el proveedor público `Microsoft-Windows-DotNETRuntime` mediante el uso de la `AppDomainResourceManagementKeyword` (palabra clave). Para correlacionar datos con dominios de aplicación y los subprocesos, debe habilitar también la `Microsoft-Windows-DotNETRuntimeRundown` proveedor con el `ThreadingKeyword` palabra clave.  
+-   Puede habilitar ARM después del inicio escuchando los eventos ETW. ARM se habilita y comienza a generar eventos para todos los dominios de aplicación cuando se habilita el proveedor público `Microsoft-Windows-DotNETRuntime` mediante el uso de la palabra clave `AppDomainResourceManagementKeyword`. Para correlacionar datos con dominios de aplicación y subprocesos, debe habilitar también el proveedor `Microsoft-Windows-DotNETRuntimeRundown` con la palabra clave `ThreadingKeyword`.  
   
-## <a name="using-arm"></a>Utilizar la ARM  
- ARM proporciona el tiempo de procesador total que se usa un dominio de aplicación y tres tipos de información sobre el uso de memoria.  
+## <a name="using-arm"></a>Uso de ARM  
+ ARM proporciona el tiempo de procesador total que un dominio de aplicación usa y tres tipos de información sobre el uso de memoria.  
   
--   **Total de tiempo de procesador para un dominio de aplicación, en segundos**: Esto se calcula sumando los tiempos de los subprocesos notificados por el sistema operativo en todos los subprocesos que dedicaron tiempo a ejecutarse en el dominio de aplicación durante su duración. Bloqueada o subprocesos inactivos no usan el tiempo de procesador. Cuando un subproceso llama a código nativo, el tiempo que invierte en el subproceso en código nativo se incluye en el recuento para el dominio de aplicación donde se realiza la llamada.  
+-   **Total de tiempo de procesador para un dominio de aplicación, en segundos**: esto se calcula con la suma de los tiempos de los subprocesos notificados por el sistema operativo en todos los subprocesos que dedicaron tiempo a ejecutarse en el dominio de aplicación durante su vigencia. Los subprocesos bloqueados o inactivos no usan tiempo de procesador. Cuando un subproceso llama a código nativo, el tiempo que el subproceso emplea en el código nativo se incluye en el recuento del dominio de aplicación donde se realizó la llamada.  
   
-    -   API administrada: <xref:System.AppDomain.MonitoringTotalProcessorTime%2A?displayProperty=nameWithType> propiedad.  
+    -   API administrada: propiedad <xref:System.AppDomain.MonitoringTotalProcessorTime%2A?displayProperty=nameWithType>.  
   
-    -   API de hospedaje: [ICLRAppDomainResourceMonitor:: GetCurrentCpuTime](../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-getcurrentcputime-method.md) método.  
+    -   API de hospedaje: método [ICLRAppDomainResourceMonitor::GetCurrentCpuTime](../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-getcurrentcputime-method.md).  
   
-    -   Eventos ETW: `ThreadCreated`, `ThreadAppDomainEnter`, y `ThreadTerminated` eventos. Para obtener información acerca de los proveedores y las palabras clave, vea "Eventos de supervisión de recursos de dominio de aplicación" en [eventos de ETW de CLR](../../../docs/framework/performance/clr-etw-events.md).  
+    -   Eventos ETW: eventos `ThreadCreated`, `ThreadAppDomainEnter` y `ThreadTerminated`. Para obtener información sobre los proveedores y las palabras clave, vea "Eventos de supervisión de recursos de dominio de aplicación" en [Eventos ETW de CLR](../../../docs/framework/performance/clr-etw-events.md).  
   
--   **Total administrado las asignaciones realizadas por un dominio de aplicación durante su duración, en bytes**: las asignaciones totales no siempre reflejan el uso de memoria de un dominio de aplicación, porque los objetos asignados podrían ser de corta duración. Sin embargo, si una aplicación asigna y libera a grandes cantidades de objetos, el costo de las asignaciones podría ser significativo.  
+-   **Asignaciones administradas totales realizadas por un dominio de aplicación durante su vigencia, en bytes**: el total de asignaciones no siempre refleja la memoria que un dominio de aplicación usa, porque los objetos asignados pueden ser de corta duración. Sin embargo, si una aplicación asigna y libera grandes cantidades de objetos, el costo de las asignaciones podría ser significativo.  
   
-    -   API administrada: <xref:System.AppDomain.MonitoringTotalAllocatedMemorySize%2A?displayProperty=nameWithType> propiedad.  
+    -   API administrada: propiedad <xref:System.AppDomain.MonitoringTotalAllocatedMemorySize%2A?displayProperty=nameWithType>.  
   
-    -   API de hospedaje: [ICLRAppDomainResourceMonitor:: GetCurrentAllocated](../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-getcurrentallocated-method.md) método.  
+    -   API de hospedaje: método [ICLRAppDomainResourceMonitor::GetCurrentAllocated](../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-getcurrentallocated-method.md).  
   
-    -   Eventos ETW: `AppDomainMemAllocated` eventos, `Allocated` campo.  
+    -   Eventos ETW: evento `AppDomainMemAllocated`, campo `Allocated`.  
   
--   **Administra la memoria, expresado en bytes, que se hace referencia a un dominio de aplicación y que sobrevivieron a la última recolección completa de bloqueo**: este número es preciso solo después de una completa colección de bloqueo. (Esto es a diferencia de las recolecciones simultáneas, que se producen en segundo plano y no bloquea la aplicación). Por ejemplo, el <xref:System.GC.Collect?displayProperty=nameWithType> sobrecarga del método hace que una recolección completa de bloqueo.  
+-   **Memoria administrada, en bytes, a la que hace referencia un dominio de aplicación y que supervisó la colección con bloqueo completo más reciente**: este número es preciso solo después del bloqueo completo de una colección. (Esto difiere de las colecciones simultáneas, que se producen en segundo plano y no bloquean la aplicación). Por ejemplo, la sobrecarga del método <xref:System.GC.Collect?displayProperty=nameWithType> genera una colección con bloqueo completo.  
   
-    -   API administrada: <xref:System.AppDomain.MonitoringSurvivedMemorySize%2A?displayProperty=nameWithType> propiedad.  
+    -   API administrada: propiedad <xref:System.AppDomain.MonitoringSurvivedMemorySize%2A?displayProperty=nameWithType>.  
   
-    -   API de hospedaje: [ICLRAppDomainResourceMonitor:: GetCurrentSurvived](../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-getcurrentsurvived-method.md) método `pAppDomainBytesSurvived` parámetro.  
+    -   API de hospedaje: método [ICLRAppDomainResourceMonitor::GetCurrentSurvived](../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-getcurrentsurvived-method.md), parámetro `pAppDomainBytesSurvived`.  
   
-    -   Eventos ETW: `AppDomainMemSurvived` eventos, `Survived` campo.  
+    -   Eventos ETW: evento `AppDomainMemSurvived`, campo `Survived`.  
   
--   **Total de memoria administrada, en bytes, que hace referencia el proceso y que sobrevivieron a la última recolección completa de bloqueo**: la memoria que sobrevivió para dominios de aplicación individuales se puede comparar con este número.  
+-   **Total de memoria administrada, en bytes, a la que hace referencia el proceso cuya duración va más allá de la colección con bloqueo completo más reciente**: la memoria de duración superior para los dominios de aplicación individuales puede compararse con este número.  
   
-    -   API administrada: <xref:System.AppDomain.MonitoringSurvivedProcessMemorySize%2A?displayProperty=nameWithType> propiedad.  
+    -   API administrada: propiedad <xref:System.AppDomain.MonitoringSurvivedProcessMemorySize%2A?displayProperty=nameWithType>.  
   
-    -   API de hospedaje: [ICLRAppDomainResourceMonitor:: GetCurrentSurvived](../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-getcurrentsurvived-method.md) método `pTotalBytesSurvived` parámetro.  
+    -   API de hospedaje: método [ICLRAppDomainResourceMonitor::GetCurrentSurvived](../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-getcurrentsurvived-method.md), parámetro `pTotalBytesSurvived`.  
   
-    -   Eventos ETW: `AppDomainMemSurvived` eventos, `ProcessSurvived` campo.  
+    -   Eventos ETW: evento `AppDomainMemSurvived`, campo `ProcessSurvived`.  
   
-### <a name="determining-when-a-full-blocking-collection-occurs"></a>Determinar cuándo un completo, colección de bloqueo se produce  
- Para determinar cuándo son precisos los recuentos de memoria que sobrevivió, necesita saber cuándo solo se produce una recolección completa de bloqueo. El método para hacer esto depende de la API que se utiliza para examinar las estadísticas ARM.  
+### <a name="determining-when-a-full-blocking-collection-occurs"></a>Determinación de la ocurrencia de una colección con bloqueo completo  
+ Para determinar cuándo son precisos los recuentos de memoria de mayor duración, es necesario saber cuándo se produce una colección con bloqueo completo. El método para hacer esto depende de la API que se utiliza para examinar las estadísticas de ARM.  
   
 #### <a name="managed-api"></a>API administrada  
- Si utiliza las propiedades de la <xref:System.AppDomain> (clase), puede usar el <xref:System.GC.RegisterForFullGCNotification%2A?displayProperty=nameWithType> método para registrarse para recibir notificaciones de las recolecciones completas. El umbral que se utiliza no es importante, porque se está esperando la finalización de una colección en lugar de con el enfoque de una colección. A continuación, puede llamar a la <xref:System.GC.WaitForFullGCComplete%2A?displayProperty=nameWithType> método, que se bloquea hasta que haya completado una recolección completa. Puede crear un subproceso que llama al método en un bucle y realiza el análisis necesario cada vez que el método devuelve.  
+ Si usa las propiedades de la clase <xref:System.AppDomain>, puede usar el método <xref:System.GC.RegisterForFullGCNotification%2A?displayProperty=nameWithType> para registrar la notificación de las colecciones completas. El umbral utilizado no es importante, ya que se espera a la finalización de una colección y no al enfoque de una colección. A continuación, puede llamar al método <xref:System.GC.WaitForFullGCComplete%2A?displayProperty=nameWithType>, que se bloquea hasta que finaliza una colección completa. Puede crear un subproceso que llame al método en un bucle y que realice cualquier análisis necesario de lo que el método devuelve.  
   
- Como alternativa, puede llamar a la <xref:System.GC.CollectionCount%2A?displayProperty=nameWithType> método periódicamente para ver si ha aumentado el número de recolecciones de generación 2. Dependiendo de la frecuencia de sondeo, esta técnica podría no proporcionar tan precisa una indicación de la aparición de una recolección completa.  
+ Como alternativa, puede llamar al método <xref:System.GC.CollectionCount%2A?displayProperty=nameWithType> periódicamente para ver si ha aumentado el número de colecciones de generación 2. Dependiendo de la frecuencia de sondeo, esta técnica podría no proporcionar una indicación lo suficientemente precisa de la ocurrencia de una colección completa.  
   
 #### <a name="hosting-api"></a>API de hospedaje  
- Si utiliza la API de hospedaje no administrada, el host debe pasar al CLR una implementación de la [IHostGCManager](../../../docs/framework/unmanaged-api/hosting/ihostgcmanager-interface.md) interfaz. CLR llama el [IHostGCManager:: SuspensionEnding](../../../docs/framework/unmanaged-api/hosting/ihostgcmanager-suspensionending-method.md) método cuando reanuda la ejecución de subprocesos que se han suspendido durante una recolección se produce. El CLR pasa la generación de la recolección completada como un parámetro del método, por lo que el host puede determinar si la colección se completa o parcial. La implementación de la [IHostGCManager:: SuspensionEnding](../../../docs/framework/unmanaged-api/hosting/ihostgcmanager-suspensionending-method.md) método puede consultar la memoria que sobrevivió, para asegurarse de que se recuperan los recuentos en cuanto se actualizan.  
+ Si utiliza la API de hospedaje no administrada, el host debe pasar al CLR una implementación de la interfaz [IHostGCManager](../../../docs/framework/unmanaged-api/hosting/ihostgcmanager-interface.md). El CLR llama al método [IHostGCManager::SuspensionEnding](../../../docs/framework/unmanaged-api/hosting/ihostgcmanager-suspensionending-method.md) cuando reanuda la ejecución de los subprocesos suspendidos durante la ocurrencia de una colección. El CLR pasa la generación de la colección completada como un parámetro del método, por lo que el host puede determinar si la colección se completó de forma total o parcial. La implementación del método [IHostGCManager::SuspensionEnding](../../../docs/framework/unmanaged-api/hosting/ihostgcmanager-suspensionending-method.md) puede consultar la memoria de duración superior, a fin de garantizar la recuperación de los recuentos en cuando se actualizan.  
   
 ## <a name="see-also"></a>Vea también  
  <xref:System.AppDomain.MonitoringIsEnabled%2A?displayProperty=nameWithType>  

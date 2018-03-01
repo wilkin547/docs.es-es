@@ -15,28 +15,31 @@ helpviewer_keywords:
 - Dispose method
 - garbage collection, Dispose method
 ms.assetid: eb4e1af0-3b48-4fbc-ad4e-fc2f64138bf9
-caps.latest.revision: "44"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: b5a304c48a953b172cbcc3aa1c717a660298d36a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 404fdece284accf305ef3cf2324be2e37a8da4b6
+ms.sourcegitcommit: bf8a3ba647252010bdce86dd914ac6c61b5ba89d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/06/2018
 ---
 # <a name="implementing-a-dispose-method"></a>Implementar un método Dispose
 
-Implementar un <xref:System.IDisposable.Dispose%2A> método para liberar recursos no administrados utilizados por la aplicación. El recolector de elementos no utilizados de .NET no asigna ni libera memoria no administrada.  
+El método <xref:System.IDisposable.Dispose%2A> se implementa para liberar recursos no administrados que la aplicación usa. El recolector de elementos no utilizados de .NET no asigna ni libera memoria no administrada.  
   
-El patrón para desechar un objeto conoce como un [patrón de dispose](../../../docs/standard/design-guidelines/dispose-pattern.md), imponer orden sobre la duración de un objeto. El patrón de Dispose se utiliza solo con los objetos que tienen acceso a recursos no administrados, como identificadores de archivo y de canalización, identificadores de registro, identificadores de espera o punteros a bloques de memoria sin administrar. Esto se debe a que el recolector de elementos no utilizados es muy eficaz a la hora de reclamar objetos administrados no usados, aunque no puede reclamar objetos no administrados.  
+El modelo para desechar un objeto, lo que se conoce como [modelo de Dispose](../../../docs/standard/design-guidelines/dispose-pattern.md), sirve para imponer orden sobre la duración de un objeto. El patrón de Dispose se utiliza solo con los objetos que tienen acceso a recursos no administrados, como identificadores de archivo y de canalización, identificadores de registro, identificadores de espera o punteros a bloques de memoria sin administrar. Esto se debe a que el recolector de elementos no utilizados es muy eficaz a la hora de reclamar objetos administrados no usados, aunque no puede reclamar objetos no administrados.  
   
 El patrón de Dispose tiene dos variaciones:  
   
 * Incluir los recursos no administrados que utilice un tipo en un controlador seguro (es decir, en una clase derivada de <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType>). En este caso, se implementa la interfaz <xref:System.IDisposable> y un método `Dispose(Boolean)` adicional. Esta es la variación recomendada y no requiere invalidar el método <xref:System.Object.Finalize%2A?displayProperty=nameWithType>.  
   
   > [!NOTE]
-  > El <xref:Microsoft.Win32.SafeHandles?displayProperty=nameWithType> espacio de nombres proporciona un conjunto de clases derivadas de <xref:System.Runtime.InteropServices.SafeHandle>, que se enumeran en la [con controladores seguros](#SafeHandles) sección. Si no encuentra ninguna clase que sea capaz de liberar el recurso no administrado, puede implementar su propia subclase de <xref:System.Runtime.InteropServices.SafeHandle>.  
+  > El espacio de nombres <xref:Microsoft.Win32.SafeHandles?displayProperty=nameWithType> proporciona un conjunto de clases derivadas de <xref:System.Runtime.InteropServices.SafeHandle> que aparecen enumeradas en la sección [Uso de controladores seguros](#SafeHandles). Si no encuentra ninguna clase que sea capaz de liberar el recurso no administrado, puede implementar su propia subclase de <xref:System.Runtime.InteropServices.SafeHandle>.  
   
 * Puede implementar la interfaz <xref:System.IDisposable> y un método `Dispose(Boolean)` adicional, así como invalidar el método <xref:System.Object.Finalize%2A?displayProperty=nameWithType>. Debe invalidar <xref:System.Object.Finalize%2A> para asegurarse de que los recursos no administrados se eliminan en el caso de que un consumidor de su tipo no llame a la implementación <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType>. Si utiliza la técnica recomendada analizada en el punto anterior, la clase <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType> realiza este procedimiento en su nombre.  
   
@@ -67,7 +70,7 @@ El método `Dispose` limpia todos los objetos, por lo que el recolector de eleme
   
 ### <a name="the-disposeboolean-overload"></a>La sobrecarga Dispose(Boolean)
 
-En la segunda sobrecarga, el *desechar* parámetro es un <xref:System.Boolean> que indica si la llamada al método procede de un <xref:System.IDisposable.Dispose%2A> método (su valor es `true`) o de un finalizador (su valor es `false`).  
+En la segunda sobrecarga, el parámetro *disposing* es un valor <xref:System.Boolean> que indica si la llamada al método procede de un método <xref:System.IDisposable.Dispose%2A> (su valor es `true`) o de un finalizador (su valor es `false`).  
   
 El cuerpo del método consta de dos bloques de código:  
   
@@ -108,13 +111,13 @@ A continuación se muestra el patrón general para implementar el patrón de Dis
 [!code-vb[System.IDisposable#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.idisposable/vb/base2.vb#5)]  
   
 > [!NOTE]
-> En C#, invalida <xref:System.Object.Finalize%2A?displayProperty=nameWithType> definiendo un [destructor](~/docs/csharp/programming-guide/classes-and-structs/destructors.md).  
+> En C#, invalida a <xref:System.Object.Finalize%2A?displayProperty=nameWithType> definiendo un [destructor](~/docs/csharp/programming-guide/classes-and-structs/destructors.md).  
   
 ## <a name="implementing-the-dispose-pattern-for-a-derived-class"></a>Implementación del patrón de Dispose para una clase derivada
 
 Una clase derivada de una clase que implemente la interfaz <xref:System.IDisposable> no debe implementar <xref:System.IDisposable>, porque la implementación de la clase base de <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> la heredan sus clases derivadas. En su lugar, para implementar el patrón de Dispose para una clase derivada, debe proporcionar lo siguiente:  
   
-* Un método `protected``Dispose(Boolean)` que invalide el método de la clase base y realice el trabajo real de liberar los recursos de la clase derivada. Este método también debe llamar al método `Dispose(Boolean)` de la clase base y pasarle un valor `true` para el argumento *disposing*.  
+* Un método `protected Dispose(Boolean)` que invalide el método de la clase base y realice el trabajo real de liberar los recursos de la clase derivada. Este método también debe llamar al método `Dispose(Boolean)` de la clase base y pasarle un valor `true` para el argumento *disposing*.  
   
 * Una clase derivada de <xref:System.Runtime.InteropServices.SafeHandle> que contiene el recurso no administrado (recomendado), o una invalidación del método <xref:System.Object.Finalize%2A?displayProperty=nameWithType>. La clase <xref:System.Runtime.InteropServices.SafeHandle> proporciona un finalizador que evita que tenga que codificar uno. Si proporciona un finalizador, debe llamar a la sobrecarga de `Dispose(Boolean)` con un argumento *disposing* que sea `false`.  
   
@@ -132,7 +135,7 @@ A continuación se muestra el patrón general para implementar el patrón de Dis
 [!code-vb[System.IDisposable#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.idisposable/vb/derived2.vb#6)]  
   
 > [!NOTE]
-> En C#, invalida <xref:System.Object.Finalize%2A?displayProperty=nameWithType> definiendo un [destructor](~/docs/csharp/programming-guide/classes-and-structs/destructors.md).  
+> En C#, invalida a <xref:System.Object.Finalize%2A?displayProperty=nameWithType> definiendo un [destructor](~/docs/csharp/programming-guide/classes-and-structs/destructors.md).  
   
 <a name="SafeHandles"></a>   
 ## <a name="using-safe-handles"></a>Uso de controladores seguros
@@ -175,5 +178,5 @@ En el ejemplo siguiente se muestra el patrón de Dispose para una clase derivada
 <xref:Microsoft.Win32.SafeHandles>   
 <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType>   
 <xref:System.Object.Finalize%2A?displayProperty=nameWithType>   
-[Cómo: definir y utilizar clases y Structs (C++ / CLI)](/cpp/dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli)   
+[Cómo: Definir y usar clases y structs (C++/CLI)](/cpp/dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli)   
 [Patrón de Dispose](../../../docs/standard/design-guidelines/dispose-pattern.md)

@@ -12,15 +12,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e25dd95f-b64c-4d8b-a3a4-379e1aa0ad55
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 8f7b812d5d6f75e39e9eebcc003686ff88d009e9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: e6ff5661a7e78f9b37f16acc86834561fc697bcc
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="compiled-xpath-expressions"></a>Expresiones XPath compiladas
 Un objeto <xref:System.Xml.XPath.XPathExpression> representa una consulta XPath compilada devuelta desde el método <xref:System.Xml.XPath.XPathExpression.Compile%2A> estático de la clase <xref:System.Xml.XPath.XPathExpression> o desde el método <xref:System.Xml.XPath.XPathNavigator.Compile%2A> de la clase <xref:System.Xml.XPath.XPathNavigator>.  
@@ -44,10 +47,10 @@ Un objeto <xref:System.Xml.XPath.XPathExpression> representa una consulta XPath 
   
  En la siguiente tabla se describe cada uno de los tipos de valores devueltos de XPath del W3C, sus equivalencias en Microsoft .NET Framework y con qué métodos se puede utilizar el objeto <xref:System.Xml.XPath.XPathExpression> basándose en su tipo de valor devuelto.  
   
-|Tipo de valor devuelto de XPath del W3C|Tipo equivalente en .NET Framework|Descripción|Métodos|  
+|Tipo de valor devuelto de XPath del W3C|Tipo equivalente en .NET Framework|Description|Métodos|  
 |---------------------------|------------------------------------|-----------------|-------------|  
 |`Node set`|<xref:System.Xml.XPath.XPathNodeIterator>|Una colección no ordenada de nodos sin duplicados creados en el orden del documento.|<xref:System.Xml.XPath.XPathNavigator.Select%2A> o <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A>|  
-|`Boolean`|<xref:System.Boolean>|Un valor `true` o `false`.|<xref:System.Xml.XPath.XPathNavigator.Evaluate%2A> o<br /><br /> <xref:System.Xml.XPath.XPathNavigator.Matches%2A>|  
+|`Boolean`|<xref:System.Boolean>|Un valor `true` o `false`.|<xref:System.Xml.XPath.XPathNavigator.Evaluate%2A>, o bien<br /><br /> <xref:System.Xml.XPath.XPathNavigator.Matches%2A>|  
 |`Number`|<xref:System.Double>|Número en punto flotante.|<xref:System.Xml.XPath.XPathNavigator.Evaluate%2A>|  
 |`String`|<xref:System.String>|Una secuencia de caracteres UCS.|<xref:System.Xml.XPath.XPathNavigator.Evaluate%2A>|  
   
@@ -124,7 +127,7 @@ Console.WriteLine(nodes.Current.Value);
   
  Además, el uso de métodos de navegación por conjuntos de nodos que proporciona la clase <xref:System.Xml.XPath.XPathNavigator>, puede producir una mejora del rendimiento con respecto a los métodos de selección que proporciona la clase <xref:System.Xml.XPath.XPathNavigator> en los casos en los que los criterios de selección sean sencillos. Por ejemplo, si tiene que seleccionar el primer nodo secundario del nodo actual, es más rápido utilizar el método <xref:System.Xml.XPath.XPathNavigator.MoveToFirst%2A> que la expresión XPath `child::*[1]` y el método <xref:System.Xml.XPath.XPathNavigator.Select%2A>.  
   
- Para obtener más información acerca del nodo establecer métodos de navegación de la <xref:System.Xml.XPath.XPathNavigator> de clases, consulte [nodo Set Navigation Using XPathNavigator](../../../../docs/standard/data/xml/node-set-navigation-using-xpathnavigator.md).  
+ Para obtener más información sobre los métodos de navegación por conjuntos de nodos de la clase <xref:System.Xml.XPath.XPathNavigator>, vea [Navegación por un conjunto de nodos con XPathNavigator](../../../../docs/standard/data/xml/node-set-navigation-using-xpathnavigator.md).  
   
 ## <a name="see-also"></a>Vea también  
  <xref:System.Xml.XmlDocument>  
@@ -132,7 +135,7 @@ Console.WriteLine(nodes.Current.Value);
  <xref:System.Xml.XPath.XPathNavigator>  
  [Procesamiento de datos XML con el modelo de datos XPath](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)  
  [Seleccionar datos XML con XPathNavigator](../../../../docs/standard/data/xml/select-xml-data-using-xpathnavigator.md)  
- [Evaluar expresiones XPath con XPathNavigator](../../../../docs/standard/data/xml/evaluate-xpath-expressions-using-xpathnavigator.md)  
+ [Evaluación de expresiones XPath con XPathNavigator](../../../../docs/standard/data/xml/evaluate-xpath-expressions-using-xpathnavigator.md)  
  [Coincidencia de nodos con XPathNavigator](../../../../docs/standard/data/xml/matching-nodes-using-xpathnavigator.md)  
  [Tipos de nodos reconocidos con consultas XPath](../../../../docs/standard/data/xml/node-types-recognized-with-xpath-queries.md)  
  [Espacios de nombres y consultas XPath](../../../../docs/standard/data/xml/xpath-queries-and-namespaces.md)

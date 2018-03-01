@@ -2,47 +2,46 @@
 title: Modificadores de acceso (Referencia de C#)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
-helpviewer_keywords: access modifiers [C#]
+helpviewer_keywords:
+- access modifiers [C#]
 ms.assetid: 61c3fa51-c00f-48cb-9b49-c805dedd62d7
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 23f99d0925aefde7ef43888d16e888a0943dfc21
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d63cf724a2364059e5f3327254a9ec95f7493e5e
+ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="access-modifiers-c-reference"></a>Modificadores de acceso (Referencia de C#)
 Los modificadores de acceso son palabras clave que se usan para especificar la accesibilidad declarada de un miembro o un tipo. En esta sección se presentan los cuatro modificadores de acceso:  
   
--   [public](../../../csharp/language-reference/keywords/public.md)  
+-   `public`
+-   `protected`
+-   `internal`
+-   `private`
   
--   [protected](../../../csharp/language-reference/keywords/protected.md)  
+ Pueden especificarse los siguientes seis niveles de accesibilidad con los modificadores de acceso:  
   
--   [internal](../../../csharp/language-reference/keywords/internal.md)  
+- [`public`](public.md): el acceso no está restringido.  
   
--   [private](../../../csharp/language-reference/keywords/private.md)  
+- [`protected`](protected.md): el acceso está limitado a la clase contenedora o a los tipos derivados de la clase contenedora.  
   
- Los siguientes seis niveles de accesibilidad pueden especificarse mediante los modificadores de acceso:  
+- [`internal`](internal.md): el acceso está limitado al ensamblado actual.  
   
- `public`: el acceso no está restringido.  
+- [`protected internal`](protected-internal.md): el acceso está limitado al ensamblado actual o a los tipos derivados de la clase contenedora.  
   
- `protected`: el acceso está limitado a la clase contenedora o a los tipos derivados de la clase contenedora.  
-  
- `internal`: el acceso está limitado al ensamblado actual.  
-  
- [`protected internal`](../../../csharp/language-reference/keywords/protected-internal.md): Acceso está limitado al ensamblado actual o tipos derivados de la clase contenedora.  
-  
- `private`: el acceso está limitado al tipo contenedor.  
+- [`private`](private.md): el acceso está limitado al tipo contenedor.  
 
- [`private protected`](../../../csharp/language-reference/keywords/private-protected.md): Acceso está limitado a la clase contenedora o tipos derivados de la clase contenedora dentro del ensamblado actual.  
+- [`private protected`](private-protected.md): el acceso está limitado a la clase contenedora o a los tipos derivados de la clase contenedora que hay en el ensamblado actual.  
   
  En esta sección también se presenta lo siguiente:  
   
--   [Niveles de accesibilidad](../../../csharp/language-reference/keywords/accessibility-levels.md): mediante los modificadores de cuatro acceso para declarar los seis niveles de accesibilidad.  
+-   [Niveles de accesibilidad](../../../csharp/language-reference/keywords/accessibility-levels.md): usar los cuatro modificadores de acceso para declarar seis niveles de accesibilidad.  
   
 -   [Dominio de accesibilidad](../../../csharp/language-reference/keywords/accessibility-domain.md): especifica en qué secciones del programa se puede hacer referencia a dicho miembro.  
   

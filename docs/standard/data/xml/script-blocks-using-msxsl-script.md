@@ -12,18 +12,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fde6f43f-c594-486f-abcb-2211197fae20
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 2e127fb02725d11e62c45157b4e45327fc9f1ace
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: badf5511c5638d98d25997f31a3aff8dc11144d6
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="script-blocks-using-msxslscript"></a>Bloques de scripts con msxsl:script
-La clase <xref:System.Xml.Xsl.XslCompiledTransform> admite scripts incrustados mediante el elemento `msxsl:script`. Cuando se carga la hoja de estilos, cualquier función definida se compila en el lenguaje intermedio de Microsoft (MSIL) por medio del Modelo de objetos de documento de código (CodeDOM) y se ejecutan en tiempo de ejecución. El ensamblado que se genera a partir del bloque de scripts incrustado es distinto al ensamblado que se genera para la hoja de estilos.  
+La clase <xref:System.Xml.Xsl.XslCompiledTransform> admite scripts incrustados mediante el elemento `msxsl:script`. Cuando se carga la hoja de estilos, cualquier función definida se compila en el lenguaje intermedio de Microsoft (MSIL) por medio del Code Document Object Model (CodeDOM) y se ejecutan en tiempo de ejecución. El ensamblado que se genera a partir del bloque de scripts incrustado es distinto al ensamblado que se genera para la hoja de estilos.  
   
 ## <a name="enable-xslt-script"></a>Cómo habilitar el script XSLT  
  La compatibilidad con scripts incrustados es un valor XSLT opcional de la clase <xref:System.Xml.Xsl.XslCompiledTransform>. Esta compatibilidad está deshabilitada de manera predeterminada. Para habilitarla, cree un objeto <xref:System.Xml.Xsl.XsltSettings> con el conjunto de propiedades <xref:System.Xml.Xsl.XsltSettings.EnableScript%2A> establecido en `true` y pase el objeto al método <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A>.  
@@ -68,7 +71,7 @@ La clase <xref:System.Xml.Xsl.XslCompiledTransform> admite scripts incrustados m
 |`Result Tree Fragment`|<xref:System.Xml.XPath.XPathNavigator>|  
 |`Node Set`|<xref:System.Xml.XPath.XPathNodeIterator>|  
   
- Los tipos CLR numéricos se convierten en <xref:System.Double>. El tipo <xref:System.DateTime> se convierte en <xref:System.String>. Los tipos <xref:System.Xml.XPath.IXPathNavigable> se convierten en <xref:System.Xml.XPath.XPathNavigator>. **XPathNavigator []** se convierte en <xref:System.Xml.XPath.XPathNodeIterator>.  
+ Los tipos CLR numéricos se convierten en <xref:System.Double>. El tipo <xref:System.DateTime> se convierte en <xref:System.String>. Los tipos <xref:System.Xml.XPath.IXPathNavigable> se convierten en <xref:System.Xml.XPath.XPathNavigator>. **XPathNavigator[]** se convierte en <xref:System.Xml.XPath.XPathNodeIterator>.  
   
  El resto de los tipos inician un error.  
   
@@ -140,7 +143,7 @@ La clase <xref:System.Xml.Xsl.XslCompiledTransform> admite scripts incrustados m
 #### <a name="calcxsl"></a>calc.xsl  
  [!code-xml[XSLT_Script#3](../../../../samples/snippets/xml/VS_Snippets_Data/XSLT_Script/XML/calc.xsl#3)]  
   
-### <a name="output"></a>Resultado  
+### <a name="output"></a>Salida  
   
 ```xml  
 <circles xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:user="urn:my-scripts">  

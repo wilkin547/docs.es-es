@@ -12,29 +12,32 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 00833027-1428-4586-83c1-42f5de3323d1
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: fab67e10aa0562b59f8c7704a5ca1feeb66d6208
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: f875169d43a2f733050b46c76cea0891b4cfabf7
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="xdr-validation-with-xmlschemacollection"></a>Validación de XDR con XmlSchemaCollection
-Si va a validar en el esquema de datos XML reducidos (XDR) se almacena en la **XmlSchemaCollection**, está asociado con el espacio de nombres URI especificado cuando el esquema se agregó a la colección. **XmlValidatingReader** asigna el URI de espacio de nombres en el documento XML al esquema que corresponde a ese URI en la colección.  
+Si el esquema reducido de datos XML (XDR) que va a utilizar para la validación se almacena en **XmlSchemaCollection**, se asociará al identificador URI de espacio de nombres que se especificó al agregar el esquema a la colección. **XmlValidatingReader** asigna el URI de espacio de nombres del documento XML al esquema que corresponde a ese URI en la colección.  
   
 > [!IMPORTANT]
->  La clase <xref:System.Xml.Schema.XmlSchemaCollection> está obsoleta y ha sido reemplazada por la clase <xref:System.Xml.Schema.XmlSchemaSet>. Para obtener más información sobre la <xref:System.Xml.Schema.XmlSchemaSet> , vea clase [XmlSchemaSet para compilación de esquemas](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md).  
+>  La clase <xref:System.Xml.Schema.XmlSchemaCollection> está obsoleta y ha sido reemplazada por la clase <xref:System.Xml.Schema.XmlSchemaSet>. Para más información sobre la clase <xref:System.Xml.Schema.XmlSchemaSet>, vea [XmlSchemaSet para compilación de esquemas](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md).  
   
- Por ejemplo, si el elemento raíz del documento XML es `<bookstore xmlns="urn:newbooks-schema">`, cuando el esquema se agrega a la **XmlSchemaCollection** hace referencia el mismo espacio de nombres, como se indica a continuación:  
+ Por ejemplo, si el elemento raíz del documento XML es `<bookstore xmlns="urn:newbooks-schema">`, cuando el esquema se agrega a la colección **XmlSchemaCollection** hace referencia al mismo espacio de nombres, como se indica a continuación:  
   
 ```  
 xsc.Add("urn:newbooks-schema", "newbooks.xdr")  
 ```  
   
- En el ejemplo de código siguiente se crea un **XmlValidatingReader** que toma un **XmlTextReader** y agrega un esquema XDR, HeadCount.xdr, a la **XmlSchemaCollection**.  
+ En el ejemplo de código siguiente se crea una clase **XmlValidatingReader** que acepta una clase **XmlTextReader** y agrega un esquema XDR, HeadCount.xdr, a **XmlSchemaCollection**.  
   
 ```vb  
 Imports System  

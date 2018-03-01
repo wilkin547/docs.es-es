@@ -24,25 +24,28 @@ helpviewer_keywords:
 - threading [Windows Forms], asynchronous features
 - AsyncCompletedEventArgs class
 ms.assetid: 21a858c1-3c99-4904-86ee-0d17b49804fa
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0b70d4ba205d39ad8fcbc7c7f6fa1f5b34a36c98
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: f8069072f5d917d4ef169a1aed8854ae3139016d
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-implement-a-client-of-the-event-based-asynchronous-pattern"></a>Cómo: Implementar un cliente en un modelo asincrónico basado en eventos
-En el ejemplo de código siguiente se muestra cómo utilizar un componente que se adhiera a la [introducción de patrón asincrónico basado en eventos](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md). El formulario en este ejemplo usa el `PrimeNumberCalculator` componente se describe en [Cómo: implementar un componente que admita el modelo asincrónico basado en eventos](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md).  
+En el ejemplo de código siguiente se muestra cómo utilizar un componente que se adhiera a la [Información general sobre el modelo asincrónico basado en eventos](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md). En el formulario de este ejemplo se usa el componente `PrimeNumberCalculator` descrito en [Implementar un componente que admita el modelo asincrónico basado en eventos](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md).  
   
- Cuando se ejecuta un proyecto que se usa en este ejemplo, verá un formulario de "Calculadora de número primo" con una cuadrícula y dos botones: **Iniciar nueva tarea** y **cancelar**. Puede hacer clic en el **Iniciar nueva tarea** botón varias veces seguidas, y por cada clic, una operación asincrónica iniciará un cálculo para determinar si un número generado aleatoriamente prueba es primo. El formulario mostrará periódicamente el progreso y resultados incrementales. Cada operación se le asigna un identificador de tarea único. El resultado del cálculo se muestra en el **resultado** columna; si el número de prueba no es primo, se etiqueta como **compuesto,** y se muestra su primer divisor.  
+ Cuando se ejecuta un proyecto que usa este ejemplo, verá un formulario "Prime Number Calculator" (Calculadora de número primo) con una cuadrícula y dos botones: **Start New Task** (Iniciar nueva tarea) y **Cancel** (Cancelar). Puede hacer clic en el botón **Start New Task** (Iniciar nueva tarea) varias veces seguidas, y por cada clic, una operación asincrónica iniciará un cálculo para determinar si un número de prueba generado aleatoriamente es primo. El formulario mostrará periódicamente el progreso y los resultados incrementales. A cada operación se le asigna un identificador de tarea único. El resultado del cálculo se muestra en la columna **Result** (Resultado); si el número de prueba no es primo, se etiqueta como **Composite** (Compuesto) y se muestra su primer divisor.  
   
- Cualquier operación pendiente puede cancelarse con el **cancelar** botón. Se pueden realizar selecciones múltiples.  
+ Cualquier operación pendiente puede cancelarse con el botón **Cancel** (Cancelar). Se pueden realizar selecciones múltiples.  
   
 > [!NOTE]
->  Casi todos los números no serán primos. Si no ha encontrado un número primo tras realizar varias operaciones, simplemente inicie más tareas y, finalmente, encontrará algunos números primos.  
+>  La mayoría de los números no serán primos. Si no ha encontrado un número primo tras realizar varias operaciones, simplemente inicie más tareas y, finalmente, encontrará algunos números primos.  
   
 ## <a name="example"></a>Ejemplo  
  [!code-csharp[System.ComponentModel.AsyncOperationManager#10](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/CS/primenumbercalculatormain.cs#10)]

@@ -21,20 +21,23 @@ helpviewer_keywords:
 - .NET Framework regular expressions, anchors
 - .NET Framework regular expressions, atomic zero-width assertions
 ms.assetid: 336391f6-2614-499b-8b1b-07a6837108a7
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 453776c97ec0531cea94ecf44c31216cf5b17a3b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 648c86c71de3c92825af3cfdd4ac2ca023f5e027
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="anchors-in-regular-expressions"></a>Delimitadores en expresiones regulares
 <a name="top"></a> Los delimitadores, o aserciones atómicas de ancho cero, especifican la posición de la cadena en que se debe producir una coincidencia. Cuando se usa un delimitador en una expresión de búsqueda, el motor de expresiones regulares no avanza por la cadena o ni consume caracteres, sino que solo busca una coincidencia en la posición especificada. Por ejemplo, `^` especifica que la coincidencia debe empezar al principio de una cadena o línea. Por consiguiente, la expresión regular `^http:` coincide con "http": solo cuando se encuentra al principio de una línea. En la tabla siguiente, se enumeran los delimitadores que admiten las expresiones regulares de .NET.  
   
-|Delimitador|Descripción|  
+|Delimitador|Description|  
 |------------|-----------------|  
 |`^`|La coincidencia se debe producir al principio de la cadena o de la línea. Para obtener más información, vea [Principio de cadena o línea](#Start).|  
 |`$`|La coincidencia se debe producir al final de la cadena o de la línea, o antes de `\n` al final de la cadena o de la línea. Para obtener más información, vea [Final de cadena o línea](#End).|  
@@ -47,7 +50,7 @@ ms.lasthandoff: 11/21/2017
   
 <a name="Start"></a>   
 ## <a name="start-of-string-or-line-"></a>Principio de cadena o línea: ^  
- El delimitador `^` especifica que el siguiente patrón debe comenzar en la posición del primer carácter de la cadena. Si usa `^` con el <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> opción (vea [opciones de expresiones regulares](../../../docs/standard/base-types/regular-expression-options.md)), la coincidencia se debe producir al principio de cada línea.  
+ El delimitador `^` especifica que el siguiente patrón debe comenzar en la posición del primer carácter de la cadena. Si usa `^` con la opción <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> (vea [Opciones de expresiones regulares](../../../docs/standard/base-types/regular-expression-options.md)), la coincidencia se debe producir al principio de cada línea.  
   
  En el ejemplo siguiente se usa el delimitador `^` en una expresión regular que extrae información sobre los años durante los que existieron algunos equipos de béisbol profesionales. En el ejemplo se llama a dos sobrecargas del método <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType>:  
   
@@ -60,7 +63,7 @@ ms.lasthandoff: 11/21/2017
   
  El patrón de expresión regular `^((\w+(\s?)){2,}),\s(\w+\s\w+),(\s\d{4}(-(\d{4}|present))?,?)+` se define como se muestra en la tabla siguiente.  
   
-|Modelo|Descripción|  
+|Modelo|Description|  
 |-------------|-----------------|  
 |`^`|Comienza la búsqueda de coincidencias al principio de la cadena de entrada (o al principio de la línea si se llama al método con la opción <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType>).|  
 |`((\w+(\s?)){2,}`|Coincide con uno o varios caracteres que se usan para formar palabras seguidos de cero o un espacio, exactamente dos veces. Este es el primer grupo de captura. Esta expresión también define un segundo y un tercer grupo de capturas: el segundo está compuesto por la palabra capturada y el tercero está compuesto por los espacios capturados.|  
@@ -113,7 +116,7 @@ ms.lasthandoff: 11/21/2017
   
 <a name="EndOnly"></a>   
 ## <a name="end-of-string-only-z"></a>Final de cadena solamente: \z  
- El delimitador `\z` especifica que debe producirse una coincidencia al final de la cadena de entrada. Al igual que el elemento del lenguaje `$`, `\z` omite la opción <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType>. A diferencia del elemento del lenguaje `\Z` , `\z` no coincide con un carácter `\n` al final de una cadena. Por consiguiente, solo puede coincidir con la última línea de la cadena de entrada.  
+ El delimitador `\z` especifica que debe producirse una coincidencia al final de la cadena de entrada. Al igual que el elemento del lenguaje `$`, `\z` omite la opción <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType>. A diferencia del elemento del lenguaje `\Z`, `\z` no coincide con un carácter `\n` al final de una cadena. Por consiguiente, solo puede coincidir con la última línea de la cadena de entrada.  
   
  En el ejemplo siguiente, se usa el delimitador `\z` en una expresión regular que por lo demás es idéntica al ejemplo de la sección anterior, que extrae información sobre los años durante los que existieron algunos equipos del béisbol profesionales. En el ejemplo, se intenta buscar coincidencias con cada uno de los cinco elementos de una matriz de cadenas con el patrón de expresión regular `^((\w+(\s?)){2,}),\s(\w+\s\w+),(\s\d{4}(-(\d{4}|present))?,?)+\r?\z`. Dos de las cadenas finalizan con caracteres de retorno de carro y salto de línea, una finaliza con un carácter de salto de línea, y dos no finalizan con un carácter de retorno de carro ni con un carácter de salto de línea. Como muestra la salida, solo coinciden con el patrón las cadenas sin un carácter de retorno de carro ni de salto de línea.  
   
@@ -133,7 +136,7 @@ ms.lasthandoff: 11/21/2017
   
  La expresión regular `\G(\w+\s?\w*),?` se interpreta como se muestra en la tabla siguiente.  
   
-|Modelo|Descripción|  
+|Modelo|Description|  
 |-------------|-----------------|  
 |`\G`|Comienza donde finalizó la última coincidencia.|  
 |`\w+`|Buscar coincidencias con uno o más caracteres alfabéticos.|  
@@ -146,7 +149,7 @@ ms.lasthandoff: 11/21/2017
   
 <a name="WordBoundary"></a>   
 ## <a name="word-boundary-b"></a>Límite de palabras: \b  
- El delimitador `\b` especifica que la coincidencia se debe producir en un límite entre un carácter que se usa para formar palabras (el elemento del lenguaje `\w` ) y un carácter que no se usa para formar palabras (el elemento del lenguaje `\W` ). Los caracteres que se usan para formar palabras son los caracteres alfanuméricos y de subrayado; un carácter que no se usa para formar palabras es cualquier carácter que no es alfanumérico ni de subrayado. (Para obtener más información, consulte [clases de caracteres](../../../docs/standard/base-types/character-classes-in-regular-expressions.md).) La coincidencia también se puede producir en un límite de palabras al principio o al final de la cadena.  
+ El delimitador `\b` especifica que la coincidencia se debe producir en un límite entre un carácter que se usa para formar palabras (el elemento del lenguaje `\w` ) y un carácter que no se usa para formar palabras (el elemento del lenguaje `\W` ). Los caracteres que se usan para formar palabras son los caracteres alfanuméricos y de subrayado; un carácter que no se usa para formar palabras es cualquier carácter que no es alfanumérico ni de subrayado. (Para más información, vea [Clases de carácter](../../../docs/standard/base-types/character-classes-in-regular-expressions.md)). La coincidencia también se puede producir en un límite de palabras al principio o al final de la cadena.  
   
  El delimitador `\b` se usa con frecuencia para asegurarse de que una subexpresión coincide con una palabra completa en lugar de solo con el principio o el final de una palabra. La expresión regular `\bare\w*\b` del ejemplo siguiente muestra este uso. Coincide con cualquier palabra que comience por la subcadena "are". El resultado del ejemplo también muestra que `\b` coincide tanto con el principio como con el final de la cadena de entrada.  
   
@@ -155,7 +158,7 @@ ms.lasthandoff: 11/21/2017
   
  El patrón de la expresión regular se interpreta como se muestra en la tabla siguiente.  
   
-|Modelo|Descripción|  
+|Modelo|Description|  
 |-------------|-----------------|  
 |`\b`|Iniciar la búsqueda de coincidencias en un límite de palabras.|  
 |`are`|Coincide con la subcadena "are".|  
@@ -175,7 +178,7 @@ ms.lasthandoff: 11/21/2017
   
  El patrón de la expresión regular se interpreta como se muestra en la tabla siguiente.  
   
-|Modelo|Descripción|  
+|Modelo|Description|  
 |-------------|-----------------|  
 |`\B`|La búsqueda de coincidencias no comienza en un límite de palabras.|  
 |`qu`|Coincide con la subcadena "qu".|  

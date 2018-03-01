@@ -19,18 +19,21 @@ helpviewer_keywords:
 - formatting [.NET Framework], time
 - custom TimeSpan format strings
 ms.assetid: a63ebf55-7269-416b-b4f5-286f6c03bf0e
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 7302b17beb5ce20ec2bd8865149fe2e0bae9cee4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: f86aeab5a024c463dbfbf0a0d0ff198cef80f7ac
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="custom-timespan-format-strings"></a>Cadenas de formato TimeSpan personalizado
-Una cadena de formato <xref:System.TimeSpan> define la representación de cadena de un valor <xref:System.TimeSpan> generado por una operación de formato. Una cadena de formato personalizado consta de uno o varios especificadores de formato <xref:System.TimeSpan> personalizado, además de un número de caracteres literales. Cualquier cadena que no sea un [cadena de formato TimeSpan estándar](../../../docs/standard/base-types/standard-timespan-format-strings.md) se interpreta como un personalizado <xref:System.TimeSpan> cadena de formato.  
+Una cadena de formato <xref:System.TimeSpan> define la representación de cadena de un valor <xref:System.TimeSpan> generado por una operación de formato. Una cadena de formato personalizado consta de uno o varios especificadores de formato <xref:System.TimeSpan> personalizado, además de un número de caracteres literales. Cualquier cadena que no sea una [cadena de formato TimeSpan estándar](../../../docs/standard/base-types/standard-timespan-format-strings.md) se interpreta como una cadena de formato <xref:System.TimeSpan> personalizada.  
   
 > [!IMPORTANT]
 >  Los especificadores de formato <xref:System.TimeSpan> personalizado no incluyen símbolos de separador de marcadores de posición, como los símbolos que separan los días de las horas, las horas de los minutos o los segundos de las fracciones de segundo. Estos símbolos deben incluirse en la cadena de formato personalizado como literales de cadena. Por ejemplo, `"dd\.hh\:mm"` define un punto (.) como separador entre los días y las horas, y un signo de dos puntos (:) como separador entre las horas y los minutos.  
@@ -47,12 +50,12 @@ Una cadena de formato <xref:System.TimeSpan> define la representación de cadena
  [!code-csharp[Conceptual.TimeSpan.Custom#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.timespan.custom/cs/customparseexample1.cs#2)]
  [!code-vb[Conceptual.TimeSpan.Custom#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.custom/vb/customparseexample1.vb#2)]  
   
-<a name="table"></a>En la tabla siguiente describe los especificadores de formato de tiempo y fechas personalizado.  
+<a name="table"></a> En la siguiente tabla se describen los especificadores de formato de fecha y hora personalizado.  
   
-|Especificador de formato|Descripción|Ejemplo|  
+|Especificador de formato|Description|Ejemplo|  
 |----------------------|-----------------|-------------|  
 |"d", "%d"|Número de días completos de un intervalo de tiempo.<br /><br /> Más información: [El especificador de formato personalizado "d"](#dSpecifier).|`new TimeSpan(6, 14, 32, 17, 685):`<br /><br /> `%d` --> "6"<br /><br /> `d\.hh\:mm` --> "6.14:32"|  
-|"dd"-"dddddddd"|Número de días completos de un intervalo de tiempo, que se completa con tantos ceros iniciales como sean necesarios.<br /><br /> Obtener más información: ["dd"-"dddddddd" especificadores de formato personalizado](#ddSpecifier).|`new TimeSpan(6, 14, 32, 17, 685):`<br /><br /> `ddd` --> "006"<br /><br /> `dd\.hh\:mm` --> "06.14:32"|  
+|"dd"-"dddddddd"|Número de días completos de un intervalo de tiempo, que se completa con tantos ceros iniciales como sean necesarios.<br /><br /> Más información: [Especificadores de formato personalizado "dd"-"dddddddd"](#ddSpecifier).|`new TimeSpan(6, 14, 32, 17, 685):`<br /><br /> `ddd` --> "006"<br /><br /> `dd\.hh\:mm` --> "06.14:32"|  
 |"h", "%h"|Número de horas completas de un intervalo de tiempo que no se cuentan como parte de los días. Las horas con un solo dígito no se escriben con un cero a la izquierda.<br /><br /> Más información: [El especificador de formato personalizado "h"](#hSpecifier).|`new TimeSpan(6, 14, 32, 17, 685):`<br /><br /> `%h` --&gt; "14"<br /><br /> `hh\:mm` --> "14:32"|  
 |"hh"|Número de horas completas de un intervalo de tiempo que no se cuentan como parte de los días. Las horas con un solo dígito se escriben con un cero a la izquierda.<br /><br /> Más información: [El especificador de formato personalizado "hh"](#hhSpecifier).|`new TimeSpan(6, 14, 32, 17, 685):`<br /><br /> `hh` --&gt; "14"<br /><br /> `new TimeSpan(6, 8, 32, 17, 685):`<br /><br /> `hh` --&gt; 08|  
 |"m", "%m"|Número de minutos completos de un intervalo de tiempo que no se incluyen como parte de las horas o los días. Los minutos con un solo dígito no se escriben con un cero a la izquierda.<br /><br /> Más información: [El especificador de formato personalizado "m"](#mSpecifier).|`new TimeSpan(6, 14, 8, 17, 685):`<br /><br /> `%m` --> "8"<br /><br /> `h\:m` --> "14:8"|  
@@ -60,7 +63,7 @@ Una cadena de formato <xref:System.TimeSpan> define la representación de cadena
 |"s", "%s"|Número de segundos completos de un intervalo de tiempo que no se incluyen como parte de las horas, los días o los minutos. Los segundos con un solo dígito no se escriben con un cero a la izquierda.<br /><br /> Más información: [El especificador de formato personalizado "s"](#sSpecifier).|`TimeSpan.FromSeconds(12.965)`:<br /><br /> `%s` --> 12<br /><br /> `s\.fff` --> 12.965|  
 |"ss"|Número de segundos completos de un intervalo de tiempo que no se incluyen como parte de las horas, los días o los minutos.  Los segundos con un solo dígito se escriben con un cero a la izquierda.<br /><br /> Más información: [El especificador de formato personalizado "ss"](#ssSpecifier).|`TimeSpan.FromSeconds(6.965)`:<br /><br /> `ss` --> 06<br /><br /> `ss\.fff` --> 06.965|  
 |"f", "%f"|Décimas de segundo de un intervalo de tiempo.<br /><br /> Más información: [El especificador de formato personalizado "f"](#fSpecifier).|`TimeSpan.FromSeconds(6.895)`:<br /><br /> `f` --> 8<br /><br /> `ss\.f` --> 06.8|  
-|"ff"|Centésimas de segundo de un intervalo de tiempo.<br /><br /> Obtener más información:[el especificador de formato personalizado "ff"](#ffSpecifier).|`TimeSpan.FromSeconds(6.895)`:<br /><br /> `ff` --> 89<br /><br /> `ss\.ff` --> 06.89|  
+|"ff"|Centésimas de segundo de un intervalo de tiempo.<br /><br /> Más información: [El especificador de formato personalizado "ff"](#ffSpecifier).|`TimeSpan.FromSeconds(6.895)`:<br /><br /> `ff` --> 89<br /><br /> `ss\.ff` --> 06.89|  
 |"fff"|Milisegundos de un intervalo de tiempo.<br /><br /> Más información: [El especificador de formato personalizado "fff"](#f3Specifier).|`TimeSpan.FromSeconds(6.895)`:<br /><br /> `fff` --> 895<br /><br /> `ss\.fff` --> 06.895|  
 |"ffff"|Diezmilésimas de segundo de un intervalo de tiempo.<br /><br /> Más información: [El especificador de formato personalizado "ffff"](#f4Specifier).|`TimeSpan.Parse("0:0:6.8954321")`:<br /><br /> `ffff` --&gt; 8954<br /><br /> `ss\.ffff` --> 06.8954|  
 |"fffff"|Cienmilésimas de segundo de un intervalo de tiempo.<br /><br /> Más información: [El especificador de formato personalizado "fffff"](#f5Specifier).|`TimeSpan.Parse("0:0:6.8954321")`:<br /><br /> `fffff` --> 89543<br /><br /> `ss\.fffff` --> 06.89543|  
@@ -73,9 +76,9 @@ Una cadena de formato <xref:System.TimeSpan> define la representación de cadena
 |"FFFFF"|Cienmilésimas de segundo de un intervalo de tiempo. No se incluyen los ceros finales fraccionarios.<br /><br /> Más información: [El especificador de formato personalizado "FFFFF"](#F5_Specifier).|`TimeSpan.Parse("00:00:06.329179")`:<br /><br /> `FFFFF`: 32917<br /><br /> `TimeSpan.Parse("0:0:3.100009")`:<br /><br /> `ss\.FFFFF`: 03.1|  
 |"FFFFFF"|Millonésimas de segundo de un intervalo de tiempo. No se muestran los ceros finales fraccionarios.<br /><br /> Más información: [El especificador de formato personalizado "FFFFFF"](#F6_Specifier).|`TimeSpan.Parse("00:00:06.3291791")`:<br /><br /> `FFFFFF`: 329179<br /><br /> `TimeSpan.Parse("0:0:3.1000009")`:<br /><br /> `ss\.FFFFFF`: 03.1|  
 |"FFFFFFF"|Diezmillonésimas de segundo de un intervalo de tiempo. No se muestran los ceros finales fraccionarios ni los dígitos de siete ceros.<br /><br /> Más información: [El especificador de formato personalizado "FFFFFFF"](#F7_Specifier).|`TimeSpan.Parse("00:00:06.3291791")`:<br /><br /> `FFFFFF`: 3291791<br /><br /> `TimeSpan.Parse("0:0:3.1900000")`:<br /><br /> `ss\.FFFFFF`: 03.19|  
-|*' cadena*'|Delimitador de cadena literal.<br /><br /> Obtener más información: [otros caracteres](#Other).|`new TimeSpan(14, 32, 17):`<br /><br /> `hh':'mm':'ss` --&gt; "14:32:17"|  
-|\|El carácter de escape.<br /><br /> Obtener más información:[otros caracteres](#Other).|`new TimeSpan(14, 32, 17):`<br /><br /> `hh\:mm\:ss` --&gt; "14:32:17"|  
-|Cualquier otro carácter|Cualquier otro carácter sin escape se interpreta como especificador de formato personalizado.<br /><br /> Obtener más información: [otros caracteres](#Other).|`new TimeSpan(14, 32, 17):`<br /><br /> `hh\:mm\:ss` --&gt; "14:32:17"|  
+|*'string*'|Delimitador de cadena literal.<br /><br /> Más información: [Otros caracteres](#Other).|`new TimeSpan(14, 32, 17):`<br /><br /> `hh':'mm':'ss` --&gt; "14:32:17"|  
+|\|El carácter de escape.<br /><br /> Más información: [Otros caracteres](#Other).|`new TimeSpan(14, 32, 17):`<br /><br /> `hh\:mm\:ss` --&gt; "14:32:17"|  
+|Cualquier otro carácter|Cualquier otro carácter sin escape se interpreta como especificador de formato personalizado.<br /><br /> Más información: [Otros caracteres](#Other).|`new TimeSpan(14, 32, 17):`<br /><br /> `hh\:mm\:ss` --&gt; "14:32:17"|  
   
 <a name="dSpecifier"></a>   
 ## <a name="the-d-custom-format-specifier"></a>Especificador de formato personalizado "d"  
@@ -145,7 +148,7 @@ Una cadena de formato <xref:System.TimeSpan> define la representación de cadena
   
 <a name="mSpecifier"></a>   
 ## <a name="the-m-custom-format-specifier"></a>Especificador de formato personalizado "m"  
- El especificador de formato personalizado "m" presenta el valor de la propiedad <xref:System.TimeSpan.Minutes%2A?displayProperty=nameWithType>, que representa el número de minutos completos de un intervalo de tiempo que no se cuentan como parte del componente de días. Devuelve un valor de cadena de un dígito si el valor de la <xref:System.TimeSpan.Minutes%2A?displayProperty=nameWithType> propiedad es de 0 a 9 y devuelve un valor de cadena de dos dígitos si el valor de la <xref:System.TimeSpan.Minutes%2A?displayProperty=nameWithType> propiedad varía entre 10 y 59.  
+ El especificador de formato personalizado "m" presenta el valor de la propiedad <xref:System.TimeSpan.Minutes%2A?displayProperty=nameWithType>, que representa el número de minutos completos de un intervalo de tiempo que no se cuentan como parte del componente de días. Devuelve un valor de cadena de un dígito si el valor de la propiedad <xref:System.TimeSpan.Minutes%2A?displayProperty=nameWithType> es de 0 a 9; devuelve un valor de cadena de dos dígitos si el valor de la propiedad <xref:System.TimeSpan.Minutes%2A?displayProperty=nameWithType> es de 10 a 59.  
   
  Si el especificador de formato personalizado "m" se utiliza solo, especifique "%m" de modo que no se interprete erróneamente como una cadena de formato estándar. Esto se muestra en el ejemplo siguiente.  
   
@@ -182,7 +185,7 @@ Una cadena de formato <xref:System.TimeSpan> define la representación de cadena
   
 <a name="sSpecifier"></a>   
 ## <a name="the-s-custom-format-specifier"></a>Especificador de formato personalizado "s"  
- El especificador de formato personalizado "s" presenta el valor de la propiedad <xref:System.TimeSpan.Seconds%2A?displayProperty=nameWithType>, que representa el número de segundos completos de un intervalo de tiempo que no se cuentan como parte del componente de horas, días o minutos. Devuelve un valor de cadena de un dígito si el valor de la <xref:System.TimeSpan.Seconds%2A?displayProperty=nameWithType> propiedad es de 0 a 9 y devuelve un valor de cadena de dos dígitos si el valor de la <xref:System.TimeSpan.Seconds%2A?displayProperty=nameWithType> propiedad varía entre 10 y 59.  
+ El especificador de formato personalizado "s" presenta el valor de la propiedad <xref:System.TimeSpan.Seconds%2A?displayProperty=nameWithType>, que representa el número de segundos completos de un intervalo de tiempo que no se cuentan como parte del componente de horas, días o minutos. Devuelve un valor de cadena de un dígito si el valor de la propiedad <xref:System.TimeSpan.Seconds%2A?displayProperty=nameWithType> es de 0 a 9; devuelve un valor de cadena de dos dígitos si el valor de la propiedad <xref:System.TimeSpan.Seconds%2A?displayProperty=nameWithType> es de 10 a 59.  
   
  Si el especificador de formato personalizado "s" se utiliza solo, especifique "%s" de modo que no se interprete erróneamente como una cadena de formato estándar. Esto se muestra en el ejemplo siguiente.  
   
@@ -383,7 +386,7 @@ Una cadena de formato <xref:System.TimeSpan> define la representación de cadena
   
 -   Se puede escribirlo entre comillas sencillas (delimitador de cadena literal).  
   
--   Ir precedida de una barra diagonal inversa ("\\"), que se interpreta como un carácter de escape. En C#, esto significa que la cadena de formato debe ser @-quoted o que el carácter literal debe ir precedido de una barra diagonal inversa adicional.  
+-   Se puede anteponer una barra diagonal inversa ("\\"), que se interpreta como un carácter de escape. En C#, esto significa que la cadena de formato debe ser @-quoted o que el carácter literal debe ir precedido de una barra diagonal inversa adicional.  
   
      En algunos casos, puede que sea necesario usar lógica condicional para incluir un carácter literal de escape en una cadena de formato. En el ejemplo siguiente se usa lógica condicional para incluir un símbolo de signo para los intervalos de tiempo negativos.  
   

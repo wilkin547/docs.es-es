@@ -12,15 +12,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fe60aaa0-ae43-4b1c-9be1-426af66ba757
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: e66d98501bb0bd3a5d5cd5eacc0b09405c158522
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: b16ad921e5b16ab7564b2ceedab91c6b6073537d
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="xslt-parameters"></a>Parámetros XSLT
 Los parámetros XSLT se agregan a <xref:System.Xml.Xsl.XsltArgumentList> mediante el método <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A>. En ese momento se asocia al objeto de parámetro un nombre completo y un identificador URI de espacio de nombres.  
@@ -43,11 +46,11 @@ Los parámetros XSLT se agregan a <xref:System.Xml.Xsl.XsltArgumentList> mediant
 |`Number`|<xref:System.Double?displayProperty=nameWithType>|XPath|  
 |`Result Tree Fragment`|<xref:System.Xml.XPath.XPathNavigator?displayProperty=nameWithType>|XSLT|  
 |`Node*`|<xref:System.Xml.XPath.XPathNavigator?displayProperty=nameWithType>|XPath|  
-|`Node Set`|<xref:System.Xml.XPath.XPathNodeIterator><br /><br /> **XPathNavigator]**|XPath|  
+|`Node Set`|<xref:System.Xml.XPath.XPathNodeIterator><br /><br /> **XPathNavigator[]**|XPath|  
   
  *Es equivalente a un conjunto de nodos que contiene un solo nodo.  
   
- Si el objeto de parámetro no pertenece a una de las clases anteriores, se convierte de acuerdo con las siguientes reglas. Los tipos de Common Language Runtime (CLR) numéricos se convierten en <xref:System.Double>.  El tipo <xref:System.DateTime> se convierte en <xref:System.String>. Los tipos <xref:System.Xml.XPath.IXPathNavigable> se convierten en <xref:System.Xml.XPath.XPathNavigator>. **XPathNavigator []** se convierte en <xref:System.Xml.XPath.XPathNodeIterator>.  
+ Si el objeto de parámetro no pertenece a una de las clases anteriores, se convierte de acuerdo con las siguientes reglas. Los tipos de Common Language Runtime (CLR) numéricos se convierten en <xref:System.Double>.  El tipo <xref:System.DateTime> se convierte en <xref:System.String>. Los tipos <xref:System.Xml.XPath.IXPathNavigable> se convierten en <xref:System.Xml.XPath.XPathNavigator>. **XPathNavigator[]** se convierte en <xref:System.Xml.XPath.XPathNodeIterator>.  
   
  El resto de los tipos inician un error.  
   
@@ -65,7 +68,7 @@ Los parámetros XSLT se agregan a <xref:System.Xml.Xsl.XsltArgumentList> mediant
 ##### <a name="discountxsl"></a>discount.xsl  
  [!code-xml[XSLT_Param#3](../../../../samples/snippets/xml/VS_Snippets_Data/XSLT_Param/XML/discount.xsl#3)]  
   
-### <a name="output"></a>Resultado  
+### <a name="output"></a>Salida  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  

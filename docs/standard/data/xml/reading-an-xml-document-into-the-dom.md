@@ -12,15 +12,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a4fb291f-5630-49ba-a49a-5b66c3b71e49
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: b8844705b492574443ff4f37de33ccaf1f5fedd7
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: bbbd61cbe22eb2c8e54daad863ad35ef076c1bc3
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="reading-an-xml-document-into-the-dom"></a>Lectura de un documento XML en el DOM
 La información XML se lee en memoria desde diferentes formatos. Se puede leer desde una cadena, una secuencia, una URL, un sistema de lectura de texto o una clase derivada de <xref:System.Xml.XmlReader>.  
@@ -31,9 +34,9 @@ La información XML se lee en memoria desde diferentes formatos. Se puede leer d
   
 |Contenido|Tema|  
 |-------------|-----------|  
-|Creación de nodos de espacios en blanco|El objeto utilizado para cargar el DOM tiene un efecto en los nodos de espacios en blanco y espacios en blanco significativos que se generan en el DOM. Para obtener más información, consulte [espacio en blanco y control de espacios en blanco significativos al cargar DOM](../../../../docs/standard/data/xml/white-space-and-significant-white-space-handling-when-loading-the-dom.md).|  
-|Carga de XML comenzando en un nodo específico o carga de todo el documento XML|Mediante el <xref:System.Xml.XmlDocument.Load%2A?displayProperty=nameWithType> datos sobre métodos se pueden cargar desde un nodo específico en el DOM. Para obtener más información, consulte [cargar datos desde un lector](../../../../docs/standard/data/xml/load-data-from-a-reader.md).|  
-|Validación de XML a medida que se carga|Los datos XML cargados en el DOM se pueden validar a medida que se cargan. Para ello, se utiliza un <xref:System.Xml.XmlReader> de validación. Para obtener más información acerca de la validación XML a medida que se carga, consulte [validar un documento XML en el DOM](../../../../docs/standard/data/xml/validating-an-xml-document-in-the-dom.md).|  
+|Creación de nodos de espacios en blanco|El objeto utilizado para cargar el DOM tiene un efecto en los nodos de espacios en blanco y espacios en blanco significativos que se generan en el DOM. Para obtener más información, vea [Control de espacios en blanco y de espacios en blanco significativos al cargar DOM](../../../../docs/standard/data/xml/white-space-and-significant-white-space-handling-when-loading-the-dom.md).|  
+|Carga de XML comenzando en un nodo específico o carga de todo el documento XML|Si se utiliza el método <xref:System.Xml.XmlDocument.Load%2A?displayProperty=nameWithType>, los datos se pueden cargar desde un nodo específico en el DOM. Para obtener más información, vea [Carga de datos desde un sistema de lectura](../../../../docs/standard/data/xml/load-data-from-a-reader.md).|  
+|Validación de XML a medida que se carga|Los datos XML cargados en el DOM se pueden validar a medida que se cargan. Para ello, se utiliza un <xref:System.Xml.XmlReader> de validación. Para obtener más información sobre la validación de documentos XML a medida que se cargan, vea [Validación de un documento XML en el DOM](../../../../docs/standard/data/xml/validating-an-xml-document-in-the-dom.md).|  
   
  En los siguientes ejemplos se muestra cómo se carga el XML con el método <xref:System.Xml.XmlDocument.LoadXml%2A> y cómo se guardan posteriormente los datos en un archivo de texto denominado `data.xml`.  
   
@@ -78,4 +81,4 @@ public class Sample
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Modelo de objetos de documento (DOM) de XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+ [Document Object Model (DOM) para XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

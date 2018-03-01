@@ -1,6 +1,6 @@
 ---
-title: "Inicio rápido - Cadenas interpoladas - Guía de C#"
-description: "En este inicio rápido sobre cadenas interpoladas, escribiremos código de C# para incluir el resultado de una expresión en una cadena mayor."
+title: "Tutorial sobre cadenas interpoladas: guías de inicio rápido para entornos locales de C#"
+description: "En esta guía de inicio rápido sobre cadenas interpoladas, escribiremos código de C# para incluir el resultado de una expresión en una cadena mayor."
 author: rpetrusha
 ms.author: ronpet
 ms.date: 01/11/2018
@@ -9,15 +9,15 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 14185dd4e364f12756541ac6401d1c6ff3206fe9
-ms.sourcegitcommit: 8bde7a3432f30fc771079744955c75c58c4eb393
+ms.openlocfilehash: 3cd9fc23dba104f92255b031eef32f80cca915b0
+ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/20/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="interpolated-strings"></a>Cadenas interpoladas
 
-En este inicio rápido se muestra cómo usar cadenas interpoladas en C# para insertar valores en una cadena de salida única. Escriba código de C# y vea los resultados de la compilación y la ejecución. Este inicio rápido contiene una serie de lecciones para insertar valores en cadenas y dar formato a estos valores de maneras diferentes.
+En esta guía de inicio rápido se muestra cómo usar cadenas interpoladas en C# para insertar valores en una cadena de salida única. Escriba código de C# y vea los resultados de la compilación y la ejecución. Esta guía de inicio rápido contiene una serie de lecciones para insertar valores en cadenas y dar formato a estos valores de maneras diferentes.
 
 En esta guía de inicio rápido se supone que cuenta con una máquina que puede usar para el desarrollo. El tema de .NET [Iniciar en 10 minutos](https://www.microsoft.com/net/core) cuenta con instrucciones para configurar el entorno de desarrollo local en Mac, PC o Linux. En las [guías de inicio rápido de introducción al entorno local](local-environment.md) puede obtener información general sobre los comandos que usará con vínculos que amplían la información. 
 

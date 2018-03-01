@@ -13,24 +13,27 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: 7f1bc7f4-401b-459f-9078-f099cc711fde
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 77fe1790a4ff2f910a740e969e458549f1fd9642
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 4b59b2b59852190bd19a3c1c9536fadb7b40603e
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="post-schema-compilation-infoset"></a>Conjunto de información posterior a la compilación de esquemas
-El [recomendación de esquemas XML de World Wide Web Consortium (W3C)](http://go.microsoft.com/fwlink/?linkid=45242) trata el conjunto de información (infoset) que debe presentarse para la validación del esquema previo y compilación del esquema posterior. El Modelo de objetos de esquema XML (SOM) consulta esta información antes y después de llamar al método <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> de <xref:System.Xml.Schema.XmlSchemaSet>.  
+La [recomendación de esquemas XML del W3C (World Wide Web Consortium)](http://go.microsoft.com/fwlink/?linkid=45242) trata acerca del conjunto de información que debe presentarse para la validación del esquema previo y para la compilación del esquema posterior. El Modelo de objetos de esquema XML (SOM) consulta esta información antes y después de llamar al método <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> de <xref:System.Xml.Schema.XmlSchemaSet>.  
   
  El conjunto de información previo a la validación del esquema se crea durante la edición del esquema. El conjunto de información posterior a la compilación del esquema se genera después de llamar al método <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> de <xref:System.Xml.Schema.XmlSchemaSet> durante la compilación del esquema, y se proporciona como propiedades.  
   
  El SOM es el modelo de objetos que representa los conjuntos de información previos a la validación del esquema y posteriores a la compilación del esquema; consta de las clases del espacio de nombres <xref:System.Xml.Schema?displayProperty=nameWithType>. Todas las propiedades de lectura y escritura de las clases del espacio de nombres <xref:System.Xml.Schema> pertenecen al conjunto de información previo a la validación del esquema, mientras que todas las propiedades de solo lectura de las clases del espacio de nombres <xref:System.Xml.Schema> pertenecen al conjunto de información posterior a la compilación del esquema. Las siguientes propiedades son la excepción a esta norma, ya que se trata de propiedades del conjunto de información previo a la validación del esquema y del conjunto de información posterior a la compilación del esquema.  
   
-|Clase|Propiedad|  
+|Clase|Property|  
 |-----------|--------------|  
 |<xref:System.Xml.Schema.XmlSchemaObject>|<xref:System.Xml.Schema.XmlSchemaObject.Parent%2A>|  
 |<xref:System.Xml.Schema.XmlSchema>|<xref:System.Xml.Schema.XmlSchema.AttributeFormDefault%2A>, <xref:System.Xml.Schema.XmlSchema.BlockDefault%2A>, <xref:System.Xml.Schema.XmlSchema.ElementFormDefault%2A>, <xref:System.Xml.Schema.XmlSchema.FinalDefault%2A>, <xref:System.Xml.Schema.XmlSchema.TargetNamespace%2A>|  

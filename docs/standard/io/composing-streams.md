@@ -19,28 +19,31 @@ helpviewer_keywords:
 - base streams
 - streams, backing stores
 ms.assetid: da761658-a535-4f26-a452-b30df47f73d5
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 75800210a52620c5b08a01c5f8fa888bf40843fe
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: d49661e93675b80bcd579a6cd341b3dc88a688c2
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="composing-streams"></a>Crear secuencias
-Una memoria auxiliar es un medio de almacenamiento, como un disco o memoria. Cada almacén de respaldo distinto implementa su propia secuencia como una implementación de la <xref:System.IO.Stream> clase. Cada tipo de secuencia lee y escribe los bytes desde y hacia su memoria auxiliar determinado. Secuencias que se conectan a almacenes de respaldo se denominan secuencias base. Secuencias base tienen constructores con los parámetros necesarios para conectar la secuencia a la memoria auxiliar. Por ejemplo, <xref:System.IO.FileStream> tiene constructores que especifican un parámetro de ruta de acceso, que especifica cómo compartirán el archivo los procesos y así sucesivamente.  
+Una memoria auxiliar es un medio de almacenamiento, como un disco o memoria. Cada memoria auxiliar distinta implementa su propia secuencia como una implementación de la clase <xref:System.IO.Stream>. Cada tipo de secuencia lee y escribe los bytes desde y en su memoria auxiliar determinada. Las secuencias que se conectan a las memorias auxiliares reciben el nombre de secuencias base. Las secuencias base tienen constructores que disponen de los parámetros necesarios para conectar la secuencia a la memoria auxiliar. Por ejemplo, <xref:System.IO.FileStream> tiene constructores que especifican un parámetro de ruta de acceso, que especifica cómo los procesos compartirán el archivo, etc.  
   
- El diseño de la <xref:System.IO> clases proporciona la composición de secuencias simplificada. Secuencias base se pueden asociar a uno o varios flujos de paso a través que proporcionan la funcionalidad que desee. Un lector o escritor puede adjuntarse al final de la cadena para que los tipos deseados se pueden leer o escritos con facilidad.  
+ El diseño de las clases <xref:System.IO> proporciona la composición de secuencias simplificada. Las secuencias base pueden adjuntarse a una o varias secuencias de paso a través que proporcionan la funcionalidad que desee. Un lector o escritor puede adjuntarse al final de la cadena para que los tipos deseados se puedan leer o escribir con facilidad.  
   
- En el ejemplo de código siguiente se crea un **FileStream** alrededor existente `MyFile.txt` en orden al búfer `MyFile.txt`. (Tenga en cuenta que **secuencias** se almacenan en búfer de forma predeterminada.) Después, un <xref:System.IO.StreamReader> se crea para leer los caracteres desde la **FileStream**, que se pasa a la **StreamReader** como argumento de su constructor. <xref:System.IO.StreamReader.ReadLine%2A>lee hasta que <xref:System.IO.StreamReader.Peek%2A> no encuentra más caracteres.  
+ En el ejemplo de código siguiente se crea una clase **FileStream** en torno al archivo `MyFile.txt` para almacenar `MyFile.txt` en el búfer. (Tenga en cuenta que las clases **FileStreams** se almacenan en búfer de forma predeterminada). Después, se crea una clase <xref:System.IO.StreamReader> para leer los caracteres desde **FileStream**, que se pasa a **StreamReader** como argumento de su constructor. <xref:System.IO.StreamReader.ReadLine%2A> lee hasta que <xref:System.IO.StreamReader.Peek%2A> no encuentra más caracteres.  
   
  [!code-cpp[System.IO.StreamReader#20](../../../samples/snippets/cpp/VS_Snippets_CLR_System/system.IO.StreamReader/CPP/source2.cpp#20)]
  [!code-csharp[System.IO.StreamReader#20](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.StreamReader/CS/source2.cs#20)]
  [!code-vb[System.IO.StreamReader#20](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.StreamReader/VB/source2.vb#20)]  
   
- En el ejemplo de código siguiente se crea un **FileStream** alrededor existente `MyFile.txt` en orden al búfer `MyFile.txt`. (Tenga en cuenta que **secuencias** se almacenan en búfer de forma predeterminada.) Después, un **BinaryReader** se crea para leer los bytes de la **FileStream**, que se pasa a la **BinaryReader** como argumento de su constructor. <xref:System.IO.BinaryReader.ReadByte%2A>lee hasta que <xref:System.IO.BinaryReader.PeekChar%2A> no encuentra más bytes.  
+ En el ejemplo de código siguiente se crea una clase **FileStream** en torno al archivo `MyFile.txt` para almacenar `MyFile.txt` en el búfer. (Tenga en cuenta que las clases **FileStreams** se almacenan en búfer de forma predeterminada). Después, se crea una clase **BinaryReader** para leer los bytes desde **FileStream**, que se pasa a **BinaryReader** como argumento de su constructor. <xref:System.IO.BinaryReader.ReadByte%2A> lee hasta que <xref:System.IO.BinaryReader.PeekChar%2A> no encuentra más bytes.  
   
  [!code-cpp[System.IO.StreamReader#21](../../../samples/snippets/cpp/VS_Snippets_CLR_System/system.IO.StreamReader/CPP/source3.cpp#21)]
  [!code-csharp[System.IO.StreamReader#21](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.StreamReader/CS/source3.cs#21)]

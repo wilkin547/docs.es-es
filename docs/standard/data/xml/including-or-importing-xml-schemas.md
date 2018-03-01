@@ -13,21 +13,24 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: fe1b4a11-37f4-4e1a-93c9-239f4fe736c0
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: d3b336b0ac4ca4fd02950a572404a117d4c193f2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: a8c9b513f47fcb07f987b1e17f0b7f485cef3143
+ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="including-or-importing-xml-schemas"></a>Inclusión o importación de esquemas XML
 Un esquema XML puede contener elementos `<xs:import />`, `<xs:include />` y `<xs:redefine />`. Estos elementos de esquema hacen referencia a otros esquemas XML que se pueden utilizar para complementar la estructura del esquema que los incluye o importa. Las clases <xref:System.Xml.Schema.XmlSchemaImport>, <xref:System.Xml.Schema.XmlSchemaInclude> y <xref:System.Xml.Schema.XmlSchemaRedefine> se asignan estos elementos en la API del modelo de objetos de esquema (SOM).  
   
 ## <a name="including-or-importing-an-xml-schema"></a>Inclusión o importación de un esquema XML  
- En el ejemplo de código siguiente se complementa el esquema del cliente creado en el [compilar esquemas XML](../../../../docs/standard/data/xml/building-xml-schemas.md) tema con el esquema de direcciones. Al complementar el esquema del cliente con el esquema de direcciones, los tipos de direcciones están disponibles en el esquema del cliente.  
+ En el siguiente ejemplo de código se complementa el esquema del cliente que se creó en el tema [Compilar esquemas XML](../../../../docs/standard/data/xml/building-xml-schemas.md) con el esquema de direcciones. Al complementar el esquema del cliente con el esquema de direcciones, los tipos de direcciones están disponibles en el esquema del cliente.  
   
  El esquema de direcciones se puede incorporar utilizando los elementos `<xs:include />` o `<xs:import />` para utilizar los componentes del esquema de direcciones tal y como están, o utilizando un elemento `<xs:redefine />` para modificar cualquiera de sus componentes con el fin de satisfacer la necesidad del esquema del cliente. Puesto que el esquema de direcciones tiene un `targetNamespace` que es diferente del que tiene el esquema del cliente, se utiliza el elemento `<xs:import />` y, por tanto, la semántica de importación.  
   
@@ -105,12 +108,12 @@ Un esquema XML puede contener elementos `<xs:import />`, `<xs:include />` y `<xs
 </schema>  
 ```  
   
- Para obtener más información acerca de la `<xs:import />`, `<xs:include />`, y `<xs:redefine />` elementos y el <xref:System.Xml.Schema.XmlSchemaImport>, <xref:System.Xml.Schema.XmlSchemaInclude> y <xref:System.Xml.Schema.XmlSchemaRedefine> las clases, consulte la [esquema XML de W3C](http://go.microsoft.com/fwlink/?LinkId=45242) y <xref:System.Xml.Schema?displayProperty=nameWithType> documentación de referencia de clases de espacio de nombres.  
+ Para obtener más información sobre los elementos `<xs:import />`, `<xs:include />` y `<xs:redefine />`, y sobre las clases <xref:System.Xml.Schema.XmlSchemaImport>, <xref:System.Xml.Schema.XmlSchemaInclude> y <xref:System.Xml.Schema.XmlSchemaRedefine>, vea [W3C XML Schema](http://www.w3.org/XML/Schema) y la documentación de referencia sobre las clases del espacio de nombres <xref:System.Xml.Schema?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>Vea también  
- [Información general sobre el modelo de objetos esquema XML](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)  
- [Leer y escribir esquemas XML](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)  
- [Compilar esquemas XML](../../../../docs/standard/data/xml/building-xml-schemas.md)  
- [Cómo atravesar esquemas XML](../../../../docs/standard/data/xml/traversing-xml-schemas.md)  
+ [Información general sobre el Modelo de objetos de esquema XML](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)  
+ [Lectura y escritura de esquemas XML](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)  
+ [Compilación de esquemas XML](../../../../docs/standard/data/xml/building-xml-schemas.md)  
+ [Recorrido de esquemas XML](../../../../docs/standard/data/xml/traversing-xml-schemas.md)  
  [Edición de esquemas XML](../../../../docs/standard/data/xml/editing-xml-schemas.md)  
  [XmlSchemaSet para compilación de esquemas](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)

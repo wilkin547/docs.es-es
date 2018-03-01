@@ -9,11 +9,14 @@ ms.topic: article
 ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
-ms.openlocfilehash: a6546818eaeac3c32a6a9ddd7e64b1b0e0ea170f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 33123732514a53574036f6f8e948b2cf9acb9229
+ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="net-glossary"></a>Glosario de .NET
 
@@ -29,21 +32,21 @@ Similar a [JIT](#jit), este compilador también convierte [IL](#il) en código d
 
 La implementación original de ASP.NET que se distribuye con .NET Framework.
 
-A veces, ASP.NET es un término genérico que hace referencia a ambas implementaciones de ASP.NET, incluido ASP.NET Core. El significado que lleva el término en una instancia específica se determina según el contexto. Hacer referencia a ASP.NET 4.x cuando desee dejar claro que no usa ASP.NET para indicar ambas implementaciones. 
+A veces, ASP.NET es un término genérico que hace referencia a ambas implementaciones de ASP.NET, incluido ASP.NET Core. El significado que lleva el término en una instancia específica se determina según el contexto. Haga referencia a ASP.NET 4.x cuando desee dejar claro que no usa ASP.NET para indicar ambas implementaciones. 
 
-Vea [documentación de ASP.NET](/aspnet/#pivot=aspnet).
+Vea la [documentación de ASP.NET](/aspnet/#pivot=aspnet).
 
 ## <a name="aspnet-core"></a>ASP.NET Core
 
 Una implementación multiplataforma, de alto rendimiento y de código abierto de ASP.NET compilada en .NET Core.
 
-Vea [documentación principal de ASP.NET](/aspnet/#pivot=core).
+Vea la [documentación de ASP.NET Core](/aspnet/#pivot=core).
 
 ## <a name="assembly"></a>ensamblado
 
-Un archivo *.dll* que contiene una colección de API que pueden llamarse mediante aplicaciones u otros ensamblados.
+Un archivo *.dll*/*.exe* que puede contener una colección de API que pueden llamarse mediante aplicaciones u otros ensamblados.
 
-Un ensamblado de .NET es una colección de tipos. Un ensamblado incluye interfaces, clases, estructuras, enumeraciones y delegados.  A veces, se hace referencia a los ensamblados de la carpeta *bin* de un proyecto como *archivos binarios*. Vea también [biblioteca](#library).
+Un ensamblado puede incluir tipos como interfaces, clases, estructuras, enumeraciones y delegados. A veces, se hace referencia a los ensamblados de la carpeta *bin* de un proyecto como *archivos binarios*. Vea también [biblioteca](#library).
 
 ## <a name="clr"></a>CLR
 
@@ -189,7 +192,7 @@ UWP fue el primer marco de trabajo de la aplicación compatible con .NET Native.
 
 Vea [Intro to .NET Native and CoreRT](https://github.com/dotnet/corert/blob/master/Documentation/intro-to-corert.md) (Introducción a .NET Native y CoreRT).
 
-## <a name="net-standard"></a>Estándar .NET
+## <a name="net-standard"></a>.NET Standard
 
 Una especificación formal de las API de .NET que están disponibles en cada implementación de .NET.
 
@@ -207,7 +210,7 @@ Esta tecnología se puede considerar como un compilador JIT persistente. Normalm
 
 Un paquete de NuGet &mdash; o simplemente un paquete &mdash; es un archivo *.zip* con uno o varios ensamblados del mismo nombre junto con metadatos adicionales, como el nombre del autor.
 
-El archivo *.zip* tiene una extensión *.nupkg* y puede contener recursos (como archivos *.dll* y *.xml*) para usar con varios marcos de trabajo y versiones. Cuando se instala en una aplicación o biblioteca, se seleccionan los recursos adecuados en función de la plataforma de destino especificada por la aplicación o biblioteca. Los recursos que definen la interfaz se encuentran en la carpeta *ref* y los recursos que definen la implementación se encuentran en la carpeta *lib*.
+El archivo *.zip* tiene una extensión *.nupkg* y puede contener recursos (como archivos *.dll* y *.xml*) para usar con varios marcos de destino y versiones. Cuando se instala en una aplicación o biblioteca, se seleccionan los recursos adecuados en función de la plataforma de destino especificada por la aplicación o biblioteca. Los recursos que definen la interfaz se encuentran en la carpeta *ref* y los recursos que definen la implementación se encuentran en la carpeta *lib*.
 
 ## <a name="platform"></a>platform
 

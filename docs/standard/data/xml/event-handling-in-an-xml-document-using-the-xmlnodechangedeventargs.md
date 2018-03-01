@@ -12,20 +12,23 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0fe844e3-5b6f-4fe7-ad15-22459501738b
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 2bfd6eee5831b6bb92c0274fe5925184c80a92e2
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: cc74b13fd4771cc4f00500ff3253795f45db2b40
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="event-handling-in-an-xml-document-using-the-xmlnodechangedeventargs"></a>Controlar eventos en un documento XML mediante XmlNodeChangedEventArgs
-El **XmlNodeChangedEventArgs** encapsula los argumentos pasados a los controladores de eventos registrados en el **XmlDocument** objeto para el control de eventos. En la tabla siguiente se proporcionan los eventos y una descripción de cuándo se activan.  
+**XmlNodeChangedEventArgs** encapsula los argumentos que se pasan a los controladores de eventos registrados en el objeto **XmlDocument** para controlar eventos. En la tabla siguiente se proporcionan los eventos y una descripción de cuándo se activan.  
   
-|Evento|Se activa|  
+|evento|Se activa|  
 |-----------|-----------|  
 |<xref:System.Xml.XmlDocument.NodeInserting>|Cuando un nodo que pertenece al documento actual se va a insertar en otro nodo.|  
 |<xref:System.Xml.XmlDocument.NodeInserted>|Cuando un nodo que pertenece al documento actual se ha insertado en otro nodo.|  
@@ -35,7 +38,7 @@ El **XmlNodeChangedEventArgs** encapsula los argumentos pasados a los controlado
 |<xref:System.Xml.XmlDocument.NodeChanged>|Cuando se ha cambiado el valor de un nodo.|  
   
 > [!NOTE]
->  Si el **XmlDataDocument** uso de memoria está totalmente optimizado para usar **conjunto de datos** almacenamiento, el **XmlDataDocument** puede no generar ninguno de los eventos enumerados anteriormente si los cambios son intentó subyacente **conjunto de datos**. Si necesita estos eventos, deberá recorrer todo el **XmlDocument** para hacer que la memoria no esté totalmente optimizada.  
+>  Si el uso de la memoria de **XmlDataDocument** está totalmente optimizado para utilizar el almacenamiento **DataSet**, **XmlDataDocument** puede no generar ninguno de los eventos enumerados anteriormente si los cambios se realizan en la clase **DataSet** subyacente. Si necesita estos eventos, deberá recorrer el objeto **XmlDocument** para hacer que la memoria no esté totalmente optimizada.  
   
  En el ejemplo de código siguiente se muestra cómo definir un controlador de eventos y cómo agregarlo a un evento.  
   
@@ -80,9 +83,9 @@ void NodeInsertedHandler(Object src, XmlNodeChangedEventArgs args)
 }  
 ```  
   
- Algunas operaciones del Modelo de objetos de documento (DOM) son compuestas y pueden dar como resultado la activación de varios eventos. Por ejemplo, **AppendChild** que también tenga que quitar el nodo que se ha agregado de su elemento primario anterior. En este caso, verá un **NodeRemoved** en primer lugar, se desencadena el evento seguido por un **NodeInserted** eventos. Las operaciones como la configuración de **InnerXml** podría dar lugar a varios eventos.  
+ Algunas operaciones del Modelo de objetos de documento (DOM) son compuestas y pueden dar como resultado la activación de varios eventos. Por ejemplo, puede que **AppendChild** tenga que quitar el nodo que se ha anexado de su nodo primario anterior. En este caso, verá la activación del evento **NodeRemoved** primero, seguida por un evento **NodeInserted**. Algunas operaciones como la configuración de **InnerXml** pueden dar como resultado varios eventos.  
   
- En el ejemplo de código siguiente se muestra la creación del controlador de eventos y el control de la **NodeInserted** eventos.  
+ En el ejemplo de código siguiente se muestra la creación del controlador de eventos y el control del evento **NodeInserted**.  
   
 ```vb  
 Imports System  
@@ -216,4 +219,4 @@ public class Sample
  Para obtener más información, consulte <xref:System.Xml.XmlNodeChangedEventArgs> y <xref:System.Xml.XmlNodeChangedEventHandler>.  
   
 ## <a name="see-also"></a>Vea también  
- [Modelo de objetos de documento (DOM) de XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+ [Document Object Model (DOM) para XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

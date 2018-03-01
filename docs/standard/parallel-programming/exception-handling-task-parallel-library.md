@@ -11,22 +11,26 @@ ms.topic: article
 dev_langs:
 - csharp
 - vb
-helpviewer_keywords: tasks, exceptions
+helpviewer_keywords:
+- tasks, exceptions
 ms.assetid: beb51e50-9061-4d3d-908c-56a4f7c2e8c1
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: e62498376d321d8ff22a53315b9d5f18a8865056
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 86b4d105b7d79abbd25b342774705866119ada68
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="exception-handling-task-parallel-library"></a>Control de excepciones (Task Parallel Library)
-Las excepciones no controladas que se inician mediante código de usuario que se ejecuta dentro de una tarea se propagan de vuelta al subproceso que hace la llamada, excepto en determinados escenarios que se describen posteriormente en este tema. Las excepciones se propagan cuando se usa uno de los métodos estático o de instancia <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> o <!--zz <xref:System.Threading.Tasks.Task%601.Wait%2A?displayProperty=nameWithType>  --> `Wait` métodos y se pueden controlar si se incluye la llamada en un `try` / `catch` instrucción. Si una tarea es la tarea primaria de tareas secundarias asociadas o si se esperan varias tareas, pueden producirse varias excepciones.  
+Las excepciones no controladas que se inician mediante código de usuario que se ejecuta dentro de una tarea se propagan de vuelta al subproceso que hace la llamada, excepto en determinados escenarios que se describen posteriormente en este tema. Las excepciones se propagan cuando se usa uno de los métodos estáticos o de instancia <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> o <!--zz <xref:System.Threading.Tasks.Task%601.Wait%2A?displayProperty=nameWithType>  --> `Wait`, los cuales se pueden controlar si se incluye la llamada en una instrucción `try`/`catch`. Si una tarea es la tarea primaria de tareas secundarias asociadas o si se esperan varias tareas, pueden producirse varias excepciones.  
   
- Para propagar todas las excepciones de nuevo al subproceso que realiza la llamada, la infraestructura de la tarea las encapsula en una instancia de <xref:System.AggregateException> . La excepción <xref:System.AggregateException> tiene una propiedad <xref:System.AggregateException.InnerExceptions%2A> que se puede enumerar para examinar todas las excepciones originales que se produjeron y controlar (o no) cada una de ellas de forma individual. También puede controlar las excepciones originales mediante el <xref:System.AggregateException.Handle%2A?displayProperty=nameWithType> método.  
+ Para propagar todas las excepciones de nuevo al subproceso que realiza la llamada, la infraestructura de la tarea las encapsula en una instancia de <xref:System.AggregateException> . La excepción <xref:System.AggregateException> tiene una propiedad <xref:System.AggregateException.InnerExceptions%2A> que se puede enumerar para examinar todas las excepciones originales que se produjeron y controlar (o no) cada una de ellas de forma individual. También puede controlar las excepciones originales mediante el método <xref:System.AggregateException.Handle%2A?displayProperty=nameWithType>.  
   
  Incluso aunque solo se produzca una excepción, se encapsulará en una excepción <xref:System.AggregateException> , como se muestra en el ejemplo siguiente.  
   
@@ -35,7 +39,7 @@ Las excepciones no controladas que se inician mediante código de usuario que se
   
  Para evitar una excepción no controlada, basta con detectar el objeto <xref:System.AggregateException> y omitir las excepciones internas. Sin embargo, esta operación no resulta recomendable porque es igual que detectar el tipo <xref:System.Exception> base en escenarios no paralelos. Si desea detectar una excepción sin realizar acciones concretas que la resuelvan, puede dejar al programa en un estado indeterminado.  
   
- Si no desea llamar a la <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> o <!--zz <xref:System.Threading.Tasks.Task%601.Wait%2A?displayProperty=nameWithType>  --> `Wait` método para esperar la finalización de una tarea, también se puede recuperar el <xref:System.AggregateException> excepción de la tarea <xref:System.Threading.Tasks.Task.Exception%2A> propiedad, como se muestra en el ejemplo siguiente. Para más información, consulte la sección [Observar excepciones mediante la propiedad Task.Exception](#ExceptionProp) de este tema.  
+ Si no desea llamar a los métodos <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> ni <!--zz <xref:System.Threading.Tasks.Task%601.Wait%2A?displayProperty=nameWithType>  --> `Wait` para esperar a la finalización de una tarea, también puede recuperar la excepción <xref:System.AggregateException> de la propiedad <xref:System.Threading.Tasks.Task.Exception%2A> de la tarea, como se muestra en el ejemplo siguiente. Para más información, consulte la sección [Observar excepciones mediante la propiedad Task.Exception](#ExceptionProp) de este tema.  
   
  [!code-csharp[TPL_Exceptions#29](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_exceptions/cs/handling22.cs#29)]
  [!code-vb[TPL_Exceptions#29](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_exceptions/vb/handling22.vb#29)]  
@@ -48,12 +52,12 @@ Las excepciones no controladas que se inician mediante código de usuario que se
 >  Cuando está habilitada la opción "Solo mi código", en algunos casos, Visual Studio se interrumpe en la línea que produce la excepción y muestra el mensaje de error "Excepción no controlada por el código de usuario". Este error es benigno. Puede presionar F5 para continuar y ver el comportamiento de control de excepciones que se muestra en estos ejemplos. Para evitar que Visual Studio se interrumpa con el primer error, desactive la casilla **Habilitar Solo mi código** bajo **Herramientas, Opciones, Depuración, General**.  
   
 ## <a name="attached-child-tasks-and-nested-aggregateexceptions"></a>Tareas secundarias asociadas y objetos AggregateException anidados  
- Si una tarea tiene una tarea secundaria adjunta que inicia una excepción, esa excepción se encapsula en un objeto <xref:System.AggregateException> antes de que se propague a la tarea primaria, que encapsula esa excepción en su propio objeto <xref:System.AggregateException> antes de propagarla de nuevo al subproceso que realiza la llamada. En tales casos, la <xref:System.AggregateException.InnerExceptions%2A> propiedad de la <xref:System.AggregateException> excepción detectada en el <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> o <!--zz <xref:System.Threading.Tasks.Task%601.Wait%2A?displayProperty=nameWithType>  --> `Wait` o <xref:System.Threading.Tasks.Task.WaitAny%2A> o <xref:System.Threading.Tasks.Task.WaitAll%2A> método contiene uno o varios <xref:System.AggregateException> instancias, no el excepciones originales que produjeron el error. Para evitar tener que iterar sobre anidado <xref:System.AggregateException> excepciones, puede usar el <xref:System.AggregateException.Flatten%2A> método para quitar todos los anidado <xref:System.AggregateException> excepciones, por lo que el <xref:System.AggregateException.InnerExceptions%2A?displayProperty=nameWithType> propiedad contiene las excepciones originales. En el ejemplo siguiente, las instancias anidadas de <xref:System.AggregateException> se reducen y se controlan en un solo bucle.  
+ Si una tarea tiene una tarea secundaria adjunta que inicia una excepción, esa excepción se encapsula en un objeto <xref:System.AggregateException> antes de que se propague a la tarea primaria, que encapsula esa excepción en su propio objeto <xref:System.AggregateException> antes de propagarla de nuevo al subproceso que realiza la llamada. En casos como este, la propiedad <xref:System.AggregateException.InnerExceptions%2A> de la excepción <xref:System.AggregateException> que se detecta en los métodos <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType>, <!--zz <xref:System.Threading.Tasks.Task%601.Wait%2A?displayProperty=nameWithType>  --> `Wait`, <xref:System.Threading.Tasks.Task.WaitAny%2A> o <xref:System.Threading.Tasks.Task.WaitAll%2A> contiene una o varias instancias de <xref:System.AggregateException>, pero no las excepciones originales que produjeron el error. Para evitar tener que iterar sobre excepciones <xref:System.AggregateException>, puede usar el método <xref:System.AggregateException.Flatten%2A> para quitar todas las excepciones <xref:System.AggregateException> anidadas, de forma que la propiedad <xref:System.AggregateException.InnerExceptions%2A?displayProperty=nameWithType> contenga las excepciones originales. En el ejemplo siguiente, las instancias anidadas de <xref:System.AggregateException> se reducen y se controlan en un solo bucle.  
   
  [!code-csharp[TPL_Exceptions#22](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_exceptions/cs/flatten2.cs#22)]
  [!code-vb[TPL_Exceptions#22](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_exceptions/vb/flatten2.vb#22)]  
   
- También puede usar el <xref:System.AggregateException.Flatten%2A?displayProperty=nameWithType> método volver a producir las excepciones internas de varias <xref:System.AggregateException> instancias iniciadas por varias tareas en una sola <xref:System.AggregateException> instancia, tal y como se muestra en el ejemplo siguiente.  
+ También puede utilizar el método <xref:System.AggregateException.Flatten%2A?displayProperty=nameWithType> para volver a generar las excepciones internas de varias instancias de <xref:System.AggregateException> iniciadas por varias tareas en una sola instancia de <xref:System.AggregateException>, como se muestra en el ejemplo siguiente.  
   
  [!code-csharp[TPL_Exceptions#13](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_exceptions/cs/taskexceptions2.cs#13)]
  [!code-vb[TPL_Exceptions#13](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_exceptions/vb/taskexceptions2.vb#13)]  
@@ -73,14 +77,14 @@ Las excepciones no controladas que se inician mediante código de usuario que se
  [!code-vb[TPL_Exceptions#4](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_exceptions/vb/tpl_exceptions.vb#4)]  
   
 ## <a name="using-the-handle-method-to-filter-inner-exceptions"></a>Usar el método Handle para filtrar excepciones internas  
- El método <xref:System.AggregateException.Handle%2A?displayProperty=nameWithType> puede usarse para filtrar excepciones que pueden tratarse como "controladas" sin necesidad de usar ninguna otra lógica. En el delegado de usuario que se proporciona a la <xref:System.AggregateException.Handle%28System.Func%7BSystem.Exception%2CSystem.Boolean%7D%29?displayProperty=nameWithType> método, puede examinar el tipo de excepción, su <xref:System.Exception.Message%2A> propiedad o cualquier otra información sobre lo que le permitirá determinar si es benigna. Las excepciones para el que el delegado devuelve `false` se reinician en un nuevo <xref:System.AggregateException> inmediatamente después de la instancia la <xref:System.AggregateException.Handle%2A?displayProperty=nameWithType> devuelve del método.  
+ El método <xref:System.AggregateException.Handle%2A?displayProperty=nameWithType> puede usarse para filtrar excepciones que pueden tratarse como "controladas" sin necesidad de usar ninguna otra lógica. En el delegado de usuario que se facilita al método <xref:System.AggregateException.Handle%28System.Func%7BSystem.Exception%2CSystem.Boolean%7D%29?displayProperty=nameWithType>, se puede examinar el tipo de excepción, su propiedad <xref:System.Exception.Message%2A> o cualquier otra información sobre ella que permita determinar si no supone un riesgo. Las excepciones en las que el delegado devuelve `false` se reinician inmediatamente en una nueva instancia de <xref:System.AggregateException> después de que el método <xref:System.AggregateException.Handle%2A?displayProperty=nameWithType> devuelva un valor.  
   
- En el ejemplo siguiente es funcionalmente equivalente al primer ejemplo de este tema, que examina cada excepción de la <xref:System.AggregateException.InnerExceptions%2A?displayProperty=nameWithType> colección.  En su lugar, llama a este controlador de excepciones del <xref:System.AggregateException.Handle%2A?displayProperty=nameWithType> objeto del método para cada excepción y solo vuelve a generar excepciones no `CustomException` instancias.  
+ El ejemplo siguiente es funcionalmente equivalente al primer ejemplo de este tema, que examina cada excepción de la colección <xref:System.AggregateException.InnerExceptions%2A?displayProperty=nameWithType>.  En su lugar, este controlador de excepciones llama al objeto del método <xref:System.AggregateException.Handle%2A?displayProperty=nameWithType> por cada excepción y solo vuelve a generar las excepciones que no son instancias de `CustomException`.  
   
  [!code-csharp[TPL_Exceptions#26](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_exceptions/cs/handlemethod21.cs#26)]
  [!code-vb[TPL_Exceptions#26](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_exceptions/vb/handlemethod21.vb#26)]  
   
- Éste es un ejemplo más completo que usa el <xref:System.AggregateException.Handle%2A?displayProperty=nameWithType> método para proporcionar un control especial para un <xref:System.UnauthorizedAccessException> excepción al enumerar los archivos.  
+ A continuación, se muestra un ejemplo más completo que usa el método <xref:System.AggregateException.Handle%2A?displayProperty=nameWithType> para ofrecer un control especial para una excepción <xref:System.UnauthorizedAccessException> al enumerar los archivos.  
   
  [!code-csharp[TPL_Exceptions#12](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_exceptions/cs/taskexceptions.cs#12)]
  [!code-vb[TPL_Exceptions#12](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_exceptions/vb/taskexceptions.vb#12)]  

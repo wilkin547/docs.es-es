@@ -21,11 +21,14 @@ helpviewer_keywords:
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 81547bbcdbae5b4cc8dc1f20e829dfb5ede08963
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 9416bff21607d8e37f9e7dbc270477539043fe8b
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="standard-numeric-format-strings"></a>Cadenas con formato numérico estándar
 Las cadenas de formato numérico estándar se utilizan para dar formato a tipos numéricos comunes. La forma de una cadena de formato numérico estándar es `Axx`, donde:  
@@ -34,34 +37,34 @@ Las cadenas de formato numérico estándar se utilizan para dar formato a tipos 
   
 -   `xx` es un entero opcional denominado *especificador de precisión*. El especificador de precisión está comprendido entre el 0 y el 99 y afecta al número de dígitos del resultado. Observe que el especificador de precisión controla el número de dígitos en la representación de cadena de un número. No redondea el número en sí. Para realizar una operación de redondeo, use el método <xref:System.Math.Ceiling%2A?displayProperty=nameWithType>, <xref:System.Math.Floor%2A?displayProperty=nameWithType> o <xref:System.Math.Round%2A?displayProperty=nameWithType>.  
   
-     Cuando *especificador de precisión* controla el número de dígitos fraccionarios en la cadena de resultado, las cadenas de resultado reflejan números que se redondean alejándose de cero (es decir, usando <xref:System.MidpointRounding.AwayFromZero?displayProperty=nameWithType>).  
+     Cuando el *especificador de precisión<xref:System.MidpointRounding.AwayFromZero?displayProperty=nameWithType> controla el número de dígitos fraccionarios en la cadena de resultados, las cadenas de resultados reflejan números que se redondean alejándose de cero (es decir, usando* ).  
   
     > [!NOTE]
     >  El especificador de precisión determina el número de dígitos de la cadena de resultado. Para rellenar una cadena de resultado con espacios iniciales o finales, use la característica [formatos compuestos](../../../docs/standard/base-types/composite-formatting.md) y defina un *componente de alineación* en el elemento de formato.  
   
-Cadenas de formato numérico estándar son compatibles con:
+Las cadenas con formato numérico estándar son compatibles con:
 
-- Algunas sobrecargas de los `ToString` método de todos los tipos numéricos. Por ejemplo, puede proporcionar una cadena de formato numérico para la <xref:System.Int32.ToString%28System.String%29?displayProperty=nameWithType> y <xref:System.Int32.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> métodos. 
+- Algunas sobrecargas del método `ToString` de todos los tipos numéricos. Por ejemplo, se puede proporcionar una cadena de formato numérico a los métodos <xref:System.Int32.ToString%28System.String%29?displayProperty=nameWithType> y <xref:System.Int32.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType>. 
  
-- .NET [característica de formato compuesto](../../../docs/standard/base-types/composite-formatting.md), que utilizan algunos `Write` y `WriteLine` métodos de la <xref:System.Console> y <xref:System.IO.StreamWriter> clases, el <xref:System.String.Format%2A?displayProperty=nameWithType> método y el <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType> método. La característica de formato compuesto permite incluir la representación de varios elementos de datos en una sola cadena a fin de especificar el ancho de campo y alinear números en un campo. Para obtener más información, consulte [Formatos compuestos](../../../docs/standard/base-types/composite-formatting.md).  
+- La [característica de formato compuesto](../../../docs/standard/base-types/composite-formatting.md) de .NET, que utilizan algunos métodos `Write` y `WriteLine` de las clases <xref:System.Console> y <xref:System.IO.StreamWriter>, el método <xref:System.String.Format%2A?displayProperty=nameWithType> y el método <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>. La característica de formato compuesto permite incluir la representación de varios elementos de datos en una sola cadena a fin de especificar el ancho de campo y alinear números en un campo. Para obtener más información, consulte [Formatos compuestos](../../../docs/standard/base-types/composite-formatting.md).  
 
-- [Interpola cadenas](../../csharp/language-reference/keywords/interpolated-strings.md) en C# y Visual Basic, que proporcionan una sintaxis simplificada cuando se compara con las cadenas de formato compuesto.
+- [Cadenas interpoladas](../../csharp/language-reference/keywords/interpolated-strings.md) en C# y Visual Basic, que proporcionan una sintaxis simplificada cuando se comparan con las cadenas de formato compuesto.
  
 > [!TIP]
 >  Puede descargar la [Utilidad de formato](http://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d), que es una aplicación que permite aplicar cadenas de formato a valores numéricos o de fecha y hora, y que muestra la cadena de resultado.  
   
 <a name="table"></a> En la tabla siguiente se describen los especificadores de formato numérico estándar y se muestran los resultados de ejemplo generados por cada especificador de formato. Consulte la sección [Notas](#NotesStandardFormatting) para obtener información adicional sobre cómo usar las cadenas con formato numérico estándar y la sección [Ejemplo](#example) para ver una ilustración completa de su uso.  
   
-|Especificador de formato|Name|Descripción|Ejemplos|  
+|Especificador de formato|nombre|Description|Ejemplos|  
 |----------------------|----------|-----------------|--------------|  
 |"C" o "c"|Moneda|Resultado: un valor de divisa.<br /><br /> Compatible con: todos los tipos numéricos.<br /><br /> Especificador de precisión: número de dígitos decimales.<br /><br /> Especificador de precisión predeterminado: definido por <xref:System.Globalization.NumberFormatInfo.CurrencyDecimalDigits%2A?displayProperty=nameWithType>.<br /><br /> Más información: [Especificador de formato de divisa ("C")](#CFormatString).|123.456 ("C", en-US) -> $123.46<br /><br /> 123.456 ("C", fr-FR) -> 123,46 €<br /><br /> 123.456 ("C", ja-JP) -> ¥123<br /><br /> -123.456 ("C3", en-US) -> ($123.456)<br /><br /> -123.456 ("C3", fr-FR) -> -123,456 €<br /><br /> -123.456 ("C3", ja-JP) -> -¥123.456|  
 |"D" o "d"|Decimal|Resultado: dígitos enteros con signo negativo opcional.<br /><br /> Compatible con: solo tipos enteros.<br /><br /> Especificador de precisión: número mínimo de dígitos.<br /><br /> Especificador de precisión predeterminado: número mínimo de dígitos necesarios.<br /><br /> Más información: [Especificador de formato decimal ("D")](#DFormatString).|1234 ("D") -> 1234<br /><br /> -1234 ("D6") -> -001234|  
 |"E" o "e"|Exponencial (científico)|Resultado: notación exponencial.<br /><br /> Compatible con: todos los tipos numéricos.<br /><br /> Especificador de precisión: número de dígitos decimales.<br /><br /> Especificador de precisión predeterminado: 6.<br /><br /> Más información: [Especificador de formato exponencial ("E")](#EFormatString).|1052.0329112756 ("E", en-US) -> 1.052033E+003<br /><br /> 1052.0329112756 ("e", fr-FR) -> 1,052033e+003<br /><br /> -1052.0329112756 ("e2", en-US) -> -1.05e+003<br /><br /> -1052.0329112756 ("E2", fr_FR) -> -1,05E+003|  
 |"F" o "f"|Punto fijo|Resultado: dígitos integrales y decimales con signo negativo opcional.<br /><br /> Compatible con: todos los tipos numéricos.<br /><br /> Especificador de precisión: número de dígitos decimales.<br /><br /> Especificador de precisión predeterminado: definido por <xref:System.Globalization.NumberFormatInfo.NumberDecimalDigits%2A?displayProperty=nameWithType>.<br /><br /> Más información: [Especificador de formato de punto fijo ("F")](#FFormatString).|1234.567 ("F", en-US) -> 1234.57<br /><br /> 1234.567 ("F", de-DE) -> 1234,57<br /><br /> 1234 ("F1", en-US) -> 1234.0<br /><br /> 1234 ("F1", de-DE) -> 1234,0<br /><br /> -1234.56 ("F4", en-US) -> -1234.5600<br /><br /> -1234.56 ("F4", de-DE) -> -1234,5600|  
 |"G" o "g"|General|Resultado: notación de punto fijo o científica, la que sea más compacta.<br /><br /> Compatible con: todos los tipos numéricos.<br /><br /> Especificador de precisión: número de dígitos significativos.<br /><br /> Especificador de precisión predeterminado: depende del tipo numérico.<br /><br /> Más información: [Especificador de formato general ("G")](#GFormatString).|-123.456 ("G", en-US) -> -123.456<br /><br /> -123.456 ("G", sv-SE) -> -123,456<br /><br /> 123.4546 ("G4", en-US) -> 123.5<br /><br /> 123.4546 ("G4", sv-SE) -> 123,5<br /><br /> -1.234567890e-25 ("G", en-US) -> -1.23456789E-25<br /><br /> -1.234567890e-25 ("G", sv-SE) -> -1,23456789E-25|  
-|"N" o "n"|Número|Resultado: dígitos integrales y decimales, separadores de grupos y un separador decimal con signo negativo opcional.<br /><br /> Compatible con: todos los tipos numéricos.<br /><br /> Especificador de precisión: número deseado de decimales.<br /><br /> Especificador de precisión predeterminado: definido por <xref:System.Globalization.NumberFormatInfo.NumberDecimalDigits%2A?displayProperty=nameWithType>.<br /><br /> Más información: [Especificador de formato numérico ("N")](#NFormatString).|1234.567 ("N", en-US) -> 1,234.57<br /><br /> 1234.567 ("N", ru-RU) -> 1 234,57<br /><br /> 1234 ("N1", en-US) -> 1,234.0<br /><br /> 1234 ("N1", ru-RU) -> 1 234,0<br /><br /> -1234.56 ("N3", en-US) -> -1,234.560<br /><br /> -1234.56 ("N3", ru-RU) -> -1 234,560|  
+|"N" o "n"|número|Resultado: dígitos integrales y decimales, separadores de grupos y un separador decimal con signo negativo opcional.<br /><br /> Compatible con: todos los tipos numéricos.<br /><br /> Especificador de precisión: número deseado de decimales.<br /><br /> Especificador de precisión predeterminado: definido por <xref:System.Globalization.NumberFormatInfo.NumberDecimalDigits%2A?displayProperty=nameWithType>.<br /><br /> Más información: [Especificador de formato numérico ("N")](#NFormatString).|1234.567 ("N", en-US) -> 1,234.57<br /><br /> 1234.567 ("N", ru-RU) -> 1 234,57<br /><br /> 1234 ("N1", en-US) -> 1,234.0<br /><br /> 1234 ("N1", ru-RU) -> 1 234,0<br /><br /> -1234.56 ("N3", en-US) -> -1,234.560<br /><br /> -1234.56 ("N3", ru-RU) -> -1 234,560|  
 |"P" o "p"|Porcentaje|Resultado: número multiplicado por 100 y mostrado con un símbolo de porcentaje.<br /><br /> Compatible con: todos los tipos numéricos.<br /><br /> Especificador de precisión: número deseado de decimales.<br /><br /> Especificador de precisión predeterminado: definido por <xref:System.Globalization.NumberFormatInfo.PercentDecimalDigits%2A?displayProperty=nameWithType>.<br /><br /> Más información: [Especificador de formato de porcentaje ("P")](#PFormatString).|1 ("P", en-US) -> 100.00 %<br /><br /> 1 ("P", fr-FR) -> 100,00 %<br /><br /> -0.39678 ("P1", en-US) -> -39.7 %<br /><br /> -0.39678 ("P1", fr-FR) -> -39,7 %|  
-|"R" o "r"|Acción de ida y vuelta|Resultado: cadena que puede aplicar acciones de ida y vuelta (round-trip) a un número idéntico.<br /><br /> Compatible con: <xref:System.Single>, <xref:System.Double> y <xref:System.Numerics.BigInteger>.<br /><br /> Nota: Se recomienda para el <xref:System.Numerics.BigInteger> solo. Para <xref:System.Double> tipos, use "G17"; para <xref:System.Single> tipos, use "G9". </br> Especificador de precisión: se omite.<br /><br /> Más información: [Especificador de formato de operación de ida y vuelta ("R")](#RFormatString).|123456789.12345678 ("R") -> 123456789.12345678<br /><br /> -1234567890.12345678 ("R") -> -1234567890.1234567|  
+|"R" o "r"|Acción de ida y vuelta|Resultado: cadena que puede aplicar acciones de ida y vuelta (round-trip) a un número idéntico.<br /><br /> Compatible con: <xref:System.Single>, <xref:System.Double> y <xref:System.Numerics.BigInteger>.<br /><br /> Nota: Se recomienda solo para el tipo <xref:System.Numerics.BigInteger>. Para los tipos <xref:System.Double>, use "G17"; para los tipos <xref:System.Single>, use "G9". </br> Especificador de precisión: se omite.<br /><br /> Más información: [Especificador de formato de operación de ida y vuelta ("R")](#RFormatString).|123456789.12345678 ("R") -> 123456789.12345678<br /><br /> -1234567890.12345678 ("R") -> -1234567890.1234567|  
 |"X" o "x"|Hexadecimal|Resultado: cadena hexadecimal.<br /><br /> Compatible con: solo tipos enteros.<br /><br /> Especificador de precisión: número de dígitos en la cadena de resultado.<br /><br /> Más información: [Especificador de formato hexadecimal ("X")](#XFormatString).|255 ("X") -> FF<br /><br /> -1 ("x") -> ff<br /><br /> 255 ("x4") -> 00ff<br /><br /> -1 ("X4") -> 00FF|  
 |Cualquier otro carácter único|Especificador desconocido|Resultado: Produce <xref:System.FormatException> en tiempo de ejecución.||  
   
@@ -69,19 +72,19 @@ Cadenas de formato numérico estándar son compatibles con:
 ## <a name="using-standard-numeric-format-strings"></a>Usar cadenas de formato numérico estándar  
  Una cadena de formato numérico estándar se puede usar para definir el formato de un valor numérico de una de dos maneras:  
   
--   Se puede pasar a una sobrecarga del método `ToString` que tiene un parámetro `format`. En el ejemplo siguiente se da formato a un valor numérico como una cadena de divisa en la referencia cultural actual (en este caso, la referencia cultural en-US).  
+-   Se puede pasar a una sobrecarga del método `ToString` que tiene un parámetro `format`. En el ejemplo siguiente se da formato a un valor numérico como una cadena de divisa en la referencia cultural actual (en este caso, en-US).  
   
      [!code-cpp[Formatting.Numeric.Standard#10](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/standardusage1.cpp#10)]
      [!code-csharp[Formatting.Numeric.Standard#10](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/standardusage1.cs#10)]
      [!code-vb[Formatting.Numeric.Standard#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/standardusage1.vb#10)]  
   
--   Se puede proporcionar como el `formatString` argumento en un elemento de formato usado con métodos como <xref:System.String.Format%2A?displayProperty=nameWithType>, <xref:System.Console.WriteLine%2A?displayProperty=nameWithType>, y <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>. Para obtener más información, consulte [Formatos compuestos](../../../docs/standard/base-types/composite-formatting.md). En el ejemplo siguiente se usa un elemento de formato para insertar un valor de divisa en una cadena.  
+-   Se puede proporcionar como el argumento `formatString` de un elemento de formato usado con métodos como <xref:System.String.Format%2A?displayProperty=nameWithType>, <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> y <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>. Para obtener más información, consulte [Formatos compuestos](../../../docs/standard/base-types/composite-formatting.md). En el ejemplo siguiente se usa un elemento de formato para insertar un valor de divisa en una cadena.  
   
      [!code-cpp[Formatting.Numeric.Standard#11](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/standardusage1.cpp#11)]
      [!code-csharp[Formatting.Numeric.Standard#11](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/standardusage1.cs#11)]
      [!code-vb[Formatting.Numeric.Standard#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/standardusage1.vb#11)]  
   
-     Si lo desea, puede proporcionar un `alignment` argumento para especificar el ancho del campo numérico y si su valor está alineado a izquierda o derecha. En el ejemplo siguiente se alinea a la izquierda un valor de moneda en un campo de 28 caracteres y se alinea a la derecha un valor de moneda en un campo de 14 caracteres.  
+     Opcionalmente, puede facilitar un argumento `alignment` para especificar el ancho del campo numérico y si su valor está alineado a izquierda o derecha. En el ejemplo siguiente se alinea a la izquierda un valor de moneda en un campo de 28 caracteres y se alinea a la derecha un valor de moneda en un campo de 14 caracteres.  
   
      [!code-cpp[Formatting.Numeric.Standard#12](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/standardusage1.cpp#12)]
      [!code-csharp[Formatting.Numeric.Standard#12](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/standardusage1.cs#12)]
@@ -97,7 +100,7 @@ Cadenas de formato numérico estándar son compatibles con:
   
  La información de formato del objeto <xref:System.Globalization.NumberFormatInfo> actual afecta a la cadena de resultado. En la tabla siguiente se enumeran las propiedades de <xref:System.Globalization.NumberFormatInfo> que controlan el formato de la cadena devuelta.  
   
-|Propiedad de NumberFormatInfo|Descripción|  
+|Propiedad de NumberFormatInfo|Description|  
 |-------------------------------|-----------------|  
 |<xref:System.Globalization.NumberFormatInfo.CurrencyPositivePattern%2A>|Define la posición del símbolo de divisa para los valores positivos.|  
 |<xref:System.Globalization.NumberFormatInfo.CurrencyNegativePattern%2A>|Define la posición del símbolo de divisa para los valores negativos y especifica si el signo negativo está representado por paréntesis o por la propiedad <xref:System.Globalization.NumberFormatInfo.NegativeSign%2A>.|  
@@ -124,7 +127,7 @@ Cadenas de formato numérico estándar son compatibles con:
   
  La información de formato del objeto <xref:System.Globalization.NumberFormatInfo> actual afecta a la cadena de resultado. Como se muestra en la tabla siguiente, una única propiedad afecta al formato de la cadena de resultado.  
   
-|Propiedad de NumberFormatInfo|Descripción|  
+|Propiedad de NumberFormatInfo|Description|  
 |-------------------------------|-----------------|  
 |<xref:System.Globalization.NumberFormatInfo.NegativeSign%2A>|Define la cadena que indica que un número es negativo.|  
   
@@ -146,7 +149,7 @@ Cadenas de formato numérico estándar son compatibles con:
   
  La información de formato del objeto <xref:System.Globalization.NumberFormatInfo> actual afecta a la cadena de resultado. En la tabla siguiente se enumeran las propiedades de <xref:System.Globalization.NumberFormatInfo> que controlan el formato de la cadena devuelta.  
   
-|Propiedad de NumberFormatInfo|Descripción|  
+|Propiedad de NumberFormatInfo|Description|  
 |-------------------------------|-----------------|  
 |<xref:System.Globalization.NumberFormatInfo.NegativeSign%2A>|Define la cadena que indica que un número es negativo tanto para el coeficiente como para el exponente.|  
 |<xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A>|Define la cadena que separa el dígito integral de los dígitos decimales en el coeficiente.|  
@@ -162,13 +165,13 @@ Cadenas de formato numérico estándar son compatibles con:
   
 <a name="FFormatString"></a>   
 ## <a name="the-fixed-point-f-format-specifier"></a>Especificador de formato de punto fijo ("F")  
- El especificador de formato punto fijo ("F") convierte un número en una cadena con el formato "-ddd.ddd …" donde cada "d" indica un dígito (0-9). La cadena comienza con un signo menos si el número es negativo.  
+ El especificador de formato de punto fijo ("F") convierte un número en una cadena con el formato "-ddd.ddd…" donde cada "d" indica un dígito (0-9). La cadena comienza con un signo menos si el número es negativo.  
   
  El especificador de precisión indica el número deseado de cifras decimales. Si se omite el especificador de precisión, la propiedad <xref:System.Globalization.NumberFormatInfo.NumberDecimalDigits%2A?displayProperty=nameWithType> actual proporciona la precisión numérica.  
   
  La información de formato del objeto <xref:System.Globalization.NumberFormatInfo> actual afecta a la cadena de resultado. En la tabla siguiente se enumeran las propiedades del objeto <xref:System.Globalization.NumberFormatInfo> que controlan el formato de la cadena de resultado.  
   
-|Propiedad de NumberFormatInfo|Descripción|  
+|Propiedad de NumberFormatInfo|Description|  
 |-------------------------------|-----------------|  
 |<xref:System.Globalization.NumberFormatInfo.NegativeSign%2A>|Define la cadena que indica que un número es negativo.|  
 |<xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A>|Define la cadena que separa los dígitos integrales de los decimales.|  
@@ -204,16 +207,16 @@ Cadenas de formato numérico estándar son compatibles con:
   
  Si se usa la notación científica, el exponente del resultado lleva el prefijo "E" si el especificador de formato es "G", o "e" si el especificador de formato es "g". El exponente contiene un mínimo de dos dígitos. Esto difiere del formato para la notación científica que genera el especificador de formato exponencial, que incluye un mínimo de tres dígitos en el exponente.  
  
-Tenga en cuenta que, cuando se usa con un <xref:System.Double> valor, el especificador de formato "G17" garantiza que el original <xref:System.Double> correctamente valor ida y vuelta. Esto es porque <xref:System.Double> es una IEEE 754 2008-compatible con doble precisión (`binary64`) número de punto que ofrece el máximo de 17 dígitos significativos de precisión flotante. Se recomienda su uso en lugar de la [especificador de formato "R"](#RFormatString), ya que en algunos casos "R" se produce un error para valores de punto flotante de precisión doble de ida y vuelta correctamente. En el ejemplo siguiente se muestra uno de estos casos.
+Tenga en cuenta que, cuando se usa con un valor <xref:System.Double>, el especificador de formato "G17" garantiza que el valor <xref:System.Double> original realice un recorrido de ida y vuelta correctamente. Esto se debe a que <xref:System.Double> es un número de punto flotante de doble precisión compatible con IEEE 754-2008 (`binary64`) que ofrece un máximo de 17 dígitos de precisión significativos. Se recomienda su uso en lugar del [especificador de formato "R"](#RFormatString), ya que, en algunos casos, "R" no logra realizar un recorrido de ida y vuelta correcto por los valores de números de punto flotante de doble precisión. Esto se ilustra en el siguiente ejemplo.
 
 [!code-csharp[Round-tripping a Double](../../../samples/snippets/standard/base-types/format-strings/csharp/g17.cs)]   
 [!code-vb[Round-tripping a Double](../../../samples/snippets/standard/base-types/format-strings/vb/g17.vb)]   
 
-Cuando se usa con un <xref:System.Single> valor, el especificador de formato "G9" garantiza que el original <xref:System.Single> correctamente valor ida y vuelta. Esto es porque <xref:System.Single> es una IEEE 754 2008-compatibles-precisión simple (`binary32`) número de punto que proporciona hasta nueve dígitos significativos de precisión flotante. Se recomienda su uso en lugar de la [especificador de formato "R"](#RFormatString), ya que en algunos casos "R" se produce un error para valores de punto flotante de precisión sencilla de ida y vuelta correctamente.
+Cuando se usa con un valor <xref:System.Single>, el especificador de formato "G9" garantiza que el valor <xref:System.Single> original realice un recorrido de ida y vuelta correctamente. Esto se debe a que <xref:System.Single> es un número de punto flotante de precisión sencilla compatible con IEEE 754-2008 (`binary32`) que ofrece hasta nueve dígitos de precisión significativos. Se recomienda su uso en lugar del [especificador de formato "R"](#RFormatString), ya que, en algunos casos, "R" no logra realizar un recorrido de ida y vuelta correcto por los valores de números de punto flotante de precisión sencilla.
 
  La información de formato del objeto <xref:System.Globalization.NumberFormatInfo> actual afecta a la cadena de resultado. En la tabla siguiente se enumeran las propiedades de <xref:System.Globalization.NumberFormatInfo> que controlan el formato de la cadena de resultado.  
   
-|Propiedad de NumberFormatInfo|Descripción|  
+|Propiedad de NumberFormatInfo|Description|  
 |-------------------------------|-----------------|  
 |<xref:System.Globalization.NumberFormatInfo.NegativeSign%2A>|Define la cadena que indica que un número es negativo.|  
 |<xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A>|Define la cadena que separa los dígitos integrales de los decimales.|  
@@ -233,7 +236,7 @@ Cuando se usa con un <xref:System.Single> valor, el especificador de formato "G9
   
  La información de formato del objeto <xref:System.Globalization.NumberFormatInfo> actual afecta a la cadena de resultado. En la tabla siguiente se enumeran las propiedades de <xref:System.Globalization.NumberFormatInfo> que controlan el formato de la cadena de resultado.  
   
-|Propiedad de NumberFormatInfo|Descripción|  
+|Propiedad de NumberFormatInfo|Description|  
 |-------------------------------|-----------------|  
 |<xref:System.Globalization.NumberFormatInfo.NegativeSign%2A>|Define la cadena que indica que un número es negativo.|  
 |<xref:System.Globalization.NumberFormatInfo.NumberNegativePattern%2A>|Define el formato de los valores negativos y especifica si el signo negativo se representa mediante paréntesis o por la propiedad <xref:System.Globalization.NumberFormatInfo.NegativeSign%2A>.|  
@@ -256,7 +259,7 @@ Cuando se usa con un <xref:System.Single> valor, el especificador de formato "G9
   
  En la tabla siguiente se enumeran las propiedades de <xref:System.Globalization.NumberFormatInfo> que controlan el formato de la cadena devuelta.  
   
-|Propiedad de NumberFormatInfo|Descripción|  
+|Propiedad de NumberFormatInfo|Description|  
 |-------------------------------|-----------------|  
 |<xref:System.Globalization.NumberFormatInfo.PercentPositivePattern%2A>|Define la posición del símbolo de porcentaje para los valores positivos.|  
 |<xref:System.Globalization.NumberFormatInfo.PercentNegativePattern%2A>|Define la posición del símbolo de porcentaje y del símbolo negativo para los valores negativos.|  
@@ -277,22 +280,22 @@ Cuando se usa con un <xref:System.Single> valor, el especificador de formato "G9
   
 <a name="RFormatString"></a>   
 ## <a name="the-round-trip-r-format-specifier"></a>Especificador de formato de operación de ida y vuelta ("R")  
- El especificador de formato ida y vuelta ("R") intenta asegurarse de que un valor numérico que se convierte en una cadena se analiza en el mismo valor numérico. Este formato solo es compatible para los tipos <xref:System.Single>, <xref:System.Double> y <xref:System.Numerics.BigInteger>.  
+ El especificador de formato de operación de ida y vuelta ("R") intenta garantizar que un valor numérico que se convierte en una cadena vuelva a tomar el mismo valor numérico. Este formato solo es compatible para los tipos <xref:System.Single>, <xref:System.Double> y <xref:System.Numerics.BigInteger>.  
 
-Para <xref:System.Double> y <xref:System.Single> valores, el especificador de formato "R" en algunos casos, se produce un error en la ida y vuelta correctamente el valor original y también ofrece un rendimiento relativamente bajo. En su lugar, se recomienda que realice la ["G17"](#GFormatString) especificador de formato <xref:System.Double> valores y la ["G9"](#GFormatString) especificador de formato para ida y vuelta correctamente <xref:System.Single> valores.
+Para los valores <xref:System.Double> y <xref:System.Single>, el especificador de formato "R", en algunos casos, no logra realizar un recorrido de ida y vuelta correcto por el valor original y también ofrece un rendimiento relativamente bajo. En su lugar, se recomienda usar el especificador de formato ["G17"](#GFormatString) para los valores <xref:System.Double> y el especificador de formato ["G9"](#GFormatString) para realizar un recorrido de ida y vuelta correcto por los valores <xref:System.Single>.
 
  Cuando se da formato a un valor <xref:System.Numerics.BigInteger> mediante este especificador, su representación de cadena contiene todos los dígitos significativos del valor <xref:System.Numerics.BigInteger>.  
   
  Aunque puede incluir un especificador de precisión, se omite. Los especificadores de ida y vuelta tienen prioridad sobre la precisión al utilizar este especificador.    
  La información de formato del objeto <xref:System.Globalization.NumberFormatInfo> actual afecta a la cadena de resultado. En la tabla siguiente se enumeran las propiedades de <xref:System.Globalization.NumberFormatInfo> que controlan el formato de la cadena de resultado.  
   
-|Propiedad de NumberFormatInfo|Descripción|  
+|Propiedad de NumberFormatInfo|Description|  
 |-------------------------------|-----------------|  
 |<xref:System.Globalization.NumberFormatInfo.NegativeSign%2A>|Define la cadena que indica que un número es negativo.|  
 |<xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A>|Define la cadena que separa los dígitos integrales de los decimales.|  
 |<xref:System.Globalization.NumberFormatInfo.PositiveSign%2A>|Define la cadena que indica que un exponente es positivo.|  
   
- El ejemplo siguiente se da una <xref:System.Numerics.BigInteger> valor con el especificador de formato de ida y vuelta.  
+ En el ejemplo siguiente se da formato a un valor <xref:System.Numerics.BigInteger> con el especificador de formato de ida y vuelta.  
   
  [!code-cpp[R format specifier with a BigInteger](../../../samples/snippets/standard/base-types/format-strings/biginteger-r.cpp)]
  [!code-csharp[R format specifier with a BigInteger](../../../samples/snippets/standard/base-types/format-strings/biginteger-r.cs)]
@@ -330,7 +333,7 @@ Para <xref:System.Double> y <xref:System.Single> valores, el especificador de fo
 ### <a name="control-panel-settings"></a>Configuración del Panel de control  
  Los valores de configuración del elemento **Configuración regional y de idioma** del Panel de control influyen en la cadena de resultado generada por una operación de formato. Esas configuraciones se usan para inicializar el objeto <xref:System.Globalization.NumberFormatInfo> asociado a la referencia cultural del subproceso actual, que proporciona valores que se usan para controlar el formato. Los equipos que usan configuraciones diferentes generarán cadenas de resultado distintas.  
   
- Además, si la <xref:System.Globalization.CultureInfo.%23ctor%28System.String%29?displayProperty=nameWithType> constructor se utiliza para crear instancias de un nuevo <xref:System.Globalization.CultureInfo> objeto que representa la misma referencia cultural que la actual referencia cultural del sistema, cualquier personalización establecida por el **Configuración Regional e idioma** elemento en el Panel de Control se aplicará al nuevo <xref:System.Globalization.CultureInfo> objeto. Puede usar el constructor <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> para crear un objeto <xref:System.Globalization.CultureInfo> que no refleje las personalizaciones de un sistema.  
+ Asimismo, si se utiliza el constructor <xref:System.Globalization.CultureInfo.%23ctor%28System.String%29?displayProperty=nameWithType> para crear instancias de un nuevo objeto <xref:System.Globalization.CultureInfo> que representa la misma referencia cultural que la referencia cultural del sistema actual, cualquier personalización establecida por el elemento **Configuración regional y de idioma** del Panel de control se aplicará al nuevo objeto <xref:System.Globalization.CultureInfo>. Puede usar el constructor <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> para crear un objeto <xref:System.Globalization.CultureInfo> que no refleje las personalizaciones de un sistema.  
   
 ### <a name="numberformatinfo-properties"></a>Propiedades NumberFormatInfo  
  El formato se ve influenciado por las propiedades del objeto <xref:System.Globalization.NumberFormatInfo> actual, proporcionado implícitamente por la referencia cultural del subproceso actual o explícitamente por el parámetro <xref:System.IFormatProvider> del método que invoca el formato. Especifique un objeto <xref:System.Globalization.NumberFormatInfo> o <xref:System.Globalization.CultureInfo> para dicho parámetro.  

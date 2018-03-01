@@ -12,18 +12,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 877e9c62-b082-4bfb-bc5b-f47297eb30ef
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 5a0806e34cfbf7c8e0b5ba995ca4876b8d10405e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: ea67841e44d8d88d2effec92eb1668142c1510f2
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="xml-document-creation"></a>Creación de documentos XML
-Hay dos formas de crear un documento XML. Es una manera de crear un **XmlDocument** sin parámetros. El otro mecanismo consiste en crear un **XmlDocument** y pasarle una XmlNameTable como parámetro. En el ejemplo siguiente se muestra cómo crear una nueva y vacía **XmlDocument** sin ningún parámetro.  
+Hay dos formas de crear un documento XML. Una es crear una clase **XmlDocument** sin parámetros. La otra es crear una clase **XmlDocument** y pasarle una clase XmlNameTable como parámetro. En el ejemplo siguiente se muestra cómo crear una clase **XmlDocument** vacía sin utilizar parámetros.  
   
 ```vb  
 Dim doc As New XmlDocument()  
@@ -33,9 +36,9 @@ Dim doc As New XmlDocument()
 XmlDocument doc = new XmlDocument();  
 ```  
   
- Una vez que se crea un documento, puede cargarlo con datos de una cadena, secuencia, dirección URL, el lector de texto, o un **XmlReader** deriva la clase utilizando el **cargar** método. También hay otro método de carga, el **LoadXML** método, que lee XML desde una cadena. Para obtener más información acerca de los diversos **carga** métodos, vea [leer un documento XML en el DOM](../../../../docs/standard/data/xml/reading-an-xml-document-into-the-dom.md).  
+ Una vez creado un documento, se pueden cargar datos desde una cadena, secuencia, dirección URL, sistema de lectura de texto o una clase derivada de **XmlReader** mediante el método **Load**. Existe también otro método de carga, el método **LoadXML**, que lee XML a partir de una cadena. Para obtener más información acerca de los diversos métodos **Load**, vea [Lectura de un documento XML en el DOM](../../../../docs/standard/data/xml/reading-an-xml-document-into-the-dom.md).  
   
- Hay una clase denominada el **XmlNameTable**. Esta clase es una tabla de objetos de cadena divididos en átomos. La tabla proporciona un medio eficaz para que el analizador XML utilice el mismo objeto de cadena para todos los nombres de elemento y atributo repetidos en un documento XML. Un **XmlNameTable** se crea automáticamente cuando un documento se crea como se indicó anteriormente y se carga con nombres de atributo y elemento cuando se carga el documento. Si ya tiene un documento con una tabla de nombres y dichos nombres serían útiles en otro documento, puede crear un documento nuevo mediante el **carga** método que toma un **XmlNameTable** como un parámetro. Cuando se crea el documento con este método, utiliza existente **XmlNameTable** con todos los atributos y elementos ya cargados desde el otro documento. Se puede utilizar para comparar de forma eficaz nombres de elemento y atributo. Para obtener más información sobre la **XmlNameTable**, consulte [comparación de objetos mediante XmlNameTable](../../../../docs/standard/data/xml/object-comparison-using-xmlnametable.md). Como referencia, vea <xref:System.Xml.XmlNameTable>.  
+ Hay una clase denominada **XmlNameTable**. Esta clase es una tabla de objetos de cadena divididos en átomos. La tabla proporciona un medio eficaz para que el analizador XML utilice el mismo objeto de cadena para todos los nombres de elemento y atributo repetidos en un documento XML. Al crear un documento, se crea un objeto **XmlNameTable** automáticamente, como se muestra a continuación, y al cargar el documento se cargan los nombres de elemento y atributo. Si dispone ya de un documento con una tabla de nombres y dichos nombres serían útiles en otro documento, puede crear un documento nuevo mediante el método **Load**, que acepta una clase **XmlNameTable** como parámetro. Al crear el documento con este método, utiliza la clase **XmlNameTable** existente con todos los atributos y elementos ya cargados desde el otro documento. Se puede utilizar para comparar de forma eficaz nombres de elemento y atributo. Para obtener más información acerca de **XmlNameTable**, vea [Comparación de objetos mediante XmlNameTable](../../../../docs/standard/data/xml/object-comparison-using-xmlnametable.md). Como referencia, vea <xref:System.Xml.XmlNameTable>.  
   
 ## <a name="see-also"></a>Vea también  
- [Modelo de objetos de documento (DOM) de XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+ [Document Object Model (DOM) para XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

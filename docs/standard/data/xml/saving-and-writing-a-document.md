@@ -12,15 +12,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 097b0cb1-5743-4c3a-86ef-caf5cbe6750d
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: ad656e2db17e44733b5718fe2e3a2a48afcb1381
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 2138b9c47c6e41cd94e775eaed005d8a6fd976c9
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="saving-and-writing-a-document"></a>Guardar y escribir un documento
 Cuando cargue y guarde un <xref:System.Xml.XmlDocument>, el documento guardado puede ser diferente al original de varias formas:  
@@ -29,7 +32,7 @@ Cuando cargue y guarde un <xref:System.Xml.XmlDocument>, el documento guardado p
   
 -   Todos los espacios en blanco entre los atributos se reducen a un carácter de un solo espacio.  
   
--   Se cambia el espacio en blanco entre los elementos. Se conserva el espacio blanco importante, pero no se conserva el poco importante. Pero cuando se guarda el documento, usará el <xref:System.Xml.XmlTextWriter> **sangría** modo de forma predeterminada para imprimir con claridad el resultado para mejorar la legibilidad.  
+-   Se cambia el espacio en blanco entre los elementos. Se conserva el espacio blanco importante, pero no se conserva el poco importante. Sin embargo, cuando se guarda el documento, se utiliza el modo <xref:System.Xml.XmlTextWriter> **Sangría** de manera predeterminada para imprimir con claridad el resultado con el fin de que sea más legible.  
   
 -   De manera predeterminada, el carácter de la comilla que se utiliza delante y detrás de los valores de los atributos se cambia por la comilla doble. Puede utilizar la propiedad <xref:System.Xml.XmlTextReader.QuoteChar%2A> en <xref:System.Xml.XmlTextWriter>para establecer el carácter de la comilla como doble o simple.  
   
@@ -98,4 +101,4 @@ string xml = mydoc.DocumentElement.OuterXml;
  Por el contrario, puede utilizar la propiedad <xref:System.Xml.XmlNode.InnerText%2A> si desea el contenido de los nodos secundarios.  
   
 ## <a name="see-also"></a>Vea también  
- [Modelo de objetos de documento (DOM) de XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+ [Document Object Model (DOM) para XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

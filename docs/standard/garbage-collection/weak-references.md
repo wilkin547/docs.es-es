@@ -14,15 +14,18 @@ helpviewer_keywords:
 - weak references, long
 - garbage collection, weak references
 ms.assetid: 6a600fe5-3af3-4c64-82da-10a0a8e2d79b
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 906c23caa7065486bb094ad2475ed9e7e24b3d9c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 3ca1331cc45f437882d38adba241e2767821de36
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="weak-references"></a>Referencias parciales
 El recolector de elementos no utilizados no puede recopilar un objeto que está siendo usado por una aplicación mientras el código de aplicación pueda llegar a ese objeto. En este caso, se dice que la aplicación tiene una referencia segura al objeto.  
@@ -31,11 +34,11 @@ El recolector de elementos no utilizados no puede recopilar un objeto que está 
   
  Las referencias débiles son útiles para objetos que usan mucha memoria, pero que pueden volverse a crear fácilmente si los reclama la recolección de elementos no utilizados.  
   
- Imagine que una vista de árbol en una aplicación de formularios Windows Forms muestra una elección jerárquica compleja de opciones al usuario. Si la cantidad de datos subyacentes es grande, mantener el árbol en memoria es ineficaz cuando el usuario está ocupado en otra parte de la aplicación.  
+ Imagine una vista de árbol de una aplicación de Windows Forms que muestra una jerarquía compleja de opciones al usuario. Si la cantidad de datos subyacentes es grande, mantener el árbol en memoria es ineficaz cuando el usuario está ocupado en otra parte de la aplicación.  
   
- Cuando el usuario cambia a otra parte de la aplicación, puede usar el <xref:System.WeakReference> clase para crear una referencia débil al árbol y destruir todas las referencias seguras. Cuando el usuario vuelve al árbol, la aplicación intenta obtener una referencia segura al árbol y, si la obtiene, evita tener que reconstruir el árbol.  
+ Cuando el usuario cambia a otra parte de la aplicación, se puede usar la clase <xref:System.WeakReference> para crear una referencia débil al árbol y destruir todas las referencias seguras. Cuando el usuario vuelve al árbol, la aplicación intenta obtener una referencia segura al árbol y, si la obtiene, evita tener que reconstruir el árbol.  
   
- Para establecer una referencia débil a un objeto, se crea un <xref:System.WeakReference> utilizando la instancia del objeto para realizar su seguimiento. A continuación, establezca el <xref:System.WeakReference.Target%2A> propiedad en ese objeto y el conjunto original hacen referencia al objeto para `null`. Para obtener un ejemplo de código, consulte <xref:System.WeakReference> en la biblioteca de clases.  
+ Para establecer una referencia débil a un objeto, se crea un elemento <xref:System.WeakReference> usando la instancia del objeto que se debe seguir. Después, se establece la propiedad <xref:System.WeakReference.Target%2A> como ese objeto y se establece la referencia original al objeto como `null`. Para obtener un ejemplo de código, consulte <xref:System.WeakReference> en la biblioteca de clases.  
   
 ## <a name="short-and-long-weak-references"></a>Referencias débiles cortas y largas  
  Puede crear una referencia débil corta o una referencia débil larga:  
@@ -46,11 +49,11 @@ El recolector de elementos no utilizados no puede recopilar un objeto que está 
   
 -   Long  
   
-     Se conserva una referencia débil larga después del objeto <xref:System.Object.Finalize%2A> ha llamado al método. Esto permite que el objeto se vuelva a crear, pero el estado del objeto sigue siendo imprevisible. Para utilizar una referencia larga, especifique `true` en el <xref:System.WeakReference> constructor.  
+     Una referencia débil larga se conserva después de que se llame al método <xref:System.Object.Finalize%2A> del objeto. Esto permite que el objeto se vuelva a crear, pero el estado del objeto sigue siendo imprevisible. Para usar una referencia larga, especifique `true` en el constructor <xref:System.WeakReference>.  
   
-     Si el tipo del objeto no tiene un <xref:System.Object.Finalize%2A> la funcionalidad de la referencia débil corta de método, se aplica y la referencia débil es válida solo hasta que se recopile el destino, lo que puede producirse en cualquier momento después el finalizador se ejecute.  
+     Si el tipo de objeto no tiene un método <xref:System.Object.Finalize%2A>, se aplica la funcionalidad de referencia débil corta y la referencia débil es válida solo hasta que se recopile el destino, lo que puede ocurrir en cualquier momento después de que se ejecute el finalizador.  
   
- Para establecer una referencia segura y vuelve a utilizar el objeto, convierte el <xref:System.WeakReference.Target%2A> propiedad de un <xref:System.WeakReference> para el tipo del objeto. Si el <xref:System.WeakReference.Target%2A> propiedad devuelve `null`, el objeto se ha recopilado; en caso contrario, aún puede usar el objeto porque la aplicación ha recuperado una referencia segura a él.  
+ Para establecer una referencia segura y usar el objeto de nuevo, convierta la propiedad <xref:System.WeakReference.Target%2A> de <xref:System.WeakReference> en el tipo del objeto. Si la propiedad <xref:System.WeakReference.Target%2A> devuelve `null`, el objeto se ha recopilado; en caso contrario, aún puede usar el objeto, porque la aplicación ha obtenido una referencia segura a este.  
   
 ## <a name="guidelines-for-using-weak-references"></a>Directrices para usar referencias débiles  
  Use referencias débiles largas solo cuando sea necesario, ya que el estado del objeto es imprevisible después de la finalización.  

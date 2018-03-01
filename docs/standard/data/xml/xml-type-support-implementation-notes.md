@@ -9,21 +9,24 @@ ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 26b071f3-1261-47ef-8690-0717f5cd93c1
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 5e99573fc3a82db7798426172a13a78e10c65636
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 8c2706782ed1242ecdb5af1fdfab7a3f24e19236
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="xml-type-support-implementation-notes"></a>Notas de implementación de la compatibilidad con tipos XML
 En este tema se describen algunos detalles de la implementación que debería conocer.  
   
 ## <a name="list-mappings"></a>Asignaciones de listas  
- El <xref:System.Collections.IList>, <xref:System.Collections.ICollection>, <xref:System.Collections.IEnumerable>, **tipo []**, y <xref:System.String> tipos se utilizan para representar tipos de lista de lenguaje (XSD) de definición de esquemas XML.  
+ Los tipos <xref:System.Collections.IList>, <xref:System.Collections.ICollection>, <xref:System.Collections.IEnumerable>, **Type[]** y <xref:System.String> se utilizan para representar tipos de listas del lenguaje de definición de esquema XML (XSD).  
   
 ## <a name="union-mappings"></a>Asignaciones de uniones  
  Los tipos de uniones se representan mediante el tipo <xref:System.Xml.Schema.XmlAtomicValue> o <xref:System.String>. Por lo tanto, el tipo de origen o el tipo de destino deben ser siempre <xref:System.String> o <xref:System.Xml.Schema.XmlAtomicValue>.  

@@ -13,15 +13,18 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: cce69574-5861-4a30-b730-2e18d915d8ee
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: cc1883e8503567bdf2f6e0bda20cea777a12c7cf
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: ceca36b5e988751dff34b5574978aa0ae2da1259
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="traversing-xml-schemas"></a>Cómo atravesar esquemas XML
 Al atravesar un esquema XML con la API del Modelo de objetos de esquema (SOM), se obtiene acceso a los elementos, atributos y tipos almacenados en el SOM. Atravesar un esquema XML cargado en el SOM es también el primer paso para editar un esquema XML utilizando la API del SOM.  
@@ -29,7 +32,7 @@ Al atravesar un esquema XML con la API del Modelo de objetos de esquema (SOM), s
 ## <a name="traversing-an-xml-schema"></a>Cómo atravesar un esquema XML  
  Las siguientes propiedades de la clase <xref:System.Xml.Schema.XmlSchema> proporcionan acceso a la colección de todos los elementos globales que se agregan al esquema XML.  
   
-|Propiedad|Tipo de objeto almacenado en la colección o matriz|  
+|Property|Tipo de objeto almacenado en la colección o matriz|  
 |--------------|---------------------------------------------------|  
 |<xref:System.Xml.Schema.XmlSchema.Elements%2A>|<xref:System.Xml.Schema.XmlSchemaElement>|  
 |<xref:System.Xml.Schema.XmlSchema.Attributes%2A>|<xref:System.Xml.Schema.XmlSchemaAttribute>|  
@@ -46,7 +49,7 @@ Al atravesar un esquema XML con la API del Modelo de objetos de esquema (SOM), s
 >   
 >  La propiedad <xref:System.Xml.Schema.XmlSchema.UnhandledAttributes%2A> proporciona acceso a todos atributos que no pertenecen al espacio de nombres del esquema. El procesador de esquemas no procesa estos atributos.  
   
- El ejemplo de código siguiente muestra cómo atravesar el esquema del cliente creado en el [compilar esquemas XML](../../../../docs/standard/data/xml/building-xml-schemas.md) tema. El código de ejemplo muestra cómo se atraviesa el esquema utilizando las colecciones que se han descrito anteriormente y escribe todos los elementos y atributos del esquema en la consola.  
+ En el código de ejemplo que se incluye a continuación se muestra cómo se atraviesa el esquema del cliente que se creó en el tema [Compilar esquemas XML](../../../../docs/standard/data/xml/building-xml-schemas.md). El código de ejemplo muestra cómo se atraviesa el esquema utilizando las colecciones que se han descrito anteriormente y escribe todos los elementos y atributos del esquema en la consola.  
   
  El ejemplo atraviesa el esquema del cliente en los siguientes pasos.  
   
@@ -72,13 +75,13 @@ Al atravesar un esquema XML con la API del Modelo de objetos de esquema (SOM), s
   
  La propiedad <xref:System.Xml.Schema.XmlSchemaElement.ElementSchemaType%2A?displayProperty=nameWithType> puede ser <xref:System.Xml.Schema.XmlSchemaSimpleType> o <xref:System.Xml.Schema.XmlSchemaComplexType> si se trata de un tipo complejo o un tipo simple definido por el usuario. También puede ser <xref:System.Xml.Schema.XmlSchemaDatatype> si es uno de los tipos de datos integrados que se definen en la recomendación de esquemas XML del W3C. En el esquema del cliente, el <xref:System.Xml.Schema.XmlSchemaElement.ElementSchemaType%2A> del elemento `Customer` es <xref:System.Xml.Schema.XmlSchemaComplexType>, y los elementos `FirstName` y `LastName` son <xref:System.Xml.Schema.XmlSchemaSimpleType>.  
   
- El ejemplo de código en el [compilar esquemas XML](../../../../docs/standard/data/xml/building-xml-schemas.md) tema utiliza el <xref:System.Xml.Schema.XmlSchemaComplexType.Attributes%2A?displayProperty=nameWithType> colección para agregar el atributo `CustomerId` a la `Customer` elemento. Se trata de una propiedad anterior a la compilación del esquema. La propiedad del conjunto de información posterior a la compilación del esquema correspondiente es la colección <xref:System.Xml.Schema.XmlSchemaComplexType.AttributeUses%2A?displayProperty=nameWithType>, que contiene todos los atributos del tipo complejo, incluyendo los que se heredan a través de la derivación de tipos.  
+ El código de ejemplo del tema [Compilar esquemas XML](../../../../docs/standard/data/xml/building-xml-schemas.md) utilizaba la colección <xref:System.Xml.Schema.XmlSchemaComplexType.Attributes%2A?displayProperty=nameWithType> para agregar el atributo `CustomerId` al elemento `Customer`. Se trata de una propiedad anterior a la compilación del esquema. La propiedad del conjunto de información posterior a la compilación del esquema correspondiente es la colección <xref:System.Xml.Schema.XmlSchemaComplexType.AttributeUses%2A?displayProperty=nameWithType>, que contiene todos los atributos del tipo complejo, incluyendo los que se heredan a través de la derivación de tipos.  
   
 ## <a name="see-also"></a>Vea también  
- [Información general sobre el modelo de objetos esquema XML](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)  
- [Leer y escribir esquemas XML](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)  
- [Compilar esquemas XML](../../../../docs/standard/data/xml/building-xml-schemas.md)  
+ [Información general sobre el Modelo de objetos de esquema XML](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)  
+ [Lectura y escritura de esquemas XML](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)  
+ [Compilación de esquemas XML](../../../../docs/standard/data/xml/building-xml-schemas.md)  
  [Edición de esquemas XML](../../../../docs/standard/data/xml/editing-xml-schemas.md)  
  [Inclusión o importación de esquemas XML](../../../../docs/standard/data/xml/including-or-importing-xml-schemas.md)  
  [XmlSchemaSet para compilación de esquemas](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)  
- [Conjunto de información de compilación del esquema posterior](../../../../docs/standard/data/xml/post-schema-compilation-infoset.md)
+ [Conjunto de información posterior a la compilación de esquemas](../../../../docs/standard/data/xml/post-schema-compilation-infoset.md)

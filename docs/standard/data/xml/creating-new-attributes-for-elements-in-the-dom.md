@@ -12,24 +12,27 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: dd6dc920-b011-418a-b3db-f1580a7d9251
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 6970ffc38e900c9b47c58c8ae4b81b9551f5589b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 4f3ae0c3db65fe7bda1bcc5bd247fea80a2a9c4e
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="creating-new-attributes-for-elements-in-the-dom"></a>Crear nuevos atributos para elementos en DOM
-Creación de nuevos atributos es diferente de la creación de otros tipos de nodo, porque los atributos no son nodos, pero son propiedades de un nodo de elemento y están incluidos en un **XmlAttributeCollection** asociada al elemento. Hay varias formas de crear un atributo y adjuntarlo a un elemento:  
+La creación de nuevos atributos es diferente de la creación de otros tipos de nodo, puesto que los atributos no son nodos, sino propiedades de un nodo de elemento y se incluyen en un **XmlAttributeCollection** asociado al elemento. Hay varias formas de crear un atributo y adjuntarlo a un elemento:  
   
--   Obtenga el nodo de elemento y utilice **SetAttribute** para agregar un atributo a la colección de atributos de ese elemento.  
+-   Para agregar un atributo a la colección de atributos de dicho elemento, obtenga el nodo de elemento y utilice **SetAttribute**.  
   
--   Crear un **XmlAttribute** nodo mediante el **CreateAttribute** método, obtenga el nodo de elemento y luego use **SetAttributeNode** para agregar el nodo a la colección de atributos de ese elemento.  
+-   Cree un nodo **XmlAttribute** mediante el método **CreateAttribute**, obtenga el nodo del elemento y, a continuación, utilice el método **SetAttributeNode** para agregar el nodo a la colección de atributos de dicho elemento.  
   
- En el ejemplo siguiente se muestra cómo agregar un atributo a un elemento mediante la **SetAttribute** método.  
+ En el ejemplo siguiente se muestra cómo agregar un atributo a un elemento mediante el método **SetAttribute**.  
   
 ```vb  
 Imports System  
@@ -79,7 +82,7 @@ public class Sample
   }  
 ```  
   
- En el ejemplo siguiente se muestra un nuevo atributo que se crea mediante la **CreateAttribute** método. A continuación, muestra el atributo agregado a la colección de atributos de la **libreta de** elemento utilizando el **SetAttributeNode** método.  
+ En el ejemplo siguiente se muestra un nuevo atributo que se crea mediante el método **CreateAttribute**. Después, se muestra el atributo agregado a la colección de atributos del elemento **book** mediante el método **SetAttributeNode**.  
   
  Dado el siguiente XML:  
   
@@ -121,15 +124,15 @@ doc.DocumentElement.SetAttributeNode(attr);
   
  El ejemplo de código completo se puede encontrar en <xref:System.Xml.XmlDocument.CreateAttribute%2A>.  
   
- También puede crear un **XmlAttribute** nodo y use la **InsertBefore** o **InsertAfter** métodos para colocarlo en la posición adecuada en la colección. Si un atributo con el mismo nombre ya está presente en la colección de atributos existente **XmlAttribute** nodo se quita de la colección y la nueva **XmlAttribute** se inserta el nodo. Esta opción realiza la misma manera que el **SetAttribute** método. Estos métodos aceptan, como parámetro, un nodo existente como punto de referencia para realizar la **InsertBefore** y **InsertAfter**. Si no proporciona un nodo de referencia que indique dónde insertar el nuevo nodo, el valor predeterminado para la **InsertAfter** método consiste en Insertar el nuevo nodo al principio de la colección. La posición predeterminada para la **InsertBefore**, si no se proporciona ningún nodo de referencia, es el final de la colección.  
+ También se puede crear un nodo **XmlAttribute** y utilizar los métodos **InsertBefore** o **InsertAfter** para colocarlo en la posición adecuada en la colección. Si en la colección de atributos ya hay uno con el mismo nombre, el nodo **XmlAttribute** existente se quita de la colección y se inserta el nuevo nodo **XmlAttribute**. Funciona del mismo modo que el método **SetAttribute**. Estos métodos aceptan, como parámetro, un nodo existente como punto de referencia para ejecutar los métodos **InsertBefore** e **InsertAfter**. Si no se proporciona un nodo de referencia que indique dónde insertar el nodo nuevo, con la configuración predeterminada del método **InsertAfter** el nodo nuevo se inserta al principio de la colección. La posición predeterminada para **InsertBefore**, si no se proporciona ningún nodo de referencia, es el final de la colección.  
   
- Si ha creado un **XmlNamedNodeMap** de atributos, puede agregar un atributo por nombre mediante el <xref:System.Xml.XmlNamedNodeMap.SetNamedItem%2A>. Para obtener más información, consulte [colecciones de nodos en NamedNodeMaps y NodeLists](../../../../docs/standard/data/xml/node-collections-in-namednodemaps-and-nodelists.md).  
+ Si creó una clase **XmlNamedNodeMap** de atributos, puede agregar un atributo por nombre mediante el método <xref:System.Xml.XmlNamedNodeMap.SetNamedItem%2A>. Para obtener más información, vea [Colecciones de nodos en NamedNodeMaps y NodeLists](../../../../docs/standard/data/xml/node-collections-in-namednodemaps-and-nodelists.md).  
   
 ## <a name="default-attributes"></a>Atributos predeterminados  
  Si creó un elemento declarado para tener un atributo predeterminado, el Modelo de objetos de documento (DOM) crea un nuevo atributo predeterminado con su valor predeterminado y lo adjunta al elemento. Los nodos secundarios del atributo predeterminado se crean también en este momento.  
   
 ## <a name="attribute-child-nodes"></a>Nodos secundarios de atributo  
- El valor de un nodo de atributo se convierte en sus nodos secundarios. Hay solo dos tipos de nodos secundarios válidos: **XmlText** nodos, y **XmlEntityReference** nodos. Estos son los nodos secundarios en el sentido de que métodos como **FirstChild** y **LastChild** procesarlos como nodos secundarios. Esta distinción de un atributo con nodos secundarios es importante cuando se intenta quitar atributos o nodos secundarios de atributo. Para obtener más información, consulte [cómo quitar atributos de un nodo de elemento en DOM](../../../../docs/standard/data/xml/removing-attributes-from-an-element-node-in-the-dom.md).  
+ El valor de un nodo de atributo se convierte en sus nodos secundarios. Hay solo dos tipos válidos de nodos secundarios: los nodos **XmlText** y **XmlEntityReference**. Se trata de nodos secundarios en el sentido de que métodos como **FirstChild** y **LastChild** los procesan como tales. Esta distinción de un atributo con nodos secundarios es importante cuando se intenta quitar atributos o nodos secundarios de atributo. Para obtener más información, vea [Cómo quitar atributos de un nodo de elemento en DOM](../../../../docs/standard/data/xml/removing-attributes-from-an-element-node-in-the-dom.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Modelo de objetos de documento (DOM) de XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+ [Document Object Model (DOM) para XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

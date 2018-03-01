@@ -12,22 +12,25 @@ helpviewer_keywords:
 - threading [.NET Framework], AutoResetEvent class
 - AutoResetEvent class
 ms.assetid: 6d39c48d-6b37-4a9b-8631-f2924cfd9c18
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 69d16e8c6491b4c66ab5a5452762e73172ebbb77
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 71933d0be804fdf68b0dc602902343f2d88b8c82
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="autoresetevent"></a>AutoResetEvent
-La <xref:System.Threading.AutoResetEvent> clase representa un evento de identificador de espera local que se restablece automáticamente cuando se señala, después de liberar un único subproceso en espera. Esta clase representa un caso especial de su clase base, <xref:System.Threading.EventWaitHandle>. Consulte la documentación conceptual [EventWaitHandle](../../../docs/standard/threading/eventwaithandle.md) para información sobre el uso y las características de los eventos de restablecimiento automático.  
+La clase <xref:System.Threading.AutoResetEvent> representa un evento de identificador de espera local que se restablece automáticamente cuando se le señala, después de liberar un subproceso en espera único. Esta clase representa un caso especial de su clase base, <xref:System.Threading.EventWaitHandle>. Consulte la documentación conceptual [EventWaitHandle](../../../docs/standard/threading/eventwaithandle.md) para información sobre el uso y las características de los eventos de restablecimiento automático.  
   
- Un <xref:System.Threading.AutoResetEvent> objeto se restablece automáticamente a no señalado por el sistema después de que se ha liberado un único subproceso en espera. Si no hay subprocesos en espera, el objeto del evento sigue teniendo el estado señalizado. <xref:System.Threading.AutoResetEvent>corresponde a Win32 `CreateEvent` llamar, especificar `false` para el `bManualReset` argumento.  
+ Un objeto <xref:System.Threading.AutoResetEvent> se restablece automáticamente a no señalado por el sistema una vez que se ha liberado un subproceso en espera único. Si no hay subprocesos en espera, el objeto del evento sigue teniendo el estado señalizado. <xref:System.Threading.AutoResetEvent> corresponde a una llamada a `CreateEvent` de Win32, definiendo `false` para el argumento `bManualReset`.  
   
- Para obtener un ejemplo que usa <xref:System.Threading.AutoResetEvent>, consulte [Monitor](http://msdn.microsoft.com/library/33fe4aef-b44b-42fd-9e72-c908e39e75db).  
+ Para obtener un ejemplo que use <xref:System.Threading.AutoResetEvent>, vea [Monitor](http://msdn.microsoft.com/library/33fe4aef-b44b-42fd-9e72-c908e39e75db).  
   
 ## <a name="see-also"></a>Vea también  
  <xref:System.Threading.ManualResetEvent>  

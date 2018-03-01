@@ -1,5 +1,5 @@
 ---
-title: Cadenas de relleno en .NET
+title: Relleno de cadenas en .NET
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net
@@ -19,37 +19,40 @@ helpviewer_keywords:
 - PadLeft method
 - padding strings
 ms.assetid: 84a9f142-3244-4c90-ba02-21af9bbaff71
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 29cd40645cf06ac9babb4738259938a3da04a155
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: ea903c1f950e7c226e043c1fa7276a66126b2512
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
-# <a name="padding-strings-in-net"></a>Cadenas de relleno en .NET
-Utilice uno de los siguientes <xref:System.String> métodos para crear una nueva cadena que consta de una cadena original que se rellena con iniciales o finales de caracteres con la longitud total especificada. El carácter de relleno puede ser un espacio o un carácter especificado y, por tanto, parece que está alineado a la derecha o a la izquierda.  
+# <a name="padding-strings-in-net"></a>Relleno de cadenas en .NET
+Use uno de los siguientes métodos <xref:System.String> para crear una cadena que conste de una cadena original rellenada con caracteres iniciales o finales hasta una longitud total especificada. El carácter de relleno puede ser un espacio o un carácter especificado y, por tanto, parece que está alineado a la derecha o a la izquierda.  
   
-|Nombre del método|Uso|  
+|Nombre del método|Usar|  
 |-----------------|---------|  
 |<xref:System.String.PadLeft%2A?displayProperty=nameWithType>|Rellena una cadena con caracteres iniciales hasta una longitud total especificada.|  
 |<xref:System.String.PadRight%2A?displayProperty=nameWithType>|Rellena una cadena con caracteres finales hasta una longitud total especificada.|  
   
 ## <a name="padleft"></a>PadLeft  
- El <xref:System.String.PadLeft%2A?displayProperty=nameWithType> método crea una nueva cadena concatenando caracteres de relleno iniciales a una cadena original hasta alcanzar la longitud total especificada. El <xref:System.String.PadLeft%28System.Int32%29?displayProperty=nameWithType> método usa el espacio en blanco como el carácter de relleno y el <xref:System.String.PadLeft%28System.Int32%2CSystem.Char%29?displayProperty=nameWithType> método le permite especificar su propio carácter de relleno.  
+ El método <xref:System.String.PadLeft%2A?displayProperty=nameWithType> crea una cadena mediante la concatenación de suficientes caracteres de relleno iniciales con una cadena original para alcanzar la longitud total especificada. El método <xref:System.String.PadLeft%28System.Int32%29?displayProperty=nameWithType> usa el espacio en blanco como carácter de relleno y el método <xref:System.String.PadLeft%28System.Int32%2CSystem.Char%29?displayProperty=nameWithType> le permite especificar su propio carácter de relleno.  
   
- El siguiente ejemplo de código utiliza el <xref:System.String.PadLeft%2A> método para crear una nueva cadena que tiene veinte caracteres. En el ejemplo se muestra "`--------Hello World!`" en la consola.  
+ En el ejemplo de código siguiente se usa el método <xref:System.String.PadLeft%2A> para crear una cadena con una longitud de veinte caracteres. En el ejemplo se muestra "`--------Hello World!`" en la consola.  
   
  [!code-cpp[Conceptual.String.BasicOps#3](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.string.basicops/cpp/padding.cpp#3)]
  [!code-csharp[Conceptual.String.BasicOps#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.basicops/cs/padding.cs#3)]
  [!code-vb[Conceptual.String.BasicOps#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.string.basicops/vb/padding.vb#3)]  
   
 ## <a name="padright"></a>PadRight  
- El <xref:System.String.PadRight%2A?displayProperty=nameWithType> método crea una nueva cadena concatenando caracteres de relleno finales a una cadena original hasta alcanzar la longitud total especificada. El <xref:System.String.PadRight%28System.Int32%29?displayProperty=nameWithType> método usa el espacio en blanco como el carácter de relleno y el <xref:System.String.PadRight%28System.Int32%2CSystem.Char%29?displayProperty=nameWithType> método le permite especificar su propio carácter de relleno.  
+ El método <xref:System.String.PadRight%2A?displayProperty=nameWithType> crea una cadena mediante la concatenación de suficientes caracteres de relleno finales con una cadena original para alcanzar la longitud total especificada. El método <xref:System.String.PadRight%28System.Int32%29?displayProperty=nameWithType> usa el espacio en blanco como carácter de relleno y el método <xref:System.String.PadRight%28System.Int32%2CSystem.Char%29?displayProperty=nameWithType> le permite especificar su propio carácter de relleno.  
   
- El siguiente ejemplo de código utiliza el <xref:System.String.PadRight%2A> método para crear una nueva cadena que tiene veinte caracteres. En el ejemplo se muestra "`Hello World!--------`" en la consola.  
+ En el ejemplo de código siguiente se usa el método <xref:System.String.PadRight%2A> para crear una cadena con una longitud de veinte caracteres. En el ejemplo se muestra "`Hello World!--------`" en la consola.  
   
  [!code-cpp[Conceptual.String.BasicOps#4](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.string.basicops/cpp/padding.cpp#4)]
  [!code-csharp[Conceptual.String.BasicOps#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.basicops/cs/padding.cs#4)]

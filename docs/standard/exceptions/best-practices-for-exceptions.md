@@ -12,17 +12,21 @@ dev_langs:
 - csharp
 - vb
 - cpp
-helpviewer_keywords: exceptions, best practices
+helpviewer_keywords:
+- exceptions, best practices
 ms.assetid: f06da765-235b-427a-bfb6-47cd219af539
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 87f9287c3714416ee5d6b63f3c9db311bb97b131
-ms.sourcegitcommit: 5d0e069655439984862a835f400058b7e8bbadc6
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 4c5ea19077ff9ce8e36a33601b7e5e87c64afe60
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/28/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="best-practices-for-exceptions"></a>Procedimientos recomendados para excepciones
 
@@ -90,7 +94,7 @@ Cuando se necesite una excepción personalizada, debe ponerse el nombre apropiad
 
 Use al menos tres constructores comunes al crear sus propias clases de excepción: el constructor predeterminado, un constructor que tome un mensaje de cadena y un constructor que tome un mensaje de cadena y una excepción interna.
 
-* <xref:System.Exception.%23ctor>, que usa los valores predeterminados.
+* <xref:System.Exception.%23ctor>, que utiliza valores predeterminados.
   
 * <xref:System.Exception.%23ctor%28System.String%29>, que acepta un mensaje de cadena.  
   
@@ -102,7 +106,7 @@ Por ejemplo, consulte [Cómo: Crear excepciones definidas por el usuario](how-to
 
 Cuando cree excepciones definidas por el usuario, debe garantizar que los metadatos de las excepciones están disponibles para el código que se ejecute de forma remota. 
 
-Por ejemplo, en las implementaciones de .NET que admita los dominios de aplicación, pueden producirse excepciones entre dominios de aplicación. Por ejemplo, supongamos que el dominio de aplicación A crea el dominio de aplicación B, que ejecuta código que inicia una excepción. Para que el dominio de aplicación A detecte y controle la excepción correctamente, debe poder encontrar el ensamblado que contiene la excepción iniciada por el dominio de aplicación B. Si el dominio de aplicación B inicia una excepción contenida en un ensamblado en su base de aplicación pero no en la base de aplicación del dominio de aplicación A, el dominio de aplicación A no podrá encontrar la excepción y common language runtime iniciará una excepción de <xref:System.IO.FileNotFoundException>. Para evitar esta situación, puede implementar el ensamblado que contiene la información de la excepción de dos maneras:
+Por ejemplo, en las implementaciones de .NET que admiten los dominios de aplicación, pueden producirse excepciones entre dominios de aplicación. Por ejemplo, supongamos que el dominio de aplicación A crea el dominio de aplicación B, que ejecuta código que inicia una excepción. Para que el dominio de aplicación A detecte y controle la excepción correctamente, debe poder encontrar el ensamblado que contiene la excepción iniciada por el dominio de aplicación B. Si el dominio de aplicación B inicia una excepción contenida en un ensamblado en su base de aplicación pero no en la base de aplicación del dominio de aplicación A, el dominio de aplicación A no podrá encontrar la excepción y common language runtime iniciará una excepción de <xref:System.IO.FileNotFoundException>. Para evitar esta situación, puede implementar el ensamblado que contiene la información de la excepción de dos maneras:
 
 - Ponga el ensamblado en una base de aplicación compartida por los dos dominios de aplicación.
 
@@ -116,7 +120,7 @@ El mensaje de error que ve el usuario deriva de la cadena descriptiva de la exce
 
 ## <a name="use-grammatically-correct-error-messages"></a>Usar mensajes de error gramaticalmente correctos
 
-Escriba frases claras e incluya puntuación final. Cara oración de una cadena descriptiva de una excepción debe acabar con un punto. Por ejemplo, "la tabla del registro se ha desbordado." sería una cadena de descripción adecuada.
+Escriba frases claras e incluya puntuación final. Cara oración de una cadena descriptiva de una excepción debe acabar con un punto. Por ejemplo, "la tabla del registro se ha desbordado". sería una cadena de descripción adecuada.
 
 ## <a name="in-custom-exceptions-provide-additional-properties-as-needed"></a>En excepciones personalizadas, proporcione propiedades adicionales según sea necesario
 
@@ -134,7 +138,7 @@ Es habitual que una clase produzca la misma excepción desde distintos lugares d
 [!code-csharp[Conceptual.Exception.Handling#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.exception.handling/cs/source.cs#6)]
 [!code-vb[Conceptual.Exception.Handling#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.exception.handling/vb/source.vb#6)]  
   
-En algunos casos, es más apropiado usar el constructor de excepciones para generar la excepción. Un ejemplo es una clase de excepción globales, como <xref:System.ArgumentException>.
+En algunos casos, es más apropiado usar el constructor de excepciones para generar la excepción. Un ejemplo es una clase de excepción global, como <xref:System.ArgumentException>.
 
 ## <a name="clean-up-intermediate-results-when-throwing-an-exception"></a>Eliminar los resultados intermedios cuando se inicie una excepción
 

@@ -18,20 +18,23 @@ helpviewer_keywords:
 - culture-sensitive string operations
 - culture-insensitive string operations
 ms.assetid: e6e2bb94-a95d-44e2-b68c-cfdd1db77784
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: dddd46dc5d825738dd9d5038ae573910122953c8
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 697d3ec32af6b704fbb1787bbb9ba1de57a0632e
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="culture-insensitive-string-operations"></a>Operaciones de cadenas que no distinguen entre referencias culturales
 Las operaciones de cadena que tienen en cuenta la referencia cultural pueden resultar ventajosas si va a crear aplicaciones diseñadas para mostrar los resultados en función de la referencia cultural. De manera predeterminada, los métodos que tienen en cuenta las referencias culturales obtienen la referencia cultural que van a usar de la propiedad <xref:System.Globalization.CultureInfo.CurrentCulture%2A> del subproceso actual.  
   
- Recuerde que las operaciones de cadena que tienen en cuenta la referencia cultural no son siempre el comportamiento más deseable. Si se utilizan operaciones que tienen en cuenta las referencias culturales cuando los resultados deben ser independientes de las referencias culturales, podrían producirse errores de código en referencias culturales con reglas de ordenación y asignaciones de mayúsculas y minúsculas personalizadas. Para obtener un ejemplo, vea la sección "Cadena comparaciones que Use la referencia cultural actual" en la [prácticas recomendadas para el uso de cadenas](../../../docs/standard/base-types/best-practices-strings.md) artículo.  
+ Recuerde que las operaciones de cadena que tienen en cuenta la referencia cultural no son siempre el comportamiento más deseable. Si se utilizan operaciones que tienen en cuenta las referencias culturales cuando los resultados deben ser independientes de las referencias culturales, podrían producirse errores de código en referencias culturales con reglas de ordenación y asignaciones de mayúsculas y minúsculas personalizadas. Para obtener un ejemplo, vea "Comparaciones de cadenas que usan la referencia cultural actual" en el artículo [Prácticas recomendadas para utilizar las cadenas](../../../docs/standard/base-types/best-practices-strings.md).  
   
  Si las operaciones de cadenas deberían tener en cuenta las referencias culturales o no depende de cómo use la aplicación los resultados. Las operaciones de cadena que muestran los resultados al usuario normalmente deberían tener en cuenta las referencias culturales. Por ejemplo, si una aplicación muestra al usuario una lista ordenada de cadenas localizadas en un cuadro de lista, la aplicación debería realizar una ordenación que tuviera en cuenta las referencias culturales.  
   

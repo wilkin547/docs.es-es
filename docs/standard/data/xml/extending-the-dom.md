@@ -12,18 +12,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b5489c96-4afd-439a-a25d-fc82eb4a148d
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: b91c49be9268d8dc967daeac116cf67b2ed7d742
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 06cac8d76b17f3ef32931ea21d0556085f05d7b1
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="extending-the-dom"></a>Extender DOM
-Microsoft .NET Framework incluye un conjunto de clases base que proporciona una implementación de Document Object Model (DOM) XML. <xref:System.Xml.XmlNode> y sus clases derivadas proporcionan métodos y propiedades que permiten navegar, consultar y modificar el contenido y la estructura de un documento XML.  
+Microsoft .NET Framework incluye un conjunto básico de clases que proporcionan una implementación de Document Object Model (DOM) XML. <xref:System.Xml.XmlNode> y sus clases derivadas proporcionan métodos y propiedades que permiten navegar, consultar y modificar el contenido y la estructura de un documento XML.  
   
  Cuando se carga el contenido XML en la memoria mediante DOM, los nodos creados contienen información como el nombre y el tipo de nodo, entre otros datos. Puede haber ocasiones en las que necesite información de nodo específica que no proporcionan las clases base. Por ejemplo, es posible que desee conocer el número de línea y posición del nodo. En este caso, puede derivar clases nuevas de las clases DOM existentes y agregar funcionalidad adicional.  
   
@@ -250,10 +253,10 @@ Number of elements in book.xml: 3
   
  El proceso de control de eventos funciona exactamente igual en las clases derivadas que en las clases DOM originales.  
   
- Para obtener más información acerca del control de eventos de nodo, vea [eventos](../../../../docs/standard/events/index.md) y <xref:System.Xml.XmlNodeChangedEventHandler>.  
+ Para obtener más información sobre el control de eventos de nodo, vea [Eventos](../../../../docs/standard/events/index.md) y <xref:System.Xml.XmlNodeChangedEventHandler>.  
   
 ## <a name="default-attributes-and-the-createelement-method"></a>Atributos predeterminados y el método CreateElement  
- Si va a invalidar el método <xref:System.Xml.XmlDocument.CreateElement%2A> en una clase derivada, los atributos predeterminados no se agregan al crear elementos nuevos mientras se edita el documento. Esto solo constituye un problema durante la edición. Puesto que el método <xref:System.Xml.XmlDocument.CreateElement%2A> es responsable de la adición de atributos predeterminados a un <xref:System.Xml.XmlDocument>, debe codificar esta funcionalidad en dicho método <xref:System.Xml.XmlDocument.CreateElement%2A>. Si va a cargar un <xref:System.Xml.XmlDocument> que incluye atributos predeterminados, se controlarán correctamente. Para obtener más información acerca de atributos predeterminados, consulte [crear nuevos atributos para elementos en DOM](../../../../docs/standard/data/xml/creating-new-attributes-for-elements-in-the-dom.md).  
+ Si va a invalidar el método <xref:System.Xml.XmlDocument.CreateElement%2A> en una clase derivada, los atributos predeterminados no se agregan al crear elementos nuevos mientras se edita el documento. Esto solo constituye un problema durante la edición. Puesto que el método <xref:System.Xml.XmlDocument.CreateElement%2A> es responsable de la adición de atributos predeterminados a un <xref:System.Xml.XmlDocument>, debe codificar esta funcionalidad en dicho método <xref:System.Xml.XmlDocument.CreateElement%2A>. Si va a cargar un <xref:System.Xml.XmlDocument> que incluye atributos predeterminados, se controlarán correctamente. Para obtener más información sobre los atributos predeterminados, vea [Crear nuevos atributos para elementos en DOM](../../../../docs/standard/data/xml/creating-new-attributes-for-elements-in-the-dom.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Modelo de objetos de documento (DOM) de XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+ [Document Object Model (DOM) para XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

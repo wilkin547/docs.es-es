@@ -22,15 +22,18 @@ helpviewer_keywords:
 - Inherited property
 - attribute classes, declaring
 ms.assetid: 97216f69-bde8-49fd-ac40-f18c500ef5dc
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 0205edba221b833625becbe6a1f2fdda2f9409a2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: d3fb814d6b458de90d684a3ac92e22a62e290a9a
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="writing-custom-attributes"></a>Escribir atributos personalizados
 Para diseñar sus propios atributos personalizados, no necesitará dominar muchos conceptos nuevos. Si está familiarizado con la programación orientada a objetos y sabe cómo diseñar clases, ya tiene la mayoría de los conocimientos necesarios. Los atributos personalizados son esencialmente clases tradicionales que se derivan directa o indirectamente de <xref:System.Attribute?displayProperty=nameWithType>. Como sucede con las clases tradicionales, los atributos personalizados contienen métodos que almacenan y recuperan datos.  
@@ -55,7 +58,7 @@ Para diseñar sus propios atributos personalizados, no necesitará dominar mucho
  [!code-csharp[Conceptual.Attributes.Usage#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.attributes.usage/cs/source2.cs#5)]
  [!code-vb[Conceptual.Attributes.Usage#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.attributes.usage/vb/source2.vb#5)]  
   
- El <xref:System.AttributeUsageAttribute?displayProperty=nameWithType> tiene tres miembros que son importantes para la creación de atributos personalizados: [AttributeTargets](#cpconwritingcustomattributesanchor1), [Inherited](#cpconwritingcustomattributesanchor2), y [AllowMultiple](#cpconwritingcustomattributesanchor3).  
+ <xref:System.AttributeUsageAttribute?displayProperty=nameWithType> tiene tres miembros que son importantes para la creación de atributos personalizados: [AttributeTargets](#cpconwritingcustomattributesanchor1), [Inherited](#cpconwritingcustomattributesanchor2) y [AllowMultiple](#cpconwritingcustomattributesanchor3).  
   
 <a name="cpconwritingcustomattributesanchor1"></a>   
 ### <a name="attributetargets-member"></a>Miembro AttributeTargets  
@@ -69,7 +72,7 @@ Para diseñar sus propios atributos personalizados, no necesitará dominar mucho
   
 <a name="cpconwritingcustomattributesanchor2"></a>   
 ### <a name="inherited-property"></a>Propiedad Inherited  
- El <xref:System.AttributeUsageAttribute.Inherited%2A?displayProperty=nameWithType> propiedad indica si el atributo puede ser heredado por las clases que se derivan las clases a la que se aplica el atributo. Esta propiedad acepta una marca **true** (valor predeterminado) o **false** . Por ejemplo, en el ejemplo siguiente, `MyAttribute` tiene un valor <xref:System.AttributeUsageAttribute.Inherited%2A> predeterminado de **true**, mientras que `YourAttribute` tiene un valor <xref:System.AttributeUsageAttribute.Inherited%2A> de **false**.  
+ La propiedad <xref:System.AttributeUsageAttribute.Inherited%2A?displayProperty=nameWithType> indica si el atributo lo pueden heredar clases derivadas de las clases a las que se aplica el atributo. Esta propiedad acepta una marca **true** (valor predeterminado) o **false** . Por ejemplo, en el ejemplo siguiente, `MyAttribute` tiene un valor <xref:System.AttributeUsageAttribute.Inherited%2A> predeterminado de **true**, mientras que `YourAttribute` tiene un valor <xref:System.AttributeUsageAttribute.Inherited%2A> de **false**.  
   
  [!code-cpp[Conceptual.Attributes.Usage#7](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.attributes.usage/cpp/source2.cpp#7)]
  [!code-csharp[Conceptual.Attributes.Usage#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.attributes.usage/cs/source2.cs#7)]
@@ -89,7 +92,7 @@ Para diseñar sus propios atributos personalizados, no necesitará dominar mucho
   
 <a name="cpconwritingcustomattributesanchor3"></a>   
 ### <a name="allowmultiple-property"></a>Propiedad AllowMultiple  
- El <xref:System.AttributeUsageAttribute.AllowMultiple%2A?displayProperty=nameWithType> propiedad indica si pueden existir varias instancias del atributo en un elemento. Si establece en **true**, se permiten varias instancias; si se establece en **false** (el valor predeterminado), solo se permite una instancia.  
+ La propiedad <xref:System.AttributeUsageAttribute.AllowMultiple%2A?displayProperty=nameWithType> indica si pueden existir varias instancias del atributo en un elemento. Si establece en **true**, se permiten varias instancias; si se establece en **false** (el valor predeterminado), solo se permite una instancia.  
   
  En el ejemplo siguiente, `MyAttribute` tiene un valor <xref:System.AttributeUsageAttribute.AllowMultiple%2A> predeterminado de **false**, mientras que `YourAttribute` tiene un valor **true**.  
   

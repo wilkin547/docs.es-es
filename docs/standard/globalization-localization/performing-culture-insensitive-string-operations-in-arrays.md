@@ -13,20 +13,23 @@ helpviewer_keywords:
 - arrays [.NET Framework], culture-insensitive string operations
 - comparer parameter
 ms.assetid: f12922e1-6234-4165-8896-63f0653ab478
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 1b4e040ed379cdbf43fbe8b2c4379fdd4dc781f2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: d273fbaa792092f5ea56bfa59392794b6728ed67
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="performing-culture-insensitive-string-operations-in-arrays"></a>Realizar operaciones de cadenas que no tienen en cuenta las referencias culturales en matrices
-Sobrecargas de la <xref:System.Array.Sort%2A?displayProperty=nameWithType> y <xref:System.Array.BinarySearch%2A?displayProperty=nameWithType> métodos realizan ordenaciones de cuenta de la referencia cultural predeterminada utilizando la <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> propiedad. Cuenta de la referencia cultural devuelta por estos métodos pueden variar según la referencia cultural debido a diferencias en los criterios de ordenación. Para eliminar el comportamiento de la cuenta de la referencia cultural, use una de las sobrecargas de este método que acepta un `comparer` parámetro. El `comparer` parámetro especifica el <xref:System.Collections.IComparer> implementación va a utilizar al comparar elementos de la matriz. Para el parámetro, especifique una clase comparadora invariable personalizada que utiliza <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType>. Se proporciona un ejemplo de una clase comparadora invariable personalizada en el tema "Utilizar la clase SortedList" de la [realizar operaciones de cadena cuenta las referencias culturales en colecciones](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations-in-collections.md) tema.  
+Las sobrecargas de los métodos <xref:System.Array.Sort%2A?displayProperty=nameWithType> y <xref:System.Array.BinarySearch%2A?displayProperty=nameWithType> realizan ordenaciones que tienen en cuenta las referencias culturales de manera predeterminada con la propiedad <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType>. Los resultados que tienen en cuenta las referencias culturales devueltos por estos métodos pueden variar en función de la referencia cultural según las diferencias de los criterios de ordenación. Para eliminar el comportamiento que tiene en cuenta las referencias culturales, use una de las sobrecargas de este método que acepta un parámetro `comparer`. El parámetro `comparer` especifica la implementación <xref:System.Collections.IComparer> para usarla al comparar elementos en la matriz. Para el parámetro, especifique una clase de comparador invariable personalizada que use <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType>. Se proporciona una clase de comparador invariable personalizada en el subtema "Uso de la clase SortedList" del tema [Realizar operaciones de cadenas que no tienen en cuenta las referencias culturales en colecciones](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations-in-collections.md).  
   
- **Tenga en cuenta** pasar **CultureInfo.InvariantCulture** a una comparación método lleva a cabo una comparación de la referencia cultural. Si embargo, no provoca una comparación no lingüística, por ejemplo, para las rutas de acceso de archivo, las claves del Registro y las variables de entorno. Tampoco admite las decisiones de seguridad basadas en el resultado de la comparación. Para una comparación no lingüística o soporte técnico para tomar decisiones de seguridad basada en el resultado, la aplicación debe utilizar un método de comparación que acepta un <xref:System.StringComparison> valor. A continuación, debe pasar la aplicación <xref:System.StringComparison.Ordinal>.  
+ **Nota** Pasar **CultureInfo.InvariantCulture** a un método de comparación realiza una comparación que no tiene en cuenta la referencia cultural. Si embargo, no provoca una comparación no lingüística, por ejemplo, para las rutas de acceso de archivo, las claves del Registro y las variables de entorno. Tampoco admite las decisiones de seguridad basadas en el resultado de la comparación. Para una comparación no lingüística o la compatibilidad con las decisiones de seguridad basadas en los resultados, la aplicación debe usar un método de comparación que acepte un valor <xref:System.StringComparison>. A continuación, la aplicación debe pasar <xref:System.StringComparison.Ordinal>.  
   
 ## <a name="see-also"></a>Vea también  
  <xref:System.Array.Sort%2A?displayProperty=nameWithType>  

@@ -9,15 +9,18 @@ ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 682643fc-b848-4e42-8c0d-50deeaeb5f2a
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: e9761afe8b56e15edba6e0319cce9a02501a6bb0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 7901f4bf88215f84445c1d222e6582e0a063c25a
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="managing-namespaces-in-an-xml-document"></a>Administrar espacios de nombres en un documento XML
 Los espacios de nombres XML asocian nombres de elementos y de atributos de un documento XML con identificadores URI personalizados y predefinidos. Para crear estas asociaciones, puede definir los prefijos de los URI del espacio de nombres y usar dichos prefijos para calificar los nombres de los elementos y de los atributos en los datos XML. Los espacios de nombres evitan conflictos de nombres de elementos y atributos y permiten que los elementos y atributos con el mismo nombre se traten y se validen de forma diferente.  
@@ -67,14 +70,14 @@ Los espacios de nombres XML asocian nombres de elementos y de atributos de un do
 ## <a name="managing-namespaces"></a>Administrar los espacios de nombres  
  La clase <xref:System.Xml.XmlNamespaceManager> almacena una colección de URI del espacio de nombres y sus prefijos y permite buscar, agregar y quitar los espacios de nombres en esta colección. En determinados contextos, esta clase es necesaria para obtener un mejor rendimiento del procesamiento XML. Por ejemplo, la clase <xref:System.Xml.Xsl.XsltContext> usa <xref:System.Xml.XmlNamespaceManager> para la compatibilidad con XPath.  
   
- El Administrador de espacio de nombres no realiza ninguna validación en los espacios de nombres, pero se supone que los prefijos y espacios de nombres ya se han comprobado y se ajustan a la [espacios de nombres de W3C](http://www.w3.org/TR/REC-xml-names/) especificación.  
+ El administrador de espacios de nombres no realiza ninguna validación en los espacios de nombres, pero asume que ya se han comprobado los prefijos y los espacios de nombres y son compatibles con la especificación de [espacios de nombres de W3C](http://www.w3.org/TR/REC-xml-names/).  
   
 > [!NOTE]
->  [LINQ to XML](http://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13) no usa <xref:System.Xml.XmlNamespaceManager> para administrar espacios de nombres. Vea [trabajar con espacios de nombres XML](http://msdn.microsoft.com/library/e3003209-3234-45be-a832-47feb7927430) en la documentación de LINQ para obtener información acerca de cómo administrar espacios de nombres al usar LINQ to XML.  
+>  [LINQ to XML](http://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13) no usa <xref:System.Xml.XmlNamespaceManager> para administrar los espacios de nombres. Vea [Trabajar con espacios de nombres XML](http://msdn.microsoft.com/library/e3003209-3234-45be-a832-47feb7927430) en la documentación de LINQ para obtener información sobre cómo administrar los espacios de nombres al usar LINQ to XML.  
   
  A continuación se detallan algunas de las tareas de administración y búsqueda que puede realizar con la clase <xref:System.Xml.XmlNamespaceManager>. Para obtener más información y ejemplos, siga los vínculos a la página de referencia para cada método o propiedad.  
   
-|Para|Uso|  
+|En|Usar|  
 |--------|---------|  
 |Agregar un espacio de nombres|Método <xref:System.Xml.XmlNamespaceManager.AddNamespace%2A>|  
 |Eliminar un espacio de nombres|Método <xref:System.Xml.XmlNamespaceManager.RemoveNamespace%2A>|  

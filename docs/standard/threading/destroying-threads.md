@@ -15,30 +15,33 @@ helpviewer_keywords:
 - destroying threads
 - threading [.NET Framework], destroying threads
 ms.assetid: df54e648-c5d1-47c9-bd29-8e4438c1db6d
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 4a41dce5db707d0be49c283256de665d316e1a1f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 3bdacb1cc54e3b67a1b4cef4f9fd274e65037faa
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="destroying-threads"></a>Destruir subprocesos
-El <xref:System.Threading.Thread.Abort%2A> método se utiliza para detener un subproceso administrado de forma permanente. Cuando se llama a <xref:System.Threading.Thread.Abort%2A>, common language runtime produce una <xref:System.Threading.ThreadAbortException> en el subproceso de destino, que puede detectar el subproceso de destino. Para obtener más información, consulta <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>.  
+El método <xref:System.Threading.Thread.Abort%2A> se utiliza para detener un subproceso administrado de forma permanente. Cuando se llama a <xref:System.Threading.Thread.Abort%2A>, Common Language Runtime produce una clase <xref:System.Threading.ThreadAbortException> en el subproceso de destino, que este último puede detectar. Para obtener más información, consulta <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>.  
   
 > [!NOTE]
->  Si se está ejecutando un subproceso no administrado código, cuando su <xref:System.Threading.Thread.Abort%2A> se llama al método, el tiempo de ejecución lo marca <xref:System.Threading.ThreadState.AbortRequested?displayProperty=nameWithType>. La excepción se produce cuando el subproceso vuelve al código administrado.  
+>  Si un subproceso ejecuta código no administrado al llamar a su método <xref:System.Threading.Thread.Abort%2A>, el tiempo de ejecución lo marca como <xref:System.Threading.ThreadState.AbortRequested?displayProperty=nameWithType>. La excepción se produce cuando el subproceso vuelve al código administrado.  
   
  Una vez que se anula un subproceso, no se puede reiniciar.  
   
- El <xref:System.Threading.Thread.Abort%2A> método no hace que el subproceso se anule inmediatamente, porque el subproceso de destino puede detectar la <xref:System.Threading.ThreadAbortException> y ejecutar cantidades arbitrarias de código en un `finally` bloque. Puede llamar a <xref:System.Threading.Thread.Join%2A?displayProperty=nameWithType> si tiene que esperar hasta que haya finalizado el subproceso. <xref:System.Threading.Thread.Join%2A?displayProperty=nameWithType>es una llamada de bloqueo que no vuelve hasta que el subproceso se ha detenido realmente o ha transcurrido un intervalo de tiempo de espera opcional. El subproceso anulado podría llamar a la <xref:System.Threading.Thread.ResetAbort%2A> método o llevar a cabo el procesamiento sin enlazar en una `finally` bloquear, por lo que si no especifica un tiempo de espera, no se garantiza que la espera para finalizar.  
+ El método <xref:System.Threading.Thread.Abort%2A> no hace que el subproceso se anule inmediatamente, porque el subproceso de destino puede detectar <xref:System.Threading.ThreadAbortException> y ejecutar cantidades arbitrarias de código en un bloque `finally`. Puede llamar a <xref:System.Threading.Thread.Join%2A?displayProperty=nameWithType> si tiene que esperar hasta que haya finalizado el subproceso. <xref:System.Threading.Thread.Join%2A?displayProperty=nameWithType> es una llamada de bloqueo que no realiza ninguna devolución hasta que el subproceso se haya dejado de ejecutar realmente o hasta que haya transcurrido un intervalo de tiempo de espera opcional. El subproceso anulado podría llamar al método <xref:System.Threading.Thread.ResetAbort%2A> o llevar a cabo el procesamiento sin enlazar en un bloqueo `finally`, por lo que si no especifica un tiempo de espera, no se garantiza que la espera finalice.  
   
- Subprocesos que están esperando en una llamada a la <xref:System.Threading.Thread.Join%2A?displayProperty=nameWithType> método puede interrumpirse por otros subprocesos que llaman a <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType>.  
+ Los subprocesos que esperan una llamada al método <xref:System.Threading.Thread.Join%2A?displayProperty=nameWithType> pueden interrumpirse con otros subprocesos que llaman a <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType>.  
   
-## <a name="handling-threadabortexception"></a>Controlar ThreadAbortException  
- Si espera que el subproceso anulado, ya sea como resultado de llamar al método <xref:System.Threading.Thread.Abort%2A> desde su propio código o como resultado de descargar un dominio de aplicación en el que está ejecutando el subproceso (<xref:System.AppDomain.Unload%2A?displayProperty=nameWithType> utiliza <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> para finalizar subprocesos), debe controlar el subproceso el <xref:System.Threading.ThreadAbortException> y realizar cualquier procesamiento final en un `finally` cláusula, tal como se muestra en el código siguiente.  
+## <a name="handling-threadabortexception"></a>Control de ThreadAbortException  
+ Si espera que se anule el subproceso, como resultado de una llamada a <xref:System.Threading.Thread.Abort%2A> desde su propio código o como resultado de la descarga de un dominio de aplicación en que se ejecuta el subproceso (<xref:System.AppDomain.Unload%2A?displayProperty=nameWithType> usa <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> para terminar los subprocesos), el subproceso debe controlar <xref:System.Threading.ThreadAbortException> y realizar cualquier procesamiento final en una cláusula `finally`, como se muestra en el código siguiente.  
   
 ```vb  
 Try  
@@ -69,9 +72,9 @@ catch (ThreadAbortException ex)
 // is rethrown at the end of the Finally clause.  
 ```  
   
- El código de limpieza debe estar en el `catch` cláusula o la `finally` cláusula, porque un <xref:System.Threading.ThreadAbortException> se vuelve a iniciar el sistema al final de la `finally` cláusula, o al final de la `catch` cláusula si no hay ningún `finally` cláusula.  
+ El código de limpieza debe estar en la cláusula `catch` o en la cláusula `finally`, porque el sistema vuelve a generar <xref:System.Threading.ThreadAbortException> al final de la cláusula `finally` o al final de la cláusula `catch` si no existe la cláusula `finally`.  
   
- Puede impedir que el sistema de vuelva a iniciar la excepción mediante una llamada a la <xref:System.Threading.Thread.ResetAbort%2A?displayProperty=nameWithType> método. Sin embargo, debe hacerlo los solo si su propio código que provocó la <xref:System.Threading.ThreadAbortException>.  
+ Puede impedir que el sistema vuelva a generar la excepción mediante una llamada al método <xref:System.Threading.Thread.ResetAbort%2A?displayProperty=nameWithType>. Sin embargo, debe hacerlo solo si su propio código generó <xref:System.Threading.ThreadAbortException>.  
   
 ## <a name="see-also"></a>Vea también  
  <xref:System.Threading.ThreadAbortException>  

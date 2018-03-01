@@ -26,21 +26,24 @@ helpviewer_keywords:
 - .NET Framework regular expressions
 - strings [.NET Framework], regular expressions
 ms.assetid: 521b3f6d-f869-42e1-93e5-158c54a6895d
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: cb612d524f32eb4a97ac358d6deb8d2889ee5391
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 145e0c9a722afd9f49216058604936189c003f17
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="net-regular-expressions"></a>Expresiones regulares de .NET
 Las expresiones regulares proporcionan un método eficaz y flexible para procesar texto. La notación extensiva de búsqueda de patrones coincidentes de las expresiones regulares permite analizar rápidamente grandes cantidades de texto para buscar patrones de caracteres específicos; para validar un texto con el fin de asegurar que se corresponde con un patrón predefinido (por ejemplo, una dirección de correo electrónico); para extraer, editar, reemplazar o eliminar subcadenas de texto; y para agregar las cadenas extraídas a una colección con el fin de generar un informe. Para muchas aplicaciones que usan cadenas o analizan grandes bloques de texto, las expresiones regulares son una herramienta indispensable.  
   
 ## <a name="how-regular-expressions-work"></a>Funcionamiento de las expresiones regulares  
- El eje del procesamiento con expresiones regulares de texto es el motor de expresiones regulares, que se representa mediante la <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> objeto en. NET. Como mínimo, el procesamiento de texto mediante expresiones regulares necesita que el motor de expresiones regulares disponga de los dos elementos de información siguientes:  
+ El eje del procesamiento de texto mediante expresiones regulares es el motor de expresiones regulares, que viene representado por el objeto <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> en .NET. Como mínimo, el procesamiento de texto mediante expresiones regulares necesita que el motor de expresiones regulares disponga de los dos elementos de información siguientes:  
   
 -   El patrón de expresión regular que se debe identificar en el texto.  
   
@@ -50,15 +53,15 @@ Las expresiones regulares proporcionan un método eficaz y flexible para procesa
   
  Los métodos de la clase <xref:System.Text.RegularExpressions.Regex> permiten realizar las operaciones siguientes:  
   
--   Determinar si el patrón de expresión regular se produce en el texto de entrada llamando al método <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType>. Para obtener un ejemplo que usa el <xref:System.Text.RegularExpressions.Regex.IsMatch%2A> método para validar texto, vea [Cómo: comprobar si las cadenas tienen un formato de correo electrónico válido](../../../docs/standard/base-types/how-to-verify-that-strings-are-in-valid-email-format.md).  
+-   Determinar si el patrón de expresión regular se produce en el texto de entrada llamando al método <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType>. Para obtener un ejemplo que utiliza el método <xref:System.Text.RegularExpressions.Regex.IsMatch%2A> para validar texto, consulte [Cómo: Comprobar si las cadenas tienen un formato de correo electrónico válido](../../../docs/standard/base-types/how-to-verify-that-strings-are-in-valid-email-format.md).  
   
 -   Recuperar una o todas las apariciones del texto que coincide con el patrón de expresión regular llamando al método <xref:System.Text.RegularExpressions.Regex.Match%2A?displayProperty=nameWithType> o <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType>. El primer método devuelve un objeto <xref:System.Text.RegularExpressions.Match?displayProperty=nameWithType> que proporciona información sobre el texto coincidente. El segundo método devuelve un objeto <xref:System.Text.RegularExpressions.MatchCollection> que contiene un objeto <xref:System.Text.RegularExpressions.Match?displayProperty=nameWithType> por cada coincidencia encontrada en el texto analizado.  
   
--   Reemplazar el texto que coincide con el patrón de expresión regular llamando al método <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType>. Para obtener ejemplos que utilizan el <xref:System.Text.RegularExpressions.Regex.Replace%2A> método para cambiar los formatos de fecha y quitar caracteres no válidos de una cadena, vea [Cómo: quitar caracteres no válidos de una cadena](../../../docs/standard/base-types/how-to-strip-invalid-characters-from-a-string.md) y [ejemplo: cambiar formatos de fecha](../../../docs/standard/base-types/regular-expression-example-changing-date-formats.md).  
+-   Reemplazar el texto que coincide con el patrón de expresión regular llamando al método <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType>. Para obtener ejemplos en los que se usa el método <xref:System.Text.RegularExpressions.Regex.Replace%2A> para cambiar los formatos de fecha y quitar los caracteres no válidos de una cadena, consulte [Cómo: Quitar caracteres no válidos de una cadena](../../../docs/standard/base-types/how-to-strip-invalid-characters-from-a-string.md) y [Ejemplo: Cambiar formatos de fecha](../../../docs/standard/base-types/regular-expression-example-changing-date-formats.md).  
   
  Para obtener información general acerca del modelo de objetos de expresiones regulares, consulte [El modelo de objetos de expresión regular](../../../docs/standard/base-types/the-regular-expression-object-model.md).  
   
- Para obtener más información sobre el lenguaje de expresiones regulares, vea [lenguaje de expresiones regulares - referencia rápida](../../../docs/standard/base-types/regular-expression-language-quick-reference.md) o descargue e imprima uno de estos folletos:  
+ Para obtener más información acerca del lenguaje de expresiones regulares, consulte [Lenguaje de expresiones regulares - Referencia rápida](../../../docs/standard/base-types/regular-expression-language-quick-reference.md) o descargue e imprima uno de estos folletos:  
   
  [Referencia rápida en formato Word (.docx)](http://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.docx)  
  [Referencia rápida en formato PDF (.pdf)](http://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.pdf)  
@@ -72,7 +75,7 @@ Las expresiones regulares proporcionan un método eficaz y flexible para procesa
  [!code-csharp[Conceptual.Regex#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex/cs/example1.cs#2)]
  [!code-vb[Conceptual.Regex#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex/vb/example1.vb#2)]  
   
- El patrón de expresión regular`(Mr\.? |Mrs\.? |Miss |Ms\.? )` coincide con cualquier aparición de "Mr", "Mr.", "Sra.", "Sra.", "Miss", "Ms o"Ms."". La llamada al método <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> reemplaza la cadena coincidente con <xref:System.String.Empty?displayProperty=nameWithType>; es decir, la quita de la cadena original.  
+ El patrón de expresión regular `(Mr\.? |Mrs\.? |Miss |Ms\.? )` busca coincidencias con cualquier aparición de "Mr", "Mr.", "Mrs", "Mrs.", "Miss", "Ms" o "Ms.". La llamada al método <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> reemplaza la cadena coincidente con <xref:System.String.Empty?displayProperty=nameWithType>; es decir, la quita de la cadena original.  
   
 ### <a name="example-2-identifying-duplicated-words"></a>Ejemplo 2: identificar palabras duplicadas  
  Duplicar palabras accidentalmente es un error frecuente que cometen los escritores. Se puede usar una expresión regular para identificar palabras duplicadas, como se muestra en el ejemplo siguiente.  
@@ -118,11 +121,11 @@ Las expresiones regulares proporcionan un método eficaz y flexible para procesa
   
 ## <a name="related-topics"></a>Temas relacionados  
   
-|Título|Descripción|  
+|Title|Description|  
 |-----------|-----------------|  
 |[Lenguaje de expresiones regulares: referencia rápida](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)|Ofrece información sobre el conjunto de caracteres, operadores y construcciones que se pueden utilizar para definir expresiones regulares.|  
 |[Modelo de objetos de expresión regular](../../../docs/standard/base-types/the-regular-expression-object-model.md)|Proporciona información y ejemplos de código que muestran cómo usar las clases de expresiones regulares.|  
-|[Detalles del comportamiento de expresiones regulares](../../../docs/standard/base-types/details-of-regular-expression-behavior.md)|Proporciona información sobre las características y comportamiento de expresiones regulares. NET.|  
+|[Detalles del comportamiento de expresiones regulares](../../../docs/standard/base-types/details-of-regular-expression-behavior.md)|Proporciona información sobre las funcionalidades y el comportamiento de las expresiones regulares de .NET.|  
 |[Ejemplos de expresiones regulares](../../../docs/standard/base-types/regular-expression-examples.md)|Proporciona ejemplos de código que muestran los usos habituales de las expresiones regulares.|  
   
 ## <a name="reference"></a>Referencia  

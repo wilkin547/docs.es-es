@@ -1,5 +1,5 @@
 ---
-title: "Prácticas recomendadas para utilizar las cadenas en .NET"
+title: Procedimientos recomendados para el uso de cadenas en .NET
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net
@@ -23,20 +23,23 @@ helpviewer_keywords:
 - comparing strings
 - strings [.NET Framework],comparing
 ms.assetid: b9f0bf53-e2de-4116-8ce9-d4f91a1df4f7
-caps.latest.revision: "35"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: d187096fee5119a22d886029cd63173e4ca1c8ec
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: a4b92cd9d6b880f23d6acaf9e38e685184ec3bfe
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
-# <a name="best-practices-for-using-strings-in-net"></a>Prácticas recomendadas para utilizar las cadenas en .NET
-<a name="top"></a>.NET proporciona una amplia compatibilidad para desarrollar aplicaciones adaptadas y globalizadas y facilita el proceso aplicar las convenciones de la referencia cultural actual o una referencia cultural concreta al realizar operaciones comunes como ordenar y mostrar cadenas. Pero ordenar o comparar cadenas no es siempre una operación dependiente de la referencia cultural. Por ejemplo, las cadenas usadas internamente por una aplicación normalmente se deben administrar de forma idéntica en todas las referencias culturales. Cuando los datos de cadenas independientes de la referencia cultural (como etiquetas XML, etiquetas HTML, nombres de usuario, rutas de acceso de archivos y nombres de objetos del sistema) se interpretan como si fueran dependientes de la referencia cultural, el código de aplicación puede estar sujeto a errores imperceptibles, un rendimiento inadecuado y, en algunos casos, a problemas de seguridad.  
+# <a name="best-practices-for-using-strings-in-net"></a>Procedimientos recomendados para el uso de cadenas en .NET
+<a name="top"></a> .NET proporciona una gran compatibilidad para desarrollar aplicaciones localizadas y globalizadas, y simplifica la aplicación de las convenciones de la referencia cultural actual o de una referencia cultural concreta al realizar operaciones comunes como ordenar y mostrar cadenas. Pero ordenar o comparar cadenas no es siempre una operación dependiente de la referencia cultural. Por ejemplo, las cadenas usadas internamente por una aplicación normalmente se deben administrar de forma idéntica en todas las referencias culturales. Cuando los datos de cadenas independientes de la referencia cultural (como etiquetas XML, etiquetas HTML, nombres de usuario, rutas de acceso de archivos y nombres de objetos del sistema) se interpretan como si fueran dependientes de la referencia cultural, el código de aplicación puede estar sujeto a errores imperceptibles, un rendimiento inadecuado y, en algunos casos, a problemas de seguridad.  
   
- Este tema examina el orden de cadenas, comparación y métodos de mayúsculas y minúsculas en. NET, presenta recomendaciones para seleccionar un método adecuado de control de cadenas y proporciona información adicional acerca de los métodos de control de cadenas. También se examina cómo se usan para la presentación y el almacenamiento los datos con formato, como los datos numéricos y los datos de fecha y hora.  
+ En este tema, se examinan los métodos de ordenación, comparación y uso de mayúsculas y minúsculas de cadenas de .NET, se presentan recomendaciones para seleccionar un método adecuado de control de cadenas y se proporciona información adicional sobre los métodos de control de cadenas. También se examina cómo se usan para la presentación y el almacenamiento los datos con formato, como los datos numéricos y los datos de fecha y hora.  
   
  Este tema contiene las siguientes secciones:  
   
@@ -92,7 +95,7 @@ ms.lasthandoff: 10/18/2017
 ## <a name="specifying-string-comparisons-explicitly"></a>Especificar comparaciones de cadenas explícitamente  
  La mayoría de los métodos de manipulación de cadenas de .NET están sobrecargados. Normalmente, una o más sobrecargas aceptan la configuración predeterminada, mientras que otras no aceptan ningún valor predeterminado y en su lugar definen la manera precisa en la que se van a comparar o manipular las cadenas. La mayoría de los métodos que no confían en los valores predeterminados incluye un parámetro de tipo <xref:System.StringComparison>, que es una enumeración que especifica explícitamente reglas para la comparación de cadenas por referencia cultural y uso de mayúsculas y minúsculas. En la tabla siguiente se describen los miembros de la enumeración <xref:System.StringComparison> .  
   
-|Miembro de StringComparison|Descripción|  
+|Miembro de StringComparison|Description|  
 |-----------------------------|-----------------|  
 |<xref:System.StringComparison.CurrentCulture>|Realiza una comparación con distinción entre mayúsculas y minúsculas usando la referencia cultural actual.|  
 |<xref:System.StringComparison.CurrentCultureIgnoreCase>|Realiza una comparación sin distinción entre mayúsculas y minúsculas usando la referencia cultural actual.|  
@@ -148,9 +151,9 @@ ms.lasthandoff: 10/18/2017
   
 -   Sobrecargas de <xref:System.String.CompareTo%2A?displayProperty=nameWithType>.  
   
--   El método <xref:System.String.StartsWith%28System.String%29?displayProperty=nameWithType> predeterminado y el método <xref:System.String.StartsWith%28System.String%2CSystem.Boolean%2CSystem.Globalization.CultureInfo%29?displayProperty=nameWithType> con un parámetro `null`<xref:System.Globalization.CultureInfo>.  
+-   El método predeterminado <xref:System.String.StartsWith%28System.String%29?displayProperty=nameWithType> y el método <xref:System.String.StartsWith%28System.String%2CSystem.Boolean%2CSystem.Globalization.CultureInfo%29?displayProperty=nameWithType> con un parámetro `null`<xref:System.Globalization.CultureInfo>.  
   
--   El método <xref:System.String.EndsWith%28System.String%29?displayProperty=nameWithType> predeterminado y el método <xref:System.String.EndsWith%28System.String%2CSystem.Boolean%2CSystem.Globalization.CultureInfo%29?displayProperty=nameWithType> con un parámetro `null`<xref:System.Globalization.CultureInfo>.  
+-   El método predeterminado <xref:System.String.EndsWith%28System.String%29?displayProperty=nameWithType> y el método <xref:System.String.EndsWith%28System.String%2CSystem.Boolean%2CSystem.Globalization.CultureInfo%29?displayProperty=nameWithType> con un parámetro `null`<xref:System.Globalization.CultureInfo>.  
   
 -   Sobrecargas de <xref:System.String.IndexOf%2A?displayProperty=nameWithType> que aceptan <xref:System.String> como un parámetro de búsqueda y que no tienen un parámetro <xref:System.StringComparison>.  
   
@@ -160,7 +163,7 @@ ms.lasthandoff: 10/18/2017
   
  Pueden surgir errores imperceptibles y no tan imperceptibles cuando los datos de cadenas no lingüísticos se interpretan lingüísticamente, o cuando los datos de cadenas de una referencia cultural determinada se interpretan usando las convenciones de otra referencia cultural. El ejemplo canónico es el problema con I en turco.  
   
- Para casi todos los alfabetos latinos, incluso en inglés de EE. UU., el carácter "i" (\u0069) es la versión en minúsculas del carácter "I" (\u0049). Esta regla de mayúsculas y minúsculas se convierte rápidamente en el valor predeterminado para alguien que programe en esa referencia cultural. Sin embargo, el alfabeto turco ("tr-TR") incluye un carácter "I con punto" "İ" (\u0130), que es la versión en mayúsculas de "i". El turco también incluye un carácter "i sin punto" en minúscula, "ı" (\u0131), que en mayúsculas es "I". Este comportamiento también se produce en la referencia cultural de azerbaiyano ("az").  
+ Para casi todos los alfabetos latinos, incluso en inglés de EE. UU., el carácter "i" (\u0069) es la versión en minúsculas del carácter "I" (\u0049). Esta regla de mayúsculas y minúsculas se convierte rápidamente en el valor predeterminado para alguien que programe en esa referencia cultural. En cambio, el alfabeto turco ("tr-TR") incluye un carácter "I con punto" "İ" (\u0130), que es la versión en mayúsculas de "i". El turco también incluye un carácter "i sin punto" en minúscula, "ı" (\u0131), que en mayúsculas es "I". Este comportamiento también se produce en la referencia cultural de azerbaiyano ("az").  
   
  Por tanto, los supuestos sobre poner en mayúsculas "i" o escribir "I" en minúsculas no son válidas en todas las referencias culturales. Si usa las sobrecargas predeterminadas para las rutinas de comparación de cadenas, estarán sujetas a variaciones entre distintas referencias culturales. Si los datos que se van a comparar son no lingüísticos, el uso de las sobrecargas predeterminadas puede generar resultados no deseables, como ilustra el siguiente intento de realizar una comparación sin distinción entre mayúsculas y minúsculas de las cadenas "file" y "FILE".  
   

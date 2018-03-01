@@ -20,15 +20,18 @@ helpviewer_keywords:
 - formatting [.NET Framework], time
 - date and time strings
 ms.assetid: 98b374e3-0cc2-4c78-ab44-efb671d71984
-caps.latest.revision: "79"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: f0346de00988a6863c212a95be3ffa9d356fe5ce
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 503f9d593235cc81c6e2ecf43b93abb2105e0adf
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="custom-date-and-time-format-strings"></a>Cadenas con formato de fecha y hora personalizado
 Una cadena con formato de fecha y hora define la representación de texto de un valor <xref:System.DateTime> o <xref:System.DateTimeOffset> que es el resultado de una operación de formato. También puede definir la representación de un valor de fecha y hora que se necesite en una operación de análisis para convertir correctamente la cadena en una fecha y hora. Una cadena de formato personalizado consta de uno o varios especificadores de formato de fecha y hora personalizado. Una cadena que no sea una [cadena con formato de fecha y hora estándar](../../../docs/standard/base-types/standard-date-and-time-format-strings.md) se interpreta como una cadena con formato de fecha y hora personalizado.  
@@ -50,7 +53,7 @@ Una cadena con formato de fecha y hora define la representación de texto de un 
   
  En la tabla siguiente se describen los especificadores de formato de fecha y hora personalizados, y se muestra la cadena de resultado producida por cada especificador de formato. De forma predeterminada, las cadenas de resultado reflejan las convenciones de formato de la referencia cultural en-us. Si un especificador de formato determinado genera una cadena de resultado localizada, el ejemplo también indica la referencia cultural a la que se aplica dicha cadena. Vea la sección Notas para obtener información adicional sobre cómo usar cadenas de formato de fecha y hora personalizado.  
   
-|Especificador de formato|Descripción|Ejemplos|  
+|Especificador de formato|Description|Ejemplos|  
 |----------------------|-----------------|--------------|  
 |"d"|El día del mes, de 1 a 31.<br /><br /> Más información: [El especificador de formato personalizado "d"](#dSpecifier).|2009-06-01T13:45:30 -> 1<br /><br /> 2009-06-15T13:45:30 -> 15|  
 |"dd"|El día del mes, de 01 a 31.<br /><br /> Más información: [El especificador de formato personalizado "dd"](#ddSpecifier).|2009-06-01T13:45:30 -> 01<br /><br /> 2009-06-15T13:45:30 -> 15|  
@@ -358,7 +361,7 @@ Una cadena con formato de fecha y hora define la representación de texto de un 
   
 -   En una hora de una zona horaria no especificada (una hora cuya propiedad <xref:System.DateTime.Kind%2A?displayProperty=nameWithType> es igual a <xref:System.DateTimeKind.Unspecified?displayProperty=nameWithType>), el resultado es equivalente a <xref:System.String.Empty?displayProperty=nameWithType>.  
   
- Para <xref:System.DateTimeOffset> valores, el especificador de formato "K" es equivalentes al especificador de formato "zzz" y genera una cadena de resultado que contiene el <xref:System.DateTimeOffset> valor de desplazamiento a la hora UTC.  
+ En los valores <xref:System.DateTimeOffset>, el especificador de formato "K" es equivalente al especificador de formato "zzz" y genera una cadena de resultado que contiene el desfase del valor <xref:System.DateTimeOffset> con respecto a la hora UTC.  
   
  Si el especificador de formato "K" se usa sin otros especificadores de formato personalizado, se interpretará como un especificador de formato de fecha y hora estándar y producirá una excepción <xref:System.FormatException>. Para más información sobre cómo usar un especificador de formato único, consulte [Usar especificadores de formato personalizado únicos](#UsingSingleSpecifiers) más adelante en este tema.  
   
@@ -636,7 +639,7 @@ Una cadena con formato de fecha y hora define la representación de texto de un 
 |-|-|-|-|-|  
 |F|H|K|M|d|  
 |f|e|h|m|s|  
-|m|s|z|%|:|  
+|m|y|z|%|:|  
 |/|"|'|\||  
   
  Todos los demás caracteres se interpretan siempre como literales de carácter y, en una operación de formato, se incluyen en la cadena de resultado sin modificar.  En una operación de análisis, deben coincidir exactamente con los caracteres de la cadena de entrada; la comparación distingue entre mayúsculas y minúsculas.  
@@ -691,7 +694,7 @@ Una cadena con formato de fecha y hora define la representación de texto de un 
 ### <a name="control-panel-settings"></a>Configuración del Panel de control  
  La configuración de **Configuración regional y de idioma** del Panel de control influye en la cadena de resultado generada por una operación de formato que incluye muchos de los especificadores de formato de fecha y hora personalizado. Estas configuraciones se utilizan para inicializar el objeto <xref:System.Globalization.DateTimeFormatInfo> asociado a la referencia cultural del subproceso actual, que proporciona valores que se utilizan para controlar el formato. Los equipos que usan configuraciones diferentes generarán cadenas de resultado distintas.  
   
- Además, si usas el <xref:System.Globalization.CultureInfo.%23ctor%28System.String%29?displayProperty=nameWithType> constructor para crear instancias de un nuevo <xref:System.Globalization.CultureInfo> objeto que representa la misma referencia cultural que la actual referencia cultural del sistema, cualquier personalización establecida por el **Configuración Regional e idioma** elemento en el Panel de Control se aplicará al nuevo <xref:System.Globalization.CultureInfo> objeto. Puede usar el constructor <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> para crear un objeto <xref:System.Globalization.CultureInfo> que no refleje las personalizaciones de un sistema.  
+ Asimismo, si se usa el constructor <xref:System.Globalization.CultureInfo.%23ctor%28System.String%29?displayProperty=nameWithType> para crear instancias de un nuevo objeto <xref:System.Globalization.CultureInfo> que representa la misma referencia cultural que la referencia cultural del sistema actual, cualquier personalización establecida por el elemento **Configuración regional y de idioma** del Panel de control se aplicará al nuevo objeto <xref:System.Globalization.CultureInfo>. Puede usar el constructor <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> para crear un objeto <xref:System.Globalization.CultureInfo> que no refleje las personalizaciones de un sistema.  
   
 ### <a name="datetimeformatinfo-properties"></a>Propiedades de DateTimeFormatInfo  
  El formato se ve influenciado por las propiedades del objeto <xref:System.Globalization.DateTimeFormatInfo> actual, proporcionado implícitamente por la referencia cultural del subproceso actual o explícitamente por el parámetro <xref:System.IFormatProvider> del método que invoca el formato. Para el parámetro <xref:System.IFormatProvider>, debe especificar un objeto <xref:System.Globalization.CultureInfo>, que representa una referencia cultural, o un objeto <xref:System.Globalization.DateTimeFormatInfo>.  

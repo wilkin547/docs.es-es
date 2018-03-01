@@ -18,21 +18,24 @@ helpviewer_keywords:
 - tables [.NET Framework], type conversions
 - data types [.NET Framework], converting
 ms.assetid: 0ea65c59-85eb-4a52-94ca-c36d3bd13058
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 327469f9a151b6ef7e1c42f6669c0a9dae7016fd
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: e741de47fec5f0ed607bba33b963d449c5c51cce
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="type-conversion-tables-in-net"></a>Tablas de conversión de tipos en .NET
 Una conversión de ampliación se produce cuando se convierte un valor de un tipo a otro tipo que es de igual o mayor tamaño. Una conversión de restricción se produce cuando se convierte un valor de un tipo a otro tipo que es de un tamaño menor. En las tablas de este tema se muestran los comportamientos de ambos tipos de conversiones.  
   
 ## <a name="widening-conversions"></a>conversiones de ampliación  
- La tabla siguiente describen las conversiones de ampliación que se pueden realizar sin pérdida de información.  
+ En la tabla siguiente se describen las conversiones de ampliación que pueden realizarse sin pérdida de información.  
   
 |Tipo|Se puede convertir sin pérdida de datos a|  
 |----------|-------------------------------------------|  
@@ -47,7 +50,7 @@ Una conversión de ampliación se produce cuando se convierte un valor de un tip
 |<xref:System.UInt64>|<xref:System.Decimal>|  
 |<xref:System.Single>|<xref:System.Double>|  
   
- Algunas conversiones a de ampliación <xref:System.Single> o <xref:System.Double> puede provocar una pérdida de precisión. En la tabla siguiente se describen las conversiones de ampliación que a veces se traducen en una pérdida de información.  
+ Algunas conversiones de ampliación a <xref:System.Single> o <xref:System.Double> pueden provocar una pérdida de precisión. En la tabla siguiente se describen las conversiones de ampliación que a veces se traducen en una pérdida de información.  
   
 |Tipo|Se puede convertir a|  
 |----------|-------------------------|  
@@ -58,11 +61,11 @@ Una conversión de ampliación se produce cuando se convierte un valor de un tip
 |<xref:System.Decimal>|<xref:System.Single>, <xref:System.Double>|  
   
 ## <a name="narrowing-conversions"></a>conversiones de restricción  
- Una conversión de restricción a <xref:System.Single> o <xref:System.Double> puede provocar una pérdida de información. Si el tipo de destino no puede expresar correctamente la magnitud del origen, el tipo resultante se establece en la constante `PositiveInfinity` o `NegativeInfinity`. `PositiveInfinity`el resultado de dividir un número positivo por cero y también se devuelve cuando el valor de un <xref:System.Single> o <xref:System.Double> supera el valor de la `MaxValue` campo. `NegativeInfinity`el resultado de dividir un número negativo por cero y también se devuelve cuando el valor de un <xref:System.Single> o <xref:System.Double> cae por debajo del valor de la `MinValue` campo. Una conversión de un <xref:System.Double> a una <xref:System.Single> puede dar lugar a `PositiveInfinity` o `NegativeInfinity`.  
+ Una conversión de restricción a <xref:System.Single> o <xref:System.Double> puede provocar una pérdida de información. Si el tipo de destino no puede expresar correctamente la magnitud del origen, el tipo resultante se establece en la constante `PositiveInfinity` o `NegativeInfinity`. `PositiveInfinity` resulta al dividir un número positivo por cero y también se devuelve cuando el valor de <xref:System.Single> o <xref:System.Double> supera el valor del campo `MaxValue`. `NegativeInfinity` resulta al dividir un número negativo por cero y también se devuelve cuando el valor de <xref:System.Single> o <xref:System.Double> cae por debajo del valor del campo `MinValue`. Una conversión de <xref:System.Double> a <xref:System.Single> podría dar lugar a `PositiveInfinity` o `NegativeInfinity`.  
   
- Una conversión de restricción también puede traducirse en una pérdida de información para otros tipos de datos. Sin embargo, un <xref:System.OverflowException> se produce si el valor de un tipo que se va a convertir está fuera del intervalo especificado por el tipo de destino `MaxValue` y `MinValue` campos y la conversión se comprueba el tiempo de ejecución para asegurarse de que el valor de destino tipo no supere su `MaxValue` o `MinValue`. Las conversiones que se realizan con la <xref:System.Convert?displayProperty=nameWithType> clase siempre se protegen de esta manera.  
+ Una conversión de restricción también puede traducirse en una pérdida de información para otros tipos de datos. Pero se inicia <xref:System.OverflowException> si el valor de un tipo que se va a convertir está fuera del intervalo especificado por los campos `MaxValue` y `MinValue` del tipo de destino y el tiempo de ejecución comprueba la conversión para asegurarse de que el valor del tipo de destino no supera su `MaxValue` o `MinValue`. Las conversiones que se realizan con la clase <xref:System.Convert?displayProperty=nameWithType> siempre se comprueban de esta manera.  
   
- En la tabla siguiente se enumera las conversiones que inician una <xref:System.OverflowException> con <xref:System.Convert?displayProperty=nameWithType> o cualquier comprobada conversión si el valor del tipo que se va a convertir está fuera del intervalo definido del tipo resultante.  
+ En la tabla siguiente se enumeran las conversiones que inician <xref:System.OverflowException> con <xref:System.Convert?displayProperty=nameWithType> o cualquier conversión comprobada si el valor del tipo que se va a convertir está fuera del intervalo definido del tipo resultante.  
   
 |Tipo|Se puede convertir a|  
 |----------|-------------------------|  

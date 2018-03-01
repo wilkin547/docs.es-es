@@ -12,35 +12,38 @@ helpviewer_keywords:
 - strings [.NET Framework], manipulating
 - manipulating strings
 ms.assetid: d4568ff3-9f83-4549-acd8-47aec2194ac0
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: f56dbd878012019f5cab68f2836286d9a6c2f548
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: b1db77672928ebf4a03b69b4bef1af80f04124b5
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="manipulating-strings-in-net"></a>Manipular cadenas en .NET
 .NET proporciona un amplio conjunto de rutinas que permiten crear, comparar y modificar cadenas de forma eficaz, así como analizar rápidamente grandes cantidades de texto y datos para buscar, quitar y reemplazar patrones de texto.  
   
 ## <a name="in-this-section"></a>En esta sección  
  [Procedimientos recomendados para el uso de cadenas](../../../docs/standard/base-types/best-practices-strings.md)  
- Examina la cadena de ordenación, comparación y métodos de mayúsculas y minúsculas en .NET y proporciona recomendaciones para seleccionar un método de control de cadenas.  
+ Se examinan los métodos de ordenación, comparación y uso de mayúsculas y minúsculas de cadenas de .NET y se proporcionan recomendaciones para seleccionar un método de control de cadenas.  
   
  [Expresiones regulares de .NET](../../../docs/standard/base-types/regular-expressions.md)  
- Proporciona información detallada acerca de expresiones regulares. NET, incluidos los elementos del lenguaje, el comportamiento de expresiones regulares y ejemplos.  
+ Se proporciona información sobre expresiones regulares de .NET, incluidos elementos de lenguaje, comportamiento de expresiones regulares y ejemplos.  
   
  [Operaciones básicas de cadenas](../../../docs/standard/base-types/basic-string-operations.md)  
- Describe las operaciones de cadena proporcionadas por el <xref:System.String?displayProperty=nameWithType> y <xref:System.Text.StringBuilder?displayProperty=nameWithType> clases, como crear cadenas nuevas en matrices de bytes, comparar los valores de cadena y modificar las cadenas existentes.  
+ Se describen las operaciones de cadenas que proporcionan las clases <xref:System.String?displayProperty=nameWithType> y <xref:System.Text.StringBuilder?displayProperty=nameWithType>, incluida la creación de cadenas a partir de matrices de bytes, la comparación de valores de cadena y la modificación de cadenas existentes.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
  [Conversión de tipos en .NET](../../../docs/standard/base-types/type-conversion.md)  
- Explica las técnicas y reglas que se utilizan para convertir a tipos con. NET.  
+ Se explican las técnicas y reglas utilizadas para convertir tipos con .NET.  
   
  [Aplicación de formato a tipos](../../../docs/standard/base-types/formatting-types.md)  
- Proporciona cómo usar la biblioteca de clases base para implementar el formato, cómo dar formato a tipos numéricos, cómo dar formato a tipos de cadena y cómo dar formato a una referencia cultural concreta.  
+ Se explica cómo usar la biblioteca de clases base para implementar el formato, cómo dar formato a tipos numéricos, cómo dar formato a tipos de cadena y cómo dar formato a una referencia cultural concreta.  
   
- [Analizar cadenas](../../../docs/standard/base-types/parsing-strings.md)  
+ [Parsing Strings](../../../docs/standard/base-types/parsing-strings.md)  
  Describe cómo inicializar objetos en los valores descritos por representaciones de cadena de dichos objetos. El análisis es la operación inversa de la aplicación de formato.

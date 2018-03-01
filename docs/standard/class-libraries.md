@@ -10,11 +10,14 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: a67484c3-fe92-44d8-8fa3-36fa2071d880
-ms.openlocfilehash: c72cdcbbe20c3c7a6890cdacb446e3db8de1b37a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 5445c6971e243e9fc2eea34937683a5c3c432c01
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="net-class-libraries"></a>Bibliotecas de clases de .NET
 
@@ -24,7 +27,7 @@ Hay tres tipos de bibliotecas de clases que puede usar:
 
 *   Las bibliotecas de clases **específicas de la plataforma** tienen acceso a todas las API de una plataforma determinada (por ejemplo, .NET Framework, Xamarin iOS), pero solo las pueden usar las aplicaciones y bibliotecas destinadas a esa plataforma.
 *   Las bibliotecas de clases **portables** tienen acceso a un subconjunto de API y las pueden usar las aplicaciones y bibliotecas que tienen como destino varias plataformas.
-*   Las bibliotecas de clases de **.NET Core** son una fusión del concepto de biblioteca específica de la plataforma y portable en un único modelo que ofrece lo mejor de ambas.
+*   Las bibliotecas de clases de **.NET Standard** son una fusión del concepto de biblioteca específica de la plataforma y portable en un único modelo que ofrece lo mejor de ambas.
 
 ## <a name="platform-specific-class-libraries"></a>Bibliotecas de clases específicas de la plataforma
 

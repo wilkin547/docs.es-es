@@ -9,18 +9,21 @@ ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 202f8820-224c-494f-b61e-cd127eac6e03
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 0d7fa8492487daff68fd8ebaf4159dd537d13e51
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 92d0688b86e6a95af46e09c21c1a8b3cdf66efc3
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="xslt-transformations"></a>Transformaciones XSLT
-El objetivo de XSLT (Extensible Stylesheet Language Transformation) es transformar el contenido de un documento XML de origen en otro documento con un formato o estructura diferentes. Por ejemplo, se puede emplear para transformar el documento XML en HTML con el fin de usarlo en un sitio web o transformarlo en un documento que sólo contenga los campos necesarios para una aplicación. Este proceso de transformación está especificado por el [recomendación W3C XSL Transformations (XSLT) versión 1.0](http://go.microsoft.com/fwlink/?LinkID=49919).  
+El objetivo de XSLT (Extensible Stylesheet Language Transformation) es transformar el contenido de un documento XML de origen en otro documento con un formato o estructura diferentes. Por ejemplo, se puede emplear para transformar el documento XML en HTML con el fin de usarlo en un sitio web o transformarlo en un documento que sólo contenga los campos necesarios para una aplicación. Las especificaciones de este proceso de transformación se encuentran en la [recomendación W3C XSL Transformations (XSLT) Version 1.0](http://go.microsoft.com/fwlink/?LinkID=49919).  
   
  La clase <xref:System.Xml.Xsl.XslCompiledTransform> es el procesador XSLT en .NET Framework. La clase <xref:System.Xml.Xsl.XslCompiledTransform> es compatible con la recomendación XSLT 1.0. del W3C mencionada anteriormente.  
   
@@ -40,7 +43,7 @@ El objetivo de XSLT (Extensible Stylesheet Language Transformation) es transform
  [Transformaciones XSLT con la clase XslTransform](../../../../docs/standard/data/xml/xslt-transformations-with-the-xsltransform-class.md)  
  Proporciona información sobre cómo usar la clase <xref:System.Xml.Xsl.XslTransform>.  
   
- **Tenga en cuenta** la <xref:System.Xml.Xsl.XslTransform> clase está obsoleta en la versión de .NET Framework 2.0.  
+ **Nota** La clase <xref:System.Xml.Xsl.XslTransform> está obsoleta en .NET Framework 2.0.  
   
 ## <a name="reference"></a>Referencia  
  <xref:System.Xml.Xsl.XslCompiledTransform>  

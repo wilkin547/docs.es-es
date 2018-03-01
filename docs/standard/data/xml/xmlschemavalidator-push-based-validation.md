@@ -12,15 +12,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 911d4460-dd91-4958-85b2-2ca3299f9ec6
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 5a78321b289dd19c5086223856fd3142f1aef75c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 60c2effea612a579b4c66b7c30243b785b86a263
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="xmlschemavalidator-push-based-validation"></a>Validación basada en inserción de XmlSchemaValidator
 La clase <xref:System.Xml.Schema.XmlSchemaValidator> incluye un mecanismo eficiente y de alto rendimiento para validar datos XML con esquemas XML mediante inserción. Por ejemplo, la clase <xref:System.Xml.Schema.XmlSchemaValidator> le permite validar un conjunto de información XML en el lugar sin tener que serializarla como un documento XML y, a continuación, volver a analizar el documento utilizando un sistema de lectura XML de validación.  
@@ -155,7 +158,7 @@ validator.ValidateEndElement(null);
 ### <a name="validating-elements-attributes-and-content"></a>Validación de elementos, atributos y contenido  
  La clase <xref:System.Xml.Schema.XmlSchemaValidator> incluye varios métodos que se utilizan para validar elementos, atributos y contenido en un conjunto de información XML con esquemas XML. En la siguiente tabla se describen cada uno de estos métodos.  
   
-|Método|Descripción|  
+|Método|Description|  
 |------------|-----------------|  
 |<xref:System.Xml.Schema.XmlSchemaValidator.ValidateElement%2A>|Valida el nombre del elemento en el contexto actual.|  
 |<xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A>|Valida el atributo en el contexto del elemento actual o con el objeto <xref:System.Xml.Schema.XmlSchemaAttribute> que se pasa como parámetro al método <xref:System.Xml.Schema.XmlSchemaValidator.Initialize%2A>.|  
@@ -172,11 +175,11 @@ validator.ValidateEndElement(null);
  Para obtener un ejemplo de los métodos que se utilizan para validar elementos, atributos y contenido en un conjunto de información XML, vea el ejemplo de la sección anterior. Para obtener más información sobre estos métodos, vea la documentación de referencia de la clase <xref:System.Xml.Schema.XmlSchemaValidator>.  
   
 #### <a name="validating-content-using-an-xmlvaluegetter"></a>Validación de contenido con XmlValueGetter  
- <xref:System.Xml.Schema.XmlValueGetter>`delegate` se puede utilizar para pasar el valor de los nodos de atributos, textos o espacios en blanco como tipos Common Language Runtime (CLR) compatibles con el tipo del lenguaje de definición de esquemas XML (XSD) del nodo de atributos, textos o espacios en blanco. <xref:System.Xml.Schema.XmlValueGetter>`delegate` es útil si el valor CLR de un nodo de atributos, textos o espacios en blanco ya está disponible y evita el costo de convertirlo en un `string` y luego volver a analizarlo para validarlo.  
+ <xref:System.Xml.Schema.XmlValueGetter>`delegate` se puede utilizar para pasar el valor de los nodos de atributos, textos o espacios en blanco como tipos Common Language Runtime (CLR) compatibles con el tipo del lenguaje de definición de esquema XML (XSD) del nodo de atributos, textos o espacios en blanco. <xref:System.Xml.Schema.XmlValueGetter> `delegate` es útil si el valor CLR de un nodo de atributos, textos o espacios en blanco ya está disponible y evita el costo de convertirlo en un valor `string` y luego volver a analizarlo para validarlo.  
   
  Los métodos <xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A>, <xref:System.Xml.Schema.XmlSchemaValidator.ValidateText%2A> y <xref:System.Xml.Schema.XmlSchemaValidator.ValidateWhitespace%2A> están sobrecargados y aceptan el valor de los nodos de atributos, textos o espacios en blanco como un `string` o <xref:System.Xml.Schema.XmlValueGetter>`delegate`.  
   
- Los siguientes métodos de la clase <xref:System.Xml.Schema.XmlSchemaValidator> aceptan un <xref:System.Xml.Schema.XmlValueGetter>`delegate` como parámetro.  
+ Los siguientes métodos de la clase <xref:System.Xml.Schema.XmlSchemaValidator> aceptan un <xref:System.Xml.Schema.XmlValueGetter> `delegate` como parámetro.  
   
 -   <xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A>  
   
@@ -214,7 +217,7 @@ static XmlValueGetter dateTimeGetter(DateTime dateTime)
 }  
 ```  
   
- Para obtener un ejemplo completo de <xref:System.Xml.Schema.XmlValueGetter>`delegate`, vea el ejemplo de la introducción. Para obtener más información sobre <xref:System.Xml.Schema.XmlValueGetter>`delegate`, vea la documentación de referencia de la clase <xref:System.Xml.Schema.XmlValueGetter> y <xref:System.Xml.Schema.XmlSchemaValidator>.  
+ Para obtener un ejemplo completo de <xref:System.Xml.Schema.XmlValueGetter>`delegate`, vea el ejemplo de la introducción. Para obtener más información sobre <xref:System.Xml.Schema.XmlValueGetter> `delegate`, vea la documentación de referencia de las clases <xref:System.Xml.Schema.XmlValueGetter> y <xref:System.Xml.Schema.XmlSchemaValidator>.  
   
 #### <a name="post-schema-validation-information"></a>Información posterior a la validación del esquema  
  La clase <xref:System.Xml.Schema.XmlSchemaInfo> representa parte de la información posterior a la validación del esquema de un nodo XML que valida la clase <xref:System.Xml.Schema.XmlSchemaValidator>. Hay varios métodos de la clase <xref:System.Xml.Schema.XmlSchemaValidator> que aceptan un objeto <xref:System.Xml.Schema.XmlSchemaInfo> como un parámetro `null` opcional (`out`).  
@@ -443,10 +446,10 @@ static void SchemaValidationEventHandler(object sender, ValidationEventArgs e)
   
 |Estado|Transición|  
 |-----------|----------------|  
-|Validar|<xref:System.Xml.Schema.XmlSchemaValidator.Initialize%2A>(<xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A> &#124; TopLevel*)<xref:System.Xml.Schema.XmlSchemaValidator.EndValidation%2A>|  
-|TopLevel|<xref:System.Xml.Schema.XmlSchemaValidator.ValidateWhitespace%2A>&#124; <xref:System.Xml.Schema.XmlSchemaValidator.ValidateText%2A> &#124; Elemento|  
-|Elemento|<xref:System.Xml.Schema.XmlSchemaValidator.ValidateElement%2A>¿ <xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A>* (<xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndOfAttributes%2A> Contenido\*)? <xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndElement%2A> &#124;<br /><br /> <xref:System.Xml.Schema.XmlSchemaValidator.ValidateElement%2A> <xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A>\* <xref:System.Xml.Schema.XmlSchemaValidator.SkipToEndElement%2A> &#124;<br /><br /> <xref:System.Xml.Schema.XmlSchemaValidator.ValidateElement%2A><xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A> \* <xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndOfAttributes%2A> Contenido\* <xref:System.Xml.Schema.XmlSchemaValidator.SkipToEndElement%2A> &#124;|  
-|Contenido|<xref:System.Xml.Schema.XmlSchemaValidator.ValidateWhitespace%2A>&#124; <xref:System.Xml.Schema.XmlSchemaValidator.ValidateText%2A> &#124; Elemento|  
+|Validar|<xref:System.Xml.Schema.XmlSchemaValidator.Initialize%2A> (<xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A> &#124; TopLevel*) <xref:System.Xml.Schema.XmlSchemaValidator.EndValidation%2A>|  
+|TopLevel|<xref:System.Xml.Schema.XmlSchemaValidator.ValidateWhitespace%2A> &#124; <xref:System.Xml.Schema.XmlSchemaValidator.ValidateText%2A> &#124; Element|  
+|Elemento|<xref:System.Xml.Schema.XmlSchemaValidator.ValidateElement%2A> <xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A>* (<xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndOfAttributes%2A> Content\*)? <xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndElement%2A> &#124;<br /><br /> <xref:System.Xml.Schema.XmlSchemaValidator.ValidateElement%2A> <xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A>\* <xref:System.Xml.Schema.XmlSchemaValidator.SkipToEndElement%2A> &#124;<br /><br /> <xref:System.Xml.Schema.XmlSchemaValidator.ValidateElement%2A> <xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A>\* <xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndOfAttributes%2A> Content\* <xref:System.Xml.Schema.XmlSchemaValidator.SkipToEndElement%2A> &#124;|  
+|Contenido|<xref:System.Xml.Schema.XmlSchemaValidator.ValidateWhitespace%2A> &#124; <xref:System.Xml.Schema.XmlSchemaValidator.ValidateText%2A> &#124; Element|  
   
 > [!NOTE]
 >  Cada uno de los métodos de la tabla anterior inicia una <xref:System.InvalidOperationException> cuando se realiza la llamada al método en la secuencia incorrecta de acuerdo con el estado actual de un objeto <xref:System.Xml.Schema.XmlSchemaValidator>.  
@@ -455,7 +458,7 @@ static void SchemaValidationEventHandler(object sender, ValidationEventArgs e)
   
  En la siguiente tabla se describe cómo los signos de puntuación que se encuentran en la tabla de transiciones de estado anterior afectan a los métodos y otros estados que se pueden llamar para cada estado de la transición de la clase <xref:System.Xml.Schema.XmlSchemaValidator>.  
   
-|Símbolo|Descripción|  
+|Símbolo|Description|  
 |------------|-----------------|  
 |&#124;|Se puede llamar al método o al estado (al que está antes o después de la barra).|  
 |?|El método o estado que precede al signo de interrogación es opcional, pero si se llama, solo se puede llamar una vez.|  

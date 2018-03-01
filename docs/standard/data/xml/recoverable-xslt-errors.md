@@ -9,15 +9,18 @@ ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 484929b0-fefb-4629-87ee-ebdde70ff1f8
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 78149e0e1c84a457f68b67ea8fe4c82098e794ad
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 4564530cd173793519471c78105d0394595f6d5c
+ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="recoverable-xslt-errors"></a>Errores XSLT recuperables
 La recomendación de la versión 1.0 de las transformaciones XLT (XSLT) del W3C incluye áreas en las que el proveedor de las implementaciones puede decidir cómo controlar una situación. Estas áreas se consideran comportamientos discrecionales. Por ejemplo, en la sección 7.3 Creación de instrucciones de procesamiento, la recomendación 1.0 de XSLT dice que el hecho de que al crear instancias del contenido de `xsl:processing-instruction` se creen nodos que no sean de texto, es un error. Para algunos problemas, la recomendación 1.0 de XSLT indica qué decisión tomar si el procesador decide recuperarse del error. En el caso del problema en particular de la sección 7.3, W3C indica que la implementación puede recuperarse del error pasando por alto los nodos y su contenido.  
@@ -29,7 +32,7 @@ La recomendación de la versión 1.0 de las transformaciones XLT (XSLT) del W3C 
   
 -   El error indica que se inicia una excepción para esta situación.  
   
--   Las referencias de sección pueden encontrarse en el [recomendación de W3C XSL Transformations (XSLT) versión 1.0](http://go.microsoft.com/fwlink/?LinkId=49919) y [erratas de especificaciones de W3C XSL Transformations (XSLT) versión 1.0](http://go.microsoft.com/fwlink/?LinkId=49917).  
+-   Puede encontrar las referencias de la sección en la [recomendación de transformaciones XSL (XSLT) versión 1.0 del W3C](http://www.w3.org/TR/xslt) y en las [erratas de especificaciones de las transformaciones XSL (XSLT) versión 1.0 del W3C](http://www.w3.org/1999/11/REC-xslt-19991116-errata/).  
   
 |Condición XSLT|Sección|Comportamiento de XslCompiledTransform|  
 |--------------------|-------------|-----------------------------------|  
@@ -59,7 +62,7 @@ La recomendación de la versión 1.0 de las transformaciones XLT (XSLT) del W3C 
 |El atributo `value` de un `xsl:number` es NAN, infinito o menor que 0,5.|errata 24|Recuperar|  
 |El segundo conjunto de nodos de argumentos de la función de documento está vacío y la referencia de identificador URI es relativa.|errata 14|Recuperar|  
   
- <sup>*</sup>Este comportamiento es diferente de la <xref:System.Xml.Xsl.XslTransform> clase. Para obtener más información, consulte [implementación de comportamientos discrecionales en la clase XslTransform](../../../../docs/standard/data/xml/implementation-of-discretionary-behaviors-in-the-xsltransform-class.md).  
+ <sup>*</sup> Este comportamiento es diferente al de la clase <xref:System.Xml.Xsl.XslTransform>. Para más información, vea [Implementación de comportamientos discrecionales en la clase XslTransform](../../../../docs/standard/data/xml/implementation-of-discretionary-behaviors-in-the-xsltransform-class.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Transformaciones XSLT](../../../../docs/standard/data/xml/xslt-transformations.md)

@@ -19,27 +19,30 @@ helpviewer_keywords:
 - uppercase
 - lowercase
 ms.assetid: 6805f81b-e9ad-4387-9f4c-b9bdb21b87c0
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 8b03dec350d38d15faaa6a0afc6a1f2c31d5c58f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: a3d845f53238f3b5b1744c13de9800e0d8f65dbc
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="changing-case-in-net"></a>Cambiar mayúsculas y minúsculas en .NET
 Si escribe una aplicación que acepta la entrada de un usuario, nunca podrá estar seguro de si usará mayúsculas o minúsculas para escribir los datos. Normalmente querrá que las cadenas usen mayúsculas y minúsculas de forma coherente, especialmente si se van a mostrar en la interfaz de usuario. En la tabla siguiente se describen tres métodos para cambiar las mayúsculas y minúsculas. Los dos primeros métodos proporcionan una sobrecarga que acepta una referencia cultural.  
   
-|Nombre del método|Uso|  
+|Nombre del método|Usar|  
 |-----------------|---------|  
 |<xref:System.String.ToUpper%2A?displayProperty=nameWithType>|Convierte todos los caracteres de una cadena a mayúsculas.|  
 |<xref:System.String.ToLower%2A?displayProperty=nameWithType>|Convierte todos los caracteres de una cadena a minúsculas.|  
 |<xref:System.Globalization.TextInfo.ToTitleCase%2A?displayProperty=nameWithType>|Convierte una cadena a mayúsculas de tipo título.|  
   
 > [!WARNING]
->  Tenga en cuenta que los métodos <xref:System.String.ToUpper%2A?displayProperty=nameWithType> y <xref:System.String.ToLower%2A?displayProperty=nameWithType> no deben usarse para convertir cadenas para compararlas ni para comprobar su igualdad. Para obtener más información, consulte el [comparar cadenas con mayúsculas y minúsculas mezcladas](#Comparing) sección.  
+>  Tenga en cuenta que los métodos <xref:System.String.ToUpper%2A?displayProperty=nameWithType> y <xref:System.String.ToLower%2A?displayProperty=nameWithType> no deben usarse para convertir cadenas para compararlas ni para comprobar su igualdad. Para más información, vea la sección [Comparar cadenas con mayúsculas y minúsculas mezcladas](#Comparing).  
   
 <a name="Comparing"></a>   
 ## <a name="comparing-strings-of-mixed-case"></a>Comparar cadenas con mayúsculas y minúsculas mezcladas  
@@ -55,7 +58,7 @@ Si escribe una aplicación que acepta la entrada de un usuario, nunca podrá est
  [!code-csharp[Strings.ChangingCase#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Strings.ChangingCase/cs/Example.cs#1)]
  [!code-vb[Strings.ChangingCase#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Strings.ChangingCase/vb/Example.vb#1)]  
   
- El ejemplo anterior tiene en cuenta la referencia cultural de forma predeterminada; aplica las convenciones de mayúsculas y minúsculas de la referencia cultural actual. Para realizar un cambio de mayúsculas de la referencia cultural o para aplicar las convenciones de mayúsculas y minúsculas de una referencia cultural determinada, use la <xref:System.String.ToUpper%28System.Globalization.CultureInfo%29?displayProperty=nameWithType> sobrecarga de método y proporcionar un valor de <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> o un <xref:System.Globalization.CultureInfo?displayProperty=nameWithType> objeto que representa la referencia cultural especificada a la *referencia cultural* parámetro. Para obtener un ejemplo que muestra cómo utilizar el <xref:System.String.ToUpper%2A> método para realizar un cambio de mayúsculas de la referencia cultural, consulte [realizar cambios de mayúsculas de la referencia cultural](../../../docs/standard/globalization-localization/performing-culture-insensitive-case-changes.md).  
+ El ejemplo anterior tiene en cuenta la referencia cultural de forma predeterminada; aplica las convenciones de mayúsculas y minúsculas de la referencia cultural actual. Para realizar un cambio de mayúsculas y minúsculas sin tener en cuenta la referencia cultural o para aplicar las convenciones de mayúsculas y minúsculas de una referencia cultural determinada, use la sobrecarga del método <xref:System.String.ToUpper%28System.Globalization.CultureInfo%29?displayProperty=nameWithType> y proporcione un valor <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> o un objeto <xref:System.Globalization.CultureInfo?displayProperty=nameWithType> que representa la referencia cultural especificada al parámetro *culture*. Para obtener un ejemplo que muestra cómo usar el método <xref:System.String.ToUpper%2A> para realizar un cambio de mayúsculas y minúsculas sin tener en cuenta la referencia cultural, consulte [Realizar cambios de mayúsculas y minúsculas que no tienen en cuenta las referencias culturales](../../../docs/standard/globalization-localization/performing-culture-insensitive-case-changes.md).  
   
 ## <a name="tolower"></a>ToLower  
  El método <xref:System.String.ToLower%2A?displayProperty=nameWithType> es similar al método anterior, pero en su lugar convierte todos los caracteres de una cadena a minúsculas. En el siguiente ejemplo, se convierte la cadena "Hello World!" en minúsculas.  
@@ -63,7 +66,7 @@ Si escribe una aplicación que acepta la entrada de un usuario, nunca podrá est
  [!code-csharp[Strings.ChangingCase#2](../../../samples/snippets/csharp/VS_Snippets_CLR/Strings.ChangingCase/cs/Example.cs#2)]
  [!code-vb[Strings.ChangingCase#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Strings.ChangingCase/vb/Example.vb#2)]  
   
- El ejemplo anterior tiene en cuenta la referencia cultural de forma predeterminada; aplica las convenciones de mayúsculas y minúsculas de la referencia cultural actual. Para realizar un cambio de mayúsculas de la referencia cultural o para aplicar las convenciones de mayúsculas y minúsculas de una referencia cultural determinada, use la <xref:System.String.ToLower%28System.Globalization.CultureInfo%29?displayProperty=nameWithType> sobrecarga de método y proporcionar un valor de <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> o un <xref:System.Globalization.CultureInfo?displayProperty=nameWithType> objeto que representa la referencia cultural especificada a la *referencia cultural* parámetro. Para obtener un ejemplo que muestra cómo utilizar el <xref:System.String.ToLower%28System.Globalization.CultureInfo%29> método para realizar un cambio de mayúsculas de la referencia cultural, consulte [realizar cambios de mayúsculas de la referencia cultural](../../../docs/standard/globalization-localization/performing-culture-insensitive-case-changes.md).  
+ El ejemplo anterior tiene en cuenta la referencia cultural de forma predeterminada; aplica las convenciones de mayúsculas y minúsculas de la referencia cultural actual. Para realizar un cambio de mayúsculas y minúsculas sin tener en cuenta la referencia cultural o para aplicar las convenciones de mayúsculas y minúsculas de una referencia cultural determinada, use la sobrecarga del método <xref:System.String.ToLower%28System.Globalization.CultureInfo%29?displayProperty=nameWithType> y proporcione un valor <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> o un objeto <xref:System.Globalization.CultureInfo?displayProperty=nameWithType> que representa la referencia cultural especificada al parámetro *culture*. Para obtener un ejemplo que muestra cómo usar el método <xref:System.String.ToLower%28System.Globalization.CultureInfo%29> para realizar un cambio de mayúsculas y minúsculas sin tener en cuenta la referencia cultural, consulte [Realizar cambios de mayúsculas y minúsculas que no tienen en cuenta las referencias culturales](../../../docs/standard/globalization-localization/performing-culture-insensitive-case-changes.md).  
   
 ## <a name="totitlecase"></a>ToTitleCase  
  El método <xref:System.Globalization.TextInfo.ToTitleCase%2A?displayProperty=nameWithType> convierte el primer carácter de cada palabra a mayúsculas y el resto de los caracteres a minúsculas. Sin embargo, se da por hecho que las palabras que están completamente en mayúsculas son siglas y no se convierten.  

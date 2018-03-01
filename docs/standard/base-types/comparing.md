@@ -24,20 +24,23 @@ helpviewer_keywords:
 - Equals method
 - StartsWith method
 ms.assetid: 977dc094-fe19-4955-98ec-d2294d04a4ba
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 34aa922155943d1b4d39de2e7c33ebc1228e1083
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: a9c2597ed2321c7494eaf44c3c43c2edc4df1952
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="comparing-strings-in-net"></a>Comparación de cadenas en .NET
 .NET proporciona varios métodos para comparar los valores de cadenas. En la tabla siguiente se enumeran y describen los métodos de comparación de valores.  
   
-|Nombre del método|Uso|  
+|Nombre del método|Usar|  
 |-----------------|---------|  
 |<xref:System.String.Compare%2A?displayProperty=nameWithType>|Compara los valores de dos cadenas. Devuelve un valor entero.|  
 |<xref:System.String.CompareOrdinal%2A?displayProperty=nameWithType>|Compara dos cadenas independientemente de la referencia cultural local. Devuelve un valor entero.|  
@@ -68,7 +71,7 @@ ms.lasthandoff: 11/21/2017
   
  Con este ejemplo se muestra `-1` en la consola.  
   
- En el ejemplo anterior se tienen en cuenta las referencias culturales de forma predeterminada. Para realizar una comparación de cadenas de la referencia cultural, use una sobrecarga de la <xref:System.String.Compare%2A?displayProperty=nameWithType> método que le permite especificar la referencia cultural suministrando un *referencia cultural* parámetro. Para obtener un ejemplo que muestra cómo utilizar el <xref:System.String.Compare%2A?displayProperty=nameWithType> método para realizar una comparación de la referencia cultural, consulte [realizar comparaciones de cadenas de la referencia cultural](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-comparisons.md).  
+ En el ejemplo anterior se tienen en cuenta las referencias culturales de forma predeterminada. Para realizar una comparación de cadenas que no tenga en cuenta las referencias culturales, utilice una sobrecarga del método <xref:System.String.Compare%2A?displayProperty=nameWithType> ya que permite especificar la referencia cultural que se debe utilizar mediante un parámetro de *referencia cultural*. Para obtener un ejemplo que muestra cómo utilizar el método <xref:System.String.Compare%2A?displayProperty=nameWithType> para realizar una comparación de este tipo, consulte [Realizar comparaciones de cadenas que no tienen en cuenta las referencias culturales](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-comparisons.md).  
   
 ## <a name="compareordinal"></a>CompareOrdinal  
  El método <xref:System.String.CompareOrdinal%2A?displayProperty=nameWithType> compara dos objetos de cadena sin tener en cuenta la referencia cultural local. Los valores devueltos de este método son idénticos a los que devolvía el método **Compare** en la tabla anterior.  
@@ -98,7 +101,7 @@ ms.lasthandoff: 11/21/2017
   
  Con este ejemplo se muestra `-1` en la consola.  
   
- Todas las sobrecargas de los <xref:System.String.CompareTo%2A?displayProperty=nameWithType> método realizar comparaciones dependientes de la referencia cultural y distingue mayúsculas de minúsculas de forma predeterminada. No se proporcionan sobrecargas de este método que permitan realizar una comparación que no tenga en cuenta las referencias culturales Para lograr claridad en el código, se recomienda que realice la **String.Compare** método en su lugar, especificando <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> para las operaciones de la cuenta de la referencia cultural o <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> para las operaciones de la referencia cultural. Para obtener ejemplos que muestran cómo utilizar el método **String.Compare** para realizar comparaciones de este tipo, vea [Realizar comparaciones de cadenas que no tienen en cuenta las referencias culturales](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-comparisons.md).  
+ Todas las sobrecargas del método <xref:System.String.CompareTo%2A?displayProperty=nameWithType> realizan comparaciones que tienen en cuenta las referencias culturales y las mayúsculas y minúsculas de manera predeterminada. No se proporcionan sobrecargas de este método que permitan realizar una comparación que no tenga en cuenta las referencias culturales Para lograr claridad en el código, se recomienda utilizar el método **String.Compare** en su lugar, especificando <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> para las operaciones que tienen en cuenta la referencia cultural o <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> para las operaciones que no la tienen en cuenta. Para obtener ejemplos que muestran cómo utilizar el método **String.Compare** para realizar comparaciones de este tipo, vea [Realizar comparaciones de cadenas que no tienen en cuenta las referencias culturales](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-comparisons.md).  
   
 ## <a name="equals"></a>Es igual a  
  El método **String.Equals** puede determinar con facilidad si dos cadenas son iguales. Este método distingue entre mayúsculas y minúsculas y devuelve un valor booleano **True** o **False** . Se puede usar desde una clase existente, como se muestra en el siguiente ejemplo. En el ejemplo siguiente se usa el método **Equals** para determinar si un objeto de cadena contiene la frase "Hello World".  

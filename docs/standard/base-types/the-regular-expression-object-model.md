@@ -41,34 +41,37 @@ helpviewer_keywords:
 - pattern-matching with regular expressions, classes
 - GroupCollection class
 ms.assetid: 49a21470-64ca-4b5a-a889-8e24e3c0af7e
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: e8784ed31de4a511f9eee361a4becee3d080298a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 4f1918788a571e9626554eaeec9fdd3f1686d4cc
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="the-regular-expression-object-model"></a>El modelo de objetos de expresión regular
-<a name="introduction"></a>Este tema describe el modelo de objetos utilizado para trabajar con expresiones regulares. NET. Contiene las siguientes secciones:  
+<a name="introduction"></a> En este tema se describe el modelo de objetos usado para trabajar con expresiones regulares de .NET. Contiene las siguientes secciones:  
   
--   [El motor de expresiones regulares](#Engine)  
+-   [Motor de expresiones regulares](#Engine)  
   
 -   [Objetos MatchCollection y Match](#Match_and_MCollection)  
   
--   [La colección de grupos](#GroupCollection)  
+-   [Colección de grupos](#GroupCollection)  
   
--   [El grupo capturado](#the_captured_group)  
+-   [Grupo capturado](#the_captured_group)  
   
--   [La colección de capturas](#CaptureCollection)  
+-   [Colección de capturas](#CaptureCollection)  
   
--   [La captura Individual](#the_individual_capture)  
+-   [Captura individual](#the_individual_capture)  
   
 <a name="Engine"></a>   
 ## <a name="the-regular-expression-engine"></a>El motor de expresiones regulares  
- El motor de expresiones regulares en .NET está representado por la <xref:System.Text.RegularExpressions.Regex> clase. El motor de expresiones regulares es responsable de analizar y compilar una expresión regular y de realizar operaciones en las que coinciden el patrón de expresión regular con una cadena de entrada. El motor es el componente central en el modelo de objetos de expresiones regulares. NET.  
+ La clase <xref:System.Text.RegularExpressions.Regex> representa el motor de expresiones regulares de .NET. El motor de expresiones regulares es responsable de analizar y compilar una expresión regular y de realizar operaciones en las que coinciden el patrón de expresión regular con una cadena de entrada. El motor es el componente central del modelo de objetos de expresión regular de .NET.  
   
  Puede utilizar el motor de expresiones regulares en una de estas dos formas:  
   
@@ -98,7 +101,7 @@ ms.lasthandoff: 11/21/2017
   
  El patrón de la expresión regular `^\d{3}-\d{2}-\d{4}$` se interpreta como se muestra en la tabla siguiente.  
   
-|Modelo|Descripción|  
+|Modelo|Description|  
 |-------------|-----------------|  
 |`^`|Buscar coincidencias con el principio de la cadena de entrada.|  
 |`\d{3}`|Coincide con tres dígitos decimales.|  
@@ -116,7 +119,7 @@ ms.lasthandoff: 11/21/2017
   
  El patrón de la expresión regular `\b(\w+)\W+(\1)\b` se interpreta como se muestra en la tabla siguiente.  
   
-|Modelo|Descripción|  
+|Modelo|Description|  
 |-------------|-----------------|  
 |`\b`|Comienza la búsqueda de coincidencias en un límite de palabras.|  
 |`(\w+)`|Buscar coincidencias con uno o más caracteres alfabéticos. Este es el primer grupo de captura.|  
@@ -138,7 +141,7 @@ ms.lasthandoff: 11/21/2017
   
  El patrón de la expresión regular `\b\d+\.\d{2}\b` se interpreta como se muestra en la tabla siguiente.  
   
-|Modelo|Descripción|  
+|Modelo|Description|  
 |-------------|-----------------|  
 |`\b`|Iniciar la búsqueda de coincidencias en un límite de palabras.|  
 |`\d+`|Buscar coincidencias con uno o más dígitos decimales.|  
@@ -161,7 +164,7 @@ ms.lasthandoff: 11/21/2017
   
  El patrón de la expresión regular `\b\d{1,2}\.\s` se interpreta como se muestra en la tabla siguiente.  
   
-|Modelo|Descripción|  
+|Modelo|Description|  
 |-------------|-----------------|  
 |`\b`|Iniciar la búsqueda de coincidencias en un límite de palabras.|  
 |`\d{1,2}`|Buscar coincidencias con uno o dos dígitos decimales.|  
@@ -176,7 +179,7 @@ ms.lasthandoff: 11/21/2017
 ### <a name="the-match-collection"></a>La colección de coincidencias  
  El método <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType> devuelve un objeto <xref:System.Text.RegularExpressions.MatchCollection> que contiene objetos <xref:System.Text.RegularExpressions.Match> que representan todas las coincidencias que encontró el motor de expresiones regulares, en el orden en el que aparecen en la cadena de entrada. Si no hay ninguna coincidencia, el método devuelve un objeto <xref:System.Text.RegularExpressions.MatchCollection> sin miembros. La propiedad <xref:System.Text.RegularExpressions.MatchCollection.Item%2A?displayProperty=nameWithType> proporciona acceso a miembros individuales de la colección por índice, desde cero hasta uno menos que el valor de la propiedad <xref:System.Text.RegularExpressions.MatchCollection.Count%2A?displayProperty=nameWithType>. <xref:System.Text.RegularExpressions.MatchCollection.Item%2A> es el indizador de la colección (en C#) y la propiedad predeterminada (en Visual Basic).  
   
- De forma predeterminada, la llamada al método <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType> utiliza la evaluación diferida para rellenar el objeto <xref:System.Text.RegularExpressions.MatchCollection>. El acceso a propiedades que requieren una colección totalmente rellenada, como las propiedades <xref:System.Text.RegularExpressions.MatchCollection.Count%2A?displayProperty=nameWithType> y <xref:System.Text.RegularExpressions.MatchCollection.Item%2A?displayProperty=nameWithType>, puede implicar una reducción del rendimiento. En consecuencia, recomendamos tener acceso a la colección utilizando el objeto <xref:System.Collections.IEnumerator> devuelto por el método <xref:System.Text.RegularExpressions.MatchCollection.GetEnumerator%2A?displayProperty=nameWithType>. Los lenguajes individuales proporcionan construcciones, como `For``Each` en Visual Basic y `foreach` en C#, que ajuste a la colección <xref:System.Collections.IEnumerator> interfaz.  
+ De forma predeterminada, la llamada al método <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType> utiliza la evaluación diferida para rellenar el objeto <xref:System.Text.RegularExpressions.MatchCollection>. El acceso a propiedades que requieren una colección totalmente rellenada, como las propiedades <xref:System.Text.RegularExpressions.MatchCollection.Count%2A?displayProperty=nameWithType> y <xref:System.Text.RegularExpressions.MatchCollection.Item%2A?displayProperty=nameWithType>, puede implicar una reducción del rendimiento. En consecuencia, recomendamos tener acceso a la colección utilizando el objeto <xref:System.Collections.IEnumerator> devuelto por el método <xref:System.Text.RegularExpressions.MatchCollection.GetEnumerator%2A?displayProperty=nameWithType>. Los lenguajes individuales proporcionan construcciones, como `For``Each` en Visual Basic y `foreach` en C#, que ajustan la interfaz <xref:System.Collections.IEnumerator> de la colección.  
   
  En el siguiente ejemplo se utiliza el método <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%29?displayProperty=nameWithType> para rellenar un objeto <xref:System.Text.RegularExpressions.MatchCollection> con todas las coincidencias encontradas en una cadena de entrada. El ejemplo enumera la colección, copia las coincidencias en una matriz de cadena y registra las posiciones de caracteres en una matriz entera.  
   
@@ -224,7 +227,7 @@ ms.lasthandoff: 11/21/2017
   
  El patrón de expresión regular `\b\d+(,\d{3})*\.\d{2}\b` se define como se muestra en la tabla siguiente.  
   
-|Modelo|Descripción|  
+|Modelo|Description|  
 |-------------|-----------------|  
 |`\b`|Iniciar la búsqueda de coincidencias en un límite de palabras.|  
 |`\d+`|Buscar coincidencias con uno o más dígitos decimales.|  
@@ -255,7 +258,7 @@ ms.lasthandoff: 11/21/2017
   
  El patrón de expresión regular `\b(\w+)\s(\d{1,2}),\s(\d{4})\b` se define como se muestra en la tabla siguiente.  
   
-|Modelo|Descripción|  
+|Modelo|Description|  
 |-------------|-----------------|  
 |`\b`|Iniciar la búsqueda de coincidencias en un límite de palabras.|  
 |`(\w+)`|Buscar coincidencias con uno o más caracteres alfabéticos. Este es el primer grupo de captura.|  
@@ -270,7 +273,7 @@ ms.lasthandoff: 11/21/2017
   
 <a name="the_captured_group"></a>   
 ## <a name="the-captured-group"></a>El grupo capturado  
- La clase <xref:System.Text.RegularExpressions.Group> representa el resultado de un único grupo de captura. La propiedad <xref:System.Text.RegularExpressions.GroupCollection.Item%2A> del objeto <xref:System.Text.RegularExpressions.GroupCollection> devuelto por la propiedad <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> devuelve objetos de grupo que representan grupos de captura definidos en una expresión regular. La propiedad <xref:System.Text.RegularExpressions.GroupCollection.Item%2A> es el indizador (en C#) y la propiedad predeterminada (en Visual Basic) de la clase <xref:System.Text.RegularExpressions.Group>. También puede recuperar miembros individuales iterando la colección mediante la `foreach` o `For``Each` construir. Para obtener un ejemplo, vea la sección anterior.  
+ La clase <xref:System.Text.RegularExpressions.Group> representa el resultado de un único grupo de captura. La propiedad <xref:System.Text.RegularExpressions.GroupCollection.Item%2A> del objeto <xref:System.Text.RegularExpressions.GroupCollection> devuelto por la propiedad <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> devuelve objetos de grupo que representan grupos de captura definidos en una expresión regular. La propiedad <xref:System.Text.RegularExpressions.GroupCollection.Item%2A> es el indizador (en C#) y la propiedad predeterminada (en Visual Basic) de la clase <xref:System.Text.RegularExpressions.Group>. También puede recuperar miembros individuales mediante la iteración de la colección con la construcción `foreach` o `For``Each`. Para obtener un ejemplo, vea la sección anterior.  
   
  En el siguiente ejemplo se utilizan construcciones de agrupación anidadas para capturar subcadenas en grupos. El patrón de expresión regular `(a(b))c` coincide con la cadena "abc". Asigna la subcadena "ab" al primer grupo de captura y la subcadena "b" al segundo grupo de captura.  
   
@@ -284,7 +287,7 @@ ms.lasthandoff: 11/21/2017
   
  El patrón de expresión regular `^(?<name>\w+):(?<value>\w+)` se define como se muestra en la tabla siguiente.  
   
-|Modelo|Descripción|  
+|Modelo|Description|  
 |-------------|-----------------|  
 |`^`|Iniciar la búsqueda de coincidencias con el principio de la cadena de entrada.|  
 |`(?<name>\w+)`|Buscar coincidencias con uno o más caracteres alfabéticos. El nombre de este grupo de captura es `name`.|  
@@ -293,7 +296,7 @@ ms.lasthandoff: 11/21/2017
   
  Las propiedades de la clase <xref:System.Text.RegularExpressions.Group> proporcionan información sobre el grupo capturado: la propiedad `Group.Value` contiene la subcadena capturada, la propiedad `Group.Index` indica la posición inicial del grupo capturado en el texto de entrada, la propiedad `Group.Length` contiene la longitud del texto capturado y la propiedad `Group.Success` indica si una subcadena coincidió con el patrón definido por el grupo de captura.  
   
- Aplicar cuantificadores a un grupo (para obtener más información, consulte [cuantificadores](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)) modifica la relación de una captura por grupo de captura de dos maneras:  
+ Al aplicar cuantificadores a un grupo (para obtener más información, consulte [Cuantificadores](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)), se modifica la relación de una captura por grupo de captura de dos maneras:  
   
 -   Si el cuantificador `*` o `*?` (qué especifica cero o más coincidencias) se aplica a un grupo, es posible que un grupo de captura no tenga una coincidencia en la cadena de entrada. Cuando no haya texto capturado, las propiedades del objeto <xref:System.Text.RegularExpressions.Group> se establecen como se muestran en la siguiente tabla.  
   
@@ -348,7 +351,7 @@ ms.lasthandoff: 11/21/2017
   
  La expresión regular se define como se muestra en la tabla siguiente.  
   
-|Modelo|Descripción|  
+|Modelo|Description|  
 |-------------|-----------------|  
 |`\w+`|Buscar coincidencias con uno o más caracteres alfabéticos.|  
 |`(\s\w+)*`|Coincide con cero o más apariciones de un carácter de espacio en blanco seguido de uno o varios caracteres que se usan para formar palabras. Este patrón busca coincidencias con nombres de ciudades de múltiples palabras. Éste es el tercer grupo de captura.|  

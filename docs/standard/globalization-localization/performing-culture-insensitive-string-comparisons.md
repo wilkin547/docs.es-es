@@ -19,15 +19,18 @@ helpviewer_keywords:
 - culture-insensitive string operations, comparisons
 - culture parameter
 ms.assetid: abae50ef-32f7-4a50-a540-fd256fd1aed0
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 980b4ac515deaaedb1ab7e240e8f110a5fd0d51c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: fa689a685a58868ccd34b8bcbc4a779b9f826473
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="performing-culture-insensitive-string-comparisons"></a>Realizar comparaciones de cadenas que no tienen en cuenta las referencias culturales
 De manera predeterminada, el método <xref:System.String.Compare%2A?displayProperty=nameWithType> realiza comparaciones que tienen en cuenta las referencias culturales y las mayúsculas y minúsculas. Este método también incluye varias sobrecargas que proporcionan un parámetro `culture` que permite especificar la referencia cultural que se va a utilizar y un parámetro `comparisonType` que permite especificar las reglas de comparación que se van a usar. Al llamar a estos métodos en lugar de a la sobrecarga predeterminada, se quita cualquier ambigüedad sobre las reglas que se utilizan en una determinada llamada al método y se establece claramente si una determinada comparación tiene en cuenta o no la referencia cultural.  
@@ -35,7 +38,7 @@ De manera predeterminada, el método <xref:System.String.Compare%2A?displayPrope
 > [!NOTE]
 >  Las dos sobrecargas del método <xref:System.String.CompareTo%2A?displayProperty=nameWithType> realizan comparaciones que tienen en cuenta la referencia cultural y que distinguen mayúsculas de minúsculas, así que no puede usar este método para realizar comparaciones que no tengan en cuenta la referencia cultural. Para lograr claridad en el código, recomendamos utilizar el método <xref:System.String.Compare%2A?displayProperty=nameWithType> en su lugar.  
   
- En operaciones que tienen en cuenta las referencias culturales, especifique el valor de enumeración <xref:System.StringComparison.CurrentCulture?displayProperty=nameWithType> o <xref:System.StringComparison.CurrentCultureIgnoreCase?displayProperty=nameWithType> como parámetro `comparisonType`. Si desea realizar una comparación de la referencia cultural utilizando una referencia cultural designada distinta de la referencia cultural actual, especifique la <xref:System.Globalization.CultureInfo> objeto que representa esa referencia cultural como el `culture` parámetro.  
+ En operaciones que tienen en cuenta las referencias culturales, especifique el valor de enumeración <xref:System.StringComparison.CurrentCulture?displayProperty=nameWithType> o <xref:System.StringComparison.CurrentCultureIgnoreCase?displayProperty=nameWithType> como parámetro `comparisonType`. Si desea realizar una comparación que tenga en cuenta la referencia cultural utilizando una referencia cultural designada distinta de la referencia cultural actual, especifique el objeto <xref:System.Globalization.CultureInfo> que representa esa referencia cultural como parámetro `culture`.  
   
  Las comparaciones de cadenas que no tienen en cuenta la referencia cultural admitidas por el método <xref:System.String.Compare%2A?displayProperty=nameWithType> pueden ser lingüísticas (se basan en las convenciones de ordenación de la referencia cultural de todos los idiomas) o no lingüísticas (se basan en el valor ordinal de los caracteres de la cadena). La mayoría de las comparaciones de cadenas que no tienen en cuenta la referencia cultural son no lingüísticas. En estas comparaciones, especifique el valor de enumeración <xref:System.StringComparison.Ordinal?displayProperty=nameWithType> u <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType> como parámetro `comparisonType`. Por ejemplo, si una decisión de seguridad (como una comparación de nombre de usuario o contraseña) está basada en el resultado de una comparación de cadenas, la operación no debe tener en cuenta la referencia cultural y debe ser no lingüística para garantizar que el resultado no se ve afectado por las convenciones de una determinada referencia cultural o idioma.  
   

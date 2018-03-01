@@ -18,15 +18,18 @@ helpviewer_keywords:
 - inline option constructs
 - options parameter
 ms.assetid: c82dc689-7e82-4767-a18d-cd24ce5f05e9
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 7bc068cc248e1ca8e1d3c64eaa4132682721e035
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: a4a1513840d17f2e7b02acf821b5032eaac6e6fc
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="regular-expression-options"></a>Opciones de expresiones regulares
 <a name="Top"></a> De forma predeterminada, al comparar una cadena de entrada con los caracteres literales de un patrón de expresión regular, se distinguen mayúsculas de minúsculas, los espacios en blanco del patrón de expresión regular se interpretan como caracteres de espacio en blanco literales, y los grupos de captura de la expresión regular se denominan tanto implícita como explícitamente. Estos y otros aspectos del comportamiento predeterminado de la expresión regular se pueden modificar mediante la especificación de las opciones de la expresión regular. Estas opciones —que aparecen enumeradas en la tabla siguiente— se pueden insertar como parte del patrón de expresión regular, o se pueden suministrar a un constructor de clases <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> o a un método estático de coincidencia de patrones como valor de enumeración de <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType>.  
@@ -112,7 +115,7 @@ ms.lasthandoff: 10/18/2017
  [!code-csharp[Conceptual.Regex.Language.Options#20](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/determine1.cs#20)]
  [!code-vb[Conceptual.Regex.Language.Options#20](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/determine1.vb#20)]  
   
- Las siguientes secciones enumeran las opciones admitidas por la expresión regular en. NET.  
+ En las secciones siguientes se enumeran las opciones admitidas en una expresión regular de .NET.  
   
 <a name="Default"></a>   
 ## <a name="default-options"></a>Opciones predeterminadas  
@@ -170,7 +173,7 @@ ms.lasthandoff: 10/18/2017
   
  El patrón de expresión regular `^(\w+)\s(\d+)\r*$` se define como se muestra en la tabla siguiente.  
   
-|Modelo|Descripción|  
+|Modelo|Description|  
 |-------------|-----------------|  
 |`^`|Comienza al principio de la línea.|  
 |`(\w+)`|Buscar coincidencias con uno o más caracteres alfabéticos. Este es el primer grupo de captura.|  
@@ -214,7 +217,7 @@ ms.lasthandoff: 10/18/2017
   
  Su única finalidad es extraer de un documento las oraciones que finalizan con un punto, signo de exclamación o signo de interrogación, y solo la oración resultante (representada mediante el objeto <xref:System.Text.RegularExpressions.Match>) es de interés. En cambio, las palabras individuales de la colección no son de interés.  
   
- Los grupos de captura que no se usan posteriormente pueden ser costosos, ya que el motor de expresiones regulares debe rellenar los objetos de colección <xref:System.Text.RegularExpressions.GroupCollection> y <xref:System.Text.RegularExpressions.CaptureCollection>. Como alternativa, puede usar el <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture?displayProperty=nameWithType> opción o `n` opción insertada para especificar que las únicas capturas válidas son explícitamente con el nombre o con el número de grupos que se designan mediante el `(?<` *nombre* `>` *subexpresión* `)` construir.  
+ Los grupos de captura que no se usan posteriormente pueden ser costosos, ya que el motor de expresiones regulares debe rellenar los objetos de colección <xref:System.Text.RegularExpressions.GroupCollection> y <xref:System.Text.RegularExpressions.CaptureCollection>. Como alternativa, se puede usar la opción <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture?displayProperty=nameWithType> o la opción insertada `n` para especificar que las únicas capturas válidas son grupos con nombre o número explícitos que se designan mediante el constructor `(?<`*nombre*`>` *subexpresión*`)`.  
   
  En el ejemplo siguiente se muestra información sobre las coincidencias devueltas por el patrón de expresión regular `\b\(?((\w+),?\s?)+[\.!?]\)?` cuando se llama al método <xref:System.Text.RegularExpressions.Regex.Match%2A> con y sin la opción <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture?displayProperty=nameWithType>. Tal como muestra el resultado de la primera llamada a método, el motor de expresiones regulares rellena totalmente los objetos de colección <xref:System.Text.RegularExpressions.GroupCollection> y <xref:System.Text.RegularExpressions.CaptureCollection> con información sobre las subcadenas capturadas. Dado que el segundo método se llama con `options` establecido en <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture?displayProperty=nameWithType>, no se captura información en grupos.  
   
@@ -223,7 +226,7 @@ ms.lasthandoff: 10/18/2017
   
  El patrón de expresión regular `\b\(?((?>\w+),?\s?)+[\.!?]\)?` se define como se muestra en la siguiente tabla.  
   
-|Modelo|Descripción|  
+|Modelo|Description|  
 |-------------|-----------------|  
 |`\b`|Empieza en un límite de palabras.|  
 |`\(?`|Busca una coincidencia con cero o con una aparición de los paréntesis de apertura ("(").|  
@@ -282,11 +285,11 @@ ms.lasthandoff: 10/18/2017
   
 -   Un espacio en blanco dentro de una clase de caracteres se interpreta siempre de forma literal. Por ejemplo, el patrón de expresión regular `[ .,;:]` coincide con cualquier carácter de espacio en blanco, punto, coma, punto y coma o dos puntos.  
   
--   No se admiten espacios en blanco dentro de un cuantificador entre corchetes, como `{`  *n*  `}`, `{`  *n*  `,}`y `{`  *n*  `,` *m*`}`. Por ejemplo, el patrón de expresión regular `\d{1. 3}` no encontrará ninguna secuencia de entre uno y tres guarismos porque contiene un carácter de espacio en blanco.  
+-   Los cuantificadores entre corchetes, como `{`*n*`}`, `{`*n*`,}` y `{`*n*`,`*m*`}`, no admiten espacios en blanco. Por ejemplo, el patrón de expresión regular `\d{1. 3}` no encontrará ninguna secuencia de entre uno y tres guarismos porque contiene un carácter de espacio en blanco.  
   
 -   No se admiten espacios en blanco en una secuencia de caracteres que presenta un elemento de lenguaje. Por ejemplo:  
   
-    -   El elemento de lenguaje `(?:`*subexpresión*`)` representa un grupo sin captura, y la parte `(?:` del elemento no puede tener espacios insertados. El patrón de `(? :` *subexpresión* `)` produce una <xref:System.ArgumentException> en tiempo de ejecución porque el motor de expresiones regulares no puede analizar el patrón y el `( ?:` *subexpresión*  `)` no coincide con *subexpresión*.  
+    -   El elemento de lenguaje `(?:`*subexpresión*`)` representa un grupo sin captura, y la parte `(?:` del elemento no puede tener espacios insertados. El modelo `(? :`*subexpresión*`)` produce una clase <xref:System.ArgumentException> en tiempo de ejecución porque el motor de expresiones regulares no puede analizar el modelo, y el modelo `( ?:`*subexpresión*`)` no coincide con *subexpresión*.  
   
     -   El elemento de lenguaje `\p{`*nombre*`}`, que representa una categoría Unicode o bloque con nombre, no puede incluir espacios insertados en la parte `\p{` del elemento. Si se incluye un espacio en blanco, el elemento produce una <xref:System.ArgumentException> en tiempo de ejecución.  
   
@@ -296,7 +299,7 @@ ms.lasthandoff: 10/18/2017
   
  `\b \(? ( (?>\w+) ,?\s? )+  [\.!?] \)? # Matches an entire sentence.`  
   
- Este patrón es similar al patrón definido en el [solo capturas explícitas](#Explicit) sección, salvo que usa el <xref:System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace?displayProperty=nameWithType> opción para ignorar el espacio en blanco del modelo.  
+ El modelo es similar al modelo definido en la sección [Solo capturas explícitas<xref:System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace?displayProperty=nameWithType>, a excepción de que utiliza la opción ](#Explicit) para ignorar el espacio en blanco del modelo.  
   
  [!code-csharp[Conceptual.Regex.Language.Options#12](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/whitespace1.cs#12)]
  [!code-vb[Conceptual.Regex.Language.Options#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/whitespace1.vb#12)]  
@@ -327,7 +330,7 @@ ms.lasthandoff: 10/18/2017
   
  El patrón de expresión regular se define como se muestra en la tabla siguiente.  
   
-|Modelo|Descripción|  
+|Modelo|Description|  
 |-------------|-----------------|  
 |`(?<=\d{1,2}\s)`|El inicio de la coincidencia debe estar precedido por uno o dos dígitos decimales seguidos de un espacio.|  
 |`\w+`|Buscar coincidencias con uno o más caracteres alfabéticos.|  
@@ -348,7 +351,7 @@ ms.lasthandoff: 10/18/2017
   
  El comportamiento de las expresiones regulares canónicas y ECMAScript se diferencia en tres aspectos: sintaxis de la clase de caracteres, grupos de captura con autorreferencia e interpretación de referencia inversa frente a octal.  
   
--   Sintaxis de la clase de caracteres. Debido a que las expresiones regulares canónicas admiten Unicode y ECMAScript no, las clases de caracteres de ECMAScript tienen una sintaxis más limitada y algunos elementos de lenguaje de clases de caracteres tienen un significado diferente. Por ejemplo, ECMAScript no admite elementos de lenguaje como la categoría Unicode ni elementos como `\p` y `\P`. De igual modo, el elemento `\w`, que coincide con un carácter literal, es equivalente a la clase de caracteres `[a-zA-Z_0-9]` al usar ECMAScript y a `[\p{Ll}\p{Lu}\p{Lt}\p{Lo}\p{Nd}\p{Pc}\p{Lm}]` al usar comportamiento canónico. Para más información, consulte [Clases de caracteres](../../../docs/standard/base-types/character-classes-in-regular-expressions.md).  
+-   Sintaxis de la clase de caracteres. Debido a que las expresiones regulares canónicas admiten Unicode y ECMAScript no, las clases de caracteres de ECMAScript tienen una sintaxis más limitada y algunos elementos de lenguaje de clases de caracteres tienen un significado diferente. Por ejemplo, ECMAScript no admite elementos de lenguaje como la categoría Unicode ni elementos como `\p` y `\P`. De igual modo, el elemento `\w`, que coincide con un carácter literal, es equivalente a la clase de caracteres `[a-zA-Z_0-9]` al usar ECMAScript y a `[\p{Ll}\p{Lu}\p{Lt}\p{Lo}\p{Nd}\p{Pc}\p{Lm}]` al usar comportamiento canónico. Para obtener más información, consulta [Character Classes](../../../docs/standard/base-types/character-classes-in-regular-expressions.md).  
   
      En el ejemplo siguiente se muestra la diferencia entre la búsqueda de coincidencias canónica y la de ECMAScript. Se define una expresión regular, `\b(\w+\s*)+`, que busca coincidencias con palabras seguidas de caracteres de espacio en blanco. La entrada consta de dos cadenas: una que usa el conjunto de caracteres latinos y otra que usa el conjunto de caracteres del cirílico. Tal como muestra el resultado, la llamada al método <xref:System.Text.RegularExpressions.Regex.IsMatch%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> que usa la búsqueda de coincidencias de ECMAScript no encuentra coincidencias con las palabras del cirílico, mientras que la llamada al método que usa la búsqueda de coincidencias canónica sí encuentra coincidencias con estas palabras.  
   
@@ -362,7 +365,7 @@ ms.lasthandoff: 10/18/2017
   
      La expresión regular se define como se muestra en la tabla siguiente.  
   
-    |Modelo|Descripción|  
+    |Modelo|Description|  
     |-------------|-----------------|  
     |(a+)|Busca una coincidencia con la letra “a” una o más veces. Este es el segundo grupo de captura.|  
     |(\1)|Busca una coincidencia con la subcadena capturada por el primer grupo de captura. Éste es el tercer grupo de captura.|  

@@ -1,5 +1,5 @@
 ---
-title: "Guía de inicio rápido; números en C#; guía de C#"
+title: "Tutorial sobre números en C#: guías de inicio rápido para entornos locales de C#"
 description: "Obtenga información sobre C# mediante la exploración de tipos numéricos, sus propiedades y métodos."
 author: billwagner
 ms.author: wiwagn
@@ -9,13 +9,13 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 9a7f061de23c632560f40ac5eb46defd4537da16
-ms.sourcegitcommit: 8bde7a3432f30fc771079744955c75c58c4eb393
+ms.openlocfilehash: 9a8b28d840d3c8ef63611e9f584e5984e1dcb1a3
+ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/20/2018
+ms.lasthandoff: 02/01/2018
 ---
-# <a name="numbers-in-c-quick-start"></a>Guía de inicio rápido sobre números en C# #
+# <a name="numbers-in-c-quickstart"></a>Guía de inicio rápido sobre números en C#
 
 En esta guía de inicio rápido se explican los tipos numéricos en C# de manera interactiva. Escribirá pequeñas cantidades de código y luego compilará y ejecutará ese código. Esta guía de inicio rápido contiene una serie de lecciones que ofrecen información detallada sobre los números y las operaciones matemáticas en C#. En ellas se enseñan los aspectos básicos del lenguaje C#.
 
@@ -319,7 +319,7 @@ Puede comprobar la respuesta si [consulta el ejemplo de código terminado en Git
 
 Si lo desea, pruebe con otras fórmulas. 
 
-Ha completado el inicio rápido "Números en C#". Puede continuar con la guía de inicio rápido [Bifurcaciones y bucles](branches-and-loops-local.md) en su propio entorno de desarrollo.
+Ha completado el inicio rápido "Números en C#". Puede continuar con la guía de inicio rápido [Ramas y bucles](branches-and-loops-local.md) en su propio entorno de desarrollo.
 
 Puede obtener más información sobre los números en C# en los temas siguientes:
 

@@ -17,15 +17,18 @@ helpviewer_keywords:
 - number formatting [.NET Framework]
 - numbers [.NET Framework], format strings
 ms.assetid: 0b2c2cb5-c580-4891-8d81-cb632f5ec384
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 6266807a01e8119ae1410a1ba09cab55c788b4d8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 7ea854f69e59c614d03f10ff546bd3181f5b51ff
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-pad-a-number-with-leading-zeros"></a>Cómo: Rellenar un número con ceros iniciales
 Si quiere agregar ceros a la izquierda de un entero, puede hacerlo mediante la [cadena de formato numérico estándar](../../../docs/standard/base-types/standard-numeric-format-strings.md) "D" con un especificador de precisión. Para agregar ceros a la izquierda tanto de enteros como de números de punto flotante, use una [cadena de formato numérico personalizada](../../../docs/standard/base-types/custom-numeric-format-strings.md). En este tema se explica cómo usar ambos métodos para rellenar un número con ceros a la izquierda.  
@@ -36,11 +39,11 @@ Si quiere agregar ceros a la izquierda de un entero, puede hacerlo mediante la [
   
 2.  Determine si desea mostrar el entero como valor decimal o hexadecimal.  
   
-    -   Para mostrar el entero como un valor decimal, llame a su `ToString(String)` método y pase la cadena "d.*n*" como el valor de la `format` parámetro, donde  *n*  representa la longitud mínima de la cadena.  
+    -   Para mostrar el entero como valor decimal, llame a su método `ToString(String)` y pase la cadena "D*n*" como valor del parámetro `format`, donde *n* representa la longitud mínima de la cadena.  
   
-    -   Para mostrar el entero como un valor hexadecimal, llame a su `ToString(String)` método y pase la cadena "X*n*" como el valor de la `format` parámetro, donde  *n*  representa la longitud mínima de la cadena.  
+    -   Para mostrar el entero como valor hexadecimal, llame a su método `ToString(String)` y pase la cadena "X*n*" como valor del parámetro `format`, donde *n* representa la longitud mínima de la cadena.  
   
-     También puede utilizar la cadena de formato en un método, como <xref:System.String.Format%2A> o <xref:System.Console.WriteLine%2A>, que utiliza [formatos compuestos](../../../docs/standard/base-types/composite-formatting.md).  
+     También puede usar la cadena de formato en un método como, por ejemplo, <xref:System.String.Format%2A> o <xref:System.Console.WriteLine%2A>, que usan [formato compuesto](../../../docs/standard/base-types/composite-formatting.md).  
   
  En el ejemplo siguiente se aplica formato a varios valores enteros con ceros a la izquierda de modo que la longitud mínima total del número con formato sea de ocho caracteres.  
   
@@ -57,7 +60,7 @@ Si quiere agregar ceros a la izquierda de un entero, puede hacerlo mediante la [
   
 4.  Agregue el número de ceros a la izquierda que desea incluir en la cadena con formato a la longitud de la cadena numérica sin rellenar. Esto define la longitud total de la cadena rellenada.  
   
-5.  Llamar al valor de entero `ToString(String)` método y pase la cadena "d.*n*" para cadenas decimales y "X*n*" para cadenas hexadecimales, donde  *n*  representa la longitud total de la cadena rellenada. También puede utilizar el "d.*n*" o "X*n*" cadena de formato de un método que admita formato compuesto.  
+5.  Llame al método `ToString(String)` del valor entero y pase la cadena "D*n*" para cadenas decimales y "X*n*" para cadenas hexadecimales, donde *n* representa la longitud total de la cadena rellenada. También puede usar la cadena de formato "D*n*" o "X*n*" en un método que admita formato compuesto.  
   
  En el ejemplo siguiente se rellena un valor entero con cinco ceros a la izquierda.  
   

@@ -22,21 +22,24 @@ helpviewer_keywords:
 - data stores, reading and writing to files
 - stores, reading and writing to files
 ms.assetid: f977ebdc-1b55-475a-bc3d-3376470b08ae
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 8d733efc3d70070dd12f55c651033e97d1792c38
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: cfb1500150d2dfb500a698713c0de6b8e5518010
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-read-and-write-to-files-in-isolated-storage"></a>Cómo: Leer y escribir en archivos en almacenamiento aislado
-Para leer o escribir en un archivo en un almacén aislado, use un <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream> objeto con un lector de secuencias (<xref:System.IO.StreamReader> objeto) o el escritor de secuencias (<xref:System.IO.StreamWriter> objeto).  
+Para leer o escribir en un archivo de un almacén aislado, use un objeto <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream> con un lector de secuencias (objeto <xref:System.IO.StreamReader>) o el escritor de secuencias (objeto <xref:System.IO.StreamWriter>).  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo de código siguiente se obtiene un almacén aislado y comprueba si existe un archivo denominado en el almacén. Si no existe, crea el archivo y escribe "Hello Isolated Storage" en el archivo. Si TestStore.txt ya existe, el código de ejemplo se lee desde el archivo.  
+ En el ejemplo de código siguiente se obtiene un almacén aislado y se comprueba si existe un archivo denominado TestStore.txt en el almacén. Si no existe, crea el archivo y escribe "Hello Isolated Storage" en el archivo. Si TestStore.txt ya existe, el código de ejemplo se lee desde el archivo.  
   
  [!code-csharp[Conceptual.IsolatedStorage#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.isolatedstorage/cs/source5.cs#5)]
  [!code-vb[Conceptual.IsolatedStorage#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.isolatedstorage/vb/source5.vb#5)]  

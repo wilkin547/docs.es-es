@@ -1,21 +1,19 @@
 ---
 title: "Introducción a C# y Visual Studio Code: Guía de C#"
 description: "Obtenga información sobre cómo crear y depurar su primera aplicación .NET Core en C# mediante Visual Studio Code."
-keywords: "C#, Introducción, Adquisición, Instalación, Visual Studio Code, Multiplataforma"
 author: kendrahavens
 ms.author: mairaw
 ms.date: 09/27/2017
 ms.topic: article
 ms.prod: .net
 ms.technology: devlang-csharp
-ms.devlang: csharp
-ms.assetid: 76c23597-4cf9-467e-8a47-0c3703ce37e7
-ms.workload: dotnetcore
-ms.openlocfilehash: 95052da1688ec1026f11ff679dda6aad50a340fa
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 0c37040220bb7f38cdd75176bb9ed2a2199b7096
+ms.sourcegitcommit: 099aa20d9b6450d1b7452d782a55771a6ad8ff35
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/05/2018
 ---
 # <a name="get-started-with-c-and-visual-studio-code"></a>Introducción a C# y Visual Studio Code
 
@@ -25,7 +23,7 @@ ms.lasthandoff: 12/23/2017
 
 1. Instale [Visual Studio Code](https://code.visualstudio.com/).
 2. Instale el [SDK de .NET Core](https://www.microsoft.com/net/download/core).
-3. Instale la [extensión de C#](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp) desde Visual Studio Code Marketplace.
+3. Instale la [extensión de C#](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp) para Visual Studio Code. Para más información sobre cómo instalar extensiones en Visual Studio Code, vea el [Marketplace de extensiones de VS Code](https://code.visualstudio.com/docs/editor/extension-gallery).
 
 ## <a name="hello-world"></a>Hello World
 

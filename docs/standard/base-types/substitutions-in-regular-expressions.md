@@ -19,22 +19,25 @@ helpviewer_keywords:
 - constructs, substitutions
 - substitutions
 ms.assetid: d1f52431-1c7d-4dc6-8792-6b988256892e
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 7a92c454548c69d1a64c954ab2d510b77553a895
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: f93584b9dff721c8521d8cb58aaf5eab2c1fc931
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="substitutions-in-regular-expressions"></a>Sustituciones en expresiones regulares
 <a name="Top"></a> Las sustituciones son elementos del lenguaje que se reconocen solo dentro de patrones de reemplazo. Usan un patrón de expresión regular para definir todo o parte del texto que reemplazará el texto coincidente en la cadena de entrada. El patrón de reemplazo puede estar compuesto de una o más sustituciones junto con caracteres literales. Los patrones de reemplazo se proporcionan a las sobrecargas del método <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> que tiene un parámetro `replacement` y al método <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType>. Los métodos reemplazan el patrón que coincide con el patrón que define el parámetro `replacement` .  
   
  .NET Framework define los elementos de sustitución que se enumeran en la siguiente tabla.  
   
-|Sustitución|Descripción|  
+|Sustitución|Description|  
 |------------------|-----------------|  
 |`$` *número*|Incluye la última subcadena coincidente por el grupo capturado que identifica *number*, donde *number* es un valor decimal, en la cadena de reemplazo. Para obtener más información, vea [Sustituir un grupo numerado](#Numbered).|  
 |`${` *name* `}`|Incluye la última subcadena coincidente por el grupo con nombre que designa `(?<`*name*`> )` en la cadena de reemplazo. Para obtener más información, vea [Sustituir un grupo con nombre](#Named).|  
@@ -70,7 +73,7 @@ ms.lasthandoff: 10/18/2017
   
  El patrón de expresión regular `\p{Sc}*(\s?\d+[.,]?\d*)\p{Sc}*` se define como se muestra en la tabla siguiente.  
   
-|Modelo|Descripción|  
+|Modelo|Description|  
 |-------------|-----------------|  
 |`\p{Sc}*`|Busca una coincidencia con cero o más caracteres de símbolo de divisa.|  
 |`\s?`|Busca una coincidencia con cero o un carácter de espacio en blanco.|  
@@ -96,7 +99,7 @@ ms.lasthandoff: 10/18/2017
   
  El patrón de expresión regular `\p{Sc}*(?<amount>\s?\d[.,]?\d*)\p{Sc}*` se define como se muestra en la tabla siguiente.  
   
-|Modelo|Descripción|  
+|Modelo|Description|  
 |-------------|-----------------|  
 |`\p{Sc}*`|Busca una coincidencia con cero o más caracteres de símbolo de divisa.|  
 |`\s?`|Busca una coincidencia con cero o un carácter de espacio en blanco.|  
@@ -118,7 +121,7 @@ ms.lasthandoff: 10/18/2017
   
  El patrón de expresión regular `\b(\d+)(\.(\d+))?` se define como se muestra en la tabla siguiente.  
   
-|Modelo|Descripción|  
+|Modelo|Description|  
 |-------------|-----------------|  
 |`\b`|Comenzar la búsqueda de coincidencias al principio de un límite de palabras.|  
 |`(\d+)`|Buscar coincidencias con uno o más dígitos decimales. Este es el primer grupo de captura.|  
@@ -137,7 +140,7 @@ ms.lasthandoff: 10/18/2017
   
  El patrón de expresión regular `^(\w+\s?)+$` se define como se muestra en la tabla siguiente.  
   
-|Modelo|Descripción|  
+|Modelo|Description|  
 |-------------|-----------------|  
 |`^`|Comenzar la búsqueda de coincidencias al principio de la cadena de entrada.|  
 |`(\w+\s?)+`|Buscar coincidencias con el patrón de uno o varios caracteres de palabra seguidos de cero o un carácter de espacio en blanco una o varias veces.|  
@@ -149,7 +152,7 @@ ms.lasthandoff: 10/18/2017
   
 <a name="BeforeMatch"></a>   
 ## <a name="substituting-the-text-before-the-match"></a>Sustituir el texto delante de la coincidencia  
- La sustitución <code>$\`</code> reemplaza la cadena coincidente por la cadena de entrada completa delante de la coincidencia. Es decir, duplica la cadena de entrada hasta la coincidencia quitando el texto coincidente. Cualquier texto que siga al texto coincidente no cambia en la cadena de resultado. Si hay varias coincidencias en una cadena de entrada, el texto de reemplazo se deriva de la cadena de entrada original, en lugar de la cadena en la que coincidencias anteriores han reemplazado el texto. \(El ejemplo proporciona una ilustración.\) Si no hay ninguna coincidencia, la sustitución <code>$\`</code> no tiene ningún efecto.  
+ La sustitución <code>$\`</code> reemplaza la cadena coincidente por la cadena de entrada completa delante de la coincidencia. Es decir, duplica la cadena de entrada hasta la coincidencia quitando el texto coincidente. Cualquier texto que siga al texto coincidente no cambia en la cadena de resultado. Si hay varias coincidencias en una cadena de entrada, el texto de reemplazo se deriva de la cadena de entrada original, en lugar de la cadena en la que coincidencias anteriores han reemplazado el texto. \(En el ejemplo se ofrece una ilustración.\) Si no hay ninguna coincidencia, la sustitución <code>$\`</code> no tiene ningún efecto.  
   
  En el ejemplo siguiente, se usa el patrón de expresión regular `\d+` para que coincida con una secuencia de uno o más dígitos decimales en la cadena de entrada. La cadena de reemplazo <code>$`</code> reemplaza estos dígitos por el texto que antecede a la coincidencia.  
   
@@ -200,7 +203,7 @@ ms.lasthandoff: 10/18/2017
   
  El patrón de expresión regular `\b(\w+)\s\1\b` se define como se muestra en la tabla siguiente.  
   
-|Modelo|Descripción|  
+|Modelo|Description|  
 |-------------|-----------------|  
 |`\b`|Iniciar la búsqueda de coincidencias en un límite de palabras.|  
 |`(\w+)`|Buscar coincidencias con uno o más caracteres alfabéticos. Este es el primer grupo de captura.|  

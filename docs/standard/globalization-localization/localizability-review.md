@@ -22,34 +22,37 @@ helpviewer_keywords:
 - global applications, localizability
 - localizing resources
 ms.assetid: 3aee2fbb-de47-4e37-8fe4-ddebb9719247
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 7633c7fe9e99bde96ee108460e983eff48f1c7f0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 2aaf7c466c6662611e2b37d5c967a99d050158df
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="localizability-review"></a>Revisión de adaptabilidad
-La revisión de localizabilidad es un paso intermedio en el desarrollo de una aplicación de uso internacional. Comprueba que una aplicación globalizada está preparada para la localización e identifica cualquier código o los aspectos de la interfaz de usuario que requieren un tratamiento especial. Este paso también ayuda a asegurarse de que el proceso de localización no introducirá defectos funcionales en la aplicación. Cuando se han abordado todos los problemas provocados por la revisión de localizabilidad, la aplicación está preparada para la localización. Si la revisión de localizabilidad es exhaustiva, no debe tener que modificar cualquier código fuente durante el proceso de localización.  
+La revisión de localización es un paso intermedio en el desarrollo de una aplicación de uso internacional. Comprueba que una aplicación globalizada está preparada para la localización e identifica cualquier código o los aspectos de la interfaz de usuario que requieren un tratamiento especial. Este paso también ayuda a asegurarse de que el proceso de localización no introducirá defectos funcionales en la aplicación. Una vez solucionados todos los problemas que planteó la revisión de localización, la aplicación estará lista para la localización. Si la revisión de localización es exhaustiva, no tiene que modificar ningún código fuente durante el proceso de localización.  
   
- La revisión de localizabilidad consta de las tres siguientes comprobaciones:  
+ La revisión de localización consta de las tres comprobaciones siguientes:  
   
--   [¿Se implementan las recomendaciones de globalización?](#global)  
+-   [¿Se han implementado las recomendaciones de globalización?](#global)  
   
--   [¿Se administran correctamente culturales características?](#culture)  
+-   [¿Las características que tienen en cuenta las referencias culturales se han controlado correctamente?](#culture)  
   
 -   [¿Ha probado la aplicación con datos internacionales?](#test)  
   
 <a name="global"></a>   
 ## <a name="implementing-globalization-recommendations"></a>Implementar recomendaciones de globalización  
- Si ha diseñado y desarrollado su aplicación con la localización en mente, y si ha seguido las recomendaciones se describen en el [globalización](../../../docs/standard/globalization-localization/globalization.md) artículo, la revisión de localizabilidad en gran medida será un paso de aseguramiento de calidad . De lo contrario, durante esta fase debe revisar e implementar las recomendaciones para [globalización](../../../docs/standard/globalization-localization/globalization.md)y corregir los errores en el código fuente que impiden la localización.  
+ Si ha diseñado y desarrollado la aplicación con la localización en mente y, además, si ha seguido las recomendaciones indicadas en el artículo [Globalización](../../../docs/standard/globalization-localization/globalization.md), la revisión de localización, en gran medida, será un paso para el control de calidad. Sin embargo, durante esta fase, debe revisar e implementar las recomendaciones de [globalización](../../../docs/standard/globalization-localization/globalization.md) y corregir los errores del código fuente que impiden la localización.  
   
 <a name="culture"></a>   
 ## <a name="handling-culture-sensitive-features"></a>Controlar características que tienen en cuenta la referencia cultural  
- .NET Framework no proporciona soporte técnico de programación en un número de áreas que varían enormemente según la referencia cultural. En la mayoría de los casos, tendrá que escribir código personalizado para controlar las áreas de características como la siguiente:  
+ .NET Framework no proporciona soporte técnico de programación en un número de áreas que varían enormemente según la referencia cultural. En la mayoría de los casos, tendrá que escribir código personalizado para controlar áreas de características como las siguientes:  
   
 -   Direcciones.  
   
@@ -57,28 +60,28 @@ La revisión de localizabilidad es un paso intermedio en el desarrollo de una ap
   
 -   Tamaños de papel.  
   
--   Unidades de medida usada para las longitudes, pesos, área, volumen y temperaturas. Aunque .NET Framework no ofrece compatibilidad integrada para la conversión entre unidades de medida, puede utilizar el <xref:System.Globalization.RegionInfo.IsMetric%2A?displayProperty=nameWithType> propiedad para determinar si un determinado país o región utiliza el sistema métrico, como se muestra en el ejemplo siguiente.  
+-   Unidades de medida usadas para longitud, peso, área, volumen y temperatura. Aunque .NET Framework no ofrece compatibilidad integrada para la conversión entre unidades de medida, puede utilizar la propiedad <xref:System.Globalization.RegionInfo.IsMetric%2A?displayProperty=nameWithType> para determinar si un determinado país o región utiliza el sistema métrico, como se muestra en el ejemplo siguiente.  
   
      [!code-csharp[Conceptual.Localizability#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.localizability/cs/ismetric1.cs#1)]
      [!code-vb[Conceptual.Localizability#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.localizability/vb/ismetric1.vb#1)]  
   
 <a name="test"></a>   
 ## <a name="testing-your-application"></a>Probar la aplicación  
- Para localizar la aplicación, debe probarla mediante el uso de datos internacionales en versiones internacionales del sistema operativo. Aunque la mayor parte de la interfaz de usuario no se traducirá en este momento, podrá detectar problemas como los siguientes:  
+ Para localizar la aplicación, debe probarla mediante el uso de datos internacionales en versiones internacionales del sistema operativo. Aunque la mayor parte de la interfaz de usuario no se localizará en este momento, podrá detectar problemas como los siguientes:  
   
--   Datos serializados que deserializar correctamente en las versiones de sistema operativo.  
+-   Datos serializados que no se deserializan correctamente en las versiones del sistema operativo.  
   
--   Datos numéricos que no reflejen las convenciones de la referencia cultural actual. Por ejemplo, pueden mostrarse números con separadores de grupos inexacto, separadores decimales ni símbolos de moneda.  
+-   Datos numéricos que no reflejan las convenciones de la referencia cultural actual. Por ejemplo, pueden mostrarse números con separadores de grupos, separadores decimales o símbolos de moneda inexactos.  
   
--   Datos de fecha y hora que no reflejen las convenciones de la referencia cultural actual. Por ejemplo, los números que representan el mes y día pueden aparecer en el orden equivocado, separadores de fecha sea incorrectos o información de zona horaria puede ser incorrecta.  
+-   Los datos de fecha y hora no reflejan las convenciones de la referencia cultural actual. Por ejemplo, los números que representan el mes y día pueden aparecer en el orden equivocado, los separadores de fecha pueden ser incorrectos o la información de zona horaria puede ser incorrecta.  
   
--   Recursos que no se puede encontrar porque no ha identificado una referencia cultural predeterminada para la aplicación.  
+-   Los recursos que no se pueden encontrar porque no se ha identificado una referencia cultural predeterminada para la aplicación.  
   
--   Cadenas que se muestran en un orden inusual para la referencia cultural específica.  
+-   Las cadenas que se muestran en un orden inusual para la referencia cultural específica.  
   
--   Cadena comparaciones o comparaciones de igualdad que devuelven resultados inesperados.  
+-   Las comparaciones de cadenas o las comparaciones de igualdad que devuelven resultados inesperados.  
   
- Si ha seguido las recomendaciones de globalización al desarrollar la aplicación, controla correctamente, características de la cuenta de la referencia cultural e identificado y hace referencia a los problemas de localización que se produjeron durante las pruebas, puede continuar con el paso siguiente, [Localización](../../../docs/standard/globalization-localization/localization.md).  
+ Si ha seguido las recomendaciones de globalización al desarrollar la aplicación, ha controlado correctamente las características que tienen en cuenta la referencia cultural y ha identificado y solucionado los problemas de localización planteados durante las pruebas, puede continuar con el paso siguiente, [Localización](../../../docs/standard/globalization-localization/localization.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Globalización y localización](../../../docs/standard/globalization-localization/index.md)  
