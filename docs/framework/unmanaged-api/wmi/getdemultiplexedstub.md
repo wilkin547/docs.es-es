@@ -3,18 +3,26 @@ title: "Función GetDemultiplexedStub (referencia de API no administrada)"
 description: "La función GetDemultiplexedStub crea un receptor de reenviador de objeto para ayudar a un cliente recibir las llamadas asincrónicas de administración de Windows."
 ms.date: 11/06/2017
 ms.prod: .net-framework
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.topic: reference
-api_name: GetDemultiplexedStub
-api_location: WMINet_Utils.dll
-api_type: DLLExport
-f1_keywords: GetDemultiplexedStub
-helpviewer_keywords: GetDemultiplexedStub function [.NET WMI and performance counters]
-topic_type: Reference
+api_name:
+- GetDemultiplexedStub
+api_location:
+- WMINet_Utils.dll
+api_type:
+- DLLExport
+f1_keywords:
+- GetDemultiplexedStub
+helpviewer_keywords:
+- GetDemultiplexedStub function [.NET WMI and performance counters]
+topic_type:
+- Reference
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: f53ee18345347f506a404a22bf5bfea6af037463
 ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT

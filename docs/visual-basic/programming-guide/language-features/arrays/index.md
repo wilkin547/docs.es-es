@@ -3,9 +3,11 @@ title: Matrices en Visual Basic
 ms.custom: 
 ms.date: 12/06/2017
 ms.prod: .net
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
-f1_keywords: vb.Array
+f1_keywords:
+- vb.Array
 helpviewer_keywords:
 - arrays [Visual Basic]
 - Visual Basic, arrays
@@ -173,7 +175,7 @@ Dim sales()() As Double = New Double(11)() {}
   
 ## <a name="array-size"></a><span data-ttu-id="5ac2a-202">Tamaño de la matriz</span><span class="sxs-lookup"><span data-stu-id="5ac2a-202">Array Size</span></span>  
 
- <span data-ttu-id="5ac2a-203">El tamaño de una matriz es el producto de las longitudes de todas sus dimensiones.</span><span class="sxs-lookup"><span data-stu-id="5ac2a-203">The size of an array is the product of the lengths of all its dimensions.</span></span> <span data-ttu-id="5ac2a-204">Representa el número total de elementos contenidos actualmente en la matriz.</span><span class="sxs-lookup"><span data-stu-id="5ac2a-204">It represents the total number of elements currently contained in the array.</span></span>  <span data-ttu-id="5ac2a-205">Por ejemplo, en el ejemplo siguiente se declara una matriz unidimensional de 2 con cuatro elementos en cada dimensión.</span><span class="sxs-lookup"><span data-stu-id="5ac2a-205">For example, the following example declares a 2-dimensional array with four elements in each dimension.</span></span> <span data-ttu-id="5ac2a-206">Como se muestra en el resultado del ejemplo, el tamaño de la matriz es 16 (o (3 + 1) * (3 + 1).</span><span class="sxs-lookup"><span data-stu-id="5ac2a-206">As the output from the example shows, the array's size is 16 (or (3 + 1) * (3 + 1).</span></span>
+ <span data-ttu-id="5ac2a-203">El tamaño de una matriz es el producto de las longitudes de todas sus dimensiones.</span><span class="sxs-lookup"><span data-stu-id="5ac2a-203">The size of an array is the product of the lengths of all its dimensions.</span></span> <span data-ttu-id="5ac2a-204">Representa el número total de elementos contenidos actualmente en la matriz.</span><span class="sxs-lookup"><span data-stu-id="5ac2a-204">It represents the total number of elements currently contained in the array.</span></span>  <span data-ttu-id="5ac2a-205">Por ejemplo, en el ejemplo siguiente se declara una matriz unidimensional de 2 con cuatro elementos en cada dimensión.</span><span class="sxs-lookup"><span data-stu-id="5ac2a-205">For example, the following example declares a 2-dimensional array with four elements in each dimension.</span></span> <span data-ttu-id="5ac2a-206">Como se muestra en el resultado del ejemplo, el tamaño de la matriz es 16 (o (3 + 1) \* (3 + 1).</span><span class="sxs-lookup"><span data-stu-id="5ac2a-206">As the output from the example shows, the array's size is 16 (or (3 + 1) \* (3 + 1).</span></span>
 
  [!code-vb[array-size](../../../../../samples/snippets/visualbasic/programming-guide/language-features/arrays/array-size.vb)]  
 

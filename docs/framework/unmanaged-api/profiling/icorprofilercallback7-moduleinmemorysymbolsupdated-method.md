@@ -5,20 +5,24 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-api_name: ICorProfiler7.ModuleInMemorySymbolsUpdated
+api_name:
+- ICorProfiler7.ModuleInMemorySymbolsUpdated
 api_location:
 - mscorwks.dll
 - corprof.idl
-api_type: COM
+api_type:
+- COM
 ms.assetid: f362a896-3247-4894-9727-e48dbbcd2c78
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 898adf043e425c00d6e311e2f67c53ed65cacb33
 ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
@@ -48,7 +52,7 @@ HRESULT ModuleInMemorySymbolsUpdated(
 > [!NOTE]
 >  <span data-ttu-id="df3bf-110">Este evento no se desencadena actualmente símbolos implícitamente creados o modificados a través de <xref:System.Reflection.Emit> API.</span><span class="sxs-lookup"><span data-stu-id="df3bf-110">This event is not currently raised for symbols implicitly created or modified via <xref:System.Reflection.Emit> APIs.</span></span>  
   
- <span data-ttu-id="df3bf-111">Incluso cuando símbolos se proporcionan por adelantado en una llamada a una de las sobrecargas de los recursos administrados <xref:System.Reflection.Assembly.Load*?displayProperty=nameWithType> métodos que incluye un `rawSymbolStore` argumento para especificar los símbolos del ensamblado, el tiempo de ejecución no puede asociar realmente los datos simbólicos con el módulo hasta después de la [ModuleLoadFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadfinished-method.md) se ha producido la devolución de llamada.</span><span class="sxs-lookup"><span data-stu-id="df3bf-111">Even when symbols are provided up front in a call to one of the overloads of the managed <xref:System.Reflection.Assembly.Load*?displayProperty=nameWithType> methods that includes a `rawSymbolStore` argument to specify the symbols for the assembly, the runtime may not actually associate the symbolic data with the module until after the [ModuleLoadFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadfinished-method.md) callback has occurred.</span></span> <span data-ttu-id="df3bf-112">Este evento proporciona una oportunidad para recopilar los símbolos para dichos módulos más adelante.</span><span class="sxs-lookup"><span data-stu-id="df3bf-112">This event provides a later opportunity to collect symbols for such modules.</span></span>  
+ <span data-ttu-id="df3bf-111">Incluso cuando símbolos se proporcionan por adelantado en una llamada a una de las sobrecargas de los recursos administrados <xref:System.Reflection.Assembly.Load\*?displayProperty=nameWithType> métodos que incluye un `rawSymbolStore` argumento para especificar los símbolos del ensamblado, el tiempo de ejecución no puede asociar realmente los datos simbólicos con el módulo hasta después de la [ModuleLoadFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadfinished-method.md) se ha producido la devolución de llamada.</span><span class="sxs-lookup"><span data-stu-id="df3bf-111">Even when symbols are provided up front in a call to one of the overloads of the managed <xref:System.Reflection.Assembly.Load\*?displayProperty=nameWithType> methods that includes a `rawSymbolStore` argument to specify the symbols for the assembly, the runtime may not actually associate the symbolic data with the module until after the [ModuleLoadFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadfinished-method.md) callback has occurred.</span></span> <span data-ttu-id="df3bf-112">Este evento proporciona una oportunidad para recopilar los símbolos para dichos módulos más adelante.</span><span class="sxs-lookup"><span data-stu-id="df3bf-112">This event provides a later opportunity to collect symbols for such modules.</span></span>  
   
 ## <a name="requirements"></a><span data-ttu-id="df3bf-113">Requisitos</span><span class="sxs-lookup"><span data-stu-id="df3bf-113">Requirements</span></span>  
  <span data-ttu-id="df3bf-114">**Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="df3bf-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
