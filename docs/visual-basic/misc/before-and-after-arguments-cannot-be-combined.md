@@ -2,11 +2,13 @@
 title: "&#39; Antes de &#39; y &#39; Después de &#39; argumentos no se pueden combinar"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
-f1_keywords: vbrCollection_BeforeAfterExclusive
+f1_keywords:
+- vbrCollection_BeforeAfterExclusive
 ms.assetid: f55fb8d2-746d-45de-b350-5a47f83e5ab4
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: bd8de783b2260dcafcac530cba31cfcc759216f8
