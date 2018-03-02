@@ -12,11 +12,11 @@ ms.assetid: 21580405-cb25-4541-89d5-037846a38b07
 caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 24a030bb43d49615a7487ce10ad2347fdfd8a290
-ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
+ms.openlocfilehash: 6492edae6e4311252dc664236fb43cd373f7c59f
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="strings-c-programming-guide"></a>Cadenas (Guía de programación de C#)
 Una cadena es un objeto de tipo <xref:System.String> cuyo valor es texto. Internamente, el texto se almacena como una colección secuencial de solo lectura de objetos <xref:System.Char>. No hay ningún carácter que finaliza en null al final de una cadena de C#; por lo tanto, la cadena de C# puede contener cualquier número de caracteres nulos insertados ('\0'). La propiedad <xref:System.String.Length%2A> de una cadena representa el número de objetos `Char` que contiene, no el número de caracteres Unicode. Para obtener acceso a los puntos de código Unicode individuales de una cadena, use el objeto <xref:System.Globalization.StringInfo>.  
@@ -83,7 +83,7 @@ Una cadena es un objeto de tipo <xref:System.String> cuyo valor es texto. Intern
  Una sobrecarga del método <xref:System.Console.WriteLine%2A> toma una cadena de formato como un parámetro. Por lo tanto, solo se puede insertar un literal de cadena de formato sin una llamada explícita al método. Pero si usa el método <xref:System.Diagnostics.Trace.WriteLine%2A> para mostrar la salida de la depuración en la ventana **Salida** de Visual Studio, debe llamar explícitamente al método <xref:System.String.Format%2A> porque <xref:System.Diagnostics.Trace.WriteLine%2A> solo acepta una cadena, no una cadena de formato. Para más información sobre las cadenas de formato, consulte [Formatting Types](../../../standard/base-types/formatting-types.md) (Tipos de formato).  
   
 ## <a name="substrings"></a>Subcadenas  
- Una subcadena es cualquier secuencia de caracteres que se encuentra en una cadena. Use el método <xref:System.String.Substring%2A> para crear una nueva cadena de una parte de la cadena original. Puede buscar una o más apariciones de una subcadena con el método <xref:System.String.IndexOf%2A>. Use el método <xref:System.String.Replace%2A> para reemplazar todas las apariciones de una subcadena especificada por una nueva cadena. Al igual que el método <xref:System.String.Substring%2A>, <xref:System.String.Replace%2A> devuelve una cadena nueva y no modifica la cadena original. Para más información, consulte [Cómo: Buscar cadenas mediante los métodos String](../../../csharp/programming-guide/strings/how-to-search-strings-using-string-methods.md) y [Cómo: Modificar el contenido de cadenas](../../../csharp/programming-guide/strings/how-to-modify-string-contents.md).  
+ Una subcadena es cualquier secuencia de caracteres que se encuentra en una cadena. Use el método <xref:System.String.Substring%2A> para crear una nueva cadena de una parte de la cadena original. Puede buscar una o más apariciones de una subcadena con el método <xref:System.String.IndexOf%2A>. Use el método <xref:System.String.Replace%2A> para reemplazar todas las apariciones de una subcadena especificada por una nueva cadena. Al igual que el método <xref:System.String.Substring%2A>, <xref:System.String.Replace%2A> devuelve una cadena nueva y no modifica la cadena original. Para más información, consulte [Cómo: Buscar cadenas](../../how-to/search-strings.md) y [Cómo: Modificar el contenido de cadenas](../../../csharp/programming-guide/strings/how-to-modify-string-contents.md).  
   
  [!code-csharp[csProgGuideStrings#7](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_7.cs)]  
   
@@ -127,8 +127,7 @@ string s = String.Empty;
 |[Cómo: Concatenar varias cadenas](../../../csharp/programming-guide/strings/how-to-concatenate-multiple-strings.md)|Muestra cómo utilizar el operador `+` y la clase `Stringbuilder` para unir cadenas en tiempo de compilación y de ejecución.|  
 |[Cómo: Comparar cadenas](../../../csharp/programming-guide/strings/how-to-compare-strings.md)|Muestra cómo realizar comparaciones ordinales de las cadenas.|  
 |[Cómo: Analizar cadenas mediante String.Split](../../how-to/parse-strings-using-split.md)|Contiene un ejemplo de código que muestra cómo utilizar el método `String.Split` para analizar cadenas.|  
-|[Cómo: Buscar cadenas mediante los métodos String](../../../csharp/programming-guide/strings/how-to-search-strings-using-string-methods.md)|Explica cómo utilizar métodos específicos para buscar cadenas.|  
-|[Cómo: Buscar cadenas mediante expresiones regulares](../../../csharp/programming-guide/strings/how-to-search-strings-using-regular-expressions.md)|Explica cómo utilizar expresiones regulares para buscar cadenas.|  
+|[Cómo: Buscar cadenas](../../how-to/search-strings.md)|Explica cómo utilizar métodos específicos para buscar cadenas.|  
 |[Cómo: Determinar si una cadena representa un valor numérico](../../../csharp/programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)|Muestra cómo analizar de forma segura una cadena para ver si tiene un valor numérico válido.|  
 |[Cómo: Convertir una cadena en un valor DateTime](../../../csharp/programming-guide/strings/how-to-convert-a-string-to-a-datetime.md)|Muestra cómo convertir una cadena como "24/01/2008" en un objeto <xref:System.DateTime?displayProperty=nameWithType>.|  
 |[Operaciones básicas de cadenas](../../../../docs/standard/base-types/basic-string-operations.md)|Proporciona vínculos a temas que usan los métodos <xref:System.String?displayProperty=nameWithType> y <xref:System.Text.StringBuilder?displayProperty=nameWithType> para realizar operaciones básicas de cadenas.|  

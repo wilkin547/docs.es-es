@@ -9,11 +9,11 @@ ms.assetid: 9bcf896a-5826-4189-8c1a-3e35fa08243a
 caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: b845bf6f31ef84c78dcfd84832036ca2f2c4cae4
-ms.sourcegitcommit: cec0525b2121c36198379525e69aa5388266db5b
+ms.openlocfilehash: 6822143df2d02c284d7506d180139c18cfbaf370
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="asynchronous-programming-with-async-and-await-c"></a>Programación asincrónica con Async y Await (C#)
 Puede evitar cuellos de botella de rendimiento y mejorar la capacidad de respuesta total de la aplicación mediante la programación asincrónica. Sin embargo, las técnicas tradicionales para escribir aplicaciones asincrónicas pueden resultar complicadas, haciéndolas difícil de escribir, depurar y mantener.  
@@ -41,7 +41,7 @@ La asincronía es especialmente valiosa para aquellas aplicaciones que obtienen 
  El enfoque basado en asincrónico agrega el equivalente de una transmisión automática a la lista de opciones entre las que puede elegir al diseñar operaciones asincrónicas. Es decir, obtiene todas las ventajas de la programación asincrónica tradicional pero con mucho menos trabajo de desarrollador.  
   
 ##  <a name="BKMK_HowtoWriteanAsyncMethod"></a> Los métodos asincrónicos son más fáciles de escribir  
- Las palabras clave [async](../../../../csharp/language-reference/keywords/async.md) y [await](../../../../csharp/language-reference/keywords/await.md) en C# son fundamentales en la programación asincrónica. Con esas dos palabras clave, se pueden usar los recursos de .NET Framework, .NET Core o Windows Runtime para crear un método asincrónico casi tan fácilmente como se crea un método sincrónico. Los métodos asincrónicos que se definen mediante `async` y `await` se denominan *métodos asincrónicos*.  
+ Las palabras clave [async](../../../../csharp/language-reference/keywords/async.md) y [await](../../../../csharp/language-reference/keywords/await.md) en C# son fundamentales en la programación asincrónica. Con esas dos palabras clave, se pueden usar los recursos de .NET Framework, .NET Core o Windows Runtime para crear un método asincrónico casi tan fácilmente como se crea un método sincrónico. Los métodos asincrónicos que se definen mediante la palabra clave `async` se denominan *métodos asincrónicos*.  
   
  En el ejemplo siguiente se muestra un método asincrónico. Casi todo el código deberá ser totalmente familiar. Los comentarios informan sobre las características que se agregan para crear la asincronía.  
   
@@ -92,21 +92,21 @@ Las siguientes características resumen lo que hace que el ejemplo anterior sea 
   
 -   El tipo de valor devuelto es uno de los tipos siguientes:  
   
-    -   <xref:System.Threading.Tasks.Task%601> si el método tiene una instrucción return en la que el operando tiene el tipo TResult.  
+    -   <xref:System.Threading.Tasks.Task%601> si el método tiene una instrucción return en la que el operando tiene el tipo `TResult`.  
   
     -   <xref:System.Threading.Tasks.Task> si el método no tiene ninguna instrucción return ni tiene una instrucción return sin operando.  
   
-    -   `Void` si está escribiendo un controlador de eventos asincrónicos.  
+    -   `void` si está escribiendo un controlador de eventos asincrónicos.  
 
     -   Cualquier otro tipo que tenga un método `GetAwaiter` (a partir de C# 7).
   
-     Para obtener más información, vea "Tipos de valor devuelto y parámetros" más adelante en este tema.  
+     Para obtener más información, consulte la sección [Tipos de valor devuelto y parámetros](#BKMK_ReturnTypesandParameters).  
   
 -   El método normalmente incluye al menos una expresión await, que marca un punto en el que el método no puede continuar hasta que se completa la operación asincrónica en espera. Mientras tanto, se suspende el método y el control vuelve al llamador del método. La sección siguiente de este tema muestra lo que sucede en el punto de suspensión.  
   
  En métodos asincrónicos, se utilizan las palabras clave y los tipos proporcionados para indicar lo que se desea hacer y el compilador realiza el resto, incluido el seguimiento de qué debe ocurrir cuando el control vuelve a un punto de espera en un método suspendido. Algunos procesos de rutina, tales como bucles y control de excepciones, pueden ser difíciles de controlar en código asincrónico tradicional. En un método asincrónico, se pueden escribir estos elementos como se haría en una solución sincrónica y se resuelve este problema.  
   
- Para obtener más información sobre la asincronía en versiones anteriores de .NET Framework, vea [TPL y la programación asincrónica tradicional de .NET Framework](http://msdn.microsoft.com/library/e7b31170-a156-433f-9f26-b1fc7cd1776f).  
+ Para obtener más información sobre la asincronía en versiones anteriores de .NET Framework, vea [TPL y la programación asincrónica tradicional de .NET Framework](../../../../standard/parallel-programming/tpl-and-traditional-async-programming.md).  
   
 ##  <a name="BKMK_WhatHappensUnderstandinganAsyncMethod"></a> Lo que ocurre en un método asincrónico  
  Lo más importante de entender en la programación asincrónica es cómo el flujo de control pasa de un método a otro. El diagrama siguiente le guía por el proceso.  
@@ -132,7 +132,7 @@ Las siguientes características resumen lo que hace que el ejemplo anterior sea 
      Por consiguiente, `AccessTheWebAsync` utiliza un operador await para suspender el progreso y producir el control al método que llamó `AccessTheWebAsync`. `AccessTheWebAsync` devuelve `Task<int>` al llamador. La tarea representa una sugerencia para generar un resultado entero que es la longitud de la cadena descargada.  
   
     > [!NOTE]
-    >  Si se completa `GetStringAsync` (y por consiguiente `getStringTask`) antes de que `AccessTheWebAsync` lo espere, permanece el control en `AccessTheWebAsync`. El gasto de suspensión y después regresar a `AccessTheWebAsync` se desperdiciaría si el proceso denominado asincrónico (`getStringTask`) ya se ha completado y AccessTheWebSync no tiene que esperar el resultado final.  
+    >  Si se completa `GetStringAsync` (y por consiguiente `getStringTask`) antes de que `AccessTheWebAsync` lo espere, permanece el control en `AccessTheWebAsync`. El gasto de suspensión y después regresar a `AccessTheWebAsync` se desperdiciaría si el proceso denominado asincrónico (`getStringTask`) ya se ha completado y `AccessTheWebSync` no tiene que esperar el resultado final.  
   
      Dentro del llamador (el controlador de eventos en este ejemplo), el patrón de procesamiento continúa. El llamador puede hacer otro trabajo que no depende del resultado de `AccessTheWebAsync` antes de esperar ese resultado, o es posible que el llamador se espere inmediatamente.   El controlador de eventos está esperando `AccessTheWebAsync`, y `AccessTheWebAsync` está esperando `GetStringAsync`.  
   
@@ -146,7 +146,7 @@ Para obtener más información sobre el flujo de control, vea [Control Flow in A
 ##  <a name="BKMK_APIAsyncMethods"></a> Métodos asincrónicos de API  
  Tal vez se pregunte dónde encontrar métodos como `GetStringAsync` que sean compatibles con la programación asincrónica. .NET Framework 4.5 o versiones posteriores y .NET Core contienen muchos miembros que trabajan con `async` y `await`. Puede reconocerlos por el sufijo "Async" que se anexa al nombre del miembro y por su tipo de valor devuelto <xref:System.Threading.Tasks.Task> o <xref:System.Threading.Tasks.Task%601>. Por ejemplo, la clase `System.IO.Stream` contiene métodos como <xref:System.IO.Stream.CopyToAsync%2A>, <xref:System.IO.Stream.ReadAsync%2A> y <xref:System.IO.Stream.WriteAsync%2A> junto con los métodos sincrónicos <xref:System.IO.Stream.CopyTo%2A>, <xref:System.IO.Stream.Read%2A> y <xref:System.IO.Stream.Write%2A>.  
   
- Windows Runtime también contiene muchos métodos que puede utilizar con `async` y `await` en Aplicaciones Windows. Para obtener más métodos de ejemplo e información, vea [Inicio rápido: Llamada a API asincrónicas en C# o Microsoft Visual Basic](/previous-versions/windows/apps/hh452713(v=win.10)), [Programación asincrónica (aplicaciones de la Tienda Windows)](/previous-versions/windows/apps/hh464924(v=win.10)) y [WhenAny: Puente entre .NET Framework y Windows Runtime](https://msdn.microsoft.com/library/jj635140(v=vs.120).aspx).  
+ Windows Runtime también contiene muchos métodos que puede utilizar con `async` y `await` en Aplicaciones Windows. Para obtener más información, consulte [Subprocesamiento y programación asincrónica](/windows/uwp/threading-async/) para el desarrollo para UWP, así como [Programación asincrónica (aplicaciones de la Tienda Windows)](/previous-versions/windows/apps/hh464924(v=win.10)) e [Inicio rápido: usar el operador await para la programación asincrónica](/previous-versions/windows/apps/hh452713(v=win.10)) si usa versiones anteriores de Windows Runtime.  
   
 ##  <a name="BKMK_Threads"></a> Subprocesos  
 La intención de los métodos Async es ser aplicaciones que no pueden producir bloqueos. Una expresión `await` en un método asincrónico no bloquea el subproceso actual mientras la tarea esperada se encuentra en ejecución. En vez de ello, la expresión declara el resto del método como una continuación y devuelve el control al llamador del método asincrónico.  
@@ -158,7 +158,7 @@ El enfoque basado en asincrónico en la programación asincrónica es preferible
 ##  <a name="BKMK_AsyncandAwait"></a> Async y Await  
  Si especifica que un método es un método asincrónico mediante el modificador [async](../../../../csharp/language-reference/keywords/async.md), habilita las dos funciones siguientes.  
   
--   El método asincrónico marcado puede utilizar [await](../../../../csharp/language-reference/keywords/await.md) para designar puntos de suspensión. El operador await indica al compilador que el método asincrónico no puede continuar pasado ese punto hasta que se complete el proceso asincrónico aguardado. Mientras tanto, el control devuelve al llamador del método asincrónico.  
+-   El método asincrónico marcado puede utilizar [await](../../../../csharp/language-reference/keywords/await.md) para designar puntos de suspensión. El operador `await` indica al compilador que el método asincrónico no puede continuar pasado ese punto hasta que se complete el proceso asincrónico aguardado. Mientras tanto, el control devuelve al llamador del método asincrónico.  
   
      La suspensión de un método asincrónico en una expresión `await` no constituye una salida del método y los bloques `finally` no se ejecutan.  
   
@@ -232,8 +232,7 @@ Las API asincrónicas en la programación de Windows Runtime tienen uno de los s
 -   <xref:Windows.Foundation.IAsyncActionWithProgress%601>  
   
 -   <xref:Windows.Foundation.IAsyncOperationWithProgress%602>  
-  
- Para obtener más información y un ejemplo, vea [Inicio rápido: llamadas a API asincrónicas en C# o Visual Basic](/previous-versions/windows/apps/hh452713(v=win.10)).  
+   
   
 ##  <a name="BKMK_NamingConvention"></a> Convención de nomenclatura  
  Por convención, se anexa "Async" a los nombres de métodos que tengan un modificador `async`.  
@@ -342,4 +341,6 @@ namespace AsyncFirstExample
   
 ## <a name="see-also"></a>Vea también  
  [async](../../../../csharp/language-reference/keywords/async.md)  
- [await](../../../../csharp/language-reference/keywords/await.md)
+ [await](../../../../csharp/language-reference/keywords/await.md)  
+ [Programación asincrónica](../../../../csharp/async.md)  
+ [Información general de Async](../../../../standard/async.md)  
