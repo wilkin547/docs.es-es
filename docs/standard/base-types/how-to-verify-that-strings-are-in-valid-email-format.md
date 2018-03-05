@@ -18,21 +18,24 @@ helpviewer_keywords:
 - regular expressions [.NET Framework], examples
 - examples [Visual Basic], strings
 - IsValidEmail
-- validation, e-mail strings
+- validation, email strings
 - input, checking
 - strings [.NET Framework], examples [Visual Basic]
-- e-mail [.NET Framework], validating
+- email [.NET Framework], validating
 - IsMatch method
 ms.assetid: 7536af08-4e86-4953-98a1-a8298623df92
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 03623cc4086981dc321aafe3020dcd571b74d9bc
-ms.sourcegitcommit: 9c4b8d457ffb8d134c9d55c6d7682a0f22e2b9a8
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: fdbb64cac1f1d4043b8b935fcad32aec88b7bb7a
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/20/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="how-to-verify-that-strings-are-in-valid-email-format"></a>Cómo: Comprobar si las cadenas tienen un formato de correo electrónico válido
 En el ejemplo siguiente se usa una expresión regular para comprobar que una cadena tiene un formato de correo electrónico válido.  
@@ -42,7 +45,7 @@ En el ejemplo siguiente se usa una expresión regular para comprobar que una cad
   
  Para comprobar que la dirección de correo electrónico es válida, el método `IsValidEmail` llama al método <xref:System.Text.RegularExpressions.Regex.Replace%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.MatchEvaluator%29?displayProperty=nameWithType> con el patrón de expresión regular `(@)(.+)$` para separar el nombre de dominio de la dirección de correo electrónico. El tercer parámetro es un delegado <xref:System.Text.RegularExpressions.MatchEvaluator> que representa el método que procesa y reemplaza el texto coincidente. El patrón de expresión regular se interpreta de esta manera:  
   
-|Modelo|Descripción|  
+|Modelo|Description|  
 |-------------|-----------------|  
 |`(@)`|Buscar el carácter @. Este es el primer grupo de captura.|  
 |`(.+)`|Buscar una coincidencia con una o más apariciones de cualquier carácter. Este es el segundo grupo de captura.|  
@@ -59,11 +62,11 @@ En el ejemplo siguiente se usa una expresión regular para comprobar que una cad
   
  En este ejemplo, el patrón de expresión regular ``^(?(")(".+?(?<!\\)"@)|(([0-9a-z]((\.(?!\.))|[-!#\$%&'\*\+/=\?\^`{}|~\w])*)(?<=[0-9a-z])@))(?([)([(\d{1,3}.){3}\d{1,3}])|(([0-9a-z][-0-9a-z]*[0-9a-z]*.)+[a-z0-9][-a-z0-9]{0,22}[a-z0-9]))$`` se interpreta como se muestra en la tabla siguiente. Observe que la expresión regular se compila mediante la marca <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType>.  
   
-|Modelo|Descripción|  
+|Modelo|Description|  
 |-------------|-----------------|  
 |`^`|Comenzar la búsqueda de coincidencia al principio de la cadena.|  
 |`(?(")`|Determinar si el primer carácter es una comilla. `(?(")` es el principio de una construcción de alternancia.|  
-|`(?("")("".+?(?<!\\)""@)`|Si el primer carácter es un signo de comillas, buscar unas comillas iniciales seguidas de al menos un carácter cualquiera, seguido a su vez de unas comillas finales. Las comillas finales no debe ir precedida de un carácter de barra diagonal inversa (\\). `(?<!` es el principio de una aserción de búsqueda anticipada negativa de ancho cero. La cadena debe concluir con una arroba (@).|  
+|`(?("")("".+?(?<!\\)""@)`|Si el primer carácter es un signo de comillas, buscar unas comillas iniciales seguidas de al menos un carácter cualquiera, seguido a su vez de unas comillas finales. Las comillas finales no pueden ir precedidas de un carácter de barra diagonal inversa (\\). `(?<!` es el principio de una aserción de búsqueda anticipada negativa de ancho cero. La cadena debe concluir con una arroba (@).|  
 |`&#124;(([0-9a-z]`|Si el primer carácter no es un signo de comillas, buscar cualquier carácter alfabético de la a a la z o de la A a la Z (la comparación distingue entre mayúsculas y minúsculas) o cualquier carácter numérico del 0 al 9.|  
 |`(\.(?!\.))`|Si el carácter siguiente es un punto, determinar que coincide. Si no lo es, buscar más adelante en el siguiente carácter y probar si coincide. `(?!\.)` es una aserción de búsqueda anticipada negativa de ancho igual a cero que evita que aparezcan dos puntos consecutivos en la parte local de una dirección de correo electrónico.|  
 |``&#124;[-!#\$%&'\*\+/=\?\^`{}\&#124;~\w]``|Si el carácter siguiente no es un punto, buscar cualquier carácter de palabra coincidente o uno de los siguientes caracteres: -!#$%'*+=?^`{}&#124;~.|  
@@ -72,7 +75,7 @@ En el ejemplo siguiente se usa una expresión regular para comprobar que una cad
 |`(?<=[0-9a-z])`|Continuar buscando si el carácter que precede al carácter @ es uno de la A a la Z, de la a a la z o del 0 al 9. La construcción `(?<=[0-9a-z])` define una aserción de búsqueda tardía positiva de ancho igual a cero.|  
 |`(?(\[)`|Comprobar si el carácter que va detrás de @ es un corchete de apertura.|  
 |`(\[(\d{1,3}\.){3}\d{1,3}\])`|Si lo es, buscar el corchete de apertura, seguido por una dirección IP (cuatro grupos de uno a tres dígitos, separados por puntos) y por un corchete de cierre.|  
-|`&#124;(([0-9a-z][-0-9a-z]*[0-9a-z]*\.)+`|Si el carácter que va detrás de @ no es un corchete de apertura, coincidir un carácter alfanumérico con un valor de A-z, a-z o 0-9, seguido de cero o más apariciones de un guión, seguido de cero o un carácter alfanumérico con un valor de A-z, a-z o 0-9 , seguido por un punto. Este patrón se puede repetir una o más veces y debe ir seguido del nombre de dominio de nivel superior.|  
+|`&#124;(([0-9a-z][-0-9a-z]*[0-9a-z]*\.)+`|Si el carácter que va detrás de @ no es un corchete de apertura, buscar un carácter alfanumérico con un valor de la A a la Z, de la a a la z o del 0 al 9, seguido de cero o más apariciones de un guión, seguido de cero o de un carácter alfanumérico con un valor de la A a la Z, de la a a la z o del 0 al 9, seguido de un punto. Este patrón se puede repetir una o más veces y debe ir seguido del nombre de dominio de nivel superior.|  
 |`[a-z0-9][\-a-z0-9]{0,22}[a-z0-9]))`|El nombre de dominio de nivel superior debe empezar y finalizar por un carácter alfanumérico (a-z, A-Z y 0-9). También puede incluir de cero a 22 caracteres ASCII que sean alfanuméricos o guiones.|  
 |`$`|Finalizar la búsqueda al final de la cadena.|  
   

@@ -17,15 +17,18 @@ helpviewer_keywords:
 - characters, matching syntax
 - .NET Framework regular expressions, character classes
 ms.assetid: 0f8bffab-ee0d-4e0e-9a96-2b4a252bb7e4
-caps.latest.revision: "58"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 603633e1a0f385c061fe0928ea7361490d61fa3e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: dfcb0d0ace4bd42d89fe7b4c2dc04098858c2945
+ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="character-classes-in-regular-expressions"></a>Clases de carácter en expresiones regulares
 <a name="Top"></a> Una clase de caracteres define un conjunto de caracteres, cualquiera de los cuales puede estar en una cadena de entrada para que se produzca una coincidencia. El lenguaje de expresiones regulares de .NET admite las siguientes clases de caracteres:  
@@ -55,7 +58,7 @@ ms.lasthandoff: 11/21/2017
  .NET admite expresiones de sustracción de clases de caracteres, que permiten definir un conjunto de caracteres como el resultado de excluir una clase de caracteres de otra clase de caracteres. Para obtener más información, consulte [Sustracción de clases de caracteres](#CharacterClassSubtraction).  
   
 > [!NOTE]
->  Las clases que coincide con caracteres por categoría, como de caracteres [\w](#WordCharacter) para que coincida con caracteres alfabéticos o [\p {}](#CategoryOrBlock) para que coincida con una categoría Unicode, se basan en la <xref:System.Globalization.CharUnicodeInfo> clase para proporcionar información sobre caracteres categorías.  A partir de [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], las categorías de caracteres se basan en [el estándar Unicode, versión 8.0.0](http://www.unicode.org/versions/Unicode8.0.0/). En [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] a través de [!INCLUDE[net_v461](../../../includes/net-v461-md.md)], se basan en [el estándar Unicode, versión 6.3.0](http://www.unicode.org/versions/Unicode6.3.0/).  
+>  Las clases que coinciden con los caracteres por categoría, como [\w](#WordCharacter) para que coincidan con caracteres alfabéticos o [\p{}](#CategoryOrBlock) para que coincidan con una categoría Unicode, que se basan en la clase <xref:System.Globalization.CharUnicodeInfo> para proporcionar información sobre las categorías de caracteres.  A partir de [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], las categorías de caracteres se basan en [el estándar Unicode, versión 8.0.0](http://www.unicode.org/versions/Unicode8.0.0/). En [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] a través de [!INCLUDE[net_v461](../../../includes/net-v461-md.md)], se basan en [el estándar Unicode, versión 6.3.0](http://www.unicode.org/versions/Unicode6.3.0/).  
   
 <a name="PositiveGroup"></a>   
 ## <a name="positive-character-group--"></a>Grupo de caracteres positivos: [ ]  
@@ -77,7 +80,7 @@ ms.lasthandoff: 11/21/2017
   
  En la tabla siguiente se recogen algunos de los patrones de expresiones regulares comunes que contienen clases de caracteres positivos.  
   
-|Modelo|Descripción|  
+|Modelo|Description|  
 |-------------|-----------------|  
 |`[aeiou]`|Coincide con todas las vocales.|  
 |`[\p{P}\d]`|Coincide con todos los caracteres de puntuación y de dígitos decimales.|  
@@ -90,7 +93,7 @@ ms.lasthandoff: 11/21/2017
   
  La expresión regular `gr[ae]y\s\S+?[\s|\p{P}]` se define de la siguiente manera:  
   
-|Modelo|Descripción|  
+|Modelo|Description|  
 |-------------|-----------------|  
 |`gr`|Coincide con los caracteres literales "gr".|  
 |`[ae]`|Coincide con una "a" o una "e".|  
@@ -105,7 +108,7 @@ ms.lasthandoff: 11/21/2017
   
  La expresión regular `\b[A-Z]\w*\b` se define como se muestra en la tabla siguiente.  
   
-|Modelo|Descripción|  
+|Modelo|Description|  
 |-------------|-----------------|  
 |`\b`|Empieza en un límite de palabras.|  
 |`[A-Z]`|Coincide con cualquier letra mayúscula de la A a la Z.|  
@@ -139,7 +142,7 @@ ms.lasthandoff: 11/21/2017
   
  En la tabla siguiente se recogen algunos de los patrones de expresiones regulares comunes que contienen grupos de caracteres negativos.  
   
-|Modelo|Descripción|  
+|Modelo|Description|  
 |-------------|-----------------|  
 |`[^aeiou]`|Coincide con todos los caracteres excepto las vocales.|  
 |`[^\p{P}\d]`|Coincide con todos los caracteres excepto los caracteres de puntuación y de dígitos decimales.|  
@@ -151,7 +154,7 @@ ms.lasthandoff: 11/21/2017
   
  La expresión regular `\bth[^o]\w+\b` se define como se muestra en la tabla siguiente.  
   
-|Modelo|Descripción|  
+|Modelo|Description|  
 |-------------|-----------------|  
 |`\b`|Empieza en un límite de palabras.|  
 |`th`|Coincide con los caracteres literales "th".|  
@@ -191,7 +194,7 @@ ms.lasthandoff: 11/21/2017
   
  La construcción de expresión regular  
   
- `\p{` *nombre* `}`  
+ `\p{` *name* `}`  
   
  coincide con cualquier carácter que pertenezca a una categoría general o bloque con nombre de Unicode, donde *nombre* es la abreviatura de la categoría o el nombre del bloque con nombre. Para obtener una lista de abreviaturas de categorías, consulte la sección [Categorías generales Unicode compatibles](#SupportedUnicodeGeneralCategories) más adelante en este tema. Para obtener una lista de bloques con nombre, consulte la sección [Bloques con nombre compatibles](#SupportedNamedBlocks) más adelante en este tema.  
   
@@ -202,7 +205,7 @@ ms.lasthandoff: 11/21/2017
   
  La expresión regular `\b(\p{IsGreek}+(\s)?)+\p{Pd}\s(\p{IsBasicLatin}+(\s)?)+` se define como se muestra en la tabla siguiente.  
   
-|Modelo|Descripción|  
+|Modelo|Description|  
 |-------------|-----------------|  
 |`\b`|Empieza en un límite de palabras.|  
 |`\p{IsGreek}+`|Coincide con uno o varios caracteres griegos.|  
@@ -222,7 +225,7 @@ ms.lasthandoff: 11/21/2017
   
  La construcción de expresión regular  
   
- `\P{` *nombre* `}`  
+ `\P{` *name* `}`  
   
  coincide con cualquier carácter que no pertenezca a una categoría general o bloque con nombre de Unicode, donde *nombre* es la abreviatura de la categoría o el nombre del bloque con nombre. Para obtener una lista de abreviaturas de categorías, consulte la sección [Categorías generales Unicode compatibles](#SupportedUnicodeGeneralCategories) más adelante en este tema. Para obtener una lista de bloques con nombre, consulte la sección [Bloques con nombre compatibles](#SupportedNamedBlocks) más adelante en este tema.  
   
@@ -239,7 +242,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="word-character-w"></a>Carácter de palabra: \w  
  `\w` coincide con cualquier carácter de palabra. Un carácter de palabra es un miembro de alguna de las categorías Unicode enumeradas en la tabla siguiente.  
   
-|Categoría|Descripción|  
+|Categoría|Description|  
 |--------------|-----------------|  
 |Ll|Letra, minúscula|  
 |Lu|Letra, mayúscula|  
@@ -257,7 +260,7 @@ ms.lasthandoff: 11/21/2017
   
  En el ejemplo siguiente se usa el elemento del lenguaje `\w` para buscar coincidencias de caracteres duplicados en una palabra. El ejemplo define un patrón de expresión regular, `(\w)\1`, que se puede interpretar de la siguiente manera.  
   
-|Elemento|Descripción|  
+|Elemento|Description|  
 |-------------|-----------------|  
 |(\w)|Coincide con un carácter de palabra. Este es el primer grupo de captura.|  
 |\1|Coincide con el valor de la primera captura.|  
@@ -277,7 +280,7 @@ ms.lasthandoff: 11/21/2017
   
  En otras palabras, coincide con cualquier carácter excepto con los que figuran en las categorías Unicode de la tabla siguiente.  
   
-|Categoría|Descripción|  
+|Categoría|Description|  
 |--------------|-----------------|  
 |Ll|Letra, minúscula|  
 |Lu|Letra, mayúscula|  
@@ -295,7 +298,7 @@ ms.lasthandoff: 11/21/2017
   
  En el ejemplo siguiente se ilustra la clase de caracteres `\W`.  Define un patrón de expresión regular, `\b(\w+)(\W){1,2}`, que coincide con una palabra seguida de uno o dos caracteres que no son de palabra, como un espacio en blanco o un signo de puntuación. La expresión regular se interpreta como se muestra en la tabla siguiente.  
   
-|Elemento|Descripción|  
+|Elemento|Description|  
 |-------------|-----------------|  
 |\b|Iniciar la búsqueda de coincidencias en un límite de palabras.|  
 |(\w+)|Buscar coincidencias con uno o más caracteres alfabéticos. Este es el primer grupo de captura.|  
@@ -312,7 +315,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="white-space-character-s"></a>Carácter de espacio en blanco: \s  
  `\s` coincide con cualquier carácter que sea un espacio en blanco. Equivale a las secuencias de escape y las categorías Unicode que figuran en la tabla siguiente.  
   
-|Categoría|Descripción|  
+|Categoría|Description|  
 |--------------|-----------------|  
 |`\f`|El carácter de avance de página, \u000C.|  
 |`\n`|El carácter de nueva línea, \u000A.|  
@@ -326,7 +329,7 @@ ms.lasthandoff: 11/21/2017
   
  En el ejemplo siguiente se ilustra la clase de caracteres `\s`. Define un patrón de expresión regular, `\b\w+(e)?s(\s|$)`, que coincide con una palabra que termina por "s" o "es" seguida de un carácter de espacio en blanco o el final de la cadena de entrada. La expresión regular se interpreta como se muestra en la tabla siguiente.  
   
-|Elemento|Descripción|  
+|Elemento|Description|  
 |-------------|-----------------|  
 |\b|Iniciar la búsqueda de coincidencias en un límite de palabras.|  
 |\w+|Buscar coincidencias con uno o más caracteres alfabéticos.|  
@@ -347,7 +350,7 @@ ms.lasthandoff: 11/21/2017
   
  En el ejemplo siguiente se ilustra el elemento del lenguaje `\S`. El patrón de expresión regular `\b(\S+)\s?` coincide con cadenas delimitadas por caracteres de espacio en blanco. El segundo elemento del objeto <xref:System.Text.RegularExpressions.GroupCollection> de la coincidencia contiene la cadena coincidente. La expresión regular puede interpretarse como se muestra en la tabla siguiente.  
   
-|Elemento|Descripción|  
+|Elemento|Description|  
 |-------------|-----------------|  
 |`\b`|Iniciar la búsqueda de coincidencias en un límite de palabras.|  
 |`(\S+)`|Coincide con caracteres que no son espacio en blanco. Este es el primer grupo de captura.|  
@@ -366,7 +369,7 @@ ms.lasthandoff: 11/21/2017
   
  En el ejemplo siguiente se ilustra el elemento del lenguaje `\d`. Comprueba si una cadena de entrada representa un número de teléfono válido de los Estados Unidos y Canadá. El patrón de expresión regular `^(\(?\d{3}\)?[\s-])?\d{3}-\d{4}$` se define como se muestra en la tabla siguiente.  
   
-|Elemento|Descripción|  
+|Elemento|Description|  
 |-------------|-----------------|  
 |`^`|Iniciar la búsqueda de coincidencias con el principio de la cadena de entrada.|  
 |`\(?`|Coincide con cero o un carácter "(" literal.|  
@@ -390,7 +393,7 @@ ms.lasthandoff: 11/21/2017
   
  En el ejemplo siguiente se muestra el elemento del lenguaje \D. Comprueba si una cadena, como un número de pieza, consta de la combinación adecuada de caracteres decimales y no decimales. El patrón de expresión regular `^\D\d{1,5}\D*$` se define como se muestra en la tabla siguiente.  
   
-|Elemento|Descripción|  
+|Elemento|Description|  
 |-------------|-----------------|  
 |`^`|Iniciar la búsqueda de coincidencias con el principio de la cadena de entrada.|  
 |`\D`|Coincide con un carácter que no sea un dígito.|  
@@ -405,9 +408,9 @@ ms.lasthandoff: 11/21/2017
   
 <a name="SupportedUnicodeGeneralCategories"></a>   
 ## <a name="supported-unicode-general-categories"></a>Categorías generales Unicode compatibles  
- Unicode define las categorías generales que se muestran en la tabla siguiente. Para obtener más información, consulte las secciones sobre el "formato de archivo UCD" y los "valores de categorías generales" en la [base de datos de caracteres Unicode](http://go.microsoft.com/fwlink/?LinkId=57650).  
+ Unicode define las categorías generales que se muestran en la tabla siguiente. Para obtener más información, consulte las secciones sobre el "formato de archivo UCD" y los "valores de categorías generales" en la [base de datos de caracteres Unicode](http://www.unicode.org/reports/tr44/).  
   
-|Categoría|Descripción|  
+|Categoría|Description|  
 |--------------|-----------------|  
 |`Lu`|Letra, mayúscula|  
 |`Ll`|Letra, minúscula|  
@@ -588,7 +591,7 @@ ms.lasthandoff: 11/21/2017
   
  En el ejemplo siguiente se define una expresión regular, `^[0-9-[2468]]+$`, que coincide con cero y con los dígitos impares de una cadena de entrada.  La expresión regular se interpreta como se muestra en la tabla siguiente.  
   
-|Elemento|Descripción|  
+|Elemento|Description|  
 |-------------|-----------------|  
 |^|Comienza la búsqueda de coincidencias al principio de la cadena de entrada.|  
 |`[0-9-[2468]]+`|Coincide con una o varias apariciones de cualquier carácter del 0 al 9, salvo con el 2, 4, 6 y 8. En otras palabras, busca una o varias coincidencias con cero o un dígito impar.|  
