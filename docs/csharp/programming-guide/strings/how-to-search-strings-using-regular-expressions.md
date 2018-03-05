@@ -2,20 +2,21 @@
 title: "Cómo: Buscar cadenas mediante expresiones regulares (Guía de programación de C#)"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - searching strings [C#]
 - strings [C#], searching with RegEx
 ms.assetid: dcab2150-a4a2-4fe4-87e3-83b83b58d84a
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
 ms.openlocfilehash: c851c57b44f1343816b905db002e530121fb6c0a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="how-to-search-strings-using-regular-expressions-c-programming-guide"></a>Cómo: Buscar cadenas mediante expresiones regulares (Guía de programación de C#)
 La clase <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> se puede usar para buscar cadenas. Estas búsquedas pueden tener distinta complejidad, desde ser muy sencillas hasta hacer un gran uso de expresiones regulares. A continuación se ofrecen dos ejemplos de búsqueda de cadenas usando la clase <xref:System.Text.RegularExpressions.Regex>. Para obtener más información, vea [Expresiones regulares de .NET Framework](https://msdn.microsoft.com/library/hs600312).  

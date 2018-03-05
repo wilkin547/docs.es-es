@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 2b7b85d2aa3c563fbd4c7cf89336827d25f22c0e
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: e6ac6f2d316a94e69c2599acf07aaaf6361b3e5a
+ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="implementing-value-objects"></a>Implementar objetos de valor
 
@@ -136,7 +136,7 @@ Acaba de ver cómo definir un objeto de valor en el modelo de dominio, pero ¿c�
 
 ### <a name="background-and-older-approaches-using-ef-core-11"></a>Contexto y enfoques anteriores con EF Core 1.1
 
-Para situarnos, una limitación a la hora de usar EF Core 1.0 y 1.1 era que no se podían usar [tipos complejos](https://docs.microsoft.com/dotnet/api/system.componentmodel.dataannotations.schema.complextypeattribute?view=netframework-4.7) tal y como se define en EF 6.x en el .NET Framework tradicional. Por lo tanto, si se usaba EF Core 1.0 o 1.1, era necesario almacenar el objeto de valor como una entidad de EF con un campo de identificador. Luego, para que se pareciera más a un objeto de valor sin ninguna identidad, se podía ocultar su identificador para dejar claro que la identidad de un objeto de valor no es importante en el modelo de dominio. Ese identificador se podía ocultar usándolo como [propiedad reemplazada](https://docs.microsoft.com/ef/core/modeling/shadow-properties ). Puesto que esa configuración para ocultar el identificador en el modelo está establecida en el nivel de la infraestructura de EF, resultaría algo transparente para su modelo de dominio.
+Para situarnos, una limitación a la hora de usar EF Core 1.0 y 1.1 era que no se podían usar [tipos complejos](xref:System.ComponentModel.DataAnnotations.Schema.ComplexTypeAttribute) tal y como se define en EF 6.x en el .NET Framework tradicional. Por lo tanto, si se usaba EF Core 1.0 o 1.1, era necesario almacenar el objeto de valor como una entidad de EF con un campo de identificador. Luego, para que se pareciera más a un objeto de valor sin ninguna identidad, se podía ocultar su identificador para dejar claro que la identidad de un objeto de valor no es importante en el modelo de dominio. Ese identificador se podía ocultar usándolo como [propiedad reemplazada](https://docs.microsoft.com/ef/core/modeling/shadow-properties ). Puesto que esa configuración para ocultar el identificador en el modelo está establecida en el nivel de la infraestructura de EF, resultaría algo transparente para su modelo de dominio.
 
 En la versión inicial de eShopOnContainers (.NET Core 1.1), el identificador oculto necesario para la infraestructura de EF Core estaba implementado del siguiente modo en el nivel de DbContext, usando la API fluida en el proyecto de la infraestructura. Por lo tanto, el identificador quedaba oculto desde el punto de vista del modelo de dominio, pero seguía presente en la infraestructura.
 
@@ -168,7 +168,7 @@ Los tipos de entidad de propiedad le permiten asignar tipos que no tienen su pro
 Si se examina el modelo de dominio, parece que los tipos de propiedad no tienen ninguna identidad
 pero, en el fondo, los tipos de propiedad tienen identidad, aunque la propiedad de navegación del propietario forma parte de esta identidad.
 
-La identidad de las instancias de los tipos de propiedad no es totalmente suya. Consta de tres componentes: 
+La identidad de las instancias de los tipos de propiedad no es totalmente suya. Consta de tres componentes:
 
 - La identidad del propietario
 
@@ -252,8 +252,8 @@ public class Order
 
 public class OrderDetails
 {
-    public StreetAddress BillingAddress { get; set; }
-    public StreetAddress ShippingAddress { get; set; }
+    public Address BillingAddress { get; set; }
+    public Address ShippingAddress { get; set; }
 }
 
 public class Address

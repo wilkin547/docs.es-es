@@ -13,11 +13,11 @@ ms.assetid: 6520323e-ff28-4c8a-ba80-e64a413199e6
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: cdd76558852992a5c2f6b7def83e30fb004f93b6
-ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
+ms.openlocfilehash: d219a584f2f5521fc3b0fd00ab037a8e486c9050
+ms.sourcegitcommit: 75a180acb5d8a2dbd4a52915ce8e980749fb1d05
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 02/24/2018
 ---
 # <a name="net-assembly-file-format"></a>Formato de archivo de ensamblado .NET
 
@@ -25,7 +25,7 @@ ms.lasthandoff: 01/05/2018
 
 > Cada componente de CLI incluye los metadatos para las declaraciones, implementaciones y referencias específicas a ese componente. Por tanto, los metadatos específicos del componente se conocen como metadatos del componente y se dice que el componente resultante es autodescriptivo (de ECMA 335 I.9.1, Componentes y ensamblados).
 
-El formato se especifica y estandariza por completo como ECMA 335. Todos los compiladores y tiempos de ejecución de .NET usan este formato. La presencia de un formato binario documentado y actualizado con poca frecuencia ha sido una ventaja importante (posiblemente un requisito) para la interoperabilidad. El formato se ha actualizado por última vez de forma significativa en 2005 (.NET 2.0) para dar cabida a la arquitectura del procesador y genéricos.
+El formato se especifica y estandariza por completo como [ECMA 335](http://www.ecma-international.org/publications/standards/Ecma-335.htm). Todos los compiladores y tiempos de ejecución de .NET usan este formato. La presencia de un formato binario documentado y actualizado con poca frecuencia ha sido una ventaja importante (posiblemente un requisito) para la interoperabilidad. El formato se ha actualizado por última vez de forma significativa en 2005 (.NET 2.0) para dar cabida a la arquitectura del procesador y genéricos.
 
 El formato es independiente de la CPU y del sistema operativo. Se ha usado como parte de las implementaciones de .NET que se dirigen a muchos chips y CPU. Aunque el propio formato tiene legado de Windows, se puede implementar en cualquier sistema operativo. Posiblemente, la opción más importante para la interoperabilidad del sistema operativo es que la mayoría de los valores se almacenan en formato little-endian. No tiene una afinidad específica con el tamaño del puntero de equipo (por ejemplo, 32 bits, 64 bits).
 

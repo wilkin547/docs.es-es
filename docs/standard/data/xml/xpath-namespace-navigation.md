@@ -16,16 +16,16 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: cae3fa68d3820e98bee333d0252aeb74b15fe2a7
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 8cc8d1f031b3f00cdf2b698514220c25c9fec7be
+ms.sourcegitcommit: ba765893e3efcece67d99fd6d5ce0074b050d1d9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="xpath-namespace-navigation"></a>Navegación por el espacio de nombres XPath
 Para usar consultas XPath con documentos XML, debe direccionar correctamente los espacios de nombres XML y los elementos que contienen los espacios de nombres. Los espacios de nombres evitan las ambigüedades que pueden producirse cuando los nombres se utilizan en varios contextos; por ejemplo, el nombre `ID` puede referirse a varios identificadores asociados con distintos elementos de un documento XML. La sintaxis de los espacios de nombres especifica los URI, nombres y prefijos que distinguen los elementos de un documento XML.  
   
- El ejemplo de este tema muestra el uso de los prefijos durante la navegación por un documento XML con <xref:System.Xml.XPath.XPathNavigator>. Para obtener más información sobre los espacios de nombres y la sintaxis, vea [Introducción a los espacios de nombres XML](http://go.microsoft.com/fwlink/?linkid=140245).  
+ El ejemplo de este tema muestra el uso de los prefijos durante la navegación por un documento XML con <xref:System.Xml.XPath.XPathNavigator>. Para obtener más información sobre los espacios de nombres y la sintaxis, vea [Introducción a los espacios de nombres XML](https://msdn.microsoft.com/library/aa468565.aspx).  
   
 ## <a name="namespace-declarations"></a>Declaraciones de espacios de nombres  
  Las declaraciones de espacios de nombres permiten distinguir y direccionar los elementos de un documento XML cuando se utiliza una instancia de <xref:System.Xml.XPath.XPathNavigator>. Los prefijos de los espacios de nombres proporcionan una sintaxis breve para direccionar los espacios de nombres.  

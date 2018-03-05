@@ -37,11 +37,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 643a1c7d8dd141a8d898af61ba8302f46207321b
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: d8bbf57625e1d944ab4e97235e718eef7b61a3a4
+ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="type-conversion-in-the-net-framework"></a>Conversión de tipos en .NET Framework
 <a name="top"></a> Cada valor tiene un tipo asociado, que define los atributos como la cantidad de espacio asignado al valor, el intervalo de valores posibles que puede tener y los miembros que ofrece. Muchos valores se pueden expresar como más de un tipo. Por ejemplo, el valor 4 se puede expresar como un entero o como un valor de punto flotante. La conversión de tipo crea un valor en un nuevo tipo que es equivalente al valor de un tipo antiguo, pero no conserva necesariamente la identidad (o valor exacto) del objeto original.  
@@ -62,11 +62,11 @@ ms.lasthandoff: 12/23/2017
   
 -   El operador `Explicit`, que define las conversiones de restricción disponibles entre los tipos. Para obtener más información, consulte la sección [Conversión explícita con el operador Explicit](#explicit_conversion_with_the_explicit_operator).  
   
--   La interfaz <xref:System.IConvertible>, que define las conversiones en cada uno de los tipos de datos base de .NET Framework. Para obtener más información, consulte la sección [La interfaz IConvertible](#the_iconvertible_interface).  
+-   La interfaz <xref:System.IConvertible>, que define las conversiones en cada uno de los tipos de datos base de .NET Framework. Para obtener más información, vea [Interfaz IConvertible](#the_iconvertible_interface).  
   
 -   La clase <xref:System.Convert>, que proporciona un conjunto de métodos que implementan los métodos de la interfaz <xref:System.IConvertible>. Para obtener más información, vea la sección [Clase Convert](#Convert).  
   
--   La clase <xref:System.ComponentModel.TypeConverter>, que es una clase base que se puede extender para admitir la conversión de un tipo concreto en cualquier otro tipo. Para obtener más información, consulte la sección [Clase TypeConverter](#the_typeconverter_class).  
+-   La clase <xref:System.ComponentModel.TypeConverter>, que es una clase base que se puede extender para admitir la conversión de un tipo concreto en cualquier otro tipo. Para obtener más información, vea [Clase TypeConverter](#the_typeconverter_class).  
   
 <a name="implicit_conversion_with_the_implicit_operator"></a>   
 ## <a name="implicit-conversion-with-the-implicit-operator"></a>Conversión implícita con el operador Implicit  

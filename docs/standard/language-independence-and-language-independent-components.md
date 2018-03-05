@@ -26,11 +26,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: ec6f7df4cc42b71ab9c61e84b71a81f641a1d0b3
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 81ccf70482c8b7f4acb0b18381ed4cf07edc06af
+ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="language-independence-and-language-independent-components"></a>Independencia del lenguaje y componentes independientes del lenguaje
 .NET Framework. es independiente del lenguaje. Esto significa que, como desarrollador, puede utilizar uno de los muchos lenguajes que tienen como destino .NET Framework; por ejemplo, C#, C++/CLI, Eiffel, F#, IronPython, IronRuby, PowerBuilder, Visual Basic, Visual COBOL y Windows PowerShell. Puede acceder a los tipos y miembros de las bibliotecas de clases desarrolladas para .NET Framework sin necesidad de conocer el lenguaje en el que se escribieron originalmente y sin necesidad de seguir ninguna de las convenciones del lenguaje original. Si es un desarrollador de componentes, podrá acceder a su componente desde cualquier aplicación de .NET Framework, con independencia del lenguaje.  
@@ -212,7 +212,7 @@ ms.lasthandoff: 12/23/2017
   
 -   Referencias con establecimiento de tipos, que son construcciones especiales que contienen una referencia a un objeto y una referencia a un tipo. Las referencias con establecimiento de tipos se representan en .NET Framework mediante la clase <xref:System.TypedReference>.  
   
- Si un tipo no es conforme a CLS, deberá aplicarle el atributo <xref:System.CLSCompliantAttribute> con el valor de `isCompliant` establecido en `false`. Para más información, consulte la sección [CLSCompliantAttribute (Atributo)](#CLSAttribute).  
+ Si un tipo no es conforme a CLS, deberá aplicarle el atributo <xref:System.CLSCompliantAttribute> con el valor de `isCompliant` establecido en `false`. Para obtener más información, vea la sección [CLSCompliantAttribute (Atributo)](#CLSAttribute).  
   
  En el ejemplo siguiente se muestra el problema de la conformidad con CLS en la creación de instancias de tipos genéricos y signaturas de métodos. En este ejemplo, se define una clase `InvoiceItem` con una propiedad de tipo <xref:System.UInt32>, una propiedad de tipo `Nullable(Of UInt32)` y un constructor con parámetros de tipo <xref:System.UInt32> y `Nullable(Of UInt32)`. Cuando intente compilar este ejemplo, aparecerán cuatro advertencias del compilador.  
   

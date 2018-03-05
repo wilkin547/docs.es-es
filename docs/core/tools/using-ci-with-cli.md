@@ -10,12 +10,13 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 0d6e1e34-277c-4aaf-9880-3ebf81023857
-ms.workload: dotnetcore
-ms.openlocfilehash: cc2defb72c61e45ecfebd26937f1c3fd2d405171
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 552865f225ceac9e7a365452ee06d7fefeeb7213
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="using-net-core-sdk-and-tools-in-continuous-integration-ci"></a>Uso de .NET Core SDK y herramientas de integración continua (CI)
 
@@ -44,7 +45,7 @@ El script del instalador se puede automatizar para que se ejecute al principio d
 
 ## <a name="ci-setup-examples"></a>Ejemplos de configuración de CI
 
-En esta sección se explica un procedimiento de instalación manual con un script de PowerShell o de Bash, además de incluir una descripción de varias soluciones de CI de software como servicio (SaaS). Las soluciones de CI de SaaS tratadas son [Travis CI](https://travis-ci.org/), [AppVeyor](https://www.appveyor.com/) y [compilación de Visual Studio Team Services](https://www.visualstudio.com/docs/build/overview).
+En esta sección se explica un procedimiento de instalación manual con un script de PowerShell o de Bash, además de incluir una descripción de varias soluciones de CI de software como servicio (SaaS). Las soluciones de CI de SaaS tratadas son [Travis CI](https://travis-ci.org/), [AppVeyor](https://www.appveyor.com/) y [compilación de Visual Studio Team Services](https://docs.microsoft.com/vsts/build-release/index).
 
 ### <a name="manual-setup"></a>Instalación manual
 
@@ -155,7 +156,7 @@ Configure Visual Studio Team Services (VSTS) para compilar proyectos de .NET Cor
 1. Ejecute el script del [paso de instalación manual](#manual-setup) con sus comandos.
 1. Cree una compilación compuesta de varias tareas de compilación integradas en VSTS que están configuradas para usar herramientas de .NET Core.
 
-Ambas soluciones son válidas. Con la utilización de un script de instalación manual, puede controlar la versión de las herramientas que recibe, ya que las descarga como parte de la compilación. La compilación se ejecuta desde un script que debe crear. En este tema solo se trata la opción manual. Para obtener más información sobre la composición de una compilación con tareas de compilación de VSTS, consulte el tema [Continuous integration and deployment](https://www.visualstudio.com/docs/build/overview) (Implementación e integración continuas) de VSTS.
+Ambas soluciones son válidas. Con la utilización de un script de instalación manual, puede controlar la versión de las herramientas que recibe, ya que las descarga como parte de la compilación. La compilación se ejecuta desde un script que debe crear. En este tema solo se trata la opción manual. Para obtener más información sobre la composición de una compilación con tareas de compilación de VSTS, consulte el tema [Continuous integration and deployment](https://docs.microsoft.com/vsts/build-release/index) (Implementación e integración continuas) de VSTS.
 
 Para usar un script de instalación manual en VSTS, cree una definición de compilación y especifique el script que va a ejecutar para el paso de compilación. Esto se realiza en la interfaz de usuario de VSTS:
 
@@ -177,7 +178,7 @@ Para usar un script de instalación manual en VSTS, cree una definición de comp
 
 ## <a name="orchestrating-the-build"></a>Orquestación de la compilación
 
-En la mayor parte de este documento se describe cómo adquirir las herramientas de .NET Core y configurar varios servicios de CI sin ofrecer información sobre cómo orquestar o *compilar realmente* el código con .NET Core. Las opciones para estructurar el proceso de compilación dependen de muchos factores que no se pueden tratar aquí en términos generales. Explore los recursos y ejemplos proporcionados en las series de documentos de [Travis CI](https://travis-ci.org/), [AppVeyor](https://www.appveyor.com/) y [VSTS](https://www.visualstudio.com/docs/build/overview) para obtener más información sobre cómo orquestar las compilaciones con cada tecnología.
+En la mayor parte de este documento se describe cómo adquirir las herramientas de .NET Core y configurar varios servicios de CI sin ofrecer información sobre cómo orquestar o *compilar realmente* el código con .NET Core. Las opciones para estructurar el proceso de compilación dependen de muchos factores que no se pueden tratar aquí en términos generales. Explore los recursos y ejemplos proporcionados en las series de documentos de [Travis CI](https://travis-ci.org/), [AppVeyor](https://www.appveyor.com/) y [VSTS](https://docs.microsoft.com/vsts/build-release/index) para obtener más información sobre cómo orquestar las compilaciones con cada tecnología.
 
 Dos enfoques generales que se aplican para estructurar el proceso de compilación del código de .NET Core con herramientas de .NET Core consisten en utilizar directamente MSBuild o en usar los comandos de la línea de comandos de .NET Core. El enfoque que debe adoptar depende de lo cómo que se sienta con cada uno de ellos y de los inconvenientes que presente su complejidad. MSBuild ofrece la posibilidad de expresar el proceso de compilación como tareas y objetivos, pero presenta la complejidad añadida de tener que aprender la sintaxis del archivo de proyecto de MSBuild. Quizá sea más sencillo usar las herramientas de línea de comandos de .NET Core, pero, en este caso, es necesario escribir la lógica de orquestación en un lenguaje de scripting como `bash` o PowerShell.
 

@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 5d809ecdbef465206015a103a14baab8dc0b49c7
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: d9489bca5ac69046818a1809b2f3082baea1eaa8
+ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="when-to-choose-net-core-for-docker-containers"></a>Cuándo elegir .NET Core para contenedores de Docker
 
@@ -35,7 +35,7 @@ Obviamente, si su objetivo es tener una aplicación (servicio o aplicación web)
 
 [Visual Studio para Mac](https://www.visualstudio.com/vs/visual-studio-mac/) es un IDE, evolución de Xamarin Studio, que se ejecuta en Mac OS y es compatible con Docker desde mediados de 2017.
 
-También puede usar [Visual Studio Code](https://code.visualstudio.com/) (VS Code) en macOS, Linux y Windows. VS Code es compatible con .NET Core, incluidos IntelliSense y depuración. Como VS Code es un editor ligero, puede usarlo para desarrollar aplicaciones en contenedor en Mac, junto con la interfaz de la línea de comandos de Docker y las [herramientas de interfaz de línea de comandos (CLI) de .NET Core](https://docs.microsoft.com/dotnet/core/tools/?tabs=netcore2x). También puede utilizar .NET Core con la mayoría de editores de terceros, como Sublime Text, Emacs, vi y el proyecto OmniSharp de código abierto, que es compatible con IntelliSense para los lenguajes .NET. Además de los editores e IDE, puede utilizar la CLI de .NET Core en todas las plataformas admitidas.
+También puede usar [Visual Studio Code](https://code.visualstudio.com/) (VS Code) en macOS, Linux y Windows. VS Code es compatible con .NET Core, incluidos IntelliSense y depuración. Como VS Code es un editor ligero, puede usarlo para desarrollar aplicaciones en contenedor en Mac, junto con la interfaz de la línea de comandos de Docker y las [herramientas de interfaz de línea de comandos (CLI) de .NET Core](../../../core/tools/index.md). También puede utilizar .NET Core con la mayoría de editores de terceros, como Sublime Text, Emacs, vi y el proyecto OmniSharp de código abierto, que es compatible con IntelliSense para los lenguajes .NET. Además de los editores e IDE, puede utilizar la CLI de .NET Core en todas las plataformas admitidas.
 
 ## <a name="using-containers-for-new-green-field-projects"></a>Uso de contenedores para nuevos proyectos (green field)
 

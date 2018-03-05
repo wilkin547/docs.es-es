@@ -20,14 +20,14 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 4b59b2b59852190bd19a3c1c9536fadb7b40603e
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 5b55271306abdca95694bd8fb2ebb6e538d060ae
+ms.sourcegitcommit: ba765893e3efcece67d99fd6d5ce0074b050d1d9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="post-schema-compilation-infoset"></a>Conjunto de información posterior a la compilación de esquemas
-La [recomendación de esquemas XML del W3C (World Wide Web Consortium)](http://go.microsoft.com/fwlink/?linkid=45242) trata acerca del conjunto de información que debe presentarse para la validación del esquema previo y para la compilación del esquema posterior. El Modelo de objetos de esquema XML (SOM) consulta esta información antes y después de llamar al método <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> de <xref:System.Xml.Schema.XmlSchemaSet>.  
+La [recomendación de esquemas XML del W3C (World Wide Web Consortium)](https://www.w3.org/XML/Schema) trata acerca del conjunto de información que debe presentarse para la validación del esquema previo y para la compilación del esquema posterior. El Modelo de objetos de esquema XML (SOM) consulta esta información antes y después de llamar al método <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> de <xref:System.Xml.Schema.XmlSchemaSet>.  
   
  El conjunto de información previo a la validación del esquema se crea durante la edición del esquema. El conjunto de información posterior a la compilación del esquema se genera después de llamar al método <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> de <xref:System.Xml.Schema.XmlSchemaSet> durante la compilación del esquema, y se proporciona como propiedades.  
   

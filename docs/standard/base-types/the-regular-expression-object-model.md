@@ -48,11 +48,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 4f1918788a571e9626554eaeec9fdd3f1686d4cc
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 8917ce764d615282f95aad2eee494fcc0ba7a847
+ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="the-regular-expression-object-model"></a>El modelo de objetos de expresión regular
 <a name="introduction"></a> En este tema se describe el modelo de objetos usado para trabajar con expresiones regulares de .NET. Contiene las siguientes secciones:  
@@ -210,7 +210,7 @@ ms.lasthandoff: 12/23/2017
   
 -   La propiedad `Match.Captures` devuelve un objeto <xref:System.Text.RegularExpressions.CaptureCollection> que es de uso limitado. La colección no se rellena para un objeto <xref:System.Text.RegularExpressions.Match> cuya propiedad `Success` es `false`. De lo contrario, contiene un único objeto <xref:System.Text.RegularExpressions.Capture> que tiene la misma información que el objeto <xref:System.Text.RegularExpressions.Match>.  
   
- Para obtener más información sobre estos objetos, consulte las secciones [La colección de grupos](#GroupCollection) y [La colección de capturas](#CaptureCollection) más adelante en este tema.  
+ Para obtener más información sobre estos objetos, vea las secciones [Colección de grupos](#GroupCollection) y [Colección de capturas](#CaptureCollection) más adelante en este tema.  
   
  Dos propiedades adicionales de la clase <xref:System.Text.RegularExpressions.Match> proporcionan información sobre la coincidencia. La propiedad `Match.Value` devuelve la subcadena en la cadena de entrada que coincide con el patrón de expresión regular. La propiedad `Match.Index` devuelve la posición inicial basada en cero de la cadena coincidente en la cadena de entrada.  
   

@@ -28,11 +28,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 648c86c71de3c92825af3cfdd4ac2ca023f5e027
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: e328c294a9b4ca3047c4ad1750ddedf64bac2218
+ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="anchors-in-regular-expressions"></a>Delimitadores en expresiones regulares
 <a name="top"></a> Los delimitadores, o aserciones atómicas de ancho cero, especifican la posición de la cadena en que se debe producir una coincidencia. Cuando se usa un delimitador en una expresión de búsqueda, el motor de expresiones regulares no avanza por la cadena o ni consume caracteres, sino que solo busca una coincidencia en la posición especificada. Por ejemplo, `^` especifica que la coincidencia debe empezar al principio de una cadena o línea. Por consiguiente, la expresión regular `^http:` coincide con "http": solo cuando se encuentra al principio de una línea. En la tabla siguiente, se enumeran los delimitadores que admiten las expresiones regulares de .NET.  
@@ -71,9 +71,9 @@ ms.lasthandoff: 12/23/2017
 |`(\w+\s\w+)`|Coincide con uno o varios caracteres que se usan para formar palabras seguidos de un espacio, seguidos de uno o varios caracteres que se usan para formar palabras. Este es el cuarto grupo de captura.|  
 |`,`|Coincide con una coma.|  
 |`\s\d{4}`|Coincide con un espacio seguido de cuatro dígitos decimales.|  
-|(-`(\d{4}&#124;present))?`|Coincide con cero o un guion seguido de cuatro dígitos decimales o de la cadena "present". Este es el sexto grupo de captura. También incluye un séptimo grupo de captura.|  
+|<code>(-(\d{4}&#124;present))?</code>|Coincide con cero o un guion seguido de cuatro dígitos decimales o de la cadena "present". Este es el sexto grupo de captura. También incluye un séptimo grupo de captura.|  
 |`,?`|Coincide con una coma o ninguna.|  
-|`(\s\d{4}(-(\d{4}&#124;present))?,?)+`|Coincide con una o más apariciones de lo siguiente: un espacio, cuatro dígitos decimales, cero o un guion seguido de cuatro dígitos decimales o de la cadena "present", y una coma o ninguna. Este es el quinto grupo de captura.|  
+|<code>(\s\d{4}(-(\d{4}&#124;present))?,?)+</code>|Coincide con una o más apariciones de lo siguiente: un espacio, cuatro dígitos decimales, cero o un guion seguido de cuatro dígitos decimales o de la cadena "present", y una coma o ninguna. Este es el quinto grupo de captura.|  
   
  [Volver al principio](#top)  
   

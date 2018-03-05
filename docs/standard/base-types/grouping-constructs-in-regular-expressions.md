@@ -26,11 +26,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: b6e0b9d3482bbfc3dabeee1f6b7fce7a93364dfb
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 9b9e54d8bbc9ca7cc9172fd83bd15968b3cef8e1
+ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="grouping-constructs-in-regular-expressions"></a>Construcciones de agrupamiento en expresiones regulares
 Las construcciones de agrupamiento definen las subexpresiones de una expresión regular y capturan las subcadenas de una cadena de entrada. Puede utilizar construcciones de agrupamiento para hacer lo siguiente:  
@@ -421,7 +421,7 @@ Las construcciones de agrupamiento definen las subexpresiones de una expresión 
 |`\w+`|Coincide con uno o varios caracteres que se usan para formar palabras seguidos de un carácter de espacio en blanco.|  
 |`\d{1,2},`|Coincide con uno o dos dígitos decimales seguidos de un carácter de espacio en blanco y una coma.|  
 |`\d{4}\b`|Coincide con cuatro dígitos decimales seguidos de un límite de palabras.|  
-|`(?<!(Saturday&#124;Sunday) )`|Si la coincidencia va precedida por algo distinto de las cadenas "Saturday" o "Sunday" seguidas de un espacio, la coincidencia es correcta.|  
+|<code>(?<!(Saturday&#124;Sunday) )</code>|Si la coincidencia va precedida por algo distinto de las cadenas "Saturday" o "Sunday" seguidas de un espacio, la coincidencia es correcta.|  
   
 <a name="nonbacktracking_subexpression"></a>   
 ## <a name="nonbacktracking-subexpressions"></a>Subexpresiones sin retroceso  
