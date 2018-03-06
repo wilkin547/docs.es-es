@@ -27,11 +27,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: db1c3af1bb3ad207278eed64a8fb2ef8ed6dc465
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: ad4e8ab527ca59c21bf4771ca9d386866d9919f7
+ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="quantifiers-in-regular-expressions"></a>cuantificadores en expresiones regulares
 Los cuantificadores especifican cuántas instancias de un carácter, grupo o clase de caracteres deben estar presentes en la entrada para que se encuentre una coincidencia.  En la tabla siguiente se indican los cuantificadores compatibles con .NET.  
@@ -273,7 +273,7 @@ Los cuantificadores especifican cuántas instancias de un carácter, grupo o cla
 |Modelo|Description|  
 |-------------|-----------------|  
 |`(a\1`|Coincide con "a", junto con el valor del primer grupo capturado...|  
-|`&#124;(?(1)`|… o bien, prueba si se ha definido el primer grupo capturado. (Tenga en cuenta que la construcción `(?(1)` no define un grupo de captura).|  
+|<code>&#124;(?(1)</code>|… o bien, prueba si se ha definido el primer grupo capturado. (Tenga en cuenta que la construcción `(?(1)` no define un grupo de captura).|  
 |`\1))`|Si el primer grupo capturado existe, coincide con su valor. Si el grupo no existe, el grupo coincidirá con <xref:System.String.Empty?displayProperty=nameWithType>.|  
   
  La primera expresión regular intenta coincidir con este patrón de cero a dos veces; el segundo, exactamente dos veces. Dado que el primer modelo alcanza el número mínimo de capturas con su primera captura de <xref:System.String.Empty?displayProperty=nameWithType>, nunca se repite para intentar coincidir con `a\1`; el cuantificador `{0,2}` solo permite las coincidencias vacías en la última iteración. En cambio, la segunda expresión regular coincide con "a" porque evalúa `a\1` una segunda vez. El número mínimo de iteraciones (dos) obliga al motor a repetirse tras una coincidencia vacía.  

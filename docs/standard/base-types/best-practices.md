@@ -22,11 +22,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 4064e3f9bd9be425108baf934817645fc7fa51c2
-ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
+ms.openlocfilehash: c665dfbf8c3b6609a934aae027ba40e0462498db
+ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="best-practices-for-regular-expressions-in-net"></a>Procedimientos recomendados con expresiones regulares en .NET
 <a name="top"></a> El motor de expresiones regulares de .NET es una herramienta eficaz y completa que procesa texto basándose en coincidencias de patrones en lugar de comparar y buscar coincidencias con texto literal. En la mayoría de los casos, realiza la coincidencia de modelos de manera rápida y eficaz. Sin embargo, en algunos casos, puede parecer que el motor de expresiones regulares es muy lento. En casos extremos, incluso puede parecer que deja de responder mientras procesa una entrada relativamente pequeña a lo largo de las horas o incluso los días.  
@@ -150,8 +150,8 @@ ms.lasthandoff: 01/09/2018
 |-------------|-----------------|  
 |`\b`|Iniciar la búsqueda de coincidencias en un límite de palabras.|  
 |`\w+`|Buscar coincidencias con uno o más caracteres alfabéticos.|  
-|`(\r?\n)&#124;,?\s)`|Buscar una coincidencia con cero o un retorno de carro seguido de un carácter de nueva línea, o cero o una coma seguida de un carácter de espacio en blanco.|  
-|`(\w+((\r?\n)&#124;,?\s))*`|Buscar coincidencias con cero o más apariciones de uno o más caracteres alfabéticos que van seguidos de cero o un retorno de carro y un carácter de nueva línea, o de cero o una coma seguida de un carácter de espacio en blanco.|  
+|<code>(\r?\n)&#124;,?\s)</code>|Buscar una coincidencia con cero o un retorno de carro seguido de un carácter de nueva línea, o cero o una coma seguida de un carácter de espacio en blanco.|  
+|<code>(\w+((\r?\n)&#124;,?\s))*</code>|Buscar coincidencias con cero o más apariciones de uno o más caracteres alfabéticos que van seguidos de cero o un retorno de carro y un carácter de nueva línea, o de cero o una coma seguida de un carácter de espacio en blanco.|  
 |`\w+`|Buscar coincidencias con uno o más caracteres alfabéticos.|  
 |`[.?:;!]`|Buscar una coincidencia con un punto, un signo de interrogación, dos puntos, punto y coma o un signo de exclamación.|  
   
