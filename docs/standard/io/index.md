@@ -16,18 +16,18 @@ helpviewer_keywords:
 - streams, I/O
 - data streams, I/O
 ms.assetid: 4f4a33a9-66b7-4cd7-a285-4ad3e4276cd2
-caps.latest.revision: "33"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 9ddb94119d009d61e8126724df2a4b852b7ad3f5
-ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
+ms.openlocfilehash: e9ebd1a11684afaa143d1f016f31e0a29a3478db
+ms.sourcegitcommit: ba765893e3efcece67d99fd6d5ce0074b050d1d9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="file-and-stream-io"></a>E/S de archivos y secuencias
 La E/S (entrada/salida) de archivos y secuencias hace referencia a la transferencia de datos con destino u origen en un medio de almacenamiento. En .NET Framework, los espacios de nombres `System.IO` contienen tipos que permiten la lectura y escritura, tanto sincrónica como asincrónica, en archivos y flujos de datos. Estos espacios de nombres también contienen tipos que realizan la compresión y la descompresión de archivos, así como tipos que permiten la comunicación a través de canalizaciones y puertos de serie.  
@@ -155,7 +155,7 @@ La E/S (entrada/salida) de archivos y secuencias hace referencia a la transferen
   
  Si es necesario, puede convertir entre las secuencias de .NET Framework y las secuencias de Windows Runtime. Para más información, vea [Cómo: Convertir flujos de .NET Framework en flujos de Windows en tiempo de ejecución](../../../docs/standard/io/how-to-convert-between-dotnet-streams-and-winrt-streams.md) o [System.IO.WindowsRuntimeStreamExtensions](https://msdn.microsoft.com/library/system.io.windowsruntimestreamextensions.aspx). <!--zz TODO: <xref:System.IO.WindowsRuntimeStreamExtensions>--> 
   
- Para más información sobre las operaciones de E/S en una aplicación de la [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)], vea [Inicio rápido: leer y escribir archivos (XAML)](http://go.microsoft.com/fwlink/p/?LinkId=243072) en el Centro de desarrollo de Windows.  
+ Para obtener más información sobre las operaciones de E/S en una aplicación de la [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)], vea [Inicio rápido: Leer y escribir archivos](/previous-versions/windows/apps/hh758325(v=win.10)).  
   
 ## <a name="io-and-security"></a>E/S y seguridad  
  Cuando se utilizan las clases del espacio de nombres <xref:System.IO?displayProperty=nameWithType>, se deben seguir los requisitos de seguridad del sistema operativo como las listas de control de acceso (ACL) para controlar el acceso a los archivos y directorios. Este requisito es adicional a cualquier requisito <xref:System.Security.Permissions.FileIOPermission>. Se pueden administrar las listas de control de acceso mediante programación. Para más información, consulte [How to: Add or Remove Access Control List Entries](../../../docs/standard/io/how-to-add-or-remove-access-control-list-entries.md) (Cómo: Agregar o quitar entradas de la lista de control de acceso).  
