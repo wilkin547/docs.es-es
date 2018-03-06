@@ -7,11 +7,11 @@ ms.date: 10/26/2017
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: ead28fe1ffe1e002af73642a1c3b2e72479520f4
-ms.sourcegitcommit: bf8a3ba647252010bdce86dd914ac6c61b5ba89d
+ms.openlocfilehash: bced3bed84d138dbda4f322322213b47c0159016
+ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/06/2018
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="walkthroughs-and-technical-get-started-overview"></a>Tutoriales y technical obtienen información general de introducción 
 
@@ -47,7 +47,7 @@ El tutorial técnico completo está disponible en el wiki de repositorio de GitH
 
 En este tutorial, puede explorar la implementación inicial de dos aplicaciones heredadas de ejemplo. Las aplicaciones de ejemplo tienen una arquitectura monolítica y creadas utilizando ASP.NET clásico. Una aplicación se basa en ASP.NET 4.x MVC; la segunda aplicación se basa en formularios Web Forms ASP.NET 4.x. Ambas aplicaciones están en el [repositorio de GitHub de eShopModernizing](https://github.com/dotnet-architecture/eShopModernizing).
 
-Puede incluya ambas aplicaciones de ejemplo, similar a la forma en que puede incluya un clásico [Windows Communication Foundation](https://docs.microsoft.com/dotnet/framework/wcf/whats-wcf) aplicación (WCF) que vayan a usar como una aplicación de escritorio. Para obtener un ejemplo, vea [eShopModernizingWCFWinForms](https://github.com/dotnet-architecture/eShopModernizingWCFWinForms).
+Puede incluya ambas aplicaciones de ejemplo, similar a la forma en que puede incluya un clásico [Windows Communication Foundation](../../framework/wcf/whats-wcf.md) aplicación (WCF) que vayan a usar como una aplicación de escritorio. Para obtener un ejemplo, vea [eShopModernizingWCFWinForms](https://github.com/dotnet-architecture/eShopModernizingWCFWinForms).
 
 ### <a name="goals"></a>Objetivos
 
@@ -59,7 +59,7 @@ La figura 5-1 muestra el escenario sencillo de las aplicaciones heredadas origin
 
 > ![Escenario de arquitectura simple de las aplicaciones heredadas originales](./media/image5-1.png)
 >
-> **Figura 5-1.** Escenario de arquitectura simple de las aplicaciones heredadas originales
+> **Figura 5-1**. Escenario de arquitectura simple de las aplicaciones heredadas originales
 
 Desde una perspectiva de dominio empresarial, ambas aplicaciones ofrecen el mismo catálogo de características de administración. Los miembros del equipo de enterprise compras utilizaría la aplicación para ver y editar el catálogo de productos. Figura 5-2 muestra las capturas de pantalla de la aplicación inicial.
 
@@ -97,7 +97,7 @@ Utilice contenedores de Windows para mejorar la implementación de aplicaciones 
 
 El objetivo de este tutorial es mostrar varias opciones para containerizing una aplicación existente de .NET Framework. Puede realizar lo siguiente:
 
--   Incluya la aplicación mediante el uso de [Visual Studio 2017 Tools para Docker](https://docs.microsoft.com/dotnet/core/docker/visual-studio-tools-for-docker) (2017 de Visual Studio o versiones posteriores).
+-   Incluya la aplicación mediante el uso de [Visual Studio 2017 Tools para Docker](/aspnet/core/host-and-deploy/docker/visual-studio-tools-for-docker) (2017 de Visual Studio o versiones posteriores).
 
 -   Incluya la aplicación agregando manualmente un [Dockerfile](https://docs.docker.com/engine/reference/builder/)y, a continuación, usar el [CLI de Docker](https://docs.docker.com/engine/reference/commandline/cli/).
 
@@ -163,7 +163,7 @@ En este tutorial se tratan varios escenarios.
 
 ![Implementar en una VM de Azure de CI/CD canalizaciones en Visual Studio Team Services](./media/image5-6.png)
 
-> **Figura 5-6.** Implementar en una VM de Azure de CI/CD canalizaciones en Visual Studio Team Services
+> **Figura 5-6**. Implementar en una VM de Azure de CI/CD canalizaciones en Visual Studio Team Services
 
 ### <a name="azure-vms-for-windows-containers"></a>Máquinas virtuales de Azure para los contenedores de Windows
 

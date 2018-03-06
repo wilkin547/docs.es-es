@@ -7,11 +7,11 @@ ms.date: 10/26/2017
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: aaf1ef968600a56d91267c6c12efa90d99446dd7
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: eef0197edb3aba555da63f1ea0b75726a826bd32
+ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud"></a>Crear servicios resistentes listos para la nube: adoptar errores transitorios en la nube 
 
@@ -19,7 +19,7 @@ La resistencia es la capacidad de recuperarse de errores y seguir funcionando. R
 
 La aplicación está lista para la nube cuando, como mínimo, implementa un modelo basado en software de resistencia, en lugar de un modelo basado en hardware. La aplicación en la nube debe adoptar los errores parciales que por supuesto, se producirán. Debe diseñar o parcialmente refactorizar la aplicación si desea conseguir resistencia a errores parciales esperados. Se deben diseñar para hacer frente a errores parciales, como las interrupciones de red transitorios y nodos o de bloqueo en la nube. Incluso los contenedores que se mueven a otro nodo en un clúster de orchestrator pueden provocar errores cortos intermitentes dentro de la aplicación.
 
-## <a name="handling-partial-failure"></a>Control de errores parciales
+## <a name="handling-partial-failure"></a>Controlar errores parciales
 
 En una aplicación basada en la nube, hay un riesgo de error parcial omnipresente. Por ejemplo, podría producirse un error en una instancia de un sitio Web único o un contenedor o podría ser no está disponible o no responde durante poco tiempo. O bien, puede bloquearse una única máquina virtual o servidor.
 
@@ -47,15 +47,13 @@ Para obtener información sobre cómo implementar estrategias para controlar los
 
 -   **Implementación de la comunicación resistente para controlar los errores parciales**
 
-    [https://docs.microsoft.com/dotnet/standard/microservices-architecture/implement-resilient-applications/partial-failure-strategies](https://docs.microsoft.com/dotnet/standard/microservices-architecture/implement-resilient-applications/partial-failure-strategies)
+    [https://docs.microsoft.com/dotnet/standard/microservices-architecture/implement-resilient-applications/partial-failure-strategies](../../microservices-architecture/implement-resilient-applications/partial-failure-strategies.md)
 
 -   **Entity Framework conexión resistencia lógica de reintento y (versión 6 y versiones posterior)**
 
     [https://msdn.microsoft.com/library/dn456835(v=vs.113).aspx](https://msdn.microsoft.com/library/dn456835(v=vs.113).aspx)
 
 -   **El bloque de aplicaciones de control de errores transitorios**
-
-<!-- -->
 
 -   [https://msdn.microsoft.com/library/hh680934(v=pandp.50).aspx](https://msdn.microsoft.com/library/hh680934(v=pandp.50).aspx)
 
