@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: baeeb47dde77ceaa461214f55482d2312d67ccec
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 0b5fdb03e4b0d0c2d4e8aa8a897fd46d56707f11
+ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="strategies-for-handling-partial-failure"></a>Estrategias para tratar errores parciales
 
@@ -31,7 +31,7 @@ Las estrategias para tratar los errores parciales son las siguientes.
 
 **Proporcionar reservas**. En este enfoque, el proceso del cliente realiza una lógica de reserva cuando falla una solicitud, como devolver los datos almacenados en caché o un valor predeterminado. Este enfoque es adecuado para las consultas, pero es más complejo para las actualizaciones o los comandos.
 
-**Limitar el número de solicitudes en cola**. Los clientes también deben imponer un límite máximo en la cantidad de solicitudes pendientes que un microservicio de cliente puede enviar a un servicio determinado. Si se alcanza el límite, probablemente no tenga sentido realizar más solicitudes y dichos intentos deben generar error inmediatamente. En cuanto a la implementación, la directiva [Aislamiento con mampara](https://github.com/App-vNext/Polly/wiki/Bulkhead) de Polly puede usarse para cumplir este requisito. Este enfoque es básicamente una limitación en paralelo con [SemaphoreSlim](https://docs.microsoft.com/dotnet/api/system.threading.semaphoreslim?view=netcore-1.1) como implementación. También admite una "cola" fuera de la mampara. Puede perder proactivamente una carga excesiva incluso antes de la ejecución (por ejemplo, porque se considera que ha llegado al límite de su capacidad). Esto hace que su respuesta a determinados escenarios de error sea mucho más rápida que la que tendría un interruptor, puesto que el interruptor espera a que se produzcan los errores. El objeto BulkheadPolicy de Polly expone hasta qué punto están llenos el espacio limitado por la mampara y la cola, y ofrece eventos sobre desbordamiento para que también se puedan utilizar para administrar un escalado horizontal automatizado.
+**Limitar el número de solicitudes en cola**. Los clientes también deben imponer un límite máximo en la cantidad de solicitudes pendientes que un microservicio de cliente puede enviar a un servicio determinado. Si se alcanza el límite, probablemente no tenga sentido realizar más solicitudes y dichos intentos deben generar error inmediatamente. En cuanto a la implementación, la directiva [Aislamiento con mampara](https://github.com/App-vNext/Polly/wiki/Bulkhead) de Polly puede usarse para cumplir este requisito. Este enfoque es básicamente una limitación en paralelo con <xref:System.Threading.SemaphoreSlim> como implementación. También admite una "cola" fuera de la mampara. Puede perder proactivamente una carga excesiva incluso antes de la ejecución (por ejemplo, porque se considera que ha llegado al límite de su capacidad). Esto hace que su respuesta a determinados escenarios de error sea mucho más rápida que la que tendría un interruptor, puesto que el interruptor espera a que se produzcan los errores. El objeto BulkheadPolicy de Polly expone hasta qué punto están llenos el espacio limitado por la mampara y la cola, y ofrece eventos sobre desbordamiento para que también se puedan utilizar para administrar un escalado horizontal automatizado.
 
 ## <a name="additional-resources"></a>Recursos adicionales
 

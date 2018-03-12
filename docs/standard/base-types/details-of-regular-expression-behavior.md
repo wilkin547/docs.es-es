@@ -22,11 +22,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: c574ab8ddf506802fb42f53b5212dcb4a3bd9d34
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: 5b471cd8e934880fc8095fbad68b460174ec338c
+ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="details-of-regular-expression-behavior"></a>Detalles del comportamiento de expresiones regulares
 El motor de expresiones regulares de .NET Framework es un buscador de coincidencias de expresiones regulares con retroceso que incorpora un motor NFA (autómata finito no determinista) tradicional, como el que usa Perl, Python, Emacs y Tcl. Esto lo distingue de los motores DFA (autómatas finitos deterministas) de expresiones regulares puras, más rápidos pero más limitados, como los de awk, egrep o lex. Esto también lo distingue de los NFA POSIX, estandarizados pero más lentos. En la sección siguiente se describen los tres tipos de motores de expresiones regulares y se explica por qué las expresiones regulares de .NET Framework se implementan mediante un motor NFA tradicional.  
@@ -108,7 +108,7 @@ El motor de expresiones regulares de .NET Framework es un buscador de coincidenc
     |`^`|Inicia la búsqueda de coincidencias al principio de una línea.|  
     |`(?<Pvt>\<PRIVATE\>\s)?`|Coincide con cero o una repetición de la cadena `<PRIVATE>` seguida de un carácter de espacio en blanco. Asigna la coincidencia a un grupo de capturas denominado `Pvt`.|  
     |`(?(Pvt)((\w+\p{P}?\s)+)`|Si existe el grupo de capturas `Pvt`, coincide con una o más repeticiones de uno o más caracteres de palabra seguidos de cero o un separador de puntuación, seguido de un carácter de espacio en blanco. Asigna la subcadena al primer grupo de capturas.|  
-    |`&#124;((\w+\p{P}?\s)+))`|Si no existe el grupo de capturas `Pvt`, coincide con una o más repeticiones de uno o más caracteres de palabra seguidos de cero o un separador de puntuación, seguido de un carácter de espacio en blanco. Asigna la subcadena al tercer grupo de capturas.|  
+    |<code>&#124;((\w+\p{P}?\s)+))<code>|Si no existe el grupo de capturas `Pvt`, coincide con una o más repeticiones de uno o más caracteres de palabra seguidos de cero o un separador de puntuación, seguido de un carácter de espacio en blanco. Asigna la subcadena al tercer grupo de capturas.|  
     |`\r?$`|Coincide con el final de una línea o con el final de la cadena.|  
   
      Para obtener más información sobre la evaluación condicional, consulte [Construcciones de alternancia](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md).  
@@ -145,7 +145,7 @@ El motor de expresiones regulares de .NET Framework es un buscador de coincidenc
     |-------------|-----------------|  
     |`^`|Empieza la búsqueda de coincidencias en el principio de la cadena.|  
     |`[A-Z0-9]`|Coincide con cualquier carácter numérico o alfanumérico. (La comparación no distingue mayúsculas de minúsculas).|  
-    |`([-!#$%&'.*+/=?^`{}&#124;~\w])*`|Coincide con cero o más repeticiones de cualquier carácter de palabra o de cualquiera de los caracteres siguientes: -, !, #, $, %, &, ', ., *, +, /, =, ?, ^, `, {, }, &#124; o ~.|  
+    |<code>([-!#$%&'.*+/=?^\`{}&#124;~\w])*<code>|Coincide con cero o más repeticiones de cualquier carácter de palabra o de cualquiera de los caracteres siguientes: -, !, #, $, %, &, ', ., *, +, /, =, ?, ^, \`, {, }, &#124;, o ~.|  
     |`(?<=[A-Z0-9])`|Realiza una búsqueda tardía en el carácter anterior, que debe ser numérico o alfanumérico. (La comparación no distingue mayúsculas de minúsculas).|  
     |`$`|Finalizar la búsqueda al final de la cadena.|  
   

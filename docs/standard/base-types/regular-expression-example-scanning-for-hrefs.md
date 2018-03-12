@@ -26,11 +26,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: c6da140ea82fc3c6d3f5f3001f37711ffe861370
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 6592647ab3ff133bceb05b9ee84ce794e41aaf13
+ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="regular-expression-example-scanning-for-hrefs"></a>Ejemplo de expresiones regulares: Buscar etiquetas HREF
 En el ejemplo siguiente se busca una cadena de entrada y se muestran todos los valores href="…" y sus ubicaciones en la cadena.  
@@ -54,7 +54,7 @@ En el ejemplo siguiente se busca una cadena de entrada y se muestran todos los v
 |`\s*`|Busca coincidencias con cero o más caracteres de espacio en blanco.|  
 |`=`|Coincide con el signo igual.|  
 |`\s*`|Busca coincidencias con cero o más caracteres de espacio en blanco.|  
-|`(?:["'](?<1>[^"']*)"&#124;(?<1>\S+))`|Coincide con uno de los siguientes sin asignar el resultado a un grupo capturado:<br /><br /> - Una comilla o un apóstrofo, seguido de cero o más apariciones de cualquier carácter que no sea una comilla o un apóstrofo, seguido por una comilla o un apóstrofo. El grupo con nombre `1` se incluye en este patrón.<br />- Uno o varios caracteres que no son espacio en blanco. El grupo con nombre `1` se incluye en este patrón.|  
+|<code>(?:\["'\](?<1>\[^"'\]*)"&#124;(?<1>\S+))</code>|Coincide con uno de los siguientes sin asignar el resultado a un grupo capturado:<br /> <ul><li><p>Una comilla o un apóstrofo, seguido de cero o más apariciones de cualquier carácter que no sea una comilla o un apóstrofo, seguido por una comilla o un apóstrofo. El grupo con nombre `1` se incluye en este patrón.</p></li><li><p>Uno o varios caracteres que no son espacios en blanco. El grupo con nombre `1` se incluye en este patrón.</p></li></ul>|  
 |`(?<1>[^"']*)`|Asigna cero o más apariciones de cualquier carácter que no sea apóstrofo o comilla al grupo de captura con nombre `1`.|  
 |`"(?<1>\S+)`|Asigna uno o varios caracteres que no sean un espacio en blanco al grupo de captura con nombre `1`.|  
   

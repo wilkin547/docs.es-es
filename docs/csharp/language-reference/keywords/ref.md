@@ -2,7 +2,8 @@
 title: ref (Referencia de C#)
 ms.date: 05/30/2017
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 f1_keywords:
 - ref_CSharpKeyword
@@ -11,14 +12,14 @@ helpviewer_keywords:
 - parameters [C#], ref
 - ref keyword [C#]
 ms.assetid: b8a5e59c-907d-4065-b41d-95bf4273c0bd
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 0be0eee67b507e2a209c9caaa3eb14cc60e8a763
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9b1e926bd1d9c3a8e0525ed02d102f26e6ec9abd
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="ref-c-reference"></a>ref (Referencia de C#)
 
@@ -82,19 +83,19 @@ Un valor devuelto de referencia se define mediante la palabra clave `ref`:
    ```csharp
    public ref decimal GetCurrentValue()
    ``` 
-- Antes de cada instrucción `return` del método. Por ejemplo:
+- Entre el token `return` y la variable devuelta en una instrucción `return` en el método. Por ejemplo:
  
    ```csharp
-   ref return Decimal.Zero;
+   return ref DecimalArray[0];
    ``` 
 
-En orden para que el llamador modificar el estado del objeto, la referencia de devolver el valor se debe almacenar en una variable que se defina explícitamente como una [ref local](#ref-locals). 
+Para que el autor de la llamada modifique el estado del objeto, el valor devuelto de referencia debe almacenarse en una variable que se defina explícitamente como una [variable local de tipo ref](#ref-locals). 
 
 Para obtener un ejemplo, vea [Un ejemplo de valores devueltos y variables locales de tipo ref](#a-ref-returns-and-ref-locals-example).
 
 ## <a name="ref-locals"></a>Variables locales de tipo ref
 
-Una variable local de tipo ref se usa para hacer referencia a valores devueltos con `ref return`.  Una variable local de tipo ref debe inicializarse y asignarse a un valor devuelto de tipo ref. Cualquier modificación en el valor de la variable local de tipo ref se refleja en el estado del objeto cuyo método ha devuelto el valor mediante referencia.
+Una variable local de tipo ref se usa para hacer referencia a valores devueltos con `return ref`.  Una variable local de tipo ref debe inicializarse y asignarse a un valor devuelto de tipo ref. Cualquier modificación en el valor de la variable local de tipo ref se refleja en el estado del objeto cuyo método ha devuelto el valor mediante referencia.
 
 Defina una variable local de tipo ref mediante la palabra clave `ref` antes de la declaración de variable, así como inmediatamente antes de la llamada al método que devuelve el valor mediante referencia. 
 

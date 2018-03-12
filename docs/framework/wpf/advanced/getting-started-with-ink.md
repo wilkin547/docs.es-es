@@ -5,7 +5,8 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-wpf
+ms.technology:
+- dotnet-wpf
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -18,16 +19,17 @@ helpviewer_keywords:
 - animation [WPF], gradient brush colors
 - brushes [WPF], animating colors of
 ms.assetid: 760332dd-594a-475d-865b-01659db8cab7
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c977e8a4a23f9739541cf28d9e34ad9e8db1daf0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 74227ebe815e971087569ff39ac0a3479c1b0d14
+ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="getting-started-with-ink"></a>Introducción a las entradas manuscritas
 La incorporación de entrada de lápiz digital en sus aplicaciones es más fácil que nunca. Tinta ha evolucionado ante un corolario al método COM y formularios Windows Forms de la programación para lograr una integración completa en el [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. No es necesario instalar ningún SDK independiente ni bibliotecas en tiempo de ejecución.  
@@ -38,14 +40,14 @@ La incorporación de entrada de lápiz digital en sus aplicaciones es más fáci
 ## <a name="quick-start"></a>Inicio rápido  
  Esta sección le ayudará a escribir una sencilla [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplicación que recopila tinta.  
   
- Si aún no lo ha hecho, instale Microsoft Visual Studio 2005 y [!INCLUDE[TLA#tla_winfxsdk](../../../../includes/tlasharptla-winfxsdk-md.md)]. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]las aplicaciones normalmente deben compilarse antes de verlos, aunque estas constan únicamente de [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]. Sin embargo, el [!INCLUDE[TLA#tla_winfxsdk](../../../../includes/tlasharptla-winfxsdk-md.md)] incluye una aplicación, XamlPad, diseñada para acelerar el proceso de implementar un [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]-según la interfaz de usuario. Puede utilizar esa aplicación para ver y aprovechar los primeros ejemplos de este documento. El proceso de creación de compila aplicaciones de [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] se trata más adelante en este documento.  
+ Si aún no lo ha hecho, instale Microsoft Visual Studio 2005 y [!INCLUDE[TLA#tla_winfxsdk](../../../../includes/tlasharptla-winfxsdk-md.md)]. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] las aplicaciones normalmente deben compilarse antes de verlos, aunque estas constan únicamente de [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]. Sin embargo, el [!INCLUDE[TLA#tla_winfxsdk](../../../../includes/tlasharptla-winfxsdk-md.md)] incluye una aplicación, XamlPad, diseñada para acelerar el proceso de implementar un [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]-según la interfaz de usuario. Puede utilizar esa aplicación para ver y aprovechar los primeros ejemplos de este documento. El proceso de creación de compila aplicaciones de [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] se trata más adelante en este documento.  
   
- Para iniciar XAMLPad, haga clic en el **iniciar** menú, elija **todos los programas**, seleccione **Microsoft Winndows SDK**, seleccione **herramientas**y haga clic en **XAMLPad**. En el panel de representación, XAMLPad representa el código XAML escrito en el panel de código. Puede editar el código XAML y los cambios aparecen inmediatamente en el panel de representación.  
+ Para iniciar XAMLPad, haga clic en el **iniciar** menú, elija **todos los programas**, seleccione **Microsoft Windows SDK**, seleccione **herramientas**y haga clic en **XAMLPad**. En el panel de representación, XAMLPad representa el código XAML escrito en el panel de código. Puede editar el código XAML y los cambios aparecen inmediatamente en el panel de representación.  
   
 #### <a name="got-ink"></a>¿Se obtuvo tinta?  
  Para iniciar su primer [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplicación que admita tinta:  
   
-1.  Abra Microsoft Visual Studio 2005  
+1.  Open Microsoft Visual Studio 2005  
   
 2.  Crear un nuevo **aplicación de Windows (WPF)**  
   

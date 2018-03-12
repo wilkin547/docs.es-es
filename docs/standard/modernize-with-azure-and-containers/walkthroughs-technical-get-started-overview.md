@@ -4,36 +4,37 @@ description: "Modernizar las aplicaciones .NET existentes con contenedores de Wi
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
+ms.prod: .net
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: bced3bed84d138dbda4f322322213b47c0159016
-ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
+ms.openlocfilehash: 6a2abda3949c1fffc4d731b01e35e58e7c56dac0
+ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 03/08/2018
 ---
-# <a name="walkthroughs-and-technical-get-started-overview"></a>Tutoriales y technical obtienen información general de introducción 
+# <a name="walkthroughs-and-technical-get-started-overview"></a>Tutoriales y technical obtienen información general de introducción
 
-Para limitar el tamaño de este libro electrónico, hemos simplificado la documentación técnica adicional y los tutoriales completos disponible en un repositorio de GitHub. La serie de tutoriales que se describen en este capítulo en línea trata el programa de instalación paso a paso de los entornos de varios que se basan en los contenedores de Windows y la implementación en Azure.
+Para limitar el tamaño de este libro electrónico, documentación técnica adicional y los tutoriales completos se encontraban disponibles en un repositorio de GitHub. La serie de tutoriales que se describen en este capítulo en línea trata el programa de instalación paso a paso de los entornos de varios que se basan en los contenedores de Windows y la implementación en Azure.
 
-Las siguientes secciones explican cada tutorial novedades sobre sus objetivos, su visión de alto nivel- y proporciona un diagrama de las tareas que están implicados. Puede obtener los tutoriales por sí mismos en el *eShopModernizing* wiki de repositorio de GitHub de aplicaciones en [https://github.com/dotnet-architecture/eShopModernizing/wiki](https://github.com/dotnet-architecture/eShopModernizing/wiki).
+Las siguientes secciones explican lo que cada tutorial trata sobre sus objetivos y la visión de alto nivel y proporciona un diagrama de las tareas que están implicados. Puede obtener los tutoriales por sí mismos en el *eShopModernizing* wiki de repositorio de GitHub de aplicaciones en [https://github.com/dotnet-architecture/eShopModernizing/wiki](https://github.com/dotnet-architecture/eShopModernizing/wiki).
 
-# <a name="technical-walkthrough-list"></a>Lista de tutoriales técnicos
+## <a name="technical-walkthrough-list"></a>Lista de tutoriales técnicos
 
 Los siguientes tutoriales iniciada por get proporcionan orientación técnica de coherente y completo para las aplicaciones de ejemplo que puede levantar y desplazar mediante el uso de contenedores y, a continuación, mueva con varias opciones de implementación de Azure.
 
 Cada uno de los siguientes tutoriales utiliza el nuevo eShopLegacy y eShopModernizing aplicaciones de ejemplo, que están disponibles en GitHub en [https://github.com/dotnet-architecture/eShopModernizing](https://github.com/dotnet-architecture/eShopModernizing).
 
--   **Paseo de compras de aplicaciones heredadas**
+- **Paseo de compras de aplicaciones heredadas**
 
--   **Incluya las aplicaciones de .NET existentes con contenedores de Windows**
+- **Incluya las aplicaciones de .NET existentes con contenedores de Windows**
 
--   **Implementar la aplicación basada en contenedores de Windows en máquinas virtuales de Azure**
+- **Implementar la aplicación basada en contenedores de Windows en máquinas virtuales de Azure**
 
--   **Implementar las aplicaciones de Windows basada en contenedores en Kubernetes en el servicio de contenedor de Azure**
+- **Implementar las aplicaciones de Windows basada en contenedores en Kubernetes en el servicio de contenedor de Azure**
 
--   **Implementar las aplicaciones de Windows basada en contenedores en Azure Service Fabric.**
+- **Implementar las aplicaciones de Windows basada en contenedores en Azure Service Fabric.**
 
 ## <a name="walkthrough-1-tour-of-eshop-legacy-apps"></a>Tutorial 1: Paseo de compras de aplicaciones heredadas
 
@@ -97,13 +98,13 @@ Utilice contenedores de Windows para mejorar la implementación de aplicaciones 
 
 El objetivo de este tutorial es mostrar varias opciones para containerizing una aplicación existente de .NET Framework. Puede realizar lo siguiente:
 
--   Incluya la aplicación mediante el uso de [Visual Studio 2017 Tools para Docker](/aspnet/core/host-and-deploy/docker/visual-studio-tools-for-docker) (2017 de Visual Studio o versiones posteriores).
+- Incluya la aplicación mediante el uso de [Visual Studio 2017 Tools para Docker](/aspnet/core/host-and-deploy/docker/visual-studio-tools-for-docker) (2017 de Visual Studio o versiones posteriores).
 
--   Incluya la aplicación agregando manualmente un [Dockerfile](https://docs.docker.com/engine/reference/builder/)y, a continuación, usar el [CLI de Docker](https://docs.docker.com/engine/reference/commandline/cli/).
+- Incluya la aplicación agregando manualmente un [Dockerfile](https://docs.docker.com/engine/reference/builder/)y, a continuación, usar el [CLI de Docker](https://docs.docker.com/engine/reference/commandline/cli/).
 
--   Incluya la aplicación mediante el uso de la [Img2Docker](https://github.com/docker/communitytools-image2docker-win) herramienta (una herramienta de código abierto de Docker).
+- Incluya la aplicación mediante el uso de la [Img2Docker](https://github.com/docker/communitytools-image2docker-win) herramienta (una herramienta de código abierto de Docker).
 
-En este tutorial se centra en Visual Studio de 2017 Tools para el enfoque de Docker, pero los otros dos enfoques son muy parecidos en lo que respecta al uso de archivos Dockerfile.
+En este tutorial se centra en Visual Studio de 2017 Tools para el enfoque de Docker, pero los otros dos enfoques son muy parecidos en relación con usando Dockerfiles.
 
 ### <a name="scenario"></a>Escenario
 
@@ -137,7 +138,7 @@ El tutorial técnico completo está disponible en el wiki de repositorio de GitH
 
 ### <a name="overview"></a>Información general
 
-Implementación en un host Docker en una VM de Windows Server 2016 en Azure le permite configurar rápidamente entornos de desarrollo/pruebas/almacenamiento provisional. También proporciona un lugar común para evaluadores o los usuarios empresariales validar la aplicación. Máquinas virtuales también pueden ser entornos de producción de IaaS válidos.
+Implementación en un host de Docker en una máquina Virtual de 2016 de servidor de Windows (VM) de Azure le permite configurar rápidamente entornos de desarrollo/pruebas/staging. También proporciona un lugar común para evaluadores o los usuarios empresariales validar la aplicación. Máquinas virtuales también pueden ser infraestructura válido como un entorno de producción del servicio (IaaS).
 
 ### <a name="goals"></a>Objetivos
 
@@ -167,7 +168,7 @@ En este tutorial se tratan varios escenarios.
 
 ### <a name="azure-vms-for-windows-containers"></a>Máquinas virtuales de Azure para los contenedores de Windows
 
-Máquinas virtuales de Azure para contenedores de Windows son simplemente las máquinas virtuales que se basan en Windows Server 2016, Windows 10, o versiones posteriores, ambos con el motor de Docker configurar. En la mayoría de los casos, usará Windows Server 2016 en las máquinas virtuales de Azure.
+Máquinas virtuales de Azure para contenedores de Windows son máquinas virtuales basadas en Windows Server 2016, Windows 10 o versiones posteriores, ambos con el motor de Docker configurar. En la mayoría de los casos, se utiliza Windows Server 2016 en las máquinas virtuales de Azure.
 
 Actualmente, Azure proporciona una máquina virtual denominada **Windows Server 2016 con contenedores**. Puede usar esta máquina virtual para probar la nueva característica de contenedor de Windows Server, con Windows Server Core o Nano Server de Windows. Imágenes del sistema operativo de contenedor se instalan y, a continuación, la máquina virtual está lista para su uso con Docker.
 
@@ -217,25 +218,25 @@ El objetivo de este tutorial es aprender a implementar una aplicación basada en
 
 ### <a name="benefits"></a>Ventajas
 
-Hay muchas ventajas a la implementación en un clúster en Kubernetes. La mayor ventaja es que se obtiene de un entorno para entornos de producción en el que se puede escalada la aplicación en función del número de instancias de contenedor que desea utilizar (escalabilidad interna en los nodos existentes) y, en función del número de nodos o máquinas virtuales en el clúster ( escalabilidad global del clúster).
+Hay muchas ventajas a la implementación en un clúster en Kubernetes. La mayor ventaja es que se obtiene de un entorno para entornos de producción en el que puede escalar horizontalmente la aplicación en función del número de instancias de contenedor que desea utilizar (escalabilidad interna en los nodos existentes) y, en función del número de nodos o máquinas virtuales en el clúster ( escalabilidad global del clúster).
 
 Servicio de contenedor de Azure optimiza las tecnologías y herramientas de código abierto populares específicamente para Azure. Obtener una solución abierta que ofrece la portabilidad tanto para los contenedores de la configuración de la aplicación. Seleccione el tamaño, el número de hosts, y el servicio de contenedor-herramientas de orchestrator controla todo lo demás.
 
 Con Kubernetes, los desarrolladores pueden progreso de pensar en máquinas físicas y virtuales, para planear una infraestructura centrada en el contenedor que facilita las siguientes capacidades, entre otros:
 
--   Aplicaciones basadas en varios contenedores
+- Aplicaciones basadas en varios contenedores
 
--   La replicación de instancias de contenedor y ajuste automático de escala horizontal
+- La replicación de instancias de contenedor y ajuste automático de escala horizontal
 
--   Nomenclatura y detectar (por ejemplo, DNS interno)
+- Nomenclatura y detectar (por ejemplo, DNS interno)
 
--   Equilibrio de carga
+- Equilibrio de carga
 
--   Actualizaciones graduales
+- Actualizaciones graduales
 
--   Distribuir secretos
+- Distribuir secretos
 
--   Comprobaciones de estado de aplicación
+- Comprobaciones de estado de aplicación
 
 ## <a name="next-steps"></a>Pasos siguientes
 
@@ -251,7 +252,7 @@ El tutorial técnico completo está disponible en el wiki de repositorio de GitH
 
 ### <a name="overview"></a>Información general
 
-Una aplicación que se basa en los contenedores de Windows rápidamente necesite usan las plataformas, aleja el aún más de las máquinas virtuales IaaS. Esto es necesario para lograr fácilmente alta escalabilidad y mejor automatizada escalabilidad y para una mejora considerable en automatizar las implementaciones y control de versiones. Puede lograr estos objetivos con el orchestrator Azure Service Fabric, que está disponible en la nube de Azure, pero también disponible para su uso local, o incluso en una nube pública diferente.
+Una aplicación basada en los contenedores de Windows rápidamente debe usar plataformas, aleja el aún más de las máquinas virtuales IaaS. Esto es necesario para lograr fácilmente alta escalabilidad y mejor automatizada escalabilidad y para una mejora considerable en automatizar las implementaciones y control de versiones. Puede lograr estos objetivos con el orchestrator Azure Service Fabric, que está disponible en la nube de Azure, pero también disponible para su uso local, o incluso en una nube pública diferente.
 
 ### <a name="goals"></a>Objetivos
 
@@ -277,37 +278,37 @@ El objetivo de este tutorial es aprender a implementar una aplicación basada en
 
 ## <a name="benefits"></a>Ventajas
 
-Las ventajas de la implementación en un clúster de Service Fabric son similares a las ventajas de usar Kubernetes. Sin embargo, no obstante, es que Service Fabric es un entorno de producción muy consolidada para aplicaciones de Windows en comparación con Kubernetes, que estaba en la vista previa de los contenedores de Windows hasta una fase temprana se dividen de 2017. (Kubernetes es un entorno más maduro para Linux). 
+Las ventajas de la implementación en un clúster de Service Fabric son similares a las ventajas de usar Kubernetes. Sin embargo, no obstante, es que Service Fabric es un entorno de producción más maduro para aplicaciones de Windows en comparación con Kubernetes, que se encuentra en una fase beta para contenedores de Windows en Kubernetes versión 1.9 (diciembre de 2017). Kubernetes es un entorno más maduro para Linux.
 
-La principal ventaja del uso de Azure Service Fabric es que se obtiene de un entorno para entornos de producción en el que se puede escalada la aplicación en función del número de instancias de contenedor que desea utilizar (escalabilidad interna en los nodos existentes) y, en función del número de los nodos o máquinas virtuales del clúster (escalabilidad global del clúster).
+La principal ventaja del uso de Azure Service Fabric es que se obtiene de un entorno para entornos de producción en el que puede escalar horizontalmente la aplicación en función del número de instancias de contenedor que desea utilizar (escalabilidad interna en los nodos existentes) y, en función del número de los nodos o máquinas virtuales del clúster (escalabilidad global del clúster).
 
 Azure Service Fabric ofrece portabilidad de los contenedores y para la configuración de la aplicación. Puede tener un tejido de servicio de clúster en Azure, o instalar localmente en su propio centro de datos. Incluso puede instalar un clúster de Service Fabric en una nube diferente, como [Amazon AWS](https://blogs.msdn.microsoft.com/azureservicefabric/2017/05/18/tutorial-how-to-create-a-service-fabric-standalone-cluster-with-aws-ec2-instances/).
 
 Con Service Fabric, los desarrolladores pueden progreso de pensar en máquinas físicas y virtuales para planear una infraestructura centrada en el contenedor que facilita las siguientes capacidades, entre otros:
 
--   Aplicaciones basadas en varios contenedores.
+- Aplicaciones basadas en varios contenedores.
 
--   Replicación de instancias de contenedor y ajuste automático de escala horizontal.
+- Replicación de instancias de contenedor y ajuste automático de escala horizontal.
 
--   Nomenclatura y detectar (por ejemplo, DNS interno).
+- Nomenclatura y detectar (por ejemplo, DNS interno).
 
--   Equilibrio de carga.
+- Equilibrio de carga.
 
--   Actualizaciones graduales.
+- Actualizaciones graduales.
 
--   Distribuir secretos.
+- Distribuir secretos.
 
--   Comprueba el estado de la aplicación.
+- Comprueba el estado de la aplicación.
 
 Las siguientes capacidades son exclusivas de Service Fabric (en comparación con otras orchestrators):
 
--   Capacidad de servicios con estado, a través del modelo de aplicación de servicios de confianza.
+- Capacidad de servicios con estado, a través del modelo de aplicación de servicios de confianza.
 
--   Patrón de actores a través del modelo de aplicación de Reliable Actors.
+- Patrón de actores a través del modelo de aplicación de Reliable Actors.
 
--   Implementar procesos descubierto, además de los contenedores de Windows o Linux.
+- Implementar procesos descubierto, además de los contenedores de Windows o Linux.
 
--   Advanced actualizaciones graduales y comprobaciones de mantenimiento.
+- Advanced actualizaciones graduales y comprobaciones de mantenimiento.
 
 ### <a name="next-steps"></a>Pasos siguientes
 

@@ -1,19 +1,20 @@
 ---
 title: "Modernización de las aplicaciones .NET existentes con la nube de Azure y los contenedores de Windows"
-description: "Obtenga información sobre cómo elevar y desplazar las aplicaciones existentes en la nube de Azure y en los contenedores"
+description: "Aprenda a levantar y mover las aplicaciones existentes para la nube de Azure y otros contenedores con este libro electrónico."
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
+ms.prod: .net
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 5e1a04a0d8ed151337e00c8147756644dfc9075a
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: ba48579735379bfc857993cd1546f5f7125101f4
+ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/08/2018
 ---
-# <a name="modernize-existing-net-applications-with-azure-cloud-and-windows-containers-v10"></a>Modernización de las aplicaciones .NET existentes con la nube de Azure y los contenedores de Windows (v1.0)  
+# <a name="modernize-existing-net-applications-with-azure-cloud-and-windows-containers-v10"></a>Modernización de las aplicaciones .NET existentes con la nube de Azure y los contenedores de Windows (v1.0)
 
 ![imagen de portada](./media/cover.png)
 
@@ -27,11 +28,11 @@ Copyright © 2017 de Microsoft Corporation
 
 Todos los derechos reservados. No se puede reproducir de ninguna forma ni por ningún medio ninguna parte del contenido de este libro sin la autorización por escrito del publicador.
 
-Este libro está disponible de forma gratuita en formato de libro electrónico a través de varios canales de Microsoft, como <http://dot.net/architecture>.
+Este libro está disponible de forma gratuita en forma de un libro electrónico (libro electrónico) disponible a través de varios canales de Microsoft como http://dot.net/architecture.
 
 Si tiene preguntas relacionadas con este libro, envíe un correo electrónico a [dotnet-architecture-ebooks-feedback@service.microsoft.com](mailto:dotnet-architecture-ebooks-feedback@service.microsoft.com?subject=Feedback%20for%20.NET%20Container%20&%20Microservices%20Architecture%20book).
 
-Este libro se proporciona “tal cual” y expresa las opiniones del autor. Las opiniones y la información expresados en este libro, incluidas las direcciones URL y otras referencias a sitios web de Internet, pueden cambiar sin previo aviso.
+Este libro se proporciona “tal cual” y expresa las opiniones del autor. Las vistas, la opinión y la información expresada en este documento, incluidas direcciones URL y otras referencias a sitios Web de Internet, pueden cambiar sin previo aviso.
 
 Algunos ejemplos descritos aquí se proporcionan únicamente con fines ilustrativos y son ficticios. No debe deducirse ninguna asociación ni conexión reales.
 
@@ -52,11 +53,11 @@ Participantes y revisores:
 
 Si decide modernizar las aplicaciones web y moverlas a la nube, no tiene necesariamente que rediseñar por completo las aplicaciones. Rediseñar una aplicación con un enfoque avanzado como los microservicios no siempre es posible por las restricciones de costos y tiempo. Según el tipo de aplicación, rediseñar una aplicación podría no ser necesario. Para optimizar la rentabilidad de la estrategia de migración a la nube de su organización, es importante tener en cuenta las necesidades de su negocio y los requisitos de las aplicaciones. Debe determinar:
 
--   Qué aplicaciones requieren una transformación o un cambio de diseño.
+- Qué aplicaciones requieren una transformación o un cambio de diseño.
 
--   Qué aplicaciones necesitan modernizarse solo parcialmente.
+- Qué aplicaciones necesitan modernizarse solo parcialmente.
 
--   Qué aplicaciones se pueden "elevar y desplazar" directamente a la nube.
+- Qué aplicaciones se pueden "elevar y desplazar" directamente a la nube.
 
 ## <a name="about-this-guide"></a>Acerca de esta guía
 
@@ -86,7 +87,7 @@ En los dos primeros niveles de migración, solo puede elevar y desplazar las apl
 
 **Nivel 1: Infraestructura lista para la nube**: en este enfoque de migración, solo tiene que rehospedar o mover las aplicaciones locales actuales a una plataforma de infraestructura como servicio ([IaaS](https://azure.microsoft.com/overview/what-is-iaas/)). Las aplicaciones tienen casi la misma composición que antes, pero ahora se implementan en máquinas virtuales en la nube.
 
-**Nivel 2: Fase de DevOps lista para la nube**: en este nivel, tras una elevación y un desplazamiento iniciales y sin necesidad de rediseñar o de modificar el código, puede obtener incluso más ventajas al ejecutar la aplicación en la nube. Se mejora la agilidad de las aplicaciones para distribuirlas con más rapidez al perfeccionar los procesos de las operaciones de desarrollo empresariales (DevOps). Esto se consigue mediante el uso de una tecnología como los contenedores de Windows, que se basa en el motor de Docker. Los contenedores eliminan la fricción causada por las dependencias de la aplicación al implementarla en varias fases. Los contenedores también usan servicios administrados de la nube adicionales relacionados con los datos, la supervisión y las canalizaciones de integración continua e implementación continua.
+**Nivel 2: Fase de DevOps lista para la nube**: en este nivel, tras una elevación y un desplazamiento iniciales y sin necesidad de rediseñar o de modificar el código, puede obtener incluso más ventajas al ejecutar la aplicación en la nube. Se mejora la agilidad de las aplicaciones para distribuirlas con más rapidez al perfeccionar los procesos de las operaciones de desarrollo empresariales (DevOps). Esto se consigue mediante el uso de una tecnología como los contenedores de Windows, que se basa en el motor de Docker. Los contenedores eliminan la fricción causada por las dependencias de la aplicación al implementarla en varias fases. Contenedores también usan servicios administrados en la nube adicionales relacionadas con datos, la supervisión y la integración continua o continuo canalizaciones de implementación (CI/CD).
 
 El tercer nivel de madurez es el objetivo final de la nube, pero es opcional para muchas aplicaciones y no el enfoque principal de esta guía:
 
@@ -94,21 +95,21 @@ El tercer nivel de madurez es el objetivo final de la nube, pero es opcional par
 
 En la tabla 1-1 se describen las principales ventajas y motivos para elegir cada enfoque de migración o modernización.
 
-> | **Infraestructura preparada para la nube** <br /> *Elevación y desplazamiento* | **Operaciones DevOps listas para la nube** <br /> *Elevación y desplazamiento* | **Optimización para la nube** *Modernizar/refactorizar/reescribir* |
-> |---|---|---|
-> | **Destino de cálculo de la aplicación** |
-> | Aplicaciones implementadas en las máquinas virtuales de Azure | Aplicaciones de n niveles o monolíticas en contenedores implementadas en máquinas virtuales, Azure Service Fabric o Azure Container Service (es decir, Kubernetes) | Microservicios o aplicaciones regulares en contenedor basados en PaaS en Azure App Service, Azure Service Fabric y Azure Container Service (es decir, Kubernetes) |
-> | **Destino de datos** |
-> | SQL o cualquier base de datos relacional en una máquina virtual | Instancia administrada de Azure SQL Database | Azure SQL Database, Azure Cosmos DB u otra instancia NoSQL |
-> | **Ventajas**|
-> | <li>Ninguna necesidad de rediseñar ni de nuevo código <li> Mínimo esfuerzo para una migración rápida <li> Mínimo común denominador compatible con Azure <li> Garantías de disponibilidad básicas <li> Después de la migración a la nube, todavía es más fácil modernizar | <li>Ninguna necesidad de rediseñar ni de nuevo código <li> Los contenedores ofrecen un pequeño esfuerzo incremental con respecto a las máquinas virtuales <li> Desarrollo y agilidad de DevOps mejorados para publicar debido a los contenedores <li> Mayor densidad y costos de implementación más bajos <li> Portabilidad de aplicaciones y dependencias <li> Con Azure Container Service o Kubernetes y Azure Service Fabric, se ofrece alta disponibilidad y orquestación <li> Aplicación de revisiones de nodos y máquinas virtuales en Service Fabric <li> Flexibilidad de destinos host: máquinas virtuales de Azure o conjuntos de escalado de máquina virtual, Azure Container Service o Kubernetes, Service Fabric y futuras opciones basadas en contenedores | <li>Diseño de la nube, refactorización y nuevo código necesarios <li> Enfoques nativos de la nube de los microservicios <li> Nuevas aplicaciones web, monolíticas, de n niveles, resistentes en la nube y optimizadas para la nube <li> Servicios totalmente administrados <li> Aplicación de revisiones automática <li> Optimizado para escalado <li> Optimizado para la agilidad autónoma por subsistema <li> Basado en implementaciones y DevOps <li> DevOps mejoradas, como las ranuras y estrategias de implementación <li> Destinos PaaS y orquestadores: Azure App Service, Azure Container Service o Kubernetes, Azure Service Fabric y futuros destinos PaaS basados en contenedores |
-> | **Desafíos** |
-> | <li> Valor menor de la nube, aparte del cambio en gastos operativos o en el cierre de los centros de datos <li> Muy poca administración: sin aplicación de revisiones del SO o del software intermedio, con posibles soluciones de infraestructura, como Terraform, Spinnaker o Puppet | <li> La inclusión en contenedores es un paso adicional inmutable del requisito de la curva de aprendizaje | <li> Puede requerir la refactorización o la reescritura de código importante (aumento de tiempo y presupuesto) |
->> **Tabla 1-1.** Ventajas y desafíos de la modernización de rutas de los servicios y las aplicaciones .NET existentes
+| **Infraestructura preparada para la nube** <br /> *Elevación y desplazamiento* | **Operaciones DevOps listas para la nube** <br /> *Elevación y desplazamiento* | **Optimización para la nube** *Modernizar/refactorizar/reescribir* |
+|---|---|---|
+| **Destino de cálculo de la aplicación** |
+| Aplicaciones implementadas en las máquinas virtuales de Azure | Aplicaciones de n niveles o monolíticas en contenedores implementadas en máquinas virtuales, Azure Service Fabric o Azure Container Service (es decir, Kubernetes) | Microservicios o aplicaciones regulares en contenedor basados en PaaS en Azure App Service, Azure Service Fabric y Azure Container Service (es decir, Kubernetes) |
+| **Destino de datos** |
+| SQL o cualquier base de datos relacional en una máquina virtual | Instancia administrada de Azure SQL Database | Azure SQL Database, Azure Cosmos DB u otra instancia NoSQL |
+| **Ventajas**|
+| <li>Ninguna necesidad de rediseñar ni de nuevo código <li> Mínimo esfuerzo para una migración rápida <li> Mínimo común denominador compatible con Azure <li> Garantías de disponibilidad básicas <li> Después de la migración a la nube, todavía es más fácil modernizar | <li>Ninguna necesidad de rediseñar ni de nuevo código <li> Los contenedores ofrecen un pequeño esfuerzo incremental con respecto a las máquinas virtuales <li> Desarrollo y agilidad de DevOps mejorados para publicar debido a los contenedores <li> Mayor densidad y costos de implementación más bajos <li> Portabilidad de aplicaciones y dependencias <li> Con Azure Container Service o Kubernetes y Azure Service Fabric, se ofrece alta disponibilidad y orquestación <li> Aplicación de revisiones de nodos y máquinas virtuales en Service Fabric <li> Flexibilidad de destinos de host: establece la escala de máquinas virtuales de Azure o una máquina virtual, el servicio de contenedor de Azure (o Kubernetes), Service Fabric y opciones en función de contenedor en el futuro | <li>Diseño de la nube, refactorización y nuevo código necesarios <li> Enfoques nativos de la nube de los microservicios <li> Nuevas aplicaciones web, monolíticas, de n niveles, resistentes en la nube y optimizadas para la nube <li> Servicios totalmente administrados <li> Aplicación de revisiones automática <li> Optimizado para escalado <li> Optimizado para la agilidad autónoma por subsistema <li> Basado en implementaciones y DevOps <li> DevOps mejoradas, como las ranuras y estrategias de implementación <li> Destinos PaaS y orquestadores: Azure App Service, Azure Container Service o Kubernetes, Azure Service Fabric y futuros destinos PaaS basados en contenedores |
+| **Desafíos** |
+| <li> Valor menor de la nube, aparte del cambio en gastos operativos o en el cierre de los centros de datos <li> Muy poca administración: sin aplicación de revisiones del SO o del software intermedio, con posibles soluciones de infraestructura, como Terraform, Spinnaker o Puppet | <li> La inclusión en contenedores es un paso adicional inmutable del requisito de la curva de aprendizaje | <li> Puede requerir la refactorización o la reescritura de código importante (aumento de tiempo y presupuesto) |
+> **Tabla 1-1.** Ventajas y desafíos de la modernización de rutas de los servicios y las aplicaciones .NET existentes
 
 ### <a name="key-technologies-and-architectures-by-maturity-level"></a>Arquitecturas y tecnologías clave por nivel de madurez
 
-Las aplicaciones .NET Framework se iniciaron por primera vez con .NET Framework 1.0, que se publicó a finales de 2001. Después, las empresas cambian a nuevas versiones (como 2.0, 3.5 y .NET 4.x). La mayoría de esas aplicaciones se ejecutaron en Windows Server y Internet Information Server (IIS) y usaron una base de datos relacional, como SQL Server, Oracle, MySQL o cualquier otra instancia de RDBMS.
+Las aplicaciones .NET Framework se iniciaron por primera vez con .NET Framework 1.0, que se publicó a finales de 2001. Después, las empresas cambian a nuevas versiones (como 2.0, 3.5 y .NET 4.x). La mayoría de las aplicaciones se ejecutaron en Windows Server y servidor de Internet Information Server (IIS) y usa una base de datos relacional, como SQL Server, Oracle, MySQL o cualquier otra de RDBMS.
 
 La mayoría de las aplicaciones .NET existentes pueden basarse actualmente en .NET Framework 4.x o incluso en .NET Framework 3.5 y usar marcos de trabajo web, como ASP.NET MVC, Formularios web ASP.NET, ASP.NET Web API, Windows Communication Foundation (WCF), ASP.NET SignalR y ASP.NET Web Pages. Estas tecnologías de .NET Framework establecidas dependen de Windows. Es importante tener en cuenta esa dependencia si solo se van a migrar aplicaciones heredadas y solo se desea realizar cambios mínimos en la infraestructura de las aplicaciones.
 
@@ -122,11 +123,11 @@ En la figura 1-2 se destacan los escenarios más comunes, pero se pueden present
 
 Cada nivel de madurez del proceso de modernización está asociado con los siguientes enfoques y tecnologías clave:
 
--   **Infraestructura lista para la nube** (rehospedaje o elevación y desplazamiento básicos): como primer paso, muchas organizaciones solo desean ejecutar una estrategia de migración a la nube con rapidez. En este caso, lo que se hace simplemente es rehospedar las aplicaciones. La mayoría del rehospedaje puede automatizarse mediante [Azure Migrate](https://aka.ms/azuremigrate), un servicio que ofrece la orientación, la información y los mecanismos necesarios para facilitar la migración a Azure basada en herramientas de la nube, como [Azure Site Recovery](https://azure.microsoft.com/services/site-recovery/) y [Azure Database Migration Service](https://azure.microsoft.com/campaigns/database-migration/). También puede configurar el rehospedaje manualmente, para poder aprender los detalles de los recursos de la infraestructura al mover las aplicaciones heredadas a la nube. Por ejemplo, puede mover las aplicaciones a las máquinas virtuales de Azure con muy pocas modificaciones, probablemente, solo con cambios de configuración menores. En este caso, el servicio de red es similar a un entorno local, sobre todo, si crea redes virtuales en Azure.
+- **Infraestructura lista para la nube** (rehospedaje o elevación y desplazamiento básicos): como primer paso, muchas organizaciones solo desean ejecutar una estrategia de migración a la nube con rapidez. En este caso, lo que se hace simplemente es rehospedar las aplicaciones. La mayoría del rehospedaje puede automatizarse mediante [Azure Migrate](https://aka.ms/azuremigrate), un servicio que ofrece la orientación, la información y los mecanismos necesarios para facilitar la migración a Azure basada en herramientas de la nube, como [Azure Site Recovery](https://azure.microsoft.com/services/site-recovery/) y [Azure Database Migration Service](https://azure.microsoft.com/campaigns/database-migration/). También puede configurar el rehospedaje manualmente, para poder aprender los detalles de los recursos de la infraestructura al mover las aplicaciones heredadas a la nube. Por ejemplo, puede mover las aplicaciones a las máquinas virtuales de Azure con muy pocas modificaciones, probablemente, solo con cambios de configuración menores. En este caso, el servicio de red es similar a un entorno local, sobre todo, si crea redes virtuales en Azure.
 
--   **Proceso de DevOps listo para la nube** (elevación y desplazamiento mejorados): este modelo consiste en hacer algunas optimizaciones importantes en la implementación para obtener algunas ventajas importantes de la nube, sin cambiar la arquitectura básica de la aplicación. El paso fundamental aquí es agregar la compatibilidad con los [contenedores de Windows](https://docs.microsoft.com/virtualization/windowscontainers/about/) a las aplicaciones .NET Framework existentes. Este paso importante (creación de contenedores) no requiere modificar el código, por lo que el esfuerzo general de elevación y desplazamiento es muy bajo. Puede usar también herramientas como [Image2Docker](https://github.com/docker/communitytools-image2docker-win) o Visual Studio con sus herramientas para [Docker](https://www.docker.com/). Visual Studio elige automáticamente valores predeterminados inteligentes para aplicaciones ASP.NET e imágenes de contenedores de Windows. Estas herramientas ofrecen un bucle interior rápido y una ruta rápida para obtener los contenedores en Azure. La agilidad se mejora al implementar en varios entornos. Después, al pasar a producción, puede implementar los contenedores de Windows en orquestadores como [Azure Service Fabric](https://azure.microsoft.com/services/service-fabric/) o [Azure Container Service](https://azure.microsoft.com/services/container-service/) (Kubernetes, DC/OS o Swarm). Durante esta modernización inicial, también puede agregar recursos desde la nube, como la supervisión con herramientas como [Azure Application Insights](https://docs.microsoft.com/azure/application-insights/app-insights-overview); canalizaciones de CI/CD para los ciclos de vida de la aplicación con [Visual Studio Team Services](https://www.visualstudio.com/team-services/) y muchos más servicios de recursos de datos que están disponibles en Azure. Por ejemplo, puede modificar una aplicación web monolítica desarrollada originalmente con las herramientas [Web Forms ASP.NET](https://www.asp.net/web-forms) o [ASP.NET MVC](https://www.asp.net/mvc) tradicionales, pero ahora se implementa con los contenedores de Windows. Si usa los contenedores de Windows, también debe migrar los datos a una base de datos en la [Instancia administrada de Azure SQL Database](https://docs.microsoft.com/azure/sql-database/), y todo sin tener que modificar la arquitectura de código de la aplicación.
+- **Proceso de DevOps listo para la nube** (elevación y desplazamiento mejorados): este modelo consiste en hacer algunas optimizaciones importantes en la implementación para obtener algunas ventajas importantes de la nube, sin cambiar la arquitectura básica de la aplicación. El paso fundamental aquí es agregar la compatibilidad con los [contenedores de Windows](https://docs.microsoft.com/virtualization/windowscontainers/about/) a las aplicaciones .NET Framework existentes. Este paso importante (creación de contenedores) no requiere modificar el código, por lo que el esfuerzo general de elevación y desplazamiento es muy bajo. Puede usar también herramientas como [Image2Docker](https://github.com/docker/communitytools-image2docker-win) o Visual Studio con sus herramientas para [Docker](https://www.docker.com/). Visual Studio elige automáticamente valores predeterminados inteligentes para aplicaciones ASP.NET e imágenes de contenedores de Windows. Estas herramientas ofrecen un bucle interior rápido y una ruta rápida para obtener los contenedores en Azure. La agilidad se mejora al implementar en varios entornos. Después, al pasar a producción, puede implementar los contenedores de Windows en orquestadores como [Azure Service Fabric](https://azure.microsoft.com/services/service-fabric/) o [Azure Container Service](https://azure.microsoft.com/services/container-service/) (Kubernetes, DC/OS o Swarm). Durante esta modernización inicial, también puede agregar recursos desde la nube, como la supervisión con herramientas como [Azure Application Insights](https://docs.microsoft.com/azure/application-insights/app-insights-overview); canalizaciones de CI/CD para los ciclos de vida de la aplicación con [Visual Studio Team Services](https://www.visualstudio.com/team-services/) y muchos más servicios de recursos de datos que están disponibles en Azure. Por ejemplo, puede modificar una aplicación web monolítica desarrollada originalmente con las herramientas [Web Forms ASP.NET](https://www.asp.net/web-forms) o [ASP.NET MVC](https://www.asp.net/mvc) tradicionales, pero ahora se implementa con los contenedores de Windows. Si usa los contenedores de Windows, también debe migrar los datos a una base de datos en la [Instancia administrada de Azure SQL Database](https://docs.microsoft.com/azure/sql-database/), y todo sin tener que modificar la arquitectura de código de la aplicación.
 
--   **Optimización para la nube**: como se ha indicado, el objetivo final al modernizar aplicaciones en la nube consiste en basar el sistema en plataformas PaaS, como [Azure App Service](https://azure.microsoft.com/services/app-service/). Las plataformas PaaS se centran en aplicaciones web modernas y extienden las aplicaciones con nuevos servicios basados en la [informática sin servidor](https://azure.microsoft.com/overview/serverless-computing/) y en plataformas como [Azure Functions](https://azure.microsoft.com/services/functions/). El segundo escenario más avanzado de este modelo de madurez se basa en arquitecturas de microservicios y aplicaciones [nativas de la nube](https://www.gartner.com/doc/3181919/architect-design-cloudnative-applications), que suelen usar orquestadores como [Azure Service Fabric](https://azure.microsoft.com/services/service-fabric/) o [Azure Container Service](https://azure.microsoft.com/services/container-service/) (Kubernetes, DC/OS o Swarm). Estos orquestadores se crean específicamente para los microservicios y las aplicaciones de varios contenedores. Todos estos enfoques (por ejemplo, microservicios y PaaS) normalmente requieren que se escriba código nuevo que se adapte a determinadas plataformas PaaS o código que se adapte a arquitecturas específicas, como microservicios.
+- **Optimización para la nube**: como se ha indicado, el objetivo final al modernizar aplicaciones en la nube consiste en basar el sistema en plataformas PaaS, como [Azure App Service](https://azure.microsoft.com/services/app-service/). Las plataformas PaaS se centran en aplicaciones web modernas y extienden las aplicaciones con nuevos servicios basados en la [informática sin servidor](https://azure.microsoft.com/overview/serverless-computing/) y en plataformas como [Azure Functions](https://azure.microsoft.com/services/functions/). El segundo escenario más avanzado de este modelo de madurez se basa en arquitecturas de microservicios y aplicaciones [nativas de la nube](https://www.gartner.com/doc/3181919/architect-design-cloudnative-applications), que suelen usar orquestadores como [Azure Service Fabric](https://azure.microsoft.com/services/service-fabric/) o [Azure Container Service](https://azure.microsoft.com/services/container-service/) (Kubernetes, DC/OS o Swarm). Estos orquestadores se crean específicamente para los microservicios y las aplicaciones de varios contenedores. Todos estos enfoques (por ejemplo, microservicios y PaaS) normalmente requieren que se escriba código nuevo que se adapte a determinadas plataformas PaaS o código que se adapte a arquitecturas específicas, como microservicios.
 
 En la figura 1-3 se muestran las tecnologías internas que se pueden usar para cada nivel de madurez:
 
@@ -148,7 +149,7 @@ Más adelante, puede disponer de una aplicación pura con operaciones de DevOps 
 
 > **Figura 1-5.** Ejemplo de escenario de elección, con base de datos IaaS, DevOps y recursos incluidos en contenedores
 
-A continuación, como el escenario ideal para muchas aplicaciones .NET Framework existentes que se van a migrar, podría migrar a una aplicación con operaciones DevOps listas para la nube para obtener importantes ventajas por el hecho de tener que realizar poco trabajo. Este enfoque también lo prepara para la optimización de la nube como un posible paso posterior. En la figura 1-6 se muestra un ejemplo.
+A continuación, como el escenario ideal para muchas aplicaciones de .NET Framework existentes a migrar, puede migrar a una aplicación preparada para DevOps la nube, para obtener ventajas significativas de poco trabajo. Este enfoque también lo prepara para la optimización de la nube como un posible paso posterior. En la figura 1-6 se muestra un ejemplo.
 
 ![Ejemplo de escenario de aplicaciones con operaciones DevOps listas para la nube, con contenedores de Windows y servicios administrados](./media/image1-6.png)
 
@@ -165,21 +166,21 @@ En esta guía se incluye un subconjunto específico de los escenarios de ejemplo
 
 > **Figura 1-7.** Elevación y desplazamiento y modernización inicial de las aplicaciones con operaciones DevOps listas para la nube
 
-El objetivo de esta guía es específico. Se muestra la ruta que se puede adoptar para conseguir una elevación y un desplazamiento de las aplicaciones .NET existentes, sin rediseñar ni cambiar el código. En última instancia, se explica cómo hacer que la aplicación tenga operaciones DevOps listas para la nube.
+El objetivo de esta guía es específico. Muestra la ruta de acceso que puede seguir para lograr una elevación y desplazamiento a la de las aplicaciones de .NET existentes, sin volver a diseñar y sin cambios de código. En última instancia, muestra cómo hacer que su aplicación preparada para DevOps la nube.
 
-En esta guía no se explica cómo trabajar con aplicaciones nativas de la nube, como la forma de evolucionar a arquitecturas de microservicios. Para rediseñar las aplicaciones o crear otras basadas en microservicios, consulte el libro electrónico [Microservicios de .NET: Arquitectura para aplicaciones .NET en contenedor](https://aka.ms/microservicesebook).
+Esta guía no muestra cómo trabajar con aplicaciones de nube nativo, como cómo evolucionan a una arquitectura de microservicios. Para rediseñar las aplicaciones o crear otras basadas en microservicios, consulte el libro electrónico [Microservicios de .NET: Arquitectura para aplicaciones .NET en contenedor](https://aka.ms/microservicesebook).
 
 ### <a name="additional-resources"></a>Recursos adicionales
 
--   **Ciclo de vida de aplicaciones de Docker en contenedor con la plataforma y las herramientas de Microsoft** (libro electrónico descargable) [*https://aka.ms/dockerlifecycleebook*](https://aka.ms/dockerlifecycleebook)
+- **Ciclo de vida de aplicaciones de Docker en contenedor con la plataforma y las herramientas de Microsoft** (libro electrónico descargable) [*https://aka.ms/dockerlifecycleebook*](https://aka.ms/dockerlifecycleebook)
 
--   **Microservicios de .NET: Arquitectura para aplicaciones .NET en contenedor** (libro electrónico descargable): [*https://aka.ms/microservicesebook*](https://aka.ms/microservicesebook)
+- **Microservicios de .NET: Arquitectura para aplicaciones .NET en contenedor** (libro electrónico descargable): [*https://aka.ms/microservicesebook*](https://aka.ms/microservicesebook)
 
--   **Diseño de aplicaciones web modernas con ASP.NET Core y Azure** (libro electrónico descargable): [*https://aka.ms/webappebook*](https://aka.ms/webappebook)
+- **Diseño de aplicaciones web modernas con ASP.NET Core y Azure** (libro electrónico descargable): [*https://aka.ms/webappebook*](https://aka.ms/webappebook)
 
 ## <a name="who-should-use-this-guide"></a>Destinatarios de esta guía
 
-Esta guía se escribió para desarrolladores y arquitectos de soluciones que desean modernizar aplicaciones ASP.NET existentes basadas en .NET Framework, para mejorar la agilidad de distribución y publicación de aplicaciones.
+Esta guía se ha escrito para los programadores y arquitectos de soluciones que desean modernizar las aplicaciones ASP.NET existentes que se basan en .NET Framework, para una mejor agilidad en envío y liberación de las aplicaciones.
 
 Esta guía puede resultar útil también si es responsable de toma de decisiones, como un arquitecto empresarial o un jefe o director de desarrollo que solo desea obtener información general de las ventajas que se pueden obtener con el uso de los contenedores de Windows y con la implementación en la nube mediante Microsoft Azure.
 
@@ -187,7 +188,7 @@ Esta guía puede resultar útil también si es responsable de toma de decisiones
 
 En esta guía se aborda el motivo por el que modernizar las aplicaciones existentes y las ventajas específicas derivadas del uso de los contenedores de Windows al mover las aplicaciones a la nube. El contenido de los primeros capítulos de la guía está diseñado para arquitectos y responsables de tomar decisiones técnicas que desean obtener información general, pero que no necesitan centrarse en información detallada de carácter técnico ni en la implementación.
 
-En el último capítulo de esta guía se presentan varios tutoriales centrados en escenarios de implementación específicos. En esta guía, se ofrecen versiones más cortas de los tutoriales, para resumir los escenarios y destacar sus ventajas. Los tutoriales completos profundizan en los detalles de configuración e implementación y se publican como una serie de [entradas de wiki](https://github.com/dotnet-architecture/eShopModernizing/wiki) en el mismo [repositorio de GitHub](https://github.com/dotnet-architecture/eShopModernizing) público en el que se encuentran aplicaciones de ejemplo relacionadas (tratadas en la siguiente sección). El último capítulo y los tutoriales detallados de la wiki de GitHub resultarán más interesantes para los desarrolladores y arquitectos que desean centrarse en los detalles de implementación.
+En el último capítulo de esta guía se presentan varios tutoriales centrados en escenarios de implementación específicos. Esta guía ofrece versiones más cortas de los tutoriales para resumir los escenarios y resaltar sus ventajas. Los tutoriales completos profundizan en los detalles de configuración e implementación y se publican como una serie de [entradas de wiki](https://github.com/dotnet-architecture/eShopModernizing/wiki) en el mismo [repositorio de GitHub](https://github.com/dotnet-architecture/eShopModernizing) público en el que se encuentran aplicaciones de ejemplo relacionadas (tratadas en la siguiente sección). El último capítulo y los tutoriales detallados de la wiki de GitHub resultarán más interesantes para los desarrolladores y arquitectos que desean centrarse en los detalles de implementación.
 
 ## <a name="sample-apps-for-modernizing-legacy-apps-eshopmodernizing"></a>Aplicaciones de ejemplo para modernizar aplicaciones heredadas: eShopModernizing
 
@@ -195,9 +196,9 @@ En el repositorio [eShopModernizing](https://github.com/dotnet-architecture/eSho
 
 Ambas aplicaciones de ejemplo tienen una segunda versión, con código modernizado, y son bastante sencillas. La diferencia más importante entre las versiones de las aplicaciones es que las segundas versiones usan los contenedores de Windows como opción de implementación. También hay algunas adiciones en las segundas versiones, como Azure Storage Blob para administrar imágenes, Azure Active Directory para administrar la seguridad y Azure Application Insights para supervisar y auditar las aplicaciones.
 
-## <a name="send-us-your-feedback"></a>Envíenos sus comentarios.
+## <a name="send-your-feedback"></a>Envíe sus comentarios
 
-Esta guía se escribió para ayudar a entender las opciones para mejorar y modernizar las aplicaciones web .NET existentes. La guía y las aplicaciones de ejemplo relacionadas evolucionan. Agradecemos los comentarios que pueda hacernos. Si tiene comentarios sobre cómo esta guía podría resultar más útil, envíelos a [dotnet-architecture-ebooks-feedback@service.microsoft.com](mailto:dotnet-architecture-ebooks-feedback@service.microsoft.com?subject=Feedback%20for%20.NET%20Container%20&%20Microservices%20Architecture%20book).
+Esta guía se escribió para ayudarle a entender las opciones para mejorar y modernizar las aplicaciones web .NET existentes. La guía y las aplicaciones de ejemplo relacionadas evolucionan. Sus comentarios son bienvenida. Si tiene comentarios sobre cómo esta guía podría resultar más útil, envíelos a [dotnet-architecture-ebooks-feedback@service.microsoft.com](mailto:dotnet-architecture-ebooks-feedback@service.microsoft.com?subject=Feedback%20for%20.NET%20Container%20&%20Microservices%20Architecture%20book).
 
 >[!div class="step-by-step"]
 [Siguiente](lift-and-shift-existing-apps-azure-iaas.md)

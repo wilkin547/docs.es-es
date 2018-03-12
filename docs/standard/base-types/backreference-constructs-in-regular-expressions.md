@@ -24,11 +24,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 2ec92933bdf123412a3d489fc493d76c4a0dc0d0
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: b4cecc44ff740dd99d10131341c6a6056ce3aab3
+ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="backreference-constructs-in-regular-expressions"></a>Construcciones de referencia inversa en expresiones regulares
 Las referencias inversas proporcionan una forma cómoda de identificar un carácter o subcadena repetidos dentro de una cadena. Por ejemplo, si la cadena de entrada contiene varias apariciones de una subcadena arbitraria, puede buscar una coincidencia con la primera aparición con un grupo de captura y después usar una referencia inversa para buscar una coincidencia con las siguientes apariciones de la subcadena.  
@@ -43,7 +43,7 @@ Las referencias inversas proporcionan una forma cómoda de identificar un carác
   
  `\` *número*  
   
- donde *número* es la posición ordinal del grupo de captura en la expresión regular. Por ejemplo, `\4` coincide con el contenido del cuarto grupo de captura. Si *número* no está definido en el patrón de expresión regular, se produce un error de análisis y el motor de expresiones regulares produce una clase <xref:System.ArgumentException>. Por ejemplo, la expresión regular `\b(\w+)\s\1` es válida, porque `(\w+)` es el primer y único grupo de captura de la expresión. Por otro lado, `\b(\w+)\s\2` no es válida y produce una excepción de argumento porque no hay ningún grupo de captura con numeración `\2`.  
+ donde *número* es la posición ordinal del grupo de captura en la expresión regular. Por ejemplo, `\4` coincide con el contenido del cuarto grupo de captura. Si *número* no está definido en el patrón de expresión regular, se produce un error de análisis y el motor de expresiones regulares produce una clase <xref:System.ArgumentException>. Por ejemplo, la expresión regular `\b(\w+)\s\1` es válida, porque `(\w+)` es el primer y único grupo de captura de la expresión. Por otro lado, `\b(\w+)\s\2` no es válida y produce una excepción de argumento porque no hay ningún grupo de captura con numeración `\2`. Además, si *número* identifica un grupo de captura en una posición ordinal determinada, pero a ese grupo de captura se le ha asignado un nombre numérico que no sea su posición ordinal, el analizador de expresiones regulares también produce una excepción <xref:System.ArgumentException>. 
   
  Tenga en cuenta la ambigüedad entre los códigos de escape octales (como `\16`) y las referencias inversas `\`*número* que usan la misma notación. Esta ambigüedad se resuelve de la siguiente forma:  
   
@@ -87,12 +87,24 @@ Las referencias inversas proporcionan una forma cómoda de identificar un carác
   
  [!code-csharp[RegularExpressions.Language.Backreferences#2](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.backreferences/cs/backreference2.cs#2)]
  [!code-vb[RegularExpressions.Language.Backreferences#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.backreferences/vb/backreference2.vb#2)]  
-  
- Tenga en cuenta que *nombre* también puede ser la representación de cadena de un número. Por ejemplo, en el ejemplo siguiente, se usa la expresión regular `(?<2>\w)\k<2>` para buscar caracteres de palabra duplicados en una cadena.  
+
+## <a name="named-numeric-backreferences"></a>Referencias inversas numéricas con nombre
+
+En una referencia inversa con `\k`, *nombre* también puede ser la representación de cadena de un número. Por ejemplo, en el ejemplo siguiente, se usa la expresión regular `(?<2>\w)\k<2>` para buscar caracteres de palabra duplicados en una cadena. En este caso, el ejemplo define un grupo de captura que se denomina explícitamente "2" y la referencia inversa se denomina también "2". 
   
  [!code-csharp[RegularExpressions.Language.Backreferences#3](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.backreferences/cs/backreference3.cs#3)]
  [!code-vb[RegularExpressions.Language.Backreferences#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.backreferences/vb/backreference3.vb#3)]  
-  
+
+Si *nombre* es la representación de cadena de un número y ningún grupo de captura tiene ese nombre, `\k<`*nombre*`>` es igual que la referencia inversa `\`*número*, donde *número* es la posición ordinal de la captura. En el ejemplo siguiente, hay un único grupo de captura denominado `char`. La construcción de referencia inversa hace referencia a él como `\k<1>`. Como muestra la salida del ejemplo, la llamada a <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> se realiza correctamente porque `char` es el primer grupo de captura.
+
+[!code-csharp[Ordinal.Backreference](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.backreferences/cs/backreference6.cs)]
+[!code-vb[Ordinal.BackReference](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.backreferences/vb/backreference6.vb)]  
+
+En cambio, si *nombre* es la representación de cadena de un número y al grupo de captura de esa posición se le ha asignado explícitamente un nombre numérico, el analizador de expresiones regulares no puede identificar el grupo de captura por su posición ordinal. En su lugar, produce una excepción <xref:System.ArgumentException>. El único grupo de captura del siguiente ejemplo se denomina "2". Dado que la construcción `\k` se usa para definir una referencia inversa denominada "1", el analizador de expresiones regulares no puede identificar el primer grupo de captura y produce una excepción.
+
+[!code-csharp[Ordinal.Backreference](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.backreferences/cs/backreference7.cs)]
+[!code-vb[Ordinal.BackReference](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.backreferences/vb/backreference7.vb)]  
+
 ## <a name="what-backreferences-match"></a>Con qué coinciden las referencias inversas  
  Una referencia inversa constituye la definición más reciente de un grupo (la definición más inmediatamente a la izquierda, al coincidir de izquierda a derecha). Cuando un grupo realiza varias capturas, una referencia inversa se refiere a la captura más reciente.  
   

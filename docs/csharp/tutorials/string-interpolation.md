@@ -10,15 +10,15 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: f8806f6b-3ac7-4ee6-9b3e-c524d5301ae9
-ms.openlocfilehash: b6b3ce53a08cfacfacb19266b0be216a40633352
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: db062ed2f832ae933941da1c49e84303090f4390
+ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="string-interpolation-in-c"></a>Interpolación de cadenas en C# #
 
-La interpolación de cadenas es la forma en que los marcadores de posición de una cadena se reemplazan por el valor de una variable de cadena. Antes de C# 6, la manera de hacerlo era con `System.String.Format`. Aunque este sistema funciona bien, como se usan marcadores de posición numerados, puede ser más difícil de leer y más detallado.
+La interpolación de cadenas es la forma en que los marcadores de posición de una cadena se reemplazan por el valor de una variable de cadena. Antes de C# 6, la manera de hacerlo era con <xref:System.String.Format%2A?displayProperty=nameWithType>. Aunque este sistema funciona bien, como se usan marcadores de posición numerados, puede ser más difícil de leer y más detallado.
 
 Durante un tiempo, otros lenguajes de programación tuvieron la interpolación de cadenas integrada. Por ejemplo, en PHP:
 
@@ -42,7 +42,7 @@ Ahora que ha instalado todas las herramientas, cree una nueva aplicación de .NE
 dotnet new console
 ```
 
-Este comando creará un proyecto de .NET Core esencial con un archivo de proyecto, *interpolated.csproj*, y un archivo de código fuente, *Program.cs*. Debe ejecutar `dotnet restore` para restaurar las dependencias necesarias para compilar este proyecto.
+Este comando crea un proyecto de .NET Core esencial con un archivo de proyecto, *interpolated.csproj*, y un archivo de código fuente, *Program.cs*. Debe ejecutar `dotnet restore` para restaurar las dependencias necesarias para compilar este proyecto.
 
 [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
@@ -52,7 +52,7 @@ Para ejecutar el programa, use `dotnet run`. Deberá ver la salida "Hola a todos
 
 ## <a name="intro-to-string-interpolation"></a>Introducción a la interpolación de cadenas
 
-Con `System.String.Format`, se especifican "marcadores de posición" en una cadena que se reemplazan por los parámetros que siguen a la cadena. Por ejemplo:
+Con <xref:System.String.Format%2A?displayProperty=nameWithType>, se especifican "marcadores de posición" en una cadena que se reemplazan por los argumentos que siguen a la cadena. Por ejemplo:
 
 [!code-csharp[String.Format example](../../../samples/snippets/csharp/new-in-6/string-interpolation.cs#StringFormatExample)]  
 
@@ -78,7 +78,7 @@ This is line number 5
 
 ## <a name="how-string-interpolation-works"></a>Cómo funciona la interpolación de cadenas
 
-En segundo plano, el compilador convierte esta sintaxis de interpolación de cadenas en String.Format. Por lo tanto, puede hacer [lo mismo que ha hecho antes con String.Format](https://msdn.microsoft.com/library/dwhawy9k(v=vs.110).aspx).
+En segundo plano, el compilador convierte esta sintaxis de interpolación de cadenas en `String.Format`. Por lo tanto, puede hacer [lo mismo que ha hecho antes con `String.Format`](../../standard/base-types/formatting-types.md).
 
 Por ejemplo, puede agregar relleno y formato numérico:
 
@@ -96,7 +96,7 @@ El comando anterior generaría la siguiente salida:
 1004       6,227.77
 ```
 
-Si no se encuentra un nombre de variable, se generará un error en tiempo de compilación.
+Si no se encuentra un nombre de variable, se genera un error en tiempo de compilación.
 
 Por ejemplo:
 
@@ -107,21 +107,19 @@ var adj = "quick";
 Console.WriteLine(localizeMe);
 ```
 
-Si compila esto, obtendrá errores:
+Si compila esto, obtiene errores:
  
 * `Cannot use local variable 'adj' before it is declared`: la variable `adj` no se ha declarado hasta *después* de la cadena interpolada.
 * `The name 'otheranimal' does not exist in the current context`: no se ha declarado ninguna variable `otheranimal`.
 
 ## <a name="localization-and-internationalization"></a>Internacionalización y localización
 
-Una cadena interpolada admite `IFormattable` y `FormattableString`, que pueden ser útiles para la internacionalización.
+Una cadena interpolada admite <xref:System.IFormattable?displayProperty=nameWithType> y <xref:System.FormattableString?displayProperty=nameWithType>, que pueden ser útiles para la internacionalización.
 
-De forma predeterminada, una cadena interpolada usa la referencia cultural actual. Para usar una referencia cultural diferente, puede convertirla a `IFormattable`.
-
-Por ejemplo:
+De forma predeterminada, una cadena interpolada usa la referencia cultural actual. Para usar otra referencia cultural, convierta una cadena interpolada como `IFormattable`. Por ejemplo:
 
 [!code-csharp[Interpolation internationalization example](../../../samples/snippets/csharp/new-in-6/string-interpolation.cs#InterpolationInternationalizationExample)]  
 
 ## <a name="conclusion"></a>Conclusión 
 
-En este tutorial, aprendió a usar las características de interpolación de cadenas de C# 6. Básicamente es una manera más concisa de escribir instrucciones simples `String.Format`, con algunas advertencias para usos más avanzados de ellas.
+En este tutorial, aprendió a usar las características de interpolación de cadenas de C# 6. Básicamente es una manera más concisa de escribir instrucciones `String.Format` simples, con algunas advertencias para usos más avanzados. Para obtener más información, vea el tema [Cadenas interpoladas](../../csharp//language-reference/keywords/interpolated-strings.md).

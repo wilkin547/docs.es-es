@@ -13,11 +13,11 @@ ms.assetid: 1e38f9d9-8f84-46ee-a15f-199aec4f2e34
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: b23a90de991b31005ba5a07a959c717c24869ffb
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: b01aa5d0fade29d04313a9db2e44517b6512166b
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="async-in-depth"></a>Async en profundidad
 
@@ -153,5 +153,6 @@ Una vez se encuentra `await`, la ejecución de `CalculateResult()` se cede a su 
 ## <a name="see-also"></a>Vea también
 
 [Programación asincrónica en C#](~/docs/csharp/async.md)   
+[Programación asincrónica con async y await (C#)](../csharp/programming-guide/concepts/async/index.md)  
 [Async Programming in F#](~/docs/fsharp/tutorials/asynchronous-and-concurrent-programming/async.md)  (Programación asincrónica en F#)  
 [Programación asincrónica con Async y Await (Visual Basic)](~/docs/visual-basic/programming-guide/concepts/async/index.md)

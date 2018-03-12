@@ -15,11 +15,11 @@ ms.assetid: 729c2923-4169-41c6-9c90-ef176c1e2953
 author: BillWagner
 ms.author: wiwagn
 ms.custom: mvc
-ms.openlocfilehash: 5143fed04148fb17697bd5d040ad23b762505db4
-ms.sourcegitcommit: 099aa20d9b6450d1b7452d782a55771a6ad8ff35
+ms.openlocfilehash: afaff6f81a1a4240214f738d0fc9f3bafdaf868c
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/05/2018
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="how-to-parse-strings-using-stringsplit-c-guide"></a>Cómo: Analizar cadenas mediante String.Split (Guía de C#)
 
@@ -51,9 +51,9 @@ Las instancias consecutivas de cualquier separador generan la cadena vacía en l
   
 [!code-csharp-interactive[split strings using strings as separators](../../../samples/snippets/csharp/how-to/strings/ParseStringsUsingSplit.cs#5)]
 
-Eche un vistazo al código de nuestro [repositorio de GitHub](https://github.com/dotnet/docs/tree/master/samples/snippets/csharp/how-to/strings) y pruebe estos ejemplos.
+Eche un vistazo al código de nuestro [repositorio de GitHub](https://github.com/dotnet/docs/tree/master/samples/snippets/csharp/how-to/strings) y pruebe estos ejemplos. O bien, puede descargar los ejemplos [como un archivo ZIP](https://github.com/dotnet/docs/tree/master/samples/snippets/csharp/how-to/strings.zip).
 
 ## <a name="see-also"></a>Vea también  
  [Guía de programación de C#](../programming-guide/index.md)  
  [Cadenas](../programming-guide/strings/index.md)  
- [Expresiones regulares de .NET Framework](https://msdn.microsoft.com/library/hs600312)
+ [Expresiones regulares de .NET](../../standard/base-types/regular-expressions.md)

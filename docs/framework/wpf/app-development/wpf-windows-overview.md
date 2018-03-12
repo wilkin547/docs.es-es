@@ -42,11 +42,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 594bb21983f51f3c0698c43d0f6ea39594b72705
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: c176f08904bac8e9c3877977c1e52afb57d5daca
+ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="wpf-windows-overview"></a>Información general sobre ventanas de WPF
 Los usuarios interactúan con las aplicaciones independientes de [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] por medio de ventanas. El propósito principal de una ventana es hospedar contenido que permita visualizar datos y que permita a los usuarios interactuar con estos. Independiente [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplicaciones proporcionan sus propias ventanas mediante la <xref:System.Windows.Window> clase. Este tema se presentan <xref:System.Windows.Window> antes de tratar los conceptos básicos de creación y administración de windows en las aplicaciones independientes.  
@@ -106,7 +106,7 @@ Los usuarios interactúan con las aplicaciones independientes de [!INCLUDE[TLA#t
   
 -   En el código subyacente, la clase debe ser un `partial` clase con el mismo nombre que se especifica mediante la `x:Class` atributo en el marcado y se debe derivar de <xref:System.Windows.Window>. Esto permite que el archivo de código subyacente asociar a la `partial` clase que se genera para el archivo de marcado cuando se compila la aplicación (consulte [compilar una aplicación de WPF](../../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md)).  
   
--   En el código subyacente, el <xref:System.Windows.Window> clase debe implementar un constructor que llama el `InitializeComponent` método. `InitializeComponent`se implementa mediante el marcado generado de archivo `partial` clase para registrar eventos y establecer las propiedades que se definen en el marcado.  
+-   En el código subyacente, el <xref:System.Windows.Window> clase debe implementar un constructor que llama el `InitializeComponent` método. `InitializeComponent` se implementa mediante el marcado generado de archivo `partial` clase para registrar eventos y establecer las propiedades que se definen en el marcado.  
   
 > [!NOTE]
 >  Cuando se agrega un nuevo <xref:System.Windows.Window> al proyecto mediante el uso de [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)], el <xref:System.Windows.Window> se implementa mediante marcado y código subyacente e incluye la configuración necesaria para crear la asociación entre los archivos de código subyacente y marcado como se describe aquí.  
@@ -164,7 +164,7 @@ Los usuarios interactúan con las aplicaciones independientes de [!INCLUDE[TLA#t
  Una ventana que se abre mediante una llamada a <xref:System.Windows.Window.Show%2A> es una ventana no modal, lo que significa que la aplicación funciona en un modo que permite a los usuarios activar otras ventanas en la misma aplicación.  
   
 > [!NOTE]
->  <xref:System.Windows.Window.ShowDialog%2A>se llama para abrir ventanas como cuadros de diálogo de forma modal. Vea [información general de cuadros de diálogo](../../../../docs/framework/wpf/app-development/dialog-boxes-overview.md) para obtener más información.  
+>  <xref:System.Windows.Window.ShowDialog%2A> se llama para abrir ventanas como cuadros de diálogo de forma modal. Vea [información general de cuadros de diálogo](../../../../docs/framework/wpf/app-development/dialog-boxes-overview.md) para obtener más información.  
   
  Cuando <xref:System.Windows.Window.Show%2A> es llama, una ventana realiza trabajo de inicialización antes de que se muestra para establecer una infraestructura que le permite recibir proporcionados por el usuario. Cuando se inicializa la ventana, el <xref:System.Windows.Window.SourceInitialized> se genera el evento y se muestra la ventana.  
   
@@ -267,7 +267,7 @@ Los usuarios interactúan con las aplicaciones independientes de [!INCLUDE[TLA#t
   
  Cuando se cierra una ventana, genera dos eventos: <xref:System.Windows.Window.Closing> y <xref:System.Windows.Window.Closed>.  
   
- <xref:System.Windows.Window.Closing>se produce antes de que se cierra la ventana y proporciona un mecanismo de qué ventana se puede evitar la cierre. Una razón común para evitar el cierre de la ventana se produce en caso de que el contenido de la ventana contenga datos modificados. En esta situación, el <xref:System.Windows.Window.Closing> se puede controlar el evento para determinar si los datos están desfasadas y, si es así, para preguntar al usuario si desea continuar cerrando la ventana sin guardar los datos o cancelar el cierre de la ventana. En el ejemplo siguiente se muestra los aspectos clave del control <xref:System.Windows.Window.Closing>.  
+ <xref:System.Windows.Window.Closing> se produce antes de que se cierra la ventana y proporciona un mecanismo de qué ventana se puede evitar la cierre. Una razón común para evitar el cierre de la ventana se produce en caso de que el contenido de la ventana contenga datos modificados. En esta situación, el <xref:System.Windows.Window.Closing> se puede controlar el evento para determinar si los datos están desfasadas y, si es así, para preguntar al usuario si desea continuar cerrando la ventana sin guardar los datos o cancelar el cierre de la ventana. En el ejemplo siguiente se muestra los aspectos clave del control <xref:System.Windows.Window.Closing>.  
   
  [!code-csharp[WindowClosingSnippets](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowClosingSnippets/CSharp/DataWindow.xaml.cs)]
  [!code-vb[WindowClosingSnippets](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WindowClosingSnippets/visualbasic/datawindow.xaml.vb)]  
@@ -322,7 +322,6 @@ Los usuarios interactúan con las aplicaciones independientes de [!INCLUDE[TLA#t
  Además de tener una ubicación x e y, una ventana también tiene una ubicación en la dimensión z, que determina su posición vertical con respecto a otras ventanas. Esto se conoce como el orden z de la ventana y hay dos tipos: orden z normal y orden z superior. La ubicación de una ventana en la *orden z normal* se determina por si está actualmente activa o no. De forma predeterminada, una ventana se encuentra en el orden z normal. La ubicación de una ventana en la *orden z superior* también se determina por si está actualmente activa o no. Además, las ventanas del orden z superior siempre se encuentran por encima de aquellas del orden z normal. Una ventana se encuentra en el orden z superior estableciendo su <xref:System.Windows.Window.Topmost%2A> propiedad `true`.  
   
  [!code-xaml[WindowsOverviewSnippets#TopmostWindowMARKUP1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/TopmostWindow.xaml#topmostwindowmarkup1)]  
-[!code-xaml[WindowsOverviewSnippets#TopmostWindowMARKUP2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/TopmostWindow.xaml#topmostwindowmarkup2)]  
   
  Dentro de cada orden z, la ventana actualmente activa aparece encima de las demás ventanas del mismo orden z.  
   
@@ -333,12 +332,10 @@ Los usuarios interactúan con las aplicaciones independientes de [!INCLUDE[TLA#t
  <xref:System.Windows.FrameworkElement.MinWidth%2A>, <xref:System.Windows.FrameworkElement.Width%2A>, y <xref:System.Windows.FrameworkElement.MaxWidth%2A> se utilizan para administrar el intervalo de anchos una ventana puede tener durante su duración y que están configuradas tal como se muestra en el ejemplo siguiente.  
   
  [!code-xaml[WindowsOverviewSnippets#WidthWindowMARKUP1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/WidthWindow.xaml#widthwindowmarkup1)]  
-[!code-xaml[WindowsOverviewSnippets#WidthWindowMARKUP2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/WidthWindow.xaml#widthwindowmarkup2)]  
   
  Alto de la ventana está administrado por <xref:System.Windows.FrameworkElement.MinHeight%2A>, <xref:System.Windows.FrameworkElement.Height%2A>, y <xref:System.Windows.FrameworkElement.MaxHeight%2A>y están configuradas tal como se muestra en el ejemplo siguiente.  
   
  [!code-xaml[WindowsOverviewSnippets#HeightWindowMARKUP1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/HeightWindow.xaml#heightwindowmarkup1)]  
-[!code-xaml[WindowsOverviewSnippets#HeightWindowMARKUP2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/HeightWindow.xaml#heightwindowmarkup2)]  
   
  Dado que los distintos valores de anchura y altura especifican cada uno de ellos un intervalo, es posible que la anchura y altura de una ventana de tamaño ajustable se encuentre dentro del intervalo especificado para la dimensión correspondiente. Para detectar su ancho y alto actuales, inspeccione <xref:System.Windows.FrameworkElement.ActualWidth%2A> y <xref:System.Windows.FrameworkElement.ActualHeight%2A>, respectivamente.  
   
@@ -355,7 +352,6 @@ Los usuarios interactúan con las aplicaciones independientes de [!INCLUDE[TLA#t
  En el ejemplo siguiente se muestra una ventana que se redimensiona automáticamente para ajustarse al contenido, tanto vertical como horizontalmente, cuando se muestra por primera vez.  
   
  [!code-xaml[WindowsOverviewSnippets#SizeToContentWindowMARKUP1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/SizeToContentWindow.xaml#sizetocontentwindowmarkup1)]  
-[!code-xaml[WindowsOverviewSnippets#SizeToContentWindowMARKUP2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/SizeToContentWindow.xaml#sizetocontentwindowmarkup2)]  
   
  En el ejemplo siguiente se muestra cómo establecer el <xref:System.Windows.Window.SizeToContent%2A> propiedad en el código para especificar cómo cambia el tamaño de una ventana para ajustar su contenido.
   
@@ -410,7 +406,6 @@ Los usuarios interactúan con las aplicaciones independientes de [!INCLUDE[TLA#t
  En el ejemplo siguiente se muestra cómo crear una ventana que se muestra como maximizada cuando se abre.  
   
  [!code-xaml[WindowsOverviewSnippets#WindowStateWindowMARKUP1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/WindowStateWindow.xaml#windowstatewindowmarkup1)]  
-[!code-xaml[WindowsOverviewSnippets#WindowStateWindowMARKUP2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/WindowStateWindow.xaml#windowstatewindowmarkup2)]  
   
  En general, debería establecer <xref:System.Windows.Window.WindowState%2A> para configurar el estado inicial de una ventana. Cuando aparece una ventana de tamaño ajustable, los usuarios pueden presionar los botones para minimizar, maximizar y restaurar situados en la barra de título de la ventana para cambiar el estado de esta.  
   
@@ -438,7 +433,6 @@ Los usuarios interactúan con las aplicaciones independientes de [!INCLUDE[TLA#t
  Al igual que con <xref:System.Windows.Window.WindowStyle%2A>, es improbable que cambie durante su duración, lo que significa que es más probable es que configuran desde el modo de cambio de tamaño de una ventana [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] marcado.  
   
  [!code-xaml[WindowsOverviewSnippets#ResizeModeWindowMARKUP1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/ResizeModeWindow.xaml#resizemodewindowmarkup1)]  
-[!code-xaml[WindowsOverviewSnippets#ResizeModeWindowMARKUP2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/ResizeModeWindow.xaml#resizemodewindowmarkup2)]  
   
  Tenga en cuenta que puede detectar si una ventana está maximizada, minimizada o restaurada inspeccionando el <xref:System.Windows.Window.WindowState%2A> propiedad.  
   
@@ -463,7 +457,6 @@ Los usuarios interactúan con las aplicaciones independientes de [!INCLUDE[TLA#t
  Puede establecer <xref:System.Windows.Window.WindowStyle%2A> mediante [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] o marcado del código; porque es improbable que cambie durante la duración de una ventana, más probable es que configurará con [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] marcado.  
   
  [!code-xaml[WindowsOverviewSnippets#WindowStyleWindowMARKUP1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/WindowStyleWindow.xaml#windowstylewindowmarkup1)]  
-[!code-xaml[WindowsOverviewSnippets#WindowStyleWindowMARKUP2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/WindowStyleWindow.xaml#windowstylewindowmarkup2)]  
   
 #### <a name="non-rectangular-window-style"></a>Estilo de ventana no rectangular  
  También hay situaciones donde el borde estilos que <xref:System.Windows.Window.WindowStyle%2A> permite tener no es suficientes. Por ejemplo, puede que desee crear una aplicación con un borde no rectangular, como [!INCLUDE[TLA#tla_wmp](../../../../includes/tlasharptla-wmp-md.md)] usa.  
@@ -475,7 +468,6 @@ Los usuarios interactúan con las aplicaciones independientes de [!INCLUDE[TLA#t
  Se puede crear este tipo de ventana estableciendo la <xref:System.Windows.Window.WindowStyle%2A> propiedad <xref:System.Windows.WindowStyle.None>y mediante el comando especial compatible con esto <xref:System.Windows.Window> tiene para la transparencia.  
   
  [!code-xaml[WindowsOverviewSnippets#TransparentWindowMARKUP1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/TransparentWindow.xaml#transparentwindowmarkup1)]  
-[!code-xaml[WindowsOverviewSnippets#TransparentWindowMARKUP2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/TransparentWindow.xaml#transparentwindowmarkup2)]  
   
  Esta combinación de valores indica a la ventana que se puede representar de forma totalmente transparente. En este estado, no se pueden usar las opciones del área distinta del cliente de la ventana (el menú Cerrar, los botones para minimizar, maximizar y restaurar, etc.). Por consiguiente, deberá proporcionar las suyas propias.  
   
@@ -488,11 +480,10 @@ Los usuarios interactúan con las aplicaciones independientes de [!INCLUDE[TLA#t
  Algunos tipos de windows no tienen un botón de barra de tareas, como cuadros de mensaje y cuadros de diálogo (vea [información general de cuadros de diálogo](../../../../docs/framework/wpf/app-development/dialog-boxes-overview.md)). Puede controlar si se muestra el botón de barra de tareas para una ventana estableciendo la <xref:System.Windows.Window.ShowInTaskbar%2A> propiedad (`true` de forma predeterminada).  
   
  [!code-xaml[WindowsOverviewSnippets#ShowInTaskbarWindowMARKUP1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/ShowInTaskbarWindow.xaml#showintaskbarwindowmarkup1)]  
-[!code-xaml[WindowsOverviewSnippets#ShowInTaskbarWindowMARKUP2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/ShowInTaskbarWindow.xaml#showintaskbarwindowmarkup2)]  
   
 <a name="SecurityConsiderations"></a>   
 ## <a name="security-considerations"></a>Consideraciones de seguridad  
- <xref:System.Windows.Window>requiere `UnmanagedCode` permiso de seguridad que se creará una instancia. Para aquellas aplicaciones instaladas e iniciadas desde la máquina local, esto pertenece al conjunto de permisos que se conceden a la aplicación.  
+ <xref:System.Windows.Window> requiere `UnmanagedCode` permiso de seguridad que se creará una instancia. Para aquellas aplicaciones instaladas e iniciadas desde la máquina local, esto pertenece al conjunto de permisos que se conceden a la aplicación.  
   
  Sin embargo, esto no entra en el conjunto de permisos concedidos a las aplicaciones que se inician desde la Internet o Local intranet zona utilizando [!INCLUDE[TLA#tla_clickonce](../../../../includes/tlasharptla-clickonce-md.md)]. Por lo tanto, los usuarios recibirán un [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] advertencia de seguridad y tendrá que elevar el conjunto de permisos para la aplicación en plena confianza.  
   
@@ -500,7 +491,7 @@ Los usuarios interactúan con las aplicaciones independientes de [!INCLUDE[TLA#t
   
 <a name="Other_Types_of_Windows"></a>   
 ## <a name="other-types-of-windows"></a>Otros tipos de ventanas  
- <xref:System.Windows.Navigation.NavigationWindow>es una ventana diseñada para hospedar contenido navegable. Para obtener más información, consulte [Navigation Overview](../../../../docs/framework/wpf/app-development/navigation-overview.md)).  
+ <xref:System.Windows.Navigation.NavigationWindow> es una ventana diseñada para hospedar contenido navegable. Para obtener más información, consulte [Navigation Overview](../../../../docs/framework/wpf/app-development/navigation-overview.md)).  
   
  Los cuadros de diálogo son ventanas que se suelen utilizar para recopilar información de un usuario para completar una función. Por ejemplo, cuando un usuario desea abrir un archivo, el **abrir archivo** cuadro de diálogo se muestra normalmente una aplicación para obtener el nombre de archivo del usuario. Para obtener más información, vea [Información general sobre cuadros de diálogo](../../../../docs/framework/wpf/app-development/dialog-boxes-overview.md).  
   

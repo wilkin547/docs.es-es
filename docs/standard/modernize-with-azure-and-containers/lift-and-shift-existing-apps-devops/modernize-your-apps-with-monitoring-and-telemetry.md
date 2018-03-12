@@ -4,14 +4,15 @@ description: "Arquitectura de Microservicios de .NET para aplicaciones .NET en c
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
+ms.prod: .net
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 1535951eb648deab17cf8c2fe64db6ddf7df4cb5
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 3caeb60cf0107aaf5413d935f3bde11863561c7d
+ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="modernize-your-apps-with-monitoring-and-telemetry"></a>Modernizar las aplicaciones con la supervisión y telemetría
 
@@ -37,13 +38,13 @@ Puede tener acceso a análisis de registros en el portal OMS o el portal de Azur
 
 El [solución de supervisión de contenedor](https://docs.microsoft.com/azure/log-analytics/log-analytics-containers) en análisis de registros le ayuda a ver y administrar los hosts de Docker y el contenedor de Windows en una sola ubicación. La solución muestra qué contenedores están ejecutando, qué imagen de contenedor se está ejecutando y que se ejecutan los contenedores. Puede ver información detallada de auditoría, incluidos los comandos que se utilizan con los contenedores. También puede solucionar los contenedores de visualización y búsqueda de registros centralizados, sin necesidad de ver de forma remota los hosts de Windows o de Docker. Puede encontrar contenedores que podrían ser ruidoso y consumo exceso de recursos en un host. Además, puede ver centralizada CPU, memoria, almacenamiento y uso de la red y obtener información de rendimiento, para los contenedores. En equipos que ejecutan Windows, puede centralizar y comparar los registros de Windows Server, Hyper-V y contenedores de Docker. La solución es compatible con la siguiente orchestrators de contenedor:
 
--   Conjunto de docker
+-   Docker Swarm
 
 -   DC/OS
 
 -   Kubernetes
 
--   Service Fabric.
+-   Service Fabric
 
 -   Red Hat OpenShift
 

@@ -14,11 +14,11 @@ ms.assetid: 8e16736f-4096-4f3f-be0f-9d4c3ff63520
 caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 978f631a130f9ec2d450779f2a6296a6ce3af356
-ms.sourcegitcommit: cec0525b2121c36198379525e69aa5388266db5b
+ms.openlocfilehash: 43b60455762ecd91a790ea5c7dae49d3348794aa
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="how-to-concatenate-multiple-strings-c-guide"></a>Concatenación de varias cadenas (Guía de C#)
 
@@ -31,7 +31,7 @@ En el ejemplo siguiente se usa la concatenación para dividir un literal de cade
  [!code-csharp-interactive[Combining strings at compile time](../../../samples/snippets/csharp/how-to/strings/Concatenate.cs#1)]  
   
 
-Para concatenar variables de cadena, puede usar los operadores `+` o `+=`, la [interpolación de cadena](../tutorials/string-interpolation.md) o los métodos <xref:System.String.Concat%2A?displayProperty=nameWithType>, <xref:System.String.Format%2A?displayProperty=nameWithType>, <xref:System.String.Join%2A?displayProperty=nameWithType> o <xref:System.Text.StringBuilder.Append%2A?displayProperty=nameWithType>. El operador `+` es sencillo de usar y genera un código intuitivo. Aunque use varios operadores `+` en una instrucción, el contenido de la cadena se copiará solo una vez. En el código siguiente se muestran dos ejemplos del uso del operador `+` para concatenar cadenas:
+Para concatenar variables de cadena, puede usar los operadores `+` o `+=`, la [interpolación de cadena](../tutorials/string-interpolation.md) o los métodos <xref:System.String.Format%2A?displayProperty=nameWithType>, <xref:System.String.Concat%2A?displayProperty=nameWithType>, <xref:System.String.Join%2A?displayProperty=nameWithType> o <xref:System.Text.StringBuilder.Append%2A?displayProperty=nameWithType>. El operador `+` es sencillo de usar y genera un código intuitivo. Aunque use varios operadores `+` en una instrucción, el contenido de la cadena se copiará solo una vez. En el código siguiente se muestran ejemplos del uso de los operadores `+` y `+=` para concatenar cadenas:
 
 [!code-csharp-interactive[combining strings using +](../../../samples/snippets/csharp/how-to/strings/Concatenate.cs#2)]  
 
@@ -42,7 +42,7 @@ En algunas expresiones, es más fácil concatenar cadenas mediante la interpolac
 > [!NOTE]
 >  En operaciones de concatenación de cadenas, el compilador de C# trata una cadena NULL igual que una cadena vacía.
 
-Otro método para concatenar cadenas es <xref:System.String.Format%2A?displayProperty=nameWithType>. Este método funciona bien para compilar una cadena a partir de un número reducido de cadenas de componente. Este método también es una excelente opción si conoce el número de cadenas que forman la cadena concatenada.
+Otro método para concatenar cadenas es <xref:System.String.Format%2A?displayProperty=nameWithType>. Este método funciona bien para compilar una cadena a partir de un número reducido de cadenas de componente.
 
 En otros casos, puede combinar cadenas en un bucle, donde no sabe cuántas cadenas de origen se combinan, y el número real de cadenas de origen puede ser bastante elevado. La clase <xref:System.Text.StringBuilder> se diseñó para estos escenarios. El código siguiente usa el método <xref:System.Text.StringBuilder.Append%2A> de la clase <xref:System.Text.StringBuilder> para concatenar cadenas.  
   
@@ -50,7 +50,7 @@ En otros casos, puede combinar cadenas en un bucle, donde no sabe cuántas caden
 
 Puede obtener más información sobre las [razones para elegir la concatenación de cadenas o sobre la clase `StringBuilder`](xref:System.Text.StringBuilder#StringAndSB).
 
-Otra opción para combinar cadenas a partir de una colección consiste en usar el método <xref:System.String.Concat%2A?displayProperty=nameWithType>. Use el método <xref:System.String.Join%2A?displayProperty=nameWithType> si las cadenas se deben separar con un delimitador. El código siguiente combina una matriz de palabras usando ambos métodos:
+Otra opción para combinar cadenas a partir de una colección consiste en usar el método <xref:System.String.Concat%2A?displayProperty=nameWithType>. Use el método <xref:System.String.Join%2A?displayProperty=nameWithType> si las cadenas de origen se deben separar con un delimitador. El código siguiente combina una matriz de palabras usando ambos métodos:
 
 [!code-csharp-interactive[concatenation of string collection](../../../samples/snippets/csharp/how-to/strings/Concatenate.cs#5)]
 
@@ -58,6 +58,7 @@ Por último, puede usar [LINQ](../programming-guide/concepts/linq/index.md) y el
 
 [!code-csharp-interactive[string concatenation using LINQ expressions](../../../samples/snippets/csharp/how-to/strings/Concatenate.cs#6)]  
 
+Eche un vistazo al código de nuestro [repositorio de GitHub](https://github.com/dotnet/docs/tree/master/samples/snippets/csharp/how-to/strings) y pruebe estos ejemplos. O bien, puede descargar los ejemplos [como un archivo ZIP](https://github.com/dotnet/docs/tree/master/samples/snippets/csharp/how-to/strings.zip).
 
 ## <a name="see-also"></a>Vea también  
  <xref:System.String>  

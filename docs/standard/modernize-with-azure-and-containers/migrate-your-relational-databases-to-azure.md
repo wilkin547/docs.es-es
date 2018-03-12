@@ -4,14 +4,15 @@ description: Modernizar las aplicaciones .NET existentes con contenedores de Win
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
+ms.prod: .net
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 221d8c2b837fb738425e26f3af4da895e4987212
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 9189de8d083c8f9dea8c53b428e6cd34ae6dad15
+ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="migrate-your-relational-databases-to-azure"></a>Migrar las bases de datos relacionales a azure
 
@@ -35,27 +36,27 @@ Una organización que opera en un sector altamente regulado y que necesitan mant
 
 Instancia administrada en la base de datos de SQL Azure tiene las siguientes características:
 
--   Aislamiento de seguridad a través de la red Virtual de Azure
+- Aislamiento de seguridad a través de la red Virtual de Azure
 
--   Compatibilidad de superficie de aplicación, con estas características:
+- Compatibilidad de superficie de aplicación, con estas características:
 
-    -   Agente SQL Server y SQL Server Profiler
+  - Agente SQL Server y SQL Server Profiler
 
-    -   La replicación entre bases de datos de las referencias y las consultas, CLR de SQL y captura de datos modificados (CDC), Service Broker
+  - La replicación entre bases de datos de las referencias y las consultas, CLR de SQL y captura de datos modificados (CDC), Service Broker
 
--   Cambia el tamaño de base de datos hasta 35 TB
+- Cambia el tamaño de base de datos hasta 35 TB
 
--   Migración de tiempo de inactividad mínimo, con estas características:
+- Migración de tiempo de inactividad mínimo, con estas características:
 
-    -   Servicio de migración de base de datos de Azure
+  - Servicio de migración de base de datos de Azure
 
-    -   Native copias de seguridad y restauración y el trasvase de registros
+  - Native copias de seguridad y restauración y el trasvase de registros
 
 Con estas funcionalidades, al migrar las bases de datos de aplicación existente a base de datos de SQL Azure, el modelo de instancia administrada ofrece casi el 100% de las ventajas de Paas para SQL Server. Instancia administrada es un entorno de SQL Server donde, seguir usando las capacidades de nivel de instancia sin cambiar el diseño de aplicaciones.
 
 Instancia administrada es probablemente la mejor opción para las empresas que actualmente está usando SQL Server, y que requieren flexibilidad en la seguridad de red en la nube. Es como tener una red privada virtual para las bases de datos SQL.
 
-## <a name="when-to-migrate-to-azure-sql-database"></a>Cuándo se debe migrar a base de datos de SQL Azure 
+## <a name="when-to-migrate-to-azure-sql-database"></a>Cuándo se debe migrar a base de datos de SQL Azure
 
 Como se mencionó, la base de datos de SQL de Azure estándar es un DBaaS completamente administrado y relacionales. Base de datos SQL actualmente administra millones de bases de datos de producción, en centros de 38 datos, todo el mundo. Admite una amplia gama de aplicaciones y cargas de trabajo, de la administración de los datos transaccionales sencillos, para controlar las aplicaciones de misión crítica, de uso más intensivo de datos que requieren procesamiento avanzado de datos en una escala global.
 
@@ -65,19 +66,19 @@ La base de datos de SQL Azure es el servicio de base de datos de nube solo intel
 
 La base de datos de SQL Azure ofrece las siguientes ventajas:
 
--   Inteligencia incorporada (aprendizaje automático) que aprende y se adapta a la aplicación
+- Inteligencia incorporada (aprendizaje automático) que aprende y se adapta a la aplicación
 
--   Aprovisionamiento de la base de datos a petición
+- Aprovisionamiento de la base de datos a petición
 
--   Un intervalo de ofertas, para todas las cargas de trabajo
+- Un intervalo de ofertas, para todas las cargas de trabajo
 
--   disponibilidad del 99,99% SLA, cero mantenimiento
+- disponibilidad del 99,99% SLA, cero mantenimiento
 
--   Servicios de replicación geográfica y restauración para la protección de datos
+- Servicios de replicación geográfica y restauración para la protección de datos
 
--   Punto de base de datos de SQL Azure en la característica de restauración a un momento
+- Punto de base de datos de SQL Azure en la característica de restauración a un momento
 
--   Compatibilidad con SQL Server 2016, incluidos híbrida y migración
+- Compatibilidad con SQL Server 2016, incluidos híbrida y migración
 
 La base de datos de SQL de Azure estándar está más cerca de PaaS que la instancia de base de datos administrada de SQL de Azure. Debe intentar usarlo, si es posible, ya que obtendrá ventajas más de una nube administrada. Sin embargo, base de datos de SQL Azure presenta algunas diferencias claves normales y las instancias de SQL Server local. Dependiendo de los requisitos de la base de datos de la aplicación existente y los requisitos de empresa y directivas, no sería la mejor opción cuando planee la migración a la nube.
 
@@ -108,23 +109,23 @@ Para obtener información sobre cómo migrar las bases de datos mediante el serv
 
 ## <a name="additional-resources"></a>Recursos adicionales
 
--   **Elija una opción de SQL Server de la nube: base de datos de SQL de Azure (PaaS) o SQL Server en la máquina virtual de Azure (IaaS)**
+- **Elija una opción de SQL Server de la nube: base de datos de SQL de Azure (PaaS) o SQL Server en la máquina virtual de Azure (IaaS)**
 
     [https://docs.microsoft.com/azure/sql-database/sql-database-paas-vs-sql-server-iaas](https://docs.microsoft.com/azure/sql-database/sql-database-paas-vs-sql-server-iaas)
 
--   **Obtener en la nube más rápida con la instancia administrada de Azure SQL DB y el servicio de migración de base de datos**
+- **Obtener en la nube más rápida con la instancia administrada de Azure SQL DB y el servicio de migración de base de datos**
 
     [https://channel9.msdn.com/Events/Build/2017/P4008](https://channel9.msdn.com/Events/Build/2017/P4008)
 
--   **Migración de base de datos de SQL Server para la base de datos de SQL en la nube**
+- **Migración de base de datos de SQL Server para la base de datos de SQL en la nube**
 
     [https://docs.microsoft.com/azure/sql-database/sql-database-cloud-migrate](https://docs.microsoft.com/azure/sql-database/sql-database-cloud-migrate)
 
--   **Azure SQL Database**
+- **Azure SQL Database**
 
     [https://azure.microsoft.com/services/sql-database/?v=16.50](https://azure.microsoft.com/services/sql-database/?v=16.50)
 
--   **SQL Server en máquinas virtuales**
+- **SQL Server en máquinas virtuales**
 
     [https://azure.microsoft.com/services/virtual-machines/sql-server/](https://azure.microsoft.com/services/virtual-machines/sql-server/)
 

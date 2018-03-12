@@ -31,11 +31,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: fdbb64cac1f1d4043b8b935fcad32aec88b7bb7a
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: 0400fba20e614b441eb549f39d8e831811c55e5e
+ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="how-to-verify-that-strings-are-in-valid-email-format"></a>Cómo: Comprobar si las cadenas tienen un formato de correo electrónico válido
 En el ejemplo siguiente se usa una expresión regular para comprobar que una cadena tiene un formato de correo electrónico válido.  
@@ -67,15 +67,15 @@ En el ejemplo siguiente se usa una expresión regular para comprobar que una cad
 |`^`|Comenzar la búsqueda de coincidencia al principio de la cadena.|  
 |`(?(")`|Determinar si el primer carácter es una comilla. `(?(")` es el principio de una construcción de alternancia.|  
 |`(?("")("".+?(?<!\\)""@)`|Si el primer carácter es un signo de comillas, buscar unas comillas iniciales seguidas de al menos un carácter cualquiera, seguido a su vez de unas comillas finales. Las comillas finales no pueden ir precedidas de un carácter de barra diagonal inversa (\\). `(?<!` es el principio de una aserción de búsqueda anticipada negativa de ancho cero. La cadena debe concluir con una arroba (@).|  
-|`&#124;(([0-9a-z]`|Si el primer carácter no es un signo de comillas, buscar cualquier carácter alfabético de la a a la z o de la A a la Z (la comparación distingue entre mayúsculas y minúsculas) o cualquier carácter numérico del 0 al 9.|  
+|<code>&#124;(([0-9a-z]</code>|Si el primer carácter no es un signo de comillas, buscar cualquier carácter alfabético de la a a la z o de la A a la Z (la comparación distingue entre mayúsculas y minúsculas) o cualquier carácter numérico del 0 al 9.|  
 |`(\.(?!\.))`|Si el carácter siguiente es un punto, determinar que coincide. Si no lo es, buscar más adelante en el siguiente carácter y probar si coincide. `(?!\.)` es una aserción de búsqueda anticipada negativa de ancho igual a cero que evita que aparezcan dos puntos consecutivos en la parte local de una dirección de correo electrónico.|  
-|``&#124;[-!#\$%&'\*\+/=\?\^`{}\&#124;~\w]``|Si el carácter siguiente no es un punto, buscar cualquier carácter de palabra coincidente o uno de los siguientes caracteres: -!#$%'*+=?^`{}&#124;~.|  
-|``((\.(?!\.))&#124;[-!#\$%'\*\+/=\?\^`{}\&#124;~\w])*``|Buscar el modelo de alternancia (un punto seguido de algo que no sea un punto, o uno de varios caracteres) cero o más veces.|  
+|<code>&#124;[-!#\$%&'\*\+/=\?\^\`{}\&#124;~\w]</code>|Si el carácter siguiente no es un punto, buscar cualquier carácter de palabra coincidente o uno de los siguientes caracteres: -!#$%'*+=?^\`{}&#124;~.|  
+|<code>((\.(?!\.))&#124;[-!#\$%'\*\+/=\?\^\`{}\&#124;~\w])*</code>|Buscar el modelo de alternancia (un punto seguido de algo que no sea un punto, o uno de varios caracteres) cero o más veces.|  
 |`@`|Buscar el carácter @.|  
 |`(?<=[0-9a-z])`|Continuar buscando si el carácter que precede al carácter @ es uno de la A a la Z, de la a a la z o del 0 al 9. La construcción `(?<=[0-9a-z])` define una aserción de búsqueda tardía positiva de ancho igual a cero.|  
 |`(?(\[)`|Comprobar si el carácter que va detrás de @ es un corchete de apertura.|  
 |`(\[(\d{1,3}\.){3}\d{1,3}\])`|Si lo es, buscar el corchete de apertura, seguido por una dirección IP (cuatro grupos de uno a tres dígitos, separados por puntos) y por un corchete de cierre.|  
-|`&#124;(([0-9a-z][-0-9a-z]*[0-9a-z]*\.)+`|Si el carácter que va detrás de @ no es un corchete de apertura, buscar un carácter alfanumérico con un valor de la A a la Z, de la a a la z o del 0 al 9, seguido de cero o más apariciones de un guión, seguido de cero o de un carácter alfanumérico con un valor de la A a la Z, de la a a la z o del 0 al 9, seguido de un punto. Este patrón se puede repetir una o más veces y debe ir seguido del nombre de dominio de nivel superior.|  
+|<code>&#124;(([0-9a-z][-0-9a-z]*[0-9a-z]*\.)+</code>|Si el carácter que va detrás de @ no es un corchete de apertura, buscar un carácter alfanumérico con un valor de la A a la Z, de la a a la z o del 0 al 9, seguido de cero o más apariciones de un guión, seguido de cero o de un carácter alfanumérico con un valor de la A a la Z, de la a a la z o del 0 al 9, seguido de un punto. Este patrón se puede repetir una o más veces y debe ir seguido del nombre de dominio de nivel superior.|  
 |`[a-z0-9][\-a-z0-9]{0,22}[a-z0-9]))`|El nombre de dominio de nivel superior debe empezar y finalizar por un carácter alfanumérico (a-z, A-Z y 0-9). También puede incluir de cero a 22 caracteres ASCII que sean alfanuméricos o guiones.|  
 |`$`|Finalizar la búsqueda al final de la cadena.|  
   

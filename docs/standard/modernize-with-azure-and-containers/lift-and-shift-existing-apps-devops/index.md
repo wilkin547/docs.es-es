@@ -4,16 +4,18 @@ description: "Modernización de las aplicaciones .NET existentes con la nube de 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
+ms.prod: .net
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 08bf7da36714b2c18d96659814bb11df6d9b26fc
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: af9457552a71e4cb5cffe95ce1f33ccfa227268a
+ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="lift-and-shift-existing-apps-devops"></a>Elevación y desplazamiento de DevOps de aplicaciones existentes
+
 > Visión: Elevación y desplazamiento de las aplicaciones .NET Framework existentes en aplicaciones listas para DevOps en la nube, a fin de mejorar significativamente la agilidad del desarrollo, para una entrega más rápida y costos de entrega de aplicaciones más bajos.
 
 Para sacar provecho de las ventajas de la nube y las nuevas tecnologías, como los contenedores, al menos debe modernizar parcialmente las aplicaciones .NET existentes. A la larga, la modernización de las aplicaciones empresariales reducirá el costo total de propiedad.

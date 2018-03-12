@@ -4,20 +4,21 @@ description: Arquitectura de Microservicios de .NET para aplicaciones .NET en co
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
+ms.prod: .net
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: f9a30605313c06542fabf9689f700ed726445f57
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: bab6e275c93d2cedddf010ab20f98cb8392fa9fa
+ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="deploy-existing-net-apps-as-windows-containers"></a>Implementar aplicaciones de .NET existentes como contenedores de Windows
 
 Las implementaciones que se basan en los contenedores de Windows son aplicables a aplicaciones optimizada para la nube, las aplicaciones nativas de nube y aplicaciones de uso de DevOps en la nube.
 
-En esta guía y en las secciones siguientes, se centra en con contenedores de Windows para *preparada para DevOps la nube* aplicaciones, cuando se levanta y mover las aplicaciones .NET existentes.
+Es el enfoque de esta guía y en las secciones siguientes sobre el uso de contenedores de Windows para *preparada para DevOps la nube* aplicaciones, cuando se levanta y mover las aplicaciones .NET existentes.
 
 ## <a name="what-are-containers-linux-or-windows"></a>¿Cuáles son los contenedores? (Linux o Windows)
 
@@ -41,7 +42,7 @@ En los contenedores de Windows, el proceso de empaquetado de aplicaciones está 
 
 Un gran número de las organizaciones está containerizing aplicaciones monolíticas existentes por los motivos siguientes:
 
--   **Agilidad a través de implementación mejoradas de la versión**. Los contenedores ofrecen un contrato de implementación coherente entre el desarrollo y las operaciones. Al usar contenedores, no digan a los desarrolladores, "Funciona en mi equipo, ¿por qué no en producción?" Puede decir sencillamente, "Se ejecuta como un contenedor, por lo que va a ejecutar en producción." La aplicación empaquetada, con todas sus dependencias, se puede ejecutar en cualquier entorno compatible con contenedor. Se ejecutará la manera en que se ha diseñado para ejecutarse en todos los destinos de implementación (desarrollo, control de calidad, almacenamiento provisional, producción). Contenedores eliminan frictions mayoría cuando pasan de una fase a la siguiente, lo que mejora considerablemente la implementación, y puede distribuir con mayor rapidez.
+-   **Agilidad a través de implementación mejoradas de la versión**. Los contenedores ofrecen un contrato de implementación coherente entre el desarrollo y las operaciones. Al usar contenedores, no digan a los desarrolladores, "Funciona en mi equipo, ¿por qué no en producción?" Puede decir sencillamente, "Se ejecuta como un contenedor, para que se ejecute en producción." La aplicación empaquetada, con todas sus dependencias, se puede ejecutar en cualquier entorno compatible con contenedor. Se ejecutará la manera en que se ha diseñado para ejecutarse en todos los destinos de implementación (desarrollo, control de calidad, almacenamiento provisional, producción). Contenedores eliminan frictions mayoría cuando pasan de una fase a la siguiente, lo que mejora considerablemente la implementación, y puede distribuir con mayor rapidez.
 
 -   **Una reducción de costes**. Contenedores de reducir los costes, ya sea mediante la consolidación y la eliminación del hardware existente, o mediante la ejecución de aplicaciones en una mayor densidad por unidad de hardware.
 
@@ -83,7 +84,7 @@ Teniendo en cuenta la diversidad de sistemas operativos que son compatibles con 
 
 Para Windows, puede usar Windows Server Core o Nano Server de Windows. Estas versiones de Windows proporcionan características diferentes (por ejemplo, IIS frente a un servidor web hospedado por sí mismo como Kestrel) que podrían ser necesarios en las aplicaciones de .NET Framework o .NET Core.
 
-Para Linux, varias distribuciones están disponibles y sea compatible con imágenes de Docker .NET oficiales (por ejemplo, Debian).
+Para Linux, hay varias distribuciones disponibles y compatibles en imágenes oficiales del Docker de .NET (por ejemplo, Debian).
 
 Figura 4-7 muestra las versiones de sistema operativo que puede tener como destino, dependiendo de la versión de la aplicación de .NET Framework.
 
