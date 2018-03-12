@@ -27,11 +27,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 8e565d029096b88d304b9cfc241807084873e735
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: cea67e0309bccac7d21d7e8db659a55d34d4959a
+ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="alternation-constructs-in-regular-expressions"></a>Construcciones de alternancia en expresiones regulares
 <a name="top"></a> Las construcciones de alternancia modifican una expresión regular para habilitar la coincidencia condicional o “either/or”. .NET admite tres construcciones de alternancia:  
@@ -126,18 +126,18 @@ ms.lasthandoff: 12/23/2017
  [!code-csharp[RegularExpressions.Language.Alternation#4](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.alternation/cs/alternation4.cs#4)]
  [!code-vb[RegularExpressions.Language.Alternation#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.alternation/vb/alternation4.vb#4)]  
   
- El patrón de la expresión regular `\b(?<n2>\d{2}-)*(?(n2)\d{7}|\d{3}-\d{2}-\d{4})\b` se interpreta como se muestra en la tabla siguiente.  
+ El patrón de la expresión regular `\b(?<n2>\d{2}-)?(?(n2)\d{7}|\d{3}-\d{2}-\d{4})\b` se interpreta como se muestra en la tabla siguiente.  
   
 |Modelo|Description|  
 |-------------|-----------------|  
 |`\b`|Empieza en un límite de palabras.|  
-|`(?<n2>\d{2}-)*`|Coincide con cero o con dos dígitos seguidos por un guión. Este grupo de captura se denomina `n2`.|  
+|`(?<n2>\d{2}-)?`|Coincide con cero o con dos dígitos seguidos por un guión. Este grupo de captura se denomina `n2`.|  
 |`(?(n2)`|Prueba si `n2` coincidió con la cadena de entrada.|  
 |`)\d{7}`|Si `n2` coincidió, coincide con siete dígitos decimales.|  
 |<code>&#124;\d{3}-\d{2}-\d{4}</code>|Si `n2` no coincidió, coincide con tres dígitos decimales, un guión, dos dígitos decimales, otro guión y cuatro dígitos decimales.|  
 |`\b`|Coincide con un límite de palabras.|  
   
- En el ejemplo siguiente se muestra una variación de este ejemplo, pero con un grupo numerado en lugar de un grupo con nombre. Su patrón de expresión regular es `\b(\d{2}-)*(?(1)\d{7}|\d{3}-\d{2}-\d{4})\b`.  
+ En el ejemplo siguiente se muestra una variación de este ejemplo, pero con un grupo numerado en lugar de un grupo con nombre. Su patrón de expresión regular es `\b(\d{2}-)?(?(1)\d{7}|\d{3}-\d{2}-\d{4})\b`.  
   
  [!code-csharp[RegularExpressions.Language.Alternation#5](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.alternation/cs/alternation5.cs#5)]
  [!code-vb[RegularExpressions.Language.Alternation#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.alternation/vb/alternation5.vb#5)]  

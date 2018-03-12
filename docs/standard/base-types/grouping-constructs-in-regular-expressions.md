@@ -26,11 +26,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 9b9e54d8bbc9ca7cc9172fd83bd15968b3cef8e1
-ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
+ms.openlocfilehash: 107e935f3fd4fd38b4393d09e46c03c0c51c4d79
+ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="grouping-constructs-in-regular-expressions"></a>Construcciones de agrupamiento en expresiones regulares
 Las construcciones de agrupamiento definen las subexpresiones de una expresión regular y capturan las subcadenas de una cadena de entrada. Puede utilizar construcciones de agrupamiento para hacer lo siguiente:  
@@ -393,7 +393,7 @@ Las construcciones de agrupamiento definen las subexpresiones de una expresión 
 |Modelo|Description|  
 |-------------|-----------------|  
 |`\d{2}`|Coincide con dos dígitos decimales.|  
-|`{?<=\b20)`|Continúa la búsqueda si los dos dígitos decimales van precedidos de los dos dígitos decimales "20" en un límite de palabra.|  
+|`(?<=\b20)`|Continúa la búsqueda si los dos dígitos decimales van precedidos de los dos dígitos decimales "20" en un límite de palabra.|  
 |`\b`|Finalizar la búsqueda de coincidencias en un límite de palabras.|  
   
  Las aserciones de búsqueda tardía positiva de ancho cero también se usan para limitar el retroceso cuando el último carácter o caracteres de un grupo capturado debe ser un subconjunto de los caracteres que coincide con el patrón de la expresión regular de dicho grupo. Por ejemplo, si un grupo captura todos los caracteres que se usan para formar palabras consecutivos, puede usar una aserción de búsqueda tardía positiva de ancho cero para requerir que el último carácter sea alfabético.  

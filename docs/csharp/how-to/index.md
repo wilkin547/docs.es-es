@@ -7,11 +7,11 @@ ms.date: 12/20/2017
 ms.topic: article
 ms.prod: .net
 ms.devlang: devlang-csharp
-ms.openlocfilehash: 26d4dffa6f6680b193788ee6d90dad01fde7cf51
-ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
+ms.openlocfilehash: 591996c02c55c1f54af94280940e41720684251a
+ms.sourcegitcommit: d95a91d685565f4d95c8773b558752864a6a3d7e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="how-to-c"></a>Procedimientos (C#)
 
@@ -55,7 +55,7 @@ Estos artículos le ayudarán a trabajar con colecciones de datos.
 Las cadenas son el tipo de datos básico que se usa para mostrar o manipular texto. En estos artículos se muestran prácticas habituales con cadenas.
 
 - [Compare cadenas](../programming-guide/strings/how-to-compare-strings.md).
-- [Modifique el contenido de una cadena](../programming-guide/strings/how-to-modify-string-contents.md).
+- [Modifique el contenido de una cadena](modify-string-contents.md).
 - [Determine si una cadena representa un número](../programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md).
 - [Use `String.Split` para separar cadenas](parse-strings-using-split.md).
 - [Combine varias cadenas en una](concatenate-multiple-strings.md).
