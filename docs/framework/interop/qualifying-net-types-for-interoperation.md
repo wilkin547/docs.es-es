@@ -2,7 +2,8 @@
 title: "Habilitar tipos de .NET para la interoperación"
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.topic: article
 helpviewer_keywords:
 - exposing .NET Framework components to COM
@@ -15,12 +16,13 @@ ms.assetid: 4b8afb52-fb8d-4e65-b47c-fd82956a3cdd
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a05330a6834b4775e62b7b55aee03526b2a9bbda
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 0f08f2de4a8f402b2c9c41908aa4bcfe2730fef5
+ms.sourcegitcommit: d95a91d685565f4d95c8773b558752864a6a3d7e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="qualifying-net-types-for-interoperation"></a>Habilitar tipos de .NET para la interoperación
 Si tiene previsto exponer tipos en un ensamblado a las aplicaciones COM, tenga en cuenta los requisitos de interoperabilidad COM en tiempo de diseño. Los tipos administrados (clase, interfaz, estructura y enumeración) se integran fácilmente con los tipos COM si se cumplen las directrices siguientes:  
@@ -54,6 +56,6 @@ Si tiene previsto exponer tipos en un ensamblado a las aplicaciones COM, tenga e
 ## <a name="see-also"></a>Vea también  
  <xref:System.Runtime.InteropServices.ComVisibleAttribute>  
  [Exponer componentes de .NET Framework en COM](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)  
- [Introducción a la interfaz de clase](http://msdn.microsoft.com/library/733c0dd2-12e5-46e6-8de1-39d5b25df024)  
+ [Introducción a la interfaz de clase](https://msdn.microsoft.com/library/733c0dd2-12e5-46e6-8de1-39d5b25df024(v=vs.100))  
  [Aplicar atributos de interoperabilidad](../../../docs/framework/interop/applying-interop-attributes.md)  
  [Empaquetar un ensamblado para COM](../../../docs/framework/interop/packaging-an-assembly-for-com.md)

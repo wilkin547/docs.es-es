@@ -5,7 +5,8 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,16 +23,17 @@ helpviewer_keywords:
 - COM interop, importing type library
 - COM interop, exposing COM components
 ms.assetid: d1898229-cd40-426e-a275-f3eb65fbc79f
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2b7b0e6e93660dd49b670975112380420d7d8f0b
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 625bbce6dca8d57d7870dbe13e086c9a34954c9b
+ms.sourcegitcommit: d95a91d685565f4d95c8773b558752864a6a3d7e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="importing-a-type-library-as-an-assembly"></a>Importar una biblioteca de tipos como un ensamblado
 Las definiciones de tipos COM residen normalmente en una biblioteca de tipos. Por el contrario, los compiladores conformes a CLS generan metadatos de tipos en un ensamblado. Las dos fuentes de información de tipos son muy diferentes. En este tema se describen técnicas para generar metadatos a partir de una biblioteca de tipos. El ensamblado resultante se denomina ensamblado de interoperabilidad y la información de tipos que contiene permite a las aplicaciones de .NET Framework usar tipos COM.  
@@ -40,7 +42,7 @@ Las definiciones de tipos COM residen normalmente en una biblioteca de tipos. Po
   
 -   Mediante tipos de interoperabilidad solo de tiempo de diseño: a partir de [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], se puede indicar al compilador que inserte información de tipos de un ensamblado de interoperabilidad en el archivo ejecutable. El compilador solo inserta la información de tipos que la aplicación usa. No es necesario implementar el ensamblado de interoperabilidad con la aplicación. Esta es la técnica recomendada.  
   
--   Implementar ensamblados de interoperabilidad: puede crear una referencia estándar al ensamblado de interoperabilidad. En este caso, el ensamblado de interoperabilidad debe implementarse con la aplicación. Si emplea esta técnica y no usa ningún componente COM privado, haga siempre referencia al ensamblado de interoperabilidad primario (PIA) publicado por el autor del componente COM que va a incorporar en el código administrado. Para más información sobre generar y usar ensamblados de interoperabilidad primarios, vea [Ensamblados de interoperabilidad primarios](http://msdn.microsoft.com/library/b977a8be-59a0-40a0-a806-b11ffba5c080).  
+-   Implementar ensamblados de interoperabilidad: puede crear una referencia estándar al ensamblado de interoperabilidad. En este caso, el ensamblado de interoperabilidad debe implementarse con la aplicación. Si emplea esta técnica y no usa ningún componente COM privado, haga siempre referencia al ensamblado de interoperabilidad primario (PIA) publicado por el autor del componente COM que va a incorporar en el código administrado. Para más información sobre generar y usar ensamblados de interoperabilidad primarios, vea [Ensamblados de interoperabilidad primarios](https://msdn.microsoft.com/library/b977a8be-59a0-40a0-a806-b11ffba5c080(v=vs.100)).  
   
  Al usar ensamblados de interoperabilidad solo de tiempo de diseño, se puede insertar información de tipos del ensamblado de interoperabilidad primario publicado por el autor del componente COM. En cambio, no es necesario implementar el ensamblado de interoperabilidad primario con la aplicación.  
   
@@ -51,7 +53,7 @@ Las definiciones de tipos COM residen normalmente en una biblioteca de tipos. Po
   
  Después de encontrar la biblioteca de tipos que contiene la implementación del tipo COM de destino, tiene las siguientes opciones para generar un ensamblado de interoperabilidad que contenga metadatos de tipos:  
   
--   Visual Studio  
+-   Programa para la mejora  
   
      Visual Studio convierte automáticamente los tipos COM de una biblioteca de tipos a metadatos en un ensamblado. Para obtener instrucciones, vea [Cómo: Agregar referencias a bibliotecas de tipos](../../../docs/framework/interop/how-to-add-references-to-type-libraries.md) y [Tutorial: Incrustar información de tipos de los ensamblados de Microsoft Office](http://msdn.microsoft.com/library/85b55e05-bc5e-4665-b6ae-e1ada9299fd3).  
   
@@ -75,17 +77,17 @@ Las definiciones de tipos COM residen normalmente en una biblioteca de tipos. Po
   
     -   Conocimiento de las reglas de conversión de bibliotecas de tipos a ensamblados.  
   
-     Escribir un contenedor personalizado es una técnica avanzada. Para obtener información adicional sobre cómo generar un contenedor personalizado, vea [Personalizar contenedores estándar](http://msdn.microsoft.com/library/c40d089b-6a3c-41b5-a20d-d760c215e49d).  
+     Escribir un contenedor personalizado es una técnica avanzada. Para obtener información adicional sobre cómo generar un contenedor personalizado, vea [Personalizar contenedores estándar](https://msdn.microsoft.com/library/c40d089b-6a3c-41b5-a20d-d760c215e49d(v=vs.100)).  
   
- Para más información sobre el proceso de importación de interoperabilidad COM, vea [Resumen de la conversión de bibliotecas de tipos en ensamblados](http://msdn.microsoft.com/library/bf3f90c5-4770-4ab8-895c-3ba1055cc958).  
+ Para más información sobre el proceso de importación de interoperabilidad COM, vea [Resumen de la conversión de bibliotecas de tipos en ensamblados](https://msdn.microsoft.com/library/bf3f90c5-4770-4ab8-895c-3ba1055cc958(v=vs.100)).  
   
 ## <a name="see-also"></a>Vea también  
  <xref:System.Runtime.InteropServices.TypeLibConverter>  
  [Exponer componentes COM en .NET Framework](../../../docs/framework/interop/exposing-com-components.md)  
- [Resumen de la conversión de bibliotecas de tipos en ensamblados](http://msdn.microsoft.com/library/bf3f90c5-4770-4ab8-895c-3ba1055cc958)  
+ [Resumen de la conversión de bibliotecas de tipos en ensamblados](https://msdn.microsoft.com/library/bf3f90c5-4770-4ab8-895c-3ba1055cc958(v=vs.100))  
  [TlbImp.exe (Importador de la biblioteca de tipos)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)  
- [Personalizar contenedores estándar](http://msdn.microsoft.com/library/c40d089b-6a3c-41b5-a20d-d760c215e49d)  
- [Utilizar tipos COM en código administrado](http://msdn.microsoft.com/library/1a95a8ca-c8b8-4464-90b0-5ee1a1135b66)  
+ [Personalizar contenedores estándar](https://msdn.microsoft.com/library/c40d089b-6a3c-41b5-a20d-d760c215e49d(v=vs.100))  
+ [Utilizar tipos COM en código administrado](https://msdn.microsoft.com/library/1a95a8ca-c8b8-4464-90b0-5ee1a1135b66(v=vs.100))  
  [Compilar un proyecto de interoperabilidad](../../../docs/framework/interop/compiling-an-interop-project.md)  
  [Implementar una aplicación interoperativa](../../../docs/framework/interop/deploying-an-interop-application.md)  
  [Cómo: Agregar referencias a bibliotecas de tipos](../../../docs/framework/interop/how-to-add-references-to-type-libraries.md)  
