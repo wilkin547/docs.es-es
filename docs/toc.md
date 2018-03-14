@@ -267,6 +267,7 @@
 ### [Cómo concatenar cadenas](csharp/how-to/concatenate-multiple-strings.md)
 ### [Cómo convertir una cadena en un valor DateTime](standard/base-types/parsing-datetime.md)
 ### [Cómo: Buscar cadenas](csharp/how-to/search-strings.md)
+### [How to modify string contents](csharp/how-to/modify-string-contents.md) (Cómo modificar contenido de cadenas)
 <!-- End of C# Concepts section -->
 ## [SDK de la plataforma del compilador de .NET (API de Roslyn)](csharp/roslyn-sdk/)
 ## [Guía de programación de C#](csharp/programming-guide/)

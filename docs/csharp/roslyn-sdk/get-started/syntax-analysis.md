@@ -8,11 +8,11 @@ ms.topic: conceptual
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.custom: mvc
-ms.openlocfilehash: c89695379d545ac5b22fc0716f3e0060b6c08f31
-ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
+ms.openlocfilehash: 52f66782086af651517d54105fea6f5533ea05a2
+ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="get-started-with-syntax-analysis"></a>Introducción al análisis de sintaxis
 
@@ -73,7 +73,7 @@ Puede examinar los nodos de un árbol de sintaxis de dos maneras. Puede recorrer
 
 ### <a name="manual-traversal"></a>Recorrido manual
 
-Puede ver el código terminado de este ejemplo en [nuestro repositorio de ejemplos de GitHub](https://github.com/dotnet/samples/csharp/roslyn-sdk/SyntaxQuickStart).
+Puede ver el código terminado de este ejemplo en [nuestro repositorio de GitHub](https://github.com/dotnet/docs/tree/master/samples/csharp/roslyn-sdk/SyntaxQuickStart).
 
 > [!NOTE]
 > Los tipos de árbol de sintaxis usan la herencia para describir los diferentes elementos de sintaxis que son válidos en diferentes ubicaciones del programa. A menudo, usar estas API significa convertir propiedades o miembros de colección en tipos derivados concretos. En los ejemplos siguientes, la asignación y las conversiones son instrucciones independientes, con variables con tipo explícito. Puede leer el código para ver los tipos de valor devuelto de la API y el tipo de motor de ejecución de los objetos devueltos. En la práctica, es más habitual usar variables con tipo implícito y basarse en nombres de API para describir el tipo de los objetos que se examinan.
@@ -103,7 +103,7 @@ Normalmente, recorrería el árbol para obtener información sobre el código. E
 
 [!code-csharp[Find the first member](../../../../samples/csharp/roslyn-sdk/SyntaxQuickStart/HelloSyntaxTree/Program.cs#4 "Find the first member")]
 
-Ese miembro es una <xref:Microsoft.CodeAnalysis.CSharp.Syntax.NamespaceDeclarationSyntax?displayProperty=nameWithType>. Representa todo lo que se incluye en el ámbito de la declaración `namespace Hello World`. Agregue el código siguiente para examinar qué nodos se declaran en el espacio de nombres `HelloWorld`:
+Ese miembro es una <xref:Microsoft.CodeAnalysis.CSharp.Syntax.NamespaceDeclarationSyntax?displayProperty=nameWithType>. Representa todo lo que se incluye en el ámbito de la declaración `namespace HelloWorld`. Agregue el código siguiente para examinar qué nodos se declaran en el espacio de nombres `HelloWorld`:
 
 [!code-csharp[Find the class declaration](../../../../samples/csharp/roslyn-sdk/SyntaxQuickStart/HelloSyntaxTree/Program.cs#5 "Find the class declaration")]
 
@@ -127,14 +127,14 @@ The tree has 4 using statements. They are:
         System.Collections
         System.Linq
         System.Text
-The first member is a NamespaceDeclaration
+The first member is a NamespaceDeclaration.
 There are 1 members declared in this namespace.
-The first member is a ClassDeclaration
-There are 1 members declared in the Program class
-The first member is a MethodDeclaration
-The return type of the Main method is void
-The method has 1 parameters
-The type of the args parameter is string[]
+The first member is a ClassDeclaration.
+There are 1 members declared in the Program class.
+The first member is a MethodDeclaration.
+The return type of the Main method is void.
+The method has 1 parameters.
+The type of the args parameter is string[].
 The body text of the Main method follows:
         {
             Console.WriteLine("Hello, World!");
@@ -143,7 +143,7 @@ The body text of the Main method follows:
 
 ### <a name="query-methods"></a>Métodos de consulta
 
-Además de recorrer árboles, también puede explorar el árbol de sintaxis mediante los métodos de consulta definidos en <xref:Microsoft.CodeAnalysis.SyntaxNode?displayProperty=nameWithType>. Cualquier persona que conozca XPath debería conocer estos métodos. Puede usarlos con LINQ para buscar elementos rápidamente en un árbol. <xref:Microsoft.CodeAnalysis.SyntaxNode> tiene métodos de consulta como <xref:Microsoft.CodeAnalysis.SyntaxNode.DescendantNodes%2A>, <xref:Microsoft.CodeAnalysis.SyntaxNode.AncestorsAndSelf%2A> y <xref:Microsoft.CodeAnalysis.SyntaxNode.ChildNodes>.
+Además de recorrer árboles, también puede explorar el árbol de sintaxis mediante los métodos de consulta definidos en <xref:Microsoft.CodeAnalysis.SyntaxNode?displayProperty=nameWithType>. Cualquier persona que conozca XPath debería conocer estos métodos. Puede usarlos con LINQ para buscar elementos rápidamente en un árbol. <xref:Microsoft.CodeAnalysis.SyntaxNode> tiene métodos de consulta como <xref:Microsoft.CodeAnalysis.SyntaxNode.DescendantNodes%2A>, <xref:Microsoft.CodeAnalysis.SyntaxNode.AncestorsAndSelf%2A> y <xref:Microsoft.CodeAnalysis.SyntaxNode.ChildNodes%2A>.
 
 Puede usar estos métodos de consulta para buscar el argumento para el método `Main` como una alternativa a navegar por el árbol. Agregue el siguiente código en la parte inferior del método `Main`:
 
@@ -163,7 +163,7 @@ En este ejemplo, se implementa un <xref:Microsoft.CodeAnalysis.CSharp.CSharpSynt
 
 Cree un proyecto de **Stand-Alone Code Analysis Tool** (Herramienta de análisis de código independiente) de C# y asígnele el nombre “**SyntaxWalker**”.
 
-Puede ver el código terminado de este ejemplo en [nuestro repositorio de GitHub](https://github.com/dotnet/docs/samples/csharp/roslyn-sdk/SyntaxQuickStart). El ejemplo de GitHub contiene los dos proyectos que se describen en este tutorial.
+Puede ver el código terminado de este ejemplo en [nuestro repositorio de GitHub](https://github.com/dotnet/docs/tree/master/samples/csharp/roslyn-sdk/SyntaxQuickStart). El ejemplo de GitHub contiene los dos proyectos que se describen en este tutorial.
 
 Como en el ejemplo anterior, puede definir una constante de cadena para que contenga el texto del programa que se va a analizar:
 
@@ -198,23 +198,23 @@ Por último, debe agregar dos líneas de código para crear el `UsingCollector` 
 Compile y ejecute el programa. Debería ver los siguientes resultados:
 
 ```console
-        VisitUsingDirective called with System
-        VisitUsingDirective called with System.Collections.Generic
-        VisitUsingDirective called with System.Linq
-        VisitUsingDirective called with System.Text
-        VisitUsingDirective called with Microsoft.CodeAnalysis
-                Success. Adding Microsoft.CodeAnalysis
-        VisitUsingDirective called with Microsoft.CodeAnalysis.CSharp
-                Success. Adding Microsoft.CodeAnalysis.CSharp
-        VisitUsingDirective called with Microsoft
-                Success. Adding Microsoft
-        VisitUsingDirective called with System.ComponentModel
-        VisitUsingDirective called with Microsoft.Win32
-                Success. Adding Microsoft.Win32
-        VisitUsingDirective called with System.Runtime.InteropServices
-        VisitUsingDirective called with System.CodeDom
-        VisitUsingDirective called with Microsoft.CSharp
-                Success. Adding Microsoft.CSharp
+        VisitUsingDirective called with System.
+        VisitUsingDirective called with System.Collections.Generic.
+        VisitUsingDirective called with System.Linq.
+        VisitUsingDirective called with System.Text.
+        VisitUsingDirective called with Microsoft.CodeAnalysis.
+                Success. Adding Microsoft.CodeAnalysis.
+        VisitUsingDirective called with Microsoft.CodeAnalysis.CSharp.
+                Success. Adding Microsoft.CodeAnalysis.CSharp.
+        VisitUsingDirective called with Microsoft.
+                Success. Adding Microsoft.
+        VisitUsingDirective called with System.ComponentModel.
+        VisitUsingDirective called with Microsoft.Win32.
+                Success. Adding Microsoft.Win32.
+        VisitUsingDirective called with System.Runtime.InteropServices.
+        VisitUsingDirective called with System.CodeDom.
+        VisitUsingDirective called with Microsoft.CSharp.
+                Success. Adding Microsoft.CSharp.
 Microsoft.CodeAnalysis
 Microsoft.CodeAnalysis.CSharp
 Microsoft

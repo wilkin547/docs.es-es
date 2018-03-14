@@ -9,12 +9,13 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 519b910a-6efe-4394-9b81-0546aa3e7462
-ms.workload: dotnetcore
-ms.openlocfilehash: 44b4ff6b870a6515f623c690ad722917c9ea5bd3
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: bf523ead40d0e3cc9148b48d5c7a4a84d3d5cb81
+ms.sourcegitcommit: d95a91d685565f4d95c8773b558752864a6a3d7e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="create-a-custom-template-for-dotnet-new"></a>Creación de una plantilla personalizada para dotnet new
 
@@ -40,7 +41,7 @@ Si quiere usar el ejemplo descargado con la distribución del sistema de archivo
 
 ## <a name="create-a-template-from-a-project"></a>Creación de una plantilla a partir de un proyecto
 
-Use un proyecto existente que se haya confirmado que se compila y se ejecuta, o cree un nuevo proyecto de aplicación de consola en una carpeta del disco duro. En este tutorial se da por hecho que el nombre de la carpeta de proyecto es *GarciaSoftware.ConsoleTemplate.CSharp* y que está almacenada en *Documentos/Plantillas* en el perfil del usuario. El nombre de la plantilla de proyecto del tutorial tiene el formato *\<nombre de la compañía>.\<tipo de plantilla>.\<lenguaje de programación>*, pero puede asignar el nombre que quiera al proyecto y a la plantilla.
+Use un proyecto existente que se haya confirmado que se compila y se ejecuta, o cree un nuevo proyecto de aplicación de consola en una carpeta del disco duro. En este tutorial se da por hecho que el nombre de la carpeta de proyecto es *GarciaSoftware.ConsoleTemplate.CSharp* y que está almacenada en *Documentos\Plantillas* en el perfil del usuario. El nombre de la plantilla de proyecto del tutorial tiene el formato *\<nombre de la compañía>.\<tipo de plantilla>.\<lenguaje de programación>*, pero puede asignar el nombre que quiera al proyecto y a la plantilla.
 
 1. Agregue una carpeta a la raíz del proyecto denominada *.template.config*.
 1. Dentro de la carpeta *.template.config*, cree un archivo *template.json* para configurar la plantilla. Para obtener más información y definiciones de miembros para el archivo *template.json*, vea el tema [Custom templates for dotnet new](../tools/custom-templates.md#templatejson) (Plantillas personalizadas para dotnet new) y el esquema [*template.json* en el almacenamiento del esquema JSON](http://json.schemastore.org/template).
@@ -65,7 +66,7 @@ Ha terminado la plantilla. Una vez hecho esto, tiene dos opciones para la distri
 
 ### <a name="pack-the-template-into-a-nuget-package"></a>Empaquetar la plantilla en un paquete de NuGet
 
-1. Cree una carpeta para el paquete de NuGet. Para el tutorial, se usa el nombre de carpeta *GarciaSoftware.ConsoleTemplate.CSharp*, y esta se crea dentro de una carpeta *Documentos/NuGetTemplates* del perfil del usuario. Cree una carpeta denominada *content* dentro de la nueva carpeta de plantillas que contendrá los archivos del proyecto.
+1. Cree una carpeta para el paquete de NuGet. Para el tutorial, se usa el nombre de carpeta *GarciaSoftware.ConsoleTemplate.CSharp*, y esta se crea dentro de una carpeta *Documentos\NuGetTemplates* del perfil del usuario. Cree una carpeta denominada *content* dentro de la nueva carpeta de plantillas que contendrá los archivos del proyecto.
 1. Copie el contenido de la carpeta del proyecto, junto con el archivo *.template.config/template.json*, en la carpeta *content* que ha creado.
 1. Junto a la carpeta *content*, agregue un [archivo *nuspec*](/nuget/create-packages/creating-a-package). El archivo nuspec es un archivo de manifiesto XML en el que se describe el contenido de un paquete y que controla el proceso de creación del paquete de NuGet.
    
@@ -102,10 +103,10 @@ Ha terminado la plantilla. Una vez hecho esto, tiene dos opciones para la distri
    </package>
    ```
 
-1. [Cree el paquete](/nuget/create-packages/creating-a-package#creating-the-package) mediante el comando `nuget pack <PATH_TO_NUSPEC_FILE>`. En el comando siguiente se da por supuesto que la carpeta que contiene los recursos de NuGet está en *C:/Users/\<USUARIO>/Documents/Templates/GarciaSoftware.ConsoleTemplate.CSharp/*. En cambio, no importa dónde ponga la carpeta en el sistema, el comando `nuget pack` acepta la ruta de acceso al archivo *nuspec*:
+1. [Cree el paquete](/nuget/create-packages/creating-a-package#creating-the-package) mediante el comando `nuget pack <PATH_TO_NUSPEC_FILE>`. En el comando siguiente se da por supuesto que la carpeta que contiene los recursos de NuGet está en *C:\Users\\\<USUARIO>\Documents\Templates\GarciaSoftware.ConsoleTemplate.CSharp\*. En cambio, no importa dónde ponga la carpeta en el sistema, el comando `nuget pack` acepta la ruta de acceso al archivo *nuspec*:
 
    ```console
-   nuget pack C:/Users/<USER>/Documents/NuGetTemplates/GarciaSoftware.ConsoleTemplate.CSharp/GarciaSoftware.ConsoleTemplate.CSharp.nuspec
+   nuget pack C:\Users\<USER>\Documents\NuGetTemplates\GarciaSoftware.ConsoleTemplate.CSharp\GarciaSoftware.ConsoleTemplate.CSharp.nuspec
    ```
 
 ### <a name="publishing-the-package-to-nugetorg"></a>Publicación del paquete en nuget.org
@@ -119,7 +120,7 @@ Para publicar un paquete de NuGet, siga las instrucciones del tema [Create and p
 Para instalar la plantilla a partir del archivo *nupkg* que ha creado, use el comando `dotnet new` con la opción `-i|--install` y proporcione la ruta de acceso al archivo *nupkg*:
 
 ```console
-dotnet new -i C:/Users/<USER>/GarciaSoftware.ConsoleTemplate.CSharp.1.0.0.nupkg
+dotnet new -i C:\Users\<USER>\GarciaSoftware.ConsoleTemplate.CSharp.1.0.0.nupkg
 ```
 
 #### <a name="install-the-template-from-a-nuget-package-stored-at-nugetorg"></a>Instalación de la plantilla a partir de un paquete de NuGet almacenado en nuget.org
@@ -187,14 +188,14 @@ Para distribuir la plantilla, coloque la carpeta de plantillas de proyecto en un
 En este tutorial se da por supuesto que la plantilla de proyecto se almacena en la carpeta *Documents/Templates* del perfil de usuario. Desde esa ubicación, instale la plantilla con el comando siguiente, pero reemplazando \<USER> con el nombre del perfil de usuario:
 
 ```console
-dotnet new -i C:/Users/<USER>/Documents/Templates/GarciaSoftware.ConsoleTemplate.CSharp
+dotnet new -i C:\Users\<USER>\Documents\Templates\GarciaSoftware.ConsoleTemplate.CSharp
 ```
 
 ### <a name="create-a-project-from-the-template"></a>Creación de un proyecto a partir de la plantilla
 
 Después de instalar la plantilla a partir del sistema de archivos, ejecute el comando `dotnet new <TEMPLATE>` desde el directorio donde quiera que se coloque la salida del motor de plantillas (a menos que esté usando la opción `-o|--output` para especificar un directorio específico) para usarla. Para obtener más información, consulte las [Opciones de `dotnet new`](~/docs/core/tools/dotnet-new.md#options). Proporcione el nombre breve de la plantilla directamente junto al comando `dotnet new`.
 
-Desde una nueva carpeta de proyecto creada en *C:/Users/\<USUARIO>/Documents/Projects/MyConsoleApp*, cree un proyecto a partir de la plantilla `garciaconsole`:
+Desde una nueva carpeta de proyecto creada en *C:\Users\\\<USUARIO>\Documentos\Proyectos\MyConsoleApp*, cree un proyecto a partir de la plantilla `garciaconsole`:
 
 ```console
 dotnet new garciaconsole
@@ -202,14 +203,14 @@ dotnet new garciaconsole
 
 ### <a name="uninstall-the-template"></a>Desinstalación de la plantilla
 
-Si ha creado la plantilla en el sistema de archivos local en *C:/Users/\<USUARIO>/Documents/Templates/GarciaSoftware.ConsoleTemplate.CSharp*, desinstálela con el modificador `-u|--uninstall` e indicando la ruta de acceso a la carpeta de la plantilla:
+Si ha creado la plantilla en el sistema de archivos local en*C:\Users\\\<USUARIO>\Documentos\Plantillas\GarciaSoftware.ConsoleTemplate.CSharp*, desinstálela con el modificador `-u|--uninstall` e indicando la ruta de acceso a la carpeta de la plantilla:
 
 ```console
-dotnet new -u C:/Users/<USER>/Documents/Templates/GarciaSoftware.ConsoleTemplate.CSharp
+dotnet new -u C:\Users\<USER>\Documents\Templates\GarciaSoftware.ConsoleTemplate.CSharp
 ```
 
 > [!NOTE]
-> Para desinstalar la plantilla del sistema de archivos local, debe usar el nombre completo de la ruta de acceso. Por ejemplo, *C:/Users/\<USER>/Documents/Templates/GarciaSoftware.ConsoleTemplate.CSharp* funcionará, pero *./GarciaSoftware.ConsoleTemplate.CSharp* desde la carpeta contenedora no lo hará.
+> Para desinstalar la plantilla del sistema de archivos local, debe usar el nombre completo de la ruta de acceso. Por ejemplo, *C:\Users\\\<USUARIO>\Documentos\Plantillas\GarciaSoftware.ConsoleTemplate.CSharp* funcionará, pero *./GarciaSoftware.ConsoleTemplate.CSharp* desde la carpeta contenedora no lo hará.
 > Además, no debe incluir una barra diagonal para finalizar el directorio en la ruta de acceso a la plantilla.
 
 ## <a name="see-also"></a>Vea también
