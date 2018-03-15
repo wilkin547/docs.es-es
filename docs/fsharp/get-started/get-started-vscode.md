@@ -1,90 +1,61 @@
 ---
-title: "Introducción a F # en el código de Visual Studio con Ionide"
+title: "Empezar a trabajar con F # en el código de Visual Studio"
 description: "Obtenga información acerca de cómo usar F # con código de Visual Studio y el conjunto de complemento Ionide."
 keywords: "Visual f #, f #, funcional de programación,. NET, Visual Studio Code, vscode, Ionide"
 author: cartermp
 ms.author: phcart
-ms.date: 09/28/2016
+ms.date: 02/28/2018
 ms.topic: article
 ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 49775139-082e-442f-b5a2-dd402399b5d2
-ms.openlocfilehash: 83099005074ea273eae5319edacd2e2ee0f7145f
-ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
+ms.openlocfilehash: c452e791b27bc3f32e137a515011d953005344c6
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/15/2018
 ---
-# <a name="getting-started-with-f-in-visual-studio-code-with-ionide"></a>Introducción a F # en el código de Visual Studio con Ionide
+# <a name="get-started-with-f-in-visual-studio-code"></a>Empezar a trabajar con F # en el código de Visual Studio
 
-Puede escribir F # en [código de Visual Studio](https://code.visualstudio.com) con el [Ionide complemento](https://marketplace.visualstudio.com/items?itemName=Ionide.Ionide-fsharp)para obtener una gran experiencia IDE multiplataforma, ligera con IntelliSense y refactorizaciones código básico.  Visite [Ionide.io](https://ionide.io) para obtener más información sobre el conjunto de complementos.
+Puede escribir F # en [código de Visual Studio](https://code.visualstudio.com) con el [Ionide complemento](https://marketplace.visualstudio.com/items?itemName=Ionide.Ionide-fsharp)para obtener una gran experiencia IDE (Integrade caracterizan un entorno de desarrollo) multiplataforma, ligera con IntelliSense y el código básico refactorizaciones.  Visite [Ionide.io](http://ionide.io) para obtener más información sobre el conjunto de complementos.
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-F # 4.0 o posterior debe instalarse en el equipo para usar Ionide.
+Debe tener [git instalado](https://git-scm.com/download) y están disponibles en la ruta de acceso al hacer uso de plantillas de proyecto en Ionide.  Puede comprobar que está instalado correctamente escribiendo `git --version` en un símbolo del sistema y presione **ENTRAR**.
 
-También debe tener [git instalado](https://git-scm.com/download) y están disponibles en la ruta de acceso al hacer uso de plantillas de proyecto en Ionide.  Puede comprobar que está instalado correctamente escribiendo `git` en una si presiona prompt.and de comando **ENTRAR**.
+### <a name="macostabmacos"></a>[macOS](#tab/macos)
 
-### <a name="windows"></a>Windows
-
-Si está en Windows, tiene dos opciones para la instalación de F #.
-
-Si ya ha instalado Visual Studio y no tiene F #, también puede [instalar las herramientas de Visual F #](get-started-visual-studio.md#installing-f).  Este modo se instalará todos los componentes necesarios para escribir, compilar y ejecutar código de F #.
-
-Si prefiere no instalar Visual Studio, utilice las siguientes instrucciones:
-
-1. Instalar [.NET Framework 4.5 o posterior](https://www.microsoft.com/en-US/download/details.aspx?id=30653) si ejecuta Windows 7.  Si usa Windows 8 o posterior, no es necesario hacer esto.
-
-2. Instale el SDK de Windows para el sistema operativo:
-
-    * [Windows 10 SDK](https://dev.windows.com/en-US/downloads/windows-10-sdk)
-    * [Windows 8.1 SDK](https://developer.microsoft.com/windows/downloads/sdk-archive)
-    * [Windows 8 SDK](https://developer.microsoft.com/windows/downloads/sdk-archive)
-    * [Windows 7 SDK](https://www.microsoft.com/download/details.aspx?id=8279)
-
-3. Instalar el [herramientas de generación de Microsoft 2015](https://www.microsoft.com/en-us/download/details.aspx?id=48159).  También puede que deba instalar [2013 de herramientas de compilación de Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=40760).
-
-4. Instalar el [herramientas de Visual F #](https://www.microsoft.com/en-us/download/details.aspx?id=48179).
-
-En Windows de 64 bits, el compilador y las herramientas se encuentran aquí:
-
-```
-C:\Program Files (x86)\Microsoft SDKs\F#\4.0\Framework\v4.0\fsc.exe
-C:\Program Files (x86)\Microsoft SDKs\F#\4.0\Framework\v4.0\fsi.exe
-C:\Program Files (x86)\Microsoft SDKs\F#\4.0\Framework\v4.0\fsiAnyCpu.exe
-```
-
-En Windows de 32 bits, las herramientas del compilador se encuentran aquí:
-
-```
-C:\Program Files\Microsoft SDKs\F#\4.0\Framework\v4.0\fsc.exe
-C:\Program Files\Microsoft SDKs\F#\4.0\Framework\v4.0\fsi.exe
-C:\Program Files\Microsoft SDKs\F#\4.0\Framework\v4.0\fsiAnyCpu.exe
-```
-
-Ionide detecta automáticamente el compilador y las herramientas, pero si no es así por algún motivo (por ejemplo, las herramientas de Visual F # se instala en un directorio distinto), puede agregar manualmente la carpeta contenedora (`...\Microsoft SDKs\F#\4.0`) a la ruta de acceso.
-
-### <a name="macos"></a>macOS
-
-En Mac OS, usa Ionide [Mono](https://www.mono-project.com).  La manera más fácil de instalar Mono en macOS es a través de Homebrew.  Basta con escribir lo siguiente en su terminal:
+Usa Ionide [Mono](http://www.mono-project.com).  La manera más fácil de instalar Mono en macOS es a través de Homebrew.  Basta con escribir lo siguiente en su terminal:
 
 ```
 brew install mono
 ```
 
-### <a name="linux"></a>Linux
+También debe instalar la [.NET Core SDK](https://www.microsoft.com/net/download).
 
-En Linux, también utiliza Ionide [Mono](https://www.mono-project.com).  Si encuentra en Debian o Ubuntu, puede utilizar lo siguiente:
+### <a name="linuxtablinux"></a>[Linux](#tab/linux)
+
+En Linux, también utiliza Ionide [Mono](https://www.mono-project.com). Si encuentra en Debian o Ubuntu, puede utilizar lo siguiente:
 
 ```
 sudo apt-get update
 sudo apt-get install mono-complete fsharp
 ```
 
+También debe instalar la [.NET Core SDK](https://www.microsoft.com/net/download).
+
+### <a name="windowstabwindows"></a>[Windows](#tab/windows)
+
+Si está en Windows, debe [instalar Visual Studio con compatibilidad con F #](get-started-visual-studio.md#installing-f). Esto instala todos los componentes necesarios para escribir, compilar y ejecutar código de F #.
+
+También debe instalar la [.NET Core SDK](https://www.microsoft.com/net/download/).
+
+---
+
 ## <a name="installing-visual-studio-code-and-the-ionide-plugin"></a>Instalar el complemento de Ionide y código de Visual Studio
 
-Puede instalar Visual Studio Code desde el [code.visualstudio.com](https://code.visualstudio.com) sitio Web.  Después de eso, hay dos formas de buscar el complemento Ionide:
+Puede instalar Visual Studio Code desde el [code.visualstudio.com](https://code.visualstudio.com) sitio Web. Después de eso, hay dos formas de buscar el complemento Ionide:
 
 1. Usa la paleta de comando (Ctrl + Mayús + P en Windows, ⌘ + MAYÚS + P en macOS, Ctrl + Mayús + P en Linux) y escriba lo siguiente:
 
@@ -96,7 +67,7 @@ Puede instalar Visual Studio Code desde el [code.visualstudio.com](https://code.
 
     ![](media/getting-started-vscode/vscode-ext.png)
 
-El complemento sólo para compatibilidad con F # en Visual Studio Code es [Ionide fsharp](https://marketplace.visualstudio.com/items?itemName=Ionide.Ionide-fsharp).  Sin embargo, también puede instalar [Ionide emulación](https://marketplace.visualstudio.com/items?itemName=Ionide.Ionide-FAKE) y para obtener [IMITAR](https://fake.build/) admite y [Ionide Paket](https://marketplace.visualstudio.com/items?itemName=Ionide.Ionide-Paket) para obtener [Paket](https://fsprojects.github.io/Paket/) admite.  FALSIFICAR y Paket son herramientas de la Comunidad de datos adicionales sobre F # para compilar proyectos y administrar dependencias, respectivamente.
+El complemento sólo para compatibilidad con F # en Visual Studio Code es [Ionide fsharp](https://marketplace.visualstudio.com/items?itemName=Ionide.Ionide-fsharp). Sin embargo, también puede instalar [Ionide emulación](https://marketplace.visualstudio.com/items?itemName=Ionide.Ionide-FAKE) y para obtener [IMITAR](https://fsharp.github.io/FAKE/) admite y [Ionide Paket](https://marketplace.visualstudio.com/items?itemName=Ionide.Ionide-Paket) para obtener [Paket](https://fsprojects.github.io/Paket/) admite. FALSIFICAR y Paket son herramientas de la Comunidad de datos adicionales sobre F # para compilar proyectos y administrar dependencias, respectivamente.
 
 ## <a name="creating-your-first-project-with-ionide"></a>Crear su primer proyecto con Ionide
 
@@ -139,7 +110,7 @@ Esta plantilla genera algunas cosas que puede encontrar útiles:
 
 1. F # del proyecto, debajo de la directiva la `ClassLibraryDemo` carpeta.
 2. La estructura de directorio correcto para agregar paquetes a través de [ `Paket` ](https://fsprojects.github.io/Paket/).
-3. Una multiplataforma Generar script con [ `FAKE` ](https://fake.build/).
+3. Una multiplataforma Generar script con [ `FAKE` ](https://fsharp.github.io/FAKE/).
 4. El `paket.exe` archivo ejecutable que puede capturar paquetes y resolver las dependencias para usted.
 5. Un `.gitignore` archivo si desea agregar este proyecto al control de origen basado en Git.
 
