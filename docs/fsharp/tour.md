@@ -4,17 +4,17 @@ description: "Examinar algunas de las características clave de la programación
 keywords: "Visual f #, f #, funcional programación,. NET, paseo"
 author: cartermp
 ms.author: phcart
-ms.date: 01/24/2017
+ms.date: 02/28/2018
 ms.topic: article
 ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 49775139-082e-442f-b5a2-dd402399b5d2
-ms.openlocfilehash: c027e6b71f35fc3b58750eb164124de145244825
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 7327573a25aa62af28570b4a8662235f3e41a972
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="tour-of-f"></a>Paseo de F #. #
 
@@ -22,20 +22,13 @@ Es la mejor manera de obtener información sobre F # leer y escribir código de 
 
 Hay dos conceptos principales en F #: tipos y funciones.  Este paseo le resaltan las características del lenguaje que se dividen en estos dos conceptos.
 
-## <a name="how-to-run-the-code-samples"></a>Cómo ejecutar los ejemplos de código
-
->[!NOTE]
-Dos opciones para ejecutar los ejemplos de código son [F # intente](http://www.tryfsharp.org/Create) (requiere Silverlight) y [F # para Azure portátiles](https://notebooks.azure.com/Microsoft/libraries/fsharp/html/FSharp%20for%20Azure%20Notebooks.ipynb) en Microsoft Azure.
-
-La forma más rápida para ejecutar estos ejemplos de código es usar [F # Interactive](tutorials/fsharp-interactive/index.md).  Simplemente copiar y pegar los ejemplos de código y ejecutarlas no existe.  O bien puede configurar un proyecto para compilar y ejecutar el código como una aplicación de consola.  Consulte la [Introducción](./get-started/index.md) sección para obtener más información.
-
 ## <a name="functions-and-modules"></a>Las funciones y módulos
 
 Los elementos más fundamentales de cualquier programa de F # son ***funciones*** organizan en ***módulos***.  [Funciones](language-reference/functions/index.md) realizar el trabajo en entradas para generar salidas, y que estén organizadas en [módulos](language-reference/modules.md), que son la manera principal agrupar cosas en F #.  Se definen mediante la [ `let` enlace](language-reference/functions/let-bindings.md), que asigne un nombre a la función y definir sus argumentos.
 
 [!code-fsharp[BasicFunctions](../../samples/snippets/fsharp/tour.fs#L101-L133)]
 
-`let`los enlaces son también cómo enlazar un valor a un nombre, de forma similar a una variable en otros lenguajes.  `let`los enlaces son ***inmutable*** de forma predeterminada, lo que significa que una vez que una función o el valor se enlaza a un nombre, no puede modificarse en contexto.  Esto difiere de las variables en otros idiomas, que son ***mutable***, lo que significa que sus valores se puede cambiar en cualquier punto en el tiempo.  Si necesita un enlace mutable, puede usar `let mutable ...` sintaxis.
+`let` los enlaces son también cómo enlazar un valor a un nombre, de forma similar a una variable en otros lenguajes.  `let` los enlaces son ***inmutable*** de forma predeterminada, lo que significa que una vez que una función o el valor se enlaza a un nombre, no puede modificarse en contexto.  Esto difiere de las variables en otros idiomas, que son ***mutable***, lo que significa que sus valores se puede cambiar en cualquier punto en el tiempo.  Si necesita un enlace mutable, puede usar `let mutable ...` sintaxis.
 
 [!code-fsharp[Immutability](../../samples/snippets/fsharp/tour.fs#L75-L94)]
 
