@@ -1,1 +1,1 @@
-<span data-ttu-id="e945f-101">Windows Media de Microsoft</span><span class="sxs-lookup"><span data-stu-id="e945f-101">Microsoft Windows Media</span></span>
+<span data-ttu-id="0d6a1-101">Windows Media de Microsoft</span><span class="sxs-lookup"><span data-stu-id="0d6a1-101">Microsoft Windows Media</span></span>
