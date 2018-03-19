@@ -66,6 +66,7 @@
 #### [Cómo: personalizar una directiva de caché de duración definida](how-to-customize-a-time-based-cache-policy.md)
 #### [Cómo establecer una directiva de caché para una solicitud](how-to-set-cache-policy-for-a-request.md)
 ## [Seguridad en la programación para redes](security-in-network-programming.md)
+### [Procedimientos recomendados sobre la seguridad de la capa de transporte (TLS)](tls.md)
 ### [Usar Capa de sockets seguros](using-secure-sockets-layer.md)
 #### [Selección y validación de certificados](certificate-selection-and-validation.md)
 ### [Autenticación de Internet](internet-authentication.md)

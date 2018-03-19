@@ -25,11 +25,11 @@ ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
 caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 0ac5c6bfb129f0367c2d62ebf139e44b8eb60379
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 68da402bde670077e0700ce1ac60e7980c6568ad
+ms.sourcegitcommit: 1c0b0f082b3f300e54b4d069b317ac724c88ddc3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="c-operators"></a>operadores de C#
 C# proporciona muchos operadores, que son símbolos que especifican las operaciones (matemáticas, indización, llamada de función, etc.) que se realizan en una expresión.  Puede [sobrecargar](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md) muchos operadores para cambiar su significado al aplicarlos a un tipo definido por el usuario.  
@@ -72,13 +72,13 @@ C# proporciona muchos operadores, que son símbolos que especifican las operacio
  [->](../../../csharp/language-reference/operators/dereference-operator.md): desreferenciación del puntero combinada con acceso a miembros.  
   
 ## <a name="unary-operators"></a>Operadores unarios  
- Estos operadores tienen mayor precedencia que los de la sección siguiente y menor que los de la anterior.  Tenga en cuenta que puede hacer clic en los operadores para ir a las páginas de detalles con ejemplos.  
+ Estos operadores tienen mayor precedencia que los de la sección siguiente y menor que el de la anterior.  Tenga en cuenta que puede hacer clic en los operadores para ir a las páginas de detalles con ejemplos.  
   
  [+x](../../../csharp/language-reference/operators/addition-operator.md): devuelve el valor de x.  
   
  [-x](../../../csharp/language-reference/operators/subtraction-operator.md): negación numérica.  
   
- [!x](../../../csharp/language-reference/operators/logical-negation-operator.md): negación lógica.  
+ [\!x](../../../csharp/language-reference/operators/logical-negation-operator.md): negación lógica.  
   
  [~x](../../../csharp/language-reference/operators/bitwise-complement-operator.md): complemento bit a bit.  
   
@@ -95,7 +95,7 @@ C# proporciona muchos operadores, que son símbolos que especifican las operacio
  [*x](../../../csharp/language-reference/operators/multiplication-operator.md): desreferenciación.  
   
 ## <a name="multiplicative-operators"></a>Operadores multiplicativos  
- Estos operadores tienen mayor precedencia que los de la sección siguiente y menor que los de la anterior.  Tenga en cuenta que puede hacer clic en los operadores para ir a las páginas de detalles con ejemplos.  
+ Estos operadores tienen mayor precedencia que los de la sección siguiente y menor que el de la anterior.  Tenga en cuenta que puede hacer clic en los operadores para ir a las páginas de detalles con ejemplos.  
   
  [x * y](../../../csharp/language-reference/operators/multiplication-operator.md): multiplicación.  
   
@@ -111,7 +111,7 @@ C# proporciona muchos operadores, que son símbolos que especifican las operacio
  [x – y](../../../csharp/language-reference/operators/subtraction-operator.md): resta.  
   
 ## <a name="shift-operators"></a>Operadores de desplazamiento  
- Estos operadores tienen mayor precedencia que los de la sección siguiente y menor que los de la anterior.  Tenga en cuenta que puede hacer clic en los operadores para ir a las páginas de detalles con ejemplos.  
+ Estos operadores tienen mayor precedencia que los de la sección siguiente y menor que el de la anterior.  Tenga en cuenta que puede hacer clic en los operadores para ir a las páginas de detalles con ejemplos.  
   
  [x <\<  y](../../../csharp/language-reference/operators/left-shift-operator.md): desplaza los bits a la izquierda y rellena con cero a la derecha.  
   
@@ -133,7 +133,7 @@ C# proporciona muchos operadores, que son símbolos que especifican las operacio
  [as](../../../csharp/language-reference/keywords/as.md): conversión de tipos.  Devuelve el operando izquierdo convertido al tipo especificado por el operando derecho (un tipo estático), pero `as` devuelve `null` donde `(T)x` produciría una excepción.  
   
 ## <a name="equality-operators"></a>Operadores de igualdad  
- Estos operadores tienen mayor precedencia que los de la sección siguiente y menor que los de la anterior.  Tenga en cuenta que puede hacer clic en los operadores para ir a las páginas de detalles con ejemplos.  
+ Estos operadores tienen mayor precedencia que los de la sección siguiente y menor que el de la anterior.  Tenga en cuenta que puede hacer clic en los operadores para ir a las páginas de detalles con ejemplos.  
   
  [x == y](../../../csharp/language-reference/operators/equality-comparison-operator.md): igualdad.  De forma predeterminada, para los tipos de referencia distintos de `string`, devuelve igualdad de referencia (prueba de identidad).  Sin embargo, los tipos pueden sobrecargar `==`, por lo que si su intención es probar la identidad, es mejor usar el método `ReferenceEquals` en `object`.  
   

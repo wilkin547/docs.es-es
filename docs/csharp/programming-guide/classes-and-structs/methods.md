@@ -2,20 +2,21 @@
 title: "Métodos (Guía de programación de C#)"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - methods [C#]
 - C# language, methods
 ms.assetid: cc738f07-e8cd-4683-9585-9f40c0667c37
-caps.latest.revision: "41"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: ff6e59f70a5718f6616fa9a585dd84144e1774a0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 5390ee08ddd0f4725bb42bbdf7240bb99bd25301
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="methods-c-programming-guide"></a>Métodos (Guía de programación de C#)
 Un método es un bloque de código que contiene una serie de instrucciones. Un programa hace que se ejecuten las instrucciones al llamar al método y especificando los argumentos de método necesarios. En C#, todas las instrucciones ejecutadas se realizan en el contexto de un método. El método Main es el punto de entrada para cada aplicación de C# y se llama mediante Common Language Runtime (CLR) cuando se inicia el programa.  
@@ -130,7 +131,7 @@ static void Main(string[] args)
   
  [!code-csharp[csAsyncMethod#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/methods_9.cs)]  
   
- Un método aisncrónico no puede declarar ningún parámetro [ref](../../../csharp/language-reference/keywords/ref.md) u [out](../../../csharp/language-reference/keywords/out.md) , pero puede llamar a los métodos que tienen estos parámetros.  
+ Un método asincrónico no puede declarar ningún parámetro [ref](../../../csharp/language-reference/keywords/ref.md) u [out](../../../csharp/language-reference/keywords/out-parameter-modifier.md), pero puede llamar a los métodos que tienen estos parámetros.  
   
  Para obtener más información sobre los métodos asincrónicos, vea [Programación asincrónica con Async y Await](../../../csharp/programming-guide/concepts/async/index.md), [Flujo de control en programas asincrónicos](../../../csharp/programming-guide/concepts/async/control-flow-in-async-programs.md) y [Tipos de valor devuelto de Async](../../../csharp/programming-guide/concepts/async/async-return-types.md).  
   
@@ -148,7 +149,7 @@ public Customer this[long id] => store.LookupCustomer(id);
   
  Si el método devuelve `void` o si es un método asincrónico, el cuerpo del método debe ser una expresión de instrucción (igual que con las expresiones lambda).  Para las propiedades y los indexadores, solo deben leerse, y no usa la palabra clave de descriptor de acceso `get`.  
   
-## <a name="iterators"></a>Iteradores  
+## <a name="iterators"></a>Iterators  
  Un iterador realiza una iteración personalizada en una colección, como una lista o matriz. Un iterador utiliza la instrucción [yield return](../../../csharp/language-reference/keywords/yield.md) para devolver cada elemento de uno en uno. Cuando se alcanza la instrucción [yield return](../../../csharp/language-reference/keywords/yield.md) , se recuerda la ubicación actual en el código. La ejecución se reinicia desde esa ubicación la próxima vez que se llama el iterador.  
   
  Llame a un iterador a partir del código de cliente mediante una instrucción [foreach](../../../csharp/language-reference/keywords/foreach-in.md) .  

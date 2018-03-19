@@ -9,15 +9,17 @@ helpviewer_keywords:
 - strings [C#], modifying
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: a67cf24c0f6024d23bc1106943d3447620f18b1f
-ms.sourcegitcommit: d95a91d685565f4d95c8773b558752864a6a3d7e
+ms.openlocfilehash: 830ca207c4cd5bd24dbb667328465cafb2509409
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="how-to-modify-string-contents-in-c"></a>Cómo: Modificar el contenido de cadenas en C# #
 
 En este artículo se muestran varias técnicas para producir una `string` modificando una `string` existente. Todas las técnicas mostradas devuelven el resultado de las modificaciones como un objeto `string` nuevo. Para indicarlo de forma clara, en todos los ejemplos se almacena el resultado en una variable nueva. Entonces, podrá examinar tanto la `string` original como la `string` resultante de la modificación al ejecutar cada ejemplo.
+
+[!INCLUDE[interactive-note](~/includes/csharp-interactive-note.md)]
 
 En este artículo se muestran varias técnicas. Puede reemplazar el texto existente. Puede buscar patrones y reemplazar el texto coincidente por otro texto. Puede tratar una cadena con una secuencia de caracteres. También puede usar métodos de conveniencia para eliminar espacios en blanco. Debe elegir la técnica con mayor coincidencia con su caso.
 

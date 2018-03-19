@@ -9,11 +9,11 @@ ms.assetid: 9bcf896a-5826-4189-8c1a-3e35fa08243a
 caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 501a11f1bc6118e647cc414f4b83a14f6b41a37d
-ms.sourcegitcommit: ba765893e3efcece67d99fd6d5ce0074b050d1d9
+ms.openlocfilehash: c9f2699646db17c9358f84f4c5407e7aab8b60cf
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="asynchronous-programming-with-async-and-await-c"></a>Programación asincrónica con Async y Await (C#)
 Puede evitar cuellos de botella de rendimiento y mejorar la capacidad de respuesta total de la aplicación mediante la programación asincrónica. Sin embargo, las técnicas tradicionales para escribir aplicaciones asincrónicas pueden resultar complicadas, haciéndolas difícil de escribir, depurar y mantener.  
@@ -219,7 +219,7 @@ Un método asincrónico también puede tener un tipo de valor devuelto `void`. E
   
 No se puede esperar a un método asincrónico que tenga un tipo de valor devuelto `void` y el llamador de un método con tipo de valor devuelto void no puede capturar ninguna excepción producida por este.  
   
-Un método aisncrónico no puede declarar ningún parámetro [ref](../../../../csharp/language-reference/keywords/ref.md) u [out](../../../../csharp/language-reference/keywords/out.md), pero el método puede llamar a los métodos que tienen estos parámetros. De forma similar, un método asincrónico no puede devolver un valor por referencia, aunque puede llamar a métodos con valores devueltos ref. 
+Un método asincrónico no puede declarar ningún parámetro [in](../../../../csharp/language-reference/keywords/in-parameter-modifier.md), [ref](../../../../csharp/language-reference/keywords/ref.md) o [out](../../../../csharp/language-reference/keywords/out-parameter-modifier.md), pero el método puede llamar a los métodos que tienen estos parámetros. De forma similar, un método asincrónico no puede devolver un valor por referencia, aunque puede llamar a métodos con valores devueltos ref. 
   
 Para más información y ejemplos, vea [Async Return Types (C#)](../../../../csharp/programming-guide/concepts/async/async-return-types.md) (Tipos de valor devuelto asincrónicos [C#]). Para más información sobre cómo capturar excepciones en métodos asincrónicos, vea [try-catch](../../../../csharp/language-reference/keywords/try-catch.md). 
   
