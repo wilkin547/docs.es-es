@@ -5,7 +5,8 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-bcl
+ms.technology:
+- dotnet-bcl
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,16 +15,17 @@ helpviewer_keywords:
 - accessing embedded objects
 - embedded objects, UI Automation
 ms.assetid: 93fdfbb9-0025-4b72-8ca0-0714adbb70d5
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 97f2f03cd55512c29c686759e756a1941f472157
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="textpattern-and-embedded-objects-overview"></a>Información general sobre TextPattern y objetos incrustados
 > [!NOTE]
@@ -54,7 +56,7 @@ Ejemplo de una secuencia de texto con objetos incrustados y sus intervalos
   
  Cuando es necesario atravesar el contenido de un intervalo de texto, se realizan en segundo plano una serie de pasos para que el método <xref:System.Windows.Automation.Text.TextPatternRange.Move%2A> pueda ejecutarse correctamente.  
   
-1.  El intervalo de texto se normaliza, es decir, se contrae, en un intervalo degenerado en el extremo <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.Start> , y el extremo <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End> queda superfluo. Este paso es necesario para evitar la ambigüedad en situaciones donde un intervalo de texto expande los límites de <xref:System.Windows.Automation.Text.TextUnit> ; por ejemplo, "{La dirección U}RL [http://www.microsoft.com](http://www.microsoft.com) está incrustada en el texto" donde "{" y "}" son los extremos del intervalo de texto.  
+1.  El intervalo de texto se normaliza, es decir, se contrae, en un intervalo degenerado en el extremo <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.Start> , y el extremo <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End> queda superfluo. Este paso es necesario para evitar la ambigüedad en situaciones donde se extiende por un intervalo de texto <xref:System.Windows.Automation.Text.TextUnit> límites: por ejemplo, "{la U} RL [ http://www.microsoft.com ](http://www.microsoft.com) está incrustada en el texto" donde "{" y "}" es extremos del intervalo de texto.  
   
 2.  El intervalo resultante se mueve hacia atrás en <xref:System.Windows.Automation.TextPattern.DocumentRange%2A> , al principio del límite <xref:System.Windows.Automation.Text.TextUnit> solicitado.  
   
@@ -79,11 +81,11 @@ Ejemplos de cómo se ajusta un intervalo de texto para Move() y ExpandToEnclosin
 ### <a name="hyperlink"></a>Hipervínculo  
  **Ejemplo 1: intervalo de texto que contiene un hipervínculo de texto incrustado**  
   
- "La dirección URL [http://www.microsoft.com](http://www.microsoft.com) está incrustada en el texto".  
+ {La dirección URL [ http://www.microsoft.com ](http://www.microsoft.com) está incrustada en el texto}.  
   
 |Método al que se llama|Resultado|  
 |-------------------|------------|  
-|<xref:System.Windows.Automation.Text.TextPatternRange.GetText%2A>|Devuelve la cadena "La dirección URL http://www.microsoft.com está incrustada en el texto".|  
+|<xref:System.Windows.Automation.Text.TextPatternRange.GetText%2A>|Devuelve la cadena "la dirección URL http://www.microsoft.com está incrustada en el texto".|  
 |<xref:System.Windows.Automation.Text.TextPatternRange.GetEnclosingElement%2A>|Devuelve el elemento <xref:System.Windows.Automation.AutomationElement> más interno que incluye el intervalo de texto (en este caso, el elemento <xref:System.Windows.Automation.AutomationElement> que representa al propio proveedor de texto).|  
 |<xref:System.Windows.Automation.Text.TextPatternRange.GetChildren%2A>|Devuelve un elemento <xref:System.Windows.Automation.AutomationElement> que representa el control de hipervínculo.|  
 |<xref:System.Windows.Automation.TextPattern.RangeFromChild%2A> , donde <xref:System.Windows.Automation.AutomationElement> es el objeto que ha devuelto el método `GetChildren` anterior.|Devuelve el intervalo que representa "http://www.microsoft.com".|  
@@ -100,7 +102,7 @@ Ejemplos de cómo se ajusta un intervalo de texto para Move() y ExpandToEnclosin
   
  **Ejemplo 3: intervalo de texto que se extiende parcialmente por el contenido de un contenedor de texto. El contenedor de texto incluye un hipervínculo de texto incrustado que no forma parte del intervalo de texto.**  
   
- {La dirección URL} [http://www.microsoft.com](http://www.microsoft.com) está incrustada en el texto.  
+ {La dirección URL} [ http://www.microsoft.com ](http://www.microsoft.com) está incrustada en el texto.  
   
 |Método al que se llama|Resultado|  
 |-------------------|------------|  

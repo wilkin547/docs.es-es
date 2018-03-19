@@ -17,10 +17,10 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: 8c2706782ed1242ecdb5af1fdfab7a3f24e19236
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
-ms.translationtype: HT
+ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="xml-type-support-implementation-notes"></a>Notas de implementación de la compatibilidad con tipos XML
 En este tema se describen algunos detalles de la implementación que debería conocer.  
@@ -37,14 +37,14 @@ En este tema se describen algunos detalles de la implementación que debería co
  A continuación se describen determinadas diferencias que se podrían producir entre los tipos de datos XML y los tipos CLR y cómo se tratan.  
   
 > [!NOTE]
->  El prefijo `xs` se asigna a http://www.w3.org/2001/XMLSchema y al identificador URI del espacio de nombres.  
+>  El `xs` prefijo se asigna a la http://www.w3.org/2001/XMLSchema y URI de espacio de nombres.  
   
 ### <a name="systemtimespan-and-xsduration"></a>System.TimeSpan y xs:duration  
  El tipo `xs:duration` está parcialmente ordenado, ya que hay determinados valores de duración que son diferentes, pero equivalentes. Eso significa que para el valor del tipo `xs:duration`, por ejemplo 1 mes (P1M), es menor que 32 días (P32D), mayor que 27 días (P27D) y equivalente a 28, 29 o 30 días.  
   
  La clase <xref:System.TimeSpan> no admite esta ordenación parcial. En su lugar, toma un número de días específico para 1 año y 1 mes; 365 días y 30 días, respectivamente.  
   
- Para obtener más información sobre el tipo `xs:duration`, vea la recomendación sobre tipos de datos de esquema XML del W3C, XML Schema Part 2: Datatypes, en la dirección http://www.w3.org/TR/xmlschema-2/ (en inglés).  
+ Para obtener más información sobre la `xs:duration` los tipos, vea W3C XML Schema Part 2: Datatypes Recommendation en http://www.w3.org/TR/xmlschema-2/.  
   
 ### <a name="xstime-gregorian-date-types-and-systemdatetime"></a>xs:time, tipos de fechas gregorianas y System.DateTime  
  Cuando se asigna un valor `xs:time` a un objeto <xref:System.DateTime>, el campo <xref:System.DateTime.MinValue> se utiliza para inicializar las propiedades de fecha del objeto <xref:System.DateTime> (por ejemplo, <xref:System.DateTime.Year%2A>, <xref:System.DateTime.Month%2A> y <xref:System.DateTime.Day%2A>) con el valor <xref:System.DateTime> más pequeño posible.  

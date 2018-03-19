@@ -14,23 +14,23 @@ ms.assetid: adc04c28-3ed2-4326-807a-7545df92b852
 caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: ad4453f889a344fcd44dfad44a30fef07380b6a3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 4b9c5328bfa1b0fc9a7751763c7d728096886905
+ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="stackalloc-c-reference"></a>stackalloc (Referencia de C#)
 La palabra clave `stackalloc` se usa en un contexto de código no seguro para asignar un bloque de memoria a la pila.  
   
-```  
+```csharp  
 int* block = stackalloc int[100];  
 ```  
   
 ## <a name="remarks"></a>Comentarios  
  La palabra clave solo es válida en inicializadores de variables locales. El código siguiente genera errores del compilador.  
   
-```  
+```csharp  
 int* block;  
 // The following assignment statement causes compiler errors. You  
 // can use stackalloc only when declaring and initializing a local   

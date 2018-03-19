@@ -5,7 +5,8 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -13,22 +14,23 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], addresses
 - WCF [WCF], addresses
 ms.assetid: 13f269e3-ebb1-433c-86cf-54fbd866a627
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 58e6d383856d57e95a1ea5bd2658af2ec0b22ed5
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="endpoint-addresses"></a>Direcciones de punto de conexión
 Cada punto de conexión tiene una dirección asociada a él, que se utiliza para ubicar e identificar el punto de conexión. Esta dirección está compuesta principalmente de un Identificador uniforme de recursos (URI), que especifica la ubicación del punto de conexión. La dirección del extremo se representa en el modelo de programación de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] mediante la clase <xref:System.ServiceModel.EndpointAddress>, que contiene una propiedad <xref:System.ServiceModel.EndpointAddress.Identity%2A> opcional que permite la autenticación del extremo por parte otros extremos que intercambian mensajes con él, y un conjunto de propiedades <xref:System.ServiceModel.EndpointAddress.Headers%2A> opcionales, que definen cualquier otro encabezado SOAP requerido para alcanzar el servicio. Los encabezados opcionales proporcionan información de direccionamiento adicional y más detallada para identificar o interactuar con el extremo de servicio. La dirección de un punto de conexión se representa en la conexión como una referencia de punto de conexión (EPR) WS-Addressing.  
   
 ## <a name="uri-structure-of-an-address"></a>Estructura URI de una Dirección  
- El URI de la dirección de la mayoría de transportes tiene cuatro partes. Por ejemplo, las cuatro partes del URI http://www.fabrikam.com:322/mathservice.svc/secureEndpoint se puede dividir en los siguientes elementos:  
+ El URI de la dirección de la mayoría de transportes tiene cuatro partes. Por ejemplo, las cuatro partes del URI http://www.fabrikam.com:322/mathservice.svc/secureEndpoint puede detallada de la siguiente manera:  
   
 -   Esquema: http:  
   
@@ -86,7 +88,7 @@ Cada punto de conexión tiene una dirección asociada a él, que se utiliza para
 </system.serviceModel>  
 ```  
   
- En el ejemplo anterior, net.tcp://payroll.myorg.com: 8000 y http://shipping.myorg.com: 8000 son las únicas direcciones base, para sus esquemas respectivos, que se pasan a través.  
+ En el ejemplo anterior, NET. TCP://Payroll.myorg.com: 8000 y http://shipping.myorg.com:8000 son las únicas direcciones base, para sus respectivos esquemas, que se pasan a través de.  
   
  `baseAddressPrefixFilter` no admite los caracteres comodín.  
   
