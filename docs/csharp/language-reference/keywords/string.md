@@ -2,7 +2,8 @@
 title: string (Referencia de C#)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 f1_keywords:
 - string
@@ -13,19 +14,19 @@ helpviewer_keywords:
 - string literals [C#]
 - string keyword [C#]
 ms.assetid: 3037e558-fb22-494d-bca1-a15ade11b11a
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 87df2b158b173072aad5257594e1b1482ae61067
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 8899eb75b1b7c556a1e92f173a4d0ca4135014c8
+ms.sourcegitcommit: 1c0b0f082b3f300e54b4d069b317ac724c88ddc3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/16/2018
 ---
-# <a name="string-c-reference"></a><span data-ttu-id="c25be-102">string (Referencia de C#)</span><span class="sxs-lookup"><span data-stu-id="c25be-102">string (C# Reference)</span></span>
-<span data-ttu-id="c25be-103">El tipo `string` representa una secuencia de cero o más caracteres Unicode.</span><span class="sxs-lookup"><span data-stu-id="c25be-103">The `string` type represents a sequence of zero or more Unicode characters.</span></span> <span data-ttu-id="c25be-104">`string` es un alias de <xref:System.String> en .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="c25be-104">`string` is an alias for <xref:System.String> in the .NET Framework.</span></span>  
+# <a name="string-c-reference"></a><span data-ttu-id="af5b7-102">string (Referencia de C#)</span><span class="sxs-lookup"><span data-stu-id="af5b7-102">string (C# Reference)</span></span>
+<span data-ttu-id="af5b7-103">El tipo `string` representa una secuencia de cero o más caracteres Unicode.</span><span class="sxs-lookup"><span data-stu-id="af5b7-103">The `string` type represents a sequence of zero or more Unicode characters.</span></span> <span data-ttu-id="af5b7-104">`string` es un alias de <xref:System.String> en .NET.</span><span class="sxs-lookup"><span data-stu-id="af5b7-104">`string` is an alias for <xref:System.String> in .NET.</span></span>  
   
- <span data-ttu-id="c25be-105">Aunque `string` es un tipo de referencia, se definen los operadores de igualdad (`==` y `!=`) para comparar los valores de los objetos `string`, no las referencias.</span><span class="sxs-lookup"><span data-stu-id="c25be-105">Although `string` is a reference type, the equality operators (`==` and `!=`) are defined to compare the values of `string` objects, not references.</span></span> <span data-ttu-id="c25be-106">Esto hace que las pruebas de igualdad entre cadenas sean más intuitivas.</span><span class="sxs-lookup"><span data-stu-id="c25be-106">This makes testing for string equality more intuitive.</span></span> <span data-ttu-id="c25be-107">Por ejemplo:</span><span class="sxs-lookup"><span data-stu-id="c25be-107">For example:</span></span>  
+ <span data-ttu-id="af5b7-105">Aunque `string` es un tipo de referencia, se definen los operadores de igualdad (`==` y `!=`) para comparar los valores de los objetos `string`, no las referencias.</span><span class="sxs-lookup"><span data-stu-id="af5b7-105">Although `string` is a reference type, the equality operators (`==` and `!=`) are defined to compare the values of `string` objects, not references.</span></span> <span data-ttu-id="af5b7-106">Esto hace que las pruebas de igualdad entre cadenas sean más intuitivas.</span><span class="sxs-lookup"><span data-stu-id="af5b7-106">This makes testing for string equality more intuitive.</span></span> <span data-ttu-id="af5b7-107">Por ejemplo:</span><span class="sxs-lookup"><span data-stu-id="af5b7-107">For example:</span></span>  
   
 ```csharp  
 string a = "hello";  
@@ -36,37 +37,37 @@ Console.WriteLine(a == b);
 Console.WriteLine((object)a == (object)b);  
 ```  
   
- <span data-ttu-id="c25be-108">Se muestra "True" y luego "False" porque el contenido de las cadenas es equivalente, pero `a` y `b` no hacen referencia a la misma instancia de cadena.</span><span class="sxs-lookup"><span data-stu-id="c25be-108">This displays "True" and then "False" because the content of the strings are equivalent, but `a` and `b` do not refer to the same string instance.</span></span>  
+ <span data-ttu-id="af5b7-108">Se muestra "True" y luego "False" porque el contenido de las cadenas es equivalente, pero `a` y `b` no hacen referencia a la misma instancia de cadena.</span><span class="sxs-lookup"><span data-stu-id="af5b7-108">This displays "True" and then "False" because the content of the strings are equivalent, but `a` and `b` do not refer to the same string instance.</span></span>  
   
- <span data-ttu-id="c25be-109">El operador + concatena cadenas:</span><span class="sxs-lookup"><span data-stu-id="c25be-109">The + operator concatenates strings:</span></span>  
+ <span data-ttu-id="af5b7-109">El operador + concatena cadenas:</span><span class="sxs-lookup"><span data-stu-id="af5b7-109">The + operator concatenates strings:</span></span>  
   
 ```csharp  
 string a = "good " + "morning";  
 ```  
   
- <span data-ttu-id="c25be-110">Crea un objeto de cadena que contiene "good morning".</span><span class="sxs-lookup"><span data-stu-id="c25be-110">This creates a string object that contains "good morning".</span></span>  
+ <span data-ttu-id="af5b7-110">Crea un objeto de cadena que contiene "good morning".</span><span class="sxs-lookup"><span data-stu-id="af5b7-110">This creates a string object that contains "good morning".</span></span>  
   
- <span data-ttu-id="c25be-111">Las cadenas son *inmutables*: el contenido de un objeto de cadena no se puede modificar una vez creado el objeto, aunque la sintaxis parezca indicar que se puede hacer.</span><span class="sxs-lookup"><span data-stu-id="c25be-111">Strings are *immutable*--the contents of a string object cannot be changed after the object is created, although the syntax makes it appear as if you can do this.</span></span> <span data-ttu-id="c25be-112">Por ejemplo, al escribir este código, el compilador crea en realidad otro objeto de cadena para almacenar la nueva secuencia de caracteres, y este nuevo objeto se asigna a b.</span><span class="sxs-lookup"><span data-stu-id="c25be-112">For example, when you write this code, the compiler actually creates a new string object to hold the new sequence of characters, and that new object is assigned to b.</span></span> <span data-ttu-id="c25be-113">La cadena "h" pasa a ser apta para la recolección de elementos no utilizados.</span><span class="sxs-lookup"><span data-stu-id="c25be-113">The string "h" is then eligible for garbage collection.</span></span>  
+ <span data-ttu-id="af5b7-111">Las cadenas son *inmutables*: el contenido de un objeto de cadena no se puede modificar una vez creado el objeto, aunque la sintaxis parezca indicar que se puede hacer.</span><span class="sxs-lookup"><span data-stu-id="af5b7-111">Strings are *immutable*--the contents of a string object cannot be changed after the object is created, although the syntax makes it appear as if you can do this.</span></span> <span data-ttu-id="af5b7-112">Por ejemplo, al escribir este código, el compilador crea en realidad otro objeto de cadena para almacenar la nueva secuencia de caracteres, y este nuevo objeto se asigna a b.</span><span class="sxs-lookup"><span data-stu-id="af5b7-112">For example, when you write this code, the compiler actually creates a new string object to hold the new sequence of characters, and that new object is assigned to b.</span></span> <span data-ttu-id="af5b7-113">La cadena "h" pasa a ser apta para la recolección de elementos no utilizados.</span><span class="sxs-lookup"><span data-stu-id="af5b7-113">The string "h" is then eligible for garbage collection.</span></span>  
   
 ```csharp
 string b = "h";  
 b += "ello";  
 ```  
   
- <span data-ttu-id="c25be-114">El operador [] puede usarse para acceso de solo lectura a determinados caracteres de un objeto `string`:</span><span class="sxs-lookup"><span data-stu-id="c25be-114">The [] operator can be used for readonly access to individual characters of a `string`:</span></span>  
+ <span data-ttu-id="af5b7-114">El operador [] puede usarse para acceso de solo lectura a determinados caracteres de un objeto `string`:</span><span class="sxs-lookup"><span data-stu-id="af5b7-114">The [] operator can be used for readonly access to individual characters of a `string`:</span></span>  
   
 ```csharp  
 string str = "test";  
 char x = str[2];  // x = 's';  
 ```  
   
- <span data-ttu-id="c25be-115">Los literales de cadena son del tipo `string` y se pueden escribir de dos formas, entre comillas y @-quoted.</span><span class="sxs-lookup"><span data-stu-id="c25be-115">String literals are of type `string` and can be written in two forms, quoted and @-quoted.</span></span> <span data-ttu-id="c25be-116">Los literales de cadena se incluyen entre comillas dobles ("):</span><span class="sxs-lookup"><span data-stu-id="c25be-116">Quoted string literals are enclosed in double quotation marks ("):</span></span>  
+ <span data-ttu-id="af5b7-115">Los literales de cadena son del tipo `string` y se pueden escribir de dos formas, entre comillas y @-quoted.</span><span class="sxs-lookup"><span data-stu-id="af5b7-115">String literals are of type `string` and can be written in two forms, quoted and @-quoted.</span></span> <span data-ttu-id="af5b7-116">Los literales de cadena se incluyen entre comillas dobles ("):</span><span class="sxs-lookup"><span data-stu-id="af5b7-116">Quoted string literals are enclosed in double quotation marks ("):</span></span>  
   
 ```csharp  
 "good morning"  // a string literal  
 ```  
   
- <span data-ttu-id="c25be-117">Los literales de cadena pueden contener cualquier literal de carácter.</span><span class="sxs-lookup"><span data-stu-id="c25be-117">String literals can contain any character literal.</span></span> <span data-ttu-id="c25be-118">Se incluyen secuencias de escape.</span><span class="sxs-lookup"><span data-stu-id="c25be-118">Escape sequences are included.</span></span> <span data-ttu-id="c25be-119">En el ejemplo siguiente se usa una secuencia de escape `\\` para la barra diagonal inversa, `\u0066` para la letra f y `\n` para la nueva línea.</span><span class="sxs-lookup"><span data-stu-id="c25be-119">The following example uses escape sequence `\\` for backslash, `\u0066` for the letter f, and `\n` for newline.</span></span>  
+ <span data-ttu-id="af5b7-117">Los literales de cadena pueden contener cualquier literal de carácter.</span><span class="sxs-lookup"><span data-stu-id="af5b7-117">String literals can contain any character literal.</span></span> <span data-ttu-id="af5b7-118">Se incluyen secuencias de escape.</span><span class="sxs-lookup"><span data-stu-id="af5b7-118">Escape sequences are included.</span></span> <span data-ttu-id="af5b7-119">En el ejemplo siguiente se usa una secuencia de escape `\\` para la barra diagonal inversa, `\u0066` para la letra f y `\n` para la nueva línea.</span><span class="sxs-lookup"><span data-stu-id="af5b7-119">The following example uses escape sequence `\\` for backslash, `\u0066` for the letter f, and `\n` for newline.</span></span>  
   
 ```  
 string a = "\\\u0066\n";  
@@ -74,44 +75,44 @@ Console.WriteLine(a);
 ```  
   
 > [!NOTE]
->  <span data-ttu-id="c25be-120">El código de escape `\udddd` (donde `dddd` es un número de cuatro dígitos) representa el carácter Unicode U+`dddd`.</span><span class="sxs-lookup"><span data-stu-id="c25be-120">The escape code `\udddd` (where `dddd` is a four-digit number) represents the Unicode character U+`dddd`.</span></span> <span data-ttu-id="c25be-121">También se reconocen los códigos de escape Unicode de 8 dígitos: `\Udddddddd`.</span><span class="sxs-lookup"><span data-stu-id="c25be-121">Eight-digit Unicode escape codes are also recognized: `\Udddddddd`.</span></span>  
+>  <span data-ttu-id="af5b7-120">El código de escape `\udddd` (donde `dddd` es un número de cuatro dígitos) representa el carácter Unicode U+`dddd`.</span><span class="sxs-lookup"><span data-stu-id="af5b7-120">The escape code `\udddd` (where `dddd` is a four-digit number) represents the Unicode character U+`dddd`.</span></span> <span data-ttu-id="af5b7-121">También se reconocen los códigos de escape Unicode de 8 dígitos: `\Udddddddd`.</span><span class="sxs-lookup"><span data-stu-id="af5b7-121">Eight-digit Unicode escape codes are also recognized: `\Udddddddd`.</span></span>  
   
- <span data-ttu-id="c25be-122">Los literales de cadena textual empiezan por @ y también se incluyen entre comillas dobles.</span><span class="sxs-lookup"><span data-stu-id="c25be-122">Verbatim string literals start with @ and are also enclosed in double quotation marks.</span></span> <span data-ttu-id="c25be-123">Por ejemplo:</span><span class="sxs-lookup"><span data-stu-id="c25be-123">For example:</span></span>  
+ <span data-ttu-id="af5b7-122">Los literales de cadena textual empiezan por `@` y también se incluyen entre comillas dobles.</span><span class="sxs-lookup"><span data-stu-id="af5b7-122">Verbatim string literals start with `@` and are also enclosed in double quotation marks.</span></span> <span data-ttu-id="af5b7-123">Por ejemplo:</span><span class="sxs-lookup"><span data-stu-id="af5b7-123">For example:</span></span>  
   
 ```csharp  
 @"good morning"  // a string literal  
 ```  
   
- <span data-ttu-id="c25be-124">La ventaja de las cadenas textuales es que las secuencias de escape *no* se procesan, lo que facilita la escritura de, por ejemplo, un nombre de archivo completo:</span><span class="sxs-lookup"><span data-stu-id="c25be-124">The advantage of verbatim strings is that escape sequences are *not* processed, which makes it easy to write, for example, a fully qualified file name:</span></span>  
+ <span data-ttu-id="af5b7-124">La ventaja de las cadenas textuales es que las secuencias de escape *no* se procesan, lo que facilita la escritura de, por ejemplo, un nombre de archivo completo:</span><span class="sxs-lookup"><span data-stu-id="af5b7-124">The advantage of verbatim strings is that escape sequences are *not* processed, which makes it easy to write, for example, a fully qualified file name:</span></span>  
   
 ```csharp  
 @"c:\Docs\Source\a.txt"  // rather than "c:\\Docs\\Source\\a.txt"  
 ```  
   
- <span data-ttu-id="c25be-125">Para incluir un signo de comillas dobles en una cadena @-quoted, duplíquelo:</span><span class="sxs-lookup"><span data-stu-id="c25be-125">To include a double quotation mark in an @-quoted string, double it:</span></span>  
+ <span data-ttu-id="af5b7-125">Para incluir un signo de comillas dobles en una cadena @-quoted, duplíquelo:</span><span class="sxs-lookup"><span data-stu-id="af5b7-125">To include a double quotation mark in an @-quoted string, double it:</span></span>  
   
 ```csharp  
 @"""Ahoy!"" cried the captain." // "Ahoy!" cried the captain.  
 ```  
   
- <span data-ttu-id="c25be-126">Otro uso del símbolo @ se da con identificadores con referencia ([/reference](../../../csharp/language-reference/compiler-options/reference-compiler-option.md)) que son palabras clave de C#.</span><span class="sxs-lookup"><span data-stu-id="c25be-126">Another use of the @ symbol is to use referenced ([/reference](../../../csharp/language-reference/compiler-options/reference-compiler-option.md)) identifiers that are C# keywords.</span></span>  
+ <span data-ttu-id="af5b7-126">Para saber qué otros usos tiene el carácter especial `@`, vea [@ -- identificador textual](../tokens/verbatim.md).</span><span class="sxs-lookup"><span data-stu-id="af5b7-126">For other uses of the `@` special character, see [@ -- verbatim identifier](../tokens/verbatim.md).</span></span>  
   
- <span data-ttu-id="c25be-127">Para obtener más información sobre las cadenas en C#, vea [Strings](../../../csharp/programming-guide/strings/index.md) (Cadenas [Guía de programación de C#]).</span><span class="sxs-lookup"><span data-stu-id="c25be-127">For more information about strings in C#, see [Strings](../../../csharp/programming-guide/strings/index.md).</span></span>  
+ <span data-ttu-id="af5b7-127">Para obtener más información sobre las cadenas en C#, vea [Strings](../../../csharp/programming-guide/strings/index.md) (Cadenas [Guía de programación de C#]).</span><span class="sxs-lookup"><span data-stu-id="af5b7-127">For more information about strings in C#, see [Strings](../../../csharp/programming-guide/strings/index.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="c25be-128">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="c25be-128">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="af5b7-128">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="af5b7-128">Example</span></span>  
  [!code-csharp[csrefKeywordsTypes#17](../../../csharp/language-reference/keywords/codesnippet/CSharp/string_1.cs)]  
   
-## <a name="c-language-specification"></a><span data-ttu-id="c25be-129">Especificación del lenguaje C#</span><span class="sxs-lookup"><span data-stu-id="c25be-129">C# Language Specification</span></span>  
+## <a name="c-language-specification"></a><span data-ttu-id="af5b7-129">Especificación del lenguaje C#</span><span class="sxs-lookup"><span data-stu-id="af5b7-129">C# Language Specification</span></span>  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="c25be-130">Vea también</span><span class="sxs-lookup"><span data-stu-id="c25be-130">See Also</span></span>  
- [<span data-ttu-id="c25be-131">Referencia de C#</span><span class="sxs-lookup"><span data-stu-id="c25be-131">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
- [<span data-ttu-id="c25be-132">Guía de programación de C#</span><span class="sxs-lookup"><span data-stu-id="c25be-132">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
- [<span data-ttu-id="c25be-133">Procedimientos recomendados para el uso de cadenas</span><span class="sxs-lookup"><span data-stu-id="c25be-133">Best Practices for Using Strings</span></span>](../../../standard/base-types/best-practices-strings.md)  
- [<span data-ttu-id="c25be-134">Palabras clave de C#</span><span class="sxs-lookup"><span data-stu-id="c25be-134">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)  
- [<span data-ttu-id="c25be-135">Guía de programación de C#</span><span class="sxs-lookup"><span data-stu-id="c25be-135">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
- [<span data-ttu-id="c25be-136">Tipos de referencia</span><span class="sxs-lookup"><span data-stu-id="c25be-136">Reference Types</span></span>](../../../csharp/language-reference/keywords/reference-types.md)  
- [<span data-ttu-id="c25be-137">Tipos de valor</span><span class="sxs-lookup"><span data-stu-id="c25be-137">Value Types</span></span>](../../../csharp/language-reference/keywords/value-types.md)  
- [<span data-ttu-id="c25be-138">Operaciones básicas de cadenas</span><span class="sxs-lookup"><span data-stu-id="c25be-138">Basic String Operations</span></span>](../../../standard/base-types/basic-string-operations.md)  
- [<span data-ttu-id="c25be-139">Creación de cadenas nuevas</span><span class="sxs-lookup"><span data-stu-id="c25be-139">Creating New Strings</span></span>](../../../standard/base-types/creating-new.md)  
- [<span data-ttu-id="c25be-140">Tabla de formatos de presentación para valores numéricos</span><span class="sxs-lookup"><span data-stu-id="c25be-140">Formatting Numeric Results Table</span></span>](../../../csharp/language-reference/keywords/formatting-numeric-results-table.md)
+## <a name="see-also"></a><span data-ttu-id="af5b7-130">Vea también</span><span class="sxs-lookup"><span data-stu-id="af5b7-130">See Also</span></span>  
+ [<span data-ttu-id="af5b7-131">Referencia de C#</span><span class="sxs-lookup"><span data-stu-id="af5b7-131">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
+ [<span data-ttu-id="af5b7-132">Guía de programación de C#</span><span class="sxs-lookup"><span data-stu-id="af5b7-132">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+ [<span data-ttu-id="af5b7-133">Procedimientos recomendados para el uso de cadenas</span><span class="sxs-lookup"><span data-stu-id="af5b7-133">Best Practices for Using Strings</span></span>](../../../standard/base-types/best-practices-strings.md)  
+ [<span data-ttu-id="af5b7-134">Palabras clave de C#</span><span class="sxs-lookup"><span data-stu-id="af5b7-134">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)  
+ [<span data-ttu-id="af5b7-135">Guía de programación de C#</span><span class="sxs-lookup"><span data-stu-id="af5b7-135">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+ [<span data-ttu-id="af5b7-136">Tipos de referencia</span><span class="sxs-lookup"><span data-stu-id="af5b7-136">Reference Types</span></span>](../../../csharp/language-reference/keywords/reference-types.md)  
+ [<span data-ttu-id="af5b7-137">Tipos de valor</span><span class="sxs-lookup"><span data-stu-id="af5b7-137">Value Types</span></span>](../../../csharp/language-reference/keywords/value-types.md)  
+ [<span data-ttu-id="af5b7-138">Operaciones básicas de cadenas</span><span class="sxs-lookup"><span data-stu-id="af5b7-138">Basic String Operations</span></span>](../../../standard/base-types/basic-string-operations.md)  
+ [<span data-ttu-id="af5b7-139">Creación de cadenas nuevas</span><span class="sxs-lookup"><span data-stu-id="af5b7-139">Creating New Strings</span></span>](../../../standard/base-types/creating-new.md)  
+ [<span data-ttu-id="af5b7-140">Tabla de formatos de presentación para valores numéricos</span><span class="sxs-lookup"><span data-stu-id="af5b7-140">Formatting Numeric Results Table</span></span>](../../../csharp/language-reference/keywords/formatting-numeric-results-table.md)

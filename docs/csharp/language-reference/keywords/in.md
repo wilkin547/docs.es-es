@@ -1,6 +1,6 @@
 ---
 title: in (Referencia de C#)
-ms.date: 07/20/2015
+ms.date: 02/06/2018
 ms.prod: .net
 ms.technology:
 - devlang-csharp
@@ -10,24 +10,23 @@ f1_keywords:
 - in_CSharpKeyword
 helpviewer_keywords:
 - in keyword [C#]
-ms.assetid: 52032838-0a38-476e-b4d5-94b59141952f
-caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 56824b21da416aecb9b00b46f2817b3d0fba2be2
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: e8c45427a99756006799d1dca42841ef09b9ed8e
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 03/15/2018
 ---
-# <a name="in-c-reference"></a><span data-ttu-id="b4588-102">in (Referencia de C#)</span><span class="sxs-lookup"><span data-stu-id="b4588-102">in (C# Reference)</span></span>
-<span data-ttu-id="b4588-103">La palabra clave contextual `in` se usa en tres contextos:</span><span class="sxs-lookup"><span data-stu-id="b4588-103">The `in` contextual keyword is used in three contexts:</span></span>  
+# <a name="in-c-reference"></a><span data-ttu-id="d0bce-102">in (Referencia de C#)</span><span class="sxs-lookup"><span data-stu-id="d0bce-102">in (C# Reference)</span></span>
+
+<span data-ttu-id="d0bce-103">La palabra clave contextual `in` se usa en cuatro contextos:</span><span class="sxs-lookup"><span data-stu-id="d0bce-103">The `in` contextual keyword is used in four contexts:</span></span>  
   
--   <span data-ttu-id="b4588-104">instrucciones [foreach](../../../csharp/language-reference/keywords/foreach-in.md)</span><span class="sxs-lookup"><span data-stu-id="b4588-104">[foreach](../../../csharp/language-reference/keywords/foreach-in.md) statements</span></span>  
+-   <span data-ttu-id="d0bce-104">[parámetros de tipo genérico](in-generic-modifier.md) en interfaces y delegados genéricos.</span><span class="sxs-lookup"><span data-stu-id="d0bce-104">[generic type parameters](in-generic-modifier.md) in generic interfaces and delegates.</span></span>
+-   <span data-ttu-id="d0bce-105">Como un [modificador de parámetro](in-parameter-modifier.md), que le permite pasar un argumento a un método mediante una referencia en lugar de mediante un valor.</span><span class="sxs-lookup"><span data-stu-id="d0bce-105">As a [parameter modifier](in-parameter-modifier.md), which lets you pass an argument to a method by reference rather than by value.</span></span>
+-   <span data-ttu-id="d0bce-106">Instrucciones [foreach](foreach-in.md)</span><span class="sxs-lookup"><span data-stu-id="d0bce-106">[foreach](foreach-in.md) statements.</span></span>
+-   <span data-ttu-id="d0bce-107">[Cláusulas join](join-clause.md) en expresiones de consulta de LINQ</span><span class="sxs-lookup"><span data-stu-id="d0bce-107">[join clauses](join-clause.md) in LINQ query expressions.</span></span>
   
--   <span data-ttu-id="b4588-105">[cláusulas join](../../../csharp/language-reference/keywords/join-clause.md) en expresiones de consulta</span><span class="sxs-lookup"><span data-stu-id="b4588-105">[join clauses](../../../csharp/language-reference/keywords/join-clause.md) in query expressions</span></span>  
-  
--   <span data-ttu-id="b4588-106">[parámetros de tipo genérico](../../../csharp/language-reference/keywords/in-generic-modifier.md) en interfaces y delegados genéricos.</span><span class="sxs-lookup"><span data-stu-id="b4588-106">[generic type parameters](../../../csharp/language-reference/keywords/in-generic-modifier.md) in generic interfaces and delegates.</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="b4588-107">Vea también</span><span class="sxs-lookup"><span data-stu-id="b4588-107">See Also</span></span>  
- [<span data-ttu-id="b4588-108">Referencia de C#</span><span class="sxs-lookup"><span data-stu-id="b4588-108">C# Reference</span></span>](../../../csharp/language-reference/index.md)
+## <a name="see-also"></a><span data-ttu-id="d0bce-108">Vea también</span><span class="sxs-lookup"><span data-stu-id="d0bce-108">See Also</span></span>  
+ [<span data-ttu-id="d0bce-109">Palabras clave de C#</span><span class="sxs-lookup"><span data-stu-id="d0bce-109">C# Keywords</span></span>](index.md)  
+ [<span data-ttu-id="d0bce-110">Referencia de C#</span><span class="sxs-lookup"><span data-stu-id="d0bce-110">C# Reference</span></span>](../index.md)
