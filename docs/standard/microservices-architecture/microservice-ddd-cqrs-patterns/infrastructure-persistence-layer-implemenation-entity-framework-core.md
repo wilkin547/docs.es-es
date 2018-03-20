@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 67f89b4ee42d896497f462b80d41afff6b347e05
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 4acdbde6405af7eb78a8c605562fdb1795fedf4d
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="implementing-the-infrastructure-persistence-layer-with-entity-framework-core"></a>Implementación del nivel de persistencia de la infraestructura con Entity Framework Core
 
@@ -31,16 +31,16 @@ Puesto que en la documentación de Microsoft ya hay una introducción a EF Core,
 
 #### <a name="additional-resources"></a>Recursos adicionales
 
--   **Descripción general de Entity Framework Core**
+-   **Entity Framework Core**
     [*https://docs.microsoft.com/ef/core/*](https://docs.microsoft.com/ef/core/)
 
--   **Introducción a ASP.NET Core MVC y Entity Framework Core con Visual Studio**
+-   **Introducción a ASP.NET Core y Entity Framework Core con Visual Studio**
     [*https://docs.microsoft.com/aspnet/core/data/ef-mvc/*](https://docs.microsoft.com/aspnet/core/data/ef-mvc/)
 
--   **DbContext Class**
+-   **Clase DbContext**
     [*https://docs.microsoft.com/ef/core/api/microsoft.entityframeworkcore.dbcontext*](https://docs.microsoft.com/ef/core/api/microsoft.entityframeworkcore.dbcontext)
 
--   **Comparar EF Core y EF6**
+-   **Comparar EF Core y EF6.x**
     [*https://docs.microsoft.com/ef/efcore-and-ef6/index*](https://docs.microsoft.com/ef/efcore-and-ef6/index)
 
 ## <a name="infrastructure-in-entity-framework-core-from-a-ddd-perspective"></a>Infraestructura en Entity Framework Core desde una perspectiva DDD
@@ -240,14 +240,14 @@ Tenga en cuenta que utilizar la duración de singleton para el repositorio puede
 
 #### <a name="additional-resources"></a>Recursos adicionales
 
--   **Implementing the Repository and Unit of Work Patterns in an ASP.NET MVC Application** (Implementación de los patrones de repositorio y unidad de trabajo en una aplicación MVC de ASP.NET) 
-    [*https://www.asp.net/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application*](https://www.asp.net/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application)
+-   **Implementing the Repository and Unit of Work Patterns in an ASP.NET MVC Application**
+    [*https://www.asp.net/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application*](https://www.asp.net/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application) (Implementación de los patrones de repositorio y unidad de trabajo en una aplicación MVC de ASP.NET)
 
--   **Jonathan Allen. Implementation Strategies for the Repository Pattern with Entity Framework, Dapper, and Chain** (Estrategias de implementación para el patrón de repositorio de con Entity Framework, Dapper y Chain) 
+-   **Jonathan Allen. Estrategias de implementación para el patrón de repositorio con Entity Framework, Dapper y Chain**
     [*https://www.infoq.com/articles/repository-implementation-strategies*](https://www.infoq.com/articles/repository-implementation-strategies)
 
--   **Cesar de la Torre. Comparing ASP.NET Core IoC container service lifetimes with Autofac IoC container instance scopes** (Comparación de las duraciones de servicio del contenedor IoC de ASP-NET Core con ámbitos de instancia de contenedor Autofac IoC) 
-    [*https://blogs.msdn.microsoft.com/cesardelatorre/2017/01/26/comparing-asp-net-core-ioc-service-life-times-and-autofac-ioc-instance-scopes/*](https://blogs.msdn.microsoft.com/cesardelatorre/2017/01/26/comparing-asp-net-core-ioc-service-life-times-and-autofac-ioc-instance-scopes/)
+-   **Cesar de la Torre. Comparing ASP.NET Core IoC container service lifetimes with Autofac IoC container instance scopes**
+    [*https://blogs.msdn.microsoft.com/cesardelatorre/2017/01/26/comparing-asp-net-core-ioc-service-life-times-and-autofac-ioc-instance-scopes/*](https://blogs.msdn.microsoft.com/cesardelatorre/2017/01/26/comparing-asp-net-core-ioc-service-life-times-and-autofac-ioc-instance-scopes/) (Comparación de las duraciones de servicio del contenedor IoC de ASP-NET Core con ámbitos de instancia de contenedor Autofac IoC)
 
 ## <a name="table-mapping"></a>Asignación de tabla
 
@@ -330,7 +330,7 @@ En el código de ejemplo se muestran algunas asignaciones y declaraciones explí
 
 ### <a name="the-hilo-algorithm-in-ef-core"></a>Algoritmo Hi/Lo en EF Core
 
-Un aspecto interesante del código de ejemplo anterior es que utiliza el [algoritmo Hi/Lo](https://vladmihalcea.com/2014/06/23/the-hilo-algorithm/) como estrategia de generación de claves.
+Un aspecto interesante del código de ejemplo anterior es que utiliza el [algoritmo Hi/Lo](https://vladmihalcea.com/the-hilo-algorithm/) como estrategia de generación de claves.
 
 El algoritmo Hi/Lo es útil cuando se necesitan claves únicas. A modo de resumen, el algoritmo Hi-Lo asigna identificadores únicos a filas de la tabla, pero no depende del almacenaje inmediato de la fila en la base de datos. Esto le permite empezar a usar los identificadores de forma inmediata, como sucede con los identificadores de la base de datos secuencial normal.
 
@@ -460,20 +460,20 @@ Aunque no se recomienda devolver IQueryable desde un repositorio, se puede usar 
 -   **Asignación de tabla**
     [*https://docs.microsoft.com/ef/core/modeling/relational/tables*](https://docs.microsoft.com/ef/core/modeling/relational/tables)
 
--   **Use HiLo to generate keys with Entity Framework Core** (Uso de HiLo para generar claves con Entity Framework Core)
-    [*http://www.talkingdotnet.com/use-hilo-to-generate-keys-with-entity-framework-core/*](http://www.talkingdotnet.com/use-hilo-to-generate-keys-with-entity-framework-core/)
+-   **Use HiLo to generate keys with Entity Framework Core**
+    [*http://www.talkingdotnet.com/use-hilo-to-generate-keys-with-entity-framework-core/*](http://www.talkingdotnet.com/use-hilo-to-generate-keys-with-entity-framework-core/) (Uso de HiLo para generar claves con Entity Framework Core)
 
 -   **Campos de respaldo**
     [*https://docs.microsoft.com/ef/core/modeling/backing-field*](https://docs.microsoft.com/ef/core/modeling/backing-field)
 
--   **Steve Smith. Encapsulated Collections in Entity Framework Core** (Colecciones encapsuladas en Entity Framework Core)
-    [*http://ardalis.com/encapsulated-collections-in-entity-framework-core*](http://ardalis.com/encapsulated-collections-in-entity-framework-core)
+-   **Steve Smith. Encapsulated Collections in Entity Framework Core**
+    [*http://ardalis.com/encapsulated-collections-in-entity-framework-core*](http://ardalis.com/encapsulated-collections-in-entity-framework-core) (Colecciones encapsuladas en Entity Framework Core)
 
--   **Shadow Properties (Propiedades Shadow)**
+-   **Propiedades paralelas**
     [*https://docs.microsoft.com/ef/core/modeling/shadow-properties*](https://docs.microsoft.com/ef/core/modeling/shadow-properties)
 
--   **The Specification pattern** (El patrón de especificación)
-    [*http://deviq.com/specification-pattern/*](http://deviq.com/specification-pattern/)
+-   **The Specification pattern**
+    [*http://deviq.com/specification-pattern/*](http://deviq.com/specification-pattern/) (Patrón de especificación)
     
 
 >[!div class="step-by-step"]

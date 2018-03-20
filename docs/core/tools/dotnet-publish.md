@@ -3,16 +3,17 @@ title: 'Comando dotnet publish: CLI de .NET Core'
 description: El comando dotnet publish publica el proyecto de .NET Core en un directorio.
 author: mairaw
 ms.author: mairaw
-ms.date: 09/01/2017
+ms.date: 03/10/2018
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.workload: dotnetcore
-ms.openlocfilehash: 46e2f6d485f360660424accbddc2278eaa497a8d
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 2aa69217e949b970b632c4fad72838b63c2a8988
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="dotnet-publish"></a>dotnet publish
 
@@ -27,7 +28,7 @@ ms.lasthandoff: 12/23/2017
 # <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
 ```
-dotnet publish [<PROJECT>] [-c|--configuration] [-f|--framework] [--force] [--manifest] [no-dependencies] [--no-restore] [-o|--output] [-r|--runtime] [--self-contained] [-v|--verbosity] [--version-suffix]
+dotnet publish [<PROJECT>] [-c|--configuration] [-f|--framework] [--force] [--manifest] [--no-dependencies] [--no-restore] [-o|--output] [-r|--runtime] [--self-contained] [-v|--verbosity] [--version-suffix]
 dotnet publish [-h|--help]
 ```
 
@@ -50,6 +51,8 @@ dotnet publish [-h|--help]
 * Todas las dependencias de la aplicación. Estas se copian de la caché de NuGet a la carpeta de salida.
 
 La salida del comando `dotnet publish` está preparada para la implementación de un sistema de hospedaje (por ejemplo, un servidor, un equipo PC o Mac o un equipo portátil) para la ejecución y es la única manera admitida oficialmente de preparar la aplicación para la implementación. Dependiendo del tipo de implementación que especifique el proyecto, el sistema de hospedaje puede o no tener instalado el entorno de tiempo de ejecución compartido de .NET Core. Para obtener más información, consulte el tema [Implementación de aplicaciones .NET Core](../deploying/index.md). Para la estructura de directorios de una aplicación publicada, consulte [Directory structure](/aspnet/core/hosting/directory-structure) (Estructura de directorios).
+
+[!INCLUDE[dotnet restore note + options](~/includes/dotnet-restore-note-options.md)]
 
 ## <a name="arguments"></a>Argumentos
 
@@ -156,14 +159,18 @@ Publica el proyecto en el directorio actual:
 Publicar la aplicación con el archivo del proyecto especificado:
 
 `dotnet publish ~/projects/app1/app1.csproj`
-    
+
 Publica el proyecto en el directorio actual mediante el marco de trabajo `netcoreapp1.1`:
 
 `dotnet publish --framework netcoreapp1.1`
-    
+
 Publica la aplicación actual mediante el marco de trabajo `netcoreapp1.1` y el entorno de tiempo de ejecución para `OS X 10.10` (este RID tiene que existir en el archivo de proyecto):
 
 `dotnet publish --framework netcoreapp1.1 --runtime osx.10.11-x64`
+
+Publica la aplicación actual pero no restaura las referencias de proyecto a proyecto (P2P), solo el proyecto raíz, durante la operación de restauración (SDK de .NET Core 2.0 y versiones superiores):
+
+`dotnet publish --no-dependencies`
 
 ## <a name="see-also"></a>Vea también
 

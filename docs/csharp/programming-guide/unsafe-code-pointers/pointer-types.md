@@ -2,20 +2,21 @@
 title: "Tipos de puntero (Guía de programación de C#)"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - unsafe code [C#], pointers
 - pointers [C#]
 ms.assetid: 3319faf9-336d-4148-9af2-1da2579cdd1e
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 0699793e91199cc623c0d13e42937c8b919e992a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: fe7b926bdf9f662d25f2fe960b51fc8254b7aa3a
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="pointer-types-c-programming-guide"></a>Tipos de puntero (Guía de programación de C#)
 En un contexto no seguro, un tipo puede ser un tipo de puntero, un tipo de valor o un tipo de referencia. Una declaración de tipos de puntero toma una de las siguientes formas:  
@@ -48,7 +49,7 @@ int *p1, *p2, *p3;   // Invalid in C#
   
  El valor de la variable de puntero de tipo `myType*` es la dirección de una variable de tipo `myType`. A continuación se muestran ejemplos de declaraciones de tipos de puntero:  
   
-|Ejemplo|Descripción|  
+|Ejemplo|Description|  
 |-------------|-----------------|  
 |`int* p`|`p` es un puntero a un entero.|  
 |`int** p`|`p` es un puntero a un puntero a un entero.|  
@@ -113,11 +114,11 @@ Console.ReadLine();
   
  Un puntero puede ser `null`. La aplicación del operador de direccionamiento indirecto a un puntero NULL da como resultado un comportamiento definido por la implementación.  
   
- Tenga en cuenta que pasar punteros entre métodos puede provocar un comportamiento no definido. Un ejemplo es devolver un puntero a una variable local mediante un parámetro Out o Ref, o como resultado de la función. Si el puntero se estableció en un bloque fijo, es posible que la variable a la que señala ya no sea fija.  
+ Tenga en cuenta que pasar punteros entre métodos puede provocar un comportamiento no definido. Valore la posibilidad de utilizar un método que devuelva un puntero a una variable local mediante un parámetro `in`, `out` o `ref`, o bien como resultado de la función. Si el puntero se estableció en un bloque fijo, es posible que la variable a la que señala ya no sea fija.  
   
  En la tabla siguiente se muestran los operadores e instrucciones que pueden funcionar en punteros en un contexto no seguro:  
   
-|Operador/Instrucción|Uso|  
+|Operador/Instrucción|Usar|  
 |-------------------------|---------|  
 |*|Realiza el direccionamiento indirecto del puntero.|  
 |->|Obtiene acceso a un miembro de un struct a través de un puntero.|  

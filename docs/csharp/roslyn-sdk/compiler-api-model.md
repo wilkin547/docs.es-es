@@ -8,11 +8,11 @@ ms.topic: conceptual
 ms.prod: .net
 ms.devlang: devlang-csharp
 ms.custom: mvc
-ms.openlocfilehash: fd599118165dcb087f046a307a3f7aeef0cf7078
-ms.sourcegitcommit: 08684dd61444c2f072b89b926370f750e456fca1
+ms.openlocfilehash: d230d334eba4e438635a4c70e8c1b5fc5075b065
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="understand-the-net-compiler-platform-sdk-model"></a>Descripción del modelo del SDK de .NET Compiler Platform
 
@@ -24,7 +24,7 @@ El SDK de .NET Compiler Platform expone el análisis de código de los compilado
 
 ![Pasos del código fuente de procesamiento de canalización de compilador a código de objeto](media/compiler-pipeline.png)
 
-Cada fase de esta canalización es un componente independiente. En primer lugar, la fase de análisis acorta y analiza el texto de origen en la sintaxis que sigue la gramática del lenguaje. En segundo lugar, la fase de declaración analiza los metadatos importados y de origen para formar símbolos con nombre. Luego la fase de enlace combina los identificadores del código con los símbolos. Por último, en la fase de emisión se emite un ensamblado con toda la información generada por el compilador.
+Cada fase de esta canalización es un componente independiente. En primer lugar, la fase de análisis acorta y analiza el texto de origen en la sintaxis que sigue la gramática del lenguaje. En segundo lugar, la fase de declaración analiza los metadatos importados y de origen para formar símbolos con nombre. Luego, la fase de enlace combina los identificadores del código con los símbolos. Por último, en la fase de emisión se emite un ensamblado con toda la información generada por el compilador.
 
 ![La API de canalización de compilador proporciona acceso a cada paso que forma parte de la canalización de compilador.](media/compiler-pipeline-api.png)
 

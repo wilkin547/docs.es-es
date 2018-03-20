@@ -11,11 +11,11 @@ ms.devlang: dotnet
 ms.assetid: 519b910a-6efe-4394-9b81-0546aa3e7462
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: bf523ead40d0e3cc9148b48d5c7a4a84d3d5cb81
-ms.sourcegitcommit: d95a91d685565f4d95c8773b558752864a6a3d7e
+ms.openlocfilehash: 7830a437b46d2080efc65f43f9112503add4c305
+ms.sourcegitcommit: 3eea47bff3201ae5d3395b0c7947806c2faca255
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="create-a-custom-template-for-dotnet-new"></a>Creación de una plantilla personalizada para dotnet new
 
@@ -103,7 +103,7 @@ Ha terminado la plantilla. Una vez hecho esto, tiene dos opciones para la distri
    </package>
    ```
 
-1. [Cree el paquete](/nuget/create-packages/creating-a-package#creating-the-package) mediante el comando `nuget pack <PATH_TO_NUSPEC_FILE>`. En el comando siguiente se da por supuesto que la carpeta que contiene los recursos de NuGet está en *C:\Users\\\<USUARIO>\Documents\Templates\GarciaSoftware.ConsoleTemplate.CSharp\*. En cambio, no importa dónde ponga la carpeta en el sistema, el comando `nuget pack` acepta la ruta de acceso al archivo *nuspec*:
+1. [Cree el paquete](/nuget/create-packages/creating-a-package#creating-the-package) mediante el comando `nuget pack <PATH_TO_NUSPEC_FILE>`. En el comando siguiente se da por supuesto que la carpeta que contiene los recursos de NuGet está en *C:\Users\\\<USUARIO>\Documents\Templates\GarciaSoftware.ConsoleTemplate.CSharp*. En cambio, no importa dónde ponga la carpeta en el sistema, el comando `nuget pack` acepta la ruta de acceso al archivo *nuspec*:
 
    ```console
    nuget pack C:\Users\<USER>\Documents\NuGetTemplates\GarciaSoftware.ConsoleTemplate.CSharp\GarciaSoftware.ConsoleTemplate.CSharp.nuspec

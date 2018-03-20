@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 577a8527-1081-4b36-9b9e-0685b6553c6e
-ms.openlocfilehash: 38e9d8955c99c7fb3ee6347af70037d3da08ff39
-ms.sourcegitcommit: a19548e5167cbe7e9e58df4ffd8c3b23f17d5c7a
+ms.openlocfilehash: 48127d5168ace7733f29f78dc3f72d9c0d051e4e
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="methods"></a>Métodos #
 
@@ -44,7 +44,7 @@ Este tema contiene las siguientes secciones:
 
 Los métodos se declaran en una `class` o `struct` al especificar:
 
-- Un nivel de acceso opcional, como, por ejemplo, `public` o `private`. De manera predeterminada, es `private`.
+- Un nivel de acceso opcional, como, por ejemplo, `public` o `private`. El valor predeterminado es `private`.
 - Modificadores opcionales, como, por ejemplo, `abstract` o `sealed`.
 - El valor devuelto o, si el método no tiene ninguno, `void`.
 - El nombre del método.
@@ -87,11 +87,11 @@ Un método se puede invocar con argumentos posicionales y argumentos con nombre.
  <a name="inherited"></a>
  ##<a name="inherited-and-overridden-methods"></a>Métodos heredados e invalidados ##
 
-Además de los miembros que se definen explícitamente en un tipo, un tipo hereda miembros definidos en sus clases base. Dado que todos los tipos en el sistema de tipo administrado heredan directa o indirectamente de la <xref:System.Object> (clase), todos los tipos heredan sus miembros, como <xref:System.Object.Equals(System.Object)>, <xref:System.Object.GetType>, y <xref:System.Object.ToString>. En el ejemplo siguiente se define una clase `Person`, se crean instancias de dos objetos `Person` y se llama al método `Person.Equals` para determinar si los dos objetos son iguales. Pero el método `Equals` no está definido en la clase `Person`; se hereda de <xref:System.Object>.
+Además de los miembros que se definen explícitamente en un tipo, un tipo hereda miembros definidos en sus clases base. Dado que todos los tipos en el sistema de tipo administrado heredan directa o indirectamente de la clase <xref:System.Object>, todos los tipos heredan sus miembros, como <xref:System.Object.Equals(System.Object)>, <xref:System.Object.GetType> y <xref:System.Object.ToString>. En el ejemplo siguiente se define una clase `Person`, se crean instancias de dos objetos `Person` y se llama al método `Person.Equals` para determinar si los dos objetos son iguales. Pero el método `Equals` no está definido en la clase `Person`; se hereda de <xref:System.Object>.
 
 [!code-csharp[csSnippets.Methods#104](../../samples/snippets/csharp/concepts/methods/inherited1.cs#104)]
 
-Los tipos pueden invalidar miembros heredados usando la palabra clave `override` y proporcionando una implementación para el método invalidado. La firma del método debe ser el mismo que el método invalidado. El ejemplo siguiente es similar al anterior, salvo que invalida el <xref:System.Object.Equals(System.Object)> método. (También invalida el método <xref:System.Object.GetHashCode>, ya que los dos métodos están diseñados para proporcionar resultados coherentes).
+Los tipos pueden invalidar miembros heredados usando la palabra clave `override` y proporcionando una implementación para el método invalidado. La firma del método debe ser igual a la del método invalidado. El ejemplo siguiente es similar al anterior, salvo que invalida el método <xref:System.Object.Equals(System.Object)>. (También invalida el método <xref:System.Object.GetHashCode>, ya que los dos métodos están diseñados para proporcionar resultados coherentes).
 
 [!code-csharp[csSnippets.Methods#105](../../samples/snippets/csharp/concepts/methods/overridden1.cs#105)]
 
@@ -118,7 +118,7 @@ En el ejemplo siguiente se define una clase (que es un tipo de referencia) denom
 <a name="byref"></a>
 ### <a name="passing-parameters-by-reference"></a>Pasar parámetros por referencia ###
 
-Pase un parámetro por referencia cuando quiera cambiar el valor de un argumento en un método y reflejar ese cambio cuando el control vuelva al método de llamada. Para pasar un parámetro por referencia, use las palabras clave `ref` o `out`.
+Pase un parámetro por referencia cuando quiera cambiar el valor de un argumento en un método y reflejar ese cambio cuando el control vuelva al método de llamada. Para pasar un parámetro por referencia, use la palabra clave [`ref`](language-reference/keywords/ref.md) o [`out`](language-reference/keywords/out-parameter-modifier.md). También puede pasar un valor por referencia para evitar la copia, pero impedir modificaciones igualmente usando la palabra clave [`in`](language-reference/keywords/in-parameter-modifier.md).
 
 El ejemplo siguiente es idéntico al anterior, salvo que el valor se pasa por referencia al método `ModifyValue`. Cuando se modifica el valor del parámetro en el método `ModifyValue`, el cambio del valor se refleja cuando el control vuelve al autor de la llamada.
 
@@ -195,7 +195,7 @@ Para utilizar un valor devuelto de un método, el método de llamada puede usar 
 
 Usar una variable local, en este caso, `result`, para almacenar un valor es opcional. La legibilidad del código puede ser útil, o puede ser necesaria si debe almacenar el valor original del argumento para todo el ámbito del método.
 
-A veces, quiere que el método devuelva más que un solo valor. A partir de C# 7.0, puede hacer esto fácilmente mediante *tipos de tupla* y *literales de tupla*. El tipo de tupla define los tipos de datos de los elementos de la tupla. Los literales de tupla proporcionan los valores reales de la tupla devuelta. En el ejemplo siguiente, `(string, string, string, int)` define el tipo de tupla que se devuelve por la `GetPersonalInfo` método. La expresión `(per.FirstName, per.MiddleName, per.LastName, per.Age)` es el literal de tupla; el método devuelve el nombre, los apellidos y la edad de un objeto `PersonInfo`.
+A veces, quiere que el método devuelva más que un solo valor. A partir de C# 7.0, puede hacer esto fácilmente mediante *tipos de tupla* y *literales de tupla*. El tipo de tupla define los tipos de datos de los elementos de la tupla. Los literales de tupla proporcionan los valores reales de la tupla devuelta. En el ejemplo siguiente, `(string, string, string, int)` define el tipo de tupla que devuelve el método `GetPersonalInfo`. La expresión `(per.FirstName, per.MiddleName, per.LastName, per.Age)` es el literal de tupla; el método devuelve el nombre, los apellidos y la edad de un objeto `PersonInfo`.
 
 ```csharp
 public (string, string, string, int) GetPersonalInfo(string id)
@@ -263,13 +263,13 @@ Si marca un método con el modificador [async](language-reference/keywords/async
 > [!NOTE]
 > Un método asincrónico vuelve al autor de llamada cuando encuentra el primer objeto esperado que aún no se ha completado o cuando llega al final del método asincrónico, lo que ocurra primero.
 
-Un método asincrónico puede tener un tipo de valor devuelto de <xref:System.Threading.Tasks.Task%601>, <xref:System.Threading.Tasks.Task>, o `void`. El tipo de valor devuelto `void` se usa principalmente para definir controladores de eventos, donde se requiere un tipo de valor devuelto `void`. No se puede esperar un método asincrónico que devuelve `void` y el autor de llamada a un método que no devuelve ningún valor no puede capturar ninguna excepción producida por este. C# 7, cuando se publique, mejorará esta restricción para permitir que un método asincrónico [devuelva cualquier tipo de tarea](https://github.com/ljw1004/roslyn/blob/features/async-return/docs/specs/feature%20-%20arbitrary%20async%20returns.md).
+Un método asincrónico puede tener un tipo de valor devuelto de <xref:System.Threading.Tasks.Task%601>, <xref:System.Threading.Tasks.Task> o `void`. El tipo de valor devuelto `void` se usa principalmente para definir controladores de eventos, donde se requiere un tipo de valor devuelto `void`. No se puede esperar un método asincrónico que devuelve `void` y el autor de llamada a un método que no devuelve ningún valor no puede capturar ninguna excepción producida por este. C# 7, cuando se publique, mejorará esta restricción para permitir que un método asincrónico [devuelva cualquier tipo de tarea](https://github.com/ljw1004/roslyn/blob/features/async-return/docs/specs/feature%20-%20arbitrary%20async%20returns.md).
 
 En el ejemplo siguiente, `DelayAsync` es un método asincrónico que contiene una instrucción return que devuelve un entero. Como se trata de un método asincrónico, su declaración de método debe tener un tipo de valor devuelto de `Task<int>`. Dado que el tipo de valor devuelto es `Task<int>`, la evaluación de la expresión `await` en `DoSomethingAsync` genera un entero, como se demuestra en la instrucción `int result = await delayTask` siguiente.
 
 [!code-csharp[csSnippets.Methods#102](../../samples/snippets/csharp/concepts/methods/async1.cs#102)]
 
-Un método asincrónico no puede declarar ningún parámetro [ref](language-reference/keywords/ref.md) ni [out](language-reference/keywords/out.md), pero puede llamar a métodos que tienen estos parámetros.
+Un método asincrónico no puede declarar ningún parámetro [in](language-reference/keywords/in-parameter-modifier.md), [ref](language-reference/keywords/ref.md) o [out](language-reference/keywords/out-parameter-modifier.md), pero puede llamar a los métodos que tienen estos parámetros.
 
  Para obtener más información sobre los métodos asincrónicos, vea [Programación asincrónica con Async y Await](async.md), [Controlar el flujo en los programas asincrónicos](programming-guide/concepts/async/control-flow-in-async-programs.md) y [Tipos de valor devueltos asincrónicos](programming-guide/concepts/async/async-return-types.md).
 
@@ -290,13 +290,13 @@ public Customer this[long id] => store.LookupCustomer(id);
 Si el método devuelve `void` o se trata de un método asincrónico, el cuerpo del método debe ser una expresión de instrucción (igual que con las expresiones lambda).  Para propiedades e indexadores, deben ser de solo lectura, y no se usa la palabra clave de descriptor de acceso `get`.
 
 <a name="iterators"></a>
-## <a name="iterators"></a>Iteradores ##
+## <a name="iterators"></a>Iterators ##
 
 Un iterador realiza una iteración personalizada en una colección, como una lista o matriz. Un iterador usa la instrucción [yield return](language-reference/keywords/yield.md) para devolver los elementos de uno en uno. Cuando se llega a una instrucción `yield return`, se recuerda la ubicación actual para que el autor de la llamada pueda solicitar el siguiente elemento en la secuencia.
 
 El tipo de valor devuelto de un iterador puede ser <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>, <xref:System.Collections.IEnumerator>o <xref:System.Collections.Generic.IEnumerator%601>.
 
-Para más información, vea [Iteradores](programming-guide/concepts/iterators.md).
+Para obtener más información, consulta [Iteradores](programming-guide/concepts/iterators.md).
 
 ## <a name="see-also"></a>Vea también ##
 
@@ -305,6 +305,7 @@ Para más información, vea [Iteradores](programming-guide/concepts/iterators.md
 [Herencia](programming-guide/classes-and-structs/inheritance.md)   
 [Clases y miembros de clase abstractos y sellados](programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)   
 [params](language-reference/keywords/params.md)   
-[out](language-reference/keywords/out.md)   
+[out](language-reference/keywords/out-parameter-modifier.md)   
 [ref](language-reference/keywords/ref.md)   
+[in (Modificador genérico)](language-reference/keywords/in-parameter-modifier.md)   
 [Pasar parámetros](programming-guide/classes-and-structs/passing-parameters.md)

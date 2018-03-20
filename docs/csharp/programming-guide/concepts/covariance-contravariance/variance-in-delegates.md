@@ -5,17 +5,18 @@ ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 ms.assetid: 19de89d2-8224-4406-8964-2965b732b890
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 6eacc9f6ac815e01c446f7cdea6026904ad2ba90
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: c29d4ddbf5f1f9ae80535a8a97651b296f3c1fb3
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="variance-in-delegates-c"></a>Varianza en delegados (C#)
 En .NET Framework 3.5 se presentó por primera vez la compatibilidad con la varianza para hacer coincidir firmas de método con tipos de delegados en todos los delegados en C#. Esto significa que puede asignar a los delegados no solo métodos con firmas coincidentes, sino métodos que devuelven tipos más derivados (covarianza) o que aceptan parámetros con tipos menos derivados (contravarianza) que el especificado por el tipo de delegado. Esto incluye delegados genéricos y no genéricos.  
@@ -148,7 +149,7 @@ public delegate void DContravariant<in A>(A a);
 ```  
   
 > [!IMPORTANT]
->  Los parámetros `ref`y `out` de C# no se pueden marcar como variantes.  
+>  Los parámetros `ref`, `in` y `out` de C# no se pueden marcar como variantes.  
   
  También es posible admitir la varianza y la covarianza en el mismo delegado, pero para parámetros de tipo diferentes. Esta implementación se muestra en el ejemplo siguiente.  
   
@@ -206,5 +207,5 @@ public static void Test()
   
 ## <a name="see-also"></a>Vea también  
  [Genéricos](~/docs/standard/generics/index.md)  
- [Using Variance for Func and Action Generic Delegates (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md) (Usar la varianza para los delegados genéricos Func y Action (C#))  
+ [Usar varianza para los delegados genéricos Func y Action (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)  
  [Cómo: Combinar delegados (delegados de multidifusión)](../../../../csharp/programming-guide/delegates/how-to-combine-delegates-multicast-delegates.md)

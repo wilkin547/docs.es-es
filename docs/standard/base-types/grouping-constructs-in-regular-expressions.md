@@ -26,11 +26,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 107e935f3fd4fd38b4393d09e46c03c0c51c4d79
-ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
+ms.openlocfilehash: 766f20f92cd4ac2d987137f86616a69df9f53600
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="grouping-constructs-in-regular-expressions"></a>Construcciones de agrupamiento en expresiones regulares
 Las construcciones de agrupamiento definen las subexpresiones de una expresión regular y capturan las subcadenas de una cadena de entrada. Puede utilizar construcciones de agrupamiento para hacer lo siguiente:  

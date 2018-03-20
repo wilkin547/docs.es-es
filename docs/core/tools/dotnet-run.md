@@ -3,16 +3,17 @@ title: 'Comando dotnet run: CLI de .NET Core'
 description: "El comando dotnet run proporciona una opción conveniente para ejecutar la aplicación desde el código fuente."
 author: mairaw
 ms.author: mairaw
-ms.date: 09/24/2017
+ms.date: 03/10/2018
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.workload: dotnetcore
-ms.openlocfilehash: 1f5a3927859f89bef6c50d3d31b73de43cd1cd31
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 251aca6dcd3edb17fe86dc03ea8f5c6d7d699d48
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="dotnet-run"></a>dotnet run
 
@@ -42,9 +43,9 @@ dotnet run [-h|--help]
 
 ## <a name="description"></a>Description
 
-El comando `dotnet run` proporciona una opción conveniente para ejecutar la aplicación desde el código fuente con un comando. Es útil para un desarrollo iterativo rápido desde la línea de comandos. El comando depende del comando [`dotnet build`](dotnet-build.md) para compilar el código. Los requisitos para la compilación, como que el cliente se deba restaurar primero, también se aplican a `dotnet run`. 
+El comando `dotnet run` proporciona una opción conveniente para ejecutar la aplicación desde el código fuente con un comando. Es útil para un desarrollo iterativo rápido desde la línea de comandos. El comando depende del comando [`dotnet build`](dotnet-build.md) para compilar el código. Los requisitos para la compilación, como que el cliente se deba restaurar primero, también se aplican a `dotnet run`.
 
-Los archivos de salida se escriben en la ubicación predeterminada, que es `bin/<configuration>/<target>`. Por ejemplo, si tiene una aplicación `netcoreapp1.0` y ejecuta `dotnet run`, la salida se colocará en `bin/Debug/netcoreapp1.0`. Los archivos se sobrescriben según sea necesario. Los archivos temporales se colocan en el directorio `obj`. 
+Los archivos de salida se escriben en la ubicación predeterminada, que es `bin/<configuration>/<target>`. Por ejemplo, si tiene una aplicación `netcoreapp1.0` y ejecuta `dotnet run`, la salida se colocará en `bin/Debug/netcoreapp1.0`. Los archivos se sobrescriben según sea necesario. Los archivos temporales se colocan en el directorio `obj`.
 
 Si el proyecto especifica varios marcos, al ejecutar `dotnet run` se produce un error a menos que se use la opción `-f|--framework <FRAMEWORK>` para especificar el marco.
 
@@ -57,6 +58,8 @@ dotnet myapp.dll
 Para más información sobre el controlador `dotnet`, consulte el tema [Herramientas de la interfaz de la línea de comandos (CLI) de .NET Core ](index.md).
 
 Para ejecutar la aplicación, el comando `dotnet run` resuelve las dependencias de la aplicación que se encuentran fuera del entorno de tiempo de ejecución compartido desde la caché de NuGet. Dado que se usan dependencias almacenadas en caché, no se recomienda utilizar `dotnet run` para ejecutar aplicaciones en producción. En su lugar, [cree una implementación](../deploying/index.md) mediante el comando [`dotnet publish`](dotnet-publish.md) e implemente la salida publicada.
+
+[!INCLUDE[dotnet restore note + options](~/includes/dotnet-restore-note-options.md)]
 
 ## <a name="options"></a>Opciones
 
@@ -150,3 +153,7 @@ Ejecución del proyecto especificado:
 Ejecute el proyecto en el directorio actual (el argumento `--help` en este ejemplo se pasa a la aplicación, dado que se usó el argumento `--`):
 
 `dotnet run --configuration Release -- --help`
+
+Restaure las dependencias y herramientas del proyecto en el directorio actual mostrando solo la salida mínima y, después, ejecute el proyecto: (SDK de .NET Core 2.0 y versiones superiores):
+
+`dotnet run --verbosity m`

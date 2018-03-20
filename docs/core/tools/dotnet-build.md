@@ -3,16 +3,17 @@ title: 'Comando dotnet build: CLI de .NET Core'
 description: El comando dotnet build compila un proyecto y todas sus dependencias.
 author: mairaw
 ms.author: mairaw
-ms.date: 08/13/2017
+ms.date: 03/10/2018
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.workload: dotnetcore
-ms.openlocfilehash: 403dc2262e2aba29fc432581a4b325092cdfb25e
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: e7181f502e2a25b17077366da9d9f071e7e94d33
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="dotnet-build"></a>dotnet-build
 
@@ -26,12 +27,14 @@ ms.lasthandoff: 12/23/2017
 
 # <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 ```
-dotnet build [<PROJECT>] [-c|--configuration] [-f|--framework] [--force] [--no-dependencies] [--no-incremental] [--no-restore] [-o|--output] [-r|--runtime] [-v|--verbosity] [--version-suffix]
+dotnet build [<PROJECT>] [-c|--configuration] [-f|--framework] [--force] [--no-dependencies] [--no-incremental]
+    [--no-restore] [-o|--output] [-r|--runtime] [-v|--verbosity] [--version-suffix]
 dotnet build [-h|--help]
 ```
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 ```
-dotnet build [<PROJECT>] [-c|--configuration] [-f|--framework] [--no-dependencies] [--no-incremental] [-o|--output] [-r|--runtime] [-v|--verbosity] [--version-suffix]
+dotnet build [<PROJECT>] [-c|--configuration] [-f|--framework] [--no-dependencies] [--no-incremental] [-o|--output]
+    [-r|--runtime] [-v|--verbosity] [--version-suffix]
 dotnet build [-h|--help]
 ```
 ---
@@ -44,7 +47,7 @@ Si el proyecto tiene dependencias de terceros, como bibliotecas de NuGet, estas 
 
 La compilación requiere el archivo *project.assets.json*, que muestra las dependencias de la aplicación. El archivo se crea cuando se ejecuta [`dotnet restore`](dotnet-restore.md). Sin el archivo de recursos, las herramientas no pueden resolver los ensamblados de referencia, lo que dará lugar a errores. Con el SDK de .NET Core 1.x, era necesario ejecutar de forma explícita `dotnet restore` antes de ejecutar `dotnet build`. A partir del SDK de .NET Core 2.0, `dotnet restore` se ejecuta implícitamente al ejecutar `dotnet build`. Si quiere deshabilitar la restauración implícita cuando se ejecuta el comando de compilación, puede usar la opción `--no-restore`.
 
-[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
+[!INCLUDE[dotnet restore note + options](~/includes/dotnet-restore-note-options.md)]
 
 `dotnet build` usa MSBuild para compilar el proyecto; por lo tanto, admite las compilaciones en paralelo e incrementales. Para más información, consulte [Compilaciones incrementales](/visualstudio/msbuild/incremental-builds).
 
@@ -167,3 +170,7 @@ Creación de un proyecto y sus dependencias mediante la configuración de lanzam
 Compilación de un proyecto y sus dependencias para un tiempo de ejecución específico (en este ejemplo, Ubuntu 16.04):
 
 `dotnet build --runtime ubuntu.16.04-x64`
+
+Compile el proyecto y use origen del paquete NuGet especificado durante la operación de restauración (SDK de .NET Core 2.0 y versiones posteriores):
+
+`dotnet build --source c:\packages\mypackages`

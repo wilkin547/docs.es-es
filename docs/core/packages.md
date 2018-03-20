@@ -9,12 +9,13 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 609b0845-49e7-4864-957b-21ffe1b93bf2
-ms.workload: dotnetcore
-ms.openlocfilehash: 599f46253a29db5dfd21d0d44ecf67654b6d2eb3
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 85f20594844025655bbfb590364324631bd8e695
+ms.sourcegitcommit: 1c0b0f082b3f300e54b4d069b317ac724c88ddc3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="packages-metapackages-and-frameworks"></a>Paquetes, metapaquetes y marcos de trabajo
 
@@ -76,7 +77,7 @@ El metapaquete del estándar .NET es:
 
 Los metapaquetes principales de .NET Core son:
 
-- [Microsoft.NETCore.App](https://www.nuget.org/packages/Microsoft.NETCore.App): describe las bibliotecas que forman parte de la distribución de .NET Core. Establece el [`.NETCoreApp`marco de trabajo](https://github.com/dotnet/core-setup/blob/master/pkg/projects/Microsoft.NETCore.App/Microsoft.NETCore.App.pkgproj). Depende del `NETStandard.Library` más pequeño.
+- [Microsoft.NETCore.App](https://www.nuget.org/packages/Microsoft.NETCore.App): describe las bibliotecas que forman parte de la distribución de .NET Core. Establece el [`.NETCoreApp`marco de trabajo](https://github.com/dotnet/core-setup/blob/release/1.1.0/pkg/projects/Microsoft.NETCore.App/Microsoft.NETCore.App.pkgproj). Depende del `NETStandard.Library` más pequeño.
 - [Microsoft.NETCore.Portable.Compatibility](https://www.nuget.org/packages/Microsoft.NETCore.Portable.Compatibility): un conjunto de fachadas de compatibilidad que permite que las Bibliotecas de clases portables (PCL) basadas en mscorlib se ejecuten en .NET Core.
 
 ## <a name="frameworks"></a>Marcos de trabajo
@@ -95,7 +96,7 @@ El marco de trabajo `.NETFramework,Version=4.6` representa las API disponibles e
 
 El marco de trabajo `.NETStandard,Version=1.3` está basado en paquete. Se basa en paquetes que tienen como destino el marco de trabajo para definir y exponer las API en términos del marco de trabajo.
 
-## <a name="package-based-frameworks"></a>Marcos de trabajo basadas en paquete
+## <a name="package-based-frameworks"></a>Marcos de trabajo basados en paquete
 
 Existe una relación recíproca entre los marcos de trabajo y los paquetes. La primera parte es definir las API disponibles para un marco de trabajo determinado, por ejemplo, `netstandard1.3`. Los paquetes que tienen como destino `netstandard1.3` (o marcos de trabajo compatibles, como `netstandard1.0`) definen las API disponibles para `netstandard1.3`. Esto puede parecer una definición circular, pero no lo es. En virtud de estar "basada en paquete", la definición de API del marco de trabajo proviene de los paquetes. El marco de trabajo mismo no define a ninguna API.
 

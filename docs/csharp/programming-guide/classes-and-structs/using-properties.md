@@ -2,26 +2,27 @@
 title: "Utilizar propiedades (Guía de programación de C#)"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - set accessor [C#]
 - get accessor [C#]
 - properties [C#], about properties
 ms.assetid: f7f67b05-0983-4cdb-96af-1855d24c967c
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: aae36195f4a6eb2ab49ec27e1e07debff7289b37
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 36345748e514f0e0a4c945d8ead149c7d8ca9a19
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="using-properties-c-programming-guide"></a>Utilizar propiedades (Guía de programación de C#)
 Las propiedades combinan aspectos de los campos y los métodos. Para el usuario de un objeto, una propiedad que parece un campo, el acceso a la propiedad necesita la misma sintaxis. Para el implementador de una clase, una propiedad es uno o dos bloques de código que representa un descriptor de acceso [get](../../../csharp/language-reference/keywords/get.md) o un descriptor de acceso [set](../../../csharp/language-reference/keywords/set.md). El bloque de código del descriptor de acceso `get` se ejecuta cuando se lee la propiedad; el bloque de código del descriptor de acceso `set` se ejecuta cuando se asigna un nuevo valor a la propiedad. Una propiedad sin un descriptor de acceso `set` se considera de solo lectura. Una propiedad sin un descriptor de acceso `get` se considera de solo escritura. Una propiedad que tiene ambos descriptores de acceso es de lectura y escritura.  
   
- A diferencia de los campos, las propiedades no se clasifican como variables. Por lo tanto, no puede pasar una propiedad como un parámetro [ref](../../../csharp/language-reference/keywords/ref.md) u [out](../../../csharp/language-reference/keywords/out.md).  
+ A diferencia de los campos, las propiedades no se clasifican como variables. Por lo tanto, no puede pasar una propiedad como un parámetro [ref](../../../csharp/language-reference/keywords/ref.md) u [out](../../../csharp/language-reference/keywords/out-parameter-modifier.md).  
   
  Las propiedades tienen muchos usos: pueden validar datos antes de permitir un cambio; pueden exponer claramente datos en una clase donde esos datos se recuperan realmente de otros orígenes, como una base de datos; pueden realizar una acción cuando los datos se cambian, como generar un evento, o cambiar el valor de otros campos.  
   

@@ -15,11 +15,11 @@ ms.assetid: 57e3ba27-9a82-4067-aca7-5ca446b7bf93
 caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: df59647b803bff448a801374a325f07e4903a160
-ms.sourcegitcommit: 22a48b64a0150a60b00b4fc4d8c62cde7f1670c4
+ms.openlocfilehash: 14bb60a5009f9a1ae59ed9846ebc868cfdcc05c6
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="lambda-expressions-c-programming-guide"></a>Expresiones lambda (Guía de programación de C#)
 Una expresión lambda es una [función anónima](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md) que se puede usar para crear tipos [delegados](../../../csharp/programming-guide/delegates/using-delegates.md) o de [árbol de expresión](http://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b) . Al utilizar expresiones lambda, puede escribir funciones locales que se pueden pasar como argumentos o devolverse como valor de llamadas de función. Las expresiones lambda son especialmente útiles para escribir expresiones de consulta LINQ.  
@@ -265,7 +265,7 @@ class Test
   
 -   Las variables introducidas en una expresión lambda no son visibles en el método externo.  
   
--   Una expresión lambda no puede capturar directamente un parámetro `ref` o `out` desde un método que la englobe.  
+-   Una expresión lambda no puede capturar directamente un parámetro `in`, `ref` o `out` desde un método que la englobe.  
   
 -   Una instrucción return en una expresión lambda no hace que el método que la engloba devuelva un valor.  
   

@@ -2,7 +2,8 @@
 title: string (Referencia de C#)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 f1_keywords:
 - string
@@ -13,17 +14,17 @@ helpviewer_keywords:
 - string literals [C#]
 - string keyword [C#]
 ms.assetid: 3037e558-fb22-494d-bca1-a15ade11b11a
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 87df2b158b173072aad5257594e1b1482ae61067
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 8899eb75b1b7c556a1e92f173a4d0ca4135014c8
+ms.sourcegitcommit: 1c0b0f082b3f300e54b4d069b317ac724c88ddc3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="string-c-reference"></a>string (Referencia de C#)
-El tipo `string` representa una secuencia de cero o más caracteres Unicode. `string` es un alias de <xref:System.String> en .NET Framework.  
+El tipo `string` representa una secuencia de cero o más caracteres Unicode. `string` es un alias de <xref:System.String> en .NET.  
   
  Aunque `string` es un tipo de referencia, se definen los operadores de igualdad (`==` y `!=`) para comparar los valores de los objetos `string`, no las referencias. Esto hace que las pruebas de igualdad entre cadenas sean más intuitivas. Por ejemplo:  
   
@@ -76,7 +77,7 @@ Console.WriteLine(a);
 > [!NOTE]
 >  El código de escape `\udddd` (donde `dddd` es un número de cuatro dígitos) representa el carácter Unicode U+`dddd`. También se reconocen los códigos de escape Unicode de 8 dígitos: `\Udddddddd`.  
   
- Los literales de cadena textual empiezan por @ y también se incluyen entre comillas dobles. Por ejemplo:  
+ Los literales de cadena textual empiezan por `@` y también se incluyen entre comillas dobles. Por ejemplo:  
   
 ```csharp  
 @"good morning"  // a string literal  
@@ -94,7 +95,7 @@ Console.WriteLine(a);
 @"""Ahoy!"" cried the captain." // "Ahoy!" cried the captain.  
 ```  
   
- Otro uso del símbolo @ se da con identificadores con referencia ([/reference](../../../csharp/language-reference/compiler-options/reference-compiler-option.md)) que son palabras clave de C#.  
+ Para saber qué otros usos tiene el carácter especial `@`, vea [@ -- identificador textual](../tokens/verbatim.md).  
   
  Para obtener más información sobre las cadenas en C#, vea [Strings](../../../csharp/programming-guide/strings/index.md) (Cadenas [Guía de programación de C#]).  
   

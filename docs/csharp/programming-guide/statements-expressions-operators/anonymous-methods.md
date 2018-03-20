@@ -2,21 +2,22 @@
 title: "Métodos anónimos (Guía de programación de C#)"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - anonymous methods [C#]
 - methods [C#], anonymous
 - delegates [C#], anonymous methods
 ms.assetid: a62441fa-f0a3-4acb-9aa6-93762a635275
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 4d942e0f3245f6404c896173b2c7ca6f1090a8c2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 96e78257c5aab84562cd8cdb336bb5a91ba59534
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="anonymous-methods-c-programming-guide"></a>Métodos anónimos (Guía de programación de C#)
 En las versiones de C# anteriores a 2.0, la única manera de declarar un [delegado](../../../csharp/language-reference/keywords/delegate.md) era usar [métodos con nombre](../../../csharp/programming-guide/delegates/delegates-with-named-vs-anonymous-methods.md). C# 2.0 introdujo los métodos anónimos y en C# 3.0 y versiones posteriores, las expresiones lambda reemplazan a los métodos anónimos como la manera preferida de escribir código en línea. En cambio, la información sobre los métodos anónimos de este tema también se aplica a las expresiones lambda. Existe un caso en el que un método anónimo proporciona funciones que no se encuentran en las expresiones lambda. Los métodos anónimos le permiten omitir la lista de parámetros. Esto significa que un método anónimo puede convertirse en delegados con una variedad de firmas. Esto no es posible con las expresiones lambda. Para obtener más información específica sobre las expresiones lambda, vea [Expresiones lambda](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md).  
@@ -44,7 +45,7 @@ En las versiones de C# anteriores a 2.0, la única manera de declarar un [delega
   
  Una referencia a la variable externa `n` se dice que está *capturada* cuando se crea el delegado. A diferencia de las variables locales, la duración de una variable capturada se extiende hasta que los delegados que hacen referencia a los métodos anónimos son aptos para la recolección de elementos no utilizados.  
   
- Un método anónimo no puede tener acceso a los parámetros [ref](../../../csharp/language-reference/keywords/ref.md) u [out](../../../csharp/language-reference/keywords/out.md) de un ámbito externo.  
+ Un método anónimo no puede tener acceso a los parámetros [in](../../../csharp/language-reference/keywords/in.md), [ref](../../../csharp/language-reference/keywords/ref.md) o [out](../../../csharp/language-reference/keywords/out-parameter-modifier.md) de un ámbito externo.  
   
  No se puede tener acceso a ningún código no seguro dentro del *bloque de método anónimo*.  
   

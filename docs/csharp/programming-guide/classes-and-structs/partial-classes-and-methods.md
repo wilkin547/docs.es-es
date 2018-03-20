@@ -2,21 +2,22 @@
 title: "Clases y métodos parciales (Guía de programación de C#)"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - partial methods [C#]
 - partial classes [C#]
 - C# language, partial classes and methods
 ms.assetid: 804cecb7-62db-4f97-a99f-60975bd59fa1
-caps.latest.revision: "35"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 662b3308c3baa429ed29adca750cbb9b143b79dc
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 396914e487bee0924c36bb1d7a0f28976f4ad354
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="partial-classes-and-methods-c-programming-guide"></a>Clases y métodos parciales (Guía de programación de C#)
 Es posible dividir la definición de una [clase](../../../csharp/language-reference/keywords/class.md) o un [struct](../../../csharp/language-reference/keywords/struct.md), una [interfaz](../../../csharp/language-reference/keywords/interface.md) o un método en dos o más archivos de código fuente. Cada archivo de código fuente contiene una sección de la definición de tipo o método, y todos los elementos se combinan cuando se compila la aplicación.  
@@ -114,7 +115,7 @@ Es posible dividir la definición de una [clase](../../../csharp/language-refere
   
 ## <a name="example-1"></a>Ejemplo 1  
   
-### <a name="description"></a>Descripción  
+### <a name="description"></a>Description  
  En el ejemplo siguiente, los campos y el constructor de la clase, `CoOrds`, se declaran en una definición de clase parcial y el miembro `PrintCoOrds` se declara en otra definición de clase parcial.  
   
 ### <a name="code"></a>Código  
@@ -122,7 +123,7 @@ Es posible dividir la definición de una [clase](../../../csharp/language-refere
   
 ## <a name="example-2"></a>Ejemplo 2  
   
-### <a name="description"></a>Descripción  
+### <a name="description"></a>Description  
  En el ejemplo siguiente se muestra que también se pueden desarrollar structs e interfaces parciales.  
   
 ### <a name="code"></a>Código  
@@ -150,7 +151,7 @@ partial void onNameChanged()
   
 -   Las declaraciones de método parcial deben comenzar con la palabra clave contextual [partial](../../../csharp/language-reference/keywords/partial-type.md) y el método debe devolver [void](../../../csharp/language-reference/keywords/void.md).  
   
--   Los métodos parciales pueden tener parámetros [ref](../../../csharp/language-reference/keywords/ref.md), pero no parámetros [out](../../../csharp/language-reference/keywords/out.md).  
+-   Los métodos parciales pueden tener parámetros [in](../../../csharp/language-reference/keywords/in-parameter-modifier.md) o [ref](../../../csharp/language-reference/keywords/ref.md), pero no parámetros [out](../../../csharp/language-reference/keywords/out-parameter-modifier.md).  
   
 -   Los métodos parciales son implícitamente [private](../../../csharp/language-reference/keywords/private.md) y, por tanto, no pueden ser [virtual](../../../csharp/language-reference/keywords/virtual.md).  
   
@@ -168,6 +169,6 @@ partial void onNameChanged()
 ## <a name="see-also"></a>Vea también  
  [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
  [Clases](../../../csharp/programming-guide/classes-and-structs/classes.md)  
- [Estructuras](../../../csharp/programming-guide/classes-and-structs/structs.md)  
+ [Structs](../../../csharp/programming-guide/classes-and-structs/structs.md)  
  [Interfaces](../../../csharp/programming-guide/interfaces/index.md)  
  [partial (Tipos)](../../../csharp/language-reference/keywords/partial-type.md)

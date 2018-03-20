@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 88a74571-f741-4a31-a2b5-1ccf165535b8
-ms.openlocfilehash: 9d435fd87a6103d505c14219499eeea9aee045fb
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: fa840d80bba98889f75863db2612f196d78bd3c5
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="structs"></a>Estructuras
 
@@ -38,7 +38,7 @@ Con las clases, es posible que dos variables hagan referencia al mismo objeto y,
 
 Si `Point` es una clase, la salida es 20 porque a y b hacen referencia al mismo objeto. Si Point es un struct, la salida es 10 porque la asignación de `a` a `b` crea una copia del valor, y esta copia no se ve afectada por la asignación posterior a `a.x`.
 
-En el ejemplo anterior se resaltan dos de las limitaciones de los structs. En primer lugar, copiar un struct entero normalmente es menos eficaz que copiar una referencia a un objeto, por lo que el paso de parámetros de asignación y valor puede ser más costoso con structs que con tipos de referencia. En segundo lugar, a excepción de los parámetros `ref` y `out`, no es posible crear referencias a structs, que excluyen su uso en varias situaciones.
+En el ejemplo anterior se resaltan dos de las limitaciones de los structs. En primer lugar, copiar un struct entero normalmente es menos eficaz que copiar una referencia a un objeto, por lo que el paso de parámetros de asignación y valor puede ser más costoso con structs que con tipos de referencia. En segundo lugar, a excepción de los parámetros `in`, `ref` y `out`, no es posible crear referencias a structs, que excluyen su uso en varias situaciones.
 
 >[!div class="step-by-step"]
 [Anterior](classes-and-objects.md)

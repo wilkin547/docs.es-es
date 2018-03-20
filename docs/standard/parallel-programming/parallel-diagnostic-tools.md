@@ -18,14 +18,14 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 4ed0b3991b08eceb950aa1a3aa1704529700feb3
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 127737877ac64ac9278bc039650caf72936571bf
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="parallel-diagnostic-tools"></a>Herramientas de diagnóstico paralelo
-[!INCLUDE[vs_dev10_ext](../../../includes/vs-dev10-ext-md.md)] proporciona amplia compatibilidad para depurar aplicaciones de varios subprocesos y generar perfiles de estas.  
+Visual Studio proporciona amplia compatibilidad para depurar aplicaciones de varios subprocesos y generar perfiles de estas.  
   
 ## <a name="debugging"></a>Depuración  
  El depurador de Visual Studio agrega ventanas nuevas para la depuración de aplicaciones paralelas. Para obtener más información, vea los temas siguientes:  
