@@ -1,12 +1,13 @@
 ---
 title: Desarrollar e implementar WCF Data Services
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - WCF Data Services, developing
@@ -14,11 +15,12 @@ helpviewer_keywords:
 - deploying [WCF Data Services
 - developing applications [WCF Data Services]
 ms.assetid: 6557c0e3-5aea-4f6e-bc14-77ad317a168b
-caps.latest.revision: "6"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 8abe23aebefadc68268aa1dada8474336b1f87e7
 ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
@@ -50,7 +52,7 @@ En este tema se proporciona información sobre el desarrollo y la implementació
   
 1.  **Servidor IIS local**  
   
-     Cuando cree un servicio de datos que sea una aplicación de [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] o un sitio web de [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] que se ejecute en Internet Information Services (IIS), se recomienda que desarrolle y pruebe el servicio de datos con IIS en el equipo local. Si se ejecuta el servicio de datos en IIS, se facilita el seguimiento de las solicitudes HTTP durante el proceso de depuración. De esta forma, puede predeterminar los derechos necesarios que requiere IIS para obtener acceso a los archivos, a las bases de datos y al resto de los recursos que necesita el servicio de datos. Para ejecutar el servicio de datos en IIS, debe asegurarse de que tanto IIS como [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] estén instalados y configurados correctamente, así como de conceder acceso a las cuentas de IIS en las bases de datos y en el sistema de archivos. Para obtener más información, consulta [How to: Develop a WCF Data Service Running on IIS](../../../../docs/framework/data/wcf/how-to-develop-a-wcf-data-service-running-on-iis.md).  
+     Cuando cree un servicio de datos que sea una aplicación de [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] o un sitio web de [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] que se ejecute en Internet Information Services (IIS), se recomienda que desarrolle y pruebe el servicio de datos con IIS en el equipo local. Si se ejecuta el servicio de datos en IIS, se facilita el seguimiento de las solicitudes HTTP durante el proceso de depuración. De esta forma, puede predeterminar los derechos necesarios que requiere IIS para obtener acceso a los archivos, a las bases de datos y al resto de los recursos que necesita el servicio de datos. Para ejecutar el servicio de datos en IIS, debe asegurarse de que tanto IIS como [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] estén instalados y configurados correctamente, así como de conceder acceso a las cuentas de IIS en las bases de datos y en el sistema de archivos. Para obtener más información, consulta [Cómo: Desarrollar un servicio de datos WCF que se ejecuta en IIS](../../../../docs/framework/data/wcf/how-to-develop-a-wcf-data-service-running-on-iis.md).  
   
     > [!NOTE]
     >  Debe ejecutar [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] con derechos de administrador para habilitar el entorno de desarrollo con el fin de configurar el servidor IIS local.  
@@ -117,7 +119,7 @@ En este tema se proporciona información sobre el desarrollo y la implementació
      [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Opciones de la implementación de un [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] aplicación, consulte [Web Deployment Overview para Visual Studio y ASP.NET](http://msdn.microsoft.com/library/99bd1927-b59f-4e02-87b4-55c6ba2adbc3).  
   
     > [!TIP]
-    >  Antes de intentar implementar el servicio de datos en IIS, asegúrese de haber probado la implementación en un servidor web que esté ejecutando IIS. Para obtener más información, consulta [How to: Develop a WCF Data Service Running on IIS](../../../../docs/framework/data/wcf/how-to-develop-a-wcf-data-service-running-on-iis.md).  
+    >  Antes de intentar implementar el servicio de datos en IIS, asegúrese de haber probado la implementación en un servidor web que esté ejecutando IIS. Para obtener más información, consulta [Cómo: Desarrollar un servicio de datos WCF que se ejecuta en IIS](../../../../docs/framework/data/wcf/how-to-develop-a-wcf-data-service-running-on-iis.md).  
   
 -   **Windows Azure**  
   
@@ -126,7 +128,7 @@ En este tema se proporciona información sobre el desarrollo y la implementació
 ### <a name="deployment-considerations"></a>Consideraciones de implementación  
  Debe plantearse lo siguiente cuando implemente un servicio de datos:  
   
--   Al implementar un servicio de datos que usa el proveedor de [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] para tener acceso a una base de datos de SQL Server, también podría tener que propagar estructuras de datos, datos o ambos con su implementación del servicio de datos. [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] puede crear automáticamente scripts (archivos .sql) para hacer esto en la base de datos de destino y estos scripts se pueden incluir en el paquete de implementación web de una aplicación [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] . Para obtener más información, consulte [NIB: Cómo: implementar una base de datos con un proyecto de aplicación Web](http://msdn.microsoft.com/library/683b33f1-8a3d-45cf-af6e-61ab50fc518b). En un sitio web de [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] , puede hacer esto con el **Asistente para publicar bases de datos** en [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)]. Para obtener más información, consulta [Deploying a Database by Using the Database Publishing Wizard](http://msdn.microsoft.com/library/1e3682e7-8b57-4da6-a393-af9640ccf8b7).  
+-   Al implementar un servicio de datos que usa el proveedor de [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] para tener acceso a una base de datos de SQL Server, también podría tener que propagar estructuras de datos, datos o ambos con su implementación del servicio de datos. [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] puede crear automáticamente scripts (archivos .sql) para hacer esto en la base de datos de destino y estos scripts se pueden incluir en el paquete de implementación web de una aplicación [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] . Para obtener más información, consulte [NIB: Cómo: implementar una base de datos con un proyecto de aplicación Web](http://msdn.microsoft.com/library/683b33f1-8a3d-45cf-af6e-61ab50fc518b). En un sitio web de [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] , puede hacer esto con el **Asistente para publicar bases de datos** en [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)]. Para obtener más información, consulta [implementar una base de datos mediante el Asistente para publicación de base de datos](http://msdn.microsoft.com/library/1e3682e7-8b57-4da6-a393-af9640ccf8b7).  
   
 -   Dado que [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] incluye una implementación de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] básica, puede usar Windows Server AppFabric para supervisar un servicio de datos implementado en IIS que se ejecuta en Windows Server. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] el uso de la supervisión de un servicio de datos con Windows Server AppFabric, consulte la publicación [Tracking WCF Data Services with Windows Server AppFabric (Seguimiento de WCF Data Services con Windows Server AppFabric)](http://go.microsoft.com/fwlink/?LinkID=202005).  
   

@@ -1,12 +1,13 @@
 ---
 title: Estilos y plantillas de ScrollViewer
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - parts [WPF], ScrollViewer
@@ -16,11 +17,12 @@ helpviewer_keywords:
 - ControlTemplate [WPF], ScrollViewer
 - ScrollViewer [WPF], styles and templates
 ms.assetid: dffdd822-ae69-4946-abaf-710860cd65b2
-caps.latest.revision: "12"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 74f8a693a143e1c6788dd79a1c1bbd1954f8cfd0
 ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
@@ -28,7 +30,7 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 12/22/2017
 ---
 # <a name="scrollviewer-styles-and-templates"></a>Estilos y plantillas de ScrollViewer
-En este tema se describe los estilos y plantillas para el <xref:System.Windows.Controls.ScrollViewer> control. Puede modificar el valor predeterminado <xref:System.Windows.Controls.ControlTemplate> para dar al control una apariencia única. Para más información, consulte [Customizing the Appearance of an Existing Control by Creating a ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md) (Personalizar la apariencia de un control existente mediante la creación de una clase ControlTemplate).  
+En este tema se describe los estilos y plantillas para el <xref:System.Windows.Controls.ScrollViewer> control. Puede modificar el valor predeterminado <xref:System.Windows.Controls.ControlTemplate> para dar al control una apariencia única. Para más información, consulte [Personalización de la apariencia de un control existente mediante la creación de una clase ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
   
 ## <a name="scrollviewer-parts"></a>Partes de ScrollViewer  
  En la tabla siguiente se enumera los elementos con nombre para el <xref:System.Windows.Controls.ScrollViewer> control.  

@@ -1,22 +1,24 @@
 ---
 title: Crear el servicio de datos
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 34d1d971-5e18-4c22-9bf6-d3612e27ea59
-caps.latest.revision: "7"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 7d890e4c2041ae4c70a79adfc0ab4141402fcd3f
 ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
@@ -35,7 +37,7 @@ En esta tarea, creará un servicio de datos de ejemplo que usa [!INCLUDE[ssAstor
 4.  Habilitar el acceso al servicio de datos.  
   
 > [!NOTE]
->  La aplicación web [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] que crea al completar esta tarea se ejecuta en el servidor de desarrollo de [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] proporcionado por [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)]. El servidor de desarrollo de [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] solo admite el acceso desde el equipo local. Para facilitar también la comprobación y solución de problemas del servicio de datos durante el desarrollo, puede ejecutar la aplicación que hospeda el servicio de datos mediante Internet Information Services (IIS). Para obtener más información, consulta [How to: Develop a WCF Data Service Running on IIS](../../../../docs/framework/data/wcf/how-to-develop-a-wcf-data-service-running-on-iis.md).  
+>  La aplicación web [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] que crea al completar esta tarea se ejecuta en el servidor de desarrollo de [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] proporcionado por [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)]. El servidor de desarrollo de [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] solo admite el acceso desde el equipo local. Para facilitar también la comprobación y solución de problemas del servicio de datos durante el desarrollo, puede ejecutar la aplicación que hospeda el servicio de datos mediante Internet Information Services (IIS). Para obtener más información, consulta [Cómo: Desarrollar un servicio de datos WCF que se ejecuta en IIS](../../../../docs/framework/data/wcf/how-to-develop-a-wcf-data-service-running-on-iis.md).  
   
 ### <a name="to-create-the-aspnet-web-application"></a>Para crear la aplicación web ASP.NET  
   

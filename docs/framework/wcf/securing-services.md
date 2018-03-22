@@ -1,23 +1,25 @@
 ---
 title: Seguridad de servicios
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - configuration [WCF], securing services
 - WCF security
 - WCF, security
 ms.assetid: f0ecc6f7-f4b5-42a4-9cb1-b02e28e26620
-caps.latest.revision: "28"
+caps.latest.revision: ''
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 2b8e84fe75f812cdcb97dcc24a0edad2d238515b
 ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
@@ -49,7 +51,7 @@ La seguridad de un servicio [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]
  La infraestructura [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] está diseñada para utilizar estos mecanismos de seguridad de Windows. Por lo tanto, si está creando un servicio que se implementa en una intranet, y sus clientes están restringidos a los miembros del dominio de Windows, la seguridad se implementará fácilmente. Solo los usuarios válidos pueden iniciar sesión en el dominio. Después de que los usuarios inicien la sesión, el controlador de Kerberos permite a cada uno de ellos establecer contextos seguros con cualquier otro equipo o aplicación. En un equipo local, los grupos pueden crearse fácilmente y al proteger carpetas específicas, pueden utilizarse esos grupos para asignar los privilegios de acceso al equipo.  
   
 ## <a name="implementing-windows-security-on-intranet-services"></a>Implementación de la seguridad de Windows en servicios de la intranet  
- Para proteger una aplicación que se ejecuta exclusivamente en un dominio de Windows, puede utilizar la configuración de seguridad predeterminada de <xref:System.ServiceModel.WSHttpBinding> , o el enlace <xref:System.ServiceModel.NetTcpBinding> . De forma predeterminada, cualquier usuario del mismo dominio de Windows puede tener acceso a los servicios [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] . Dado que esos usuarios han iniciado sesión en la red, son de confianza. Los mensajes entre un servicio y un cliente se cifran para la confidencialidad y se firman para integridad. [!INCLUDE[crabout](../../../includes/crabout-md.md)] cómo crear un servicio que use la seguridad de Windows, consulte [How to: Secure a Service with Windows Credentials](../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md).  
+ Para proteger una aplicación que se ejecuta exclusivamente en un dominio de Windows, puede utilizar la configuración de seguridad predeterminada de <xref:System.ServiceModel.WSHttpBinding> , o el enlace <xref:System.ServiceModel.NetTcpBinding> . De forma predeterminada, cualquier usuario del mismo dominio de Windows puede tener acceso a los servicios [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] . Dado que esos usuarios han iniciado sesión en la red, son de confianza. Los mensajes entre un servicio y un cliente se cifran para la confidencialidad y se firman para integridad. [!INCLUDE[crabout](../../../includes/crabout-md.md)] cómo crear un servicio que use la seguridad de Windows, consulte [Cómo: Proteger un servicio con credenciales de Windows](../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md).  
   
 ### <a name="authorization-using-the-principalpermissionattribute-class"></a>Autorización utilizando la clase PrincipalPermissionAttribute  
  Si necesita restringir el acceso de recursos de un equipo, la manera más sencilla es utilizar la clase <xref:System.Security.Permissions.PrincipalPermissionAttribute> . Este atributo permite restringir la invocación de operaciones del servicio exigiendo que el usuario pertenezca a un grupo o función de Windows específico, o bien ser un usuario concreto. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Cómo: restringir el acceso con la clase PrincipalPermissionAttribute](../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md).  

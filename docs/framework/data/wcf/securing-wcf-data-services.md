@@ -1,12 +1,13 @@
 ---
 title: Proteger WCF Data Services
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,11 +16,12 @@ helpviewer_keywords:
 - securing application [WCF Data Services]
 - WCF Data Services, security
 ms.assetid: 99fc2baa-a040-4549-bc4d-f683d60298af
-caps.latest.revision: "9"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: c45da4ec1fa5d111be19437dde54035a89f9162e
 ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
@@ -78,7 +80,7 @@ context.Credentials = _
  Los interceptores permiten interceptar solicitudes en los recursos del servicio de datos antes de que actúe en ellos dicho servicio. Para obtener más información, consulte [interceptores](../../../../docs/framework/data/wcf/interceptors-wcf-data-services.md). Los interceptores le permiten tomar decisiones de autorización basadas el usuario autenticado que está realizando la solicitud. [!INCLUDE[crexample](../../../../includes/crexample-md.md)]cómo restringir el acceso a los recursos de servicio de datos basada en una identidad de usuario autenticado, consulte [Cómo: interceptar mensajes de servicio de datos](../../../../docs/framework/data/wcf/how-to-intercept-data-service-messages-wcf-data-services.md).  
   
 ### <a name="restrict-access-to-the-persisted-data-store-and-local-resources"></a>Restringir el acceso al almacén de datos persistentes y a los recursos locales  
- A las cuentas que se usan para acceder al almacén persistente se les deben conceder solo los derechos estrictamente necesarios en una base de datos o en el sistema de archivos para admitir los requisitos del servicio de datos. Cuando se usa la autenticación anónima, se trata de la cuenta usada para ejecutar la aplicación de hospedaje. Para obtener más información, consulta [How to: Develop a WCF Data Service Running on IIS](../../../../docs/framework/data/wcf/how-to-develop-a-wcf-data-service-running-on-iis.md). Cuando se usa la suplantación, a los usuarios autenticados se les debe conceder acceso a estos recursos, normalmente como parte de un grupo de Windows.  
+ A las cuentas que se usan para acceder al almacén persistente se les deben conceder solo los derechos estrictamente necesarios en una base de datos o en el sistema de archivos para admitir los requisitos del servicio de datos. Cuando se usa la autenticación anónima, se trata de la cuenta usada para ejecutar la aplicación de hospedaje. Para obtener más información, consulta [Cómo: Desarrollar un servicio de datos WCF que se ejecuta en IIS](../../../../docs/framework/data/wcf/how-to-develop-a-wcf-data-service-running-on-iis.md). Cuando se usa la suplantación, a los usuarios autenticados se les debe conceder acceso a estos recursos, normalmente como parte de un grupo de Windows.  
   
 ## <a name="other-security-considerations"></a>Otras consideraciones de seguridad  
   
