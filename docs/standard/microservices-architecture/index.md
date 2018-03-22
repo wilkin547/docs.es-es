@@ -127,7 +127,7 @@ Una vez que haya estudiado esta guía, el siguiente paso que debería dar es obt
 
 ## <a name="what-this-guide-does-not-cover"></a>Aspectos no tratados en esta guía
 
-Esta guía no se centra en el ciclo de vida de la aplicación, DevOps, las canalizaciones CI/CD ni el trabajo de equipo. La guía complementaria [Containerized Docker Application Lifecycle with Microsoft Platform and Tools](https://aka.ms/dockerlifecycleebook) (Ciclo de vida de aplicaciones de Docker en contenedor con la plataforma y herramientas de Microsoft) se centra en esas cuestiones. La guía actual tampoco proporciona detalles de implementación de la infraestructura de Azure, como información sobre orquestadores específicos.
+Esta guía no se centra en el ciclo de vida de la aplicación, DevOps, las canalizaciones CI/CD ni el trabajo de equipo. La guía complementaria [Ciclo de vida de aplicaciones de Docker en contenedor con la plataforma y herramientas de Microsoft](https://aka.ms/dockerlifecycleebook) se centra en esas cuestiones. La guía actual tampoco proporciona detalles de implementación de la infraestructura de Azure, como información sobre orquestadores específicos.
 
 ### <a name="additional-resources"></a>Recursos adicionales
 

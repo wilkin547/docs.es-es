@@ -1,12 +1,12 @@
 ---
 title: Descifrar datos
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -17,7 +17,7 @@ helpviewer_keywords:
 - asymmetric decryption
 - decryption
 ms.assetid: 9b266b6c-a9b2-4d20-afd8-b3a0d8fd48a0
-caps.latest.revision: "15"
+caps.latest.revision: ''
 author: mairaw
 ms.author: mairaw
 manager: wpickett
@@ -184,7 +184,7 @@ class Class1
 ## <a name="asymmetric-decryption"></a>Descifrado asimétrico  
  Normalmente, una parte (parte A) genera tanto una clave pública como privada y la almacena en memoria o en un contenedor de claves criptográficas.  A continuación, la parte A envía la clave pública a otra parte (parte B).  Con la clave pública, la parte B cifra los datos y envía los datos de vuelta a la parte A. Después de recibir los datos, la parte A los descifra con la clave privada correspondiente.  El descifrado será correcto solo si la parte A usa la clave privada que corresponde a la clave pública que la parte B usó para cifrar los datos.  
   
- Para obtener información sobre cómo almacenar una clave asimétrica en un contenedor de claves criptográficas seguro y cómo recuperar posteriormente la clave asimétrica, consulte [How to: Store Asymmetric Keys in a Key Container](../../../docs/standard/security/how-to-store-asymmetric-keys-in-a-key-container.md).  
+ Para obtener información sobre cómo almacenar una clave asimétrica en un contenedor de claves criptográficas seguro y cómo recuperar posteriormente la clave asimétrica, consulte [Cómo: Almacenar claves asimétricas en un contenedor de claves](../../../docs/standard/security/how-to-store-asymmetric-keys-in-a-key-container.md).  
   
  En el ejemplo siguiente se muestra el descifrado de dos matrices de bytes que representan una clave simétrica y un IV.  Para obtener información sobre cómo extraer la clave pública asimétrica del objeto <xref:System.Security.Cryptography.RSACryptoServiceProvider> en un formato que se pueda enviar fácilmente a un tercero, consulte [Encrypting Data](../../../docs/standard/security/encrypting-data.md).  
   

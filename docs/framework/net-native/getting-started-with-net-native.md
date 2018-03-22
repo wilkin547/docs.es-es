@@ -1,19 +1,21 @@
 ---
-title: "Introducción a .NET Native"
-ms.custom: 
+title: Introducción a .NET Native
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: fc9e04e8-2d05-4870-8cd6-5bd276814afc
-caps.latest.revision: "29"
+caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 56ff06c17eda8483c7d067af9fb39a402d2f6ea5
 ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
@@ -32,7 +34,7 @@ El conjunto de procedimientos que se debe seguir es el mismo, independientemente
 4.  [Resuelva manualmente los metadatos que faltan](#Step4) y repita el [paso 3](#Step3) hasta que todos los problemas estén solucionados.  
   
 > [!NOTE]
->  Si va a migrar una aplicación existente de la Tienda Windows a [!INCLUDE[net_native](../../../includes/net-native-md.md)], no olvide repasar el tema [Migrating Your Windows Store App to .NET Native](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md).  
+>  Si va a migrar una aplicación existente de la Tienda Windows a [!INCLUDE[net_native](../../../includes/net-native-md.md)], no olvide repasar el tema [Migrar la aplicación de la Tienda Windows a .NET Native](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md).  
   
 <a name="Step1"></a>   
 ## <a name="step-1-develop-and-test-debug-builds-of-your-uwp-app"></a>Paso 1: desarrollar y probar compilaciones de depuración de la aplicación de UWP  
