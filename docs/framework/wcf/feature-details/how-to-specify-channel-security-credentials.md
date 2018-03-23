@@ -1,24 +1,26 @@
 ---
-title: "Cómo especificar las credenciales de seguridad de los canales"
-ms.custom: 
+title: Cómo especificar las credenciales de seguridad de los canales
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f8e03f47-9c4f-4dd5-8f85-429e6d876119
-caps.latest.revision: "18"
+caps.latest.revision: ''
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: e2aedb06ec694f6c7dfb12b70ab919ae23eed17e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="how-to-specify-channel-security-credentials"></a>Cómo especificar las credenciales de seguridad de los canales
 El moniker de servicio [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] permite a las aplicaciones COM llamar a los servicios [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. La mayoría de los servicios [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] exigen al cliente que especifique las credenciales para la autenticación y autorización. Al llamar a un servicio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] desde un cliente [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], pueden especificarse estas credenciales en código administrado o en un archivo de configuración de la aplicación. Al llamar a un servicio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] desde una aplicación COM, puede utilizarse la interfaz <xref:System.ServiceModel.ComIntegration.IChannelCredentials> para especificar las credenciales. Este tema describe varias maneras de especificar credenciales mediante la interfaz <xref:System.ServiceModel.ComIntegration.IChannelCredentials>.  

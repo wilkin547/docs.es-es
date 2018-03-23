@@ -1,14 +1,14 @@
 ---
 title: '&lt;AppContextSwitchOverrides&gt; elemento'
-ms.custom: 
+ms.custom: ''
 ms.date: 01/08/2018
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-bcl
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - AppContextSwitchOverrides
@@ -16,23 +16,24 @@ helpviewer_keywords:
 - configuration switches
 - configuration
 ms.assetid: 4ce07f47-7ddb-4d91-b067-501bd8b88752
-caps.latest.revision: "16"
+caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 71888febdc42f0ee65bdcd55a761700eda065bc1
-ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="ltappcontextswitchoverridesgt-element"></a>&lt;AppContextSwitchOverrides&gt; elemento
 Define uno o varios modificadores usados por la clase <xref:System.AppContext> para proporcionar un mecanismo para cancelar la participación con nueva funcionalidad.  
   
  \<configuration>  
  \<en tiempo de ejecución >  
-\<AppContextSwitchOverrides >  
+\<AppContextSwitchOverrides>  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -53,7 +54,7 @@ Define uno o varios modificadores usados por la clase <xref:System.AppContext> p
   
 |Valor|Descripción|  
 |-----------|-----------------|  
-|"nombre = valor"|Un nombre de conmutador predefinidos junto con su valor (`true` o `false`). Varios pares de nombre/valor de conmutador están separados por punto y coma (";"). Para obtener una lista de nombres predefinidos conmutador compatible con .NET Framework, vea la sección Comentarios.|  
+|"name=value"|Un nombre de conmutador predefinidos junto con su valor (`true` o `false`). Varios pares de nombre/valor de conmutador están separados por punto y coma (";"). Para obtener una lista de nombres predefinidos conmutador compatible con .NET Framework, vea la sección Comentarios.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
  Ninguno.  
@@ -143,5 +144,5 @@ Define uno o varios modificadores usados por la clase <xref:System.AppContext> p
   
 ## <a name="see-also"></a>Vea también  
  <xref:System.AppContext?displayProperty=nameWithType>  
- [\<en tiempo de ejecución > elemento](runtime-element.md)  
+ [\<runtime> Element](runtime-element.md)  
  [Elemento \<configuration>](../configuration-element.md)

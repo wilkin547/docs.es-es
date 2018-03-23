@@ -1,34 +1,34 @@
 ---
 title: Referencia de esquema de contrato de datos
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - data contracts [WCF], schema reference
 ms.assetid: 9ebb0ebe-8166-4c93-980a-7c8f1f38f7c0
-caps.latest.revision: 
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
 ms.openlocfilehash: 57ccc812aab5df0a9acd99bdcde327d56e4bad8d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="data-contract-schema-reference"></a>Referencia de esquema de contrato de datos
 En este tema se describe el subconjunto del esquema XML (XSD) que <xref:System.Runtime.Serialization.DataContractSerializer> usa para describir los tipos de Common Language Runtime (CLR) para la serialización XML.  
   
 ## <a name="datacontractserializer-mappings"></a>Asignaciones de DataContractSerializer  
- El `DataContractSerializer` asigna tipos CLR a XSD cuando los metadatos se exportan desde un servicio de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] con un punto de conexión de metadatos o la [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Serializador de contrato de datos](../../../../docs/framework/wcf/feature-details/data-contract-serializer.md).  
+ El `DataContractSerializer` asigna tipos CLR a XSD cuando los metadatos se exportan desde un servicio de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] con un punto de conexión de metadatos o la [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Serializador de contrato de datos](../../../../docs/framework/wcf/feature-details/data-contract-serializer.md).  
   
  El `DataContractSerializer` también asigna XSD a tipos de CLR cuando Svcutil.exe se utiliza para tener acceso al lenguaje de descripción de servicios Web (WSDL) o documentos XSD y para generar contratos de datos para servicios o clientes.  
   
@@ -60,7 +60,7 @@ En este tema se describe el subconjunto del esquema XML (XSD) que <xref:System.R
 |`elementFormDefault`|Se debe calificar. Todos los elementos se deben calificar para un esquema para que `DataContractSerializer`los admita. Esto puede realizarse, ya sea estableciendo xs:schema/@elementFormDefault en "qualified" o estableciendo xs:element/@form en "qualified" en cada declaración de elemento individual.|  
 |`finalDefault`|ignorado.|  
 |`Id`|ignorado.|  
-|`targetNamespace`|Admitido y asignado al espacio de nombres del contrato de datos. Si no se especifica este atributo, se utiliza el espacio de nombres en blanco. No puede ser el espacio de nombres http://schemas.microsoft.com/2003/10/Serialization/ reservado.|  
+|`targetNamespace`|Admitido y asignado al espacio de nombres del contrato de datos. Si no se especifica este atributo, se utiliza el espacio de nombres en blanco. No puede ser el espacio de nombres reservado http://schemas.microsoft.com/2003/10/Serialization/.|  
 |`version`|ignorado.|  
   
 ### <a name="xsschema-contents"></a>\<xs: schema >: contenido  
@@ -213,7 +213,7 @@ En este tema se describe el subconjunto del esquema XML (XSD) que <xref:System.R
 |`keyref`|ignorado.|  
 |(en blanco)|Se admite.|  
   
- \*Cuando se usa el `simpleType` y `complexType,` asignación para tipos anónimos es el mismo que para tipos no anónimos, salvo que no hay ningún contrato de datos anónimo, por lo que se crea un contrato de datos con nombre, con un nombre generado derivado del nombre de elemento. Las reglas para los tipos anónimos están en la lista siguiente:  
+ \* Cuando se usa el `simpleType` y `complexType,` asignación para tipos anónimos es el mismo que para tipos no anónimos, salvo que no hay ningún contrato de datos anónimo, por lo que se crea un contrato de datos con nombre, con un nombre generado derivado del nombre de elemento. Las reglas para los tipos anónimos están en la lista siguiente:  
   
 -   Detalle de implementación de[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] : si el nombre de `xs:element` no contiene puntos, el tipo anónimo asigna a un tipo interno del tipo de contrato de datos exterior. Si el nombre contiene puntos, el tipo de contrato de datos resultante es independiente (no un tipo interno).  
   
@@ -342,7 +342,7 @@ public enum MyEnum
 </xs:simpleType>  
 ```  
   
-### <a name="xslist"></a>\<xs: List >  
+### <a name="xslist"></a>\<xs:list>  
  El`DataContractSerializer` asigna tipos de enumeración marcados con `System.FlagsAttribute` a `xs:list` derivado de `xs:string`. No se admite ninguna otra variación de `xs:list` .  
   
 ### <a name="xslist-attributes"></a>\<xs: List >: atributos  
@@ -537,7 +537,7 @@ public class Employee : Person
 |`positiveInteger`|<xref:System.Int64>.|  
   
 ## <a name="iserializable-types-mapping"></a>Asignación de tipos ISerializable  
- En la versión 1.0 de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 1.0, `ISerializable` se introdujo como un mecanismo general para serializar objetos para proporcionar persistencia o transferencia de datos. Hay muchos tipos de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] que implementan `ISerializable` y que pueden pasarse entre aplicaciones. `DataContractSerializer` proporciona de manera natural compatibilidad para las clases `ISerializable` . `DataContractSerializer` asigna tipos de esquema de implementación de `ISerializable` que solo difieren en cuanto al QName (nombre completo) del tipo y son colecciones de propiedades. Por ejemplo, el `DataContractSerializer` asigna <xref:System.Exception> al tipo XSD siguiente en el espacio de nombres http://schemas.datacontract.org/2004/07/System.  
+ En la versión 1.0 de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 1.0, `ISerializable` se introdujo como un mecanismo general para serializar objetos para proporcionar persistencia o transferencia de datos. Hay muchos tipos de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] que implementan `ISerializable` y que pueden pasarse entre aplicaciones. `DataContractSerializer` proporciona de manera natural compatibilidad para las clases `ISerializable` . `DataContractSerializer` asigna tipos de esquema de implementación de `ISerializable` que solo difieren en cuanto al QName (nombre completo) del tipo y son colecciones de propiedades. Por ejemplo, el `DataContractSerializer` asigna <xref:System.Exception> al tipo XSD siguiente en el http://schemas.datacontract.org/2004/07/System espacio de nombres.  
   
 ```xml  
 <xs:complexType name="Exception">  

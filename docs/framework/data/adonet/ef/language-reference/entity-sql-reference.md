@@ -1,24 +1,26 @@
 ---
 title: Referencia de Entity SQL
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 61ce7ee1-ffe2-477d-8a9f-835b0a11d900
-caps.latest.revision: "4"
+caps.latest.revision: ''
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: ac05ec8a8732da383a4e33e84c669aa29660a0da
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="entity-sql-reference"></a>Referencia de Entity SQL
 Esta sección contiene temas de referencia de [!INCLUDE[esql](../../../../../../includes/esql-md.md)]. En este tema se resumen y agrupan el [!INCLUDE[esql](../../../../../../includes/esql-md.md)] operadores por categoría.  
@@ -57,12 +59,12 @@ Esta sección contiene temas de referencia de [!INCLUDE[esql](../../../../../../
 |[= (Igual que)](../../../../../../docs/framework/data/adonet/ef/language-reference/equals-entity-sql.md)|Compara la igualdad de dos expresiones.|  
 |[> (Mayor que)](../../../../../../docs/framework/data/adonet/ef/language-reference/greater-than-entity-sql.md)|Compara dos expresiones para determinar si la expresión de la izquierda tiene un valor mayor que el de la expresión de la derecha.|  
 |[>= (Mayor o igual que)](../../../../../../docs/framework/data/adonet/ef/language-reference/greater-than-or-equal-to-entity-sql.md)|Compara dos expresiones para determinar si la expresión de la izquierda tiene un valor igual o mayor que el de la expresión de la derecha.|  
-|[ES &#91; NO &#93; ES NULL](../../../../../../docs/framework/data/adonet/ef/language-reference/isnull-entity-sql.md)|Determina si una expresión de consulta es nula.|  
+|[ES &AMP;#91;NO&AMP;#93; NULL](../../../../../../docs/framework/data/adonet/ef/language-reference/isnull-entity-sql.md)|Determina si una expresión de consulta es nula.|  
 |[< (Menor que)](../../../../../../docs/framework/data/adonet/ef/language-reference/less-than-entity-sql.md)|Compara dos expresiones para determinar si la expresión de la izquierda tiene un valor menor que el de la expresión de la derecha.|  
 |[<= (Menor o igual que)](../../../../../../docs/framework/data/adonet/ef/language-reference/less-than-or-equal-to-entity-sql.md)|Compara dos expresiones para determinar si la expresión izquierda tiene un valor igual o menor que el de la expresión derecha.|  
-|[&#91; NO &#93; ENTRE](../../../../../../docs/framework/data/adonet/ef/language-reference/between-entity-sql.md)|Determina si el resultado de una expresión es un valor incluido en un intervalo especificado.|  
+|[&AMP;#91;NO&AMP;#93; BETWEEN](../../../../../../docs/framework/data/adonet/ef/language-reference/between-entity-sql.md)|Determina si el resultado de una expresión es un valor incluido en un intervalo especificado.|  
 |[!= (No igual a)](../../../../../../docs/framework/data/adonet/ef/language-reference/not-equal-to-entity-sql.md)|Compara dos expresiones para determinar si la expresión de la izquierda no es igual que la expresión de la derecha.|  
-|[&#91; NO &#93; AL IGUAL QUE](../../../../../../docs/framework/data/adonet/ef/language-reference/like-entity-sql.md)|Determina si una cadena de caracteres específica coincide con un patrón especificado.|  
+|[&AMP;#91;NO&AMP;#93; COMO](../../../../../../docs/framework/data/adonet/ef/language-reference/like-entity-sql.md)|Determina si una cadena de caracteres específica coincide con un patrón especificado.|  
   
 ## <a name="logical-and-case-expression-operators"></a>Operadores lógicos y de expresión CASE  
  Los operadores lógicos prueban la veracidad de una condición. La expresión CASE evalúa un conjunto de expresiones booleanas para determinar el resultado. En la tabla siguiente se enumeran los operadores lógicos y de expresión CASE.  
@@ -71,7 +73,7 @@ Esta sección contiene temas de referencia de [!INCLUDE[esql](../../../../../../
 |--------------|-----------------|  
 |[& & (AND lógico)](../../../../../../docs/framework/data/adonet/ef/language-reference/and-entity-sql.md)|AND lógico.|  
 |[Operador (NOT lógico)](../../../../../../docs/framework/data/adonet/ef/language-reference/not-entity-sql.md)|NOT lógico.|  
-|[&#124; &#124; (OR lógico)](../../../../../../docs/framework/data/adonet/ef/language-reference/or-entity-sql.md)|OR lógico.|  
+|[&#124;&#124;(OR lógico)](../../../../../../docs/framework/data/adonet/ef/language-reference/or-entity-sql.md)|OR lógico.|  
 |[CASE](../../../../../../docs/framework/data/adonet/ef/language-reference/case-entity-sql.md)|Evalúa un conjunto de expresiones booleanas para determinar el resultado.|  
 |[THEN](../../../../../../docs/framework/data/adonet/ef/language-reference/then-entity-sql.md)|El resultado de un [cuando](http://msdn.microsoft.com/library/6233fe9f-00b0-460e-8372-64e138a5f998) cláusula cuando se evalúa como true.|  
   
@@ -92,7 +94,7 @@ Esta sección contiene temas de referencia de [!INCLUDE[esql](../../../../../../
 |[WHERE](../../../../../../docs/framework/data/adonet/ef/language-reference/where-entity-sql.md)|Filtra de forma condicional los datos devueltos por una consulta.|  
   
 ## <a name="reference-operators"></a>Operadores de referencia  
- Una referencia es un puntero lógico (clave externa) a una entidad concreta en un conjunto de entidades específico. [!INCLUDE[esql](../../../../../../includes/esql-md.md)]admite los operadores siguientes para construir, anular la construcción y navegar por las referencias.  
+ Una referencia es un puntero lógico (clave externa) a una entidad concreta en un conjunto de entidades específico. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] admite los operadores siguientes para construir, anular la construcción y navegar por las referencias.  
   
 |Operador|Usar|  
 |--------------|---------|  
@@ -109,22 +111,22 @@ Esta sección contiene temas de referencia de [!INCLUDE[esql](../../../../../../
 |--------------|---------|  
 |[ANYELEMENT](../../../../../../docs/framework/data/adonet/ef/language-reference/anyelement-entity-sql.md)|Extrae un elemento de una colección de varios valores.|  
 |[EXCEPT](../../../../../../docs/framework/data/adonet/ef/language-reference/except-entity-sql.md)|Devuelve una colección de los valores distintos de la expresión de consulta situada a la izquierda del operando EXCEPT, que tampoco se devuelven en la expresión de consulta situada a la derecha del operando EXCEPT.|  
-|[&#91; NO &#93; EXISTE](../../../../../../docs/framework/data/adonet/ef/language-reference/exists-entity-sql.md)|Determina si una colección está vacía.|  
+|[&AMP;#91;NO&AMP;#93; EXISTS](../../../../../../docs/framework/data/adonet/ef/language-reference/exists-entity-sql.md)|Determina si una colección está vacía.|  
 |[FLATTEN](../../../../../../docs/framework/data/adonet/ef/language-reference/flatten-entity-sql.md)|Convierte una colección de colecciones en una colección plana.|  
-|[&#91; NO &#93; EN](../../../../../../docs/framework/data/adonet/ef/language-reference/in-entity-sql.md)|Determina si un valor determinado coincide con algún valor de una colección.|  
+|[&AMP;#91;NO&AMP;#93; IN](../../../../../../docs/framework/data/adonet/ef/language-reference/in-entity-sql.md)|Determina si un valor determinado coincide con algún valor de una colección.|  
 |[INTERSECT](../../../../../../docs/framework/data/adonet/ef/language-reference/intersect-entity-sql.md)|Devuelve una colección de los valores distintos que devuelven las expresiones de consulta situadas a los lados izquierdo y derecho del operando INTERSECT.|  
 |[OVERLAPS](../../../../../../docs/framework/data/adonet/ef/language-reference/overlaps-entity-sql.md)|Determina si dos colecciones tienen elementos comunes.|  
 |[SET](../../../../../../docs/framework/data/adonet/ef/language-reference/set-entity-sql.md)|Convierte una colección de objetos en un conjunto produciendo una colección nueva en la que se han quitado todos los elementos duplicados.|  
 |[UNION](../../../../../../docs/framework/data/adonet/ef/language-reference/union-entity-sql.md)|Combina los resultados de dos o más consultas en una sola colección.|  
   
 ## <a name="type-operators"></a>Operadores de tipo  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)]Proporciona operaciones que permiten al tipo de una expresión (valor) para construir, consultar y manipular. En la tabla siguiente se enumeran los operadores usados para trabajar con tipos.  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] Proporciona operaciones que permiten al tipo de una expresión (valor) para construir, consultar y manipular. En la tabla siguiente se enumeran los operadores usados para trabajar con tipos.  
   
 |Operador|Usar|  
 |--------------|---------|  
 |[CAST](../../../../../../docs/framework/data/adonet/ef/language-reference/cast-entity-sql.md)|Convierte una expresión de un tipo de datos a otro.|  
 |[COLLECTION](../../../../../../docs/framework/data/adonet/ef/language-reference/collection-entity-sql.md)|Usar en un [función](../../../../../../docs/framework/data/adonet/ef/language-reference/function-entity-sql.md) operación para declarar una colección de tipos de entidad o tipos complejos.|  
-|[ES &#91; NO &#93; DE](../../../../../../docs/framework/data/adonet/ef/language-reference/isof-entity-sql.md)|Determina si el tipo de una expresión es del tipo especificado o uno de sus subtipos.|  
+|[ES &AMP;#91;NO&AMP;#93; OF](../../../../../../docs/framework/data/adonet/ef/language-reference/isof-entity-sql.md)|Determina si el tipo de una expresión es del tipo especificado o uno de sus subtipos.|  
 |[OFTYPE](../../../../../../docs/framework/data/adonet/ef/language-reference/oftype-entity-sql.md)|Devuelve una colección de objetos de una expresión de consulta de un tipo específico.|  
 |[Constructor de tipos con nombre](../../../../../../docs/framework/data/adonet/ef/language-reference/named-type-constructor-entity-sql.md)|Crea instancias de tipos de entidad o tipos complejos.|  
 |[MULTISET](../../../../../../docs/framework/data/adonet/ef/language-reference/multiset-entity-sql.md)|Crea una instancia de un conjunto múltiple a partir de una lista de valores.|  

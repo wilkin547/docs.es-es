@@ -1,12 +1,13 @@
 ---
 title: Herramienta de utilidad de metadatos de ServiceModel (Svcutil.exe)
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - clients [WCF], building
@@ -14,16 +15,17 @@ helpviewer_keywords:
 - Svcutil.exe
 - clients [WCF], consuming services
 ms.assetid: 1abf3d9f-b420-46f1-b628-df238751f308
-caps.latest.revision: "40"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: ce66f98f064ec5c9460dd1909f8eb7bc44c26f76
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="servicemodel-metadata-utility-tool-svcutilexe"></a>Herramienta de utilidad de metadatos de ServiceModel (Svcutil.exe)
 La herramienta de utilidad de metadatos de ServiceModel se utiliza para generar el código de modelo de servicio a partir de los documentos de metadatos y los documentos de metadatos a partir del código de modelo de servicio.  
@@ -63,16 +65,16 @@ La herramienta de utilidad de metadatos de ServiceModel se utiliza para generar 
   
 |Opción|Descripción|  
 |------------|-----------------|  
-|/ directory:\<directorio >|Directorio en el que se crearán los archivos.<br /><br /> Valor predeterminado: el directorio actual.<br /><br /> Forma abreviada: `/d`|  
+|/directory:\<directory>|Directorio en el que se crearán los archivos.<br /><br /> Valor predeterminado: el directorio actual.<br /><br /> Forma abreviada: `/d`|  
 |/help|Muestra la sintaxis de comandos y las opciones de la herramienta.<br /><br /> Forma abreviada: `/?`|  
 |/noLogo|Suprime el mensaje del banner y el copyright.|  
-|/ svcutilconfig:\<configFile >|Especifica un archivo de configuración personalizado para utilizar en lugar del archivo App.config. Esto se puede utilizar para registrar extensiones system.serviceModel sin modificar el archivo de configuración de la herramienta.|  
+|/svcutilConfig:\<configFile>|Especifica un archivo de configuración personalizado para utilizar en lugar del archivo App.config. Esto se puede utilizar para registrar extensiones system.serviceModel sin modificar el archivo de configuración de la herramienta.|  
 |/ target:\<tipo de salida >|Especifica la salida que va a generar la herramienta.<br /><br /> Los valores válidos son código, metadatos o xmlSerializer.<br /><br /> Forma abreviada: `/t`|  
   
 ### <a name="code-generation"></a>Generación de código  
  Svcutil.exe puede generar el código para los contratos de servicios, clientes y tipos de datos a partir de documentos de metadatos. Estos documentos de metadatos pueden estar en un almacenamiento duradero o recuperarse en línea. La recuperación en línea sigue el protocolo de WS-Metadata Exchange o el protocolo DISCO (para obtener detalles, vea la sección Descarga de metadatos).  
   
- Puede usar la herramienta SvcUtil.exe para generar contratos de servicio y de datos basándose en un documento predefinido de WSDL. Use el modificador /serviceContract y especifique una dirección URL o una ubicación de archivo donde el documento de WSDL se puede descargar o encontrar. Esto generará el servicio y los contratos de datos definidos en el documento de WSDL que se puede usar después para implementar un servicio de reclamaciones. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Cómo: recuperar metadatos e implementar un servicio conforme](../../../docs/framework/wcf/feature-details/how-to-retrieve-metadata-and-implement-a-compliant-service.md).  
+ Puede usar la herramienta SvcUtil.exe para generar contratos de servicio y de datos basándose en un documento predefinido de WSDL. Use el modificador /serviceContract y especifique una dirección URL o una ubicación de archivo donde el documento de WSDL se puede descargar o encontrar. Esto generará el servicio y los contratos de datos definidos en el documento de WSDL que se puede usar después para implementar un servicio de reclamaciones. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Cómo: recuperar metadatos e implementar un servicio conforme](../../../docs/framework/wcf/feature-details/how-to-retrieve-metadata-and-implement-a-compliant-service.md).  
   
  Para un servicio con un extremo BasicHttpContextbinding, Svcutil.exe genera un BasicHttpBinding con el atributo `allowCookies` establecido como `true`. Las cookies se utilizan para el contexto del servidor. Si desea administrar el contexto del cliente cuando el servicio utiliza cookies, puede modificar manualmente la configuración para usar un enlace de contexto.  
   
@@ -91,7 +93,7 @@ La herramienta de utilidad de metadatos de ServiceModel se utiliza para generar 
 |------------|-----------------|  
 |/async|Genera firmas del método sincrónicas y asincrónicas.<br /><br /> Valor predeterminado: generar solo firmas de método sincrónicas.<br /><br /> Forma abreviada: `/a`|  
 |/CollectionType:\<tipo >|Especifica el tipo de colección de lista para un cliente de WCF.<br/><br /> Valor predeterminado: tipo de colección es System.Array. <br /><br /> Forma abreviada: `/ct`|  
-|/ config:\<configFile >|Especifica el nombre de archivo para el archivo de configuración generado.<br /><br /> Valor predeterminado: output.config|  
+|/config:\<configFile>|Especifica el nombre de archivo para el archivo de configuración generado.<br /><br /> Valor predeterminado: output.config|  
 |/dataContractOnly|Genera código solo para tipos de contrato de datos. No se generan los tipos del contrato de servicio.<br /><br /> Solo debería especificar archivos de metadatos locales para esta opción.<br /><br /> Forma abreviada: `/dconly`|  
 |/enableDataBinding|Implementa la interfaz <xref:System.ComponentModel.INotifyPropertyChanged> en todos los tipos de contrato de datos para habilitar el enlace de datos.<br /><br /> Forma abreviada: `/edb`|  
 |/excludeType:\<tipo >|Especifica un nombre de tipo completo o calificado con el nombre de ensamblado que se va a excluir de los tipos de contrato a los que se hace referencia.<br /><br /> Al utilizar este modificador junto con `/r` de DLL independientes, se hace referencia al nombre completo de la clase XSD.<br /><br /> Forma abreviada: `/et`|  
@@ -127,7 +129,7 @@ La herramienta de utilidad de metadatos de ServiceModel se utiliza para generar 
   
 |Opción|Descripción|  
 |------------|-----------------|  
-|/ ServiceName:\<serviceConfigName >|Especifica el nombre de configuración de un servicio que se va a exportar. Si se utiliza esta opción, se debe pasar un ensamblado ejecutable con un archivo de configuración asociado como entrada. Svcutil.exe busca la configuración de servicio en todos los archivos de configuración asociados. Si los archivos de configuración contienen cualquier tipo de extensión, los ensamblados que contienen estos tipos deben estar en la GAC o indicados de forma explícita mediante la opción `/reference`.|  
+|/serviceName:\<serviceConfigName>|Especifica el nombre de configuración de un servicio que se va a exportar. Si se utiliza esta opción, se debe pasar un ensamblado ejecutable con un archivo de configuración asociado como entrada. Svcutil.exe busca la configuración de servicio en todos los archivos de configuración asociados. Si los archivos de configuración contienen cualquier tipo de extensión, los ensamblados que contienen estos tipos deben estar en la GAC o indicados de forma explícita mediante la opción `/reference`.|  
 |/ reference:\<ruta de acceso de archivo >|Agrega el ensamblado especificado al conjunto de ensamblados utilizados para resolver las referencias de tipo. Si está exportando o validando un servicio registrado en configuración que utiliza extensiones de terceros (Comportamientos, Enlaces y Elementos de enlace), utilice esta opción para buscar ensamblados de extensión que no están en la GAC.<br /><br /> Forma abreviada: `/r`|  
 |/dataContractOnly|Solo funciona en tipos de contrato de datos. No se procesan los contratos de servicios.<br /><br /> Solo debería especificar archivos de metadatos locales para esta opción.<br /><br /> Forma abreviada: `/dconly`|  
 |/excludeType:\<tipo >|Especifica el nombre completo o calificado con el ensamblado de un tipo que se va a excluir de la exportación. Se puede utilizar esta opción al exportar los metadatos para un servicio o un conjunto de contratos de servicios excluyan tipos de la exportación. Esta opción no se puede combinar con la opción `/dconly`.<br /><br /> Si tiene un ensamblado único que contiene varios servicios y cada uno usa clases independientes con el mismo nombre XSD, debería especificar el nombre del servicio en lugar del nombre de clase XSD para este modificador.<br /><br /> No se admiten XSD o tipos de contrato de datos.<br /><br /> Forma abreviada: `/et`|  
@@ -144,7 +146,7 @@ La herramienta de utilidad de metadatos de ServiceModel se utiliza para generar 
 |Opción|Descripción|  
 |------------|-----------------|  
 |/validate|Valida una implementación del servicio especificada por la opción `/serviceName`. Si se utiliza esta opción, se debe pasar un ensamblado ejecutable con un archivo de configuración asociado como entrada.<br /><br /> Forma abreviada: `/v`|  
-|/ ServiceName:\<serviceConfigName >|Especifica el nombre de configuración de un servicio que se va a validar. Svcutil.exe busca la configuración de servicio en todos los archivos de configuración asociados de todos los ensamblados de entrada. Si los archivos de configuración contienen cualquier tipo de extensión, los ensamblados que contienen estos tipos deben estar en la GAC o indicados de forma explícita mediante la opción `/reference`.|  
+|/serviceName:\<serviceConfigName>|Especifica el nombre de configuración de un servicio que se va a validar. Svcutil.exe busca la configuración de servicio en todos los archivos de configuración asociados de todos los ensamblados de entrada. Si los archivos de configuración contienen cualquier tipo de extensión, los ensamblados que contienen estos tipos deben estar en la GAC o indicados de forma explícita mediante la opción `/reference`.|  
 |/ reference:\<ruta de acceso de archivo >|Agrega el ensamblado especificado al conjunto de ensamblados utilizados para resolver las referencias de tipo. Si está exportando o validando un servicio registrado en configuración que utiliza extensiones de terceros (Comportamientos, Enlaces y Elementos de enlace), utilice esta opción para buscar ensamblados de extensión que no están en la GAC.<br /><br /> Forma abreviada: `/r`|  
 |/dataContractOnly|Solo funciona en tipos de contrato de datos. No se procesan los contratos de servicios.<br /><br /> Solo debería especificar archivos de metadatos locales para esta opción.<br /><br /> Forma abreviada: `/dconly`|  
 |/excludeType:\<tipo >|Especifica el nombre completo o calificado con el ensamblado de un tipo que se va a excluir de la validación.<br /><br /> Forma abreviada: `/et`|  

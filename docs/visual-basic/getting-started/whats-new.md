@@ -12,14 +12,14 @@ helpviewer_keywords:
 - what's new [Visual Basic]
 - Visual Basic, what's new
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
-caps.latest.revision: 
+caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4df9a34e078de9daeff85c894afbbf4d60501f6b
-ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
-ms.translationtype: HT
+ms.openlocfilehash: c0452a5dde3a266f5d50f69016eac8144bab9ba6
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="whats-new-for-visual-basic"></a>Novedades de Visual Basic
 
@@ -34,6 +34,9 @@ Para ver las características nuevas, vea [Visual Basic 15.5](#visual-basic-155)
 
 Visual Basic 15.3   
 Para ver las características nuevas, vea [Visual Basic 15.3](#visual-basic-153)
+
+Visual Basic 2017   
+Para obtener características nuevas, vea [Visual Basic 2017](#visual-basic-2017).
 
 Visual Basic / Visual Studio .NET 2015   
 Para obtener características nuevas, vea [Visual Basic 14](#visual-basic-14).
@@ -78,7 +81,7 @@ En Visual Basic 2017 se ha agregado compatibilidad con el carácter de subrayado
 ```vb
 Dim number As Integer = &H_C305_F860
 ``` 
-Para usar el carácter de subrayado como separador inicial, debe agregar el elemento siguiente al archivo del proyecto de Visual Basic (*.vbproj):
+Para utilizar el carácter de subrayado como separador inicial, debe agregar el siguiente elemento a su proyecto de Visual Basic (\*.vbproj) archivo:
 
 ```xml
 <PropertyGroup>
@@ -88,15 +91,19 @@ Para usar el carácter de subrayado como separador inicial, debe agregar el elem
 
 ## <a name="visual-basic-153"></a>Visual Basic 15.3
 
-[Inferencia en tuplas con nombre](../programming-guide/language-features/data-types/tuples.md#inferred-tuple-element-names)
+[**Inferencia de tupla con nombre**](../programming-guide/language-features/data-types/tuples.md#inferred-tuple-element-names)
 
 Al asignar el valor de elementos de tupla desde variables, Visual Basic infiere el nombre de los elementos de tupla a partir de los nombres de variable correspondientes, por lo que no es necesario asignar un nombre a un elemento de tupla de forma explícita. En el ejemplo siguiente se usa la inferencia para crear una tupla con tres elementos con nombre: `state`, `stateName` y `capital`.
 
 [!code-vb[Inferred tuple names](../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/named-tuples/program.vb#2)]
 
+**Otros modificadores de compilador**  
+
+Ahora es compatible con el compilador de línea de comandos de Visual Basic el [ **- refout** ](../reference/command-line-compiler/refout-compiler-option.md) y [ **- refonly** ](../reference/command-line-compiler/refonly-compiler-option.md) opciones del compilador para controlar la salida de ensamblados de referencia. **-refout** define el directorio de salida del ensamblado de referencia, y **- refonly** especifica que solo un ensamblado de referencia se transferirán por compilación.
+
 ## <a name="visual-basic-2017"></a>Visual Basic 2017
 
-[Tuplas](../programming-guide/language-features/data-types/tuples.md)
+[**Tuplas**](../programming-guide/language-features/data-types/tuples.md)
 
 Las tuplas son una estructura de datos ligera que se usan normalmente para devolver varios valores de una sola llamada al método. Normalmente, para devolver varios valores de un método, tiene que realizar una de las siguientes acciones:
 

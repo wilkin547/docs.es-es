@@ -1,24 +1,26 @@
 ---
 title: Colecciones de esquemas comunes
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 50127ced-2ac8-4d7a-9cd1-5c98c655ff03
-caps.latest.revision: "3"
+caps.latest.revision: ''
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 893093900b3fc4276f9bd7143b1f235a5ba98f90
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="common-schema-collections"></a>Colecciones de esquemas comunes
 Las colecciones de esquemas comunes son las colecciones de esquemas que implementa cada uno de los proveedores administrados de .NET Framework. Puede consultar un proveedor administrado de .NET Framework para determinar la lista de colecciones de esquemas admitidas mediante la llamada la **GetSchema** método sin argumentos o con el nombre de la colección de esquemas "MetaDataCollections". Esto devolverá una <xref:System.Data.DataTable> con una lista de colecciones de esquemas admitidas, el número de restricciones que admite cada una y el número de partes de identificador que emplean. Estas colecciones describen todas las columnas necesarias. Los proveedores pueden agregar más columnas si lo desean. Por ejemplo, `SqlClient` y `OracleClient` agregan ParameterName a la colección con restricciones.  
@@ -41,7 +43,7 @@ Las colecciones de esquemas comunes son las colecciones de esquemas que implemen
   
 |ColumName|DataType|Descripción|  
 |----------------|--------------|-----------------|  
-|CompositeIdentifierSeparatorPattern|string|La expresión regular que va a hacer corresponder los separadores compuestos en un identificador compuesto. Por ejemplo, "\\." (para SQL Server) o "@&#124; \\." (en Oracle).<br /><br /> Un identificador compuesto es normalmente lo que se usa para un nombre de objeto de base de datos, por ejemplo: pubs.dbo.authors o pubs@dbo.authors.<br /><br /> Para SQL Server, utilice la expresión regular "\\.". En OracleClient, use "@&#124; \\.".<br /><br /> En ODBC, utilice Catalog_name_seperator.<br /><br /> En OLE DB, use DBLITERAL_CATALOG_SEPARATOR o DBLITERAL_SCHEMA_SEPARATOR.|  
+|CompositeIdentifierSeparatorPattern|string|La expresión regular que va a hacer corresponder los separadores compuestos en un identificador compuesto. Por ejemplo, "\\." (para SQL Server) o "@&#124;\\." (en Oracle).<br /><br /> Un identificador compuesto es normalmente lo que se usa para un nombre de objeto de base de datos, por ejemplo: pubs.dbo.authors o pubs@dbo.authors.<br /><br /> Para SQL Server, utilice la expresión regular "\\.". En OracleClient, use "@&#124;\\.".<br /><br /> En ODBC, utilice Catalog_name_seperator.<br /><br /> En OLE DB, use DBLITERAL_CATALOG_SEPARATOR o DBLITERAL_SCHEMA_SEPARATOR.|  
 |DataSourceProductName|string|El nombre del producto al que tiene acceso el proveedor, por ejemplo, "Oracle" o "SQLServer".|  
 |DataSourceProductVersion|string|Indica la versión del producto al que tiene acceso el proveedor, en el formato nativo de los orígenes de datos y no en el formato de Microsoft.<br /><br /> En algunos casos, DataSourceProductVersion y DataSourceProductVersionNormalized tendrán el mismo valor. En el caso de OLE DB y ODBC, serán siempre iguales dado que se asignan a la misma llamada de función en la API nativa subyacente.|  
 |DataSourceProductVersionNormalized|string|Una versión normalizada del origen de datos, de forma que se puede comparar con `String.Compare()`. Su formato es coherente con todas las versiones del proveedor para evitar que la versión 10 se clasifique entre la versión 1 y la versión 2.<br /><br /> Por ejemplo, el proveedor de Oracle utiliza un formato de "nn.nn.nn.nn.nn" en su versión normalizada, lo que hace que un origen de datos de Oracle 8i devuelva "08.01.07.04.01". SQL Server utiliza el formato típico de "nn.nn.nnnn" de Microsoft.<br /><br /> En algunos casos, DataSourceProductVersion y DataSourceProductVersionNormalized tendrán el mismo valor. En el caso de OLE DB y ODBC, serán siempre iguales dado que se asignan a la misma llamada de función en la API nativa subyacente.|  
@@ -53,10 +55,10 @@ Las colecciones de esquemas comunes son las colecciones de esquemas que implemen
 |ParameterMarkerPattern|string|Una expresión regular que crea una correspondencia con un marcador de parámetro. Tendrá un valor de correspondencia del nombre del parámetro, si lo hay.<br /><br /> Por ejemplo, si se admiten parámetros con nombre con un carácter de introducción ‘@’ que se incluirá en el nombre del parámetro, el resultado sería: "(@[A-Za-z0-9_$#]*)".<br /><br /> Sin embargo, si se admiten parámetros con nombre con un ':' como el carácter de introducción y no forma parte del nombre del parámetro, esto sería: ": ([A-Za-z0-9_$ #]\*)".<br /><br /> Naturalmente, si el origen de datos no admite parámetros con nombre, el resultado sería "?".|  
 |ParameterNameMaxLength|int|La longitud máxima del nombre del parámetro en caracteres. Visual Studio espera que si se admiten nombres de parámetros, el valor mínimo de la longitud máxima sea 30 caracteres.<br /><br /> Si el origen de datos no admite parámetros con nombre, esta propiedad devuelve cero.|  
 |ParameterNamePattern|string|Una expresión regular que crea una correspondencia con los nombres de parámetros válidos. Según el origen de datos, existen diferentes reglas respecto a los caracteres que se pueden utilizar en los nombres de parámetros.<br /><br /> Visual Studio espera que si se admiten nombres de parámetros, los caracteres "\p{Lu}\p{Ll}\p{Lt}\p{Lm}\p{Lo}\p{Nl}\p{Nd}" son el juego mínimo de caracteres admitidos que son válidos en nombres de parámetros.|  
-|QuotedIdentifierPattern|string|Una expresión regular que crea una correspondencia con un identificador incluido entre comillas y que tiene un valor de correspondencia del propio identificador sin las comillas. Por ejemplo, si el origen de datos utilizado comillas dobles para identificar identificadores entre comillas, sería: "(([^\\"] &#124;\\" \\")*)".|  
+|QuotedIdentifierPattern|string|Una expresión regular que crea una correspondencia con un identificador incluido entre comillas y que tiene un valor de correspondencia del propio identificador sin las comillas. Por ejemplo, si el origen de datos utilizado comillas dobles para identificar identificadores entre comillas, sería: "(([^\\"]&#124;\\"\\") *) ".|  
 |QuotedIdentifierCase|<xref:System.Data.Common.IdentifierCase>|Indica si los identificadores incluidos entre comillas se tratan o no como con diferenciación entre mayúsculas y minúsculas.|  
 |StatementSeparatorPattern|string|Una expresión regular que crea una correspondencia con el separador de instrucciones.|  
-|StringLiteralPattern|string|Una expresión regular que crea una correspondencia con un literal de cadena y que tiene un valor de correspondencia del propio literal. Por ejemplo, si el origen de datos utiliza comillas simples para identificar cadenas, sería: "('([^'] &#124;'') *')"'|  
+|StringLiteralPattern|string|Una expresión regular que crea una correspondencia con un literal de cadena y que tiene un valor de correspondencia del propio literal. Por ejemplo, si el origen de datos utiliza comillas simples para identificar cadenas, sería: "('([^']&#124;'') *')"'|  
 |SupportedJoinOperators|<xref:System.Data.Common.SupportedJoinOperators>|Especifica los tipos de instrucciones de unión SQL que admite el origen de datos.|  
   
 ## <a name="datatypes"></a>DataTypes  

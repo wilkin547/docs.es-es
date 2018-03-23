@@ -1,24 +1,26 @@
 ---
-title: "Generación de un cliente WCF a partir de los metadatos de servicio"
-ms.custom: 
+title: Generación de un cliente WCF a partir de los metadatos de servicio
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 27f8f545-cc44-412a-b104-617e0781b803
-caps.latest.revision: "9"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 9eedf84d1dccb8bc2540aca7e6bd338b4e58326d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="generating-a-wcf-client-from-service-metadata"></a>Generación de un cliente WCF a partir de los metadatos de servicio
 En este tema se describe cómo utilizar los diversos modificadores de Svcutil.exe para generar los clientes a partir de documentos de metadatos.  
@@ -42,15 +44,15 @@ svcutil.exe [/t:code]  <metadataDocumentPath>* | <url>* | <epr>
 |Opción|Descripción|  
 |------------|-----------------|  
 |**/ reference:\<ruta de acceso de archivo >**|Tipos de referencia en el ensamblado especificado. Al generar clientes, utilice esta opción para especificar ensamblados que podrían contener tipos que representan los metadatos que se están importando.<br /><br /> Forma abreviada: `/r`|  
-|**/excludeType:\<tipo >**|Especifica un nombre de tipo completo o calificado con el nombre de ensamblado que se va a excluir de los tipos de contrato a los que se hace referencia.<br /><br /> Forma abreviada: `/et`|  
+|**/excludeType:\<type>**|Especifica un nombre de tipo completo o calificado con el nombre de ensamblado que se va a excluir de los tipos de contrato a los que se hace referencia.<br /><br /> Forma abreviada: `/et`|  
   
 ## <a name="choosing-a-serializer"></a>Elección de un serializador  
   
 |Opción|Descripción|  
 |------------|-----------------|  
-|**/Serializer:auto**|Selecciona el serializador de forma automática. Esto utiliza el serializador `DataContract`. Si esto falla, se utiliza `XmlSerializer`.<br /><br /> Forma abreviada: `/ser:Auto`|  
-|**/Serializer:DataContractSerializer**|Genera tipos de datos que utilizan el serializador `DataContract` para la serialización y deserialización.<br /><br /> Forma abreviada: `/ser:DataContractSerializer`|  
-|**/ Serializer: XmlSerializer**|Genera tipos de datos que usan el `XmlSerializer` para la serialización y deserialización.<br /><br /> Forma abreviada: `/ser:XmlSerializer`|  
+|**/serializer:Auto**|Selecciona el serializador de forma automática. Esto utiliza el serializador `DataContract`. Si esto falla, se utiliza `XmlSerializer`.<br /><br /> Forma abreviada: `/ser:Auto`|  
+|**/serializer:DataContractSerializer**|Genera tipos de datos que utilizan el serializador `DataContract` para la serialización y deserialización.<br /><br /> Forma abreviada: `/ser:DataContractSerializer`|  
+|**/serializer:XmlSerializer**|Genera tipos de datos que usan el `XmlSerializer` para la serialización y deserialización.<br /><br /> Forma abreviada: `/ser:XmlSerializer`|  
 |**/importXmlTypes**|Configura el serializador `DataContract` para que importe tipos que no sean de `DataContract` como tipos `IXmlSerializable`.<br /><br /> Forma abreviada: `/ixt`|  
 |**/dataContractOnly**|Genera código para los tipos de `DataContract` únicamente. Se generan los tipos de `ServiceContract`.<br /><br /> Solo debería especificar archivos de metadatos locales para esta opción.<br /><br /> Forma abreviada: `/dconly`|  
   
@@ -58,7 +60,7 @@ svcutil.exe [/t:code]  <metadataDocumentPath>* | <url>* | <epr>
   
 |Opción|Descripción|  
 |------------|-----------------|  
-|**/ Language:\<idioma >**|Especifica el lenguaje de programación a utilizar para la generación de código. Proporcione un nombre de lenguaje registrado en el archivo Machine.config o el nombre completo de una clase que hereda de <xref:System.CodeDom.Compiler.CodeDomProvider>.<br /><br /> Valores: c#, cs, csharp, vb, vbs, visualbasic, vbscript, javascript, c++, mc, cpp<br /><br /> Valor predeterminado: csharp<br /><br /> Forma abreviada: `/l`<br /><br /> [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Clase CodeDomProvider](http://go.microsoft.com/fwlink/?LinkId=94778).|  
+|**/ Language:\<idioma >**|Especifica el lenguaje de programación a utilizar para la generación de código. Proporcione un nombre de lenguaje registrado en el archivo Machine.config o el nombre completo de una clase que hereda de <xref:System.CodeDom.Compiler.CodeDomProvider>.<br /><br /> Valores: c#, cs, csharp, vb, vbs, visualbasic, vbscript, javascript, c++, mc, cpp<br /><br /> Valor predeterminado: csharp<br /><br /> Forma abreviada: `/l`<br /><br /> [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Clase CodeDomProvider](http://go.microsoft.com/fwlink/?LinkId=94778).|  
   
 ## <a name="choosing-a-namespace-for-the-client"></a>Elección de un espacio de nombres para el cliente  
   
@@ -76,7 +78,7 @@ svcutil.exe [/t:code]  <metadataDocumentPath>* | <url>* | <epr>
   
 |Opción|Descripción|  
 |------------|-----------------|  
-|**/ config:\<configFile >**|Especifica el nombre de archivo para el archivo de configuración generado.<br /><br /> Valor predeterminado: output.config|  
+|**/config:\<configFile>**|Especifica el nombre de archivo para el archivo de configuración generado.<br /><br /> Valor predeterminado: output.config|  
 |**/mergeConfig**|Combina la configuración generada en un archivo existente en lugar de sobrescribir el archivo existente.|  
 |**/noConfig**|No generar archivos de configuración.|  
   
