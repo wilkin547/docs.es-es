@@ -1,60 +1,59 @@
 ---
-title: /netcf
-ms.date: 07/20/2015
+title: -netcf
+ms.date: 03/13/2018
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - /netcf
-- netcf
+- -netcf
 helpviewer_keywords:
 - -netcf compiler option [Visual Basic]
 - netcf compiler option [Visual Basic]
 - /netcf compiler option [Visual Basic]
 ms.assetid: db7cfa59-c315-401c-a59b-0daf355343d6
-caps.latest.revision: "18"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 4a75573b0881af71e907a488c2b3c15db3816fc0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: rpetrusha
+ms.author: ronpet
+ms.openlocfilehash: 82a0adc9e821df3a789cf19e798d4bad9e9a69e3
+ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/22/2018
 ---
-# <a name="netcf"></a>/netcf
+# <a name="-netcf"></a>-netcf
 Establece el compilador con destino en [!INCLUDE[Compact](~/includes/compact-md.md)].  
   
 ## <a name="syntax"></a>Sintaxis  
   
 ```  
-/netcf  
+-netcf  
 ```  
   
 ## <a name="remarks"></a>Comentarios  
- El `/netcf` opción causas el [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] compilador con destino el [!INCLUDE[Compact](~/includes/compact-md.md)] en lugar de toda la [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Funcionalidad del lenguaje que está presente sólo en toda la [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] está deshabilitado.  
+ El `-netcf` opción causas el [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] compilador con destino el [!INCLUDE[Compact](~/includes/compact-md.md)] en lugar de toda la [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Funcionalidad del lenguaje que está presente sólo en toda la [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] está deshabilitado.  
   
- El `/netcf` opción está diseñada para usarse con [/sdkpath](../../../visual-basic/reference/command-line-compiler/sdkpath.md). Las características de lenguaje deshabilitadas por `/netcf` son las mismas características de lenguaje que no están presentes en los archivos de destino con `/sdkpath`.  
+ El `-netcf` opción está diseñada para usarse con [- sdkpath](../../../visual-basic/reference/command-line-compiler/sdkpath.md). Las características de lenguaje deshabilitadas por `-netcf` son las mismas características de lenguaje que no están presentes en los archivos de destino con `-sdkpath`.  
   
 > [!NOTE]
->  El `/netcf` opción no está disponible en el entorno de desarrollo de Visual Studio, que está disponible sólo cuando se compila desde la línea de comandos. El `/netcf` opción se establece cuando un [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] se carga el proyecto de dispositivo.  
+>  El `-netcf` opción no está disponible en el entorno de desarrollo de Visual Studio, que está disponible sólo cuando se compila desde la línea de comandos. El `-netcf` opción se establece cuando un [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] se carga el proyecto de dispositivo.  
   
- El `/netcf` opción cambia las características de lenguaje siguientes:  
+ El `-netcf` opción cambia las características de lenguaje siguientes:  
   
--   El [final \<palabra clave > instrucción](../../../visual-basic/language-reference/statements/end-keyword-statement.md) palabra clave, que finaliza la ejecución de un programa, está deshabilitada. El programa siguiente compila y se ejecuta sin `/netcf` , pero se produce un error en tiempo de compilación con `/netcf`.  
+-   El [final \<palabra clave > instrucción](../../../visual-basic/language-reference/statements/end-keyword-statement.md) palabra clave, que finaliza la ejecución de un programa, está deshabilitada. El programa siguiente compila y se ejecuta sin `-netcf` , pero se produce un error en tiempo de compilación con `-netcf`.  
   
      [!code-vb[VbVbalrCompiler#34](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/netcf_1.vb)]  
   
--   Enlace de tiempo de ejecución, en todos los formularios, está deshabilitado. Se generan errores en tiempo de compilación cuando se encuentran escenarios de enlace tardío reconocidos. El programa siguiente compila y se ejecuta sin `/netcf` , pero se produce un error en tiempo de compilación con `/netcf`.  
+-   Enlace de tiempo de ejecución, en todos los formularios, está deshabilitado. Se generan errores en tiempo de compilación cuando se encuentran escenarios de enlace tardío reconocidos. El programa siguiente compila y se ejecuta sin `-netcf` , pero se produce un error en tiempo de compilación con `-netcf`.  
   
      [!code-vb[VbVbalrCompiler#35](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/netcf_2.vb)]  
   
--   El [automática](../../../visual-basic/language-reference/modifiers/auto.md), [Ansi](../../../visual-basic/language-reference/modifiers/ansi.md), y [Unicode](../../../visual-basic/language-reference/modifiers/unicode.md) modificadores están deshabilitados. La sintaxis de la [instrucción Declare](../../../visual-basic/language-reference/statements/declare-statement.md) también se modifica la instrucción en `Declare Sub|Function name Lib "library" [Alias "alias"] [([arglist])]`. El código siguiente muestra el efecto de `/netcf` en una compilación.  
+-   El [automática](../../../visual-basic/language-reference/modifiers/auto.md), [Ansi](../../../visual-basic/language-reference/modifiers/ansi.md), y [Unicode](../../../visual-basic/language-reference/modifiers/unicode.md) modificadores están deshabilitados. La sintaxis de la [instrucción Declare](../../../visual-basic/language-reference/statements/declare-statement.md) también se modifica la instrucción en `Declare Sub|Function name Lib "library" [Alias "alias"] [([arglist])]`. El código siguiente muestra el efecto de `-netcf` en una compilación.  
   
      [!code-vb[VbVbalrCompiler#36](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/netcf_3.vb)]  
   
--   Usar palabras clave de Visual Basic 6.0 que se quitaron de [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] genera un error diferente cuando `/netcf` se utiliza. Esto afecta a los mensajes de error para las palabras clave siguientes:  
+-   Usar palabras clave de Visual Basic 6.0 que se quitaron de [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] genera un error diferente cuando `-netcf` se utiliza. Esto afecta a los mensajes de error para las palabras clave siguientes:  
   
     -   `Open`  
   
@@ -91,11 +90,11 @@ Establece el compilador con destino en [!INCLUDE[Compact](~/includes/compact-md.
 ## <a name="example"></a>Ejemplo  
  El siguiente código compila `Myfile.vb` con el [!INCLUDE[Compact](~/includes/compact-md.md)], utiliza las versiones de mscorlib.dll y Microsoft.VisualBasic.dll se encuentra en el directorio de instalación predeterminado de la [!INCLUDE[Compact](~/includes/compact-md.md)] en la unidad C:. Normalmente, se usa la versión más reciente de la [!INCLUDE[Compact](~/includes/compact-md.md)].  
   
-```  
-vbc /netcf /sdkpath:"c:\Program Files\Microsoft Visual Studio .NET 2003\CompactFrameworkSDK\v1.0.5000\Windows CE " myfile.vb  
+```console  
+vbc -netcf -sdkpath:"c:\Program Files\Microsoft Visual Studio .NET 2003\CompactFrameworkSDK\v1.0.5000\Windows CE " myfile.vb  
 ```  
   
 ## <a name="see-also"></a>Vea también  
  [Compilador de línea de comandos de Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)  
  [Líneas de comandos de compilación de ejemplo](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)  
- [/sdkpath](../../../visual-basic/reference/command-line-compiler/sdkpath.md)
+ [-sdkpath](../../../visual-basic/reference/command-line-compiler/sdkpath.md)

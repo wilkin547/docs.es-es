@@ -1,50 +1,50 @@
 ---
-title: /optioninfer
+title: -optioninfer
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - devlang-visual-basic
 ms.topic: article
 f1_keywords:
-- /optioninfer
+- -optioninfer
 helpviewer_keywords:
 - -optioninfer compiler option [Visual Basic]
 - /optioninfer compiler option [Visual Basic]
 - optioninfer compiler option [Visual Basic]
 ms.assetid: f6c09db1-0553-464a-abe3-d4510c61d6ed
-caps.latest.revision: 
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 2df7fa743e72d12dcef1aa9be5ea43d24ef43cee
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: df01fccd7276f0ec759065306ad3614d735f89ef
+ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/22/2018
 ---
-# <a name="optioninfer"></a>/optioninfer
+# <a name="-optioninfer"></a>-optioninfer
 Permite el uso de la inferencia de tipo de variable local en declaraciones de variables.  
   
 ## <a name="syntax"></a>Sintaxis  
   
 ```  
-/optioninfer[+ | -]  
+-optioninfer[+ | -]  
 ```  
   
 ## <a name="arguments"></a>Argumentos  
   
-|Término|Definición|  
+|Término|de esquema JSON|  
 |---|---|  
-|`+` &#124; `-`|Opcional. Especifique `/optioninfer+` para habilitar la inferencia de tipo de variable local o `/optioninfer-` para bloquearla. La opción `/optioninfer`, sin ningún valor especificado, es igual a `/optioninfer+`. El valor predeterminado cuando el modificador `/optioninfer` no está presente también es `/optioninfer+`. El valor predeterminado se establece en el archivo de respuesta vbc.rsp.|  
+|`+` &#124; `-`|Opcional. Especifique `-optioninfer+` para habilitar la inferencia de tipo de variable local o `-optioninfer-` para bloquearla. La opción `-optioninfer`, sin ningún valor especificado, es igual a `-optioninfer+`. El valor predeterminado cuando el modificador `-optioninfer` no está presente también es `-optioninfer+`. El valor predeterminado se establece en el archivo de respuesta vbc.rsp.|  
   
 > [!NOTE]
->  Puede utilizar la opción `/noconfig` para conservar los valores predeterminados internos del compilador en lugar de los especificados en vbc.rsp. El valor predeterminado del compilador para esta opción es `/optioninfer-`.  
+>  Puede utilizar la opción `-noconfig` para conservar los valores predeterminados internos del compilador en lugar de los especificados en vbc.rsp. El valor predeterminado del compilador para esta opción es `-optioninfer-`.  
   
 ## <a name="remarks"></a>Comentarios  
- Si el archivo de código fuente contiene un [Option Infer instrucción](../../../visual-basic/language-reference/statements/option-infer-statement.md), la instrucción anula la `/optioninfer` configuración del compilador de línea de comandos.  
+ Si el archivo de código fuente contiene un [Option Infer instrucción](../../../visual-basic/language-reference/statements/option-infer-statement.md), la instrucción anula la `-optioninfer` configuración del compilador de línea de comandos.  
   
-### <a name="to-set-optioninfer-in-the-visual-studio-ide"></a>Cómo establecer /optioninfer en el IDE de Visual Studio  
+### <a name="to-set--optioninfer-in-the-visual-studio-ide"></a>Para establecer - optioninfer en el IDE de Visual Studio  
   
 1.  Seleccione un proyecto en **el Explorador de soluciones**. En el menú **Proyecto**, haga clic en **Propiedades**.  
   
@@ -53,15 +53,15 @@ Permite el uso de la inferencia de tipo de variable local en declaraciones de va
 ## <a name="example"></a>Ejemplo  
  El siguiente código compila `test.vb` con la inferencia de tipo de variable local habilitada.  
   
-```  
-vbc /optioninfer+ test.vb  
+```console
+vbc -optioninfer+ test.vb  
 ```  
   
 ## <a name="see-also"></a>Vea también  
  [Compilador de línea de comandos de Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)  
- [/optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md)  
- [/optionexplicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md)  
- [/optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)  
+ [-optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md)  
+ [-optionexplicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md)  
+ [-optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)  
  [Líneas de comandos de compilación de ejemplo](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)  
  [Option Infer (instrucción)](../../../visual-basic/language-reference/statements/option-infer-statement.md)  
  [Inferencia de tipo de variable local](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)  

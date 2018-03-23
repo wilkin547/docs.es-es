@@ -1,10 +1,10 @@
 ---
-title: /baseaddress
-ms.date: 07/20/2015
+title: -baseaddress
+ms.date: 08/09/2018
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - /baseaddress
@@ -14,22 +14,21 @@ helpviewer_keywords:
 - /baseaddress compiler option [Visual Basic]
 - baseaddress compiler option [Visual Basic]
 ms.assetid: c982bcf2-46e5-47a2-bc8f-a5cc32b7dc47
-caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 1ad39acdec92667fbb0848a1c64c567b504dcb67
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 3abe566e7a32a0b350a4f483df5c77fa4d003367
+ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/22/2018
 ---
-# <a name="baseaddress"></a>/baseaddress
+# <a name="-baseaddress"></a>-baseaddress
 Especifica una dirección base predeterminada al crear un archivo DLL.  
   
 ## <a name="syntax"></a>Sintaxis  
   
 ```  
-/baseaddress:address  
+-baseaddress:address  
 ```  
   
 ## <a name="arguments"></a>Argumentos  
@@ -47,12 +46,12 @@ Especifica una dirección base predeterminada al crear un archivo DLL.
   
  Esta opción se omite si el destino no es un archivo DLL.  
   
-|Para establecer /baseaddress en el IDE de Visual Studio|  
+|Para establecer - baseaddress en el IDE de Visual Studio|  
 |---|  
 |1.  Seleccione un proyecto en el **Explorador de soluciones**. En el menú **Proyecto**, haga clic en **Propiedades**. <br />2.  Haga clic en la pestaña **Compilar**.<br />3.  Haga clic en **Avanzado**.<br />4.  Modifique el valor en el **dirección base del archivo DLL:** cuadro. **Nota:** el **dirección base del archivo DLL:** cuadro es de solo lectura, a menos que el destino es un archivo DLL.|  
   
 ## <a name="see-also"></a>Vea también  
  [Compilador de línea de comandos de Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)  
- [/target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)  
+ [-target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)  
  [Líneas de comandos de compilación de ejemplo](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)  
  [Sn.exe (herramienta de nombre seguro)] [Sn.exe (herramienta de nombre seguro)](../../../framework/tools/sn-exe-strong-name-tool.md))

@@ -1,10 +1,10 @@
 ---
-title: /reference (Visual Basic)
-ms.date: 07/20/2015
+title: -referencia (Visual Basic)
+ms.date: 03/13/2018
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - /reference compiler option [Visual Basic]
@@ -14,31 +14,30 @@ helpviewer_keywords:
 - reference compiler option [Visual Basic]
 - -r compiler option [Visual Basic]
 ms.assetid: 66bdfced-bbf6-43d1-a554-bc0990315737
-caps.latest.revision: "16"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: f8c6851802afa818cc80b3f6d7eafc2ef47ac689
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: rpetrusha
+ms.author: ronpet
+ms.openlocfilehash: ba879dd7079b35bea50c4a6c1d67da7aa57110f6
+ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/22/2018
 ---
-# <a name="reference-visual-basic"></a>/reference (Visual Basic)
+# <a name="-reference-visual-basic"></a>-referencia (Visual Basic)
 Hace que el compilador para que estén disponibles para el proyecto que se está compilando la información de tipo en los ensamblados especificados.  
   
 ## <a name="syntax"></a>Sintaxis  
   
 ```  
-/reference:fileList  
+-reference:fileList  
 ' -or-  
-/r:fileList  
+-r:fileList  
 ```  
   
 ## <a name="arguments"></a>Argumentos  
   
 |Término|Definición|  
 |---|---|  
-|`fileList`|Obligatorio. Lista delimitada por comas de nombres de archivos de ensamblado. Si el nombre de archivo contiene un espacio, escríbalo entre comillas.|  
+|`fileList`|Requerido. Lista delimitada por comas de nombres de archivos de ensamblado. Si el nombre de archivo contiene un espacio, escríbalo entre comillas.|  
   
 ## <a name="remarks"></a>Comentarios  
  Los archivos importados deben contener metadatos de ensamblado. Solo los tipos públicos son visibles fuera del ensamblado. El [/addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md) opción importa los metadatos de un módulo.  
@@ -49,24 +48,24 @@ Hace que el compilador para que estén disponibles para el proyecto que se está
   
 -   Se invoca a un campo, una propiedad, un evento o un método que tiene un tipo de parámetro o un tipo de valor devuelto del ensamblado B.  
   
- Use [/libpath](../../../visual-basic/reference/command-line-compiler/libpath.md) para especificar el directorio en el que se encuentran una o varias de las referencias de ensamblado.  
+ Use [- libpath](../../../visual-basic/reference/command-line-compiler/libpath.md) para especificar el directorio en el que se encuentran una o varias de las referencias de ensamblado.  
   
  Para que el compilador reconozca un tipo en un ensamblado (no un módulo), debe forzarse para resolver el tipo. Un ejemplo de cómo se puede hacer esto es definir una instancia del tipo. Otras maneras de están disponibles para resolver los nombres de tipo en un ensamblado para el compilador. Por ejemplo, si se hereda de un tipo en un ensamblado, el nombre de tipo, a continuación, se convierte en el compilador conoce.  
   
- El archivo de respuesta Vbc.rsp, que utiliza habitualmente referencias [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] ensamblados, se utiliza de forma predeterminada. Usar `/noconfig` si no desea que el compilador utilice Vbc.rsp.  
+ El archivo de respuesta Vbc.rsp, que utiliza habitualmente referencias [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] ensamblados, se utiliza de forma predeterminada. Usar `-noconfig` si no desea que el compilador utilice Vbc.rsp.  
   
- La forma abreviada de `/reference` es `/r`.  
+ La forma abreviada de `-reference` es `/r`.  
   
 ## <a name="example"></a>Ejemplo  
- El código siguiente compila el archivo de origen `Input.vb` y hace referencia a ensamblados de `Metad1.dll` y `Metad2.dll` para generar `Out.exe`.  
+ El comando siguiente compila el archivo de código fuente `Input.vb` y hacer referencia a ensamblados de `Metad1.dll` y `Metad2.dll` para generar `Out.exe`.  
   
-```  
-vbc /reference:metad1.dll,metad2.dll /out:out.exe input.vb  
+```console
+vbc -reference:metad1.dll,metad2.dll -out:out.exe input.vb  
 ```  
   
 ## <a name="see-also"></a>Vea también  
  [Compilador de línea de comandos de Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)  
- [/noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)  
- [/target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)  
+ [-noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)  
+ [-target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)  
  [Public](../../../visual-basic/language-reference/modifiers/public.md)  
  [Líneas de comandos de compilación de ejemplo](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

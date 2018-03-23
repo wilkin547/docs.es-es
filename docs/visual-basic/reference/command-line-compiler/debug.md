@@ -1,10 +1,11 @@
 ---
 title: /debug (Visual Basic)
-ms.date: 07/20/2015
+ms.date: 03/10/2018
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - debug compiler switches
@@ -12,29 +13,28 @@ helpviewer_keywords:
 - -debug compiler option [Visual Basic]
 - debug compiler option [Visual Basic]
 ms.assetid: c2b0bea5-1d5e-499f-9bd5-4f6c6b715ea2
-caps.latest.revision: "18"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 07ab386ddb456c059b6390b986ec0a880320973b
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+author: rpetrusha
+ms.author: ronpet
+ms.openlocfilehash: 7430a3ac85a86ed5528af9ea830da530208749eb
+ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/22/2018
 ---
-# <a name="debug-visual-basic"></a>/debug (Visual Basic)
+# <a name="-debug-visual-basic"></a>-debug (Visual Basic)
 Hace que el compilador generar información de depuración y almacenarla en los archivos de salida.  
   
 ## <a name="syntax"></a>Sintaxis  
   
 ```  
-/debug[+ | -]  
+-debug[+ | -]  
 ' -or-  
-/debug:[full | pdbonly]  
+-debug:[full | pdbonly]  
 ```  
   
 ## <a name="arguments"></a>Argumentos  
   
-|Término|Definición|  
+|Término|de esquema JSON|  
 |---|---|  
 |`+` &#124; `-`|Opcional. Especificar `+` o `/debug` hace que el compilador generar información de depuración y almacenarla en un archivo .pdb. Especificar `-` tiene el mismo efecto que si no se especifica `/debug`.|  
 |`full` &#124; `pdbonly`|Opcional. Especifica el tipo de información de depuración generado por el compilador. Si no se especifica `/debug:pdbonly`, el valor predeterminado es `full`, lo que permite adjuntar un depurador al programa en ejecución. El `pdbonly` argumento permite depurar el código fuente cuando se inicia el programa en el depurador, pero se mostrará el código de lenguaje de ensamblado solo cuando el programa en ejecución se adjunta al depurador.|  
@@ -46,7 +46,7 @@ Hace que el compilador generar información de depuración y almacenarla en los 
   
  Para obtener información sobre cómo configurar el rendimiento de depuración de una aplicación, consulte [Facilitar la depuración de una imagen](../../../framework/debug-trace-profile/making-an-image-easier-to-debug.md).  
   
-|Para establecer/debug en Visual Studio el entorno de desarrollo integrado|  
+|Para establecer - depurar en el entorno de desarrollo integrado de Visual Studio|  
 |---|  
 |1.  Seleccione un proyecto en el **Explorador de soluciones**y, en el menú **Proyecto** , haga clic en **Propiedades**. <br />2.  Haga clic en la pestaña **Compilar**.<br />3.  Haga clic en **Opciones de compilación avanzadas**.<br />4.  Modifique el valor en el **generar información de depuración** cuadro.|  
   
@@ -54,7 +54,7 @@ Hace que el compilador generar información de depuración y almacenarla en los 
  En el ejemplo siguiente se incluye información de depuración en el archivo de salida `App.exe`.  
   
 ```  
-vbc /debug /out:app.exe test.vb  
+vbc -debug -out:app.exe test.vb  
 ```  
   
 ## <a name="see-also"></a>Vea también  

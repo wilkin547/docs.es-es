@@ -1,10 +1,11 @@
 ---
-title: "Compilar desde la línea de comandos (Visual Basic)"
+title: Compilar desde la línea de comandos (Visual Basic)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - builds [Visual Basic], command-line
@@ -18,23 +19,21 @@ helpviewer_keywords:
 - command-line compilers [Visual Basic], Visual Basic
 - command line [Visual Basic], Visual Basic
 ms.assetid: e61947e9-a42e-4717-a699-5f70a98cdd03
-caps.latest.revision: "13"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: d982506af2c4f01e80ae5b3862fcbcfff2aa9d99
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.openlocfilehash: c3f71a84feffce46bafd92ff701a0250c059a82e
+ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="building-from-the-command-line-visual-basic"></a>Compilar desde la línea de comandos (Visual Basic)
 Un [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] proyecto se compone de uno o más archivos de código fuente independiente. Durante el proceso conocido como compilación, estos archivos se reúnen en un paquete, un solo archivo ejecutable que se pueden ejecutar como una aplicación.  
   
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]Proporciona un compilador de línea de comandos como alternativa a la compilación de programas desde el [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] el entorno de desarrollo integrado (IDE). El compilador de línea de comandos está diseñado para situaciones en las que no necesitan el conjunto completo de características del IDE, por ejemplo, cuando estén usando o escribiendo en los equipos con sistema limitados memoria o espacio de almacenamiento.  
+ [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Proporciona un compilador de línea de comandos como alternativa a la compilación de programas desde el [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] el entorno de desarrollo integrado (IDE). El compilador de línea de comandos está diseñado para situaciones en las que no necesitan el conjunto completo de características del IDE, por ejemplo, cuando estén usando o escribiendo en los equipos con sistema limitados memoria o espacio de almacenamiento.  
   
- Cuando se compila desde la línea de comandos, explícitamente debe hacer referencia a Microsoft [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] biblioteca en tiempo de ejecución a través de la `/reference` opción del compilador.  
-  
- Para compilar archivos de código fuente desde el [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] IDE, elija la **generar** línea de comandos desde el **generar** menú.  
+  Para compilar archivos de código fuente desde el [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] IDE, elija la **generar** línea de comandos desde el **generar** menú.  
   
 > [!TIP]
 >  Cuando compila los archivos de proyecto mediante el IDE de Visual Studio, puede mostrar información acerca de los asociados **vbc** comando y sus modificadores en la ventana de salida. Para mostrar esta información, abra el [cuadro de diálogo Opciones, proyectos y soluciones, compilación y ejecución](/visualstudio/ide/reference/options-dialog-box-projects-and-solutions-build-and-run)y, a continuación, establezca el **nivel de detalle de la salida de compilación del proyecto de MSBuild** a **Normal** o un mayor nivel de detalle. Para obtener más información, consulte [Cómo: Ver, guardar y configurar archivos de registro de compilación](http://msdn.microsoft.com/library/75d38b76-26d6-4f43-bbe7-cbacd7cc81e7).  

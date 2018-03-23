@@ -1,41 +1,40 @@
 ---
-title: /optioncompare
+title: -optioncompare
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.suite: ''
 ms.technology:
 - devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - /optioncompare
+- -optioncompare
 helpviewer_keywords:
 - optioncompare compiler option [Visual Basic]
 - -optioncompare compiler option [Visual Basic]
 - /optioncompare compiler option [Visual Basic]
 ms.assetid: 7237b766-b44d-4cc5-9a3c-885348a7d9e4
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 62a9a4bf3428f3ee731e7ecc63be51dbf3076ee4
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+author: rpetrusha
+ms.author: ronpet
+ms.openlocfilehash: 033be2ce3845ed470d56c2097b89b81d10275046
+ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/22/2018
 ---
-# <a name="optioncompare"></a>/optioncompare
+# <a name="-optioncompare"></a>-optioncompare
 Especifica la forma en que se realizan las comparaciones de cadenas.  
   
 ## <a name="syntax"></a>Sintaxis  
   
 ```  
-/optioncompare:{binary | text}  
+-optioncompare:{binary | text}  
 ```  
   
 ## <a name="remarks"></a>Comentarios  
- Puede especificar `/optioncompare` en uno de dos formas: `/optioncompare:binary` usar comparaciones de cadenas binarias y `/optioncompare:text` usar comparaciones de cadenas de texto. De forma predeterminada, el compilador utiliza `/optioncompare:binary`.  
+ Puede especificar `-optioncompare` en uno de dos formas: `-optioncompare:binary` usar comparaciones de cadenas binarias y `-optioncompare:text` usar comparaciones de cadenas de texto. De forma predeterminada, el compilador utiliza `-optioncompare:binary`.  
   
- En Microsoft Windows, la página de códigos que se va a usar determina el criterio de ordenación binario. Un criterio de ordenación binario típico es como sigue:  
+ En Microsoft Windows, la página de códigos actual determina el criterio de ordenación binario. Un criterio de ordenación binario típico es como sigue:  
   
  `A < B < E < Z < a < b < e < z < À < Ê < Ø < à < ê < ø`  
   
@@ -43,7 +42,7 @@ Especifica la forma en que se realizan las comparaciones de cadenas.
   
  `(A = a) < (À = à) < (B=b) < (E=e) < (Ê = ê) < (Z=z) < (Ø = ø)`  
   
-### <a name="to-set-optioncompare-in-the-visual-studio-ide"></a>Para establecer /optioncompare en el IDE de Visual Studio  
+### <a name="to-set--optioncompare-in-the-visual-studio-ide"></a>Para establecer - optioncompare en el IDE de Visual Studio  
   
 1.  Seleccione un proyecto en el **Explorador de soluciones**. En el menú **Proyecto**, haga clic en **Propiedades**.   
   
@@ -51,22 +50,22 @@ Especifica la forma en que se realizan las comparaciones de cadenas.
   
 3.  Modifique el valor en el **Option Compare** cuadro.  
   
-### <a name="to-set-optioncompare-programmatically"></a>Para establecer /optioncompare mediante programación  
+### <a name="to-set--optioncompare-programmatically"></a>Para establecer - optioncompare mediante programación  
   
 -   Vea [Option Compare (instrucción)](../../../visual-basic/language-reference/statements/option-compare-statement.md).  
   
 ## <a name="example"></a>Ejemplo  
  El siguiente código compila `ProjFile.vb` y utiliza comparaciones de cadenas binarias.  
   
-```  
-vbc /optioncompare:binary projFile.vb  
+```console
+vbc -optioncompare:binary projFile.vb  
 ```  
   
 ## <a name="see-also"></a>Vea también  
  [Compilador de línea de comandos de Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)  
- [/optionexplicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md)  
- [/optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)  
- [/optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md)  
+ [-optionexplicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md)  
+ [-optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)  
+ [-optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md)  
  [Líneas de comandos de compilación de ejemplo](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)  
  [Option Compare (instrucción)](../../../visual-basic/language-reference/statements/option-compare-statement.md)  
  [Valores predeterminados de Visual Basic, Proyectos, Opciones (Cuadro de diálogo)](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)
