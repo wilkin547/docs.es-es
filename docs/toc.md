@@ -64,9 +64,9 @@
 # [Guía de .NET Core](core/index.md)
 ## [Introducción](core/get-started.md)
 ### [Introducción a C# y Visual Studio Code](core/tutorials/with-visual-studio-code.md)
-### [Build a C# Hello World app with .NET Core in Visual Studio 2017](core/tutorials/with-visual-studio.md) (Compilación de una aplicación Hola mundo de C# con .NET Core en Visual Studio 2017)
-### [Build a Visual Basic Hello World app with .NET Core in Visual Studio 2017](core/tutorials/vb-with-visual-studio.md) (Compilación de una aplicación Hola mundo de Visual Basic con .NET Core en Visual Studio 2017)
-### [Build a class library with C# and .NET Core in Visual Studio 2017](core/tutorials/library-with-visual-studio.md) (Compilación de una biblioteca de clases con C# y .NET Core en Visual Studio 2017)
+### [Compilación de una aplicación Hola mundo de C# con .NET Core en Visual Studio 2017](core/tutorials/with-visual-studio.md)
+### [Compilación de una aplicación Hola mundo de Visual Basic con .NET Core en Visual Studio 2017](core/tutorials/vb-with-visual-studio.md)
+### [Compilación de una biblioteca de clases con C# y .NET Core en Visual Studio](core/tutorials/library-with-visual-studio.md)
 ### [Creación de una biblioteca de clases con Visual Basic y .NET Core en Visual Studio 2017](core/tutorials/vb-library-with-visual-studio.md)
 ## [Requisitos previos de Windows](core/windows-prerequisites.md)
 ## [Requisitos previos de macOS](core/macos-prerequisites.md)
@@ -163,7 +163,7 @@
 ### [Uso del paquete de compatibilidad de Windows](core/porting/windows-compat-pack.md)
 <!--### [🔧 NuGet packages](core/porting/nuget-packages.md)-->
 ## [Compilar .NET Core desde el código fuente](core/build/index.md)
-### [.NET Core distribution packaging](core/build/distribution-packaging.md) (Empaquetado de distribución de .NET Core)
+### [Empaquetado de distribución de .NET Core](core/build/distribution-packaging.md)
 ## [Documentos de VS 2015/project.json](project-json.md)
 <!-- End .NET Core Content -->
 
@@ -283,7 +283,7 @@
 ### [Introducción a Visual Studio](fsharp/get-started/get-started-visual-studio.md)
 ### [Introducción a Visual Studio para Mac](fsharp/get-started/get-started-with-visual-studio-for-mac.md)
 ### [Introducción a Visual Studio Code e Ionide](fsharp/get-started/get-started-vscode.md)
-### [Get Started with the .NET Core CLI](fsharp/get-started/get-started-command-line.md) (Introducción a la CLI de .NET Core)
+### [Introducción a la CLI de .NET Core](fsharp/get-started/get-started-command-line.md)
 <!--## [Tutorials](fsharp/tutorials/index.md)-->
 ## Tutoriales
 ### [F# Interactive](fsharp/tutorials/fsharp-interactive/index.md)
