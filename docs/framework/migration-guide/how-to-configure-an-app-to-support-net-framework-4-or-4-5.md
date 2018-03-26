@@ -1,28 +1,30 @@
 ---
-title: "Cómo: Configurar una aplicación para que admita .NET Framework 4 o 4.5"
-ms.custom: 
+title: 'Cómo: Configurar una aplicación para que admita .NET Framework 4 o 4.5'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - configuring apps to support .NET Framework 4
 - .NET Framework 4, configuring apps
 - .NET Framework 4.5, configuring apps
 ms.assetid: 63c6b9a8-0088-4077-9aa3-521ab7290f79
-caps.latest.revision: "14"
+caps.latest.revision: ''
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 4ba3d248dbdd81cf2e2e4445d1e1eb160605542c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: HT
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="how-to-configure-an-app-to-support-net-framework-4-or-45"></a>Cómo: Configurar una aplicación para que admita .NET Framework 4 o 4.5
 Todas las aplicaciones que hospedan Common Language Runtime (CLR) necesitan iniciar o *activar* CLR para ejecutar código administrado. Normalmente, una aplicación de .NET Framework se ejecuta en la versión de CLR en la que se compiló, pero puede cambiar este comportamiento para las aplicaciones de escritorio mediante un archivo de configuración de la aplicación (que suele recibir el nombre de archivo app.config). Sin embargo, no puede cambiar el comportamiento predeterminado de activación para las aplicaciones de la Tienda Windows o Windows Phone mediante un archivo de configuración de la aplicación. En este artículo se explica cómo permitir que la aplicación de escritorio se ejecute en otra versión de .NET Framework y se proporciona un ejemplo de cómo establecer la versión 4 o 4.5 como destino.  

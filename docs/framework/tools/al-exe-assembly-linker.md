@@ -1,12 +1,13 @@
 ---
 title: Al.exe (Assembly Linker)
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Al.exe
@@ -14,16 +15,17 @@ helpviewer_keywords:
 - modules, Assembly Linker
 - assembly manifest, Assembly Linker
 ms.assetid: b5382965-0053-47cf-b92f-862860275a01
-caps.latest.revision: "37"
+caps.latest.revision: ''
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 830c141a13f2a7676e120600e05d786093a5ff44
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: HT
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="alexe-assembly-linker"></a>Al.exe (Assembly Linker)
 
@@ -46,7 +48,7 @@ al sources options
 
 Puede especificar uno o varios de los siguientes orígenes (`sources`).
 
-| Origen | Description |
+| Origen | Descripción |
 | ------ | ----------- |
 |`file`[,`target`]|Copia el contenido de `file` (un módulo) en el nombre de archivo especificado en `target`. Después de la copia, *Al.exe* compila `target` en un ensamblado.|
 |**/embed[resource]:** `file`[,`name`[,`private`]]|Inserta el recurso especificado en `file` en la imagen que contiene el manifiesto del ensamblado; *Al.exe* copia el contenido de `file` en la imagen portable ejecutable (PE).<br /><br /> El parámetro `name` es un identificador interno del recurso. De forma predeterminada, los recursos son públicos en el ensamblado (visibles para otros ensamblados). Si se especifica `private`, el recurso no es visible para otros ensamblados.<br /><br /> Si `file` es un archivo de recursos de .NET Framework creado, por ejemplo, por el [Generador de archivos de recursos *Resgen.exe*)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) o en el entorno de desarrollo, se puede tener acceso al mismo con miembros del <xref:System.Resources>. Para obtener más información, consulta <xref:System.Resources.ResourceManager>. Para todos los demás recursos, use los métodos `GetManifestResource`* de <xref:System.Reflection.Assembly> para obtener acceso al recurso en tiempo de ejecución.<br /><br /> Si solo se pasan archivos de recursos a *Al.exe*, el archivo de salida es un ensamblado de recursos satélite.|
@@ -54,7 +56,7 @@ Puede especificar uno o varios de los siguientes orígenes (`sources`).
 
 Se pueden especificar las siguientes `options`; debe especificar **/out**.
 
-| Opción | Description |
+| Opción | Descripción |
 | ------ | ----------- |
 |**/algid:** `id`|Especifica un algoritmo que genera un valor hash para todos los archivos en un ensamblado de múltiples archivos, exceptuando el archivo que contiene el manifiesto del ensamblado. El algoritmo predeterminado es CALG_SHA1. Para obtener información sobre otros algoritmos, vea ALG_ID en la documentación de Platform SDK. En la primera versión de .NET Framework, solo son válidos los algoritmos CALG_SHA1 y CALG_MD5.<br /><br /> Los valores hash se almacenan en la tabla de archivos del manifiesto del ensamblado. Durante la instalación y la carga, se cotejan los valores hash de los archivos del ensamblado.<br /><br /> También puede especificar esta opción como un atributo personalizado (<xref:System.Reflection.AssemblyAlgorithmIdAttribute>) en el código fuente de cualquier módulo.|
 |**/base[address]:** `addr`|Especifica la dirección donde se cargará un archivo DLL en el equipo del usuario en tiempo de ejecución. Las aplicaciones se cargan con mayor rapidez si se especifica la dirección base de los archivos DLL, en lugar de dejar que el sistema operativo cambie la ubicación de los mismos en el espacio de proceso.|
@@ -78,7 +80,7 @@ Se pueden especificar las siguientes `options`; debe especificar **/out**.
 |**/platform:** `text`|Limita en qué plataformas se puede ejecutar este código; debe ser x86, Itanium, x64, anycpu (valor predeterminado) o anycpu32bitpreferred.|
 |**/prod[uct]:** `text`|Especifica una cadena para el campo **Producto** del ensamblado. Si `text` contiene algún espacio, escriba la cadena entre comillas dobles (" "). Esta cadena es un atributo personalizado del ensamblado y se puede ver con el mecanismo de reflexión.<br /><br /> Si no especifica **/win32res**, en el Explorador de archivos aparecerá **/product** como el recurso **Nombre del producto** de Win32.<br /><br /> Si el texto es una cadena vacía, el recurso **Nombre del producto** de Win32 aparece como un único espacio.<br /><br /> Si especifica **/win32res**, **/product** no tendrá ningún efecto en la información de recursos de Win32.<br /><br /> También puede especificar esta opción como un atributo personalizado (<xref:System.Reflection.AssemblyProductAttribute>) en el código fuente de cualquier módulo MSIL.|
 |**/productv[ersion]:** `text`|Especifica una cadena para el campo **Versión del producto** del ensamblado. Si `text` contiene algún espacio, escriba la cadena entre comillas dobles (" "). Esta cadena es un atributo personalizado del ensamblado y se puede ver con el mecanismo de reflexión.<br /><br /> Si no especifica **/win32res**, en el Explorador de archivos aparecerá **/productversion** como el recurso **Versión del producto** de Win32. Si no especifica **/productversion**, el recurso **Versión del producto** de Win32 se rellenará con el recurso **Versión del archivo** de Win32.<br /><br /> Si especifica **/win32res**, **/productversion** no tendrá ningún efecto en la información de recursos de Win32.<br /><br /> También puede especificar esta opción como un atributo personalizado (<xref:System.Reflection.AssemblyInformationalVersionAttribute>) en el código fuente de cualquier módulo MSIL.|
-|**/t[arget]:** `lib[rary]` &#124; `exe` &#124; `win[exe]`|Especifica el formato del archivo de salida: `lib[rary]` (biblioteca de códigos), `exe` (aplicación de consola) o `win[exe]` (aplicación basada en Windows). El valor predeterminado es `lib[rary]`.|
+|**/t[arget]:** `lib[rary]` &#124; `exe` &#124; `win[exe]`|Especifica el formato del archivo de salida: `lib[rary]` (biblioteca de códigos), `exe` (aplicación de consola) o `win[exe]` (aplicación basada en Windows). De manera predeterminada, es `lib[rary]`.|
 |**/template:** `filename`|Especifica el ensamblado, `filename`, del que se heredarán todos los metadatos del ensamblado, salvo el campo correspondiente a la referencia cultural.<br /><br /> Los ensamblados creados con **/template** serán ensamblados satélite.|
 |**/title:** `text`|Especifica una cadena para el campo **Título** del ensamblado. Si `text` contiene algún espacio, escriba la cadena entre comillas dobles (" "). Esta cadena es un atributo personalizado del ensamblado y se puede ver con el mecanismo de reflexión.<br /><br /> Si no especifica **/win32res**, en el Explorador de archivos aparecerá **/title** como el recurso **Descripción** de Win32, usado por el shell como nombre descriptivo de una aplicación. También se muestra en el submenú **Abrir con** del menú contextual de un tipo de archivo para el que existen varias aplicaciones compatibles.<br /><br /> Si el texto es una cadena vacía, el recurso **Descripción** de Win32 aparece como un único espacio.<br /><br /> Si especifica **/win32res**, **/title** no tendrá ningún efecto en la información de recursos de Win32.<br /><br /> También puede especificar esta opción como un atributo personalizado (<xref:System.Reflection.AssemblyTitleAttribute>) en el código fuente de cualquier módulo MSIL.|
 |**/trade[mark]:** `text`|Especifica una cadena para el campo **Marca registrada** del ensamblado. Si `text` contiene algún espacio, escriba la cadena entre comillas dobles (" "). Esta cadena es un atributo personalizado del ensamblado y se puede ver con el mecanismo de reflexión.<br /><br /> Si no especifica **/win32res**, en el Explorador de archivos aparecerá **/trademark** como el recurso **Marca registrada** de Win32.<br /><br /> Si el texto es una cadena vacía, el recurso **Marca registrada** de Win32 aparece como un único espacio.<br /><br /> Si especifica **/win32res**, **/trademark** no tendrá ningún efecto en la información de recursos de Win32.<br /><br /> También puede especificar esta opción como un atributo personalizado (<xref:System.Reflection.AssemblyTrademarkAttribute>) en el código fuente de cualquier módulo MSIL.|
@@ -98,7 +100,7 @@ Para instalar ensamblados en la memoria caché, quitar ensamblados de la memoria
 
 En la tabla siguiente se enumeran los errores generados por *Al.exe*.
 
-| Error | Description |
+| Error | Descripción |
 | ----- | ----------- |
 |al1001|Error interno del compilador<br /><br /> Intente determinar si *Al.exe* está fallando porque no puede analizar una sintaxis inesperada. A continuación, póngase en contacto con los servicios de soporte técnico de Microsoft.|
 |al1002|Memoria agotada<br /><br /> *Al.exe* se ha quedado sin memoria y se ha detenido. Aumente la cantidad de memoria disponible.|

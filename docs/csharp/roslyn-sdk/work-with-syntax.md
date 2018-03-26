@@ -1,6 +1,6 @@
 ---
 title: Usar el modelo de sintaxis del SDK de .NET Compiler Platform
-description: "En este tema se proporciona una descripción de los tipos que se usan para entender y manipular nodos de sintaxis."
+description: En este tema se proporciona una descripción de los tipos que se usan para entender y manipular nodos de sintaxis.
 author: billwagner
 ms.author: wiwagn
 ms.date: 10/15/2017
@@ -9,10 +9,10 @@ ms.prod: .net
 ms.devlang: devlang-csharp
 ms.custom: mvc
 ms.openlocfilehash: 09d07e6257ad7d32d75328a8c1850888b4d0b937
-ms.sourcegitcommit: 099aa20d9b6450d1b7452d782a55771a6ad8ff35
-ms.translationtype: HT
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/05/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="work-with-syntax"></a>Trabajar con sintaxis
 
@@ -69,7 +69,7 @@ A diferencia de los nodos y los tokens de sintaxis, las curiosidades de sintaxis
 
 Cada nodo, token o curiosidad conoce su posición dentro del texto de origen y el número de caracteres del que se compone. Una posición de texto se representa como un entero de 32 bits, que es un índice `char` de base cero. Un objeto <xref:Microsoft.CodeAnalysis.Text.TextSpan> es la posición inicial y un recuento de caracteres, ambos representados como enteros. Si <xref:Microsoft.CodeAnalysis.Text.TextSpan> tiene una longitud cero, hace referencia a una ubicación entre dos caracteres.
 
-Cada nodo tiene dos propiedades <xref:Microsoft.CodeAnalysis.Text.TextSpan>: <xref:Microsoft.CodeAnalysis.SyntaxNode.Span*> y <xref:Microsoft.CodeAnalysis.SyntaxNode.FullSpan*>. 
+Cada nodo tiene dos <xref:Microsoft.CodeAnalysis.Text.TextSpan> propiedades: <xref:Microsoft.CodeAnalysis.SyntaxNode.Span*> y <xref:Microsoft.CodeAnalysis.SyntaxNode.FullSpan*>. 
 
 La propiedad <xref:Microsoft.CodeAnalysis.SyntaxNode.Span*> es el intervalo de texto desde el principio del primer token del subárbol del nodo al final del último token. Este intervalo no incluye ninguna curiosidad inicial ni final.
 
@@ -89,7 +89,7 @@ El nodo de la instrucción dentro del bloque tiene un intervalo indicado por las
 
 ## <a name="kinds"></a>Tipos
 
-Cada nodo, token o curiosidad tiene una propiedad <xref:Microsoft.CodeAnalysis.SyntaxNode.RawKind?displayProperty=nameWithType>, de tipo <xref:System.Int32?displayProperty=nameWithType>, que identifica el elemento de sintaxis exacto representado. Este valor se puede convertir en una enumeración específica del lenguaje; cada lenguaje, C# o VB, tiene una sola enumeración `SyntaxKind` (<xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind?displayProperty=nameWithType> y <xref:Microsoft.CodeAnalysis.VisualBasic.SyntaxKind?displayProperty=nameWithType>, respectivamente) que enumera todos los posibles nodos, tokens y curiosidades de la gramática. Esta conversión se puede realizar automáticamente al acceder a los métodos de extensión <xref:Microsoft.CodeAnalysis.CSharp.CSharpExtensions.Kind*?displayProperty=nameWithType> o <xref:Microsoft.CodeAnalysis.VisualBasic.VisualBasicExtensions.Kind*?displayProperty=nameWithType>.
+Cada nodo, token o curiosidad tiene una propiedad <xref:Microsoft.CodeAnalysis.SyntaxNode.RawKind?displayProperty=nameWithType>, de tipo <xref:System.Int32?displayProperty=nameWithType>, que identifica el elemento de sintaxis exacto representado. Este valor se puede convertir en una enumeración específica del lenguaje; cada lenguaje, C# o VB, tiene una sola enumeración `SyntaxKind` (<xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind?displayProperty=nameWithType> y <xref:Microsoft.CodeAnalysis.VisualBasic.SyntaxKind?displayProperty=nameWithType>, respectivamente) que enumera todos los posibles nodos, tokens y curiosidades de la gramática. Se puede realizar esta conversión automáticamente mediante el acceso a la <xref:Microsoft.CodeAnalysis.CSharp.CSharpExtensions.Kind*?displayProperty=nameWithType> o <xref:Microsoft.CodeAnalysis.VisualBasic.VisualBasicExtensions.Kind*?displayProperty=nameWithType> métodos de extensión.
 
 La propiedad <xref:Microsoft.CodeAnalysis.SyntaxToken.RawKind> permite anular fácilmente la ambigüedad de los tipos de nodos de sintaxis que comparten la misma clase de nodos. En el caso de los tokens y las curiosidades, esta propiedad es la única manera de distinguir un tipo de elemento de otro. 
 

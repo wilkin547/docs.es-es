@@ -1,7 +1,7 @@
 ---
-title: "Creación de una plantilla personalizada para dotnet new"
-description: "Obtenga información sobre cómo crear una plantilla personalizada para el comando dotnet new en este ameno tutorial."
-keywords: ".NET, .NET Core, plantilla, creación de plantillas, tutorial, dotnet new"
+title: Creación de una plantilla personalizada para dotnet new
+description: Obtenga información sobre cómo crear una plantilla personalizada para el comando dotnet new en este ameno tutorial.
+keywords: .NET, .NET Core, plantilla, creación de plantillas, tutorial, dotnet new
 author: guardrex
 ms.author: mairaw
 ms.date: 08/12/2017
@@ -12,10 +12,10 @@ ms.assetid: 519b910a-6efe-4394-9b81-0546aa3e7462
 ms.workload:
 - dotnetcore
 ms.openlocfilehash: 7830a437b46d2080efc65f43f9112503add4c305
-ms.sourcegitcommit: 3eea47bff3201ae5d3395b0c7947806c2faca255
-ms.translationtype: HT
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="create-a-custom-template-for-dotnet-new"></a>Creación de una plantilla personalizada para dotnet new
 
@@ -74,7 +74,7 @@ Ha terminado la plantilla. Una vez hecho esto, tiene dos opciones para la distri
 
 1. Dentro de un elemento **\<packageTypes>** en el archivo *nuspec*, incluya un elemento **\<packageType>** con un valor de atributo `name` de `Template`. Tanto la carpeta *content* como el archivo *nuspec* deben estar en el mismo directorio. En la tabla se muestran los elementos de archivo *nuspec* mínimos necesarios para generar una plantilla como un paquete NuGet.
 
-   | Elemento            | Tipo   | Description |
+   | Elemento            | Tipo   | Descripción |
    | ------------------ | ------ | ----------- |
    | **\<authors>**     | cadena | Una lista separada por comas de los autores de los paquetes, que coinciden con los nombres de perfil de nuget.org. Estos se muestran en la galería de NuGet, en nuget.org, y se usan para hacer referencias cruzadas a paquetes de los mismos autores. |
    | **\<description>** | cadena | Una descripción larga del paquete para su visualización en la interfaz de usuario. |

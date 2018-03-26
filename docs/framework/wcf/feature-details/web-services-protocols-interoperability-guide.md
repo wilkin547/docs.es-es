@@ -1,24 +1,26 @@
 ---
-title: "Guía de interoperabilidad de los protocolos de servicios web"
-ms.custom: 
+title: Guía de interoperabilidad de los protocolos de servicios web
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f2981678-ebdb-433d-899b-467f7df95fb2
-caps.latest.revision: "20"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 6b962452b6127d259733418969f1fb7b5036b1e5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="web-services-protocols-interoperability-guide"></a>Guía de interoperabilidad de los protocolos de servicios web
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] implementa varios protocolos de servicio web. Muchos de estos protocolos incluyen distintas opciones y puntos de extensibilidad que son decisión del responsable de la implementación. Este tema ofrece una lista de los protocolos de servicios web implementados por [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Otros temas incluidos en esta sección proporcionan información detallada acerca de la implementación de cada protocolo admitido.  
@@ -26,7 +28,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="web-services-protocols-implemented-by-wcf"></a>Protocolos de servicios web implementados por WCF  
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ofrece compatibilidad con los protocolos de la infraestructura de servicios web (WS) a través de las características de los contratos de canales, y los protocolos de aplicación de los servicio web. La interoperabilidad de los protocolos de aplicación se consigue mediante el lenguaje de descripción Esquema XML 1.0 (XSD) y el Lenguaje de descripción de servicios Web (WSDL) 1.1.  
   
- La interoperabilidad de los protocolos de infraestructura la proporcionan las especificaciones de WS-*. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]los canales proporcionan compatibilidad para un número de WS -\* protocolos de infraestructura. Los canales de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] se configuran mediante elementos de enlace. Las tablas siguientes contienen la lista completa de WS -\* protocolos de infraestructura implementados por distintos [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] elementos de enlace.  
+ La interoperabilidad de los protocolos de infraestructura la proporcionan las especificaciones de WS-*. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] los canales proporcionan compatibilidad para un número de WS -\* protocolos de infraestructura. Los canales de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] se configuran mediante elementos de enlace. Las tablas siguientes contienen la lista completa de WS -\* protocolos de infraestructura implementados por distintos [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] elementos de enlace.  
   
  <xref:System.ServiceModel.Channels.HttpTransportBindingElement> admite las especificaciones de la tabla siguiente.  
   

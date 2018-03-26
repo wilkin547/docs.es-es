@@ -1,6 +1,6 @@
 ---
-title: "Diseño de la capa de persistencia de infraestructura"
-description: "Arquitectura de microservicios de .NET para aplicaciones .NET en contenedores | Diseño de la capa de persistencia de infraestructura"
+title: Diseño de la capa de persistencia de infraestructura
+description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedores | Diseño de la capa de persistencia de infraestructura
 keywords: Docker, microservicios, ASP.NET, contenedor
 author: CESARDELATORRE
 ms.author: wiwagn
@@ -12,10 +12,10 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: 76db5388c75d4eb3b5cc23c1e57cc391a15f2934
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: HT
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="designing-the-infrastructure-persistence-layer"></a>Diseño de la capa de persistencia de infraestructura
 
@@ -138,30 +138,30 @@ En las próximas secciones, se explica cómo implementar el patrón de especific
 
 ### <a name="the-repository-pattern"></a>El modelo de repositorio
 
--   **Edward Hieatt y Rob Mee. Repository pattern. (El modelo de repositorio)**
+-   **Edward Hieatt y Rob Mee. Modelo de repositorio.**
     [*http://martinfowler.com/eaaCatalog/repository.html*](http://martinfowler.com/eaaCatalog/repository.html)
 
--   **The Repository pattern (El modelo de repositorio)**
+-   **El modelo de repositorio**
     [*https://msdn.microsoft.com/library/ff649690.aspx*](https://msdn.microsoft.com/library/ff649690.aspx)
 
--   **Repository Pattern: A data persistence abstraction (El modelo de repositorio: una abstracción de la persistencia de datos)**
+-   **Modelo de repositorio: Una persistencia abstracción de datos**
     [*http://deviq.com/repository-pattern/*](http://deviq.com/repository-pattern/)
 
--   **Eric Evans. Domain-Driven Design: Tackling Complexity in the Heart of Software (Diseño controlado por dominios: abordar la complejidad en el corazón del software).** (Libro; incluye una explicación sobre el modelo de repositorio) [*https://www.amazon.es/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/*](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
+-   **Eric Evans. Domain-Driven Design: Tackling Complexity in the Heart of Software** (Diseño guiado por el dominio: abordar la complejidad en el corazón del software). (Libro; incluye una explicación sobre el modelo de repositorio) [*https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/*](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
 
 ### <a name="unit-of-work-pattern"></a>Patrón de unidades de trabajo
 
--   **Martin Fowler. Unit of Work pattern. (Patrón de unidades de trabajo)**
+-   **Martin Fowler. Unidad de patrón de trabajo.**
     [*http://martinfowler.com/eaaCatalog/unitOfWork.html*](http://martinfowler.com/eaaCatalog/unitOfWork.html)
 
 <!-- -->
 
--   **Implementing the Repository and Unit of Work Patterns in an ASP.NET MVC Application (Implementación de los patrones de repositorio y unidad de trabajo en una aplicación ASP.NET MVC)**
-    [*https://www.asp.net/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application*](https://www.asp.net/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application)
+-   **Implementing the Repository and Unit of Work Patterns in an ASP.NET MVC Application**
+    [*https://www.asp.net/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application*](https://www.asp.net/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application) (Implementación de los patrones de repositorio y unidad de trabajo en una aplicación MVC de ASP.NET)
 
 ### <a name="the-specification-pattern"></a>El patrón de especificación
 
--   **The Specification pattern. (El patrón de especificación)**
+-   **El patrón de la especificación.**
     [*http://deviq.com/specification-pattern/*](http://deviq.com/specification-pattern/)
 
 -   **Evans, Eric (2004). Domain Driven Design (Diseño controlado por dominios). Addison-Wesley. p. 224.**

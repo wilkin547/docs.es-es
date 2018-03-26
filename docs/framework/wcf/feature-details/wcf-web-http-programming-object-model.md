@@ -1,24 +1,26 @@
 ---
-title: "Modelo de objetos de programación web HTTP de WCF"
-ms.custom: 
+title: Modelo de objetos de programación web HTTP de WCF
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ed96b5fc-ca2c-4b0d-bdba-d06b77c3cb2a
-caps.latest.revision: "40"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: d71a373d3410c90f405a37e104e7d1b440a7aa14
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="wcf-web-http-programming-object-model"></a>Modelo de objetos de programación web HTTP de WCF
 El modelo de programación WEB HTTP de WCF permite a los desarrolladores exponer los servicios Web de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] a través de solicitudes HTTP básicas sin necesidad de SOAP. El modelo de programación WEB HTTP de WCF se compila a partir del modelo de extensibilidad [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] existente. Define las clases siguientes:  
@@ -108,7 +110,7 @@ El modelo de programación WEB HTTP de WCF permite a los desarrolladores exponer
  El modelo de programación WEB HTTP de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] no usa mensajes basados en SOAP y, por lo tanto, no es compatible con los protocolos WS-*. No obstante, puede exponer el mismo contrato en dos puntos de conexión diferentes, uno que use SOAP y otro que no lo haga. Vea [Cómo: exponer un contrato para clientes Web y SOAP](../../../../docs/framework/wcf/feature-details/how-to-expose-a-contract-to-soap-and-web-clients.md) para obtener un ejemplo.  
   
 ## <a name="security"></a>Seguridad  
- Dado que el modelo de programación WEB HTTP de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] no admite los protocolos WS-*, la única manera de proteger un servicio web compilado en el modelo de programación WEB HTTP de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] consiste en exponer el servicio mediante SSL. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Cómo configurar SSL con [!INCLUDE[iisver](../../../../includes/iisver-md.md)] vea [cómo implementar SSL en IIS](http://go.microsoft.com/fwlink/?LinkId=131613)  
+ Dado que el modelo de programación WEB HTTP de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] no admite los protocolos WS-*, la única manera de proteger un servicio web compilado en el modelo de programación WEB HTTP de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] consiste en exponer el servicio mediante SSL. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Cómo configurar SSL con [!INCLUDE[iisver](../../../../includes/iisver-md.md)] vea [cómo implementar SSL en IIS](http://go.microsoft.com/fwlink/?LinkId=131613)  
   
 ## <a name="see-also"></a>Vea también  
  <xref:System.ServiceModel.WebHttpBinding>  

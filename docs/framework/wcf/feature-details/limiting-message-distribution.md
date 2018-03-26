@@ -1,24 +1,26 @@
 ---
-title: "Limitación de la distribución de mensajes"
-ms.custom: 
+title: Limitación de la distribución de mensajes
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 8b5ec4b8-1ce9-45ef-bb90-2c840456bcc1
-caps.latest.revision: "10"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: b4d81583a8dfc2c48fb9b7533f071495b562615e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="limiting-message-distribution"></a>Limitación de la distribución de mensajes
 El canal del mismo nivel es, por diseño, una malla de difusión. Su modelo de distribución básico implica la distribución de cada mensaje enviado por cualquier miembro de una malla a todos los demás miembros de esa malla. Esto es ideal en situaciones en las que cada mensaje generado por un miembro es relevante y útil para todos los demás miembros (por ejemplo, en un salón de chat). Sin embargo, muchas aplicaciones tienen una necesidad ocasional de limitar la distribución de mensajes. Por ejemplo, si un nuevo miembro se une a una malla y desea recuperar el último mensaje enviado a través de la malla, esta solicitud no necesita ser distribuida a cada miembro. La solicitud podría limitarse a los vecinos próximos o podrían filtrarse los mensajes generados localmente. Los mensajes también se pueden enviar a un nodo individual de la malla. En este tema se analiza el uso del número de saltos, de un filtro de propagación de mensajes, de un filtro local o de una conexión directa para controlar la forma en que los mensajes se reenvían a lo largo de la malla, y se proporcionan instrucciones de carácter general para elegir un enfoque.  
@@ -55,7 +57,7 @@ El canal del mismo nivel es, por diseño, una malla de difusión. Su modelo de d
   
  Las respuestas a estas preguntas pueden ayudarle a determinar si debe utilizar el número de saltos, un filtro de propagación de mensajes, un filtro local o una conexión directa. Considere las siguientes pautas de carácter general:  
   
--   **Quién**  
+-   **Who**  
   
     -   *Nodo individual*: filtro Local o conexión directa.  
   

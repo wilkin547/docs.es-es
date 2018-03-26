@@ -1,6 +1,6 @@
 ---
-title: "Validación del lado cliente (validación de los niveles de presentación)"
-description: "Arquitectura de microservicios de .NET para aplicaciones .NET en contenedores | Validación del lado cliente (validación de los niveles de presentación)"
+title: Validación del lado cliente (validación de los niveles de presentación)
+description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedores | Validación del lado cliente (validación de los niveles de presentación)
 keywords: Docker, microservicios, ASP.NET, contenedor
 author: CESARDELATORRE
 ms.author: wiwagn
@@ -12,10 +12,10 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: 273aa0a8ceb7f683999f1074faae0a6aa303f9be
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
-ms.translationtype: HT
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="client-side-validation-validation-in-the-presentation-layers"></a>Validación del lado cliente (validación de los niveles de presentación)
 
@@ -35,23 +35,23 @@ La implementación de la validación del lado cliente depende del tipo de aplica
 
 ### <a name="validation-in-xamarin-mobile-apps"></a>Validación en aplicaciones móviles de Xamarin
 
--   **Validate Text Input and Show Errors (Validar entrada de texto y mostrar errores)**
-    [*https://developer.xamarin.com/recipes/ios/standard\_controls/text\_field/validate\_input/*](https://developer.xamarin.com/recipes/ios/standard_controls/text_field/validate_input/)
+-   **Validar entrada de texto y mostrar errores**
+    [*https://developer.xamarin.com/recipes/ios/standard\_controles o texto\_campo/validar\_entrada /*](https://developer.xamarin.com/recipes/ios/standard_controls/text_field/validate_input/)
 
--   **Validation Callback (Devolución de llamada de validación)**
+-   **Devolución de llamada de validación**
     [*https://developer.xamarin.com/samples/xamarin-forms/XAML/ValidationCallback/*](https://developer.xamarin.com/samples/xamarin-forms/XAML/ValidationCallback/)
 
 ### <a name="validation-in-aspnet-core-apps"></a>Validación en aplicaciones ASP.NET Core
 
--   **Rick Anderson. Adding validation (Agregar validación)**
+-   **Rick Anderson. Agregar validación**
     [*https://docs.microsoft.com/aspnet/core/tutorials/first-mvc-app/validation*](https://docs.microsoft.com/aspnet/core/tutorials/first-mvc-app/validation)
 
 ### <a name="validation-in-spa-web-apps-angular-2-typescript-javascript"></a>Validación en aplicaciones SPA Web (Angular 2, TypeScript, JavaScript)
 
--   **Ado Kukic. Angular 2 Form Validation (Validación de forma de Angular 2)** **
+-   **Ado Kukic. Validación del formulario 2 angular** **
     **[*https://scotch.io/tutorials/angular-2-form-validation*](https://scotch.io/tutorials/angular-2-form-validation)
 
--   **Form Validation (Validación de forma)**
+-   **Validación del formulario**
     [*https://angular.io/docs/ts/latest/cookbook/form-validation.html*](https://angular.io/docs/ts/latest/cookbook/form-validation.html)
 
 -   **Validation (Validación).** Documentación de Breeze.

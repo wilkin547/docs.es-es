@@ -1,5 +1,5 @@
 ---
-title: "Guía de implementación de .NET Framework para desarrolladores"
+title: Guía de implementación de .NET Framework para desarrolladores
 ms.custom: updateeachrelease
 ms.date: 12/14/2017
 ms.prod: .net-framework
@@ -16,10 +16,10 @@ manager: wpickett
 ms.workload:
 - dotnet
 ms.openlocfilehash: 6b2083efabd6c16bafd8b241980c4cd413258ae5
-ms.sourcegitcommit: 099aa20d9b6450d1b7452d782a55771a6ad8ff35
-ms.translationtype: HT
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/05/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="net-framework-deployment-guide-for-developers"></a>Guía de implementación de .NET Framework para desarrolladores
 En este tema se proporciona información a los desarrolladores que quieren instalar cualquier versión de NET Framework a partir de .NET Framework 4.5 en [!INCLUDE[net_current](../../../includes/net-current-version.md)] con sus aplicaciones.
@@ -255,8 +255,8 @@ dotNetFx45_Full_x86_x64.exe /q /norestart /ChainingPackage Contoso
 |.NET Framework 4.7.1 instalado en todas las versiones del sistema operativo diferentes de Windows 10 Fall Creators Update|461310|
 |.NET Framework 4.7 instalado en Windows 10 Creators Update|460798|
 |.NET Framework 4.7 instalado en todas las versiones del sistema operativo diferentes de Windows 10 Creators Update|460805|
-|[!INCLUDE[net_v462](../../../includes/net-v462-md.md)] instalado en la Actualización de aniversario de Windows 10|394802|
-|[!INCLUDE[net_v462](../../../includes/net-v462-md.md)] instalado en todas las versiones de sistema operativo diferentes de la Actualización de aniversario de Windows 10|394806|
+|[!INCLUDE[net_v462](../../../includes/net-v462-md.md)] instalado en la actualización de aniversario de Windows 10|394802|
+|[!INCLUDE[net_v462](../../../includes/net-v462-md.md)] instalado en todas las versiones de sistema operativo diferentes de la actualización de aniversario de Windows 10|394806|
 |[!INCLUDE[net_v461](../../../includes/net-v461-md.md)] instalado en la actualización de noviembre de Windows 10|394254|
 |[!INCLUDE[net_v461](../../../includes/net-v461-md.md)] instalado en todas las versiones del sistema operativo diferentes de la actualización de noviembre de Windows 10|394271|
 |[!INCLUDE[net_v46](../../../includes/net-v46-md.md)] instalado en Windows 10|393295|
@@ -319,7 +319,7 @@ NDP451-KB2858728-x86-x64-AllOS-JPN.exe/q /norestart /ChainingPackage <ProductNam
 #### <a name="return-codes"></a>Códigos de retorno
  En la tabla siguiente se muestra una lista de los códigos de retorno más comunes del instalador redistribuible de .NET Framework. Los códigos devueltos son los mismos para todas las versiones del instalador. Para obtener vínculos a la información detallada, vea la sección siguiente.
 
-|Código devuelto|Description|
+|Código devuelto|Descripción|
 |-----------------|-----------------|
 |0|La instalación se completó correctamente.|
 |1602|El usuario canceló la instalación.|
@@ -355,7 +355,7 @@ NDP451-KB2858728-x86-x64-AllOS-JPN.exe/q /norestart /ChainingPackage <ProductNam
 ### <a name="command-line-options"></a>Opciones de la línea de comandos
  En la tabla siguiente se muestran las opciones que se pueden incluir cuando se encadenan paquetes redistribuibles de [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] al programa de instalación de una aplicación.
 
-|Opción|Description|
+|Opción|Descripción|
 |------------|-----------------|
 |**/CEIPConsent**|Sobrescribe el comportamiento predeterminado y envía comentarios anónimos a Microsoft para mejorar las experiencias de implementación futuras. Se puede utilizar esta opción solamente si el programa de instalación solicita el consentimiento y si el usuario concede el permiso para enviar comentarios anónimos a Microsoft.|
 |**/chainingpackage** `packageName`|Especifica el nombre del archivo ejecutable que realiza el encadenamiento. Esta información se envía a Microsoft como comentarios anónimos para ayudar a mejorar las experiencias de implementación futuras.<br /><br /> Si el nombre del paquete incluye espacios, use comillas dobles como delimitadores; por ejemplo: **/chainingpackage "Lucerne Publishing"**. Para obtener un ejemplo de un paquete de encadenamiento, vea [Obtener información de progreso de un paquete de instalación](http://go.microsoft.com/fwlink/?LinkId=181926) en MSDN Library.|
@@ -392,7 +392,7 @@ En la tabla siguiente se enumeran los paquetes de idioma de .NET Framework que e
 |1041|Japonés|ja|
 |1042|Coreano|ko|
 |1043|Neerlandés – Países Bajos|nl|
-|1044|Noruego (Bokmål)|No|
+|1044|Noruego (Bokmål)|no|
 |1045|Polaco|pl|
 |1046|Portugués – Brasil|pt-BR|
 |1049|Ruso|ru|

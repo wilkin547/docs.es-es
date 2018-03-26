@@ -20,7 +20,7 @@ ms.openlocfilehash: 823edadf7d387d1a509edbdf839ac6eeece5d41f
 ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="wcf-service-publishing"></a>Publicación de servicio WCF
 La publicación de servicios de [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] ayuda a pasar del entorno de desarrollo preliminar que proporciona el host de servicio de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] y el cliente de prueba de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] a la implementación real de la aplicación en un entorno producción con fines de prueba. Antes de confirmar un plan de implementación final, puede usar la publicación de servicios de [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] para comprobar que el servicio de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] funciona correctamente y está listo para su publicación. También puede decidir implementar las bibliotecas de servicios de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] en varias ubicaciones de destino para comprobarlas.  

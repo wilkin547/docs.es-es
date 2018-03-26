@@ -1,24 +1,26 @@
 ---
-title: "Migración de .NET Remoting a WCF"
-ms.custom: 
+title: Migración de .NET Remoting a WCF
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 16902a42-ef80-40e9-8c4c-90e61ddfdfe5
-caps.latest.revision: "4"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 6b387e100ff881c5394b6a77716a733b3928eae9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="migrating-from-net-remoting-to-wcf"></a>Migración de .NET Remoting a WCF
 En este artículo se describe el procedimiento para migrar una aplicación que usa .NET Remoting para que use Windows Communication Foundation (WCF). Se comparan conceptos similares entre estos productos y se describe cómo llevar a cabo varios escenarios comunes de comunicación remota en WCF.  
@@ -34,7 +36,7 @@ En este artículo se describe el procedimiento para migrar una aplicación que u
 |Operaciones de servicio|Métodos públicos en el tipo de servidor|Marcar con el atributo [OperationContract]|  
 |Serialización|ISerializable o [Serializable]|DataContractSerializer o XmlSerializer|  
 |Objetos pasados|Por valor o por referencia|Solo por valor|  
-|Errores y excepciones|Cualquier excepción serializable|FaultContract\<TDetail >|  
+|Errores y excepciones|Cualquier excepción serializable|FaultContract\<TDetail>|  
 |Objetos proxy de cliente|Los servidores proxy transparentes fuertemente tipados se crean automáticamente desde MarshalByRefObjects|Los servidores proxy fuertemente tipados se generan a petición con ChannelFactory\<TChannel >|  
 |Plataforma necesaria|Tanto el cliente como el servidor deben usar Microsoft OS y .NET|Multiplataforma|  
 |Formato del mensaje|Privado|Estándares del sector (SOAP, WS-*, etc.)|  

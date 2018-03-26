@@ -1,12 +1,13 @@
 ---
-title: "Tipos de colección en contratos de datos"
-ms.custom: 
+title: Tipos de colección en contratos de datos
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,16 +17,17 @@ helpviewer_keywords:
 - data contracts [WCF], collection types
 - collection types [WCF]
 ms.assetid: 9b45b28e-0a82-4ea3-8c33-ec0094aff9d5
-caps.latest.revision: "19"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: e74bd7d90d5653890fd5cf48e76c81d0227c6172
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="collection-types-in-data-contracts"></a>Tipos de colección en contratos de datos
 Una *colección* es una lista de elementos de un determinado tipo. En [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], tales listas se pueden representar utilizando matrices o una variedad de otros tipos (Lista genérica, <xref:System.ComponentModel.BindingList%601>genérica, <xref:System.Collections.Specialized.StringCollection>o <xref:System.Collections.ArrayList>). Por ejemplo, una colección puede albergar una lista de direcciones para un determinado cliente. Estas colecciones se denominan *colecciones de lista*, con independencia de cual sea su tipo real.  
@@ -38,7 +40,7 @@ Una *colección* es una lista de elementos de un determinado tipo. En [!INCLUDE[
   
  Los requisitos adicionales en los tipos de colección, como tener un método llamado `Add` y un constructor predeterminado, se discuten detalladamente en las secciones siguientes. Esto garantiza que los tipos de colección se puedan tanto serializar como deserializar. Esto significa que algunas colecciones no se admiten directamente, por ejemplo <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> genérico (porque no tiene ningún constructor predeterminado). Sin embargo, para información sobre cómo burlar estas restricciones, vea la sección "Utilizar tipos de interfaz de colección y colecciones de solo lectura" a continuación de este tema.  
   
- Los tipos contenidos en las colecciones deben ser tipos de contrato de datos o, de lo contrario, se deben poder serializar. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Tipos admitidos por el serializador de contratos de datos](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md).  
+ Los tipos contenidos en las colecciones deben ser tipos de contrato de datos o, de lo contrario, se deben poder serializar. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Tipos admitidos por el serializador de contratos de datos](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md).  
   
  [!INCLUDE[crabout](../../../../includes/crabout-md.md)] lo que se considera y lo que no se considera una colección válida, así como sobre cómo se serializan las colecciones, vea la información sobre la serialización de colecciones en la sección "Reglas avanzadas de colección" de este tema.  
   
@@ -298,8 +300,8 @@ svcutil.exe MyService.wsdl MyServiceSchema.xsd /r:C:\full_path_to_system_dll\Sys
 |Tipo de referencia|Interfaz implementada por el tipo de referencia|Ejemplo|Tipo tratado como|  
 |---------------------|----------------------------------------------|-------------|---------------------|  
 |No genérico o genérico cerrado (cualquier número de parámetros)|<xref:System.Collections.IDictionary>|`MyType : IDictionary`<br /><br /> o<br /><br /> `MyType<T> : IDictionary` donde T=`int`|Genérico cerrado `IDictionary<object,object>`|  
-|Genérico cerrado (cualquier número de parámetros)|<xref:System.Collections.Generic.IDictionary%602>, cerrado|`MyType<T> : IDictionary<string, bool>`donde T =`int`|Genérico cerrado (por ejemplo, `IDIctionary<string,bool>`)|  
-|Genérico cerrado (cualquier número de parámetros)|<xref:System.Collections.Generic.IDictionary%602>genérico, o clave o valor está cerrado, el otro está abierto y utiliza uno de los parámetros de tipo|`MyType<T,U,V> : IDictionary<string,V>`donde T =`int`, U =`float`, V =`bool`<br /><br /> o<br /><br /> `MyType<Z> : IDictionary<Z,bool>`donde Z =`string`|Genérico cerrado (por ejemplo, `IDictionary<string,bool>`)|  
+|Genérico cerrado (cualquier número de parámetros)|<xref:System.Collections.Generic.IDictionary%602>, cerrado|`MyType<T> : IDictionary<string, bool>` donde T =`int`|Genérico cerrado (por ejemplo, `IDIctionary<string,bool>`)|  
+|Genérico cerrado (cualquier número de parámetros)|<xref:System.Collections.Generic.IDictionary%602>genérico, o clave o valor está cerrado, el otro está abierto y utiliza uno de los parámetros de tipo|`MyType<T,U,V> : IDictionary<string,V>` donde T =`int`, U =`float`, V =`bool`<br /><br /> o<br /><br /> `MyType<Z> : IDictionary<Z,bool>` donde Z =`string`|Genérico cerrado (por ejemplo, `IDictionary<string,bool>`)|  
 |Genérico cerrado (cualquier número de parámetros)|<xref:System.Collections.Generic.IDictionary%602>genérico, tanto clave como valor están abiertos y cada uno utiliza uno de los parámetros del tipo|`MyType<T,U,V> : IDictionary<V,U>` donde T=`int`, U=`bool`, V=`string`|Genérico cerrado (por ejemplo, `IDictionary<string,bool>`)|  
 |Genérico abierto (dos parámetros)|<xref:System.Collections.Generic.IDictionary%602>genérico, abrir, utiliza los dos parámetros genéricos del tipo en el orden que aparecen|`MyType<K,V> : IDictionary<K,V>`, tanto K como V están abiertos|Genérico abierto (por ejemplo, `IDictionary<K,V>`)|  
   
@@ -353,7 +355,7 @@ svcutil.exe MyService.wsdl MyServiceSchema.xsd /r:C:\full_path_to_system_dll\Sys
 ### <a name="collection-naming"></a>Denominación de colección  
  A continuación, se muestra una lista de las reglas para denominar una colección:  
   
--   El espacio de nombres predeterminado para todos los contratos de datos de colección de diccionarios, así como para los contratos de datos de colección de listas que contienen tipos primitivos, es http://schemas.microsoft.com/2003/10/Serialization/Arrays a menos que se invalide utilizando Espacio de nombres. Los tipos que se asignan a tipos XSD integrados, así como `char`, `Timespan`y los tipos `Guid` , se consideran primitivos para este propósito.  
+-   El espacio de nombres predeterminado para todos los contratos de datos de colección de diccionarios, así como para los contratos de datos de colección de listas que contienen tipos primitivos, http://schemas.microsoft.com/2003/10/Serialization/Arrays a menos que se invalide utilizando Namespace. Los tipos que se asignan a tipos XSD integrados, así como `char`, `Timespan`y los tipos `Guid` , se consideran primitivos para este propósito.  
   
 -   El espacio de nombres predeterminado para tipos de colección que contienen tipos no primitivos, a menos que se invalide mediante el uso de Namespace, es el mismo que el espacio de nombres de contrato de datos del tipo contenido en la colección.  
   

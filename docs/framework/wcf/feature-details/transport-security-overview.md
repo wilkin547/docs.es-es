@@ -1,27 +1,29 @@
 ---
-title: "Información general de la seguridad del transporte"
-ms.custom: 
+title: Información general de la seguridad del transporte
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 00959326-aa9d-44d0-af61-54933d4adc7f
-caps.latest.revision: "23"
+caps.latest.revision: ''
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 71325089f2c72f6f01b2179bd150d21a98b3a8e2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="transport-security-overview"></a>Información general de la seguridad del transporte
 Los mecanismos de seguridad del transporte en [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] dependen del enlace y el transporte que se estén usando. Por ejemplo, al utilizar la clase <xref:System.ServiceModel.WSHttpBinding>, el transporte es HTTP y el mecanismo principal para garantizar el transporte es Capa de sockets seguros (SSL) sobre HTTP, normalmente denominado HTTPS. En este tema se tratan los mecanismos de seguridad en el transporte principales utilizados en los enlaces proporcionados por el sistema [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
@@ -58,22 +60,22 @@ Los mecanismos de seguridad del transporte en [!INCLUDE[indigo1](../../../../inc
  Las secciones siguientes tratan otros tipos de credenciales de clientes.  
   
 #### <a name="basic"></a>Basic  
- Se corresponde con el método de autenticación básico de IIS. Cuando se utiliza este modo, el servidor IIS debe configurarse con cuentas de usuario de Windows y permisos de sistema de archivos NTFS adecuados. [!INCLUDE[crabout](../../../../includes/crabout-md.md)][!INCLUDE[iis601](../../../../includes/iis601-md.md)], consulte [habilitar la autenticación básica y configurar el nombre de dominio Kerberos](http://go.microsoft.com/fwlink/?LinkId=88592). [!INCLUDE[crabout](../../../../includes/crabout-md.md)][!INCLUDE[iisver](../../../../includes/iisver-md.md)], consulte [IIS 7.0 Beta: configurar la autenticación básica](http://go.microsoft.com/fwlink/?LinkId=88593).  
+ Se corresponde con el método de autenticación básico de IIS. Cuando se utiliza este modo, el servidor IIS debe configurarse con cuentas de usuario de Windows y permisos de sistema de archivos NTFS adecuados. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] [!INCLUDE[iis601](../../../../includes/iis601-md.md)], consulte [habilitar la autenticación básica y configurar el nombre de dominio Kerberos](http://go.microsoft.com/fwlink/?LinkId=88592). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] [!INCLUDE[iisver](../../../../includes/iisver-md.md)], consulte [IIS 7.0 Beta: configurar la autenticación básica](http://go.microsoft.com/fwlink/?LinkId=88593).  
   
 #### <a name="certificate"></a>Certificado  
- IIS tiene una opción para exigir a los clientes que inicien sesión con un certificado. La característica también le permite a IIS asignar un certificado de cliente a una cuenta de Windows. [!INCLUDE[crabout](../../../../includes/crabout-md.md)][!INCLUDE[iis601](../../../../includes/iis601-md.md)], consulte [habilitar certificados de cliente en IIS 6.0](http://go.microsoft.com/fwlink/?LinkId=88594). [!INCLUDE[crabout](../../../../includes/crabout-md.md)][!INCLUDE[iisver](../../../../includes/iisver-md.md)], consulte [IIS 7.0 Beta: configurar certificados de servidor en IIS 7.0](http://go.microsoft.com/fwlink/?LinkId=88595).  
+ IIS tiene una opción para exigir a los clientes que inicien sesión con un certificado. La característica también le permite a IIS asignar un certificado de cliente a una cuenta de Windows. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] [!INCLUDE[iis601](../../../../includes/iis601-md.md)], consulte [habilitar certificados de cliente en IIS 6.0](http://go.microsoft.com/fwlink/?LinkId=88594). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] [!INCLUDE[iisver](../../../../includes/iisver-md.md)], consulte [IIS 7.0 Beta: configurar certificados de servidor en IIS 7.0](http://go.microsoft.com/fwlink/?LinkId=88595).  
   
 #### <a name="digest"></a>Implícita  
- La autenticación implícita es similar a la autenticación básica, pero proporciona la ventaja de enviar las credenciales como un hash, en lugar de como texto no cifrado. [!INCLUDE[crabout](../../../../includes/crabout-md.md)][!INCLUDE[iis601](../../../../includes/iis601-md.md)], consulte [la autenticación implícita en IIS 6.0](http://go.microsoft.com/fwlink/?LinkID=88443). [!INCLUDE[crabout](../../../../includes/crabout-md.md)][!INCLUDE[iisver](../../../../includes/iisver-md.md)], consulte [IIS 7.0 Beta: configurar la autenticación implícita](http://go.microsoft.com/fwlink/?LinkId=88596).  
+ La autenticación implícita es similar a la autenticación básica, pero proporciona la ventaja de enviar las credenciales como un hash, en lugar de como texto no cifrado. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] [!INCLUDE[iis601](../../../../includes/iis601-md.md)], consulte [la autenticación implícita en IIS 6.0](http://go.microsoft.com/fwlink/?LinkID=88443). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] [!INCLUDE[iisver](../../../../includes/iisver-md.md)], consulte [IIS 7.0 Beta: configurar la autenticación implícita](http://go.microsoft.com/fwlink/?LinkId=88596).  
   
 #### <a name="windows"></a>Windows  
- Esto se corresponde a la autenticación integrada de Windows en IIS. Cuando se establece en este valor, también se espera que el servidor exista en un dominio de Windows que utiliza el protocolo Kerberos como su controlador de dominio. Si el servidor no está en un dominio respaldado por Kerberos, o si se producen errores en el sistema Kerberos, puede utilizar el valor de NT LAN Manager (NTLM) descrito en la sección siguiente. [!INCLUDE[crabout](../../../../includes/crabout-md.md)][!INCLUDE[iis601](../../../../includes/iis601-md.md)], consulte [autenticación integrada de Windows en IIS 6.0](http://go.microsoft.com/fwlink/?LinkId=88597). [!INCLUDE[crabout](../../../../includes/crabout-md.md)][!INCLUDE[iisver](../../../../includes/iisver-md.md)], consulte [IIS 7.0 Beta: configurar certificados de servidor en IIS 7.0](http://go.microsoft.com/fwlink/?LinkId=88595).  
+ Esto se corresponde a la autenticación integrada de Windows en IIS. Cuando se establece en este valor, también se espera que el servidor exista en un dominio de Windows que utiliza el protocolo Kerberos como su controlador de dominio. Si el servidor no está en un dominio respaldado por Kerberos, o si se producen errores en el sistema Kerberos, puede utilizar el valor de NT LAN Manager (NTLM) descrito en la sección siguiente. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] [!INCLUDE[iis601](../../../../includes/iis601-md.md)], consulte [autenticación integrada de Windows en IIS 6.0](http://go.microsoft.com/fwlink/?LinkId=88597). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] [!INCLUDE[iisver](../../../../includes/iisver-md.md)], consulte [IIS 7.0 Beta: configurar certificados de servidor en IIS 7.0](http://go.microsoft.com/fwlink/?LinkId=88595).  
   
 #### <a name="ntlm"></a>NTLM  
- Esto permite al servidor usar NTLM para la autenticación si se produce un error en el protocolo Kerberos. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]configuración de IIS en [!INCLUDE[iis601](../../../../includes/iis601-md.md)], consulte [forzar la autenticación NTLM](http://go.microsoft.com/fwlink/?LinkId=88598). Para [!INCLUDE[iisver](../../../../includes/iisver-md.md)], la autenticación de Windows incluye la autenticación NTLM. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][IIS 7.0 Beta: configurar certificados de servidor en IIS 7.0](http://go.microsoft.com/fwlink/?LinkID=88595).  
+ Esto permite al servidor usar NTLM para la autenticación si se produce un error en el protocolo Kerberos. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] configuración de IIS en [!INCLUDE[iis601](../../../../includes/iis601-md.md)], consulte [forzar la autenticación NTLM](http://go.microsoft.com/fwlink/?LinkId=88598). Para [!INCLUDE[iisver](../../../../includes/iisver-md.md)], la autenticación de Windows incluye la autenticación NTLM. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [IIS 7.0 Beta: configurar certificados de servidor en IIS 7.0](http://go.microsoft.com/fwlink/?LinkID=88595).  
   
 ## <a name="wshttpbinding"></a>WsHttpBinding  
- La clase <xref:System.ServiceModel.WSHttpBinding> está diseñada para la interoperación con servicios que implementan las especificaciones de WS-*. La seguridad de transporte para este enlace es Capa de sockets seguros (SSL) sobre HTTP o HTTPS. Para crear una aplicación [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] que utiliza SSL, utilice IIS para hospedar la aplicación. Alternativamente, si está creando una aplicación autohospedada, utilice la herramienta HttpCfg.exe para enlazar un certificado X.509 con un puerto concreto en un equipo. El número de puerto se especifica como parte de la aplicación [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] como una dirección del extremo. Al utilizar el modo de transporte, la dirección del punto de conexión debe incluir el protocolo HTTPS o se producirá una excepción en el tiempo de ejecución. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Seguridad de transporte HTTP](../../../../docs/framework/wcf/feature-details/http-transport-security.md).  
+ La clase <xref:System.ServiceModel.WSHttpBinding> está diseñada para la interoperación con servicios que implementan las especificaciones de WS-*. La seguridad de transporte para este enlace es Capa de sockets seguros (SSL) sobre HTTP o HTTPS. Para crear una aplicación [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] que utiliza SSL, utilice IIS para hospedar la aplicación. Alternativamente, si está creando una aplicación autohospedada, utilice la herramienta HttpCfg.exe para enlazar un certificado X.509 con un puerto concreto en un equipo. El número de puerto se especifica como parte de la aplicación [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] como una dirección del extremo. Al utilizar el modo de transporte, la dirección del punto de conexión debe incluir el protocolo HTTPS o se producirá una excepción en el tiempo de ejecución. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Seguridad de transporte HTTP](../../../../docs/framework/wcf/feature-details/http-transport-security.md).  
   
  En el caso de la autenticación del cliente, defina la propiedad <xref:System.ServiceModel.HttpTransportSecurity.ClientCredentialType%2A> de la clase <xref:System.ServiceModel.HttpTransportSecurity> en uno de los valores de enumeración de <xref:System.ServiceModel.HttpClientCredentialType>. Los valores de enumeración son idénticos a los tipos de credencial de cliente para <xref:System.ServiceModel.BasicHttpBinding> y están diseñados para que se hospeden con servicios de IIS.  
   
@@ -99,7 +101,7 @@ Los mecanismos de seguridad del transporte en [!INCLUDE[indigo1](../../../../inc
 > [!NOTE]
 >  Si está utilizando la seguridad de Windows, no se requiere un certificado.  
   
- El código siguiente usa la huella digital del certificado, que lo identifica de forma única. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]certificados, consulte [trabajar con certificados](../../../../docs/framework/wcf/feature-details/working-with-certificates.md).  
+ El código siguiente usa la huella digital del certificado, que lo identifica de forma única. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] certificados, consulte [trabajar con certificados](../../../../docs/framework/wcf/feature-details/working-with-certificates.md).  
   
  [!code-csharp[c_ProgrammingSecurity#13](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_programmingsecurity/cs/source.cs#13)]
  [!code-vb[c_ProgrammingSecurity#13](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_programmingsecurity/vb/source.vb#13)]  
@@ -123,10 +125,10 @@ Los mecanismos de seguridad del transporte en [!INCLUDE[indigo1](../../../../inc
  La clase <xref:System.ServiceModel.NetNamedPipeBinding> está diseñada para la comunicación eficaz dentro de la máquina. Es decir, para los procesos que se ejecuten en el mismo equipo, aunque los canales de canalización con nombre se puedan crear entre dos equipos de la misma red. Este enlace solo proporciona la seguridad de nivel de transporte. Al crear aplicaciones mediante este enlace, las direcciones del extremo deben incluir "net.pipe" como protocolo de la dirección del extremo.  
   
 ## <a name="wsfederationhttpbinding"></a>WSFederationHttpBinding  
- Cuando se usa seguridad de transporte, este enlace usa SSL sobre HTTP, lo que se conoce como HTTPS con un token emitido (<xref:System.ServiceModel.WSFederationHttpSecurityMode.TransportWithMessageCredential>). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]las aplicaciones de federación, vea [federación y Tokens emitidos](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).  
+ Cuando se usa seguridad de transporte, este enlace usa SSL sobre HTTP, lo que se conoce como HTTPS con un token emitido (<xref:System.ServiceModel.WSFederationHttpSecurityMode.TransportWithMessageCredential>). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] las aplicaciones de federación, vea [federación y Tokens emitidos](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).  
   
 ## <a name="netpeertcpbinding"></a>NetPeerTcpBinding  
- La clase <xref:System.ServiceModel.NetPeerTcpBinding> es un transporte seguro que está diseñado para la comunicación eficaz utilizando la característica de conexión de red de punto a punto. Tal y como indica el nombre de la clase y el enlace, TCP es el protocolo. Cuando el modo de seguridad se establece en Transporte, el enlace implementa TLS sobre TCP. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]la característica punto a punto, vea [redes Peer-to-Peer](../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md).  
+ La clase <xref:System.ServiceModel.NetPeerTcpBinding> es un transporte seguro que está diseñado para la comunicación eficaz utilizando la característica de conexión de red de punto a punto. Tal y como indica el nombre de la clase y el enlace, TCP es el protocolo. Cuando el modo de seguridad se establece en Transporte, el enlace implementa TLS sobre TCP. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] la característica punto a punto, vea [redes Peer-to-Peer](../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md).  
   
 ## <a name="msmqintegrationbinding-and-netmsmqbinding"></a>MsmqIntegrationBinding y NetMsmqBinding  
  Para obtener una explicación completa del transporte de seguridad con Message Queue Server (anteriormente denominado MSMQ), consulte [proteger mensajes utilizando seguridad de transporte](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md).  

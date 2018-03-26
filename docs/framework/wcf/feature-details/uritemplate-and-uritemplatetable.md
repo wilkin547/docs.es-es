@@ -1,24 +1,26 @@
 ---
 title: UriTemplate y UriTemplateTable
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 5cbbe03f-4a9e-4d44-9e02-c5773239cf52
-caps.latest.revision: "24"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: ac77fe2c83828d2cc9473417d2b29b2d2e540923
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="uritemplate-and-uritemplatetable"></a>UriTemplate y UriTemplateTable
 Los desarrolladores web necesitan poder describir la forma y el diseño de los URI a los que sus servicios responden. [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] agregó dos nuevas clases para proporcionar a los desarrolladores el control sobre sus URI. <xref:System.UriTemplate> y <xref:System.UriTemplateTable> forman la base del motor de distribución basado en URI en [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Estas clases también se pueden utilizar por sí mismas, permitiendo a los desarrolladores aprovecharse de las plantillas y el mecanismo de asignación de URI sin implementar un servicio de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
@@ -92,7 +94,7 @@ Los desarrolladores web necesitan poder describir la forma y el diseño de los U
   
 -   "{zapato}/barco"  
   
--   "{zapato} / {barco} /bed/ {tejido}"  
+-   "{shoe}/{boat}/bed/{quilt}"  
   
 -   "zapato / {barco}"  
   
@@ -140,7 +142,7 @@ Los desarrolladores web necesitan poder describir la forma y el diseño de los U
 -   /{zapato}{barco}: las variables deben estar separadas por un literal.  
   
 ### <a name="matching-and-compound-path-segments"></a>Segmentos de ruta de acceso coincidentes y compuestos  
- Los segmentos de ruta de acceso permiten definir un UriTemplate que tenga varias variables en un solo segmento de ruta de acceso. Por ejemplo, en la siguiente cadena de plantilla: "direcciones / {state}. {Ciudad} "se definen dos variables (estado y ciudad) en el mismo segmento. Esta plantilla coincidiría con una dirección URL como "http://example.com/Washington.Redmond" pero también coincidirá con una dirección URL como "http://example.com/Washington.Redmond.Microsoft". En el último caso, la variable de estado contendrá a "Washington" y la variable de la ciudad, "Redmond.Microsoft". En este caso, cualquier texto (salvo ‘/’) coincidirá con la variable {ciudad}. Si desea una plantilla que no coincida con el texto "extra", coloque la variable en un segmento de plantilla independiente, por ejemplo: "direcciones / {state} / {ciudad}.  
+ Los segmentos de ruta de acceso permiten definir un UriTemplate que tenga varias variables en un solo segmento de ruta de acceso. Por ejemplo, en la siguiente cadena de plantilla: "direcciones / {state}. {Ciudad} "se definen dos variables (estado y ciudad) en el mismo segmento. Esta plantilla coincidiría con una dirección URL como "http://example.com/Washington.Redmond", pero también coincidirá con una dirección URL como"http://example.com/Washington.Redmond.Microsoft". En el último caso, la variable de estado contendrá a "Washington" y la variable de la ciudad, "Redmond.Microsoft". En este caso, cualquier texto (salvo ‘/’) coincidirá con la variable {ciudad}. Si desea una plantilla que no coincida con el texto "extra", coloque la variable en un segmento de plantilla independiente, por ejemplo: "direcciones / {state} / {ciudad}.  
   
 ### <a name="named-wildcard-segments"></a>Segmentos de carácter comodín con nombre  
  Un segmento de carácter comodín con nombre es cualquier segmento de variable de ruta de acceso cuyo nombre de variable comience por el carácter comodín "*". La cadena de plantilla siguiente contiene un segmento de carácter comodín con nombre denominado "zapato".  

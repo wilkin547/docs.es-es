@@ -1,24 +1,26 @@
 ---
 title: Control de mensajes dudosos
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 8d1c5e5a-7928-4a80-95ed-d8da211b8595
-caps.latest.revision: "29"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 8202c9f715944c6d556c0023444475838cfd5eab
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="poison-message-handling"></a>Control de mensajes dudosos
 A *mensaje dudoso* es un mensaje que ha superado el número máximo de intentos de entrega a la aplicación. Esta situación se puede presentar cuando una aplicación basada en cola no puede procesar un mensaje debido a los errores. Para satisfacer la confiabilidad que exige, una aplicación en cola recibe los mensajes bajo una transacción. Anular la transacción en la que un mensaje en cola se recibió deja el mensaje en la cola para que el mensaje se vuelva a intentar con una nueva transacción. Si no se corrige el problema que produjo la anulación de la transacción, la aplicación receptora se puede atascar en una recepción de bucle y anulando el mismo mensaje hasta que supere el número máximo de intentos de entrega, y se produzca un mensaje dudoso.  
@@ -73,7 +75,7 @@ A *mensaje dudoso* es un mensaje que ha superado el número máximo de intentos 
 ## <a name="best-practice-handling-msmqpoisonmessageexception"></a>Procedimiento recomendado: Controlar MsmqPoisonMessageException  
  Cuando el servicio determina que un mensaje es dudoso, el transporte en cola arroja <xref:System.ServiceModel.MsmqPoisonMessageException> que contiene `LookupId` del mensaje dudoso.  
   
- Una aplicación receptora puede implementar la interfaz <xref:System.ServiceModel.Dispatcher.IErrorHandler> para controlar cualquier error que la aplicación requiera. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Extender el Control sobre el control e informes de errores](../../../../docs/framework/wcf/samples/extending-control-over-error-handling-and-reporting.md).  
+ Una aplicación receptora puede implementar la interfaz <xref:System.ServiceModel.Dispatcher.IErrorHandler> para controlar cualquier error que la aplicación requiera. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Extender el Control sobre el control e informes de errores](../../../../docs/framework/wcf/samples/extending-control-over-error-handling-and-reporting.md).  
   
  La aplicación puede requerir algún tipo de control automatizado de mensajes dudosos que los aparte a una cola específica de manera que el servicio pueda tener acceso al resto de los mensajes de la cola. El único escenario para utilizar el mecanismo del controlador de errores para realizar escuchas para las excepciones de mensajes dudosos es cuando <xref:System.ServiceModel.Configuration.MsmqBindingElementBase.ReceiveErrorHandling%2A> está establecido en <xref:System.ServiceModel.ReceiveErrorHandling.Fault>. El ejemplo de mensaje dudoso para Message Queuing 3.0 demuestra este comportamiento. A continuación se dibujan los pasos a realizar para controlar los mensajes dudosos, incluyendo los procedimientos recomendados:  
   
@@ -102,7 +104,7 @@ A *mensaje dudoso* es un mensaje que ha superado el número máximo de intentos 
  Una sesión sufre los mismos procedimientos de reintento y control de mensajes dudosos como un mensaje único. Las propiedades enumeradas anteriormente para los mensajes dudosos se aplican a toda la sesión. Esto significa que se reintenta la sesión completa y se envía a una cola de mensajes dudosos final o a la cola de mensajes no enviados del remitente si se rechaza el mensaje.  
   
 ## <a name="batching-and-poison-messages"></a>Procesamiento por lotes y mensajes dudosos  
- Si un mensaje se vuelve un mensaje dudoso y es parte de un lote, se deshace el lote completo y el canal vuelve a leer un mensaje cada vez. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]procesamiento por lotes, consulte [mensajes por lotes en una transacción](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md)  
+ Si un mensaje se vuelve un mensaje dudoso y es parte de un lote, se deshace el lote completo y el canal vuelve a leer un mensaje cada vez. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] procesamiento por lotes, consulte [mensajes por lotes en una transacción](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md)  
   
 ## <a name="poison-message-handling-for-messages-in-a-poison-queue"></a>Control de mensajes dudosos para mensajes en una cola de mensajes dudosos  
  El control de mensajes dudosos no finaliza cuando un mensaje se coloca en la cola de mensajes dudosos. Los mensajes de la cola de mensajes dudosos también se deben leer y controlar. Puede utilizar un subconjunto de los valores de control de mensajes dudosos al leer mensajes de la subcola final de mensajes dudosos. La configuración aplicable es `ReceiveRetryCount` y `ReceiveErrorHandling`. Puede establecer `ReceiveErrorHandling` en Drop, Reject o Fault. Se omite `MaxRetryCycles` y se produce una excepción si `ReceiveErrorHandling` se establece en Move.  

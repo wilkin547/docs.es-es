@@ -1,5 +1,5 @@
 ---
-title: "Migración de DNX a CLI de .NET Core"
+title: Migración de DNX a CLI de .NET Core
 description: Migre de las herramientas de DNX a las herramientas de la CLI de .NET Core.
 keywords: .NET, .NET Core
 author: blackdwarf
@@ -9,12 +9,13 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: c0d70120-78c8-4d26-bb3c-801f42fc2366
-ms.workload: dotnetcore
+ms.workload:
+- dotnetcore
 ms.openlocfilehash: dba38de28dc15147e5bcc5bf4cede9f4dd5fca62
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
-ms.translationtype: HT
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="migrating-from-dnx-to-net-core-cli-projectjson"></a>Migración de DNX a CLI de .NET Core (project.json)
 
@@ -54,7 +55,7 @@ Si usó DNX, usaba algunos comandos provenientes de uno de sus tres componentes 
 La tabla siguiente muestra la asignación entre los comandos de DNX/DNU y sus contrapartes de la CLI.
 
 
-| Comando de DNX                       | Comando de la CLI       | Description                                                                                                       |
+| Comando de DNX                       | Comando de la CLI       | Descripción                                                                                                       |
 |--------------------------------   |----------------   |-----------------------------------------------------------------------------------------------------------------  |
 | dnx run                           | dotnet run        | Ejecute el código desde el origen.                                                                                             |
 | dnu build                         | dotnet build      | Compile un archivo binario de IL del código.                                                                                  |

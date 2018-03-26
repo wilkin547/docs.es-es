@@ -1,24 +1,26 @@
 ---
 title: Herramientas
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 89c907f9-313f-408c-992a-631f1eadf1da
-caps.latest.revision: "5"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 5badbb9142261fc1dc6c2b2d5af3c89c7af776b6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="tools"></a>Herramientas
 En este tema se enumeran todas las excepciones generadas por las herramientas [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)].  
@@ -28,7 +30,7 @@ En este tema se enumeran todas las excepciones generadas por las herramientas [!
 |Código de recurso|Cadena de recurso|  
 |-------------------|---------------------|  
 |ParametersTarget|\<enum >|  
-|ParametersToolConfig|\<configFile >|  
+|ParametersToolConfig|\<configFile>|  
 |ErrInvalidPath|La ruta de acceso especificada no es válida. Compruebe el argumento especificado.|  
 |ParametersReference|\<ruta de acceso de archivo >|  
 |WrnCannotLoadConfigFileForValidation|Se ha producido un error durante el procesamiento del archivo de configuración cargado de la ubicación especificada. No se pueden validar los servicios que se definen en este archivo de configuración.|  
@@ -79,7 +81,7 @@ En este tema se enumeran todas las excepciones generadas por las herramientas [!
 |HelpCodeGenerationCategory|-= CODE GENERATION =-|  
 |RetreivingMetadataWithMexAndDisco|Intentando descargar los metadatos a partir de lo especificado utilizando intercambio de metadatos WS o DISCO.|  
 |ErrGeneralSchemaValidation|Se produjo un error al comprobar los esquemas XML que se generaron durante la exportación.|  
-|ParametersDirectory|\<directorio >|  
+|ParametersDirectory|\<directory>|  
 |ErrCannotLoadSpecifiedType|Ningún tipo se puede cargar para el valor especificado que se pasó a la opción especificada. Asegúrese de que el ensamblado al que pertenece este tipo se especifica utilizando la opción especificada.|  
 |ErrOptionModeConflict|La opción especificada no se puede utilizar con la opción especificada porque implican tipos de salida diferentes.|  
 |ErrIsNotAnAssembly|No puede cargar lo especificado como un ensamblado. Compruebe que este archivo es un .NET ensamblado.|  
@@ -98,7 +100,7 @@ En este tema se enumeran todas las excepciones generadas por las herramientas [!
 |ErrDirectoryNotFound|No se puede encontrar el directorio especificado. Compruebe que el directorio existe y que tiene los permisos adecuados para leerlo.|  
 |ErrUnableToLoadFile|No puede leer el archivo especificado.|  
 |ErrNoFilesFound|La ruta de acceso de entrada especificada no parece hacer referencia a ningún archivo existente.|  
-|ParametersConfig|\<configFile >|  
+|ParametersConfig|\<configFile>|  
 |ErrDirectoryInsteadOfFile|La ruta de acceso de entrada especificada parece ser un directorio. La entrada debe ser direcciones URL o rutas de acceso de archivo.|  
 |HelpConfig|Indica a las herramientas que generen un archivo de configuración con el nombre proporcionado. Valor predeterminado: output.config.|  
 |ErrSingleUseSwitch|No puede especificarse la opción especificada varias veces.|  
@@ -123,7 +125,7 @@ En este tema se enumeran todas las excepciones generadas por las herramientas [!
 |ErrInvalidTarget|El destino especificado no es válido cuando se especifica utilizando la opción especificada. Se especifican los destinos soportados.|  
 |ErrPathTooLong|La ruta de acceso resultante es demasiado larga. Revise los argumentos especificados.|  
 |HelpCommonOptionsCategory|-= COMMON OPTIONS =-|  
-|ParametersServiceName|\<serviceConfigName >|  
+|ParametersServiceName|\<serviceConfigName>|  
 |ErrNoValidInputFilesSpecified|No se especificaron archivos de entrada válidos. Especifique documentos de metadatos o archivos de ensamblado.|  
 |ParametersLanguage|\<idioma >|  
 |ErrUnableToLoadMetadataDocument|Se produjo un error al leer los metadatos a partir de uno de los documentos cargados. Se especifica el identificador del documento.|  

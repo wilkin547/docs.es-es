@@ -1,24 +1,26 @@
 ---
-title: "Migración de los servicios web WSE 3.0 a WCF"
-ms.custom: 
+title: Migración de los servicios web WSE 3.0 a WCF
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 7bc5fff7-a2b2-4dbc-86cc-ecf73653dcdc
-caps.latest.revision: "16"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: a7e7187eb6ed444ba2c28aa301ce4b3b16129030
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="migrating-wse-30-web-services-to-wcf"></a>Migración de los servicios web WSE 3.0 a WCF
 Entre las ventajas de migrar los servicios web WSE 3.0 a [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] se incluyen un mejor rendimiento y la compatibilidad con transportes adicionales, escenarios de seguridad adicionales y especificaciones WS - *. Un servicio web que se migra desde WSE 3.0 a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] puede experimentar una mejora de rendimiento de entre un 200% y un 400%. Para obtener más información acerca de los transportes admitidos por [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], consulte [elegir un transporte](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md). Para obtener una lista de los escenarios compatibles con [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], consulte [escenarios comunes de seguridad](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md). Para obtener una lista de las especificaciones que son compatibles con [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], consulte [Guía de interoperabilidad de protocolos de servicios Web](../../../../docs/framework/wcf/feature-details/web-services-protocols-interoperability-guide.md).  

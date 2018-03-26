@@ -1,12 +1,13 @@
 ---
 title: Extensiones de marcado y XAML de WPF
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - brace character [WPF]
@@ -22,16 +23,17 @@ helpviewer_keywords:
 - characters [WPF], curly brace
 - DynamicResource markup extensions [WPF]
 ms.assetid: 618dc745-8b14-4886-833f-486d2254bb78
-caps.latest.revision: "26"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 5e6dec42d40039f9cc23ba976ecf421f6471888e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="markup-extensions-and-wpf-xaml"></a>Extensiones de marcado y XAML de WPF
 En este tema se presenta el concepto de extensiones de marcado para XAML, incluidos sus reglas de sintaxis, su finalidad y el modelo de objeto de clase subyacente. Las extensiones de marcado son una característica general del lenguaje XAML y de la implementación .NET de servicios XAML. En este tema se detallan las extensiones de marcado para su uso en XAML de WPF.  
@@ -74,7 +76,7 @@ En este tema se presenta el concepto de extensiones de marcado para XAML, inclui
   
 -   `Binding` proporciona un valor enlazado a datos para una propiedad mediante el contexto de datos que se aplica al objeto primario en tiempo de ejecución. Esta extensión de marcado es relativamente compleja, porque permite una sintaxis insertada sustancial para especificar un enlace de datos. Para obtener más información, consulte [Binding (extensión de marcado)](../../../../docs/framework/wpf/advanced/binding-markup-extension.md).  
   
--   `RelativeSource`Proporciona información de origen para un <xref:System.Windows.Data.Binding> que puede navegar por varias posibles relaciones en el árbol de objetos de tiempo de ejecución. Esto proporciona un origen especializado para los enlaces que se crean en plantillas de uso múltiple o creados en código sin conocimiento completo del árbol de objetos adyacente. Para obtener más información, consulte [Extensión de marcado RelativeSource](../../../../docs/framework/wpf/advanced/relativesource-markupextension.md).  
+-   `RelativeSource` Proporciona información de origen para un <xref:System.Windows.Data.Binding> que puede navegar por varias posibles relaciones en el árbol de objetos de tiempo de ejecución. Esto proporciona un origen especializado para los enlaces que se crean en plantillas de uso múltiple o creados en código sin conocimiento completo del árbol de objetos adyacente. Para obtener más información, consulte [Extensión de marcado RelativeSource](../../../../docs/framework/wpf/advanced/relativesource-markupextension.md).  
   
 -   `TemplateBinding` permite que una plantilla de control use valores para propiedades con plantilla procedentes de propiedades definidas por el modelo de objeto de la clase que usará la plantilla. En otras palabras, la propiedad dentro de la definición de plantilla puede obtener acceso a un contexto que solo existe cuando se aplica la plantilla. Para obtener más información, consulte [Extensión de marcado TemplateBinding](../../../../docs/framework/wpf/advanced/templatebinding-markup-extension.md). Para obtener más información sobre el uso práctico de `TemplateBinding`, consulte [Aplicación de estilos con el ejemplo ControlTemplates](http://go.microsoft.com/fwlink/?LinkID=160041).  
   
