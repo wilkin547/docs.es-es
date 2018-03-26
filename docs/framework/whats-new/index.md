@@ -1,5 +1,5 @@
 ---
-title: "Novedades de .NET Framework"
+title: Novedades de .NET Framework
 ms.custom: updateeachrelease
 ms.date: 05/02/2017
 ms.prod: .net-framework
@@ -17,11 +17,11 @@ ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 86f1884749b5fdf93254985ab3e163dca0562648
-ms.sourcegitcommit: be1fb5d9447ad459bef22b91a91c72e3e0b2d916
+ms.openlocfilehash: 93c08633af1b4bb46afe9e382066f523c9923a9b
+ms.sourcegitcommit: 6f967c86dde55472440f0c8669b0e910ee3c53ba
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="whats-new-in-the-net-framework"></a>Novedades de .NET Framework
 <a name="introduction"></a> En este artículo se resumen las nuevas características y mejoras en las siguientes versiones de .NET Framework:  
@@ -192,7 +192,7 @@ A partir de .NET Framework 4.7, ASP.NET agrega un nuevo conjunto de API que perm
 <a name="wcf47" />
 #### <a name="windows-communication-foundation-wcf"></a>Windows Communication Foundation (WCF)
 
-Windows Communication Foundation (WFC) agrega las siguientes características y cambios:
+Windows Communication Foundation (WCF) agrega las siguientes características y cambios:
 
 **Capacidad de configurar las opciones de seguridad de mensaje predeterminadas en TLS 1.1 o TLS 1.2**
 
@@ -1134,7 +1134,7 @@ Para obtener más información sobre la estructura <xref:System.TimeZoneInfo> y 
 
 - **Cambio de tamaño en controles de Windows Forms** Esta característica se ha ampliado. Ahora se puede usar el valor de PPP del sistema para cambiar el tamaño de componentes de los siguientes controles adicionales (por ejemplo, la flecha desplegable en cuadros combinados):
 
-     <xref:System.Windows.Forms.ComboBox>    <xref:System.Windows.Forms.ToolStripComboBox>    <xref:System.Windows.Forms.ToolStripMenuItem>    <xref:System.Windows.Forms.Cursor>    <xref:System.Windows.Forms.DataGridView>    <xref:System.Windows.Forms.DataGridViewComboBoxColumn>
+     <xref:System.Windows.Forms.ComboBox> <xref:System.Windows.Forms.ToolStripComboBox> <xref:System.Windows.Forms.ToolStripMenuItem> <xref:System.Windows.Forms.Cursor> <xref:System.Windows.Forms.DataGridView> <xref:System.Windows.Forms.DataGridViewComboBoxColumn>
 
      Esta característica es opcional. Para habilitarla, establezca el elemento `EnableWindowsFormsHighDpiAutoResizing` en `true` en el archivo de configuración de la aplicación (app.config):
 
@@ -1214,7 +1214,7 @@ Para obtener más información sobre la estructura <xref:System.TimeZoneInfo> y 
 
 - Cambio de tamaño en controles de Windows Forms. Puede usar el valor de PPP del sistema para cambiar el tamaño de los componentes de controles (por ejemplo, los iconos que aparecen en una cuadrícula de propiedades); para ello, active esta opción con una entrada en el archivo de configuración de la aplicación (app.config). Actualmente, esta característica es compatible con los siguientes controles de Windows Forms:
 
-     <xref:System.Windows.Forms.PropertyGrid>    <xref:System.Windows.Forms.TreeView>    Algunos aspectos de <xref:System.Windows.Forms.DataGridView> (consulte la lista completa de controles compatibles en [Nuevas características en 4.5.2](#v452))
+     <xref:System.Windows.Forms.PropertyGrid> <xref:System.Windows.Forms.TreeView> Algunos aspectos de <xref:System.Windows.Forms.DataGridView> (consulte las [nuevas características de 4.5.2](#v452) para conocer los controles adicionales compatibles).
 
      Para activar esta característica, agregue un nuevo elemento \<appSettings> al archivo de configuración (app.config) y establezca el elemento `EnableWindowsFormsHighDpiAutoResizing` en `true`:
 
@@ -1443,7 +1443,7 @@ Para obtener más información sobre la estructura <xref:System.TimeZoneInfo> y 
 
 <a name="tailored"></a> 
 ### [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]
- [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] Las aplicaciones de la están diseñadas para factores de forma específicos y aprovechan la eficacia del sistema operativo Windows. Un subconjunto de [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] o 4.5.1 está disponible para compilar aplicaciones de la [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] para Windows mediante C# o Visual Basic. Este subconjunto se denomina [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] y se explica en una [introducción](http://go.microsoft.com/fwlink/?LinkId=228491) del Centro de desarrollo de Windows.
+ Las aplicaciones de la [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] están diseñadas para factores de forma específicos y aprovechan la eficacia del sistema operativo Windows. Un subconjunto de [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] o 4.5.1 está disponible para compilar aplicaciones de la [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] para Windows mediante C# o Visual Basic. Este subconjunto se denomina [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] y se explica en una [introducción](http://go.microsoft.com/fwlink/?LinkId=228491) del Centro de desarrollo de Windows.
 
 <a name="portable"></a> 
 ### <a name="portable-class-libraries"></a>Bibliotecas de clases portables

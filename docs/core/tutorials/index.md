@@ -9,12 +9,13 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: f6f654b1-1d2c-4105-8376-7c1959e23803
-ms.workload: dotnetcore
-ms.openlocfilehash: 8b1e80023139a4ebc3c961c47c06b9afd0370014
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 267cac338263f964006b424bb855d1022990498c
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="net-core-tutorials"></a>Tutoriales de .NET Core
 
@@ -30,7 +31,7 @@ Los siguientes tutoriales están disponibles para aprender sobre .NET Core.
 - [Prueba de una biblioteca de clases](testing-library-with-visual-studio.md)
 - [Uso de una biblioteca de clases](consuming-library-with-visual-studio.md)
 - [Creación de una solución completa de C# de .NET Core en Windows](using-on-windows-full-solution.md)
-- [NoSQL tutorial: Build a DocumentDB C# console application on .NET Core](/azure/documentdb/documentdb-dotnetcore-get-started) (Tutorial de NoSQL: Creación de una aplicación de consola de C# de DocumentDB en .NET Core)
+- [Azure Cosmos DB: introducción a la API de SQL y .NET Core](/azure/cosmos-db/sql-api-dotnetcore-get-started)
 
 ## <a name="building-applications-with-visual-studio-code"></a>Creación de aplicaciones con Visual Studio Code
 
