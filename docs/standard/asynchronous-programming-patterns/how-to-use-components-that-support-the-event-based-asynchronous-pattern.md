@@ -1,12 +1,12 @@
 ---
-title: "Cómo: Utilizar componentes que admitan el modelo asincrónico basado en eventos"
-ms.custom: 
+title: 'Cómo: Utilizar componentes que admitan el modelo asincrónico basado en eventos'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -24,7 +24,7 @@ helpviewer_keywords:
 - threading [Windows Forms], asynchronous features
 - AsyncCompletedEventArgs class
 ms.assetid: 35e9549c-1568-4768-ad07-17cc6dff11e1
-caps.latest.revision: 
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
@@ -32,27 +32,27 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: c7fe7d0a959a490893fba2b2fc7faceedee03879
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: HT
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/26/2018
 ---
-# <a name="how-to-use-components-that-support-the-event-based-asynchronous-pattern"></a><span data-ttu-id="21758-102">Cómo: Utilizar componentes que admitan el modelo asincrónico basado en eventos</span><span class="sxs-lookup"><span data-stu-id="21758-102">How to: Use Components That Support the Event-based Asynchronous Pattern</span></span>
-<span data-ttu-id="21758-103">Muchos componentes le ofrecen la opción de realizar su trabajo de forma asincrónica.</span><span class="sxs-lookup"><span data-stu-id="21758-103">Many components provide you with the option of performing their work asynchronously.</span></span> <span data-ttu-id="21758-104">Por ejemplo, los componentes <xref:System.Media.SoundPlayer> y <xref:System.Windows.Forms.PictureBox> permiten cargas sonidos e imágenes "en segundo plano" mientras el subproceso principal continúa ejecutándose sin interrupción.</span><span class="sxs-lookup"><span data-stu-id="21758-104">The <xref:System.Media.SoundPlayer> and <xref:System.Windows.Forms.PictureBox> components, for example, enable you to load sounds and images "in the background" while your main thread continues running without interruption.</span></span>  
+# <a name="how-to-use-components-that-support-the-event-based-asynchronous-pattern"></a><span data-ttu-id="a16e0-102">Cómo: Utilizar componentes que admitan el modelo asincrónico basado en eventos</span><span class="sxs-lookup"><span data-stu-id="a16e0-102">How to: Use Components That Support the Event-based Asynchronous Pattern</span></span>
+<span data-ttu-id="a16e0-103">Muchos componentes le ofrecen la opción de realizar su trabajo de forma asincrónica.</span><span class="sxs-lookup"><span data-stu-id="a16e0-103">Many components provide you with the option of performing their work asynchronously.</span></span> <span data-ttu-id="a16e0-104">Por ejemplo, los componentes <xref:System.Media.SoundPlayer> y <xref:System.Windows.Forms.PictureBox> permiten cargas sonidos e imágenes "en segundo plano" mientras el subproceso principal continúa ejecutándose sin interrupción.</span><span class="sxs-lookup"><span data-stu-id="a16e0-104">The <xref:System.Media.SoundPlayer> and <xref:System.Windows.Forms.PictureBox> components, for example, enable you to load sounds and images "in the background" while your main thread continues running without interruption.</span></span>  
   
- <span data-ttu-id="21758-105">Usar métodos asincrónicos en una clase que admite la [Información general sobre el modelo asincrónico basado en eventos](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md) puede ser tan sencillo como adjuntar un controlador de eventos al evento *MethodName***Completed** del componente, como lo haría para otro componente.</span><span class="sxs-lookup"><span data-stu-id="21758-105">Using asynchronous methods on a class that supports the [Event-based Asynchronous Pattern Overview](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md) can be as simple as attaching an event handler to the component's *MethodName***Completed** event, just as you would for any other event.</span></span> <span data-ttu-id="21758-106">Cuando se llama al método *MethodName***Async**, la aplicación continuará ejecutándose sin interrupción hasta que se genere el evento *MethodName***Completed**.</span><span class="sxs-lookup"><span data-stu-id="21758-106">When you call the *MethodName***Async** method, your application will continue running without interruption until the *MethodName***Completed** event is raised.</span></span> <span data-ttu-id="21758-107">En el controlador de eventos, puede examinar el parámetro <xref:System.ComponentModel.AsyncCompletedEventArgs> para determinar si la operación asincrónica se completó correctamente o si se canceló.</span><span class="sxs-lookup"><span data-stu-id="21758-107">In your event handler, you can examine the <xref:System.ComponentModel.AsyncCompletedEventArgs> parameter to determine if the asynchronous operation successfully completed or if it was canceled.</span></span>  
+ <span data-ttu-id="a16e0-105">Usar métodos asincrónicos en una clase que admite la [Información general sobre el modelo asincrónico basado en eventos](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md) puede ser tan sencillo como adjuntar un controlador de eventos al evento *MethodName***Completed** del componente, como lo haría para otro componente.</span><span class="sxs-lookup"><span data-stu-id="a16e0-105">Using asynchronous methods on a class that supports the [Event-based Asynchronous Pattern Overview](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md) can be as simple as attaching an event handler to the component's *MethodName***Completed** event, just as you would for any other event.</span></span> <span data-ttu-id="a16e0-106">Cuando se llama al método *MethodName***Async**, la aplicación continuará ejecutándose sin interrupción hasta que se genere el evento *MethodName***Completed**.</span><span class="sxs-lookup"><span data-stu-id="a16e0-106">When you call the *MethodName***Async** method, your application will continue running without interruption until the *MethodName***Completed** event is raised.</span></span> <span data-ttu-id="a16e0-107">En el controlador de eventos, puede examinar el parámetro <xref:System.ComponentModel.AsyncCompletedEventArgs> para determinar si la operación asincrónica se completó correctamente o si se canceló.</span><span class="sxs-lookup"><span data-stu-id="a16e0-107">In your event handler, you can examine the <xref:System.ComponentModel.AsyncCompletedEventArgs> parameter to determine if the asynchronous operation successfully completed or if it was canceled.</span></span>  
   
- <span data-ttu-id="21758-108">Para más información sobre el uso de los controladores de eventos, vea [Información general sobre controladores de eventos](../../../docs/framework/winforms/event-handlers-overview-windows-forms.md).</span><span class="sxs-lookup"><span data-stu-id="21758-108">For more information about using event handlers, see [Event Handlers Overview](../../../docs/framework/winforms/event-handlers-overview-windows-forms.md).</span></span>  
+ <span data-ttu-id="a16e0-108">Para más información sobre el uso de los controladores de eventos, vea [Información general sobre controladores de eventos](../../../docs/framework/winforms/event-handlers-overview-windows-forms.md).</span><span class="sxs-lookup"><span data-stu-id="a16e0-108">For more information about using event handlers, see [Event Handlers Overview](../../../docs/framework/winforms/event-handlers-overview-windows-forms.md).</span></span>  
   
- <span data-ttu-id="21758-109">En el siguiente procedimiento se explica cómo usar la funcionalidad de carga de imágenes asincrónica de un control <xref:System.Windows.Forms.PictureBox>.</span><span class="sxs-lookup"><span data-stu-id="21758-109">The following procedure shows how to use the asynchronous image-loading capability of a <xref:System.Windows.Forms.PictureBox> control.</span></span>  
+ <span data-ttu-id="a16e0-109">En el siguiente procedimiento se explica cómo usar la funcionalidad de carga de imágenes asincrónica de un control <xref:System.Windows.Forms.PictureBox>.</span><span class="sxs-lookup"><span data-stu-id="a16e0-109">The following procedure shows how to use the asynchronous image-loading capability of a <xref:System.Windows.Forms.PictureBox> control.</span></span>  
   
-### <a name="to-enable-a-picturebox-control-to-asynchronously-load-an-image"></a><span data-ttu-id="21758-110">Para permitir que un control PictureBox cargue una imagen de manera asincrónica</span><span class="sxs-lookup"><span data-stu-id="21758-110">To enable a PictureBox control to asynchronously load an image</span></span>  
+### <a name="to-enable-a-picturebox-control-to-asynchronously-load-an-image"></a><span data-ttu-id="a16e0-110">Para permitir que un control PictureBox cargue una imagen de manera asincrónica</span><span class="sxs-lookup"><span data-stu-id="a16e0-110">To enable a PictureBox control to asynchronously load an image</span></span>  
   
-1.  <span data-ttu-id="21758-111">Cree una instancia del componente <xref:System.Windows.Forms.PictureBox> en el formulario.</span><span class="sxs-lookup"><span data-stu-id="21758-111">Create an instance of the <xref:System.Windows.Forms.PictureBox> component in your form.</span></span>  
+1.  <span data-ttu-id="a16e0-111">Cree una instancia del componente <xref:System.Windows.Forms.PictureBox> en el formulario.</span><span class="sxs-lookup"><span data-stu-id="a16e0-111">Create an instance of the <xref:System.Windows.Forms.PictureBox> component in your form.</span></span>  
   
-2.  <span data-ttu-id="21758-112">Asigne un controlador de eventos al evento <xref:System.Windows.Forms.PictureBox.LoadCompleted>.</span><span class="sxs-lookup"><span data-stu-id="21758-112">Assign an event handler to the <xref:System.Windows.Forms.PictureBox.LoadCompleted> event.</span></span>  
+2.  <span data-ttu-id="a16e0-112">Asigne un controlador de eventos al evento <xref:System.Windows.Forms.PictureBox.LoadCompleted>.</span><span class="sxs-lookup"><span data-stu-id="a16e0-112">Assign an event handler to the <xref:System.Windows.Forms.PictureBox.LoadCompleted> event.</span></span>  
   
-     <span data-ttu-id="21758-113">Compruebe si hay errores que puedan haberse producido durante la descarga asincrónica aquí.</span><span class="sxs-lookup"><span data-stu-id="21758-113">Check for any errors that may have occurred during the asynchronous download here.</span></span> <span data-ttu-id="21758-114">También es donde puede comprobar posibles cancelaciones.</span><span class="sxs-lookup"><span data-stu-id="21758-114">This is also where you check for cancellation.</span></span>  
+     <span data-ttu-id="a16e0-113">Compruebe si hay errores que puedan haberse producido durante la descarga asincrónica aquí.</span><span class="sxs-lookup"><span data-stu-id="a16e0-113">Check for any errors that may have occurred during the asynchronous download here.</span></span> <span data-ttu-id="a16e0-114">También es donde puede comprobar posibles cancelaciones.</span><span class="sxs-lookup"><span data-stu-id="a16e0-114">This is also where you check for cancellation.</span></span>  
   
      [!code-csharp[System.Windows.Forms.PictureBox.LoadAsync#2](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.PictureBox.LoadAsync/CS/Form1.cs#2)]
      [!code-vb[System.Windows.Forms.PictureBox.LoadAsync#2](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.PictureBox.LoadAsync/VB/Form1.vb#2)]  
@@ -60,7 +60,7 @@ ms.lasthandoff: 01/19/2018
      [!code-csharp[System.Windows.Forms.PictureBox.LoadAsync#5](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.PictureBox.LoadAsync/CS/Form1.cs#5)]
      [!code-vb[System.Windows.Forms.PictureBox.LoadAsync#5](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.PictureBox.LoadAsync/VB/Form1.vb#5)]  
   
-3.  <span data-ttu-id="21758-115">Agregue dos botones, denominados `loadButton` y `cancelLoadButton`, al formulario.</span><span class="sxs-lookup"><span data-stu-id="21758-115">Add two buttons, called `loadButton` and `cancelLoadButton`, to your form.</span></span> <span data-ttu-id="21758-116">Agregue los controladores de eventos <xref:System.Windows.Forms.Control.Click> para iniciar y cancelar la descarga.</span><span class="sxs-lookup"><span data-stu-id="21758-116">Add <xref:System.Windows.Forms.Control.Click> event handlers to start and cancel the download.</span></span>  
+3.  <span data-ttu-id="a16e0-115">Agregue dos botones, denominados `loadButton` y `cancelLoadButton`, al formulario.</span><span class="sxs-lookup"><span data-stu-id="a16e0-115">Add two buttons, called `loadButton` and `cancelLoadButton`, to your form.</span></span> <span data-ttu-id="a16e0-116">Agregue los controladores de eventos <xref:System.Windows.Forms.Control.Click> para iniciar y cancelar la descarga.</span><span class="sxs-lookup"><span data-stu-id="a16e0-116">Add <xref:System.Windows.Forms.Control.Click> event handlers to start and cancel the download.</span></span>  
   
      [!code-csharp[System.Windows.Forms.PictureBox.LoadAsync#3](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.PictureBox.LoadAsync/CS/Form1.cs#3)]
      [!code-vb[System.Windows.Forms.PictureBox.LoadAsync#3](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.PictureBox.LoadAsync/VB/Form1.vb#3)]  
@@ -68,11 +68,11 @@ ms.lasthandoff: 01/19/2018
      [!code-csharp[System.Windows.Forms.PictureBox.LoadAsync#4](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.PictureBox.LoadAsync/CS/Form1.cs#4)]
      [!code-vb[System.Windows.Forms.PictureBox.LoadAsync#4](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.PictureBox.LoadAsync/VB/Form1.vb#4)]  
   
-4.  <span data-ttu-id="21758-117">Ejecute la aplicación.</span><span class="sxs-lookup"><span data-stu-id="21758-117">Run your application.</span></span>  
+4.  <span data-ttu-id="a16e0-117">Ejecute la aplicación.</span><span class="sxs-lookup"><span data-stu-id="a16e0-117">Run your application.</span></span>  
   
-     <span data-ttu-id="21758-118">Mientras se realiza la descarga de la imagen, puede mover libremente el formulario, minimizarlo y maximizarlo.</span><span class="sxs-lookup"><span data-stu-id="21758-118">As the image download proceeds, you can move the form freely, minimize it, and maximize it.</span></span>  
+     <span data-ttu-id="a16e0-118">Mientras se realiza la descarga de la imagen, puede mover libremente el formulario, minimizarlo y maximizarlo.</span><span class="sxs-lookup"><span data-stu-id="a16e0-118">As the image download proceeds, you can move the form freely, minimize it, and maximize it.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="21758-119">Vea también</span><span class="sxs-lookup"><span data-stu-id="21758-119">See Also</span></span>  
- [<span data-ttu-id="21758-120">Ejecutar una operación en segundo plano</span><span class="sxs-lookup"><span data-stu-id="21758-120">How to: Run an Operation in the Background</span></span>](../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)  
- [<span data-ttu-id="21758-121">Información general sobre el modelo asincrónico basado en eventos</span><span class="sxs-lookup"><span data-stu-id="21758-121">Event-based Asynchronous Pattern Overview</span></span>](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)  
- [<span data-ttu-id="21758-122">NO ESTÁ EN LA COMPILACIÓN: Multithreading en Visual Basic</span><span class="sxs-lookup"><span data-stu-id="21758-122">NOT IN BUILD: Multithreading in Visual Basic</span></span>](http://msdn.microsoft.com/library/c731a50c-09c1-4468-9646-54c86b75d269)
+## <a name="see-also"></a><span data-ttu-id="a16e0-119">Vea también</span><span class="sxs-lookup"><span data-stu-id="a16e0-119">See Also</span></span>  
+ [<span data-ttu-id="a16e0-120">Ejecutar una operación en segundo plano</span><span class="sxs-lookup"><span data-stu-id="a16e0-120">How to: Run an Operation in the Background</span></span>](../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)  
+ [<span data-ttu-id="a16e0-121">Información general sobre el modelo asincrónico basado en eventos</span><span class="sxs-lookup"><span data-stu-id="a16e0-121">Event-based Asynchronous Pattern Overview</span></span>](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)  
+ [<span data-ttu-id="a16e0-122">NO ESTÁ EN LA COMPILACIÓN: Multithreading en Visual Basic</span><span class="sxs-lookup"><span data-stu-id="a16e0-122">NOT IN BUILD: Multithreading in Visual Basic</span></span>](http://msdn.microsoft.com/library/c731a50c-09c1-4468-9646-54c86b75d269)

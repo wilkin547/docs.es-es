@@ -1,1 +1,1 @@
-<span data-ttu-id="c2a96-101">UIs</span><span class="sxs-lookup"><span data-stu-id="c2a96-101">UIs</span></span>
+<span data-ttu-id="bf814-101">UIs</span><span class="sxs-lookup"><span data-stu-id="bf814-101">UIs</span></span>

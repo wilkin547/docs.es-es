@@ -1,1 +1,1 @@
-<span data-ttu-id="f852d-101">Convención de nomenclatura universal (UNC)</span><span class="sxs-lookup"><span data-stu-id="f852d-101">Universal Naming Convention (UNC)</span></span>
+<span data-ttu-id="7001f-101">Convención de nomenclatura universal (UNC)</span><span class="sxs-lookup"><span data-stu-id="7001f-101">Universal Naming Convention (UNC)</span></span>

@@ -1,1 +1,1 @@
-<span data-ttu-id="eaa78-101">Para obtener más información sobre</span><span class="sxs-lookup"><span data-stu-id="eaa78-101">For more information about</span></span>
+<span data-ttu-id="83439-101">Para obtener más información sobre</span><span class="sxs-lookup"><span data-stu-id="83439-101">For more information about</span></span>

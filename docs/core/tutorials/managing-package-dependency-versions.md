@@ -1,6 +1,6 @@
 ---
-title: "Cómo administrar las versiones de dependencias de paquete para .NET Core 1.0"
-description: "Obtenga información sobre la administración de versiones de dependencias de paquete para aplicaciones y bibliotecas de .NET Core."
+title: Cómo administrar las versiones de dependencias de paquete para .NET Core 1.0
+description: Obtenga información sobre la administración de versiones de dependencias de paquete para aplicaciones y bibliotecas de .NET Core.
 keywords: .NET, .NET Core
 author: cartermp
 ms.author: mairaw
@@ -9,30 +9,31 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 4424a947-bdf9-4775-8d48-dc350a4e0aee
-ms.workload: dotnetcore
+ms.workload:
+- dotnetcore
 ms.openlocfilehash: 2bb55f3bcd6678a127f099afbb9461cafe1a9c94
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
-ms.translationtype: HT
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/26/2018
 ---
-# <a name="how-to-manage-package-dependency-versions-for-net-core-10"></a><span data-ttu-id="d66f7-104">Cómo administrar las versiones de dependencias de paquete para .NET Core 1.0</span><span class="sxs-lookup"><span data-stu-id="d66f7-104">How to Manage Package Dependency Versions for .NET Core 1.0</span></span>
+# <a name="how-to-manage-package-dependency-versions-for-net-core-10"></a><span data-ttu-id="b3cfe-104">Cómo administrar las versiones de dependencias de paquete para .NET Core 1.0</span><span class="sxs-lookup"><span data-stu-id="b3cfe-104">How to Manage Package Dependency Versions for .NET Core 1.0</span></span>
 
-<span data-ttu-id="d66f7-105">En este artículo se analiza lo que debe saber sobre las versiones de paquete para las bibliotecas y aplicaciones de .NET Core.</span><span class="sxs-lookup"><span data-stu-id="d66f7-105">This article covers what you need to know about package versions for your .NET Core libraries and apps.</span></span>
+<span data-ttu-id="b3cfe-105">En este artículo se analiza lo que debe saber sobre las versiones de paquete para las bibliotecas y aplicaciones de .NET Core.</span><span class="sxs-lookup"><span data-stu-id="b3cfe-105">This article covers what you need to know about package versions for your .NET Core libraries and apps.</span></span>
 
-## <a name="glossary"></a><span data-ttu-id="d66f7-106">Glosario</span><span class="sxs-lookup"><span data-stu-id="d66f7-106">Glossary</span></span>
+## <a name="glossary"></a><span data-ttu-id="b3cfe-106">Glosario</span><span class="sxs-lookup"><span data-stu-id="b3cfe-106">Glossary</span></span>
 
-<span data-ttu-id="d66f7-107">**Corrección**: corregir las dependencias significa que usa la misma "familia" de paquetes lanzada en NuGet para .NET Core 1.0.</span><span class="sxs-lookup"><span data-stu-id="d66f7-107">**Fix** - Fixing dependencies means you are using the same "family" of packages released on NuGet for .NET Core 1.0.</span></span>
+<span data-ttu-id="b3cfe-107">**Corrección**: corregir las dependencias significa que usa la misma "familia" de paquetes lanzada en NuGet para .NET Core 1.0.</span><span class="sxs-lookup"><span data-stu-id="b3cfe-107">**Fix** - Fixing dependencies means you are using the same "family" of packages released on NuGet for .NET Core 1.0.</span></span>
 
-<span data-ttu-id="d66f7-108">**Metapaquete**: un paquete NuGet que representa un conjunto de paquetes NuGet.</span><span class="sxs-lookup"><span data-stu-id="d66f7-108">**Metapackage** - A NuGet package that represents a set of NuGet packages.</span></span>
+<span data-ttu-id="b3cfe-108">**Metapaquete**: un paquete NuGet que representa un conjunto de paquetes NuGet.</span><span class="sxs-lookup"><span data-stu-id="b3cfe-108">**Metapackage** - A NuGet package that represents a set of NuGet packages.</span></span>
 
-<span data-ttu-id="d66f7-109">**Recorte**: acción de quitar de un metapaquete los paquetes de los cuales no depende.</span><span class="sxs-lookup"><span data-stu-id="d66f7-109">**Trimming** - The act of removing the packages you do not depend on from a metapackage.</span></span>  <span data-ttu-id="d66f7-110">Es importante para los creadores de paquetes NuGet.</span><span class="sxs-lookup"><span data-stu-id="d66f7-110">This is something relevant for NuGet package authors.</span></span>  <span data-ttu-id="d66f7-111">Consulte [Reducción de dependencias de paquete con project.json](../deploying/reducing-dependencies.md) para más información.</span><span class="sxs-lookup"><span data-stu-id="d66f7-111">See [Reducing Package Dependencies with project.json](../deploying/reducing-dependencies.md) for more information.</span></span> 
+<span data-ttu-id="b3cfe-109">**Recorte**: acción de quitar de un metapaquete los paquetes de los cuales no depende.</span><span class="sxs-lookup"><span data-stu-id="b3cfe-109">**Trimming** - The act of removing the packages you do not depend on from a metapackage.</span></span>  <span data-ttu-id="b3cfe-110">Es importante para los creadores de paquetes NuGet.</span><span class="sxs-lookup"><span data-stu-id="b3cfe-110">This is something relevant for NuGet package authors.</span></span>  <span data-ttu-id="b3cfe-111">Consulte [Reducción de dependencias de paquete con project.json](../deploying/reducing-dependencies.md) para más información.</span><span class="sxs-lookup"><span data-stu-id="b3cfe-111">See [Reducing Package Dependencies with project.json](../deploying/reducing-dependencies.md) for more information.</span></span> 
 
-## <a name="fix-your-dependencies-to-net-core-10"></a><span data-ttu-id="d66f7-112">Corrección de las dependencias a .NET Core 1.0</span><span class="sxs-lookup"><span data-stu-id="d66f7-112">Fix your dependencies to .NET Core 1.0</span></span>
+## <a name="fix-your-dependencies-to-net-core-10"></a><span data-ttu-id="b3cfe-112">Corrección de las dependencias a .NET Core 1.0</span><span class="sxs-lookup"><span data-stu-id="b3cfe-112">Fix your dependencies to .NET Core 1.0</span></span>
 
-<span data-ttu-id="d66f7-113">Para restaurar de forma fiable los paquetes y escribir código confiable, es importante que corrija las dependencias a las versiones de los paquetes incluidos con .NET Core 1.0.</span><span class="sxs-lookup"><span data-stu-id="d66f7-113">To reliably restore packages and write reliable code, it's important that you fix your dependencies to the versions of packages shipping alongside .NET Core 1.0.</span></span>  <span data-ttu-id="d66f7-114">Esto significa que cada paquete debe tener una versión única sin calificadores adicionales.</span><span class="sxs-lookup"><span data-stu-id="d66f7-114">This means every package should have a single version with no additional qualifiers.</span></span>
+<span data-ttu-id="b3cfe-113">Para restaurar de forma fiable los paquetes y escribir código confiable, es importante que corrija las dependencias a las versiones de los paquetes incluidos con .NET Core 1.0.</span><span class="sxs-lookup"><span data-stu-id="b3cfe-113">To reliably restore packages and write reliable code, it's important that you fix your dependencies to the versions of packages shipping alongside .NET Core 1.0.</span></span>  <span data-ttu-id="b3cfe-114">Esto significa que cada paquete debe tener una versión única sin calificadores adicionales.</span><span class="sxs-lookup"><span data-stu-id="b3cfe-114">This means every package should have a single version with no additional qualifiers.</span></span>
 
-<span data-ttu-id="d66f7-115">**Ejemplos de paquetes corregidos a 1.0**</span><span class="sxs-lookup"><span data-stu-id="d66f7-115">**Examples of packages fixed to 1.0**</span></span>
+<span data-ttu-id="b3cfe-115">**Ejemplos de paquetes corregidos a 1.0**</span><span class="sxs-lookup"><span data-stu-id="b3cfe-115">**Examples of packages fixed to 1.0**</span></span>
 
 `"System.Collections":"4.0.11"`
 
@@ -40,7 +41,7 @@ ms.lasthandoff: 12/23/2017
 
 `"Microsoft.NETCore.App":"1.0.0"`
 
-<span data-ttu-id="d66f7-116">**Ejemplos de paquetes NO corregidos a 1.0**</span><span class="sxs-lookup"><span data-stu-id="d66f7-116">**Examples of packages that are NOT fixed to 1.0**</span></span>
+<span data-ttu-id="b3cfe-116">**Ejemplos de paquetes NO corregidos a 1.0**</span><span class="sxs-lookup"><span data-stu-id="b3cfe-116">**Examples of packages that are NOT fixed to 1.0**</span></span>
 
 `"Microsoft.NETCore.App":"1.0.0-rc4-00454-00"`
 
@@ -48,40 +49,40 @@ ms.lasthandoff: 12/23/2017
 
 `"System.Text.RegularExpressions":"4.0.10-rc3-24021-00"`
 
-### <a name="why-does-this-matter"></a><span data-ttu-id="d66f7-117">¿Por qué es importante?</span><span class="sxs-lookup"><span data-stu-id="d66f7-117">Why does this matter?</span></span>
+### <a name="why-does-this-matter"></a><span data-ttu-id="b3cfe-117">¿Por qué es importante?</span><span class="sxs-lookup"><span data-stu-id="b3cfe-117">Why does this matter?</span></span>
 
-<span data-ttu-id="d66f7-118">Se garantiza que si se corrigen las dependencias del contenido que se distribuye con .NET Core 1.0, esos paquetes van a funcionar juntos.</span><span class="sxs-lookup"><span data-stu-id="d66f7-118">We guarantee that if you fix your dependencies to what ships alongside .NET Core 1.0, those packages will all work together.</span></span> <span data-ttu-id="d66f7-119">Dicha garantía no existe si usa paquetes no corregidos de esa manera.</span><span class="sxs-lookup"><span data-stu-id="d66f7-119">There is no such guarantee if you use packages which aren't fixed in this way.</span></span>
+<span data-ttu-id="b3cfe-118">Se garantiza que si se corrigen las dependencias del contenido que se distribuye con .NET Core 1.0, esos paquetes van a funcionar juntos.</span><span class="sxs-lookup"><span data-stu-id="b3cfe-118">We guarantee that if you fix your dependencies to what ships alongside .NET Core 1.0, those packages will all work together.</span></span> <span data-ttu-id="b3cfe-119">Dicha garantía no existe si usa paquetes no corregidos de esa manera.</span><span class="sxs-lookup"><span data-stu-id="b3cfe-119">There is no such guarantee if you use packages which aren't fixed in this way.</span></span>
 
-### <a name="scenarios"></a><span data-ttu-id="d66f7-120">Escenarios</span><span class="sxs-lookup"><span data-stu-id="d66f7-120">Scenarios</span></span>
+### <a name="scenarios"></a><span data-ttu-id="b3cfe-120">Escenarios</span><span class="sxs-lookup"><span data-stu-id="b3cfe-120">Scenarios</span></span>
 
-<span data-ttu-id="d66f7-121">A pesar de que hay una gran lista de todos los paquetes y sus versiones lanzadas con .NET Core 1.0, puede que no sea necesario consultarla si el código que tiene se encuentra en ciertos escenarios.</span><span class="sxs-lookup"><span data-stu-id="d66f7-121">Although there is a big list of all packages and their versions released with .NET Core 1.0, you may not have to look through it if your code falls under certain scenarios.</span></span>
+<span data-ttu-id="b3cfe-121">A pesar de que hay una gran lista de todos los paquetes y sus versiones lanzadas con .NET Core 1.0, puede que no sea necesario consultarla si el código que tiene se encuentra en ciertos escenarios.</span><span class="sxs-lookup"><span data-stu-id="b3cfe-121">Although there is a big list of all packages and their versions released with .NET Core 1.0, you may not have to look through it if your code falls under certain scenarios.</span></span>
 
-<span data-ttu-id="d66f7-122">**¿Depende solo de** `NETStandard.Library`**?**</span><span class="sxs-lookup"><span data-stu-id="d66f7-122">**Are you depending only on** `NETStandard.Library`**?**</span></span>
+<span data-ttu-id="b3cfe-122">**¿Depende solo de** `NETStandard.Library`**?**</span><span class="sxs-lookup"><span data-stu-id="b3cfe-122">**Are you depending only on** `NETStandard.Library`**?**</span></span>
 
-<span data-ttu-id="d66f7-123">Si es así, debe corregir el paquete `NETStandard.Library` a la versión `1.6`.</span><span class="sxs-lookup"><span data-stu-id="d66f7-123">If so, you should fix your `NETStandard.Library` package to version `1.6`.</span></span>  <span data-ttu-id="d66f7-124">Como se trata de un metapaquete mantenido, la clausura de su paquete también se corrige a 1.0.</span><span class="sxs-lookup"><span data-stu-id="d66f7-124">Because this is a curated metapackage, its package closure is also fixed to 1.0.</span></span>
+<span data-ttu-id="b3cfe-123">Si es así, debe corregir el paquete `NETStandard.Library` a la versión `1.6`.</span><span class="sxs-lookup"><span data-stu-id="b3cfe-123">If so, you should fix your `NETStandard.Library` package to version `1.6`.</span></span>  <span data-ttu-id="b3cfe-124">Como se trata de un metapaquete mantenido, la clausura de su paquete también se corrige a 1.0.</span><span class="sxs-lookup"><span data-stu-id="b3cfe-124">Because this is a curated metapackage, its package closure is also fixed to 1.0.</span></span>
 
-<span data-ttu-id="d66f7-125">**¿Depende solo de** `Microsoft.NETCore.App`**?**</span><span class="sxs-lookup"><span data-stu-id="d66f7-125">**Are you depending only on** `Microsoft.NETCore.App`**?**</span></span>
+<span data-ttu-id="b3cfe-125">**¿Depende solo de** `Microsoft.NETCore.App`**?**</span><span class="sxs-lookup"><span data-stu-id="b3cfe-125">**Are you depending only on** `Microsoft.NETCore.App`**?**</span></span>
 
-<span data-ttu-id="d66f7-126">Si es así, debe corregir el paquete `Microsoft.NETCore.App` a la versión `1.0.0`.</span><span class="sxs-lookup"><span data-stu-id="d66f7-126">If so, you should fix your `Microsoft.NETCore.App` package to version `1.0.0`.</span></span>  <span data-ttu-id="d66f7-127">Como se trata de un metapaquete mantenido, la clausura de su paquete también se corrige a 1.0.</span><span class="sxs-lookup"><span data-stu-id="d66f7-127">Because this is a curated metapackage, its package closure is also fixed to 1.0.</span></span>
+<span data-ttu-id="b3cfe-126">Si es así, debe corregir el paquete `Microsoft.NETCore.App` a la versión `1.0.0`.</span><span class="sxs-lookup"><span data-stu-id="b3cfe-126">If so, you should fix your `Microsoft.NETCore.App` package to version `1.0.0`.</span></span>  <span data-ttu-id="b3cfe-127">Como se trata de un metapaquete mantenido, la clausura de su paquete también se corrige a 1.0.</span><span class="sxs-lookup"><span data-stu-id="b3cfe-127">Because this is a curated metapackage, its package closure is also fixed to 1.0.</span></span>
 
-<span data-ttu-id="d66f7-128">**¿[Recorta](../deploying/reducing-dependencies.md) las dependencias del metapaquete** `NETStandard.Library` **o** `Microsoft.NETCore.App` **?**</span><span class="sxs-lookup"><span data-stu-id="d66f7-128">**Are you [trimming](../deploying/reducing-dependencies.md) your** `NETStandard.Library` **or** `Microsoft.NETCore.App` **metapackage dependencies?**</span></span>
+<span data-ttu-id="b3cfe-128">**¿[Recorta](../deploying/reducing-dependencies.md) las dependencias del metapaquete** `NETStandard.Library` **o** `Microsoft.NETCore.App` **?**</span><span class="sxs-lookup"><span data-stu-id="b3cfe-128">**Are you [trimming](../deploying/reducing-dependencies.md) your** `NETStandard.Library` **or** `Microsoft.NETCore.App` **metapackage dependencies?**</span></span>
 
-<span data-ttu-id="d66f7-129">Si es así, debe asegurarse de que el metapaquete con el que comienza esté corregido a 1.0.</span><span class="sxs-lookup"><span data-stu-id="d66f7-129">If so, you should ensure that the metapackage you start with is fixed to 1.0.</span></span>  <span data-ttu-id="d66f7-130">Los paquetes individuales de los que depende después del recorte también se corrigen a 1.0.</span><span class="sxs-lookup"><span data-stu-id="d66f7-130">The individual packages you depend on after trimming are also fixed to 1.0.</span></span>
+<span data-ttu-id="b3cfe-129">Si es así, debe asegurarse de que el metapaquete con el que comienza esté corregido a 1.0.</span><span class="sxs-lookup"><span data-stu-id="b3cfe-129">If so, you should ensure that the metapackage you start with is fixed to 1.0.</span></span>  <span data-ttu-id="b3cfe-130">Los paquetes individuales de los que depende después del recorte también se corrigen a 1.0.</span><span class="sxs-lookup"><span data-stu-id="b3cfe-130">The individual packages you depend on after trimming are also fixed to 1.0.</span></span>
 
-<span data-ttu-id="d66f7-131">**¿Depende de paquetes externos al metapaquete** `NETStandard.Library` **o** `Microsoft.NETCore.App` **?**</span><span class="sxs-lookup"><span data-stu-id="d66f7-131">**Are you depending on packages outside the** `NETStandard.Library` **or** `Microsoft.NETCore.App` **metapackages?**</span></span>
+<span data-ttu-id="b3cfe-131">**¿Depende de paquetes externos al metapaquete** `NETStandard.Library` **o** `Microsoft.NETCore.App` **?**</span><span class="sxs-lookup"><span data-stu-id="b3cfe-131">**Are you depending on packages outside the** `NETStandard.Library` **or** `Microsoft.NETCore.App` **metapackages?**</span></span>
 
-<span data-ttu-id="d66f7-132">Si es así, debe corregir las otras dependencias a 1.0.</span><span class="sxs-lookup"><span data-stu-id="d66f7-132">If so, you need to fix your other dependencies to 1.0.</span></span>  <span data-ttu-id="d66f7-133">Consulte las versiones de paquete y los números de compilación correctos al final de este artículo.</span><span class="sxs-lookup"><span data-stu-id="d66f7-133">See the correct package versions and build numbers at the end of this article.</span></span>
+<span data-ttu-id="b3cfe-132">Si es así, debe corregir las otras dependencias a 1.0.</span><span class="sxs-lookup"><span data-stu-id="b3cfe-132">If so, you need to fix your other dependencies to 1.0.</span></span>  <span data-ttu-id="b3cfe-133">Consulte las versiones de paquete y los números de compilación correctos al final de este artículo.</span><span class="sxs-lookup"><span data-stu-id="b3cfe-133">See the correct package versions and build numbers at the end of this article.</span></span>
 
-### <a name="a-note-on-using-a-splat-string--when-versioning"></a><span data-ttu-id="d66f7-134">Nota sobre el uso de una cadena con asterisco (\\*) cuando cree versiones</span><span class="sxs-lookup"><span data-stu-id="d66f7-134">A note on using a splat string (\\*) when versioning</span></span>
+### <a name="a-note-on-using-a-splat-string--when-versioning"></a><span data-ttu-id="b3cfe-134">Nota sobre el uso de una cadena con asterisco (\*) cuando cree versiones</span><span class="sxs-lookup"><span data-stu-id="b3cfe-134">A note on using a splat string (\*) when versioning</span></span>
 
-<span data-ttu-id="d66f7-135">Puede que haya adoptado un patrón de creación de versiones que usa una cadena con asterisco (\*) como la siguiente: `"System.Collections":"4.0.11-*"`.</span><span class="sxs-lookup"><span data-stu-id="d66f7-135">You may have adopted a versioning pattern which uses a splat (\*) string like this: `"System.Collections":"4.0.11-*"`.</span></span>
+<span data-ttu-id="b3cfe-135">Puede que haya adoptado un patrón de creación de versiones que usa una cadena con asterisco (\*) como la siguiente: `"System.Collections":"4.0.11-*"`.</span><span class="sxs-lookup"><span data-stu-id="b3cfe-135">You may have adopted a versioning pattern which uses a splat (\*) string like this: `"System.Collections":"4.0.11-*"`.</span></span>
 
-<span data-ttu-id="d66f7-136">**No debe hacer esto**.</span><span class="sxs-lookup"><span data-stu-id="d66f7-136">**You should not do this**.</span></span>  <span data-ttu-id="d66f7-137">Si usa la cadena con asterisco podría restaurar paquetes de distintas compilaciones, algunas de las cuales podrían ir mucho más allá de .NET Core 1.0.</span><span class="sxs-lookup"><span data-stu-id="d66f7-137">Using the splat string could result in restoring packages from different builds, some of which may be further along than .NET Core 1.0.</span></span>  <span data-ttu-id="d66f7-138">Esto podría hacer que algunos paquetes no sean compatibles.</span><span class="sxs-lookup"><span data-stu-id="d66f7-138">This could then result in some packages being incompatible.</span></span>
+<span data-ttu-id="b3cfe-136">**No debe hacer esto**.</span><span class="sxs-lookup"><span data-stu-id="b3cfe-136">**You should not do this**.</span></span>  <span data-ttu-id="b3cfe-137">Si usa la cadena con asterisco podría restaurar paquetes de distintas compilaciones, algunas de las cuales podrían ir mucho más allá de .NET Core 1.0.</span><span class="sxs-lookup"><span data-stu-id="b3cfe-137">Using the splat string could result in restoring packages from different builds, some of which may be further along than .NET Core 1.0.</span></span>  <span data-ttu-id="b3cfe-138">Esto podría hacer que algunos paquetes no sean compatibles.</span><span class="sxs-lookup"><span data-stu-id="b3cfe-138">This could then result in some packages being incompatible.</span></span>
 
-## <a name="packages-and-version-numbers-organized-by-metapackage"></a><span data-ttu-id="d66f7-139">Número de versión y paquetes organizados por metapaquete</span><span class="sxs-lookup"><span data-stu-id="d66f7-139">Packages and Version Numbers organized by Metapackage</span></span>
+## <a name="packages-and-version-numbers-organized-by-metapackage"></a><span data-ttu-id="b3cfe-139">Número de versión y paquetes organizados por metapaquete</span><span class="sxs-lookup"><span data-stu-id="b3cfe-139">Packages and Version Numbers organized by Metapackage</span></span>
 
-<span data-ttu-id="d66f7-140">[Lista de todos los paquetes del estándar .NET y sus versiones para 1.0](https://github.com/dotnet/versions/blob/master/build-info/dotnet/corefx/release/1.0.0/Latest_Packages.txt).</span><span class="sxs-lookup"><span data-stu-id="d66f7-140">[List of all .NET Standard packages and their versions for 1.0](https://github.com/dotnet/versions/blob/master/build-info/dotnet/corefx/release/1.0.0/Latest_Packages.txt).</span></span>
+<span data-ttu-id="b3cfe-140">[Lista de todos los paquetes del estándar .NET y sus versiones para 1.0](https://github.com/dotnet/versions/blob/master/build-info/dotnet/corefx/release/1.0.0/Latest_Packages.txt).</span><span class="sxs-lookup"><span data-stu-id="b3cfe-140">[List of all .NET Standard packages and their versions for 1.0](https://github.com/dotnet/versions/blob/master/build-info/dotnet/corefx/release/1.0.0/Latest_Packages.txt).</span></span>
 
-<span data-ttu-id="d66f7-141">[Lista de todos los paquetes de entorno de ejecución y sus versiones para 1.0](https://github.com/dotnet/versions/blob/master/build-info/dotnet/coreclr/release/1.0.0/LKG_Packages.txt).</span><span class="sxs-lookup"><span data-stu-id="d66f7-141">[List of all runtime packages and their versions for 1.0](https://github.com/dotnet/versions/blob/master/build-info/dotnet/coreclr/release/1.0.0/LKG_Packages.txt).</span></span>
+<span data-ttu-id="b3cfe-141">[Lista de todos los paquetes de entorno de ejecución y sus versiones para 1.0](https://github.com/dotnet/versions/blob/master/build-info/dotnet/coreclr/release/1.0.0/LKG_Packages.txt).</span><span class="sxs-lookup"><span data-stu-id="b3cfe-141">[List of all runtime packages and their versions for 1.0](https://github.com/dotnet/versions/blob/master/build-info/dotnet/coreclr/release/1.0.0/LKG_Packages.txt).</span></span>
 
-<span data-ttu-id="d66f7-142">[Lista de todos los paquetes de aplicaciones de .NET Core y sus versiones para 1.0](https://github.com/dotnet/versions/blob/master/build-info/dotnet/core-setup/release/1.0.0/Latest_Packages.txt).</span><span class="sxs-lookup"><span data-stu-id="d66f7-142">[List of all .NET Core application packages and their versions for 1.0](https://github.com/dotnet/versions/blob/master/build-info/dotnet/core-setup/release/1.0.0/Latest_Packages.txt).</span></span>
+<span data-ttu-id="b3cfe-142">[Lista de todos los paquetes de aplicaciones de .NET Core y sus versiones para 1.0](https://github.com/dotnet/versions/blob/master/build-info/dotnet/core-setup/release/1.0.0/Latest_Packages.txt).</span><span class="sxs-lookup"><span data-stu-id="b3cfe-142">[List of all .NET Core application packages and their versions for 1.0](https://github.com/dotnet/versions/blob/master/build-info/dotnet/core-setup/release/1.0.0/Latest_Packages.txt).</span></span>

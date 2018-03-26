@@ -1,1 +1,1 @@
-<span data-ttu-id="5ba63-101">Microsoft .NET</span><span class="sxs-lookup"><span data-stu-id="5ba63-101">Microsoft .NET</span></span>
+<span data-ttu-id="1e21e-101">Microsoft .NET</span><span class="sxs-lookup"><span data-stu-id="1e21e-101">Microsoft .NET</span></span>
