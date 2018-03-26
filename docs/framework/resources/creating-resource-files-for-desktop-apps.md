@@ -1,12 +1,13 @@
 ---
 title: Crear archivos de recursos para aplicaciones de escritorio
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -17,16 +18,17 @@ helpviewer_keywords:
 - application resources, creating files
 - resource files, creating
 ms.assetid: 6c5ad891-66a0-4e7a-adcf-f41863ba6d8d
-caps.latest.revision: "25"
+caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 555ef705dc485462dc209b090e5cdbee98983681
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: b73520dfc3d5123aedce77254f738a61a27ccd95
+ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="creating-resource-files-for-desktop-apps"></a>Crear archivos de recursos para aplicaciones de escritorio
 Puede incluir recursos, como cadenas, imágenes o datos de objeto, en los archivos de recursos para hacer que estén disponibles fácilmente en su aplicación. .NET Framework ofrece cinco mecanismos para crear archivos de recursos:  
@@ -130,11 +132,15 @@ greeting=Hello, {0}!
   
  Si está utilizando Visual Basic y el archivo de código fuente se denomina Greeting.vb, el siguiente comando crea un archivo ejecutable que incluye el archivo .resources incrustado:  
   
- **vbc greeting.vb /resource:GreetingResources.resources**  
+```console 
+vbc greeting.vb -resource:GreetingResources.resources
+```
   
  Si está utilizando C# y el archivo de código fuente se denomina Greeting.cs, el comando siguiente crea un archivo ejecutable que incluye el archivo .resources incrustado:  
   
- **csc greeting.cs /resource:GreetingResources.resources**  
+ ```console
+csc greeting.cs -resource:GreetingResources.resources
+```
   
 <a name="ResxFiles"></a>   
 ## <a name="resources-in-resx-files"></a>Recursos en archivos .resx  
