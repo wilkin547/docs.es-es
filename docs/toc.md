@@ -66,7 +66,7 @@
 ### [Introducción a C# y Visual Studio Code](core/tutorials/with-visual-studio-code.md)
 ### [Compilación de una aplicación Hola mundo de C# con .NET Core en Visual Studio 2017](core/tutorials/with-visual-studio.md)
 ### [Compilación de una aplicación Hola mundo de Visual Basic con .NET Core en Visual Studio 2017](core/tutorials/vb-with-visual-studio.md)
-### [Compilación de una biblioteca de clases con C# y .NET Core en Visual Studio 2017](core/tutorials/library-with-visual-studio.md)
+### [Compilación de una biblioteca de clases con C# y .NET Core en Visual Studio](core/tutorials/library-with-visual-studio.md)
 ### [Creación de una biblioteca de clases con Visual Basic y .NET Core en Visual Studio 2017](core/tutorials/vb-library-with-visual-studio.md)
 ## [Requisitos previos de Windows](core/windows-prerequisites.md)
 ## [Requisitos previos de macOS](core/macos-prerequisites.md)
