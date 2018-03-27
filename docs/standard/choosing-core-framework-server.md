@@ -1,19 +1,19 @@
 ---
-title: "Selección entre .NET Core y .NET Framework para aplicaciones de servidor"
-description: "Una guía sobre qué implementación de .NET debe tener en cuenta al crear una aplicación de servidor en .NET."
+title: Selección entre .NET Core y .NET Framework para aplicaciones de servidor
+description: Una guía sobre qué implementación de .NET debe tener en cuenta al crear una aplicación de servidor en .NET.
 author: cartermp
 ms.author: mairaw
-ms.date: 08/15/2016
+ms.date: 03/15/2018
 ms.topic: article
 ms.prod: .net
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 2108125b9c01a2686d66b0ebd4e43e7ac863e223
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: c07b0b760e2a46faea574eef3575409bac773942
+ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a>Selección entre .NET Core y .NET Framework para aplicaciones de servidor
 
@@ -34,7 +34,7 @@ Use .NET Framework para su aplicación de servidor cuando:
 * La aplicación use tecnologías de .NET que no están disponibles para .NET Core.
 * La aplicación use una plataforma que no es compatible con .NET Core.
 
-## <a name="when-to-choose-net-core"></a>Cuándo elegir .NET Core
+## <a name="when-to-choose-net-core"></a>Casos en los que elegir .NET Core
 
 En las siguientes secciones, se explican de manera más detallada las razones indicadas anteriormente para elegir .NET Core.
 
@@ -68,7 +68,7 @@ El rendimiento y la escalabilidad son especialmente importantes para las arquite
 
 Para instalar aplicaciones con dependencias en diferentes versiones de .NET, se recomienda .NET Core. .NET Core ofrece una instalación en paralelo de diferentes versiones del entorno de ejecución .NET Core en el mismo equipo. Esta instalación en paralelo permite varios servicios en el mismo servidor, cada uno de ellos en su propia versión de .NET Core. También reduce los riesgos y ahorra dinero en las operaciones de TI y las actualizaciones de aplicaciones.
 
-## <a name="when-to-choose-net-framework"></a>Cuándo elegir .NET Framework
+## <a name="when-to-choose-net-framework"></a>Casos en los que elegir .NET Framework
 
 .NET Core ofrece ventajas significativas para las aplicaciones nuevas y los patrones de aplicación. En cambio, .NET Framework sigue siendo la opción natural para muchos escenarios existentes y, por ello, .NET Core no reemplaza a .NET Framework para todas las aplicaciones de servidor.
 
@@ -79,6 +79,7 @@ En la mayoría de los casos, no necesita migrar sus aplicaciones existentes a .N
 ### <a name="a-need-to-use-third-party-net-libraries-or-nuget-packages-not-available-for-net-core"></a>Necesidad de usar bibliotecas .NET de terceros o paquetes de NuGet que no están disponibles para .NET Core
 
 Las bibliotecas están adoptando rápidamente .NET Standard. .NET Standard permite compartir código entre todas las implementaciones de .NET, incluido .NET Core. Con .NET Standard 2.0, esto es incluso más fácil:
+
 - La superficie de API es mucho más grande. 
 - Se ha introducido un modo de compatibilidad de .NET Framework. Este modo de compatibilidad permite a los proyectos de .NET Standard o .NET Core hacer referencia a bibliotecas de .NET Framework. Para obtener más información sobre el modo de compatibilidad, vea [Announcing .NET Standard 2.0](https://blogs.msdn.microsoft.com/dotnet/2017/08/14/announcing-net-standard-2-0/) (Anuncio de .NET Standard 2.0).
 
@@ -92,7 +93,7 @@ Algunas tecnologías de .NET Framework no están disponibles en .NET Core. Algun
 
 * Aplicaciones de ASP.NET Web Pages: ASP.NET Web Pages no está incluida en ASP.NET Core. Las [páginas de Razor](/aspnet/core/mvc/razor-pages/) de ASP.NET Core tienen muchas similitudes con Web Pages.
 
-* Implementación de servidor y cliente de ASP.NET SignalR. Actualmente, ASP.NET SignalR no está disponible para ASP.NET Core (cliente o servidor). ASP.NET Core SignalR está programada para ASP.NET Core 2.1. Consulte [ASP.NET Core Schedule and Roadmap](https://github.com/aspnet/Home/wiki/Roadmap) (Programación y mapa de ruta de ASP.NET Core). El estado de versión preliminar está disponible en los repositorios de GitHub del [lado servidor](https://github.com/aspnet/SignalR-Server) y la [biblioteca cliente](https://github.com/aspnet/SignalR-Client-Net).
+* Implementación de servidor y cliente de ASP.NET SignalR. En la actualidad [ASP.NET SignalR](https://github.com/aspnet/SignalR) está disponible en modo de versión preliminar con ASP.NET Core 2.1.
 
 * Implementación de servicios WCF. Aunque hay una [biblioteca cliente de WCF](https://github.com/dotnet/wcf) para consumir servicios WCF desde .NET Core, actualmente, la implementación del servidor WCF solo está disponible en .NET Framework. Este escenario no es parte del plan actual de .NET Core, pero se está considerando para el futuro.
 

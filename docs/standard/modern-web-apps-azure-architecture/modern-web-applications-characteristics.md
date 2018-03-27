@@ -1,6 +1,6 @@
 ---
-title: "Características de aplicaciones web modernas"
-description: "Diseñar aplicaciones Web modernas con ASP.NET Core y Azure | características de aplicaciones web modernas"
+title: Características de las aplicaciones web modernas
+description: Diseño de aplicaciones web modernas con ASP.NET Core y Azure | Características de las aplicaciones web modernas
 author: ardalis
 ms.author: wiwagn
 ms.date: 10/06/2017
@@ -11,24 +11,24 @@ ms.workload:
 - dotnetcore
 ms.openlocfilehash: ecef23870ac547f4b4066628da71f8af98c91b27
 ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 12/23/2017
 ---
-# <a name="characteristics-of-modern-web-applications"></a>Características de aplicaciones Web modernas
+# <a name="characteristics-of-modern-web-applications"></a>Características de las aplicaciones web modernas
 
-> "… las características de un diseño adecuado, conlleva económica. Este enfoque es arduo, pero continúa lleve a cabo correctamente."  
+> "… con el diseño adecuado, las características son más baratas. Este enfoque es complicado, pero sigue siendo útil".  
 > _\- Dennis Ritchie_
 
 ## <a name="summary"></a>Resumen
 
-Las aplicaciones web modernas tienen las expectativas del usuario superior y mayor demanda que nunca. Las aplicaciones web de hoy en día deben estar disponibles 24/7 desde cualquier lugar del mundo y se puede usar desde prácticamente cualquier dispositivo o tamaño de la pantalla. Aplicaciones Web deben ser segura, flexible y escalable para satisfacer los picos de demanda. Cada vez más, los escenarios complejos deben controlarse con experiencias de usuario enriquecida creadas en el cliente con JavaScript y comunicarse de forma eficaz a través de las API web.
+Las aplicaciones web modernas tienen expectativas más altas por parte del usuario y mayores demandas que nunca. Se espera que las aplicaciones web actuales estén disponibles 24 horas al día los siete días de la semana desde cualquier lugar del mundo y se puedan usar desde prácticamente cualquier dispositivo o tamaño de pantalla. Las aplicaciones web deben ser seguras, flexibles y escalables para satisfacer los picos de demanda. Cada vez más, los escenarios complejos deben controlarse mediante experiencias de usuario enriquecidas creadas en el cliente con JavaScript y comunicarse de forma eficaz a través de las API web.
 
-ASP.NET Core está optimizado para aplicaciones web modernas y escenarios de hospedaje en la nube. Su diseño modular permite que las aplicaciones que dependen sólo aquellas características que realmente utilizan, mejorar la seguridad de la aplicación y el rendimiento al reducir los requisitos de recursos de host.
+ASP.NET Core se ha optimizado para aplicaciones web modernas y escenarios de hospedaje basados en la nube. Su diseño modular permite que las aplicaciones dependan solo de aquellas características que realmente usan, lo que mejora la seguridad y el rendimiento de la aplicación mientras se reducen los requisitos de recursos de hospedaje.
 
-## <a name="reference-application-eshoponweb"></a>Referencia de aplicación: eShopOnWeb
+## <a name="reference-application-eshoponweb"></a>Aplicación de referencia: eShopOnWeb
 
-Esta guía incluye una aplicación de referencia, *eShopOnWeb*, que muestran algunos de los principios y las recomendaciones. La aplicación es una tienda en línea simple que admite la exploración a través de un catálogo de camisetas, tazas de café y otros elementos de marketing. La aplicación de referencia es deliberadamente sencilla para que sea fácil de entender.
+En esta guía se incluye una aplicación de referencia, *eShopOnWeb*, en la que se muestran algunos de los principios y las recomendaciones. La aplicación es una sencilla tienda en línea que admite búsquedas a través de un catálogo de camisetas, tazas de café y otros productos de marketing. La aplicación de referencia es deliberadamente sencilla para que sea fácil de entender.
 
 **Figura 2-1.** eShopOnWeb
 
@@ -38,47 +38,47 @@ Esta guía incluye una aplicación de referencia, *eShopOnWeb*, que muestran alg
 > - **eShopOnWeb**  
 > <https://github.com/dotnet/eShopOnWeb>
 
-## <a name="cloud-hosted-and-scalable"></a>Hospedado en la nube y escalable
+## <a name="cloud-hosted-and-scalable"></a>Hospedada en la nube y escalable
 
-ASP.NET Core está optimizado para la nube (nube pública, en la nube privada, cualquier nube) porque está bajo de memoria y de alto rendimiento. La menor superficie de aplicaciones de ASP.NET Core significa que puede hospedar varias de ellas en el mismo hardware, y se paga por menos recursos cuando con el pago a medida que vaya a servicios de hospedaje en nube. El rendimiento mayor significa que puede servir a más clientes desde una aplicación que tiene el mismo hardware, reduciendo así la necesidad de invertir en servidores y la infraestructura de hospedaje.
+ASP.NET Core se ha optimizado para la nube (pública, privada, cualquier nube) debido a su memoria baja y rendimiento alto. La superficie más pequeña de las aplicaciones ASP.NET Core significa que se pueden hospedar más en el mismo hardware, y se paga por menos recursos cuando se usan servicios de hospedaje en la nube de pago por uso. El rendimiento mayor significa que se puede servir a más clientes desde una aplicación dado el mismo hardware, reduciendo así la necesidad de invertir en infraestructura y servidores de hospedaje.
 
 ## <a name="cross-platform"></a>Multiplataforma
 
-ASP.NET Core multiplataforma y se pueden ejecutar en Linux y Mac OS, así como de Windows. Esto abrirá muchas opciones nuevas para el desarrollo y la implementación de aplicaciones compiladas con ASP.NET Core. Contenedores de docker, que normalmente se ejecutan Linux hoy en día, pueden hospedar aplicaciones ASP.NET Core, lo que les permite sacar partido de las ventajas de [contenedores y microservicios](../microservices-architecture/index.md).
+ASP.NET Core es multiplataforma y se puede ejecutar en Linux, MacOS y Windows. Esto abre muchas opciones nuevas para el desarrollo y la implementación de aplicaciones compiladas con ASP.NET Core. Los contenedores de Docker, que en la actualidad normalmente se ejecutan en Linux, pueden hospedar aplicaciones ASP.NET Core, lo que les permite aprovechar las ventajas de los [contenedores y microservicios](../microservices-architecture/index.md).
 
-## <a name="modular-and-loosely-coupled"></a>Acoplamiento flexible y modular
+## <a name="modular-and-loosely-coupled"></a>Modular y de acoplamiento flexible
 
-Paquetes de NuGet son objetos de primera clase en .NET Core y ASP.NET Core aplicaciones se componen de muchas bibliotecas a través de NuGet. Este nivel de detalle de la funcionalidad ayuda a garantizar aplicaciones solo dependen e implementación la funcionalidad que realmente necesitan, lo que reduce su área de superficie de vulnerabilidad de seguridad y la superficie de.
+Los paquetes NuGet son objetos de primera clase en .NET Core y las aplicaciones ASP.NET Core se componen de muchas bibliotecas de NuGet. Esta granularidad de la funcionalidad ayuda a garantizar que las aplicaciones solo dependen e implementan la funcionalidad que realmente necesitan, lo que reduce su superficie y el área expuesta a vulnerabilidades de seguridad.
 
-ASP.NET Core también totalmente compatible con la inserción de dependencias, tanto internamente como en el nivel de aplicación. Interfaces pueden tener varias implementaciones que pueden intercambiarse según sea necesario. Inyección de dependencia permite a flexible par a esas interfaces, lo que facilita su ampliar, mantener y probar las aplicaciones.
+ASP.NET Core también es totalmente compatible con la inserción de dependencias, tanto de forma interna como en el nivel de la aplicación. Las interfaces pueden tener varias implementaciones que se pueden intercambiar según sea necesario. La inserción de dependencias permite acoplar de forma flexible las aplicaciones a esas interfaces, lo que facilita su ampliación, mantenimiento y pruebas.
 
-## <a name="easily-tested-with-automated-tests"></a>Probar fácilmente con las pruebas automatizadas
+## <a name="easily-tested-with-automated-tests"></a>Pruebas sencillas con pruebas automatizadas
 
-Las aplicaciones de ASP.NET Core admiten pruebas unitarias y el acoplamiento flexible y la compatibilidad con inyecciones de dependencia facilita la intercambiar problemas de infraestructura con implementaciones falsas para fines de prueba. ASP.NET Core también se suministra un TestServer que puede usarse para aplicaciones de host en la memoria. Pruebas funcionales, a continuación, pueden realizar solicitudes a este servidor en memoria, llevar a cabo la pila de aplicación completo (incluido el software intermedio, enrutamiento, el enlace de modelos, filtros, etc.) y recibir una respuesta en una fracción del tiempo necesario para hospedar la aplicación en un servidor real y realizar solicitudes a través de la capa de red. Estas pruebas son especialmente fáciles de escribir y útil para las API, que son cada vez más importante en aplicaciones web modernas.
+Las aplicaciones ASP.NET Core admiten las pruebas unitarias y su acoplamiento flexible y la compatibilidad con la inserción de dependencias facilitan el intercambio de intereses de infraestructura con implementaciones falsas para fines de prueba. ASP.NET Core también incluye un TestServer que se puede usar para hospedar aplicaciones en memoria. Después, las pruebas funcionales pueden realizar solicitudes a este servidor en memoria, ejecutar la pila de aplicación completa (incluido el software intermedio, el enrutamiento, el enlace de modelos, los filtros, etc.) y recibir una respuesta en una fracción del tiempo que sería necesario para hospedar la aplicación en un servidor real y realizar solicitudes a través de la capa de red. Estas pruebas son especialmente fáciles de escribir y útiles para las API, que cada vez son más importantes en las aplicaciones web modernas.
 
-## <a name="traditional-and-spa-behaviors-supported"></a>Tradicionales y los comportamientos SPA compatibles
+## <a name="traditional-and-spa-behaviors-supported"></a>Comportamientos tradicionales y de SPA admitidos
 
-Aplicaciones web tradicionales han implicado poco comportamiento del lado del cliente, pero en su lugar se basaban en el servidor para todas las actualizaciones de la aplicación puede que deba realizar, consultas y navegación. Cada nueva operación realizada por el usuario se puede convertir en una nueva solicitud de web, con lo que se va a una recarga de página completa en el explorador del usuario final. Marcos de trabajo Model-View-Controller (MVC) clásico normalmente siguen este enfoque, con cada nueva solicitud correspondiente a una acción de otro controlador, que a su vez podría trabajar con un modelo y devolver una vista. Algunas operaciones individuales en una página determinada pueden mejorarse con funcionalidad de AJAX (JavaScript asincrónico y XML), pero la arquitectura global de la aplicación utiliza muchos distintas vistas MVC y los puntos de conexión de dirección URL.
+Las aplicaciones web tradicionales apenas contaban con comportamiento del lado cliente, y en su lugar se basaban en el servidor para todas las operaciones de navegación, consultas y actualizaciones que la aplicación tuviera que realizar. Cada operación nueva realizada por el usuario se convertiría en una nueva solicitud web, con el resultado de una recarga de página completa en el explorador del usuario final. Los marcos de controlador de vista de modelos (MVC) clásicos normalmente siguen este enfoque, en el que cada solicitud nueva se corresponde a otra acción de controlador, lo que a su vez podría funcionar con un modelo y devolver una vista. Es posible que algunas operaciones individuales en una página determinada se mejoraran con funcionalidad de AJAX (JavaScript asincrónico y XML), pero la arquitectura global de la aplicación usaba muchas vistas MVC distintas y extremos de URL.
 
-Las aplicaciones de página única (SPAs), por el contrario, implican muy pocas carga de página generada dinámicamente de servidor (si existe). Muchos SPAs se inicializan en un archivo HTML estático que carga las bibliotecas de JavaScript necesarias para iniciar y ejecutar la aplicación. Estas aplicaciones hacen un uso intensivo de las API web para sus necesidades de datos y pueden proporcionan que mucho más enriquecida usuario experimente.
+Las aplicaciones de página única (SPA), por el contrario, implican muy pocas cargas de página generadas de forma dinámica en el lado de servidor (si existen). Muchas SPA se inicializan en un archivo HTML estático que carga las bibliotecas de JavaScript necesarias para iniciar y ejecutar la aplicación. Estas aplicaciones hacen un uso intensivo de las API web para sus necesidades de datos y pueden proporcionar experiencias de usuario mucho más enriquecidas.
 
-Muchas aplicaciones web implican una combinación de comportamientos de las aplicaciones de web tradicionales (normalmente para el contenido) y SPAs (durante la interactividad). Es compatible con ASP.NET Core MVC y las API web de la misma aplicación, con el mismo conjunto de herramientas y subyacente bibliotecas de framework.
+Muchas aplicaciones web implican una combinación del comportamiento de aplicación web tradicional (normalmente para el contenido) y SPA (para la interactividad). ASP.NET Core admite MVC y las API web en la misma aplicación, con el mismo conjunto de herramientas y bibliotecas de marco subyacentes.
 
-## <a name="simple-development-and-deployment"></a>Implementación y desarrollo simple
+## <a name="simple-development-and-deployment"></a>Implementación y desarrollo simples
 
-Las aplicaciones de ASP.NET Core se pueden escribir con editores de texto simple y las interfaces de línea de comandos o entornos de desarrollo completos como Visual Studio. Aplicaciones monolíticas normalmente se implementan en un solo punto de conexión. Las implementaciones pueden automatizarse fácilmente para que se realice como parte de una integración continua (CI) y la canalización de la entrega continua (CD). Además de las herramientas tradicionales de CI/CD, Windows Azure tiene compatibilidad integrada para repositorios git y se pueden implementar automáticamente actualizaciones cuando que se realizan en una rama de git especificado o una etiqueta.
+Las aplicaciones ASP.NET Core se pueden escribir mediante interfaces de línea de comandos y editores de texto simples, o bien con entornos de desarrollo completos como Visual Studio. Las aplicaciones monolíticas normalmente se implementan en un solo punto de conexión. Las implementaciones se pueden automatizar con facilidad para que tengan lugar como parte de una canalización de integración continua (CI) y entrega continua (CD). Además de las herramientas de CI/CD tradicionales, Windows Azure tiene compatibilidad integrada para repositorios de Git y puede implementar automáticamente las actualizaciones que se realicen en una rama o etiqueta de Git especificada.
 
 ## <a name="traditional-aspnet-and-web-forms"></a>ASP.NET tradicional y formularios Web Forms
 
-Además de núcleo de ASP.NET, ASP.NET tradicional 4.x sigue siendo una plataforma sólida y confiable para compilar aplicaciones web. Es compatible con ASP.NET MVC y API Web de modelos de desarrollo, así como formularios Web Forms, que es adecuada para el desarrollo de aplicaciones enriquecido basado en páginas y características de un ecosistema de componentes de terceros enriquecido. Windows Azure tiene mayor compatibilidad de enfoque para las aplicaciones de ASP.NET 4.x y muchos desarrolladores están familiarizados con esta plataforma.
+Además de ASP.NET Core, ASP.NET 4.x tradicional sigue siendo una plataforma sólida y confiable para compilar aplicaciones web. ASP.NET es compatible con los modelos de desarrollo de MVC y API web, así como los formularios Web Forms, que resultan muy adecuados para el desarrollo de aplicaciones basadas en páginas y ofrecen un ecosistema enriquecido de componentes de terceros. Desde hace tiempo, Windows Azure ofrece una gran compatibilidad con las aplicaciones ASP.NET 4.x y muchos desarrolladores están familiarizados con esta plataforma.
 
-> ### <a name="references--modern-web-applications"></a>Referencias: aplicaciones Web modernas
+> ### <a name="references--modern-web-applications"></a>Referencias: aplicaciones web modernas
 > - **Introducción a ASP.NET Core**  
-> <https://docs.microsoft.com/aspnet/core/>
-> - **Seis clave ventajas de ASP.NET Core que facilitan diferentes y mejor**  
+> <https://docs.microsoft.com/es-es/aspnet/core/>
+> - **Six Key Benefits of ASP.NET Core which make it Different and Better** (Seis ventajas clave de ASP.NET Core que lo hacen diferente y mejor)  
 > <https://blog.trigent.com/six-key-benefits-of-asp-net-core-1-0-which-make-it-different-better/>
-> - **Pruebas de ASP.NET Core**  
-> <https://docs.microsoft.com/aspnet/core/testing/>
+> - **Pruebas y depuración en ASP.NET Core**  
+> <https://docs.microsoft.com/es-es/aspnet/core/testing/>
 
 >[!div class="step-by-step"]
-[Previous] (index.md) [Next] (choose-between-traditional-web-and-single-page-apps.md)
+[Anterior] (index.md) [Siguiente] (choose-between-traditional-web-and-single-page-apps.md)
