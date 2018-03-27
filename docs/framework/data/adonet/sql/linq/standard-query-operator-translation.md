@@ -1,27 +1,29 @@
 ---
-title: "Traslación del operador de consulta estándar"
-ms.custom: 
+title: Traslación del operador de consulta estándar
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: a60c30fa-1e68-45fe-b984-f6abb9ede40e
-caps.latest.revision: "2"
+caps.latest.revision: ''
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: fc99fea9b722f6c3395f6bade625a09c6e97eb08
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="standard-query-operator-translation"></a>Traslación del operador de consulta estándar
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] convierte los operadores de consulta estándar en comandos SQL. El procesador de consultas de la base de datos determina la semántica de ejecución de la conversión a SQL.  
@@ -45,7 +47,7 @@ ms.lasthandoff: 01/17/2018
  El método <xref:System.Linq.Enumerable.Union%2A> se define para los conjuntos múltiples como la concatenación no ordenada de los conjuntos múltiples (de hecho, el resultado de la cláusula UNION ALL en SQL).  
   
 ### <a name="take-skip"></a>Take, Skip  
- <xref:System.Linq.Enumerable.Take%2A>y <xref:System.Linq.Enumerable.Skip%2A> métodos están bien definidos solo en *conjuntos ordenados*. La semántica para los conjuntos no ordenados o conjuntos múltiples no está definida.  
+ <xref:System.Linq.Enumerable.Take%2A> y <xref:System.Linq.Enumerable.Skip%2A> métodos están bien definidos solo en *conjuntos ordenados*. La semántica para los conjuntos no ordenados o conjuntos múltiples no está definida.  
   
 > [!NOTE]
 >  <xref:System.Linq.Enumerable.Take%2A> y <xref:System.Linq.Enumerable.Skip%2A> tienen ciertas limitaciones cuando se utilizan en consultas en SQL Server 2000. Para obtener más información, consulte la entrada "Skip y Take excepciones en SQL Server 2000" en [solución de problemas](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md).  
@@ -105,7 +107,7 @@ ORDER BY [t0].[CustomerID]
  De igual forma, la conversión que realiza [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] de <xref:System.Linq.Enumerable.Average%2A> de valores enteros se calcula como `integer`, no como `double`.  
   
 ### <a name="entity-arguments"></a>Argumentos de entidad  
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]permite que los tipos de entidad que se usará en el <xref:System.Linq.Enumerable.GroupBy%2A> y <xref:System.Linq.Enumerable.OrderBy%2A> métodos. En la conversión de estos operadores, el uso de un argumento de un tipo se considera equivalente a especificar todos los miembros de ese tipo. Por ejemplo, el código siguiente es equivalente:  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] permite que los tipos de entidad que se usará en el <xref:System.Linq.Enumerable.GroupBy%2A> y <xref:System.Linq.Enumerable.OrderBy%2A> métodos. En la conversión de estos operadores, el uso de un argumento de un tipo se considera equivalente a especificar todos los miembros de ese tipo. Por ejemplo, el código siguiente es equivalente:  
   
  [!code-csharp[DLinqSQOTranslation#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqSQOTranslation/cs/Program.cs#2)]
  [!code-vb[DLinqSQOTranslation#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSQOTranslation/vb/Module1.vb#2)]  
@@ -123,7 +125,7 @@ ORDER BY [t0].[CustomerID]
   
  <xref:System.Linq.Enumerable.Except%2A>  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]admite la igualdad y comparación para ** argumentos, pero no para los argumentos que son secuencias o las contienen. Un argumento plano es un tipo que asignarse a una fila de SQL. Una proyección de uno o más tipos de entidad que se pueden determinar estáticamente que no contiene una secuencia se considera un argumento plano.  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] admite la igualdad y comparación para los argumentos *planos*, pero no para los argumentos que son secuencias o las contienen. Un argumento plano es un tipo que asignarse a una fila de SQL. Una proyección de uno o más tipos de entidad que se pueden determinar estáticamente que no contiene una secuencia se considera un argumento plano.  
   
  A continuación se ofrecen ejemplos de argumentos planos:  
   
@@ -206,7 +208,7 @@ ORDER BY [t0].[CustomerID]
  Esta limitación no tiene ninguna resolución. Concretamente, no puede utilizar `Distinct()` en ningún resultado que contenga miembros que se asignen a columnas `text` o `ntext`.  
   
 ### <a name="behavior-triggered-by-nested-queries"></a>Comportamiento desencadenado por las consultas anidadas  
- [!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)](hasta SP4) enlazador tiene algunas peculiaridades que son desencadenadas por las consultas anidadas. El conjunto de consultas SQL que las desencadenan no está bien definido. Por esta razón, no se puede definir el conjunto de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] las consultas que pueden producir excepciones de SQL Server.  
+ [!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)] (hasta SP4) enlazador tiene algunas peculiaridades que son desencadenadas por las consultas anidadas. El conjunto de consultas SQL que las desencadenan no está bien definido. Por esta razón, no se puede definir el conjunto de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] las consultas que pueden producir excepciones de SQL Server.  
   
 ### <a name="skip-and-take-operators"></a>Operadores Skip y Take  
  <xref:System.Linq.Enumerable.Take%2A> y <xref:System.Linq.Enumerable.Skip%2A> tienen ciertas limitaciones cuando se utilizan en consultas en [!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)]. Para obtener más información, consulte la entrada "Skip y Take excepciones en SQL Server 2000" en [solución de problemas](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md).  
