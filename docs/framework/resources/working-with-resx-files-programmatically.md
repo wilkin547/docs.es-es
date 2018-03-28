@@ -1,12 +1,13 @@
 ---
-title: "Trabajar con archivos .resx mediante programación"
-ms.custom: 
+title: Trabajar con archivos .resx mediante programación
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,16 +16,17 @@ helpviewer_keywords:
 - resource files, .resx files
 - .resx files
 ms.assetid: 168f941a-2b84-43f8-933f-cf4a8548d824
-caps.latest.revision: "12"
+caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 17c2cee97c3347a98a015e8526e436815378eed0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 951bd2160baddf100a685af2d78ec49e2146077b
+ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="working-with-resx-files-programmatically"></a>Trabajar con archivos .resx mediante programación
 Como los archivos de recursos (.resx) XML deben constar de código XML bien definido e incluir un encabezado según un esquema concreto, seguido de datos en pares nombre/valor, es posible que la creación manual de estos archivos sea propensa a errores. Como alternativa, puede crear archivos .resx mediante programación con tipos y miembros de la biblioteca de clases de .NET Framework. También puede utilizar la biblioteca de clases de .NET Framework para recuperar los recursos almacenados en archivos .resx. En este tema se explica cómo se pueden utilizar los tipos y miembros del espacio de nombres <xref:System.Resources> para trabajar con archivos .resx.  
@@ -83,15 +85,15 @@ Como los archivos de recursos (.resx) XML deben constar de código XML bien defi
   
  El resultado es un archivo de recursos binario que tiene el mismo nombre de archivo raíz que el archivo .resx y una extensión de archivo .resources. Este archivo puede compilarse en un archivo ejecutable o una biblioteca en tiempo de compilación. Si está utilizando el compilador de Visual Basic, use la siguiente sintaxis para insertar un archivo .resources en el archivo ejecutable de la aplicación:  
   
- **vbc** *nombreArchivo* **.vb /resource:** *nombreArchivo.resources*  
+ **vbc** *nombreArchivo* **.vb -resource:** *nombreArchivo.resources*  
   
  Si está utilizando C#, la sintaxis es la que se indica a continuación:  
   
- **csc** *nombreArchivo* **.cs /resource:** *nombreArchivo.resources*  
+ **csc** *nombreArchivo* **.cs -resource:** *nombreArchivo.resources*  
   
  También se puede insertar el archivo .resources en un ensamblado satélite con [Assembly Linker (AL.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md), que tiene la siguiente sintaxis básica:  
   
- **al** *resourcesFilename* **/out:** *assemblyFilename*  
+ **al** *nombreArchivoRecursos* **-out:** *nombreArchivoEnsamblado*  
   
 ## <a name="see-also"></a>Vea también  
  [Crear archivos de recursos](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)  

@@ -1,6 +1,6 @@
 ---
-title: "Valores devueltos y variables locales de tipo ref (Guía de C#)"
-description: "Obtenga información sobre cómo definir y usar valores locales y devueltos de tipo ref"
+title: Valores devueltos y variables locales de tipo ref (Guía de C#)
+description: Obtenga información sobre cómo definir y usar valores locales y devueltos de tipo ref
 author: rpetrusha
 ms.author: ronpet
 ms.date: 01/23/2017
@@ -8,11 +8,11 @@ ms.topic: article
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
-ms.openlocfilehash: a74563c0d24b6cd2a2fa8534787f078f3cc92674
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: c37c6dd61ae02813bcc467982f3b175da9136e4a
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="ref-returns-and-ref-locals"></a>Valores devueltos y variables locales de tipo ref
 
@@ -85,7 +85,15 @@ ref Person p = ref contacts.GetContactInformation("Brandie", "Best");
 
 El uso posterior de `p` es lo mismo que usar la variable devuelta por `GetContactInformation`, porque `p` es un alias para dicha variable. Los cambios realizados en `p` también modifican la variable devuelta desde `GetContactInformation`.
 
-Tenga en cuenta que la palabra clave `ref` se usa antes de la declaración de variable local *y* antes de la llamada al método. Si no se incluyen ambas palabras clave `ref` en la asignación y declaración de variable, se produce el error del compilador CS8172, "No se puede inicializar una variable por referencia con un valor". 
+Tenga en cuenta que la palabra clave `ref` se usa antes de la declaración de variable local *y* antes de la llamada al método. 
+
+Puede acceder a un valor por referencia de la misma manera. En algunos casos, acceder a un valor por referencia aumenta el rendimiento, ya que evita una operación de copia potencialmente cara. Por ejemplo, en la instrucción siguiente se muestra cómo es posible definir un valor local de referencia que se usa para hacer referencia a un valor.
+
+```csharp
+ref VeryLargeStruct reflocal = ref veryLargeStruct;
+```
+
+Tenga en cuenta que la palabra clave `ref` se usa antes de la declaración de variable local *y* antes del valor en el segundo ejemplo. Si no se incluyen ambas palabras clave `ref` en la asignación y declaración de variable en ambos ejemplos, se produce el error del compilador CS8172, "No se puede inicializar una variable por referencia con un valor". 
  
 ## <a name="ref-returns-and-ref-locals-an-example"></a>Valores devueltos y variables locales de tipo ref: un ejemplo
 
@@ -101,4 +109,5 @@ Sin que se admitan los valores devueltos de referencia, este tipo de operación 
  
 ## <a name="see-also"></a>Vea también
 
-[ref (palabra clave)](../../language-reference/keywords/ref.md)
+[ref (palabra clave)](../../language-reference/keywords/ref.md)  
+[Semántica de referencia con tipos de valor](../../../csharp/reference-semantics-with-value-types.md)

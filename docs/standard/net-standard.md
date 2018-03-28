@@ -1,6 +1,6 @@
 ---
 title: .NET Standard
-description: "Obtenga información sobre .NET Standard, sus versiones y las implementaciones de .NET que lo admiten."
+description: Obtenga información sobre .NET Standard, sus versiones y las implementaciones de .NET que lo admiten.
 keywords: .NET Standard, PCL, .NET
 author: mairaw
 ms.author: mairaw
@@ -13,11 +13,11 @@ ms.assetid: c044882c-af15-45f2-96d1-534557a5ee9b
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 9c0d375f160b886b104daeb68b88c25264e3e78f
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: f22405f4547edcc5034ed221fa144512a237b050
+ms.sourcegitcommit: 32172ca05d5dcce7ef3d327b9c8639c736e0fe2b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="net-standard"></a>.NET Standard
 
@@ -38,7 +38,7 @@ En la tabla siguiente se enumeran todas las versiones de .NET Standard y las pla
 [!INCLUDE [net-standard-table](~/includes/net-standard-table.md)]
 
 Para buscar la versión superior de .NET Standard que puede usar como destino, haga lo siguiente:
-1. Busque la fila que indica la implementación de .NET en la que quiere ejecutar.
+1. Busque la fila en la que se indica la implementación de .NET en la que quiere realizar la ejecución.
 2. Busque la columna de esa fila que indica la versión de derecha a izquierda.
 3. El encabezado de columna indica la versión de .NET Standard que admite el destino (y las versiones de .NET Standard inferiores también lo admitirán).
 4. Repita este proceso para cada plataforma a la que quiera dirigirse. Si tiene más de una plataforma de destino, debe elegir la versión más baja. Por ejemplo, si quiere ejecutar en .NET Framework 4.5 y .NET Core 1.0, la versión de .NET Standard más alta que puede usar es .NET Standard 1.1.

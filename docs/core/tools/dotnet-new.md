@@ -1,22 +1,19 @@
 ---
 title: 'Comando dotnet new: CLI de .NET Core'
 description: El comando dotnet new crea proyectos de .NET Core basados en la plantilla especificada.
-keywords: dotnet-new, CLI, comando de CLI, .NET Core
 author: mairaw
 ms.author: mairaw
-ms.date: 08/13/2017
+ms.date: 03/21/2018
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.devlang: dotnet
-ms.assetid: fcc3ed2e-9265-4d50-b59e-dc2e5c190b34
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: ea94c875ae6fe82d0e5d35ba8ca3fd47971fbbe6
-ms.sourcegitcommit: e2bf8e6bc365bd9a0e86fe81eeae7d14f85f48c1
+ms.openlocfilehash: 2cbd42195d0ec713d2ccb4af823075ece950ceff
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="dotnet-new"></a>dotnet new
 
@@ -28,7 +25,7 @@ ms.lasthandoff: 02/13/2018
 
 ## <a name="synopsis"></a>Sinopsis
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
+# <a name="net-core-20tabnetcore2x"></a>[.NET Core 2.0](#tab/netcore2x)
 ```
 dotnet new <TEMPLATE> [--force] [-i|--install] [-lang|--language] [-n|--name] [-o|--output] [-u|--uninstall] [Template options]
 dotnet new <TEMPLATE> [-l|--list] [--type]
@@ -55,7 +52,7 @@ El comando llama al [motor de plantillas](https://github.com/dotnet/templating) 
 
 La plantilla de la que se va a crear una instancia cuando se invoca el comando. Cada plantilla puede tener opciones específicas que puede pasar. Para obtener más información, vea [Opciones de plantilla](#template-options).
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
+# <a name="net-core-20tabnetcore2x"></a>[.NET Core 2.0](#tab/netcore2x)
 
 El comando contiene una lista predeterminada de plantillas. Use `dotnet new -l` para obtener una lista de las plantillas disponibles. En la siguiente tabla se muestran las plantillas que vienen preinstaladas con el SDK de .NET Core 2.0. El lenguaje predeterminado de la plantilla se muestra entre corchetes.
 
@@ -101,7 +98,7 @@ El comando contiene una lista predeterminada de plantillas. Use `dotnet new -all
 
 ## <a name="options"></a>Opciones
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
+# <a name="net-core-20tabnetcore2x"></a>[.NET Core 2.0](#tab/netcore2x)
 
 `--force`
 
@@ -113,7 +110,9 @@ Imprime la ayuda para el comando. Puede invocarse para el propio comando `dotnet
 
 `-i|--install <PATH|NUGET_ID>`
 
-Instala un paquete de plantillas u origen desde los parámetros `PATH` o `NUGET_ID` proporcionados. Para obtener información sobre cómo crear plantillas personalizadas, consulte [Custom templates for dotnet new](custom-templates.md) (Plantillas personalizadas para dotnet new).
+Instala un paquete de plantillas u origen desde los parámetros `PATH` o `NUGET_ID` proporcionados. Si quiere instalar una versión preliminar de un paquete de plantilla, tendrá que especificar la versión en el formato de `<package-name>::<package-version>`. De manera predeterminada, `dotnet new` pasa \* para la versión, que representa la última versión estable del paquete. Vea un ejemplo en la sección [Ejemplos](#examples).
+
+Para obtener información sobre cómo crear plantillas personalizadas, consulte [Custom templates for dotnet new](custom-templates.md) (Plantillas personalizadas para dotnet new).
 
 `-l|--list`
 
@@ -175,11 +174,11 @@ La ubicación para colocar la salida generada. El valor predeterminado es el dir
 
 Cada plantilla de proyecto puede tener opciones adicionales disponibles. Las plantillas principales tienen las siguientes opciones adicionales:
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
+# <a name="net-core-20tabnetcore2x"></a>[.NET Core 2.0](#tab/netcore2x)
 
 **console, angular, react, reactredux**
 
-`--no-restore`: no se realiza una restauración implícita durante la creación del proyecto.
+  `--no-restore`: no se realiza una restauración implícita durante la creación del proyecto.
 
 **classlib**
 
@@ -319,9 +318,13 @@ Creación de una aplicación de xUnit que tenga como destino .NET Core 2.0:
 
 `dotnet new xunit --framework netcoreapp2.0`
 
-Enumere todas las plantillas disponibles para MVC:
+Enumeración de todas las plantillas disponibles para MVC:
 
 `dotnet new mvc -l`
+
+Instalación de la versión 2.0 de las plantillas Aplicación de página única para ASP.NET Core (opción de comando solo disponible para .NET Core SDK 1.1 y versiones posteriores):
+
+`dotnet new -i Microsoft.DotNet.Web.Spa.ProjectTemplates::2.0.0`
 
 ## <a name="see-also"></a>Vea también
 

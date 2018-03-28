@@ -1,12 +1,13 @@
 ---
-title: "Crear ensamblados satélite para aplicaciones de escritorio"
-ms.custom: 
+title: Crear ensamblados satélite para aplicaciones de escritorio
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -30,16 +31,17 @@ helpviewer_keywords:
 - compiling satellite assemblies
 - re-signing assemblies
 ms.assetid: 8d5c6044-2919-41d2-8321-274706b295ac
-caps.latest.revision: "11"
+caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0d360dc5b95c1cdb8de54bcbd723d0056c81c9c2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 2f75da3332c8172a6a888e6f40c66383866799ea
+ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="creating-satellite-assemblies-for-desktop-apps"></a>Crear ensamblados satélite para aplicaciones de escritorio
 Los archivos de recursos desempeñan un papel fundamental en las aplicaciones localizadas. Permiten que una aplicación muestre cadenas, imágenes y otros datos en el idioma y la referencia cultural del usuario, y que proporcione datos alternativos si los recursos para el idioma o la referencia cultural del usuario no están disponibles. .NET Framework usa un modelo de concentrador y radio para buscar y recuperar recursos localizados. El concentrador es el ensamblado principal que contiene el código ejecutable no localizable y los recursos de una referencia cultural única, denominada referencia cultural neutra o predeterminada. La referencia cultural predeterminada es la referencia cultural de reserva de la aplicación y se usa si no hay recursos localizados disponibles. El atributo <xref:System.Resources.NeutralResourcesLanguageAttribute> se usa para designar la referencia cultural predeterminada de la aplicación. Cada radio se conecta a un ensamblado satélite que contiene los recursos de una única referencia cultural localizada, pero no contiene código. Debido a que los ensamblados satélite no forman parte del ensamblado principal, los recursos correspondientes a una referencia cultural específica se pueden actualizar o reemplazar fácilmente sin reemplazar el ensamblado principal de la aplicación.  
@@ -71,25 +73,25 @@ Directorio del ensamblado satélite
   
  El siguiente comando de Al.exe crea un ensamblado satélite para la aplicación `Example` a partir del archivo de recursos de alemán strings.de.resources.  
   
-```  
-al /target:lib /embed:strings.de.resources /culture:de /out:Example.resources.dll  
+```console
+al -target:lib -embed:strings.de.resources -culture:de -out:Example.resources.dll  
 ```  
   
  El siguiente comando de Al.exe también crea un ensamblado satélite para la aplicación `Example` a partir del archivo strings.de.resources. La opción **/template** hace que el ensamblado satélite herede todos los metadatos del ensamblado salvo la información de referencia cultural del ensamblado principal (Example.dll).  
   
-```  
-al /target:lib /embed:strings.de.resources /culture:de /out:Example.resources.dll /template:Example.dll  
+```console
+al -target:lib -embed:strings.de.resources -culture:de -out:Example.resources.dll -template:Example.dll  
 ```  
   
  En la tabla siguiente se describen detalladamente las opciones de Al.exe usadas en estos comandos.  
   
 |Opción|Description|  
 |------------|-----------------|  
-|**/target:**lib|Especifica que el ensamblado satélite se compila en un archivo de biblioteca (.dll). Dado que un ensamblado satélite no contiene código ejecutable y no es el ensamblado principal de la aplicación, debe guardar los ensamblados satélite como archivos DLL.|  
-|**/embed:**strings.de.resources|Especifica el nombre del archivo de recursos que se va a insertar cuando Al.exe compile el ensamblado. Puede insertar varios archivos .resources en un ensamblado satélite, pero si sigue el modelo de concentrador y radio, debe compilar un ensamblado satélite para cada referencia cultural. Aun así, puede crear archivos .resources independientes para cadenas y objetos.|  
-|**/culture:**de|Especifica la referencia cultural del recurso que se va a compilar. Common Language Runtime usa esta información cuando busca los recursos para la referencia cultural especificada. Si se omite esta opción, Al.exe compilará igualmente el recurso, pero el tiempo de ejecución no podrá encontrarlo cuando un usuario lo solicite.|  
-|**/out:**Example.resources.dll|Especifica el nombre del archivo de salida. El nombre debe seguir la convención de nomenclatura *baseName*.resources.*extension*, donde *baseName* es el nombre del ensamblado principal y *extension* es una extensión de nombre de archivo válida (por ejemplo, .dll). Tenga en cuenta que el tiempo de ejecución no puede determinar la referencia cultural de un ensamblado satélite a partir del nombre de su archivo de salida; debe usar la opción **/culture** para especificarla.|  
-|**/template:**Example.dll|Especifica el ensamblado del que el ensamblado satélite heredará todos los metadatos de ensamblado, salvo el campo correspondiente a la referencia cultural. Esta opción solo afecta a los ensamblados satélite si se especifica un ensamblado con [nombre seguro](../../../docs/framework/app-domains/strong-named-assemblies.md).|  
+|**-target:**lib|Especifica que el ensamblado satélite se compila en un archivo de biblioteca (.dll). Dado que un ensamblado satélite no contiene código ejecutable y no es el ensamblado principal de la aplicación, debe guardar los ensamblados satélite como archivos DLL.|  
+|**-embed:**strings.de.resources|Especifica el nombre del archivo de recursos que se va a insertar cuando Al.exe compile el ensamblado. Puede insertar varios archivos .resources en un ensamblado satélite, pero si sigue el modelo de concentrador y radio, debe compilar un ensamblado satélite para cada referencia cultural. Aun así, puede crear archivos .resources independientes para cadenas y objetos.|  
+|**-culture:**de|Especifica la referencia cultural del recurso que se va a compilar. Common Language Runtime usa esta información cuando busca los recursos para la referencia cultural especificada. Si se omite esta opción, Al.exe compilará igualmente el recurso, pero el tiempo de ejecución no podrá encontrarlo cuando un usuario lo solicite.|  
+|**-out:**Example.resources.dll|Especifica el nombre del archivo de salida. El nombre debe seguir la convención de nomenclatura *baseName*.resources.*extension*, donde *baseName* es el nombre del ensamblado principal y *extension* es una extensión de nombre de archivo válida (por ejemplo, .dll). Tenga en cuenta que el tiempo de ejecución no puede determinar la referencia cultural de un ensamblado satélite a partir del nombre de su archivo de salida; debe usar la opción **/culture** para especificarla.|  
+|**-template:**Example.dll|Especifica el ensamblado del que el ensamblado satélite heredará todos los metadatos de ensamblado, salvo el campo correspondiente a la referencia cultural. Esta opción solo afecta a los ensamblados satélite si se especifica un ensamblado con [nombre seguro](../../../docs/framework/app-domains/strong-named-assemblies.md).|  
   
  Para obtener una lista completa de las opciones disponibles con Al.exe, vea [Assembly Linker (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md).  
   
@@ -113,7 +115,7 @@ al /target:lib /embed:strings.de.resources /culture:de /out:Example.resources.dl
   
 4.  Use [Resgen.exe](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) para compilar cada texto o archivo de recursos XML en un archivo .resources binario. La salida es un conjunto de archivos que tienen el mismo nombre de archivo raíz, como los archivos .resx o .txt, pero con una extensión .resources. Si crea el ejemplo con Visual Studio, el proceso de compilación se realiza automáticamente. Si no está usando Visual Studio, ejecute los comandos siguientes para compilar los archivos .resx en archivos .resources:  
   
-    ```  
+    ```console
     resgen Greeting.resx  
     resgen Greeting.en-us.resx  
     resgen Greeting.fr-FR.resx  
@@ -132,22 +134,22 @@ al /target:lib /embed:strings.de.resources /culture:de /out:Example.resources.dl
   
      Si la aplicación se denomina Example y está compilando desde la línea de comandos, el comando para el compilador de C# es el siguiente:  
   
-    ```  
-    csc Example.cs /res:Greeting.resources  
+    ```console  
+    csc Example.cs -res:Greeting.resources  
     ```  
   
      El comando de compilador de Visual Basic correspondiente es el siguiente:  
   
-    ```  
-    vbc Example.vb /res:Greeting.resources  
+    ```console  
+    vbc Example.vb -res:Greeting.resources  
     ```  
   
 6.  Cree un subdirectorio en el directorio principal de la aplicación para cada referencia cultural localizada admitida por la aplicación. Debe crear un subdirectorio en-US, fr-FR, y ru-RU. Visual Studio crea estos subdirectorios automáticamente como parte del proceso de compilación.  
   
 7.  Inserte los archivos .resources individuales específicos de la referencia cultural en ensamblados satélite y guárdelos en el directorio adecuado. El comando para hacer esto para cada archivo .resources es el siguiente:  
   
-    ```  
-    al /target:lib /embed:Greeting.culture.resources /culture:culture /out:culture\Example.resources.dll  
+    ```console
+    al -target:lib -embed:Greeting.culture.resources -culture:culture -out:culture\Example.resources.dll  
     ```  
   
      donde *culture* es el nombre de la referencia cultural cuyos recursos contiene el ensamblado satélite. Visual Studio controla este proceso automáticamente.  
@@ -167,13 +169,13 @@ al /target:lib /embed:strings.de.resources /culture:de /out:Example.resources.dl
   
  El siguiente comando de Sn.exe crea un par de claves pública y privada de prueba. La opción **–k** especifica que Sn.exe debe crear un par de claves y guardarlo en un archivo denominado TestKeyPair.snk.  
   
-```  
+```console
 sn –k TestKeyPair.snk   
 ```  
   
  Puede extraer la clave pública del archivo que contiene el par de claves de prueba. El comando siguiente extrae la clave pública de TestKeyPair.snk y la guarda en PublicKey.snk:  
   
-```  
+```console
 sn –p TestKeyPair.snk PublicKey.snk  
 ```  
   
@@ -182,18 +184,18 @@ sn –p TestKeyPair.snk PublicKey.snk
   
  El siguiente comando de Al.exe crea un ensamblado satélite con nombre seguro para la aplicación StringLibrary a partir del archivo strings.ja.resources:  
   
-```  
-al /target:lib /embed:strings.ja.resources /culture:ja /out:StringLibrary.resources.dll /delay+ /keyfile:PublicKey.snk  
+```console 
+al -target:lib -embed:strings.ja.resources -culture:ja -out:StringLibrary.resources.dll -delay+ -keyfile:PublicKey.snk  
 ```  
   
- La opción **/delay+** especifica que Assembly Linker debe retrasar la firma del ensamblado. La opción **/keyfile** especifica el nombre del archivo de claves que contiene la clave pública que se va a usar para retrasar la firma del ensamblado.  
+ La opción **-delay+** especifica que Assembly Linker debe retrasar la firma del ensamblado. La opción **-keyfile** especifica el nombre del archivo de claves que contiene la clave pública que se va a usar para retrasar la firma del ensamblado.  
   
 ### <a name="re-signing-an-assembly"></a>Volver a firmar un ensamblado  
  Antes de implementar la aplicación, debe volver a firmar el ensamblado satélite con firma retrasada mediante el par de claves real. Para ello, use Sn.exe.  
   
  El siguiente comando de Sn.exe firma StringLibrary.resources.dll con el par de claves almacenado en el archivo RealKeyPair.snk. La opción **–R** especifica que se debe volver a firmar un ensamblado ya firmado o con firma retrasada.  
   
-```  
+```console
 sn –R StringLibrary.resources.dll RealKeyPair.snk   
 ```  
   
@@ -202,8 +204,8 @@ sn –R StringLibrary.resources.dll RealKeyPair.snk
   
  El siguiente comando de Gacutil.exe instala StringLibrary.resources.dll en la caché global de ensamblados:  
   
-```  
-gacutil /i:StringLibrary.resources.dll  
+```console
+gacutil -i:StringLibrary.resources.dll  
 ```  
   
  La opción **/i** especifica que Gacutil.exe debe instalar el ensamblado especificado en la caché global de ensamblados. Una vez que se ha instalado el ensamblado satélite en la caché, los recursos que contiene están disponibles para todas las aplicaciones que están diseñadas para usar el ensamblado satélite.  
@@ -213,7 +215,7 @@ gacutil /i:StringLibrary.resources.dll
   
 1.  Si no está usando Visual Studio, use el siguiente comando de la [herramienta de nombre seguro (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) para crear un par de claves pública y privada denominado ResKey.snk:  
   
-    ```  
+    ```console
     sn –k ResKey.snk  
     ```  
   
@@ -221,7 +223,7 @@ gacutil /i:StringLibrary.resources.dll
   
 2.  Use el siguiente comando de la [herramienta de nombre seguro (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) para crear un archivo de clave pública denominado PublicKey.snk:  
   
-    ```  
+    ```console
     sn –p ResKey.snk PublicKey.snk  
     ```  
   
@@ -242,7 +244,7 @@ gacutil /i:StringLibrary.resources.dll
   
 6.  Use [Resgen.exe](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) para compilar cada texto o archivo de recursos XML en un archivo .resources binario. La salida es un conjunto de archivos que tienen el mismo nombre de archivo raíz, como los archivos .resx o .txt, pero con una extensión .resources. Si crea el ejemplo con Visual Studio, el proceso de compilación se realiza automáticamente. Si no está usando Visual Studio, ejecute el comando siguiente para compilar los archivos .resx en archivos .resources:  
   
-    ```  
+    ```console
     resgen filename  
     ```  
   
@@ -258,42 +260,42 @@ gacutil /i:StringLibrary.resources.dll
   
      El comando para el compilador de C# es el siguiente:  
   
-    ```  
-    csc /t:library /resource:Strings.resources /delaysign+ /keyfile:publickey.snk StringLibrary.cs  
+    ```console
+    csc -t:library -resource:Strings.resources -delaysign+ -keyfile:publickey.snk StringLibrary.cs  
     ```  
   
      El comando de compilador de Visual Basic correspondiente es el siguiente:  
   
-    ```  
-    vbc /t:library /resource:Strings.resources /delaysign+ /keyfile:publickey.snk StringLibrary.vb  
+    ```console  
+    vbc -t:library -resource:Strings.resources -delaysign+ -keyfile:publickey.snk StringLibrary.vb  
     ```  
   
 8.  Cree un subdirectorio en el directorio principal de la aplicación para cada referencia cultural localizada admitida por la aplicación. Debe crear un subdirectorio en-US, fr-FR, y ru-RU. Visual Studio crea estos subdirectorios automáticamente como parte del proceso de compilación. Dado que todos los ensamblados satélite tienen el mismo nombre de archivo, se usan los subdirectorios para almacenar los ensamblados satélite individuales específicos de la referencia cultural hasta que se firmen con un par de claves pública y privada.  
   
 9. Inserte los archivos .resources individuales específicos de la referencia cultural en ensamblados satélite con firma retrasada y guárdelos en el directorio adecuado. El comando para hacer esto para cada archivo .resources es el siguiente:  
   
-    ```  
-    al /target:lib /embed:Strings.culture.resources /culture:culture /out:culture\StringLibrary.resources.dll /delay+ /keyfile:publickey.snk  
+    ```console
+    al -target:lib -embed:Strings.culture.resources -culture:culture -out:culture\StringLibrary.resources.dll -delay+ -keyfile:publickey.snk  
     ```  
   
      donde *culture* es el nombre de una referencia cultural. En este ejemplo, los nombres de referencia cultural son en-US, fr-FR y ru-RU.  
   
 10. Vuelva a firmar StringLibrary.dll mediante la [herramienta de nombre seguro (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) de la manera siguiente:  
   
-    ```  
+    ```console
     sn –R StringLibrary.dll RealKeyPair.snk  
     ```  
   
 11. Vuelva a firmar los ensamblados satélite individuales. Para ello, use la [herramienta de nombre seguro (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) como se indica a continuación para cada ensamblado satélite:  
   
-    ```  
+    ```console
     sn –R StringLibrary.resources.dll RealKeyPair.snk  
     ```  
   
 12. Registre StringLibrary.dll y cada uno de sus ensamblados satélite en la caché global de ensamblados mediante el comando siguiente:  
   
-    ```  
-    gacutil /i filename  
+    ```console
+    gacutil -i filename  
     ```  
   
      donde *filename* es el nombre del archivo que se va a registrar.  
@@ -305,14 +307,14 @@ gacutil /i:StringLibrary.resources.dll
   
      Para compilar desde la línea de comandos, use el comando siguiente para el compilador de C#:  
   
-    ```  
-    csc Example.cs /r:StringLibrary.dll   
+    ```console
+    csc Example.cs -r:StringLibrary.dll   
     ```  
   
      La línea de comandos para el compilador de Visual Basic es la siguiente:  
   
-    ```  
-    vbc Example.vb /r:StringLibrary.dll   
+    ```console
+    vbc Example.vb -r:StringLibrary.dll   
     ```  
   
 14. Ejecute Example.exe.  

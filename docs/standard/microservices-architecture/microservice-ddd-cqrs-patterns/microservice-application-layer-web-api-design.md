@@ -1,6 +1,6 @@
 ---
-title: "Diseñar el nivel de aplicación de microservicios y la API web"
-description: "Arquitectura de microservicios de .NET para aplicaciones .NET en contenedor | Diseñar el nivel de aplicación de microservicios y la API web"
+title: Diseñar el nivel de aplicación de microservicios y la API web
+description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedor | Diseñar el nivel de aplicación de microservicios y la API web
 keywords: Docker, microservicios, ASP.NET, contenedor
 author: CESARDELATORRE
 ms.author: wiwagn
@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: c166e0286d0769e24a6361037eb6c4694fb821ae
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 87b48624fde8c7cdab097289f1cf56ab56e1173f
+ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="designing-the-microservice-application-layer-and-web-api"></a>Diseñar el nivel de aplicación de microservicios y la API web
 
@@ -29,7 +29,7 @@ Los principios SOLID son técnicas fundamentales para utilizar en cualquier apli
 
 -   Principio de sustitución de Liskov
 
--   Principio de segregación de inversión
+-   Principio de segregación de interfaces
 
 -   Principio de inversión de dependencias
 
@@ -43,14 +43,14 @@ Necesitaríamos otra guía para tratar SOLID con detalle. Para esta guía solo n
 
 #### <a name="additional-resources"></a>Recursos adicionales
 
--   **SOLID: Fundamental OOP Principles** (SOLID: principios fundamentales de OOP)
-    [*http://deviq.com/solid/*](http://deviq.com/solid/%20)
+-   **SOLID: Fundamental OOP Principles**
+    [*http://deviq.com/solid/*](http://deviq.com/solid/%20) (SOLID: principios fundamentales de OOP)
 
--   **Inversion of Control Containers and the Dependency Injection pattern** (Inversión del patrón de contenedores de control y de inserción de dependencias)
-    [*https://martinfowler.com/articles/injection.html*](https://martinfowler.com/articles/injection.html)
+-   **Inversion of Control Containers and the Dependency Injection pattern**
+    [*https://martinfowler.com/articles/injection.html*](https://martinfowler.com/articles/injection.html) (Inversión de los contenedores de control y el patrón de inserción de dependencias)
 
--   **Steve Smith. New is Glue** (La novedad es el pegamento)
-    [*http://ardalis.com/new-is-glue*](http://ardalis.com/new-is-glue)
+-   **Steve Smith. New is Glue**
+    [*http://ardalis.com/new-is-glue*](http://ardalis.com/new-is-glue) (New es como pegamento)
 
 
 >[!div class="step-by-step"]

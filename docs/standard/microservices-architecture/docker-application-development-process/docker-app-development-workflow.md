@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 8537b1db27f512ec0bfc2f23589efe8199ca3287
-ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
+ms.openlocfilehash: 9c3df50430117936fd0b9d4390cb84e02085e48d
+ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="development-workflow-for-docker-apps"></a>Flujo de trabajo de desarrollo para aplicaciones de Docker
 
@@ -69,8 +69,8 @@ Puede empezar a programar la aplicación en .NET sin formato (normalmente en .NE
 
 ### <a name="additional-resources"></a>Recursos adicionales
 
--   **Get started with Docker CE for Windows (Introducción a Docker CE para Windows)**
-    [*https://docs.docker.com/docker-for-windows/*](https://docs.docker.com/docker-for-windows/)
+-   **Get started with Docker CE for Windows**
+    [*https://docs.docker.com/docker-for-windows/*](https://docs.docker.com/docker-for-windows/) (Introducción a Docker CE para Windows)
 
 -   **Visual Studio 2017**
     [*https://www.visualstudio.com/downloads/*](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)
@@ -338,7 +338,7 @@ Lo importante aquí es que, como se muestra en la figura 5-12, en Visual Studio 
 
 ### <a name="additional-resources"></a>Recursos adicionales
 
--   **Implementar un contenedor ASP.NET en un host remoto de Docker**
+-   **Implementación de un contenedor ASP.NET en un host remoto de Docker**
     [*https://docs.microsoft.com/azure/vs-azure-tools-docker-hosting-web-apps-in-docker*](https://docs.microsoft.com/azure/vs-azure-tools-docker-hosting-web-apps-in-docker)
 
 ### <a name="a-note-about-testing-and-deploying-with-orchestrators"></a>Nota sobre las pruebas y la implementación con orquestadores
@@ -351,7 +351,7 @@ En [DC/OS](https://mesosphere.com/blog/2015/09/02/dcos-cli-command-line-tool-dat
 
 ## <a name="step-6-test-your-docker-application-using-your-local-docker-host"></a>Paso 6. Probar la aplicación de Docker con el host local de Docker
 
-Este paso varía en función de lo que haga la aplicación. En una aplicación web de .NET Core sencilla implementada como un único contenedor o servicio, puede acceder al servicio si abre un explorador en el host de Docker y va a ese sitio, como se muestra en la figura 5-13. (Si la configuración del Dockerfile asigna el contenedor a un puerto del host distinto al 80, incluya la entrada del host en la dirección URL).
+Este paso varía en función de lo que haga la aplicación. En una aplicación web de .NET Core sencilla implementada como un único contenedor o servicio, puede acceder al servicio si abre un explorador en el host de Docker y va a ese sitio, como se muestra en la figura 5-13. (Si la configuración del Dockerfile asigna el contenedor a un puerto del host distinto al 80, incluya el puerto del host en la dirección URL).
 
 ![](./media/image18.png)
 
@@ -395,11 +395,11 @@ Además, debe realizar el paso 2 (agregar compatibilidad con Docker a los proyec
 
 ### <a name="additional-resources"></a>Recursos adicionales
 
--   **Steve Lasker. .NET Docker Development with Visual Studio 2017 (Desarrollo de Docker de .Net con Visual Studio 2017)**
-    [*https://channel9.msdn.com/Events/Visual-Studio/Visual-Studio-2017-Launch/T111*](https://channel9.msdn.com/Events/Visual-Studio/Visual-Studio-2017-Launch/T111)
+-   **Steve Lasker. .NET Docker Development with Visual Studio 2017**
+    [*https://channel9.msdn.com/Events/Visual-Studio/Visual-Studio-2017-Launch/T111*](https://channel9.msdn.com/Events/Visual-Studio/Visual-Studio-2017-Launch/T111) (Desarrollo de Docker de .NET con Visual Studio 2017, de Steve Lasker)
 
--   **Jeffrey T. Fritz. Put a .NET Core App in a Container with the new Docker Tools for Visual Studio (Colocar una aplicación de .NET Core en un contenedor con las nuevas herramientas de Docker para Visual Studio)**
-    [*https://blogs.msdn.microsoft.com/webdev/2016/11/16/new-docker-tools-for-visual-studio/*](https://blogs.msdn.microsoft.com/webdev/2016/11/16/new-docker-tools-for-visual-studio/)
+-   **Jeffrey T. Fritz. Put a .NET Core App in a Container with the new Docker Tools for Visual Studio**
+    [*https://blogs.msdn.microsoft.com/webdev/2016/11/16/new-docker-tools-for-visual-studio/*](https://blogs.msdn.microsoft.com/webdev/2016/11/16/new-docker-tools-for-visual-studio/) (Colocación de una aplicación de .NET Core en un contenedor con las nuevas Herramientas de Docker para Visual Studio)
 
 ## <a name="using-powershell-commands-in-a-dockerfile-to-set-up-windows-containers"></a>Uso de comandos de PowerShell en un Dockerfile para configurar contenedores de Windows 
 

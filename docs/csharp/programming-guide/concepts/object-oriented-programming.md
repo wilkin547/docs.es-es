@@ -1,18 +1,19 @@
 ---
-title: "Programación orientada a objetos (C#)"
+title: Programación orientada a objetos (C#)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 ms.assetid: 89574786-65ef-4335-88bc-fbacd094f183
-caps.latest.revision: "4"
+caps.latest.revision: ''
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 4a7f30293bb2d50981353badfb7e373b60dcfeec
-ms.sourcegitcommit: 5fb6646b5ee3769ffb214e672041833ea4ceeb26
+ms.openlocfilehash: 6da28e97a33e962d4926a3b65d0fdf388c252d9a
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/08/2017
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="object-oriented-programming-c"></a>Programación orientada a objetos (C#)
 C# proporciona compatibilidad completa para la programación orientada a objetos incluida la encapsulación, la herencia y el polimorfismo.  
@@ -95,7 +96,7 @@ struct SampleStruct
  Para definir un campo:  
   
 ```csharp  
-Class SampleClass  
+class SampleClass  
 {  
     public string sampleField;  
 }  
@@ -227,14 +228,14 @@ Container.Nested nestedInstance = new Container.Nested()
   
  Están disponibles los siguientes modificadores de acceso:  
   
-|Modificador de C#|Definición|  
+|Modificador de C#|de esquema JSON|  
 |------------------|----------------|  
 |[public](../../../csharp/language-reference/keywords/public.md)|Puede obtener acceso al tipo o miembro cualquier otro código del mismo ensamblado o de otro ensamblado que haga referencia a éste.|  
 |[private](../../../csharp/language-reference/keywords/private.md)|Solamente puede obtener acceso al tipo o miembro el código de la misma clase.|  
 |[protected](../../../csharp/language-reference/keywords/protected.md)|Solamente puede obtener acceso al tipo o miembro el código de la misma clase o de una clase derivada.|  
 |[internal](../../../csharp/language-reference/keywords/internal.md)|Puede obtener acceso al tipo o miembro cualquier código del mismo ensamblado, pero no de un ensamblado distinto.|  
 |[protected internal](../../../csharp/language-reference/keywords/protected-internal.md)|Puede obtener acceso al tipo o miembro cualquier código del mismo ensamblado o cualquier clase derivada de otro ensamblado.|  
-|[privado protegido](../../../csharp/language-reference/keywords/private-protected.md)|El tipo o miembro puede tener acceso a código en la misma clase o de una clase derivada en el ensamblado de la clase base.|  
+|[private protected](../../../csharp/language-reference/keywords/private-protected.md)|Un código de la misma clase o de una clase derivada dentro del ensamblado de clase base puede acceder al tipo o miembro en cuestión.|  
   
  Para obtener más información, consulte [Modificadores de acceso](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).  
   
@@ -340,7 +341,7 @@ public abstract class B { }
   
  Los siguientes modificadores se utilizan para controlar cómo se reemplazan propiedades y métodos:  
   
-|Modificador de C#|Definición|  
+|Modificador de C#|de esquema JSON|  
 |------------------|----------------|  
 |[virtual](../../../csharp/language-reference/keywords/virtual.md)|Permite invalidar un miembro de una clase derivada.|  
 |[override](../../../csharp/language-reference/keywords/override.md)|Invalida un miembro virtual (invalidable) definido en la clase base.|  
@@ -383,7 +384,7 @@ class SampleClass : ISampleInterface
  Para definir una clase genérica:  
   
 ```csharp  
-Public class SampleGeneric<T>   
+public class SampleGeneric<T>   
 {  
     public T Field;  
 }  

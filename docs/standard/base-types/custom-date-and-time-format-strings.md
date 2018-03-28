@@ -1,12 +1,8 @@
 ---
 title: Cadenas con formato de fecha y hora personalizado
-ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
 - csharp
@@ -20,18 +16,18 @@ helpviewer_keywords:
 - formatting [.NET Framework], time
 - date and time strings
 ms.assetid: 98b374e3-0cc2-4c78-ab44-efb671d71984
-caps.latest.revision: 
+caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 503f9d593235cc81c6e2ecf43b93abb2105e0adf
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: c54a5ec9cdbfd73bccd8f70befcfcff7cf8aac2d
+ms.sourcegitcommit: 6f967c86dde55472440f0c8669b0e910ee3c53ba
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="custom-date-and-time-format-strings"></a>Cadenas con formato de fecha y hora personalizado
 Una cadena con formato de fecha y hora define la representación de texto de un valor <xref:System.DateTime> o <xref:System.DateTimeOffset> que es el resultado de una operación de formato. También puede definir la representación de un valor de fecha y hora que se necesite en una operación de análisis para convertir correctamente la cadena en una fecha y hora. Una cadena de formato personalizado consta de uno o varios especificadores de formato de fecha y hora personalizado. Una cadena que no sea una [cadena con formato de fecha y hora estándar](../../../docs/standard/base-types/standard-date-and-time-format-strings.md) se interpreta como una cadena con formato de fecha y hora personalizado.  
@@ -614,7 +610,7 @@ Una cadena con formato de fecha y hora define la representación de texto de un 
  El especificador de formato personalizado ":" representa el separador de hora, que se usa para diferenciar horas, minutos y segundos. El separador de hora adaptado adecuado se recupera de la propiedad <xref:System.Globalization.DateTimeFormatInfo.TimeSeparator%2A?displayProperty=nameWithType> de la referencia cultural actual o especificada.  
   
 > [!NOTE]
->  Para cambiar el separador de hora en una determinada cadena de fecha y hora, especifique el carácter separador en un delimitador de cadena literal. Por ejemplo, la cadena de formato personalizado `hh'_'dd'_'ss` genera una cadena en que "_" (guión bajo) siempre se utiliza como separador de hora. Para cambiar el separador de hora en todas las fechas de una referencia cultural, cambie el valor de la propiedad <xref:System.Globalization.DateTimeFormatInfo.TimeSeparator%2A?displayProperty=nameWithType> de la referencia cultural actual, o cree una instancia de un objeto <xref:System.Globalization.DateTimeFormatInfo>, asigne el carácter a su propiedad <xref:System.Globalization.DateTimeFormatInfo.TimeSeparator%2A> y llame a una sobrecarga del método de formato que incluya un parámetro <xref:System.IFormatProvider>.  
+>  Para cambiar el separador de hora en una determinada cadena de fecha y hora, especifique el carácter separador en un delimitador de cadena literal. Por ejemplo, la cadena de formato personalizado `hh'_'dd'_'ss` genera una cadena en que "\_" (guion bajo) siempre se utiliza como separador de hora. Para cambiar el separador de hora en todas las fechas de una referencia cultural, cambie el valor de la propiedad <xref:System.Globalization.DateTimeFormatInfo.TimeSeparator%2A?displayProperty=nameWithType> de la referencia cultural actual, o cree una instancia de un objeto <xref:System.Globalization.DateTimeFormatInfo>, asigne el carácter a su propiedad <xref:System.Globalization.DateTimeFormatInfo.TimeSeparator%2A> y llame a una sobrecarga del método de formato que incluya un parámetro <xref:System.IFormatProvider>.  
   
  Si el especificador de formato ":" se usa sin otros especificadores de formato personalizado, se interpretará como un especificador de formato de fecha y hora estándar y producirá una excepción <xref:System.FormatException>. Para más información sobre cómo usar un especificador de formato único, consulte [Usar especificadores de formato personalizado únicos](#UsingSingleSpecifiers) más adelante en este tema.  
   

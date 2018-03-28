@@ -1,19 +1,19 @@
 ---
 title: 'Comando dotnet: CLI de .NET Core'
-description: "Aprenda sobre el comando dotnet (el controlador genérico para las herramientas de la CLI de .NET Core) y su uso."
+description: Aprenda sobre el comando dotnet (el controlador genérico para las herramientas de la CLI de .NET Core) y su uso.
 author: mairaw
 ms.author: mairaw
-ms.date: 11/28/2017
+ms.date: 03/20/2018
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: bed0876645428cdff11fa83a091fc63e64cedc8f
-ms.sourcegitcommit: 973a12d1e6962cd9a9c263fbfaad040ec8267fe9
+ms.openlocfilehash: 2d22124cb613152df402046541650f3262e7e202
+ms.sourcegitcommit: 6f967c86dde55472440f0c8669b0e910ee3c53ba
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/22/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="dotnet-command"></a>comando dotnet
 
@@ -27,11 +27,13 @@ ms.lasthandoff: 02/22/2018
 
 # <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 ```
-dotnet [command] [arguments] [--additional-deps] [--additionalprobingpath] [-d|--diagnostics] [--fx-version] [-h|--help] [--info] [--roll-forward-on-no-candidate-fx] [-v|--verbose] [--version]
+dotnet [command] [arguments] [--additional-deps] [--additionalprobingpath] [-d|--diagnostics]
+    [--fx-version] [-h|--help] [--info] [--roll-forward-on-no-candidate-fx] [-v|--verbosity] [--version]
 ```
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 ```
-dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-version] [-h|--help] [--info] [-v|--verbose] [--version]
+dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-version]
+    [-h|--help] [--info] [-v|--verbosity] [--version]
 ```
 ---
 
@@ -75,9 +77,9 @@ Imprime información detallada sobre las herramientas de la CLI y el entorno, co
 
  Se pone al día con ningún candidato de marco de trabajo compartido.
 
-`-v|--verbose`
+`-v|--verbosity <LEVEL>`
 
-Habilita la salda detallada.
+Establece el nivel de detalle del comando. Los valores permitidos son `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` y `diag[nostic]`. Estos no se admiten en todos los comandos; consulte la página específica de cada comando para asegurarse de que la opción está disponible.
 
 `--version`
 
@@ -105,9 +107,9 @@ Imprime una corta ayuda para el comando. Si se usa con `dotnet`, también imprim
 
 Imprime información detallada sobre las herramientas de la CLI y el entorno, como el sistema operativo actual, el SHA de confirmación para la versión y otra información.
 
-`-v|--verbose`
+`-v|--verbosity <LEVEL>`
 
-Habilita la salda detallada.
+Establece el nivel de detalle del comando. Los valores permitidos son `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` y `diag[nostic]`. Estos no se admiten en todos los comandos; consulte la página específica de cada comando para asegurarse de que la opción está disponible.
 
 `--version`
 
