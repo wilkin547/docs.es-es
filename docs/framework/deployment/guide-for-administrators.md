@@ -1,27 +1,29 @@
 ---
-title: "Guía de implementación de .NET Framework para administradores"
-ms.custom: 
+title: Guía de implementación de .NET Framework para administradores
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - administrator's guide, deploying .NET Framework
 - deployment [.NET Framework], administrator's guide
 ms.assetid: bee14036-0436-44e8-89f5-4bc61317977a
-caps.latest.revision: "40"
+caps.latest.revision: ''
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3af5e301e57350b72ac0ea50448c7a46ca6c5387
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: f57b5db5c03030d8cb930355586d0253cae13319
+ms.sourcegitcommit: 6f967c86dde55472440f0c8669b0e910ee3c53ba
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="net-framework-deployment-guide-for-administrators"></a>Guía de implementación de .NET Framework para administradores
 Este artículo paso a paso describe cómo un administrador del sistema puede implementar [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] y sus dependencias del sistema en una red mediante Microsoft System Center Configuration Manager. En este artículo se supone que todos los equipos cliente de destino cumplen los requisitos mínimos para .NET Framework. Para obtener una lista de los requisitos de software y hardware para instalar [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], consulte [Requisitos del sistema](../../../docs/framework/get-started/system-requirements.md).  
@@ -230,8 +232,7 @@ Este artículo paso a paso describe cómo un administrador del sistema puede imp
 ### <a name="log-file-locations"></a>Ubicaciones de archivos de registro  
  Los siguientes archivos de registro se generan durante la configuración de [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]:  
   
- %temp%\Microsoft .NET Framework 4.5*.txt  
- %temp%\Microsoft .NET Framework 4.5\*.html  
+ %temp%\Microsoft .NET Framework 4.5*.txt %temp%\Microsoft .NET Framework 4.5*.html  
   
  Puede usar la [herramienta de recopilación de registros](http://www.microsoft.com/download/details.aspx?id=12493) para recopilar los archivos de registro de [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] y crear un archivo .cab comprimido que reduzca el tamaño de los archivos.  
   
