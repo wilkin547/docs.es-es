@@ -1,24 +1,26 @@
 ---
-title: "Patrones de diseño: suscripción-publicación basada en la lista"
-ms.custom: 
+title: 'Patrones de diseño: suscripción-publicación basada en la lista'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f4257abc-12df-4736-a03b-0731becf0fd4
-caps.latest.revision: "16"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9f5d9b334aae1607f4fb46e0b41155b50eb95a46
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 2a4f36c7231146811e4eb033cfb6a3433a58dbb2
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="design-patterns-list-based-publish-subscribe"></a>Patrones de diseño: suscripción-publicación basada en la lista
 Este ejemplo muestra el patrón suscripción-publicación basada en la lista implementado como un programa [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
@@ -89,7 +91,7 @@ public class PriceChangeEventArgs : EventArgs
         }  
   
         //Clients call this service operation to unsubscribe.  
-        //The previous price change event handler is deregistered.  
+        //The previous price change event handler is unregistered.  
   
         public void Unsubscribe()  
         {  
@@ -129,7 +131,7 @@ public class PriceChangeEventArgs : EventArgs
   
 ### <a name="to-run-the-sample-on-the-same-machine"></a>Para ejecutar el ejemplo en el mismo equipo  
   
-1.  Pruebe que puede tener acceso al servicio con un explorador escribiendo la dirección siguiente: http://localhost/servicemodelsamples/service.svc. Como respuesta se debe mostrar una página de confirmación.  
+1.  Pruebe que puede tener acceso el servicio con un explorador escribiendo la siguiente dirección: http://localhost/servicemodelsamples/service.svc. Como respuesta se debe mostrar una página de confirmación.  
   
 2.  Ejecute Client.exe desde \client\bin\\, desde la carpeta específica del lenguaje. La actividad del cliente se muestra en la ventana de consola del cliente. Inicie varios clientes.  
   

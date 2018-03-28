@@ -1,7 +1,7 @@
 ---
 title: 'Uso de F # en Azure'
-description: "Guía para usar los servicios de Azure con F #"
-keywords: "Azure, nube, visual f#, f#, programación funcional, .NET, .NET Core"
+description: 'Guía para usar los servicios de Azure con F #'
+keywords: Azure, nube, visual f#, f#, programación funcional, .NET, .NET Core
 author: sylvanc
 ms.author: phcart
 ms.date: 09/22/2016
@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: FAD4D11E-703A-42D4-9F72-893D9E0F569B
-ms.openlocfilehash: 8f1d5abe0412ecf72e38c7d76ef44fdc5fd4a0f7
-ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
+ms.openlocfilehash: 0849bc77139b4f4383e2c772f5bae62741ee2b8b
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="using-f-on-azure"></a>Uso de F # en Azure
 
@@ -69,14 +69,14 @@ Azure Storage también puede usarse junto con Azure Functions a través de confi
 * [Implementing Spark Apps in F# using Mobius](https://github.com/Microsoft/Mobius/blob/master/notes/spark-fsharp-mobius.md) (Implementar aplicaciones de Spark en F# con Mobius)
 * [Aplicaciones de Spark de F# de ejemplo con Mobius](https://github.com/Microsoft/Mobius/tree/master/examples/fsharp)
 
-## <a name="using-azure-documentdb-with-f"></a>Uso de documentos de Azure con F # #
+## <a name="using-azure-cosmos-db-with-f"></a>Uso de Azure Cosmos DB con F # #
 
-[Azure DocumentDB](https://azure.microsoft.com/services/documentdb/) es un servicio NoSQL para aplicaciones altamente disponibles y distribuidas de forma global.
+[Base de datos de Azure Cosmos](https://azure.microsoft.com/services/cosmos-db) es un servicio de NoSQL para aplicaciones de alta disponibilidad, distribuidos globalmente.
 
-Azure DocumentDB se puede usar con F# de dos maneras:
+Base de datos de Azure Cosmos puede utilizarse con F # de dos maneras:
 
-1. Mediante la creación de Azure Functions de F# que reaccionen ante los cambios o los provoquen en colecciones de DocumentDB. Vea [Desencadenadores de Azure Functions para DocumentDB](/azure/azure-functions/functions-bindings-documentdb), o bien
-2. Mediante el uso del [SDK de .NET para Azure](/azure/documentdb/documentdb-get-started-quickstart). Tenga en cuenta que estos ejemplos son de C#.
+1. A través de la creación de funciones de Azure de F # que reaccionar frente a o producen cambios en las colecciones de base de datos de Azure Cosmos. Vea [enlaces de base de datos de Azure Cosmos para las funciones de Azure](/azure/azure-functions/functions-bindings-cosmosdb), o
+2. Mediante el uso de la [Cosmos DB .NET SDK de Azure para la API de SQL](/azure/cosmos-db/sql-api-sdk-dotnet). Los ejemplos relacionados están en C#.
 
 ## <a name="using-azure-event-hubs-with-f"></a>Uso de los centros de eventos de Azure con F # #
 
@@ -119,7 +119,7 @@ Los temporizadores pueden implementarse en F# y hospedarse en Azure a través de
 
 Las máquinas virtuales de Azure se pueden implementar y administrar mediante programación desde scripts de F# con los paquetes y API de Microsoft.Azure.Management. Por ejemplo, vea [Introducción a las bibliotecas de administración para .NET](https://msdn.microsoft.com/library/dn722415.aspx) y [Uso de Azure Resource Manager](/azure/azure-resource-manager/resource-manager-deployment-model).
 
-Del mismo modo, también se pueden implementar y administrar otros recursos de Azure desde scripts de F# mediante el uso de los mismos componentes. Por ejemplo, se pueden crear cuentas de almacenamiento, implementar Azure Cloud Services, crear instancias de Azure DocumentDB y administrar Azure Notifcation Hubs mediante programación desde scripts de F#.
+Del mismo modo, también se pueden implementar y administrar otros recursos de Azure desde scripts de F# mediante el uso de los mismos componentes. Por ejemplo, puede crear cuentas de almacenamiento, implementar servicios en la nube, crear instancias de base de datos de Azure Cosmos y administrar los centros de notificaciones de Azure mediante programación desde scripts de F #.
 
 Normalmente no es necesario usar scripts de F# para implementar y administrar recursos. Por ejemplo, los recursos de Azure también se pueden implementar directamente desde descripciones de plantillas de JSON, que pueden tener parámetros. Vea [Plantillas de Azure Resource Manager](/azure/azure-resource-manager/resource-manager-template-best-practices) con ejemplos como las [Plantillas de inicio rápido de Azure](https://azure.microsoft.com/documentation/templates/).
 
