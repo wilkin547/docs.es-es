@@ -23,14 +23,14 @@ ms.lasthandoff: 11/21/2017
 # <a name="internal-c-reference"></a>internal (Referencia de C#)
 La palabra clave `internal` es un [modificador de acceso](../../../csharp/language-reference/keywords/access-modifiers.md) para tipos y miembros de tipo. 
   
- > Esta página cubre `internal` acceso. El `internal` palabra clave es también parte de la [ `protected internal` ](./protected-internal.md) modificador de acceso.
+Esta página trata sobre el modificador de acceso `internal`. La palabra clave `internal` también forma parte del modificador de acceso [ `protected internal` ](./protected-internal.md).
   
 Solo se puede tener acceso a los tipos internos o los miembros desde los archivos del mismo ensamblado, como en este ejemplo:  
   
 ```  
 public class BaseClass   
 {  
-    // Only accessible within the same assembly  
+    // Only accessible within the same assembly 
     internal static int x = 0;  
 }  
 ```  
@@ -48,7 +48,7 @@ public class BaseClass
   
 ```  
 // Assembly1.cs  
-// Compile with: /target:library  
+// Compile with: /target:library 
 internal class BaseClass   
 {  
    public static int intM = 0;  
@@ -57,7 +57,7 @@ internal class BaseClass
   
 ```  
 // Assembly1_a.cs  
-// Compile with: /reference:Assembly1.dll  
+// Compile with: /reference:Assembly1.dll 
 class TestAccess   
 {  
    static void Main()   
@@ -72,7 +72,7 @@ class TestAccess
   
 ```  
 // Assembly2.cs  
-// Compile with: /target:library  
+// Compile with: /target:library 
 public class BaseClass   
 {  
    internal static int intM = 0;  
@@ -81,7 +81,7 @@ public class BaseClass
   
 ```  
 // Assembly2_a.cs  
-// Compile with: /reference:Assembly1.dll  
+// Compile with: /reference:Assembly1.dll 
 public class TestAccess   
 {  
    static void Main()   
