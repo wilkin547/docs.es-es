@@ -1,12 +1,13 @@
 ---
-title: "Cómo el motor en tiempo de ejecución ubica ensamblados"
-ms.custom: 
+title: Cómo el motor en tiempo de ejecución ubica ensamblados
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - app.config files, assembly locations
@@ -16,16 +17,17 @@ helpviewer_keywords:
 - locating assemblies
 - assemblies [.NET Framework], location
 ms.assetid: 772ac6f4-64d2-4cfb-92fd-58096dcd6c34
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 97a56a095c1b0c080cd3df329fce0085dd01af23
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 6e154e0658534018ccd1086631cad6d350528b5d
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="how-the-runtime-locates-assemblies"></a>Cómo el motor en tiempo de ejecución ubica ensamblados
 Para implementar correctamente una aplicación de .NET Framework, debe entender la manera en que Common Language Runtime busca y enlaza los ensamblados que componen la aplicación. De forma predeterminada, runtime intenta enlazar con la versión exacta de un ensamblado con el que se creó la aplicación. Este comportamiento predeterminado puede reemplazarse con los valores del archivo de configuración.  
@@ -187,7 +189,7 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
   
 -   Nombre, que es el nombre del ensamblado al que se hace referencia.  
   
--   Atributo `privatePath` del elemento [\<probing>](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md), que es la lista definida por el usuario de subdirectorios bajo la ubicación raíz. Esta ubicación puede especificarse en el archivo de configuración de la aplicación y en el código administrado mediante la propiedad <xref:System.AppDomain.AppendPrivatePath%2A> para un dominio de aplicación. Cuando se especifica en código administrado, se sondea primero el código administrado `privatePath` , seguido de la ruta de acceso especificada en el archivo de configuración de la aplicación.  
+-   Atributo `privatePath` del elemento [\<probing>](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md), que es la lista definida por el usuario de subdirectorios bajo la ubicación raíz. Esta ubicación puede especificarse en el archivo de configuración de la aplicación y en el código administrado mediante la propiedad <xref:System.AppDomainSetup.PrivateBinPath?displayProperty=nameWithType> para un dominio de aplicación. Cuando se especifica en código administrado, se sondea primero el código administrado `privatePath` , seguido de la ruta de acceso especificada en el archivo de configuración de la aplicación.  
   
 #### <a name="probing-the-application-base-and-culture-directories"></a>Sondear los directorios de base de la aplicación y de referencia cultural  
  El tiempo de ejecución siempre empieza a sondear en la base de la aplicación, que puede ser una dirección URL o el directorio raíz de la aplicación en un equipo. Si el ensamblado al que se hace referencia no se encuentra en la base de la aplicación y si no se proporciona ninguna información de referencia cultural, el tiempo de ejecución busca cualquier subdirectorio con el nombre del ensamblado. Los directorios sondeados incluyen:  
@@ -254,7 +256,7 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
 #### <a name="other-locations-probed"></a>Otras ubicaciones sondeadas  
  La ubicación del ensamblado también puede determinarse mediante el contexto de enlace actual. Esto suele ocurrir cuando se usa el método <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> y en escenarios de interoperabilidad COM. Si un ensamblado usa el método <xref:System.Reflection.Assembly.LoadFrom%2A> para hacer referencia a otro ensamblado, la ubicación del ensamblado que realiza la llamada se considera una pista sobre dónde se encontrará el ensamblado al que se hace referencia. Si se encuentra una coincidencia, se carga dicho ensamblado. Si no se encuentra ninguna coincidencia, el tiempo de ejecución prosigue con la semántica de búsqueda y, a continuación, consulta a Windows Installer para proporcionar el ensamblado. Si no se proporciona ningún ensamblado que coincida con la solicitud de enlace, se produce una excepción. Esta excepción es una <xref:System.TypeLoadException> en código administrado si se hacía referencia a un tipo, o una <xref:System.IO.FileNotFoundException> si no se encontró un ensamblado que se estuviera cargando.  
   
- Por ejemplo, si Assembly1 hace referencia a Assembly2 y Assembly1 se descargó desde http://www.code.microsoft.com/utils, dicha ubicación se considera una pista sobre dónde buscar Assembly2.dll. A continuación, el tiempo de ejecución sondea el ensamblado en http://www.code.microsoft.com/utils/Assembly2.dll y en http://www.code.microsoft.com/utils/Assembly2/Assembly2.dll. Si no se encuentra Assembly2 en ninguna de estas ubicaciones, el tiempo de ejecución consulta a Windows Installer.  
+ Por ejemplo, si Assembly1 hace referencia a Assembly2 y Assembly1 se descargó desde http://www.code.microsoft.com/utils, dicha ubicación se considera una pista sobre dónde buscar Assembly2.dll. Después, el runtime busca el ensamblado en http://www.code.microsoft.com/utils/Assembly2.dll y http://www.code.microsoft.com/utils/Assembly2/Assembly2.dll. Si no se encuentra Assembly2 en ninguna de estas ubicaciones, el tiempo de ejecución consulta a Windows Installer.  
   
 ## <a name="see-also"></a>Vea también  
  [Procedimientos recomendados para cargar ensamblados](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)  

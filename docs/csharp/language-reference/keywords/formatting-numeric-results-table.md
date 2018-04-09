@@ -1,8 +1,9 @@
 ---
-title: "Tabla de formatos de presentación para valores numéricos (Referencia de C#)"
+title: Tabla de formatos de presentación para valores numéricos (Referencia de C#)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - formatting [C#]
@@ -10,28 +11,28 @@ helpviewer_keywords:
 - String.Format method
 - Console.Write method
 ms.assetid: 120ba537-4448-4c62-8676-7a8fdd98f496
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: cce14d5124ffdf030701ae0fc769278da51f86cc
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d389703c2d82d74760b99059201cb634849aa433
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="formatting-numeric-results-table-c-reference"></a>Tabla de formatos de presentación para valores numéricos (Referencia de C#)
-Se pueden aplicar formatos a los resultados numéricos mediante el método <xref:System.String.Format%2A?displayProperty=nameWithType>, o con el método <xref:System.Console.Write%2A?displayProperty=nameWithType> o <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> que realiza una llamada a `String.Format`. El formato se especifica mediante cadenas de formato. La tabla siguiente contiene las cadenas de formato estándar admitidas. La cadena de formato toma la siguiente forma: `Axx`, donde `A` es el especificador de formato y `xx` es el especificador de precisión. El especificador de formato controla el tipo de formato aplicado al valor numérico, mientras que el especificador de precisión controla el número de dígitos significativos o posiciones decimales del resultado. El valor de los intervalos del especificador de precisión comprende de 0 a 99.  
+Se puede aplicar formato a los resultados numéricos mediante el método <xref:System.String.Format%2A?displayProperty=nameWithType>, o con los métodos <xref:System.Console.Write%2A?displayProperty=nameWithType> o <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> que realizan una llamada a `String.Format`, o usando la [interpolación de cadenas](../tokens/interpolated.md). El formato se especifica mediante cadenas de formato. La tabla siguiente contiene las cadenas de formato estándar admitidas. La cadena de formato toma la siguiente forma: `Axx`, donde `A` es el especificador de formato y `xx` es el especificador de precisión. El especificador de formato controla el tipo de formato aplicado al valor numérico, mientras que el especificador de precisión controla el número de dígitos significativos o posiciones decimales del resultado. El valor de los intervalos del especificador de precisión comprende de 0 a 99.  
   
- Para obtener más información sobre cadenas de formato estándar y personalizadas, vea [Aplicación de formato a tipo](../../../standard/base-types/formatting-types.md). Para obtener más información sobre el método `String.Format`, vea <xref:System.String.Format%2A?displayProperty=nameWithType>.  
+ Para obtener más información sobre cadenas de formato estándar y personalizadas, vea [Aplicación de formato a tipo](../../../standard/base-types/formatting-types.md).
   
-|Especificador de formato|Descripción|Ejemplos|Salida|  
+|Especificador de formato|Description|Ejemplos|Salida|  
 |----------------------|-----------------|--------------|------------|  
 |C o c|Moneda|Console.Write("{0:C}", 2.5);<br /><br /> Console.Write("{0:C}", -2.5);|$2.50<br /><br /> ($2.50)|  
 |D o d|Decimal|Console.Write("{0:D5}", 25);|00025|  
 |E o e|Científica|Console.Write("{0:E}", 250000);|2.500000E+005|  
 |F o f|Punto fijo|Console.Write("{0:F2}", 25);<br /><br /> Console.Write("{0:F0}", 25);|25.00<br /><br /> 25|  
 |G o g|General|Console.Write("{0:G}", 2.5);|2.5|  
-|N o n|Número|Console.Write("{0:N}", 2500000);|2,500,000.00|  
+|N o n|número|Console.Write("{0:N}", 2500000);|2,500,000.00|  
 |X o x|Hexadecimal|Console.Write("{0:X}", 250);<br /><br /> Console.Write("{0:X}", 0xffff);|FA<br /><br /> FFFF|  
   
 ## <a name="see-also"></a>Vea también  

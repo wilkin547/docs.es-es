@@ -1,6 +1,6 @@
 ---
 title: Requisitos de sistema de .NET Framework
-description: "Averigüe cuáles son los requisitos de hardware, sistema operativo y software para instalar .NET Framework 4.5 y versiones posteriores."
+description: Averigüe cuáles son los requisitos de hardware, sistema operativo y software para instalar .NET Framework 4.5 y versiones posteriores.
 ms.custom: updateeachrelease
 ms.date: 02/02/2018
 ms.prod: .net-framework
@@ -19,11 +19,11 @@ ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: a0cfbcbc4c2c0857c1fe4163484a43f4521444a3
-ms.sourcegitcommit: be1fb5d9447ad459bef22b91a91c72e3e0b2d916
+ms.openlocfilehash: e0b6faf42f0fa47f6104454440033a6272efb224
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="net-framework-system-requirements"></a>Requisitos de sistema de .NET Framework
 
@@ -35,13 +35,7 @@ En las tablas de este tema se indican los requisitos de hardware, sistema operat
 
 Los entornos de desarrollo que permiten desarrollar aplicaciones para .NET Framework tienen otros requisitos diferentes.
 
-> [!IMPORTANT]
-> Todas las versiones de .NET Framework a partir de .NET Framework 4 son actualizaciones en contexto, por lo que solo puede estar presente en un sistema una sola versión 4.x.
-> Además, determinadas versiones de .NET Framework están preinstaladas en algunas versiones del sistema operativo Windows. Esto significa que:
->
-> * Si hay alguna versión posterior que ya está instalada en el equipo, no se puede instalar una versión 4.x anterior.
-> * Si el sistema operativo viene preinstalado con una determinada versión de .NET, no se puede instalar una versión 4.x anterior en el mismo equipo.
-> * Si se instala una versión posterior, no es necesario desinstalar primero la versión anterior.
+[!INCLUDE[net-framework-4-versions](../../../includes/net-framework-4x-versions.md)]
 
 Para obtener información y vínculos de descarga, vea [Instalar .NET Framework para desarrolladores](../../../docs/framework/install/guide-for-developers.md).
 
@@ -101,7 +95,7 @@ Necesita tener privilegios de administrador para poder instalar .NET Framework. 
 
  **Notas:**
 
-- [!INCLUDE[winserver8](../../../includes/winserver8-md.md)] Incluye [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], por lo que no tendrá que instalarlo por separado. Del mismo modo, [!INCLUDE[winblue_server_2](../../../includes/winblue-server-2-md.md)] incluye [!INCLUDE[net_v451](../../../includes/net-v451-md.md)].
+- [!INCLUDE[winserver8](../../../includes/winserver8-md.md)] incluye [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], por lo que no tendrá que instalarlo por separado. Del mismo modo, [!INCLUDE[winblue_server_2](../../../includes/winblue-server-2-md.md)] incluye [!INCLUDE[net_v451](../../../includes/net-v451-md.md)].
 
 - .NET Framework. tiene compatibilidad limitada con el rol Server Core con Windows Server 2008 R2 SP1 o versiones posteriores. Vea [Server Core .NET Functionality](https://msdn.microsoft.com/library/ee391632.aspx) (Funcionalidad de .NET en Server Core) para obtener una lista de las API no compatibles.
 

@@ -1,5 +1,5 @@
 ---
-title: "Cadenas con formato numérico estándar"
+title: Cadenas con formato numérico estándar
 ms.date: 09/10/2017
 ms.prod: .net
 ms.technology: dotnet-standard
@@ -24,11 +24,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 9416bff21607d8e37f9e7dbc270477539043fe8b
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: f042d72c76ddbf3b5eaf8923fc747325b701c9a6
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="standard-numeric-format-strings"></a>Cadenas con formato numérico estándar
 Las cadenas de formato numérico estándar se utilizan para dar formato a tipos numéricos comunes. La forma de una cadena de formato numérico estándar es `Axx`, donde:  
@@ -48,7 +48,7 @@ Las cadenas con formato numérico estándar son compatibles con:
  
 - La [característica de formato compuesto](../../../docs/standard/base-types/composite-formatting.md) de .NET, que utilizan algunos métodos `Write` y `WriteLine` de las clases <xref:System.Console> y <xref:System.IO.StreamWriter>, el método <xref:System.String.Format%2A?displayProperty=nameWithType> y el método <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>. La característica de formato compuesto permite incluir la representación de varios elementos de datos en una sola cadena a fin de especificar el ancho de campo y alinear números en un campo. Para obtener más información, consulte [Formatos compuestos](../../../docs/standard/base-types/composite-formatting.md).  
 
-- [Cadenas interpoladas](../../csharp/language-reference/keywords/interpolated-strings.md) en C# y Visual Basic, que proporcionan una sintaxis simplificada cuando se comparan con las cadenas de formato compuesto.
+- [Cadenas interpoladas](../../csharp/language-reference/tokens/interpolated.md) en C# y Visual Basic, que proporcionan una sintaxis simplificada cuando se comparan con las cadenas de formato compuesto.
  
 > [!TIP]
 >  Puede descargar la [Utilidad de formato](http://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d), que es una aplicación que permite aplicar cadenas de formato a valores numéricos o de fecha y hora, y que muestra la cadena de resultado.  
@@ -89,6 +89,8 @@ Las cadenas con formato numérico estándar son compatibles con:
      [!code-cpp[Formatting.Numeric.Standard#12](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/standardusage1.cpp#12)]
      [!code-csharp[Formatting.Numeric.Standard#12](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/standardusage1.cs#12)]
      [!code-vb[Formatting.Numeric.Standard#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/standardusage1.vb#12)]  
+  
+-   Se puede proporcionar como el argumento `formatString` en un elemento de la expresión interpolada de una cadena interpolada. Para más información, vea el tema [$ (Referencia de C#)](../../csharp/language-reference/tokens/interpolated.md) en la referencia de C# o el tema [Interpolated Strings (Visual Basic Reference)](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md) [Cadenas interpoladas (Referencia de Visual Basic)] en la referencia de Visual Basic.  
   
  En las secciones siguientes se proporciona información detallada sobre cada una de las cadenas de formato numérico estándar.  
   

@@ -1,5 +1,5 @@
 ---
-title: "Uso de tipos que aceptan valores NULL (Guía de programación de C#)"
+title: Uso de tipos que aceptan valores NULL (Guía de programación de C#)
 ms.date: 07/20/2015
 ms.prod: .net
 ms.technology:
@@ -8,7 +8,7 @@ ms.topic: article
 helpviewer_keywords:
 - nullable types [C#], about nullable types
 ms.assetid: 0bacbe72-ce15-4b14-83e1-9c14e6380c28
-caps.latest.revision: 
+caps.latest.revision: 31
 author: BillWagner
 ms.author: wiwagn
 ms.openlocfilehash: c8a42392bbcd2e53c54ff4c13bf98c048262ae4d
@@ -103,7 +103,7 @@ Los tipos que aceptan valores NULL pueden representar todos los valores de un ti
   
  Los resultados de estos operadores se muestran en la siguiente tabla:  
   
-|X|y|x e y|x | y|  
+|X|y|x e y|x&#124;y|  
 |-------|-------|---------|--------------|  
 |true|true|true|true|  
 |true|false|false|true|  

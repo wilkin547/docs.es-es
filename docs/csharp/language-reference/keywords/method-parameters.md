@@ -1,5 +1,5 @@
 ---
-title: "Parámetros de métodos (Referencia de C#)"
+title: Parámetros de métodos (Referencia de C#)
 ms.date: 07/20/2015
 ms.prod: .net
 ms.technology:
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - method parameters [C#]
 - parameters [C#]
 ms.assetid: 680e39ff-775b-48b0-9f47-4186a5bfc4a1
-caps.latest.revision: 
+caps.latest.revision: 8
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: b20d2d233350cfb9de55cbd07e722082ec311597
-ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
+ms.openlocfilehash: 35d96066deb866e02f6bf624121376fe3ae94373
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="method-parameters-c-reference"></a>Parámetros de métodos (Referencia de C#)
 
@@ -25,13 +25,13 @@ Los parámetros declarados para un método sin [in](../../../csharp/language-ref
   
  Esta sección describe las palabras clave que puede usar para declarar parámetros de métodos:  
   
--   [params](../../../csharp/language-reference/keywords/params.md)  
+-   [params](../../../csharp/language-reference/keywords/params.md) especifica que este parámetro puede tomar un número variable de argumentos.
   
--   [in](../../../csharp/language-reference/keywords/in-parameter-modifier.md)  
+-   [in](../../../csharp/language-reference/keywords/in-parameter-modifier.md) especifica que este parámetro se pasa por referencia, pero solo se lee mediante el método llamado.
   
--   [ref](../../../csharp/language-reference/keywords/ref.md)  
+-   [ref](../../../csharp/language-reference/keywords/ref.md) especifica que este parámetro se pasa por referencia y puede ser leído o escrito por el método llamado.
   
--   [out](../../../csharp/language-reference/keywords/out-parameter-modifier.md)  
+-   [out](../../../csharp/language-reference/keywords/out-parameter-modifier.md) especifica que este parámetro se pasa por referencia y se escribe mediante el método llamado.
   
 ## <a name="see-also"></a>Vea también  
  [Referencia de C#](../../../csharp/language-reference/index.md)  

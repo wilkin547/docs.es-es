@@ -10,7 +10,7 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 61ce7ee1-ffe2-477d-8a9f-835b0a11d900
-caps.latest.revision: ''
+caps.latest.revision: 4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
@@ -63,7 +63,7 @@ Esta sección contiene temas de referencia de [!INCLUDE[esql](../../../../../../
 |[< (Menor que)](../../../../../../docs/framework/data/adonet/ef/language-reference/less-than-entity-sql.md)|Compara dos expresiones para determinar si la expresión de la izquierda tiene un valor menor que el de la expresión de la derecha.|  
 |[<= (Menor o igual que)](../../../../../../docs/framework/data/adonet/ef/language-reference/less-than-or-equal-to-entity-sql.md)|Compara dos expresiones para determinar si la expresión izquierda tiene un valor igual o menor que el de la expresión derecha.|  
 |[&AMP;#91;NO&AMP;#93; BETWEEN](../../../../../../docs/framework/data/adonet/ef/language-reference/between-entity-sql.md)|Determina si el resultado de una expresión es un valor incluido en un intervalo especificado.|  
-|[!= (No igual a)](../../../../../../docs/framework/data/adonet/ef/language-reference/not-equal-to-entity-sql.md)|Compara dos expresiones para determinar si la expresión de la izquierda no es igual que la expresión de la derecha.|  
+|[\!= (No igual a)](../../../../../../docs/framework/data/adonet/ef/language-reference/not-equal-to-entity-sql.md)|Compara dos expresiones para determinar si la expresión de la izquierda no es igual que la expresión de la derecha.|  
 |[&AMP;#91;NO&AMP;#93; COMO](../../../../../../docs/framework/data/adonet/ef/language-reference/like-entity-sql.md)|Determina si una cadena de caracteres específica coincide con un patrón especificado.|  
   
 ## <a name="logical-and-case-expression-operators"></a>Operadores lógicos y de expresión CASE  

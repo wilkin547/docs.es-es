@@ -1,9 +1,10 @@
 ---
-title: "Instalación de .NET Framework para desarrolladores"
+title: Instalación de .NET Framework para desarrolladores
 ms.custom: updateeachrelease
-ms.date: 10/17/2017
+ms.date: 03/23/2018
 ms.prod: .net-framework
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.topic: get-started-article
 helpviewer_keywords:
 - .NET Framework redistributable package, downloading
@@ -14,25 +15,26 @@ ms.assetid: daf9d9d5-84ac-4bd9-a864-27665ffd0f5c
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4be70c047566416b40da3fd34d1e8b8f479af7c5
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: b5cfa21306ccad78825d5f46c78c00a24ff67436
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="install-the-net-framework-for-developers"></a>Instalación de .NET Framework para desarrolladores
 
 .NET es una parte integral de muchas aplicaciones que se ejecutan en Windows y proporciona la funcionalidad común para que dichas aplicaciones puedan ejecutarse. Para los desarrolladores, .NET Framework facilita un modelo de programación coherente y completo para compilar aplicaciones que ofrezcan experiencias de usuario visualmente increíbles y una comunicación segura y sin problemas.  
 
+> [!NOTE]
+> Este tema está destinado a **desarrolladores** que quieren instalar .NET Framework en su propio sistema o que quieren instalarlo con sus aplicaciones. Para aquellos **usuarios** interesados en la instalación de .NET Framework, se recomiendan los temas que tratan la instalación de .NET Framework en sistemas operativos específicos, como [Instalar .NET Framework en Windows 10 y Windows Server 2016](on-windows-10.md).  
+
 Este artículo contiene vínculos para instalar todas las versiones de .NET Framework desde .NET Framework 4.5 hasta [!INCLUDE[net_current](../../../includes/net-current-version.md)] en el equipo. Los desarrolladores también pueden utilizar estos vínculos para descargar y redistribuir .NET Framework con sus aplicaciones. Para obtener información acerca de la implementación de una versión de .NET Framework en su aplicación, consulte la [Guía de implementación de .NET Framework para desarrolladores](../deployment/deployment-guide-for-developers.md).
 
-> [!NOTE]
-> Este tema está destinado a desarrolladores que desean instalar .NET Framework en su propio sistema o que desean instalarlo con sus aplicaciones. Para aquellos usuarios interesados en la instalación de .NET Framework, se recomiendan los temas que tratan la instalación de .NET Framework en sistemas operativos específicos, como [Instalar .NET Framework en Windows 10 y Windows Server 2016](on-windows-10.md).  
+[!INCLUDE[net-framework-4-versions](../../../includes/net-framework-4x-versions.md)]
   
-Tenga en cuenta que al instalar una nueva versión de .NET Framework no siempre se reemplazan las versiones anteriores. Para obtener más información acerca de las versiones de .NET Framework y cómo determinar qué versiones están instaladas en un equipo, consulte [Versiones y dependencias](~/docs/framework/migration-guide/versions-and-dependencies.md) y [Cómo: Determinar qué versiones de .NET Framework están instaladas](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md). Todas las versiones de .NET Framework que aparecen en la tabla siguiente son actualizaciones en contexto de .NET Framework 4. Es decir, si instala una versión posterior, como .NET Framework 4.6, no deberá instalar primero las versiones anteriores, como .NET Framework 4.5, 4.5.1 o 4.5.2. De manera similar, si instala una versión posterior, como .NET Framework 4.6, no deberá desinstalar primero las versiones anteriores, como .NET Framework 4.5, 4.5.1 o 4.5.2. 
-
-El hecho de que las versiones posteriores a .NET Framework 4.x sean actualizaciones en contexto de versiones anteriores significa que *no puede* instalar una versión anterior que se muestre en la tabla si ya hay instalada una versión posterior. Por ejemplo, no puede instalar .NET Framework 4.6 en un sistema de actualización de noviembre de Windows 10, ya que .NET Framework 4.6.1 está preinstalada en él.    
+Para obtener más información acerca de las versiones de .NET Framework y cómo determinar qué versiones están instaladas en un equipo, consulte [Versiones y dependencias](~/docs/framework/migration-guide/versions-and-dependencies.md) y [Cómo: Determinar qué versiones de .NET Framework están instaladas](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md).  
 
 > [!NOTE]
 > Para obtener información sobre .NET Framework 3.5, consulte [Instalación de .NET Framework 3.5 en Windows 10, Windows 8.1 y Windows 8](~/docs/framework/install/dotnet-35-windows-10.md).  
@@ -67,9 +69,11 @@ Para obtener una introducción general a .NET Framework para usuarios y desarrol
 
 Instale un paquete para desarrolladores para desarrollar con la versión más reciente de .NET Framework en Visual Studio o con otro entorno de desarrollo, o bien descargue el paquete redistribuible de .NET Framework para distribuir su aplicación o control.  
   
-## <a name="to-install-the-net-framework-developer-or-targeting-pack"></a>Para instalar el paquete para desarrolladores o paquete de compatibilidad de .NET Framework
+### <a name="to-install-the-net-framework-developer-pack-or-targeting-pack"></a>Para instalar el Paquete de compatibilidad o el Paquete de desarrollador de .NET Framework
 
-El paquete de desarrollador de .NET Framework 4.5.1 o 4.5.2, el paquete de compatibilidad de [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] y el paquete de desarrollador de [!INCLUDE[net_v461](../../../includes/net-v461-md.md)], 4.6.2, 4.7 o 4.7.1 proporcionan a .NET Framework 4.5.1 o 4.5.2 o [!INCLUDE[net_v46](../../../includes/net-v46-md.md)], 4.6.1 o 4.6.2 o .NET Framework 4.7 o 4.7.1 los ensamblados de referencia, los paquetes de idioma y los archivos de IntelliSense que se usan en un entorno de desarrollo integrado como Visual Studio.  Si usa Visual Studio, el paquete para desarrolladores o el paquete de compatibilidad también agregará la versión instalada de .NET Framework a las opciones de destino al crear un nuevo proyecto.  Elija uno de estos paquetes de desarrolladores o el paquete de compatibilidad:  
+Un *paquete de compatibilidad* permite que la aplicación apunte a una versión concreta de .NET Framework durante el desarrollo en Visual Studio y otros entornos de desarrollo. Un *paquete de desarrollador* incluye una versión concreta de .NET Framework y su correspondiente SDK junto con el paquete de compatibilidad correspondiente.
+
+El Paquete de desarrollador de .NET Framework 4.5.1 o 4.5.2, el Paquete de compatibilidad de .NET Framework 4.6 y el Paquete de desarrollador de .NET Framework 4.6.1, 4.6.2, 4.7 o 4.7.1 proporcionan a una versión concreta de .NET Framework los ensamblados de referencia, los paquetes de idioma y los archivos de IntelliSense que se usan en un entorno de desarrollo integrado como Visual Studio.  Si usa Visual Studio, el paquete para desarrolladores o el paquete de compatibilidad también agregará la versión instalada de .NET Framework a las opciones de destino al crear un nuevo proyecto.  Elija una de las siguientes opciones:  
 
 - [Paquete de desarrollador de Microsoft .NET Framework 4.7.1](http://go.microsoft.com/fwlink/?LinkId=852105)
 
@@ -85,40 +89,46 @@ El paquete de desarrollador de .NET Framework 4.5.1 o 4.5.2, el paquete de compa
   
 - [Paquete de desarrollador de .NET Framework 4.5.1](http://go.microsoft.com/fwlink/?LinkId=324213) para instalar la versión 4.5.1 en Visual Studio 2012 o en otros IDE.  
   
-En la página de descarga del paquete para desarrolladores, seleccione **Descargar**. Después, seleccione **Ejecutar** o **Guardar** y siga las instrucciones.  
-  
-## <a name="to-install-or-download-the-net-framework-redistributable"></a>Para instalar o descargar el paquete redistribuible de .NET Framework
+En la página de descarga del paquete para desarrolladores, seleccione **Descargar**. Después, seleccione **Ejecutar** o **Guardar** y siga las instrucciones. También puede instalar el paquete de desarrollador o el paquete de compatibilidad para una versión específica de .NET Framework. Para ello, selecciónelo en los componentes opcionales en la carga de trabajo de **desarrollo de escritorio de .NET** en el Instalador de Visual Studio, como se muestra en esta imagen.
 
-Estos instaladores descargan los componentes de .NET Framework para una aplicación o un control que tengan como destino esas versiones de .NET Framework. Estos componentes deben instalarse en cada uno de los equipos en los que se ejecuta la aplicación o el control. Los dos instaladores son redistribuibles, por lo que puede incluirlos en el programa de instalación de la aplicación.  
+   ![Instalador de Visual Studio con la carga de trabajo de desarrollo para el escritorio de .NET](./media/visual-studio-installer.jpg) 
+
+Si elige como destino una versión concreta de .NET Framework, la aplicación se compila mediante los ensamblados de referencia que se incluyen con el paquete de desarrollador de esa versión. En tiempo de ejecución, se resuelven los ensamblados de la caché global de ensamblados y no se usan los ensamblados de referencia.
+
+Al compilar una aplicación desde Visual Studio o con MSBuild desde la línea de comandos, MSBuild puede mostrar el error MSB3644: "No se encontraron los ensamblados de referencia para Framework "*versión de Framework*"". Para solucionar el error, descargue el paquete de desarrollador o el paquete de compatibilidad de esa versión de .NET Framework.   
+
+### <a name="to-install-or-download-the-net-framework-redistributable"></a>Para instalar o descargar el paquete redistribuible de .NET Framework
+
+Los instaladores descargan los componentes de .NET Framework para una aplicación o un control que tengan como destino esas versiones de .NET Framework. Estos componentes deben instalarse en cada uno de los equipos en los que se ejecuta la aplicación o el control. Estos instaladores son redistribuibles, por lo que puede incluirlos en el programa de instalación de la aplicación.  
   
 La página de descarga está disponible en varios idiomas, pero la mayoría de las descargas se proporcionan solo en inglés. Para obtener compatibilidad con otros idiomas, debe instalar un paquete de idioma.  
   
-Hay disponibles dos tipos de instalaciones de paquete redistribuible:  
+Hay disponibles dos tipos de instaladores de paquete redistribuible:  
   
 - El **instalador web** (programa previo para web), que descarga de Internet los componentes necesarios y el paquete de idioma que coincide con el sistema operativo del equipo de instalación. Este paquete es mucho más pequeño que el instalador sin conexión, pero requiere una conexión a Internet constante. Puede descargar los [paquetes de idioma independientes](#standalone_language_packs) para instalar la compatibilidad con otros idiomas.  
   
-- El **instalador sin conexión** (paquete redistribuible independiente), que contiene todos los componentes necesarios para instalar .NET Framework, pero no contiene los paquetes de idioma. Esta descarga es más grande que el instalador web. El instalador sin conexión no requiere una conexión a internet. Después de ejecutar el instalador sin conexión, podrá descargar los [paquetes de idioma independientes](#standalone_language_packs) para instalar la compatibilidad con otros idiomas. Use el instalador sin conexión si no dispone de una conexión a internet fiable.  
+- El **instalador sin conexión** (paquete redistribuible independiente) contiene todos los componentes necesarios para instalar .NET Framework, pero no contiene los paquetes de idioma. Esta descarga es más grande que el instalador web. El instalador sin conexión no requiere una conexión a internet. Después de ejecutar el instalador sin conexión, podrá descargar los [paquetes de idioma independientes](#standalone_language_packs) para instalar la compatibilidad con otros idiomas. Use el instalador sin conexión si no dispone de una conexión a internet fiable.  
   
 Los instaladores web y sin conexión están diseñados para equipos con sistemas x86 y x64 (vea los [requisitos del sistema](~/docs/framework/get-started/system-requirements.md)), pero no son compatibles con equipos Itanium.  
   
 1.  Abra la página de descarga de la versión de .NET Framework que desee instalar:  
 
-   - .NET Framework 4.7.1 ([instalador web](http://go.microsoft.com/fwlink/?LinkId=852095) o [instalador sin conexión](http://go.microsoft.com/fwlink/p/?LinkId=852107))
+    - .NET Framework 4.7.1 ([instalador web](http://go.microsoft.com/fwlink/?LinkId=852095) o [instalador sin conexión](http://go.microsoft.com/fwlink/p/?LinkId=852107))
 
-   - .NET Framework 4.7 ([instalador web](http://go.microsoft.com/fwlink/?LinkId=825299) o [instalador sin conexión](http://go.microsoft.com/fwlink/p/?LinkId=825303))
+    - .NET Framework 4.7 ([instalador web](http://go.microsoft.com/fwlink/?LinkId=825299) o [instalador sin conexión](http://go.microsoft.com/fwlink/p/?LinkId=825303))
 
     - .NET Framework 4.6.2 ([instalador web](http://go.microsoft.com/fwlink/?LinkId=780597) o [instalador sin conexión](http://go.microsoft.com/fwlink/p/?LinkId=780601))  
     
     - .NET Framework 4.6.1 ([instalador web](http://go.microsoft.com/fwlink/?LinkId=671729) o [instalador sin conexión](http://go.microsoft.com/fwlink/p/?LinkId=671744))  
   
-    - .NET Framework 4.6 ([instalador web](http://go.microsoft.com/fwlink/?LinkId=528259) o [instalador sin conexión](http://go.microsoft.com/fwlink/p/?LinkId=528233))  
-  
+    - .NET Framework 4.6 ([instalador web](http://go.microsoft.com/fwlink/?LinkId=528259) o [instalador sin conexión](http://go.microsoft.com/fwlink/p/?LinkId=528233))    
+   
     - .NET Framework 4.5.2 ([instalador web](http://go.microsoft.com/fwlink/p/?LinkId=397703) o [instalador sin conexión](http://go.microsoft.com/fwlink/p/?LinkId=397706))  
   
     - .NET Framework 4.5.1 ([instalador web](http://go.microsoft.com/fwlink/p/?LinkId=310158) o [instalador sin conexión](http://go.microsoft.com/fwlink/p/?LinkId=310159))  
   
-    - [.NET Framework 4.5](http://go.microsoft.com/fwlink/p/?LinkId=245484)  
-  
+    - [.NET Framework 4.5](http://go.microsoft.com/fwlink/p/?LinkId=245484)
+
 1. Seleccione el idioma de la página de descarga. Esta opción no descarga los recursos localizados de .NET Framework; solo afecta al texto que aparece en la página de descarga.  
   
 1. Elija **Descargar**.  

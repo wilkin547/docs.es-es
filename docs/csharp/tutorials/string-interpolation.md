@@ -1,6 +1,6 @@
 ---
-title: "Interpolación de cadenas: C#"
-description: "Aprenda cómo funciona la interpolación de cadenas en C# 6."
+title: 'Interpolación de cadenas: C#'
+description: Aprenda cómo funciona la interpolación de cadenas en C# 6.
 keywords: .NET, .NET Core, C#, cadena
 author: mgroves
 ms.author: wiwagn
@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: f8806f6b-3ac7-4ee6-9b3e-c524d5301ae9
-ms.openlocfilehash: db062ed2f832ae933941da1c49e84303090f4390
-ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
+ms.openlocfilehash: a9578d006861b987871071961437345c378a5b58
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="string-interpolation-in-c"></a>Interpolación de cadenas en C# #
 
@@ -122,4 +122,4 @@ De forma predeterminada, una cadena interpolada usa la referencia cultural actua
 
 ## <a name="conclusion"></a>Conclusión 
 
-En este tutorial, aprendió a usar las características de interpolación de cadenas de C# 6. Básicamente es una manera más concisa de escribir instrucciones `String.Format` simples, con algunas advertencias para usos más avanzados. Para obtener más información, vea el tema [Cadenas interpoladas](../../csharp//language-reference/keywords/interpolated-strings.md).
+En este tutorial, aprendió a usar las características de interpolación de cadenas de C# 6. Básicamente es una manera más concisa de escribir instrucciones `String.Format` simples, con algunas advertencias para usos más avanzados. Para más información, vea el tema [Interpolación de cadenas](../../csharp//language-reference/tokens/interpolated.md).

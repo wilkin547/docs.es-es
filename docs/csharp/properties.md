@@ -1,6 +1,6 @@
 ---
 title: Propiedades
-description: "Obtenga información sobre las propiedades de C#, que incluyen características para la validación, valores calculados, evaluación diferida y notificaciones de cambio de propiedad."
+description: Obtenga información sobre las propiedades de C#, que incluyen características para la validación, valores calculados, evaluación diferida y notificaciones de cambio de propiedad.
 keywords: .NET, .NET Core
 author: BillWagner
 ms.author: wiwagn
@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 6950d25a-bba1-4744-b7c7-a3cc90438c55
-ms.openlocfilehash: 1ffacd52df89a955ebfa72dc58836211c7a58640
-ms.sourcegitcommit: 5fb6646b5ee3769ffb214e672041833ea4ceeb26
+ms.openlocfilehash: 2a25919048f94211b1696ac8c8471a14ce6e15c5
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/08/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="properties"></a>Propiedades
 
@@ -149,7 +149,7 @@ public class Person
 
 Ahora, se puede obtener acceso a la propiedad `FirstName` desde cualquier código, pero solo puede asignarse desde otro código de la clase `Person`.
 
-Puede agregar cualquier modificador de acceso restrictivo al descriptor de acceso set o get. Ningún modificador de acceso que se coloque en el descriptor de acceso concreto debe ser más limitado que el modificador de acceso en la definición de la propiedad. El ejemplo anterior es válido porque la propiedad `FirstName` es `public`, pero el descriptor de acceso set es `private`. No se puede declarar una propiedad `private` con un descriptor de acceso `public`. También se pueden declarar las declaraciones de propiedad `protected`, `internal`, `protected internal`, `private protected` o incluso `private`.   
+Puede agregar cualquier modificador de acceso restrictivo al descriptor de acceso set o get. Ningún modificador de acceso que se coloque en el descriptor de acceso concreto debe ser más limitado que el modificador de acceso en la definición de la propiedad. El ejemplo anterior es válido porque la propiedad `FirstName` es `public`, pero el descriptor de acceso set es `private`. No se puede declarar una propiedad `private` con un descriptor de acceso `public`. Las declaraciones de propiedad también se pueden declarar como `protected`, `internal`, `protected internal`, `private protected` o incluso `private`.   
 
 También es válido colocar el modificador más restrictivo en el descriptor de acceso `get`. Por ejemplo, se podría tener una propiedad `public`, pero restringir el descriptor de acceso `get` a `private`. Ese escenario raramente se aplica en la práctica.
 
@@ -193,9 +193,9 @@ public class Person
 }
 ```
 
-En el ejemplo anterior se usa la sintaxis de *interpolación de cadena* para crear la cadena con formato para el nombre completo.
+En el ejemplo anterior se usa la característica de [interpolación de cadenas](../csharp/language-reference/tokens/interpolated.md) para crear la cadena con formato para el nombre completo.
 
-También se pueden usar *miembros con forma de expresión*, que proporcionan una manera más concisa de crear la propiedad calculada `FullName`:
+También se pueden usar *miembros con forma de expresión*, que proporcionan una manera más concisa de crear la propiedad `FullName` calculada:
 
 ```csharp
 public class Person
@@ -208,7 +208,7 @@ public class Person
 }
 ```
  
-Los *miembros con cuerpo de expresión* usan la sintaxis de *expresión lambda* para definir un método que contiene una única expresión. En este caso, esa expresión devuelve el nombre completo para el objeto person.
+Los *miembros con forma de expresión* usan la sintaxis de *expresión lambda* para definir un método que contiene una única expresión. En este caso, esa expresión devuelve el nombre completo para el objeto person.
 
 ### <a name="lazy-evaluated-properties"></a>Propiedades de evaluación diferida
 

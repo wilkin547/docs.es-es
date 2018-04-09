@@ -1,7 +1,7 @@
 ---
-title: "Compilación de una aplicación Hola a todos con .NET Core y C# en Visual Studio 2017"
-description: "Obtenga información sobre cómo crear una sencilla aplicación de consola .NET Core con C# mediante Visual Studio 2017."
-keywords: ".NET Core, aplicación de consola .NET Core, Visual Studio 2017"
+title: Compilación de una aplicación Hola a todos con .NET Core y C# en Visual Studio 2017
+description: Obtenga información sobre cómo crear una sencilla aplicación de consola .NET Core con C# mediante Visual Studio 2017.
+keywords: .NET Core, aplicación de consola .NET Core, Visual Studio 2017
 author: BillWagner
 ms.author: wiwagn
 ms.date: 09/13/2017
@@ -12,11 +12,11 @@ ms.devlang: csharp
 ms.assetid: 97aa50bf-bdf8-416d-a56c-ac77504c14ea
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: 21b36bfa355bbea1b078c4bd29afdf5afeb61453
-ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
+ms.openlocfilehash: 7042a7356fa1b65f7a152208dbfaa9ba27081a8d
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="build-a-c-hello-world-application-with-net-core-in-visual-studio-2017"></a>Compilación de una aplicación Hola a todos en C# con .NET Core en Visual Studio 2017
 
@@ -70,7 +70,7 @@ Mejore su aplicación para pedir su nombre al usuario y mostrarlo junto con la f
 
    ![Archivo c-sharp del programa Visual Studio con el método Main actualizado](./media/with-visual-studio/codewindow.png)
 
-   Este código muestra "What is your name?" en la ventana de la consola y espera a que el usuario escriba una cadena seguida de la tecla Entrar. Almacena esta cadena en una variable denominada `name`. También recupera el valor de la propiedad <xref:System.DateTime.Now?displayProperty=nameWithType>, que contiene la hora local actual, y lo asigna a una variable denominada `date`. Por último, usa una [cadena interpolada](../../csharp/language-reference/keywords/interpolated-strings.md) para mostrar estos valores en la ventana de la consola.
+   Este código muestra "What is your name?" en la ventana de la consola y espera a que el usuario escriba una cadena seguida de la tecla Entrar. Almacena esta cadena en una variable denominada `name`. También recupera el valor de la propiedad <xref:System.DateTime.Now?displayProperty=nameWithType>, que contiene la hora local actual, y lo asigna a una variable denominada `date`. Por último, usa una [cadena interpolada](../../csharp/language-reference/tokens/interpolated.md) para mostrar estos valores en la ventana de la consola.
 
 1. Compile el programa; para ello, seleccione **Generar** > **Compilar solución**.
 

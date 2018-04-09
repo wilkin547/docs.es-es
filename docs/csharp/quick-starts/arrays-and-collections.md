@@ -1,6 +1,6 @@
 ---
-title: "Tutorial sobre colecciones: guías de inicio rápido para entornos locales de C#"
-description: "Conozca C# a través de la colección de listas que se presenta en este tutorial."
+title: 'Tutorial sobre colecciones: guías de inicio rápido para entornos locales de C#'
+description: Conozca C# a través de la colección de listas que se presenta en este tutorial.
 author: billwagner
 ms.author: wiwagn
 ms.date: 10/13/2017
@@ -9,11 +9,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 76b3baf0525c81e5b3058aa2ab6fd4ccd97d1916
-ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
+ms.openlocfilehash: 88471c5fc60178c058f121ba5e5703999ad61030
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="c-quickstart-collections"></a>Guía de inicio rápido de C#: colecciones
 
@@ -54,7 +54,7 @@ Reemplace `<name>` por su propio nombre. Guarde **Program.cs**. Escriba `dotnet 
 
 Hasta ahora, solo ha creado una lista de cadenas, ha agregado tres nombres a dicha lista y ha impreso los nombres en MAYÚSCULA. Los conceptos aplicados ya se han aprendido en los inicios rápidos anteriores para recorrer en bucle la lista.
 
-El código para mostrar los nombres usa **cadenas interpoladas**.  Si un valor de `string` va precedido del carácter `$`, significa que puede insertar código de C# en la declaración de cadena. La cadena real reemplaza a ese código de C# con el valor que genera. En este ejemplo, reemplaza `{name.ToUpper()}` con cada nombre, convertido a mayúsculas, porque se llama al método <xref:System.String.ToUpper%2A>.
+El código para mostrar los nombres usa la característica [interpolación de cadenas](../language-reference/tokens/interpolated.md).  Si un valor de `string` va precedido del carácter `$`, significa que puede insertar código de C# en la declaración de cadena. La cadena real reemplaza a ese código de C# con el valor que genera. En este ejemplo, reemplaza `{name.ToUpper()}` con cada nombre, convertido a mayúsculas, porque se llama al método <xref:System.String.ToUpper%2A>.
 
 Vamos a continuar indagando.
 

@@ -1,6 +1,6 @@
 ---
-title: "Tutorial sobre cadenas interpoladas: guías de inicio rápido para entornos locales de C#"
-description: "En esta guía de inicio rápido sobre cadenas interpoladas, escribiremos código de C# para incluir el resultado de una expresión en una cadena mayor."
+title: 'Tutorial sobre cadenas interpoladas: guías de inicio rápido para entornos locales de C#'
+description: En esta guía de inicio rápido sobre cadenas interpoladas, escribiremos código de C# para incluir el resultado de una expresión en una cadena mayor.
 author: rpetrusha
 ms.author: ronpet
 ms.date: 01/11/2018
@@ -9,11 +9,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: b6089b69eb350fce29f86f19f5abeb44acb4b6b4
-ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
+ms.openlocfilehash: 1edd2b9f59d1933547c4152343f226a86ad90216
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="interpolated-strings"></a>Cadenas interpoladas
 
@@ -166,5 +166,4 @@ Ha completado el inicio rápido sobre cadenas interpoladas.
     
 Puede continuar con la guía de inicio rápido [Matrices y colecciones](arrays-and-collections.md) en su propio entorno de desarrollo.
 
-Para aprender más sobre cómo trabajar con cadenas interpoladas, eche un vistazo al tema [Cadenas interpoladas](../language-reference/keywords/interpolated-strings.md) en la referencia de C#.
-
+Para aprender más sobre cadenas interpoladas, eche un vistazo al tema [Interpolación de cadenas](../language-reference/tokens/interpolated.md) en la referencia de C#.

@@ -1,6 +1,6 @@
 ---
 title: Trabajar con LINQ
-description: "En este tutorial se enseña cómo generar secuencias con LINQ, escribir métodos para su uso en consultas LINQ y distinguir entre la evaluación diligente y diferida."
+description: En este tutorial se enseña cómo generar secuencias con LINQ, escribir métodos para su uso en consultas LINQ y distinguir entre la evaluación diligente y diferida.
 keywords: .NET, .NET Core
 author: BillWagner
 ms.author: wiwagn
@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 0db12548-82cb-4903-ac88-13103d70aa77
-ms.openlocfilehash: 3f0fcfebf37d9e6dad52c69111cc5e374ae27183
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: c5720d5391eec327aa2f885fd65579aeb6260488
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="working-with-linq"></a>Trabajar con LINQ
 
@@ -313,7 +313,7 @@ Para terminar, se va a crear un tipo para representar la carta, en lugar de depe
 
 [!CODE-csharp[PlayingCard](../../../samples/csharp/getting-started/console-linq/playingcard.cs?name=snippet1)]
 
-Este tipo utiliza *propiedades autoimplementadas de solo lectura* que se establece en el constructor y, por tanto, no se puede modificar. También usa la nueva característica *interpolación de cadena* que simplifica la salida de la cadena de formato.
+Este tipo utiliza *propiedades autoimplementadas de solo lectura* que se establece en el constructor y, por tanto, no se puede modificar. También usa la nueva característica de [interpolación de cadena](../language-reference/tokens/interpolated.md) que simplifica la salida de la cadena de formato.
 
 Actualice la consulta que genera la baraja original para usar el nuevo tipo:
 

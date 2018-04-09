@@ -163,7 +163,7 @@
 ### [Uso del paquete de compatibilidad de Windows](core/porting/windows-compat-pack.md)
 <!--### [🔧 NuGet packages](core/porting/nuget-packages.md)-->
 ## [Compilar .NET Core desde el código fuente](core/build/index.md)
-### [Empaquetado de distribución de .NET Core](core/build/distribution-packaging.md)
+### [.NET Core distribution packaging](core/build/distribution-packaging.md) (Empaquetado de distribución de .NET Core)
 ## [Documentos de VS 2015/project.json](project-json.md)
 <!-- End .NET Core Content -->
 
@@ -264,10 +264,11 @@
 ### [Control de versiones](csharp/versioning.md)
 ## [Temas de procedimientos de C#](csharp/how-to/index.md)
 ### [Análisis de cadenas mediante `String.Split`](csharp/how-to/parse-strings-using-split.md)
-### [Cómo concatenar cadenas](csharp/how-to/concatenate-multiple-strings.md)
-### [Cómo convertir una cadena en un valor DateTime](standard/base-types/parsing-datetime.md)
-### [Cómo: Buscar cadenas](csharp/how-to/search-strings.md)
-### [How to modify string contents](csharp/how-to/modify-string-contents.md) (Cómo modificar contenido de cadenas)
+### [Concatenación de cadenas](csharp/how-to/concatenate-multiple-strings.md)
+### [Conversión de una cadena en un valor DateTime](standard/base-types/parsing-datetime.md)
+### [Búsqueda de cadenas](csharp/how-to/search-strings.md)
+### [Modificación del contenido de una cadena](csharp/how-to/modify-string-contents.md)
+### [Comparación de cadenas](csharp/how-to/compare-strings.md)
 <!-- End of C# Concepts section -->
 ## [SDK de la plataforma del compilador de .NET (API de Roslyn)](csharp/roslyn-sdk/)
 ## [Guía de programación de C#](csharp/programming-guide/)
@@ -283,7 +284,7 @@
 ### [Introducción a Visual Studio](fsharp/get-started/get-started-visual-studio.md)
 ### [Introducción a Visual Studio para Mac](fsharp/get-started/get-started-with-visual-studio-for-mac.md)
 ### [Introducción a Visual Studio Code e Ionide](fsharp/get-started/get-started-vscode.md)
-### [Introducción a la CLI de .NET Core](fsharp/get-started/get-started-command-line.md)
+### [Get Started with the .NET Core CLI](fsharp/get-started/get-started-command-line.md) (Introducción a la CLI de .NET Core)
 <!--## [Tutorials](fsharp/tutorials/index.md)-->
 ## Tutoriales
 ### [F# Interactive](fsharp/tutorials/fsharp-interactive/index.md)

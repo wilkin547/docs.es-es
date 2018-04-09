@@ -1,6 +1,6 @@
 ---
-title: "Introducción a .NET Core en macOS"
-description: "En este documento se proporcionan los pasos y el flujo de trabajo para crear una solución de .NET Core con Visual Studio Code."
+title: Introducción a .NET Core en macOS
+description: En este documento se proporcionan los pasos y el flujo de trabajo para crear una solución de .NET Core con Visual Studio Code.
 keywords: .NET, .NET Core, Mac, macOS, Visual Studio Code
 author: bleroy
 ms.author: mairaw
@@ -9,12 +9,13 @@ ms.topic: get-started-article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 8ad82148-dac8-4b31-9128-b0e9610f4d9b
-ms.workload: dotnetcore
-ms.openlocfilehash: 5a8f1fca7623763d43b977d0cc44396de249c62e
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 8c045e5625cee53acc4daa3c9fca524bc953b5a1
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="getting-started-with-net-core-on-macos"></a>Introducción a .NET Core en macOS
 
@@ -102,7 +103,7 @@ namespace Library
 }
 ```
 
-La clase `Thing` contiene un método público, `Get`, que devuelve la suma de dos números pero lo hace convirtiendo la suma en una cadena y, después, deserializándola en un entero. Esto usa varias características de C# recientes como [directivas`using static`](../../csharp/language-reference/keywords/using-static.md), [miembros con forma de expresión](../../csharp/whats-new/csharp-7.md#more-expression-bodied-members) y [cadenas interpoladas](../../csharp/language-reference/keywords/interpolated-strings.md).
+La clase `Thing` contiene un método público, `Get`, que devuelve la suma de dos números pero lo hace convirtiendo la suma en una cadena y, después, deserializándola en un entero. Esto usa varias características de C# recientes, como las  [directivas `using static`](../../csharp/language-reference/keywords/using-static.md), los [miembros con forma de expresión](../../csharp/whats-new/csharp-7.md#more-expression-bodied-members) y la [interpolación de cadenas](../../csharp/language-reference/tokens/interpolated.md).
 
 Compile la biblioteca con el comando [`dotnet build`](../tools/dotnet-build.md). Esto crea un archivo *library.dll* en *golden/library/bin/Debug/netstandard1.4*:
 

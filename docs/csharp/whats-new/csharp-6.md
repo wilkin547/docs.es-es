@@ -1,6 +1,6 @@
 ---
-title: "¿Qué es nueva en C# 6 - Guía de C#"
-description: "Obtenga información sobre las nuevas características de la versión 6 de C#"
+title: Novedades de C# 6 - Guía de C#
+description: Obtenga información sobre las nuevas características de la versión 6 de C#
 keywords: .NET, .NET Core
 author: BillWagner
 ms.date: 09/22/2016
@@ -9,11 +9,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 4d879f69-f889-4d3f-a781-75194e143400
-ms.openlocfilehash: f3e7a515b1dde52461ab6abf8a9adbe84d27b7c1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: ea54e9a05120134eea8e1bc9d82302a7513b43e7
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="whats-new-in-c-6"></a>Novedades de C# 6
 
@@ -56,7 +56,7 @@ La sintaxis de las propiedades implementadas automáticamente (normalmente denom
 
 Pero esta sintaxis simple limitaba los tipos de diseños que se podían admitir mediante las propiedades automáticas. C# 6 mejora las capacidades de las propiedades automáticas para que se puedan usar en más escenarios. No será necesario recurrir con tanta frecuencia a la sintaxis más detallada de la declaración y manipulación del campo de respaldo a mano.
 
-La nueva sintaxis describen escenarios para propiedades de solo lectura y para inicializar la variable almacenamiento detrás de una propiedad automáticamente.
+La nueva sintaxis está dirigida a escenarios para propiedades de solo lectura y a la inicialización del almacenamiento de variables detrás de una propiedad automática.
 
 ### <a name="read-only-auto-properties"></a>Propiedades automáticas de solo lectura
 
@@ -105,17 +105,17 @@ C# 6 le permite asignar un valor inicial para el almacenamiento usado por una pr
 
 El miembro `Grades` se inicializa cuando se declara. Eso hace que sea más fácil realizar la inicialización exactamente una sola vez. La inicialización es parte de la declaración de la propiedad, lo que facilita igualar la asignación de almacenamiento con la interfaz pública para objetos `Student`.
 
-Inicializadores de propiedad se pueden usar con propiedades de lectura/escritura, así como propiedades de solo lectura, tal como se muestra aquí.
+Los inicializadores de propiedad se pueden usar con propiedades de lectura y escritura, y también con propiedades de solo lectura, como se muestra aquí.
 
 [!code-csharp[ReadWriteInitialization](../../../samples/snippets/csharp/new-in-6/newcode.cs#ReadWriteInitialization)]
 
 ## <a name="expression-bodied-function-members"></a>Miembros de función con cuerpos de expresión
 
-El cuerpo de muchos miembros que se escriben consta de una sola instrucción que se puede representar como una expresión. Se puede reducir esa sintaxis escribiendo en su lugar un miembro con cuerpo de expresión. Funciona para los métodos y propiedades de solo lectura. Por ejemplo, un reemplazo de `ToString()` suele ser un excelente candidato:
+El cuerpo de muchos miembros que se escriben consta de una sola instrucción que se puede representar como una expresión. Se puede reducir esa sintaxis escribiendo en su lugar un miembro con cuerpo de expresión. Funciona para métodos y propiedades de solo lectura. Por ejemplo, un reemplazo de `ToString()` suele ser un excelente candidato:
 
 [!code-csharp[ToStringExpressionMember](../../../samples/snippets/csharp/new-in-6/newcode.cs#ToStringExpressionMember)]
 
-También puede utilizar a los miembros de expresión en el cuerpo en Propiedades de solo lectura así:
+También se pueden usar miembros con cuerpo de expresión en propiedades de solo lectura:
 
 [!code-csharp[FullNameExpressionMember](../../../samples/snippets/csharp/new-in-6/newcode.cs#FullNameExpressionMember)]
 
@@ -209,17 +209,17 @@ Asegurarse de que el lado izquierdo se evalúa solo una vez también le permite 
 
 ## <a name="string-interpolation"></a>Interpolación de cadenas
 
-C# 6 contiene nueva sintaxis para crear cadenas a partir de una cadena de formato y expresiones que se pueden evaluar para generar otros valores de cadena.
+C# 6 contiene nueva sintaxis para crear cadenas a partir de una cadena de formato y expresiones que se evalúan para generar otros valores de cadena.
 
 Tradicionalmente, era necesario usar parámetros posicionales en un método como `string.Format`:
 
 [!code-csharp[stringFormat](../../../samples/snippets/csharp/new-in-6/oldcode.cs#stringFormat)]
 
-Con C# 6, la nueva característica de interpolación de cadena permite insertar las expresiones en la cadena de formato. Simplemente se antepone la cadena con `$`:
+Con C# 6, la nueva característica [interpolación de cadenas](../language-reference/tokens/interpolated.md) permite insertar las expresiones en la cadena de formato. Solo hay que anteponer la cadena con `$`:
 
 [!code-csharp[stringInterpolation](../../../samples/snippets/csharp/new-in-6/newcode.cs#FullNameExpressionMember)]
 
-Este ejemplo inicial usa expresiones variables para las expresiones sustituidas. Se puede expandir esta sintaxis para usar cualquier expresión. Por ejemplo, se podría calcular la puntuación media de un alumno como parte de la interpolación:
+Este ejemplo inicial usa expresiones de propiedad para las expresiones sustituidas. Se puede expandir esta sintaxis para usar cualquier expresión. Por ejemplo, se podría calcular la puntuación media de un alumno como parte de la interpolación:
 
 [!code-csharp[stringInterpolationExpression](../../../samples/snippets/csharp/new-in-6/newcode.cs#stringInterpolationExpression)]
 
@@ -249,22 +249,17 @@ pero es ilustrativo de la amplitud de la característica. Cualquier expresión d
 
 ### <a name="string-interpolation-and-specific-cultures"></a>Interpolación de cadena y referencias culturales específicas
 
-Todos los ejemplos que se muestran en la sección anterior darán formato a las cadenas con la referencia cultural actual y el idioma del equipo donde se ejecuta el código. A menudo puede ser necesario dar formato a la cadena generada con una referencia cultural concreta.
-El objeto generado a partir de una interpolación de cadena es un tipo que tiene una conversión implícita a <xref:System.String> o <xref:System.FormattableString>.
+Todos los ejemplos que se muestran en la sección anterior dan formato a las cadenas con la referencia cultural actual y el idioma del equipo donde se ejecuta el código. A menudo puede ser necesario dar formato a la cadena generada con una referencia cultural concreta.
+Para hacerlo, aprovechan que el objeto producido por una interpolación de cadena puede convertirse implícitamente a <xref:System.FormattableString>.
 
-El tipo <xref:System.FormattableString> contiene la cadena de formato y los resultados de la evaluación de los argumentos antes de convertirlos en cadenas. Se pueden usar los métodos públicos de <xref:System.FormattableString> para especificar la referencia cultural al dar formato a una cadena. Por ejemplo, lo siguiente generará una cadena que usa el alemán como idioma y referencia cultural. (Usará el carácter "," para el separador de decimales y el carácter "." como separador de miles).
+La instancia de <xref:System.FormattableString> contiene la cadena de formato y los resultados de la evaluación de las expresiones antes de convertirlas en cadenas. Se pueden usar los métodos públicos de <xref:System.FormattableString> para especificar la referencia cultural al dar formato a una cadena. Por ejemplo, en el ejemplo siguiente se genera una cadena con la referencia cultural de alemán. (Usa el carácter "," para el separador de decimales y el carácter "." como separador de miles).
 
 ```csharp
 FormattableString str = $"Average grade is {s.Grades.Average()}";
-var gradeStr = string.Format(null, 
-    System.Globalization.CultureInfo.CreateSpecificCulture("de-de"),
-    str.GetFormat(), str.GetArguments());
+var gradeStr = str.ToString(new System.Globalization.CultureInfo("de-DE"));
 ```
 
-> [!NOTE]
-> El ejemplo anterior no se admite en la versión 1.0.1 de .NET Core. Solo se admite en .NET Framework.
-
-En general, las expresiones de interpolación de cadena producen cadenas como resultado. Pero si quiere un control mayor sobre la referencia cultural usada para la cadena de formato, puede especificar un resultado concreto.  Si necesita esta capacidad con frecuencia, puede crear métodos de utilidad, como métodos de extensión, para habilitar el formato fácil con referencias culturales específicas.
+Para más información, vea el tema [Interpolación de cadenas](../language-reference/tokens/interpolated.md).
 
 ## <a name="exception-filters"></a>Filtros de excepciones
 

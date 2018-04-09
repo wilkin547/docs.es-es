@@ -1,6 +1,6 @@
 ---
-title: "Introducción al análisis de sintaxis (API de Roslyn)"
-description: "Introducción para recorrer y consultar árboles de sintaxis."
+title: Introducción al análisis de sintaxis (API de Roslyn)
+description: Introducción para recorrer y consultar árboles de sintaxis.
 author: billwagner
 ms.author: wiwagn
 ms.date: 02/05/2018
@@ -8,11 +8,11 @@ ms.topic: conceptual
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.custom: mvc
-ms.openlocfilehash: 52f66782086af651517d54105fea6f5533ea05a2
-ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
+ms.openlocfilehash: 90d6542122dd8c579c63f5f003441ce63a7ca5e9
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="get-started-with-syntax-analysis"></a>Introducción al análisis de sintaxis
 
@@ -43,6 +43,10 @@ La API de sintaxis crea una estructura de árbol y la raíz representa la unidad
 
 Esa descripción breve proporciona información general sobre el tipo de información accesible mediante la API de sintaxis. La API de sintaxis no es nada más que una API formal que describe las construcciones de código que ya conoce de C#. Entre las funcionalidades completas, se incluye información sobre cómo se da formato al código, incluidos los saltos de línea, los espacios en blanco y la sangría. Con esta información, puede representar por completo el código tal y como lo escriben y leen los programadores humanos o el compilador. Con esta estructura, puede interactuar con el código fuente de forma muy significativa. Ya no son cadenas de texto, sino datos que representan la estructura de un programa de C#.
 
+Para empezar, debe instalar el **SDK de .NET Compiler Platform**:
+
+[!INCLUDE[interactive-note](~/includes/roslyn-installation.md)]
+
 ## <a name="understanding-syntax-trees"></a>Comprender los árboles de sintaxis
 
 Use la API de sintaxis para cualquier análisis de la estructura del código de C#. La **API de sintaxis** expone los analizadores, los árboles de sintaxis y las utilidades para analizar y construir árboles de sintaxis. Es la forma en que busca en el código cualquier elemento de sintaxis específica o lee el código de un programa.
@@ -67,9 +71,6 @@ Aunque puede buscar cualquier elemento en un archivo de código mediante las API
 ## <a name="traversing-trees"></a>Recorrer árboles
 
 Puede examinar los nodos de un árbol de sintaxis de dos maneras. Puede recorrer el árbol para examinar cada nodo o puede consultar elementos o nodos concretos.
-
-> [!IMPORTANT]
-> Los siguientes ejemplos requieren tener instalado el **SDK de .NET Compiler Platform** como parte de Visual Studio 2017. Puede encontrar el SDK de .NET Compiler como el último componente opcional que aparece en la carga de trabajo **Desarrollo de extensiones de Visual Studio**. Las plantillas no se instalan sin este componente.
 
 ### <a name="manual-traversal"></a>Recorrido manual
 
