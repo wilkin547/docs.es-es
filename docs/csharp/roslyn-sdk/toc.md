@@ -3,8 +3,8 @@
 ## [Trabajar con sintaxis](work-with-syntax.md)
 ## [Trabajar con semántica](work-with-semantics.md)
 ## [Trabajar con un área de trabajo](work-with-workspace.md)
-
-## Guías rápidas
+## [Exploración de código con el visualizador de sintaxis](syntax-visualizer.md)
+## Inicios rápidos
 ### [Análisis de sintaxis](get-started/syntax-analysis.md)
 ### [Análisis semántico](get-started/semantic-analysis.md)
 
