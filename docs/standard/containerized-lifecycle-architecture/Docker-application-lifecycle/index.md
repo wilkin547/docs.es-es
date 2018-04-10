@@ -1,5 +1,5 @@
 ---
-title: "Introducción al ciclo de vida de aplicaciones de Docker"
+title: Introducción al ciclo de vida de aplicaciones de Docker
 description: Ciclo de vida de aplicaciones de Docker en contenedor con la plataforma y las herramientas de Microsoft
 keywords: Docker, microservicios, ASP.NET, contenedor
 author: CESARDELATORRE

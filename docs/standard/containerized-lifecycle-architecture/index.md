@@ -1,5 +1,5 @@
 ---
-title: "Introducción a Containers y Docker"
+title: Introducción a Containers y Docker
 description: Ciclo de vida de aplicaciones de Docker en contenedor con la plataforma y las herramientas de Microsoft
 keywords: Docker, microservicios, ASP.NET, contenedor
 author: CESARDELATORRE

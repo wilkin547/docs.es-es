@@ -1,7 +1,7 @@
 ---
 title: Control de excepciones (F#)
-description: "Obtenga información acerca de los conceptos básicos del control de excepciones en F # y busque vínculos a expresiones y funciones de control de excepciones."
-keywords: "visual f#, f#, programación funcional"
+description: 'Obtenga información acerca de los conceptos básicos del control de excepciones en F # y busque vínculos a expresiones y funciones de control de excepciones.'
+keywords: visual f#, f#, programación funcional
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016

@@ -1,6 +1,6 @@
 ---
 title: Tutoriales de C#
-description: "Explore estos tutoriales de C# para obtener información sobre cómo compilar programas de C# y conocer las características de este lenguaje."
+description: Explore estos tutoriales de C# para obtener información sobre cómo compilar programas de C# y conocer las características de este lenguaje.
 keywords: .NET, .NET Core
 author: BillWagner
 ms.author: wiwagn

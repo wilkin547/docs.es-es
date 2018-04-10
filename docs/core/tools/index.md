@@ -1,6 +1,6 @@
 ---
-title: "Herramientas de la interfaz de línea de comandos (CLI) de .NET Core"
-description: "Introducción a las herramientas y características de la interfaz de la línea de comandos (CLI) de .NET Core."
+title: Herramientas de la interfaz de línea de comandos (CLI) de .NET Core
+description: Introducción a las herramientas y características de la interfaz de la línea de comandos (CLI) de .NET Core.
 author: mairaw
 ms.author: mairaw
 ms.date: 08/14/2017

@@ -1,57 +1,55 @@
 ---
-title: "Empezar a trabajar con F # con herramientas de línea de comandos"
-description: "Obtener información sobre cómo usar F # en cualquier sistema operativo (Windows, Mac OS, Linux) con la CLI de núcleo de .NET de multiplataforma."
-keywords: "visual f#, f#, programación funcional, .NET, .NET Core"
+title: 'Empezar a trabajar con F # con herramientas de línea de comandos'
+description: 'Obtenga información acerca de cómo crear una solución sencilla de varios proyecto en F # mediante la CLI de núcleo de .NET en cualquier sistema operativo (Windows, Mac OS o Linux).'
 author: cartermp
 ms.author: phcart
-ms.date: 06/14/2017
+ms.date: 03/26/2018
 ms.topic: article
 ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
-ms.assetid: 615db1ec-6ef3-4de2-bae6-4586affa9771
-ms.openlocfilehash: 4820a8a306bd478429b497a8b7c70ff170c1c655
-ms.sourcegitcommit: d095094e942eedf09530ea5636fbaf9029853027
+ms.openlocfilehash: e48e1291bbe91da0d9ca2adbb08662bd106c8fb4
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2017
+ms.lasthandoff: 04/09/2018
 ---
-# <a name="get-started-with-f-with-the-net-core-cli"></a><span data-ttu-id="faacc-104">Empezar a trabajar con F # con la CLI de núcleo de .NET</span><span class="sxs-lookup"><span data-stu-id="faacc-104">Get started with F# with the .NET Core CLI</span></span>
+# <a name="get-started-with-f-with-the-net-core-cli"></a><span data-ttu-id="4f7ac-103">Empezar a trabajar con F # con la CLI de núcleo de .NET</span><span class="sxs-lookup"><span data-stu-id="4f7ac-103">Get started with F# with the .NET Core CLI</span></span>
 
-<span data-ttu-id="faacc-105">Este artículo explican cómo puede comenzar a trabajar en cualquier sistema operativo (Windows, Mac OS o Linux) mediante el uso de F # con la CLI de .NET Core.</span><span class="sxs-lookup"><span data-stu-id="faacc-105">This article covers how you can get started on any OS (Windows, macOS, or Linux) by using F# with the .NET Core CLI.</span></span> <span data-ttu-id="faacc-106">Se desplazará por la creación de una solución de varios proyecto con una biblioteca de clases que se llama a una aplicación de consola.</span><span class="sxs-lookup"><span data-stu-id="faacc-106">It will go through building a multi-project solution with a Class Library that is called by a Console Application.</span></span>
+<span data-ttu-id="4f7ac-104">Este artículo explican cómo puede empezar a trabajar con F # en cualquier sistema operativo (Windows, Mac OS o Linux) con la CLI de .NET Core.</span><span class="sxs-lookup"><span data-stu-id="4f7ac-104">This article covers how you can get started with F# on any operating system (Windows, macOS, or Linux) with the .NET Core CLI.</span></span> <span data-ttu-id="4f7ac-105">Lleva a cabo la creación de una solución de varios proyecto con una biblioteca de clases que se llama a una aplicación de consola.</span><span class="sxs-lookup"><span data-stu-id="4f7ac-105">It goes through building a multi-project solution with a class library that is called by a console application.</span></span>
 
-## <a name="prerequisites"></a><span data-ttu-id="faacc-107">Requisitos previos</span><span class="sxs-lookup"><span data-stu-id="faacc-107">Prerequisites</span></span>
+## <a name="prerequisites"></a><span data-ttu-id="4f7ac-106">Requisitos previos</span><span class="sxs-lookup"><span data-stu-id="4f7ac-106">Prerequisites</span></span>
 
-<span data-ttu-id="faacc-108">Para comenzar, primero debe instalar la [.NET Core SDK 1.0 o posterior](https://dot.net/core).</span><span class="sxs-lookup"><span data-stu-id="faacc-108">To begin, you must install the [.NET Core SDK 1.0 or later](https://dot.net/core).</span></span> <span data-ttu-id="faacc-109">No es necesario para desinstalar una versión anterior de .NET Core SDK, ya que admite instalaciones en paralelo.</span><span class="sxs-lookup"><span data-stu-id="faacc-109">There is no need to uninstall a previous version of the .NET Core SDK, as it supports side-by-side installations.</span></span>
+<span data-ttu-id="4f7ac-107">Para comenzar, primero debe instalar la [.NET Core SDK 1.0 o posterior](https://www.microsoft.com/net/download/).</span><span class="sxs-lookup"><span data-stu-id="4f7ac-107">To begin, you must install the [.NET Core SDK 1.0 or later](https://www.microsoft.com/net/download/).</span></span> <span data-ttu-id="4f7ac-108">No es necesario para desinstalar una versión anterior de .NET Core SDK, ya que admite instalaciones en paralelo.</span><span class="sxs-lookup"><span data-stu-id="4f7ac-108">There is no need to uninstall a previous version of the .NET Core SDK, as it supports side-by-side installations.</span></span>
 
-<span data-ttu-id="faacc-110">En este artículo se supone que sabe cómo usar una línea de comandos y tiene un texto de preferencia editor.</span><span class="sxs-lookup"><span data-stu-id="faacc-110">This article assumes that you know how to use a command line and have a preferred text editor.</span></span> <span data-ttu-id="faacc-111">Si ya no utiliza, [código de Visual Studio](https://code.visualstudio.com) es una buena opción como un editor de texto para F #.</span><span class="sxs-lookup"><span data-stu-id="faacc-111">If you don't already use it, [Visual Studio Code](https://code.visualstudio.com) is a great option as a text editor for F#.</span></span> <span data-ttu-id="faacc-112">Para obtener maravillas características como IntelliSense, mejor resaltado de sintaxis y mucho más, puede descargar el [Ionide extensión](https://marketplace.visualstudio.com/items?itemName=Ionide.Ionide-fsharp).</span><span class="sxs-lookup"><span data-stu-id="faacc-112">To get awesome features like IntelliSense, better syntax highlighting, and more, you can download the [Ionide Extension](https://marketplace.visualstudio.com/items?itemName=Ionide.Ionide-fsharp).</span></span>
+<span data-ttu-id="4f7ac-109">En este artículo se supone que sabe cómo usar una línea de comandos y tiene un texto de preferencia editor.</span><span class="sxs-lookup"><span data-stu-id="4f7ac-109">This article assumes that you know how to use a command line and have a preferred text editor.</span></span> <span data-ttu-id="4f7ac-110">Si ya no utiliza, [código de Visual Studio](https://code.visualstudio.com) es una buena opción como un editor de texto para F #.</span><span class="sxs-lookup"><span data-stu-id="4f7ac-110">If you don't already use it, [Visual Studio Code](https://code.visualstudio.com) is a great option as a text editor for F#.</span></span> <span data-ttu-id="4f7ac-111">Para obtener maravillas características como IntelliSense, mejor resaltado de sintaxis y mucho más, puede descargar el [Ionide extensión](https://marketplace.visualstudio.com/items?itemName=Ionide.Ionide-fsharp).</span><span class="sxs-lookup"><span data-stu-id="4f7ac-111">To get awesome features like IntelliSense, better syntax highlighting, and more, you can download the [Ionide Extension](https://marketplace.visualstudio.com/items?itemName=Ionide.Ionide-fsharp).</span></span>
 
-## <a name="building-a-simple-multi-project-solution"></a><span data-ttu-id="faacc-113">Crear una solución Simple de varios proyecto</span><span class="sxs-lookup"><span data-stu-id="faacc-113">Building a Simple Multi-project Solution</span></span>
+## <a name="build-a-simple-multi-project-solution"></a><span data-ttu-id="4f7ac-112">Crear una solución sencilla de varios proyecto</span><span class="sxs-lookup"><span data-stu-id="4f7ac-112">Build a simple multi-project solution</span></span>
 
-<span data-ttu-id="faacc-114">Abra un símbolo del sistema o terminal y utilice la `dotnet new` comando para crear el nuevo archivo de solución denominado `FSNetCore`:</span><span class="sxs-lookup"><span data-stu-id="faacc-114">Open a command prompt/terminal and use the `dotnet new` command to create new solution file called `FSNetCore`:</span></span>
+<span data-ttu-id="4f7ac-113">Abra un símbolo del sistema o terminal y utilice la [dotnet nueva](../../core/tools/dotnet-new.md) comando para crear el nuevo archivo de solución denominado `FSNetCore`:</span><span class="sxs-lookup"><span data-stu-id="4f7ac-113">Open a command prompt/terminal and use the [dotnet new](../../core/tools/dotnet-new.md) command to create new solution file called `FSNetCore`:</span></span>
 
 ```
 dotnet new sln -o FSNetCore
 ```
 
-<span data-ttu-id="faacc-115">La estructura de directorios de lo siguiente es el resultado de la finalización de comando:</span><span class="sxs-lookup"><span data-stu-id="faacc-115">The folowing directory structure is produced as a result of the command completing:</span></span>
+<span data-ttu-id="4f7ac-114">La siguiente estructura de directorios se produce después de ejecutar el comando anterior:</span><span class="sxs-lookup"><span data-stu-id="4f7ac-114">The following directory structure is produced after running the previous command:</span></span>
 
 ```
 FSNetCore
     ├── FSNetCore.sln
 ```
 
-<span data-ttu-id="faacc-116">Cambie los directorios a *FSNetCore* y empezar a agregar proyectos a la carpeta de soluciones.</span><span class="sxs-lookup"><span data-stu-id="faacc-116">Change directories to *FSNetCore* and start adding projects to the solution folder.</span></span>
- 
-### <a name="writing-a-class-library"></a><span data-ttu-id="faacc-117">Escribir una biblioteca de clases</span><span class="sxs-lookup"><span data-stu-id="faacc-117">Writing a Class library</span></span>
+### <a name="write-a-class-library"></a><span data-ttu-id="4f7ac-115">Escribir una biblioteca de clases</span><span class="sxs-lookup"><span data-stu-id="4f7ac-115">Write a class library</span></span>
 
-<span data-ttu-id="faacc-118">Use la `dotnet new` de comando, se crea un proyecto de biblioteca de clases en el **src** carpeta con el nombre de biblioteca.</span><span class="sxs-lookup"><span data-stu-id="faacc-118">Use the `dotnet new` command, create a Class Library project in the **src** folder named Library.</span></span> 
+<span data-ttu-id="4f7ac-116">Cambie los directorios a *FSNetCore*.</span><span class="sxs-lookup"><span data-stu-id="4f7ac-116">Change directories to *FSNetCore*.</span></span>
 
-```bash
-dotnet new lib -lang F# -o src/Library 
+<span data-ttu-id="4f7ac-117">Use la `dotnet new` comando, cree un proyecto de biblioteca de clases en el **src** carpeta con el nombre de biblioteca.</span><span class="sxs-lookup"><span data-stu-id="4f7ac-117">Use the `dotnet new` command, create a class library project in the **src** folder named Library.</span></span>
+
+```
+dotnet new lib -lang F# -o src/Library
 ```
 
-<span data-ttu-id="faacc-119">La siguiente estructura de directorios es el resultado de la finalización de comando:</span><span class="sxs-lookup"><span data-stu-id="faacc-119">The following directory structure is produced as a result of the command completing:</span></span>
+<span data-ttu-id="4f7ac-118">La siguiente estructura de directorios se produce después de ejecutar el comando anterior:</span><span class="sxs-lookup"><span data-stu-id="4f7ac-118">The following directory structure is produced after running the previous command:</span></span>
 
 ```
 └── FSNetCore
@@ -62,40 +60,40 @@ dotnet new lib -lang F# -o src/Library
             └── Library.fsproj
 ```
 
-<span data-ttu-id="faacc-120">Reemplace el contenido de `Library.fs` con lo siguiente:</span><span class="sxs-lookup"><span data-stu-id="faacc-120">Replace the contents of `Library.fs` with the following:</span></span>
+<span data-ttu-id="4f7ac-119">Reemplace el contenido de `Library.fs` con el código siguiente:</span><span class="sxs-lookup"><span data-stu-id="4f7ac-119">Replace the contents of `Library.fs` with the following code:</span></span>
 
 ```fsharp
 module Library
 
 open Newtonsoft.Json
 
-let getJsonNetJson value = 
-    sprintf "I used to be %s but now I'm %s thanks to JSON.NET!" value  (JsonConvert.SerializeObject(value))
+let getJsonNetJson value =
+    sprintf "I used to be %s but now I'm %s thanks to JSON.NET!" value (JsonConvert.SerializeObject(value))
 ```
 
-<span data-ttu-id="faacc-121">Agregue el paquete Newtonsoft.Json NuGet al proyecto de biblioteca.</span><span class="sxs-lookup"><span data-stu-id="faacc-121">Add the Newtonsoft.Json NuGet package to the Library project.</span></span>
+<span data-ttu-id="4f7ac-120">Agregue el paquete Newtonsoft.Json NuGet al proyecto de biblioteca.</span><span class="sxs-lookup"><span data-stu-id="4f7ac-120">Add the Newtonsoft.Json NuGet package to the Library project.</span></span>
 
-```bash
+```
 dotnet add src/Library/Library.fsproj package Newtonsoft.Json
 ```
 
-<span data-ttu-id="faacc-122">Agregar el `Library` proyecto a la `FSNetCore` solución mediante la `dotnet sln add` comando:</span><span class="sxs-lookup"><span data-stu-id="faacc-122">Add the `Library` project to the `FSNetCore` solution using the `dotnet sln add` command:</span></span>
+<span data-ttu-id="4f7ac-121">Agregar el `Library` proyecto a la `FSNetCore` solución mediante la [dotnet sln agregar](../../core/tools/dotnet-sln.md) comando:</span><span class="sxs-lookup"><span data-stu-id="4f7ac-121">Add the `Library` project to the `FSNetCore` solution using the [dotnet sln add](../../core/tools/dotnet-sln.md) command:</span></span>
 
-```bash
+```
 dotnet sln add src/Library/Library.fsproj
 ```
 
-<span data-ttu-id="faacc-123">Restaurar las dependencias de NuGet, `dotnet restore` ([Véase la nota](#dotnet-restore-note)) y ejecute `dotnet build` para compilar el proyecto.</span><span class="sxs-lookup"><span data-stu-id="faacc-123">Restore the NuGet dependencies, `dotnet restore` ([see note](#dotnet-restore-note)) and run `dotnet build` to build the project.</span></span>
+<span data-ttu-id="4f7ac-122">Restaurar las dependencias de NuGet utilizando el `dotnet restore` comando ([Véase la nota](#dotnet-restore-note)) y ejecute `dotnet build` para compilar el proyecto.</span><span class="sxs-lookup"><span data-stu-id="4f7ac-122">Restore the NuGet dependencies using the `dotnet restore` command ([see note](#dotnet-restore-note)) and run `dotnet build` to build the project.</span></span>
 
-### <a name="writing-a-console-application-which-consumes-the-class-library"></a><span data-ttu-id="faacc-124">Escribir una aplicación de consola que utiliza la biblioteca de clases</span><span class="sxs-lookup"><span data-stu-id="faacc-124">Writing a Console Application which Consumes the Class Library</span></span>
+### <a name="write-a-console-application-that-consumes-the-class-library"></a><span data-ttu-id="4f7ac-123">Escribir una aplicación de consola que utiliza la biblioteca de clases</span><span class="sxs-lookup"><span data-stu-id="4f7ac-123">Write a console application that consumes the class library</span></span>
 
-<span data-ttu-id="faacc-125">Use la `dotnet new` comando, cree una aplicación de consola en el **src** carpeta con el nombre de aplicación.</span><span class="sxs-lookup"><span data-stu-id="faacc-125">Use the `dotnet new` command, create a Console app in the **src** folder named App.</span></span> 
+<span data-ttu-id="4f7ac-124">Use la `dotnet new` comando, cree una aplicación de consola en el **src** carpeta con el nombre de aplicación.</span><span class="sxs-lookup"><span data-stu-id="4f7ac-124">Use the `dotnet new` command, create a console application in the **src** folder named App.</span></span>
 
-```bash
-dotnet new console -lang F# -o src/App 
+```
+dotnet new console -lang F# -o src/App
 ```
 
-<span data-ttu-id="faacc-126">La siguiente estructura de directorios es el resultado de la finalización de comando:</span><span class="sxs-lookup"><span data-stu-id="faacc-126">The following directory structure is produced as a result of the command completing:</span></span>
+<span data-ttu-id="4f7ac-125">La siguiente estructura de directorios se produce después de ejecutar el comando anterior:</span><span class="sxs-lookup"><span data-stu-id="4f7ac-125">The following directory structure is produced after running the previous command:</span></span>
 
 ```
 └── FSNetCore
@@ -109,14 +107,14 @@ dotnet new console -lang F# -o src/App
             └── Library.fsproj
 ```
 
-<span data-ttu-id="faacc-127">Cambio `Program.fs` para:</span><span class="sxs-lookup"><span data-stu-id="faacc-127">Change `Program.fs` to:</span></span>
+<span data-ttu-id="4f7ac-126">Reemplace el contenido de la `Program.fs` archivo con el código siguiente:</span><span class="sxs-lookup"><span data-stu-id="4f7ac-126">Replace the contents of the `Program.fs` file with the following code:</span></span>
 
 ```fsharp
 open System
 open Library
 
 [<EntryPoint>]
-let main argv = 
+let main argv =
     printfn "Nice command-line arguments! Here's what JSON.NET has to say about them:"
 
     argv
@@ -126,28 +124,28 @@ let main argv =
     0 // return an integer exit code
 ```
 
-<span data-ttu-id="faacc-128">Agregue una referencia a la `Library` proyecto usando `dotnet add reference`.</span><span class="sxs-lookup"><span data-stu-id="faacc-128">Add a reference to the `Library` project using `dotnet add reference`.</span></span>
+<span data-ttu-id="4f7ac-127">Agregue una referencia a la `Library` proyecto usando [dotnet Agregar referencia](../../core/tools/dotnet-add-reference.md).</span><span class="sxs-lookup"><span data-stu-id="4f7ac-127">Add a reference to the `Library` project using [dotnet add reference](../../core/tools/dotnet-add-reference.md).</span></span>
 
-```bash
+```
 dotnet add src/App/App.fsproj reference src/Library/Library.fsproj
 ```
 
-<span data-ttu-id="faacc-129">Agregar el `App` proyecto a la `FSNetCore` solución mediante la `dotnet sln add` comando:</span><span class="sxs-lookup"><span data-stu-id="faacc-129">Add the `App` project to the `FSNetCore` solution using the `dotnet sln add` command:</span></span>
+<span data-ttu-id="4f7ac-128">Agregar el `App` proyecto a la `FSNetCore` solución mediante la `dotnet sln add` comando:</span><span class="sxs-lookup"><span data-stu-id="4f7ac-128">Add the `App` project to the `FSNetCore` solution using the `dotnet sln add` command:</span></span>
 
-```bash
+```
 dotnet sln add src/App/App.fsproj
 ```
 
-<span data-ttu-id="faacc-130">Restaurar las dependencias de NuGet, `dotnet restore` ([Véase la nota](#dotnet-restore-note)) y ejecute `dotnet build` para compilar el proyecto.</span><span class="sxs-lookup"><span data-stu-id="faacc-130">Restore the NuGet dependencies, `dotnet restore` ([see note](#dotnet-restore-note)) and run `dotnet build` to build the project.</span></span>
+<span data-ttu-id="4f7ac-129">Restaurar las dependencias de NuGet, `dotnet restore` ([Véase la nota](#dotnet-restore-note)) y ejecute `dotnet build` para compilar el proyecto.</span><span class="sxs-lookup"><span data-stu-id="4f7ac-129">Restore the NuGet dependencies, `dotnet restore` ([see note](#dotnet-restore-note)) and run `dotnet build` to build the project.</span></span>
 
-<span data-ttu-id="faacc-131">Cambie el directorio a la `src/App` proyecto de consola y ejecutar el proyecto pasar `Hello World` como argumentos.</span><span class="sxs-lookup"><span data-stu-id="faacc-131">Change directory to the `src/App` console project and run the project passing `Hello World` as arguments.</span></span>
+<span data-ttu-id="4f7ac-130">Cambie el directorio a la `src/App` proyecto de consola y ejecutar el proyecto pasar `Hello World` como argumentos:</span><span class="sxs-lookup"><span data-stu-id="4f7ac-130">Change directory to the `src/App` console project and run the project passing `Hello World` as arguments:</span></span>
 
-```bash
+```
 cd src/App
 dotnet run Hello World
-``` 
+```
 
-<span data-ttu-id="faacc-132">Debería ver los siguientes resultados:</span><span class="sxs-lookup"><span data-stu-id="faacc-132">You should see the following results:</span></span>
+<span data-ttu-id="4f7ac-131">Debería ver los siguientes resultados:</span><span class="sxs-lookup"><span data-stu-id="4f7ac-131">You should see the following results:</span></span>
 
 ```
 Nice command-line arguments! Here's what JSON.NET has to say about them:
@@ -155,5 +153,6 @@ Nice command-line arguments! Here's what JSON.NET has to say about them:
 I used to be Hello but now I'm ""Hello"" thanks to JSON.NET!
 I used to be World but now I'm ""World"" thanks to JSON.NET!
 ```
+
 <a name="dotnet-restore-note"></a>
 [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]

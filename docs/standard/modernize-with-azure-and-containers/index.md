@@ -1,6 +1,6 @@
 ---
-title: "Modernización de las aplicaciones .NET existentes con la nube de Azure y los contenedores de Windows"
-description: "Aprenda a levantar y mover las aplicaciones existentes para la nube de Azure y otros contenedores con este libro electrónico."
+title: Modernización de las aplicaciones .NET existentes con la nube de Azure y los contenedores de Windows
+description: Aprenda a levantar y mover las aplicaciones existentes para la nube de Azure y otros contenedores con este libro electrónico.
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017

@@ -1,6 +1,6 @@
 ---
-title: "Diseño de aplicaciones web modernas con ASP.NET Core y Azure"
-description: "Diseño de aplicaciones web modernas con ASP.NET Core y Azure | Introducción"
+title: Diseño de aplicaciones web modernas con ASP.NET Core y Azure
+description: Diseño de aplicaciones web modernas con ASP.NET Core y Azure | Introducción
 author: ardalis
 ms.author: wiwagn
 ms.date: 10/06/2017

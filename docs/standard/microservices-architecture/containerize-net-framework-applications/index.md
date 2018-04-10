@@ -1,6 +1,6 @@
 ---
-title: "Migrar aplicaciones de .NET Framework monolíticas heredadas a contenedores de Windows"
-description: "Arquitectura de microservicios de .NET para aplicaciones .NET en contenedor | Migrar aplicaciones de .NET Framework monolíticas heredadas a contenedores de Windows"
+title: Migrar aplicaciones de .NET Framework monolíticas heredadas a contenedores de Windows
+description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedor | Migrar aplicaciones de .NET Framework monolíticas heredadas a contenedores de Windows
 keywords: Docker, microservicios, ASP.NET, contenedor
 author: CESARDELATORRE
 ms.author: wiwagn

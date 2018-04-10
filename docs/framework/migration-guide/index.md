@@ -1,5 +1,5 @@
 ---
-title: "Guía de migración a .NET Framework 4.7, 4.6 y 4.5 "
+title: 'Guía de migración a .NET Framework 4.7, 4.6 y 4.5 '
 ms.custom: updateeachrelease
 ms.date: 10/17/2017
 ms.prod: .net-framework

@@ -1,6 +1,6 @@
 ---
-title: "Get (función) (referencia de API no administrada)"
-description: "La función Get recupera el valor de propiedad especificado."
+title: Get (función) (referencia de API no administrada)
+description: La función Get recupera el valor de propiedad especificado.
 ms.date: 11/06/2017
 ms.prod: .net-framework
 ms.technology:
