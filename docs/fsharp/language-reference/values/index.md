@@ -1,7 +1,7 @@
 ---
 title: Valores (F#)
-description: "Obtenga información acerca de cómo los valores de F # son cantidades que tienen un tipo específico."
-keywords: "visual f#, f#, programación funcional"
+description: 'Obtenga información acerca de cómo los valores de F # son cantidades que tienen un tipo específico.'
+keywords: visual f#, f#, programación funcional
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016

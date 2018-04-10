@@ -1,7 +1,7 @@
 ---
-title: "Tutoriales interactivos de C# - Guías de inicio rápido de C#"
+title: Tutoriales interactivos de C# - Guías de inicio rápido de C#
 description: Aprenda a usar C# en el explorador y empiece a trabajar con su entorno de desarrollo
-keywords: "C#, Introducción, Lecciones, Interactivo"
+keywords: C#, Introducción, Lecciones, Interactivo
 author: billwagner
 ms.author: wiwagn
 ms.date: 01/30/2018

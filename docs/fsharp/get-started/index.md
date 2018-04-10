@@ -1,7 +1,7 @@
 ---
-title: "Introducción a F #"
-description: "Obtener información sobre cómo empezar a usar el lenguaje de .NET de programación de F #."
-keywords: "visual f#, f#, programación funcional, .NET, .NET Core"
+title: 'Introducción a F #'
+description: 'Obtener información sobre cómo empezar a usar el lenguaje de .NET de programación de F #.'
+keywords: visual f#, f#, programación funcional, .NET, .NET Core
 author: cartermp
 ms.author: phcart
 ms.date: 09/06/2016

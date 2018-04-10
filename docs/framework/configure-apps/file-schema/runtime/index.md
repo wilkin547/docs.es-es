@@ -1,13 +1,13 @@
 ---
-title: "Esquema de la configuración de Common Language Runtime"
-ms.custom: 
+title: Esquema de la configuración de Common Language Runtime
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - schema runtime settings

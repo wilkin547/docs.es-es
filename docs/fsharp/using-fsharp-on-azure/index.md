@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: FAD4D11E-703A-42D4-9F72-893D9E0F569B
-ms.openlocfilehash: 0849bc77139b4f4383e2c772f5bae62741ee2b8b
-ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
+ms.openlocfilehash: fdb2378a731a13894cf71356a2713c62a5c2064e
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="using-f-on-azure"></a>Uso de F # en Azure
 
@@ -121,7 +121,7 @@ Las máquinas virtuales de Azure se pueden implementar y administrar mediante pr
 
 Del mismo modo, también se pueden implementar y administrar otros recursos de Azure desde scripts de F# mediante el uso de los mismos componentes. Por ejemplo, puede crear cuentas de almacenamiento, implementar servicios en la nube, crear instancias de base de datos de Azure Cosmos y administrar los centros de notificaciones de Azure mediante programación desde scripts de F #.
 
-Normalmente no es necesario usar scripts de F# para implementar y administrar recursos. Por ejemplo, los recursos de Azure también se pueden implementar directamente desde descripciones de plantillas de JSON, que pueden tener parámetros. Vea [Plantillas de Azure Resource Manager](/azure/azure-resource-manager/resource-manager-template-best-practices) con ejemplos como las [Plantillas de inicio rápido de Azure](https://azure.microsoft.com/documentation/templates/).
+Normalmente no es necesario usar scripts de F# para implementar y administrar recursos. Por ejemplo, los recursos de Azure también se pueden implementar directamente desde descripciones de plantillas de JSON, que pueden tener parámetros. Vea [Plantillas de Azure Resource Manager](/azure/azure-resource-manager/resource-manager-template-best-practices) con ejemplos como las [Plantillas de inicio rápido de Azure](https://azure.microsoft.com/resources/templates/).
 
 ## <a name="other-resources"></a>Otros recursos
 

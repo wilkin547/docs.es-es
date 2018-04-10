@@ -1,7 +1,7 @@
 ---
 title: Referencia del lenguaje F#
-description: "Buscar información características de F # idioma de esta referencia a tokens de lenguaje, conceptos, tipos, expresiones y temas de construcción admitidas por el compilador."
-keywords: "visual f#, f#, programación funcional"
+description: 'Buscar información características de F # idioma de esta referencia a tokens de lenguaje, conceptos, tipos, expresiones y temas de construcción admitidas por el compilador.'
+keywords: visual f#, f#, programación funcional
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016

@@ -1,13 +1,13 @@
 ---
 title: Trabajar con certificados
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,29 +15,29 @@ dev_langs:
 helpviewer_keywords:
 - certificates [WCF]
 ms.assetid: 6ffb8682-8f07-4a45-afbb-8d2487e9dbc3
-caps.latest.revision: 
+caps.latest.revision: 26
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 80bc22599a2c7b3478912453b3f90a563aec9c57
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ba49d990c9f067ae2c10ae2a60cbad24b30f43eb
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="working-with-certificates"></a>Trabajar con certificados
 Para programar la seguridad de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], los certificados digitales de X.509 se utilizan normalmente para autenticar clientes y servidores, cifrar y firmar mensajes digitalmente. En este tema se explican brevemente las características de los certificados digitales de X.509 y cómo utilizarlos en [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] e incluye vínculos a los temas que explican estos conceptos en mayor profundidad o que muestran cómo llevar a cabo tareas comunes mediante [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] y los certificados.  
   
- En resumen, un certificado digital forma parte de un *infraestructura de clave pública* (PKI), que es un sistema de certificados digitales, entidades de certificación y otras autoridades de registro que comprueban y autentican la validez de cada parte implicada en una transacción electrónica mediante el uso de criptografía de clave pública. Una entidad de certificación emite certificados y cada certificado tiene un conjunto de campos que contienen datos, como *asunto* (la entidad a la que se emite el certificado), las fechas de validez (cuando el certificado es válido), emisor (el entidad que emitió el certificado) y una clave pública. En [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], cada una de estas propiedades se procesa como clase <xref:System.IdentityModel.Claims.Claim> y cada notificación se divide en dos tipos: identidad y derecho. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Vea los certificados X.509 [certificados de clave pública X.509](http://go.microsoft.com/fwlink/?LinkId=209952) [!INCLUDE[crabout](../../../../includes/crabout-md.md)] notificaciones y autorización en WCF vea [Administrar notificaciones y autorización con el modelo de identidad](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]implementación de una PKI, consulte [Windows Server 2008 R2 - servicios de Certificate Server](http://go.microsoft.com/fwlink/?LinkId=209949).  
+ En resumen, un certificado digital forma parte de un *infraestructura de clave pública* (PKI), que es un sistema de certificados digitales, entidades de certificación y otras autoridades de registro que comprueban y autentican la validez de cada parte implicada en una transacción electrónica mediante el uso de criptografía de clave pública. Una entidad de certificación emite certificados y cada certificado tiene un conjunto de campos que contienen datos, como *asunto* (la entidad a la que se emite el certificado), las fechas de validez (cuando el certificado es válido), emisor (el entidad que emitió el certificado) y una clave pública. En [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], cada una de estas propiedades se procesa como clase <xref:System.IdentityModel.Claims.Claim> y cada notificación se divide en dos tipos: identidad y derecho. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Vea los certificados X.509 [certificados de clave pública X.509](http://go.microsoft.com/fwlink/?LinkId=209952) [!INCLUDE[crabout](../../../../includes/crabout-md.md)] notificaciones y autorización en WCF vea [Administrar notificaciones y autorización con el modelo de identidad](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] implementación de una PKI, consulte [Windows Server 2008 R2 - servicios de Certificate Server](http://go.microsoft.com/fwlink/?LinkId=209949).  
   
  Una función principal del certificado es la de autenticar la identidad del propietario del certificado ante los demás. Un certificado contiene la *clave pública* del propietario, mientras que el propietario conserva la clave privada. La clave pública se puede usar para cifrar los mensajes enviados al propietario del certificado. Solo el propietario tiene acceso a la clave privada, por lo que únicamente él puede descifrar esos mensajes.  
   
  Los certificados los debe emitir una entidad de certificación, que suele ser un emisor de certificados de terceros. En un dominio de Windows, se incluye una entidad de certificación que se puede usar para emitir los certificados a los equipos del dominio.  
   
 ## <a name="viewing-certificates"></a>Visualización de certificados  
- Para trabajar con certificados, a menudo es necesario verlos y examinar sus propiedades. Esto se hace con facilidad con la herramienta de complemento Microsoft Management Console (MMC). [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Cómo: ver certificados con el complemento de MMC](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md).  
+ Para trabajar con certificados, a menudo es necesario verlos y examinar sus propiedades. Esto se hace con facilidad con la herramienta de complemento Microsoft Management Console (MMC). [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Cómo: ver certificados con el complemento de MMC](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md).  
   
 ## <a name="certificate-stores"></a>Almacenes de certificados  
  Los certificados se encuentran en almacenes. Existen dos ubicaciones de almacenamiento principales que se dividen en subalmacenes. Si es el administrador en un equipo, puede ver ambos almacenes principales utilizando la herramienta de complemento MMC. Los usuarios que no sean administradores solo pueden ver el almacén del usuario actual.  
@@ -55,7 +55,7 @@ Para programar la seguridad de [!INCLUDE[indigo1](../../../../includes/indigo1-m
   
 -   **Personal**. Este almacén se utiliza para los certificados asociados a un usuario de un equipo. Normalmente este almacén se usa para los certificados emitidos por uno de los certificados de la entidad de certificación situado en el almacén de las Entidades emisoras de certificados raíz de confianza. O bien, una aplicación puede confiar en un certificado que se encuentre aquí y que sea de emisión propia.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]almacenes de certificados, consulte [almacenes de certificados](http://go.microsoft.com/fwlink/?LinkId=88912).  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] almacenes de certificados, consulte [almacenes de certificados](http://go.microsoft.com/fwlink/?LinkId=88912).  
   
 ### <a name="selecting-a-store"></a>Selección de un almacén  
  Seleccionar dónde almacenar un certificado depende de cómo y cuándo se ejecute el cliente o el servicio. Se aplican las siguientes reglas generales:  
@@ -65,7 +65,7 @@ Para programar la seguridad de [!INCLUDE[indigo1](../../../../includes/indigo1-m
 -   Si el servicio o cliente es una aplicación que se ejecuta bajo una cuenta de usuario, a continuación, use la **usuario actual** almacenar.  
   
 ### <a name="accessing-stores"></a>Obtención de acceso a almacenes  
- Los almacenes son protegidos por las listas de control de acceso (ACL), como las carpetas de un equipo. Al crear un servicio alojado por Internet Information Services (IIS), el proceso [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] se ejecuta bajo la cuenta [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]. Esa cuenta debe tener acceso al almacén que contiene los certificados que utiliza un servicio. Cada uno de los almacenes principales se encuentra protegido mediante una lista de acceso predeterminada, pero se pueden modificar las listas. Si crea un rol independiente para obtener acceso a un almacén, debe garantizar el permiso de acceso a ese rol. Para obtener información sobre cómo modificar la lista de acceso con la herramienta WinHttpCertConfig.exe, consulte [Cómo: crear certificados temporales para el uso durante el desarrollo](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]uso de certificados de cliente con IIS, consulte [cómo llamar a un servicio Web mediante un certificado de cliente para la autenticación en una aplicación Web ASP.NET](http://go.microsoft.com/fwlink/?LinkId=88914).  
+ Los almacenes son protegidos por las listas de control de acceso (ACL), como las carpetas de un equipo. Al crear un servicio alojado por Internet Information Services (IIS), el proceso [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] se ejecuta bajo la cuenta [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]. Esa cuenta debe tener acceso al almacén que contiene los certificados que utiliza un servicio. Cada uno de los almacenes principales se encuentra protegido mediante una lista de acceso predeterminada, pero se pueden modificar las listas. Si crea un rol independiente para obtener acceso a un almacén, debe garantizar el permiso de acceso a ese rol. Para obtener información sobre cómo modificar la lista de acceso con la herramienta WinHttpCertConfig.exe, consulte [Cómo: crear certificados temporales para el uso durante el desarrollo](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] uso de certificados de cliente con IIS, consulte [cómo llamar a un servicio Web mediante un certificado de cliente para la autenticación en una aplicación Web ASP.NET](http://go.microsoft.com/fwlink/?LinkId=88914).  
   
 ## <a name="chain-trust-and-certificate-authorities"></a>Confianza de cadena y entidades de certificación  
  Los certificados se crean en una jerarquía en la que cada certificado individual se vincula a la CA que emite el certificado. Este vínculo va al certificado de la CA. Después, el certificado de la CA se vincula a la CA que emitió el certificado original de la CA. Este proceso se repite hasta que se llegue al certificado de la CA raíz. Se confía intrínsecamente en el certificado de la CA raíz.  
@@ -87,16 +87,16 @@ Para programar la seguridad de [!INCLUDE[indigo1](../../../../includes/indigo1-m
   
  También puede establecer la propiedad mediante configuración. Los siguientes elementos se utilizan para especificar el modo de validación:  
   
--   [\<autenticación >](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md)  
+-   [\<authentication>](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md)  
   
 -   [\<peerAuthentication >](../../../../docs/framework/configure-apps/file-schema/wcf/peerauthentication-element.md)  
   
--   [\<messageSenderAuthentication >](../../../../docs/framework/configure-apps/file-schema/wcf/messagesenderauthentication-element.md)  
+-   [\<messageSenderAuthentication>](../../../../docs/framework/configure-apps/file-schema/wcf/messagesenderauthentication-element.md)  
   
 ## <a name="custom-authentication"></a>Autenticación personalizada  
  La propiedad `CertificateValidationMode` también le permite personalizar cómo se autentican los certificados. De manera predeterminada, el nivel se establece en `ChainTrust`. Para utilizar el valor <xref:System.ServiceModel.Security.X509CertificateValidationMode.Custom>, también debe establecer el atributo `CustomCertificateValidatorType` en un ensamblado y tipo utilizado para validar el certificado. Para crear un validador personalizado, debe heredar a partir de la clase <xref:System.IdentityModel.Selectors.X509CertificateValidator> abstracta.  
   
- Al crear un autenticador personalizado, el método más importante para invalidar es el método <xref:System.IdentityModel.Selectors.X509CertificateValidator.Validate%2A>. Para obtener un ejemplo de autenticación personalizada, consulte el [validador de certificado X.509](../../../../docs/framework/wcf/samples/x-509-certificate-validator.md) ejemplo. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Credencial personalizada y validación de credencial](../../../../docs/framework/wcf/extending/custom-credential-and-credential-validation.md).  
+ Al crear un autenticador personalizado, el método más importante para invalidar es el método <xref:System.IdentityModel.Selectors.X509CertificateValidator.Validate%2A>. Para obtener un ejemplo de autenticación personalizada, consulte el [validador de certificado X.509](../../../../docs/framework/wcf/samples/x-509-certificate-validator.md) ejemplo. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Credencial personalizada y validación de credencial](../../../../docs/framework/wcf/extending/custom-credential-and-credential-validation.md).  
   
 ## <a name="using-makecertexe-to-build-a-certificate-chain"></a>Uso de Makecert.exe para generar una cadena de certificados  
  La herramienta de creación de certificados (Makecert.exe) crea certificados X.509 y pares de claves privadas y públicas. Puede guardar la clave privada en el disco y, a continuación, usarla para emitir y firmar nuevos certificados, simulando así una jerarquía de certificados encadenados. La herramienta está diseñada para usarla únicamente como una ayuda al desarrollar servicios y nunca se debería utilizar para crear los certificados para la implementación real. Al desarrollar un servicio de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], utilice los siguientes pasos para generar una cadena de confianza con Makecert.exe.  
@@ -115,7 +115,7 @@ Para programar la seguridad de [!INCLUDE[indigo1](../../../../includes/indigo1-m
  Las preguntas más comunes sobre certificados son qué certificados utilizar y por qué. La respuesta depende de si está programando un cliente o servicio. La siguiente información proporciona una directriz general y no es una respuesta exhaustiva a estas preguntas.  
   
 ### <a name="service-certificates"></a>Certificados de servicio  
- Los certificados de servicio tienen la tarea principal de autenticar el servidor a los clientes. Una de las comprobaciones iniciales cuando un cliente autentica un servidor es comparar el valor de la **asunto** campo para el identificador uniforme de recursos (URI) utilizado para ponerse en contacto con el servicio: debe coincidir con el DNS de ambos. Por ejemplo, si el URI del servicio es "http://www.contoso.com/endpoint/", a continuación, el **asunto** campo también debe contener el valor "www.contoso.com".  
+ Los certificados de servicio tienen la tarea principal de autenticar el servidor a los clientes. Una de las comprobaciones iniciales cuando un cliente autentica un servidor es comparar el valor de la **asunto** campo para el identificador uniforme de recursos (URI) utilizado para ponerse en contacto con el servicio: debe coincidir con el DNS de ambos. Por ejemplo, si el URI del servicio es "http://www.contoso.com/endpoint/" la **asunto** campo también debe contener el valor "www.contoso.com".  
   
  Observe que el campo puede contener varios valores, cada uno prefijado con una inicialización que indique el valor. Muy comúnmente, la inicialización es "CN" para designar un nombre común, por ejemplo, "CN = www.contoso.com". También es posible que el **asunto** campo esté en blanco, en cuyo caso el **nombre alternativo del sujeto** campo puede contener el **nombre DNS** valor.  
   
@@ -153,15 +153,15 @@ Para programar la seguridad de [!INCLUDE[indigo1](../../../../includes/indigo1-m
  [!code-vb[c_WorkingWithCertificates#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_workingwithcertificates/vb/source.vb#1)]  
   
 ### <a name="multiple-certificates-with-the-same-value"></a>Varios certificados con el mismo valor  
- Un almacén puede contener varios certificados con el mismo nombre de asunto. Esto significa que si especifica que la `x509FindType` es <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindBySubjectName> o <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindBySubjectDistinguishedName>y más de un certificado tiene el mismo valor, se produce una excepción becausethereisno manera de distinguir qué certificado es necesario. Puede mitigar esto estableciendo el `x509FindType` en <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindByThumbprint>. El campo de huella digital contiene un valor único que se puede utilizar para encontrar un certificado concreto en un almacén. Sin embargo, este tiene su propia desventaja: si el certificado se revoca o renueva, el método `SetCertificate` falla porque también se ha ido la huella digital. O, si el certificado ya no es válido, se produce un error de autenticación. Para mitigar esto se ha de establecer el parámetro `x590FindType` en <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindByIssuerName> y especificar el nombre del emisor. Si no se requiere ningún emisor determinado, también puede establecer uno de los otros valores de enumeración<xref:System.Security.Cryptography.X509Certificates.X509FindType>, como <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindByTimeValid>.  
+ Un almacén puede contener varios certificados con el mismo nombre de asunto. Esto significa que si especifica que la `x509FindType` es <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindBySubjectName> o <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindBySubjectDistinguishedName>y más de un certificado tiene el mismo valor, se produce una excepción porque no hay ninguna manera de distinguir qué certificado es necesario. Puede mitigar esto estableciendo el `x509FindType` en <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindByThumbprint>. El campo de huella digital contiene un valor único que se puede utilizar para encontrar un certificado concreto en un almacén. Sin embargo, este tiene su propia desventaja: si el certificado se revoca o renueva, el método `SetCertificate` falla porque también se ha ido la huella digital. O, si el certificado ya no es válido, se produce un error de autenticación. Para mitigar esto se ha de establecer el parámetro `x590FindType` en <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindByIssuerName> y especificar el nombre del emisor. Si no se requiere ningún emisor determinado, también puede establecer uno de los otros valores de enumeración<xref:System.Security.Cryptography.X509Certificates.X509FindType>, como <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindByTimeValid>.  
   
 ## <a name="certificates-in-configuration"></a>Certificados en configuración  
  También puede establecer certificados mediante configuración. Si está creando un servicio, se especifican credenciales, como los certificados, en el [ \<serviceBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md). Cuando se programa un cliente, los certificados se especifican en el [ \<endpointBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md).  
   
 ## <a name="mapping-a-certificate-to-a-user-account"></a>Asignación de un certificado a una cuenta de usuario  
- Una característica de IIS y de Active Directory es la capacidad de asignar un certificado a una cuenta de usuario de Windows. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]la característica, consulte [asignar certificados a cuentas de usuario](http://go.microsoft.com/fwlink/?LinkId=88917).  
+ Una característica de IIS y de Active Directory es la capacidad de asignar un certificado a una cuenta de usuario de Windows. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] la característica, consulte [asignar certificados a cuentas de usuario](http://go.microsoft.com/fwlink/?LinkId=88917).  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]usa la asignación de Active Directory, vea [asignación de certificados de cliente con la asignación de servicio de directorio](http://go.microsoft.com/fwlink/?LinkId=88918).  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] usa la asignación de Active Directory, vea [asignación de certificados de cliente con la asignación de servicio de directorio](http://go.microsoft.com/fwlink/?LinkId=88918).  
   
  Con esta capacidad habilitada, puede definir la propiedad <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication.MapClientCertificateToWindowsAccount%2A> de la clase <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication> en `true`. En configuración, puede establecer la `mapClientCertificateToWindowsAccount` atributo de la [ \<autenticación >](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md) elemento `true`, como se muestra en el código siguiente.  
   

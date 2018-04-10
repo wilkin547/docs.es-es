@@ -1,7 +1,7 @@
 ---
-title: "Novedades de C# - Guía de C#"
-description: "Cómo evoluciona el lenguaje C#"
-keywords: "C#, Características más recientes, Novedades, Roslyn"
+title: Novedades de C# - Guía de C#
+description: Cómo evoluciona el lenguaje C#
+keywords: C#, Características más recientes, Novedades, Roslyn
 author: BillWagner
 ms.author: wiwagn
 ms.date: 11/13/2017

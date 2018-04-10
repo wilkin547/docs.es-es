@@ -1,6 +1,6 @@
 ---
 title: WMI y contadores de rendimiento (referencia de API no administrada)
-description: "Resume el .NET Framework API no administrada para obtener información de contador de rendimiento y WMI."
+description: Resume el .NET Framework API no administrada para obtener información de contador de rendimiento y WMI.
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett

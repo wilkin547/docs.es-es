@@ -1,12 +1,11 @@
 ---
 title: 'Tutorial: Organizar controles de formularios Windows Forms en WPF'
-ms.custom: 
-ms.date: 03/30/2017
+ms.custom: ''
+ms.date: 04/03/2018
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,16 +14,16 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - arranging controls [WPF]
 ms.assetid: a1db8049-15c7-45d6-ae3d-36a6735cb848
-caps.latest.revision: "31"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 480d61f6ca2aa67e0de48030655a6368c70554f4
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 4f3129b4128444530b1277299f3f95ce49232421
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="walkthrough-arranging-windows-forms-controls-in-wpf"></a>Tutorial: Organizar controles de formularios Windows Forms en WPF
 En este tutorial se muestra cómo usar [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] características de diseño para organizar [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] controles en una aplicación híbrida.  
@@ -161,26 +160,17 @@ En este tutorial se muestra cómo usar [!INCLUDE[TLA2#tla_winclient](../../../..
 5.  Haga clic en el **Click me** botón. El `button1_Click` conjuntos de controlador de eventos el <xref:System.Windows.Forms.Control.Top%2A> y <xref:System.Windows.Forms.Control.Left%2A> propiedades en el control hospedado. Esto hace que el control hospedado cambiar de posición dentro de la <xref:System.Windows.Forms.Integration.WindowsFormsHost> elemento. El host conserva la misma área de la pantalla, pero el control hospedado se recorta. En su lugar, el control hospedado siempre debe rellenar el <xref:System.Windows.Forms.Integration.WindowsFormsHost> elemento.  
   
 ## <a name="understanding-z-order-limitations"></a>Entender las limitaciones del orden Z  
- De forma predeterminada, visible <xref:System.Windows.Forms.Integration.WindowsFormsHost> elementos siempre se dibujan sobre otro [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] elementos y se ven afectados por orden z. Para habilitar el orden z, establezca el <xref:System.Windows.Interop.HwndHost.IsRedirected%2A> propiedad de la <xref:System.Windows.Forms.Integration.WindowsFormsHost> en true y la <xref:System.Windows.Interop.HwndHost.CompositionMode%2A> propiedad <xref:System.Windows.Interop.CompositionMode.Full> o <xref:System.Windows.Interop.CompositionMode.OutputOnly>.  
-  
-#### <a name="to-see-the-default-z-order-behavior"></a>Para ver el comportamiento predeterminado del orden Z  
-  
-1.  Copie el código XAML siguiente en el <xref:System.Windows.Controls.Grid> elemento.  
-  
+ Visible <xref:System.Windows.Forms.Integration.WindowsFormsHost> elementos siempre se dibujan encima de otros elementos WPF, y no se ven afectadas por orden z. Para ver este comportamiento en el orden z, haga lo siguiente:
+
+1.  Copie el código XAML siguiente en el <xref:System.Windows.Controls.Grid> elemento.
+
      [!code-xaml[WpfLayoutHostingWfWithXaml#8](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#8)]  
-  
+ 
 2.  Presione F5 para compilar y ejecutar la aplicación. El <xref:System.Windows.Forms.Integration.WindowsFormsHost> se pinta el elemento sobre el elemento de etiqueta.  
-  
-#### <a name="to-see-the-z-order-behavior-when-isredirected-is-true"></a>Para ver el comportamiento del orden Z cuando IsRedirected es true  
-  
-1.  Reemplazar el anterior ejemplo de orden z con el código XAML siguiente.  
-  
-     [!code-xaml[WpfLayoutHostingWfWithXaml#8b](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/VisualBasic/Window1.xaml#8b)]  
-  
-     Presione F5 para compilar y ejecutar la aplicación. Se pinta el elemento de etiqueta sobre la <xref:System.Windows.Forms.Integration.WindowsFormsHost> elemento.  
-  
+
+
 ## <a name="docking"></a>Acoplamiento  
- <xref:System.Windows.Forms.Integration.WindowsFormsHost>elemento admite [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] acoplamiento. Establecer el <xref:System.Windows.Controls.DockPanel.Dock%2A> propiedad adjunta para acoplar el control hospedado en un <xref:System.Windows.Controls.DockPanel> elemento.  
+ <xref:System.Windows.Forms.Integration.WindowsFormsHost> elemento admite [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] acoplamiento. Establecer el <xref:System.Windows.Controls.DockPanel.Dock%2A> propiedad adjunta para acoplar el control hospedado en un <xref:System.Windows.Controls.DockPanel> elemento.  
   
 #### <a name="to-dock-a-hosted-control"></a>Para acoplar un control hospedado  
   
@@ -222,7 +212,7 @@ En este tutorial se muestra cómo usar [!INCLUDE[TLA2#tla_winclient](../../../..
 2.  Presione F5 para compilar y ejecutar la aplicación. El <xref:System.Windows.Forms.Integration.WindowsFormsHost> elemento se centra en la fila de cuadrícula, pero no se expande para rellenar el espacio disponible. Si la ventana es lo suficientemente grande, es posible que vea dos o más meses mostrados por hospedado <xref:System.Windows.Forms.MonthCalendar> control, pero éstos se centran en la fila. El [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] motor de diseño centra elementos que no se deben preverse para rellenar el espacio disponible.  
   
 ## <a name="scaling"></a>Cambiar escala  
- A diferencia de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] elementos, más [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] controles no son escalables continuamente. De forma predeterminada, la <xref:System.Windows.Forms.Integration.WindowsFormsHost> elemento escala el control hospedado siempre que sea posible.  Para habilitar el ajuste de escala completa, establezca el <xref:System.Windows.Interop.HwndHost.IsRedirected%2A> propiedad de la <xref:System.Windows.Forms.Integration.WindowsFormsHost> en true y la <xref:System.Windows.Interop.HwndHost.CompositionMode%2A> propiedad <xref:System.Windows.Interop.CompositionMode.Full> o <xref:System.Windows.Interop.CompositionMode.OutputOnly>.  
+ A diferencia de los elementos WPF, la mayoría de los controles de formularios Windows Forms no es escalable una continuamente. Para proporcionar una escala personalizada, invalide el <xref:System.Windows.Forms.Integration.WindowsFormsHost.ScaleChild%2A?displayProperty=nameWithType> método. 
   
 #### <a name="to-scale-a-hosted-control-by-using-the-default-behavior"></a>Para escalar un control hospedado mediante el comportamiento predeterminado  
   
@@ -230,19 +220,13 @@ En este tutorial se muestra cómo usar [!INCLUDE[TLA2#tla_winclient](../../../..
   
      [!code-xaml[WpfLayoutHostingWfWithXaml#12](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#12)]  
   
-2.  Presione F5 para compilar y ejecutar la aplicación. El control hospedado y sus elementos adyacentes se escalan por un factor de 0,5. A pesar de ello, la fuente del control hospedado no se escala.  
-  
-#### <a name="to-scale-a-hosted-control-by-setting-isredirected-to-true"></a>Para escalar un control hospedado mediante el establecimiento de IsRedirected en true  
-  
-1.  Reemplace el ejemplo de escalado anterior por el código XAML siguiente.  
-  
-     [!code-xaml[WpfLayoutHostingWfWithXaml#12b](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/VisualBasic/Window1.xaml#12b)]  
-  
-2.  Presione F5 para compilar y ejecutar la aplicación. El control hospedado, sus elementos adyacentes y la fuente del control hospedado se escalan por un factor de 0,5.  
-  
+2.  Presione F5 para compilar y ejecutar la aplicación. El control hospedado y sus elementos adyacentes se escalan por un factor de 0,5. A pesar de ello, la fuente del control hospedado no se escala.
+
+<!-- This could use an example of custom scaling. -->
+
 ## <a name="rotating"></a>Girar  
- A diferencia de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] elementos, [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] los controles no admiten la rotación. De forma predeterminada, el <xref:System.Windows.Forms.Integration.WindowsFormsHost> no girar el elemento con otro [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] elementos cuando se aplica una transformación de giro. Cualquier valor de giro distinto de 180 grados genera el <xref:System.Windows.Forms.Integration.WindowsFormsHost.LayoutError> eventos.  Para permitir la rotación a cualquier ángulo, establezca el <xref:System.Windows.Interop.HwndHost.IsRedirected%2A> propiedad de la <xref:System.Windows.Forms.Integration.WindowsFormsHost> en true y la <xref:System.Windows.Interop.HwndHost.CompositionMode%2A> propiedad <xref:System.Windows.Interop.CompositionMode.Full> o <xref:System.Windows.Interop.CompositionMode.OutputOnly>.  
-  
+ A diferencia de los elementos WPF, controles de formularios Windows Forms no admiten la rotación. El <xref:System.Windows.Forms.Integration.WindowsFormsHost> elemento no giran con otros elementos de WPF cuando se aplica una transformación de giro. Cualquier valor de giro distinto de 180 grados genera el <xref:System.Windows.Forms.Integration.WindowsFormsHost.LayoutError> eventos.
+ 
 #### <a name="to-see-the-effect-of-rotation-in-a-hybrid-application"></a>Para ver el efecto del giro en una aplicación híbrida  
   
 1.  Copie el código XAML siguiente en el <xref:System.Windows.Controls.Grid> elemento.  
@@ -250,15 +234,8 @@ En este tutorial se muestra cómo usar [!INCLUDE[TLA2#tla_winclient](../../../..
      [!code-xaml[WpfLayoutHostingWfWithXaml#13](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#13)]  
   
 2.  Presione F5 para compilar y ejecutar la aplicación. El control hospedado no se gira, pero sus elementos adyacentes se giran en un ángulo de 180 grados. Es posible que deba cambiar el tamaño de la ventana para ver los elementos.  
-  
-#### <a name="to-see-the-effect-of-rotation-in-a-hybrid-application-when-isredirected-is-true"></a>Para ver el efecto del giro en una aplicación híbrida si IsRedirected es true  
-  
-1.  Reemplace el ejemplo de giro anterior por el código XAML siguiente.  
-  
-     [!code-xaml[WpfLayoutHostingWfWithXaml#13b](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/VisualBasic/Window1.xaml#13b)]  
-  
-2.  Presione F5 para compilar y ejecutar la aplicación. El control hospedado se gira.  Tenga en cuenta que el <xref:System.Windows.Media.RotateTransform.Angle%2A> propiedad puede establecerse en cualquier valor. Es posible que deba cambiar el tamaño de la ventana para ver los elementos.  
-  
+ 
+
 ## <a name="setting-padding-and-margins"></a>Establecer el relleno y márgenes  
  Padding y Margin en [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] diseño son similares a padding y Margin en [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]. Basta con establecer la <xref:System.Windows.Controls.Control.Padding%2A> y <xref:System.Windows.FrameworkElement.Margin%2A> propiedades en el <xref:System.Windows.Forms.Integration.WindowsFormsHost> elemento.  
   
@@ -272,7 +249,7 @@ En este tutorial se muestra cómo usar [!INCLUDE[TLA2#tla_winclient](../../../..
 2.  Presione F5 para compilar y ejecutar la aplicación. Se aplica la configuración de relleno y margen para hospedado [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] controles de la misma manera que se aplicarían en [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)].  
   
 ## <a name="using-dynamic-layout-containers"></a>Usar contenedores de diseño dinámico  
- [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]proporciona dos contenedores de diseño dinámico, <xref:System.Windows.Forms.FlowLayoutPanel> y <xref:System.Windows.Forms.TableLayoutPanel>. También puede utilizar estos contenedores en [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] diseños.  
+ [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] proporciona dos contenedores de diseño dinámico, <xref:System.Windows.Forms.FlowLayoutPanel> y <xref:System.Windows.Forms.TableLayoutPanel>. También puede utilizar estos contenedores en [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] diseños.  
   
 #### <a name="to-use-a-dynamic-layout-container"></a>Para usar un contenedor de diseño dinámico  
   

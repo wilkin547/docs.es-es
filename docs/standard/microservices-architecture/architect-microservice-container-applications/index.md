@@ -1,6 +1,6 @@
 ---
-title: "Diseñar la arquitectura de aplicaciones basadas en contenedores y microservicios"
-description: "Arquitectura de microservicios de .NET para aplicaciones .NET en contenedor | Diseñar la arquitectura de aplicaciones basadas en contenedores y microservicios"
+title: Diseñar la arquitectura de aplicaciones basadas en contenedores y microservicios
+description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedor | Diseñar la arquitectura de aplicaciones basadas en contenedores y microservicios
 keywords: Docker, microservicios, ASP.NET, contenedor
 author: CESARDELATORRE
 ms.author: wiwagn

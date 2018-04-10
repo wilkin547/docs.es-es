@@ -1,6 +1,6 @@
 ---
 title: Puntos clave
-description: "Ciclo de vida de aplicaciones de Docker en contenedor con la plataforma y las herramientas de Microsoft (libro electrónico)_v1.1"
+description: Ciclo de vida de aplicaciones de Docker en contenedor con la plataforma y las herramientas de Microsoft (libro electrónico)_v1.1
 keywords: Docker, microservicios, ASP.NET, contenedor
 author: CESARDELATORRE
 ms.author: wiwagn

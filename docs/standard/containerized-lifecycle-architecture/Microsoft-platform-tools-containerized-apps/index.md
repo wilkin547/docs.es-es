@@ -1,5 +1,5 @@
 ---
-title: "Introducción a la plataforma y las herramientas de Microsoft para aplicaciones en contenedor"
+title: Introducción a la plataforma y las herramientas de Microsoft para aplicaciones en contenedor
 description: Ciclo de vida de aplicaciones de Docker en contenedor con la plataforma y las herramientas de Microsoft
 keywords: Docker, microservicios, ASP.NET, contenedor
 author: CESARDELATORRE

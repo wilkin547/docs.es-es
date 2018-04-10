@@ -1,6 +1,6 @@
 ---
-title: "Elevación y desplazamiento de DevOps de aplicaciones existentes"
-description: "Modernización de las aplicaciones .NET existentes con la nube de Azure y los contenedores de Windows"
+title: Elevación y desplazamiento de DevOps de aplicaciones existentes
+description: Modernización de las aplicaciones .NET existentes con la nube de Azure y los contenedores de Windows
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017

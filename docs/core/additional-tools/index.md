@@ -1,6 +1,6 @@
 ---
 title: Herramientas adicionales de .NET Core
-description: "Información general sobre las herramientas adicionales compatibles con las funcionalidades de .NET Core y que las amplían."
+description: Información general sobre las herramientas adicionales compatibles con las funcionalidades de .NET Core y que las amplían.
 author: mlacouture
 manager: wpickett
 ms.author: johalex

@@ -1,7 +1,7 @@
 ---
-title: "Un paseo por C# - Guía de C#"
-description: "¿Nuevo en C#? Conozca los conceptos básicos del lenguaje."
-keywords: ".NET, .NET Core, C#, C# Primer, Guía de C#"
+title: Un paseo por C# - Guía de C#
+description: ¿Nuevo en C#? Conozca los conceptos básicos del lenguaje.
+keywords: .NET, .NET Core, C#, C# Primer, Guía de C#
 author: BillWagner
 ms.author: wiwagn
 ms.date: 08/10/2016

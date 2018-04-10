@@ -1,12 +1,13 @@
 ---
 title: '&lt;legacyImpersonationPolicy&gt; elemento'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#legacyImpersonationPolicy
@@ -15,23 +16,24 @@ helpviewer_keywords:
 - <legacyImpersonationPolicy> element
 - legacyImpersonationPolicy element
 ms.assetid: 6e00af10-42f3-4235-8415-1bb2db78394e
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: caeede11d8128af00beb5b1b3426e8c4a5406520
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9a50ad06026b6ef2f819abefc22016aee29f8ab5
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="ltlegacyimpersonationpolicygt-element"></a>&lt;legacyImpersonationPolicy&gt; elemento
 Especifica que la identidad de Windows no fluye por puntos asincrónicos, independientemente de la configuración del flujo del contexto de ejecución del subproceso actual.  
   
  \<configuration>  
 \<en tiempo de ejecución >  
-\<legacyImpersonationPolicy >  
+\<legacyImpersonationPolicy>  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -53,8 +55,8 @@ Especifica que la identidad de Windows no fluye por puntos asincrónicos, indepe
   
 |Valor|Descripción|  
 |-----------|-----------------|  
-|`false`|<xref:System.Security.Principal.WindowsIdentity>fluye por puntos asincrónicos según el <xref:System.Threading.ExecutionContext> flujo de configuración para el subproceso actual. Este es el valor predeterminado.|  
-|`true`|<xref:System.Security.Principal.WindowsIdentity>no fluye por puntos asincrónicos, sin tener en cuenta el <xref:System.Threading.ExecutionContext> flujo de configuración en el subproceso actual.|  
+|`false`|<xref:System.Security.Principal.WindowsIdentity> fluye por puntos asincrónicos según el <xref:System.Threading.ExecutionContext> flujo de configuración para el subproceso actual. Este es el valor predeterminado.|  
+|`true`|<xref:System.Security.Principal.WindowsIdentity> no fluye por puntos asincrónicos, sin tener en cuenta el <xref:System.Threading.ExecutionContext> flujo de configuración en el subproceso actual.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
  Ninguno.  
@@ -93,8 +95,8 @@ Especifica que la identidad de Windows no fluye por puntos asincrónicos, indepe
   
  ASP.NET de forma predeterminada, se deshabilita el flujo de suplantación en el archivo aspnet.config mediante las siguientes opciones de configuración:  
   
-```  
-configuration>  
+``` xml
+<configuration>  
    <runtime>  
       <legacyImpersonationPolicy enabled="true"/>  
       <alwaysFlowImpersonationPolicy enabled="false"/>  
@@ -127,4 +129,4 @@ configuration>
 ## <a name="see-also"></a>Vea también  
  [Esquema de la configuración de Common Language Runtime](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
  [Esquema de los archivos de configuración](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [\<alwaysFlowImpersonationPolicy > elemento](../../../../../docs/framework/configure-apps/file-schema/runtime/alwaysflowimpersonationpolicy-element.md)
+ [\<alwaysFlowImpersonationPolicy> Element](../../../../../docs/framework/configure-apps/file-schema/runtime/alwaysflowimpersonationpolicy-element.md)

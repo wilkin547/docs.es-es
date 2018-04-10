@@ -1,5 +1,5 @@
 ---
-title: "Ejecución, administración y supervisión de entornos de producción de Docker"
+title: Ejecución, administración y supervisión de entornos de producción de Docker
 description: Ciclo de vida de aplicaciones de Docker en contenedor con la plataforma y las herramientas de Microsoft
 keywords: Docker, microservicios, ASP.NET, contenedor
 author: CESARDELATORRE

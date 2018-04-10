@@ -1,20 +1,20 @@
 ---
-title: "Referencia de símbolos y operadores (F#)"
-description: "Obtenga información acerca de los símbolos y operadores que se utilizan en el lenguaje de programación de F #."
-keywords: "visual f#, f#, programación funcional"
+title: Referencia de símbolos y operadores (F#)
+description: 'Obtenga información acerca de los símbolos y operadores que se utilizan en el lenguaje de programación de F #.'
+keywords: visual f#, f#, programación funcional
 author: cartermp
 ms.author: phcart
-ms.date: 05/16/2016
+ms.date: 04/04/2018
 ms.topic: language-reference
 ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: ab453800-d4d0-4a11-9d55-2b358d56af27
-ms.openlocfilehash: cb21ef7385cb679f9d445f8ee419db3d727fa057
-ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
+ms.openlocfilehash: 2fa4504c7059b4559b364d4000fe4ec6131430e5
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="symbol-and-operator-reference"></a>Referencia de símbolos y operadores
 
@@ -34,9 +34,9 @@ En la siguiente tabla se describen los símbolos utilizados en el lenguaje F#, s
 |`"""`|[Cadenas](../strings.md)|Delimita una cadena de texto literal. Se diferencia de `@"..."` en que puede indicar un carácter de comilla mediante el uso de comillas simples en la cadena.|
 |`#`|[Directivas de compilador](../compiler-directives.md)<br /><br />[Tipos flexibles](../flexible-types.md)|<ul><li>Prefija una directiva de compilador o preprocesador, como `#light`.<br /></li><li>Cuando se usa con un tipo, indica un *tipo flexible*, que hace referencia a un tipo o a cualquiera de sus tipos derivados.<br /></li><ul/>|
 |`$`|No hay más información disponible.|<ul><li>Se utiliza internamente para determinados nombres de variable y función generados por el compilador.<br /></li><ul/>|
-|`%`|[Operadores aritméticos](arithmetic-operators.md)<br /><br />[Expresiones de código delimitadas](../code-quotations.md)|<ul><li>Calcula el módulo entero.<br /></li><li>Se utiliza para ensamblar expresiones en expresiones de código delimitadas con tipo.<br /></li><ul/>|
+|`%`|[Operadores aritméticos](arithmetic-operators.md)<br /><br />[Expresiones de código delimitadas](../code-quotations.md)|<ul><li>Calcula el resto entero.<br /></li><li>Se utiliza para ensamblar expresiones en expresiones de código delimitadas con tipo.<br /></li><ul/>|
 |`%%`|[Expresiones de código delimitadas](../code-quotations.md)|<ul><li>Se utiliza para ensamblar expresiones en expresiones de código delimitadas sin tipo.<br /></li><ul/>|
-|`%?`|[Operadores que aceptan valores NULL](nullable-operators.md)|<ul><li>Calcula el módulo entero, cuando el lado derecho es un tipo que acepta valores NULL.<br /></li><ul/>|
+|`%?`|[Operadores que aceptan valores NULL](nullable-operators.md)|<ul><li>Calcula el resto entero, cuando el lado derecho es un tipo que acepta valores NULL.<br /></li><ul/>|
 |`&`|[Expresiones de coincidencia](../match-expressions.md)|<ul><li>Calcula la dirección de un valor mutable para usarlo al interoperar con otros lenguajes.<br /></li><li>Se utiliza en los patrones AND.<br /></li><ul/>|
 |`&&`|[Operadores booleanos](boolean-operators.md)|<ul><li>Calcula la operación AND booleana.<br /></li><ul/>|
 |`&&&`|[Operadores bit a bit](bitwise-operators.md)|<ul><li>Calcula la operación AND bit a bit.<br /></li><ul/>|
@@ -127,7 +127,7 @@ En la siguiente tabla se muestra, de menor a mayor, el orden de precedencia de o
 |--------|-------------|
 |`as`|Derecho|
 |`when`|Derecho|
-|<code>&#124;</code>(barra vertical)|Izquierdo|
+|<code>&#124;</code> (barra vertical)|Izquierdo|
 |`;`|Derecho|
 |`let`|No asociativo|
 |`function`, `fun`, `match`, `try`|No asociativo|
@@ -138,7 +138,7 @@ En la siguiente tabla se muestra, de menor a mayor, el orden de precedencia de o
 |`or`, <code>&#124;&#124;</code>|Izquierdo|
 |`&`, `&&`|Izquierdo|
 |`:>`, `:?>`|Derecho|
-|`!=`*OP*, `<` *op*, `>` *op*, `=`, <code>&#124;</code> *op*, `&`  *OP*,`&`<br /><br />(incluyendo `<<<`, `>>>`, <code>&#124;&#124;&#124;</code>, `&&&`)|Izquierdo|
+|`!=`*op*, `<`*op*, `>`*op*, `=`, <code>&#124;</code>*op*, `&`*op*, `&`<br /><br />(incluyendo `<<<`, `>>>`, <code>&#124;&#124;&#124;</code>, `&&&`)|Izquierdo|
 |`^`*op*<br /><br />(incluyendo `^^^`)|Derecho|
 |`::`|Derecho|
 |`:?`|No asociativo|
@@ -146,7 +146,7 @@ En la siguiente tabla se muestra, de menor a mayor, el orden de precedencia de o
 |`*`*op*, `/`*op*, `%`*op*|Izquierdo|
 |`**`*op*|Derecho|
 |`f x` (aplicación de función)|Izquierdo|
-|<code>&#124;</code>(coincidencia de patrones)|Derecho|
+|<code>&#124;</code> (coincidencia de patrones)|Derecho|
 |operadores de prefijo (`+`*op*, `-`*op*, `%`, `%%`, `&`, `&&`, `!`*op*, `~`*op*)|Izquierdo|
 |`.`|Izquierdo|
 |`f(x)`|Izquierdo|

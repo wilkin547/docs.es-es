@@ -1,6 +1,6 @@
 ---
-title: "Guía de C#"
-description: "Obtenga información sobre cómo la Guía de C# puede ayudarle a obtener un amplio conocimiento de C#, tanto si es un desarrollador nuevo como si es un experto."
+title: Guía de C#
+description: Obtenga información sobre cómo la Guía de C# puede ayudarle a obtener un amplio conocimiento de C#, tanto si es un desarrollador nuevo como si es un experto.
 author: BillWagner
 ms.date: 01/30/2018
 ms.topic: article

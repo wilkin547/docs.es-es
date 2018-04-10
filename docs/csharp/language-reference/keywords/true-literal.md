@@ -8,7 +8,7 @@ ms.topic: article
 helpviewer_keywords:
 - true literal keyword [C#]
 ms.assetid: 7e36d493-1acf-460d-9258-a6d76c6b5a3a
-caps.latest.revision: 
+caps.latest.revision: 15
 author: BillWagner
 ms.author: wiwagn
 ms.openlocfilehash: f4d2c5c2bfd871f14c2d6f74434aa67255e7d739

@@ -8,7 +8,7 @@ ms.topic: article
 helpviewer_keywords:
 - access modifiers [C#], accessibility level restrictions
 ms.assetid: 987e2f22-46bf-4fea-80ee-270b9cd01045
-caps.latest.revision: 
+caps.latest.revision: 21
 author: BillWagner
 ms.author: wiwagn
 ms.openlocfilehash: 44d065429f67d717d7c50e3877294eadd462a99d
