@@ -1,6 +1,6 @@
 ---
-title: "Información general de Async"
-description: "Obtenga información sobre cómo la programación de Async es una técnica clave que ayuda a controlar las operaciones simultáneas y de E/S de bloqueo en varios núcleos."
+title: Información general de Async
+description: Obtenga información sobre cómo la programación de Async es una técnica clave que ayuda a controlar las operaciones simultáneas y de E/S de bloqueo en varios núcleos.
 keywords: .NET, .NET Core
 author: cartermp
 ms.author: wiwagn
