@@ -1,6 +1,6 @@
 ---
-title: "Guía de la plataforma .NET"
-description: "Más información sobre la plataforma. NET."
+title: Guía de la plataforma .NET
+description: Más información sobre la plataforma. NET.
 keywords: .NET, .NET Core
 author: cartermp
 ms.author: ronpet
@@ -13,11 +13,11 @@ ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: c9b4ae0f845d3e290df66b85548b697d9be002a4
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: e363eac2c26e51ccd880227fe56c619f8c39aea3
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="net-guide"></a>Guía de .NET
 
@@ -68,4 +68,4 @@ Consulte también la guía correspondiente a cada lenguaje de programación para
 
 ## <a name="api-reference"></a>Referencia de API
 
-Para obtener más información sobre la gran variedad de API disponibles, consulte la [Referencia de API de .NET](../../api/index.md).
+Consulte la [Referencia de API de .NET](../../api/index.md) para ver las diversas API disponibles.
