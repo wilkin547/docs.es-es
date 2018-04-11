@@ -1,6 +1,6 @@
 ---
-title: "Programación asincrónica"
-description: "Obtenga información sobre el modelo de programación asincrónico de nivel de lenguaje de C# que proporciona .NET Core."
+title: Programación asincrónica
+description: Obtenga información sobre el modelo de programación asincrónico de nivel de lenguaje de C# que proporciona .NET Core.
 keywords: .NET, .NET Core
 author: cartermp
 ms.author: wiwagn
