@@ -1,13 +1,13 @@
 ---
-title: "ICorDebug::CreateProcess (Método)"
-ms.custom: 
+title: ICorDebug::CreateProcess (Método)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - ICorDebug.CreateProcess
@@ -23,17 +23,17 @@ helpviewer_keywords:
 ms.assetid: b6128694-11ed-46e7-bd4e-49ea1914c46a
 topic_type:
 - apiref
-caps.latest.revision: 
+caps.latest.revision: 21
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 ms.openlocfilehash: 16e45f3bad92914ce8c7fb0044534789a7a28b2e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="icordebugcreateprocess-method"></a>ICorDebug::CreateProcess (Método)
 Inicia un proceso y su subproceso principal bajo el control del depurador.  
@@ -97,7 +97,7 @@ HRESULT CreateProcess (
 ## <a name="remarks"></a>Comentarios  
  Los parámetros de este método son los mismos que los de Win32 `CreateProcess` método.  
   
- Para habilitar la depuración en modo mixto no administrada, establezca `dwCreationFlags` a DEBUG_PROCESS &#124; DEBUG_ONLY_THIS_PROCESS. Si desea usar solo la depuración administrada, no establezca estos indicadores.  
+ Para habilitar la depuración en modo mixto no administrada, establezca `dwCreationFlags` en DEBUG_PROCESS &#124; DEBUG_ONLY_THIS_PROCESS. Si desea usar solo la depuración administrada, no establezca estos indicadores.  
   
  Si el depurador y el proceso de depuran (el proceso asociado) comparten una única consola, y si se utiliza la depuración de interoperabilidad, es posible que el proceso asociado contener los bloqueos de la consola y dejar a un evento de depuración. El depurador, a continuación, bloqueará cualquier intento de usar la consola. Para evitar este problema, establezca el marcador CREATE_NEW_CONSOLE el `dwCreationFlags` parámetro.  
   
@@ -110,7 +110,7 @@ HRESULT CreateProcess (
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versiones de .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también  
  [ICorDebug (interfaz)](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
