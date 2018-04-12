@@ -8,11 +8,11 @@ ms.topic: conceptual
 ms.prod: .net
 ms.devlang: devlang-csharp
 ms.custom: mvc
-ms.openlocfilehash: 09d07e6257ad7d32d75328a8c1850888b4d0b937
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
-ms.translationtype: MT
+ms.openlocfilehash: 0230777c59185a6b50d5dac5066efc3afa347f44
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="work-with-syntax"></a>Trabajar con sintaxis
 
@@ -25,7 +25,7 @@ El **árbol de sintaxis** es una estructura de datos fundamental expuesta por la
 
 Los árboles de sintaxis son la estructura principal usada para la compilación, el análisis de código, los enlaces, la refactorización, las características de IDE y la generación de código. Ninguna parte del código fuente se entiende sin que primero se haya identificado y clasificado en alguno de los elementos de lenguaje estructural conocidos. 
 
-Los árboles de sintaxis tienen tres atributos clave. El primer atributo es que los árboles de sintaxis contienen toda la información de origen con plena fidelidad. Esto significa que el árbol de sintaxis contiene cada fragmento de información del texto de origen, cada construcción gramatical, cada token léxico y todo lo que hay entre estos elementos, incluidos los espacios en blanco, los comentarios y las directivas de preprocesador. Por ejemplo, cada literal mencionado en el origen se representa exactamente como se ha escrito. Los árboles de sintaxis también representan errores del código fuente cuando el programa está incompleto o tiene un formato incorrecto mediante la representación de tokens omitidos o que faltan en el árbol de sintaxis.  
+Los árboles de sintaxis tienen tres atributos clave. El primer atributo es que los árboles de sintaxis contienen toda la información de origen con plena fidelidad. Esto significa que el árbol de sintaxis contiene cada fragmento de información del texto de origen, cada construcción gramatical, cada token léxico y todo lo demás, incluidos los espacios en blanco, los comentarios y las directivas de preprocesador. Por ejemplo, cada literal mencionado en el origen se representa exactamente como se ha escrito. Los árboles de sintaxis también representan errores del código fuente cuando el programa está incompleto o tiene un formato incorrecto mediante la representación de tokens omitidos o que faltan en el árbol de sintaxis.  
 
 Esto habilita el segundo atributo de los árboles de sintaxis. Un árbol de sintaxis obtenido del analizador puede generar el texto exacto a partir del que se ha analizado. Es posible obtener la representación de texto del subárbol cuya raíz está en ese nodo desde cualquier nodo de sintaxis. Esto significa que los árboles de sintaxis se pueden usar como una manera de crear y editar texto de origen. Al crear un árbol, implícitamente se ha creado el texto equivalente, mientras que al editar un árbol de sintaxis o crear uno nuevo a partir de los cambios en uno existente, se ha editado realmente el texto. 
 
@@ -57,7 +57,7 @@ La propiedad <xref:Microsoft.CodeAnalysis.SyntaxToken.ValueText> transmite la mi
 
 ## <a name="syntax-trivia"></a>Curiosidades de sintaxis
 
-Las curiosidades de sintaxis representan las partes del texto de origen que no son significativas para el normal entendimiento del código, como los espacios en blanco, los comentarios y las directivas de preprocesador. Al igual que los tokens de sintaxis, las curiosidades son tipos de valor. Se usa el tipo único <xref:Microsoft.CodeAnalysis.SyntaxTrivia?displayProperty=nameWithType> para describir todos los tipos de curiosidades.
+Las curiosidades de sintaxis representan las partes del texto de origen que no son realmente significativas para la correcta comprensión del código, como los espacios en blanco, los comentarios y las directivas de preprocesador. Al igual que los tokens de sintaxis, las curiosidades son tipos de valor. Se usa el tipo único <xref:Microsoft.CodeAnalysis.SyntaxTrivia?displayProperty=nameWithType> para describir todos los tipos de curiosidades.
 
 Dado que las curiosidades no forman parte de la sintaxis normal del lenguaje y pueden aparecer en cualquier lugar entre dos tokens, no se incluyen en el árbol de sintaxis como elemento secundario de un nodo. Pero dado que son importantes a la hora de implementar una característica como la refactorización y de mantener la plena fidelidad con el texto de origen, existen como parte del árbol de sintaxis.
 
@@ -69,7 +69,7 @@ A diferencia de los nodos y los tokens de sintaxis, las curiosidades de sintaxis
 
 Cada nodo, token o curiosidad conoce su posición dentro del texto de origen y el número de caracteres del que se compone. Una posición de texto se representa como un entero de 32 bits, que es un índice `char` de base cero. Un objeto <xref:Microsoft.CodeAnalysis.Text.TextSpan> es la posición inicial y un recuento de caracteres, ambos representados como enteros. Si <xref:Microsoft.CodeAnalysis.Text.TextSpan> tiene una longitud cero, hace referencia a una ubicación entre dos caracteres.
 
-Cada nodo tiene dos <xref:Microsoft.CodeAnalysis.Text.TextSpan> propiedades: <xref:Microsoft.CodeAnalysis.SyntaxNode.Span*> y <xref:Microsoft.CodeAnalysis.SyntaxNode.FullSpan*>. 
+Cada nodo tiene dos propiedades <xref:Microsoft.CodeAnalysis.Text.TextSpan>: <xref:Microsoft.CodeAnalysis.SyntaxNode.Span*> y <xref:Microsoft.CodeAnalysis.SyntaxNode.FullSpan*>. 
 
 La propiedad <xref:Microsoft.CodeAnalysis.SyntaxNode.Span*> es el intervalo de texto desde el principio del primer token del subárbol del nodo al final del último token. Este intervalo no incluye ninguna curiosidad inicial ni final.
 
@@ -89,7 +89,7 @@ El nodo de la instrucción dentro del bloque tiene un intervalo indicado por las
 
 ## <a name="kinds"></a>Tipos
 
-Cada nodo, token o curiosidad tiene una propiedad <xref:Microsoft.CodeAnalysis.SyntaxNode.RawKind?displayProperty=nameWithType>, de tipo <xref:System.Int32?displayProperty=nameWithType>, que identifica el elemento de sintaxis exacto representado. Este valor se puede convertir en una enumeración específica del lenguaje; cada lenguaje, C# o VB, tiene una sola enumeración `SyntaxKind` (<xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind?displayProperty=nameWithType> y <xref:Microsoft.CodeAnalysis.VisualBasic.SyntaxKind?displayProperty=nameWithType>, respectivamente) que enumera todos los posibles nodos, tokens y curiosidades de la gramática. Se puede realizar esta conversión automáticamente mediante el acceso a la <xref:Microsoft.CodeAnalysis.CSharp.CSharpExtensions.Kind*?displayProperty=nameWithType> o <xref:Microsoft.CodeAnalysis.VisualBasic.VisualBasicExtensions.Kind*?displayProperty=nameWithType> métodos de extensión.
+Cada nodo, token o curiosidad tiene una propiedad <xref:Microsoft.CodeAnalysis.SyntaxNode.RawKind?displayProperty=nameWithType>, de tipo <xref:System.Int32?displayProperty=nameWithType>, que identifica el elemento de sintaxis exacto representado. Este valor se puede convertir en una enumeración específica del lenguaje; cada lenguaje, C# o VB, tiene una sola enumeración `SyntaxKind` (<xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind?displayProperty=nameWithType> y <xref:Microsoft.CodeAnalysis.VisualBasic.SyntaxKind?displayProperty=nameWithType>, respectivamente) que enumera todos los posibles nodos, tokens y curiosidades de la gramática. Dicha conversión se puede realizar automáticamente. Para ello, es necesario acceder a los métodos de extensión <xref:Microsoft.CodeAnalysis.CSharp.CSharpExtensions.Kind*?displayProperty=nameWithType> o <xref:Microsoft.CodeAnalysis.VisualBasic.VisualBasicExtensions.Kind*?displayProperty=nameWithType>.
 
 La propiedad <xref:Microsoft.CodeAnalysis.SyntaxToken.RawKind> permite anular fácilmente la ambigüedad de los tipos de nodos de sintaxis que comparten la misma clase de nodos. En el caso de los tokens y las curiosidades, esta propiedad es la única manera de distinguir un tipo de elemento de otro. 
 

@@ -8,11 +8,11 @@ ms.topic: conceptual
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.custom: mvc
-ms.openlocfilehash: 90d6542122dd8c579c63f5f003441ce63a7ca5e9
-ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
+ms.openlocfilehash: 9e42253e520b89fd8a864dead8c17d53bdb8a439
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="get-started-with-syntax-analysis"></a>Introducción al análisis de sintaxis
 
@@ -58,13 +58,13 @@ Los cuatro pilares principales de los árboles de sintaxis son los siguientes:
 * La clase <xref:Microsoft.CodeAnalysis.SyntaxTree?displayProperty=nameWithType>, una instancia de lo que representa un árbol de análisis completo. <xref:Microsoft.CodeAnalysis.SyntaxTree> es una clase abstracta que tiene derivados específicos del lenguaje. Use los métodos de análisis de la clase <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxTree?displayProperty=nameWithType> (o <xref:Microsoft.CodeAnalysis.VisualBasic.VisualBasicSyntaxTree?displayProperty=nameWithType>) para analizar texto en C# o VB.
 * La clase <xref:Microsoft.CodeAnalysis.SyntaxNode?displayProperty=nameWithType>, instancias de lo que representan las construcciones sintácticas como declaraciones, instrucciones, cláusulas y expresiones.
 * La estructura <xref:Microsoft.CodeAnalysis.SyntaxToken?displayProperty=nameWithType>, que representa una palabra clave, identificador, operador o puntuación individuales.
-* Por último, la estructura <xref:Microsoft.CodeAnalysis.SyntaxTrivia?displayProperty=nameWithType>, que representa bits de información sintácticamente insignificantes como el espacio en blanco entre tokens, las directivas de preprocesamiento y los comentarios.
+* Por último, la estructura <xref:Microsoft.CodeAnalysis.SyntaxTrivia?displayProperty=nameWithType>, que representa sintácticamente bits de información insignificante, como el espacio en blanco entre tokens, las directivas de preprocesamiento y los comentarios.
 
 La trivialidad, los tokens y los nodos se componen de forma jerárquica para formar un árbol que representa por completo todo lo que hay en un fragmento de código de Visual Basic o C#. Puede ver esta estructura mediante la ventana **Syntax Visualizer** (Visualizador de sintaxis). En Visual Studio, elija **Vista** > **Otras ventanas** > **Syntax Visualizer** (Visualizador de sintaxis). Por ejemplo, el archivo de código fuente de C# anterior examinado con **Syntax Visualizer** (Visualizador de sintaxis) tiene el mismo aspecto que en la siguiente ilustración:
 
 **SyntaxNode**: azul | **SyntaxToken**: verde | **SyntaxTrivia**: rojo ![Archivo de código de C#](media/walkthrough-csharp-syntax-figure1.png)
 
-Si se desplaza por esta estructura de árbol, puede buscar cualquier instrucción, expresión, token o bit de espacio en blanco en un archivo de código.
+Si se desplaza por esta estructura de árbol, podrá encontrar cualquier instrucción, expresión, token o bit de espacio en blanco en un archivo de código.
 
 Aunque puede buscar cualquier elemento en un archivo de código mediante las API de sintaxis, la mayoría de los escenarios implican examinar pequeños fragmentos de código o buscar instrucciones o fragmentos concretos. Los dos ejemplos siguientes muestran usos típicos para examinar la estructura del código o buscar instrucciones únicas.
 
@@ -74,7 +74,7 @@ Puede examinar los nodos de un árbol de sintaxis de dos maneras. Puede recorrer
 
 ### <a name="manual-traversal"></a>Recorrido manual
 
-Puede ver el código terminado de este ejemplo en [nuestro repositorio de GitHub](https://github.com/dotnet/docs/tree/master/samples/csharp/roslyn-sdk/SyntaxQuickStart).
+Puede ver el código terminado de este ejemplo en [nuestro repositorio de GitHub](https://github.com/dotnet/samples/tree/master/csharp/roslyn-sdk/SyntaxQuickStart).
 
 > [!NOTE]
 > Los tipos de árbol de sintaxis usan la herencia para describir los diferentes elementos de sintaxis que son válidos en diferentes ubicaciones del programa. A menudo, usar estas API significa convertir propiedades o miembros de colección en tipos derivados concretos. En los ejemplos siguientes, la asignación y las conversiones son instrucciones independientes, con variables con tipo explícito. Puede leer el código para ver los tipos de valor devuelto de la API y el tipo de motor de ejecución de los objetos devueltos. En la práctica, es más habitual usar variables con tipo implícito y basarse en nombres de API para describir el tipo de los objetos que se examinan.
@@ -164,7 +164,7 @@ En este ejemplo, se implementa un <xref:Microsoft.CodeAnalysis.CSharp.CSharpSynt
 
 Cree un proyecto de **Stand-Alone Code Analysis Tool** (Herramienta de análisis de código independiente) de C# y asígnele el nombre “**SyntaxWalker**”.
 
-Puede ver el código terminado de este ejemplo en [nuestro repositorio de GitHub](https://github.com/dotnet/docs/tree/master/samples/csharp/roslyn-sdk/SyntaxQuickStart). El ejemplo de GitHub contiene los dos proyectos que se describen en este tutorial.
+Puede ver el código terminado de este ejemplo en [nuestro repositorio de GitHub](https://github.com/dotnet/samples/tree/master/csharp/roslyn-sdk/SyntaxQuickStart). El ejemplo de GitHub contiene los dos proyectos que se describen en este tutorial.
 
 Como en el ejemplo anterior, puede definir una constante de cadena para que contenga el texto del programa que se va a analizar:
 
