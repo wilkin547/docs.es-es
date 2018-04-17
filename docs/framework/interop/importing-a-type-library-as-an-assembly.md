@@ -1,13 +1,13 @@
 ---
 title: Importar una biblioteca de tipos como un ensamblado
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - importing type library
@@ -23,17 +23,17 @@ helpviewer_keywords:
 - COM interop, importing type library
 - COM interop, exposing COM components
 ms.assetid: d1898229-cd40-426e-a275-f3eb65fbc79f
-caps.latest.revision: 
+caps.latest.revision: 14
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 625bbce6dca8d57d7870dbe13e086c9a34954c9b
-ms.sourcegitcommit: d95a91d685565f4d95c8773b558752864a6a3d7e
+ms.openlocfilehash: 0299ef58d58318714b8f0eb8082928f8da565d2f
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="importing-a-type-library-as-an-assembly"></a>Importar una biblioteca de tipos como un ensamblado
 Las definiciones de tipos COM residen normalmente en una biblioteca de tipos. Por el contrario, los compiladores conformes a CLS generan metadatos de tipos en un ensamblado. Las dos fuentes de información de tipos son muy diferentes. En este tema se describen técnicas para generar metadatos a partir de una biblioteca de tipos. El ensamblado resultante se denomina ensamblado de interoperabilidad y la información de tipos que contiene permite a las aplicaciones de .NET Framework usar tipos COM.  
@@ -55,7 +55,7 @@ Las definiciones de tipos COM residen normalmente en una biblioteca de tipos. Po
   
 -   Programa para la mejora  
   
-     Visual Studio convierte automáticamente los tipos COM de una biblioteca de tipos a metadatos en un ensamblado. Para obtener instrucciones, vea [Cómo: Agregar referencias a bibliotecas de tipos](../../../docs/framework/interop/how-to-add-references-to-type-libraries.md) y [Tutorial: Incrustar información de tipos de los ensamblados de Microsoft Office](http://msdn.microsoft.com/library/85b55e05-bc5e-4665-b6ae-e1ada9299fd3).  
+     Visual Studio convierte automáticamente los tipos COM de una biblioteca de tipos a metadatos en un ensamblado. Para obtener instrucciones, vea [Cómo: Agregar referencias a bibliotecas de tipos](../../../docs/framework/interop/how-to-add-references-to-type-libraries.md) y [Tutorial: Incrustar información de tipos de los ensamblados de Microsoft Office](https://msdn.microsoft.com/library/85b55e05-bc5e-4665-b6ae-e1ada9299fd3(v=vs.100)).  
   
 -   [TlbImp.exe (Importador de la biblioteca de tipos)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)  
   
@@ -92,4 +92,4 @@ Las definiciones de tipos COM residen normalmente en una biblioteca de tipos. Po
  [Implementar una aplicación interoperativa](../../../docs/framework/interop/deploying-an-interop-application.md)  
  [Cómo: Agregar referencias a bibliotecas de tipos](../../../docs/framework/interop/how-to-add-references-to-type-libraries.md)  
  [Cómo: Generar ensamblados de interoperabilidad a partir de bibliotecas de tipos](../../../docs/framework/interop/how-to-generate-interop-assemblies-from-type-libraries.md)  
- [Tutorial: Incrustación de información de tipos de los ensamblados de Microsoft Office](http://msdn.microsoft.com/library/85b55e05-bc5e-4665-b6ae-e1ada9299fd3)
+ [Tutorial: Incrustación de información de tipos de los ensamblados de Microsoft Office](https://msdn.microsoft.com/library/85b55e05-bc5e-4665-b6ae-e1ada9299fd3(v=vs.100))

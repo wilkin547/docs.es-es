@@ -1,13 +1,9 @@
 ---
 title: Cálculo de referencias predeterminado para objetos
-ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,17 +12,16 @@ helpviewer_keywords:
 - objects, interop marshaling
 - interop marshaling, objects
 ms.assetid: c2ef0284-b061-4e12-b6d3-6a502b9cc558
-caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: b49575bb7f16b942a56a48e9ad3f5a44edfb373a
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 6980db381322d354cace38709586e50681ae0a7e
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="default-marshaling-for-objects"></a>Serialización predeterminada para objetos
 Los parámetros y campos de tipo <xref:System.Object?displayProperty=nameWithType> pueden exponerse a código no administrado como uno de los siguientes tipos:  
@@ -304,7 +299,7 @@ mo.SetVariant(new CurrencyWrapper(new Decimal(5.25)));
 ## <a name="marshaling-byref-variants"></a>Serialización de variantes ByRef  
  Aunque las variantes se pueden pasar por valor o por referencia, la marca **VT_BYREF** también se puede usar con cualquier tipo de variante para indicar que el contenido de la variante se está pasando por referencia en lugar de por valor. La diferencia entre serializar variantes por referencia y serializar una variante con la marca **VT_BYREF** establecida puede resultar confusa. En la siguiente ilustración se explican las diferencias.  
   
- ![Variante que se pasa en la pila](../../../docs/framework/interop/media/interopvariant.gif "interopvariant")  
+ ![Variante que se pasa en la pila](./media/interopvariant.gif "interopvariant")  
 Variantes pasadas por valor y por referencia  
   
  **Comportamiento predeterminado para la serialización de objetos y variantes por valor**  
@@ -342,7 +337,7 @@ Variantes pasadas por valor y por referencia
 |**Variante**  *v* **(VT_BYREF** *&#124;* **VT_)**|**Objeto de ref**  *o*|Solo si el tipo no ha cambiado.|  
   
 ## <a name="see-also"></a>Vea también  
- [Comportamiento predeterminado del cálculo de referencias](../../../docs/framework/interop/default-marshaling-behavior.md)  
- [Tipos que pueden o que no pueden transferirse en bloque de bits](../../../docs/framework/interop/blittable-and-non-blittable-types.md)  
- [Atributos direccionales](http://msdn.microsoft.com/library/241ac5b5-928e-4969-8f58-1dbc048f9ea2)  
- [Copiar y fijar](../../../docs/framework/interop/copying-and-pinning.md)
+ [Comportamiento predeterminado del cálculo de referencias](default-marshaling-behavior.md)  
+ [Tipos que pueden o que no pueden transferirse en bloque de bits](blittable-and-non-blittable-types.md)  
+ [Atributos direccionales](https://msdn.microsoft.com/library/241ac5b5-928e-4969-8f58-1dbc048f9ea2(v=vs.100))  
+ [Copiar y fijar](copying-and-pinning.md)

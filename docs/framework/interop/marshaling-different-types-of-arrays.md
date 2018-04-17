@@ -1,12 +1,9 @@
 ---
-title: "Cálculo de referencias de tipos diferentes de matrices"
-ms.custom: 
+title: Cálculo de referencias de tipos diferentes de matrices
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.technology:
+- dotnet-clr
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,19 +12,20 @@ helpviewer_keywords:
 - marshaling, Arrays sample
 - data marshaling, Arrays sample
 ms.assetid: c5ac9920-5b6e-4dc9-bf2d-1f6f8ad3b0bf
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1102243eaf43eeb87b16bb654568ef15a821214c
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 62958f1656dfbfcb45356378161090b8271b6b83
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="marshaling-different-types-of-arrays"></a>Serialización de tipos diferentes de matrices
-Una matriz es un tipo de referencia en código administrado que contiene uno o varios elementos del mismo tipo. Aunque las matrices son tipos de referencia, se pasan como parámetros In a funciones no administradas. Este comportamiento no se corresponde con la manera en que se pasan las matrices administradas a los objetos administrados, que es como parámetros In/Out. Para obtener más información, consulte [Copiar y fijar](../../../docs/framework/interop/copying-and-pinning.md).  
+Una matriz es un tipo de referencia en código administrado que contiene uno o varios elementos del mismo tipo. Aunque las matrices son tipos de referencia, se pasan como parámetros In a funciones no administradas. Este comportamiento no se corresponde con la manera en que se pasan las matrices administradas a los objetos administrados, que es como parámetros In/Out. Para obtener más información, consulte [copiar y fijar](copying-and-pinning.md).  
   
  En la tabla siguiente se muestran las opciones de cálculo de referencias de matrices y se describe su uso.  
   
@@ -95,7 +93,7 @@ Una matriz es un tipo de referencia en código administrado que contiene uno o v
     int TestArrayOfStructs2 (MYPERSON* pPersonArray, int size);  
     ```  
   
- [PinvokeLib.dll](http://msdn.microsoft.com/library/5d1438d7-9946-489d-8ede-6c694a08f614) es una biblioteca personalizada no administrada que contiene implementaciones para las funciones enumeradas anteriormente y dos variables de estructura, **MyStrStruct** y **MYPERSON**. Estas estructuras contienen los siguientes elementos:  
+ [PinvokeLib.dll](https://msdn.microsoft.com/library/5d1438d7-9946-489d-8ede-6c694a08f614(v=vs.100)) es una biblioteca personalizada no administrada que contiene implementaciones para las funciones enumeradas anteriormente y dos variables de estructura, **MyStrStruct** y **MYPERSON**. Estas estructuras contienen los siguientes elementos:  
   
 ```  
 typedef struct _MYPOINT  
@@ -124,6 +122,6 @@ typedef struct _MYPERSON
  [!code-vb[Conceptual.Interop.Marshaling#32](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.interop.marshaling/vb/arrays.vb#32)]  
   
 ## <a name="see-also"></a>Vea también  
- [Serialización de matrices de tipos](http://msdn.microsoft.com/library/049b1c1b-228f-4445-88ec-91bc7fd4b1e8)  
- [Tipos de datos de invocación de plataforma](http://msdn.microsoft.com/library/16014d9f-d6bd-481e-83f0-df11377c550f)  
- [Crear prototipos en código administrado](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)
+ [Serialización de matrices de tipos](https://msdn.microsoft.com/library/049b1c1b-228f-4445-88ec-91bc7fd4b1e8(v=vs.100))  
+ [Tipos de datos de invocación de plataforma](https://msdn.microsoft.com/library/16014d9f-d6bd-481e-83f0-df11377c550f(v=vs.100))  
+ [Crear prototipos en código administrado](creating-prototypes-in-managed-code.md)

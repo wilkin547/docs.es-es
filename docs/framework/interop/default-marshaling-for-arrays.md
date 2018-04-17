@@ -1,12 +1,9 @@
 ---
-title: "Cálculo de referencias predeterminado para matrices"
-ms.custom: 
+title: Cálculo de referencias predeterminado para matrices
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.technology:
+- dotnet-clr
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,21 +12,22 @@ helpviewer_keywords:
 - interop marshaling, arrays
 - arrays, interop marshaling
 ms.assetid: 8a3cca8b-dd94-4e3d-ad9a-9ee7590654bc
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 91df17448a57f7495dc95fb2b4ab1fa63dd8a27f
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 84f4015fd9bc5eb2de11b71530115d20c583d21d
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="default-marshaling-for-arrays"></a>Serialización predeterminada para matrices
 En una aplicación que consta únicamente de código administrado, Common Language Runtime pasa los tipos de matriz como parámetros In/Out. En cambio, el serializador de interoperabilidad pasa una matriz como parámetros In de forma predeterminada.  
   
- Con [optimización de anclaje](../../../docs/framework/interop/copying-and-pinning.md), una matriz que puede transferirse en bloque de bits puede parecer que opera como un parámetro In/Out al interactuar con objetos en el mismo contenedor. Pero si posteriormente se exporta el código a una biblioteca de tipos que se usa para generar el proxy entre equipos y esa biblioteca se usa para serializar las llamadas entre contenedores, las llamadas pueden revertir al comportamiento real del parámetro.  
+ Con [optimización de anclaje](copying-and-pinning.md), una matriz que puede transferirse en bloque de bits puede parecer que opera como un parámetro In/Out al interactuar con objetos en el mismo contenedor. Pero si posteriormente se exporta el código a una biblioteca de tipos que se usa para generar el proxy entre equipos y esa biblioteca se usa para serializar las llamadas entre contenedores, las llamadas pueden revertir al comportamiento real del parámetro.  
   
  Las matrices son complejas por naturaleza y las distinciones entre matrices administradas y no administradas garantizan más información que otros tipos que no pueden transferirse en bloque de bits. En este tema se proporciona la siguiente información sobre la serialización de matrices:  
   
@@ -51,9 +49,9 @@ En una aplicación que consta únicamente de código administrado, Common Langua
   
 |Tipo de matriz administrada|Tipo de elemento|Rango|Límite inferior|Notación de firma|  
 |------------------------|------------------|----------|-----------------|------------------------|  
-|**ELEMENT_TYPE_ARRAY**|Especificado por el tipo.|Especificado por el rango.|Especificado opcionalmente por los límites.|*tipo* **[** *n*,*m* **]**|  
+|**ELEMENT_TYPE_ARRAY**|Especificado por el tipo.|Especificado por el rango.|Especificado opcionalmente por los límites.|*tipo de* **[** *n*,*m* **]**|  
 |**ELEMENT_TYPE_CLASS**|Desconocido|Desconocido|Desconocido|**System.Array**|  
-|**ELEMENT_TYPE_SZARRAY**|Especificado por el tipo.|1|0|*tipo* **[** *n* **]**|  
+|**ELEMENT_TYPE_SZARRAY**|Especificado por el tipo.|1|0|*tipo de* **[** *n* **]**|  
   
 <a name="cpcondefaultmarshalingforarraysanchor2"></a>   
 ## <a name="unmanaged-arrays"></a>Matrices no administradas  
@@ -71,7 +69,7 @@ En una aplicación que consta únicamente de código administrado, Common Langua
 ### <a name="safe-arrays"></a>Matrices seguras  
  Cuando se importa una matriz segura desde una biblioteca de tipos a un ensamblado .NET, la matriz se convierte en una matriz unidimensional de un tipo conocido (como **int**). Las mismas reglas de conversión de tipos que se aplican a los parámetros también se aplican a los elementos de la matriz. Por ejemplo, una matriz segura de tipos **BSTR** se convierte en una matriz administrada de cadenas y una matriz segura de variantes se convierte en una matriz administrada de objetos. El tipo de elemento **SAFEARRAY** se captura de la biblioteca de tipos y se guarda en el valor **SAFEARRAY** de la enumeración <xref:System.Runtime.InteropServices.UnmanagedType>.  
   
- Como el rango y los límites de la matriz segura no pueden determinarse a partir de la biblioteca de tipos, el rango se considera igual a 1 y el límite inferior igual a 0. El rango y los límites se deben definir en la firma administrada generada por [TlbImp.exe (Importador de la biblioteca de tipos)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md). Si el rango pasado al método en tiempo de ejecución difiere, se inicia una excepción <xref:System.Runtime.InteropServices.SafeArrayRankMismatchException>. Si difiere el tipo de la matriz pasado en tiempo de ejecución, se inicia una excepción <xref:System.Runtime.InteropServices.SafeArrayTypeMismatchException>. En el ejemplo siguiente se muestran las matrices seguras en código administrado y no administrado.  
+ Como el rango y los límites de la matriz segura no pueden determinarse a partir de la biblioteca de tipos, el rango se considera igual a 1 y el límite inferior igual a 0. El rango y los límites se deben definir en la firma administrada generada por [TlbImp.exe (Importador de la biblioteca de tipos)](../tools/tlbimp-exe-type-library-importer.md). Si el rango pasado al método en tiempo de ejecución difiere, se inicia una excepción <xref:System.Runtime.InteropServices.SafeArrayRankMismatchException>. Si difiere el tipo de la matriz pasado en tiempo de ejecución, se inicia una excepción <xref:System.Runtime.InteropServices.SafeArrayTypeMismatchException>. En el ejemplo siguiente se muestran las matrices seguras en código administrado y no administrado.  
   
  **Firma no administrada**  
   
@@ -100,7 +98,7 @@ void New3([MarshalAs(UnmanagedType.SafeArray, SafeArraySubType=VT_BSTR)]
    ref String[] ar);  
 ```  
   
- Las matrices multidimensionales, o matrices seguras con límite distinto de cero, se pueden serializar en código administrado si la firma del método generada por Tlbimp.exe se modifica para indicar un tipo de elemento de **ELEMENT_TYPE_ARRAY** en lugar de **ELEMENT_ TYPE_SZARRAY**. Como alternativa, se puede usar el modificador **/sysarray** con Tlbimp.exe para importar todas las matrices como objetos <xref:System.Array?displayProperty=nameWithType>. En casos en los que se sabe que la matriz que se pasa es multidimensional, se puede editar el código de lenguaje intermedio (MSIL) de Microsoft generado mediante Tlbimp.exe y después volver a compilarlo. Para más información sobre cómo modificar código MSIL, vea [Personalización de contenedores RCW](http://msdn.microsoft.com/library/4652beaf-77d0-4f37-9687-ca193288c0be).  
+ Las matrices multidimensionales, o matrices seguras con límite distinto de cero, se pueden serializar en código administrado si la firma del método generada por Tlbimp.exe se modifica para indicar un tipo de elemento de **ELEMENT_TYPE_ARRAY** en lugar de **ELEMENT_ TYPE_SZARRAY**. Como alternativa, se puede usar el modificador **/sysarray** con Tlbimp.exe para importar todas las matrices como objetos <xref:System.Array?displayProperty=nameWithType>. En casos en los que se sabe que la matriz que se pasa es multidimensional, se puede editar el código de lenguaje intermedio (MSIL) de Microsoft generado mediante Tlbimp.exe y después volver a compilarlo. Para más información sobre cómo modificar código MSIL, vea [Personalización de contenedores RCW](https://msdn.microsoft.com/library/4652beaf-77d0-4f37-9687-ca193288c0be(v=vs.100)).  
   
 ### <a name="c-style-arrays"></a>Matrices de estilo C  
  Cuando se importa una matriz de estilo C desde una biblioteca de tipos a un ensamblado. NET, la matriz se convierte en **ELEMENT_TYPE_SZARRAY**.  
@@ -164,7 +162,7 @@ void New2(ref double ar);
 void New3(ref String ar);   
 ```  
   
- Puede proporcionar al serializador el tamaño de la matriz si modifica el código de lenguaje intermedio de Microsoft (MSIL) generado mediante Tlbimp.exe y después lo vuelve a compilar. Para más información sobre cómo modificar código MSIL, vea [Personalización de contenedores RCW](http://msdn.microsoft.com/library/4652beaf-77d0-4f37-9687-ca193288c0be). Para indicar el número de elementos de la matriz, aplique el tipo <xref:System.Runtime.InteropServices.MarshalAsAttribute> al parámetro de matriz de la definición de método administrado de una de las maneras siguientes:  
+ Puede proporcionar al serializador el tamaño de la matriz si modifica el código de lenguaje intermedio de Microsoft (MSIL) generado mediante Tlbimp.exe y después lo vuelve a compilar. Para más información sobre cómo modificar código MSIL, vea [Personalización de contenedores RCW](https://msdn.microsoft.com/library/4652beaf-77d0-4f37-9687-ca193288c0be(v=vs.100)). Para indicar el número de elementos de la matriz, aplique el tipo <xref:System.Runtime.InteropServices.MarshalAsAttribute> al parámetro de matriz de la definición de método administrado de una de las maneras siguientes:  
   
 -   Identifique otro parámetro que contenga el número de elementos de la matriz. Los parámetros se identifican por posición, empezando con el primer parámetro como el número 0.     
   
@@ -320,7 +318,7 @@ HRESULT New(long ar[]);
 HRESULT New(LPStr ar[]);  
 ```  
   
- Las matrices anidadas no se pueden serializar. Por ejemplo, la siguiente firma genera un error cuando se exporta con el [exportador de la biblioteca de tipos (Tlbexp.exe)](../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md).  
+ Las matrices anidadas no se pueden serializar. Por ejemplo, la siguiente firma genera un error cuando se exporta con el [exportador de la biblioteca de tipos (Tlbexp.exe)](../tools/tlbexp-exe-type-library-exporter.md).  
   
 #### <a name="managed-signature"></a>Firma administrada  
   
@@ -382,7 +380,7 @@ public struct MyStruct {
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Comportamiento predeterminado del cálculo de referencias](../../../docs/framework/interop/default-marshaling-behavior.md)  
- [Tipos que pueden o que no pueden transferirse en bloque de bits](../../../docs/framework/interop/blittable-and-non-blittable-types.md)  
- [Atributos direccionales](http://msdn.microsoft.com/library/241ac5b5-928e-4969-8f58-1dbc048f9ea2)  
- [Copiar y fijar](../../../docs/framework/interop/copying-and-pinning.md)
+ [Comportamiento predeterminado del cálculo de referencias](default-marshaling-behavior.md)  
+ [Tipos que pueden o que no pueden transferirse en bloque de bits](blittable-and-non-blittable-types.md)  
+ [Atributos direccionales](https://msdn.microsoft.com/library/241ac5b5-928e-4969-8f58-1dbc048f9ea2(v=vs.100))  
+ [Copiar y fijar](copying-and-pinning.md)

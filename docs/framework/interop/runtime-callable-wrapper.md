@@ -1,12 +1,9 @@
 ---
-title: "Contenedor al que se puede llamar en tiempo de ejecución"
-ms.custom: 
+title: Contenedor al que se puede llamar en tiempo de ejecución
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.technology:
+- dotnet-clr
 ms.topic: article
 helpviewer_keywords:
 - COM interop, COM wrappers
@@ -15,23 +12,23 @@ helpviewer_keywords:
 - runtime callable wrappers
 - interoperation with unmanaged code, COM wrappers
 ms.assetid: 7e542583-1e31-4e10-b523-8cf2f29cb4a4
-caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8fed5ff57a4674f9b7723b1b850e972316fa94fb
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: bc92f169851680465f33170290d865be8426a53d
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="runtime-callable-wrapper"></a>Contenedor al que se puede llamar en tiempo de ejecución
 Common Language Runtime expone objetos COM mediante un proxy denominado el contenedor RCW (Runtime Callable Wrapper). Aunque el contenedor RCW aparece como un objeto corriente para los clientes .NET, su función principal es calcular referencias de llamadas entre un cliente .NET y un objeto COM.  
   
  CLR crea exactamente un contenedor RCW para cada objeto COM, independientemente del número de referencias que existan en ese objeto. CLR mantiene un único contenedor RCW por proceso para cada objeto.  Si crea un contenedor RCW en un dominio de aplicación o apartamento y después pasa una referencia a otro dominio de aplicación o apartamento, se usará un proxy para el primer objeto.  Como se muestra en la siguiente ilustración, cualquier número de clientes administrados puede contener una referencia a los objetos COM que exponen las interfaces INew e INewer.  
   
- ![RCW](../../../docs/framework/interop/media/rcw.gif "rcw")  
+ ![RCW](./media/rcw.gif "rcw")  
 Acceso a objetos COM mediante el contenedor RCW  
   
  Usando los metadatos derivados de una biblioteca de tipos, CLR crea el objeto COM al que se está llamando y un contenedor para dicho objeto. Cada contenedor RCW mantiene una memoria caché de punteros de interfaz en el objeto COM que contiene y libera su referencia en el objeto COM cuando el contenedor RCW ya no es necesario. CLR realiza la recolección de elementos no utilizados en el contenedor RCW.  
@@ -41,9 +38,9 @@ Acceso a objetos COM mediante el contenedor RCW
  El contenedor estándar impone las reglas de cálculo de referencias integradas. Por ejemplo, cuando un cliente .NET pasa un tipo String como parte de un argumento a un objeto no administrado, el contenedor convierte la cadena en un tipo BSTR. Si el objeto COM devuelve una cadena BSTR a su llamador administrado, el llamador recibe una cadena. Tanto el cliente como el servidor envían y reciben datos que les resultan familiares. Otros tipos no requieren conversión. Por ejemplo, un contenedor estándar pasará siempre un entero de 4 bytes entre el código administrado y no administrado sin convertir el tipo.  
   
 ## <a name="marshaling-selected-interfaces"></a>Serialización de interfaces seleccionadas  
- El objetivo principal del [contenedor RCW](../../../docs/framework/interop/runtime-callable-wrapper.md) es ocultar las diferencias entre los modelos de programación administrada y no administrada. Para crear una transición fluida, el contenedor RCW consume interfaces COM seleccionadas sin exponerlas al cliente .NET, tal y como se muestra en la siguiente ilustración.  
+ El objetivo principal del [contenedor RCW](runtime-callable-wrapper.md) es ocultar las diferencias entre los modelos de programación administrada y no administrada. Para crear una transición fluida, el contenedor RCW consume interfaces COM seleccionadas sin exponerlas al cliente .NET, tal y como se muestra en la siguiente ilustración.  
   
- ![RCW con Interfaces](../../../docs/framework/interop/media/rcwwithinterfaces.gif "rcwwithinterfaces")  
+ ![RCW con Interfaces](./media/rcwwithinterfaces.gif "rcwwithinterfaces")  
 Interfaces COM y el contenedor RCW  
   
  Cuando se crea como un objeto de enlace en tiempo de compilación, el contenedor RCW es un tipo específico. Implementa las interfaces que el objeto COM implementa, y expone los métodos, las propiedades y los eventos de las interfaces del objeto. En la ilustración, el contenedor RCW expone la interfaz INew pero consume las interfaces **IUnknown** e **IDispatch**. Además, el contenedor RCW expone todos los miembros de la interfaz INew al cliente .NET.  
@@ -66,8 +63,8 @@ Interfaces COM y el contenedor RCW
 |**IEnumVARIANT**|Permite tratar como colecciones a los tipos COM que admiten enumeraciones.|  
   
 ## <a name="see-also"></a>Vea también  
- [Contenedores COM](../../../docs/framework/interop/com-wrappers.md)  
- [Serialización de Interfaces seleccionadas](http://msdn.microsoft.com/library/fdb97fd0-f694-4832-bf15-a4e7cf413840)  
- [Contenedor CCW (COM callable wrapper)](../../../docs/framework/interop/com-callable-wrapper.md)  
- [Resumen de la conversión de bibliotecas de tipos en ensamblados](http://msdn.microsoft.com/library/bf3f90c5-4770-4ab8-895c-3ba1055cc958)  
- [Importar una biblioteca de tipos como un ensamblado](../../../docs/framework/interop/importing-a-type-library-as-an-assembly.md)
+ [Contenedores COM](com-wrappers.md)  
+ [Serialización de Interfaces seleccionadas](https://msdn.microsoft.com/library/fdb97fd0-f694-4832-bf15-a4e7cf413840(v=vs.100))  
+ [Contenedor CCW (COM callable wrapper)](com-callable-wrapper.md)  
+ [Resumen de la conversión de bibliotecas de tipos en ensamblados](https://msdn.microsoft.com/library/bf3f90c5-4770-4ab8-895c-3ba1055cc958(v=vs.100))  
+ [Importar una biblioteca de tipos como un ensamblado](importing-a-type-library-as-an-assembly.md)

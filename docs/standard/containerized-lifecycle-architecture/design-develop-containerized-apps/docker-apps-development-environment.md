@@ -1,18 +1,18 @@
 ---
 title: Entorno de desarrollo para aplicaciones de Docker
 description: Ciclo de vida de aplicaciones de Docker en contenedor con la plataforma y las herramientas de Microsoft
-keywords: Docker, microservicios, ASP.NET, contenedor
+ms.prod: .net
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: ad1a6e4cb0974ebb067cf1a7be987d696e8bc82a
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: c164b94572a8fde58124acaa14d47da574a19383
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="development-environment-for-docker-apps"></a>Entorno de desarrollo para aplicaciones de Docker
 
@@ -50,7 +50,7 @@ Puede desarrollar aplicaciones de Docker y herramientas de Microsoft con lenguaj
 
 -   Ruby
 
--   Python
+-   Plantillas de
 
 Básicamente, puede usar cualquier lenguaje moderno admitido por Docker en Linux o Windows.
 

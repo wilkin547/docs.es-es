@@ -1,30 +1,25 @@
 ---
 title: Exponer componentes COM en .NET Framework
-ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - exposing COM components to .NET Framework
 - interoperation with unmanaged code, exposing COM components
 - COM interop, exposing COM components
 ms.assetid: e78b14f1-e487-43cd-9c6d-1a07483f1730
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: f2a73bbe23cc1e8fd267489d2607dd7275b09322
-ms.sourcegitcommit: d95a91d685565f4d95c8773b558752864a6a3d7e
+ms.openlocfilehash: e17c0b8c3676bb632c9b45af0577708c98446967
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="exposing-com-components-to-the-net-framework"></a>Exponer componentes COM en .NET Framework
 En esta sección se resume el proceso necesario para exponer un componente COM existente a código administrado. Para obtener más detalles sobre cómo escribir servidores COM que se integren estrechamente con .NET Framework, vea [Consideraciones de diseño para interoperaciones](https://msdn.microsoft.com/library/b59637f6-fe35-40d6-ae72-901e7a707689(v=vs.100)).
@@ -33,7 +28,7 @@ En esta sección se resume el proceso necesario para exponer un componente COM e
   
 #### <a name="to-expose-com-components-to-the-net-framework"></a>Para exponer componentes COM en .NET Framework  
   
-1.  [Importe una biblioteca de tipos como un ensamblado](../../../docs/framework/interop/importing-a-type-library-as-an-assembly.md).  
+1.  [Importe una biblioteca de tipos como un ensamblado](importing-a-type-library-as-an-assembly.md).  
   
      Common Language Runtime requiere metadatos para todos los tipos, incluidos los tipos COM. Hay varias maneras de obtener un ensamblado que contiene tipos COM importados como metadatos.  
   
@@ -41,17 +36,17 @@ En esta sección se resume el proceso necesario para exponer un componente COM e
   
      Puede inspeccionar los tipos COM, activar instancias e invocar métodos en el objeto COM de la misma manera que lo hace para cualquier tipo administrado.  
   
-3.  [Compile un proyecto de interoperabilidad](../../../docs/framework/interop/compiling-an-interop-project.md).  
+3.  [Compile un proyecto de interoperabilidad](compiling-an-interop-project.md).  
   
      El [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] proporciona compiladores para varios lenguajes compatibles con Common Language Specification (CLS), incluidos [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)], C# y C++.  
   
-4.  [Implemente una aplicación de interoperabilidad](../../../docs/framework/interop/deploying-an-interop-application.md).  
+4.  [Implemente una aplicación de interoperabilidad](deploying-an-interop-application.md).  
   
-     Las aplicaciones de interoperabilidad se implementan mejor como ensamblados firmados [con nombre seguro](../../../docs/framework/app-domains/strong-named-assemblies.md) en la caché global de ensamblados.  
+     Las aplicaciones de interoperabilidad se implementan mejor como ensamblados firmados [con nombre seguro](../app-domains/strong-named-assemblies.md) en la caché global de ensamblados.  
   
 ## <a name="see-also"></a>Vea también  
- [Interoperating with Unmanaged Code](../../../docs/framework/interop/index.md) (Interoperar con código no administrado)  
- [Consideraciones de diseño para interoperaciones](http://msdn.microsoft.com/library/b59637f6-fe35-40d6-ae72-901e7a707689)  
- [Ejemplo de interoperabilidad COM: cliente .NET y servidor COM](../../../docs/framework/interop/com-interop-sample-net-client-and-com-server.md)  
- [Independencia del lenguaje y componentes independientes del lenguaje](../../../docs/standard/language-independence-and-language-independent-components.md)  
- [Gacutil.exe (Herramienta Caché global de ensamblados)](../../../docs/framework/tools/gacutil-exe-gac-tool.md)
+ [Interoperating with Unmanaged Code](index.md) (Interoperar con código no administrado)  
+ [Consideraciones de diseño para interoperaciones](https://msdn.microsoft.com/library/b59637f6-fe35-40d6-ae72-901e7a707689(v=vs.100))  
+ [Ejemplo de interoperabilidad COM: cliente .NET y servidor COM](com-interop-sample-net-client-and-com-server.md)  
+ [Independencia del lenguaje y componentes independientes del lenguaje](../../standard/language-independence-and-language-independent-components.md)  
+ [Gacutil.exe (Herramienta Caché global de ensamblados)](../tools/gacutil-exe-gac-tool.md)

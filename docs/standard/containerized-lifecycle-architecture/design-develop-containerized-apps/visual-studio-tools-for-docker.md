@@ -1,18 +1,18 @@
 ---
 title: Con Visual Studio Tools para Docker (Visual Studio en Windows)
 description: Ciclo de vida de aplicaciones de Docker en contenedor con la plataforma y las herramientas de Microsoft
-keywords: Docker, microservicios, ASP.NET, contenedor
+ms.prod: .net
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 0525633b23625d915fd447d438c6281fb14b3b46
-ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
+ms.openlocfilehash: cbd4dea32b98e79e85302aa5d4a5c97b1b0fa556
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-visual-studio-tools-for-docker-visual-studio-on-windows"></a>Con Visual Studio Tools para Docker (Visual Studio en Windows)
 
@@ -26,7 +26,7 @@ Con las versiones más recientes de Docker para Windows, es más fácil que nunc
 
 Si usa Visual Studio 2015, debe tener la actualización 3 o una versión posterior y Visual Studio Tools para Docker.
 
-**Obtener más información:** para obtener instrucciones acerca de cómo instalar Visual Studio, vaya a [https://www.visualstudio.com/ \ productos/vs-2015--ediciones de productos](https://www.visualstudio.com/products/vs-2015-product-editions).
+**Obtener más información:** para obtener instrucciones acerca de cómo instalar Visual Studio, vaya a [ https://www.visualstudio.com/\ productos/vs-2015--ediciones de productos](https://www.visualstudio.com/products/vs-2015-product-editions).
 
 Para obtener más información acerca de la instalación de Visual Studio Tools para Docker, vaya a <http://aka.ms/vstoolsfordocker> y <https://docs.microsoft.com/aspnet/core/host-and-deploy/docker/visual-studio-tools-for-docker>.
 
@@ -74,4 +74,4 @@ Implementar un contenedor ASP.NET en un host de Docker remoto: [https://docs.mic
 
 
 >[!div class="step-by-step"]
-[Previous] (docker-apps-inner-loop-workflow.md) [Next] (set-up-windows-containers-with-powershell.md)
+[Anterior] (docker-aplicaciones-interna-bucle-workflow.md) [siguiente] (set-up-windows-containers-with-powershell.md)

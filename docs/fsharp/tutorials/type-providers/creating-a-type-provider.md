@@ -1,7 +1,7 @@
 ---
-title: 'Tutorial: Crear un proveedor de tipos (F#)'
-description: "Obtenga información acerca de cómo crear sus propios proveedores de tipo de F # en F # 3.0 mediante el examen de varios proveedores de tipo simples para ilustrar los conceptos básicos."
-keywords: "visual f#, f#, programación funcional"
+title: 'Tutorial: Crear un proveedor de tipos (F #)'
+description: 'Obtenga información acerca de cómo crear sus propios proveedores de tipo de F # en F # 3.0 mediante el examen de varios proveedores de tipo simples para ilustrar los conceptos básicos.'
+keywords: visual f#, f#, programación funcional
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
@@ -10,13 +10,13 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 82bec076-19d4-470c-979f-6c3a14b7c70a
-ms.openlocfilehash: 30d1c20d66fd0a193c05c97ee726a886f98356ad
-ms.sourcegitcommit: 1c0b0f082b3f300e54b4d069b317ac724c88ddc3
+ms.openlocfilehash: b2e83218184bd1aef8258378485b99697cc8cf8d
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="tutorial-creating-a-type-provider"></a>Tutorial: Crear un proveedor de tipos
+# <a name="tutorial-create-a-type-provider"></a>Tutorial: Crear un proveedor de tipos
 
 El mecanismo de proveedores de tipo de F # es una parte considerable de su compatibilidad con la programación de información enriquecida. Este tutorial le explica cómo crear proveedores de tipos, a la vez que le guía en el desarrollo de varios proveedores de tipo simples para ilustrar los conceptos básicos. Para obtener más información sobre el mecanismo de proveedores de tipo de F #, vea [proveedores de tipo](index.md).
 

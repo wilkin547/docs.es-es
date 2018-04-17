@@ -1,18 +1,18 @@
 ---
-title: "¿Qué es Docker?"
+title: ¿Qué es Docker?
 description: Ciclo de vida de aplicaciones de Docker en contenedor con la plataforma y las herramientas de Microsoft
-keywords: Docker, microservicios, ASP.NET, contenedor
+ms.prod: .net
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/21/2017
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: c75b2fa87e5aad93693c76c3bbd135044b36525f
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: c471c4bc1588aaa6c0e145ede0b67ab5340f254a
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="what-is-docker"></a>¿Qué es Docker?
 
@@ -30,11 +30,11 @@ Para hospedar contenedores en entornos de desarrollo y proporcionan herramientas
 
 Para ejecutar [contenedores de Windows](https://msdn.microsoft.com/virtualization/windowscontainers/about/about_overview), hay dos tipos de tiempos de ejecución:
 
--   **Contenedor de Windows Server** este tiempo de ejecución proporciona aislamiento de aplicaciones mediante tecnología de aislamiento de proceso y espacio de nombres. Un contenedor de Windows Server comparte el kernel con el host de contenedor y todos los contenedores que se ejecutan en el host.
+-   **Contenedor de Windows Server** este tiempo de ejecución proporciona aislamiento de aplicaciones mediante tecnología de aislamiento de proceso y espacio de nombres. Un contenedor de Windows Server comparte el kernel con el host de contenedor y con todos los contenedores que se ejecutan en el host.
 
--   **Contenedor de Hyper-V** esta opción se expande el aislamiento que ofrecen los contenedores de Windows Server mediante la ejecución de cada contenedor en una máquina virtual altamente optimizada. En esta configuración, no se comparte el kernel del host del contenedor con los contenedores de Hyper-V, lo que proporciona un mejor aislamiento.
+-   **Contenedor de Hyper-V** esta opción se expande el aislamiento que ofrecen los contenedores de Windows Server mediante la ejecución de cada contenedor en una máquina virtual altamente optimizada. En esta configuración, el kernel del host del contenedor no se comparte con los contenedores de Hyper-V, lo que proporciona un mejor aislamiento.
 
-Las imágenes de estos contenedores se crean de la misma manera y funcionan del mismo. La diferencia radica en cómo se crea el contenedor de la imagen, la ejecución de un contenedor de Hyper-V requiere un parámetro adicional. Para obtener más información, consulte [contenedores de Hyper-V](https://msdn.microsoft.com/virtualization/windowscontainers/about/about_overview).
+Las imágenes de estos contenedores se crean de la misma manera y funcionan del mismo. La diferencia radica en cómo se crea el contenedor de la imagen, la ejecución de un contenedor de Hyper-V requiere un parámetro adicional. Para más información, vea [Contenedores de Hyper-V](https://msdn.microsoft.com/virtualization/windowscontainers/about/about_overview).
 
 ## <a name="comparing-docker-containers-with-vms"></a>Comparar contenedores de Docker con máquinas virtuales
 
@@ -44,7 +44,7 @@ Dado que los contenedores requieren mucho menos recursos (por ejemplo, que no ne
 
 Como efecto secundario de la ejecución en el mismo kernel, se logra el aislamiento de menor que las máquinas virtuales.
 
-El objetivo principal de una imagen es que lo hace el entorno (dependencias) el mismo entre las distintas implementaciones. Esto significa que puede depurar en su equipo y, a continuación, implementarlo en otro equipo con el mismo entorno garantizado.
+El objetivo principal de una imagen es que hace que el entorno (dependencias) sea el mismo entre las distintas implementaciones. Esto significa que puede depurarlo en su equipo y, a continuación, implementarlo en otra máquina con el mismo entorno garantizado.
 
 Una imagen de contenedor es una manera para empaquetar una aplicación o servicio e implementarlo de forma confiable y reproducible. En este sentido, Docker no es solo una tecnología, también es una filosofía y un proceso.
 

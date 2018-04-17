@@ -1,18 +1,18 @@
 ---
 title: Flujo de trabajo de DevOps para aplicaciones de Docker con herramientas de Microsoft
 description: Ciclo de vida de aplicaciones de Docker en contenedor con la plataforma de Microsoft y flujo de trabajo de DevOps de aplicaciones con las herramientas de Microsoft
-keywords: Docker, microservicios, ASP.NET, contenedor
+ms.prod: .net
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 8539e8c0a6d0c6c9d558b91e062184e7ef135856
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 13f279b371bc5212a4ce9a171d37316c5e6efb77
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="docker-application-devops-workflow-with-microsoft-tools"></a>Flujo de trabajo de DevOps para aplicaciones de Docker con herramientas de Microsoft
 

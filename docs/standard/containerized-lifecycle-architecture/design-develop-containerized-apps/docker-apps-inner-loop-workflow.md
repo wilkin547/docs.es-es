@@ -1,18 +1,18 @@
 ---
 title: Flujo de trabajo de desarrollo de bucle interno para las aplicaciones de Docker
 description: Ciclo de vida de aplicaciones de Docker en contenedor con la plataforma y las herramientas de Microsoft
-keywords: Docker, microservicios, ASP.NET, contenedor
+ms.prod: .net
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 632c04507c1478238a5dc2573542f8c88bae2a51
-ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
+ms.openlocfilehash: 7f49b19b0836636bf7656dc618ef2f181a0d7fff
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="inner-loop-development-workflow-for-docker-apps"></a>Flujo de trabajo de desarrollo de bucle interno para las aplicaciones de Docker
 
@@ -52,7 +52,7 @@ La manera de desarrollar la aplicación es bastante similar a la manera de que h
 
 Con las versiones más recientes de Docker para Mac y Windows, es más fácil que nunca para desarrollar aplicaciones de Docker y el programa de instalación es sencilla.
 
-**Obtener más información** para obtener instrucciones sobre cómo configurar Docker para Windows, vaya a [https://docs.docker.com/docker-for-windows/](https://docs.docker.com/docker-for-windows/).
+**Obtener más información** para obtener instrucciones sobre cómo configurar Docker para Windows, vaya a [ https://docs.docker.com/docker-for-windows/ ](https://docs.docker.com/docker-for-windows/).
 
 Para obtener instrucciones sobre cómo configurar Docker para Mac, vaya a <https://docs.docker.com/docker-for-mac/>.
 
@@ -60,7 +60,7 @@ Además, deberá un editor de código para que realmente puede desarrollar su ap
 
 Microsoft proporciona el código de Visual Studio, que es un editor de código ligero que es compatible con Mac, Windows y Linux y proporciona IntelliSense con [admite muchos idiomas](https://code.visualstudio.com/docs/languages/overview) (JavaScript,. NET, vaya, Java, Ruby, Python y más lenguajes modernos), [depuración](https://code.visualstudio.com/Docs/editor/debugging), [integración con Git](https://code.visualstudio.com/Docs/editor/versioncontrol) y [compatibilidad con las extensiones](https://code.visualstudio.com/docs/extensions/overview). Este editor es una excelente elección para los desarrolladores Mac y Linux. En Windows, también puede usar la aplicación completa de Visual Studio.
 
-**Obtener más información** para obtener instrucciones acerca de cómo instalar Visual Studio para Windows, Mac o Linux, vaya a [http://code.visualstudio.com/docs/setup/setup-overview/https://docs.docker.com/docker-for-mac/](http://code.visualstudio.com/docs/setup/setup-overview/https:/docs.docker.com/docker-for-mac/).
+**Obtener más información** para obtener instrucciones acerca de cómo instalar Visual Studio para Windows, Mac o Linux, vaya a [ http://code.visualstudio.com/docs/setup/setup-overview/https://docs.docker.com/docker-for-mac/ ](http://code.visualstudio.com/docs/setup/setup-overview/https:/docs.docker.com/docker-for-mac/).
 
 También puede trabajar con CLI de Docker y escribir el código con cualquier editor de código, pero si usa código de Visual Studio, permite que los fáciles de autor Dockerfile y docker compose.yml archivos en el área de trabajo. Además, puede ejecutar tareas de código de Visual Studio desde el IDE, que le solicitará las secuencias de comandos que se pueden ejecutar operaciones elaboradas con CLI de Docker debajo.
 
@@ -125,7 +125,7 @@ Hay otras líneas de configuración que se puede agregar en el DockerFile según
 
 **Obtener más información** para obtener información sobre la creación de imágenes de Docker para las aplicaciones de .NET Core, vaya a <https://docs.microsoft.com/dotnet/core/docker/building-net-docker-images>.
 
-Para más información acerca de cómo crear sus propias imágenes, vaya a [https://docs.docker.com/engine/ \tutoriales/dockerimages/](https://docs.docker.com/engine/tutorials/dockerimages/).
+Para más información acerca de cómo crear sus propias imágenes, vaya a [ https://docs.docker.com/engine/\tutoriales/dockerimages/](https://docs.docker.com/engine/tutorials/dockerimages/).
 
 **Repositorios de imágenes multiplataforma**
 
@@ -258,8 +258,8 @@ Código de Visual Studio admite la depuración Docker si usas Node.js y otras pl
 
 También puede depurar contenedores .NET Core en Docker cuando se utiliza Visual Studio, como se describe en la sección siguiente.
 
-**Obtener más información:** para más información sobre la depuración de contenedores de Node.js Docker, vaya a <https://blog.docker.com/2016/07/live-debugging-docker/> y [https://blogs.msdn.microsoft.com/ \ usuario\_ed/2016/02/27 / Visual-Studio-Code-New-Features-13-big-Debugging-Updates-Rich-Object-Hover-Conditional-Breakpoints-Node-js-mono-More/](https://blogs.msdn.microsoft.com/user_ed/2016/02/27/visual-studio-code-new-features-13-big-debugging-updates-rich-object-hover-conditional-breakpoints-node-js-mono-more/).
+**Obtener más información:** para más información sobre la depuración de contenedores de Node.js Docker, vaya a <https://blog.docker.com/2016/07/live-debugging-docker/> y [ https://blogs.msdn.microsoft.com/\ usuario\_ed/2016/02/27 / Visual-Studio-Code-New-Features-13-big-Debugging-Updates-Rich-Object-Hover-Conditional-Breakpoints-Node-js-mono-More/](https://blogs.msdn.microsoft.com/user_ed/2016/02/27/visual-studio-code-new-features-13-big-debugging-updates-rich-object-hover-conditional-breakpoints-node-js-mono-more/).
 
 
 >[!div class="step-by-step"]
-[Previous] (docker-apps-development-environment.md) [Next] (visual-studio-tools-for-docker.md)
+[Anterior] (docker-aplicaciones-desarrollo-environment.md) [siguiente] (visual-studio-herramientas-de-docker.md)

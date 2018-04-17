@@ -1,18 +1,18 @@
 ---
-title: "Pasos del flujo de trabajo de DevOps de bucle externo para una aplicación de Docker"
+title: Pasos del flujo de trabajo de DevOps de bucle externo para una aplicación de Docker
 description: Ciclo de vida de aplicaciones de Docker en contenedor con la plataforma y las herramientas de Microsoft
-keywords: Docker, microservicios, ASP.NET, contenedor
+ms.prod: .net
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: fe51fc4b5026d17f0f9b93e7fd0dedde93ef4a3c
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: a03a9d153793b30ca9276b64a0a33e3de26f8f6e
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="steps-in-the-outer-loop-devops-workflow-for-a-docker-application"></a>Pasos del flujo de trabajo de DevOps de bucle externo para una aplicación de Docker
 
@@ -110,13 +110,13 @@ Una manera fácil de crear una de ellas es usar Docker para ejecutar un contened
 
 **Obtener más información** para leer más acerca de cómo ensamblar un CI de Visual Studio Team Services Docker de canalización y para ver los tutoriales, visiten los siguientes sitios:
 
-Ejecuta un agente de Visual Studio Team Services como un contenedor de Docker: [https://hub.docker.com/r/ \ vsts-agente/microsoft /](https://hub.docker.com/r/microsoft/vsts-agent/)
+Ejecuta un agente de Visual Studio Team Services como un contenedor de Docker: [ https://hub.docker.com/r/\ vsts-agente/microsoft /](https://hub.docker.com/r/microsoft/vsts-agent/)
 
-Extensión de VSTS Docker: <https://aka.ms/vstsdockerextension>
+Extensión de Docker de VSTS: <https://aka.ms/vstsdockerextension>
 
-Crear imágenes de .NET Core Linux Docker con Visual Studio Team Services: <https://blogs.msdn.microsoft.com/stevelasker/2016/06/13/building-net-core-linux-docker-images-with-visual-studio-team-services/>
+Creación de imágenes de .NET Core Linux Docker con Visual Studio Team Services: <https://blogs.msdn.microsoft.com/stevelasker/2016/06/13/building-net-core-linux-docker-images-with-visual-studio-team-services/>
 
-Creación de un servicio de equipo basado en Linux, Visual Studio crea la máquina con el soporte técnico de Docker: <http://donovanbrown.com/post/2016/06/03/Building-a-Linux-Based-Visual-Studio-Team-Service-Build-Machine-with-Docker-Support>
+Creación de una máquina de compilación basado en Linux, el servicio del equipo de Visual Studio con el soporte técnico de Docker: <http://donovanbrown.com/post/2016/06/03/Building-a-Linux-Based-Visual-Studio-Team-Service-Build-Machine-with-Docker-Support>
 
 ### <a name="integrate-test-and-validate-multicontainer-docker-applications"></a>Integrar, probar y validar las aplicaciones de Docker multicontainer
 
@@ -220,7 +220,7 @@ Implementación de la figura 5-11: Docker implementar tarea definición para el 
 
 **Obtener más información** para obtener más información acerca de la canalización de CD con Visual Studio Team Services y Docker, visite los siguientes sitios:
 
-Extensión de Visual Studio Team Services para Docker y el servicio de contenedor de Azure: [https://aka.ms/ \ vstsdockerextension](https://aka.ms/vstsdockerextension)
+Extensión de Visual Studio Team Services para Docker y el servicio de contenedor de Azure: [ https://aka.ms/\ vstsdockerextension](https://aka.ms/vstsdockerextension)
 
 Servicio de contenedor de Azure: <https://aka.ms/azurecontainerservice>
 
@@ -237,4 +237,4 @@ En este tema también se trata en el capítulo siguiente como parte de las tarea
 Solo cuando la supervisión y diagnóstico está al 100% en el dominio Kerberos de DevOps son los procesos de supervisión y análisis realizadas por el equipo de desarrollo en entornos de pruebas o beta. Esto se realiza mediante la realización de pruebas de carga o simplemente mediante la supervisión de la versión beta o entornos de preguntas y respuestas, donde los evaluadores de beta están tratando de las nuevas versiones.
 
 >[!div class="step-by-step"]
-[Previous] (index.md) [Next] (../run-manage-monitor-docker-environments/index.md)
+[Anterior] (index.md) [siguiente] (.. /Run-Manage-Monitor-docker-Environments/index.MD)

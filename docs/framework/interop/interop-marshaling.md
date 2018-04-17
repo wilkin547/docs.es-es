@@ -1,28 +1,26 @@
 ---
-title: "Serialización de interoperabilidad"
-ms.custom: 
+title: Serialización de interoperabilidad
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.technology:
+- dotnet-clr
 ms.topic: article
 helpviewer_keywords:
 - marshaling, COM interop
 - interop marshaling
 - interop marshaling, about interop marshaling
 ms.assetid: 115f7a2f-d422-4605-ab36-13a8dd28142a
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 17638390a07f752a7101209e5635752bc0511d1d
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: cb22c708221fcc80962fd7da6e26c3720173d824
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="interop-marshaling"></a>Serialización de interoperabilidad
 <a name="top"></a> La serialización de interoperabilidad rige cómo se pasan los datos en argumentos de método y valores devueltos entre la memoria administrada y la no administrada durante las llamadas. La serialización de interoperabilidad es una actividad en tiempo de ejecución realizada por el servicio de serialización de Common Language Runtime.  
@@ -51,12 +49,12 @@ ms.lasthandoff: 01/19/2018
   
 -   Interoperabilidad COM, que permite al código administrado interactuar con modelos de objetos componentes (COM) a través de interfaces.  
   
- Tanto la invocación de plataforma como la interoperabilidad COM usan serialización de interoperabilidad para mover con precisión los argumentos de método desde el llamador al destinatario y viceversa, si es necesario. Como se muestra en la siguiente ilustración, una llamada al método de invocación de plataforma fluye desde el código administrado al no administrado y nunca en sentido contrario, excepto cuando hay [funciones de devolución de llamada](../../../docs/framework/interop/callback-functions.md) implicadas. Aunque las llamadas de invocación de plataforma solo pueden realizarse desde código administrado a código no administrado, los datos pueden fluir en ambas direcciones como parámetros de entrada o salida. Las llamadas a métodos de interoperabilidad COM pueden fluir en ambas direcciones.  
+ Tanto la invocación de plataforma como la interoperabilidad COM usan serialización de interoperabilidad para mover con precisión los argumentos de método desde el llamador al destinatario y viceversa, si es necesario. Como se muestra en la siguiente ilustración, una llamada al método de invocación de plataforma fluye desde el código administrado al no administrado y nunca en sentido contrario, excepto cuando hay [funciones de devolución de llamada](callback-functions.md) implicadas. Aunque las llamadas de invocación de plataforma solo pueden realizarse desde código administrado a código no administrado, los datos pueden fluir en ambas direcciones como parámetros de entrada o salida. Las llamadas a métodos de interoperabilidad COM pueden fluir en ambas direcciones.  
   
- ![Invocación de plataforma](../../../docs/framework/interop/media/interopmarshaling.png "interopmarshaling")  
+ ![Invocación de plataforma](./media/interopmarshaling.png "interopmarshaling")  
 Flujo de llamadas de invocación de plataforma e interoperabilidad COM  
   
- En el nivel más bajo, ambos mecanismos usan el mismo servicio de serialización de interoperabilidad; sin embargo, hay determinados tipos de datos que solo se admiten en la interoperabilidad COM o en la invocación de plataforma. Para obtener más información, vea [Comportamiento de serialización predeterminado](../../../docs/framework/interop/default-marshaling-behavior.md).  
+ En el nivel más bajo, ambos mecanismos usan el mismo servicio de serialización de interoperabilidad; sin embargo, hay determinados tipos de datos que solo se admiten en la interoperabilidad COM o en la invocación de plataforma. Para obtener más información, vea [Comportamiento de serialización predeterminado](default-marshaling-behavior.md).  
   
  [Volver al principio](#top)  
   
@@ -67,7 +65,7 @@ Flujo de llamadas de invocación de plataforma e interoperabilidad COM
  COM también dispone de un administrador de serialización que serializa datos entre apartamentos COM o diferentes procesos COM. Al realizar llamadas entre código administrado y no administrado en el mismo apartamento COM, el administrador de serialización de interoperabilidad es el único administrador de serialización implicado. Al realizar llamadas entre código administrado y código no administrado en un apartamento COM diferente o en un proceso diferente, están implicados tanto el administrador de serialización de interoperabilidad como el administrador de serialización de COM.  
   
 ### <a name="com-clients-and-managed-servers"></a>Clientes COM y servidores administrados  
- Un servidor administrado exportado con una biblioteca de tipos registrada por la [herramienta de registro de ensamblados (Regasm.exe)](../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md) tiene una entrada del Registro `ThreadingModel` establecida en `Both`. Este valor indica que el servidor puede activarse en un contenedor uniproceso (STA) o en un contenedor multiproceso (MTA). El objeto de servidor se crea en el mismo apartamento que su llamador, como se muestra en la tabla siguiente.  
+ Un servidor administrado exportado con una biblioteca de tipos registrada por la [herramienta de registro de ensamblados (Regasm.exe)](../tools/regasm-exe-assembly-registration-tool.md) tiene una entrada del Registro `ThreadingModel` establecida en `Both`. Este valor indica que el servidor puede activarse en un contenedor uniproceso (STA) o en un contenedor multiproceso (MTA). El objeto de servidor se crea en el mismo apartamento que su llamador, como se muestra en la tabla siguiente.  
   
 |Cliente COM|Servidor .NET|Requisitos de serialización|  
 |----------------|-----------------|-----------------------------|  
@@ -76,7 +74,7 @@ Flujo de llamadas de invocación de plataforma e interoperabilidad COM
   
  Dado que el cliente y el servidor están en el mismo apartamento, el servicio de serialización de interoperabilidad controla automáticamente toda la serialización de datos. La ilustración siguiente muestra cómo opera el servicio de serialización de interoperabilidad entre montones administrados y no administrados dentro del mismo apartamento de estilo COM.  
   
- ![Serialización de interoperabilidad](../../../docs/framework/interop/media/interopheap.gif "interopheap")  
+ ![Serialización de interoperabilidad](./media/interopheap.gif "interopheap")  
 Proceso de serialización en el mismo apartamento  
   
  Si planea exportar un servidor administrado, tenga en cuenta que el cliente COM determina el apartamento del servidor. Un servidor administrado llamado por un cliente COM inicializado en un MTA debe garantizar la seguridad de subprocesos.  
@@ -93,7 +91,7 @@ Proceso de serialización en el mismo apartamento
   
  Cuando un cliente administrado y un servidor no administrado están en el mismo apartamento, el servicio de serialización de interoperabilidad controla toda la serialización de datos. Sin embargo, cuando el cliente y el servidor se inicializan en apartamentos diferentes, también es necesaria la serialización de COM. La ilustración siguiente muestra los elementos de una llamada entre apartamentos.  
   
- ![Serialización COM](../../../docs/framework/interop/media/singleprocessmultapt.gif "singleprocessmultapt")  
+ ![Serialización COM](./media/singleprocessmultapt.gif "singleprocessmultapt")  
 Llamada entre apartamentos entre un cliente .NET y un objeto COM  
   
  Para una serialización entre apartamentos, puede hacer lo siguiente:  
@@ -105,7 +103,7 @@ Llamada entre apartamentos entre un cliente .NET y un objeto COM
     > [!NOTE]
     >  Una vez que se establece el subproceso de un cliente C# en STA, las llamadas a componentes COM de MTA requerirán la serialización entre apartamentos.  
   
- Para obtener instrucciones sobre cómo seleccionar explícitamente un modelo de contenedor, vea [Subprocesamiento administrado y no administrado](http://msdn.microsoft.com/library/db425c20-4b2f-4433-bf96-76071c7881e5).  
+ Para obtener instrucciones sobre cómo seleccionar explícitamente un modelo de contenedor, vea [Subprocesamiento administrado y no administrado](https://msdn.microsoft.com/library/db425c20-4b2f-4433-bf96-76071c7881e5(v=vs.100)).  
   
  [Volver al principio](#top)  
   
@@ -119,13 +117,13 @@ Llamada entre apartamentos entre un cliente .NET y un objeto COM
   
  En la ilustración siguiente se muestra cómo la serialización de interoperabilidad y la serialización de COM proporcionan canales de comunicación a través de procesos y límites de hosts.  
   
- ![Serialización COM](../../../docs/framework/interop/media/interophost.gif "interophost")  
+ ![Serialización COM](./media/interophost.gif "interophost")  
 Serialización entre procesos  
   
 ### <a name="preserving-identity"></a>Conservar la identidad  
  Common Language Runtime conserva la identidad de las referencias administradas y no administradas. En la siguiente ilustración se muestra el flujo de referencias directas no administradas (fila superior) y de referencias directas administradas (fila inferior) entre procesos y límites de hosts.  
   
- ![Contenedor CCW y contenedor RCW](../../../docs/framework/interop/media/interopdirectref.gif "interopdirectref")  
+ ![Contenedor CCW y contenedor RCW](./media/interopdirectref.gif "interopdirectref")  
 Paso de referencia entre límites de hosts y procesos  
   
  En esta ilustración:  
@@ -142,10 +140,10 @@ Paso de referencia entre límites de hosts y procesos
 ### <a name="managed-remoting"></a>Comunicación remota administrada  
  El runtime también proporciona comunicación remota administrada que puede usarse para establecer un canal de comunicaciones entre objetos administrados a través varios procesos y límites de hosts. La comunicación remota administrada puede alojar un firewall entre los componentes de la comunicación, como se muestra en la ilustración siguiente.  
   
- ![SOAP o TcpChannel](../../../docs/framework/interop/media/interopremotesoap.gif "interopremotesoap")  
+ ![SOAP o TcpChannel](./media/interopremotesoap.gif "interopremotesoap")  
 Llamadas remotas a través de firewalls que usan SOAP o la clase TcpChannel  
   
- Algunas llamadas no administradas pueden canalizarse mediante SOAP, como las llamadas entre [componentes con servicio](http://msdn.microsoft.com/library/f109ee24-81ad-4d99-9892-51ac6f34978c) y COM.  
+ Algunas llamadas no administradas pueden canalizarse mediante SOAP, como las llamadas entre componentes con servicio y COM.  
   
  [Volver al principio](#top)  
   
@@ -154,15 +152,15 @@ Llamadas remotas a través de firewalls que usan SOAP o la clase TcpChannel
   
 |Título|Descripción|  
 |-----------|-----------------|  
-|[Comportamiento predeterminado del cálculo de referencias](../../../docs/framework/interop/default-marshaling-behavior.md)|Describe las reglas que usa el servicio de serialización de interoperabilidad para serializar datos.|  
-|[Serialización de datos con invocación de plataforma](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md)|Describe cómo se declaran parámetros de método y se pasan argumentos a funciones exportadas por bibliotecas no administradas.|  
-|[Serialización de datos con la interoperabilidad COM](../../../docs/framework/interop/marshaling-data-with-com-interop.md)|Describe cómo se personalizan los contenedores COM para alterar el comportamiento de la serialización.|  
-|[Cómo: Migrar código administrado DCOM a WCF](../../../docs/framework/interop/how-to-migrate-managed-code-dcom-to-wcf.md)|Describe cómo se migra de DCOM a WCF.|  
-|[Asignar resultados HRESULT y excepciones](../../../docs/framework/interop/how-to-map-hresults-and-exceptions.md)|Describe cómo se asignan excepciones personalizadas a valores HRESULT y proporciona la asignación completa de cada HRESULT a su clase de excepción comparable en .NET Framework.|  
-|[Interoperar mediante tipos genéricos](http://msdn.microsoft.com/library/26b88e03-085b-4b53-94ba-a5a9c709ce58)|Describe qué acciones se admiten al usar tipos genéricos para la interoperabilidad COM.|  
-|[Interoperating with Unmanaged Code](../../../docs/framework/interop/index.md) (Interoperar con código no administrado)|Describe los servicios de interoperabilidad proporcionados por Common Language Runtime.|  
-|[Interoperabilidad COM avanzada](http://msdn.microsoft.com/library/3ada36e5-2390-4d70-b490-6ad8de92f2fb)|Proporciona vínculos a más información sobre la incorporación de componentes COM en una aplicación de .NET Framework.|  
-|[Consideraciones de diseño para interoperaciones](http://msdn.microsoft.com/library/b59637f6-fe35-40d6-ae72-901e7a707689)|Proporciona sugerencias para escribir componentes COM integrados.|  
+|[Comportamiento predeterminado del cálculo de referencias](default-marshaling-behavior.md)|Describe las reglas que usa el servicio de serialización de interoperabilidad para serializar datos.|  
+|[Serialización de datos con invocación de plataforma](marshaling-data-with-platform-invoke.md)|Describe cómo se declaran parámetros de método y se pasan argumentos a funciones exportadas por bibliotecas no administradas.|  
+|[Serialización de datos con la interoperabilidad COM](marshaling-data-with-com-interop.md)|Describe cómo se personalizan los contenedores COM para alterar el comportamiento de la serialización.|  
+|[Cómo: Migrar código administrado DCOM a WCF](how-to-migrate-managed-code-dcom-to-wcf.md)|Describe cómo se migra de DCOM a WCF.|  
+|[Asignar resultados HRESULT y excepciones](how-to-map-hresults-and-exceptions.md)|Describe cómo se asignan excepciones personalizadas a valores HRESULT y proporciona la asignación completa de cada HRESULT a su clase de excepción comparable en .NET Framework.|  
+|[Interoperar mediante tipos genéricos](https://msdn.microsoft.com/library/26b88e03-085b-4b53-94ba-a5a9c709ce58(v=vs.100))|Describe qué acciones se admiten al usar tipos genéricos para la interoperabilidad COM.|  
+|[Interoperating with Unmanaged Code](index.md) (Interoperar con código no administrado)|Describe los servicios de interoperabilidad proporcionados por Common Language Runtime.|  
+|[Interoperabilidad COM avanzada](https://msdn.microsoft.com/library/3ada36e5-2390-4d70-b490-6ad8de92f2fb(v=vs.100))|Proporciona vínculos a más información sobre la incorporación de componentes COM en una aplicación de .NET Framework.|  
+|[Consideraciones de diseño para interoperaciones](https://msdn.microsoft.com/library/b59637f6-fe35-40d6-ae72-901e7a707689(v=vs.100))|Proporciona sugerencias para escribir componentes COM integrados.|  
   
  [Volver al principio](#top)  
   

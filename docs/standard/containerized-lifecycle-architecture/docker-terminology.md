@@ -1,18 +1,18 @@
 ---
-title: "Terminología de Docker"
+title: Terminología de Docker
 description: Ciclo de vida de aplicaciones de Docker en contenedor con la plataforma y las herramientas de Microsoft
-keywords: Docker, microservicios, ASP.NET, contenedor
+ms.prod: .net
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/21/2017
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: a622b2949c1d2277bb3e82617a5bc2d8cb432263
-ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
+ms.openlocfilehash: 853474a18e5c7253b88db7fb651ee447242bb9f2
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="docker-terminology"></a>Terminología de Docker
 
@@ -50,4 +50,4 @@ Esta sección enumeran términos y definiciones con la que debería familiarizar
 
 
 >[!div class="step-by-step"]
-[Previous] (what-is-docker.md) [Next] (docker-containers-images-and-registries.md)
+[Anterior] (what-es-docker.md) [siguiente] (docker-contenedores-imágenes-y-registries.md)

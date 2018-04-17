@@ -1,18 +1,18 @@
 ---
 title: Introducción a la plataforma y las herramientas de Microsoft para aplicaciones en contenedor
 description: Ciclo de vida de aplicaciones de Docker en contenedor con la plataforma y las herramientas de Microsoft
-keywords: Docker, microservicios, ASP.NET, contenedor
+ms.prod: .net
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/21/2017
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: a24f57216130a42eb11ef44abe462d4955601fdb
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 2e9bc95ed7bfdb4351f8fa2de280c96288905515
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="introduction-to-the-microsoft-platform-and-tools-for-containerized-apps"></a>Introducción a la plataforma y las herramientas de Microsoft para aplicaciones en contenedor
 
@@ -29,7 +29,7 @@ En la tabla 3-1 se muestra que la intención de las operaciones de DevOps de Mic
 
 Tabla 3-1: Flujo de trabajo de DevOps abierto para cualquier tecnología
 
-| Host | Tecnologías de Microsoft | Aplicaciones de terceros: acoplables a Azure |
+| administrador de flujos de trabajo | Tecnologías de Microsoft | Aplicaciones de terceros: acoplables a Azure |
 | ---------------------------| ----------------------------------------------------| --------------------------------------------------------------------------------|
 | Plataforma para aplicaciones de Docker   | • Microsoft Visual Studio y Visual Studio Code<br /> • .NET<br /> • Microsoft Azure Container Service<br /> • Azure Service Fabric<br /> • Azure Container Registry<br /> | • Cualquier editor de código (por ejemplo, Sublime)<br /> • Cualquier lenguaje (Node.js, Java, Go, etc.)<br /> • Cualquier orquestrator y programador<br /> • Cualquier registro de Docker<br /> |
 | DevOps para aplicaciones de Docker     | • Visual Studio Team Services<br /> • Microsoft Team Foundation Server<br /> • Azure Container Service<br /> • Azure Service Fabric<br /> | • GitHub, Git, Subversion, etc.<br /> • Jenkins, Chef, Puppet, Velocity, CircleCI, TravisCI, etc.<br /> • Centro de datos de Docker local, Docker Swarm, Mesos DC/OS, Kubernetes, etc.<br /> |

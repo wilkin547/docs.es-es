@@ -1,12 +1,9 @@
 ---
-title: "Cómo: Configurar componentes COM basados en .NET Framework para la activación sin registro"
-ms.custom: 
+title: 'Cómo: Configurar componentes COM basados en .NET Framework para la activación sin registro'
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.technology:
+- dotnet-clr
 ms.topic: article
 helpviewer_keywords:
 - components [.NET Framework], manifest
@@ -15,16 +12,16 @@ helpviewer_keywords:
 - registration-free COM interop, configuring .NET-based components
 - activation, registration-free
 ms.assetid: 32f8b7c6-3f73-455d-8e13-9846895bd43b
-caps.latest.revision: "16"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: fdae288650a0ff7b1a34b3a38a231d3da6caf560
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 8b97f73e93ad0ef8d9def596361ac68e93ae5e6e
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-configure-net-framework-based-com-components-for-registration-free-activation"></a>Cómo: Configurar componentes COM basados en .NET Framework para la activación sin registro
 La activación sin registro de los componentes de .NET Framework solo es un poco más complicada que la de los componentes COM. La configuración requiere dos manifiestos:  
@@ -133,7 +130,7 @@ La activación sin registro de los componentes de .NET Framework solo es un poco
     <assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">  
            <assemblyIdentity  
                         name="myOrganization.myDivision.myManagedComp"  
-                        version="1.2.3.4" />  
+                        version="1.2.3.4"   
                         publicKeyToken="8275b28176rcbbef"  
            />  
            <clrClass  
@@ -182,7 +179,7 @@ La activación sin registro de los componentes de .NET Framework solo es un poco
      Una vez más, `myresource.res` es el nombre del archivo de recursos que contiene el recurso incrustado.  
   
 ## <a name="see-also"></a>Vea también  
- [Interoperabilidad COM sin registro](../../../docs/framework/interop/registration-free-com-interop.md)  
- [Requisitos para interoperabilidad COM sin registro](http://msdn.microsoft.com/library/0c43bc57-eecf-4e6c-8114-490141cce4da)  
- [Configurar componentes COM para activación sin registro](http://msdn.microsoft.com/library/bfe9b02f-d964-4784-960e-a1f94692fbfe)  
- [Registration-Free Activation of .NET-Based Components: A Walkthrough](http://go.microsoft.com/fwlink/?LinkId=158812) (Tutorial: Activación sin registro de componentes basados en .NET)
+ [Interoperabilidad COM sin registro](registration-free-com-interop.md)  
+ [Requisitos para interoperabilidad COM sin registro](https://msdn.microsoft.com/library/0c43bc57-eecf-4e6c-8114-490141cce4da(v=vs.100)))  
+ [Configurar componentes COM para activación sin registro](https://msdn.microsoft.com/library/bfe9b02f-d964-4784-960e-a1f94692fbfe(v=vs.100)))  
+ [Registration-Free Activation of .NET-Based Components: A Walkthrough](https://msdn.microsoft.com/library/ms973915.aspx) (Tutorial: Activación sin registro de componentes basados en .NET)

@@ -1,13 +1,9 @@
 ---
 title: Compilar un proyecto de interoperabilidad
-ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - interoperation with unmanaged code, compiling
@@ -17,17 +13,16 @@ helpviewer_keywords:
 - interoperation with unmanaged code, exposing COM components
 - COM interop, exposing COM components
 ms.assetid: 6fcf6588-5e25-41af-b4ae-780974f2c3df
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 8115df3159b715fbd01a15621c391cbe35612dfe
-ms.sourcegitcommit: d95a91d685565f4d95c8773b558752864a6a3d7e
+ms.openlocfilehash: f64300e2f00eea788fcea9bd607af815cbea611d
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="compiling-an-interop-project"></a>Compilar un proyecto de interoperabilidad
 Los proyectos de interoperabilidad COM que hacen referencia a uno o más ensamblados que contienen tipos COM importados se compilan como cualquier otro proyecto administrado. Puede hacer referencia a ensamblados de interoperabilidad en un entorno de desarrollo como Visual Studio, o hacer referencia a ellos cuando se usa un compilador de línea de comandos. En cualquier caso, para compilar correctamente, el ensamblado de interoperabilidad debe estar en el mismo directorio que los demás archivos del proyecto.  
@@ -40,9 +35,9 @@ Los proyectos de interoperabilidad COM que hacen referencia a uno o más ensambl
   
  Las diferencias entre estas dos técnicas se explican con más detalle en [Usar tipos COM en código administrado](https://msdn.microsoft.com/library/1a95a8ca-c8b8-4464-90b0-5ee1a1135b66(v=vs.100)).  
   
- Insertar tipos de interoperabilidad con Visual Studio se muestra en [Tutorial: Insertar información de tipos de los ensamblados de Microsoft Office (C# y Visual Basic)](http://msdn.microsoft.com/library/85b55e05-bc5e-4665-b6ae-e1ada9299fd3) y [Tutorial: Insertar los tipos de los ensamblados administrados (C# y Visual Basic)](http://msdn.microsoft.com/library/b28ec92c-1867-4847-95c0-61adfe095e21).  
+ Insertar tipos de interoperabilidad con Visual Studio se muestra en [Tutorial: Insertar información de tipos de los ensamblados de Microsoft Office (C# y Visual Basic)](https://msdn.microsoft.com/library/85b55e05-bc5e-4665-b6ae-e1ada9299fd3(v=vs.100)) y [Tutorial: Insertar los tipos de los ensamblados administrados (C# y Visual Basic)](https://msdn.microsoft.com/library/b28ec92c-1867-4847-95c0-61adfe095e21).  
   
- Para hacer referencia a un ensamblado de interoperabilidad con un compilador de línea de comandos e insertar información de tipos en los archivos ejecutables, use el modificador del compilador [/link (opciones del compilador de C#)](~/docs/csharp/language-reference/compiler-options/link-compiler-option.md) o [/link (Visual Basic)](~/docs/visual-basic/reference/command-line-compiler/link.md), y especifique el nombre del ensamblado de interoperabilidad.  
+ Para hacer referencia a un ensamblado de interoperabilidad con un compilador de línea de comandos e insertar información de tipos en los archivos ejecutables, use el modificador del compilador [/link (opciones del compilador de C#)](../../csharp/language-reference/compiler-options/link-compiler-option.md) o [/link (Visual Basic)](../../visual-basic/reference/command-line-compiler/link.md), y especifique el nombre del ensamblado de interoperabilidad.  
   
 > [!NOTE]
 >  Las aplicaciones de Visual C++ no pueden insertar información de tipos, pero pueden interoperar con aplicaciones o complementos que lo hagan.  
@@ -50,9 +45,9 @@ Los proyectos de interoperabilidad COM que hacen referencia a uno o más ensambl
  Para compilar una aplicación que incluye un ensamblado de interoperabilidad primario cuando se implementa, use el modificador del compilador **/reference** y especifique el nombre del ensamblado de interoperabilidad.  
   
 ## <a name="see-also"></a>Vea también  
- [Exponer componentes COM en .NET Framework](../../../docs/framework/interop/exposing-com-components.md)  
- [Independencia del lenguaje y componentes independientes del lenguaje](../../../docs/standard/language-independence-and-language-independent-components.md)  
+ [Exponer componentes COM en .NET Framework](exposing-com-components.md)  
+ [Independencia del lenguaje y componentes independientes del lenguaje](../../standard/language-independence-and-language-independent-components.md)  
  [Utilizar tipos COM en código administrado](https://msdn.microsoft.com/library/1a95a8ca-c8b8-4464-90b0-5ee1a1135b66(v=vs.100))  
- [Tutorial: Incrustación de información de tipos de los ensamblados de Microsoft Office](http://msdn.microsoft.com/library/85b55e05-bc5e-4665-b6ae-e1ada9299fd3)  
- [Tutorial: Incrustación de los tipos de los ensamblados administrados](http://msdn.microsoft.com/library/b28ec92c-1867-4847-95c0-61adfe095e21)  
- [Importar una biblioteca de tipos como un ensamblado](../../../docs/framework/interop/importing-a-type-library-as-an-assembly.md)
+ [Tutorial: Incrustación de información de tipos de los ensamblados de Microsoft Office](https://msdn.microsoft.com/library/85b55e05-bc5e-4665-b6ae-e1ada9299fd3(v=vs.100))  
+ [Tutorial: Incrustación de los tipos de los ensamblados administrados](https://msdn.microsoft.com/library/b28ec92c-1867-4847-95c0-61adfe095e21)  
+ [Importar una biblioteca de tipos como un ensamblado](importing-a-type-library-as-an-assembly.md)

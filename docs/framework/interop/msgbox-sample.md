@@ -1,12 +1,9 @@
 ---
 title: Ejemplo MsgBox
-ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.technology:
+- dotnet-clr
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,16 +13,16 @@ helpviewer_keywords:
 - marshaling, MsgBox sample
 - data marshaling, MsgBox sample
 ms.assetid: 9e0edff6-cc0d-4d5c-a445-aecf283d9c3a
-caps.latest.revision: "14"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0b14ee9c435d36e8d6a49cbfb29a57365bcd42d6
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 26c72ee918db48bcbdf0ce912e12d20a0719f85b
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="msgbox-sample"></a>Ejemplo MsgBox
 En este ejemplo se muestra cómo pasar tipos de cadena por valor como parámetros In y cuándo utilizar los campos <xref:System.Runtime.InteropServices.DllImportAttribute.EntryPoint>, <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet> y <xref:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling>.  
@@ -41,7 +38,7 @@ En este ejemplo se muestra cómo pasar tipos de cadena por valor como parámetro
   
  En este ejemplo, la clase `LibWrap` contiene un prototipo administrado para cada función no administrada a la que se llama desde la clase `MsgBoxSample`. Los métodos de prototipo administrados `MsgBox`, `MsgBox2` y `MsgBox3` tienen declaraciones diferentes para la misma función no administrada.  
   
- La declaración para `MsgBox2` produce una salida incorrecta en el cuadro de mensaje porque el tipo de caracteres, especificado como ANSI, no corresponde con el punto de entrada `MessageBoxW`, que es el nombre de la función Unicode. La declaración de `MsgBox3` genera una falta de coincidencia entre los campos **EntryPoint**, **CharSet** y **ExactSpelling**. Al llamar a `MsgBox3`, se produce una excepción. Para obtener información detallada sobre los nombres de cadena y la serialización de nombres, vea [Especificar un juego de caracteres](../../../docs/framework/interop/specifying-a-character-set.md).  
+ La declaración para `MsgBox2` produce una salida incorrecta en el cuadro de mensaje porque el tipo de caracteres, especificado como ANSI, no corresponde con el punto de entrada `MessageBoxW`, que es el nombre de la función Unicode. La declaración de `MsgBox3` genera una falta de coincidencia entre los campos **EntryPoint**, **CharSet** y **ExactSpelling**. Al llamar a `MsgBox3`, se produce una excepción. Para obtener información detallada sobre los nombres de cadena y la serialización de nombres, vea [Especificar un juego de caracteres](specifying-a-character-set.md).  
   
 ## <a name="declaring-prototypes"></a>Declaración de prototipos  
  [!code-cpp[Conceptual.Interop.Marshaling#5](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.interop.marshaling/cpp/msgbox.cpp#5)]
@@ -54,8 +51,8 @@ En este ejemplo se muestra cómo pasar tipos de cadena por valor como parámetro
  [!code-vb[Conceptual.Interop.Marshaling#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.interop.marshaling/vb/msgbox.vb#6)]  
   
 ## <a name="see-also"></a>Vea también  
- [Serialización de cadenas](../../../docs/framework/interop/marshaling-strings.md)  
- [Tipos de datos de invocación de plataforma](http://msdn.microsoft.com/library/16014d9f-d6bd-481e-83f0-df11377c550f)  
- [Serialización predeterminada para cadenas](../../../docs/framework/interop/default-marshaling-for-strings.md)  
- [Crear prototipos en código administrado](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)  
- [Especificar un juego de caracteres](../../../docs/framework/interop/specifying-a-character-set.md)
+ [Serialización de cadenas](marshaling-strings.md)  
+ [Tipos de datos de invocación de plataforma](https://msdn.microsoft.com/library/16014d9f-d6bd-481e-83f0-df11377c550f(v=vs.100))  
+ [Serialización predeterminada para cadenas](default-marshaling-for-strings.md)  
+ [Crear prototipos en código administrado](creating-prototypes-in-managed-code.md)  
+ [Especificar un juego de caracteres](specifying-a-character-set.md)

@@ -1,13 +1,9 @@
 ---
 title: Comportamiento de serialización predeterminado
-ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -17,17 +13,16 @@ helpviewer_keywords:
 - interoperation with unmanaged code, marshaling
 - marshaling behavior
 ms.assetid: c0a9bcdf-3df8-4db3-b1b6-abbdb2af809a
-caps.latest.revision: 15
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: f0a8fcba31ddfa09ca60f8ba6cf08d20b270c3da
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: 7d653e6bd82a897d1fe8591f263a12f4c3a67abf
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="default-marshaling-behavior"></a>Comportamiento de serialización predeterminado
 La serialización de interoperabilidad funciona con reglas que dictan cómo se comportan los datos asociados con parámetros de método cuando pasan entre memoria administrada y no administrada. Estas reglas integradas controlan las actividades de serialización como transformaciones de tipos de datos, si un destinatario puede cambiar los datos que recibe y devolver esos cambios al llamador, y en qué circunstancias el serializador proporciona optimizaciones de rendimiento.  
@@ -52,10 +47,10 @@ BSTR MethodOne (BSTR b) {
   
  Sin embargo, si define el método como un prototipo de invocación de plataforma, reemplaza cada tipo **BSTR** por un tipo <xref:System.String> y llama a `MethodOne`, Common Language Runtime intenta liberar `b` dos veces. Puede cambiar el comportamiento de serialización mediante tipos <xref:System.IntPtr> en lugar de tipos **String**.  
   
- El tiempo de ejecución usa siempre el método **CoTaskMemFree** para liberar memoria. Si la memoria con la que está trabajando no se asignó con el método **CoTaskMemAlloc**, debe usar un **IntPtr** y liberar la memoria manualmente mediante el método adecuado. De forma similar, puede evitar la liberación automática de la memoria en situaciones donde nunca se debería liberar, como al usar la función **GetCommandLine** de Kernel32.dll, que devuelve un puntero a la memoria del kernel. Para obtener más información sobre cómo liberar memoria manualmente, vea el [ejemplo sobre búferes](http://msdn.microsoft.com/library/e30d36e8-d7c4-4936-916a-8fdbe4d9ffd5).  
+ El tiempo de ejecución usa siempre el método **CoTaskMemFree** para liberar memoria. Si la memoria con la que está trabajando no se asignó con el método **CoTaskMemAlloc**, debe usar un **IntPtr** y liberar la memoria manualmente mediante el método adecuado. De forma similar, puede evitar la liberación automática de la memoria en situaciones donde nunca se debería liberar, como al usar la función **GetCommandLine** de Kernel32.dll, que devuelve un puntero a la memoria del kernel. Para obtener más información sobre cómo liberar memoria manualmente, vea el [ejemplo sobre búferes](http://msdn.microsoft.com/library/e30d36e8-d7c4-4936-916a-8fdbe4d9ffd5(v=vs.100)).  
   
 ## <a name="default-marshaling-for-classes"></a>Serialización predeterminada para clases  
- Las clases solo se pueden serializar con la interoperabilidad COM y siempre se serializan como interfaces. En algunos casos, la interfaz usada para serializar la clase se conoce como interfaz de clase. Para obtener información sobre cómo reemplazar la interfaz de clase por una interfaz de su elección, vea [Presentar la interfaz de clase](http://msdn.microsoft.com/library/733c0dd2-12e5-46e6-8de1-39d5b25df024).  
+ Las clases solo se pueden serializar con la interoperabilidad COM y siempre se serializan como interfaces. En algunos casos, la interfaz usada para serializar la clase se conoce como interfaz de clase. Para obtener información sobre cómo reemplazar la interfaz de clase con una interfaz de su elección, vea [Introducción a la interfaz de clase](com-callable-wrapper.md#introducing-the-class-interface).  
   
 ### <a name="passing-classes-to-com"></a>Pasar clases a COM  
  Cuando una clase administrada se pasa a COM, el serializador de interoperabilidad automáticamente encapsula la clase con un proxy COM y pasa la interfaz de clase generada por el proxy a la llamada de método COM. El proxy delega entonces todas las llamadas en la interfaz de clase al objeto administrado. El proxy también expone otras interfaces que no están implementadas explícitamente por la clase. El proxy implementa automáticamente interfaces como **IUnknown** e **IDispatch** en nombre de la clase.  
@@ -171,7 +166,7 @@ internal class DelegateTest {
 ```  
   
 ## <a name="default-marshaling-for-value-types"></a>Serialización predeterminada para tipos de valor  
- La mayoría de los tipos de valor, como enteros y números de punto flotante, [pueden transferirse en bloque de bits](../../../docs/framework/interop/blittable-and-non-blittable-types.md) y no requieren serialización. Otros tipos que [no pueden transferirse en bloque de bits](../../../docs/framework/interop/blittable-and-non-blittable-types.md) tienen representaciones distintas en memoria administrada y no administrada, y requieren serialización. Hay también otros tipos que requieren un formato explícito en el límite de interoperación.  
+ La mayoría de los tipos de valor, como enteros y números de punto flotante, [pueden transferirse en bloque de bits](blittable-and-non-blittable-types.md) y no requieren serialización. Otros tipos que [no pueden transferirse en bloque de bits](blittable-and-non-blittable-types.md) tienen representaciones distintas en memoria administrada y no administrada, y requieren serialización. Hay también otros tipos que requieren un formato explícito en el límite de interoperación.  
   
  En este tema se proporciona la siguiente información sobre tipos de valor con formato:  
   
@@ -450,8 +445,8 @@ interface IValueTypes : IDispatch {
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Tipos que pueden o que no pueden transferirse en bloque de bits](../../../docs/framework/interop/blittable-and-non-blittable-types.md)  
- [Copiar y fijar](../../../docs/framework/interop/copying-and-pinning.md)  
- [Serialización predeterminada para matrices](../../../docs/framework/interop/default-marshaling-for-arrays.md)  
- [Serialización predeterminada para objetos](../../../docs/framework/interop/default-marshaling-for-objects.md)  
- [Serialización predeterminada para cadenas](../../../docs/framework/interop/default-marshaling-for-strings.md)
+ [Tipos que pueden o que no pueden transferirse en bloque de bits](blittable-and-non-blittable-types.md)  
+ [Copiar y fijar](copying-and-pinning.md)  
+ [Serialización predeterminada para matrices](default-marshaling-for-arrays.md)  
+ [Serialización predeterminada para objetos](default-marshaling-for-objects.md)  
+ [Serialización predeterminada para cadenas](default-marshaling-for-strings.md)

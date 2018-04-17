@@ -1,12 +1,9 @@
 ---
-title: "Cálculo de referencias predeterminado para cadenas"
-ms.custom: 
+title: Cálculo de referencias predeterminado para cadenas
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.technology:
+- dotnet-clr
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,16 +12,16 @@ helpviewer_keywords:
 - strings, interop marshaling
 - interop marshaling, strings
 ms.assetid: 9baea3ce-27b3-4b4f-af98-9ad0f9467e6f
-caps.latest.revision: "18"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3d219ad68d125e2b90197fc7703ccfc0a1c857d2
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 10f2c0e0e61190f571ae5bd4998f54d128448296
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="default-marshaling-for-strings"></a>Serialización predeterminada para cadenas
 Las clases <xref:System.String?displayProperty=nameWithType> y <xref:System.Text.StringBuilder?displayProperty=nameWithType> tienen un comportamiento de cálculo de referencias similar.  
@@ -41,7 +38,8 @@ Las clases <xref:System.String?displayProperty=nameWithType> y <xref:System.Text
   
 -   [Búferes de cadenas de longitud fija](#cpcondefaultmarshalingforstringsanchor3)  
   
-<a name="cpcondefaultmarshalingforstringsanchor1"></a>   
+<a name="cpcondefaultmarshalingforstringsanchor1"></a>
+
 ## <a name="strings-used-in-interfaces"></a>Cadenas usadas en interfaces  
  En la siguiente tabla se muestran las opciones de cálculo de referencias para el tipo de datos de cadena cuando las referencias se calculan como un argumento de método a código no administrado. El atributo <xref:System.Runtime.InteropServices.MarshalAsAttribute> proporciona varios valores de enumeración <xref:System.Runtime.InteropServices.UnmanagedType> para calcular referencias de cadenas a interfaces COM.  
   
@@ -65,12 +63,12 @@ void PassStringRef1(ref String s);
 void PassStringRef2([MarshalAs(UnmanagedType.BStr)]ref String s);  
 void PassStringRef3([MarshalAs(UnmanagedType.LPStr)]ref String s);  
 void PassStringRef4([MarshalAs(UnmanagedType.LPWStr)]ref String s);  
-);  
-```  
-  
- En el ejemplo siguiente se muestra la interfaz correspondiente descrita en una biblioteca de tipos.  
-  
-```  
+);
+```
+
+En el ejemplo siguiente se muestra la interfaz correspondiente descrita en una biblioteca de tipos.
+
+```
 […]  
 interface IStringWorker : IDispatch {  
 HRESULT PassString1([in] BSTR s);  
@@ -81,10 +79,11 @@ HRESULT PassStringRef1([in, out] BSTR *s);
 HRESULT PassStringRef2([in, out] BSTR *s);  
 HRESULT PassStringRef3([in, out] LPStr *s);  
 HRESULT PassStringRef4([in, out] LPWStr *s);  
-);  
-```  
-  
-<a name="cpcondefaultmarshalingforstringsanchor5"></a>   
+);
+```
+
+<a name="cpcondefaultmarshalingforstringsanchor5"></a>
+
 ## <a name="strings-used-in-platform-invoke"></a>Cadenas usadas en la plataforma de invocación  
  La invocación de plataforma copia los argumentos de cadena y los convierte del formato de .NET Framework (Unicode) al formato no administrado de la plataforma. Las cadenas son inmutables y no se vuelven a copiar desde la memoria no administrada a la memoria administrada cuando finaliza la llamada.  
   
@@ -119,9 +118,9 @@ Public Declare Auto Sub PassAnsiBStr Lib "StringLib.Dll" _
 Public Declare Auto Sub PassTBStr Lib "StringLib.Dll" _  
 (<MarshalAs(UnmanagedType.TBStr)> s As String)  
 End Class  
-```  
-  
-```csharp  
+```
+
+```csharp
 class StringLibAPI {  
 [DllImport("StringLib.Dll")]  
 public static extern void PassLPStr([MarshalAs(UnmanagedType.LPStr)]  
@@ -162,7 +161,7 @@ String s);
   
 ### <a name="type-library-representation"></a>Representación de la biblioteca de tipos  
   
-```  
+```
 struct StringInfoA {  
    char *    f1;  
    char      f2[256];  
@@ -271,7 +270,7 @@ public class Window {
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Comportamiento predeterminado del cálculo de referencias](../../../docs/framework/interop/default-marshaling-behavior.md)  
- [Tipos que pueden o que no pueden transferirse en bloque de bits](../../../docs/framework/interop/blittable-and-non-blittable-types.md)  
- [Atributos direccionales](http://msdn.microsoft.com/library/241ac5b5-928e-4969-8f58-1dbc048f9ea2)  
- [Copiar y fijar](../../../docs/framework/interop/copying-and-pinning.md)
+ [Comportamiento predeterminado del cálculo de referencias](default-marshaling-behavior.md)  
+ [Tipos que pueden o que no pueden transferirse en bloque de bits](blittable-and-non-blittable-types.md)  
+ [Atributos direccionales](https://msdn.microsoft.com/library/241ac5b5-928e-4969-8f58-1dbc048f9ea2(v=vs.100))  
+ [Copiar y fijar](copying-and-pinning.md)
