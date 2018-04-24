@@ -1,1 +1,0 @@
-mapa de bits independiente de dispositivo (DIB)

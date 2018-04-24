@@ -1,1 +1,0 @@
-Aplicación del explorador XAML (XBAP)

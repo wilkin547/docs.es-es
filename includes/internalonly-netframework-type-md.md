@@ -1,1 +1,0 @@
-Este tipo admite la infraestructura de .NET Framework y no está prevista su utilización directa desde el código.

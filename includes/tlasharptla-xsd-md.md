@@ -1,1 +1,0 @@
-Definición de esquema XML (XSD)

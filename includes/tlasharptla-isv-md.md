@@ -1,1 +1,0 @@
-proveedor de software independiente (ISV)
