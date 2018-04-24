@@ -1,0 +1,1 @@
+Este miembro es compatible con la infraestructura de .NET Framework y no debe utilizarse directamente desde el código.

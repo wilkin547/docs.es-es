@@ -1,0 +1,1 @@
+Para las transformaciones de matriz, las instancias de <xref:System.Numerics.Vector2>, <xref:System.Numerics.Vector3> y <xref:System.Numerics.Vector4> se representan como filas: un vector *v* se transforma mediante una matriz *M* con multiplicación *vM*.
