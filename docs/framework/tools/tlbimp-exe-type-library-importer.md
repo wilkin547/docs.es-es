@@ -1,12 +1,9 @@
 ---
 title: TlbImp.exe (Importador de la biblioteca de tipos)
-ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.suite: 
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - type libraries [.NET Framework], importing
@@ -22,16 +19,16 @@ ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 2eb29c82b21088f4bfe4752d70b927ca048c875b
-ms.sourcegitcommit: 1c0b0f082b3f300e54b4d069b317ac724c88ddc3
+ms.openlocfilehash: 9591c9ced836a98c5843f5fb53809903f72c73f3
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="tlbimpexe-type-library-importer"></a>TlbImp.exe (Importador de la biblioteca de tipos)
-El Importador de la biblioteca de tipos convierte las definiciones de tipos encontradas en una biblioteca de tipos COM en las definiciones equivalentes en un ensamblado de Common Language Runtime. El resultado de Tlbimp.exe es un archivo binario (un ensamblado) que contiene los metadatos en tiempo de ejecución para los tipos definidos en la biblioteca de tipos original. Este archivo se puede examinar con herramientas como [Ildasm.exe](../../../docs/framework/tools/ildasm-exe-il-disassembler.md).  
+El Importador de la biblioteca de tipos convierte las definiciones de tipos encontradas en una biblioteca de tipos COM en las definiciones equivalentes en un ensamblado de Common Language Runtime. El resultado de Tlbimp.exe es un archivo binario (un ensamblado) que contiene los metadatos en tiempo de ejecución para los tipos definidos en la biblioteca de tipos original. Este archivo se puede examinar con herramientas como [Ildasm.exe](ildasm-exe-il-disassembler.md).  
   
- Esta herramienta se instala automáticamente con Visual Studio. Para ejecutar la herramienta, utilice el Símbolo del sistema para desarrolladores (o el Símbolo del sistema de Visual Studio en Windows 7). Para más información, consulte [Símbolos del sistema](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
+ Esta herramienta se instala automáticamente con Visual Studio. Para ejecutar la herramienta, utilice el Símbolo del sistema para desarrolladores (o el Símbolo del sistema de Visual Studio en Windows 7). Para más información, consulte [Símbolos del sistema](developer-command-prompt-for-vs.md).  
   
  En el símbolo del sistema, escriba lo siguiente:  
   
@@ -52,7 +49,7 @@ tlbimp tlbFile [options]
 |**/asmversion:** *númeroVersión*|Especifica el número de versión del ensamblado que se genera. Especifique *númeroVersión* con el formato *principal.secundaria.compilación.revisión*.|  
 |**/company:** `companyinformation`|Agrega información de la compañía al ensamblado de salida.|  
 |**/copyright:** `copyrightinformation`|Agrega información de copyright al ensamblado de salida. Esta información se puede ver en el cuadro de diálogo **Propiedades del archivo** del ensamblado.|  
-|**/delaysign**|Indica a la herramienta Tlbimp.exe que firme el ensamblado resultante con un nombre seguro mediante la firma retardada. Esta opción se debe especificar con las opciones **/keycontainer:**, **/keyfile:** o **/publickey:**. Para obtener más información sobre el proceso de firma retardada, vea [Retrasar la firma de un ensamblado](../../../docs/framework/app-domains/delay-sign-assembly.md).|  
+|**/delaysign**|Indica a la herramienta Tlbimp.exe que firme el ensamblado resultante con un nombre seguro mediante la firma retardada. Esta opción se debe especificar con las opciones **/keycontainer:**, **/keyfile:** o **/publickey:**. Para obtener más información sobre el proceso de firma retardada, vea [Retrasar la firma de un ensamblado](../app-domains/delay-sign-assembly.md).|  
 |**/help**|Muestra las opciones y la sintaxis de los comandos para la herramienta.|  
 |**/keycontainer:** *nombreContenedor*|Firma el ensamblado resultante con un nombre seguro utilizando el par de claves pública y privada que se encuentra en el contenedor de claves especificado mediante *nombreContenedor*.|  
 |**/keyfile:** *nombreArchivo*|Firma el ensamblado resultante con un nombre seguro utilizando el par de claves pública y privada oficial del editor que se encuentra en *nombreArchivo*.|  
@@ -61,10 +58,10 @@ tlbimp tlbFile [options]
 |**/noclassmembers**|Evita que Tlbimp.exe agregue miembros a las clases. Esto evita una posible excepción <xref:System.TypeLoadException>.|  
 |**/nologo**|Suprime la presentación de la portada de inicio de Microsoft.|  
 |**/out:** *nombreArchivo*|Especifica el nombre del archivo de salida, el ensamblado y el espacio de nombres en el que se escriben las definiciones de los metadatos. La opción **/out** no afecta al espacio de nombres del ensamblado si la biblioteca de tipos especifica el atributo personalizado de lenguaje de definición de interfaz (IDL) que controla explícitamente el espacio de nombres del ensamblado. Si no se especifica esta opción, Tlbimp.exe escribe los metadatos en un archivo con el mismo nombre que la biblioteca de tipos real definida en el archivo de entrada y le asigna una extensión .dll. Si el archivo de salida tiene el mismo nombre que el archivo de entrada, la herramienta genera un error para evitar que se sobrescriba la biblioteca de tipos.|  
-|**/primary**|Genera un ensamblado de interoperabilidad primario para la biblioteca de tipos especificada. La información se agrega al ensamblado indicando que se ha generado con el editor de la biblioteca de tipos. Al especificar un ensamblado de interoperabilidad primario, es posible diferenciar el ensamblado de un editor de otros ensamblados creados desde la biblioteca de tipos mediante Tlbimp.exe. Solo debería utilizar la opción **/primary** si es el editor de la biblioteca de tipos que va a importar con Tlbimp.exe. Tenga en cuenta que debe firmar un ensamblado de interoperabilidad primario con un [nombre seguro](../../../docs/framework/app-domains/strong-named-assemblies.md). Para obtener más información, vea [Ensamblados de interoperabilidad primarios](https://msdn.microsoft.com/library/b977a8be-59a0-40a0-a806-b11ffba5c080(v=vs.100)).|  
+|**/primary**|Genera un ensamblado de interoperabilidad primario para la biblioteca de tipos especificada. La información se agrega al ensamblado indicando que se ha generado con el editor de la biblioteca de tipos. Al especificar un ensamblado de interoperabilidad primario, es posible diferenciar el ensamblado de un editor de otros ensamblados creados desde la biblioteca de tipos mediante Tlbimp.exe. Solo debería utilizar la opción **/primary** si es el editor de la biblioteca de tipos que va a importar con Tlbimp.exe. Tenga en cuenta que debe firmar un ensamblado de interoperabilidad primario con un [nombre seguro](../app-domains/strong-named-assemblies.md). Para obtener más información, vea [Ensamblados de interoperabilidad primarios](https://msdn.microsoft.com/library/b977a8be-59a0-40a0-a806-b11ffba5c080(v=vs.100)).|  
 |**/product:** `productinformation`|Agrega información del producto al ensamblado de salida. Esta información se puede ver en el cuadro de diálogo **Propiedades del archivo** del ensamblado.|  
 |**/productversion:** `productversioninformation`|Agrega información de la versión al ensamblado de salida. No hay restricciones de formato. Esta información se puede ver en el cuadro de diálogo **Propiedades del archivo** del ensamblado.|  
-|**/publickey:** *nombreArchivo*|Especifica el archivo que contiene la clave pública que se va a utilizar para firmar el ensamblado resultante. Si se especifica las opciones **/keyfile:** o **/keycontainer:** en lugar de **/publickey:**, Tlbimp.exe genera la clave pública a partir del par de claves pública y privada suministrado por **/keyfile:** o **/keycontainer:**. La opción **/publickey:** admite los escenarios de clave de prueba y de firma retardada. El archivo tiene el formato generado por Sn.exe. Para obtener más información, vea la opción **-p** de Sn.exe en la [herramienta Nombre seguro (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md).|  
+|**/publickey:** *nombreArchivo*|Especifica el archivo que contiene la clave pública que se va a utilizar para firmar el ensamblado resultante. Si se especifica las opciones **/keyfile:** o **/keycontainer:** en lugar de **/publickey:**, Tlbimp.exe genera la clave pública a partir del par de claves pública y privada suministrado por **/keyfile:** o **/keycontainer:**. La opción **/publickey:** admite los escenarios de clave de prueba y de firma retardada. El archivo tiene el formato generado por Sn.exe. Para obtener más información, vea la opción **-p** de Sn.exe en la [herramienta Nombre seguro (Sn.exe)](sn-exe-strong-name-tool.md).|  
 |**/reference:** *nombreArchivo*|Especifica el archivo de ensamblado que se utiliza para resolver referencias en tipos definidos fuera de la biblioteca de tipos actual. Si no se especifica la opción **/reference**, Tlbimp.exe importa de forma automática y recursiva todas las bibliotecas de tipos externas a la que se haga referencia en la biblioteca de tipos que se va a importar. Si especifica la opción **/reference**, la herramienta intenta resolver los tipos externos en los ensamblados a los que se hace referencia antes de importar otras bibliotecas de tipos.|  
 |**/silence:** `warningnumber`|Suprime la presentación de la advertencia especificada. Esta opción no se puede utilizar con la opción **/silent**.|  
 |**/silent**|Suprime la presentación de mensajes de aprobación. Esta opción no se puede utilizar con la opción **/silence**.|  
@@ -85,7 +82,7 @@ tlbimp tlbFile [options]
 ## <a name="remarks"></a>Comentarios  
  Tlbimp.exe realiza las conversiones de una biblioteca completa de tipos de una vez. No se puede utilizar esta herramienta para generar información de tipos para un subconjunto de los tipos definidos en una biblioteca de tipos sencilla.  
   
- Hay veces que resulta útil o es necesario poder asignar [nombres seguros](../../../docs/framework/app-domains/strong-named-assemblies.md) a los ensamblados. Por consiguiente, Tlbimp.exe incluye opciones que proporcionan la información necesaria para generar ensamblados con nombre seguro. Las dos opciones **/keyfile:** y **/keycontainer:** firman los ensamblados con nombres seguros. Por tanto, lo lógico es proporcionar una de estas opciones cada vez.  
+ Hay veces que resulta útil o es necesario poder asignar [nombres seguros](../app-domains/strong-named-assemblies.md) a los ensamblados. Por consiguiente, Tlbimp.exe incluye opciones que proporcionan la información necesaria para generar ensamblados con nombre seguro. Las dos opciones **/keyfile:** y **/keycontainer:** firman los ensamblados con nombres seguros. Por tanto, lo lógico es proporcionar una de estas opciones cada vez.  
   
  Puede especificar diversos ensamblados de referencia utilizando la opción **/reference** varias veces.  
   
@@ -128,19 +125,19 @@ void SomeMethod([out, retval] VARIANT_BOOL*);
 bool SomeMethod();  
 ```  
   
- Si utiliza Tlbimp.exe para generar una biblioteca administrada para `TestLib.dll` sin especificar la opción**/transform:dispret**, la herramienta genera la siguiente signatura de método para `SomeMethod` en la biblioteca administrada `myTestLib.dll`.  
+ Si utiliza Tlbimp.exe para generar una biblioteca administrada para `TestLib.dll` sin especificar la opción **/transform:dispret**, la herramienta genera la siguiente signatura de método para `SomeMethod` en la biblioteca administrada `myTestLib.dll`.  
   
 ```csharp  
 void SomeMethod(out bool x);  
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Herramientas](../../../docs/framework/tools/index.md)  
- [Tlbexp.exe (Exportador de la biblioteca de tipos)](../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md)  
- [Importar una biblioteca de tipos como un ensamblado](../../../docs/framework/interop/importing-a-type-library-as-an-assembly.md)  
- [Resumen de la conversión de bibliotecas de tipos en ensamblados](http://msdn.microsoft.com/library/bf3f90c5-4770-4ab8-895c-3ba1055cc958)  
- [Ildasm.exe (Desensamblador de IL)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md)  
- [Sn.exe (Herramienta de nombre seguro)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)  
- [Ensamblados con nombre seguro](../../../docs/framework/app-domains/strong-named-assemblies.md)  
- [Atributos para importar bibliotecas de tipos en ensamblados de interoperabilidad](http://msdn.microsoft.com/library/81e587b8-393f-43e1-9add-c4b05e65cbfd)  
- [Símbolos del sistema](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+ [Herramientas](index.md)  
+ [Tlbexp.exe (Exportador de la biblioteca de tipos)](tlbexp-exe-type-library-exporter.md)  
+ [Importar una biblioteca de tipos como un ensamblado](../interop/importing-a-type-library-as-an-assembly.md)  
+ [Resumen de la conversión de bibliotecas de tipos en ensamblados](https://msdn.microsoft.com/library/bf3f90c5-4770-4ab8-895c-3ba1055cc958(v=vs.100))  
+ [Ildasm.exe (Desensamblador de IL)](ildasm-exe-il-disassembler.md)  
+ [Sn.exe (Herramienta de nombre seguro)](sn-exe-strong-name-tool.md)  
+ [Ensamblados con nombre seguro](../app-domains/strong-named-assemblies.md)  
+ [Atributos para importar bibliotecas de tipos en ensamblados de interoperabilidad](https://msdn.microsoft.com/library/81e587b8-393f-43e1-9add-c4b05e65cbfd(v=vs.100))  
+ [Símbolos del sistema](developer-command-prompt-for-vs.md)

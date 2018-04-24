@@ -1,12 +1,12 @@
 ---
-title: "Cadenas con formato de fecha y hora estándar"
-ms.custom: 
+title: Cadenas con formato de fecha y hora estándar
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - formatting [.NET Framework], time
 - date and time strings
 ms.assetid: bb79761a-ca08-44ee-b142-b06b3e2fc22b
-caps.latest.revision: 
+caps.latest.revision: 92
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 55f8f6b544a3ade0ad9423e8253cc44e0fb5fec1
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 5de7da12867e11fcde00089e13c98396ed279a5e
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="standard-date-and-time-format-strings"></a>Cadenas con formato de fecha y hora estándar
 Una cadena de formato de fecha y hora estándar usa un único especificador de formato para definir la representación de texto de un valor de fecha y hora. Cualquier cadena con formato de fecha y hora que contenga más de un carácter, incluido un espacio en blanco, se interpreta como una cadena con formato de fecha y hora personalizado; para obtener más información, consulte [Cadenas con formato de fecha y hora personalizado](../../../docs/standard/base-types/custom-date-and-time-format-strings.md). Una cadena de formato estándar o personalizado se puede usar de dos maneras:  
@@ -43,7 +43,7 @@ Una cadena de formato de fecha y hora estándar usa un único especificador de f
  Las cadenas con formato de fecha y hora estándar se pueden utilizar tanto con valores <xref:System.DateTime> como con valores <xref:System.DateTimeOffset>.  
   
 > [!TIP]
->  Puede descargar la [Utilidad de formato](http://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d), que es una aplicación que permite aplicar cadenas de formato a valores numéricos o de fecha y hora, y que muestra la cadena de resultado.  
+>  Puede descargar la [Utilidad de formato](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d), que es una aplicación que permite aplicar cadenas de formato a valores numéricos o de fecha y hora, y que muestra la cadena de resultado.  
   
 <a name="table"></a>En la tabla siguiente se describen los especificadores de formato de fecha y hora estándar. A menos que se indique lo contrario, un determinado especificador de formato de fecha y hora estándar genera una representación de cadena idéntica independientemente de que se use con un valor <xref:System.DateTime> o <xref:System.DateTimeOffset>. Consulte la sección [Notas](#Notes) para obtener información adicional sobre cómo usar cadenas de formato de fecha y hora estándar.  
   
@@ -426,4 +426,4 @@ Una cadena de formato de fecha y hora estándar usa un único especificador de f
  <xref:System.DateTimeOffset?displayProperty=nameWithType>  
  [Aplicación de formato a tipos](../../../docs/standard/base-types/formatting-types.md)  
  [Custom Date and Time Format Strings](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)  
- [Ejemplo: Utilidad de formato de .NET Framework 4](http://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)
+ [Ejemplo: Utilidad de formato de .NET Framework 4](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)

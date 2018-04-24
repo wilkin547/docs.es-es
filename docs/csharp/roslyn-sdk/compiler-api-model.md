@@ -1,6 +1,6 @@
 ---
 title: Modelo de objetos y conceptos del SDK de .NET Compiler Platform
-description: "En este tema se proporciona la información necesaria para trabajar de forma eficaz con el SDK de .NET Compiler. Aprenderá sobre las capas de API, los tipos principales implicados y el modelo de objetos general."
+description: En este tema se proporciona la información necesaria para trabajar de forma eficaz con el SDK de .NET Compiler. Aprenderá sobre las capas de API, los tipos principales implicados y el modelo de objetos general.
 author: billwagner
 ms.author: wiwagn
 ms.date: 10/10/2017
@@ -8,11 +8,11 @@ ms.topic: conceptual
 ms.prod: .net
 ms.devlang: devlang-csharp
 ms.custom: mvc
-ms.openlocfilehash: d230d334eba4e438635a4c70e8c1b5fc5075b065
-ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
+ms.openlocfilehash: 17a7884518f71d7df1f4a9fe8c91da87d7335e0d
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="understand-the-net-compiler-platform-sdk-model"></a>Descripción del modelo del SDK de .NET Compiler Platform
 
@@ -22,15 +22,15 @@ Los compiladores procesan el código que se escribe conforme a reglas estructura
 
 El SDK de .NET Compiler Platform expone el análisis de código de los compiladores de C# y Visual Basic al proporcionar una capa de API que refleja una canalización de compilador tradicional.
 
-![Pasos del código fuente de procesamiento de canalización de compilador a código de objeto](media/compiler-pipeline.png)
+![Pasos del código fuente de procesamiento de canalización de compilador a código de objeto](media/compiler-api-model/compiler-pipeline.png)
 
 Cada fase de esta canalización es un componente independiente. En primer lugar, la fase de análisis acorta y analiza el texto de origen en la sintaxis que sigue la gramática del lenguaje. En segundo lugar, la fase de declaración analiza los metadatos importados y de origen para formar símbolos con nombre. Luego, la fase de enlace combina los identificadores del código con los símbolos. Por último, en la fase de emisión se emite un ensamblado con toda la información generada por el compilador.
 
-![La API de canalización de compilador proporciona acceso a cada paso que forma parte de la canalización de compilador.](media/compiler-pipeline-api.png)
+![La API de canalización de compilador proporciona acceso a cada paso que forma parte de la canalización de compilador.](media/compiler-api-model/compiler-pipeline-api.png)
 
 En correspondencia a cada una de esas fases, el SDK de .NET Compiler Platform expone un modelo de objetos que permite el acceso a la información en esa fase. La fase de análisis expone un árbol de sintaxis, la fase de declaración expone una tabla de símbolos jerárquica, la fase de enlace expone el resultado del análisis semántico del compilador y la fase de emisión es una API que genera códigos de bytes de IL.
 
-![Servicios de lenguaje disponibles desde la API del compilador en cada paso de la canalización de compilador](media/compiler-pipeline-lang-svc.png)
+![Servicios de lenguaje disponibles desde la API del compilador en cada paso de la canalización de compilador](media/compiler-api-model/compiler-pipeline-lang-svc.png)
 
 Cada compilador combina estos componentes como un único todo.
 
@@ -40,7 +40,7 @@ Estas API son las mismas que usa Visual Studio. Por ejemplo, las característica
 
 El SDK de .NET Compiler está formado por dos capas principales de API: API de compilador y API de áreas de trabajo.
 
-![Capas de API representadas por las API de canalización de compilador](media/api-layers.png)
+![Capas de API representadas por las API de canalización de compilador](media/compiler-api-model/api-layers.png)
 
 ### <a name="compiler-apis"></a>API de compilador
 

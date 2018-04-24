@@ -1,30 +1,30 @@
 ---
 title: Subprocesamiento administrado y no administrado en Windows
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - threading [.NET Framework], unmanaged
 - threading [.NET Framework], managed
 - managed threading
 ms.assetid: 4fb6452f-c071-420d-9e71-da16dee7a1eb
-caps.latest.revision: 
+caps.latest.revision: 17
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 2ce17ef15a5b582a9df0f16d7e0ac82df626579d
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 66bf8458a3f4f9dd622129e82acb659dddf8467a
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="managed-and-unmanaged-threading-in-windows"></a>Subprocesamiento administrado y no administrado en Windows
 La administración de todos los subprocesos se realiza mediante la clase <xref:System.Threading.Thread> , incluidos los subprocesos creados por Common Language Runtime y los creados fuera del runtime que entran en el entorno administrado para ejecutar código. El runtime supervisa todos los subprocesos del proceso que han ejecutado alguna vez código en el entorno de ejecución administrado. No realiza un seguimiento de ningún otro subproceso. Los subprocesos pueden acceder al entorno de ejecución administrado a través de la interoperabilidad COM (porque el runtime expone los objetos administrados como objetos COM a los entornos no administrados), la función COM [DllGetClassObject](https://msdn.microsoft.com/library/ms680760.aspx) y la invocación de plataforma.  
@@ -55,7 +55,7 @@ La administración de todos los subprocesos se realiza mediante la clase <xref:S
 |Cercano a **CoInitializeEx** (OLE32.DLL)|<xref:System.Threading.Thread.ApartmentState%2A?displayProperty=nameWithType>|  
   
 ## <a name="managed-threads-and-com-apartments"></a>Subprocesos administrados y apartamentos COM  
- Un subproceso administrado se puede marcar para indicar que hospedará un contenedor [uniproceso](http://msdn.microsoft.com/library/windows/desktop/ms680112.aspx) o [multiproceso](http://msdn.microsoft.com/library/windows/desktop/ms693421.aspx). (Para más información sobre la arquitectura de subprocesos COM, consulte [Procesos, subprocesos y contenedores](http://msdn.microsoft.com/library/windows/desktop/ms693344.aspx)). Los métodos <xref:System.Threading.Thread.GetApartmentState%2A>, <xref:System.Threading.Thread.SetApartmentState%2A> y <xref:System.Threading.Thread.TrySetApartmentState%2A> de la clase <xref:System.Threading.Thread> devuelven y asignan el estado de contenedor de un subproceso. Si el estado no se ha establecido, <xref:System.Threading.Thread.GetApartmentState%2A> devuelve <xref:System.Threading.ApartmentState.Unknown?displayProperty=nameWithType>.  
+ Un subproceso administrado se puede marcar para indicar que hospedará un contenedor [uniproceso](https://msdn.microsoft.com/library/windows/desktop/ms680112.aspx) o [multiproceso](https://msdn.microsoft.com/library/windows/desktop/ms693421.aspx). (Para más información sobre la arquitectura de subprocesos COM, consulte [Procesos, subprocesos y contenedores](https://msdn.microsoft.com/library/windows/desktop/ms693344.aspx)). Los métodos <xref:System.Threading.Thread.GetApartmentState%2A>, <xref:System.Threading.Thread.SetApartmentState%2A> y <xref:System.Threading.Thread.TrySetApartmentState%2A> de la clase <xref:System.Threading.Thread> devuelven y asignan el estado de contenedor de un subproceso. Si el estado no se ha establecido, <xref:System.Threading.Thread.GetApartmentState%2A> devuelve <xref:System.Threading.ApartmentState.Unknown?displayProperty=nameWithType>.  
   
  La propiedad solo se puede establecer cuando el estado del subproceso es <xref:System.Threading.ThreadState.Unstarted?displayProperty=nameWithType> y únicamente una vez por subproceso.  
   

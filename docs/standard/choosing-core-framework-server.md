@@ -9,11 +9,11 @@ ms.prod: .net
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: c07b0b760e2a46faea574eef3575409bac773942
-ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
+ms.openlocfilehash: 1fba5ce14b2504ea688bdff35efa959b8a5a86ab
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a>Selección entre .NET Core y .NET Framework para aplicaciones de servidor
 
@@ -34,7 +34,7 @@ Use .NET Framework para su aplicación de servidor cuando:
 * La aplicación use tecnologías de .NET que no están disponibles para .NET Core.
 * La aplicación use una plataforma que no es compatible con .NET Core.
 
-## <a name="when-to-choose-net-core"></a>Casos en los que elegir .NET Core
+## <a name="when-to-choose-net-core"></a>Cuándo elegir .NET Core
 
 En las siguientes secciones, se explican de manera más detallada las razones indicadas anteriormente para elegir .NET Core.
 
@@ -42,7 +42,7 @@ En las siguientes secciones, se explican de manera más detallada las razones in
 
 Si la aplicación (web/servicio) tiene que ejecutarse en varias plataformas (Windows, Linux y macOS), use .NET Core.
 
-.NET Core admite los sistemas operativos mencionados anteriormente como estación de trabajo de desarrollo. Visual Studio proporciona un entorno de desarrollo integrado (IDE) para Windows y macOS. También puede usar Visual Studio Code, que se ejecuta en macOS, Linux y Windows. Visual Studio Code es compatible con .NET Core, incluidos IntelliSense y la depuración. La mayoría de los editores de terceros, como Sublime, Emacs y VI, funcionan con .NET Core. Estos editores de terceros obtienen el editor de IntelliSense mediante [Omnisharp](http://www.omnisharp.net/). También puede evitar el uso de un editor de código y usar directamente las [herramientas de la interfaz de la línea de comandos de .NET Core](../core/tools/index.md), disponibles para todas las plataformas compatibles.
+.NET Core admite los sistemas operativos mencionados anteriormente como estación de trabajo de desarrollo. Visual Studio proporciona un entorno de desarrollo integrado (IDE) para Windows y macOS. También puede usar Visual Studio Code, que se ejecuta en macOS, Linux y Windows. Visual Studio Code es compatible con .NET Core, incluidos IntelliSense y la depuración. La mayoría de los editores de terceros, como Sublime, Emacs y VI, funcionan con .NET Core. Estos editores de terceros obtienen el editor de IntelliSense mediante [Omnisharp](https://www.omnisharp.net/). También puede evitar el uso de un editor de código y usar directamente las [herramientas de la interfaz de la línea de comandos de .NET Core](../core/tools/index.md), disponibles para todas las plataformas compatibles.
 
 ### <a name="microservices-architecture"></a>Arquitectura de microservicios
 
@@ -68,7 +68,7 @@ El rendimiento y la escalabilidad son especialmente importantes para las arquite
 
 Para instalar aplicaciones con dependencias en diferentes versiones de .NET, se recomienda .NET Core. .NET Core ofrece una instalación en paralelo de diferentes versiones del entorno de ejecución .NET Core en el mismo equipo. Esta instalación en paralelo permite varios servicios en el mismo servidor, cada uno de ellos en su propia versión de .NET Core. También reduce los riesgos y ahorra dinero en las operaciones de TI y las actualizaciones de aplicaciones.
 
-## <a name="when-to-choose-net-framework"></a>Casos en los que elegir .NET Framework
+## <a name="when-to-choose-net-framework"></a>Cuándo elegir .NET Framework
 
 .NET Core ofrece ventajas significativas para las aplicaciones nuevas y los patrones de aplicación. En cambio, .NET Framework sigue siendo la opción natural para muchos escenarios existentes y, por ello, .NET Core no reemplaza a .NET Framework para todas las aplicaciones de servidor.
 

@@ -1,6 +1,6 @@
 ---
-title: "Introducción al tutorial de clases: inicios rápidos para entornos locales de C#"
-description: "Creación del primer programa con C# y análisis de los conceptos orientados a objetos"
+title: 'Introducción al tutorial de clases: inicios rápidos para entornos locales de C#'
+description: Creación del primer programa con C# y análisis de los conceptos orientados a objetos
 author: billwagner
 ms.author: wiwagn
 ms.date: 10/11/2017
@@ -9,11 +9,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 97c1de562c86ea04153ec09bb0e813565523a3ba
-ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
+ms.openlocfilehash: dd3fff6f74c92a45545e8e36f28eab351b39b37e
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="introduction-to-classes"></a>Introducción a las clases
 
@@ -215,6 +215,6 @@ Escriba `dotnet run` para ver los resultados.
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Si se ha quedado bloqueado, puede consultar el origen de este inicio rápido [en el repositorio de GitHub](https://github.com/dotnet/docs/tree/master/samples/csharp/classes-quickstart/).
+Si se ha quedado bloqueado, puede consultar el origen de este inicio rápido [en el repositorio de GitHub](https://github.com/dotnet/samples/tree/master/csharp/classes-quickstart/).
 
 Enhorabuena, ha completado todos los inicios rápidos. Si le interesa obtener más información, continúe con los [tutoriales](../tutorials/index.md).

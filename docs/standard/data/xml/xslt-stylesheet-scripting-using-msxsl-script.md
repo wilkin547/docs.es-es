@@ -1,29 +1,29 @@
 ---
 title: Escritura de scripts de hojas de estilos XSLT mediante &lt;msxsl:script&gt;
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 60e2541b-0cea-4b2e-a4fa-85f4c50f1bef
-caps.latest.revision: 
+caps.latest.revision: 4
 author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: f9e7ceb40167d970b1886aec17b93f4bcf08f631
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 01d4271eb5795e3760d289842bdfbdfa11c883fd
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="xslt-stylesheet-scripting-using-ltmsxslscriptgt"></a>Escritura de scripts de hojas de estilos XSLT mediante &lt;msxsl:script&gt;
 Esta clase <xref:System.Xml.Xsl.XslTransform> admite scripts incrustados mediante el elemento `script`.  
@@ -55,7 +55,7 @@ Esta clase <xref:System.Xml.Xsl.XslTransform> admite scripts incrustados mediant
   
  Para obtener la evidencia desde el ensamblado, utilice `this.GetType().Assembly.Evidence`. Para obtener evidencia de un identificador de recurso uniforme (URI), utilice `Evidence e = XmlSecureResolver.CreateEvidenceForUrl(stylesheetURI)`.  
   
- Si utiliza métodos <xref:System.Xml.Xsl.XslTransform.Load%2A> que toman <xref:System.Xml.XmlResolver> pero no `Evidence`, la zona de seguridad del ensamblado toma como valor predeterminado Plena confianza. Para más información, vea <xref:System.Security.SecurityZone> y [Conjuntos de permisos con nombre](http://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3).  
+ Si utiliza métodos <xref:System.Xml.Xsl.XslTransform.Load%2A> que toman <xref:System.Xml.XmlResolver> pero no `Evidence`, la zona de seguridad del ensamblado toma como valor predeterminado Plena confianza. Para más información, vea <xref:System.Security.SecurityZone> y [Conjuntos de permisos con nombre](https://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3).  
   
  Las funciones se pueden declarar dentro del elemento `msxsl:script`. La tabla siguiente muestra los espacios de nombres que se admiten de forma predeterminada. Es posible utilizar clases fuera de los espacios de nombres enumerados. Sin embargo, el nombre de las clases debe estar completo.  
   

@@ -6,14 +6,15 @@ ms.author: wiwagn
 ms.date: 10/07/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
+ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: e8e156552fd4aa733594c01845fb7ed1643b4aef
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: c77b6fecdea3620a4f807dfa9b3501f78bb247d2
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="common-client-side-web-technologies"></a>Tecnologías web comunes del lado cliente
 
@@ -152,9 +153,9 @@ Los marcos de JavaScript siguen evolucionando a una velocidad de vértigo. Use l
 > - **Sass vs. LESS** (Diferencias entre Sass y LESS)  
 > <https://www.keycdn.com/blog/sass-vs-less/>
 > - **Aplicación de estilos a aplicaciones ASP.NET Core con LESS, Sass y Font Awesome**  
-> <https://docs.microsoft.com/es-es/aspnet/core/client-side/less-sass-fa>
+> <https://docs.microsoft.com/aspnet/core/client-side/less-sass-fa>
 > - **Desarrollo del lado cliente en ASP.NET Core**  
-> <https://docs.microsoft.com/es-es/aspnet/core/client-side/>
+> <https://docs.microsoft.com/aspnet/core/client-side/>
 > - **jQuery**  
 > <https://jquery.com/>
 > - **jQuery vs AngularJS** (Diferencias entre jQuery y AngularJS)  

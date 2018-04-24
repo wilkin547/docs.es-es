@@ -1,29 +1,29 @@
 ---
-title: "Cómo: Convertir flujos de .NET Framework en flujos de Windows Runtime, y viceversa"
-ms.custom: 
+title: 'Cómo: Convertir flujos de .NET Framework en flujos de Windows Runtime, y viceversa'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 23a763ea-8348-4244-9f8c-a4280b870b47
-caps.latest.revision: 
+caps.latest.revision: 15
 author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: d9e4c1c0b432ff44af0410b1efdc3940cd0ff19c
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 25df0b363e5c9b44ae51d14ef0c2286cbb80ced8
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="how-to-convert-between-net-framework-streams-and-windows-runtime-streams"></a>Cómo: Convertir flujos de .NET Framework en flujos de Windows Runtime, y viceversa
 .NET Framework para aplicaciones de la Tienda Windows es un subconjunto de la plataforma .NET Framework completa. Debido a los requisitos de seguridad y de otro tipo de las aplicaciones de la Tienda Windows, no se puede usar el conjunto completo de API de .NET Framework para abrir y leer archivos. Para más información, consulte [Información general de .NET para aplicaciones de la Tienda Windows](http://msdn.microsoft.com/library/windows/apps/br230302.aspx). Sin embargo, puede que desee usar las API de .NET Framework para otras operaciones de manipulación de secuencias. Para manipular estas secuencias, puede que sea necesario convertir entre un tipo de secuencia de .NET Framework como <xref:System.IO.MemoryStream> o <xref:System.IO.FileStream>, y una secuencia de Windows Runtime como [IInputStream](http://msdn.microsoft.com/library/windows/apps/windows.storage.streams.iinputstream.aspx), [IOutputStream](http://msdn.microsoft.com/library/windows/apps/windows.storage.streams.ioutputstream.aspx)o [IRandomAccessStream](http://msdn.microsoft.com/library/windows/apps/windows.storage.streams.irandomaccessstream.aspx).  
@@ -90,6 +90,6 @@ ms.lasthandoff: 12/23/2017
     [!code-vb[System.IO.WindowsRuntimeStreamExtensionsEx#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.windowsruntimestreamextensionsex/vb/mainpage.xaml.vb#2)]  
   
 ## <a name="see-also"></a>Vea también  
- [Tutorial rápido: leer y escribir en un archivo (Windows)](http://msdn.microsoft.com/library/windows/apps/hh464978.aspx)  
+ [Tutorial rápido: leer y escribir en un archivo (Windows)](https://msdn.microsoft.com/library/windows/apps/hh464978.aspx)  
  [Información general de .NET para aplicaciones de la Tienda Windows](http://msdn.microsoft.com/library/windows/apps/br230302.aspx)  
- [.NET para aplicaciones de la Tienda Windows: API admitidas](http://msdn.microsoft.com/library/windows/apps/br230232.aspx)
+ [.NET para aplicaciones de la Tienda Windows: API admitidas](https://msdn.microsoft.com/library/windows/apps/br230232.aspx)

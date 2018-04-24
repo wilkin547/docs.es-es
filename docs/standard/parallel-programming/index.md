@@ -18,11 +18,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: c0ea65b0a61719c85ab1da53bcc99f5d43a3210b
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: 1e649bcb37b711d01199bd4e4823a9bb0cac60b4
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="parallel-programming-in-net"></a>Programación en paralelo en .NET
 Muchos equipos y estaciones de trabajo tienen dos o cuatro núcleos (es decir, CPU) que permiten ejecutar varios subprocesos simultáneamente. Se espera que los equipos en un futuro cercano tengan significativamente más núcleos. Para aprovecharse del hardware de hoy y del mañana, puede paralelizar el código para distribuir el trabajo entre varios procesadores. En el pasado, la paralelización requería manipulación de bajo nivel de los subprocesos y bloqueos. [!INCLUDE[vs_dev10_long](../../../includes/vs-dev10-long-md.md)] y [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] mejoran la compatibilidad para la programación paralela proporcionando un nuevo runtime, nuevos tipos de biblioteca de clases y nuevas herramientas de diagnóstico. Estas características simplifican el desarrollo en paralelo, de modo que pueda escribir código paralelo eficaz, específico y escalable de forma natural sin tener que trabajar directamente con subprocesos ni el bloque de subprocesos. La siguiente ilustración proporciona una información general de alto nivel de la arquitectura de programación paralela en [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)].  
@@ -44,4 +44,4 @@ Muchos equipos y estaciones de trabajo tienen dos o cuatro núcleos (es decir, C
   
 ## <a name="see-also"></a>Vea también  
  [Patrones para la programación paralela: comprender y aplicar patrones paralelos con .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=19222)  
- [Samples for Parallel Programming with the .NET Framework](http://code.msdn.microsoft.com/Samples-for-Parallel-b4b76364) (Ejemplos de programación en paralelo con .NET Framework)
+ [Samples for Parallel Programming with the .NET Framework](https://code.msdn.microsoft.com/Samples-for-Parallel-b4b76364) (Ejemplos de programación en paralelo con .NET Framework)

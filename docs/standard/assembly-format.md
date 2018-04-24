@@ -1,6 +1,6 @@
 ---
 title: Formato de archivo de ensamblado .NET
-description: "Obtenga información sobre el formato de archivo de ensamblado .NET, que se usa para describir y contiene las bibliotecas y aplicaciones de .NET."
+description: Obtenga información sobre el formato de archivo de ensamblado .NET, que se usa para describir y contiene las bibliotecas y aplicaciones de .NET.
 keywords: .NET, .NET Core
 author: richlander
 ms.author: mairaw
@@ -13,11 +13,11 @@ ms.assetid: 6520323e-ff28-4c8a-ba80-e64a413199e6
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: d219a584f2f5521fc3b0fd00ab037a8e486c9050
-ms.sourcegitcommit: 75a180acb5d8a2dbd4a52915ce8e980749fb1d05
+ms.openlocfilehash: f2e838746762922087162142e61ce3ce5b33b2fb
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/24/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="net-assembly-file-format"></a>Formato de archivo de ensamblado .NET
 
@@ -25,7 +25,7 @@ ms.lasthandoff: 02/24/2018
 
 > Cada componente de CLI incluye los metadatos para las declaraciones, implementaciones y referencias específicas a ese componente. Por tanto, los metadatos específicos del componente se conocen como metadatos del componente y se dice que el componente resultante es autodescriptivo (de ECMA 335 I.9.1, Componentes y ensamblados).
 
-El formato se especifica y estandariza por completo como [ECMA 335](http://www.ecma-international.org/publications/standards/Ecma-335.htm). Todos los compiladores y tiempos de ejecución de .NET usan este formato. La presencia de un formato binario documentado y actualizado con poca frecuencia ha sido una ventaja importante (posiblemente un requisito) para la interoperabilidad. El formato se ha actualizado por última vez de forma significativa en 2005 (.NET 2.0) para dar cabida a la arquitectura del procesador y genéricos.
+El formato se especifica y estandariza por completo como [ECMA 335](https://www.ecma-international.org/publications/standards/Ecma-335.htm). Todos los compiladores y tiempos de ejecución de .NET usan este formato. La presencia de un formato binario documentado y actualizado con poca frecuencia ha sido una ventaja importante (posiblemente un requisito) para la interoperabilidad. El formato se ha actualizado por última vez de forma significativa en 2005 (.NET 2.0) para dar cabida a la arquitectura del procesador y genéricos.
 
 El formato es independiente de la CPU y del sistema operativo. Se ha usado como parte de las implementaciones de .NET que se dirigen a muchos chips y CPU. Aunque el propio formato tiene legado de Windows, se puede implementar en cualquier sistema operativo. Posiblemente, la opción más importante para la interoperabilidad del sistema operativo es que la mayoría de los valores se almacenan en formato little-endian. No tiene una afinidad específica con el tamaño del puntero de equipo (por ejemplo, 32 bits, 64 bits).
 
@@ -33,7 +33,7 @@ El formato de ensamblado .NET también es muy descriptivo sobre la estructura de
 
 ## <a name="format"></a>Formato
 
-El formato binario de .NET se basa en el formato de [archivo PE](http://en.wikipedia.org/wiki/Portable_Executable) de Windows. De hecho, las bibliotecas de clases de .NET son compatibles con Windows PE y, a primera vista, parecen ser bibliotecas de vínculos dinámicos (DLL) o aplicaciones ejecutables (EXE) de Windows. Se trata de una característica muy útil en Windows, donde pueden hacerse pasar por archivos binarios ejecutables nativos y recibir el mismo tratamiento (por ejemplo, carga del sistema operativo, herramientas de PE).
+El formato binario de .NET se basa en el formato de [archivo PE](https://en.wikipedia.org/wiki/Portable_Executable) de Windows. De hecho, las bibliotecas de clases de .NET son compatibles con Windows PE y, a primera vista, parecen ser bibliotecas de vínculos dinámicos (DLL) o aplicaciones ejecutables (EXE) de Windows. Se trata de una característica muy útil en Windows, donde pueden hacerse pasar por archivos binarios ejecutables nativos y recibir el mismo tratamiento (por ejemplo, carga del sistema operativo, herramientas de PE).
 
 ![Encabezados de ensamblado](./media/assembly-format/assembly-headers.png)
 
@@ -41,4 +41,4 @@ Encabezados de ensamblado de ECMA 335 II.25.1, Estructura del formato de archivo
 
 ## <a name="processing-the-assemblies"></a>Procesar los ensamblados
 
-Se pueden escribir herramientas o API para procesar ensamblados. La información de ensamblado permite tomar decisiones mediante programación en tiempo de ejecución, volver a escribir ensamblados, proporcionar API IntelliSense en un editor y generar documentación. <xref:System.Reflection?displayProperty=nameWithType> y [Mono.Cecil](http://www.mono-project.com/docs/tools+libraries/libraries/Mono.Cecil/) son buenos ejemplos de herramientas que se usan con frecuencia con este propósito.
+Se pueden escribir herramientas o API para procesar ensamblados. La información de ensamblado permite tomar decisiones mediante programación en tiempo de ejecución, volver a escribir ensamblados, proporcionar API IntelliSense en un editor y generar documentación. <xref:System.Reflection?displayProperty=nameWithType> y [Mono.Cecil](https://www.mono-project.com/docs/tools+libraries/libraries/Mono.Cecil/) son buenos ejemplos de herramientas que se usan con frecuencia con este propósito.

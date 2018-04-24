@@ -6,14 +6,15 @@ ms.author: wiwagn
 ms.date: 10/07/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
+ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 868f1b7ce452be9e29b921888f90d128e074ba13
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: eccb57e5ccf9162a6e6ce11434e644682881debc
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="azure-hosting-recommendations-for-aspnet-core-web-apps"></a>Recomendaciones de hospedaje en Azure de aplicaciones web ASP.NET Core
 
@@ -118,16 +119,16 @@ En la figura 11-2 se muestra una arquitectura de referencia de ejemplo. En este 
 **Referencias: recomendaciones de hospedaje de Azure**
 
 -   Arquitecturas de soluciones de Azure\
-    <https://azure.microsoft.com/es-es/solutions/architecture/>
+    <https://azure.microsoft.com/solutions/architecture/>
 
 -   Guía para desarrolladores de Microsoft Azure\
-    <https://azure.microsoft.com/es-es/campaigns/developer-guide/>
+    <https://azure.microsoft.com/campaigns/developer-guide/>
 
 -   Introducción a Web Apps\
-    <https://docs.microsoft.com/es-es/azure/app-service/app-service-web-overview>
+    <https://docs.microsoft.com/azure/app-service/app-service-value-prop-what-is>
 
 -   Comparación de Azure App Service, Virtual Machines, Service Fabric y Cloud Services\
-    <https://docs.microsoft.com/es-es/azure/app-service/choose-web-site-cloud-service-vm>
+    <https://docs.microsoft.com/azure/app-service-web/choose-web-site-cloud-service-vm>
 
 >[!div class="step-by-step"]
 [Anterior] (development-process-for-azure.md)

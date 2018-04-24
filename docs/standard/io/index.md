@@ -23,11 +23,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: e9ebd1a11684afaa143d1f016f31e0a29a3478db
-ms.sourcegitcommit: ba765893e3efcece67d99fd6d5ce0074b050d1d9
+ms.openlocfilehash: b420859380d7c3c39a7d85f94df1708d9f26bebc
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="file-and-stream-io"></a>E/S de archivos y secuencias
 La E/S (entrada/salida) de archivos y secuencias hace referencia a la transferencia de datos con destino u origen en un medio de almacenamiento. En .NET Framework, los espacios de nombres `System.IO` contienen tipos que permiten la lectura y escritura, tanto sincrónica como asincrónica, en archivos y flujos de datos. Estos espacios de nombres también contienen tipos que realizan la compresión y la descompresión de archivos, así como tipos que permiten la comunicación a través de canalizaciones y puertos de serie.  
@@ -51,7 +51,7 @@ La E/S (entrada/salida) de archivos y secuencias hace referencia a la transferen
   
  Además de usar estas clases, los usuarios de Visual Basic pueden usar los métodos y propiedades proporcionados por la clase <xref:Microsoft.VisualBasic.FileIO.FileSystem?displayProperty=nameWithType> para la E/S de archivos.  
   
- Vea [How to: Copy Directories](../../../docs/standard/io/how-to-copy-directories.md)(Cómo: Copiar directorios), [Cómo: Crear una lista de directorios](http://msdn.microsoft.com/library/4d2772b1-b991-4532-a8a6-6ef733277e69) y [How to: Enumerate Directories and Files](../../../docs/standard/io/how-to-enumerate-directories-and-files.md) (Cómo: Enumerar directorios y archivos).  
+ Vea [How to: Copy Directories](../../../docs/standard/io/how-to-copy-directories.md)(Cómo: Copiar directorios), [Cómo: Crear una lista de directorios](https://msdn.microsoft.com/library/4d2772b1-b991-4532-a8a6-6ef733277e69) y [How to: Enumerate Directories and Files](../../../docs/standard/io/how-to-enumerate-directories-and-files.md) (Cómo: Enumerar directorios y archivos).  
   
 ## <a name="streams"></a>Secuencias  
  La clase base abstracta <xref:System.IO.Stream> es compatible con bytes de lectura y escritura. Todas las clases que representan secuencias heredan de la clase <xref:System.IO.Stream>. La clase <xref:System.IO.Stream> y sus clases derivadas proporcionan una visión genérica de los repositorios y los orígenes de datos, y evitan que el programador tenga que ocuparse de los detalles específicos del sistema operativo y los dispositivos subyacentes.  

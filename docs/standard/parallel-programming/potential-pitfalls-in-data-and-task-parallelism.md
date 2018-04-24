@@ -21,11 +21,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 2f575e8bdf06490eb0e5eba0ac07fe23787aa18d
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 0b932de530c8ae48c4c8204d7da8e9b3dff59021
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="potential-pitfalls-in-data-and-task-parallelism"></a>Problemas potenciales en el paralelismo de datos y tareas
 En muchos casos, <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> y <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> pueden proporcionar importantes mejoras de rendimiento con respecto a los bucles secuenciales normales. Sin embargo, el trabajo de paralelizar el bucle aporta una complejidad que puede conducir a problemas que, en código secuencial, no son tan comunes o no se producen en ningún caso. En este tema se indican algunas prácticas que se deben evitar al escribir bucles paralelos.  
@@ -93,4 +93,4 @@ En muchos casos, <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=na
 ## <a name="see-also"></a>Vea también  
  [Programación en paralelo](../../../docs/standard/parallel-programming/index.md)  
  [Posibles problemas con PLINQ](../../../docs/standard/parallel-programming/potential-pitfalls-with-plinq.md)  
- [Patrones para la programación paralela: comprender y aplicar patrones paralelos con .NET Framework 4](http://go.microsoft.com/fwlink/?LinkID=185142)
+ [Patrones para la programación paralela: comprender y aplicar patrones paralelos con .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=19222)

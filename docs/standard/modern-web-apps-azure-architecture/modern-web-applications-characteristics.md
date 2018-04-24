@@ -6,14 +6,15 @@ ms.author: wiwagn
 ms.date: 10/06/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
+ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: ecef23870ac547f4b4066628da71f8af98c91b27
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 4f12b6860f1c4efe0f55cae4fefd8cd5f4539095
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="characteristics-of-modern-web-applications"></a>Características de las aplicaciones web modernas
 
@@ -74,11 +75,11 @@ Además de ASP.NET Core, ASP.NET 4.x tradicional sigue siendo una plataforma só
 
 > ### <a name="references--modern-web-applications"></a>Referencias: aplicaciones web modernas
 > - **Introducción a ASP.NET Core**  
-> <https://docs.microsoft.com/es-es/aspnet/core/>
+> <https://docs.microsoft.com/aspnet/core/>
 > - **Six Key Benefits of ASP.NET Core which make it Different and Better** (Seis ventajas clave de ASP.NET Core que lo hacen diferente y mejor)  
 > <https://blog.trigent.com/six-key-benefits-of-asp-net-core-1-0-which-make-it-different-better/>
 > - **Pruebas y depuración en ASP.NET Core**  
-> <https://docs.microsoft.com/es-es/aspnet/core/testing/>
+> <https://docs.microsoft.com/aspnet/core/testing/>
 
 >[!div class="step-by-step"]
 [Anterior] (index.md) [Siguiente] (choose-between-traditional-web-and-single-page-apps.md)

@@ -1,6 +1,6 @@
 ---
 title: Recursos adicionales para programadores de Visual Basic
-description: "Descubra recursos en la Web para obtener información, haga preguntas y obtenga más información sobre Visual Basic."
+description: Descubra recursos en la Web para obtener información, haga preguntas y obtenga más información sobre Visual Basic.
 ms.date: 02/21/2018
 ms.prod: .net
 ms.technology:
@@ -14,11 +14,11 @@ helpviewer_keywords:
 ms.assetid: 9bfb42e9-327f-439b-935e-8884f6aca80c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9b2e9718d6f342bdd0865a9593e85683a5bf9a45
-ms.sourcegitcommit: cec0525b2121c36198379525e69aa5388266db5b
+ms.openlocfilehash: 10fe7506f2112ef15566a35c1c330a25024744f8
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="additional-resources"></a>Recursos adicionales
 
@@ -38,7 +38,7 @@ En los siguientes sitios web encontrará orientación y respuestas a algunos pro
 |Término|de esquema JSON|
 |----------|----------------|
 |[Galería de códigos](https://code.msdn.microsoft.com/site/search?f%5B0%5D.Type=ProgrammingLanguage&f%5B0%5D.Value=VB&f%5B0%5D.Text=VB.NET)|Descargue y comparta aplicaciones de ejemplo y otros recursos con la comunidad de desarrolladores.|
-|[Ejemplos de documentación de Visual Basic](https://github.com/dotnet/docs/tree/master/samples/snippets/visualbasic)|Contiene los ejemplos que se usan en la documentación de Visual Basic y de .NET.|
+|[Ejemplos de documentación de Visual Basic](https://github.com/dotnet/samples/tree/master/snippets/visualbasic)|Contiene los ejemplos que se usan en la documentación de Visual Basic y de .NET.|
 
 ### <a name="forums"></a>Foros
 

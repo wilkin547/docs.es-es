@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 87b48624fde8c7cdab097289f1cf56ab56e1173f
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: d623a3bc542e0f044d73f405aa639bef0f6d1ec8
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="designing-the-microservice-application-layer-and-web-api"></a>Diseñar el nivel de aplicación de microservicios y la API web
 
@@ -50,7 +50,7 @@ Necesitaríamos otra guía para tratar SOLID con detalle. Para esta guía solo n
     [*https://martinfowler.com/articles/injection.html*](https://martinfowler.com/articles/injection.html) (Inversión de los contenedores de control y el patrón de inserción de dependencias)
 
 -   **Steve Smith. New is Glue**
-    [*http://ardalis.com/new-is-glue*](http://ardalis.com/new-is-glue) (New es como pegamento)
+    [*https://ardalis.com/new-is-glue*](https://ardalis.com/new-is-glue) (New es como pegamento)
 
 
 >[!div class="step-by-step"]

@@ -1,6 +1,6 @@
 ---
-title: "Crear árboles de expresión"
-description: "Obtenga información sobre técnicas para crear árboles de expresión."
+title: Crear árboles de expresión
+description: Obtenga información sobre técnicas para crear árboles de expresión.
 keywords: .NET, .NET Core
 author: BillWagner
 ms.author: wiwagn
@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 542754a9-7f40-4293-b299-b9f80241902c
-ms.openlocfilehash: c0d7bcf6e07f4a49e15e6f6f4e028eebfe82d8bf
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 7e45f566f66c129111c65a1166a6c71ff518dfc7
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="building-expression-trees"></a>Crear árboles de expresión
 
@@ -169,7 +169,7 @@ BlockExpression body = Expression.Block(
 
 El código para crear el árbol de expresión para la función factorial es bastante más largo, más complicado y está lleno de etiquetas, instrucciones Break y otros elementos que nos gustaría evitar en nuestras tareas de codificación diarias. 
 
-En esta sección, también he actualizado el código del visitante para visitar cada nodo de este árbol de expresión y escribir información sobre los nodos que se crean en este ejemplo. Puede [ver o descargar el código de ejemplo](https://github.com/dotnet/docs/tree/master/samples/csharp/expression-trees) en el repositorio dotnet/docs de GitHub. Pruébelo compilando y ejecutando los ejemplos. Para obtener instrucciones de descarga, vea [Ejemplos y tutoriales](../samples-and-tutorials/index.md#viewing-and-downloading-samples).
+En esta sección, también he actualizado el código del visitante para visitar cada nodo de este árbol de expresión y escribir información sobre los nodos que se crean en este ejemplo. Puede [ver o descargar el código de ejemplo](https://github.com/dotnet/samples/tree/master/csharp/expression-trees) en el repositorio dotnet/docs de GitHub. Pruébelo compilando y ejecutando los ejemplos. Para obtener instrucciones de descarga, vea [Ejemplos y tutoriales](../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
 ## <a name="examining-the-apis"></a>Examinar las API
 

@@ -1,12 +1,12 @@
 ---
-title: "Codificación de caracteres de .NET"
-ms.custom: 
+title: Codificación de caracteres de .NET
+ms.custom: ''
 ms.date: 12/22/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,18 +16,18 @@ helpviewer_keywords:
 - encoding, choosing
 - encoding, fallback strategy
 ms.assetid: bf6d9823-4c2d-48af-b280-919c5af66ae9
-caps.latest.revision: 
+caps.latest.revision: 33
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: ac24e3a685c20445c473f0f5222ddba72b6b098c
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: 1d296920d75af2194323791c4ea571c10f1e3c7d
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="character-encoding-in-net"></a>Codificación de caracteres de .NET
 Los caracteres son entidades abstractas que se pueden representar de muchas maneras diferentes. Una codificación de caracteres es un sistema que empareja cada carácter de un juego de caracteres compatible con algún valor que representa ese carácter. Por ejemplo, el código Morse es una codificación de caracteres que empareja cada carácter del alfabeto latino con un patrón de puntos y guiones que son adecuados para la transmisión a través de las líneas de telégrafo. Una codificación de caracteres para los equipos empareja cada carácter de un juego de caracteres compatible con un valor numérico que representa ese carácter. Una codificación de caracteres tiene dos componentes distintos:  
@@ -70,7 +70,7 @@ Los caracteres son entidades abstractas que se pueden representar de muchas mane
 > [!NOTE]
 >  El estándar Unicode asigna un punto de código (un número) y un nombre a cada carácter en todos los scripts admitidos. Por ejemplo, el carácter "A" está representado por el punto de código U+0041 y el nombre "LATIN CAPITAL LETTER A". Las codificaciones de Formato de transformación Unicode (UTF) definen formas de codificar ese punto de código en una secuencia de uno o más bytes. Un esquema de codificación Unicode simplifica el desarrollo de aplicaciones de uso internacional porque permite que los caracteres de cualquier juego de caracteres estén representados en una única codificación. Los desarrolladores de aplicaciones ya no tienen que realizar el seguimiento del esquema de codificación empleado para producir caracteres para un idioma o un sistema de escritura concreto, y se pueden compartir los datos internacionalmente entre sistemas sin dañarlos.  
 >   
->  .NET admite tres codificaciones definidas por el estándar Unicode: UTF-8, UTF-16 y UTF-32. Para obtener más información, vea el estándar Unicode en la [página principal de Unicode](http://www.unicode.org/).  
+>  .NET admite tres codificaciones definidas por el estándar Unicode: UTF-8, UTF-16 y UTF-32. Para obtener más información, vea el estándar Unicode en la [página principal de Unicode](https://www.unicode.org/).  
   
  Se puede recuperar información sobre todas las codificaciones disponibles en .NET llamando al método <xref:System.Text.Encoding.GetEncodings%2A?displayProperty=nameWithType>. .NET admite los sistemas de codificación de caracteres que se muestran en la tabla siguiente.  
   
@@ -157,7 +157,7 @@ Los caracteres son entidades abstractas que se pueden representar de muchas mane
  Las estrategias de ajuste perfecto varían en páginas de códigos diferentes. Por ejemplo, para algunas páginas de códigos, los caracteres latinos de ancho completo se asignarán a caracteres latinos de ancho medio, que son más comunes. Para otras páginas de códigos no se realiza esta asignación. Incluso con una estrategia de ajuste perfecto dinámica, algunos caracteres no tienen un ajuste imaginable en algunas codificaciones. Por ejemplo, un ideograma chino no tiene ninguna asignación razonable a la página de códigos 1252. En este caso, se emplea una cadena de reemplazo. De forma predeterminada, esta cadena es simplemente un carácter QUESTION MARK (U+003F).  
   
 > [!NOTE]
->  Las estrategias de ajuste perfecto no están documentadas de forma detallada. Sin embargo, varias páginas de códigos se documentan en el sitio web de [Unicode Consortium](http://www.unicode.org/Public/MAPPINGS/VENDORS/MICSFT/WindowsBestFit/). Revise el archivo **Léame.txt** de esa carpeta para obtener una descripción de cómo interpretar los archivos de asignación.
+>  Las estrategias de ajuste perfecto no están documentadas de forma detallada. Sin embargo, varias páginas de códigos se documentan en el sitio web de [Unicode Consortium](https://www.unicode.org/Public/MAPPINGS/VENDORS/MICSFT/WindowsBestFit/). Revise el archivo **Léame.txt** de esa carpeta para obtener una descripción de cómo interpretar los archivos de asignación.
   
  En el ejemplo siguiente se usa la página de códigos 1252 (la página de códigos de Windows para los idiomas de Europa occidental) para mostrar la asignación con ajuste perfecto y sus desventajas. El método <xref:System.Text.Encoding.GetEncoding%28System.Int32%29?displayProperty=nameWithType> se usa para recuperar un objeto de codificación para la página de códigos 1252. De forma predeterminada, usa una asignación con ajuste perfecto para los caracteres Unicode que no admite. En el ejemplo se crea una instancia de una cadena que contiene tres caracteres no ASCII, CIRCLED LATIN CAPITAL LETTER S (U+24C8), SUPERSCRIPT FIVE (U+2075) e INFINITY (U+221E), separados por espacios en blanco. Como muestra el resultado del ejemplo, cuando se codifica la cadena, los tres caracteres originales que no son espacios en blanco se reemplazan con QUESTION MARK (U+003F), DIGIT FIVE (U+0035) y DIGIT EIGHT (U+0038). DIGIT EIGHT es un reemplazo especialmente deficiente para el carácter INFINITY no compatible y QUESTION MARK indica que no había ninguna asignación disponible para el carácter original.  
   

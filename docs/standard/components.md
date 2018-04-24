@@ -1,6 +1,6 @@
 ---
 title: Componentes de la arquitectura .NET
-description: "Describe los componentes de la arquitectura .NET, como .NET Standard, las implementaciones de .NET, los entornos de ejecución de .NET y las herramientas."
+description: Describe los componentes de la arquitectura .NET, como .NET Standard, las implementaciones de .NET, los entornos de ejecución de .NET y las herramientas.
 author: cartermp
 ms.author: mairaw
 ms.date: 08/23/2017
@@ -10,11 +10,11 @@ ms.technology: dotnet-standard
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 8a17d4c36d9c1942166b9ad889103a7942f1813d
-ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
+ms.openlocfilehash: 51e6779d63cdaccc5633c9e81f97471d71099653
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="net-architectural-components"></a>Componentes de la arquitectura .NET
 
@@ -61,7 +61,7 @@ Históricamente, Mono implementaba la API de .NET Framework más grande y emulab
 
 Mono se suele usar con un compilador Just-In-Time, pero también incluye un compilador estático completo (compilación Ahead Of Time) que se usa en plataformas como iOS.
 
-Para más información sobre Mono, consulte la [documentación de Mono](http://www.mono-project.com/docs/).
+Para más información sobre Mono, consulte la [documentación de Mono](https://www.mono-project.com/docs/).
 
 ### <a name="universal-windows-platform-uwp"></a>Plataforma universal de Windows (UWP)
 
@@ -86,7 +86,7 @@ Tiene acceso a un amplio conjunto de herramientas y componentes de infraestructu
 - El sistema de proyectos de .NET (basado en archivos *.csproj*, *.vbproj* y *.fsproj*)
 - [MSBuild](/visualstudio/msbuild/msbuild), el motor de compilación usado para compilar proyectos
 - [NuGet](/nuget/), administrador de paquetes de Microsoft para .NET
-- Herramientas de organización de compilación de código abierto, como [CAKE](http://cakebuild.net/) y [FAKE](https://fake.build/)
+- Herramientas de organización de compilación de código abierto, como [CAKE](https://cakebuild.net/) y [FAKE](https://fake.build/)
 
 ## <a name="see-also"></a>Vea también
 [Selección entre .NET Core y .NET Framework para aplicaciones de servidor](choosing-core-framework-server.md)   

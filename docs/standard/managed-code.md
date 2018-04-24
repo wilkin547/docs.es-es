@@ -1,6 +1,6 @@
 ---
-title: "¿Qué es el código administrado?"
-description: "Obtenga información sobre cómo el código administrado es código cuya ejecución la administra un tiempo de ejecución, Common Language Runtime (CLR)."
+title: ¿Qué es el código administrado?
+description: Obtenga información sobre cómo el código administrado es código cuya ejecución la administra un tiempo de ejecución, Common Language Runtime (CLR).
 keywords: .NET, .NET Core
 author: blackdwarf
 ms.author: mairaw
@@ -13,17 +13,17 @@ ms.assetid: 20bb7ea8-192e-4a96-8ef3-e10e1950fd3d
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: ca2ae076229a1726d3a25a84e358f9cfb623a297
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 46bbe30f216ba9b0a3bc7f88267c428ec56de614
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="what-is-managed-code"></a>¿Qué es el "código administrado"?
 
 Al trabajar con .NET Framework, a menudo se encontrará con el término "código administrado". En este documento se explica el significado de este término y otra información relacionada.
 
-Dicho en pocas palabras, el código administrado es simplemente eso: código cuya ejecución está administrada mediante un tiempo de ejecución. En este caso, el tiempo de ejecución en cuestión se denomina **Common Language Runtime** o CLR, independientemente de la implementación ([Mono](http://www.mono-project.com/), .NET Framework o .NET Core). CLR se encarga de tomar el código administrado, compilarlo en código máquina y, después, ejecutarlo. Además de eso, el tiempo de ejecución proporciona varios servicios importantes, como la administración de memoria automática, los límites de seguridad, la seguridad de los tipos, etc.
+Dicho en pocas palabras, el código administrado es simplemente eso: código cuya ejecución está administrada mediante un tiempo de ejecución. En este caso, el tiempo de ejecución en cuestión se denomina **Common Language Runtime** o CLR, independientemente de la implementación ([Mono](https://www.mono-project.com/), .NET Framework o .NET Core). CLR se encarga de tomar el código administrado, compilarlo en código máquina y, después, ejecutarlo. Además de eso, el tiempo de ejecución proporciona varios servicios importantes, como la administración de memoria automática, los límites de seguridad, la seguridad de los tipos, etc.
 
 Compare esto con la forma en que ejecutaría un programa escrito en C/C++, también denominado "código no administrado". En un entorno no administrado, el programador se encarga prácticamente de todo. El programa real es, básicamente, un archivo binario que el sistema operativo (SO) carga en la memoria e inicia. Todo lo demás, desde la administración de memoria hasta las consideraciones de seguridad, son responsabilidad del programador.
 

@@ -6,14 +6,15 @@ ms.author: wiwagn
 ms.date: 10/07/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
+ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 648e0a4cdd388cf4a322f0fc049d5dcfca53d54b
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 7d160d23808832ff6456e5c95f6e5ed5f4d44fa5
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="working-with-data-in-aspnet-core-apps"></a>Trabajar con datos en aplicaciones ASP.NET Core
 
@@ -202,11 +203,11 @@ El primer DbContext es \_catalogContext y el segundo DbContext está dentro del 
 
 > ### <a name="references--entity-framework-core"></a>Referencias: Entity Framework Core
 > - **Documentación de EF Core**  
-> <https://docs.microsoft.com/es-es/ef/>
+> <https://docs.microsoft.com/ef/>
 > - **EF Core: datos relacionados**  
-> <https://docs.microsoft.com/es-es/ef/core/querying/related-data>
+> <https://docs.microsoft.com/ef/core/querying/related-data>
 > - **Avoid Lazy Loading Entities in ASPNET Applications** (Evitar la carga diferida de entidades en aplicaciones ASP.NET)  
-> <http://ardalis.com/avoid-lazy-loading-entities-in-asp-net-applications>
+> <https://ardalis.com/avoid-lazy-loading-entities-in-asp-net-applications>
 
 ## <a name="ef-core-or-micro-orm"></a>¿EF Core o micro-ORM?
 
@@ -236,7 +237,7 @@ Si tiene que generar gráficos de objetos más complejos con Dapper, tendrá que
 
 ```sql
 select * from #Posts p
-left join \#Users u on u.Id = p.OwnerId
+left join #Users u on u.Id = p.OwnerId
 Order by p.Id
 ```
 
@@ -270,7 +271,7 @@ Otra complejidad que las bases de datos NoSQL deben superar es el control de ver
 
 En las bases de datos NoSQL se pueden almacenar varias versiones de los objetos, algo que las bases de datos relacionales de esquema fijo normalmente no admiten. Pero en este caso, el código de la aplicación tendrá que tener en cuenta la existencia de versiones anteriores de los objetos, lo que agrega complejidad adicional.
 
-Las bases de datos NoSQL normalmente no aplican [ACID](http://en.wikipedia.org/wiki/ACID), lo que significa que tienen ventajas de rendimiento y escalabilidad con respecto a las bases de datos relacionales. Son adecuadas para conjuntos de datos y objetos muy grandes que no son adecuados para el almacenamiento en estructuras de tabla normalizadas. No hay ninguna razón para que una aplicación no pueda aprovechar las ventajas de las bases de datos relacionales y NoSQL, y usar cada una cuando sea más adecuado.
+Las bases de datos NoSQL normalmente no aplican [ACID](https://en.wikipedia.org/wiki/ACID), lo que significa que tienen ventajas de rendimiento y escalabilidad con respecto a las bases de datos relacionales. Son adecuadas para conjuntos de datos y objetos muy grandes que no son adecuados para el almacenamiento en estructuras de tabla normalizadas. No hay ninguna razón para que una aplicación no pueda aprovechar las ventajas de las bases de datos relacionales y NoSQL, y usar cada una cuando sea más adecuado.
 
 ## <a name="azure-documentdb"></a>Azure DocumentDB
 
@@ -286,7 +287,7 @@ El lenguaje de consulta DocumentDB es una interfaz sencilla pero eficaz para con
 **Referencias: DocumentDB**
 
 -   Introducción a DocumentDB\
-    <https://docs.microsoft.com/es-es/azure/cosmos-db/sql-api-introduction>
+    <https://docs.microsoft.com/azure/documentdb/documentdb-introduction>
 
 ## <a name="other-persistence-options"></a>Otras opciones de persistencia
 
@@ -303,7 +304,7 @@ Además de las opciones de almacenamiento relacionales y NoSQL, en las aplicacio
 **Referencias: Azure Storage**
 
 -   Introducción a Azure Storage
-    <https://docs.microsoft.com/es-es/azure/storage/common/storage-introduction>
+    <https://docs.microsoft.com/azure/storage/storage-introduction>
 
 ## <a name="caching"></a>Almacenamiento en memoria caché
 

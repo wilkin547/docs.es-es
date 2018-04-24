@@ -1,12 +1,12 @@
 ---
-title: "Prácticas recomendadas para desarrollar aplicaciones de uso internacional"
-ms.custom: 
+title: Prácticas recomendadas para desarrollar aplicaciones de uso internacional
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - global applications, best practices
@@ -14,18 +14,18 @@ helpviewer_keywords:
 - globalization [.NET Framework], best practices
 - international applications [.NET Framework], best practices
 ms.assetid: f08169c7-aad8-4ec3-9a21-9ebd3b89986c
-caps.latest.revision: 
+caps.latest.revision: 20
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 1fbdbe2596f44a6efda35b8c3e3aace303d79364
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 65566d54c97db7592fdd38178d88fe2963e637bf
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="best-practices-for-developing-world-ready-applications"></a>Prácticas recomendadas para desarrollar aplicaciones de uso internacional
 En esta sección se describen las procedimientos recomendados que hay que seguir al desarrollar aplicaciones de uso internacional.  
@@ -102,7 +102,7 @@ En esta sección se describen las procedimientos recomendados que hay que seguir
   
 4.  Especifique los valores de los atributos requestEncoding, responseEncoding, fileEncoding, culture y uiCulture en las tres ubicaciones siguientes de una aplicación ASP.NET:  
   
-    -   En la sección de globalización de un archivo Web.config. Este archivo es externo a la aplicación de ASP.NET. Para obtener más información, vea [Elemento \<globalization>](http://msdn.microsoft.com/library/e2dffc8e-ebd2-439b-a2fd-e3ac5e620da7).  
+    -   En la sección de globalización de un archivo Web.config. Este archivo es externo a la aplicación de ASP.NET. Para obtener más información, vea [Elemento \<globalization>](https://msdn.microsoft.com/library/e2dffc8e-ebd2-439b-a2fd-e3ac5e620da7).  
   
     -   En una directiva de página. Tenga en cuenta que, cuando una aplicación está en una página, el archivo ya se ha leído. Por lo tanto, es demasiado tarde para especificar fileEncoding y requestEncoding. Sólo uiCulture, Culture y responseEncoding se pueden especificar en una directiva de página.  
   

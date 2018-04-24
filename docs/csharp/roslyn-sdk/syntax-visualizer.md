@@ -8,11 +8,11 @@ ms.topic: conceptual
 ms.prod: .net
 ms.devlang: devlang-csharp
 ms.custom: mvc
-ms.openlocfilehash: ec9d9fcdcaf2c018762542f6dc403e2a4f89376b
-ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
+ms.openlocfilehash: 04452159c759a0c7236c1b93dc966e5e9c54574a
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="explore-code-with-the-roslyn-syntax-visualizer-in-visual-studio"></a>Explorar código con el Visualizador de sintaxis Roslyn en Visual Studio
 
@@ -28,16 +28,17 @@ El **Visualizador de sintaxis** permite inspeccionar el árbol de sintaxis para 
 
 Este comando abre el Visualizador de sintaxis como una ventana de herramientas flotante. Si no tiene abierta ninguna ventana de editor de código, la presentación está en blanco, tal como se muestra en esta imagen. 
 
-![Ventana de la herramienta Visualizador de sintaxis](media/syntax-visualizer.png)
+![Ventana de la herramienta Visualizador de sintaxis](media/syntax-visualizer/syntax-visualizer.png)
 
 Acople esta ventana de herramienta en una ubicación cómoda dentro de Visual Studio, como por ejemplo, en el lado izquierdo. El visualizador muestra información sobre el archivo de código actual.
 
 Cree un nuevo proyecto con los comandos **Archivo** > **Nuevo proyecto**. Puede crear un proyecto de VB o de C#. Cuando Visual Studio abre el principal archivo de código para este proyecto, el visualizador muestra el árbol de sintaxis correspondiente. Puede abrir cualquier archivo de C# o VB existente en esta instancia de Visual Studio y el visualizador mostrará el árbol de sintaxis de ese archivo. Si tiene varios archivos de código abiertos dentro de Visual Studio, el visualizador muestra el árbol de sintaxis para el archivo de código activo (el archivo de código que tiene el foco de teclado).
 
 # <a name="ctabcsharp"></a>[C#](#tab/csharp)
-![Visualizar un árbol de sintaxis de C#](media/visualize-csharp.png)
+![Visualizar un árbol de sintaxis de C#](media/syntax-visualizer/visualize-csharp.png)
 # <a name="visual-basictabvisual-basic"></a>[Visual Basic](#tab/visual-basic)
-<a name="visualizing-a-vb-syntax-treemediavisualize-visual-basicpng"></a>![Visualizar un árbol de sintaxis de VB](media/visualize-visual-basic.png)
+![Visualizar un árbol de sintaxis de VB](media/syntax-visualizer/visualize-visual-basic.png)
+
 ---
 
 Como se muestra en las imágenes anteriores, la ventana de herramientas del visualizador muestra el árbol de sintaxis en la parte superior y una cuadrícula de propiedades en la parte inferior. La cuadrícula de propiedades muestra las propiedades del elemento que está seleccionado actualmente en el árbol, incluido el *Tipo* de .NET y la *Variante* (SyntaxKind) del elemento.
@@ -60,13 +61,18 @@ Pare de escribir en cuanto escriba `Console.`. Verá que el árbol ha marcado en
 
 Haga clic con el botón derecho en cualquier elemento del árbol y haga clic en **View Directed Syntax Graph** (Ver gráfico de sintaxis dirigido). 
 
+# <a name="ctabcsharp"></a>[C#](#tab/csharp)
+
 El visualizador muestra una representación gráfica del subárbol cuya raíz se encuentra en el elemento seleccionado. Siga estos pasos para el nodo **MethodDeclaration** correspondiente al método `Main()` en el ejemplo de C#. El visualizador muestra un gráfico de sintaxis que tiene este aspecto:
 
-![Ver un gráfico de sintaxis de C#](media/csharp-syntax-graph.png)
+![Ver un gráfico de sintaxis de C#](media/syntax-visualizer/csharp-syntax-graph.png)
+# <a name="visual-basictabvisual-basic"></a>[Visual Basic](#tab/visual-basic)
 
 Pruebe lo mismo para el nodo **SubBlock** correspondiente al método `Main()` en el ejemplo de VB anterior. El visualizador muestra un gráfico de sintaxis que tiene este aspecto:
 
-![Ver un gráfico de sintaxis de VB](media/visual-basic-syntax-graph.png)
+![Ver un gráfico de sintaxis de VB](media/syntax-visualizer/visual-basic-syntax-graph.png)
+
+---
 
 El visor de gráficos de sintaxis tiene una opción para mostrar una leyenda con su esquema de color. También puede pasar el puntero sobre determinados elementos en el gráfico de sintaxis para ver las propiedades correspondientes a ese elemento.
 
@@ -74,7 +80,7 @@ Puede ver gráficos de sintaxis de elementos diferentes en el árbol de manera r
 
 Este es el diseño de acoplamiento que se usa con la ventana del visualizador y la ventana del gráfico de sintaxis:
 
-![Un diseño de acoplamiento para la ventana del gráfico de sintaxis y del visualizador](media/docking-layout.png)
+![Un diseño de acoplamiento para la ventana del gráfico de sintaxis y del visualizador](media/syntax-visualizer/docking-layout.png)
 
 Otra opción consiste en colocar la ventana del gráfico de sintaxis en un segundo monitor, en una configuración de monitor dual.
 
@@ -84,19 +90,19 @@ El Visualizador de sintaxis permite realizar una inspección rudimentaria de sí
 
 La cuadrícula de propiedades en el visualizador se actualiza como se muestra en esta imagen: el símbolo de la expresión es **SynthesizedIntrinsicOperatorSymbol** con **Variante = Método**.
 
-![Propiedades de símbolo](media/symbol-properties.png)
+![Propiedades de símbolo](media/syntax-visualizer/symbol-properties.png)
 
 Intente **View TypeSymbol (if any)** [Ver TypeSymbol (si existe)] para el mismo nodo **AddExpression**. La cuadrícula de propiedades del visualizador se actualiza como se muestra en esta imagen, que indica que el tipo de la expresión seleccionada es `Int32`.
 
-![Propiedades de TypeSymbol](media/type-symbol-properties.png)
+![Propiedades de TypeSymbol](media/syntax-visualizer/type-symbol-properties.png)
 
 Intente **View Converted TypeSymbol (if any)** [Ver TypeSymbol convertido (si existe)] para el mismo nodo **AddExpression**. La cuadrícula de propiedades se actualiza para indicar que, aunque el tipo de la expresión es `Int32`, el tipo convertido de la expresión es `Double`, como se muestra en esta imagen. Este nodo incluye información de símbolo de tipo convertido porque la expresión `Int32` se produce en un contexto donde se debe convertir a `Double`. Esta conversión satisface el tipo `Double` especificado para la variable `x` en el lado izquierdo del operador de asignación.
 
-![Propiedades de TypeSymbol convertido](media/converted-type-symbol-properties.png)
+![Propiedades de TypeSymbol convertido](media/syntax-visualizer/converted-type-symbol-properties.png)
 
 Por último, intente **View Constant Value (if any)** [Ver valor de constante (si existe)] para el mismo nodo **AddExpression**. La cuadrícula de propiedades muestra que el valor de la expresión es una constante en tiempo de compilación con el valor `2`.
 
-![Un valor de constante](media/constant-value.png)
+![Un valor de constante](media/syntax-visualizer/constant-value.png)
 
 El ejemplo anterior también se puede replicar en VB. Escriba `Dim x As Double = 1 + 1` en un archivo de VB. Seleccione la expresión `1 + 1` en la ventana del editor de código. El visualizador resalta el nodo **AddExpression** correspondiente en el visualizador. Repita los pasos anteriores para **AddExpression** y deberían mostrarse resultados idénticos.
 
@@ -114,15 +120,15 @@ End Module
 
 Este código incluye un alias llamado `C` que se asigna al tipo `System.Console` en la parte superior del archivo y usa este alias en `Main()`. Seleccione el uso de este alias, `C` en `C.WriteLine()`, dentro del método `Main()`. El visualizador selecciona el nodo **IdentifierName** correspondiente en el visualizador. Haga clic con el botón derecho en este nodo y elija **View Symbol (if any)** [Ver símbolo (si existe)]. La cuadrícula de propiedades indica que este identificador está enlazado al tipo `System.Console` tal como se muestra en esta imagen:
 
-![Propiedades de símbolo](media/symbol-visual-basic.png)
+![Propiedades de símbolo](media/syntax-visualizer/symbol-visual-basic.png)
 
 Intente **View AliasSymbol (if any)** [Ver AliasSymbol (si existe)] para el mismo nodo **IdentifierName**. La cuadrícula de propiedades indica que el identificador es un alias con el nombre `C` que está enlazado al destino `System.Console`. En otras palabras, la cuadrícula de propiedades proporciona información sobre el **AliasSymbol** correspondiente al identificador `C`.
 
-![Propiedades de AliasSymbol](media/alias-symbol.png)
+![Propiedades de AliasSymbol](media/syntax-visualizer/alias-symbol.png)
 
 Inspeccione el símbolo correspondiente a cualquier tipo, método o propiedad declarados. Seleccione el nodo correspondiente en el visualizador y haga clic en **View Symbol (if any)** [Ver símbolo (si existe)]. Seleccione el método `Sub Main()`, incluido el cuerpo del método. Haga clic en **View Symbol (if any)** [Ver símbolo (si existe)] para el nodo **SubBlock** correspondiente en el visualizador. La cuadrícula de propiedades muestra que **MethodSymbol** para este nodo **SubBlock** tiene el nombre `Main` con el tipo de valor devuelto `Void`.
 
-![Ver símbolo de una declaración de método](media/method-symbol.png)
+![Ver símbolo de una declaración de método](media/syntax-visualizer/method-symbol.png)
 
 Los ejemplos de VB anteriores se pueden replicar fácilmente en C#. Escriba `using C = System.Console;` en lugar de `Imports C = System.Console` para el alias. Los pasos anteriores en C# producen resultados idénticos en la ventana del visualizador.
 

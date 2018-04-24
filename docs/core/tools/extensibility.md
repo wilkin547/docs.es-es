@@ -1,6 +1,6 @@
 ---
 title: Modelo de extensibilidad de la CLI de .NET Core
-description: "Obtenga información sobre cómo puede ampliar las herramientas de la interfaz de la línea de comandos (CLI)."
+description: Obtenga información sobre cómo puede ampliar las herramientas de la interfaz de la línea de comandos (CLI).
 keywords: CLI, extensibilidad, comandos personalizados, .NET Core
 author: blackdwarf
 ms.author: mairaw
@@ -10,12 +10,13 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: fffc3400-aeb9-4c07-9fea-83bc8dbdcbf3
-ms.workload: dotnetcore
-ms.openlocfilehash: 0d273510903c888f3212a57f4c28b118b73cab5c
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 53329c302066891c240a234156c2572acc66e7ab
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="net-core-cli-tools-extensibility-model"></a>Modelo de extensibilidad de las herramientas de la CLI de .NET Core
 
@@ -82,8 +83,8 @@ Como las herramientas son aplicaciones portátiles, el usuario que las consume d
 
 Estas clases de herramientas tienen un gráfico de dependencias que es completamente independiente del gráfico de dependencias del proyecto que los usa. El proceso de restauración restaura primero las dependencias del proyecto y, después, cada una de las herramientas y sus dependencias.
 
-Puede encontrar más ejemplos y diferentes combinaciones de esto en el [repositorio de la CLI de .NET Core](https://github.com/dotnet/cli/tree/rel/1.0.1/TestAssets/TestProjects).
-También puede ver las [herramientas de implementación usadas](https://github.com/dotnet/cli/tree/rel/1.0.1/TestAssets/TestPackages) en el mismo repositorio.
+Puede encontrar más ejemplos y diferentes combinaciones de esto en el [repositorio de la CLI de .NET Core](https://github.com/dotnet/cli/tree/release/2.1/TestAssets/TestProjects).
+También puede ver las [herramientas de implementación usadas](https://github.com/dotnet/cli/tree/release/2.1/TestAssets/TestPackages) en el mismo repositorio.
 
 ### <a name="custom-targets"></a>Destinos personalizados
 NuGet tiene la capacidad de [empaquetar archivos de propiedades y destinos de MSBuild personalizados](/nuget/create-packages/creating-a-package#including-msbuild-props-and-targets-in-a-package). Con el paso de las herramientas de la CLI de .NET Core para usar MSBuild, el mismo mecanismo de extensibilidad se aplica ahora en proyectos de .NET Core. Este tipo de extensibilidad se usaría cuando quisiera extender el proceso de compilación o quisiera acceder a alguno de los artefactos de dicho proceso, como los archivos generados, o si quiere inspeccionar la configuración bajo la que se invoca la compilación, etc.

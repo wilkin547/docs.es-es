@@ -1,6 +1,6 @@
 ---
-title: "Introducción a .NET y Docker"
-description: "Descripción de Docker y .NET Core"
+title: Introducción a .NET y Docker
+description: Descripción de Docker y .NET Core
 keywords: .NET, .NET Core, Docker
 author: jralexander
 ms.author: johalex
@@ -14,11 +14,11 @@ manager: wpickett
 ms.custom: mvc
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: dabc7c0c4a0afab8edf7d2bab410bb9635821936
-ms.sourcegitcommit: 75a180acb5d8a2dbd4a52915ce8e980749fb1d05
+ms.openlocfilehash: 75c631cf0abac543889cb7387f6fc3fdb2624512
+ms.sourcegitcommit: 68b60d38043e50104ccc90c76f8599b1ffe18346
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/24/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="introduction-to-net-and-docker"></a>Introducción a .NET y Docker
 
@@ -105,15 +105,15 @@ Este repositorio contiene ejemplos que muestran diversas configuraciones de Dock
 
 **.NET Framework 4.7**
 
-En el [ejemplo dotnet-framework:4.7](https://github.com/Microsoft/dotnet-framework-docker-samples/tree/master/dotnetapp-4.7) se muestra el uso básico de "hello world" de [.NET Framework 4.7](../../framework/whats-new/index.md#v47). Muestra cómo puede compilar e implementar la aplicación que se basa en la [imagen de docker de .NET Framework 4.7](https://github.com/Microsoft/dotnet-framework-docker/blob/master/4.7/Dockerfile).
+En el [ejemplo dotnet-framework:4.7](https://github.com/Microsoft/dotnet-framework-docker-samples/tree/master/dotnetapp-4.7) se muestra el uso básico de "hello world" de [.NET Framework 4.7](../../framework/whats-new/index.md#v47). Muestra cómo puede compilar e implementar la aplicación que se basa en la [imagen de docker de .NET Framework 4.7](https://github.com/Microsoft/dotnet-framework-docker-samples/blob/master/dotnetapp-4.7/Dockerfile).
 
 **.NET Framework 4.6.2**
 
-El [ejemplo de dotnet-framework:4.6.2](https://github.com/Microsoft/dotnet-framework-docker-samples/tree/master/dotnetapp-4.6.2) muestra el uso básico de "hola mundo" de [.NET Framework 4.6.2](../../framework/whats-new/index.md#v462). Muestra cómo puede compilar e implementar la aplicación que se basa en la [imagen de docker de .NET Framework 4.6.2](https://github.com/Microsoft/dotnet-framework-docker/tree/master/4.6.2).
+El [ejemplo de dotnet-framework:4.6.2](https://github.com/Microsoft/dotnet-framework-docker-samples/tree/master/dotnetapp-4.6.2) muestra el uso básico de "hola mundo" de [.NET Framework 4.6.2](../../framework/whats-new/index.md#v462). Muestra cómo puede compilar e implementar la aplicación que se basa en la [imagen de docker de .NET Framework 4.6.2](https://github.com/Microsoft/dotnet-framework-docker-samples/blob/master/dotnetapp-4.6.2/Dockerfile).
 
 **.NET Framework 3.5**
 
- El [ejemplo de dotnet-framework:3.5](https://github.com/Microsoft/dotnet-framework-docker-samples/tree/master/dotnetapp-3.5) muestra el uso básico de "hola mundo" de [.NET Framework 3.5](https://github.com/Microsoft/dotnet-framework-docker/tree/master/3.5). Muestra cómo puede compilar e implementar un proyecto que se basa en .NET Framework 3.5 en Docker.
+ El [ejemplo de dotnet-framework:3.5](https://github.com/Microsoft/dotnet-framework-docker-samples/tree/master/dotnetapp-3.5) muestra el uso básico de "hola mundo" de [.NET Framework 3.5](https://github.com/Microsoft/dotnet-framework-docker-samples/blob/master/dotnetapp-3.5/dotnetapp-3.5/Dockerfile). Muestra cómo puede compilar e implementar un proyecto que se basa en .NET Framework 3.5 en Docker.
 
 #### <a name="aspnet-core"></a>ASP.NET Core
 
@@ -133,7 +133,7 @@ El [ejemplo de dotnet-framework:4.6.2](https://github.com/Microsoft/dotnet-frame
 
 * [Imágenes de Windows Communication Framework (WCF) en DockerHub](https://hub.docker.com/r/microsoft/wcf/)
 
-* [Imágenes de Windows Communication Framework (WCF) en GitHub](https://github.com/microsoft/iis-docker)
+* [Imágenes de Windows Communication Framework (WCF) en GitHub](https://github.com/microsoft/wcf-docker)
 
 * [Ejemplos de Docker de Windows Communication Framework (WCF) que usan .NET Full Framework 4.6.2](https://github.com/Microsoft/wcf-docker-samples)
 
@@ -141,7 +141,7 @@ El [ejemplo de dotnet-framework:4.6.2](https://github.com/Microsoft/dotnet-frame
 
 * [Imágenes de Internet Information Server (IIS) en DockerHub](https://hub.docker.com/r/microsoft/iis/)
 
-* [Imágenes de Internet Information Server (IIS) en GitHub](https://github.com/microsoft/wcf-docker)
+* [Imágenes de Internet Information Server (IIS) en GitHub](https://github.com/microsoft/iis-docker)
 
 ### <a name="interact-with-other-microsoft-stack-container-images"></a>Interacción con otras imágenes de contenedor de pila de Microsoft
 
@@ -149,9 +149,7 @@ El [ejemplo de dotnet-framework:4.6.2](https://github.com/Microsoft/dotnet-frame
 
 * [Guía de inicio rápido para ejecutar la imagen de contenedor de Microsoft SQL Server para Linux 2017 con Docker](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker)
 
-* [Imágenes de Microsoft SQL Server para Linux en DockerHub](https://hub.docker.com/r/microsoft/mssql-server-windows/)
-
-* [Imágenes de Microsoft SQL Server para contenedores de Windows en DockerHub](https://hub.docker.com/r/microsoft/mssql-server-windows/)
+* [Imágenes de Microsoft SQL Server para Linux en DockerHub](https://hub.docker.com/r/microsoft/mssql-server-linux/)
 
 * [Imágenes de Microsoft SQL Server Express Edition para contenedores de Windows en DockerHub](https://hub.docker.com/r/microsoft/mssql-server-windows-express/)
 
@@ -165,9 +163,9 @@ El [ejemplo de dotnet-framework:4.6.2](https://github.com/Microsoft/dotnet-frame
 
 #### <a name="operations-management-suite-oms-linux-agent"></a>Agente de Linux de Operations Management Suite (OMS)
 
-* [Información general de agente de Linux de Operations Management Suite (OMS)](https://github.com/Microsoft/OMS-Agent-for-Linux/blob/master/docs/Docker-Instructions.md#overview)
+* [Información general de agente de Linux de Operations Management Suite (OMS)](https://github.com/Microsoft/OMS-Agent-for-Linux/blob/master/docs/Docker-Instructions.md)
 
-* [Imágenes de Operations Management Suite (OMS) en DockerHub](https://hub.docker.com/r/microsoft/vsts-agent/)
+* [Imágenes de Operations Management Suite (OMS) en DockerHub](https://hub.docker.com/r/microsoft/oms/)
 
 * [Imágenes de Operations Management Suite (OMS) en GitHub](https://github.com/Microsoft/OMS-docker)
 
@@ -175,7 +173,7 @@ El [ejemplo de dotnet-framework:4.6.2](https://github.com/Microsoft/dotnet-frame
 
 * [Imágenes de interfaz de línea de comandos (CLI) de Microsoft Azure en DockerHub](https://hub.docker.com/r/microsoft/azure-cli/) 
 
-* [Imágenes de interfaz de línea de comandos (CLI) de Microsoft Azure en GitHub](https://github.com/Microsoft/OMS-docker)
+* [Imágenes de interfaz de línea de comandos (CLI) de Microsoft Azure en GitHub](https://github.com/Azure/azure-cli#Docker)
 
 > [!NOTE]
 > Si no tiene una suscripción de Azure, [regístrese hoy](https://azure.microsoft.com/free/?b=16.48) para obtener una cuenta gratuita durante 30 días y obtenga 200 dólares en créditos de Azure para probar cualquier combinación de servicios de Azure.

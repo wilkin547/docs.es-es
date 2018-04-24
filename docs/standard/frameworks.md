@@ -1,6 +1,6 @@
 ---
 title: Versiones de .NET Framework de destino
-description: "Obtenga información sobre las plataforma de destino para las aplicaciones y bibliotecas de .NET Core."
+description: Obtenga información sobre las plataforma de destino para las aplicaciones y bibliotecas de .NET Core.
 author: richlander
 ms.author: mairaw
 ms.date: 09/22/2017
@@ -11,11 +11,11 @@ ms.technology: dotnet-standard
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 838f4f6d78b4544a538e9c4bd6c487bcc731270b
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: e9f47647a1d4dc82b2df2ea8905f8d0a1e705b96
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="target-frameworks"></a>Versiones de .NET Framework de destino
 
@@ -141,4 +141,4 @@ Las siguientes plataformas de destino están en desuso. Los paquetes destinados 
 [Control de versiones de .NET Core](~/docs/core/versions/index.md)  
 [Repositorio de GitHub dotnet/standard](https://github.com/dotnet/standard)  
 [Repositorio de GitHub de herramientas de NuGet](https://github.com/joelverhagen/NuGetTools)  
-[Framework Profiles in .NET](http://blog.stephencleary.com/2012/05/framework-profiles-in-net.html) (Perfiles de marco de trabajo en .NET)
+[Framework Profiles in .NET](https://blog.stephencleary.com/2012/05/framework-profiles-in-net.html) (Perfiles de marco de trabajo en .NET)

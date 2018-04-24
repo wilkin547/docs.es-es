@@ -16,18 +16,18 @@ helpviewer_keywords:
 - formatting [.NET Framework], time
 - date and time strings
 ms.assetid: 98b374e3-0cc2-4c78-ab44-efb671d71984
-caps.latest.revision: ''
+caps.latest.revision: 79
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: c54a5ec9cdbfd73bccd8f70befcfcff7cf8aac2d
-ms.sourcegitcommit: 6f967c86dde55472440f0c8669b0e910ee3c53ba
+ms.openlocfilehash: 51c16e8c1cd031e4f2b8a207c8d288b7691e7a84
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="custom-date-and-time-format-strings"></a>Cadenas con formato de fecha y hora personalizado
 Una cadena con formato de fecha y hora define la representación de texto de un valor <xref:System.DateTime> o <xref:System.DateTimeOffset> que es el resultado de una operación de formato. También puede definir la representación de un valor de fecha y hora que se necesite en una operación de análisis para convertir correctamente la cadena en una fecha y hora. Una cadena de formato personalizado consta de uno o varios especificadores de formato de fecha y hora personalizado. Una cadena que no sea una [cadena con formato de fecha y hora estándar](../../../docs/standard/base-types/standard-date-and-time-format-strings.md) se interpreta como una cadena con formato de fecha y hora personalizado.  
@@ -35,7 +35,7 @@ Una cadena con formato de fecha y hora define la representación de texto de un 
  Las cadenas con formato de fecha y hora personalizado se pueden utilizar tanto con valores <xref:System.DateTime> como con valores <xref:System.DateTimeOffset>.  
   
 > [!TIP]
->  Puede descargar la [utilidad de formato](http://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d), una aplicación que permite aplicar cadenas de formato a valores de fecha y hora o numéricos, y muestra la cadena de resultado.  
+>  Puede descargar la [utilidad de formato](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d), una aplicación que permite aplicar cadenas de formato a valores de fecha y hora o numéricos, y muestra la cadena de resultado.  
   
 <a name="table"></a> En operaciones de formato, las cadenas de formato de fecha y hora personalizado se pueden usar con el método `ToString` de una instancia de fecha y hora o con un método que admita formato compuesto. En el ejemplo siguiente se muestran ambos usos.  
   
@@ -702,4 +702,4 @@ Una cadena con formato de fecha y hora define la representación de texto de un 
  <xref:System.IFormatProvider?displayProperty=nameWithType>  
  [Aplicación de formato a tipos](../../../docs/standard/base-types/formatting-types.md)  
  [Standard Date and Time Format Strings](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)  
- [Ejemplo: Utilidad de formato de .NET Framework 4](http://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)
+ [Ejemplo: Utilidad de formato de .NET Framework 4](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)

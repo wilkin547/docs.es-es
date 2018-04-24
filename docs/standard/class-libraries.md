@@ -13,15 +13,15 @@ ms.assetid: a67484c3-fe92-44d8-8fa3-36fa2071d880
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 8f7c421d2490678f7122e78bc0b83ebf3a1aa9ea
-ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
+ms.openlocfilehash: 44d5745daed8539c5dd48b08f9f73edce4da939f
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="net-class-libraries"></a>Bibliotecas de clases de .NET
 
-Las bibliotecas de clases son el concepto de [biblioteca compartida](http://en.wikipedia.org/wiki/Library_%28computing%29#Shared_libraries) de .NET. Le permiten dividir funcionalidades útiles en módulos que pueden usar varias aplicaciones. También se pueden usar para cargar la funcionalidad no necesaria o no conocida al inicio de la aplicación. Las bibliotecas de clases se describen mediante el [formato de archivo de Ensamblado de .NET](assembly-format.md).
+Las bibliotecas de clases son el concepto de [biblioteca compartida](https://en.wikipedia.org/wiki/Library_%28computing%29#Shared_libraries) de .NET. Le permiten dividir funcionalidades útiles en módulos que pueden usar varias aplicaciones. También se pueden usar para cargar la funcionalidad no necesaria o no conocida al inicio de la aplicación. Las bibliotecas de clases se describen mediante el [formato de archivo de Ensamblado de .NET](assembly-format.md).
 
 Hay tres tipos de bibliotecas de clases que puede usar:
 
@@ -43,7 +43,7 @@ Las bibliotecas portables son compatibles con varias implementaciones de .NET. P
 
 Puede elegir una configuración de plataforma al crear una biblioteca portable. Estos son los conjuntos de plataformas que tiene que admitir (por ejemplo, .NET Framework 4.5+, Windows Phone 8.0+). Cuantas más plataformas decida admitir, menos API y menos hipótesis de plataforma puede hacer, el mínimo común denominador. Esta característica puede ser confusa al principio, ya que la gente suele pensar que "más es mejor", pero más plataformas compatibles suponen menos API disponibles.
 
-Muchos desarrolladores de bibliotecas han pasado de producir bibliotecas específicas de varias plataformas de un origen (con las directivas de compilación condicionales) a bibliotecas portables. Hay [varios enfoques](http://blog.stephencleary.com/2012/11/portable-class-library-enlightenment.html) para acceder a la funcionalidad específica de la plataforma en las bibliotecas portables con [bait-and-switch](http://log.paulbetts.org/the-bait-and-switch-pcl-trick/) como la técnica más aceptada en este momento.
+Muchos desarrolladores de bibliotecas han pasado de producir bibliotecas específicas de varias plataformas de un origen (con las directivas de compilación condicionales) a bibliotecas portables. Hay [varios enfoques](https://blog.stephencleary.com/2012/11/portable-class-library-enlightenment.html) para acceder a la funcionalidad específica de la plataforma en las bibliotecas portables con [bait-and-switch](https://log.paulbetts.org/the-bait-and-switch-pcl-trick/) como la técnica más aceptada en este momento.
 
 ### <a name="net-standard-class-libraries"></a>Bibliotecas de clases .NET Standard
 

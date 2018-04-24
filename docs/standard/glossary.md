@@ -12,11 +12,11 @@ ms.devlang: dotnet
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 33123732514a53574036f6f8e948b2cf9acb9229
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
-ms.translationtype: MT
+ms.openlocfilehash: 7e9732fb6eaef240d08449635697ba6b8ad9c510
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="net-glossary"></a>Glosario de .NET
 
@@ -150,7 +150,7 @@ Históricamente, Mono implementaba la API de .NET Framework más grande y emulab
 
 Mono se suele usar con un compilador Just-In-Time, pero también incluye un compilador estático completo (compilación Ahead Of Time) que se usa en plataformas como iOS.
 
-Para más información sobre Mono, consulte la [documentación de Mono](http://www.mono-project.com/docs/).
+Para más información sobre Mono, consulte la [documentación de Mono](https://www.mono-project.com/docs/).
 
 ## <a name="net"></a>.NET
 

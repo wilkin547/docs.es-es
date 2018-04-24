@@ -1,6 +1,6 @@
 ---
-title: "Identificación de los límites del modelo de dominio para cada microservicio"
-description: "Arquitectura de microservicios de .NET para aplicaciones .NET en contenedores | Identificación de los límites del modelo de dominio para cada microservicio"
+title: Identificación de los límites del modelo de dominio para cada microservicio
+description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedores | Identificación de los límites del modelo de dominio para cada microservicio
 keywords: Docker, microservicios, ASP.NET, contenedor
 author: CESARDELATORRE
 ms.author: wiwagn
@@ -11,17 +11,17 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 830dd48a420a462842de57e436323a5a930c195d
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 23b5ebafc5ea037568f168426d76b3ec9839040e
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="identify-domain-model-boundaries-for-each-microservice"></a>Identificar los límites del modelo de dominio para cada microservicio
 
 El objetivo al identificar los límites del modelo y el tamaño de cada microservicio no es llegar a la separación más específica posible (aunque debería intentar usar microservicios pequeños siempre que sea posible), sino que debería ser llegar a la separación más significativa basada en el conocimiento del dominio. El énfasis no está en el tamaño, sino más bien en las capacidades empresariales. Además, si se necesita una clara cohesión para un área concreta de la aplicación sobre la base de un gran número de dependencias, eso también indica la necesidad de un solo microservicio. La cohesión es una manera de identificar cómo separar o agrupar microservicios. En última instancia, al tiempo que conoce mejor el dominio, debe adaptar el tamaño de su microservicio de forma iterativa. Buscar el tamaño adecuado no es un proceso monoestable.
 
-[Sam Newman](http://samnewman.io/), un reconocido promotor de microservicios y autor del libro [Crear microservicios](http://samnewman.io/books/building_microservices/), resalta que los microservicios se deben diseñar de acuerdo con el patrón de contexto limitado (BC) (parte del diseño guiado por el dominio), como se ha mencionado anteriormente. A veces, un BC podría estar compuesto de varios servicios físicos, pero no viceversa.
+[Sam Newman](https://samnewman.io/), un reconocido promotor de microservicios y autor del libro [Crear microservicios](https://samnewman.io/books/building_microservices/), resalta que los microservicios se deben diseñar de acuerdo con el patrón de contexto limitado (BC) (parte del diseño guiado por el dominio), como se ha mencionado anteriormente. A veces, un BC podría estar compuesto de varios servicios físicos, pero no viceversa.
 
 Un modelo de dominio con entidades de dominio específicas se aplica en un BC o un microservicio concreto. Un BC delimita la aplicabilidad de un modelo de dominio y ofrece a los miembros del equipo de desarrolladores una descripción clara y compartida de qué partes deben ser cohesivas y qué partes se pueden desarrollar de manera independiente. Estos son los mismos objetivos para los microservicios.
 

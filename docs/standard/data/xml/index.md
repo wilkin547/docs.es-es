@@ -16,11 +16,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 824e06a00c4242d8ee38bdfc5a57151a71e4f285
-ms.sourcegitcommit: ba765893e3efcece67d99fd6d5ce0074b050d1d9
+ms.openlocfilehash: 0da27afc5509af6db510b5e622ffde461ae2e0a1
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="xml-documents-and-data"></a>Documentos y datos XML
 .NET Framework proporciona un conjunto de clases completo e integrado que permiten crear, de forma sencilla, aplicaciones preparadas para XML. Las clases de los espacios de nombres siguientes admiten análisis y escritura XML, edición de datos XML en memoria, validación de datos y transformación XSLT.  
@@ -35,21 +35,21 @@ ms.lasthandoff: 03/02/2018
   
 -   <xref:System.Xml.Linq>  
   
- Para obtener una lista completa, vea la página web [Espacios de nombres System.Xml](http://msdn.microsoft.com/library/gg145036.aspx).  
+ Para obtener una lista completa, vea la página web [Espacios de nombres System.Xml](https://msdn.microsoft.com/library/gg145036.aspx).  
   
  Las clases de estos espacios de nombres admiten las recomendaciones del World Wide Web Consortium (W3C). Por ejemplo:  
   
--   La clase <xref:System.Xml.XmlDocument?displayProperty=nameWithType> implementa las recomendaciones de la [parte principal del nivel 1 de Document Object Model (DOM)](http://www.w3.org/TR/REC-DOM-Level-1/) y de la [parte principal del nivel 2 de DOM](http://www.w3.org/TR/DOM-Level-2-Core/) del W3C.  
+-   La clase <xref:System.Xml.XmlDocument?displayProperty=nameWithType> implementa las recomendaciones de la [parte principal del nivel 1 de Document Object Model (DOM)](https://www.w3.org/TR/REC-DOM-Level-1/) y de la [parte principal del nivel 2 de DOM](https://www.w3.org/TR/DOM-Level-2-Core/) del W3C.  
   
--   Las clases <xref:System.Xml.XmlReader?displayProperty=nameWithType> y <xref:System.Xml.XmlWriter?displayProperty=nameWithType> admiten las recomendaciones del W3C sobre [XML 1.0](http://www.w3.org/TR/2006/REC-xml-20060816/) y los [espacios de nombres de XML](http://www.w3.org/TR/REC-xml-names/).  
+-   Las clases <xref:System.Xml.XmlReader?displayProperty=nameWithType> y <xref:System.Xml.XmlWriter?displayProperty=nameWithType> admiten las recomendaciones del W3C sobre [XML 1.0](https://www.w3.org/TR/2006/REC-xml-20060816/) y los [espacios de nombres de XML](https://www.w3.org/TR/REC-xml-names/).  
   
--   Los esquemas de la clase <xref:System.Xml.Schema.XmlSchemaSet?displayProperty=nameWithType> admiten las recomendaciones del W3C sobre [estructuras del esquema XML (parte 1)](http://www.w3.org/TR/xmlschema-1/) y [tipos de datos del esquema XML (parte 2)](http://www.w3.org/TR/xmlschema-2/).  
+-   Los esquemas de la clase <xref:System.Xml.Schema.XmlSchemaSet?displayProperty=nameWithType> admiten las recomendaciones del W3C sobre [estructuras del esquema XML (parte 1)](https://www.w3.org/TR/xmlschema-1/) y [tipos de datos del esquema XML (parte 2)](https://www.w3.org/TR/xmlschema-2/).  
   
 -   Las clases del espacio de nombres <xref:System.Xml.Xsl?displayProperty=nameWithType> admiten transformaciones XSLT compatibles con las recomendaciones del W3C sobre [XSLT versión 1.0](http://www.w3.org/TR/xslt).  
   
  Las clases XML de .NET Framework proporcionan estas ventajas:  
   
--   **Productividad.** Gracias a [LINQ to XML](http://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13) resulta más sencillo programar con XML y proporciona una experiencia de consulta similar a SQL.  
+-   **Productividad.** Gracias a [LINQ to XML](https://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13) resulta más sencillo programar con XML y proporciona una experiencia de consulta similar a SQL.  
   
 -   **Extensibilidad.** Las clases XML en .NET Framework se pueden extender mediante el uso de clases base abstractas y métodos virtuales. Por ejemplo, puede crear una clase derivada de la clase <xref:System.Xml.XmlUrlResolver> que almacene el flujo caché en el disco local.  
   
@@ -72,7 +72,7 @@ ms.lasthandoff: 03/02/2018
  Trata sobre las opciones disponibles para procesar datos XML.  
   
  [Procesamiento de datos XML en memoria](../../../../docs/standard/data/xml/processing-xml-data-in-memory.md)  
- Trata acerca de los tres modelos para procesar datos XML en memoria. [LINQ to XML](http://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13), la clase <xref:System.Xml.XPath.XPathDocument> (basada en Document Object Model del W3C) y la clase <xref:System.Xml.XmlDocument> (basada en el modelo de datos XPath).  
+ Trata acerca de los tres modelos para procesar datos XML en memoria. [LINQ to XML](https://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13), la clase <xref:System.Xml.XPath.XPathDocument> (basada en Document Object Model del W3C) y la clase <xref:System.Xml.XmlDocument> (basada en el modelo de datos XPath).  
   
  [Transformaciones XSLT](../../../../docs/standard/data/xml/xslt-transformations.md)  
  Describe cómo utilizar el procesador XSLT.  

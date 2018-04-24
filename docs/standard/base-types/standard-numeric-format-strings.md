@@ -24,11 +24,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: f042d72c76ddbf3b5eaf8923fc747325b701c9a6
-ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
+ms.openlocfilehash: 34fe406dac4cbbc0c25e43f479154fd3e398ffc2
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="standard-numeric-format-strings"></a>Cadenas con formato numérico estándar
 Las cadenas de formato numérico estándar se utilizan para dar formato a tipos numéricos comunes. La forma de una cadena de formato numérico estándar es `Axx`, donde:  
@@ -51,7 +51,7 @@ Las cadenas con formato numérico estándar son compatibles con:
 - [Cadenas interpoladas](../../csharp/language-reference/tokens/interpolated.md) en C# y Visual Basic, que proporcionan una sintaxis simplificada cuando se comparan con las cadenas de formato compuesto.
  
 > [!TIP]
->  Puede descargar la [Utilidad de formato](http://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d), que es una aplicación que permite aplicar cadenas de formato a valores numéricos o de fecha y hora, y que muestra la cadena de resultado.  
+>  Puede descargar la [Utilidad de formato](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d), que es una aplicación que permite aplicar cadenas de formato a valores numéricos o de fecha y hora, y que muestra la cadena de resultado.  
   
 <a name="table"></a> En la tabla siguiente se describen los especificadores de formato numérico estándar y se muestran los resultados de ejemplo generados por cada especificador de formato. Consulte la sección [Notas](#NotesStandardFormatting) para obtener información adicional sobre cómo usar las cadenas con formato numérico estándar y la sección [Ejemplo](#example) para ver una ilustración completa de su uso.  
   
@@ -361,5 +361,5 @@ Para los valores <xref:System.Double> y <xref:System.Single>, el especificador d
  [Custom Numeric Format Strings](../../../docs/standard/base-types/custom-numeric-format-strings.md)  
  [Aplicación de formato a tipos](../../../docs/standard/base-types/formatting-types.md)  
  [Rellenar un número con ceros a la izquierda](../../../docs/standard/base-types/how-to-pad-a-number-with-leading-zeros.md)  
- [Ejemplo: Utilidad de formato de .NET Framework 4](http://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)  
+ [Ejemplo: Utilidad de formato de .NET Framework 4](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)  
  [Formatos compuestos](../../../docs/standard/base-types/composite-formatting.md)

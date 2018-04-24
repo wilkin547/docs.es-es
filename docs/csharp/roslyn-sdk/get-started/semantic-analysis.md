@@ -8,11 +8,11 @@ ms.topic: conceptual
 ms.prod: .net
 ms.devlang: devlang-csharp
 ms.custom: mvc
-ms.openlocfilehash: b9921bc3621d6abfc37b1bf1fc4f481620ccc407
-ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
+ms.openlocfilehash: 8703670f650a16d1b6642eaaf4f82f0a73ab4c69
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="get-started-with-semantic-analysis"></a>Introducción al análisis semántico
 
@@ -36,7 +36,7 @@ Como <xref:Microsoft.CodeAnalysis.SyntaxTree?displayProperty=nameWithType>, <xre
 
 En este tutorial, volverá a examinar el programa "Hola mundo". En esta ocasión, consultará los símbolos del programa para comprender qué tipos representan esos símbolos. Consultará los tipos en un espacio de nombres y aprenderá a buscar los métodos disponibles en un tipo.
 
-Puede ver el código terminado de este ejemplo en [nuestro repositorio de GitHub](https://github.com/dotnet/docs/tree/master/samples/csharp/roslyn-sdk/SemanticQuickStart).
+Puede ver el código terminado de este ejemplo en [nuestro repositorio de GitHub](https://github.com/dotnet/samples/tree/master/csharp/roslyn-sdk/SemanticQuickStart).
 
 > [!NOTE]
 > Los tipos de árbol de sintaxis usan la herencia para describir los diferentes elementos de sintaxis que son válidos en diferentes ubicaciones del programa. A menudo, usar estas API significa convertir propiedades o miembros de colección en tipos derivados concretos. En los ejemplos siguientes, la asignación y las conversiones son instrucciones independientes, con variables con tipo explícito. Puede leer el código para ver los tipos de valor devuelto de la API y el tipo de motor de ejecución de los objetos devueltos. En la práctica, es más habitual usar variables con tipo implícito y basarse en nombres de API para describir el tipo de los objetos que se examinan.
