@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 45f29a8d19e49685f864b7ca83e466ceb1f73a62
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 8098c62ac18593d8044d52cb24c4cd8859972e68
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="tackling-business-complexity-in-a-microservice-with-ddd-and-cqrs-patterns"></a>Abordar la complejidad empresarial en un microservicio con patrones DDD y CQRS
 
@@ -37,13 +37,13 @@ DDD es un tema amplio con numerosos recursos para obtener más información. Pue
 
 ##### <a name="ddd-domain-driven-design"></a>DDD (diseño guiado por el dominio)
 
--   **Eric Evans. Sitio web Domain Language**
-    [*http://domainlanguage.com/*](http://domainlanguage.com/)
+-   **Eric Evans. Domain Language**
+    [*https://domainlanguage.com/*](https://domainlanguage.com/)
 
--   **Martin Fowler. Artículos con la etiqueta "domain-driven design" (diseño guiado por el dominio)**
-    [*http://martinfowler.com/tags/domain%20driven%20design.html*](http://martinfowler.com/tags/domain%20driven%20design.html)
+-   **Martin Fowler. Domain-Driven Design**
+    [*https://martinfowler.com/tags/domain%20driven%20design.html*](https://martinfowler.com/tags/domain%20driven%20design.html)
 
--   **Jimmy Bogard. Strengthening your domain: a primer (Manual sobre cómo fortalecer el dominio)**
+-   **Jimmy Bogard. Strengthening your domain: a primer**
     [*https://lostechies.com/jimmybogard/2010/02/04/strengthening-your-domain-a-primer/*](https://lostechies.com/jimmybogard/2010/02/04/strengthening-your-domain-a-primer/)
 
 ##### <a name="ddd-books"></a>Libros sobre DDD
@@ -71,7 +71,7 @@ DDD es un tema amplio con numerosos recursos para obtener más información. Pue
 
 Aprendizaje de DDD
 
--   **Julie Lerman y Steve Smith. Curso "Domain-Driven Design Fundamentals" (Conceptos fundamentales sobre el diseño guiado por el dominio)**
+-   **Julie Lerman y Steve Smith. Domain-Driven Design Fundamentals**
     [*http://bit.ly/PS-DDD*](http://bit.ly/PS-DDD)
 
 
