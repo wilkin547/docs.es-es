@@ -1,12 +1,12 @@
 ---
 title: Sistema de tipos comunes
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -21,18 +21,18 @@ helpviewer_keywords:
 - namespaces [.NET Framework], types
 - types, about types
 ms.assetid: 53c57c96-83e1-4ee3-9543-9ac832671a89
-caps.latest.revision: 
+caps.latest.revision: 25
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 26ee5cffd5e04a8c78cf5913b286fadfaab03c7c
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 4660e8764c429f526e05e8e7b6c44bd30c4172c1
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="common-type-system"></a>Sistema de tipos comunes
 Common Type System define cómo se declaran, usan y administran los tipos en Common Language Runtime. Es también una parte importante de la compatibilidad en tiempo de ejecución con la integración entre lenguajes. El sistema de tipos común realiza las funciones siguientes:  
@@ -331,6 +331,6 @@ Common Type System define cómo se declaran, usan y administran los tipos en Com
 -   Un tipo derivado puede reemplazar a un método virtual heredado. El método de reemplazo proporciona una nueva definición del método que se invocará según el tipo del valor en tiempo de ejecución y no el tipo de la variable conocido en tiempo de compilación. Un método puede invalidar un método virtual únicamente si el método virtual no está marcado como `final` y el nuevo método es, al menos, tan accesible como el método virtual.  
   
 ## <a name="see-also"></a>Vea también  
- [Biblioteca de clases de .NET](http://go.microsoft.com/fwlink/?LinkID=217856)  
+ [Explorador de API de .NET](/dotnet/api)  
  [Common Language Runtime](../../../docs/standard/clr.md)  
  [Conversión de tipos en .NET](../../../docs/standard/base-types/type-conversion.md)
