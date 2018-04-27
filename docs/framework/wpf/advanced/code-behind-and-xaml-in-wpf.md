@@ -1,30 +1,32 @@
 ---
-title: "Código subyacente y XAML en WPF"
-ms.custom: 
+title: Código subyacente y XAML en WPF
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - XAML [WPF], code-behind
 - code-behind files [WPF], XAML
 ms.assetid: 9df6d3c9-aed3-471c-af36-6859b19d999f
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 19c7c2cdd49663a57a4184027fd7d6ad8fcd7656
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9c28a501996e4f2cc25e9e280b2f63e1c0c67051
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="code-behind-and-xaml-in-wpf"></a>Código subyacente y XAML en WPF
-<a name="introduction"></a>Código subyacente es un término que se usa para describir el código que se une con objetos definidos por marcado, cuando un [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] página está compilado por marcado. Este tema describen los requisitos para el código subyacente, así como un mecanismo de código insertado alternativo para el código en [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].  
+<a name="introduction"></a> Código subyacente es un término que se usa para describir el código que se une con objetos definidos por marcado, cuando un [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] página está compilado por marcado. Este tema describen los requisitos para el código subyacente, así como un mecanismo de código insertado alternativo para el código en [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].  
   
  Este tema contiene las siguientes secciones:  
   
@@ -57,11 +59,11 @@ ms.lasthandoff: 12/22/2017
   
 -   El controlador debe coincidir con el delegado para el evento adecuado en el sistema de tipos de respaldo.  
   
--   Para el [!INCLUDE[TLA#tla_visualb](../../../../includes/tlasharptla-visualb-md.md)] lenguaje concreto, puede usar el específicos del idioma `Handles` palabra clave que se va a asociar controladores de instancias y eventos en la declaración del controlador, en lugar de adjuntar controladores con atributos en [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Sin embargo, esta técnica tiene algunas limitaciones porque la `Handles` palabra clave no es compatible con todas las características específicas de la [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sistema de eventos, por ejemplo, determinados enruta los escenarios de eventos o eventos adjuntos. Para obtener más información, consulte [Visual Basic y el control de eventos de WPF](../../../../docs/framework/wpf/advanced/visual-basic-and-wpf-event-handling.md).  
+-   Para el idioma de Microsoft Visual Basic en concreto, puede usar el específicos del idioma `Handles` palabra clave que se va a asociar controladores de instancias y eventos en la declaración del controlador, en lugar de adjuntar controladores con atributos en [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Sin embargo, esta técnica tiene algunas limitaciones porque la `Handles` palabra clave no es compatible con todas las características específicas de la [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sistema de eventos, por ejemplo, determinados enruta los escenarios de eventos o eventos adjuntos. Para obtener más información, consulte [Visual Basic y el control de eventos de WPF](../../../../docs/framework/wpf/advanced/visual-basic-and-wpf-event-handling.md).  
   
 <a name="x_Code"></a>   
 ## <a name="xcode"></a>x: Code  
- [x: Code](../../../../docs/framework/xaml-services/x-code-intrinsic-xaml-type.md) se define un elemento de directiva en [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Un `x:Code` directiva elemento puede contener código de programación en línea. El código que se define en línea puede interactuar con el [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] en la misma página. En el ejemplo siguiente se muestra alineado [!INCLUDE[TLA2#tla_cshrp](../../../../includes/tla2sharptla-cshrp-md.md)] código. Tenga en cuenta que el código está dentro de la `x:Code` elemento y que el código debe incluirse entre `<CDATA[`... `]]>` para escapar el contenido para [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)], de modo que un [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] procesador (interpretar ya sea el [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] esquema o la [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] esquema) no intentará volver a interpretar el contenido literalmente como [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)].  
+ [x: Code](../../../../docs/framework/xaml-services/x-code-intrinsic-xaml-type.md) se define un elemento de directiva en [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Un `x:Code` directiva elemento puede contener código de programación en línea. El código que se define en línea puede interactuar con el [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] en la misma página. En el ejemplo siguiente se muestra código C# en línea. Tenga en cuenta que el código está dentro de la `x:Code` elemento y que el código debe incluirse entre `<CDATA[`... `]]>` para escapar el contenido para [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)], de modo que un [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] procesador (interpretar ya sea el [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] esquema o la [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] esquema) no intentará volver a interpretar el contenido literalmente como [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)].  
   
  [!code-xaml[XAMLOvwSupport#ButtonWithInlineCode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page4.xaml#buttonwithinlinecode)]  
   

@@ -1,31 +1,33 @@
 ---
-title: "Asignación basada en atributos"
-ms.custom: 
+title: Asignación basada en atributos
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 6dd89999-f415-4d61-b8c8-237d23d7924e
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: a7a66b165e5bcfc605842b96295ae1721e7b3af5
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 49969af962db9fb533ad316622af42104438be7d
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="attribute-based-mapping"></a>Asignación basada en atributos
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]asigna una base de datos de SQL Server a un [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] modelo de objetos aplicando atributos o mediante un archivo de asignación externo. En este tema se describe el enfoque basado en atributos.  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] asigna una base de datos de SQL Server a un [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] modelo de objetos aplicando atributos o mediante un archivo de asignación externo. En este tema se describe el enfoque basado en atributos.  
   
  En su forma más elemental, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] asigna una base de datos a un <xref:System.Data.Linq.DataContext>, una tabla a una clase y las columnas y relaciones a las propiedades de esas clases. También puede utilizar atributos para asignar una jerarquía de herencia en su modelo de objetos. Para obtener más información, consulte [Cómo: generar el modelo de objetos en Visual Basic o C#](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md).  
   
- Los desarrolladores que utilizan [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] suele llevar a cabo asignación basada en atributos con el [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]. También puede usar la herramienta de la línea de comandos de SQLMetal o incluir los atributos en el código manualmente. Para obtener más información, consulte [Cómo: generar el modelo de objetos en Visual Basic o C#](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md).  
+ Los desarrolladores que utilizan Visual Studio suele llevar a cabo asignación basada en atributos con el [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]. También puede usar la herramienta de la línea de comandos de SQLMetal o incluir los atributos en el código manualmente. Para obtener más información, consulte [Cómo: generar el modelo de objetos en Visual Basic o C#](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md).  
   
 > [!NOTE]
 >  También puede realizar la asignación utilizando un archivo XML externo. Para obtener más información, consulte [asignación externa](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md).  
@@ -72,7 +74,7 @@ ms.lasthandoff: 01/17/2018
  Para obtener más información, consulta <xref:System.Data.Linq.Mapping.ColumnAttribute>.  
   
 > [!NOTE]
->  Los valores de propiedad AssociationAttribute y ColumnAttribute Storage distinguen entre mayúsculas y minúsculas. Por ejemplo, asegúrese de que los valores utilizados en el atributo de la propiedad AssociationAttribute.Storage coinciden con el uso de mayúsculas y minúsculas para los nombres de propiedad correspondientes del resto del código. Esto se aplica a todos los lenguajes de programación de .NET, incluso a los que típicamente no distinguen entre mayúsculas y minúsculas, como [!INCLUDE[vb_current_short](../../../../../../includes/vb-current-short-md.md)]. Para obtener más información acerca de la propiedad Storage, vea <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A?displayProperty=nameWithType>.  
+>  Los valores de propiedad AssociationAttribute y ColumnAttribute Storage distinguen entre mayúsculas y minúsculas. Por ejemplo, asegúrese de que los valores utilizados en el atributo de la propiedad AssociationAttribute.Storage coinciden con el uso de mayúsculas y minúsculas para los nombres de propiedad correspondientes del resto del código. Esto se aplica a todos los lenguajes de programación. NET, incluso aquellos que no son normalmente entre mayúsculas y minúsculas, incluido Visual Basic. Para obtener más información acerca de la propiedad Storage, vea <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A?displayProperty=nameWithType>.  
   
 ## <a name="associationattribute-attribute"></a>Atributo AssociationAttribute  
  Utilice este atributo para designar una propiedad que represente una asociación en la base de datos, como una relación entre clave externa y clave principal. Para obtener más información acerca de las relaciones, vea [Cómo: relaciones de base de datos de mapa](../../../../../../docs/framework/data/adonet/sql/linq/how-to-map-database-relationships.md).  
@@ -91,7 +93,7 @@ ms.lasthandoff: 01/17/2018
  Para obtener más información, consulta <xref:System.Data.Linq.Mapping.AssociationAttribute>.  
   
 > [!NOTE]
->  Los valores de propiedad AssociationAttribute y ColumnAttribute Storage distinguen entre mayúsculas y minúsculas. Por ejemplo, asegúrese de que los valores utilizados en el atributo de la propiedad AssociationAttribute.Storage coinciden con el uso de mayúsculas y minúsculas para los nombres de propiedad correspondientes del resto del código. Esto se aplica a todos los lenguajes de programación de .NET, incluso a los que típicamente no distinguen entre mayúsculas y minúsculas, como [!INCLUDE[vb_current_short](../../../../../../includes/vb-current-short-md.md)]. Para obtener más información acerca de la propiedad Storage, vea <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A?displayProperty=nameWithType>.  
+>  Los valores de propiedad AssociationAttribute y ColumnAttribute Storage distinguen entre mayúsculas y minúsculas. Por ejemplo, asegúrese de que los valores utilizados en el atributo de la propiedad AssociationAttribute.Storage coinciden con el uso de mayúsculas y minúsculas para los nombres de propiedad correspondientes del resto del código. Esto se aplica a todos los lenguajes de programación. NET, incluso aquellos que no son normalmente entre mayúsculas y minúsculas, incluido Visual Basic. Para obtener más información acerca de la propiedad Storage, vea <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A?displayProperty=nameWithType>.  
   
 ## <a name="inheritancemappingattribute-attribute"></a>Atributo InheritanceMappingAttribute  
  Utilice este atributo para asignar una jerarquía de herencia.  

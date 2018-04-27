@@ -1,31 +1,33 @@
 ---
-title: "Compatibilidad de SqlClient para alta disponibilidad y recuperación ante desastres"
-ms.custom: 
+title: Compatibilidad de SqlClient para alta disponibilidad y recuperación ante desastres
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 61e0b396-09d7-4e13-9711-7dcbcbd103a0
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 4f6ede253f52682cfe5a698cf4fb02841dc4c1e0
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: aab233fca7754f154166778646acba8d8df7de83
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sqlclient-support-for-high-availability-disaster-recovery"></a>Compatibilidad de SqlClient para alta disponibilidad y recuperación ante desastres
-Este tema explica la compatibilidad de SqlClient (agregado en [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)]) para grupos de disponibilidad AlwaysOn de alta disponibilidad y recuperación ante desastres.  La característica de los grupos de disponibilidad AlwaysOn se agregó a [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 2012. Para obtener más información acerca de los grupos de disponibilidad AlwaysOn, vea los Libros en pantalla de [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)].  
+Este tema explica la compatibilidad de SqlClient (agregado en [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)]) para grupos de disponibilidad AlwaysOn de alta disponibilidad y recuperación ante desastres.  Característica de grupos de disponibilidad AlwaysOn se agregó a SQL Server 2012. Para obtener más información acerca de los grupos de disponibilidad AlwaysOn, vea los libros en pantalla de SQL Server.  
   
- Ahora puede especificar el agente de escucha de grupo de disponibilidad de un grupo de disponibilidad (AG) (alta disponibilidad, recuperación ante desastres) o la instancia de clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 2012 en la propiedad de conexión. Si una aplicación SqlClient está conectada a una base de datos de AlwaysOn que realiza conmutación por error, la conexión original se interrumpe y la aplicación debe abrir una nueva conexión para continuar trabajando después de la conmutación por error.  
+ Ahora puede especificar el agente de escucha del grupo de disponibilidad de una (alta disponibilidad y recuperación ante desastres) grupo de disponibilidad (AG) o instancia de clúster de conmutación por error de SQL Server 2012 en la propiedad de conexión. Si una aplicación SqlClient está conectada a una base de datos de AlwaysOn que realiza conmutación por error, la conexión original se interrumpe y la aplicación debe abrir una nueva conexión para continuar trabajando después de la conmutación por error.  
   
- Si no se está conectando a un agente de escucha de grupo de disponibilidad o una instancia de clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 2012 y, si hay varias direcciones IP asociadas a un nombre de host, SqlClient iterará secuencialmente todas las direcciones IP asociadas a esa entrada de DNS. Esto puede ser largo si la primera dirección IP que devuelve el servidor de DNS no está enlazada a ninguna tarjeta de interfaz de red (NIC). Al conectarse a un agente de escucha de grupo de disponibilidad o a una instancia de clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 2012, SqlClient intenta establecer conexiones a todas las direcciones IP en paralelo y si un intento de conexión se realiza correctamente, el controlador descartará cualquier intento de conexión pendiente.  
+ Si no se está conectando a un agente de escucha del grupo de disponibilidad o una instancia de clúster de conmutación por error de SQL Server 2012, y si hay varias direcciones IP asociadas con un nombre de host, SqlClient iterará secuencialmente todas las direcciones IP asociadas a entrada DNS. Esto puede ser largo si la primera dirección IP que devuelve el servidor de DNS no está enlazada a ninguna tarjeta de interfaz de red (NIC). Al conectarse a un agente de escucha del grupo de disponibilidad o una instancia de clúster de conmutación por error de SQL Server 2012, SqlClient intenta establecer conexiones con todas las direcciones IP en paralelo y si un intento de conexión se realiza correctamente, el controlador descartará cualquier conexión pendiente intentos.  
   
 > [!NOTE]
 >  El incremento del tiempo de espera de conexión y la implementación de lógica de reintento de conexión aumentarán la probabilidad de que una aplicación se conecte a un grupo de disponibilidad. Además, dado que una conexión puede producir un error debido a una conmutación por error, debe implementar lógica de reintento de conexión, reintentando una conexión con errores hasta que se vuelva a conectar.  
@@ -46,23 +48,23 @@ Este tema explica la compatibilidad de SqlClient (agregado en [!INCLUDE[net_v45]
 >  Establecer `MultiSubnetFailover` a `true` no es necesario con [!INCLUDE[net_v461](../../../../../includes/net-v461-md.md)]) o versiones posteriores.
   
 ## <a name="connecting-with-multisubnetfailover"></a>Conectar con MultiSubnetFailover  
- Especifique siempre `MultiSubnetFailover=True` al conectarse a un agente de escucha de grupo de disponibilidad de [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 2012 o a una instancia de clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 2012. `MultiSubnetFailover` permite una conmutación por error más rápida para todos los grupos de disponibilidad y/o instancias de clúster de conmutación por error en [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 2012 y reducirá significativamente el tiempo de conmutación por error para las topologías AlwaysOn de una subred y de múltiples subredes. Durante una conmutación por error de múltiples subredes, el cliente intentará conexiones en paralelo. Durante una conmutación por error de subred, se reintentará agresivamente la conexión TCP.  
+ Especifique siempre `MultiSubnetFailover=True` al conectarse a un agente de escucha del grupo de disponibilidad de SQL Server 2012 o una instancia de clúster de conmutación por error de SQL Server 2012. `MultiSubnetFailover` permite la rápida conmutación por error para todos los grupos de disponibilidad y o instancia de clúster de conmutación por error de SQL Server 2012 y se reducir significativamente el tiempo de conmutación por error para las topologías de AlwaysOn y de varias subredes. Durante una conmutación por error de múltiples subredes, el cliente intentará conexiones en paralelo. Durante una conmutación por error de subred, se reintentará agresivamente la conexión TCP.  
   
- La propiedad de conexión `MultiSubnetFailover` indica que la aplicación se va a implementar en un grupo de disponibilidad o en una instancia de clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 2012 y que SqlClient intentará conectarse a la base de datos en la instancia primaria de [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] intentando conectarse a todas las direcciones IP. Cuando `MultiSubnetFailover=True` se especifica para una conexión, el cliente reintenta la conexión TCP más rápidamente que el valor predeterminado de intervalos de retransmisión TCP del sistema operativo. Esto permite una reconexión más rápida después de la conmutación por error de un grupo de disponibilidad AlwaysOn o de una instancia de clúster de conmutación por error AlwaysOn, y es aplicable a los grupos de disponibilidad y a las instancias de clúster de conmutación por error de una subred o de múltiples subredes.  
+ El `MultiSubnetFailover` propiedad de conexión indica que la aplicación se implementa en un grupo de disponibilidad o una instancia de clúster de conmutación por error de SQL Server 2012 y que SqlClient intentará conectarse a la base de datos en la instancia principal de SQL Server al intentar conectarse a todas las direcciones IP. Cuando `MultiSubnetFailover=True` se especifica para una conexión, el cliente reintenta la conexión TCP más rápidamente que el valor predeterminado de intervalos de retransmisión TCP del sistema operativo. Esto permite una reconexión más rápida después de la conmutación por error de un grupo de disponibilidad AlwaysOn o de una instancia de clúster de conmutación por error AlwaysOn, y es aplicable a los grupos de disponibilidad y a las instancias de clúster de conmutación por error de una subred o de múltiples subredes.  
   
  Para obtener más información sobre las palabras clave de cadena de conexión de SqlClient, vea <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>.  
   
- Especificar `MultiSubnetFailover=True` cuando se conecta con algo distinto de un agente de escucha de grupo de disponibilidad o una instancia de clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 2012 puede producir un impacto negativo en el rendimiento, y no se admite.  
+ Especificar `MultiSubnetFailover=True` al conectarse a algo distinto de un agente de escucha del grupo de disponibilidad o una instancia de clúster de conmutación por error de SQL Server 2012 puede producir un impacto negativo en el rendimiento y no se admite.  
   
- Use las instrucciones siguientes para conectarse a un servidor de un grupo de disponibilidad o de una instancia de clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 2012:  
+ Use las directrices siguientes para conectarse a un servidor en un grupo de disponibilidad o la instancia de clúster de conmutación por error de SQL Server 2012:  
   
 -   Use la propiedad de conexión `MultiSubnetFailover` al conectarse a una sola subred o a múltiples subredes; mejorará el rendimiento en ambos casos.  
   
 -   Para conectarse a un grupo de disponibilidad, especifique el agente de escucha del grupo de disponibilidad como el servidor en la cadena de conexión.  
   
--   La conexión a una instancia de [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] configurada con más de 64 direcciones IP producirán un error de conexión.  
+-   Conectarse a un servidor SQL Server instancia configurada con más de 64 direcciones IP producirá un error de conexión.  
   
--   El comportamiento de una aplicación que usa la propiedad de conexión `MultiSubnetFailover` no se ve afectado en función del tipo de autenticación: autenticación de [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)], autenticación Kerberos o autenticación de Windows.  
+-   Comportamiento de una aplicación que usa el `MultiSubnetFailover` propiedad de conexión no se ve afectada por el tipo de autenticación: autenticación de SQL Server, la autenticación Kerberos o autenticación de Windows.  
   
 -   Aumente el valor de `Connect Timeout` para alojar el tiempo de conmutación por error y reducir los reintentos de conexión de la aplicación.  
   
@@ -79,7 +81,7 @@ Este tema explica la compatibilidad de SqlClient (agregado en [!INCLUDE[net_v45]
  Una conexión generará un error si una réplica primaria está configurada para rechazar cargas de trabajo de solo lectura y la cadena de conexión contiene `ApplicationIntent=ReadOnly`.  
   
 ## <a name="upgrading-to-use-multi-subnet-clusters-from-database-mirroring"></a>Actualización para usar clústeres de múltiples subredes desde la creación de reflejo de la base de datos  
- Se producirá un error de conexión (<xref:System.ArgumentException>) si las palabras clave de conexión `MultiSubnetFailover` y `Failover Partner` están presentes en la cadena de conexión, o si se usa `MultiSubnetFailover=True` y un protocolo distinto de TCP. También ocurrirá un error (<xref:System.Data.SqlClient.SqlException>) si se usa `MultiSubnetFailover` y [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] devuelve una respuesta del asociado de conmutación por error que indica que forma parte de un par de creación de reflejo de la base de datos.  
+ Se producirá un error de conexión (<xref:System.ArgumentException>) si las palabras clave de conexión `MultiSubnetFailover` y `Failover Partner` están presentes en la cadena de conexión, o si se usa `MultiSubnetFailover=True` y un protocolo distinto de TCP. Error (<xref:System.Data.SqlClient.SqlException>) también se producirá si `MultiSubnetFailover` se utiliza y el servidor SQL Server devuelve una respuesta del asociado de conmutación por error que indica forma parte de un par de creación de reflejo de la base de datos.  
   
  Si actualiza una aplicación SqlClient que usa actualmente creación de reflejo de la base de datos a un escenario de múltiples subredes, debe quitar la propiedad de conexión `Failover Partner` y reemplazarla con `MultiSubnetFailover` establecido en `True` y reemplazar el nombre del servidor en la cadena de conexión con un agente de escucha de grupo de disponibilidad. Si una cadena de conexión usa `Failover Partner` y `MultiSubnetFailover=True`, el controlador generará un error. Sin embargo, si una cadena de conexión usa `Failover Partner` y `MultiSubnetFailover=False` (o `ApplicationIntent=ReadWrite`), la aplicación usará creación de reflejo de la base de datos.  
   

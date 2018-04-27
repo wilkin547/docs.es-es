@@ -1,11 +1,12 @@
 ---
 title: Estructuras (Visual Basic)
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - structures [Visual Basic]
@@ -15,17 +16,17 @@ helpviewer_keywords:
 - user-defined data types [Visual Basic], about user-defined data types
 - types [Visual Basic], user-defined
 ms.assetid: 55e86462-5e99-4d33-8018-6d097ca491b2
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: de99d67ee31d8fb8e92e0a351142b30f622bf5f0
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.openlocfilehash: d1f537b25a405548816ab3d356a18f693a5d0006
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="structures-visual-basic"></a>Estructuras (Visual Basic)
-A *estructura* es una generalización del tipo definido por el usuario (UDT) compatible con versiones anteriores de [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. Además de campos, las estructuras pueden exponer propiedades, métodos y eventos. Una estructura puede implementar una o más interfaces, y se pueden declarar niveles de acceso individuales para cada campo.  
+A *estructura* es una generalización del tipo definido por el usuario (UDT) admitido por versiones anteriores de Visual Basic. Además de campos, las estructuras pueden exponer propiedades, métodos y eventos. Una estructura puede implementar una o más interfaces, y se pueden declarar niveles de acceso individuales para cada campo.  
   
  Puede combinar elementos de datos de distintos tipos para crear una estructura. Una estructura asocia uno o varios *elementos* entre sí y con la propia estructura. Al declarar una estructura, se convierte en una *tipo de datos compuesto*, y se pueden declarar variables de ese tipo.  
   
@@ -46,7 +47,7 @@ A *estructura* es una generalización del tipo definido por el usuario (UDT) com
   
 ## <a name="related-sections"></a>Secciones relacionadas  
  [Tipos de datos](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
- Presenta el [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] tipos de datos y describe cómo utilizarlos.  
+ Presenta a los tipos de datos de Visual Basic y describe cómo utilizarlos.  
   
  [Tipos de datos](../../../../visual-basic/language-reference/data-types/data-type-summary.md)  
- Enumera los tipos de datos básicos proporcionados por [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].
+ Muestra los tipos de datos básicos proporcionados por Visual Basic.

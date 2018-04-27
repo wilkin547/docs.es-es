@@ -1,11 +1,12 @@
 ---
-title: "Cómo: Llamar a un procedimiento de propiedad (Visual Basic)"
-ms.custom: 
+title: 'Cómo: Llamar a un procedimiento de propiedad (Visual Basic)'
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - Visual Basic code, procedures
@@ -14,25 +15,25 @@ helpviewer_keywords:
 - properties [Visual Basic], property procedures
 - procedure calls [Visual Basic], property procedures
 ms.assetid: 96bc4d74-d9c3-4b7a-954d-58ac8553cd94
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: cf9080e3c2b23302257499f13e734231f3614495
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 38b3704328916a487f94879ea0096ae923f19082
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-call-a-property-procedure-visual-basic"></a>Cómo: Llamar a un procedimiento de propiedad (Visual Basic)
 Puede llamar a un procedimiento de propiedad almacena un valor en la propiedad o recuperar su valor. Tener acceso a una propiedad de la misma manera que se obtenga acceso a una variable.  
   
- La propiedad `Set` procedimiento almacena un valor y su `Get` procedimiento recupera el valor. Sin embargo, no llame explícitamente estos procedimientos por su nombre. Use la propiedad en una instrucción de asignación o una expresión, tal y como haría almacenar o recuperar el valor de una variable. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]realiza las llamadas a procedimientos de la propiedad.  
+ La propiedad `Set` procedimiento almacena un valor y su `Get` procedimiento recupera el valor. Sin embargo, no llame explícitamente estos procedimientos por su nombre. Use la propiedad en una instrucción de asignación o una expresión, tal y como haría almacenar o recuperar el valor de una variable. Visual Basic realiza las llamadas a procedimientos de la propiedad.  
   
 ### <a name="to-call-a-propertys-get-procedure"></a>Para llamar al procedimiento de Get de una propiedad  
   
 1.  Utilice el nombre de propiedad en una expresión de la misma manera que usaría un nombre de variable. Puede usar una propiedad en cualquier lugar puede usar una variable o una constante.  
   
-     O bien  
+     -o bien-  
   
      Utilice el nombre de la propiedad siguiendo la igual (`=`) iniciar sesión en una instrucción de asignación.  
   

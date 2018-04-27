@@ -1,27 +1,29 @@
 ---
-title: "Información general sobre las extensiones de marcado para el lenguaje XAML"
-ms.custom: 
+title: Información general sobre las extensiones de marcado para el lenguaje XAML
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - markup extensions [XAML Services], custom
 - XAML [XAML Services], markup extensions
 ms.assetid: 261b2b11-2dc0-462f-8c66-55b8c9c6e436
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0feef370e6b09d2f58a33f2142bd654e1d7e3402
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 464c5f547089d47906f2e227effe821357196c16
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="markup-extensions-for-xaml-overview"></a>Información general sobre las extensiones de marcado para el lenguaje XAML
 Las extensiones de marcado son una técnica XAML para obtener un valor que no es un tipo primitivo ni específico de XAML. Para el uso de atributos, las extensiones de marcado usan la secuencia de caracteres conocida de una llave de apertura `{` para entrar en el ámbito de la extensión de marcado y una llave de cierre `}` para salir. Al usar los servicios XAML de .NET Framework, puede usar algunas de las extensiones de marcado del lenguaje XAML predefinidas del ensamblado System.Xaml. También puede crear subclases de la clase <xref:System.Windows.Markup.MarkupExtension> , definida en System.Xaml, y definir sus propias extensiones de marcado. Asimismo, puede usar las extensiones de marcado definidas por un marco determinado si ya se hace referencia a dicho marco.  
@@ -33,7 +35,7 @@ Las extensiones de marcado son una técnica XAML para obtener un valor que no es
  Varias extensiones de marcado se implementan mediante los servicios XAML de .NET Framework para la compatibilidad con el lenguaje XAML. Estas extensiones de marcado corresponden a las partes de la especificación de XAML como lenguaje. Suelen identificarse por el prefijo `x:` en la sintaxis, tal como se muestra en el uso común. Todas las implementaciones de servicios XAML de .NET Framework para estos elementos del lenguaje XAML derivan de la clase base  <xref:System.Windows.Markup.MarkupExtension> .  
   
 > [!NOTE]
->  El prefijo `x:` se usa para la asignación de espacio de nombres típica de XAML para el espacio de nombres del lenguaje XAML, en el elemento raíz de una producción de XAML. Por ejemplo, las plantillas de proyecto y de página de [!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)] para diversos marcos concretos inician un archivo XAML usando esta asignación `x:` . Puede elegir un token de prefijo diferente en su propia asignación de espacio de nombres XAML, pero en esta documentación se presupone la asignación `x:` predeterminada como manera de identificar las entidades que forman una parte definida del espacio de nombres XAML del lenguaje XAML, en lugar de un espacio de nombres XAML predeterminado de un marco concreto o de otros espacios de nombres XML o CLR arbitrarios.  
+>  El prefijo `x:` se usa para la asignación de espacio de nombres típica de XAML para el espacio de nombres del lenguaje XAML, en el elemento raíz de una producción de XAML. Por ejemplo, las plantillas de proyecto y una página de Visual Studio para diversos marcos concretos inician un archivo XAML usando esta `x:` asignación. Puede elegir un token de prefijo diferente en su propia asignación de espacio de nombres XAML, pero en esta documentación se presupone la asignación `x:` predeterminada como manera de identificar las entidades que forman una parte definida del espacio de nombres XAML del lenguaje XAML, en lugar de un espacio de nombres XAML predeterminado de un marco concreto o de otros espacios de nombres XML o CLR arbitrarios.  
   
 ### <a name="xtype"></a>x:Type  
  `x:Type` proporciona el objeto <xref:System.Type> para el tipo con nombre. Esta funcionalidad se usa con más frecuencia en los mecanismos de aplazamiento que usan el tipo CLR subyacente y la derivación de tipos como identificador o moniker de agrupación. Los estilos y plantillas WPF y su uso de las propiedades `TargetType` son un ejemplo concreto. Para obtener más información, consulta [x:Type Markup Extension](../../../docs/framework/xaml-services/x-type-markup-extension.md).  

@@ -1,29 +1,30 @@
 ---
-title: "Cómo: Pasar procedimientos a otro procedimiento en Visual Basic"
-ms.custom: 
+title: 'Cómo: Pasar procedimientos a otro procedimiento en Visual Basic'
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - AddressOf operator [Visual Basic]
 - delegates [Visual Basic], passing procedures
 ms.assetid: 5adbba15-5a1d-413f-ab3e-3ff6cc0a4669
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 4e8e205f5238aab39aa92574bc5c680e68cc8a81
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 30264e0480b603b21f8f71893af0fd742af40286
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-pass-procedures-to-another-procedure-in-visual-basic"></a>Cómo: Pasar procedimientos a otro procedimiento en Visual Basic
 En este ejemplo se muestra cómo utilizar a los delegados para pasar un procedimiento a otro procedimiento.  
   
- Un delegado es un tipo que puede usar como cualquier otro tipo en [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. El `AddressOf` operador devuelve un objeto de delegado cuando se aplica a un nombre de procedimiento.  
+ Un delegado es un tipo que puede usar como cualquier otro tipo en Visual Basic. El `AddressOf` operador devuelve un objeto de delegado cuando se aplica a un nombre de procedimiento.  
   
  Este ejemplo tiene un procedimiento con un parámetro de delegado que puede tomar una referencia a otro procedimiento obtenido con la `AddressOf` operador.  
   

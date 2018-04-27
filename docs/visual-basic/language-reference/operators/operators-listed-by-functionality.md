@@ -2,25 +2,25 @@
 title: Operadores enumerados por funcionalidad (Visual Basic)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - operators [Visual Basic]
 ms.assetid: d1fb027c-872b-4ccc-afc8-2380e3f65d4a
-caps.latest.revision: 
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: de65fdd3a71c87199127b9013a6e89e0528be18e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: a41089514bb4f38ef981b4fe014b249f0d7ee6da
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="operators-listed-by-functionality-visual-basic"></a>Operadores enumerados por funcionalidad (Visual Basic)
-Vea una de las categorías que figuran a continuación o abra esta parte de la tabla de contenido para ver una lista alfabética de Ayuda [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] operadores.  
+Consulte una de las categorías que figuran a continuación o abra esta parte de la tabla de contenido para ver una lista alfabética de operadores de Visual Basic ayuda.  
   
 ## <a name="categories-of-operators"></a>Categorías de operadores  
   

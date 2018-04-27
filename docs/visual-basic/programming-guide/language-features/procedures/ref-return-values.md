@@ -1,12 +1,13 @@
 ---
 title: Valores devueltos de ref (Visual Basic)
-ms.custom: 
+ms.custom: ''
 ms.date: 04/28/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - variables [Visual Basic]
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 5ef0cc69-eb3a-4a67-92a2-78585f223cb5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 560607f7aa304b25314daabeef3952e6bbef7426
-ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
+ms.openlocfilehash: 6055028ac92016cbc4b6f7bffa7f483e5ea76608
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="support-for-reference-return-values-visual-basic"></a>Soporte técnico para los valores devueltos de referencia (Visual Basic)
 
-A partir de C# 7, el lenguaje C# admite *hacen referencia a valores devueltos*. Una manera de comprender los valores devueltos de referencia es que son el opuesto de argumentos que se pasan por referencia a un método. Cuando se modifica un argumento que se pasa por referencia, los cambios se reflejan en el valor de la variable en el llamador. Cuando un método proporciona un valor devuelto de referencia a un llamador, las modificaciones realizadas en el valor devuelto de referencia por el llamador se reflejan en los datos del método llamado.
+A partir de C# 7.0, el lenguaje C# admite *hacen referencia a valores devueltos*. Una manera de comprender los valores devueltos de referencia es que son el opuesto de argumentos que se pasan por referencia a un método. Cuando se modifica un argumento que se pasa por referencia, los cambios se reflejan en el valor de la variable en el llamador. Cuando un método proporciona un valor devuelto de referencia a un llamador, las modificaciones realizadas en el valor devuelto de referencia por el llamador se reflejan en los datos del método llamado.
 
 Visual Basic no permite que a los métodos de autor con referencia de valores devueltos, pero permite utilizar los valores devueltos de referencia. En otras palabras, puede llamar a un método con un valor devuelto de referencia y modificar ese valor devuelto, y los cambios en el valor devuelto de referencia se reflejan en los datos del método llamado.
 

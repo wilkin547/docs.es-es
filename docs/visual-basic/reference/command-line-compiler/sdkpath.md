@@ -16,11 +16,11 @@ helpviewer_keywords:
 ms.assetid: fec8a3f1-b791-4a37-8af7-344859f8212d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 53362c2eb5517d9230ea88975745315d6db7f1ba
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: 5a25755bcbb8d42124cde531f641a611202ae5a1
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="-sdkpath"></a>-sdkpath
 Especifica la ubicación de mscorlib.dll y Microsoft.VisualBasic.dll.  
@@ -36,10 +36,10 @@ Especifica la ubicación de mscorlib.dll y Microsoft.VisualBasic.dll.
  El directorio que contiene las versiones de mscorlib.dll y Microsoft.VisualBasic.dll a utilizar para la compilación. Esta ruta de acceso no se comprueba hasta que se cargue. Escriba el nombre de directorio entre comillas ("") si contiene un espacio.  
   
 ## <a name="remarks"></a>Comentarios  
- Esta opción indica el [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] compilador para cargar el archivo mscorlib.dll y Microsoft.VisualBasic.dll archivos desde una ubicación no predeterminada. El `-sdkpath` opción se ha diseñado para utilizarse con [- netcf](../../../visual-basic/reference/command-line-compiler/netcf.md). El [!INCLUDE[Compact](~/includes/compact-md.md)] utiliza diferentes versiones de estas bibliotecas de compatibilidad para evitar el uso de tipos y características del lenguaje no se encuentran en los dispositivos.  
+ Esta opción indica al compilador de Visual Basic para cargar el archivo mscorlib.dll y Microsoft.VisualBasic.dll archivos desde una ubicación no predeterminada. El `-sdkpath` opción se ha diseñado para utilizarse con [- netcf](../../../visual-basic/reference/command-line-compiler/netcf.md). El [!INCLUDE[Compact](~/includes/compact-md.md)] utiliza diferentes versiones de estas bibliotecas de compatibilidad para evitar el uso de tipos y características del lenguaje no se encuentran en los dispositivos.  
   
 > [!NOTE]
->  El `-sdkpath` opción no está disponible en el entorno de desarrollo de Visual Studio, que está disponible sólo cuando se compila desde la línea de comandos. El `-sdkpath` opción se establece cuando un [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] se carga el proyecto de dispositivo.  
+>  El `-sdkpath` opción no está disponible en el entorno de desarrollo de Visual Studio, que está disponible sólo cuando se compila desde la línea de comandos. El `-sdkpath` opción se establece cuando se carga un proyecto de dispositivo de Visual Basic.  
   
  Puede especificar que el compilador debe compilar sin una referencia a la biblioteca en tiempo de ejecución de Visual Basic mediante el uso de la `-vbruntime` opción del compilador. Para obtener más información, consulte [- vbruntime](../../../visual-basic/reference/command-line-compiler/vbruntime.md).  
   

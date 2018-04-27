@@ -1,13 +1,13 @@
 ---
-title: "Información general sobre declaraciones de enlaces"
-ms.custom: 
+title: Información general sobre declaraciones de enlaces
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-wpf
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -20,17 +20,17 @@ helpviewer_keywords:
 - syntax [WPF], object elements
 - binding declarations [WPF]
 ms.assetid: b97fd626-4c0d-4761-872a-2bca5820da2c
-caps.latest.revision: 
+caps.latest.revision: 34
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 615b92d264b91ab5b267d5e79ab829b8afa489cd
-ms.sourcegitcommit: 973a12d1e6962cd9a9c263fbfaad040ec8267fe9
+ms.openlocfilehash: 3fcc1b57f758abd2791bc6970c29300fd2fc0e30
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/22/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="binding-declarations-overview"></a>Información general sobre declaraciones de enlaces
 En este tema se describen las distintas formas de declarar un enlace.  
@@ -88,7 +88,7 @@ En este tema se describen las distintas formas de declarar un enlace.
   
 -   En el caso más simple, el <xref:System.Windows.Data.Binding.Path%2A> valor de la propiedad es el nombre de la propiedad del objeto de origen que se usará para el enlace, como `Path=PropertyName`.  
   
--   Se pueden especificar subpropiedades de una propiedad mediante una sintaxis similar a la de [!INCLUDE[TLA#tla_cshrp](../../../../includes/tlasharptla-cshrp-md.md)]. Por ejemplo, la cláusula `Path=ShoppingCart.Order` define el enlace a la subpropiedad `Order` del objeto o la propiedad `ShoppingCart`.  
+-   Las subpropiedades de una propiedad pueden especificarse mediante una sintaxis similar que en C#. Por ejemplo, la cláusula `Path=ShoppingCart.Order` define el enlace a la subpropiedad `Order` del objeto o la propiedad `ShoppingCart`.  
   
 -   Para enlazar a una propiedad adjunta, coloque paréntesis alrededor de esta propiedad. Por ejemplo, para enlazar a la propiedad adjunta <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType>, la sintaxis es `Path=(DockPanel.Dock)`.  
   

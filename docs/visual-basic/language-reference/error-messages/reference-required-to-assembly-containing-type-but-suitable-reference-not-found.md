@@ -1,9 +1,9 @@
 ---
-title: "Necesaria una referencia al ensamblado &#39; &lt;identidadensamblado&gt;&#39; contenedor tipo &#39;&lt; TypeName&gt;&#39; pero no se pudo encontrar una referencia adecuada debido a la ambigüedad entre proyectos &#39;&lt; projectname1&gt;&#39; y &#39;&lt; projectname2&gt;&#39;"
+title: Necesaria una referencia al ensamblado &#39; &lt;identidadensamblado&gt; &#39; que contiene el tipo &#39; &lt;typename&gt;&#39;, pero no se pudo encontrar una referencia adecuada debido a la ambigüedad entre proyectos &#39; &lt;projectname1&gt; &#39; y &#39; &lt;projectname2&gt;&#39;
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - devlang-visual-basic
 ms.topic: article
@@ -13,21 +13,21 @@ f1_keywords:
 helpviewer_keywords:
 - BC30969
 ms.assetid: 1b29dbc5-8268-45fe-bfc2-b2070a5c845c
-caps.latest.revision: 
+caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 5ca2454f5c306b3defd1c885dfd59ee130f3e828
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 69b1184d47e427bd985c3b18135d4a0ac4d91410
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="reference-required-to-assembly-39ltassemblyidentitygt39-containing-type-39lttypenamegt39-but-a-suitable-reference-could-not-be-found-due-to-ambiguity-between-projects-39ltprojectname1gt39-and-39ltprojectname2gt39"></a>Necesaria una referencia al ensamblado &#39; &lt;identidadensamblado&gt;&#39; contenedor tipo &#39;&lt; TypeName&gt;&#39; pero no se pudo encontrar una referencia adecuada debido a la ambigüedad entre proyectos &#39;&lt; projectname1&gt;&#39; y &#39;&lt; projectname2&gt;&#39;
+# <a name="reference-required-to-assembly-39ltassemblyidentitygt39-containing-type-39lttypenamegt39-but-a-suitable-reference-could-not-be-found-due-to-ambiguity-between-projects-39ltprojectname1gt39-and-39ltprojectname2gt39"></a>Necesaria una referencia al ensamblado &#39; &lt;identidadensamblado&gt; &#39; que contiene el tipo &#39; &lt;typename&gt;&#39;, pero no se pudo encontrar una referencia adecuada debido a la ambigüedad entre proyectos &#39; &lt;projectname1&gt; &#39; y &#39; &lt;projectname2&gt;&#39;
 Una expresión usa un tipo como, por ejemplo, una clase, estructura, interfaz, enumeración o delegado, que se define fuera del proyecto. Sin embargo, hay referencias de proyectos a más de un ensamblado que definen ese tipo.  
   
  Los proyectos citados generan ensamblados con el mismo nombre. Por lo tanto, el compilador no puede determinar qué ensamblado debe usar para el tipo al que se está accediendo.  
   
- Para acceder a un tipo definido en otro ensamblado, el compilador de [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] debe tener una referencia a dicho ensamblado. Debe ser una referencia única y no ambigua, que no produzca referencias circulares entre proyectos.  
+ Para obtener acceso a un tipo definido en otro ensamblado, el compilador de Visual Basic debe tener una referencia a dicho ensamblado. Debe ser una referencia única y no ambigua, que no produzca referencias circulares entre proyectos.  
   
  **Identificador de error:** BC30969  
   

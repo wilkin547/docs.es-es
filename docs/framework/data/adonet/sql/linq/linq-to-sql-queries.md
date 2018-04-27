@@ -1,24 +1,26 @@
 ---
 title: Consultas de LINQ to SQL
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f4897aaa-7f44-4c20-a471-b948c2971aae
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 8c32ff4040213ce73b78f7ea0f6d56e222d55b25
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 62e6252da06201e33d6f81f3160bee063272132f
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="linq-to-sql-queries"></a>Consultas de LINQ to SQL
 Las consultas [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] se definen utilizando la misma sintaxis que utilizaría en [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)]. La única diferencia es que los objetos a los que se hace referencia en las consultas se asignan a elementos de una base de datos. Para obtener más información, vea [Introduction to LINQ queries (C#)](~/docs/csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md) [Introducción a las consultas LINQ (C#)].  
@@ -33,7 +35,7 @@ Las consultas [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)
 |Item|Consulta LINQ|Consulta [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]|  
 |----------|----------------|----------------------------------------------------------------------|  
 |Tipo de valor devuelto de la variable local que contiene la consulta (para las consultas que devuelven secuencias)|`IEnumerable` genérico|`IQueryable` genérico|  
-|Especificar el origen de datos|Usa el `From` ([!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)]) o `from` cláusula (C#)|Igual|  
+|Especificar el origen de datos|Usa el `From` (Visual Basic) o `from` cláusula (C#)|Igual|  
 |Filtrado|Usa el `Where` / `where` cláusula|Igual|  
 |Agrupar|Usa el `Group…By` / `groupby` cláusula|Igual|  
 |Seleccionar (proyectar)|Usa el `Select` / `select` cláusula|Igual|  

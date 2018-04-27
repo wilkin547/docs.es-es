@@ -15,18 +15,18 @@ ms.assetid: db3337e5-c349-42bf-86df-d9c1e00952a5
 caps.latest.revision: 23
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: bcf3c37852e73464eec612e9e1d458ca707342e2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9bbec233435ab728657c1b99e26ab157d4657093
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="access-of-shared-member-through-an-instance-qualifying-expression-will-not-be-evaluated"></a>Acceso de miembro compartido mediante una instancia; la expresión calificadora no se evaluará
 Se utiliza una variable de instancia de una clase o estructura para tener acceso a un `Shared` variable, propiedad, procedimiento o evento definido en esa clase o estructura. Esta advertencia también puede producirse si una variable de instancia se utiliza para tener acceso a un miembro implícitamente compartido de una clase o estructura, como una constante o enumeración, o una clase anidada o una estructura.  
   
  El propósito de compartir a un miembro es crear una sola copia de ese miembro y que esa sola copia esté disponible para todas las instancias de la clase o estructura en la que se declara. Es coherente con este fin para tener acceso a un `Shared` miembro mediante el nombre de su clase o estructura, y no a través de una variable que contiene una instancia individual de esa clase o estructura.  
   
- Obtener acceso a un `Shared` miembro a través de una variable de instancia puede hacer más difícil de entender ocultando el hecho de que el miembro es el código `Shared`. Además, si el acceso forma parte de una expresión que lleva a cabo otras acciones, como un `Function` procedimiento que devuelve una instancia del miembro compartido, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] omite la expresión y todas las demás acciones que realizaría en caso contrario.  
+ Obtener acceso a un `Shared` miembro a través de una variable de instancia puede hacer más difícil de entender ocultando el hecho de que el miembro es el código `Shared`. Además, si el acceso forma parte de una expresión que lleva a cabo otras acciones, como un `Function` procedimiento que devuelve una instancia del miembro compartido, Visual Basic omite la expresión y todas las demás acciones que realizaría en caso contrario.  
   
  Para obtener más información y un ejemplo, vea [Shared](../../../visual-basic/language-reference/modifiers/shared.md).  
   

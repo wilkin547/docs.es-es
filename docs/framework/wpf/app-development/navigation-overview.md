@@ -1,12 +1,13 @@
 ---
-title: "Información general sobre navegación"
-ms.custom: 
+title: Información general sobre navegación
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -31,19 +32,20 @@ helpviewer_keywords:
 - programmatic navigation [WPF]
 - hyperlinks [WPF]
 ms.assetid: 86ad2143-606a-4e34-bf7e-51a2594248b8
-caps.latest.revision: "69"
+caps.latest.revision: 69
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3a3b7d865a503189ebb5b3adadc7258603461c9b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 07609671d061851e6ede2f2bd90e4bee38e43159
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="navigation-overview"></a>Información general sobre navegación
-[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]admite la navegación de estilo de explorador que se puede usar en dos tipos de aplicaciones: aplicaciones independientes y [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)]. Contenido de paquete para la navegación, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] proporciona el <xref:System.Windows.Controls.Page> clase. Puede navegar desde una <xref:System.Windows.Controls.Page> a otro mediante declaración, mediante un <xref:System.Windows.Documents.Hyperlink>, o mediante programación, usando la <xref:System.Windows.Navigation.NavigationService>. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] usa el diario para recordar las páginas desde las que se navegó o para volver a ellas.  
+[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] admite la navegación de estilo de explorador que se puede usar en dos tipos de aplicaciones: aplicaciones independientes y [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)]. Contenido de paquete para la navegación, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] proporciona el <xref:System.Windows.Controls.Page> clase. Puede navegar desde una <xref:System.Windows.Controls.Page> a otro mediante declaración, mediante un <xref:System.Windows.Documents.Hyperlink>, o mediante programación, usando la <xref:System.Windows.Navigation.NavigationService>. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] usa el diario para recordar las páginas desde las que se navegó o para volver a ellas.  
   
  <xref:System.Windows.Controls.Page>, <xref:System.Windows.Documents.Hyperlink>, <xref:System.Windows.Navigation.NavigationService>, y el diario de forman el núcleo de la compatibilidad de navegación que ofrece [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]. Esta introducción describen estas características en detalle antes de tratar la compatibilidad de navegación avanzada que incluye la navegación a perder [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] archivos [!INCLUDE[TLA#tla_html](../../../../includes/tlasharptla-html-md.md)] archivos y objetos.  
   
@@ -118,7 +120,7 @@ ms.lasthandoff: 12/22/2017
   
 -   En el código subyacente, la clase debe ser un `partial` clase con el mismo nombre que se especifica mediante la `x:Class` atributo en el marcado y se debe derivar de <xref:System.Windows.Controls.Page>. Esto permite que el archivo de código subyacente asociar a la `partial` clase que se genera para el archivo de marcado cuando se compila la aplicación (consulte [compilar una aplicación de WPF](../../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md)).  
   
--   En el código subyacente, el <xref:System.Windows.Controls.Page> clase debe implementar un constructor que llama el `InitializeComponent` método. `InitializeComponent`se implementa mediante el marcado generado de archivo `partial` clase para registrar eventos y establecer las propiedades que se definen en el marcado.  
+-   En el código subyacente, el <xref:System.Windows.Controls.Page> clase debe implementar un constructor que llama el `InitializeComponent` método. `InitializeComponent` se implementa mediante el marcado generado de archivo `partial` clase para registrar eventos y establecer las propiedades que se definen en el marcado.  
   
 > [!NOTE]
 >  Cuando se agrega un nuevo <xref:System.Windows.Controls.Page> al proyecto mediante [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)], el <xref:System.Windows.Controls.Page> se implementa mediante marcado y código subyacente, e incluye la configuración necesaria para crear la asociación entre los archivos de código subyacente y marcado como se describe aquí.  
@@ -215,7 +217,7 @@ ms.lasthandoff: 12/22/2017
 [!code-xaml[NavigationOverviewSnippets#PageThatNavigatesXAML3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/PageThatNavigatesToFragment.xaml#pagethatnavigatesxaml3)]  
   
 > [!NOTE]
->  Esta sección describe la implementación de navegación del fragmento predeterminado en [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]También le permite implementar su propio esquema de navegación de fragmento que, en parte, requiere un tratamiento el <xref:System.Windows.Navigation.NavigationService.FragmentNavigation?displayProperty=nameWithType> eventos.  
+>  Esta sección describe la implementación de navegación del fragmento predeterminado en [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] También le permite implementar su propio esquema de navegación de fragmento que, en parte, requiere un tratamiento el <xref:System.Windows.Navigation.NavigationService.FragmentNavigation?displayProperty=nameWithType> eventos.  
   
 > [!IMPORTANT]
 >  Puede navegar a fragmentos en malas [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] páginas (sólo marcado [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] archivos con `Page` como el elemento raíz) solo si se pueden examinar las páginas a través de [!INCLUDE[TLA2#tla_http](../../../../includes/tla2sharptla-http-md.md)].  
@@ -276,7 +278,7 @@ ms.lasthandoff: 12/22/2017
  [!code-csharp[NavigationOverviewSnippets#NSNavigationPageCODEBEHIND](../../../../samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/NSNavigationPage.xaml.cs#nsnavigationpagecodebehind)]
  [!code-vb[NavigationOverviewSnippets#NSNavigationPageCODEBEHIND](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/NavigationOverviewSnippets/VisualBasic/NSNavigationPage.xaml.vb#nsnavigationpagecodebehind)]  
   
- Cuando el <xref:System.Windows.Documents.Hyperlink> en este <xref:System.Windows.Controls.Page> es hacer clic en, se inicia la navegación creando instancias de la <xref:System.Windows.Controls.Page> para navegar a utilizando el constructor no predeterminado y llamar a la <xref:System.Windows.Navigation.NavigationService.Navigate%2A?displayProperty=nameWithType> (método). <xref:System.Windows.Navigation.NavigationService.Navigate%2A>acepta una referencia al objeto que la <xref:System.Windows.Navigation.NavigationService> se le remitirá a, en lugar de un módulo de [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)].  
+ Cuando el <xref:System.Windows.Documents.Hyperlink> en este <xref:System.Windows.Controls.Page> es hacer clic en, se inicia la navegación creando instancias de la <xref:System.Windows.Controls.Page> para navegar a utilizando el constructor no predeterminado y llamar a la <xref:System.Windows.Navigation.NavigationService.Navigate%2A?displayProperty=nameWithType> (método). <xref:System.Windows.Navigation.NavigationService.Navigate%2A> acepta una referencia al objeto que la <xref:System.Windows.Navigation.NavigationService> se le remitirá a, en lugar de un módulo de [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)].  
   
 #### <a name="programmatic-navigation-with-a-pack-uri"></a>Navegación programática con Pack URI  
  Si necesita crear un módulo de [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] mediante programación (cuando solo se puede determinar el módulo [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] en tiempo de ejecución, por ejemplo), puede usar el <xref:System.Windows.Navigation.NavigationService.Navigate%2A?displayProperty=nameWithType> método. Esta implementación se muestra en el ejemplo siguiente.  
@@ -338,7 +340,7 @@ ms.lasthandoff: 12/22/2017
   
 -   <xref:System.Windows.Application.FragmentNavigation?displayProperty=nameWithType>  
   
- Cada vez que <xref:System.Windows.Navigation.NavigationService> genera un evento, el <xref:System.Windows.Application> clase provoca el evento correspondiente. <xref:System.Windows.Controls.Frame>y <xref:System.Windows.Navigation.NavigationWindow> ofrecen los mismos eventos para detectar la navegación en sus respectivos ámbitos.  
+ Cada vez que <xref:System.Windows.Navigation.NavigationService> genera un evento, el <xref:System.Windows.Application> clase provoca el evento correspondiente. <xref:System.Windows.Controls.Frame> y <xref:System.Windows.Navigation.NavigationWindow> ofrecen los mismos eventos para detectar la navegación en sus respectivos ámbitos.  
   
  En algunos casos, un <xref:System.Windows.Controls.Page> podría estar interesado en estos eventos. Por ejemplo, un <xref:System.Windows.Controls.Page> puede controlar la <xref:System.Windows.Navigation.NavigationService.Navigating?displayProperty=nameWithType> evento para determinar si se debe o no cancelar la navegación fuera del propio. Esta implementación se muestra en el ejemplo siguiente.  
   
@@ -455,7 +457,7 @@ ms.lasthandoff: 12/22/2017
   
 3.  El <xref:System.Windows.Controls.Page> se retrocede al.  
   
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]utiliza automáticamente esta compatibilidad cuando se utilizan los siguientes controles en un <xref:System.Windows.Controls.Page>:  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] utiliza automáticamente esta compatibilidad cuando se utilizan los siguientes controles en un <xref:System.Windows.Controls.Page>:  
   
 -   <xref:System.Windows.Controls.CheckBox>  
   
@@ -513,13 +515,13 @@ ms.lasthandoff: 12/22/2017
   
  Los siguientes son algunas de las maneras en que se admiten cookies en [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]:  
   
--   [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]las aplicaciones independientes y [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] puede crear y administrar las cookies.  
+-   [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] las aplicaciones independientes y [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] puede crear y administrar las cookies.  
   
 -   Las cookies que se crean mediante una [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] puede tener acceso desde el explorador.  
   
 -   [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] del mismo dominio puede crear y compartir cookies.  
   
--   [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]y [!INCLUDE[TLA2#tla_html](../../../../includes/tla2sharptla-html-md.md)] páginas del mismo dominio pueden crear y compartir las cookies.  
+-   [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] y [!INCLUDE[TLA2#tla_html](../../../../includes/tla2sharptla-html-md.md)] páginas del mismo dominio pueden crear y compartir las cookies.  
   
 -   Las cookies se envían al [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] y malas [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] páginas hacer solicitudes Web.  
   
@@ -537,15 +539,15 @@ ms.lasthandoff: 12/22/2017
   
 <a name="The_NavigationWindow_Class"></a>   
 ## <a name="the-navigationwindow-class"></a>Clase NavigationWindow  
- En este punto, ha visto la gama de servicios de navegación que probablemente usará para compilar aplicaciones con contenido navegable. Estos servicios se trataron en el contexto de [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)], aunque no se limitan a [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]. Los sistemas operativos modernos y [!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)] aplicaciones aprovechan las ventajas de la experiencia de exploración de los usuarios para incorporar una navegación de estilo explorador en las aplicaciones independientes. Estos son algunos ejemplos comunes:  
+ En este punto, ha visto la gama de servicios de navegación que probablemente usará para compilar aplicaciones con contenido navegable. Estos servicios se trataron en el contexto de [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)], aunque no se limitan a [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]. Los sistemas operativos modernos y las aplicaciones de Windows aprovechar la experiencia de exploración de los usuarios para incorporar una navegación de estilo explorador en las aplicaciones independientes. Estos son algunos ejemplos comunes:  
   
 -   **Diccionario de sinónimos de Word**: navegación por las opciones de Word.  
   
 -   **Explorador de archivos**: navegación por archivos y carpetas.  
   
--   **Asistentes**: desglose de una tarea compleja en varias páginas entre las que se puede navegar. Un ejemplo es el Asistente para componentes de Windows que administra agregando y quitando [!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)] características.  
+-   **Asistentes**: desglose de una tarea compleja en varias páginas entre las que se puede navegar. Un ejemplo es el Asistente para componentes de Windows que controla la adición y eliminación de las características de Windows.  
   
- Para incorporar una navegación de estilo explorador en las aplicaciones independientes, puede usar el <xref:System.Windows.Navigation.NavigationWindow> clase. <xref:System.Windows.Navigation.NavigationWindow>se deriva de <xref:System.Windows.Window> y lo extiende con la misma compatibilidad de navegación que [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] proporcionar. Puede usar <xref:System.Windows.Navigation.NavigationWindow> como la ventana principal de la aplicación independiente o como una ventana secundaria como un cuadro de diálogo.  
+ Para incorporar una navegación de estilo explorador en las aplicaciones independientes, puede usar el <xref:System.Windows.Navigation.NavigationWindow> clase. <xref:System.Windows.Navigation.NavigationWindow> se deriva de <xref:System.Windows.Window> y lo extiende con la misma compatibilidad de navegación que [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] proporcionar. Puede usar <xref:System.Windows.Navigation.NavigationWindow> como la ventana principal de la aplicación independiente o como una ventana secundaria como un cuadro de diálogo.  
   
  Para implementar un <xref:System.Windows.Navigation.NavigationWindow>, al igual que con la mayoría de las clases nivel superior en [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] (<xref:System.Windows.Window>, <xref:System.Windows.Controls.Page>, etc.), utilice una combinación de marcado y código subyacente. Esta implementación se muestra en el ejemplo siguiente.  
   
@@ -592,7 +594,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="Frame_in_Standalone_Applications"></a>   
 ## <a name="the-frame-class"></a>Clase Frame  
- Tanto el explorador y <xref:System.Windows.Navigation.NavigationWindow> son ventanas que hospedan contenido navegable. En algunos casos, las aplicaciones tienen contenido que no hace falta que los hospede una ventana completa. En su lugar, dicho contenido se hospeda dentro de otro contenido. Puede insertar contenido navegable en otro tipo de contenido mediante el uso de la <xref:System.Windows.Controls.Frame> clase. <xref:System.Windows.Controls.Frame>proporciona la misma compatibilidad como <xref:System.Windows.Navigation.NavigationWindow> y [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)].  
+ Tanto el explorador y <xref:System.Windows.Navigation.NavigationWindow> son ventanas que hospedan contenido navegable. En algunos casos, las aplicaciones tienen contenido que no hace falta que los hospede una ventana completa. En su lugar, dicho contenido se hospeda dentro de otro contenido. Puede insertar contenido navegable en otro tipo de contenido mediante el uso de la <xref:System.Windows.Controls.Frame> clase. <xref:System.Windows.Controls.Frame> proporciona la misma compatibilidad como <xref:System.Windows.Navigation.NavigationWindow> y [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)].  
   
  En el ejemplo siguiente se muestra cómo agregar un <xref:System.Windows.Controls.Frame> a una <xref:System.Windows.Controls.Page> manera declarativa mediante el uso de la `Frame` elemento.  
   
@@ -633,7 +635,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="Navigation_Hosts"></a>   
 ## <a name="navigation-hosts"></a>Hosts de navegación  
- <xref:System.Windows.Controls.Frame>y <xref:System.Windows.Navigation.NavigationWindow> son clases que se conocen como hosts de navegación. A *host de navegación* es una clase que puede navegar y mostrar el contenido. Para lograr esto, cada host de navegación utiliza su propio <xref:System.Windows.Navigation.NavigationService> y diario. La construcción de un host de navegación básica se muestra en la ilustración siguiente.  
+ <xref:System.Windows.Controls.Frame> y <xref:System.Windows.Navigation.NavigationWindow> son clases que se conocen como hosts de navegación. A *host de navegación* es una clase que puede navegar y mostrar el contenido. Para lograr esto, cada host de navegación utiliza su propio <xref:System.Windows.Navigation.NavigationService> y diario. La construcción de un host de navegación básica se muestra en la ilustración siguiente.  
   
  ![Diagramas de navegador](../../../../docs/framework/wpf/app-development/media/navigationoverviewfigure15.png "NavigationOverviewFigure15")  
   
@@ -738,7 +740,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="Security"></a>   
 ## <a name="security"></a>Seguridad  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]permite la compatibilidad de navegación [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] navegar a través de Internet y permite a las aplicaciones para hospedar contenido de terceros. Para proteger las aplicaciones y los usuarios de un comportamiento malintencionado, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] proporciona una variedad de características de seguridad que se describen en [seguridad](../../../../docs/framework/wpf/security-wpf.md) y [seguridad de confianza parcial de WPF](../../../../docs/framework/wpf/wpf-partial-trust-security.md).  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] permite la compatibilidad de navegación [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] navegar a través de Internet y permite a las aplicaciones para hospedar contenido de terceros. Para proteger las aplicaciones y los usuarios de un comportamiento malintencionado, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] proporciona una variedad de características de seguridad que se describen en [seguridad](../../../../docs/framework/wpf/security-wpf.md) y [seguridad de confianza parcial de WPF](../../../../docs/framework/wpf/wpf-partial-trust-security.md).  
   
 ## <a name="see-also"></a>Vea también  
  <xref:System.Windows.Application.SetCookie%2A>  

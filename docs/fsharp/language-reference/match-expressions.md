@@ -1,22 +1,20 @@
 ---
-title: Expresiones match (F#)
-description: "Obtenga información acerca de cómo la expresión de coincidencia de F # proporciona control de bifurcación que se basa en la comparación de una expresión con un conjunto de patrones."
-keywords: "visual f#, f#, programación funcional"
+title: 'Expresiones Match (F #)'
+description: 'Obtenga información acerca de cómo la expresión de coincidencia de F # proporciona control de bifurcación que se basa en la comparación de una expresión con un conjunto de patrones.'
 author: cartermp
 ms.author: phcart
-ms.date: 05/16/2016
+ms.date: 04/19/2018
 ms.topic: language-reference
 ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
-ms.assetid: 8854b713-255a-408d-942a-e80ab52fd2a4
-ms.openlocfilehash: c8b9be744cfa7bc76f0d663b12abd66f8757fc56
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: f843e6fde98eae8a10235dd5cae38ffc10a4fb9f
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="match-expressions"></a>Expresiones de coincidencia
+# <a name="match-expressions"></a>Expresiones de coincidencia.
 
 El `match` expresión proporciona control de bifurcación que se basa en la comparación de una expresión con un conjunto de patrones.
 
@@ -48,7 +46,7 @@ fun arg ->
     | pattern1 [ when condition ] -> result-expression1
     | pattern2 [ when condition ] -> result-expression2
     | ...
-```    
+```
 
 Para obtener más información sobre las expresiones lambda, vea [expresiones Lambda: la `fun` palabra clave](functions/lambda-expressions-the-fun-keyword.md).
 
@@ -66,14 +64,29 @@ En el ejemplo siguiente se muestra el uso de una restricción para especificar u
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4602.fs)]
 
-Tenga en cuenta que dado que no se puede usar valores distintos de literales en el modelo, debe utilizar un `when` cláusula si tiene alguna parte de la entrada con un valor de comparación. Esto se muestra en el código siguiente.
+Tenga en cuenta que dado que no se puede usar valores distintos de literales en el modelo, debe utilizar un `when` cláusula si tiene alguna parte de la entrada con un valor de comparación. Esto se muestra en el código siguiente:
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4603.fs)]
 
+Tenga en cuenta que cuando un patrón de unión está cubierto por una restricción, la protección se aplica a **todos los** de los patrones, no solo la última de ellas. Por ejemplo, dado el código siguiente, la protección del `when a > 12` se aplica a los `A a` y `B a`:
+
+```fsharp
+type Union =
+    | A of int
+    | B of int
+
+let foo() =
+    let test = A 42
+    match test with
+    | A a
+    | B a when a > 41 -> a // the guard applies to both patterns
+    | _ -> 1
+
+foo() // returns 42
+```
+
 ## <a name="see-also"></a>Vea también
 
-[Referencia del lenguaje F#](index.md)
-
-[Patrones activos](active-patterns.md)
-
-[Coincidencia de patrones](pattern-matching.md)
+[Referencia del lenguaje F#](index.md)  
+[Patrones activos](active-patterns.md)  
+[Coincidencia de patrones](pattern-matching.md)  

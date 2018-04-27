@@ -1,30 +1,32 @@
 ---
 title: Control de eventos en Visual Basic y WPF
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Visual Basic [WPF], event handlers
 - event handlers [WPF], Visual Basic
 ms.assetid: ad4eb9aa-3afc-4a71-8cf6-add3fbea54a1
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ed10e52c59112714a500fe52ccf5b398c14a97b7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: f61b63e7f80ec779d03c230bd4f24eed00098242
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="visual-basic-and-wpf-event-handling"></a>Control de eventos en Visual Basic y WPF
-Para el [!INCLUDE[TLA#tla_visualbnet](../../../../includes/tlasharptla-visualbnet-md.md)] lenguaje concreto, puede usar el específicos del idioma `Handles` palabra clave que se va a asociar controladores de eventos con instancias, en lugar de adjuntar controladores de eventos con atributos o utilizando el <xref:System.Windows.UIElement.AddHandler%2A> método. Pero la técnica de `Handles` para adjuntar controladores a instancias tiene algunas limitaciones, ya que la sintaxis de `Handles` no es compatible con algunas de las características específicas de eventos enrutados del sistema de eventos de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
+Para el idioma de Microsoft Visual Basic .NET concreto, puede usar el específicos del idioma `Handles` palabra clave que se va a asociar controladores de eventos con instancias, en lugar de adjuntar controladores de eventos con atributos o utilizando el <xref:System.Windows.UIElement.AddHandler%2A> método. Pero la técnica de `Handles` para adjuntar controladores a instancias tiene algunas limitaciones, ya que la sintaxis de `Handles` no es compatible con algunas de las características específicas de eventos enrutados del sistema de eventos de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
   
 ## <a name="using-handles-in-a-wpf-application"></a>Usar "Handles" en una aplicación WPF  
  Los controladores de eventos que se conectan a instancias y eventos con `Handles` deben definirse dentro de la declaración de clase parcial de la instancia, algo que también es un requisito para los controladores de eventos que se asignan a través de valores de atributo en los elementos. Solo se puede especificar `Handles` para un elemento en la página que tenga un <xref:System.Windows.FrameworkContentElement.Name%2A> valor de propiedad (o [Directiva x: Name](../../../../docs/framework/xaml-services/x-name-directive.md) declarado). Esto es porque el <xref:System.Windows.FrameworkContentElement.Name%2A> en [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] crea la referencia a la instancia que es necesaria para admitir la *instancia.evento* formato de referencia requerido por la `Handles` sintaxis. El único elemento que puede usarse para `Handles` sin un <xref:System.Windows.FrameworkContentElement.Name%2A> referencia es la instancia del elemento raíz que define la clase parcial.  
@@ -45,7 +47,7 @@ Para el [!INCLUDE[TLA#tla_visualbnet](../../../../includes/tlasharptla-visualbne
  `Handles` no puede adjuntar los controladores que se invocan para eventos que ya están marcados como controlados. En su lugar, debe utilizar código y llamar a la `handledEventsToo` sobrecarga de <xref:System.Windows.UIElement.AddHandler%28System.Windows.RoutedEvent%2CSystem.Delegate%2CSystem.Boolean%29>.  
   
 > [!NOTE]
->  No use la sintaxis de `Handles` en código de [!INCLUDE[vb_current_short](../../../../includes/vb-current-short-md.md)] al especificar un controlador de eventos para el mismo evento en XAML. En ese caso, se llama al controlador de eventos dos veces.  
+>  No utilice la `Handles` sintaxis en el código de Visual Basic cuando se especifica un controlador de eventos para el mismo evento en XAML. En ese caso, se llama al controlador de eventos dos veces.  
   
 ## <a name="how-wpf-implements-handles-functionality"></a>Cómo implementa WPF la funcionalidad "Handles"  
  Cuando un [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] página se compila, el archivo intermedio declara `Friend` `WithEvents` referencias a todos los elementos en la página que tenga un <xref:System.Windows.FrameworkContentElement.Name%2A> conjunto de propiedades (o [Directiva x: Name](../../../../docs/framework/xaml-services/x-name-directive.md) declarado). Cada instancia con nombre es potencialmente un elemento que se puede asignar a un controlador mediante `Handles`.  

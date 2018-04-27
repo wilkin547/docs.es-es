@@ -13,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: a7fe83a2-a6d8-460c-8dad-79a8f433f501
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 59dc833299161eac7b119e654c94534f202b1cb7
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: 5dc321f7f927d68a9f270076640cbc6d31d2f6d5
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="-errorreport"></a>-errorreport
-Especifica cómo debe documentar el compilador [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] los errores internos del compilador.  
+Especifica cómo el compilador de Visual Basic debería notificar errores internos del compilador.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -29,7 +29,7 @@ Especifica cómo debe documentar el compilador [!INCLUDE[vbprvb](~/includes/vbpr
 ```  
   
 ## <a name="remarks"></a>Comentarios  
- Esta opción proporciona una manera cómoda para informes un [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] error del compilador interno (ICE) a la [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] equipo de Microsoft. De forma predeterminada, el compilador no envía ninguna información a Microsoft. Sin embargo, si se produce un error interno del compilador, esta opción le permite notificar el error a Microsoft. Esta información le ayudará a los ingenieros de Microsoft a identificar la causa y puede ayudar a mejorar la siguiente versión de [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+ Esta opción proporciona una manera cómoda para notificar un error interno del compilador de Visual Basic (ICE) al equipo de Visual Basic en Microsoft. De forma predeterminada, el compilador no envía ninguna información a Microsoft. Sin embargo, si se produce un error interno del compilador, esta opción le permite notificar el error a Microsoft. Esta información le ayudará a los ingenieros de Microsoft a identificar la causa y puede ayudar a mejorar la próxima versión de Visual Basic.  
   
  Capacidad de un usuario para enviar informes depende de los permisos de directiva de equipo y de usuario.  
   

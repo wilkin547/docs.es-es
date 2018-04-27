@@ -1,10 +1,11 @@
 ---
-title: "Cómo: Invocar al compilador de la línea de comandos (Visual Basic)"
+title: 'Cómo: Invocar al compilador de la línea de comandos (Visual Basic)'
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - command-line arguments
@@ -12,14 +13,14 @@ helpviewer_keywords:
 - Visual Basic compiler, starting
 - command line [Visual Basic], arguments
 ms.assetid: 0fd9a8f6-f34e-4c35-a49d-9b9bbd8da4a9
-caps.latest.revision: "28"
+caps.latest.revision: 28
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 5c69860ede5620272e67bde435e6e6fa08cc81bc
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f1ccf08ba58fa6af60bd8ffd7cba79b205dc0f3d
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-invoke-the-command-line-compiler-visual-basic"></a>Cómo: Invocar al compilador de la línea de comandos (Visual Basic)
 Puede invocar el compilador de línea de comandos escribiendo el nombre de su archivo ejecutable en la línea de comandos, también conocido como el símbolo de MS-DOS. Si compila desde la línea de comandos de Windows de manera predeterminada, debe escribir la ruta de acceso completa al archivo ejecutable. Para invalidar este comportamiento predeterminado, puede utilizar el [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] símbolo o modificar la variable de entorno PATH. Ambos permiten compilar desde cualquier directorio escribiendo simplemente el nombre del compilador.  
@@ -54,7 +55,7 @@ Puede invocar el compilador de línea de comandos escribiendo el nombre de su ar
   
 6.  Haga clic en **Aceptar** para confirmar los cambios y cerrar los cuadros de diálogo.  
   
-     Después de cambiar la variable de entorno PATH, puede ejecutar el [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] compilador en la línea de comandos de Windows desde cualquier directorio en el equipo.  
+     Después de cambiar la variable de entorno PATH, podrá ejecutar el compilador de Visual Basic en el símbolo del sistema de Windows desde cualquier directorio del equipo.  
   
 ### <a name="to-invoke-the-compiler-using-the-windows-command-prompt"></a>Para invocar al compilador mediante el símbolo del sistema de Windows  
   

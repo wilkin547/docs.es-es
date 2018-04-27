@@ -1,10 +1,11 @@
 ---
-title: "Instrucción For Each...Next (Visual Basic)"
+title: Instrucción For Each...Next (Visual Basic)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vb.ForEach
@@ -27,14 +28,14 @@ helpviewer_keywords:
 - Exit statement [Visual Basic], For Each...Next statements
 - iteration
 ms.assetid: ebce3120-95c3-42b1-b70b-fa7da40c75e2
-caps.latest.revision: "56"
+caps.latest.revision: 56
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 11601eb1caad1c6cc6d9898f590436a977a78fa1
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: b1593d279d4338ebadca803fe757a201cbcd654b
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="for-eachnext-statement-visual-basic"></a>Instrucción For Each...Next (Visual Basic)
 Repite un grupo de instrucciones para cada elemento de una colección.  
@@ -53,7 +54,7 @@ Next [ element ]
   
 ## <a name="parts"></a>Elementos  
   
-|Término|Definición|  
+|Término|de esquema JSON|  
 |---|---|  
 |`element`|Necesario en el `For Each` instrucción. Opcional en la `Next` instrucción. Variable. Utilizar para recorrer en iteración los elementos de la colección.|  
 |`datatype`|Obligatorio si `element` ya no está declarado. Tipo de datos de `element`.|  
@@ -97,7 +98,7 @@ Next [ element ]
   
  Puede colocar cualquier número de `Exit For` instrucciones en un `For Each` bucle. Cuando se usa en anidado `For Each` bucles, `Exit For` provoca la ejecución al salir del bucle y transfiere el control más interno al siguiente nivel más alto de anidamiento.  
   
- `Exit For`a menudo se usa después de una evaluación de alguna condición, por ejemplo, en un `If`... `Then`... `Else` estructura. Desea usar `Exit For` para las siguientes condiciones:  
+ `Exit For` a menudo se usa después de una evaluación de alguna condición, por ejemplo, en un `If`... `Then`... `Else` estructura. Desea usar `Exit For` para las siguientes condiciones:  
   
 -   Continuar recorrer en iteración es innecesaria o imposible. Esto podría deberse a un valor erróneo o una solicitud de finalización.  
   
@@ -133,7 +134,7 @@ Next [ element ]
   
  Tipo de datos de `element` deberá ser tal que el tipo de datos de los elementos de `group` se puede convertir a él.  
   
- Tipo de datos de `group` debe ser un tipo de referencia que hace referencia a una colección o una matriz que es enumerable. Normalmente, esto significa que `group` hace referencia a un objeto que implementa el <xref:System.Collections.IEnumerable> interfaz de la `System.Collections` espacio de nombres o la <xref:System.Collections.Generic.IEnumerable%601> interfaz de la `System.Collections.Generic` espacio de nombres. `System.Collections.IEnumerable`define la <xref:System.Collections.IEnumerable.GetEnumerator%2A> método, que devuelve un objeto de enumerador para la colección. El objeto de enumerador implementa la `System.Collections.IEnumerator` interfaz de la `System.Collections` espacio de nombres y expone el <xref:System.Collections.IEnumerator.Current%2A> propiedad y el <xref:System.Collections.IEnumerator.Reset%2A> y <xref:System.Collections.IEnumerator.MoveNext%2A> métodos. Visual Basic utiliza con frecuencia para recorrer la colección.  
+ Tipo de datos de `group` debe ser un tipo de referencia que hace referencia a una colección o una matriz que es enumerable. Normalmente, esto significa que `group` hace referencia a un objeto que implementa el <xref:System.Collections.IEnumerable> interfaz de la `System.Collections` espacio de nombres o la <xref:System.Collections.Generic.IEnumerable%601> interfaz de la `System.Collections.Generic` espacio de nombres. `System.Collections.IEnumerable` define la <xref:System.Collections.IEnumerable.GetEnumerator%2A> método, que devuelve un objeto de enumerador para la colección. El objeto de enumerador implementa la `System.Collections.IEnumerator` interfaz de la `System.Collections` espacio de nombres y expone el <xref:System.Collections.IEnumerator.Current%2A> propiedad y el <xref:System.Collections.IEnumerator.Reset%2A> y <xref:System.Collections.IEnumerator.MoveNext%2A> métodos. Visual Basic utiliza con frecuencia para recorrer la colección.  
   
 ### <a name="narrowing-conversions"></a>conversiones de restricción  
  Cuando `Option Strict` se establece en `On`, las conversiones de restricción suelen provocan errores del compilador. En un `For Each` instrucción, sin embargo, las conversiones de los elementos de `group` a `element` se evalúan y se realiza en tiempo de ejecución y se suprimen los errores de compilador causados por las conversiones de restricción.  
@@ -149,7 +150,7 @@ Next [ element ]
   
  **Modificar la colección.** El objeto de enumerador devuelto por <xref:System.Collections.IEnumerable.GetEnumerator%2A> normalmente no le permiten cambiar la colección agregando, eliminando, reemplazando o reordenar los elementos. Si cambia la colección después de haber iniciado una `For Each`... `Next` bucles, el objeto de enumerador deja de ser válido y hace que el próximo intento de obtener acceso a un elemento una <xref:System.InvalidOperationException> excepción.  
   
- Sin embargo, este bloqueo de modificación no está determinado por [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], sino por la implementación de la <xref:System.Collections.IEnumerable> interfaz. Es posible implementar `IEnumerable` de forma que permite la modificación durante la iteración. Si se va a realizar dichos cambios dinámicos, asegúrese de que comprende las características de la `IEnumerable` implementación en la colección que está utilizando.  
+ Sin embargo, este bloqueo de modificación no está determinado por Visual Basic, pero en su lugar por la implementación de la <xref:System.Collections.IEnumerable> interfaz. Es posible implementar `IEnumerable` de forma que permite la modificación durante la iteración. Si se va a realizar dichos cambios dinámicos, asegúrese de que comprende las características de la `IEnumerable` implementación en la colección que está utilizando.  
   
  **Modificar elementos de la colección.** El <xref:System.Collections.IEnumerator.Current%2A> es propiedad del objeto de enumerador [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md), y devuelve una copia local de cada elemento de la colección. Esto significa que no se puede modificar los propios elementos en un `For Each`... `Next` bucle. Cualquier modificación que realice afecta a solo la copia local de `Current` y no se reflejará en la colección subyacente. Sin embargo, si un elemento es un tipo de referencia, puede modificar los miembros de la instancia a la que señala. En el ejemplo siguiente se modifica la `BackColor` miembro de cada `thisControl` elemento. Sin embargo, no es posible, modificar `thisControl` propio.  
   

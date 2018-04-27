@@ -1,5 +1,5 @@
 ---
-title: Lo sentimos, se don &#39; t tiene detalles sobre este error de C#
+title: Lo sentimos, no queremos&#39;t tiene detalles sobre este error de C#
 ms.date: 07/20/2015
 ms.prod: .net
 ms.technology:
@@ -886,29 +886,29 @@ f1_keywords:
 helpviewer_keywords:
 - errors [C#], additional information
 ms.assetid: 48320e4a-6e17-45a6-9966-88c6ec89bd2f
-caps.latest.revision: 
+caps.latest.revision: 15
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 5f6224f661aff817b4314d832fcc2ff3938644c0
-ms.sourcegitcommit: 973a12d1e6962cd9a9c263fbfaad040ec8267fe9
+ms.openlocfilehash: 4aeea86778b44cbe8e71ed64ee5a3a3a1618cccd
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/22/2018
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="sorry-we-don39t-have-specifics-on-this-c-error"></a>Lo sentimos, se don &#39; t tiene detalles sobre este error de C#
+# <a name="sorry-we-don39t-have-specifics-on-this-c-error"></a>Lo sentimos, no queremos&#39;t tiene detalles sobre este error de C#
 Lo sentimos, pero no tenemos información específica sobre este error. Puede buscar información en la web mediante el número y el texto del mensaje de error. O bien, puede pedir a otros desarrolladores a través de uno de estos foros:  
   
  [Lenguaje Visual C#](https://social.msdn.microsoft.com/Forums/en-US/home?forum=csharplanguage)  
- Proporciona un foro donde plantear preguntas y debate en general acerca del compilador y la sintaxis del lenguaje [!INCLUDE[csprcs](~/includes/csprcs-md.md)].  
+ Proporciona un foro para preguntas y debate en general de la sintaxis del lenguaje de Visual C# y el compilador.  
   
  [IDE de Visual C#](https://social.msdn.microsoft.com/Forums/en-US/home?forum=csharpide)  
  Proporciona un foro donde plantear preguntas sobre la forma de trabajar en el entorno de [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)].  
   
  [Información general de Visual C#](https://social.msdn.microsoft.com/Forums/vstudio/en-US/home?forum=csharpgeneral)  
- Proporciona un foro donde plantear preguntas y problemas referentes a [!INCLUDE[csprcs](~/includes/csprcs-md.md)] que no se debaten en otros foros.  
+ Ofrece un foro de preguntas y problemas con Visual C# que no se debaten en otros foros.  
   
  [StackOverflow](http://stackoverflow.com/questions/tagged/c%23)  
- Ofrece un foro de preguntas y problemas con [!INCLUDE[csprcs](~/includes/csprcs-md.md)].  
+ Ofrece un foro de preguntas y problemas con Visual C#.  
   
  Vea también:  
  [Otros recursos para los programadores de Visual C#](../../csharp/getting-started/additional-resources.md)  

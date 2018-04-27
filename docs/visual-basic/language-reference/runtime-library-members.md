@@ -1,5 +1,5 @@
 ---
-title: "Miembros de la biblioteca en tiempo de ejecución de Visual Basic"
+title: Miembros de la biblioteca en tiempo de ejecución de Visual Basic
 ms.date: 07/20/2015
 ms.prod: .net
 ms.technology:
@@ -13,17 +13,17 @@ helpviewer_keywords:
 - Microsoft.VisualBasic namespace
 - members [Visual Basic], Visual Basic run-time library
 ms.assetid: f5e82c6e-3500-452b-bdb8-78f0d5477604
-caps.latest.revision: 
+caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: f928a01424853dc7e3637f49cc3af4108c5afb5b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 47c7af031b2169d1a259a8f96f5485bcb354aa25
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="visual-basic-runtime-library-members"></a>Miembros de la biblioteca en tiempo de ejecución de Visual Basic
-El `Microsoft.VisualBasic` espacio de nombres contiene clases, módulos, constantes y enumeraciones que constituyen el [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] biblioteca en tiempo de ejecución. Estos miembros de la biblioteca proporcionan procedimientos, propiedades y valores constantes que puede utilizar en el código. Cada módulo y clase representan una categoría determinada de funcionalidad.  
+El `Microsoft.VisualBasic` espacio de nombres contiene clases, módulos, constantes y enumeraciones que constituyen la biblioteca en tiempo de ejecución de Visual Basic. Estos miembros de la biblioteca proporcionan procedimientos, propiedades y valores constantes que puede utilizar en el código. Cada módulo y clase representan una categoría determinada de funcionalidad.  
   
 ## <a name="microsoftvisualbasiccollection-class"></a>Clase Microsoft.VisualBasic.Collection  
   
@@ -197,7 +197,7 @@ El `Microsoft.VisualBasic` espacio de nombres contiene clases, módulos, constan
 |<xref:Microsoft.VisualBasic.VBMath.Randomize%2A>|<xref:Microsoft.VisualBasic.VBMath.Rnd%2A>|||  
   
 ## <a name="microsoftvisualbasic-constants-and-enumerations"></a>Microsoft.VisualBasic constantes y enumeraciones  
- El `Microsoft.VisualBasic` espacio de nombres proporciona constantes y enumeraciones como parte de la [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] biblioteca en tiempo de ejecución. Puede utilizar estos valores constantes en el código. Cada enumeración representa una categoría determinada de funcionalidad. Para obtener más información, consulte [constantes y enumeraciones](../../visual-basic/language-reference/constants-and-enumerations.md).  
+ El `Microsoft.VisualBasic` espacio de nombres proporciona constantes y enumeraciones como parte de la biblioteca de tiempo de ejecución de Visual Basic. Puede utilizar estos valores constantes en el código. Cada enumeración representa una categoría determinada de funcionalidad. Para obtener más información, consulte [constantes y enumeraciones](../../visual-basic/language-reference/constants-and-enumerations.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Constantes y enumeraciones](../../visual-basic/language-reference/constants-and-enumerations.md)  

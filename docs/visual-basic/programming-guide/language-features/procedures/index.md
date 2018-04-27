@@ -18,14 +18,14 @@ ms.assetid: 9effbcf0-80a0-4d1a-98f4-2c6920592766
 caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 5487dc7dbe9be50e065610cfd61815242bb74ac0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 92cb2dd3f356acf89cbe62b5f3f5dc81fce271fc
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="procedures-in-visual-basic"></a>Procedimientos en Visual Basic
-Un *procedimiento* es un bloque de instrucciones [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] incluido dentro de una instrucción de declaración (`Function`, `Sub`, `Operator`, `Get`, `Set`) y una declaración `End` coincidente. Todas las instrucciones ejecutables de [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] deben formar parte de algún procedimiento.  
+A *procedimiento* es un bloque de instrucciones de Visual Basic delimitadas por una instrucción de declaración (`Function`, `Sub`, `Operator`, `Get`, `Set`) y su correspondiente `End` declaración. Todas las instrucciones ejecutables en Visual Basic deben estar dentro de algún procedimiento.  
   
 ## <a name="calling-a-procedure"></a>Llamada a un procedimiento  
  Cuando invoca un procedimiento desde otra parte del código, está realizando una *llamada a procedimiento*. Cuando el procedimiento termina de ejecutarse, devuelve el control al código que lo ha invocado, el cual se conoce como *código de llamada*. El código de llamada es una instrucción, o una expresión de una instrucción, que especifica el procedimiento por el nombre y le transfiere el control.  
@@ -43,7 +43,7 @@ Un *procedimiento* es un bloque de instrucciones [!INCLUDE[vbprvb](~/includes/vb
  En la mayoría de los casos, un procedimiento necesita operar en datos diferentes cada vez que se llama. Puede pasar esta información al procedimiento como parte de la llamada a procedimiento. El procedimiento define cero o más *parámetros*, cada uno de los cuales representa un valor que espera que le pase. Cada parámetro de la definición del procedimiento tiene un *argumento* correspondiente en la llamada a procedimiento. Un argumento representa el valor que pasa al parámetro correspondiente en una llamada a procedimiento determinada.  
   
 ## <a name="types-of-procedures"></a>Tipos de procedimientos  
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] usa varios tipos de procedimientos:  
+ Visual Basic utiliza varios tipos de procedimientos:  
   
 -   Los [procedimientos Sub](./sub-procedures.md) realizan acciones, pero no devuelven un valor al código de llamada.  
   

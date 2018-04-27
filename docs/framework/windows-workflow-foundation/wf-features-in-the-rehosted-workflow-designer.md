@@ -1,23 +1,24 @@
 ---
-title: "Compatibilidad para las nuevas características de Workflow Foundation 4.5 en el diseñador de flujo de trabajo rehospedado"
-ms.custom: 
+title: Compatibilidad para las nuevas características de Workflow Foundation 4.5 en el diseñador de flujo de trabajo rehospedado
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 1a4a4038-d8e6-41dd-99ea-93bd76286772
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ee8467eaeaef490f4c7a8bfbcb204506d71f5500
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 999c18f20264a71cf73bbd5afd352ad3104a03e8
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="support-for-new-workflow-foundation-45-features-in-the-rehosted-workflow-designer"></a>Compatibilidad para las nuevas características de Workflow Foundation 4.5 en el diseñador de flujo de trabajo rehospedado
 [!INCLUDE[wf](../../../includes/wf-md.md)] en [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] presentó muchas características nuevas, incluidas varias mejoras en la experiencia de diseñador de flujo de trabajo. En este tema se detallan las características admitidas en el diseñador rehospedado y las que no se admiten.  
@@ -54,7 +55,7 @@ ms.lasthandoff: 12/22/2017
   
  La captura de pantalla siguiente muestra una actividad `WriteLine` en `Body` de `NoPersistScope`.  
   
- ![Auto &#45; rodear ubicación de destino](../../../docs/framework/windows-workflow-foundation/media/autosurround1.png "AutoSurround1")  
+ ![Auto&#45;rodear ecurso](../../../docs/framework/windows-workflow-foundation/media/autosurround1.png "AutoSurround1")  
   
  La captura de pantalla siguiente muestra la actividad `Sequence` creada automáticamente en `Body` cuando se coloca un segundo elemento `WriteLine` debajo del primero.  
   
@@ -75,7 +76,7 @@ ms.lasthandoff: 12/22/2017
  Asimismo, se pueden arrastrar y colocar en el diseñador selecciones múltiples de actividad, y también se puede interactuar con ellas mediante el menú contextual.  
   
 ### <a name="outline-view-of-workflow-items"></a>Vista de esquema de los elementos de flujo de trabajo  
- Para que sea más fácil navegar en los flujos de trabajo jerárquicos, los componentes de un flujo de trabajo se muestran en una vista de esquema de árbol. La vista esquema se muestra en el **esquema del documento** vista. Para abrir esta vista en [!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)], en el menú superior, seleccione **vista**, **otras ventanas**, **esquema del documento**, o presione Ctrl W, U. Al hacer clic en un nodo en la vista de esquema navegará a la actividad correspondiente en el diseñador de flujo de trabajo, y la vista de esquema se actualizará para mostrar las actividades seleccionadas en el diseñador. Esta característica se admite en el diseñador rehospedado.  
+ Para que sea más fácil navegar en los flujos de trabajo jerárquicos, los componentes de un flujo de trabajo se muestran en una vista de esquema de árbol. La vista esquema se muestra en el **esquema del documento** vista. Para abrir esta vista en Visual Studio, en el menú superior, seleccione **vista**, **otras ventanas**, **esquema del documento**, o presione Ctrl W, U. Al hacer clic en un nodo en la vista de esquema navegará a la actividad correspondiente en el diseñador de flujo de trabajo, y la vista de esquema se actualizará para mostrar las actividades seleccionadas en el diseñador. Esta característica se admite en el diseñador rehospedado.  
   
  La siguiente captura de pantalla de flujo de trabajo completado de la [Tutorial de introducción](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md) muestra la vista de esquema con un flujo de trabajo secuencial.  
   
@@ -93,7 +94,7 @@ ms.lasthandoff: 12/22/2017
   
  Las actividades también se pueden arrastrar a las conexiones entre los nodos y estados de un diagrama de flujo para insertar automáticamente el nodo entre otros dos nodos. La captura de pantalla siguiente muestra la línea de conexión resaltada donde se pueden arrastrar y colocar actividades del cuadro de herramientas.  
   
- ![Auto &#45; inserción controlar para colocar actividades](../../../docs/framework/windows-workflow-foundation/media/autoinsert.png "Autoinsert")  
+ ![Auto&#45;insertar identificador para colocar actividades](../../../docs/framework/windows-workflow-foundation/media/autoinsert.png "Autoinsert")  
   
  La conexión y la inserción automáticas se admiten en el diseñador rehospedado.  
   
@@ -149,7 +150,7 @@ ms.lasthandoff: 12/22/2017
  Para obtener más información sobre la creación de flujos de trabajo de máquina de Estados, vea [flujos de trabajo de máquina de estados](../../../docs/framework/windows-workflow-foundation/state-machine-workflows.md). Los flujos de trabajo de máquina de estados se admiten en el diseñador rehospedado.  
   
 ### <a name="contract-first-workflow-development"></a>Desarrollo de flujo de trabajo de contrato primero  
- La herramienta de desarrollo del flujo de trabajo de contrato primero permite al desarrollador diseñar un contrato en Code First y, a continuación, haciendo algunos clics en [!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)], generar automáticamente una plantilla de actividad en el cuadro de herramientas que representa cada operación. Estas actividades se usan para crear un flujo de trabajo que implemente las operaciones definidas por el contrato. El diseñador de flujo de trabajo validará el servicio de flujo de trabajo para garantizar que estas operaciones se implementan y la signatura del flujo de trabajo coincide con la signatura del contrato. El desarrollador también puede asociar un servicio de flujo de trabajo a una colección de contratos implementados. Para obtener más información sobre el desarrollo de servicios de flujo de trabajo de contrato primero, consulte [Cómo: crear un servicio de flujo de trabajo que consume un contrato de servicio existente](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md).  
+ La herramienta de desarrollo de flujo de trabajo de contrato primero permite al desarrollador diseñar un contrato en code first y, después, con unos pocos clics en Visual Studio, generar automáticamente una plantilla de actividad en el cuadro de herramientas que representa cada operación. Estas actividades se usan para crear un flujo de trabajo que implemente las operaciones definidas por el contrato. El diseñador de flujo de trabajo validará el servicio de flujo de trabajo para garantizar que estas operaciones se implementan y la signatura del flujo de trabajo coincide con la signatura del contrato. El desarrollador también puede asociar un servicio de flujo de trabajo a una colección de contratos implementados. Para obtener más información sobre el desarrollo de servicios de flujo de trabajo de contrato primero, consulte [Cómo: crear un servicio de flujo de trabajo que consume un contrato de servicio existente](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md).  
   
 > [!WARNING]
 >  El desarrollo de flujo de trabajo de contrato primero no se admite en el diseñador de flujo de trabajo.

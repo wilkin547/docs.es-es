@@ -1,12 +1,12 @@
 ---
-title: "Diseño de enumeraciones"
-ms.custom: 
+title: Diseño de enumeraciones
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - type design guidelines, enumerations
@@ -15,18 +15,18 @@ helpviewer_keywords:
 - class library design guidelines [.NET Framework], enumerations
 - flags enumerations
 ms.assetid: dd53c952-9d9a-4736-86ff-9540e815d545
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 3ee73e8677ca3fd48f4bb3c94bd4e15c49a564c7
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: c3e89567761367ddcd67078b138c15b982a0d666
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="enum-design"></a>Diseño de enumeraciones
 Las enumeraciones son un tipo especial de tipo de valor. Hay dos tipos de enumeraciones: las enumeraciones simples de enumeraciones y marca.  
@@ -77,7 +77,7 @@ Las enumeraciones son un tipo especial de tipo de valor. Hay dos tipos de enumer
   
  **X DO NOT** extender <xref:System.Enum?displayProperty=nameWithType> directamente.  
   
- <xref:System.Enum?displayProperty=nameWithType>es un tipo especial que CLR usa para crear enumeraciones definidas por el usuario. La mayoría de lenguajes de programación proporcionan un elemento de programación que proporciona acceso a esta funcionalidad. Por ejemplo, en C# el `enum` palabra clave se utiliza para definir una enumeración.  
+ <xref:System.Enum?displayProperty=nameWithType> es un tipo especial que CLR usa para crear enumeraciones definidas por el usuario. La mayoría de lenguajes de programación proporcionan un elemento de programación que proporciona acceso a esta funcionalidad. Por ejemplo, en C# el `enum` palabra clave se utiliza para definir una enumeración.  
   
 <a name="design"></a>   
 ### <a name="designing-flag-enums"></a>Diseñar enumeraciones de indicador  
@@ -87,7 +87,7 @@ Las enumeraciones son un tipo especial de tipo de valor. Hay dos tipos de enumer
   
  **✓ Considere la posibilidad de** proporcionar valores de enumeración especiales para normalmente usa combinaciones de marcas.  
   
- Operaciones bit a bit son un concepto avanzado y no deberían ser necesarias para tareas sencillas. <xref:System.IO.FileAccess.ReadWrite>es un ejemplo de este tipo de valor especial.  
+ Operaciones bit a bit son un concepto avanzado y no deberían ser necesarias para tareas sencillas. <xref:System.IO.FileAccess.ReadWrite> es un ejemplo de este tipo de valor especial.  
   
  **X evitar** crear enumeraciones de indicador que ciertas combinaciones de valores no son válidos.  
   
@@ -105,7 +105,7 @@ Las enumeraciones son un tipo especial de tipo de valor. Hay dos tipos de enumer
   
  *Partes © 2005, 2009 Microsoft Corporation. Reservados todos los derechos.*  
   
- *Volver a imprimir en el permiso de educación de Pearson, Inc. de [directrices de diseño de marco de trabajo: convenciones, expresiones y patrones para las bibliotecas .NET de reutilizable, 2ª edición](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina y Brad Abrams, publicado el 22 de octubre de 2008 por Addison-Wesley Professional como parte de la serie de desarrollo de Microsoft Windows.*  
+ *Volver a imprimir en el permiso de educación de Pearson, Inc. de [directrices de diseño de marco de trabajo: convenciones, expresiones y patrones para las bibliotecas .NET de reutilizable, 2ª edición](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina y Brad Abrams, publicado el 22 de octubre de 2008 por Addison-Wesley Professional como parte de la serie de desarrollo de Microsoft Windows.*  
   
 ## <a name="see-also"></a>Vea también  
  [Instrucciones de diseño de tipos](../../../docs/standard/design-guidelines/type.md)  

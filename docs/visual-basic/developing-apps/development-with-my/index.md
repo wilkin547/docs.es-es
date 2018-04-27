@@ -17,11 +17,11 @@ ms.assetid: f1d04509-5e46-4551-9f9f-94334a121fca
 caps.latest.revision: 26
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 2cf51e1f6292a61c071fe6d92f5fcbce4be84ff4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 5ea802572a59a3b94508558cee97290cac67e1ac
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="development-with-my-visual-basic"></a>Desarrollo con My (Visual Basic)
 Visual Basic ofrece nuevas características para el desarrollo rápido de aplicaciones que mejoran la productividad y la facilidad de uso con la máxima eficacia. Una de estas funciones, `My`, proporciona acceso a información y a las instancias de objetos predeterminados relacionados con la aplicación y su entorno de ejecución. Esta información está organizada en un formato que se descubre mediante IntelliSense y se define lógicamente según su uso.  
@@ -43,7 +43,7 @@ Visual Basic ofrece nuevas características para el desarrollo rápido de aplica
  Describe los objetos `My.Resources` y `My.Settings`, que proporcionan acceso a la configuración y los recursos de una aplicación.  
   
  [Información general sobre el modelo de aplicaciones de Visual Basic](../../../visual-basic/developing-apps/development-with-my/overview-of-the-visual-basic-application-model.md)  
- Describe el modelo de inicio y parada de la aplicación [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+ Describe el modelo de inicio y cierre de aplicaciones de Visual Basic.  
   
  [Cómo My depende del tipo de proyecto](../../../visual-basic/developing-apps/development-with-my/how-my-depends-on-project-type.md)  
  Proporciona información detallada sobre las características `My` disponibles en diferentes tipos de proyectos.  

@@ -1,24 +1,26 @@
 ---
 title: Recuperar y modificar datos en ADO.NET
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 722e7f87-3691-46c6-87e8-7d159722d675
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: ff937e619d449fbfbedb234749292b6acc4bdf50
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 05760e7295606f700f72e5a3af14e395bcc5d820
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="retrieving-and-modifying-data-in-adonet"></a>Recuperar y modificar datos en ADO.NET
 La principal función de cualquier aplicación de base de datos es conectarse a un origen de datos y recuperar los datos que contiene. Los proveedores de datos de .NET Framework de ADO.NET sirven como puente entre una aplicación y un origen de datos, lo que le permite ejecutar comandos y recuperar datos mediante un **DataReader** o un **DataAdapter** . Una función clave de cualquier aplicación de base de datos es la capacidad de actualizar los datos almacenados en la misma. En ADO.NET, actualización de datos implica el uso de la **DataAdapter** y <xref:System.Data.DataSet>, y **comando** objetos; y también pueden implicar mediante transacciones.  
@@ -43,7 +45,7 @@ La principal función de cualquier aplicación de base de datos es conectarse a 
  Contiene temas en los que se describe cómo realizar transacciones locales y transacciones distribuidas, y cómo trabajar con la simultaneidad optimista.  
   
  [Recuperación de valores autonuméricos y de identidad](../../../../docs/framework/data/adonet/retrieving-identity-or-autonumber-values.md)  
- Proporciona un ejemplo de asignación de los valores generados para una **identidad** columna en un [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] tabla o para una **Autonumérico** campo en una tabla de Microsoft Access, para una columna de una fila insertada en una tabla. Describe la combinación de valores de identidad en una `DataTable`.  
+ Proporciona un ejemplo de asignación de los valores generados para una **identidad** columna en una tabla de SQL Server o para un **Autonumérico** campo en una tabla de Microsoft Access, para una columna de una fila insertada en una tabla. Describe la combinación de valores de identidad en una `DataTable`.  
   
  [Recuperación de datos binarios](../../../../docs/framework/data/adonet/retrieving-binary-data.md)  
  Describe cómo recuperar datos binarios o estructuras de datos de gran tamaño mediante `CommandBehavior`.`SequentialAccess` Para modificar el comportamiento predeterminado de un `DataReader`.  
@@ -67,7 +69,7 @@ La principal función de cualquier aplicación de base de datos es conectarse a 
  Describe la compatibilidad de [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] con programación asincrónica.  
   
  [Compatibilidad de streaming de SqlClient](../../../../docs/framework/data/adonet/sqlclient-streaming-support.md)  
- Explica cómo escribir aplicaciones que transmiten por secuencias datos de [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] sin cargarlos totalmente en memoria.  
+ Describe cómo escribir aplicaciones que transmitir datos de SQL Server sin tener que totalmente cargados en memoria.  
   
 ## <a name="see-also"></a>Vea también  
  [Asignaciones de tipos de datos en ADO.NET](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)  

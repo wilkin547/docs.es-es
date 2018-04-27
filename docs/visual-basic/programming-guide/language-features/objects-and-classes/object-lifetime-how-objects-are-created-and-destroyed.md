@@ -1,10 +1,10 @@
 ---
-title: "Duración de los objetos: cómo se crean y destruyen (Visual Basic)"
-ms.custom: 
+title: 'Duración de los objetos: cómo se crean y destruyen (Visual Basic)'
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - devlang-visual-basic
 ms.topic: article
@@ -29,14 +29,14 @@ helpviewer_keywords:
 - Sub Dispose destructor
 - garbage collection [Visual Basic], Visual Basic
 ms.assetid: f1ee8458-b156-44e0-9a8a-5dd171648cd8
-caps.latest.revision: 
+caps.latest.revision: 22
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: f985d6bf7b26ec22d6e533eae1f1d7ea0682e56c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d93d0c94bdbeb93e0527ef6b5c6248b3b580599f
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="object-lifetime-how-objects-are-created-and-destroyed-visual-basic"></a>Duración de los objetos: cómo se crean y destruyen (Visual Basic)
 Mediante el uso de la palabra clave `New` se crea una instancia de una clase, un objeto. A menudo, las tareas de inicialización deben realizarse en los objetos nuevos antes de utilizarlos. Las tareas de inicialización comunes incluyen abrir archivos, conectarse a bases de datos y leer los valores de las claves del registro. Visual Basic controla la inicialización de objetos nuevos mediante procedimientos denominados *constructores* (métodos especiales que permiten controlar la inicialización).  
@@ -44,10 +44,10 @@ Mediante el uso de la palabra clave `New` se crea una instancia de una clase, un
  Después de que un objeto abandone el ámbito, se libera por Common Language Runtime (CLR). Visual Basic controla la liberación de recursos del sistema mediante procedimientos denominados *destructores*. Juntos, los constructores y los destructores permiten la creación de bibliotecas de clases completas y predecibles.  
   
 ## <a name="using-constructors-and-destructors"></a>Usar constructores y destructores  
- Los constructores y los destructores controlan la creación y la destrucción de objetos. Los procedimientos `Sub New` y `Sub Finalize` de Visual Basic inicializan y destruyen objetos; sustituyen a los métodos `Class_Initialize` y `Class_Terminate` usados en [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 6.0 y versiones anteriores.  
+ Los constructores y los destructores controlan la creación y la destrucción de objetos. El `Sub New` y `Sub Finalize` procedimientos en Visual Basic inicializan y destruyen objetos; sustituyen el `Class_Initialize` y `Class_Terminate` métodos que se utilizan en Visual Basic 6.0 y versiones anteriores.  
   
 ### <a name="sub-new"></a>Sub New  
- El constructor `Sub New` solo puede ejecutarse una vez cuando se crea una clase. No se puede llamar explícitamente en ningún lugar que no sea la primera línea de código de otro constructor de la misma clase o de una clase derivada. Además, el código del método `Sub New` siempre se ejecuta antes que cualquier otro código en una clase. [!INCLUDE[vbprvblong](~/includes/vbprvblong-md.md)]y versiones posteriores crean implícitamente un `Sub New` constructor en tiempo de ejecución si no se define explícitamente un `Sub New` procedimiento para una clase.  
+ El constructor `Sub New` solo puede ejecutarse una vez cuando se crea una clase. No se puede llamar explícitamente en ningún lugar que no sea la primera línea de código de otro constructor de la misma clase o de una clase derivada. Además, el código del método `Sub New` siempre se ejecuta antes que cualquier otro código en una clase. [!INCLUDE[vbprvblong](~/includes/vbprvblong-md.md)] y versiones posteriores crean implícitamente un `Sub New` constructor en tiempo de ejecución si no se define explícitamente un `Sub New` procedimiento para una clase.  
   
  Para crear un constructor para una clase, cree un procedimiento denominado `Sub New` en cualquier parte de la definición de clase. Para crear un constructor parametrizado, especifique los nombres y los tipos de datos de los argumentos en `Sub New` tal y como haría al especificar argumentos en cualquier otro procedimiento, como en el código siguiente:  
   
@@ -57,7 +57,7 @@ Mediante el uso de la palabra clave `New` se crea una instancia de una clase, un
   
  [!code-vb[VbVbalrOOP#116](../../../../visual-basic/misc/codesnippet/VisualBasic/object-lifetime-how-objects-are-created-and-destroyed_2.vb)]  
   
- Cuando defina una clase que derive de otra clase, la primera línea de un constructor debe ser una llamada al constructor de la clase base, a menos que la clase base tenga un constructor accesible que no tome ningún parámetro. Una llamada a la clase base que contiene el constructor anterior sería, por ejemplo, `MyBase.New(s)`. De lo contrario, `MyBase.New` es opcional, y el tiempo de ejecución de [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] lo llama implícitamente.  
+ Cuando defina una clase que derive de otra clase, la primera línea de un constructor debe ser una llamada al constructor de la clase base, a menos que la clase base tenga un constructor accesible que no tome ningún parámetro. Una llamada a la clase base que contiene el constructor anterior sería, por ejemplo, `MyBase.New(s)`. En caso contrario, `MyBase.New` es opcional, y el tiempo de ejecución de Visual Basic llama implícitamente.  
   
  Después de escribir el código para llamar al constructor del objeto primario, puede agregar código de inicialización al procedimiento `Sub New`. `Sub New` puede aceptar argumentos cuando se llama como constructor parametrizado. Estos parámetros se pasan desde el procedimiento que llama al constructor, por ejemplo, `Dim AnObject As New ThisClass(X)`.  
   

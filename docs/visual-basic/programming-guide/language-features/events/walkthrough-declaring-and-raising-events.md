@@ -1,11 +1,12 @@
 ---
 title: Declarar y generar eventos (Visual Basic)
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - declarations [Visual Basic], events
@@ -15,14 +16,14 @@ helpviewer_keywords:
 - events [Visual Basic], raising
 - raising events [Visual Basic], walkthroughs
 ms.assetid: 8ffb3be8-097d-4d3c-b71e-04555ebda2a2
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 0bf75cfba5102be5d837af385e2d3578f78a03c0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 27db585084703607a7389f5a0aa3eba6f70dd793
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-declaring-and-raising-events-visual-basic"></a>Tutorial: Declarar y provocar eventos (Visual Basic)
 Este tutorial muestra cómo declarar y provocar eventos para una clase denominada `Widget`. Después de completar los pasos, puede leer el tema complementario, [Tutorial: controlar eventos](../../../../visual-basic/programming-guide/language-features/events/walkthrough-handling-events.md), que muestra cómo utilizar eventos de `Widget` objetos para proporcionar información de estado en una aplicación.  
@@ -36,13 +37,13 @@ Este tutorial muestra cómo declarar y provocar eventos para una clase denominad
   
 #### <a name="to-build-the-code-example-for-this-topic"></a>Para compilar el ejemplo de código de este tema  
   
-1.  Abra una nueva [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] aplicación de Windows del proyecto y cree un formulario denominado `Form1`.  
+1.  Abra un nuevo proyecto de aplicación de Windows de Visual Basic y cree un formulario denominado `Form1`.  
   
 2.  Agregue dos botones y una etiqueta para `Form1`.  
   
 3.  Asigne nombre a los objetos tal y como se muestra en la tabla siguiente.  
   
-    |Objeto|Propiedad|Parámetro|  
+    |Objeto|Property|Parámetro|  
     |------------|--------------|-------------|  
     |`Button1`|`Text`|Tarea de inicio|  
     |`Button2`|`Text`|Cancelar|  
@@ -61,7 +62,7 @@ Este tutorial muestra cómo declarar y provocar eventos para una clase denominad
 > [!NOTE]
 >  Puede declarar argumentos de evento como se hace con los argumentos de procedimientos, con las siguientes excepciones: eventos no pueden tener `Optional` o `ParamArray` argumentos y eventos no tienen valores devueltos.  
   
- El `PercentDone` evento es desencadenado por la `LongTask` método de la `Widget` clase. `LongTask`toma dos argumentos: el período de tiempo que el método pretende esté realizando un trabajo y el intervalo de tiempo mínimo antes de `LongTask` pausas para generar el `PercentDone` eventos.  
+ El `PercentDone` evento es desencadenado por la `LongTask` método de la `Widget` clase. `LongTask` toma dos argumentos: el período de tiempo que el método pretende esté realizando un trabajo y el intervalo de tiempo mínimo antes de `LongTask` pausas para generar el `PercentDone` eventos.  
   
 #### <a name="to-raise-the-percentdone-event"></a>Para generar el evento PercentDone  
   

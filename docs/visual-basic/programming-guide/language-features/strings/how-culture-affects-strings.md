@@ -1,27 +1,28 @@
 ---
-title: "Cómo afecta la referencia cultural a las cadenas en Visual Basic"
-ms.custom: 
+title: Cómo afecta la referencia cultural a las cadenas en Visual Basic
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - locale [Visual Basic], effect on strings
 - strings [Visual Basic], locale dependence
 ms.assetid: c4664444-ee0d-47bf-bef1-eaa3c54bdd7f
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: b61f008edc446445fd5873b6138b64f29e0b8b8c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: c95dcc8d04725f7a072e8c8bc7fe058e53a95c05
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-culture-affects-strings-in-visual-basic"></a>Cómo afecta la referencia cultural a las cadenas en Visual Basic
-Esta página de ayuda se describe cómo [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] usa la referencia cultural información para realizar las conversiones de cadenas y comparaciones.  
+Esta página de ayuda describe cómo Visual Basic utiliza la información de referencia cultural para realizar conversiones de cadenas y comparaciones.  
   
 ## <a name="when-to-use-culture-specific-strings"></a>Cuándo utilizar las cadenas específicas de la referencia cultural  
  Por lo general, debe utilizar cadenas específicas de la referencia cultural para todos los datos que se presentan a y de lectura de los usuarios y utilizar cadenas de referencia cultural de todos los idiomas para los datos de aplicación interna.  
@@ -31,7 +32,7 @@ Esta página de ayuda se describe cómo [!INCLUDE[vbprvb](~/includes/vbprvb-md.m
  Sin embargo, si la aplicación carga la fecha en un servidor central, debe dar formato a la cadena de acuerdo con una referencia cultural concreta, para evitar la confusión entre los formatos de fecha potencialmente diferentes.  
   
 ## <a name="culture-sensitive-functions"></a>Funciones de la cuenta de la referencia cultural  
- Todos los [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] funciones de conversión de cadenas (excepto para la `Str` y `Val` funciones) utilizar información de referencia cultural de la aplicación para asegurarse de que las conversiones y comparaciones son adecuadas para la referencia cultural de la usuario de la aplicación.  
+ Todas las funciones de conversión de cadenas de Visual Basic (excepto para la `Str` y `Val` funciones) utilizar información de referencia cultural de la aplicación para asegurarse de que las conversiones y comparaciones son adecuadas para la referencia cultural de la aplicación usuario.  
   
  La clave para utilizar correctamente las funciones de conversión de cadenas en aplicaciones que se ejecutan en equipos con la configuración de referencia cultural diferente consiste en comprender qué funciones utilizan una configuración de referencia cultural específica y que usan la configuración de la referencia cultural actual. Tenga en cuenta que la configuración de referencia cultural de la aplicación es, de forma predeterminada, hereda de la configuración de referencia cultural del sistema operativo. Para obtener más información, consulte <xref:Microsoft.VisualBasic.Strings.Asc%2A>, <xref:Microsoft.VisualBasic.Strings.AscW%2A>, <xref:Microsoft.VisualBasic.Strings.Chr%2A>, <xref:Microsoft.VisualBasic.Strings.ChrW%2A>, <xref:Microsoft.VisualBasic.Strings.Format%2A>, <xref:Microsoft.VisualBasic.Conversion.Hex%2A>, <xref:Microsoft.VisualBasic.Conversion.Oct%2A>, y [funciones de conversión de tipo](../../../../visual-basic/language-reference/functions/type-conversion-functions.md).  
   
@@ -64,7 +65,7 @@ Esta página de ayuda se describe cómo [!INCLUDE[vbprvb](~/includes/vbprvb-md.m
   
 -   **Determinar si dos cadenas internas de la aplicación coincidir exactamente con (normalmente por motivos de seguridad).** Utilice las operaciones que pasar por alto la referencia cultural actual.  
   
- Puede realizar dos tipos de comparaciones con la [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] <xref:Microsoft.VisualBasic.Strings.StrComp%2A> (función). Especifique el valor opcional `Compare` argumento para controlar el tipo de comparación: `Text` para la mayoría de entrada y salida `Binary` para determinar las coincidencias exactas.  
+ Puede realizar dos tipos de comparaciones con Visual Basic <xref:Microsoft.VisualBasic.Strings.StrComp%2A> función. Especifique el valor opcional `Compare` argumento para controlar el tipo de comparación: `Text` para la mayoría de entrada y salida `Binary` para determinar las coincidencias exactas.  
   
  El `StrComp` función devuelve un entero que indica la relación entre las dos cadenas comparadas basándose en el criterio de ordenación. Un valor positivo para el resultado indica que la primera cadena es mayor que la segunda cadena. Un resultado negativo indica que la primera cadena es menor y cero indica que las cadenas son iguales.  
   
@@ -79,7 +80,7 @@ Esta página de ayuda se describe cómo [!INCLUDE[vbprvb](~/includes/vbprvb-md.m
 |Valor `comparisonType` argumento|Tipo de comparación|Cuándo utilizarlo|  
 |---|---|---|  
 |`Ordinal`|Comparación basada en bytes del componente de las cadenas.|Use este valor al comparar: identificadores entre mayúsculas y minúsculas, las configuraciones relacionadas con la seguridad u otros identificadores no lingüísticos donde los bytes deben coincidir exactamente.|  
-|`OrdinalIgnoreCase`|Comparación basada en bytes del componente de las cadenas.<br /><br /> `OrdinalIgnoreCase`usa la información de referencia cultural invariable para determinar si dos caracteres solo difieren en mayúsculas y minúsculas.|Use este valor al comparar: identificadores entre mayúsculas y minúsculas, configuración relacionada con la seguridad y los datos almacenados en Windows.|  
+|`OrdinalIgnoreCase`|Comparación basada en bytes del componente de las cadenas.<br /><br /> `OrdinalIgnoreCase` usa la información de referencia cultural invariable para determinar si dos caracteres solo difieren en mayúsculas y minúsculas.|Use este valor al comparar: identificadores entre mayúsculas y minúsculas, configuración relacionada con la seguridad y los datos almacenados en Windows.|  
 |`CurrentCulture` o `CurrentCultureIgnoreCase`|Comparación basada en la interpretación de las cadenas en la referencia cultural actual.|Utilice estos valores al comparar: datos que se muestran al usuario, la mayoría proporcionados por el usuario y otros datos que requieran interpretación lingüística.|  
 |`InvariantCulture` o `InvariantCultureIgnoreCase`|Comparación basada en la interpretación de las cadenas en la referencia cultural invariable.<br /><br /> Esto es diferente de la `Ordinal` y `OrdinalIgnoreCase`, porque la referencia cultural de todos los idiomas trata los caracteres fuera de su intervalo aceptado como caracteres invariables equivalentes.|Utilice estos valores únicamente al comparar datos persistentes o mostrar datos lingüísticamente pertinentes requiere un criterio de ordenación fijo.|  
   

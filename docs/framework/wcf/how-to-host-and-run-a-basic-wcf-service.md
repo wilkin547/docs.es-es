@@ -17,11 +17,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 1e1c00abfec36622f5da493165259fb1786ab8d6
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: a13e5a0044c51700acce6b123688868443f635ae
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-host-and-run-a-basic-windows-communication-foundation-service"></a>Procedimiento para hospedar y ejecutar un servicio básico de Windows Communication Foundation
 Es la tercera de las seis tareas necesarias para crear una aplicación de [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]. Para obtener información general de las seis de las tareas, consulte la [Tutorial de introducción](../../../docs/framework/wcf/getting-started-tutorial.md) tema.  
@@ -170,7 +170,7 @@ Es la tercera de las seis tareas necesarias para crear una aplicación de [!INCL
   
 ### <a name="to-verify-the-service-is-working"></a>Para comprobar si el servicio funciona  
   
-1.  Ejecute la aplicación de consola GettingStartedHost desde [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)]. Al ejecutarse en [!INCLUDE[wv](../../../includes/wv-md.md)] y sistemas operativos posteriores, el servicio se debe ejecutar con privilegios de administrador. Dado que [!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)] se ejecutó con privilegios de administrador, GettingStartedHost también se ejecuta con dichos privilegios. También puede iniciar un nuevo símbolo del sistema con privilegios de administrador y ejecutar service.exe desde allí.  
+1.  Ejecute la aplicación de consola GettingStartedHost desde [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)]. Al ejecutarse en [!INCLUDE[wv](../../../includes/wv-md.md)] y sistemas operativos posteriores, el servicio se debe ejecutar con privilegios de administrador. Dado que Visual Studio se ejecuta con privilegios de administrador, GettingStartedHost también se ejecuta con privilegios de administrador. También puede iniciar un nuevo símbolo del sistema con privilegios de administrador y ejecutar service.exe desde allí.  
   
 2.  Abra Internet Explorer y busque la página de depuración del servicio en `http://localhost:8000/GettingStarted/CalculatorService`.  
   
@@ -424,7 +424,7 @@ End Module
 ```  
   
 > [!NOTE]
->  Servicios como este requieren permiso para registrar las direcciones HTTP en el equipo para la realización de escuchas. Las cuentas Administrador tienen este permiso, pero las cuentas de usuario no administrador deben tener concedido permiso para los espacios de nombres HTTP. [!INCLUDE[crabout](../../../includes/crabout-md.md)] Cómo configurar las reservas de espacio de nombres, consulte [configurar HTTP y HTTPS](../../../docs/framework/wcf/feature-details/configuring-http-and-https.md). Al ejecutarse en [!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)], the service.exe se debe ejecutar con privilegios de administrador.  
+>  Servicios como este requieren permiso para registrar las direcciones HTTP en el equipo para la realización de escuchas. Las cuentas Administrador tienen este permiso, pero las cuentas de usuario no administrador deben tener concedido permiso para los espacios de nombres HTTP. [!INCLUDE[crabout](../../../includes/crabout-md.md)] Cómo configurar las reservas de espacio de nombres, consulte [configurar HTTP y HTTPS](../../../docs/framework/wcf/feature-details/configuring-http-and-https.md). Cuando se ejecutan en Visual Studio, se debe ejecutar service.exe con privilegios de administrador.  
   
  Ahora, el servicio se está ejecutando. Continúe con [Cómo: crear un cliente](../../../docs/framework/wcf/how-to-create-a-wcf-client.md). Para obtener información de solución de problemas, consulte [el Tutorial de introducción de la solución de problemas](../../../docs/framework/wcf/troubleshooting-the-getting-started-tutorial.md).  
   

@@ -1,27 +1,29 @@
 ---
-title: "Cómo: Validar archivos DBML y de asignación externa"
-ms.custom: 
+title: 'Cómo: Validar archivos DBML y de asignación externa'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: d9ea37f5-0a9e-4401-8fc3-1e6fd44c49f9
-caps.latest.revision: "2"
+caps.latest.revision: 2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 7724586c33c19654c3657a5a4604a3c74f2c8756
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 4d3fc297078c9f6c1ac8b2d8a498050f294a5437
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-validate-dbml-and-external-mapping-files"></a>Cómo: Validar archivos DBML y de asignación externa
-Los archivos de asignación externa y los archivos .dbml que se modifican se deben validar con sus respectivas definiciones de esquema. En este tema se proporciona a los usuarios de [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] los pasos necesarios para implementar el proceso de validación.  
+Los archivos de asignación externa y los archivos .dbml que se modifican se deben validar con sus respectivas definiciones de esquema. Este tema proporciona a los usuarios de Visual Studio con los pasos para implementar el proceso de validación.  
   
  [!INCLUDE[note_settings_general](../../../../../../includes/note-settings-general-md.md)]  
   
@@ -56,7 +58,7 @@ Los archivos de asignación externa y los archivos .dbml que se modifican se deb
      Determine si se han generado errores, advertencias o mensajes. Si no, el archivo XML es válido respecto a la definición de esquema.  
   
 ## <a name="alternate-method-for-supplying-schema-definition"></a>Método alternativo para proporcionar la definición de esquema  
- Si por alguna razón el .xsd adecuado archivo no aparece en la **esquemas XML** cuadro de diálogo, puede descargar el archivo .xsd de un tema de ayuda. Los pasos siguientes le indicarán cómo guardar el archivo descargado en el formato Unicode que requiere el Editor XML de [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)].  
+ Si por alguna razón el .xsd adecuado archivo no aparece en la **esquemas XML** cuadro de diálogo, puede descargar el archivo .xsd de un tema de ayuda. Los pasos siguientes le ayudarán a guardar el archivo descargado en el formato de Unicode requerido por el Editor XML de Visual Studio.  
   
 #### <a name="to-copy-a-schema-definition-file-from-a-help-topic"></a>Para copiar un archivo de definición de esquema de un tema de Ayuda  
   

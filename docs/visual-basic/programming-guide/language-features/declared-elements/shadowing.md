@@ -1,11 +1,12 @@
 ---
 title: Sombrear en Visual Basic
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - inheritance [Visual Basic], shadowing
@@ -24,19 +25,19 @@ helpviewer_keywords:
 - objects [Visual Basic], names
 - names [Visual Basic], shadowing
 ms.assetid: 54bb4c25-12c4-4181-b4a0-93546053964e
-caps.latest.revision: "24"
+caps.latest.revision: 24
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: cbfce3edc122ca875552b2d41ba876fe5cfcfc4d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 489e1786b08085f229f66b2dbc434b96b06d86df
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="shadowing-in-visual-basic"></a>Sombrear en Visual Basic
-Si dos elementos de programación comparten el mismo nombre, uno de ellos puede ocultar, o *instantáneas*, el otro se. En esta situación, el elemento sombreado no está disponible como referencia; en su lugar, cuando el código utiliza el nombre del elemento, el [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] compilador lo resuelve como el elemento reemplazado.  
+Si dos elementos de programación comparten el mismo nombre, uno de ellos puede ocultar, o *instantáneas*, el otro se. En esta situación, el elemento sombreado no está disponible como referencia; en su lugar, cuando el código usa el nombre del elemento, el compilador de Visual Basic resuelve en el elemento reemplazado.  
   
-## <a name="purpose"></a>Finalidad  
+## <a name="purpose"></a>Propósito  
  El propósito principal de sombrear es proteger la definición de los miembros de clase. La clase base puede sufrir un cambio que se crea un elemento con el mismo nombre que ya se ha definido. Si esto ocurre, el `Shadows` modificador fuerza referencias a través de la clase para que se resuelvan en el miembro definido, en lugar de en el nuevo elemento de clase base.  
   
 ## <a name="types-of-shadowing"></a>Tipos de sombreado  

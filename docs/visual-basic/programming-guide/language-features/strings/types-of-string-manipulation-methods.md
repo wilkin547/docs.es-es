@@ -1,30 +1,31 @@
 ---
-title: "Tipos de métodos de manipulación de cadenas en Visual Basic"
-ms.custom: 
+title: Tipos de métodos de manipulación de cadenas en Visual Basic
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - strings [Visual Basic], manipulating [Visual Basic]
 - string manipulation
 ms.assetid: 905055cd-7f50-48fb-9eed-b0995af1dc1f
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: b437be4a6f4a0cc9d5a4d21291a80c9cb8fffcd3
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 3677c8a23e956716af4357fe79041fc96f4014f2
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="types-of-string-manipulation-methods-in-visual-basic"></a>Tipos de métodos de manipulación de cadenas en Visual Basic
-Hay varias maneras de analizar y manipular las cadenas. Algunos de los métodos forman parte de la [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] idioma, mientras que otras son inherentes a la `String` clase.  
+Hay varias maneras de analizar y manipular las cadenas. Algunos de los métodos forman parte del lenguaje Visual Basic, y otros son inherentes a la `String` clase.  
   
 ## <a name="visual-basic-language-and-the-net-framework"></a>Lenguaje Visual Basic y .NET Framework  
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]métodos se utilizan como funciones inherentes del lenguaje. Se puede utilizar sin calificación en el código. En el ejemplo siguiente se muestra el uso típico de un [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] comando de manipulación de cadenas:  
+ Métodos de Visual Basic se utilizan como funciones inherentes del lenguaje. Se puede utilizar sin calificación en el código. En el ejemplo siguiente se muestra un uso típico de un comando de manipulación de cadenas de Visual Basic:  
   
  [!code-vb[VbVbalrStrings#44](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/types-of-string-manipulation-methods_1.vb)]  
   

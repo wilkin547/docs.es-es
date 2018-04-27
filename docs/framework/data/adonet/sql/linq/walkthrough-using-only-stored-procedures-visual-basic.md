@@ -1,28 +1,28 @@
 ---
 title: 'Tutorial: Usar solo procedimientos almacenados (Visual Basic)'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-ado
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - vb
 ms.assetid: 5a736a30-ba66-4adb-b87c-57d19476e862
-caps.latest.revision: 
+caps.latest.revision: 4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload:
 - dotnet
-ms.openlocfilehash: 800cc7d6a1e4aa836ebe75afcbe29a3532ee173a
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: c04fe5e81f19b89de7204ed2430c9acf08ce1647
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-using-only-stored-procedures-visual-basic"></a>Tutorial: Usar solo procedimientos almacenados (Visual Basic)
 Este tutorial proporciona un escenario completo básico de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] para tener acceso a los datos utilizando procedimientos almacenados solamente. Este enfoque suelen utilizarlo los administradores de bases de datos para limitar el acceso al almacén de datos.  
@@ -30,9 +30,9 @@ Este tutorial proporciona un escenario completo básico de [!INCLUDE[vbtecdlinq]
 > [!NOTE]
 >  También puede utilizar procedimientos almacenados en aplicaciones [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] para invalidar el comportamiento predeterminado, especialmente para los procesos `Create`, `Update` y `Delete`. Para obtener más información, consulte [personalizar operaciones de inserción, actualización y eliminar](../../../../../../docs/framework/data/adonet/sql/linq/customizing-insert-update-and-delete-operations.md).  
   
- En este tutorial, utilizará dos métodos asignados a procedimientos almacenados en la base de datos de ejemplo Northwind: CustOrdersDetail y CustOrderHist. La asignación se produce al ejecutar la herramienta de línea de comandos SqlMetal para crear un archivo de [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)]. Para obtener más información, vea la sección Requisitos previos que se incluye posteriormente en este tutorial.  
+ En este tutorial, utilizará dos métodos asignados a procedimientos almacenados en la base de datos de ejemplo Northwind: CustOrdersDetail y CustOrderHist. La asignación se produce cuando se ejecuta la herramienta de línea de comandos SqlMetal para generar un archivo de Visual Basic. Para obtener más información, vea la sección Requisitos previos que se incluye posteriormente en este tutorial.  
   
- En este tutorial no se utiliza el [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]. Los desarrolladores de [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] también pueden utilizar el [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)] para implementar funcionalidad de procedimiento almacenado. Vea [LINQ a las herramientas SQL en Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).  
+ En este tutorial no se utiliza el [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]. Los desarrolladores que utilizan Visual Studio también pueden usar el [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)] para implementar la funcionalidad de procedimiento almacenado. Vea [LINQ a las herramientas SQL en Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).  
   
  [!INCLUDE[note_settings_general](../../../../../../includes/note-settings-general-md.md)]  
   
@@ -47,7 +47,7 @@ Este tutorial proporciona un escenario completo básico de [!INCLUDE[vbtecdlinq]
   
      Si no dispone de esta base de datos en el equipo de desarrollo, puede descargarla del sitio web de descargas de Microsoft. Para obtener instrucciones, consulte [descargar bases de datos de ejemplo](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md). Después de haber descargado la base de datos, copie el archivo northwnd.mdf en la carpeta c:\linqtest3.  
   
--   Un archivo de código de [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] generado a partir de la base de datos Northwind.  
+-   Archivo de código de Visual Basic generado a partir de la base de datos Northwind.  
   
      Este tutorial se escribió utilizando la herramienta SqlMetal con la línea de comandos siguiente:  
   
@@ -58,7 +58,7 @@ Este tutorial proporciona un escenario completo básico de [!INCLUDE[vbtecdlinq]
 ## <a name="overview"></a>Información general  
  Este tutorial se compone de seis tareas principales:  
   
--   Configurar la solución de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] en [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)].  
+-   Configurar la [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] solución en Visual Studio.  
   
 -   Agregar el ensamblado System.Data.Linq al proyecto.  
   
@@ -71,11 +71,11 @@ Este tutorial proporciona un escenario completo básico de [!INCLUDE[vbtecdlinq]
 -   Ejecutar y probar la aplicación.  
   
 ## <a name="creating-a-linq-to-sql-solution"></a>Crear una solución LINQ to SQL  
- En esta primera tarea, va a crear una solución de [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] que contiene las referencias necesarias para compilar y ejecutar un proyecto de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
+ En esta primera tarea, se creará una solución de Visual Studio que contiene las referencias necesarias para compilar y ejecutar un [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] proyecto.  
   
 #### <a name="to-create-a-linq-to-sql-solution"></a>Para crear una solución LINQ to SQL  
   
-1.  En el [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] **archivo** menú, haga clic en **nuevo proyecto**.  
+1.  En el menú **Archivo** de Visual Studio, haga clic en **Nuevo proyecto**.  
   
 2.  En el panel **Tipos de proyecto** del cuadro de diálogo **Nuevo proyecto** , expanda **Visual Basic**y, a continuación, haga clic en **Windows**.  
   

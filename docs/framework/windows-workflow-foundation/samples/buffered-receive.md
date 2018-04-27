@@ -1,23 +1,24 @@
 ---
-title: "Recepción almacenada en búfer"
-ms.custom: 
+title: Recepción almacenada en búfer
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 9d46d9b9-96c9-4531-9695-ab526b4d704a
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a7a486d3fbfb520ffe3b32c392566e5147c5dfcc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9cd4dfcbfc9d417766615c624905f8bce2c10e54
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="buffered-receive"></a>Recepción almacenada en búfer
 En este ejemplo se muestra cómo preparar y configurar la característica de recepción almacenada en búfer en [!INCLUDE[wf](../../../../includes/wf-md.md)]. La recepción almacenada en búfer permite al autor del flujo de trabajo crear un flujo de trabajo sin tener que preocuparse por el orden en el que se reciben los mensajes. Este tipo de recepción almacena en búfer los mensajes localmente y los entrega cuando el flujo de trabajo está listo para recibirlos.  
@@ -47,7 +48,7 @@ En este ejemplo se muestra cómo preparar y configurar la característica de rec
   
  El servicio también expone metadatos para el servicio utilizando <xref:System.ServiceModel.Description.ServiceMetadataBehavior>.  
   
- De igual forma, el extremo del cliente se configura utilizando <xref:System.ServiceModel.NetMsmqBinding>. El código de cliente y la configuración se genera mediante el **Agregar referencia de servicio** característica de [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)]. El siguiente ejemplo muestra el extremo de cliente generado en el archivo App.config.  
+ De igual forma, el extremo del cliente se configura utilizando <xref:System.ServiceModel.NetMsmqBinding>. El código de cliente y la configuración se genera mediante el **Agregar referencia de servicio** característica de Visual Studio. El siguiente ejemplo muestra el extremo de cliente generado en el archivo App.config.  
   
 ```xml  
 <endpoint address="net.msmq://localhost/private/LoanService/Service1.xamlx"  

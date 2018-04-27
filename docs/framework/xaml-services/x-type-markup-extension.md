@@ -1,12 +1,13 @@
 ---
-title: "x:Type (Extensión de marcado)"
-ms.custom: 
+title: x:Type (Extensión de marcado)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - x:TypeExtension
@@ -21,16 +22,17 @@ helpviewer_keywords:
 - TargetType attribute [XAML Services]
 - Type markup extension in XAML [XAML Services]
 ms.assetid: e0e0ce6f-e873-49c7-8ad7-8b840eb353ec
-caps.latest.revision: "27"
+caps.latest.revision: 27
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a4d645d5c953c0ff33435a5648024ace099455e2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: db56c2bcdca14b87de320dfe19a6c364c76ecef7
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="xtype-markup-extension"></a>x:Type (Extensión de marcado)
 Proporciona el CLR <xref:System.Type> objeto que es el tipo subyacente para un tipo XAML especificado.  
@@ -55,7 +57,7 @@ Proporciona el CLR <xref:System.Type> objeto que es el tipo subyacente para un t
 |`typeNameValue`|Requerido. Un nombre de tipo que se puede resolver en nombres XAML predeterminado actual; o especificado asigna prefijo si `prefix` se proporciona.|  
   
 ## <a name="remarks"></a>Comentarios  
- El `x:Type` extensión de marcado tiene una función similar a la `typeof()` operador en [!INCLUDE[TLA#tla_cshrp](../../../includes/tlasharptla-cshrp-md.md)] o `GetType` operador en [!INCLUDE[TLA#tla_visualb](../../../includes/tlasharptla-visualb-md.md)].  
+ El `x:Type` extensión de marcado tiene una función similar a la `typeof()` operador de C# o `GetType` (operador) en Microsoft Visual Basic.  
   
  El `x:Type` extensión de marcado proporciona un comportamiento de conversión de cadena para las propiedades que tenga el tipo <xref:System.Type>. La entrada es un tipo XAML. La relación entre el tipo de entrada XAML y la salida CLR <xref:System.Type> que es el resultado <xref:System.Type> es el <xref:System.Xaml.XamlType.UnderlyingType%2A> de la entrada <xref:System.Xaml.XamlType>, después de buscar el necesario <xref:System.Xaml.XamlType> basándose en el contexto de esquema XAML y el <xref:System.Windows.Markup.IXamlTypeResolver>proporciona el contexto de servicio.  
   
@@ -67,7 +69,7 @@ Proporciona el CLR <xref:System.Type> objeto que es el tipo subyacente para un t
   
  El `x:Type` en la sintaxis de elemento de objeto, se puede utilizar la extensión de marcado. En este caso, especificando el valor de la <xref:System.Windows.Markup.TypeExtension.TypeName%2A> propiedad es necesaria para inicializar correctamente la extensión.  
   
- El `x:Type` extensión de marcado también puede usarse como un atributo detallado; sin embargo este uso no es común: `<``object``property``="{x:Type TypeName=``typeNameValue``}" .../>`  
+ El `x:Type` extensión de marcado también puede usarse como un atributo detallado; sin embargo este uso no es habitual: `<``object` `property``="{x:Type TypeName=``typeNameValue``}" .../>`  
   
 ## <a name="wpf-usage-notes"></a>Notas de uso WPF  
   
@@ -82,7 +84,7 @@ Proporciona el CLR <xref:System.Type> objeto que es el tipo subyacente para un t
 ## <a name="xaml-2009"></a>XAML 2009  
  XAML 2009 proporciona compatibilidad adicional para tipos de genéricos y modifica el comportamiento de la característica de `x:TypeArguments` y `x:Type` para proporcionar esta compatibilidad.  
   
--   `x:TypeArguments`y el elemento de objeto asociado para la creación de instancias de un objeto genérico puede estar en elementos distintos de la raíz. Para obtener más información, vea la sección "XAML 2009" de [x: TypeArguments (directiva)](../../../docs/framework/xaml-services/x-typearguments-directive.md).  
+-   `x:TypeArguments` y el elemento de objeto asociado para la creación de instancias de un objeto genérico puede estar en elementos distintos de la raíz. Para obtener más información, vea la sección "XAML 2009" de [x: TypeArguments (directiva)](../../../docs/framework/xaml-services/x-typearguments-directive.md).  
   
 -   XAML 2009 admite una sintaxis para especificar la restricción de un tipo genérico en el marcado. Esto se puede utilizar por `x:TypeArguments`, `x:Type`, o las dos características en combinación.  
   

@@ -1,30 +1,31 @@
 ---
-title: "Cómo: analizar una cadena (Visual Basic)"
-ms.custom: 
+title: 'Cómo: analizar una cadena (Visual Basic)'
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 896e1b4b-f9bd-4975-8bc1-55b6badce1ac
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 10b80c72cae70437ff812c4b67b2532d708f1e69
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: d0fd7c7adcfbd7e2136d1a652017d470634016b9
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-parse-a-string-visual-basic"></a>Cómo: analizar una cadena (Visual Basic)
 Este tema muestra cómo crear un árbol XML en C#.  
   
 ## <a name="example"></a>Ejemplo  
- Puede analizar una cadena en [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] utilizando el `XElement.Parse` método. Sin embargo, resulta más eficaz usar literales XML, tal como se muestra en el código siguiente, ya que dichos literales no sufren las mismas pérdidas de rendimiento que se producen al analizar XML de una cadena.  
+ Puede analizar una cadena en Visual Basic usando el `XElement.Parse` método. Sin embargo, resulta más eficaz usar literales XML, tal como se muestra en el código siguiente, ya que dichos literales no sufren las mismas pérdidas de rendimiento que se producen al analizar XML de una cadena.  
   
- Mediante los literales XML, puede copiar y pegar XML en el programa de [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+ Mediante el uso de literales XML, solo puede copiar y pegar el código XML en el programa de Visual Basic.  
   
 > [!NOTE]
 >  Analizar texto o cargar un documento XML de un archivo de texto es menos eficaz que la construcción funcional. Si inicializa un árbol XML a partir de código, el uso de la construcción funcional consume menos tiempo de procesador que el análisis de texto.  

@@ -1,11 +1,12 @@
 ---
-title: "Cómo: Calcular valores numéricos (Visual Basic)"
-ms.custom: 
+title: 'Cómo: Calcular valores numéricos (Visual Basic)'
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - operator precedence
@@ -17,14 +18,14 @@ helpviewer_keywords:
 - Visual Basic code, expressions
 - numeric expressions
 ms.assetid: ba6bf43d-bd96-49b8-b1de-4a7797551372
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 65cd446b99018d029e8a18d69ed33d8b8ac28f8c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 322e2c9fe7f668e08a42cd707c5d81090aca627c
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-calculate-numeric-values-visual-basic"></a>Cómo: Calcular valores numéricos (Visual Basic)
 Puede calcular valores numéricos mediante el uso de expresiones numéricas. A *expresión numérica* es una expresión que contiene literales, constantes y variables que representan valores numéricos y operadores que actúan sobre esos valores.  
@@ -45,7 +46,7 @@ Puede calcular valores numéricos mediante el uso de expresiones numéricas. A *
   
      Las tres primeras líneas muestran un literal, una constante y una variable. Cada uno forma una expresión numérica válida por sí mismo. La línea final muestra una combinación de una variable con dos literales.  
   
-     Tenga en cuenta que una expresión numérica no forma una completa [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] instrucción por sí mismo. Debe usar la expresión como parte de una instrucción completa.  
+     Tenga en cuenta que una expresión numérica no forma una instrucción de Visual Basic completa por sí misma. Debe usar la expresión como parte de una instrucción completa.  
   
 #### <a name="to-store-a-numeric-value"></a>Para almacenar un valor numérico  
   

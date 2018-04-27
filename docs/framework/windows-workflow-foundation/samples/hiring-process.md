@@ -1,23 +1,24 @@
 ---
-title: "Proceso de contratación"
-ms.custom: 
+title: Proceso de contratación
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: d5fcacbb-c884-4b37-a5d6-02b1b8eec7b4
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 30cad662a9cca679f7e8ce720cfde3d369b9ba60
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 8cfa23ab5f36b3a40de107a546dd4700a4523595
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="hiring-process"></a>Proceso de contratación
 Este ejemplo muestra cómo implementar un proceso de negocio mediante actividades de mensajería y dos flujos de trabajo hospedados como servicios de flujo de trabajo. Estos flujos de trabajo son parte de la infraestructura de TI de una compañía ficticia denominada Contoso, Inc.  
@@ -129,7 +130,7 @@ Este ejemplo muestra cómo implementar un proceso de negocio mediante actividade
 |Seguimiento personalizado|En el ejemplo se incluye un participante de seguimiento personalizado que guarda el historial de `HiringRequestProcess` (registra qué acción se ha realizado, quién la ha realizado y cuándo se ha realizado). El código fuente está en la carpeta Tracking de HiringRequestService.|HiringRequestService|  
 |Seguimiento ETW|El seguimiento de ETW proporcionado por el sistema se configura en el archivo App.config en el servicio HiringRequestService.|HiringRequestService|  
 |Composición de actividades|La definición del proceso utiliza la composición libre de <xref:System.Activities.Activity>. El Diagrama de flujo contiene varias actividades Sequence y Parallel que al mismo tiempo contienen otras actividades (y así sucesivamente).|HiringRequestService|  
-|Actividades paralelas|-   <xref:System.Activities.Statements.ParallelForEach%601>se usa para registrar en la Bandeja de entrada del CEO y los responsables de recursos humanos en paralelo (espera de paso de aprobación de los administradores de recursos humanos dos).<br />-   <xref:System.Activities.Statements.Parallel>se utiliza para realizar algunas tareas de limpieza en los pasos Completed y Rejected.|HiringRequestService|  
+|Actividades paralelas|-   <xref:System.Activities.Statements.ParallelForEach%601> se usa para registrar en la Bandeja de entrada del CEO y los responsables de recursos humanos en paralelo (espera de paso de aprobación de los administradores de recursos humanos dos).<br />-   <xref:System.Activities.Statements.Parallel> se utiliza para realizar algunas tareas de limpieza en los pasos Completed y Rejected.|HiringRequestService|  
 |Cancelación de modelo|El Diagrama de flujo utiliza <xref:System.Activities.Statements.CancellationScope> para crear el comportamiento de cancelación (en este caso, se lleva a cabo alguna limpieza).|HiringRequestService|  
 |Participante de persistencia del cliente|`HiringRequestPersistenceParticipant` guarda los datos de una variable de flujo de trabajo en una tabla almacenada en la base de datos de Recursos Humanos de Contoso.|HiringRequestService|  
 |Servicios de flujo de trabajo|`ResumeRequestService` se implementa utilizando los servicios de flujo de trabajo. La definición del Flujo de trabajo y la información del servicio se encuentran en ResumeRequestService.xamlx. El servicio se configura para utilizar la persistencia y el seguimiento.|ResumeRequestService|  
@@ -141,13 +142,13 @@ Este ejemplo muestra cómo implementar un proceso de negocio mediante actividade
 ## <a name="data-storage"></a>Almacenamiento de datos  
  Los datos están almacenados en una base de datos de SQL Server llamada `ContosoHR` (el script para crear esta base de datos se encuentra en la carpeta `DbSetup` ). Las instancias del flujo de trabajo se almacenan en una base de datos de SQL Server llamada `InstanceStore` (los scripts para crear el almacén de instancias forman parte de la distribución de [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)]).  
   
- Ambas bases de datos se crean ejecutando el script Setup.cmd desde un símbolo del sistema de [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)].  
+ Ambas bases de datos se crean ejecutando el script Setup.cmd desde un símbolo del sistema de Visual Studio.  
   
 ## <a name="running-the-sample"></a>Ejecutar el ejemplo  
   
 #### <a name="to-create-the-databases"></a>Para crear las bases de datos  
   
-1.  Abra un símbolo del sistema de [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)].  
+1.  Abra un símbolo del sistema de Visual Studio 2010.  
   
 2.  Navegue hasta la carpeta del ejemplo.  
   
@@ -157,7 +158,7 @@ Este ejemplo muestra cómo implementar un proceso de negocio mediante actividade
   
 #### <a name="to-set-up-the-solution-for-execution"></a>Para configurar la solución para su ejecución  
   
-1.  Ejecute [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] como administrador. Abra HiringRequest.sln.  
+1.  Ejecute Visual Studio como administrador. Abra HiringRequest.sln.  
   
 2.  Haga clic en la solución en **el Explorador de soluciones** y seleccione **propiedades**.  
   
@@ -221,7 +222,7 @@ Este ejemplo muestra cómo implementar un proceso de negocio mediante actividade
   
 ## <a name="troubleshooting"></a>Solución de problemas  
   
-1.  Asegúrese de que está ejecutando [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] con privilegios de administrador.  
+1.  Asegúrese de que está ejecutando Visual Studio con privilegios de administrador.  
   
 2.  Si la solución no se compila, compruebe lo siguiente:  
   
@@ -237,7 +238,7 @@ Este ejemplo muestra cómo implementar un proceso de negocio mediante actividade
   
         2.  Haga clic en **Contoso** y seleccione **actualizar referencias Web/servicio**.  
   
-        3.  Recompile la solución presionando CTRL+MAYÚS+B en [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)].  
+        3.  Vuelva a generar la solución presionando CTRL + MAYÚS + B en Visual Studio.  
   
 ## <a name="uninstalling"></a>Desinstalación  
   

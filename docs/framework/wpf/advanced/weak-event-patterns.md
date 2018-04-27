@@ -1,34 +1,36 @@
 ---
-title: "Modelos de evento débil"
-ms.custom: 
+title: Modelos de evento débil
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - weak event pattern implementation [WPF]
 - event handlers [WPF], weak event pattern
 - IWeakEventListener interface [WPF]
 ms.assetid: e7c62920-4812-4811-94d8-050a65c856f6
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 21a36797f945f37a641e7002bbb9937a664650fd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: f96327f8eaad36f3faebf48db083125816589821
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="weak-event-patterns"></a>Modelos de evento débil
-En las aplicaciones, es posible que los controladores que están conectados a los orígenes de eventos no se destruirán en coordinación con el objeto de agente de escucha que se adjunta el controlador para el origen. Esta situación puede provocar pérdidas de memoria. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]Introduce un modelo de diseño que puede utilizarse para solucionar este problema, debe proporcionar una clase de administrador dedicada para eventos concretos e implementando una interfaz en los agentes de escucha para ese evento. Este patrón de diseño se conoce como el *modelo de evento débil*.  
+En las aplicaciones, es posible que los controladores que están conectados a los orígenes de eventos no se destruirán en coordinación con el objeto de agente de escucha que se adjunta el controlador para el origen. Esta situación puede provocar pérdidas de memoria. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Introduce un modelo de diseño que puede utilizarse para solucionar este problema, debe proporcionar una clase de administrador dedicada para eventos concretos e implementando una interfaz en los agentes de escucha para ese evento. Este patrón de diseño se conoce como el *modelo de evento débil*.  
   
 ## <a name="why-implement-the-weak-event-pattern"></a>¿Por qué implementar el modelo de evento débil?  
- Realizar escuchas de eventos pueden provocar pérdidas de memoria. La técnica típica para realizar escuchas de eventos es utilizar la sintaxis específica del lenguaje que asocia un controlador a un evento en un origen. Por ejemplo, en [!INCLUDE[TLA#tla_cshrp](../../../../includes/tlasharptla-cshrp-md.md)], que la sintaxis es: `source.SomeEvent += new SomeEventHandler(MyEventHandler)`.  
+ Realizar escuchas de eventos pueden provocar pérdidas de memoria. La técnica típica para realizar escuchas de eventos es utilizar la sintaxis específica del lenguaje que asocia un controlador a un evento en un origen. Por ejemplo, en C#, que la sintaxis es: `source.SomeEvent += new SomeEventHandler(MyEventHandler)`.  
   
  Esta técnica crea una referencia segura desde el origen de eventos para el agente de escucha de eventos. Por lo general, asociar un controlador de eventos para un agente de escucha hace que el agente de escucha tienen una duración de los objetos que se ven afectada por la duración del objeto de origen (a menos que explícitamente se quita el controlador de eventos). Sin embargo, en ciertas circunstancias, podrían desear la duración de los objetos del agente de escucha esté controlada por otros factores, como si actualmente pertenece al árbol visual de la aplicación y no por la duración del origen. Cada vez que la duración del objeto de origen se extiende más allá de la duración de los objetos del agente de escucha, el patrón de eventos normales conduce a una pérdida de memoria: el agente de escucha se mantiene activo más tiempo del previsto.  
   

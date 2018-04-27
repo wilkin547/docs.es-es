@@ -2,8 +2,8 @@
 title: 'Error al guardar el archivo temporal de recursos de Win32 &#39; &lt;filename&gt;&#39;: &lt;mensaje de error&gt;'
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - devlang-visual-basic
 ms.topic: article
@@ -13,17 +13,17 @@ f1_keywords:
 helpviewer_keywords:
 - BC30137
 ms.assetid: 61c23f48-0e06-42fc-be00-5598053c86dd
-caps.latest.revision: 
+caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: ef9d98e7a0b2698ea2bea46734389db015e04b6a
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: e2e4bbc095e419ae0af6eecf9ae4863d3cbd4bce
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="error-saving-temporary-win32-resource-file-39ltfilenamegt39-lterror-messagegt"></a>Error al guardar el archivo temporal de recursos de Win32 &#39; &lt;filename&gt;&#39;: &lt;mensaje de error&gt;
-El compilador de [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] llama a Assembly Linker (Al.exe, también denominado Alink) para generar un ensamblado con un manifiesto. El vinculador ha informado de un error al obtener un nombre de archivo para usarlo para escribir en un recurso en memoria.  
+El compilador de Visual Basic llama a la herramienta Assembly Linker (Al.exe, también denominado Alink) para generar un ensamblado con un manifiesto. El vinculador ha informado de un error al obtener un nombre de archivo para usarlo para escribir en un recurso en memoria.  
   
  **Id. de error:** BC30137  
   

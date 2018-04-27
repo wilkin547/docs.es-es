@@ -1,12 +1,13 @@
 ---
-title: "Cómo: Insertar comillas en una cadena (formularios Windows Forms)"
-ms.custom: 
+title: 'Cómo: Insertar comillas en una cadena (formularios Windows Forms)'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -17,16 +18,17 @@ helpviewer_keywords:
 - TextBox control [Windows Forms], displaying quotation marks
 - quotation marks [Windows Forms], adding to strings in text boxes
 ms.assetid: 68bdc3f3-4177-4eab-99cd-cac17a82b515
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 267a69b9470040dfc60f3c0b280b71e3f52dbc88
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: dd7c6a460f24b1406ad914e20b9113920814737c
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-put-quotation-marks-in-a-string-windows-forms"></a>Cómo: Insertar comillas en una cadena (formularios Windows Forms)
 A veces querrá poner comillas ("") en una cadena de texto. Por ejemplo:  
@@ -37,7 +39,7 @@ A veces querrá poner comillas ("") en una cadena de texto. Por ejemplo:
   
 ### <a name="to-place-quotation-marks-in-a-string-in-your-code"></a>Para colocar comillas en una cadena en el código  
   
-1.  En [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)], inserte dos comillas en una fila como una comilla incrustada. En [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] y [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)], inserte la secuencia de escape \\"como una comilla incrustada. Por ejemplo, para crear la cadena anterior, utilice el código siguiente.  
+1.  En Visual Basic, inserte dos comillas seguidas en una fila como una comilla incrustada. En Visual C# y [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)], inserte la secuencia de escape \\"como una comilla incrustada. Por ejemplo, para crear la cadena anterior, utilice el código siguiente.  
   
     ```vb  
     Private Sub InsertQuote()  
@@ -59,9 +61,9 @@ A veces querrá poner comillas ("") en una cadena de texto. Por ejemplo:
        }  
     ```  
   
-     O bien  
+     -o bien-  
   
-2.  Inserte el carácter ASCII o Unicode de una comilla. En [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)], use el carácter ASCII (34). En [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)], use el carácter Unicode ( \u0022).  
+2.  Inserte el carácter ASCII o Unicode de una comilla. En Visual Basic, utilice el carácter ASCII (34). En Visual C#, utilice el carácter Unicode (\u0022).  
   
     ```vb  
     Private Sub InsertAscii()  
@@ -78,7 +80,7 @@ A veces querrá poner comillas ("") en una cadena de texto. Por ejemplo:
     > [!NOTE]
     >  En este ejemplo, no puede utilizar \u0022 porque no puede utilizar un nombre de carácter universal que designe un carácter en el juego de caracteres básico. De lo contrario, se produce el error C3851. Para más información, consulte [Error del compilador C3851](/cpp/error-messages/compiler-errors-2/compiler-error-c3851).  
   
-     O bien  
+     -o bien-  
   
 3.  También puede definir una constante para el carácter y utilizarla donde sea necesario.  
   

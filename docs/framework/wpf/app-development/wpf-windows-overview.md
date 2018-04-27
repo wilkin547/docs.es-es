@@ -1,13 +1,13 @@
 ---
-title: "Información general sobre ventanas de WPF"
-ms.custom: 
+title: Información general sobre ventanas de WPF
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-wpf
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -36,17 +36,17 @@ helpviewer_keywords:
 - modal dialog boxes [WPF]
 - displaying XAML pages [WPF]
 ms.assetid: 737d04ec-8861-46c3-8d44-fa11d3528d23
-caps.latest.revision: 
+caps.latest.revision: 65
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: c176f08904bac8e9c3877977c1e52afb57d5daca
-ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
+ms.openlocfilehash: ae454e54abc2c8200f33bdb0bc5537806c824074
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="wpf-windows-overview"></a>Información general sobre ventanas de WPF
 Los usuarios interactúan con las aplicaciones independientes de [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] por medio de ventanas. El propósito principal de una ventana es hospedar contenido que permita visualizar datos y que permita a los usuarios interactuar con estos. Independiente [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplicaciones proporcionan sus propias ventanas mediante la <xref:System.Windows.Window> clase. Este tema se presentan <xref:System.Windows.Window> antes de tratar los conceptos básicos de creación y administración de windows en las aplicaciones independientes.  
@@ -282,7 +282,7 @@ Los usuarios interactúan con las aplicaciones independientes de [!INCLUDE[TLA#t
   
  Mientras que una ventana se puede cerrar explícitamente a través de los mecanismos proporcionados en las áreas de cliente y no cliente, una ventana también se puede cerrar implícitamente como resultado un comportamiento en otras partes de la aplicación o [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)], incluidos los siguientes:  
   
--   Un usuario cierra la sesión o se apaga [!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)].  
+-   Un usuario cierra la sesión o se cierra Windows.  
   
 -   Propietario de la ventana se cierra (consulte <xref:System.Windows.Window.Owner%2A>).  
   
@@ -315,7 +315,7 @@ Los usuarios interactúan con las aplicaciones independientes de [!INCLUDE[TLA#t
   
 -   <xref:System.Windows.WindowStartupLocation.Manual>  
   
- Si se especifica la ubicación de inicio como <xref:System.Windows.WindowStartupLocation.Manual>y el <xref:System.Windows.Window.Left%2A> y <xref:System.Windows.Window.Top%2A> no se han establecido propiedades, <xref:System.Windows.Window> le preguntará [!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)] aparecen en una ubicación.  
+ Si se especifica la ubicación de inicio como <xref:System.Windows.WindowStartupLocation.Manual>y el <xref:System.Windows.Window.Left%2A> y <xref:System.Windows.Window.Top%2A> no se han establecido propiedades, <xref:System.Windows.Window> le preguntará Windows para una ubicación que aparezcan en.  
   
 <a name="Topmost_Windows_and_Z_Order"></a>   
 ### <a name="topmost-windows-and-z-order"></a>Ventanas de nivel superior y orden Z  

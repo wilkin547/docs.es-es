@@ -1,12 +1,13 @@
 ---
 title: Relaciones entre tipos en operaciones de consulta (Visual Basic)
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - variable relationships [LINQ in Visual Basic]
@@ -18,14 +19,14 @@ helpviewer_keywords:
 - inferring type information [LINQ in Visual Basic]
 - relationships [LINQ in Visual Basic]
 ms.assetid: b5ff4da5-f3fd-4a8e-aaac-1cbf52fa16f6
-caps.latest.revision: "34"
+caps.latest.revision: 34
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 1b93188475dd2bb00aea044ff178028eb87e00d4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e38f51d77869dcca8a81fdcbc70aed32c4146935
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="type-relationships-in-query-operations-visual-basic"></a>Relaciones entre tipos en operaciones de consulta (Visual Basic)
 Las variables utilizadas en [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] consulta operaciones están fuertemente tipadas y deben ser compatibles entre sí. Establecimiento inflexible de tipos se usa en el origen de datos, en la propia consulta y en la ejecución de la consulta. La ilustración siguiente identifica los términos que se usan para describir un [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] consulta. Para obtener más información acerca de las partes de una consulta, vea [operaciones básicas de consulta (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md).  
@@ -35,7 +36,7 @@ Partes de una consulta LINQ
   
  El tipo de la variable de rango en la consulta debe ser compatible con el tipo de los elementos del origen de datos. El tipo de la variable de consulta debe ser compatible con el elemento de secuencia definido en el `Select` cláusula. Por último, el tipo de los elementos de secuencia también debe ser compatible con el tipo de la variable de control de bucle que se utiliza en el `For Each` instrucción que ejecuta la consulta. Este establecimiento inflexible de tipos facilita la identificación de los errores de tipo en tiempo de compilación.  
   
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]facilitar la establecimiento inflexible de tipos al implementar la inferencia de tipo local, también conocido como *tipos implícitos*. Que se usa la característica en el ejemplo anterior y verá que se utilizan a lo largo del [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] documentación y ejemplos. En Visual Basic, la inferencia de tipo local se logra simplemente mediante un `Dim` instrucción sin un `As` cláusula. En el ejemplo siguiente, `city` está fuertemente tipado como una cadena.  
+ Visual Basic, establecimiento inflexible de tipos fácil implementando la inferencia de tipo local, también conocido como *tipos implícitos*. Que se usa la característica en el ejemplo anterior y verá que se utilizan a lo largo del [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] documentación y ejemplos. En Visual Basic, la inferencia de tipo local se logra simplemente mediante un `Dim` instrucción sin un `As` cláusula. En el ejemplo siguiente, `city` está fuertemente tipado como una cadena.  
   
  [!code-vb[VbLINQTypeRels#1](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/type-relationships-in-query-operations_1.vb)]  
   

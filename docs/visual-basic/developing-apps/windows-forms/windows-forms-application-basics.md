@@ -1,25 +1,26 @@
 ---
-title: "Conceptos básicos de las aplicaciones de Windows Forms (Visual Basic)"
+title: Conceptos básicos de las aplicaciones de Windows Forms (Visual Basic)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - Windows applications
 - Windows Forms, Visual Basic
 ms.assetid: 0b919d30-7fd6-42db-85c8-543d15312441
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 7872d3c7b19ec9cd7059cccf41e5fab50d85123b
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: aaa7fbd679eceea53a673646173dc14dc4f209bc
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="windows-forms-application-basics-visual-basic"></a>Conceptos básicos de las aplicaciones de Windows Forms (Visual Basic)
-Una parte importante de [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] es la capacidad para crear aplicaciones de Windows Forms que se ejecutan localmente en equipos de los usuarios. Puede usar Visual Studio para crear la interfaz de usuario y la aplicación con formularios Windows Forms. Una aplicación de formularios Windows Forms se basa en las clases de la <xref:System.Windows.Forms> espacio de nombres.  
+Una parte importante de Visual Basic es la capacidad para crear aplicaciones de Windows Forms que se ejecutan localmente en equipos de los usuarios. Puede usar Visual Studio para crear la interfaz de usuario y la aplicación con formularios Windows Forms. Una aplicación de formularios Windows Forms se basa en las clases de la <xref:System.Windows.Forms> espacio de nombres.  
   
 ## <a name="designing-windows-forms-applications"></a>Las aplicaciones de diseño de Windows Forms  
  Puede crear formularios Windows Forms y aplicaciones de servicio de Windows con [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]. Para obtener más información, vea los temas siguientes:  
@@ -52,9 +53,9 @@ Una parte importante de [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] es la capaci
   
 |En|Vea|  
 |--------|---------|  
-|Cree una nueva aplicación de Windows Forms con[!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]|[Tutorial: Crear un formulario Windows Forms sencillo](http://msdn.microsoft.com/library/2d9daec0-0543-41d0-acb1-964f685bddbb)|  
+|Cree una nueva aplicación de Windows Forms con [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]|[Tutorial: Crear un formulario Windows Forms sencillo](http://msdn.microsoft.com/library/2d9daec0-0543-41d0-acb1-964f685bddbb)|  
 |Usar controles en formularios|[Cómo: Agregar controles a Windows Forms](../../../framework/winforms/controls/how-to-add-controls-to-windows-forms.md)|   
-|Crear gráficos con<xref:System.Drawing>|[Introducción a la programación de gráficos](../../../framework/winforms/advanced/getting-started-with-graphics-programming.md)|  
+|Crear gráficos con <xref:System.Drawing>|[Introducción a la programación de gráficos](../../../framework/winforms/advanced/getting-started-with-graphics-programming.md)|  
 |Crear controles personalizados|[cómo: Heredar de la clase UserControl](../../../framework/winforms/controls/how-to-inherit-from-the-usercontrol-class.md)|  
   
 ## <a name="displaying-and-manipulating-data"></a>Mostrar y manipular datos  
@@ -77,19 +78,19 @@ Una parte importante de [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] es la capaci
 |Utilice la ventana de orígenes de datos|[Tutorial: Mostrar datos en Windows Forms](/visualstudio/data-tools/accessing-data-in-visual-studio)|  
   
 ## <a name="deploying-applications-to-client-computers"></a>Implementar aplicaciones en equipos cliente  
- Una vez escrita la aplicación, debe enviar a los usuarios para que puedan instalar y ejecutar en sus equipos cliente. Mediante el [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] tecnología, puede implementar aplicaciones desde [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] mediante unos pocos clics y proporcionar a los usuarios con una dirección URL que apunte a la aplicación en la Web. [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]administra todos los elementos y dependencias de la aplicación y se asegura de que la aplicación está instalada correctamente en el equipo cliente.  
+ Una vez escrita la aplicación, debe enviar a los usuarios para que puedan instalar y ejecutar en sus equipos cliente. Mediante el [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] tecnología, puede implementar aplicaciones desde [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] mediante unos pocos clics y proporcionar a los usuarios con una dirección URL que apunte a la aplicación en la Web. [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] administra todos los elementos y dependencias de la aplicación y se asegura de que la aplicación está instalada correctamente en el equipo cliente.  
   
  Las aplicaciones [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] se pueden configurar para ejecutarse únicamente cuando el usuario está conectado a la red, o para ejecutarse tanto en línea como sin conexión. Cuando se especifica que una aplicación debe admitir el funcionamiento sin conexión, [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] agrega un vínculo a la aplicación en el usuario **iniciar** menú, por lo que el usuario pueda abrirla sin utilizar la dirección URL.  
   
- Cuando se actualiza la aplicación, se publica un nuevo manifiesto de implementación y una nueva copia de la aplicación en el servidor web. [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]detecta que hay una actualización disponible y actualiza la instalación del usuario; no se requiere ninguna programación personalizada para actualizar los ensamblados antiguos.  
+ Cuando se actualiza la aplicación, se publica un nuevo manifiesto de implementación y una nueva copia de la aplicación en el servidor web. [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] detecta que hay una actualización disponible y actualiza la instalación del usuario; no se requiere ninguna programación personalizada para actualizar los ensamblados antiguos.  
   
  Para obtener una introducción completa a [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)], consulte [Seguridad e implementación ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment). Para obtener información detallada sobre el uso de estas características, vea los temas de ayuda siguientes:  
   
 |En|Vea|  
 |--------|---------|  
-|Implementar una aplicación con[!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]|[Cómo: Publicar una aplicación ClickOnce mediante el Asistente para publicación](/visualstudio/deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard)<br /><br /> [Tutorial: Implementar manualmente una aplicación ClickOnce](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)|  
+|Implementar una aplicación con [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]|[Cómo: Publicar una aplicación ClickOnce mediante el Asistente para publicación](/visualstudio/deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard)<br /><br /> [Tutorial: Implementar manualmente una aplicación ClickOnce](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)|  
 |Actualización de un [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] implementación|[Cómo: Administrar actualizaciones de aplicaciones ClickOnce](/visualstudio/deployment/how-to-manage-updates-for-a-clickonce-application)|  
-|Administrar la seguridad con[!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]|[Cómo: Habilitar la configuración de seguridad de ClickOnce](/visualstudio/deployment/how-to-enable-clickonce-security-settings)|  
+|Administrar la seguridad con [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]|[Cómo: Habilitar la configuración de seguridad de ClickOnce](/visualstudio/deployment/how-to-enable-clickonce-security-settings)|  
   
 ## <a name="other-controls-and-features"></a>Otros controles y características  
  Hay muchas otras características en Windows Forms que simplifican y agilizan las tareas comunes de implementación, como la posibilidad de crear cuadros de diálogo, imprimir, agregar ayuda y documentación, y localizar la aplicación a varios idiomas. Además, Windows Forms se basa en el sólido sistema de seguridad de la [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], lo que le permite publicar aplicaciones más seguras para sus clientes.  

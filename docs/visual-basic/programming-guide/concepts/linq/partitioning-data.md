@@ -1,22 +1,23 @@
 ---
-title: "Creación de particiones de datos (Visual Basic)"
-ms.custom: 
+title: Creación de particiones de datos (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 69c59379-b66e-422c-b324-5b5c07760ef7
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 0ea305a67765e1b11ceebbf65c48a685024a41f3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 01e4e6d6db07a520b97911de5388b8e42b7e1acc
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="partitioning-data-visual-basic"></a>Creación de particiones de datos (Visual Basic)
 Partición en LINQ es la operación de dividir una secuencia de entrada en dos secciones, sin reorganizar los elementos, y devolver después una de las secciones.  
@@ -39,22 +40,22 @@ Partición en LINQ es la operación de dividir una secuencia de entrada en dos s
 ## <a name="query-expression-syntax-examples"></a>Ejemplos de sintaxis de expresiones de consulta  
   
 ### <a name="skip"></a>Skip  
- El siguiente ejemplo de código utiliza el `Skip` cláusula en [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] que omita las primeras cuatro cadenas en una matriz de cadenas antes de devolver las cadenas restantes de la matriz.  
+ El siguiente ejemplo de código utiliza el `Skip` cadenas en Visual Basic que omita las primeras cuatro cadenas en una matriz de cadenas antes de devolver el resto de la matriz.  
   
  [!code-vb[CsLINQPartitioning#1](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/partitioning-data_1.vb)]  
   
 ### <a name="skipwhile"></a>SkipWhile  
- El siguiente ejemplo de código utiliza el `Skip While` cláusula en [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] que omita las cadenas en una matriz mientras la primera letra de la cadena es "a". Se devuelven las cadenas restantes de la matriz.  
+ El siguiente ejemplo de código utiliza el `Skip While` cláusula en Visual Basic que omita las cadenas en una matriz mientras la primera letra de la cadena es "a". Se devuelven las cadenas restantes de la matriz.  
   
  [!code-vb[CsLINQPartitioning#2](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/partitioning-data_2.vb)]  
   
 ### <a name="take"></a>Take  
- El siguiente ejemplo de código utiliza el `Take` cláusula en [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] para devolver el primero de dos cadenas en una matriz de cadenas.  
+ El siguiente ejemplo de código utiliza el `Take` cláusula en Visual Basic para devolver el primero de dos cadenas en una matriz de cadenas.  
   
  [!code-vb[CsLINQPartitioning#3](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/partitioning-data_3.vb)]  
   
 ### <a name="takewhile"></a>TakeWhile  
- El siguiente ejemplo de código utiliza el `Take While` cláusula en [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] para devolver las cadenas de una matriz mientras la longitud de la cadena es cinco o menos.  
+ El siguiente ejemplo de código utiliza el `Take While` cláusula en Visual Basic para devolver las cadenas de una matriz mientras la longitud de la cadena es cinco o menos.  
   
  [!code-vb[CsLINQPartitioning#4](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/partitioning-data_4.vb)]  
   

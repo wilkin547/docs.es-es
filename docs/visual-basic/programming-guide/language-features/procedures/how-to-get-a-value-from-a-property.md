@@ -1,11 +1,12 @@
 ---
-title: "Cómo: Obtener un valor de una propiedad (Visual Basic)"
-ms.custom: 
+title: 'Cómo: Obtener un valor de una propiedad (Visual Basic)'
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - property values [Visual Basic]
@@ -14,29 +15,29 @@ helpviewer_keywords:
 - Visual Basic code, properties
 - properties [Visual Basic], values
 ms.assetid: 3954423e-6ab7-4a4c-b55c-a8d27be47891
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 6cde5408ea09398a79a3da01ae9b2d0202c58eaf
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 7161052b9d9b388d8da8bd421c3b220f15037805
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-get-a-value-from-a-property-visual-basic"></a>Cómo: Obtener un valor de una propiedad (Visual Basic)
 Recupera el valor de una propiedad incluyendo el nombre de propiedad en una expresión.  
   
- La propiedad `Get` procedimiento recupera el valor, pero no llamar explícitamente a él por su nombre. Use la propiedad tal como utilizaría una variable. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]realiza las llamadas a procedimientos de la propiedad.  
+ La propiedad `Get` procedimiento recupera el valor, pero no llamar explícitamente a él por su nombre. Use la propiedad tal como utilizaría una variable. Visual Basic realiza las llamadas a procedimientos de la propiedad.  
   
 ### <a name="to-retrieve-a-value-from-a-property"></a>Para recuperar un valor de una propiedad  
   
 1.  Utilice el nombre de propiedad en una expresión de la misma manera que usaría un nombre de variable. Puede usar una propiedad en cualquier lugar puede usar una variable o una constante.  
   
-     O bien  
+     -o bien-  
   
      Utilice el nombre de la propiedad siguiendo la igual (`=`) iniciar sesión en una instrucción de asignación.  
   
-     En el ejemplo siguiente se lee el valor de la [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] `Now` propiedad, se llama implícitamente a su `Get` procedimiento.  
+     En el ejemplo siguiente se lee el valor de Visual Basic `Now` propiedad, se llama implícitamente a su `Get` procedimiento.  
   
      [!code-vb[VbVbalrDateProperties#4](./codesnippet/VisualBasic/how-to-get-a-value-from-a-property_1.vb)]  
   

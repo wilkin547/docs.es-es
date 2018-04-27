@@ -1,25 +1,26 @@
 ---
-title: "Cómo: Crear una nueva variable (Visual Basic)"
-ms.custom: 
+title: 'Cómo: Crear una nueva variable (Visual Basic)'
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Dim statement [Visual Basic]
 - variables [Visual Basic], creating
 ms.assetid: 35300be3-77b0-4bef-a156-034d3cdedde0
-caps.latest.revision: "29"
+caps.latest.revision: 29
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: a6806dcbe9e00cbae77181b79d74ddb9a1e1493f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: aff160584d3d1fe382020d5b8c25ac57dab66d92
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-create-a-new-variable-visual-basic"></a>Cómo: Crear una nueva variable (Visual Basic)
 Crear una variable con un [Dim (instrucción)](../../../../visual-basic/language-reference/statements/dim-statement.md).  
@@ -40,7 +41,7 @@ Crear una variable con un [Dim (instrucción)](../../../../visual-basic/language
   
      No es necesario el `Dim` palabra clave si utiliza otras palabras clave en la declaración.  
   
-3.  Siga las especificaciones con el nombre de la variable, que debe seguir [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] reglas y convenciones. Para obtener más información, consulte [nombres de elementos declarados](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).  
+3.  Siga las especificaciones con el nombre de la variable, que debe seguir las convenciones y reglas de Visual Basic. Para obtener más información, consulte [nombres de elementos declarados](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).  
   
     ```  
     Public Static newCustomer  
@@ -56,7 +57,7 @@ Crear una variable con un [Dim (instrucción)](../../../../visual-basic/language
   
 5.  Siga el `As` cláusula con un signo igual (`=`) y siga el signo igual con el valor inicial de la variable.  
   
-     [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]asigna el valor especificado a la variable cada vez que se ejecuta el `Dim` instrucción. Si no especifica un valor inicial, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] asigna el valor inicial predeterminado para el tipo de datos de la variable cuando entra por primera vez el código que contiene el `Dim` instrucción.  
+     Visual Basic asigna el valor especificado a la variable cada vez que se ejecuta el `Dim` instrucción. Si no especifica un valor inicial, Visual Basic asigna el valor inicial predeterminado para el tipo de datos de la variable cuando entra por primera vez el código que contiene el `Dim` instrucción.  
   
      Si la variable es un tipo de referencia, puede crear una instancia de su clase incluyendo la [New (operador)](../../../../visual-basic/language-reference/operators/new-operator.md) palabra clave en el `As` cláusula. Si no usa `New`, el valor inicial de la variable es [nada](../../../../visual-basic/language-reference/nothing.md).  
   

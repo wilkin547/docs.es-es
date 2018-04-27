@@ -1,11 +1,12 @@
 ---
 title: Estructuras y clases (Visual Basic)
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - classes [Visual Basic], vs. structures
@@ -15,17 +16,17 @@ helpviewer_keywords:
 - structures [Visual Basic], structure variables
 - structure variables [Visual Basic]
 ms.assetid: a221e74a-ffcf-4bdc-a0f6-a088a9bf26cc
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 08e31481feac7a6184c6b29269d193c749f440ff
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: cf72fb0a7a34d45774cb9a58c037ebcb1c05288f
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="structures-and-classes-visual-basic"></a>Estructuras y clases (Visual Basic)
-[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]unifica la sintaxis de estructuras y clases, con lo que ambas entidades admiten la mayoría de las mismas características. Sin embargo, también hay diferencias importantes entre las estructuras y clases.  
+Visual Basic unifica la sintaxis de estructuras y clases, con lo que ambas entidades admiten la mayoría de las mismas características. Sin embargo, también hay diferencias importantes entre las estructuras y clases.  
   
  Las clases tienen la ventaja de ser tipos de referencia: pasar una referencia es más eficaz que se pasa una variable de estructura con todos sus datos. Por otro lado, las estructuras no requieren la asignación de memoria en el montón global.  
   
@@ -80,7 +81,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="instances-and-variables"></a>Instancias y Variables  
  Dado que las estructuras son tipos de valor, cada variable de estructura permanentemente se enlaza a una instancia de estructura individual. Pero las clases son tipos de referencia y una variable de objeto puede hacer referencia a varias instancias de clase en momentos diferentes. Esta distinción afecta al uso de estructuras y clases de las maneras siguientes:  
   
--   **Inicialización.** Una variable de estructura incluye implícitamente una inicialización de los elementos mediante el constructor sin parámetros de la estructura. Por lo tanto, `Dim s As struct1` es equivalente a `Dim s As struct1 = New struct1()`.  
+-   **inicialización.** Una variable de estructura incluye implícitamente una inicialización de los elementos mediante el constructor sin parámetros de la estructura. Por lo tanto, `Dim s As struct1` es equivalente a `Dim s As struct1 = New struct1()`.  
   
 -   **Asignación de Variables.** Al asignar una variable de estructura a otra o pasar una instancia de estructura a un argumento de procedimiento, se copian los valores actuales de todos los elementos de la variable a la nueva estructura. Al asignar una variable de objeto a otro, o pasar una variable de objeto a un procedimiento, se copia el puntero de referencia.  
   
@@ -92,7 +93,7 @@ ms.lasthandoff: 11/21/2017
   
      Elementos de estructura, sin embargo, están aislados dentro de su propia instancia. Cambios en sus valores no se reflejan en ninguna otra variable de estructura, incluso en otras instancias de la misma `Structure` declaración.  
   
--   **Igualdad.** Comprobar la igualdad de dos estructuras debe realizarse con una prueba de elemento a elemento. Se pueden comparar dos variables de objeto mediante la <xref:System.Object.Equals%2A> método. <xref:System.Object.Equals%2A>indica si las dos variables apuntan a la misma instancia.  
+-   **Igualdad.** Comprobar la igualdad de dos estructuras debe realizarse con una prueba de elemento a elemento. Se pueden comparar dos variables de objeto mediante la <xref:System.Object.Equals%2A> método. <xref:System.Object.Equals%2A> indica si las dos variables apuntan a la misma instancia.  
   
 ## <a name="see-also"></a>Vea también  
  [Tipos de datos](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  

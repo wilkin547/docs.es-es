@@ -1,24 +1,26 @@
 ---
 title: Transacciones y simultaneidad
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f46570de-9e50-4fe6-8710-a8c31fa8569b
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 6e6dfa946313bb9d43077bad68b761e8f03c175c
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 80db92f94f8cb523c3b8f9d0d08bbcb6b33c2fbe
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="transactions-and-concurrency"></a>Transacciones y simultaneidad
 Una transacción consiste en un comando único o en un grupo de comandos que se ejecutan como un paquete. Las transacciones permiten combinar varias operaciones en una sola unidad de trabajo. Si en un punto de la transacción se produjera un error, todas las actualizaciones podrían revertirse y devolverse al estado que tenían antes de la transacción.  
@@ -30,7 +32,7 @@ Una transacción consiste en un comando único o en un grupo de comandos que se 
   
  Las transacciones explícitas en procedimientos almacenados suelen dar mejores resultados cuando una transacción implica el uso de varias tablas en la misma base de datos o servidor. Se pueden crear transacciones en procedimientos almacenados de SQL Server mediante las instrucciones `BEGIN TRANSACTION`, `COMMIT TRANSACTION` o `ROLLBACK TRANSACTION` de Transact-SQL. Para obtener más información, vea los Libros en pantalla de SQL Server.  
   
- Las transacciones que implican varios administradores de recursos, como un a transacción entre [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] y Oracle, requieren una transacción distribuida.  
+ Las transacciones que implican a varios administradores de recursos, como un a transacción entre SQL Server y Oracle, requieren una transacción distribuida.  
   
 ## <a name="in-this-section"></a>En esta sección  
  [Transacciones locales](../../../../docs/framework/data/adonet/local-transactions.md)  
@@ -40,7 +42,7 @@ Una transacción consiste en un comando único o en un grupo de comandos que se 
  Describe cómo realizar transacciones distribuidas en ADO.NET.  
   
  [Integración de System.Transactions con SQL Server](../../../../docs/framework/data/adonet/system-transactions-integration-with-sql-server.md)  
- Describe la integración de <xref:System.Transactions> con [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] para trabajar con transacciones distribuidas.  
+ Describe <xref:System.Transactions> integración con SQL Server para trabajar con transacciones distribuidas.  
   
  [Simultaneidad optimista](../../../../docs/framework/data/adonet/optimistic-concurrency.md)  
  Describe la simultaneidad optimista y pesimista, y cómo puede probar las infracciones de simultaneidad.  

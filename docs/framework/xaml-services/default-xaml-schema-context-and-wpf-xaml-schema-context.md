@@ -1,24 +1,26 @@
 ---
 title: Contexto de esquema XAML predeterminado y contexto de esquema XAML de WPF
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 04e06a15-09b3-4210-9bdf-9a64c2eccb83
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9ee7c83868934f1a524bb0068ea5e749e6cbfab4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: ec5e29ae9022470f8b583dc1b673a0b93040c862
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="default-xaml-schema-context-and-wpf-xaml-schema-context"></a>Contexto de esquema XAML predeterminado y contexto de esquema XAML de WPF
 Un contexto de esquema XAML es una entidad conceptual que califica cómo una producción de XAML que usa un vocabulario XAML determinado interactúa con el objeto de escritura de comportamiento, incluido cómo resuelve asignación de tipos, cómo se cargan los ensamblados, cómo ciertos lector y escritor se interpreta la configuración. En este tema se describe las características de los servicios XAML de .NET Framework y el contexto de esquema XAML predeterminado asociado, que se basa en el sistema de tipos CLR. Este tema también describe el contexto de esquema XAML que se usa para WPF.  
@@ -35,7 +37,7 @@ Un contexto de esquema XAML es una entidad conceptual que califica cómo una pro
 ## <a name="wpf-xaml-schema-context"></a>Contexto de esquema XAML de WPF  
  El contexto de esquema XAML de WPF se describe en este tema porque la implementación de WPF proporciona una ilustración interesante de los tipos de características que pueden producirse al implementar un contexto de esquema XAML no predeterminado. Además, el concepto de contexto de esquema XAML no se explica mucho en la documentación de WPF que dirige a XAML de WPF; el comportamiento que permite que el contexto de esquema XAML solo puede ser totalmente comprender si integrado con una explicación de cómo funciona el contexto de esquema XAML predeterminado. El contexto de esquema XAML de WPF implementa el comportamiento siguiente.  
   
- **Invalidaciones de búsqueda:** WPF tiene algunos modelos de contenido para XAML donde hay propiedades de contenido de XAML que funcionan sin necesidad de ser <xref:System.Windows.Markup.ContentPropertyAttribute> con atributos. <xref:System.Xaml.XamlType.LookupContentProperty%2A>invalidaciones de WPF implementan este comportamiento.  
+ **Invalidaciones de búsqueda:** WPF tiene algunos modelos de contenido para XAML donde hay propiedades de contenido de XAML que funcionan sin necesidad de ser <xref:System.Windows.Markup.ContentPropertyAttribute> con atributos. <xref:System.Xaml.XamlType.LookupContentProperty%2A> invalidaciones de WPF implementan este comportamiento.  
   
  **Aplazamiento para las expresiones de WPF:** WPF incluye varias clases de expresiones que aplazan un valor hasta que esté disponible un contexto de tiempo de ejecución. Además, la expansión de la plantilla es un comportamiento en tiempo de ejecución que se basa en las técnicas de aplazamiento.  
   
@@ -68,7 +70,7 @@ Un contexto de esquema XAML es una entidad conceptual que califica cómo una pro
     -   Si el nombre es unqualified en la asignación, llame a <xref:System.Reflection.Assembly.LoadWithPartialName%2A?displayProperty=nameWithType>.  
   
 #### <a name="xamlbuildtask"></a>XamlBuildTask  
- `XamlBuildTask`se utiliza para [!INCLUDE[vsindigo](../../../includes/vsindigo-md.md)] y [!INCLUDE[TLA#tla_workflow](../../../includes/tlasharptla-workflow-md.md)].  
+ `XamlBuildTask` se utiliza para [!INCLUDE[vsindigo](../../../includes/vsindigo-md.md)] y Windows Workflow Foundation.  
   
  Tenga en cuenta que el ensamblado que hace referencia a través de `XamlBuildTask` siempre son nombres completos.  
   

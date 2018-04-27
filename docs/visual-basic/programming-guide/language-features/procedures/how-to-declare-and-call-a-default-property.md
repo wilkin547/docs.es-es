@@ -1,11 +1,12 @@
 ---
-title: "Cómo: Declarar y llamar a una propiedad predeterminada en Visual Basic"
-ms.custom: 
+title: 'Cómo: Declarar y llamar a una propiedad predeterminada en Visual Basic'
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - defaults [Visual Basic], properties
@@ -16,17 +17,17 @@ helpviewer_keywords:
 - Visual Basic code, properties
 - default properties
 ms.assetid: 68b4026e-09ef-4613-808e-f6287494ff63
-caps.latest.revision: "23"
+caps.latest.revision: 23
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 8baa03e37325a6ad7065ec1a60052b3ea6a46c6f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9c4f471eba42e47d6bef45a4d38abc0cbd2d32bc
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-declare-and-call-a-default-property-in-visual-basic"></a>Cómo: Declarar y llamar a una propiedad predeterminada en Visual Basic
-A *propiedad predeterminada* es una propiedad de clase o estructura que el código puede tener acceso sin especificarlo. Al llamar a código nombres de una clase o estructura pero no una propiedad, y el contexto permite el acceso a una propiedad, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] resuelve el acceso a esa clase o una propiedad de la estructura de forma predeterminada, si existe.  
+A *propiedad predeterminada* es una propiedad de clase o estructura que el código puede tener acceso sin especificarlo. Cuando se llama a los nombres de código de una clase o estructura, pero no una propiedad y el contexto permite el acceso a una propiedad, Visual Basic resuelve el acceso a esa clase o una propiedad de la estructura de forma predeterminada, si existe.  
   
  Una clase o estructura puede tener a lo sumo una propiedad predeterminada. Sin embargo, puede sobrecargar una propiedad predeterminada y tener más de una versión del mismo.  
   

@@ -2,22 +2,22 @@
 title: Error de acceso al archivo de la ruta de acceso
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vbrID75
 ms.assetid: 6ce3a161-7316-46bd-a785-0d50e5414020
-caps.latest.revision: 
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 2c86d46c884617be152a5954426e9ddd6ef61651
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: bff3ec554a594e99bc65e5cd8df28a056dcc1ebd
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="pathfile-access-error"></a>Error de acceso a la ruta o al archivo
 Durante una operación de acceso a archivos o acceso al disco, el sistema operativo no pudo realizar una conexión entre la ruta de acceso y el nombre de archivo.  
@@ -30,7 +30,7 @@ Durante una operación de acceso a archivos o acceso al disco, el sistema operat
   
 3.  Asegúrese de que no ha intentado abrir un archivo de solo lectura en secuencial `Output` o `Append` modo. Si este es el caso, abra el archivo en `Input` modo o cambiar el atributo de sólo lectura del archivo.  
   
-4.  Asegúrese de que no intentó cambiar un [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] proyecto dentro de una base de datos o el documento.  
+4.  Asegúrese de que no intentó cambiar un proyecto de Visual Basic dentro de una base de datos o el documento.  
   
 ## <a name="see-also"></a>Vea también  
  [Tipos de error](../../../visual-basic/programming-guide/language-features/error-types.md)

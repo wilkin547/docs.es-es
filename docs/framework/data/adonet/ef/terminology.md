@@ -1,24 +1,26 @@
 ---
-title: "Terminología de Entity Framework"
-ms.custom: 
+title: Terminología de Entity Framework
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: fa2a1bd1-6118-487b-8673-eebc66b92945
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: a2d55319b5463b2c9624fe22e7a16235c3d57614
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: cd85760e219e810c089ebe88c8295d79ebaf0944
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="entity-framework-terminology"></a>Terminología de Entity Framework
 En este tema se define términos que se hace referencia frecuentemente en [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] documentación. Se proporcionan vínculos a temas importantes donde hay información adicional.  
@@ -55,7 +57,7 @@ En este tema se define términos que se hace referencia frecuentemente en [!INCL
 |asociación independiente|Una asociación entre entidades que se representa, y a la que se hace el seguimiento, a través de un objeto independiente.|  
 |key|Atributo de un tipo de entidad que especifica qué propiedad o conjunto de propiedades se utiliza para identificar instancias únicas del tipo de entidad. Se representa en el nivel de objetos mediante la clase <xref:System.Data.EntityKey>.<br /><br /> Para obtener más información, consulte [clave de elemento (CSDL)](http://msdn.microsoft.com/library/0cdb1402-dbc7-4a04-a11e-5729cdf7431b) y [clave de entidad](../../../../../docs/framework/data/adonet/entity-key.md).|  
 |carga diferida|Cuando una consulta devuelve objetos, los objetos relacionados no se cargan al mismo tiempo. En vez de ello, se cargan automáticamente cuando se obtiene acceso a la propiedad de navegación.|  
-|[!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)]|Sintaxis de consulta que define un conjunto de operadores de consulta que permiten expresar las operaciones de proyección, filtro y exploración transversal de una manera directa y declarativa en [!INCLUDE[csprcs](../../../../../includes/csprcs-md.md)] y [!INCLUDE[vbprvb](../../../../../includes/vbprvb-md.md)].<br /><br /> Para obtener más información, consulte [LINQ to Entities](../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md).|  
+|[!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)]|Sintaxis de consulta que define un conjunto de operadores de consulta que permiten operaciones de recorrido, filtro y proyección se expresen de forma directa y declarativa en Visual C# y Visual Basic.<br /><br /> Para obtener más información, consulte [LINQ to Entities](../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md).|  
 |asignar|Especificación de las correspondencias entre los elementos de un modelo conceptual y los elementos de un modelo de almacenamiento.<br /><br /> Para obtener más información, consulte [especificación de MSL](../../../../../docs/framework/data/adonet/ef/language-reference/msl-specification.md).|  
 |archivo .msl|Archivo XML que contiene la asignación entre el modelo conceptual y el modelo de almacenamiento, expresado en MSL.|  
 |lenguaje de especificación de asignaciones (MLS)|Lenguaje basado en XML que se utiliza para asignar los elementos definidos en un modelo conceptual a los elementos de un modelo de almacenamiento.<br /><br /> Para obtener más información, consulte [especificación de MSL](../../../../../docs/framework/data/adonet/ef/language-reference/msl-specification.md).|  
@@ -64,7 +66,7 @@ En este tema se define términos que se hace referencia frecuentemente en [!INCL
 |multiple entity sets per type|Capacidad de definir un tipo de entidad en más de un conjunto de entidades.<br /><br /> Para obtener más información, consulte [elemento EntitySet (CSDL)](http://msdn.microsoft.com/library/ec56db77-718d-4c0e-adc9-f1d33c896287) y [Cómo: definir un modelo con varios conjuntos de entidades por tipo](http://msdn.microsoft.com/library/61aa4fca-5ac0-4f47-9bc8-46e8c2965ef7).|  
 |propiedad de navegación|Propiedad de un tipo de entidad que representa una relación con otro tipo de entidad, tal y como se define mediante una asociación. Las propiedades de navegación se utilizan para devolver los objetos relacionados como <xref:System.Data.Objects.DataClasses.EntityCollection%601> o <xref:System.Data.Objects.DataClasses.EntityReference%601>, dependiendo de la multiplicidad en el otro extremo de la asociación.<br /><br /> Para obtener más información, consulte [elemento NavigationProperty (CSDL)](http://msdn.microsoft.com/library/5829a238-a50e-4c81-901d-7b54fc00f27e) y [propiedad de navegación](../../../../../docs/framework/data/adonet/navigation-property.md).|  
 |ruta de consulta|Representación de cadena de una ruta de acceso que especifica qué objetos relacionados devolver cuando se ejecuta una consulta de objeto. Una ruta de consulta se define llamando al método <xref:System.Data.Objects.ObjectQuery%601.Include%2A> en <xref:System.Data.Objects.ObjectQuery%601>.<br /><br /> Para obtener más información, consulte [cargar objetos relacionados](http://msdn.microsoft.com/library/452347d2-7b3b-44cd-9001-231299a28cb1).|  
-|contexto de objeto|Representa el contenedor de la entidad definido en el modelo conceptual. Contiene una conexión al origen de datos subyacente y proporciona servicios como el seguimiento de cambios y la resolución de identidad. Una instancia de la clase <xref:System.Data.Objects.ObjectContext> o `DbContext` representa un contexto de objeto.<br /><br /> `DbContext`forma parte de la [Entity Framework 5.0](http://go.microsoft.com/fwlink/?LinkId=234900). Entity Framework 5.0 no forma parte de .NET Framework, pero se compila en .NET Framework 4.0.5. Entity Framework 5.0 está disponible como el ['Entity Framework'](http://go.microsoft.com/fwlink/?LinkID=215714)[NuGet](http://go.microsoft.com/fwlink/?LinkId=232488) paquete. Para obtener más información, consulte [versiones de Entity Framework y control de versiones](http://go.microsoft.com/fwlink/?LinkId=234899).|  
+|contexto de objeto|Representa el contenedor de la entidad definido en el modelo conceptual. Contiene una conexión al origen de datos subyacente y proporciona servicios como el seguimiento de cambios y la resolución de identidad. Una instancia de la clase <xref:System.Data.Objects.ObjectContext> o `DbContext` representa un contexto de objeto.<br /><br /> `DbContext` forma parte de la [Entity Framework 5.0](http://go.microsoft.com/fwlink/?LinkId=234900). Entity Framework 5.0 no forma parte de .NET Framework, pero se compila en .NET Framework 4.0.5. Entity Framework 5.0 está disponible como el ['Entity Framework'](http://go.microsoft.com/fwlink/?LinkID=215714)[NuGet](http://go.microsoft.com/fwlink/?LinkId=232488) paquete. Para obtener más información, consulte [versiones de Entity Framework y control de versiones](http://go.microsoft.com/fwlink/?LinkId=234899).|  
 |nivel de objeto|Los tipos de entidad y las definiciones de contexto del objeto que utiliza Entity Framework.|  
 |consulta de objeto|Consulta ejecutada contra un modelo conceptual, dentro del contexto de un objeto, que devuelve los datos en forma de objetos.<br /><br /> Para obtener más información, consulte [las consultas de objeto](http://msdn.microsoft.com/library/0768033c-876f-471d-85d5-264884349276).|  
 |asignación objeto relacional|Técnica para transformar los datos de una base de datos relacional en tipos de datos que se pueden utilizar en aplicaciones de software orientadas a objetos.<br /><br /> [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] proporciona servicios de asignación objeto-relacional asignando los datos relacionales, como se definen en el modelo de almacenamiento, a los tipos de datos, según se definen en el modelo conceptual.<br /><br /> Para obtener más información, consulte [de modelado y asignación](../../../../../docs/framework/data/adonet/ef/modeling-and-mapping.md).|  

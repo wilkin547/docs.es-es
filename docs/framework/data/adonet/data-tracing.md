@@ -1,27 +1,29 @@
 ---
 title: Traza de datos en ADO.NET
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a6a752a5-d2a9-4335-a382-b58690ccb79f
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: df958982739c7ab2fd7aba42918b919c25d86829
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 377c69feda356aee9e11720cf12c9c97158d45a7
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="data-tracing-in-adonet"></a>Traza de datos en ADO.NET
-ADO.NET 2.0 ofrece nueva funcionalidad integrada de seguimiento de datos compatible con los proveedores de datos de .NET para [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)], Oracle, OLE DB y ODBC, así como <xref:System.Data.DataSet> de ADO.NET y los protocolos de red de [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)].  
+ADO.NET incluye funcionalidad de seguimiento de datos integrado que es compatible con los proveedores de datos .NET para SQL Server, Oracle, OLE DB y ODBC, así como ADO.NET <xref:System.Data.DataSet>y los protocolos de red de SQL Server.  
   
  Las llamadas API de acceso a datos de traza ayudan a diagnosticar los siguientes problemas:  
   
@@ -40,7 +42,7 @@ ADO.NET 2.0 ofrece nueva funcionalidad integrada de seguimiento de datos compati
  Para obtener más información sobre la configuración y la configuración del seguimiento administrado en ADO.NET, vea [acceso a datos de seguimiento](http://msdn.microsoft.com/library/hh880086.aspx).  
   
 ## <a name="accessing-diagnostic-information-in-the-extended-events-log"></a>Tener acceso a información de diagnóstico en el registro de eventos extendidos  
- En el [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] proveedor de datos para [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)], seguimiento de acceso a datos ([seguimiento de acceso a datos](http://msdn.microsoft.com/library/hh880086.aspx)) se ha actualizado para facilitar más fácil correlacionar eventos de cliente con información de diagnóstico, como errores de conexión de la información del servidor conectividad anillo búfer y aplicación de rendimiento en el registro de eventos extendidos. Para obtener información acerca de cómo leer el registro de eventos extendidos, vea [View Event Session Data](http://msdn.microsoft.com/library/hh710068\(SQL.110\).aspx).  
+ En el [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] proveedor de datos de SQL Server, de acceso datos de seguimiento ([seguimiento de acceso a datos](http://msdn.microsoft.com/library/hh880086.aspx)) se ha actualizado para facilitar más fácil correlacionar eventos de cliente con información de diagnóstico, como errores de conexión de la información de rendimiento de búfer y aplicación en el registro de eventos extendidos de anillo de conectividad del servidor. Para obtener información acerca de cómo leer el registro de eventos extendidos, vea [View Event Session Data](http://msdn.microsoft.com/library/hh710068\(SQL.110\).aspx).  
   
  Para las operaciones de conexión, ADO.NET enviará un identificador de conexión de cliente. Si se produce un error en la conexión, puede tener acceso al búfer de anillo de conectividad ([solucionar problemas de conectividad en SQL Server 2008 con el búfer de anillo de conectividad](http://go.microsoft.com/fwlink/?LinkId=207752)) y busque el `ClientConnectionID` del campo y obtener información de diagnóstico el Error de conexión. Los identificadores de conexión de cliente inician sesión el búfer de anillo solo si se produce un error. (Si se produce un error en una conexión antes de enviar el paquete previo al inicio de sesión, no se generará un identificador de conexión de cliente.) El identificador de la conexión de cliente es un GUID de 16 bytes. También puede buscar el identificador de la conexión de cliente en la salida de destino de los eventos extendidos si la acción `client_connection_id` se agregó a los eventos en una sesión de eventos extendidos. Puede habilitar el seguimiento de acceso a datos y volver a ejecutar el comando de conexión y observar el campo `ClientConnectionID` en el seguimiento de acceso a datos, si necesita ayuda adicional de diagnóstico del controlador del cliente.  
   

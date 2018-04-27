@@ -13,17 +13,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 34d1d971-5e18-4c22-9bf6-d3612e27ea59
-caps.latest.revision: ''
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 7d890e4c2041ae4c70a79adfc0ab4141402fcd3f
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 781def411214b0804cdc094c00b2f655b6c3823d
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="creating-the-data-service"></a>Crear el servicio de datos
 En esta tarea, creará un servicio de datos de ejemplo que usa [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] para exponer un [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] fuente que se basa en la base de datos de ejemplo Northwind. Esta tarea supone la realización de los siguientes pasos básicos:  
@@ -37,16 +37,16 @@ En esta tarea, creará un servicio de datos de ejemplo que usa [!INCLUDE[ssAstor
 4.  Habilitar el acceso al servicio de datos.  
   
 > [!NOTE]
->  La aplicación web [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] que crea al completar esta tarea se ejecuta en el servidor de desarrollo de [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] proporcionado por [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)]. El servidor de desarrollo de [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] solo admite el acceso desde el equipo local. Para facilitar también la comprobación y solución de problemas del servicio de datos durante el desarrollo, puede ejecutar la aplicación que hospeda el servicio de datos mediante Internet Information Services (IIS). Para obtener más información, consulta [Cómo: Desarrollar un servicio de datos WCF que se ejecuta en IIS](../../../../docs/framework/data/wcf/how-to-develop-a-wcf-data-service-running-on-iis.md).  
+>  El [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] aplicación Web que se crea al completar esta tarea se ejecuta en el [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] servidor de desarrollo de Visual Studio. El servidor de desarrollo de [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] solo admite el acceso desde el equipo local. Para facilitar también la comprobación y solución de problemas del servicio de datos durante el desarrollo, puede ejecutar la aplicación que hospeda el servicio de datos mediante Internet Information Services (IIS). Para obtener más información, consulta [Cómo: Desarrollar un servicio de datos WCF que se ejecuta en IIS](../../../../docs/framework/data/wcf/how-to-develop-a-wcf-data-service-running-on-iis.md).  
   
 ### <a name="to-create-the-aspnet-web-application"></a>Para crear la aplicación web ASP.NET  
   
-1.  En [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)], en la **archivo** menú, seleccione **New**y, a continuación, seleccione **proyecto**.  
+1.  En Visual Studio, en el **archivo** menú, seleccione **New**y, a continuación, seleccione **proyecto**.  
   
-2.  En el **nuevo proyecto** cuadro de diálogo, bajo [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] o [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] seleccione la **Web** plantilla y, a continuación, seleccione **aplicación Web ASP.NET**.  
+2.  En el **nuevo proyecto** cuadro de diálogo, en Visual Basic o Visual C#, seleccione la **Web** plantilla y, a continuación, seleccione **aplicación Web ASP.NET**.  
   
     > [!NOTE]
-    >  Si usa [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] Web Developer, debe crear un nuevo sitio web en lugar de una nueva aplicación web.  
+    >  Si usa Visual Studio Web Developer, tendrá que crear un nuevo sitio web en lugar de una nueva aplicación web.  
   
 3.  Tipo `NorthwindService` como el nombre del proyecto.  
   
@@ -70,7 +70,7 @@ En esta tarea, creará un servicio de datos de ejemplo que usa [!INCLUDE[ssAstor
   
 5.  Conectar el modelo de datos a la base de datos, realice uno de los pasos siguientes y, a continuación, haga clic en **siguiente**:  
   
-    -   Si no tiene una conexión de base de datos ya configurada, haga clic en **nueva conexión** y crear una nueva conexión. Para obtener más información, consulte [Cómo: crear conexiones a bases de datos de SQL Server](http://go.microsoft.com/fwlink/?LinkId=123631). Esta instancia de [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] debe tener adjuntada la base de datos de ejemplo Northwind.  
+    -   Si no tiene una conexión de base de datos ya configurada, haga clic en **nueva conexión** y crear una nueva conexión. Para obtener más información, consulte [Cómo: crear conexiones a bases de datos de SQL Server](http://go.microsoft.com/fwlink/?LinkId=123631). Esta instancia de SQL Server debe tener asociada la base de datos de ejemplo Northwind.  
   
          \- o -  
   
@@ -81,7 +81,7 @@ En esta tarea, creará un servicio de datos de ejemplo que usa [!INCLUDE[ssAstor
 7.  Haga clic en **finalizar** para cerrar el asistente.  
   
     > [!NOTE]
-    >  Este modelo de datos generado expone las propiedades de clave externa en los tipos de entidad. Los modelos de datos creados en [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] 2008 no incluyen estas propiedades de clave externa. Debido a esto, debe actualizar las clases del servicio de datos de cliente de cualquier aplicación cliente que se haya creado para tener acceso al servicio de datos de Northwind que se creó con [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] 2008 antes de intentar tener acceso a esta versión del servicio de datos de Northwind.  
+    >  Este modelo de datos generado expone las propiedades de clave externa en los tipos de entidad. Los modelos de datos creados mediante Visual Studio 2008 no incluyen estas propiedades de clave externa. Debido a esto, debe actualizar las clases del servicio de datos de cliente de cualquier aplicación cliente que se haya creado para tener acceso al servicio de datos de Northwind que se creó con Visual Studio 2008 antes de intentar tener acceso a esta versión del servicio de datos de Northwind.  
   
 ### <a name="to-create-the-data-service"></a>Para crear el servicio de datos  
   
@@ -91,7 +91,7 @@ En esta tarea, creará un servicio de datos de ejemplo que usa [!INCLUDE[ssAstor
   
 3.  Para el nombre del servicio, escriba `Northwind`.  
   
-     [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)]Visual Studio crea los archivos de código y marcado XML para el nuevo servicio. De forma predeterminada, se abre la ventana del editor de código. En **el Explorador de soluciones**, el servicio tendrá el nombre Northwind, con la extensión. svc.cs o. svc.vb.  
+     Visual StudioVisual Studio crea los archivos de código y marcado XML para el nuevo servicio. De forma predeterminada, se abre la ventana del editor de código. En **el Explorador de soluciones**, el servicio tendrá el nombre Northwind, con la extensión. svc.cs o. svc.vb.  
   
 4.  En el código para el servicio de datos, reemplace el comentario `/* TODO: put your data source class name here */` de la definición de la clase que define el servicio de datos por el tipo que es el contenedor de entidades del modelo de datos, que en este caso es `NorthwindEntities`. La definición de la clase debería ser como la siguiente:  
   
@@ -111,7 +111,7 @@ En esta tarea, creará un servicio de datos de ejemplo que usa [!INCLUDE[ssAstor
     >  Cualquier cliente que pueda tener acceso a la aplicación [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] también puede tener acceso a los recursos expuestos por el servicio de datos. En un servicio de datos de producción, para evitar el acceso no autorizado a los recursos también debería proteger la aplicación. Para obtener más información, consulta [Securing WCF Data Services](../../../../docs/framework/data/wcf/securing-wcf-data-services.md).  
   
 ## <a name="next-steps"></a>Pasos siguientes  
- Ha creado correctamente un nuevo servicio de datos que expone un [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] fuente que se basa en la base de datos de ejemplo Northwind y se ha habilitado el acceso a la fuente para los clientes que tienen permisos en el [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] aplicación Web. A continuación, se iniciará el servicio de datos de [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] y tendrá acceso a la [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] fuente enviando solicitudes GET de HTTP a través de un explorador Web:  
+ Ha creado correctamente un nuevo servicio de datos que expone un [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] fuente que se basa en la base de datos de ejemplo Northwind y se ha habilitado el acceso a la fuente para los clientes que tienen permisos en el [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] aplicación Web. A continuación, iniciará el servicio de datos desde Visual Studio y tendrá acceso a la fuente de [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] enviando solicitudes HTTP GET a través de un explorador web:  
   
  [Acceso al servicio desde un explorador web](../../../../docs/framework/data/wcf/accessing-the-service-from-a-web-browser-wcf-data-services-quickstart.md)  
   

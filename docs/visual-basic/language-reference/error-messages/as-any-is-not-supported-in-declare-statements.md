@@ -1,5 +1,5 @@
 ---
-title: '&#39; Como cualquier &#39; no se admite en &#39; Declare &#39; instrucciones'
+title: '&#39;Como cualquier&#39; no se admite en &#39;Declare&#39; instrucciones'
 ms.date: 07/20/2015
 ms.prod: .net
 ms.suite: ''
@@ -15,14 +15,14 @@ ms.assetid: 7e5cf519-8b64-4ac5-8116-705fe26c846d
 caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 59120622688ee38d5b8f45c08dfc3ae40711fb8b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d8146e339ac5cb005b99c9a1e02f1cd248c4558b
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="39as-any39-is-not-supported-in-39declare39-statements"></a>&#39; Como cualquier &#39; no se admite en &#39; Declare &#39; instrucciones
-El `Any` tipo de datos se usó con `Declare` instrucciones en Visual Basic 6.0 y versiones anteriores para permitir el uso de argumentos que puede contener cualquier tipo de datos. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]admite la sobrecarga, sin embargo y por lo que facilita la `Any` obsoleta del tipo de datos.  
+# <a name="39as-any39-is-not-supported-in-39declare39-statements"></a>&#39;Como cualquier&#39; no se admite en &#39;Declare&#39; instrucciones
+El `Any` tipo de datos se usó con `Declare` instrucciones en Visual Basic 6.0 y versiones anteriores para permitir el uso de argumentos que puede contener cualquier tipo de datos. Visual Basic admite sobrecarga, sin embargo y por lo que facilita la `Any` obsoleta del tipo de datos.  
   
  **Id. de error:** BC30828  
   

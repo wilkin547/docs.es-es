@@ -1,30 +1,32 @@
 ---
 title: Muestras
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 3fcc0c4a-b952-4cfe-9e09-0c0cf874ba2c
-caps.latest.revision: "2"
+caps.latest.revision: 2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 98bcb52d193cffb19f6144364895c040f9860f10
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 36e619e47a46c14c3b4496ac61968850ebce9f99
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="samples"></a>Muestras
-En este tema se proporcionan vínculos a las soluciones de C# y [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] que contienen código de ejemplo de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
+Este tema proporcionan vínculos a las soluciones de Visual Basic y C# que contienen [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] código de ejemplo.  
   
 ## <a name="in-this-section"></a>En esta sección  
- Versión de [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] de la solución SampleQueries  
+ Versión de Visual Basic de la solución SampleQueries  
  [Consultas de ejemplo (Visual Basic)](~/docs/visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
   
  Versión de C# de la solución SampleQueries  
@@ -36,7 +38,7 @@ En este tema se proporcionan vínculos a las soluciones de C# y [!INCLUDE[vbprvb
   
 -   Participar en la [foro de LINQ](http://go.microsoft.com/fwlink/?LinkId=76488), dónde debatirá detalladamente temas más complejos con expertos.  
   
--   Examine las notas del producto donde se describe detalladamente la tecnología [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], junto con ejemplos de código de [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] y C#. Para obtener más información, consulte [LINQ to SQL: consultas de .NET para datos relacionales](http://go.microsoft.com/fwlink/?LinkId=93205).  
+-   Estudiar las notas del producto que detallan [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] tecnología, junto con ejemplos de código de Visual Basic y C#. Para obtener más información, consulte [LINQ to SQL: consultas de .NET para datos relacionales](http://go.microsoft.com/fwlink/?LinkId=93205).  
   
 ## <a name="see-also"></a>Vea también  
  [LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/index.md)  

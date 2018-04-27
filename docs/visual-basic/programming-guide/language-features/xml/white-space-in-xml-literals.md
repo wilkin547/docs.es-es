@@ -1,28 +1,29 @@
 ---
 title: Espacio en blanco en literales XML (Visual Basic)
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - white space [XML in Visual Basic]
 - XML literals [Visual Basic], white space
 ms.assetid: dfe3a9ff-d69a-418e-a6b5-476f4ed84219
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: d8587abb98fe33ab2c5a0cef6cea76049a00909e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: e6d23aa54b150748aac9aa955f4bd86ee88358ea
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="white-space-in-xml-literals-visual-basic"></a>Espacio en blanco en literales XML (Visual Basic)
-El [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] compilador incorpora sólo los caracteres de espacio en blanco significativo de un literal XML cuando crea un [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] objeto. No se incorporan los caracteres de espacio en blanco no significativos.  
+El compilador de Visual Basic incorpora sólo los caracteres de espacio en blanco significativo de un literal XML cuando crea un [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] objeto. No se incorporan los caracteres de espacio en blanco no significativos.  
   
 ## <a name="significant-and-insignificant-white-space"></a>Espacio en blanco significativo y  
  Caracteres de espacio en blanco en literales XML son significativos únicamente en tres áreas:  
@@ -38,7 +39,7 @@ El [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] compilador incorpora sólo los ca
  Para incluir espacios en blanco no significativos de un literal XML, use una expresión incrustada que contiene una cadena literal con el espacio en blanco.  
   
 > [!NOTE]
->  Si el `xml:space` atributo aparece en un elemento XML literal, el [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] compilador incluye el atributo en el <xref:System.Xml.Linq.XElement> objeto, pero agregar este atributo no cambia la forma en que el compilador trata el espacio en blanco.  
+>  Si el `xml:space` atributo aparece en un literal de elemento XML, el compilador de Visual Basic incluye el atributo en el <xref:System.Xml.Linq.XElement> objeto, pero agregar este atributo no cambia la forma en que el compilador trata el espacio en blanco.  
   
 ## <a name="examples"></a>Ejemplos  
  El ejemplo siguiente contiene dos elementos XML, externos e internos. Ambos elementos contienen espacios en blanco en su contenido de texto. El espacio en blanco en el elemento exterior es insignificante porque contiene solo espacios en blanco y un elemento XML. El espacio en blanco en el elemento interno es significativo porque contiene espacios en blanco y texto.  

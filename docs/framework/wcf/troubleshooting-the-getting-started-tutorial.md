@@ -1,31 +1,33 @@
 ---
-title: "Solución de problemas con el tutorial de introducción"
-ms.custom: 
+title: Solución de problemas con el tutorial de introducción
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 69a21511-0871-4c41-9a53-93110e84d7fd
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 55288074b35bcb00d6c6b453f1320ad40d26a5f7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: d8bc077b1ef24ecfcb4d37a9ddb8389dc705f68e
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="troubleshooting-the-getting-started-tutorial"></a>Solución de problemas con el tutorial de introducción
 En este tema se enumeran los problemas más comunes que se producen al desarrollar el Tutorial de introducción y se explica cómo resolverlos.  
   
 1.  [No puedo encontrar los archivos de proyecto en el disco duro.](../../../docs/framework/wcf/troubleshooting-the-getting-started-tutorial.md#BKMK_q1)  
   
-2.  [Se intentó ejecutar la aplicación de servicio: HTTP no pudo registrar la dirección URL http://+:8000/ServiceModelSamples/Service/. Su proceso no tiene los derechos de acceso a este espacio de nombres.](../../../docs/framework/wcf/troubleshooting-the-getting-started-tutorial.md#BKMK_q2)  
+2.  [Al intentar ejecutar la aplicación de servicio: HTTP no pudo registrar la dirección URL http://+:8000/ServiceModelSamples/Service/. Su proceso no tiene los derechos de acceso a este espacio de nombres.](../../../docs/framework/wcf/troubleshooting-the-getting-started-tutorial.md#BKMK_q2)  
   
 3.  [Cualquier intento de usar la herramienta Svcutil.exe: 'svcutil' no se reconoce como un comando interno o externo, programa operable o archivo por lotes.](../../../docs/framework/wcf/troubleshooting-the-getting-started-tutorial.md#BKMK_q3)  
   
@@ -35,14 +37,14 @@ En este tema se enumeran los problemas más comunes que se producen al desarroll
   
 6.  [Compilar la aplicación cliente: el nombre de tipo o espacio de nombres 'CalculatorClient' no se encontró (¿falta un uso de la directiva o una referencia de ensamblado?)](../../../docs/framework/wcf/troubleshooting-the-getting-started-tutorial.md#BKMK_q6)  
   
-7.  [Ejecuta el cliente: excepción no controlada: System.ServiceModel.EndpointNotFoundException: no se pudo conectar a http://localhost: 8000/ServiceModelSamples/Service/CalculatorService. Código de error TCP 10061: no se estableció ninguna conexión porque el equipo de destino rechazó.](../../../docs/framework/wcf/troubleshooting-the-getting-started-tutorial.md#BKMK_q7)  
+7.  [Ejecuta el cliente: excepción no controlada: System.ServiceModel.EndpointNotFoundException: no se pudo conectar a http://localhost:8000/ServiceModelSamples/Service/CalculatorService. Código de error TCP 10061: no se estableció ninguna conexión porque el equipo de destino rechazó.](../../../docs/framework/wcf/troubleshooting-the-getting-started-tutorial.md#BKMK_q7)  
   
 <a name="BKMK_q1"></a>   
 ## <a name="i-am-unable-to-find-the-project-files-on-my-hard-drive"></a>Los archivos del proyecto no se encuentran en el disco duro.  
- [!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)]Guardar archivos de proyecto en c:\users\\< usuario usuario\Documents\\< versión de Visual Studio\>\Projects en [!INCLUDE[wv](../../../includes/wv-md.md)] y [!INCLUDE[win7_client_secondref](../../../includes/win7-client-secondref-md.md)]y c:\Documents and Settings\\< nombre de usuario\>Documentos \My\\< versión de Visual Studio\>\Projects en versiones anteriores de Windows.  
+ Visual Studio guarda los archivos de proyecto en c:\users\\< usuario usuario\Documents\\< versión de Visual Studio\>\Projects en [!INCLUDE[wv](../../../includes/wv-md.md)] y [!INCLUDE[win7_client_secondref](../../../includes/win7-client-secondref-md.md)]y c:\Documents and Settings\\< nombre de usuario \>Documentos \My\\< versión de Visual Studio\>\Projects en versiones anteriores de Windows.  
   
 <a name="BKMK_q2"></a>   
-## <a name="attempting-to-run-the-service-application-http-could-not-register-url-http8000servicemodelsamplesservice-your-process-does-not-have-access-rights-to-this-namespace"></a>Se intentó ejecutar la aplicación de servicio: HTTP no pudo registrar la dirección URL http://+:8000/ServiceModelSamples/Service/. Su proceso no tiene los derechos de acceso a este espacio de nombres.  
+## <a name="attempting-to-run-the-service-application-http-could-not-register-url-http8000servicemodelsamplesservice-your-process-does-not-have-access-rights-to-this-namespace"></a>Al intentar ejecutar la aplicación de servicio: HTTP no pudo registrar la dirección URL http://+:8000/ServiceModelSamples/Service/. Su proceso no tiene los derechos de acceso a este espacio de nombres.  
  El proceso que hospeda un servicio [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] se debe ejecutar con privilegios administrativos. Si está ejecutando el servicio desde [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)], debe ejecutar [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] como administrador. Para ello, haga clic **iniciar**, haga clic en [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] y seleccione **ejecutar como administrador**. Si está ejecutando el servicio desde el símbolo de la línea de comandos, debe iniciar el símbolo del sistema como administrador de una forma similar. Haga clic en **iniciar**, haga clic en **símbolo** y seleccione **ejecutar como administrador**.  
   
 <a name="BKMK_q3"></a>   
@@ -62,11 +64,11 @@ En este tema se enumeran los problemas más comunes que se producen al desarroll
  Este error se produce si no se agrega el archivo Proxy.cs o Proxy.vb a su proyecto de cliente.  
   
 <a name="BKMK_q7"></a>   
-## <a name="running-the-client-unhandled-exception-systemservicemodelendpointnotfoundexception-could-not-connect-to-httplocalhost8000servicemodelsamplesservicecalculatorservice-tcp-error-code-10061-no-connection-could-be-made-because-the-target-machine-actively-refused-it"></a>Ejecución del cliente: excepción no controlada: System.ServiceModel.EndpointNotFoundException: no se puede establecer conexión con http://localhost:8000/ServiceModelSamples/Service/CalculatorService. Código de error TCP 10061: no se estableció ninguna conexión porque el equipo de destino la rechazó.  
+## <a name="running-the-client-unhandled-exception-systemservicemodelendpointnotfoundexception-could-not-connect-to-httplocalhost8000servicemodelsamplesservicecalculatorservice-tcp-error-code-10061-no-connection-could-be-made-because-the-target-machine-actively-refused-it"></a>Ejecuta el cliente: excepción no controlada: System.ServiceModel.EndpointNotFoundException: no se pudo conectar a http://localhost:8000/ServiceModelSamples/Service/CalculatorService. Código de error TCP 10061: no se estableció ninguna conexión porque el equipo de destino la rechazó.  
  Este error se produce si se ejecuta la aplicación cliente sin ejecutar el servicio.  
   
 <a name="BKMK_q8"></a>   
-## <a name="unhandled-exception-systemservicemodelsecuritysecuritynegotiationexception-soap-security-negotiation-with-httplocalhost8000servicemodelsamplesservicecalculatorservice-for-target-httplocalhost8000servicemodelsamplesservicecalculatorservice-failed"></a>Excepción no controlada: System.ServiceModel.Security.SecurityNegotiationException: error de negociación de seguridad SOAP con 'http://localhost:8000/ServiceModelSamples/Service/CalculatorService' para el destino 'http://localhost:8000/ServiceModelSamples/Service/CalculatorService'  
+## <a name="unhandled-exception-systemservicemodelsecuritysecuritynegotiationexception-soap-security-negotiation-with-httplocalhost8000servicemodelsamplesservicecalculatorservice-for-target-httplocalhost8000servicemodelsamplesservicecalculatorservice-failed"></a>Excepción no controlada: System.ServiceModel.Security.SecurityNegotiationException: la negociación de seguridad SOAP con 'http://localhost:8000/ServiceModelSamples/Service/CalculatorService'para el destino'http://localhost:8000/ServiceModelSamples/Service/CalculatorService' no se pudo  
  Este error se produce en un equipo unido a un dominio que no dispone de conectividad de red. Conecte el equipo a la red o desactive la seguridad para el cliente y el servicio. En el servicio, modifique el código que crea el WSHttpBinding de la manera siguiente.  
   
 ```  

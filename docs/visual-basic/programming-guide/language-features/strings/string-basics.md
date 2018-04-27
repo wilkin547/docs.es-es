@@ -1,28 +1,29 @@
 ---
 title: Fundamentos de cadenas en Visual Basic
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - strings [Visual Basic], Like operator
 - strings [Visual Basic], Visual Basic
 - strings [Visual Basic], regular expressions
 ms.assetid: 5674418d-f00d-4f72-9f98-d15897793350
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 8881ad6ab7f28689019463abdab3b867e010d51e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 4a40435b76b0eee4f4eca15d5ba1a31cc58698ab
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="string-basics-in-visual-basic"></a>Fundamentos de cadenas en Visual Basic
-El tipo de datos de `String` representa una serie de caracteres (y cada uno de ellos representa a su vez una instancia del tipo de datos `Char`). En este tema se presentan conceptos básicos de las cadenas de [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+El tipo de datos de `String` representa una serie de caracteres (y cada uno de ellos representa a su vez una instancia del tipo de datos `Char`). Este tema presenta los conceptos básicos de cadenas en Visual Basic.  
   
 ## <a name="string-variables"></a>Variables de cadena  
  A una instancia de una cadena se le puede asignar un valor literal que represente una serie de caracteres. Por ejemplo:  
@@ -37,7 +38,7 @@ El tipo de datos de `String` representa una serie de caracteres (y cada uno de e
   
  [!code-vb[VbVbalrStrings#65](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/string-basics_3.vb)]  
   
- Este código provoca un error porque el compilador termina la cadena después de la segunda comilla, y el resto de la cadena se interpreta como código. Para solucionar este problema, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] interpreta los dos caracteres de comillas de un literal de cadena como uno solo en la cadena. En el ejemplo siguiente se muestra la forma correcta de incluir una comilla en una cadena:  
+ Este código provoca un error porque el compilador termina la cadena después de la segunda comilla, y el resto de la cadena se interpreta como código. Para solucionar este problema, Visual Basic interpreta dos comillas en un literal de cadena como una comilla en la cadena. En el ejemplo siguiente se muestra la forma correcta de incluir una comilla en una cadena:  
   
  [!code-vb[VbVbalrStrings#66](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/string-basics_4.vb)]  
   

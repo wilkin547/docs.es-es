@@ -1,12 +1,12 @@
 ---
 title: Trabajar con calendarios
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -19,18 +19,18 @@ helpviewer_keywords:
 - international applications [.NET Framework], calendars
 - culture, calendars
 ms.assetid: 0c1534e5-979b-4c8a-a588-1c24301aefb3
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: c3a54d5222edca0b42f30c33584f0f62aa96f9e2
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 67e0344dc3038096a5b2114790fbb0c343ba3e4f
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="working-with-calendars"></a>Trabajar con calendarios
 
@@ -204,4 +204,4 @@ En aquellos casos donde la representación de cadena de una fecha se expresa en 
 ## <a name="see-also"></a>Vea también
 
 [Cómo: mostrar fechas en calendarios no gregorianos](../../../docs/standard/base-types/how-to-display-dates-in-non-gregorian-calendars.md)
-[ejemplo: utilidad de intervalo de semana del calendario](http://code.msdn.microsoft.com/NET-Framework-4-Calendar-3360a84a)
+[ejemplo: utilidad de intervalo de semana del calendario](https://code.msdn.microsoft.com/NET-Framework-4-Calendar-3360a84a)

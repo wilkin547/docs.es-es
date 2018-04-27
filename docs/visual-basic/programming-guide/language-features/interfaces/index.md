@@ -14,11 +14,11 @@ ms.assetid: 61b06674-12c9-430b-be68-cc67ecee1f5b
 caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: c26bb7322064d0b8cdf733e74f8b37e81b1e620c
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.openlocfilehash: 558eae39b38161d01d599bba6c3121839560884b
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="interfaces-visual-basic"></a>Interfaces (Visual Basic)
 Las *interfaces* definen las propiedades, los métodos y los eventos que pueden implementar las clases. Las interfaces permiten definir características como grupos pequeños de propiedades, métodos y eventos estrechamente relacionados; esto reduce los problemas de compatibilidad porque se pueden desarrollar implementaciones mejoradas para las interfaces sin comprometer el código existente. En cualquier momento se pueden agregar nuevas características mediante el desarrollo de implementaciones e interfaces adicionales.  
@@ -46,13 +46,13 @@ Las *interfaces* definen las propiedades, los métodos y los eventos que pueden 
  [!code-vb[VbVbalrOOP#17](../../../../visual-basic/misc/codesnippet/VisualBasic/index_1.vb)]  
   
 ## <a name="implementing-interfaces"></a>Implementar interfaces  
- La palabra reservada de [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] `Implements` se usa de dos maneras. La instrucción `Implements` significa que una clase o estructura implementa una interfaz. La palabra clave `Implements` significa que un miembro de clase o de estructura implementa un miembro de interfaz específico.  
+ Palabra reservada de Visual Basic `Implements` se utiliza de dos maneras. La instrucción `Implements` significa que una clase o estructura implementa una interfaz. La palabra clave `Implements` significa que un miembro de clase o de estructura implementa un miembro de interfaz específico.  
   
 ### <a name="implements-statement"></a>Implements (Instrucción)  
  Si una clase o estructura implementa una o más interfaces, debe incluir la instrucción `Implements` inmediatamente después de la instrucción `Class` o `Structure`. La instrucción `Implements` requiere una lista separada por comas de las interfaces que implementará una clase. La clase o estructura debe implementar todos los miembros de interfaz mediante la palabra clave `Implements`.  
   
 ### <a name="implements-keyword"></a>Implements (palabra clave)  
- La palabra clave `Implements` requiere una lista separada por comas de los miembros de interfaz que se implementarán. Por lo general solo se especifica un miembro de interfaz, pero pueden especificarse varios. La especificación de un miembro de interfaz consta del nombre de la interfaz —que debe especificarse en una instrucción implements dentro de la clase—, un punto y el nombre de la función miembro, propiedad o evento que se va a implementar. El nombre de un miembro que implementa un miembro de interfaz puede usar cualquier identificador permitido y no se limita a la convención `InterfaceName_MethodName` que se usaba en versiones anteriores de [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+ La palabra clave `Implements` requiere una lista separada por comas de los miembros de interfaz que se implementarán. Por lo general solo se especifica un miembro de interfaz, pero pueden especificarse varios. La especificación de un miembro de interfaz consta del nombre de la interfaz —que debe especificarse en una instrucción implements dentro de la clase—, un punto y el nombre de la función miembro, propiedad o evento que se va a implementar. El nombre de un miembro que implementa un miembro de interfaz puede utilizar cualquier identificador permitido y no se limita a la `InterfaceName_MethodName` convención usada en versiones anteriores de Visual Basic.  
   
  Por ejemplo, el código siguiente muestra cómo declarar una subrutina denominada `Sub1` que implementa un método de una interfaz:  
   

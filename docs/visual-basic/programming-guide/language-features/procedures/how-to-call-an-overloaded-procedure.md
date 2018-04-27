@@ -1,11 +1,12 @@
 ---
-title: "Cómo: Llamar a un procedimiento sobrecargado (Visual Basic)"
-ms.custom: 
+title: 'Cómo: Llamar a un procedimiento sobrecargado (Visual Basic)'
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - Visual Basic code, procedures
@@ -14,14 +15,14 @@ helpviewer_keywords:
 - procedures [Visual Basic], multiple versions
 - procedure calls [Visual Basic], overloaded
 ms.assetid: 3bb331fb-f6bc-406f-9ca0-9609b497014c
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: ff5967c1b09ad59f249297b1cf0a4ed900faf4a1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 5eca03de6b6dd2ca2b992196b1ae224f8fbf5068
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-call-an-overloaded-procedure-visual-basic"></a>Cómo: Llamar a un procedimiento sobrecargado (Visual Basic)
 La ventaja de sobrecargar un procedimiento radica en la flexibilidad de la llamada. El código de llamada puede obtener la información que necesita para pasar al procedimiento y, a continuación, llamar a un único nombre de procedimiento, independientemente de los argumentos está pasando.  
@@ -32,7 +33,7 @@ La ventaja de sobrecargar un procedimiento radica en la flexibilidad de la llama
   
 2.  Escribir la llamada al procedimiento de la manera normal, presentación de datos en la lista de argumentos. Asegúrese de que los argumentos coincidan con la lista de parámetros en una de las versiones definidas para el procedimiento.  
   
-3.  No es necesario que determinar qué versión del procedimiento para llamar a. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]pasa el control a la versión correspondiente de la lista de argumentos.  
+3.  No es necesario que determinar qué versión del procedimiento para llamar a. Visual Basic pasa el control a la versión que coincida con la lista de argumentos.  
   
      El ejemplo siguiente se llama el `post` procedimiento declarado en [Cómo: definir varias versiones de un procedimiento](./how-to-define-multiple-versions-of-a-procedure.md). Obtiene la identificación del cliente, se determina si se trata de un `String` o `Integer`y, a continuación, en cualquier caso llama el mismo procedimiento.  
   

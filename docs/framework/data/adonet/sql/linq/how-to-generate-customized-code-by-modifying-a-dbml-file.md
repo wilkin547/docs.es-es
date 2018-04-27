@@ -1,27 +1,29 @@
 ---
-title: "Cómo: Generar código personalizado modificando un archivo DBML"
-ms.custom: 
+title: 'Cómo: Generar código personalizado modificando un archivo DBML'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 50ad597a-8598-42d3-82dd-fc7d702ebc37
-caps.latest.revision: "2"
+caps.latest.revision: 2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: c9a2b382c84548d3226fe68531961e0f53033e7d
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: dccef2af3d13099b71d3ea8418242e5a5cc16ae5
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-generate-customized-code-by-modifying-a-dbml-file"></a>Cómo: Generar código personalizado modificando un archivo DBML
-Puede generar [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] o código fuente de C# desde un archivo de metadatos base de datos (.dbml) de lenguaje de marcado. Este enfoque proporciona una oportunidad de personalizar el archivo .dbml predeterminado antes de generar el código de asignación de la aplicación. Ésta es una característica avanzada.  
+Puede generar código fuente de Visual Basic o C# desde un archivo de metadatos base de datos (.dbml) de lenguaje de marcado. Este enfoque proporciona una oportunidad de personalizar el archivo .dbml predeterminado antes de generar el código de asignación de la aplicación. Ésta es una característica avanzada.  
   
  Los pasos de este proceso son los siguientes.  
   
@@ -29,7 +31,7 @@ Puede generar [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] o cód
   
 2.  Utilice un editor para modificar el archivo .dbml. Tenga en cuenta que el archivo .dbml debe validarse con el archivo de esquema (.xsd) de definición para [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] archivos .dbml. Para obtener más información, consulte [generación de código en LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md).  
   
-3.  Genere el código fuente de [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] o de C#.  
+3.  Generar el código fuente de Visual Basic o C#.  
   
  En los ejemplos siguientes se utiliza la herramienta de línea de comandos SQLMetal. Para obtener más información, vea [SqlMetal.exe (Herramienta de generación de código)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md).  
   
@@ -42,7 +44,7 @@ sqlmetal /dbml:mymeta.dbml mydbfile.mdf
 ```  
   
 ## <a name="example"></a>Ejemplo  
- El código siguiente genera un archivo de código fuente de [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] o C# a partir de un archivo .dbml.  
+ El código siguiente genera el archivo de código fuente de Visual Basic o C# desde un archivo. dbml.  
   
 ```  
 sqlmetal /namespace:nwind /code:nwind.vb /language:vb DBMLFile.dbml  

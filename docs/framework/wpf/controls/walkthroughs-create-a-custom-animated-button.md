@@ -1,42 +1,44 @@
 ---
-title: "Tutoriales: Crear un botón animado personalizado"
-ms.custom: 
+title: 'Tutoriales: Crear un botón animado personalizado'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - custom animated buttons [WPF]
 - buttons [WPF]
 - animation [WPF], buttons [WPF]
 ms.assetid: e9532c72-460f-4898-9332-613fa21d746a
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3ece907b23772504990ef334f446d7b6072f5d44
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 349a9627c20de24a17c533bb9b2fd5f6d1735c70
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthroughs-create-a-custom-animated-button"></a>Tutoriales: Crear un botón animado personalizado
 Como sugiere su nombre, [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] es magnífico para crear experiencias de presentación enriquecidas para los clientes. Estos tutoriales muestra cómo personalizar la apariencia y el comportamiento de un botón (incluyendo animaciones). Esta personalización se realiza mediante un estilo y una plantilla para que pueda aplicar este botón personalizado fácilmente a los botones de la aplicación. En la siguiente ilustración muestra el botón personalizado que va a crear.  
   
  ![Botón personalizado que creará](../../../../docs/framework/wpf/controls/media/custom-button-blend-intro.jpg "custom_button_blend_Intro")  
   
- Los gráficos vectoriales que componen el aspecto del botón se crean mediante [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]. [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]es similar a HTML pero es más eficaz y extensible. [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]pueden escribirse en forma manual mediante Microsoft Visual Studio o el Bloc de notas, o puede usar una herramienta de diseño visual como Microsoft Expression Blend. Expression Blend funciona creando subyacente [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] de código, por lo que ambos métodos crean los mismos gráficos.  
+ Los gráficos vectoriales que componen el aspecto del botón se crean mediante [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]. [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] es similar a HTML pero es más eficaz y extensible. [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] pueden escribirse en forma manual mediante Microsoft Visual Studio o el Bloc de notas, o puede usar una herramienta de diseño visual como Microsoft Expression Blend. Expression Blend funciona creando subyacente [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] de código, por lo que ambos métodos crean los mismos gráficos.  
   
 ## <a name="in-this-section"></a>En esta sección  
  [Crear un botón mediante Microsoft Expression Blend](../../../../docs/framework/wpf/controls/walkthrough-create-a-button-by-using-microsoft-expression-blend.md)  
  Muestra cómo crear botones con comportamiento personalizado mediante las características del Diseñador de Expression Blend.  
   
  [Crear un botón mediante el uso de XAML](../../../../docs/framework/wpf/controls/walkthrough-create-a-button-by-using-xaml.md)  
- Muestra cómo crear botones con comportamiento personalizado mediante el uso de [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] y [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)].  
+ Muestra cómo crear botones con comportamiento personalizado mediante [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] y Visual Studio.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
  [Aplicar estilos y plantillas](../../../../docs/framework/wpf/controls/styling-and-templating.md)  

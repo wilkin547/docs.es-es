@@ -1,11 +1,12 @@
 ---
-title: "Cómo: Llamar a un procedimiento de operador (Visual Basic)"
-ms.custom: 
+title: 'Cómo: Llamar a un procedimiento de operador (Visual Basic)'
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - operator procedures [Visual Basic], calling
@@ -17,19 +18,19 @@ helpviewer_keywords:
 - overloaded operators [Visual Basic], calling
 - operator overloading
 ms.assetid: 0dce42cc-f0b0-4c14-9f62-018b21f33497
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 0abff0a81ebcdacb59b69d0c307bb4aa219906c3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 21545f2488bfabd0abc9c6e316d21bbc4d5aeb91
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-call-an-operator-procedure-visual-basic"></a>Cómo: Llamar a un procedimiento de operador (Visual Basic)
 Llame a un procedimiento de operador mediante el símbolo del operador en una expresión. En el caso de un operador de conversión, se llama a la [CType (función)](../../../../visual-basic/language-reference/functions/ctype-function.md) para convertir un valor de un tipo de datos a otro.  
   
- No se llama explícitamente procedimientos de operadores. Solo se usa el operador, o la `CType` función, en una instrucción de asignación o una expresión, del mismo modo que se usa habitualmente un operador. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]realiza la llamada al procedimiento de operador.  
+ No se llama explícitamente procedimientos de operadores. Solo se usa el operador, o la `CType` función, en una instrucción de asignación o una expresión, del mismo modo que se usa habitualmente un operador. Visual Basic realiza la llamada al procedimiento de operador.  
   
  Definir un operador en una clase o estructura también se denomina *sobrecarga* el operador.  
   
@@ -47,7 +48,7 @@ Llame a un procedimiento de operador mediante el símbolo del operador en una ex
   
 2.  Asegúrese de que los tipos de datos de los operandos son adecuados para la conversión y, en el orden correcto.  
   
-3.  `CType`llama al procedimiento de operador de conversión y devuelve el valor convertido.  
+3.  `CType` llama al procedimiento de operador de conversión y devuelve el valor convertido.  
   
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se crea dos <xref:System.TimeSpan> las estructuras y los agrega juntos y almacena el resultado en una tercera <xref:System.TimeSpan> estructura. El <xref:System.TimeSpan> estructura define los procedimientos de operador para sobrecargar varios operadores estándares.  

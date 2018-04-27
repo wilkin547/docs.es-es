@@ -1,28 +1,28 @@
 ---
 title: Configurar seguimiento
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - tracing [WCF]
 ms.assetid: 82922010-e8b3-40eb-98c4-10fc05c6d65d
-caps.latest.revision: 
+caps.latest.revision: 53
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 3beeaec1ed9982fc49f6bf81e2717db862e7882f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b7b9590096789af609e83d1a5ed736cf18e27700
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="configuring-tracing"></a>Configurar seguimiento
 En este tema se describe cómo se puede habilitar el seguimiento, configurar los orígenes de seguimiento para emitir trazas y establecer niveles de seguimiento, establecer el seguimiento y la propagación de actividades para admitir la correlación de seguimiento de un extremo a otro, y establecer escuchas de seguimiento para tener acceso a las trazas.  
@@ -66,7 +66,7 @@ En este tema se describe cómo se puede habilitar el seguimiento, configurar los
 ```  
   
 > [!NOTE]
->  Para editar el archivo de configuración de un [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] proyecto de servicio en [!INCLUDE[vs_current_short](../../../../../includes/vs-current-short-md.md)], haga clic en el archivo de configuración de la aplicación: Web.config para las aplicaciones hospedadas en Web o Appname.exe.config para las aplicaciones autohospedadas en  **El Explorador de soluciones**. A continuación, elija la **Editar configuración de WCF** elemento de menú contextual. Esto inicia el [herramienta Editor de configuración (SvcConfigEditor.exe)](../../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md), lo que permite modificar la configuración para [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] los servicios mediante una interfaz gráfica de usuario.  
+>  Para editar el archivo de configuración de un [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] servicio de proyecto en Visual Studio, haga clic en el archivo de configuración de la aplicación: Web.config para las aplicaciones hospedadas en Web o Appname.exe.config para las aplicaciones autohospedadas en  **El Explorador de soluciones**. A continuación, elija la **Editar configuración de WCF** elemento de menú contextual. Esto inicia el [herramienta Editor de configuración (SvcConfigEditor.exe)](../../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md), lo que permite modificar la configuración para [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] los servicios mediante una interfaz gráfica de usuario.  
   
 ## <a name="configuring-trace-sources-to-emit-traces"></a>Configurar los orígenes de seguimiento para emitir trazas  
  [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] define un origen de seguimiento para cada ensamblado. Las escuchas definidas para ese origen tienen acceso a las trazas generadas dentro de un ensamblado. Se definen los orígenes de seguimiento siguientes:  
@@ -146,7 +146,7 @@ En este tema se describe cómo se puede habilitar el seguimiento, configurar los
 </system.diagnostics>  
 ```  
   
- [!INCLUDE[crabout](../../../../../includes/crabout-md.md)]crear definido por el usuario a orígenes de traza, consulte [extender seguimiento](../../../../../docs/framework/wcf/samples/extending-tracing.md).  
+ [!INCLUDE[crabout](../../../../../includes/crabout-md.md)] crear definido por el usuario a orígenes de traza, consulte [extender seguimiento](../../../../../docs/framework/wcf/samples/extending-tracing.md).  
   
 ## <a name="configuring-trace-listeners-to-consume-traces"></a>Configurar las escuchas para consumir trazas  
  En tiempo de ejecución, las fuentes de [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] hacen un seguimiento de datos hasta los agentes de escucha que procesan los datos. [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] proporciona varios agentes de escucha predefinidos para <xref:System.Diagnostics>, que difieren en el formato que usan para el resultado. También puede agregar tipos de escucha personalizados.  
@@ -155,7 +155,7 @@ En este tema se describe cómo se puede habilitar el seguimiento, configurar los
   
  Puede configurar una escucha de seguimiento personalizada para enviar las trazas en la conexión, por ejemplo, a una base de datos remota. Como un implementador de la aplicación, debería exigir un control de acceso apropiado en los registros de seguimiento en el equipo remoto.  
   
- También puede configurar mediante programación una escucha de seguimiento. [!INCLUDE[crdefault](../../../../../includes/crdefault-md.md)][Cómo: crear e inicializar agentes de escucha de seguimiento](http://go.microsoft.com/fwlink/?LinkId=94648) y [crear un TraceListener personalizado](http://go.microsoft.com/fwlink/?LinkId=96239).  
+ También puede configurar mediante programación una escucha de seguimiento. [!INCLUDE[crdefault](../../../../../includes/crdefault-md.md)] [Cómo: crear e inicializar agentes de escucha de seguimiento](http://go.microsoft.com/fwlink/?LinkId=94648) y [crear un TraceListener personalizado](http://go.microsoft.com/fwlink/?LinkId=96239).  
   
 > [!CAUTION]
 >  Puesto que `System.Diagnostics.XmlWriterTraceListener` no es seguro para subprocesos, el origen de seguimiento puede bloquear los recursos de forma exclusiva al generar trazas. Cuando muchos subprocesos generan trazas para un origen de seguimiento configurado para utilizar esta escucha, puede producirse una contención de recursos, que genera un problema de rendimiento importante. Para solucionar este problema, debería implementar una escucha personalizada que sea segura para subprocesos.  
@@ -187,7 +187,7 @@ En este tema se describe cómo se puede habilitar el seguimiento, configurar los
   
  El atributo `propagateActivity` indica si la actividad se debería propagar a otros extremos que participan en el intercambio de mensajes. Estableciendo este valor en `true`, puede coger archivos de seguimiento generados por dos extremos cualesquiera y observar cómo un conjunto de trazas en un extremo fluyó a un conjunto de rastros de otro extremo.  
   
- [!INCLUDE[crabout](../../../../../includes/crabout-md.md)]seguimiento de la actividad y propagación, vea [propagación](../../../../../docs/framework/wcf/diagnostics/tracing/propagation.md).  
+ [!INCLUDE[crabout](../../../../../includes/crabout-md.md)] seguimiento de la actividad y propagación, vea [propagación](../../../../../docs/framework/wcf/diagnostics/tracing/propagation.md).  
   
  Ambos `propagateActivity` y `ActivityTracing` valores booleanos se aplican a la System.ServiceModel TraceSource. El `ActivityTracing` valor también se aplica a cualquier origen de seguimiento, incluido [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] o definido por el usuario.  
   

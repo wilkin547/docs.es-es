@@ -1,11 +1,12 @@
 ---
 title: Solucionar problemas de procedimientos (Visual Basic)
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - troubleshooting Visual Basic, procedures
@@ -14,14 +15,14 @@ helpviewer_keywords:
 - troubleshooting procedures
 - procedures [Visual Basic], about procedures
 ms.assetid: 525721e8-2e02-4f75-b5d8-6b893462cf2b
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: b838644baa5ad10f1deb917cff5751a0f625fca6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 7e54c965dc15131734be2c5bcfe04ad70292bf23
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="troubleshooting-procedures-visual-basic"></a>Solucionar problemas de procedimientos (Visual Basic)
 Esta página enumera algunos problemas comunes que pueden producirse al trabajar con los procedimientos.  
@@ -83,11 +84,11 @@ Esta página enumera algunos problemas comunes que pueden producirse al trabajar
   
  Los elementos siguientes, aunque pertenecen a la lista de parámetros, no forman parte de la firma de un procedimiento:  
   
--   Palabras clave de modificador de procedimiento, como `Public`, `Shared`, y`Static`  
+-   Palabras clave de modificador de procedimiento, como `Public`, `Shared`, y `Static`  
   
 -   Nombres de parámetros  
   
--   Palabras clave de modificador de parámetro, como `ByRef` y`Optional`  
+-   Palabras clave de modificador de parámetro, como `ByRef` y `Optional`  
   
 -   El tipo de datos del valor devuelto (excepto para un operador de conversión)  
   
@@ -99,7 +100,7 @@ Esta página enumera algunos problemas comunes que pueden producirse al trabajar
  Si se sobrecarga un procedimiento con uno o varios [opcional](../../../../visual-basic/language-reference/modifiers/optional.md) parámetros o un [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) parámetro, debe evitar la duplicación de cualquiera de los *sobrecargas implícitas*. Para obtener información, consulte [consideraciones de sobrecarga de procedimientos](./considerations-in-overloading-procedures.md).  
   
 ## <a name="calling-a-wrong-version-of-an-overloaded-procedure"></a>Llamar a una versión incorrecta de un procedimiento sobrecargado  
- Si un procedimiento tiene varias versiones sobrecargadas, debe estar familiarizado con todas las listas de parámetros y comprender cómo [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] resuelve las llamadas entre las sobrecargas. En caso contrario, podría llamar a una sobrecarga que no sea el deseado.  
+ Si un procedimiento tiene varias versiones sobrecargadas, debe estar familiarizado con todas las listas de parámetros y comprender cómo resuelve las llamadas entre las sobrecargas de Visual Basic. En caso contrario, podría llamar a una sobrecarga que no sea el deseado.  
   
  Si ha determinado qué sobrecarga desea llamar, asegúrese de cumplir las siguientes reglas:  
   

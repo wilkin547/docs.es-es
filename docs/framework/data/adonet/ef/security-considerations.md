@@ -1,24 +1,26 @@
 ---
 title: Consideraciones de seguridad (Entity Framework)
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 84758642-9b72-4447-86f9-f831fef46962
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 68b077ec6c7edd30882c9c84a10aa14060a589e8
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: d70b1a6aff3e93122b5d0fb21affdfcd13d817e6
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="security-considerations-entity-framework"></a>Consideraciones de seguridad (Entity Framework)
 En este tema se describen consideraciones de seguridad que son específicas del desarrollo, implementación y ejecución de aplicaciones de [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. También debe seguir las recomendaciones para crear aplicaciones de [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] seguras. Para obtener más información, consulte [información general sobre seguridad](../../../../../docs/framework/data/adonet/security-overview.md).  
@@ -84,7 +86,7 @@ En este tema se describen consideraciones de seguridad que son específicas del 
   
 -   <xref:System.Security.Permissions.SecurityPermission>: <xref:System.Security.Permissions.SecurityPermissionFlag.SerializationFormatter> para serializar las excepciones utilizando la interfaz <xref:System.Runtime.Serialization.ISerializable>.  
   
--   Permiso para abrir una conexión de base de datos y ejecutar comandos en la base de datos, como <xref:System.Data.SqlClient.SqlClientPermission> para un [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] base de datos.  
+-   Permiso para abrir una conexión de base de datos y ejecutar comandos en la base de datos, como <xref:System.Data.SqlClient.SqlClientPermission> para una base de datos de SQL Server.  
   
  Para más información, consulte [Seguridad de acceso del código y ADO.NET](../../../../../docs/framework/data/adonet/code-access-security.md).  
   

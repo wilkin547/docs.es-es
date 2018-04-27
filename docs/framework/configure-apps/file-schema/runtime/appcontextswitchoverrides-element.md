@@ -1,7 +1,7 @@
 ---
 title: '&lt;AppContextSwitchOverrides&gt; elemento'
 ms.custom: ''
-ms.date: 03/28/2018
+ms.date: 04/19/2018
 ms.prod: .net-framework
 ms.technology:
 - dotnet-bcl
@@ -19,18 +19,18 @@ ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: a17d67a1c6143897802bb15b983a9a909fd5949c
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: 146416a9872a8444316c2e4a754067b82030a81d
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="ltappcontextswitchoverridesgt-element"></a>&lt;AppContextSwitchOverrides&gt; elemento
 Define uno o varios modificadores usados por la clase <xref:System.AppContext> para proporcionar un mecanismo para cancelar la participación con nueva funcionalidad.  
   
  \<configuration>  
  \<en tiempo de ejecución >  
-\<AppContextSwitchOverrides>  
+\<AppContextSwitchOverrides >  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -51,7 +51,7 @@ Define uno o varios modificadores usados por la clase <xref:System.AppContext> p
   
 |Valor|Descripción|  
 |-----------|-----------------|  
-|"name=value"|Un nombre de conmutador predefinidos junto con su valor (`true` o `false`). Varios pares de nombre/valor de conmutador están separados por punto y coma (";"). Para obtener una lista de nombres predefinidos conmutador compatible con .NET Framework, vea la sección Comentarios.|  
+|"nombre = valor"|Un nombre de conmutador predefinidos junto con su valor (`true` o `false`). Varios pares de nombre/valor de conmutador están separados por punto y coma (";"). Para obtener una lista de nombres predefinidos conmutador compatible con .NET Framework, vea la sección Comentarios.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
  Ninguno.  
@@ -80,12 +80,13 @@ Define uno o varios modificadores usados por la clase <xref:System.AppContext> p
 |`Switch.System.Drawing.Printing.`</br>`OptimizePrintPreview`|Controles si el rendimiento de la <xref:System.Windows.Forms.PrintPreviewDialog> está optimizado para las impresoras de red. Para obtener más información, consulte [información general del control PrintPreviewDialog](../../../winforms/controls/printpreviewdialog-control-overview-windows-forms.md).|.NET Framework 4.6|
 |`Switch.System.Globalization.NoAsyncCurrentCulture`|Controla si las operaciones asincrónicas no fluye desde el contexto del subproceso que realiza la llamada. Para obtener más información, consulte [CurrentCulture y CurrentUICulture fluirán tareas](~/docs/framework/migration-guide/retargeting/4.5.2-4.6.md#currentculture-and-currentuiculture-flow-across-tasks).|.NET Framework 4.6|  
 |`Switch.System.IdentityModel.`<br/>`DisableMultipleDNSEntriesInSANCertificate`|Controles si el <xref:System.IdentityModel.Claims.X509CertificateClaimSet.FindClaims%2A?displayProperty=nameWithType> método intenta hacer coincidir el tipo de notificación solo con la última entrada DNS. Para más información, consulte [Mitigación: Método X509CertificateClaimSet.FindClaims](~/docs/framework/migration-guide/mitigation-x509certificateclaimset-findclaims-method.md).|.NET Framework 4.6.1|  
+|`Switch.System.IdentityModel.`<br/>`EnableCachedEmptyDefaultAuthorizationContext`|Controla si se permite AuthorizationContext.Empty devolver un objeto mutable.|.NET Framework 4.6|  
 |`Switch.System.IO.BlockLongPaths`|Controles si las rutas de acceso más de `MAX_PATH` (260 caracteres) producen un <xref:System.IO.PathTooLongException>. Para obtener más información, consulte [largo de ruta de acceso de soporte](~/docs/framework/migration-guide/retargeting/4.6.1-4.6.2.md#long-path-support).|.NET Framework 4.6.2|  
 |`Switch.System.IO.Compression.ZipFile.`<br/>`UseBackslash`|Usa la barra diagonal inversa ("\\") en lugar de la barra diagonal ("/") como separador de ruta de acceso en la <xref:System.IO.Compression.ZipArchiveEntry.FullName%2A?displayProperty=nameWithType> propiedad. Para obtener más información, consulte [mitigación: separador de ruta de acceso de ZipArchiveEntry.FullName](~/docs/framework/migration-guide/mitigation-ziparchiveentry-fullname-path-separator.md).|.NET Framework 4.6.1|  
 |`Switch.System.IO.Ports.`<br/>`DoNotCatchSerialStreamThreadExceptions`|Controla si operativo excepciones del sistema que se producen en subprocesos en segundo plano creados con <xref:System.IO.Ports.SerialPort> secuencias finalizan el proceso.|.NET Framework 4.7.1| 
 |`Switch.System.IO.`<br/>`UseLegacyPathHandling`|Controla si se usa la normalización de la ruta de acceso heredadas y las rutas de acceso URI son compatibles con el <xref:System.IO.Path.GetDirectoryName%2A?displayProperty=nameWithType> y <xref:System.IO.Path.GetPathRoot%2A?displayProperty=nameWithType> métodos. Para obtener más información, consulte [mitigación: ruta de acceso de normalización](~/docs/framework/migration-guide/mitigation-path-normalization.md) y [mitigación: comprueba de dos puntos de ruta de acceso](~/docs/framework/migration-guide/mitigation-path-colon-checks.md).|.NET Framework 4.6.2|  
 |`Switch.System.`<br/>`MemberDescriptorEqualsReturnsFalseIfEquivalent`|Controla si una prueba de igualdad compara el <xref:System.ComponentModel.MemberDescriptor.Category%2A?displayProperty=nameWithType> propiedad de un objeto con el <xref:System.ComponentModel.MemberDescriptor.Description%2A?displayProperty=nameWithType> propiedad del segundo objeto. Para obtener más información, consulte [implementación incorrecta de MemberDescriptor.Equals](~/docs/framework/migration-guide/retargeting/4.6.1-4.6.2.md#incorrect-implementation-of-memberdescriptorequals).|.NET Framework 4.6.2|  
- `Switch.System.Net.`<br/>`DontCheckCertificateEKUs`|Deshabilita la validación de identificador (OID) de objeto de uso mejorado de clave (EKU) de certificados. Una extensión de uso mejorado de clave (EKU) es una colección de identificadores de objeto (OID) que indican las aplicaciones que usan la clave.|.NET Framework 4.6|
+ `Switch.System.Net.`<br/>`DontCheckCertificateEKUs`|Deshabilita la validación de identificador (OID) de objeto de uso mejorado de clave (EKU) de certificados. Una extensión de uso mejorado de clave (EKU) es una colección de identificadores de objetos (OID) que indica las aplicaciones que usan la clave.|.NET Framework 4.6|
 |`Switch.System.Net.`<br/>`DontEnableSchSendAuxRecord`|Deshabilita la mitigación de TLS 1.0 explorador aprovechar con SSL/TLS (BEAST) deshabilitar el uso de SCH_SEND_AUX_RECORD.|.NET Framework 4.6|
 |`Switch.System.Net.`<br/>`DontEnableSchUseStrongCrypto`|Controles si el <xref:System.Net.ServicePointManager?displayProperty=nameWithType> y <xref:System.Net.Security.SslStream?displayProperty=nameWithType> las clases pueden utilizar el protocolo SSL 3.0. Para más información, consulte [Mitigación: protocolos TLS](~/docs/framework/migration-guide/mitigation-tls-protocols.md).|.NET Framework 4.6|
 |`Switch.System.Net.`<br/>`DontEnableSystemDefaultTlsVersions`|Deshabilita las versiones de SystemDefault TLS volver a un valor predeterminado de Tls12, Tls11, Tls.|.NET Framework 4.7|
@@ -100,10 +101,13 @@ Define uno o varios modificadores usados por la clase <xref:System.AppContext> p
 |`Switch.System.ServiceModel.`<br/>`AllowUnsignedToHeader`|Determina si el `TransportWithMessageCredential` modo de seguridad permite los mensajes con unsigned "a" encabezado. Se trata de un modificador opcional. Para obtener más información, consulte [cambios en tiempo de ejecución en .NET Framework 4.6.1](https://msdn.microsoft.com/library/mt592686.aspx#WCF).|.NET Framework 4.6.1| 
 |`Switch.System.ServiceModel.`<br/>`DisableAddressHeaderCollectionValidation`>|Controles si el <xref:System.ServiceModel.Channels.AddressHeaderCollection.%23ctor(System.Collections.Generic.IEnumerable{System.ServiceModel.Channels.AddressHeader})> constructor produce una <xref:System.ArgumentException> si uno de los elementos es `null`.|.NET Framework 4.7.1| 
 |`Switch.System.ServiceModel.`<br />`DisableCngCertificates`|Determina que si el intento de usar X509 certificados con un proveedor de almacenamiento de claves CSG produce una excepción. Para obtener más información, consulte [seguridad de transporte WCF es compatible con los certificados almacenados con CNG](~/docs/framework/migration-guide/retargeting/4.6.1-4.6.2.md#wcf-transport-security-supports-certificates-stored-using-cng).|.NET Framework 4.6.1|
+|`Switch.System.ServiceModel.`<br/>`DisableExplicitConnectionCloseHeader`|Cuando se usa el transporte HTTP con un servicio hospedado por sí mismo, establecer este valor en `true` hace que WCF pasar por alto la adición de una aplicación la `Connection: close` encabezado a los encabezados de respuesta para una solicitud. Establecer este valor en `false` permite agregar la `Connection: close` encabezado a los encabezados de respuesta, lo que resulta en el socket de solicitud de cierre después de que se ha enviado una respuesta.|.NET Framework 4.6|
 |`Switch.System.ServiceModel.`<br/>`DisableOperationContextAsyncFlow`|Interbloqueos de identificadores que son el resultado de la restricción de instancias de un servicio reentrante a un único subproceso de ejecución a la vez.|.NET Framework 4.6.2|
 |`Switch.System.ServiceModel.`<br/>`DisableUsingServicePointManagerSecurityProtocols`|Junto con `Switch.System.Net.DontEnableSchUseStrongCrypto`, determina si la seguridad de mensajes WCF usa TLS 1.1 y 1.2 de TLS.|.NET Framework 4.7 |    
+|`Switch.System.ServiceModel.`<br/>`DontEnableSystemDefaultTlsVersions`|Un valor de `false` establece la configuración predeterminada para permitir que el sistema operativo elegir el protocolo. Un valor de `true` establece el valor predeterminado para el protocolo más alto disponible. (También disponible en la rama de versiones anteriores de framework de mantenimiento)|.NET Framework 4.7.1|
 |`Switch.System.ServiceModel.`<br/>`UseSha1InMsmqEncryptionAlgorithm`|Determina si el mensaje predeterminado que se firma el algoritmo para mensajes de MSMQ en WCF es SHA1 o SHA256.|.NET Framework 4.7.1|
 |`Switch.System.ServiceModel.`<br/>`UseSha1InPipeConnectionGetHashAlgorithm`|Controla si WCF usa un SHA1 o un algoritmo hash SHA256 para generar nombres aleatorios para canalizaciones con nombre.|.NET Framework 4.7.1|
+|`Switch.System.ServiceModel.Internals`<br/>`IncludeNullExceptionMessageInETWTrace`|Controla si se debe producir una [NullReferenceException](xref:System.NullReferenceException) cuando el mensaje de excepción es null.|.NET Framework 4.7|  
 |`Switch.System.ServiceProcess.`<br/>`DontThrowExceptionsOnStart`|Controla si las excepciones producidas en el inicio del servicio se propagan al autor de llamada de la <xref:System.ServiceProcess.ServiceBase.Run%2A?displayProperty=nameWithType> método.|.NET Framework 4.7.1|
 |`Switch.System.Windows.Controls.Grid.`<br/>`StarDefinitionsCanExceedAvailableSpace` |Determina si Windows Presentation Foundation se aplica un algoritmo anterior (`true`) o un nuevo algoritmo (`false`) en la asignación de espacio para \*-columnas. Para más información, vea [Mitigación: Asignación del espacio del control de cuadrícula a columnas de estrella](Mitigation:%20Grid%20Control's%20Space%20Allocation%20to%20Star-columns.md). |.NET Framework 4.7 |
 |`Switch.System.Windows.Controls.TabControl.`<br/>`SelectionPropertiesCanLagBehindSelectionChangedEvent`|Evento de cambio de si un selector o una pestaña de control siempre actualiza el valor de su propiedad value seleccionada antes de generar la selección de controles.|.NET Framework 4.7.1|
@@ -143,5 +147,5 @@ Define uno o varios modificadores usados por la clase <xref:System.AppContext> p
   
 ## <a name="see-also"></a>Vea también  
  <xref:System.AppContext?displayProperty=nameWithType>  
- [\<runtime> Element](runtime-element.md)  
+ [\<en tiempo de ejecución > elemento](runtime-element.md)  
  [Elemento \<configuration>](../configuration-element.md)

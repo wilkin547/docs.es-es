@@ -1,10 +1,11 @@
 ---
-title: "Instrucción Dim (Visual Basic)"
+title: Instrucción Dim (Visual Basic)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vb.Dim
@@ -34,14 +35,14 @@ helpviewer_keywords:
 - Dim statement [Visual Basic], syntax
 - variables [Visual Basic], member and local
 ms.assetid: fae3eca1-f0b2-4400-994b-7aa58a848448
-caps.latest.revision: "72"
+caps.latest.revision: 72
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: a428f8be7b62600ca8fffd3160039c1de911e34e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 36e2d416e4653bfa6fe212b75b92ae2d90775d53
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="dim-statement-visual-basic"></a>Instrucción Dim (Visual Basic)
 Declara y asigna espacio de almacenamiento para una o más variables.  
@@ -97,7 +98,7 @@ Dim [ WithEvents ] variablelist
   
 -   `variablelist`  
   
-     Obligatorio. Lista de variables que se declaran en esta instrucción.  
+     Requerido. Lista de variables que se declaran en esta instrucción.  
   
      `variable [ , variable ... ]`  
   
@@ -107,7 +108,7 @@ Dim [ WithEvents ] variablelist
   
     |Parte|Descripción|  
     |---|---|  
-    |`variablename`|Obligatorio. Nombre de la variable. Vea [nombres de elementos declarados](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|  
+    |`variablename`|Requerido. Nombre de la variable. Vea [nombres de elementos declarados](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|  
     |`boundslist`|Opcional. Lista de límites de cada dimensión de una variable de matriz.|  
     |`New`|Opcional. Crea una nueva instancia de la clase cuando la `Dim` instrucción se ejecuta.|  
     |`datatype`|Opcional. Tipo de datos de la variable.|  
@@ -251,7 +252,7 @@ Dim twoDimensions(,) As Integer = {{0, 1, 2}, {10, 11, 12}}
   
  Para obtener más información sobre los literales de matriz, vea [matrices](../../../visual-basic/programming-guide/language-features/arrays/index.md).  
   
-##  <a name="default"></a>Tipos de datos predeterminados y valores  
+##  <a name="default"></a> Tipos de datos predeterminados y valores  
  En la tabla siguiente se describen los resultados de diversas combinaciones resultantes de especificar el tipo de datos y el inicializador en una instrucción `Dim`.  
   
 |¿Tipo de datos especificado?|¿Inicializador especificado?|Ejemplo|Resultado|  
@@ -261,7 +262,7 @@ Dim twoDimensions(,) As Integer = {{0, 1, 2}, {10, 11, 12}}
 |Sí|No|`Dim qty As Integer`|La variable se inicializa con el valor predeterminado del tipo de datos. Vea la tabla más adelante en esta sección.|  
 |Sí|Sí|`Dim qty  As Integer = 5`|Si el tipo de datos del inicializador no es convertible al tipo de datos especificado, se produce un error en tiempo de compilación.|  
   
- Si especifica un tipo de datos pero no especifica un inicializador, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] inicializa la variable en el valor predeterminado para su tipo de datos. En la tabla siguiente muestra el valor predeterminado de los valores de inicialización.  
+ Si especifica un tipo de datos pero no especifica a un inicializador, Visual Basic inicializa la variable en el valor predeterminado para su tipo de datos. En la tabla siguiente muestra el valor predeterminado de los valores de inicialización.  
   
 |Tipo de datos|Valor predeterminado|  
 |---|---|  
@@ -279,8 +280,8 @@ Dim twoDimensions(,) As Integer = {{0, 1, 2}, {10, 11, 12}}
 |Declaración de procedimiento|Variable inicializada|Detiene la variable existente|  
 |---|---|---|  
 |En un módulo|La primera vez que se llama al procedimiento|Cuando detiene la ejecución del programa|  
-|En una clase o estructura, el procedimiento es`Shared`|La primera vez que se llama al procedimiento en una instancia específica o en la propia clase o estructura|Cuando detiene la ejecución del programa|  
-|En una clase o estructura, no es el procedimiento`Shared`|La primera vez que se llama al procedimiento en una instancia específica|Cuando se libera la instancia para la recopilación de elementos no utilizados (GC)|  
+|En una clase o estructura, el procedimiento es `Shared`|La primera vez que se llama al procedimiento en una instancia específica o en la propia clase o estructura|Cuando detiene la ejecución del programa|  
+|En una clase o estructura, no es el procedimiento `Shared`|La primera vez que se llama al procedimiento en una instancia específica|Cuando se libera la instancia para la recopilación de elementos no utilizados (GC)|  
   
 ## <a name="attributes-and-modifiers"></a>Los atributos y modificadores  
  Puede aplicar atributos solo a variables de miembro, no a las variables locales. Un atributo proporciona información a los metadatos del ensamblado, que no son significativos para el almacenamiento temporal como las variables locales.  

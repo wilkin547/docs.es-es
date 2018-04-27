@@ -1,11 +1,12 @@
 ---
 title: Estructuras de control anidadas (Visual Basic)
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - Visual Basic code, control flow
@@ -16,20 +17,20 @@ helpviewer_keywords:
 - structures [Visual Basic], nested control
 - nested control statements [Visual Basic]
 ms.assetid: cf60b061-65d9-44a8-81f2-b0bdccd23a05
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 22adf4086cd494202a540b2ec16310072329b6ca
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f2c91bcdd741ef75417fe50b0c08bd0f9bd5ff80
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="nested-control-structures-visual-basic"></a>Estructuras de control anidadas (Visual Basic)
 Puede colocar instrucciones de control dentro de otras instrucciones de control, por ejemplo un `If...Then...Else` bloquear dentro de un `For...Next` bucle. Cuando una instrucción de control que se coloca dentro de otra instrucción de control se dice *anidada*.  
   
 ## <a name="nesting-levels"></a>Niveles de anidamiento  
- Controlar las estructuras de [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] pueden anidarse en tantos niveles como desee. Es una práctica habitual que las estructuras anidadas sean más legibles aplicar sangría al cuerpo de cada uno de ellos. El editor de desarrollo integrado (IDE) de entorno lo hace automáticamente.  
+ Estructuras de control en Visual Basic se pueden anidar a tantos niveles como desee. Es una práctica habitual que las estructuras anidadas sean más legibles aplicar sangría al cuerpo de cada uno de ellos. El editor de desarrollo integrado (IDE) de entorno lo hace automáticamente.  
   
  En el ejemplo siguiente, el procedimiento `sumRows` suma los elementos positivos de cada fila de la matriz.  
   
@@ -78,7 +79,7 @@ Next ctl
  ![Diagrama gráfico de anidación no válida](../../../../visual-basic/programming-guide/language-features/control-flow/media/nestexampleinvalid.gif "NestExampleInvalid")  
 Anidamiento no válido de estructuras For y With  
   
- El [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] compilador detecta este tipo de control que se superponen las estructuras y señala un error en tiempo de compilación.  
+ El compilador de Visual Basic detecta estas estructuras de control superpuestas y señala un error en tiempo de compilación.  
   
 ## <a name="see-also"></a>Vea también  
  [Flujo de control](../../../../visual-basic/programming-guide/language-features/control-flow/index.md)  

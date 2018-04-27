@@ -2,9 +2,10 @@
 title: Option Strict Statement
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vb.Strict
@@ -16,14 +17,14 @@ helpviewer_keywords:
 - late binding [Visual Basic]
 - implicit conversions [Visual Basic]
 ms.assetid: 5883e0c1-a920-4274-8e46-b0ff047eaee5
-caps.latest.revision: "49"
+caps.latest.revision: 49
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 1a01edd918ea49c08defddb45bf23c33307e814f
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 0e49c8f64d38b7f8d2dc1a34cf22925c15e3a505
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="option-strict-statement"></a>Option Strict Statement
 Restringe las conversiones de tipos de datos implícitos a conversiones de ampliación únicamente, no permite el enlace más tarde y no permite tipos implícitos que da como resultado un `Object` tipo.  
@@ -68,7 +69,7 @@ Option Strict { On | Off }
 ## <a name="implicit-narrowing-conversion-errors"></a>Errores de conversión de restricción implícitas  
  Los errores de conversión de restricción implícita se producen cuando existe una conversión de tipos de datos implícita que es una conversión de restricción.  
   
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]puede convertir a muchos tipos de datos en otros tipos de datos. Puede producirse una pérdida de datos cuando el valor de un tipo de datos se convierte en un tipo de datos que tiene menor precisión o menor capacidad. Si se produce un error de este tipo una conversión de restricción, se produce un error de tiempo de ejecución. `Option Strict`garantiza la notificación en tiempo de compilación de estas conversiones de restricción para que pueda evitarlas. Para obtener más información, consulte [conversiones implícitas y explícitas](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md) y [conversiones de ampliación y de restricción](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md).  
+ Visual Basic puede convertir a muchos tipos de datos a otros tipos de datos. Puede producirse una pérdida de datos cuando el valor de un tipo de datos se convierte en un tipo de datos que tiene menor precisión o menor capacidad. Si se produce un error de este tipo una conversión de restricción, se produce un error de tiempo de ejecución. `Option Strict` garantiza la notificación en tiempo de compilación de estas conversiones de restricción para que pueda evitarlas. Para obtener más información, consulte [conversiones implícitas y explícitas](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md) y [conversiones de ampliación y de restricción](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md).  
   
  Las conversiones que pueden producir errores incluyen conversiones implícitas que se producen en las expresiones. Para obtener más información, vea los temas siguientes:  
   
@@ -120,7 +121,7 @@ Option Strict { On | Off }
   
 2.  En el **compilar** pestaña, establezca el valor de la **Option Strict** cuadro.  
   
-###  <a name="conditions"></a>Para establecer configuraciones de advertencia en el IDE  
+###  <a name="conditions"></a> Para establecer configuraciones de advertencia en el IDE  
  Cuando se usa el [página compilación, Diseñador de proyectos (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) en lugar de un `Option Strict` (instrucción), tiene un control adicional sobre las condiciones que generan errores. El **configuraciones de advertencia** sección de la **página compilación** tiene una configuración que se corresponde con las tres condiciones que producen un error en tiempo de compilación cuando `Option Strict` se encuentra en. Estas opciones son las siguientes:  
   
 -   **Conversión implícita**  

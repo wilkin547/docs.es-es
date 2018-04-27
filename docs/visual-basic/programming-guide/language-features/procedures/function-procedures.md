@@ -1,11 +1,12 @@
 ---
-title: "Procedimientos de función (Visual Basic)"
-ms.custom: 
+title: Procedimientos de función (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - Function procedures
@@ -15,17 +16,17 @@ helpviewer_keywords:
 - procedures [Visual Basic], Function procedures
 - syntax [Visual Basic], function procedures
 ms.assetid: 1b9f632c-553b-4cb6-920a-ded117ead8c0
-caps.latest.revision: "27"
+caps.latest.revision: 27
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 9520a6555e65fd801a5c40d40748028e04a10739
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: ad4f55a9dd9fbd68c36dd53a01f97ddb03c2bb9b
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="function-procedures-visual-basic"></a>Procedimientos de función (Visual Basic)
-A `Function` procedimiento es una serie de [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] instrucciones delimitadas por la `Function` y `End Function` las instrucciones. El `Function` procedimiento realiza una tarea y, a continuación, devuelve el control al código de llamada. Cuando devuelve el control, también devuelve un valor para el código de llamada.  
+A `Function` procedimiento es una serie de instrucciones de Visual Basic delimitadas por la `Function` y `End Function` las instrucciones. El `Function` procedimiento realiza una tarea y, a continuación, devuelve el control al código de llamada. Cuando devuelve el control, también devuelve un valor para el código de llamada.  
   
  Cada vez que se llama al procedimiento, sus instrucciones que se ejecuta, a partir de la primera instrucción ejecutable tras la `Function` instrucción y terminando con la primera `End Function`, `Exit Function`, o `Return` encontrada una instrucción.  
   
@@ -91,11 +92,11 @@ End Function
   
  La sintaxis de una llamada a un `Function` procedimiento es el siguiente:  
   
- *valor l*`=`*functionname* `[(` *argumentlist*    `)]`  
+ *valor l*`=`*functionname* `[(` *argumentlist*  `)]`  
   
- `If ((`*functionname* `[(` *argumentlist* `)] / 3) <=` *expresión*  `) Then`  
+ `If ((` *functionname* `[(` *argumentlist* `)] / 3) <=` *expresión*  `) Then`  
   
- Cuando se llama a un `Function` procedimiento, no es necesario utilizar su valor devuelto. Si no lo hace, se llevan a cabo todas las acciones de la función, pero se omite el valor devuelto. <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A>se suele denominar de esta manera.  
+ Cuando se llama a un `Function` procedimiento, no es necesario utilizar su valor devuelto. Si no lo hace, se llevan a cabo todas las acciones de la función, pero se omite el valor devuelto. <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A> se suele denominar de esta manera.  
   
 ### <a name="illustration-of-declaration-and-call"></a>Ilustración de declaración y llamada  
  El siguiente `Function` procedimiento calcula el lado más largo, o la hipotenusa de un triángulo rectángulo, dado los valores para los otros dos lados.  

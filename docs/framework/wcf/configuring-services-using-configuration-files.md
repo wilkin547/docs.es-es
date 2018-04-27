@@ -1,35 +1,35 @@
 ---
-title: "Configuración de servicios mediante archivos de configuración"
-ms.custom: 
+title: Configuración de servicios mediante archivos de configuración
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - configuring services [WCF]
 ms.assetid: c9c8cd32-2c9d-4541-ad0d-16dff6bd2a00
-caps.latest.revision: 
+caps.latest.revision: 29
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 93dc8119e76f5c9cbff5c91a7e5d0cde3b0072f2
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: e5ad91fa70a743b7135648cb10c7c519e3559bdb
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="configuring-services-using-configuration-files"></a>Configuración de servicios mediante archivos de configuración
 Configurar un servicio de [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] con un archivo de configuración le da la flexibilidad de proporcionar datos de extremo y comportamiento del servicio en el punto de implementación en lugar de hacerlo en la fase de diseño. En este tema se describen las principales técnicas disponibles.  
   
  Se puede configurar un servicio de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] mediante la tecnología de configuración [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] . Por lo general, los elementos XML se agregan al archivo Web.config para un sitio de Internet Information Services (IIS) que hospeda un servicio [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] . Los elementos le permiten cambiar detalles como las direcciones de extremos (las direcciones reales utilizadas para comunicarse con el servicio) equipo a equipo. Además, [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] incluye varios elementos proporcionados por el sistema que le permiten seleccionar rápidamente las características más básicas de un servicio. A partir de [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)], [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] incluye un nuevo modelo de configuración predeterminado que simplifica los requisitos de configuración de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] . Si no se proporciona ninguna configuración de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] para un servicio concreto, el tiempo de ejecución lo configurará automáticamente con varios extremos estándar y un enlace/comportamiento predeterminado. En la práctica, escribir la configuración es una parte principal de la programación de aplicaciones de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] .  
   
- [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Configurar enlaces para los servicios](../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md). [!INCLUDE[crlist](../../../includes/crlist-md.md)] de los elementos más usados, consulte [System-Provided Bindings](../../../docs/framework/wcf/system-provided-bindings.md). [!INCLUDE[crabout](../../../includes/crabout-md.md)] los puntos de conexión, enlaces y comportamientos predeterminados, consulte [Simplified Configuration](../../../docs/framework/wcf/simplified-configuration.md) y [Simplified Configuration for WCF Services](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
+ [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Configuración de enlaces para servicios](../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md). Para una lista de la mayor parte de uso general elementos, vea [enlaces proporcionados](../../../docs/framework/wcf/system-provided-bindings.md). [!INCLUDE[crabout](../../../includes/crabout-md.md)] los puntos de conexión, enlaces y comportamientos predeterminados, consulte [Simplified Configuration](../../../docs/framework/wcf/simplified-configuration.md) y [Simplified Configuration for WCF Services](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
   
 > [!IMPORTANT]
 >  Al implementar escenarios en paralelo con dos versiones diferentes de un servicio, es necesario especificar los nombres parciales de los ensamblados a los que se hace referencia en los archivos de configuración. Esto se debe a que el archivo de configuración se comparte entre todas las versiones de un servicio y se podrían estar ejecutando con versiones diferentes de .NET Framework.  
@@ -82,7 +82,7 @@ Configurar un servicio de [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] c
 ### <a name="the-services-element"></a>El \<services > elemento  
  El elemento `services` contiene las especificaciones para todos los servicios que la aplicación hospeda. A partir del modelo de configuración simplificado de [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], esta sección es opcional.  
   
- [\<services>](../../../docs/framework/configure-apps/file-schema/wcf/services.md)  
+ [\<Servicios >](../../../docs/framework/configure-apps/file-schema/wcf/services.md)  
   
 ### <a name="the-service-element"></a>El \<servicio > elemento  
  Cada elemento service tiene estos atributos:  
@@ -91,7 +91,7 @@ Configurar un servicio de [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] c
   
 -   `behaviorConfiguration`. Especifica el nombre de uno de los elementos `behavior` encontrados en el elemento `behaviors` . El comportamiento especificado rige las acciones como si el servicio permitiese la suplantación. Si su valor es el nombre vacío o no se proporciona ningún atributo `behaviorConfiguration` , se agrega al servicio el conjunto predeterminado de comportamientos de servicio.  
   
--   [\<service>](../../../docs/framework/configure-apps/file-schema/wcf/service.md)  
+-   [\<servicio >](../../../docs/framework/configure-apps/file-schema/wcf/service.md)  
   
 ### <a name="the-endpoint-element"></a>El \<extremo > elemento  
  Cada extremo requiere una dirección, un enlace y un contrato, que están representados por los atributos siguientes:  
@@ -109,24 +109,24 @@ Configurar un servicio de [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] c
 ### <a name="the-bindings-element"></a>El \<enlaces > elemento  
  El elemento `bindings` contiene las especificaciones para todos los enlaces que puede utilizar cualquier extremo definido en cualquier servicio.  
   
- [\<bindings>](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)  
+ [\<enlaces >](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)  
   
 ### <a name="the-binding-element"></a>El \<enlace > elemento  
  El elemento `binding` contenidos en el elemento `bindings` pueden ser uno de los enlaces proporcionados por el sistema (consulte [System-Provided Bindings](../../../docs/framework/wcf/system-provided-bindings.md)) o un enlace personalizado (consulte [Custom Bindings](../../../docs/framework/wcf/extending/custom-bindings.md)). El elemento `binding` tiene un atributo `name` que pone en correlación el enlace con el extremo especificado en el atributo `bindingConfiguration` del elemento `endpoint` . Si no se especifica ningún nombre, dicho enlace corresponde al enlace predeterminado de ese tipo de enlace.  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)]configurar los servicios y clientes, consulte [configuración de Windows Communication Foundation Applications](http://msdn.microsoft.com/library/13cb368e-88d4-4c61-8eed-2af0361c6d7a).  
+ [!INCLUDE[crabout](../../../includes/crabout-md.md)] configurar los servicios y clientes, consulte [configuración de Windows Communication Foundation Applications](http://msdn.microsoft.com/library/13cb368e-88d4-4c61-8eed-2af0361c6d7a).  
   
- [\<binding>](../../../docs/framework/misc/binding.md)  
+ [\<enlace >](../../../docs/framework/misc/binding.md)  
   
 ### <a name="the-behaviors-element"></a>El \<comportamientos > elemento  
  Éste es un elemento contenedor para los elementos `behavior` que definen los comportamientos de un servicio.  
   
- [\<behaviors>](../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)  
+ [\<comportamientos >](../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)  
   
 ### <a name="the-behavior-element"></a>La \<comportamiento > elemento  
  Cada elemento `behavior` lo identifica un atributo `name` y proporciona un comportamiento proporcionado por el sistema como <`throttling`> o bien, un comportamiento personalizado. Si no se especifica ningún nombre, dicho elemento de comportamiento corresponde al servicio predeterminado o al comportamiento de extremo.  
   
- [\<behavior>](../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md)  
+ [\<comportamiento >](../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md)  
   
 ## <a name="how-to-use-binding-and-behavior-configurations"></a>Uso de las configuraciones de comportamientos y enlaces  
  [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hace fácil compartir las configuraciones entre extremos utilizando un sistema de referencia en la configuración. En lugar de asignar directamente los valores de configuración a un extremo, los valores de configuración relacionados con el enlace se agrupan en elementos `bindingConfiguration` de la sección `<binding>` . Una configuración de enlace es un grupo con nombre de valores en un enlace. Entonces, los extremos pueden hacer referencia a `bindingConfiguration` por nombre.  
@@ -278,5 +278,5 @@ Configurar un servicio de [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] c
 ## <a name="see-also"></a>Vea también  
  [Configuración simplificada](../../../docs/framework/wcf/simplified-configuration.md)  
  [Configurar aplicaciones de Windows Communication Foundation](http://msdn.microsoft.com/library/13cb368e-88d4-4c61-8eed-2af0361c6d7a)  
- [\<service>](../../../docs/framework/configure-apps/file-schema/wcf/service.md)  
- [\<binding>](../../../docs/framework/misc/binding.md)
+ [\<servicio >](../../../docs/framework/configure-apps/file-schema/wcf/service.md)  
+ [\<enlace >](../../../docs/framework/misc/binding.md)

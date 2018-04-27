@@ -16,11 +16,11 @@ ms.author: douglasl
 manager: craigg
 ms.workload:
 - dotnet
-ms.openlocfilehash: 76d8765be1dc24f4b8c457644595796680c2f2c3
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: 3939abaf376100e09d244afdb32662729a990ff7
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="connection-string-syntax"></a>Sintaxis de cadenas de conexión
 Cada proveedor de datos .NET Framework tiene un objeto `Connection` que hereda de la clase <xref:System.Data.Common.DbConnection>, así como una propiedad <xref:System.Data.Common.DbConnection.ConnectionString%2A> específica del proveedor. La sintaxis de la cadena de conexión específica de cada proveedor se indica en su propiedad `ConnectionString`. En la tabla siguiente se muestran los cuatro proveedores de datos que se incluyen en .NET Framework.  
@@ -98,7 +98,7 @@ Data Source=MySqlServer\MSSQL1;"
 A la hora de crear una cadena de conexión, también puede establecer la propiedad <xref:System.Data.SqlClient.SqlConnectionStringBuilder.DataSource%2A> del `SqlConnectionStringBuilder` en el nombre de instancia. La propiedad <xref:System.Data.SqlClient.SqlConnection.DataSource%2A> de un objeto <xref:System.Data.SqlClient.SqlConnection> es de solo lectura.  
   
 ### <a name="type-system-version-changes"></a>Cambios en Type System Version  
- La palabra clave `Type System Version` en un objeto <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A?displayProperty=nameWithType> especifica la representación del lado cliente de los tipos de [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]. Para obtener más información sobre la palabra clave <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A?displayProperty=nameWithType>, vea `Type System Version`.  
+ El `Type System Version` palabra clave en un <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A?displayProperty=nameWithType> especifica la representación del lado cliente de tipos de SQL Server. Para obtener más información sobre la palabra clave <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A?displayProperty=nameWithType>, vea `Type System Version`.  
   
 ## <a name="connecting-and-attaching-to-sql-server-express-user-instances"></a>Concatenar y adjuntar a instancias de usuario de SQL Server Express  
  Las instancias de usuario son una característica de SQL Server Express. Permiten que un usuario que ejecuta una cuenta de Windows local y con privilegios mínimos adjunte y ejecute una base de datos de SQL Server sin necesidad de tener privilegios administrativos. Una instancia de usuario se ejecuta con las credenciales de Windows del usuario, no como un servicio.  
@@ -106,7 +106,7 @@ A la hora de crear una cadena de conexión, también puede establecer la propied
  Para obtener más información sobre cómo trabajar con instancias de usuario, consulte [instancias de SQL Server Express usuario](../../../../docs/framework/data/adonet/sql/sql-server-express-user-instances.md).  
   
 ## <a name="using-trustservercertificate"></a>Usar TrustServerCertificate  
- La palabra clave `TrustServerCertificate` solo es válida al conectar a una instancia [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] con un certificado válido. Cuando `TrustServerCertificate` se establece en `true`, la capa de transporte utilizará SSL para cifrar el canal y evitar recorrer la cadena de certificados para validar la confianza.  
+ El `TrustServerCertificate` palabra clave es válida sólo cuando se conecta a una instancia de SQL Server con un certificado válido. Cuando `TrustServerCertificate` se establece en `true`, la capa de transporte utilizará SSL para cifrar el canal y evitar recorrer la cadena de certificados para validar la confianza.  
   
 ```  
 "TrustServerCertificate=true;"   

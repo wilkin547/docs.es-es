@@ -1,24 +1,26 @@
 ---
-title: "Generar SQL a partir de árboles de comandos: procedimientos recomendados"
-ms.custom: 
+title: 'Generar SQL a partir de árboles de comandos: procedimientos recomendados'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 71ef6a24-4c4f-4254-af3a-ffc0d855b0a8
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: d68194ab83a6606337a33668470411ed8b1c6957
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 037d1eaa8d781d012cde7a1bd3b08aa7003edd77
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="generating-sql-from-command-trees---best-practices"></a>Generar SQL a partir de árboles de comandos: procedimientos recomendados
 Los árboles de comandos de consulta de salida crean modelos muy similares a consultas expresables en SQL. Sin embargo, hay ciertos retos comunes para los programadores de proveedores a la hora de generar SQL a partir de un árbol de comandos de salida. En este tema se describen estos retos. En el tema siguiente, el proveedor de ejemplo muestra cómo actuar ante estos retos.  
@@ -147,7 +149,7 @@ ON b.y = d.z
  Las expresiones se pueden reutilizar en el árbol de comandos de consulta pasado por [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. No suponga que cada expresión aparece una sola vez en el árbol de comandos de consulta.  
   
 ## <a name="mapping-primitive-types"></a>Asignar tipos primitivos  
- Al asignar tipos conceptuales (EDM) a los tipos de proveedor, debe asignar al tipo más ancho (Int32) para que quepan todos los valores posibles. Evite además la asignación a los tipos que no se pueden utilizar para muchas operaciones, como los tipos BLOB (por ejemplo, `ntext` en [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]).  
+ Al asignar tipos conceptuales (EDM) a los tipos de proveedor, debe asignar al tipo más ancho (Int32) para que quepan todos los valores posibles. Evite además la asignación a tipos que no se puede utilizar para muchas operaciones, como los tipos BLOB (por ejemplo, `ntext` en SQL Server).  
   
 ## <a name="see-also"></a>Vea también  
  [Generación de SQL](../../../../../docs/framework/data/adonet/ef/sql-generation.md)

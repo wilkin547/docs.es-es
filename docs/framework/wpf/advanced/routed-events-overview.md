@@ -1,12 +1,13 @@
 ---
-title: "Información general sobre eventos enrutados"
-ms.custom: 
+title: Información general sobre eventos enrutados
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -22,16 +23,17 @@ helpviewer_keywords:
 - button set [WPF], grouped
 - bubbling [WPF]
 ms.assetid: 1a2189ae-13b4-45b0-b12c-8de2e49c29d2
-caps.latest.revision: "29"
+caps.latest.revision: 29
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 22ce2611afa2a3b2b06b7d378479e5ffd2f744f9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 896f3b852c00b9c7cd031710dbdaa00974428344
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="routed-events-overview"></a>Información general sobre eventos enrutados
 En este tema se describe el concepto de eventos enrutados en [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. En el tema se define la terminología de los eventos enrutados, se describe cómo se enrutan a través de un árbol de elementos, se resume cómo controlar los eventos enrutados y se explica cómo crear sus propios eventos enrutados personalizados.
@@ -127,12 +129,12 @@ En este tema se describe el concepto de eventos enrutados en [!INCLUDE[TLA#tla_w
   
  [!code-xaml[EventOvwSupport#SimplestSyntax](../../../../samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/default.xaml#simplestsyntax)]  
   
- `b1SetColor`es el nombre del controlador implementado que contiene el código que controla el <xref:System.Windows.Controls.Primitives.ButtonBase.Click> eventos. `b1SetColor`debe tener la misma firma que el <xref:System.Windows.RoutedEventHandler> delegado, que es el delegado de controlador de eventos para el <xref:System.Windows.Controls.Primitives.ButtonBase.Click> eventos. El primer parámetro de todos los delegados de controlador de eventos enrutados especifica el elemento al que se agrega el controlador de eventos y el segundo parámetro especifica los datos para el evento.  
+ `b1SetColor` es el nombre del controlador implementado que contiene el código que controla el <xref:System.Windows.Controls.Primitives.ButtonBase.Click> eventos. `b1SetColor` debe tener la misma firma que el <xref:System.Windows.RoutedEventHandler> delegado, que es el delegado de controlador de eventos para el <xref:System.Windows.Controls.Primitives.ButtonBase.Click> eventos. El primer parámetro de todos los delegados de controlador de eventos enrutados especifica el elemento al que se agrega el controlador de eventos y el segundo parámetro especifica los datos para el evento.  
   
 [!code-csharp[EventOvwSupport#SimpleHandlerA](../../../../samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/default.xaml.cs#simplehandlera)]
 [!code-vb[EventOvwSupport#SimpleHandlerA](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/EventOvwSupport/visualbasic/default.xaml.vb#simplehandlera)]  
   
- <xref:System.Windows.RoutedEventHandler>es el delegado de controlador de eventos enrutados básico. Para los eventos enrutados especializados para ciertos controles o escenarios, los delegados que deben usarse para los controladores de eventos enrutados también podrían volverse más especializados, de forma que puedan transmitir datos de evento especializados. Por ejemplo, en un escenario de entrada común, puede controlar un <xref:System.Windows.UIElement.DragEnter> evento enrutado. El controlador debe implementar la <xref:System.Windows.DragEventHandler> delegar. Al usar el delegado más específico, puede procesar el <xref:System.Windows.DragEventArgs> en el controlador y leer la <xref:System.Windows.DragEventArgs.Data%2A> propiedad, que contiene la carga del Portapapeles de la operación de arrastre.  
+ <xref:System.Windows.RoutedEventHandler> es el delegado de controlador de eventos enrutados básico. Para los eventos enrutados especializados para ciertos controles o escenarios, los delegados que deben usarse para los controladores de eventos enrutados también podrían volverse más especializados, de forma que puedan transmitir datos de evento especializados. Por ejemplo, en un escenario de entrada común, puede controlar un <xref:System.Windows.UIElement.DragEnter> evento enrutado. El controlador debe implementar la <xref:System.Windows.DragEventHandler> delegar. Al usar el delegado más específico, puede procesar el <xref:System.Windows.DragEventArgs> en el controlador y leer la <xref:System.Windows.DragEventArgs.Data%2A> propiedad, que contiene la carga del Portapapeles de la operación de arrastre.  
   
  Para obtener un ejemplo completo de cómo agregar un controlador de eventos a un elemento mediante [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], vea [Cómo: Controlar un evento enrutado](../../../../docs/framework/wpf/advanced/how-to-handle-a-routed-event.md).  
   
@@ -141,18 +143,18 @@ En este tema se describe el concepto de eventos enrutados en [!INCLUDE[TLA#tla_w
  [!code-csharp[EventOvwSupport#AddHandlerCode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/default.xaml.cs#addhandlercode)]
  [!code-vb[EventOvwSupport#AddHandlerCode](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/EventOvwSupport/visualbasic/default.xaml.vb#addhandlercode)]  
   
- En el siguiente ejemplo se muestra la sintaxis de operador de [!INCLUDE[TLA#tla_cshrp](../../../../includes/tlasharptla-cshrp-md.md)] ([!INCLUDE[TLA2#tla_visualb](../../../../includes/tla2sharptla-visualb-md.md)] tiene una sintaxis de operador ligeramente diferente debido al modo en que controla la desreferenciación):  
+ El siguiente ejemplo se muestra en C# sintaxis del operador (Visual Basic tiene sintaxis del operador ligeramente diferente debido a su propio control de desreferenciar):  
   
  [!code-csharp[EventOvwSupport#AddHandlerPlusEquals](../../../../samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/default.xaml.cs#addhandlerplusequals)]
  [!code-vb[EventOvwSupport#AddHandlerPlusEquals](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/EventOvwSupport/visualbasic/default.xaml.vb#addhandlerplusequals)]  
   
  Para obtener un ejemplo de cómo agregar un controlador de eventos en el código, vea [Agregar un controlador de eventos mediante código](../../../../docs/framework/wpf/advanced/how-to-add-an-event-handler-using-code.md).  
   
- Si está usando [!INCLUDE[TLA2#tla_visualb](../../../../includes/tla2sharptla-visualb-md.md)], también puede usar la palabra clave `Handles` para agregar controladores como parte de las declaraciones de controlador. Para más información, vea [Control de eventos en Visual Basic y WPF](../../../../docs/framework/wpf/advanced/visual-basic-and-wpf-event-handling.md).  
+ Si se utiliza Visual Basic, también puede usar el `Handles` palabra clave para agregar controladores como parte de las declaraciones del controlador. Para más información, vea [Control de eventos en Visual Basic y WPF](../../../../docs/framework/wpf/advanced/visual-basic-and-wpf-event-handling.md).  
   
 <a name="concept_handled"></a>   
 ### <a name="the-concept-of-handled"></a>El concepto de controlado  
- Todos los eventos enrutados comparten una evento datos clase base común, <xref:System.Windows.RoutedEventArgs>. <xref:System.Windows.RoutedEventArgs>define la <xref:System.Windows.RoutedEventArgs.Handled%2A> propiedad, que toma un valor booleano. El propósito de la <xref:System.Windows.RoutedEventArgs.Handled%2A> propiedad es permitir que cualquier controlador de eventos a lo largo de la ruta para marcar el evento enrutado como *controla*, estableciendo el valor de <xref:System.Windows.RoutedEventArgs.Handled%2A> a `true`. Una vez procesados por el controlador de un elemento a lo largo de la ruta, se informa de nuevo sobre los datos de evento compartidos a cada agente de escucha a lo largo de la ruta.  
+ Todos los eventos enrutados comparten una evento datos clase base común, <xref:System.Windows.RoutedEventArgs>. <xref:System.Windows.RoutedEventArgs> define la <xref:System.Windows.RoutedEventArgs.Handled%2A> propiedad, que toma un valor booleano. El propósito de la <xref:System.Windows.RoutedEventArgs.Handled%2A> propiedad es permitir que cualquier controlador de eventos a lo largo de la ruta para marcar el evento enrutado como *controla*, estableciendo el valor de <xref:System.Windows.RoutedEventArgs.Handled%2A> a `true`. Una vez procesados por el controlador de un elemento a lo largo de la ruta, se informa de nuevo sobre los datos de evento compartidos a cada agente de escucha a lo largo de la ruta.  
   
  El valor de <xref:System.Windows.RoutedEventArgs.Handled%2A> afecta a cómo se notifica un evento enrutado o se procesan cuando recorre más a lo largo de la ruta. Si <xref:System.Windows.RoutedEventArgs.Handled%2A> es `true` en el evento datos para un evento enrutado y, a continuación, los controladores que realizan escuchas para ese evento enrutado en otros elementos generalmente están ya no se invoca para esa instancia concreta del evento. Esto se cumple tanto para los controladores adjuntos en [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] como para los controladores agregados mediante sintaxis de adjuntar controladores de eventos específicas del lenguaje como `+=` o `Handles`. Para los escenarios más comunes de controlador, marcar un evento como controlado estableciendo <xref:System.Windows.RoutedEventArgs.Handled%2A> a `true` "dejará de" enrutamiento para una ruta de tunelización o una ruta de propagación y también para cualquier evento que se controla en un punto de la ruta mediante un controlador de clase.  
   
@@ -200,7 +202,7 @@ En este tema se describe el concepto de eventos enrutados en [!INCLUDE[TLA#tla_w
   
  [!code-xaml[EventOvwSupport#GroupButton](../../../../samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/default.xaml#groupbutton)]  
   
- En este caso, el agente de escucha del elemento primario donde se agrega el controlador es un <xref:System.Windows.Controls.StackPanel>. Sin embargo, agrega un controlador para un evento enrutado que se ha declarado y se producirá por la <xref:System.Windows.Controls.Button> clase (<xref:System.Windows.Controls.Primitives.ButtonBase> realmente, pero disponible para <xref:System.Windows.Controls.Button> a través de la herencia). <xref:System.Windows.Controls.Button>"posee" el evento, pero los controladores de eventos enrutados sistema permite cualquier evento enrutado que se va a asociarse a cualquier <xref:System.Windows.UIElement> o <xref:System.Windows.ContentElement> agente de escucha de instancia que en caso contrario, se puede adjuntar agentes de escucha para un [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] eventos. El espacio de nombres xmlns predeterminado para estos nombres de atributo de evento calificados suele ser el espacio de nombres xmlns de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] predeterminado, pero también se pueden especificar espacios de nombres con prefijos para los eventos enrutados personalizados. Para más información sobre xmlns, vea [Espacios de nombres y asignación de espacios de nombres XAML para WPF](../../../../docs/framework/wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md).  
+ En este caso, el agente de escucha del elemento primario donde se agrega el controlador es un <xref:System.Windows.Controls.StackPanel>. Sin embargo, agrega un controlador para un evento enrutado que se ha declarado y se producirá por la <xref:System.Windows.Controls.Button> clase (<xref:System.Windows.Controls.Primitives.ButtonBase> realmente, pero disponible para <xref:System.Windows.Controls.Button> a través de la herencia). <xref:System.Windows.Controls.Button> "posee" el evento, pero los controladores de eventos enrutados sistema permite cualquier evento enrutado que se va a asociarse a cualquier <xref:System.Windows.UIElement> o <xref:System.Windows.ContentElement> agente de escucha de instancia que en caso contrario, se puede adjuntar agentes de escucha para un [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] eventos. El espacio de nombres xmlns predeterminado para estos nombres de atributo de evento calificados suele ser el espacio de nombres xmlns de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] predeterminado, pero también se pueden especificar espacios de nombres con prefijos para los eventos enrutados personalizados. Para más información sobre xmlns, vea [Espacios de nombres y asignación de espacios de nombres XAML para WPF](../../../../docs/framework/wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md).  
   
 <a name="how_event_processing_works"></a>   
 ## <a name="wpf-input-events"></a>Eventos de entrada de WPF  

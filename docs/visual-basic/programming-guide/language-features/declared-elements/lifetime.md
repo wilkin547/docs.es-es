@@ -1,11 +1,12 @@
 ---
-title: "Período de duración en Visual Basic"
-ms.custom: 
+title: Período de duración en Visual Basic
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - static variables [Visual Basic], lifetime
@@ -16,14 +17,14 @@ helpviewer_keywords:
 - lifetime [Visual Basic], Visual Basic
 - lifetime [Visual Basic]
 ms.assetid: bd91e390-690a-469a-9946-8dca70bc14e7
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 999490885571889b2de911cc14754f8db257d0af
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 14a75a2c3af52f63051d02df9341faf19c3b76c7
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="lifetime-in-visual-basic"></a>Período de duración en Visual Basic
 El *duración* de un elemento declarado es el período de tiempo durante el cual está disponible para su uso. Las variables son los únicos elementos que tienen duración. Para ello, el compilador trata los parámetros de procedimiento y función devuelve como casos especiales de variables. La duración de una variable representa el período de tiempo durante el cual puede contener un valor. Su valor puede cambiar durante su vida útil, pero siempre contiene un valor.  
@@ -41,7 +42,7 @@ El *duración* de un elemento declarado es el período de tiempo durante el cual
  Las variables declaradas dentro de un bloque dentro de un procedimiento (como un `For` bucle) se inicializan en la entrada al procedimiento. Estas inicializaciones tienen efecto si o no alguna vez ejecuta el código del bloque.  
   
 ## <a name="end-of-lifetime"></a>Final del período de duración  
- Cuando un procedimiento finaliza, no se conservan los valores de las variables locales, y [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] recupera su memoria. La próxima vez que se llama al procedimiento, todas sus variables locales se crean de nuevo y reinicializar.  
+ Cuando un procedimiento finaliza, no se conservan los valores de sus variables locales y Visual Basic recupera su memoria. La próxima vez que se llama al procedimiento, todas sus variables locales se crean de nuevo y reinicializar.  
   
  Cuando finaliza una instancia de una clase o estructura, sus variables no compartidas pierden su memoria y sus valores. Cada nueva instancia de la clase o estructura crea y reinicializa sus variables no compartidas. Sin embargo, `Shared` variables se conservan hasta que la aplicación deje de ejecutarse.  
   
@@ -55,7 +56,7 @@ El *duración* de un elemento declarado es el período de tiempo durante el cual
 |En una instancia de una clase, no `Shared` (el procedimiento es un miembro de instancia)|La primera vez que se llama al procedimiento en la instancia específica|Cuando se libera la instancia para la recopilación de elementos no utilizados (GC)|  
   
 ## <a name="static-variables-of-the-same-name"></a>Variables estáticas del mismo nombre  
- Puede declarar variables estáticas con el mismo nombre en más de un procedimiento. Si lo hace, el [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] compilador considera que cada variable es un elemento independiente. La inicialización de una de estas variables no afecta a los valores de las demás. Lo mismo se aplica si se define un procedimiento con un conjunto de sobrecargas y se declara una variable estática con el mismo nombre en cada sobrecarga.  
+ Puede declarar variables estáticas con el mismo nombre en más de un procedimiento. Si lo hace, el compilador de Visual Basic considera que cada variable es un elemento independiente. La inicialización de una de estas variables no afecta a los valores de las demás. Lo mismo se aplica si se define un procedimiento con un conjunto de sobrecargas y se declara una variable estática con el mismo nombre en cada sobrecarga.  
   
 ## <a name="containing-elements-for-static-variables"></a>Que contiene los elementos para las Variables estáticas  
  Puede declarar una variable local estática dentro de una clase, es decir, dentro de un procedimiento de esa clase. Sin embargo, no puede declarar una variable local estática dentro de una estructura, como un miembro de estructura o como una variable local de un procedimiento dentro de esa estructura.  

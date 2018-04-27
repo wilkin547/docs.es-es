@@ -1,12 +1,13 @@
 ---
-title: "Cómo: Crear una interfaz de usuario de varios paneles con formularios Windows Forms"
-ms.custom: 
+title: 'Cómo: Crear una interfaz de usuario de varios paneles con formularios Windows Forms'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -19,16 +20,17 @@ helpviewer_keywords:
 - TreeView control [Windows Forms], examples
 - Splitter control [Windows Forms], examples
 ms.assetid: e79f6bcc-3740-4d1e-b46a-c5594d9b7327
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f29fb5fc4f873431471cd1c037446a5157d5f07c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 6011eb2d49e537a2f5dfc540611af40a30b3e721
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-create-a-multipane-user-interface-with-windows-forms"></a>Cómo: Crear una interfaz de usuario de varios paneles con formularios Windows Forms
 En el siguiente procedimiento, creará una interfaz de usuario de varios paneles que es similar al utilizado en Microsoft Outlook, con un **carpeta** lista, un **mensajes** panel y un **devistaprevia** panel. Esta disposición se consigue principalmente mediante el acoplamiento de controles con el formulario.  
@@ -175,7 +177,7 @@ En el siguiente procedimiento, creará una interfaz de usuario de varios paneles
     }  
     ```  
   
-3.  En [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)], agregue una llamada al procedimiento que acaba de crear en el `New()` procedimiento. En [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)], agregue esta línea de código al constructor de la clase de formulario.  
+3.  En Visual Basic, agregue una llamada al procedimiento que acaba de crear en el `New()` procedimiento. En Visual C#, agregue esta línea de código al constructor de la clase de formulario.  
   
     ```vb  
     ' Add this to the New procedure.  

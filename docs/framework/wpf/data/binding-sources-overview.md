@@ -1,28 +1,30 @@
 ---
-title: "Información general sobre orígenes de enlaces"
-ms.custom: 
+title: Información general sobre orígenes de enlaces
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - binding data [WPF], binding sources
 - data binding [WPF], binding source
 - binding sources [WPF]
 ms.assetid: 2df2cd11-6aac-4bdf-ab7b-ea5f464cd5ca
-caps.latest.revision: "25"
+caps.latest.revision: 25
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6b603599232a5cb4d33e2b7c9ad00e7ab3a24649
-ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
+ms.workload:
+- dotnet
+ms.openlocfilehash: 94238ba34976ad5971e7181aa3377e38ab0e4659
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="binding-sources-overview"></a>Información general sobre orígenes de enlaces
 En el enlace de datos, el objeto de origen de enlace hace referencia al objeto de que se obtienen los datos. En este tema se describen los tipos de objetos que se pueden usar como origen de enlace.  
@@ -55,7 +57,7 @@ En el enlace de datos, el objeto de origen de enlace hace referencia al objeto d
 ### <a name="other-characteristics"></a>Otras características  
  En la lista siguiente se proporcionan otros puntos importantes a tener en cuenta:  
   
--   Si desea crear el objeto en [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], la clase debe tener un constructor predeterminado. En algunos lenguajes [!INCLUDE[TLA2#tla_net](../../../../includes/tla2sharptla-net-md.md)], como [!INCLUDE[TLA#tla_cshrp](../../../../includes/tlasharptla-cshrp-md.md)], el constructor predeterminado puede crearse automáticamente.  
+-   Si desea crear el objeto en [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], la clase debe tener un constructor predeterminado. En algunos [!INCLUDE[TLA2#tla_net](../../../../includes/tla2sharptla-net-md.md)] lenguajes, como C#, el constructor predeterminado puede crearse automáticamente.  
   
 -   Las propiedades que se utilizan como propiedades de origen de enlace para un enlace deben ser propiedades públicas de la clase. No se puede acceder a las propiedades de interfaz definidas explícitamente con fines de enlace, ni tampoco las propiedades protegidas, privadas, internas o virtuales que no tengan ninguna implementación base.  
   
@@ -79,7 +81,7 @@ En el enlace de datos, el objeto de origen de enlace hace referencia al objeto d
   
  WPF nunca se enlaza directamente a una colección. Si especifica una colección como origen de enlace, WPF se enlaza en realidad a la vista predeterminada de la colección. Para más información sobre las vistas predeterminadas, consulte [Información general sobre el enlace de datos](../../../../docs/framework/wpf/data/data-binding-overview.md).  
   
- Si tiene un escenario avanzado y desea implementar su propia colección, considere el uso de la <xref:System.Collections.IList> interfaz. <xref:System.Collections.IList>Proporciona una colección no genérica de objetos que puede tener acceso individualmente por índice, lo que puede mejorar el rendimiento.  
+ Si tiene un escenario avanzado y desea implementar su propia colección, considere el uso de la <xref:System.Collections.IList> interfaz. <xref:System.Collections.IList> Proporciona una colección no genérica de objetos que puede tener acceso individualmente por índice, lo que puede mejorar el rendimiento.  
   
 <a name="permissions"></a>   
 ## <a name="permission-requirements-in-data-binding"></a>Requisitos de permisos en el enlace de datos  

@@ -1,11 +1,12 @@
 ---
 title: Instrucciones en Visual Basic
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - variables [Visual Basic], declaring
@@ -21,17 +22,17 @@ helpviewer_keywords:
 - variables [Visual Basic], defining
 - statements [Visual Basic], about statements
 ms.assetid: fcfdee1a-82b7-4846-98f7-9ca3f5160089
-caps.latest.revision: "30"
+caps.latest.revision: 30
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 210637105e54244ba829dabd73feab0b43ec7c6c
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.openlocfilehash: beb33b8f2c30723158e41244cbb5c9cfca108a53
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="statements-in-visual-basic"></a>Instrucciones en Visual Basic
-Una declaración de [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] es una instrucción completa. Puede contener palabras clave, operadores, variables, constantes y expresiones. Cada instrucción pertenece a una de las siguientes categorías:  
+Una instrucción en Visual Basic es una instrucción completa. Puede contener palabras clave, operadores, variables, constantes y expresiones. Cada instrucción pertenece a una de las siguientes categorías:  
   
 -   **Instrucciones de declaración**, que el nombre de una variable, constante o procedimiento y también puede especificar un tipo de datos.  
   
@@ -53,7 +54,7 @@ Una declaración de [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] es una instrucci
  La tercera declaración es la `Dim` instrucción, que declara la variable `thisWidget`. El tipo de datos es un objeto concreto, es decir, se crea un objeto desde el `Widget` clase. Puede declarar una variable de cualquier tipo de datos básico o de cualquier tipo de objeto que se expone en la aplicación que esté utilizando.  
   
 ### <a name="initial-values"></a>Valores iniciales  
- Cuando se ejecuta el código que contiene una instrucción de declaración, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] reserva la memoria necesaria para el elemento declarado. Si el elemento contiene un valor [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] inicializa el valor predeterminado para su tipo de datos. Para obtener más información, vea "Comportamiento" en [Dim (instrucción)](../../../visual-basic/language-reference/statements/dim-statement.md).  
+ Cuando se ejecuta el código que contiene una instrucción de declaración, Visual Basic reserva la memoria necesaria para el elemento declarado. Si el elemento contiene un valor, Visual Basic la inicializa con el valor predeterminado para su tipo de datos. Para obtener más información, vea "Comportamiento" en [Dim (instrucción)](../../../visual-basic/language-reference/statements/dim-statement.md).  
   
  Puede asignar un valor inicial a una variable como parte de su declaración, como se muestra en el ejemplo siguiente.  
   
@@ -121,7 +122,7 @@ Una declaración de [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] es una instrucci
 ### <a name="type-conversions-in-assignment-statements"></a>Conversiones de tipos en instrucciones de asignación  
  El valor que se asigna a una variable, propiedad o elemento de matriz debe ser de un tipo de datos apropiado para ese elemento de destino. En general, debe intentar generar un valor del mismo tipo de datos que el elemento de destino. Sin embargo, algunos tipos se pueden convertir a otros tipos durante la asignación.  
   
- Para obtener información sobre cómo convertir entre tipos de datos, vea [conversiones de tipos en Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md). En resumen, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] convierte automáticamente un valor de un tipo determinado en cualquier otro tipo a la que se amplía. A *conversión de ampliación* es aquella que siempre se realiza correctamente en tiempo de ejecución y no se perderá ningún dato. Por ejemplo, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] convierte un `Integer` valor `Double` cuando sea necesario, porque `Integer` se amplía a `Double`. Para obtener más información, consulta [Widening and Narrowing Conversions](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md).  
+ Para obtener información sobre cómo convertir entre tipos de datos, vea [conversiones de tipos en Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md). En resumen, Visual Basic convierte automáticamente un valor de un tipo determinado en cualquier otro tipo a la que se amplía. A *conversión de ampliación* es aquella que siempre se realiza correctamente en tiempo de ejecución y no se perderá ningún dato. Por ejemplo, Visual Basic convierte un `Integer` valor `Double` cuando sea necesario, porque `Integer` se amplía a `Double`. Para obtener más información, consulta [Widening and Narrowing Conversions](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md).  
   
  *Conversiones de restricción* (aquellos que no son de ampliación) llevan un riesgo de error en tiempo de ejecución, o de pérdida de datos. Puede realizar una conversión de restricción explícitamente mediante una función de conversión de tipo, o puede indicar al compilador que realice implícitamente todas las conversiones estableciendo `Option Strict Off`. Para obtener más información, consulte [conversiones implícitas y explícitas](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md).  
   
@@ -158,7 +159,7 @@ Una declaración de [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] es una instrucci
 |Después de la `From` palabra clave en un inicializador de colección.|[!code-vb[VbVbalrLineContinuation#13](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/statements_27.vb)]<br /><br /> Para obtener más información, vea [Inicializadores de colección](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md).|  
   
 ## <a name="adding-comments"></a>Agregar comentarios  
- Código fuente no siempre es fácil de entender, incluso para el programador que lo ha escrito. Con el fin de documentar el código, por lo tanto, los programadores utilizan libremente comentarios incrustados. Comentarios en código pueden explicar un procedimiento o una instrucción concreta a cualquiera que lea o trabaje con ellos posteriormente. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]omite los comentarios durante la compilación, y no afectan al código compilado.  
+ Código fuente no siempre es fácil de entender, incluso para el programador que lo ha escrito. Con el fin de documentar el código, por lo tanto, los programadores utilizan libremente comentarios incrustados. Comentarios en código pueden explicar un procedimiento o una instrucción concreta a cualquiera que lea o trabaje con ellos posteriormente. Visual Basic omite los comentarios durante la compilación y no afectan al código compilado.  
   
  Líneas de comentario comienzan con un apóstrofo (`'`) o `REM` seguido por un espacio. Se pueden agregar en cualquier lugar en el código, excepto en una cadena. Para anexar un comentario a una instrucción, inserte un apóstrofo o `REM` después de la instrucción, seguida del comentario. Los comentarios también pueden ir en su propia línea independiente. En el ejemplo siguiente se muestra estas posibilidades.  
   
@@ -169,7 +170,7 @@ Una declaración de [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] es una instrucci
   
 ## <a name="related-sections"></a>Secciones relacionadas  
   
-|Término|Definición|  
+|Término|de esquema JSON|  
 |---|---|  
 |[Operadores de asignación](../../../visual-basic/language-reference/operators/assignment-operators.md)|Proporciona vínculos a páginas de referencia del lenguaje que describen los operadores de asignación como `=`, `*=`, y `&=`.|  
 |[Operadores y expresiones](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)|Muestra cómo combinar elementos con operadores para obtener nuevos valores.|  

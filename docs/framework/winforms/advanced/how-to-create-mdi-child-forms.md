@@ -1,12 +1,13 @@
 ---
-title: "Cómo: Crear formularios MDI secundarios"
-ms.custom: 
+title: 'Cómo: Crear formularios MDI secundarios'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,16 +17,17 @@ helpviewer_keywords:
 - MDI [Windows Forms], creating forms
 - child forms
 ms.assetid: 164b69bb-2eca-4339-ada3-0679eb2c6dda
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d0ee60e9b25ed4238ccdd738cd59a69876f6b55d
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: d28a7390ea3cfbd922f029d963ad3249db399177
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-create-mdi-child-forms"></a>Cómo: Crear formularios MDI secundarios
 Formularios MDI secundarios son un elemento esencial de [aplicaciones de interfaz de múltiples documentos (MDI)](../../../../docs/framework/winforms/advanced/multiple-document-interface-mdi-applications.md), ya que estos formularios son el centro de interacción del usuario.  
@@ -47,7 +49,7 @@ Formularios MDI secundarios son un elemento esencial de [aplicaciones de interfa
   
 4.  En **el Explorador de soluciones**, haga clic en el proyecto, seleccione **agregar**y, a continuación, seleccione **Agregar nuevo elemento**.  
   
-5.  En el **Agregar nuevo elemento** cuadro de diálogo, seleccione **Windows Form** (en [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] o en [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)]) o **aplicación de Windows Forms (. NET)** (en [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) desde el **plantillas** panel. En el **nombre** cuadro, un nombre al formulario **Form2**. Haga clic en el **abiertos** botón para agregar el formulario al proyecto.  
+5.  En el **Agregar nuevo elemento** cuadro de diálogo, seleccione **Windows Form** (en Visual Basic o en Visual C#) o **aplicación de Windows Forms (. NET)** (en [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) desde el  **Plantillas de** panel. En el **nombre** cuadro, un nombre al formulario **Form2**. Haga clic en el **abiertos** botón para agregar el formulario al proyecto.  
   
     > [!NOTE]
     >  El formulario secundario MDI creado en este paso es un Windows Form estándar. Como tal, tiene una propiedad <xref:System.Windows.Forms.Form.Opacity%2A>, que le permite controlar la transparencia del formulario. Sin embargo, la propiedad <xref:System.Windows.Forms.Form.Opacity%2A> se diseñó para ventanas de nivel superior. No la use con formularios secundarios MDI porque se pueden producir problemas de dibujo.  

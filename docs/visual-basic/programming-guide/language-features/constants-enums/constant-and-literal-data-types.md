@@ -1,11 +1,12 @@
 ---
 title: Tipos de datos constantes y literales (Visual Basic)
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - declaring constants [Visual Basic], literal data types
@@ -15,14 +16,14 @@ helpviewer_keywords:
 - literals [Visual Basic], coercing data type
 - declarations [Visual Basic], data types
 ms.assetid: 057206d2-3a5b-40b9-b3af-57446f9b52fa
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 554753e26d185593ce43b741b3b2f9e3cb1ad6dd
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 58fa1e8c6c659c80cd7998a88d07849ea223750f
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="constant-and-literal-data-types-visual-basic"></a>Tipos de datos constantes y literales (Visual Basic)
 Un literal es un valor que se expresa por sí misma en lugar de como valor de una variable o el resultado de una expresión, como el número 3 o la cadena "Hello". Una constante es un nombre descriptivo que ocupa el lugar de un literal y retiene este mismo valor en todo el programa, en lugar de una variable, cuyo valor puede cambiar.  
@@ -53,7 +54,7 @@ myDecimal = 100000000000000000000   ' This causes a compiler error.
   
  [!code-vb[VbVbalrConstants#3](../../../../visual-basic/programming-guide/language-features/constants-enums/codesnippet/VisualBasic/constant-and-literal-data-types_3.vb)]  
   
- La siguiente tabla muestra los caracteres y el tipo envolvente caracteres disponibles en [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+ La siguiente tabla muestra los caracteres de inclusión y los caracteres de tipo disponibles en Visual Basic.  
   
 |Tipo de datos|Carácter de inclusión|Carácter de tipo anexado|  
 |---|---|---|  

@@ -5,14 +5,15 @@ ms.prod: .net
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
+ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 7f49b19b0836636bf7656dc618ef2f181a0d7fff
-ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
+ms.openlocfilehash: 8ee1918091fe72e8606be6e7503ecd850084a4ba
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="inner-loop-development-workflow-for-docker-apps"></a>Flujo de trabajo de desarrollo de bucle interno para las aplicaciones de Docker
 
@@ -193,7 +194,7 @@ En este caso concreto, este archivo define dos servicios: el servicio web (el se
 
 -   Vincular el servicio web para el servicio de redis
 
-El servicio de redis utiliza el [imagen redis pública más reciente](https://hub.docker.com/_/redis/) extraídos del registro de Docker Hub. [Redis](http://redis.io/) es un sistema muy popular de caché para aplicaciones de servidor.
+El servicio de redis utiliza el [imagen redis pública más reciente](https://hub.docker.com/_/redis/) extraídos del registro de Docker Hub. [Redis](https://redis.io/) es un sistema muy popular de caché para aplicaciones de servidor.
 
 ### <a name="step-5-build-and-run-your-docker-app"></a>Paso 5: Compilar y ejecutar la aplicación de Docker
 

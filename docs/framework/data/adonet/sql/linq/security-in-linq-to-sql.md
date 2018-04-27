@@ -1,24 +1,26 @@
 ---
 title: Seguridad de LINQ to SQL
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: d49787f7-414e-4c71-aa33-80a5895536b1
-caps.latest.revision: "2"
+caps.latest.revision: 2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 0ee361c27bd14f0266b2b86f315f9c091e049c12
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 96951b3b3c8a6ee93a83ba24f6c6a19c3e36381c
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="security-in-linq-to-sql"></a>Seguridad de LINQ to SQL
 Siempre hay riesgos de seguridad al conectarse a una base de datos. Aunque LINQ to SQL puede incluir algunos modos nuevos de trabajar con datos de SQL Server, no proporciona ningún mecanismo de seguridad adicional.  
@@ -32,7 +34,7 @@ Siempre hay riesgos de seguridad al conectarse a una base de datos. Aunque LINQ 
 ## <a name="connection-strings"></a>Cadenas de conexión  
  Siempre que sea posible se debe evitar el uso de contraseñas en las cadenas de conexión. No solo una cadena de conexión supone un riesgo de seguridad por derecho propio, sino que ésta se puede añadir también en texto no cifrado al modelo de objetos o al archivo de asignación externa al usar Object Relational Designer o la herramienta de línea de comandos SQLMetal. Cualquiera que tenga acceso al modelo de objetos o al archivo de asignación externo mediante el sistema de archivos podría ver la contraseña de conexión (si está incluida en la cadena de conexión).  
   
- Para minimizar tales riesgos, utilice la seguridad integrada para realizar una conexión confiable con [!INCLUDE[ssNoVersion](../../../../../../includes/ssnoversion-md.md)]. Con este enfoque no es necesario almacenar una contraseña en la cadena de conexión. Para obtener más información, consulte [seguridad de SQL Server](../../../../../../docs/framework/data/adonet/sql/sql-server-security.md).  
+ Para minimizar tales riesgos, use seguridad integrada para establecer una conexión de confianza con SQL Server. Con este enfoque no es necesario almacenar una contraseña en la cadena de conexión. Para obtener más información, consulte [seguridad de SQL Server](../../../../../../docs/framework/data/adonet/sql/sql-server-security.md).  
   
  Sin la seguridad integrada, se necesitará una contraseña de texto no cifrado en la cadena de conexión. El mejor modo de ayudar a proteger la seguridad de la cadena de conexión, en lo que respecta al aumento de orden de riesgos, se detalla a continuación:  
   

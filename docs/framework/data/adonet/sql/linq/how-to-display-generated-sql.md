@@ -1,27 +1,29 @@
 ---
-title: "Cómo: Mostrar el código SQL generado"
-ms.custom: 
+title: 'Cómo: Mostrar el código SQL generado'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 626492c0-5ee3-4675-88e8-8c40379510b6
-caps.latest.revision: "2"
+caps.latest.revision: 2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 5c75ac8734a92fc76613643c3831d0b767e92feb
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: c58e691bdf39e71a756c8b26451c22c769f05c0a
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-display-generated-sql"></a>Cómo: Mostrar el código SQL generado
 Puede ver el código de SQL generado para las consultas y cambiar su procesamiento por medio de la propiedad <xref:System.Data.Linq.DataContext.Log%2A>. Este enfoque puede ser útil para entender la funcionalidad de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] y para depurar problemas concretos.  
@@ -29,7 +31,7 @@ Puede ver el código de SQL generado para las consultas y cambiar su procesamien
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se utiliza la propiedad <xref:System.Data.Linq.DataContext.Log%2A> para mostrar el código de SQL en la ventana de la consola antes de que se ejecute el código.  Puede utilizar esta propiedad con los comandos de consulta, inserción, actualización y eliminación.  
   
- Las líneas de la ventana de la consola son las que aparecen al ejecutar el código de [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] o C# siguiente.  
+ Las líneas de la ventana de consola son las que aparecen cuando se ejecuta el código de Visual Basic o C# siguiente.  
   
 ```  
 SELECT [t0].[CustomerID], [t0].[CompanyName], [t0].[ContactName], [t0].[ContactT  

@@ -1,30 +1,32 @@
 ---
-title: "Parámetros con valores de tabla"
-ms.custom: 
+title: Parámetros con valores de tabla
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 370c16d5-db7b-43e3-945b-ccaab35b739b
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 6e881213979d32cb9335f01d2804c35c19856b5e
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 01b19d49ee82a884247e4eb260f659f19f124cee
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="table-valued-parameters"></a>Parámetros con valores de tabla
-Los parámetros con valores de tabla proporcionan un método sencillo para calcular las referencias de varias filas de datos procedentes de una aplicación cliente en [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] sin necesidad de efectuar varios viajes de ida y vuelta (round trip) ni de crear lógica especial de servidor para procesar los datos. Puede usar los parámetros con valores de tabla para encapsular las filas de datos de una aplicación cliente y enviar los datos al servidor en un único comando con parámetros. Las filas de datos de entrada se almacenan en una variable de tabla en la que se puede operar usando [!INCLUDE[tsql](../../../../../includes/tsql-md.md)].  
+Los parámetros con valores de tabla proporcionan un método sencillo para calcular las referencias de varias filas de datos procedentes de una aplicación cliente en SQL Server sin necesidad de efectuar viajes de ida y vuelta (round trip) ni de crear lógica especial de servidor para procesar los datos. Puede usar los parámetros con valores de tabla para encapsular las filas de datos de una aplicación cliente y enviar los datos al servidor en un único comando con parámetros. Las filas de datos de entrada se almacenan en una variable de tabla en la que se puede operar usando [!INCLUDE[tsql](../../../../../includes/tsql-md.md)].  
   
  El acceso a los valores de columna de los parámetros con valores de tabla se realiza mediante instrucciones estándar SELECT de [!INCLUDE[tsql](../../../../../includes/tsql-md.md)]. Los parámetros con valores de tabla están fuertemente tipados y su estructura se valida automáticamente. El tamaño de los parámetros con valores de tabla está únicamente limitado por la memoria del servidor.  
   
@@ -35,13 +37,13 @@ Los parámetros con valores de tabla proporcionan un método sencillo para calcu
   
 |Recurso|Descripción|  
 |--------------|-----------------|  
-|[Parámetros con valores de tabla (motor de base de datos)](http://go.microsoft.com/fwlink/?LinkId=98363) en [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] libros en pantalla|Describe cómo se crean y se usan los parámetros con valores de tabla.|  
-|[Tipos de tabla definidos por el usuario](http://go.microsoft.com/fwlink/?LinkId=98364) en [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] libros en pantalla|Describe los tipos de tabla definidos por el usuario que se usan para declarar parámetros con valores de tabla.|  
+|[Parámetros con valores de tabla (motor de base de datos)](http://go.microsoft.com/fwlink/?LinkId=98363) en libros en pantalla de SQL Server|Describe cómo se crean y se usan los parámetros con valores de tabla.|  
+|[Tipos de tabla definidos por el usuario](http://go.microsoft.com/fwlink/?LinkId=98364) en libros en pantalla de SQL Server|Describe los tipos de tabla definidos por el usuario que se usan para declarar parámetros con valores de tabla.|  
   
 ## <a name="passing-multiple-rows-in-previous-versions-of-sql-server"></a>Pasar varias filas de versiones previas de SQL Server  
- Antes de la incorporación de los parámetros con valores de tabla a [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 2008, las opciones para pasar varias filas de datos a un procedimiento almacenado o a un comando SQL con parámetros eran limitadas. Un programador podía elegir entre las siguientes opciones para pasar varias filas al servidor:  
+ Antes de que los parámetros con valores de tabla se introdujeron en SQL Server 2008, las opciones para pasar varias filas de datos a un procedimiento almacenado o un comando SQL con parámetros eran limitadas. Un programador podía elegir entre las siguientes opciones para pasar varias filas al servidor:  
   
--   Usar una serie de parámetros individuales para representar los valores en varias columnas y filas de datos. La cantidad de datos que se pueden pasar mediante este método está limitada por el número de parámetros permitidos. Los procedimientos de [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] pueden tener 2100 parámetros como máximo. La lógica de servidor es necesaria para ensamblar estos valores individuales en una variable de tabla o en una tabla temporal para su procesamiento.  
+-   Usar una serie de parámetros individuales para representar los valores en varias columnas y filas de datos. La cantidad de datos que se pueden pasar mediante este método está limitada por el número de parámetros permitidos. Los procedimientos de SQL Server pueden tener 2100 parámetros como máximo. La lógica de servidor es necesaria para ensamblar estos valores individuales en una variable de tabla o en una tabla temporal para su procesamiento.  
   
 -   Empaquetar varios valores de datos en cadenas delimitadas o documentos XML y, a continuación, pasar esos valores de texto a un procedimiento o instrucción. Por ello, el procedimiento o la instrucción deben incluir la lógica necesaria para validar las estructuras de datos y desempaquetar los valores.  
   
@@ -50,7 +52,7 @@ Los parámetros con valores de tabla proporcionan un método sencillo para calcu
 -   Usar la utilidad `bcp` o el objeto <xref:System.Data.SqlClient.SqlBulkCopy> para cargar muchas filas de datos en una tabla. Aunque esta técnica sea muy eficaz, no es compatible con el procesamiento de servidor a menos que los datos se carguen en una tabla temporal o en una variable de tabla.  
   
 ## <a name="creating-table-valued-parameter-types"></a>Crear tipos de parámetros con valores de tabla  
- Los parámetros con valores de tabla se basan en estructuras de tabla fuertemente tipadas definidas mediante instrucciones CREATE TYPE de [!INCLUDE[tsql](../../../../../includes/tsql-md.md)]. Debe crear un tipo de tabla y definir la estructura en [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] antes de poder usar los parámetros con valores de tabla en las aplicaciones cliente. Para obtener más información acerca de cómo crear tipos de tabla, vea [tipos de tabla definidos por el usuario](http://go.microsoft.com/fwlink/?LinkID=98364) en [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] libros en pantalla.  
+ Los parámetros con valores de tabla se basan en estructuras de tabla fuertemente tipadas definidas mediante instrucciones CREATE TYPE de [!INCLUDE[tsql](../../../../../includes/tsql-md.md)]. Debe crear un tipo de tabla y definir la estructura en SQL Server antes de poder usar los parámetros con valores de tabla en las aplicaciones cliente. Para obtener más información acerca de cómo crear tipos de tabla, vea [tipos de tabla definidos por el usuario](http://go.microsoft.com/fwlink/?LinkID=98364) en libros en pantalla de SQL Server.  
   
  La siguiente instrucción crea un tipo de tabla denominado CategoryTableType formada por las columnas CategoryID y CategoryName:  
   
@@ -90,14 +92,14 @@ INSERT INTO dbo.Categories (CategoryID, CategoryName)
   
 -   No se puede pasar parámetros con valores de tabla para [funciones CLR definidas por el usuario](http://msdn.microsoft.com/library/ms131077.aspx).  
   
--   Los parámetros con valores de tabla solo se pueden indizar para admitir restricciones UNIQUE o PRIMARY KEY. [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] no mantiene estadísticas de parámetros con valores de tabla.  
+-   Los parámetros con valores de tabla solo se pueden indizar para admitir restricciones UNIQUE o PRIMARY KEY. SQL Server no mantiene estadísticas de parámetros con valores de tabla.  
   
 -   Los parámetros con valores de tabla son de solo lectura en el código [!INCLUDE[tsql](../../../../../includes/tsql-md.md)]. No puede actualizar los valores de columna de las filas de un parámetro con valores de tabla ni insertar ni eliminar filas. Para modificar los datos que se pasan a un procedimiento almacenado o a una instrucción con parámetros de un parámetro con valores de tabla, debe insertar los datos en una tabla temporal o en una variable de tabla.  
   
 -   No puede usar instrucciones ALTER TABLE para modificar el diseño de los parámetros con valores de tabla.  
   
 ## <a name="configuring-a-sqlparameter-example"></a>Configurar un ejemplo de SqlParameter  
- <xref:System.Data.SqlClient>admite rellenar parámetros con valores de tabla desde <xref:System.Data.DataTable>, <xref:System.Data.Common.DbDataReader> o <xref:System.Collections.Generic.IEnumerable%601>  \  <xref:Microsoft.SqlServer.Server.SqlDataRecord> objetos. Debe especificar un nombre de tipo para el parámetro con valores de tabla mediante la propiedad <xref:System.Data.SqlClient.SqlParameter.TypeName%2A> de una clase <xref:System.Data.SqlClient.SqlParameter>. El valor de `TypeName` debe coincidir con el nombre de un tipo compatible previamente creado en el servidor. El fragmento de código siguiente muestra cómo se configura <xref:System.Data.SqlClient.SqlParameter> para insertar datos.  
+ <xref:System.Data.SqlClient> admite rellenar parámetros con valores de tabla desde <xref:System.Data.DataTable>, <xref:System.Data.Common.DbDataReader> o <xref:System.Collections.Generic.IEnumerable%601>  \  <xref:Microsoft.SqlServer.Server.SqlDataRecord> objetos. Debe especificar un nombre de tipo para el parámetro con valores de tabla mediante la propiedad <xref:System.Data.SqlClient.SqlParameter.TypeName%2A> de una clase <xref:System.Data.SqlClient.SqlParameter>. El valor de `TypeName` debe coincidir con el nombre de un tipo compatible previamente creado en el servidor. El fragmento de código siguiente muestra cómo se configura <xref:System.Data.SqlClient.SqlParameter> para insertar datos.  
   
 ```csharp  
 // Configure the command and parameter.  

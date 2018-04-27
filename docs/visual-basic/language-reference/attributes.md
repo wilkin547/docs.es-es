@@ -11,14 +11,14 @@ ms.assetid: 5deb2b8a-1afd-4dbd-8ee8-f093d74ad0eb
 caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 411208ff134f53f0d3c9b842c9282a1545119066
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: e2450f34992af4b6b100b9e4d21a46b7d54b335c
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="attributes-visual-basic"></a>Atributos de Visual Basic
-[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]proporciona varios atributos que permiten a los objetos interactúan con código no administrado y un atributo que permite a los miembros de módulo tener acceso sin el nombre del módulo. En la tabla siguiente se enumera los atributos utilizados por [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+Visual Basic proporciona varios atributos que permiten a los objetos interactúan con código no administrado y un atributo que permite a los miembros de módulo tener acceso sin el nombre del módulo. En la tabla siguiente enumera los atributos utilizados por Visual Basic.  
   
 |||  
 |---|---|  

@@ -1,24 +1,26 @@
 ---
 title: FROM (Entity SQL)
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ff3e3048-0d5d-4502-ae5c-9187fcbd0514
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 115fb8dfef46c74837d774012babdef9db915341
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 64d41359ba8a4131acb38b128238065ee2545f80
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="from-entity-sql"></a>FROM (Entity SQL)
 Especifica la colección que se usa en [seleccione](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md) instrucciones.  
@@ -107,7 +109,7 @@ LOB.Customers
 >  A diferencia de lo que ocurre en [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)], no hay necesidad de seguir un paso UNNEST explícito en [!INCLUDE[esql](../../../../../../includes/esql-md.md)].  
   
 > [!NOTE]
->  Los operadores `CROSS` y `OUTER APPLY` se incluyeron en [!INCLUDE[ssVersion2005](../../../../../../includes/ssversion2005-md.md)]. En algunos casos, la canalización de la consulta podría generar código de Transact-SQL que contiene los operadores `CROSS APPLY` y `OUTER APPLY`. Dado que algunos proveedores back-end, incluidas las versiones de [!INCLUDE[ssNoVersion](../../../../../../includes/ssnoversion-md.md)] anteriores a [!INCLUDE[ssVersion2005](../../../../../../includes/ssversion2005-md.md)], no admiten estos operadores, tales consultas no se pueden ejecutar en ellos.  
+>  Los operadores `CROSS` y `OUTER APPLY` se incluyeron en [!INCLUDE[ssVersion2005](../../../../../../includes/ssversion2005-md.md)]. En algunos casos, la canalización de la consulta podría generar código de Transact-SQL que contiene los operadores `CROSS APPLY` y `OUTER APPLY`. Dado que algunos proveedores back-end, incluidas las versiones de SQL Server anteriores a [!INCLUDE[ssVersion2005](../../../../../../includes/ssversion2005-md.md)], no admiten estos operadores, tales consultas no se pueden ejecutar en estos proveedores back-end.  
 >   
 >  Algunos escenarios típicos que podrían conducir  a la presencia de los operadores `CROSS APPLY``OUTER APPLY` en la consulta de salida son las siguientes: una subconsulta correlacionada con la paginación; AnyElement sobre una subconsulta correlacionada o sobre una colección generada mediante navegación; consultas LINQ que utilizan métodos de agrupación que aceptan un selector de elemento; una consulta en la que se especifica explícitamente `CROSS APPLY` u `OUTER APPLY`; una consulta que tiene una construcción `DEREF` sobre una construcción `REF`.  
   

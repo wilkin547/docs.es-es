@@ -1,26 +1,26 @@
 ---
 title: Asignaciones de tipos de datos de SQL Server
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-ado
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: fafdc31a-f435-4cd3-883f-1dfadd971277
-caps.latest.revision: 
+caps.latest.revision: 8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload:
 - dotnet
-ms.openlocfilehash: 812b953935d17320d83e3752d8c7fd600af15533
-ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
+ms.openlocfilehash: e1af00ba0a1f631868711f191c028a04c5e0441a
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sql-server-data-type-mappings"></a>Asignaciones de tipos de datos de SQL Server
 SQL Server y .NET Framework se basan en sistemas de tipos distintos. Por ejemplo, la estructura <xref:System.Decimal> de .NET Framework tiene una escala máxima de 28, mientras que los tipos de datos decimal y numérico de SQL Server tienen una escala máxima de 38. Para mantener la integridad de los datos al leer y escribir datos, <xref:System.Data.SqlClient.SqlDataReader> expone métodos de descriptores de acceso con tipo específicos de SQL Server que devuelven objetos de <xref:System.Data.SqlTypes> así como métodos de descriptores de acceso que devuelven tipos de .NET Framework. Los tipos de SQL Server y los de .NET Framework se representan también mediante enumeraciones en las clases <xref:System.Data.DbType> y <xref:System.Data.SqlDbType>, que puede usar al especificar los tipos de datos <xref:System.Data.SqlClient.SqlParameter>.  
@@ -65,8 +65,8 @@ SQL Server y .NET Framework se basan en sistemas de tipos distintos. Por ejemplo
 <sup>1</sup> no se puede establecer la `DbType` propiedad de un `SqlParameter` a `SqlDbType.Date`.  
 <sup>2</sup> utilice un descriptor de acceso con tipo si conoce el tipo subyacente de la `sql_variant`.  
   
-## <a name="includessnoversionincludesssnoversion-mdmd-books-online-reference"></a>Referencia de Libros en pantalla de [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]  
- Para obtener más información acerca de [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] tipos de datos, consulte [tipos de datos (motor de base de datos)](http://go.microsoft.com/fwlink/?LinkID=107468).  
+## <a name="sql-server-books-online-reference"></a>Referencia de Libros en pantalla de SQL Server  
+ Para obtener más información acerca de los tipos de datos de SQL Server, vea [tipos de datos (motor de base de datos)](http://go.microsoft.com/fwlink/?LinkID=107468).  
   
 ## <a name="see-also"></a>Vea también  
  [Tipos de datos de SQL Server y ADO.NET](../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)  

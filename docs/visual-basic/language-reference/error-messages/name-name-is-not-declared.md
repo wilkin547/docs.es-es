@@ -1,9 +1,9 @@
 ---
-title: Nombre de &#39; &lt;nombre&gt;&#39; no se ha declarado
+title: Nombre &#39; &lt;nombre&gt; &#39; no se ha declarado
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - devlang-visual-basic
 ms.topic: article
@@ -13,23 +13,23 @@ f1_keywords:
 helpviewer_keywords:
 - BC30451
 ms.assetid: 765f099b-e21e-47c6-a906-a065444e56b3
-caps.latest.revision: 
+caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 7a63ae74c7179d71756e2b9b4bf6b41a71ce12a6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 26245952a2dc5341dedba6c497c47773b882b49b
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="name-39ltnamegt39-is-not-declared"></a>Nombre de &#39; &lt;nombre&gt;&#39; no se ha declarado
+# <a name="name-39ltnamegt39-is-not-declared"></a>Nombre &#39; &lt;nombre&gt; &#39; no se ha declarado
 Una instrucción hace referencia a un elemento de programación, pero el compilador no encuentra un elemento con ese nombre exacto.  
   
  **Id. de error:** BC30451  
   
 ## <a name="to-correct-this-error"></a>Para corregir este error  
   
-1.  Compruebe que el nombre de la instrucción de referencia esté bien escrito. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]distingue mayúsculas de minúsculas, pero cualquier otra variación en la ortografía se considera como un nombre completamente distinto. Tenga en cuenta que el carácter de subrayado (`_`) es parte del nombre y, por tanto, parte de la ortografía.  
+1.  Compruebe que el nombre de la instrucción de referencia esté bien escrito. Visual Basic distingue mayúsculas de minúsculas, pero cualquier otra variación en la ortografía se considera como un nombre completamente distinto. Tenga en cuenta que el carácter de subrayado (`_`) es parte del nombre y, por tanto, parte de la ortografía.  
   
 2.  Compruebe que tiene el operador de acceso de miembro (`.`) entre un objeto y su miembro. Por ejemplo, si tiene un control <xref:System.Windows.Forms.TextBox> denominado `TextBox1`, para tener acceso a su propiedad <xref:System.Windows.Forms.TextBoxBase.Text%2A> debe escribir `TextBox1.Text`. Si en su lugar escribe `TextBox1Text`, ha creado un nombre diferente.  
   

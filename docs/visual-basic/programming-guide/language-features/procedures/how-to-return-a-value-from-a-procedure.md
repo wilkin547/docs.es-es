@@ -1,25 +1,26 @@
 ---
-title: "Cómo: Devolver un valor de un procedimiento (Visual Basic)"
-ms.custom: 
+title: 'Cómo: Devolver un valor de un procedimiento (Visual Basic)'
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - Visual Basic code, procedures
 - procedures [Visual Basic], returning from
 - procedures [Visual Basic], returning a value
 ms.assetid: 4bcc4724-2b4e-4df8-9b4b-16054607f87d
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 6ce7aa0942be413986cb010963753447ea18cdf2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: affcb25951a6647604286bc91dcaec8898fe2e30
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-return-a-value-from-a-procedure-visual-basic"></a>Cómo: Devolver un valor de un procedimiento (Visual Basic)
 A `Function` procedimiento devuelve un valor al código de llamada mediante la ejecución de un `Return` instrucción o encontrar una `Exit Function` o `End Function` instrucción.  
@@ -44,7 +45,7 @@ A `Function` procedimiento devuelve un valor al código de llamada mediante la e
   
 1.  En lugar de al menos una de las `Function` procedimiento, asigne un valor para el nombre del procedimiento.  
   
-2.  Cuando se ejecuta un `Exit Function` o `End Function` instrucción, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] devuelve el valor asignado más recientemente al nombre del procedimiento.  
+2.  Cuando se ejecuta un `Exit Function` o `End Function` instrucción, Visual Basic devuelve el valor asignado más recientemente al nombre del procedimiento.  
   
 3.  Puede tener más de una instrucción `Exit Function` en el mismo procedimiento. Además, puede combinar instrucciones `Return` y `Exit Function` en el mismo procedimiento.  
   

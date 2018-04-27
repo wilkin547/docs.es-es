@@ -1,11 +1,12 @@
 ---
-title: "Cómo: Sobrecargar un procedimiento que toma un número indefinido de parámetros (Visual Basic)"
-ms.custom: 
+title: 'Cómo: Sobrecargar un procedimiento que toma un número indefinido de parámetros (Visual Basic)'
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - procedures [Visual Basic], parameters
@@ -16,14 +17,14 @@ helpviewer_keywords:
 - procedures [Visual Basic], overloading
 - procedures [Visual Basic], multiple versions
 ms.assetid: c7042de2-2422-4039-94e8-ac298896af69
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 37d5b47f06bad1c2a8871168c5642663aedcccf2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 8cb4faa2dfd01f854dcc3bf8c2a330adf5acdcac
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters-visual-basic"></a>Cómo: Sobrecargar un procedimiento que toma un número indefinido de parámetros (Visual Basic)
 Si un procedimiento tiene un [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) parámetro, no se puede definir una versión sobrecargada que tome una matriz unidimensional de la matriz de parámetros. Para obtener más información, vea "Implícita sobrecargas para un parámetro ParamArray" en [consideraciones de sobrecarga de procedimientos](./considerations-in-overloading-procedures.md).  
@@ -53,7 +54,7 @@ Si un procedimiento tiene un [ParamArray](../../../../visual-basic/language-refe
   
  [!code-vb[VbVbcnProcedures#71](./codesnippet/VisualBasic/how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters_3.vb)]  
   
- El código en las versiones sobrecargadas no tiene que comprobar si el código de llamada proporciona uno o varios valores para el `ParamArray` parámetro, o si es así, ¿cuántos. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]pasa el control a la versión correspondiente de la lista de argumentos que realiza la llamada.  
+ El código en las versiones sobrecargadas no tiene que comprobar si el código de llamada proporciona uno o varios valores para el `ParamArray` parámetro, o si es así, ¿cuántos. Visual Basic pasa el control a la versión que coincida con la lista de argumentos que realiza la llamada.  
   
 ## <a name="compiling-the-code"></a>Compilar el código  
  Dado que un procedimiento con un `ParamArray` parámetro es equivalente a un conjunto de versiones sobrecargadas, no se puede sobrecargar un procedimiento con una lista de parámetros que se corresponda con alguna de estas sobrecargas implícitas. Para obtener más información, consulte [consideraciones de sobrecarga de procedimientos](./considerations-in-overloading-procedures.md).  

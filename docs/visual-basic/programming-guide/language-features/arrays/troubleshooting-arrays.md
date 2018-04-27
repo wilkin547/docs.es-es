@@ -1,11 +1,12 @@
 ---
 title: Solucionar problemas de matrices (Visual Basic)
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - troubleshooting arrays
@@ -15,14 +16,14 @@ helpviewer_keywords:
 - arrays [Visual Basic], declaration errors
 - arrays [Visual Basic], troubleshooting
 ms.assetid: f4e971c7-c0a4-4ed7-a77a-8d71039f266f
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 0417ae8d37642a65b14cc81ae9dcf3a3c32d63ce
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9e5c00c2b531dd019a207b16ffcac95424bfe450
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="troubleshooting-arrays-visual-basic"></a>Solucionar problemas de matrices (Visual Basic)
 Esta página enumera algunos problemas comunes que pueden producirse al trabajar con matrices.  
@@ -60,10 +61,10 @@ Esta página enumera algunos problemas comunes que pueden producirse al trabajar
  El proceso de inicialización de una matriz asigna un límite superior y un límite inferior a cada dimensión. Cada acceso a un elemento de la matriz debe especificar un índice válido, o subíndice, para cada dimensión. Si un índice está por debajo de su límite inferior o por encima de su límite superior, un <xref:System.IndexOutOfRangeException> resultados de la excepción. El compilador no puede detectar este tipo de error, por lo que se produce un error en tiempo de ejecución.  
   
 ### <a name="determining-bounds"></a>Determinar los límites  
- Si otro componente pasa una matriz en el código, por ejemplo como un argumento de procedimiento, se desconoce el tamaño de la matriz o la longitud de sus dimensiones. Siempre debe determinar el límite superior para cada dimensión de una matriz antes de intentar tener acceso a los elementos. Si la matriz se ha creado por un medio distinto de una [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] `New` cláusula, el límite inferior podría ser algo distinto de 0, y es más seguro determinar también ese límite inferior.  
+ Si otro componente pasa una matriz en el código, por ejemplo como un argumento de procedimiento, se desconoce el tamaño de la matriz o la longitud de sus dimensiones. Siempre debe determinar el límite superior para cada dimensión de una matriz antes de intentar tener acceso a los elementos. Si la matriz se ha creado por otros medios distintos a un de Visual Basic `New` cláusula, el límite inferior podría ser algo distinto de 0, y es más seguro determinar también ese límite inferior.  
   
 ### <a name="specifying-the-dimension"></a>Especificar la dimensión  
- Al determinar los límites de una matriz multidimensional, tenga cuidado de cómo especificar la dimensión. El `dimension` parámetros de la <xref:System.Array.GetLowerBound%2A> y <xref:System.Array.GetUpperBound%2A> métodos están basadas en 0, mientras el `Rank` parámetros de la [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] <xref:Microsoft.VisualBasic.Information.LBound%2A> y <xref:Microsoft.VisualBasic.Information.UBound%2A> funciones están basados en 1.  
+ Al determinar los límites de una matriz multidimensional, tenga cuidado de cómo especificar la dimensión. El `dimension` parámetros de la <xref:System.Array.GetLowerBound%2A> y <xref:System.Array.GetUpperBound%2A> métodos están basadas en 0, mientras el `Rank` parámetros de Visual Basic <xref:Microsoft.VisualBasic.Information.LBound%2A> y <xref:Microsoft.VisualBasic.Information.UBound%2A> funciones están basados en 1.  
   
 ## <a name="see-also"></a>Vea también  
  [Matrices](../../../../visual-basic/programming-guide/language-features/arrays/index.md)  

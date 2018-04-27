@@ -1,9 +1,9 @@
 ---
-title: Tipo de &#39; &lt;typename&gt;&#39; no tiene constructores
+title: Tipo de &#39; &lt;typename&gt; &#39; no tiene constructores
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - devlang-visual-basic
 ms.topic: article
@@ -13,16 +13,16 @@ f1_keywords:
 helpviewer_keywords:
 - BC30251
 ms.assetid: aff3e1df-abe6-4bc0-9abc-a1e70514c561
-caps.latest.revision: 
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: d2c1bfcc4af928fff6a10ca3d97957e75cbd7355
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 03f8c0d958696abdb6043b65f8f1359897dcf5fd
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="type-39lttypenamegt39-has-no-constructors"></a>Tipo de &#39; &lt;typename&gt;&#39; no tiene constructores
+# <a name="type-39lttypenamegt39-has-no-constructors"></a>Tipo de &#39; &lt;typename&gt; &#39; no tiene constructores
 Un tipo no admite una llamada a `Sub New()`. Una causa probable puede ser un archivo binario o un compilador dañado.  
   
  **Id. de error:** BC30251  
@@ -33,7 +33,7 @@ Un tipo no admite una llamada a `Sub New()`. Una causa probable puede ser un arc
   
 2.  Si el tipo se encuentra en el mismo proyecto, vuelva a compilar el ensamblado que contiene dicho tipo.  
   
-3.  Si el error se repite, reinstale el compilador de [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+3.  Si el error persiste, vuelva a instalar el compilador de Visual Basic.  
   
 4.  Si el error persiste, reúna información sobre las circunstancias y notifíquelo a los Servicios de soporte técnico de Microsoft.  
   

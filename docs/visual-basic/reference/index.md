@@ -12,18 +12,18 @@ ms.assetid: df6e7c50-5f3e-4381-98ed-ba5c3e9fe228
 caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 1bef4da309f5e281b4016912d4b0da8237db6ec0
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 26cb885187cff31a085e34c60c820fe7c0bdc787
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="reference-visual-basic"></a>Referencia (Visual Basic)
-Esta sección proporciona vínculos a información de referencia sobre diversos aspectos de la programación de [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+Esta sección proporciona vínculos a información de referencia sobre distintos aspectos de programación en Visual Basic.  
   
 ## <a name="in-this-section"></a>En esta sección  
  [Referencia del lenguaje Visual Basic](../../visual-basic/language-reference/index.md)  
- Proporciona información de referencia sobre diversos aspectos del lenguaje [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+ Proporciona información de referencia sobre diversos aspectos del lenguaje Visual Basic.  
   
  [Compilador de línea de comandos de Visual Basic](../../visual-basic/reference/command-line-compiler/index.md)  
  Proporciona vínculos a información sobre el compilador de línea de comandos, que proporciona una alternativa a la compilación de programas desde el IDE de Visual Studio.  
@@ -32,7 +32,7 @@ Esta sección proporciona vínculos a información de referencia sobre diversos 
  Proporciona vínculos a información sobre cómo trabajar con la biblioteca de clases [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].  
   
  [Especificación del lenguaje de Visual Basic](../../visual-basic/reference/language-specification/index.md)  
- Proporciona vínculos a la especificación completa del lenguaje [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], que contiene información detallada sobre todos los aspectos del lenguaje.  
+ Proporciona vínculos a la especificación completa del lenguaje Visual Basic, que contiene información detallada sobre todos los aspectos del lenguaje.  
   
 ## <a name="reference"></a>Referencia  
  <xref:Microsoft.VisualBasic.PowerPacks?displayProperty=nameWithType>  

@@ -1,10 +1,10 @@
 ---
-title: "Etiquetas XML recomendadas para comentarios de documentación (Visual Basic)"
-ms.custom: 
+title: Etiquetas XML recomendadas para comentarios de documentación (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - devlang-visual-basic
 ms.topic: article
@@ -15,17 +15,17 @@ helpviewer_keywords:
 - XML comments, recommended tags [Visual Basic]
 - comments, recommended XML tags
 ms.assetid: 294e0736-ff1e-498e-af83-6db71ed41a72
-caps.latest.revision: 
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 54712deb8bb2a5ed1e7b1f5fb8aa073dcdaf76d6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 7815d4c9fddc4e760c7495ef7a2509c55141e96e
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="recommended-xml-tags-for-documentation-comments-visual-basic"></a>Etiquetas XML recomendadas para comentarios de documentación (Visual Basic)
-El [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] compilador puede procesar los comentarios de documentación en el código en un archivo XML. Puede utilizar herramientas adicionales para procesar el archivo XML en la documentación.  
+El compilador de Visual Basic puede procesar los comentarios de documentación en el código en un archivo XML. Puede utilizar herramientas adicionales para procesar el archivo XML en la documentación.  
   
  Comentarios XML están permitidos en construcciones de código, como tipos y miembros de tipo. Para los tipos parciales, solo una parte del tipo puede tener comentarios XML, aunque no hay ninguna restricción sobre la creación de comentarios de sus miembros.  
   

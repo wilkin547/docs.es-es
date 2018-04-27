@@ -1,24 +1,26 @@
 ---
-title: "Compatibilidad de característica de confianza parcial"
-ms.custom: 
+title: Compatibilidad de característica de confianza parcial
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a36a540b-1606-4e63-88e0-b7c59e0e6ab7
-caps.latest.revision: "75"
+caps.latest.revision: 75
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1950a0c4015658affb0b9fa0d7c87a062865144b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 72282c62ad23ec825eab7054ab1909d07a062b45
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="partial-trust-feature-compatibility"></a>Compatibilidad de característica de confianza parcial
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] admite un subconjunto limitado de funcionalidad cuando se ejecuta en un entorno de confianza parcial. Las características admitidas en confianza parcial están diseñadas alrededor de un conjunto concreto de escenarios, tal y como se describe en el tema [Supported Deployment Scenarios](../../../../docs/framework/wcf/feature-details/supported-deployment-scenarios.md) .  
@@ -103,7 +105,7 @@ ms.lasthandoff: 12/22/2017
   
 -   Asegurarse de implementar la aplicación como una aplicación de confianza total en la que los usuarios no pueden modificar los valores de la seguridad de acceso del código para ejecutar la aplicación en un entorno de confianza parcial. De poder hacerlo, el comportamiento no se ejecutaría y no se iniciaría ninguna excepción. Para garantizar esto, consulte la **levelfinal** mediante la opción [Caspol.exe (Code Access Security Policy Tool)](../../../../docs/framework/tools/caspol-exe-code-access-security-policy-tool.md).  
   
- [!INCLUDE[crexample](../../../../includes/crexample-md.md)] un comportamiento común, consulte [How to: Lock Down Endpoints in the Enterprise](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md).  
+ Para obtener un ejemplo de un comportamiento común, consulte [Cómo: bloqueo hacia abajo los extremos de la empresa](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md).  
   
 ## <a name="configuration"></a>Configuración  
  Con una sola excepción, el código de confianza parcial solo puede cargar secciones de configuración de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] en el archivo `app.config` local. Para cargar las secciones de configuración de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] que hacen referencia a las secciones de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] en machine.config o en un archivo web.config raíz requiere ConfigurationPermission (sin restricciones). Sin este permiso, las referencias a las secciones de configuración de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] (comportamientos, enlaces) fuera del archivo de configuración local producen una excepción cuando se carga la configuración.  

@@ -1,26 +1,27 @@
 ---
-title: "Cómo actualizar la definición de una instancia de flujo de trabajo en ejecución"
-ms.custom: 
+title: Cómo actualizar la definición de una instancia de flujo de trabajo en ejecución
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 26dfac36-ae23-4909-9867-62495b55fb5e
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 86a6e8d22d1e46407082af5d71cd83c179825bb9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9c0590f7fc9cd8cc48b725b83af55b4ed81a0e59
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-update-the-definition-of-a-running-workflow-instance"></a>Cómo actualizar la definición de una instancia de flujo de trabajo en ejecución
 La actualización dinámica proporciona un mecanismo para que los desarrolladores de aplicaciones de flujo de trabajo actualicen la definición de flujo de trabajo de una instancia de flujo de trabajo persistente. El cambio necesario puede ser implementar una corrección de errores, nuevos requisitos o dar cabida a cambios inesperados. Este paso en el tutorial muestra cómo usar la actualización dinámica para modificar las instancias persistentes de la `v1` número averiguación de flujo de trabajo para que coincida con la nueva funcionalidad incluida en [Cómo: Host varias versiones de un flujo de trabajo paralelo ](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md).  
@@ -50,7 +51,7 @@ La actualización dinámica proporciona un mecanismo para que los desarrolladore
   
 -   [Para habilitar el inicio de las versiones anteriores de los flujos de trabajo](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_StartPreviousVersions)  
   
-###  <a name="BKMK_CreateProject"></a>Para crear el proyecto de CreateUpdateMaps  
+###  <a name="BKMK_CreateProject"></a> Para crear el proyecto de CreateUpdateMaps  
   
 1.  Haga clic en **WF45GettingStartedTutorial** en **el Explorador de soluciones** y elija **agregar**, **nuevo proyecto**.  
   
@@ -234,7 +235,7 @@ La actualización dinámica proporciona un mecanismo para que los desarrolladore
     }  
     ```  
   
-###  <a name="BKMK_StateMachine"></a>Para actualizar StateMachineNumberGuessWorkflow  
+###  <a name="BKMK_StateMachine"></a> Para actualizar StateMachineNumberGuessWorkflow  
   
 1.  Agregue `CreateStateMachineUpdateMap` a la clase `Program` (o `Module1`).  
   
@@ -427,7 +428,7 @@ La actualización dinámica proporciona un mecanismo para que los desarrolladore
     }  
     ```  
   
-###  <a name="BKMK_Flowchart"></a>Para actualizar FlowchartNumberGuessWorkflow  
+###  <a name="BKMK_Flowchart"></a> Para actualizar FlowchartNumberGuessWorkflow  
   
 1.  Agregue el siguiente `CreateFlowchartUpdateMethod` a la clase `Program` (o `Module1`). Este método es parecido a `CreateStateMachineUpdateMap`. Comienza con una llamada a `StartUpdate`, actualiza la definición de flujo de trabajo del diagrama de flujo y finaliza guardando la asignación de actualización y la definición de flujo de trabajo actualizada.  
   
@@ -541,7 +542,7 @@ La actualización dinámica proporciona un mecanismo para que los desarrolladore
     }  
     ```  
   
-###  <a name="BKMK_Sequential"></a>Para actualizar SequentialNumberGuessWorkflow  
+###  <a name="BKMK_Sequential"></a> Para actualizar SequentialNumberGuessWorkflow  
   
 1.  Agregue el siguiente `CreateSequentialUpdateMethod` a la clase `Program` (o `Module1`). Este método es similar a los otros dos métodos. Comienza con una llamada a `StartUpdate`, actualiza la definición de flujo de trabajo secuencial y finaliza guardando la asignación de actualización y la definición de flujo de trabajo actualizada.  
   
@@ -621,7 +622,7 @@ La actualización dinámica proporciona un mecanismo para que los desarrolladore
     }  
     ```  
   
-###  <a name="BKMK_CreateUpdateMaps"></a>Para compilar y ejecutar la aplicación CreateUpdateMaps  
+###  <a name="BKMK_CreateUpdateMaps"></a> Para compilar y ejecutar la aplicación CreateUpdateMaps  
   
 1.  Actualice el método `Main` y agregue las tres llamadas de método siguientes. Estos métodos se agregan en las secciones siguientes. Cada método actualiza el flujo de trabajo de acierto de números correspondiente y crea un elemento `DynamicUpdateMap` que describe las actualizaciones.  
   
@@ -655,7 +656,7 @@ La actualización dinámica proporciona un mecanismo para que los desarrolladore
   
      Una vez creadas las asignaciones de actualización y actualizadas las definiciones de flujo de trabajo, el siguiente paso es compilar un ensamblado de flujo de trabajo actualizado que contenga las definiciones actualizadas.  
   
-###  <a name="BKMK_BuildAssembly"></a>Para compilar el ensamblado de flujo de trabajo actualizados  
+###  <a name="BKMK_BuildAssembly"></a> Para compilar el ensamblado de flujo de trabajo actualizados  
   
 1.  Abra una segunda instancia de [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)].  
   
@@ -680,13 +681,13 @@ La actualización dinámica proporciona un mecanismo para que los desarrolladore
   
 9. Presione Ctrl+Mayús+B para compilar el proyecto.  
   
-10. Elija **Cerrar solución** desde el **archivo** menú. Un archivo de solución del proyecto no es necesario, haga clic en **No** para cerrar [!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)] sin guardar un archivo de solución. Elija **Exit** desde el **archivo** menú para cerrar [!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)].  
+10. Elija **Cerrar solución** desde el **archivo** menú. Un archivo de solución del proyecto no es necesario, haga clic en **n** para cerrar Visual Studio sin guardar un archivo de solución. Elija **Exit** desde el **archivo** menú para cerrar Visual Studio.  
   
 11. Abra el Explorador de Windows y navegue hasta la **NumberGuessWorkflowActivities_du\bin\Debug** carpeta (o **bin\Release** según la configuración del proyecto).  
   
 12. Cambiar el nombre de **NumberGuessWorkflowActivities.dll** a **NumberGuessWorkflowActivities_v15.dll**y cópielo en el **PreviousVersions** carpeta que creó en [Cómo: hospedar varias versiones de un flujo de trabajo paralelo](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md).  
   
-###  <a name="BKMK_UpdateWorkflowVersionMap"></a>Para actualizar WorkflowVersionMap con las nuevas versiones  
+###  <a name="BKMK_UpdateWorkflowVersionMap"></a> Para actualizar WorkflowVersionMap con las nuevas versiones  
   
 1.  Vuelva a la instancia inicial de [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)].  
   
@@ -1073,7 +1074,7 @@ La actualización dinámica proporciona un mecanismo para que los desarrolladore
   
 5.  Presione Ctrl+Mayús+B para compilar el proyecto.  
   
-###  <a name="BKMK_ApplyUpdate"></a>Para aplicar las actualizaciones dinámicas  
+###  <a name="BKMK_ApplyUpdate"></a> Para aplicar las actualizaciones dinámicas  
   
 1.  Haga clic en **WF45GettingStartedTutorial** en **el Explorador de soluciones** y elija **agregar**, **nuevo proyecto**.  
   
@@ -1448,7 +1449,7 @@ La actualización dinámica proporciona un mecanismo para que los desarrolladore
 **Inspeccionando: SequentialNumberGuessWorkflow; Versión = 2.0.0.0**   
 **Presione cualquier tecla para continuar...**  
   
-###  <a name="BKMK_BuildAndRun"></a>Para ejecutar la aplicación con los flujos de trabajo actualizados  
+###  <a name="BKMK_BuildAndRun"></a> Para ejecutar la aplicación con los flujos de trabajo actualizados  
   
 1.  Haga clic en **NumberGuessWorkflowHost** en **el Explorador de soluciones** y elija **establecer como proyecto de inicio**.  
   
@@ -1483,7 +1484,7 @@ La actualización dinámica proporciona un mecanismo para que los desarrolladore
 **Escriba un número entre 1 y 10**   
 **6 es correcto. Lo acertó en 4 intentos.**  
   
-###  <a name="BKMK_StartPreviousVersions"></a>Para habilitar el inicio de las versiones anteriores de los flujos de trabajo  
+###  <a name="BKMK_StartPreviousVersions"></a> Para habilitar el inicio de las versiones anteriores de los flujos de trabajo  
  Si ya no le quedan flujos de trabajo que actualizar, puede modificar la aplicación `NumberGuessWorkflowHost` para habilitar el inicio de versiones anteriores de los flujos de trabajo.  
   
 1.  Haga doble clic en **WorkflowHostForm** en **el Explorador de soluciones**y seleccione el **WorkflowType** cuadro combinado.  

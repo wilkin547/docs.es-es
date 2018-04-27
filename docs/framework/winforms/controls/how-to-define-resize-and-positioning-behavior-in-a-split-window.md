@@ -1,12 +1,13 @@
 ---
-title: "Cómo: Definir el comportamiento de cambio de tamaño y colocación de una ventana dividida"
-ms.custom: 
+title: 'Cómo: Definir el comportamiento de cambio de tamaño y colocación de una ventana dividida'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,16 +17,17 @@ helpviewer_keywords:
 - splitter windows [Windows Forms], resizing
 - SplitContainer control [Windows Forms], resizing
 ms.assetid: 9bf73f36-ed2d-4a02-b15a-0770eff4fdfa
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ed78a49119c87c52a07cc2ade030e66087d3f420
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: e62091addfb64c287154b190f02caf1600533b3b
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-define-resize-and-positioning-behavior-in-a-split-window"></a>Cómo: Definir el comportamiento de cambio de tamaño y colocación de una ventana dividida
 Los paneles de la <xref:System.Windows.Forms.SplitContainer> control prestan apropiado para la que se va a cambiar de tamaño y manipulados por los usuarios. Sin embargo, habrá veces cuando desea controlar mediante programación el divisor, donde se coloca y hasta qué punto se puede mover.  
@@ -66,7 +68,7 @@ Los paneles de la <xref:System.Windows.Forms.SplitContainer> control prestan apr
     }  
     ```  
   
-     ([!INCLUDE[csprcs](../../../../includes/csprcs-md.md)]) Coloque el código siguiente en el constructor del formulario para registrar el controlador de eventos.  
+     (Visual C#) Coloque el código siguiente en el constructor del formulario para registrar el controlador de eventos.  
   
     ```csharp  
     this.Load += new System.EventHandler(this.Form1_Load);  

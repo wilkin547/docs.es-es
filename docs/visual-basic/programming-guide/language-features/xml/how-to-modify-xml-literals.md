@@ -1,29 +1,30 @@
 ---
-title: "Cómo: Modificar literales XML (Visual Basic)"
-ms.custom: 
+title: 'Cómo: Modificar literales XML (Visual Basic)'
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - XML axis [Visual Basic], Value
 - XML literals [Visual Basic]
 - XML literals [Visual Basic], modifying
 ms.assetid: 4e864522-a37a-43a2-8236-af80277c5482
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: bdc60542477d15f4fe9dd85dae4c9a918e695740
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 230cf17fec8356b8f16ea2118b0bda0589ecd04a
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-modify-xml-literals-visual-basic"></a>Cómo: Modificar literales XML (Visual Basic)
-[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]proporciona las formas adecuadas para modificar literales XML. Puede agregar o eliminar elementos y atributos, y también puede reemplazar un elemento existente con un nuevo elemento XML. Este tema proporciona varios ejemplos de cómo modificar un literal XML existente.  
+Visual Basic proporciona formas adecuadas para modificar literales XML. Puede agregar o eliminar elementos y atributos, y también puede reemplazar un elemento existente con un nuevo elemento XML. Este tema proporciona varios ejemplos de cómo modificar un literal XML existente.  
   
 ### <a name="to-modify-the-value-of-an-xml-literal"></a>Para modificar el valor de un literal XML  
   

@@ -1,12 +1,13 @@
 ---
-title: "Información general sobre impresión"
-ms.custom: 
+title: Información general sobre impresión
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -22,19 +23,20 @@ helpviewer_keywords:
 - XPSDrv-based printers
 - GDI print path [WPF]
 ms.assetid: 0de8ac41-9aa6-413d-a121-7aa6f41539b1
-caps.latest.revision: "35"
+caps.latest.revision: 35
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 91ccf1f98d9e1e2f5784246cf30995b689a0b94b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9a36589ca670892398b4d6bb171e79a07060d458
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="printing-overview"></a>Información general sobre impresión
-Con [!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)], los desarrolladores de aplicaciones que usan [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] tienen un nuevo y rico conjunto de [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)] de impresión y administración del sistema de impresión. Con [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)], algunas de estas mejoras del sistema de impresión también están disponibles para los desarrolladores que crean aplicaciones de [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)], así como para los que usan código no administrado. La base de esta nueva funcionalidad es el nuevo formato de archivo [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] y la ruta de impresión [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)].  
+Con Microsoft .NET Framework, los desarrolladores de aplicaciones que utilizan [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] tiene un nuevo conjunto enriquecido de administración de sistema de impresión y [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)]. Con [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)], algunas de estas mejoras del sistema de impresión también están disponibles para los desarrolladores que crean aplicaciones de [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)], así como para los que usan código no administrado. La base de esta nueva funcionalidad es el nuevo formato de archivo [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] y la ruta de impresión [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)].  
   
  Este tema contiene las siguientes secciones:  
   
@@ -46,11 +48,11 @@ Con [!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)], los
   
 <a name="XPS_print_path_intro"></a>   
 ## <a name="xps-print-path"></a>Ruta de impresión XPS  
- La ruta de impresión [!INCLUDE[TLA#tla_metro](../../../../includes/tlasharptla-metro-md.md)] es una nueva característica de [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] que redefine la administración de la impresión en aplicaciones de [!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)]. Dado que [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] puede reemplazar un lenguaje de presentación de documento (por ejemplo, RTF), un formato de administrador de trabajos en cola de impresión (como WMF) y un lenguaje de descripción de página (por ejemplo, Postscript o PCL), la nueva ruta de impresión mantiene el formato [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] desde la publicación en la aplicación hasta el procesamiento final en el dispositivo o controlador de impresora.  
+ El [!INCLUDE[TLA#tla_metro](../../../../includes/tlasharptla-metro-md.md)] es una nueva ruta de impresión [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] característica que vuelve a definir cómo se controla la impresión en aplicaciones de Windows. Dado que [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] puede reemplazar un lenguaje de presentación de documento (por ejemplo, RTF), un formato de administrador de trabajos en cola de impresión (como WMF) y un lenguaje de descripción de página (por ejemplo, Postscript o PCL), la nueva ruta de impresión mantiene el formato [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] desde la publicación en la aplicación hasta el procesamiento final en el dispositivo o controlador de impresora.  
   
  La ruta de impresión [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] se basa en el modelo de controlador de impresora [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] (XPSDrv), que proporciona varias ventajas a los desarrolladores, como impresión [!INCLUDE[TLA#tla_wys](../../../../includes/tlasharptla-wys-md.md)], soporte de color mejorado y rendimiento de impresión considerablemente superior. (Para obtener más información sobre XPSDrv, consulte el [kit de desarrollo de controladores de Windows](https://msdn.microsoft.com/library/windows/hardware/ff557573.aspx)).  
   
- La operación del administrador de trabajos en cola de impresión para documentos [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] es esencialmente la misma que en versiones anteriores de [!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)]. Sin embargo, se ha mejorado para admitir la ruta de impresión [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)], que se suma a la ruta de impresión [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)] actual. La nueva ruta de impresión usa de forma nativa un archivo de cola de impresión [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)]. Aunque los controladores de impresora de modo de usuario escritos para versiones anteriores de [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] continuarán funcionando, es necesario un controlador de impresora [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] (XPSDrv) a fin de poder usar la ruta de impresión [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)].  
+ La operación de la cola de impresión para [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] documentos es esencialmente el mismo que en versiones anteriores de Windows. Sin embargo, se ha mejorado para admitir la ruta de impresión [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)], que se suma a la ruta de impresión [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)] actual. La nueva ruta de impresión usa de forma nativa un archivo de cola de impresión [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)]. Aunque los controladores de impresora de modo de usuario escritos para versiones anteriores de [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] continuarán funcionando, es necesario un controlador de impresora [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] (XPSDrv) a fin de poder usar la ruta de impresión [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)].  
   
  Las ventajas de la ruta de impresión [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] son significativas e incluyen:  
   

@@ -1,12 +1,13 @@
 ---
-title: "Delegación y suplantación con WCF"
-ms.custom: 
+title: Delegación y suplantación con WCF
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,16 +16,17 @@ helpviewer_keywords:
 - impersonation [WCF]
 - delegation [WCF]
 ms.assetid: 110e60f7-5b03-4b69-b667-31721b8e3152
-caps.latest.revision: "40"
+caps.latest.revision: 40
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6319a9793698e12a984c875670d71b2cbb0b00ba
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 5c1acfdfdbac2660fd4de7ec391c94b39890f669
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="delegation-and-impersonation-with-wcf"></a>Delegación y suplantación con WCF
 La*suplantación* es una técnica habitual que utilizan los servicios para restringir el acceso de los clientes a los recursos de un dominio de servicio. Los recursos de dominio de servicio pueden ser recursos de equipo, como archivos locales (suplantación), o un recurso en otro equipo, como un recurso compartido de archivos (delegación). Para obtener una aplicación de ejemplo, consulte [Impersonating the Client](../../../../docs/framework/wcf/samples/impersonating-the-client.md). Para obtener un ejemplo sobre el uso de la suplantación, consulte [How to: Impersonate a Client on a Service](../../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md).  
@@ -68,7 +70,7 @@ La*suplantación* es una técnica habitual que utilizan los servicios para restr
  Hasta qué punto el servicio puede suplantar al cliente depende de los privilegios que la cuenta de servicio contiene al intentar suplantar, el tipo de suplantación utilizado y posiblemente hasta qué punto el cliente permite la suplantación.  
   
 > [!NOTE]
->  Cuando el cliente y el servicio se están ejecutando en el mismo equipo y el cliente se está ejecutando bajo una cuenta del sistema (por ejemplo, `Local System` o `Network Service`), no se puede suplantar el cliente cuando una sesión segura se establece con tokens de contexto de seguridad con estado. Una aplicación Windows Form o de consola se ejecutan normalmente con la cuenta con la que haya iniciado la sesión, de manera que la cuenta pueda suplantarse de manera predeterminada. Sin embargo, cuando el cliente es una página [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] y se hospeda en [!INCLUDE[iis601](../../../../includes/iis601-md.md)] o [!INCLUDE[iisver](../../../../includes/iisver-md.md)], el cliente se ejecutará a continuación con la cuenta `Network Service` de manera predeterminada. Todos los enlaces proporcionados por el sistema que admiten sesiones seguras utilizan de forma predeterminada un token de contexto de seguridad sin estado (SCT). Sin embargo, si el cliente es una página de [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] y se usan sesiones seguras con SCT con estado, no se puede suplantar al cliente. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]cómo usar SCT con estado en una sesión segura, consulte [Cómo: crear un Token de contexto de seguridad para una sesión segura](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).  
+>  Cuando el cliente y el servicio se están ejecutando en el mismo equipo y el cliente se está ejecutando bajo una cuenta del sistema (por ejemplo, `Local System` o `Network Service`), no se puede suplantar el cliente cuando una sesión segura se establece con tokens de contexto de seguridad con estado. Una aplicación Windows Form o de consola se ejecutan normalmente con la cuenta con la que haya iniciado la sesión, de manera que la cuenta pueda suplantarse de manera predeterminada. Sin embargo, cuando el cliente es una página [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] y se hospeda en [!INCLUDE[iis601](../../../../includes/iis601-md.md)] o [!INCLUDE[iisver](../../../../includes/iisver-md.md)], el cliente se ejecutará a continuación con la cuenta `Network Service` de manera predeterminada. Todos los enlaces proporcionados por el sistema que admiten sesiones seguras utilizan de forma predeterminada un token de contexto de seguridad sin estado (SCT). Sin embargo, si el cliente es una página de [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] y se usan sesiones seguras con SCT con estado, no se puede suplantar al cliente. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] cómo usar SCT con estado en una sesión segura, consulte [Cómo: crear un Token de contexto de seguridad para una sesión segura](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).  
   
 ## <a name="impersonation-in-a-service-method-declarative-model"></a>Suplantación en un método de servicio: modelo declarativo  
  La mayoría de los escenarios de suplantación implican la ejecución del método de servicio en el contexto del autor de llamada. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] proporciona una característica de suplantación que lo facilita al permitir que el usuario especifique el requisito de suplantación en el atributo <xref:System.ServiceModel.OperationBehaviorAttribute> . Por ejemplo, en el código siguiente, la infraestructura [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] suplanta al autor de la llamada antes de ejecutar el método `Hello` . Cualquier intento para tener acceso a los recursos nativos dentro del método `Hello` solo tiene éxito si la lista de control de acceso (ACL) del recurso permite privilegios de acceso al autor de la llamada. Para habilitar la suplantación, establezca la propiedad <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> en uno de los valores de enumeración <xref:System.ServiceModel.ImpersonationOption>, <xref:System.ServiceModel.ImpersonationOption.Required?displayProperty=nameWithType> o <xref:System.ServiceModel.ImpersonationOption.Allowed?displayProperty=nameWithType>, tal y como se muestra en el ejemplo siguiente.  
@@ -82,13 +84,13 @@ La*suplantación* es una técnica habitual que utilizan los servicios para restr
  La infraestructura de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] solo puede suplantar al autor de la llamada si éste se autentica con credenciales que pueden estar asignadas a una cuenta de usuario de Windows. Si el servicio se configura para autenticar utilizando una credencial que no puede estar asignada a una cuenta de Windows, no se ejecutará el método de servicio.  
   
 > [!NOTE]
->  En [!INCLUDE[wxp](../../../../includes/wxp-md.md)], se produce un error en la suplantación si se crea un SCT con estado dando como resultado <xref:System.InvalidOperationException>. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Escenarios no admitidos](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md).  
+>  En [!INCLUDE[wxp](../../../../includes/wxp-md.md)], se produce un error en la suplantación si se crea un SCT con estado dando como resultado <xref:System.InvalidOperationException>. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Escenarios no admitidos](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md).  
   
 ## <a name="impersonation-in-a-service-method-imperative-model"></a>Suplantación en un método de servicio: modelo imperativo  
  En ocasiones, un autor de la llamada no necesita suplantar todo el método de servicio para funcionar, sino solo una parte de él. En este caso, obtenga la identidad de Windows del autor de la llamada dentro del método de servicio y realice la suplantación inmediatamente. Haga esto utilizando la propiedad <xref:System.ServiceModel.ServiceSecurityContext.WindowsIdentity%2A> de <xref:System.ServiceModel.ServiceSecurityContext> para devolver una instancia de la clase <xref:System.Security.Principal.WindowsIdentity> y llamando al método <xref:System.Security.Principal.WindowsIdentity.Impersonate%2A> antes de utilizar la instancia.  
   
 > [!NOTE]
->  Asegúrese de usar la instrucción [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)]`Using` o la instrucción `using` de C# para invertir automáticamente la acción de suplantación. Si no utiliza la instrucción, o si utiliza un lenguaje de programación distinto de [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] o C#, asegúrese de invertir el nivel de suplantación. El no hacerlo puede ser la base de la denegación de servicio y aumentar los ataques contra los privilegios.  
+>  Asegúrese de usar Visual Basic`Using` instrucción o C# `using` instrucción para invertir automáticamente la acción de suplantación. Si no utiliza la instrucción, o si usa un lenguaje de programación distinto de Visual Basic o C#, asegúrese de revertir el nivel de suplantación. El no hacerlo puede ser la base de la denegación de servicio y aumentar los ataques contra los privilegios.  
   
  [!code-csharp[c_ImpersonationAndDelegation#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_impersonationanddelegation/cs/source.cs#2)]
  [!code-vb[c_ImpersonationAndDelegation#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_impersonationanddelegation/vb/source.vb#2)]  

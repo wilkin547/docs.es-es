@@ -1,9 +1,9 @@
 ---
-title: "Copiar el valor de &#39; ByRef &#39; parámetro &#39; &lt;parametername&gt;&#39; nuevo en el argumento correspondiente se restringe de tipo &#39;&lt; NombreTipo1&gt;&#39; escriba &#39;&lt; nombredetipo2&gt;&#39;"
+title: Copiar el valor de &#39;ByRef&#39; parámetro &#39; &lt;parametername&gt; &#39; en el argumento correspondiente se reduce de tipo &#39; &lt;typename1&gt; &#39; al tipo &#39; &lt;nombredetipo2&gt;&#39;
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - devlang-visual-basic
 ms.topic: article
@@ -13,29 +13,29 @@ f1_keywords:
 helpviewer_keywords:
 - BC32053
 ms.assetid: 281564b7-99f7-451f-b10d-f985e831bb25
-caps.latest.revision: 
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 4bf993639007162e2e17d4b8cb9dfe8d5316acaa
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 18c72e56e4b2cc9c2251de2417a9f12a6688323f
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="copying-the-value-of-39byref39-parameter-39ltparameternamegt39-back-to-the-matching-argument-narrows-from-type-39lttypename1gt39-to-type-39lttypename2gt39"></a>Copiar el valor de &#39; ByRef &#39; parámetro &#39; &lt;parametername&gt;&#39; nuevo en el argumento correspondiente se restringe de tipo &#39;&lt; NombreTipo1&gt;&#39; escriba &#39;&lt; nombredetipo2&gt;&#39;
+# <a name="copying-the-value-of-39byref39-parameter-39ltparameternamegt39-back-to-the-matching-argument-narrows-from-type-39lttypename1gt39-to-type-39lttypename2gt39"></a>Copiar el valor de &#39;ByRef&#39; parámetro &#39; &lt;parametername&gt; &#39; en el argumento correspondiente se reduce de tipo &#39; &lt;typename1&gt; &#39; al tipo &#39; &lt;nombredetipo2&gt;&#39;
 Se llama a un procedimiento con un argumento que se amplía al tipo de parámetro correspondiente, y la conversión del parámetro al argumento es de restricción.  
   
- Al definir una clase o estructura, puede definir uno o varios operadores de conversión para convertir ese tipo de clase o estructura a otros tipos. También puede definir operadores de conversión inversos para convertir esos otros tipos de nuevo a su clase o tipo de estructura. Cuando use su tipo de clase o estructura en una llamada de procedimiento, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] puede usar estos operadores de conversión para convertir el tipo de un argumento al tipo del parámetro correspondiente.  
+ Al definir una clase o estructura, puede definir uno o varios operadores de conversión para convertir ese tipo de clase o estructura a otros tipos. También puede definir operadores de conversión inversos para convertir esos otros tipos de nuevo a su clase o tipo de estructura. Cuando utilice su tipo de clase o estructura en una llamada a procedimiento, Visual Basic puede utilizar estos operadores de conversión para convertir al tipo de un argumento al tipo del parámetro correspondiente.  
   
- Si se pasa el argumento [ByRef](../../../visual-basic/language-reference/modifiers/byref.md), [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] a veces copia el valor del argumento en una variable local en el procedimiento en lugar de pasar una referencia. En tal caso, cuando el procedimiento vuelve, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] debe copiar el valor de la variable local de nuevo en el argumento en el código de llamada.  
+ Si se pasa el argumento [ByRef](../../../visual-basic/language-reference/modifiers/byref.md), Visual Basic a veces copia el valor del argumento en una variable local en el procedimiento en lugar de pasar una referencia. En este caso, cuando el procedimiento vuelve, Visual Basic debe copiar de nuevo el valor de la variable local en el argumento en el código de llamada.  
   
- Si un valor de argumento `ByRef` se copia en el procedimiento y el argumento y el parámetro son del mismo tipo, no es necesario realizar ninguna conversión. Pero si los tipos son diferentes, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] se debe convertir en ambas direcciones. Si uno de los tipos es su tipo de clase o estructura, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] lo debe convertir a y desde el otro tipo. Si es una de estas conversiones de ampliación, la conversión inversa podría ser de restricción.  
+ Si un valor de argumento `ByRef` se copia en el procedimiento y el argumento y el parámetro son del mismo tipo, no es necesario realizar ninguna conversión. Pero si los tipos son diferentes, Visual Basic debe convertir en ambas direcciones. Si uno de los tipos es su tipo de clase o estructura, Visual Basic debe convertir a y desde el otro tipo. Si es una de estas conversiones de ampliación, la conversión inversa podría ser de restricción.  
   
  **Id. de error:** BC32053  
   
 ## <a name="to-correct-this-error"></a>Para corregir este error  
   
--   Si es posible, use un argumento de llamada del mismo tipo, como el parámetro de procedimiento, por lo que [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] no necesita hacer ninguna conversión.  
+-   Si es posible, utilice un argumento de llamada del mismo tipo como el parámetro de procedimiento, por lo que no es necesario realizar ninguna conversión de Visual Basic.  
   
 -   Si necesita llamar al procedimiento con un argumento de tipo diferente del tipo de parámetro pero no es necesario devolver un valor al argumento de llamada, defina el parámetro para que sea [ByVal](../../../visual-basic/language-reference/modifiers/byval.md) en lugar de `ByRef`.  
   

@@ -1,27 +1,29 @@
 ---
-title: "Agrupación de conexiones de SQL Server (ADO.NET)"
-ms.custom: 
+title: Agrupación de conexiones de SQL Server (ADO.NET)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 7e51d44e-7c4e-4040-9332-f0190fe36f07
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 497ebbd573ea05568010485f04f08cdeddbf6041
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: c0be63e767255508ac93555a503980f3798e70c0
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sql-server-connection-pooling-adonet"></a>Agrupación de conexiones de SQL Server (ADO.NET)
 La conexión a un servidor de bases de datos suele constar de varios pasos que requieren mucho tiempo. Se debe establecer un canal físico, como un socket o una canalización con nombre, debe tener lugar el protocolo de enlace con el servidor, se debe analizar la información de la cadena de conexión, el servidor debe autenticar la conexión, se deben ejecutar comprobaciones para la inscripción en la transacción actual, etc.  
@@ -78,13 +80,13 @@ using (SqlConnection connection = new SqlConnection(
  El agrupador de conexiones satisface las solicitudes de conexión al reasignar las conexiones conforme se liberan de nuevo en el grupo. Si se ha alcanzado el tamaño máximo del grupo y no hay disponible ninguna conexión que se pueda utilizar, la solicitud se pone en la cola. A continuación, el concentrador intenta reclamar las conexiones hasta que se agota el tiempo de espera (el valor predeterminado es 15 segundos). Si no puede satisfacer la solicitud antes de que se agote el tiempo de espera de la conexión, se inicia una excepción.  
   
 > [!CAUTION]
->  Se recomienda encarecidamente cerrar siempre la conexión cuando se termine de utilizar para que regrese al grupo. Para ello, puede utilizar los métodos `Close` o `Dispose` del objeto `Connection`, o abrir todas las conexiones dentro de una instrucción `using` en C#, o de una instrucción `Using` en [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)]. Es posible que las conexiones que no se cierran explícitamente no se puedan agregar ni puedan regresar al grupo. Para obtener más información, consulte [mediante la instrucción](~/docs/csharp/language-reference/keywords/using-statement.md) o [Cómo: deshacerse de un recurso de sistema](~/docs/visual-basic/programming-guide/language-features/control-flow/how-to-dispose-of-a-system-resource.md) para [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)].  
+>  Se recomienda encarecidamente cerrar siempre la conexión cuando se termine de utilizar para que regrese al grupo. Puede hacerlo mediante el `Close` o `Dispose` métodos de la `Connection` objeto, o abrir todas las conexiones dentro de un `using` instrucción en C#, o un `Using` instrucción en Visual Basic. Es posible que las conexiones que no se cierran explícitamente no se puedan agregar ni puedan regresar al grupo. Para obtener más información, consulte [mediante la instrucción](~/docs/csharp/language-reference/keywords/using-statement.md) o [Cómo: deshacerse de un recurso de sistema](~/docs/visual-basic/programming-guide/language-features/control-flow/how-to-dispose-of-a-system-resource.md) en Visual Basic.  
   
 > [!NOTE]
 >  No llame a `Close` o a `Dispose` en un objeto `Connection`, un objeto `DataReader` o cualquier otro objeto administrado en el método `Finalize` de la clase. En un finalizador, libere solo los recursos no administrados que pertenezcan directamente a su clase. Si la clase no dispone de recursos no administrados, no incluya un método `Finalize` en la definición de clase. Para obtener más información, consulte [recolección](../../../../docs/standard/garbage-collection/index.md).  
   
 > [!NOTE]
->  Los eventos de inicio y cierre de sesión no se producen en el servidor cuando se captura una conexión del grupo de conexiones o se devuelve a él. Esto se debe a que la conexión no se cierra realmente cuando se devuelve al grupo de conexiones. Para obtener más información, consulte [Audit Login Event Class](http://msdn2.microsoft.com/library/ms190260.aspx) y [Audit Logout Event Class](http://msdn2.microsoft.com/library/ms175827.aspx) en [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] libros en pantalla.  
+>  Los eventos de inicio y cierre de sesión no se producen en el servidor cuando se captura una conexión del grupo de conexiones o se devuelve a él. Esto se debe a que la conexión no se cierra realmente cuando se devuelve al grupo de conexiones. Para obtener más información, consulte [Audit Login Event Class](http://msdn2.microsoft.com/library/ms190260.aspx) y [Audit Logout Event Class](http://msdn2.microsoft.com/library/ms175827.aspx) en libros en pantalla de SQL Server.  
   
 ## <a name="removing-connections"></a>Cómo quitar conexiones  
  El agrupador de conexiones quita una conexión del grupo después de haber estado inactiva unos 4-8 minutos o si detecta que se ha roto la conexión con el servidor. Tenga en cuenta que una conexión rota solo puede detectarse después de intentar comunicarse con el servidor. Si se encuentra que una conexión ya no está conectada al servidor, se marca como no válida. Las conexiones no válidas se quitan del grupo de conexión solo cuando se cierran o reclaman.  
@@ -111,7 +113,7 @@ using (SqlConnection connection = new SqlConnection(
 ### <a name="pool-fragmentation-due-to-many-databases"></a>Fragmentación de grupos debido a muchas bases de datos  
  Muchos proveedores de acceso a Internet hospedan varios sitios web en un único servidor. Puede que utilicen una sola base de datos para confirmar un inicio de sesión de autenticación de formularios y luego abran una conexión a una base de datos específica para ese usuario o grupo de usuarios. La conexión a la base de datos de autenticación es agrupada y utilizada por todo el mundo. Sin embargo, hay un grupo independiente de conexiones con cada base de datos, lo que implica un aumento del número de conexiones con el servidor.  
   
- Este es también un efecto secundario del diseño de la aplicación. Hay una forma relativamente sencilla de evitar este efecto secundario sin comprometer la seguridad cuando se establece conexión con [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]. En lugar de realizar una conexión a una base de datos diferente para cada usuario o grupo, realice una conexión a la misma base de datos en el servidor y, a continuación, ejecute la instrucción USE de [!INCLUDE[tsql](../../../../includes/tsql-md.md)] para cambiar a la base de datos deseada. En el siguiente fragmento de código se muestra la creación de una conexión inicial con la base de datos `master` y el cambio a la base de datos deseada especificada en la variable de cadena `databaseName`.  
+ Este es también un efecto secundario del diseño de la aplicación. Existe, sin embargo, una forma relativamente sencilla de evitarlo sin comprometer la seguridad cuando se establece conexión con SQL Server. En lugar de realizar una conexión a una base de datos diferente para cada usuario o grupo, realice una conexión a la misma base de datos en el servidor y, a continuación, ejecute la instrucción USE de [!INCLUDE[tsql](../../../../includes/tsql-md.md)] para cambiar a la base de datos deseada. En el siguiente fragmento de código se muestra la creación de una conexión inicial con la base de datos `master` y el cambio a la base de datos deseada especificada en la variable de cadena `databaseName`.  
   
 ```vb  
 ' Assumes that command is a valid SqlCommand object and that  
@@ -136,7 +138,7 @@ using (SqlConnection connection = new SqlConnection(
 ```  
   
 ## <a name="application-roles-and-connection-pooling"></a>Roles de aplicación y agrupación de conexiones  
- Cuando se ha activado un rol de aplicación de [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] mediante una llamada al procedimiento almacenado del sistema `sp_setapprole`, el contexto de seguridad de esa conexión no puede restablecerse. Sin embargo, cuando se habilita la agrupación, la conexión se devuelve al grupo y se produce un error al utilizar de nuevo la conexión agrupada. Para obtener más información, vea el artículo de Knowledge Base, "[errores de rol de aplicación de SQL con la agrupación de recursos OLE DB](http://support.microsoft.com/default.aspx?scid=KB;EN-US;Q229564)."  
+ Una vez activada una función de aplicación de SQL Server al llamar al procedimiento almacenado de sistema `sp_setapprole`, no se puede restablecer el contexto de seguridad de la conexión. Sin embargo, cuando se habilita la agrupación, la conexión se devuelve al grupo y se produce un error al utilizar de nuevo la conexión agrupada. Para obtener más información, vea el artículo de Knowledge Base, "[errores de rol de aplicación de SQL con la agrupación de recursos OLE DB](http://support.microsoft.com/default.aspx?scid=KB;EN-US;Q229564)."  
   
 ### <a name="application-role-alternatives"></a>Alternativas a los roles de aplicación  
  Se recomienda aprovechar las ventajas de los mecanismos de seguridad que se pueden usar en lugar de roles de aplicación. Para obtener más información, consulte [crear Roles de aplicación de SQL Server](../../../../docs/framework/data/adonet/sql/creating-application-roles-in-sql-server.md).  

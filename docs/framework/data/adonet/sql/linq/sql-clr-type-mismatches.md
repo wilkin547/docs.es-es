@@ -1,27 +1,29 @@
 ---
 title: Desajustes de tipos entre SQL y CLR
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 0a90c33f-7ed7-4501-ad5f-6224c5da8e9b
-caps.latest.revision: "2"
+caps.latest.revision: 2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 6a027bd898409708dd6800908a6736f5853058df
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 6006bb8fd1f6b49382c89acc2b55efcb035ffbf5
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sql-clr-type-mismatches"></a>Desajustes de tipos entre SQL y CLR
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] automatiza gran parte de la conversión entre el modelo de objetos y SQL Server. No obstante, algunas situaciones impiden la exactitud de la conversión. Estas discordancias clave entre los tipos de Common Language Runtime (CLR) y los de base de datos de SQL Server se resumen en las siguientes secciones. Puede encontrar más detalles acerca de las asignaciones de tipo específico y la traducción de la función en [asignación de tipo de CLR de SQL](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md) y [tipos de datos y funciones](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md).  
@@ -42,9 +44,9 @@ Select DateOfBirth From Customer Where CustomerId = @id
   
     -   **Números enteros sin signo**. Estos tipos suelen asignarse a sus equivalentes con signo de mayor tamaño para evitar el desbordamiento. Los literales se pueden convertir a un tipo numérico con signo del mismo tamaño o de un tamaño inferior, según su valor.  
   
-    -   **Boolean**. Estos tipos pueden asignarse a un valor numérico en bits o mayor, o a una cadena. Un literal se puede asignar a una expresión que se evalúe en el mismo valor (por ejemplo, `1=1` en SQL para `True` en CLS).  
+    -   **Booleano**. Estos tipos pueden asignarse a un valor numérico en bits o mayor, o a una cadena. Un literal se puede asignar a una expresión que se evalúe en el mismo valor (por ejemplo, `1=1` en SQL para `True` en CLS).  
   
-    -   **TimeSpan**. Este tipo representa la diferencia entre dos valores `DateTime` y no se corresponde con `timestamp` en SQL Server. El elemento <xref:System.TimeSpan?displayProperty=nameWithType> de CLR también se puede asignar al tipo de elemento `TIME` de SQL Server en algunos casos. La única finalidad del tipo de elemento `TIME` de SQL Server era representar valores positivos menores que 24 horas. El ámbito del elemento <xref:System.TimeSpan> de CLR es mucho más amplio.  
+    -   **Intervalo de tiempo**. Este tipo representa la diferencia entre dos valores `DateTime` y no se corresponde con `timestamp` en SQL Server. El elemento <xref:System.TimeSpan?displayProperty=nameWithType> de CLR también se puede asignar al tipo de elemento `TIME` de SQL Server en algunos casos. La única finalidad del tipo de elemento `TIME` de SQL Server era representar valores positivos menores que 24 horas. El ámbito del elemento <xref:System.TimeSpan> de CLR es mucho más amplio.  
   
     > [!NOTE]
     >  Específicas de SQL Server [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] tipos de <xref:System.Data.SqlTypes> no se incluyen en esta comparación.  
@@ -53,9 +55,9 @@ Select DateOfBirth From Customer Where CustomerId = @id
   
     -   **Tipos de caracteres de longitud fija**. Transact-SQL distingue entre las categorías Unicode y no Unicode y tiene tres tipos distintos en cada categoría: una longitud fija `nchar` / `char`, longitud variable `nvarchar` / `varchar`, y mayor tamaño `ntext` / `text`. Los tipos de caracteres de longitud fija podrían asignarse al tipo de elemento <xref:System.Char?displayProperty=nameWithType> de CLR para recuperar los caracteres, pero realmente no se corresponden con el mismo tipo en conversiones y comportamiento.  
   
-    -   **Bit**. Aunque el dominio `bit` tiene el mismo número de valores que `Nullable<Boolean>`, ambos son tipos diferentes. `Bit`toma los valores `1` y `0` en lugar de `true` / `false`y no se puede usar como equivalente de expresiones booleanas.  
+    -   **Bits**. Aunque el dominio `bit` tiene el mismo número de valores que `Nullable<Boolean>`, ambos son tipos diferentes. `Bit` toma los valores `1` y `0` en lugar de `true` / `false`y no se puede usar como equivalente de expresiones booleanas.  
   
-    -   **Timestamp**. A diferencia del tipo de elemento <xref:System.TimeSpan?displayProperty=nameWithType> de CLR, el tipo de elemento `TIMESTAMP` de SQL Server representa un número de 8 bits generado por la base de datos que es único para cada actualización y no se basa en la diferencia entre los valores de <xref:System.DateTime>.  
+    -   **Marca de tiempo**. A diferencia del tipo de elemento <xref:System.TimeSpan?displayProperty=nameWithType> de CLR, el tipo de elemento `TIMESTAMP` de SQL Server representa un número de 8 bits generado por la base de datos que es único para cada actualización y no se basa en la diferencia entre los valores de <xref:System.DateTime>.  
   
     -   **Money** y **SmallMoney**. Estos tipos pueden asignarse a <xref:System.Decimal>, pero básicamente son tipos diferentes y son tratados como tales en las conversiones y por las funciones basadas en servidor.  
   
@@ -118,7 +120,7 @@ or col1 != col2
   
  En el caso anterior, puede obtener un comportamiento equivalente para generar SQL, pero la conversión podría no reflejar su intención de manera precisa.  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]no impone C# `null` o [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] `nothing` una semántica de comparación en SQL. Los operadores de comparación se convierten sintácticamente en sus equivalentes SQL. La semántica refleja la semántica de SQL tal como la define la configuración del servidor o de la conexión. Dos valores nulos se consideran distintos según la configuración predeterminada de SQL Server (aunque se puede cambiar la configuración para cambiar la semántica). Sea como fuere, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] no considera la configuración del servidor en la conversión de consultas.  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] no impone C# `null` o Visual Basic `nothing` una semántica de comparación en SQL. Los operadores de comparación se convierten sintácticamente en sus equivalentes SQL. La semántica refleja la semántica de SQL tal como la define la configuración del servidor o de la conexión. Dos valores nulos se consideran distintos según la configuración predeterminada de SQL Server (aunque se puede cambiar la configuración para cambiar la semántica). Sea como fuere, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] no considera la configuración del servidor en la conversión de consultas.  
   
  Una comparación con el literal `null` (`nothing`) se convierte a la versión de SQL correcta (`is null` o `is not null`).  
   
@@ -179,7 +181,7 @@ Where Col1 = Col2
     > [!NOTE]
     >  Este comportamiento del operador `Like` solo se aplica en C#; la palabra clave de Visual Basic `Like` se mantiene invariable.  
   
--   El desbordamiento siempre se comprueba en SQL, pero tiene que especificarse explícitamente en C# (no en [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)]) para evitar el salto. Dadas las columnas de enteros C1, C2 y C3, si C1+C2 se almacena en C3 (Update T Set C3 = C1 + C2):  
+-   Siempre se comprueba el desbordamiento en SQL, pero tiene que especificarse explícitamente en C# (no en Visual Basic) para evitar el salto. Dadas las columnas de enteros C1, C2 y C3, si C1+C2 se almacena en C3 (Update T Set C3 = C1 + C2):  
   
     ```  
     create table T3 (  
@@ -197,7 +199,7 @@ Where Col1 = Col2
   
 -   SQL realiza un redondeo aritmético simétrico mientras que [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] utiliza el redondeo bancario. Para obtener información detallada, vea el artículo 196652 de Microsoft Knowledge Base.  
   
--   De forma predeterminada, para las configuraciones regionales comunes, en las comparaciones de cadenas de caracteres no se hace distinción entre mayúsculas y minúsculas en SQL. En Visual Basic y en C#, se distingue entre mayúsculas y minúsculas. Por ejemplo, `s == "Food"` (`s = "Food"` en [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)]) y `s == "Food"` pueden producir resultados diferentes si `s` es `food`.  
+-   De forma predeterminada, para las configuraciones regionales comunes, en las comparaciones de cadenas de caracteres no se hace distinción entre mayúsculas y minúsculas en SQL. En Visual Basic y en C#, se distingue entre mayúsculas y minúsculas. Por ejemplo, `s == "Food"` (`s = "Food"` en Visual Basic) y `s == "Food"` pueden producir resultados diferentes si `s` es `food`.  
   
     ```  
     -- Assume default US-English locale (case insensitive).  

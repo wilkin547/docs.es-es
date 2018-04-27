@@ -2,8 +2,8 @@
 title: Literal de comentario XML (Visual Basic)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - devlang-visual-basic
 ms.topic: article
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - XML comment literal [Visual Basic]
 - XML literals [Visual Basic], comment
 ms.assetid: 634c1cee-5e01-48d0-88d7-2dd55e4a9e52
-caps.latest.revision: 
+caps.latest.revision: 19
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 36be34ac22cfe926a2eea946f5e4c4eb534de696
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d5bb8c10c28a4ab864220c1b4ce4702622e55c92
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="xml-comment-literal-visual-basic"></a>Literal de comentario XML (Visual Basic)
 Un literal que representa un <xref:System.Xml.Linq.XComment> objeto.  
@@ -37,9 +37,9 @@ Un literal que representa un <xref:System.Xml.Linq.XComment> objeto.
   
 |Término|Definición|  
 |---|---|  
-|`<!--`|Obligatorio. Denota el inicio del comentario XML.|  
-|`content`|Obligatorio. Texto que aparecerá en el comentario XML. No puede contener una serie de dos guiones (-) ni terminar con un guión adyacente a la etiqueta de cierre.|  
-|`-->`|Obligatorio. Denota el final del comentario XML.|  
+|`<!--`|Requerido. Denota el inicio del comentario XML.|  
+|`content`|Requerido. Texto que aparecerá en el comentario XML. No puede contener una serie de dos guiones (-) ni terminar con un guión adyacente a la etiqueta de cierre.|  
+|`-->`|Requerido. Denota el final del comentario XML.|  
   
 ## <a name="return-value"></a>Valor devuelto  
  Un objeto <xref:System.Xml.Linq.XComment>.  
@@ -54,9 +54,9 @@ Un literal que representa un <xref:System.Xml.Linq.XComment> objeto.
  Puede asignar un literal de comentario XML a una variable o incluirlo en un literal de elemento XML.  
   
 > [!NOTE]
->  Un literal XML puede abarcar varias líneas sin usar caracteres de continuación de línea. Esta característica le permite copiar el contenido de un documento XML y pegarlos directamente en un [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] programa.  
+>  Un literal XML puede abarcar varias líneas sin usar caracteres de continuación de línea. Esta característica permite copiar el contenido de un documento XML y pegarlos directamente en un programa de Visual Basic.  
   
- El [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] compilador convierte el literal de comentario XML a una llamada a la <xref:System.Xml.Linq.XComment.%23ctor%2A> constructor.  
+ El compilador de Visual Basic convierte el literal de comentario XML a una llamada a la <xref:System.Xml.Linq.XComment.%23ctor%2A> constructor.  
   
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se crea un comentario XML que contiene el texto "Esto es un comentario".  

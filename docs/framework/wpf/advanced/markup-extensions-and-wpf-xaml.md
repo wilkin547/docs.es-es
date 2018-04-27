@@ -23,17 +23,17 @@ helpviewer_keywords:
 - characters [WPF], curly brace
 - DynamicResource markup extensions [WPF]
 ms.assetid: 618dc745-8b14-4886-833f-486d2254bb78
-caps.latest.revision: ''
+caps.latest.revision: 26
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 5e6dec42d40039f9cc23ba976ecf421f6471888e
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: cf1d7fda58c3bca0f9d76c3c4d3b8d22545a9912
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="markup-extensions-and-wpf-xaml"></a>Extensiones de marcado y XAML de WPF
 En este tema se presenta el concepto de extensiones de marcado para XAML, incluidos sus reglas de sintaxis, su finalidad y el modelo de objeto de clase subyacente. Las extensiones de marcado son una característica general del lenguaje XAML y de la implementación .NET de servicios XAML. En este tema se detallan las extensiones de marcado para su uso en XAML de WPF.  
@@ -64,7 +64,7 @@ En este tema se presenta el concepto de extensiones de marcado para XAML, inclui
 -   `x:Array` admite la creación de matrices generales en sintaxis XAML para casos en los que no se use deliberadamente el soporte de colección que proporcionan los elementos base y los modelos de control. Para obtener más información, consulte [x:Array (Extensión de marcado)](../../../../docs/framework/xaml-services/x-array-markup-extension.md).  
   
 > [!NOTE]
->  El prefijo `x:` se usa para la asignación de espacio de nombres típica de XAML para los objetos intrínsecos del lenguaje XAML, en el elemento raíz de una producción o un archivo XAML. Por ejemplo, las plantillas [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] para aplicaciones WPF inician un archivo XAML mediante la asignación `x:`. Puede elegir un token de prefijo diferente en su propia asignación de espacio de nombres XAML, pero en esta documentación se presupone la asignación `x:` predeterminada como manera de identificar las entidades que forman una parte definida del espacio de nombres XAML del lenguaje XAML, en lugar de un espacio de nombres predeterminado de WPF o de otros espacios de nombres XAML que no estén relacionados con ningún marco específico.  
+>  El prefijo `x:` se usa para la asignación de espacio de nombres típica de XAML para los objetos intrínsecos del lenguaje XAML, en el elemento raíz de una producción o un archivo XAML. Por ejemplo, las plantillas de Visual Studio para las aplicaciones WPF inician un archivo XAML usando esta `x:` asignación. Puede elegir un token de prefijo diferente en su propia asignación de espacio de nombres XAML, pero en esta documentación se presupone la asignación `x:` predeterminada como manera de identificar las entidades que forman una parte definida del espacio de nombres XAML del lenguaje XAML, en lugar de un espacio de nombres predeterminado de WPF o de otros espacios de nombres XAML que no estén relacionados con ningún marco específico.  
   
 <a name="WPF_Specific_Markup_Extensions"></a>   
 ## <a name="wpf-specific-markup-extensions"></a>Extensiones de marcado específicas de WPF  
@@ -112,7 +112,7 @@ En este tema se presenta el concepto de extensiones de marcado para XAML, inclui
   
 <a name="EscapeSequences"></a>   
 ## <a name="escape-sequences-and-markup-extensions"></a>Secuencias de escape y extensiones de marcado  
- El control de atributos en un procesador XAML usa las llaves como indicadores de una secuencia de extensión de marcado. También es posible generar un valor de atributo de caracteres literales de llave si es necesario, escribiendo una secuencia de escape con un par de llaves vacío seguido de la llave de cierre literal. Vea [secuencia de Escape {}: extensión de marcado](../../xaml-services/escape-sequence-markup-extension.md).  
+ El control de atributos en un procesador XAML usa las llaves como indicadores de una secuencia de extensión de marcado. También es posible generar un valor de atributo de caracteres literales de llave si es necesario, escribiendo una secuencia de escape con un par de llaves vacío seguido de la llave de cierre literal. Vea [ {} secuencia - extensión de marcado de Escape](../../xaml-services/escape-sequence-markup-extension.md).  
   
 <a name="Nesting"></a>   
 ## <a name="nesting-markup-extensions-in-xaml-usage"></a>Anidar extensiones de marcado en uso de XAML  

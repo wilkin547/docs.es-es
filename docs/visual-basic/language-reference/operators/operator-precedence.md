@@ -2,9 +2,10 @@
 title: Prioridad de operador en Visual Basic
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - arithmetic operators [Visual Basic], precedence
@@ -19,14 +20,14 @@ helpviewer_keywords:
 - math operators [Visual Basic]
 - order of precedence
 ms.assetid: cbbdb282-f572-458e-a520-008a675f8063
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 6c0fb466b404cafdd4b91d061971fd683375c715
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 2d8de9deea84c7f0c11c91b55951cdfc200b017f
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="operator-precedence-in-visual-basic"></a>Prioridad de operador en Visual Basic
 Cuando se producen varias operaciones en una expresión, cada parte se evalúa y se resuelve en un orden predeterminado denominado *precedencia de operadores*.  
@@ -84,7 +85,7 @@ Cuando se producen varias operaciones en una expresión, cada parte se evalúa y
   
  El `Is` y `IsNot` operadores son operadores de comparación de referencia de objeto. No se comparan los valores de dos objetos; sólo comprueban y para determinar si dos variables de objeto hacen referencia a la misma instancia de objeto.  
   
-## <a name="associativity"></a>Asociatividad  
+## <a name="associativity"></a>asociatividad  
  Cuando los operadores tienen la misma precedencia aparecen juntas en una expresión, por ejemplo, multiplicación y división, el compilador evalúa cada operación tal y como encuentra de izquierda a derecha. Esto se ilustra en el siguiente ejemplo:  
   
 ```  
@@ -95,10 +96,10 @@ Dim n3 As Integer = 96 / (8 / 4)
   
  La primera expresión se evalúa como la división de 96 / 8 (que da como resultado 12) y, a continuación, la división de 12 / 4, lo que resulta en tres. Dado que el compilador evalúa las operaciones de `n1` de izquierda a derecha, la evaluación equivale cuando ese orden está indicado de forma explícita `n2`. Ambos `n1` y `n2` dan como resultado un de tres. Por el contrario, `n3` ha producido como resultado 48, porque los paréntesis fuerzan al compilador que evaluar 8 / 4 primero.  
   
- Debido a este comportamiento, se dice que los operadores *asociativos a la izquierda* en [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+ Debido a este comportamiento, se dice que los operadores *asociativos a la izquierda* en Visual Basic.  
   
 ## <a name="overriding-precedence-and-associativity"></a>Reemplazar la prioridad y asociatividad  
- Puede usar paréntesis para forzar que algunas partes de una expresión se evalúe antes que otras. Esto puede invalidar el orden de prioridad y asociatividad por la izquierda. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]siempre realiza operaciones que se encierran entre paréntesis antes de aquellos que no pertenecen. Sin embargo, entre paréntesis, mantiene normal prioridad y asociatividad, a menos que utilice paréntesis dentro del paréntesis. Esto se ilustra en el siguiente ejemplo:  
+ Puede usar paréntesis para forzar que algunas partes de una expresión se evalúe antes que otras. Esto puede invalidar el orden de prioridad y asociatividad por la izquierda. Visual Basic siempre realiza las operaciones que se encierran entre paréntesis antes de aquellos que no pertenecen. Sin embargo, entre paréntesis, mantiene normal prioridad y asociatividad, a menos que utilice paréntesis dentro del paréntesis. Esto se ilustra en el siguiente ejemplo:  
   
 ```  
 Dim a, b, c, d, e, f, g As Double  

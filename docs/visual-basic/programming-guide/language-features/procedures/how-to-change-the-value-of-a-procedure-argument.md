@@ -1,11 +1,12 @@
 ---
-title: "Cómo: Cambiar el valor de un argumento de procedimiento (Visual Basic)"
-ms.custom: 
+title: 'Cómo: Cambiar el valor de un argumento de procedimiento (Visual Basic)'
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - procedures [Visual Basic], arguments
@@ -19,19 +20,19 @@ helpviewer_keywords:
 - arguments [Visual Basic], ByRef
 - arguments [Visual Basic], changing value
 ms.assetid: 6fad2368-5da7-4c07-8bf8-0f4e65a1be67
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: ba23c8f0b4b0b6e751546019af902a6305b9ef53
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 93d9cc11e919e45fdd3b48dd2731b165f3466640
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-change-the-value-of-a-procedure-argument-visual-basic"></a>Cómo: Cambiar el valor de un argumento de procedimiento (Visual Basic)
 Cuando se llama a un procedimiento, cada argumento proporcionado se corresponde a uno de los parámetros definidos en el procedimiento. En algunos casos, el código del procedimiento puede cambiar el valor subyacente a un argumento en el código de llamada. En otros casos, el procedimiento puede cambiar solo su copia local de un argumento.  
   
- Cuando se llama al procedimiento, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] realiza una copia local de cada argumento que se pasa [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md). Para cada argumento pasado [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md), [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] proporciona el código del procedimiento una referencia directa al elemento de programación subyacente del argumento en el código de llamada.  
+ Cuando se llama al procedimiento, Visual Basic realiza una copia local de cada argumento que se pasa [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md). Para cada argumento pasado [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md), Visual Basic proporciona el código del procedimiento una referencia directa al elemento de programación subyacente del argumento en el código de llamada.  
   
  Si el elemento subyacente en el código de llamada es un elemento modificable y el argumento se pasa `ByRef`, el código del procedimiento puede utilizar la referencia directa para cambiar el valor del elemento en el código de llamada.  
   
@@ -56,9 +57,9 @@ Cuando se llama a un procedimiento, cada argumento proporcionado se corresponde 
   
 1.  En la declaración de procedimiento, especifique [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) para el parámetro correspondiente al argumento.  
   
-     O bien  
+     -o bien-  
   
-     En el código que realiza la llamada, incluya el argumento entre paréntesis en la lista de argumentos. Esto obliga a [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] para pasar el argumento por valor, incluso si el parámetro correspondiente especifica `ByRef`.  
+     En el código que realiza la llamada, incluya el argumento entre paréntesis en la lista de argumentos. Esto obligará a Visual Basic para pasar el argumento por valor, incluso si el parámetro correspondiente especifica `ByRef`.  
   
 2.  En el código de procedimiento, utilice el nombre de parámetro para asignar un valor a la copia local del argumento. No se cambia el valor subyacente en el código de llamada.  
   
@@ -80,7 +81,7 @@ Cuando se llama a un procedimiento, cada argumento proporcionado se corresponde 
 ## <a name="compiling-the-code"></a>Compilar el código  
  Cuando se pasa una variable por referencia, debe utilizar el `ByRef` palabra clave para especificar este mecanismo.  
   
- El valor predeterminado en [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] consiste en pasar argumentos por valor. Sin embargo, resulta recomienda incluir la [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) o [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) palabra clave con cada parámetro declarado. Esto hace que el código más fácil de leer.  
+ El valor predeterminado en Visual Basic es pasar argumentos por valor. Sin embargo, resulta recomienda incluir la [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) o [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) palabra clave con cada parámetro declarado. Esto hace que el código más fácil de leer.  
   
 ## <a name="net-framework-security"></a>Seguridad de .NET Framework  
  Siempre es un riesgo potencial al permitir a un procedimiento cambiar el valor subyacente a un argumento en el código de llamada. Asegúrese de que se espera que este valor puede cambiar, y estar preparado para comprobar su validez antes de usarlo.  

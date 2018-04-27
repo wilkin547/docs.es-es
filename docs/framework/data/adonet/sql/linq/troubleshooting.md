@@ -1,24 +1,26 @@
 ---
-title: "Solución de problemas"
-ms.custom: 
+title: Solución de problemas
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 8cd4401c-b12c-4116-a421-f3dcffa65670
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 56d06fa7adf2690a2cb9194342071c7814a4ec4a
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 5544540c6a27975a885bf4cd8b2e0a26183e192b
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="troubleshooting"></a>Solución de problemas
 La siguiente información expone algunos problemas que podría encontrar en sus aplicaciones de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] y proporciona sugerencias para evitar o reducir el efecto de estos problemas.  
@@ -57,7 +59,7 @@ La siguiente información expone algunos problemas que podría encontrar en sus 
   
 -   Tiene una referencia a `System.Core.dll` y `System.Data.Linq.dll`.  
   
--   Tiene una directiva `Imports` ([!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)]) o `using` (C#) para <xref:System.Linq> y <xref:System.Data.Linq>.  
+-   Tiene una `Imports` (Visual Basic) o `using` directiva (C#) para <xref:System.Linq> y <xref:System.Data.Linq>.  
   
 ## <a name="duplicatekeyexception"></a>DuplicateKeyException  
  Durante la depuración un [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] proyecto, se podrían recorrer las relaciones de una entidad. Si lo hace, sitúa estos elementos en la memoria caché, y [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] pasa a ser consciente de su presencia. Si, a continuación, intenta ejecutar <xref:System.Data.Linq.Table%601.Attach%2A> o <xref:System.Data.Linq.Table%601.InsertOnSubmit%2A> o un método similar que genere varias filas con que presenten la misma clave, se producirá la excepción <xref:System.Data.Linq.DuplicateKeyException>.  

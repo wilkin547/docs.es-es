@@ -1,24 +1,24 @@
 ---
-title: "Cuándo se debe usar una enumeración (Visual Basic)"
-ms.custom: 
+title: Cuándo se debe usar una enumeración (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - enumerations [Visual Basic]
 ms.assetid: e6e47b5b-3ed9-452d-a481-9c3fed88519a
-caps.latest.revision: 
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: a3b2937cc71c0c31bd8dce3d77fb33f48e1b5750
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 5ab152687f4f9e4ba6bd032ae7c1352f65af715f
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="when-to-use-an-enumeration-visual-basic"></a>Cuándo se debe usar una enumeración (Visual Basic)
 Las enumeraciones ofrecen una manera sencilla de trabajar con conjuntos de constantes relacionadas. Una enumeración, o `Enum`, es un nombre simbólico para un conjunto de valores. Las enumeraciones se tratan como tipos de datos y utilizarlas para crear conjuntos de constantes para su uso con las variables y propiedades.  
@@ -37,12 +37,12 @@ Las enumeraciones ofrecen una manera sencilla de trabajar con conjuntos de const
 -   Garantiza la compatibilidad con versiones posteriores. Con enumeraciones, el código es menos probable que produzca un error si en el futuro en que alguien cambia los valores correspondientes a los nombres de miembro.  
   
 ## <a name="naming-enumerations"></a>Enumeraciones de nomenclaturas  
- Utilice una convención de nomenclatura para los miembros de enumeración. Cuando [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] encuentra un nombre de miembro de una enumeración, se puede producir una excepción si otras bibliotecas de tipos que se hace referencia contienen el mismo nombre. Use un prefijo único que identifica los valores de la aplicación o componente.  
+ Utilice una convención de nomenclatura para los miembros de enumeración. Cuando Visual Basic encuentra un nombre de miembro de enumeración, se puede producir una excepción si otras bibliotecas de tipos que se hace referencia contienen el mismo nombre. Use un prefijo único que identifica los valores de la aplicación o componente.  
   
  Cuando se hace referencia a un miembro de una enumeración, debe calificar el nombre de miembro con el nombre de la enumeración o bien utilizar la `Imports` instrucción. Para obtener más información, consulte [enumeraciones y calificación de nombres](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md).  
   
 ## <a name="predefined-enumerations"></a>Enumeraciones predefinidas  
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]Proporciona una serie de enumeraciones predefinidas, como `FirstDayOfWeek` y `MsgBoxResult`, para facilitar el código. Para obtener una lista de estos vea [constantes y enumeraciones](../../../../visual-basic/language-reference/constants-and-enumerations.md).  
+ Visual Basic proporciona una serie de enumeraciones predefinidas, como `FirstDayOfWeek` y `MsgBoxResult`, para facilitar el código. Para obtener una lista de estos vea [constantes y enumeraciones](../../../../visual-basic/language-reference/constants-and-enumerations.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Cómo: declarar una enumeración](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-enumerations.md)  

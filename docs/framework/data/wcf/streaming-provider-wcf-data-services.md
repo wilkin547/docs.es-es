@@ -1,12 +1,13 @@
 ---
-title: "Proveedores de transmisión por secuencias (WCF Data Services)"
-ms.custom: 
+title: Proveedores de transmisión por secuencias (WCF Data Services)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -17,16 +18,17 @@ helpviewer_keywords:
 - streaming data provider [WCF Data Services]
 - WCF Data Services, streams
 ms.assetid: f0978fe4-5f9f-42aa-a5c2-df395d7c9495
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f965bc46c62742c0e2ffb0a7f8ae2e09eca5dc1c
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: bc66d4154f60e46e53de8ca72596e133dc84eb97
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="streaming-provider-wcf-data-services"></a>Proveedores de transmisión por secuencias (WCF Data Services)
 Un servicio de datos puede exponer datos binarios de objetos grandes. Estos datos binarios pueden representar secuencias de vídeo y audio, imágenes, archivos de documento u otros tipos de medios binarios. Cuando una entidad del modelo de datos incluye una o más propiedades binarias, el servicio de datos devuelve estos datos binarios codificados en base 64 en la entrada de la fuente de respuesta. Dado que carga y serialización de datos binarios grandes de esta manera pueden afectar al rendimiento, la [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] define un mecanismo para recuperar datos binarios independientemente de la entidad a la que pertenece. Para ello, se separan los datos binarios de la entidad en uno o varios flujos de datos.  
@@ -61,7 +63,7 @@ Un servicio de datos puede exponer datos binarios de objetos grandes. Estos dato
   
  También debe agregar el espacio de nombres `xmlns:m=http://schemas.microsoft.com/ado/2007/08/dataservices/metadata` a la entidad o a la raíz del archivo .edmx o del archivo .csdl que definen el modelo de datos.  
   
- [!INCLUDE[crexample](../../../../includes/crexample-md.md)]un servicio de datos que utiliza el [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] proveedor y expone un recurso multimedia, vea la entrada [serie de proveedores de transmisión por secuencias de servicios de datos: implementación de un proveedor de transmisión por secuencias (parte 1)](http://go.microsoft.com/fwlink/?LinkID=198989).  
+ Para obtener un ejemplo de un servicio de datos que utiliza el [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] proveedor y expone un recurso multimedia, vea la entrada [serie de proveedores de transmisión por secuencias de servicios de datos: implementación de un proveedor de transmisión por secuencias (parte 1)](http://go.microsoft.com/fwlink/?LinkID=198989).  
   
  **Proveedor de reflexión**  
  Para indicar que una entidad es una entrada de vínculo multimedia, agregue el atributo <xref:System.Data.Services.Common.HasStreamAttribute> a la clase que define el tipo de entidad en el proveedor de reflexión.  
@@ -122,7 +124,7 @@ Un servicio de datos puede exponer datos binarios de objetos grandes. Estos dato
   
     -   En el modelo de datos no debe incluirse una propiedad binaria que sea un recurso multimedia. Todas las propiedades expuestas en un modelo de datos se devuelven en la entrada de una fuente de respuesta.  
   
-    -   Para mejorar el rendimiento con un flujo binario grande, recomendamos crear una clase de flujo personalizado para almacenar datos binarios en la base de datos. La implementación de <xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetWriteStream%2A> devuelve esta clase y envía los datos binarios a la base de datos en fragmentos. Para una [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] base de datos, se recomienda usar un objeto FILESTREAM para transmitir datos en la base de datos cuando los datos binarios están mayores que 1 MB.  
+    -   Para mejorar el rendimiento con un flujo binario grande, recomendamos crear una clase de flujo personalizado para almacenar datos binarios en la base de datos. La implementación de <xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetWriteStream%2A> devuelve esta clase y envía los datos binarios a la base de datos en fragmentos. Para una base de datos de SQL Server, se recomienda usar un objeto FILESTREAM para transmitir datos en la base de datos cuando los datos binarios están mayores que 1MB.  
   
     -   Asegúrese de que la base de datos esté diseñada para almacenar los flujos binarios grandes que vaya a recibir el servicio de datos.  
   

@@ -1,10 +1,7 @@
 ---
 title: Tipos que admiten valores null (Visual Basic)
-ms.custom: 
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - devlang-visual-basic
 ms.topic: article
@@ -17,21 +14,20 @@ helpviewer_keywords:
 - nullable types [Visual Basic]
 - data types [Visual Basic], nullable
 ms.assetid: 9ac3b602-6f96-4e6d-96f7-cd4e81c468a6
-caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 8734114b9d657066a0ef0b2d648f0290c03b1cbf
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 16df20be89a88aa68e06692594c208cee1ab2dea
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="nullable-value-types-visual-basic"></a>Tipos que admiten valores null (Visual Basic)
 A veces se trabaja con un tipo de valor que no tiene un valor definido en determinadas circunstancias. Por ejemplo, podría tener un campo en una base de datos distinguir entre tener un valor asignado que es significativo y no tener un valor asignado. Tipos de valor se pueden extender para tomar sus valores normales o un valor null. Este tipo de extensión se llama un *tipo que acepta valores NULL*.  
   
  Cada tipo que acepta valores NULL se construye a partir de la interfaz genérica <xref:System.Nullable%601> estructura. Considere la posibilidad de una base de datos que realiza el seguimiento de las actividades relacionadas con el trabajo. En el ejemplo siguiente se crea un que aceptan valores NULL `Boolean` escriba y declara una variable de ese tipo. Puede escribir la declaración de tres maneras:  
   
- [!code-vb[VbVbalrNullableValue#1](../../../../visual-basic/programming-guide/language-features/data-types/codesnippet/VisualBasic/nullable-value-types_1.vb)]  
+ [!code-vb[VbVbalrNullableValue#1](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrNullableValue/VB/Class1.vb#1)]  
   
  La variable `ridesBusToWork` puede contener un valor de `True`, un valor de `False`, o ningún valor en absoluto. Su valor predeterminado inicial no es ningún valor en absoluto, que en este caso podría significar que la información no se ha obtenido para esta persona. En cambio, `False` puede significar que se ha obtenido la información y la persona que no utiliza el autobús para que funcione.  
   
@@ -45,26 +41,26 @@ A veces se trabaja con un tipo de valor que no tiene un valor definido en determ
 ### <a name="default-values"></a>Valores predeterminados  
  Cuando se declara una variable con un tipo que acepta valores NULL, su <xref:System.Nullable%601.HasValue%2A> propiedad tiene un valor predeterminado de `False`. Esto significa que, de forma predeterminada, la variable no tiene ningún valor definido, en lugar del valor predeterminado de su tipo de valor subyacente. En el ejemplo siguiente, la variable `numberOfChildren` inicialmente no tiene ningún valor definido, aunque el valor predeterminado de la `Integer` tipo es 0.  
   
- [!code-vb[VbVbalrNullableValue#2](../../../../visual-basic/programming-guide/language-features/data-types/codesnippet/VisualBasic/nullable-value-types_2.vb)]  
+ [!code-vb[VbVbalrNullableValue#2](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrNullableValue/VB/Class1.vb#2)]  
   
  Un valor null es útil para indicar un valor indefinido o desconocido. Si `numberOfChildren` se ha declarado como `Integer`, no habría ningún valor que podría indicar que la información no está disponible actualmente.  
   
 ### <a name="storing-values"></a>Almacenar valores  
  Almacenar un valor en una variable o propiedad de un tipo que acepta valores NULL de la manera habitual. En el ejemplo siguiente se asigna un valor a la variable `numberOfChildren` declarada en el ejemplo anterior.  
   
- [!code-vb[VbVbalrNullableValue#3](../../../../visual-basic/programming-guide/language-features/data-types/codesnippet/VisualBasic/nullable-value-types_3.vb)]  
+ [!code-vb[VbVbalrNullableValue#3](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrNullableValue/VB/Class1.vb#3)]  
   
  Si una variable o propiedad de un tipo que acepta valores NULL contiene un valor definido, puede provocar que se vuelve a su estado inicial de no tener un valor asignado. Para ello, Establece la variable o propiedad para `Nothing`, como se muestra en el ejemplo siguiente.  
   
- [!code-vb[VbVbalrNullableValue#4](../../../../visual-basic/programming-guide/language-features/data-types/codesnippet/VisualBasic/nullable-value-types_4.vb)]  
+ [!code-vb[VbVbalrNullableValue#4](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrNullableValue/VB/Class1.vb#4)]  
   
 > [!NOTE]
 >  Aunque puede asignar `Nothing` a una variable de un tipo que acepta valores NULL, no puede probarlo para `Nothing` utilizando el signo igual. Comparación que utiliza el signo igual, `someVar = Nothing`, siempre se evalúa como `Nothing`. Puede probar la variable <xref:System.Nullable%601.HasValue%2A> propiedad `False`, o probar mediante el `Is` o `IsNot` operador.  
   
 ### <a name="retrieving-values"></a>Recuperar valores  
- Para recuperar el valor de una variable de un tipo que acepta valores NULL, debe probar su <xref:System.Nullable%601.HasValue%2A> propiedad para confirmar que tiene un valor. Si se intenta leer el valor cuando <xref:System.Nullable%601.HasValue%2A> es `False`, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] produce una <xref:System.InvalidOperationException> excepción. En el ejemplo siguiente se muestra la manera recomendada de leer la variable `numberOfChildren` de los ejemplos anteriores.  
+ Para recuperar el valor de una variable de un tipo que acepta valores NULL, debe probar su <xref:System.Nullable%601.HasValue%2A> propiedad para confirmar que tiene un valor. Si se intenta leer el valor cuando <xref:System.Nullable%601.HasValue%2A> es `False`, Visual Basic produce una <xref:System.InvalidOperationException> excepción. En el ejemplo siguiente se muestra la manera recomendada de leer la variable `numberOfChildren` de los ejemplos anteriores.  
   
- [!code-vb[VbVbalrNullableValue#5](../../../../visual-basic/programming-guide/language-features/data-types/codesnippet/VisualBasic/nullable-value-types_5.vb)]  
+ [!code-vb[VbVbalrNullableValue#5](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrNullableValue/VB/Class1.vb#5)]  
   
 ## <a name="comparing-nullable-types"></a>Compara los tipos que aceptan valores null  
  Cuando acepta valores NULL `Boolean` se usan variables en expresiones booleanas, el resultado puede ser `True`, `False`, o `Nothing`. La siguiente es la tabla truth para `And` y `Or`. Dado que `b1` y `b2` ahora tiene tres valores posibles, hay nueve combinaciones para evaluar.  
@@ -83,7 +79,7 @@ A veces se trabaja con un tipo de valor que no tiene un valor definido en determ
   
  Cuando el valor de una variable o expresión booleana es `Nothing`, no es ni `true` ni `false`. Considere el ejemplo siguiente.  
   
- [!code-vb[VbVbalrNullableValue#6](../../../../visual-basic/programming-guide/language-features/data-types/codesnippet/VisualBasic/nullable-value-types_6.vb)]  
+ [!code-vb[VbVbalrNullableValue#6](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrNullableValue/VB/Class1.vb#6)]  
   
  En este ejemplo, `b1 And b2` se evalúa como `Nothing`. Como resultado, el `Else` cláusula se ejecuta en cada uno de ellos `If` instrucción y el resultado es el siguiente:  
   
@@ -92,19 +88,19 @@ A veces se trabaja con un tipo de valor que no tiene un valor definido en determ
  `Expression is not false`  
   
 > [!NOTE]
->  `AndAlso`y `OrElse`, evaluación de cortocircuito que usan debe evaluar sus segundos operandos cuando el primero se evalúa como `Nothing`.  
+>  `AndAlso` y `OrElse`, evaluación de cortocircuito que usan debe evaluar sus segundos operandos cuando el primero se evalúa como `Nothing`.  
   
 ## <a name="propagation"></a>Propagación  
  Si uno o ambos operandos de una aritmética, comparación, MAYÚS o de operación de tipo admite valores NULL, el resultado de la operación también es que aceptan valores NULL. Si ambos operandos tienen valores que no sean `Nothing`, la operación se realiza en los valores subyacentes de los operandos, como si ninguno fuera un tipo que acepta valores NULL. En el ejemplo siguiente, las variables `compare1` y `sum1` son con tipo implícito. Si sitúa el puntero del mouse sobre ellos, verá que el compilador deduce los tipos que aceptan valores NULL para ambos.  
   
- [!code-vb[VbVbalrNullableValue#7](../../../../visual-basic/programming-guide/language-features/data-types/codesnippet/VisualBasic/nullable-value-types_7.vb)]  
+ [!code-vb[VbVbalrNullableValue#7](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrNullableValue/VB/Class1.vb#7)]  
   
  Si uno o ambos operandos tienen un valor de `Nothing`, el resultado será `Nothing`.  
   
- [!code-vb[VbVbalrNullableValue#8](../../../../visual-basic/programming-guide/language-features/data-types/codesnippet/VisualBasic/nullable-value-types_8.vb)]  
+ [!code-vb[VbVbalrNullableValue#8](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrNullableValue/VB/Class1.vb#8)]  
   
 ## <a name="using-nullable-types-with-data"></a>Utilizar tipos que aceptan valores NULL con datos  
- Una base de datos es uno de los lugares más importantes para utilizar tipos que aceptan valores NULL. Actualmente, no todos los objetos de base de datos admiten tipos que aceptan valores NULL, pero sí los adaptadores de tabla generado por el diseñador. Vea "Compatibilidad de TableAdapter con tipos que aceptan valores null" en [información general sobre TableAdapter](/visualstudio/data-tools/tableadapter-overview).  
+ Una base de datos es uno de los lugares más importantes para utilizar tipos que aceptan valores NULL. Actualmente, no todos los objetos de base de datos admiten tipos que aceptan valores NULL, pero sí los adaptadores de tabla generado por el diseñador. Vea "Compatibilidad de TableAdapter con tipos que aceptan valores null" en [información general sobre TableAdapter](/visualstudio/data-tools/tableadapter-overview).
   
 ## <a name="see-also"></a>Vea también  
  <xref:System.InvalidOperationException>  

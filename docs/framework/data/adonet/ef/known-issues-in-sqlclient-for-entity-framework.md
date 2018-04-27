@@ -1,38 +1,40 @@
 ---
 title: Problemas conocidos en SqlClient para Entity Framework
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 48fe4912-4d0f-46b6-be96-3a42c54780f6
-caps.latest.revision: "2"
+caps.latest.revision: 2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 3fb62e266ee6f0ca7957667d7c41fbd90dd34d32
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 8d5363ede9735ea805284638f795af67f2415ad0
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="known-issues-in-sqlclient-for-entity-framework"></a>Problemas conocidos en SqlClient para Entity Framework
 En esta sección se describen problemas conocidos relacionados con el proveedor de datos .NET Framework para SQL Server (SqlClient).  
   
 ## <a name="trailing-spaces-in-string-functions"></a>Espacios finales en funciones de cadena  
- [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] omite los espacios finales en los valores de cadena. Por consiguiente, al pasar espacios finales en una cadena, se pueden producir resultados imprevisibles, incluso errores.  
+ SQL Server pasa por alto los espacios finales en los valores de cadena. Por consiguiente, al pasar espacios finales en una cadena, se pueden producir resultados imprevisibles, incluso errores.  
   
- Si ha de tener espacios finales en una cadena, debería considerar anexar un carácter de espacio en blanco al final, para que [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] no recorte la cadena. Si no se requieren los espacios finales, se deberían recortar antes de pasarse a la canalización de la consulta.  
+ Si tiene que tener espacios finales en la cadena, debería considerar anexar un carácter de espacio en blanco al final, para que SQL Server no recorte la cadena. Si no se requieren los espacios finales, se deberían recortar antes de pasarse a la canalización de la consulta.  
   
 ## <a name="right-function"></a>Función RIGHT  
  Si se pasa un valor no `null` como primer argumento y se pasa 0 como segundo argumento a la función `RIGHT(nvarchar(max)`, 0`)` o `RIGHT(varchar(max)`, 0`)`, se devolverá un valor `NULL` en lugar de una cadena `empty`.  
   
 ## <a name="cross-and-outer-apply-operators"></a>Operadores CROSS APPLY y OUTER APPLY  
- Los operadores CROSS APPLY y OUTER APPLY se incluyeron en [!INCLUDE[ssVersion2005](../../../../../includes/ssversion2005-md.md)]. En algunos casos, la canalización de la consulta podría generar una instrucción de Transact-SQL que contenga los operadores CROSS APPLY y/o OUTER APPLY. Dado que algunos proveedores back-end, incluidas las versiones de [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] anteriores a [!INCLUDE[ssVersion2005](../../../../../includes/ssversion2005-md.md)], no admiten estos operadores, tales consultas no se pueden ejecutar en ellos.  
+ Los operadores CROSS APPLY y OUTER APPLY se incluyeron en [!INCLUDE[ssVersion2005](../../../../../includes/ssversion2005-md.md)]. En algunos casos, la canalización de la consulta podría generar una instrucción de Transact-SQL que contenga los operadores CROSS APPLY y/o OUTER APPLY. Dado que algunos proveedores back-end, incluidas las versiones de SQL Server anteriores a [!INCLUDE[ssVersion2005](../../../../../includes/ssversion2005-md.md)], no admiten estos operadores, tales consultas no se pueden ejecutar en estos proveedores back-end.  
   
  A continuación se ilustran escenarios típicos que podrían conducir a la presencia de los operadores CROSS APPLY y/o OUTER APPLY en la consulta de salida:  
   
@@ -68,7 +70,7 @@ SELECT c, (SELECT c, (SELECT c FROM AdventureWorksModel.Vendor AS c  ) As Inner2
 ```  
   
 ## <a name="server-generated-guid-identity-values"></a>Valores de identidad de GUID generados por el servidor  
- [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] es compatible con los valores de identidad de tipo GUID generados por el servidor, pero el proveedor debe admitir a su vez la devolución de dichos valores después de la inserción de una fila. A partir de [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 2005, puede devolver el tipo GUID generado por el servidor en un [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] a través de la base de datos la [cláusula OUTPUT](http://go.microsoft.com/fwlink/?LinkId=169400) .  
+ [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] es compatible con los valores de identidad de tipo GUID generados por el servidor, pero el proveedor debe admitir a su vez la devolución de dichos valores después de la inserción de una fila. A partir de SQL Server 2005, puede devolver el tipo GUID generado por el servidor en una base de datos de SQL Server a través de la [cláusula OUTPUT](http://go.microsoft.com/fwlink/?LinkId=169400) .  
   
 ## <a name="see-also"></a>Vea también  
  [SqlClient para Entity Framework](../../../../../docs/framework/data/adonet/ef/sqlclient-for-the-entity-framework.md)  

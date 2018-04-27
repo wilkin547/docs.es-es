@@ -1,11 +1,12 @@
 ---
 title: Determinar tipos de objeto (Visual Basic)
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - classes [Visual Basic], discovering which an object belongs to
@@ -15,17 +16,17 @@ helpviewer_keywords:
 - TypeName function
 - objects [Visual Basic], type determining
 ms.assetid: d95e7ad1-cd63-41d6-9a28-d7a1380d49c1
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 9a63b5cf5941deb4dcc7518880b4dc7d0545803c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: a6d24be68ea4a9872f8f4fe89c1aabb943fbcb91
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="determining-object-type-visual-basic"></a>Determinar tipos de objeto (Visual Basic)
-Variables de objeto genéricas (es decir, las variables se declara como `Object`) puede contener objetos de cualquier clase. Al usar las variables de tipo `Object`, puede que necesite realizar diferentes acciones basadas en la clase del objeto; por ejemplo, algunos objetos podrían no admitir un método o propiedad determinado. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]proporciona dos formas de determinar qué tipo de objeto se almacena en una variable de objeto: la `TypeName` función y el `TypeOf...Is` operador.  
+Variables de objeto genéricas (es decir, las variables se declara como `Object`) puede contener objetos de cualquier clase. Al usar las variables de tipo `Object`, puede que necesite realizar diferentes acciones basadas en la clase del objeto; por ejemplo, algunos objetos podrían no admitir un método o propiedad determinado. Visual Basic proporciona dos formas de determinar qué tipo de objeto se almacena en una variable de objeto: la `TypeName` función y el `TypeOf...Is` operador.  
   
 ## <a name="typename-and-typeofis"></a>TypeName y TypeOf... Es  
  El `TypeName` función devuelve una cadena y es la mejor opción cuando necesite almacenar o mostrar el nombre de clase de un objeto, como se muestra en el siguiente fragmento de código:  
@@ -36,7 +37,7 @@ Variables de objeto genéricas (es decir, las variables se declara como `Object`
   
  [!code-vb[VbVbalrOOP#93](../../../../visual-basic/misc/codesnippet/VisualBasic/determining-object-type_2.vb)]  
   
- Una palabra de precaución aquí es debida. El `TypeOf...Is` operador devuelve `True` si un objeto es de un tipo específico, o se deriva de un tipo específico. Casi todo lo que haga con [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] implica objetos, que incluyen algunos elementos que normalmente no se suponen como objetos, como cadenas y números enteros. Estos objetos se derivan y heredan métodos de <xref:System.Object>. Cuando se pasa un `Integer` y evaluado con `Object`, `TypeOf...Is` operador devuelve `True`. En el ejemplo siguiente se notifica que el parámetro `InParam` es tanto un `Object` y `Integer`:  
+ Una palabra de precaución aquí es debida. El `TypeOf...Is` operador devuelve `True` si un objeto es de un tipo específico, o se deriva de un tipo específico. Casi todo lo que haga con Visual Basic incluye objetos, que incluyen algunos elementos que normalmente no se suponen como objetos, como cadenas y números enteros. Estos objetos se derivan y heredan métodos de <xref:System.Object>. Cuando se pasa un `Integer` y evaluado con `Object`, `TypeOf...Is` operador devuelve `True`. En el ejemplo siguiente se notifica que el parámetro `InParam` es tanto un `Object` y `Integer`:  
   
  [!code-vb[VbVbalrOOP#94](../../../../visual-basic/misc/codesnippet/VisualBasic/determining-object-type_3.vb)]  
   

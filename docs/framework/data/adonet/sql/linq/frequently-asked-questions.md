@@ -1,27 +1,29 @@
 ---
-title: "Preguntas más frecuentes"
-ms.custom: 
+title: Preguntas más frecuentes
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 252ed666-0679-4eea-b71b-2f14117ef443
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: e09dd7cb3fc979a9be0165705247cc5a63a6b328
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: caccbb76f32c38f29fa4f49adc9b7b1c8fe4045d
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="frequently-asked-questions"></a>Preguntas más frecuentes
 Las siguientes secciones dan respuesta a algunos problemas comunes que podría encontrar al implementar [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)].  
@@ -31,7 +33,7 @@ Las siguientes secciones dan respuesta a algunos problemas comunes que podría e
 ## <a name="cannot-connect"></a>No se puede conectar  
  P. No puedo conectarme a mi base de datos.  
   
- Un archivo . Asegúrese de que su cadena de conexión es correcta y de que su instancia de [!INCLUDE[ssNoVersion](../../../../../../includes/ssnoversion-md.md)] se está ejecutando. También tenga en cuenta que [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] requiere que el protocolo Canalizaciones con nombre esté habilitado. Para obtener más información, consulte [aprender con tutoriales](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md).  
+ R. Asegúrese de que la cadena de conexión es correcta y que está ejecutando la instancia de SQL Server. También tenga en cuenta que [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] requiere que el protocolo Canalizaciones con nombre esté habilitado. Para obtener más información, consulte [aprender con tutoriales](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md).  
   
 ## <a name="changes-to-database-lost"></a>La base de datos pierde los cambios realizados  
  P. Realicé un cambio en los datos de la base de datos, pero, cuando volví a ejecutar mi aplicación, el cambio ya no estaba.  
@@ -113,12 +115,12 @@ Las siguientes secciones dan respuesta a algunos problemas comunes que podría e
 ## <a name="serialization-errors"></a>Errores de serialización  
  P. Cuando intento serializar, obtengo el siguiente error: "el tipo... 'System.Data.Linq.ChangeTracker+StandardChangeTracker' no está marcado como serializable."  
   
- Un archivo . La generación de código en [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] admite serialización <xref:System.Runtime.Serialization.DataContractSerializer>. No admite <xref:System.Xml.Serialization.XmlSerializer> o <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>. Para obtener más información, vea [Serialización](../../../../../../docs/framework/data/adonet/sql/linq/serialization.md).  
+ R. La generación de código en [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] admite serialización <xref:System.Runtime.Serialization.DataContractSerializer>. No admite <xref:System.Xml.Serialization.XmlSerializer> o <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>. Para obtener más información, vea [Serialización](../../../../../../docs/framework/data/adonet/sql/linq/serialization.md).  
   
 ## <a name="multiple-dbml-files"></a>Múltiples archivos DBML  
  P. Cuando tengo varios archivos DBML que comparten algunas tablas, obtengo un error del compilador.  
   
- Un archivo . Establecer el **contexto Namespace** y **entidad Namespace** propiedades desde el [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] en un valor distinto para cada archivo DBML. Este enfoque elimina la colisión entre nombres o espacios de nombres.  
+ R. Establecer el **contexto Namespace** y **entidad Namespace** propiedades desde el [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] en un valor distinto para cada archivo DBML. Este enfoque elimina la colisión entre nombres o espacios de nombres.  
   
 ## <a name="avoiding-explicit-setting-of-database-generated-values-on-insert-or-update"></a>Evitar el establecimiento explícito de valores generados por la base de datos al insertar o actualizar  
  P. Tengo una tabla de base de datos con una columna `DateCreated` que tiene como valor predeterminado `Getdate()` de SQL. Cuando intento insertar un nuevo registro utilizando [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], el valor queda establecido en `NULL`. Lo que esperaba es que tomara el valor predeterminado de la base de datos.  
@@ -155,7 +157,7 @@ dlo.LoadWith<Order>(o => o.OrderDetails);
 ## <a name="provider-model"></a>Modelo de proveedor  
  P. ¿Existe un modelo de proveedor público disponible?  
   
- Un archivo . No existe ningún modelo de proveedor público disponible. En este momento, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] solo admite [!INCLUDE[ssNoVersion](../../../../../../includes/ssnoversion-md.md)] y [!INCLUDE[ssEW](../../../../../../includes/ssew-md.md)].  
+ Un archivo . No existe ningún modelo de proveedor público disponible. En este momento, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] es compatible con SQL Server y [!INCLUDE[ssEW](../../../../../../includes/ssew-md.md)] solo.  
   
 ## <a name="sql-injection-attacks"></a>Ataques mediante inserción de SQL  
  P. ¿Cómo se protege [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] de ataques de inyección de código SQL?  
@@ -174,7 +176,7 @@ dlo.LoadWith<Order>(o => o.OrderDetails);
 3.  Revise el valor predeterminado de <xref:System.Data.Linq.Mapping.UpdateCheck> (<xref:System.Data.Linq.Mapping.UpdateCheck.Never>) para determinar si ése es el valor correcto para su aplicación.  
   
     > [!CAUTION]
-    >  Si está utilizando el [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] en [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)], sus cambios podrían resultar sobrescritos.  
+    >  Si usas el [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] en Visual Studio, se pueden sobrescribir los cambios.  
   
 ## <a name="aptca"></a>APTCA  
  P. ¿Está System.Data.Linq marcado para que el código de confianza parcial pueda utilizarlo?  
@@ -196,7 +198,7 @@ dlo.LoadWith<Order>(o => o.OrderDetails);
   
  Un archivo . No intente reutilizar instancias de <xref:System.Data.Linq.DataContext>. Cada <xref:System.Data.Linq.DataContext> mantiene el estado (incluida una caché de identidad) para una sesión de edición o consulta particular. Para obtener nuevas instancias según el estado actual de la base de datos, utilice un nuevo <xref:System.Data.Linq.DataContext>.  
   
- Puede seguir utilizando agrupamiento de conexiones [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] subyacente. Para obtener más información, consulte [SQL Server Connection Pooling (ADO.NET)](../../../../../../docs/framework/data/adonet/sql-server-connection-pooling.md).  
+ Puede seguir utilizando agrupamiento de conexiones [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] subyacente. Para obtener más información, vea [Agrupación de conexiones de SQL Server (ADO.NET)](../../../../../../docs/framework/data/adonet/sql-server-connection-pooling.md).  
   
 ## <a name="second-datacontext-is-not-updated"></a>El segundo DataContext no resulta actualizado  
  P. Utilizo una instancia de <xref:System.Data.Linq.DataContext> para almacenar valores en la base de datos. Sin embargo, un segundo <xref:System.Data.Linq.DataContext> en la misma base de datos no refleja los valores actualizados. La segunda instancia de <xref:System.Data.Linq.DataContext> parece devolver valores almacenados en memoria caché.  

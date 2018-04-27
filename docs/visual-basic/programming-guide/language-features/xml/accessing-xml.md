@@ -1,12 +1,13 @@
 ---
 title: Obtener acceso a XML en Visual Basic
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - LINQ to XML [Visual Basic], accessing XML
@@ -15,19 +16,19 @@ helpviewer_keywords:
 - XML [Visual Basic], axis properties
 - XML [Visual Basic], accessing
 ms.assetid: c47f88b2-3cbc-4bb1-b4b9-be60f71ffc6a
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 79c7b8a94731e151a803a041d91dd1e240ddeb97
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 064e4b224d37172b8f79e57c73164b90186ef922
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="accessing-xml-in-visual-basic"></a>Obtener acceso a XML en Visual Basic
-[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]Proporciona propiedades de eje XML para obtener acceso y navegar por [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] estructuras. Estas propiedades utilizan una sintaxis especial que le permite tener acceso a elementos y atributos especificando los nombres XML.  
+Visual Basic proporciona propiedades de eje XML para obtener acceso y navegar por [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] estructuras. Estas propiedades utilizan una sintaxis especial que le permite tener acceso a elementos y atributos especificando los nombres XML.  
   
- En la tabla siguiente se enumera las características de lenguaje que permiten obtener acceso a elementos y atributos en XML [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+ En la tabla siguiente se enumera las características del lenguaje que permiten obtener acceso a elementos XML y atributos en Visual Basic.  
   
 ### <a name="xml-axis-properties"></a>Propiedades de eje XML  
   
@@ -37,7 +38,7 @@ ms.lasthandoff: 10/18/2017
 |*eje de atributo*|`phone.@type`|Obtiene todos los `type` atributos de la `phone` elemento.|  
 |*eje Descendant*|`contacts...<name>`|Obtiene todos los `name` elementos de la `contacts` elemento, independientemente de la profundidad de la jerarquía que se produzcan.|  
 |*indizador de extensión*|`contacts...<name>(0)`|Obtiene la primera `name` elemento de la secuencia.|  
-|*value*|`contacts...<name>.Value`|Obtiene la representación de cadena del primer objeto de la secuencia, o `Nothing` si la secuencia está vacía.|  
+|*valor*|`contacts...<name>.Value`|Obtiene la representación de cadena del primer objeto de la secuencia, o `Nothing` si la secuencia está vacía.|  
   
 ## <a name="in-this-section"></a>En esta sección  
  [Acceso a elementos descendientes XML](../../../../visual-basic/programming-guide/language-features/xml/how-to-access-xml-descendant-elements.md)  

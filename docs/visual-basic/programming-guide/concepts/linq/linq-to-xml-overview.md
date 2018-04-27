@@ -1,22 +1,23 @@
 ---
-title: "LINQ to XML Introducción (Visual Basic)"
-ms.custom: 
+title: LINQ to XML Introducción (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 502661e0-bc5d-438d-94c2-7efb63bb6fbd
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 41dd5818dc33a690c7abe4c33aa7a7becfde2123
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f4ccc81f1f7b875c7388dc09cc45521c6257c00d
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="linq-to-xml-overview-visual-basic"></a>LINQ to XML Introducción (Visual Basic)
 XML se ha adoptado ampliamente como un modo de dar formato a datos en diversos contextos. Por ejemplo, puede encontrar XML en la web, en archivos de configuración, en archivos de Microsoft Office Word y en bases de datos.  
@@ -92,7 +93,7 @@ Dim contacts = _
 </Contacts>  
 ```  
   
- El [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] compilador traduce los literales XML en [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] llamadas al método.  
+ El compilador de Visual Basic traduce los literales XML en [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] llamadas al método.  
   
  Para obtener más información, consulte [crear árboles XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md).  
   

@@ -1,24 +1,26 @@
 ---
 title: Descargar bases de datos de ejemplo
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ef9d69a1-9461-43fe-94bb-7c836754bcb5
-caps.latest.revision: "2"
+caps.latest.revision: 2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 3b0dccd831591946684fb0087f33563b87ee6ba7
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: dd0b29e97d36d67781c92ee24c56aed43c703261
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="downloading-sample-databases"></a>Descargar bases de datos de ejemplo
 En varios ejemplos y tutoriales de la documentación de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] se utiliza la base de datos de ejemplo Northwind y SQL Server Express Edition. Puede descargar estos productos de forma gratuita desde el sitio de descargas de Microsoft.  
@@ -57,7 +59,7 @@ En varios ejemplos y tutoriales de la documentación de [!INCLUDE[vbtecdlinq](..
 6.  Siga las instrucciones de instalación del sitio web.  
   
 ## <a name="downloading-management-studio-express"></a>Descargar Microsoft SQL Server Management Studio Express  
- Si desea modificar una base de datos que ha descargado, puede tener acceso a la base de datos de **Explorador de servidores** en el [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] el entorno de desarrollo integrado (IDE), o use (Microsoft SQL Server Management Studio Express SSMSE).  
+ Si desea modificar una base de datos que ha descargado, puede tener acceso a la base de datos de **Explorador de servidores** en Visual Studio integra el entorno de desarrollo (IDE), o usar Microsoft SQL Server Management Studio Express (SSMSE) .  
   
 #### <a name="to-download-management-studio-express"></a>Para descargar Microsoft SQL Server Management Studio Express  
   

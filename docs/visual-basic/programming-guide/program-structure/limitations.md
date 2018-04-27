@@ -1,11 +1,12 @@
 ---
 title: Limitaciones de Visual Basic
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - limits
@@ -14,19 +15,19 @@ helpviewer_keywords:
 - limits, Visual Basic code
 - Visual Basic code, limitations
 ms.assetid: cf1646b7-5d24-48c6-9616-bda8a4849d91
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 97a2e162b9f1a673fbe805a5d2ef1421cd423a4f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d06b743996969dcd7fc022bbb8ab625f3a151137
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="visual-basic-limitations"></a>Limitaciones de Visual Basic
-Las versiones anteriores de [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] aplica límites en el código, como la longitud de los nombres de variable, el número de variables permitidas en los módulos y tamaño de los módulos. En Visual Basic. NET, se han reducido estas restricciones, lo que le proporciona mayor libertad para crear y organizar el código.  
+Las versiones anteriores de Visual Basic aplican límites en el código, como la longitud de los nombres de variable, el número de variables permitidas en los módulos y el tamaño de módulo. En Visual Basic. NET, se han reducido estas restricciones, lo que le proporciona mayor libertad para crear y organizar el código.  
   
- Límites físicos dependen más de memoria en tiempo de ejecución que en las consideraciones de tiempo de compilación. Si se utilizan prácticas de programación prudentes y aplicaciones grandes se dividen en varias clases y módulos, hay muy pocas probabilidades de encontrar un interno [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] limitación.  
+ Límites físicos dependen más de memoria en tiempo de ejecución que en las consideraciones de tiempo de compilación. Si se utilizan prácticas de programación prudentes y aplicaciones grandes se dividen en varias clases y módulos, hay muy pocas probabilidades de encontrar una limitación interna de Visual Basic.  
   
  Las siguientes son algunas limitaciones que pueden surgir en casos extremos:  
   

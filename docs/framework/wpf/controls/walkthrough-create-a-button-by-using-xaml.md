@@ -1,34 +1,34 @@
 ---
-title: "Tutorial: Crear un botón mediante el uso de XAML"
-ms.custom: 
+title: 'Tutorial: Crear un botón mediante el uso de XAML'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-wpf
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - buttons [WPF]
 ms.assetid: 138c41c4-1759-4bbf-8d77-77031a06a8a0
-caps.latest.revision: 
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 5c5efa9f8787e65d59e1b544632e806bf3fbbc81
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 94ec5e56862190026b43331488cbc699fe7dfda4
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-create-a-button-by-using-xaml"></a>Tutorial: Crear un botón mediante el uso de XAML
 El objetivo de este tutorial es aprender a crear un botón animado para su uso en un [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] aplicación. En este tutorial usa estilos y una plantilla para crear un recurso de botón personalizado que permite la reutilización del código y la separación de la lógica de botón de la declaración del botón. En este tutorial se escribe completamente en [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].  
   
 > [!IMPORTANT]
->  Este tutorial le guía a través de los pasos para crear la aplicación escribiendo o copiando y pegando [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] en Microsoft [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)]. Si prefiere obtener información sobre cómo usar una herramienta de diseño (Microsoft Expression Blend) para crear la misma aplicación, consulte [crear un botón mediante Microsoft Expression Blend utilizando](../../../../docs/framework/wpf/controls/walkthrough-create-a-button-by-using-microsoft-expression-blend.md).  
+>  Este tutorial le guía a través de los pasos para crear la aplicación escribiendo o copiando y pegando [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] en Microsoft Visual Studio. Si prefiere obtener información sobre cómo usar una herramienta de diseño (Microsoft Expression Blend) para crear la misma aplicación, consulte [crear un botón mediante Microsoft Expression Blend utilizando](../../../../docs/framework/wpf/controls/walkthrough-create-a-button-by-using-microsoft-expression-blend.md).  
   
  La siguiente ilustración muestra los botones acabados.  
   
@@ -39,7 +39,7 @@ El objetivo de este tutorial es aprender a crear un botón animado para su uso e
   
 #### <a name="to-create-a-new-wpf-project-and-add-buttons-to-the-window"></a>Para crear un nuevo proyecto WPF y agregar botones a la ventana  
   
-1.  Iniciar[!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)].  
+1.  Inicie Visual Studio.  
   
 2.  **Cree un nuevo proyecto WPF:** en el **archivo** menú, elija **New**y, a continuación, haga clic en **proyecto**. Buscar el **aplicación de Windows (WPF)** plantilla y el nombre del proyecto "AnimatedButton". Esto creará el esqueleto de la aplicación.  
   
@@ -332,7 +332,7 @@ El objetivo de este tutorial es aprender a crear un botón animado para su uso e
   
      Presione F5 para ejecutar la aplicación y haga clic en uno de los botones. Tenga en cuenta que el botón permanece resaltado después de hacer clic en él porque aún tiene el foco. Si hace clic en otro botón, el nuevo botón recibe el foco mientras el último lo pierde.  
   
-4.  **Agregar animaciones para** <xref:System.Windows.UIElement.MouseEnter> **y** <xref:System.Windows.UIElement.MouseLeave> **:** a continuación, agregamos algunas animaciones a los desencadenadores. Agregue el siguiente marcado en cualquier lugar dentro de la `ControlTemplate.Triggers` bloque.  
+4.  **Agregar animaciones para** <xref:System.Windows.UIElement.MouseEnter> **y** <xref:System.Windows.UIElement.MouseLeave> **:** a continuación, agregamos algunas animaciones a los desencadenadores.   Agregue el siguiente marcado en cualquier lugar dentro de la `ControlTemplate.Triggers` bloque.  
   
     ```  
     <!-- Animations that start when mouse enters and leaves button. -->  

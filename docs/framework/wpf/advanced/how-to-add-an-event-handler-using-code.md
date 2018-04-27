@@ -1,12 +1,13 @@
 ---
-title: "Cómo: Agregar un controlador de eventos mediante código"
-ms.custom: 
+title: 'Cómo: Agregar un controlador de eventos mediante código'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,16 +16,17 @@ helpviewer_keywords:
 - event handlers [WPF], adding
 - XAML [WPF], adding event handlers
 ms.assetid: 269c61e0-6bd9-4291-9bed-1c5ee66da486
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3abcd441219e58df2e5a0d4b66447e255c6aabd4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 4e7627589ff7e422c4ad3cd7a37fdc14c8a9c9f4
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-add-an-event-handler-using-code"></a>Cómo: Agregar un controlador de eventos mediante código
 Este ejemplo muestra cómo agregar un controlador de eventos a un elemento mediante código.  
@@ -34,7 +36,7 @@ Este ejemplo muestra cómo agregar un controlador de eventos a un elemento media
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se agrega un nuevo <xref:System.Windows.Controls.Button> a una página existente que se define inicialmente en [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Un archivo de código subyacente implementa un método de controlador de eventos y, a continuación, agrega ese método como un nuevo controlador de eventos en el <xref:System.Windows.Controls.Button>.  
   
- El [!INCLUDE[TLA2#tla_cshrp](../../../../includes/tla2sharptla-cshrp-md.md)] en el ejemplo se usa el `+=` operador que se va a asignar un controlador a un evento. Éste es el mismo operador que se utiliza para asignar un controlador en el [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] modelo de control de eventos. [!INCLUDE[TLA#tla_visualb](../../../../includes/tlasharptla-visualb-md.md)]no se admite este operador como un medio para agregar controladores de eventos. En su lugar, requiere una de estas dos técnicas:  
+ El ejemplo de C# se usa el `+=` operador que se va a asignar un controlador a un evento. Éste es el mismo operador que se utiliza para asignar un controlador en el [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] modelo de control de eventos. Microsoft Visual Basic no admite este operador como un medio para agregar controladores de eventos. En su lugar, requiere una de estas dos técnicas:  
   
 -   Use la <xref:System.Windows.UIElement.AddHandler%2A> método, junto con un `AddressOf` operador, para hacer referencia a la implementación del controlador de eventos.  
   

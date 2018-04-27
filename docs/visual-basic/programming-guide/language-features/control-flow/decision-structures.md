@@ -1,11 +1,12 @@
 ---
-title: "Estructuras de decisión (Visual Basic)"
-ms.custom: 
+title: Estructuras de decisión (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - statements [Visual Basic], control flow
@@ -15,17 +16,17 @@ helpviewer_keywords:
 - decision structures [Visual Basic]
 - conditional statements [Visual Basic], decision structures
 ms.assetid: 2e2e0895-4483-442a-b17c-26aead751ec2
-caps.latest.revision: "29"
+caps.latest.revision: 29
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 38820b6ca0a8f716dcaa28644bb25eb4899bd511
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 3b89d6f9b27e086b657c29f3353b63cdd855ae19
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="decision-structures-visual-basic"></a>Estructuras de decisión (Visual Basic)
-[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]permite probar condiciones y realizar diferentes operaciones en función de los resultados de esa prueba. Puede probar si una condición es true o false para distintos valores de una expresión o varias excepciones que se genera cuando se ejecuta una serie de instrucciones.  
+Visual Basic permite probar condiciones y realizar diferentes operaciones en función de los resultados de esa prueba. Puede probar si una condición es true o false para distintos valores de una expresión o varias excepciones que se genera cuando se ejecuta una serie de instrucciones.  
   
  En la siguiente ilustración muestra una estructura de decisión que comprueba una condición es true y realiza acciones diferentes dependiendo de si es true o false.  
   
@@ -33,15 +34,15 @@ ms.lasthandoff: 11/21/2017
 Emprender acciones diferentes cuando una condición es true y cuando es false  
   
 ## <a name="ifthenelse-construction"></a>If... Then... Construcción else  
- `If...Then...Else`construcciones le permiten probar una o más condiciones y ejecutar una o varias instrucciones según cada condición. Puede probar las condiciones y realizar acciones en las siguientes maneras:  
+ `If...Then...Else` construcciones le permiten probar una o más condiciones y ejecutar una o varias instrucciones según cada condición. Puede probar las condiciones y realizar acciones en las siguientes maneras:  
   
--   Ejecutar una o más instrucciones si una condición es`True`  
+-   Ejecutar una o más instrucciones si una condición es `True`  
   
--   Ejecutar una o más instrucciones si una condición es`False`  
+-   Ejecutar una o más instrucciones si una condición es `False`  
   
--   Ejecutar algunas instrucciones si una condición es `True` y otras personas si`False`  
+-   Ejecutar algunas instrucciones si una condición es `True` y otras personas si `False`  
   
--   Probar una condición adicional si es un requisito previo`False`  
+-   Probar una condición adicional si es un requisito previo `False`  
   
  La estructura de control que proporciona todas estas posibilidades es la [si... Then... Else (instrucción)](../../../../visual-basic/language-reference/statements/if-then-else-statement.md). Puede usar una versión de línea si tiene simplemente una comprobación y una instrucción que se ejecutará. Si tiene un conjunto más complejo de condiciones y acciones, puede usar la versión de varias líneas.  
   
@@ -49,7 +50,7 @@ Emprender acciones diferentes cuando una condición es true y cuando es false
  El `Select...Case` construcción permite evaluar una expresión una vez y ejecutar distintos conjuntos de instrucciones basados en diferentes valores posibles. Para obtener más información, vea [seleccione... Caso instrucción](../../../../visual-basic/language-reference/statements/select-case-statement.md).  
   
 ## <a name="trycatchfinally-construction"></a>Try... Catch... Por último, construcción  
- `Try...Catch...Finally`construcciones permiten ejecutar un conjunto de instrucciones en un entorno que conserva el control si cualquiera de las instrucciones provoca una excepción. Puede realizar acciones diferentes para diferentes excepciones. También puede especificar un bloque de código que se ejecuta antes de salir de todo el `Try...Catch...Finally` construcción, independientemente de lo que ocurre. Para obtener más información, vea [Try...Catch...Finally Statement](../../../../visual-basic/language-reference/statements/try-catch-finally-statement.md) (Try...Catch...Finally [Instrucción, Visual Basic]).  
+ `Try...Catch...Finally` construcciones permiten ejecutar un conjunto de instrucciones en un entorno que conserva el control si cualquiera de las instrucciones provoca una excepción. Puede realizar acciones diferentes para diferentes excepciones. También puede especificar un bloque de código que se ejecuta antes de salir de todo el `Try...Catch...Finally` construcción, independientemente de lo que ocurre. Para obtener más información, vea [Try...Catch...Finally Statement](../../../../visual-basic/language-reference/statements/try-catch-finally-statement.md) (Try...Catch...Finally [Instrucción, Visual Basic]).  
   
 > [!NOTE]
 >  Para muchas de las estructuras de control, al hacer clic en una palabra clave, se resaltan todas las palabras clave en la estructura. Por ejemplo, al hacer clic en `If` en un `If...Then...Else` construcción, todas las instancias de `If`, `Then`, `ElseIf`, `Else`, y `End If` se resaltan en la construcción. Para mover a la palabra clave resaltada siguiente o anterior, presione CTRL + MAYÚS + flecha abajo o CTRL + MAYÚS + flecha arriba.  

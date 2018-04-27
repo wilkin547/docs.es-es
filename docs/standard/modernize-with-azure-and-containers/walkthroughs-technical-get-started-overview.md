@@ -1,30 +1,31 @@
 ---
-title: "Tutoriales y technical obtienen información general de introducción"
-description: "Modernizar las aplicaciones .NET existentes con contenedores de Windows y la nube de Azure | tutoriales y technical obtienen información general de introducción"
+title: Tutoriales y technical obtienen información general de introducción
+description: Modernizar las aplicaciones .NET existentes con contenedores de Windows y la nube de Azure | tutoriales y technical obtienen información general de introducción
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
 ms.prod: .net
+ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 6a2abda3949c1fffc4d731b01e35e58e7c56dac0
-ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
+ms.openlocfilehash: 0bad7e3afbdf3e55c447319b3756f2235b9e0a19
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="walkthroughs-and-technical-get-started-overview"></a>Tutoriales y technical obtienen información general de introducción
 
 Para limitar el tamaño de este libro electrónico, documentación técnica adicional y los tutoriales completos se encontraban disponibles en un repositorio de GitHub. La serie de tutoriales que se describen en este capítulo en línea trata el programa de instalación paso a paso de los entornos de varios que se basan en los contenedores de Windows y la implementación en Azure.
 
-Las siguientes secciones explican lo que cada tutorial trata sobre sus objetivos y la visión de alto nivel y proporciona un diagrama de las tareas que están implicados. Puede obtener los tutoriales por sí mismos en el *eShopModernizing* wiki de repositorio de GitHub de aplicaciones en [https://github.com/dotnet-architecture/eShopModernizing/wiki](https://github.com/dotnet-architecture/eShopModernizing/wiki).
+Las siguientes secciones explican lo que cada tutorial trata sobre sus objetivos y la visión de alto nivel y proporciona un diagrama de las tareas que están implicados. Puede obtener los tutoriales por sí mismos en el *eShopModernizing* wiki de repositorio de GitHub de aplicaciones en [ https://github.com/dotnet-architecture/eShopModernizing/wiki ](https://github.com/dotnet-architecture/eShopModernizing/wiki).
 
 ## <a name="technical-walkthrough-list"></a>Lista de tutoriales técnicos
 
 Los siguientes tutoriales iniciada por get proporcionan orientación técnica de coherente y completo para las aplicaciones de ejemplo que puede levantar y desplazar mediante el uso de contenedores y, a continuación, mueva con varias opciones de implementación de Azure.
 
-Cada uno de los siguientes tutoriales utiliza el nuevo eShopLegacy y eShopModernizing aplicaciones de ejemplo, que están disponibles en GitHub en [https://github.com/dotnet-architecture/eShopModernizing](https://github.com/dotnet-architecture/eShopModernizing).
+Cada uno de los siguientes tutoriales utiliza el nuevo eShopLegacy y eShopModernizing aplicaciones de ejemplo, que están disponibles en GitHub en [ https://github.com/dotnet-architecture/eShopModernizing ](https://github.com/dotnet-architecture/eShopModernizing).
 
 - **Paseo de compras de aplicaciones heredadas**
 
@@ -240,7 +241,7 @@ Con Kubernetes, los desarrolladores pueden progreso de pensar en máquinas físi
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Explorar este contenido más detallada en el sitio wiki de GitHub: [https://github.com/dotnet-architecture/eShopModernizing/wiki/04.-How-to-deploy-your-Windows-Containers-based-apps-into-Kubernetes-in-Azure-Container-Service-() Including-C-CD)](https://github.com/dotnet-architecture/eShopModernizing/wiki/04.-How-to-deploy-your-Windows-Containers-based-apps-into-Kubernetes-in-Azure-Container-Service-(Including-C-CD))
+Explorar este contenido más detallada en el sitio wiki de GitHub: [https://github.com/dotnet-architecture/eShopModernizing/wiki/04.-How-to-deploy-your-Windows-Containers-based-apps-into-Kubernetes-in-Azure-Container-Service-(Including-C-CD)](https://github.com/dotnet-architecture/eShopModernizing/wiki/04.-How-to-deploy-your-Windows-Containers-based-apps-into-Kubernetes-in-Azure-Container-Service-(Including-C-CD))
 
 ## <a name="walkthrough-5-deploy-your-windows-containers-based-apps-to-azure-service-fabric"></a>Tutorial 5: Implementar las aplicaciones de Windows basada en contenedores en Azure Service Fabric.
 

@@ -2,8 +2,8 @@
 title: Literal de CDATA XML (Visual Basic)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - devlang-visual-basic
 ms.topic: article
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - XML CDATA literal [Visual Basic]
 - XML literals [Visual Basic], CDATA
 ms.assetid: 9eafb6a4-dd9d-4866-85e8-0654c65abc44
-caps.latest.revision: 
+caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 906fd2494dd952c08088b9b7e38dba4505780481
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e8dfc091409e060e20970b0b6d6bc19b4fc2aeea
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="xml-cdata-literal-visual-basic"></a>Literal de CDATA XML (Visual Basic)
 Un literal que representa un <xref:System.Xml.Linq.XCData> objeto.  
@@ -34,13 +34,13 @@ Un literal que representa un <xref:System.Xml.Linq.XCData> objeto.
   
 ## <a name="parts"></a>Elementos  
  `<![CDATA[`  
- Obligatorio. Denota el inicio de la sección XML CDATA.  
+ Requerido. Denota el inicio de la sección XML CDATA.  
   
  `content`  
- Obligatorio. Contenido de texto que aparezca en la sección XML CDATA.  
+ Requerido. Contenido de texto que aparezca en la sección XML CDATA.  
   
  `]]>`  
- Obligatorio. Denota el final de la sección.  
+ Requerido. Denota el final de la sección.  
   
 ## <a name="return-value"></a>Valor devuelto  
  Un objeto <xref:System.Xml.Linq.XCData>.  
@@ -55,9 +55,9 @@ Un literal que representa un <xref:System.Xml.Linq.XCData> objeto.
  Puede asignar un literal de CDATA XML a una variable o incluirlo en un literal de elemento XML.  
   
 > [!NOTE]
->  Un literal XML puede abarcar varias líneas pero no usa caracteres de continuación de línea. Esto le permite copiar el contenido de un documento XML y pegarlos directamente en un [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] programa.  
+>  Un literal XML puede abarcar varias líneas pero no usa caracteres de continuación de línea. Esto le permite copiar el contenido de un documento XML y pegarlos directamente en un programa de Visual Basic.  
   
- El [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] compilador convierte el literal de CDATA XML a una llamada a la <xref:System.Xml.Linq.XCData.%23ctor%2A> constructor.  
+ El compilador de Visual Basic convierte el literal de CDATA XML a una llamada a la <xref:System.Xml.Linq.XCData.%23ctor%2A> constructor.  
   
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se crea una sección CDATA que contiene el texto "puede contener literal \<XML > etiquetas".  

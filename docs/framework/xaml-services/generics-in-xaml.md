@@ -1,34 +1,34 @@
 ---
-title: "Elementos genéricos en XAML"
-ms.custom: 
+title: Elementos genéricos en XAML
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-wpf
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - generics [XAML Services]
 ms.assetid: 835bfed7-585c-4216-ae67-b674edab8b92
-caps.latest.revision: 
+caps.latest.revision: 8
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: c0e5bfb4f327028f09e8c898cf07e5fec9a5f789
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e64224edcb49d5040332b7cef9649c98cf26798b
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="generics-in-xaml"></a>Elementos genéricos en XAML
 Los servicios de XAML de .NET Framework implementados en System.Xaml proporciona compatibilidad para utilizar tipos genéricos de CLR. Esta compatibilidad incluye especificar las restricciones de los genéricos como un argumento de tipo y exigir la restricción mediante una llamada a la correspondiente `Add` método para casos de colección genéricos. Este tema describe aspectos del uso y hacer referencia a tipos genéricos en XAML.  
   
 ## <a name="xtypearguments"></a>x: TypeArguments  
- `x:TypeArguments`es una directiva definida por el lenguaje XAML. Cuando se utiliza como un miembro de un tipo XAML que está respaldado por un tipo genérico, `x:TypeArguments` pasa si se restringen los argumentos de la clase genérica para el constructor de copias de seguridad de tipo. Para la sintaxis de referencia que pertenece a los servicios XAML de .NET Framework el uso de `x:TypeArguments`, que incluye ejemplos de sintaxis, vea [x: TypeArguments (directiva)](../../../docs/framework/xaml-services/x-typearguments-directive.md).  
+ `x:TypeArguments` es una directiva definida por el lenguaje XAML. Cuando se utiliza como un miembro de un tipo XAML que está respaldado por un tipo genérico, `x:TypeArguments` pasa si se restringen los argumentos de la clase genérica para el constructor de copias de seguridad de tipo. Para la sintaxis de referencia que pertenece a los servicios XAML de .NET Framework el uso de `x:TypeArguments`, que incluye ejemplos de sintaxis, vea [x: TypeArguments (directiva)](../../../docs/framework/xaml-services/x-typearguments-directive.md).  
   
  Dado que `x:TypeArguments` toma una cadena y tiene copias de seguridad de convertidor de tipo, normalmente se declara en el uso XAML como un atributo.  
   
@@ -53,7 +53,7 @@ Los servicios de XAML de .NET Framework implementados en System.Xaml proporciona
   
  En WPF y destino [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], puede usar las características de XAML 2009 junto con `x:TypeArguments`, pero solo para XAML dinámico (XAML que no está compilado por marcado). XAML compilado por marcado para WPF y el formulario BAML de XAML no admiten de momento las palabras clave y características de XAML 2009.  
   
- Flujos de trabajo personalizados en [!INCLUDE[TLA#tla_workflow](../../../includes/tlasharptla-workflow-md.md)] para [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] no admiten el uso XAML genérico.  
+ Flujos de trabajo personalizados en Windows Workflow Foundation para [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] no admiten el uso XAML genérico.  
   
 ## <a name="see-also"></a>Vea también  
  [x:TypeArguments (Directiva)](../../../docs/framework/xaml-services/x-typearguments-directive.md)  

@@ -1,11 +1,12 @@
 ---
 title: Pasar argumentos por valor y por referencia (Visual Basic)
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - ByRef keyword [Visual Basic], passing arguments by reference
@@ -15,17 +16,17 @@ helpviewer_keywords:
 - arguments [Visual Basic], passing by value or by reference
 - argument passing [Visual Basic], by value or by reference
 ms.assetid: fd8a9de6-7178-44d5-a9bf-458d4ad907c2
-caps.latest.revision: "23"
+caps.latest.revision: 23
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 752c0c8e90cafe457cbd5d684bc984a1ea4632ac
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f10e0e582e060c1305a9c0fe922620cb4da2c215
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="passing-arguments-by-value-and-by-reference-visual-basic"></a>Pasar argumentos por valor y por referencia (Visual Basic)
-En [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], puede pasar un argumento a un procedimiento *por valor* o *por referencia*. Esto se conoce como el *mecanismo para pasar argumentos*, y determina si el procedimiento puede modificar el elemento de programación subyacente del argumento en el código de llamada. La declaración de procedimiento determina el mecanismo de paso para cada parámetro especificando el [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) o [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) palabra clave.  
+En Visual Basic, puede pasar un argumento a un procedimiento *por valor* o *por referencia*. Esto se conoce como el *mecanismo para pasar argumentos*, y determina si el procedimiento puede modificar el elemento de programación subyacente del argumento en el código de llamada. La declaración de procedimiento determina el mecanismo de paso para cada parámetro especificando el [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) o [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) palabra clave.  
   
 ## <a name="distinctions"></a>Diferencias  
  Cuando se pasa un argumento a un procedimiento, tenga en distintas condiciones que interactúan entre sí:  
@@ -45,7 +46,7 @@ En [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], puede pasar un argumento a un pr
   
 -   **Protección**. Al elegir entre los mecanismos de dos pasar, el criterio más importante es la exposición de la llamada a las variables a cambiar. La ventaja de pasar un argumento `ByRef` es que el procedimiento puede devolver un valor para el código que realiza la llamada a través de ese argumento. La ventaja de pasar un argumento `ByVal` es que evita que una variable que se está cambiando mediante el procedimiento.  
   
--   **Rendimiento**. Aunque el mecanismo de paso puede afectar al rendimiento del código, la diferencia es suele ser insignificante. Una excepción a esto es un tipo de valor que se pasa `ByVal`. En este caso, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] copia el contenido de todos los datos del argumento. Por lo tanto, para un tipo de valor grande, como una estructura, puede ser más eficaz para pasarlo `ByRef`.  
+-   **Rendimiento**. Aunque el mecanismo de paso puede afectar al rendimiento del código, la diferencia es suele ser insignificante. Una excepción a esto es un tipo de valor que se pasa `ByVal`. En este caso, Visual Basic copia el contenido de todos los datos del argumento. Por lo tanto, para un tipo de valor grande, como una estructura, puede ser más eficaz para pasarlo `ByRef`.  
   
      Para los tipos de referencia, solo el puntero a los datos es (cuatro bytes copiados en plataformas de 32 bits, ocho bytes en plataformas de 64 bits). Por lo tanto, puede pasar argumentos de tipo `String` o `Object` por valor sin perjudicar al rendimiento.  
   
@@ -54,7 +55,7 @@ En [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], puede pasar un argumento a un pr
   
  Si se declara un parámetro con `ByRef`, el código de llamada puede forzar al mecanismo para `ByVal` , incluya el nombre del argumento paréntesis en la llamada. Para obtener más información, consulte [Cómo: forzar un argumento para pasar por valor](./how-to-force-an-argument-to-be-passed-by-value.md).  
   
- El valor predeterminado en [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] consiste en pasar argumentos por valor.  
+ El valor predeterminado en Visual Basic es pasar argumentos por valor.  
   
 ## <a name="when-to-pass-an-argument-by-value"></a>Cuándo se debe pasar un argumento por valor  
   

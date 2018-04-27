@@ -1,26 +1,27 @@
 ---
 title: Actividades de flujo de control en WF
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 6892885b-f7c5-4aea-8f5e-28863fb4ae75
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1e8520e34cf9bd9d31e9b877849e7c9611d6d989
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 91fb4e18d753709ab973730300ffef5a952c56d6
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="control-flow-activities-in-wf"></a>Actividades de flujo de control en WF
-[!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] proporciona varias actividades para controlar el flujo de ejecución dentro de un flujo de trabajo. Algunas de estas actividades (como `Switch` y `If`) implementan estructuras de control de flujo similares a las que se encuentran en los entornos de programación, como [!INCLUDE[csprcs](../../../includes/csprcs-md.md)], mientras que otras modelan nuevas estructuras de programación (como `Pick`.)  
+[!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] proporciona varias actividades para controlar el flujo de ejecución dentro de un flujo de trabajo. Algunas de estas actividades (como `Switch` y `If`) implementan estructuras de control de flujo similares a aquellos en los entornos, como Visual C#, mientras que otros de programación (como `Pick`) modelan nuevas estructuras de programación.  
   
  Tenga en cuenta que mientras las actividades `Parallel` y `ParallelForEach` programan varias actividades secundarias para su ejecución simultánea, solo se usa un subproceso para un flujo de trabajo. Cada actividad secundaria de estas actividades se ejecuta secuencialmente mientras que las actividades sucesivas no se ejecutan hasta que las anteriores se completen o pasen a estar inactivas. Como resultado, estas actividades son muy útiles para las aplicaciones en las que se deben ejecutar de un modo intercalado varias actividades de bloqueo. Si ninguna de las actividades secundarias de estas actividades se está bloqueando o está inactiva, una actividad `Parallel` se ejecuta simplemente como una actividad `Sequence` y una actividad `ParallelForEach` se ejecuta como una actividad `ForEach`. Sin embargo, si se usan actividades asincrónicas (como actividades que derivan de <xref:System.Activities.AsyncCodeActivity>) o actividades de mensajería, el control pasará a la bifurcación siguiente mientras la actividad secundaria espera que se reciba su mensaje o se complete su trabajo asincrónico.  
   

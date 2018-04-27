@@ -1,11 +1,12 @@
 ---
-title: "Conversiones de ampliación y de restricción (Visual Basic)"
-ms.custom: 
+title: Conversiones de ampliación y de restricción (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - widening conversions [Visual Basic]
@@ -25,14 +26,14 @@ helpviewer_keywords:
 - data type conversion [Visual Basic], exceptions during conversion
 - conversions [Visual Basic], widening
 ms.assetid: 058c3152-6c28-4268-af44-2209e774f0bd
-caps.latest.revision: "27"
+caps.latest.revision: 27
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 2cf1f8d956935a9a363211abf94b4f1c2f538074
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 960b4e4c7184309b6a84247d86fb94ccb2faf877
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="widening-and-narrowing-conversions-visual-basic"></a>Conversiones de ampliación y de restricción (Visual Basic)
 Una consideración importante con una conversión de tipos es si el resultado de la conversión está dentro del intervalo del tipo de datos de destino.  
@@ -59,7 +60,7 @@ Una consideración importante con una conversión de tipos es si el resultado de
 |[Double](../../../../visual-basic/language-reference/data-types/double-data-type.md)|`Double`|  
 |Cualquier tipo enumerado ([Enum](../../../../visual-basic/language-reference/statements/enum-statement.md))|Su tipo integral subyacente y cualquier tipo al que se amplía el tipo subyacente.|  
 |[Char](../../../../visual-basic/language-reference/data-types/char-data-type.md)|`Char`, `String`|  
-|Matriz `Char`|`Char`matriz,`String`|  
+|Matriz `Char`|`Char` matriz, `String`|  
 |Cualquier tipo|[Objeto](../../../../visual-basic/language-reference/data-types/object-data-type.md)|  
 |Cualquier tipo derivado|Cualquier tipo del que se deriva de base <sup>3</sup>.|  
 |Cualquier tipo|Cualquier interfaz que implementa.|  
@@ -97,11 +98,11 @@ Una consideración importante con una conversión de tipos es si el resultado de
 ## <a name="exceptions-during-conversion"></a>Excepciones durante la conversión  
  Dado que las conversiones de ampliación siempre correctamente, no producen excepciones. Las conversiones de restricción, cuando produce un error, suelen producen las excepciones siguientes:  
   
--   <xref:System.InvalidCastException>: si no se ha definido ninguna conversión entre los dos tipos  
+-   <xref:System.InvalidCastException> : si no se ha definido ninguna conversión entre los dos tipos  
   
--   <xref:System.OverflowException>: (solo tipos enteros) si el valor convertido es demasiado grande para el tipo de destino  
+-   <xref:System.OverflowException> : (solo tipos enteros) si el valor convertido es demasiado grande para el tipo de destino  
   
- Si una clase o estructura define un [CType (función)](../../../../visual-basic/language-reference/functions/ctype-function.md) para que actúe como un operador de conversión a o desde esa clase o estructura, que `CType` puede producir cualquier excepción que considere apropiada. Además, que `CType` podría llamar a [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] funciones o [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] métodos, que a su vez pueden producir una variedad de excepciones.  
+ Si una clase o estructura define un [CType (función)](../../../../visual-basic/language-reference/functions/ctype-function.md) para que actúe como un operador de conversión a o desde esa clase o estructura, que `CType` puede producir cualquier excepción que considere apropiada. Además, que `CType` podría llamar a funciones de Visual Basic o [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] métodos, que a su vez pueden producir una variedad de excepciones.  
   
 ## <a name="changes-during-reference-type-conversions"></a>Cambios durante las conversiones de tipo de referencia  
  Una conversión de un *tipo de referencia* sólo copia el puntero al valor. El valor en sí no se copia ni cambiarse de forma alguna. Lo único que puede cambiar es el tipo de datos de la variable que contiene el puntero. En el ejemplo siguiente, se convierte el tipo de datos de la clase derivada a su clase base, pero el objeto que apuntan ahora ambas variables no se modifica.  

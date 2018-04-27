@@ -1,23 +1,24 @@
 ---
 title: Escenario1
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: cb678fda-79aa-4495-833b-ef570539d4c3
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 50efd36e1d54bd456e184c42d62aded14e510947
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 60f6571d7702236ee24c0cb9da2aa4121feddcf0
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="scenario"></a>Escenario
 Esta sección contiene ejemplos de escenarios [!INCLUDE[wf](../../../../includes/wf-md.md)].  
@@ -39,7 +40,7 @@ Esta sección contiene ejemplos de escenarios [!INCLUDE[wf](../../../../includes
  Muestra cómo implementar un escenario de cronómetro simple mediante una combinación de actividades <xref:System.Activities.Statements.Flowchart> y <xref:System.Activities.Statements.Pick>.  
   
  [Integración de WPF y WF en XAML](../../../../docs/framework/windows-workflow-foundation/samples/wpf-and-wf-integration-in-xaml.md)  
- Muestra cómo crear una aplicación que utiliza características [!INCLUDE[avalon1](../../../../includes/avalon1-md.md)] y [!INCLUDE[wf](../../../../includes/wf-md.md)] en un documento XAML único. Para lograr esto, el ejemplo utiliza [!INCLUDE[wf](../../../../includes/wf-md.md)] y extensibilidad de XAML.  
+ Muestra cómo crear una aplicación que usa Windows Presentation Foundation (WPF) y [!INCLUDE[wf](../../../../includes/wf-md.md)] características en un documento XAML único. Para lograr esto, el ejemplo utiliza [!INCLUDE[wf](../../../../includes/wf-md.md)] y extensibilidad de XAML.  
   
  [Kit de herramientas de RuleSet externo](../../../../docs/framework/windows-workflow-foundation/samples/external-ruleset-toolkit.md)  
  Muestra cómo administrar y modificar conjuntos de reglas en una base de datos y cómo tener acceso a ellos desde un flujo de trabajo en tiempo de ejecución.

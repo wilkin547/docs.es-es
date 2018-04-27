@@ -1,11 +1,12 @@
 ---
-title: "Comentarios en el código (Visual Basic)"
-ms.custom: 
+title: Comentarios en el código (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - Uncomment button
@@ -20,17 +21,17 @@ helpviewer_keywords:
 - comments
 - code comments
 ms.assetid: 90136fba-22eb-49f9-ba81-63db629b4a47
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 0cf1aa755c479c73c64951f80ab0b76985507da6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9cd3277ea61ac9b46d8d20028bd100811988f611
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="comments-in-code-visual-basic"></a>Comentarios en el código (Visual Basic)
-Cuando lea ejemplos de código, encontrará el símbolo de comentario (`'`). Este símbolo solicita la [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] compilador para pasar por alto el texto que aparece a continuación o *comentario*. Los comentarios son notas cortas explicativas que se agregan al código para aportar mayor información a las personas que lo lean.  
+Cuando lea ejemplos de código, encontrará el símbolo de comentario (`'`). Este símbolo solicita al compilador de Visual Basic para pasar por alto el texto que aparece a continuación o *comentario*. Los comentarios son notas cortas explicativas que se agregan al código para aportar mayor información a las personas que lo lean.  
   
  Una buena práctica de programación consiste en comenzar todos los procedimientos con un comentario breve que describe las características funcionales del procedimiento (lo que hace). Esto ayuda al desarrollador y a los que puedan examinar el código. Debería separar los detalles de implementación (cómo lo hace el procedimiento) de los comentarios que describen las características funcionales. Al incluir detalles de implementación en la descripción, recuerde actualizarlos en el momento de actualizar la función.  
   
@@ -43,12 +44,12 @@ Cuando lea ejemplos de código, encontrará el símbolo de comentario (`'`). Est
  [!code-vb[VbVbcnConventions#17](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/comments-in-code_2.vb)]  
   
 ## <a name="commenting-guidelines"></a>Instrucciones sobre los comentarios  
- La tabla siguiente proporciona directrices generales sobre los tipos de comentarios que pueden preceder una sección de código. Se trata únicamente de sugerencias, ya que [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] no tiene reglas obligatorias para agregar comentarios. Escriba lo que considere más conveniente, para uso propio o para cualquier otra persona que lea el código.  
+ La tabla siguiente proporciona directrices generales sobre los tipos de comentarios que pueden preceder una sección de código. Se trata de sugerencias; Visual Basic no aplica las reglas para agregar comentarios. Escriba lo que considere más conveniente, para uso propio o para cualquier otra persona que lea el código.  
   
 |||  
 |---|---|  
 |Tipo de comentario|Descripción del comentario|  
-|Finalidad|Describe qué hace el procedimiento (no cómo lo hace).|  
+|Propósito|Describe qué hace el procedimiento (no cómo lo hace).|  
 |Suposiciones|Enumera cada variable externa, control, archivo abierto u otro elemento al cual el procedimiento tenga acceso.|  
 |Efectos|Enumera cada variable externa, control o archivo que esté afectado, y el efecto que tienen (únicamente si no es evidente).|  
 |Entradas|Especifica el propósito del argumento.|  

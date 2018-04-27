@@ -1,28 +1,28 @@
 ---
 title: Servicios de hospedaje
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - hosting services [WCF]
 ms.assetid: 192be927-6be2-4fda-98f0-e513c4881acc
-caps.latest.revision: 
+caps.latest.revision: 31
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: b23dac1db5252d3ce2bd60e4f8525dd89d9127b0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: db4662245f348eca795440f149160a66d87c998f
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="hosting-services"></a>Servicios de hospedaje
 Para activarse, se debe hospedar un servicio dentro de un entorno de tiempo en ejecución que lo crea y controla su contexto y duración. Los servicios[!INCLUDE[indigo1](../../../includes/indigo1-md.md)] están diseñados para ejecutarse en cualquier proceso de Windows que admite código administrado.  
@@ -34,12 +34,12 @@ Para activarse, se debe hospedar un servicio dentro de un entorno de tiempo en e
 ## <a name="hosting-options"></a>Opciones de hospedaje  
   
 #### <a name="self-hosting-in-a-managed-application"></a>Autohospedaje en una aplicación administrada  
- Los servicios de[!INCLUDE[indigo2](../../../includes/indigo2-md.md)] se pueden hospedar en cualquier aplicación administrada. Ésta es la opción más flexible puesto que es la que exige una menor infraestructura para implementar. Usted incrusta el código del servicio dentro del código de la aplicación administrada y, a continuación, crea y abre una instancia del <xref:System.ServiceModel.ServiceHost> para hacer que el servicio esté disponible. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Cómo: hospedar un servicio WCF en una aplicación administrada](../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md).  
+ Los servicios de[!INCLUDE[indigo2](../../../includes/indigo2-md.md)] se pueden hospedar en cualquier aplicación administrada. Ésta es la opción más flexible puesto que es la que exige una menor infraestructura para implementar. Usted incrusta el código del servicio dentro del código de la aplicación administrada y, a continuación, crea y abre una instancia del <xref:System.ServiceModel.ServiceHost> para hacer que el servicio esté disponible. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Cómo: hospedar un servicio WCF en una aplicación administrada](../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md).  
   
- Esta opción habilita dos escenarios comunes: los servicios de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] que se ejecutan dentro de aplicaciones de consola y las aplicaciones de cliente completas como las basadas en [!INCLUDE[avalon1](../../../includes/avalon1-md.md)] o Windows Forms (Winforms). Hospedar un servicio de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] dentro de una aplicación de consola es útil, por lo general, durante la fase de desarrollo de la aplicación. Esto hace que sean fáciles de depurar, de obtener información de seguimiento para averiguar lo que está sucediendo dentro de la aplicación y fáciles de mover copiándolas en nuevas ubicaciones. Esta opción de hospedaje también facilita la comunicación de aplicaciones de cliente completas, como [!INCLUDE[avalon2](../../../includes/avalon2-md.md)] y aplicaciones Winforms, con el mundo externo. Por ejemplo, un cliente de colaboración punto a punto que utiliza [!INCLUDE[avalon2](../../../includes/avalon2-md.md)] para su interfaz de usuario y también hospeda un servicio de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] que permite a otros clientes conectar con él y compartir información.  
+ Esta opción habilita dos escenarios comunes: [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] servicios que se ejecutan dentro de las aplicaciones de consola y aplicaciones de cliente completas como las basan en Windows Presentation Foundation (WPF) o Windows Forms (WinForms). Hospedar un servicio de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] dentro de una aplicación de consola es útil, por lo general, durante la fase de desarrollo de la aplicación. Esto hace que sean fáciles de depurar, de obtener información de seguimiento para averiguar lo que está sucediendo dentro de la aplicación y fáciles de mover copiándolas en nuevas ubicaciones. Esta opción de hospedaje también facilita la comunicación de aplicaciones de cliente completas, como [!INCLUDE[avalon2](../../../includes/avalon2-md.md)] y aplicaciones Winforms, con el mundo externo. Por ejemplo, un cliente de colaboración punto a punto que utiliza [!INCLUDE[avalon2](../../../includes/avalon2-md.md)] para su interfaz de usuario y también hospeda un servicio de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] que permite a otros clientes conectar con él y compartir información.  
   
 #### <a name="managed-windows-services"></a>Servicios administrados de Windows  
- Esta opción de hospedaje consiste en el registro del dominio de la aplicación (AppDomain) que hospeda un servicio de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] como un servicio administrado de Windows (anteriormente conocido como servicio NT) para que el Administrador de control de servicios (SCM) controle la duración del proceso del servicio de los servicios de Windows. Al igual que la opción de autohospedaje, este tipo de entorno de hospedaje requiere que se escriba algún código de hospedaje como parte de la aplicación. El servicio se implementa como un servicio de Windows y como un servicio de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] provocando que herede de la clase <xref:System.ServiceProcess.ServiceBase> , así como de una interfaz de contrato de servicios de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] . <xref:System.ServiceModel.ServiceHost> se crea y se abre a continuación dentro de un método <xref:System.ServiceProcess.ServiceBase.OnStart%28System.String%5B%5D%29> invalidado y cerrado dentro de un método <xref:System.ServiceProcess.ServiceBase.OnStop> invalidado. Una clase de instalador que hereda de <xref:System.Configuration.Install.Installer> también se debe implementar para permitir que la herramienta Installutl.exe instale el programa como un servicio de Windows. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Cómo: hospedar un servicio WCF en un servicio de Windows administrado](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-a-managed-windows-service.md). El escenario habilitado por la opción de hospedaje del servicio administrado de Windows es el de un servicio de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] de ejecución prolongada hospedado fuera de IIS en un entorno seguro que no es activado por mensaje. En su lugar, el sistema operativo controla la duración del servicio. Esta opción de hospedaje está disponible en todas las versiones de Windows.  
+ Esta opción de hospedaje consiste en el registro del dominio de la aplicación (AppDomain) que hospeda un servicio de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] como un servicio administrado de Windows (anteriormente conocido como servicio NT) para que el Administrador de control de servicios (SCM) controle la duración del proceso del servicio de los servicios de Windows. Al igual que la opción de autohospedaje, este tipo de entorno de hospedaje requiere que se escriba algún código de hospedaje como parte de la aplicación. El servicio se implementa como un servicio de Windows y como un servicio de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] provocando que herede de la clase <xref:System.ServiceProcess.ServiceBase> , así como de una interfaz de contrato de servicios de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] . <xref:System.ServiceModel.ServiceHost> se crea y se abre a continuación dentro de un método <xref:System.ServiceProcess.ServiceBase.OnStart%28System.String%5B%5D%29> invalidado y cerrado dentro de un método <xref:System.ServiceProcess.ServiceBase.OnStop> invalidado. Una clase de instalador que hereda de <xref:System.Configuration.Install.Installer> también se debe implementar para permitir que la herramienta Installutl.exe instale el programa como un servicio de Windows. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Cómo: hospedar un servicio WCF en un servicio de Windows administrado](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-a-managed-windows-service.md). El escenario habilitado por la opción de hospedaje del servicio administrado de Windows es el de un servicio de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] de ejecución prolongada hospedado fuera de IIS en un entorno seguro que no es activado por mensaje. En su lugar, el sistema operativo controla la duración del servicio. Esta opción de hospedaje está disponible en todas las versiones de Windows.  
   
 #### <a name="internet-information-services-iis"></a>Internet Information Services (IIS)  
  La opción de alojamiento de IIS se integra con [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] y utiliza las características que ofrecen estas tecnologías, como el reciclaje de procesos, cierre por inactividad, supervisión de estado de procesos y activación basada en mensajes. En los sistemas operativos [!INCLUDE[wxp](../../../includes/wxp-md.md)] y [!INCLUDE[ws2003](../../../includes/ws2003-md.md)] , ésta es la solución preferida para hospedar aplicaciones de servicios web que deben estar muy disponibles y ser muy escalables. IIS también proporciona una capacidad de administración integrada que los clientes esperan de un producto de servidor de clase empresarial. Esta opción de hospedaje requiere que se configure correctamente IIS, pero no requiere que se escriba ningún código de hospedaje como parte de la aplicación. [!INCLUDE[crabout](../../../includes/crabout-md.md)] cómo configurar el hospedaje de IIS para un servicio de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] , consulte [How to: Host a WCF Service in IIS](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md).  

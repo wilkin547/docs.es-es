@@ -1,24 +1,26 @@
 ---
 title: Aprender con tutoriales
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a8ae2965-6a49-4155-89b0-7fab2c488ab1
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: c49ecfec032a20090e8eca1c94efe9e1f35cce7d
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 98373ccee7f9fde178f26c62cd77acb17676c6cc
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="learning-by-walkthroughs"></a>Aprender con tutoriales
 El [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] documentación proporciona varios tutoriales. En este tema se resuelven algunos de los problemas generales que plantean los tutoriales y se proporcionan vínculos a varios tutoriales de iniciación a través de los cuales conocerá [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
@@ -41,20 +43,20 @@ El [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] documenta
 ## <a name="general"></a>General  
  La información siguiente corresponde a estos tutoriales en general:  
   
--   Entorno: cada tutorial [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] utiliza [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] como entorno de desarrollo integrado (IDE).  
+-   Entorno: Cada [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] tutorial utiliza Visual Studio como entorno de desarrollo integrado (IDE).  
   
 -   Motores de SQL: estos tutoriales se han escrito para ser implementados con SQL Server Express. Si no tiene SQL Server Express, puede descargarlo gratuitamente. Para obtener más información, consulte [descargar bases de datos de ejemplo](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md).  
   
     > [!NOTE]
     >  Los tutoriales de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] utilizan un nombre de archivo como cadena de conexión. La simple especificación de un nombre de archivo es una ventaja que [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] ofrece para los usuarios de SQL Server Express. Siempre preste atención a los problemas de seguridad. Para obtener más información, consulte [seguridad en LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/security-in-linq-to-sql.md).  
   
--   [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]tutoriales normalmente requieren la base de datos de ejemplo Northwind. Para obtener más información, consulte [descargar bases de datos de ejemplo](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md).  
+-   [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] tutoriales normalmente requieren la base de datos de ejemplo Northwind. Para obtener más información, consulte [descargar bases de datos de ejemplo](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md).  
   
--   Los cuadros de diálogo y comandos de menú que se ven en los tutoriales pueden diferir de los descritos en la Ayuda, en función de los valores de configuración o de edición de [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] activos. Para cambiar la configuración, haga clic en **Importar y exportar configuraciones** en el menú **Herramientas** . Para obtener más información, vea [Personalizar la configuración de desarrollo en Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+-   Los cuadros de diálogo y comandos de menú que se ven en los tutoriales pueden diferir de los descritos en la Ayuda, dependiendo de la edición de Visual Studio o configuración activa. Para cambiar la configuración, haga clic en **Importar y exportar configuraciones** en el menú **Herramientas** . Para obtener más información, vea [Personalizar la configuración de desarrollo en Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
 -   Para los tutoriales que se ocupan de escenarios de varios niveles, debe disponer de un servidor en un equipo distinto del equipo de desarrollo, y debe tener los permisos de acceso adecuados para el servidor.  
   
--   El nombre de la clase que normalmente representa la tabla Orders en la base de datos de ejemplo Northwind es `[Order]`. Los caracteres de escape son necesarios, ya que `Order` es una palabra clave en [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)].  
+-   El nombre de la clase que normalmente representa la tabla Orders en la base de datos de ejemplo Northwind es `[Order]`. Las secuencias de escape son necesario porque `Order` es una palabra clave en Visual Basic.  
   
 ## <a name="troubleshooting"></a>Solución de problemas  
  Pueden producirse errores en tiempo de ejecución, ya que no dispone de los permisos suficientes para tener acceso a las bases de datos utilizadas en estos tutoriales. Los pasos siguientes pueden ayudarle a resolver los problemas más comunes.  
@@ -68,7 +70,7 @@ El [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] documenta
   
 2.  En el panel izquierdo de la **Administrador de configuración de SQL Server**, haga clic en **servicios de SQL Server 2005**.  
   
-3.  En el panel derecho, haga clic en **SQL Server (SQLEXPRESS)**y, a continuación, haga clic en **propiedades**.  
+3.  En el panel derecho, haga clic en **SQL Server (SQLEXPRESS)** y, a continuación, haga clic en **propiedades**.  
   
 4.  Haga clic en el **Log On** ficha y compruebe cómo se está intentando iniciar sesión en el servidor.  
   
@@ -94,9 +96,9 @@ El [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] documenta
   
 1.  En el panel izquierdo de la **Administrador de configuración de SQL Server**, haga clic en **servicios de SQL Server 2005**.  
   
-2.  En el panel derecho, haga clic en **SQL Server (SQLEXPRESS)**y, a continuación, haga clic en **detener**.  
+2.  En el panel derecho, haga clic en **SQL Server (SQLEXPRESS)** y, a continuación, haga clic en **detener**.  
   
-3.  Haga clic en **SQL Server (SQLEXPRESS)**y, a continuación, haga clic en **reiniciar**.  
+3.  Haga clic en **SQL Server (SQLEXPRESS)** y, a continuación, haga clic en **reiniciar**.  
   
 ## <a name="see-also"></a>Vea también  
  [Introducción](../../../../../../docs/framework/data/adonet/sql/linq/getting-started.md)

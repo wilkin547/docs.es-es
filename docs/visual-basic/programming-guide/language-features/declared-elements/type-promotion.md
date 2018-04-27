@@ -1,11 +1,12 @@
 ---
-title: "Promoción de tipos (Visual Basic)"
-ms.custom: 
+title: Promoción de tipos (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - declared elements [Visual Basic], scope
@@ -16,17 +17,17 @@ helpviewer_keywords:
 - type promotion
 - declared elements [Visual Basic], visibility
 ms.assetid: 035eeb15-e4c5-4288-ab3c-6bd5d22f7051
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: f3a55c023afe7afe96f862f0b3cbbdb03a15b902
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: ddb0d61f0f1c94e8e28493d0c62afe1e09503804
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="type-promotion-visual-basic"></a>Promoción de tipos (Visual Basic)
-Cuando se declara un elemento de programación en un módulo, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] promueve su ámbito al espacio de nombres que contiene el módulo. Esto se conoce como *promoción de tipo*.  
+Cuando se declara un elemento de programación en un módulo, Visual Basic promueve su ámbito al espacio de nombres que contiene el módulo. Esto se conoce como *promoción de tipo*.  
   
  En el ejemplo siguiente se muestra un esquema de definición de un módulo y dos miembros de ese módulo.  
   
@@ -46,7 +47,7 @@ Cuando se declara un elemento de programación en un módulo, [!INCLUDE[vbprvb](
   
  [!code-vb[VbVbalrDeclaredElements#3](../../../../visual-basic/programming-guide/language-features/declared-elements/codesnippet/VisualBasic/type-promotion_3.vb)]  
   
- En el ejemplo anterior, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] no se puede promover la clase `abc` a `thisNameSpace` porque ya hay una enumeración con el mismo nombre en el nivel de espacio de nombres. Para tener acceso a `abcSub`, debe utilizar la cadena de calificación completa `thisNamespace.thisModule.abc.abcSub`. Sin embargo, la clase `xyz` todavía se promueve, y puede tener acceso a `xyzSub` con la cadena de calificación más corta `thisNamespace.xyz.xyzSub`.  
+ En el ejemplo anterior, Visual Basic no puede promover la clase `abc` a `thisNameSpace` porque ya hay una enumeración con el mismo nombre en el nivel de espacio de nombres. Para tener acceso a `abcSub`, debe utilizar la cadena de calificación completa `thisNamespace.thisModule.abc.abcSub`. Sin embargo, la clase `xyz` todavía se promueve, y puede tener acceso a `xyzSub` con la cadena de calificación más corta `thisNamespace.xyz.xyzSub`.  
   
 ### <a name="defeat-of-type-promotion-for-partial-types"></a>Rechazo de promoción de tipos para tipos parciales.  
  Si una clase o estructura dentro de un módulo usa la [parcial](../../../../visual-basic/language-reference/modifiers/partial.md) palabra clave, se rechaza automáticamente para esa clase o estructura, la promoción de tipos si el espacio de nombres tiene un miembro con el mismo nombre o no. Otros elementos en el módulo son aún aptos para la promoción de tipos.  

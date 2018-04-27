@@ -24,11 +24,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 2f4a6debc25a51e3a0a83e70fc8c8f8fc55c62f5
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: dfa32112a2eb85a93cdd1e7a72d4411a3b197a1a
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="struct-design"></a>Diseño de structs
 El tipo de valor de uso general más a menudo se conoce como un struct, la palabra clave de C#. Esta sección proporciona instrucciones para el diseño de la estructura general.  
@@ -47,7 +47,7 @@ El tipo de valor de uso general más a menudo se conoce como un struct, la palab
   
  **✓ HACER** implementar <xref:System.IEquatable%601> en tipos de valor.  
   
- El <xref:System.Object.Equals%2A?displayProperty=nameWithType> método en tipos de valor provoca conversión boxing y la implementación predeterminada no es muy eficaz, ya que usa la reflexión. <xref:System.IEquatable%601.Equals%2A>puede tener un rendimiento mucho mejor y se puede implementar para que no producirá la conversión boxing.  
+ El <xref:System.Object.Equals%2A?displayProperty=nameWithType> método en tipos de valor provoca conversión boxing y la implementación predeterminada no es muy eficaz, ya que usa la reflexión. <xref:System.IEquatable%601.Equals%2A> puede tener un rendimiento mucho mejor y se puede implementar para que no producirá la conversión boxing.  
   
  **X DO NOT** extender explícitamente <xref:System.ValueType>. De hecho, la mayoría de los lenguajes evitar esto.  
   
@@ -55,7 +55,7 @@ El tipo de valor de uso general más a menudo se conoce como un struct, la palab
   
  *Partes © 2005, 2009 Microsoft Corporation. Reservados todos los derechos.*  
   
- *Volver a imprimir en el permiso de educación de Pearson, Inc. de [directrices de diseño de marco de trabajo: convenciones, expresiones y patrones para las bibliotecas .NET de reutilizable, 2ª edición](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina y Brad Abrams, publicado el 22 de octubre de 2008 por Addison-Wesley Professional como parte de la serie de desarrollo de Microsoft Windows.*  
+ *Volver a imprimir en el permiso de educación de Pearson, Inc. de [directrices de diseño de marco de trabajo: convenciones, expresiones y patrones para las bibliotecas .NET de reutilizable, 2ª edición](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina y Brad Abrams, publicado el 22 de octubre de 2008 por Addison-Wesley Professional como parte de la serie de desarrollo de Microsoft Windows.*  
   
 ## <a name="see-also"></a>Vea también  
  [Instrucciones de diseño de tipos](../../../docs/standard/design-guidelines/type.md)  

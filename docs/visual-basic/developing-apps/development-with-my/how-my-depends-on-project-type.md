@@ -1,28 +1,28 @@
 ---
-title: "Cómo My depende del tipo de proyecto (Visual Basic)"
+title: Cómo My depende del tipo de proyecto (Visual Basic)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.suite: 
+ms.suite: ''
 ms.technology:
 - devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - _MYTYPE
 ms.assetid: c188b38e-bd9d-4121-9983-41ea6a94d28e
-caps.latest.revision: 
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 4a37bf43096931597278974099becb9be6ae133d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d931a2034d681c4e14cc35ecfbd9ad7accf5afaa
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-my-depends-on-project-type-visual-basic"></a>Cómo My depende del tipo de proyecto (Visual Basic)
-`My`muestra sólo los objetos requeridos por un tipo de proyecto determinado. Por ejemplo, el `My.Forms` objeto está disponible en una aplicación de Windows Forms pero no está disponible en una aplicación de consola. En este tema se describe qué `My` objetos están disponibles en diferentes tipos de proyectos.  
+`My` muestra sólo los objetos requeridos por un tipo de proyecto determinado. Por ejemplo, el `My.Forms` objeto está disponible en una aplicación de Windows Forms pero no está disponible en una aplicación de consola. En este tema se describe qué `My` objetos están disponibles en diferentes tipos de proyectos.  
   
 ## <a name="my-in-windows-applications-and-web-sites"></a>Mi Windows en las aplicaciones y sitios Web  
- `My`expone sólo los objetos que son útiles en el tipo de proyecto actual; Suprime los objetos que no son aplicables. Por ejemplo, la siguiente imagen muestra la `My` modelo de objetos en un proyecto de formularios Windows Forms.  
+ `My` expone sólo los objetos que son útiles en el tipo de proyecto actual; Suprime los objetos que no son aplicables. Por ejemplo, la siguiente imagen muestra la `My` modelo de objetos en un proyecto de formularios Windows Forms.  
   
  ![Forma de My en una aplicación de formularios Windows Forms](../../../visual-basic/developing-apps/development-with-my/media/myinwinform.png "MyInWinForm")  
   
@@ -48,7 +48,7 @@ ms.lasthandoff: 11/21/2017
 |`My.User`|**Sí** <sup>6</sup>|**Sí** <sup>6</sup>|**Sí** <sup>6</sup>|**Sí** <sup>6</sup>|**Sí** <sup>7</sup>|**Sí** <sup>6</sup>|No|**Sí** <sup>7</sup>|  
 |`My.WebServices`|**Sí**|**Sí**|**Sí**|**Sí**|**Sí**|**Sí**|No|No|  
   
- <sup>1</sup> versión de Windows Forms de `My.Application`. Se deriva de la versión de la consola (vea la nota 3); Agrega compatibilidad para interactuar con las ventanas de la aplicación y proporciona el [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] modelo de aplicación.  
+ <sup>1</sup> versión de Windows Forms de `My.Application`. Se deriva de la versión de la consola (vea la nota 3); Agrega compatibilidad para interactuar con las ventanas de la aplicación y proporciona el modelo de aplicaciones de Visual Basic.  
   
  <sup>2</sup> versión de biblioteca de `My.Application`. Proporciona la funcionalidad básica que necesita una aplicación: proporciona miembros para escribir en el registro de aplicación y acceder a información de la aplicación.  
   

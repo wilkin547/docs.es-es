@@ -15,21 +15,21 @@ ms.assetid: c68c5752-1006-46e1-975a-6717b62a42fc
 caps.latest.revision: 26
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: be5e0156b4cacc39e1613e06fe3c138838b02700
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 19aa20097e35a780f923a84e3e5809eb2b8bb3e8
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="objects-and-classes-in-visual-basic"></a>Objetos y clases de Visual Basic
 Un *objeto* es una combinación de código y datos que se pueden tratar como una unidad. Un objeto puede ser una parte de una aplicación, como un control o un formulario. Toda la aplicación también puede ser un objeto.
 
-Cuando se crea una aplicación en [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], se trabaja constantemente con objetos. Puede utilizar objetos proporcionados por [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], como controles, formularios y objetos de acceso a datos. También puede utilizar objetos de otras aplicaciones dentro de su aplicación [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. Incluso puede crear sus propios objetos y definir propiedades y métodos adicionales para ellos. Los objetos actúan como bloques de compilación prefabricados que permiten escribir un fragmento de código de una vez y utilizarlo una y otra vez.  
+Cuando se crea una aplicación en Visual Basic, se trabaja constantemente con objetos. Puede usar los objetos proporcionados por Visual Basic, como los objetos de acceso a datos, formularios y controles. También puede utilizar objetos de otras aplicaciones dentro de la aplicación de Visual Basic. Incluso puede crear sus propios objetos y definir propiedades y métodos adicionales para ellos. Los objetos actúan como bloques de compilación prefabricados que permiten escribir un fragmento de código de una vez y utilizarlo una y otra vez.  
   
 En este tema se proporciona información detallada sobre los objetos.  
 
 ## <a name="objects-and-classes"></a>Objetos y clases
-Cada objeto de [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] se define mediante una *clase*. Una clase describe las variables, las propiedades, los procedimientos y los eventos de un objeto. Los objetos son instancias de clases; puede crear tantos objetos como sean necesarios una vez que haya definido una clase.
+Cada objeto en Visual Basic se define por un *clase*. Una clase describe las variables, las propiedades, los procedimientos y los eventos de un objeto. Los objetos son instancias de clases; puede crear tantos objetos como sean necesarios una vez que haya definido una clase.
 
 Para comprender la relación entre un objeto y su clase, piense en las galletas y en su molde. El molde de la galleta es la clase. Define las características de cada galleta, por ejemplo, tamaño y forma. La clase se usa para crear objetos. Los objetos son las galletas.
 
@@ -241,7 +241,7 @@ Asegúrese de que el compilador puede tener acceso a la clase de la que pretende
 Otra forma de relacionar ese objeto es mediante una *relación de contención*. Los objetos contenedores lógicamente encapsulan otros objetos. Por ejemplo, el objeto <xref:System.OperatingSystem> contiene lógicamente un objeto <xref:System.Version>, el cual devuelve a través de su propiedad <xref:System.OperatingSystem.Version%2A>. Tenga en cuenta que el objeto contenedor no contiene ningún otro objeto físicamente.
 
 #### <a name="collections"></a>Colecciones
-Un tipo concreto de contención de objeto se representa mediante *colecciones*. Las colecciones son grupos de objetos similares que se pueden enumerar. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] admite una sintaxis específica en la [instrucción For Each...Next](../../../../visual-basic/language-reference/statements/for-each-next-statement.md) que le permite realizar una iteración por los elementos de una colección. Además, las colecciones suelen permitir usar un <xref:Microsoft.VisualBasic.Collection.Item%2A> para recuperar elementos en función de su índice o asociándolos con una cadena única. Las colecciones pueden ser más fáciles de utilizar que las matrices puesto que permiten agregar o quitar elementos sin utilizar índices. Debido a su facilidad de uso, las colecciones se utilizan a menudo para almacenar formularios y controles.
+Un tipo concreto de contención de objeto se representa mediante *colecciones*. Las colecciones son grupos de objetos similares que se pueden enumerar. Visual Basic admite una sintaxis específica en el [For Each... Next (instrucción)](../../../../visual-basic/language-reference/statements/for-each-next-statement.md) que le permite recorrer en iteración los elementos de una colección. Además, las colecciones suelen permitir usar un <xref:Microsoft.VisualBasic.Collection.Item%2A> para recuperar elementos en función de su índice o asociándolos con una cadena única. Las colecciones pueden ser más fáciles de utilizar que las matrices puesto que permiten agregar o quitar elementos sin utilizar índices. Debido a su facilidad de uso, las colecciones se utilizan a menudo para almacenar formularios y controles.
 
 ## <a name="related-topics"></a>Temas relacionados  
  [Tutorial: Definir clases](../../../../visual-basic/programming-guide/language-features/objects-and-classes/walkthrough-defining-classes.md)  

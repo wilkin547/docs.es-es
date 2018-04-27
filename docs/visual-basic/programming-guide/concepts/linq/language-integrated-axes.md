@@ -1,25 +1,26 @@
 ---
 title: Ejes integrados en el lenguaje de Visual Basic (LINQ to XML)
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: d450a556-a134-4261-b011-44e399660894
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: d648ba7c8710f73c4aeb8dad3983f219c5fe1815
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 8360281d1d8de0cad243297cd78e97958530bae4
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="language-integrated-axes-in-visual-basic-linq-to-xml"></a>Ejes integrados en el lenguaje de Visual Basic (LINQ to XML)
-Esta sección describen características integradas directamente en la [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] idioma que resulte sencillo tener acceso a XML. Muchos de los ejemplos de la documentación de LINQ to XML usan estos ejes de [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] integrados.  
+Esta sección describen características integradas directamente en el lenguaje de Visual Basic que resulte sencillo tener acceso a XML. Muchos de los ejemplos de LINQ para documentación XML usan estos ejes integrados de Visual Basic.  
   
 ## <a name="in-this-section"></a>En esta sección  
   

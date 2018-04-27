@@ -1,27 +1,29 @@
 ---
-title: "Asignación externa"
-ms.custom: 
+title: Asignación externa
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 076606b8-d889-4ba0-b5da-ae577b146f23
-caps.latest.revision: "2"
+caps.latest.revision: 2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: ae67c80e4637281a26b15d7faa2dbdbe7171ba1c
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 99b5a37778299f541a59707708edba244ab2f806
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="external-mapping"></a>Asignación externa
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]admite *asignación externa*, un proceso por el que utiliza un archivo XML independiente para especificar la asignación entre el modelo de datos de la base de datos y su modelo de objetos. Las ventajas de utilizar una archivo de asignación externa son las siguientes:  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] admite *asignación externa*, un proceso por el que utiliza un archivo XML independiente para especificar la asignación entre el modelo de datos de la base de datos y su modelo de objetos. Las ventajas de utilizar una archivo de asignación externa son las siguientes:  
   
 -   Puede separar el código de la asignación del código de la aplicación. Este enfoque reduce el desorden en el código de la aplicación.  
   
@@ -46,7 +48,7 @@ ms.lasthandoff: 01/17/2018
  Distinga este archivo de definición de esquema del archivo de definición de esquema que se utiliza para validar un archivo DBML. Para obtener más información, consulte [generación de código en LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)).  
   
 > [!NOTE]
->  Los usuarios de [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] también encontrarán este archivo XSD en el cuadro de diálogo Esquemas XML como "LinqToSqlMapping.xsd". Para usar este archivo correctamente para validar un archivo de asignación externo, consulte [Cómo: validar archivos DBML y externo asignación](../../../../../../docs/framework/data/adonet/sql/linq/how-to-validate-dbml-and-external-mapping-files.md).  
+>  Usuarios de Visual Studio también encontrarán este archivo XSD en el cuadro de diálogo de esquemas XML como "LinqToSqlMapping.xsd". Para usar este archivo correctamente para validar un archivo de asignación externo, consulte [Cómo: validar archivos DBML y externo asignación](../../../../../../docs/framework/data/adonet/sql/linq/how-to-validate-dbml-and-external-mapping-files.md).  
   
 ```  
 ?<?xml version="1.0" encoding="utf-16"?>  

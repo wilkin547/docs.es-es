@@ -1,26 +1,27 @@
 ---
-title: "Programar el árbol de elementos de modelo"
-ms.custom: 
+title: Programar el árbol de elementos de modelo
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 0229efde-19ac-4bdc-a187-c6227a7bd1a5
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 83e804a3ede525510b5c46b494882656c74591b8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 497aa75214bdbbefa7f09ef56fe96926c2461ed6
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="programming-model-item-tree"></a>Programar el árbol de elementos de modelo
-En este ejemplo se muestra cómo navegar hasta el árbol <xref:System.Activities.Presentation.Model.ModelItem> utilizando el enlace de datos declarativo de la vista de árbol de [!INCLUDE[avalon1](../../../../includes/avalon1-md.md)].  
+Este ejemplo muestra cómo navegar hasta el <xref:System.Activities.Presentation.Model.ModelItem> árbol utilizando el enlace de datos declarativo de la vista de árbol de Windows Presentation Foundation (WPF).  
   
 ## <a name="sample-details"></a>Detalles del ejemplo  
  El árbol <xref:System.Activities.Presentation.Model.ModelItem> es la abstracción que usa la infraestructura de [!INCLUDE[wfd1](../../../../includes/wfd1-md.md)] para mostrar los datos sobre la instancia subyacente que se está editando. La siguiente ilustración describe los diferentes niveles de infraestructura dentro de [!INCLUDE[wfd2](../../../../includes/wfd2-md.md)].  

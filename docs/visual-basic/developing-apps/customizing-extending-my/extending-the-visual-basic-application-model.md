@@ -1,5 +1,5 @@
 ---
-title: "Ampliar el modelo de la aplicación de Visual Basic"
+title: Ampliar el modelo de la aplicación de Visual Basic
 ms.date: 07/20/2015
 ms.prod: .net
 ms.technology:
@@ -8,14 +8,14 @@ ms.topic: article
 helpviewer_keywords:
 - Visual Basic Application Model, extending
 ms.assetid: e91d3bed-4c27-40e3-871d-2be17467c72c
-caps.latest.revision: 
+caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 15e6ea1a8b2df0b8ed1b84abceee9e6be2c556f9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 5ffd882c2a1d04c29483d380e972d6ce70bdb5c4
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="extending-the-visual-basic-application-model"></a>Ampliar el modelo de la aplicación de Visual Basic
 Puede agregar funcionalidad al modelo de aplicación reemplazando el `Overridable` los miembros de la <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> clase. Esta técnica permite personalizar el comportamiento del modelo de aplicación y agregue llamadas a sus propios métodos, como la aplicación se inicia y se cierra.  
@@ -25,11 +25,11 @@ Puede agregar funcionalidad al modelo de aplicación reemplazando el `Overridabl
   
  El gráfico siguiente muestra la secuencia de llamada de modelo de aplicación en una aplicación de formularios Windows Forms de Visual Basic normal. La secuencia inicia cuando el `Sub Main` las llamadas a procedimiento el <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Run%2A> método.  
   
- ![Modelo de aplicación de Visual Basic &#45; &#45; Ejecutar](../../../visual-basic/developing-apps/customizing-extending-my/media/vb_modelrun.gif "VB_ModelRun")  
+ ![Modelo de aplicación de Visual Basic &#45; &#45; ejecutar](../../../visual-basic/developing-apps/customizing-extending-my/media/vb_modelrun.gif "VB_ModelRun")  
   
  El modelo de aplicación de Visual Basic también proporciona la <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.StartupNextInstance> y <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UnhandledException> eventos. Los gráficos siguientes muestran el mecanismo para generar estos eventos.  
   
- ![Modelo de aplicación de Visual Basic &#45; &#45; A continuación de la instancia](../../../visual-basic/developing-apps/customizing-extending-my/media/vb_modelnext.gif "VB_ModelNext")  
+ ![Modelo de aplicación de Visual Basic &#45; &#45; después de la instancia](../../../visual-basic/developing-apps/customizing-extending-my/media/vb_modelnext.gif "VB_ModelNext")  
   
  ![Excepción no controlada del modelo de aplicación de Visual Basic](../../../visual-basic/developing-apps/customizing-extending-my/media/vb_unhandex.gif "VB_UnhandEx")  
   
@@ -50,7 +50,7 @@ Puede agregar funcionalidad al modelo de aplicación reemplazando el `Overridabl
   
     2.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateSplashScreen%2A>. Permite a un diseñador emitir código que inicializa la pantalla de presentación.  
   
-         De forma predeterminada, este método no hace nada. Si selecciona una pantalla de presentación para la aplicación en el [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] **Diseñador de proyectos**, invalida el Diseñador de la <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateSplashScreen%2A> método con un método que establece el <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.SplashScreen%2A> propiedad a una nueva instancia de la forma de pantalla de presentación.  
+         De forma predeterminada, este método no hace nada. Si selecciona una pantalla de presentación para la aplicación en Visual Basic **Diseñador de proyectos**, el diseñador reemplaza el <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateSplashScreen%2A> método con un método que establece el <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.SplashScreen%2A> propiedad a una nueva instancia de la forma de pantalla de presentación .  
   
 2.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnStartup%2A>. Proporciona un punto de extensibilidad para generar el `Startup` eventos. La secuencia de inicio de la aplicación se detiene si esta función devuelve `False`.  
   
@@ -62,7 +62,7 @@ Puede agregar funcionalidad al modelo de aplicación reemplazando el `Overridabl
   
     1.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateMainForm%2A>. Proporciona una manera para que un diseñador emitir código que inicializa el formulario principal.  
   
-         De forma predeterminada, este método no hace nada. Sin embargo, cuando se selecciona un formulario principal para la aplicación en el [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] **Diseñador de proyectos**, invalida el Diseñador de la <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateMainForm%2A> método con un método que establece el <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.MainForm%2A> propiedad a una nueva instancia del formulario principal.  
+         De forma predeterminada, este método no hace nada. Sin embargo, cuando se selecciona un formulario principal de la aplicación en Visual Basic **Diseñador de proyectos**, el diseñador reemplaza el <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateMainForm%2A> método con un método que establece el <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.MainForm%2A> propiedad a una nueva instancia del formulario principal.  
   
     2.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.HideSplashScreen%2A>. Si la aplicación tiene definida una pantalla de presentación y está abierta, este método cierra la pantalla de presentación.  
   
@@ -85,11 +85,11 @@ Puede agregar funcionalidad al modelo de aplicación reemplazando el `Overridabl
  El <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnStartupNextInstance(Microsoft.VisualBasic.ApplicationServices.StartupNextInstanceEventArgs)> llamadas al constructor el <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering%2A> propiedad para determinar qué motor de representación de texto que se usará para los formularios de la aplicación. De forma predeterminada, el <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering%2A> propiedad devuelve `False`, que indica que se usa el motor de representación de texto GDI, que es el valor predeterminado en [!INCLUDE[vbprvblong](~/includes/vbprvblong-md.md)]. Puede invalidar la <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering%2A> propiedad para devolver `True`, que indica que se usa el motor de representación de texto GDI +, que es el valor predeterminado en Visual Basic .NET 2002 y Visual Basic .NET 2003.  
   
 ## <a name="configuring-the-application"></a>Configuración de la aplicación  
- Como parte de la [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] modelo de aplicación, la <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering> clase proporciona propiedades protegidas que configuran la aplicación. Estas propiedades se deben establecer en el constructor de la clase de implementación.  
+ Como parte del modelo de aplicación de Visual Basic, la <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering> clase proporciona propiedades protegidas que configuran la aplicación. Estas propiedades se deben establecer en el constructor de la clase de implementación.  
   
  En un proyecto de formularios Windows Forms de forma predeterminada, el **Diseñador de proyectos** crea código para establecer las propiedades con la configuración del diseñador. Las propiedades se utilizan solo cuando se inicia la aplicación; establecerlas después de iniciar la aplicación no tiene ningún efecto.  
   
-|Propiedad|Determina|Configuración en el panel aplicación del Diseñador de proyectos|  
+|Property|Determina|Configuración en el panel aplicación del Diseñador de proyectos|  
 |---|---|---|  
 |<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.IsSingleInstance%2A>|Si la aplicación se ejecuta como una aplicación de instancia única o de varias instancias.|**Asegúrese de aplicación de instancia única** casilla de verificación|  
 |<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.EnableVisualStyles%2A>|Si la aplicación va a usar los estilos visuales que coinciden con Windows XP.|**Habilitar los estilos visuales de XP** casilla de verificación|  

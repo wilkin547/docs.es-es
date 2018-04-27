@@ -5,14 +5,15 @@ author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
 ms.prod: .net
+ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: ba48579735379bfc857993cd1546f5f7125101f4
-ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
+ms.openlocfilehash: ac4cd9f14f046a970b6ec41c1b176e9980a960cf
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="modernize-existing-net-applications-with-azure-cloud-and-windows-containers-v10"></a>Modernización de las aplicaciones .NET existentes con la nube de Azure y los contenedores de Windows (v1.0)
 
@@ -36,7 +37,7 @@ Este libro se proporciona “tal cual” y expresa las opiniones del autor. Las 
 
 Algunos ejemplos descritos aquí se proporcionan únicamente con fines ilustrativos y son ficticios. No debe deducirse ninguna asociación ni conexión reales.
 
-Microsoft y las marcas comerciales indicadas en http://www.microsoft.com en la página web "Marcas comerciales" pertenecen al grupo de empresas de Microsoft. El resto de marcas pertenecen a sus respectivos propietarios.
+Microsoft y marcas comerciales enumeradas en http://www.microsoft.com en la página Web "Marcas" son marcas comerciales del grupo de compañías Microsoft. El resto de marcas pertenecen a sus respectivos propietarios.
 
 Autor:
 > **Cesar de la Torre**, administrador de programas sénior del equipo del producto de .NET, Microsoft Corp.
@@ -172,11 +173,11 @@ Esta guía no muestra cómo trabajar con aplicaciones de nube nativo, como cómo
 
 ### <a name="additional-resources"></a>Recursos adicionales
 
-- **Ciclo de vida de aplicaciones de Docker en contenedor con la plataforma y las herramientas de Microsoft** (libro electrónico descargable) [*https://aka.ms/dockerlifecycleebook*](https://aka.ms/dockerlifecycleebook)
+- **En contenedores Docker ciclo de vida de aplicación con herramientas y plataforma de Microsoft** (libro electrónico descargable): [*https://aka.ms/dockerlifecycleebook*](https://aka.ms/dockerlifecycleebook)
 
-- **Microservicios de .NET: Arquitectura para aplicaciones .NET en contenedor** (libro electrónico descargable): [*https://aka.ms/microservicesebook*](https://aka.ms/microservicesebook)
+- **.NET Microservicios: Arquitectura de aplicaciones .NET en contenedores** (libro electrónico descargable): [*https://aka.ms/microservicesebook*](https://aka.ms/microservicesebook)
 
-- **Diseño de aplicaciones web modernas con ASP.NET Core y Azure** (libro electrónico descargable): [*https://aka.ms/webappebook*](https://aka.ms/webappebook)
+- **Diseñar aplicaciones web modernas con ASP.NET Core y Azure** (libro electrónico descargable): [*https://aka.ms/webappebook*](https://aka.ms/webappebook)
 
 ## <a name="who-should-use-this-guide"></a>Destinatarios de esta guía
 

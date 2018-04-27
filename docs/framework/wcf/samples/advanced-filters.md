@@ -1,24 +1,26 @@
 ---
 title: Filtros avanzados
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 8d81590f-e036-4f96-824a-4a187f462764
-caps.latest.revision: "23"
+caps.latest.revision: 23
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 357b57bb39ca31b48d21cb83209a72d0b3d12a62
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: a374765317751a5adc241941a0c0dc613a3ea2cc
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="advanced-filters"></a>Filtros avanzados
 En este ejemplo se muestra un servicio de enrutamiento de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. El servicio de enrutamiento es un componente de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] que permite incluir fácilmente un enrutador basado en contenido en una aplicación. En este ejemplo se adapta el ejemplo de la calculadora de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] estándar para comunicarse utilizando el servicio de enrutamiento. En este ejemplo se muestra cómo definir la lógica de enrutamiento basado en contenido a través del uso de filtros de mensajes y tablas de filtro de mensajes.  
@@ -60,7 +62,7 @@ XPathMessageFilter xpathFilter = new XPathMessageFilter("/s12:Envelope/s12:Heade
 EndpointNameMessageFilter endpointNameFilter = new EndpointNameMessageFilter("calculatorEndpoint");  
 ```  
   
- El tercer filtro es un <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter>. Esto coincide con cualquier mensaje que se presentara en un extremo con una dirección que coincida con el prefijo de dirección (o la parte delantera) proporcionado. En este ejemplo el prefijo de dirección se define como "http://localhost/routingservice/router/rounding/". Esto significa que este filtro coincide con cualquier mensaje entrante que se dirija a "http://localhost/routingservice/router/rounding/*". En este caso, es un mensaje que se presenta en el extremo de la calculadora de redondeo, que tiene la dirección "http://localhost/routingservice/router/rounding/calculator".  
+ El tercer filtro es un <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter>. Esto coincide con cualquier mensaje que se presentara en un punto de conexión con una dirección que coincida con el prefijo de dirección (o la parte delantera) proporcionado. En este ejemplo se define el prefijo de dirección como "http://localhost/routingservice/router/rounding/". Esto significa que los mensajes entrantes que se dirigen al "http://localhost/routingservice/router/rounding/*" coincide con este filtro. En este caso, es un mensaje que se muestran en el extremo de calculadora de redondeo, que tiene la dirección "http://localhost/routingservice/router/rounding/calculator".  
   
 ```  
 PrefixEndpointAddressMessageFilter prefixAddressFilter = new PrefixEndpointAddressMessageFilter(new EndpointAddress("http://localhost/routingservice/router/rounding/"));  
@@ -91,7 +93,7 @@ RoundRobinMessageFilter roundRobinFilter2 = new RoundRobinMessageFilter("group1"
   
 2.  Para abrir **el Explorador de soluciones**, seleccione **el Explorador de soluciones** desde el **vista** menú.  
   
-3.  Presione F5 o CTRL+MAYÚS+B en [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)].  
+3.  Presione F5 o CTRL + MAYÚS + B en Visual Studio.  
   
     1.  Si desea iniciar de forma automática los proyectos necesarios al presionar F5, haga clic en la solución y seleccione **propiedades**. Seleccione el **proyecto de inicio** nodo bajo **propiedades comunes** en el panel izquierdo. Seleccione el **proyectos de inicio múltiples** botón de radio y establecer todos los proyectos que tienen el **iniciar** acción.  
   
