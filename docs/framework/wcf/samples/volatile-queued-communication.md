@@ -1,54 +1,56 @@
 ---
-title: "Comunicación en cola volátil"
-ms.custom: 
+title: Comunicación en cola volátil
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 0d012f64-51c7-41d0-8e18-c756f658ee3d
-caps.latest.revision: "28"
+caps.latest.revision: 28
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d7af5e29faf000fe3fe86463cb4eca9dc1e5c567
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 01dc48d7df85051449c92f4e91e5d1e58d6ddb91
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
-# <a name="volatile-queued-communication"></a><span data-ttu-id="995fa-102">Comunicación en cola volátil</span><span class="sxs-lookup"><span data-stu-id="995fa-102">Volatile Queued Communication</span></span>
-<span data-ttu-id="995fa-103">Este ejemplo muestra cómo realizar la comunicación en cola volátil sobre el transporte de Message Queuing (MSMQ).</span><span class="sxs-lookup"><span data-stu-id="995fa-103">This sample demonstrates how to perform volatile queued communication over the Message Queuing (MSMQ) transport.</span></span> <span data-ttu-id="995fa-104">Este ejemplo utiliza <xref:System.ServiceModel.NetMsmqBinding>.</span><span class="sxs-lookup"><span data-stu-id="995fa-104">This sample uses <xref:System.ServiceModel.NetMsmqBinding>.</span></span> <span data-ttu-id="995fa-105">El servicio en este caso es una aplicación de consola hospedada a sí misma que le permite observar el servicio que recibe los mensajes en cola.</span><span class="sxs-lookup"><span data-stu-id="995fa-105">The service in this case is a self-hosted console application to enable you to observe the service receiving queued messages.</span></span>  
+# <a name="volatile-queued-communication"></a><span data-ttu-id="989d0-102">Comunicación en cola volátil</span><span class="sxs-lookup"><span data-stu-id="989d0-102">Volatile Queued Communication</span></span>
+<span data-ttu-id="989d0-103">Este ejemplo muestra cómo realizar la comunicación en cola volátil sobre el transporte de Message Queuing (MSMQ).</span><span class="sxs-lookup"><span data-stu-id="989d0-103">This sample demonstrates how to perform volatile queued communication over the Message Queuing (MSMQ) transport.</span></span> <span data-ttu-id="989d0-104">Este ejemplo utiliza <xref:System.ServiceModel.NetMsmqBinding>.</span><span class="sxs-lookup"><span data-stu-id="989d0-104">This sample uses <xref:System.ServiceModel.NetMsmqBinding>.</span></span> <span data-ttu-id="989d0-105">El servicio en este caso es una aplicación de consola hospedada a sí misma que le permite observar el servicio que recibe los mensajes en cola.</span><span class="sxs-lookup"><span data-stu-id="989d0-105">The service in this case is a self-hosted console application to enable you to observe the service receiving queued messages.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="995fa-106">El procedimiento de instalación y las instrucciones de compilación de este ejemplo se encuentran al final de este tema.</span><span class="sxs-lookup"><span data-stu-id="995fa-106">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
+>  <span data-ttu-id="989d0-106">El procedimiento de instalación y las instrucciones de compilación de este ejemplo se encuentran al final de este tema.</span><span class="sxs-lookup"><span data-stu-id="989d0-106">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
   
- <span data-ttu-id="995fa-107">En la comunicación con colas, el cliente se comunica con el servicio mediante una cola.</span><span class="sxs-lookup"><span data-stu-id="995fa-107">In queued communication, the client communicates to the service using a queue.</span></span> <span data-ttu-id="995fa-108">Más exactamente, el cliente envía los mensajes a una cola.</span><span class="sxs-lookup"><span data-stu-id="995fa-108">More precisely, the client sends messages to a queue.</span></span> <span data-ttu-id="995fa-109">El servicio recibe los mensajes de la cola.</span><span class="sxs-lookup"><span data-stu-id="995fa-109">The service receives messages from the queue.</span></span> <span data-ttu-id="995fa-110">El servicio y el cliente no necesitan ejecutarse simultáneamente para comunicarse mediante una cola.</span><span class="sxs-lookup"><span data-stu-id="995fa-110">The service and client therefore, do not have to be running at the same time to communicate using a queue.</span></span>  
+ <span data-ttu-id="989d0-107">En la comunicación con colas, el cliente se comunica con el servicio mediante una cola.</span><span class="sxs-lookup"><span data-stu-id="989d0-107">In queued communication, the client communicates to the service using a queue.</span></span> <span data-ttu-id="989d0-108">Más exactamente, el cliente envía los mensajes a una cola.</span><span class="sxs-lookup"><span data-stu-id="989d0-108">More precisely, the client sends messages to a queue.</span></span> <span data-ttu-id="989d0-109">El servicio recibe los mensajes de la cola.</span><span class="sxs-lookup"><span data-stu-id="989d0-109">The service receives messages from the queue.</span></span> <span data-ttu-id="989d0-110">El servicio y el cliente no necesitan ejecutarse simultáneamente para comunicarse mediante una cola.</span><span class="sxs-lookup"><span data-stu-id="989d0-110">The service and client therefore, do not have to be running at the same time to communicate using a queue.</span></span>  
   
- <span data-ttu-id="995fa-111">Al enviar un mensaje sin garantías, MSMQ solo realiza un esfuerzo para entregar el mensaje, a diferencia de las garantías de tipo "exactamente una vez" donde MSMQ garantiza que se entrega el mensaje o, si no se puede, le informa de que el mensaje no puede entregarse.</span><span class="sxs-lookup"><span data-stu-id="995fa-111">When you send a message with no assurances, MSMQ only makes a best effort to deliver the message, unlike with Exactly Once assurances where MSMQ ensures that the message gets delivered or, if it cannot be delivered, lets you know that the message cannot be delivered.</span></span>  
+ <span data-ttu-id="989d0-111">Al enviar un mensaje sin garantías, MSMQ solo realiza un esfuerzo para entregar el mensaje, a diferencia de las garantías de tipo "exactamente una vez" donde MSMQ garantiza que se entrega el mensaje o, si no se puede, le informa de que el mensaje no puede entregarse.</span><span class="sxs-lookup"><span data-stu-id="989d0-111">When you send a message with no assurances, MSMQ only makes a best effort to deliver the message, unlike with Exactly Once assurances where MSMQ ensures that the message gets delivered or, if it cannot be delivered, lets you know that the message cannot be delivered.</span></span>  
   
- <span data-ttu-id="995fa-112">En ciertos escenarios, puede desear enviar un mensaje volátil sin garantías sobre una cola, cuando una entrega a tiempo es más importante que perder los mensajes.</span><span class="sxs-lookup"><span data-stu-id="995fa-112">In certain scenarios, you may want to send a volatile message with no assurances over a queue, when timely delivery is more important than losing messages.</span></span> <span data-ttu-id="995fa-113">Los mensajes volátiles no sobreviven a los bloqueos del administrador de la cola.</span><span class="sxs-lookup"><span data-stu-id="995fa-113">Volatile messages do not survive queue manager crashes.</span></span> <span data-ttu-id="995fa-114">Por consiguiente, si el administrador de cola se bloquea, la cola no transaccional utilizada para almacenar los mensajes volátiles sobrevive pero los mensajes no porque no están almacenados en el disco.</span><span class="sxs-lookup"><span data-stu-id="995fa-114">Therefore if the queue manager crashes, the non-transactional queue used to store volatile messages survives but the messages themselves do not because the messages are not stored on the disk.</span></span>  
+ <span data-ttu-id="989d0-112">En ciertos escenarios, puede desear enviar un mensaje volátil sin garantías sobre una cola, cuando una entrega a tiempo es más importante que perder los mensajes.</span><span class="sxs-lookup"><span data-stu-id="989d0-112">In certain scenarios, you may want to send a volatile message with no assurances over a queue, when timely delivery is more important than losing messages.</span></span> <span data-ttu-id="989d0-113">Los mensajes volátiles no sobreviven a los bloqueos del administrador de la cola.</span><span class="sxs-lookup"><span data-stu-id="989d0-113">Volatile messages do not survive queue manager crashes.</span></span> <span data-ttu-id="989d0-114">Por consiguiente, si el administrador de cola se bloquea, la cola no transaccional utilizada para almacenar los mensajes volátiles sobrevive pero los mensajes no porque no están almacenados en el disco.</span><span class="sxs-lookup"><span data-stu-id="989d0-114">Therefore if the queue manager crashes, the non-transactional queue used to store volatile messages survives but the messages themselves do not because the messages are not stored on the disk.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="995fa-115">No puede enviar mensajes volátiles sin garantías dentro del ámbito de una transacción utilizando MSMQ.</span><span class="sxs-lookup"><span data-stu-id="995fa-115">You cannot send volatile messages with no assurances within the scope of a transaction using MSMQ.</span></span> <span data-ttu-id="995fa-116">También debe crear una cola no transaccional para enviar mensajes volátiles.</span><span class="sxs-lookup"><span data-stu-id="995fa-116">You also must create a non-transactional queue to send volatile messages.</span></span>  
+>  <span data-ttu-id="989d0-115">No puede enviar mensajes volátiles sin garantías dentro del ámbito de una transacción utilizando MSMQ.</span><span class="sxs-lookup"><span data-stu-id="989d0-115">You cannot send volatile messages with no assurances within the scope of a transaction using MSMQ.</span></span> <span data-ttu-id="989d0-116">También debe crear una cola no transaccional para enviar mensajes volátiles.</span><span class="sxs-lookup"><span data-stu-id="989d0-116">You also must create a non-transactional queue to send volatile messages.</span></span>  
   
- <span data-ttu-id="995fa-117">El contrato de servicios en este ejemplo es `IStockTicker` que define servicios unidireccionales que se adaptan mejor a su uso con la cola.</span><span class="sxs-lookup"><span data-stu-id="995fa-117">The service contract in this sample is `IStockTicker` that defines one-way services that are best suited for use with queuing.</span></span>  
-  
-```  
+ <span data-ttu-id="989d0-117">El contrato de servicios en este ejemplo es `IStockTicker` que define servicios unidireccionales que se adaptan mejor a su uso con la cola.</span><span class="sxs-lookup"><span data-stu-id="989d0-117">The service contract in this sample is `IStockTicker` that defines one-way services that are best suited for use with queuing.</span></span>  
+
+```csharp
 [ServiceContract(Namespace = "http://Microsoft.ServiceModel.Samples")]  
 public interface IStockTicker  
 {  
     [OperationContract(IsOneWay = true)]  
     void StockTick(string symbol, float price);  
 }  
-```  
+```
+
+ <span data-ttu-id="989d0-118">La operación de servicio muestra el símbolo y precios del tablero de cotizaciones, tal y como se muestra en el código de ejemplo siguiente:</span><span class="sxs-lookup"><span data-stu-id="989d0-118">The service operation displays the stock ticker symbol and price, as shown in the following sample code:</span></span>  
   
- <span data-ttu-id="995fa-118">La operación de servicio muestra el símbolo y precios del tablero de cotizaciones, tal y como se muestra en el código de ejemplo siguiente:</span><span class="sxs-lookup"><span data-stu-id="995fa-118">The service operation displays the stock ticker symbol and price, as shown in the following sample code:</span></span>  
-  
-```  
+```csharp
 public class StockTickerService : IStockTicker  
 {  
     public void StockTick(string symbol, float price)  
@@ -59,9 +61,9 @@ public class StockTickerService : IStockTicker
 }  
 ```  
   
- <span data-ttu-id="995fa-119">El servicio se hospeda en sí mismo.</span><span class="sxs-lookup"><span data-stu-id="995fa-119">The service is self hosted.</span></span> <span data-ttu-id="995fa-120">Al utilizar el transporte de MSMQ, se debe crear la cola utilizada de antemano.</span><span class="sxs-lookup"><span data-stu-id="995fa-120">When using the MSMQ transport, the queue used must be created in advance.</span></span> <span data-ttu-id="995fa-121">Esto se puede hacer manualmente o a través de código.</span><span class="sxs-lookup"><span data-stu-id="995fa-121">This can be done manually or through code.</span></span> <span data-ttu-id="995fa-122">En este ejemplo, el servicio contiene el código para comprobar la existencia de la cola y crearla si fuera necesario.</span><span class="sxs-lookup"><span data-stu-id="995fa-122">In this sample, the service contains code to check for the existence of the queue and create it if required.</span></span> <span data-ttu-id="995fa-123">El nombre de la cola se lee del archivo de configuración.</span><span class="sxs-lookup"><span data-stu-id="995fa-123">The queue name is read from the configuration file.</span></span> <span data-ttu-id="995fa-124">La dirección base es utilizada por la [la herramienta de utilidad de metadatos de ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) para generar el proxy para el servicio.</span><span class="sxs-lookup"><span data-stu-id="995fa-124">The base address is used by the [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) to generate the proxy for the service.</span></span>  
-  
-```  
+ <span data-ttu-id="989d0-119">El servicio se hospeda en sí mismo.</span><span class="sxs-lookup"><span data-stu-id="989d0-119">The service is self hosted.</span></span> <span data-ttu-id="989d0-120">Al utilizar el transporte de MSMQ, se debe crear la cola utilizada de antemano.</span><span class="sxs-lookup"><span data-stu-id="989d0-120">When using the MSMQ transport, the queue used must be created in advance.</span></span> <span data-ttu-id="989d0-121">Esto se puede hacer manualmente o a través de código.</span><span class="sxs-lookup"><span data-stu-id="989d0-121">This can be done manually or through code.</span></span> <span data-ttu-id="989d0-122">En este ejemplo, el servicio contiene el código para comprobar la existencia de la cola y crearla si fuera necesario.</span><span class="sxs-lookup"><span data-stu-id="989d0-122">In this sample, the service contains code to check for the existence of the queue and create it if required.</span></span> <span data-ttu-id="989d0-123">El nombre de la cola se lee del archivo de configuración.</span><span class="sxs-lookup"><span data-stu-id="989d0-123">The queue name is read from the configuration file.</span></span> <span data-ttu-id="989d0-124">La dirección base es utilizada por la [la herramienta de utilidad de metadatos de ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) para generar el proxy para el servicio.</span><span class="sxs-lookup"><span data-stu-id="989d0-124">The base address is used by the [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) to generate the proxy for the service.</span></span>  
+
+```csharp
 // Host the service within this EXE console application.  
 public static void Main()  
 {  
@@ -88,14 +90,14 @@ public static void Main()
         serviceHost.Close();  
     }  
 }  
-```  
-  
- <span data-ttu-id="995fa-125">El nombre de cola de MSMQ se especifica en la sección appSettings del archivo de configuración.</span><span class="sxs-lookup"><span data-stu-id="995fa-125">The MSMQ queue name is specified in the appSettings section of the configuration file.</span></span> <span data-ttu-id="995fa-126">El extremo para el servicio se define en la sección system.ServiceModel del archivo de configuración y especifica el enlace `netMsmqBinding`.</span><span class="sxs-lookup"><span data-stu-id="995fa-126">The endpoint for the service is defined in the system.serviceModel section of the configuration file and specifies the `netMsmqBinding` binding.</span></span>  
+```
+
+ <span data-ttu-id="989d0-125">El nombre de cola de MSMQ se especifica en la sección appSettings del archivo de configuración.</span><span class="sxs-lookup"><span data-stu-id="989d0-125">The MSMQ queue name is specified in the appSettings section of the configuration file.</span></span> <span data-ttu-id="989d0-126">El extremo para el servicio se define en la sección system.ServiceModel del archivo de configuración y especifica el enlace `netMsmqBinding`.</span><span class="sxs-lookup"><span data-stu-id="989d0-126">The endpoint for the service is defined in the system.serviceModel section of the configuration file and specifies the `netMsmqBinding` binding.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="995fa-127">El nombre de la cola usa un punto (.) para el equipo local y separadores con barra diagonal inversa en su ruta de acceso al crear una cola mediante <xref:System.Messaging>.</span><span class="sxs-lookup"><span data-stu-id="995fa-127">The queue name uses a dot (.) for the local machine and backslash separators in its path when creating a queue using <xref:System.Messaging>.</span></span> <span data-ttu-id="995fa-128">La dirección de extremo de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] especifica un esquema net.msmq:, utiliza "localhost" para el equipo local y utiliza barras diagonales en su ruta de acceso.</span><span class="sxs-lookup"><span data-stu-id="995fa-128">The [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] endpoint address specifies a net.msmq: scheme, uses "localhost" for the local machine and forward slashes in its path.</span></span>  
+>  <span data-ttu-id="989d0-127">El nombre de la cola usa un punto (.) para el equipo local y separadores con barra diagonal inversa en su ruta de acceso al crear una cola mediante <xref:System.Messaging>.</span><span class="sxs-lookup"><span data-stu-id="989d0-127">The queue name uses a dot (.) for the local machine and backslash separators in its path when creating a queue using <xref:System.Messaging>.</span></span> <span data-ttu-id="989d0-128">La dirección de extremo de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] especifica un esquema net.msmq:, utiliza "localhost" para el equipo local y utiliza barras diagonales en su ruta de acceso.</span><span class="sxs-lookup"><span data-stu-id="989d0-128">The [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] endpoint address specifies a net.msmq: scheme, uses "localhost" for the local machine and forward slashes in its path.</span></span>  
   
- <span data-ttu-id="995fa-129">Las garantías y duración o la volatilidad de los mensajes también se especifican en la configuración.</span><span class="sxs-lookup"><span data-stu-id="995fa-129">The assurances and durability or volatility of messages are also specified in the configuration.</span></span>  
+ <span data-ttu-id="989d0-129">Las garantías y duración o la volatilidad de los mensajes también se especifican en la configuración.</span><span class="sxs-lookup"><span data-stu-id="989d0-129">The assurances and durability or volatility of messages are also specified in the configuration.</span></span>  
   
 ```xml  
 <appSettings>  
@@ -114,7 +116,7 @@ public static void Main()
                 bindingConfiguration="volatileBinding"   
                 contract="Microsoft.ServiceModel.Samples.IStockTicker" />  
     ...  
-          </service>  
+    </service>  
   </services>  
   
   <bindings>  
@@ -128,9 +130,9 @@ public static void Main()
 </system.serviceModel>  
 ```  
   
- <span data-ttu-id="995fa-130">Dado que el ejemplo envía los mensajes en cola utilizando una cola no transaccional, los mensajes con transacciones no se pueden enviar a la cola.</span><span class="sxs-lookup"><span data-stu-id="995fa-130">Because the sample sends queued messages by using a non-transactional queue, transacted messages cannot be sent to the queue.</span></span>  
-  
-```  
+ <span data-ttu-id="989d0-130">Dado que el ejemplo envía los mensajes en cola utilizando una cola no transaccional, los mensajes con transacciones no se pueden enviar a la cola.</span><span class="sxs-lookup"><span data-stu-id="989d0-130">Because the sample sends queued messages by using a non-transactional queue, transacted messages cannot be sent to the queue.</span></span>  
+
+```csharp
 // Create a client.  
 Random r = new Random(137);  
   
@@ -145,9 +147,9 @@ for (int i = 0; i < 10; i++)
   
 //Closing the client gracefully cleans up resources.  
 client.Close();  
-```  
-  
- <span data-ttu-id="995fa-131">Al ejecutar el ejemplo, las actividades del servicio y del cliente se muestran en las ventanas de la consola del cliente y del servicio.</span><span class="sxs-lookup"><span data-stu-id="995fa-131">When you run the sample, the client and service activities are displayed in both the service and client console windows.</span></span> <span data-ttu-id="995fa-132">Puede ver los mensajes recibidos por el servicio desde el cliente.</span><span class="sxs-lookup"><span data-stu-id="995fa-132">You can see the service receive messages from the client.</span></span> <span data-ttu-id="995fa-133">Presione Entrar en cada ventana de la consola para cerrar el servicio y el cliente.</span><span class="sxs-lookup"><span data-stu-id="995fa-133">Press ENTER in each console window to shut down the service and client.</span></span> <span data-ttu-id="995fa-134">Observe que debido a que se está usando el proceso de poner en cola, el cliente y el servicio no tienen que estar activados y ejecutándose simultáneamente.</span><span class="sxs-lookup"><span data-stu-id="995fa-134">Note that because queuing is in use, the client and service do not have to be up and running at the same time.</span></span> <span data-ttu-id="995fa-135">Puede ejecutar el cliente, cerrarlo e iniciar el servicio y seguir recibiendo mensajes.</span><span class="sxs-lookup"><span data-stu-id="995fa-135">You can run the client, shut it down, and then start up the service and it still receives its messages.</span></span>  
+```
+
+ <span data-ttu-id="989d0-131">Al ejecutar el ejemplo, las actividades del servicio y del cliente se muestran en las ventanas de la consola del cliente y del servicio.</span><span class="sxs-lookup"><span data-stu-id="989d0-131">When you run the sample, the client and service activities are displayed in both the service and client console windows.</span></span> <span data-ttu-id="989d0-132">Puede ver los mensajes recibidos por el servicio desde el cliente.</span><span class="sxs-lookup"><span data-stu-id="989d0-132">You can see the service receive messages from the client.</span></span> <span data-ttu-id="989d0-133">Presione Entrar en cada ventana de la consola para cerrar el servicio y el cliente.</span><span class="sxs-lookup"><span data-stu-id="989d0-133">Press ENTER in each console window to shut down the service and client.</span></span> <span data-ttu-id="989d0-134">Observe que debido a que se está usando el proceso de poner en cola, el cliente y el servicio no tienen que estar activados y ejecutándose simultáneamente.</span><span class="sxs-lookup"><span data-stu-id="989d0-134">Note that because queuing is in use, the client and service do not have to be up and running at the same time.</span></span> <span data-ttu-id="989d0-135">Puede ejecutar el cliente, cerrarlo e iniciar el servicio y seguir recibiendo mensajes.</span><span class="sxs-lookup"><span data-stu-id="989d0-135">You can run the client, shut it down, and then start up the service and it still receives its messages.</span></span>  
   
 ```  
 The service is ready.  
@@ -165,19 +167,19 @@ Stock Tick zzz8:43.32
 Stock Tick zzz9:43.3  
 ```  
   
-### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="995fa-136">Configurar, compilar y ejecutar el ejemplo</span><span class="sxs-lookup"><span data-stu-id="995fa-136">To set up, build, and run the sample</span></span>  
+### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="989d0-136">Configurar, compilar y ejecutar el ejemplo</span><span class="sxs-lookup"><span data-stu-id="989d0-136">To set up, build, and run the sample</span></span>  
   
-1.  <span data-ttu-id="995fa-137">Asegúrese de que ha llevado a cabo la [procedimiento de instalación de un solo uso para los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span><span class="sxs-lookup"><span data-stu-id="995fa-137">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
+1.  <span data-ttu-id="989d0-137">Asegúrese de que ha llevado a cabo la [procedimiento de instalación de un solo uso para los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span><span class="sxs-lookup"><span data-stu-id="989d0-137">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
   
-2.  <span data-ttu-id="995fa-138">Para compilar el código C# o Visual Basic .NET Edition de la solución, siga las instrucciones de [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="995fa-138">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
+2.  <span data-ttu-id="989d0-138">Para compilar el código C# o Visual Basic .NET Edition de la solución, siga las instrucciones de [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="989d0-138">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
   
-3.  <span data-ttu-id="995fa-139">Para ejecutar el ejemplo en una configuración de equipo único o de varios, siga las instrucciones de [ejecutando los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="995fa-139">To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
+3.  <span data-ttu-id="989d0-139">Para ejecutar el ejemplo en una configuración de equipo único o de varios, siga las instrucciones de [ejecutando los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="989d0-139">To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
   
- <span data-ttu-id="995fa-140">De forma predeterminada con <xref:System.ServiceModel.NetMsmqBinding>, la seguridad de transporte está habilitada.</span><span class="sxs-lookup"><span data-stu-id="995fa-140">By default with the <xref:System.ServiceModel.NetMsmqBinding>, transport security is enabled.</span></span> <span data-ttu-id="995fa-141">Hay dos propiedades pertinentes para la seguridad de transporte MSMQ, <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A> y <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A> `.` de forma predeterminada, el modo de autenticación se establece en `Windows` y el nivel de protección se establece en `Sign`.</span><span class="sxs-lookup"><span data-stu-id="995fa-141">There are two pertinent properties for MSMQ transport security, <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A> and <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A>`.` By default, the authentication mode is set to `Windows` and the protection level is set to `Sign`.</span></span> <span data-ttu-id="995fa-142">Para que MSMQ proporcione la autenticación y la característica de firma, debe formar parte de un dominio y debe instalarse la opción de integración de directorio activo para MSMQ.</span><span class="sxs-lookup"><span data-stu-id="995fa-142">For MSMQ to provide the authentication and signing feature, it must be part of a domain and the active directory integration option for MSMQ must be installed.</span></span> <span data-ttu-id="995fa-143">Si ejecuta este ejemplo en un equipo que no cumple estos criterios, recibirá un error.</span><span class="sxs-lookup"><span data-stu-id="995fa-143">If you run this sample on a computer that does not satisfy these criteria you receive an error.</span></span>  
+ <span data-ttu-id="989d0-140">De forma predeterminada con <xref:System.ServiceModel.NetMsmqBinding>, la seguridad de transporte está habilitada.</span><span class="sxs-lookup"><span data-stu-id="989d0-140">By default with the <xref:System.ServiceModel.NetMsmqBinding>, transport security is enabled.</span></span> <span data-ttu-id="989d0-141">Hay dos propiedades pertinentes para la seguridad de transporte MSMQ, <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A> y <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A> `.` de forma predeterminada, el modo de autenticación se establece en `Windows` y el nivel de protección se establece en `Sign`.</span><span class="sxs-lookup"><span data-stu-id="989d0-141">There are two pertinent properties for MSMQ transport security, <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A> and <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A>`.` By default, the authentication mode is set to `Windows` and the protection level is set to `Sign`.</span></span> <span data-ttu-id="989d0-142">Para que MSMQ proporcione la autenticación y la característica de firma, debe formar parte de un dominio y debe instalarse la opción de integración de directorio activo para MSMQ.</span><span class="sxs-lookup"><span data-stu-id="989d0-142">For MSMQ to provide the authentication and signing feature, it must be part of a domain and the active directory integration option for MSMQ must be installed.</span></span> <span data-ttu-id="989d0-143">Si ejecuta este ejemplo en un equipo que no cumple estos criterios, recibirá un error.</span><span class="sxs-lookup"><span data-stu-id="989d0-143">If you run this sample on a computer that does not satisfy these criteria you receive an error.</span></span>  
   
-### <a name="to-run-the-sample-on-a-computer-joined-to-a-workgroup-or-without-active-directory-integration"></a><span data-ttu-id="995fa-144">Para ejecutar el ejemplo en un equipo unido a un grupo de trabajo o sin integración con Active Directory</span><span class="sxs-lookup"><span data-stu-id="995fa-144">To run the sample on a computer joined to a workgroup or without active directory integration</span></span>  
+### <a name="to-run-the-sample-on-a-computer-joined-to-a-workgroup-or-without-active-directory-integration"></a><span data-ttu-id="989d0-144">Para ejecutar el ejemplo en un equipo unido a un grupo de trabajo o sin integración con Active Directory</span><span class="sxs-lookup"><span data-stu-id="989d0-144">To run the sample on a computer joined to a workgroup or without active directory integration</span></span>  
   
-1.  <span data-ttu-id="995fa-145">Si su equipo no es parte de un dominio o no tiene la integración del directorio activo instalada, desactive la seguridad de transporte estableciendo el modo de autenticación y el nivel de protección en `None`, tal y como se muestra en el código de configuración de ejemplo siguiente:</span><span class="sxs-lookup"><span data-stu-id="995fa-145">If your computer is not part of a domain or does not have active directory integration installed, turn off transport security by setting the authentication mode and protection level to `None` as shown in the following sample configuration code:</span></span>  
+1.  <span data-ttu-id="989d0-145">Si su equipo no es parte de un dominio o no tiene la integración del directorio activo instalada, desactive la seguridad de transporte estableciendo el modo de autenticación y el nivel de protección en `None`, tal y como se muestra en el código de configuración de ejemplo siguiente:</span><span class="sxs-lookup"><span data-stu-id="989d0-145">If your computer is not part of a domain or does not have active directory integration installed, turn off transport security by setting the authentication mode and protection level to `None` as shown in the following sample configuration code:</span></span>  
   
     ```xml  
     <system.serviceModel>  
@@ -224,18 +226,18 @@ Stock Tick zzz9:43.3
       </system.serviceModel>  
     ```  
   
-2.  <span data-ttu-id="995fa-146">Asegúrese de que cambia la configuración en el servidor y el cliente antes de ejecutar el ejemplo.</span><span class="sxs-lookup"><span data-stu-id="995fa-146">Ensure that you change the configuration on both the server and the client before you run the sample.</span></span>  
+2.  <span data-ttu-id="989d0-146">Asegúrese de que cambia la configuración en el servidor y el cliente antes de ejecutar el ejemplo.</span><span class="sxs-lookup"><span data-stu-id="989d0-146">Ensure that you change the configuration on both the server and the client before you run the sample.</span></span>  
   
     > [!NOTE]
-    >  <span data-ttu-id="995fa-147">Establecer `security mode` en `None` es equivalente a definir la seguridad de <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A>, <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A> y `Message` en `None`.</span><span class="sxs-lookup"><span data-stu-id="995fa-147">Setting `security mode` to `None` is equivalent to setting <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A>, <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A>, and `Message` security to `None`.</span></span>  
+    >  <span data-ttu-id="989d0-147">Establecer `security mode` en `None` es equivalente a definir la seguridad de <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A>, <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A> y `Message` en `None`.</span><span class="sxs-lookup"><span data-stu-id="989d0-147">Setting `security mode` to `None` is equivalent to setting <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A>, <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A>, and `Message` security to `None`.</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="995fa-148">Puede que los ejemplos ya estén instalados en su equipo.</span><span class="sxs-lookup"><span data-stu-id="995fa-148">The samples may already be installed on your computer.</span></span> <span data-ttu-id="995fa-149">Compruebe el siguiente directorio (predeterminado) antes de continuar.</span><span class="sxs-lookup"><span data-stu-id="995fa-149">Check for the following (default) directory before continuing.</span></span>  
+>  <span data-ttu-id="989d0-148">Puede que los ejemplos ya estén instalados en su equipo.</span><span class="sxs-lookup"><span data-stu-id="989d0-148">The samples may already be installed on your computer.</span></span> <span data-ttu-id="989d0-149">Compruebe el siguiente directorio (predeterminado) antes de continuar.</span><span class="sxs-lookup"><span data-stu-id="989d0-149">Check for the following (default) directory before continuing.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  <span data-ttu-id="995fa-150">Si no existe este directorio, vaya a la página [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) [Ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4] para descargar todos los ejemplos de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="995fa-150">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="995fa-151">Este ejemplo se encuentra en el siguiente directorio.</span><span class="sxs-lookup"><span data-stu-id="995fa-151">This sample is located in the following directory.</span></span>  
+>  <span data-ttu-id="989d0-150">Si no existe este directorio, vaya a la página [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) [Ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4] para descargar todos los ejemplos de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="989d0-150">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="989d0-151">Este ejemplo se encuentra en el siguiente directorio.</span><span class="sxs-lookup"><span data-stu-id="989d0-151">This sample is located in the following directory.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\Volatile`  
   
-## <a name="see-also"></a><span data-ttu-id="995fa-152">Vea también</span><span class="sxs-lookup"><span data-stu-id="995fa-152">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="989d0-152">Vea también</span><span class="sxs-lookup"><span data-stu-id="989d0-152">See Also</span></span>
