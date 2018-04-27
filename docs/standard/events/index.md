@@ -23,16 +23,16 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 49355c4271efc37a40c025c0f8275ec42e13723e
-ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
+ms.openlocfilehash: ca56291e31526a6295c4a44f930e294d71b72488
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="handling-and-raising-events"></a>Controlar y provocar eventos
 Los eventos de .NET Framework se basan en un modelo de delegado. El modelo de delegado sigue el patrón de diseño del observador, que permite que un suscriptor se registre con un proveedor y reciba notificaciones de dicho proveedor. El emisor de un evento inserta una notificación de que se ha producido un evento, y un receptor de eventos recibe la notificación y define una respuesta a la misma. En este artículo se describen los componentes principales del modelo de delegado, cómo consumir eventos en las aplicaciones y cómo implementar eventos en el código.  
   
- Para información sobre el control de eventos en las aplicaciones de la [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)], vea [Introducción a eventos y eventos enrutados (aplicaciones de la Tienda Windows)](http://go.microsoft.com/fwlink/p/?LinkId=261485).  
+ Para obtener información sobre el control de eventos en las aplicaciones de la Tienda de Windows 8.x, vea [Introducción a eventos y eventos enrutados](/previous-versions/windows/apps/hh758286(v=win.10)).  
   
 ## <a name="events"></a>Eventos  
  Un evento es un mensaje que envía un objeto cuando ocurre una acción. La acción podría ser debida a la interacción del usuario, como hacer clic en un botón, o podría proceder de cualquier otra lógica del programa, como el cambio del valor de una propiedad. El objeto que provoca el evento se conoce como *emisor del evento*. El emisor del evento no sabe qué objeto o método recibirá (controlará) los eventos que genera. El evento normalmente es un miembro del emisor del evento; por ejemplo, el evento <xref:System.Web.UI.WebControls.Button.Click> es un miembro de la clase <xref:System.Web.UI.WebControls.Button>, y el evento <xref:System.ComponentModel.INotifyPropertyChanged.PropertyChanged> es un miembro de la clase que implementa la interfaz <xref:System.ComponentModel.INotifyPropertyChanged>.  

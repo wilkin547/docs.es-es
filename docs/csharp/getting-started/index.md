@@ -12,11 +12,11 @@ ms.topic: article
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
-ms.openlocfilehash: f335ee1412932043b175aa49b29ecd360d447eb9
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: 630815032925e5dac0477147c6265657face44a5
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="get-started-with-c"></a>Introducción a C# #
 
@@ -48,7 +48,7 @@ Los siguientes temas se encuentran disponibles:
 
 * [Usar el entorno de desarrollo de Visual C#](/visualstudio/csharp-ide/using-the-visual-studio-development-environment-for-csharp)  
 
-    Proporciona una guía para utilizar el entorno de desarrollo integrado de [!INCLUDE[csprcs](~/includes/csprcs-md.md)].
+    Proporciona una guía para utilizar el entorno de desarrollo integrado de Visual C#.
 
 * [Guía de programación de C#](../../csharp/programming-guide/index.md)
 

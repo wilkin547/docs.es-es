@@ -9,11 +9,11 @@ ms.topic: conceptual
 ms.prod: .net
 ms.devlang: devlang-csharp
 ms.custom: mvc
-ms.openlocfilehash: c627903743f8867e05bac9ce835659fc7270b94e
-ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
+ms.openlocfilehash: aad6b06748b02e2ea3003ca339d8a5a0b15583f8
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="the-net-compiler-platform-sdk"></a>SDK de .NET Compiler Platform
 
@@ -67,8 +67,8 @@ El SDK de .NET Compiler Platform incluye los modelos de objetos de idioma más r
 
 Puede obtener más información sobre los conceptos del SDK de .NET Compiler Platform en estos cuatro temas:
 
- - [Explore code with the syntax visualizer](syntax-visualizer.md) (Exploración de código con el visualizador de sintaxis)
- - [Descripción del modelo del SDK de .NET Compiler Platform](compiler-api-model.md)
+ - [Exploración de código con el visualizador de sintaxis](syntax-visualizer.md)
+ - [Entender el modelo de API de compilador](compiler-api-model.md)
  - [Trabajar con sintaxis](work-with-syntax.md)
  - [Trabajar con semántica](work-with-semantics.md)
  - [Trabajar con un área de trabajo](work-with-workspace.md)

@@ -12,11 +12,11 @@ ms.assetid: 6685467b-28fa-4cde-9516-f0e00ad08911
 caps.latest.revision: 36
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: e53ba3e1134b09edcc87a0421b7699bcf3bb1d39
-ms.sourcegitcommit: d95a91d685565f4d95c8773b558752864a6a3d7e
+ms.openlocfilehash: 58e63d95c2f10329f85d6150b58f196294de38d1
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="get-started-with-visual-basic"></a>Introducción a Visual Basic
 Esta sección de la documentación sirve como introducción al desarrollo de aplicaciones con Visual Basic.  
@@ -40,7 +40,7 @@ Proporciona una lista de sitios Web y grupos de noticias que le ayudarán a enco
 
 ## <a name="develop-net-core-applications-with-visual-basic"></a>Desarrollo de aplicaciones de .NET Core con Visual Basic
 
-[Build a Visual Basic Hello World app with .NET Core in Visual Studio 2017](../../core/tutorials/vb-with-visual-studio.md) (Compilación de una aplicación Hola mundo de Visual Basic con .NET Core en Visual Studio 2017) 
+[Compilación de una aplicación Hola mundo de Visual Basic con .NET Core en Visual Studio 2017](../../core/tutorials/vb-with-visual-studio.md) 
 
 [Creación de una biblioteca de clases con Visual Basic y .NET Core en Visual Studio 2017](../../core/tutorials/vb-library-with-visual-studio.md) 
 
@@ -55,10 +55,10 @@ Proporciona una lista de sitios Web y grupos de noticias que le ayudarán a enco
  Proporciona vínculos a páginas que presentan la programación orientada a objetos y describen cómo crear sus propios objetos y cómo utilizar objetos para simplificar la escritura del código.  
   
  [Ejemplos](../../visual-basic/sample-applications.md)  
- Proporciona vínculos al código de ejemplo de [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+ Proporciona vínculos al código de ejemplo de Visual Basic.  
   
  [Tutoriales](../../visual-basic/walkthroughs.md)  
- Proporciona una lista de páginas de Ayuda donde se explican aspectos del lenguaje [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+ Proporciona una lista de páginas de Ayuda donde se explican aspectos del lenguaje Visual Basic.  
   
  [Hable con nosotros](/visualstudio/ide/talk-to-us)  
  Explica cómo recibir asistencia y proporcionar información al servicio técnico.  
@@ -66,7 +66,7 @@ Proporciona una lista de sitios Web y grupos de noticias que le ayudarán a enco
  [Visual Studio](/visualstudio/)  
  Proporciona vínculos a la documentación de [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)].  
   
- [C#](../../csharp/index.md) Proporciona los vínculos a la documentación sobre desarrollo de aplicaciones con [!INCLUDE[csprcs](~/includes/csprcs-md.md)].  
+ [C#](../../csharp/index.md) Proporciona los vínculos a la documentación sobre desarrollo de aplicaciones con Visual C#.  
   
  [Visual C++](/cpp/)  
  Proporciona vínculos a la documentación de Visual C++.  

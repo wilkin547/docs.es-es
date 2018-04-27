@@ -9,11 +9,11 @@ ms.assetid: 9bcf896a-5826-4189-8c1a-3e35fa08243a
 caps.latest.revision: 5
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: c9f2699646db17c9358f84f4c5407e7aab8b60cf
-ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
+ms.openlocfilehash: 70dd5606ba81619658eda24f8c4bfd4970d29308
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="asynchronous-programming-with-async-and-await-c"></a>Programación asincrónica con Async y Await (C#)
 Puede evitar cuellos de botella de rendimiento y mejorar la capacidad de respuesta total de la aplicación mediante la programación asincrónica. Sin embargo, las técnicas tradicionales para escribir aplicaciones asincrónicas pueden resultar complicadas, haciéndolas difícil de escribir, depurar y mantener.  
@@ -98,7 +98,7 @@ Las siguientes características resumen lo que hace que el ejemplo anterior sea 
   
     -   `void` si está escribiendo un controlador de eventos asincrónicos.  
 
-    -   Cualquier otro tipo que tenga un método `GetAwaiter` (a partir de C# 7).
+    -   Cualquier otro tipo que tenga un método `GetAwaiter` (a partir de C# 7.0).
   
      Para obtener más información, consulte la sección [Tipos de valor devuelto y parámetros](#BKMK_ReturnTypesandParameters).  
   
@@ -179,7 +179,7 @@ Puede especificar <xref:System.Threading.Tasks.Task%601> como tipo de valor devu
   
 Puede usar <xref:System.Threading.Tasks.Task> como tipo de valor devuelto si el método no tiene instrucción return o si tiene una instrucción return que no devuelve un operando.  
 
-A partir de C# 7, también puede especificar cualquier otro tipo de valor devuelto, siempre que dicho tipo incluya un método `GetAwaiter`. Un ejemplo de este tipo es <xref:System.Threading.Tasks.ValueTask%601>. Está disponible en el paquete NuGet [System.Threading.Tasks.Extension](https://www.nuget.org/packages/System.Threading.Tasks.Extensions/).
+A partir de C# 7.0, también puede especificar cualquier otro tipo de valor devuelto, siempre que dicho tipo incluya un método `GetAwaiter`. Un ejemplo de este tipo es <xref:System.Threading.Tasks.ValueTask%601>. Está disponible en el paquete NuGet [System.Threading.Tasks.Extension](https://www.nuget.org/packages/System.Threading.Tasks.Extensions/).
   
  En el ejemplo siguiente se muestra cómo declarar y llamar a un método que devuelve <xref:System.Threading.Tasks.Task%601> o <xref:System.Threading.Tasks.Task>.  
   

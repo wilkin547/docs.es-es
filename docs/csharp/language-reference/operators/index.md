@@ -25,11 +25,11 @@ ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
 caps.latest.revision: 40
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: c62a168c845575e4fd3df212db379548926d2fab
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: a52fad2755c8c255d9489cd7148b0d279c0e1a5e
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="c-operators"></a>operadores de C#
 C# proporciona muchos operadores, que son símbolos que especifican las operaciones (matemáticas, indización, llamada de función, etc.) que se realizan en una expresión. Puede [sobrecargar](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md) muchos operadores para cambiar su significado al aplicarlos a un tipo definido por el usuario.  
@@ -63,7 +63,7 @@ C# proporciona muchos operadores, que son símbolos que especifican las operacio
   
  [unchecked](../../../csharp/language-reference/keywords/unchecked.md): deshabilita la comprobación de desbordamiento para operaciones con enteros. Este es el comportamiento predeterminado del compilador.  
   
- [default(T)](../../../csharp/programming-guide/statements-expressions-operators/default-value-expressions.md): devuelve el valor predeterminado de tipo T: `null` para tipos de referencia, cero para tipos numéricos y cero o `null` en miembros para tipos de estructura.  
+ [default(T)](../../../csharp/programming-guide/statements-expressions-operators/default-value-expressions.md) genera el valor predeterminado del tipo T.  
   
  [delegate](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md): declara y devuelve una instancia de delegado.  
   
