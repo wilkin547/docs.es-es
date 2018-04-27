@@ -1,24 +1,26 @@
 ---
 title: Demux personalizado
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: fc54065c-518e-4146-b24a-0fe00038bfa7
-caps.latest.revision: "41"
+caps.latest.revision: 41
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 540469571f06f9c2ab38f9754a40aae5a3c3b267
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 45184c2d884347baef4090ed496e22e77aab5423
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="custom-demux"></a>Demux personalizado
 Este ejemplo muestra cómo se pueden asignar los encabezados del mensaje MSMQ para diferentes operaciones de servicio para que [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] servicios que utilizan <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> no están limitados a utilizar una operación de servicio como se muestra en el [Message Queue Server Windows Communication Foundation](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md) y [Windows Communication Foundation a Message Queue Server](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md) ejemplos.  
@@ -26,8 +28,8 @@ Este ejemplo muestra cómo se pueden asignar los encabezados del mensaje MSMQ pa
  El servicio de este ejemplo es una aplicación de consola autohospedada que permite observar el servicio que recibe los mensajes en cola.  
   
  El contrato de servicio es `IOrderProcessor`, y define un servicio unidireccional que es adecuado para usarse con colas.  
-  
-```  
+
+```csharp
 [ServiceContract]  
 [KnownType(typeof(PurchaseOrder))]  
 [KnownType(typeof(String))]  
@@ -39,11 +41,11 @@ public interface IOrderProcessor
     [OperationContract(IsOneWay = true, Name = "CancelPurchaseOrder")]  
     void CancelPurchaseOrder(MsmqMessage<string> ponumber);  
 }  
-```  
-  
+```
+
  Un mensaje de MSMQ no tiene un encabezado Acción. No es posible asignar automáticamente los mensajes de MSMQ diferentes a los contratos de operación. Además, solo puede haber un contrato de operación. Para superar esta limitación, el servicio implementa el método <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector.SelectOperation%2A> de la interfaz <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector>. El método <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector.SelectOperation%2A> permite al servicio asignar un encabezado determinado del mensaje a una operación del servicio determinada. En este ejemplo, el encabezado de etiqueta del mensaje está asignado a las operaciones del servicio. El parámetro `Name` del contrato de operación determina qué operación del servicio se debe enviar para una etiqueta del mensaje determinada. Por ejemplo, si el encabezado de etiqueta del mensaje contiene "SubmitPurchaseOrder", se invoca la operación de servicio de "SubmitPurchaseOrder."  
-  
-```  
+
+```csharp
 public class OperationSelector : IDispatchOperationSelector  
 {  
     public string SelectOperation(ref System.ServiceModel.Channels.Message message)  
@@ -52,29 +54,29 @@ public class OperationSelector : IDispatchOperationSelector
         return property.Label;  
     }  
 }  
-```  
-  
+```
+
  El servicio debe implementar el método <xref:System.ServiceModel.Description.IContractBehavior.ApplyDispatchBehavior%28System.ServiceModel.Description.ContractDescription%2CSystem.ServiceModel.Description.ServiceEndpoint%2CSystem.ServiceModel.Dispatcher.DispatchRuntime%29> de la interfaz <xref:System.ServiceModel.Description.IContractBehavior> como se muestra en el código muestra siguiente. Esto aplica el `OperationSelector` personalizado a la expedición del marco de trabajo del servicio en tiempo de ejecución.  
-  
-```  
+
+```csharp
 void IContractBehavior.ApplyDispatchBehavior(ContractDescription description, ServiceEndpoint endpoint, DispatchRuntime dispatch)  
 {  
     dispatch.OperationSelector = new OperationSelector();  
 }  
-```  
-  
+```
+
  Un mensaje debe atravesar <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.ContractFilter%2A> del distribuidor antes de llegar al OperationSelector. De forma predeterminada se rechaza un mensaje si su acción no se puede buscar en cualquier contrato implementado por el servicio. Para evitar esta comprobación, implementamos un <xref:System.ServiceModel.Description.IEndpointBehavior> denominado `MatchAllFilterBehavior`, que permite a cualquier mensaje atravesar `ContractFilter` aplicando el <xref:System.ServiceModel.Dispatcher.MatchAllMessageFilter> como sigue.  
-  
-```  
+
+```csharp
 public void ApplyDispatchBehavior(ServiceEndpoint serviceEndpoint, EndpointDispatcher endpointDispatcher)  
 {  
     endpointDispatcher.ContractFilter = new MatchAllMessageFilter();  
 }  
-```  
+```
   
  Cuando el servicio recibe un mensaje, la operación del servicio adecuada se envía utilizando la información proporcionada por el encabezado de etiqueta. El cuerpo del mensaje se deserializa en un objeto `PurchaseOrder`, como se muestra en el código muestra siguiente.  
-  
-```  
+
+```csharp
 [OperationBehavior(TransactionScopeRequired = true, TransactionAutoComplete = true)]  
 public void SubmitPurchaseOrder(MsmqMessage<PurchaseOrder> msg)  
 {  
@@ -83,11 +85,11 @@ public void SubmitPurchaseOrder(MsmqMessage<PurchaseOrder> msg)
     po.Status = (OrderStates)statusIndexer.Next(3);  
     Console.WriteLine("Processing {0} ", po);  
 }  
-```  
-  
+```
+
  El servicio es autohospedado. Al utilizar el MSMQ, se debe crear la cola que se utiliza de antemano. Esto se puede hacer manualmente o a través de código. En este ejemplo, el servicio contiene el código para comprobar la existencia de la cola y crearla si no existe. El nombre de la cola se lee del archivo de configuración.  
-  
-```  
+
+```csharp
 public static void Main()  
 {  
     // Get MSMQ queue name from app settings in configuration  
@@ -115,8 +117,8 @@ public static void Main()
         serviceHost.Close();  
     }  
 }  
-```  
-  
+```
+
  El nombre de cola de MSMQ se especifica en una sección appSettings del archivo de configuración.  
   
 > [!NOTE]

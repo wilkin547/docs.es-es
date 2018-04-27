@@ -1,29 +1,30 @@
 ---
-title: "Cómo crear un participante de seguimiento personalizado"
-ms.custom: 
+title: Cómo crear un participante de seguimiento personalizado
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 1b612c7e-2381-4a7c-b07a-77030415f2a3
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 345fd696559ba52d41874ff774bd46a2d37f6e6f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: d53035c2fb41800a91d3cdea134ae811a09fa3e9
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="how-to-create-a-custom-tracking-participant"></a>Cómo crear un participante de seguimiento personalizado
-El seguimiento de flujo de trabajo proporciona visibilidad del estado de la ejecución del flujo de trabajo. El runtime de flujo de trabajo emite registros de seguimiento que describen los eventos de ciclo de vida de flujo de trabajo, los eventos de ciclo de vida de actividad, los errores y la reanudación de marcadores. Los participantes de seguimiento usan estos registros de seguimiento. [!INCLUDE[wf](../../../includes/wf-md.md)] incluye un participante de seguimiento estándar que escribe los registros de seguimiento como eventos de Seguimiento de eventos para Windows (ETW). Si eso no cumple sus requisitos, también puede escribir un participante de seguimiento personalizado. Este paso del tutorial describe cómo crear un participante y un perfil de seguimiento personalizados que capturen la salida de las actividades `WriteLine` para poder mostrarla al usuario.  
+El seguimiento de flujo de trabajo proporciona visibilidad del estado de la ejecución del flujo de trabajo. El runtime de flujo de trabajo emite registros de seguimiento que describen los eventos de ciclo de vida de flujo de trabajo, los eventos de ciclo de vida de actividad, los errores y la reanudación de marcadores. Los participantes de seguimiento usan estos registros de seguimiento. Windows Workflow Foundation (WF) incluye a un participante de seguimiento estándar que escribe los registros de seguimiento como eventos de seguimiento de eventos para Windows (ETW). Si eso no cumple sus requisitos, también puede escribir un participante de seguimiento personalizado. Este paso del tutorial describe cómo crear un participante y un perfil de seguimiento personalizados que capturen la salida de las actividades `WriteLine` para poder mostrarla al usuario.  
   
 > [!NOTE]
 >  Cada uno de los temas del tutorial de introducción depende de los temas anteriores. Para completar este tema, primero debe finalizar los temas anteriores. Para descargar una versión completada o ver un tutorial en vídeo del tutorial, vea [Windows Workflow Foundation (WF45) - Tutorial de introducción](http://go.microsoft.com/fwlink/?LinkID=248976).  
@@ -38,7 +39,7 @@ El seguimiento de flujo de trabajo proporciona visibilidad del estado de la ejec
   
 -   [Para compilar y ejecutar la aplicación](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-tracking-participant.md#BKMK_BuildAndRun)  
   
-###  <a name="BKMK_CustomTrackingParticipant"></a>Para crear al participante de seguimiento personalizado  
+###  <a name="BKMK_CustomTrackingParticipant"></a> Para crear al participante de seguimiento personalizado  
   
 1.  Haga clic en **NumberGuessWorkflowHost** en **el Explorador de soluciones** y elija **agregar**, **clase**. Tipo de `StatusTrackingParticipant` en el **nombre** cuadro y haga clic en **agregar**.  
   
@@ -114,7 +115,7 @@ El seguimiento de flujo de trabajo proporciona visibilidad del estado de la ejec
   
      Cuando no se especifica ningún perfil de seguimiento, se usa el perfil de seguimiento predeterminado. Cuando se usa el perfil de seguimiento predeterminado, los registros de seguimiento se emiten para todos `ActivityStates`. Dado que solo debemos capturar el texto una vez durante el ciclo de vida de la actividad `WriteLine` , solo extraemos el texto del estado `ActivityStates.Executing` . En [para crear el perfil de seguimiento y registrar el participante de seguimiento](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-tracking-participant.md#BKMK_TrackingProfile), se crea un perfil de seguimiento que especifica que solo `WriteLine` `ActivityStates.Executing` se emiten registros de seguimiento.  
   
-###  <a name="BKMK_TrackingProfile"></a>Para crear el perfil de seguimiento y registrar al participante de seguimiento  
+###  <a name="BKMK_TrackingProfile"></a> Para crear el perfil de seguimiento y registrar al participante de seguimiento  
   
 1.  Haga clic en **WorkflowHostForm** en **el Explorador de soluciones** y elija **ver código**.  
   
@@ -235,7 +236,7 @@ El seguimiento de flujo de trabajo proporciona visibilidad del estado de la ejec
         // Workflow lifecycle handlers...  
     ```  
   
-###  <a name="BKMK_DisplayTracking"></a>Para mostrar la información de seguimiento  
+###  <a name="BKMK_DisplayTracking"></a> Para mostrar la información de seguimiento  
   
 1.  Haga clic en **WorkflowHostForm** en **el Explorador de soluciones** y elija **ver código**.  
   
@@ -330,7 +331,7 @@ El seguimiento de flujo de trabajo proporciona visibilidad del estado de la ejec
     }  
     ```  
   
-###  <a name="BKMK_BuildAndRun"></a>Para compilar y ejecutar la aplicación  
+###  <a name="BKMK_BuildAndRun"></a> Para compilar y ejecutar la aplicación  
   
 1.  Presione Ctrl+Mayús+B para compilar la aplicación.  
   

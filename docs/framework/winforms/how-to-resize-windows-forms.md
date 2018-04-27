@@ -1,12 +1,13 @@
 ---
-title: "Cómo: Cambiar el tamaño de los formularios Windows Forms"
-ms.custom: 
+title: 'Cómo: Cambiar el tamaño de los formularios Windows Forms'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,19 +17,20 @@ helpviewer_keywords:
 - resizing Windows Forms
 - Windows Forms, resizing
 ms.assetid: 5d9dd47e-e68c-48c9-a0a3-a9ff34ba009d
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: cc2e9f81094d16030dbe4595a8132569edab782a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 22f1c829257f8cd23379de54063ae88802908fe0
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="how-to-resize-windows-forms"></a>Cómo: Cambiar el tamaño de los formularios Windows Forms
-Puede especificar el tamaño de su Windows Form de varias maneras. Puede cambiar el alto y el ancho del formulario mediante programación estableciendo un nuevo valor para la propiedad <xref:System.Windows.Forms.Form.Size%2A>, o ajustar las propiedades <xref:System.Windows.Forms.Control.Height%2A> o <xref:System.Windows.Forms.Control.Width%2A> individualmente. Si usa [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], puede cambiar el tamaño mediante el Diseñador de Windows Forms. Consulte también [Cómo: cambiar el tamaño de Windows Forms mediante el diseñador](http://msdn.microsoft.com/library/37k2zkwx\(v=vs.110\)).  
+Puede especificar el tamaño de su Windows Form de varias maneras. Puede cambiar el alto y el ancho del formulario mediante programación estableciendo un nuevo valor para la propiedad <xref:System.Windows.Forms.Form.Size%2A>, o ajustar las propiedades <xref:System.Windows.Forms.Control.Height%2A> o <xref:System.Windows.Forms.Control.Width%2A> individualmente. Si se utiliza Visual Studio, puede cambiar el tamaño mediante el Diseñador de Windows Forms. Consulte también [Cómo: cambiar el tamaño de Windows Forms mediante el diseñador](http://msdn.microsoft.com/library/37k2zkwx\(v=vs.110\)).  
   
 ### <a name="to-resize-a-form-programmatically"></a>Para cambiar el tamaño de un formulario mediante programación  
   

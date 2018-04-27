@@ -1,24 +1,26 @@
 ---
 title: Uso del moniker de WCF con clientes COM
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: e2799bfe-88bd-49d7-9d6d-ac16a9b16b04
-caps.latest.revision: "34"
+caps.latest.revision: 34
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 18633ab7c7d54b4feafc22f6b598acc564084f4a
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 322467510d499040c07d6e5e84842542aa325737
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="using-the-wcf-moniker-with-com-clients"></a>Uso del moniker de WCF con clientes COM
 Este ejemplo muestra cómo utilizar el moniker de servicio de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] para integrar los servicios Web en entornos de desarrollo basados en COM, como Microsoft Office Visual Basic para Aplicaciones (Office VBA) o Visual Basic 6.0. El ejemplo está compuesto por un cliente de Windows Script Host (.vbs), una biblioteca de cliente auxiliar (.dll) y una biblioteca de servicios (.dll) hospedados en Internet Information Services (IIS). El servicio es un servicio de calculadora y el cliente COM llama operaciones matemáticas: Sumar, Restar, Multiplicar y Dividir, en el servicio. La actividad Client está visible en las ventanas de cuadro de mensaje.  
@@ -199,7 +201,7 @@ WScript.Echo "MEX service moniker: 9 * 81.25 = " & mexServiceMoniker.Multiply(9,
   
 2.  Para compilar el código C# o Visual Basic .NET Edition de la solución, siga las instrucciones de [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  Desde un símbolo del sistema de [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)], abra la carpeta \client\bin\, en la carpeta específica del lenguaje.  
+3.  Desde un símbolo del sistema de Visual Studio, abra la carpeta \client\bin\, bajo la carpeta específica del lenguaje.  
   
     > [!NOTE]
     >  Si usa [!INCLUDE[wv](../../../../includes/wv-md.md)], [!INCLUDE[lserver](../../../../includes/lserver-md.md)], Windows 7 o Windows Server 2008 R2, asegúrese de que ejecuta el símbolo del sistema con privilegios de administrador.  

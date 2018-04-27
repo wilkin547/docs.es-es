@@ -1,36 +1,38 @@
 ---
-title: "Información general de LINQ to DataSet"
-ms.custom: 
+title: Información general de LINQ to DataSet
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: dc20a8fb-03f6-4b68-9c2b-7f7299e3070b
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 0295ff475367b0867ff0a5b0dd85f7a686e343bc
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 3e030ca62625e2b8870cf0eeb5694f4b889b3a7e
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="linq-to-dataset-overview"></a>Información general de LINQ to DataSet
 <xref:System.Data.DataSet> es uno de los componentes más ampliamente utilizados de [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]. Es un elemento fundamental del modelo de programación desconectado en el que se basa [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] y permite almacenar explícitamente en caché datos de diferentes orígenes de datos. Para el nivel de presentación, <xref:System.Data.DataSet> está estrechamente integrado en los controles de GUI para el enlace de datos. Para el nivel medio, proporciona una caché que conserva la forma relacional de los datos e incluye servicios de exploración de jerarquías y consultas rápidos y sencillos. Una técnica común que se usa para reducir el número de solicitudes en una base de datos es usar el <xref:System.Data.DataSet> para almacenar en caché en el nivel intermedio. Por ejemplo, considere un orientadas a datos [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] aplicación Web. A menudo una parte importante de los datos de aplicación no cambia frecuentemente y es común entre sesiones o usuarios. Estos datos se pueden conservar en memoria o en un servidor web, lo que reduce el número de solicitudes en la base de datos y acelera las interacciones del usuario. Otro aspecto útil de los <xref:System.Data.DataSet> es que permite a una aplicación lleve subconjuntos de datos de origen de datos de uno o más en el espacio de la aplicación. La aplicación puede manipular los datos en memoria mientras retiene su forma relacional.  
   
  A pesar de su importancia, <xref:System.Data.DataSet> tiene capacidades de consulta limitadas. El método <xref:System.Data.DataTable.Select%2A> se puede usar para filtrar y ordenar y los métodos <xref:System.Data.DataRow.GetChildRows%2A> y <xref:System.Data.DataRow.GetParentRow%2A> se pueden usar para la exploración de jerarquías. Sin embargo, para cualquier tarea más compleja, el programador debe escribir una consulta personalizada. Esto puede tener como resultado aplicaciones con un bajo rendimiento y con un mantenimiento difícil.  
   
- [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] facilita y acelera las consultas en datos almacenados en caché en un objeto <xref:System.Data.DataSet>. Esas consultas se expresan en el lenguaje de programación mismo, en lugar de como literales de cadena incrustados en el código de la aplicación. Esto significa que los desarrolladores no tienen que aprender un lenguaje de consultas diferente. Además, [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] permite [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] a los programadores trabajar de forma más productiva, ya que la [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] IDE proporciona comprobación de sintaxis en tiempo de compilación, tipos estáticos y compatibilidad con IntelliSense para [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]. [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] también se puede usar para consultar los datos que se han consolidado de uno o más orígenes de datos. Esto permite muchos casos que requieren flexibilidad en la forma de representar y controlar los datos. En concreto, las aplicaciones de inteligencia empresaria, análisis e informes genéricos requieren este método de manipulación.  
+ [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] facilita y acelera las consultas en datos almacenados en caché en un objeto <xref:System.Data.DataSet>. Esas consultas se expresan en el lenguaje de programación mismo, en lugar de como literales de cadena incrustados en el código de la aplicación. Esto significa que los desarrolladores no tienen que aprender un lenguaje de consultas diferente. Además, [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] permite a los desarrolladores de Visual Studio trabajar de forma más productiva, ya que el IDE de Visual Studio proporciona comprobación de sintaxis en tiempo de compilación, tipos estáticos y compatibilidad con IntelliSense para [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]. [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] también se puede usar para consultar los datos que se han consolidado de uno o más orígenes de datos. Esto permite muchos casos que requieren flexibilidad en la forma de representar y controlar los datos. En concreto, las aplicaciones de inteligencia empresaria, análisis e informes genéricos requieren este método de manipulación.  
   
 ## <a name="querying-datasets-using-linq-to-dataset"></a>Consultar conjuntos de datos usando LINQ to DataSet  
- Antes de poder empezar a consultar un objeto <xref:System.Data.DataSet> usando [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)], se debe rellenar el <xref:System.Data.DataSet>. Hay varias maneras de cargar datos en un <xref:System.Data.DataSet>, como el uso de la <xref:System.Data.Common.DataAdapter> clase o [LINQ to SQL](../../../../docs/framework/data/adonet/sql/linq/index.md). Después de que se han cargado los datos en un <xref:System.Data.DataSet> de objeto, puede empezar a realizar consultas sobre él. Formulación de consultas usando [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] es similar al uso [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] contra otros [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]-orígenes de datos habilitados. [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]pueden realizar consultas en tablas únicas en un <xref:System.Data.DataSet> o en más de una tabla mediante el uso de la <xref:System.Linq.Enumerable.Join%2A> y <xref:System.Linq.Enumerable.GroupJoin%2A> operadores de consulta estándar.  
+ Antes de poder empezar a consultar un objeto <xref:System.Data.DataSet> usando [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)], se debe rellenar el <xref:System.Data.DataSet>. Hay varias maneras de cargar datos en un <xref:System.Data.DataSet>, como el uso de la <xref:System.Data.Common.DataAdapter> clase o [LINQ to SQL](../../../../docs/framework/data/adonet/sql/linq/index.md). Después de que se han cargado los datos en un <xref:System.Data.DataSet> de objeto, puede empezar a realizar consultas sobre él. Formulación de consultas usando [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] es similar al uso [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] contra otros [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]-orígenes de datos habilitados. [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] pueden realizar consultas en tablas únicas en un <xref:System.Data.DataSet> o en más de una tabla mediante el uso de la <xref:System.Linq.Enumerable.Join%2A> y <xref:System.Linq.Enumerable.GroupJoin%2A> operadores de consulta estándar.  
   
- [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]se admiten las consultas con tipo y sin tipo <xref:System.Data.DataSet> objetos. Si el esquema de <xref:System.Data.DataSet> es desconocido en tiempo de diseño, se recomienda un <xref:System.Data.DataSet> con tipo. En un <xref:System.Data.DataSet> con tipo, las tablas y las filas tienen miembros con tipo para cada una de las columnas, lo que hace que las consultas sean más sencillas y legibles.  
+ [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] se admiten las consultas con tipo y sin tipo <xref:System.Data.DataSet> objetos. Si el esquema de <xref:System.Data.DataSet> es desconocido en tiempo de diseño, se recomienda un <xref:System.Data.DataSet> con tipo. En un <xref:System.Data.DataSet> con tipo, las tablas y las filas tienen miembros con tipo para cada una de las columnas, lo que hace que las consultas sean más sencillas y legibles.  
   
  Además de los operadores de consulta estándar implementados en System.Core.dll, [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] agrega varias <xref:System.Data.DataSet>-extensiones específicas que facilitan la consulta sobre un conjunto de <xref:System.Data.DataRow> objetos. Estas extensiones específicas de <xref:System.Data.DataSet> incluyen operadores para comparar secuencias de filas, así como métodos que proporcionan acceso a los valores de columna de un <xref:System.Data.DataRow>.  
   

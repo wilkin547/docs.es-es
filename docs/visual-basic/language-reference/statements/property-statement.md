@@ -2,9 +2,10 @@
 title: Property Statement
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vb.PropertySet
@@ -16,21 +17,21 @@ helpviewer_keywords:
 - property procedures [Visual Basic], Property statements
 - Property keyword [Visual Basic]
 ms.assetid: 3155edaf-8ebd-45c6-9cef-11d5d2dc8d38
-caps.latest.revision: "41"
+caps.latest.revision: 41
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: af4666ecb059f141480be2295055644537819293
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 558b62dd8c676532355ef12134ad8cb803b70796
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="property-statement"></a>Property Statement
 Declara el nombre de una propiedad y los procedimientos de propiedad que se utiliza para almacenar y recuperar el valor de la propiedad.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```vb  
 [ <attributelist> ] [ Default ] [ accessmodifier ]   
 [ propertymodifiers ] [ Shared ] [ Shadows ] [ ReadOnly | WriteOnly ] [ Iterator ]  
 Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslist ]  
@@ -113,7 +114,7 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
   
 -   `name`  
   
-     Obligatorio. Nombre de la propiedad. Vea [nombres de elementos declarados](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).  
+     Requerido. Nombre de la propiedad. Vea [nombres de elementos declarados](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).  
   
 -   `parameterlist`  
   
@@ -139,8 +140,8 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
   
     |Parte|Descripción|  
     |---|---|  
-    |`interface`|Obligatorio. Nombre de una interfaz implementada por esta propiedad contenedora de clase o estructura.|  
-    |`definedname`|Obligatorio. Nombre por el que se define la propiedad en `interface`.|  
+    |`interface`|Requerido. Nombre de una interfaz implementada por esta propiedad contenedora de clase o estructura.|  
+    |`definedname`|Requerido. Nombre por el que se define la propiedad en `interface`.|  
   
 -   `Get`  
   

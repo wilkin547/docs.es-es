@@ -24,16 +24,16 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 7ab44faf9e95a2ff5f1957bd6f46fc62944a4f44
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: e8b2d67f38f9533e60575b45df011f50e7ec091d
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="how-to-create-a-professionally-styled-toolstrip-control"></a>Cómo: Crear un control ToolStrip de estilo profesional
 Puede dar a los controles <xref:System.Windows.Forms.ToolStrip> de la aplicación un aspecto y comportamiento profesional escribiendo su propia clase derivada del tipo <xref:System.Windows.Forms.ToolStripProfessionalRenderer>.  
   
- Hay una amplia compatibilidad para esta característica en [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)].  
+ Hay una amplia compatibilidad para esta característica en Visual Studio.  
   
  Vea [Tutorial: Crear un control ToolStrip de estilo profesional](../../../../docs/framework/winforms/controls/walkthrough-creating-a-professionally-styled-toolstrip-control.md).  
   
@@ -48,7 +48,7 @@ Puede dar a los controles <xref:System.Windows.Forms.ToolStrip> de la aplicació
   
 -   Referencias a los ensamblados System.Drawing y System.Windows.Forms.  
   
- Para obtener información acerca de cómo compilar este ejemplo desde la línea de comandos de Visual Basic o Visual C#, vea [compilar desde la línea de comandos](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) o [Command-Line Building With csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). También puede compilar este ejemplo en [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] pegando el código en un nuevo proyecto.  Vea también [Tutorial: Crear un control ToolStrip de estilo profesional](http://msdn.microsoft.com/library/ms233664\(v=vs.110\)).  
+ Para obtener información acerca de cómo compilar este ejemplo desde la línea de comandos de Visual Basic o Visual C#, vea [compilar desde la línea de comandos](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) o [Command-Line Building With csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). También puede compilar este ejemplo en Visual Studio pegando el código en un nuevo proyecto.  Vea también [Tutorial: Crear un control ToolStrip de estilo profesional](http://msdn.microsoft.com/library/ms233664\(v=vs.110\)).  
   
 ## <a name="see-also"></a>Vea también  
  <xref:System.Windows.Forms.MenuStrip>  

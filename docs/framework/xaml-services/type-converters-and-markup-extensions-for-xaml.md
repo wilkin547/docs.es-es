@@ -1,12 +1,13 @@
 ---
 title: Convertidores de tipos y extensiones de marcado para XAML
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - XAML [XAML Services], type converter services
@@ -15,16 +16,17 @@ helpviewer_keywords:
 - value converters for XAML [XAML Services]
 - XAML [XAML Services], service context
 ms.assetid: db07a952-05ce-4aa4-b6f9-aac7397d0326
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 946049cea6c9148d600cb50e6d49a4cc686c6d2d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 6425685083c3b73d75d2d7c8a4509ae035542085
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="type-converters-and-markup-extensions-for-xaml"></a>Convertidores de tipos y extensiones de marcado para XAML
 Los convertidores de tipos y extensiones de marcado son dos técnicas que los sistemas de tipos XAML y escritores de XAML utilizan para generar componentes de gráfico de objeto. Aunque comparten algunas características, los convertidores de tipos y las extensiones de marcado se representan de forma diferente en una secuencia de nodo XAML. En este conjunto de documentación, en ocasiones nos referimos colectivamente a los convertidores de tipos, las extensiones de marcado y construcciones similares como convertidores de valores.  
@@ -56,7 +58,7 @@ Los convertidores de tipos y extensiones de marcado son dos técnicas que los si
  Para más información sobre el patrón de implementación de extensión de marcado para XAML, vea [Markup Extensions for XAML Overview](../../../docs/framework/xaml-services/markup-extensions-for-xaml-overview.md).  
   
 > [!NOTE]
->  Los tipos <xref:System.Windows.Markup.MarkupExtension> y <xref:System.Windows.Markup.ValueSerializer> están en el espacio de nombres <xref:System.Windows.Markup> y no en el espacio de nombres <xref:System.Xaml> . Esto no implica que estos tipos sean específicos para WPF o para tecnologías [!INCLUDE[TLA2#tla_winforms](../../../includes/tla2sharptla-winforms-md.md)] que rellenan por otra parte los espacios de nombres CLR que contienen la cadena `Windows`. <xref:System.Windows.Markup.MarkupExtension> y <xref:System.Windows.Markup.ValueSerializer> están en el ensamblado System.Xaml y no tienen ninguna dependencia del marco concreto. Estos tipos existían en el espacio de nombres CLR para [!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)] y permanecen en el espacio de nombres CLR en [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] para evitar interrumpir las referencias en los proyectos WPF existentes. Para obtener más información, consulta [Types Migrated from WPF to System.Xaml](../../../docs/framework/xaml-services/types-migrated-from-wpf-to-system-xaml.md).  
+>  Los tipos <xref:System.Windows.Markup.MarkupExtension> y <xref:System.Windows.Markup.ValueSerializer> están en el espacio de nombres <xref:System.Windows.Markup> y no en el espacio de nombres <xref:System.Xaml> . Esto no implica que estos tipos sean específicos para las tecnologías de Windows Forms o WPF que rellenan por otra parte los espacios de nombres CLR que contienen la cadena `Windows`. <xref:System.Windows.Markup.MarkupExtension> y <xref:System.Windows.Markup.ValueSerializer> están en el ensamblado System.Xaml y no tienen ninguna dependencia del marco concreto. Estos tipos existían en el espacio de nombres CLR para [!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)] y permanecen en el espacio de nombres CLR en [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] para evitar interrumpir las referencias en los proyectos WPF existentes. Para obtener más información, consulta [Types Migrated from WPF to System.Xaml](../../../docs/framework/xaml-services/types-migrated-from-wpf-to-system-xaml.md).  
   
 <a name="value_serializers"></a>   
 ## <a name="value-serializers"></a>Serializadores de valor  

@@ -17,11 +17,11 @@ ms.assetid: f8e7263a-de13-48d1-b67c-ca1adf3544d9
 caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 10c6bdf46e351b23705107da3b693531718cfd37
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: b03b81c9e04e79f8ce7763ecf8a489d248ff480b
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="walkthrough-implementing-inheritance-with-com-objects-visual-basic"></a>Tutorial: Implementar la herencia mediante objetos COM (Visual Basic)
 Puede derivar clases de Visual Basic de `Public` clases de objetos COM, incluso los creados en versiones anteriores de Visual Basic. Las propiedades y métodos de las clases heredadas de objetos COM pueden reemplazar o sobrecargar al igual que las propiedades y métodos de cualquier otra clase base se pueden reemplazar o sobrecargar. Herencia de objetos COM resulta útil cuando tiene una biblioteca de clases existentes que no desea volver a compilar.  
@@ -81,7 +81,7 @@ Puede derivar clases de Visual Basic de `Public` clases de objetos COM, incluso 
     >  Aunque también puede exponer una clase creada con Visual Basic como un objeto COM, no es un objeto COM es true y no se puede usar en este tutorial. Para obtener más información, consulte [interoperabilidad COM en aplicaciones de .NET Framework](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md).  
   
 ## <a name="interop-assemblies"></a>Ensamblados de interoperabilidad  
- En el siguiente procedimiento, creará un ensamblado de interoperabilidad, que actúa como un puente entre el código administrado y el código no administrado (por ejemplo, un objeto COM) [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] utiliza. El ensamblado de interoperabilidad que crea Visual Basic controla muchos de los detalles sobre cómo trabajar con objetos COM, como *la serialización de interoperabilidad*, el proceso de empaquetado de parámetros y valores devueltos en datos equivalentes tipos tal y como se mueven a y de los objetos COM. La referencia de la aplicación Visual Basic apunta al ensamblado de interoperabilidad, no al objeto COM real.  
+ En el siguiente procedimiento, creará un ensamblado de interoperabilidad, que actúa como un puente entre el código no administrado (por ejemplo, un objeto COM) y el código administrado que utiliza Visual Studio. El ensamblado de interoperabilidad que crea Visual Basic controla muchos de los detalles sobre cómo trabajar con objetos COM, como *la serialización de interoperabilidad*, el proceso de empaquetado de parámetros y valores devueltos en datos equivalentes tipos tal y como se mueven a y de los objetos COM. La referencia de la aplicación Visual Basic apunta al ensamblado de interoperabilidad, no al objeto COM real.  
   
 #### <a name="to-use-a-com-object-with-visual-basic-2005-and-later-versions"></a>Para utilizar un objeto COM con Visual Basic 2005 y versiones posteriores  
   

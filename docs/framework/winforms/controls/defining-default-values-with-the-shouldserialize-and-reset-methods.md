@@ -1,12 +1,13 @@
 ---
-title: "Definir valores predeterminados con los métodos ShouldSerialize y Reset"
-ms.custom: 
+title: Definir valores predeterminados con los métodos ShouldSerialize y Reset
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,19 +16,20 @@ helpviewer_keywords:
 - custom controls [Windows Forms], property methods
 - ShouldPersist method
 ms.assetid: 7b6c5e00-3771-46b4-9142-5a80d5864a5e
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a654fef461d92c4b93db131e303bb07a1e839d34
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: a28cd84c88cd7434eaca3fdaa7b4406006c44dad
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="defining-default-values-with-the-shouldserialize-and-reset-methods"></a>Definir valores predeterminados con los métodos ShouldSerialize y Reset
-`ShouldSerialize`y `Reset` son métodos opcionales que se pueden proporcionar para una propiedad, si la propiedad no es un valor predeterminado simple. Si la propiedad tiene un valor predeterminado simple, debe aplicar el <xref:System.ComponentModel.DefaultValueAttribute> y proporcionar el valor predeterminado para el constructor de clase de atributo en su lugar. Cualquiera de estos mecanismos habilita las siguientes características en el diseñador:  
+`ShouldSerialize` y `Reset` son métodos opcionales que se pueden proporcionar para una propiedad, si la propiedad no es un valor predeterminado simple. Si la propiedad tiene un valor predeterminado simple, debe aplicar el <xref:System.ComponentModel.DefaultValueAttribute> y proporcionar el valor predeterminado para el constructor de clase de atributo en su lugar. Cualquiera de estos mecanismos habilita las siguientes características en el diseñador:  
   
 -   La propiedad proporciona una indicación visual en el Explorador de propiedades si se ha modificado el valor predeterminado.  
   
@@ -53,9 +55,9 @@ public void ResetMyFont() {
 ```  
   
 > [!NOTE]
->  Si una propiedad no tiene un `Reset` método, no se marca con un <xref:System.ComponentModel.DefaultValueAttribute>y no tiene un valor predeterminado proporcionado en su declaración, la `Reset` opción para esa propiedad está deshabilitada en el menú contextual de la **propiedades** ventana del Diseñador de Windows Forms en [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)].  
+>  Si una propiedad no tiene un `Reset` método, no se marca con un <xref:System.ComponentModel.DefaultValueAttribute>y no tiene un valor predeterminado proporcionado en su declaración, la `Reset` opción para esa propiedad está deshabilitada en el menú contextual de la **propiedades** ventana del Diseñador de Windows Forms en Visual Studio.  
   
- Los diseñadores como [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] usar la `ShouldSerialize` *PropertyName* se cambia el método para comprobar si una propiedad ha cambiado respecto de su valor predeterminado y escribir código en el solo si forma una propiedad, permitiendo así de más eficaz generación de código. Por ejemplo:  
+ Los diseñadores como Visual Studio utilizan el `ShouldSerialize` *PropertyName* se cambia el método para comprobar si una propiedad ha cambiado respecto de su valor predeterminado y escribir código en el solo si forma una propiedad, por lo que para un código más eficaz generación. Por ejemplo:  
   
 ```vb  
 'Returns true if the font has changed; otherwise, returns false.  

@@ -14,11 +14,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 2d7377d843e4ab8bd583e135dcdfd2cbfca67b8d
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 8fa5a9e4287bcbcb490754b84a8b5060d321f779
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="durable-delay-in-xamlx"></a>Retraso duradero en XAMLX
 En este ejemplo se muestra cómo utilizar un retraso duradero, que es un retraso que conserva el flujo de trabajo en un dispositivo duradero durante el tiempo que dura.  
@@ -37,7 +37,7 @@ En este ejemplo se muestra cómo utilizar un retraso duradero, que es un retraso
   
  El archivo .xamlx es un servicio de flujo de trabajo que se hospeda en Visual Studio. Visual Studio usa a Cassini que usa un servicio de flujo de trabajo de host para hospedar el flujo de trabajo.  
   
- Además de hospedar el flujo de trabajo, el host de servicio de flujo de trabajo administra las instancias de flujo de trabajo cargándolas y descargándolas. Para iniciar una instancia de la definición de [!INCLUDE[wf](../../../../includes/wf-md.md)] (en el host de servicio de flujo de trabajo), establezca un cliente que envíe un mensaje a la actividad <xref:System.ServiceModel.Activities.Receive> en el flujo de trabajo. <xref:System.ServiceModel.Activities.Receive> tiene su propiedad <xref:System.ServiceModel.Activities.Receive.CanCreateInstance%2A> establecida en `true`, lo que le permite crear una nueva instancia del flujo de trabajo después de recibir un mensaje.  
+ Además de hospedar el flujo de trabajo, el host de servicio de flujo de trabajo administra las instancias de flujo de trabajo cargándolas y descargándolas. Para iniciar una instancia de la definición de Windows Workflow Foundation (WF) (en el host de servicio de flujo de trabajo), establezca un cliente que envía un mensaje a la <xref:System.ServiceModel.Activities.Receive> actividad del flujo de trabajo. <xref:System.ServiceModel.Activities.Receive> tiene su propiedad <xref:System.ServiceModel.Activities.Receive.CanCreateInstance%2A> establecida en `true`, lo que le permite crear una nueva instancia del flujo de trabajo después de recibir un mensaje.  
   
  Durante la inicialización, se agrega un comportamiento de instancia de descarga al archivo de configuración que especifica al host de servicio de flujo de trabajo en el que debe descargarse una instancia al almacén de persistencia (base de datos). En este ejemplo, descarga la instancia de forma inmediata cuando el flujo de trabajo pasa a estado inactivo (cuando el retraso se activa).  
   

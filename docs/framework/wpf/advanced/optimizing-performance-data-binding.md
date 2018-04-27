@@ -1,27 +1,29 @@
 ---
 title: 'Optimizar el rendimiento: Enlace de datos'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - binding data [WPF], performance
 - data binding [WPF], performance
 ms.assetid: 1506a35d-c009-43db-9f1e-4e230ad5be73
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c420748a9361655eeb2df33ce8426d9f167d3414
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 4b21089ea3f3aef8a934c78187b30f2576b8d39b
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="optimizing-performance-data-binding"></a>Optimizar el rendimiento: Enlace de datos
 El enlace de datos de [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] proporciona una manera sencilla y coherente para que las aplicaciones presenten datos e interactúen con ellos. Los elementos se pueden enlazar a datos desde una variedad de orígenes de datos en forma de objetos [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] y [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)].  
@@ -34,7 +36,7 @@ El enlace de datos de [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharp
 ## <a name="how-data-binding-references-are-resolved"></a>Cómo se resuelven las referencias de enlace de datos  
  Antes de tratar los problemas de rendimiento del enlace de datos, vale la pena explorar cómo el motor de enlace de datos [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] resuelve las referencias de objeto para el enlace.  
   
- El origen de un enlace de datos [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] puede ser cualquier objeto [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]. Puede enlazar a propiedades, subpropiedades o indizadores de un objeto [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]. Las referencias de enlace se resuelven utilizando [!INCLUDE[TLA#tla_avalonwinfx](../../../../includes/tlasharptla-avalonwinfx-md.md)] reflexión o un <xref:System.ComponentModel.ICustomTypeDescriptor>. Estos son tres métodos para resolver las referencias de objeto para el enlace.  
+ El origen de un enlace de datos [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] puede ser cualquier objeto [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]. Puede enlazar a propiedades, subpropiedades o indizadores de un objeto [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]. Las referencias de enlace se resuelven utilizando cualquier reflexión de Microsoft .NET Framework o un <xref:System.ComponentModel.ICustomTypeDescriptor>. Estos son tres métodos para resolver las referencias de objeto para el enlace.  
   
  El primer método implica el uso de reflexión. En este caso, el <xref:System.Reflection.PropertyInfo> objeto se usa para detectar los atributos de la propiedad y proporciona acceso a sus metadatos. Cuando se usa el <xref:System.ComponentModel.ICustomTypeDescriptor> interfaz, el motor de enlace de datos usa esta interfaz para tener acceso a los valores de propiedad. La <xref:System.ComponentModel.ICustomTypeDescriptor> interfaz es especialmente útil en casos donde el objeto no tiene un conjunto estático de propiedades.  
   
@@ -51,7 +53,7 @@ El enlace de datos de [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharp
 |**Enlazar la propiedad de texto de TextBlock**|**Tiempo de enlace (ms)**|**Tiempo de representación, incluido el enlace (ms)**|  
 |--------------------------------------------------|-----------------------------|--------------------------------------------------|  
 |Para una propiedad de un objeto [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]|115|314|  
-|Para una propiedad de un [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] objeto que implementa<xref:System.ComponentModel.INotifyPropertyChanged>|115|305|  
+|Para una propiedad de un [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] objeto que implementa <xref:System.ComponentModel.INotifyPropertyChanged>|115|305|  
 |Para una <xref:System.Windows.DependencyProperty> de un <xref:System.Windows.DependencyObject>.|90|263|  
   
 <a name="Binding_to_Large_CLR_Objects"></a>   
@@ -74,7 +76,7 @@ El enlace de datos de [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharp
 |**Enlace de datos de ItemsSource**|**Tiempo de actualización para 1 elemento (ms)**|  
 |--------------------------------------|---------------------------------------|  
 |Para una [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] <xref:System.Collections.Generic.List%601> objeto|1656|  
-|Para un<xref:System.Collections.ObjectModel.ObservableCollection%601>|20|  
+|Para un <xref:System.Collections.ObjectModel.ObservableCollection%601>|20|  
   
 <a name="Binding_IList_to_ItemsControl_not_IEnumerable"></a>   
 ## <a name="bind-ilist-to-itemscontrol-not-ienumerable"></a>Enlazar IList a ItemsControl no IEnumerable  

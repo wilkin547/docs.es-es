@@ -1,13 +1,13 @@
 ---
-title: "Información general del control DataGrid (Formularios Windows Forms)"
-ms.custom: 
+title: Información general del control DataGrid (Formularios Windows Forms)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-winforms
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - DataGrid
@@ -28,17 +28,17 @@ helpviewer_keywords:
 - parent table navigation in DataGrid
 - child tables [Windows Forms], dataGrid control
 ms.assetid: 85604bce-bc03-49d9-9030-dda8896c44b1
-caps.latest.revision: 
+caps.latest.revision: 22
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 10220efc0bb77ddcc7f0f9fa0e3f2793a032a1bd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fd74ed0e31fff211f0197ad27f297f9fbecf5cab
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="datagrid-control-overview-windows-forms"></a>Información general del control DataGrid (Formularios Windows Forms)
 > [!NOTE]
@@ -103,7 +103,7 @@ Un control DataGrid enlazado a datos con múltiples tablas
 |Varias tablas relacionadas.|La cuadrícula puede mostrar una vista de árbol para seleccionar las tablas, o usted puede especificar que la cuadrícula muestre la tabla primaria. Los registros de la tabla primaria permiten a los usuarios desplazarse a las filas secundarias relacionadas.|  
   
 > [!NOTE]
->  Las tablas de un conjunto de datos se relacionan mediante <xref:System.Data.DataRelation>.  Consulte también [HYPERLINK "http://msdn.microsoft.com/library/dbwcse3d(v=vs.110)" Relaciones en conjuntos de datos](http://msdn.microsoft.com/library/dbwcse3d\(v=vs.110\)) o [Relaciones en conjuntos de datos](http://msdn.microsoft.com/library/dbwcse3d\(v=vs.120\)).  
+>  Las tablas de un conjunto de datos se relacionan mediante <xref:System.Data.DataRelation>.  Consulte también [HYPERLINK "http://msdn.microsoft.com/library/dbwcse3d(v=vs.110)" relaciones en conjuntos de datos](http://msdn.microsoft.com/library/dbwcse3d\(v=vs.110\)) o [relaciones en conjuntos de datos](http://msdn.microsoft.com/library/dbwcse3d\(v=vs.120\)).  
   
  Cuando el control <xref:System.Windows.Forms.DataGrid> muestra una tabla y la propiedad <xref:System.Windows.Forms.DataGrid.AllowSorting%2A> se establece en `true`, los datos se pueden volver a ordenar haciendo clic en los encabezados de columna. El usuario también puede agregar filas y modificar celdas.  
   
@@ -137,7 +137,7 @@ La ilustración siguiente muestra los objetos incluidos en el control DataGrid.
   
  Los estilos de columna están relacionados con las columnas de un conjunto de datos del mismo modo que los estilos de tabla están relacionados con las tablas de datos. Al igual que sucede con las tablas, que no pueden tener más de un estilo de tabla definido, una columna no puede tener definido más de un estilo de columna en un estilo de tabla concreto. Esta relación se define en la propiedad <xref:System.Windows.Forms.DataGridColumnStyle.MappingName%2A> de la columna.  
   
- Si crea un estilo de tabla sin agregarle estilos de columna, [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] agregará estilos de columna predeterminados cuando se creen el formulario y la cuadrícula en tiempo de ejecución. Sin embargo, si crea un estilo de tabla y le agrega estilos de columna, [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] no creará ningún estilo de columna. Además, necesitará definir estilos de columna y asignarlos con el nombre de la asignación para que las columnas que desee aparezcan en la cuadrícula.  
+ Si ha creado un estilo de tabla sin agregarle estilos de columna, Visual Studio agregará estilos de columna predeterminados cuando se creen el formulario y la cuadrícula en tiempo de ejecución. Sin embargo, si ha creado un estilo de tabla y le agrega estilos de columna, Visual Studio no creará ningún estilo de columna. Además, necesitará definir estilos de columna y asignarlos con el nombre de la asignación para que las columnas que desee aparezcan en la cuadrícula.  
   
  Dado que usted especifica las columnas que se incluyen en la cuadrícula de datos al asignarles un estilo de columna y no se les ha asignado ningún estilo de columna, puede incluir columnas de datos en el conjunto de datos que no se muestran en la cuadrícula. Sin embargo, dado que la columna de datos se incluye en el conjunto de datos, puede editar mediante programación los datos que no se muestran.  
   

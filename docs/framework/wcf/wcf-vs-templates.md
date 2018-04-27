@@ -1,30 +1,32 @@
 ---
 title: Plantillas de Visual Studio para WCF
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 6a608575-3535-4190-89da-911e24c8374f
-caps.latest.revision: "31"
+caps.latest.revision: 31
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2bb195af180ab9d840f91fe82f9f643119663374
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9626905dbcec6bd40570e4188e9a188fca164144
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="wcf-visual-studio-templates"></a>Plantillas de Visual Studio para WCF
-Las plantillas para [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] de [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] son plantillas de proyecto y de elemento predefinidas que pueden utilizarse en [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] para generar rápidamente servicios [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] y las aplicaciones relacionadas.  
+[!INCLUDE[indigo1](../../../includes/indigo1-md.md)] Plantillas de Visual Studio son plantillas de proyecto y elemento predefinidas puede usar en Visual Studio para generar rápidamente [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] servicios y aplicaciones que lo rodea.  
   
 ## <a name="using-the-wcf-templates"></a>Utilización de las plantillas de WCF  
- Las plantillas para [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] de [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] proporcionan una estructura de clases básica para el desarrollo de servicios. En concreto, estas plantillas proporcionan las definiciones básicas para el contrato de servicios y el contrato de datos, así como la implementación y configuración del servicio. Puede utilizar estas plantillas para crear un servicio simple con una interacción de código mínima, además de una unidad de creación para servicios más avanzados.  
+ [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Plantillas de Visual Studio proporcionan una estructura de clase básica para el desarrollo del servicio. En concreto, estas plantillas proporcionan las definiciones básicas para el contrato de servicios y el contrato de datos, así como la implementación y configuración del servicio. Puede utilizar estas plantillas para crear un servicio simple con una interacción de código mínima, además de una unidad de creación para servicios más avanzados.  
   
 ### <a name="wcf-service-library-project-template"></a>Plantilla de proyecto de biblioteca de servicio WCF  
  El [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] plantilla de proyecto Biblioteca de servicio está disponible en el cuadro de diálogo nuevo proyecto bajo **Visual C# \WCF** y **Visual Basic\WCF**.  
@@ -38,7 +40,7 @@ Las plantillas para [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] de [!IN
 -   Archivo de configuración de la aplicación (App.config). El archivo de configuración proporciona los elementos básicos de un modelo de servicio [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] con un enlace HTTP seguro. Además incluye un punto de conexión para el servicio y habilita el intercambio de metadatos.  
   
 > [!NOTE]
->  [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]se configura para reconocer el archivo App.config como el archivo de configuración para el proyecto cuando se ejecuta con la [Host de servicio WCF (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md), que es la configuración predeterminada. Si hospeda la biblioteca de servicios en un ejecutable, sitúe el código de configuración en el archivo de configuración del ejecutable, ya que los archivos de configuración para DLL no son válidos.  
+>  Visual Studio está configurado para que reconozca el archivo App.config como el archivo de configuración para el proyecto cuando se ejecuta con la [Host de servicio WCF (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md), que es la configuración predeterminada. Si hospeda la biblioteca de servicios en un ejecutable, sitúe el código de configuración en el archivo de configuración del ejecutable, ya que los archivos de configuración para DLL no son válidos.  
   
 ### <a name="wcf-service-application-template"></a>Plantilla Aplicación del servicio de WCF  
  El [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] plantilla de aplicación de servicio está disponible en el cuadro de diálogo nuevo proyecto en **Visual C# \WCF** y **Visual Basic\WCF**.  
@@ -59,7 +61,7 @@ Las plantillas para [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] de [!IN
  El [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] plantilla de sitio Web está disponible en el cuadro de diálogo nuevo proyecto en **Visual C# \Web Site\WCF servicio** y **Visual basic\sitio Web\servicio WCF**. Esto crea los mismos archivos que la plantilla Aplicación del servicio de WCF pero los organiza como si fuera un sitio web ASP.NET. Se crean las carpetas App_Code y App_Data.  
   
 ### <a name="wcf-service-item-template"></a>Plantilla de elementos de servicio WCF  
- La plantilla de elementos de servicio [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] es una plantilla personalizada que proporciona una manera rápida de agregar servicios [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] a los proyectos [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] existentes.  
+ El [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] plantilla de elemento de servicio es una plantilla personalizada que proporciona una forma rápida de agregar [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] servicios a los proyectos de Visual Studio existentes.  
   
  Para usar esta plantilla, vaya a la **el Explorador de soluciones** panel, haga clic en el nombre del proyecto, seleccione **agregar**y, a continuación, haga clic en **nuevo elemento** para iniciar el **Agregar nuevo Elemento** cuadro de diálogo.  
   
@@ -70,15 +72,15 @@ Las plantillas para [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] de [!IN
  Si el proyecto existente es un proyecto web, también se crea un archivo de host de servicio (service1.svc).  
   
 ### <a name="wcf-wf-service-project-and-item-template"></a>Plantilla de proyectos y elementos WF del servicio WCF.  
- Estas plantillas crean servicios [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] que hospedan un servicio de flujo de trabajo, que es un flujo de trabajo al que se puede obtener acceso como a un servicio web. Existen plantillas independientes para XAML o modelos de programación imperativos. Con las plantillas, puede crear un flujo de trabajo de equipo secuencial o de estado. Para obtener más información sobre estos tipos de flujo de trabajo, consulte [tutoriales de Windows Workflow Foundation](http://msdn.microsoft.com/library/e9705654-bd96-4b56-8d98-f1f118112d97). [!INCLUDE[crabout](../../../includes/crabout-md.md)]crear proyectos de flujo de trabajo, consulte [crear proyectos de flujo de trabajo heredado](/visualstudio/workflow-designer/creating-legacy-workflow-projects).  
+ Estas plantillas crean servicios [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] que hospedan un servicio de flujo de trabajo, que es un flujo de trabajo al que se puede obtener acceso como a un servicio web. Existen plantillas independientes para XAML o modelos de programación imperativos. Con las plantillas, puede crear un flujo de trabajo de equipo secuencial o de estado. Para obtener más información sobre estos tipos de flujo de trabajo, consulte [tutoriales de Windows Workflow Foundation](http://msdn.microsoft.com/library/e9705654-bd96-4b56-8d98-f1f118112d97). [!INCLUDE[crabout](../../../includes/crabout-md.md)] crear proyectos de flujo de trabajo, consulte [crear proyectos de flujo de trabajo heredado](/visualstudio/workflow-designer/creating-legacy-workflow-projects).  
   
- El diseñador [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] es más sensible si se utilizan flujos de trabajo de tipo XOML en lugar de los flujos basados en código. El flujo de trabajo de XOML es el tipo de flujo predeterminado que se crea.  
+ Diseñador de Visual Studio es más sensible si XOML de tipo se utilizan flujos de trabajo en su lugar de código basados en. El flujo de trabajo de XOML es el tipo de flujo predeterminado que se crea.  
   
 ### <a name="wcf-syndication-service-library-template"></a>Plantilla Biblioteca de servicio de distribución de WCF  
  Esta plantilla permite exponer la fuente con el formato RSS o ATOM como un servicio [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. Para obtener más información, consulte [sindicación en WCF](../../../docs/framework/wcf/feature-details/wcf-syndication.md).  
   
 #### <a name="changing-the-address-of-the-feed"></a>Cambiar la dirección o la fuente  
- La plantilla de distribución utiliza Internet Explorer durante la ejecución. Cuando hace doble clic en el proyecto en **el Explorador de soluciones** en [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], seleccione **propiedades**, a continuación, seleccione la **depurar** ficha y se puede ver la dirección predeterminada de la plantilla. Internet Explorer intenta abrir la fuente en esta dirección.  
+ La plantilla de distribución utiliza Internet Explorer durante la ejecución. Cuando hace doble clic en el proyecto en **el Explorador de soluciones** en Visual Studio, seleccione **propiedades**, a continuación, seleccione la **depurar** ficha y se puede ver la dirección predeterminada de la plantilla. Internet Explorer intenta abrir la fuente en esta dirección.  
   
  Si cambia la dirección de su fuente, también debe cambiar la dirección en la **depurar** ficha. Si no lo hace, Internet Explorer intenta abrir la fuente en la dirección predeterminada y no lo consigue.  
   

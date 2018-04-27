@@ -1,12 +1,13 @@
 ---
 title: Enlace de datos y formularios Windows Forms
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - master-details lists
@@ -19,16 +20,17 @@ helpviewer_keywords:
 - Windows Forms controls, data binding
 - data-bound controls [Windows Forms], Windows Forms
 ms.assetid: 419aac5e-819b-4aad-88b0-73a2f8c0bd27
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f2a4d023600456adf1e14b801ee6c24fd0a2348c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: db0e3ad5602d7ee608299bc5b9c5c85b860cab7d
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="data-binding-and-windows-forms"></a>Enlace de datos y formularios Windows Forms
 Windows Forms permite enlazar no solo a orígenes de datos tradicionales, sino también a prácticamente cualquier estructura que contenga datos. Se puede enlazar a una matriz de valores que se calcula en tiempo de ejecución, se lee de un archivo o se deriva de los valores de otros controles.  
@@ -48,7 +50,7 @@ Windows Forms permite enlazar no solo a orígenes de datos tradicionales, sino t
   
 |Tipo de enlace de datos|Descripción|  
 |--------------------------|-----------------|  
-|Enlace de datos simple|Capacidad de un control para enlazarse a un único elemento de datos como, por ejemplo, un valor que existe en una columna de una tabla de conjunto de datos. Este es el tipo de enlace habitual de controles tales como <xref:System.Windows.Forms.TextBox> o <xref:System.Windows.Forms.Label>, que son controles que suelen mostrar un único valor. De hecho, se puede enlazar cualquier propiedad de un control a un campo de una base de datos. Hay una amplia compatibilidad para esta característica en [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)].<br /><br /> Para obtener más información, consulte:<br /><br /> -   [Interfaces relacionadas con el enlace de datos](../../../docs/framework/winforms/interfaces-related-to-data-binding.md)<br />-   [Cómo: desplazarse por datos en formularios Windows Forms](../../../docs/framework/winforms/how-to-navigate-data-in-windows-forms.md)<br />-   [Cómo: crear un Control con enlace Simple en un formulario Windows Forms](../../../docs/framework/winforms/how-to-create-a-simple-bound-control-on-a-windows-form.md)|  
+|Enlace de datos simple|Capacidad de un control para enlazarse a un único elemento de datos como, por ejemplo, un valor que existe en una columna de una tabla de conjunto de datos. Este es el tipo de enlace habitual de controles tales como <xref:System.Windows.Forms.TextBox> o <xref:System.Windows.Forms.Label>, que son controles que suelen mostrar un único valor. De hecho, se puede enlazar cualquier propiedad de un control a un campo de una base de datos. Hay una amplia compatibilidad para esta característica en Visual Studio.<br /><br /> Para obtener más información, consulte:<br /><br /> -   [Interfaces relacionadas con el enlace de datos](../../../docs/framework/winforms/interfaces-related-to-data-binding.md)<br />-   [Cómo: desplazarse por datos en formularios Windows Forms](../../../docs/framework/winforms/how-to-navigate-data-in-windows-forms.md)<br />-   [Cómo: crear un Control con enlace Simple en un formulario Windows Forms](../../../docs/framework/winforms/how-to-create-a-simple-bound-control-on-a-windows-form.md)|  
 |Enlace de datos complejo|Capacidad de un control para enlazarse a más de un elemento de datos; normalmente, a más de un registro en una base de datos. El enlace complejo también se denomina enlace basado en lista. <xref:System.Windows.Forms.DataGridView>, <xref:System.Windows.Forms.ListBox> y <xref:System.Windows.Forms.ComboBox> son ejemplos de controles que admiten el enlace complejo. Para obtener un ejemplo de enlace de datos complejo, consulte [Cómo: enlazar un Windows Forms ComboBox o ListBox (Control) a los datos](../../../docs/framework/winforms/controls/how-to-bind-a-windows-forms-combobox-or-listbox-control-to-data.md).|  
   
 ## <a name="bindingsource-component"></a>Componente BindingSource  

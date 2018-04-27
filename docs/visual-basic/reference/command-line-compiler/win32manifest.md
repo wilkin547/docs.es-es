@@ -13,11 +13,11 @@ helpviewer_keywords:
 ms.assetid: 9e3191b4-90db-41c8-966a-28036fd20005
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 79b51117197f28cec21671eea4dd7b7f2f1cc306
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: 901ea984a8e8e90329953a8936e68f2fc07f8847
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="-win32manifest-visual-basic"></a>-win32manifest (Visual Basic)
 Identifica un archivo de manifiesto de la aplicación Win32 definido por el usuario que se va a insertar en un archivo ejecutable portable (PE) del proyecto.  
@@ -48,7 +48,7 @@ Identifica un archivo de manifiesto de la aplicación Win32 definido por el usua
   
 2.  Se proporciona un manifiesto personalizado que no especifica un nivel de ejecución solicitado.  
   
- [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] crea un archivo de manifiesto predeterminado y lo almacena en los directorios de depuración y lanzamiento junto con el archivo ejecutable. Puede ver o editar el archivo app.manifest predeterminado haciendo clic en **ver configuración de UAC** en el **aplicación** ficha en el Diseñador de proyectos. Para obtener más información, consulte [Application Page, Project Designer (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic).  
+ Visual Studio crea un archivo .manifest predeterminado y lo almacena en los directorios de depuración y lanzamiento junto con el archivo ejecutable. Puede ver o editar el archivo app.manifest predeterminado haciendo clic en **ver configuración de UAC** en el **aplicación** ficha en el Diseñador de proyectos. Para obtener más información, consulte [Application Page, Project Designer (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic).  
   
  Puede proporcionar el manifiesto de aplicación como un paso posterior a la compilación personalizado o como parte de un archivo de recursos Win32 mediante la `-nowin32manifest` opción. Use esa misma opción si quiere que la aplicación esté sujeta a virtualización de archivos y Registro en Windows Vista. Esto evitará que el compilador cree e incruste un manifiesto predeterminado en el archivo PE.  
   

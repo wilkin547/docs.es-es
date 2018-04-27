@@ -1,31 +1,33 @@
 ---
 title: Windows Communication Foundation a Message Queuing
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 78d0d0c9-648e-4d4a-8f0a-14d9cafeead9
-caps.latest.revision: "32"
+caps.latest.revision: 32
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 90013752ed03f24c0995bc837efde5f20bf272c6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: f2ea59c7f1ef2ac6f22500a13eb9bb4456149b7c
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="windows-communication-foundation-to-message-queuing"></a>Windows Communication Foundation a Message Queuing
 Este ejemplo muestra cómo una aplicación [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] puede enviar un mensaje a una aplicación de Message Queuing (MSMQ). El servicio es una aplicación de consola autohospedada que le permite observar el servicio que recibe los mensajes en cola. El servicio y el cliente no tienen que estar ejecutándose al mismo tiempo.  
   
  El servicio recibe los mensajes de la cola y procesa las órdenes. El servicio crea una cola transaccional y establece un mensaje recibido por el controlador de mensajes, tal y como se muestra en el código de ejemplo siguiente.  
-  
-```  
+
+```csharp
 static void Main(string[] args)  
 {  
     if (!MessageQueue.Exists(  
@@ -41,11 +43,11 @@ static void Main(string[] args)
     Console.WriteLine("Order Service is running");  
     Console.ReadLine();  
 }  
-```  
-  
+```
+
  Cuando se recibe un mensaje en la cola, se invoca a `ProcessOrder` del controlador de mensajes.  
-  
-```  
+
+```csharp
 public static void ProcessOrder(Object source,  
     ReceiveCompletedEventArgs asyncResult)  
 {  
@@ -70,8 +72,8 @@ public static void ProcessOrder(Object source,
     }  
   
 }  
-```  
-  
+```
+
  El servicio extrae `ProcessOrder` desde el cuerpo del mensaje de MSMQ y procesa la orden.  
   
  El nombre de cola de MSMQ se especifica en una sección appSettings del archivo de configuración, tal y como se muestra en la configuración de ejemplo siguiente.  
@@ -86,8 +88,8 @@ public static void ProcessOrder(Object source,
 >  El nombre de la cola utiliza un punto (.) para el equipo local y separadores con barra diagonal inversa en su ruta de acceso.  
   
  El cliente crea una orden de compra y la envía dentro del ámbito de una transacción, tal y como se muestra en el código de ejemplo siguiente.  
-  
-```  
+
+```csharp
 // Create the purchase order  
 PurchaseOrder po = new PurchaseOrder();  
 // Fill in the details  
@@ -105,13 +107,13 @@ Console.WriteLine("Order has been submitted:{0}", po);
   
 //Closing the client gracefully closes the connection and cleans up resources  
 client.Close();  
-```  
-  
+```
+
  El cliente utiliza un cliente personalizado en orden para enviar el mensaje de MSMQ a la cola. Dado que la aplicación que recibe y procesa el mensaje es una aplicación MSMQ y no una aplicación [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], no hay ningún contrato de servicios implícito entre las dos aplicaciones. Así que no podemos crear ningún proxy utilizando la herramienta Svcutil.exe en este escenario.  
   
  El cliente personalizado es esencialmente el mismo para todas las aplicaciones [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] que utilizan el enlace `MsmqIntegration` para enviar mensajes. A diferencia de otros clientes, no incluye ningún intervalo de operaciones de servicio. Solo es una operación de envío de mensaje.  
-  
-```  
+
+```csharp
 [System.ServiceModel.ServiceContractAttribute(Namespace = "http://Microsoft.ServiceModel.Samples")]  
 public interface IOrderProcessor  
 {  
@@ -136,8 +138,8 @@ public partial class OrderProcessorClient : System.ServiceModel.ClientBase<IOrde
         base.Channel.SubmitPurchaseOrder(msg);  
     }  
 }  
-```  
-  
+```
+
  Al ejecutar el ejemplo, las actividades del servicio y del cliente se muestran en las ventanas de la consola del cliente y del servicio. Puede ver los mensajes recibidos por el servicio desde el cliente. Presione Entrar en cada ventana de la consola para cerrar el servicio y el cliente. Observe que debido a que se está usando el proceso de poner en cola, el cliente y el servicio no tienen que estar activados y ejecutándose simultáneamente. Por ejemplo, podría ejecutar el cliente, cerrarlo e iniciar el servicio y seguiría recibiendo sus mensajes.  
   
 > [!NOTE]

@@ -17,11 +17,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 8bf63c59c0948dd8414232a52fc12fafa0d13aa1
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 909461811907c1eb3f494b29294db45dbbe8b01d
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="globalization-for-wpf"></a>Globalización de WPF
 Este tema presentan problemas que debe tener en cuenta al escribir [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aplicaciones para el mercado global. Los elementos de programación de globalización se definen en [!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)] en `System.Globalization`.  
@@ -180,7 +180,7 @@ En el ejemplo siguiente se muestra una referencia de carácter hexadecimal. Teng
   
 <a name="using_clickonce"></a>   
 ## <a name="using-clickonce-with-localized-applications"></a>Utilizar ClickOnce con aplicaciones localizadas  
- ClickOnce es una nueva tecnología de implementación de Windows Forms que se incluirá con [!INCLUDE[TLA#tla_visualstu2005](../../../../includes/tlasharptla-visualstu2005-md.md)]. Permite la instalación y actualización de aplicaciones web. Cuando se localiza una aplicación que se implementó con ClickOnce, solo puede verse en la referencia cultural localizada. Por ejemplo, si una aplicación implementada se localiza a japonés sólo puede verse en japonés [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] no en inglés [!INCLUDE[TLA2#tla_win](../../../../includes/tla2sharptla-win-md.md)]. Esto presenta un problema porque es un escenario común para los usuarios japoneses ejecutar una versión en inglés de [!INCLUDE[TLA2#tla_win](../../../../includes/tla2sharptla-win-md.md)].  
+ ClickOnce es una nueva tecnología de implementación de Windows Forms que se incluirá con [!INCLUDE[TLA#tla_visualstu2005](../../../../includes/tlasharptla-visualstu2005-md.md)]. Permite la instalación y actualización de aplicaciones web. Cuando se localiza una aplicación que se implementó con ClickOnce, solo puede verse en la referencia cultural localizada. Por ejemplo, si una aplicación implementada se localiza a japonés sólo puede verse en japonés [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] no en inglés de Windows. Esto presenta un problema porque es un escenario común para los usuarios japoneses ejecutar una versión en inglés de Windows.  
   
  La solución a este problema es establecer el atributo neutro de reserva de idioma. Como alternativa, un desarrollador de aplicaciones puede quitar recursos del ensamblado principal y especificar que los recursos puedan encontrarse en un ensamblado satélite correspondiente a una referencia cultural específica. Para controlar este proceso, utilice el <xref:System.Resources.NeutralResourcesLanguageAttribute>. El constructor de la <xref:System.Resources.NeutralResourcesLanguageAttribute> clase tiene dos firmas, una que tome un <xref:System.Resources.UltimateResourceFallbackLocation> parámetro para especificar la ubicación donde el <xref:System.Resources.ResourceManager> debe extraer la reserva de recursos: ensamblado principal o un ensamblado satélite. En el ejemplo siguiente se muestra cómo utilizar el atributo. Para la ubicación de reserva ultimate, el código provoca el <xref:System.Resources.ResourceManager> para buscar los recursos en el subdirectorio "de" del directorio del ensamblado en ejecución actualmente.  
   

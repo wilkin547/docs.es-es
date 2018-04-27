@@ -1,24 +1,26 @@
 ---
 title: Enlace MSMQ por transacciones
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 71f5cb8d-f1df-4e1e-b8a2-98e734a75c37
-caps.latest.revision: "50"
+caps.latest.revision: 50
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 702f3ac45ade5fcd2f37d256ce1213a79f012ae3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: e0529aa940c02ee79e25034e57f89d4b476861b8
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="transacted-msmq-binding"></a>Enlace MSMQ por transacciones
 Este ejemplo muestra cómo llevar a cabo la comunicación en cola por transacciones utilizando Message Queuing (MSMQ).  
@@ -33,19 +35,19 @@ Este ejemplo muestra cómo llevar a cabo la comunicación en cola por transaccio
  En este ejemplo, el cliente envía un lote de mensajes al servicio desde dentro del ámbito de una transacción. El servicio recibe a continuación los mensajes enviados a la cola dentro del ámbito de la transacción definido por el servicio.  
   
  El contrato de servicios es `IOrderProcessor`, tal y como se muestra en el código de ejemplo siguiente. La interfaz define un servicio unidireccional que es conveniente para su uso con las colas.  
-  
-```  
+
+```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
 public interface IOrderProcessor  
 {  
     [OperationContract(IsOneWay = true)]  
     void SubmitPurchaseOrder(PurchaseOrder po);  
 }  
-```  
-  
+```
+
  El comportamiento del servicio define un comportamiento de la operación con `TransactionScopeRequired` definido en `true`. Esto garantiza que los administradores de recursos a los que el método tiene acceso utilizan el mismo ámbito de la transacción usado para recuperar el mensaje de la cola. También garantiza que si el método produce una excepción, el mensaje se devuelva a la cola. Sin establecer este comportamiento de operación, un canal en cola crea una transacción para leer el mensaje de la cola y lo confirma automáticamente antes de la expedición de tal manera que si se produce un error en la operación, el mensaje se pierde. El escenario más común es para que las operaciones de servicio den de alta en la transacción que se utiliza para leer el mensaje de la cola, tal y como se muestra en el código siguiente.  
-  
-```  
+
+```csharp
  // This service class that implements the service contract.  
  // This added code writes output to the console window.  
  public class OrderProcessorService : IOrderProcessor  
@@ -58,11 +60,11 @@ public interface IOrderProcessor
      }  
   …  
 }  
-```  
-  
+```
+
  El servicio se hospeda en sí mismo. Al utilizar el transporte de MSMQ, se debe crear la cola utilizada de antemano. Esto se puede hacer manualmente o a través de código. En este ejemplo, el servicio contiene el código para comprobar la existencia de la cola y crearla si no existe. El nombre de la cola se lee del archivo de configuración. La dirección base es utilizada por la [la herramienta de utilidad de metadatos de ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) para generar el proxy para el servicio.  
-  
-```  
+
+```csharp
 // Host the service within this EXE console application.  
 public static void Main()  
 {  
@@ -89,8 +91,8 @@ public static void Main()
         serviceHost.Close();  
     }  
 }  
-```  
-  
+```
+
  El nombre de cola de MSMQ se especifica en una sección appSettings del archivo de configuración, tal y como se muestra en la configuración de ejemplo siguiente.  
   
 ```xml  
@@ -103,8 +105,8 @@ public static void Main()
 >  El nombre de la cola usa un punto (.) para el equipo local y separadores con barra diagonal inversa en su ruta de acceso al crear la cola mediante <xref:System.Messaging>. El extremo de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] utiliza la dirección de la cola con el esquema net.msmq, usa el "localhost" para designar el equipo local y emplea barras diagonales en su ruta de acceso.  
   
  El cliente crea un ámbito de transacción. La comunicación con la cola tiene lugar dentro del ámbito de la transacción, provocando que se trate como una unidad atómica donde se envían todos los mensajes a la cola o no se envía ninguno. La transacción se confirma llamando a <xref:System.Transactions.TransactionScope.Complete%2A> en el ámbito de la transacción.  
-  
-```  
+
+```csharp
 // Create a client.  
 OrderProcessorClient client = new OrderProcessorClient();  
   
@@ -142,14 +144,14 @@ client.Close();
 Console.WriteLine();  
 Console.WriteLine("Press <ENTER> to terminate client.");  
 Console.ReadLine();  
-```  
-  
+```
+
  Para comprobar que las transacciones están funcionando, modifique el cliente marcando como comentario el ámbito de transacción tal y como se muestra en el siguiente código de ejemplo, recompile la solución y ejecute el cliente.  
-  
-```  
+
+```csharp
 //scope.Complete();  
-```  
-  
+```
+
  Dado que no se completa la transacción, los mensajes no se envían a la cola.  
   
  Al ejecutar el ejemplo, las actividades del servicio y del cliente se muestran en las ventanas de la consola del cliente y del servicio. Puede ver los mensajes recibidos por el servicio desde el cliente. Presione Entrar en cada ventana de la consola para cerrar el servicio y el cliente. Observe que debido a que se está usando el proceso de poner en cola, el cliente y el servicio no tienen que estar activados y ejecutándose simultáneamente. Puede ejecutar el cliente, cerrarlo e iniciar el servicio y seguir recibiendo mensajes.  

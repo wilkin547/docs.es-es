@@ -2,7 +2,8 @@
 title: Compatibilidad bidireccional en las aplicaciones de Windows Forms
 ms.date: 09/30/2017
 ms.prod: .net-framework
-ms.technology: dotnet-winforms
+ms.technology:
+- dotnet-winforms
 ms.topic: article
 helpviewer_keywords:
 - globalization [Windows Forms], bi-directional support in Windows
@@ -13,15 +14,16 @@ helpviewer_keywords:
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a8ae0e958c842c2f3cf3fbb788cad1cde6e6cc2b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: d670fedb2fe693a871de8f0147b81b97b4958853
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="bi-directional-support-for-windows-forms-applications"></a>Compatibilidad bidireccional en las aplicaciones de Windows Forms
-Puede usar [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] para crear aplicaciones basadas en Windows que admitan idiomas bidireccionales (de derecha a izquierda), como el árabe y hebreo. Esto incluye formularios estándar, cuadros de diálogo, formularios MDI y todos los controles con los que puede trabajar en estos formularios, es decir, todos los objetos del espacio de nombres <xref:System.Windows.Forms.Control>.  
+Puede usar Visual Studio para crear aplicaciones basadas en Windows que admitan bidireccionales (de derecha a izquierda) idiomas como el árabe y hebreo. Esto incluye formularios estándar, cuadros de diálogo, formularios MDI y todos los controles con los que puede trabajar en estos formularios, es decir, todos los objetos del espacio de nombres <xref:System.Windows.Forms.Control>.  
   
 ## <a name="culture-support"></a>Compatibilidad con referencias culturales  
  La configuración de referencia cultural e idioma de la interfaz de usuario determina cómo utiliza una aplicación las fechas, las horas, las monedas y otros datos. La compatibilidad con las referencias culturales y los idiomas de la interfaz de usuario es la misma con los idiomas bidireccionales que con los demás idiomas.   Vea también [Clases específicas de las referencias culturales para Windows Forms y formularios Web Forms globales](http://msdn.microsoft.com/library/94ye9x8c\(v=vs.110\)) o [Clases específicas de las referencias culturales para Windows Forms y formularios Web Forms globales](http://msdn.microsoft.com/library/94ye9x8c\(v=vs.120\))  
@@ -122,5 +124,5 @@ Puede usar [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] para crear apli
  Algunos controles están sellados, de modo que no puede derivar un nuevo control de ellos: por ejemplo, los controles <xref:System.Windows.Forms.ImageList> y <xref:System.Windows.Forms.ProgressBar>.  
   
 ## <a name="see-also"></a>Vea también  
- [Compatibilidad bidireccional para aplicaciones Web ASP.NET](http://msdn.microsoft.com/library/5576f9b1-9b86-41ef-8354-092d366bcd03)  
+ [Compatibilidad bidireccional para aplicaciones web ASP.NET](http://msdn.microsoft.com/library/5576f9b1-9b86-41ef-8354-092d366bcd03)  
  [Globalizar Windows Forms](../../../../docs/framework/winforms/advanced/globalizing-windows-forms.md)

@@ -1,24 +1,26 @@
 ---
 title: Imperativo en enlace personalizado
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 6e13bf96-5de0-4476-b646-5f150774418d
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 58116f11fc482792cb84023bd3e1c23fe9e94a55
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 44bedc3290d9c10078806ed63a8c5ddfe9754801
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="custom-binding-imperative"></a>Imperativo en enlace personalizado
 El ejemplo muestra cómo escribir código imperativo para definir y utilizar los enlaces personalizados sin utilizar un archivo de configuración o un cliente generado por [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. Este ejemplo combina las características proporcionadas por el transporte HTTP y el canal de sesión confiable para crear un enlace basado en HTTP confiable. En este ejemplo se basa en el [Introducción](../../../../docs/framework/wcf/samples/getting-started-sample.md) que implementa un servicio de calculadora.  
@@ -27,8 +29,8 @@ El ejemplo muestra cómo escribir código imperativo para definir y utilizar los
 >  El procedimiento de instalación y las instrucciones de compilación de este ejemplo se encuentran al final de este tema.  
   
  En el cliente y el servicio, se crea un enlace personalizado que contiene dos elementos de enlace (sesión confiable y HTTP):  
-  
-```  
+
+```csharp
 ReliableSessionBindingElement reliableSession = new ReliableSessionBindingElement();  
 reliableSession.Ordered = true;  
   
@@ -37,32 +39,32 @@ httpTransport.AuthenticationScheme = System.Net.AuthenticationSchemes.Anonymous;
 httpTransport.HostNameComparisonMode = HostNameComparisonMode.StrongWildcard;  
   
 CustomBinding binding = new CustomBinding(reliableSession, httpTransport);  
-```  
+```
   
  En el servicio, se usa el enlace agregando un punto de conexión a ServiceHost:  
-  
-```  
+
+```csharp
 serviceHost.AddServiceEndpoint(typeof(ICalculator), binding, "");  
-```  
-  
+```
+
  <xref:System.ServiceModel.ChannelFactory> utiliza el enlace para crear un canal al servicio en el cliente:  
-  
-```  
+
+```csharp
 EndpointAddress address = new EndpointAddress("http://localhost:8000/servicemodelsamples/service");  
 ChannelFactory<ICalculator> channelFactory = new ChannelFactory<ICalculator>(binding, address);  
 ICalculator channel = channelFactory.CreateChannel();  
-```  
-  
+```
+
  Este canal se utiliza a continuación para interactuar con el servicio:  
-  
-```  
+
+```csharp
 // Call the Add service operation.  
 double value1 = 100.00D;  
 double value2 = 15.99D;  
 double result = channel.Add(value1, value2);  
 Console.WriteLine("Add({0},{1}) = {2}", value1, value2, result);  
-```  
-  
+```
+
  Al ejecutar el ejemplo, las solicitudes y respuestas de la operación se muestran en la ventana de la consola del cliente. Presione ENTRAR en la ventana de cliente para cerrar el cliente.  
   
 ```  

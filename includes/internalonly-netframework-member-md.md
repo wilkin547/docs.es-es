@@ -1,1 +1,1 @@
-Este miembro es compatible con la infraestructura de .NET Framework y no debe utilizarse directamente desde el código.
+Este miembro admite la infraestructura de .NET Framework y no está prevista su utilización directa desde el código.

@@ -1,13 +1,13 @@
 ---
-title: "Utilización de la clase XmlSerializer"
-ms.custom: 
+title: Utilización de la clase XmlSerializer
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - XmlSerializer [WCF], using
 ms.assetid: c680602d-39d3-44f1-bf22-8e6654ad5069
-caps.latest.revision: 
+caps.latest.revision: 26
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: bc1ede649a68747461882dfe607214bfb06b2ec3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c541c44f0043000ccd4e7edb0d38eba2c66d0844
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="using-the-xmlserializer-class"></a>Utilización de la clase XmlSerializer
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] puede utilizar dos tecnologías de serialización diferentes para convertir los datos de su aplicación en XML transmitidos entre los clientes y servicios, un proceso llamado serialización.  
@@ -45,12 +45,12 @@ ms.lasthandoff: 12/22/2017
   
  Muchos tipos [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] se incluyen en las dos últimas categorías y son, de este modo, serializables. Las matrices de tipos serializables también son serializables. Para obtener una lista completa, consulte [especificación de transferencia de datos en contratos de servicio](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md).  
   
- <xref:System.Runtime.Serialization.DataContractSerializer>, utilizado junto con los tipos de contrato de datos, es la manera recomendada de escribir nuevos servicios [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Usar contratos de datos](../../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
+ <xref:System.Runtime.Serialization.DataContractSerializer>, utilizado junto con los tipos de contrato de datos, es la manera recomendada de escribir nuevos servicios [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Usar contratos de datos](../../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
   
 ## <a name="when-to-use-the-xmlserializer-class"></a>Cuándo utilizar la clase XmlSerializer  
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] también admite la clase <xref:System.Xml.Serialization.XmlSerializer>. La clase <xref:System.Xml.Serialization.XmlSerializer> es no es exclusiva de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Es el mismo motor de serialización que usan los servicios Web de [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]. La clase <xref:System.Xml.Serialization.XmlSerializer> admite un conjunto mucho más estrecho de tipos que la clase <xref:System.Runtime.Serialization.DataContractSerializer>, pero permite mucho más control sobre el XML resultante y admite mucho más de la norma del lenguaje de definición de esquemas XML (XSD). Tampoco necesita ningún atributo declarativo en los tipos serializables. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] el tema Serialización XML en la documentación de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]. La clase <xref:System.Xml.Serialization.XmlSerializer> no admite tipos de contrato de datos.  
   
- Cuando se usa Svcutil.exe o la **Agregar referencia de servicio** característica de [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] para generar el código de cliente para un servicio de terceros, o para tener acceso a un esquema de otro fabricante, se selecciona automáticamente un serializador adecuado para usted. Si el esquema no es compatible con <xref:System.Runtime.Serialization.DataContractSerializer>, se selecciona el <xref:System.Xml.Serialization.XmlSerializer>.  
+ Cuando se usa Svcutil.exe o la **Agregar referencia de servicio** característica en Visual Studio para generar el código de cliente para un servicio de otro fabricante o para tener acceso a un esquema de otro fabricante, un serializador adecuado se selecciona automáticamente. Si el esquema no es compatible con <xref:System.Runtime.Serialization.DataContractSerializer>, se selecciona el <xref:System.Xml.Serialization.XmlSerializer>.  
   
 ## <a name="manually-switching-to-the-xmlserializer"></a>Intercambio manual a XmlSerializer  
  En algunas ocasiones, puede ser necesario intercambiar manualmente a <xref:System.Xml.Serialization.XmlSerializer>. Esto sucede, por ejemplo, en los casos siguientes:  
@@ -133,11 +133,11 @@ ms.lasthandoff: 12/22/2017
 ### <a name="schema-considerations-for-ixmlserializable-content-types"></a>Consideraciones del esquema para los tipos de contenido de IXmlSerializable  
  Al exportar el esquema y un tipo de contenido `IXmlSerializable`, se llama al método de proveedor de esquema. <xref:System.Xml.Schema.XmlSchemaSet> se pasa al método de proveedor de esquema. El método puede agregar cualquier esquema válido al conjunto de esquemas. El conjunto de esquemas contiene el esquema conocido en el momento de la exportación del esquema. Cuando el método de proveedor de esquema debe agregar un elemento al conjunto de esquemas, debe determinar si en el esquema ya existe un <xref:System.Xml.Schema.XmlSchema> con el espacio de nombres adecuado. Si ya existe, el método de proveedor de esquema debe agregar el nuevo elemento al `XmlSchema` existente. De lo contrario, debe crear una nueva instancia `XmlSchema`. Esto es importante si se utilizan las matrices de los tipos `IXmlSerializable`. Por ejemplo, si tiene un tipo `IXmlSerializable` que se exporta como tipo "A" en el espacio de nombres "B", es posible que cuando al llamar al método de proveedor de esquema, el conjunto de esquemas ya contenga el esquema para que "B" incluya el tipo "ArrayOfA."  
   
- Además de agregar los tipos a <xref:System.Xml.Schema.XmlSchemaSet>, el método de proveedor de esquema para los tipos de contenido debe devolver un valor no nulo. Puede devolver un <xref:System.Xml.XmlQualifiedName> que especifique el nombre del tipo de esquema que se utilizará para el tipo `IXmlSerializable` concreto. Este nombre completo también actúa como el nombre de contrato de datos y el espacio de nombres del tipo. Se permite devolver un tipo que no existe en el esquema establecido inmediatamente cuando vuelve el método del proveedor de esquema. No obstante, se espera que en el momento de exportar todos los tipos relacionados (se llama al método <xref:System.Runtime.Serialization.XsdDataContractExporter.Export%2A> para todos los tipos relevantes en el <xref:System.Runtime.Serialization.XsdDataContractExporter>, y se tiene acceso a la propiedad <xref:System.Runtime.Serialization.XsdDataContractExporter.Schemas%2A>), el tipo existirá en el conjunto de esquemas. Teniendo acceso a la propiedad `Schemas` antes de que se hayan realizado todas las llamadas `Export` pertinentes puede producir <xref:System.Xml.Schema.XmlSchemaException>. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]el proceso de exportación, consulte [Exportar esquemas de las clases](../../../../docs/framework/wcf/feature-details/exporting-schemas-from-classes.md).  
+ Además de agregar los tipos a <xref:System.Xml.Schema.XmlSchemaSet>, el método de proveedor de esquema para los tipos de contenido debe devolver un valor no nulo. Puede devolver un <xref:System.Xml.XmlQualifiedName> que especifique el nombre del tipo de esquema que se utilizará para el tipo `IXmlSerializable` concreto. Este nombre completo también actúa como el nombre de contrato de datos y el espacio de nombres del tipo. Se permite devolver un tipo que no existe en el esquema establecido inmediatamente cuando vuelve el método del proveedor de esquema. No obstante, se espera que en el momento de exportar todos los tipos relacionados (se llama al método <xref:System.Runtime.Serialization.XsdDataContractExporter.Export%2A> para todos los tipos relevantes en el <xref:System.Runtime.Serialization.XsdDataContractExporter>, y se tiene acceso a la propiedad <xref:System.Runtime.Serialization.XsdDataContractExporter.Schemas%2A>), el tipo existirá en el conjunto de esquemas. Teniendo acceso a la propiedad `Schemas` antes de que se hayan realizado todas las llamadas `Export` pertinentes puede producir <xref:System.Xml.Schema.XmlSchemaException>. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] el proceso de exportación, consulte [Exportar esquemas de las clases](../../../../docs/framework/wcf/feature-details/exporting-schemas-from-classes.md).  
   
  El método de proveedor de esquema también puede devolver el <xref:System.Xml.Schema.XmlSchemaType> que se va a utilizar. El tipo puede o no ser anónimo. Si es anónimo, el esquema para el tipo `IXmlSerializable` se exporta como tipo anónimo cada vez que el tipo `IXmlSerializable` se utiliza como un miembro de datos. El tipo `IXmlSerializable` aún tiene un nombre de contrato de datos y un espacio de nombres. (Esto se determina como se describe en [nombres de contrato de datos](../../../../docs/framework/wcf/feature-details/data-contract-names.md) salvo que la <xref:System.Runtime.Serialization.DataContractAttribute> atributo no se puede usar para personalizar el nombre.) Si no es anónimo, debe ser uno de los tipos en `XmlSchemaSet`. Este caso es equivalente a la devolución del `XmlQualifiedName` del tipo.  
   
- Además, se exporta una declaración de elemento global para el tipo. Si el tipo no tiene el atributo <xref:System.Xml.Serialization.XmlRootAttribute> aplicado, el elemento tiene el mismo nombre y espacio de nombres que el contrato de datos, y su propiedad "nillable" será `true`. La única excepción es el espacio de nombres de esquema ("http://www.w3.org/2001/XMLSchema"). Si el contrato de datos del tipo está en este espacio de nombres, el elemento global correspondiente está en el espacio de nombres en blanco porque no está permitido agregar nuevos elementos al espacio de nombres del esquema. Si el tipo tiene el atributo `XmlRootAttribute` aplicado, la declaración del elemento global se exporta mediante las siguientes propiedades: <xref:System.Xml.Serialization.XmlRootAttribute.ElementName%2A>, <xref:System.Xml.Serialization.XmlRootAttribute.Namespace%2A> y <xref:System.Xml.Serialization.XmlRootAttribute.IsNullable%2A>. Los valores predeterminados con `XmlRootAttribute` aplicados son el nombre de contrato de datos, un espacio de nombres en blanco y "nillable" como `true`.  
+ Además, se exporta una declaración de elemento global para el tipo. Si el tipo no tiene el atributo <xref:System.Xml.Serialization.XmlRootAttribute> aplicado, el elemento tiene el mismo nombre y espacio de nombres que el contrato de datos, y su propiedad "nillable" será `true`. La única excepción a esto es el espacio de nombres de esquema ("http://www.w3.org/2001/XMLSchema"): si el contrato de datos del tipo está en este espacio de nombres, el elemento global correspondiente está en el espacio de nombres en blanco porque no está permitido agregar nuevos elementos al espacio de nombres de esquema. Si el tipo tiene el atributo `XmlRootAttribute` aplicado, la declaración del elemento global se exporta mediante las siguientes propiedades: <xref:System.Xml.Serialization.XmlRootAttribute.ElementName%2A>, <xref:System.Xml.Serialization.XmlRootAttribute.Namespace%2A> y <xref:System.Xml.Serialization.XmlRootAttribute.IsNullable%2A>. Los valores predeterminados con `XmlRootAttribute` aplicados son el nombre de contrato de datos, un espacio de nombres en blanco y "nillable" como `true`.  
   
  Las mismas reglas de la declaración de elemento globales se aplican a los tipos de conjunto de datos heredados. Tenga en cuenta que `XmlRootAttribute` no puede invalidar declaraciones de elemento globales agregadas a través de código personalizado, o agregadas a `XmlSchemaSet` mediante el método de proveedor de esquema o a través de `GetSchema` para los tipos de conjunto de datos heredados.  
   
@@ -150,7 +150,7 @@ ms.lasthandoff: 12/22/2017
   
 -   La implementación `ReadXml` no debería leer el elemento contenedor. Se espera que lea el un elemento que `WriteXml` genera.  
   
--   Al serializar de manera regular un tipo de elemento (por ejemplo, como un miembro de datos en un contrato de datos), el serializador producirá un elemento contenedor antes de llamar a `WriteXml`, como en los tipos de contenido. No obstante, al serializar un tipo de elemento en el nivel superior, normalmente, el serializador no produce un elemento contenedor alrededor del elemento que `WriteXml` escribe, salvo que se especifiquen explícitamente un nombre de raíz y un espacio de nombres al construir el serializador en los constructores `DataContractSerializer` o `NetDataContractSerializer`. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Serialización y deserialización](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md).  
+-   Al serializar de manera regular un tipo de elemento (por ejemplo, como un miembro de datos en un contrato de datos), el serializador producirá un elemento contenedor antes de llamar a `WriteXml`, como en los tipos de contenido. No obstante, al serializar un tipo de elemento en el nivel superior, normalmente, el serializador no produce un elemento contenedor alrededor del elemento que `WriteXml` escribe, salvo que se especifiquen explícitamente un nombre de raíz y un espacio de nombres al construir el serializador en los constructores `DataContractSerializer` o `NetDataContractSerializer`. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Serialización y deserialización](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md).  
   
 -   Cuando se serializa un tipo de elemento en el nivel superior sin especificar el nombre de raíz y el espacio de nombres en el momento de la construcción, <xref:System.Runtime.Serialization.XmlObjectSerializer.WriteStartObject%2A> y <xref:System.Runtime.Serialization.XmlObjectSerializer.WriteEndObject%2A> no hacen prácticamente nada, y <xref:System.Runtime.Serialization.XmlObjectSerializer.WriteObjectContent%2A> llama a `WriteXml`. En este modo, el objeto que se serializa no puede ser `null` y no se puede asignar polimórficamente. Además, la preservación del gráfico de objetos puede se puede habilitar y no se puede utilizar `NetDataContractSerializer`.  
   

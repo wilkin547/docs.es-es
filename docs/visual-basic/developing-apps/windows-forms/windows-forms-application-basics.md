@@ -13,17 +13,17 @@ ms.assetid: 0b919d30-7fd6-42db-85c8-543d15312441
 caps.latest.revision: 20
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: aaa7fbd679eceea53a673646173dc14dc4f209bc
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 230229203029740b82e706fe2aa7ff8ee06c486a
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="windows-forms-application-basics-visual-basic"></a>Conceptos básicos de las aplicaciones de Windows Forms (Visual Basic)
 Una parte importante de Visual Basic es la capacidad para crear aplicaciones de Windows Forms que se ejecutan localmente en equipos de los usuarios. Puede usar Visual Studio para crear la interfaz de usuario y la aplicación con formularios Windows Forms. Una aplicación de formularios Windows Forms se basa en las clases de la <xref:System.Windows.Forms> espacio de nombres.  
   
 ## <a name="designing-windows-forms-applications"></a>Las aplicaciones de diseño de Windows Forms  
- Puede crear formularios Windows Forms y aplicaciones de servicio de Windows con [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]. Para obtener más información, vea los temas siguientes:  
+ Puede crear formularios Windows Forms y aplicaciones de servicio de Windows con Visual Studio. Para obtener más información, vea los temas siguientes:  
   
 -   [Introducción a Windows Forms](../../../framework/winforms/getting-started-with-windows-forms.md). Proporciona información sobre cómo crear y programar formularios Windows Forms.  
    
@@ -32,7 +32,7 @@ Una parte importante de Visual Basic es la capacidad para crear aplicaciones de 
 -   [Las aplicaciones de servicio de Windows](../../../framework/windows-services/index.md). Enumera los temas que explican cómo crear servicios de Windows.  
   
 ## <a name="building-rich-interactive-user-interfaces"></a>Compilación de interfaces de usuario completas e interactivas  
- Formularios Windows Forms es el componente de cliente inteligente de la [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], un conjunto de bibliotecas administradas que permiten que las tareas de aplicación comunes, como leer y escribir en el sistema de archivos. Usar un entorno de desarrollo como [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)], puede crear aplicaciones de Windows Forms que muestran información, pedir la opinión de los usuarios y se comunican con equipos remotos a través de una red.  
+ Formularios Windows Forms es el componente de cliente inteligente de la [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], un conjunto de bibliotecas administradas que permiten que las tareas de aplicación comunes, como leer y escribir en el sistema de archivos. Usar un entorno de desarrollo como Visual Studio, puede crear aplicaciones de Windows Forms que muestran información, pedir la opinión de los usuarios y se comunican con equipos remotos a través de una red.  
   
  En Windows Forms, un formulario es una superficie visual en el que se muestra información al usuario. Normalmente las aplicaciones de formularios Windows Forms se generan colocar controles en formularios y desarrollo de respuestas a las acciones del usuario, como clics del mouse o presiones de teclas. Un *control* es un elemento de interfaz de usuario (UI) discreto que muestra datos o acepta la entrada de datos.  
   
@@ -44,7 +44,7 @@ Una parte importante de Visual Basic es la capacidad para crear aplicaciones de 
   
  Windows Forms tiene controles de interfaz de usuario enriquecidos que emulan las características de las aplicaciones de tecnología avanzada como Microsoft Office. Mediante el <xref:System.Windows.Forms.ToolStrip> y <xref:System.Windows.Forms.MenuStrip> (control), puede crear barras de herramientas y menús que contienen texto e imágenes, muestran submenús y hospedan otros controles como cuadros de texto y cuadros combinados.  
   
- Con el [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] Diseñador de formularios de arrastrar y colocar, puede crear fácilmente aplicaciones de Windows Forms: basta con seleccionar los controles con el cursor y colóquelos donde desee en el formulario. El diseñador proporciona herramientas como líneas de cuadrícula y "líneas de ajuste" para minimizar la molestia de alinear los controles. Y si utiliza [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] o compilación en la línea de comandos, puede usar el <xref:System.Windows.Forms.FlowLayoutPanel>, <xref:System.Windows.Forms.TableLayoutPanel> y <xref:System.Windows.Forms.SplitContainer> diseños con el mínimo tiempo y esfuerzo de formularios de controles para crear avanzadas.  
+ Con el Diseñador de formularios de arrastrar y colocar de Visual Studio, puede crear fácilmente aplicaciones de Windows Forms: basta con seleccionar los controles con el cursor y colóquelos donde desee en el formulario. El diseñador proporciona herramientas como líneas de cuadrícula y "líneas de ajuste" para minimizar la molestia de alinear los controles. Y si usa Visual Studio o compilar en la línea de comandos, se puede utilizar el <xref:System.Windows.Forms.FlowLayoutPanel>, <xref:System.Windows.Forms.TableLayoutPanel> y <xref:System.Windows.Forms.SplitContainer> diseños con el mínimo tiempo y esfuerzo de formularios de controles para crear avanzadas.  
   
 ### <a name="custom-ui-elements"></a>Elementos de interfaz de usuario personalizada  
  Por último, si debe crear sus propios elementos de interfaz de usuario personalizados, el <xref:System.Drawing> espacio de nombres contiene todas las clases necesarias para representar líneas, círculos y otras formas directamente en un formulario.  
@@ -53,7 +53,7 @@ Una parte importante de Visual Basic es la capacidad para crear aplicaciones de 
   
 |En|Vea|  
 |--------|---------|  
-|Cree una nueva aplicación de Windows Forms con [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]|[Tutorial: Crear un formulario Windows Forms sencillo](http://msdn.microsoft.com/library/2d9daec0-0543-41d0-acb1-964f685bddbb)|  
+|Cree una nueva aplicación de Windows Forms con Visual Studio|[Tutorial: Crear un formulario Windows Forms sencillo](http://msdn.microsoft.com/library/2d9daec0-0543-41d0-acb1-964f685bddbb)|  
 |Usar controles en formularios|[Cómo: Agregar controles a Windows Forms](../../../framework/winforms/controls/how-to-add-controls-to-windows-forms.md)|   
 |Crear gráficos con <xref:System.Drawing>|[Introducción a la programación de gráficos](../../../framework/winforms/advanced/getting-started-with-graphics-programming.md)|  
 |Crear controles personalizados|[cómo: Heredar de la clase UserControl](../../../framework/winforms/controls/how-to-inherit-from-the-usercontrol-class.md)|  
@@ -67,7 +67,7 @@ Una parte importante de Visual Basic es la capacidad para crear aplicaciones de 
  Puede crear controles enlazados a datos fácilmente mediante la ventana Orígenes de datos, que muestra los orígenes de datos tales como bases de datos, servicios Web y objetos del proyecto. Para crear controles enlazados a datos, arrastre los elementos desde esta ventana hasta los formularios de su proyecto. También puede enlazar controles existentes a datos si arrastra los objetos desde la ventana Orígenes de datos a los controles existentes.  
   
 ### <a name="settings"></a>Configuración  
- Otro tipo de enlace de datos que se puede administrar en Windows Forms es la configuración. Mayoría de las aplicaciones smart client debe conservar cierta información sobre su estado de tiempo de ejecución, como el último tamaño conocido de los formularios y conservar los datos de preferencia del usuario, como las ubicaciones predeterminadas de los archivos guardados. La característica de configuración de la aplicación aborda estos requisitos al proporcionar una manera sencilla de almacenar ambos tipos de configuración en el equipo cliente. Una vez definido mediante [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] o un editor de código, esta configuración se conserva con formato XML y se lee automáticamente en la memoria en tiempo de ejecución.  
+ Otro tipo de enlace de datos que se puede administrar en Windows Forms es la configuración. Mayoría de las aplicaciones smart client debe conservar cierta información sobre su estado de tiempo de ejecución, como el último tamaño conocido de los formularios y conservar los datos de preferencia del usuario, como las ubicaciones predeterminadas de los archivos guardados. La característica de configuración de la aplicación aborda estos requisitos al proporcionar una manera sencilla de almacenar ambos tipos de configuración en el equipo cliente. Una vez definido mediante Visual Studio o un editor de código, esta configuración se conserva con formato XML y se lee automáticamente en la memoria en tiempo de ejecución.  
   
  Para obtener información detallada sobre el uso de estas características, vea los siguientes temas de ayuda.  
   
@@ -78,7 +78,7 @@ Una parte importante de Visual Basic es la capacidad para crear aplicaciones de 
 |Utilice la ventana de orígenes de datos|[Tutorial: Mostrar datos en Windows Forms](/visualstudio/data-tools/accessing-data-in-visual-studio)|  
   
 ## <a name="deploying-applications-to-client-computers"></a>Implementar aplicaciones en equipos cliente  
- Una vez escrita la aplicación, debe enviar a los usuarios para que puedan instalar y ejecutar en sus equipos cliente. Mediante el [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] tecnología, puede implementar aplicaciones desde [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] mediante unos pocos clics y proporcionar a los usuarios con una dirección URL que apunte a la aplicación en la Web. [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] administra todos los elementos y dependencias de la aplicación y se asegura de que la aplicación está instalada correctamente en el equipo cliente.  
+ Una vez escrita la aplicación, debe enviar a los usuarios para que puedan instalar y ejecutar en sus equipos cliente. Mediante el [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] tecnología, puede implementar aplicaciones desde Visual Studio con tan solo unos clics y proporcionar a los usuarios con una dirección URL que apunte a la aplicación en la Web. [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] administra todos los elementos y dependencias de la aplicación y se asegura de que la aplicación está instalada correctamente en el equipo cliente.  
   
  Las aplicaciones [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] se pueden configurar para ejecutarse únicamente cuando el usuario está conectado a la red, o para ejecutarse tanto en línea como sin conexión. Cuando se especifica que una aplicación debe admitir el funcionamiento sin conexión, [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] agrega un vínculo a la aplicación en el usuario **iniciar** menú, por lo que el usuario pueda abrirla sin utilizar la dirección URL.  
   

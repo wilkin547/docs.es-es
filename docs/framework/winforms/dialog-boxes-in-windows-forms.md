@@ -1,31 +1,33 @@
 ---
-title: "Cuadros de diálogo en formularios Windows Forms"
-ms.custom: 
+title: Cuadros de diálogo en formularios Windows Forms
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - dialog boxes [Windows Forms], Windows Forms
 - Windows Forms dialog boxes
 - dialogs [Windows Forms], using in Windows Forms
 ms.assetid: d43d022b-451b-490d-9386-dc79d98fbf8a
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b8f493013744ffa7819d4cb554f794d9a591a371
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 423f8e83290d46b1f49a34517f67ddaef398b3b3
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="dialog-boxes-in-windows-forms"></a>Cuadros de diálogo en formularios Windows Forms
-Los cuadros de diálogo se usan para interactuar con el usuario y recuperar información. En términos sencillos, un cuadro de diálogo es un formulario cuya propiedad de enumeración <xref:System.Windows.Forms.FormBorderStyle> está establecida en `FixedDialog`. Puede construir sus propios cuadros de diálogo personalizados con el Diseñador de Windows Forms en [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]. Agregue controles como `Label`, `Textbox` y `Button` para personalizar los cuadros de diálogo según sus necesidades específicas. El [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] también incluye cuadros de diálogo predefinidos, como **abrir archivo** y cuadros de mensaje, que se pueden adaptar para sus propias aplicaciones. Para obtener más información, consulte [componentes y controles de cuadro de diálogo](../../../docs/framework/winforms/controls/dialog-box-controls-and-components-windows-forms.md).  
+Los cuadros de diálogo se usan para interactuar con el usuario y recuperar información. En términos sencillos, un cuadro de diálogo es un formulario cuya propiedad de enumeración <xref:System.Windows.Forms.FormBorderStyle> está establecida en `FixedDialog`. Puede construir sus propios cuadros de diálogo personalizados utilizando el Diseñador de Windows Forms en Visual Studio. Agregue controles como `Label`, `Textbox` y `Button` para personalizar los cuadros de diálogo según sus necesidades específicas. El [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] también incluye cuadros de diálogo predefinidos, como **abrir archivo** y cuadros de mensaje, que se pueden adaptar para sus propias aplicaciones. Para obtener más información, consulte [componentes y controles de cuadro de diálogo](../../../docs/framework/winforms/controls/dialog-box-controls-and-components-windows-forms.md).  
   
 ## <a name="in-this-section"></a>En esta sección  
  [Mostrar cuadros de diálogo de Windows Forms](../../../docs/framework/winforms/how-to-display-dialog-boxes-for-windows-forms.md)  

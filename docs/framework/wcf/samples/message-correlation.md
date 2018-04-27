@@ -1,24 +1,26 @@
 ---
-title: "Correlación del mensaje"
-ms.custom: 
+title: Correlación del mensaje
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 3f62babd-c991-421f-bcd8-391655c82a1f
-caps.latest.revision: "26"
+caps.latest.revision: 26
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 95336c55b2c3e83e2bd68bb653bbaacc446d8934
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 52dd8d66a4a28b515ebfaee88c4383889839fff0
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="message-correlation"></a>Correlación del mensaje
 Este ejemplo muestra cómo una aplicación de Message Queuing (MSMQ) puede enviar un mensaje de MSMQ a un servicio [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] y cómo los mensajes se pueden poner en correlación entre las aplicaciones del remitente y el receptor en un escenario de solicitud/respuesta. Este ejemplo utiliza el enlace msmqIntegrationBinding. El servicio en este caso es una aplicación de consola autohospedada que le permite observar el servicio que recibe los mensajes en cola. k  
@@ -28,8 +30,8 @@ Este ejemplo muestra cómo una aplicación de Message Queuing (MSMQ) puede envia
  El contrato de servicio `IOrderProcessor` define una operación de servicio unidireccional que sea adecuada para su uso cuando se coloque en la cola. Un mensaje de MSMQ no tiene un encabezado Acción, por lo que no es posible asignar automáticamente distintos mensajes de MSMQ a los contratos de operación. Por consiguiente, puede haber solo un contrato de operación en este caso. Si desea definir más contratos de operación en el servicio, la aplicación debe proporcionar información como qué encabezado en el mensaje de MSMQ (por ejemplo, la etiqueta o correlationID) se puede utilizar para decidir qué contrato de operación enviar. Esto se muestra en el [Demux personalizado](../../../../docs/framework/wcf/samples/custom-demux.md).  
   
  El mensaje de MSMQ no contiene información sobre qué encabezados están asignados a los distintos parámetros del contrato de operación. Por consiguiente, puede haber solo un parámetro en el contrato de la operación. El parámetro es de tipo <!--zz <xref:System.ServiceModel.MSMQIntegration.MsmqMessage%601>`MsmqMessage<T>`--> , `System.ServiceModel.MSMQIntegration.MsmqMessage` que contiene el mensaje MSMQ subyacente. El tipo "T" en la clase `MsmqMessage<T>` representa los datos que se serializan en el cuerpo del mensaje de MSMQ. En este ejemplo, el tipo `PurchaseOrder` se serializa en el cuerpo del mensaje de MSMQ.  
-  
-```  
+
+```csharp
 [ServiceContract(Namespace = "http://Microsoft.ServiceModel.Samples")]  
 [ServiceKnownType(typeof(PurchaseOrder))]  
 public interface IOrderProcessor  
@@ -37,11 +39,11 @@ public interface IOrderProcessor
     [OperationContract(IsOneWay = true, Action = "*")]  
     void SubmitPurchaseOrder(MsmqMessage<PurchaseOrder> msg);  
 }  
-```  
-  
+```
+
  La operación del servicio procesa la orden de compra, muestra su contenido y su estado en la ventana de la consola del servicio. <xref:System.ServiceModel.OperationBehaviorAttribute> configura la operación que dar de alta en una transacción con la cola y marcar la transacción como completada cuando vuelve la operación. `PurchaseOrder` contiene los detalles de la orden que debe ser procesada por el servicio.  
-  
-```  
+
+```csharp
 // Service class that implements the service contract.  
 public class OrderProcessorService : IOrderProcessor  
 {  
@@ -74,13 +76,13 @@ public class OrderProcessorService : IOrderProcessor
         client.Close();  
     }  
 }  
-```  
-  
+```
+
  El servicio utiliza un `OrderResponseClient` de cliente personalizado para enviar el mensaje de MSMQ a la cola. Dado que la aplicación que recibe y procesa el mensaje es una aplicación MSMQ y no una aplicación [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], no hay ningún contrato de servicios implícito entre las dos aplicaciones. Así que no podemos crear ningún proxy utilizando la herramienta Svcutil.exe en este escenario.  
   
  El proxy personalizado es esencialmente el mismo para todas las aplicaciones [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] que utilizan el enlace `msmqIntegrationBinding` para enviar mensajes. A diferencia de otros servidores proxy, no incluye ningún intervalo de operaciones de servicio. Solo es una operación de envío de mensaje.  
-  
-```  
+
+```csharp
 [System.ServiceModel.ServiceContractAttribute(Namespace = "http://Microsoft.ServiceModel.Samples")]  
 public interface IOrderResponse  
 {  
@@ -108,11 +110,11 @@ public partial class OrderResponseClient : System.ServiceModel.ClientBase<IOrder
         base.Channel.SendOrderResponse(msg);  
     }  
 }  
-```  
-  
+```
+
  El servicio se hospeda en sí mismo. Al utilizar el transporte de integración de MSMQ, se debe crear con antelación la cola utilizada. Esto se puede hacer manualmente o a través de código. En este ejemplo, el servicio contiene el código <xref:System.Messaging> para comprobar la existencia de la cola y crearla si fuera necesaria. El nombre de la cola se lee del archivo de configuración.  
-  
-```  
+
+```csharp
 public static void Main()  
 {  
        // Get the MSMQ queue name from application settings in configuration.  
@@ -134,7 +136,7 @@ public static void Main()
             serviceHost.Close();  
       }  
 }  
-```  
+```
   
  La cola de MSMQ a la que se envían las solicitudes de la orden se especifica en la sección appSettings del archivo de configuración. Los extremos de servicio y cliente se definen en la sección de system.ServiceModel del archivo de configuración. Ambos especifican el enlace `msmqIntegrationbinding`.  
   
@@ -176,8 +178,8 @@ public static void Main()
 ```  
   
  La aplicación cliente utiliza <xref:System.Messaging> para enviar un mensaje duradero y transaccional a la cola. El cuerpo del mensaje contiene la orden de compra.  
-  
-```  
+
+```csharp
 static void PlaceOrder()  
 {  
     //Connect to the queue  
@@ -219,8 +221,8 @@ static void PlaceOrder()
     orderMessageID = msg.Id;  
     Console.WriteLine("Placed the order, waiting for response...");  
 }  
-```  
-  
+```
+
  La cola de MSMQ de la que se reciben las respuestas del pedido se especifica en una sección appSettings del archivo de configuración, tal y como se muestra en la configuración de ejemplo siguiente.  
   
 > [!NOTE]
@@ -233,8 +235,8 @@ static void PlaceOrder()
 ```  
   
  La aplicación cliente guarda `messageID` del mensaje de solicitud de la orden que envía al servicio y espera una respuesta de éste. Una vez que la respuesta llega a la cola, el cliente la pone en correlación con el mensaje de la orden que envió utilizando la propiedad `correlationID` del mensaje, que contiene el `messageID` del mensaje de la orden que el cliente envió al servicio en un principio.  
-  
-```  
+
+```csharp
 static void DisplayOrderStatus()  
 {  
     MessageQueue orderResponseQueue = new   
@@ -273,8 +275,8 @@ static void DisplayOrderStatus()
     }  
   }  
 }  
-```  
-  
+```
+
  Al ejecutar el ejemplo, las actividades del servicio y del cliente se muestran en las ventanas de la consola del cliente y del servicio. Podrá observar que el servicio recibe los mensajes del cliente y envía una respuesta a éste. El cliente muestra la respuesta recibida del servicio. Presione Entrar en cada ventana de la consola para cerrar el servicio y el cliente.  
   
 > [!NOTE]

@@ -8,20 +8,20 @@ ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 56a82682-73c2-4b91-a206-4d8bb12c561b
-caps.latest.revision: ''
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: f1d4b3f319d86dd463dabc8b71be7c76c7fef41f
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 32aab8ae875158fed62c70cbc2d7506ba6c8d3c5
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="tracking-using-a-text-file"></a>Realizar el seguimiento del uso de un archivo de texto
-En este ejemplo se muestra cómo ampliar el seguimiento en [!INCLUDE[wf](../../../../includes/wf-md.md)] creando un participante de seguimiento personalizado. Los participantes de seguimiento son clases de .NET Framework que reciben registros de seguimiento del motor en tiempo de ejecución a medida que se emiten. Puede crear un participante de seguimiento para transportar los eventos de seguimiento al destino necesario para su escenario. Por ejemplo, como parte de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] se proporciona el participante de seguimiento de ETW (Seguimiento de eventos para Windows). El participante de seguimiento de este ejemplo escribe los registros en formato XML en un archivo de texto.  
+Este ejemplo muestra cómo ampliar el seguimiento en Windows Workflow Foundation (WF) mediante la creación de un participante de seguimiento personalizado. Los participantes de seguimiento son clases de .NET Framework que reciben registros de seguimiento del motor en tiempo de ejecución a medida que se emiten. Puede crear un participante de seguimiento para transportar los eventos de seguimiento al destino necesario para su escenario. Por ejemplo, como parte de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] se proporciona el participante de seguimiento de ETW (Seguimiento de eventos para Windows). El participante de seguimiento de este ejemplo escribe los registros en formato XML en un archivo de texto.  
   
 ## <a name="sample-details"></a>Detalles del ejemplo  
  Para optimizar la utilidad y solidez del participante de seguimiento, deben completarse algunos pasos adicionales para conectar correctamente el participante de seguimiento al motor en tiempo de ejecución. En la siguiente tabla se describen las clases utilizadas en este ejemplo para crear un participante de seguimiento que obedece los procedimientos recomendados.  
@@ -66,7 +66,7 @@ En este ejemplo se muestra cómo ampliar el seguimiento en [!INCLUDE[wf](../../.
   
 5.  El explorador muestra la **StockPriceService** página, que contiene la dirección wsdl de servicio local. Copie esta dirección.  
   
-     Un ejemplo de dirección wsdl de servicio local es http://localhost:53797/StockPriceService.xamlx?wsdl.  
+     Un ejemplo de la dirección wsdl de servicio local es http://localhost:53797/StockPriceService.xamlx?wsdl.  
   
 6.  Mediante [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)], vaya a la carpeta de [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] (la carpeta de instalación predeterminada es %SystemDrive%\Program Files\Microsoft Visual Studio 10.0). A continuación, busque la subcarpeta Common7\IDE\.  
   

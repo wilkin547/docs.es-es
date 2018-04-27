@@ -1,28 +1,28 @@
 ---
-title: "Seguridad de mensaje anónima"
-ms.custom: 
+title: Seguridad de mensaje anónima
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - WS Security
 ms.assetid: c321cbf9-8c05-4cce-b5a5-4bf7b230ee03
-caps.latest.revision: 
+caps.latest.revision: 52
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: d6f3ac3ba51939f319d1d0e98265d7867233f2b6
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: c93aacbe5af47c9094dccdaa15828bfa9fda79c5
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="message-security-anonymous"></a>Seguridad de mensaje anónima
 El ejemplo de Seguridad de Mensaje Anónima muestra cómo implementar una aplicación [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] que utiliza la seguridad de nivel de mensaje sin la autenticación del cliente pero que requiere autenticación de servidor mediante el certificado X.509 del servidor. Todos los mensajes de la aplicación entre el cliente y el servidor se firman y se cifran. En este ejemplo se basa en el [WSHttpBinding](../../../../docs/framework/wcf/samples/wshttpbinding.md) ejemplo. Este ejemplo está compuesto de un programa de consola de cliente (.exe) y una biblioteca de servicios (.dll) hospedados por Internet Information Services (IIS). El servicio implementa un contrato que define un modelo de comunicación de solicitud y respuesta.  
@@ -31,8 +31,8 @@ El ejemplo de Seguridad de Mensaje Anónima muestra cómo implementar una aplica
 >  El procedimiento de instalación y las instrucciones de compilación de este ejemplo se encuentran al final de este tema.  
   
  Este ejemplo agrega una nueva operación a la interfaz de calculadora que devuelve `True` si no se autenticó el cliente.  
-  
-```  
+
+```csharp
 public class CalculatorService : ICalculator  
 {  
     public bool IsCallerAnonymous()  
@@ -42,8 +42,8 @@ public class CalculatorService : ICalculator
     }  
     ...  
 }  
-```  
-  
+```
+
  El servicio expone un extremo único para comunicarse con el servicio, que se define utilizando el archivo de configuración (Web.config). El extremo está compuesto por una dirección, un enlace y un contrato. El enlace se configura con un enlace `wsHttpBinding`. El modo de seguridad predeterminado para el enlace `wsHttpBinding`es`Message`. El atributo `clientCredentialType` está establecido en `None`.  
   
 ```xml  
@@ -123,8 +123,8 @@ public class CalculatorService : ICalculator
  El ejemplo establece <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication.CertificateValidationMode%2A> en <xref:System.ServiceModel.Security.X509CertificateValidationMode.PeerOrChainTrust> para autenticar el certificado del servicio. Esto se hace en el archivo App.config del cliente en la sección `behaviors`. Esto significa que si el certificado está en el almacén de personas de confianza del usuario, se confía sin realizar una validación de la cadena del emisor del certificado. Este valor se utiliza aquí por comodidad, para que el ejemplo se pueda ejecutar sin que sean precisos certificados emitidos por una entidad de certificación (CA). Este valor es menos seguro que el valor predeterminado, ChainTrust. Las implicaciones de seguridad de este valor deberían considerarse cuidadosamente antes de utilizar `PeerOrChainTrust` en código de producción.  
   
  La implementación del cliente agrega una llamada a la `IsCallerAnonymous` método y en caso contrario, no se diferencian de los [WSHttpBinding](../../../../docs/framework/wcf/samples/wshttpbinding.md) ejemplo.  
-  
-```  
+
+```csharp
 // Create a client with a client endpoint configuration.  
 CalculatorClient client = new CalculatorClient();  
   
@@ -145,8 +145,8 @@ client.Close();
 Console.WriteLine();  
 Console.WriteLine("Press <ENTER> to terminate client.");  
 Console.ReadLine();  
-```  
-  
+```
+
  Al ejecutar el ejemplo, las solicitudes y respuestas de la operación se muestran en la ventana de la consola del cliente. Presione ENTRAR en la ventana de cliente para cerrar el cliente.  
   
 ```  
@@ -166,7 +166,7 @@ Press <ENTER> to terminate client.
   
      Las líneas siguientes del archivo por lotes Setup.bat crean el certificado de servidor que se va a usar.  
   
-    ```  
+    ```bat
     echo ************  
     echo Server cert setup starting  
     echo %SERVER_NAME%  
@@ -190,7 +190,7 @@ Press <ENTER> to terminate client.
   
      Las líneas siguientes en el archivo por lotes Setup.bat hacen que el certificado de servidor almacenado en el almacén LocalMachine esté accesible para la cuenta de proceso de trabajo de [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)].  
   
-    ```  
+    ```bat
     echo ************  
     echo setting privileges on server certificates  
     echo ************  
@@ -218,7 +218,7 @@ Press <ENTER> to terminate client.
     > [!NOTE]
     >  El archivo por lotes de configuración está diseñado para ejecutarse desde un símbolo del sistema [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]. Requiere que la variable de entorno path señale al directorio donde está instalado el SDK. Esta variable de entorno se establece automáticamente dentro de un símbolo del sistema de [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].  
   
-3.  Compruebe el acceso al servicio en un explorador utilizando la dirección http://localhost/servicemodelsamples/service.svc.  
+3.  Comprobar el acceso al servicio utilizando un explorador escribiendo la dirección http://localhost/servicemodelsamples/service.svc.  
   
 4.  Inicie Client.exe desde \client\bin. La actividad del cliente se muestra en la aplicación de consola del cliente.  
   

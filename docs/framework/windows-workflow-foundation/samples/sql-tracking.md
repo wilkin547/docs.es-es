@@ -1,26 +1,27 @@
 ---
 title: Seguimiento de SQL
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: bcaebeb1-b9e5-49e8-881b-e49af66fd341
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6bd8fbe1a29793778d93eeca64b185079d706f3e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 2eeb5cf57e6efac77de4a76fe8131189273d5438
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="sql-tracking"></a>Seguimiento de SQL
-Este ejemplo muestra cómo escribir un participante de seguimiento SQL personalizado, que escribe registros de seguimiento en una base de datos SQL. [!INCLUDE[wf](../../../../includes/wf-md.md)] proporciona seguimiento del flujo de trabajo para ganar visibilidad en la ejecución de una instancia de flujo de trabajo. El tiempo de ejecución de seguimiento emite registros de seguimiento de flujo de trabajo durante la ejecución del flujo de trabajo. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]flujo de trabajo de seguimiento, vea [seguimiento y traza del flujo de trabajo](../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md).  
+Este ejemplo muestra cómo escribir un participante de seguimiento SQL personalizado, que escribe registros de seguimiento en una base de datos SQL. Windows Workflow Foundation (WF) proporciona seguimiento para ganar visibilidad en la ejecución de una instancia de flujo de trabajo de flujo de trabajo. El tiempo de ejecución de seguimiento emite registros de seguimiento de flujo de trabajo durante la ejecución del flujo de trabajo. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] flujo de trabajo de seguimiento, vea [seguimiento y traza del flujo de trabajo](../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md).  
   
 #### <a name="to-use-this-sample"></a>Para utilizar este ejemplo  
   
@@ -43,7 +44,7 @@ Este ejemplo muestra cómo escribir un participante de seguimiento SQL personali
   
 7.  El explorador muestra la página StockPriceService, que contiene la dirección WSDL de servicio local. Copie esta dirección.  
   
-     Un ejemplo de dirección WSDL de servicio local es http://localhost:65193/StockPriceService.xamlx?wsdl.  
+     Un ejemplo de la dirección WSDL de servicio local es http://localhost:65193/StockPriceService.xamlx?wsdl.  
   
 8.  Al usar [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)], ejecute el cliente de prueba de WCF (WcfTestClient.exe). Se encuentra en el directorio Microsoft Visual Studio 10.0\Common7\IDE.  
   
@@ -51,7 +52,7 @@ Este ejemplo muestra cómo escribir un participante de seguimiento SQL personali
   
 10. En el cliente de prueba WCF, haga doble clic en **GetStockPrice**. Se abrirá la `GetStockPrice` operación que toma un parámetro, escriba el valor `Contoso` y haga clic en **Invoke**.  
   
-11. Los registros de seguimiento emitidos se escriben en una base de datos SQL. Para ver los registros de seguimiento, abra la base de datos TrackingSample en SQL Management Studio y navegue hasta las tablas. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]SQL Server Management Studio, consulte [Introducción a SQL Server Management Studio](http://go.microsoft.com/fwlink/?LinkId=165645). Puede descargar SQL Server 2008 Management Studio Express [aquí](http://go.microsoft.com/fwlink/?LinkId=180520). La ejecución de una consulta de selección en las tablas muestra los datos dentro de los registros de seguimiento almacenados en las tablas respectivas.  
+11. Los registros de seguimiento emitidos se escriben en una base de datos SQL. Para ver los registros de seguimiento, abra la base de datos TrackingSample en SQL Management Studio y navegue hasta las tablas. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] SQL Server Management Studio, consulte [Introducción a SQL Server Management Studio](http://go.microsoft.com/fwlink/?LinkId=165645). Puede descargar SQL Server 2008 Management Studio Express [aquí](http://go.microsoft.com/fwlink/?LinkId=180520). La ejecución de una consulta de selección en las tablas muestra los datos dentro de los registros de seguimiento almacenados en las tablas respectivas.  
   
 #### <a name="to-uninstall-the-sample"></a>Para desinstalar el ejemplo  
   

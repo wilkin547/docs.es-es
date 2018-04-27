@@ -13,11 +13,11 @@ helpviewer_keywords:
 ms.assetid: ffa82a4b-517a-4c6c-9889-5bae7b534bb8
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 02169f1f43ba93b68dc47f5bad038b78d3635a80
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: 319d01e8162dbc3806b0d9ba59e90410acb1acd5
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="-keyfile"></a>-keyfile
 Especifica un archivo que contiene una clave o un par de claves que asigna un nombre seguro al ensamblado.  
@@ -48,7 +48,7 @@ Especifica un archivo que contiene una clave o un par de claves que asigna un no
  Vea [crear y utilizar ensamblados](../../../framework/app-domains/create-and-use-strong-named-assemblies.md) para obtener más información sobre cómo firmar un ensamblado.  
   
 > [!NOTE]
->  El `-keyfile` opción no está disponible en la [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] entorno de desarrollo; está disponible solo cuando se compila desde la línea de comandos.  
+>  El `-keyfile` opción no está disponible en el entorno de desarrollo de Visual Studio, que está disponible sólo cuando se compila desde la línea de comandos.  
   
 ## <a name="example"></a>Ejemplo  
  El código siguiente compila el archivo de código fuente `Input.vb` y especifica un archivo de clave.  

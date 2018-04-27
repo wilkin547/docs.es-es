@@ -20,17 +20,17 @@ helpviewer_keywords:
 - drag-and-drop [WPF], events
 - drop targets [WPF], drag-and-drop
 ms.assetid: 1a5b27b0-0ac5-4cdf-86c0-86ac0271fa64
-caps.latest.revision: ''
+caps.latest.revision: 31
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: b7a69a4dcd5fc39b700bf9c3404e70d581509ebc
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: fe34933c19e7f8a50d144cad99b99decbd501965
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="drag-and-drop-overview"></a>Información general sobre la función de arrastrar y colocar
 Este tema proporciona información general sobre la compatibilidad con arrastrar y colocar en aplicaciones [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Arrastrar y colocar se refiere normalmente a un método de transferencia de datos que implica el uso de un mouse (o cualquier otro dispositivo señalador) para seleccionar uno o más objetos, arrastrar estos objetos sobre un destino deseado en la [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] y soltarlos.  
@@ -44,7 +44,7 @@ Este tema proporciona información general sobre la compatibilidad con arrastrar
   
  Las acciones concretas realizadas durante una operación de arrastrar y colocar son específicas de la aplicación y a menudo están determinadas por el contexto.  Por ejemplo, si se arrastra una selección de archivos de una carpeta a otra en el mismo dispositivo de almacenamiento los archivos se mueven de forma predeterminada, mientras que si se arrastran archivos de un recurso compartido [!INCLUDE[TLA#tla_unc](../../../../includes/tlasharptla-unc-md.md)] a una carpeta local los archivos se copian de forma predeterminada.  
   
- Las funciones de arrastrar y colocar proporcionadas por [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] están diseñadas para ser altamente flexibles y personalizables, para que admitan una amplia variedad de escenarios de arrastrar y colocar.  Arrastrar y colocar permite manipular objetos en una sola aplicación o entre aplicaciones diferentes. La operación de arrastrar y colocar entre aplicaciones de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] y otras aplicaciones de [!INCLUDE[TLA2#tla_win](../../../../includes/tla2sharptla-win-md.md)] también es totalmente compatible.  
+ Las funciones de arrastrar y colocar proporcionadas por [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] están diseñadas para ser altamente flexibles y personalizables, para que admitan una amplia variedad de escenarios de arrastrar y colocar.  Arrastrar y colocar permite manipular objetos en una sola aplicación o entre aplicaciones diferentes. Operación de arrastrar y colocar entre [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] y otras aplicaciones Windows es también totalmente compatible.  
   
  En [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], cualquier <xref:System.Windows.UIElement> o <xref:System.Windows.ContentElement> puede participar en una operación de arrastrar y colocar. Los eventos y los métodos necesarios para las operaciones de arrastrar y colocar están definidos en la clase <xref:System.Windows.DragDrop>. Las clases <xref:System.Windows.UIElement> y <xref:System.Windows.ContentElement> contienen un alias para los eventos adjuntos <xref:System.Windows.DragDrop>, de modo que los eventos aparezcan en la lista de miembros de clase cuando se hereda un <xref:System.Windows.UIElement> o <xref:System.Windows.ContentElement> como elemento base. Los controladores de eventos que están asociados a estos eventos se asocian al evento adjunto <xref:System.Windows.DragDrop> subyacente y reciben la misma instancia de datos de evento. Para obtener más información, vea el evento <xref:System.Windows.UIElement.Drop?displayProperty=nameWithType>.  
   

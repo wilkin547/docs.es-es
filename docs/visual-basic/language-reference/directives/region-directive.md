@@ -1,9 +1,10 @@
 ---
-title: '#<a name="region-directive"></a>Region: directiva'
+title: '#Region: directiva'
 ms.date: 07/20/2015
 ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vb.Region
@@ -14,22 +15,22 @@ helpviewer_keywords:
 - region directive (#region)
 - '#Region keyword [Visual Basic]'
 ms.assetid: 90a6a104-3cbf-47d0-bdc4-b585d0921b87
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: fb308da6ad0ca6243f14e0d825ed7eb005d622bc
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 83ceac7d73eff23e16c5f6efb1c4eb8a2210ee2c
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="region-directive"></a>#Region (Directiva)
 Contrae y oculta secciones de código en archivos de Visual Basic.  
   
 ## <a name="syntax"></a>Sintaxis  
-  
-```  
-      #Region "identifier_string"  
+
+```vb
+#Region "identifier_string"  
 #End Region  
 ```  
   
@@ -37,7 +38,7 @@ Contrae y oculta secciones de código en archivos de Visual Basic.
   
 |Término|Definición|  
 |---|---|  
-|`identifier_string`|Obligatorio. Cadena que actúa como título de una región cuando esta se contrae. Las regiones están contraídas de forma predeterminada.|  
+|`identifier_string`|Requerido. Cadena que actúa como título de una región cuando esta se contrae. Las regiones están contraídas de forma predeterminada.|  
 |`#End Region`|Finaliza el bloque `#Region`.|  
   
 ## <a name="remarks"></a>Comentarios  

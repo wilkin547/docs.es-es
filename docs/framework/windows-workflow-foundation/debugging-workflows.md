@@ -14,11 +14,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 788cc6b25e4faa8a680f5ec23d88a5d18d0a7c87
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 866fe3ebcec295b57444f937b3b6fd6677bfe0f4
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="debugging-workflows"></a>Depurar flujos de trabajo
 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] proporciona varias opciones para depurar los flujos de trabajo en ejecución del entorno de desarrollo. Los flujos de trabajo se pueden depurar en el diseñador, en XAML y en el código.  
@@ -36,7 +36,7 @@ ms.lasthandoff: 04/26/2018
  La depuración del flujo de trabajo también admite el uso de la infraestructura de Visual Studio para adjuntar a un proceso. De esta forma se permite que el autor del flujo de trabajo depure un flujo de trabajo que se ejecuta en un entorno de host diferente como Internet Information Services (IIS) 7.0.  
   
 ## <a name="remote-debugging"></a>Remote Debugging  
- [!INCLUDE[wf](../../../includes/wf-md.md)] depuración remota funciona igual que la depuración remota de otros componentes de Visual Studio. Para obtener información sobre cómo usar la depuración remota, vea [Cómo: habilitar la depuración remota](http://go.microsoft.com/fwlink/?LinkId=196257).  
+ Depuración remota de Windows Workflow Foundation (WF) funciona igual que la depuración remota de otros componentes de Visual Studio. Para obtener información sobre cómo usar la depuración remota, vea [Cómo: habilitar la depuración remota](http://go.microsoft.com/fwlink/?LinkId=196257).  
   
 > [!NOTE]
 >  Si la aplicación de flujo de trabajo tiene como destino el x86 arquitectura y se hospeda en un equipo que ejecuta un sistema operativo de 64 bits, la depuración remota no funcionará a menos que Visual Studio está instalado en el equipo remoto o el destino de la aplicación de flujo de trabajo se cambia a **Cualquier CPU**.  

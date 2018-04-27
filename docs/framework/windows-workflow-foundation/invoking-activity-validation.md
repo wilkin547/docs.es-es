@@ -1,26 +1,27 @@
 ---
-title: "Invocar validación de actividad"
-ms.custom: 
+title: Invocar validación de actividad
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 22bef766-c505-4fd4-ac0f-7b363b238969
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f22fc7dc53f52b47be2da3313f678825d4362750
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 39c059e7d8ed2191a4e0ce42d7d5b2087db84a5c
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="invoking-activity-validation"></a>Invocar validación de actividad
-La validación de la actividad proporciona un método para identificar y notificar los errores en la configuración de cualquier actividad antes de su ejecución. La validación se produce cuando un flujo de trabajo se modifica en el diseñador de flujo de trabajo y cuando los errores de validación o advertencias se muestran en el diseñador de flujo de trabajo. La validación también se produce en tiempo de ejecución cuando se invoca un flujo de trabajo y si se producen algunos errores de validación; la lógica de validación predeterminada produce <xref:System.Activities.InvalidWorkflowException>. [!INCLUDE[wf](../../../includes/wf-md.md)] proporciona la clase <xref:System.Activities.Validation.ActivityValidationServices> que la aplicación de flujo de trabajo y los desarrolladores de herramientas pueden usar para validar explícitamente una actividad. En este tema se describe cómo usar <xref:System.Activities.Validation.ActivityValidationServices> para realizar la validación de actividad.  
+La validación de la actividad proporciona un método para identificar y notificar los errores en la configuración de cualquier actividad antes de su ejecución. La validación se produce cuando un flujo de trabajo se modifica en el diseñador de flujo de trabajo y cuando los errores de validación o advertencias se muestran en el diseñador de flujo de trabajo. La validación también se produce en tiempo de ejecución cuando se invoca un flujo de trabajo y si se producen algunos errores de validación; la lógica de validación predeterminada produce <xref:System.Activities.InvalidWorkflowException>. Windows Workflow Foundation (WF) proporciona la <xref:System.Activities.Validation.ActivityValidationServices> clase que puede utilizarse por aplicación de flujo de trabajo y los desarrolladores de herramientas para validar explícitamente una actividad. En este tema se describe cómo usar <xref:System.Activities.Validation.ActivityValidationServices> para realizar la validación de actividad.  
   
 ## <a name="using-activityvalidationservices"></a>Usar ActivityValidationServices  
  <xref:System.Activities.Validation.ActivityValidationServices> tiene dos sobrecargas de <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A> que se usan para invocar la lógica de validación de una actividad. La primera sobrecarga toma la actividad raíz que se va a validar y devuelve una colección de errores de validación y advertencias. En el siguiente ejemplo, se usa una actividad `Add` personalizada que tiene dos argumentos necesarios.  
@@ -243,7 +244,7 @@ else
 >  Los autores de actividades personalizadas pueden proporcionar lógica de validación en la invalidación del método <xref:System.Activities.CodeActivity.CacheMetadata%2A> de una actividad. Cualquier excepción que se produzca desde el método <xref:System.Activities.CodeActivity.CacheMetadata%2A> no se trata como errores de validación. Estas excepciones escaparán de la llamada al método <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A> y serán administradas por el autor de la llamada.  
   
 ## <a name="using-validationsettings"></a>Usar ValidationSettings  
- De forma predeterminada, todas las actividades del árbol de actividad se evalúan cuando la validación se invoca mediante <xref:System.Activities.Validation.ActivityValidationServices>. <xref:System.Activities.Validation.ValidationSettings> permite personalizar la validación de varias maneras diferentes configurando sus tres propiedades. <xref:System.Activities.Validation.ValidationSettings.SingleLevel%2A> especifica si el validador debe recorrer el árbol de actividad completo o solo aplicar lógica de validación a la actividad proporcionada. Éste es el valor predeterminado de `false`. <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A> especifica una asignación de restricción adicional de un tipo a una lista de restricciones. Para el tipo base de cada actividad en el árbol de actividad que se esté validando, hay una búsqueda en <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A>. Si se encuentra una lista de restricciones que coincida, todas las restricciones de la lista se evalúan para la actividad. <xref:System.Activities.Validation.ValidationSettings.OnlyUseAdditionalConstraints%2A> especifica si el validador debe evaluar todas las restricciones o solo las especificadas en <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A>. El valor predeterminado es `false`. <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A> y <xref:System.Activities.Validation.ValidationSettings.OnlyUseAdditionalConstraints%2A> son útiles para que los autores de host de flujo de trabajo agreguen validación adicional a los flujos de trabajo, por ejemplo restricciones de directivas para herramientas como FxCop. [!INCLUDE[crabout](../../../includes/crabout-md.md)]las restricciones, vea [las restricciones declarativas](../../../docs/framework/windows-workflow-foundation/declarative-constraints.md).  
+ De forma predeterminada, todas las actividades del árbol de actividad se evalúan cuando la validación se invoca mediante <xref:System.Activities.Validation.ActivityValidationServices>. <xref:System.Activities.Validation.ValidationSettings> permite personalizar la validación de varias maneras diferentes configurando sus tres propiedades. <xref:System.Activities.Validation.ValidationSettings.SingleLevel%2A> especifica si el validador debe recorrer el árbol de actividad completo o solo aplicar lógica de validación a la actividad proporcionada. Éste es el valor predeterminado de `false`. <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A> especifica una asignación de restricción adicional de un tipo a una lista de restricciones. Para el tipo base de cada actividad en el árbol de actividad que se esté validando, hay una búsqueda en <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A>. Si se encuentra una lista de restricciones que coincida, todas las restricciones de la lista se evalúan para la actividad. <xref:System.Activities.Validation.ValidationSettings.OnlyUseAdditionalConstraints%2A> especifica si el validador debe evaluar todas las restricciones o solo las especificadas en <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A>. El valor predeterminado es `false`. <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A> y <xref:System.Activities.Validation.ValidationSettings.OnlyUseAdditionalConstraints%2A> son útiles para que los autores de host de flujo de trabajo agreguen validación adicional a los flujos de trabajo, por ejemplo restricciones de directivas para herramientas como FxCop. [!INCLUDE[crabout](../../../includes/crabout-md.md)] las restricciones, vea [las restricciones declarativas](../../../docs/framework/windows-workflow-foundation/declarative-constraints.md).  
   
  Para usar <xref:System.Activities.Validation.ValidationSettings>, configure las propiedades que desee y, a continuación, páselo en la llamada a <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A>. En este ejemplo, se valida un flujo de trabajo que está compuesto de un <xref:System.Activities.Statements.Sequence> con una actividad `Add` personalizada. La actividad `Add` tiene dos argumentos necesarios.  
   

@@ -1,24 +1,26 @@
 ---
 title: Cliente con tipo
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 62c40e8f-e9b4-4b1a-939a-93c37393d343
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: edad174ac5977aabf6c3fb410ede6ab07b85e4aa
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 638b4a82a5407cbfbe15b75f6f1bfda27367b174
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="typed-client"></a>Cliente con tipo
 El ejemplo muestra cómo obtener información de un cliente especificado generado por la [la herramienta de utilidad de metadatos de ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). En este ejemplo se basa en el [Introducción](../../../../docs/framework/wcf/samples/getting-started-sample.md) que implementa un servicio de calculadora. En este ejemplo, el cliente es una aplicación de consola (.exe) y los Servicios de Internet Information Server (IIS) hospedan el servicio.  
@@ -28,7 +30,7 @@ El ejemplo muestra cómo obtener información de un cliente especificado generad
   
  La propiedad `Endpoint` del cliente permite el acceso a la información sobre el extremo de servicio con el que el cliente se comunica, incluida la información de la dirección, del enlace y del contrato. La propiedad `InnerChannel` del cliente es una instancia de <xref:System.ServiceModel.IClientChannel> que permite el acceso a información acerca del canal subyacente, como su estado y su identificador de sesión.  
   
-```  
+```csharp   
 // Create a client.  
 CalculatorClient client = new CalculatorClient();  
 ...  

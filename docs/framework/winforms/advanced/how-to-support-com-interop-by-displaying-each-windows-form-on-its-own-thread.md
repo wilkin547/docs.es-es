@@ -1,13 +1,13 @@
 ---
-title: "Cómo: Admitir la interoperabilidad COM al mostrar Windows Forms en sus propios subprocesos"
-ms.custom: 
+title: 'Cómo: Admitir la interoperabilidad COM al mostrar Windows Forms en sus propios subprocesos'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-winforms
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - vb
@@ -18,17 +18,17 @@ helpviewer_keywords:
 - ActiveX controls [Windows Forms], COM interop
 - Windows Forms, interop
 ms.assetid: a9e04765-d2de-4389-a494-a9a6d07aa6ee
-caps.latest.revision: 
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 60e52bc1486f74bdce44062a4ac861032b7b660c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f5d8a0351fc206aad9d88f9ca3f7c930ff853ff7
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread"></a>Cómo: Admitir la interoperabilidad COM al mostrar Windows Forms en sus propios subprocesos
 Puede resolver problemas de interoperabilidad COM mostrando el formulario en un bucle de mensajes de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], que puede crear con el método <xref:System.Windows.Forms.Application.Run%2A?displayProperty=nameWithType>.  
@@ -39,7 +39,7 @@ Puede resolver problemas de interoperabilidad COM mostrando el formulario en un 
   
 -   Muestre cada Windows Form en un subproceso independiente.  
   
- Hay una amplia compatibilidad para esta característica en [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)].  
+ Hay una amplia compatibilidad para esta característica en Visual Studio.  
   
  Consulte también [Tutorial: Admitir la interoperabilidad COM al mostrar Windows Forms en su propio subproceso](http://msdn.microsoft.com/library/ms233639\(v=vs.110\)).  
   

@@ -1,24 +1,26 @@
 ---
 title: Sesiones y colas
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 47d7c5c2-1e6f-4619-8003-a0ff67dcfbd6
-caps.latest.revision: "27"
+caps.latest.revision: 27
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0de2668eb03a658632bb8a18c711f780b333e86b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: f1aeaa72937d23a321eb615ad8b1eb4ec1e7b48e
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="sessions-and-queues"></a>Sesiones y colas
 Este ejemplo muestra cómo enviar y recibir un conjunto de mensajes relacionados en comunicación en cola sobre el transporte de Message Queuing (MSMQ). El ejemplo usa el enlace `netMsmqBinding`. El servicio es una aplicación de consola autohospedada que le permite observar el servicio que recibe los mensajes en cola.  
@@ -42,8 +44,8 @@ Este ejemplo muestra cómo enviar y recibir un conjunto de mensajes relacionados
  En el ejemplo, el cliente envía varios mensajes al servicio como parte de una sesión dentro del ámbito de una transacción única.  
   
  El contrato de servicio es `IOrderTaker`, que define un servicio unidireccional que es adecuado para usarse con colas. <xref:System.ServiceModel.SessionMode> utilizado en el contrato mostrado en el código de ejemplo siguiente indica que los mensajes forman parte de la sesión.  
-  
-```  
+
+```csharp
 [ServiceContract(Namespace = "http://Microsoft.ServiceModel.Samples", SessionMode=SessionMode.Required)]  
 public interface IOrderTaker  
 {  
@@ -56,11 +58,11 @@ public interface IOrderTaker
     [OperationContract(IsOneWay = true)]  
     void EndPurchaseOrder();  
 }  
-```  
-  
+```
+
  El servicio define las operaciones de servicio de tal manera que la primera operación da de alta en una transacción pero no la completa. Las operaciones subsiguientes también dan de alta en la misma transacción pero no se completan automáticamente. La última operación en la sesión completa automáticamente la transacción. Así, se utiliza la misma transacción para varias invocaciones de la operación en el contrato de servicios. Si cualquiera de las operaciones produce una excepción, a continuación, la transacción se revierte y la sesión se pone de nuevo en la cola. En la realización correcta de la última operación, la transacción se confirma. El servicio utiliza `PerSession` como <xref:System.ServiceModel.InstanceContextMode> para recibir todos los mensajes en una sesión en la misma instancia del servicio.  
-  
-```  
+
+```csharp
 [ServiceBehavior(InstanceContextMode=InstanceContextMode.PerSession)]  
 public class OrderTakerService : IOrderTaker  
 {  
@@ -92,11 +94,11 @@ public class OrderTakerService : IOrderTaker
        Console.WriteLine(po.ToString());  
     }  
 }  
-```  
-  
+```
+
  El servicio se hospeda en sí mismo. Al utilizar el transporte de MSMQ, se debe crear la cola utilizada de antemano. Esto se puede hacer manualmente o a través de código. En este ejemplo, el servicio contiene el código <xref:System.Messaging> para comprobar la existencia de la cola y la crea, si fuera necesario. El nombre de la cola se lee del archivo de configuración utilizando la clase <xref:System.Configuration.ConfigurationManager.AppSettings%2A>.  
-  
-```  
+
+```csharp
 // Host the service within this EXE console application.  
 public static void Main()  
 {  
@@ -123,8 +125,8 @@ public static void Main()
         serviceHost.Close();   
     }  
 }  
-```  
-  
+```
+
  El nombre de cola de MSMQ se especifica en una sección appSettings del archivo de configuración. El extremo para el servicio se define en la sección system.ServiceModel del archivo de configuración y especifica el enlace `netMsmqBinding`.  
   
 ```xml  
@@ -150,8 +152,8 @@ public static void Main()
 ```  
   
  El cliente crea un ámbito de transacción. Se envían todos los mensajes en la sesión a la cola dentro del ámbito de la transacción, provocando que se trate como una unidad atómica donde todos los mensajes son correctos o se producen errores. La transacción se confirma llamando a <xref:System.Transactions.TransactionScope.Complete%2A>.  
-  
-```  
+
+```csharp
 //Create a transaction scope.  
 using (TransactionScope scope = new TransactionScope(TransactionScopeOption.Required))  
 {  
@@ -178,8 +180,8 @@ using (TransactionScope scope = new TransactionScope(TransactionScopeOption.Requ
     // Complete the transaction.  
     scope.Complete();  
 }  
-```  
-  
+```
+
 > [!NOTE]
 >  Puede utilizar solo una transacción única para todos los mensajes en la sesión y deben enviarse todos los mensajes en la sesión antes de confirmar la transacción. Al cerrar el cliente, se cierra la sesión. Por consiguiente, el cliente tiene que estar cerrado antes de que la transacción se complete para enviar todos los mensajes de la sesión a la cola.  
   

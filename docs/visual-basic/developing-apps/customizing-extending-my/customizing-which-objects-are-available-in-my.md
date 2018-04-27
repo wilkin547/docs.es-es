@@ -1,24 +1,25 @@
 ---
-title: "Personalizar los objetos que están disponibles en My (Visual Basic)"
+title: Personalizar los objetos que están disponibles en My (Visual Basic)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - My namespace [Visual Basic], customizing
 - My namespace
 ms.assetid: 4e8279c2-ed5b-4681-8903-8a6671874000
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: e5f5be7481ee102074fe1236b91110ee6b1d2944
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 669641a2b6ecbf988f6cad68acf52c5561b32515
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="customizing-which-objects-are-available-in-my-visual-basic"></a>Personalizar los objetos que están disponibles en My (Visual Basic)
-Este tema describe cómo puede controlar qué `My` objetos se habilitan estableciendo el proyecto `_MYTYPE` constante de compilación condicional. El [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] el entorno de desarrollo integrado (IDE) mantiene el `_MYTYPE` constante de compilación condicional para un proyecto en sincronización con el tipo del proyecto.  
+Este tema describe cómo puede controlar qué `My` objetos se habilitan estableciendo el proyecto `_MYTYPE` constante de compilación condicional. El entorno de desarrollo integrado (IDE) de Visual Studio mantiene el `_MYTYPE` constante de compilación condicional para un proyecto en sincronización con el tipo del proyecto.  
   
 ## <a name="predefined-mytype-values"></a>Valores predefinidos de _MYTYPE  
  Debe utilizar el `/define` opción del compilador para establecer el `_MYTYPE` constante de compilación condicional. Al especificar su propio valor para la `_MYTYPE` constante, debe incluir el valor de cadena en la barra diagonal inversa/comillas (\\") las secuencias. Por ejemplo, podría utilizar:  
@@ -36,7 +37,7 @@ Este tema describe cómo puede controlar qué `My` objetos se habilitan establec
 |Web|"Web"|  
 |Biblioteca de controles Web|"WebControl"|  
 |Aplicación Windows|"WindowsForms"|  
-|Aplicación de Windows, al iniciarse con personalizado`Sub Main`|"WindowsFormsWithCustomSubMain"|  
+|Aplicación de Windows, al iniciarse con personalizado `Sub Main`|"WindowsFormsWithCustomSubMain"|  
 |Biblioteca de controles de Windows|"Windows"|  
 |Servicio de Windows|"Consola"|  
 |Empty|"Vacío"|  
@@ -49,14 +50,14 @@ Este tema describe cómo puede controlar qué `My` objetos se habilitan establec
   
 |_MYTYPE|_MYAPPLICATIONTYPE|_MYCOMPUTERTYPE|_MYFORMS|_MYUSERTYPE|_MYWEBSERVICES|  
 |--------------|-------------------------|----------------------|---------------|------------------|---------------------|  
-|"Consola"|"Consola"|"Windows"|Sin definir|"Windows"|TRUE|  
+|"Consola"|"Consola"|"Windows"|Sin definir|"Windows"|true|  
 |"Custom"|Sin definir|Sin definir|Sin definir|Sin definir|Sin definir|  
 |"Vacío"|Sin definir|Sin definir|Sin definir|Sin definir|Sin definir|  
-|"Web"|Sin definir|"Web"|FALSE|"Web"|FALSE|  
-|"WebControl"|Sin definir|"Web"|FALSE|"Web"|TRUE|  
+|"Web"|Sin definir|"Web"|false|"Web"|false|  
+|"WebControl"|Sin definir|"Web"|false|"Web"|true|  
 |"Windows" o ""|"Windows"|"Windows"|Sin definir|"Windows"|TRUE|  
-|"WindowsForms"|"WindowsForms"|"Windows"|TRUE|"Windows"|TRUE|  
-|"WindowsFormsWithCustomSubMain"|"Consola"|"Windows"|TRUE|"Windows"|TRUE|  
+|"WindowsForms"|"WindowsForms"|"Windows"|true|"Windows"|true|  
+|"WindowsFormsWithCustomSubMain"|"Consola"|"Windows"|true|"Windows"|true|  
   
  De forma predeterminada, resuelven sin definir constantes de compilación condicional en `FALSE`. Puede especificar valores para las constantes sin definir cuando se compila el proyecto para invalidar el comportamiento predeterminado.  
   

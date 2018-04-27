@@ -1,26 +1,27 @@
 ---
 title: Basic1
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 84a315b6-3f96-4959-8306-49be37936a23
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7ec3fe498bc76c5fe7221d14c8af219420037c14
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 4f10a7789c60f6e5e0734f4f0c93e7e088162e7f
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="basic"></a>Básico
-En esta sección se proporcionan ejemplos que muestran la funcionalidad básica de [!INCLUDE[wf](../../../../includes/wf-md.md)].  
+Esta sección proporciona ejemplos que muestran la funcionalidad básica de Windows Workflow Foundation (WF).  
   
 ## <a name="in-this-section"></a>En esta sección  
  [Actividades integradas](../../../../docs/framework/windows-workflow-foundation/samples/built-in-activities.md)  
@@ -42,10 +43,10 @@ En esta sección se proporcionan ejemplos que muestran la funcionalidad básica 
  Contiene ejemplos que muestran cómo ejecutar flujos de trabajo.  
   
  [Expresiones](../../../../docs/framework/windows-workflow-foundation/samples/expressions.md)  
- Contiene ejemplos que muestran expresiones de [!INCLUDE[wf](../../../../includes/wf-md.md)].  
+ Contiene ejemplos que muestran expresiones de Windows Workflow Foundation (WF).  
   
  [Migración](../../../../docs/framework/windows-workflow-foundation/samples/migration.md)  
- Contiene ejemplos que muestran cómo migrar flujos de trabajo creados con versiones anteriores de [!INCLUDE[wf](../../../../includes/wf-md.md)].  
+ Contiene ejemplos que muestran cómo migrar flujos de trabajo creados con versiones anteriores de Windows Workflow Foundation (WF).  
   
  [Persistencia](../../../../docs/framework/windows-workflow-foundation/samples/persistence.md)  
  Contiene ejemplos que muestran cómo guardar flujos de trabajo en un medio duradero.  
@@ -63,6 +64,6 @@ En esta sección se proporcionan ejemplos que muestran la funcionalidad básica 
  Contiene ejemplos que muestran las transacciones de flujo de trabajo.  
   
  [Validación](../../../../docs/framework/windows-workflow-foundation/samples/validation.md)  
- Contiene ejemplos que muestran la validación en [!INCLUDE[wf2](../../../../includes/wf2-md.md)].  
+ Contiene ejemplos que muestran la validación de Windows Workflow Foundation.  
   
 ## <a name="reference"></a>Referencia

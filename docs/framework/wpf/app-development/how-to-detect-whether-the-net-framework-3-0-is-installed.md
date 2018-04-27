@@ -20,21 +20,21 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 48295a187870340948b045a64b852f1e6fdc1a65
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: dfa5eb8ec1e4f9f2eeeb142670b92d5ec35ab6cf
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="how-to-detect-whether-the-net-framework-30-is-installed"></a>Cómo: Detectar si .NET Framework 3.0 está instalado
-Antes de que los administradores pueden implementar [!INCLUDE[TLA#tla_avalonwinfx](../../../../includes/tlasharptla-avalonwinfx-md.md)] aplicaciones en un sistema, debe confirmar primero que el [!INCLUDE[TLA2#tla_avalonwinfx](../../../../includes/tla2sharptla-avalonwinfx-md.md)] está presente en tiempo de ejecución. En este tema se proporciona un script escrito en HTML/JavaScript que los administradores pueden usar para determinar si [!INCLUDE[TLA2#tla_avalonwinfx](../../../../includes/tla2sharptla-avalonwinfx-md.md)] está presente en un sistema.  
+Antes de que los administradores pueden implementar las aplicaciones de Microsoft .NET Framework en un sistema, debe confirmar primero que el tiempo de ejecución de .NET Framework está presente. En este tema se proporciona un script escrito en HTML/JavaScript que los administradores pueden usar para determinar si está presente en un sistema de .NET Framework.  
   
 > [!NOTE]
 >  Para obtener más información acerca de cómo instalar, implementar y detectar Microsoft .NET Framework, vea la explicación en [implementación Microsoft .NET Framework versión 3.0](http://go.microsoft.com/fwlink/?LinkId=96739).  
   
 <a name="content_expiration"></a>   
 ## <a name="detect-the-net-clr-user-agent-string"></a>Detectar la cadena de agente de usuario ".NET CLR"  
- Cuando [!INCLUDE[TLA2#tla_avalonwinfx](../../../../includes/tla2sharptla-avalonwinfx-md.md)] está instalado, el archivo MSI agrega ".NET CLR" y el número de versión a la cadena UserAgent. En el ejemplo siguiente se muestra un script incrustado en una página HTML sencilla. El script busca la cadena UserAgent para determinar si [!INCLUDE[TLA2#tla_avalonwinfx](../../../../includes/tla2sharptla-avalonwinfx-md.md)] está instalado y muestra un mensaje de estado sobre los resultados de la búsqueda.  
+ Cuando se instala .NET Framework, el archivo MSI agrega ".NET CLR" y el número de versión a la cadena UserAgent. En el ejemplo siguiente se muestra un script incrustado en una página HTML sencilla. El script busca la cadena UserAgent para determinar si está instalado .NET Framework y muestra un mensaje de estado sobre los resultados de la búsqueda.  
   
 ```  
 <HTML>  

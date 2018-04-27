@@ -26,11 +26,11 @@ ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 4d288d321063512f91ad94b417bb1a6bf38c9ef9
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: 2e31605f428f4e1dc58ee3332977f14dfd394489
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="add-ins-and-extensibility"></a>Complementos y extensibilidad
 <a name="top"></a> Los complementos ofrecen características o servicios extendidos para una aplicación host. El [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] proporciona un modelo de programación que los desarrolladores pueden usar para desarrollar complementos y activarlos en la aplicación host. Para ello, el modelo construye una canalización de comunicación entre el host y el complemento. El modelo se implementa con los tipos de los espacios de nombres <xref:System.AddIn>, <xref:System.AddIn.Hosting>, <xref:System.AddIn.Pipeline>y <xref:System.AddIn.Contract> .  
@@ -54,7 +54,7 @@ ms.lasthandoff: 02/01/2018
   
  La ilustración siguiente muestra la canalización.  
   
- ![Agregar &#45; en el modelo de canalización. ] (../../../docs/framework/add-ins/media/addin1.png "AddIn1")  
+ ![Agregar&#45;en el modelo de canalización. ] (../../../docs/framework/add-ins/media/addin1.png "AddIn1")  
 Canalización de complementos  
   
  No es necesario que los ensamblados de estos segmentos estén en el mismo dominio de aplicación. Puede cargar un complemento en su propio dominio de aplicación nuevo, en un dominio de aplicación existente o, incluso, en el dominio de aplicación del host. Puede cargar varios complementos en el mismo dominio de aplicación, lo que permite a los complementos compartir recursos y contextos de seguridad.  
@@ -116,7 +116,7 @@ Canalización de complementos
   
 |Título|Descripción|  
 |-----------|-----------------|  
-|[Pipeline Development](../../../docs/framework/add-ins/pipeline-development.md)|Describe la canalización de comunicación de los segmentos de la aplicación host al complemento. Proporciona ejemplos de código en los temas del tutorial que describen cómo construir la canalización y cómo implementar segmentos en la canalización de [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)].|  
+|[Pipeline Development](../../../docs/framework/add-ins/pipeline-development.md)|Describe la canalización de comunicación de los segmentos de la aplicación host al complemento. Proporciona ejemplos de código de temas del tutorial que describen cómo construir la canalización y cómo implementar segmentos en la canalización en Visual Studio.|  
 |[Dominios de aplicación y ensamblados](http://msdn.microsoft.com/library/433b04ae-4ba8-4849-9dbd-79194f240346)|Describe la relación entre los dominios de aplicación, que proporcionan un límite de aislamiento para la seguridad, la confiabilidad y el control de versiones, además de los ensamblados.|  
   
  [Volver al principio](#top)  

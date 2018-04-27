@@ -1,12 +1,13 @@
 ---
-title: "Tutorial: Enlazar a datos en aplicaciones híbridas"
-ms.custom: 
+title: 'Tutorial: Enlazar a datos en aplicaciones híbridas'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,16 +16,17 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - data binding [WPF interoperability]
 ms.assetid: 18997e71-745a-4425-9c69-2cbce1d8669e
-caps.latest.revision: "39"
+caps.latest.revision: 39
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c1348f3a57dd04d58298c9746b74a7c3a1baf30c
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: b8afe4732363ec61d73db13e9b190381cbd8f29d
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="walkthrough-binding-to-data-in-hybrid-applications"></a>Tutorial: Enlazar a datos en aplicaciones híbridas
 Enlazar un origen de datos a un control es esencial para proporcionar a los usuarios con acceso a datos subyacentes, si usas [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] o [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Este tutorial muestra cómo puede utilizar el enlace de datos en aplicaciones híbridas que incluyen ambos [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] y [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] controles.  
@@ -90,7 +92,7 @@ Enlazar un origen de datos a un control es esencial para proporcionar a los usua
      [!code-xaml[WPFWithWFAndDatabinding#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml#3)]  
   
 ## <a name="specifying-the-form-layout"></a>Especificar el diseño del formulario  
- El diseño del formulario se define mediante una cuadrícula con tres filas y tres columnas. <xref:System.Windows.Controls.Label>dispone de controles para identificar cada columna de la tabla Customers.  
+ El diseño del formulario se define mediante una cuadrícula con tres filas y tres columnas. <xref:System.Windows.Controls.Label> dispone de controles para identificar cada columna de la tabla Customers.  
   
 #### <a name="to-set-up-the-grid-layout"></a>Para configurar el diseño de cuadrícula  
   
@@ -127,7 +129,7 @@ Enlazar un origen de datos a un control es esencial para proporcionar a los usua
      [!code-xaml[WPFWithWFAndDatabinding#7](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml#7)]  
   
 ## <a name="adding-the-data-source-to-the-project"></a>Agregar el origen de datos al proyecto  
- Con [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)], puede agregar fácilmente un origen de datos al proyecto. Este procedimiento agrega un conjunto de datos fuertemente tipados a su proyecto. También se agregan otras clases de compatibilidad, como adaptadores de tabla para cada una de las tablas elegidas.  
+ Con Visual Studio, puede agregar fácilmente un origen de datos al proyecto. Este procedimiento agrega un conjunto de datos fuertemente tipados a su proyecto. También se agregan otras clases de compatibilidad, como adaptadores de tabla para cada una de las tablas elegidas.  
   
 #### <a name="to-add-the-data-source"></a>Para agregar el origen de datos  
   

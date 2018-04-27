@@ -1,12 +1,13 @@
 ---
-title: "Información general sobre la seguridad en formularios Windows Forms"
-ms.custom: 
+title: Información general sobre la seguridad en formularios Windows Forms
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - code access security [Windows Forms], Windows Forms
@@ -15,16 +16,17 @@ helpviewer_keywords:
 - security [Windows Forms], about security
 - access control [Windows Forms], Windows Forms
 ms.assetid: 4810dc9f-ea23-4ce1-8ea1-657f0ff1d820
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e56ae77a36ce0000fd518a3324ab5e5b8409d1d4
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 57f46620e7b98bb1a4c120684075dbe065db9714
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="security-in-windows-forms-overview"></a>Información general sobre la seguridad en formularios Windows Forms
 Antes del lanzamiento de [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], todo el código que se ejecutaba en el equipo de un usuario tenía los mismos derechos o permisos de acceso a los recursos que los que tenía un usuario del equipo. Por ejemplo, si el usuario tenía acceso al sistema de archivos, el código también tenía acceso al sistema de archivos; si el usuario tenía acceso a una base de datos, el código también tenía acceso a esa base de datos. Aunque estos derechos o permisos pueden ser aceptables para el código de los ejecutables que el usuario ha instalado explícitamente en el equipo local, no pueden ser aceptables para el código potencialmente malintencionado procedente de Internet o de una intranet local. Este código no debe tener acceso a los recursos del equipo del usuario sin permiso.  
@@ -60,7 +62,7 @@ Antes del lanzamiento de [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md
   
  Cuando solicite permisos opcionales, debe controlar las excepciones de seguridad que se generarán si la aplicación realiza una acción que requiere permisos que no tiene concedidos. El control adecuado de <xref:System.Security.SecurityException> garantizará que la aplicación continúa ejecutándose. La aplicación puede usar la excepción para determinar si se debería deshabilitar una característica para el usuario. Por ejemplo, una aplicación puede deshabilitar la opción de menú **Guardar** si no se concede el permiso de archivo necesario.  
   
- A veces es difícil saber si ha declarado todos los permisos adecuados. Por ejemplo, una llamada de método que a primera vista parece inofensiva, puede tener acceso al sistema de archivos en algún momento durante su ejecución. Si la aplicación no se implementa con todos los permisos necesarios, la depuración en el escritorio no dará problemas, pero producirá un error cuando se implemente. Tanto el SDK de [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] como [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] contienen herramientas para calcular los permisos que necesita una aplicación: la herramienta de línea de comandos MT.exe y la característica Calcular permisos de [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], respectivamente.  
+ A veces es difícil saber si ha declarado todos los permisos adecuados. Por ejemplo, una llamada de método que a primera vista parece inofensiva, puede tener acceso al sistema de archivos en algún momento durante su ejecución. Si la aplicación no se implementa con todos los permisos necesarios, la depuración en el escritorio no dará problemas, pero producirá un error cuando se implemente. Tanto el [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] SDK y [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] contienen herramientas para calcular los permisos que necesita una aplicación: la herramienta comandos MT.exe línea y la característica Calcular permisos de Visual Studio, respectivamente.  
   
  Los temas siguientes describen características de seguridad adicionales de Windows Forms.  
   
@@ -86,12 +88,12 @@ Antes del lanzamiento de [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md
   
  La tecnología elegida dependerá de su entorno de implementación. Para más información, consulte el artículo [Elegir una estrategia de implementación de ClickOnce](/visualstudio/deployment/choosing-a-clickonce-deployment-strategy).  
   
- De forma predeterminada, las aplicaciones [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] implementadas mediante [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] o las herramientas del SDK de [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] (Mage.exe y MageUI.exe) se configuran para ejecutarse en un equipo cliente que tiene plena confianza. Si va a implementar la aplicación con confianza parcial o solo con algunos permisos adicionales, tendrá que cambiar este valor predeterminado. Puede hacerlo con [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] o con la herramienta del SDK de [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] MageUI.exe cuando configure la implementación. Para obtener más información acerca de cómo usar MageUI.exe, vea el tutorial sobre implementación de una aplicación ClickOnce desde la línea de comandos.  Consulte también [Cómo: Establecer permisos personalizados para una aplicación ClickOnce](http://msdn.microsoft.com/library/hafybdaa\(v=vs.110\)) o [Cómo: Establecer permisos personalizados para una aplicación ClickOnce](http://msdn.microsoft.com/library/hafybdaa\(v=vs.120\)).  
+ De forma predeterminada, [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] las aplicaciones implementadas mediante Visual Studio o el [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] herramientas del SDK (Mage.exe y MageUI.exe) están configurados para ejecutarse en un equipo cliente que tiene plena confianza. Si va a implementar la aplicación con confianza parcial o solo con algunos permisos adicionales, tendrá que cambiar este valor predeterminado. Esto se puede hacer con cualquier instancia de Visual Studio o [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] herramienta MageUI.exe cuando configure la implementación del SDK. Para obtener más información acerca de cómo usar MageUI.exe, vea el tutorial sobre implementación de una aplicación ClickOnce desde la línea de comandos.  Consulte también [Cómo: Establecer permisos personalizados para una aplicación ClickOnce](http://msdn.microsoft.com/library/hafybdaa\(v=vs.110\)) o [Cómo: Establecer permisos personalizados para una aplicación ClickOnce](http://msdn.microsoft.com/library/hafybdaa\(v=vs.120\)).  
   
  Para más información acerca de los aspectos de seguridad de [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] y la elevación de permisos, consulte [Proteger las aplicaciones ClickOnce](/visualstudio/deployment/securing-clickonce-applications). Para más información sobre la implementación de aplicaciones de confianza, consulte [Introducción a la implementación de aplicaciones de confianza](/visualstudio/deployment/trusted-application-deployment-overview).  
   
 ### <a name="testing-the-application"></a>Probar la aplicación  
- Si ha implementado la aplicación de Windows Forms con [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], puede habilitar la depuración en confianza parcial o un conjunto de permisos restringido desde el entorno de desarrollo.  Consulte también [Cómo: depurar una aplicación ClickOnce con permisos restringidos](http://msdn.microsoft.com/library/593zkfdf\(v=vs.110\)) o [Cómo: depurar una aplicación ClickOnce con permisos restringidos](http://msdn.microsoft.com/library/593zkfdf\(v=vs.120\)).  
+ Si ha implementado la aplicación de formularios Windows Forms con Visual Studio, puede habilitar la depuración en confianza parcial o un conjunto del entorno de desarrollo de permisos restringidos.  Consulte también [Cómo: depurar una aplicación ClickOnce con permisos restringidos](http://msdn.microsoft.com/library/593zkfdf\(v=vs.110\)) o [Cómo: depurar una aplicación ClickOnce con permisos restringidos](http://msdn.microsoft.com/library/593zkfdf\(v=vs.120\)).  
   
 ## <a name="see-also"></a>Vea también  
  [Windows Forms Security](../../../docs/framework/winforms/windows-forms-security.md)  

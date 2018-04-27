@@ -16,14 +16,14 @@ ms.assetid: f5a72143-c268-4dff-a019-974ad940e17d
 caps.latest.revision: 15
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 25fbde3845d378d4a2bcfc13c71124ad1bc29514
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: a3e19f8c0a06308a604d2b219f730bf175fb0c46
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="com-interoperability-in-net-framework-applications-visual-basic"></a>Interoperabilidad COM en aplicaciones .NET Framework (Visual Basic)
-Si desea utilizar objetos COM y objetos de .NET Framework en la misma aplicación, debe resolver las diferencias en cómo los objetos existen en la memoria. Un objeto de .NET Framework se encuentra en la memoria administrada, la memoria controlada por common language runtime y se pueden mover en tiempo de ejecución según sea necesario. Un objeto COM se encuentra en la memoria no administrada y no se prevé que se mueva a otra ubicación de memoria. [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] y el [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] proporcionan herramientas para controlar la interacción de estos administrados y componentes. Para obtener más información sobre el código administrado, consulte [Common Language Runtime](../../../standard/clr.md).  
+Si desea utilizar objetos COM y objetos de .NET Framework en la misma aplicación, debe resolver las diferencias en cómo los objetos existen en la memoria. Un objeto de .NET Framework se encuentra en la memoria administrada, la memoria controlada por common language runtime y se pueden mover en tiempo de ejecución según sea necesario. Un objeto COM se encuentra en la memoria no administrada y no se prevé que se mueva a otra ubicación de memoria. Visual Studio y la [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] proporcionan herramientas para controlar la interacción de estos administrados y componentes. Para obtener más información sobre el código administrado, consulte [Common Language Runtime](../../../standard/clr.md).  
   
  Además de usar objetos COM en aplicaciones. NET, también puede utilizar Visual Basic para desarrollar objetos accesibles desde código no administrado a través de COM.  
   

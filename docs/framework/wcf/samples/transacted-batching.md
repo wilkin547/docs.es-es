@@ -1,24 +1,26 @@
 ---
 title: Procesamiento por lotes con transacciones
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ecd328ed-332e-479c-a894-489609bcddd2
-caps.latest.revision: "23"
+caps.latest.revision: 23
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 87d8e3e09618b214dcafb7afd82970dde54fc4fc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 50596aaf5290146148ecb9636b78f7f9180c0b79
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="transacted-batching"></a>Procesamiento por lotes con transacciones
 Este ejemplo muestra cómo procesar por lotes transacciones leídas mediante Message Queuing (MSMQ). El procesamiento por lotes con transacciones es una característica de optimización de rendimiento para las transacciones leídas en comunicación en cola.  
@@ -142,8 +144,8 @@ Este ejemplo muestra cómo procesar por lotes transacciones leídas mediante Mes
  El comportamiento del servicio define un comportamiento de la operación con `TransactionScopeRequired` definido en `true`. Esto garantiza que los administradores de recursos a los que el método tiene acceso utilizan el mismo ámbito de la transacción usado para recuperar el mensaje de la cola. En este ejemplo, utilizamos una base de datos básica para almacenar la información del pedido de compra contenida en el mensaje. El ámbito de la transacción también garantiza que si el método produce una excepción, el mensaje se devuelva a la cola. Sin establecer este comportamiento de operación, un canal en cola crea una transacción para leer el mensaje de la cola y lo confirma automáticamente antes de la expedición de tal manera que si se produce un error en la operación, el mensaje se pierde. El escenario más común es que las operaciones de servicio se inscriban en la transacción que se utiliza para leer el mensaje de la cola, tal y como se muestra en el código siguiente.  
   
  Observe que `ReleaseServiceInstanceOnTransactionComplete` está establecido en `false`. Éste es un requisito importante para el procesamiento por lotes. La propiedad `ReleaseServiceInstanceOnTransactionComplete` en `ServiceBehaviorAttribute` indica qué hacer con la instancia del servicio una vez la transacción se completa. De forma predeterminada, la instancia del servicio se lanza al completar la transacción. El aspecto básico del procesamiento por lotes es el uso de una transacción única para leer y enviar muchos mensajes en la cola. Por consiguiente, al lanzar la instancia del servicio, se acaba completando la transacción prematuramente, lo que niega el mismo uso del procesamiento por lotes. Si esta propiedad está establecida en `true` y el comportamiento del procesamiento por lotes con transacciones se agrega al extremo, el comportamiento de la validación por lotes produce una excepción.  
-  
-```  
+
+```csharp
 // Service class that implements the service contract.  
 // Added code to write output to the console window.  
 [ServiceBehavior(ReleaseServiceInstanceOnTransactionComplete=false,   
@@ -160,11 +162,11 @@ public class OrderProcessorService : IOrderProcessor
     }  
     …  
 }  
-```  
-  
+```
+
  La clase `Orders` encapsula el procesamiento de la orden. En el ejemplo, actualiza la base de datos con información del pedido de compra.  
-  
-```  
+
+```csharp
 // Order Processing Logic  
 public class Orders  
 {  
@@ -234,8 +236,8 @@ public class Orders
                                      {1} ", rowsAffected, po.PONumber);  
     }  
 }  
-```  
-  
+```
+
  El comportamiento del procesamiento por lotes y su configuración se especifican en la configuración de la aplicación del servicio.  
   
 ```xml  
@@ -292,8 +294,8 @@ public class Orders
 >  La opción del tamaño del lote depende de su aplicación. Si el tamaño del lote es demasiado pequeño, puede no obtener el rendimiento deseado. Por otro lado si el tamaño del lote es demasiado grande, puede deteriorar el rendimiento. Por ejemplo, su transacción podría durar mucho más tiempo y realizar bloqueos en su base de datos o su transacción se podría bloquear, lo que podría hacer que el lote se revierta y rehacer el trabajo.  
   
  El cliente crea un ámbito de transacción. La comunicación con la cola tiene lugar dentro del ámbito de la transacción, provocando que se trate como una unidad atómica donde se envían todos los mensajes a la cola o no se envía ninguno. La transacción se confirma llamando a <xref:System.Transactions.TransactionScope.Complete%2A> en el ámbito de la transacción.  
-  
-```  
+
+```csharp
 //Client implementation code.  
 class Client  
 {  
@@ -340,8 +342,8 @@ class Client
         Console.ReadLine();  
     }  
 }  
-```  
-  
+```
+
  Al ejecutar el ejemplo, las actividades del servicio y del cliente se muestran en las ventanas de la consola del cliente y del servicio. Puede ver los mensajes recibidos por el servicio desde el cliente. Presione Entrar en cada ventana de la consola para cerrar el servicio y el cliente. Observe que debido a que se está usando el proceso de poner en cola, el cliente y el servicio no tienen que estar activados y ejecutándose simultáneamente. Puede ejecutar el cliente, cerrarlo e iniciar el servicio y seguir recibiendo mensajes. Puede observar un gran resultado cuando los mensajes se leen en un lote y se procesan.  
   
 ```  

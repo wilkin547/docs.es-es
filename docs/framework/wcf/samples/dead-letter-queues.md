@@ -1,24 +1,26 @@
 ---
 title: Colas con problemas de entrega
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ff664f33-ad02-422c-9041-bab6d993f9cc
-caps.latest.revision: "35"
+caps.latest.revision: 35
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 09a41abc8bc9fc3469ba35d7c7cfbe85d05ca174
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9892579633103f1e7a6612c09865c91c559df34c
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="dead-letter-queues"></a>Colas con problemas de entrega
 Este ejemplo muestra cómo administrar y procesar mensajes que han producido errores en la entrega. Se basa en el [transacciones enlace MSMQ](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) ejemplo. El ejemplo usa el enlace `netMsmqBinding`. El servicio es una aplicación de consola autohospedada que le permite observar el servicio que recibe los mensajes en cola.  
@@ -50,21 +52,21 @@ Este ejemplo muestra cómo administrar y procesar mensajes que han producido err
  La aplicación del cliente puede leer los mensajes en la cola de mensajes no enviados e intentar enviar el mensaje o corregir el error que causó que el mensaje original fuera colocado en la cola de mensajes no enviados y enviar el mensaje. En el ejemplo, el cliente muestra un mensaje de error.  
   
  El contrato de servicios es `IOrderProcessor`, tal y como se muestra en el código de ejemplo siguiente.  
-  
-```  
+
+```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
 public interface IOrderProcessor  
 {  
     [OperationContract(IsOneWay = true)]  
     void SubmitPurchaseOrder(PurchaseOrder po);  
 }  
-```  
-  
+```
+
  El código del servicio en el ejemplo es el de la [transacciones enlace MSMQ](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md).  
   
  La comunicación con el servicio tiene lugar dentro del ámbito de una transacción. El servicio lee los mensajes de la cola, realiza la operación y, a continuación, muestra los resultados de la operación. La aplicación también crea una cola de mensajes no enviados para mensajes no enviados.  
-  
-```  
+
+```csharp
 //The service contract is defined in generatedClient.cs, generated from the service by the svcutil tool.  
   
 //Client implementation code.  
@@ -117,8 +119,8 @@ class Client
         Console.ReadLine();  
     }  
 }  
-```  
-  
+```
+
  La configuración del cliente especifica una duración corta para que el mensaje alcance el servicio. Si el mensaje no se puede transmitir dentro de la duración especificada, el mensaje expira y se mueve a la cola de mensajes no enviados.  
   
 > [!NOTE]
@@ -163,8 +165,8 @@ class Client
 >  La cola de mensajes no enviados es una cola del cliente y es local al administrador de cola del cliente.  
   
  La implementación de servicio de mensajes no enviados comprueba la razón por la que un mensaje no se ha enviado y toma medidas de corrección. La razón de un error en el envío del mensaje se captura en dos enumeraciones, <xref:System.ServiceModel.Channels.MsmqMessageProperty.DeliveryFailure%2A> y <xref:System.ServiceModel.Channels.MsmqMessageProperty.DeliveryStatus%2A>. Se puede recuperar el <xref:System.ServiceModel.Channels.MsmqMessageProperty> de <xref:System.ServiceModel.OperationContext> como se muestra en el código muestra siguiente:  
-  
-```  
+
+```csharp
 public void SubmitPurchaseOrder(PurchaseOrder po)  
 {  
     Console.WriteLine("Submitting purchase order did not succed ", po);  
@@ -176,15 +178,15 @@ public void SubmitPurchaseOrder(PurchaseOrder po)
     Console.WriteLine("Message Delivery Failure: {0}",   
                                                mqProp.DeliveryFailure);  
     Console.WriteLine();  
-    ….  
-}  
-```  
-  
+    …  
+}
+```
+
  Los mensajes en la cola de mensajes no enviados son mensajes que se dirigen al servicio que está procesando el mensaje. Por consiguiente, cuando el servicio de mensajes no enviados lee los mensajes de la cola, el nivel de canal de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] encuentra la desigualdad en los extremos y no envía el mensaje. En este caso, el mensaje se dirige al servicio de procesamiento de la orden, pero quien lo recibe es el servicio de mensajes no enviados. Para recibir un mensaje que se dirige a un extremo diferente, una dirección se filtra para coincidir con cualquier dirección especificada en `ServiceBehavior`. Esto se exigen para procesar correctamente los mensajes que se leen de la cola de mensajes no enviados.  
   
  En este ejemplo, el servicio de mensajes no enviados reenvía el mensaje en el caso de que la razón para el error sea que el mensaje ha agotado el tiempo de espera. Para el resto de razones, muestra el error de la entrega, como se muestra en el código muestra siguiente:  
-  
-```  
+
+```csharp
 // Service class that implements the service contract.  
 // Added code to write output to the console window.  
 [ServiceBehavior(InstanceContextMode=InstanceContextMode.Single, ConcurrencyMode=ConcurrencyMode.Single, AddressFilterMode=AddressFilterMode.Any)]  
@@ -237,8 +239,8 @@ public class PurchaseOrderDLQService : IOrderProcessor
         }  
     }  
 }   
-```  
-  
+```
+
  El ejemplo siguiente muestra la configuración para un mensaje no enviado:  
   
 ```xml  

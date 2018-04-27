@@ -1,24 +1,26 @@
 ---
-title: "Encabezados de dirección"
-ms.custom: 
+title: Encabezados de dirección
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: b0c94d4a-3bde-4b4d-bb6d-9f12bc3a6940
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: aafd6ec911464dcc2b936b9f9fc74b9bc39808bf
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 1392e06b0148ee24c9591839b58baf45da5109d4
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="address-headers"></a>Encabezados de dirección
 El ejemplo de encabezados de dirección muestra cómo los clientes pueden pasar los parámetros de referencia a un servicio utilizando [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
@@ -35,7 +37,7 @@ El ejemplo de encabezados de dirección muestra cómo los clientes pueden pasar 
 ## <a name="client"></a>Cliente  
  Para que el cliente envíe un parámetro de referencia, debe agregar un `AddressHeader` a `EndpointAddress` de `ServiceEndpoint`. Dado que la clase `EndpointAddress` es inmutable, la modificación de una dirección del extremo se debe hacer utilizando la clase `EndpointAddressBuilder`. El código siguiente inicializa el cliente para enviar un parámetro de referencia como parte de su mensaje.  
   
-```  
+```csharp   
 HelloClient client = new HelloClient();  
 EndpointAddressBuilder builder =   
     new EndpointAddressBuilder(client.Endpoint.Address);  
@@ -54,23 +56,21 @@ client.Endpoint.Address = builder.ToEndpointAddress();
 ## <a name="server"></a>Servidor  
  La implementación de la operación del servicio`Hello()` utiliza el `OperationContext` actual para inspeccionar los valores de los encabezados en el mensaje entrante.  
   
-```  
+```csharp   
 string id = null;  
 // look at headers on incoming message  
 for (int i = 0;   
      i < OperationContext.Current.IncomingMessageHeaders.Count;   
      ++i)  
 {  
-    MessageHeaderInfo h =   
-        OperationContext.Current.IncomingMessageHeaders[i];  
+    MessageHeaderInfo h = OperationContext.Current.IncomingMessageHeaders[i];  
     // for any reference parameters with the correct name & namespace  
     if (h.IsReferenceParameter &&   
         h.Name == IDName &&   
         h.Namespace == IDNamespace)  
     {  
         // read the value of that header  
-        XmlReader xr =   
-OperationContext.Current.IncomingMessageHeaders.GetReaderAtHeader(i);  
+        XmlReader xr = OperationContext.Current.IncomingMessageHeaders.GetReaderAtHeader(i);  
         id = xr.ReadElementContentAsString();  
     }  
 }  

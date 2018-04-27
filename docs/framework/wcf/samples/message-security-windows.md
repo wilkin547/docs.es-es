@@ -1,28 +1,28 @@
 ---
 title: Seguridad de mensaje de Windows
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - WS Security
 ms.assetid: d2221d1c-c9cb-48d1-b044-a3b4445c7f05
-caps.latest.revision: 
+caps.latest.revision: 34
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: c8bb8d0506dd535a312bd8df8954c8143d9543ae
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d42f266e51f6d5dd8c772d674736adc729b2ac2c
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="message-security-windows"></a>Seguridad de mensaje de Windows
 Este ejemplo muestra cómo configurar un<xref:System.ServiceModel.WSHttpBinding> que enlaza para utilizar la seguridad del nivel de mensaje con autenticación de Windows. En este ejemplo se basa en el [Introducción](../../../../docs/framework/wcf/samples/getting-started-sample.md). En este ejemplo, el cliente es una aplicación de consola (.exe) y los Servicios de Internet Information Server (IIS) hospedan el servicio.  
@@ -75,15 +75,15 @@ Este ejemplo muestra cómo configurar un<xref:System.ServiceModel.WSHttpBinding>
 ```  
   
  El código fuente del servicio se ha modificado para mostrar cómo <xref:System.ServiceModel.OperationContext.ServiceSecurityContext%2A> se puede utilizar para tener acceso a la identidad del llamador.  
-  
-```  
+
+```csharp
 public string GetCallerIdentity()  
 {  
     // The Windows identity of the caller can be accessed on the ServiceSecurityContext.WindowsIdentity.  
     return OperationContext.Current.ServiceSecurityContext.WindowsIdentity.Name;  
 }  
-```  
-  
+```
+
  Al ejecutar el ejemplo, las solicitudes y respuestas de la operación se muestran en la ventana de la consola del cliente. El primer método llamado - `GetCallerIdentity`- devuelve el nombre de la identidad del llamador al cliente. Presione ENTRAR en la ventana de la consola para cerrar el cliente.  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Configurar, compilar y ejecutar el ejemplo  

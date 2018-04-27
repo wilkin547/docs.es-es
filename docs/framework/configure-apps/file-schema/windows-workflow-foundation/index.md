@@ -14,14 +14,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: baa8846d339e87c121ece2678157c132035db07f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9644b1e25c8d1568a01434a587e4271b163a3f0b
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="windows-workflow-foundation-configuration-schema"></a>Esquema de configuración de Windows Workflow Foundation
-Los elementos de configuración de [!INCLUDE[wf](../../../../../includes/wf-md.md)] permiten configurar las aplicaciones de flujo de trabajo. Para una aplicación de flujo de trabajo puede configurar, entre otras cosas, el seguimiento y la traza. Para obtener más información sobre el seguimiento y la traza, vea [Workflow Tracking and Tracing](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md) (Seguimiento y traza del flujo de trabajo). Para los servicios del flujo de trabajo también puede usar los elementos de configuración [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]. Para obtener más información sobre [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)], vea [WCF Configuration Schema](../../../../../docs/framework/configure-apps/file-schema/wcf/index.md) (Esquema de configuración de WCF).  
+Elementos de configuración de Windows Workflow Foundation (WF) le permiten configurar las aplicaciones de flujo de trabajo. Para una aplicación de flujo de trabajo puede configurar, entre otras cosas, el seguimiento y la traza. Para obtener más información sobre el seguimiento y la traza, vea [Workflow Tracking and Tracing](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md) (Seguimiento y traza del flujo de trabajo). Para los servicios del flujo de trabajo también puede usar los elementos de configuración [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]. Para obtener más información sobre [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)], vea [WCF Configuration Schema](../../../../../docs/framework/configure-apps/file-schema/wcf/index.md) (Esquema de configuración de WCF).  
   
  Puesto que los archivos de configuración tienen el formato XML, debe familiarizarse con el formato XML si desea modificarlos manualmente con un editor de texto. De lo contrario, puede encontrarse con problemas como no encontrar un atributo o una etiqueta de elemento XML. Esto se debe a que los atributos y las etiquetas del elemento XML distinguen entre mayúsculas y minúsculas.  
   

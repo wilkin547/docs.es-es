@@ -1,12 +1,13 @@
 ---
-title: "Tutorial: Crear un formulario MDI con combinación de menús y controles ToolStrip"
-ms.custom: 
+title: 'Tutorial: Crear un formulario MDI con combinación de menús y controles ToolStrip'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -21,16 +22,17 @@ helpviewer_keywords:
 - MDI forms [Windows Forms], creating
 - MDI forms [Windows Forms], walkthroughs
 ms.assetid: fbab4221-74af-42d0-bbf4-3c97f7b2e544
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3e0538151c19eb47f8a51330b7f2c06818d1e73f
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: bc8214815beb0eac6fe3811ba198207a06ee1a9a
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="walkthrough-creating-an-mdi-form-with-menu-merging-and-toolstrip-controls"></a>Tutorial: Crear un formulario MDI con combinación de menús y controles ToolStrip
 El espacio de nombres <xref:System.Windows.Forms?displayProperty=nameWithType> es compatible con aplicaciones de interfaces de múltiples documentos (MDI) y el control <xref:System.Windows.Forms.MenuStrip> admite la combinación de menús. Los formularios MDI también pueden ser compatibles con los controles <xref:System.Windows.Forms.ToolStrip>.  
@@ -57,7 +59,7 @@ El espacio de nombres <xref:System.Windows.Forms?displayProperty=nameWithType> e
 ## <a name="prerequisites"></a>Requisitos previos  
  Para poder completar este tutorial, necesitará:  
   
--   Los permisos necesarios para poder crear y ejecutar proyectos de aplicación de Windows Forms en el equipo donde [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] está instalado.  
+-   Permisos suficientes para poder crear y ejecutar proyectos de aplicación de Windows Forms en el equipo donde está instalado Visual Studio.  
   
 ## <a name="creating-the-project"></a>Crear el proyecto  
  El primer paso es crear el proyecto y configurar el formulario.  

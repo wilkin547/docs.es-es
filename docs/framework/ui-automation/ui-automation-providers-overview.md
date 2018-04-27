@@ -1,27 +1,29 @@
 ---
-title: "Información general sobre proveedores de UI Automation"
-ms.custom: 
+title: Información general sobre proveedores de UI Automation
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - UI Automation, providers
 - providers, UI Automation
 ms.assetid: 859557b8-51e1-4d15-92e8-318d2dcdb2f7
-caps.latest.revision: "38"
+caps.latest.revision: 38
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: dc5cb5749bbfe06fd3a1bbe3537b28c7bbfa295d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: a8279b8c2c39ce37fa9e3af55a6b079e8202b3ff
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="ui-automation-providers-overview"></a>Información general sobre proveedores de UI Automation
 > [!NOTE]
@@ -38,12 +40,12 @@ ms.lasthandoff: 12/22/2017
  Los proveedores de automatización de la interfaz de usuario se dividen en dos categorías: proveedores del lado cliente y proveedores del lado servidor.  
   
 ### <a name="client-side-providers"></a>Proveedores del lado cliente  
- Los proveedores de cliente se implementan por los clientes de automatización de la interfaz de usuario para comunicarse con una aplicación que no admite, o no admite por completo, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]. Los proveedores del lado cliente suelen comunicarse con el servidor a través del límite del proceso enviando y recibiendo mensajes [!INCLUDE[TLA2#tla_win](../../../includes/tla2sharptla-win-md.md)] .  
+ Los proveedores de cliente se implementan por los clientes de automatización de la interfaz de usuario para comunicarse con una aplicación que no admite, o no admite por completo, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]. Proveedores del lado cliente suelen comunican con el servidor a través de los límites del proceso enviando y recibiendo mensajes de Windows.  
   
- Dado que los proveedores de automatización de la interfaz de usuario para los controles de las aplicaciones [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)], [!INCLUDE[TLA2#tla_winforms](../../../includes/tla2sharptla-winforms-md.md)]o [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] se ofrecen como parte del sistema operativo, las aplicaciones cliente rara vez tienen que implementar sus propios proveedores y en esta información general no se tratan más.  
+ Dado que los proveedores de automatización de la interfaz de usuario para los controles en [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)], formularios Windows Forms, o [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] las aplicaciones se proporcionan como parte del sistema operativo, las aplicaciones cliente rara vez tendrían que implementar sus propios proveedores y esta información general no tratan más adelante.  
   
 ### <a name="server-side-providers"></a>Proveedores del lado servidor  
- Los proveedores del lado servidor se implementan mediante controles personalizados o aplicaciones que se basan en un marco de trabajo de la interfaz de usuario distinto de [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)], [!INCLUDE[TLA2#tla_winforms](../../../includes/tla2sharptla-winforms-md.md)]o [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)].  
+ Proveedores del lado servidor se implementan mediante controles personalizados o aplicaciones que se basan en un marco de interfaz de usuario distinto de [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)], formularios Windows Forms, o [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)].  
   
  Los proveedores del lado servidor se comunican con aplicaciones cliente a través del límite de proceso al exponer interfaces al sistema principal [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , que a su vez atiende solicitudes de los clientes.  
   

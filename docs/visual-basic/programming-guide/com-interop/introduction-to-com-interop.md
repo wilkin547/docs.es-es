@@ -1,29 +1,30 @@
 ---
-title: "Información general sobre la interoperabilidad COM (Visual Basic)"
-ms.custom: 
+title: Información general sobre la interoperabilidad COM (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - interop assemblies
 - COM interop [Visual Basic], about COM interop
 ms.assetid: 8bd62e68-383d-407f-998b-29aa0ce0fd67
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 39a4245b51c1199a6aeb0c23282b1917f51164d2
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 5a13fabd729218dc2a980b9c63e153d17a140cce
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="introduction-to-com-interop-visual-basic"></a>Información general sobre la interoperabilidad COM (Visual Basic)
 El modelo de objetos componentes (COM) permite a un objeto exponer su funcionalidad a otros componentes y aplicaciones del host. Aunque los objetos COM han sido fundamentales para la programación durante muchos años para Windows, las aplicaciones diseñadas para common language runtime (CLR) ofrecen muchas ventajas.  
   
- [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]las aplicaciones reemplazará finalmente a los que haya creado con COM. Hasta entonces, puede que tenga que utilizar o crear objetos COM mediante [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]. Interoperabilidad con COM, o *interoperabilidad COM*, le permite utilizar objetos COM existentes mientras realiza la transición a la [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] a su propio ritmo.  
+ [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] las aplicaciones reemplazará finalmente a los que haya creado con COM. Hasta entonces, tendrá que utilizar o crear objetos COM con Visual Studio. Interoperabilidad con COM, o *interoperabilidad COM*, le permite utilizar objetos COM existentes mientras realiza la transición a la [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] a su propio ritmo.  
   
  Mediante el uso de la [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] para crear componentes COM, puede usar la interoperabilidad COM sin registro. Esto le permite controlar qué versión del archivo DLL se habilita cuando se instala en un equipo más de una versión y permite a los usuarios finales utilizar XCOPY o FTP para copiar la aplicación en un directorio adecuado en su equipo en el que se ejecuta. Para obtener más información, consulte [interoperabilidad COM sin registro](http://msdn.microsoft.com/library/90f308b9-82dc-414a-bce1-77e0155e56bd).  
   
@@ -49,7 +50,7 @@ El modelo de objetos componentes (COM) permite a un objeto exponer su funcionali
  Para obtener más información sobre los ensamblados y manifiestos de ensamblado, consulte [ensamblados y la caché Global de ensamblados](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md).  
   
 ### <a name="importing-and-exporting-type-libraries"></a>Importación y exportación de bibliotecas de tipos  
- [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]contiene una utilidad, Tlbimp, que le permite importar información desde una biblioteca de tipos en un [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] aplicación. Puede generar las bibliotecas de tipos de los ensamblados mediante la utilidad Tlbexp.  
+ Visual Studio contiene una utilidad, Tlbimp, que le permite importar información desde una biblioteca de tipos en un [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] aplicación. Puede generar las bibliotecas de tipos de los ensamblados mediante la utilidad Tlbexp.  
   
  Para obtener información sobre Tlbimp y Tlbexp, vea [Tlbimp.exe (importador de la biblioteca de tipos)](../../../framework/tools/tlbimp-exe-type-library-importer.md) y [Tlbexp.exe (exportador de la biblioteca de tipos)](http://msdn.microsoft.com/library/a487d61b-d166-467b-a7ca-d8b52fbff42d).  
   

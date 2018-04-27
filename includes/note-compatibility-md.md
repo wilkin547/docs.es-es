@@ -1,0 +1,2 @@
+> [!NOTE]
+>  Las funciones y los objetos del espacio de nombres <xref:Microsoft.VisualBasic.Compatibility.VB6> se proporcionan para su uso con las herramientas de actualización de Visual Basic 6.0 a Visual Basic 2008. En la mayoría de los casos, estas funciones y objetos duplican la funcionalidad que se puede encontrar en otros espacios de nombres de .NET Framework. Únicamente son necesarios cuando el modelo de código de Visual Basic 6.0 es significativamente distinto de la implementación en .NET Framework.

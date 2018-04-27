@@ -1,26 +1,27 @@
 ---
-title: "Configurar la validación de actividades"
-ms.custom: 
+title: Configurar la validación de actividades
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 25a4eccb-b8fc-4857-a01d-2683b6341219
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d75f03a9af5caa5569cbfd4d1d09cda8936f6562
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: f0b7099cbae2faf53e99f73a52f4c25f42ed6834
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="configuring-activity-validation"></a>Configurar la validación de actividades
-La validación de la actividad permite a los autores y usuarios de actividades identificar y notificar los errores en la configuración de una actividad antes de su ejecución. [!INCLUDE[wf](../../../includes/wf-md.md)] proporciona los tres tipos siguientes de validación de actividad:  
+La validación de la actividad permite a los autores y usuarios de actividades identificar y notificar los errores en la configuración de una actividad antes de su ejecución. Windows Workflow Foundation (WF) proporciona los tres tipos siguientes de validación de actividad:  
   
 -   Atributos `RequiredArgument` y `OverloadGroup`.  
   

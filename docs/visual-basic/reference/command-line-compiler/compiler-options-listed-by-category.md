@@ -1,6 +1,6 @@
 ---
 title: Opciones del compilador de Visual Basic, por categoría
-ms.date: 03/09/2018
+ms.date: 04/12/2018
 ms.prod: .net
 ms.reviewer: ''
 ms.suite: ''
@@ -12,14 +12,14 @@ helpviewer_keywords:
 ms.assetid: fbe36f7a-7cfa-4f77-a8d4-2be5958568e3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e66ec709a32b39e2e7427d6ce165f62212dac543
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: a90c54ae1bb4d89b2fbe0df62730bc55c0ceb64f
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="visual-basic-compiler-options-listed-by-category"></a>Opciones del compilador de Visual Basic, por categoría
-El compilador de línea de comandos de Visual Basic se proporciona como una alternativa a la compilación de programas desde el [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] el entorno de desarrollo integrado (IDE). La siguiente es una lista de las opciones de línea de comandos del compilador de Visual Basic clasificadas por categoría funcional.  
+El compilador de línea de comandos de Visual Basic se proporciona como una alternativa a la compilación de programas desde el entorno de desarrollo integrado (IDE) de Visual Studio. La siguiente es una lista de las opciones de línea de comandos del compilador de Visual Basic clasificadas por categoría funcional.  
 
 [!INCLUDE[compiler-options](~/includes/compiler-options.md)]
   
@@ -31,7 +31,7 @@ El compilador de línea de comandos de Visual Basic se proporciona como una alte
 |[-utf8output](../../../visual-basic/reference/command-line-compiler/utf8output.md)|Muestra los resultados del compilador en codificación UTF-8.|  
 |[-verbose](../../../visual-basic/reference/command-line-compiler/verbose.md)|Muestra información adicional durante la compilación.|  
 |`-modulename:<string>`|Especifica el nombre del módulo de origen.|  
-|[/preferreduilang](../../../csharp/language-reference/compiler-options/preferreduilang-compiler-option.md)|Especifica un idioma para los resultados del compilador.|  
+|[/preferreduilang](../../../csharp/language-reference/compiler-options/preferreduilang-compiler-option.md)|Especifica un idioma para los resultados del compilador.|
   
 ## <a name="optimization"></a>Optimización  
   
@@ -45,6 +45,7 @@ El compilador de línea de comandos de Visual Basic se proporciona como una alte
 |Opción|Propósito|  
 |---|---|  
 |[-doc](../../../visual-basic/reference/command-line-compiler/doc.md)|Procesa los comentarios de documentación generando un archivo XML.|  
+|[-determinista](../../../visual-basic/reference/command-line-compiler/deterministic.md)|Hace que el compilador generar un ensamblado cuyo contenido binario es idéntica en compilaciones si las entradas son idénticas.|
 |[-netcf](../../../visual-basic/reference/command-line-compiler/netcf.md)|Establece el compilador con destino en [!INCLUDE[Compact](~/includes/compact-md.md)].|  
 |[-out](../../../visual-basic/reference/command-line-compiler/out.md)|Especifica un directorio de salida.|  
 |[/refonly](refonly-compiler-option.md)|Genera un ensamblado de referencia.|
