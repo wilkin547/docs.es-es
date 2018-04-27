@@ -10,29 +10,29 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 193f8ce60d8675832955b0e153af7f61b28d2707
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a1fb5f7ab268397b75f6d3e2c5c784c1a586c93c
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="windows-workflow-wf-samples"></a>Ejemplos de Windows Workflow (WF)
-Estos ejemplos proporcionan instrucciones sobre distintos aspectos de [!INCLUDE[wf](../../../../includes/wf-md.md)].  
+Estos ejemplos proporcionan instrucciones sobre distintos aspectos de Windows Workflow Foundation (WF).  
   
 Los ejemplos se pueden descargar desde el [Centro de descarga de Microsoft](http://go.microsoft.com/fwlink/?LinkId=150780).  
   
 > [!NOTE]
->  Estos ejemplos se crearon con [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] y [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)], pero son compatibles con [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] y [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)]. Los ejemplos adicionales para [!INCLUDE[wf2](../../../../includes/wf2-md.md)] en [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] se pueden buscar en [Code MSDN](http://aka.ms/WF45Samples).
+>  Estos ejemplos se crearon con [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] y [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)], pero son compatibles con [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] y [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)]. Más ejemplos para Windows Workflow Foundation en [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] pueden encontrarse en [código MSDN](http://aka.ms/WF45Samples).
   
 ## <a name="in-this-section"></a>En esta sección  
  [Aplicación](../../../../docs/framework/windows-workflow-foundation/samples/application.md)  
  Proporciona ejemplos relacionados con aplicaciones de flujo de trabajo.  
   
  [Básico](../../../../docs/framework/windows-workflow-foundation/samples/basic.md)  
- Proporciona ejemplos que muestran la funcionalidad básica de [!INCLUDE[wf](../../../../includes/wf-md.md)].  
+ Proporciona ejemplos que muestran la funcionalidad básica de Windows Workflow Foundation (WF).  
   
  [Escenario](../../../../docs/framework/windows-workflow-foundation/samples/scenario.md)  
- Proporciona ejemplos de escenarios de [!INCLUDE[wf](../../../../includes/wf-md.md)].  
+ Proporciona ejemplos de escenarios de Windows Workflow Foundation (WF).  
   
  Los ejemplos incluidos en esta sección hace uso de nuevas características de C# 3.0. Para obtener información sobre algunas nuevas características de C# 3.0 que pueden ser desconocidas, vea [C# 3.0 Overview](http://go.microsoft.com/fwlink/?LinkId=193972) (Información general de C# 3.0).  
   

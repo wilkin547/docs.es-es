@@ -1,24 +1,26 @@
 ---
-title: "Servicio AJAX sin configuración"
-ms.custom: 
+title: Servicio AJAX sin configuración
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: e6db7acd-5679-45d4-b98a-8449c6873838
-caps.latest.revision: "23"
+caps.latest.revision: 23
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 13f74a69e05c419cc76cc8df8f58d3e3385ab35f
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: ae16dc38c5508eac4a94d464e818f0b97d3b9e3b
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="ajax-service-without-configuration"></a>Servicio AJAX sin configuración
 Este ejemplo muestra cómo utilizar [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] para crear un servicio ASP.NET básico JavaScript Asincrónico y XML (AJAX) (un servicio al que puede tener acceso utilizando el código JavaScript de un cliente del explorador web) sin utilizar ninguna configuración. El servicio utiliza la sintaxis especial en el archivo .svc para habilitar automáticamente un extremo de AJAX.  
@@ -29,17 +31,17 @@ Este ejemplo muestra cómo utilizar [!INCLUDE[indigo1](../../../../includes/indi
 >  El procedimiento de instalación y las instrucciones de compilación de este ejemplo se encuentran al final de este tema.  
   
  Este ejemplo se compila en el servicio AJAX mediante HTTP POST. Como se describe en el [servicio AJAX básico](../../../../docs/framework/wcf/samples/basic-ajax-service.md) ejemplo, <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory> se utiliza para hospedar el servicio.  
-  
-```  
+
+```svc
 <%ServiceHost  
     language=c#  
     Debug="true"  
     Service="Microsoft.Ajax.Samples.CalculatorService  
     Factory="System.ServiceModel.Activation.WebScriptServiceHostFactory"  
 %>  
-```  
-  
- La clase <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory> agrega automáticamente la clase <xref:System.ServiceModel.Description.WebScriptEndpoint> al servicio. Si se necesita ningún cambio de configuración que se realizan en el punto de conexión, el \<sistema. ServiceModel > sección se puede quitar completamente del archivo Web.config para el servicio. El archivo Web.config contiene parte de la configuración de ASP.NET, que la usa el archivo ConfigFreeClientPage.aspx. Si este no es el caso, se podría quitar el archivo Web.config.  
+```
+
+ La clase <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory> agrega automáticamente la clase <xref:System.ServiceModel.Description.WebScriptEndpoint> al servicio. Si no se necesita realizar ningún cambio de configuración en el extremo, la sección `<system.ServiceModel>` se puede quitar totalmente del archivo Web.config del servicio. El archivo Web.config contiene parte de la configuración de ASP.NET, que la usa el archivo ConfigFreeClientPage.aspx. Si este no es el caso, se podría quitar el archivo Web.config.  
   
 > [!IMPORTANT]
 >  Puede que los ejemplos ya estén instalados en su equipo. Compruebe el siguiente directorio (predeterminado) antes de continuar.  
@@ -56,7 +58,7 @@ Este ejemplo muestra cómo utilizar [!INCLUDE[indigo1](../../../../includes/indi
   
 2.  Compile la solución ConfigFreeAjaxService.sln tal y como se describe en [compilar los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  Navegue en http://localhost/ServiceModelSamples/ConfigFreeClientPage.aspx (no abra ConfigFreeClientPage.aspx en el explorador desde dentro del directorio de proyecto).  
+3.  Vaya a http://localhost/ServiceModelSamples/ConfigFreeClientPage.aspx (no abra ConfigFreeClientPage.aspx en el explorador desde dentro del directorio del proyecto).  
   
 > [!NOTE]
 >  Al ejecutar este ejemplo, asegúrese de que la Autenticación anónima y la Autenticación de Windows no están habilitadas simultáneamente para la carpeta ServiceModelSamples en IIS. Si es así, deshabilite la Autenticación de Windows. Una vez ha ejecutado el ejemplo, habilite la Autenticación de Windows y ejecute "iisreset".  

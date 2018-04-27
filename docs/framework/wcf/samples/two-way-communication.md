@@ -1,24 +1,26 @@
 ---
-title: "Comunicación bidireccional"
-ms.custom: 
+title: Comunicación bidireccional
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: fb64192d-b3ea-4e02-9fb3-46a508d26c60
-caps.latest.revision: "24"
+caps.latest.revision: 24
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3ea6ea34e83f9c813062620c5029ea4b812cd777
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9eb37e7e307bc9748113e5580ee96c8863d3ef89
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="two-way-communication"></a>Comunicación bidireccional
 Este ejemplo muestra cómo llevar a cabo la comunicación en cola bidireccional sobre MSMQ. El ejemplo usa el enlace `netMsmqBinding`. En este caso, el servicio es una aplicación de consola hospedada en sí misma que permite observar el servicio que recibe los mensajes en cola.  
@@ -33,33 +35,33 @@ Este ejemplo muestra cómo llevar a cabo la comunicación en cola bidireccional 
  Este ejemplo muestra la comunicación bidireccional mediante las colas. El cliente envía los pedidos de compra a la cola desde dentro del ámbito de una transacción. El servicio recibe las órdenes, procesa la orden y, a continuación, llama de nuevo al cliente con el estado de la orden desde la cola dentro del ámbito de una transacción. Para facilitar la comunicación bidireccional, tanto el cliente como el servicio utilizan las colas para poner en cola los pedidos de compra y el estado de la orden.  
   
  El contrato de servicios `IOrderProcessor` define operaciones de servicio unidireccionales que satisfacen el uso de poner en cola. La operación del servicio incluye el extremo de la respuesta para utilizarlo para enviar los estados del orden. El extremo de la respuesta es el URI de la cola para devolver el estado de la orden al cliente. La aplicación de procesamiento de orden implementa este contrato.  
-  
-```  
+
+```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
 public interface IOrderProcessor  
 {  
     [OperationContract(IsOneWay = true)]  
     void SubmitPurchaseOrder(PurchaseOrder po, string   
                                   reportOrderStatusTo);  
-}  
-```  
+}
+```
   
  El cliente especifica el contrato de la respuesta para enviar el estado de la orden. El cliente implementa el contrato del estado de la orden. El servicio utiliza el proxy generado de este contrato para devolver el estado de la orden al cliente.  
-  
-```  
+
+```csharp
 [ServiceContract]  
 public interface IOrderStatus  
 {  
     [OperationContract(IsOneWay = true)]  
     void OrderStatus(string poNumber, string status);  
 }  
-```  
-  
+```
+
  La operación del servicio procesa el pedido de compra enviado. <xref:System.ServiceModel.OperationBehaviorAttribute> se aplica a la operación del servicio para especificar la inscripción automática en una transacción que se utiliza para recibir el mensaje de la cola y la realización automática de transacciones en la realización de la operación del servicio. La clase `Orders` encapsula la funcionalidad del procesamiento de la orden. En este caso, agrega el pedido de compra a un diccionario. La transacción en la que la operación del servicio se dio de alta está disponible para las operaciones en la clase `Orders`.  
   
  La operación del servicio, además de procesar el pedido de compra enviado, responde de nuevo al cliente en el estado de la orden.  
-  
-```  
+
+```csharp
 [OperationBehavior(TransactionScopeRequired = true, TransactionAutoComplete = true)]  
 public void SubmitPurchaseOrder(PurchaseOrder po, string reportOrderStatusTo)  
 {  
@@ -79,16 +81,16 @@ public void SubmitPurchaseOrder(PurchaseOrder po, string reportOrderStatusTo)
     //Close the client.  
     client.Close();  
 }  
-```  
-  
+```
+
  El nombre de cola de MSMQ se especifica en una sección appSettings del archivo de configuración. Los extremos para el servicio se definen en la sección de System.ServiceModel del archivo de configuración.  
   
 > [!NOTE]
 >  El nombre de cola de MSMQ y la dirección de extremo utilizan convenciones de direccionamiento ligeramente diferentes. El nombre de la cola MSMQ utiliza un punto (.) para el equipo local y separadores con barra diagonal inversa en su ruta de acceso. La dirección de extremo [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] especifica net.msmq: el esquema utiliza el "host local" para el equipo local y utiliza barras diagonales en su ruta de acceso. Para leer de una cola que se hospeda en el equipo remoto, reemplace el "." y el “host local” por el nombre del equipo remoto.  
   
  El servicio se hospeda en sí mismo. Al utilizar el transporte de MSMQ, se debe crear la cola utilizada de antemano. Esto se puede hacer manualmente o a través de código. En este ejemplo, el servicio comprueba la existencia de la cola y la crea si es necesario. El nombre de la cola se lee del archivo de configuración. La dirección base es utilizada por la [la herramienta de utilidad de metadatos de ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) para generar el proxy para el servicio.  
-  
-```  
+
+```csharp
 // Host the service within this EXE console application.  
 public static void Main()  
 {  
@@ -112,11 +114,11 @@ public static void Main()
         Console.ReadLine();  
     }  
 }  
-```  
-  
+```
+
  El cliente crea un ámbito de transacción. La comunicación con la cola tiene lugar dentro del ámbito de la transacción, produciendo que se tratae como una unidad atómica donde todos los mensajes tienen éxito o no dan error.  
-  
-```  
+
+```csharp
 // Create a ServiceHost for the OrderStatus service type.  
 using (ServiceHost serviceHost = new ServiceHost(typeof(OrderStatusService)))  
 {  
@@ -152,11 +154,11 @@ using (ServiceHost serviceHost = new ServiceHost(typeof(OrderStatusService)))
     // Close the ServiceHost to shutdown the service.  
     serviceHost.Close();  
 }  
-```  
-  
+```
+
  El código de cliente implementa el contrato`IOrderStatus` para recibir el estado de la orden del servicio. En este caso, imprime el estado de la orden.  
-  
-```  
+
+```csharp
 [ServiceBehavior]  
 public class OrderStatusService : IOrderStatus  
 {  
@@ -168,8 +170,8 @@ public class OrderStatusService : IOrderStatus
                                                            status);  
     }  
 }  
-```  
-  
+```
+
  La cola de estado de la orden se crea en el método `Main`. La configuración del cliente incluye la configuración del servicio del estado de la orden para hospedar el servicio del estado de la orden, tal y como se muestra en la configuración del ejemplo siguiente.  
   
 ```xml  
@@ -323,7 +325,7 @@ Status of order 124a1f69-3699-4b16-9bcc-43147a8756fc:Pending
   
 3.  El servicio para este ejemplo crea un enlace en `OrderProcessorService`. Agregue una línea de código una vez se haya creado instancias para el enlace para establecer el modo de seguridad en `None`.  
   
-    ```  
+    ```csharp
     NetMsmqBinding msmqCallbackBinding = new NetMsmqBinding();  
     msmqCallbackBinding.Security.Mode = NetMsmqSecurityMode.None;  
     ```  

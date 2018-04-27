@@ -1,28 +1,30 @@
 ---
 title: Utilizar la UI Automation para pruebas automatizadas
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - automated testing
 - testing, UI Automation
 - UI Automation, automated testing
 ms.assetid: 3a0435c0-a791-4ad7-ba92-a4c1d1231fde
-caps.latest.revision: "26"
+caps.latest.revision: 26
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 128af9a015d25985b7075f5b670fea36c6773267
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 6539829feacf8c9a5c9c1339df299a21ac5fe64f
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="using-ui-automation-for-automated-testing"></a>Utilizar la UI Automation para pruebas automatizadas
 > [!NOTE]
@@ -50,7 +52,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="Implementing_UI_Automation"></a>   
 ### <a name="implementing-ui-automation"></a>Implementación de automatización de interfaz de usuario  
- Como se ha mencionado anteriormente, sin el modelo unificado ofrecido por [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], las herramientas de prueba y los desarrolladores deben conocer la información específica del marco de trabajo para exponer propiedades y comportamientos de los controles en ese marco de trabajo. Dado que puede haber varios marcos de trabajo diferentes de interfaz de usuario presentes en cualquier momento único dentro de sistemas operativos [!INCLUDE[TLA2#tla_win](../../../includes/tla2sharptla-win-md.md)] , incluidos [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)], [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]y [!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)], puede resultar una tarea desalentadora probar varias aplicaciones con controles que parezcan similares. Por ejemplo, en la siguiente tabla se describen los nombres de propiedades específicas del marco de trabajo necesarias para recuperar el nombre (o el texto) asociado a un control de botón y se muestra la única propiedad [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] equivalente.  
+ Como se ha mencionado anteriormente, sin el modelo unificado ofrecido por [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], las herramientas de prueba y los desarrolladores deben conocer la información específica del marco de trabajo para exponer propiedades y comportamientos de los controles en ese marco de trabajo. Dado que puede haber varios marcos diferentes interfaz de usuario presentes en cualquier momento único dentro de sistemas operativos Windows, incluidos [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)], [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)], y [!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)], puede ser una tarea desalentadora probar varias aplicaciones con controles que parezcan similares . Por ejemplo, en la siguiente tabla se describen los nombres de propiedades específicas del marco de trabajo necesarias para recuperar el nombre (o el texto) asociado a un control de botón y se muestra la única propiedad [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] equivalente.  
   
 |Tipo de control de automatización de interfaz de usuario|Marco de interfaz de usuario|Propiedad específica de marco de trabajo|Propiedad de automatización de interfaz de usuario|  
 |--------------------------------|------------------|---------------------------------|----------------------------|  

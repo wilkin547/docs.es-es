@@ -1,28 +1,28 @@
 ---
 title: Nombre de usuario de seguridad de mensaje
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - WS Security
 ms.assetid: c63cfc87-6b20-4949-93b3-bcd4b732b0a2
-caps.latest.revision: 
+caps.latest.revision: 57
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: 3d0c5278cf1860a89ea6a1c3ed33b45ed3c48e92
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: da9cf3a59976453a5372a95af83dcff181171a01
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="message-security-user-name"></a>Nombre de usuario de seguridad de mensaje
 Este ejemplo muestra cómo implementar una aplicación que utiliza WS-Security con autenticación de nombre de usuario para el cliente y que requiere la autenticación del servidor mediante el certificado X.509v3 del servidor. Todos los mensajes de la aplicación entre el cliente y el servidor se firman y se cifran. De forma predeterminada, el nombre de usuario y contraseña proporcionadas por el cliente se utilizan para iniciar una sesión con una cuenta de Windows válida. En este ejemplo se basa en el [WSHttpBinding](../../../../docs/framework/wcf/samples/wshttpbinding.md). Este ejemplo está compuesto de un programa de consola de cliente (Client.exe) y una biblioteca de servicios (Service.dll) hospedada por Internet Information Services (IIS). El servicio implementa un contrato que define un modelo de comunicación de solicitud y respuesta.  
@@ -129,8 +129,8 @@ Este ejemplo muestra cómo implementar una aplicación que utiliza WS-Security c
 ```  
   
  La implementación del cliente establece el nombre de usuario y la contraseña que utilizar.  
-  
-```  
+
+```csharp
 // Create a client.  
 CalculatorClient client = new CalculatorClient();  
   
@@ -143,8 +143,8 @@ Console.WriteLine(client.GetCallerIdentity());
 ...  
 //Closing the client gracefully closes the connection and cleans up resources.  
 client.Close();  
-```  
-  
+```
+
  Al ejecutar el ejemplo, las solicitudes y respuestas de la operación se muestran en la ventana de la consola del cliente. Presione ENTRAR en la ventana de cliente para cerrar el cliente.  
   
 ```  
@@ -164,7 +164,7 @@ Press <ENTER> to terminate client.
   
      Las líneas siguientes del archivo por lotes Setup.bat crean el certificado de servidor que se va a usar.  
   
-    ```  
+    ```bat
     echo ************  
     echo Server cert setup starting  
     echo %SERVER_NAME%  
@@ -188,7 +188,7 @@ Press <ENTER> to terminate client.
   
      Las líneas siguientes en el archivo por lotes Setup.bat hacen que el certificado de servidor almacenado en el almacén LocalMachine esté accesible para la cuenta de proceso de trabajo de [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)].  
   
-    ```  
+    ```bat
     echo ************  
     echo setting privileges on server certificates  
     echo ************  
@@ -217,7 +217,7 @@ Press <ENTER> to terminate client.
     > [!NOTE]
     >  El archivo por lotes Setup.bat está diseñado para ejecutarse desde el símbolo del sistema de Visual Studio. Requiere que la variable de entorno path señale al directorio donde está instalado el SDK. Esta variable de entorno se establece automáticamente dentro de un símbolo del sistema de Visual Studio.  
   
-3.  Compruebe el acceso al servicio en un explorador utilizando la dirección http://localhost/servicemodelsamples/service.svc.  
+3.  Comprobar el acceso al servicio utilizando un explorador escribiendo la dirección http://localhost/servicemodelsamples/service.svc.  
   
 4.  Inicie Client.exe desde \client\bin. La actividad del cliente se muestra en la aplicación de consola del cliente.  
   

@@ -15,14 +15,14 @@ ms.assetid: 8fb0353a-e41b-4e23-b78f-da65db832f70
 caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: c18c1ea645c9f144e2c2043af5460d6fb03f13a1
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 6a303b0bc9a51ec5566be5cf6db40ff9b9de4c9c
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="events-visual-basic"></a>Eventos (Visual Basic)
-Aunque puede visualizar un proyecto [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] como una serie de procedimientos que se ejecutan en una secuencia, en realidad, la mayoría de los programas está dirigidos por eventos, lo que significa que el flujo de ejecución está determinado por elementos externos denominados *eventos*.  
+Aunque puede visualizar un proyecto de Visual Studio como una serie de procedimientos que se ejecutan en una secuencia, en realidad, la mayoría de programas son orientada a eventos, lo que significa que el flujo de ejecución viene determinado por elementos externos denominados *eventos*.  
   
  Un evento es una señal que comunica a una aplicación que ha sucedido algo importante. Por ejemplo, cuando un usuario hace clic en un control en un formulario, el formulario puede provocar un evento `Click` y llamar a un procedimiento que controla el evento. Los eventos también permiten que las tareas independientes se comuniquen. Por ejemplo, supongamos que la aplicación realiza una tarea de ordenación de manera independiente a la aplicación principal. Si un usuario cancela la ordenación, la aplicación puede enviar un evento de cancelación que indica al proceso de ordenación que se detenga.  
   

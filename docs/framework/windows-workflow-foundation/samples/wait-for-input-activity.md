@@ -1,26 +1,27 @@
 ---
 title: Actividad Wait For Input
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: d58c344e-9ee8-4ce2-b199-75b3fe45237f
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ac05054d56c424ab3f4d1fdfd9c3590aac8b00bb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: b9e7942ced071a795f1bf408ca4778a216cd85e4
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="wait-for-input-activity"></a>Actividad Wait For Input
-Este ejemplo muestra cómo crear marcadores con nombre en un flujo de trabajo. [!INCLUDE[wf](../../../../includes/wf-md.md)] no proporciona una actividad para la creación declarativa de marcadores. Por consiguiente, si desea crear un marcador en su flujo de trabajo, deberá escribir una actividad personalizada que lo cree. La actividad `WaitForInput` definida en este ejemplo proporciona esta funcionalidad, para que los usuarios puedan crear los marcadores mediante declaración dentro de un flujo de trabajo.  
+Este ejemplo muestra cómo crear marcadores con nombre en un flujo de trabajo. Windows Workflow Foundation (WF) no proporciona una actividad para la creación declarativa de marcadores. Por consiguiente, si desea crear un marcador en su flujo de trabajo, deberá escribir una actividad personalizada que lo cree. La actividad `WaitForInput` definida en este ejemplo proporciona esta funcionalidad, para que los usuarios puedan crear los marcadores mediante declaración dentro de un flujo de trabajo.  
   
 ## <a name="projects-in-this-sample"></a>Proyectos en este ejemplo  
   
@@ -41,8 +42,7 @@ Este ejemplo muestra cómo crear marcadores con nombre en un flujo de trabajo. [
   
 |**Name**|**Type**|**Descripción**|  
 |-|-|-|  
-|
-          TResult|El argumento genérico (TResult)|El tipo del marcador. Este es el tipo de datos que se va a pasar al marcador cuando se reanude.|  
+|TResult|El argumento genérico (TResult)|El tipo del marcador. Este es el tipo de datos que se va a pasar al marcador cuando se reanude.|  
 |BookmarkName|InArgument\<cadena >|Nombre del marcador.|  
 |Resultado|InArgument\<TResult >|Los datos pasados a la actividad cuando se reanuda el marcador.|  
   

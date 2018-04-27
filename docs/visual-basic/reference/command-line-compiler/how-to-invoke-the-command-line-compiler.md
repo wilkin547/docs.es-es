@@ -16,14 +16,14 @@ ms.assetid: 0fd9a8f6-f34e-4c35-a49d-9b9bbd8da4a9
 caps.latest.revision: 28
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: f1ccf08ba58fa6af60bd8ffd7cba79b205dc0f3d
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 20239045426e466ba58427bb9794ea7e55b3aa4c
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="how-to-invoke-the-command-line-compiler-visual-basic"></a>Cómo: Invocar al compilador de la línea de comandos (Visual Basic)
-Puede invocar el compilador de línea de comandos escribiendo el nombre de su archivo ejecutable en la línea de comandos, también conocido como el símbolo de MS-DOS. Si compila desde la línea de comandos de Windows de manera predeterminada, debe escribir la ruta de acceso completa al archivo ejecutable. Para invalidar este comportamiento predeterminado, puede utilizar el [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] símbolo o modificar la variable de entorno PATH. Ambos permiten compilar desde cualquier directorio escribiendo simplemente el nombre del compilador.  
+Puede invocar el compilador de línea de comandos escribiendo el nombre de su archivo ejecutable en la línea de comandos, también conocido como el símbolo de MS-DOS. Si compila desde la línea de comandos de Windows de manera predeterminada, debe escribir la ruta de acceso completa al archivo ejecutable. Para invalidar este comportamiento predeterminado, puede usar el símbolo del sistema de Visual Studio o modificar la variable de entorno PATH. Ambos permiten compilar desde cualquier directorio escribiendo simplemente el nombre del compilador.  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
@@ -31,9 +31,9 @@ Puede invocar el compilador de línea de comandos escribiendo el nombre de su ar
   
 1.  Abra la carpeta de programas de Visual Studio Tools dentro del grupo de programas de Microsoft Visual Studio.  
   
-2.  Puede usar el [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] línea de comandos para tener acceso al compilador desde cualquier directorio en su equipo, si está instalado Visual Studio.  
+2.  Puede utilizar el símbolo del sistema de Visual Studio para tener acceso al compilador desde cualquier directorio en su equipo, si está instalado Visual Studio.  
   
-3.  Invocar el [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] símbolo del sistema.  
+3.  Invocar el símbolo del sistema de Visual Studio.  
   
 4.  En la línea de comandos, escriba `vbc.exe` *nombreArchivoOrigen* y, a continuación, presione ENTRAR.  
   

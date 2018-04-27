@@ -1,24 +1,26 @@
 ---
 title: BasicBinding con seguridad de transporte
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f49b1de6-0254-4362-8ef2-fccd8ff9688b
-caps.latest.revision: "26"
+caps.latest.revision: 26
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 2a65adbb908aded9f4124f473f0b298d573a521f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 4d06f7652f7366fc795cd157398bbb15ed78828c
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="basicbinding-with-transport-security"></a>BasicBinding con seguridad de transporte
 El ejemplo muestra el uso de seguridad de transporte de SSL con el enlace básico. En este ejemplo se basa en el [Introducción](../../../../docs/framework/wcf/samples/getting-started-sample.md) que implementa un servicio de calculadora.  
@@ -65,15 +67,14 @@ El ejemplo muestra el uso de seguridad de transporte de SSL con el enlace básic
 </system.serviceModel>  
 ```  
   
- Dado que el certificado utilizado en este ejemplo es un certificado de prueba creado con Makecert.exe, aparecerá una alerta de seguridad al intentar obtener acceso a una dirección HTTPS:, como https://localhost/servicemodelsamples/service.svc, en el explorador. Para permitir que el cliente de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] use un certificado de prueba, se ha agregado código adicional al cliente para suprimir la alerta de seguridad. Este código y la clase acompañante, no es necesario al utilizar los certificados reales.  
-  
-```  
+ Dado que el certificado utilizado en este ejemplo es un certificado de prueba creado con Makecert.exe, una alerta de seguridad aparece cuando se intenta acceder a un HTTPS: dirección en el explorador, como https://localhost/servicemodelsamples/service.svc. Para permitir que el cliente de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] use un certificado de prueba, se ha agregado código adicional al cliente para suprimir la alerta de seguridad. Este código y la clase acompañante, no es necesario al utilizar los certificados reales.  
+
+```csharp
 // This code is required only for test certificates such as those   
 // created by Makecert.exe.  
-PermissiveCertificatePolicy.Enact(  
-                           "CN=ServiceModelSamples-HTTPS-Server");  
-```  
-  
+PermissiveCertificatePolicy.Enact("CN=ServiceModelSamples-HTTPS-Server");  
+```
+
  Al ejecutar el ejemplo, las solicitudes y respuestas de la operación se muestran en la ventana de la consola del cliente. Presione ENTRAR en la ventana de cliente para cerrar el cliente.  
   
 ```  

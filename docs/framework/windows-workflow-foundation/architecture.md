@@ -1,26 +1,27 @@
 ---
 title: Arquitectura de Windows Workflow
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 1d4c6495-d64a-46d0-896a-3a01fac90aa9
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ed13d7885cb8abd760aed6bd5812cb8b7c75bc02
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: a3a59369738ada0c6b770d272afa9c6c79c2ce01
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="windows-workflow-architecture"></a>Arquitectura de Windows Workflow
-[!INCLUDE[wf](../../../includes/wf-md.md)] genera el nivel de abstracción para desarrollar aplicaciones interactivas de ejecución prolongada. Las unidades de trabajo se encapsulan como actividades. Las actividades se ejecutan en un entorno que proporcione los medios para el control de flujo, el control de excepciones, la propagación de errores, la persistencia de los datos de estado, la carga y descarga de flujos de trabajo en progreso de la memoria, el seguimiento y el flujo de la transacción.  
+Windows Workflow Foundation (WF) eleva el nivel de abstracción para desarrollar aplicaciones interactivas de ejecución prolongada. Las unidades de trabajo se encapsulan como actividades. Las actividades se ejecutan en un entorno que proporcione los medios para el control de flujo, el control de excepciones, la propagación de errores, la persistencia de los datos de estado, la carga y descarga de flujos de trabajo en progreso de la memoria, el seguimiento y el flujo de la transacción.  
   
 ## <a name="activity-architecture"></a>Arquitectura de la actividad  
  Las actividades se desarrollan como tipos CLR que derivan de <xref:System.Activities.Activity>, <xref:System.Activities.CodeActivity>, <xref:System.Activities.AsyncCodeActivity>, o sus variantes que devuelven un valor, <xref:System.Activities.NativeActivity>, <xref:System.Activities.Activity%601>, <xref:System.Activities.CodeActivity%601>, <xref:System.Activities.AsyncCodeActivity%601> o <xref:System.Activities.NativeActivity%601>. Desarrollar actividades que derivan de <xref:System.Activities.Activity> le permite al usuario ensamblar actividades existentes previamente para crear las unidades de trabajo que se ejecutan en el entorno del flujo de trabajo. <xref:System.Activities.CodeActivity>, por otro lado, permite crear la lógica de ejecución en código administrado usando principalmente <xref:System.Activities.CodeActivityContext> para el acceso a los argumentos de actividad. <xref:System.Activities.AsyncCodeActivity> es similar a <xref:System.Activities.CodeActivity> salvo que puede usarse para implementar tareas asincrónicas. Desarrollar actividades que derivan de <xref:System.Activities.NativeActivity> permite a los usuarios tener acceso al tiempo de ejecución a través de <xref:System.Activities.NativeActivityContext> para funciones como la programación de elementos secundarios, la creación de marcadores, invocar el trabajo asincrónico, el registro de transacciones y mucho más.  

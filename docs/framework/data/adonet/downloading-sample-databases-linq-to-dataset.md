@@ -1,24 +1,26 @@
 ---
 title: Descargar bases de datos de ejemplo (LINQ to DataSet)
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: eb42a7af-d410-4b7f-b4a8-13c72ce6fd09
-caps.latest.revision: "2"
+caps.latest.revision: 2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: c8c1c2dabb13393764ca8b1fd9c1a717b9e2527e
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 8e19e51ecf4868d0d49e26b4aafd7e8b3840992d
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="downloading-sample-databases-linq-to-dataset"></a>Descargar bases de datos de ejemplo (LINQ to DataSet)
 Los ejemplos y tutoriales de la [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] documentación usar la base de datos de ejemplo AdventureWorks. Puede descargar este producto de forma gratuita del sitio de descarga de Microsoft. Los ejemplos y los tutoriales de la documentación de [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] usan SQL Server como almacén de datos. SQL Server Express Edition, que está disponible de forma gratuita, también se puede usar como almacén de datos en lugar de SQL Server.  
@@ -74,7 +76,7 @@ Los ejemplos y tutoriales de la [!INCLUDE[linq_dataset](../../../../includes/lin
      Si ha instalado esos archivos en una unidad o en un directorio diferente, debe revisar las rutas de acceso correctamente antes de ejecutar el procedimiento almacenado `sp_attach_db`.  
   
 ## <a name="downloading-sql-server-express-edition"></a>Descargar SQL Server Express Edition  
- Los ejemplos y tutoriales de la [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] sección usar SQL Server 2005 como almacén de datos pero se puede modificar para usar SQL Server Express Edition, en su lugar. SQL Server Express Edition está disponible gratuitamente y puede redistribuirse con aplicaciones. Si está usando [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)], se incluye SQL Server Express Edition en las ediciones Pro y superiores.  
+ Los ejemplos y tutoriales de la [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] sección usar SQL Server 2005 como almacén de datos pero se puede modificar para usar SQL Server Express Edition, en su lugar. SQL Server Express Edition está disponible gratuitamente y puede redistribuirse con aplicaciones. Si se utiliza Visual Studio, SQL Server Express Edition se incluye en las ediciones Pro y superiores.  
   
 #### <a name="to-download-and-install-sql-server-express-edition"></a>Para descargar e instalar SQL Server Express Edition  
   

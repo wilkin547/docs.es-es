@@ -1,12 +1,13 @@
 ---
-title: "Tutorial: Almacenar en caché datos de la aplicación en una aplicación de WPF"
-ms.custom: 
+title: 'Tutorial: Almacenar en caché datos de la aplicación en una aplicación de WPF'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,16 +17,17 @@ helpviewer_keywords:
 - caching [.NET Framework]
 - caching [WPF]
 ms.assetid: dac2c9ce-042b-4d23-91eb-28f584415cef
-caps.latest.revision: "25"
+caps.latest.revision: 25
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 81d808b982852d5cc6dc187a3c8389748a0dc0bf
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: a8d3fe2dbfe0b4b5fb9081d71cec080dfa54add8
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="walkthrough-caching-application-data-in-a-wpf-application"></a>Tutorial: Almacenar en caché datos de la aplicación en una aplicación de WPF
 El almacenamiento en caché permite almacenar datos en memoria para un acceso rápido. Cuando se tiene acceso a los datos de nuevo, las aplicaciones puedan obtener los datos de la memoria caché en su lugar la recuperación de la fuente original. Esto puede mejorar el rendimiento y la escalabilidad. Además, el almacenamiento en caché permite que los datos estén disponibles cuando el origen de datos no está disponible temporalmente.  
@@ -67,7 +69,7 @@ El almacenamiento en caché permite almacenar datos en memoria para un acceso r�
   
 #### <a name="to-create-a-wpf-application"></a>Para crear una aplicación WPF  
   
-1.  Inicie [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)].  
+1.  Inicie Visual Studio.  
   
 2.  En el **archivo** menú, haga clic en **New**y, a continuación, haga clic en **nuevo proyecto**.  
   
@@ -86,7 +88,7 @@ El almacenamiento en caché permite almacenar datos en memoria para un acceso r�
   
 7.  Haga clic en **Aceptar**.  
   
-     Se abre el Diseñador de WPF en **diseño** ver y muestra el archivo MainWindow.xaml. [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)]crea el **mi proyecto** carpeta, el archivo Application.xaml y el archivo MainWindow.xaml.  
+     Se abre el Diseñador de WPF en **diseño** ver y muestra el archivo MainWindow.xaml. Visual Studio crea el **mi proyecto** carpeta, el archivo Application.xaml y el archivo MainWindow.xaml.  
   
 ## <a name="targeting-the-net-framework-and-adding-a-reference-to-the-caching-assemblies"></a>.NET Framework de destino y agregue una referencia a los ensamblados de almacenamiento en caché  
  De forma predeterminada, el destino de las aplicaciones de WPF el [!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)]. Para usar el <xref:System.Runtime.Caching> espacio de nombres en una aplicación WPF, la aplicación debe tener como destino el [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] (no el [!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)]) y debe incluir una referencia al espacio de nombres.  
@@ -307,7 +309,7 @@ El almacenamiento en caché permite almacenar datos en memoria para un acceso r�
   
      El contenido almacenado en caché del archivo de texto se muestra en un cuadro de mensaje. Tenga en cuenta la marca de tiempo en el archivo.  
   
-3.  Cierre el cuadro de mensaje y, a continuación, haga clic en **obtener caché** nuevo**.**  
+3.  Cierre el cuadro de mensaje y, a continuación, haga clic en **obtener caché** nuevo **.**  
   
      Se ha modificado la marca de tiempo. Esto indica que se muestra el contenido almacenado en caché.  
   
@@ -317,7 +319,7 @@ El almacenamiento en caché permite almacenar datos en memoria para un acceso r�
   
 5.  En un editor de texto, abra el archivo de texto que ha creado. No realice los cambios todavía.  
   
-6.  Cierre el cuadro de mensaje y, a continuación, haga clic en **obtener caché** nuevo**.**  
+6.  Cierre el cuadro de mensaje y, a continuación, haga clic en **obtener caché** nuevo **.**  
   
      Observe la marca de tiempo de nuevo.  
   

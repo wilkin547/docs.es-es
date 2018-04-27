@@ -1,13 +1,13 @@
 ---
-title: "Cómo: Agregar controles sin una interfaz de usuario a formularios Windows Forms"
-ms.custom: 
+title: 'Cómo: Agregar controles sin una interfaz de usuario a formularios Windows Forms'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-winforms
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -22,17 +22,17 @@ helpviewer_keywords:
 - Windows Forms controls, nonvisual
 - nonvisual controls [Windows Forms]
 ms.assetid: 52134d9c-cff6-4eed-8e2b-3d5eb3bd494e
-caps.latest.revision: 
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 3abbf931cff9ad459e8c9221f91430ecccefa9cc
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: e900c1c34f69531a14cfa11803ef5a6afb4783c6
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="how-to-add-controls-without-a-user-interface-to-windows-forms"></a>Cómo: Agregar controles sin una interfaz de usuario a formularios Windows Forms
 Un control no Visual (o componente) proporciona la funcionalidad a la aplicación. A diferencia de otros controles, componentes no proporcionan una interfaz de usuario para el usuario y, por tanto, no es necesario que se mostrará en la superficie del Diseñador de Windows Forms. Cuando se agrega un componente a un formulario, el Diseñador de Windows Forms muestra una bandeja de tamaño variable en la parte inferior del formulario donde se muestran todos los componentes. Una vez que un control se ha agregado a la Bandeja de componentes, puede seleccionar el componente y establecer sus propiedades tal y como lo haría con cualquier otro control en el formulario.  
@@ -48,7 +48,7 @@ Un control no Visual (o componente) proporciona la funcionalidad a la aplicació
   
      El componente aparecerá en la Bandeja de componentes.  
   
- Además, los componentes se pueden agregar a un formulario en tiempo de ejecución. Se trata de un escenario común, sobre todo porque los componentes no tienen una expresión visual, a diferencia de los controles que tienen una interfaz de usuario. En el ejemplo siguiente, un <xref:System.Windows.Forms.Timer> se agrega el componente en tiempo de ejecución. (Tenga en cuenta que [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] contiene un número de temporizadores diferentes; en este caso, utilice un formulario Windows Forms <xref:System.Windows.Forms.Timer> componente. Para obtener más información sobre los diferentes temporizadores en [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)], consulte [Introducción a los temporizadores basados en servidor](http://msdn.microsoft.com/library/adc0bc0a-a519-4812-bafc-fb9d1a5801fc).)  
+ Además, los componentes se pueden agregar a un formulario en tiempo de ejecución. Se trata de un escenario común, sobre todo porque los componentes no tienen una expresión visual, a diferencia de los controles que tienen una interfaz de usuario. En el ejemplo siguiente, un <xref:System.Windows.Forms.Timer> se agrega el componente en tiempo de ejecución. (Tenga en cuenta que Visual Studio contiene un número de temporizadores diferentes; en este caso, utilice un formulario Windows Forms <xref:System.Windows.Forms.Timer> componente. Para obtener más información sobre los diferentes temporizadores en Visual Studio, vea [Introducción a los temporizadores basados en servidor](http://msdn.microsoft.com/library/adc0bc0a-a519-4812-bafc-fb9d1a5801fc).)  
   
 > [!CAUTION]
 >  Componentes a menudo tienen propiedades específicas del control que se deben establecer para que el componente funcione de forma eficaz. En el caso de los <xref:System.Windows.Forms.Timer> siguiente componente, establecer el `Interval` propiedad. Debe tener, al agregar componentes al proyecto, se configuran las propiedades necesarias para cada componente.  

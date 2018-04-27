@@ -1,23 +1,24 @@
 ---
-title: "Actividad de promoción de propiedad"
-ms.custom: 
+title: Actividad de promoción de propiedad
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 802196b7-1159-4c05-b41b-d3bfdfcc88d9
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 244cea33b684a8674681c4d1974d5d857c4c402b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 12f7aa4bd10a22a3cd3ea361e32016b95e41e46b
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="property-promotion-activity"></a>Actividad de promoción de propiedad
 Este ejemplo proporciona una solución integral que incluye la característica Promoción de <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> directamente en el flujo de trabajo que crea la experiencia. Se proporciona una colección de elementos de configuración, actividades de flujo de trabajo y extensiones de flujo de trabajo que simplifican el uso de la característica Promoción. Además, el ejemplo contiene un flujo de trabajo sencillo que muestra cómo utilizar esta colección.  
@@ -109,7 +110,7 @@ go
  El orden de los elementos `promotedValue` se correlaciona con la colocación de las propiedades promovidas en la vista `InstancePromotedProperties`. `Count` es el primer elemento `promotedValue`. Como resultado, se asigna a la columna `Value1` de la vista `InstancePromotedProperties`. `LastIncrementedAt` es el segundo elemento `promotedValue`. Como resultado, se asigna a la columna `Value2` de la vista `InstancePromotedProperties`.  
   
 #### <a name="using-the-promotevalue-activity"></a>Utilizar la actividad PromoteValue  
- Examine el archivo CounterService.xamlx en el Diseñador [!INCLUDE[wf2](../../../../includes/wf2-md.md)]. Observe que hay dos actividades especiales en la definición de WF: `PromoteValue<DateTime>` y `PromoteValue<Int32>`.  
+ Examine el archivo CounterService.xamlx en el Diseñador de Windows Workflow Foundation. Observe que hay dos actividades especiales en la definición de WF: `PromoteValue<DateTime>` y `PromoteValue<Int32>`.  
   
  La actividad `PromoteValue<Int32>` tiene su miembro `Name` definido como `Count`. Esto coincide con el primer elemento de `promotedValue` en la configuración y tiene `Value` definido como la variable de flujo de trabajo `Counter`. Cuando el flujo de trabajo persiste, la variable de flujo de trabajo `Counter` se guarda como una propiedad promovida en la columna `Value1` de la vista `InstancePromotedProperties`.  
   

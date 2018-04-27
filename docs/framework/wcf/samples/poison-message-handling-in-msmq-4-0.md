@@ -1,24 +1,26 @@
 ---
 title: Control de mensajes dudosos en MSMQ 4,0
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ec8d59e3-9937-4391-bb8c-fdaaf2cbb73e
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 32d7c7a93636cbe0086cfbcb5fd1e401a2f013fb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 6f2361ed862986d2490968ae422b9b1313eedea3
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="poison-message-handling-in-msmq-40"></a>Control de mensajes dudosos en MSMQ 4,0
 Este ejemplo muestra cómo administrar los mensajes dudosos en un servicio. En este ejemplo se basa en el [transacciones enlace MSMQ](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) ejemplo. Este ejemplo utiliza `netMsmqBinding`. El servicio es una aplicación de consola autohospedada que le permite observar el servicio que recibe los mensajes en cola.  
@@ -49,19 +51,19 @@ Este ejemplo muestra cómo administrar los mensajes dudosos en un servicio. En e
  El ejemplo muestra cómo usar el desecho de `Move` para el mensaje dudoso. `Move` mueve el mensaje a la subcola de mensajes dudosos.  
   
  El contrato de servicio es `IOrderProcessor`, que define un servicio unidireccional que es adecuado para usarse con colas.  
-  
-```  
+
+```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
 public interface IOrderProcessor  
 {  
     [OperationContract(IsOneWay = true)]  
     void SubmitPurchaseOrder(PurchaseOrder po);  
 }  
-```  
-  
+```
+
  La operación de servicio muestra un mensaje que indica que está procesando la orden. Para mostrar la funcionalidad del mensaje dudoso, la operación de servicio `SubmitPurchaseOrder` inicia una excepción para revertir la transacción en una invocación aleatoria del servicio. Esto provoca que el mensaje se vuelva a poner en la cola. Finalmente, el mensaje se marca como dudoso. La configuración se establece para mover el mensaje dudoso a la subcola de mensajes dudosos.  
-  
-```  
+
+```csharp
 // Service class that implements the service contract.  
 // Added code to write output to the console window.  
 public class OrderProcessorService : IOrderProcessor  
@@ -127,8 +129,8 @@ public class OrderProcessorService : IOrderProcessor
   
     }  
 }  
-```  
-  
+```
+
  La configuración de servicio incluye las siguientes propiedades de mensaje dudoso: `receiveRetryCount`, `maxRetryCycles`, `retryCycleDelay`, y `receiveErrorHandling` tal y como se muestra en el archivo de configuración siguiente.  
   
 ```xml  
@@ -171,8 +173,8 @@ public class OrderProcessorService : IOrderProcessor
  Los mensajes en la cola de mensajes dudosos son los que se dirigen al servicio que está procesando el mensaje, que podría ser diferente del extremo de servicio de mensajes dudosos. Por consiguiente, cuando el servicio de mensajes dudosos lee los mensajes de la cola, el nivel de canal de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] encuentra la desigualdad en los extremos y no envía el mensaje. En este caso, el mensaje se dirige al servicio de procesamiento de pedidos pero está siendo recibido por el servicio de mensajes dudosos. Para continuar recibiendo el mensaje aun cuando se dirige a un extremo diferente, debemos agregar `ServiceBehavior` para filtrar las direcciones en las que el criterio de coincidencia sea coincidir con cualquier extremo de servicio al que se dirija el mensaje. Esto es necesario para procesar correctamente los mensajes que lee desde la cola de mensajes dudosos.  
   
  La propia implementación de servicio de los mensajes dudosos es muy similar a la implementación del servicio. Implementa el contrato y procesa los pedidos. El ejemplo de código es el siguiente.  
-  
-```  
+
+```csharp
 // Service class that implements the service contract.  
 // Added code to write output to the console window.  
 [ServiceBehavior(AddressFilterMode=AddressFilterMode.Any)]  
@@ -215,8 +217,8 @@ public class OrderProcessorService : IOrderProcessor
             serviceHost.Close();  
         }  
     }  
-```  
-  
+```
+
  A diferencia del servicio de procesamiento de pedidos que lee los mensajes desde la cola de pedidos, el servicio de mensajes dudosos lee los mensajes desde la subcola de mensajes dudosos. La cola de mensajes dudosos es una subcola de la cola principal, se denomina "poison" y MSMQ la genera automáticamente. Para tener acceso a ella, proporcione el nombre de la cola principal seguido de un punto y coma (";") y el nombre de la subcola, en este caso "poison", tal y como se muestra en la configuración del ejemplo siguiente.  
   
 > [!NOTE]
@@ -325,7 +327,7 @@ Processing Purchase Order: 23e0b991-fbf9-4438-a0e2-20adf93a4f89
     > [!NOTE]
     >  Establecer `security mode` en `None` es equivalente a definir la seguridad de `MsmqAuthenticationMode`, `MsmqProtectionLevel` y `Message` en `None`.  
   
-3.  Para que el intercambio de metadatos para funcionar, registramos una dirección URL con enlace de http. Esto requiere que el servicio se ejecute en una ventana de comandos elevada. De lo contrario, obtiene una excepción como: Excepción no controlada: System.ServiceModel.AddressAccessDeniedException: HTTP no pudo registrar URL http://+:8000/ServiceModelSamples/service/. Su proceso no tiene los derechos de acceso a este espacio de nombres (vea http://go.microsoft.com/fwlink/? LinkId=70353 para más detalles). ---> System.Net.HttpListenerException: se deniega el acceso.  
+3.  Para que el intercambio de metadatos para funcionar, registramos una dirección URL con enlace de http. Esto requiere que el servicio se ejecute en una ventana de comandos elevada. De lo contrario, obtendrá una excepción como: excepción no controlada: System.ServiceModel.AddressAccessDeniedException: HTTP no pudo registrar la dirección URL http://+:8000/ServiceModelSamples/service/. El proceso no tiene derechos de acceso a este espacio de nombres (consulte http://go.microsoft.com/fwlink/?LinkId=70353 para obtener más información). ---> System.Net.HttpListenerException: se deniega el acceso.  
   
 > [!IMPORTANT]
 >  Puede que los ejemplos ya estén instalados en su equipo. Compruebe el siguiente directorio (predeterminado) antes de continuar.  

@@ -18,11 +18,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: e5ad91fa70a743b7135648cb10c7c519e3559bdb
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 5f1c7449372ad012280b360c09017a15733fb95b
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="configuring-services-using-configuration-files"></a>Configuración de servicios mediante archivos de configuración
 Configurar un servicio de [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] con un archivo de configuración le da la flexibilidad de proporcionar datos de extremo y comportamiento del servicio en el punto de implementación en lugar de hacerlo en la fase de diseño. En este tema se describen las principales técnicas disponibles.  
@@ -37,9 +37,9 @@ Configurar un servicio de [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] c
 ## <a name="systemconfiguration-webconfig-and-appconfig"></a>System.Configuration: Web.config y App.config  
  [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] utiliza el sistema de configuración System.Configuration de [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].  
   
- Al configurar un servicio en [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], utilice un archivo Web.config o un archivo App.config para especificar los valores. El entorno de hospedaje determina la elección realizada del nombre del archivo de configuración para el servicio. Si está utilizando IIS para hospedar su servicio, utilice un archivo Web.config. Si está utilizando cualquier otro entorno de hospedaje, utilice un archivo App.config.  
+ Al configurar un servicio en Visual Studio, utilice un archivo Web.config o un archivo App.config para especificar la configuración. El entorno de hospedaje determina la elección realizada del nombre del archivo de configuración para el servicio. Si está utilizando IIS para hospedar su servicio, utilice un archivo Web.config. Si está utilizando cualquier otro entorno de hospedaje, utilice un archivo App.config.  
   
- En [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], el archivo denominado App.config se utiliza para crear el archivo de configuración final. El nombre final realmente utilizado para la configuración depende del nombre de ensamblado. Por ejemplo, un ensamblado denominado "Cohowinery.exe" tiene un nombre final de archivo de configuración de "Cohowinery.exe.config". Sin embargo, solo necesita modificar el archivo App.config. Los cambios realizados en ese archivo se realizan automáticamente en tiempo de compilación en el archivo final de configuración de la aplicación.  
+ En Visual Studio, el archivo denominado App.config se utiliza para crear el archivo de configuración final. El nombre final realmente utilizado para la configuración depende del nombre de ensamblado. Por ejemplo, un ensamblado denominado "Cohowinery.exe" tiene un nombre final de archivo de configuración de "Cohowinery.exe.config". Sin embargo, solo necesita modificar el archivo App.config. Los cambios realizados en ese archivo se realizan automáticamente en tiempo de compilación en el archivo final de configuración de la aplicación.  
   
  Al utilizar un archivo App.config, el sistema de configuración combina el archivo App.config con el contenido del archivo Machine.config cuando se inicia la aplicación y se aplica la configuración. Este mecanismo permite definir los valores de equipo en el archivo Machine.config. El archivo App.config se puede utilizar para reemplazar los valores del archivo Machine.config; también puede bloquear los valores en el archivo Machine.config para que se utilicen. En el caso de Web.config, el sistema de configuración combina los archivos Web.config de todos los directorios que conducen al directorio de la aplicación en la configuración que se aplica. [!INCLUDE[crabout](../../../includes/crabout-md.md)] la configuración y las prioridades de los valores, vea temas sobre el espacio de nombres <xref:System.Configuration> .  
   

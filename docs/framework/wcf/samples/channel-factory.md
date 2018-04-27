@@ -1,24 +1,26 @@
 ---
 title: Generador de canales
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 09b53aa1-b13c-476c-a461-e82fcacd2a8b
-caps.latest.revision: "24"
+caps.latest.revision: 24
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7f5fb22c329bf7b27c32f05a2d8e41734723f53b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 37b5f880b18f4caac9dc452d93129922ecc33543
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="channel-factory"></a>Generador de canales
 Este ejemplo muestra cómo una aplicación cliente puede crear un canal con la clase <xref:System.ServiceModel.ChannelFactory> en lugar de un cliente generado. En este ejemplo se basa en el [Introducción](../../../../docs/framework/wcf/samples/getting-started-sample.md) que implementa un servicio de calculadora.  
@@ -28,7 +30,7 @@ Este ejemplo muestra cómo una aplicación cliente puede crear un canal con la c
   
  Este ejemplo utiliza la clase <xref:System.ServiceModel.ChannelFactory%601> para crear un canal a un extremo de servicio. Normalmente, para crear un canal a un extremo de servicio hay que generar un tipo de cliente con el [la herramienta de utilidad de metadatos de ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) y cree una instancia del tipo generado. También puede crear un canal utilizando la clase <xref:System.ServiceModel.ChannelFactory%601>, tal y como se muestra en este ejemplo. El servicio creado por el código de ejemplo siguiente es idéntico al servicio en la [Introducción](../../../../docs/framework/wcf/samples/getting-started-sample.md).  
   
-```  
+```csharp  
 EndpointAddress address = new EndpointAddress("http://localhost/servicemodelsamples/service.svc");  
 WSHttpBinding binding = new WSHttpBinding();  
 ChannelFactory<ICalculator> factory = new   
@@ -41,7 +43,7 @@ ICalculator channel = factory.CreateChannel();
   
  Una vez creado el canal, se pueden invocar operaciones de servicio de la misma manera que con un cliente generado.  
   
-```  
+```csharp  
 // Call the Add service operation.  
 double value1 = 100.00D;  
 double value2 = 15.99D;  
@@ -51,7 +53,7 @@ Console.WriteLine("Add({0},{1}) = {2}", value1, value2, result);
   
  Para cerrar el canal, se debe convertir primero a una interfaz <xref:System.ServiceModel.IClientChannel>. Esto es porque cuando se genera el canal se declara en la aplicación cliente utilizando la interfaz `ICalculator`, que cuenta con métodos como `Add` y `Subtract` pero no `Close`. El método `Close` se origina en la interfaz <xref:System.ServiceModel.ICommunicationObject>.  
   
-```  
+```csharp  
 // Close the channel.  
  ((IClientChannel)client).Close();  
 ```  
@@ -79,7 +81,7 @@ Press <ENTER> to terminate client.
   
 1.  Reemplace el "host local" en el código siguiente con el nombre completo del equipo que está ejecutando el servicio.  
   
-    ```  
+    ```csharp  
     EndpointAddress address = new EndpointAddress("http://localhost/servicemodelsamples/service.svc");  
     ```  
   

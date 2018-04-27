@@ -1,5 +1,5 @@
 ---
-title: -doc
+title: -doc.
 ms.date: 03/10/2018
 ms.prod: .net
 ms.suite: ''
@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 5fc32ec9-a149-4648-994c-a8d0cccd0a65
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0948b9ef0675541ca595bb297e01e62c9d79a181
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: e7dc75a0600c9694c4a20f028c810c6aca54eeb6
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/27/2018
 ---
-# <a name="-doc"></a>-doc
+# <a name="-doc"></a>-doc.
 Procesa los comentarios de documentación generando un archivo XML.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -46,7 +46,7 @@ Procesa los comentarios de documentación generando un archivo XML.
   
 -   Miembros, como un campo, [eventos](../../../visual-basic/language-reference/statements/event-statement.md), [propiedad](../../../visual-basic/language-reference/statements/property-statement.md), [función](../../../visual-basic/language-reference/statements/function-statement.md), o [subrutina](../../../visual-basic/language-reference/statements/sub-statement.md).  
   
- Para usar el archivo XML generado con el [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] [IntelliSense](/visualstudio/ide/using-intellisense) de características, supongamos que el nombre de archivo del archivo XML es el mismo que el ensamblado que desea admitir. Asegúrese de que el archivo XML está en el mismo directorio que el ensamblado para que cuando se hace referencia el ensamblado en el [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] proyecto, se encuentra el archivo .xml así. Archivos de documentación XML no son necesarios para que IntelliSense funcione para un código dentro de un proyecto o dentro de los proyectos que se hace referencia a un proyecto.  
+ Para usar el archivo XML generado con Visual Studio [IntelliSense](/visualstudio/ide/using-intellisense) de características, supongamos que el nombre de archivo del archivo XML es el mismo que el ensamblado que desea admitir. Asegúrese de que el archivo XML está en el mismo directorio que el ensamblado para que cuando se hace referencia al ensamblado en el proyecto de Visual Studio, el archivo .xml se encuentra también. Archivos de documentación XML no son necesarios para que IntelliSense funcione para un código dentro de un proyecto o dentro de los proyectos que se hace referencia a un proyecto.  
   
  A menos que se compila con `/target:module`, el archivo XML contiene las etiquetas `<assembly></assembly>`. Estas etiquetas especifican el nombre del archivo que contiene el manifiesto del ensamblado para el archivo de salida de la compilación.  
   

@@ -12,11 +12,11 @@ ms.assetid: b595ea44-a712-4625-a761-190c64f59bbe
 caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 15b6e21e769c90e23e66e4f87b37f74462423985
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: f49a5ef8dd4e36c9ab055ca01dc25ed05b083349
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="deploying-applications-that-reference-the-printform-component-visual-basic"></a>Implementar aplicaciones que hacen referencia al componente PrintForm (Visual Basic)
 Si quiere implementar una aplicación que haga referencia al componente <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> , el componente debe estar instalado en el equipo de destino.  
@@ -26,7 +26,7 @@ Si quiere implementar una aplicación que haga referencia al componente <xref:Mi
 ## <a name="installing-the-printform-as-a-prerequisite"></a>Instalación de PrintForm como un requisito previo  
  Para implementar correctamente una aplicación, también debe implementar todos los componentes a los que hace referencia la aplicación. El proceso de instalación de componentes de requisito previo se conoce como *arranque*.  
   
- Si el componente <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> está instalado en el equipo de desarrollo, se agrega un paquete de arranque de Microsoft Visual Basic PowerPacks al directorio de arranque de [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] . Este paquete está disponible al seguir los procedimientos para agregar requisitos previos para cualquier implementación de [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] o Windows Installer.  
+ Cuando el <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> componente está instalado en el equipo de desarrollo, se agrega un paquete de programa previo de Microsoft Visual Basic PowerPacks al directorio de programa previo de Visual Studio. Este paquete está disponible al seguir los procedimientos para agregar requisitos previos para cualquier implementación de [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] o Windows Installer.  
   
  De forma predeterminada, los componentes de arranque se implementan desde la misma ubicación que el paquete de instalación. Como alternativa, puede implementar los componentes desde una dirección URL o una ubicación de recurso compartido de archivo desde la que los usuarios pueden descargarlos según sea necesario.  
   

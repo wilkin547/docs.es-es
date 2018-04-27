@@ -14,16 +14,16 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 5388ed3f55d97f3282a710ac59fe36cfb32fa49c
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 6e9481364a70257f6c1711692daf5c81eee9fd88
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="using-a-custom-expression-editor"></a>Usar un editor de expresiones personalizado
 Se puede implementar un editor de expresiones personalizado para proporcionar una experiencia de edición de expresiones más sencilla o más enriquecida. Existen varios escenarios en los que se podría desear utilizar un editor de expresiones personalizado:  
   
--   Para proporcionar compatibilidad con IntelliSense y otras características de edición enriquecidas en un diseñador de flujo de trabajo hospedado en otro host. Esta funcionalidad se debe proporcionar porque el editor de expresiones de [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] predeterminado no se puede utilizar en aplicaciones hospedadas en otro host.  
+-   Para proporcionar compatibilidad con IntelliSense y otras características de edición enriquecidas en un diseñador de flujo de trabajo hospedado en otro host. Esta funcionalidad se debe proporcionar porque el editor de expresiones de Visual Studio de forma predeterminada no se puede usar en aplicaciones hospedadas en.  
   
 -   Para simplificar la experiencia para los usuarios de analista de negocios, en la edición de expresiones para que no son, por ejemplo, necesario para aprender Visual Basic ni tratar con expresiones de Visual Basic.  
   

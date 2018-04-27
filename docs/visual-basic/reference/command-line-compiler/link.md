@@ -18,11 +18,11 @@ helpviewer_keywords:
 ms.assetid: 1885f24a-86f5-486c-a064-9fb7e455ccec
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 4410818b43c0ab12f9488198fffbe4b0f2d89252
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: 4699e3adfd83a35ee81a5c8838e300adf6ecf667
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="-link-visual-basic"></a>-link (Visual Basic)
 Hace que el compilador facilite al proyecto que se está compilando información de tipos COM en los ensamblados especificados.  
@@ -51,7 +51,7 @@ Hace que el compilador facilite al proyecto que se está compilando información
 > [!NOTE]
 >  Cuando se crea una instancia de un tipo COM incrustado en el código, hay que crear la instancia mediante la interfaz adecuada. Si se intenta crear una instancia de un tipo COM incrustado mediante la coclase, se produce un error.  
   
- Para establecer la opción `-link` en [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)], agregue una referencia de ensamblado y establezca la propiedad `Embed Interop Types` en **true**. El valor predeterminado de la propiedad `Embed Interop Types` es **false**.  
+ Para establecer el `-link` opción en Visual Studio, agregue una referencia de ensamblado y establezca el `Embed Interop Types` propiedad **true**. El valor predeterminado de la propiedad `Embed Interop Types` es **false**.  
   
  Si vincula a un ensamblado COM (ensamblado A) que a su vez hace referencia a otro ensamblado COM (ensamblado B), también debe vincular al ensamblado B si se cumple alguna de las siguientes condiciones:  
   

@@ -1,12 +1,13 @@
 ---
 title: 'Tutorial: Crear un formulario principal-detalle mediante dos controles DataGridView de Windows Forms'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -17,16 +18,17 @@ helpviewer_keywords:
 - master-details lists [Windows Forms], displaying on Windows Forms
 - walkthroughs [Windows Forms], DataGridView control
 ms.assetid: c5fa29e8-47f7-4691-829b-0e697a691f36
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: af6f1bcb172543b372cbca52f54b675b6baf87d2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: e5c3dfc547fe775b38ad4c2e658755268f791502
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="walkthrough-creating-a-masterdetail-form-using-two-windows-forms-datagridview-controls"></a>Tutorial: Crear un formulario principal-detalle mediante dos controles DataGridView de formularios Windows Forms
 Uno de los escenarios más comunes para usar el <xref:System.Windows.Forms.DataGridView> control es el *principal-detalle* formulario, en el que se muestra una relación primaria-secundaria entre dos tablas de base de datos. Selección de filas en la tabla maestra hace que la tabla de detalles se actualiza con los datos secundarios correspondientes.  
@@ -44,7 +46,7 @@ Uno de los escenarios más comunes para usar el <xref:System.Windows.Forms.DataG
   
 #### <a name="to-create-a-masterdetail-form"></a>Para crear un formulario principal-detalle  
   
-1.  Cree una clase que deriva de <xref:System.Windows.Forms.Form> y contiene dos <xref:System.Windows.Forms.DataGridView> controles y dos <xref:System.Windows.Forms.BindingSource> componentes. El código siguiente proporciona la inicialización de forma básica e incluye un `Main` método. Si usas el [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] diseñador para crear el formulario, puede utilizar el código generado del diseñador en lugar de este código, pero asegúrese de usar los nombres mostrados en las declaraciones de variable.  
+1.  Cree una clase que deriva de <xref:System.Windows.Forms.Form> y contiene dos <xref:System.Windows.Forms.DataGridView> controles y dos <xref:System.Windows.Forms.BindingSource> componentes. El código siguiente proporciona la inicialización de forma básica e incluye un `Main` método. Si utiliza el Diseñador de Visual Studio para crear el formulario, puede utilizar el código generado del diseñador en lugar de este código, pero asegúrese de usar los nombres mostrados en las declaraciones de variable.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMasterDetails#01](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMasterDetails/CS/masterdetails.cs#01)]
      [!code-vb[System.Windows.Forms.DataGridViewMasterDetails#01](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMasterDetails/VB/masterdetails.vb#01)]  

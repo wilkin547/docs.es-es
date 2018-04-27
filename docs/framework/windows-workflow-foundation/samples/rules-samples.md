@@ -1,23 +1,24 @@
 ---
 title: Ejemplos de reglas
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: fe156790-3260-4d50-a4a6-e6bc80575af0
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 087b6aaf524ac2bf301d40b13ed8f3d7987d1956
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 1c3f8f1f364e2875e0fc2f192ba59dca94209bb1
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="rules-samples"></a>Ejemplos de reglas
 Esta sección contiene ejemplos que muestran cómo utilizar el motor de reglas de flujo de trabajo en [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)].  
@@ -36,4 +37,4 @@ Esta sección contiene ejemplos que muestran cómo utilizar el motor de reglas d
  Muestra una aplicación de reservas de viajes.  
   
  [Procesamiento de pedidos con directiva](../../../../docs/framework/windows-workflow-foundation/samples/order-processing-with-policy.md)  
- Muestra algunas de las características clave de [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] introducidas en [!INCLUDE[wf](../../../../includes/wf-md.md)].
+ Muestra algunas de las características clave introducidas en el [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] de Windows Workflow Foundation (WF).

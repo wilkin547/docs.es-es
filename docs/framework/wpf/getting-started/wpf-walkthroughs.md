@@ -1,27 +1,29 @@
 ---
 title: Tutoriales de WPF
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - walkthroughs [WPF]
 - WPF walkthroughs [WPF]
 ms.assetid: c29bde96-0389-4aff-a9fb-cd678f66b7f7
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a6407ccb093d6bdba4e3953ffa1117cf4b56c119
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: c99d23769e99ea01fe1e1d264361a933228f4c1c
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="wpf-walkthroughs"></a>Tutoriales de WPF
 Los tutoriales proporcionan instrucciones paso a paso para escenarios comunes. Esto hace que sean un buen punto de partida para conocer el producto o una característica en particular.  
@@ -52,7 +54,7 @@ Los tutoriales proporcionan instrucciones paso a paso para escenarios comunes. E
 |Title|Descripción|  
 |-----------|-----------------|  
 |[Tutorial: Hospedar un control de Windows Forms en WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md)|Muestra cómo hospedar un formulario Windows Forms <xref:System.Windows.Forms.MaskedTextBox?displayProperty=nameWithType> control en una aplicación WPF.|  
-|[Tutorial: Hospedar un control compuesto de formularios Windows Forms en WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)|Muestra cómo hospedar un [!INCLUDE[TLA2#tla_winforms](../../../../includes/tla2sharptla-winforms-md.md)] control compuesto de entrada de datos en un [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplicación.|  
+|[Tutorial: Hospedar un control compuesto de formularios Windows Forms en WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)|Muestra cómo hospedar un control compuesto de entrada de datos de formularios Windows Forms en un [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplicación.|  
 |[Tutorial: Hospedar un control compuesto de WPF en formularios Windows Forms](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)|Muestra cómo hospedar un control compuesto de entrada de datos WPF en una aplicación de formularios Windows Forms.|  
 |[Tutorial: Organizar controles de formularios Windows Forms en WPF](../../../../docs/framework/wpf/advanced/walkthrough-arranging-windows-forms-controls-in-wpf.md)|Muestra cómo utilizar las características de diseño WPF para organizar los controles de formularios Windows Forms en una aplicación híbrida.|  
 |[Tutorial: Enlazar a datos en aplicaciones híbridas](../../../../docs/framework/wpf/advanced/walkthrough-binding-to-data-in-hybrid-applications.md)|Muestra cómo utilizar el enlace de datos en aplicaciones híbridas que incluyen controles de formularios Windows Forms y WPF.|  

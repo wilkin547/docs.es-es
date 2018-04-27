@@ -22,11 +22,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 7fc755ff7f1b6c583a1e9aa1bc209495563812f0
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 43eaa4ffe562cf1dde5abd7e7540125dcf383732
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="importing-schema-to-generate-classes"></a>Importación del esquema para generar clases
 Para generar las clases desde los esquemas que se pueden utilizar con [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], utilice la clase <xref:System.Runtime.Serialization.XsdDataContractImporter>. En este tema se describen el proceso y variaciones.  
@@ -154,7 +154,7 @@ Para generar las clases desde los esquemas que se pueden utilizar con [!INCLUDE[
  El `ReferencedTypes` propiedad se corresponde con el **/reference** cambie en ciertos modos de funcionamiento de la herramienta Svcutil.exe.  
   
 > [!NOTE]
->  Cuando se utiliza Svcutil.exe o (en [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)]) la **Agregar referencia de servicio** herramientas, todos los tipos en MsCorLib.dll automáticamente se hace referencia.  
+>  Cuando se utiliza Svcutil.exe o (en Visual Studio) la **Agregar referencia de servicio** herramientas, todos los tipos en MsCorLib.dll automáticamente se hace referencia.  
   
 #### <a name="import-options-importing-non-datacontract-schema-as-ixmlserializable-types"></a>Opciones de importación: Importar esquema Non-DataContract como tipos IXmlSerializable  
  <xref:System.Runtime.Serialization.XsdDataContractImporter> admite un subconjunto limitado del esquema. Si las construcciones de esquema no compatibles están presentes (por ejemplo, atributos XML), se produce un error en los intentos de importación y se genera una excepción. Sin embargo, si se establece la propiedad <xref:System.Runtime.Serialization.ImportOptions.ImportXmlType%2A> en `true`,  se extiende el intervalo de esquema compatible. Cuando se establece en `true`, <xref:System.Runtime.Serialization.XsdDataContractImporter> genera tipos que implementan la interfaz <xref:System.Xml.Serialization.IXmlSerializable>. Esto permite el acceso directo a la representación XML de estos tipos.  

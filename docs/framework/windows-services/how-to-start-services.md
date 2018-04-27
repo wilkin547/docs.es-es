@@ -1,27 +1,29 @@
 ---
-title: "Cómo: Iniciar servicios"
-ms.custom: 
+title: 'Cómo: Iniciar servicios'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Windows Service applications, starting
 - services, starting
 ms.assetid: 9ea77955-2d96-4c3d-913c-14db7604cdad
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: ghogen
 ms.author: ghogen
 manager: douge
-ms.workload: dotnet
-ms.openlocfilehash: 8352edaa9386adc1fbf3057c6e98f5a9cf9ce4a1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 47e27f579c0ed7d1be0b061bc6e79bba0c060abb
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="how-to-start-services"></a>Cómo: Iniciar servicios
 Después de instala un servicio, debe estar iniciado. A partir de las llamadas del <xref:System.ServiceProcess.ServiceBase.OnStart%2A> método en la clase de servicio. Por lo general, la <xref:System.ServiceProcess.ServiceBase.OnStart%2A> método define el trabajo útil que realizará el servicio. Una vez iniciado un servicio, permanece activo hasta que se está pausado o detenido manualmente.  
@@ -29,7 +31,7 @@ Después de instala un servicio, debe estar iniciado. A partir de las llamadas d
  Los servicios se pueden configurar para iniciar automática o manualmente. Se iniciará un servicio que se inicia automáticamente cuando se reinicia el equipo en el que está instalado o se activa por primera vez. Un usuario debe iniciar un servicio que inicia de forma manual.  
   
 > [!NOTE]
->  De forma predeterminada, los servicios creados con [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] están configurados para iniciarse manualmente.  
+>  De forma predeterminada, los servicios creados con Visual Studio están configurados para iniciarse manualmente.  
   
  Puede iniciar manualmente un servicio de varias maneras: desde **Explorador de servidores**, desde el **Administrador de Control de servicios**, o desde el código mediante un componente denominado el <xref:System.ServiceProcess.ServiceController>.  
   

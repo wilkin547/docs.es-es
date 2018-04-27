@@ -1,27 +1,29 @@
 ---
-title: "Información general sobre formularios Windows Forms"
-ms.custom: 
+title: Información general sobre formularios Windows Forms
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - smart clients
 - Windows Forms, about Windows Forms
 ms.assetid: 3a2b6284-c8d6-4e1c-8c69-0bed38f38cd4
-caps.latest.revision: "34"
+caps.latest.revision: 34
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: bc9ff97583566bd950486d96bd100f05ef651c7e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 2620d8314a11e0a90864120c40dbc3935cce75fe
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="windows-forms-overview"></a>Información general sobre formularios Windows Forms
 La información general siguiente explica las ventajas de las aplicaciones smart client, las características principales de la programación de Windows Forms y cómo puede usar Windows Forms para compilar smart clients que satisfagan las necesidades actuales de las empresas y usuarios.  
@@ -30,7 +32,7 @@ La información general siguiente explica las ventajas de las aplicaciones smart
  Con Windows Forms, puede desarrollar aplicaciones smart client. Las aplicaciones de *cliente inteligente* son aplicaciones gráficamente enriquecidas, fáciles de implementar y actualizar, que pueden funcionar con o sin conexión a Internet y que pueden acceder a los recursos del equipo local de un modo más seguro que las aplicaciones tradicionales basadas en Windows.  
   
 ### <a name="building-rich-interactive-user-interfaces"></a>Compilación de interfaces de usuario completas e interactivas  
- Windows Forms es una tecnología de smart client para [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], un conjunto de bibliotecas administradas que simplifican las tareas comunes de las aplicaciones, como leer y escribir en el sistema de archivos. Cuando se usa un entorno de desarrollo como [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], se pueden crear aplicaciones smart client de Windows Forms que muestran información, solicitan a los usuarios la entrada de datos y se comunican con equipos remotos a través de una red.  
+ Windows Forms es una tecnología de smart client para [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], un conjunto de bibliotecas administradas que simplifican las tareas comunes de las aplicaciones, como leer y escribir en el sistema de archivos. Cuando se usa un entorno de desarrollo como Visual Studio, puede crear aplicaciones smart client de Windows Forms que muestran información, pedir la opinión de los usuarios y se comunican con equipos remotos a través de una red.  
   
  En Windows Forms, un *formulario* es una superficie visual en la que se muestra información al usuario. Normalmente, las aplicaciones de Windows Forms se compilan mediante la adición de controles a los formularios y el desarrollo de respuestas a las acciones del usuario, como clics del mouse o presiones de teclas. Un *control* es un elemento de interfaz de usuario (UI) discreto que muestra datos o acepta la entrada de datos.  
   
@@ -40,7 +42,7 @@ La información general siguiente explica las ventajas de las aplicaciones smart
   
  Windows Forms tiene controles de interfaz de usuario enriquecidos que emulan las características de las aplicaciones de tecnología avanzada como Microsoft Office. Los controles <xref:System.Windows.Forms.ToolStrip> y <xref:System.Windows.Forms.MenuStrip> le permiten crear barras de herramientas y menús que contienen texto e imágenes, muestran submenús y hospedan otros controles como cuadros de texto y cuadros combinados.  
   
- Con el Diseñador de Windows Forms de arrastrar y colocar de [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], puede crear fácilmente aplicaciones de Windows Forms. Simplemente seleccione los controles con el cursor y agréguelos donde desee en el formulario. El diseñador proporciona herramientas como líneas de cuadrícula y líneas de ajuste para minimizar la molestia de alinear los controles. Y si usa [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] o compila en la línea de comandos, puede utilizar los controles <xref:System.Windows.Forms.FlowLayoutPanel>, <xref:System.Windows.Forms.TableLayoutPanel> y <xref:System.Windows.Forms.SplitContainer> para crear diseños de formularios avanzados en menos tiempo.  
+ Con el Diseñador de formularios de Windows de arrastrar y colocar de Visual Studio, puede crear fácilmente aplicaciones de Windows Forms. Simplemente seleccione los controles con el cursor y agréguelos donde desee en el formulario. El diseñador proporciona herramientas como líneas de cuadrícula y líneas de ajuste para minimizar la molestia de alinear los controles. Y si usa Visual Studio o compilar en la línea de comandos, se puede utilizar el <xref:System.Windows.Forms.FlowLayoutPanel>, <xref:System.Windows.Forms.TableLayoutPanel> y <xref:System.Windows.Forms.SplitContainer> diseños de formularios de controles para crear avanzados en menos tiempo.  
   
  Por último, si debe crear sus propios elementos de interfaz de usuario personalizados, el espacio de nombres <xref:System.Drawing> contiene una gran selección de clases para representar líneas, círculos y otras formas directamente en un formulario.  
   
@@ -64,7 +66,7 @@ La información general siguiente explica las ventajas de las aplicaciones smart
   
  Puede crear fácilmente controles enlazados a datos en la ventana Orígenes de datos. La ventana muestra los orígenes de datos como bases de datos, servicios web y objetos en el proyecto. Para crear controles enlazados a datos, arrastre los elementos desde esta ventana hasta los formularios de su proyecto. También puede enlazar controles existentes a datos si arrastra los objetos desde la ventana Orígenes de datos a los controles existentes.  
   
- Otro tipo de enlace de datos que puede administrar en Windows Forms es el de *configuración*. La mayoría de las aplicaciones smart client deben conservar cierta información sobre su estado de tiempo de ejecución, como el último tamaño conocido de los formularios, y conservar los datos de preferencias del usuario, como las ubicaciones predeterminadas de los archivos guardados. La característica Configuración de la aplicación aborda estos requisitos al proporcionar una manera sencilla de almacenar ambos tipos de configuración en el equipo cliente. Después de definir esta configuración mediante [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] o un editor de código, la configuración se conserva con formato XML y se lee automáticamente en la memoria en tiempo de ejecución.  
+ Otro tipo de enlace de datos que puede administrar en Windows Forms es el de *configuración*. La mayoría de las aplicaciones smart client deben conservar cierta información sobre su estado de tiempo de ejecución, como el último tamaño conocido de los formularios, y conservar los datos de preferencias del usuario, como las ubicaciones predeterminadas de los archivos guardados. La característica Configuración de la aplicación aborda estos requisitos al proporcionar una manera sencilla de almacenar ambos tipos de configuración en el equipo cliente. Después de definir esta configuración mediante el uso de Visual Studio o un editor de código, la configuración se conserva con formato XML y se lee automáticamente en la memoria en tiempo de ejecución.  
   
 #### <a name="help-displaying-and-manipulating-data"></a>Mostrar y manipular datos  
  Para obtener información detallada sobre cómo usar estas características, vea los siguientes temas de ayuda.  
@@ -77,7 +79,7 @@ La información general siguiente explica las ventajas de las aplicaciones smart
 |Usar la configuración de la aplicación|[Cómo: Crear la configuración de la aplicación](../../../docs/framework/winforms/advanced/how-to-create-application-settings.md)|  
   
 ### <a name="deploying-applications-to-client-computers"></a>Implementar aplicaciones en equipos cliente  
- Una vez escrita la aplicación, hay que enviarla a los usuarios para que puedan instalarla y ejecutarla en sus equipos cliente. Con la tecnología [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)], puede implementar aplicaciones desde [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] con unos cuantos clics y proporcionar a los usuarios una dirección URL que apunte a la aplicación en la Web. [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] administra todos los elementos y dependencias de la aplicación y garantiza que está instalada correctamente en el equipo cliente.  
+ Una vez escrita la aplicación, hay que enviarla a los usuarios para que puedan instalarla y ejecutarla en sus equipos cliente. Cuando se usa el [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] tecnología, puede implementar aplicaciones desde Visual Studio con tan solo unos clics y proporcionar a los usuarios con una dirección URL que apunte a la aplicación en la Web. [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] administra todos los elementos y dependencias de la aplicación y garantiza que está instalada correctamente en el equipo cliente.  
   
  Las aplicaciones [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] se pueden configurar para ejecutarse únicamente cuando el usuario está conectado a la red, o para ejecutarse tanto en línea como sin conexión. Al especificar que una aplicación debe admitir el funcionamiento sin conexión, [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] agrega un vínculo a la aplicación en el menú **Inicio** del usuario. El usuario puede entonces abrir la aplicación sin usar la dirección URL.  
   

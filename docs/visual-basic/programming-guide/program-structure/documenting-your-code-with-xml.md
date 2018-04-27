@@ -16,11 +16,11 @@ ms.assetid: a0d35dc7-c5f9-4d74-92ff-a1c6f28d5235
 caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 645dd4a8a9d1c78fd54f0f31ad0efd772b671d39
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: d132fa514008d072158a0e6bedaff511c55b18c0
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="documenting-your-code-with-xml-visual-basic"></a>Documentar el código con XML (Visual Basic)
 En Visual Basic, puede documentar el código con XML  
@@ -40,7 +40,7 @@ En Visual Basic, puede documentar el código con XML
   
     -   El atributo `cref` se puede asociar a cualquier etiqueta para proporcionar una referencia a un elemento de código. El compilador comprueba que existe este elemento de código. Si se produce un error en la comprobación, el compilador emite una advertencia. El compilador también respeta cualquier `Imports` instrucciones cuando se busca un tipo descrito en el `cref` atributo.  
   
-    -   El \<resumen > etiqueta se utiliza por IntelliSense en [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] para mostrar información adicional sobre un tipo o miembro.  
+    -   El \<resumen > etiqueta se usa por IntelliSense en Visual Studio para mostrar información adicional sobre un tipo o miembro.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
  Para obtener más información sobre cómo crear un archivo XML con los comentarios de documentación, vea los temas siguientes:  

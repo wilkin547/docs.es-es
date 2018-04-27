@@ -1,31 +1,32 @@
 ---
 title: Seguimiento de eventos en Seguimiento de eventos para Windows
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f812659b-0943-45ff-9430-4defa733182b
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6798494e442b2e7633461fb821c56130a2af2508
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 1a1038f848563c106ee1cac441b8a247e161e268
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="tracking-events-into-event-tracing-in-windows"></a>Seguimiento de eventos en Seguimiento de eventos para Windows
-En este ejemplo se muestra cómo habilitar el seguimiento de [!INCLUDE[wf](../../../../includes/wf-md.md)] en un servicio del flujo de trabajo y cómo emitir los eventos de seguimiento en Seguimiento de eventos para Windows (ETW). Para emitir registros de seguimiento de flujo de trabajo en ETW, el ejemplo utiliza el participante de seguimiento de ETW (<xref:System.Activities.Tracking.EtwTrackingParticipant>).  
+Este ejemplo muestra cómo habilitar el seguimiento en un servicio de flujo de trabajo de Windows Workflow Foundation (WF) y emitir los eventos de seguimiento de eventos de seguimiento para Windows (ETW). Para emitir registros de seguimiento de flujo de trabajo en ETW, el ejemplo utiliza el participante de seguimiento de ETW (<xref:System.Activities.Tracking.EtwTrackingParticipant>).  
   
  El flujo de trabajo del ejemplo recibe una solicitud, asigna el recíproco de los datos de entrada a la variable de entrada y devuelve el recíproco al cliente. Cuando los datos de entrada son 0, se produce una excepción no controlada de división por cero que causa la anulación del flujo de trabajo. Con el seguimiento habilitado, el registro de seguimiento de error se emite a ETW, lo que puede ayudar a solucionar el error posteriormente. El participante de seguimiento de ETW se configura con un perfil de seguimiento para suscribirse a registros de seguimiento. El perfil de seguimiento se define en el archivo Web.config y se proporciona al participante de seguimiento de ETW como un parámetro de configuración. El participante de seguimiento de ETW se configura en el archivo Web.config del servicio de flujo de trabajo y se aplica al servicio como un comportamiento del servicio. En este ejemplo, los eventos de seguimiento del registro de eventos se ven utilizando Visor de eventos.  
   
 ## <a name="workflow-tracking-details"></a>Detalles del seguimiento del flujo de trabajo  
- [!INCLUDE[wf2](../../../../includes/wf2-md.md)] proporciona una infraestructura de seguimiento para realizar un seguimiento de la ejecución de una instancia de flujo de trabajo. El tiempo de ejecución de seguimiento crea una instancia de flujo de trabajo para emitir eventos relacionados con el ciclo de vida de flujo de trabajo, eventos procedentes de actividades de flujo de trabajo y eventos personalizados. En la siguiente tabla se detallan los componentes primarios de la infraestructura de seguimiento.  
+ Windows Workflow Foundation proporciona una infraestructura de seguimiento para realizar el seguimiento de la ejecución de una instancia de flujo de trabajo. El tiempo de ejecución de seguimiento crea una instancia de flujo de trabajo para emitir eventos relacionados con el ciclo de vida de flujo de trabajo, eventos procedentes de actividades de flujo de trabajo y eventos personalizados. En la siguiente tabla se detallan los componentes primarios de la infraestructura de seguimiento.  
   
 |Componente|Descripción|  
 |---------------|-----------------|  
@@ -55,7 +56,7 @@ En este ejemplo se muestra cómo habilitar el seguimiento de [!INCLUDE[wf](../..
   
 3.  Presione F5 para ejecutar la solución.  
   
-     De forma predeterminada, el servicio realiza escuchas en el puerto 53797 (http://localhost:53797/SampleWorkflowService.xamlx).  
+     De forma predeterminada, el servicio está escuchando en el puerto 53797 (http://localhost:53797/SampleWorkflowService.xamlx).  
   
 4.  Mediante [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)], abra el cliente de prueba de WCF.  
   
@@ -65,7 +66,7 @@ En este ejemplo se muestra cómo habilitar el seguimiento de [!INCLUDE[wf](../..
   
 5.  En el cliente de prueba WCF, seleccione **Agregar servicio** desde el **archivo** menú.  
   
-     Agregue la dirección del punto de conexión en el cuadro de entrada. El valor predeterminado es http://localhost:53797/SampleWorkflowService.xamlx.  
+     Agregue la dirección del punto de conexión en el cuadro de entrada. De manera predeterminada, es http://localhost:53797/SampleWorkflowService.xamlx.  
   
 6.  Abra la aplicación Visor de eventos.  
   

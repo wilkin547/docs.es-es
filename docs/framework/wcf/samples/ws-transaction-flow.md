@@ -1,28 +1,28 @@
 ---
-title: "Flujo de la transacción WS"
-ms.custom: 
+title: Flujo de la transacción WS
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Transactions
 ms.assetid: f8eecbcf-990a-4dbb-b29b-c3f9e3b396bd
-caps.latest.revision: 
+caps.latest.revision: 43
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: bf441831a205b022899999b1bf34e1505b8fb6bb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f79ffdfe624674074f2e9cadeaccb7f2ab3ba0d7
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="ws-transaction-flow"></a>Flujo de la transacción WS
 Este ejemplo muestra el uso de una transacción coordinada por cliente y las opciones de servidor y cliente para el flujo de la transacción utilizando la Transacción atómica del WS o el protocolo OleTransactions. En este ejemplo se basa en el [Introducción](../../../../docs/framework/wcf/samples/getting-started-sample.md) que implementa un servicio de calculadora, pero las operaciones se atribuyen para demostrar el uso de la `TransactionFlowAttribute` con el **TransactionFlowOption** enumeración para determinar a qué grado de transacción está habilitado el flujo. Dentro del ámbito de la transacción fluida, un registro de las operaciones solicitadas se escribe a una base de datos y se conserva hasta que la transacción coordinada por el cliente se ha completado - si la transacción del cliente no se completa, la transacción del Servicio Web se asegura de que no se confirmen las actualizaciones adecuadas a la base de datos.  
@@ -31,8 +31,8 @@ Este ejemplo muestra el uso de una transacción coordinada por cliente y las opc
 >  El procedimiento de instalación y las instrucciones de compilación de este ejemplo se encuentran al final de este tema.  
   
  Después de iniciar una conexión al servicio y una transacción, el cliente tiene acceso a varias operaciones del servicio. El contrato para el servicio se define como sigue con cada una de las operaciones que muestran un valor diferente para `TransactionFlowOption`:  
-  
-```  
+
+```csharp
 [ServiceContract(Namespace = "http://Microsoft.ServiceModel.Samples")]  
 public interface ICalculator  
 {  
@@ -48,8 +48,8 @@ public interface ICalculator
     [OperationContract]  
     double Divide(double n1, double n2);   
 }  
-```  
-  
+```
+
  Esto define las operaciones en el orden que serán procesadas:  
   
 -   Una solicitud de operación `Add` debe incluir una transacción fluida.  
@@ -83,8 +83,8 @@ public interface ICalculator
   
 > [!NOTE]
 >  La propiedad <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A> define el comportamiento local de las implementaciones de método de servicio y no define la capacidad del cliente ni el requisito para que una transacción fluya.  
-  
-```  
+
+```csharp
 // Service class that implements the service contract.  
 [ServiceBehavior(TransactionIsolationLevel = System.Transactions.IsolationLevel.Serializable)]  
 public class CalculatorService : ICalculator  
@@ -119,22 +119,22 @@ public class CalculatorService : ICalculator
   
     // Logging method omitted for brevity  
 }  
-```  
-  
+```
+
  En el cliente, la configuración de `TransactionFlowOption` del servicio en las operaciones se refleja en la definición generada del cliente de la interfaz `ICalculator`. Asimismo, la configuración de propiedades del servicio `transactionFlow` se refleja en la configuración de la aplicación del cliente. El cliente puede seleccionar el transporte y el protocolo seleccionando el `endpointConfigurationName` adecuado:  
-  
-```  
+
+```csharp
 // Create a client using either wsat or oletx endpoint configurations  
 CalculatorClient client = new CalculatorClient("WSAtomicTransaction_endpoint");  
 // CalculatorClient client = new CalculatorClient("OleTransactions_endpoint");  
-```  
-  
+```
+
 > [!NOTE]
 >  El comportamiento observado de este ejemplo es el mismo, independientemente de qué protocolo o transporte se elige.  
   
  Habiendo iniciado la conexión al servicio, el cliente crea un nuevo `TransactionScope` alrededor de las llamadas a las operaciones del servicio.  
-  
-```  
+
+```csharp
 // Start a transaction scope  
 using (TransactionScope tx =  
             new TransactionScope(TransactionScopeOption.RequiresNew))  
@@ -191,8 +191,8 @@ using (TransactionScope tx =
 }  
   
 Console.WriteLine("Transaction committed");  
-```  
-  
+```
+
  Las llamadas a las operaciones son como sigue:  
   
 -   La solicitud `Add` provoca que la transacción necesaria fluya hasta al servicio y las acciones del servicio se producen dentro del ámbito de la transacción del cliente.  

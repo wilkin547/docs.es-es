@@ -1,12 +1,13 @@
 ---
-title: "Cómo: Establecer opciones de cuadrícula para todos los formularios Windows Forms"
-ms.custom: 
+title: 'Cómo: Establecer opciones de cuadrícula para todos los formularios Windows Forms'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - snap to grid [Windows Forms], Windows Forms Designer
@@ -15,19 +16,20 @@ helpviewer_keywords:
 - Windows Forms, grid options in designer
 - Windows Forms Designer
 ms.assetid: 36967466-1dfd-4fae-a7f1-7bf2cbc94048
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f4b77f77490ce3229cd2f05f2a8824f2c4784bcd
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 67f59c76066e5ff1688d39a7bf5e349d00262bc3
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="how-to-set-grid-options-for-all-windows-forms"></a>Cómo: Establecer opciones de cuadrícula para todos los formularios Windows Forms
-Como que esté acostumbrado a trabajar el [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] entorno de desarrollo, puede establecer preferencias para todos los formularios y proyectos con los que trabaje en el Diseñador de Windows Forms.  
+Medida que esté acostumbrado a trabajar en el entorno de desarrollo de Visual Studio, puede establecer preferencias para todos los formularios y proyectos con los que trabaje en el Diseñador de Windows Forms.  
   
 > [!NOTE]
 >  Los cuadros de diálogo y comandos de menú que se ven pueden diferir de los descritos en la Ayuda, en función de los valores de configuración o de edición activos. Para cambiar la configuración, elija la opción **Importar y exportar configuraciones** del menú **Herramientas** . Para obtener más información, vea [Personalizar la configuración de desarrollo en Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  

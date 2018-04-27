@@ -1,29 +1,30 @@
 ---
-title: "Dúplex duradero"
-ms.custom: 
+title: Dúplex duradero
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 4e76d1a1-f3d8-4a0f-8746-4a322cdff6eb
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b1298f150709b48f18de654be2ab17adfdcbf42a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 50d0ac9efae8e6d795455a63d793b2e84407b987
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="durable-duplex"></a>Dúplex duradero
-En este ejemplo se muestra cómo instalar y configurar el intercambio de mensajes dúplex duradero utilizando las actividades de mensajería de [!INCLUDE[wf](../../../../includes/wf-md.md)]. Un intercambio de mensajes dúplex duradero es un intercambio de mensajes bidireccional que tiene lugar a lo largo de un período largo de tiempo. La duración del intercambio de mensajes puede ser mayor que la duración del canal de comunicación y la duración en memoria de las instancias de servicio.  
+Este ejemplo muestra cómo instalar y configurar el intercambio de mensajes dúplex duradero utilizando las actividades de mensajería en Windows Workflow Foundation (WF). Un intercambio de mensajes dúplex duradero es un intercambio de mensajes bidireccional que tiene lugar a lo largo de un período largo de tiempo. La duración del intercambio de mensajes puede ser mayor que la duración del canal de comunicación y la duración en memoria de las instancias de servicio.  
   
 ## <a name="sample-details"></a>Detalles del ejemplo  
- En este ejemplo, se configuran dos servicios [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] implementados utilizando [!INCLUDE[wf2](../../../../includes/wf2-md.md)] para tener un intercambio de mensajes dúplex duradero. El intercambio de mensajes dúplex duradero está compuesto por dos mensajes unidireccionales enviados a través de MSMQ y se correlacionan con [intercambio de contexto de .NET](http://go.microsoft.com/fwlink/?LinkID=166059). Los mensajes se envían mediante las actividades de mensajería <xref:System.ServiceModel.Activities.Send> y <xref:System.ServiceModel.Activities.Receive>. El intercambio de contexto de .NET se utiliza para especificar la dirección de devolución de llamada en los mensajes enviados. Ambos servicios se hospedan mediante Windows Process Activation Services (WAS) y se configuran para habilitar la persistencia de las instancias de los servicios.  
+ En este ejemplo, dos [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] servicios implementados mediante Windows Workflow Foundation están configurados para tener un intercambio de mensajes dúplex duradero. El intercambio de mensajes dúplex duradero está compuesto por dos mensajes unidireccionales enviados a través de MSMQ y se correlacionan con [intercambio de contexto de .NET](http://go.microsoft.com/fwlink/?LinkID=166059). Los mensajes se envían mediante las actividades de mensajería <xref:System.ServiceModel.Activities.Send> y <xref:System.ServiceModel.Activities.Receive>. El intercambio de contexto de .NET se utiliza para especificar la dirección de devolución de llamada en los mensajes enviados. Ambos servicios se hospedan mediante Windows Process Activation Services (WAS) y se configuran para habilitar la persistencia de las instancias de los servicios.  
   
  El primer servicio (Service1.xamlx) envía una solicitud al servicio de envío (Service2.xamlx) para que realice algún trabajo. Una vez completado el trabajo, Service2.xamlx devuelve una notificación a Service1.xamlx para indicar que se ha completado el trabajo. Una aplicación de consola de flujo de trabajo prepara las colas donde están realizando escuchas los servicios y envía al mensaje Start inicial para activar Service1.xamlx. Cuando Service1.xamlx recibe la notificación de Service2.xamlx que indica que se ha completado el trabajo solicitado, Service1.xamlx guarda el resultado en un archivo XML. Mientras espera el mensaje de devolución de llamada, Service1.xamlx conserva su estado de la instancia mediante la clase <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior> predeterminada. Service2.xamlx conserva su estado de instancia como parte de la finalización del trabajo solicitado por Service1.xamlx.  
   

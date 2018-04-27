@@ -1,29 +1,30 @@
 ---
 title: Extraer datos de WF mediante seguimiento
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: e30c68f5-8c6a-495a-bd20-667a4364c68e
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4d6c269dc9c8b5a0050cfc3ffcefc3160b07c897
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 44e49aa0c9b3b9b53b921fe90838875ab34b7772
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="extract-wf-data-using-tracking"></a>Extraer datos de WF mediante seguimiento
 En este ejemplo se muestra cómo utilizar el seguimiento del flujo de trabajo para extraer variables de flujo de trabajo y argumentos de las actividades. También muestra cómo agregar anotaciones a los registros de seguimiento y cómo extraer una carga de datos en los registros de seguimiento personalizados. En el ejemplo se utiliza el participante de seguimiento de Seguimiento de eventos para Windows (ETW) para extraer datos del flujo de trabajo.  
   
 ## <a name="sample-details"></a>Detalles del ejemplo  
- [!INCLUDE[wf](../../../../includes/wf-md.md)] proporciona seguimiento para ganar visibilidad en la ejecución de una instancia de flujo de trabajo. El tiempo de ejecución de seguimiento emite registros de seguimiento de flujo de trabajo durante la ejecución del flujo de trabajo. Los datos de la instancia de flujo de trabajo, junto con los registros de seguimiento del flujo de trabajo, se pueden extraer del flujo de trabajo. La siguiente lista detalla los tipos de datos que se pueden extraer de los registros de seguimiento:  
+ Windows Workflow Foundation (WF) proporciona un seguimiento para ganar visibilidad en la ejecución de una instancia de flujo de trabajo. El tiempo de ejecución de seguimiento emite registros de seguimiento de flujo de trabajo durante la ejecución del flujo de trabajo. Los datos de la instancia de flujo de trabajo, junto con los registros de seguimiento del flujo de trabajo, se pueden extraer del flujo de trabajo. La siguiente lista detalla los tipos de datos que se pueden extraer de los registros de seguimiento:  
   
 1.  Las variables de flujo de trabajo de una actividad y registros de seguimiento durante la ejecución de la actividad.  
   

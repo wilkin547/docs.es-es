@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 72282c62ad23ec825eab7054ab1909d07a062b45
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 20cb6c1cd7a3b06b57bce02d5c3caacc7e2e42b7
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="partial-trust-feature-compatibility"></a>Compatibilidad de característica de confianza parcial
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] admite un subconjunto limitado de funcionalidad cuando se ejecuta en un entorno de confianza parcial. Las características admitidas en confianza parcial están diseñadas alrededor de un conjunto concreto de escenarios, tal y como se describe en el tema [Supported Deployment Scenarios](../../../../docs/framework/wcf/feature-details/supported-deployment-scenarios.md) .  
@@ -154,7 +154,7 @@ ms.lasthandoff: 04/26/2018
 >  Para evitar inundar los archivos de seguimiento con errores duplicados, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] deshabilita el seguimiento del recurso o acción después del primer error de seguridad. Hay un seguimiento de excepción para cada acceso erróneo a recurso la primera vez que se realiza un intento de tener acceso al recurso o realizar la acción.  
   
 ## <a name="wcf-service-host"></a>Host de servicio de WCF  
- El host de servicio de[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] no admite la confianza parcial. Si desea usar un servicio de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] con confianza parcial, no use la plantilla de proyecto de biblioteca de servicios de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] en [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] para crear el servicio. En su lugar, cree un nuevo sitio web en [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] , eligiendo la plantilla de sitio web de servicio de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] , que puede hospedar el servicio en un servidor web en el que se admita la confianza parcial de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] .  
+ El host de servicio de[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] no admite la confianza parcial. Si desea usar un [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] de servicio en confianza parcial, no use el [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] plantilla de proyecto de biblioteca de servicio en Visual Studio para compilar su servicio. En su lugar, cree un nuevo sitio Web en Visual Studio eligiendo el [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] plantilla de sitio Web de servicio, que puede hospedar el servicio en un servidor Web en el que [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] se admite la confianza parcial.  
   
 ## <a name="other-limitations"></a>Otras limitaciones  
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] generalmente se limita a las consideraciones de seguridad impuestas en él por la aplicación de hospedaje. Por ejemplo, si [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] se hospeda en una Aplicación Explorador de XAML (XBAP), está sujeto a las limitaciones de XBAP, como se describe en [Seguridad de confianza parcial en Windows Presentation Foundation](http://go.microsoft.com/fwlink/?LinkId=89138).  

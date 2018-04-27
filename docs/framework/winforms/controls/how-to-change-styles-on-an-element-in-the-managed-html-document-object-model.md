@@ -1,13 +1,13 @@
 ---
-title: "Cómo: Cambiar los estilos de un elemento en el Modelo de objetos de documento HTML administrado"
-ms.custom: 
+title: 'Cómo: Cambiar los estilos de un elemento en el Modelo de objetos de documento HTML administrado'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-winforms
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,20 +15,20 @@ dev_langs:
 helpviewer_keywords:
 - managed HTML DOM [Windows Forms], changing styles on elements
 ms.assetid: 154e8d9f-3e2d-4e8b-a6f3-c85a070e9cc1
-caps.latest.revision: 
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 3726ccdebf310d831fb0d7ea21fab011293f6d99
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e833a15e33d0baf80f0078b26758137e7908a8fd
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="how-to-change-styles-on-an-element-in-the-managed-html-document-object-model"></a>Cómo: Cambiar los estilos de un elemento en el Modelo de objetos de documento HTML administrado
-Puede utilizar estilos en HTML para controlar la apariencia de un documento y sus elementos. <xref:System.Windows.Forms.HtmlDocument>y <xref:System.Windows.Forms.HtmlElement> admite <xref:System.Windows.Forms.HtmlElement.Style%2A> propiedades que toman cadenas de estilo de los formatos siguientes:  
+Puede utilizar estilos en HTML para controlar la apariencia de un documento y sus elementos. <xref:System.Windows.Forms.HtmlDocument> y <xref:System.Windows.Forms.HtmlElement> admite <xref:System.Windows.Forms.HtmlElement.Style%2A> propiedades que toman cadenas de estilo de los formatos siguientes:  
   
  `name1:value1;...;nameN:valueN;`  
   
@@ -75,7 +75,7 @@ Puede utilizar estilos en HTML para controlar la apariencia de un documento y su
 6.  Agregue el código siguiente al archivo de código del proyecto.  
   
     > [!IMPORTANT]
-    >  Asegúrese de que el `webBrowser1_DocumentCompleted` controlador de eventos está configurado como un agente de escucha para el <xref:System.Windows.Forms.WebBrowser.DocumentCompleted> eventos. En [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)], haga doble clic en el <xref:System.Windows.Forms.WebBrowser> el control; en un editor de texto, configure el agente de escucha mediante programación.  
+    >  Asegúrese de que el `webBrowser1_DocumentCompleted` controlador de eventos está configurado como un agente de escucha para el <xref:System.Windows.Forms.WebBrowser.DocumentCompleted> eventos. En Visual Studio, haga doble clic en el <xref:System.Windows.Forms.WebBrowser> el control; en un editor de texto, configure el agente de escucha mediante programación.  
   
      [!code-csharp[ManagedDOMStyles#2](../../../../samples/snippets/csharp/VS_Snippets_Winforms/ManagedDOMStyles/CS/Form1.cs#2)]
      [!code-vb[ManagedDOMStyles#2](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ManagedDOMStyles/VB/Form1.vb#2)]  

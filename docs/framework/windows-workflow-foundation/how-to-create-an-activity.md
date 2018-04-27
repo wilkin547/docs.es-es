@@ -1,26 +1,27 @@
 ---
-title: "Cómo: Crear una actividad"
-ms.custom: 
+title: 'Cómo: Crear una actividad'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: c09b1e99-21b5-4d96-9c04-ec31db3f4436
-caps.latest.revision: "39"
+caps.latest.revision: 39
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4a3b9698d6a060120addff52e6600916a2de19fc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 0d0d48d1e78efb3484f521958edf22d97ca8053d
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="how-to-create-an-activity"></a>Cómo: Crear una actividad
 Las actividades son la unidad básica de comportamiento en [!INCLUDE[wf1](../../../includes/wf1-md.md)]. La lógica de ejecución de una actividad se puede implementar en un código administrado o mediante otras actividades. Este tema muestra cómo crear dos actividades. La primera actividad es una actividad simple que usa código para implementar la lógica de ejecución. La implementación de la segunda actividad se define mediante otras actividades. Estas actividades se usan en los siguientes pasos del tutorial.  
@@ -44,7 +45,7 @@ Las actividades son la unidad básica de comportamiento en [!INCLUDE[wf1](../../
 5.  En el nodo **Instalado** , seleccione **Visual C#**, **Flujo de trabajo** (o **Visual Basic**, **Flujo de trabajo**). Asegúrese de que **.NET Framework 4.5** está seleccionado en el [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] lista desplegable de versión. Seleccione **biblioteca de actividades** desde el **flujo de trabajo** lista. Tipo de `NumberGuessWorkflowActivities` en el **nombre** y, a continuación, haga clic en **Aceptar**.  
   
     > [!NOTE]
-    >  Función del lenguaje de programación que se configure como lenguaje principal en [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], **Visual C#** o **Visual Basic** nodo puede estar bajo el **otros lenguajes**nodo en el **instalado** nodo.  
+    >  En función del lenguaje de programación que se configure como lenguaje principal en Visual Studio, el nodo **Visual C#** o **Visual Basic** puede estar bajo el nodo **Otros lenguajes** en el nodo **Instalado** .  
   
 6.  Haga clic en **Activity1.xaml** en **el Explorador de soluciones** y elija **eliminar**. Haga clic en **Aceptar** para confirmar.  
   

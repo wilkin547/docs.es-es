@@ -14,14 +14,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: ea613d21cf7c8064938b94df3826e40caeecf3c3
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 17528db182676ae69694c4e416ee10bff1ae6ef2
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="c-expressions"></a>Expresiones de C#
-A partir de [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], las expresiones de C# se admiten en [!INCLUDE[wf](../../../includes/wf-md.md)]. Los nuevos proyectos de flujo de trabajo C# creados en [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] que están destinados a [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] usan expresiones de C#, mientras que los proyectos de flujo de trabajo Visual Basic usan expresiones de Visual Basic. Los proyectos de flujo de trabajo existentes de [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] que usan expresiones de Visual Basic se pueden migrar a [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] independientemente del lenguaje del proyecto y son compatibles. En este tema se proporciona información general sobre las expresiones de C# en [!INCLUDE[wf1](../../../includes/wf1-md.md)].  
+A partir de [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], expresiones de C# se admiten en Windows Workflow Foundation (WF). Los nuevos proyectos de flujo de trabajo C# creados en [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] que están destinados a [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] usan expresiones de C#, mientras que los proyectos de flujo de trabajo Visual Basic usan expresiones de Visual Basic. Los proyectos de flujo de trabajo existentes de [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] que usan expresiones de Visual Basic se pueden migrar a [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] independientemente del lenguaje del proyecto y son compatibles. En este tema se proporciona información general sobre las expresiones de C# en [!INCLUDE[wf1](../../../includes/wf1-md.md)].  
   
 ## <a name="using-c-expressions-in-workflows"></a>Uso de expresiones de C# en los flujos de trabajo  
   
@@ -40,7 +40,7 @@ A partir de [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], las expresione
 -   [Usar expresiones de C# en servicios de flujo de trabajo XAMLX](../../../docs/framework/windows-workflow-foundation/csharp-expressions.md#WFServices)  
   
 ###  <a name="WFDesigner"></a> Usar expresiones de C# en el Diseñador de flujo de trabajo  
- A partir de [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], las expresiones de C# se admiten en [!INCLUDE[wf](../../../includes/wf-md.md)]. Los proyectos de flujo de trabajo C# creados en [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] que están destinados a [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] usan expresiones de C#, mientras que los proyectos de flujo de trabajo Visual Basic usan expresiones de Visual Basic. Para especificar la expresión de C# deseada, escríbala en el cuadro etiquetado **escriba una expresión de C#**. Esta etiqueta se muestra en la ventana de propiedades cuando se selecciona la actividad en el diseñador o en la actividad en el diseñador de flujo de trabajo. En el ejemplo siguiente, se incluyen dos actividades `WriteLine` en un `Sequence` dentro de `NoPersistScope`.  
+ A partir de [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], expresiones de C# se admiten en Windows Workflow Foundation (WF). Los proyectos de flujo de trabajo C# creados en [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] que están destinados a [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] usan expresiones de C#, mientras que los proyectos de flujo de trabajo Visual Basic usan expresiones de Visual Basic. Para especificar la expresión de C# deseada, escríbala en el cuadro etiquetado **escriba una expresión de C#**. Esta etiqueta se muestra en la ventana de propiedades cuando se selecciona la actividad en el diseñador o en la actividad en el diseñador de flujo de trabajo. En el ejemplo siguiente, se incluyen dos actividades `WriteLine` en un `Sequence` dentro de `NoPersistScope`.  
   
  ![Actividad sequence creada automáticamente](../../../docs/framework/windows-workflow-foundation/media/autosurround2.png "AutoSurround2")  
   

@@ -1,24 +1,26 @@
 ---
-title: "Comunicación en cola volátil"
-ms.custom: 
+title: Comunicación en cola volátil
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 0d012f64-51c7-41d0-8e18-c756f658ee3d
-caps.latest.revision: "28"
+caps.latest.revision: 28
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d7af5e29faf000fe3fe86463cb4eca9dc1e5c567
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 01dc48d7df85051449c92f4e91e5d1e58d6ddb91
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="volatile-queued-communication"></a>Comunicación en cola volátil
 Este ejemplo muestra cómo realizar la comunicación en cola volátil sobre el transporte de Message Queuing (MSMQ). Este ejemplo utiliza <xref:System.ServiceModel.NetMsmqBinding>. El servicio en este caso es una aplicación de consola hospedada a sí misma que le permite observar el servicio que recibe los mensajes en cola.  
@@ -36,19 +38,19 @@ Este ejemplo muestra cómo realizar la comunicación en cola volátil sobre el t
 >  No puede enviar mensajes volátiles sin garantías dentro del ámbito de una transacción utilizando MSMQ. También debe crear una cola no transaccional para enviar mensajes volátiles.  
   
  El contrato de servicios en este ejemplo es `IStockTicker` que define servicios unidireccionales que se adaptan mejor a su uso con la cola.  
-  
-```  
+
+```csharp
 [ServiceContract(Namespace = "http://Microsoft.ServiceModel.Samples")]  
 public interface IStockTicker  
 {  
     [OperationContract(IsOneWay = true)]  
     void StockTick(string symbol, float price);  
 }  
-```  
-  
+```
+
  La operación de servicio muestra el símbolo y precios del tablero de cotizaciones, tal y como se muestra en el código de ejemplo siguiente:  
   
-```  
+```csharp
 public class StockTickerService : IStockTicker  
 {  
     public void StockTick(string symbol, float price)  
@@ -60,8 +62,8 @@ public class StockTickerService : IStockTicker
 ```  
   
  El servicio se hospeda en sí mismo. Al utilizar el transporte de MSMQ, se debe crear la cola utilizada de antemano. Esto se puede hacer manualmente o a través de código. En este ejemplo, el servicio contiene el código para comprobar la existencia de la cola y crearla si fuera necesario. El nombre de la cola se lee del archivo de configuración. La dirección base es utilizada por la [la herramienta de utilidad de metadatos de ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) para generar el proxy para el servicio.  
-  
-```  
+
+```csharp
 // Host the service within this EXE console application.  
 public static void Main()  
 {  
@@ -88,8 +90,8 @@ public static void Main()
         serviceHost.Close();  
     }  
 }  
-```  
-  
+```
+
  El nombre de cola de MSMQ se especifica en la sección appSettings del archivo de configuración. El extremo para el servicio se define en la sección system.ServiceModel del archivo de configuración y especifica el enlace `netMsmqBinding`.  
   
 > [!NOTE]
@@ -114,7 +116,7 @@ public static void Main()
                 bindingConfiguration="volatileBinding"   
                 contract="Microsoft.ServiceModel.Samples.IStockTicker" />  
     ...  
-          </service>  
+    </service>  
   </services>  
   
   <bindings>  
@@ -129,8 +131,8 @@ public static void Main()
 ```  
   
  Dado que el ejemplo envía los mensajes en cola utilizando una cola no transaccional, los mensajes con transacciones no se pueden enviar a la cola.  
-  
-```  
+
+```csharp
 // Create a client.  
 Random r = new Random(137);  
   
@@ -145,8 +147,8 @@ for (int i = 0; i < 10; i++)
   
 //Closing the client gracefully cleans up resources.  
 client.Close();  
-```  
-  
+```
+
  Al ejecutar el ejemplo, las actividades del servicio y del cliente se muestran en las ventanas de la consola del cliente y del servicio. Puede ver los mensajes recibidos por el servicio desde el cliente. Presione Entrar en cada ventana de la consola para cerrar el servicio y el cliente. Observe que debido a que se está usando el proceso de poner en cola, el cliente y el servicio no tienen que estar activados y ejecutándose simultáneamente. Puede ejecutar el cliente, cerrarlo e iniciar el servicio y seguir recibiendo mensajes.  
   
 ```  

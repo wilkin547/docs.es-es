@@ -1,24 +1,26 @@
 ---
 title: Ejemplo de uso compartido de puertos Net.TCP
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 03da5959-0574-4e91-8a53-05854b6c55dc
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7dea3a0f0d69662021c78b0f1d57ad0ba8c11fcb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 0db4148f9be6db97dec2b8b680dad56171106b2c
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="nettcp-port-sharing-sample"></a>Ejemplo de uso compartido de puertos Net.TCP
 El protocolo TCP/IP utiliza un número de 16 bits, llamado "puerto", para diferenciar las conexiones en varias aplicaciones de red que se ejecutan en el mismo equipo. Si una aplicación está realizando escuchas en un puerto, todo el tráfico TCP para ese puerto se dirige a esa aplicación. Otras aplicaciones no pueden realizar escuchas en ese puerto al mismo tiempo.  
@@ -46,8 +48,8 @@ Unhandled Exception: System.ServiceModel.CommunicationException: The TransportMa
   
 ## <a name="enabling-port-sharing"></a>Cómo habilitar el uso compartido del puerto  
  El código siguiente muestra cómo habilitar el uso compartido del puerto en el servidor. Inicia una instancia del servicio `ICalculator` en un puerto fijo con una ruta de acceso del URI aleatoria. Aunque dos servicios pueden compartir el mismo puerto, sus direcciones de extremo totales deben seguir siendo únicas de manera que el servicio de uso compartido de puertos de NetTcp puede enrutar los mensajes a la aplicación correcta.  
-  
-```  
+
+```csharp
 // Configure a binding with TCP port sharing enabled  
 NetTcpBinding binding = new NetTcpBinding();  
 binding.PortSharingEnabled = true;  
@@ -59,8 +61,8 @@ string address =
    String.Format("net.tcp://localhost:9000/calculator/{0}", salt);  
 host.AddServiceEndpoint(typeof(ICalculator), binding, address);  
 host.Open();  
-```  
-  
+```
+
  Con el uso compartido del puerto habilitado, puede ejecutar el servicio varias veces sin tener un conflicto sobre el número de puerto. Si cambia el código para deshabilitar el uso compartido del puerto, iniciar hasta un máximo de dos copias del servicio da como resultado que la segunda fracase con un <xref:System.ServiceModel.AddressAlreadyInUseException>.  
   
 ```  
@@ -69,8 +71,8 @@ Unhandled Exception: System.ServiceModel.AddressAlreadyInUseException: There is 
   
 ## <a name="running-the-sample"></a>Ejecutar el ejemplo  
  Puede utilizar el cliente de pruebas para comprobar que los mensajes se enrutan correctamente a los servicios que comparten el puerto.  
-  
-```  
+
+```csharp
 class client  
 {  
    static void Main(string[] args)  
@@ -112,8 +114,8 @@ class client
       factory.Close();  
    }  
 }  
-```  
-  
+```
+
  Cada instancia del servicio imprime su número y dirección únicos. Por ejemplo, puede ver el texto siguiente al ejecutar service.exe.  
   
 ```  

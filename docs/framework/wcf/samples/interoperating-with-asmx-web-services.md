@@ -1,24 +1,26 @@
 ---
 title: Interoperabilidad con servicios web ASMX
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a7c11f0a-9e68-4f03-a6b1-39cf478d1a89
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ce0f548f345e3711edfd547b2e6879fafdbd0ad4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 8fa28637ad4ffdc2652c4c925208cd699134579a
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="interoperating-with-asmx-web-services"></a>Interoperabilidad con servicios web ASMX
 Este ejemplo muestra cómo integrar una aplicación cliente [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] con un Servicio Web de ASMX existente.  
@@ -30,7 +32,7 @@ Este ejemplo muestra cómo integrar una aplicación cliente [!INCLUDE[indigo1](.
   
  La implementación de servicio Web de ASMX mostrada en el código muestra siguiente calcula y devuelve el resultado adecuado.  
   
-```  
+```csharp  
 [WebService(Namespace="http://Microsoft.ServiceModel.Samples")]  
 public class CalculatorService : System.Web.Services.WebService  
     {  
@@ -57,7 +59,7 @@ public class CalculatorService : System.Web.Services.WebService
     }  
 ```  
   
- Tal y como se ha configurado, un cliente puede tener acceso al servicio en http://localhost/servicemodelsamples/service.asmx en el mismo equipo. Para que los clientes en equipos remotos tengan acceso al servicio, se debe especificar un nombre de dominio completo en lugar del host local.  
+ Conforme a la configuración, puede tener acceso al servicio en http://localhost/servicemodelsamples/service.asmx por un cliente en el mismo equipo. Para que los clientes en equipos remotos tengan acceso al servicio, se debe especificar un nombre de dominio completo en lugar del host local.  
   
  La comunicación se realiza a través de un cliente generado por la [la herramienta de utilidad de metadatos de ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). El cliente está contenido en el archivo generatedClient.cs. El servicio ASMX debe estar disponible Para compilar el código proxy, porque se utiliza para recuperar los metadatos actualizados. Ejecute el comando siguiente desde un símbolo del sistema en el directorio del cliente para generar el proxy especificado.  
   
@@ -78,7 +80,7 @@ svcutil.exe /n:http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Samp
   
  La implementación del cliente crea una instancia del cliente generado. El cliente generado se puede utilizar a continuación para comunicarse con el servicio.  
   
-```  
+```csharp  
 // Create a client.  
 CalculatorServiceSoapClient client = new CalculatorServiceSoapClient();  
   

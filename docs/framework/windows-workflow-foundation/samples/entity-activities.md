@@ -1,35 +1,36 @@
 ---
 title: Actividades de entidad
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: c04f7413-7fb8-40c6-819e-dc92b145b62e
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c507c3da7f4583bf6ffb7b869cecbf0bfd305077
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 81f8b1852b939d7ceb8b9afae4435ca12239b880
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="entity-activities"></a>Actividades de entidad
-En este ejemplo se muestra cómo utilizar ADO.NET Entity Framework con [!INCLUDE[wf2](../../../../includes/wf2-md.md)] para simplificar el acceso a los datos.  
+Este ejemplo muestra cómo utilizar ADO.NET Entity Framework con Windows Workflow Foundation para simplificar el acceso a datos.  
   
- ADO.NET Entity Framework permite a los desarrolladores de software trabajar con datos en forma de objetos específicos del dominio, propiedades y relaciones, como Customers, Orders, Order Details y las relaciones entre estas entidades. ADO.NET Entity Framework realiza esto proporcionando un nivel de abstracción que habilita la programación con un modelo de aplicación conceptual en lugar de programar directamente con un esquema de almacenamiento relacional. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]ADO.NET Entity Framework, vea [ADO.NET Entity Framework](http://go.microsoft.com/fwlink/?LinkId=165549).  
+ ADO.NET Entity Framework permite a los desarrolladores de software trabajar con datos en forma de objetos específicos del dominio, propiedades y relaciones, como Customers, Orders, Order Details y las relaciones entre estas entidades. ADO.NET Entity Framework realiza esto proporcionando un nivel de abstracción que habilita la programación con un modelo de aplicación conceptual en lugar de programar directamente con un esquema de almacenamiento relacional. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] ADO.NET Entity Framework, vea [ADO.NET Entity Framework](http://go.microsoft.com/fwlink/?LinkId=165549).  
   
 ## <a name="sample-details"></a>Detalles del ejemplo  
  Este ejemplo utiliza la base de datos `Northwind` e incluye scripts para crear y quitar la base de datos `Northwind` (Setup.cmd y Cleanup.cmd). Los proyectos de este ejemplo incluyen un Entity Data Model basado en la base de datos `Northwind`. Para encontrar el modelo, abra el archivo `Northwind.edmx` que está incluido en el proyecto. Este es el modelo que define la forma de los objetos a los que se pueden tener acceso mediante ADO.NET Entity Framework.  
   
  En este ejemplo se incluyen las siguientes actividades:  
   
--   `EntitySQLQuery`: la actividad `EntitySQLQuery` le permite recuperar los objetos de la base de datos en función de una cadena de consulta de Entity SQL. Entity SQL es un lenguaje independiente del almacenamiento que es similar a SQL y permite especificar consultas basadas en el modelo conceptual y las entidades que forman una parte del modelo o del dominio. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Lenguaje Entity SQL, consulte [lenguaje Entity SQL](http://go.microsoft.com/fwlink/?LinkId=165646).  
+-   `EntitySQLQuery`: la actividad `EntitySQLQuery` le permite recuperar los objetos de la base de datos en función de una cadena de consulta de Entity SQL. Entity SQL es un lenguaje independiente del almacenamiento que es similar a SQL y permite especificar consultas basadas en el modelo conceptual y las entidades que forman una parte del modelo o del dominio. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Lenguaje Entity SQL, consulte [lenguaje Entity SQL](http://go.microsoft.com/fwlink/?LinkId=165646).  
   
 -   `EntityLinqQuery`: esta actividad permite recuperar objetos de la base de datos en función de una consulta o un predicado LINQ.  
   

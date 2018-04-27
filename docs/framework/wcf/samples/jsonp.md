@@ -10,20 +10,20 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: c13b4d7b-dac7-4ffd-9f84-765c903511e1
-caps.latest.revision: ''
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 02332e04f729abd125f43acdbe0883851004537e
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: af557d41709ea1015a4454d62df93e60dd975217
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="jsonp"></a>JSONP
-En este ejemplo se muestra cómo admitir JSON con relleno (JSONP) en los servicios REST de WCF. JSONP es una convención usada para invocar scripts entre dominios generando las etiquetas de scripts en el documento actual. El resultado se devuelve en una función de devolución de llamada especificada. JSONP se basa en la idea de que etiquetas como \<script src = "http:/ /..." > pueden evaluar los scripts desde cualquier dominio y el script que estas etiquetas recuperan se evalúa dentro de un ámbito en el que ya se pueden definir otras funciones.  
+En este ejemplo se muestra cómo admitir JSON con relleno (JSONP) en los servicios REST de WCF. JSONP es una convención usada para invocar scripts entre dominios generando las etiquetas de scripts en el documento actual. El resultado se devuelve en una función de devolución de llamada especificada. JSONP se basa en la idea de que etiquetas como `<script src="http://..." >` pueden evaluar los scripts desde cualquier dominio y el script que estas etiquetas recuperan se evalúa dentro de un ámbito en el que ya se pueden definir otras funciones.  
   
 ## <a name="demonstrates"></a>Demostraciones  
  Scripting a través de dominios con JSONP.  
@@ -79,6 +79,6 @@ Sys._json0({"__type":"Customer:#Microsoft.Samples.Jsonp","Address":"1 Example Wa
   
 1.  Abra la solución para obtener el ejemplo de JSONP.  
   
-2.  Presione F5 para iniciar el hipervínculo "http://localhost:26648/JSONPClientPage.aspx" http://localhost:26648/JSONPClientPage.aspx en el explorador.  
+2.  Presione F5 para iniciar `http://localhost:26648/JSONPClientPage.aspx` en el explorador.  
   
 3.  Tenga en cuenta que una vez cargada la página, las entradas de texto para "Nombre" y "Dirección" están rellenas con valores.  Estos valores se proporcionaron en una llamada al servicio de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], una vez que el explorador terminó de representar la página.

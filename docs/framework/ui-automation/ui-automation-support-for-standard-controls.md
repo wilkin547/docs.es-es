@@ -1,27 +1,29 @@
 ---
-title: "Compatibilidad de UI Automation con controles estándar"
-ms.custom: 
+title: Compatibilidad de UI Automation con controles estándar
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - controls, UI Automation support for
 - UI Automation, support for standard controls
 ms.assetid: 3770ea8a-2655-4add-9c59-fe0610ad5084
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: f7529c68e96f93ebbba9fc5e750e09331bda9699
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: af46a984f1b4c2577daee120752590ff18b9d1d8
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="ui-automation-support-for-standard-controls"></a>Compatibilidad de UI Automation con controles estándar
 > [!NOTE]
@@ -105,9 +107,9 @@ ms.lasthandoff: 12/22/2017
   
 <a name="Windows_Forms_Controls"></a>   
 ## <a name="windows-forms-controls"></a>Controles de Windows Forms  
- Los controles[!INCLUDE[TLA2#tla_winforms](../../../includes/tla2sharptla-winforms-md.md)] se exponen a [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] a través de los proveedores del cliente en UIAutomationClientsideProviders.dll. Este ensamblado se registra automáticamente para su uso con aplicaciones de cliente de automatización de la interfaz de usuario.  
+ Controles de formularios Windows Forms se exponen a [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] a través de proveedores del lado cliente en UIAutomationClientsideProviders.dll. Este ensamblado se registra automáticamente para su uso con aplicaciones de cliente de automatización de la interfaz de usuario.  
   
- Normalmente, los controles [!INCLUDE[TLA2#tla_winforms](../../../includes/tla2sharptla-winforms-md.md)] que son contenedores administrado para controles comunes [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] son compatibles con [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]. Se admiten los siguientes controles.  
+ Normalmente, los controles de formularios Windows Forms que son contenedores administran para [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] controles comunes son compatibles con [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]. Se admiten los siguientes controles.  
   
 |Nombre de la clase|  
 |----------------|  

@@ -1,24 +1,26 @@
 ---
 title: Ejemplo de XMLSerializer
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 7d134453-9a35-4202-ba77-9ca3a65babc3
-caps.latest.revision: "23"
+caps.latest.revision: 23
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c89194eebbfe4f25b8d8120be16a18306a92a889
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: af051dffa93aea6586adaea1e49081ddc357a210
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="xmlserializer-sample"></a>Ejemplo de XMLSerializer
 Este ejemplo muestra cómo serializar y deserializar tipos que sean compatibles con <xref:System.Xml.Serialization.XmlSerializer>. El formateador de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] predeterminado es la clase <xref:System.Runtime.Serialization.DataContractSerializer>. Se puede usar la clase <xref:System.Xml.Serialization.XmlSerializer> para serializar y deserializar los tipos cuando no se puede utilizar la clase <xref:System.Runtime.Serialization.DataContractSerializer>. Éste es a menudo el caso cuando se requiere el control preciso sobre XML; por ejemplo, si un dato debe ser un atributo XML y no un elemento XML. Además, <xref:System.Xml.Serialization.XmlSerializer> se selecciona automáticamente cuando se crean clientes para servicios que no sean de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
@@ -30,7 +32,7 @@ Este ejemplo muestra cómo serializar y deserializar tipos que sean compatibles 
   
  <xref:System.ServiceModel.ServiceContractAttribute> y <xref:System.ServiceModel.XmlSerializerFormatAttribute> se deben aplicar a la interfaz tal y como se muestra en el código de muestra siguiente.  
   
-```  
+```csharp  
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples"), XmlSerializerFormat]  
 public interface IXmlSerializerCalculator  
 {  
@@ -47,7 +49,7 @@ public interface IXmlSerializerCalculator
   
  `ComplexNumber` serializa los miembros públicos de la clase <xref:System.Xml.Serialization.XmlSerializer> como atributos XML. <xref:System.Runtime.Serialization.DataContractSerializer> no se puede utilizar para crear este tipo de instancia XML.  
   
-```  
+```csharp  
 public class ComplexNumber  
 {  
     private double real;  
@@ -83,7 +85,7 @@ public class ComplexNumber
   
  La implementación del servicio calcula y devuelve los resultados adecuados, aceptando y devolviendo valores del tipo `ComplexNumber`.  
   
-```  
+```csharp  
 public class XmlSerializerCalculatorService : IXmlSerializerCalculator  
 {  
     public ComplexNumber Add(ComplexNumber n1, ComplexNumber n2)  
@@ -97,7 +99,7 @@ public class XmlSerializerCalculatorService : IXmlSerializerCalculator
   
  La implementación del cliente también utiliza números complejos. El contrato de servicio y los tipos de datos se definen en el archivo de origen generatedClient.cs, que fue generado por la [la herramienta de utilidad de metadatos de ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) de metadatos del servicio. Svcutil.exe puede detectar cuándo no es serializable un contrato por <xref:System.Runtime.Serialization.DataContractSerializer> y vuelve a tipos de `XmlSerializable` emisores en este caso. Si desea forzar el uso de <xref:System.Xml.Serialization.XmlSerializer>, puede pasar la opción de comando /serializer:XmlSerializer (utilice XmlSerializer) a la herramienta Svcutil.exe.  
   
-```  
+```csharp  
 // Create a client.  
 XmlSerializerCalculatorClient client = new  
                          XmlSerializerCalculatorClient();  

@@ -1,12 +1,13 @@
 ---
 title: Interfaces relacionadas con el enlace de datos
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - data [Windows Forms], data-binding interfaces
@@ -19,29 +20,30 @@ helpviewer_keywords:
 - data binding [Windows Forms], interfaces
 - IDataErrorInfo interface [Windows Forms], Windows Forms data binding
 ms.assetid: 14e49a2e-3e46-47ca-b491-70d546333277
-caps.latest.revision: "23"
+caps.latest.revision: 23
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a0e48ddc6f74d3c4e030bc953ac4f853660a00d5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 5278ccd34e556c33e4bc5c9f460573b399f265be
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="interfaces-related-to-data-binding"></a>Interfaces relacionadas con el enlace de datos
 Con [!INCLUDE[vstecado](../../../includes/vstecado-md.md)], puede crear varias estructuras de datos distintas para satisfacer las necesidades de enlace de la aplicación y los datos con los que trabaja. Es posible que quiera crear sus propias clases que proporcionen o consuman datos en Windows Forms. Estos objetos pueden ofrecer varios niveles de funcionalidad y complejidad, desde el enlace de datos básico hasta proporcionar compatibilidad en tiempo de diseño, comprobación de errores, notificación de cambios o incluso compatibilidad con la reversión estructurada de los cambios hechos en los datos.  
   
 ## <a name="consumers-of-data-binding-interfaces"></a>Consumidores de interfaces de enlace de datos  
- En las secciones siguientes se describen dos grupos de objetos de interfaz. El primer grupo muestra las interfaces que los autores de orígenes de datos implementan en los orígenes de datos. Estas interfaces están diseñadas para que los consumidores de orígenes de datos las usen, los que en muchos casos son controles o componentes de Windows Forms. En el segundo grupo se muestran interfaces diseñadas para su uso por parte de los autores de componentes. Los autores de componentes usan estas interfaces cuando crean un componente que admite que el motor de enlace de datos de Windows Forms use el enlace de datos. Puede implementar estas interfaces dentro de las clases asociadas con el formulario para habilitar el enlace de datos; en cada caso se presenta una clase que implementa una interfaz que permite interactuar con los datos. Las herramientas con experiencia en el diseño de datos de desarrollo rápido de aplicaciones (RAD) de [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] ya aprovechan esta funcionalidad.  
+ En las secciones siguientes se describen dos grupos de objetos de interfaz. El primer grupo muestra las interfaces que los autores de orígenes de datos implementan en los orígenes de datos. Estas interfaces están diseñadas para que los consumidores de orígenes de datos las usen, los que en muchos casos son controles o componentes de Windows Forms. En el segundo grupo se muestran interfaces diseñadas para su uso por parte de los autores de componentes. Los autores de componentes usan estas interfaces cuando crean un componente que admite que el motor de enlace de datos de Windows Forms use el enlace de datos. Puede implementar estas interfaces dentro de las clases asociadas con el formulario para habilitar el enlace de datos; en cada caso se presenta una clase que implementa una interfaz que permite interactuar con los datos. Visual Studio rápido de aplicaciones (RAD) datos diseño experiencia de herramientas de desarrollo de ya aprovechan esta funcionalidad.  
   
 ### <a name="interfaces-for-implementation-by-data-source-authors"></a>Interfaces para la implementación por parte de los autores del origen de datos  
  Las interfaces siguientes están diseñadas para ser usadas por los controles de Windows Forms:  
   
 -   <xref:System.Collections.IList> (interfaz)  
   
-     Una clase que implementa el <xref:System.Collections.IList> interfaz podría ser un <xref:System.Array>, <xref:System.Collections.ArrayList>, o <xref:System.Collections.CollectionBase>. Se trata de listas de elementos de tipo indizadas <xref:System.Object>. Estas listas deben contener tipos homogéneos, porque el primer elemento del índice determina el tipo. <xref:System.Collections.IList>estaría disponible para el enlace en tiempo de ejecución.  
+     Una clase que implementa el <xref:System.Collections.IList> interfaz podría ser un <xref:System.Array>, <xref:System.Collections.ArrayList>, o <xref:System.Collections.CollectionBase>. Se trata de listas de elementos de tipo indizadas <xref:System.Object>. Estas listas deben contener tipos homogéneos, porque el primer elemento del índice determina el tipo. <xref:System.Collections.IList> estaría disponible para el enlace en tiempo de ejecución.  
   
     > [!NOTE]
     >  Si desea crear una lista de objetos comerciales para enlaces con formularios Windows Forms, considere la posibilidad de usar el <xref:System.ComponentModel.BindingList%601>. El <xref:System.ComponentModel.BindingList%601> es una clase extensible que implementa las interfaces principales necesarias para el enlace de datos bidireccional de formularios Windows Forms.  
@@ -111,7 +113,7 @@ Con [!INCLUDE[vstecado](../../../includes/vstecado-md.md)], puede crear varias e
   
 -   <xref:System.ComponentModel.IListSource> (interfaz)  
   
-     Una clase que implementa el <xref:System.ComponentModel.IListSource> interfaz habilita el enlace basado en lista en objetos de fuera de la lista. El <xref:System.ComponentModel.IListSource.GetList%2A> método <xref:System.ComponentModel.IListSource> se utiliza para devolver una lista enlazable de un objeto que no hereda de <xref:System.Collections.IList>. <xref:System.ComponentModel.IListSource>se usa por la <xref:System.Data.DataSet> clase.  
+     Una clase que implementa el <xref:System.ComponentModel.IListSource> interfaz habilita el enlace basado en lista en objetos de fuera de la lista. El <xref:System.ComponentModel.IListSource.GetList%2A> método <xref:System.ComponentModel.IListSource> se utiliza para devolver una lista enlazable de un objeto que no hereda de <xref:System.Collections.IList>. <xref:System.ComponentModel.IListSource> se usa por la <xref:System.Data.DataSet> clase.  
   
 -   <xref:System.ComponentModel.IRaiseItemChangedEvents> (interfaz)  
   
@@ -124,17 +126,17 @@ Con [!INCLUDE[vstecado](../../../includes/vstecado-md.md)], puede crear varias e
   
      Un componente que implementa la <xref:System.ComponentModel.ISupportInitialize> interfaz tiene ventajas de las optimizaciones por lotes para establecer las propiedades e inicializar propiedades codependientes. El <xref:System.ComponentModel.ISupportInitialize> contiene dos métodos:  
   
-    -   <xref:System.ComponentModel.ISupportInitialize.BeginInit%2A>indica que la inicialización del objeto se está iniciando.  
+    -   <xref:System.ComponentModel.ISupportInitialize.BeginInit%2A> indica que la inicialización del objeto se está iniciando.  
   
-    -   <xref:System.ComponentModel.ISupportInitialize.EndInit%2A>indica que la inicialización del objeto está finalizando.  
+    -   <xref:System.ComponentModel.ISupportInitialize.EndInit%2A> indica que la inicialización del objeto está finalizando.  
   
 -   <xref:System.ComponentModel.ISupportInitializeNotification> (interfaz)  
   
      Un componente que implementa la <xref:System.ComponentModel.ISupportInitializeNotification> interfaz también implementa el <xref:System.ComponentModel.ISupportInitialize> interfaz. Esta interfaz permite notificar a otros <xref:System.ComponentModel.ISupportInitialize> componentes que la inicialización está completa. El <xref:System.ComponentModel.ISupportInitializeNotification> interfaz contiene dos miembros:  
   
-    -   <xref:System.ComponentModel.ISupportInitializeNotification.IsInitialized%2A>Devuelve un `boolean` valor que indica si el componente se ha inicializado.  
+    -   <xref:System.ComponentModel.ISupportInitializeNotification.IsInitialized%2A> Devuelve un `boolean` valor que indica si el componente se ha inicializado.  
   
-    -   <xref:System.ComponentModel.ISupportInitializeNotification.Initialized>se produce cuando <xref:System.ComponentModel.ISupportInitialize.EndInit%2A> se llama.  
+    -   <xref:System.ComponentModel.ISupportInitializeNotification.Initialized> se produce cuando <xref:System.ComponentModel.ISupportInitialize.EndInit%2A> se llama.  
   
 -   <xref:System.ComponentModel.INotifyPropertyChanged> (interfaz)  
   

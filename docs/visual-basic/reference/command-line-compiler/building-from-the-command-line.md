@@ -22,18 +22,18 @@ ms.assetid: e61947e9-a42e-4717-a699-5f70a98cdd03
 caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 1fd4054838925267647986a5166fd88037b17fae
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 9a9dee47f06e4f7d9fc8d237376df7707130921d
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="building-from-the-command-line-visual-basic"></a>Compilar desde la línea de comandos (Visual Basic)
 Un proyecto de Visual Basic se compone de uno o más archivos de código fuente independiente. Durante el proceso conocido como compilación, estos archivos se reúnen en un paquete, un solo archivo ejecutable que se pueden ejecutar como una aplicación.  
   
- Visual Basic proporciona un compilador de línea de comandos como alternativa a la compilación de programas desde el [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] el entorno de desarrollo integrado (IDE). El compilador de línea de comandos está diseñado para situaciones en las que no necesitan el conjunto completo de características del IDE, por ejemplo, cuando estén usando o escribiendo en los equipos con sistema limitados memoria o espacio de almacenamiento.  
+ Visual Basic proporciona un compilador de línea de comandos como alternativa a la compilación de programas desde el entorno de desarrollo integrado (IDE) de Visual Studio. El compilador de línea de comandos está diseñado para situaciones en las que no necesitan el conjunto completo de características del IDE, por ejemplo, cuando estén usando o escribiendo en los equipos con sistema limitados memoria o espacio de almacenamiento.  
   
-  Para compilar archivos de código fuente desde el [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] IDE, elija la **generar** línea de comandos desde el **generar** menú.  
+  Para compilar archivos de código fuente desde el IDE de Visual Studio, elija la **generar** línea de comandos desde el **generar** menú.  
   
 > [!TIP]
 >  Cuando compila los archivos de proyecto mediante el IDE de Visual Studio, puede mostrar información acerca de los asociados **vbc** comando y sus modificadores en la ventana de salida. Para mostrar esta información, abra el [cuadro de diálogo Opciones, proyectos y soluciones, compilación y ejecución](/visualstudio/ide/reference/options-dialog-box-projects-and-solutions-build-and-run)y, a continuación, establezca el **nivel de detalle de la salida de compilación del proyecto de MSBuild** a **Normal** o un mayor nivel de detalle. Para obtener más información, consulte [Cómo: Ver, guardar y configurar archivos de registro de compilación](http://msdn.microsoft.com/library/75d38b76-26d6-4f43-bbe7-cbacd7cc81e7).  

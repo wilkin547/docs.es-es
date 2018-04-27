@@ -1,24 +1,26 @@
 ---
 title: Cliente de prueba de WCF (WcfTestClient.exe)
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: d4302855-677f-4640-aa90-c5d785d72fb7
-caps.latest.revision: "45"
+caps.latest.revision: 45
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 18866260c5d14cf27634afcd8391b159abac1dd1
-ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
+ms.workload:
+- dotnet
+ms.openlocfilehash: 2eb32d36b1e6710f666391f918aff68c33566ab8
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="wcf-test-client-wcftestclientexe"></a>Cliente de prueba de WCF (WcfTestClient.exe)
 El cliente de prueba de [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] (WcfTestClient.exe) es una herramienta de interfaz gráfica de usuario (GUI) que permite a los usuarios especificar parámetros de prueba, enviar esa entrada al servicio y ver la respuesta que éste devuelve. Proporciona un servicio de prueba sin problemas cuando se combina con el host de servicio [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].  
@@ -172,9 +174,9 @@ El cliente de prueba de [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] (Wc
 ## <a name="closing-wcf-test-client"></a>Cerrar el cliente de prueba de WCF  
  El cliente de prueba [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] se puede cerrar de las maneras siguientes:  
   
--   En el **archivo** menú, haga clic en **Exit**. O bien, en la [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] ventana principal del cliente de prueba, haga clic en **cerrar**. Estas dos acciones también cierran el host de servicio de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] y detienen el proceso de depuración de [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] si [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] ha iniciado el cliente de prueba de [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)].  
+-   En el **archivo** menú, haga clic en **Exit**. O bien, en la [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] ventana principal del cliente de prueba, haga clic en **cerrar**. Estas dos acciones también cierran [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Host automático del servicio y detener la depuración de Visual Studio procesar si [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] ha iniciado el cliente de prueba de Visual Studio.  
   
--   Haga clic en el **Host de servicio WCF** icono en el área de notificación y, a continuación, haga clic en **salir.** Esto apaga el host automático de servicio [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] y el cliente de prueba [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] y detiene el proceso de depuración [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)].  
+-   Haga clic en el **Host de servicio WCF** icono en el área de notificación y, a continuación, haga clic en **salir.** Esto apaga [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Host automático del servicio y [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] cliente de prueba y se detiene la depuración de Visual Studio del proceso.  
   
 ## <a name="see-also"></a>Vea también  
  [Host de servicio WCF (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)

@@ -1,13 +1,13 @@
 ---
-title: "Información general sobre propiedades asociadas"
-ms.custom: 
+title: Información general sobre propiedades asociadas
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-wpf
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - attached properties [WPF Designer]
 ms.assetid: 75928354-dc01-47e8-a018-8409aec1f32d
-caps.latest.revision: 
+caps.latest.revision: 28
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 2d1d0eb55e75cd450d55b69aadca9c60e157eb09
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ceba94d80ca66ab228804ffff2a5b8f89a68d7c4
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="attached-properties-overview"></a>Información general sobre propiedades asociadas
 Una propiedad adjunta es un concepto definido por XAML. Una propiedad adjunta está destinada a usarse como un tipo de propiedad global que se puede establecer en cualquier objeto. En [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], las propiedades adjuntas se definen normalmente como una forma especializada de propiedad de dependencia que no tiene el "contenedor" de propiedades convencional.  
@@ -67,7 +67,7 @@ Una propiedad adjunta es un concepto definido por XAML. Una propiedad adjunta es
 ### <a name="an-example-of-a-parent-defined-attached-property"></a>Ejemplo de una propiedad adjunta definida por el elemento primario  
  El escenario más típico donde [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] define una propiedad adjunta es aquel en que un elemento primario admite una colección de elementos secundarios e implementa un comportamiento donde se notifican individualmente los detalles del comportamiento de cada elemento secundario.  
   
- <xref:System.Windows.Controls.DockPanel>define la <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType> propiedad adjunta, y <xref:System.Windows.Controls.DockPanel> tiene código de nivel de clase como parte de su lógica de representación (en concreto, <xref:System.Windows.Controls.DockPanel.MeasureOverride%2A> y <xref:System.Windows.Controls.DockPanel.ArrangeOverride%2A>). A <xref:System.Windows.Controls.DockPanel> instancia siempre comprobará si cualquiera de sus elementos secundarios inmediatos ha establecido un valor para <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType>. Si es así, esos valores se convierten en la entrada de la lógica de representación que se aplica a ese elemento secundario determinado. Anidar <xref:System.Windows.Controls.DockPanel> instancias cada tratan sus propias colecciones de elementos secundarios inmediatos, pero ese comportamiento es específico de la implementación a la forma <xref:System.Windows.Controls.DockPanel> procesos <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType> valores. Teóricamente, es posible tener propiedades adjuntas que influyan en los elementos, más allá del elemento primario inmediato. Si el <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType> propiedad asociada está establecida en un elemento que no tiene ningún <xref:System.Windows.Controls.DockPanel> se genera el elemento primario para que actúe sobre ella, ningún error o excepción. Esto significa simplemente que se estableció un valor de propiedad global, pero no tiene ningún actual <xref:System.Windows.Controls.DockPanel> primario que pueda utilizar la información.  
+ <xref:System.Windows.Controls.DockPanel> define la <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType> propiedad adjunta, y <xref:System.Windows.Controls.DockPanel> tiene código de nivel de clase como parte de su lógica de representación (en concreto, <xref:System.Windows.Controls.DockPanel.MeasureOverride%2A> y <xref:System.Windows.Controls.DockPanel.ArrangeOverride%2A>). A <xref:System.Windows.Controls.DockPanel> instancia siempre comprobará si cualquiera de sus elementos secundarios inmediatos ha establecido un valor para <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType>. Si es así, esos valores se convierten en la entrada de la lógica de representación que se aplica a ese elemento secundario determinado. Anidar <xref:System.Windows.Controls.DockPanel> instancias cada tratan sus propias colecciones de elementos secundarios inmediatos, pero ese comportamiento es específico de la implementación a la forma <xref:System.Windows.Controls.DockPanel> procesos <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType> valores. Teóricamente, es posible tener propiedades adjuntas que influyan en los elementos, más allá del elemento primario inmediato. Si el <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType> propiedad asociada está establecida en un elemento que no tiene ningún <xref:System.Windows.Controls.DockPanel> se genera el elemento primario para que actúe sobre ella, ningún error o excepción. Esto significa simplemente que se estableció un valor de propiedad global, pero no tiene ningún actual <xref:System.Windows.Controls.DockPanel> primario que pueda utilizar la información.  
   
 <a name="attached_properties_code"></a>   
 ## <a name="attached-properties-in-code"></a>Propiedades adjuntas del código  
@@ -106,7 +106,7 @@ Una propiedad adjunta es un concepto definido por XAML. Una propiedad adjunta es
  Defina la propiedad adjunta como una propiedad de dependencia declarando un `public` `static` `readonly` campo de tipo <xref:System.Windows.DependencyProperty>. Para definir este campo con el valor devuelto de la <xref:System.Windows.DependencyProperty.RegisterAttached%2A> método. El nombre del campo debe coincidir con el nombre de la propiedad adjunta, con la cadena `Property` anexada, para seguir el patrón establecido de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] para la nomenclatura de campos de identificación frente a las propiedades que representan. El proveedor de propiedades adjuntas debe proporcionar también los métodos estáticos `Get`*NombreDePropiedad* y `Set`*NombreDePropiedad* como descriptores de acceso para la propiedad adjunta; de lo contrario, el sistema de propiedades no podrá usar la propiedad adjunta.  
   
 > [!NOTE]
->  Si omite el descriptor de acceso get de la propiedad adjunta, el enlace de datos en la propiedad no funcionará en las herramientas de diseño, como [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] y Expression Blend.  
+>  Si se omite el descriptor de acceso de la propiedad adjunta get, enlace de datos en la propiedad no funcionará en las herramientas de diseño, como Visual Studio y Expression Blend.  
   
 #### <a name="the-get-accessor"></a>Descriptor de acceso get  
  La signatura del descriptor de acceso `Get`*NombreDePropiedad* debe ser:  

@@ -16,14 +16,14 @@ helpviewer_keywords:
 ms.assetid: 5bfbb487-5f47-4267-969a-39dfb917beeb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cf20e2916efd2eb10065be22c319e34ddb2bda9a
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: b61ef6facf33fa043cad28a78405a19308a9864f
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="sample-compilation-command-lines-visual-basic"></a>Líneas de comandos de compilación de ejemplo (Visual Basic)
-Como alternativa a la compilación de programas de Visual Basic desde [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)], puede compilar desde la línea de comandos para generar archivos ejecutables (.exe) o archivos de biblioteca de vínculos dinámicos (.dll).  
+Como alternativa a la compilación de programas de Visual Basic desde dentro de Visual Studio, puede compilar desde la línea de comandos para generar archivos ejecutables (.exe) o archivos de biblioteca de vínculos dinámicos (.dll).  
   
  El compilador de línea de comandos de Visual Basic admite un conjunto completo de opciones que controlan entrada y salida de archivos, ensamblados y depuración y opciones de preprocesador. Cada opción está disponible en dos formatos intercambiables: `-option` y `/option`. Esta documentación se muestra solo la `-option` formulario.  
   

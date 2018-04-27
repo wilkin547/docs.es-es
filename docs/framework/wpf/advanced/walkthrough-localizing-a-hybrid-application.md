@@ -1,27 +1,29 @@
 ---
-title: "Tutorial: Localizar una aplicación híbrida"
-ms.custom: 
+title: 'Tutorial: Localizar una aplicación híbrida'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - localization [WPF interoperability]
 - hybrid applications [WPF interoperability]
 ms.assetid: fbc0c54e-930a-4c13-8e9c-27b83665010a
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9f9bb7588ef1f6962a5cd55196154ac7f666d53b
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: b00553c005b714094f208fc6d4ed40e838b90b49
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="walkthrough-localizing-a-hybrid-application"></a>Tutorial: Localizar una aplicación híbrida
 En este tutorial se muestra cómo localizar [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] elementos en un [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]-aplicación híbrida basada en.  
@@ -123,7 +125,7 @@ En este tutorial se muestra cómo localizar [!INCLUDE[TLA2#tla_winclient](../../
   
 #### <a name="to-assign-resource-identifiers"></a>Para asignar identificadores de recursos  
   
-1.  En el menú Inicio, abra el [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] símbolo del sistema.  
+1.  En el menú Inicio, abra el símbolo del sistema de Visual Studio.  
   
 2.  Use el siguiente comando para asignar identificadores de recursos al contenido localizable.  
   
@@ -150,7 +152,7 @@ En este tutorial se muestra cómo localizar [!INCLUDE[TLA2#tla_winclient](../../
     LocBaml /parse LocalizingWpfInWf.g.en-US.resources /out:temp.csv  
     ```  
   
-3.  Abra el archivo temp.csv con [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] u otro editor de texto. Reemplace la cadena `"Hello"` con su traducción al español, `"Hola"`.  
+3.  Abra el archivo temp.csv con Visual Studio u otro editor de texto. Reemplace la cadena `"Hello"` con su traducción al español, `"Hola"`.  
   
 4.  Guarde el archivo temp.csv.  
   

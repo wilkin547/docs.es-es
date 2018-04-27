@@ -1,34 +1,35 @@
 ---
 title: Emular la ruptura en una actividad While
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ddff715d-d623-4b54-b841-60bacbc3ca21
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 22a03c2e7dcc8d024ed407e7df24a4e9db4e2bf6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 27264832dd82719d7ccb81e1398df343653515b1
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="emulating-breaking-in-a-while-activity"></a>Emular la ruptura en una actividad While
 En este ejemplo se muestra cómo interrumpir el mecanismo de bucle de las siguientes actividades: <xref:System.Activities.Statements.DoWhile>, <xref:System.Activities.Statements.ForEach%601>, <xref:System.Activities.Statements.While>y <xref:System.Activities.Statements.ParallelForEach%601>.  
   
- Esto resulta útil porque [!INCLUDE[wf](../../../../includes/wf-md.md)] no incluye ninguna actividad para interrumpir la ejecución de estos bucles.  
+ Esto es útil porque Windows Workflow Foundation (WF) no incluye ninguna actividad para interrumpir la ejecución de estos bucles.  
   
 ## <a name="scenario"></a>Escenario  
  En el ejemplo se encuentra el primer proveedor de confianza en una lista de proveedores (instancias de la clase `Vendor`). Cada proveedor tiene un `ID`, un `Name` y un valor de confiabilidad numérico que determina la fiabilidad del proveedor. En el ejemplo se crea una actividad personalizada llamada `FindReliableVendor` que recibe dos parámetros de entrada (una lista de proveedores y un valor de confiabilidad mínimo) y devuelve el primer proveedor de la lista que coincide con los criterios proporcionados.  
   
 ## <a name="breaking-a-loop"></a>Interrumpir un bucle  
- [!INCLUDE[wf](../../../../includes/wf-md.md)] no incluye ninguna actividad para interrumpir un bucle. El ejemplo de código logra interrumpir un bucle utilizando una actividad <xref:System.Activities.Statements.If> y diferentes variables. En el ejemplo, la actividad <xref:System.Activities.Statements.While> se interrumpe cuando se asigna a la variable `reliableVendor` un valor distinto de `null`.  
+ Windows Workflow Foundation (WF) no incluye ninguna actividad para interrumpir un bucle. El ejemplo de código logra interrumpir un bucle utilizando una actividad <xref:System.Activities.Statements.If> y diferentes variables. En el ejemplo, la actividad <xref:System.Activities.Statements.While> se interrumpe cuando se asigna a la variable `reliableVendor` un valor distinto de `null`.  
   
  El siguiente ejemplo de código muestra cómo el ejemplo interrumpe un bucle while.  
   

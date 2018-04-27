@@ -22,11 +22,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: ab80f39a15952bee8296166ea19a78498c3c1b23
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 7c33e764b9af46aec3788e7e113d01c4c5fc9905
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="walkthrough-hosting-a-win32-control-in-wpf"></a>Tutorial: Hospedar un control de Win32 en WPF
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] proporciona un entorno rico para crear aplicaciones. Sin embargo, si tiene una inversión sustancial en [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] código, puede ser más eficaz volver a usar al menos parte de ese código en su [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplicación en lugar de escribirlo completamente. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Proporciona un mecanismo sencillo para hospedar un [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] ventana, en un [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] página.  
@@ -141,7 +141,7 @@ ms.lasthandoff: 04/26/2018
   
 <a name="communication"></a>   
 ## <a name="implement-communication-between-the-control-and-the-page"></a>Implementar la comunicación entre el control y la página  
- Manipular el control mediante su envío [!INCLUDE[TLA2#tla_win](../../../../includes/tla2sharptla-win-md.md)] mensajes. El control le notifica en qué momento el usuario interactúa con él mediante el envío de notificaciones a la ventana host. El [hospedar un Control de cuadro de lista de Win32 en WPF Sample](http://go.microsoft.com/fwlink/?LinkID=159998) ejemplo incluye una interfaz de usuario que proporciona varios ejemplos de cómo funciona esto:  
+ Manipular el control mediante el envío de mensajes de Windows. El control le notifica en qué momento el usuario interactúa con él mediante el envío de notificaciones a la ventana host. El [hospedar un Control de cuadro de lista de Win32 en WPF Sample](http://go.microsoft.com/fwlink/?LinkID=159998) ejemplo incluye una interfaz de usuario que proporciona varios ejemplos de cómo funciona esto:  
   
 -   Anexar un elemento a la lista  
   

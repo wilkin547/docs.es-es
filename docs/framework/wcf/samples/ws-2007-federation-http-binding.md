@@ -1,24 +1,26 @@
 ---
-title: "Enlace HTTP de federación de WS 2007"
-ms.custom: 
+title: Enlace HTTP de federación de WS 2007
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 91c1b477-a96e-4bf5-9330-5e9312113371
-caps.latest.revision: "23"
+caps.latest.revision: 23
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8b04984ad1e21da4bc86760046029d3b94b70758
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: b7126e4c0c293bfbf78cecf97cc13ea91e6c0c62
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="ws-2007-federation-http-binding"></a>Enlace HTTP de federación de WS 2007
 Este ejemplo muestra el uso de <xref:System.ServiceModel.WS2007FederationHttpBinding>, un enlace estándar que puede utilizar para generar escenarios federados que admiten la versión 1.3 de la especificación WS-Trust.  
@@ -108,17 +110,15 @@ Este ejemplo muestra el uso de <xref:System.ServiceModel.WS2007FederationHttpBin
  STS hace que esté disponible un extremo único mediante el estándar <xref:System.ServiceModel.WS2007HttpBinding>. El servicio responde a las solicitudes de los clientes para los tokens. Si el cliente se autentica utilizando una cuenta de Windows, el servicio emite un token que contiene el nombre de usuario del cliente como una demanda. Como parte de la creación del token, el STS firma el token usando la clave privada asociada con el certificado de CN=STS. Además, crea una clave simétrica y la cifra utilizando la clave pública asociada con el certificado de CN=localhost. Para devolver el token al cliente, el STS devuelve también la clave simétrica. El cliente presenta el token emitido al servicio `ICalculator` y demuestra que conoce la clave simétrica firmando el mensaje con esa clave.  
   
  Al ejecutar el ejemplo, la solicitud para el token de seguridad se muestra en la ventana de la consola del STS. Las solicitudes y respuestas de la operación se muestran en las ventanas de la consola del cliente y del servicio. Presione ENTRAR en cualquiera de las ventanas de la consola para cerrar la aplicación.  
-  
- `Add(100,15.99) = 115.99`  
-  
- `Subtract(145,76.54) = 68.46`  
-  
- `Multiply(9,81.25) = 731.25`  
-  
- `Divide(22,7) = 3.14285714285714`  
-  
- `Press <ENTER> to terminate client.`  
-  
+
+```
+Add(100,15.99) = 115.99
+Subtract(145,76.54) = 68.46
+Multiply(9,81.25) = 731.25
+Divide(22,7) = 3.14285714285714
+Press <ENTER> to terminate client.
+```
+
  El archivo Setup.bat incluido con este ejemplo le permite configurar el servidor y el STS con los certificados pertinentes para ejecutan una aplicación autohospedada. El archivo por lotes crea dos certificados en el almacén de certificados LocalMachine /TrustedPeople. El primer certificado tiene un nombre sujeto de CN=STS y STS lo utiliza para firmar los tokens de seguridad que emite al cliente. El segundo certificado tiene un nombre sujeto de CN=localhost y el STS lo utiliza para cifrar en cierto modo una clave que el servicio puede descifrar.  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Configurar, compilar y ejecutar el ejemplo  

@@ -16,11 +16,11 @@ ms.assetid: 3b77b7e3-8b17-40de-b4e1-05e4b9b325ad
 caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 298faf593dc15d6ede5fbb4238599373f3a49a82
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: b02f4bb120b4072facc913fb9b83dcf498208cbe
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="unable-to-write-temporary-file-because-temporary-path-is-not-available"></a>No se puede escribir el archivo temporal porque la ruta de acceso temporal no está disponible
 Visual Basic no se pudo determinar la ruta de acceso donde se almacenan los archivos temporales.  
@@ -29,9 +29,9 @@ Visual Basic no se pudo determinar la ruta de acceso donde se almacenan los arch
   
 ## <a name="to-correct-this-error"></a>Para corregir este error  
   
-1.  Reinicie [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)].  
+1.  Reinicie Visual Studio.  
   
-2.  Si el problema persiste, reinstale [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)].  
+2.  Si el problema persiste, vuelva a instalar Visual Studio.  
   
 ## <a name="see-also"></a>Vea también  
  [Hable con nosotros](/visualstudio/ide/talk-to-us)
