@@ -1,12 +1,13 @@
 ---
-title: "Cómo suplantar a un cliente en un servicio"
-ms.custom: 
+title: Cómo suplantar a un cliente en un servicio
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,22 +17,23 @@ helpviewer_keywords:
 - impersonation
 - WCF, security
 ms.assetid: 431db851-a75b-4009-9fe2-247243d810d3
-caps.latest.revision: "33"
+caps.latest.revision: 33
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2c868e2b31fa15d0f0c9228828beba03666d5591
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 95330e062ff0ab6ba080deeb01a73bb64fac4dfc
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="how-to-impersonate-a-client-on-a-service"></a>Cómo suplantar a un cliente en un servicio
-Suplantar un cliente en un servicio de [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] permite al servicio realizar acciones en nombre del cliente. Para las acciones sujetas a las comprobaciones de la lista de control de acceso (ACL), como el acceso a los directorios y archivos de un equipo o el acceso a una base de datos de SQL Server, ACL realiza una comprobación frente a la cuenta de usuario del cliente. Este tema muestra los pasos básicos requeridos para permitir a un cliente de un dominio de Windows establecer un nivel de la suplantación del cliente. Para obtener un ejemplo ilustrativo, consulte [Impersonating the Client](../../../docs/framework/wcf/samples/impersonating-the-client.md). [!INCLUDE[crabout](../../../includes/crabout-md.md)]suplantación de clientes, consulte [delegación y suplantación](../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
+Suplantar un cliente en un servicio de [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] permite al servicio realizar acciones en nombre del cliente. Para las acciones sujetas a las comprobaciones de la lista de control de acceso (ACL), como el acceso a los directorios y archivos de un equipo o el acceso a una base de datos de SQL Server, ACL realiza una comprobación frente a la cuenta de usuario del cliente. Este tema muestra los pasos básicos requeridos para permitir a un cliente de un dominio de Windows establecer un nivel de la suplantación del cliente. Para obtener un ejemplo ilustrativo, consulte [Impersonating the Client](../../../docs/framework/wcf/samples/impersonating-the-client.md). [!INCLUDE[crabout](../../../includes/crabout-md.md)] suplantación de clientes, consulte [delegación y suplantación](../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
   
 > [!NOTE]
->  Cuando el cliente y el servicio se están ejecutando en el mismo equipo y el cliente se está ejecutando bajo una cuenta del sistema (por ejemplo, `Local System` o `Network Service`), no se puede suplantar el cliente cuando se establece una sesión segura con tokens de contexto de seguridad con estado. Un WinForms o una aplicación de consola se ejecuta normalmente con la cuenta con la que haya iniciado la sesión, de manera que la cuenta pueda suplantarse de manera predeterminada. No obstante, cuando el cliente es una página [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] que se hospeda en [!INCLUDE[iis601](../../../includes/iis601-md.md)] o ISS 7.0, el cliente se ejecuta, de manera predeterminada, en la cuenta `Network Service` . Todos los enlaces proporcionados por el sistema que admiten sesiones seguras utilizan de forma predeterminada un token de contexto de seguridad sin estado. Sin embargo, si el cliente es una página de [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] y se usan sesiones seguras con tokens de contexto de seguridad con estado, no se puede suplantar al cliente. [!INCLUDE[crabout](../../../includes/crabout-md.md)]uso de tokens de contexto de seguridad con estado en una sesión segura, consulte [Cómo: crear un Token de contexto de seguridad para una sesión segura](../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).  
+>  Cuando el cliente y el servicio se están ejecutando en el mismo equipo y el cliente se está ejecutando bajo una cuenta del sistema (por ejemplo, `Local System` o `Network Service`), no se puede suplantar el cliente cuando se establece una sesión segura con tokens de contexto de seguridad con estado. Un WinForms o una aplicación de consola se ejecuta normalmente con la cuenta con la que haya iniciado la sesión, de manera que la cuenta pueda suplantarse de manera predeterminada. No obstante, cuando el cliente es una página [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] que se hospeda en [!INCLUDE[iis601](../../../includes/iis601-md.md)] o ISS 7.0, el cliente se ejecuta, de manera predeterminada, en la cuenta `Network Service` . Todos los enlaces proporcionados por el sistema que admiten sesiones seguras utilizan de forma predeterminada un token de contexto de seguridad sin estado. Sin embargo, si el cliente es una página de [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] y se usan sesiones seguras con tokens de contexto de seguridad con estado, no se puede suplantar al cliente. [!INCLUDE[crabout](../../../includes/crabout-md.md)] uso de tokens de contexto de seguridad con estado en una sesión segura, consulte [Cómo: crear un Token de contexto de seguridad para una sesión segura](../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).  
   
 ### <a name="to-enable-impersonation-of-a-client-from-a-cached-windows-token-on-a-service"></a>Para habilitar la suplantación de un cliente desde un token de Windows almacenado en memoria caché en un servicio  
   
@@ -46,7 +48,7 @@ Suplantar un cliente en un servicio de [!INCLUDE[indigo1](../../../includes/indi
   
 ### <a name="to-set-the-allowed-impersonation-level-on-the-client"></a>Para establecer el nivel de suplantación permitido en el cliente  
   
-1.  Cree el código de cliente del servicio mediante [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Acceso a los servicios mediante un cliente WCF](../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md).  
+1.  Cree el código de cliente del servicio mediante [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). Para obtener más información, consulte [al tener acceso a los servicios mediante un cliente WCF](../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md).  
   
 2.  Después de crear el cliente [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] , establezca la propiedad <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A> de la clase <xref:System.ServiceModel.Security.WindowsClientCredential> en uno de los valores de enumeración <xref:System.Security.Principal.TokenImpersonationLevel> .  
   

@@ -21,11 +21,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 3669260d34aac0783f2ebd735c79ced91741408a
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: b0042d9b90066553d6fc962bba1b7a7b990ca242
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="wcf-client-overview"></a>Introducción a un cliente WCF
 En esta sección se describe qué aplicaciones pueden configurar un cliente [!INCLUDE[indigo1](../../../includes/indigo1-md.md)], cómo lo configuran, crean y utilizan, y cómo proteger las aplicaciones cliente.  
@@ -83,7 +83,7 @@ svcutil /language:vb /out:ClientCode.vb /config:app.config http://computerName/M
   
  Esta clase puede crearse como un objeto local, mediante uno de los constructores, configurarse y, a continuación, utilizarse para la conexión con un servicio del tipo `ISampleService`.  
   
- Se recomienda crear primero el objeto de cliente [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], y, a continuación, utilizarlo y cerrarlo dentro de un único bloque try/catch. No debe utilizar el `using` instrucción (`Using` en Visual Basic) porque puede enmascarar excepciones en ciertos modos de error. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] las siguientes secciones, así como [evitar problemas con la instrucción Using](../../../docs/framework/wcf/samples/avoiding-problems-with-the-using-statement.md).  
+ Se recomienda crear primero el objeto de cliente [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], y, a continuación, utilizarlo y cerrarlo dentro de un único bloque try/catch. No debe utilizar el `using` instrucción (`Using` en Visual Basic) porque puede enmascarar excepciones en ciertos modos de error. Para obtener más información, consulte las secciones siguientes como [evitar problemas con la instrucción Using](../../../docs/framework/wcf/samples/avoiding-problems-with-the-using-statement.md).  
   
 ### <a name="contracts-bindings-and-addresses"></a>Contratos, enlaces y direcciones  
  Antes de poder crear un objeto de cliente [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], este debe configurarse. En concreto, debe tener un servicio *extremo* a usar. Un punto de conexión es la combinación de un contrato de servicio, un enlace y una dirección. ([!INCLUDE[crabout](../../../includes/crabout-md.md)] puntos de conexión, consulte [extremos: direcciones, enlaces y contratos](../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md).) Normalmente, esta información se encuentra en la [ \<extremo >](../../../docs/framework/configure-apps/file-schema/wcf/endpoint-of-client.md) elemento en un archivo de configuración de aplicación de cliente, como el que la herramienta Svcutil.exe genera y se carga automáticamente cuando se crea el cliente objeto. Ambos tipos de cliente [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] también tienen sobrecargas que permiten especificar esta información mediante programación.  
@@ -140,7 +140,7 @@ Namespace Microsoft.ServiceModel.Samples
 End Interface  
 ```  
   
- Puede llamar a las operaciones mediante la creación de un objeto de cliente [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] y la llamada a sus métodos, como muestra el ejemplo de código siguiente. Tenga en cuenta que la apertura, llamada y cierre del objeto de cliente [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] tiene lugar en un bloque try/catch único. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Acceso a los servicios mediante un cliente WCF](../../../docs/framework/wcf/feature-details/accessing-services-using-a-client.md) y [evitar problemas con la instrucción Using](../../../docs/framework/wcf/samples/avoiding-problems-with-the-using-statement.md).  
+ Puede llamar a las operaciones mediante la creación de un objeto de cliente [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] y la llamada a sus métodos, como muestra el ejemplo de código siguiente. Tenga en cuenta que la apertura, llamada y cierre del objeto de cliente [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] tiene lugar en un bloque try/catch único. Para obtener más información, consulte [al tener acceso a los servicios mediante un cliente WCF](../../../docs/framework/wcf/feature-details/accessing-services-using-a-client.md) y [evitar problemas con la instrucción Using](../../../docs/framework/wcf/samples/avoiding-problems-with-the-using-statement.md).  
   
  [!code-csharp[C_GeneratedCodeFiles#20](../../../samples/snippets/csharp/VS_Snippets_CFX/c_generatedcodefiles/cs/proxycode.cs#20)]  
   
@@ -167,7 +167,7 @@ End Interface
   
  Los objetos de cliente [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] dúplex funcionan como sus homólogos no dúplex, salvo que exponen la funcionalidad necesaria para admitir las devoluciones de llamada, incluida la configuración del servicio de devolución de llamada.  
   
- Por ejemplo, pueden controlarse distintos aspectos del comportamiento del tiempo de ejecución del objeto de devolución de llamada mediante las propiedades del atributo <xref:System.ServiceModel.CallbackBehaviorAttribute?displayProperty=nameWithType>, en la clase de devolución de llamada. Otro ejemplo es el uso de la clase <xref:System.ServiceModel.Description.CallbackDebugBehavior?displayProperty=nameWithType> para habilitar el retorno de información de excepción a los servicios que llaman al objeto de devolución de llamada. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Servicios dúplex](../../../docs/framework/wcf/feature-details/duplex-services.md). Para obtener un ejemplo completo, vea [dúplex](../../../docs/framework/wcf/samples/duplex.md).  
+ Por ejemplo, pueden controlarse distintos aspectos del comportamiento del tiempo de ejecución del objeto de devolución de llamada mediante las propiedades del atributo <xref:System.ServiceModel.CallbackBehaviorAttribute?displayProperty=nameWithType>, en la clase de devolución de llamada. Otro ejemplo es el uso de la clase <xref:System.ServiceModel.Description.CallbackDebugBehavior?displayProperty=nameWithType> para habilitar el retorno de información de excepción a los servicios que llaman al objeto de devolución de llamada. Para obtener más información, consulte [servicios dúplex](../../../docs/framework/wcf/feature-details/duplex-services.md). Para obtener un ejemplo completo, vea [dúplex](../../../docs/framework/wcf/samples/duplex.md).  
   
  En los equipos de Windows XP que ejecutan Internet Information Services (IIS) 5.1, los clientes dúplex deben especificar una dirección base de cliente utilizando la clase <xref:System.ServiceModel.WSDualHttpBinding?displayProperty=nameWithType>, o se iniciará una excepción. En el ejemplo de código siguiente se muestra cómo realizar esta especificación en el código.  
   
@@ -179,7 +179,7 @@ End Interface
  [!code-csharp[S_DualHttp#134](../../../samples/snippets/csharp/VS_Snippets_CFX/s_dualhttp/cs/program.cs#134)]  
   
 ## <a name="calling-services-asynchronously"></a>Llamada a servicios de manera asincrónica.  
- La manera cómo se realizan las llamadas a las operaciones depende del desarrollador cliente. La razón es que los mensajes que constituyen una operación pueden asignarse a métodos sincrónicos o asincrónicos cuando se expresan en código administrado. Por consiguiente, si desea crear un cliente que llama a las operaciones de manera asincrónica, puede utilizar Svcutil.exe para generar código de cliente asincrónico mediante la opción `/async`. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Cómo: llamar a las operaciones del servicio de forma asincrónica](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md).  
+ La manera cómo se realizan las llamadas a las operaciones depende del desarrollador cliente. La razón es que los mensajes que constituyen una operación pueden asignarse a métodos sincrónicos o asincrónicos cuando se expresan en código administrado. Por consiguiente, si desea crear un cliente que llama a las operaciones de manera asincrónica, puede utilizar Svcutil.exe para generar código de cliente asincrónico mediante la opción `/async`. Para obtener más información, consulte [Cómo: llamar a las operaciones de servicio de forma asincrónica](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md).  
   
 ## <a name="calling-services-using-wcf-client-channels"></a>Llamada a los servicios mediante canales de cliente WCF.  
  Los tipos de cliente [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] extienden <xref:System.ServiceModel.ClientBase%601>, que, a su vez, deriva de la interfaz <xref:System.ServiceModel.IClientChannel?displayProperty=nameWithType> para exponer el sistema del canal subyacente. Puede invocar los servicios utilizando el contrato de servicios de destino con la clase <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType>. Para obtener más información, consulte [arquitectura de cliente de WCF](../../../docs/framework/wcf/feature-details/client-architecture.md).  

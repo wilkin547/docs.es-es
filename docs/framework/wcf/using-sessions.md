@@ -1,13 +1,13 @@
 ---
 title: Uso de sesiones
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - sessions [WCF]
 ms.assetid: 864ba12f-3331-4359-a359-6d6d387f1035
-caps.latest.revision: 
+caps.latest.revision: 32
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: f5f6df22918dedf32738a8cb9d73af2e625923a4
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 9f6a6a819b4667bc60ab0abb575d6fff397d67fe
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="using-sessions"></a>Uso de sesiones
 En las aplicaciones de [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] , una *sesión* correlaciona un grupo de mensajes en una conversación. Las sesiones de[!INCLUDE[indigo2](../../../includes/indigo2-md.md)] son diferentes del objeto de sesión disponible en las aplicaciones de [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] , admiten diferentes comportamientos y se controlan de maneras diferentes. En este tema se describen las características que habilitan las sesiones en las aplicaciones de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] y cómo utilizarlas.  
@@ -75,13 +75,13 @@ En las aplicaciones de [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] , un
   
  [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] proporciona los siguientes tipos de comportamiento de aplicaciones basados en sesión:  
   
--   El <xref:System.ServiceModel.Channels.SecurityBindingElement?displayProperty=nameWithType> admite sesiones basadas en seguridad, en las que ambos extremos de la comunicación han acordado una conversación segura concreta. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Proteger servicios](../../../docs/framework/wcf/securing-services.md). Por ejemplo, el enlace <xref:System.ServiceModel.WSHttpBinding?displayProperty=nameWithType>, que admite sesiones de seguridad y sesiones confiables, solo utiliza de forma predeterminada una sesión segura que cifra y firma digitalmente los mensajes.  
+-   El <xref:System.ServiceModel.Channels.SecurityBindingElement?displayProperty=nameWithType> admite sesiones basadas en seguridad, en las que ambos extremos de la comunicación han acordado una conversación segura concreta. Para obtener más información, consulte [proteger Services](../../../docs/framework/wcf/securing-services.md). Por ejemplo, el enlace <xref:System.ServiceModel.WSHttpBinding?displayProperty=nameWithType>, que admite sesiones de seguridad y sesiones confiables, solo utiliza de forma predeterminada una sesión segura que cifra y firma digitalmente los mensajes.  
   
 -   El enlace <xref:System.ServiceModel.NetTcpBinding?displayProperty=nameWithType> admite las sesiones basadas en TCP/IP para asegurarse de que todos los mensajes están correlacionados por la conexión en el nivel de socket.  
   
--   El elemento <xref:System.ServiceModel.Channels.ReliableSessionBindingElement?displayProperty=nameWithType>, que implementa la especificación de WS-ReliableMessaging, proporciona la compatibilidad para las sesiones confiables en las que los mensajes se pueden configurar para que se entreguen en orden y solo una vez, asegurando que los mensajes se reciban aunque estos viajen por varios nodos durante la conversación. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Sesiones confiables](../../../docs/framework/wcf/feature-details/reliable-sessions.md).  
+-   El elemento <xref:System.ServiceModel.Channels.ReliableSessionBindingElement?displayProperty=nameWithType>, que implementa la especificación de WS-ReliableMessaging, proporciona la compatibilidad para las sesiones confiables en las que los mensajes se pueden configurar para que se entreguen en orden y solo una vez, asegurando que los mensajes se reciban aunque estos viajen por varios nodos durante la conversación. Para obtener más información, consulte [sesiones confiables](../../../docs/framework/wcf/feature-details/reliable-sessions.md).  
   
--   El enlace <xref:System.ServiceModel.NetMsmqBinding?displayProperty=nameWithType> proporciona sesiones de datagrama de MSMQ. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Colas en WCF](../../../docs/framework/wcf/feature-details/queues-in-wcf.md).  
+-   El enlace <xref:System.ServiceModel.NetMsmqBinding?displayProperty=nameWithType> proporciona sesiones de datagrama de MSMQ. Para obtener más información, consulte [colas en WCF](../../../docs/framework/wcf/feature-details/queues-in-wcf.md).  
   
  Establecer la propiedad <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A> no especifica el tipo de sesión que el contrato requiere, solo que requiere uno.  
   
@@ -130,7 +130,7 @@ En las aplicaciones de [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] , un
   
 -   <xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=nameWithType> en el canal devuelto por una llamada a <xref:System.ServiceModel.ChannelFactory%601.CreateChannel%2A?displayProperty=nameWithType>.  
   
--   <xref:System.ServiceModel.ClientBase%601.Open%2A?displayProperty=nameWithType>en el [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] objeto de cliente generado por la [la herramienta de utilidad de metadatos de ServiceModel (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).  
+-   <xref:System.ServiceModel.ClientBase%601.Open%2A?displayProperty=nameWithType> en el [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] objeto de cliente generado por la [la herramienta de utilidad de metadatos de ServiceModel (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).  
   
 -   Una operación de inicio en cualquier tipo de objeto de cliente de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] (de forma predeterminada, todas las operaciones son de inicio). Cuando se llama a la primera operación, el objeto de cliente de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] abre automáticamente el canal e inicia una sesión.  
   
@@ -144,10 +144,10 @@ En las aplicaciones de [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] , un
   
  Para obtener ejemplos, consulte [How to: Create a Service That Requires Sessions](../../../docs/framework/wcf/feature-details/how-to-create-a-service-that-requires-sessions.md) , así como los ejemplos de [Default Service Behavior](../../../docs/framework/wcf/samples/default-service-behavior.md) y [Instancing](../../../docs/framework/wcf/samples/instancing.md) .  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)]los clientes y sesiones, consulte [al tener acceso a los servicios mediante un cliente WCF](../../../docs/framework/wcf/feature-details/accessing-services-using-a-client.md).  
+ [!INCLUDE[crabout](../../../includes/crabout-md.md)] los clientes y sesiones, consulte [al tener acceso a los servicios mediante un cliente WCF](../../../docs/framework/wcf/feature-details/accessing-services-using-a-client.md).  
   
 ## <a name="sessions-interact-with-instancecontext-settings"></a>Las sesiones interactúan con la configuración de InstanceContext  
- Hay una interacción entre la enumeración de <xref:System.ServiceModel.SessionMode> en un contrato y la propiedad <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType>, que controla la asociación entre canales y objetos de servicio concretos. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Sesiones, creación de instancias y simultaneidad](../../../docs/framework/wcf/feature-details/sessions-instancing-and-concurrency.md).  
+ Hay una interacción entre la enumeración de <xref:System.ServiceModel.SessionMode> en un contrato y la propiedad <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType>, que controla la asociación entre canales y objetos de servicio concretos. Para obtener más información, consulte [sesiones, Instancing y simultaneidad](../../../docs/framework/wcf/feature-details/sessions-instancing-and-concurrency.md).  
   
 ### <a name="sharing-instancecontext-objects"></a>Uso compartido de objetos InstanceContext  
  También puede controlar qué canal basado en sesión o llamada se asocia a qué objeto <xref:System.ServiceModel.InstanceContext> realizando esa asociación usted mismo. Para obtener un ejemplo completo, vea [InstanceContextSharing](http://msdn.microsoft.com/library/4a6a46d7-b7d7-4bb5-a0dd-03ffa3cbc230).  

@@ -19,11 +19,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: f7716921be5ff97c2353b3b31d841c0c8dc01658
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 95e27941cece3bfb96c4567516d07bcbe07c7490
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="understanding-generated-client-code"></a>Comprender códigos de cliente generado
 [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) genera código de cliente y un archivo de configuración de la aplicación cliente para su uso en la compilación de aplicaciones cliente. Este tema proporciona un recorrido por los ejemplos de código generados para los escenarios de contrato de servicio estándar. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] cómo compilar una aplicación cliente mediante el código generado, consulte [WCF Client Overview](../../../../docs/framework/wcf/wcf-client-overview.md).  
@@ -52,14 +52,14 @@ ms.lasthandoff: 04/27/2018
   
  [!code-csharp[C_GeneratedCodeFiles#12](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_generatedcodefiles/cs/proxycode.cs#12)]  
   
- Puede utilizar la interfaz del contrato de servicio generada junto con la clase <xref:System.ServiceModel.ChannelFactory?displayProperty=nameWithType> para crear un objeto de canal [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] con el que invocar las operaciones del servicio. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Cómo: utilizar ChannelFactory](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md).  
+ Puede utilizar la interfaz del contrato de servicio generada junto con la clase <xref:System.ServiceModel.ChannelFactory?displayProperty=nameWithType> para crear un objeto de canal [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] con el que invocar las operaciones del servicio. Para obtener más información, consulte [Cómo: utilizar ChannelFactory](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md).  
   
 ### <a name="finding-wcf-client-classes"></a>Buscar las clases de cliente de WCF  
  Para buscar la clase de cliente [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] que implementa el contrato de servicios que usted quiere utilizar, busque una extensión de <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType>, donde el parámetro de tipo es la interfaz del contrato de servicio que usted ha buscado previamente y que extiende esa interfaz. En el ejemplo de código siguiente se muestra la clase <xref:System.ServiceModel.ClientBase%601> de tipo `ISampleService`.  
   
  [!code-csharp[C_GeneratedCodeFiles#14](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_generatedcodefiles/cs/proxycode.cs#14)]  
   
- Puede utilizar esta clase de cliente [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] creando una nueva instancia de esta y llamando a los métodos que implementa. Esos métodos invocan la operación del servicio con la que está diseñado y está configurado para interactuar. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Información general sobre el cliente WCF](../../../../docs/framework/wcf/wcf-client-overview.md).  
+ Puede utilizar esta clase de cliente [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] creando una nueva instancia de esta y llamando a los métodos que implementa. Esos métodos invocan la operación del servicio con la que está diseñado y está configurado para interactuar. Para obtener más información, consulte [información general sobre el cliente de WCF](../../../../docs/framework/wcf/wcf-client-overview.md).  
   
 > [!NOTE]
 >  Cuando SvcUtil.exe genera una clase de cliente WCF, agrega <xref:System.Diagnostics.DebuggerStepThroughAttribute> a la clase de cliente para evitar que los depuradores recorran la clase de cliente WCF.  

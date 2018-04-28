@@ -1,12 +1,13 @@
 ---
-title: "Información general sobre las aplicaciones de explorador XAML de WPF"
-ms.custom: 
+title: Información general sobre las aplicaciones de explorador XAML de WPF
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -17,20 +18,21 @@ helpviewer_keywords:
 - XAML browser applications (XBAP)
 - browser-hosted applications [WPF]
 ms.assetid: 3a7a86a8-75d5-4898-96b9-73da151e5e16
-caps.latest.revision: "47"
+caps.latest.revision: 47
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0f4f410f0f6c209dbc43642a15ae85a788390f4a
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 0afdce00cc169a5be9224a7b675e4666c1349bd5
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="wpf-xaml-browser-applications-overview"></a>Información general sobre las aplicaciones de explorador XAML de WPF
 <a name="introduction"></a>
-[!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)]combina las características de aplicaciones Web y aplicaciones cliente enriquecidas. Al igual que las aplicaciones web, las aplicaciones XBAP se pueden implementar en un servidor web e iniciar desde Internet Explorer o Firefox. Al igual que las aplicaciones cliente enriquecidas, las aplicaciones XBAP pueden aprovechar las funcionalidades de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. El desarrollo de aplicaciones XBAP también se parece al desarrollo de clientes enriquecidos. En este tema se proporciona una sencilla introducción de alto nivel al desarrollo de aplicaciones XBAP y se describe en qué se diferencia este del desarrollo estándar de clientes enriquecidos.  
+[!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] combina las características de aplicaciones Web y aplicaciones cliente enriquecidas. Al igual que las aplicaciones web, las aplicaciones XBAP se pueden implementar en un servidor web e iniciar desde Internet Explorer o Firefox. Al igual que las aplicaciones cliente enriquecidas, las aplicaciones XBAP pueden aprovechar las funcionalidades de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. El desarrollo de aplicaciones XBAP también se parece al desarrollo de clientes enriquecidos. En este tema se proporciona una sencilla introducción de alto nivel al desarrollo de aplicaciones XBAP y se describe en qué se diferencia este del desarrollo estándar de clientes enriquecidos.  
   
  Este tema contiene las siguientes secciones:  
   
@@ -63,7 +65,7 @@ ms.lasthandoff: 01/19/2018
 |Manifiesto de aplicación (.manifest)|Contiene metadatos asociados con la aplicación y tiene la extensión .manifest.|  
 |Manifiesto de implementación (.xbap)|Este archivo contiene la información que [!INCLUDE[TLA#tla_clickonce](../../../../includes/tlasharptla-clickonce-md.md)] utiliza para implementar la aplicación y tiene la extensión .xbap.|  
   
- Las aplicaciones XBAP se implementan en un servidor web, por ejemplo [!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)] o versiones posteriores. No es necesario instalar [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] en el servidor web, pero sí debe registrar los tipos [!INCLUDE[TLA#tla_mime](../../../../includes/tlasharptla-mime-md.md)] de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] y las extensiones de nombre de archivo. Para más información, consulte [Cómo: Configurar IIS 5.0 e IIS 6.0 para implementar aplicaciones WPF](../../../../docs/framework/wpf/app-development/how-to-configure-iis-5-0-and-iis-6-0-to-deploy-wpf-applications.md).  
+ Las aplicaciones XBAP se implementan en un servidor web, por ejemplo [!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)] o versiones posteriores. No es necesario instalar .NET Framework en el servidor Web, pero tiene que registrar el [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] [!INCLUDE[TLA#tla_mime](../../../../includes/tlasharptla-mime-md.md)] extensiones de nombre de archivo y tipos. Para más información, consulte [Cómo: Configurar IIS 5.0 e IIS 6.0 para implementar aplicaciones WPF](../../../../docs/framework/wpf/app-development/how-to-configure-iis-5-0-and-iis-6-0-to-deploy-wpf-applications.md).  
   
  Para preparar la aplicación XBAP para la implementación, copie el archivo .exe y los manifiestos asociados al servidor web. Cree una página HTML que contenga un hipervínculo para abrir el manifiesto de implementación, que es el archivo con la extensión .xbap. Cuando el usuario hace clic en el vínculo al archivo .xbap, [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] controla automáticamente el mecanismo de descarga e inicio de la aplicación. En el ejemplo de código siguiente, se muestra una página HTML que contiene un hipervínculo que apunta a una aplicación XBAP.  
   
@@ -152,7 +154,7 @@ ms.lasthandoff: 01/19/2018
   
 -   Es posible que un control ActiveX personalizado experimente problemas de comunicación porque la aplicación WPF se esté ejecutando en un subproceso independiente.  
   
--   <xref:System.Windows.Interop.HwndHost.MessageHook>no se produzca porque <xref:System.Windows.Interop.HwndHost> no puede crear subclases de una ventana que se ejecuta en otro proceso o subproceso.  
+-   <xref:System.Windows.Interop.HwndHost.MessageHook> no se produzca porque <xref:System.Windows.Interop.HwndHost> no puede crear subclases de una ventana que se ejecuta en otro proceso o subproceso.  
   
 ### <a name="creating-a-full-trust-xbap"></a>Creación de una aplicación XBAP de plena confianza  
  Si la aplicación XBAP necesita plena confianza, puede cambiar el proyecto para habilitar este permiso. En los pasos siguientes se describe cómo habilitar la plena confianza:  

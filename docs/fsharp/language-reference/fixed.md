@@ -1,20 +1,17 @@
 ---
 title: 'La palabra clave fija (F #)'
 description: "Obtenga información acerca de cómo puede 'pin' local en la pila para evitar que la colección con F # 'fixed' palabra clave."
-keywords: "visual f#, f#, programación funcional"
 author: cartermp
 ms.author: phcart
 ms.date: 04/24/2017
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 5795ce1f-11bf-4798-9f1f-6e44ffa1477e
-ms.openlocfilehash: 1605603bc35941e21c798600140036fb678869b5
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 8c1d486ec754335dfbaeec439b1eb949494e4241
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="the-fixed-keyword"></a>La palabra clave Fixed
 
@@ -30,7 +27,7 @@ use ptr = fixed expression
 
 Este comando extiende la sintaxis de expresiones para permitir la extracción de un puntero y se enlaza a un nombre que ha impedido que se recopilan o se mueve durante la recolección de elementos no utilizados.  
 
-Un puntero desde una expresión es fijo a través de la `fixed` palabra clave está enlazado a un identificador a través de la `use` (palabra clave).  La semántica de esto es similar a la administración de recursos a través de la `use` (palabra clave).  El puntero se fija mientras esté dentro del ámbito, y una vez que está fuera del ámbito, ya no es fijo.  `fixed`no se puede usar fuera del contexto de un `use` enlace.  Debe enlazar el puntero a un nombre con `use`.
+Un puntero desde una expresión es fijo a través de la `fixed` palabra clave está enlazado a un identificador a través de la `use` (palabra clave).  La semántica de esto es similar a la administración de recursos a través de la `use` (palabra clave).  El puntero se fija mientras esté dentro del ámbito, y una vez que está fuera del ámbito, ya no es fijo.  `fixed` no se puede usar fuera del contexto de un `use` enlace.  Debe enlazar el puntero a un nombre con `use`.
 
 El uso de `fixed` debe producirse dentro de una expresión en una función o un método.  No puede utilizarse en un ámbito de nivel de script o el nivel de módulo.
 

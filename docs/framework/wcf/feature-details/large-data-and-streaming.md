@@ -1,29 +1,29 @@
 ---
-title: "Datos de gran tamaño y secuencias"
-ms.custom: 
+title: Datos de gran tamaño y secuencias
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ab2851f5-966b-4549-80ab-c94c5c0502d2
-caps.latest.revision: 
+caps.latest.revision: 27
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: e9551fcf4f302be899dcee8737b3bcfad15f1210
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: b37af67a3deeed4e55939ff1c1baf73752233e94
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="large-data-and-streaming"></a>Datos de gran tamaño y secuencias
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] es una infraestructura de comunicaciones basadas en XML. Dado que los datos XML se codifican normalmente en el formato de texto estándar definido en el [especificación XML 1.0](http://go.microsoft.com/fwlink/?LinkId=94838)conectados los arquitectos y desarrolladores de sistemas normalmente están preocupados por la superficie de conexión (o el tamaño) de los mensajes enviados a través de la red y basadas en texto con codificación de XML puede causar problemas especiales para la transferencia eficaz de datos binarios.  
+[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] es una infraestructura de comunicaciones basada en XML. Dado que los datos XML se codifican normalmente en el formato de texto estándar definido en el [especificación XML 1.0](http://go.microsoft.com/fwlink/?LinkId=94838)conectados los arquitectos y desarrolladores de sistemas normalmente están preocupados por la superficie de conexión (o el tamaño) de los mensajes enviados a través de la red y basadas en texto con codificación de XML puede causar problemas especiales para la transferencia eficaz de datos binarios.  
   
 ## <a name="basic-considerations"></a>Consideraciones básicas  
  Para proporcionar información adicional sobre las cuestiones siguientes relacionadas con [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], en esta sección se resaltan algunos aspectos y consideraciones generales sobre codificaciones, datos binarios y secuencias que generalmente se aplican a las infraestructuras de sistemas conectados.  
@@ -41,7 +41,7 @@ ms.lasthandoff: 02/01/2018
   
  Por lo tanto, la decisión entre el formato de texto y el binario no consiste solamente en suponer que los mensajes binarios son siempre más pequeños que los mensajes de texto XML.  
   
- Una ventaja clara de los mensajes de texto XML es que están basados en estándares y proporcionan la opción más completa en cuanto a interoperabilidad y compatibilidad de plataforma. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] la sección “Codificaciones” más adelante en este tema.  
+ Una ventaja clara de los mensajes de texto XML es que están basados en estándares y proporcionan la opción más completa en cuanto a interoperabilidad y compatibilidad de plataforma. Para obtener más información, vea la sección "Codificaciones" más adelante en este tema.  
   
 ### <a name="binary-content"></a>Contenido binario  
  Un área en la cual las codificaciones binarias son superiores a las codificaciones basadas en texto con respecto al tamaño del mensaje resultante es elementos de datos binarios de gran tamaño como imágenes, vídeos, secuencias de sonido o cualquier otra forma de datos opacos y binarios que se deben intercambiar entre los servicios y sus consumidores. Para ajustar estos tipos de datos en el texto XML, el enfoque común es codificarlos utilizando la codificación de Base64.  
@@ -52,7 +52,7 @@ ms.lasthandoff: 02/01/2018
   
  Un mensaje SOAP de MTOM se modifica a partir de su versión descodificada para que las etiquetas de elementos especiales que hacen referencia a las correspondientes partes MIME sustituyan a los elementos originales que contenían datos binarios en el mensaje. Como resultado, el mensaje SOAP hace referencia al contenido binario señalando las partes MIME enviadas con él, pero, de lo contrario, solo lleva datos de texto XML. Dado que este modelo está alineado estrechamente con el modelo de SMTP bien establecido, hay una gran compatibilidad con las herramientas para codificar y descodificar los mensajes MTOM en muchas plataformas, lo cual lo convierte en una opción sumamente interoperable.  
   
- No obstante, como con Base64, MTOM viene también con alguna sobrecarga necesaria para el formato MIME, para que solamente se vean las ventajas de utilizar MTOM cuando el tamaño de un elemento de datos binarios supera aproximadamente 1 KB. Debido a la sobrecarga, los mensajes codificados por MTOM podrían ser mayores que los mensajes que usan la codificación Base64 para datos binarios, si la carga binaria permanece bajo ese umbral. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] la sección “Codificaciones” más adelante en este tema.  
+ No obstante, como con Base64, MTOM viene también con alguna sobrecarga necesaria para el formato MIME, para que solamente se vean las ventajas de utilizar MTOM cuando el tamaño de un elemento de datos binarios supera aproximadamente 1 KB. Debido a la sobrecarga, los mensajes codificados por MTOM podrían ser mayores que los mensajes que usan la codificación Base64 para datos binarios, si la carga binaria permanece bajo ese umbral. Para obtener más información, vea la sección "Codificaciones" más adelante en este tema.  
   
 ### <a name="large-data-content"></a>Contenido de datos de gran tamaño  
  Superficie de la conexión a parte, la carga útil de 500 MB previamente mencionada también supone un gran desafío local para el servicio y para el cliente. De forma predeterminada, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] procesa los mensajes en *el modo de búfer*. Esto significa que todo el contenido de un mensaje está presente en la memoria antes de enviarse o una vez recibido. Aunque es una estrategia acertada para la mayoría de los escenarios y necesaria para el uso de características de mensajería tales como las firmas digitales y la entrega confiable, los mensajes grandes podrían agotar los recursos del sistema.  
@@ -67,7 +67,7 @@ ms.lasthandoff: 02/01/2018
   
 -   No están disponibles en su totalidad cuando se inicia la transferencia.  
   
- Para los datos que no tienen estas restricciones, normalmente es mejor enviar secuencias de mensajes dentro del ámbito de una sesión que un mensaje de gran tamaño. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] la sección "Transmisión de datos” más adelante en este tema.  
+ Para los datos que no tienen estas restricciones, normalmente es mejor enviar secuencias de mensajes dentro del ámbito de una sesión que un mensaje de gran tamaño. Para obtener más información, vea la sección "Transmisión de datos" más adelante en este tema.  
   
  Al enviar grandes cantidades de datos debe establecer el `maxAllowedContentLength` configuración de IIS (para obtener más información, consulte [configurar límites de solicitudes de IIS](http://go.microsoft.com/fwlink/?LinkId=253165)) y la `maxReceivedMessageSize` valor de enlace (por ejemplo [ System.ServiceModel.BasicHttpBinding.MaxReceivedMessageSize](xref:System.ServiceModel.HttpBindingBase.MaxReceivedMessageSize%2A) o <xref:System.ServiceModel.NetTcpBinding.MaxReceivedMessageSize%2A>). El `maxAllowedContentLength` propiedad tiene como valor predeterminado 28,6 M y `maxReceivedMessageSize` propiedad el valor predeterminado es 64 KB.  
   
@@ -246,7 +246,7 @@ public class UploadStreamMessage
   
  Por consiguiente, restringir el tamaño máximo del mensaje entrante no es suficiente en este caso. Se exige a la propiedad `MaxBufferSize` que restrinja la memoria que [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] almacena en búfer. Es importante establecer esto en un valor seguro (o mantenerlo en el valor predeterminado) en la transmisión por secuencias. Por ejemplo, suponga que su servicio debe recibir los archivos hasta 4 GB en tamaño y almacenarlos en el disco local. Suponga además que su memoria se restringe de tal manera que puede almacenar en búfer solo 64 KB de datos a la vez. A continuación, establecería `MaxReceivedMessageSize` en 4 GB y `MaxBufferSize` a 64 KB. Asimismo, en su implementación de servicio debe asegurarse de que solo lee de la secuencia entrante en fragmentos de 64 KB y no leer el fragmento siguiente antes de que el anterior se haya escrito en el disco y haya sido descartado de la memoria.  
   
- También es importante entender que esta cuota solo limita el almacenamiento en búfer realizado por [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] y no puede protegerle contra ningún almacenamiento en búfer que usted haga en su propio servicio o implementación de cliente. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Consideraciones de seguridad adicionales, consulte [consideraciones de seguridad para datos](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md).  
+ También es importante entender que esta cuota solo limita el almacenamiento en búfer realizado por [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] y no puede protegerle contra ningún almacenamiento en búfer que usted haga en su propio servicio o implementación de cliente. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Consideraciones de seguridad adicionales, consulte [consideraciones de seguridad para datos](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md).  
   
 > [!NOTE]
 >  La decisión de utilizar transferencias almacenadas en búfer o transmitidas es una decisión local del punto de conexión. Para los transportes HTTP, el modo de transferencia no se propaga a través de una conexión o a los servidores proxy y otros intermediarios. Establecer el modo de transferencia no se refleja en la descripción de la interfaz de servicio. Después de generar un cliente [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] a un servicio, debe editar el archivo de configuración de los servicios pensados para ser utilizado con transferencias transmitidas para establecer el modo. En los transportes con canalizaciones con nombre y TCP, el modo de transferencia se propaga como una aserción de directiva.  

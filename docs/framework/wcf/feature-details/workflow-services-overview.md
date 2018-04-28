@@ -1,27 +1,29 @@
 ---
-title: "Información general de servicios de flujo de trabajo"
-ms.custom: 
+title: Información general de servicios de flujo de trabajo
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: e536dda3-e286-441e-99a7-49ddc004b646
-caps.latest.revision: "30"
+caps.latest.revision: 30
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0c38abe8ab0ac99a7e5bd0499ff826a00730b211
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: b0c59c0688fca53a7c7623330f3fdba4f5defd88
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="workflow-services-overview"></a>Información general de servicios de flujo de trabajo
-Los servicios de flujo de trabajo son servicios basados en [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] que se implementan mediante flujos de trabajo. Los servicios de flujo de trabajo son flujos de trabajo que usan las actividades de mensajería para enviar y recibir mensajes de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. .NET Framework 4.5 presenta varias actividades de mensajería que permiten enviar y recibir mensajes dentro de un flujo de trabajo. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]actividades de mensajería y cómo se puede usar para implementar patrones de intercambio de mensajes diferente, consulte [actividades de mensajería](../../../../docs/framework/wcf/feature-details/messaging-activities.md).  
+Los servicios de flujo de trabajo son servicios basados en [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] que se implementan mediante flujos de trabajo. Los servicios de flujo de trabajo son flujos de trabajo que usan las actividades de mensajería para enviar y recibir mensajes de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. .NET Framework 4.5 presenta varias actividades de mensajería que permiten enviar y recibir mensajes dentro de un flujo de trabajo. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] actividades de mensajería y cómo se puede usar para implementar patrones de intercambio de mensajes diferente, consulte [actividades de mensajería](../../../../docs/framework/wcf/feature-details/messaging-activities.md).  
   
 ## <a name="benefits-of-using-workflow-services"></a>Ventajas de utilizar servicios de flujo de trabajo  
  Cuando las aplicaciones están cada vez más distribuidas, los servicios individuales se convierten en los responsables de llamar a otros servicios para descargar parte del trabajo. La implementación de estas llamadas como operaciones asincrónicas crea cierta complejidad en el código. El control de errores agrega complejidad, ya que hay que administrar excepciones y proporcionar información de seguimiento detallada. Algunos servicios suelen ejecutarse durante mucho tiempo y pueden ocupar valiosos recursos del sistema mientras esperan recibir información. Debido a estos problemas, las aplicaciones distribuidas suelen ser muy complejas y difíciles de escribir y mantener. Los flujos de trabajo son una manera natural de expresar la coordinación del trabajo asincrónico, sobre todo las llamadas a servicios externos. Los flujos de trabajo también son eficaces para representar procesos de negocio de ejecución prolongada. Son estas calidades las que convierten el flujo de trabajo en un gran recurso para compilar servicios en un entorno distribuido.  
@@ -69,7 +71,7 @@ Los servicios de flujo de trabajo son servicios basados en [!INCLUDE[indigo2](..
   
  Los servicios de flujo de trabajo hospedados en una aplicación [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] administrada o en un servicio Windows administrado crean una instancia de la clase <xref:System.ServiceModel.Activities.WorkflowServiceHost> y pasan una instancia de <xref:System.ServiceModel.Activities.WorkflowService> que contiene la definición de flujo de trabajo dentro de la propiedad <xref:System.ServiceModel.Activities.WorkflowService.Body%2A>. Una definición de flujo de trabajo que contiene actividades de mensajería se expone como un servicio de flujo de trabajo.  
   
- Para hospedar un servicio de flujo de trabajo en IIS o WAS, coloque el archivo .xamlx que contiene la definición del servicio de flujo de trabajo en un directorio virtual. Un extremo predeterminado (mediante <xref:System.ServiceModel.BasicHttpBinding>) se crea automáticamente [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [configuración simplificada](../../../../docs/framework/wcf/simplified-configuration.md). También puede colocar un archivo Web.config en el directorio virtual para especificar sus propios puntos de conexión. Si la definición de flujo de trabajo es en un ensamblado, puede colocar un archivo .svc en el directorio virtual y el ensamblado de flujo de trabajo en el directorio App_Code. El archivo .svc debe especificar el generador de host de servicio y la clase que implementa el servicio de flujo de trabajo. En el siguiente ejemplo, se indica cómo especificar el generador de host de servicio y especificar la clase que implementa el servicio de flujo de trabajo.  
+ Para hospedar un servicio de flujo de trabajo en IIS o WAS, coloque el archivo .xamlx que contiene la definición del servicio de flujo de trabajo en un directorio virtual. Un extremo predeterminado (mediante <xref:System.ServiceModel.BasicHttpBinding>) es creado automáticamente para obtener más información, consulte [configuración simplificada](../../../../docs/framework/wcf/simplified-configuration.md). También puede colocar un archivo Web.config en el directorio virtual para especificar sus propios puntos de conexión. Si la definición de flujo de trabajo es en un ensamblado, puede colocar un archivo .svc en el directorio virtual y el ensamblado de flujo de trabajo en el directorio App_Code. El archivo .svc debe especificar el generador de host de servicio y la clase que implementa el servicio de flujo de trabajo. En el siguiente ejemplo, se indica cómo especificar el generador de host de servicio y especificar la clase que implementa el servicio de flujo de trabajo.  
   
 ```  
 <%@ServiceHost Factory=" System.ServiceModel.Activities.Activation.WorkflowServiceHostFactory  

@@ -1,20 +1,17 @@
 ---
-title: "Generalización automática (F#)"
-description: "Obtenga información acerca de cómo F # generaliza automáticamente los argumentos y los tipos de funciones para que funcionen con varios tipos cuando sea posible."
-keywords: "visual f#, f#, programación funcional"
+title: Generalización automática (F#)
+description: 'Obtenga información acerca de cómo F # generaliza automáticamente los argumentos y los tipos de funciones para que funcionen con varios tipos cuando sea posible.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 14a3554c-3fad-4eba-a93d-8ba07d1245b4
-ms.openlocfilehash: d60831084cef76ce29f64322362b4920520f71d2
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 9b599fd9fe1220b41987bc14a420ed5740aa05f5
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="automatic-generalization"></a>Generalización automática
 

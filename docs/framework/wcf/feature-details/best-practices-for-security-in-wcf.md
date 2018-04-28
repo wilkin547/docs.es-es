@@ -21,11 +21,11 @@ ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: 7416f8429f347d0b8dc6227415ad366b3ff63986
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 19bb6d4a172568611f73e3a50d0c526016c65aac
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="best-practices-for-security-in-wcf"></a>Procedimientos recomendados acerca de seguridad en WCF
 Las siguientes secciones enumeran los procedimientos recomendados que hay que tener en cuenta a la hora de crear aplicaciones seguras mediante [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] seguridad, consulte [consideraciones de seguridad](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md), [consideraciones de seguridad para datos](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md), y [consideraciones de seguridad con metadatos](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md).  
@@ -60,7 +60,7 @@ Las siguientes secciones enumeran los procedimientos recomendados que hay que te
  Asegúrese de que confía en el origen de sus metadatos y de que nadie ha manipulado los metadatos. Los metadatos recuperados utilizando el protocolo HTTP se envían en texto no cifrado y se pueden manipular. Si el servicio utiliza la propiedad <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A> y <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetUrl%2A>, utilice la URL proporcionada por el creador del servicio para descargar los datos mediante el protocolo HTTPS.  
   
 ## <a name="publish-metadata-using-security"></a>Publicación de metadatos utilizando la seguridad  
- Para evitar la modificación de los metadatos publicados de un servicio, proteja el punto de conexión de intercambio de metadatos mediante seguridad de mensajes o de transporte. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Extremos de metadatos de publicación](../../../../docs/framework/wcf/publishing-metadata-endpoints.md) y [Cómo: publicar los metadatos para un servicio mediante código](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md).  
+ Para evitar la modificación de los metadatos publicados de un servicio, proteja el punto de conexión de intercambio de metadatos mediante seguridad de mensajes o de transporte. Para obtener más información, consulte [publicación de extremos de metadatos](../../../../docs/framework/wcf/publishing-metadata-endpoints.md) y [Cómo: Publicar metadatos para un servicio mediante código](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md).  
   
 ## <a name="ensure-use-of-local-issuer"></a>Asegure el uso de un emisor local  
  Si se especifica una dirección y un enlace del emisor para un enlace determinado, el emisor local no se utiliza para los puntos de conexión que utilizan ese enlace. Los clientes que esperan utilizar siempre el emisor local deberían asegurarse de que no utilizan dicho enlace o de que modifican el enlace de manera que la dirección del emisor sea null.  

@@ -1,28 +1,28 @@
 ---
-title: "Especificación y administración de errores en contratos y servicios"
-ms.custom: 
+title: Especificación y administración de errores en contratos y servicios
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - handling faults [WCF]
 ms.assetid: a9696563-d404-4905-942d-1e0834c26dea
-caps.latest.revision: 
+caps.latest.revision: 22
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 57fc01b77379389ca4d86d241ec8f3d672b519b6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 70f8c1f89a5570f5b77eaba1bf72c42706d88947
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="specifying-and-handling-faults-in-contracts-and-services"></a>Especificación y administración de errores en contratos y servicios
 Las aplicaciones de [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] administran las situaciones de error asignando objetos de excepción administrados a los objetos de error de SOAP y objetos de error de SOAP a objetos de excepción administrados. Los temas de esta sección describen cómo diseñar contratos para exponer condiciones de error como errores de SOAP personalizados, cómo devolver tales errores como parte de la implementación del servicio y cómo los clientes detectan tales errores.  
@@ -47,12 +47,12 @@ Las aplicaciones de [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] adminis
 ## <a name="map-exceptions-to-soap-faults"></a>Asignación de excepciones a errores SOAP  
  El primer paso para crear una operación que administra condiciones de error es decidir bajo qué condiciones una aplicación de cliente debería informar sobre errores. Algunas operaciones tienen condiciones de error específicas de su funcionalidad. Por ejemplo, una operación `PurchaseOrder` podría devolver la información concreta a los clientes a los que ya no se les permite iniciar una orden de compra. En otros casos, como un servicio `Calculator`, un error de SOAP `MathFault` más general puede ser capaz de describir todas las condiciones de error en un servicio completo. Una vez que se identifican las condiciones de error de los clientes del servicio, se puede construir un error SOAP personalizado y la operación se puede marcar para que devuelva ese error SOAP cuando se produzca la condición de error correspondiente.  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)]Este paso del desarrollo de su servicio o cliente, consulte [definir y especificar los errores](../../../docs/framework/wcf/defining-and-specifying-faults.md).  
+ [!INCLUDE[crabout](../../../includes/crabout-md.md)] Este paso del desarrollo de su servicio o cliente, consulte [definir y especificar los errores](../../../docs/framework/wcf/defining-and-specifying-faults.md).  
   
 ## <a name="clients-and-services-handle-soap-faults-as-exceptions"></a>Los clientes y servicios administran los errores SOAP como excepciones  
  Identificar condiciones de error de la operación, definir errores SOAP personalizados y marcar esas operaciones para que devuelvan esos fallos son los primeros pasos para una administración adecuada de errores en las aplicaciones de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. El siguiente paso es implementar correctamente el envío y la recepción de estos errores. Normalmente, los servicios envían errores para informar a las aplicaciones de cliente sobre las condiciones de error, pero los clientes dúplex también pueden enviar errores SOAP a los servicios.  
   
- [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Enviando y recibiendo errores](../../../docs/framework/wcf/sending-and-receiving-faults.md).  
+ Para obtener más información, consulte [enviar y recibir errores](../../../docs/framework/wcf/sending-and-receiving-faults.md).  
   
 ## <a name="undeclared-soap-faults-and-debugging"></a>Errores de SOAP no declarados y depuración  
  Los errores de SOAP declarados son sumamente útiles para crear aplicaciones robustas, interoperables y distribuidas. Sin embargo, en algunos casos es útil para un servicio (o cliente dúplex) enviar un error SOAP no declarado, uno que no se menciona en el Lenguaje de descripción de servicios Web (WSDL) para esa operación. Por ejemplo, al desarrollar un servicio, pueden producirse situaciones inesperadas en las que es útil enviar información de vuelta al cliente para la depuración. Además, puede establecer la propiedad <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> o <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> en `true` para que permita a los clientes de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] obtener información sobre las excepciones de operaciones de servicio internas. Enviar errores individuales y establecer las propiedades de comportamiento de depuración se describen en [enviar y recibir errores](../../../docs/framework/wcf/sending-and-receiving-faults.md).  

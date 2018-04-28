@@ -1,12 +1,13 @@
 ---
 title: Versiones de contratos de datos
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,16 +17,17 @@ helpviewer_keywords:
 - versioning [WCF]
 - data contracts [WCF], versioning
 ms.assetid: 4a0700cb-5f5f-4137-8705-3a3ecf06461f
-caps.latest.revision: "35"
+caps.latest.revision: 35
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e9773725a0d4626a8488249ead6440ad67a2a14a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: f232cb1cf98fe01aa0542c2a4b459fb7fc7b5089
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="data-contract-versioning"></a>Versiones de contratos de datos
 A medida que las aplicaciones evolucionan, es posible que tenga que cambiar los contratos de datos que utilizan los servicios. En este tema se explica cómo controlar las versiones de los contratos de datos. En este tema se describen los mecanismos de control de versiones de los contratos de datos. Para una información general completa y la orientación preceptiva del control de versiones, vea [procedimientos recomendados: control de versiones de contrato de datos](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md).  
@@ -114,16 +116,16 @@ A medida que las aplicaciones evolucionan, es posible que tenga que cambiar los 
   
  Muchos de los cambios considerados como cambios sin interrupción son, en realidad, cambios con interrupción si se requiere una adherencia estricta al esquema. En el ejemplo anterior, una instancia de `CarV1` simplemente con el elemento `Model` validaría frente al esquema `CarV2` (que tiene `Model` y `Horsepower`, pero ambos son opcionales). Sin embargo, lo inverso no es cierto: una instancia de `CarV2` produciría un error en la validación frente al esquema `CarV1`.  
   
- El recorrido de ida y vuelta implica algunas consideraciones adicionales. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]sección "Consideraciones del esquema" [contratos de datos compatibles con el reenvío](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md).  
+ El recorrido de ida y vuelta implica algunas consideraciones adicionales. Para obtener más información, vea la sección "Consideraciones del esquema" en [contratos de datos compatibles con el reenvío](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md).  
   
 ### <a name="other-permitted-changes"></a>Otros cambios permitidos  
- Implementar la interfaz <xref:System.Runtime.Serialization.IExtensibleDataObject> es un cambio sin interrupción. Sin embargo, la compatibilidad con el recorrido de ida y vuelta no existe para las versiones del tipo anterior a la versión en la que <xref:System.Runtime.Serialization.IExtensibleDataObject> se implementó. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Contratos de datos compatibles con el reenvío](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md).  
+ Implementar la interfaz <xref:System.Runtime.Serialization.IExtensibleDataObject> es un cambio sin interrupción. Sin embargo, la compatibilidad con el recorrido de ida y vuelta no existe para las versiones del tipo anterior a la versión en la que <xref:System.Runtime.Serialization.IExtensibleDataObject> se implementó. Para obtener más información, vea [Forward-Compatible Data Contracts](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md) (Contratos de datos compatibles con el reenvío).  
   
 ## <a name="enumerations"></a>Enumeraciones  
- Agregar o eliminar un miembro de enumeración es un cambio con interrupción. Cambiar el nombre de un miembro de enumeración es un cambio con interrupción, a menos que su nombre de contrato se mantenga igual que en la versión anterior mediante el atributo `EnumMemberAtttribute`. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Tipos de enumeración en contratos de datos](../../../../docs/framework/wcf/feature-details/enumeration-types-in-data-contracts.md).  
+ Agregar o eliminar un miembro de enumeración es un cambio con interrupción. Cambiar el nombre de un miembro de enumeración es un cambio con interrupción, a menos que su nombre de contrato se mantenga igual que en la versión anterior mediante el atributo `EnumMemberAtttribute`. Para obtener más información, consulte [tipos de enumeración en contratos de datos](../../../../docs/framework/wcf/feature-details/enumeration-types-in-data-contracts.md).  
   
 ## <a name="collections"></a>Colecciones  
- La mayoría de los cambios de colección son cambios sin interrupción, puesto que la mayoría de los tipos de colección son intercambiables entre sí en el modelo del contrato de datos. Sin embargo, personalizar una colección no personalizada o viceversa es un cambio con interrupción. Asimismo, cambiar la configuración de personalización de la colección es un cambio brusco; es decir, implica cambiar su espacio de nombres y nombre de contrato de datos, repitiendo el nombre del elemento, el nombre del elemento de la clave y el nombre del elemento del valor. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]personalización de colecciones, vea [tipos de colección en contratos de datos](../../../../docs/framework/wcf/feature-details/collection-types-in-data-contracts.md).  
+ La mayoría de los cambios de colección son cambios sin interrupción, puesto que la mayoría de los tipos de colección son intercambiables entre sí en el modelo del contrato de datos. Sin embargo, personalizar una colección no personalizada o viceversa es un cambio con interrupción. Asimismo, cambiar la configuración de personalización de la colección es un cambio brusco; es decir, implica cambiar su espacio de nombres y nombre de contrato de datos, repitiendo el nombre del elemento, el nombre del elemento de la clave y el nombre del elemento del valor. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] personalización de colecciones, vea [tipos de colección en contratos de datos](../../../../docs/framework/wcf/feature-details/collection-types-in-data-contracts.md).  
 Naturalmente, cambiar el contrato de datos del contenido de una colección (por ejemplo, cambiar de una lista de enteros a una lista de cadenas) es un cambio brusco.  
   
 ## <a name="see-also"></a>Vea también  

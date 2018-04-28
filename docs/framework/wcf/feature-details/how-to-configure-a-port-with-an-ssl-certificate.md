@@ -1,12 +1,13 @@
 ---
-title: "Cómo: Configurar un puerto con un certificado SSL"
-ms.custom: 
+title: 'Cómo: Configurar un puerto con un certificado SSL'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,23 +17,24 @@ helpviewer_keywords:
 - WCF, security mode
 - WCF, security
 ms.assetid: b8abcc8e-a5f5-4317-aca5-01e3c40ab24d
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3fbd3b640e90ecf0ff5857bd33465e8c60135eac
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: bbf3d4b9888d07a89d1b6a8225a7f7415e8c67cc
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="how-to-configure-a-port-with-an-ssl-certificate"></a>Cómo: Configurar un puerto con un certificado SSL
-Cuando crea un [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] autohospedado con la clase <xref:System.ServiceModel.WSHttpBinding> que utiliza la seguridad de transporte, también debe configurar un puerto con un certificado X.509. Si no está creando un servicio autohospedado, puede hospedar su servicio en Servicios de Internet Information Server (IIS). [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Seguridad de transporte HTTP](../../../../docs/framework/wcf/feature-details/http-transport-security.md).  
+Cuando crea un [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] autohospedado con la clase <xref:System.ServiceModel.WSHttpBinding> que utiliza la seguridad de transporte, también debe configurar un puerto con un certificado X.509. Si no está creando un servicio autohospedado, puede hospedar su servicio en Servicios de Internet Information Server (IIS). Para obtener más información, consulte [seguridad de transporte HTTP](../../../../docs/framework/wcf/feature-details/http-transport-security.md).  
   
  La herramienta que se usa para configurar un puerto depende del sistema operativo que se esté ejecutando en el equipo.  
   
- Si está ejecutando [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] o [!INCLUDE[wxp](../../../../includes/wxp-md.md)], use la herramienta HttpCfg.exe. Esta herramienta se instala con [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]. Con [!INCLUDE[wxp](../../../../includes/wxp-md.md)], puede descargar la herramienta en [herramientas de soporte técnico de Windows XP Service Pack 2](http://go.microsoft.com/fwlink/?LinkId=88606). [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][General de Httpcfg](http://go.microsoft.com/fwlink/?LinkId=88605). El [Httpcfg](http://go.microsoft.com/fwlink/?LinkId=94840) explica la sintaxis de la herramienta Httpcfg.exe.  
+ Si está ejecutando [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] o [!INCLUDE[wxp](../../../../includes/wxp-md.md)], use la herramienta HttpCfg.exe. Esta herramienta se instala con [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]. Con [!INCLUDE[wxp](../../../../includes/wxp-md.md)], puede descargar la herramienta en [herramientas de soporte técnico de Windows XP Service Pack 2](http://go.microsoft.com/fwlink/?LinkId=88606). Para obtener más información, consulte [general de Httpcfg](http://go.microsoft.com/fwlink/?LinkId=88605). El [Httpcfg](http://go.microsoft.com/fwlink/?LinkId=94840) explica la sintaxis de la herramienta Httpcfg.exe.  
   
  Si está ejecutando [!INCLUDE[wv](../../../../includes/wv-md.md)], use la herramienta Netsh.exe, que ya está instalada.  
   
@@ -66,9 +68,9 @@ Cuando crea un [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] autohospe
   
 ### <a name="to-get-a-certificates-thumbprint"></a>Para obtener una huella digital de un certificado  
   
-1.  Use el complemento de certificados de MMC para buscar un certificado X.509 que tenga como finalidad la autenticación del cliente. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Cómo: ver certificados con el complemento de MMC](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md).  
+1.  Use el complemento de certificados de MMC para buscar un certificado X.509 que tenga como finalidad la autenticación del cliente. Para obtener más información, consulte [Cómo: ver certificados con el complemento de MMC](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md).  
   
-2.  Obtenga acceso a la huella digital del certificado. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Cómo: recuperar la huella digital de un certificado](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md).  
+2.  Obtenga acceso a la huella digital del certificado. Para obtener más información, consulte [Cómo: recuperar la huella digital de un certificado](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md).  
   
 3.  Copie la huella digital del certificado en un editor de texto, como por ejemplo Bloc de notas.  
   

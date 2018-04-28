@@ -1,28 +1,28 @@
 ---
-title: "Configuración del registro de mensajes"
-ms.custom: 
+title: Configuración del registro de mensajes
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - message logging [WCF]
 ms.assetid: 0ff4c857-8f09-4b85-9dc0-89084706e4c9
-caps.latest.revision: 
+caps.latest.revision: 40
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: a867d5f85177ad9a19a5766c65a8f1f98c04cd17
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 63bdbc68851ace71b3afef30e274b9821ed1ad5f
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="configuring-message-logging"></a>Configuración del registro de mensajes
 En este tema se describe cómo puede configurar el registro de mensajes para distintos escenarios.  
@@ -58,7 +58,7 @@ En este tema se describe cómo puede configurar el registro de mensajes para dis
 </system.serviceModel>  
 ```  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]configuración de registro de mensajes, vea [configuración recomendada para el seguimiento y registro de mensajes](../../../../docs/framework/wcf/diagnostics/tracing/recommended-settings-for-tracing-and-message-logging.md).  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] configuración de registro de mensajes, vea [configuración recomendada para el seguimiento y registro de mensajes](../../../../docs/framework/wcf/diagnostics/tracing/recommended-settings-for-tracing-and-message-logging.md).  
   
  Puede utilizar `add` para especificar el nombre y tipo del agente de escucha que desea utilizar. En la configuración de ejemplo, el agente de escucha se denomina "mensajes" y agrega el agente de escucha de seguimiento de .NET Framework estándar (`System.Diagnostics.XmlWriterTraceListener`) como el tipo que se va a utilizar. Si utiliza `System.Diagnostics.XmlWriterTraceListener`, debe especificar la ubicación y el nombre del archivo de resultados en el archivo de configuración. Esto se hace estableciendo `initializeData` en el nombre del archivo de registro. De lo contrario, el sistema produce una excepción. También puede implementar un agente de escucha personalizado que emita registros en un archivo predeterminado.  
   
@@ -73,7 +73,7 @@ En este tema se describe cómo puede configurar el registro de mensajes para dis
 <source name="System.ServiceModel.MessageLogging" switchValue="Verbose">  
 ```  
   
- Si desea deshabilitar el origen de seguimiento, debería utilizar en su lugar los atributos `logMessagesAtServiceLevel`, `logMalformedMessages` y `logMessagesAtTransportLevel` del elemento `messageLogging`. Debería establecer todos estos atributos en `false`. Esta acción puede realizarse utilizando el archivo de configuración en el ejemplo de código anterior, mediante la interfaz del usuario del editor de configuración, o mediante WMI. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]la herramienta Editor de configuración, consulte [herramienta Editor de configuración (SvcConfigEditor.exe)](../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]WMI, consulte [utilizando Windows Management Instrumentation para diagnósticos](../../../../docs/framework/wcf/diagnostics/wmi/index.md).  
+ Si desea deshabilitar el origen de seguimiento, debería utilizar en su lugar los atributos `logMessagesAtServiceLevel`, `logMalformedMessages` y `logMessagesAtTransportLevel` del elemento `messageLogging`. Debería establecer todos estos atributos en `false`. Esta acción puede realizarse utilizando el archivo de configuración en el ejemplo de código anterior, mediante la interfaz del usuario del editor de configuración, o mediante WMI. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] la herramienta Editor de configuración, consulte [herramienta Editor de configuración (SvcConfigEditor.exe)](../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] WMI, consulte [utilizando Windows Management Instrumentation para diagnósticos](../../../../docs/framework/wcf/diagnostics/wmi/index.md).  
   
 ## <a name="logging-levels-and-options"></a>Registro de niveles y opciones  
  En el caso de los mensajes entrantes, el registro se produce inmediatamente después de que se haya formado el mensaje, inmediatamente antes de que el mensaje obtenga el código de usuario en el nivel de servicio y cuando se detecten los mensajes incorrectos.  
@@ -107,7 +107,7 @@ En este tema se describe cómo puede configurar el registro de mensajes para dis
   
  Si ningún agente de escucha de seguimiento se define en el archivo de configuración, no se generará ninguna salida de registro sin tener en cuenta el nivel de registro especificado.  
   
- Las opciones de registro de mensajes, como los atributos descritos en esta sección, se pueden cambiar en el tiempo de ejecución mediante el Instrumental de administración de Windows (WMI). Esto puede hacerse mediante el acceso a la [AppDomainInfo](../../../../docs/framework/wcf/diagnostics/wmi/appdomaininfo.md) instancia, que expone las siguientes propiedades booleanas: `LogMessagesAtServiceLevel`, `LogMessagesAtTransportLevel`, y `LogMalformedMessages`. Por consiguiente, si configura un agente de escucha de traza para el registro de mensajes, pero define estas opciones en `false`, en la configuración, puede cambiarlas después a `true`, una vez se esté ejecutando la aplicación. Esto habilita en efecto el registro de mensajes en el tiempo de ejecución. De igual forma, si habilita el registro de mensajes en su archivo de configuración, puede deshabilitarlo en el tiempo de ejecución mediante WMI. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Mediante Instrumental de administración de Windows para el diagnóstico](../../../../docs/framework/wcf/diagnostics/wmi/index.md).  
+ Las opciones de registro de mensajes, como los atributos descritos en esta sección, se pueden cambiar en el tiempo de ejecución mediante el Instrumental de administración de Windows (WMI). Esto puede hacerse mediante el acceso a la [AppDomainInfo](../../../../docs/framework/wcf/diagnostics/wmi/appdomaininfo.md) instancia, que expone las siguientes propiedades booleanas: `LogMessagesAtServiceLevel`, `LogMessagesAtTransportLevel`, y `LogMalformedMessages`. Por consiguiente, si configura un agente de escucha de traza para el registro de mensajes, pero define estas opciones en `false`, en la configuración, puede cambiarlas después a `true`, una vez se esté ejecutando la aplicación. Esto habilita en efecto el registro de mensajes en el tiempo de ejecución. De igual forma, si habilita el registro de mensajes en su archivo de configuración, puede deshabilitarlo en el tiempo de ejecución mediante WMI. Para obtener más información, consulte [utilizando Windows Management Instrumentation para diagnósticos](../../../../docs/framework/wcf/diagnostics/wmi/index.md).  
   
  El campo `source` de un registro de mensajes especifica en qué contexto se registra el mensaje: al enviar o recibir un mensaje de solicitud, para una solicitud-respuesta o una solicitud unidireccional, en el modelo de servicio o capa de transporte, o en el caso de un mensaje con formato incorrecto.  
   
@@ -117,14 +117,14 @@ En este tema se describe cómo puede configurar el registro de mensajes para dis
   
 ||Enviar solicitud|Recibir solicitud|Enviar respuesta|Recibir respuesta|  
 |-|------------------|---------------------|----------------|-------------------|  
-|Nivel de modelo de servicio|Servicio<br /><br /> Nivel<br /><br /> Enviar<br /><br /> Solicitud|Servicio<br /><br /> Nivel<br /><br /> Recibir<br /><br /> Solicitud|Servicio<br /><br /> Nivel<br /><br /> Enviar<br /><br /> Responder|Servicio<br /><br /> Nivel<br /><br /> Recibir<br /><br /> Responder|  
+|Nivel de modelo de servicio|web de Office<br /><br /> Nivel<br /><br /> Enviar<br /><br /> Solicitud|web de Office<br /><br /> Nivel<br /><br /> Recibir<br /><br /> Solicitud|web de Office<br /><br /> Nivel<br /><br /> Enviar<br /><br /> Responder|web de Office<br /><br /> Nivel<br /><br /> Recibir<br /><br /> Responder|  
 |Nivel de transporte|Transporte<br /><br /> Enviar|Transporte<br /><br /> Recibir|Transporte<br /><br /> Enviar|Transporte<br /><br /> Recibir|  
   
  Para solicitud unidireccional  
   
 ||Enviar solicitud|Recibir solicitud|  
 |-|------------------|---------------------|  
-|Nivel de modelo de servicio|Servicio<br /><br /> Nivel<br /><br /> Enviar<br /><br /> Datagrama|Servicio<br /><br /> Nivel<br /><br /> Recibir<br /><br /> Datagrama|  
+|Nivel de modelo de servicio|web de Office<br /><br /> Nivel<br /><br /> Enviar<br /><br /> Datagrama|web de Office<br /><br /> Nivel<br /><br /> Recibir<br /><br /> Datagrama|  
 |Nivel de transporte|Transporte<br /><br /> Enviar|Transporte<br /><br /> Recibir|  
   
 ## <a name="message-filters"></a>Filtros de mensajes  

@@ -1,32 +1,33 @@
 ---
 title: OperationScope
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 56206a21-1e63-422d-b92a-e5d8b713e707
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 837be2de516f604dd6869449d99df238fb6dbd24
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 3bf92d7a726a53c5d625f31b0386e11c941cdde9
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="operationscope"></a>OperationScope
 En este ejemplo se muestra cómo las actividades de mensajería, <xref:System.ServiceModel.Activities.Receive> y <xref:System.ServiceModel.Activities.SendReply>, se pueden utilizar para exponer una actividad personalizada existente como una operación en un servicio de flujo de trabajo. En este ejemplo se incluye una nueva actividad personalizada denominada `OperationScope`. Pretende facilitar el desarrollo de un servicio de flujo de trabajo permitiendo a los usuarios crear el cuerpo de sus operaciones por separado como actividades personalizadas y exponiéndolas fácilmente como operaciones del servicio mediante la actividad `OperationScope`. Por ejemplo, una actividad `Add` personalizada que toma dos argumentos `in` y devuelve un argumento `out` se puede exponer como una operación `Add` en el servicio de flujo de trabajo si se coloca en una actividad `OperationScope`.  
   
  El ámbito funciona inspeccionando la actividad proporcionada como su cuerpo. Se supone que los argumentos `in` no enlazados son entradas del mensaje entrante. Se supone que todos los argumentos `out`, independientemente de si están enlazados, son salidas en el mensaje de respuesta subsiguiente. El nombre de la operación expuesta se toma del nombre para mostrar de la actividad `OperationScope`. El resultado final es que la actividad del cuerpo se incluye en las actividades <xref:System.ServiceModel.Activities.Receive> y <xref:System.ServiceModel.Activities.SendReply> con los parámetros de los mensajes enlazados a los argumentos de la actividad.  
   
- En este ejemplo se expone un servicio del flujo de trabajo mediante extremos HTTP. Para ejecutarlo, se deben agregar las ACL de dirección URL apropiadas. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Configurar HTTP y HTTPS](http://go.microsoft.com/fwlink/?LinkId=70353). Ejecutar el comando siguiente en un símbolo del sistema con privilegios elevados agrega las ACL adecuadas (asegúrese de que su dominio y el nombre de usuario se sustituyen por dominio %\\% UserName %).  
+ En este ejemplo se expone un servicio del flujo de trabajo mediante extremos HTTP. Para ejecutarlo, se deben agregar las ACL de dirección URL apropiadas. Para obtener más información, consulte [configurar HTTP y HTTPS](http://go.microsoft.com/fwlink/?LinkId=70353). Ejecutar el comando siguiente en un símbolo del sistema con privilegios elevados agrega las ACL adecuadas (asegúrese de que su dominio y el nombre de usuario se sustituyen por dominio %\\% UserName %).  
   
- **netsh http agregar dirección url urlacl = http: / / +: 8000 / usuario = % DOMAIN %\\% UserName %**  
+ **netsh http agregar dirección url de urlacl =http://+:8000/ usuario = % DOMAIN %\\% UserName %**  
   
 ### <a name="to-run-the-sample"></a>Para ejecutar el ejemplo  
   

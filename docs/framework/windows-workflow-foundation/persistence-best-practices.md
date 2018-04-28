@@ -1,23 +1,24 @@
 ---
 title: Procedimientos recomendados de persistencia
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 6974c5a4-1af8-4732-ab53-7d694608a3a0
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 408257d9ec51e9d60cb899c16cbef3a26cdc609f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: cfea5b8728774a4e788f3f0d866c6741d5b0bbe9
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="persistence-best-practices"></a>Procedimientos recomendados de persistencia
 Este documento trata de los procedimientos recomendados el diseño de flujo de trabajo y de la configuración relacionada con la persistencia del flujo de trabajo.  
@@ -31,7 +32,7 @@ Este documento trata de los procedimientos recomendados el diseño de flujo de t
   
  Si su flujo de trabajo está ocupado durante mucho tiempo, le recomendamos conservar la instancia de flujo de trabajo con regularidad a lo largo de su período ocupación. Puede hacer esto agregando las actividades <xref:System.Activities.Statements.Persist> a lo largo de la secuencia de actividades que mantienen ocupada la instancia de flujo de trabajo. De esta manera, reciclando el dominio de la aplicación, los errores del host o del equipo no hacen que el sistema revierta hasta el inicio del período de ocupación. Sea consciente de que agregar las actividades <xref:System.Activities.Statements.Persist> a su flujo de trabajo podría provocar una degradación del rendimiento.  
   
- Windows Server App Fabric simplifica mucho la configuración y el uso de la persistencia. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Persistencia de AppFabric de Windows Server](http://go.microsoft.com/fwlink/?LinkID=201200&clcid=0x409)  
+ Windows Server App Fabric simplifica mucho la configuración y el uso de la persistencia. Para obtener más información, vea [persistencia de Windows Server App Fabric](http://go.microsoft.com/fwlink/?LinkID=201200&clcid=0x409)  
   
 ## <a name="configuration-of-scalability-parameters"></a>Configuración de los parámetros de escalabilidad  
  Los requisitos de escalabilidad y rendimiento determinan la configuración de los siguientes parámetros:  

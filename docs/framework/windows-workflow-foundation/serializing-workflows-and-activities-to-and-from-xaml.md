@@ -14,11 +14,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 4ca32eb9543498279448617e33169ddd22882702
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: 9a215be76002b9e8fca8ac4a9073885b3b30a97b
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="serializing-workflows-and-activities-to-and-from-xaml"></a>Serializar flujos de trabajo y actividades a y de XAML
 Además de compilarse en tipos incluidos en ensamblados, las definiciones de flujo de trabajo también se pueden serializar en XAML. Estas definiciones serializadas se pueden recargar para edición o inspección, pasar a un sistema de compilación para compilación, o bien cargar e invocar. En este tema se proporciona información general sobre la serialización de definiciones de flujo de trabajo y el trabajo con definiciones de flujo de trabajo de XAML.  
@@ -28,7 +28,7 @@ Además de compilarse en tipos incluidos en ensamblados, las definiciones de flu
   
  [!code-csharp[CFX_WorkflowApplicationExample#41](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#41)]  
   
- Cada una de las instancias de <xref:System.Activities.DynamicActivityProperty> representa uno de los argumentos de entrada al flujo de trabajo y la propiedad <xref:System.Activities.ActivityBuilder.Implementation%2A> contiene las actividades que constituyen la lógica del flujo de trabajo. Observe que las expresiones de valor de r de este ejemplo son expresiones de Visual Basic. Las expresiones lambda no son serializables en XAML a menos que se use <xref:System.Activities.Expressions.ExpressionServices.Convert%2A>. Si los flujos de trabajo serializados están pensados para abrirse o editarse en el diseñador de flujo de trabajo, se deben usar expresiones de Visual Basic. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Crear flujos de trabajo, actividades y expresiones mediante código imperativo](../../../docs/framework/windows-workflow-foundation/authoring-workflows-activities-and-expressions-using-imperative-code.md).  
+ Cada una de las instancias de <xref:System.Activities.DynamicActivityProperty> representa uno de los argumentos de entrada al flujo de trabajo y la propiedad <xref:System.Activities.ActivityBuilder.Implementation%2A> contiene las actividades que constituyen la lógica del flujo de trabajo. Observe que las expresiones de valor de r de este ejemplo son expresiones de Visual Basic. Las expresiones lambda no son serializables en XAML a menos que se use <xref:System.Activities.Expressions.ExpressionServices.Convert%2A>. Si los flujos de trabajo serializados están pensados para abrirse o editarse en el diseñador de flujo de trabajo, se deben usar expresiones de Visual Basic. Para obtener más información, consulte [creación de flujos de trabajo, actividades y expresiones mediante código imperativo](../../../docs/framework/windows-workflow-foundation/authoring-workflows-activities-and-expressions-using-imperative-code.md).  
   
  Para serializar la definición de flujo de trabajo representada por la instancia de <xref:System.Activities.ActivityBuilder> en XAML, use <xref:System.Activities.XamlIntegration.ActivityXamlServices> para crear <xref:System.Xaml.XamlWriter> y use después <xref:System.Xaml.XamlServices> para serializar la definición de flujo de trabajo mediante <xref:System.Xaml.XamlWriter>. <xref:System.Activities.XamlIntegration.ActivityXamlServices> tiene métodos para asignar instancias de <xref:System.Activities.ActivityBuilder> en XAML y viceversa, y cargar flujos de trabajo de XAML y devolver <xref:System.Activities.DynamicActivity> que se pueda invocar. En el siguiente ejemplo, la instancia de <xref:System.Activities.ActivityBuilder> del ejemplo anterior se serializa en una cadena y también se guarda en un archivo.  
   
@@ -97,7 +97,7 @@ ActivityXamlServicesSettings settings = new ActivityXamlServicesSettings
 DynamicActivity<int> wf = ActivityXamlServices.Load(new StringReader(serializedAB), settings) as DynamicActivity<int>;  
 ```  
   
- [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Expresiones de C#](../../../docs/framework/windows-workflow-foundation/csharp-expressions.md).  
+ Para obtener más información, consulte [expresiones de C#](../../../docs/framework/windows-workflow-foundation/csharp-expressions.md).  
   
  También se puede cargar una definición de flujo de trabajo serializado en una <xref:System.Activities.ActivityBuilder> instancia mediante el uso de la <xref:System.Activities.XamlIntegration.ActivityXamlServices> <xref:System.Activities.XamlIntegration.ActivityXamlServices.CreateBuilderReader%2A> método. Una vez cargado un flujo de trabajo serializado en una instancia de <xref:System.Activities.ActivityBuilder>, se puede inspeccionar y modificar. Esto resulta útil para los autores de diseñadores de flujo de trabajo personalizados y proporciona un mecanismo para guardar y recargar las definiciones de flujo de trabajo durante el proceso del diseño. En el siguiente ejemplo, se carga la definición de flujo de trabajo serializada del ejemplo anterior y se inspeccionan sus propiedades.  
   

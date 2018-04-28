@@ -1,20 +1,17 @@
 ---
 title: Coincidencia de modelos [F#]
-description: "Obtenga información acerca de cómo se utilizan los patrones en F # para comparar los datos con estructuras lógicas, descomponer datos en sus partes constituyentes o extraer información de datos."
-keywords: "visual f#, f#, programación funcional"
+description: 'Obtenga información acerca de cómo se utilizan los patrones en F # para comparar los datos con estructuras lógicas, descomponer datos en sus partes constituyentes o extraer información de datos.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 5562ee98-e2f1-4dcd-8e2f-16ae27baaade
-ms.openlocfilehash: 7c7a3110a8f34c0c96c12d4584010a9ac4b485fa
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 31a5b321e5daecdc3add9a205d60b63b2c00ccd2
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="pattern-matching"></a>Coincidencia de modelos
 
@@ -36,12 +33,12 @@ Cada modelo actúa como una regla para transformar la entrada de alguna manera. 
 
 Los modelos admitidos se muestran en la tabla siguiente. En tiempo de ejecución, la entrada se prueba cada uno de los siguientes patrones en el orden mostrado en la tabla, y patrones son aplica de forma recursiva, de primero al último tal y como aparecen en el código y de izquierda a derecha para los patrones en cada línea.
 
-|Nombre|Descripción|Ejemplo|
+|nombre|Descripción|Ejemplo|
 |----|-----------|-------|
 |Patrón de constante|Cualquier numérico, carácter, o literal de cadena, una constante de enumeración o un identificador literal definido|`1.0`, `"test"`, `30`, `Color.Red`|
 |Identificador (modelo)|Un valor de caso de una unión discriminada, una etiqueta de excepción o un caso (modelo activo)|`Some(x)`<br /><br />`Failure(msg)`|
 |Variable (modelo)|*identifier*|`a`|
-|`as`patrón|*patrón de* como *identificador*|`(a, b) as tuple1`|
+|`as` Patrón|*patrón de* como *identificador*|`(a, b) as tuple1`|
 |O un patrón|*pattern1* &#124; *pattern2*|<code>([h] &#124; [h; _])</code>|
 |Y el patrón|*pattern1* &amp; *pattern2*|`(a, b) & (_, "test")`|
 |Modelo de cons|*identificador* :: *identificador de la lista*|`h :: t`|

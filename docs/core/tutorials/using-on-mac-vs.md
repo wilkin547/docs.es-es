@@ -1,20 +1,19 @@
 ---
-title: "Introducción a .NET Core en macOS con Visual Studio para Mac"
-description: "Este tema le guía en la creación de una aplicación de consola sencilla con Visual Studio para Mac y .NET Core."
-keywords: .NET, .NET Core, macOS, Mac
+title: Introducción a .NET Core en macOS con Visual Studio para Mac
+description: Este tema le guía en la creación de una aplicación de consola sencilla con Visual Studio para Mac y .NET Core.
 author: guardrex
 ms.author: mairaw
 ms.date: 06/12/2017
 ms.topic: get-started-article
-ms.prod: .net-core
+ms.prod: dotnet-core
 ms.devlang: dotnet
-ms.assetid: 8902e849-dd17-42c0-8264-cc7ae3927a0c
-ms.workload: dotnetcore
-ms.openlocfilehash: dad4a66fc943f4232806f7512705fc96decd1904
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 97a9c62280f09f244028c066a04350a59dd0400d
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="getting-started-with-net-core-on-macos-using-visual-studio-for-mac"></a>Introducción a .NET Core en macOS con Visual Studio para Mac
 

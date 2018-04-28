@@ -1,35 +1,35 @@
 ---
-title: "Auditoría de eventos de seguridad"
-ms.custom: 
+title: Auditoría de eventos de seguridad
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - auditing security events [WCF]
 ms.assetid: 5633f61c-a3c9-40dd-8070-1c373b66a716
-caps.latest.revision: 
+caps.latest.revision: 27
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: cb8f112c71c743fd6650baf04b8db55ceaeef4ae
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 948ff11cf1b7ecacc6f9f5fdebfc3a0cbd1ef5b1
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="auditing-security-events"></a>Auditoría de eventos de seguridad
 Las aplicaciones creadas con [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] pueden registrar eventos de seguridad (éxito, error o ambos) con la característica de auditoría. Los eventos se escriben al registro de eventos del sistema de Windows y se pueden examinar utilizando el Visor de eventos.  
   
  La auditoría proporciona un método para que un administrador detecte un ataque que ya se ha producido o que está en curso. Además, auditar puede ayudar un desarrollador a depurar problemas relacionados con la seguridad. Por ejemplo, si un error en la configuración de la autorización o al comprobar la directiva niega accidentalmente el acceso a un usuario autorizado, un programador puede detectar y aislar rápidamente la causa de este error examinando el registro de eventos.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)][!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] seguridad, consulte [información general sobre seguridad](../../../../docs/framework/wcf/feature-details/security-overview.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]programación [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], consulte [programación básica de WCF](../../../../docs/framework/wcf/basic-wcf-programming.md).  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] seguridad, consulte [información general sobre seguridad](../../../../docs/framework/wcf/feature-details/security-overview.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] programación [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], consulte [programación básica de WCF](../../../../docs/framework/wcf/basic-wcf-programming.md).  
   
 ## <a name="audit-level-and-behavior"></a>Nivel de auditoría y comportamiento  
  Existen dos niveles de auditorías de seguridad:  
@@ -41,7 +41,7 @@ Las aplicaciones creadas con [!INCLUDE[indigo1](../../../../includes/indigo1-md.
  Puede comprobar los niveles de auditoría para éxito o fracaso, lo que se conoce como el *comportamiento de auditoría*.  
   
 ## <a name="audit-log-location"></a>Ubicación del registro de auditoría  
- Una vez que determina el nivel y comportamiento de una auditoría, usted (o un administrador) puede especificar una ubicación para el registro de auditoría. Hay tres opciones: valor predeterminado, aplicación y seguridad. Al especificar Predeterminado, el registro real depende de qué sistema esté usando y de si el sistema permite escribir en el registro de seguridad. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] la sección “Sistema operativo” más adelante en este tema.  
+ Una vez que determina el nivel y comportamiento de una auditoría, usted (o un administrador) puede especificar una ubicación para el registro de auditoría. Hay tres opciones: valor predeterminado, aplicación y seguridad. Al especificar Predeterminado, el registro real depende de qué sistema esté usando y de si el sistema permite escribir en el registro de seguridad. Para obtener más información, vea la sección "Sistema operativo" más adelante en este tema.  
   
  Para escribir en el registro de seguridad es necesario el `SeAuditPrivilege`. De forma predeterminada, solo las cuentas de Sistema local y Servicio de red tienen este privilegio. Para administrar las funciones del registro de seguridad `read` y `delete` es necesario `SeSecurityPrivilege`. De forma predeterminada, solo los administradores tienen este privilegio.  
   
@@ -86,10 +86,10 @@ Las aplicaciones creadas con [!INCLUDE[indigo1](../../../../includes/indigo1-md.
 </configuration>  
 ```  
   
- Si auditar está habilitado y no se especifica una `auditLogLocation`, el nombre del registro predeterminado es "Seguridad", para que la plataforma admita la escritura en el registro de seguridad; de lo contrario, el nombre será "Aplicación". Solo los sistemas operativos [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] y [!INCLUDE[wv](../../../../includes/wv-md.md)] admiten la escritura en el registro de seguridad. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] la sección “Sistema operativo” más adelante en este tema.  
+ Si auditar está habilitado y no se especifica una `auditLogLocation`, el nombre del registro predeterminado es "Seguridad", para que la plataforma admita la escritura en el registro de seguridad; de lo contrario, el nombre será "Aplicación". Solo los sistemas operativos [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] y [!INCLUDE[wv](../../../../includes/wv-md.md)] admiten la escritura en el registro de seguridad. Para obtener más información, vea la sección "Sistema operativo" más adelante en este tema.  
   
 ## <a name="security-considerations"></a>Consideraciones de seguridad  
- Si un usuario malintencionado sabe que la auditoría está habilitada, el atacante puede enviar mensajes no válidos y de este modo hacer que se escriban entradas de auditoría. Si el registro de auditoría se rellena de esta manera, el sistema de auditoría falla. Para mitigar esto, establezca la propiedad <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> en `true` y use las propiedades del Visor de eventos para controlar el comportamiento de la auditoría. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]el artículo de Microsoft Support sobre cómo ver y administrar registros de eventos mediante el Visor de eventos en Windows XP, disponible en [cómo ver y administrar registros de eventos en el Visor de eventos en Windows XP](http://go.microsoft.com/fwlink/?LinkId=89150).  
+ Si un usuario malintencionado sabe que la auditoría está habilitada, el atacante puede enviar mensajes no válidos y de este modo hacer que se escriban entradas de auditoría. Si el registro de auditoría se rellena de esta manera, el sistema de auditoría falla. Para mitigar esto, establezca la propiedad <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> en `true` y use las propiedades del Visor de eventos para controlar el comportamiento de la auditoría. Para obtener más información, vea el artículo de Microsoft Support sobre cómo ver y administrar registros de eventos mediante el Visor de eventos en Windows XP, disponible en [cómo ver y administrar registros de eventos en el Visor de eventos en Windows XP](http://go.microsoft.com/fwlink/?LinkId=89150).  
   
  Los eventos de auditoría que se escriben en el registro de aplicaciones en [!INCLUDE[wxp](../../../../includes/wxp-md.md)] puede verlos cualquier usuario autenticado.  
   

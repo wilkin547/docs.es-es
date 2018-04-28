@@ -1,35 +1,35 @@
 ---
-title: "Cómo recuperar la huella digital de un certificado"
-ms.custom: 
+title: Cómo recuperar la huella digital de un certificado
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - certificates [WCF], retrieving thumbprint
 ms.assetid: da3101aa-78cd-4c34-9652-d1f24777eeab
-caps.latest.revision: 
+caps.latest.revision: 15
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 8f6d00d31023aa8d6dbfec4a8306f1cb9da17c74
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0fe3635b73e17123e410f43efc8d382e0df85641
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="how-to-retrieve-the-thumbprint-of-a-certificate"></a>Cómo recuperar la huella digital de un certificado
 Al escribir una aplicación [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] que usa un certificado X.509 para la autenticación, es a menudo necesario especificar demandas en el certificado. Por ejemplo, debe proporcionar una demanda de huella digital al utilizar la enumeración <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindByThumbprint> en el método <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A> . Se requieren dos pasos a la hora de buscar un valor de demanda. Primero, abra el complemento de Microsoft Management Console (MMC) para certificados. (Vea [How to: View Certificates with the MMC Snap-in](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md).) Segundo, como se describe aquí, busque un certificado adecuado y copie su huella digital (u otros valores de demanda).  
   
  Si usa un certificado para la autenticación del servicio, es importante apuntar el valor de la columna **Emitido para** (la primera columna en la consola). Al utilizar Capa de sockets seguros (SSL) como seguridad de transporte, una de las primeras comprobaciones es la comparación de la dirección base Identificador uniforme de recursos (URI) de un servicio con el valor **Emitido para** . Los valores deben coincidir o se detiene el proceso de autenticación.  
   
- También puede usar la herramienta Makecert.exe de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] de SDK para crear certificados temporales para el uso durante el desarrollo. Una entidad de certificación no emite, sin embargo, de forma predeterminada, este tipo de certificado, y no se puede usar para propósitos de producción. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Cómo: crear certificados temporales para su uso durante el desarrollo](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md).  
+ También puede usar la herramienta Makecert.exe de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] de SDK para crear certificados temporales para el uso durante el desarrollo. Una entidad de certificación no emite, sin embargo, de forma predeterminada, este tipo de certificado, y no se puede usar para propósitos de producción. Para obtener más información, consulte [Cómo: crear certificados temporales para el uso durante el desarrollo](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md).  
   
 ### <a name="to-retrieve-a-certificates-thumbprint"></a>Para recuperar una huella digital de un certificado  
   

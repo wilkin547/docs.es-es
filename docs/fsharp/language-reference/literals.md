@@ -1,20 +1,17 @@
 ---
 title: Literales (F#)
-description: "Obtenga información acerca de los tipos literales en el lenguaje de programación de F #."
-keywords: "visual f#, f#, programación funcional"
+description: 'Obtenga información acerca de los tipos literales en el lenguaje de programación de F #.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 4b1d6e9d-f933-4cd4-966d-d643152c27e4
-ms.openlocfilehash: 6bb1f233b6846e226c4e73aee00b8cf77735fe2d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 961d6a10122c5d5c691d394efa8d2b7b31a80453
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="literals"></a>Literales
 
@@ -39,15 +36,15 @@ La tabla siguiente muestran los tipos literales en F #. Los caracteres que repre
 |uint64|número de natural de 64 bits sin signo|UL|`86UL`|
 |float32 único,|número de punto flotante de 32 bits|F o f|`4.14F` o `4.14f`|
 |||LF|`0x00000000lf`|
-|float; doble|número de punto flotante de 64 bits|ninguna|`4.14`o `2.3E+32` o`2.3e+32`|
+|float; doble|número de punto flotante de 64 bits|ninguna|`4.14` o `2.3E+32` o `2.3e+32`|
 |||LF|`0x0000000000000000LF`|
 |bigint|entero no limitado a la representación en forma de 64 bits|I|`9999999999999999999999999999I`|
 |decimal|número fraccionario representado como un punto fijo o un número racional|M o m|`0.7833M` o `0.7833m`|
 |Char|Carácter Unicode|ninguna|`'a'`|
-|Cadena|Cadena de Unicode|ninguna|`"text\n"`<br /><br />o<br /><br />`@"c:\filename"`<br /><br />o<br /><br />`"""<book title="Paradise Lost">"""`<br /><br />o<br /><br />`"string1" + "string2"`<br /><br />Vea también [cadenas](Strings.md).|
+|String|Cadena de Unicode|ninguna|`"text\n"`<br /><br />o<br /><br />`@"c:\filename"`<br /><br />o<br /><br />`"""<book title="Paradise Lost">"""`<br /><br />o<br /><br />`"string1" + "string2"`<br /><br />Vea también [cadenas](Strings.md).|
 |byte|Carácter ASCII|B|`'a'B`|
 |byte[]|cadena ASCII|B|`"text"B`|
-|String o byte]|literales de cadenas|prefijo @|`@"\\server\share"`(Unicode)<br /><br />`@"\\server\share"B`(ASCII)|
+|String o byte]|literales de cadenas|prefijo @|`@"\\server\share"` (Unicode)<br /><br />`@"\\server\share"B` (ASCII)|
 
 ## <a name="remarks"></a>Comentarios
 Las cadenas Unicode pueden contener codificaciones explícitas, que se pueden especificar mediante `\u` seguido por un código hexadecimal de 16 bits o codificaciones UTF-32 se pueden especificar mediante `\U` seguido por un código hexadecimal de 32 bits que representa un Unicode par suplente.

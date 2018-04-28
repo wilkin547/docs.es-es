@@ -21,11 +21,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: ba49d990c9f067ae2c10ae2a60cbad24b30f43eb
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: e731fd31f2a247466891abbf75d67a61dba7f286
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="working-with-certificates"></a>Trabajar con certificados
 Para programar la seguridad de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], los certificados digitales de X.509 se utilizan normalmente para autenticar clientes y servidores, cifrar y firmar mensajes digitalmente. En este tema se explican brevemente las características de los certificados digitales de X.509 y cómo utilizarlos en [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] e incluye vínculos a los temas que explican estos conceptos en mayor profundidad o que muestran cómo llevar a cabo tareas comunes mediante [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] y los certificados.  
@@ -37,7 +37,7 @@ Para programar la seguridad de [!INCLUDE[indigo1](../../../../includes/indigo1-m
  Los certificados los debe emitir una entidad de certificación, que suele ser un emisor de certificados de terceros. En un dominio de Windows, se incluye una entidad de certificación que se puede usar para emitir los certificados a los equipos del dominio.  
   
 ## <a name="viewing-certificates"></a>Visualización de certificados  
- Para trabajar con certificados, a menudo es necesario verlos y examinar sus propiedades. Esto se hace con facilidad con la herramienta de complemento Microsoft Management Console (MMC). [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Cómo: ver certificados con el complemento de MMC](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md).  
+ Para trabajar con certificados, a menudo es necesario verlos y examinar sus propiedades. Esto se hace con facilidad con la herramienta de complemento Microsoft Management Console (MMC). Para obtener más información, consulte [Cómo: ver certificados con el complemento de MMC](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md).  
   
 ## <a name="certificate-stores"></a>Almacenes de certificados  
  Los certificados se encuentran en almacenes. Existen dos ubicaciones de almacenamiento principales que se dividen en subalmacenes. Si es el administrador en un equipo, puede ver ambos almacenes principales utilizando la herramienta de complemento MMC. Los usuarios que no sean administradores solo pueden ver el almacén del usuario actual.  
@@ -87,16 +87,16 @@ Para programar la seguridad de [!INCLUDE[indigo1](../../../../includes/indigo1-m
   
  También puede establecer la propiedad mediante configuración. Los siguientes elementos se utilizan para especificar el modo de validación:  
   
--   [\<authentication>](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md)  
+-   [\<autenticación >](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md)  
   
 -   [\<peerAuthentication >](../../../../docs/framework/configure-apps/file-schema/wcf/peerauthentication-element.md)  
   
--   [\<messageSenderAuthentication>](../../../../docs/framework/configure-apps/file-schema/wcf/messagesenderauthentication-element.md)  
+-   [\<messageSenderAuthentication >](../../../../docs/framework/configure-apps/file-schema/wcf/messagesenderauthentication-element.md)  
   
 ## <a name="custom-authentication"></a>Autenticación personalizada  
  La propiedad `CertificateValidationMode` también le permite personalizar cómo se autentican los certificados. De manera predeterminada, el nivel se establece en `ChainTrust`. Para utilizar el valor <xref:System.ServiceModel.Security.X509CertificateValidationMode.Custom>, también debe establecer el atributo `CustomCertificateValidatorType` en un ensamblado y tipo utilizado para validar el certificado. Para crear un validador personalizado, debe heredar a partir de la clase <xref:System.IdentityModel.Selectors.X509CertificateValidator> abstracta.  
   
- Al crear un autenticador personalizado, el método más importante para invalidar es el método <xref:System.IdentityModel.Selectors.X509CertificateValidator.Validate%2A>. Para obtener un ejemplo de autenticación personalizada, consulte el [validador de certificado X.509](../../../../docs/framework/wcf/samples/x-509-certificate-validator.md) ejemplo. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Credencial personalizada y validación de credencial](../../../../docs/framework/wcf/extending/custom-credential-and-credential-validation.md).  
+ Al crear un autenticador personalizado, el método más importante para invalidar es el método <xref:System.IdentityModel.Selectors.X509CertificateValidator.Validate%2A>. Para obtener un ejemplo de autenticación personalizada, consulte el [validador de certificado X.509](../../../../docs/framework/wcf/samples/x-509-certificate-validator.md) ejemplo. Para obtener más información, consulte [credencial personalizada y validación de credencial](../../../../docs/framework/wcf/extending/custom-credential-and-credential-validation.md).  
   
 ## <a name="using-makecertexe-to-build-a-certificate-chain"></a>Uso de Makecert.exe para generar una cadena de certificados  
  La herramienta de creación de certificados (Makecert.exe) crea certificados X.509 y pares de claves privadas y públicas. Puede guardar la clave privada en el disco y, a continuación, usarla para emitir y firmar nuevos certificados, simulando así una jerarquía de certificados encadenados. La herramienta está diseñada para usarla únicamente como una ayuda al desarrollar servicios y nunca se debería utilizar para crear los certificados para la implementación real. Al desarrollar un servicio de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], utilice los siguientes pasos para generar una cadena de confianza con Makecert.exe.  

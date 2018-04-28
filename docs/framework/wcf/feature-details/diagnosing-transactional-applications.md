@@ -1,30 +1,32 @@
 ---
-title: "Diagnóstico de aplicaciones transaccionales"
-ms.custom: 
+title: Diagnóstico de aplicaciones transaccionales
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 4a993492-1088-4d10-871b-0c09916af05f
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0826881bac88f2bfa933ae71b798186dafc55303
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: a730daeadbed0f7453b8312612c096846d4e2cda
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="diagnosing-transactional-applications"></a>Diagnóstico de aplicaciones transaccionales
 En este tema se describe cómo utilizar la característica de diagnóstico y administración de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] para solucionar problemas de una aplicación transaccional.  
   
 ## <a name="performance-counters"></a>Contadores de rendimiento  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] proporciona un conjunto estándar de contadores de rendimiento para que usted mida el rendimiento de su aplicación transaccional. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Contadores de rendimiento](../../../../docs/framework/wcf/diagnostics/performance-counters/index.md).  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] proporciona un conjunto estándar de contadores de rendimiento para que usted mida el rendimiento de su aplicación transaccional. Para más información, vea [Contadores de rendimiento](../../../../docs/framework/wcf/diagnostics/performance-counters/index.md).  
   
  Los contadores de rendimiento tienen tres niveles de alcance diferentes: servicio, punto de conexión y operación, tal y como se describe en las tablas siguientes.  
   
@@ -56,7 +58,7 @@ En este tema se describe cómo utilizar la característica de diagnóstico y adm
 |Flujo de transacciones por segundo|El número de transacciones que fluyeron a operaciones en este extremo en cada segundo. Este contador se incrementa siempre que se encuentra una transacción en el mensaje enviado al extremo.|  
   
 ## <a name="windows-management-instrumentation"></a>Windows Management Instrumentation  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] expone datos de la inspección de un servicio en el tiempo de ejecución a través de un proveedor del Instrumental de administración de Windows (WMI) [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]acceso a datos WMI, consulte [utilizando Windows Management Instrumentation para diagnósticos](../../../../docs/framework/wcf/diagnostics/wmi/index.md).  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] expone datos de la inspección de un servicio en el tiempo de ejecución a través de un proveedor del Instrumental de administración de Windows (WMI) [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] acceso a datos WMI, consulte [utilizando Windows Management Instrumentation para diagnósticos](../../../../docs/framework/wcf/diagnostics/wmi/index.md).  
   
  Varias propiedades WMI de solo lectura indican los valores de transacción aplicados para un servicio. Las tablas siguientes hacen una lista de todos estos valores.  
   
@@ -100,7 +102,7 @@ En este tema se describe cómo utilizar la característica de diagnóstico y adm
   
 -   Seguimiento estándar de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]  
   
-     Este tipo de seguimiento es igual que seguir cualquier aplicación de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Configuración del seguimiento](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md).  
+     Este tipo de seguimiento es igual que seguir cualquier aplicación de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Para obtener más información, consulta [Configuring Tracing](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md).  
   
 -   Trazado de WS-AtomicTransaction  
   

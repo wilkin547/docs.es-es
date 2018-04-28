@@ -1,27 +1,29 @@
 ---
-title: "Integración de System.Web.Routing"
-ms.custom: 
+title: Integración de System.Web.Routing
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 31fe2a4f-5c47-4e5d-8ee1-84c524609d41
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8f74a0f9d7a39d7d5ccb97d7f4ef022b32bbf4fc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9c3a5b9965f63a9fc501025493b3a323013ea2a4
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="systemwebrouting-integration"></a>Integración de System.Web.Routing
-Al hospedar un servicio de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] en Internet Information Service (IIS), se coloca un archivo .svc en el directorio virtual. Este archivo .svc especifica el generador de host de servicio que se debe usar, así como la clase que implementa el servicio. Al realizar solicitudes al servicio, debe especificar el archivo .svc en el URI, por ejemplo: http://contoso.com/ServicioDeEmpleados.svc. Para programadores que escriben servicios de REST, este tipo de URI no es óptimo. Los URI para los servicios de REST especifican un recurso determinado y normalmente no tienen ninguna extensión. La característica de integración <xref:System.Web.Routing> le permite hospedar un servicio de REST de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] que responde a URI sin extensión. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Vea enrutamiento [el enrutamiento de ASP.NET](http://go.microsoft.com/fwlink/?LinkId=184660) y [AspNetRouteIntegration](../../../../docs/framework/wcf/samples/aspnetrouteintegration.md) ejemplo.  
+Al hospedar un servicio de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] en Internet Information Service (IIS), se coloca un archivo .svc en el directorio virtual. Este archivo .svc especifica el generador de host de servicio que se debe usar, así como la clase que implementa el servicio. Al realizar solicitudes al servicio de especificar el archivo .svc en el URI, por ejemplo: http://contoso.com/EmployeeServce.svc. Para programadores que escriben servicios de REST, este tipo de URI no es óptimo. Los URI para los servicios de REST especifican un recurso determinado y normalmente no tienen ninguna extensión. La característica de integración <xref:System.Web.Routing> le permite hospedar un servicio de REST de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] que responde a URI sin extensión. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Vea enrutamiento [el enrutamiento de ASP.NET](http://go.microsoft.com/fwlink/?LinkId=184660) y [AspNetRouteIntegration](../../../../docs/framework/wcf/samples/aspnetrouteintegration.md) ejemplo.  
   
 ## <a name="using-systemwebrouting-integration"></a>Usar la integración de System.Web.Routing  
  Para usar la característica de integración de <xref:System.Web.Routing>, utilice la clase <xref:System.ServiceModel.Activation.ServiceRoute> para crear una o más rutas y agregarlas a <xref:System.Web.Routing.RouteTable> en un archivo Global.asax. Estas rutas especifican los URI relativos a los que responde el servicio. En el ejemplo siguiente se muestra cómo hacerlo.  
@@ -60,7 +62,7 @@ Al hospedar un servicio de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md
     </system.webServer>  
 ```  
   
- Esto carga un módulo y el controlador requerido para el enrutamiento. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Enrutamiento](../../../../docs/framework/wcf/feature-details/routing.md). También debe establecer el atributo `aspNetCompatibilityEnabled` como `true` en el elemento `<serviceHostingEnvironment>`, tal y como se muestra en el siguiente ejemplo.  
+ Esto carga un módulo y el controlador requerido para el enrutamiento. Para más información, vea [Enrutamiento](../../../../docs/framework/wcf/feature-details/routing.md). También debe establecer el atributo `aspNetCompatibilityEnabled` como `true` en el elemento `<serviceHostingEnvironment>`, tal y como se muestra en el siguiente ejemplo.  
   
 ```xml  
 <system.serviceModel>  

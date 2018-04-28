@@ -1,20 +1,17 @@
 ---
-title: "Tipos de colección F#"
-description: "Obtenga información acerca de los tipos de colección F # y cómo se diferencian de los tipos de colección en .NET Framework."
-keywords: "visual f#, f#, programación funcional"
+title: Tipos de colección F#
+description: 'Obtenga información acerca de los tipos de colección F # y cómo se diferencian de los tipos de colección en .NET Framework.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: cdf6a7e6-6b3d-4c44-b7b6-773a2b700331
-ms.openlocfilehash: c22178641a88c304e0f666b07aca94e620161071
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 0baad5bdf88e8f381240b822a3f6132898dc9ff9
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="f-collection-types"></a>Tipos de colección F#
 
@@ -31,9 +28,9 @@ La siguiente tabla muestra los tipos de colección F #.
 |Tipo|Descripción|Vínculos relacionados|
 |----|-----------|-------------|
 |[List](https://msdn.microsoft.com/library/c627b668-477b-4409-91ed-06d7f1b3e4a7)|Una serie ordenada e inmutable de elementos del mismo tipo. Se implementa como una lista vinculada.|[Listas](lists.md)<br /><br />[List (módulo)](https://msdn.microsoft.com/library/a2264ba3-2d45-40dd-9040-4f7aa2ad9788)|
-|[Matriz](https://msdn.microsoft.com/library/0cda8040-9396-40dd-8dcd-cf48542165a1)|Una colección de tamaño fijo, basado en cero, mutable de elementos de datos consecutivos que son todas del mismo tipo.|[Matrices](arrays.md)<br /><br />[Array (módulo)](https://msdn.microsoft.com/library/0cda8040-9396-40dd-8dcd-cf48542165a1)<br /><br />[Array2D módulo](https://msdn.microsoft.com/library/ae1a9746-7817-4430-bcdb-a79c2411bbd3)<br /><br />[Array3D módulo](https://msdn.microsoft.com/library/c8355e2d-add8-48a4-8aa6-1c57ae74c560)|
+|[matriz](https://msdn.microsoft.com/library/0cda8040-9396-40dd-8dcd-cf48542165a1)|Una colección de tamaño fijo, basado en cero, mutable de elementos de datos consecutivos que son todas del mismo tipo.|[Matrices](arrays.md)<br /><br />[Array (módulo)](https://msdn.microsoft.com/library/0cda8040-9396-40dd-8dcd-cf48542165a1)<br /><br />[Array2D módulo](https://msdn.microsoft.com/library/ae1a9746-7817-4430-bcdb-a79c2411bbd3)<br /><br />[Array3D módulo](https://msdn.microsoft.com/library/c8355e2d-add8-48a4-8aa6-1c57ae74c560)|
 |[Seq](https://msdn.microsoft.com/library/2f0c87c6-8a0d-4d33-92a6-10d1d037ce75)|Una serie lógica de elementos que son del mismo tipo. Las secuencias son especialmente útiles cuando disponga de una gran colección ordenada de datos pero no necesariamente espera utilizar todos los elementos. Secuencia individual elementos se calculan únicamente como necesario, por lo que puede realizar una secuencia de un rendimiento mejor que una lista si no se utilizan todos los elementos. Las secuencias se representan mediante la `seq<'T>` tipo, que es un alias para `IEnumerable<T>`. Por lo tanto, cualquier tipo de .NET Framework que implemente `System.Collections.Generic.IEnumerable<'T>` puede utilizarse como una secuencia.|[Secuencias](sequences.md)<br /><br />[Seq (módulo)](https://msdn.microsoft.com/library/54e8f059-ca52-4632-9ae9-49685ee9b684)|
-|[Mapa](https://msdn.microsoft.com/library/975316ea-55e3-4987-9994-90897ad45664)|Diccionario inmutable de elementos. Se tiene acceso a los elementos por clave.|[Map (módulo)](https://msdn.microsoft.com/library/bfe61ead-f16c-416f-af98-56dbcbe23e4f)|
+|[mapa](https://msdn.microsoft.com/library/975316ea-55e3-4987-9994-90897ad45664)|Diccionario inmutable de elementos. Se tiene acceso a los elementos por clave.|[Map (módulo)](https://msdn.microsoft.com/library/bfe61ead-f16c-416f-af98-56dbcbe23e4f)|
 |[Set](https://msdn.microsoft.com/library/50cebdce-0cd7-4c5c-8ebc-f3a9e90b38d8)|Un conjunto inmutable que se basa en árboles binarios, donde la comparación es la función de comparación estructural de F #, que potencialmente utiliza las implementaciones de la `System.IComparable` interfaz valores de clave.|[Set (módulo)](https://msdn.microsoft.com/library/61efa732-d55d-4c32-993f-628e2f98e6a0)|
 
 ### <a name="table-of-functions"></a>Tabla de funciones
@@ -62,9 +59,9 @@ Esta sección comparan las funciones que están disponibles en los tipos de cole
 |crear|O (N)|-|-|-|-|Crea una matriz de elementos completas que son todos inicialmente el valor especificado.|
 |retraso|-|-|O (1)|-|-|Devuelve una secuencia que se compila desde la especificación retrasada dada de una secuencia.|
 |diferencia|-|-|-|-|O (M &#42; log N)|Devuelve un nuevo conjunto con los elementos del segundo conjunto quitados del primer conjunto.|
-|DISTINCT|||O (1) &#42;|||Devuelve una secuencia que no contiene ninguna entrada duplicada según las comparaciones de hash y comparaciones de igualdad genéricas en las entradas. Si un elemento aparece varias veces en la secuencia, se descartan las apariciones posteriores.|
-|distinctBy|||O (1) &#42;|||Devuelve una secuencia que no contiene ninguna entrada duplicada según las comparaciones de hash y comparaciones de igualdad genéricas de las claves que devuelve la función de generación de claves especificada. Si un elemento aparece varias veces en la secuencia, se descartan las apariciones posteriores.|
-|empty|O (1)|O (1)|O (1)|O (1)|O (1)|Crea una colección vacía.|
+|DISTINCT|||O (1)&AMP;#42;|||Devuelve una secuencia que no contiene ninguna entrada duplicada según las comparaciones de hash y comparaciones de igualdad genéricas en las entradas. Si un elemento aparece varias veces en la secuencia, se descartan las apariciones posteriores.|
+|distinctBy|||O (1)&AMP;#42;|||Devuelve una secuencia que no contiene ninguna entrada duplicada según las comparaciones de hash y comparaciones de igualdad genéricas de las claves que devuelve la función de generación de claves especificada. Si un elemento aparece varias veces en la secuencia, se descartan las apariciones posteriores.|
+|vacío|O (1)|O (1)|O (1)|O (1)|O (1)|Crea una colección vacía.|
 |exists|O (N)|O (N)|O (N)|O (log N)|O (log N)|Comprueba si algún elemento de la secuencia cumple el predicado especificado.|
 |exists2|O(min(N,M))|-|O(min(N,M))|||Comprueba si algún par de elementos correspondientes de las secuencias de entrada satisface el predicado especificado.|
 |fill|O (N)|||||Establece un intervalo de elementos de la matriz en el valor indicado.|
@@ -83,7 +80,7 @@ Esta sección comparan las funciones que están disponibles en los tipos de cole
 |init|O (N)|O (N)|O (1)|-|-|Crea una colección que tiene la dimensión y la función de generador especificadas para calcular los elementos.|
 |initInfinite|-|-|O (1)|-|-|Genera una secuencia que, cuando se recorren en iteración, devuelve los elementos sucesivos mediante una llamada a la función especificada.|
 |Formar intersección|-|-|-|-|O (log N &#42; registro M)|Calcula la intersección de dos conjuntos.|
-|intersectMany|-|-|-|-|O (N1 &#42; N2...)|Calcula la intersección de una secuencia de conjuntos. La secuencia no debe estar vacía.|
+|intersectMany|-|-|-|-|O (N1 &AMP;#42; N2...)|Calcula la intersección de una secuencia de conjuntos. La secuencia no debe estar vacía.|
 |IsEmpty|O (1)|O (1)|O (1)|O (1)|-|Devuelve `true` si la colección está vacía.|
 |isProperSubset|-|-|-|-|O (M &#42; log N)|Devuelve `true` si todos los elementos del primer conjunto se encuentran en el segundo conjunto, y al menos un elemento del segundo conjunto no está en el primer conjunto.|
 |isProperSuperset|-|-|-|-|O (M &#42; log N)|Devuelve `true` si todos los elementos del segundo conjunto se encuentran en el primer conjunto y al menos un elemento del primer conjunto no está en el segundo conjunto.|
@@ -93,7 +90,7 @@ Esta sección comparan las funciones que están disponibles en los tipos de cole
 |iteri|O (N)|O (N)|O (N)|-|-|Aplica la función especificada a cada elemento de la colección. El entero que se pasa a la función indica el índice del elemento.|
 |iteri2|O (N)|O (N)|-|-|-|Aplica la función especificada a un par de elementos que se dibujan desde índices correspondientes de dos matrices. El entero que se pasa a la función indica el índice de los elementos. Las dos matrices deben tener la misma longitud.|
 |iter2|O (N)|O (N)|O (N)|-|-|Aplica la función especificada a un par de elementos que se dibujan desde índices correspondientes de dos matrices. Las dos matrices deben tener la misma longitud.|
-|length|O (1)|O (N)|O (N)|-|-|Devuelve el número de elementos de la colección.|
+|longitud|O (1)|O (N)|O (N)|-|-|Devuelve el número de elementos de la colección.|
 |map|O (N)|O (N)|O (1)|-|-|Crea una colección cuyos elementos son los resultados de aplicar la función especificada a cada elemento de la matriz.|
 |map2|O (N)|O (N)|O (1)|-|-|Crea una colección cuyos elementos son el resultado de aplicar la función especificada a los elementos correspondientes de las dos colecciones en pares. Las dos matrices de entrada deben tener la misma longitud.|
 |sitio3|-|O (N)|-|-|-|Crea una colección cuyos elementos son el resultado de aplicar la función especificada a los elementos correspondientes de las tres colecciones simultáneamente.|
@@ -146,7 +143,7 @@ Esta sección comparan las funciones que están disponibles en los tipos de cole
 |tryPick|O (N)|O (N)|O (N)|O (log N)|-|Aplica la función especificada a elementos sucesivos y devuelve el primer resultado que devuelve la función `Some` para algún valor. Si no existe ese elemento, la operación devuelve `None`.|
 |Expandir|-|-|O (N)|-|-|Devuelve una secuencia que contiene los elementos que genera el cálculo especificado.|
 |union|-|-|-|-|O (M &#42; log N)|Calcula la unión de los dos conjuntos.|
-|unionMany|-|-|-|-|O (N1 &#42; N2...)|Calcula la unión de una secuencia de conjuntos.|
+|unionMany|-|-|-|-|O (N1 &AMP;#42; N2...)|Calcula la unión de una secuencia de conjuntos.|
 |unzip|O (N)|O (N)|O (N)|-|-|Divide una lista de pares en dos listas.|
 |unzip3|O (N)|O (N)|O (N)|-|-|Divide una lista de triples en tres listas.|
 |división de particiones|-|-|O (N)|-|-|Devuelve una secuencia que genera ventanas deslizantes de que contiene elementos que se dibujan desde la secuencia de entrada. Cada ventana se devuelve como una matriz nueva.|

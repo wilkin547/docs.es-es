@@ -1,27 +1,29 @@
 ---
 title: Trabajar con NAT y firewalls
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - firewalls [WCF]
 - NATs [WCF]
 ms.assetid: 74db0632-1bf0-428b-89c8-bd53b64332e7
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: cae680c8958c86dc57a2aff3c2d567e1fdac981d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: fe74b4bd86a25a8e6b769be1abe5fd81e5ffe5f9
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="working-with-nats-and-firewalls"></a>Trabajar con NAT y firewalls
 Frecuentemente, el cliente y servidor de una conexión de red no tienen una ruta de acceso directa y abierta para la comunicación. Los paquetes se filtran, enrutan, analizan y transforman tanto en los equipos de extremo como en equipos intermedios de la red. Las traducciones de direcciones de red (NATs) y los firewalls son ejemplos comunes de aplicaciones intermedias que pueden participar en la comunicación de redes.  
@@ -43,7 +45,7 @@ Frecuentemente, el cliente y servidor de una conexión de red no tienen una ruta
  Una configuración común para un firewall del usuario doméstico consiste en prohibir las conexiones entrantes a menos que se haya realizado una conexión de salida previamente a ese equipo. Una configuración común para un firewall de usuario empresarial consiste en prohibir las conexiones entrantes en todos los puertos exceptuando un grupo identificado específicamente. Un ejemplo es un firewall que prohíbe las conexiones en todos los puertos salvo el puerto 80 y 443 para proporcionar servicio HTTP y HTTPS. Los firewalls administrados existen tanto para usuarios domésticos como para usuarios empresariales, y permiten a un usuario o proceso de confianza del equipo cambiar la configuración del firewall. Los firewalls administrados son más comunes para usuarios domésticos donde no hay ninguna directiva corporativa que controle el uso de la red.  
   
 ## <a name="using-teredo"></a>Uso de Teredo  
- Teredo es una tecnología de transición de IPv6 que habilita la direccionabilidad directa de equipos detrás de una NAT. Teredo se basa en el uso de un servidor que se puede enrutar de manera pública y global para anunciar conexiones potenciales. El servidor de Teredo da al servidor y cliente de la aplicación un punto de reunión común en el que pueden intercambiar información de conexión. Los equipos solicitan a continuación una dirección Teredo temporal y los paquetes se pasan mediante túneles a través de la red existente. La compatibilidad con Teredo en [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] necesita habilitar la compatibilidad con IPv6 y Teredo en el sistema operativo. [!INCLUDE[wxp](../../../../includes/wxp-md.md)] y los sistemas operativos posteriores admiten Teredo. [!INCLUDE[wv](../../../../includes/wv-md.md)] y los sistemas operativos posteriores admiten IPv6 de forma predeterminada y solo el usuario necesita habilitar Teredo. [!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)] y [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] necesitan que el usuario habilite IPv6 y Teredo. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]el [información general sobre Teredo](http://go.microsoft.com/fwlink/?LinkId=87571).  
+ Teredo es una tecnología de transición de IPv6 que habilita la direccionabilidad directa de equipos detrás de una NAT. Teredo se basa en el uso de un servidor que se puede enrutar de manera pública y global para anunciar conexiones potenciales. El servidor de Teredo da al servidor y cliente de la aplicación un punto de reunión común en el que pueden intercambiar información de conexión. Los equipos solicitan a continuación una dirección Teredo temporal y los paquetes se pasan mediante túneles a través de la red existente. La compatibilidad con Teredo en [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] necesita habilitar la compatibilidad con IPv6 y Teredo en el sistema operativo. [!INCLUDE[wxp](../../../../includes/wxp-md.md)] y los sistemas operativos posteriores admiten Teredo. [!INCLUDE[wv](../../../../includes/wv-md.md)] y los sistemas operativos posteriores admiten IPv6 de forma predeterminada y solo el usuario necesita habilitar Teredo. [!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)] y [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] necesitan que el usuario habilite IPv6 y Teredo. Para obtener más información, consulte el [información general sobre Teredo](http://go.microsoft.com/fwlink/?LinkId=87571).  
   
 ## <a name="choosing-a-transport-and-message-exchange-pattern"></a>Elección de un patrón de intercambio de mensajes y transporte  
  La selección de un transporte y MEP es un proceso de tres pasos:  

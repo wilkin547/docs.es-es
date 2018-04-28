@@ -1,24 +1,26 @@
 ---
-title: "Implementación de un servicio WFC hospedado en Internet Information Services"
-ms.custom: 
+title: Implementación de un servicio WFC hospedado en Internet Information Services
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 04ebd329-3fbd-44c3-b3ab-1de3517e27d7
-caps.latest.revision: "30"
+caps.latest.revision: 30
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 869e3b81e94e6efaa8d6cd9f4f021b52b6b43f48
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: ca37e8b3f59875ed912c02d0a8237a040bf79518
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="deploying-an-internet-information-services-hosted-wcf-service"></a>Implementación de un servicio WFC hospedado en Internet Information Services
 El desarrollo e implementación de un servicio de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] que se hospeda en Internet Information Services (IIS) consta de las tareas siguientes:  
@@ -40,13 +42,13 @@ El desarrollo e implementación de un servicio de [!INCLUDE[indigo1](../../../..
   
  El proceso de instalación del [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)] registra automáticamente a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] con IIS si IIS ya está presente en el equipo. Si IIS se instala después del [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)], se requiere un paso adicional para registrar a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] con IIS y [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]. Puede hacer esto de la siguiente manera, en función de su sistema operativo:  
   
--   [!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)], Windows 7, y [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]: usar el [herramienta de registro de ServiceModel (ServiceModelReg.exe)](../../../../docs/framework/wcf/servicemodelreg-exe.md) herramienta para registrar [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] con IIS: para usar esta herramienta, escriba **ServiceModelReg.exe /i /x** en el símbolo del sistema de Visual Studio. Puede abrir este símbolo del sistema haciendo clic en el botón Inicio, y seleccionando **Todos los programas**, **Microsoft Visual Studio 2012**, **Visual Studio Tools**y **Símbolo del sistema de Visual Studio (2010)**.  
+-   [!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)], Windows 7, y [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]: usar el [herramienta de registro de ServiceModel (ServiceModelReg.exe)](../../../../docs/framework/wcf/servicemodelreg-exe.md) herramienta para registrar [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] con IIS: para usar esta herramienta, escriba **ServiceModelReg.exe /i /x** en el Línea de comandos de Visual Studio. Puede abrir este símbolo del sistema haciendo clic en el botón Inicio, y seleccionando **Todos los programas**, **Microsoft Visual Studio 2012**, **Visual Studio Tools**y **Símbolo del sistema de Visual Studio (2010)**.  
   
 -   [!INCLUDE[wv](../../../../includes/wv-md.md)]: instale el subcomponente Componentes de activación de Windows Communication Foundation de [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)]. Para ello, en el Panel de Control, haga clic en **agregar o quitar programas** y, a continuación, **agregar\/quitar componentes de Windows**. Esto activa el **Asistente para componentes de Windows**.  
   
 -   Windows 7:  
   
- Finalmente debe comprobar que ASP.NET se configura para utilizar la versión 4 de .NET Framework. Para ello, se ejecuta la herramienta ASPNET_Regiis con la opción –i. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Herramienta de registro de IIS en ASP.NET](http://go.microsoft.com/fwlink/?LinkId=201186)  
+ Finalmente debe comprobar que ASP.NET se configura para utilizar la versión 4 de .NET Framework. Para ello, se ejecuta la herramienta ASPNET_Regiis con la opción –i. Para obtener más información, vea [herramienta de registro de IIS de ASP.NET](http://go.microsoft.com/fwlink/?LinkId=201186)  
   
 ## <a name="create-a-new-iis-application-or-reuse-an-existing-aspnet-application"></a>Crear una nueva aplicación de IIS o reutilizar una aplicación de ASP.NET existente  
  Los servicios de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hospedados en IIS deben residir dentro de una aplicación IIS. Puede crear una nueva aplicación IIS para hospedar exclusivamente servicios de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] . O bien, puede implementar un servicio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] en una aplicación existente que ya hospeda contenido de [!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)] (como páginas .aspx y servicios web ASP.NET [ASMX]). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] estas opciones, vea las secciones que describen el hospedaje de WCF en paralelo con ASP.NET y el de servicios WCF en el modo de compatibilidad de ASP.NET de [WCF Services and ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md).  
@@ -89,21 +91,21 @@ new ServiceHost( typeof( MyNamespace.MyServiceImplementationTypeName ) );
 -   Las aplicaciones que hospedan [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] servicios fuera de IIS pueden controlar la dirección base de los servicios que hospedan pasando un conjunto de direcciones base URI para el <xref:System.ServiceModel.ServiceHost> constructor, o proporcionando un [ \<host >](../../../../docs/framework/configure-apps/file-schema/wcf/host.md) elemento de la configuración del servicio. Los servicios hospedados en IIS no tienen la capacidad de controlar sus direcciones base; la dirección base de un servicio hospedado en IIS es la dirección de su archivo .svc.  
   
 ### <a name="endpoint-addresses-for-iis-hosted-services"></a>Direcciones de extremos para servicios hospedados en IIS  
- Cuando se hospeda en IIS, las direcciones de extremo siempre se considera que son relativas a la dirección del archivo .svc que representa al servicio. Por ejemplo, si la dirección base de un servicio de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] es http://localhost/Application1/MyService.svc con la siguiente configuración de extremo.  
+ Cuando se hospeda en IIS, las direcciones de extremo siempre se considera que son relativas a la dirección del archivo .svc que representa al servicio. Por ejemplo, si la dirección base de un [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] servicio es http://localhost/Application1/MyService.svc con la siguiente configuración de punto de conexión.  
   
 ```xml  
 <endpoint address="anotherEndpoint" .../>  
 ```  
   
- Esto proporciona un extremo que se puede alcanzar en "http://localhost/Application1/MyService.svc/anotherEndpoint".  
+ Esto proporciona un punto de conexión que se puede alcanzar en "http://localhost/Application1/MyService.svc/anotherEndpoint".  
   
- De forma similar, el elemento de configuración de extremo que utiliza una cadena vacía como dirección relativa proporciona un extremo alcanzable en http://localhost/Application1/MyService.svc, que es la dirección base.  
+ De forma similar, el elemento de configuración de punto de conexión que utiliza una cadena vacía como la dirección relativa proporciona un punto de conexión alcanzable en http://localhost/Application1/MyService.svc, que es la dirección base.  
   
 ```xml  
 <endpoint address="" ... />  
 ```  
   
- Siempre debe utilizar direcciones de extremo relativas para los extremos de servicio hospedados en IIS. Proporcionar una dirección de extremo completa (por ejemplo, http://localhost/MyService.svc) puede llevar a errores en la implementación del servicio si la dirección del extremo no señala a la aplicación IIS que hospeda el servicio que expone el extremo. El uso de direcciones de extremo relativas para servicios hospedados evita estos posibles conflictos.  
+ Siempre debe utilizar direcciones de extremo relativas para los extremos de servicio hospedados en IIS. Proporcionar una dirección de extremo completa (por ejemplo, http://localhost/MyService.svc) puede provocar errores en la implementación del servicio si la dirección del extremo no apunta a la aplicación de IIS que hospeda el servicio que expone el extremo. El uso de direcciones de extremo relativas para servicios hospedados evita estos posibles conflictos.  
   
 ### <a name="available-transports"></a>Transportes disponibles  
  Los de servicios[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hospedados en IIS 5.1 e [!INCLUDE[iis601](../../../../includes/iis601-md.md)] están limitados a utilizar la comunicación basada en HTTP. En estas plataformas de IIS, configurar un servicio hospedado para utilizar un enlace no HTTP genera un error durante la activación del servicio. Para [!INCLUDE[iisver](../../../../includes/iisver-md.md)], entre los transportes admitidos se incluyen HTTP, Net.TCP, Net.Pipe, Net.MSMQ y msmq.formatname para la compatibilidad con versiones anteriores con respecto a aplicaciones MSMQ existentes.  

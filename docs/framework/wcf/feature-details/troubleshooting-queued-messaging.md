@@ -1,24 +1,26 @@
 ---
-title: "Solución de problemas de la mensajería en cola"
-ms.custom: 
+title: Solución de problemas de la mensajería en cola
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a5f2836f-018d-42f5-a571-1e97e64ea5b0
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a35de5ea587ad77a13105442f0c47344638b611c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: d7de2912029efb61135d5329f186ed2c1ca95840
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="troubleshooting-queued-messaging"></a>Solución de problemas de la mensajería en cola
 Esta sección contiene preguntas comunes y solución de problemas para utilizar las colas en [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
@@ -34,7 +36,7 @@ Esta sección contiene preguntas comunes y solución de problemas para utilizar 
   
  **P: ¿** ¿tengo que actualizar MSMQ para usar el <xref:System.ServiceModel.NetMsmqBinding> y `MsmqIntegration` enlaces?  
   
- **A:** No. Ambos enlaces funcionan con MSMQ 3.0 en [!INCLUDE[wxp](../../../../includes/wxp-md.md)] y [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]. Ciertas características de los enlaces se vuelven disponibles al actualizar a MSMQ 4.0 en [!INCLUDE[wv](../../../../includes/wv-md.md)].  
+ **R:** no. Ambos enlaces funcionan con MSMQ 3.0 en [!INCLUDE[wxp](../../../../includes/wxp-md.md)] y [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]. Ciertas características de los enlaces se vuelven disponibles al actualizar a MSMQ 4.0 en [!INCLUDE[wv](../../../../includes/wv-md.md)].  
   
  **P: ¿** ¿qué características de la <xref:System.ServiceModel.NetMsmqBinding> y <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> enlaces están disponibles en MSMQ 4.0 pero no en MSMQ 3.0?  
   
@@ -46,7 +48,7 @@ Esta sección contiene preguntas comunes y solución de problemas para utilizar 
   
 -   Sólo MSMQ 4.0 admite la lectura de transacción remota.  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Diferencias en las características de puesta en cola en Windows Vista, Windows Server 2003 y Windows XP](../../../../docs/framework/wcf/feature-details/diff-in-queue-in-vista-server-2003-windows-xp.md).  
+ Para obtener más información, consulte [diferencias en las características de puesta en cola en Windows Vista, Windows Server 2003 y Windows XP](../../../../docs/framework/wcf/feature-details/diff-in-queue-in-vista-server-2003-windows-xp.md).  
   
  **P: ¿** puedo usar MSMQ 3.0 en un lado de una comunicación en cola y MSMQ 4.0 en el otro lado?  
   
@@ -54,7 +56,7 @@ Esta sección contiene preguntas comunes y solución de problemas para utilizar 
   
  **P: ¿** deseo integrar aplicaciones MSMQ existentes con nuevas [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] clientes o servidores. ¿Necesito actualizar ambos lados de mi infraestructura de MSMQ?  
   
- **A:** No. No tiene que actualizar a MSMQ 4.0 en ningún lado.  
+ **R:** no. No tiene que actualizar a MSMQ 4.0 en ningún lado.  
   
 ## <a name="troubleshooting"></a>Solución de problemas  
  Esta sección contiene las respuestas a la mayoría de problemas más comunes. Algunos problemas que son limitaciones conocidas también se describen en las notas de la versión.  

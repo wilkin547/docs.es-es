@@ -4,17 +4,16 @@ description: Comprenda cómo funciona el control de versiones de .NET Core.
 author: bleroy
 ms.author: mairaw
 ms.date: 02/13/2018
-ms.topic: article
-ms.prod: .net-core
+ms.topic: conceptual
+ms.prod: dotnet-core
 ms.devlang: dotnet
-ms.assetid: f6f684b1-1d2c-4105-8376-7c1959e23803
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: 70c7f179f3451e51d5ab383cde80959a69f959a1
-ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
+ms.openlocfilehash: 437bea33f26c9ae445cf412657f4d23fcce18873
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="net-core-versioning"></a>Control de versiones de .NET Core
 
@@ -261,6 +260,6 @@ Los diversos metapaquetes se actualizan para hacer referencia a los paquetes de 
 ## <a name="see-also"></a>Vea también
 
 [Marcos de trabajo de destino](../../standard/frameworks.md)  
-[.NET Core distribution packaging](../build/distribution-packaging.md) (Empaquetado de distribución de .NET Core)  
+[Empaquetado de distribución de .NET Core](../build/distribution-packaging.md)  
 [Hoja de información sobre el ciclo de vida de compatibilidad de .NET Core](https://www.microsoft.com/net/core/support)  
 [.NET Core 2+ Version Binding (Enlace de versión de .NET Core 2+)](https://github.com/dotnet/designs/issues/3)  

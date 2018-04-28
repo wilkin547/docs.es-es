@@ -1,13 +1,13 @@
 ---
-title: "Información general sobre la arquitectura de transferencia de datos"
-ms.custom: 
+title: Información general sobre la arquitectura de transferencia de datos
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - data transfer [WCF], architectural overview
 ms.assetid: 343c2ca2-af53-4936-a28c-c186b3524ee9
-caps.latest.revision: 
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 829635bd7fd73b58004c59862f4d589e95f67f9b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cb64b871b8e4ba3036d70f3b84e2fde1667f4529
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="data-transfer-architectural-overview"></a>Información general sobre la arquitectura de transferencia de datos
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] se puede ver como una infraestructura de mensajería. Puede recibir mensajes, procesarlos y enviarlos al código de usuario para realizar acciones adicionales o puede construir mensajes a partir de los datos proporcionados por el código de usuario y entregarlos en un destino. Este tema, que está dirigido a desarrolladores avanzados, describe la arquitectura para el manejo de mensajes y los datos contenidos. Para obtener una vista más sencilla y orientada a tareas sobre cómo enviar y recibir datos, consulte [Specifying Data Transfer in Service Contracts](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md).  
@@ -97,14 +97,14 @@ ms.lasthandoff: 12/22/2017
 |Entrante a partir de la pila de canales de transmisión por secuencias|Un objeto `Stream` que representa los datos que entran a través de la red con <xref:System.Xml.XmlReader> sobre él|Escriba fuera el contenido del `XmlReader` almacenado utilizando `WriteNode`|Devuelve el `XmlReader`almacenado|  
 |Entrante a partir de la pila de canales sin transmisión por secuencias|Un búfer que contiene datos del cuerpo con un `XmlReader` sobre él|Escribe fuera el contenido del `XmlReader` almacenado utilizando `WriteNode`|Devuelve el lenguaje almacenado|  
   
- \*Estos elementos no se implementan directamente en `Message` subclases, sino en subclases de la <xref:System.ServiceModel.Channels.BodyWriter> clase. Para obtener más información acerca de <xref:System.ServiceModel.Channels.BodyWriter>, vea [Using the Message Class](../../../../docs/framework/wcf/feature-details/using-the-message-class.md).  
+ \* Estos elementos no se implementan directamente en `Message` subclases, sino en subclases de la <xref:System.ServiceModel.Channels.BodyWriter> clase. Para obtener más información acerca de <xref:System.ServiceModel.Channels.BodyWriter>, vea [Using the Message Class](../../../../docs/framework/wcf/feature-details/using-the-message-class.md).  
   
 ## <a name="message-headers"></a>Encabezados de mensajes  
  Un mensaje puede contener encabezados. Un encabezado se compone lógicamente de un conjunto de información XML asociado a un nombre, un espacio de nombres y algunas propiedades. Se tiene acceso a los encabezados del mensaje utilizando la propiedad `Headers` en <xref:System.ServiceModel.Channels.Message>. Cada encabezado está representado por una clase <xref:System.ServiceModel.Channels.MessageHeader> . Normalmente, los encabezados de mensajes están asignados a encabezados de mensaje SOAP al utilizar una pila de canales configurada para que funcione con mensajes SOAP.  
   
  Colocar información en un encabezado de mensaje y extraer información de él es similar a utilizar el cuerpo del mensaje. Se simplifica un poco el proceso porque no se admite la transmisión por secuencias. Es posible tener acceso más de una vez al contenido del mismo encabezado y se puede tener acceso a los encabezados en orden aleatorio, lo que hace que siempre estén almacenados en búfer. No hay ningún mecanismo de uso general disponible para obtener un lector XML sobre un encabezado, pero hay una subclase `MessageHeader` interna a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] que representa un encabezado legible con una función de este tipo. La pila del canal crea este tipo de `MessageHeader` cuando llega un mensaje con encabezados personalizados de la aplicación. Esto permite al marco de trabajo del servicio usar un motor de deserialización, como <xref:System.Runtime.Serialization.DataContractSerializer>, para interpretar estos encabezados.  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Using the Message Class](../../../../docs/framework/wcf/feature-details/using-the-message-class.md).  
+ Para obtener más información, consulte [mediante la clase de mensaje](../../../../docs/framework/wcf/feature-details/using-the-message-class.md).  
   
 ## <a name="message-properties"></a>Message (propiedades)  
  Un mensaje puede contener propiedades. Una *propiedad* es cualquier objeto de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] asociado a un nombre de cadena. Se tiene acceso a las propiedades a través de la propiedad `Properties` en `Message`.  
@@ -113,7 +113,7 @@ ms.lasthandoff: 12/22/2017
   
  Por ejemplo, el canal del transporte HTTP incluido como parte de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] es capaz de generar varios códigos de estado HTTP, como "404 (No encontrado)" y "500 (Error interno del servidor)", cuando envía respuestas a los clientes. Antes de enviar un mensaje de respuesta, comprueba para ver si el `Properties` de la `Message` contienen una propiedad denominada "httpResponse" que contiene un objeto de tipo <xref:System.ServiceModel.Channels.HttpResponseMessageProperty>. Si se encuentra este tipo de propiedad, mirará en la propiedad <xref:System.ServiceModel.Channels.HttpResponseMessageProperty.StatusCode%2A> y utilizará ese código de estado. Si no se encuentra, se utiliza el código "200 (Aceptar)" predeterminado.  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Using the Message Class](../../../../docs/framework/wcf/feature-details/using-the-message-class.md).  
+ Para obtener más información, consulte [mediante la clase de mensaje](../../../../docs/framework/wcf/feature-details/using-the-message-class.md).  
   
 ### <a name="the-message-as-a-whole"></a>El mensaje en conjunto  
  Hasta ahora, hemos discutido los métodos para tener acceso a las diversas partes del mensaje aislado. Sin embargo, la clase <xref:System.ServiceModel.Channels.Message> también proporciona métodos para trabajar con el mensaje completo como un todo. Por ejemplo, el método `WriteMessage` escribe el mensaje completo en un sistema de escritura XML.  
@@ -240,7 +240,7 @@ ms.lasthandoff: 12/22/2017
  [!code-csharp[C_DataArchitecture#9](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_dataarchitecture/cs/source.cs#9)]
  [!code-vb[C_DataArchitecture#9](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_dataarchitecture/vb/source.vb#9)]  
   
- Los elementos marcados para serializar (con <xref:System.ServiceModel.MessageBodyMemberAttribute>, <xref:System.ServiceModel.MessageHeaderAttribute>u otros atributos relacionados) deben ser serializables para participar en un contrato de mensaje. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] la sección “Serialización” más adelante en este tema.  
+ Los elementos marcados para serializar (con <xref:System.ServiceModel.MessageBodyMemberAttribute>, <xref:System.ServiceModel.MessageHeaderAttribute>u otros atributos relacionados) deben ser serializables para participar en un contrato de mensaje. Para obtener más información, vea la sección "Serialización" más adelante en este tema.  
   
 ### <a name="4-parameters"></a>4. Parámetros  
  A menudo, un desarrollador que desea describir una operación que actúa en varios pedazos de datos no necesita el grado de control que los contratos de mensajes proporcionan. Por ejemplo, al crear los nuevos servicios, uno normalmente no desea tomar la decisión de desnudo frente a ajustado, sino decidirse por el nombre del elemento contenedor. La toma de estas decisiones a menudo requiere un amplio conocimiento de servicios Web y SOAP.  
@@ -255,7 +255,7 @@ ms.lasthandoff: 12/22/2017
  Describir la información que se va a enviar o recibir como una simple lista de parámetros de contratos de operaciones es el enfoque recomendado, a menos que tenga razones especiales para pasar al contrato de mensaje más complejo o a los modelos de programación basados en `Message`.  
   
 ### <a name="5-stream"></a>5. Secuencia  
- Utilizar `Stream` o una de sus subclases en un contrato de operación o como una sola parte del cuerpo del mensaje en un contrato de mensajes puede considerarse como  un modelo de programación independiente de los descritos anteriormente. Utilizar `Stream` de esta manera es la única manera de garantizar que su contrato se podrá usar de manera secuenciada, sin tener que escribir su propia subclase `Message` compatible con transmisión por secuencias. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Datos de gran tamaño y la transmisión por secuencias](../../../../docs/framework/wcf/feature-details/large-data-and-streaming.md).  
+ Utilizar `Stream` o una de sus subclases en un contrato de operación o como una sola parte del cuerpo del mensaje en un contrato de mensajes puede considerarse como  un modelo de programación independiente de los descritos anteriormente. Utilizar `Stream` de esta manera es la única manera de garantizar que su contrato se podrá usar de manera secuenciada, sin tener que escribir su propia subclase `Message` compatible con transmisión por secuencias. Para obtener más información, consulte [datos de gran tamaño y la transmisión por secuencias](../../../../docs/framework/wcf/feature-details/large-data-and-streaming.md).  
   
  Cuando `Stream` o una de sus subclases se utiliza de esta manera, no se invoca el serializador. Para los mensajes salientes, se crea una subclase `Message` de transmisión por secuencias y la secuencia se escribe tal y como se describe en la sección sobre la interfaz <xref:System.Xml.IStreamProvider> . Para los mensajes entrantes, el marco de trabajo de servicio crea una subclase `Stream` sobre el mensaje entrante y la proporciona a la operación.  
   

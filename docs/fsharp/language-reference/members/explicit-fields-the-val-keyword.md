@@ -1,20 +1,17 @@
 ---
-title: "Campos explícitos: palabra clave val (F#)"
+title: 'Campos explícitos: palabra clave val (F#)'
 description: "Obtenga información sobre F # 'val' palabra clave, que se utiliza para declarar una ubicación para almacenar un valor en un tipo de clase o estructura sin inicializar el tipo."
-keywords: "visual f#, f#, programación funcional"
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 3bdbc745-436b-407f-bf54-5d11ca829cd0
-ms.openlocfilehash: cee53a48f08aec89b0bdd40189ed331cadee877d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: dc277680121976c0469b18c77bd84443cd251afb
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="explicit-fields-the-val-keyword"></a>Campos explícitos: palabra clave val
 
@@ -49,7 +46,7 @@ Para un campo mutable, la representación compilada de .NET es un campo .NET.
 
 
 >[!WARNING] 
-`Note`El espacio de nombres de .NET Framework `System.ComponentModel` contiene un atributo que tiene el mismo nombre. Para obtener más información sobre el atributo, vea `System.ComponentModel.DefaultValueAttribute`.
+`Note` El espacio de nombres de .NET Framework `System.ComponentModel` contiene un atributo que tiene el mismo nombre. Para obtener más información sobre el atributo, vea `System.ComponentModel.DefaultValueAttribute`.
 
 
 El código siguiente muestra el uso de campos explícitos y, para la comparación, un `let` de enlace en una clase que tiene un constructor primario. Tenga en cuenta que el campo enlazado a `let``myInt1` es privado. Si se hace referencia al campo enlazado a `let` `myInt1` desde un método de miembro, el identificador propio `this` no es necesario. Pero si hace referencia a los campos explícitos `myInt2` y `myString`, se requiere el identificador propio.

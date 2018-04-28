@@ -1,28 +1,28 @@
 ---
-title: "Configuración de HTTP y HTTPS"
-ms.custom: 
+title: Configuración de HTTP y HTTPS
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - configuring HTTP [WCF]
 ms.assetid: b0c29a86-bc0c-41b3-bc1e-4eb5bb5714d4
-caps.latest.revision: 
+caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 50d4f92273a3e105fb83705bc138b06350910ccf
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8d3317cd4bba7c9935bd7555f16599dc94725fbd
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="configuring-http-and-https"></a>Configuración de HTTP y HTTPS
 Los servicios y clientes de WCF se pueden comunicar a través de HTTP y HTTPS, que se configuran mediante el uso de Internet Information Services (IIS) o de una herramienta de la línea de comandos. Cuando un servicio WCF se hospeda bajo IIS y necesita la configuración de HTTP o HTTPS se puede configurar en IIS (con la herramienta inetmgr.exe). Si el servicio WCF se autohospeda, la configuración de HTTP o HTTPS se configura usando una herramienta de la línea de comandos.  
@@ -31,7 +31,7 @@ Los servicios y clientes de WCF se pueden comunicar a través de HTTP y HTTPS, q
   
  La herramienta que se usa para definir la configuración de HTTP depende del sistema operativo que el equipo esté ejecutando.  
   
- Cuando se ejecuta [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] o [!INCLUDE[wxp](../../../../includes/wxp-md.md)], use la herramienta HttpCfg.exe. [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] instala automáticamente esta herramienta. Cuando se ejecuta [!INCLUDE[wxp](../../../../includes/wxp-md.md)], puede descargar la herramienta en [herramientas de soporte técnico de Windows XP Service Pack 2](http://go.microsoft.com/fwlink/?LinkId=88606). [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][General de Httpcfg](http://go.microsoft.com/fwlink/?LinkId=88605).  
+ Cuando se ejecuta [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] o [!INCLUDE[wxp](../../../../includes/wxp-md.md)], use la herramienta HttpCfg.exe. [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] instala automáticamente esta herramienta. Cuando se ejecuta [!INCLUDE[wxp](../../../../includes/wxp-md.md)], puede descargar la herramienta en [herramientas de soporte técnico de Windows XP Service Pack 2](http://go.microsoft.com/fwlink/?LinkId=88606). Para obtener más información, consulte [general de Httpcfg](http://go.microsoft.com/fwlink/?LinkId=88605).  
   
  Cuando se ejecute [!INCLUDE[wv](../../../../includes/wv-md.md)]o Windows 7, configúrelo con la herramienta Netsh.exe.  
   

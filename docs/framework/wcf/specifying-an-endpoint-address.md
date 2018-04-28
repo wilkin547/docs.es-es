@@ -1,13 +1,13 @@
 ---
-title: "Especificación de una dirección de punto de conexión"
-ms.custom: 
+title: Especificación de una dirección de punto de conexión
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - endpoints [WCF], addressing
 ms.assetid: ac24f5ad-9558-4298-b168-c473c68e819b
-caps.latest.revision: 
+caps.latest.revision: 41
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 403ff897de4dc9ee95a854d9658bdee344755d59
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 09a3bf2d552b49e36375210e3036e344a9702405
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="specifying-an-endpoint-address"></a>Especificación de una dirección de punto de conexión
 Toda comunicación con un servicio de [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] se produce a través de sus extremos. Cada <xref:System.ServiceModel.Description.ServiceEndpoint> contiene un <xref:System.ServiceModel.Description.ServiceEndpoint.Address%2A>, un <xref:System.ServiceModel.Description.ServiceEndpoint.Binding%2A>y un <xref:System.ServiceModel.Description.ServiceEndpoint.Contract%2A>. El contrato especifica qué operaciones están disponibles. El enlace especifica cómo comunicarse con el servicio y la dirección especifica dónde encontrar el servicio. Cada punto de conexión debe tener una dirección única. La clase <xref:System.ServiceModel.EndpointAddress> representa la dirección de extremo, que contiene un Identificador uniforme de recursos (URI) que representa la dirección del servicio, una <xref:System.ServiceModel.EndpointAddress.Identity%2A>, que representa la identidad de seguridad del servicio, y una colección de <xref:System.ServiceModel.EndpointAddress.Headers%2A>opcional. Los encabezados opcionales proporcionan información más detallada de direccionamiento para identificar o interactuar con el punto de conexión. Por ejemplo, los encabezados pueden indicar cómo procesar un mensaje entrante, dónde debería enviar el extremo un mensaje de respuesta o qué instancia de un servicio se va a usar para procesar un mensaje entrante de un usuario determinado cuando hay varias instancias disponibles.  
@@ -33,7 +33,7 @@ Toda comunicación con un servicio de [!INCLUDE[indigo1](../../../includes/indig
 ## <a name="definition-of-an-endpoint-address"></a>Definición de una dirección del punto de conexión  
  En [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], una <xref:System.ServiceModel.EndpointAddress> modela una referencia del extremo (EPR), tal y como se define en la norma WS-Addressing.  
   
- El URI de la dirección de la mayoría de transportes tiene cuatro partes. Por ejemplo, este URI, "http://www.fabrikam.com: 322/mathservice .svc/secureEndpoint" tiene las cuatro partes siguientes:  
+ El URI de la dirección de la mayoría de transportes tiene cuatro partes. Por ejemplo, este identificador URI, "http://www.fabrikam.com:322/mathservice.svc/secureEndpoint" tiene las cuatro partes siguientes:  
   
 -   Esquema: http:  
   
@@ -49,7 +49,7 @@ Toda comunicación con un servicio de [!INCLUDE[indigo1](../../../includes/indig
   
  Hay dos maneras de especificar las direcciones del extremo de un servicio en [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. Puede especificar una dirección absoluta para cada extremo asociado al servicio o puede proporcionar una dirección base para <xref:System.ServiceModel.ServiceHost> de un servicio y, a continuación, especificar una dirección para cada extremo asociado a este servicio que se define relativo a esta dirección base. Puede utilizar cada uno de estos procedimientos para especificar las direcciones de punto de conexión de un servicio mediante configuración o código. Si no especifica una dirección relativa, el servicio utiliza la dirección base. También puede tener varias direcciones base para un servicio, pero en cada servicio se permite sólo una dirección base para cada transporte. Si tiene varios puntos de conexión, cada uno de los cuales está configurado con un enlace diferente, sus direcciones deben ser únicas. Los extremos que utilizan el mismo enlace pero contratos diferentes pueden utilizar la misma dirección.  
   
- Al hospedarse con IIS, no administra por sí mismo las instancias <xref:System.ServiceModel.ServiceHost>. La dirección base siempre es la dirección especificada en el archivo .svc para el servicio al hospedarse en IIS. De modo que siempre debe utilizar direcciones de extremo relativas para los extremos de servicio hospedados en IIS. Proporcionar una dirección de punto de conexión completa puede conducir a errores en la implementación del servicio. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Implementar un servicio WCF hospedado en servicios de Internet Information](../../../docs/framework/wcf/feature-details/deploying-an-internet-information-services-hosted-wcf-service.md).  
+ Al hospedarse con IIS, no administra por sí mismo las instancias <xref:System.ServiceModel.ServiceHost>. La dirección base siempre es la dirección especificada en el archivo .svc para el servicio al hospedarse en IIS. De modo que siempre debe utilizar direcciones de extremo relativas para los extremos de servicio hospedados en IIS. Proporcionar una dirección de punto de conexión completa puede conducir a errores en la implementación del servicio. Para obtener más información, consulte [implementación de un servicio de WCF Internet Information Services-Hosted](../../../docs/framework/wcf/feature-details/deploying-an-internet-information-services-hosted-wcf-service.md).  
   
 ## <a name="defining-endpoint-addresses-in-configuration"></a>Definición de direcciones de puntos de conexión mediante configuración  
  Para definir un punto de conexión en un archivo de configuración, utilice la [ \<extremo >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) elemento.  
@@ -58,7 +58,7 @@ Toda comunicación con un servicio de [!INCLUDE[indigo1](../../../includes/indig
   
  Cuando el <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A> método se llama (es decir, cuando la aplicación de hospedaje intenta iniciar el servicio), el sistema buscará un [ \<servicio >](../../../docs/framework/configure-apps/file-schema/wcf/service.md) elemento con un atributo de nombre que especifica "UE. Samples.HelloService". Si el [ \<servicio >](../../../docs/framework/configure-apps/file-schema/wcf/service.md) se encuentra el elemento, el sistema carga la clase especificada y crea puntos de conexión mediante las definiciones de punto de conexión proporcionadas en el archivo de configuración. Este mecanismo le permite cargar e iniciar un servicio con dos líneas de código, mientras mantiene la información de enlace y dirección fuera de su código. La ventaja de este enfoque es que estas modificaciones se pueden realizar sin tener que recompilar o implementar la aplicación.  
   
- Los encabezados opcionales se declaran en una [ \<encabezados >](../../../docs/framework/configure-apps/file-schema/wcf/headers-element.md). Lo siguiente es un ejemplo de los elementos utilizados para especificar los puntos de conexión de un servicio en un archivo de configuración que distinga entre dos encabezados: Clientes "Gold" de http://tempuri1.org/ y clientes "Standard" de http://tempuri2.org/. El cliente que llame a este servicio debe tener los pertinentes [ \<encabezados >](../../../docs/framework/configure-apps/file-schema/wcf/headers-element.md) en su archivo de configuración.  
+ Los encabezados opcionales se declaran en una [ \<encabezados >](../../../docs/framework/configure-apps/file-schema/wcf/headers-element.md). El siguiente es un ejemplo de los elementos utilizados para especificar los extremos de un servicio en un archivo de configuración que distinga entre dos encabezados: clientes "Gold" de http://tempuri1.org/ y clientes "Standard" de http://tempuri2.org/. El cliente que llame a este servicio debe tener los pertinentes [ \<encabezados >](../../../docs/framework/configure-apps/file-schema/wcf/headers-element.md) en su archivo de configuración.  
   
  [!code-xml[S_UEHelloWorld#1](../../../samples/snippets/common/VS_Snippets_CFX/s_uehelloworld/common/serviceapp.config#1)]  
   

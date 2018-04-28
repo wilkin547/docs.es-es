@@ -1,12 +1,13 @@
 ---
-title: "Cómo: Crear un servicio de token de seguridad"
-ms.custom: 
+title: 'Cómo: Crear un servicio de token de seguridad'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,29 +16,30 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: 98e82101-4cff-4bb8-a220-f7abed3556e5
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 53ae64af0612cb905a2342491761b1e27ef19c06
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: e043b9b9a3b09bec0d7484fb732e33571b5aaf0c
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="how-to-create-a-security-token-service"></a>Cómo: Crear un servicio de token de seguridad
 Un servicio de token de seguridad implementa el protocolo definido en la especificación de WS-Trust. Este protocolo define formatos de mensaje y patrones de intercambio de mensajes para emitir, renovar, cancelar y validar tokens de seguridad. Un servicio de token de seguridad determinado proporciona uno o más de estas funciones. Este tema aborda el escenario común: implementación de la emisión de token.  
   
 ## <a name="issuing-tokens"></a>Emitir tokens  
- WS-Trust define los formatos de mensaje, basándose en el elemento de esquema del lenguaje de definición de esquemas XML (XSD) `RequestSecurityToken` y en el elemento de esquema XSD `RequestSecurityTokenResponse` para realizar la emisión del token. Además, define los URI (Uniform Resource Identifier) de acción. El URI de acción asociado al mensaje `RequestSecurityToken` es http://schemas.xmlsoap.org/ws/2005/02/trust/RST/Issue. El URI de acción asociado al mensaje `RequestSecurityTokenResponse` es http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/Issue.  
+ WS-Trust define los formatos de mensaje, basándose en el elemento de esquema del lenguaje de definición de esquemas XML (XSD) `RequestSecurityToken` y en el elemento de esquema XSD `RequestSecurityTokenResponse` para realizar la emisión del token. Además, define los URI (Uniform Resource Identifier) de acción. La acción URI asociado con el `RequestSecurityToken` mensaje es http://schemas.xmlsoap.org/ws/2005/02/trust/RST/Issue. La acción URI asociado con el `RequestSecurityTokenResponse` mensaje es http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/Issue.  
   
 ### <a name="request-message-structure"></a>Estructura de mensaje de solicitud  
  La estructura del mensaje de solicitud de problema está normalmente compuesta de los elementos siguientes:  
   
--   Un URI del tipo de petición con un valor de http://schemas.xmlsoap.org/ws/2005/02/trust/Issue.  
+-   URI del tipo de una solicitud con un valor de http://schemas.xmlsoap.org/ws/2005/02/trust/Issue.  
   
--   Un URI del tipo de token. Para tokens de Security Assertions Markup Language (SAML) 1.1, el valor de este URI es http://docs.oasis open.org/wss/oasis wss saml #SAMLV1.1.  
+-   Un URI del tipo de token. Para los tokens de lenguaje de marcado de aserciones de seguridad (SAML) 1.1, el valor de este URI es http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLV1.1.  
   
 -   Un valor de tamaño clave que indica el número de bits en la clave que se va asociar al token emitido.  
   
@@ -109,7 +111,7 @@ Un servicio de token de seguridad implementa el protocolo definido en la especif
  [!code-csharp[c_CreateSTS#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#4)]
  [!code-vb[c_CreateSTS#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#4)]  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Ejemplo de federación](../../../../docs/framework/wcf/samples/federation-sample.md).  
+ Para obtener más información, consulte [ejemplo de federación](../../../../docs/framework/wcf/samples/federation-sample.md).  
   
 ## <a name="creating-response-messages"></a>Crear los mensajes de respuesta  
  Cuando el servicio de token de seguridad procesa la solicitud del problema y construye el token que se va a emitir junto con la clave de prueba, el mensaje de respuesta necesita ser construido, incluyendo como mínimo el token solicitado, el token de prueba y las referencias del token emitido. El token emitido es normalmente <xref:System.IdentityModel.Tokens.SamlSecurityToken> creado a partir de <xref:System.IdentityModel.Tokens.SamlAssertion>, como se muestra en el ejemplo siguiente.  
@@ -122,7 +124,7 @@ Un servicio de token de seguridad implementa el protocolo definido en la especif
  [!code-csharp[c_CreateSTS#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#6)]
  [!code-vb[c_CreateSTS#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#6)]  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]cómo construir el token de prueba cuando el cliente y el token de seguridad de servicio ambos proporcionan material de clave para la clave compartida, consulte [ejemplo de federación](../../../../docs/framework/wcf/samples/federation-sample.md).  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] cómo construir el token de prueba cuando el cliente y el token de seguridad de servicio ambos proporcionan material de clave para la clave compartida, consulte [ejemplo de federación](../../../../docs/framework/wcf/samples/federation-sample.md).  
   
  Las referencias del token emitido se construyen creando instancias de la clase <xref:System.IdentityModel.Tokens.SecurityKeyIdentifierClause>.  
   

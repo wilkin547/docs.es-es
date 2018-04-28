@@ -1,28 +1,28 @@
 ---
-title: "Implementación de contratos de servicio"
-ms.custom: 
+title: Implementación de contratos de servicio
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - implementing service contracts [WCF]
 ms.assetid: aefb6f56-47e3-4f24-ab0a-9bc07bf9885f
-caps.latest.revision: 
+caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 1b4085e23120ad654121f33111eda68276259096
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2a9c34f67de6f4f8b4a8d22dac7e8bf1c9555498
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="implementing-service-contracts"></a>Implementación de contratos de servicio
 Un servicio es una clase que expone la funcionalidad disponible a los clientes en uno o más puntos de conexión. Para crear un servicio, escriba una clase que implemente un contrato [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]. Hay dos maneras de hacerlo. Puede definir el contrato separadamente como una interfaz y, a continuación, crear una clase que implemente esa interfaz. También puede crear la clase y el contrato directamente colocando el atributo <xref:System.ServiceModel.ServiceContractAttribute> en la misma clase y el atributo <xref:System.ServiceModel.OperationContractAttribute> en los métodos disponibles para los clientes del servicio.  
@@ -66,9 +66,9 @@ class MathService
   
  Tenga en cuenta que los servicios anteriores exponen contratos diferentes porque los nombres del contrato son diferentes. En el primer caso, el contrato expuesto se denomina "`IMath`" mientras que, en el segundo caso, el contrato se denomina" `MathService`".  
   
- Puede establecer algunas cosas en el servicio y niveles de implementación de operación, como simultaneidad y creación de instancias. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Diseñar e implementar servicios](../../../docs/framework/wcf/designing-and-implementing-services.md).  
+ Puede establecer algunas cosas en el servicio y niveles de implementación de operación, como simultaneidad y creación de instancias. Para obtener más información, consulte [diseñar e implementar servicios](../../../docs/framework/wcf/designing-and-implementing-services.md).  
   
- Después de implementar un contrato de servicios, debe crear uno o más puntos de conexión para el servicio. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Información general de creación de punto de conexión](../../../docs/framework/wcf/endpoint-creation-overview.md). [!INCLUDE[crabout](../../../includes/crabout-md.md)]cómo ejecutar un servicio, consulte [servicios de hospedaje](../../../docs/framework/wcf/hosting-services.md).  
+ Después de implementar un contrato de servicios, debe crear uno o más puntos de conexión para el servicio. Para obtener más información, consulte [información general de creación de punto de conexión](../../../docs/framework/wcf/endpoint-creation-overview.md). [!INCLUDE[crabout](../../../includes/crabout-md.md)] cómo ejecutar un servicio, consulte [servicios de hospedaje](../../../docs/framework/wcf/hosting-services.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Diseño e implementación de servicios](../../../docs/framework/wcf/designing-and-implementing-services.md)  

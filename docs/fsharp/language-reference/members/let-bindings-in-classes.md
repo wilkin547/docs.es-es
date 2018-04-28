@@ -1,20 +1,17 @@
 ---
 title: Enlaces let en clases (F#)
 description: "Obtenga información acerca de cómo definir campos privados y funciones privadas para las clases de F # mediante enlaces 'let' en la definición de clase."
-keywords: "visual f#, f#, programación funcional"
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 9d3710f5-68b1-4e4c-b02b-27fe018f20e8
-ms.openlocfilehash: 1337cc0794e366e8c39745f5c45065362c9c38c9
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: c4511a541403dde517acaf902e86de8d48f13781
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="let-bindings-in-classes"></a>Enlaces let en clases
 
@@ -60,4 +57,4 @@ También puede definir campos privados en una clase con una definición de miemb
 
 [`do` Bindings in Classes](do-bindings-in-classes.md) (Enlaces `do` en clases)
 
-[`let`Enlaces](../functions/let-bindings.md)
+[`let` Enlaces](../functions/let-bindings.md)

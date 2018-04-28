@@ -1,23 +1,24 @@
 ---
 title: Usar la actividad Interop en un flujo de trabajo de .NET Framework 4
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 9bb747f0-eb33-4f70-84cd-317382372dcd
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0a02d6dbc7c6f6583a174bd10853d8c8070ac273
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: ebef74097d22c9624a29470f4cda231bbb32fe90
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="using-the-interop-activity-in-a-net-framework-4-workflow"></a>Usar la actividad Interop en un flujo de trabajo de .NET Framework 4
 Las actividades creadas con [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] o [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] pueden usarse en un flujo de trabajo de [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] mediante la actividad <xref:System.Activities.Statements.Interop>. En este tema se proporciona información general sobre el uso de la actividad <xref:System.Activities.Statements.Interop>.  
@@ -370,10 +371,10 @@ Rule3: IF this.DiscountPercent > 0
 |Característica de reglas|Documentación|  
 |-------------------|-------------------|  
 |Información general sobre reglas|[Introducción al motor de reglas de Windows Workflow Foundation](http://go.microsoft.com/fwlink/?LinkID=152836)|  
-|RuleSet|[Utilización de RuleSets en flujos de trabajo](http://go.microsoft.com/fwlink/?LinkId=178516) y<xref:System.Workflow.Activities.Rules.RuleSet>|  
+|RuleSet|[Utilización de RuleSets en flujos de trabajo](http://go.microsoft.com/fwlink/?LinkId=178516) y <xref:System.Workflow.Activities.Rules.RuleSet>|  
 |Evaluación de reglas|[Evaluación de reglas en RuleSets](http://go.microsoft.com/fwlink/?LinkId=178517)|  
 |Encadenamiento de reglas|[Control de encadenamiento hacia delante](http://go.microsoft.com/fwlink/?LinkId=178518) y [encadenamiento hacia delante de reglas](http://go.microsoft.com/fwlink/?LinkId=178519)|  
 |Procesamiento de colecciones en reglas|[Procesamiento de colecciones en reglas](http://go.microsoft.com/fwlink/?LinkId=178520)|  
-|Usar PolicyActivity|[Uso de la actividad PolicyActivity](http://go.microsoft.com/fwlink/?LinkId=178521) y<xref:System.Workflow.Activities.PolicyActivity>|  
+|Usar PolicyActivity|[Uso de la actividad PolicyActivity](http://go.microsoft.com/fwlink/?LinkId=178521) y <xref:System.Workflow.Activities.PolicyActivity>|  
   
- Los flujos de trabajo creados en [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] no usan todas las características de reglas proporcionadas por [!INCLUDE[wf1](../../../includes/wf1-md.md)], como las condiciones de actividad declarativas y las actividades condicionales como, por ejemplo, <xref:System.Workflow.Activities.ConditionedActivityGroup> y <xref:System.Workflow.Activities.ReplicatorActivity>. Si es necesario, esta funcionalidad está disponible para flujos de trabajo creados con [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] y [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Guía de migración](../../../docs/framework/windows-workflow-foundation/migration-guidance.md).
+ Los flujos de trabajo creados en [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] no usan todas las características de reglas proporcionadas por [!INCLUDE[wf1](../../../includes/wf1-md.md)], como las condiciones de actividad declarativas y las actividades condicionales como, por ejemplo, <xref:System.Workflow.Activities.ConditionedActivityGroup> y <xref:System.Workflow.Activities.ReplicatorActivity>. Si es necesario, esta funcionalidad está disponible para flujos de trabajo creados con [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] y [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]. Para obtener más información, consulte [Guía de migración](../../../docs/framework/windows-workflow-foundation/migration-guidance.md).

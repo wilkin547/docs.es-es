@@ -1,20 +1,17 @@
 ---
-title: "Expresiones de cálculo (F#)"
-description: "Obtenga información acerca de cómo crear la sintaxis adecuada para escribir cálculos en F # que se pueden secuenciar y combinar mediante enlaces y construcciones de flujo de control."
-keywords: "visual f#, f#, programación funcional"
+title: Expresiones de cálculo (F#)
+description: 'Obtenga información acerca de cómo crear la sintaxis adecuada para escribir cálculos en F # que se pueden secuenciar y combinar mediante enlaces y construcciones de flujo de control.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: acabbf5d-fbb8-479f-894c-7251bf16c8c3
-ms.openlocfilehash: c4ff998c65f3a5c458f36312f6887d869569d814
-ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
+ms.openlocfilehash: 990ea509e4fef84d3e3ee37471b28e2b8d019fad
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="computation-expressions"></a>Expresiones de cálculo
 
@@ -47,9 +44,9 @@ En la tabla siguiente se describe los métodos que pueden usarse en una clase de
 |`Delay`|`(unit -> M<'T>) -> M<'T>`|Contiene una expresión de cálculo como una función.|
 |`Return`|`'T -> M<'T>`|Piden `return` en expresiones de cálculo.|
 |`ReturnFrom`|`M<'T> -> M<'T>`|Piden `return!` en expresiones de cálculo.|
-|`Run`|`M<'T> -> M<'T>` o<br /><br />`M<'T> -> 'T`|Ejecuta una expresión de cálculo.|
-|`Combine`|`M<'T> * M<'T> -> M<'T>` o<br /><br />`M<unit> * M<'T> -> M<'T>`|Se llama para las secuencias en las expresiones de cálculo.|
-|`For`|`seq<'T> * ('T -> M<'U>) -> M<'U>` o<br /><br />`seq<'T> * ('T -> M<'U>) -> seq<M<'U>>`|Piden `for...do` expresiones en expresiones de cálculo.|
+|`Run`|`M<'T> -> M<'T>`, o bien<br /><br />`M<'T> -> 'T`|Ejecuta una expresión de cálculo.|
+|`Combine`|`M<'T> * M<'T> -> M<'T>`, o bien<br /><br />`M<unit> * M<'T> -> M<'T>`|Se llama para las secuencias en las expresiones de cálculo.|
+|`For`|`seq<'T> * ('T -> M<'U>) -> M<'U>`, o bien<br /><br />`seq<'T> * ('T -> M<'U>) -> seq<M<'U>>`|Piden `for...do` expresiones en expresiones de cálculo.|
 |`TryFinally`|`M<'T> * (unit -> unit) -> M<'T>`|Piden `try...finally` expresiones en expresiones de cálculo.|
 |`TryWith`|`M<'T> * (exn -> M<'T>) -> M<'T>`|Piden `try...with` expresiones en expresiones de cálculo.|
 |`Using`|`'T * ('T -> M<'U>) -> M<'U> when 'U :> IDisposable`|Piden `use` enlaces en expresiones de cálculo.|

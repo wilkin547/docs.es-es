@@ -1,22 +1,20 @@
 ---
 title: Compilación de una aplicación Hola a todos con .NET Core y C# en Visual Studio 2017
 description: Obtenga información sobre cómo crear una sencilla aplicación de consola .NET Core con C# mediante Visual Studio 2017.
-keywords: .NET Core, aplicación de consola .NET Core, Visual Studio 2017
 author: BillWagner
 ms.author: wiwagn
 ms.date: 09/13/2017
-ms.topic: article
-ms.prod: .net-core
+ms.topic: conceptual
+ms.prod: dotnet-core
 ms.technology: devlang-csharp
 ms.devlang: csharp
-ms.assetid: 97aa50bf-bdf8-416d-a56c-ac77504c14ea
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: 7042a7356fa1b65f7a152208dbfaa9ba27081a8d
-ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
+ms.openlocfilehash: 7abc0cc087553e2cac10c8cc1da560a048b8e323
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="build-a-c-hello-world-application-with-net-core-in-visual-studio-2017"></a>Compilación de una aplicación Hola a todos en C# con .NET Core en Visual Studio 2017
 

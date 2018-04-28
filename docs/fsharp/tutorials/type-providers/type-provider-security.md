@@ -1,20 +1,17 @@
 ---
 title: Seguridad del proveedor de tipos
-description: "Obtenga información acerca de la seguridad del proveedor de tipo de F #, incluida la forma de cambiar la configuración de confianza de un proveedor de tipos."
-keywords: "visual f#, f#, programación funcional"
+description: 'Obtenga información acerca de la seguridad del proveedor de tipo de F #, incluida la forma de cambiar la configuración de confianza de un proveedor de tipos.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 9c5a8a1f-5a31-490d-83c0-8beabda75c78
-ms.openlocfilehash: c8f03ee90d4dce1d3484a9dfe8951d500d509a2b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 4f0b55062aec6c560112fe10ca4df77f42493011
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="type-provider-security"></a>Seguridad del proveedor de tipos
 

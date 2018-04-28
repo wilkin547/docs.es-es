@@ -1,24 +1,26 @@
 ---
-title: "Ejemplo de elemento de enlace de detección"
-ms.custom: 
+title: Ejemplo de elemento de enlace de detección
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: af513015-85bf-417b-8729-1bdff77ff6d6
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: dbbaefbd32048924434342dc3f902c99a3c2448c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 624209221dc8c2745afa6b4db20df6e47c7374f1
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="discovery-binding-element-sample"></a>Ejemplo de elemento de enlace de detección
 En este ejemplo se muestra cómo utilizar el elemento de enlace de cliente de detección para detectar un servicio. Esta característica permite a los desarrolladores de software agregar un canal de cliente de detección a su pila del canal de clientes existente, con lo que el modelo de programación resulta muy intuitivo. Cuando se abre el canal asociado, la dirección del servicio se resuelve utilizando la detección. Este ejemplo consta de los siguientes proyectos:  
@@ -93,7 +95,7 @@ static CustomBinding CreateCustomBindingWithDiscoveryElement()
             return customBinding; }  
 ```  
   
- Una vez creado el objeto <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement>, el desarrollador de software especifica los criterios que se usan al buscar un servicio. En este caso, el criterio de búsqueda de detección es el tipo de la interfaz `ICalculatorService`. Además, el desarrollador de software especifica un <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider> que devuelve un <xref:System.ServiceModel.Discovery.DiscoveryEndpoint> que especifica dónde buscar los servicios. El <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider> devuelve una nueva instancia de <xref:System.ServiceModel.Discovery.DiscoveryEndpoint>. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Mediante un enlace personalizado con el canal de cliente de detección](../../../../docs/framework/wcf/feature-details/using-a-custom-binding-with-the-discovery-client-channel.md).  
+ Una vez creado el objeto <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement>, el desarrollador de software especifica los criterios que se usan al buscar un servicio. En este caso, el criterio de búsqueda de detección es el tipo de la interfaz `ICalculatorService`. Además, el desarrollador de software especifica un <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider> que devuelve un <xref:System.ServiceModel.Discovery.DiscoveryEndpoint> que especifica dónde buscar los servicios. El <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider> devuelve una nueva instancia de <xref:System.ServiceModel.Discovery.DiscoveryEndpoint>. Para obtener más información, consulte [mediante un enlace personalizado con el canal de cliente de detección](../../../../docs/framework/wcf/feature-details/using-a-custom-binding-with-the-discovery-client-channel.md).  
   
 ```  
 // Extend DiscoveryEndpointProvider class to change the default DiscoveryEndpoint  

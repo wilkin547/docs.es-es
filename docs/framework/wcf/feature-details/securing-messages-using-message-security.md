@@ -1,24 +1,26 @@
 ---
-title: "Protección de mensajes mediante la seguridad de mensajes"
-ms.custom: 
+title: Protección de mensajes mediante la seguridad de mensajes
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a17ebe67-836b-4c52-9a81-2c3d58e225ee
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: be727fe2b69258a058ba99dc8aa40ae148d3dd99
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: be9d55e508308f23e70be81ac0d4fe0dfd0ea9cd
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="securing-messages-using-message-security"></a>Protección de mensajes mediante la seguridad de mensajes
 Esta sección aborda el modo de seguridad [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] al utilizar <xref:System.ServiceModel.NetMsmqBinding>.  
@@ -52,7 +54,7 @@ Esta sección aborda el modo de seguridad [!INCLUDE[indigo2](../../../../include
   
  Teniendo en cuenta la naturaleza desconectada de las colas, es posible que el cliente y el servicio no estén en línea al mismo tiempo. Como tales, el cliente y servicio tienen que intercambiar certificados fuera de banda. En particular, el cliente, en virtud de guardar el certificado del servicio (que se puede encadenar a una entidad de certificación) en su almacén de confianza, debe confiar en que se está comunicando con el servicio correcto. Para autenticar el cliente, el servicio utiliza el certificado X.509 adjunto con el mensaje para compararlo con el certificado en su almacén y verificar la autenticidad del cliente. De nuevo, el certificado se debe encadenar a una entidad de certificación.  
   
- En un equipo que ejecuta Windows, los certificados se conservan en varias clases de almacenes. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]los almacenes diferentes, consulte [almacenes de certificados](http://go.microsoft.com/fwlink/?LinkId=87787).  
+ En un equipo que ejecuta Windows, los certificados se conservan en varias clases de almacenes. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] los almacenes diferentes, consulte [almacenes de certificados](http://go.microsoft.com/fwlink/?LinkId=87787).  
   
 ### <a name="windows"></a>Windows  
  El tipo de credencial de mensaje de Windows utiliza el protocolo Kerberos.  
@@ -63,7 +65,7 @@ Esta sección aborda el modo de seguridad [!INCLUDE[indigo2](../../../../include
   
  Tenga en cuenta que al utilizar este tipo de credencial, el servicio se debe estar ejecutando bajo la cuenta del servicio.  
   
- Se utiliza el protocolo Kerberos de forma predeterminada al elegir la credencial del mensaje. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Explorar Kerberos, el protocolo para la seguridad en Windows 2000 distribuida](http://go.microsoft.com/fwlink/?LinkId=87790).  
+ Se utiliza el protocolo Kerberos de forma predeterminada al elegir la credencial del mensaje. Para obtener más información, consulte [explorar Kerberos, el protocolo para la seguridad distribuida de Windows 2000](http://go.microsoft.com/fwlink/?LinkId=87790).  
   
 ### <a name="username-password"></a>Nombre de usuario/contraseña  
  Con esta propiedad, el cliente puede autenticar al servidor utilizando una contraseña y nombre de usuario en el encabezado de seguridad del mensaje.  

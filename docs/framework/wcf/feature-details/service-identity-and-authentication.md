@@ -1,13 +1,13 @@
 ---
-title: "Identidad del servicio y autenticación"
-ms.custom: 
+title: Identidad del servicio y autenticación
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - authentication [WCF], specifying the identity of a service
 ms.assetid: a4c8f52c-5b30-45c4-a545-63244aba82be
-caps.latest.revision: 
+caps.latest.revision: 32
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 579f41a213564dd18dae719a14170100903efd92
-ms.sourcegitcommit: 973a12d1e6962cd9a9c263fbfaad040ec8267fe9
+ms.openlocfilehash: a0229ce5c6b7081ae493af22b0daeee444736783
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/22/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="service-identity-and-authentication"></a>Identidad del servicio y autenticación
 Un servicio *identidad de extremo*es un valor generado desde el servicio de lenguaje de descripción de servicios Web (WSDL). Este valor, propagado a cualquier cliente, se utiliza para autenticar el servicio. Después de que el cliente inicie una comunicación con un punto de conexión y el servicio se autentique a sí mismo ante el cliente, el cliente compara el valor de identidad del punto de conexión con el valor real devuelto por el proceso de autenticación del punto de conexión. Si coinciden, se asegura al cliente que se ha puesto en contacto con el punto de conexión de servicio esperado. Esto funciona como una protección contra *"phishing"* evitando que un cliente sea redirigido a un punto de conexión hospedado por un servicio malintencionado.  
@@ -48,7 +48,7 @@ Un servicio *identidad de extremo*es un valor generado desde el servicio de leng
  La propiedad <xref:System.ServiceModel.EndpointAddress.Identity%2A> de la clase <xref:System.ServiceModel.EndpointAddress> representa la identidad del servicio llamada por el cliente. El servicio publica la <xref:System.ServiceModel.EndpointAddress.Identity%2A> en sus metadatos. Cuando se ejecuta el programador del cliente la [la herramienta de utilidad de metadatos de ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) respecto al extremo de servicio, la configuración generada contiene el valor del servicio <xref:System.ServiceModel.EndpointAddress.Identity%2A> propiedad. La infraestructura de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] (si se configura con seguridad) comprueba que el servicio posea la identidad especificada.  
   
 > [!IMPORTANT]
->  Los metadatos contienen la identidad esperada del servicio, por lo que se recomienda que exponga los metadatos del servicio a través de medios seguros, como, por ejemplo, creando un punto de conexión HTTPS para el servicio. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Cómo: proteger los extremos de metadatos](../../../../docs/framework/wcf/feature-details/how-to-secure-metadata-endpoints.md).  
+>  Los metadatos contienen la identidad esperada del servicio, por lo que se recomienda que exponga los metadatos del servicio a través de medios seguros, como, por ejemplo, creando un punto de conexión HTTPS para el servicio. Para obtener más información, consulte [Cómo: proteger los extremos de metadatos](../../../../docs/framework/wcf/feature-details/how-to-secure-metadata-endpoints.md).  
   
 ## <a name="identity-types"></a>Tipos de identidad  
  Un servicio puede proporcionar seis tipos de identidades. Cada tipo de identidad corresponde a un elemento que se puede contener dentro del elemento `<identity>` mediante configuración. El tipo utilizado depende del escenario y de los requisitos de seguridad del servicio. La tabla siguiente describe cada tipo de identidad.  

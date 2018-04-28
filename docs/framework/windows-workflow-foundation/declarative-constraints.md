@@ -1,23 +1,24 @@
 ---
 title: Restricciones declarativas
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 67001ed1-7f4d-4ada-ae57-a31176901a53
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a11c62c7011d7ffb13ed0d0ebf060a3cbeb7d7f8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: f5ab784498805473830b46962d9e02591fc3eace
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="declarative-constraints"></a>Restricciones declarativas
 Las restricciones declarativas proporcionan un método eficaz de validación para una actividad y sus relaciones con otras actividades. Las restricciones se configuran para una actividad durante el proceso de creación, aunque el host del flujo de trabajo puede especificar también las restricciones adicionales. En este tema se ofrece información general sobre cómo usar restricciones declarativas para proporcionar la validación de actividad.  
@@ -146,7 +147,7 @@ public sealed class CreateState : CodeActivity
 }  
 ```  
   
- [!INCLUDE[crdefault](../../../includes/crdefault-md.md)]Windows Workflow Foundation [validación](../../../docs/framework/windows-workflow-foundation/samples/validation.md) ejemplos.  
+ Para obtener más información, consulte Windows Workflow Foundation [validación](../../../docs/framework/windows-workflow-foundation/samples/validation.md) ejemplos.  
   
 ## <a name="additional-constraints"></a>Restricciones adicionales  
  Los autores de host de flujo de trabajo pueden especificar las restricciones de validación adicionales para las actividades en un flujo de trabajo creando las restricciones y agregándolas al diccionario de la propiedad <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A> de una instancia de <xref:System.Activities.Validation.ValidationSettings>. Cada elemento de <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A> contiene el tipo de actividad en el que se aplican las restricciones y una lista de las restricciones adicionales para ese tipo de actividad. Cuando se invoca la validación para el flujo de trabajo, cada actividad del tipo especificado, incluidas las clases derivadas, evalúa las restricciones. En este ejemplo, la restricción `ActivityDisplayNameIsNotSetWarning` de la sección anterior se aplica a todas las actividades en un flujo de trabajo.  
@@ -187,4 +188,4 @@ else
 }  
 ```  
   
- Si la propiedad <xref:System.Activities.Validation.ValidationSettings.OnlyUseAdditionalConstraints%2A> de <xref:System.Activities.Validation.ValidationSettings> es `true`, sólo se evaluarán las restricciones adicionales especificadas cuando la validación se invoca llamando al método <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A>. Esto puede ser útil a la hora de inspeccionar flujos de trabajo para configuraciones de validación concretas. Sin embargo, tenga en cuenta que cuando se invoca el flujo de trabajo, la lógica de validación configurada en el flujo de trabajo se evalúa y se debe pasar para que el flujo de trabajo comience correctamente. [!INCLUDE[crabout](../../../includes/crabout-md.md)]invocar la validación, consulte [invocar validación de actividad](../../../docs/framework/windows-workflow-foundation/invoking-activity-validation.md).
+ Si la propiedad <xref:System.Activities.Validation.ValidationSettings.OnlyUseAdditionalConstraints%2A> de <xref:System.Activities.Validation.ValidationSettings> es `true`, sólo se evaluarán las restricciones adicionales especificadas cuando la validación se invoca llamando al método <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A>. Esto puede ser útil a la hora de inspeccionar flujos de trabajo para configuraciones de validación concretas. Sin embargo, tenga en cuenta que cuando se invoca el flujo de trabajo, la lógica de validación configurada en el flujo de trabajo se evalúa y se debe pasar para que el flujo de trabajo comience correctamente. [!INCLUDE[crabout](../../../includes/crabout-md.md)] invocar la validación, consulte [invocar validación de actividad](../../../docs/framework/windows-workflow-foundation/invoking-activity-validation.md).

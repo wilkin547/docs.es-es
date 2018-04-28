@@ -1,28 +1,30 @@
 ---
-title: "Información general sobre las transacciones de Windows Communication Foundation"
-ms.custom: 
+title: Información general sobre las transacciones de Windows Communication Foundation
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - transactions [WCF]
 - WCF, transactions
 - Windows Communication Foundation, transactions
 ms.assetid: c7757854-1207-4019-8b31-552578b7d570
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6fb90d0f93e9bdf7dd9779ffd5d4b1288ba56e7a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 76edd7cf30d9da06db6e0c2f4624bf9a6d677eca
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="windows-communication-foundation-transactions-overview"></a>Información general sobre las transacciones de Windows Communication Foundation
 Las transacciones proporcionan una manera de agrupar un conjunto de acciones u operaciones en una unidad indivisible única de ejecución. Una transacción es una colección de operaciones con las propiedades siguientes:  
@@ -39,7 +41,7 @@ Las transacciones proporcionan una manera de agrupar un conjunto de acciones u o
   
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] implementa la compatibilidad con el protocolo WS-AtomicTransaction (WS-AT) que permite que las aplicaciones de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hagan fluir transacciones a aplicaciones interoperables, como servicios web interoperables compilados mediante tecnología de otro fabricante. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] también implementa la compatibilidad con el protocolo de transacciones OLE, que se puede usar en escenarios donde no necesita funcionalidad de interoperabilidad para habilitar el flujo de la transacción.  
   
- Puede utilizar un archivo de configuración de la aplicación para configurar los enlaces con el fin de habilitar o deshabilitar el flujo de la transacción, así como establecer el protocolo de transacción deseado en un enlace. Además, puede establecer los tiempos de espera de la transacción en el nivel del servicio utilizando el archivo de configuración. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Habilitar el flujo de transacción](../../../../docs/framework/wcf/feature-details/enabling-transaction-flow.md).  
+ Puede utilizar un archivo de configuración de la aplicación para configurar los enlaces con el fin de habilitar o deshabilitar el flujo de la transacción, así como establecer el protocolo de transacción deseado en un enlace. Además, puede establecer los tiempos de espera de la transacción en el nivel del servicio utilizando el archivo de configuración. Para obtener más información, consulte [habilitar el flujo de transacciones](../../../../docs/framework/wcf/feature-details/enabling-transaction-flow.md).  
   
  Los atributos de transacción en el espacio de nombres <xref:System.ServiceModel> le permiten hacer lo siguiente:  
   
@@ -49,7 +51,7 @@ Las transacciones proporcionan una manera de agrupar un conjunto de acciones u o
   
 -   Utilice los atributos <xref:System.ServiceModel.ServiceContractAttribute> y <xref:System.ServiceModel.OperationContractAttribute> de un método de contrato para requerir, permitir o denegar el flujo de transacciones.  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Atributos de transacción de ServiceModel](../../../../docs/framework/wcf/feature-details/servicemodel-transaction-attributes.md).  
+ Para obtener más información, consulte [atributos de transacción de ServiceModel](../../../../docs/framework/wcf/feature-details/servicemodel-transaction-attributes.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Atributos de transacción de ServiceModel](../../../../docs/framework/wcf/feature-details/servicemodel-transaction-attributes.md)  

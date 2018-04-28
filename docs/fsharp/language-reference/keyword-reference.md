@@ -1,20 +1,17 @@
 ---
 title: Referencia de palabras clave (F#)
-description: "Encuentre vínculos a información acerca de todas las palabras clave del lenguaje F #."
-keywords: "visual f#, f#, programación funcional"
+description: 'Encuentre vínculos a información acerca de todas las palabras clave del lenguaje F #.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 5795ce1f-11bf-4798-9f1f-6e44ffa1477e
-ms.openlocfilehash: cdfdd86843acf05a8b33647823f934a161f6d885
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 35a127a38db4874699ef7b43681cb967a139c81e
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="keyword-reference"></a>Referencia de palabras clave
 
@@ -24,10 +21,10 @@ Este tema contiene vínculos a información sobre todas las palabras clave del l
 
 La tabla siguiente muestran todas las palabras clave de F # en orden alfabético, junto con descripciones breves y vínculos a temas importantes que contienen más información.
 
-|Palabra clave|Link|Descripción|
+|Palabra clave|Vínculo|Descripción|
 |-------|----|-----------|
 |`abstract`|[Miembros](members/index.md)<br /><br />[Clases abstractas](abstract-classes.md)|Indica un método que ya sea en el tipo en el que se declara o que es virtual y tiene una implementación predeterminada no tiene ninguna implementación.|
-|`and`|[`let`Enlaces](functions/let-bindings.md)<br /><br />[Miembros](members/index.md)<br /><br />[Restricciones](generics/constraints.md)|Usar en enlaces mutuamente recursivos, en las declaraciones de propiedad y con varias restricciones en parámetros genéricos.|
+|`and`|[`let` Enlaces](functions/let-bindings.md)<br /><br />[Miembros](members/index.md)<br /><br />[Restricciones](generics/constraints.md)|Usar en enlaces mutuamente recursivos, en las declaraciones de propiedad y con varias restricciones en parámetros genéricos.|
 |`as`|[Clases](classes.md)<br /><br />[Coincidencia de patrones](Pattern-Matching.md)|Se utiliza para proporcionar un nombre de objeto a objeto de clase actual. También se utiliza para asignar un nombre a un modelo completo en una coincidencia de patrones.|
 |`assert`|[Aserciones](assertions.md)|Se utiliza para comprobar el código durante la depuración.|
 |`base`|[Clases](classes.md)<br /><br />[Herencia](inheritance.md)|Se utiliza como el nombre del objeto de clase base.|
@@ -46,7 +43,7 @@ La tabla siguiente muestran todas las palabras clave de F # en orden alfabético
 |`extern`|[Funciones externas](functions/external-functions.md)|Indica que un elemento de programa declarado está definido en otro binario o ensamblado.|
 |`false`|[Tipos primitivos](primitive-types.md)|Se utiliza como un literal booleano.|
 |`finally`|[Exceptions: The `try...finally` Expression](exception-handling/the-try-finally-expression.md) (Excepciones: la expresión `try...finally`)|Utilizar junto con `try` para presentar un bloque de código que se ejecuta independientemente de si se produce una excepción.|
-|`fixed`|[Fijo](fixed.md)|Se utiliza para "ancla" un puntero en la pila para evitar que se han recopilado.|
+|`fixed`|[fijo](fixed.md)|Se utiliza para "ancla" un puntero en la pila para evitar que se han recopilado.|
 |`for`|[Bucles: expresión `for...to`](loops-for-to-expression.md)<br /><br />[Bucles: expresión for...in](loops-for-in-expression.md)|Se utiliza en construcciones de bucle.|
 |`fun`|[Expresiones lambda: La `fun` (palabra clave)](functions/lambda-expressions-the-fun-keyword.md)|Se utiliza en las expresiones lambda, también conocido como funciones anónimas.|
 |`function`|[Expresiones de coincidencia](match-expressions.md)<br /><br />[Expresiones lambda: Palabra clave fun](functions/lambda-expressions-the-fun-keyword.md)|Usar como una alternativa más corta que el `fun` palabra clave y un `match` expresión en una expresión lambda cuya coincidencia de patrones en un único argumento.|
@@ -58,7 +55,7 @@ La tabla siguiente muestran todas las palabras clave de F # en orden alfabético
 |`interface`|[Interfaces](interfaces.md)|Se utiliza para declarar e implementar interfaces.|
 |`internal`|[Control de acceso](access-control.md)|Se utiliza para especificar que un miembro está visible dentro de un ensamblado, pero no fuera de él.|
 |`lazy`|[Expresiones con procesamiento diferido](lazy-computations.md)|Se utiliza para especificar un cálculo que se realiza únicamente cuando se necesita un resultado.|
-|`let`|[`let`Enlaces](functions/let-bindings.md)|Se utiliza para asociar o enlazar, un nombre a un valor o una función.|
+|`let`|[`let` Enlaces](functions/let-bindings.md)|Se utiliza para asociar o enlazar, un nombre a un valor o una función.|
 |`let!`|[Flujos de trabajo asincrónicos](asynchronous-workflows.md)<br /><br />[Expresiones de cálculo](computation-expressions.md)|Utilizar en flujos de trabajo asincrónicos para enlazar un nombre para el resultado de un cálculo asincrónico, o, en otras expresiones de cálculo, que se usa para enlazar un nombre a un resultado, que es del tipo de cálculo.|
 |`match`|[Expresiones de coincidencia](match-expressions.md)|Utilizado para la bifurcación mediante la comparación de un valor a un patrón.|
 |`member`|[Miembros](members/index.md)|Se utiliza para declarar una propiedad o método en un tipo de objeto.|

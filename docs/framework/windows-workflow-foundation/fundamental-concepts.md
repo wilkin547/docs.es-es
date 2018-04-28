@@ -1,23 +1,24 @@
 ---
 title: Conceptos fundamentales de Windows Workflow
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 0e930e80-5060-45d2-8a7a-95c0690105d4
-caps.latest.revision: "27"
+caps.latest.revision: 27
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: fca570f661b1867737cc3af295aff5fd8d4cd5ec
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: faeb05045049e9a53babf754f1ec058c6aac2f05
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="fundamental-windows-workflow-concepts"></a>Conceptos fundamentales de Windows Workflow
 El desarrollo del flujo de trabajo en [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] usa conceptos que pueden ser nuevos para algunos desarrolladores de software. En este tema se describen algunos de ellos y la forma en que se implementan.  
@@ -62,7 +63,7 @@ El desarrollo del flujo de trabajo en [!INCLUDE[netfx_current_long](../../../inc
  Las actividades tienen acceso al entorno de tiempo de ejecución de flujo de trabajo mediante la clase derivada de <xref:System.Activities.ActivityContext> adecuada, como <xref:System.Activities.NativeActivityContext> o <xref:System.Activities.CodeActivityContext>. Usan esto para resolver argumentos y variables, para programar las actividades secundarias, y para muchos otros objetivos.  
   
 ## <a name="services"></a>Servicios  
- Los flujos de trabajo proporcionan una manera natural de implementar y tener acceso a servicios flojamente acoplados usando actividades de mensajería. Las actividades de mensajería se compilan en [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] y son el mecanismo principal usado para obtener datos en y fuera de un flujo de trabajo. Puede componer actividades de mensajería para modelar cualquier tipo de patrón de intercambio de mensajes que desee. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)]vea [actividades de mensajería](../../../docs/framework/wcf/feature-details/messaging-activities.md). Los servicios de flujo de trabajo se hospedan mediante la clase <xref:System.ServiceModel.Activities.WorkflowServiceHost>. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Información general de servicios de hospedaje de flujo de trabajo](../../../docs/framework/wcf/feature-details/hosting-workflow-services-overview.md). [!INCLUDE[crabout](../../../includes/crabout-md.md)]Vea servicios de flujo de trabajo [servicios de flujo de trabajo](../../../docs/framework/wcf/feature-details/workflow-services.md)  
+ Los flujos de trabajo proporcionan una manera natural de implementar y tener acceso a servicios flojamente acoplados usando actividades de mensajería. Las actividades de mensajería se compilan en [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] y son el mecanismo principal usado para obtener datos en y fuera de un flujo de trabajo. Puede componer actividades de mensajería para modelar cualquier tipo de patrón de intercambio de mensajes que desee. Para obtener más información, consulte vea [actividades de mensajería](../../../docs/framework/wcf/feature-details/messaging-activities.md). Los servicios de flujo de trabajo se hospedan mediante la clase <xref:System.ServiceModel.Activities.WorkflowServiceHost>. Para obtener más información, consulte [información general de servicios de flujo de trabajo de hospedaje](../../../docs/framework/wcf/feature-details/hosting-workflow-services-overview.md). [!INCLUDE[crabout](../../../includes/crabout-md.md)] Vea servicios de flujo de trabajo [servicios de flujo de trabajo](../../../docs/framework/wcf/feature-details/workflow-services.md)  
   
 ## <a name="persistence-unloading-and-long-running-workflows"></a>Persistencia, descarga y flujos de trabajo de ejecución prolongada  
  El flujo de trabajo de Windows simplifica la creación de programas reactivos de ejecución prolongada al proporcionar:  

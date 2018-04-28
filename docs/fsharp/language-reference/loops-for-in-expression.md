@@ -1,20 +1,17 @@
 ---
-title: "Bucles: expresión for...in (F#)"
-description: "Vea cómo la estructura de F # for.. en expresión la construcción de bucle se utiliza para recorrer en iteración las coincidencias de un patrón en una colección enumerable."
-keywords: "visual f#, f#, programación funcional"
+title: 'Bucles: expresión for...in (F#)'
+description: 'Vea cómo la estructura de F # for.. en expresión la construcción de bucle se utiliza para recorrer en iteración las coincidencias de un patrón en una colección enumerable.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: f54e3228-4aec-4d0a-ae37-bc3376508284
-ms.openlocfilehash: d86aeb3bdd975261e59004d636354a740bd95c47
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: eaf0f4fc6419d8e0bff46795120ee5e42c4efe1d
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="loops-forin-expression"></a>Bucles: expresión for...in
 
@@ -138,7 +135,7 @@ La salida es la siguiente.
 Number of elements in list1: 5
 ```
 
-`Note`Puede usar `for...in` en expresiones de secuencia y otras expresiones de cálculo, en cuyo caso una versión personalizada de la `for...in` se utiliza la expresión. Para obtener más información, consulte [secuencias](sequences.md), [flujos de trabajo asincrónicos](asynchronous-workflows.md), y [expresiones de cálculo](computation-expressions.md).
+`Note` Puede usar `for...in` en expresiones de secuencia y otras expresiones de cálculo, en cuyo caso una versión personalizada de la `for...in` se utiliza la expresión. Para obtener más información, consulte [secuencias](sequences.md), [flujos de trabajo asincrónicos](asynchronous-workflows.md), y [expresiones de cálculo](computation-expressions.md).
 
 
 ## <a name="see-also"></a>Vea también

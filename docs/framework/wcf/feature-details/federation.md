@@ -1,12 +1,13 @@
 ---
-title: "Federación"
-ms.custom: 
+title: Federación
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,16 +16,17 @@ helpviewer_keywords:
 - WCF, federation
 - federation [WCF]
 ms.assetid: 2f1e646f-8361-48d4-9d5d-1b961f31ede4
-caps.latest.revision: "26"
+caps.latest.revision: 26
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3c87fa08a698350d601f72d5d19ef353bd4257a9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 0e7aef1f53675089ee311aa79a54abf60441b728
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="federation"></a>Federación
 En este tema se proporciona una información general breve sobre el concepto de seguridad federada. También describe la compatibilidad de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] para la implementación de arquitecturas de seguridad federadas. Para una aplicación de ejemplo que muestra la federación, consulte [ejemplo de federación](../../../../docs/framework/wcf/samples/federation-sample.md).  
@@ -71,14 +73,14 @@ En este tema se proporciona una información general breve sobre el concepto de 
   
  En una arquitectura de seguridad federada, los usuarios de la organización A saben que si desean tener acceso al servicio web de la organización B, deben presentar un token de seguridad válido desde el STS de la organización B, que autentica y autoriza su acceso al servicio específico.  
   
- Al ponerse en contacto con el STS de B, los usuarios reciben otro nivel de direccionamiento indirecto desde la directiva asociada al STS. Deben presentar un token de seguridad válido del STS de A (es decir, el dominio de confianza del cliente) antes de que el STS de B pueda emitirles un token de seguridad. Esto es un corolario de la relación de confianza establecida entre las dos organizaciones e implica que la organización B no tiene que administrar las identidades de los usuarios de la organización A. En la práctica, el STS de B tiene normalmente una `issuerAddress` y `issuerMetadataAddress` nulas. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Cómo: configurar un emisor Local](../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md). En ese caso, el cliente consulta una directiva local para buscar STS A. Esta configuración se denomina *federación del dominio de inicio* y se escala mejor porque STS de B no tiene que mantener información acerca de STS A.  
+ Al ponerse en contacto con el STS de B, los usuarios reciben otro nivel de direccionamiento indirecto desde la directiva asociada al STS. Deben presentar un token de seguridad válido del STS de A (es decir, el dominio de confianza del cliente) antes de que el STS de B pueda emitirles un token de seguridad. Esto es un corolario de la relación de confianza establecida entre las dos organizaciones e implica que la organización B no tiene que administrar las identidades de los usuarios de la organización A. En la práctica, el STS de B tiene normalmente una `issuerAddress` y `issuerMetadataAddress` nulas. Para obtener más información, consulte [Cómo: configurar un emisor Local](../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md). En ese caso, el cliente consulta una directiva local para buscar STS A. Esta configuración se denomina *federación del dominio de inicio* y se escala mejor porque STS de B no tiene que mantener información acerca de STS A.  
   
  Los usuarios se ponen en contacto a continuación con el STS de la organización A y obtienen un token de seguridad presentando las credenciales de autenticación que utilizan normalmente para obtener acceso a cualquier otro recurso de la organización A. Esto también palia el problema de que los usuarios tengan que mantener varios conjuntos de credenciales o que usen el mismo conjunto de credenciales en varios sitios de servicios.  
   
  Una vez que los usuarios obtienen un token de seguridad del STS de A, presentan el token al STS de B. La organización B continúa con la autorización de las solicitudes de los usuarios y emite un token de seguridad a los usuarios desde su propio conjunto de tokens de seguridad. Los usuarios pueden presentar a continuación su token al recurso de la organización B y obtener acceso al servicio.  
   
 ## <a name="support-for-federated-security-in-wcf"></a>Compatibilidad para la seguridad federada en WCF  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]proporciona compatibilidad inmediata para la implementación de arquitecturas de seguridad federadas a través de la [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md).  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] proporciona compatibilidad inmediata para la implementación de arquitecturas de seguridad federadas a través de la [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md).  
   
  El [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) elemento proporciona para un enlace seguro, confiable y interoperable que implica el uso de HTTP como mecanismo de transporte subyacente para el estilo de comunicación de solicitud y respuesta, uso de texto y XML como el formato de codificación.  
   
@@ -159,7 +161,7 @@ operationRequirementType="FederationSample.MyServiceOperationRequirement, MyServ
 ```  
   
 > [!NOTE]
->  Se debería tener en cuenta un pequeño punto sobre las demandas requeridas por `MyService`. La segunda figura indica que `MyService` requiere un token de SAML con la demanda `accessAuthorized`. Para ser más preciso, esto especifica el tipo de demanda que `MyService` requiere. El nombre completo de este tipo de demanda es http://tempuri.org:accessAuthorized (junto con el espacio de nombres asociado), que se utiliza en el archivo de configuración del servicio. El valor de esta demanda indica la presencia de esta demanda y se supone que el STS de B lo ha establecido en `true`.  
+>  Se debería tener en cuenta un pequeño punto sobre las demandas requeridas por `MyService`. La segunda figura indica que `MyService` requiere un token de SAML con la demanda `accessAuthorized`. Para ser más preciso, esto especifica el tipo de demanda que `MyService` requiere. El nombre completo de este tipo de notificación es http://tempuri.org:accessAuthorized (junto con el espacio de nombres asociado), que se usa en el archivo de configuración de servicio. El valor de esta demanda indica la presencia de esta demanda y se supone que el STS de B lo ha establecido en `true`.  
   
  En tiempo de ejecución, la clase `MyServiceOperationRequirement` que se implementa como parte de `MyService` obliga a cumplir esta directiva.  
   
@@ -218,7 +220,7 @@ operationRequirementType="FederationSample.MyServiceOperationRequirement, MyServ
 ```  
   
 > [!NOTE]
->  De nuevo, la demanda `userAuthenticated` es el tipo de demanda que el STS de B requiere. El nombre completo de este tipo de demanda es http://tempuri.org:userAuthenticated (junto con el espacio de nombres asociado), que se utiliza en el archivo de configuración del STS. El valor de esta demanda indica la presencia de esta demanda y se supone que el STS de A lo ha establecido en `true`.  
+>  Una vez más, la `userAuthenticated` notificación es el tipo de notificación requerida por el STS de B. El nombre completo de este tipo de notificación es http://tempuri.org:userAuthenticated (junto con el espacio de nombres asociado), que se usa en el archivo de configuración de STS. El valor de esta demanda indica la presencia de esta demanda y se supone que el STS de A lo ha establecido en `true`.  
   
  En tiempo de ejecución, la clase `STS_B_OperationRequirement` hace cumplir esta directiva, que se implementa como parte del STS de B.  
   

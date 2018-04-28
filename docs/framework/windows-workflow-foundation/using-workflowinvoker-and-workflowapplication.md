@@ -14,11 +14,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 90999867ee1dd678e279832d73d7ecaaa416fe7b
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: af520c1520f605d34076e6ecabdf84deb52fbfd0
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="using-workflowinvoker-and-workflowapplication"></a>Usar WorkflowInvoker y WorkflowApplication
 Windows Workflow Foundation (WF) proporciona varios métodos para hospedar flujos de trabajo. <xref:System.Activities.WorkflowInvoker> proporciona una manera sencilla de invocar un flujo de trabajo como si fuera una llamada al método y se puede usar solo para los flujos de trabajo que no usan la persistencia. <xref:System.Activities.WorkflowApplication> proporciona un modelo más enriquecido para ejecutar flujos de trabajo que incluye notificación de eventos de ciclo de vida, control de ejecución, reanudación de marcadores y persistencia. <xref:System.ServiceModel.Activities.WorkflowServiceHost> proporciona compatibilidad para las actividades de mensajería y se usa principalmente con servicios de flujo de trabajo. Este tema presenta el hospedaje del flujo de trabajo con <xref:System.Activities.WorkflowInvoker> y <xref:System.Activities.WorkflowApplication>. [!INCLUDE[crabout](../../../includes/crabout-md.md)] hospedar flujos de trabajo con <xref:System.ServiceModel.Activities.WorkflowServiceHost>, consulte [servicios de flujo de trabajo](../../../docs/framework/wcf/feature-details/workflow-services.md) y [información general de servicios de flujo de trabajo de hospedaje](../../../docs/framework/wcf/feature-details/hosting-workflow-services-overview.md).  
@@ -35,7 +35,7 @@ Windows Workflow Foundation (WF) proporciona varios métodos para hospedar flujo
 > [!NOTE]
 >  La excepción <xref:System.TimeoutException> solo se produce si se agota el tiempo de espera y el flujo de trabajo queda inactivo durante la ejecución. Un flujo de trabajo que tarda en completarse más tiempo que el especificado por el intervalo de tiempo de espera se completa correctamente si el flujo de trabajo no queda inactivo.  
   
- <xref:System.Activities.WorkflowInvoker> también proporciona versiones asincrónicas del método de invocación. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] <xref:System.Activities.WorkflowInvoker.InvokeAsync%2A> y <xref:System.Activities.WorkflowInvoker.BeginInvoke%2A>.  
+ <xref:System.Activities.WorkflowInvoker> también proporciona versiones asincrónicas del método de invocación. Para obtener más información, consulte <xref:System.Activities.WorkflowInvoker.InvokeAsync%2A> y <xref:System.Activities.WorkflowInvoker.BeginInvoke%2A>.  
   
 ### <a name="setting-input-arguments-of-a-workflow"></a>Definir argumentos de entrada de un flujo de trabajo  
  Los datos se pueden pasar a un flujo de trabajo mediante un diccionario de parámetros de entrada, con claves por nombre de argumento, que se asignan a los argumentos de entrada del flujo de trabajo. En este ejemplo, se invoca <xref:System.Activities.Statements.WriteLine> y el valor de su argumento <xref:System.Activities.Statements.WriteLine.Text%2A> se especifica con el diccionario de parámetros de entrada.  

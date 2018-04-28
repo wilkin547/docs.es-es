@@ -1,30 +1,32 @@
 ---
-title: "Cómo: Crear una credencial de apoyo"
-ms.custom: 
+title: 'Cómo: Crear una credencial de apoyo'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: d0952919-8bb4-4978-926c-9cc108f89806
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4afad13300e2eb50a9625a5991bc8cb724c21dd6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: e74ba51306ba8761d916f580b21de9b3ba9cb7f4
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="how-to-create-a-supporting-credential"></a>Cómo: Crear una credencial de apoyo
 Es posible tener un esquema de seguridad personalizado que requiera más de una credencial. Por ejemplo, un servicio puede solicitar del cliente un nombre de usuario y contraseña, pero también una credencial que demuestre que el cliente tiene más de 18 años. La segunda credencial es un *credencial de apoyo*. En este tema, se explica cómo implementar dichos credenciales en un cliente [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
   
 > [!NOTE]
->  La especificación para admitir las credenciales forma parte de la especificación WS-SecurityPolicy. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Especificaciones de seguridad de servicios web](http://go.microsoft.com/fwlink/?LinkId=88537).  
+>  La especificación para admitir las credenciales forma parte de la especificación WS-SecurityPolicy. Para obtener más información, consulte [especificaciones de seguridad de servicios Web](http://go.microsoft.com/fwlink/?LinkId=88537).  
   
 ## <a name="supporting-tokens"></a>Tokens auxiliares  
  En pocas palabras, cuando se usa seguridad de los mensajes, un *credenciales primarias* siempre se utiliza para proteger el mensaje (por ejemplo, un certificado X.509 o un vale de Kerberos).  
@@ -46,7 +48,7 @@ Es posible tener un esquema de seguridad personalizado que requiera más de una 
 |Firmar y cifrar|Los tokens de aprobación firmados y cifrados son tokens de aprobación firmados que también se cifran cuando aparecen en `wsse:SecurityHeader`.|  
   
 ## <a name="programming-supporting-credentials"></a>Programar credenciales de aprobación  
- Para crear un servicio que utiliza los tokens auxiliares debe crear un [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md). ([!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Cómo: crear un enlace personalizado mediante SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md).)  
+ Para crear un servicio que utiliza los tokens auxiliares debe crear un [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md). (Para obtener más información, consulte [Cómo: crear un personalizado de enlace con SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md).)  
   
  El primer paso cuando se crea un enlace personalizado es crear un elemento de enlace de seguridad, que puede ser uno de tres tipos:  
   

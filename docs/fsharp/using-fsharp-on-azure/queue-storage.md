@@ -1,20 +1,17 @@
 ---
-title: "Introducción al almacenamiento de cola de Azure con F #"
-description: "Las colas de Azure proporcionan mensajería confiable y asincrónica entre los componentes de la aplicación. La nube permite mensajería los componentes de aplicación para escalar de forma independiente."
-keywords: "Visual f #, f #, funcional de programación,. NET, .NET Core, Azure"
+title: 'Introducción al almacenamiento de cola de Azure con F #'
+description: Las colas de Azure proporcionan mensajería confiable y asincrónica entre los componentes de la aplicación. La nube permite mensajería los componentes de aplicación para escalar de forma independiente.
 author: sylvanc
 ms.author: phcart
 ms.date: 09/20/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.topic: conceptual
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 70dc554c-8f4d-42a7-8e2a-6438657d012a
-ms.openlocfilehash: 50b2d69a1753add688aa14c3314a0ca2df9f03a4
-ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
+ms.openlocfilehash: bd49fd0f0e8d91449443051ab9a4ffc2d2638e11
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="get-started-with-azure-queue-storage-using-f"></a>Introducción al almacenamiento de cola de Azure con F # #
 

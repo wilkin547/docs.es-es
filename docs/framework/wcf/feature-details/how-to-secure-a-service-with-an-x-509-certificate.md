@@ -1,36 +1,38 @@
 ---
-title: "Cómo: Proteger un servicio con un certificado X.509"
-ms.custom: 
+title: 'Cómo: Proteger un servicio con un certificado X.509'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 2d06c2aa-d0d7-4e5e-ad7e-77416aa1c10b
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: e1ad7cd844ffbd3f45517f7d812ad3f5fa1ae3c3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 31028b6fe2cc34a9ae5cabe410bef0d753fd9436
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="how-to-secure-a-service-with-an-x509-certificate"></a>Cómo: Proteger un servicio con un certificado X.509
 La protección de un servicio mediante un certificado X.509 es una técnica básica que la mayoría de los enlaces de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] utilizan. En este tema se describen los pasos necesarios para configurar un servicio autoalojado con un certificado X.509.  
   
- Un requisito previo es un certificado válido que se puede utilizar para autenticar el servidor. Una entidad emisora de certificados de confianza debe emitir el certificado. Si el certificado no es válido, cualquier cliente que intente usar el servicio no confiará en el servicio y, por tanto, no se realizará ninguna conexión. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]uso de certificados, consulte [trabajar con certificados](../../../../docs/framework/wcf/feature-details/working-with-certificates.md).  
+ Un requisito previo es un certificado válido que se puede utilizar para autenticar el servidor. Una entidad emisora de certificados de confianza debe emitir el certificado. Si el certificado no es válido, cualquier cliente que intente usar el servicio no confiará en el servicio y, por tanto, no se realizará ninguna conexión. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] uso de certificados, consulte [trabajar con certificados](../../../../docs/framework/wcf/feature-details/working-with-certificates.md).  
   
 ### <a name="to-configure-a-service-with-a-certificate-using-code"></a>Configuración de un servicio con un certificado mediante código  
   
-1.  Cree el contrato de servicio y el servicio implementado. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Diseñar e implementar servicios](../../../../docs/framework/wcf/designing-and-implementing-services.md).  
+1.  Cree el contrato de servicio y el servicio implementado. Para obtener más información, consulte [diseñar e implementar servicios](../../../../docs/framework/wcf/designing-and-implementing-services.md).  
   
 2.  Cree una instancia de la clase <xref:System.ServiceModel.WSHttpBinding> y establezca su modo de seguridad en <xref:System.ServiceModel.SecurityMode.Message>, tal y como se muestra en el código siguiente.  
   

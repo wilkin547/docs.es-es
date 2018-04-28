@@ -1,24 +1,26 @@
 ---
-title: "Escenarios de implementación admitidos"
-ms.custom: 
+title: Escenarios de implementación admitidos
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 3399f208-3504-4c70-a22e-a7c02a8b94a6
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3e6039567e4fad7fe4c014665dd3ae0c3082a9d0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 82fa7e1b9619502dfdd27d2de29a502bec0af4f4
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="supported-deployment-scenarios"></a>Escenarios de implementación admitidos
 El subconjunto de características de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] admitido para su uso en aplicaciones de confianza parcial está diseñado para cumplir los requisitos de algunos, aunque no todos, escenarios de uso de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. En el servidor, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] cumple los requisitos de proveedores de hospedaje compartido de escala de Internet que ejecutan aplicaciones de terceros en el conjunto de permisos de Nivel de confianza medio [!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)] por razones de seguridad. En el cliente, la compatibilidad de confianza parcial de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] está diseñada para cumplir los requisitos de tecnologías de implementación como [ClickOnce Deployment](http://go.microsoft.com/fwlink/?LinkId=83712) o la tecnología de aplicación de explorador XAML de [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)], que permiten una implementación perfecta y segura de aplicaciones de escritorio de los sitios que no son de confianza.  
@@ -35,7 +37,7 @@ El subconjunto de características de [!INCLUDE[indigo1](../../../../includes/in
  Para obtener más información sobre las características admitidas en estos conjuntos de permisos, consulte [Partial Trust Feature Compatibility](../../../../docs/framework/wcf/feature-details/partial-trust-feature-compatibility.md).  
   
 ## <a name="partial-trust-on-the-server"></a>Confianza parcial en el servidor  
- Muchos proveedores comerciales de servicios de hospedaje de aplicaciones web de [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] obligan a que las aplicaciones que se ejecutan en sus servidores se ejecuten en el conjunto de permisos Confianza media de [!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)] . [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]pueden ejecutar servicios en estos entornos suponiendo que usen el <xref:System.ServiceModel.BasicHttpBinding>, el <xref:System.ServiceModel.WebHttpBinding>, o el <<!--zz xref:System.ServiceModel.WsHttpBinding --> `xref:System.ServiceModel.WsHttpBinding`> con seguridad de nivel de transporte.  
+ Muchos proveedores comerciales de servicios de hospedaje de aplicaciones web de [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] obligan a que las aplicaciones que se ejecutan en sus servidores se ejecuten en el conjunto de permisos Confianza media de [!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)] . [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] pueden ejecutar servicios en estos entornos suponiendo que usen el <xref:System.ServiceModel.BasicHttpBinding>, el <xref:System.ServiceModel.WebHttpBinding>, o el <<!--zz xref:System.ServiceModel.WsHttpBinding --> `xref:System.ServiceModel.WsHttpBinding`> con seguridad de nivel de transporte.  
   
  Los servicios de[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] que se ejecutan en entornos de hospedaje de Nivel de confianza medio también pueden actuar como servicios de nivel medio enviando mensajes a otros servidores en respuesta a solicitudes de cliente. Se admiten los escenarios de nivel medio en el servidor si el entorno de hospedaje ha concedido a la aplicación el <xref:System.Net.WebPermission> adecuado para realizar solicitudes salientes al servidor deseado.  
   
@@ -43,7 +45,7 @@ El subconjunto de características de [!INCLUDE[indigo1](../../../../includes/in
   
  Los servicios de flujo requieren permisos de plena confianza y no se pueden utilizar en aplicaciones de confianza parcial.  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Cómo: Usar el nivel de confianza medio en ASP.NET 2.0](http://go.microsoft.com/fwlink/?LinkId=84603).  
+ Para obtener más información, consulte [Cómo: uso de confianza medio en ASP.NET 2.0](http://go.microsoft.com/fwlink/?LinkId=84603).  
   
 ## <a name="partial-trust-on-the-client"></a>Confianza parcial en el Cliente  
  Se deben tomar ciertas precauciones de seguridad al descargar y ejecutar código desde sitios de Internet que no sean de confianza. Las tecnologías de [ClickOnce Deployment](http://go.microsoft.com/fwlink/?LinkId=83712) y de la aplicación de explorador XAML (XBAP) [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)]hacen uso de la confianza parcial para conceder permisos limitados (zona de Internet) al código que no sea de confianza.  

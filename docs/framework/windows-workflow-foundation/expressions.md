@@ -14,11 +14,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 293e59bd53607b7ca4c3d9075cb4bb0c4be4d4da
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 18c64daca1532bb626a59e5f01528e207e6b6b87
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="expressions"></a>Expresiones
 Una expresión de Windows Workflow Foundation (WF) es cualquier actividad que devuelve un resultado. Todas las actividades de expresión derivan indirectamente de <xref:System.Activities.Activity%601>, que contiene una propiedad <xref:System.Activities.OutArgument> denominada <xref:System.Activities.Activity%601.Result%2A> como valor devuelto de la actividad. [!INCLUDE[wf1](../../../includes/wf1-md.md)] incluye una gran variedad de actividades de expresión, desde simples como <xref:System.Activities.Expressions.VariableValue%601> y <xref:System.Activities.Expressions.VariableReference%601>, que proporcionan acceso a la única variable de flujo de trabajo mediante actividades de operador, hasta actividades complejas como <xref:Microsoft.VisualBasic.Activities.VisualBasicReference%601> y <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601>, que proporcionan acceso a todo el lenguaje Visual Basic para generar el resultado. Las actividades de expresión adicionales se pueden crear al derivar de <xref:System.Activities.CodeActivity%601> o <xref:System.Activities.NativeActivity%601>.  
@@ -27,7 +27,7 @@ Una expresión de Windows Workflow Foundation (WF) es cualquier actividad que de
  El diseñador de flujo de trabajo usa <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601> y <xref:Microsoft.VisualBasic.Activities.VisualBasicReference%601> para todas las expresiones en proyectos de Visual Basic, y <xref:Microsoft.CSharp.Activities.CSharpValue%601> y <xref:Microsoft.CSharp.Activities.CSharpReference%601> para expresiones en los proyectos de flujo de trabajo de C#.  
   
 > [!NOTE]
->  La compatibilidad con las expresiones de C# en proyectos de flujo de trabajo se incorporó en [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Expresiones de C#](../../../docs/framework/windows-workflow-foundation/csharp-expressions.md).  
+>  La compatibilidad con las expresiones de C# en proyectos de flujo de trabajo se incorporó en [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]. Para obtener más información, consulte [expresiones de C#](../../../docs/framework/windows-workflow-foundation/csharp-expressions.md).  
   
  Los flujos de trabajo generados por el diseñador se guardan en XAML, donde las expresiones se adjuntan en corchetes, como en el siguiente ejemplo.  
   

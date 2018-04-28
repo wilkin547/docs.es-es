@@ -1,20 +1,17 @@
 ---
-title: "Excepciones: la expresión try...with (F#)"
+title: 'Excepciones: la expresión try...with (F#)'
 description: "Obtenga información acerca de cómo usar la expresión 'try... with' de F # para el control de excepciones."
-keywords: "visual f#, f#, programación funcional"
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 36721076-95cd-4636-ae43-79dd512bee6c
-ms.openlocfilehash: 163dfab49d4aaf23123800246fae2cad33e2257c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 06e40b79fc1958918dc0615ce9d1004e0a6e74a5
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="exceptions-the-trywith-expression"></a>Excepciones: expresión try...with
 
@@ -49,7 +46,7 @@ Puede usar una variedad de modelos para filtrar según el tipo de excepción y o
 |:? *tipo de excepción*|Coincide con el tipo de excepción de .NET especificado.|
 |:? *tipo de excepción* como *identificador*|Coincide con el tipo de excepción de .NET especificado, pero da un valor con nombre de la excepción.|
 |*nombre de la excepción*(*argumentos*)|Coincide con un tipo de excepción de F # y enlaza los argumentos.|
-|*identifier*|Coincide con cualquier excepción y enlaza el nombre para el objeto de excepción. ¿Equivalente a **:? System.Exception como***identificador*|
+|*identifier*|Coincide con cualquier excepción y enlaza el nombre para el objeto de excepción. ¿Equivalente a **:? System.Exception como *** identificador*|
 |*identificador* cuando *condición*|Coincide con cualquier excepción si la condición es true.|
 
 ## <a name="examples"></a>Ejemplos

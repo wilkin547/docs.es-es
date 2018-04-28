@@ -1,12 +1,13 @@
 ---
 title: Tipos conocidos de contratos de datos
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,23 +17,24 @@ helpviewer_keywords:
 - KnownTypeAttribute [WCF]
 - KnownTypes [WCF]
 ms.assetid: 1a0baea1-27b7-470d-9136-5bbad86c4337
-caps.latest.revision: "42"
+caps.latest.revision: 42
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 24d26358c0bf0440b2fbba143629a0e4bda21cec
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: c9c180a0f1544fa187ddb53ec79a47f908c298d7
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="data-contract-known-types"></a>Tipos conocidos de contratos de datos
 La clase <xref:System.Runtime.Serialization.KnownTypeAttribute> le permite especificar, de antemano, los tipos que deberían tenerse en cuenta durante la deserialización. Para ver un ejemplo ilustrativo, consulte el ejemplo [Known Types](../../../../docs/framework/wcf/samples/known-types.md) .  
   
  Normalmente, al pasar parámetros y valores devueltos entre un cliente y un servicio, ambos extremos comparten todos los contratos de datos de los datos que se van a transmitir. Sin embargo, éste no es el caso en las siguientes circunstancias:  
   
--   El contrato de datos enviados se deriva del contrato de datos esperados. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] la sección sobre herencia en [Data Contract Equivalence](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)). En ese caso, los datos transmitidos no tienen el mismo contrato de datos que espera el extremo receptor.  
+-   El contrato de datos enviados se deriva del contrato de datos esperados. Para obtener más información, vea la sección acerca de la herencia en [equivalencia del contrato de datos](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)). En ese caso, los datos transmitidos no tienen el mismo contrato de datos que espera el extremo receptor.  
   
 -   El tipo declarado de la información que se va a transmitir es una interfaz, en lugar de una clase, estructura o enumeración. En consecuencia, no se puede saber por adelantado qué tipo que implementa la interfaz se envía realmente y, por consiguiente, el extremo receptor no puede determinar de antemano el contrato de datos para los datos transmitidos.  
   

@@ -12,23 +12,23 @@ ms.topic: article
 helpviewer_keywords:
 - data contracts [WCF], schema reference
 ms.assetid: 9ebb0ebe-8166-4c93-980a-7c8f1f38f7c0
-caps.latest.revision: ''
+caps.latest.revision: 24
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 57ccc812aab5df0a9acd99bdcde327d56e4bad8d
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 739046945a019541f279b15d2d1b945f526861fb
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="data-contract-schema-reference"></a>Referencia de esquema de contrato de datos
 En este tema se describe el subconjunto del esquema XML (XSD) que <xref:System.Runtime.Serialization.DataContractSerializer> usa para describir los tipos de Common Language Runtime (CLR) para la serialización XML.  
   
 ## <a name="datacontractserializer-mappings"></a>Asignaciones de DataContractSerializer  
- El `DataContractSerializer` asigna tipos CLR a XSD cuando los metadatos se exportan desde un servicio de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] con un punto de conexión de metadatos o la [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Serializador de contrato de datos](../../../../docs/framework/wcf/feature-details/data-contract-serializer.md).  
+ El `DataContractSerializer` asigna tipos CLR a XSD cuando los metadatos se exportan desde un servicio de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] con un punto de conexión de metadatos o la [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). Para obtener más información, consulte [serializador de contratos de datos](../../../../docs/framework/wcf/feature-details/data-contract-serializer.md).  
   
  El `DataContractSerializer` también asigna XSD a tipos de CLR cuando Svcutil.exe se utiliza para tener acceso al lenguaje de descripción de servicios Web (WSDL) o documentos XSD y para generar contratos de datos para servicios o clientes.  
   
@@ -342,7 +342,7 @@ public enum MyEnum
 </xs:simpleType>  
 ```  
   
-### <a name="xslist"></a>\<xs:list>  
+### <a name="xslist"></a>\<xs: List >  
  El`DataContractSerializer` asigna tipos de enumeración marcados con `System.FlagsAttribute` a `xs:list` derivado de `xs:string`. No se admite ninguna otra variación de `xs:list` .  
   
 ### <a name="xslist-attributes"></a>\<xs: List >: atributos  

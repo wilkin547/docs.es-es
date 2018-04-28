@@ -1,23 +1,24 @@
 ---
 title: Usar WorkflowIdentity y el control de versiones
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: b8451735-8046-478f-912b-40870a6c0c3a
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 02620abf421256b53fb5919b39f441f7346a2e7c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: bc527fe59468544cf94256d100a1f90dd3cd44dd
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="using-workflowidentity-and-versioning"></a>Usar WorkflowIdentity y el control de versiones
 <xref:System.Activities.WorkflowIdentity> proporciona una manera para que los desarrolladores de aplicaciones de flujo de trabajo asocien un nombre y una <xref:System.Version> con una definición de flujo de trabajo, y para que esta información se asocie a una instancia de flujo de trabajo persistente. Los desarrolladores de aplicaciones de flujo de trabajo pueden usar esta información de identidad para habilitar escenarios como la ejecución en paralelo de varias versiones de una definición de flujo de trabajo; además esta información proporciona la piedra angular para otras funcionalidades como la actualización dinámica. Este tema proporciona información general sobre cómo usar <xref:System.Activities.WorkflowIdentity> con hospedaje de <xref:System.Activities.WorkflowApplication>. Para obtener información sobre la ejecución en paralelo de las definiciones de flujo de trabajo en un servicio de flujo de trabajo, consulte [control de versiones en paralelo en WorkflowServiceHost](../../../docs/framework/wcf/feature-details/side-by-side-versioning-in-workflowservicehost.md). Para obtener información sobre la actualización dinámica, consulte [actualización dinámica](../../../docs/framework/windows-workflow-foundation/dynamic-update.md).  
@@ -32,7 +33,7 @@ ms.lasthandoff: 12/22/2017
   
     -   [Para actualizar el esquema de base de datos](../../../docs/framework/windows-workflow-foundation/using-workflowidentity-and-versioning.md#ToUpgrade)  
   
-##  <a name="UsingWorkflowIdentity"></a>Usar WorkflowIdentity  
+##  <a name="UsingWorkflowIdentity"></a> Usar WorkflowIdentity  
  Para usar <xref:System.Activities.WorkflowIdentity>, cree una instancia, configúrela y asóciela con una instancia de <xref:System.Activities.WorkflowApplication>. Una instancia de <xref:System.Activities.WorkflowIdentity> contiene tres elementos de identificación de información. <xref:System.Activities.WorkflowIdentity.Name%2A> y <xref:System.Activities.WorkflowIdentity.Version%2A> contienen un nombre y <xref:System.Version> y son necesarios, y <xref:System.Activities.WorkflowIdentity.Package%2A> es opcional y se puede usar para especificar una cadena adicional que contiene información como el nombre del ensamblado u otra información deseada. <xref:System.Activities.WorkflowIdentity> es único si cualquiera de sus tres propiedades son diferentes de otra <xref:System.Activities.WorkflowIdentity>.  
   
 > [!IMPORTANT]
@@ -87,13 +88,13 @@ wfApp.Load(instanceId);
  Cuando se ejecuta el código anterior, se produce la <xref:System.Activities.VersionMismatchException> siguiente.  
   
  **La WorkflowIdentity ("MortgageWorkflow v1; Versión = 1.0.0.0") de la instancia cargada no coincide con la WorkflowIdentity (" MortgageWorkflow v2; Versión = 2.0.0.0") de la definición de flujo de trabajo proporcionada. La instancia puede cargarse con una definición diferente o actualizarse con la actualización dinámica.**  
-###  <a name="SxS"></a>Ejecución en paralelo mediante WorkflowIdentity  
+###  <a name="SxS"></a> Ejecución en paralelo mediante WorkflowIdentity  
  <xref:System.Activities.WorkflowIdentity> se puede usar para facilitar la ejecución de varias versiones de un flujo de trabajo en paralelo. Un escenario común es cambiar los requisitos comerciales de un flujo de trabajo de ejecución prolongada. Pueden ejecutarse varias instancias de un flujo de trabajo cuando se implementa una versión actualizada. La aplicación host se puede configurar para usar la definición de flujo de trabajo actualizada al iniciar nuevas instancias y es responsabilidad de la aplicación host proporcionar la definición de flujo de trabajo correcta al reanudar las instancias. <xref:System.Activities.WorkflowIdentity> puede usarse para identificar y proporcionar la definición de flujo de trabajo coincidente al reanudar instancias de flujo de trabajo.  
   
  Para recuperar la <xref:System.Activities.WorkflowIdentity> de una instancia de flujo de trabajo persistente, se usa el método <xref:System.Activities.WorkflowApplication.GetInstance%2A>. El método <xref:System.Activities.WorkflowApplication.GetInstance%2A> toma el <xref:System.Activities.WorkflowApplication.Id%2A> de la instancia de flujo de trabajo persistente y el <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> que contiene la instancia persistente y devuelve una <xref:System.Activities.WorkflowApplicationInstance>. <xref:System.Activities.WorkflowApplicationInstance> contiene información sobre una instancia de flujo de trabajo persistente, incluida su <xref:System.Activities.WorkflowIdentity> asociada. El host puede usar esta <xref:System.Activities.WorkflowIdentity> asociada para proporcionar la definición de flujo de trabajo correcta al cargar y reanudar la instancia de flujo de trabajo.  
   
 > [!NOTE]
->  Un objeto <xref:System.Activities.WorkflowIdentity> NULL es válido y el host puede usarlo para asignar las instancias persistentes sin ningún <xref:System.Activities.WorkflowIdentity> asociado a la definición de flujo de trabajo adecuada. Este escenario puede darse cuando una aplicación de flujo de trabajo no se escribió al principio con el control de versiones del flujo de trabajo o cuando una aplicación se actualiza desde [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Actualizar bases de datos de .NET Framework 4 persistencia para admitir el control de versiones de flujo de trabajo](../../../docs/framework/windows-workflow-foundation/using-workflowidentity-and-versioning.md#UpdatingWF4PersistenceDatabases).  
+>  Un objeto <xref:System.Activities.WorkflowIdentity> NULL es válido y el host puede usarlo para asignar las instancias persistentes sin ningún <xref:System.Activities.WorkflowIdentity> asociado a la definición de flujo de trabajo adecuada. Este escenario puede darse cuando una aplicación de flujo de trabajo no se escribió al principio con el control de versiones del flujo de trabajo o cuando una aplicación se actualiza desde [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]. Para obtener más información, consulte [actualizar .NET Framework 4 persistencia bases de datos al control de versiones de flujo de trabajo de compatibilidad con](../../../docs/framework/windows-workflow-foundation/using-workflowidentity-and-versioning.md#UpdatingWF4PersistenceDatabases).  
   
  En el ejemplo siguiente una `Dictionary<WorkflowIdentity, Activity>` se usa para asociar <xref:System.Activities.WorkflowIdentity> instancias con sus definiciones de flujo de trabajo coincidente y un flujo de trabajo se inicia con la `MortgageWorkflow` definición de flujo de trabajo, que está asociado el `identityV1` <xref:System.Activities.WorkflowIdentity>.  
   
@@ -148,13 +149,13 @@ wfApp.Load(instance);
 // Resume the workflow...  
 ```  
   
-##  <a name="UpdatingWF4PersistenceDatabases"></a>Actualizar bases de datos de .NET Framework 4 persistencia para admitir el control de versiones de flujo de trabajo  
+##  <a name="UpdatingWF4PersistenceDatabases"></a> Actualizar bases de datos de .NET Framework 4 persistencia para admitir el control de versiones de flujo de trabajo  
  Se proporciona un script de base de datos SqlWorkflowInstanceStoreSchemaUpgrade.sql para actualizar las bases de datos de persistencia creadas mediante los scripts de base de datos de [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]. Este script actualiza las bases de datos para admitir las nuevas funciones de control de versiones presentadas en [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]. Cualquier instancia de flujo de trabajo persistente en las bases de datos recibe valores de control de versión predeterminados y puede participar en ejecuciones en paralelo y en actualizaciones dinámicas.  
   
  Si una aplicación de flujo de trabajo de [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] intenta cualquier operación de persistencia que use las nuevas características de control de versiones en una base de datos de persistencia que no se haya actualizado mediante el script proporcionado, se produce un <xref:System.Runtime.DurableInstancing.InstancePersistenceCommandException> con un mensaje similar al siguiente.  
   
  **SqlWorkflowInstanceStore tiene una versión de base de datos de "4.0.0.0". InstancePersistenceCommand "System.Activities.DurableInstancing.CreateWorkflowOwnerWithIdentityCommand" no se puede ejecutar en esta versión de la base de datos.  Actualice la base de datos a "4.5.0.0".**  
-###  <a name="ToUpgrade"></a>Para actualizar el esquema de base de datos  
+###  <a name="ToUpgrade"></a> Para actualizar el esquema de base de datos  
   
 1.  Abra SQL Server Management Studio y conéctese al servidor de base de datos de persistencia, por ejemplo **. \SQLEXPRESS**.  
   

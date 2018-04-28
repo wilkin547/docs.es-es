@@ -1,24 +1,26 @@
 ---
-title: "Configuración del cliente"
-ms.custom: 
+title: Configuración del cliente
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 5da5bd3b-65d9-43b7-91b9-cc9e989b1350
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 75b594d01c8a9297f3383c2648b3853c2c024b9b
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 19d1f7630c96f557791f0682fbc0c5d7286c7eb7
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="client-configuration"></a>Configuración del cliente
 Puede utilizar la configuración de cliente de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] para especificar la dirección, enlace, comportamiento y contrato, las propiedades "ABC" del extremo del cliente, que los clientes utilizan para conectarse a los extremos del servicio. El [ \<cliente >](../../../../docs/framework/configure-apps/file-schema/wcf/client.md) elemento tiene un [ \<extremo >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) elemento cuyos atributos se utilizan para configurar los ABC del extremo. Estos atributos se discuten en la sección “Configuración de puntos de conexión” de este tema.  
@@ -93,16 +95,16 @@ Puede utilizar la configuración de cliente de [!INCLUDE[indigo1](../../../../in
   
  El atributo opcional `name` identifica de manera única a un extremo de un contrato determinado. Es utilizado por <xref:System.ServiceModel.ChannelFactory%601.%23ctor%2A> o <xref:System.ServiceModel.ClientBase%601.%23ctor%2A> para especificar qué extremo de la configuración del cliente se destina y se debe cargar cuando se crea un canal para el servicio. Hay disponible un nombre de configuración de extremo de comodín "*" e indica al método <xref:System.ServiceModel.ChannelFactory.ApplyConfiguration%2A> que debería cargar cualquier configuración de extremo del archivo, suponiendo que haya precisamente uno disponible o, si no fuese así, produjese una excepción. Si se omite este atributo, el extremo correspondiente se usa como el extremo predeterminado asociado al tipo de contrato especificado. El valor predeterminado para el atributo `name` es una cadena vacía que se iguala como cualquier otro nombre.  
   
- Cada extremo debe tener una dirección asociada a él para ubicar e identificar el extremo. El atributo `address` se puede utilizar para especificar la dirección URL que proporciona la ubicación del extremo. Pero la dirección de un extremo de servicio también se puede especificar en código mediante la creación de un Identificador uniforme de recursos (URI) y se agrega al <xref:System.ServiceModel.ServiceHost> utilizando uno de los métodos <xref:System.ServiceModel.ServiceHost.AddServiceEndpoint%2A>. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Direcciones](../../../../docs/framework/wcf/feature-details/endpoint-addresses.md). Tal y como se indica en la introducción, el [ \<encabezados >](../../../../docs/framework/configure-apps/file-schema/wcf/headers.md) y [ \<identidad >](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md) elementos forman parte de la <xref:System.ServiceModel.EndpointAddress> y también se describen en la [ Direcciones](../../../../docs/framework/wcf/feature-details/endpoint-addresses.md) tema.  
+ Cada extremo debe tener una dirección asociada a él para ubicar e identificar el extremo. El atributo `address` se puede utilizar para especificar la dirección URL que proporciona la ubicación del extremo. Pero la dirección de un extremo de servicio también se puede especificar en código mediante la creación de un Identificador uniforme de recursos (URI) y se agrega al <xref:System.ServiceModel.ServiceHost> utilizando uno de los métodos <xref:System.ServiceModel.ServiceHost.AddServiceEndpoint%2A>. Para obtener más información, consulte [direcciones](../../../../docs/framework/wcf/feature-details/endpoint-addresses.md). Tal y como se indica en la introducción, el [ \<encabezados >](../../../../docs/framework/configure-apps/file-schema/wcf/headers.md) y [ \<identidad >](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md) elementos forman parte de la <xref:System.ServiceModel.EndpointAddress> y también se describen en la [ Direcciones](../../../../docs/framework/wcf/feature-details/endpoint-addresses.md) tema.  
   
- El atributo `binding` indica el tipo de enlace que el extremo espera utilizar al conectarse a un servicio. El tipo debe tener una sección de configuración registrada si se le va a hacer referencia. En el ejemplo anterior, se trata de la [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) sección, que indica que el punto de conexión usa un <xref:System.ServiceModel.WSHttpBinding>. Pero puede que haya más de un enlace de un tipo determinado que el punto de conexión puede utilizar. Cada uno de ellos tiene su propio [ \<enlace >](../../../../docs/framework/misc/binding.md) dentro del elemento de tipo (enlace). El atributo `bindingconfiguration` se utiliza para distinguir entre enlaces del mismo tipo. Su valor coincide con el `name` atributo de la [ \<enlace >](../../../../docs/framework/misc/binding.md) elemento. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Cómo configurar un cliente de enlace con la configuración, consulte [Cómo: especificar un enlace de cliente en configuración](../../../../docs/framework/wcf/how-to-specify-a-client-binding-in-configuration.md).  
+ El atributo `binding` indica el tipo de enlace que el extremo espera utilizar al conectarse a un servicio. El tipo debe tener una sección de configuración registrada si se le va a hacer referencia. En el ejemplo anterior, se trata de la [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) sección, que indica que el punto de conexión usa un <xref:System.ServiceModel.WSHttpBinding>. Pero puede que haya más de un enlace de un tipo determinado que el punto de conexión puede utilizar. Cada uno de ellos tiene su propio [ \<enlace >](../../../../docs/framework/misc/binding.md) dentro del elemento de tipo (enlace). El atributo `bindingconfiguration` se utiliza para distinguir entre enlaces del mismo tipo. Su valor coincide con el `name` atributo de la [ \<enlace >](../../../../docs/framework/misc/binding.md) elemento. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Cómo configurar un cliente de enlace con la configuración, consulte [Cómo: especificar un enlace de cliente en configuración](../../../../docs/framework/wcf/how-to-specify-a-client-binding-in-configuration.md).  
   
  El `behaviorConfiguration` atributo se usa para especificar qué [ \<comportamiento >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) de la [ \<endpointBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md) debe utilizar el punto de conexión. Su valor coincide con el `name` atributo de la [ \<comportamiento >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) elemento. Para obtener un ejemplo de usar la configuración para especificar los comportamientos del cliente, consulte [configurar comportamientos del cliente](../../../../docs/framework/wcf/configuring-client-behaviors.md).  
   
  El atributo `contract` especifica qué contrato expone este extremo. Este valor se asigna al <xref:System.ServiceModel.ServiceContractAttribute.ConfigurationName%2A> del <xref:System.ServiceModel.ServiceContractAttribute>. El valor predeterminado es el nombre de tipo completo de la clase que implementa el servicio.  
   
 ### <a name="configuring-metadata"></a>Configuración de metadatos  
- El [ \<metadatos >](../../../../docs/framework/configure-apps/file-schema/wcf/metadata.md) elemento se utiliza para especificar la configuración que se usa para registrar metadatos de las extensiones de importación. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]extender el sistema de metadatos, vea[extender el sistema de metadatos](../../../../docs/framework/wcf/extending/extending-the-metadata-system.md).  
+ El [ \<metadatos >](../../../../docs/framework/configure-apps/file-schema/wcf/metadata.md) elemento se utiliza para especificar la configuración que se usa para registrar metadatos de las extensiones de importación. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] extender el sistema de metadatos, vea[extender el sistema de metadatos](../../../../docs/framework/wcf/extending/extending-the-metadata-system.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Puntos de conexión: direcciones, enlaces y contratos](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)  

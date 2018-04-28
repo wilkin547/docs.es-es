@@ -1,20 +1,17 @@
 ---
 title: Listas (F#)
-description: "Obtenga información acerca de las listas de F #, una serie ordenada e inmutable de elementos del mismo tipo."
-keywords: "visual f#, f#, programación funcional"
+description: 'Obtenga información acerca de las listas de F #, una serie ordenada e inmutable de elementos del mismo tipo.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: a1a6075f-064d-4aee-8222-2b59ff16cc12
-ms.openlocfilehash: 5802a5a1c48ad05c1765c4c0fa2e8a81a92dee8d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: e29dbdac5e920c009bf7758fd2cc1ad486041cad
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="lists"></a>Listas
 
@@ -71,7 +68,7 @@ El tipo de lista admite las siguientes propiedades:
 |Propiedad|Tipo|Descripción|
 |--------|----|-----------|
 |[Head](https://msdn.microsoft.com/library/5f9414fd-6bdb-470a-8b72-40016db30740)|`'T`|El primer elemento.|
-|[Vacía](https://msdn.microsoft.com/library/44406ecb-1918-4d32-b32a-ca1f69840386)|`'T list`|Propiedad estática que devuelve una lista vacía del tipo apropiado.|
+|[vacía](https://msdn.microsoft.com/library/44406ecb-1918-4d32-b32a-ca1f69840386)|`'T list`|Propiedad estática que devuelve una lista vacía del tipo apropiado.|
 |[IsEmpty](https://msdn.microsoft.com/library/3ba087b2-2fc2-406d-b10a-cff6a19322da)|`bool`|`true` si la lista no tiene ningún elemento.|
 |[Item](https://msdn.microsoft.com/library/bdb2553a-0e54-4ff8-baed-ab1aac8f5dae)|`'T`|Elemento en el índice especificado (base cero).|
 |[Longitud](https://msdn.microsoft.com/library/25f715c8-9daa-4c4d-a6c7-26772f9dab4d)|`int`|Número de elementos.|
@@ -411,7 +408,7 @@ El siguiente ejemplo muestra el uso de `List.fold2`.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lists/snippet28.fs)]
 
-`List.fold`y [List.scan](https://msdn.microsoft.com/library/21f636db-885c-4a72-970e-e3841f33a1b8) difiere en que `List.fold` devuelve el valor final del parámetro adicional, pero `List.scan` devuelve la lista de los valores intermedios (junto con el valor final) del parámetro adicional.
+`List.fold` y [List.scan](https://msdn.microsoft.com/library/21f636db-885c-4a72-970e-e3841f33a1b8) difiere en que `List.fold` devuelve el valor final del parámetro adicional, pero `List.scan` devuelve la lista de los valores intermedios (junto con el valor final) del parámetro adicional.
 
 Cada una de estas funciones incluye una variación inversa, por ejemplo, [List.foldBack](https://msdn.microsoft.com/library/b9a58e66-efe1-445f-a90c-ac9ffb9d40c7), que difiere en el orden en que se atraviesa la lista y el orden de los argumentos. Además, `List.fold` y `List.foldBack` tienen variaciones, [List.fold2](https://msdn.microsoft.com/library/6cfcd043-a65d-4423-805a-2ab234cb5343) y [List.foldBack2](https://msdn.microsoft.com/library/56371d3e-5271-4183-9e8c-15a02eda9aa2), que toman dos listas de igual longitud. La función que se ejecuta en cada elemento puede usar los elementos correspondientes de ambas listas para realizar alguna acción. Los tipos de elemento de las dos listas pueden ser diferentes, como en el ejemplo siguiente, en el que una lista contiene los importes de transacción para una cuenta bancaria, y la otra lista contiene el tipo de transacción: depósito o retirada.
 

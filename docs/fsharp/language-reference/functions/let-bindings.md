@@ -1,20 +1,17 @@
 ---
 title: Enlaces let (F#)
 description: "Obtenga información acerca de cómo usar un 'let' enlace, que asocia un identificador a un valor o una función de F #."
-keywords: "visual f#, f#, programación funcional"
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: bee69edc-d5ae-46bd-8b56-f02d97725d0d
-ms.openlocfilehash: a57c5572e4bb5a3777c928dd572b7a84d4f0a334
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 2abc4e05f9f2977501f01f745062e2e7cd611f68
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="let-bindings"></a>Enlaces let
 
@@ -87,7 +84,7 @@ Los ámbitos de `field1` y `field2` se limitan al tipo en el que se declaran. Pa
 
 ## <a name="type-parameters-in-let-bindings"></a>Parámetros de tipo en los enlaces let
 
-Un `let` enlace en el nivel de módulo, en un tipo o en una expresión de cálculo puede tener parámetros de tipo explícito. Un enlace let en una expresión, como en una definición de función, no puede tener parámetros de tipo. Para obtener más información, consulte [Genéricos](../generics/index.md).
+Un `let` enlace en el nivel de módulo, en un tipo o en una expresión de cálculo puede tener parámetros de tipo explícito. Un enlace let en una expresión, como en una definición de función, no puede tener parámetros de tipo. Para más información, vea [Genéricos](../generics/index.md).
 
 ## <a name="attributes-on-let-bindings"></a>Atributos en los enlaces let
 

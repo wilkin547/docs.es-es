@@ -1,20 +1,17 @@
 ---
 title: Registros (F#)
-description: "Obtenga información acerca de cómo F # registros representan agregados simples de valores con nombre, opcionalmente con miembros."
-keywords: "visual f#, f#, programación funcional"
+description: 'Obtenga información acerca de cómo F # registros representan agregados simples de valores con nombre, opcionalmente con miembros.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 3a3701ea-4308-4fa1-9b5c-b955c470f17a
-ms.openlocfilehash: 478ab74ad32cc6e53daffd1bd6229729149d2a1e
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 1270bf4eaeba99a15b0f81b5477f4c3b98644f66
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="records"></a>Registros
 
@@ -114,7 +111,7 @@ Point is at (10.000000, 0.000000, -1.000000).
 ## <a name="differences-between-records-and-classes"></a>Diferencias entre las clases y los registros
 Campos de registro difieren de las clases en cuanto automáticamente se exponen como propiedades, y se usan en la creación y copia de registros. La construcción de registros también difiere de la construcción de la clase. En un tipo de registro, no se puede definir un constructor. En su lugar, se aplica la sintaxis de construcción descrita en este tema. Clases no tienen ninguna relación directa entre los parámetros del constructor, campos y propiedades.
 
-Al igual que los tipos de estructura y unión, los registros tienen una semántica de igualdad estructural. Las clases tienen referencia semántica de igualdad. En el ejemplo de código siguiente se muestra cómo hacerlo.
+Al igual que los tipos de estructura y unión, los registros tienen una semántica de igualdad estructural. Las clases tienen referencia semántica de igualdad. El siguiente ejemplo de código muestra esto.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1911.fs)]
 

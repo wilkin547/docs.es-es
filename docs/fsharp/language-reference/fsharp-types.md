@@ -1,20 +1,17 @@
 ---
 title: Tipos en F#
-description: "Obtenga información acerca de los tipos que se usan en F # y cómo se denomina y se describen los tipos de F #."
-keywords: "visual f#, f#, programación funcional"
+description: 'Obtenga información acerca de los tipos que se usan en F # y cómo se denomina y se describen los tipos de F #.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: c7272a0d-5ab6-4eae-bceb-e49af498b917
-ms.openlocfilehash: 9b7235637f301f91ae2cc8fbc59adc27cdfd5bd0
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 42521ed75a76753af81d3bbb9693ec5af29536ad
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="f-types"></a>Tipos en F#
 
@@ -51,12 +48,12 @@ La siguiente tabla muestra los aspectos de la sintaxis de tipo para tipos de F #
 |array|*nombre de tipo*[] o<br /><br />*nombre de tipo* matriz|`int[]`<br /><br />`array<int>`<br /><br />`int array`|
 |matriz bidimensional|*nombre de tipo*[,]|`int[,]`<br /><br />`float[,]`|
 |matriz tridimensional|*nombre de tipo*[,]|`float[,,]`|
-|tuple|*tipo nombre1* &#42; *tipo nombre2* ...|Por ejemplo, `(1,'b',3)` tiene el tipo`int * char * int`|
+|tuple|*tipo nombre1* &#42; *tipo nombre2* ...|Por ejemplo, `(1,'b',3)` tiene el tipo `int * char * int`|
 |tipo genérico|*parámetro de tipo* *nombre de tipo genérico*<br /><br />o<br /><br />*nombre de tipo genérico*&lt;*lista de parámetros de tipo*&gt;|`'a list`<br /><br />`list<'a>`<br /><br />`Dictionary<'key, 'value>`|
 |tipo (un tipo genérico que tiene un argumento de tipo específico proporcionado) construido|*argumento de tipo* *nombre de tipo genérico*<br /><br />o<br /><br />*nombre de tipo genérico*&lt;*lista de argumentos de tipo*&gt;|`int option`<br /><br />`string list`<br /><br />`int ref`<br /><br />`option<int>`<br /><br />`list<string>`<br /><br />`ref<int>`<br /><br />`Dictionary<int, string>`|
-|tipo de función que tiene un único parámetro|*parámetro: type1*  - &gt; *tipo de valor devuelto*|Una función que toma un `int` y devuelve un `string` tiene un tipo`int -> string`|
-|tipo de función que tiene varios parámetros|*parámetro: type1*  - &gt; *parámetro type2*  - &gt; ... -&gt; *tipo de valor devuelto*|Una función que toma un `int` y un `float` y devuelve un `string` tiene un tipo`int -> float -> string`|
-|función de orden superior como un parámetro|(*tipo de función*)|`List.map`tiene un tipo`('a -> 'b) -> 'a list -> 'b list`|
+|tipo de función que tiene un único parámetro|*parámetro: type1*  - &gt; *tipo de valor devuelto*|Una función que toma un `int` y devuelve un `string` tiene un tipo `int -> string`|
+|tipo de función que tiene varios parámetros|*parámetro: type1*  - &gt; *parámetro type2*  - &gt; ... -&gt; *tipo de valor devuelto*|Una función que toma un `int` y un `float` y devuelve un `string` tiene un tipo `int -> float -> string`|
+|función de orden superior como un parámetro|(*tipo de función*)|`List.map` tiene un tipo `('a -> 'b) -> 'a list -> 'b list`|
 |delegado|delegado de *tipo de función*|`delegate of unit -> int`|
 |tipo flexible|#*nombre de tipo*|`#System.Windows.Forms.Control`<br /><br />`#seq<int>`|
 

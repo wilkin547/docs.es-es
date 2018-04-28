@@ -1,12 +1,13 @@
 ---
-title: "Cómo: Establecer el modo de seguridad"
-ms.custom: 
+title: 'Cómo: Establecer el modo de seguridad'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,23 +17,24 @@ helpviewer_keywords:
 - WCF, security mode
 - WCF, security
 ms.assetid: 6e01dd9f-b5dd-4474-b24c-06e124de4ff7
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 84fa0e6b20f3d2b75d3182f64ddc9c70ef661f10
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 34c53389694aa48742becfd713796feb8111d888
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="how-to-set-the-security-mode"></a>Cómo: Establecer el modo de seguridad
 La seguridad de [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] tiene tres modos de seguridad comunes que se encuentran en la mayoría de los enlaces predefinidos: transporte, mensaje y “transporte con credencial del mensaje”. Dos modos adicionales son específicos para dos enlaces: el modo “solo credencial de transporte” encontrado en el <xref:System.ServiceModel.BasicHttpBinding>y el modo “Ambos” encontrado en el <xref:System.ServiceModel.NetMsmqBinding>. Sin embargo, este tema se concentra en los tres modos de seguridad comunes: <xref:System.ServiceModel.SecurityMode.Transport>, <xref:System.ServiceModel.SecurityMode.Message>y <xref:System.ServiceModel.SecurityMode.TransportWithMessageCredential>.  
   
  Tenga en cuenta que no todos los enlaces predefinidos admiten todos estos modos. Este tema establece el modo con las clases <xref:System.ServiceModel.WSHttpBinding> y <xref:System.ServiceModel.NetTcpBinding> y muestra cómo establecer el modo mediante programación y configuración.  
   
- [!INCLUDE[crabout](../../../includes/crdefault-md.md)][!INCLUDE[indigo2](../../../includes/indigo2-md.md)] seguridad, consulte [información general sobre seguridad](../../../docs/framework/wcf/feature-details/security-overview.md), [proteger Services](../../../docs/framework/wcf/securing-services.md), y [protección de servicios y clientes](../../../docs/framework/wcf/feature-details/securing-services-and-clients.md). [!INCLUDE[crabout](../../../includes/crabout-md.md)]mensaje de modo de transporte, consulte [seguridad de transporte](../../../docs/framework/wcf/feature-details/transport-security.md) y [Message Security](../../../docs/framework/wcf/feature-details/message-security-in-wcf.md).  
+ Para obtener más información, consulte [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] seguridad, consulte [información general sobre seguridad](../../../docs/framework/wcf/feature-details/security-overview.md), [proteger Services](../../../docs/framework/wcf/securing-services.md), y [protección de servicios y clientes](../../../docs/framework/wcf/feature-details/securing-services-and-clients.md). [!INCLUDE[crabout](../../../includes/crabout-md.md)] mensaje de modo de transporte, consulte [seguridad de transporte](../../../docs/framework/wcf/feature-details/transport-security.md) y [Message Security](../../../docs/framework/wcf/feature-details/message-security-in-wcf.md).  
   
 ### <a name="to-set-the-security-mode-in-code"></a>Para establecer el modo de seguridad en código  
   
@@ -122,7 +124,7 @@ La seguridad de [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] tiene tres 
 ### <a name="using-transportwithmessagecredential"></a>Uso de TransportWithMessageCredential  
  Al establecer el modo de seguridad en `TransportWithMessageCredential`, el transporte determina el mecanismo real que proporciona la seguridad de nivel de transporte. Por ejemplo, el protocolo HTTP utiliza Secure Sockets Layer (SSL) sobre HTTP (HTTPS). Por consiguiente, se omite el establecimiento de la propiedad `ClientCredentialType` de cualquier objeto de seguridad de transporte (como <xref:System.ServiceModel.HttpTransportSecurity>).  En otras palabras, solo puede establecer el `ClientCredentialType` del objeto de seguridad del mensaje (para el enlace `WSHttpBinding`, el objeto <xref:System.ServiceModel.NonDualMessageSecurityOverHttp>).  
   
- [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Cómo: utilizar seguridad de transporte y credenciales de mensaje](../../../docs/framework/wcf/feature-details/how-to-use-transport-security-and-message-credentials.md).  
+ Para obtener más información, consulte [Cómo: utilizar seguridad de transporte y credenciales de mensaje](../../../docs/framework/wcf/feature-details/how-to-use-transport-security-and-message-credentials.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Configuración de un puerto con un certificado SSL](../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)  

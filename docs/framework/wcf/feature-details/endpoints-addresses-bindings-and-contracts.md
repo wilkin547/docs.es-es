@@ -1,28 +1,30 @@
 ---
-title: "puntos de conexión: direcciones, enlaces y contratos"
-ms.custom: 
+title: 'puntos de conexión: direcciones, enlaces y contratos'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - endpoints [WCF]
 - Windows Communication Foundation [WCF], endpoints
 - WCF [WCF], endpoints
 ms.assetid: 9ddc46ee-1883-4291-9926-28848c57e858
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: af82cb934570b371d332c0e08ebc9b2338d0c0d6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 477c23facd846580bac698ce6e61d02e11afe430
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="endpoints-addresses-bindings-and-contracts"></a>puntos de conexión: direcciones, enlaces y contratos
 Toda la comunicación con un [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] servicio se produce a través de la *extremos* del servicio. Los extremos proporcionan acceso a los clientes a la funcionalidad que ofrece un servicio de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
@@ -48,7 +50,7 @@ Toda la comunicación con un [!INCLUDE[indigo1](../../../../includes/indigo1-md.
   
     -   Una propiedad <xref:System.ServiceModel.EndpointAddress.Identity%2A>, que representa la identidad de seguridad del servicio y una colección de encabezados de mensaje opcionales. Los encabezados de mensaje opcionales se utilizan para proporcionar información de direccionamiento adicional y más detallada para identificar o interactuar con el punto de conexión.  
   
-     [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Al especificar una dirección de punto de conexión](../../../../docs/framework/wcf/specifying-an-endpoint-address.md).  
+     Para obtener más información, consulte [al especificar una dirección de punto de conexión](../../../../docs/framework/wcf/specifying-an-endpoint-address.md).  
   
 -   Enlace: el enlace especifica cómo comunicarse con el punto de conexión. Esto incluye:  
   
@@ -58,7 +60,7 @@ Toda la comunicación con un [!INCLUDE[indigo1](../../../../includes/indigo1-md.
   
     -   Los requisitos de seguridad necesarios (por ejemplo, SSL o seguridad de mensaje SOAP).  
   
-     [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Información general de enlaces de WCF](../../../../docs/framework/wcf/bindings-overview.md). Un enlace se representa en el modelo de objetos de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] mediante la clase base abstracta <xref:System.ServiceModel.Channels.Binding>. Para la mayoría de los escenarios, los usuarios pueden utilizar uno de los enlaces proporcionados por el sistema. Para obtener más información, consulte [enlaces proporcionados](../../../../docs/framework/wcf/system-provided-bindings.md).  
+     Para obtener más información, consulte [información general de enlaces de WCF](../../../../docs/framework/wcf/bindings-overview.md). Un enlace se representa en el modelo de objetos de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] mediante la clase base abstracta <xref:System.ServiceModel.Channels.Binding>. Para la mayoría de los escenarios, los usuarios pueden utilizar uno de los enlaces proporcionados por el sistema. Para obtener más información, consulte [enlaces proporcionados](../../../../docs/framework/wcf/system-provided-bindings.md).  
   
 -   Contratos: el contrato describe qué funcionalidad expone el punto de conexión al cliente. Un contrato especifica:  
   
@@ -72,10 +74,10 @@ Toda la comunicación con un [!INCLUDE[indigo1](../../../../includes/indigo1-md.
   
      Para obtener más información acerca de cómo definir un contrato, vea [diseñar contratos de servicio](../../../../docs/framework/wcf/designing-service-contracts.md).  
   
--   Comportamientos: puede utilizar los comportamientos de punto de conexión para personalizar el comportamiento local del punto de conexión de servicio. Comportamientos de extremo logran esto participando en el proceso de creación una [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]en tiempo de ejecución. Un ejemplo de un comportamiento de extremo es la propiedad <xref:System.ServiceModel.Description.ServiceEndpoint.ListenUri%2A>, que permite especificar una dirección de escucha diferente que la dirección SOAP o la dirección del Lenguaje de descripción de servicios Web (WSDL). [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][ClientViaBehavior](../../../../docs/framework/wcf/diagnostics/wmi/clientviabehavior.md).  
+-   Comportamientos: puede utilizar los comportamientos de punto de conexión para personalizar el comportamiento local del punto de conexión de servicio. Comportamientos de extremo logran esto participando en el proceso de creación una [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]en tiempo de ejecución. Un ejemplo de un comportamiento de extremo es la propiedad <xref:System.ServiceModel.Description.ServiceEndpoint.ListenUri%2A>, que permite especificar una dirección de escucha diferente que la dirección SOAP o la dirección del Lenguaje de descripción de servicios Web (WSDL). Para obtener más información, consulte [ClientViaBehavior](../../../../docs/framework/wcf/diagnostics/wmi/clientviabehavior.md).  
   
 ## <a name="defining-endpoints"></a>Definición de puntos de conexión  
- Puede especificar el punto de conexión de un servicio de manera imperativa mediante código o de manera declarativa mediante configuración. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Cómo: crear un extremo de servicio en configuración](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md) y [Cómo: crear un extremo de servicio en el código](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-code.md).  
+ Puede especificar el punto de conexión de un servicio de manera imperativa mediante código o de manera declarativa mediante configuración. Para obtener más información, consulte [Cómo: crear un extremo de servicio en configuración](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md) y [Cómo: crear un extremo de servicio en el código](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-code.md).  
   
 ## <a name="in-this-section"></a>En esta sección  
  En esta sección se explica el propósito de los enlaces, extremos y direcciones; se muestra cómo configurar un enlace y un extremo; y cómo utilizar el comportamiento `ClientVia` y la propiedad `ListenUri`.  

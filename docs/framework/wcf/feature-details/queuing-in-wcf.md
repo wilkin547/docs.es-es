@@ -1,24 +1,26 @@
 ---
 title: Las colas en WCF
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: e98d76ba-1acf-42cd-b137-0f8214661112
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3c50bbc54d56d3fdc7a848af0e77cfbb2c15c9bb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 01dc36c73d9e668dd98cb5ba8b275d3d5177ba61
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="queuing-in-wcf"></a>Las colas en WCF
 Esta sección describe cómo utilizar la comunicación en cola en [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
@@ -49,12 +51,12 @@ Esta sección describe cómo utilizar la comunicación en cola en [!INCLUDE[indi
   
  Las colas de MSMQ también pueden protegerse utilizando una identidad de Windows registrada con el servicio de directorio Active Directory. Al instalar MSMQ puede instalar la integración de Active Directory, para lo que es necesario que el equipo forme parte de una red de dominios de Windows.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]MSMQ, consulte [instalar Message Queuing (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md).  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] MSMQ, consulte [instalar Message Queuing (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md).  
   
 ### <a name="netmsmqbinding"></a>NetMsmqBinding  
  El [ \<netMsmqBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md) es el enlace en cola [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] proporciona para dos [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] extremos para comunicarse mediante MSMQ. Por lo tanto, el enlace expone propiedades que son específicas de MSMQ. No obstante, no todas las características y propiedades MSMQ se exponen en `NetMsmqBinding`. El `NetMsmqBinding` compacto está diseñado con un conjunto óptimo de características que la mayoría de los clientes debería encontrar suficiente.  
   
- `NetMsmqBinding` expone los conceptos fundamentales de las colas explicados hasta ahora como propiedades de los enlaces. Por su parte, estas propiedades comunican a MSMQ cómo transferir y entregar los mensajes. Hay una descripción de las categorías de propiedad en las secciones siguientes. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] los temas conceptuales que describen propiedades específicas más completamente.  
+ `NetMsmqBinding` expone los conceptos fundamentales de las colas explicados hasta ahora como propiedades de los enlaces. Por su parte, estas propiedades comunican a MSMQ cómo transferir y entregar los mensajes. Hay una descripción de las categorías de propiedad en las secciones siguientes. Para obtener más información, vea los temas conceptuales que describen propiedades específicas más completamente.  
   
 #### <a name="exactlyonce-and-durable-properties"></a>ExactlyOnce y propiedades durables  
  `ExactlyOnce` y las propiedades `Durable` afectan a cómo los mensajes se transfieren entre las colas:  
@@ -77,17 +79,17 @@ Esta sección describe cómo utilizar la comunicación en cola en [!INCLUDE[indi
   
  El enlace tiene dos propiedades interesantes:  
   
--   `DeadLetterQueue`: esta propiedad es una enumeración que indica si se envía una solicitud a una cola de mensajes no enviados. La enumeración también contiene el tipo de cola de mensajes no enviados, en caso de que se solicite uno. Los valores son `None`, `System` y `Custom`. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]la interpretación de estas propiedades, vea [utilizando colas de mensajes fallidos para controlar errores de transferencia de mensajes](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md)  
+-   `DeadLetterQueue`: esta propiedad es una enumeración que indica si se envía una solicitud a una cola de mensajes no enviados. La enumeración también contiene el tipo de cola de mensajes no enviados, en caso de que se solicite uno. Los valores son `None`, `System` y `Custom`. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] la interpretación de estas propiedades, vea [utilizando colas de mensajes fallidos para controlar errores de transferencia de mensajes](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md)  
   
 -   `CustomDeadLetterQueue`: esta propiedad es la dirección del identificador uniforme de recursos (URI) de la cola de mensajes no enviados específica de la aplicación. Esto es necesario si `DeadLetterQueue`.`Custom` se elige.  
   
 #### <a name="poison-message-handling-properties"></a>Propiedades de control de mensajes dudosos  
- Cuando el servicio lee mensajes de la cola de destino en una transacción, puede no procesar el mensaje debido a distintas razones. En este caso, el mensaje se devuelve a la cola para volver a leerse. Para gestionar los mensajes en los que se producen errores repetidamente, se puede configurar un conjunto propiedades de control de mensajes dudosos en el enlace. Hay cuatro propiedades: `ReceiveRetryCount`, `MaxRetryCycles`, `RetryCycleDelay` y `ReceiveErrorHandling`. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Estas propiedades, consulte [control de mensajes dudosos](../../../../docs/framework/wcf/feature-details/poison-message-handling.md).  
+ Cuando el servicio lee mensajes de la cola de destino en una transacción, puede no procesar el mensaje debido a distintas razones. En este caso, el mensaje se devuelve a la cola para volver a leerse. Para gestionar los mensajes en los que se producen errores repetidamente, se puede configurar un conjunto propiedades de control de mensajes dudosos en el enlace. Hay cuatro propiedades: `ReceiveRetryCount`, `MaxRetryCycles`, `RetryCycleDelay` y `ReceiveErrorHandling`. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Estas propiedades, consulte [control de mensajes dudosos](../../../../docs/framework/wcf/feature-details/poison-message-handling.md).  
   
 #### <a name="security-properties"></a>Propiedades de seguridad  
- MSMQ expone su propio modelo de seguridad, como las listas de control de acceso (ACL) en una cola o el envío de mensajes autenticados. `NetMsmqBinding` expone estas propiedades de seguridad como parte de sus valores de seguridad de transporte. Hay dos propiedades en el enlace para la seguridad de transporte: `MsmqAuthenticationMode` y `MsmqProtectionLevel`. Los valores de estas propiedades dependen de la configuración de MSMQ. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Proteger mensajes mediante la seguridad del transporte](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md).  
+ MSMQ expone su propio modelo de seguridad, como las listas de control de acceso (ACL) en una cola o el envío de mensajes autenticados. `NetMsmqBinding` expone estas propiedades de seguridad como parte de sus valores de seguridad de transporte. Hay dos propiedades en el enlace para la seguridad de transporte: `MsmqAuthenticationMode` y `MsmqProtectionLevel`. Los valores de estas propiedades dependen de la configuración de MSMQ. Para obtener más información, consulte [proteger mensajes utilizando seguridad de transporte](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md).  
   
- Además de la seguridad de transporte, el propio mensaje SOAP puede protegerse utilizando la seguridad de mensaje. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Proteger mensajes mediante la seguridad del mensaje](../../../../docs/framework/wcf/feature-details/securing-messages-using-message-security.md).  
+ Además de la seguridad de transporte, el propio mensaje SOAP puede protegerse utilizando la seguridad de mensaje. Para obtener más información, consulte [proteger mensajes utilizando seguridad del mensaje](../../../../docs/framework/wcf/feature-details/securing-messages-using-message-security.md).  
   
  `MsmqTransportSecurity` también expone dos propiedades, `MsmqEncryptionAlgorithm` y `MsmqHashAlgorithm`. Éstas son enumeraciones de distintos algoritmos que permiten elegir el cifrado de la transferencia cola a cola de mensajes y el algoritmo hash de las firmas.  
   
@@ -100,7 +102,7 @@ Esta sección describe cómo utilizar la comunicación en cola en [!INCLUDE[indi
   
 -   `QueueTransferProtocol`: una enumeración del protocolo utilizado para las transferencias de mensajes cola a cola. MSMQ implementa un protocolo de transferencia cola a cola nativo y un protocolo basado en SOAP, denominado protocolo de mensajería de confianza (SRMP) de SOAP. Se utiliza SRMP cuando se recurre al transporte HTTP para las transferencias cola a cola. La protección SRMP se utiliza cuando se recurre a HTTPS para las transferencias cola a cola.  
   
--   `UseActiveDirectory`: un valor booleano que indica si debe utilizarse Active Directory para la resolución de direcciones de cola. De manera predeterminada, está desactivado. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Puntos de conexión y el direccionamiento de la cola de servicio](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md).  
+-   `UseActiveDirectory`: un valor booleano que indica si debe utilizarse Active Directory para la resolución de direcciones de cola. De manera predeterminada, está desactivado. Para obtener más información, consulte [extremos de servicio y direccionamiento de la cola](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md).  
   
 ### <a name="msmqintegrationbinding"></a>MsmqIntegrationBinding  
  Se utiliza `MsmqIntegrationBinding` cuando se desea que un punto final [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] se comunique con una aplicación MSMQ existente escrita en C, C++, COM, o System.Messaging API.  

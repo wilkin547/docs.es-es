@@ -1,20 +1,17 @@
 ---
-title: "Administración de recursos: palabra clave use (F#)"
+title: 'Administración de recursos: palabra clave use (F#)'
 description: "Obtenga información acerca de la F # palabra clave 'use' y la función 'con', que puede controlar la inicialización y la liberación de recursos."
-keywords: "visual f#, f#, programación funcional"
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 00c3040e-859f-4dad-a7b5-7b8d44dc232c
-ms.openlocfilehash: d4e8626f07f1c77e52e8fabd5ccc07dbf1fa8ddd
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 0e134bf5b302911324dd224316941fee693b787b
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="resource-management-the-use-keyword"></a>Administración de recursos: palabra clave use
 
@@ -44,7 +41,7 @@ Puede usar `use` en las expresiones de cálculo, en cuyo caso una versión perso
 ## <a name="using-function"></a>uso de la función
 El `using` función tiene la forma siguiente:
 
-`using`(*expression1*) *función o expresión lambda*
+`using` (*expression1*) *función o expresión lambda*
 
 En un `using` expresión, *expression1* crea el objeto que se debe eliminar. El resultado de *expression1* (es decir, el objeto que se debe eliminar) se convierte en un argumento, *valor*a *función o expresión lambda*, que es una función que espera un único restante argumento de tipo que coincide con el valor generado por *expression1*, o una expresión lambda que espera un argumento de ese tipo. Al final de la ejecución de la función, el runtime llama a `Dispose` y libera los recursos (a menos que el valor es `null`, en cuyo caso no se intenta realizar la llamada a Dispose).
 
@@ -56,7 +53,7 @@ El siguiente ejemplo se muestra la `using` expresión con una función.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6303.fs)]
 
-Tenga en cuenta que la función podría ser una función que tiene algunos argumentos ya aplicados. En el ejemplo de código siguiente se muestra cómo hacerlo. Se crea un archivo que contiene la cadena `XYZ`.
+Tenga en cuenta que la función podría ser una función que tiene algunos argumentos ya aplicados. El siguiente ejemplo de código muestra esto. Se crea un archivo que contiene la cadena `XYZ`.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6304.fs)]
 

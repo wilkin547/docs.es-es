@@ -1,26 +1,26 @@
 ---
 title: Persistencia del flujo de trabajo
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - programming [WF], persistence
 ms.assetid: 39e69d1f-b771-4c16-9e18-696fa43b65b2
-caps.latest.revision: 
+caps.latest.revision: 26
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 9e65f07fc01d0d364d7271c4f1378b968b687881
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d2278762895978f90d80977f9e538b0e10a4f3f8
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="workflow-persistence"></a>Persistencia del flujo de trabajo
 La persistencia del flujo de trabajo es la captura duradera de un estado de la instancia de flujo de trabajo, independientemente de la información del proceso o del equipo. Esto sirve para proporcionar un punto de recuperación conocido para la instancia de flujo de trabajo en caso de error del sistema, para conservar la memoria descargando instancias de flujo de trabajo que no están funcionando de forma activa o para mover el estado de la instancia de flujo de trabajo de un nodo a otro en una granja de servidores.  
@@ -33,7 +33,7 @@ La persistencia del flujo de trabajo es la captura duradera de un estado de la i
   
  Para almacenar y cargar los datos específicos de la aplicación junto con la información relacionada con la instancia de flujo de trabajo, puede crear participantes de persistencia que extienden la clase <xref:System.Activities.Persistence.PersistenceParticipant>. Los participantes de persistencia participan en el proceso de persistencia para guardar los datos serializables personalizados en el almacén de persistencia, para cargar los datos del almacén de instancias en la memoria y para realizar cualquier lógica adicional en una transacción de persistencia. Para obtener más información, consulte [participantes de persistencia](../../../docs/framework/windows-workflow-foundation/persistence-participants.md).  
   
- Windows Server APp Fabric simplifica el proceso de configuración de persistencia. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Conceptos de persistencia con Windows Server App Fabric](http://go.microsoft.com/fwlink/?LinkId=201200)  
+ Windows Server APp Fabric simplifica el proceso de configuración de persistencia. Para obtener más información, vea [conceptos de persistencia con Windows Server App Fabric](http://go.microsoft.com/fwlink/?LinkId=201200)  
   
 ## <a name="implicit-persistence-points"></a>Puntos de persistencia implícitos  
  La siguiente lista contiene ejemplos de las condiciones en las que se conserva un flujo de trabajo cuando se asocia un almacén de instancias a este.  

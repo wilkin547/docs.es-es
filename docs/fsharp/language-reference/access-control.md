@@ -1,20 +1,17 @@
 ---
 title: Control de acceso (F#)
-description: "Obtener información sobre cómo controlar el acceso a elementos de programación como tipos, métodos y funciones, en el lenguaje de programación de F #."
-keywords: "visual f#, f#, programación funcional"
+description: 'Obtener información sobre cómo controlar el acceso a elementos de programación como tipos, métodos y funciones, en el lenguaje de programación de F #.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 955b06fe-d1cd-431d-8db6-93e83b697453
-ms.openlocfilehash: a02e20a585a0456577901f2762a0eeb0e3ecd2f0
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: fee5f719904b61c3082d56f73448defdea39f472
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="access-control"></a>Control de acceso
 
@@ -25,11 +22,11 @@ ms.lasthandoff: 10/18/2017
 En F #, el acceso de control especificadores `public`, `internal`, y `private` pueden aplicarse a los módulos, tipos, métodos, definiciones de valor, funciones, propiedades y campos explícitos.
 
 
-- `public`indica que la entidad puede tener acceso a todos los llamadores.
+- `public` indica que la entidad puede tener acceso a todos los llamadores.
 
-- `internal`indica que se puede tener acceso a la entidad únicamente desde el mismo ensamblado.
+- `internal` indica que se puede tener acceso a la entidad únicamente desde el mismo ensamblado.
 
-- `private`indica que la entidad puede tener acceso sólo desde el tipo o módulo envolvente.
+- `private` indica que la entidad puede tener acceso sólo desde el tipo o módulo envolvente.
 
 
 >[!NOTE] 

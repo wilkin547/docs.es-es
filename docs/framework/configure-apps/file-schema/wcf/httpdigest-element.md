@@ -1,29 +1,31 @@
 ---
 title: Elemento &lt;httpDigest&gt;
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 3da4f276-dfd9-4247-8c07-01d83618727c
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 95e6a7d31949bd7a6badb029e3f768a63fbaf924
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 75579a583b774896f43099d3cc30f1679b10a889
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="lthttpdigestgt-element"></a>Elemento &lt;httpDigest&gt;
 Especifica una credencial de tipo de resumen utilizada al autenticar el cliente a un servicio.  
   
- \<sistema. ServiceModel >  
+ \<system.ServiceModel>  
 \<comportamientos >  
 \<endpointBehaviors >  
 \<comportamiento >  
@@ -57,7 +59,7 @@ Especifica una credencial de tipo de resumen utilizada al autenticar el cliente 
 ## <a name="remarks"></a>Comentarios  
  Un resumen es un hash determinado mediante un algoritmo y un conjunto de entradas. El autenticador y los autenticados están de acuerdo en un algoritmo e intercambian los datos utilizados como entradas. El cliente puede calcular el hash y enviarlo al servicio. El servicio también calcula el hash y compara los valores. La coincidencia valida al cliente.  
   
- Esta característica se debe habilitar con Active Directory en Windows e Internet Information Services (IIS). [!INCLUDE[crdefault](../../../../../includes/crdefault-md.md)][La autenticación en IIS 6.0 implícita](http://go.microsoft.com/fwlink/?LinkId=88443).  
+ Esta característica se debe habilitar con Active Directory en Windows e Internet Information Services (IIS). Para obtener más información, consulte [la autenticación implícita en IIS 6.0](http://go.microsoft.com/fwlink/?LinkId=88443).  
   
 ## <a name="see-also"></a>Vea también  
  <xref:System.ServiceModel.Configuration.ClientCredentialsElement>  

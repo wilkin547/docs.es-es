@@ -1,26 +1,27 @@
 ---
 title: Almacenes de instancias
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f2629668-0923-4987-b943-67477131c1e0
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 63cfe130e841ce073f794db6494fa8e97364d476
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: a41c25dc3c664715bd9e811d6a21a6e3600aa8a5
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="instance-stores"></a>Almacenes de instancias
-Un almacén de instancias es un contenedor lógico de instancias. Es el lugar donde se almacenan los metadatos y los datos de las instancias. Un almacén de instancias no tiene que ser necesariamente un almacenamiento físico dedicado. Un almacén de instancias puede contener información duradera de una base de datos de SQL Server o información de estado no duradera de una memoria. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] distribuye con el Almacén de instancias de flujos de trabajo de SQL, que es una implementación concreta de un almacén de instancias que permite a los flujos de trabajo conservar metadatos y datos de instancia en una base de datos de SQL Server 2005 o SQL Server 2008. Además, Windows Server App Fabric también proporciona una implementación concreta de un almacén de instancias. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Almacén de instancias de Windows Server App Fabric, consulta y proveedores de Control de](http://go.microsoft.com/fwlink/?LinkID=201201&clcid=0x409).  
+Un almacén de instancias es un contenedor lógico de instancias. Es el lugar donde se almacenan los metadatos y los datos de las instancias. Un almacén de instancias no tiene que ser necesariamente un almacenamiento físico dedicado. Un almacén de instancias puede contener información duradera de una base de datos de SQL Server o información de estado no duradera de una memoria. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] distribuye con el Almacén de instancias de flujos de trabajo de SQL, que es una implementación concreta de un almacén de instancias que permite a los flujos de trabajo conservar metadatos y datos de instancia en una base de datos de SQL Server 2005 o SQL Server 2008. Además, Windows Server App Fabric también proporciona una implementación concreta de un almacén de instancias. Para obtener más información, consulte [almacén de instancias de Windows Server App Fabric, consulta y proveedores de Control de](http://go.microsoft.com/fwlink/?LinkID=201201&clcid=0x409).  
   
  La API de persistencia es la interfaz entre un host y un almacén de instancias que permite al host enviar las solicitudes de comando al almacén de instancias (por ejemplo, <xref:System.Activities.DurableInstancing.LoadWorkflowCommand> y <xref:System.Activities.DurableInstancing.SaveWorkflowCommand>). La implementación concreta de esta API se denomina proveedor de persistencia. El proveedor de persistencia recibe solicitudes de un host y modifica el almacén de instancias.  
   

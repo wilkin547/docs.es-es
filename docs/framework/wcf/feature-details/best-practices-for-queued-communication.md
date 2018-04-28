@@ -19,11 +19,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 3834f48c407f799fc5fede17182f47652f49747f
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 082fa083dbba601cefc00e40bad7b91e14a45d44
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="best-practices-for-queued-communication"></a>Procedimientos recomendados para la comunicación en cola
 En este tema se proporcionan procedimientos recomendados para la comunicación en cola en [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. Las secciones siguientes discuten los procedimientos recomendados desde una perspectiva del escenario.  
@@ -33,7 +33,7 @@ En este tema se proporcionan procedimientos recomendados para la comunicación e
   
  Además, puede decidir no incurrir en el costo de escrituras en disco estableciendo la propiedad <xref:System.ServiceModel.MsmqBindingBase.Durable%2A> en `false`.  
   
- La seguridad afecta al rendimiento. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Consideraciones de rendimiento](../../../../docs/framework/wcf/feature-details/performance-considerations.md).  
+ La seguridad afecta al rendimiento. Para obtener más información, consulte [consideraciones de rendimiento](../../../../docs/framework/wcf/feature-details/performance-considerations.md).  
   
 ## <a name="reliable-end-to-end-queued-messaging"></a>Mensajería en cola fiable de un extremo a otro  
  Las secciones siguientes describen los procedimientos recomendados para escenarios que requieren una mensajería fiable de un extremo a otro.  
@@ -49,21 +49,21 @@ En este tema se proporcionan procedimientos recomendados para la comunicación e
   
  No se recomienda desactivar las colas de mensajes no enviados para la comunicación fiable de un extremo a otro.  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Uso de colas de mensajes no enviados para administrar los errores de transferencia de mensajes](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md).  
+ Para obtener más información, consulte [utilizando colas de mensajes fallidos para controlar errores de transferencia de mensajes](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md).  
   
 ### <a name="use-of-poison-message-handling"></a>Uso de control de mensajes dudosos  
  El control de mensajes dudosos proporciona la capacidad de recuperarse del error de procesamiento de mensajes.  
   
  Al utilizar la característica de control de mensajes dudosos, asegúrese de que la propiedad <xref:System.ServiceModel.MsmqBindingBase.ReceiveErrorHandling%2A> está establecida en el valor adecuado. Establecerla en <xref:System.ServiceModel.ReceiveErrorHandling.Drop> implica que los datos se pierdan. Por otro lado, establecerla en <xref:System.ServiceModel.ReceiveErrorHandling.Fault> produce un error en el host de servicios cuando detecta un mensaje dudoso. Utilizar MSMQ 3.0, <xref:System.ServiceModel.ReceiveErrorHandling.Fault> es la mejor opción para evitar la pérdida de datos y quitar el mensaje dudoso. Con MSMQ 4.0, <xref:System.ServiceModel.ReceiveErrorHandling.Move> es el enfoque recomendado. <xref:System.ServiceModel.ReceiveErrorHandling.Move> mueve un mensaje dudoso fuera de la cola para que el servicio pueda continuar procesando los nuevos mensajes. El servicio del mensaje dudoso puede procesar a continuación el mensaje dudoso por separado.  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Control de mensajes dudosos](../../../../docs/framework/wcf/feature-details/poison-message-handling.md).  
+ Para obtener más información, consulte [control de mensajes dudosos](../../../../docs/framework/wcf/feature-details/poison-message-handling.md).  
   
 ## <a name="achieving-high-throughput"></a>Obtener un alto rendimiento  
  Para lograr un alto rendimiento en un solo punto de conexión, utilice lo siguiente:  
   
--   Procesamiento por lotes con transacciones El procesamiento por lotes con transacciones garantiza que muchos mensajes se puedan leer en una transacción única. Esto optimiza las confirmaciones de transacciones, aumentando el rendimiento total. El costo del procesamiento por lotes es que si se produce un error en un mensaje único dentro de un lote, se deshace el lote completo y se deben procesar los mensajes de uno en uno hasta que sea seguro de nuevo el procesamiento por lotes. En la mayoría de los casos, los mensajes dudosos son raros, así que el procesamiento por lotes es la forma preferida de aumentar el rendimiento del sistema, particularmente cuando se tienen otros administradores de recursos que participan en la transacción. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Los mensajes en una transacción por lotes](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md).  
+-   Procesamiento por lotes con transacciones El procesamiento por lotes con transacciones garantiza que muchos mensajes se puedan leer en una transacción única. Esto optimiza las confirmaciones de transacciones, aumentando el rendimiento total. El costo del procesamiento por lotes es que si se produce un error en un mensaje único dentro de un lote, se deshace el lote completo y se deben procesar los mensajes de uno en uno hasta que sea seguro de nuevo el procesamiento por lotes. En la mayoría de los casos, los mensajes dudosos son raros, así que el procesamiento por lotes es la forma preferida de aumentar el rendimiento del sistema, particularmente cuando se tienen otros administradores de recursos que participan en la transacción. Para obtener más información, consulte [mensajes por lotes en una transacción](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md).  
   
--   Simultaneidad. La simultaneidad aumenta el rendimiento, pero también afecta a la contención a los recursos compartidos. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Simultaneidad](../../../../docs/framework/wcf/samples/concurrency.md).  
+-   Simultaneidad. La simultaneidad aumenta el rendimiento, pero también afecta a la contención a los recursos compartidos. Para obtener más información, consulte [simultaneidad](../../../../docs/framework/wcf/samples/concurrency.md).  
   
 -   Limitación de peticiones. Para un rendimiento óptimo, limite el número de mensajes en el conductor del distribuidor. Para obtener un ejemplo de cómo hacerlo, consulte [limitación](../../../../docs/framework/wcf/samples/throttling.md).  
   
@@ -73,12 +73,12 @@ En este tema se proporcionan procedimientos recomendados para la comunicación e
   
  Al utilizar los conjuntos, sea consciente de que MSMQ 3.0 no admite las lecturas con transacciones remotas. MSMQ 4.0 admite las lecturas con transacciones remotas.  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Los mensajes en una transacción por lotes](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md) y [diferencias en las características de puesta en cola en Windows Vista, Windows Server 2003 y Windows XP](../../../../docs/framework/wcf/feature-details/diff-in-queue-in-vista-server-2003-windows-xp.md).  
+ Para obtener más información, consulte [mensajes por lotes en una transacción](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md) y [diferencias en las características de puesta en cola en Windows Vista, Windows Server 2003 y Windows XP](../../../../docs/framework/wcf/feature-details/diff-in-queue-in-vista-server-2003-windows-xp.md).  
   
 ## <a name="queuing-with-unit-of-work-semantics"></a>Puesta en cola con la unidad de semántica de trabajo  
  En algunos escenarios un grupo de mensajes en una cola se puede relacionar y, por consiguiente, la clasificación de estos mensajes es significativa. En tales escenarios, procese juntos un grupo de mensajes relacionados como una unidad única: o se procesan todos los mensajes correctamente o no se procesa ninguno. Para implementar tal comportamiento, utilice sesiones con colas.  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Agrupar los mensajes en cola en una sesión de](../../../../docs/framework/wcf/feature-details/grouping-queued-messages-in-a-session.md).  
+ Para obtener más información, consulte [agrupar los mensajes en cola en una sesión de](../../../../docs/framework/wcf/feature-details/grouping-queued-messages-in-a-session.md).  
   
 ## <a name="correlating-request-reply-messages"></a>Correlación de mensajes de solicitud-respuesta  
  Aunque las colas son típicamente unidireccionales, en algunos escenarios puede querer correlacionar una respuesta recibida con una solicitud enviada anteriormente. Si requiere dicha correlación, se recomienda que aplique su propio encabezado de mensaje SOAP que contiene información de correlación con el mensaje. Normalmente, el remitente adjunta este encabezado al mensaje y el receptor, tras procesar el mensaje y responder con un nuevo mensaje en una cola de respuesta, adjunta el encabezado del mensaje del remitente que contiene la información de la correlación al mensaje de solicitud para que el remitente pueda identificar el mensaje de respuesta.  

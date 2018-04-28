@@ -1,24 +1,26 @@
 ---
-title: "Ejemplo básico"
-ms.custom: 
+title: Ejemplo básico
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: c1910bc1-3d0a-4fa6-b12a-4ed6fe759620
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0f0d5c25e2b2d3dac042ef93e5a174b25ce17314
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: d692b33c84f12976e2d1c263ca9d68475667c2a8
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="basic-sample"></a>Ejemplo básico
 En este ejemplo se muestra cómo hacer que un servicio se pueda detectar y cómo buscar y llamar a un servicio detectable. Este ejemplo se compone de dos proyectos: servicio y cliente.  
@@ -26,7 +28,7 @@ En este ejemplo se muestra cómo hacer que un servicio se pueda detectar y cómo
 > [!NOTE]
 >  En él se implementa la detección en el código.  Para obtener un ejemplo que implementa la detección de configuración, consulte [configuración](../../../../docs/framework/wcf/samples/configuration-sample.md).  
   
-## <a name="service"></a>Servicio  
+## <a name="service"></a>web de Office  
  Se trata de la implementación de un servicio de calculadora sencillo. El código relacionado con la detección se puede encontrar en `Main` donde un objeto <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> se agrega al host del servicio y un objeto <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> se agrega como se muestra en el siguiente código.  
   
 ```  
@@ -93,7 +95,7 @@ static void InvokeCalculatorService(ServiceEndpoint serviceEndpoint)
   
 #### <a name="to-use-this-sample"></a>Para utilizar este ejemplo  
   
-1.  Este ejemplo utiliza los puntos de conexión HTTP y para ejecutarlo, se deben agregar las ACL de dirección URL apropiadas. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Configurar HTTP y HTTPS](http://go.microsoft.com/fwlink/?LinkId=70353). Al ejecutar el siguiente comando con privilegios elevados, se deberían agregar las ACL adecuadas. Puede que desee sustituir su dominio y nombre de usuario para los siguientes argumentos si el comando no funciona como debería. `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`  
+1.  Este ejemplo utiliza los puntos de conexión HTTP y para ejecutarlo, se deben agregar las ACL de dirección URL apropiadas. Para obtener más información, consulte [configurar HTTP y HTTPS](http://go.microsoft.com/fwlink/?LinkId=70353). Al ejecutar el siguiente comando con privilegios elevados, se deberían agregar las ACL adecuadas. Puede que desee sustituir su dominio y nombre de usuario para los siguientes argumentos si el comando no funciona como debería. `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`  
   
 2.  Con [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)], abra Basic.sln y compile el ejemplo.  
   

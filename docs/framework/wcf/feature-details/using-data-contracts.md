@@ -1,12 +1,13 @@
 ---
-title: "Utilización de contratos de datos"
-ms.custom: 
+title: Utilización de contratos de datos
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,16 +17,17 @@ helpviewer_keywords:
 - WCF, data
 - data contracts [WCF]
 ms.assetid: a3ae7b21-c15c-4c05-abd8-f483bcbf31af
-caps.latest.revision: "38"
+caps.latest.revision: 38
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7541f04279bbe9d85b7e2ecca841d9f5a14fc9a3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 839227e9a67d904ea4613f841deac5a9a3f6f9ea
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="using-data-contracts"></a>Utilización de contratos de datos
 Un *contrato de datos* es un acuerdo formal entre un servicio y un cliente que abstractamente describe los datos que se van a intercambiar. Es decir, para comunicarse, el cliente y el servicio no tienen que compartir los mismos tipos, solo los mismos contratos de datos. Un contrato de datos define con precisión, para cada parámetro o tipo de valor devuelto, qué datos se serializan (se convierten en XML) para su intercambio.  
@@ -33,7 +35,7 @@ Un *contrato de datos* es un acuerdo formal entre un servicio y un cliente que a
 ## <a name="data-contract-basics"></a>Fundamentos del contrato de datos  
  [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] utiliza un motor de la serialización llamado Serializador de contrato de datos de forma predeterminada para serializar y deserializar los datos (convertirlos de y a XML). Todos los tipos primitivos [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] , como enteros y cadenas, así como ciertos tipos tratados como primitivos, como <xref:System.DateTime> y <xref:System.Xml.XmlElement>, se pueden serializar sin otra preparación y se considera que tienen contratos de datos predeterminados. Muchos tipos [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] también tienen contratos de datos existentes. Para obtener una lista completa de los tipos serializables, consulte [Types Supported by the Data Contract Serializer](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md).  
   
- Los nuevos tipos complejos que se crean deben tener un contrato de datos definido para que sean serializables. De forma predeterminada, <xref:System.Runtime.Serialization.DataContractSerializer> deduce el contrato de datos y serializa todos los tipos públicamente visibles. Se serializan todas las propiedades de lectura y escritura públicas y campos del tipo. Puede descartar miembros de la serialización mediante el uso de <xref:System.Runtime.Serialization.IgnoreDataMemberAttribute>. También puede crear explícitamente un contrato de datos mediante el uso de los atributos <xref:System.Runtime.Serialization.DataContractAttribute> y <xref:System.Runtime.Serialization.DataMemberAttribute> . Esto se hace normalmente aplicando el atributo <xref:System.Runtime.Serialization.DataContractAttribute> al tipo. Este atributo se puede aplicar a clases, estructuras y enumeraciones. El atributo <xref:System.Runtime.Serialization.DataMemberAttribute> se debe aplicar a continuación a cada miembro del tipo de contrato de datos para indicar que es un *miembro de datos*, es decir, que se debería serializar. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Tipos serializables](../../../../docs/framework/wcf/feature-details/serializable-types.md).  
+ Los nuevos tipos complejos que se crean deben tener un contrato de datos definido para que sean serializables. De forma predeterminada, <xref:System.Runtime.Serialization.DataContractSerializer> deduce el contrato de datos y serializa todos los tipos públicamente visibles. Se serializan todas las propiedades de lectura y escritura públicas y campos del tipo. Puede descartar miembros de la serialización mediante el uso de <xref:System.Runtime.Serialization.IgnoreDataMemberAttribute>. También puede crear explícitamente un contrato de datos mediante el uso de los atributos <xref:System.Runtime.Serialization.DataContractAttribute> y <xref:System.Runtime.Serialization.DataMemberAttribute> . Esto se hace normalmente aplicando el atributo <xref:System.Runtime.Serialization.DataContractAttribute> al tipo. Este atributo se puede aplicar a clases, estructuras y enumeraciones. El atributo <xref:System.Runtime.Serialization.DataMemberAttribute> se debe aplicar a continuación a cada miembro del tipo de contrato de datos para indicar que es un *miembro de datos*, es decir, que se debería serializar. Para obtener más información, consulte [tipos serializables](../../../../docs/framework/wcf/feature-details/serializable-types.md).  
   
 ### <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se muestra un contrato de servicio (una interfaz) al que se han aplicado los atributos <xref:System.ServiceModel.ServiceContractAttribute> y <xref:System.ServiceModel.OperationContractAttribute> explícitamente. El ejemplo muestra que los tipos primitivos no requieren un contrato de datos, mientras un tipo complejo sí lo hace.  

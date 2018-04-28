@@ -1,27 +1,29 @@
 ---
 title: Uso de la clase de mensajes
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: d1d62bfb-2aa3-4170-b6f8-c93d3afdbbed
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5c3e33f4db403fdc4ad1d4efd14282fe2beac8dc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: c63a0a88997a1c35b24562bcca3e0fdb40ebfd41
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="using-the-message-class"></a>Uso de la clase de mensajes
 La clase <xref:System.ServiceModel.Channels.Message> es fundamental para [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. Toda la comunicación entre clientes y servicios, en última instancia, produce como resultado instancias <xref:System.ServiceModel.Channels.Message> que se envían y reciben.  
@@ -172,7 +174,7 @@ La clase <xref:System.ServiceModel.Channels.Message> es fundamental para [!INCLU
   
  Recupere un encabezado determinado mediante el método <xref:System.ServiceModel.Channels.MessageHeaders.FindHeader%2A>. Este método toma el nombre y espacio de nombres del encabezado para buscar y devuelve su índice. Si el encabezado se produce más de una vez, se produce una excepción. Si no se encuentra el encabezado, devuelve -1.  
   
- En el modelo del encabezado SOAP, los encabezados pueden tener un valor `Actor` que especifica el destinatario previsto del encabezado. La sobrecarga `FindHeader` más básica solo busca en los encabezados que están pensados para el receptor definitivo del mensaje. Sin embargo, otra sobrecarga le permite especificar qué valores `Actor` están incluidos en la búsqueda. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] la especificación SOAP.  
+ En el modelo del encabezado SOAP, los encabezados pueden tener un valor `Actor` que especifica el destinatario previsto del encabezado. La sobrecarga `FindHeader` más básica solo busca en los encabezados que están pensados para el receptor definitivo del mensaje. Sin embargo, otra sobrecarga le permite especificar qué valores `Actor` están incluidos en la búsqueda. Para obtener más información, vea la especificación de SOAP.  
   
  Se proporciona un método <xref:System.ServiceModel.Channels.MessageHeaders.CopyTo%28System.ServiceModel.Channels.MessageHeaderInfo%5B%5D%2CSystem.Int32%29> para copiar los encabezados de una colección <xref:System.ServiceModel.Channels.MessageHeaders> en una matriz de los objetos <xref:System.ServiceModel.Channels.MessageHeaderInfo>.  
   

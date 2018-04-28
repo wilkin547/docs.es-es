@@ -1,24 +1,26 @@
 ---
-title: "Cómo: Crear un servicio transaccional"
-ms.custom: 
+title: 'Cómo: Crear un servicio transaccional'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 1bd2e4ed-a557-43f9-ba98-4c70cb75c154
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4a61c1c4aeba63baee3c5e2ba5110710ed9f45f2
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9e39ecd346b5d5fb4113fd17abe9bde715a12aa4
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="how-to-create-a-transactional-service"></a>Cómo: Crear un servicio transaccional
 Este ejemplo muestra varios aspectos sobre la creación de un servicio transaccional y el uso de una transacción iniciada por el cliente para coordinar las operaciones de servicio.  
@@ -76,7 +78,7 @@ Este ejemplo muestra varios aspectos sobre la creación de un servicio transacci
     }  
     ```  
   
-3.  Configure los enlaces en el archivo de configuración, especificando que debería fluir el contexto de la transacción, y los protocolos que se van a utilizar para ello. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Configuración de transacción de ServiceModel](../../../../docs/framework/wcf/feature-details/servicemodel-transaction-configuration.md). Concretamente, se especifica el tipo de enlace en el atributo `binding` del elemento del extremo. El [ \<extremo >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) elemento contiene un `bindingConfiguration` atributo que hace referencia a una configuración de enlace denominada `transactionalOleTransactionsTcpBinding`, tal y como se muestra en el siguiente ejemplo de configuración.  
+3.  Configure los enlaces en el archivo de configuración, especificando que debería fluir el contexto de la transacción, y los protocolos que se van a utilizar para ello. Para obtener más información, consulte [configuración de transacción de ServiceModel](../../../../docs/framework/wcf/feature-details/servicemodel-transaction-configuration.md). Concretamente, se especifica el tipo de enlace en el atributo `binding` del elemento del extremo. El [ \<extremo >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) elemento contiene un `bindingConfiguration` atributo que hace referencia a una configuración de enlace denominada `transactionalOleTransactionsTcpBinding`, tal y como se muestra en el siguiente ejemplo de configuración.  
   
     ```xml  
     <service name="CalculatorService">  

@@ -16,16 +16,16 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 1e81a8eb27725edeccf3e5c7489109ba47b70dec
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 4e2afa9e868c1f561aed699a2bdf7d09c17898b3
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="hosting-in-a-managed-application"></a>Hospedaje en una aplicación administrada
 Los servicios de[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] se pueden hospedar en cualquier aplicación de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] . Los servicios autohospedados constituyen la opción de hospedaje más flexible porque es la que requiere una menor infraestructura para su implementación. Sin embargo, también es la opción de hospedaje menos robusta, porque las aplicaciones administradas no proporcionan las características de administración y hospedaje avanzadas de otras opciones de hospedaje de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], como Internet Information Services (IIS) y servicios de Windows.  
   
- Para crear un servicio autohospedado, cree y abra una instancia de <xref:System.ServiceModel.ServiceHost>, que inicia un servicio que realiza escuchas de mensajes. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Cómo: hospedar un servicio WCF en una aplicación administrada](../../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md).  
+ Para crear un servicio autohospedado, cree y abra una instancia de <xref:System.ServiceModel.ServiceHost>, que inicia un servicio que realiza escuchas de mensajes. Para obtener más información, consulte [Cómo: hospedar un servicio WCF en una aplicación administrada](../../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md).  
   
  Para obtener un ejemplo completo sobre cómo definir un contrato, implemente el contrato y hospedar un servicio dentro de una aplicación administrada, consulte la [Tutorial de introducción](../../../../docs/framework/wcf/getting-started-tutorial.md) y [autohospedaje](../../../../docs/framework/wcf/samples/self-host.md).  
   

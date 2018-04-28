@@ -1,27 +1,29 @@
 ---
-title: "Cómo: Especificar los valores de credenciales de cliente"
-ms.custom: 
+title: 'Cómo: Especificar los valores de credenciales de cliente'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 82293d7f-471a-4549-8f19-0be890e7b074
-caps.latest.revision: "28"
+caps.latest.revision: 28
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: cd818a2342ff5b44e4e8ab1b237f7c657d3bf438
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 35244032a36af8d3d23fd9d88006ea032a99b44b
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="how-to-specify-client-credential-values"></a>Cómo: Especificar los valores de credenciales de cliente
 Con [!INCLUDE[indigo1](../../../includes/indigo1-md.md)], el servicio puede especificar cómo se debe autenticar un cliente con él. Por ejemplo, un servicio puede estipular que el cliente se autentique mediante un certificado.  
@@ -32,7 +34,7 @@ Con [!INCLUDE[indigo1](../../../includes/indigo1-md.md)], el servicio puede espe
   
 2.  Abra el archivo de configuración XML. Si usa la herramienta Svcutil.exe, el nombre predeterminado del archivo es Output.config.  
   
-3.  Buscar el  **\<seguridad >** elemento con la **modo** atributo (**< SecurityMode =** `MessageOrTransport`  **>**  donde `MessageOrTransport` se establece en uno de los modos de seguridad.  
+3.  Buscar el  **\<seguridad >** elemento con la **modo** atributo (**< SecurityMode =** `MessageOrTransport` **>** donde `MessageOrTransport` se establece en uno de los modos de seguridad.  
   
 4.  Busque el elemento secundario que coincida con el valor del modo. Por ejemplo, si el modo está establecido en **mensaje**, buscar el  **\<mensaje >** los elementos en el  **\<seguridad >** elemento.  
   
@@ -50,7 +52,7 @@ Con [!INCLUDE[indigo1](../../../includes/indigo1-md.md)], el servicio puede espe
 ```  
   
 ## <a name="example-tcp-transport-mode-with-certificate-as-client-credential"></a>Ejemplo: modo de transporte TCP con certificado como credencial de cliente  
- Este ejemplo establece el modo de seguridad en transporte y establece el valor de credencial de cliente en un certificado X.509. Los procedimientos siguientes muestran cómo establecer el valor de credencial de cliente en el cliente en código y configuración. Se supone que ha usado el [la herramienta de utilidad de metadatos de ServiceModel (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) para devolver los metadatos (código y configuración) desde el servicio. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Cómo: crear un cliente](../../../docs/framework/wcf/how-to-create-a-wcf-client.md).  
+ Este ejemplo establece el modo de seguridad en transporte y establece el valor de credencial de cliente en un certificado X.509. Los procedimientos siguientes muestran cómo establecer el valor de credencial de cliente en el cliente en código y configuración. Se supone que ha usado el [la herramienta de utilidad de metadatos de ServiceModel (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) para devolver los metadatos (código y configuración) desde el servicio. Para obtener más información, consulte [Cómo: crear un cliente](../../../docs/framework/wcf/how-to-create-a-wcf-client.md).  
   
 #### <a name="to-specify-the-client-credential-value-on-the-client-in-code"></a>Para especificar el valor de credencial de cliente en el cliente en código  
   
@@ -73,7 +75,7 @@ Con [!INCLUDE[indigo1](../../../includes/indigo1-md.md)], el servicio puede espe
   
 3.  Agregar un [ \<clientCertificate >](../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-servicecredentials.md) elemento a la [ \<clientCredentials >](../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) elemento.  
   
-4.  Establezca los atributos siguientes en los valores adecuados: `storeLocation`, `storeName`, `x509FindType` y `findValue`, como se muestra en el código siguiente. [!INCLUDE[crabout](../../../includes/crabout-md.md)]certificados, consulte [trabajar con certificados](../../../docs/framework/wcf/feature-details/working-with-certificates.md).  
+4.  Establezca los atributos siguientes en los valores adecuados: `storeLocation`, `storeName`, `x509FindType` y `findValue`, como se muestra en el código siguiente. [!INCLUDE[crabout](../../../includes/crabout-md.md)] certificados, consulte [trabajar con certificados](../../../docs/framework/wcf/feature-details/working-with-certificates.md).  
   
     ```xml  
     <behaviors>  

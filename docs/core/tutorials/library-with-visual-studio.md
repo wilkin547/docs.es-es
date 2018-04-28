@@ -1,21 +1,20 @@
 ---
-title: "Creación de una biblioteca de clases de .NET Standard con C# y .NET Core en Visual Studio 2017"
-description: "Obtenga información sobre cómo crear una biblioteca de clases de .NET Standard escrita en C# con Visual Studio 2017."
-keywords: .NET Core, biblioteca de clases de .NET Standard, Visual Studio 2017
+title: Creación de una biblioteca de clases de .NET Standard con C# y .NET Core en Visual Studio 2017
+description: Obtenga información sobre cómo crear una biblioteca de clases de .NET Standard escrita en C# con Visual Studio 2017.
 author: BillWagner
 ms.author: wiwagn
 ms.date: 08/07/2017
-ms.topic: article
-ms.prod: .net-core
+ms.topic: conceptual
+ms.prod: dotnet-core
 ms.technology: devlang-csharp
 ms.devlang: csharp
-ms.assetid: c849ca26-6a25-4d35-9544-f343af88e0e7
-ms.workload: dotnetcore
-ms.openlocfilehash: cc24c97e878362e91ab9d27452fd44d7df81ada7
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 95db68e2568a2d54b6f7fe540672de3256226fd8
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="building-a-class-library-with-c-and-net-core-in-visual-studio-2017"></a>Creación de una biblioteca de clases con C# y .NET Core en Visual Studio 2017
 

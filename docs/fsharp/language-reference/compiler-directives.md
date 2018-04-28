@@ -1,20 +1,17 @@
 ---
 title: Directivas de compilador (F#)
-description: "Obtenga información sobre directivas de preprocesador de lenguaje F #, las directivas de compilación condicional, directivas de línea y directivas de compilador."
-keywords: "visual f#, f#, programación funcional"
+description: 'Obtenga información sobre directivas de preprocesador de lenguaje F #, las directivas de compilación condicional, directivas de línea y directivas de compilador.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 93aef07a-6747-4ce4-a10f-a05168978af6
-ms.openlocfilehash: c7ec056f407f3af34528205a5abb1cdef7d43fef
-ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
+ms.openlocfilehash: 03fe3598f04025cf6dfaf2424b9fcb33ed4b3859
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="compiler-directives"></a>Directivas de compilador
 
@@ -29,7 +26,7 @@ En la siguiente tabla se recoge una lista de las directivas de preprocesador dis
 
 |Directiva|Descripción|
 |---------|-----------|
-|`#if` *symbol*|Admite la compilación condicional. Código en la sección tras la `#if` se incluye si el *símbolo* está definido.|
+|`#if` *Símbolo*|Admite la compilación condicional. Código en la sección tras la `#if` se incluye si el *símbolo* está definido.|
 |`#else`|Admite la compilación condicional. Marca una sección de código que incluir si el símbolo usado con la directiva `#if` anterior no se ha definido.|
 |`#endif`|Admite la compilación condicional. Marca el final de una sección condicional de código.|
 |`#`[línea] *int*,<br/>`#`[línea] *int* *cadena*,<br/>`#`[línea] *int* *literales de cadenas*|Indica el nombre de archivo y la línea de código fuente original para la depuración. Esta característica se proporciona para las herramientas que generan código fuente de F#.|

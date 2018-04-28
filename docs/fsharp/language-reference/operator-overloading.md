@@ -1,20 +1,17 @@
 ---
 title: Sobrecarga de operadores (F#)
-description: "Obtenga información acerca de cómo sobrecargar los operadores aritméticos en una clase o tipo de registro y en el nivel global en F #."
-keywords: "visual f#, f#, programación funcional"
+description: 'Obtenga información acerca de cómo sobrecargar los operadores aritméticos en una clase o tipo de registro y en el nivel global en F #.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 019277ed-f649-4fa5-ad43-097865f449d9
-ms.openlocfilehash: 76ddab5339e11d71bb326b60d727017eb838ccf4
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 45fcb4d2acce29caa6b38d08ae4f166884f20147
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="operator-overloading"></a>Sobrecarga de operadores
 
@@ -106,7 +103,7 @@ Hay otras combinaciones de caracteres de operador que no se muestran en este tex
 
 
 
-|Carácter de operador|Name|
+|Carácter de operador|nombre|
 |------------------|----|
 |`>`|`Greater`|
 |`<`|`Less`|

@@ -15,17 +15,17 @@ helpviewer_keywords:
 - Windows Communication Foundation, security
 - bindings [WCF]
 ms.assetid: 4de03dd3-968a-4e65-af43-516e903d7f95
-caps.latest.revision: ''
+caps.latest.revision: 42
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: 9e44db963a696f22f91569eb3d7c2956289a9c76
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 5eb1019694f6228edbe3656849b85dfa7611ef18
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="bindings-and-security"></a>Enlaces y seguridad
 Los enlaces proporcionados por el sistema incluidos en [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] proporcionan una manera rápida de programar aplicaciones de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Con una excepción, todos los enlaces tienen un esquema de seguridad predeterminado habilitó. Este tema le ayuda a seleccionar el enlace adecuado a sus necesidades de seguridad.  
@@ -56,7 +56,7 @@ Los enlaces proporcionados por el sistema incluidos en [!INCLUDE[indigo1](../../
   
 -   Perfil de seguridad básico tal y como se define en WS-I.  
   
- De forma predeterminada, este enlace no es seguro. Está diseñado para interoperar con servicios ASMX. Cuando la seguridad está habilitada, el enlace está diseñado para ofrecer una interoperación perfecta con los mecanismos de seguridad de Internet Information Services (IIS), como la autenticación básica, el resumen y la seguridad integrada de Windows. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Introducción a la seguridad de transporte](../../../../docs/framework/wcf/feature-details/transport-security-overview.md). Este enlace admite lo siguiente:  
+ De forma predeterminada, este enlace no es seguro. Está diseñado para interoperar con servicios ASMX. Cuando la seguridad está habilitada, el enlace está diseñado para ofrecer una interoperación perfecta con los mecanismos de seguridad de Internet Information Services (IIS), como la autenticación básica, el resumen y la seguridad integrada de Windows. Para obtener más información, consulte [información general sobre la seguridad de transporte](../../../../docs/framework/wcf/feature-details/transport-security-overview.md). Este enlace admite lo siguiente:  
   
 -   Seguridad de transporte de HTTPS.  
   
@@ -64,7 +64,7 @@ Los enlaces proporcionados por el sistema incluidos en [!INCLUDE[indigo1](../../
   
 -   WS-Security.  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] <xref:System.ServiceModel.BasicHttpSecurity>, <xref:System.ServiceModel.BasicHttpMessageSecurity>, <xref:System.ServiceModel.BasicHttpMessageCredentialType>, y <xref:System.ServiceModel.BasicHttpSecurityMode>.  
+ Para obtener más información, vea<xref:System.ServiceModel.BasicHttpSecurity>, <xref:System.ServiceModel.BasicHttpMessageSecurity>, <xref:System.ServiceModel.BasicHttpMessageCredentialType>y <xref:System.ServiceModel.BasicHttpSecurityMode>.  
   
 ### <a name="wshttpbinding"></a>WSHttpBinding  
  En el código, utilice la <xref:System.ServiceModel.WSHttpBinding> clase; en la configuración, utilice la [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md).  
@@ -77,7 +77,7 @@ Los enlaces proporcionados por el sistema incluidos en [!INCLUDE[indigo1](../../
   
 -   Protección de transportes HTTPS con seguridad de credenciales de mensajes SOAP para autenticar al llamador.  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] <xref:System.ServiceModel.WSHttpSecurity>, <xref:System.ServiceModel.MessageSecurityOverHttp>, <xref:System.ServiceModel.MessageCredentialType>, <xref:System.ServiceModel.SecurityMode>, <xref:System.ServiceModel.HttpTransportSecurity>, <xref:System.ServiceModel.HttpClientCredentialType>, y <xref:System.ServiceModel.HttpProxyCredentialType>.  
+ Para obtener más información, consulte <xref:System.ServiceModel.WSHttpSecurity>, <xref:System.ServiceModel.MessageSecurityOverHttp>, <xref:System.ServiceModel.MessageCredentialType>, <xref:System.ServiceModel.SecurityMode>, <xref:System.ServiceModel.HttpTransportSecurity>, <xref:System.ServiceModel.HttpClientCredentialType>, y <xref:System.ServiceModel.HttpProxyCredentialType>.  
   
 ### <a name="wsdualhttpbinding"></a>WSDualHttpBinding  
  En el código, utilice la <xref:System.ServiceModel.WSDualHttpBinding> clase; en la configuración, utilice la [ \<wsDualHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md).  
@@ -102,7 +102,7 @@ Los enlaces proporcionados por el sistema incluidos en [!INCLUDE[indigo1](../../
   
     -   Proporcionar credenciales de servicio negociadas desde el servicio como parte de la configuración del canal.  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] <xref:System.ServiceModel.WSDualHttpSecurity> y <xref:System.ServiceModel.WSDualHttpSecurityMode>.  
+ Para obtener más información, consulte <xref:System.ServiceModel.WSDualHttpSecurity> y <xref:System.ServiceModel.WSDualHttpSecurityMode>.  
   
 ### <a name="nettcpbinding"></a>NetTcpBinding  
  En el código, utilice la <xref:System.ServiceModel.NetTcpBinding> clase; en la configuración, utilice la [ \<netTcpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md).  
@@ -125,7 +125,7 @@ Los enlaces proporcionados por el sistema incluidos en [!INCLUDE[indigo1](../../
   
 -   Seguridad de transporte con credencial de mensaje; confidencialidad e integridad proporcionadas por la seguridad del nivel de transporte (TLS) sobre TCP, y credenciales para la autorización proporcionada por WS-Security.  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] <xref:System.ServiceModel.NetTcpSecurity>, <xref:System.ServiceModel.TcpTransportSecurity>, <xref:System.ServiceModel.TcpClientCredentialType>, <xref:System.ServiceModel.MessageSecurityOverTcp>, y <xref:System.ServiceModel.MessageCredentialType>.  
+ Para obtener más información, consulte <xref:System.ServiceModel.NetTcpSecurity>, <xref:System.ServiceModel.TcpTransportSecurity>, <xref:System.ServiceModel.TcpClientCredentialType>, <xref:System.ServiceModel.MessageSecurityOverTcp>, y <xref:System.ServiceModel.MessageCredentialType>.  
   
 ### <a name="netnamedpipebinding"></a>NetNamedPipeBinding  
  En el código, utilice la <xref:System.ServiceModel.NetNamedPipeBinding> clase; en la configuración, utilice la [ \<netNamedPipeBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/netnamedpipebinding.md).  
@@ -144,7 +144,7 @@ Los enlaces proporcionados por el sistema incluidos en [!INCLUDE[indigo1](../../
   
 -   Autenticación utilizando la seguridad de Windows.  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)], <xref:System.ServiceModel.NetNamedPipeSecurity>, <xref:System.ServiceModel.NetNamedPipeSecurityMode> y <xref:System.ServiceModel.NamedPipeTransportSecurity>.  
+ Para obtener más información, vea <xref:System.ServiceModel.NetNamedPipeSecurity>, <xref:System.ServiceModel.NetNamedPipeSecurityMode> y <xref:System.ServiceModel.NamedPipeTransportSecurity>.  
   
 ### <a name="msmqintegrationbinding"></a>MsmqIntegrationBinding  
  En el código, utilice la <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> clase; en la configuración, utilice la [ \<msmqIntegrationBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/msmqintegrationbinding.md).  
@@ -157,7 +157,7 @@ Los enlaces proporcionados por el sistema incluidos en [!INCLUDE[indigo1](../../
   
 -   Seguridad de transporte de MSMQ (Transporte).  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] <xref:System.ServiceModel.NetMsmqSecurity> y <xref:System.ServiceModel.NetMsmqSecurityMode>.  
+ Para obtener más información, consulte <xref:System.ServiceModel.NetMsmqSecurity> y <xref:System.ServiceModel.NetMsmqSecurityMode>.  
   
 ### <a name="netmsmqbinding"></a>NetMsmqBinding  
  En el código, utilice la <xref:System.ServiceModel.NetMsmqBinding> clase; en la configuración, utilice la [ \<netMsmqBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md).  
@@ -178,17 +178,17 @@ Los enlaces proporcionados por el sistema incluidos en [!INCLUDE[indigo1](../../
   
  Se admite la credencial <xref:System.ServiceModel.MessageCredentialType.Certificate> solo cuando el modo de seguridad está establecido en <xref:System.ServiceModel.NetMsmqSecurityMode.Both> o <xref:System.ServiceModel.NetMsmqSecurityMode.Message>.  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] <xref:System.ServiceModel.MessageSecurityOverMsmq> y <xref:System.ServiceModel.MsmqTransportSecurity>.  
+ Para obtener más información, consulte <xref:System.ServiceModel.MessageSecurityOverMsmq> y <xref:System.ServiceModel.MsmqTransportSecurity>.  
   
 ### <a name="wsfederationhttpbinding"></a>WSFederationHttpBinding  
  En el código, utilice la <xref:System.ServiceModel.WSFederationHttpBinding> clase; en la configuración, utilice la [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md).  
   
  De forma predeterminada, este enlace utiliza WS-Security (seguridad de nivel de mensaje).  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Federación](../../../../docs/framework/wcf/feature-details/federation.md), <xref:System.ServiceModel.WSFederationHttpSecurity>, y <xref:System.ServiceModel.WSFederationHttpSecurityMode>.  
+ Para obtener más información, consulte [federación](../../../../docs/framework/wcf/feature-details/federation.md), <xref:System.ServiceModel.WSFederationHttpSecurity>, y <xref:System.ServiceModel.WSFederationHttpSecurityMode>.  
   
 ## <a name="custom-bindings"></a>Enlaces personalizados  
- Si ninguno de los enlaces proporcionados por el sistema cumple sus requisitos, puede crear un enlace personalizado con un elemento de enlace de seguridad personalizado. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Capacidades de seguridad con enlaces personalizados](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md).  
+ Si ninguno de los enlaces proporcionados por el sistema cumple sus requisitos, puede crear un enlace personalizado con un elemento de enlace de seguridad personalizado. Para obtener más información, consulte [capacidades de seguridad con enlaces personalizados](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md).  
   
 ## <a name="binding-choices"></a>Opciones de enlaces  
  La tabla siguiente resume las características proporcionadas en la configuración del modo de seguridad, es decir, hace una lista de las características disponibles cuando el modo de seguridad se establece en `Transport`, `Message`o `TransportWithMessageCredential`. Utilice esta tabla para encontrar las características de seguridad que requiere su aplicación.  
@@ -218,12 +218,12 @@ Los enlaces proporcionados por el sistema incluidos en [!INCLUDE[indigo1](../../
 |Tipo|Descripción|  
 |----------|-----------------|  
 |Ninguna|Especifica que el cliente no necesita presentar ningún credencial. Realiza una conversión a un cliente anónimo.|  
-|Básico|Autenticación básica. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] RFC 2617 de autenticación HTTP: Autenticación básica e implícita, disponible en [ http://go.microsoft.com/fwlink/?LinkId=84023 ](http://go.microsoft.com/fwlink/?LinkId=84023).|  
-|Implícita|Autenticación implícita. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] RFC 2617 de autenticación HTTP: Autenticación básica e implícita, disponible en [ http://go.microsoft.com/fwlink/?LinkId=84023 ](http://go.microsoft.com/fwlink/?LinkId=84023).|  
+|Básico|Autenticación básica. Para obtener más información, consulte RFC 2617 de HTTP Authentication: Basic and Digest Authentication, disponible en [ http://go.microsoft.com/fwlink/?LinkId=84023 ](http://go.microsoft.com/fwlink/?LinkId=84023).|  
+|Implícita|Autenticación implícita. Para obtener más información, consulte RFC 2617 de HTTP Authentication: Basic and Digest Authentication, disponible en [ http://go.microsoft.com/fwlink/?LinkId=84023 ](http://go.microsoft.com/fwlink/?LinkId=84023).|  
 |NTLM|Autenticación NT LAN Manager (NTLM).|  
 |Windows|Autenticación de Windows.|  
 |Certificado|Autenticación realizada utilizando un certificado.|  
-|IssuedToken|Permite al servicio requerir que el cliente se autentique utilizando un token emitido por un servicio de token de seguridad o mediante [!INCLUDE[infocard](../../../../includes/infocard-md.md)]. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Federación y Tokens emitidos](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).|  
+|IssuedToken|Permite al servicio requerir que el cliente se autentique utilizando un token emitido por un servicio de token de seguridad o mediante [!INCLUDE[infocard](../../../../includes/infocard-md.md)]. Para obtener más información, consulte [federación y Tokens emitidos](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).|  
   
 ### <a name="message-client-credentials-in-bindings"></a>Credenciales de cliente de mensaje en enlaces  
  La tabla siguiente enumera los tipos de credenciales de cliente disponibles al utilizar un enlace en el modo de seguridad de mensajes.  

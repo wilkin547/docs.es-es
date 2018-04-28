@@ -1,28 +1,28 @@
 ---
 title: Suplentes de contratos de datos
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - data contracts [WCF], surrogates
 ms.assetid: 8c31134c-46c5-4ed7-94af-bab0ac0dfce5
-caps.latest.revision: 
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: f6fcae1989b75a668fd6ff38596b06feca7be9e8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e6b372b998d7b3a91189032947a9ad8c68074b5d
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="data-contract-surrogates"></a>Suplentes de contratos de datos
 El contrato de datos *suplente* es una característica avanzada basada en el modelo de contrato de datos. Esta característica está diseñada para ser utilizada para la personalización de tipo y substitución en situaciones donde los usuarios desean cambiar cómo un tipo se serializa, deserializa o se proyecta en metadatos. Algunos escenarios donde se puede utilizar un suplente es cuando un contrato de datos no se ha especificado para el tipo, los campos y las propiedades no están marcados con el atributo <xref:System.Runtime.Serialization.DataMemberAttribute> o los usuarios desean crear dinámicamente las variaciones del esquema.  
@@ -75,7 +75,7 @@ El contrato de datos *suplente* es una característica avanzada basada en el mod
   
  El parámetro `targetType` hace referencia al tipo declarado del miembro. Este parámetro es el tipo suplente devuelto por el método <xref:System.Runtime.Serialization.IDataContractSurrogate.GetDataContractType%2A>. El serializador no exige que el objeto devuelto se pueda asignar a este tipo. El `obj` parámetro es el objeto que se va a serializar y se convertirá en su suplente si es necesario. Este método debe devolver el objeto de entrada si el suplente no controla el objeto. De lo contrario, se devolverá el nuevo objeto suplente. No se llama al suplente si el objeto es NULL. Las numerosas asignaciones del suplente para las diferentes instancias se pueden definir dentro de este método.  
   
- Al crear <xref:System.Runtime.Serialization.DataContractSerializer>, puede indicarle que conserve las referencias a objeto. ([!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Serialización y deserialización](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md).) Esto se hace estableciendo el parámetro `preserveObjectReferences` en su constructor en `true`. En tal caso, se llama al suplente solo una vez para un objeto puesto que todas las serializaciones subsiguientes simplemente escriben la referencia en la secuencia. Si `preserveObjectReferences` está establecido en `false`, se llama al suplente cada vez que se encuentra una instancia.  
+ Al crear <xref:System.Runtime.Serialization.DataContractSerializer>, puede indicarle que conserve las referencias a objeto. (Para obtener más información, consulte [serialización y deserialización](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md).) Esto se hace estableciendo el parámetro `preserveObjectReferences` en su constructor en `true`. En tal caso, se llama al suplente solo una vez para un objeto puesto que todas las serializaciones subsiguientes simplemente escriben la referencia en la secuencia. Si `preserveObjectReferences` está establecido en `false`, se llama al suplente cada vez que se encuentra una instancia.  
   
  Si el tipo de la instancia serializada difiere del tipo declarado, la información de tipo se escribe en la secuencia, por ejemplo, `xsi:type` para permitir deserializar la instancia en el otro extremo. Este proceso se produce tanto si el objeto es suplente como si no.  
   
@@ -144,7 +144,7 @@ El contrato de datos *suplente* es una característica avanzada basada en el mod
 ### <a name="getknowncustomdatatypes-method"></a>Método GetKnownCustomDataTypes  
  Este método obtiene tipos de datos personalizados definidos a partir del esquema. Este método es opcional para la importación del esquema.  
   
- Se llama al método al principio de la exportación e importación del esquema. El método devuelve los tipos de datos personalizados utilizados en el esquema exportado o importado. El método se pasa a <xref:System.Collections.ObjectModel.Collection%601> (el parámetro `customDataTypes`), que es una colección de tipos. El método debería agregar los tipos conocidos adicionales a esta colección. Los tipos de datos personalizados conocidos son necesarios para habilitar la serialización y deserialización de datos personalizados utilizando <xref:System.Runtime.Serialization.DataContractSerializer>. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Tipos conocidos de contrato de datos](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).  
+ Se llama al método al principio de la exportación e importación del esquema. El método devuelve los tipos de datos personalizados utilizados en el esquema exportado o importado. El método se pasa a <xref:System.Collections.ObjectModel.Collection%601> (el parámetro `customDataTypes`), que es una colección de tipos. El método debería agregar los tipos conocidos adicionales a esta colección. Los tipos de datos personalizados conocidos son necesarios para habilitar la serialización y deserialización de datos personalizados utilizando <xref:System.Runtime.Serialization.DataContractSerializer>. Para obtener más información, consulte [tipos conocidos de contrato de datos](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).  
   
 ## <a name="implementing-a-surrogate"></a>Implementar un suplente  
  Para utilizar el suplente del contrato de datos dentro de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], debe seguir unos procedimientos especiales.  

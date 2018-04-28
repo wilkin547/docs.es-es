@@ -22,11 +22,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 43eaa4ffe562cf1dde5abd7e7540125dcf383732
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 4d7988630e2eba3e6d5ebdc8b15b23aeb280a66f
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="importing-schema-to-generate-classes"></a>Importación del esquema para generar clases
 Para generar las clases desde los esquemas que se pueden utilizar con [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], utilice la clase <xref:System.Runtime.Serialization.XsdDataContractImporter>. En este tema se describen el proceso y variaciones.  
@@ -114,7 +114,7 @@ Para generar las clases desde los esquemas que se pueden utilizar con [!INCLUDE[
  [!code-xml[C_SchemaImportExport#12](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_schemaimportexport/common/source.config#12)]  
   
 > [!NOTE]
->  Las asociaciones también se podrían considerar una lista. Por ejemplo, puede ver la asociación anterior como una lista de objetos `city` complejos que tienen dos campos (un campo de cadena y un campo de valor entero). Ambos patrones tienen una representación en el Esquema XSD. No hay ningún modo de diferenciar entre una lista y una asociación, así que estos patrones siempre se tratan como listas a menos que haya una anotación especial en el esquema específica para [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. La anotación indica que un patrón determinado representa una asociación. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Referencia de esquema de contrato de datos](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md).  
+>  Las asociaciones también se podrían considerar una lista. Por ejemplo, puede ver la asociación anterior como una lista de objetos `city` complejos que tienen dos campos (un campo de cadena y un campo de valor entero). Ambos patrones tienen una representación en el Esquema XSD. No hay ningún modo de diferenciar entre una lista y una asociación, así que estos patrones siempre se tratan como listas a menos que haya una anotación especial en el esquema específica para [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. La anotación indica que un patrón determinado representa una asociación. Para obtener más información, consulte [referencia de esquema de contrato de datos](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md).  
   
  Normalmente, una lista se importa como un contrato de datos de colección derivado de una Lista Genérica o como una matriz [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], según si el esquema sigue el patrón estándar de denominación o no para las colecciones. Esto se describe con más detalle en [tipos de colección en contratos de datos](../../../../docs/framework/wcf/feature-details/collection-types-in-data-contracts.md). Las asociaciones se importan normalmente como <xref:System.Collections.Generic.Dictionary%602> o como un contrato de datos de colección derivado del objeto de diccionario. Por ejemplo, considere el siguiente esquema:  
   
@@ -161,7 +161,7 @@ Para generar las clases desde los esquemas que se pueden utilizar con [!INCLUDE[
   
 ##### <a name="design-considerations"></a>Consideraciones de diseño  
   
--   Puede ser difícil trabajar directamente con la representación XML con tipos débiles. Considere utilizar un motor de serialización alternativo, como por ejemplo <xref:System.Xml.Serialization.XmlSerializer>, para trabajar con esquema no compatible con contratos de datos fuertemente tipados. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Mediante la clase XmlSerializer](../../../../docs/framework/wcf/feature-details/using-the-xmlserializer-class.md).  
+-   Puede ser difícil trabajar directamente con la representación XML con tipos débiles. Considere utilizar un motor de serialización alternativo, como por ejemplo <xref:System.Xml.Serialization.XmlSerializer>, para trabajar con esquema no compatible con contratos de datos fuertemente tipados. Para obtener más información, consulte [mediante la clase XmlSerializer](../../../../docs/framework/wcf/feature-details/using-the-xmlserializer-class.md).  
   
 -   <xref:System.Runtime.Serialization.XsdDataContractImporter> no puede importar algunas construcciones de esquema incluso cuando la propiedad <xref:System.Runtime.Serialization.ImportOptions.ImportXmlType%2A> está establecida en `true`. De nuevo, considere utilizar <xref:System.Xml.Serialization.XmlSerializer> para estos casos.  
   
@@ -190,7 +190,7 @@ Para generar las clases desde los esquemas que se pueden utilizar con [!INCLUDE[
   
 -   Propiedad <xref:System.Runtime.Serialization.ImportOptions.CodeProvider%2A>. Especifique <xref:System.CodeDom.Compiler.CodeDomProvider> que quiere utilizar para generar el código para las clases generadas. El mecanismo de importación intenta evitar características que <xref:System.CodeDom.Compiler.CodeDomProvider> no admite. Si no se establece <xref:System.Runtime.Serialization.ImportOptions.CodeProvider%2A>, el conjunto completo de características de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] se utiliza sin restricciones.  
   
--   Propiedad <xref:System.Runtime.Serialization.ImportOptions.DataContractSurrogate%2A>. Se puede especificar una implementación <xref:System.Runtime.Serialization.IDataContractSurrogate> con esta propiedad. <xref:System.Runtime.Serialization.IDataContractSurrogate> personaliza el proceso de importación. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Suplentes del contrato de datos](../../../../docs/framework/wcf/extending/data-contract-surrogates.md). De forma predeterminada, no se utiliza ningún suplente.  
+-   Propiedad <xref:System.Runtime.Serialization.ImportOptions.DataContractSurrogate%2A>. Se puede especificar una implementación <xref:System.Runtime.Serialization.IDataContractSurrogate> con esta propiedad. <xref:System.Runtime.Serialization.IDataContractSurrogate> personaliza el proceso de importación. Para obtener más información, consulte [suplentes del contrato de datos](../../../../docs/framework/wcf/extending/data-contract-surrogates.md). De forma predeterminada, no se utiliza ningún suplente.  
   
 ## <a name="see-also"></a>Vea también  
  <xref:System.Runtime.Serialization.DataContractSerializer>  

@@ -1,21 +1,19 @@
 ---
 title: Creación de una plantilla personalizada para dotnet new
 description: Obtenga información sobre cómo crear una plantilla personalizada para el comando dotnet new en este ameno tutorial.
-keywords: .NET, .NET Core, plantilla, creación de plantillas, tutorial, dotnet new
 author: guardrex
 ms.author: mairaw
 ms.date: 08/12/2017
-ms.topic: article
-ms.prod: .net-core
+ms.topic: conceptual
+ms.prod: dotnet-core
 ms.devlang: dotnet
-ms.assetid: 519b910a-6efe-4394-9b81-0546aa3e7462
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: 7830a437b46d2080efc65f43f9112503add4c305
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
-ms.translationtype: MT
+ms.openlocfilehash: 9ff58634daa6d51c10df9a3c9a1af0fd6420c69c
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="create-a-custom-template-for-dotnet-new"></a>Creación de una plantilla personalizada para dotnet new
 
@@ -74,7 +72,7 @@ Ha terminado la plantilla. Una vez hecho esto, tiene dos opciones para la distri
 
 1. Dentro de un elemento **\<packageTypes>** en el archivo *nuspec*, incluya un elemento **\<packageType>** con un valor de atributo `name` de `Template`. Tanto la carpeta *content* como el archivo *nuspec* deben estar en el mismo directorio. En la tabla se muestran los elementos de archivo *nuspec* mínimos necesarios para generar una plantilla como un paquete NuGet.
 
-   | Elemento            | Tipo   | Descripción |
+   | Elemento            | Tipo   | Description |
    | ------------------ | ------ | ----------- |
    | **\<authors>**     | cadena | Una lista separada por comas de los autores de los paquetes, que coinciden con los nombres de perfil de nuget.org. Estos se muestran en la galería de NuGet, en nuget.org, y se usan para hacer referencias cruzadas a paquetes de los mismos autores. |
    | **\<description>** | cadena | Una descripción larga del paquete para su visualización en la interfaz de usuario. |

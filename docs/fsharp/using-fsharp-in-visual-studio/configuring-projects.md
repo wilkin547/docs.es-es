@@ -1,20 +1,17 @@
 ---
 title: 'Configurar los proyectos (F #)'
-description: "Obtenga información acerca de cómo utilizar el Diseñador de proyectos cuando se trabaja con proyectos de F # en Visual Studio."
-keywords: "visual f#, f#, programación funcional"
+description: 'Obtenga información acerca de cómo utilizar el Diseñador de proyectos cuando se trabaja con proyectos de F # en Visual Studio.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 8b2ed206-34e4-4256-a6ce-0c2499561165
-ms.openlocfilehash: f56fed1e16b4de1d97766f37cb1c72297d5502d5
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: eac5b61d6b61d2aa1cb7b1606d60995a0355e975
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="configuring-projects-in-visual-studio"></a>Configurar los proyectos en Visual Studio
 
@@ -28,9 +25,9 @@ El **Diseñador de proyectos** y su uso general se describen totalmente en el te
 
 |Página del Diseñador de proyectos|Vínculos relacionados|Descripción|
 |---------------------|-------------|-----------|
-|`Application`|[Página de aplicación, Diseñador de proyectos &#40; C &#35; &#41;](https://msdn.microsoft.com/library/ms247046.aspx)|Le permite especificar la configuración del nivel de aplicación y las propiedades, por ejemplo, si está creando una biblioteca o un archivo ejecutable, qué versión de .NET Framework en la que está destinada la aplicación e información sobre donde el archivo de recursos que la aplicación usa está almacenadas.|
-|`Build`|[Generar página, Diseñador de proyectos &#40; C &#35; &#41;](https://msdn.microsoft.com/library/kb4wyys2.aspx)|Le permite controlar cómo se compila el código.|
-|`Build Events`|[Crear página de eventos, Diseñador de proyectos &#40; C &#35; &#41;](https://msdn.microsoft.com/library/kb4wyys2.aspx)|Le permite especificar comandos que se ejecuten antes o después de la compilación.|
+|`Application`|[Página de aplicación, Diseñador de proyectos &#40;C&#35;&#41;](https://msdn.microsoft.com/library/ms247046.aspx)|Le permite especificar la configuración del nivel de aplicación y las propiedades, por ejemplo, si está creando una biblioteca o un archivo ejecutable, qué versión de .NET Framework en la que está destinada la aplicación e información sobre donde el archivo de recursos que la aplicación usa está almacenadas.|
+|`Build`|[Generar página, Diseñador de proyectos &#40;C&#35;&#41;](https://msdn.microsoft.com/library/kb4wyys2.aspx)|Le permite controlar cómo se compila el código.|
+|`Build Events`|[Página de eventos de compilación, Diseñador de proyectos &#40;C&#35;&#41;](https://msdn.microsoft.com/library/kb4wyys2.aspx)|Le permite especificar comandos que se ejecuten antes o después de la compilación.|
 |`Debug`|[Página Depuración, Diseñador de proyectos](https://msdn.microsoft.com/library/2wcdezs5.aspx)|Le permite controlar cómo se ejecuta la aplicación durante la depuración. Esto incluye qué línea de comandos que se usará y ¿qué es el directorio de inicio de la aplicación y cualquier especiales que desea habilitar, como código nativo y SQL de modos de depuración.|
 |`Reference Paths`|[Administrar referencias en un proyecto](/visualstudio/ide/managing-references-in-a-project)|Le permite especificar dónde buscar los ensamblados que depende el código.|
 

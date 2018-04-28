@@ -1,20 +1,17 @@
 ---
 title: Expresiones con procesamiento diferido (F#)
-description: "Obtenga información acerca de cómo F # con procesamiento diferido puede mejorar el rendimiento de sus aplicaciones y bibliotecas."
-keywords: "visual f#, f#, programación funcional"
+description: 'Obtenga información acerca de cómo F # con procesamiento diferido puede mejorar el rendimiento de sus aplicaciones y bibliotecas.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 3499293e-1d53-4b02-b764-f687fbdaa7fe
-ms.openlocfilehash: 984c96ab68a8919e2382eefe8260b07f191027dd
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 72dc5a14a845b52ae2512314d730516ca0cf4b9d
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="lazy-computations"></a>Expresiones con procesamiento diferido
 
@@ -32,7 +29,7 @@ En la sintaxis anterior, *expresión* es código que se evalúa solo cuando sea 
 
 Expresiones con procesamiento diferidas permiten mejorar el rendimiento mediante la restricción de la ejecución de un cálculo a solo aquellas situaciones en que se necesita un resultado.
 
-Para forzar el cálculo que se realice, llame al método `Force`. `Force`hace que la ejecución realizar solo una vez. Las llamadas subsiguientes a `Force` devuelven el mismo resultado, pero no ejecute ningún código.
+Para forzar el cálculo que se realice, llame al método `Force`. `Force` hace que la ejecución realizar solo una vez. Las llamadas subsiguientes a `Force` devuelven el mismo resultado, pero no ejecute ningún código.
 
 El código siguiente muestra el uso de expresiones con procesamiento diferido y el uso de `Force`. En este código, el tipo de `result` es `Lazy<int>`y el `Force` método devuelve un `int`.
 

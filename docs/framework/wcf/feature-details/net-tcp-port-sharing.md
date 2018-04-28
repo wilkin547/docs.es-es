@@ -1,27 +1,29 @@
 ---
 title: Uso compartido de puertos Net.TCP
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - port activation [WCF]
 - port sharing [WCF]
 ms.assetid: f13692ee-a179-4439-ae72-50db9534eded
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 013c9e963ca75cc612d869a55b33d69aebbcad33
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: c7abf272cb1d069b0fbdcd561256580de5a82c29
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="nettcp-port-sharing"></a>Uso compartido de puertos Net.TCP
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] proporciona un nuevo protocolo de red basado en TCP (net.tcp://) para la comunicación de alto rendimiento. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] también presenta un nuevo componente del sistema, el servicio de uso compartido de puertos Net.TCP que permite compartir puertos de net.tcp en varios procesos de usuario.  
@@ -49,12 +51,12 @@ ms.lasthandoff: 12/22/2017
  Cuando un servicio de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] que utiliza el uso compartido de  puertos net.tcp:// se abre, la infraestructura de transporte TCP de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] no abre directamente un socket TCP en el proceso de la aplicación. En su lugar, la infraestructura de transporte registra el Identificador uniforme de recursos (URI) de la dirección base del servicio con el servicio de uso compartido de puertos Net.TCP y espera a que el servicio de uso compartido de puertos escuche mensajes en su nombre.  El servicio de uso compartido de puertos entrega mensajes direccionados al servicio de la aplicación según van llegando.  
   
 ## <a name="installing-port-sharing"></a>Instalación del uso compartido de puertos  
- El servicio de uso compartido de puertos Net.TCP está disponible en todos los sistemas operativos que [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)] admite, pero el servicio no está habilitado de forma predeterminada. Como precaución de seguridad, un administrador debe poder habilitar manualmente el servicio de uso compartido de puertos Net.TCP antes de utilizarlo por primera vez. El servicio de uso compartido de puertos Net.TCP expone opciones de configuración que permiten manipular varias características de los sockets de red que posee el servicio de uso compartido de puertos. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Cómo: habilitar el servicio de uso compartido de puertos Net.TCP](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md).  
+ El servicio de uso compartido de puertos Net.TCP está disponible en todos los sistemas operativos que [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)] admite, pero el servicio no está habilitado de forma predeterminada. Como precaución de seguridad, un administrador debe poder habilitar manualmente el servicio de uso compartido de puertos Net.TCP antes de utilizarlo por primera vez. El servicio de uso compartido de puertos Net.TCP expone opciones de configuración que permiten manipular varias características de los sockets de red que posee el servicio de uso compartido de puertos. Para obtener más información, consulte [Cómo: habilitar el servicio de uso compartido de puertos Net.TCP](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md).  
   
 ## <a name="using-nettcp-port-sharing-in-an-application"></a>Uso del uso compartido de puertos Net.tcp en una aplicación  
  La manera más fácil de utilizar el uso compartido de puertos net.tcp:// en su aplicación de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], es exponer un servicio mediante <xref:System.ServiceModel.NetTcpBinding> y, a continuación, habilitar el servicio de uso compartido de puertos Net.TCP, mediante la propiedad <xref:System.ServiceModel.NetTcpBinding.PortSharingEnabled%2A>.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Cómo hacer esto, consulte [Cómo: configurar un servicio de WCF para uso compartido de puerto](../../../../docs/framework/wcf/feature-details/how-to-configure-a-wcf-service-to-use-port-sharing.md).  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Cómo hacer esto, consulte [Cómo: configurar un servicio de WCF para uso compartido de puerto](../../../../docs/framework/wcf/feature-details/how-to-configure-a-wcf-service-to-use-port-sharing.md).  
   
 ## <a name="security-implications-of-port-sharing"></a>Implicaciones de seguridad del uso compartido de puertos  
  Aunque el servicio de uso compartido de puertos Net.TCP proporciona una capa de procesamiento entre las aplicaciones y la red, las aplicaciones que utilizan el uso compartido de puertos todavía deberían seguir estando protegidas como si estuvieran realizando escuchas directamente en la red. En concreto, las aplicaciones que utilizan el uso compartido de puertos deberían evaluar los privilegios de procesos bajo los que se ejecutan. Considere ejecutar su aplicación utilizando la cuenta de servicio de red integrada, que se ejecuta con el conjunto mínimo de privilegios de procesos requeridos para la comunicación por red.  

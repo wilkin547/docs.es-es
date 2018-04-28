@@ -1,20 +1,17 @@
 ---
-title: "Expresiones de código delimitadas (F#)"
-description: "Obtenga información sobre F # expresiones de código delimitadas, una característica del lenguaje que permite generar y trabajar con expresiones de código de F # mediante programación."
-keywords: "visual f#, f#, programación funcional"
+title: Expresiones de código delimitadas (F#)
+description: 'Obtenga información sobre F # expresiones de código delimitadas, una característica del lenguaje que permite generar y trabajar con expresiones de código de F # mediante programación.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 4559e659-2b04-48bd-8a0b-8527920eec95
-ms.openlocfilehash: f7a08013bc6487b570a62576bb01ca2dd65ce8b1
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: cfa2e4b9a4ad1776315dfa8ea82fb8fc3f13a552
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="code-quotations"></a>Expresiones de código delimitadas
 
@@ -77,7 +74,7 @@ En el ejemplo siguiente se muestra el uso de expresiones de código delimitadas 
 ### <a name="code"></a>Código
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-3/snippet601.fs)]
     
-### <a name="output"></a>Resultado
+### <a name="output"></a>Salida
 
 ```fsharp
 fun (x:System.Int32) -> x + 1
@@ -88,7 +85,7 @@ let f = fun (x:System.Int32) -> x + 10 in f 10
 ## <a name="example"></a>Ejemplo
 
 ### <a name="description"></a>Descripción
-También puede utilizar los tres modelos activos en el [ExprShape (módulo)](https://msdn.microsoft.com/library/7685150e-2432-4d39-9338-57292eff18de) para recorrer los árboles de expresión con menos modelos activos. Estos modelos activos pueden ser útiles cuando desea recorrer un árbol pero no es necesario toda la información en la mayoría de los nodos. Al usar estos patrones, cualquier expresión de F # coincide con uno de los siguientes tres modelos: `ShapeVar` si la expresión es una variable, `ShapeLambda` si la expresión es una expresión lambda, o `ShapeCombination` si la expresión es algo más. Si recorrer un árbol de expresión mediante el uso de los patrones activos como en el ejemplo de código anterior, tendrá que utilizar muchos más modelos para administrar todos los tipos de expresión de F # posibles, y el código será más complejo. Para obtener más información, consulte [ExprShape.ShapeVar &#124; ShapeLambda &#124; Modelo activo de ShapeCombination](https://msdn.microsoft.com/visualfsharpdocs/conceptual/exprshape.shapevarhshapelambdahshapecombination-active-pattern-%5bfsharp%5d).
+También puede utilizar los tres modelos activos en el [ExprShape (módulo)](https://msdn.microsoft.com/library/7685150e-2432-4d39-9338-57292eff18de) para recorrer los árboles de expresión con menos modelos activos. Estos modelos activos pueden ser útiles cuando desea recorrer un árbol pero no es necesario toda la información en la mayoría de los nodos. Al usar estos patrones, cualquier expresión de F # coincide con uno de los siguientes tres modelos: `ShapeVar` si la expresión es una variable, `ShapeLambda` si la expresión es una expresión lambda, o `ShapeCombination` si la expresión es algo más. Si recorrer un árbol de expresión mediante el uso de los patrones activos como en el ejemplo de código anterior, tendrá que utilizar muchos más modelos para administrar todos los tipos de expresión de F # posibles, y el código será más complejo. Para obtener más información, consulte [ExprShape.ShapeVar&#124;ShapeLambda&#124;ShapeCombination (modelo activo)](https://msdn.microsoft.com/visualfsharpdocs/conceptual/exprshape.shapevarhshapelambdahshapecombination-active-pattern-%5bfsharp%5d).
 
 El ejemplo de código siguiente puede utilizarse como base para recorridos más complejos. En este código, se crea un árbol de expresión para una expresión que implica una llamada de función, `add`. El [SpecificCall](https://msdn.microsoft.com/library/05a77b21-20fe-4b9a-8e07-aa999538198d) (modelo activo) se utiliza para detectar cualquier llamada a `add` en el árbol de expresión. Este modelo activo asigna los argumentos de la llamada a la `exprList` valor. En este caso, hay solo dos, por lo que se extraen estos y la función se llama de forma recursiva en los argumentos. Los resultados se insertan en una expresión de código que representa una llamada a `mul` mediante el operador de intervalo (`%%`). El `println` función del ejemplo anterior se utiliza para mostrar los resultados.
 
@@ -98,7 +95,7 @@ El código en las otras bifurcaciones del modelo activo simplemente regenera el 
 ### <a name="code"></a>Código
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-3/snippet701.fs)]
     
-### <a name="output"></a>Resultado
+### <a name="output"></a>Salida
 
 ```fsharp
 1 + Module1.add(2,Module1.add(3,4))

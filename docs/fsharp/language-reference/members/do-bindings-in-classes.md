@@ -1,20 +1,17 @@
 ---
 title: Enlaces do en clases (F#)
 description: "Obtenga información acerca de cómo usar un 'do' enlace en una definición de clase, que lleva a cabo acciones cuando se construye el objeto o cuando se utiliza primero el tipo de F #."
-keywords: "visual f#, f#, programación funcional"
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 78987cb8-bdba-46e2-b5b2-994c83fe42c4
-ms.openlocfilehash: f9582338306d87c3dd799425083037cc95b31b1e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 27c2372328c8b23b91239517271c0d71a672a34d
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="do-bindings-in-classes"></a>Enlaces do en clases
 
@@ -60,4 +57,4 @@ Initializing object 1 2 2 4 8 16
 
 [`let` Bindings in Classes](let-bindings-in-classes.md) (Enlaces `let` en clases)
 
-[`do`Enlaces](../functions/do-Bindings.md)
+[`do` Enlaces](../functions/do-Bindings.md)

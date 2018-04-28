@@ -1,20 +1,19 @@
 ---
 title: Compatibilidad de .NET Core
-description: "Más información sobre las diferentes compatibilidades de la serie de la versión (LTS y Actual) para .NET Core"
-keywords: ".NET, .NET Core, lts, actual, fts, compatibilidad, series de compatibilidad, pistas de soporte, ciclo de vida, series de la versión"
+description: Más información sobre las diferentes compatibilidades de la serie de la versión (LTS y Actual) para .NET Core
 author: kendrahavens
 ms.author: mairaw
 ms.date: 01/30/2017
-ms.topic: article
-ms.prod: .net-core
+ms.topic: conceptual
+ms.prod: dotnet-core
 ms.devlang: dotnet
-ms.assetid: fedc7025-f320-4cba-957b-ef74885f66de
-ms.workload: dotnetcore
-ms.openlocfilehash: 2fcb33c7c5a4a3c31960a683865b0e5e29269a8b
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 8bb2cd1895513ca2d895aa45671cb341193d2359
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="net-core-support"></a>Compatibilidad de .NET Core
 

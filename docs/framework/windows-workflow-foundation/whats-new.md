@@ -17,11 +17,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 605e1401eb2f2fdee7bb39c6636c0245154041a4
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 6604c4fccec50369d83cede58ff2931c2015c5b9
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="what39s-new-in-windows-workflow-foundation"></a>¿Qué&#39;s nuevos en Windows Workflow Foundation
 Windows Workflow Foundation (WF) en [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)] cambia varios paradigmas de desarrollo de las versiones anteriores. Los flujos de trabajo son ahora más fáciles de crear, ejecutar, mantener e implementan un host de nuevas funciones. [!INCLUDE[crabout](../../../includes/crabout-md.md)] migración de .NET 3.0 y 3.5 de .NET de aplicaciones de flujo de trabajo para usar la versión más reciente, consulte [Guía de migración](../../../docs/framework/windows-workflow-foundation/migration-guidance.md).  
@@ -44,7 +44,7 @@ Windows Workflow Foundation (WF) en [!INCLUDE[netfx40_long](../../../includes/ne
 -   Nuevas actividades de mensajería como <xref:System.ServiceModel.Activities.SendContent> y <xref:System.ServiceModel.Activities.ReceiveReply>.  
   
 ## <a name="explicit-activity-data-model"></a>Modelo de datos de actividad explícito  
- [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] incluye las nuevas opciones para almacenar o mover los datos. Se pueden almacenar datos en una actividad usando <xref:System.Activities.Variable>. Al mover datos hacia dentro de una actividad y fuera de ella, los tipos de argumento especializados se usan para determinar la dirección en la que se están moviendo los datos. Estos tipos son <xref:System.Activities.InArgument>, <xref:System.Activities.InOutArgument> y <xref:System.Activities.OutArgument>. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Modelo de datos de Windows Workflow Foundation](../../../docs/framework/windows-workflow-foundation/data-model.md).  
+ [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] incluye las nuevas opciones para almacenar o mover los datos. Se pueden almacenar datos en una actividad usando <xref:System.Activities.Variable>. Al mover datos hacia dentro de una actividad y fuera de ella, los tipos de argumento especializados se usan para determinar la dirección en la que se están moviendo los datos. Estos tipos son <xref:System.Activities.InArgument>, <xref:System.Activities.InOutArgument> y <xref:System.Activities.OutArgument>. Para obtener más información, consulte [modelo de datos de Windows Workflow Foundation](../../../docs/framework/windows-workflow-foundation/data-model.md).  
   
 ## <a name="enhanced-hosting-persistence-and-tracking-options"></a>Hospedaje, persistencia y opciones de seguimiento mejoradas  
  [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] contiene mejoras de persistencia como las siguientes:  
@@ -66,4 +66,4 @@ Windows Workflow Foundation (WF) en [!INCLUDE[netfx40_long](../../../includes/ne
 -   Actualmente, reanudar un flujo de trabajo pendiente se administra mediante un objeto <xref:System.Activities.Bookmark>.  
   
 ## <a name="easier-ability-to-extend-wf-designer-experience"></a>Mejor capacidad para ampliar la experiencia de diseñador de WF  
- El nuevo diseñador de WF se basa en Windows Presentation Foundation (WPF) y proporciona un modelo más fácil de usar al realizar el rehospedaje del Diseñador de WF fuera de Visual Studio y también proporciona mecanismos más sencillos para crear diseñadores de actividad personalizados. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Puede personalizar la experiencia de diseño de flujo de trabajo](../../../docs/framework/windows-workflow-foundation/customizing-the-workflow-design-experience.md).
+ El nuevo diseñador de WF se basa en Windows Presentation Foundation (WPF) y proporciona un modelo más fácil de usar al realizar el rehospedaje del Diseñador de WF fuera de Visual Studio y también proporciona mecanismos más sencillos para crear diseñadores de actividad personalizados. Para obtener más información, consulte [puede personalizar la experiencia de diseño de flujo de trabajo](../../../docs/framework/windows-workflow-foundation/customizing-the-workflow-design-experience.md).

@@ -1,33 +1,35 @@
 ---
 title: Consideraciones de seguridad con metadatos
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: e78ef8ab-4f63-4656-ab93-b1deab2666d5
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 098b31e479322d9de3a299f06652e819a5388c42
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: d033a3e22def60c5d82191fd7fcc93bd67f4548b
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="security-considerations-with-metadata"></a>Consideraciones de seguridad con metadatos
 Cuando se usan las características de metadatos de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], deben tenerse en cuenta las implicaciones de seguridad de la publicación, recuperación y utilización de los metadatos del servicio.  
   
 ## <a name="when-to-publish-metadata"></a>Cuándo publicar metadatos  
- Los servicios [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] no publican datos de manera predeterminada. Para publicar los metadatos para una [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] servicio debe habilitar explícitamente la publicación de metadatos mediante la adición de puntos de conexión de metadatos a su servicio (vea [la publicación de metadatos](../../../../docs/framework/wcf/feature-details/publishing-metadata.md)). Deshabilitar la publicación de metadatos reduce la superficie de ataque de su servicio y disminuye el riesgo de divulgación involuntaria de información. No todos los servicios deben publicar metadatos. Si no tiene que publicar metadatos, considere el mantener esta opción desactivada. Tenga en cuenta que todavía puede generar metadatos y código de cliente directamente desde los ensamblados de servicio mediante el [la herramienta de utilidad de metadatos de ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]utilizar Svcutil.exe para exportar los metadatos, vea [Cómo: utilizar Svcutil.exe para exportar metadatos desde el código de servicio compilado](../../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-export-metadata-from-compiled-service-code.md).  
+ Los servicios [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] no publican datos de manera predeterminada. Para publicar los metadatos para una [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] servicio debe habilitar explícitamente la publicación de metadatos mediante la adición de puntos de conexión de metadatos a su servicio (vea [la publicación de metadatos](../../../../docs/framework/wcf/feature-details/publishing-metadata.md)). Deshabilitar la publicación de metadatos reduce la superficie de ataque de su servicio y disminuye el riesgo de divulgación involuntaria de información. No todos los servicios deben publicar metadatos. Si no tiene que publicar metadatos, considere el mantener esta opción desactivada. Tenga en cuenta que todavía puede generar metadatos y código de cliente directamente desde los ensamblados de servicio mediante el [la herramienta de utilidad de metadatos de ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] utilizar Svcutil.exe para exportar los metadatos, vea [Cómo: utilizar Svcutil.exe para exportar metadatos desde el código de servicio compilado](../../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-export-metadata-from-compiled-service-code.md).  
   
 ## <a name="publishing-metadata-using-a-secure-binding"></a>Publicar metadatos mediante un enlace seguro  
- Los enlaces de metadatos predeterminados que proporciona [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] no son seguros y permiten el acceso anónimo a los metadatos. Los metadatos de servicio que un servicio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] publica contienen una descripción detallada del servicio y pueden incluir, de manera intencionada o involuntaria, información confidencial. Por ejemplo, los metadatos de servicio pueden contener información sobre operaciones de infraestructura que no se tenía intención de divulgar públicamente. Para proteger los metadatos de servicio de los accesos no autorizados, utilice un enlace de seguridad para el extremo de los metadatos. Los puntos de conexión de metadatos responden a las solicitudes HTTP/GET que pueden utilizar la capa de sockets seguros (SSL) para proteger los metadatos. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Cómo: proteger los extremos de metadatos](../../../../docs/framework/wcf/feature-details/how-to-secure-metadata-endpoints.md).  
+ Los enlaces de metadatos predeterminados que proporciona [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] no son seguros y permiten el acceso anónimo a los metadatos. Los metadatos de servicio que un servicio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] publica contienen una descripción detallada del servicio y pueden incluir, de manera intencionada o involuntaria, información confidencial. Por ejemplo, los metadatos de servicio pueden contener información sobre operaciones de infraestructura que no se tenía intención de divulgar públicamente. Para proteger los metadatos de servicio de los accesos no autorizados, utilice un enlace de seguridad para el extremo de los metadatos. Los puntos de conexión de metadatos responden a las solicitudes HTTP/GET que pueden utilizar la capa de sockets seguros (SSL) para proteger los metadatos. Para obtener más información, consulte [Cómo: proteger los extremos de metadatos](../../../../docs/framework/wcf/feature-details/how-to-secure-metadata-endpoints.md).  
   
  La protección de los puntos de conexión de metadatos también proporciona un método para que los solicitantes recuperen metadatos de servicio de manera segura, sin el riesgo de manipulación o suplantación.  
   

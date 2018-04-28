@@ -1,9 +1,7 @@
 ---
 title: Mod (Operador, Visual Basic)
-ms.date: 07/20/2015
+ms.date: 04/24/2018
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - devlang-visual-basic
 ms.topic: article
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - arithmetic operators [Visual Basic], Mod
 - math operators [Visual Basic]
 ms.assetid: 6ff7e40e-cec8-4c77-bff6-8ddd2791c25b
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 5464b57c993e5703c09529b527a7bc714e045870
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: rpetrusha
+ms.author: ronpet
+ms.openlocfilehash: cf0889cbea609b4555581fbf67cd0cba1ea889d0
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/28/2018
 ---
-# <a name="mod-operator-visual-basic"></a>Mod (Operador, Visual Basic)
+# <a name="mod-operator-visual-basic"></a>Mod (operador) (Visual Basic)
 Divide dos números y devuelve solamente el resto.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -38,17 +35,39 @@ number1 Mod number2
   
 ## <a name="parts"></a>Elementos  
  `number1`  
- Obligatorio. Cualquier expresión numérica.  
+ Requerido. Cualquier expresión numérica.  
   
  `number2`  
- Obligatorio. Cualquier expresión numérica.  
+ Requerido. Cualquier expresión numérica.  
   
 ## <a name="supported-types"></a>Tipos admitidos  
  todos los tipos numéricos. Esto incluye los tipos sin signo y de punto flotante y `Decimal`.  
   
-## <a name="result"></a>Resultado  
- El resultado es el resto después de `number1` se divide por `number2`. Por ejemplo, la expresión `14 Mod 4` se evalúa como 2.  
-  
+## <a name="result"></a>Resultado
+
+El resultado es el resto después de `number1` se divide por `number2`. Por ejemplo, la expresión `14 Mod 4` se evalúa como 2.  
+
+> [!NOTE]
+> Hay una diferencia entre *resto* y *módulo* en matemáticas, con resultados diferentes para los números negativos. El `Mod` operador en Visual Basic, .NET Framework `op_Modulus` operador y el subyacente [rem]<xref:System.Reflection.Emit.OpCodes.Rem> instrucción IL realizan una operación de resto.
+
+El resultado de un `Mod` operación conserva el signo del dividendo, `number1`, por lo que puede ser positivo o negativo. El resultado siempre está en el intervalo (-`number2`, `number2`), exclusivo. Por ejemplo:
+
+```vb
+Public Module Example
+   Public Sub Main()
+      Console.WriteLine($" 8 Mod  3 = {8 Mod 3}")
+      Console.WriteLine($"-8 Mod  3 = {-8 Mod 3}")
+      Console.WriteLine($" 8 Mod -3 = {8 Mod -3}")
+      Console.WriteLine($"-8 Mod -3 = {-8 Mod -3}")
+   End Sub
+End Module
+' The example displays the following output:
+'       8 Mod  3 = 2
+'      -8 Mod  3 = -2
+'       8 Mod -3 = 2
+'      -8 Mod -3 = -2
+```
+
 ## <a name="remarks"></a>Comentarios  
  Si el valor `number1` o `number2` es un valor de punto flotante, se devuelve el resto de la división de punto flotante. El tipo de datos del resultado es el tipo de datos más pequeño que puede contener todos los valores posibles que son el resultado de la división con los tipos de datos de `number1` y `number2`.  
   
@@ -71,7 +90,7 @@ number1 Mod number2
  `a - (b * Fix(a / b))`  
   
 ## <a name="floating-point-imprecision"></a>Punto flotante imprecisión  
- Cuando trabaje con números de punto flotante, recuerde que no siempre tienen una representación precisa en memoria. Esto podría provocar resultados inesperados en ciertas operaciones, como comparación de valores y la `Mod` operador. Para obtener más información, consulte [solución de problemas de tipos de datos](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).  
+ Cuando trabaje con números de punto flotante, recuerde que no siempre tienen una representación decimal precisa en memoria. Esto puede provocar resultados inesperados en ciertas operaciones, como comparación de valores y la `Mod` operador. Para obtener más información, consulte [solución de problemas de tipos de datos](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).  
   
 ## <a name="overloading"></a>Sobrecarga  
  El `Mod` puede ser *sobrecargados*, lo que significa que una clase o estructura puede volver a definir su comportamiento. Si el código se aplica `Mod` a una instancia de una clase o estructura que incluye una sobrecarga de este tipo, asegúrese de conocer su comportamiento redefinido. Para obtener más información, consulte [procedimientos de operadores](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  

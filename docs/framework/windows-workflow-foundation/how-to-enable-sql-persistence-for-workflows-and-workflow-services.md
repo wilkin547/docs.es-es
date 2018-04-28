@@ -1,31 +1,32 @@
 ---
-title: "Cómo: Habilitar la persistencia de SQL para flujos de trabajo y servicios de flujo de trabajo"
-ms.custom: 
+title: 'Cómo: Habilitar la persistencia de SQL para flujos de trabajo y servicios de flujo de trabajo'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: ca7bf77f-3e5d-4b23-b17a-d0b60f46411d
-caps.latest.revision: "36"
+caps.latest.revision: 36
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 60fac3cba4da35b5146f777abd912ad15f0f29eb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 5d687c00edd9d495f3b7715474d7eb2e107c23f0
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="how-to-enable-sql-persistence-for-workflows-and-workflow-services"></a>Cómo: Habilitar la persistencia de SQL para flujos de trabajo y servicios de flujo de trabajo
 En este tema se describe cómo configurar la característica Almacén de instancias de flujo de trabajo de SQL para habilitar la persistencia para los flujos de trabajo y servicios de flujo de trabajo, según la programación, o mediante un archivo de configuración.  
   
- Windows Server APp Fabric simplifica el proceso de configuración de persistencia. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Configuración de persistencia de AppFabric](http://go.microsoft.com/fwlink/?LinkId=201204)  
+ Windows Server APp Fabric simplifica el proceso de configuración de persistencia. Para obtener más información, vea [configuración de persistencia de App Fabric](http://go.microsoft.com/fwlink/?LinkId=201204)  
   
  Antes de usar la característica Almacén de instancias de flujo de trabajo de SQL, cree una base de datos que la característica usará para conservar las instancias de flujo de trabajo. El programa de instalación de [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] copia los archivos de script de SQL asociados con la característica Almacén de instancias de flujo de trabajo en la carpeta %WINDIR%\Microsoft.NET\Framework\v4.xxx\SQL\EN. Ejecute estos archivos de script en una base de datos de SQL Server 2005 o SQL Server 2008 que desea que el almacén de instancias de flujo de trabajo de SQL use para conservar las instancias de flujo de trabajo. Ejecute primero el archivo SqlWorkflowInstanceStoreSchema.sql y después SqlWorkflowInstanceStoreLogic.sql.  
   
@@ -40,7 +41,7 @@ En este tema se describe cómo configurar la característica Almacén de instanc
 >   
 >  System.Data.SqlClient.SqlException: No se pudo encontrar el procedimiento almacenado 'System.Activities.DurableInstancing.CreateLockOwner'  
   
- En las siguientes secciones se describe cómo habilitar la persistencia para flujos de trabajo y servicios de flujo de trabajo que usen el almacén de instancias de flujo de trabajo de SQL. [!INCLUDE[crabout](../../../includes/crabout-md.md)]propiedades de almacén de instancias de flujo de trabajo de SQL, consulte [propiedades de flujo de trabajo de almacén de instancias SQL](../../../docs/framework/windows-workflow-foundation/properties-of-sql-workflow-instance-store.md).  
+ En las siguientes secciones se describe cómo habilitar la persistencia para flujos de trabajo y servicios de flujo de trabajo que usen el almacén de instancias de flujo de trabajo de SQL. [!INCLUDE[crabout](../../../includes/crabout-md.md)] propiedades de almacén de instancias de flujo de trabajo de SQL, consulte [propiedades de flujo de trabajo de almacén de instancias SQL](../../../docs/framework/windows-workflow-foundation/properties-of-sql-workflow-instance-store.md).  
   
 ## <a name="enabling-persistence-for-self-hosted-workflows-that-use-workflowapplication"></a>Habilitar la persistencia para flujos de trabajo auto-hospedados que usan WorkflowApplication  
  Puede habilitar la persistencia para los flujos de trabajo auto-hospedados que usen <xref:System.Activities.WorkflowApplication> mediante programación al utilizar el modelo de objeto <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>. El siguiente procedimiento contiene los pasos para hacerlo.  

@@ -1,23 +1,24 @@
 ---
 title: Excepciones
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 065205cc-52dd-4f30-9578-b17d8d113136
-caps.latest.revision: "26"
+caps.latest.revision: 26
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: bf2c6e12dac2130a26aa01efc21b8f58f509294a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9e78546a10e1a8cdff780c44898fd209ca829c6c
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="exceptions"></a>Excepciones
 Los flujos de trabajo pueden usar la actividad <xref:System.Activities.Statements.TryCatch> para controlar excepciones que se producen durante la ejecución de un flujo de trabajo. Se pueden controlar estas excepciones o se pueden volver a producir usando la actividad <xref:System.Activities.Statements.Rethrow>. Las actividades de la sección <xref:System.Activities.Statements.TryCatch.Finally%2A> se ejecutan cuando la sección <xref:System.Activities.Statements.TryCatch.Try%2A> o la sección <xref:System.Activities.Statements.TryCatch.Catches%2A> se hayan completado. Los flujos de trabajo hospedan por un <xref:System.Activities.WorkflowApplication> también puede usar la instancia de la <xref:System.Activities.WorkflowApplication.OnUnhandledException%2A> controlador de eventos para controlar las excepciones no controladas por un <xref:System.Activities.Statements.TryCatch> actividad.  
@@ -58,7 +59,7 @@ Los flujos de trabajo pueden usar la actividad <xref:System.Activities.Statement
 -   La excepción no la controla un <xref:System.Activities.Statements.TryCatch> de mayor nivel, se escapa la raíz del flujo de trabajo, y el flujo de trabajo se configura para cancelarse en lugar de finalizarse o anularse. Los flujos de trabajo hospedados mediante <xref:System.Activities.WorkflowApplication> pueden configurar esto controlando <xref:System.Activities.WorkflowApplication.OnUnhandledException%2A> y devolviendo <xref:System.Activities.UnhandledExceptionAction.Cancel>. Un ejemplo de cómo administrar <xref:System.Activities.WorkflowApplication.OnUnhandledException%2A> se proporciona anteriormente en este tema. Los servicios de flujo de trabajo pueden configurar esto mediante <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior> y especificando <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionAction.Cancel>. Para obtener un ejemplo de configuración de <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior>, consulte [extensibilidad de Host de servicio de flujo de trabajo](../../../docs/framework/wcf/feature-details/workflow-service-host-extensibility.md).  
   
 ## <a name="exception-handling-versus-compensation"></a>Control de excepciones contra compensación  
- La diferencia entre el control de excepciones y la compensación es que el primero se produce durante la ejecución de una actividad. La compensación, sin embargo, se produce después de que una actividad se haya completado correctamente. El control de excepciones proporciona una oportunidad para limpiar después de que la actividad produzca la excepción, mientras la compensación proporciona un mecanismo por el que se puede deshacer el trabajo terminado correctamente de una actividad completada previamente. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Compensación](../../../docs/framework/windows-workflow-foundation/compensation.md).  
+ La diferencia entre el control de excepciones y la compensación es que el primero se produce durante la ejecución de una actividad. La compensación, sin embargo, se produce después de que una actividad se haya completado correctamente. El control de excepciones proporciona una oportunidad para limpiar después de que la actividad produzca la excepción, mientras la compensación proporciona un mecanismo por el que se puede deshacer el trabajo terminado correctamente de una actividad completada previamente. Para obtener más información, consulte [compensación](../../../docs/framework/windows-workflow-foundation/compensation.md).  
   
 ## <a name="see-also"></a>Vea también  
  <xref:System.Activities.Statements.TryCatch>  
