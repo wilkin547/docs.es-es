@@ -1,1 +1,1 @@
-Formato de texto enriquecido (RTF)
+<span data-ttu-id="c2065-101">Formato de texto enriquecido (RTF)</span><span class="sxs-lookup"><span data-stu-id="c2065-101">Rich Text Format (RTF)</span></span>

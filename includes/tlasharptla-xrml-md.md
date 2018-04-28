@@ -1,1 +1,1 @@
-Lenguaje de marcado con derechos extensible (XrML)
+<span data-ttu-id="bf068-101">Lenguaje de marcado con derechos extensible (XrML)</span><span class="sxs-lookup"><span data-stu-id="bf068-101">Extensible Rights Markup Language (XrML)</span></span>

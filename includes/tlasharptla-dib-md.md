@@ -1,1 +1,1 @@
-mapa de bits independiente de dispositivo (DIB)
+<span data-ttu-id="6852d-101">mapa de bits independiente de dispositivo (DIB)</span><span class="sxs-lookup"><span data-stu-id="6852d-101">device-independent bitmap (DIB)</span></span>
