@@ -1,21 +1,20 @@
 ---
-title: "Introducción a ASP.NET Core"
-description: "Obtenga más información sobre ASP.NET Core con los tutoriales de la documentación de ASP.NET Core."
-keywords: .NET, .NET Core
+title: Introducción a ASP.NET Core
+description: Obtenga más información sobre ASP.NET Core con los tutoriales de la documentación de ASP.NET Core.
 author: tdykstra
-ms.author: tdykstra
+ms.author: mairaw
 ms.date: 06/20/2016
-ms.topic: article
-ms.prod: aspnet-core
+ms.topic: conceptual
+ms.prod: dotnet-core
 ms.devlang: dotnet
-ms.assetid: 4172512e-b93d-4169-abdb-bd0b0b2d657e
-ms.workload: dotnetcore
-ms.openlocfilehash: 89ae4d4f58f7a935370035b17ae2c645d30b3199
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: a6aa908d711546ae83d2b77a261b90956ab05b48
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/28/2018
 ---
-# <a name="getting-started-with-aspnet-core"></a><span data-ttu-id="13654-104">Introducción a ASP.NET Core</span><span class="sxs-lookup"><span data-stu-id="13654-104">Getting started with ASP.NET Core</span></span>    
-    
-<span data-ttu-id="13654-105">Para ver tutoriales sobre el desarrollo de aplicaciones web ASP.NET Core, le sugerimos que lea completamente la [documentación de ASP.NET Core](/aspnet/core/).</span><span class="sxs-lookup"><span data-stu-id="13654-105">For tutorials about developing ASP.NET Core web applications, we suggest you head over to [ASP.NET Core documentation](/aspnet/core/).</span></span>
+# <a name="getting-started-with-aspnet-core"></a><span data-ttu-id="acb20-103">Introducción a ASP.NET Core</span><span class="sxs-lookup"><span data-stu-id="acb20-103">Getting started with ASP.NET Core</span></span>
+
+<span data-ttu-id="acb20-104">Para ver tutoriales sobre el desarrollo de aplicaciones web ASP.NET Core, le sugerimos que lea completamente la [documentación de ASP.NET Core](/aspnet/core/).</span><span class="sxs-lookup"><span data-stu-id="acb20-104">For tutorials about developing ASP.NET Core web applications, we suggest you head over to [ASP.NET Core documentation](/aspnet/core/).</span></span>

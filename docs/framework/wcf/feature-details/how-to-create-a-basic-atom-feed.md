@@ -1,112 +1,114 @@
 ---
-title: "Creación de una fuente básica de Atom"
-ms.custom: 
+title: Creación de una fuente básica de Atom
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 6e0cacc1-9b11-4665-adb7-577a62626fd6
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 51a42e9b954fba7ccd58d74248fb65dc2b57a76b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 26e5bf0771e3b8d700efeaf4f63b9866534db68a
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
-# <a name="how-to-create-a-basic-atom-feed"></a><span data-ttu-id="71168-102">Creación de una fuente básica de Atom</span><span class="sxs-lookup"><span data-stu-id="71168-102">How to: Create a Basic Atom Feed</span></span>
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]<span data-ttu-id="71168-103"> le permite crear un servicio que exponga una fuente de distribución.</span><span class="sxs-lookup"><span data-stu-id="71168-103"> allows you to create a service that exposes a syndication feed.</span></span> <span data-ttu-id="71168-104">En este tema se discute cómo crear un servicio de distribución que exponga una fuente de distribución Atom.</span><span class="sxs-lookup"><span data-stu-id="71168-104">This topic discusses how to create a syndication service that exposes an Atom syndication feed.</span></span>  
+# <a name="how-to-create-a-basic-atom-feed"></a><span data-ttu-id="56b4b-102">Creación de una fuente básica de Atom</span><span class="sxs-lookup"><span data-stu-id="56b4b-102">How to: Create a Basic Atom Feed</span></span>
+[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]<span data-ttu-id="56b4b-103"> le permite crear un servicio que exponga una fuente de distribución.</span><span class="sxs-lookup"><span data-stu-id="56b4b-103"> allows you to create a service that exposes a syndication feed.</span></span> <span data-ttu-id="56b4b-104">En este tema se discute cómo crear un servicio de distribución que exponga una fuente de distribución Atom.</span><span class="sxs-lookup"><span data-stu-id="56b4b-104">This topic discusses how to create a syndication service that exposes an Atom syndication feed.</span></span>  
   
-### <a name="to-create-a-basic-syndication-service"></a><span data-ttu-id="71168-105">Creación de un servicio de distribución básico</span><span class="sxs-lookup"><span data-stu-id="71168-105">To create a basic syndication service</span></span>  
+### <a name="to-create-a-basic-syndication-service"></a><span data-ttu-id="56b4b-105">Creación de un servicio de distribución básico</span><span class="sxs-lookup"><span data-stu-id="56b4b-105">To create a basic syndication service</span></span>  
   
-1.  <span data-ttu-id="71168-106">Defina un contrato de servicios utilizando una interfaz marcada con el atributo <xref:System.ServiceModel.Web.WebGetAttribute>.</span><span class="sxs-lookup"><span data-stu-id="71168-106">Define a service contract using an interface marked with the <xref:System.ServiceModel.Web.WebGetAttribute> attribute.</span></span> <span data-ttu-id="71168-107">Cada operación que se expone como una fuente de distribución debería devolver un objeto <xref:System.ServiceModel.Syndication.Atom10FeedFormatter>.</span><span class="sxs-lookup"><span data-stu-id="71168-107">Each operation that is exposed as a syndication feed should return a <xref:System.ServiceModel.Syndication.Atom10FeedFormatter> object.</span></span>  
+1.  <span data-ttu-id="56b4b-106">Defina un contrato de servicios utilizando una interfaz marcada con el atributo <xref:System.ServiceModel.Web.WebGetAttribute>.</span><span class="sxs-lookup"><span data-stu-id="56b4b-106">Define a service contract using an interface marked with the <xref:System.ServiceModel.Web.WebGetAttribute> attribute.</span></span> <span data-ttu-id="56b4b-107">Cada operación que se expone como una fuente de distribución debería devolver un objeto <xref:System.ServiceModel.Syndication.Atom10FeedFormatter>.</span><span class="sxs-lookup"><span data-stu-id="56b4b-107">Each operation that is exposed as a syndication feed should return a <xref:System.ServiceModel.Syndication.Atom10FeedFormatter> object.</span></span>  
   
      [!code-csharp[htAtomBasic#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/htatombasic/cs/program.cs#0)]
      [!code-vb[htAtomBasic#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htatombasic/vb/program.vb#0)]  
   
     > [!NOTE]
-    >  <span data-ttu-id="71168-108">Todas las operaciones de servicio que apliquen el <xref:System.ServiceModel.Web.WebGetAttribute> se asignan a solicitudes HTTP GET.</span><span class="sxs-lookup"><span data-stu-id="71168-108">All service operations that apply the <xref:System.ServiceModel.Web.WebGetAttribute> are mapped to HTTP GET requests.</span></span> <span data-ttu-id="71168-109">Para asignar su operación a un método HTTP diferente, utilice en su lugar <xref:System.ServiceModel.Web.WebInvokeAttribute>.</span><span class="sxs-lookup"><span data-stu-id="71168-109">To map your operation to a different HTTP method, use the <xref:System.ServiceModel.Web.WebInvokeAttribute> instead.</span></span> [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="71168-110">[Cómo: crear un servicio WCF básico Web HTTP](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md).</span><span class="sxs-lookup"><span data-stu-id="71168-110"> [How to: Create a Basic WCF Web HTTP Service](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md).</span></span>  
+    >  <span data-ttu-id="56b4b-108">Todas las operaciones de servicio que apliquen el <xref:System.ServiceModel.Web.WebGetAttribute> se asignan a solicitudes HTTP GET.</span><span class="sxs-lookup"><span data-stu-id="56b4b-108">All service operations that apply the <xref:System.ServiceModel.Web.WebGetAttribute> are mapped to HTTP GET requests.</span></span> <span data-ttu-id="56b4b-109">Para asignar su operación a un método HTTP diferente, utilice en su lugar <xref:System.ServiceModel.Web.WebInvokeAttribute>.</span><span class="sxs-lookup"><span data-stu-id="56b4b-109">To map your operation to a different HTTP method, use the <xref:System.ServiceModel.Web.WebInvokeAttribute> instead.</span></span> <span data-ttu-id="56b4b-110">Para obtener más información, consulte [Cómo: crear un servicio básico de WCF Web HTTP](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md).</span><span class="sxs-lookup"><span data-stu-id="56b4b-110">For more information, see [How to: Create a Basic WCF Web HTTP Service](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md).</span></span>  
   
-2.  <span data-ttu-id="71168-111">Implemente el contrato de servicios.</span><span class="sxs-lookup"><span data-stu-id="71168-111">Implement the service contract.</span></span>  
+2.  <span data-ttu-id="56b4b-111">Implemente el contrato de servicios.</span><span class="sxs-lookup"><span data-stu-id="56b4b-111">Implement the service contract.</span></span>  
   
      [!code-csharp[htAtomBasic#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/htatombasic/cs/program.cs#1)]
      [!code-vb[htAtomBasic#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htatombasic/vb/program.vb#1)]  
   
-3.  <span data-ttu-id="71168-112">Cree un objeto <xref:System.ServiceModel.Syndication.SyndicationFeed> y agregue un autor, categoría y descripción.</span><span class="sxs-lookup"><span data-stu-id="71168-112">Create a <xref:System.ServiceModel.Syndication.SyndicationFeed> object and add an author, category, and description.</span></span>  
+3.  <span data-ttu-id="56b4b-112">Cree un objeto <xref:System.ServiceModel.Syndication.SyndicationFeed> y agregue un autor, categoría y descripción.</span><span class="sxs-lookup"><span data-stu-id="56b4b-112">Create a <xref:System.ServiceModel.Syndication.SyndicationFeed> object and add an author, category, and description.</span></span>  
   
      [!code-csharp[htAtomBasic#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/htatombasic/cs/program.cs#2)]
      [!code-vb[htAtomBasic#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htatombasic/vb/program.vb#2)]  
   
-4.  <span data-ttu-id="71168-113">Cree varios objetos <xref:System.ServiceModel.Syndication.SyndicationItem>.</span><span class="sxs-lookup"><span data-stu-id="71168-113">Create several <xref:System.ServiceModel.Syndication.SyndicationItem> objects.</span></span>  
+4.  <span data-ttu-id="56b4b-113">Cree varios objetos <xref:System.ServiceModel.Syndication.SyndicationItem>.</span><span class="sxs-lookup"><span data-stu-id="56b4b-113">Create several <xref:System.ServiceModel.Syndication.SyndicationItem> objects.</span></span>  
   
      [!code-csharp[htAtomBasic#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/htatombasic/cs/program.cs#3)]
      [!code-vb[htAtomBasic#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htatombasic/vb/program.vb#3)]  
   
-5.  <span data-ttu-id="71168-114">Agregue los objetos <xref:System.ServiceModel.Syndication.SyndicationItem> a la fuente.</span><span class="sxs-lookup"><span data-stu-id="71168-114">Add the <xref:System.ServiceModel.Syndication.SyndicationItem> objects to the feed.</span></span>  
+5.  <span data-ttu-id="56b4b-114">Agregue los objetos <xref:System.ServiceModel.Syndication.SyndicationItem> a la fuente.</span><span class="sxs-lookup"><span data-stu-id="56b4b-114">Add the <xref:System.ServiceModel.Syndication.SyndicationItem> objects to the feed.</span></span>  
   
      [!code-csharp[htAtomBasic#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/htatombasic/cs/program.cs#4)]
      [!code-vb[htAtomBasic#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htatombasic/vb/program.vb#4)]  
   
-6.  <span data-ttu-id="71168-115">Devuelva la fuente.</span><span class="sxs-lookup"><span data-stu-id="71168-115">Return the feed.</span></span>  
+6.  <span data-ttu-id="56b4b-115">Devuelva la fuente.</span><span class="sxs-lookup"><span data-stu-id="56b4b-115">Return the feed.</span></span>  
   
      [!code-csharp[htAtomBasic#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/htatombasic/cs/program.cs#5)]
      [!code-vb[htAtomBasic#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htatombasic/vb/program.vb#5)]  
   
-### <a name="to-host-the-service"></a><span data-ttu-id="71168-116">Para hospedar el servicio</span><span class="sxs-lookup"><span data-stu-id="71168-116">To host the service</span></span>  
+### <a name="to-host-the-service"></a><span data-ttu-id="56b4b-116">Para hospedar el servicio</span><span class="sxs-lookup"><span data-stu-id="56b4b-116">To host the service</span></span>  
   
-1.  <span data-ttu-id="71168-117">Crear un objeto <xref:System.ServiceModel.Web.WebServiceHost>.</span><span class="sxs-lookup"><span data-stu-id="71168-117">Create a <xref:System.ServiceModel.Web.WebServiceHost> object.</span></span>  
+1.  <span data-ttu-id="56b4b-117">Crear un objeto <xref:System.ServiceModel.Web.WebServiceHost>.</span><span class="sxs-lookup"><span data-stu-id="56b4b-117">Create a <xref:System.ServiceModel.Web.WebServiceHost> object.</span></span>  
   
      [!code-csharp[htAtomBasic#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/htatombasic/cs/program.cs#6)]
      [!code-vb[htAtomBasic#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htatombasic/vb/program.vb#6)]  
   
-2.  <span data-ttu-id="71168-118">Abra el host de servicio, cargue la fuente desde el servicio, muestre la fuente y espere a que el usuario presione Entrar.</span><span class="sxs-lookup"><span data-stu-id="71168-118">Open the service host, load the feed from the service, display the feed, and wait for the user to press ENTER.</span></span>  
+2.  <span data-ttu-id="56b4b-118">Abra el host de servicio, cargue la fuente desde el servicio, muestre la fuente y espere a que el usuario presione Entrar.</span><span class="sxs-lookup"><span data-stu-id="56b4b-118">Open the service host, load the feed from the service, display the feed, and wait for the user to press ENTER.</span></span>  
   
      [!code-csharp[htAtomBasic#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/htatombasic/cs/program.cs#8)]
      [!code-vb[htAtomBasic#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htatombasic/vb/program.vb#8)]  
   
-### <a name="to-call-getblog-with-an-http-get"></a><span data-ttu-id="71168-119">Realización de llamadas a GetBlog() mediante HTTP GET</span><span class="sxs-lookup"><span data-stu-id="71168-119">To call GetBlog() with an HTTP GET</span></span>  
+### <a name="to-call-getblog-with-an-http-get"></a><span data-ttu-id="56b4b-119">Realización de llamadas a GetBlog() mediante HTTP GET</span><span class="sxs-lookup"><span data-stu-id="56b4b-119">To call GetBlog() with an HTTP GET</span></span>  
   
-1.  <span data-ttu-id="71168-120">Abra Internet Explorer, escriba la siguiente URL y presione Entrar: http://localhost:8000/BlogService/GetBlog</span><span class="sxs-lookup"><span data-stu-id="71168-120">Open Internet Explorer, type the following URL, and press ENTER: http://localhost:8000/BlogService/GetBlog</span></span>  
+1.  <span data-ttu-id="56b4b-120">Abra Internet Explorer, escriba la dirección URL siguiente y presione ENTRAR: http://localhost:8000/BlogService/GetBlog</span><span class="sxs-lookup"><span data-stu-id="56b4b-120">Open Internet Explorer, type the following URL, and press ENTER: http://localhost:8000/BlogService/GetBlog</span></span>  
   
-     <span data-ttu-id="71168-121">La URL contiene la dirección base del servicio (http://localhost:8000/BlogService), la dirección relativa del punto de conexión y la operación del servicio que se va a llamar.</span><span class="sxs-lookup"><span data-stu-id="71168-121">The URL contains the base address of the service (http://localhost:8000/BlogService), the relative address of the endpoint, and the service operation to call.</span></span>  
+     <span data-ttu-id="56b4b-121">La dirección URL contiene la dirección base del servicio (http://localhost:8000/BlogService), la dirección relativa del extremo y la operación de servicio a llamar.</span><span class="sxs-lookup"><span data-stu-id="56b4b-121">The URL contains the base address of the service (http://localhost:8000/BlogService), the relative address of the endpoint, and the service operation to call.</span></span>  
   
-### <a name="to-call-getblog-from-code"></a><span data-ttu-id="71168-122">Llamar a GetBlog() mediante código</span><span class="sxs-lookup"><span data-stu-id="71168-122">To call GetBlog() from code</span></span>  
+### <a name="to-call-getblog-from-code"></a><span data-ttu-id="56b4b-122">Llamar a GetBlog() mediante código</span><span class="sxs-lookup"><span data-stu-id="56b4b-122">To call GetBlog() from code</span></span>  
   
-1.  <span data-ttu-id="71168-123">Cree un <xref:System.Xml.XmlReader> con la dirección base y el método al que está llamando.</span><span class="sxs-lookup"><span data-stu-id="71168-123">Create a <xref:System.Xml.XmlReader> with the base address and the method you are calling.</span></span>  
+1.  <span data-ttu-id="56b4b-123">Cree un <xref:System.Xml.XmlReader> con la dirección base y el método al que está llamando.</span><span class="sxs-lookup"><span data-stu-id="56b4b-123">Create a <xref:System.Xml.XmlReader> with the base address and the method you are calling.</span></span>  
   
      [!code-csharp[htAtomBasic#9](../../../../samples/snippets/csharp/VS_Snippets_CFX/htatombasic/cs/snippets.cs#9)]
      [!code-vb[htAtomBasic#9](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htatombasic/vb/snippets.vb#9)]  
   
-2.  <span data-ttu-id="71168-124">Llame al método estático <xref:System.ServiceModel.Syndication.SyndicationFeed.Load%28System.Xml.XmlReader%29>, pasando el <xref:System.Xml.XmlReader> que acaba de crear.</span><span class="sxs-lookup"><span data-stu-id="71168-124">Call the static <xref:System.ServiceModel.Syndication.SyndicationFeed.Load%28System.Xml.XmlReader%29> method, passing in the <xref:System.Xml.XmlReader> you just created.</span></span>  
+2.  <span data-ttu-id="56b4b-124">Llame al método estático <xref:System.ServiceModel.Syndication.SyndicationFeed.Load%28System.Xml.XmlReader%29>, pasando el <xref:System.Xml.XmlReader> que acaba de crear.</span><span class="sxs-lookup"><span data-stu-id="56b4b-124">Call the static <xref:System.ServiceModel.Syndication.SyndicationFeed.Load%28System.Xml.XmlReader%29> method, passing in the <xref:System.Xml.XmlReader> you just created.</span></span>  
   
      [!code-csharp[htAtomBasic#10](../../../../samples/snippets/csharp/VS_Snippets_CFX/htatombasic/cs/snippets.cs#10)]
      [!code-vb[htAtomBasic#10](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htatombasic/vb/snippets.vb#10)]  
   
-     <span data-ttu-id="71168-125">Esto invoca la operación de servicio y rellena una nueva <xref:System.ServiceModel.Syndication.SyndicationFeed> con el formateador devuelto desde la operación del servicio.</span><span class="sxs-lookup"><span data-stu-id="71168-125">This invokes the service operation and populates a new <xref:System.ServiceModel.Syndication.SyndicationFeed> with the formatter returned from the service operation.</span></span>  
+     <span data-ttu-id="56b4b-125">Esto invoca la operación de servicio y rellena una nueva <xref:System.ServiceModel.Syndication.SyndicationFeed> con el formateador devuelto desde la operación del servicio.</span><span class="sxs-lookup"><span data-stu-id="56b4b-125">This invokes the service operation and populates a new <xref:System.ServiceModel.Syndication.SyndicationFeed> with the formatter returned from the service operation.</span></span>  
   
-3.  <span data-ttu-id="71168-126">Obtenga acceso al objeto de fuente.</span><span class="sxs-lookup"><span data-stu-id="71168-126">Access the feed object.</span></span>  
+3.  <span data-ttu-id="56b4b-126">Obtenga acceso al objeto de fuente.</span><span class="sxs-lookup"><span data-stu-id="56b4b-126">Access the feed object.</span></span>  
   
      [!code-csharp[htAtomBasic#11](../../../../samples/snippets/csharp/VS_Snippets_CFX/htatombasic/cs/snippets.cs#11)]
      [!code-vb[htAtomBasic#11](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htatombasic/vb/snippets.vb#11)]  
   
-## <a name="example"></a><span data-ttu-id="71168-127">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="71168-127">Example</span></span>  
- <span data-ttu-id="71168-128">A continuación, se muestra una lista de código completa para este ejemplo.</span><span class="sxs-lookup"><span data-stu-id="71168-128">The following is the full code listing for this example.</span></span>  
+## <a name="example"></a><span data-ttu-id="56b4b-127">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="56b4b-127">Example</span></span>  
+ <span data-ttu-id="56b4b-128">A continuación, se muestra una lista de código completa para este ejemplo.</span><span class="sxs-lookup"><span data-stu-id="56b4b-128">The following is the full code listing for this example.</span></span>  
   
  [!code-csharp[htAtomBasic#12](../../../../samples/snippets/csharp/VS_Snippets_CFX/htatombasic/cs/program.cs#12)]
  [!code-vb[htAtomBasic#12](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htatombasic/vb/program.vb#12)]  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="71168-129">Compilar el código</span><span class="sxs-lookup"><span data-stu-id="71168-129">Compiling the Code</span></span>  
- <span data-ttu-id="71168-130">Al compilar el código anterior, haga referencia a System.ServiceModel.dll y System.ServiceModel.Web.dll.</span><span class="sxs-lookup"><span data-stu-id="71168-130">When compiling the preceding code, reference System.ServiceModel.dll and System.ServiceModel.Web.dll.</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="56b4b-129">Compilar el código</span><span class="sxs-lookup"><span data-stu-id="56b4b-129">Compiling the Code</span></span>  
+ <span data-ttu-id="56b4b-130">Al compilar el código anterior, haga referencia a System.ServiceModel.dll y System.ServiceModel.Web.dll.</span><span class="sxs-lookup"><span data-stu-id="56b4b-130">When compiling the preceding code, reference System.ServiceModel.dll and System.ServiceModel.Web.dll.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="71168-131">Vea también</span><span class="sxs-lookup"><span data-stu-id="71168-131">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="56b4b-131">Vea también</span><span class="sxs-lookup"><span data-stu-id="56b4b-131">See Also</span></span>  
  <xref:System.ServiceModel.WebHttpBinding>  
  <xref:System.ServiceModel.Web.WebGetAttribute>

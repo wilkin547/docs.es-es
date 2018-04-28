@@ -1,29 +1,29 @@
 ---
 title: 'Comando dotnet sln: CLI de .NET Core'
-description: "El comando dotnet-sln proporciona una opción conveniente para agregar, quitar y enumerar los proyectos en un archivo de solución."
+description: El comando dotnet-sln proporciona una opción conveniente para agregar, quitar y enumerar los proyectos en un archivo de solución.
 author: mairaw
 ms.author: mairaw
 ms.date: 08/14/2017
-ms.topic: article
-ms.prod: .net-core
+ms.topic: conceptual
+ms.prod: dotnet-core
 ms.technology: dotnet-cli
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: deb66ff52074630616c7be47f1a9751246db501d
-ms.sourcegitcommit: 70dcc89737127e4d5f20500242409b687e51b07e
+ms.openlocfilehash: 837d47c38119f9a7aa75c74576ed75b8ef3813dd
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/28/2018
 ---
-# <a name="dotnet-sln"></a><span data-ttu-id="81545-103">dotnet sln</span><span class="sxs-lookup"><span data-stu-id="81545-103">dotnet sln</span></span>
+# <a name="dotnet-sln"></a><span data-ttu-id="88bb8-103">dotnet sln</span><span class="sxs-lookup"><span data-stu-id="88bb8-103">dotnet sln</span></span>
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a><span data-ttu-id="81545-104">nombre</span><span class="sxs-lookup"><span data-stu-id="81545-104">Name</span></span>
+## <a name="name"></a><span data-ttu-id="88bb8-104">nombre</span><span class="sxs-lookup"><span data-stu-id="88bb8-104">Name</span></span>
 
-<span data-ttu-id="81545-105">`dotnet sln`: modifica un archivo de solución de .NET Core.</span><span class="sxs-lookup"><span data-stu-id="81545-105">`dotnet sln` - Modifies a .NET Core solution file.</span></span>
+<span data-ttu-id="88bb8-105">`dotnet sln`: modifica un archivo de solución de .NET Core.</span><span class="sxs-lookup"><span data-stu-id="88bb8-105">`dotnet sln` - Modifies a .NET Core solution file.</span></span>
 
-## <a name="synopsis"></a><span data-ttu-id="81545-106">Sinopsis</span><span class="sxs-lookup"><span data-stu-id="81545-106">Synopsis</span></span>
+## <a name="synopsis"></a><span data-ttu-id="88bb8-106">Sinopsis</span><span class="sxs-lookup"><span data-stu-id="88bb8-106">Synopsis</span></span>
 
 ```
 dotnet sln [<SOLUTION_NAME>] add <PROJECT> <PROJECT> ...
@@ -34,62 +34,62 @@ dotnet sln [<SOLUTION_NAME>] list
 dotnet sln [-h|--help]
 ```
 
-## <a name="description"></a><span data-ttu-id="81545-107">Description</span><span class="sxs-lookup"><span data-stu-id="81545-107">Description</span></span>
+## <a name="description"></a><span data-ttu-id="88bb8-107">Description</span><span class="sxs-lookup"><span data-stu-id="88bb8-107">Description</span></span>
 
-<span data-ttu-id="81545-108">El comando `dotnet sln` proporciona una opción conveniente para agregar, quitar y enumerar los proyectos en un archivo de solución.</span><span class="sxs-lookup"><span data-stu-id="81545-108">The `dotnet sln` command provides a convenient way to add, remove, and list projects in a solution file.</span></span>
+<span data-ttu-id="88bb8-108">El comando `dotnet sln` proporciona una opción conveniente para agregar, quitar y enumerar los proyectos en un archivo de solución.</span><span class="sxs-lookup"><span data-stu-id="88bb8-108">The `dotnet sln` command provides a convenient way to add, remove, and list projects in a solution file.</span></span>
 
-## <a name="commands"></a><span data-ttu-id="81545-109">Comandos</span><span class="sxs-lookup"><span data-stu-id="81545-109">Commands</span></span>
+## <a name="commands"></a><span data-ttu-id="88bb8-109">Comandos</span><span class="sxs-lookup"><span data-stu-id="88bb8-109">Commands</span></span>
 
 `add <PROJECT> ...`
 
 `add <GLOBBING_PATTERN>`
 
-<span data-ttu-id="81545-110">Agrega un proyecto o varios proyectos al archivo de solución.</span><span class="sxs-lookup"><span data-stu-id="81545-110">Adds a project or multiple projects to the solution file.</span></span> <span data-ttu-id="81545-111">Se admiten [patrones globales](https://en.wikipedia.org/wiki/Glob_(programming)) en terminales basados en Unix o Linux.</span><span class="sxs-lookup"><span data-stu-id="81545-111">[Globbing patterns](https://en.wikipedia.org/wiki/Glob_(programming)) are supported on Unix/Linux based terminals.</span></span>
+<span data-ttu-id="88bb8-110">Agrega un proyecto o varios proyectos al archivo de solución.</span><span class="sxs-lookup"><span data-stu-id="88bb8-110">Adds a project or multiple projects to the solution file.</span></span> <span data-ttu-id="88bb8-111">Se admiten [patrones globales](https://en.wikipedia.org/wiki/Glob_(programming)) en terminales basados en Unix o Linux.</span><span class="sxs-lookup"><span data-stu-id="88bb8-111">[Globbing patterns](https://en.wikipedia.org/wiki/Glob_(programming)) are supported on Unix/Linux based terminals.</span></span>
 
 `remove <PROJECT> ...`
 
 `remove <GLOBBING_PATTERN>`
 
-<span data-ttu-id="81545-112">Quita un proyecto o varios proyectos del archivo de solución.</span><span class="sxs-lookup"><span data-stu-id="81545-112">Removes a project or multiple projects from the solution file.</span></span> <span data-ttu-id="81545-113">Se admiten [patrones globales](https://en.wikipedia.org/wiki/Glob_(programming)) en terminales basados en Unix o Linux.</span><span class="sxs-lookup"><span data-stu-id="81545-113">[Globbing patterns](https://en.wikipedia.org/wiki/Glob_(programming)) are supported on Unix/Linux based terminals.</span></span>
+<span data-ttu-id="88bb8-112">Quita un proyecto o varios proyectos del archivo de solución.</span><span class="sxs-lookup"><span data-stu-id="88bb8-112">Removes a project or multiple projects from the solution file.</span></span> <span data-ttu-id="88bb8-113">Se admiten [patrones globales](https://en.wikipedia.org/wiki/Glob_(programming)) en terminales basados en Unix o Linux.</span><span class="sxs-lookup"><span data-stu-id="88bb8-113">[Globbing patterns](https://en.wikipedia.org/wiki/Glob_(programming)) are supported on Unix/Linux based terminals.</span></span>
 
 `list`
 
-<span data-ttu-id="81545-114">Enumera todos los proyectos en un archivo de solución.</span><span class="sxs-lookup"><span data-stu-id="81545-114">Lists all projects in a solution file.</span></span>
+<span data-ttu-id="88bb8-114">Enumera todos los proyectos en un archivo de solución.</span><span class="sxs-lookup"><span data-stu-id="88bb8-114">Lists all projects in a solution file.</span></span>
 
-## <a name="arguments"></a><span data-ttu-id="81545-115">Argumentos</span><span class="sxs-lookup"><span data-stu-id="81545-115">Arguments</span></span>
+## <a name="arguments"></a><span data-ttu-id="88bb8-115">Argumentos</span><span class="sxs-lookup"><span data-stu-id="88bb8-115">Arguments</span></span>
 
 `SOLUTION_NAME`
 
-<span data-ttu-id="81545-116">Archivo de solución que se va a utilizar.</span><span class="sxs-lookup"><span data-stu-id="81545-116">Solution file to use.</span></span> <span data-ttu-id="81545-117">Si no se especifica, el comando busca uno en el directorio actual.</span><span class="sxs-lookup"><span data-stu-id="81545-117">If not specified, the command searches the current directory for one.</span></span> <span data-ttu-id="81545-118">Si hay varios archivos de solución en el directorio, se debe especificar uno.</span><span class="sxs-lookup"><span data-stu-id="81545-118">If there are multiple solution files in the directory, one must be specified.</span></span>
+<span data-ttu-id="88bb8-116">Archivo de solución que se va a utilizar.</span><span class="sxs-lookup"><span data-stu-id="88bb8-116">Solution file to use.</span></span> <span data-ttu-id="88bb8-117">Si no se especifica, el comando busca uno en el directorio actual.</span><span class="sxs-lookup"><span data-stu-id="88bb8-117">If not specified, the command searches the current directory for one.</span></span> <span data-ttu-id="88bb8-118">Si hay varios archivos de solución en el directorio, se debe especificar uno.</span><span class="sxs-lookup"><span data-stu-id="88bb8-118">If there are multiple solution files in the directory, one must be specified.</span></span>
 
-## <a name="options"></a><span data-ttu-id="81545-119">Opciones</span><span class="sxs-lookup"><span data-stu-id="81545-119">Options</span></span>
+## <a name="options"></a><span data-ttu-id="88bb8-119">Opciones</span><span class="sxs-lookup"><span data-stu-id="88bb8-119">Options</span></span>
 
 `-h|--help`
 
-<span data-ttu-id="81545-120">Imprime una corta ayuda para el comando.</span><span class="sxs-lookup"><span data-stu-id="81545-120">Prints out a short help for the command.</span></span>
+<span data-ttu-id="88bb8-120">Imprime una corta ayuda para el comando.</span><span class="sxs-lookup"><span data-stu-id="88bb8-120">Prints out a short help for the command.</span></span>
 
-## <a name="examples"></a><span data-ttu-id="81545-121">Ejemplos</span><span class="sxs-lookup"><span data-stu-id="81545-121">Examples</span></span>
+## <a name="examples"></a><span data-ttu-id="88bb8-121">Ejemplos</span><span class="sxs-lookup"><span data-stu-id="88bb8-121">Examples</span></span>
 
-<span data-ttu-id="81545-122">Agregue un proyecto de C# a una solución:</span><span class="sxs-lookup"><span data-stu-id="81545-122">Add a C# project to a solution:</span></span>
+<span data-ttu-id="88bb8-122">Agregue un proyecto de C# a una solución:</span><span class="sxs-lookup"><span data-stu-id="88bb8-122">Add a C# project to a solution:</span></span>
 
 `dotnet sln todo.sln add todo-app/todo-app.csproj`
 
-<span data-ttu-id="81545-123">Quite un proyecto de C# de una solución:</span><span class="sxs-lookup"><span data-stu-id="81545-123">Remove a C# project from a solution:</span></span>
+<span data-ttu-id="88bb8-123">Quite un proyecto de C# de una solución:</span><span class="sxs-lookup"><span data-stu-id="88bb8-123">Remove a C# project from a solution:</span></span>
 
 `dotnet sln todo.sln remove todo-app/todo-app.csproj`
 
-<span data-ttu-id="81545-124">Agregue varios proyectos de C# a una solución:</span><span class="sxs-lookup"><span data-stu-id="81545-124">Add multiple C# projects to a solution:</span></span>
+<span data-ttu-id="88bb8-124">Agregue varios proyectos de C# a una solución:</span><span class="sxs-lookup"><span data-stu-id="88bb8-124">Add multiple C# projects to a solution:</span></span>
 
 `dotnet sln todo.sln add todo-app/todo-app.csproj back-end/back-end.csproj`
 
-<span data-ttu-id="81545-125">Quite varios proyectos de C# de una solución:</span><span class="sxs-lookup"><span data-stu-id="81545-125">Remove multiple C# projects from a solution:</span></span>
+<span data-ttu-id="88bb8-125">Quite varios proyectos de C# de una solución:</span><span class="sxs-lookup"><span data-stu-id="88bb8-125">Remove multiple C# projects from a solution:</span></span>
 
 `dotnet sln todo.sln remove todo-app/todo-app.csproj back-end/back-end.csproj`
 
-<span data-ttu-id="81545-126">Agregue varios proyectos de C# a una solución mediante un patrón global:</span><span class="sxs-lookup"><span data-stu-id="81545-126">Add multiple C# projects to a solution using a globbing pattern:</span></span>
+<span data-ttu-id="88bb8-126">Agregue varios proyectos de C# a una solución mediante un patrón global:</span><span class="sxs-lookup"><span data-stu-id="88bb8-126">Add multiple C# projects to a solution using a globbing pattern:</span></span>
 
 `dotnet sln todo.sln add **/*.csproj`
 
-<span data-ttu-id="81545-127">Quite varios proyectos de C# de una solución mediante un patrón global:</span><span class="sxs-lookup"><span data-stu-id="81545-127">Remove multiple C# projects from a solution using a globbing pattern:</span></span>
+<span data-ttu-id="88bb8-127">Quite varios proyectos de C# de una solución mediante un patrón global:</span><span class="sxs-lookup"><span data-stu-id="88bb8-127">Remove multiple C# projects from a solution using a globbing pattern:</span></span>
 
 `dotnet sln todo.sln remove **/*.csproj`
